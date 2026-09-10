@@ -11,6 +11,10 @@
 
    Bilder werden dabei frisch geholt (Pexels ist kostenlos) und neu
    freigestellt, damit auch daran gearbeitet werden kann.
+
+   Mit IG_ABLEGEN=1 landen die Ergebnisse unter vorschau/<datum>/ im
+   Asset-Zweig. So laesst sich das Ergebnis vom Runner aus ansehen, ohne den
+   Feed anzufassen.
    ========================================================================== */
 
 import fs from "node:fs";
@@ -24,7 +28,8 @@ import { CONFIG } from "../src/config.mjs";
 const datum = process.argv[2] || heuteIso();
 const ziel = process.argv[3] || path.resolve("out", `nach-${datum}`);
 
-const hosting = new Hosting({ pushen: false }).vorbereiten();
+const ablegen = process.env.IG_ABLEGEN === "1";
+const hosting = new Hosting({ pushen: ablegen }).vorbereiten();
 const dir = path.join(hosting.stateDir, "inhalte");
 if (!fs.existsSync(dir)) { console.error(`Keine Inhalte in ${dir}`); process.exit(1); }
 
@@ -59,3 +64,20 @@ for (const datei of dateien) {
 }
 await browserBeenden();
 console.log(`${n} Bilder → ${ziel}`);
+
+if (ablegen) {
+  /* Flach in den Zweig legen: die Unterordner je Beitrag wuerden die Pfade nur
+     verlaengern, die Dateinamen sind schon eindeutig. */
+  const dateien = [];
+  const sammeln = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) e.isDirectory() ? sammeln(path.join(d, e.name)) : /\.(jpg|png|mp4)$/.test(e.name) && dateien.push(path.join(d, e.name)); };
+  sammeln(ziel);
+  const kennung = Date.now().toString(36);
+  for (const d of dateien) {
+    const { name, ext } = path.parse(d);
+    const teil = path.relative(ziel, path.dirname(d)).split(path.sep).filter(Boolean).join("-");
+    hosting.ablegen(d, path.join("vorschau", datum, `${teil ? teil + "-" : ""}${name}-${kennung}${ext}`));
+  }
+  hosting.commit(`Vorschau ${datum} (${dateien.length} Bilder)`);
+  await hosting.push();
+  console.log(`${dateien.length} Bilder im Asset-Zweig unter vorschau/${datum}/`);
+}
