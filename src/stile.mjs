@@ -130,7 +130,12 @@ export const ICONS = {
   person: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
   personen: '<circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20a7 7 0 0 1 14 0M15 20a5 5 0 0 1 7 0"/>',
   globus: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
-  paragraf: '<path d="M14 5.5c-1-1.2-2.4-1.5-3.6-1.5C8.2 4 7 5.3 7 6.8c0 3.6 7 2.6 7 6.4 0 1.7-1.4 2.8-3.4 2.8-1.6 0-2.9-.6-3.8-1.6M10 18.5c1 1.2 2.4 1.5 3.6 1.5 2.2 0 3.4-1.3 3.4-2.8 0-3.6-7-2.6-7-6.4"/>',
+  /* Das Paragrafenzeichen wird gesetzt, nicht gezeichnet. Die nachgezeichnete
+     Variante sah aus wie zwei ineinandergehakte S - jeder Jurist erkennt den
+     Unterschied sofort, und ein Zeichen, das es in jeder Schrift gibt, muss
+     man nicht nachbauen. Die Schrift kommt von der Kachel (currentColor,
+     Titelschrift), fill statt stroke - sonst bliebe die Kontur leer. */
+  paragraf: '<text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-family="inherit" font-size="21" font-weight="600" fill="currentColor" stroke="none">§</text>',
   haken: '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',
   kreuz: '<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',
   zielscheibe: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
@@ -139,5 +144,5 @@ export const ICONS = {
 
 export function iconSvg(name, groesse = 96) {
   const pfad = ICONS[name] || ICONS.paragraf;
-  return `<svg class="icon" width="${groesse}" height="${groesse}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${pfad}</svg>`;
+  return `<svg class="icon" width="${groesse}" height="${groesse}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" font-family="var(--titel)">${pfad}</svg>`;
 }
