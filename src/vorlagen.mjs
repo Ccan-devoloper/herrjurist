@@ -243,7 +243,6 @@ h1 em{color:${p.akzent2}}
 .art-titel:has(.frei) .fuss .klausur{background:var(--grund);padding:6px 18px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1}
 .foto img{width:100%;height:100%;object-fit:cover;display:block}
-.bildquelle{position:absolute;left:70px;bottom:78px;font-size:20px;color:${p.dunkel};opacity:.6;letter-spacing:.02em;z-index:2}
 .illu{right:auto;left:330px;bottom:70px;width:420px;height:420px;color:${p.dunkel};opacity:1;z-index:1}
 .illu::before{display:none}
 .illu .icon{width:380px;height:380px}
@@ -356,7 +355,10 @@ function fotoBuehne(folie) {
   /* Freigestellt: Das Motiv laeuft unten rechts aus der Kachel, ohne Rahmen.
      Nicht freigestellt (Notfall): als abgerundete Karte. */
   const klasse = folie.bildFrei === false ? "foto" : "frei";
-  return `<div class="${klasse}"><img src="${esc(folie.bild)}" alt=""></div>${folie.bildQuelle ? `<div class="bildquelle">${esc(folie.bildQuelle)}</div>` : ""}`;
+  /* Der Bildnachweis steht in der Caption, nicht auf der Kachel: Pexels
+     verlangt einen sichtbaren Hinweis, aber nicht an einer bestimmten Stelle -
+     und auf dem Bild stoert er die Gestaltung. */
+  return `<div class="${klasse}"><img src="${esc(folie.bild)}" alt=""></div>`;
 }
 
 function bildOderIllu(ctx, folie) {
