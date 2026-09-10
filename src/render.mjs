@@ -82,14 +82,19 @@ function einpassen() {
         der Titel darüber und wird unlesbar. */
   const fuss = wurzel.querySelector(".fuss");
   const foto = wurzel.querySelector(".foto");
-  const grenze = foto ? foto.getBoundingClientRect().top - 16 : wurzel.getBoundingClientRect().bottom - 24;
+  const frei = wurzel.querySelector(".frei");
+  /* Beim freigestellten Motiv darf der Text bis zu dessen Oberkante laufen –
+     es ist transparent, ein bisschen Ueberlappung oben schadet nicht. */
+  const grenze = foto ? foto.getBoundingClientRect().top - 16
+    : frei ? frei.getBoundingClientRect().top + 120
+    : wurzel.getBoundingClientRect().bottom - 24;
   const textElemente = [...wurzel.querySelectorAll("h1,h2,h3,p,li,.text,.merke,.norm,.zahl,.zahl-unter,.karte,.optionen div,.rechnung,.spalte,.unter,.hinweis,.pfeil")];
   let n = 0;
-  const ausser = (c) => c.classList.contains("geist") || c.classList.contains("illu") || c.classList.contains("foto") || c.classList.contains("bildquelle") || c.classList.contains("fuss");
+  const ausser = (c) => c.classList.contains("geist") || c.classList.contains("illu") || c.classList.contains("foto") || c.classList.contains("frei") || c.classList.contains("bildquelle") || c.classList.contains("fuss");
   const passt = () => {
     const unten = Math.max(...textElemente.map((e) => e.getBoundingClientRect().bottom));
     const kinderUnten = Math.max(...[...wurzel.children].filter((c) => !ausser(c)).map((c) => c.getBoundingClientRect().bottom));
-    const fussOk = foto || !fuss || fuss.getBoundingClientRect().bottom <= wurzel.getBoundingClientRect().bottom - 8;
+    const fussOk = foto || frei || !fuss || fuss.getBoundingClientRect().bottom <= wurzel.getBoundingClientRect().bottom - 8;
     return unten <= grenze + 24 && kinderUnten <= grenze + 24 && fussOk && wurzel.scrollHeight <= wurzel.clientHeight + 1;
   };
   while (!passt() && n++ < 14) for (const el of textElemente) setze(el, 0.95);

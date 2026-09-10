@@ -66,7 +66,7 @@ async function titelfolieBebildern(beitrag) {
   if (!titelfolie || titelfolie.bild) return;
   try {
     const treffer = await titelbild(beitrag);
-    if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; }
+    if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; }
   } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
 }
 

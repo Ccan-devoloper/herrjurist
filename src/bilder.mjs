@@ -17,7 +17,9 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import os from "node:os";
 import { CONFIG } from "./config.mjs";
+import { freistellen } from "./freistellen.mjs";
 
 const API = "https://api.pexels.com/v1/search";
 
@@ -65,6 +67,21 @@ export async function fotoSuchen(szene, { zufall = Math.random } = {}) {
  * @param {string} [ablage] optionales Verzeichnis, in dem das Original zur
  *   Nachschau liegen bleibt
  */
+export async function fotoDatei(foto, ablage) {
+  if (!foto?.url) return null;
+  try {
+    const res = await fetch(foto.url);
+    if (!res.ok) return null;
+    fs.mkdirSync(ablage, { recursive: true });
+    const datei = path.join(ablage, `pexels-${foto.id || Date.now()}.jpg`);
+    fs.writeFileSync(datei, Buffer.from(await res.arrayBuffer()));
+    return datei;
+  } catch (e) {
+    console.warn(`  ! Foto nicht ladbar: ${e.message}`);
+    return null;
+  }
+}
+
 export async function fotoLaden(foto, ablage = null) {
   if (!foto?.url) return null;
   try {
@@ -83,8 +100,9 @@ export async function fotoLaden(foto, ablage = null) {
 }
 
 /**
- * Foto für die Titelfolie eines Beitrags besorgen. Gibt { bild, quelle } oder
- * null zurück – null heißt: Icon-Bühne wie bisher.
+ * Foto für die Titelfolie eines Beitrags besorgen – freigestellt, damit das
+ * Motiv aus der Kachel läuft statt als Rechteck darauf zu liegen.
+ * Gibt { bild, quelle, frei } oder null zurück; null heißt: Icon-Bühne.
  */
 export async function titelbild(beitrag, ablage = null, opt = {}) {
   if (!CONFIG.bilder.aktiv || !CONFIG.bilder.key) return null;
@@ -92,8 +110,23 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
   if (!szene) return null;
   const foto = await fotoSuchen(szene, opt);
   if (!foto) { console.log(`  → kein Foto zu „${szene}“ – Titelfolie bleibt beim Icon.`); return null; }
-  const bild = await fotoLaden(foto, ablage);
-  if (!bild) return null;
+
+  /* Erst als Datei laden: Zum Freistellen braucht rembg einen Pfad. */
+  const roh = await fotoDatei(foto, ablage || os.tmpdir());
+  if (!roh) return null;
+  const quelle = `Foto: ${foto.fotograf || "Pexels"} / Pexels`;
+
+  if (CONFIG.bilder.freistellen) {
+    const frei = freistellen(roh);
+    if (frei) {
+      const bild = `data:image/png;base64,${fs.readFileSync(frei.pfad).toString("base64")}`;
+      fs.rmSync(frei.pfad, { force: true });
+      console.log(`  → Titelbild freigestellt: „${szene}“ · ${foto.fotograf || "Pexels"} (Deckung ${(frei.deckung * 100).toFixed(0)} %)`);
+      return { bild, quelle, seite: foto.seite, frei: true };
+    }
+    /* Freistellen misslungen: lieber kein Bild als ein aufgeklebtes Rechteck. */
+    if (!CONFIG.bilder.rechteckErlaubt) return null;
+  }
   console.log(`  → Titelbild: „${szene}“ · ${foto.fotograf || "Pexels"}`);
-  return { bild, quelle: `Foto: ${foto.fotograf || "Pexels"} / Pexels`, seite: foto.seite };
+  return { bild: `data:image/jpeg;base64,${fs.readFileSync(roh).toString("base64")}`, quelle, seite: foto.seite, frei: false };
 }
