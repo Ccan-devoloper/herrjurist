@@ -126,6 +126,7 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
   const benutzt = new Set();
   const ledgerKopie = { ...ledger, fachZaehler: { ...(ledger.fachZaehler || {}) } };
 
+  const beitraegeBisher = [];
   const beitraege = formate.map((format, i) => {
     const typen = FORMAT_QUELLEN[format] || [];
     let thema = null;
@@ -133,6 +134,11 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
       let kandidaten = verfuegbar(pool, ledgerKopie, datum, benutzt).filter((t) => typen.includes(t.typ));
       /* Endspurt: Dauerbrenner zuerst – keine seltenen Themen mehr. */
       if (endspurt) { const hoch = kandidaten.filter((t) => t.prioritaet === "hoch"); if (hoch.length >= 4) kandidaten = hoch; }
+      /* Farbwechsel: Zwei Beiträge am selben Tag sollen nicht dasselbe
+         Rechtsgebiet tragen – im Profilraster sähe das aus wie ein Doppelpost. */
+      const schonHeute = new Set(beitraegeBisher.map((b) => b.thema?.klausur).filter(Boolean));
+      const andereFarbe = kandidaten.filter((t) => !schonHeute.has(t.klausur));
+      if (andereFarbe.length >= 3) kandidaten = andereFarbe;
       thema = gewichteteWahl(kandidaten.length ? kandidaten : pool.filter((t) => typen.includes(t.typ)), zufall, ledgerKopie, strategie);
       benutzt.add(thema.id);
       ledgerKopie.fachZaehler[thema.fach] = (ledgerKopie.fachZaehler[thema.fach] || 0) + 1;
@@ -140,7 +146,9 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
     /* Samstags-Reel: Mindset statt Fachthema – holt Menschen ab, die Fachposts nie sehen. */
     if (format === "reel" && wt === 6) thema = mindsetThema(datum);
     const zeit = format === "loesungsskizze" ? abendAnlass.zeit : (zeiten[i] || zeiten.at(-1));
-    return { slot: `b${i + 1}`, zeit, format, thema, anlass: format === "anlass" ? anlass : format === "loesungsskizze" ? abendAnlass : undefined, lang: format === "reel" ? CONFIG.reel.langeTage.includes(wt) : undefined };
+    const eintrag = { slot: `b${i + 1}`, zeit, format, thema, anlass: format === "anlass" ? anlass : format === "loesungsskizze" ? abendAnlass : undefined, lang: format === "reel" ? CONFIG.reel.langeTage.includes(wt) : undefined };
+    beitraegeBisher.push(eintrag);
+    return eintrag;
   });
 
   /* Stories: Teaser je Beitrag + eigenständige Karten, bis zur Tagesmenge. */

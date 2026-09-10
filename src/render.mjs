@@ -63,7 +63,11 @@ function einpassen() {
   const wurzel = document.querySelector(".folie, .story");
   if (!wurzel) return;
   const px = (el) => parseFloat(getComputedStyle(el).fontSize);
-  const setze = (el, f) => { el.style.fontSize = `${Math.max(28, px(el) * f)}px`; };
+  /* Untergrenzen: Ein Titel auf der ersten Folie darf nie unter 56 px fallen –
+     darunter ist er im Feed-Vorschaubild nicht mehr zu entziffern, und dann
+     nützt der beste Text nichts. Der Rest der Kachel darf weiter schrumpfen. */
+  const untergrenze = (el) => (el.tagName === "H1" ? 56 : 28);
+  const setze = (el, f) => { el.style.fontSize = `${Math.max(untergrenze(el), px(el) * f)}px`; };
   /* 1. Einzelne Zeilen/Blöcke, die breiter als ihr Platz sind (lange Wörter).
         Neben dem eigenen Überlauf zählt der rechte Rand der Kachel: Elemente
         mit „width:fit-content“ (im bunten Stil etwa die Titelpille) wachsen
