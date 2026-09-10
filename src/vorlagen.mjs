@@ -245,8 +245,11 @@ h1 em{color:${p.akzent2}}
    Schatten setzt es von der Flaeche ab, ohne einen Rahmen zu zeichnen. */
 /* Die Buehne endet unterhalb des Kopfblocks: Seit die Motive zugeschnitten
    werden, fuellen sie den Kasten wirklich aus und wuerden sonst in den Pfeil
-   und das "So geht's!" hineinlaufen. */
-.frei{position:absolute;right:-40px;bottom:0;width:720px;height:560px;z-index:1;pointer-events:none}
+   und das "So geht's!" hineinlaufen.
+   Buendig am rechten Rand statt darueber hinaus: Solange die Motive als
+   Briefmarke in der Ecke sassen, schnitt der Ueberstand nur Luft ab - jetzt
+   wuerde er das Motiv selbst anschneiden. */
+.frei{position:absolute;right:0;bottom:0;width:640px;height:620px;z-index:1;pointer-events:none}
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.28))}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
