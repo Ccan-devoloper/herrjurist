@@ -215,9 +215,12 @@ export function buntCss(ctx) {
 .kopf .etikett .punkt{display:none}
 .kopf .zaehler{position:absolute;right:46px;top:40px;width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.9);color:${p.dunkel};font-family:"Inter";font-weight:700;font-size:26px;display:flex;align-items:center;justify-content:center}
 .kopf .zaehler:empty{display:none}
-/* Titel als Pillen, Zeile für Zeile */
-h1{margin-top:96px;font-size:76px;line-height:1.75}
-h1.klein{font-size:66px}h1.winzig{font-size:56px}
+/* Titel als Pillen, Zeile für Zeile. Die erste Folie wird im Feed als
+   Vorschaubild von 300 px Breite gesehen – dort entscheidet die Schriftgröße,
+   ob jemand den Beitrag überhaupt liest. Deshalb so groß wie möglich; zu
+   lange Titel fängt einpassen() ab. */
+h1{margin-top:72px;font-size:100px;line-height:1.5}
+h1.klein{font-size:86px}h1.winzig{font-size:74px}
 h1 .z{background:${p.dunkel};color:#fff;padding:.14em .5em;border-radius:48px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 h1 em{color:${p.akzent2}}
 .unter{margin-top:22px;display:inline-block;width:fit-content;background:${p.hell};color:${p.dunkel};padding:12px 30px;border-radius:40px;font-weight:700;font-size:36px;line-height:1.25;margin-left:24px}
@@ -347,7 +350,7 @@ function zweitIcon(icon) {
 
 function titelKlasse(t) {
   const l = (t || "").length;
-  return l > 84 ? "winzig" : l > 56 ? "klein" : "";
+  return l > 92 ? "winzig" : l > 62 ? "klein" : "";
 }
 
 const FOLIEN = {

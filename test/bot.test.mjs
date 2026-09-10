@@ -561,10 +561,11 @@ test("Normen stehen in der Klausur-Zitierweise, die Stimme liest sie ausgeschrie
   const { normKurz, normGesprochen, felderKuerzen } = await import("../src/normen.mjs");
   assert.equal(normKurz("§ 1 Absatz 1 Satz 1 Nummer 1 Buchstabe a BGB"), "§ 1 Abs. 1 S. 1 Nr. 1 lit. a BGB");
   assert.equal(normKurz("§ 80 Abs. 1 S. 5 VwGO"), "§ 80 Abs. 1 S. 5 VwGO");
-  /* Römische Ziffern sind verbreitet, aber nicht die Hausschreibweise. */
-  assert.equal(normKurz("§ 80 V VwGO"), "§ 80 Abs. 5 VwGO");
-  assert.equal(normKurz("§ 823 I BGB i.V.m. § 31 BGB"), "§ 823 Abs. 1 BGB i.V.m. § 31 BGB");
-  assert.equal(normKurz("Art. 12 I GG"), "Art. 12 Abs. 1 GG");
+  /* Römische Absatzziffern sind auf dem Kanal seit jeher üblich und bleiben
+     stehen – umgeschrieben wird nur die Klammerform des Schwester-Kanals. */
+  assert.equal(normKurz("§ 441 III BGB"), "§ 441 III BGB");
+  assert.equal(normKurz("§ 823 I BGB i.V.m. § 31 BGB"), "§ 823 I BGB i.V.m. § 31 BGB");
+  assert.equal(normKurz("Art. 12 I GG"), "Art. 12 I GG");
   /* Klammerform aus anderen Quellen wird zurückgeholt. */
   assert.equal(normKurz("§ 7 (1) S. 1 EStG"), "§ 7 Abs. 1 S. 1 EStG");
   /* Was schon richtig steht, bleibt unverändert. */
@@ -576,9 +577,12 @@ test("Normen stehen in der Klausur-Zitierweise, die Stimme liest sie ausgeschrie
   assert.equal(normGesprochen("Art. 2 Abs. 1 GG"), "Artikel 2 Absatz 1 GG");
   assert.match(normGesprochen("§ 823 Abs. 1 BGB i.V.m. § 31 BGB"), /in Verbindung mit/);
   assert.match(normGesprochen("Nach h.M. gilt das."), /herrschende Meinung/);
+  /* Römisch muss die Stimme auflösen, sonst liest sie „drei Buchstaben I“. */
+  assert.equal(normGesprochen("§ 441 III BGB"), "Paragraf 441 Absatz 3 BGB");
+  assert.equal(normGesprochen("Art. 12 I GG"), "Artikel 12 Absatz 1 GG");
 
   /* Die Felder eines Objekts werden mitsamt Punkteliste umgeschrieben. */
-  const folie = { titel: "Frist nach § 80 V VwGO", text: null, punkte: ["§ 123 I VwGO prüfen"] };
+  const folie = { titel: "Frist nach § 80 (5) VwGO", text: null, punkte: ["§ 123 Absatz 1 VwGO prüfen"] };
   felderKuerzen(folie, ["titel", "text", "norm"]);
   assert.equal(folie.titel, "Frist nach § 80 Abs. 5 VwGO");
   assert.equal(folie.punkte[0], "§ 123 Abs. 1 VwGO prüfen");

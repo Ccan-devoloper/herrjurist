@@ -4,15 +4,15 @@
    Auf dem Bildschirm gilt die Zitierweise, die in der juristischen Klausur
    üblich ist: § 80 Abs. 1 S. 5 VwGO, § 1 Abs. 1 S. 1 Nr. 1 BGB. Absatz,
    Satz, Nummer und Buchstabe werden abgekürzt, aber ausgeschrieben – keine
-   Klammern, keine römischen Ziffern.
+   Klammern.
 
-   Römische Ziffern („§ 80 V VwGO“) sind in Lehrbüchern verbreitet, in der
-   Klausur aber uneinheitlich; sie werden deshalb in die Absatz-Form
-   überführt, damit der Kanal durchgehend gleich zitiert.
+   Römische Ziffern („§ 441 III BGB“) bleiben stehen, wo sie stehen: Der Kanal
+   zitiert sie seit jeher so, und beides ist in der Klausur üblich. Nur die
+   Klammerform wird aufgelöst, die gehört zum Schwester-Kanal.
 
-   Gesprochen geht das nicht: „Abs.“ liest keine Stimme als „Absatz“.
-   Deshalb gibt es zwei Fassungen – normKurz() für alles Sichtbare,
-   normGesprochen() für den Sprechertext.
+   Gesprochen geht beides nicht: „Abs.“ liest keine Stimme als „Absatz“, und
+   „III“ liest sie als Buchstaben. Deshalb gibt es zwei Fassungen – normKurz()
+   für alles Sichtbare, normGesprochen() für den Sprechertext.
    ========================================================================== */
 
 /* Römische Ziffern, wie sie hinter einem Paragrafen vorkommen (Absätze gehen
@@ -24,9 +24,6 @@ const ROEMISCH = { I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX:
 const KURZ = [
   /* Klammerform aus anderen Quellen zurückholen: „§ 7 (1)“ → „§ 7 Abs. 1“. */
   [/(§{1,2}\s*\d+[a-z]?)\s*\((\d+[a-z]?)\)/g, (_, p, n) => `${p} Abs. ${n}`],
-  /* Römisch → Absatz. Nur direkt hinter einer Paragrafen- oder Artikelangabe,
-     damit „Art. 5 GG“ und Abkürzungen wie „i.V.m.“ unangetastet bleiben. */
-  [/((?:§{1,2}|Art\.)\s*\d+[a-z]?)\s+([IVX]+)(?=[\s,.;)]|$)/g, (_, p, r) => (ROEMISCH[r] ? `${p} Abs. ${ROEMISCH[r]}` : `${p} ${r}`)],
   /* Ausgeschriebene Formen abkürzen. Bewusst ohne i-Flag bei Absatz und
      Nummer: Der Zusatz hinter der Zahl ist immer klein („1a“); mit i-Flag
      verschluckte die Regel das große S aus „Abs. 1 S. 1“. */
@@ -48,6 +45,9 @@ export function normKurz(text) {
 }
 
 const GESPROCHEN = [
+  /* „§ 441 III“ würde die Stimme als „drei Buchstaben I“ lesen – zuerst
+     auflösen, solange das § noch als Anker dasteht. */
+  [/((?:§{1,2}|Art\.)\s*\d+[a-z]?)\s+([IVX]+)(?=[\s,.;)]|$)/g, (_, p, r) => (ROEMISCH[r] ? `${p} Absatz ${ROEMISCH[r]}` : `${p} ${r}`)],
   [/§§/g, "Paragrafen"],
   [/§/g, "Paragraf"],
   [/\bArt\./g, "Artikel"],
@@ -76,7 +76,7 @@ export function normGesprochen(text) {
 }
 
 /** Die Regel, wie sie im Auftrag an das Modell steht. */
-export const NORM_REGEL = 'Normen immer in der Klausur-Zitierweise: § 80 Abs. 1 S. 5 VwGO, § 1 Abs. 1 S. 1 Nr. 1 lit. a BGB. Absatz, Satz, Nummer und Buchstabe abgekürzt, aber nie in Klammern und nie in römischen Ziffern („§ 80 V“ ist falsch).';
+export const NORM_REGEL = 'Normen in der Klausur-Zitierweise: § 80 Abs. 1 S. 5 VwGO, § 1 Abs. 1 S. 1 Nr. 1 lit. a BGB. Absatz, Satz, Nummer und Buchstabe abgekürzt, nie in Klammern. Römische Absatzziffern („§ 441 III BGB“) sind ebenfalls in Ordnung, wenn die Norm üblicherweise so zitiert wird – nur nicht innerhalb eines Beitrags mischen.';
 export const NORM_REGEL_STIMME = 'Im Sprechertext dagegen ausgeschrieben, damit die Stimme es richtig liest: „Paragraf 80 Absatz 1 Satz 5 VwGO“ – dort keine Abkürzungen.';
 
 /** Wendet die Kurzform auf alle sichtbaren Felder eines Objekts an. */
