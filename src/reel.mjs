@@ -247,7 +247,7 @@ export function hintergrundClip(verzeichnis, datum) {
    oder Gedankenstrich, und wenn auch das nicht reicht, nach WORT_MAX Wörtern.
    Gebrochen wird nur, wo es sein muss - ein halber Satz ist immer noch besser
    lesbar als vier Wörter ohne Zusammenhang. */
-const WORT_MAX = 12;
+const WORT_MAX = 8;
 
 export function untertitelBloecke(szenen) {
   const bloecke = [];
@@ -260,7 +260,7 @@ export function untertitelBloecke(szenen) {
       const teilende = /[,;:–—]$/.test(w.wort);
       if (satzende) schliessen();
       else if (akt.length >= WORT_MAX && teilende) schliessen();
-      else if (akt.length >= WORT_MAX + 4) schliessen();
+      else if (akt.length >= WORT_MAX + 3) schliessen();
     }
     schliessen();
   }
@@ -272,7 +272,11 @@ export function untertitelBloecke(szenen) {
     if (v && v.szene === bloecke[i].szene) { v.woerter.push(...bloecke[i].woerter); bloecke.splice(i, 1); }
     else if (n && n.szene === bloecke[i].szene) { n.woerter.unshift(...bloecke[i].woerter); bloecke.splice(i, 1); }
   }
-  return bloecke.map((b) => ({ szene: b.szene, von: b.woerter[0].von, bis: b.woerter.at(-1).bis, text: b.woerter.map((x) => x.wort).join(" ") }));
+  /* Gezaehlt wird in gesprochenen Woertern, angezeigt wird die Schreibfassung:
+     Die Stimme sagt "Paragraf 48 Absatz 4 Verwaltungsverfahrensgesetz", auf
+     der Karte steht "§ 48 Abs. 4 VwVfG". Ohne diesen Schritt lief der
+     ausgeschriebene Gesetzesname quer ueber den halben Bildschirm. */
+  return bloecke.map((b) => ({ szene: b.szene, von: b.woerter[0].von, bis: b.woerter.at(-1).bis, text: normKurz(b.woerter.map((x) => x.wort).join(" ")) }));
 }
 
 /* Die Seite: oberes Drittel Canvas-Animation, darunter Szenen und Untertitel;
@@ -318,7 +322,7 @@ canvas#oben{position:absolute;left:0;top:0;width:1080px;height:${OBEN}px;display
 .ctablock .text{margin-top:22px;font-size:40px;color:var(--text-weich)}
 .ctablock .pille{margin-top:34px;font-size:36px;padding:18px 40px}
 .untertitel{position:absolute;left:60px;right:60px;top:${OBEN + 780}px;height:280px;display:flex;align-items:center;justify-content:center;text-align:center}
-.untertitel .block{max-width:100%;font-family:var(--titel);font-size:84px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em;font-weight:${stil.schrift.titelGewicht};transform-origin:50% 50%;will-change:transform}
+.untertitel .block{max-width:100%;overflow-wrap:anywhere;font-family:var(--titel);font-size:84px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em;font-weight:${stil.schrift.titelGewicht};transform-origin:50% 50%;will-change:transform}
 
 .reel .fuss{position:absolute;left:84px;right:84px;bottom:70px;display:flex;justify-content:space-between}
 ${klausurCss(ctx)}${buntCss(ctx)}
@@ -377,7 +381,7 @@ window.setzeZeit = function (t) {
        Satz, nicht je Bild - sonst zappelt die Schrift. */
     block.style.fontSize = "";
     const kasten = block.parentElement;
-    for (let i = 0; i < 16 && block.scrollHeight > kasten.clientHeight; i++) {
+    for (let i = 0; i < 16 && (block.scrollHeight > kasten.clientHeight || block.scrollWidth > kasten.clientWidth); i++) {
       block.style.fontSize = (parseFloat(getComputedStyle(block).fontSize) * 0.93) + "px";
     }
   }

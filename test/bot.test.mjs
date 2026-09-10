@@ -384,6 +384,12 @@ test("Reel: Animation rotiert täglich, Untertitel zeigen ganze Sätze", async (
   assert.ok(bl.every((x) => x.text.split(" ").length <= 17), JSON.stringify(bl.map((x) => x.text.split(" ").length)));
   /* Kein Wort geht verloren. */
   assert.equal(bl.map((x) => x.text).join(" "), lang[0].woerter.map((w) => w.wort).join(" "));
+  /* Gesprochen wird der ausgeschriebene Gesetzesname, angezeigt das Kürzel –
+     sonst läuft „VERWALTUNGSVERFAHRENSGESETZ“ quer über die Karte. */
+  const norm = [{ index: 0, woerter: woerterVerteilen("Paragraf 48 Absatz 4 Verwaltungsverfahrensgesetz: Die Behörde hat ein Jahr.", 6, 0) }];
+  const bn = untertitelBloecke(norm);
+  assert.ok(bn[0].text.startsWith("§ 48 Abs. 4 VwVfG"), bn[0].text);
+  assert.ok(!bn.some((x) => /Verwaltungsverfahrensgesetz|Paragraf/.test(x.text)), JSON.stringify(bn.map((x) => x.text)));
 });
 
 test("Reel: Hintergrund-Clip rotiert täglich, ohne Verzeichnis keine Auswahl", async () => {

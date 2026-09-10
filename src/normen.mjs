@@ -49,6 +49,11 @@ export function normKurz(text) {
   if (typeof text !== "string" || !text) return text;
   let out = text;
   for (const [muster, ersatz] of KURZ) out = out.replace(muster, ersatz);
+  /* Der Rückweg zur Kurzform: Was die Stimme ausgeschrieben bekommt, gehört
+     auf dem Bildschirm wieder als Kürzel hin. Der Untertitel entsteht aus dem
+     gesprochenen Text und trug sonst „PARAGRAF 48 ABSATZ 4
+     VERWALTUNGSVERFAHRENSGESETZ“ quer über die Karte. */
+  out = out.replace(GESETZ_LANG_MUSTER, (n) => GESETZE_KURZ[n]);
   return out.replace(/§\s*(\d)/g, "§ $1").replace(/\s{2,}/g, " ").trim();
 }
 
@@ -114,6 +119,12 @@ const GESETZE = {
 };
 /* Lange Kürzel zuerst, sonst schlägt VwVG innerhalb von VwVfG zu. */
 const GESETZ_MUSTER = new RegExp(`\\b(${Object.keys(GESETZE).sort((a, b) => b.length - a.length).join("|")})\\b`, "g");
+
+/* Und zurück: Der Untertitel eines Reels entsteht aus dem gesprochenen Text,
+   auf dem Bildschirm soll aber das Kürzel stehen. Gibt es für einen Namen
+   mehrere Kürzel, gewinnt das erste - die Tabelle ist eindeutig gepflegt. */
+const GESETZE_KURZ = Object.fromEntries(Object.entries(GESETZE).map(([k, v]) => [v, k]).reverse());
+const GESETZ_LANG_MUSTER = new RegExp(`\\b(${Object.keys(GESETZE_KURZ).sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\-]/g, "\\$&")).join("|")})\\b`, "g");
 
 /**
  * Fassung für die Stimme: Abkürzungen ausgeschrieben, damit die Sprachausgabe
