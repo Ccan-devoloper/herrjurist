@@ -13,6 +13,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { browserStarten, coverRendern } from "./render.mjs";
 import { css, klausurCss, buntCss, fussRechts } from "./vorlagen.mjs";
+import { normKurz } from "./normen.mjs";
 import { stil as stilLaden, iconSvg } from "./stile.mjs";
 import { FAECHER } from "./inhalte.mjs";
 import { CONFIG } from "./config.mjs";
@@ -179,7 +180,12 @@ canvas#oben,.trenner{display:none}
 .reel .untertitel .w.jetzt,.familie-bunt .untertitel .w.jetzt,.reel .untertitel .w.jetzt{color:${p.dunkel}}`;
 }
 
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+/* Wie auf den Kacheln gilt die Schreibweise der Normen hier im Renderer,
+   nicht in der Quelle: Auf einer Reel-Folie stand schon "Paragraf 48 VwVfG",
+   weil die Regel fuer den Sprechertext auf den Bildschirmtext abgefaerbt
+   hatte. Der Sprechertext selbst laeuft nicht hierdurch - er wird gesprochen,
+   nicht gesetzt. */
+const esc = (s) => String(normKurz(s) ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 /* Alle Szenen mit einem Anbieter sprechen und daraus den Zeitplan bauen. */
 async function szenenSprechen(reel, audioDir, anbieter, stimmeId = null) {

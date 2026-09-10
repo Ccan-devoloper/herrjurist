@@ -6,6 +6,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { iconSvg, ICONS } from "./stile.mjs";
+import { normKurz } from "./normen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 export const FONT_DIR = path.resolve(hier, "../fonts");
@@ -25,13 +26,18 @@ export function esc(s) {
 }
 
 /* Überschriften: nur Hervorhebungen, keine Mono-Normen (die wirken in Großschrift fremd). */
+/* Die Schreibweise der Normen ist Sache des Renderers, nicht der Quelle.
+   Der Autor kuerzt zwar schon, aber gerendert wird auch gespeicherter Text,
+   Handbuch-Material und Beispielinhalt - und dort stand schon "Paragraf 48
+   VwVfG" auf einer Reel-Folie. normKurz ist idempotent, doppelt schadet also
+   nicht. */
 export function markierenTitel(s) {
-  return esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  return esc(normKurz(s)).replace(/\*([^*]+)\*/g, "<em>$1</em>");
 }
 
 /* Hervorhebungen: *wichtig* → <em>, Normen in Mono. */
 export function markieren(s) {
-  let t = esc(s);
+  let t = esc(normKurz(s));
   t = t.replace(/\*([^*]+)\*/g, "<em>$1</em>");
   /* Die Gesetze der drei Rechtsgebiete. Auch Aufzaehlungen ("§§ 61, 62 VwGO")
      und Artikel ("Art. 20 Abs. 3 GG") gehoeren dazu - beides zitiert man im
