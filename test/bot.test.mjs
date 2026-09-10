@@ -714,3 +714,22 @@ test("Strenger Faktencheck: ohne Prüfung erscheint kein Beitrag", async () => {
   CONFIG.faktencheck.aktiv = alt;
   assert.equal(CONFIG.faktencheck.strikt, true, "streng ist der Standard");
 });
+
+test("Normen: gesprochene Form wird für Text zurückgewandelt", async () => {
+  const { normGeschrieben } = await import("../src/normen.mjs");
+  assert.equal(normGeschrieben("Paragraf 48 Absatz 2 VwVfG"), "§ 48 Abs. 2 VwVfG");
+  assert.equal(normGeschrieben("Paragrafen 116 ff. BGB"), "§§ 116 ff. BGB");
+  assert.equal(normGeschrieben("Artikel 3 Absatz 1 GG"), "Art. 3 Abs. 1 GG");
+  assert.equal(normGeschrieben("§ 441 III BGB"), "§ 441 III BGB");
+});
+
+test("Hashtags: fremde Rechtsgebiete werden aussortiert", async () => {
+  const { hashtagsWaehlen } = await import("../src/autor.mjs");
+  const kern = CONFIG.hashtags.kern;
+  const tags = hashtagsWaehlen(["#öffentlichesrecht", "#strafrecht", "#kaufrecht"], kern, null, undefined, 1);
+  assert.ok(!tags.includes("#öffentlichesrecht"), tags.join(" "));
+  assert.ok(!tags.includes("#strafrecht"), tags.join(" "));
+  assert.ok(tags.includes("#kaufrecht"), tags.join(" "));
+  const zivil = hashtagsWaehlen(["#zivilrecht"], kern, null, undefined, 1);
+  assert.ok(zivil.includes("#zivilrecht"), zivil.join(" "));
+});

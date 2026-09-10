@@ -18,7 +18,7 @@ import { datumLesbar, tageBis } from "./zeit.mjs";
 import { erfassen, budgetPruefen, BudgetFehler } from "./kosten.mjs";
 import { pruefeFakten } from "./faktencheck.mjs";
 import { hookWaehlen as hookMusterWaehlen, hookAnleitung, pruefeHook, hookTypErkennen } from "./hooks.mjs";
-import { normKurz, normGesprochen, felderKuerzen, NORM_REGEL, NORM_REGEL_STIMME } from "./normen.mjs";
+import { normKurz, normGesprochen, normGeschrieben, felderKuerzen, NORM_REGEL, NORM_REGEL_STIMME } from "./normen.mjs";
 import { hookTyp } from "./insights.mjs";
 import { phase } from "./kalender.mjs";
 
@@ -269,12 +269,21 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
 /* Hashtags: Vorschläge des Modells + Kern-Hashtags, sortiert nach gelerntem
    Gewicht (welche Tags Follower und Reichweite brachten), dazu zwei täglich
    rotierende Entdecker-Tags. Höchstens maxJeBeitrag. */
-export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.floor(Date.now() / 86400000)) {
+/* Gebiets-Hashtags gehören zum Beitrag, nicht in die Rotation: Ein Beitrag zum
+   Schuldrecht mit #öffentlichesrecht ist schlicht falsch ausgezeichnet – er
+   landet bei Leuten, die etwas anderes suchen, und wirkt unsauber. */
+const GEBIET_TAGS = { 1: "#zivilrecht", 2: "#strafrecht", 3: "#öffentlichesrecht" };
+const ALLE_GEBIET_TAGS = Object.values(GEBIET_TAGS);
+
+export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.floor(Date.now() / 86400000), klausur = null) {
   const norm = (h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase().replace(/\s+/g, "");
   const g = strategie?.hashtagGewicht || {};
-  const eigene = [...new Set(vorschlaege.map(norm))].filter((h) => !kern.includes(h)).sort((a, b) => (g[b] ?? 1) - (g[a] ?? 1));
-  const entdecker = CONFIG.hashtags.entdecker || [];
+  const passt = (h) => !ALLE_GEBIET_TAGS.includes(h) || h === GEBIET_TAGS[klausur];
+  const eigene = [...new Set(vorschlaege.map(norm))].filter((h) => !kern.includes(h) && passt(h)).sort((a, b) => (g[b] ?? 1) - (g[a] ?? 1));
+  const entdecker = (CONFIG.hashtags.entdecker || []).filter(passt);
   const neu = entdecker.length ? [entdecker[tag % entdecker.length], entdecker[(tag * 7 + 3) % entdecker.length]] : [];
+  /* Das eigene Gebiet steht immer dabei. */
+  if (klausur && GEBIET_TAGS[klausur]) neu.unshift(GEBIET_TAGS[klausur]);
   const max = CONFIG.hashtags.maxJeBeitrag;
   const liste = [...kern, ...neu];
   for (const h of eigene) if (liste.length < max && !liste.includes(h)) liste.push(h);
@@ -400,7 +409,7 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
   for (const f of folien) for (const k of ["titel", "text", "untertitel"]) if (f[k] && verboten.test(f[k])) f[k] = f[k].replace(verboten, "").replace(/\s{2,}/g, " ").trim();
   if (!CONFIG.marke.website) daten.caption = (daten.caption || "").split("\n").filter((z) => !verboten.test(z)).join("\n");
   const kern = CONFIG.hashtags.kern;
-  const tags = hashtagsWaehlen(daten.hashtags || [], kern, strategie);
+  const tags = hashtagsWaehlen(daten.hashtags || [], kern, strategie, undefined, klausur);
   return {
     format, fach, klausur, fachLabel: FAECHER[fach]?.label || "Examenswissen",
     themaId: thema?.id || null,
@@ -631,7 +640,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       if (o.sprecher) o.sprecher = normGesprochen(o.sprecher);
       return o;
     });
-    const reel = { format: "reel", fach, klausur, fachLabel: FAECHER[fach]?.label, themaId: thema?.id || null, szenen, caption: normKurz((daten.caption || "").trim()), hashtags: [...new Set([...(daten.hashtags || []).map((h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase()), ...CONFIG.hashtags.kern])].slice(0, CONFIG.hashtags.maxJeBeitrag), kurztitel: daten.kurztitel || szenen[0]?.titel || "" };
+    const reel = { format: "reel", fach, klausur, fachLabel: FAECHER[fach]?.label, themaId: thema?.id || null, szenen, caption: normKurz(normGeschrieben((daten.caption || "").trim())), hashtags: [...new Set([...(daten.hashtags || []).map((h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase()), ...CONFIG.hashtags.kern])].slice(0, CONFIG.hashtags.maxJeBeitrag), kurztitel: daten.kurztitel || szenen[0]?.titel || "" };
     /* Prüfung über die Folien-Logik: Szenen als Folien, Sprechertext als Text. */
     const ergebnis = pruefeBeitrag({ folien: [{ art: "titel", titel: szenen[0]?.titel || "" }, ...szenen.slice(1).map((s) => ({ art: "text", titel: s.titel, text: `${s.text || ""} ${s.sprecher}` })), { art: "cta" }], caption: reel.caption, hashtags: reel.hashtags });
     ergebnis.fehler.push(...pruefeHook(szenen[0]));

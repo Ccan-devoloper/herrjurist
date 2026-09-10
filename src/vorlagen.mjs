@@ -233,6 +233,13 @@ h1 em{color:${p.akzent2}}
 .art-titel::after{content:"";position:absolute;left:210px;bottom:-140px;width:660px;height:660px;border-radius:50%;background:rgba(255,255,255,.16);pointer-events:none}
 /* Fotokarte: unteres Drittel, gleiche Rundung wie die uebrigen Karten. Ist ein
    Foto da, entfaellt die Icon-Buehne samt Kreis und Sternen. */
+/* Inhaltsfolien: der Inhalt steht mittig zwischen Kopf und Fusszeile. Kurze
+   Folien klebten sonst oben und liessen die untere Haelfte leer - im Feed
+   sieht das aus wie ein halbfertiger Beitrag. Der Kopf liegt in diesem Stil
+   absolut, deshalb traegt die erste Ueberschrift den oberen Abstand; zusammen
+   mit dem margin-top:auto der Fusszeile teilt sich der freie Platz. Die
+   Titelfolie bleibt oben - dort fuellt das Motiv die untere Haelfte. */
+.folie:not(.art-titel) > h2:first-of-type{margin-top:auto}
 .art-titel:has(.foto)::after,.art-titel:has(.frei)::after{display:none}
 /* Freigestelltes Motiv: unten rechts, laeuft ueber den Rand hinaus. Der
    Schatten setzt es von der Flaeche ab, ohne einen Rahmen zu zeichnen. */
