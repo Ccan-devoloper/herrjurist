@@ -733,3 +733,28 @@ test("Hashtags: fremde Rechtsgebiete werden aussortiert", async () => {
   const zivil = hashtagsWaehlen(["#zivilrecht"], kern, null, undefined, 1);
   assert.ok(zivil.includes("#zivilrecht"), zivil.join(" "));
 });
+
+test("Normen in Mono: Paragrafen, Aufzählungen und Artikel, aber keine Prosa", async () => {
+  const { markieren } = await import("../src/vorlagen.mjs");
+  /* Nach dem Paragrafenzeichen steht ein geschütztes Leerzeichen, damit es
+     nicht allein am Zeilenende hängt - deshalb hier \s statt eines Leerzeichens. */
+  assert.match(markieren("Nach § 280 Abs. 1 BGB haftet er"), /<code>§\s280 Abs\.\s1 BGB<\/code>/);
+  assert.match(markieren("§§ 61, 62 VwGO regeln die Fähigkeit"), /<code>§§\s61, 62 VwGO<\/code>/);
+  assert.match(markieren("Art. 20 Abs. 3 GG folgt"), /<code>Art\.\s20 Abs\.\s3 GG<\/code>/);
+  /* Ohne Paragrafenzeichen ist es ein Satz, kein Zitat. */
+  assert.equal(markieren("Der Antrag ist zulässig, die Klage nach der ZPO auch").includes("<code>"), false);
+});
+
+test("Mindset-Reels laufen auf Fächern, die es in diesem Kanal gibt", async () => {
+  const { MINDSET_THEMEN } = await import("../src/kalender.mjs");
+  const { FAECHER } = await import("../src/inhalte.mjs");
+  for (const m of MINDSET_THEMEN) assert.ok(FAECHER[m.fach], `Fach fehlt: ${m.fach}`);
+  assert.ok(MINDSET_THEMEN.every((m) => [1, 2, 3].includes(m.klausur)));
+});
+
+test("Reel-Fußzeile trägt das Rechtsgebiet, nicht den Klausurtag", async () => {
+  const { fussRechts } = await import("../src/vorlagen.mjs");
+  assert.equal(fussRechts({ klausur: 1 }), "Zivilrecht");
+  assert.equal(fussRechts({ klausur: 3 }), "Öffentliches Recht");
+  assert.equal(fussRechts({ fach: "methodik", klausur: 2 }), "Klausurtechnik");
+});

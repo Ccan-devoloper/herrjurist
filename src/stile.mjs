@@ -38,8 +38,8 @@ export const STILE = {
     ecken: "6px",
   },
 
-  /* D · Bunt – ganze Kachel in der Farbe des Klausurtags (Tag 1 Blau, Tag 2
-     Orange, Tag 3 Grün), Titel in Pillen, handschriftlicher Hinweis, Bühne mit
+  /* D · Bunt – ganze Kachel in der Farbe des Rechtsgebiets (Zivilrecht Blau, Strafrecht
+     Orange, Öffentliches Recht Grün), Titel in Pillen, handschriftlicher Hinweis, Bühne mit
      großem Icon, §-Badge und Karte. Vorbild: bunte Studygram-Profile. */
   bunt: {
     name: "Bunt",

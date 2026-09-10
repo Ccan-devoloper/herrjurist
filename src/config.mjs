@@ -20,7 +20,8 @@ export const CONFIG = {
        (Schachbrett im Profil). Für andere Stile ohne Wirkung. */
     stilWechsel: env("IG_STIL_WECHSEL", "true") === "true",
     /* Markenkern „sortiert nach Klausurtag“: jede Kachel trägt die feste Farbe
-       ihres Prüfungstags (Tag 1 Blau, Tag 2 Orange, Tag 3 Grün) – farbiger
+       ihres Rechtsgebiets (Zivilrecht Blau, Strafrecht Orange, Öffentliches
+       Recht Grün) – farbiger
        Balken oben, Akzente, Pille, Fußzeile. Ersetzt den Schwarz/Weiß-Wechsel. */
     farbeJeKlausur: env("IG_FARBE_JE_KLAUSUR", "true") === "true",
     zeitzone: "Europe/Berlin",
@@ -184,7 +185,7 @@ export const CONFIG = {
     stimmeErkundung: Number(env("IG_STIMME_ERKUNDUNG", "0.4")),  // 0 = nur ausnutzen, größer = mehr ausprobieren
     stimmeMessungen: Number(env("IG_STIMME_MESSUNGEN", "6")),    // so viele gemessene Reels je Stimme, bevor entschieden wird
     stimmeVorsprung: Number(env("IG_STIMME_VORSPRUNG", "0.25")), // so viel muss die Beste vor der Zweiten liegen
-    stimmeProbeText: env("IG_STIMME_PROBE", "Achtzig Prozent scheitern an dieser Frage. Nach Paragraf 7 Absatz 1 Satz 1 EStG beginnt die Abschreibung im Monat der Anschaffung – nicht im Januar. Merk dir das für Tag 2."),
+    stimmeProbeText: env("IG_STIMME_PROBE", "Achtzig Prozent scheitern an dieser Frage. Nach Paragraf 123 Absatz 5 Verwaltungsgerichtsordnung ist die einstweilige Anordnung gesperrt, wenn Paragraf 80 Absatz 5 greift – nicht umgekehrt. Merk dir das für die Zulässigkeit."),
     fps: 30,
     maxSekunden: 90,
     hintergrundmusik: env("IG_REEL_MUSIK", "true") === "true",  // dezentes, synthetisch erzeugtes Klangbett
