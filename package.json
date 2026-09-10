@@ -1,0 +1,21 @@
+{
+  "name": "examenscampus-instagram-bot",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vollautomatische Instagram-Beiträge und -Stories für den Examenscampus Steuerberaterexamen",
+  "scripts": {
+    "lauf": "node src/lauf.mjs",
+    "planen": "node src/lauf.mjs --nur-planen",
+    "rendern": "node src/lauf.mjs --nur-rendern",
+    "beispiele": "node src/beispiele.mjs",
+    "token:pruefen": "node src/instagram.mjs --pruefen",
+    "stimmen": "node bin/stimmen.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.123.0",
+    "nodemailer": "^6.10.1",
+    "playwright": "^1.62.1"
+  }
+}
