@@ -18,6 +18,7 @@ import { datumLesbar, tageBis } from "./zeit.mjs";
 import { erfassen, budgetPruefen, BudgetFehler } from "./kosten.mjs";
 import { pruefeFakten } from "./faktencheck.mjs";
 import { hookWaehlen as hookMusterWaehlen, hookAnleitung, pruefeHook, hookTypErkennen } from "./hooks.mjs";
+import { dauerWaehlen } from "./insights.mjs";
 import { normKurz, normGesprochen, felderKuerzen, NORM_REGEL, NORM_REGEL_STIMME } from "./normen.mjs";
 import { hookTyp } from "./insights.mjs";
 import { phase } from "./kalender.mjs";
@@ -96,7 +97,7 @@ export const FORMATE = {
   },
   aktuell: {
     label: "Aktuell",
-    anleitung: "Folie 1: die Neuigkeit als Frage oder Schlagzeile (Gesetzesänderung, BFH-Urteil, BMF-Schreiben, Prüfungstermine, Statistik). Folie 2: was genau passiert ist, in Punkten mit Datum/Aktenzeichen. Folie 3: was das fürs Examen bedeutet. Letzte Folie: CTA. Die Quelle wird in der Caption genannt (Gericht/Behörde, Datum, Aktenzeichen oder Dokumentname).",
+    anleitung: "Folie 1: die Neuigkeit als Frage oder Schlagzeile (Gesetzesänderung, Entscheidung von BGH, BVerfG, BVerwG oder EuGH, Prüfungstermine, Statistik). Folie 2: was genau passiert ist, in Punkten mit Datum/Aktenzeichen. Folie 3: was das fürs Examen bedeutet. Letzte Folie: CTA. Die Quelle wird in der Caption genannt (Gericht/Behörde, Datum, Aktenzeichen oder Dokumentname).",
     folien: ["titel", "text", "text", "cta"],
   },
 };
@@ -109,6 +110,12 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Jede Aussage muss juristisch korrekt sein (Rechtsstand 2026). Normen immer zitieren. ${NORM_REGEL} Wenn du dir bei einem Detail nicht sicher bist, lass es weg, statt zu raten.
 - Kurze Sätze. Auf einer Kachel wird gelesen, nicht studiert.
 - Keine Emojis auf den Folien. In der Caption höchstens 3.
+
+## Wie das Examen wirklich abläuft (häufige Fehlgriffe)
+- Es gibt KEINE feste Reihenfolge der Klausuren. Welches Rechtsgebiet an welchem Tag drankommt, entscheidet jedes Land und jeder Durchgang neu. Verboten sind deshalb Formulierungen wie „in der zweiten Klausurenrunde“, „am zweiten Prüfungstag“, „die dritte Klausur“ oder „traditionell kommt X zuerst“. Schreib stattdessen „in den Zivilrechtsklausuren“, „ein Dauerbrenner im Öffentlichen Recht“, „kommt regelmäßig dran“.
+- Es gibt KEINE festen Punktzahlen je Prüfungspunkt. Bewertet wird die Klausur als Ganzes (0 bis 18 Notenpunkte), nicht Position für Position wie in einer Steuerberaterklausur. Verboten sind deshalb „hier verlierst du die meisten Punkte“, „das bringt 5 Punkte“, „Punkteverteilung“, „Textziffer“. Schreib stattdessen, was der Fehler tatsächlich anrichtet: „hier kippt die ganze Anspruchsgrundlage“, „damit ist der Aufbau hin“, „das lesen Korrektoren als Verständnisfehler“.
+- Notenpunkte als Ergebnis einer Klausur zu nennen („eine Neun“, „Prädikat ab 9 Punkten“) ist in Ordnung – gemeint ist nur die Punktzahl je Prüfungsschritt, die es nicht gibt.
+- Keine Rechenwege, keine Buchungssätze, keine Steuerfächer. Das ist ein Kanal zum juristischen Staatsexamen.
 
 ## Eigenständigkeit (sehr wichtig)
 - Du bekommst ein Themen-Skelett (Frage, Normen, Stichpunkte). Formuliere ALLES neu, in eigenen Worten und eigener Struktur. Übernimm keine Sätze, keine Aufzählungsreihenfolgen, keine Beispielzahlen.
@@ -439,7 +446,7 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
 export async function beitragSchreiben({ format, thema, datum, recherche, wochenThemen, anlass, strategie }) {
   if (process.env.IG_AUTOR === "beispiele") return beispielBeitrag(format, thema);
   const spec = FORMATE[format] || FORMATE.pruefungsfrage;
-  const fach = thema?.fach || recherche?.fach || "bilanz";
+  const fach = thema?.fach || recherche?.fach || "methodik";
   const klausur = FAECHER[fach]?.klausur || 3;
   const sperr = korpus().namen;
   let feedback = "";
@@ -527,7 +534,7 @@ async function webRecherche(frage, zweck = "recherche") {
   const text = textAus(response);
   const fachTreffer = text.match(/Fach\s*[:：]\s*(ao|ust|erbst|kst|istr|bilanz|persg)/i);
   const quellen = [...new Set((text.match(/https?:\/\/[^\s)>\]]+/g) || []))].slice(0, 4);
-  return { notizen: text, quellen, fach: fachTreffer ? fachTreffer[1].toLowerCase() : "bilanz", titel: (text.match(/Titel\s*[:：]\s*(.+)/i) || [])[1]?.trim() || "" };
+  return { notizen: text, quellen, fach: fachTreffer ? fachTreffer[1].toLowerCase() : "methodik", titel: (text.match(/Titel\s*[:：]\s*(.+)/i) || [])[1]?.trim() || "" };
 }
 
 /**
@@ -565,7 +572,7 @@ Alles in eigenen Worten, juristisch korrekt, mit Norm. Nicht benötigte Felder n
   const nachSlot = new Map(daten.stories.map((s) => [s.slot, s]));
   return plan.map((p) => {
     const s = nachSlot.get(p.slot) || {};
-    const o = { slot: p.slot, art: p.art, fach: p.thema?.fach || "bilanz", klausur: p.thema?.klausur || 3 };
+    const o = { slot: p.slot, art: p.art, fach: p.thema?.fach || "methodik", klausur: p.thema?.klausur || 3 };
     for (const [k, v] of Object.entries(s)) if (v != null && k !== "slot" && k !== "art") o[k] = v;
     if (o.icon && !ICONS[o.icon]) o.icon = "paragraf";
     if (p.art === "countdown") { o.zahl = String(p.tageBisExamen); o.fortschritt = Math.round(100 - Math.min(100, p.tageBisExamen / 150 * 100)); o.ueberzeile = "Noch"; }
@@ -606,27 +613,45 @@ const REEL_SCHEMA = {
   required: ["szenen", "caption", "hashtags", "kurztitel"],
 };
 
-const REEL_ANLEITUNG = `## Reel (Video 45–60 Sekunden, Hochformat, mit Sprecherstimme)
-Du schreibst ein Skript aus 6–8 Szenen. Jede Szene hat einen kurzen Bildschirmtext und einen Sprechertext.
-- Szenenarten: hook (Frage/Aufhänger, Folge 1), schritt (nummeriert, für Prüfschritte) oder punkt (unnummeriert), merke (Merksatz + norm), cta (Abschluss mit Ausblick auf das nächste Thema).
+/* Sprechtempo einer deutschen Vorlesestimme: rund 2,4 Wörter je Sekunde.
+   Aus dem Zeitfenster wird daraus eine Wortzahl - eine Sekundenangabe allein
+   kann ein Sprachmodell nicht einhalten, eine Wortzahl schon. */
+const WOERTER_JE_SEKUNDE = 2.4;
+
+function laengenAnleitung(von, bis, lang) {
+  const wVon = Math.round(von * WOERTER_JE_SEKUNDE), wBis = Math.round(bis * WOERTER_JE_SEKUNDE);
+  const szenen = lang ? "6–9" : von >= 60 ? "6–8" : von >= 45 ? "5–7" : "4–6";
+  return `## Länge
+Dieses Reel soll ${von}–${bis} Sekunden dauern, also insgesamt ${wVon}–${wBis} gesprochene Wörter in ${szenen} Szenen. Halte dich daran: Zu kurz wirkt abgehackt, zu lang verliert die Zuschauer.
+Die Länge ist kein Sparzwang. Wenn das Thema einen Schritt mehr braucht, nimm die Sekunden – aber keine Füllsätze, keine Wiederholungen, keine Begrüßung.`;
+}
+
+const REEL_ANLEITUNG = `## Reel (Hochformat, mit Sprecherstimme)
+Du schreibst ein Skript aus Szenen. Jede Szene hat einen kurzen Bildschirmtext und einen Sprechertext.
+- Szenenarten: hook (Frage/Aufhänger, Folge 1), schritt (nummeriert, für Prüfschritte) oder punkt (unnummeriert), merke (Merksatz + norm), cta (Abschluss).
 - Bildschirmtext: titel maximal 7 Wörter, text maximal 14 Wörter. Was gesprochen wird, steht NICHT wortgleich auf dem Bildschirm – der Bildschirm zeigt die Essenz, die Stimme erklärt.
 - Sprechertext: So, wie ein Mensch spricht, nicht wie ein Lehrbuch. Kurze Hauptsätze, direkte Ansprache, gelegentlich ein Gedankenstrich als Pause, ein „Also:“, „Kurz gesagt:“, „Und jetzt der Punkt, den fast alle übersehen.“ Keine Klammern, keine Abkürzungen (schreibe „Paragraf zweihundertneunundvierzig Absatz eins“ als „Paragraf 249 Absatz 1“ – die Stimme liest Ziffern korrekt). Keine Aufzählungszeichen. Je Szene 1–3 Sätze, insgesamt 110–150 Wörter.
 - Szene 1 ist der Hook. Wie er zu bauen ist, steht unten in einem eigenen Abschnitt; er entscheidet über die Reichweite des ganzen Reels.
-- cta: Ausblick auf das nächste Thema und Aufforderung zu folgen, ohne Website, ohne Produkt.
+- cta: Der Kern in einem Satz, dann die Aufforderung zu folgen – ohne Website, ohne Produkt. Kündige NICHTS an: kein „Nächstes Mal zeige ich dir …“, kein „Im nächsten Reel …“, kein „Teil 2 folgt“. Was hier steht, muss auch in einem Jahr noch stimmen.
 - icon nur beim hook.`;
 
 /* Reel-Skript schreiben (Szenen mit Bildschirm- und Sprechertext). */
 export async function reelSchreiben({ thema, datum, lang = false, anlass = null, strategie = null }) {
-  const fach = thema?.fach || "bilanz";
+  const fach = thema?.fach || "methodik";
   const klausur = FAECHER[fach]?.klausur || 3;
   const sperr = korpus().namen;
   /* Muster des Tages – rotiert, bevorzugt aber, was gemessen besser lief. */
   const hookMuster = hookMusterWaehlen(datum, strategie);
+  /* Die Ziellänge kommt aus der Lernschleife: Jedes Fenster wird erst ein paar
+     Mal ausprobiert, danach gewinnt, was gemessen besser lief. Ein Reel muss
+     nicht kurz sein - braucht ein Prüfschema 80 Sekunden, bekommt es sie. */
+  const [von, bis] = dauerWaehlen(datum, strategie, { min: lang ? 60 : 0 });
   let feedback = "", letzter = null;
   for (let versuch = 1; versuch <= CONFIG.ki.maxVersuche; versuch++) {
     const user = [
-      `Datum: ${datumLesbar(datum)}. Format: ${lang ? "Reel (lang, 45–60 s, 6–8 Szenen, ein komplettes Prüfschema)" : "Kurz-Reel (20–35 s, 4–5 Szenen, genau EIN Aha-Punkt: eine Frage, die Antwort, warum, Merksatz)"}.`,
-      REEL_ANLEITUNG + (lang ? "" : "\nKurzfassung: insgesamt 60–90 gesprochene Wörter, Bildschirmtitel maximal 5 Wörter."),
+      `Datum: ${datumLesbar(datum)}. Format: ${lang ? `Reel mit einem kompletten Prüfschema, ${von}–${bis} Sekunden` : `Reel, ${von}–${bis} Sekunden`}.`,
+      laengenAnleitung(von, bis, lang),
+      REEL_ANLEITUNG,
       hookAnleitung(hookMuster),
       `\n## Normen\n${NORM_REGEL}\n${NORM_REGEL_STIMME}`,
       anlass ? `\n## Anlass\n${anlass.titel}: ${anlass.kontext}` : "",

@@ -364,7 +364,7 @@ test("Tagesdeckel: Verbrauch wird gezählt, weitere Aufrufe werden gestoppt", as
   assert.equal(k.budgetFrei(), true);
 });
 
-test("Reel: Animation rotiert täglich, Untertitel-Blöcke stehen fest", async () => {
+test("Reel: Animation rotiert täglich, Untertitel zeigen ganze Sätze", async () => {
   const { animationFuer, untertitelBloecke } = await import("../src/reel.mjs");
   const a = ["2026-09-06", "2026-09-07", "2026-09-08", "2026-09-09"].map(animationFuer);
   assert.deepEqual(new Set(a.slice(0, 3)).size, 3, a.join(","));
@@ -372,9 +372,18 @@ test("Reel: Animation rotiert täglich, Untertitel-Blöcke stehen fest", async (
   const { woerterVerteilen } = await import("../src/stimme.mjs");
   const szenen = [{ index: 0, woerter: woerterVerteilen("Erstens: Gibt es eine Verpflichtung nach außen? Ja, gegenüber einem Dritten.", 6, 0) }];
   const b = untertitelBloecke(szenen);
-  assert.ok(b.every((x) => x.w.length >= 2 && x.w.length <= 5), JSON.stringify(b.map((x) => x.w.length)));
+  /* Zwei Sätze, also zwei Blöcke - der zweite ist so kurz, dass er nicht bricht. */
+  assert.equal(b.length, 2, JSON.stringify(b.map((x) => x.text)));
+  assert.equal(b[0].text, "Erstens: Gibt es eine Verpflichtung nach außen?");
+  assert.equal(b[1].text, "Ja, gegenüber einem Dritten.");
   assert.ok(b.every((x, i) => i === 0 || x.von >= b[i - 1].bis - 1e-9));
-  assert.equal(b[0].w[0].t, "Erstens:");
+  /* Ein sehr langer Satz bricht, sonst passt er nicht auf die Karte. */
+  const lang = [{ index: 0, woerter: woerterVerteilen("Die Behörde darf den Bescheid nur zurücknehmen, wenn das Vertrauen des Begünstigten nicht schutzwürdig ist und die Jahresfrist noch läuft.", 9, 0) }];
+  const bl = untertitelBloecke(lang);
+  assert.ok(bl.length >= 2, JSON.stringify(bl.map((x) => x.text)));
+  assert.ok(bl.every((x) => x.text.split(" ").length <= 17), JSON.stringify(bl.map((x) => x.text.split(" ").length)));
+  /* Kein Wort geht verloren. */
+  assert.equal(bl.map((x) => x.text).join(" "), lang[0].woerter.map((w) => w.wort).join(" "));
 });
 
 test("Reel: Hintergrund-Clip rotiert täglich, ohne Verzeichnis keine Auswahl", async () => {
@@ -580,8 +589,14 @@ test("Normen stehen in der Klausur-Zitierweise, die Stimme liest sie ausgeschrie
   assert.equal(normKurz("§§ 54 ff. VwVfG"), "§§ 54 ff. VwVfG");
   assert.equal(normKurz("Nach § 1006 BGB wird vermutet."), "Nach § 1006 BGB wird vermutet.");
 
-  /* Für die Stimme ausgeschrieben, sonst liest sie „Abs Punkt“. */
-  assert.equal(normGesprochen("§ 80 Abs. 1 S. 5 VwGO"), "Paragraf 80 Absatz 1 Satz 5 VwGO");
+  /* Für die Stimme ausgeschrieben, sonst liest sie „Abs Punkt“. Kürzel mit
+     gemischter Schreibweise werden dazu ausgeschrieben – „VwGO“ kam als
+     „Vau-Weh-Geh-O“ zerhackt heraus. */
+  assert.equal(normGesprochen("§ 80 Abs. 1 S. 5 VwGO"), "Paragraf 80 Absatz 1 Satz 5 Verwaltungsgerichtsordnung");
+  assert.equal(normGesprochen("§ 48 Abs. 2 VwVfG"), "Paragraf 48 Absatz 2 Verwaltungsverfahrensgesetz");
+  /* Saubere Initialen liest jede Stimme richtig und bleiben stehen. */
+  assert.equal(normGesprochen("§ 280 Abs. 1 BGB"), "Paragraf 280 Absatz 1 BGB");
+  assert.equal(normGesprochen("§ 212 StGB"), "Paragraf 212 StGB");
   assert.equal(normGesprochen("Art. 2 Abs. 1 GG"), "Artikel 2 Absatz 1 GG");
   assert.match(normGesprochen("§ 823 Abs. 1 BGB i.V.m. § 31 BGB"), /in Verbindung mit/);
   assert.match(normGesprochen("Nach h.M. gilt das."), /herrschende Meinung/);
@@ -765,4 +780,44 @@ test("Reel-Fußzeile trägt das Rechtsgebiet, nicht den Klausurtag", async () =>
   assert.equal(fussRechts({ klausur: 1 }), "Zivilrecht");
   assert.equal(fussRechts({ klausur: 3 }), "Öffentliches Recht");
   assert.equal(fussRechts({ fach: "methodik", klausur: 2 }), "Klausurtechnik");
+});
+
+test("Prüfung weist Vorstellungen zurück, die es nur im Steuerberaterexamen gibt", async () => {
+  const { pruefeBeitrag } = await import("../src/pruefung.mjs");
+  const abgelehnt = (t) => pruefeBeitrag({ caption: t }).fehler.some((f) => f.includes(t.match(/\S.*\S/)[0].slice(0, 6)) || /Staatsexamen|Reihenfolge|Klausur|Ankündigung/.test(f));
+  for (const t of ["Der Klassiker in der zweiten Klausurenrunde", "Hier verlierst du die meisten Punkte", "Das kostet dich 5 Punkte", "Am zweiten Prüfungstag kommt das dran", "Nächstes Mal zeige ich dir den Widerruf", "Teil 2 folgt"]) {
+    assert.ok(abgelehnt(t), `nicht erkannt: ${t}`);
+  }
+  /* Notenpunkte als Klausurergebnis und „Punkte sammeln“ bleiben erlaubt –
+     nur die Punktzahl je Prüfungsschritt gibt es im Staatsexamen nicht. */
+  for (const t of ["Mit 9 Notenpunkten hast du bestanden", "Ein Dauerbrenner in den Zivilrechtsklausuren", "Punkte sammeln, wo es leichtfällt", "Folg mir für den Unterschied zur Rücknahme"]) {
+    const f = pruefeBeitrag({ caption: t }).fehler.filter((x) => /Staatsexamen|Reihenfolge|Ankündigung|Punkte/.test(x));
+    assert.equal(f.length, 0, `zu Unrecht beanstandet: ${t} → ${f.join(" | ")}`);
+  }
+});
+
+test("Reel-Länge: unerforschte Fenster zuerst, danach entscheidet die Messung", async () => {
+  const { dauerFenster, dauerWaehlen, strategieAbleiten } = await import("../src/insights.mjs");
+  assert.equal(dauerFenster(32), "30-45");
+  assert.equal(dauerFenster(70), "60-80");
+  /* Auch was über dem letzten Fenster liegt, zählt mit – sonst fiele ein Reel,
+     das ein paar Sekunden überzieht, aus der Messung. */
+  assert.equal(dauerFenster(140), "80-105");
+  assert.equal(dauerFenster(0), null);
+  /* Ohne Messwerte rotieren alle vier Fenster über die Tage. */
+  const daten = ["2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13"];
+  const tage = daten.map((d) => dauerWaehlen(d).join("-"));
+  assert.equal(new Set(tage).size, 4, tage.join(" "));
+  /* Ein langes Reel bekommt nie ein kurzes Fenster. */
+  for (const d of daten) assert.ok(dauerWaehlen(d, null, { min: 60 })[1] > 60, `${d}: ${dauerWaehlen(d, null, { min: 60 }).join("-")}`);
+  /* Sind alle Fenster durchgemessen, gewinnt das mit den besseren Zahlen. */
+  const eintraege = [];
+  for (let i = 0; i < 24; i++) {
+    const dauer = [35, 50, 70, 90][i % 4];
+    eintraege.push({ art: "beitrag", format: "reel", dauer, insights: { reach: 1000, follows: dauer === 70 ? 9 : 1, saved: 2 } });
+  }
+  const st = strategieAbleiten({ veroeffentlicht: eintraege });
+  assert.ok(st.dauerGewicht["60-80"] > st.dauerGewicht["30-45"], JSON.stringify(st.dauerGewicht));
+  const gewaehlt = ["2026-09-10", "2026-09-11", "2026-09-12"].map((d) => dauerWaehlen(d, st).join("-"));
+  assert.ok(gewaehlt.every((f) => f === "60-80"), gewaehlt.join(" "));
 });

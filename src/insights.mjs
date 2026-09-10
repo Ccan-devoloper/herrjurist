@@ -80,6 +80,44 @@ export function hashtagGewichte(eintraege) {
 }
 
 /* Aus dem Ledger (Einträge mit insights) die Gewichte ableiten. */
+/* Ziellänge der Reels ---------------------------------------------------- */
+
+/** Das Fenster, in das eine gemessene Dauer fällt („45-60“), oder null. */
+export function dauerFenster(sekunden) {
+  if (!(sekunden > 0)) return null;
+  const f = CONFIG.reel.dauerFenster.find(([a, b]) => sekunden >= a && sekunden < b);
+  /* Alles über dem letzten Fenster zählt zum letzten - sonst fiele ein Reel,
+     das ein paar Sekunden überzieht, aus der Messung heraus. */
+  const letzte = CONFIG.reel.dauerFenster.at(-1);
+  const [a, b] = f || (sekunden >= letzte[0] ? letzte : CONFIG.reel.dauerFenster[0]);
+  return `${a}-${b}`;
+}
+
+/**
+ * Welches Längenfenster als Nächstes drankommt.
+ *
+ * Solange ein Fenster weniger als dauerMessungen veröffentlichte Reels hat,
+ * ist es unerforscht und wird bevorzugt – erst danach entscheidet, was
+ * gemessen besser lief. Bei Gleichstand rotiert das Datum, damit der Kanal
+ * nicht auf einer Länge festfährt.
+ *
+ * `min` schneidet die kurzen Fenster ab: Ein komplettes Prüfschema braucht
+ * seine Zeit, da wählt der Planer eine Untergrenze und lässt die Lernschleife
+ * nur noch darüber entscheiden.
+ */
+export function dauerWaehlen(datum, strategie = null, { min = 0 } = {}) {
+  const erlaubt = CONFIG.reel.dauerFenster.filter(([, b]) => b > min);
+  const fenster = (erlaubt.length ? erlaubt : CONFIG.reel.dauerFenster).map(([a, b]) => `${a}-${b}`);
+  const messungen = strategie?.dauerMessungen || {};
+  const gewicht = strategie?.dauerGewicht || {};
+  const tag = Math.floor(Date.parse(`${datum}T12:00:00Z`) / 86400000);
+  const offen = fenster.filter((f) => (messungen[f] || 0) < CONFIG.reel.dauerMessungen);
+  const auswahl = offen.length ? offen : fenster.filter((f) => (gewicht[f] ?? 1) >= Math.max(...fenster.map((x) => gewicht[x] ?? 1)) - 0.15);
+  const liste = auswahl.length ? auswahl : fenster;
+  const gewaehlt = liste[((tag % liste.length) + liste.length) % liste.length];
+  return CONFIG.reel.dauerFenster.find(([a, b]) => `${a}-${b}` === gewaehlt) || CONFIG.reel.dauerFenster[0];
+}
+
 export function strategieAbleiten(ledger, konto = {}) {
   const eintraege = (ledger.veroeffentlicht || []).filter((e) => e.art === "beitrag" && e.insights && punkte(e.insights) != null);
   const strategie = { stand: new Date().toISOString().slice(0, 10), beitraege: eintraege.length, formatGewicht: {}, fachGewicht: {}, hookGewicht: {}, besteStunden: null, follower: konto.follower ?? null, reichweite7: konto.reichweite7 ?? null };
@@ -99,6 +137,21 @@ export function strategieAbleiten(ledger, konto = {}) {
        Rotation in hooks.mjs davon lernt. */
     strategie.hookGewicht = { ...gruppe("hookTyp"), ...gruppe("hookMuster") };
   }
+  /* Reel-Länge: Wie viele Reels je Fenster gemessen sind und wie sie liefen.
+     Die Messungen stehen auch dann schon zur Verfügung, wenn es für Gewichte
+     noch zu wenige Beiträge sind - dauerWaehlen braucht sie, um überhaupt
+     erst alle Fenster einmal auszuprobieren. */
+  const reels = eintraege.filter((e) => e.format === "reel" && e.dauer > 0);
+  strategie.dauerMessungen = {};
+  for (const e of reels) { const f = dauerFenster(e.dauer); if (f) strategie.dauerMessungen[f] = (strategie.dauerMessungen[f] || 0) + 1; }
+  if (reels.length >= 4) {
+    const mittelReel = reels.reduce((a, e) => a + punkte(e.insights), 0) / reels.length || 1;
+    const g = {};
+    for (const e of reels) { const f = dauerFenster(e.dauer); if (f) (g[f] ||= []).push(punkte(e.insights)); }
+    strategie.dauerGewicht = {};
+    for (const [f, v] of Object.entries(g)) if (v.length >= 2) strategie.dauerGewicht[f] = Math.max(0.5, Math.min(2, (v.reduce((a, b) => a + b, 0) / v.length) / mittelReel));
+  } else strategie.dauerGewicht = {};
+
   const ht = hashtagGewichte(eintraege);
   strategie.hashtagGewicht = ht.gewicht;
   strategie.hashtagFolgen = ht.folgen;

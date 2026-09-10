@@ -70,16 +70,62 @@ const GESPROCHEN = [
   [/\ba\.\s?A\./g, "andere Ansicht"],
 ];
 
+/* Gesetzeskürzel, die eine Sprachausgabe nicht buchstabieren kann. „VwVfG“
+   wurde als „Vau-Weh-Vau-Ef-Geh“ zerhackt; gesagt wird im Hörsaal ohnehin
+   „Verwaltungsverfahrensgesetz“. Nur die Kürzel mit gemischter Schreibweise
+   stehen hier: Saubere Initialen wie BGB, ZPO, StGB oder GG liest jede Stimme
+   richtig, und ausgeschrieben klängen sie umständlich. */
+const GESETZE = {
+  VwVfG: "Verwaltungsverfahrensgesetz",
+  VwGO: "Verwaltungsgerichtsordnung",
+  VwVG: "Verwaltungsvollstreckungsgesetz",
+  BauGB: "Baugesetzbuch",
+  BauNVO: "Baunutzungsverordnung",
+  GewO: "Gewerbeordnung",
+  PolG: "Polizeigesetz",
+  POG: "Polizei- und Ordnungsbehördengesetz",
+  GVG: "Gerichtsverfassungsgesetz",
+  GmbHG: "GmbH-Gesetz",
+  AktG: "Aktiengesetz",
+  InsO: "Insolvenzordnung",
+  ArbGG: "Arbeitsgerichtsgesetz",
+  BetrVG: "Betriebsverfassungsgesetz",
+  KSchG: "Kündigungsschutzgesetz",
+  TzBfG: "Teilzeit- und Befristungsgesetz",
+  FamFG: "Gesetz über das Verfahren in Familiensachen",
+  WEG: "Wohnungseigentumsgesetz",
+  ProdHaftG: "Produkthaftungsgesetz",
+  StVG: "Straßenverkehrsgesetz",
+  StVO: "Straßenverkehrsordnung",
+  OWiG: "Ordnungswidrigkeitengesetz",
+  JGG: "Jugendgerichtsgesetz",
+  BeurkG: "Beurkundungsgesetz",
+  GBO: "Grundbuchordnung",
+  ErbbauRG: "Erbbaurechtsgesetz",
+  MarkenG: "Markengesetz",
+  UrhG: "Urheberrechtsgesetz",
+  PatG: "Patentgesetz",
+  EGBGB: "Einführungsgesetz zum Bürgerlichen Gesetzbuch",
+  GRCh: "Grundrechtecharta",
+  EMRK: "Europäische Menschenrechtskonvention",
+  DSGVO: "Datenschutzgrundverordnung",
+  BDSG: "Bundesdatenschutzgesetz",
+  StPO: "Strafprozessordnung",
+};
+/* Lange Kürzel zuerst, sonst schlägt VwVG innerhalb von VwVfG zu. */
+const GESETZ_MUSTER = new RegExp(`\\b(${Object.keys(GESETZE).sort((a, b) => b.length - a.length).join("|")})\\b`, "g");
+
 /**
  * Fassung für die Stimme: Abkürzungen ausgeschrieben, damit die Sprachausgabe
  * „Paragraf 80 Absatz 1 Satz 5“ sagt statt „Paragraf 80 Abs Punkt 1“.
- * Die Gesetzeskürzel (BGB, StGB, VwGO …) bleiben stehen; sie werden korrekt
- * gelesen.
+ * Gesetzeskürzel, die sich buchstabieren lassen (BGB, StGB, ZPO …), bleiben
+ * stehen; die anderen werden ausgeschrieben.
  */
 export function normGesprochen(text) {
   if (typeof text !== "string" || !text) return text;
   let out = text;
   for (const [muster, ersatz] of GESPROCHEN) out = out.replace(muster, ersatz);
+  out = out.replace(GESETZ_MUSTER, (k) => GESETZE[k]);
   return out.replace(/\s{2,}/g, " ").replace(/\s+([,.;:])/g, "$1").trim();
 }
 
