@@ -914,4 +914,42 @@ export const THEMEN = [
   { fach: "stpo", titel: "Revisionsgutachten: Verfahrensrüge", normen: ["§§ 337 ff. StPO"], prioritaet: "hoch", typ: "modul", examen: "2. Examen", quelle: "S-AS-10" },
   { fach: "stpo", titel: "Revisionsgutachten: Sachrüge", normen: ["§ 337 StPO"], prioritaet: "hoch", typ: "schema", examen: "2. Examen", quelle: "S-AS-11" },
   { fach: "stpo", titel: "Aktenvortrag Strafrecht", normen: ["StGB; StPO"], prioritaet: "hoch", typ: "karteikarte", examen: "2. Examen", quelle: "S-AS-12" },
+
+  /* ---- Klausur- und Lernmethodik (aus dem Handbuch, M-METH) -------------
+     Ohne festes Rechtsgebiet: Obersatztechnik gilt überall. Jeder Beitrag
+     erklärt die Methode an EINEM konkreten Beispiel – abstrakte Ratschläge
+     kann jeder geben, den Unterschied macht das gezeigte Beispiel.
+
+     Nicht übernommen aus diesem Abschnitt sind die Einträge M-METH-13 bis 19:
+     Carousel-Formel, Reel-Formel, Quiz-Formel, Case-Brief, Zitierstandard,
+     Landesrecht-Kennzeichnung und Update-Routine. Das sind Redaktionsregeln
+     für den Kanal, kein Stoff fürs Publikum – ein Beitrag darüber wäre, als
+     würde man seinen Redaktionsplan veröffentlichen. Wo sie uns betreffen,
+     stehen sie im Auftrag an das Modell (autor.mjs). */
+  { fach: "methodik", titel: "Anspruchsgrundlagen finden statt Probleme erraten", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-01",
+    kern: { lernziele: ["Reihenfolge der Anspruchsgrundlagen: vertraglich, quasivertraglich, dinglich, deliktisch, bereicherungsrechtlich", "Wer die Reihenfolge kennt, muss nichts erraten"] } },
+  { fach: "methodik", titel: "Obersatztechnik: präzise und subsumtionsfähig formulieren", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-02",
+    kern: { lernziele: ["Ein Obersatz nennt Anspruchsteller, Anspruchsgegner, Ziel und Norm", "Wer im Obersatz schludert, subsumiert ins Leere"] } },
+  { fach: "methodik", titel: "Definitionen lernen: Wortlaut plus Funktion", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-03",
+    kern: { lernziele: ["Eine Definition ohne ihre Funktion ist auswendig gelernt, nicht verstanden", "Beispiel: Warum die Wegnahme über den Gewahrsam definiert wird"] } },
+  { fach: "methodik", titel: "Streitstände nur dort, wo sie entscheidungserheblich sind", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-04",
+    kern: { lernziele: ["Erst prüfen, ob die Ansichten zu unterschiedlichen Ergebnissen führen", "Führen sie zum selben Ergebnis: ein Satz, kein Streitaufbau"] } },
+  { fach: "methodik", titel: "Gutachtenstil und Urteilsstil richtig einsetzen", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-05",
+    kern: { lernziele: ["Gutachtenstil im ersten Examen, Urteilsstil in der Assessorklausur", "Auch im Gutachten gilt: Unproblematisches im Urteilsstil abhandeln"] } },
+  { fach: "methodik", titel: "Schwerpunkte setzen, wenn die Zeit knapp wird", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-06",
+    kern: { lernziele: ["Punkte liegen im Streit, nicht in der Vollständigkeit", "Lieber ein Problem sauber als fünf angerissen"] } },
+  { fach: "methodik", titel: "Hilfsgutachten: wann es rettet und wann es schadet", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-07",
+    kern: { lernziele: ["Nur nach einer klaren Ablehnung, nie als Absicherung gegen die eigene Unsicherheit", "Kurz halten – es zählt weniger als der Hauptstrang"] } },
+  { fach: "methodik", titel: "Normenketten bilden statt Einzelnormen lernen", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-08",
+    kern: { lernziele: ["Verweisungsketten wie §§ 280, 281, 323 BGB gemeinsam denken", "Beispiel: Wie eine Kette im Rücktrittsrecht durchläuft"] } },
+  { fach: "methodik", titel: "Prozessrecht früh erkennen und einbauen", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-09",
+    kern: { lernziele: ["Prozessuale Einkleidung entscheidet über den Aufbau der ganzen Klausur", "Signale im Sachverhalt: Klage, Antrag, Bescheid, Anklage"] } },
+  { fach: "methodik", titel: "Sachverhaltssignale für Standardprobleme lesen", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-10",
+    kern: { lernziele: ["Jede Angabe im Sachverhalt hat einen Zweck", "Beispiel: Warum das Alter des Handelnden nie zufällig dasteht"] } },
+  { fach: "methodik", titel: "Fehleranalyse nach der Probeklausur", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-11",
+    kern: { lernziele: ["Fehler trennen: nicht gewusst, falsch aufgebaut, Zeit verloren", "Nur die erste Sorte lernt man durch Wiederholen weg"] } },
+  { fach: "methodik", titel: "Aktuelle Rechtsprechung examensgerecht reduzieren", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-12",
+    kern: { lernziele: ["Aus einer Entscheidung zählt der Leitsatz, nicht der Sachverhalt", "Die Frage ist immer: Welches Klausurproblem löst sie?"] } },
+  { fach: "methodik", titel: "Wiederholen nach dem 7-30-90-Tage-Prinzip", normen: [], prioritaet: "hoch", typ: "modul", quelle: "M-METH-20",
+    kern: { lernziele: ["Nach 7, 30 und 90 Tagen wiederholen statt kurz vor der Klausur alles", "Wiederholung schlägt Erstlektüre – auch beim Zeitbudget"] } },
 ];

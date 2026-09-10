@@ -35,4 +35,10 @@ export const FAECHER = {
   verwbt:  { label: "Besonderes Verwaltungsrecht", kurz: "Bes. VerwR", gebiet: 3 },
   vwgo:    { label: "Verwaltungsprozessrecht",kurz: "VwGO",      gebiet: 3 },
   europa:  { label: "Europarecht",            kurz: "EuR",       gebiet: 3 },
+  /* Klausur- und Lernmethodik gehoert zu keinem Rechtsgebiet: Obersatztechnik
+     gilt im Zivilrecht wie im Strafrecht. Gebiet 0 heisst "ohne festes Gebiet" -
+     inhalte.mjs verteilt diese Themen reihum ueber die drei Farben, damit das
+     Raster bunt bleibt, und die Fusszeile traegt "Klausurtechnik" statt eines
+     Rechtsgebiets. */
+  methodik: { label: "Klausur- und Lernmethodik", kurz: "Klausurtechnik", gebiet: 0 },
 };

@@ -33,7 +33,8 @@ export function kontext(opt = {}) {
     stil: stilLaden(stilName),
     farbeJeKlausur: CONFIG.marke.farbeJeKlausur,
     handle: opt.handle ?? CONFIG.marke.handle,
-    fachLabel: opt.fachLabel || (opt.fach ? FAECHER[opt.fach]?.label : "Steuerberaterexamen") || "Steuerberaterexamen",
+    fach: opt.fach || null,
+    fachLabel: opt.fachLabel || (opt.fach ? FAECHER[opt.fach]?.label : "Examenswissen") || "Examenswissen",
     klausur: opt.klausur || (opt.fach ? FAECHER[opt.fach]?.klausur : 3) || 3,
   };
 }
