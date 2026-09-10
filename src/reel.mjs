@@ -407,7 +407,7 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
   const datum = opt.datum || (String(reel.slug || "").match(/^\d{4}-\d{2}-\d{2}/) || [new Date().toISOString().slice(0, 10)])[0];
   const hell = CONFIG.marke.stil === "kanzlei" && opt.variante && !CONFIG.marke.farbeJeKlausur;
   const clip = opt.clip === null ? null : (opt.clip || hintergrundClip(opt.hintergrundDir, datum));
-  const ctx = { stil: stilLaden(opt.stil || (hell ? "kanzlei-hell" : CONFIG.marke.stil)), handle: CONFIG.marke.handle, klausur: reel.klausur || FAECHER[reel.fach]?.klausur || 3, fachLabel: FAECHER[reel.fach]?.label || "Steuerberaterexamen", animation: opt.animation || animationFuer(datum), farbeJeKlausur: CONFIG.marke.farbeJeKlausur, clip };
+  const ctx = { stil: stilLaden(opt.stil || (hell ? "kanzlei-hell" : CONFIG.marke.stil)), handle: CONFIG.marke.handle, fach: reel.fach, klausur: reel.klausur || FAECHER[reel.fach]?.klausur || 3, fachLabel: FAECHER[reel.fach]?.label || "Examenswissen", animation: opt.animation || animationFuer(datum), farbeJeKlausur: CONFIG.marke.farbeJeKlausur, clip };
   fs.mkdirSync(ausgabeDir, { recursive: true });
   const plan = await zeitplanErstellen(reel, path.join(ausgabeDir, "audio"), { stimmeId: opt.stimmeId || null, stimmeName: opt.stimmeName || null });
   const frameDir = path.join(ausgabeDir, "frames");

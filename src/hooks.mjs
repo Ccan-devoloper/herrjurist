@@ -10,7 +10,7 @@
 
    Die Muster stammen aus der Praxis kurzer Videos – Neugier und Wissenslücke,
    Alltagsbezug, Problem und Abhilfe, Widerspruch, direkte Frage, steile
-   Behauptung, Preisschild, Szene – und sind hier auf das Steuerberaterexamen
+   Behauptung, Preisschild, Szene – und sind hier auf das juristische Staatsexamen
    übersetzt. Welches Muster ein Tag bekommt, entscheidet die Rotation; was
    messbar besser lief, wird bevorzugt (insights.mjs liefert hookGewicht).
 
@@ -27,23 +27,23 @@ export const HOOKS = {
     name: "Fehler-Hook",
     regel: "Benenne den Fehler, den fast alle machen, bevor du die Lösung zeigst. Kein Vorwurf, sondern Wiedererkennung.",
     beispiele: [
-      { titel: "Der teuerste Denkfehler", sprecher: "Fast alle prüfen hier die Frist zuerst. Genau das kostet die Punkte." },
-      { titel: "Falsches Amt, Frist weg?", sprecher: "Der Einspruch landet beim falschen Finanzamt – und viele schreiben sofort: unzulässig." },
+      { titel: "Der teuerste Denkfehler", sprecher: "Fast alle prüfen hier den Anspruch zuerst. Genau das kostet die Punkte." },
+      { titel: "Falsches Gericht, Klage weg?", sprecher: "Die Klage landet beim unzuständigen Gericht – und viele schreiben sofort: unzulässig." },
     ],
   },
   frage: {
     name: "Direkte Frage",
     regel: "Stelle eine Frage, die man im Examen beantworten können muss und bei der man kurz zögert. Die Antwort kommt erst später im Reel.",
     beispiele: [
-      { titel: "Wer schuldet die Steuer?", sprecher: "Die Rechnung weist Umsatzsteuer aus, die Leistung gab es nie. Wer schuldet sie?" },
-      { titel: "Neue Tatsache oder nicht?", sprecher: "Das Finanzamt erfährt es nach dem Bescheid. Reicht das für eine Änderung?" },
+      { titel: "Wer trägt die Gefahr?", sprecher: "Der Käufer nimmt die Ware nicht an, dann verbrennt das Lager. Wer zahlt?" },
+      { titel: "Heimtücke oder nicht?", sprecher: "Das Opfer ahnt nichts, der Täter weiß das. Reicht das für Paragraf 211?" },
     ],
   },
   luecke: {
     name: "Wissenslücke",
     regel: "Zeige, dass es eine bestimmte Stelle gibt, die alles entscheidet, ohne sie sofort zu verraten.",
     beispiele: [
-      { titel: "Ein Halbsatz entscheidet", sprecher: "In Paragraf 173 steckt ein Halbsatz, der über die ganze Änderung entscheidet." },
+      { titel: "Ein Halbsatz entscheidet", sprecher: "In Paragraf 123 Absatz 5 VwGO steckt ein Halbsatz, der über den ganzen Antrag entscheidet." },
       { titel: "Die Reihenfolge ist alles", sprecher: "Zwei Prüfungsschritte, eine Reihenfolge – und nur eine davon führt zur richtigen Lösung." },
     ],
   },
@@ -51,15 +51,15 @@ export const HOOKS = {
     name: "Steile Behauptung",
     regel: "Stelle eine These auf, die zunächst widerspricht, und löse sie im Reel fachlich sauber auf. Keine Übertreibung, die du nicht belegst.",
     beispiele: [
-      { titel: "Fristen sind Punktegeschenke", sprecher: "Die Fristberechnung ist der einfachste Punktelieferant in Klausur 1. Ernsthaft." },
-      { titel: "Auswendig lernen bringt nichts", sprecher: "Das Schema auswendig zu können reicht hier nicht. Es kommt auf die Zuordnung an." },
+      { titel: "Zulässigkeit ist geschenkt", sprecher: "Die Zulässigkeit ist der einfachste Punktelieferant in jeder Klausur. Ernsthaft." },
+      { titel: "Auswendig lernen bringt nichts", sprecher: "Das Schema auswendig zu können reicht hier nicht. Es kommt auf die Abgrenzung an." },
     ],
   },
   kosten: {
     name: "Preisschild",
     regel: "Sage konkret, was der Fehler oder das Wissen im Examen wert ist. Zahlen nur, wenn sie aus dem Themen-Skelett stammen – niemals erfundene Statistiken.",
     beispiele: [
-      { titel: "Das kostet dich Punkte", sprecher: "Wer hier die falsche Bewertung ansetzt, verliert die halbe Textziffer." },
+      { titel: "Das kostet dich Punkte", sprecher: "Wer hier den falschen Absatz zitiert, verliert die halbe Prüfung." },
       { titel: "Drei Sätze, volle Punkte", sprecher: "Für diesen Prüfungspunkt brauchst du drei Sätze. Mehr will der Korrektor nicht." },
     ],
   },
@@ -67,7 +67,7 @@ export const HOOKS = {
     name: "Szene aus der Klausur",
     regel: "Setze die Zuschauer mitten in die Prüfungssituation, in der zweiten Person, im Präsens.",
     beispiele: [
-      { titel: "Minute 90, Blatt 4", sprecher: "Du liest den Sachverhalt zum dritten Mal und weißt nicht, wo du anfangen sollst." },
+      { titel: "Stunde drei, Blatt vier", sprecher: "Du liest den Sachverhalt zum dritten Mal und weißt nicht, wo du anfangen sollst." },
       { titel: "Der Satz im Sachverhalt", sprecher: "Ein Nebensatz im Sachverhalt – und plötzlich läuft die ganze Prüfung anders." },
     ],
   },
@@ -76,15 +76,15 @@ export const HOOKS = {
     regel: "Sprich ein Gefühl aus, das jede und jeder beim Lernen kennt, und knüpfe daran das Fachthema. Wiedererkennung vor Fachbegriff.",
     beispiele: [
       { titel: "Kennst du diesen Moment?", sprecher: "Du hast das Schema dreimal gelernt und in der Klausur ist es weg." },
-      { titel: "Immer dieselbe Stelle", sprecher: "Jedes Mal, wenn die Bewertung dran ist, fängst du wieder von vorne an." },
+      { titel: "Immer dieselbe Stelle", sprecher: "Jedes Mal, wenn die Kausalität dran ist, fängst du wieder von vorne an." },
     ],
   },
   widerspruch: {
     name: "Widerspruch",
     regel: "Stelle eine verbreitete Annahme in Frage, die tatsächlich falsch ist, und löse sie fachlich auf. Nur echte Irrtümer, keine Strohmänner.",
     beispiele: [
-      { titel: "Das stimmt so nicht", sprecher: "Der Einspruch hemmt die Vollziehung? Genau umgekehrt." },
-      { titel: "Fast alle lernen das falsch", sprecher: "Grobes Verschulden trifft den Steuerpflichtigen? Nicht in dieser Fallgruppe." },
+      { titel: "Das stimmt so nicht", sprecher: "Der Widerspruch hemmt die Vollziehung immer? Genau umgekehrt." },
+      { titel: "Fast alle lernen das falsch", sprecher: "Der Erlaubnistatbestandsirrtum ist ein Verbotsirrtum? Nicht nach herrschender Lehre." },
     ],
   },
   loesung: {
@@ -92,15 +92,15 @@ export const HOOKS = {
     regel: "Nenne den Schmerzpunkt und verspreche im selben Atemzug die Abhilfe, die das Reel liefert. Das Versprechen muss das Reel auch einlösen.",
     beispiele: [
       { titel: "Schluss mit Raten", sprecher: "Du weißt nie, wo die Prüfung anfängt? Dafür gibt es genau eine Reihenfolge." },
-      { titel: "Nie wieder Fristchaos", sprecher: "Fristen kosten dich Zeit? Mit drei Fragen bist du in zwanzig Sekunden durch." },
+      { titel: "Nie wieder Klageart-Chaos", sprecher: "Du suchst jedes Mal die richtige Klageart? Mit drei Fragen bist du in zwanzig Sekunden durch." },
     ],
   },
   kontrast: {
     name: "Vorher und nachher",
     regel: "Stelle zwei Wege gegenüber: den, den die meisten gehen, und den, der zur Lösung führt.",
     beispiele: [
-      { titel: "So nicht, sondern so", sprecher: "Die meisten fangen bei der Bewertung an. Der Korrektor erwartet die Zurechnung." },
-      { titel: "Zwei Zeilen Unterschied", sprecher: "Dieselbe Rechnung, zwei Sätze mehr – und aus vier Punkten werden sieben." },
+      { titel: "So nicht, sondern so", sprecher: "Die meisten fangen beim Verschulden an. Der Korrektor erwartet die Zurechnung." },
+      { titel: "Zwei Zeilen Unterschied", sprecher: "Derselbe Streit, zwei Sätze mehr – und aus vier Punkten werden sieben." },
     ],
   },
 };
