@@ -33,7 +33,11 @@ export function markierenTitel(s) {
 export function markieren(s) {
   let t = esc(s);
   t = t.replace(/\*([^*]+)\*/g, "<em>$1</em>");
-  t = t.replace(/(§§?\s?[\dA-Za-z.\s]+?(?:HGB|EStG|AO|UStG|KStG|GewStG|ErbStG|BewG|UmwStG|AStG|EStDV|EStR|KStR|UStAE|BGB|GrEStG|FGO|DBA))/g, '<code>$1</code>');
+  /* Die Gesetze der drei Rechtsgebiete. Auch Aufzaehlungen ("§§ 61, 62 VwGO")
+     und Artikel ("Art. 20 Abs. 3 GG") gehoeren dazu - beides zitiert man im
+     Examen staendig. Die Laenge ist begrenzt, damit die Regel nicht ueber
+     halbe Saetze hinweg bis zum naechsten Kuerzel greift. */
+  t = t.replace(/((?:§§?|Art\.)\s?[\dA-Za-z.,\s]{0,40}?(?:BGB|ZPO|StGB|StPO|GVG|VwGO|VwVfG|BauGB|BauNVO|GewO|POG|PolG|GG|HGB|GmbHG|AktG|InsO|ArbGG|BetrVG|KSchG|TzBfG|SGB|FamFG|WEG|ProdHaftG|StVG|StVO|OWiG|JGG|BeurkG|GBO|ErbbauRG|UWG|MarkenG|UrhG|PatG|AO|EStG|UStG|EGBGB|AEUV|EUV|GRCh|EMRK|BDSG|DSGVO))/g, '<code>$1</code>');
   return t;
 }
 
@@ -364,12 +368,17 @@ function kopf(ctx, zaehler) {
    kein Markenname – das kommt später. */
 function fuss(ctx) {
   /* Methodik gehoert zu keinem Rechtsgebiet - dann steht dort das Fach. */
-  const rechts = ctx.fach === "methodik" ? "Klausurtechnik" : (KLAUSUR_KURZ[ctx.klausur] || "");
+  const rechts = fussRechts(ctx);
   return `<div class="fuss"><span class="handle">${esc(ctx.handle || "")}</span><span class="klausur">${esc(rechts)}</span></div>`;
 }
 /* Die Marke sortiert nach Rechtsgebiet - das steht in der Fusszeile, so wie
    beim Steuerkanal der Klausurtag. */
-const KLAUSUR_KURZ = { 1: "Zivilrecht", 2: "Strafrecht", 3: "Öffentliches Recht" };
+export const KLAUSUR_KURZ = { 1: "Zivilrecht", 2: "Strafrecht", 3: "Öffentliches Recht" };
+
+/* Dasselbe Etikett, das die Fusszeile der Kachel traegt - das Reel nutzt es mit. */
+export function fussRechts(ctx) {
+  return ctx?.fach === "methodik" ? "Klausurtechnik" : (KLAUSUR_KURZ[ctx?.klausur] || "");
+}
 
 /* Foto statt Icon-Buehne: Das Bild liegt als abgerundete Karte im unteren
    Drittel, die Farbe der Kachel bleibt sichtbar. Ganzflaechig waere es ein

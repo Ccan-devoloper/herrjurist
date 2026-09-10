@@ -143,14 +143,14 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - kurztitel: 3–6 Wörter für die Story-Ankündigung.
 - bildSzene: eine ENGLISCHE Beschreibung einer konkreten, fotografierbaren Alltagsszene für das Titelbild – 3 bis 6 Wörter, so, wie man sie in einer Fotodatenbank suchen würde. Sie muss die Rechtsfrage bildlich greifbar machen, nicht sie beschriften: für den Annahmeverzug „delivery man waiting at door“, für das Mietrecht „damp stain on apartment wall“, für den Betrug „person signing contract nervously“. Verboten sind juristische Vokabeln („annahmeverzug“, „liability“), abstrakte Begriffe („justice“, „law“) und die Symbolbild-Klassiker: Richterhammer, Waage, Paragrafenzeichen, Gesetzbuch, Gerichtsgebäude, Anzugträger beim Händedruck – die sagen nichts und stehen unter jedem zweiten Jura-Beitrag. Fällt dir keine echte Szene ein, gib null zurück; dann bleibt es beim Icon.
 
-## Beispiel eines fertigen Beitrags (Format Prüfungsfrage)
-${JSON.stringify({ folien: beispiele.beitraege[0].folien, caption: beispiele.beitraege[0].caption, hashtags: beispiele.beitraege[0].hashtags, kurztitel: "Teilwert-AfA: Pflicht oder Wahlrecht?" }, null, 1)}
+## Beispiel eines fertigen Beitrags (Format Streitstand)
+${JSON.stringify({ folien: beispiele.beitraege[0].folien, caption: beispiele.beitraege[0].caption, hashtags: beispiele.beitraege[0].hashtags, kurztitel: "Mord und Totschlag: das Verhältnis" }, null, 1)}
 
 ## Beispiel eines fertigen Beitrags (Format Fehlerfalle)
-${JSON.stringify({ folien: beispiele.beitraege[1].folien, caption: beispiele.beitraege[1].caption, hashtags: beispiele.beitraege[1].hashtags, kurztitel: "Anzahlung: Wann entsteht die USt?" }, null, 1)}
+${JSON.stringify({ folien: beispiele.beitraege[1].folien, caption: beispiele.beitraege[1].caption, hashtags: beispiele.beitraege[1].hashtags, kurztitel: "§ 123 oder § 80 Abs. 5 VwGO?" }, null, 1)}
 
-## Beispiel eines fertigen Beitrags (Format Rechenweg)
-${JSON.stringify({ folien: beispiele.beitraege[2].folien, caption: beispiele.beitraege[2].caption, hashtags: beispiele.beitraege[2].hashtags, kurztitel: "Zinsstaffel beim Disagio" }, null, 1)}
+## Beispiel eines fertigen Beitrags (Format Vergleich)
+${JSON.stringify({ folien: beispiele.beitraege[2].folien, caption: beispiele.beitraege[2].caption, hashtags: beispiele.beitraege[2].hashtags, kurztitel: "Schuldner- oder Gläubigerverzug?" }, null, 1)}
 
 ## Beispiel-Stories (Ton und Länge)
 ${JSON.stringify(beispiele.stories, null, 1)}

@@ -12,7 +12,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { browserStarten, coverRendern } from "./render.mjs";
-import { css, klausurCss, buntCss } from "./vorlagen.mjs";
+import { css, klausurCss, buntCss, fussRechts } from "./vorlagen.mjs";
 import { stil as stilLaden, iconSvg } from "./stile.mjs";
 import { FAECHER } from "./inhalte.mjs";
 import { CONFIG } from "./config.mjs";
@@ -310,7 +310,7 @@ ${ctx.clip ? overlayCss(ctx) : ""}
 <div class="kopf"><span class="etikett ${kl}"><i class="punkt"></i>${esc(ctx.fachLabel)}</span><span class="zaehler" id="zaehler"></span></div>
 ${szenenHtml}
 <div class="untertitel"><div class="block" id="block"></div></div>
-<div class="fuss"><span class="handle">${esc(ctx.handle || "")}</span><span class="klausur">${esc({ 1: "Klausur 1 · Tag 1", 2: "Klausur 2 · Tag 2", 3: "Klausur 3 · Tag 3" }[ctx.klausur] || "")}</span></div>
+<div class="fuss"><span class="handle">${esc(ctx.handle || "")}</span><span class="klausur">${esc(fussRechts(ctx))}</span></div>
 </div>
 <script>
 const BLOECKE = ${JSON.stringify(bloecke)};
