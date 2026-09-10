@@ -63,7 +63,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('social/package-lock.json') }}
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       # Der Chrome-Paketspiegel von Google liefert gelegentlich „Hash Sum mismatch“
       # bei apt-get update; er wird für Playwright nicht gebraucht und deshalb
@@ -159,7 +159,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: instagram-ausgabe-${{ github.run_id }}
-          path: social/out
+          path: out
           if-no-files-found: ignore
           retention-days: 7
 

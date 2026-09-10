@@ -13,7 +13,22 @@ import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
-const REPO = path.resolve(hier, "../..");
+
+/* Wurzel des Repos: von src/ aus nach oben, bis ein .git auftaucht. Fest
+   verdrahtete Ebenen gehen schief, sobald der Bot nicht mehr in einem
+   Unterordner liegt (beim Schwester-Kanal steckt er in social/, hier in der
+   Wurzel) – und der Fehler zeigt sich erst im Workflow, nicht im Test. */
+function repoWurzel(start) {
+  let d = start;
+  for (let i = 0; i < 6; i++) {
+    if (fs.existsSync(path.join(d, ".git"))) return d;
+    const oben = path.dirname(d);
+    if (oben === d) break;
+    d = oben;
+  }
+  return path.resolve(start, "..");
+}
+const REPO = repoWurzel(hier);
 const schlafen = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function git(args, cwd = REPO, opt = {}) {
