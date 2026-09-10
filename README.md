@@ -30,7 +30,7 @@ Der Code stammt aus dem Steuerberater-Kanal; markenspezifisch sind vier Stellen:
 
 | | Examenscampus | Herr Jurist |
 | --- | --- | --- |
-| Inhaltsquelle | Lerndaten der Webseite (`src/data`) | `daten/themen.mjs` – eigener Themenpool |
+| Inhaltsquelle | Lerndaten der Webseite (`src/data`) | `daten/themen.mjs` – 795 Themen aus Pflichtfachkatalog und `daten/handbuch-2026.pdf` |
 | Markenachse | Klausurtag 1/2/3 | Rechtsgebiet Zivil/Straf/Öffentlich |
 | Normzitat | `§ 7 (1) S. 1 Nr. 1 lit. a) EStG` | `§ 80 Abs. 1 S. 5 VwGO` (römische Ziffern werden umgeschrieben) |
 | Prüfungstermin | bundeseinheitlich, mit Countdown | keiner – Jahresrhythmus (Kampagnen Frühjahr/Herbst); `IG_EXAMEN_DATUM` schaltet den Countdown an |

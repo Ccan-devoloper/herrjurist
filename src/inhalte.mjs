@@ -65,6 +65,10 @@ export function themenpool() {
         fehler: t.kern?.fehler || [],
       },
       prioritaet: t.prioritaet || "mittel",
+      /* Erstes oder zweites Examen? Steht nur bei Themen aus dem Handbuch;
+         der Autor erwähnt es, wo es den Zuschnitt ändert (Gutachtenstil im
+         ersten, Urteils-/Aktenvortragsstil im zweiten Examen). */
+      examen: t.examen || null,
     };
   });
 }
