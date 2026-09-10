@@ -732,6 +732,14 @@ test("Hashtags: fremde Rechtsgebiete werden aussortiert", async () => {
   assert.ok(tags.includes("#kaufrecht"), tags.join(" "));
   const zivil = hashtagsWaehlen(["#zivilrecht"], kern, null, undefined, 1);
   assert.ok(zivil.includes("#zivilrecht"), zivil.join(" "));
+  /* Auch die taeglich rotierenden Entdecker-Tags duerfen kein fremdes Gebiet
+     einschleusen - genau daran ist #staatsrecht unter einem Zivilrechtsbeitrag
+     gelandet. Ueber viele Tage geprueft, weil sie nach Datum rotieren. */
+  const fremd = ["#staatsrecht", "#strafrecht", "#öffentlichesrecht", "#verwaltungsrecht", "#grundrechte", "#stpo"];
+  for (let t = 0; t < 60; t++) {
+    const tags = hashtagsWaehlen([], kern, null, t, 1);
+    for (const f of fremd) assert.ok(!tags.includes(f), `Tag ${t}: ${f} in ${tags.join(" ")}`);
+  }
 });
 
 test("Normen in Mono: Paragrafen, Aufzählungen und Artikel, aber keine Prosa", async () => {
