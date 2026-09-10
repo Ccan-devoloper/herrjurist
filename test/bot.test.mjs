@@ -20,9 +20,17 @@ test("Themenpool: alle Fächer vertreten, alle drei Gebiete, saubere Titel", () 
      Untergrenze, damit der Planer nie in die Notauswahl fällt. */
   assert.ok(st.gesamt >= 300, `nur ${st.gesamt} Themen`);
   for (const gebiet of [1, 2, 3]) assert.ok(st.jeKlausur[gebiet] >= 15, `Gebiet ${gebiet} zu dünn: ${st.jeKlausur[gebiet]}`);
-  /* Normen sind entweder Paragrafen/Artikel oder ein benannter Regelungskomplex
-     (Landesrecht wie die Polizeigesetze, die je Land anders nummeriert sind). */
-  for (const t of pool) for (const n of t.normen) assert.ok(/§|Art\.|gesetze der Länder|ordnungen der Länder/.test(n), `unklare Norm bei „${t.titel}“: ${n}`);
+  /* Normangaben sind nie leer und nie Fließtext. Dass nicht jede einen
+     Paragrafen nennt, ist gewollt: Landesrecht („Polizeigesetze der Länder“)
+     und ganze Gesetze („GmbHG“) werden je Land oder je Fall anders zitiert.
+     Der Großteil muss aber eine konkrete Fundstelle tragen. */
+  for (const t of pool) for (const n of t.normen) assert.ok(n && n.length >= 2 && n.length <= 90, `unbrauchbare Norm bei „${t.titel}“: ${n}`);
+  const alleNormen = pool.flatMap((t) => t.normen);
+  const konkret = alleNormen.filter((n) => /§|Art\./.test(n)).length;
+  assert.ok(konkret / alleNormen.length > 0.9, `nur ${Math.round(konkret / alleNormen.length * 100)} % der Normen sind konkret`);
+  /* Jedes Thema trägt eine brauchbare Bezeichnung. Kurze wie „Raub“ oder
+     „Prokura“ sind in Ordnung – die Frage auf Folie 1 baut der Autor daraus. */
+  for (const t of pool) assert.ok(t.titel.length >= 4 && t.titel.length <= 140, `Titel unbrauchbar: ${t.titel}`);
   for (const f of Object.keys(FAECHER)) assert.ok(st.jeFach[f] > 0, `Fach ${f} fehlt`);
   for (const t of pool) {
     assert.ok(!/Originalfall|Hausaufgabe|Seite \d/i.test(t.titel), `Quellenbezug im Titel: ${t.titel}`);

@@ -298,6 +298,7 @@ function themaText(thema) {
     `Thema: ${thema.titel}`,
     `Examenspriorität: ${thema.prioritaet === "hoch" ? "Dauerbrenner (nahezu jährlich geprüft)" : thema.prioritaet === "mittel" ? "regelmäßig geprüft" : "selten geprüft, aber punktestark"}`,
     thema.normen.length ? `Normen: ${thema.normen.join(" · ")}` : "",
+    thema.examen && thema.examen !== "1. Examen" ? `Prüfungsbezug: ${thema.examen}${/2\./.test(thema.examen) ? " – im zweiten Examen zählt die praktische Seite: Entscheidungsform, Tenor, Zweckmäßigkeit, Urteils- statt Gutachtenstil." : ""}` : "",
   ];
   if (k.einordnung?.length) zeilen.push(`Einordnung (nur als Gedankenstütze, nicht übernehmen): ${k.einordnung.join(" ")}`);
   if (k.lernziele?.length) zeilen.push(`Worauf es ankommt: ${k.lernziele.join("; ")}`);
