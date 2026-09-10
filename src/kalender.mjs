@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Saisonkalender des Steuerberaterexamens.
+   Saisonkalender des juristischen Staatsexamens.
 
    Liefert für ein Datum die anstehenden Anlässe (Prüfungstage, Fristen,
    Countdown-Meilensteine). Der Planer ersetzt an Anlasstagen den ersten
@@ -39,20 +39,20 @@ export function anlaesse(datum = new Date().toISOString().slice(0, 10)) {
   const [, , et] = CONFIG.examen.ende.split("-").map(Number);
   const pruefung = { jahr: pj, tag1: iso(pj, pm, pt), tag2: iso(pj, pm, pt + 1), tag3: iso(pj, pm, et) };
   const liste = [
-    { datum: iso(jahr, 4, 30), art: "frist", titel: "Anmeldeschluss zur Steuerberaterprüfung", kontext: "Heute endet die Anmeldefrist (30. April) für die Prüfung im Herbst. Wer sich anmeldet, hat ab jetzt einen festen Plan nötig." },
+    { datum: iso(jahr, 4, 30), art: "frist", titel: "Anmeldeschluss zur Prüfung", kontext: "Heute endet in vielen Ländern die Meldefrist für den nächsten Durchgang. Wer sich meldet, braucht ab jetzt einen festen Plan." },
     { datum: iso(jahr, 5, 1), art: "auftakt", titel: "Fünf Monate bis zum Examen", kontext: "Nach dem Anmeldeschluss beginnt die heiße Phase: fünf Monate, drei Klausuren, ein Lernplan." },
     { datum: iso(jahr, 1, 15), art: "muendlich", titel: "Vorbereitung auf die mündliche Prüfung", kontext: "Die Ergebnisse der schriftlichen Prüfung kommen in diesen Wochen; wer bestanden hat, bereitet sich jetzt auf die mündliche Prüfung vor: Vortrag, Prüfungsgespräch, Aktualitäten." },
-    { datum: iso(jahr, 12, 31), art: "jahreswechsel", titel: "Jahreswechsel im Steuerrecht", kontext: "Zum Jahreswechsel treten Gesetzesänderungen in Kraft; für das Examen zählt der Rechtsstand, den die Prüfung vorgibt." },
+    { datum: iso(jahr, 12, 31), art: "jahreswechsel", titel: "Jahreswechsel: neuer Rechtsstand", kontext: "Zum Jahreswechsel treten Gesetzesänderungen in Kraft; für das Examen zählt der Rechtsstand, den die Prüfung vorgibt." },
   ];
   /* Countdown-Meilensteine vor der schriftlichen Prüfung. */
   for (const n of [100, 60, 30, 14, 7, 3, 1]) {
     const d = new Date(`${pruefung.tag1}T12:00:00Z`); d.setUTCDate(d.getUTCDate() - n);
-    liste.push({ datum: d.toISOString().slice(0, 10), art: "countdown", titel: `${n} Tag${n === 1 ? "" : "e"} bis zum Examen`, kontext: `In ${n} Tag${n === 1 ? "" : "en"} beginnt die schriftliche Steuerberaterprüfung (${pruefung.tag1} bis ${pruefung.tag3}). ${n >= 60 ? "Jetzt zählt der Lernplan: Dauerbrenner zuerst, Klausuren unter Zeit." : n >= 7 ? "Jetzt nur noch wiederholen, was sitzt – keine neuen Themen mehr." : "Schlaf, Ruhe, Prüfschemata durchgehen – nichts Neues mehr anfangen."}` });
+    liste.push({ datum: d.toISOString().slice(0, 10), art: "countdown", titel: `${n} Tag${n === 1 ? "" : "e"} bis zum Examen`, kontext: `In ${n} Tag${n === 1 ? "" : "en"} beginnt die schriftliche Prüfung (${pruefung.tag1} bis ${pruefung.tag3}). ${n >= 60 ? "Jetzt zählt der Lernplan: Dauerbrenner zuerst, Klausuren unter Zeit." : n >= 7 ? "Jetzt nur noch wiederholen, was sitzt – keine neuen Themen mehr." : "Schlaf, Ruhe, Prüfschemata durchgehen – nichts Neues mehr anfangen."}` });
   }
   liste.push(
     { datum: pruefung.tag1, art: "pruefungstag", titel: "Tag 1: Verfahrensrecht, Umsatzsteuer, Erbschaftsteuer", kontext: "Heute ist der erste Prüfungstag (AO, USt, ErbSt/BewG). Ton: ruhig, ermutigend, ein letzter Klausurtipp – keine neuen Inhalte." },
     { datum: pruefung.tag2, art: "pruefungstag", titel: "Tag 2: Ertragsteuern", kontext: "Heute ist der zweite Prüfungstag (ESt, KSt, GewSt, IStR). Ton: ermutigend, ein Klausurtipp zur Zeiteinteilung." },
-    { datum: pruefung.tag3, art: "pruefungstag", titel: "Tag 3: Buchführung und Bilanzwesen", kontext: "Heute ist der dritte und letzte Prüfungstag (Bilanzen). Ton: ermutigend, Hinweis auf Technikpunkte (Bilanzposten, Buchung, Gewinnauswirkung)." },
+    { datum: pruefung.tag3, art: "pruefungstag", titel: "Klausurtag Öffentliches Recht", kontext: "Heute war ein Klausurtag im Öffentlichen Recht. Ton: ermutigend, Hinweis auf Technikpunkte (Klageart, Zulässigkeitsaufbau, Verhältnismäßigkeit)." },
   );
   const nach = new Date(`${pruefung.tag3}T12:00:00Z`); nach.setUTCDate(nach.getUTCDate() + 1);
   const nachIso = nach.toISOString().slice(0, 10);
@@ -62,11 +62,11 @@ export function anlaesse(datum = new Date().toISOString().slice(0, 10)) {
      die offiziellen Hinweise kommen erst Monate später. */
   const tage = [
     [pruefung.tag1, 1, "Verfahrensrecht (AO), Umsatzsteuer, Erbschaftsteuer/Bewertung"],
-    [pruefung.tag2, 2, "Ertragsteuern (ESt, KSt, GewSt, Internationales Steuerrecht)"],
-    [pruefung.tag3, 3, "Buchführung und Bilanzwesen"],
+    [pruefung.tag2, 2, "Strafrecht"],
+    [pruefung.tag3, 3, "Öffentliches Recht"],
   ];
   for (const [d, nr, faecher] of tage) {
-    liste.push({ datum: d, zeit: "18:30", art: "loesungsskizze", klausur: nr, titel: `Lösungsskizze Tag ${nr}: die berichteten Themen`, kontext: `Heute war Tag ${nr} der schriftlichen Steuerberaterprüfung (${faecher}). Kandidat:innen berichten in Foren und sozialen Netzwerken, welche Sachverhalte drankamen. Aufgabe: die berichteten Themen sammeln und je Thema den Lösungsweg skizzieren – ausdrücklich vorläufig, auf Berichten beruhend, keine offizielle Lösung. Einladung: „Was war bei dir dran? Schreib es in die Kommentare, ich ergänze.“` });
+    liste.push({ datum: d, zeit: "18:30", art: "loesungsskizze", klausur: nr, titel: `Lösungsskizze Tag ${nr}: die berichteten Themen`, kontext: `Heute war Klausurtag ${nr} der schriftlichen Prüfung (${faecher}). Kandidat:innen berichten in Foren und sozialen Netzwerken, welche Sachverhalte drankamen. Aufgabe: die berichteten Themen sammeln und je Thema den Lösungsweg skizzieren – ausdrücklich vorläufig, auf Berichten beruhend, keine offizielle Lösung. Einladung: „Was war bei dir dran? Schreib es in die Kommentare, ich ergänze.“` });
   }
   liste.push({ datum: nachIso, zeit: "12:30", art: "loesungsskizze", klausur: 3, titel: "Alle drei Tage im Überblick: Themen und Lösungswege", kontext: `Die schriftliche Prüfung ${pruefung.jahr} ist vorbei (${pruefung.tag1} bis ${pruefung.tag3}). Aufgabe: die berichteten Themen aller drei Tage bündeln, je Klausur die zwei wichtigsten Lösungswege skizzieren, vorläufig und ohne Anspruch auf Vollständigkeit. Einladung, eigene Erinnerungen an die Aufgaben zu kommentieren.` });
   /* Okt–Dez: Rund die Hälfte fällt durch – wer neu anfängt, braucht jetzt einen
@@ -91,7 +91,7 @@ export function anlaesse(datum = new Date().toISOString().slice(0, 10)) {
     ["Antreten oder warten? Die ehrliche Entscheidung vor der Anmeldung", "Bis 30. April muss die Anmeldung stehen. Kriterien: Stundenbudget, Klausurstand, Vorwissen je Klausurtag – und was passiert, wenn man ein Jahr wartet."],
     ["Sechs Monate Lernplan: So teilst du die Zeit auf die drei Klausurtage auf", "Nach der Entscheidung kommt der Plan: Wochenstunden je Klausurtag, feste Klausurtermine, Wiederholungsschleifen."],
     ["Was Bestehende anders gemacht haben: fünf Muster", "Aus Erfahrungsberichten lassen sich Muster ableiten: früh Klausuren schreiben, Schemata auswendig, Lerngruppe, Pausen, ein fester Prüfungstag-Ablauf."],
-    ["Anmeldung zur Steuerberaterprüfung: Fristen, Unterlagen, Stolpersteine", "Antrag, Nachweise, Gebühren, Fristende 30. April – was oft vergessen wird."],
+    ["Meldung zum Examen: Fristen, Unterlagen, Stolpersteine", "Antrag, Nachweise, Freischuss-Voraussetzungen – was oft vergessen wird. Je nach Land unterschiedlich."],
   ];
   let j = 0, zaehler = 0;
   for (let d = new Date(Date.UTC(jahr, 0, 1)); d.getUTCMonth() <= 3; d.setUTCDate(d.getUTCDate() + 1)) {

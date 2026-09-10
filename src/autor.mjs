@@ -102,7 +102,7 @@ export const FORMATE = {
 };
 
 const KANAL = CONFIG.marke.name ? `des Instagram-Kanals „${CONFIG.marke.name}“` : "eines Instagram-Kanals";
-const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das deutsche Steuerberaterexamen vorbereiten (schriftliche Prüfung: Tag 1 Verfahrensrecht/USt/ErbSt, Tag 2 Ertragsteuern, Tag 3 Buchführung und Bilanzwesen). Vorbild ist der Aufbau erfolgreicher juristischer Lernkanäle: eine präzise Prüfungsfrage als Aufhänger, dann eine klare, prüfungsnahe Antwort zum Durchswipen.
+const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das erste oder zweite juristische Staatsexamen vorbereiten (Pflichtfachstoff: Zivilrecht, Strafrecht, Öffentliches Recht, jeweils mit Prozessrecht und europarechtlichen Bezügen; im zweiten Examen dazu die praktische Seite – Urteil, Bescheid, Anwaltsschriftsatz, Aktenvortrag). Der Aufbau ist immer gleich: eine präzise Prüfungsfrage als Aufhänger, dann eine klare, klausurnahe Antwort zum Durchswipen.
 
 ## Ton
 - Direkt, fachlich präzise, kein Marketing-Sprech, kein Pathos. Du-Ansprache.
@@ -132,7 +132,7 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das de
 ## Form
 - Folienarten: titel (Frage/Aufhänger), text (Titel + Text oder Punkte), schritte (nummeriert, je Schritt titel + text), vergleich (links/rechts mit titel + punkte), rechnung (formel, zeilen, ergebnis), karte (dichter Spickzettel: schritte mit kurzem titel + norm im text), merke (ein Satz, der hängen bleibt), cta (Abschluss mit Folgen-Aufforderung).
 - hooks: drei alternative Titel für Folie 1 in unterschiedlichen Typen – eine Frage, ein Fehler-/Falle-Hook („Der Fehler, der … kostet“), ein Zahlen-Hook (Frist, Prozentsatz, Betrag). Folie 1 trägt den besten davon.
-- Die erste Zeile der Caption ist gleichzeitig Suchtext: Sie nennt das Thema mit den Wörtern, die jemand bei Instagram oder Google eintippen würde (z. B. „Teilwertabschreibung Steuerbilanz Voraussetzungen“), natürlich eingebettet in den Hook.
+- Die erste Zeile der Caption ist gleichzeitig Suchtext: Sie nennt das Thema mit den Wörtern, die jemand bei Instagram oder Google eintippen würde (z. B. „Annahmeverzug Voraussetzungen Rechtsfolgen“), natürlich eingebettet in den Hook.
 - Folie-1-Titel: eine Frage, ideal 45–80 Zeichen, maximal 100. Andere Titel maximal 60 Zeichen.
 - Je Folie maximal 5 Punkte / 5 Schritte, insgesamt maximal 380 Zeichen Text je Folie; bei „vergleich“ je Spalte maximal 3 Punkte à 60 Zeichen.
 - Kernaussagen und Merksätze aus dem Skelett NIE übernehmen, auch nicht leicht umgestellt – schreibe einen eigenen Merksatz mit anderem Satzbau und anderen Wörtern.
@@ -387,7 +387,7 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
   const kern = CONFIG.hashtags.kern;
   const tags = hashtagsWaehlen(daten.hashtags || [], kern, strategie);
   return {
-    format, fach, klausur, fachLabel: FAECHER[fach]?.label || "Steuerberaterexamen",
+    format, fach, klausur, fachLabel: FAECHER[fach]?.label || "Examenswissen",
     themaId: thema?.id || null,
     folien,
     caption: (daten.caption || "").trim(),
@@ -456,16 +456,19 @@ Wähle dann DIE eine Neuigkeit mit dem größten Examensbezug aus – lieber ein
   return webRecherche(frage, "recherche");
 }
 
-/* Web-Recherche am Prüfungsabend: Was berichten Kandidat:innen über die heutige Klausur? */
+/* Web-Recherche am Klausurtag: Was berichten Kandidat:innen über die heutige
+   Klausur? Läuft nur, wenn ein konkreter Prüfungstermin gesetzt ist
+   (IG_EXAMEN_DATUM) – ohne Termin gibt es diesen Anlass nicht. */
 export async function loesungsRecherchieren(datum, anlass) {
   const jahr = datum.slice(0, 4);
-  const frage = `Heute ist der ${datumLesbar(datum)}. ${anlass?.kontext || "Heute war ein Tag der schriftlichen Steuerberaterprüfung."}
-Recherchiere Berichte von Kandidat:innen zur schriftlichen Steuerberaterprüfung ${jahr} (Klausur Tag ${anlass?.klausur || "?"}): Welche Sachverhalte, Aufgabenstellungen und Themengebiete werden genannt? Suche in Foren (z. B. Foren für Steuerberateranwärter, Reddit, WiWi-Treff), sozialen Netzwerken (Instagram, LinkedIn, X), bei Lehrgangsanbietern und Fachverlagen (NWB, Haufe, DATEV, Steuerberaterkammern, BStBK). Suchbegriffe wie „Steuerberaterprüfung ${jahr} Klausur Tag ${anlass?.klausur || ""} Themen“, „StB-Examen ${jahr} Erfahrungen“, „Steuerberaterexamen ${jahr} Aufgaben“.
+  const gebiet = { 1: "Zivilrecht", 2: "Strafrecht", 3: "Öffentliches Recht" }[anlass?.klausur] || "";
+  const frage = `Heute ist der ${datumLesbar(datum)}. ${anlass?.kontext || "Heute war ein Klausurtag der juristischen Staatsprüfung."}
+Recherchiere Berichte von Kandidat:innen zur Examensklausur ${jahr}${gebiet ? ` im ${gebiet}` : ""}: Welche Sachverhalte, Aufgabenstellungen und Problemschwerpunkte werden genannt? Suche in Foren (Jura-Foren, Reddit r/jura, jurawelt), sozialen Netzwerken (Instagram, LinkedIn, X), bei Repetitorien und in Examensreport-Sammlungen der Fachschaften und Landesjustizprüfungsämter. Suchbegriffe wie „Examensreport ${jahr} ${gebiet}“, „Klausur ${jahr} Erfahrungen Staatsexamen“, „Examensklausur ${jahr} Probleme“.
 
 Antworte mit:
 1. Titel: ein kurzer Titel
-2. Fach: ${anlass?.klausur === 1 ? "ao" : anlass?.klausur === 2 ? "kst" : "bilanz"}
-3. Notizen (max. 300 Wörter, eigene Worte): die berichteten Themen je Aufgabe/Sachverhalt, mit Angabe, wie oft und wie sicher sie berichtet werden (mehrfach / einzeln / unsicher). Wenn es noch keine belastbaren Berichte gibt, sage das ausdrücklich und nenne stattdessen die erfahrungsgemäßen Dauerbrenner dieses Prüfungstags.
+2. Fach: das passende Fach (bgbat, schuld, schuldbt, sachen, delikt, bereich, gesetzs, arbeit, famerb, handelsg, zpo, strafat, strafbt, stpo, staat, grundr, verwalt, verwbt, vwgo, europa)
+3. Notizen (max. 300 Wörter, eigene Worte): die berichteten Probleme je Aufgabe, mit Angabe, wie oft und wie sicher sie berichtet werden (mehrfach / einzeln / unsicher). Gibt es noch keine belastbaren Berichte, sage das ausdrücklich und nenne stattdessen die erfahrungsgemäßen Dauerbrenner dieses Rechtsgebiets.
 4. Quellen: 2–4 URLs`;
   return webRecherche(frage, "recherche-loesung");
 }
@@ -533,7 +536,7 @@ Alles in eigenen Worten, juristisch korrekt, mit Norm. Nicht benötigte Felder n
     for (const [k, v] of Object.entries(s)) if (v != null && k !== "slot" && k !== "art") o[k] = v;
     if (o.icon && !ICONS[o.icon]) o.icon = "paragraf";
     if (p.art === "countdown") { o.zahl = String(p.tageBisExamen); o.fortschritt = Math.round(100 - Math.min(100, p.tageBisExamen / 150 * 100)); o.ueberzeile = "Noch"; }
-    o.fachLabel = FAECHER[o.fach]?.label || "Steuerberaterexamen";
+    o.fachLabel = FAECHER[o.fach]?.label || "Examenswissen";
     felderKuerzen(o, ["titel", "text", "norm", "formel", "richtigText", "falsch", "ueberzeile"]);
     const ergebnis = pruefeBeitrag({ stories: [o] });
     if (!ergebnis.ok) { o.beanstandet = ergebnis.fehler; }
@@ -657,7 +660,7 @@ function beispielStories(plan) {
     const s = beispiele.stories.find((x) => x.art === p.art) || beispiele.stories[0];
     const o = { ...s, slot: p.slot, art: p.art, fach: p.thema?.fach || s.fach, klausur: p.thema?.klausur || s.klausur };
     if (p.art === "countdown") { o.zahl = String(p.tageBisExamen); o.fortschritt = Math.round(100 - Math.min(100, p.tageBisExamen / 150 * 100)); }
-    o.fachLabel = FAECHER[o.fach]?.label || "Steuerberaterexamen";
+    o.fachLabel = FAECHER[o.fach]?.label || "Examenswissen";
     return o;
   });
 }

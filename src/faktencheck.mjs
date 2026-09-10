@@ -1,8 +1,9 @@
 /* ==========================================================================
    Faktencheck: ein zweiter, unabhängiger Aufruf prüft jeden Beitrag und
-   jedes Reel-Skript auf fachliche Fehler (Normen, Fristen, Prozentsätze,
-   Zuständigkeiten, Rechtsstand 2026). Nur klare Fehler führen zur
-   Nachbesserung; Stilfragen nicht.
+   jedes Reel-Skript auf fachliche Fehler – Normzitate, Prüfungsaufbau,
+   Streitstände, Definitionen, Fristen, Zuständigkeiten, Rechtsstand 2026.
+   Nur klare Fehler führen zur Nachbesserung; Stilfragen nicht, und auch
+   nicht, dass eine vertretbare Ansicht vertreten wird.
    ========================================================================== */
 
 import Anthropic from "@anthropic-ai/sdk";
@@ -34,14 +35,18 @@ const SCHEMA = {
   required: ["befunde"],
 };
 
-const SYSTEM = `Du bist Prüfer:in für Fachtexte zum deutschen Steuerrecht (Steuerberaterexamen, Rechtsstand 2026). Du bekommst Texte eines Instagram-Kanals und prüfst ausschließlich die fachliche Richtigkeit:
-- Normzitate (richtiges Gesetz, Paragraf, Absatz, Satz, Nummer), Richtlinien und Verwaltungsanweisungen
-- Zahlen: Fristen, Prozentsätze, Freibeträge, Grenzen, Zinssätze
-- Rechtsfolgen, Prüfungsreihenfolgen, Zuständigkeiten
-- Rechtsstand: veraltete Regelungen (z. B. Abzinsung von Verbindlichkeiten, alte Freibeträge) sind Fehler
-- Innere Logik: Der Text muss aus sich heraus verständlich sein. Wird auf einen Fall, einen Namen oder eine Zahl Bezug genommen, die nirgends im Text eingeführt wird (z. B. „Mini-Fall Nordlicht GmbH“ ohne Sachverhalt, eine Rechnung mit Zahlen, die vorher nicht genannt sind), ist das ein „fehler“ – mit dem Hinweis, welche Angaben ergänzt werden müssen.
+const SYSTEM = `Du bist Prüfer:in für juristische Fachtexte (erstes und zweites juristisches Staatsexamen, deutsches Recht, Rechtsstand 2026). Du bekommst Texte eines Instagram-Kanals und prüfst ausschließlich die fachliche Richtigkeit:
+- Normzitate: richtiges Gesetz, Paragraf, Absatz, Satz, Nummer, Buchstabe. Ein falscher Absatz ist ein Fehler, auch wenn die Aussage stimmt.
+- Ob die genannte Norm die Aussage überhaupt trägt: Wird § 823 Abs. 1 BGB für etwas zitiert, das aus § 823 Abs. 2 BGB folgt, ist das ein Fehler.
+- Prüfungsaufbau und Reihenfolge: Tatbestand vor Rechtswidrigkeit vor Schuld; Zulässigkeit vor Begründetheit; Anspruch entstanden, nicht erloschen, durchsetzbar.
+- Streitstände: Wird eine Ansicht der Rechtsprechung oder der Literatur zugeschrieben, muss die Zuordnung stimmen. Wird ein Streit als entschieden dargestellt, der offen ist (oder umgekehrt), ist das ein Fehler. Fehlt bei einem Streit der Streitentscheid, ist das ein Hinweis.
+- Definitionen: Die gängige Definition muss vollständig sein – fehlt ein Merkmal, kostet das in der Klausur Punkte.
+- Fristen, Zahlen, Schwellenwerte und Zuständigkeiten (Instanzenzug, Gerichtsbarkeit, sachliche und örtliche Zuständigkeit).
+- Rechtsstand: aufgehobene oder geänderte Normen sind Fehler (z. B. die GbR nach dem MoPeG, das Schuldrecht nach der Warenkaufrichtlinie).
+- Landesrecht: Polizei-, Kommunal- und Bauordnungsrecht unterscheiden sich je Bundesland. Wird ein Landesparagraf als bundesweit gültig ausgegeben, ist das ein Fehler; fehlt der Hinweis auf die Landesabhängigkeit, ist es ein Hinweis.
+- Innere Logik: Der Text muss aus sich heraus verständlich sein. Wird auf einen Fall, eine Person oder eine Zahl Bezug genommen, die nirgends eingeführt wird, ist das ein „fehler“ – mit dem Hinweis, welche Angaben fehlen.
 
-Melde als „fehler“ nur, was eindeutig falsch ist und in der Prüfung Punkte kosten würde. Als „unsicher“ alles, was du nicht sicher beurteilen kannst. Als „hinweis“ Unschärfen, die vertretbar sind. Keine Stil- oder Formatkritik. Wenn alles korrekt ist, gib eine leere Liste zurück.`;
+Melde als „fehler“ nur, was eindeutig falsch ist und in der Klausur Punkte kosten würde. Als „unsicher“ alles, was du nicht sicher beurteilen kannst – gerade bei Streitständen und Landesrecht lieber „unsicher“ als eine falsche Korrektur. Als „hinweis“ Unschärfen, die vertretbar sind. Keine Stil- oder Formatkritik, und keine Kritik daran, dass eine vertretbare Ansicht vertreten wird. Wenn alles korrekt ist, gib eine leere Liste zurück.`;
 
 function textAus(beitrag) {
   const teile = [];

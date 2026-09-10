@@ -9,7 +9,7 @@ export const STILE = {
      Nächster Verwandter von herrjurist. */
   kanzlei: {
     name: "Kanzlei",
-    beschreibung: "Schwarz, große weiße Schlagzeile, farbiges Fach-Etikett – der herrjurist-Look für Steuerrecht.",
+    beschreibung: "Schwarz, große weiße Schlagzeile, farbiges Fach-Etikett – der bisherige Look des Kanals.",
     modus: "dunkel",
     schrift: { titel: "Anton", text: "Inter", mono: "IBM Plex Mono", titelGewicht: 400, titelTransform: "none", titelSpacing: "0.005em", titelZeilenhoehe: 1.02 },
     farben: {
