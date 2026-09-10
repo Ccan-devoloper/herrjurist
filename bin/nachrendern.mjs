@@ -22,6 +22,7 @@ import path from "node:path";
 import { Hosting } from "../src/hosting.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "../src/render.mjs";
 import { titelbild } from "../src/bilder.mjs";
+import { reelBauen } from "../src/reel.mjs";
 import { heuteIso } from "../src/zeit.mjs";
 import { CONFIG } from "../src/config.mjs";
 
@@ -56,7 +57,12 @@ for (const datei of dateien) {
       n++;
       console.log(`  ${slot}: Story ${inhalt.art}`);
     } else if (inhalt.szenen) {
-      console.log(`  ${slot}: Reel übersprungen (Video, nicht nur Rendern)`);
+      /* Das Reel kostet auch hier keinen Claude-Aufruf – der Text steht ja
+         schon. Die Stimme wird allerdings neu gesprochen; das geht auf das
+         Kontingent von ElevenLabs (oder auf Piper, wenn es erschöpft ist). */
+      const r = await reelBauen(inhalt, path.join(ziel, slot), { datum, hintergrundDir: path.join(hosting.stateDir, "hintergrund") });
+      n += 2;
+      console.log(`  ${slot}: Reel ${r.dauer.toFixed(1)} s${r.echt ? "" : " (Ersatzstimme)"} → ${path.basename(r.video)}`);
     }
   } catch (e) {
     console.error(`  ${slot}: ${e.message}`);
