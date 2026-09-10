@@ -156,6 +156,32 @@ export function gesperrteNamen(text, k = korpus()) {
 
 const QUELLENBEZUG = /\b(laut Quelle|Quelle|Seite \d+|Folie|Mitschrift|Skript|Originalfall|Fall \d{2,3}|Hausaufgabe|Musterlösung der Finanzverwaltung|Frame)\b/i;
 
+/* Vorstellungen vom Prüfungsablauf, die aus dem Steuerberaterexamen stammen und
+   im Staatsexamen falsch sind. Als Regel steht das im Auftrag ans Modell, aber
+   eine Regel ist eine Bitte - der Beitrag „Der Klassiker in der zweiten
+   Klausurenrunde“ war schon draußen. Deshalb hier hart:
+
+   - Reihenfolge: Welches Gebiet an welchem Tag drankommt, entscheidet jedes
+     Land und jeder Durchgang neu. Es gibt keine „zweite Klausurenrunde“.
+   - Punkte je Prüfungsschritt: Bewertet wird die Klausur als Ganzes (0 bis 18
+     Notenpunkte). „Hier verlierst du die meisten Punkte“ verspricht eine
+     Punkteverteilung, die es nicht gibt. Die Notenpunkte selbst bleiben
+     erlaubt - deshalb steht „Punkte“ nur zusammen mit verlieren, kosten,
+     bringen oder Verteilung in der Liste. */
+const EXAMENSABLAUF = [
+  [/\b(erste|zweite|dritte|vierte|fünfte|sechste)[nrms]?\s+(Klausurenrunde|Klausurrunde|Prüfungstag|Prüfungstages|Klausurtag)/i, "Es gibt keine feste Reihenfolge der Klausuren – welches Gebiet wann drankommt, entscheidet jedes Land neu."],
+  [/\b(am|im)\s+(zweiten|dritten|vierten|fünften|sechsten)\s+(Tag|Prüfungstag)/i, "Es gibt keine feste Reihenfolge der Klausuren."],
+  [/\bdie\s+(zweite|dritte|vierte|fünfte|sechste)\s+Klausur\b/i, "Die Klausuren sind nicht durchnummeriert – welches Gebiet wann drankommt, ist offen."],
+  [/\b(verlierst|verlieren|verliert|kostet|kosten|bringt|bringen)\s+(dich\s+|du\s+)?(die\s+meisten\s+|am\s+meisten\s+|\d+\s+)?Punkte?\b/i, "Im Staatsexamen gibt es keine Punkte je Prüfungsschritt – schreib, was der Fehler anrichtet (Aufbau, Anspruchsgrundlage, Verständnis)."],
+  [/\bPunkte(verteilung|vergabe)\b/i, "Eine Punkteverteilung je Prüfungspunkt gibt es im Staatsexamen nicht."],
+  [/\bTextziffer\b/i, "„Textziffer“ ist Steuerberaterexamen, nicht Staatsexamen."],
+  [/\bBuchungssatz\b/i, "Buchungssätze gehören nicht in einen Kanal zum juristischen Staatsexamen."],
+  /* Ankündigungen auf ein nächstes Mal: Der Feed sortiert nicht chronologisch,
+     ein Beitrag wird Monate später gesehen, und eingelöst wird so ein
+     Versprechen ohnehin nie. */
+  [/\b(n(ä|ae)chste[ns]?\s+(Mal|Reel|Beitrag|Woche)\s+(zeige|erkl(ä|ae)re|geht|kommt|schauen|sehen)|Teil\s+2\s+folgt|dazu\s+mehr\s+im\s+n(ä|ae)chsten)/i, "Keine Ankündigung auf ein nächstes Mal – der Beitrag muss für sich stehen."],
+];
+
 /* Normen sind wörtlich erlaubt – sie sind Gesetzestext-Zitate, keine Übernahme.
    Deshalb werden Normzitate (auch ohne Gesetzesangabe, in beliebiger
    Reihenfolge von Abs./S./Nr./Buchst.) vor dem Shingle-Vergleich entfernt. */
@@ -192,6 +218,12 @@ export function pruefeBeitrag(beitrag, opt = {}) {
 
   /* 3. Quellenbezüge */
   if (QUELLENBEZUG.test(gesamt)) fehler.push(`Bezug auf Kursquelle/Seiten/Fallnummern entfernen: ${gesamt.match(QUELLENBEZUG)[0]}`);
+
+  /* 3b. Vorstellungen vom Prüfungsablauf, die es im Staatsexamen nicht gibt. */
+  for (const [muster, grund] of EXAMENSABLAUF) {
+    const treffer = gesamt.match(muster);
+    if (treffer) fehler.push(`„${treffer[0]}“: ${grund}`);
+  }
 
   /* 4. Formales */
   if (beitrag.folien) {

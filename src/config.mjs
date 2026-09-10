@@ -187,7 +187,17 @@ export const CONFIG = {
     stimmeVorsprung: Number(env("IG_STIMME_VORSPRUNG", "0.25")), // so viel muss die Beste vor der Zweiten liegen
     stimmeProbeText: env("IG_STIMME_PROBE", "Achtzig Prozent scheitern an dieser Frage. Nach Paragraf 123 Absatz 5 Verwaltungsgerichtsordnung ist die einstweilige Anordnung gesperrt, wenn Paragraf 80 Absatz 5 greift – nicht umgekehrt. Merk dir das für die Zulässigkeit."),
     fps: 30,
-    maxSekunden: 90,
+    /* Obergrenze, damit ein entgleistes Skript nicht ein Zehn-Minuten-Video
+       baut - nicht die Ziellänge. Die steht in dauerFenster. */
+    maxSekunden: 150,
+    /* Ziellängen, unter denen die Lernschleife wählt. Ein Reel muss nicht kurz
+       sein: Wenn ein Prüfschema 80 Sekunden braucht, bekommt es sie. Welches
+       Fenster tatsächlich am besten läuft, misst insights.mjs an den
+       veröffentlichten Reels; bis genug Messwerte da sind, rotieren sie. */
+    dauerFenster: [[30, 45], [45, 60], [60, 80], [80, 105]],
+    /* So viele gemessene Reels braucht ein Fenster, bevor es gegen die anderen
+       antritt - darunter wird weiter reihum ausprobiert. */
+    dauerMessungen: Number(env("IG_REEL_DAUER_MESSUNGEN", "3")),
     hintergrundmusik: env("IG_REEL_MUSIK", "true") === "true",  // dezentes, synthetisch erzeugtes Klangbett
     /* Split-Screen: das obere Drittel zeigt eine ruhige Animation, täglich
        rotierend. IG_REEL_ANIMATION=labyrinth|marble|ring legt eine fest. */
