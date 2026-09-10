@@ -702,3 +702,15 @@ test("Freistellen: unbrauchbare Ergebnisse werden verworfen", async () => {
   /* Kein Bild → keine Deckung, statt einer Zahl, mit der man weiterrechnet. */
   assert.equal(deckung("/gibt/es/nicht.png"), null);
 });
+
+test("Strenger Faktencheck: ohne Prüfung erscheint kein Beitrag", async () => {
+  const { pruefeFakten } = await import("../src/faktencheck.mjs");
+  /* Abgeschalteter Faktencheck meldet weiterhin „in Ordnung“ – nur der
+     technische Ausfall führt im strengen Modus zum Ausfall des Beitrags. */
+  const alt = CONFIG.faktencheck.aktiv;
+  CONFIG.faktencheck.aktiv = false;
+  const r = await pruefeFakten({ folien: [{ art: "titel", titel: "Test" }] });
+  assert.deepEqual(r, { ok: true, fehler: [], hinweise: [] });
+  CONFIG.faktencheck.aktiv = alt;
+  assert.equal(CONFIG.faktencheck.strikt, true, "streng ist der Standard");
+});
