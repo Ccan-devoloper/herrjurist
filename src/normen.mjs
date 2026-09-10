@@ -22,6 +22,14 @@ const ROEMISCH = { I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX:
 /* Reihenfolge zählt: Erst die langen Formen, dann die kurzen, damit nichts
    doppelt umgeschrieben wird. */
 const KURZ = [
+  /* Sprechform zurückholen. Im selben Auftrag ans Modell steht die Regel für
+     den Sprechertext („Paragraf 48 Absatz 2“), und die färbt gelegentlich auf
+     Bildschirmtext und Caption ab. Nur mit folgender Ziffer, damit „Der
+     Paragraf regelt …“ stehen bleibt. */
+  [/\bParagrafen\s*(?=\d)/g, "§§ "],
+  [/\bParagraf\s*(?=\d)/g, "§ "],
+  [/\bArtikel\s*(?=\d)/g, "Art. "],
+  [/\bin Verbindung mit\b/g, "i.V.m."],
   /* Klammerform aus anderen Quellen zurückholen: „§ 7 (1)“ → „§ 7 Abs. 1“. */
   [/(§{1,2}\s*\d+[a-z]?)\s*\((\d+[a-z]?)\)/g, (_, p, n) => `${p} Abs. ${n}`],
   /* Ausgeschriebene Formen abkürzen. Bewusst ohne i-Flag bei Absatz und
@@ -82,26 +90,6 @@ export const NORM_REGEL_STIMME = 'Im Sprechertext dagegen ausgeschrieben, damit 
 /* Rückweg: Im Reel wird der Sprechertext ausgeschrieben („Paragraf 48 Absatz 2
    VwVfG“) – die Caption ist aber geschriebener Text und gehört ins Zeichen.
    Ohne diesen Schritt steht in der Caption des Reels „Paragraf 48 Abs. 2“. */
-const GESCHRIEBEN = [
-  [/\bParagrafen\s*(?=\d)/g, "§§ "],
-  [/\bParagraf\s*(?=\d)/g, "§ "],
-  [/\bArtikel\s*(?=\d)/g, "Art. "],
-  [/\bAbsatz\s*(\d+)/g, "Abs. $1"],
-  [/\bSatz\s*(\d+)/g, "S. $1"],
-  [/\bNummer\s*(\d+)/g, "Nr. $1"],
-  [/\bHalbsatz\s*(\d+)/g, "Hs. $1"],
-  [/\bBuchstabe\s*([a-z])\b/g, "lit. $1"],
-  [/\bin Verbindung mit\b/g, "i.V.m."],
-];
-
-/** Fassung für geschriebenen Text: aus „Paragraf 48 Absatz 2“ wird „§ 48 Abs. 2“. */
-export function normGeschrieben(text) {
-  if (typeof text !== "string" || !text) return text;
-  let out = text;
-  for (const [muster, ersatz] of GESCHRIEBEN) out = out.replace(muster, ersatz);
-  return out.replace(/§\s+/g, "§ ").replace(/\s{2,}/g, " ").trim();
-}
-
 /** Wendet die Kurzform auf alle sichtbaren Felder eines Objekts an. */
 export function felderKuerzen(objekt, felder) {
   for (const f of felder) if (typeof objekt?.[f] === "string") objekt[f] = normKurz(objekt[f]);

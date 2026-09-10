@@ -716,11 +716,11 @@ test("Strenger Faktencheck: ohne Prüfung erscheint kein Beitrag", async () => {
 });
 
 test("Normen: gesprochene Form wird für Text zurückgewandelt", async () => {
-  const { normGeschrieben } = await import("../src/normen.mjs");
-  assert.equal(normGeschrieben("Paragraf 48 Absatz 2 VwVfG"), "§ 48 Abs. 2 VwVfG");
-  assert.equal(normGeschrieben("Paragrafen 116 ff. BGB"), "§§ 116 ff. BGB");
-  assert.equal(normGeschrieben("Artikel 3 Absatz 1 GG"), "Art. 3 Abs. 1 GG");
-  assert.equal(normGeschrieben("§ 441 III BGB"), "§ 441 III BGB");
+  const { normKurz } = await import("../src/normen.mjs");
+  assert.equal(normKurz("Paragraf 48 Absatz 2 VwVfG"), "§ 48 Abs. 2 VwVfG");
+  assert.equal(normKurz("Paragrafen 116 ff. BGB"), "§§ 116 ff. BGB");
+  assert.equal(normKurz("Artikel 3 Absatz 1 GG"), "Art. 3 Abs. 1 GG");
+  assert.equal(normKurz("§ 441 III BGB"), "§ 441 III BGB");
 });
 
 test("Hashtags: fremde Rechtsgebiete werden aussortiert", async () => {
