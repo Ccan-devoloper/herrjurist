@@ -1,0 +1,59 @@
+name: Stimmen
+
+# Sucht deutsche Sprecher in der ElevenLabs-Bibliothek und spricht auf Wunsch
+# je Kandidat einen Probesatz (≈ 200 Zeichen). Die MP3s landen im Asset-Zweig
+# unter state/stimmen/ und lassen sich dort direkt anhören.
+on:
+  workflow_dispatch:
+    inputs:
+      proben:
+        description: "Probesätze sprechen (kostet ≈ 200 Freizeichen je Stimme)"
+        type: boolean
+        default: true
+      neu:
+        description: "Kandidaten neu suchen (überschreibt die bisherige Liste)"
+        type: boolean
+        default: false
+      setzen:
+        description: "Nummer des Kandidaten, der ab jetzt alle Reels spricht (leer = weiter ausprobieren)"
+        type: string
+        default: ""
+      modell:
+        description: "Sprachmodell für die Proben (leer = wie eingestellt; eleven_flash_v2_5 halbiert den Verbrauch)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  stimmen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Abhängigkeiten
+        working-directory: .
+        run: npm ci
+
+      - name: Stimmen
+        working-directory: .
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL: ${{ inputs.modell != '' && inputs.modell || vars.ELEVENLABS_MODEL }}
+          IG_STIMME_ANZAHL: ${{ vars.IG_STIMME_ANZAHL }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          node bin/stimmen.mjs \
+            ${{ inputs.proben && '--proben' || '' }} \
+            ${{ inputs.neu && '--neu' || '' }} \
+            ${{ inputs.setzen != '' && format('--setzen {0}', inputs.setzen) || '' }}
