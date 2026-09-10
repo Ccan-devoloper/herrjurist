@@ -34,16 +34,21 @@ export function ledgerSpeichern(pfad, ledger) {
 }
 
 /* Welche Themen-Typen ein Format sinnvoll speisen. */
+/* Welches Beitragsformat darf sich aus welchen Themen-Typen bedienen?
+   Der Typ beschreibt das Material (Schema, Frage-Antwort-Karte, Begriffspaar,
+   Rechnung), das Format den Aufbau des Beitrags. Ein Thema vom Typ „quiz“ –
+   eine Frage mit zwei vertretbaren Wegen – trägt nicht nur die Prüfungsfrage,
+   sondern ebenso den Mini-Fall, die Fehlerfalle und das Reel. */
 export const FORMAT_QUELLEN = {
   pruefungsfrage: ["modul", "karteikarte", "quiz", "schema"],
-  fehlerfalle:    ["modul", "karteikarte"],
+  fehlerfalle:    ["modul", "karteikarte", "quiz"],
   schema:         ["modul", "schema"],
   rechenweg:      ["formel", "modul"],
   spickzettel:    ["modul", "schema"],
   anlass:         ["modul", "karteikarte"],
-  reel:           ["modul", "schema", "karteikarte"],
+  reel:           ["modul", "schema", "karteikarte", "quiz"],
   loesungsskizze: [],
-  minifall:       ["modul", "karteikarte"],
+  minifall:       ["modul", "karteikarte", "quiz"],
   vergleich:      ["modul", "karteikarte", "begriff"],
   streitstand:    ["modul", "begriff", "karteikarte"],
   klausurtechnik: ["modul", "formel", "schema"],
