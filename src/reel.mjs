@@ -322,6 +322,7 @@ canvas#oben{position:absolute;left:0;top:0;width:1080px;height:${OBEN}px;display
 .ctablock .text{margin-top:22px;font-size:40px;color:var(--text-weich)}
 .ctablock .pille{margin-top:34px;font-size:36px;padding:18px 40px}
 .untertitel{position:absolute;left:60px;right:60px;top:${OBEN + 780}px;height:280px;display:flex;align-items:center;justify-content:center;text-align:center}
+.untertitel .k{text-transform:none}
 .untertitel .block{max-width:100%;overflow-wrap:anywhere;font-family:var(--titel);font-size:84px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em;font-weight:${stil.schrift.titelGewicht};transform-origin:50% 50%;will-change:transform}
 
 .reel .fuss{position:absolute;left:84px;right:84px;bottom:70px;display:flex;justify-content:space-between}
@@ -344,6 +345,19 @@ const FARBEN = ${JSON.stringify(farben)};
 const H = ${OBEN};
 const szenen = [...document.querySelectorAll(".szene")].map((el) => ({ el, start: +el.dataset.start, dauer: +el.dataset.dauer, kinder: [...el.querySelectorAll("h1,h2,p,.nummer,.norm,.pille,.ueber")] }));
 const ease = (x) => 1 - Math.pow(1 - Math.min(1, Math.max(0, x)), 3);
+/* Der Untertitel steht in Grossbuchstaben - aus "VwVfG" wuerde damit "VWVFG".
+   Gesetzeskuerzel sind Eigennamen und behalten ihre Schreibweise. Erkannt
+   werden sie an dem, was sie ausmacht: mindestens zwei Grossbuchstaben und
+   mindestens ein kleiner. Ein normales deutsches Wort hat nur einen grossen. */
+function kuerzelSchonen(text) {
+  const esc = (x) => x.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  return esc(text).split(/(\s+)/).map((w) => {
+    const kern = w.replace(/[^A-Za-z\u00c4\u00d6\u00dc\u00e4\u00f6\u00fc\u00df]/g, "");
+    const gross = (kern.match(/[A-Z\u00c4\u00d6\u00dc]/g) || []).length;
+    const klein = (kern.match(/[a-z\u00e4\u00f6\u00fc\u00df]/g) || []).length;
+    return gross >= 2 && klein >= 1 ? '<span class="k">' + w + "</span>" : w;
+  }).join("");
+}
 ${ANIMATIONEN}
 /* Einpassen: Überschriften verkleinern, bis kein Wort umbrechen muss und die Szene in ihren Rahmen passt. */
 (function einpassen() {
@@ -375,7 +389,7 @@ window.setzeZeit = function (t) {
   const key = String(b.von);
   if (block.dataset.key !== key) {
     block.dataset.key = key;
-    block.textContent = b.text;
+    block.innerHTML = kuerzelSchonen(b.text);
     /* Ein ganzer Satz ist laenger als die vier Woerter von frueher und passt in
        der Ausgangsgroesse nicht immer in die Karte. Verkleinert wird einmal je
        Satz, nicht je Bild - sonst zappelt die Schrift. */
