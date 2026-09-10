@@ -81,7 +81,7 @@ export const FORMATE = {
   },
   spickzettel: {
     label: "Spickzettel",
-    anleitung: "Folie 1: „Das ganze Schema auf einer Karte“ als Frage/Versprechen. Folie 2 (art karte): der komplette Prüfungsaufbau als dichte, nummerierte Karte – 5–8 Schritte mit je maximal 8 Wörtern und Norm. Folie 3: die zwei Stellen, an denen die meisten Punkte verloren gehen (Punkte). Vorletzte Folie: Merksatz. Letzte Folie: CTA mit dem Hinweis „Kommentiere SCHEMA, dann schicke ich dir die Karte als Nachricht“. Diese Karte muss so gut sein, dass man sie speichert.",
+    anleitung: "Folie 1: „Das ganze Schema auf einer Karte“ als Frage/Versprechen. Folie 2 (art karte): der komplette Prüfungsaufbau als dichte, nummerierte Karte – 5–8 Schritte mit je maximal 8 Wörtern und Norm. Folie 3: die zwei Stellen, an denen die meisten Punkte verloren gehen (Punkte). Vorletzte Folie: Merksatz. Letzte Folie: CTA. Diese Karte muss so gut sein, dass man sie speichert.",
     folien: ["titel", "karte", "text", "merke", "cta"],
   },
   anlass: {
@@ -418,7 +418,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
       wochenThemen?.length ? `\n## Themen dieser Woche\n${wochenThemen.map((t) => `- ${t}`).join("\n")}` : "",
       anlass ? `\n## Anlass\n${anlass.titel}: ${anlass.kontext}` : "",
       `\nPhase im Prüfungsjahr: ${phase(datum)}.`,
-      format === "spickzettel" ? `\nDer CTA muss den Satz enthalten: „Kommentiere ${CONFIG.nachrichten.schluesselwort} – dann schicke ich dir die Karte als Nachricht.“ Derselbe Satz gehört ans Ende der Caption.` : "",
+      "",
       `\n## Sperrliste (diese Namen nie verwenden)\n${sperr.join(", ")}`,
       feedback ? `\n## Beanstandungen am vorherigen Entwurf – bitte beheben\n${feedback}\n\nVorheriger Entwurf:\n${JSON.stringify(letzter)}` : "",
       `\nErstelle jetzt den Beitrag als JSON.`,

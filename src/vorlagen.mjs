@@ -233,7 +233,14 @@ h1 em{color:${p.akzent2}}
 .art-titel::after{content:"";position:absolute;left:210px;bottom:-140px;width:660px;height:660px;border-radius:50%;background:rgba(255,255,255,.16);pointer-events:none}
 /* Fotokarte: unteres Drittel, gleiche Rundung wie die uebrigen Karten. Ist ein
    Foto da, entfaellt die Icon-Buehne samt Kreis und Sternen. */
-.art-titel:has(.foto)::after{display:none}
+.art-titel:has(.foto)::after,.art-titel:has(.frei)::after{display:none}
+/* Freigestelltes Motiv: unten rechts, laeuft ueber den Rand hinaus. Der
+   Schatten setzt es von der Flaeche ab, ohne einen Rahmen zu zeichnen. */
+.frei{position:absolute;right:-40px;bottom:0;width:760px;height:740px;z-index:1;pointer-events:none}
+.frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.28))}
+/* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
+.art-titel:has(.frei) .fuss{z-index:3}
+.art-titel:has(.frei) .fuss .klausur{background:var(--grund);padding:6px 18px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1}
 .foto img{width:100%;height:100%;object-fit:cover;display:block}
 .bildquelle{position:absolute;left:70px;bottom:78px;font-size:20px;color:${p.dunkel};opacity:.6;letter-spacing:.02em;z-index:2}
@@ -346,7 +353,10 @@ const KLAUSUR_KURZ = { 1: "Zivilrecht", 2: "Strafrecht", 3: "Öffentliches Recht
    Drittel, die Farbe der Kachel bleibt sichtbar. Ganzflaechig waere es ein
    anderer Kanal - so bleibt die Marke erkennbar und das Bild traegt trotzdem. */
 function fotoBuehne(folie) {
-  return `<div class="foto"><img src="${esc(folie.bild)}" alt=""></div>${folie.bildQuelle ? `<div class="bildquelle">${esc(folie.bildQuelle)}</div>` : ""}`;
+  /* Freigestellt: Das Motiv laeuft unten rechts aus der Kachel, ohne Rahmen.
+     Nicht freigestellt (Notfall): als abgerundete Karte. */
+  const klasse = folie.bildFrei === false ? "foto" : "frei";
+  return `<div class="${klasse}"><img src="${esc(folie.bild)}" alt=""></div>${folie.bildQuelle ? `<div class="bildquelle">${esc(folie.bildQuelle)}</div>` : ""}`;
 }
 
 function bildOderIllu(ctx, folie) {

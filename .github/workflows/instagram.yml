@@ -77,6 +77,16 @@ jobs:
 
       # Kostenlose Offline-Stimme für Reels (Piper „Thorsten“, neuronal). Wird nur
       # gebraucht, wenn kein ElevenLabs-Schlüssel gesetzt ist; kostet sonst nichts.
+      - name: Freisteller-Modell (Cache)
+        id: rembg-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.u2net
+          key: rembg-u2net-v1
+
+      - name: Freisteller installieren
+        run: pip install --quiet "rembg[cli]" onnxruntime
+
       - name: Piper-Stimme (Cache)
         id: piper-cache
         uses: actions/cache@v4
@@ -106,6 +116,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          IG_BILDER_FREISTELLEN: ${{ vars.IG_BILDER_FREISTELLEN }}
           IG_BILDER: ${{ vars.IG_BILDER }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
           ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}

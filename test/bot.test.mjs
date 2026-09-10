@@ -688,3 +688,9 @@ test("Titelbild: Szene statt Vokabel, Querformat, kein Treffer heißt kein Bild"
   globalThis.fetch = fetchAlt;
   CONFIG.bilder.key = key;
 });
+
+test("Freistellen: unbrauchbare Ergebnisse werden verworfen", async () => {
+  const { deckung } = await import("../src/freistellen.mjs");
+  /* Kein Bild → keine Deckung, statt einer Zahl, mit der man weiterrechnet. */
+  assert.equal(deckung("/gibt/es/nicht.png"), null);
+});
