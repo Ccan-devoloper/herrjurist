@@ -273,12 +273,21 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
    Schuldrecht mit #öffentlichesrecht ist schlicht falsch ausgezeichnet – er
    landet bei Leuten, die etwas anderes suchen, und wirkt unsauber. */
 const GEBIET_TAGS = { 1: "#zivilrecht", 2: "#strafrecht", 3: "#öffentlichesrecht" };
-const ALLE_GEBIET_TAGS = Object.values(GEBIET_TAGS);
+/* Auch Fach-Hashtags gehoeren zu genau einem Gebiet. Ohne diese Liste rutschte
+   ueber die taeglich rotierenden Entdecker-Tags ein #staatsrecht unter einen
+   Zivilrechtsbeitrag - fuer die Leute, die dem Tag folgen, ein Fehlgriff, und
+   fuer die Lernschleife ein verfaelschter Messwert. */
+const FACH_TAGS = {
+  1: ["#zivilrecht", "#bgbat", "#schuldrecht", "#sachenrecht", "#zpo", "#familienrecht", "#erbrecht", "#handelsrecht", "#arbeitsrecht"],
+  2: ["#strafrecht", "#stpo", "#strafprozessrecht"],
+  3: ["#öffentlichesrecht", "#verwaltungsrecht", "#staatsrecht", "#grundrechte", "#verfassungsrecht", "#europarecht", "#vwgo"],
+};
+const ALLE_GEBIET_TAGS = Object.values(FACH_TAGS).flat();
 
 export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.floor(Date.now() / 86400000), klausur = null) {
   const norm = (h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase().replace(/\s+/g, "");
   const g = strategie?.hashtagGewicht || {};
-  const passt = (h) => !ALLE_GEBIET_TAGS.includes(h) || h === GEBIET_TAGS[klausur];
+  const passt = (h) => !klausur || !ALLE_GEBIET_TAGS.includes(h) || (FACH_TAGS[klausur] || []).includes(h);
   const eigene = [...new Set(vorschlaege.map(norm))].filter((h) => !kern.includes(h) && passt(h)).sort((a, b) => (g[b] ?? 1) - (g[a] ?? 1));
   const entdecker = (CONFIG.hashtags.entdecker || []).filter(passt);
   const neu = entdecker.length ? [entdecker[tag % entdecker.length], entdecker[(tag * 7 + 3) % entdecker.length]] : [];
