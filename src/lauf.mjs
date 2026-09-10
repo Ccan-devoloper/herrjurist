@@ -60,6 +60,13 @@ function planSpeichern(hosting, plan) {
   hosting.jsonSchreiben(`plaene/${plan.datum}.json`, plan);
 }
 
+/* Bildnachweis fuer die Caption. Pexels verlangt einen sichtbaren Hinweis auf
+   die Quelle; auf der Kachel stoert er, in der Caption nicht. */
+function bildnachweis(beitrag) {
+  const q = beitrag?.folien?.find((f) => f.art === "titel")?.bildQuelle;
+  return q ? `\n\n${q}` : "";
+}
+
 /* Setzt das Foto auf die Titelfolie, sofern eines gefunden wird. */
 async function titelfolieBebildern(beitrag) {
   const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
@@ -352,7 +359,7 @@ async function main() {
       await titelfolieBebildern(beitrag);
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
-      const caption = `${beitrag.caption}\n\n${beitrag.hashtags.join(" ")}`;
+      const caption = `${beitrag.caption}${bildnachweis(beitrag)}\n\n${beitrag.hashtags.join(" ")}`;
       const schonDa = await ig.bereitsVeroeffentlicht(caption);
       if (schonDa) log(`  Beitrag steht bereits auf Instagram (${schonDa}) – wird nur vermerkt.`);
       const medienId = schonDa || await ig.beitragPosten({ bildUrls: urls, caption });
@@ -485,7 +492,7 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
       await titelfolieBebildern(beitrag);
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "auffuellen"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Auffüllen ${slot}`);
-      const caption = `${beitrag.caption}\n\n${beitrag.hashtags.join(" ")}`;
+      const caption = `${beitrag.caption}${bildnachweis(beitrag)}\n\n${beitrag.hashtags.join(" ")}`;
       const schonDa = await ig.bereitsVeroeffentlicht(caption);
       if (schonDa) log(`  Beitrag steht bereits auf Instagram (${schonDa}) – wird nur vermerkt.`);
       const medienId = schonDa || await ig.beitragPosten({ bildUrls: urls, caption });
