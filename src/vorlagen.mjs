@@ -233,13 +233,18 @@ h1 em{color:${p.akzent2}}
 .art-titel::after{content:"";position:absolute;left:210px;bottom:-140px;width:660px;height:660px;border-radius:50%;background:rgba(255,255,255,.16);pointer-events:none}
 /* Fotokarte: unteres Drittel, gleiche Rundung wie die uebrigen Karten. Ist ein
    Foto da, entfaellt die Icon-Buehne samt Kreis und Sternen. */
-/* Inhaltsfolien: der Inhalt steht mittig zwischen Kopf und Fusszeile. Kurze
-   Folien klebten sonst oben und liessen die untere Haelfte leer - im Feed
-   sieht das aus wie ein halbfertiger Beitrag. Der Kopf liegt in diesem Stil
-   absolut, deshalb traegt die erste Ueberschrift den oberen Abstand; zusammen
-   mit dem margin-top:auto der Fusszeile teilt sich der freie Platz. Die
-   Titelfolie bleibt oben - dort fuellt das Motiv die untere Haelfte. */
-.folie:not(.art-titel) > h2:first-of-type{margin-top:auto}
+/* Inhaltsfolien: der Inhalt steht mittig, die Fusszeile klebt unten.
+   Vorher holten sich Inhalt und Fusszeile den freien Platz beide ueber
+   margin-top:auto. Bei Folien, die selbst schon auto-Raender mitbringen
+   (Merksatz, CTA), waren das drei Ansprueche auf denselben Platz - der
+   Inhalt landete im oberen Drittel und die untere Haelfte blieb leer.
+   Die Titelfolie bleibt oben, dort fuellt das Motiv die untere Haelfte. */
+.folie:not(.art-titel){justify-content:center}
+.folie:not(.art-titel) > .fuss{position:absolute;left:76px;right:76px;bottom:64px;margin-top:0}
+/* Merksatz und CTA zentrieren sich sonst selbst und loesen sich damit von
+   ihrer Ueberschrift - das Zentrieren macht jetzt die Folie fuer alle. */
+.folie:not(.art-titel) > .merke{margin-top:36px;margin-bottom:0}
+.folie:not(.art-titel) > .cta{margin-top:0;margin-bottom:0}
 .art-titel:has(.foto)::after,.art-titel:has(.frei)::after{display:none}
 /* Freigestelltes Motiv: unten rechts, laeuft ueber den Rand hinaus. Der
    Schatten setzt es von der Flaeche ab, ohne einen Rahmen zu zeichnen. */
