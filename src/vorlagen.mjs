@@ -342,7 +342,9 @@ function kopf(ctx, zaehler) {
 /* Fußzeile: nur das Handle, und nur wenn eines konfiguriert ist. Keine Website,
    kein Markenname – das kommt später. */
 function fuss(ctx) {
-  return `<div class="fuss"><span class="handle">${esc(ctx.handle || "")}</span><span class="klausur">${esc(KLAUSUR_KURZ[ctx.klausur] || "")}</span></div>`;
+  /* Methodik gehoert zu keinem Rechtsgebiet - dann steht dort das Fach. */
+  const rechts = ctx.fach === "methodik" ? "Klausurtechnik" : (KLAUSUR_KURZ[ctx.klausur] || "");
+  return `<div class="fuss"><span class="handle">${esc(ctx.handle || "")}</span><span class="klausur">${esc(rechts)}</span></div>`;
 }
 /* Die Marke sortiert nach Rechtsgebiet - das steht in der Fusszeile, so wie
    beim Steuerkanal der Klausurtag. */

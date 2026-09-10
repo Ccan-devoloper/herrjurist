@@ -48,10 +48,13 @@ export function themenpool() {
     const fach = FAECHER[t.fach];
     if (!fach) throw new Error(`Thema ${i} nennt ein unbekanntes Fach: ${t.fach}`);
     const typ = t.typ || typVon(t.titel);
+    /* Gebiet 0 (Methodik): reihum eine der drei Farben, damit diese Beiträge
+       nicht alle gleich aussehen – die Ecke sagt ohnehin „Klausurtechnik“. */
+    const klausur = fach.klausur || ((i % 3) + 1);
     return {
       id: t.id || `${t.fach}-${String(i + 1).padStart(3, "0")}`,
       fach: t.fach,
-      klausur: fach.klausur,
+      klausur,
       typ,
       streit: istStreit(t),
       titel: t.titel,
