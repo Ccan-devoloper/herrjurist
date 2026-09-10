@@ -243,9 +243,15 @@ h1 em{color:${p.akzent2}}
 .art-titel:has(.foto)::after,.art-titel:has(.frei)::after{display:none}
 /* Freigestelltes Motiv: unten rechts, laeuft ueber den Rand hinaus. Der
    Schatten setzt es von der Flaeche ab, ohne einen Rahmen zu zeichnen. */
-.frei{position:absolute;right:-40px;bottom:0;width:760px;height:740px;z-index:1;pointer-events:none}
+/* Die Buehne endet unterhalb des Kopfblocks: Seit die Motive zugeschnitten
+   werden, fuellen sie den Kasten wirklich aus und wuerden sonst in den Pfeil
+   und das "So geht's!" hineinlaufen. */
+.frei{position:absolute;right:-40px;bottom:0;width:720px;height:560px;z-index:1;pointer-events:none}
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.28))}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
+/* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
+   links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
+.art-titel:has(.frei) .pille{margin-left:20px;z-index:3}
 .art-titel:has(.frei) .fuss{z-index:3}
 .art-titel:has(.frei) .fuss .klausur{background:var(--grund);padding:6px 18px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1}
