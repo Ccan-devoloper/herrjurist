@@ -79,6 +79,29 @@ export function normGesprochen(text) {
 export const NORM_REGEL = 'Normen in der Klausur-Zitierweise: § 80 Abs. 1 S. 5 VwGO, § 1 Abs. 1 S. 1 Nr. 1 lit. a BGB. Absatz, Satz, Nummer und Buchstabe abgekürzt, nie in Klammern. Römische Absatzziffern („§ 441 III BGB“) sind ebenfalls in Ordnung, wenn die Norm üblicherweise so zitiert wird – nur nicht innerhalb eines Beitrags mischen.';
 export const NORM_REGEL_STIMME = 'Im Sprechertext dagegen ausgeschrieben, damit die Stimme es richtig liest: „Paragraf 80 Absatz 1 Satz 5 VwGO“ – dort keine Abkürzungen.';
 
+/* Rückweg: Im Reel wird der Sprechertext ausgeschrieben („Paragraf 48 Absatz 2
+   VwVfG“) – die Caption ist aber geschriebener Text und gehört ins Zeichen.
+   Ohne diesen Schritt steht in der Caption des Reels „Paragraf 48 Abs. 2“. */
+const GESCHRIEBEN = [
+  [/\bParagrafen\s*(?=\d)/g, "§§ "],
+  [/\bParagraf\s*(?=\d)/g, "§ "],
+  [/\bArtikel\s*(?=\d)/g, "Art. "],
+  [/\bAbsatz\s*(\d+)/g, "Abs. $1"],
+  [/\bSatz\s*(\d+)/g, "S. $1"],
+  [/\bNummer\s*(\d+)/g, "Nr. $1"],
+  [/\bHalbsatz\s*(\d+)/g, "Hs. $1"],
+  [/\bBuchstabe\s*([a-z])\b/g, "lit. $1"],
+  [/\bin Verbindung mit\b/g, "i.V.m."],
+];
+
+/** Fassung für geschriebenen Text: aus „Paragraf 48 Absatz 2“ wird „§ 48 Abs. 2“. */
+export function normGeschrieben(text) {
+  if (typeof text !== "string" || !text) return text;
+  let out = text;
+  for (const [muster, ersatz] of GESCHRIEBEN) out = out.replace(muster, ersatz);
+  return out.replace(/§\s+/g, "§ ").replace(/\s{2,}/g, " ").trim();
+}
+
 /** Wendet die Kurzform auf alle sichtbaren Felder eines Objekts an. */
 export function felderKuerzen(objekt, felder) {
   for (const f of felder) if (typeof objekt?.[f] === "string") objekt[f] = normKurz(objekt[f]);

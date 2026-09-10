@@ -37,6 +37,45 @@ export function deckung(pngPfad) {
 }
 
 /**
+ * Schneidet die durchsichtigen Ränder weg, sodass das Motiv das Bild ausfüllt.
+ * Ohne diesen Schritt bleibt das freigestellte Motiv so klein wie im
+ * Originalfoto – bei einem stehenden Menschen in einer Querformat-Aufnahme
+ * sind das schnell 80 Prozent Luft.
+ */
+export function zuschneiden(pngPfad) {
+  /* Der Alphakanal wird auf ein grobes Raster verkleinert und darin die
+     Umrandung des Motivs gesucht. cropdetect wäre der naheliegende Weg, meldet
+     bei durchsichtigen Rändern aber nichts – hier zählt jedes Pixel selbst. */
+  const N = 96;
+  const r = spawnSync(ffmpegPfad(), ["-hide_banner", "-loglevel", "error", "-i", pngPfad,
+    "-vf", `alphaextract,scale=${N}:${N}`, "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 22 });
+  if (r.status !== 0 || r.stdout?.length !== N * N) return pngPfad;
+  let l = N, o = N, re = -1, u = -1;
+  for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+    if (r.stdout[y * N + x] < 24) continue;      // fast durchsichtig
+    if (x < l) l = x; if (x > re) re = x;
+    if (y < o) o = y; if (y > u) u = y;
+  }
+  if (re < 0 || u < 0) return pngPfad;
+  const masse = spawnSync(ffmpegPfad(), ["-hide_banner", "-i", pngPfad, "-f", "null", "-"], { encoding: "utf8" });
+  const g = String(masse.stderr || "").match(/,\s(\d+)x(\d+)/);
+  if (!g) return pngPfad;
+  const [B, H] = [Number(g[1]), Number(g[2])];
+  /* Etwas Luft stehen lassen, sonst klebt das Motiv am Rand. */
+  const luft = 2;
+  const x = Math.max(0, Math.floor(((l - luft) / N) * B));
+  const y = Math.max(0, Math.floor(((o - luft) / N) * H));
+  const bb = Math.min(B - x, Math.ceil(((re - l + 1 + 2 * luft) / N) * B));
+  const hh = Math.min(H - y, Math.ceil(((u - o + 1 + 2 * luft) / N) * H));
+  if (bb < 32 || hh < 32 || (bb >= B * 0.98 && hh >= H * 0.98)) return pngPfad;
+  const ziel = pngPfad.replace(/\.png$/, "-eng.png");
+  const s2 = spawnSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-i", pngPfad, "-vf", `crop=${bb}:${hh}:${x}:${y}`, ziel], { encoding: "utf8" });
+  if (s2.status !== 0 || !fs.existsSync(ziel)) return pngPfad;
+  fs.rmSync(pngPfad, { force: true });
+  return ziel;
+}
+
+/**
  * Stellt ein Bild frei.
  * @returns {{pfad:string, deckung:number}|null} null = nicht brauchbar
  */
@@ -56,5 +95,7 @@ export function freistellen(quelle, { min = 0.06, max = 0.82 } = {}) {
     fs.rmSync(ziel, { force: true });
     return null;
   }
-  return { pfad: ziel, deckung: d };
+  /* Deckung wird am ungeschnittenen Bild gemessen (dort sagt sie etwas über
+     die Qualität der Freistellung), zugeschnitten wird danach. */
+  return { pfad: zuschneiden(ziel), deckung: d };
 }
