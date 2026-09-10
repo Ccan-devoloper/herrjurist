@@ -660,3 +660,31 @@ test("Die Stimme wird ausprobiert und erst bei klarem Vorsprung festgeschrieben"
   const duenn = { veroeffentlicht: [reel("a", 200, 1), reel("b", 60, 2)] };
   assert.equal(gewinner(stimmenStatistik(duenn, new Date("2026-09-15T12:00:00Z")), kandidaten), null);
 });
+
+test("Titelbild: Szene statt Vokabel, Querformat, kein Treffer heißt kein Bild", async () => {
+  const { fotoSuchen, titelbild } = await import("../src/bilder.mjs");
+  const { CONFIG } = await import("../src/config.mjs");
+  const key = CONFIG.bilder.key, fetchAlt = globalThis.fetch;
+  CONFIG.bilder.key = "test-key";
+  let gefragt = null;
+  const antwort = (fotos) => ({ ok: true, json: async () => ({ photos: fotos }), text: async () => "" });
+  const foto = (id, w, h) => ({ id, width: w, height: h, photographer: `F${id}`, url: `https://pexels/${id}`, src: { large2x: `https://img/${id}.jpg` } });
+
+  /* Hochformat und zu kleine Bilder fallen raus. */
+  globalThis.fetch = async (u) => { gefragt = u; return antwort([foto(1, 800, 1200), foto(2, 900, 600), foto(3, 2000, 1300)]); };
+  const treffer = await fotoSuchen("delivery man waiting at door", { zufall: () => 0 });
+  assert.equal(treffer.id, 3, "nur groß und quer");
+  assert.match(gefragt, /delivery\+man|delivery%20man/);
+  assert.match(gefragt, /orientation=landscape/);
+
+  /* Kein Treffer: kein Bild – lieber das Icon als ein beliebiges Symbolfoto. */
+  globalThis.fetch = async () => antwort([]);
+  assert.equal(await fotoSuchen("annahmeverzug"), null);
+
+  /* Ohne Szene wird gar nicht erst gesucht. */
+  globalThis.fetch = async () => { throw new Error("darf nicht fragen"); };
+  assert.equal(await titelbild({ folien: [{ art: "titel" }] }), null);
+
+  globalThis.fetch = fetchAlt;
+  CONFIG.bilder.key = key;
+});

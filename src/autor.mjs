@@ -139,6 +139,7 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das de
 - Caption: 4–8 Zeilen. Zeile 1 ist der Hook (die Frage oder die Pointe), dann die Kernantwort in 2–4 Sätzen, dann die Aufforderung, den Beitrag an die Lerngruppe weiterzuleiten und zu speichern, plus eine echte Frage an die Leser:innen, die eine Antwort im Kommentar provoziert. ${CONFIG.marke.website ? `Am Ende darf ein Hinweis „Mehr auf ${CONFIG.marke.website} (Link in Bio)“ stehen.` : "Keine Website, keine Plattform, kein Produkt erwähnen – auch nicht „Link in Bio“."} Keine Hashtags in der Caption; die kommen separat.
 - Hashtags: 8–14 Stück, deutsch, kleingeschrieben, spezifisch zum Thema plus diese Kernhashtags: ${CONFIG.hashtags.kern.join(" ")}.
 - kurztitel: 3–6 Wörter für die Story-Ankündigung.
+- bildSzene: eine ENGLISCHE Beschreibung einer konkreten, fotografierbaren Alltagsszene für das Titelbild – 3 bis 6 Wörter, so, wie man sie in einer Fotodatenbank suchen würde. Sie muss die Rechtsfrage bildlich greifbar machen, nicht sie beschriften: für den Annahmeverzug „delivery man waiting at door“, für das Mietrecht „damp stain on apartment wall“, für den Betrug „person signing contract nervously“. Verboten sind juristische Vokabeln („annahmeverzug“, „liability“), abstrakte Begriffe („justice“, „law“) und die Symbolbild-Klassiker: Richterhammer, Waage, Paragrafenzeichen, Gesetzbuch, Gerichtsgebäude, Anzugträger beim Händedruck – die sagen nichts und stehen unter jedem zweiten Jura-Beitrag. Fällt dir keine echte Szene ein, gib null zurück; dann bleibt es beim Icon.
 
 ## Beispiel eines fertigen Beitrags (Format Prüfungsfrage)
 ${JSON.stringify({ folien: beispiele.beitraege[0].folien, caption: beispiele.beitraege[0].caption, hashtags: beispiele.beitraege[0].hashtags, kurztitel: "Teilwert-AfA: Pflicht oder Wahlrecht?" }, null, 1)}
@@ -184,10 +185,11 @@ const BEITRAG_SCHEMA = {
     caption: { type: "string" },
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
+    bildSzene: { type: ["string", "null"] },
     quellen: { type: ["array", "null"], items: { type: "string" } },
     hooks: { type: ["array", "null"], items: { type: "object", additionalProperties: false, properties: { typ: { type: "string", enum: ["frage", "fehler", "zahl", "aussage"] }, titel: { type: "string" } }, required: ["typ", "titel"] } },
   },
-  required: ["folien", "caption", "hashtags", "kurztitel", "quellen", "hooks"],
+  required: ["folien", "caption", "hashtags", "kurztitel", "bildSzene", "quellen", "hooks"],
 };
 
 const STORY_SCHEMA = {
@@ -388,6 +390,7 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     caption: (daten.caption || "").trim(),
     hashtags: tags,
     kurztitel: daten.kurztitel || folien[0]?.titel || "",
+    bildSzene: daten.bildSzene || null,
     quellen: daten.quellen || [],
     hookTyp: hook?.typ || hookTyp(folien[0]?.titel || ""),
   };
@@ -437,11 +440,15 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
 
 /* Web-Recherche für das Format „aktuell“ (Server-Tool Websuche). */
 export async function aktuellRecherchieren(datum, bereitsBehandelt = []) {
-  const frage = `Heute ist der ${datumLesbar(datum)}. Recherchiere 3–5 aktuelle Neuigkeiten aus den letzten 4 Wochen, die für Kandidat:innen des deutschen Steuerberaterexamens relevant sind: BFH-Urteile, BMF-Schreiben, Gesetzesänderungen (EStG, KStG, UStG, AO, HGB, ErbStG, UmwStG, GewStG), Termine/Statistiken der Steuerberaterprüfung, Änderungen bei Prüfungsordnung oder Hilfsmitteln. Bevorzuge offizielle Quellen (bundesfinanzhof.de, bundesfinanzministerium.de, bstbk.de, Steuerberaterkammern, Bundesgesetzblatt) und Fachverlage (NWB, Haufe, Beck, DATEV). Bereits behandelt (nicht erneut): ${bereitsBehandelt.join("; ") || "–"}.
+  const frage = `Heute ist der ${datumLesbar(datum)}. Recherchiere 3–5 aktuelle Neuigkeiten aus den letzten 6 Wochen, die für Kandidat:innen des ersten und zweiten juristischen Staatsexamens relevant sind: neue Entscheidungen von BGH, BVerfG, BVerwG, BAG oder EuGH mit Examensbezug, Gesetzesänderungen (BGB, StGB, StPO, ZPO, GG, VwGO, VwVfG, HGB, GmbHG, ArbR), Änderungen an Juristenausbildungsgesetzen oder Prüfungsordnungen der Länder.
 
-Wähle dann DIE eine Neuigkeit mit dem größten Examensbezug aus. Antworte mit:
-1. Auswahl: Titel, Datum, Aktenzeichen/Dokument, Fach (eines von: ao, ust, erbst, kst, istr, bilanz, persg)
-2. Notizen: Was ist passiert, was ist der Kern, was bedeutet es fürs Examen (max. 200 Wörter, eigene Worte)
+Nutze ausschließlich frei zugängliche Quellen: die Entscheidungsdatenbanken der Gerichte selbst (bundesgerichtshof.de, bundesverfassungsgericht.de, bundesverwaltungsgericht.de, bundesarbeitsgericht.de, curia.europa.eu), rechtsprechung-im-internet.de, gesetze-im-internet.de, dejure.org, openjur.de, Bundesgesetzblatt, Landesjustizprüfungsämter. KEINE kostenpflichtigen Datenbanken (beck-online, juris, Wolters Kluwer) – deren Inhalte dürfen nicht weitergegeben werden; die amtlichen Entscheidungsgründe sind ohnehin frei.
+
+Bereits behandelt (nicht erneut): ${bereitsBehandelt.join("; ") || "–"}.
+
+Wähle dann DIE eine Neuigkeit mit dem größten Examensbezug aus – lieber eine Entscheidung zu einem Klausurklassiker als eine spektakuläre Randfrage. Antworte mit:
+1. Auswahl: Titel, Datum, Aktenzeichen, Fach (eines von: bgbat, schuld, schuldbt, sachen, delikt, bereich, gesetzs, arbeit, famerb, handelsg, zpo, strafat, strafbt, stpo, staat, grundr, verwalt, verwbt, vwgo, europa)
+2. Notizen: Was ist passiert, welche Norm trägt die Entscheidung, was ändert sich gegenüber der bisherigen Linie, und was heißt das für die Klausur (max. 200 Wörter, eigene Worte)
 3. Quellen: 2–3 URLs`;
   return webRecherche(frage, "recherche");
 }

@@ -231,6 +231,12 @@ h1 em{color:${p.akzent2}}
 .art-titel .pille::before{content:"";position:absolute;left:0;top:-30px;width:150px;height:110px;background:${pfeil} no-repeat center/contain}
 /* Bühne: Blase, großes Icon, §-Badge, Karte, Sterne */
 .art-titel::after{content:"";position:absolute;left:210px;bottom:-140px;width:660px;height:660px;border-radius:50%;background:rgba(255,255,255,.16);pointer-events:none}
+/* Fotokarte: unteres Drittel, gleiche Rundung wie die uebrigen Karten. Ist ein
+   Foto da, entfaellt die Icon-Buehne samt Kreis und Sternen. */
+.art-titel:has(.foto)::after{display:none}
+.foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+.bildquelle{position:absolute;left:70px;bottom:78px;font-size:20px;color:${p.dunkel};opacity:.6;letter-spacing:.02em;z-index:2}
 .illu{right:auto;left:330px;bottom:70px;width:420px;height:420px;color:${p.dunkel};opacity:1;z-index:1}
 .illu::before{display:none}
 .illu .icon{width:380px;height:380px}
@@ -336,6 +342,13 @@ function fuss(ctx) {
    beim Steuerkanal der Klausurtag. */
 const KLAUSUR_KURZ = { 1: "Zivilrecht", 2: "Strafrecht", 3: "Öffentliches Recht" };
 
+/* Foto statt Icon-Buehne: Das Bild liegt als abgerundete Karte im unteren
+   Drittel, die Farbe der Kachel bleibt sichtbar. Ganzflaechig waere es ein
+   anderer Kanal - so bleibt die Marke erkennbar und das Bild traegt trotzdem. */
+function fotoBuehne(folie) {
+  return `<div class="foto"><img src="${esc(folie.bild)}" alt=""></div>${folie.bildQuelle ? `<div class="bildquelle">${esc(folie.bildQuelle)}</div>` : ""}`;
+}
+
 function bildOderIllu(ctx, folie) {
   if (folie.icon) return `<div class="geist">§</div><div class="illu">${iconSvg(folie.icon)}</div>`;
   return `<div class="geist">§</div>`;
@@ -360,8 +373,8 @@ const FOLIEN = {
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
     ${f.prioritaet ? `<div class="prio ${f.prioritaet}"><i></i>${esc(f.prioritaetText || "")}</div>` : ""}
     <div><span class="pille">${esc((ctx.stil.familie || ctx.stil.id) === "bunt" ? (f.hinweis || "So geht's!") : (f.pille || "Swipen →"))}</span></div>
-    ${bildOderIllu(ctx, f)}
-    ${(ctx.stil.familie || ctx.stil.id) === "bunt" ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
+    ${f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f)}
+    ${!f.bild && (ctx.stil.familie || ctx.stil.id) === "bunt" ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
     ${fuss(ctx)}`,
   text: (f, ctx, i, n) => `
     ${kopf(ctx, `${i}/${n}`)}

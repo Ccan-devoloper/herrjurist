@@ -197,6 +197,14 @@ export const CONFIG = {
     langeTage: [0],
   },
 
+  /* Bilder auf der Titelfolie (Pexels) ------------------------------------
+     Der Autor liefert je Beitrag eine Szene; bilder.mjs sucht danach. Ohne
+     Schlüssel oder ohne Treffer bleibt es bei der Icon-Bühne. */
+  bilder: {
+    aktiv: env("IG_BILDER", "true") === "true",
+    key: env("PEXELS_API_KEY", ""),
+  },
+
   /* Interaktion: Kommentare unter den eigenen Beiträgen beantworten -------- */
   interaktion: {
     aktiv: env("IG_INTERAKTION", "true") === "true",

@@ -77,17 +77,22 @@ function einpassen() {
     let n = 0;
     while ((el.scrollWidth > el.clientWidth + 1 || el.getBoundingClientRect().right > innenRechts + 1) && n++ < 20) setze(el, 0.94);
   }
-  /* 2. Gesamthöhe: Fußzeile muss innerhalb der Kachel bleiben. */
+  /* 2. Gesamthöhe: Fußzeile muss innerhalb der Kachel bleiben. Liegt ein Foto
+        auf der Kachel, ist dessen Oberkante die Grenze – sonst schiebt sich
+        der Titel darüber und wird unlesbar. */
   const fuss = wurzel.querySelector(".fuss");
-  const grenze = wurzel.getBoundingClientRect().bottom - 24;
+  const foto = wurzel.querySelector(".foto");
+  const grenze = foto ? foto.getBoundingClientRect().top - 16 : wurzel.getBoundingClientRect().bottom - 24;
   const textElemente = [...wurzel.querySelectorAll("h1,h2,h3,p,li,.text,.merke,.norm,.zahl,.zahl-unter,.karte,.optionen div,.rechnung,.spalte,.unter,.hinweis,.pfeil")];
   let n = 0;
+  const ausser = (c) => c.classList.contains("geist") || c.classList.contains("illu") || c.classList.contains("foto") || c.classList.contains("bildquelle") || c.classList.contains("fuss");
   const passt = () => {
-    const unten = fuss ? fuss.getBoundingClientRect().bottom : Math.max(...textElemente.map((e) => e.getBoundingClientRect().bottom));
-    const kinderUnten = Math.max(...[...wurzel.children].filter((c) => !c.classList.contains("geist") && !c.classList.contains("illu")).map((c) => c.getBoundingClientRect().bottom));
-    return unten <= grenze + 24 && kinderUnten <= grenze + 24 && wurzel.scrollHeight <= wurzel.clientHeight + 1;
+    const unten = Math.max(...textElemente.map((e) => e.getBoundingClientRect().bottom));
+    const kinderUnten = Math.max(...[...wurzel.children].filter((c) => !ausser(c)).map((c) => c.getBoundingClientRect().bottom));
+    const fussOk = foto || !fuss || fuss.getBoundingClientRect().bottom <= wurzel.getBoundingClientRect().bottom - 8;
+    return unten <= grenze + 24 && kinderUnten <= grenze + 24 && fussOk && wurzel.scrollHeight <= wurzel.clientHeight + 1;
   };
-  while (!passt() && n++ < 10) for (const el of textElemente) setze(el, 0.95);
+  while (!passt() && n++ < 14) for (const el of textElemente) setze(el, 0.95);
 }
 
 /* Rendert alle Folien eines Beitrags → Liste der JPEG-Pfade. */

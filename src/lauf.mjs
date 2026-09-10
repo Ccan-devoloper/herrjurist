@@ -35,6 +35,7 @@ import { berichtErstellen, berichtSenden } from "./bericht.mjs";
 import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reservierungAufheben, tagesStand, tagesLimit, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
+import { titelbild } from "./bilder.mjs";
 import { wochentag } from "./zeit.mjs";
 import { heuteIso, lokaleMinuten, minutenVon } from "./zeit.mjs";
 
@@ -57,6 +58,16 @@ const varianteStory = (slot) => (CONFIG.marke.farbeJeKlausur ? 0 : (Number(slot.
 /* Plan serialisierbar machen: Themen nur als ID + Titel, Inhalte separat. */
 function planSpeichern(hosting, plan) {
   hosting.jsonSchreiben(`plaene/${plan.datum}.json`, plan);
+}
+
+/* Setzt das Foto auf die Titelfolie, sofern eines gefunden wird. */
+async function titelfolieBebildern(beitrag) {
+  const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
+  if (!titelfolie || titelfolie.bild) return;
+  try {
+    const treffer = await titelbild(beitrag);
+    if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; }
+  } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
 }
 
 async function main() {
@@ -335,6 +346,10 @@ async function main() {
         hosting.jsonSchreiben(`inhalte/${datum}-${eintrag.slot}.json`, beitrag);
       }
       const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
+      /* Titelbild: Der Autor hat eine Szene beschrieben, bilder.mjs sucht sie.
+         Ohne Treffer bleibt es bei der Icon-Bühne - ein beliebiges Symbolfoto
+         waere schlechter als keines. */
+      await titelfolieBebildern(beitrag);
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
       const caption = `${beitrag.caption}\n\n${beitrag.hashtags.join(" ")}`;
@@ -467,6 +482,7 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
         beitrag.slug = slot;
         hosting.jsonSchreiben(`inhalte/${slot}.json`, beitrag);
       }
+      await titelfolieBebildern(beitrag);
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "auffuellen"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Auffüllen ${slot}`);
       const caption = `${beitrag.caption}\n\n${beitrag.hashtags.join(" ")}`;
