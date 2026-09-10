@@ -95,6 +95,12 @@ export const CONFIG = {
   /* Faktencheck: zweiter, unabhängiger Prüfaufruf je Beitrag/Reel --------- */
   faktencheck: {
     aktiv: env("IG_FAKTENCHECK", "true") === "true",
+    /* Streng: Fällt der Faktencheck technisch aus, erscheint der Beitrag
+       nicht. Bei juristischen Inhalten ist ein ungeprüfter Beitrag teurer als
+       ein fehlender – ein falsch dargestellter Streitstand fällt genau der
+       Zielgruppe auf, die ihn gerade lernt. IG_FAKTENCHECK_STRIKT=false
+       lässt ungeprüfte Beiträge wieder durch. */
+    strikt: env("IG_FAKTENCHECK_STRIKT", "true") === "true",
   },
 
   /* Schlüsselwort-Nachrichten: „Kommentiere SCHEMA …“ → Karte per Direktnachricht */

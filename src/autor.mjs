@@ -15,7 +15,7 @@ import { FAECHER, KLAUSUREN } from "./inhalte.mjs";
 import { ICONS } from "./stile.mjs";
 import { folieLeer, pruefeBeitrag, korpus } from "./pruefung.mjs";
 import { datumLesbar, tageBis } from "./zeit.mjs";
-import { erfassen, budgetPruefen } from "./kosten.mjs";
+import { erfassen, budgetPruefen, BudgetFehler } from "./kosten.mjs";
 import { pruefeFakten } from "./faktencheck.mjs";
 import { hookWaehlen as hookMusterWaehlen, hookAnleitung, pruefeHook, hookTypErkennen } from "./hooks.mjs";
 import { normKurz, normGesprochen, felderKuerzen, NORM_REGEL, NORM_REGEL_STIMME } from "./normen.mjs";
@@ -283,10 +283,25 @@ export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.
 
 /* Faktencheck, der einen fertigen Entwurf nie verwirft: Fällt der Prüfaufruf
    selbst aus (Modellfehler, Budget), gilt der Entwurf mit Hinweis als geprüft. */
+/**
+ * Faktencheck mit klarer Haltung zum Ausfall.
+ *
+ * Streng (Standard): Lässt sich nicht prüfen, erscheint nichts. Bei
+ * juristischen Inhalten ist ein ungeprüfter Beitrag teurer als ein fehlender –
+ * einen falsch dargestellten Streitstand liest genau die Zielgruppe, die ihn
+ * gerade lernt, und der Fehler bleibt im Feed stehen.
+ *
+ * Das Tagesbudget ist davon ausgenommen: Ein BudgetFehler heißt „später
+ * weiter“, nicht „durchwinken“ – er wandert nach oben, wo der Lauf ihn kennt.
+ */
 async function faktenSicher(inhalt, zweck = "faktencheck") {
   try {
     return await pruefeFakten(inhalt, zweck);
   } catch (e) {
+    if (e instanceof BudgetFehler) throw e;
+    if (CONFIG.faktencheck.strikt) {
+      throw new Error(`Faktencheck nicht möglich (${e.message.split("\n")[0].slice(0, 160)}) – der Beitrag erscheint nicht.`);
+    }
     console.warn(`  ! Faktencheck nicht möglich (${e.message.split("\n")[0].slice(0, 160)}) – Entwurf wird ohne Faktencheck übernommen.`);
     return { ok: true, fehler: [], hinweise: [`Faktencheck ausgefallen: ${e.message.slice(0, 120)}`] };
   }
