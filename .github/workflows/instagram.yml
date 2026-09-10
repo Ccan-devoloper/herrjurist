@@ -10,10 +10,10 @@ on:
   workflow_dispatch:
     inputs:
       modus:
-        description: "trocken = nur erzeugen und in den Asset-Zweig legen · live = veröffentlichen · planen = nur Tagesplan zeigen · nachrendern = gespeicherten Tag ohne Claude-Kosten neu bauen"
+        description: "trocken = nur erzeugen und in den Asset-Zweig legen · live = veröffentlichen · planen = nur Tagesplan zeigen · nachrendern = gespeicherten Tag ohne Claude-Kosten neu bauen · startklar = nur prüfen, ob alles zum Veröffentlichen bereitsteht"
         type: choice
         default: trocken
-        options: [trocken, live, planen, nachrendern]
+        options: [trocken, live, planen, nachrendern, startklar]
       datum:
         description: "Nur für nachrendern: welcher Tag (JJJJ-MM-TT, leer = heute)"
         type: string
@@ -169,6 +169,12 @@ jobs:
         run: |
           # Nachrendern baut nur die Kacheln neu und ruft Claude kein einziges
           # Mal auf - der Tagesetat bleibt unberührt. Ergebnis: vorschau/<datum>/
+          # Startklar spricht mit Instagram, veroeffentlicht aber nichts - und
+          # ruft Claude kein einziges Mal auf.
+          if [ "${{ github.event.inputs.modus }}" = "startklar" ]; then
+            node bin/startklar.mjs
+            exit $?
+          fi
           if [ "${{ github.event.inputs.modus }}" = "nachrendern" ]; then
             node bin/nachrendern.mjs "${{ github.event.inputs.datum }}"
             exit $?
