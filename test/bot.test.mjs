@@ -16,9 +16,9 @@ const beispiele = JSON.parse(fs.readFileSync(new URL("../beispiele/inhalte.json"
 test("Themenpool: alle Fächer vertreten, alle drei Gebiete, saubere Titel", () => {
   const pool = themenpool();
   const st = poolStatistik(pool);
-  /* Zwei Beiträge am Tag bei 60 Tagen Themensperre heißen 120 Themen als
-     Untergrenze, damit sich der Feed nicht wiederholt. */
-  assert.ok(st.gesamt >= 100, `nur ${st.gesamt} Themen`);
+  /* Zwei Beiträge am Tag bei 150 Tagen Themensperre heißen 300 Themen als
+     Untergrenze, damit der Planer nie in die Notauswahl fällt. */
+  assert.ok(st.gesamt >= 300, `nur ${st.gesamt} Themen`);
   for (const gebiet of [1, 2, 3]) assert.ok(st.jeKlausur[gebiet] >= 15, `Gebiet ${gebiet} zu dünn: ${st.jeKlausur[gebiet]}`);
   /* Normen sind entweder Paragrafen/Artikel oder ein benannter Regelungskomplex
      (Landesrecht wie die Polizeigesetze, die je Land anders nummeriert sind). */

@@ -70,14 +70,26 @@ function gewichteteWahl(kandidaten, zufall, ledger, strategie = null) {
   return kandidaten[kandidaten.length - 1];
 }
 
+/* Was wurde zu einem Thema zuletzt veröffentlicht? Der jüngste Eintrag zählt –
+   daraus wird die Sperre berechnet und, bei einer Wiederholung, die Auflage an
+   den Autor, das Thema anders zu verpacken. */
+function letzteBeitraege(ledger) {
+  const m = new Map();
+  for (const e of ledger.veroeffentlicht || []) {
+    if (!e.thema || e.art !== "beitrag") continue;
+    const alt = m.get(e.thema);
+    if (!alt || (e.datum || "") > (alt.datum || "")) m.set(e.thema, e);
+  }
+  return m;
+}
+
 function verfuegbar(pool, ledger, datum, benutzt) {
   const sperre = CONFIG.plan.themenSperreTage;
-  const zuletzt = new Map();
-  for (const e of ledger.veroeffentlicht || []) zuletzt.set(e.thema, e.datum);
+  const zuletzt = letzteBeitraege(ledger);
   return pool.filter((t) => {
     if (benutzt.has(t.id)) return false;
-    const d = zuletzt.get(t.id);
-    return !d || tageBis(datum, new Date(`${d}T12:00:00Z`)) >= sperre;
+    const e = zuletzt.get(t.id);
+    return !e || tageBis(datum, new Date(`${e.datum}T12:00:00Z`)) >= sperre;
   });
 }
 
@@ -127,6 +139,7 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
   const ledgerKopie = { ...ledger, fachZaehler: { ...(ledger.fachZaehler || {}) } };
 
   const beitraegeBisher = [];
+  const vorher = letzteBeitraege(ledger);
   const beitraege = formate.map((format, i) => {
     const typen = FORMAT_QUELLEN[format] || [];
     let thema = null;
@@ -134,12 +147,22 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
       let kandidaten = verfuegbar(pool, ledgerKopie, datum, benutzt).filter((t) => typen.includes(t.typ));
       /* Endspurt: Dauerbrenner zuerst – keine seltenen Themen mehr. */
       if (endspurt) { const hoch = kandidaten.filter((t) => t.prioritaet === "hoch"); if (hoch.length >= 4) kandidaten = hoch; }
+      /* Wiederholungen anders verpacken: Ein Thema, das schon einmal in diesem
+         Format lief, wird für dieses Format zurückgestellt. Kommt es doch
+         wieder dran, bekommt der Autor die Auflage, einen anderen Zugang zu
+         wählen (siehe unten, thema.zuletzt). */
+      const frisch = kandidaten.filter((t) => vorher.get(t.id)?.format !== format);
+      if (frisch.length >= 3) kandidaten = frisch;
       /* Farbwechsel: Zwei Beiträge am selben Tag sollen nicht dasselbe
          Rechtsgebiet tragen – im Profilraster sähe das aus wie ein Doppelpost. */
       const schonHeute = new Set(beitraegeBisher.map((b) => b.thema?.klausur).filter(Boolean));
       const andereFarbe = kandidaten.filter((t) => !schonHeute.has(t.klausur));
       if (andereFarbe.length >= 3) kandidaten = andereFarbe;
       thema = gewichteteWahl(kandidaten.length ? kandidaten : pool.filter((t) => typen.includes(t.typ)), zufall, ledgerKopie, strategie);
+      /* War das Thema schon einmal dran, reist die Vorgeschichte mit: Format,
+         Hook und Titel von damals. Der Autor darf sich davon nicht wiederholen. */
+      const alt = vorher.get(thema.id);
+      if (alt) thema = { ...thema, zuletzt: { datum: alt.datum, format: alt.format, hookMuster: alt.hookMuster || alt.hookTyp || null, titel: alt.titel || null } };
       benutzt.add(thema.id);
       ledgerKopie.fachZaehler[thema.fach] = (ledgerKopie.fachZaehler[thema.fach] || 0) + 1;
     }

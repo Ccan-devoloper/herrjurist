@@ -20,6 +20,8 @@ export const FAECHER = {
   schuldbt:{ label: "Schuldrecht BT",         kurz: "SchuldR BT",gebiet: 1 },
   sachen:  { label: "Sachenrecht",            kurz: "SachenR",   gebiet: 1 },
   delikt:  { label: "Deliktsrecht",           kurz: "DeliktsR",  gebiet: 1 },
+  bereich: { label: "Bereicherungsrecht",     kurz: "BereichR",  gebiet: 1 },
+  gesetzs: { label: "Gesetzliche Schuldverhältnisse", kurz: "GoA/EBV", gebiet: 1 },
   arbeit:  { label: "Arbeitsrecht",           kurz: "ArbR",      gebiet: 1 },
   famerb:  { label: "Familien- und Erbrecht", kurz: "FamR/ErbR", gebiet: 1 },
   handelsg:{ label: "Handels- und Gesellschaftsrecht", kurz: "HGB/GesR", gebiet: 1 },
