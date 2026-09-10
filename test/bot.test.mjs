@@ -390,6 +390,26 @@ test("Reel: Animation rotiert täglich, Untertitel zeigen ganze Sätze", async (
   const bn = untertitelBloecke(norm);
   assert.ok(bn[0].text.startsWith("§ 48 Abs. 4 VwVfG"), bn[0].text);
   assert.ok(!bn.some((x) => /Verwaltungsverfahrensgesetz|Paragraf/.test(x.text)), JSON.stringify(bn.map((x) => x.text)));
+  /* „Abs.“ endet auf einen Punkt, beendet aber keinen Satz – sonst zerfiel
+     „§ 48 Abs. 4 VwVfG“ in zwei Untertitel. */
+  assert.equal(bn[0].text.startsWith("§ 48 Abs. 4 VwVfG:"), true, bn[0].text);
+});
+
+test("Reel-Seite: Untertitel steht groß, Gesetzeskürzel behalten ihre Schreibweise", async () => {
+  /* Die Funktion, die die Kürzel schont, steht in einem Template-String und
+     wird erst in der Seite zu Code. Ein einfach geschriebenes \\s verschluckt
+     der String – dann trennt das Muster keine Wörter mehr, der ganze Satz
+     landet in einer Spanne und die Großschreibung fällt aus. Genau das ist
+     passiert, und nur die fertige Seite zeigt es. */
+  const src = fs.readFileSync(new URL("../src/reel.mjs", import.meta.url), "utf8");
+  const fn = src.match(/function kuerzelSchonen\(text\)[\s\S]*?\n\}/);
+  assert.ok(fn, "kuerzelSchonen nicht gefunden");
+  /* So, wie es in der Seite ankommt: einmal durch den Template-String. */
+  const inSeite = new Function(`return \`${fn[0].replace(/`/g, "\\`")}\``)();
+  const kuerzelSchonen = new Function(`${inSeite}; return kuerzelSchonen;`)();
+  assert.equal(kuerzelSchonen("§ 48 Abs. 4 VwVfG: Die Behörde hat"), '§ 48 Abs. 4 <span class="k">VwVfG:</span> Die Behörde hat');
+  assert.equal(kuerzelSchonen("Nach § 280 Abs. 1 BGB haftet er"), "Nach § 280 Abs. 1 BGB haftet er");
+  assert.equal(kuerzelSchonen("a < b"), "a &lt; b");
 });
 
 test("Reel: Hintergrund-Clip rotiert täglich, ohne Verzeichnis keine Auswahl", async () => {

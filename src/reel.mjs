@@ -247,6 +247,15 @@ export function hintergrundClip(verzeichnis, datum) {
    oder Gedankenstrich, und wenn auch das nicht reicht, nach WORT_MAX Wörtern.
    Gebrochen wird nur, wo es sein muss - ein halber Satz ist immer noch besser
    lesbar als vier Wörter ohne Zusammenhang. */
+/* Ein Punkt beendet nicht jeden Satz: „§ 48 Abs. 4 VwVfG“ zerfiel sonst nach
+   „Abs.“ in zwei Untertitel. Einzelne Buchstaben („S.“, „f.“) und die üblichen
+   juristischen Kürzel gelten deshalb nicht als Satzende. */
+const ABKUERZUNGEN = new Set(["abs", "nr", "hs", "lit", "art", "ff", "f", "vgl", "bzw", "ca", "ggf", "inkl", "insb", "rn", "rspr", "sog", "usw", "etc", "evtl", "str", "hm", "aa", "mio", "mrd", "ders", "aao"]);
+function istAbkuerzung(wort) {
+  const kern = String(wort).replace(/[^A-Za-zÄÖÜäöüß]/g, "").toLowerCase();
+  return kern.length <= 1 || ABKUERZUNGEN.has(kern);
+}
+
 const WORT_MAX = 8;
 
 export function untertitelBloecke(szenen) {
@@ -256,7 +265,7 @@ export function untertitelBloecke(szenen) {
     const schliessen = () => { if (akt.length) { bloecke.push({ szene: s.index, woerter: akt }); akt = []; } };
     for (const w of s.woerter) {
       akt.push(w);
-      const satzende = /[.!?]["»«)]?$/.test(w.wort);
+      const satzende = /[.!?]["»«)]?$/.test(w.wort) && !istAbkuerzung(w.wort);
       const teilende = /[,;:–—]$/.test(w.wort);
       if (satzende) schliessen();
       else if (akt.length >= WORT_MAX && teilende) schliessen();
@@ -351,7 +360,11 @@ const ease = (x) => 1 - Math.pow(1 - Math.min(1, Math.max(0, x)), 3);
    mindestens ein kleiner. Ein normales deutsches Wort hat nur einen grossen. */
 function kuerzelSchonen(text) {
   const esc = (x) => x.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
-  return esc(text).split(/(\s+)/).map((w) => {
+  /* Doppelter Backslash: Diese Funktion steht in einem Template-String und
+     wird erst in der Seite zu Code. Einfach geschrieben verschluckt der
+     String das \\s, und aus dem Trennmuster wird "(s+)" - dann steht der
+     ganze Satz in einer einzigen Spanne und die Grossschreibung faellt aus. */
+  return esc(text).split(/(\\s+)/).map((w) => {
     const kern = w.replace(/[^A-Za-z\u00c4\u00d6\u00dc\u00e4\u00f6\u00fc\u00df]/g, "");
     const gross = (kern.match(/[A-Z\u00c4\u00d6\u00dc]/g) || []).length;
     const klein = (kern.match(/[a-z\u00e4\u00f6\u00fc\u00df]/g) || []).length;
