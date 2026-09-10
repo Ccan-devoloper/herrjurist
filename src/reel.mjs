@@ -13,7 +13,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { browserStarten, coverRendern } from "./render.mjs";
 import { css, klausurCss, buntCss, fussRechts } from "./vorlagen.mjs";
-import { normKurz } from "./normen.mjs";
+import { normKurz, normGesprochen } from "./normen.mjs";
 import { stil as stilLaden, iconSvg } from "./stile.mjs";
 import { FAECHER } from "./inhalte.mjs";
 import { CONFIG } from "./config.mjs";
@@ -193,7 +193,11 @@ async function szenenSprechen(reel, audioDir, anbieter, stimmeId = null) {
     /* Der Hook wird betont gesprochen und bekommt danach einen Moment Stille –
        erst dieser Bruch macht aus einem Satz einen Aufhänger. */
     const istHook = s.art === "hook" || i === 0;
-    const stimme = await sprechen(s.sprecher, path.join(audioDir, `szene-${String(i + 1).padStart(2, "0")}.mp3`), { betonung: istHook ? "hook" : null, anbieter, stimmeId });
+    /* Wie beim Bildschirmtext gilt die Fassung an der Stelle, die sie braucht:
+       Gesprochen wird auch gespeicherter Text, und der trug „VwVfG“ noch als
+       Kürzel - die Stimme zerhackte es zu „Vau-Weh-Vau-Ef-Geh“. normGesprochen
+       ist idempotent, doppelt schadet also nicht. */
+    const stimme = await sprechen(normGesprochen(s.sprecher), path.join(audioDir, `szene-${String(i + 1).padStart(2, "0")}.mp3`), { betonung: istHook ? "hook" : null, anbieter, stimmeId });
     const vorlauf = i === 0 ? 0.25 : 0.25;
     const nachlauf = s.art === "cta" ? 1.2 : istHook ? 0.85 : 0.55;
     const dauer = vorlauf + stimme.dauer + nachlauf;
