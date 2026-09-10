@@ -307,6 +307,15 @@ function themaText(thema) {
   if (k.ausdruck) zeilen.push(`Formel: ${k.ausdruck} – ${k.erklaerung}`);
   if (k.begriff) zeilen.push(`Definition: ${k.definition}`);
   if (k.schritte?.length) zeilen.push(`Schema-Gedanken: ${k.schritte.join(" | ")}`);
+  /* Wiederholung: Dasselbe Thema darf wiederkommen – aber nie als derselbe
+     Beitrag. Wer den Kanal länger verfolgt, muss etwas Neues bekommen, und
+     wer damals nichts verstanden hat, einen zweiten Zugang. */
+  if (thema.zuletzt) {
+    zeilen.push(
+      `ACHTUNG, WIEDERHOLUNG: Dieses Thema lief am ${thema.zuletzt.datum} schon einmal – damals als Format „${thema.zuletzt.format}“${thema.zuletzt.hookMuster ? ` mit dem Hook-Muster „${thema.zuletzt.hookMuster}“` : ""}${thema.zuletzt.titel ? `, Titel: „${thema.zuletzt.titel}“` : ""}.`,
+      `Verpacke es diesmal komplett anders: anderer Einstieg, anderer Blickwinkel, andere Beispiele, anderer Titel. Wiederhole den alten Titel weder wörtlich noch sinngemäß. Wähle eine andere Seite des Themas – etwa die typische Klausurfalle statt der Definition, den Streitstand statt des Schemas, den Fall statt der Regel.`,
+    );
+  }
   return zeilen.filter(Boolean).join("\n");
 }
 

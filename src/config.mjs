@@ -55,8 +55,12 @@ export const CONFIG = {
     zeitMindestWirkung: Number(env("IG_ZEIT_WIRKUNG", "1")),       // mittlere Punkte je Beitrag, ab denen die Zahlen die Uhrzeit bestimmen
     /* Zeitfenster, über das die Stories verteilt werden. */
     storyFenster: ["07:00", "21:30"],
-    /* Ein Thema kommt frühestens nach so vielen Tagen erneut dran. */
-    themenSperreTage: 60,
+    /* Ein Thema kommt frühestens nach so vielen Tagen erneut dran. Bei 415
+       Themen und zwei Beiträgen am Tag ist der Pool erst nach gut 200 Tagen
+       durch – 150 Tage Sperre lassen sich also halten, ohne dass der Planer
+       in die Notauswahl fällt. Kommt ein Thema doch wieder, bekommt der Autor
+       die Auflage, es anders zu verpacken (planer.mjs, thema.zuletzt). */
+    themenSperreTage: Number(env("IG_THEMENSPERRE_TAGE", "150")),
     /* Gewichtung nach Examenspriorität (🔴/🟠/🟢) – wie auf der Webseite. */
     prioritaetGewicht: { hoch: 60, mittel: 25, selten: 15 },
     /* Wöchentlicher Formatplan der Beiträge (0 = Sonntag). Ein Format aus
