@@ -862,3 +862,17 @@ test("Tagesplan: Stories füllen das ganze Fenster, auch den Morgen", async () =
   const letzte = Math.max(...frei.map((s) => Number(s.zeit.slice(0, 2)) * 60 + Number(s.zeit.slice(3))));
   assert.ok(letzte > 17 * 60, `letzte eigenständige Story schon um ${letzte}`);
 });
+
+test("Faktencheck liest auch Stories und ordnet Befunde ihrem Slot zu", async () => {
+  const { textAus } = await import("../src/faktencheck.mjs");
+  const t = textAus({ stories: [
+    { slot: "s3", art: "frage", titel: "Wann liegt ein Reisemangel vor?", optionen: ["A", "B"] },
+    { slot: "s5", art: "norm", norm: "§ 651m BGB", text: "Rechtsfolgen: Abhilfe, Minderung" },
+  ] });
+  assert.match(t, /\[Story s3 frage\]/);
+  assert.match(t, /\[Story s5 norm\]/);
+  assert.match(t, /§ 651m BGB/);
+  /* Der Slot im Kopf ist der Anker, über den ein Befund später genau einer
+     Kachel zugeordnet wird – ohne ihn müssten alle neu geschrieben werden. */
+  assert.ok(t.split("\n").length === 2, t);
+});
