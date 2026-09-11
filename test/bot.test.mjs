@@ -847,3 +847,18 @@ test("Reel-Länge: unerforschte Fenster zuerst, danach entscheidet die Messung",
   const gewaehlt = ["2026-09-10", "2026-09-11", "2026-09-12"].map((d) => dauerWaehlen(d, st).join("-"));
   assert.ok(gewaehlt.every((f) => f === "60-80"), gewaehlt.join(" "));
 });
+
+test("Tagesplan: Stories füllen das ganze Fenster, auch den Morgen", async () => {
+  const { tagesplan } = await import("../src/planer.mjs");
+  const p = tagesplan("2026-09-11", { veroeffentlicht: [] });
+  const frei = p.stories.filter((s) => s.art !== "teaser");
+  assert.ok(frei.length >= 5, `nur ${frei.length} eigenständige Stories`);
+  /* Die Teaser bringen die Zeit ihres Beitrags mit. Wurden sie bei der
+     Verteilung mitgezählt, blieben die ersten beiden Slots ungenutzt und vor
+     10 Uhr erschien nichts – obwohl das Fenster um 7 Uhr beginnt. */
+  const erste = Math.min(...frei.map((s) => Number(s.zeit.slice(0, 2)) * 60 + Number(s.zeit.slice(3))));
+  assert.ok(erste < 9 * 60, `erste eigenständige Story erst um ${p.stories[0].zeit}`);
+  /* Und der Abend wird auch bespielt. */
+  const letzte = Math.max(...frei.map((s) => Number(s.zeit.slice(0, 2)) * 60 + Number(s.zeit.slice(3))));
+  assert.ok(letzte > 17 * 60, `letzte eigenständige Story schon um ${letzte}`);
+});

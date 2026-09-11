@@ -207,8 +207,14 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
       stories.push({ art, thema, tageBisExamen: art === "countdown" ? tageBisExamen : undefined });
     }
   }
-  const storyZeitenListe = storyZeiten(stories.length, zufall);
-  stories.forEach((s, i) => { s.slot = `s${i + 1}`; if (!s.zeit) s.zeit = storyZeitenListe[i]; });
+  /* Zeiten nur für die Stories berechnen, die noch keine haben. Die Teaser
+     erscheinen mit ihrem Beitrag und bringen ihre Zeit mit; wurden sie
+     mitgezählt, blieben die ersten beiden Slots des Fensters ungenutzt - und
+     damit der ganze Morgen leer, obwohl das Fenster um 7 Uhr beginnt. */
+  const ohneZeit = stories.filter((s) => !s.zeit);
+  const storyZeitenListe = storyZeiten(ohneZeit.length, zufall);
+  ohneZeit.forEach((s, i) => { s.zeit = storyZeitenListe[i]; });
+  stories.forEach((s, i) => { s.slot = `s${i + 1}`; });
   /* Auflösung direkt hinter der Frage – niemand kommt für die Antwort zurück. */
   for (let i = 0; i < stories.length; i++) if (stories[i].art === "antwort") stories[i].zeit = stories[i - 1].zeit;
   stories.sort((a, b) => minutenVon(a.zeit) - minutenVon(b.zeit));
