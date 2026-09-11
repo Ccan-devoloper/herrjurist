@@ -163,6 +163,10 @@ jobs:
           IG_EXAMEN_ENDE: ${{ vars.IG_EXAMEN_ENDE }}
           # Manuell: nur „live“ veröffentlicht. Zeitplan: live, außer die Variable IG_PAUSE ist auf true.
           IG_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.modus != 'live') || vars.IG_PAUSE == 'true' }}
+          # Nur fuer die Startklar-Pruefung: Ein manueller Lauf ist immer
+          # trocken, an IG_DRY_RUN laesst sich also nicht ablesen, ob der
+          # Zeitplan veroeffentlichen wuerde. Die Variable selbst sagt es.
+          IG_PAUSE: ${{ vars.IG_PAUSE }}
           GIT_AUTHOR_NAME: instagram-bot
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           IG_ABLEGEN: "1"
