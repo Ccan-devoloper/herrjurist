@@ -48,10 +48,14 @@ const SYSTEM = `Du bist Prüfer:in für juristische Fachtexte (erstes und zweite
 
 Melde als „fehler“ nur, was eindeutig falsch ist und in der Klausur Punkte kosten würde. Als „unsicher“ alles, was du nicht sicher beurteilen kannst – gerade bei Streitständen und Landesrecht lieber „unsicher“ als eine falsche Korrektur. Als „hinweis“ Unschärfen, die vertretbar sind. Keine Stil- oder Formatkritik, und keine Kritik daran, dass eine vertretbare Ansicht vertreten wird. Wenn alles korrekt ist, gib eine leere Liste zurück.`;
 
-function textAus(beitrag) {
+export function textAus(beitrag) {
   const teile = [];
   for (const f of beitrag.folien || []) teile.push(`[Folie ${f.art}] ${[f.titel, f.untertitel, f.text, ...(f.punkte || []), ...(f.schritte || []).map((s) => (typeof s === "string" ? s : `${s.titel}: ${s.text || ""}`)), f.formel, ...(f.zeilen || []), f.ergebnis, f.links?.titel, ...(f.links?.punkte || []), f.rechts?.titel, ...(f.rechts?.punkte || [])].filter(Boolean).join(" · ")}`);
   for (const s of beitrag.szenen || []) teile.push(`[Szene ${s.art}] ${[s.titel, s.text, s.norm, s.sprecher].filter(Boolean).join(" · ")}`);
+  /* Stories tragen den Slot im Kopf, damit ein Befund einer einzelnen Kachel
+     zugeordnet werden kann - neun Stories in einem Aufruf zu pruefen ist
+     bezahlbar, neun einzelne Aufrufe waeren es nicht. */
+  for (const s of beitrag.stories || []) teile.push(`[Story ${s.slot} ${s.art}] ${[s.ueberzeile, s.titel, s.norm, s.formel, s.zahl, s.text, ...(s.optionen || []), s.richtigText, s.falsch].filter(Boolean).join(" · ")}`);
   if (beitrag.caption) teile.push(`[Caption] ${beitrag.caption}`);
   return teile.join("\n");
 }
@@ -59,12 +63,12 @@ function textAus(beitrag) {
 /**
  * @returns {{ok:boolean, fehler:string[], hinweise:string[]}}
  */
-export async function pruefeFakten(beitrag, zweck = "faktencheck") {
+export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "" } = {}) {
   if (!CONFIG.faktencheck.aktiv) return { ok: true, fehler: [], hinweise: [] };
-  budgetPruefen(zweck === "reel-faktencheck" ? "Reel-Faktencheck" : "Faktencheck");
+  budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck", "story-faktencheck": "Story-Faktencheck" }[zweck] || "Faktencheck");
   const modell = CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben;
   const haiku = /haiku/i.test(modell);
-  const user = `Prüfe diesen Text:\n\n${textAus(beitrag)}`;
+  const user = `Prüfe diesen Text:\n\n${textAus(beitrag)}${hinweis ? `\n\n${hinweis}` : ""}`;
   const basis = {
     model: modell,
     max_tokens: 6000,
