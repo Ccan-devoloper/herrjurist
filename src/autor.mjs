@@ -696,9 +696,15 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
     /* Prüfung über die Folien-Logik: Szenen als Folien, Sprechertext als Text. */
     const ergebnis = pruefeBeitrag({ folien: [{ art: "titel", titel: szenen[0]?.titel || "" }, ...szenen.slice(1).map((s) => ({ art: "text", titel: s.titel, text: `${s.text || ""} ${s.sprecher}` })), { art: "cta" }], caption: reel.caption, hashtags: reel.hashtags });
     ergebnis.fehler.push(...pruefeHook(szenen[0]));
+    /* Die Annahmegrenze folgt dem gewählten Zeitfenster. Stand sie fest, wurde
+       jedes längere Reel abgelehnt, obwohl die Anleitung genau diese Länge
+       verlangt hatte - ein Nachschlag pro Reel, und nach drei Versuchen gar
+       kein Reel. Die Toleranz ist großzügig: Ein paar Wörter mehr verschieben
+       die Dauer um Sekunden, nicht um ein Fenster. */
     const woerter = szenen.reduce((n, s) => n + s.sprecher.split(/\s+/).length, 0);
-    const [min, max] = lang ? [80, 190] : [45, 110];
-    if (woerter < min || woerter > max) ergebnis.fehler.push(`Sprechertext hat ${woerter} Wörter (Ziel ${lang ? "110–150" : "60–90"})`);
+    const zielVon = Math.round(von * WOERTER_JE_SEKUNDE), zielBis = Math.round(bis * WOERTER_JE_SEKUNDE);
+    const min = Math.round(zielVon * 0.75), max = Math.round(zielBis * 1.25);
+    if (woerter < min || woerter > max) ergebnis.fehler.push(`Sprechertext hat ${woerter} Wörter (Ziel ${zielVon}–${zielBis})`);
     if (!ergebnis.fehler.length) {
       const fakten = await faktenSicher(reel, "reel-faktencheck");
       if (fakten.ok) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; return reel; }
