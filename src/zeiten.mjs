@@ -64,16 +64,64 @@ export function zeitStatistik(ledger, heute = new Date()) {
   /* Es braucht genug Beiträge mit Wirkung UND eine Wirkung, die über
      Einzelklicks hinausgeht – sonst entscheiden ein paar Aufrufe die Uhrzeit. */
   const belastbar = mitWirkung >= CONFIG.plan.zeitMindestMessungen && mittel >= CONFIG.plan.zeitMindestWirkung;
-  return { gesamt: eintraege.length, mitWirkung, belastbar, mittelPunkte: mittel, stunden: fassen(stunden), tagStunden: fassen(tagStunden) };
+  /* Versuche je Stunde - alle Beiträge, auch die ohne Zahlen. Damit weiß die
+     Erkundung, welche Stunden schon dran waren, bevor Messungen belastbar sind. */
+  const versuche = {};
+  let versucheGesamt = 0;
+  for (const e of ledger?.veroeffentlicht || []) {
+    if (e.art !== "beitrag") continue;
+    const h = stundeVon(e);
+    if (h == null) continue;
+    versuche[`${klasseVon(e.format)}|${h}`] = (versuche[`${klasseVon(e.format)}|${h}`] || 0) + 1;
+    versucheGesamt++;
+  }
+  return { gesamt: eintraege.length, mitWirkung, belastbar, mittelPunkte: mittel, stunden: fassen(stunden), tagStunden: fassen(tagStunden), versuche, versucheGesamt };
 }
 
-/* Vorwissen: Sind die Follower zu dieser Stunde online, ist sie einen kleinen
-   Bonus wert, solange noch nichts gemessen wurde. */
-function vorwissen(strategie, stunde) {
+/* Vorwissen aus Studien (Stand September 2026), bevor eigene Zahlen da sind.
+
+   Quellen, die sich weitgehend decken: Sprout Social (2 Mrd. Interaktionen,
+   deutsche Auswertung), Buffer (9,6 Mio. Beiträge), Hootsuite, Later (6 Mio.),
+   SocialPilot (7 Mio. Beiträge, 250.000 Reels), PostFast (23.552 Beiträge),
+   dazu deutsche Ratgeber zur Zielgruppe Studierende (Social Media Akademie,
+   pixx.io, ds-onlinemarketing).
+
+   Karussells und Bildbeiträge: Vormittag 8–11 Uhr und Mittag 12–14 Uhr am
+   stärksten, zweiter Gipfel abends 18–21 Uhr; Dienstag bis Donnerstag vorn,
+   Wochenende schwächer.
+   Reels: Abend 19–22 Uhr klar vorn, Sonntag mit den meisten Reel-Aufrufen;
+   ein zweites, kleineres Fenster 8–12 Uhr. Für Studierende verschiebt sich
+   der Abend nach hinten (20–23 Uhr) und das Wochenende zählt mit.
+
+   Die Werte sind bewusst schwach (0,85–1,15): Sie ordnen die ersten Tage,
+   sollen die eigenen Messungen aber nicht übertönen. Mit jedem gemessenen
+   Beitrag verlieren sie an Gewicht (siehe stundenWert). */
+export const VORWISSEN = {
+  karussell: {
+    stunden: { 6: 0.88, 7: 0.95, 8: 1.08, 9: 1.15, 10: 1.12, 11: 1.08, 12: 1.12, 13: 1.08, 14: 0.97, 15: 0.93, 16: 0.95, 17: 1.0, 18: 1.08, 19: 1.12, 20: 1.08, 21: 1.0, 22: 0.9 },
+    /* Sonntag … Samstag */
+    tage: [0.97, 1.0, 1.03, 1.05, 1.03, 0.97, 0.95],
+  },
+  reel: {
+    stunden: { 6: 0.85, 7: 0.9, 8: 1.0, 9: 1.0, 10: 0.97, 11: 0.95, 12: 1.0, 13: 0.95, 14: 0.9, 15: 0.9, 16: 0.95, 17: 1.0, 18: 1.06, 19: 1.12, 20: 1.15, 21: 1.12, 22: 1.08 },
+    tage: [1.05, 1.0, 1.0, 1.03, 1.03, 0.97, 1.0],
+  },
+};
+
+/* Vorwissen einer Stunde: Studienwert × Wochentag, und sind die eigenen
+   Follower zu dieser Stunde online (Insights), noch ein kleiner Aufschlag. */
+export function vorwissen(strategie, stunde, klasse = "karussell", wochentag = null) {
+  const v = VORWISSEN[klasse] || VORWISSEN.karussell;
+  let wert = v.stunden[stunde] ?? 0.9;
+  if (Number.isInteger(wochentag)) wert *= v.tage[wochentag] ?? 1;
   const zeiten = strategie?.besteStunden;
-  if (!Array.isArray(zeiten) || !zeiten.length) return 1;
-  return zeiten.some((z) => Math.floor(minutenVon(z) / 60) === stunde) ? 1.15 : 1;
+  if (Array.isArray(zeiten) && zeiten.some((z) => Math.floor(minutenVon(z) / 60) === stunde)) wert *= 1.15;
+  return wert;
 }
+
+/* So viele Beobachtungen ist das Vorwissen wert: Nach drei gemessenen
+   Beiträgen zu einer Stunde zählt die Messung halb, nach zehn fast allein. */
+const VORWISSEN_GEWICHT = 3;
 
 /**
  * Bewertet eine Stunde für eine Beitragsart: gemessenes Mittel plus
@@ -81,19 +129,33 @@ function vorwissen(strategie, stunde) {
  * getestet wurde, und schrumpft mit der Gesamtzahl der Messungen.
  */
 export function stundenWert(stunde, { klasse, wochentag, statistik, strategie, erkundung = CONFIG.plan.zeitErkundung }) {
-  /* Ohne belastbare Zahlen zählt nur das Vorwissen; alle Stunden starten
-     gleichauf und werden der Reihe nach ausprobiert. */
-  if (!statistik.belastbar) return { wert: vorwissen(strategie, stunde), mittel: vorwissen(strategie, stunde), n: 0, bonus: 0 };
+  const prior = vorwissen(strategie, stunde, klasse, wochentag);
+  /* Ohne belastbare Zahlen entscheidet das Vorwissen - und ein Aufschlag für
+     Stunden, die noch selten ausprobiert wurden. So beginnt der Kanal bei den
+     Studienwerten und wandert von dort aus zu den Nachbarstunden, statt jeden
+     Tag dieselbe Uhrzeit zu wiederholen oder wahllos zu streuen. */
+  if (!statistik.belastbar) {
+    const n = statistik.versuche?.[`${klasse}|${stunde}`] || 0;
+    const gesamt = statistik.versucheGesamt || 0;
+    const bonus = erkundung * Math.sqrt(Math.log(gesamt + 1) / (n + 1));
+    return { wert: prior + bonus, mittel: prior, n, bonus };
+  }
   const global = statistik.stunden[`${klasse}|${stunde}`];
   const jeTag = statistik.tagStunden[`${klasse}|${wochentag}|${stunde}`];
   /* Der Wochentag zählt erst mit, wenn es dafür mehrere Messungen gibt. */
   const n = (global?.n || 0) + (jeTag?.n || 0);
-  let mittel;
-  if (!global && !jeTag) mittel = vorwissen(strategie, stunde);
-  else if (jeTag && jeTag.n >= 2) mittel = 0.5 * (global?.mittel ?? jeTag.mittel) + 0.5 * jeTag.mittel;
-  else mittel = global?.mittel ?? jeTag.mittel;
+  let gemessen;
+  if (!global && !jeTag) gemessen = null;
+  else if (jeTag && jeTag.n >= 2) gemessen = 0.5 * (global?.mittel ?? jeTag.mittel) + 0.5 * jeTag.mittel;
+  else gemessen = global?.mittel ?? jeTag.mittel;
+  /* Messung und Vorwissen verschmelzen: Das Vorwissen zählt wie drei
+     Beobachtungen, danach übernimmt die Messung. */
+  const mittel = gemessen == null ? prior : (n * gemessen + VORWISSEN_GEWICHT * prior) / (n + VORWISSEN_GEWICHT);
   const gesamt = Math.max(1, statistik.gesamt);
-  const bonus = erkundung * Math.sqrt(Math.log(gesamt + 1) / (n + 1));
+  /* Auch der Erkundungsaufschlag rechnet das Vorwissen als Beobachtungen
+     mit: Eine Stunde, die laut Studien gut ist, gilt nicht zusätzlich als
+     "unerforscht" - sonst schlüge sie eine zehnfach gemessene Nachbarstunde. */
+  const bonus = erkundung * Math.sqrt(Math.log(gesamt + 1) / (n + VORWISSEN_GEWICHT + 1));
   return { wert: mittel + bonus, mittel, n, bonus };
 }
 

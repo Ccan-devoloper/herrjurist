@@ -43,12 +43,12 @@ export const CONFIG = {
     beitraegeWochenende: Number(env("IG_BEITRAEGE_WOCHENENDE", 2)),
     storiesProTag: Number(env("IG_STORIES_PRO_TAG", 9)),   // Instagram-Limit über die API: 100 Veröffentlichungen / 24 h
     /* Lokale Uhrzeiten (Europe/Berlin), zu denen Beiträge erscheinen. */
-    beitragsZeiten: ["07:30", "12:30", "18:00"],   // Startwerte, solange nichts gemessen ist
+    beitragsZeiten: ["09:30", "12:30", "19:30"],   // nur ohne Lernschleife (IG_ZEIT_LERNEN=false); sonst zeiten.mjs
     /* Lernende Uhrzeiten: Der Bot probiert Stunden aus und behält, was
        Reichweite bringt – getrennt nach Reel und Karussell und je Wochentag.
        Siehe zeiten.mjs. */
     zeitLernen: env("IG_ZEIT_LERNEN", "true") === "true",
-    zeitFenster: env("IG_ZEIT_FENSTER", "6-21"),         // frühestes und spätestes Erscheinen (lokale Stunden)
+    zeitFenster: env("IG_ZEIT_FENSTER", "6-22"),         // frühestes und spätestes Erscheinen (lokale Stunden); 22 = 22:30, der letzte Lauf des Tages liegt um 22:42
     zeitAbstandStunden: Number(env("IG_ZEIT_ABSTAND", "4")),
     zeitErkundung: Number(env("IG_ZEIT_ERKUNDUNG", "0.35")),   // 0 = nur ausnutzen, größer = mehr ausprobieren
     zeitReifeTage: Number(env("IG_ZEIT_REIFE_TAGE", "2")),     // so alt muss ein Beitrag sein, damit seine Zahlen zählen
