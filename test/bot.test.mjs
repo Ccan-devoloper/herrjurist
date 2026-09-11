@@ -1023,3 +1023,35 @@ test("Motive auf Reel-Cover und Stories, Nebentext auf Blau hell", async () => {
   const orange = folieHtml({ art: "text", titel: "T", text: "x" }, ctx, 2, 3);
   assert.ok(/--text-weich:#3a1708/.test(orange));
 });
+
+test("Token-Tresor: ein neu gesetztes Secret gewinnt gegen den gespeicherten Token", async () => {
+  const { Instagram, fingerabdruck } = await import("../src/instagram.mjs");
+  const os = await import("node:os");
+  const path = (await import("node:path")).default;
+  const altSchluessel = CONFIG.instagram.tokenSchluessel, altToken = CONFIG.instagram.token;
+  CONFIG.instagram.tokenSchluessel = "test-schluessel";
+  const datei = path.join(os.tmpdir(), `tresor-${Date.now()}.enc`);
+  try {
+    /* Kette beginnt mit Secret A; der Tresor hält den daraus verlängerten Token. */
+    CONFIG.instagram.token = "secret-A";
+    const a = new Instagram({ token: "secret-A", tresorDatei: datei, trockenlauf: true });
+    a.token = "verlaengert-aus-A"; a.tokenAblauf = "2026-12-01T00:00:00Z";
+    assert.ok(a.tresorSpeichern());
+    const b = new Instagram({ token: "secret-A", tresorDatei: datei, trockenlauf: true });
+    assert.equal(b.tresorLaden(), true);
+    assert.equal(b.token, "verlaengert-aus-A", "gleiches Secret: Tresor gewinnt");
+    /* Secret neu gesetzt (etwa mit weiterer Berechtigung): Secret gewinnt, Tresor startet neu. */
+    CONFIG.instagram.token = "secret-B";
+    const c = new Instagram({ token: "secret-B", tresorDatei: datei, trockenlauf: true });
+    assert.equal(c.tresorLaden(), false);
+    assert.equal(c.token, "secret-B", "neues Secret muss gewinnen");
+    const d = new Instagram({ token: "secret-B", tresorDatei: datei, trockenlauf: true });
+    assert.equal(d.tresorLaden(), true);
+    assert.equal(d.token, "secret-B");
+    assert.equal(fingerabdruck("secret-B").length, 16);
+    assert.notEqual(fingerabdruck("secret-A"), fingerabdruck("secret-B"));
+  } finally {
+    CONFIG.instagram.tokenSchluessel = altSchluessel; CONFIG.instagram.token = altToken;
+    fs.rmSync(datei, { force: true });
+  }
+});
