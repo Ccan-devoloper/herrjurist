@@ -64,10 +64,10 @@ function einpassen() {
   const wurzel = document.querySelector(".folie, .story");
   if (!wurzel) return;
   const px = (el) => parseFloat(getComputedStyle(el).fontSize);
-  /* Untergrenzen: Ein Titel auf der ersten Folie darf nie unter 56 px fallen –
+  /* Untergrenzen: Ein Titel auf der ersten Folie darf nie unter 64 px fallen –
      darunter ist er im Feed-Vorschaubild nicht mehr zu entziffern, und dann
      nützt der beste Text nichts. Der Rest der Kachel darf weiter schrumpfen. */
-  const untergrenze = (el) => (el.tagName === "H1" ? 56 : 28);
+  const untergrenze = (el) => (el.tagName === "H1" ? 64 : 28);
   const setze = (el, f) => { el.style.fontSize = `${Math.max(untergrenze(el), px(el) * f)}px`; };
   /* 1. Einzelne Zeilen/Blöcke, die breiter als ihr Platz sind (lange Wörter).
         Neben dem eigenen Überlauf zählt der rechte Rand der Kachel: Elemente
@@ -91,7 +91,11 @@ function einpassen() {
     : wurzel.getBoundingClientRect().bottom - 24;
   const textElemente = [...wurzel.querySelectorAll("h1,h2,h3,p,li,.text,.merke,.norm,.zahl,.zahl-unter,.karte,.optionen div,.rechnung,.spalte,.unter,.hinweis,.pfeil")];
   let n = 0;
-  const ausser = (c) => c.classList.contains("geist") || c.classList.contains("illu") || c.classList.contains("foto") || c.classList.contains("frei") || c.classList.contains("bildquelle") || c.classList.contains("fuss");
+  /* Absolut gesetzte Buehnenelemente zaehlen nicht als Inhalt: Das farbige
+     Zeichen neben dem Motiv (frei-zeichen) steht bewusst unterhalb der
+     Textgrenze - wuerde es mitgezaehlt, schrumpfte der Titel 14 Runden lang
+     bis auf die Untergrenze, obwohl er laengst passt. */
+  const ausser = (c) => ["geist", "illu", "foto", "frei", "frei-zeichen", "bildquelle", "fuss"].some((k) => c.classList.contains(k));
   const passt = () => {
     const unten = Math.max(...textElemente.map((e) => e.getBoundingClientRect().bottom));
     const kinderUnten = Math.max(...[...wurzel.children].filter((c) => !ausser(c)).map((c) => c.getBoundingClientRect().bottom));
