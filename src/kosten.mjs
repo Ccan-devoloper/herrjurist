@@ -27,6 +27,10 @@ export function budgetSetzen(opt = {}) {
      von budgetSetzen im selben Prozess die alten Posten doppelt. */
   posten.length = 0;
   for (const k of Object.keys(GEMESSEN)) delete GEMESSEN[k];
+  /* Die Messungen der früheren Läufe des Tages: Ein Lauf um 21:30 soll nicht
+     wieder mit der Tabelle rechnen, wenn der Lauf um 19:43 schon weiß, was
+     ein Reel heute tatsächlich kostet. */
+  Object.assign(GEMESSEN, opt.gemessen || {});
   limitUsd = opt.limitUsd ?? Infinity;
   vorbelastung = opt.bisher ?? 0;
   speichern = opt.speichern ?? null;
@@ -39,6 +43,9 @@ export function budgetSetzen(opt = {}) {
 export function reservieren(betrag, fuer = "reel") { reserviert = Math.max(0, Number(betrag) || 0); reserviertFuer = String(fuer).toLowerCase(); }
 export function reservierungAufheben() { reserviert = 0; }
 export const reservierung = () => reserviert;
+/** Teuerster Aufruf je Zweck – wandert in state/kosten.json, damit der nächste
+    Lauf des Tages damit weiterrechnet statt mit der Schätzung. */
+export const messungen = () => ({ ...GEMESSEN });
 
 export const tagesStand = () => vorbelastung + summe();
 export const tagesLimit = () => limitUsd;
@@ -99,7 +106,7 @@ export function erfassen(modell, usage, zweck = "") {
   if (zweckSchluessel) GEMESSEN[zweckSchluessel] = Math.max(GEMESSEN[zweckSchluessel] ?? 0, usd);
   const k = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n));
   console.log(`  $ ${usd.toFixed(4)} ${zweck || modell} · ${k(usage.input_tokens || 0)} ein / ${k(usage.output_tokens || 0)} aus / ${k(usage.cache_read_input_tokens || 0)} Cache`);
-  if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
+  if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
   return usd;
 }
 

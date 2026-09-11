@@ -89,12 +89,15 @@ async function main() {
   budgetSetzen({
     limitUsd: CONFIG.ki.tagesBudgetUsd,
     bisher: kostenStart.tage?.[datum]?.usd || 0,
-    speichern: (usd, aufrufe, zwecke) => {
+    gemessen: kostenStart.tage?.[datum]?.messungen || {},
+    speichern: (usd, aufrufe, zwecke, gemessen) => {
       const k = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} }); k.tage = k.tage || {};
       const alt = kostenStart.tage?.[datum] || {};
       const gesamtZwecke = { ...(alt.zwecke || {}) };
       for (const [z, betrag] of Object.entries(zwecke || {})) gesamtZwecke[z] = Number(((alt.zwecke?.[z] || 0) + betrag).toFixed(4));
-      k.tage[datum] = { usd: Number(usd.toFixed(4)), aufrufe: (alt.aufrufe || 0) + aufrufe, zwecke: gesamtZwecke, stand: new Date().toISOString() };
+      const hoechste = { ...(alt.messungen || {}) };
+      for (const [z, betrag] of Object.entries(gemessen || {})) hoechste[z] = Number(Math.max(hoechste[z] || 0, betrag).toFixed(4));
+      k.tage[datum] = { usd: Number(usd.toFixed(4)), aufrufe: (alt.aufrufe || 0) + aufrufe, zwecke: gesamtZwecke, messungen: hoechste, stand: new Date().toISOString() };
       hosting.jsonSchreiben("kosten.json", k);
     },
   });

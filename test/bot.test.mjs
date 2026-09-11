@@ -389,6 +389,15 @@ test("Tagesdeckel: nach der ersten Messung zählt die Messung, nicht die Schätz
   const vorher = k.tagesStand();
   assert.ok(vorher > 0.19 && vorher < 0.22, String(vorher));
   assert.equal(k.budgetFrei("reel"), true, `zweiter Versuch blockiert bei ${vorher.toFixed(3)} $`);
+
+  /* Und der nächste Lauf des Tages rechnet ebenfalls mit der Messung: Sie
+     wandert über state/kosten.json in den folgenden Prozess. */
+  const gemessen = k.messungen();
+  assert.ok(gemessen.reel > 0.02 && gemessen.reel < 0.06, JSON.stringify(gemessen));
+  k.budgetSetzen({ limitUsd: 0.27, bisher: 0.2145, reserviert: 0.11, reserviertFuer: "reel" });
+  assert.equal(k.budgetFrei("reel"), false, "ohne Messung müsste der Deckel greifen");
+  k.budgetSetzen({ limitUsd: 0.27, bisher: 0.2145, reserviert: 0.11, reserviertFuer: "reel", gemessen });
+  assert.equal(k.budgetFrei("reel"), true, "mit Messung muss das Reel noch passen");
   k.budgetSetzen({});
 });
 
