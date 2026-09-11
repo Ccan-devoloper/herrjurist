@@ -26,6 +26,7 @@ export function budgetSetzen(opt = {}) {
      `bisher`, nicht in dieser Liste. Ohne das Leeren zählte ein zweiter Aufruf
      von budgetSetzen im selben Prozess die alten Posten doppelt. */
   posten.length = 0;
+  for (const k of Object.keys(GEMESSEN)) delete GEMESSEN[k];
   limitUsd = opt.limitUsd ?? Infinity;
   vorbelastung = opt.bisher ?? 0;
   speichern = opt.speichern ?? null;
@@ -64,7 +65,19 @@ const ERWARTET = {
 const STANDARD = 0.05;
 /* Längste Übereinstimmung gewinnt: „reel-faktencheck“ enthält „reel“. */
 const schluessel = (zweck) => Object.keys(ERWARTET).sort((a, b) => b.length - a.length).find((n) => String(zweck).toLowerCase().includes(n)) || null;
-const erwartetFuer = (zweck) => { const k = schluessel(zweck); return k ? ERWARTET[k] : STANDARD; };
+
+/* Was ein Zweck in diesem Lauf tatsächlich gekostet hat (teuerster Aufruf).
+   Die Tabelle oben ist nur der Startwert für den ersten Aufruf; sobald
+   gemessen wurde, zählt die Messung – in beide Richtungen.
+
+   Warum das wichtig ist: Am 11.09. wurde ein Reel-Entwurf vom Faktencheck zu
+   Recht beanstandet („Paragraf 9“ statt „Art. 9 Abs. 3 GG“). Der zweite
+   Versuch scheiterte dann nicht am Geld, sondern an der Schätzung – der
+   Entwurf hatte 0,047 $ gekostet, vorab belastet wurden aber 0,06 $, und
+   damit lag der Deckel rechnerisch 0,005 $ zu tief. Das Reel fiel aus,
+   obwohl es bezahlbar gewesen wäre. */
+const GEMESSEN = {};
+const erwartetFuer = (zweck) => { const k = schluessel(zweck); if (!k) return STANDARD; return GEMESSEN[k] ?? ERWARTET[k]; };
 
 const darfReserve = (zweck) => Boolean(reserviertFuer) && String(zweck).toLowerCase().includes(reserviertFuer);
 export const budgetFrei = (zweck = "") => tagesStand() + erwartetFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
@@ -80,9 +93,10 @@ export function erfassen(modell, usage, zweck = "") {
   const p = PREISE[modell] || PREISE["claude-opus-5"];
   const usd = ((usage.input_tokens || 0) * p.ein + (usage.output_tokens || 0) * p.aus + (usage.cache_read_input_tokens || 0) * p.cacheLesen + (usage.cache_creation_input_tokens || 0) * p.cacheSchreiben) / 1e6;
   posten.push({ modell, zweck, usd, ein: usage.input_tokens || 0, aus: usage.output_tokens || 0, cache: usage.cache_read_input_tokens || 0 });
-  /* Teurer als erwartet? Dann rechnet der Rest des Laufs mit dem höheren Wert. */
+  /* Der Rest des Laufs rechnet ab jetzt mit dem gemessenen Wert (dem teuersten
+     Aufruf dieses Zwecks), nicht mehr mit der Schätzung. */
   const zweckSchluessel = schluessel(zweck);
-  if (zweckSchluessel && usd > ERWARTET[zweckSchluessel]) ERWARTET[zweckSchluessel] = usd;
+  if (zweckSchluessel) GEMESSEN[zweckSchluessel] = Math.max(GEMESSEN[zweckSchluessel] ?? 0, usd);
   const k = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n));
   console.log(`  $ ${usd.toFixed(4)} ${zweck || modell} · ${k(usage.input_tokens || 0)} ein / ${k(usage.output_tokens || 0)} aus / ${k(usage.cache_read_input_tokens || 0)} Cache`);
   if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
