@@ -35,6 +35,11 @@ function tresorSchluessel() {
   return crypto.createHash("sha256").update(s).digest();
 }
 
+/* Kurzer Fingerabdruck eines Tokens - der Token selbst steht nirgends im Klartext. */
+export function fingerabdruck(token) {
+  return token ? crypto.createHash("sha256").update(String(token)).digest("hex").slice(0, 16) : null;
+}
+
 export function tokenVerschluesseln(daten) {
   const key = tresorSchluessel();
   if (!key) throw new Error("IG_TOKEN_KEY fehlt");
@@ -67,12 +72,28 @@ export class Instagram {
     this.protokoll = [];
   }
 
-  /* Token aus dem Tresor laden (falls vorhanden und neuer als das Secret). */
+  /* Token aus dem Tresor laden - es sei denn, im Secret steht inzwischen ein
+     neuer Token.
+
+     Der Tresor hält den verlängerten Token, der vom ursprünglichen Secret
+     abstammt. Wird das Secret neu gesetzt (etwa mit einer weiteren
+     Berechtigung wie instagram_business_manage_comments), muss das neue
+     Secret gewinnen - sonst liefe der Bot auf dem alten Token weiter, und die
+     neue Berechtigung käme nie an. Erkannt wird das am Fingerabdruck des
+     Secrets, von dem die Tresorkette ausging. */
   tresorLaden() {
     if (!this.tresorDatei || !fs.existsSync(this.tresorDatei)) return false;
     try {
       const t = tokenEntschluesseln(fs.readFileSync(this.tresorDatei, "utf8"));
-      if (t?.token) { this.token = t.token; this.tokenAblauf = t.ablauf || null; return true; }
+      if (!t?.token) return false;
+      const secret = fingerabdruck(CONFIG.instagram.token);
+      if (t.herkunft && secret && t.herkunft !== secret) {
+        console.log("Neuer Token im Secret erkannt – der Tresor wird ab jetzt von diesem Token aus geführt.");
+        this.tokenAblauf = null;
+        this.tresorSpeichern();
+        return false;
+      }
+      this.token = t.token; this.tokenAblauf = t.ablauf || null; return true;
     } catch (e) {
       console.warn(`Token-Tresor nicht lesbar (${e.message}) – verwende Secret.`);
     }
@@ -82,7 +103,7 @@ export class Instagram {
   tresorSpeichern() {
     if (!this.tresorDatei || !tresorSchluessel()) return false;
     fs.mkdirSync(path.dirname(this.tresorDatei), { recursive: true });
-    fs.writeFileSync(this.tresorDatei, tokenVerschluesseln({ token: this.token, ablauf: this.tokenAblauf, gespeichert: new Date().toISOString() }));
+    fs.writeFileSync(this.tresorDatei, tokenVerschluesseln({ token: this.token, ablauf: this.tokenAblauf, gespeichert: new Date().toISOString(), herkunft: fingerabdruck(CONFIG.instagram.token) }));
     return true;
   }
 
