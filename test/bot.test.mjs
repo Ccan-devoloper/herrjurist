@@ -279,7 +279,7 @@ test("Lernschleife: Gewichte, Hook-Typen, beste Uhrzeiten, Plan folgt der Strate
      Fenster, aufsteigend und mit Mindestabstand. */
   const zeitenPlan = plan.beitraege.map((b) => minutenVon(b.zeit));
   assert.ok(zeitenPlan[0] >= minutenVon("06:00"), plan.beitraege.map((b) => b.zeit).join(" "));
-  assert.ok(zeitenPlan.at(-1) <= minutenVon("21:59"));
+  assert.ok(zeitenPlan.at(-1) <= minutenVon("22:59"));
   assert.ok(zeitenPlan[1] - zeitenPlan[0] >= CONFIG.plan.zeitAbstandStunden * 60);
 });
 
@@ -523,19 +523,31 @@ test("Uhrzeiten werden gelernt: Erkundung ohne Daten, beste Stunde mit Daten", a
   assert.equal(klasseVon("reel"), "reel");
   assert.equal(klasseVon("spickzettel"), "karussell");
 
-  /* Ohne Messungen: gültige Zeiten im Fenster, Mindestabstand eingehalten,
-     und über die Woche werden verschiedene Stunden ausprobiert. */
+  /* Ohne Messungen: Der erste Tag folgt dem Vorwissen aus den Studien
+     (Karussell vormittags, Reel abends); danach werden die Nachbarstunden
+     ausprobiert. Jeder Tag trägt seine Beiträge in den Ledger ein, wie im
+     Betrieb - nur so kann die Erkundung wissen, was schon dran war. */
   const leer = { veroeffentlicht: [] };
+  const erster = zeitenWaehlen({ formate: ["spickzettel", "reel"], datum: "2026-09-14", ledger: leer, zufall: rngFuer("2026-09-14") });
+  assert.ok(minutenVon(erster[0]) >= minutenVon("08:00") && minutenVon(erster[0]) <= minutenVon("13:59"), `Karussell ohne Daten nicht vormittags/mittags: ${erster[0]}`);
+  assert.ok(minutenVon(erster[1]) >= minutenVon("18:00"), `Reel ohne Daten nicht abends: ${erster[1]}`);
   const gesehen = new Set();
   for (const datum of ["2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20"]) {
     const z = zeitenWaehlen({ formate: ["spickzettel", "reel"], datum, ledger: leer, zufall: rngFuer(datum) });
     assert.equal(z.length, 2);
     const [a, b] = z.map((t) => minutenVon(t));
-    assert.ok(a >= minutenVon("06:00") && b <= minutenVon("21:59"), z.join(" "));
+    assert.ok(a >= minutenVon("06:00") && b <= minutenVon("22:59"), z.join(" "));
     assert.ok(b - a >= CONFIG.plan.zeitAbstandStunden * 60, `Abstand zu klein: ${z.join(" ")}`);
     z.forEach((t) => gesehen.add(t));
+    leer.veroeffentlicht.push({ art: "beitrag", datum, format: "spickzettel", zeit: z[0] }, { art: "beitrag", datum, format: "reel", zeit: z[1] });
   }
-  assert.ok(gesehen.size >= 3, `zu wenig Erkundung: ${[...gesehen].join(" ")}`);
+  assert.ok(gesehen.size >= 4, `zu wenig Erkundung: ${[...gesehen].join(" ")}`);
+  /* Erkundet wird in der Nähe des Vorwissens, nicht wahllos: Die meisten
+     Reels bleiben am Abend, das zweite Studienfenster (8–12 Uhr) darf
+     vorkommen, die Nacht nicht. */
+  const reels = leer.veroeffentlicht.filter((e) => e.format === "reel").map((e) => minutenVon(e.zeit));
+  assert.ok(reels.filter((m) => m >= minutenVon("17:00")).length >= 5, `Reels zu selten abends: ${reels.join(" ")}`);
+  assert.ok(reels.every((m) => m >= minutenVon("08:00")), `Reel zu früh: ${reels.join(" ")}`);
 
   /* Mit Messungen: 19 Uhr läuft für Reels deutlich besser, 8 Uhr fürs Karussell. */
   const ledger = { veroeffentlicht: [] };
@@ -558,7 +570,12 @@ test("Uhrzeiten werden gelernt: Erkundung ohne Daten, beste Stunde mit Daten", a
   const statSchwach = zeitStatistik(schwach);
   assert.equal(statSchwach.belastbar, false, JSON.stringify({ n: statSchwach.gesamt, w: statSchwach.mitWirkung, m: statSchwach.mittelPunkte }));
   const verteilt = new Set();
-  for (const datum of ["2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"]) verteilt.add(zeitenWaehlen({ formate: ["spickzettel", "reel"], datum, ledger: schwach, zufall: rngFuer(datum) }).join(" "));
+  for (const datum of ["2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25"]) {
+    const z = zeitenWaehlen({ formate: ["spickzettel", "reel"], datum, ledger: schwach, zufall: rngFuer(datum) });
+    verteilt.add(z.join(" "));
+    /* Wie im Betrieb: Jeder Tag landet im Ledger, auch ohne Zahlen. */
+    schwach.veroeffentlicht.push({ art: "beitrag", datum, format: "spickzettel", zeit: z[0], insights: { reach: 0 } }, { art: "beitrag", datum, format: "reel", zeit: z[1], insights: { reach: 0 } });
+  }
   assert.ok(verteilt.size >= 3, `bei dünner Datenlage zu starr: ${[...verteilt].join(" | ")}`);
 
   /* Bericht nennt die besten Stunden je Art. */
