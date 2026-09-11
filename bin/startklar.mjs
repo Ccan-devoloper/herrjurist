@@ -54,8 +54,10 @@ else gut("IG_TOKEN_KEY gesetzt, verlängerte Token werden verschlüsselt abgeleg
 
 /* 2. Texte und Prüfung --------------------------------------------------- */
 console.log(zeilen.splice(0).join("\n") + "\n\nTexte");
-if (!CONFIG.ki.key) fehler("ANTHROPIC_API_KEY fehlt – ohne ihn entsteht kein einziger Beitrag.");
-else gut(`Claude erreichbar konfiguriert (${CONFIG.ki.modell}, Faktencheck ${CONFIG.faktencheck.aktiv ? CONFIG.faktencheck.modell : "aus"})`);
+/* Der Schlüssel steht nicht in CONFIG – das SDK liest ihn selbst aus der
+   Umgebung. Deshalb hier direkt nachsehen. */
+if (!process.env.ANTHROPIC_API_KEY) fehler("ANTHROPIC_API_KEY fehlt – ohne ihn entsteht kein einziger Beitrag.");
+else gut(`Claude-Schlüssel gesetzt (${CONFIG.ki.modell}, Faktencheck ${CONFIG.faktencheck.aktiv ? CONFIG.faktencheck.modellPruefung || CONFIG.faktencheck.modell || "an" : "aus"})`);
 if (CONFIG.faktencheck.aktiv && CONFIG.faktencheck.strikt) gut("Faktencheck streng: Fällt er aus, erscheint der Beitrag nicht");
 else if (CONFIG.faktencheck.aktiv) warnung("Faktencheck nicht streng – fällt er aus, erscheint der Beitrag trotzdem.");
 else fehler("Faktencheck ist abgeschaltet.");
@@ -91,5 +93,7 @@ else warnung("IG_HANDLE ist leer – die Fußzeile der Kacheln bleibt links leer
 console.log(zeilen.splice(0).join("\n"));
 const trocken = CONFIG.instagram.trockenlauf;
 console.log(`\n${trocken ? "Der Lauf ist auf TROCKEN gestellt (IG_DRY_RUN/IG_PAUSE) – es wird nichts veröffentlicht." : "Der Lauf würde LIVE veröffentlichen."}`);
-if (blocker) { console.error(`\n${blocker} Punkt${blocker === 1 ? "" : "e"} verhindert das Veröffentlichen.`); process.exit(1); }
-console.log("\nAlles bereit.");
+/* Auch das Fazit auf stdout: Auf stderr mischt GitHub die Reihenfolge, und
+   dann steht „1 Punkt verhindert das Veröffentlichen“ mitten im Bericht. */
+if (blocker) { console.log(`\n${blocker} Punkt${blocker === 1 ? "" : "e"} verhindert das Veröffentlichen.`); process.exitCode = 1; }
+else console.log("\nAlles bereit.");
