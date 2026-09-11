@@ -91,8 +91,13 @@ else warnung("IG_HANDLE ist leer – die Fußzeile der Kacheln bleibt links leer
 
 /* 5. Fazit --------------------------------------------------------------- */
 console.log(zeilen.splice(0).join("\n"));
+/* Zwei verschiedene Fragen: Was tut DIESER Lauf, und was tut der Zeitplan?
+   Ein von Hand ausgeloester Lauf ist immer trocken; ob der naechste
+   stuendliche Lauf veroeffentlicht, haengt allein an IG_PAUSE. */
 const trocken = CONFIG.instagram.trockenlauf;
-console.log(`\n${trocken ? "Der Lauf ist auf TROCKEN gestellt (IG_DRY_RUN/IG_PAUSE) – es wird nichts veröffentlicht." : "Der Lauf würde LIVE veröffentlichen."}`);
+const pause = String(process.env.IG_PAUSE || "").toLowerCase() === "true";
+console.log(`\nDieser Lauf: ${trocken ? "TROCKEN – es wird nichts veröffentlicht." : "würde LIVE veröffentlichen."}`);
+console.log(`Zeitplan:    ${pause ? "steht auf Pause (IG_PAUSE=true) – die stündlichen Läufe veröffentlichen nichts." : "LIVE – der nächste stündliche Lauf veröffentlicht, was fällig ist."}`);
 /* Auch das Fazit auf stdout: Auf stderr mischt GitHub die Reihenfolge, und
    dann steht „1 Punkt verhindert das Veröffentlichen“ mitten im Bericht. */
 if (blocker) { console.log(`\n${blocker} Punkt${blocker === 1 ? "" : "e"} verhindert das Veröffentlichen.`); process.exitCode = 1; }
