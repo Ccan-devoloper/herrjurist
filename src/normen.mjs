@@ -141,7 +141,7 @@ export function normGesprochen(text) {
 }
 
 /** Die Regel, wie sie im Auftrag an das Modell steht. */
-export const NORM_REGEL = 'Normen in der Klausur-Zitierweise: § 80 Abs. 1 S. 5 VwGO, § 1 Abs. 1 S. 1 Nr. 1 lit. a BGB. Absatz, Satz, Nummer und Buchstabe abgekürzt, nie in Klammern. Römische Absatzziffern („§ 441 III BGB“) sind ebenfalls in Ordnung, wenn die Norm üblicherweise so zitiert wird – nur nicht innerhalb eines Beitrags mischen.';
+export const NORM_REGEL = 'Normen in der Klausur-Zitierweise: § 80 Abs. 1 S. 5 VwGO, § 1 Abs. 1 S. 1 Nr. 1 lit. a BGB. Absatz, Satz, Nummer und Buchstabe abgekürzt, nie in Klammern. Römische Absatzziffern („§ 441 III BGB“) sind ebenfalls in Ordnung, wenn die Norm üblicherweise so zitiert wird – nur nicht innerhalb eines Beitrags mischen. Grundgesetz, EMRK, AEUV, EUV und Grundrechtecharta werden mit ARTIKEL zitiert, nie mit Paragraf: „Art. 9 Abs. 3 GG“, niemals „§ 9 GG“.';
 export const NORM_REGEL_STIMME = 'Im Sprechertext dagegen ausgeschrieben, damit die Stimme es richtig liest: „Paragraf 80 Absatz 1 Satz 5 VwGO“ – dort keine Abkürzungen.';
 
 /* Rückweg: Im Reel wird der Sprechertext ausgeschrieben („Paragraf 48 Absatz 2

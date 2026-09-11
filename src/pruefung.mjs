@@ -176,6 +176,12 @@ const EXAMENSABLAUF = [
   [/\bPunkte(verteilung|vergabe)\b/i, "Eine Punkteverteilung je Prüfungspunkt gibt es im Staatsexamen nicht."],
   [/\bTextziffer\b/i, "„Textziffer“ ist Steuerberaterexamen, nicht Staatsexamen."],
   [/\bBuchungssatz\b/i, "Buchungssätze gehören nicht in einen Kanal zum juristischen Staatsexamen."],
+  /* Das Grundgesetz und die europäischen Verträge kennen keine Paragrafen.
+     Ein Reel zur Koalitionsfreiheit schrieb durchgehend „Paragraf 9“ statt
+     „Art. 9 Abs. 3 GG“ - der Faktencheck hat es gefunden, aber erst nachdem
+     das Skript geschrieben war. Hier kostet es nichts. Beide Schreibweisen
+     prüfen: Auf dem Bildschirm steht „§“, im Sprechertext „Paragraf“. */
+  [/(?:§§?\s*|\bParagra(?:f|ph)(?:en)?\s+)\d+[a-z]?(?:\s+(?:Abs\.|Absatz|S\.|Satz|Nr\.|Nummer|Alt\.|Alternative|Var\.|Variante|Hs\.|Halbsatz)\s*\d+[a-z]?)*\s+(?:GG|AEUV|EUV|EMRK|GRCh)\b/, "Grundgesetz und europäische Verträge werden mit Artikel zitiert, nicht mit Paragraf (Art. 9 Abs. 3 GG statt § 9 GG)."],
   /* Ankündigungen auf ein nächstes Mal: Der Feed sortiert nicht chronologisch,
      ein Beitrag wird Monate später gesehen, und eingelöst wird so ein
      Versprechen ohnehin nie. */

@@ -146,7 +146,7 @@ export const CONFIG = {
     /* Rücklage für das Reel des Tages: Es soll täglich erscheinen, darf also
        nicht daran scheitern, dass Beiträge und Recherche das Budget vorher
        aufbrauchen. */
-    reelReserveUsd: Number(env("IG_REEL_RESERVE_USD", "0.09")),
+    reelReserveUsd: Number(env("IG_REEL_RESERVE_USD", "0.11")),
   },
 
   /* Instagram Graph API -------------------------------------------------- */

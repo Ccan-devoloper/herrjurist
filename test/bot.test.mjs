@@ -365,11 +365,31 @@ test("Tagesdeckel: Verbrauch wird gezählt, weitere Aufrufe werden gestoppt", as
   k.budgetPruefen("beitrag");
   k.erfassen("claude-sonnet-5", { input_tokens: 1000, output_tokens: 2500 }, "beitrag");   // 0,002 + 0,025 = 0,027 $
   assert.ok(gespeichert.length === 1 && gespeichert[0] > 0.04, JSON.stringify(gespeichert));
+  /* Ab jetzt rechnet der Deckel mit dem gemessenen Wert (0,027 $ je Beitrag),
+     nicht mehr mit der Schätzung – ein dritter Aufruf passt also noch. */
   k.erfassen("claude-sonnet-5", { input_tokens: 1000, output_tokens: 2500 }, "beitrag");
+  assert.equal(k.budgetFrei("beitrag"), true);
+  k.erfassen("claude-sonnet-5", { input_tokens: 1000, output_tokens: 2500 }, "beitrag");   // 0,02 + 3 × 0,027 = 0,101 $
   assert.equal(k.budgetFrei("beitrag"), false);
   assert.throws(() => k.budgetPruefen("Beitrag"), k.BudgetFehler);
+  assert.ok(k.tagesStand() < 0.12, `Deckel überschritten: ${k.tagesStand()}`);
   k.budgetSetzen({});   // zurücksetzen, damit andere Tests nicht betroffen sind
   assert.equal(k.budgetFrei(), true);
+});
+
+test("Tagesdeckel: nach der ersten Messung zählt die Messung, nicht die Schätzung", async () => {
+  const k = await import("../src/kosten.mjs");
+  /* Der Fall vom 11.09.: Ein Reel-Entwurf kostete 0,047 $, wurde vom
+     Faktencheck zu Recht beanstandet – und der zweite Versuch scheiterte an
+     der Schätzung von 0,06 $, nicht am Geld. Ein Aufruf, der günstiger ist
+     als geschätzt, darf den nächsten nicht blockieren. */
+  k.budgetSetzen({ limitUsd: 0.27, bisher: 0.168, reserviert: 0.11, reserviertFuer: "reel" });
+  k.erfassen("claude-sonnet-5", { input_tokens: 2400, output_tokens: 1900 }, "reel");        // ≈ 0,024 $
+  k.erfassen("claude-haiku-4-5", { input_tokens: 2000, output_tokens: 621 }, "reel-faktencheck");
+  const vorher = k.tagesStand();
+  assert.ok(vorher > 0.19 && vorher < 0.22, String(vorher));
+  assert.equal(k.budgetFrei("reel"), true, `zweiter Versuch blockiert bei ${vorher.toFixed(3)} $`);
+  k.budgetSetzen({});
 });
 
 test("Reel: Animation rotiert täglich, Untertitel zeigen ganze Sätze", async () => {
@@ -827,6 +847,18 @@ test("Prüfung weist Vorstellungen zurück, die es nur im Steuerberaterexamen gi
   for (const t of ["Mit 9 Notenpunkten hast du bestanden", "Ein Dauerbrenner in den Zivilrechtsklausuren", "Punkte sammeln, wo es leichtfällt", "Folg mir für den Unterschied zur Rücknahme"]) {
     const f = pruefeBeitrag({ caption: t }).fehler.filter((x) => /Staatsexamen|Reihenfolge|Ankündigung|Punkte/.test(x));
     assert.equal(f.length, 0, `zu Unrecht beanstandet: ${t} → ${f.join(" | ")}`);
+  }
+});
+
+test("Prüfung: Grundgesetz wird mit Artikel zitiert, nie mit Paragraf", async () => {
+  const { pruefeBeitrag } = await import("../src/pruefung.mjs");
+  const geruegt = (t) => pruefeBeitrag({ caption: t }).fehler.some((f) => /Artikel zitiert/.test(f));
+  /* Beide Schreibweisen: auf der Kachel „§“, im Sprechertext „Paragraf“. */
+  for (const t of ["§ 9 Abs. 3 GG schützt die Koalitionsfreiheit", "Das steht in § 9 GG", "Nach Paragraf 9 Absatz 3 GG ist das geschützt", "Paragraf 20 Absatz 3 GG bindet die Verwaltung", "§ 5 Abs. 1 Satz 2 GG", "§ 47 EMRK"]) {
+    assert.ok(geruegt(t), `nicht erkannt: ${t}`);
+  }
+  for (const t of ["Art. 9 Abs. 3 GG schützt die Koalitionsfreiheit", "Artikel 20 Absatz 3 GG bindet die Verwaltung", "§ 823 Abs. 1 BGB", "§ 80 Abs. 5 VwGO", "Art. 19 Abs. 4 GG i.V.m. § 40 VwGO", "§ 9 BGB und Art. 12 GG"]) {
+    assert.ok(!geruegt(t), `zu Unrecht beanstandet: ${t}`);
   }
 });
 
