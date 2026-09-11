@@ -85,8 +85,13 @@ jobs:
         id: rembg-cache
         uses: actions/cache@v4
         with:
-          path: ~/.u2net
-          key: rembg-u2net-v1
+          # rembg 2.0.8x legt Modelle unter ~/.rembg ab; das Verzeichnis ~/.u2net
+          # ist der Ablageort älterer Versionen. Beide, damit nichts jeden Lauf
+          # neu geladen wird.
+          path: |
+            ~/.rembg
+            ~/.u2net
+          key: rembg-isnet-v2
 
       - name: Freisteller installieren
         run: pip install --quiet "rembg[cli]" onnxruntime

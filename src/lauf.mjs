@@ -67,6 +67,16 @@ function bildnachweis(beitrag) {
   return q ? `\n\n${q}` : "";
 }
 
+/* Motiv für Reel-Cover oder Story: dieselbe Suche wie für die Titelfolie
+   (bildSzene → Pexels → freistellen), abgelegt am Objekt selbst. */
+async function motivBesorgen(ziel, was = "Motiv") {
+  if (!ziel || ziel.bild || !ziel.bildSzene) return;
+  try {
+    const treffer = await titelbild(ziel);
+    if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; }
+  } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
+}
+
 /* Setzt das Foto auf die Titelfolie, sofern eines gefunden wird. */
 async function titelfolieBebildern(beitrag) {
   const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
@@ -314,6 +324,7 @@ async function main() {
         }
         const varianteReel = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
         const gewaehlteStimme = stimmeWaehlen({ kandidaten: stimmenListe?.kandidaten || [], ledger, datum, fest: stimmenListe?.fest || null });
+        await motivBesorgen(reel, "Reel-Cover");
         const r = await reelBauen(reel, path.join(AUSGABE, "reels", eintrag.slot), { variante: varianteReel, datum, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
         log(`  Reel gebaut: ${r.dauer.toFixed(1)} s · Stimme ${r.anbieter}${r.stimmeName ? ` „${r.stimmeName}“` : ""} · Animation ${r.animation}`);
         /* Stimme vom Tarif gesperrt: aus der Liste werfen, beim nächsten Lauf
@@ -324,7 +335,7 @@ async function main() {
           log(`  Stimme „${gewaehlteStimme.name}“ entfernt (Tarif erlaubt sie nicht).`);
         }
         const [videoUrl, coverUrl] = await hosting.veroeffentlichen([r.video, r.cover], datum, `Reel ${datum} ${eintrag.slot}`);
-        const caption = `${reel.caption}\n\n${reel.hashtags.join(" ")}`;
+        const caption = `${reel.caption}${reel.bildQuelle ? `\n\n${reel.bildQuelle}` : ""}\n\n${reel.hashtags.join(" ")}`;
         const medienId = await ig.reelPosten({ videoUrl, coverUrl, caption });
         kontingent.genutzt += 1;
         eintrag.status = "veroeffentlicht"; eintrag.medienId = medienId; eintrag.veroeffentlicht = new Date().toISOString();
@@ -410,6 +421,9 @@ async function main() {
           else { log(`Story ${eintrag.slot} beanstandet: ${erneut.fehler.join("; ")} – übersprungen.`); eintrag.status = "uebersprungen"; continue; }
         }
       }
+      /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
+         Tipp); der Teaser bringt das Bild des Beitrags schon mit. */
+      await motivBesorgen(story, "Story-Motiv");
       const bild = await storyRendern(story, path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`), { variante: varianteStory(eintrag.slot) });
       const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
       const medienId = await ig.storyPosten({ bildUrl: url });

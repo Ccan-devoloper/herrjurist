@@ -788,7 +788,7 @@ test("Strenger Faktencheck: ohne Prüfung erscheint kein Beitrag", async () => {
   const alt = CONFIG.faktencheck.aktiv;
   CONFIG.faktencheck.aktiv = false;
   const r = await pruefeFakten({ folien: [{ art: "titel", titel: "Test" }] });
-  assert.deepEqual(r, { ok: true, fehler: [], hinweise: [] });
+  assert.deepEqual(r, { ok: true, fehler: [], hinweise: [], korrekturen: [] });
   CONFIG.faktencheck.aktiv = alt;
   assert.equal(CONFIG.faktencheck.strikt, true, "streng ist der Standard");
 });
@@ -965,4 +965,61 @@ test("Tagesdeckel hält, auch wenn ein Aufruf teurer ist als die alte Pauschale"
   }
   assert.ok(aufrufe >= 3, `nur ${aufrufe} Aufrufe möglich – der Deckel ist zu streng`);
   assert.ok(k.tagesStand() <= limit, `${k.tagesStand().toFixed(4)} $ über dem Limit von ${limit.toFixed(2)} $`);
+});
+
+test("Faktencheck: Sprachversehen werden im Text ersetzt, nicht neu geschrieben", async () => {
+  const { korrekturenAnwenden } = await import("../src/faktencheck.mjs");
+  const beitrag = { folien: [{ art: "schritte", schritte: [{ titel: "Teilnehmer prüfen", text: "U hat U selbst keine Amtsträgereigenschaft. Er stiftet R zur Tat an, § 26 StGB." }] }], caption: "U hat U selbst keine Amtsträgereigenschaft – das ist der Kern." };
+  const n = korrekturenAnwenden(beitrag, [{ original: "U hat U selbst keine", ersatz: "U hat selbst keine" }, { original: "kommt nicht vor", ersatz: "egal" }]);
+  assert.equal(n, 2);
+  assert.equal(beitrag.folien[0].schritte[0].text, "U hat selbst keine Amtsträgereigenschaft. Er stiftet R zur Tat an, § 26 StGB.");
+  assert.ok(beitrag.caption.startsWith("U hat selbst keine"));
+});
+
+test("Icons: jeder Schlüssel des Autors hat ein farbiges Gegenstück", async () => {
+  const { ICONS, iconSvg } = await import("../src/stile.mjs");
+  const { farbIcon, ZUORDNUNG } = await import("../src/icons.mjs");
+  for (const k of Object.keys(ICONS)) assert.ok(ZUORDNUNG[k], `keine Zuordnung für ${k}`);
+  for (const k of Object.keys(ZUORDNUNG)) assert.ok(farbIcon(k, 48)?.includes("<svg"), `kein Icon für ${k} (${ZUORDNUNG[k]})`);
+  /* iconSvg liefert das farbige Icon, sobald der Satz da ist. */
+  assert.ok(iconSvg("waage").includes('class="icon farb"'));
+  assert.equal(farbIcon("gibt-es-nicht"), null);
+});
+
+test("Freisteller: vom Fotorand angeschnittene Motive werden erkannt", async () => {
+  const { randkontakt } = await import("../src/freistellen.mjs");
+  const { execFileSync } = await import("node:child_process");
+  const { ffmpegPfad } = await import("../src/stimme.mjs");
+  const os = await import("node:os");
+  const path = (await import("node:path")).default;
+  const ganz = path.join(os.tmpdir(), `rand-ganz-${Date.now()}.png`), oben = path.join(os.tmpdir(), `rand-oben-${Date.now()}.png`);
+  /* Deckender Kasten in der Mitte (ganz im Bild) bzw. bis an den oberen Rand. */
+  /* Weißer Kasten, ringsum durchsichtig aufgefüllt (ganz im Bild) bzw. bis an
+     den oberen und unteren Rand reichend (angeschnitten). */
+  execFileSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=white:s=100x150", "-vf", "format=rgba,pad=200:200:50:50:color=black@0.0", "-frames:v", "1", ganz]);
+  execFileSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=white:s=100x200", "-vf", "format=rgba,pad=200:200:50:0:color=black@0.0", "-frames:v", "1", oben]);
+  const a = randkontakt(ganz), b = randkontakt(oben);
+  assert.ok(a && a.oben === 0 && a.links === 0 && a.rechts === 0, JSON.stringify(a));
+  assert.ok(b && b.oben > 0.3 && b.unten > 0.3, JSON.stringify(b));
+  fs.rmSync(ganz, { force: true }); fs.rmSync(oben, { force: true });
+});
+
+test("Motive auf Reel-Cover und Stories, Nebentext auf Blau hell", async () => {
+  const { coverHtml, storyHtml, folieHtml } = await import("../src/vorlagen.mjs");
+  const { teaserAusBeitrag } = await import("../src/autor.mjs");
+  const bild = "data:image/png;base64,iVBORw0KGgo=";
+  const ctx = kontext({ fach: "strafbt", klausur: 2 });
+  assert.ok(coverHtml({ titel: "Test", bild, bildFrei: true }, ctx).includes('class="frei"'));
+  assert.ok(!coverHtml({ titel: "Test", icon: "waage" }, ctx).includes('class="frei"'));
+  const s = storyHtml({ art: "begriff", titel: "Begriff", text: "Text", bild, bildFrei: true, bildQuelle: "Foto: X / Pexels" }, ctx);
+  assert.ok(s.includes('class="frei"') && s.includes("Foto: X / Pexels"));
+  /* Der Teaser trägt das Bild des Beitrags. */
+  const t = teaserAusBeitrag({ fach: "strafbt", klausur: 2, kurztitel: "K", folien: [{ art: "titel", titel: "T", bild, bildFrei: true, bildQuelle: "Q" }] }, "s1");
+  assert.equal(t.bild, bild);
+  /* Blau (Klausur 1): weicher Text hell; auf weißen Flächen dunkel. */
+  const blau = folieHtml({ art: "text", titel: "T", text: "x" }, kontext({ fach: "zivil", klausur: 1 }), 2, 3);
+  assert.ok(/--text-weich:#dbe4ff/.test(blau), "helle Weichfarbe fehlt");
+  assert.ok(/\.text[^{]*\{--text-weich:#0c1b4d\}/.test(blau) || /\.text,[^{]*\{--text-weich:#0c1b4d\}/.test(blau), "dunkle Weichfarbe auf weißen Flächen fehlt");
+  const orange = folieHtml({ art: "text", titel: "T", text: "x" }, ctx, 2, 3);
+  assert.ok(/--text-weich:#3a1708/.test(orange));
 });

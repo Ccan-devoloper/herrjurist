@@ -452,6 +452,8 @@ export function coverDaten(reel, plan) {
     ueberzeile: sekunden ? `Reel · ${sekunden} Sekunden` : "Reel",
     dauerText: sekunden ? `In ${sekunden} Sekunden erklärt` : "",
     icon: reel.szenen?.find((s) => s.icon)?.icon || "paragraf",
+    /* Freigestelltes Motiv (bilder.mjs) statt Icon-Bühne, wenn eines da ist. */
+    bild: reel.bild || null, bildFrei: reel.bildFrei !== false, bildQuelle: reel.bildQuelle || null,
     fach: reel.fach,
     klausur: reel.klausur,
     fachLabel: FAECHER[reel.fach]?.label,
