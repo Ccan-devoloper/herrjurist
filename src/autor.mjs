@@ -144,7 +144,7 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Je Folie maximal 5 Punkte / 5 Schritte, insgesamt maximal 380 Zeichen Text je Folie; bei „vergleich“ je Spalte maximal 3 Punkte à 60 Zeichen.
 - Kernaussagen und Merksätze aus dem Skelett NIE übernehmen, auch nicht leicht umgestellt – schreibe einen eigenen Merksatz mit anderem Satzbau und anderen Wörtern.
 - Hervorhebungen mit *Sternchen* um das Wort – sparsam, ein bis zwei je Folie.
-- icon: genau einer aus: ${Object.keys(ICONS).join(", ")}.
+- icon: genau einer aus: ${Object.keys(ICONS).join(", ")}. Nimm das konkreteste Zeichen zum Thema – das, was in der Geschichte des Falls vorkommt: Tötungsdelikt → messer oder polizei, Kaufvertrag → handschlag oder einkaufswagen, Mietrecht → haus oder schluessel, Erbrecht → schriftrolle, Verkehrsunfall → auto, Kündigung → umschlag, Insolvenz → geld-weg. Die allgemeinen Zeichen (waage, paragraf, buch, dokument) sind nur Rückfall, wenn wirklich nichts Konkretes passt.
 - Caption: 4–8 Zeilen. Zeile 1 ist der Hook (die Frage oder die Pointe), dann die Kernantwort in 2–4 Sätzen, dann die Aufforderung, den Beitrag an die Lerngruppe weiterzuleiten und zu speichern, plus eine echte Frage an die Leser:innen, die eine Antwort im Kommentar provoziert. ${CONFIG.marke.website ? `Am Ende darf ein Hinweis „Mehr auf ${CONFIG.marke.website} (Link in Bio)“ stehen.` : "Keine Website, keine Plattform, kein Produkt erwähnen – auch nicht „Link in Bio“."} Keine Hashtags in der Caption; die kommen separat.
 - Hashtags: 8–14 Stück, deutsch, kleingeschrieben, spezifisch zum Thema plus diese Kernhashtags: ${CONFIG.hashtags.kern.join(" ")}.
 - kurztitel: 3–6 Wörter für die Story-Ankündigung.
@@ -365,8 +365,20 @@ function themaText(thema) {
   return zeilen.filter(Boolean).join("\n");
 }
 
-function prioritaetText(stufe) {
-  return { hoch: "Dauerbrenner im Examen", mittel: "Regelmäßig geprüft", selten: "Seltener, aber punktestark" }[stufe] || "";
+/* Pille unter dem Titel und Handschrift-Hinweis daneben: nicht immer dieselben
+   Worte. Die Wahl haengt am Thema, damit derselbe Beitrag beim Nachrendern
+   gleich aussieht - im Feed wechselt es von Beitrag zu Beitrag. */
+const PRIORITAET_TEXTE = {
+  hoch: ["Dauerbrenner im Examen", "Kommt fast jedes Jahr dran", "Examensklassiker", "Prüfer:innen lieben das", "Das musst du können"],
+  mittel: ["Regelmäßig geprüft", "Kommt immer wieder dran", "Fester Bestandteil im Examen", "Gehört ins Repertoire"],
+  selten: ["Seltener, aber punktestark", "Wenn es kommt, zählt es doppelt", "Unterschätzt – und punktestark", "Die Punkte, die andere liegen lassen"],
+};
+const HINWEISE = ["So geht's!", "Swipe →", "Schau rein", "Merk dir das", "Kurz erklärt", "Das musst du wissen", "Weiter geht's →", "Lies weiter"];
+const streuung = (text) => { let h = 7; for (const c of String(text)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
+const auswahl = (liste, seed) => liste[streuung(seed) % liste.length];
+function prioritaetText(stufe, seed = "") {
+  const liste = PRIORITAET_TEXTE[stufe];
+  return liste ? auswahl(liste, `${stufe}:${seed}`) : "";
 }
 
 /* Nachbearbeitung: leere Felder entfernen, Titelfolie normieren, Hashtags säubern. */
@@ -411,7 +423,9 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
   if (folien[0]) {
     folien[0].art = "titel";
     folien[0].pille = "Swipen →";
-    if (thema?.prioritaet) { folien[0].prioritaet = thema.prioritaet; folien[0].prioritaetText = prioritaetText(thema.prioritaet); }
+    const seed = thema?.id || folien[0].titel || "";
+    if (thema?.prioritaet) { folien[0].prioritaet = thema.prioritaet; folien[0].prioritaetText = prioritaetText(thema.prioritaet, seed); }
+    if (!folien[0].hinweis) folien[0].hinweis = auswahl(HINWEISE, `hinweis:${seed}`);
     if (!ICONS[folien[0].icon]) folien[0].icon = "paragraf";
   }
   if (folien.at(-1)?.art !== "cta") folien.push({ art: "cta", titel: "Schick das deiner Lerngruppe.", punkte: ["Weiterleiten an die Lerngruppe", "Speichern und vor der Klausur wiederholen", "Folgen: sortiert nach Klausurtag"] });

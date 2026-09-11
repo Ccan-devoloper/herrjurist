@@ -289,7 +289,7 @@ h1 em{color:${p.akzent2}}
 /* Links neben dem Motiv, unterhalb der Pfeilzeile: Der Kasten des Motivs
    beginnt bei x = 440 px, die Pfeilzeile endet auch bei vier Titelzeilen
    oberhalb von y = 860 px - dazwischen ist die Flaeche frei. */
-.frei-zeichen{position:absolute;left:90px;bottom:250px;width:250px;height:250px;transform:rotate(-9deg);z-index:2;filter:drop-shadow(0 16px 26px rgba(0,0,0,.18))}
+.frei-zeichen{position:absolute;left:90px;bottom:210px;width:250px;height:250px;transform:rotate(-9deg);z-index:2;filter:drop-shadow(0 16px 26px rgba(0,0,0,.18))}
 .frei-zeichen .icon{width:100%;height:100%}
 .story .frei-zeichen{left:90px;bottom:640px;width:280px;height:280px}
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.28))}

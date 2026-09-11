@@ -146,6 +146,23 @@ export const ICONS = {
   trophaee: '<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v2a3 3 0 0 0 3 3M16 6h4v2a3 3 0 0 1-3 3M12 13v4M8 21h8M9 17h6v4H9z"/>',
 };
 
+/* Themennahes Vokabular (icons.mjs): Die Schlüssel gehören zur Auswahl des
+   Autors; als Strichgrafik steht dahinter das nächstliegende alte Zeichen -
+   gebraucht wird das nur, wenn der farbige Satz fehlt. */
+const ZUSATZ = {
+  person: ["polizei", "richter", "detektiv", "arzt", "buero", "landwirt", "mechaniker", "bauarbeiter", "senior", "baby", "achselzucken"],
+  personen: ["familie", "hochzeit", "handschlag"],
+  gebaeude: ["gericht", "krankenhaus", "schule", "hotel", "laden", "bank", "baustelle", "haeuser", "ruine", "tuer", "wahlurne"],
+  lkw: ["polizeiauto", "auto", "taxi", "motorrad", "fahrrad", "bus", "zug", "sattelzug", "traktor", "schiff", "flugzeug", "krankenwagen", "tanken", "anker", "rakete"],
+  warnung: ["verbot", "stopp", "schild", "feuer", "messer", "dolch", "sarg", "blitz"],
+  muenzen: ["geldbeutel", "banknote", "kreditkarte", "quittung", "hauptbuch", "geld-weg", "einkaufswagen", "paket", "handtasche", "edelstein"],
+  diagramm: ["kurve-hoch", "kurve-runter", "medaille", "abschluss", "stoppuhr"],
+  dokument: ["ordner", "aktenschrank", "aktentasche", "klemmbrett", "schriftrolle", "umschlag", "fueller", "zeitung", "etikett", "link", "bueroklammer", "schere", "kamera", "handy", "laptop", "fernseher", "mikrofon", "megafon", "telefon", "drucker", "glocke"],
+  vertrag: ["schluessel", "schloss", "ring", "hammer", "werkzeug", "weinglas", "bier", "tablette"],
+  globus: ["hund", "baum", "setzling", "schneeflocke"],
+};
+for (const [alt, neue] of Object.entries(ZUSATZ)) for (const k of neue) if (!ICONS[k]) ICONS[k] = ICONS[alt];
+
 export function iconSvg(name, groesse = 96) {
   /* Farbig, wenn der Iconify-Satz da ist (icons.mjs); die Strichgrafik
      darunter bleibt der Rückfall für Umgebungen ohne das Paket. */
