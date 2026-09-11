@@ -208,10 +208,16 @@ export const CONFIG = {
        Inhalt liegt als Karten darüber; die Clips rotieren täglich.
        IG_REEL_HINTERGRUND=animation erzwingt die Canvas-Animationen. */
     hintergrund: env("IG_REEL_HINTERGRUND", "clip"),
-    /* Wochentage, an denen der letzte Beitrag ein Reel ist (0 = So). Standard:
-       jeden Tag. Reels tragen die Reichweite, deshalb erscheint täglich eines;
-       der zweite Beitrag des Tages ist dann statt eines Carousels ein Reel. */
+    /* Wochentage, an denen ein Reel erscheint (0 = So). Standard: jeden Tag. */
     tage: (env("IG_REEL_TAGE", "0,1,2,3,4,5,6")).split(",").map(Number),
+    /* true: Das Reel kommt zu den Beiträgen dazu – der Tag hat dann drei
+       Feed-Veröffentlichungen (zwei Karussells und ein Reel). false: Es
+       ersetzt den letzten Beitrag, der Tag hat zwei.
+
+       Hier true: Der Kanal baut Reichweite auf, da hilft Frequenz, und das
+       Tagesbudget trägt es – ein Tag mit Karussell, Reel und neun Stories lag
+       bei 0,16 $ von 0,27 $, das zweite Karussell kostet rund 0,05 $. */
+    zusaetzlich: env("IG_REEL_ZUSAETZLICH", "true") === "true",
     /* Kurz-Reels (20–35 s) an allen Tagen, sonntags ein langes Schema-Reel (bis 60 s). */
     langeTage: [0],
   },

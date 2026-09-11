@@ -118,10 +118,14 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
   const endspurt = tageVor >= 0 && tageVor <= CONFIG.plan.endspurtTage;
   const tabelle = endspurt ? CONFIG.plan.formateEndspurt : CONFIG.plan.formateJeWochentag;
   const formate = (tabelle[wt] || ["pruefungsfrage", "fehlerfalle", "schema"]).slice(0, anzahl);
-  /* Reel-Tage (Standard: täglich): der letzte Beitrag des Tages wird ein Reel
-     (Video mit Stimme). Steht vor der Lernschleife, damit diese nur Plätze
-     tauscht, die auch bleiben. */
-  if (CONFIG.reel.aktiv && CONFIG.reel.tage.includes(wt) && formate.length) formate[formate.length - 1] = "reel";
+  /* Reel-Tage (Standard: täglich). Je nach CONFIG.reel.zusaetzlich kommt das
+     Reel zu den Beiträgen dazu (drei Feed-Veröffentlichungen) oder ersetzt den
+     letzten (zwei). Steht vor der Lernschleife, damit diese nur Plätze tauscht,
+     die auch bleiben. */
+  if (CONFIG.reel.aktiv && CONFIG.reel.tage.includes(wt) && formate.length) {
+    if (CONFIG.reel.zusaetzlich) formate.push("reel");
+    else formate[formate.length - 1] = "reel";
+  }
   /* Lernschleife: ein Format, das deutlich schlechter läuft als der Schnitt, wird an
      diesem Tag durch das beste Format ersetzt (nie „aktuell“/„wochenrueckblick“/Reel). */
   const fg = (CONFIG.plan.lernen && strategie?.formatGewicht) || {};

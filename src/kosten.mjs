@@ -22,6 +22,10 @@ let reserviert = 0, reserviertFuer = "";
 export class BudgetFehler extends Error {}
 
 export function budgetSetzen(opt = {}) {
+  /* Beginn eines Laufs: Die Posten der bisherigen Läufe des Tages stecken in
+     `bisher`, nicht in dieser Liste. Ohne das Leeren zählte ein zweiter Aufruf
+     von budgetSetzen im selben Prozess die alten Posten doppelt. */
+  posten.length = 0;
   limitUsd = opt.limitUsd ?? Infinity;
   vorbelastung = opt.bisher ?? 0;
   speichern = opt.speichern ?? null;
@@ -37,10 +41,33 @@ export const reservierung = () => reserviert;
 
 export const tagesStand = () => vorbelastung + summe();
 export const tagesLimit = () => limitUsd;
-/* Kleine Reserve: ein Aufruf kostet 0,02–0,05 $, so bleibt der Deckel praktisch eingehalten. */
-const RESERVE = 0.02;
+
+/* --- Was ein Aufruf kostet, bevor er läuft ------------------------------
+   Geprüft wird vor dem Aufruf, gezählt danach. Eine pauschale Reserve von
+   0,02 $ reichte deshalb nicht: Ein Reel-Aufruf kostet das Dreifache, und
+   einzelne Tage lagen bis zu 16 % über dem Limit.
+
+   Der Deckel wird jetzt vorab mit dem belastet, was ein Aufruf dieses Zwecks
+   erfahrungsgemäß kostet. Die Werte stammen aus den Läufen der letzten Woche;
+   wird ein Aufruf teurer als gedacht, rechnet der Rest des Laufs mit dem
+   höheren Wert weiter. */
+const ERWARTET = {
+  "story-faktencheck": 0.01,
+  "reel-faktencheck": 0.01,
+  faktencheck: 0.01,
+  recherche: 0.05,
+  stories: 0.05,
+  beitrag: 0.05,
+  autor: 0.05,
+  reel: 0.06,
+};
+const STANDARD = 0.05;
+/* Längste Übereinstimmung gewinnt: „reel-faktencheck“ enthält „reel“. */
+const schluessel = (zweck) => Object.keys(ERWARTET).sort((a, b) => b.length - a.length).find((n) => String(zweck).toLowerCase().includes(n)) || null;
+const erwartetFuer = (zweck) => { const k = schluessel(zweck); return k ? ERWARTET[k] : STANDARD; };
+
 const darfReserve = (zweck) => Boolean(reserviertFuer) && String(zweck).toLowerCase().includes(reserviertFuer);
-export const budgetFrei = (zweck = "") => tagesStand() + RESERVE + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
+export const budgetFrei = (zweck = "") => tagesStand() + erwartetFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
 
 export function budgetPruefen(zweck = "Claude-Aufruf") {
   if (budgetFrei(zweck)) return;
@@ -53,6 +80,9 @@ export function erfassen(modell, usage, zweck = "") {
   const p = PREISE[modell] || PREISE["claude-opus-5"];
   const usd = ((usage.input_tokens || 0) * p.ein + (usage.output_tokens || 0) * p.aus + (usage.cache_read_input_tokens || 0) * p.cacheLesen + (usage.cache_creation_input_tokens || 0) * p.cacheSchreiben) / 1e6;
   posten.push({ modell, zweck, usd, ein: usage.input_tokens || 0, aus: usage.output_tokens || 0, cache: usage.cache_read_input_tokens || 0 });
+  /* Teurer als erwartet? Dann rechnet der Rest des Laufs mit dem höheren Wert. */
+  const zweckSchluessel = schluessel(zweck);
+  if (zweckSchluessel && usd > ERWARTET[zweckSchluessel]) ERWARTET[zweckSchluessel] = usd;
   const k = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n));
   console.log(`  $ ${usd.toFixed(4)} ${zweck || modell} · ${k(usage.input_tokens || 0)} ein / ${k(usage.output_tokens || 0)} aus / ${k(usage.cache_read_input_tokens || 0)} Cache`);
   if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
