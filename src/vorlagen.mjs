@@ -6,6 +6,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { iconSvg, ICONS } from "./stile.mjs";
+import { farbIcon } from "./icons.mjs";
 import { normKurz } from "./normen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
@@ -158,6 +159,9 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .stil-campus .story{background:radial-gradient(1300px 1100px at 30% 10%,#243070 0%,#141a3a 55%,#0e1230 100%)}
 .stil-klausurbogen .story{background:repeating-linear-gradient(0deg,transparent 0 63px,rgba(18,35,63,.08) 63px 64px),var(--grund)}
 .story .kopf{font-size:30px}
+.story .ueberzeile{display:flex;align-items:center;gap:20px}
+.story .ueberzeile .uz-icon{display:inline-flex;width:64px;height:64px;border-radius:18px;background:rgba(255,255,255,.85);align-items:center;justify-content:center;flex:none}
+.story .ueberzeile .uz-icon .icon{width:44px;height:44px}
 .story .ueberzeile{margin-top:70px;font-size:34px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-weich);font-weight:700}
 .story .etikett{font-size:30px}
 .story h1{font-size:120px;margin-top:34px}
@@ -173,6 +177,14 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .stil-klausurbogen .story .zahl{color:var(--rot)}
 .story .zahl-unter{font-size:56px;line-height:1.2;margin-top:10px;font-family:var(--titel);text-wrap:balance}
 .story .merke{font-size:96px}
+/* Motiv in Story und Reel-Cover: unten rechts, laeuft aus der Kachel; der
+   Text darueber bleibt frei, die Fusszeile liegt ueber dem Motiv. */
+.story .frei{width:720px;height:820px;right:0;bottom:0}
+.story .foto{left:84px;right:84px;bottom:150px;height:600px}
+.story:has(.frei) .fuss,.story:has(.foto) .fuss{z-index:3}
+.story .bildquelle{position:absolute;left:84px;bottom:96px;font-size:22px;color:var(--text-weich);opacity:.85;z-index:3}
+.story:has(.frei) .hinweis,.story:has(.frei) .text{max-width:640px}
+.story.cover:has(.frei) .buehne{display:none}
 .story .pille{font-size:36px;padding:20px 40px;margin-top:56px}
 .story .fuss{font-size:32px}
 .story .hinweis{margin-top:60px;font-size:34px;color:var(--text-weich);line-height:1.4}
@@ -217,8 +229,15 @@ export function buntCss(ctx) {
   const p = stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3];
   const pfeil = `url("data:image/svg+xml,${PFEIL.replace("%23111", encodeURIComponent(p.dunkel))}")`;
   return `
-:root{--grund:${p.grund};--text:${p.dunkel};--text-weich:${p.dunkel};--akzent:${p.dunkel};--pille:${p.dunkel};--pille-text:#fff;--flaeche:rgba(255,255,255,.92);--linie:rgba(255,255,255,.45);--hell:${p.hell};--lila:${p.lila};--akzent2:${p.akzent2}}
+:root{--grund:${p.grund};--text:${p.dunkel};--text-weich:${p.weich || p.dunkel};--akzent:${p.dunkel};--pille:${p.dunkel};--pille-text:#fff;--flaeche:rgba(255,255,255,.92);--linie:rgba(255,255,255,.45);--hell:${p.hell};--lila:${p.lila};--akzent2:${p.akzent2}}
 .folie,.story,.reel{background:${p.grund};color:${p.dunkel}}
+/* Auf weißen Flächen bleibt Nebentext dunkel - die helle Weichfarbe gilt
+   nur direkt auf der Grundfarbe. */
+.text,ul.punkte li,ol.schritte li,.spalte,.rechnung,.cta .liste div,.story .karte,.story .optionen div,.story .norm,.merke,.reel .merkeblock .norm{--text-weich:${p.dunkel}}
+/* Sticker-Rand um freigestellte Motive: eine Kontur in der hellen Tagesfarbe,
+   die das Motiv von der Fläche abhebt und ausgefranste Kanten des Freistellers
+   verdeckt. Acht harte Schlagschatten ergeben eine gleichmäßige Kontur. */
+.frei img{filter:${["10px 0","-10px 0","0 10px","0 -10px","7px 7px","-7px -7px","7px -7px","-7px 7px","9px 4px","-9px -4px","4px -9px","-4px 9px"].map((v) => `drop-shadow(${v} 0 ${p.hell})`).join(" ")} drop-shadow(0 26px 40px rgba(0,0,0,.28))}
 /* Ecke oben links: dunkles Band mit dem Fach; oben rechts der Zähler im weißen Kreis */
 .kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}
 .kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1}
@@ -254,6 +273,8 @@ h1 em{color:${p.akzent2}}
 /* Merksatz und CTA zentrieren sich sonst selbst und loesen sich damit von
    ihrer Ueberschrift - das Zentrieren macht jetzt die Folie fuer alle. */
 .folie:not(.art-titel) > .merke{margin-top:36px;margin-bottom:0}
+.merke-icon{width:96px;height:96px;border-radius:26px;background:rgba(255,255,255,.85);margin-bottom:24px;display:flex;align-items:center;justify-content:center}
+.folie:not(.art-titel) > .merke-icon + h2{margin-top:0}
 .folie:not(.art-titel) > .cta{margin-top:0;margin-bottom:0}
 .art-titel:has(.foto)::after,.art-titel:has(.frei)::after{display:none}
 /* Freigestelltes Motiv: unten rechts, laeuft ueber den Rand hinaus. Der
@@ -400,6 +421,11 @@ function fotoBuehne(folie) {
 }
 
 function bildOderIllu(ctx, folie) {
+  /* Story mit Motiv (Teaser übernimmt das Bild des Beitrags, Begriff und Tipp
+     bekommen ein eigenes): freigestellt unten rechts, wie auf der Titelfolie.
+     Pexels verlangt einen sichtbaren Hinweis; Stories haben keine Caption,
+     also steht er klein auf der Kachel. */
+  if (folie.bild) return `${fotoBuehne(folie)}${folie.bildQuelle ? `<div class="bildquelle">${esc(folie.bildQuelle)}</div>` : ""}`;
   if (folie.icon) return `<div class="geist">§</div><div class="illu">${iconSvg(folie.icon)}</div>`;
   return `<div class="geist">§</div>`;
 }
@@ -462,6 +488,7 @@ const FOLIEN = {
     ${fuss(ctx)}`,
   merke: (f, ctx, i, n) => `
     ${kopf(ctx, `${i}/${n}`)}
+    ${farbIcon("merke", 64) ? `<div class="merke-icon">${farbIcon("merke", 64)}</div>` : ""}
     ${f.titel ? `<h2>${markierenTitel(f.titel)}</h2>` : ""}
     <p class="merke">${markieren(f.text)}</p>
     ${fuss(ctx)}`,
@@ -484,10 +511,17 @@ export function folieHtml(folie, ctx, index, anzahl) {
 
 const sk = (ctx) => kopf(ctx, "");
 
+/* Überzeile einer Story mit dem farbigen Zeichen ihrer Art (Merksatz → Glühbirne,
+   Fehler → Warnkreis). Ohne Iconify-Satz steht die Zeile ohne Zeichen. */
+function ueberzeile(art, text) {
+  const zeichen = farbIcon(art, 52);
+  return `<div class="ueberzeile">${zeichen ? `<span class="uz-icon">${zeichen}</span>` : ""}<span>${esc(text)}</span></div>`;
+}
+
 const STORIES = {
   teaser: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Neuer Beitrag")}</div>
+    ${ueberzeile("teilen", s.ueberzeile || "Neuer Beitrag")}
     <h1 class="${titelKlasse(s.titel)}">${markierenTitel(s.titel)}</h1>
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
     <div><span class="pille">${esc(s.pille || "Jetzt im Feed")}</span></div>
@@ -496,21 +530,21 @@ const STORIES = {
     ${fuss(ctx)}`,
   frage: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Prüfungsfrage")}</div>
+    ${ueberzeile("frage", s.ueberzeile || "Prüfungsfrage")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.optionen?.length ? `<div class="optionen">${s.optionen.map((o, k) => `<div><b>${"ABCD"[k]}</b><span>${markieren(o)}</span></div>`).join("")}</div>` : ""}
     <div class="pfeil">Antwort in der nächsten Story →</div>
     ${fuss(ctx)}`,
   antwort: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Richtig ist")}</div>
+    ${ueberzeile("haken", s.ueberzeile || "Richtig ist")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.optionen?.length ? `<div class="optionen">${s.optionen.map((o, k) => `<div class="${k === s.richtig ? "richtig" : ""}"><b>${"ABCD"[k]}</b><span>${markieren(o)}</span></div>`).join("")}</div>` : ""}
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
     ${fuss(ctx)}`,
   norm: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Norm des Tages")}</div>
+    ${ueberzeile("norm", s.ueberzeile || "Norm des Tages")}
     <div class="norm">${esc(s.norm)}</div>
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
@@ -518,13 +552,13 @@ const STORIES = {
     ${fuss(ctx)}`,
   merksatz: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Merksatz")}</div>
+    ${ueberzeile("merke", s.ueberzeile || "Merksatz")}
     <p class="merke">${markieren(s.text)}</p>
     ${s.titel ? `<div class="hinweis">${markieren(s.titel)}</div>` : ""}
     ${fuss(ctx)}`,
   countdown: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Noch")}</div>
+    ${ueberzeile("countdown", s.ueberzeile || "Noch")}
     <div class="zahl">${esc(s.zahl)}</div>
     <div class="zahl-unter">${markierenTitel(s.titel)}</div>
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
@@ -532,13 +566,13 @@ const STORIES = {
     ${fuss(ctx)}`,
   formel: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Rechenweg")}</div>
+    ${ueberzeile("formel", s.ueberzeile || "Rechenweg")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     <div class="karte"><div class="t" style="font-family:var(--mono)">${esc(s.formel)}</div>${s.text ? `<div class="u">${markieren(s.text)}</div>` : ""}</div>
     ${fuss(ctx)}`,
   begriff: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Begriff des Tages")}</div>
+    ${ueberzeile("begriff", s.ueberzeile || "Begriff des Tages")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.norm ? `<div class="norm" style="font-size:44px;margin-top:30px">${esc(s.norm)}</div>` : ""}
     <div class="text">${markieren(s.text)}</div>
@@ -546,21 +580,21 @@ const STORIES = {
     ${fuss(ctx)}`,
   zahl: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Zahl des Tages")}</div>
+    ${ueberzeile("zahl", s.ueberzeile || "Zahl des Tages")}
     <div class="zahl" style="font-size:300px">${esc(s.zahl)}</div>
     <div class="zahl-unter">${markierenTitel(s.titel)}</div>
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
     ${fuss(ctx)}`,
   tipp: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Klausurtipp")}</div>
+    ${ueberzeile("tipp", s.ueberzeile || "Klausurtipp")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     <div class="text">${markieren(s.text)}</div>
     ${bildOderIllu(ctx, s)}
     ${fuss(ctx)}`,
   fehler: (s, ctx) => `
     ${sk(ctx)}
-    <div class="ueberzeile">${esc(s.ueberzeile || "Typischer Fehler")}</div>
+    ${ueberzeile("fehler", s.ueberzeile || "Typischer Fehler")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     <div class="karte"><div class="t" style="color:var(--rot)">Falsch</div><div class="u">${markieren(s.falsch)}</div></div>
     <div class="karte"><div class="t" style="color:var(--ok)">Richtig</div><div class="u">${markieren(s.richtigText || s.text)}</div></div>
@@ -586,7 +620,7 @@ export function coverHtml(daten, ctx) {
     <div class="ueberzeile">${esc(daten.ueberzeile || "Reel")}</div>
     <h1 class="${titelKlasse(daten.titel)}">${markierenTitel(daten.titel)}</h1>
     ${daten.dauerText ? `<div class="dauer">${esc(daten.dauerText)}</div>` : ""}
-    <div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>
+    ${daten.bild ? fotoBuehne(daten) : `<div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>`}
     ${fuss(ctx)}`;
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>${css(ctx.stil, "story")}${klausurCss(ctx)}${buntCss(ctx)}</style></head>
 <body class="stil-${ctx.stil.id} familie-${ctx.stil.familie || ctx.stil.id}"><div class="story cover">${inhalt}</div></body></html>`;

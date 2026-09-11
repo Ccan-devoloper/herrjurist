@@ -1,3 +1,4 @@
+import { farbIcon } from "./icons.mjs";
 /* ==========================================================================
    Drei Stilrichtungen. Der aktive Stil steht in config.mjs (marke.stil) bzw.
    in der Umgebungsvariablen IG_STIL. Jeder Stil liefert CSS-Variablen; die
@@ -55,7 +56,10 @@ export const STILE = {
     },
     /* Palette je Klausurtag: Grund, dunkle Kontrastfarbe, helle und lila Pille, Zweitakzent. */
     tagFarben: {
-      1: { grund: "#2d5be3", dunkel: "#0c1b4d", hell: "#e3ebff", lila: "#cdbcff", akzent2: "#ffd166" },
+      /* weich: Farbe für Nebentext direkt auf der Grundfarbe. Auf Orange und
+         Grün reicht das Dunkel; auf dem Blau hat es nur 2,9:1 Kontrast, dort
+         steht Nebentext hell. Weiße Karten behalten ihr Dunkel (vorlagen.mjs). */
+      1: { grund: "#2d5be3", dunkel: "#0c1b4d", hell: "#e3ebff", lila: "#cdbcff", akzent2: "#ffd166", weich: "#dbe4ff" },
       2: { grund: "#ff7a45", dunkel: "#3a1708", hell: "#fff0e6", lila: "#ffd9c2", akzent2: "#2d5be3" },
       3: { grund: "#23d98b", dunkel: "#0b4a33", hell: "#e9fff4", lila: "#d9c8ff", akzent2: "#ff7a45" },
     },
@@ -143,6 +147,10 @@ export const ICONS = {
 };
 
 export function iconSvg(name, groesse = 96) {
+  /* Farbig, wenn der Iconify-Satz da ist (icons.mjs); die Strichgrafik
+     darunter bleibt der Rückfall für Umgebungen ohne das Paket. */
+  const farbig = farbIcon(name, groesse);
+  if (farbig) return farbig;
   const pfad = ICONS[name] || ICONS.paragraf;
   return `<svg class="icon" width="${groesse}" height="${groesse}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" font-family="var(--titel)">${pfad}</svg>`;
 }

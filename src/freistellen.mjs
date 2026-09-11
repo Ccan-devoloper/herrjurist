@@ -79,10 +79,14 @@ export function zuschneiden(pngPfad) {
  * Stellt ein Bild frei.
  * @returns {{pfad:string, deckung:number}|null} null = nicht brauchbar
  */
-export function freistellen(quelle, { min = 0.06, max = 0.82 } = {}) {
+export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.env.IG_BILDER_MODELL || "isnet-general-use" } = {}) {
   if (!rembgVorhanden()) return null;
   const ziel = path.join(os.tmpdir(), `frei-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
-  const r = spawnSync("rembg", ["i", quelle, ziel], { encoding: "utf8", timeout: 120000 });
+  /* Modell ausdrücklich wählen: rembg 2.0.8x lädt sonst „bria-rmbg“, ein
+     Gigabyte, und schneidet mit weichem Saum. isnet-general-use (180 MB)
+     liefert im Vergleich die sauberste Kante - ohne Alpha-Matting, das auf
+     farbigem Grund einen hellen Schein um das Motiv legt. */
+  const r = spawnSync("rembg", ["i", "-m", modell, quelle, ziel], { encoding: "utf8", timeout: 180000 });
   if (r.status !== 0 || !fs.existsSync(ziel)) {
     console.warn(`  ! Freistellen fehlgeschlagen: ${(r.stderr || "").slice(0, 160)}`);
     return null;
@@ -95,7 +99,33 @@ export function freistellen(quelle, { min = 0.06, max = 0.82 } = {}) {
     fs.rmSync(ziel, { force: true });
     return null;
   }
+  /* Ein Motiv, das oben oder seitlich vom Fotorand abgeschnitten ist, wirkt
+     auf der Kachel wie ein Fehler: Der Richterhammer endet in der Luft, der
+     Kopf fehlt. Unten darf es anschneiden - da läuft es ohnehin aus der
+     Kachel. */
+  const rand = randkontakt(ziel);
+  if (rand && (rand.oben > 0.04 || rand.links > 0.12 || rand.rechts > 0.12)) {
+    console.log(`  → freigestelltes Motiv verworfen (vom Fotorand angeschnitten: oben ${(rand.oben * 100).toFixed(0)} %, links ${(rand.links * 100).toFixed(0)} %, rechts ${(rand.rechts * 100).toFixed(0)} %) – Titelfolie bleibt beim Icon.`);
+    fs.rmSync(ziel, { force: true });
+    return null;
+  }
   /* Deckung wird am ungeschnittenen Bild gemessen (dort sagt sie etwas über
      die Qualität der Freistellung), zugeschnitten wird danach. */
   return { pfad: zuschneiden(ziel), deckung: d };
+}
+
+/**
+ * Anteil der deckenden Pixel in der äußersten Reihe je Bildrand (0–1).
+ * Berührt das Motiv den oberen oder einen seitlichen Rand, ist es im Foto
+ * angeschnitten.
+ */
+export function randkontakt(pngPfad) {
+  const N = 96;
+  const r = spawnSync(ffmpegPfad(), ["-hide_banner", "-loglevel", "error", "-i", pngPfad,
+    "-vf", `alphaextract,scale=${N}:${N}`, "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 22 });
+  if (r.status !== 0 || r.stdout?.length !== N * N) return null;
+  const deckend = (x, y) => r.stdout[y * N + x] >= 128;
+  let oben = 0, unten = 0, links = 0, rechts = 0;
+  for (let i = 0; i < N; i++) { if (deckend(i, 0)) oben++; if (deckend(i, N - 1)) unten++; if (deckend(0, i)) links++; if (deckend(N - 1, i)) rechts++; }
+  return { oben: oben / N, unten: unten / N, links: links / N, rechts: rechts / N };
 }

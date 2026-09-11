@@ -23,12 +23,17 @@ const SCHEMA = {
         type: "object",
         additionalProperties: false,
         properties: {
-          schwere: { type: "string", enum: ["fehler", "unsicher", "hinweis"] },
+          schwere: { type: "string", enum: ["fehler", "unsicher", "hinweis", "sprache"] },
           stelle: { type: "string" },
           problem: { type: "string" },
           korrektur: { type: "string" },
+          /* Nur bei „sprache“: die fehlerhafte Wortfolge genau so, wie sie im
+             Text steht, und die berichtigte Fassung. Damit lässt sich der
+             Fehler ohne Neufassung im Text ersetzen. */
+          original: { type: "string" },
+          ersatz: { type: "string" },
         },
-        required: ["schwere", "stelle", "problem", "korrektur"],
+        required: ["schwere", "stelle", "problem", "korrektur", "original", "ersatz"],
       },
     },
   },
@@ -46,6 +51,8 @@ const SYSTEM = `Du bist Prüfer:in für juristische Fachtexte (erstes und zweite
 - Landesrecht: Polizei-, Kommunal- und Bauordnungsrecht unterscheiden sich je Bundesland. Wird ein Landesparagraf als bundesweit gültig ausgegeben, ist das ein Fehler; fehlt der Hinweis auf die Landesabhängigkeit, ist es ein Hinweis.
 - Innere Logik: Der Text muss aus sich heraus verständlich sein. Wird auf einen Fall, eine Person oder eine Zahl Bezug genommen, die nirgends eingeführt wird, ist das ein „fehler“ – mit dem Hinweis, welche Angaben fehlen.
 
+Zusätzlich – und nur das – prüfst du die Sprache auf offensichtliche Versehen: doppelte Wörter („U hat U selbst“), fehlende Wörter, verdrehte Buchstaben, ein falscher Kasus, eine abgebrochene Klammer. Melde solche Versehen als „sprache“ und gib in „original“ die fehlerhafte Wortfolge exakt so an, wie sie im Text steht (mindestens drei Wörter, damit die Stelle eindeutig ist), in „ersatz“ die berichtigte Fassung mit denselben Wörtern drumherum. Stilfragen, Umformulierungen und Kürzungen sind keine Sprachversehen – nur, was ein Korrektor mit dem Rotstift anstreichen würde. Bei allen anderen Befunden bleiben „original“ und „ersatz“ leer.
+
 Melde als „fehler“ nur, was eindeutig falsch ist und in der Klausur Punkte kosten würde. Als „unsicher“ alles, was du nicht sicher beurteilen kannst – gerade bei Streitständen und Landesrecht lieber „unsicher“ als eine falsche Korrektur. Als „hinweis“ Unschärfen, die vertretbar sind. Keine Stil- oder Formatkritik, und keine Kritik daran, dass eine vertretbare Ansicht vertreten wird. Wenn alles korrekt ist, gib eine leere Liste zurück.`;
 
 export function textAus(beitrag) {
@@ -61,10 +68,31 @@ export function textAus(beitrag) {
 }
 
 /**
- * @returns {{ok:boolean, fehler:string[], hinweise:string[]}}
+ * Wendet Sprachkorrekturen direkt auf die Texte an: jede Zeichenkette im
+ * Objekt, in der „original“ wörtlich vorkommt, bekommt „ersatz“. Kein neuer
+ * Aufruf, keine Neufassung – ein doppeltes Wort kostet so nichts.
+ * @returns {number} Zahl der ersetzten Stellen
+ */
+export function korrekturenAnwenden(obj, korrekturen = []) {
+  let n = 0;
+  const gehe = (o) => {
+    if (Array.isArray(o)) { o.forEach((v, i) => { if (typeof v === "string") { const w = ersetze(v); if (w !== v) { o[i] = w; } } else gehe(v); }); return; }
+    if (o && typeof o === "object") for (const k of Object.keys(o)) { const v = o[k]; if (typeof v === "string") { const w = ersetze(v); if (w !== v) o[k] = w; } else gehe(v); }
+  };
+  const ersetze = (text) => {
+    let t = text;
+    for (const k of korrekturen) { if (k.original && t.includes(k.original)) { t = t.split(k.original).join(k.ersatz); n++; } }
+    return t;
+  };
+  gehe(obj);
+  return n;
+}
+
+/**
+ * @returns {{ok:boolean, fehler:string[], hinweise:string[], korrekturen:{original:string, ersatz:string}[]}}
  */
 export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "" } = {}) {
-  if (!CONFIG.faktencheck.aktiv) return { ok: true, fehler: [], hinweise: [] };
+  if (!CONFIG.faktencheck.aktiv) return { ok: true, fehler: [], hinweise: [], korrekturen: [] };
   budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck", "story-faktencheck": "Story-Faktencheck" }[zweck] || "Faktencheck");
   const modell = CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben;
   const haiku = /haiku/i.test(modell);
@@ -88,15 +116,21 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
     response = await client().messages.create({ ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHEMA)}` }] });
   }
   erfassen(modell, response.usage, zweck);
-  if (response.stop_reason === "refusal") return { ok: true, fehler: [], hinweise: [] };
+  if (response.stop_reason === "refusal") return { ok: true, fehler: [], hinweise: [], korrekturen: [] };
   const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
   let daten;
-  try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); } catch { return { ok: true, fehler: [], hinweise: [] }; }
+  try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); } catch { return { ok: true, fehler: [], hinweise: [], korrekturen: [] }; }
   /* Weiche Beanstandungen („irreführend“, „präzisieren“, „missverständlich“) sind
      keine Fehler, die eine teure Neufassung rechtfertigen – sie werden zu Hinweisen. */
   const WEICH = /irreführend|präzisier|missverständlich|ungenau|unscharf|unschärfe|ausdrucksweise|formulierung|konzeptionell|didaktisch|sollte (?:ergänzt|erwähnt|klargestellt)|könnte|empfehl|verkürzt|vereinfacht|mathematisch (?:richtig|korrekt)|ist (?:zwar |dann )?(?:sachlich )?korrekt/i;
   const ist = (b) => b.schwere === "fehler" && !WEICH.test(`${b.problem} ${b.korrektur}`);
+  /* Sprachversehen mit brauchbarer Fundstelle werden ersetzt, nicht neu
+     geschrieben. Ohne verwertbares Original (zu kurz, oder Original gleich
+     Ersatz) bleibt es ein Hinweis. */
+  const sprache = (b) => b.schwere === "sprache";
+  const korrekturen = daten.befunde.filter((b) => sprache(b) && b.original && b.ersatz && b.original !== b.ersatz && b.original.trim().split(/\s+/).length >= 2).map((b) => ({ original: b.original, ersatz: b.ersatz }));
   const fehler = daten.befunde.filter(ist).map((b) => `${b.stelle}: ${b.problem} → ${b.korrektur}`);
-  const hinweise = daten.befunde.filter((b) => !ist(b)).map((b) => `${b.stelle}: ${b.problem}`);
-  return { ok: fehler.length === 0, fehler, hinweise };
+  const hinweise = daten.befunde.filter((b) => !ist(b) && !sprache(b)).map((b) => `${b.stelle}: ${b.problem}`);
+  if (korrekturen.length) console.log(`  Sprachkorrekturen: ${korrekturen.map((k) => `„${k.original}“ → „${k.ersatz}“`).join(" · ")}`);
+  return { ok: fehler.length === 0, fehler, hinweise, korrekturen };
 }
