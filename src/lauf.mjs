@@ -17,6 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
+import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken } from "./planer.mjs";
@@ -72,7 +73,7 @@ function bildnachweis(beitrag) {
 async function motivBesorgen(ziel, was = "Motiv") {
   if (!ziel || ziel.bild || !ziel.bildSzene) return;
   try {
-    const treffer = await titelbild(ziel);
+    const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil) });
     if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; }
   } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
 }
@@ -82,7 +83,7 @@ async function titelfolieBebildern(beitrag) {
   const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
   if (!titelfolie || titelfolie.bild) return;
   try {
-    const treffer = await titelbild(beitrag);
+    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil) });
     if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; }
   } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
 }

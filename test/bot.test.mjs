@@ -1072,3 +1072,47 @@ test("Token-Tresor: ein neu gesetztes Secret gewinnt gegen den gespeicherten Tok
     fs.rmSync(datei, { force: true });
   }
 });
+
+test("Bilder: unscharfe Fotos und Maskenfotos fliegen raus, Passung sortiert", async () => {
+  const { schaerfe, SCHAERFE_MIN } = await import("../src/freistellen.mjs");
+  const { passung } = await import("../src/bilder.mjs");
+  const { execFileSync } = await import("node:child_process");
+  const { ffmpegPfad } = await import("../src/stimme.mjs");
+  const os = await import("node:os");
+  const path = (await import("node:path")).default;
+  const scharf = path.join(os.tmpdir(), `scharf-${Date.now()}.png`), weich = path.join(os.tmpdir(), `weich-${Date.now()}.png`);
+  /* Schachbrett = viele Kanten; dasselbe stark weichgezeichnet = fast keine. */
+  execFileSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=s=320x320", "-frames:v", "1", scharf]);
+  execFileSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=s=320x320", "-vf", "gblur=sigma=12", "-frames:v", "1", weich]);
+  const a = schaerfe(scharf), b = schaerfe(weich);
+  assert.ok(a > SCHAERFE_MIN, `scharf: ${a}`);
+  assert.ok(b < SCHAERFE_MIN, `weich: ${b}`);
+  fs.rmSync(scharf, { force: true }); fs.rmSync(weich, { force: true });
+  /* Passung: Wörter der Szene in der Bildbeschreibung. */
+  assert.ok(passung({ alt: "Woman reading a letter at the kitchen table" }, "woman reading letter at kitchen table") > 0.8);
+  assert.equal(passung({ alt: "Portrait of a smiling man" }, "woman reading letter at kitchen table"), 0);
+});
+
+test("Sticker-Rand liegt in der PNG: Bild wächst um die Randbreite, Saum trägt die Farbe", async () => {
+  const { bestickern } = await import("../src/freistellen.mjs");
+  const { stickerFarbe } = await import("../src/stile.mjs");
+  const { execFileSync } = await import("node:child_process");
+  const { ffmpegPfad } = await import("../src/stimme.mjs");
+  const os = await import("node:os");
+  const path = (await import("node:path")).default;
+  const quelle = path.join(os.tmpdir(), `sticker-${Date.now()}.png`);
+  /* Weißes Quadrat, ringsum durchsichtig. */
+  execFileSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=white:s=60x60", "-vf", "format=rgba,pad=100:100:20:20:color=black@0.0", "-frames:v", "1", quelle]);
+  const ziel = bestickern(quelle, "#ffd166", 12);
+  assert.notEqual(ziel, quelle);
+  assert.ok(fs.existsSync(ziel));
+  const { spawnSync } = await import("node:child_process");
+  const masse = String(spawnSync(ffmpegPfad(), ["-hide_banner", "-i", ziel, "-f", "null", "-"], { encoding: "utf8" }).stderr || "");
+  assert.ok(/124x124/.test(masse), `Maße: ${masse.match(/\d+x\d+/)?.[0]}`);
+  /* Pixel im Saum (6 px außerhalb des Quadrats) ist gelb und deckend. */
+  const raw = execFileSync(ffmpegPfad(), ["-loglevel", "error", "-i", ziel, "-vf", "crop=1:1:26:62", "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "rgba", "-"]);
+  assert.deepEqual([...raw], [255, 209, 102, 255], `Saumpixel: ${[...raw].join(",")}`);
+  fs.rmSync(ziel, { force: true });
+  assert.equal(stickerFarbe(1, "bunt"), "#ffd166");
+  assert.equal(stickerFarbe(2, "bunt"), "#2d5be3");
+});

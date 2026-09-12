@@ -37,6 +37,25 @@ export function deckung(pngPfad) {
 }
 
 /**
+ * Schärfe eines Fotos: Varianz des Laplace-Operators auf einem 256er
+ * Graustufenraster. Scharfe Fotos liegen bei 800 und mehr, ein weichgezeichnetes
+ * bei unter 20. Ein unscharfes Foto ergibt freigestellt einen Klecks - der
+ * Freisteller findet keine Kante, und die Kachel zeigt dann etwas, das aussieht
+ * wie ein Fehler.
+ */
+export function schaerfe(pfad, N = 256) {
+  const r = spawnSync(ffmpegPfad(), ["-hide_banner", "-loglevel", "error", "-i", pfad, "-vf", `scale=${N}:${N}:flags=area,format=gray`, "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 24 });
+  if (r.status !== 0 || r.stdout?.length !== N * N) return null;
+  const p = r.stdout; let s = 0, s2 = 0, n = 0;
+  for (let y = 1; y < N - 1; y++) for (let x = 1; x < N - 1; x++) {
+    const i = y * N + x; const l = 4 * p[i] - p[i - 1] - p[i + 1] - p[i - N] - p[i + N];
+    s += l; s2 += l * l; n++;
+  }
+  const m = s / n; return s2 / n - m * m;
+}
+export const SCHAERFE_MIN = 120;
+
+/**
  * Schneidet die durchsichtigen Ränder weg, sodass das Motiv das Bild ausfüllt.
  * Ohne diesen Schritt bleibt das freigestellte Motiv so klein wie im
  * Originalfoto – bei einem stehenden Menschen in einer Querformat-Aufnahme
@@ -76,11 +95,36 @@ export function zuschneiden(pngPfad) {
 }
 
 /**
+ * Sticker-Rand: weitet die Deckung des Motivs um `dicke` Pixel auf, färbt
+ * den Saum und legt das Motiv darüber. Das passiert hier in ffmpeg und
+ * nicht im Stylesheet: Zwölf verkettete drop-shadows brachten Chromium beim
+ * Rendern zum Stehen. Der Rand liegt so auch in der gespeicherten PNG.
+ * @returns {string} Pfad der neuen Datei (oder der alte bei Fehlern)
+ */
+export function bestickern(pngPfad, farbe, dicke = 12) {
+  const m = String(farbe || "").match(/^#?([0-9a-f]{6})$/i);
+  if (!m) return pngPfad;
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(m[1].slice(i, i + 2), 16));
+  const ziel = pngPfad.replace(/\.png$/, "-sticker.png");
+  const weiten = Array(dicke).fill("dilation").join(",");
+  const filter = `[0:v]format=rgba,pad=iw+${2 * dicke}:ih+${2 * dicke}:${dicke}:${dicke}:color=black@0,split=2[o][o2];[o2]alphaextract,${weiten},format=rgba,geq=r=${r}:g=${g}:b=${b}:a='r(X,Y)'[rand];[rand][o]overlay=0:0:format=auto`;
+  const s = spawnSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-i", pngPfad, "-filter_complex", filter, "-frames:v", "1", "-update", "1", ziel], { encoding: "utf8", timeout: 60000 });
+  if (s.status !== 0 || !fs.existsSync(ziel)) { console.warn(`  ! Sticker-Rand nicht gezeichnet: ${(s.stderr || "").slice(0, 120)}`); return pngPfad; }
+  fs.rmSync(pngPfad, { force: true });
+  return ziel;
+}
+
+/**
  * Stellt ein Bild frei.
  * @returns {{pfad:string, deckung:number}|null} null = nicht brauchbar
  */
-export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.env.IG_BILDER_MODELL || "isnet-general-use" } = {}) {
+export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.env.IG_BILDER_MODELL || "isnet-general-use", randFarbe = null } = {}) {
   if (!rembgVorhanden()) return null;
+  const sch = schaerfe(quelle);
+  if (sch != null && sch < SCHAERFE_MIN) {
+    console.log(`  → Foto verworfen (unscharf, Schärfe ${Math.round(sch)}) – nächster Kandidat.`);
+    return null;
+  }
   const ziel = path.join(os.tmpdir(), `frei-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
   /* Modell ausdrücklich wählen: rembg 2.0.8x lädt sonst „bria-rmbg“, ein
      Gigabyte, und schneidet mit weichem Saum. isnet-general-use (180 MB)
@@ -104,14 +148,15 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
      Kopf fehlt. Unten darf es anschneiden - da läuft es ohnehin aus der
      Kachel. */
   const rand = randkontakt(ziel);
-  if (rand && (rand.oben > 0.04 || rand.links > 0.12 || rand.rechts > 0.12)) {
+  if (rand && (rand.oben > 0.02 || rand.links > 0.06 || rand.rechts > 0.06)) {
     console.log(`  → freigestelltes Motiv verworfen (vom Fotorand angeschnitten: oben ${(rand.oben * 100).toFixed(0)} %, links ${(rand.links * 100).toFixed(0)} %, rechts ${(rand.rechts * 100).toFixed(0)} %) – Titelfolie bleibt beim Icon.`);
     fs.rmSync(ziel, { force: true });
     return null;
   }
   /* Deckung wird am ungeschnittenen Bild gemessen (dort sagt sie etwas über
      die Qualität der Freistellung), zugeschnitten wird danach. */
-  return { pfad: zuschneiden(ziel), deckung: d };
+  const geschnitten = zuschneiden(ziel);
+  return { pfad: randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten, deckung: d };
 }
 
 /**

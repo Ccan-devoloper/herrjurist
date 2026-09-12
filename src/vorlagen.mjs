@@ -234,10 +234,6 @@ export function buntCss(ctx) {
 /* Auf weißen Flächen bleibt Nebentext dunkel - die helle Weichfarbe gilt
    nur direkt auf der Grundfarbe. */
 .text,ul.punkte li,ol.schritte li,.spalte,.rechnung,.cta .liste div,.story .karte,.story .optionen div,.story .norm,.merke,.reel .merkeblock .norm{--text-weich:${p.dunkel}}
-/* Sticker-Rand um freigestellte Motive: eine Kontur in der hellen Tagesfarbe,
-   die das Motiv von der Fläche abhebt und ausgefranste Kanten des Freistellers
-   verdeckt. Acht harte Schlagschatten ergeben eine gleichmäßige Kontur. */
-.frei img{filter:${["10px 0","-10px 0","0 10px","0 -10px","7px 7px","-7px -7px","7px -7px","-7px 7px","9px 4px","-9px -4px","4px -9px","-4px 9px"].map((v) => `drop-shadow(${v} 0 ${p.hell})`).join(" ")} drop-shadow(0 26px 40px rgba(0,0,0,.28))}
 /* Ecke oben links: dunkles Band mit dem Fach; oben rechts der Zähler im weißen Kreis */
 .kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}
 .kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1}
@@ -291,8 +287,16 @@ h1 em{color:${p.akzent2}}
    oberhalb von y = 860 px - dazwischen ist die Flaeche frei. */
 .frei-zeichen{position:absolute;left:90px;bottom:210px;width:250px;height:250px;transform:rotate(-9deg);z-index:2;filter:drop-shadow(0 16px 26px rgba(0,0,0,.18))}
 .frei-zeichen .icon{width:100%;height:100%}
-.story .frei-zeichen{left:90px;bottom:640px;width:280px;height:280px}
-.frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.28))}
+/* In der Story sitzt das Zeichen unten links neben dem Motiv, unterhalb von
+   Pille und Hinweistext - auf Hoehe der Pille verdeckte es die Schrift. */
+.story .frei-zeichen{left:84px;bottom:330px;width:240px;height:240px}
+/* Der Pexels-Hinweis steht ueber der Zone, die Instagram mit Antwortfeld und
+   Reaktionen ueberlagert (unterste ~250 px). */
+.story .bildquelle{bottom:290px;max-width:300px;line-height:1.3}
+/* Der Sticker-Rand steckt schon in der PNG (freistellen.mjs, bestickern):
+   zwoelf verkettete drop-shadows brachten Chromium zum Stehen. Hier nur
+   noch der weiche Schatten, der den Sticker von der Flaeche hebt. */
+.frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
