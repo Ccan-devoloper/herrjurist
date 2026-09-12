@@ -182,23 +182,29 @@ export function zeitenWaehlen({ formate, datum, ledger, strategie = null, zufall
   const wochentag = new Date(`${datum}T12:00:00Z`).getUTCDay();
   const abstand = CONFIG.plan.zeitAbstandStunden;
   const alle = kandidatenStunden();
-  const gewaehlt = [];
-  for (let i = 0; i < formate.length; i++) {
-    const klasse = klasseVon(formate[i]);
-    /* Jeder Beitrag bekommt ein eigenes Zeitfenster, damit der Tag nicht
-       zusammenrückt: Beitrag i darf frühestens abstand·i Stunden nach dem
-       ersten möglichen Slot liegen und muss vor den folgenden Beiträgen bleiben. */
-    const frueheste = gewaehlt.length ? gewaehlt.at(-1) + abstand : alle[0];
+  /* Alle Beiträge des Tages zusammen wählen, nicht einen nach dem anderen.
+     Der Reihe nach gewählt nahm sich der zweite Beitrag die beste Stunde am
+     frühen Abend und schob den dritten (das Reel) mit vier Stunden Abstand
+     an das Ende des Fensters - 22:30 statt 20:30. Gesucht wird jetzt die
+     Kombination mit der höchsten Summe, Reihenfolge und Mindestabstand
+     bleiben. Bei drei Beiträgen und 17 Stunden sind das 680 Kombinationen. */
+  const werte = formate.map((f) => { const klasse = klasseVon(f); const m = {}; for (const h of alle) m[h] = stundenWert(h, { klasse, wochentag, statistik: stat, strategie }).wert; return m; });
+  let besteSumme = -Infinity, spitze = [];
+  const suche = (i, ab, bisher, summe) => {
+    if (i === formate.length) {
+      if (summe > besteSumme + 1e-9) { besteSumme = summe; spitze = [bisher]; }
+      else if (summe >= besteSumme - 1e-9) spitze.push(bisher);
+      return;
+    }
     const spaeteste = alle.at(-1) - abstand * (formate.length - 1 - i);
-    const moeglich = alle.filter((h) => h >= frueheste && h <= spaeteste);
-    if (!moeglich.length) { gewaehlt.push(Math.min(alle.at(-1), (gewaehlt.at(-1) ?? alle[0]) + abstand)); continue; }
-    const bewertet = moeglich.map((h) => ({ h, ...stundenWert(h, { klasse, wochentag, statistik: stat, strategie }) }));
-    const beste = Math.max(...bewertet.map((b) => b.wert));
-    /* Gleichauf liegende Stunden werden je Tag zufällig, aber reproduzierbar
-       aufgelöst – so wandert die Zeit beim Ausprobieren über die Woche. */
-    const spitze = bewertet.filter((b) => b.wert >= beste - 1e-9);
-    gewaehlt.push(spitze[Math.floor(zufall() * spitze.length)].h);
-  }
+    for (const h of alle) { if (h < ab || h > spaeteste) continue; suche(i + 1, h + abstand, [...bisher, h], summe + werte[i][h]); }
+  };
+  suche(0, alle[0], [], 0);
+  /* Passt der Abstand nicht in das Fenster: der Reihe nach so dicht wie möglich. */
+  if (!spitze.length) { const g = []; for (let i = 0; i < formate.length; i++) g.push(Math.min(alle.at(-1), (g.at(-1) ?? alle[0] - abstand) + abstand)); return g.map((h) => hhmm(h * 60 + 30)); }
+  /* Gleichauf liegende Kombinationen werden je Tag zufällig, aber
+     reproduzierbar aufgelöst - so wandert die Zeit beim Ausprobieren. */
+  const gewaehlt = spitze[Math.floor(zufall() * spitze.length)];
   return gewaehlt.map((h) => hhmm(h * 60 + 30));
 }
 
