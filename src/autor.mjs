@@ -336,6 +336,10 @@ async function faktenSicher(inhalt, zweck = "faktencheck", opt = {}) {
 }
 
 function themaText(thema) {
+  /* Ohne Thema (freies Format) gibt es kein Skelett - ein Absturz waere hier
+     die teuerste Reaktion: Der Lauf bricht ab, obwohl das Modell auch ohne
+     Skelett schreiben kann. */
+  if (!thema?.fach) return "";
   const f = FAECHER[thema.fach];
   const k = thema.kern;
   const zeilen = [
