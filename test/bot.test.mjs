@@ -1116,3 +1116,18 @@ test("Sticker-Rand liegt in der PNG: Bild wächst um die Randbreite, Saum trägt
   assert.equal(stickerFarbe(1, "bunt"), "#ffd166");
   assert.equal(stickerFarbe(2, "bunt"), "#2d5be3");
 });
+
+test("TikTok: Upload-Stücke nach den API-Regeln, Verteilen ohne Zugangsdaten still", async () => {
+  const { tiktokStuecke, verteilen } = await import("../src/verteilen.mjs");
+  const MB = 1024 * 1024;
+  assert.deepEqual(tiktokStuecke(3 * MB), [{ von: 0, bis: 3 * MB - 1 }], "unter 5 MB: ein Stück");
+  assert.deepEqual(tiktokStuecke(20 * MB), [{ von: 0, bis: 20 * MB - 1 }], "unter der Stückgröße: ein Stück");
+  const gross = tiktokStuecke(70 * MB);
+  assert.equal(gross.length, 2);
+  assert.equal(gross[0].bis + 1, gross[1].von);
+  assert.equal(gross.at(-1).bis, 70 * MB - 1, "der Rest wandert ins letzte Stück");
+  assert.ok(gross.every((s) => s.bis - s.von + 1 >= 5 * MB));
+  /* Ohne Secrets postet kein Kanal - und nichts wirft. */
+  const r = await verteilen({ art: "reel", videoPfad: "/nicht/da.mp4", titel: "T", text: "t", hashtags: [] });
+  assert.deepEqual(Object.values(r).filter((x) => x.fehler), []);
+});
