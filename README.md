@@ -472,8 +472,15 @@ sind; Fehler auf einem Kanal berühren Instagram nie.
 | Threads | Beiträge als Bild-Carousel + Text, Reels als Video | Meta-App: Anwendungsfall „Threads API“ hinzufügen, Threads-Konto verbinden, langlebigen Token erzeugen (60 Tage; der Bot verlängert ihn wie den Instagram-Token) | `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID` |
 | YouTube Shorts | Reels als Shorts | Google Cloud: Projekt, YouTube Data API v3 aktivieren, OAuth-Client (Desktop), einmal per OAuth-Playground `youtube.upload` freigeben → Refresh-Token (läuft nicht ab, solange die App „In Produktion“ steht) | `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` |
 | Facebook-Seite | Beiträge als Foto-Post, Reels als Reel | Facebook-Seite anlegen, Seiten-Token ohne Ablauf (über langlebigen Nutzer-Token) mit `pages_manage_posts`, `pages_read_engagement` | `FB_PAGE_TOKEN`, `FB_PAGE_ID` |
-| TikTok | Reels | TikTok for Developers: App mit „Content Posting API“ (Direct Post), Prüfung durch TikTok, Refresh-Token (365 Tage) | `TT_CLIENT_KEY`, `TT_CLIENT_SECRET`, `TT_REFRESH_TOKEN` |
+| TikTok | Reels (Datei-Upload) | TikTok for Developers: App mit „Login Kit“ + „Content Posting API“ (Direct Post), Rückleit-Adresse auf eigener Domain, einmal `node bin/tiktok-anmelden.mjs` → Refresh-Token (365 Tage; der Bot erneuert ihn und legt den neuesten verschlüsselt ab). Öffentlich posten darf die App erst nach der Prüfung durch TikTok – bis dahin postet der Bot nicht und meldet das im Log | `TT_CLIENT_KEY`, `TT_CLIENT_SECRET`, `TT_REFRESH_TOKEN` |
 | LinkedIn | Beiträge als Text mit Titelbild auf dem eigenen Profil | LinkedIn-App mit „Share on LinkedIn“, Token mit `w_member_social` (60 Tage – LinkedIn erneuert nicht automatisch; der Wochenbericht meldet, wenn er abläuft) | `LI_ACCESS_TOKEN`, `LI_PERSON_URN` |
+
+**TikTok einrichten (einmalig, ca. 20 Minuten plus Wartezeit auf TikTok).**
+1. Auf [developers.tiktok.com](https://developers.tiktok.com) eine App anlegen (Kategorie „Content Posting“), Produkte **Login Kit** und **Content Posting API** hinzufügen, Scopes `user.info.basic`, `video.upload`, `video.publish`.
+2. Unter Login Kit eine Rückleit-Adresse (Redirect URI) auf einer eigenen, in der App verifizierten Domain eintragen – eine leere Seite reicht, sie muss nur den Parameter `code` in der Adresszeile zeigen.
+3. App zur Prüfung einreichen („Submit for review“). Bis zur Freigabe darf die App nur „nur ich“-Videos posten; der Bot erkennt das und wartet.
+4. Auf dem eigenen Rechner: `TT_CLIENT_KEY=… TT_CLIENT_SECRET=… TT_REDIRECT_URI=… node bin/tiktok-anmelden.mjs`, die gezeigte Adresse mit dem Konto des Kanals öffnen, den `code` aus der Adresszeile im zweiten Aufruf übergeben. Der ausgegebene Refresh-Token kommt als Secret `TT_REFRESH_TOKEN` ins Repository – zusammen mit `TT_CLIENT_KEY` und `TT_CLIENT_SECRET`.
+5. Ab dem nächsten Reel lädt der Bot das Video hoch (Datei-Upload, weil TikTok für URL-Abrufe eine verifizierte Video-Domain verlangt). Der Refresh-Token braucht für die Erneuerung den Schlüssel `IG_TOKEN_KEY`, der ohnehin gesetzt ist.
 
 **Wochenbericht.** Montags beim ersten Lauf: Follower und Zuwachs, Reichweite, Beiträge/Stories/Reels,
 beantwortete Kommentare, verschickte Karten, Kosten der Woche, beste Beiträge, gelernte Gewichte,
