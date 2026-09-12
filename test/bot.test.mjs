@@ -1131,3 +1131,31 @@ test("TikTok: Upload-Stücke nach den API-Regeln, Verteilen ohne Zugangsdaten st
   const r = await verteilen({ art: "reel", videoPfad: "/nicht/da.mp4", titel: "T", text: "t", hashtags: [] });
   assert.deepEqual(Object.values(r).filter((x) => x.fehler), []);
 });
+
+test("Samstags-Reel: das Mindset-Thema wird aufgelöst, obwohl es nicht im Pool steht", async () => {
+  const { mindsetThema } = await import("../src/kalender.mjs");
+  const { tagesplan } = await import("../src/planer.mjs");
+  const { themenpool } = await import("../src/inhalte.mjs");
+  /* 12.09.2026 ist ein Samstag: Der Planer setzt ein Mindset-Thema. */
+  const samstag = "2026-09-12";
+  assert.equal(new Date(`${samstag}T12:00:00Z`).getUTCDay(), 6);
+  const t = mindsetThema(samstag);
+  assert.ok(t?.id?.startsWith("mindset") && t.fach && t.titel, JSON.stringify(t));
+  const pool = themenpool();
+  assert.equal(pool.some((x) => x.id === t.id), false, "Mindset-Themen stehen bewusst nicht im Pool");
+  const plan = tagesplan(samstag, { veroeffentlicht: [] }, pool, null);
+  const reel = plan.beitraege.find((b) => b.format === "reel");
+  assert.ok(reel, "am Samstag gehört ein Reel in den Plan");
+  assert.equal(reel.thema?.typ, "mindset", "Samstags-Reel bekommt ein Mindset-Thema");
+  /* Im gespeicherten Plan steht nur die Kennung - genau so kommt sie beim
+     Veröffentlichen wieder an. So löst der Tageslauf sie auf: erst Pool,
+     dann Kalender. */
+  const gespeichert = { themaId: reel.thema?.id || null };
+  const index = new Map(pool.map((x) => [x.id, x]));
+  const themaFuer = (id) => (id ? index.get(id) || (String(id).startsWith("mindset") ? mindsetThema(samstag) : null) : null);
+  assert.equal(index.get(gespeichert.themaId), undefined, "nur über den Kalender auflösbar");
+  assert.ok(themaFuer(gespeichert.themaId)?.fach, `Thema ${gespeichert.themaId} nicht auflösbar`);
+  /* Und der Auftrag an das Modell kommt ohne Absturz zustande. */
+  const { pruefeBeitrag } = await import("../src/pruefung.mjs");
+  assert.ok(pruefeBeitrag({ caption: themaFuer(gespeichert.themaId).titel }));
+});

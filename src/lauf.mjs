@@ -17,6 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
+import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool } from "./inhalte.mjs";
@@ -145,6 +146,11 @@ async function main() {
   const ledger = ledgerLaden(ledgerPfad);
   const pool = themenpool();
   const poolIndex = new Map(pool.map((t) => [t.id, t]));
+  /* Themen auflösen: Die Mindset-Themen des Samstags-Reels stehen im Kalender,
+     nicht im Themenpool - der Plan hält nur ihre Kennung. Ohne diesen Umweg
+     kam beim Veröffentlichen `undefined` statt eines Themas an, und das Reel
+     fiel aus (12.09., erster Samstag mit dieser Regel). */
+  const themaFuer = (id) => (id ? poolIndex.get(id) || (String(id).startsWith("mindset") ? mindsetThema(datum) : null) : null);
 
   /* Gelernte Strategie (Formate, Fächer, Uhrzeiten) aus der Lernschleife. */
   const strategie = hosting.jsonLesen("strategie.json", null);
@@ -174,7 +180,7 @@ async function main() {
   }
   if (nurPlanen) {
     for (const b of plan.beitraege) log(`  ${b.zeit} Beitrag ${b.slot} ${b.format} ${b.themaTitel || ""} [${b.status}]`);
-    for (const s of plan.stories) log(`  ${s.zeit} Story ${s.slot} ${s.art} ${s.beitragSlot ? "→ " + s.beitragSlot : poolIndex.get(s.themaId)?.titel || ""} [${s.status}]`);
+    for (const s of plan.stories) log(`  ${s.zeit} Story ${s.slot} ${s.art} ${s.beitragSlot ? "→ " + s.beitragSlot : themaFuer(s.themaId)?.titel || ""} [${s.status}]`);
     return;
   }
 
@@ -282,7 +288,7 @@ async function main() {
     for (const [slot, v] of vorhanden) if (v) geschrieben.set(slot, v);
     if (offen.length) {
       try {
-        const auftrag = (liste) => liste.map((s) => ({ slot: s.slot, art: s.art, thema: s.themaId ? poolIndex.get(s.themaId) : null, tageBisExamen: s.tageBisExamen }));
+        const auftrag = (liste) => liste.map((s) => ({ slot: s.slot, art: s.art, thema: themaFuer(s.themaId), tageBisExamen: s.tageBisExamen }));
         const neu = await storiesSchreiben(auftrag(offen), datum);
         for (const s of neu) { hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s); geschrieben.set(s.slot, s); }
         log(`  Story-Texte für ${neu.length} Slots geschrieben`);
@@ -319,7 +325,7 @@ async function main() {
       if (eintrag.format === "reel") {
         let reel = hosting.jsonLesen(`inhalte/${datum}-${eintrag.slot}.json`, null);
         if (!reel) {
-          reel = await reelSchreiben({ thema: eintrag.themaId ? poolIndex.get(eintrag.themaId) : null, datum, lang: Boolean(eintrag.lang), anlass: plan.anlass, strategie });
+          reel = await reelSchreiben({ thema: themaFuer(eintrag.themaId), datum, lang: Boolean(eintrag.lang), anlass: plan.anlass, strategie });
           reel.slug = `${datum}-${eintrag.slot}`;
           hosting.jsonSchreiben(`inhalte/${datum}-${eintrag.slot}.json`, reel);
         }
@@ -351,7 +357,7 @@ async function main() {
       }
       let beitrag = hosting.jsonLesen(`inhalte/${datum}-${eintrag.slot}.json`, null);
       if (!beitrag) {
-        const thema = eintrag.themaId ? poolIndex.get(eintrag.themaId) : null;
+        const thema = themaFuer(eintrag.themaId);
         let recherche = null, wochenThemen = null;
         if (eintrag.format === "aktuell" || eintrag.format === "loesungsskizze") {
           const bisher = (ledger.veroeffentlicht || []).filter((e) => e.format === "aktuell").slice(-12).map((e) => e.titel);
