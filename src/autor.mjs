@@ -476,7 +476,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
   if (process.env.IG_AUTOR === "beispiele") return beispielBeitrag(format, thema);
   const spec = FORMATE[format] || FORMATE.pruefungsfrage;
   const fach = thema?.fach || recherche?.fach || "methodik";
-  const klausur = FAECHER[fach]?.klausur || 3;
+  const klausur = FAECHER[fach]?.klausur ?? 3;
   const sperr = korpus().namen;
   let feedback = "";
   let letzter = null;
@@ -605,7 +605,7 @@ Alles in eigenen Worten, juristisch korrekt, mit Norm. Nicht benötigte Felder n
   const nachSlot = new Map(daten.stories.map((s) => [s.slot, s]));
   const liste = plan.map((p) => {
     const s = nachSlot.get(p.slot) || {};
-    const o = { slot: p.slot, art: p.art, fach: p.thema?.fach || "methodik", klausur: p.thema?.klausur || 3 };
+    const o = { slot: p.slot, art: p.art, fach: p.thema?.fach || "methodik", klausur: p.thema?.klausur ?? 3 };
     for (const [k, v] of Object.entries(s)) if (v != null && k !== "slot" && k !== "art") o[k] = v;
     if (o.icon && !ICONS[o.icon]) o.icon = "paragraf";
     if (p.art === "countdown") { o.zahl = String(p.tageBisExamen); o.fortschritt = Math.round(100 - Math.min(100, p.tageBisExamen / 150 * 100)); o.ueberzeile = "Noch"; }
@@ -692,7 +692,7 @@ Du schreibst ein Skript aus Szenen. Jede Szene hat einen kurzen Bildschirmtext u
 /* Reel-Skript schreiben (Szenen mit Bildschirm- und Sprechertext). */
 export async function reelSchreiben({ thema, datum, lang = false, anlass = null, strategie = null }) {
   const fach = thema?.fach || "methodik";
-  const klausur = FAECHER[fach]?.klausur || 3;
+  const klausur = FAECHER[fach]?.klausur ?? 3;
   const sperr = korpus().namen;
   /* Muster des Tages – rotiert, bevorzugt aber, was gemessen besser lief. */
   const hookMuster = hookMusterWaehlen(datum, strategie);
@@ -766,6 +766,7 @@ export function teaserAusBeitrag(beitrag, slot) {
     /* Das Motiv der Titelfolie wandert mit - so kündigt die Story den Beitrag
        mit demselben Bild an. */
     bild: beitrag.folien[0].bild || null, bildFrei: beitrag.folien[0].bildFrei !== false, bildQuelle: beitrag.folien[0].bildQuelle || null,
+    bildBreite: beitrag.folien[0].bildBreite || null, bildHoehe: beitrag.folien[0].bildHoehe || null,
     pille: "Jetzt im Feed",
   };
 }
