@@ -56,6 +56,10 @@ export const STILE = {
     },
     /* Palette je Klausurtag: Grund, dunkle Kontrastfarbe, helle und lila Pille, Zweitakzent. */
     tagFarben: {
+      /* Klausurtag 0: alles, was zu keinem Prüfungstag gehört - Mindset,
+         Klausurtechnik. Violett steht neben Blau, Orange und Grün für sich,
+         und die Leserschaft sieht am Farbwechsel sofort: kein Fachstoff. */
+      0: { grund: "#6b4bd6", dunkel: "#1e0f52", hell: "#efe9ff", lila: "#ffd9c2", akzent2: "#ffd166", weich: "#e4dcff" },
       /* weich: Farbe für Nebentext direkt auf der Grundfarbe. Auf Orange und
          Grün reicht das Dunkel; auf dem Blau hat es nur 2,9:1 Kontrast, dort
          steht Nebentext hell. Weiße Karten behalten ihr Dunkel (vorlagen.mjs). */

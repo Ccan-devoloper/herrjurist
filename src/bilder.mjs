@@ -165,7 +165,9 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
       const bild = `data:image/png;base64,${fs.readFileSync(frei.pfad).toString("base64")}`;
       fs.rmSync(frei.pfad, { force: true });
       console.log(`  → Titelbild freigestellt: „${szene}“ · ${foto.fotograf || "Pexels"} (Deckung ${(frei.deckung * 100).toFixed(0)} %, Passung ${(foto.passung * 100).toFixed(0)} %)`);
-      return { bild, quelle, seite: foto.seite, frei: true };
+      /* Die Maße wandern mit: Die Vorlage rechnet daraus die Bühne aus, damit
+         ein breites Motiv nicht als Briefmarke in der Ecke endet. */
+      return { bild, quelle, seite: foto.seite, frei: true, breite: frei.breite || null, hoehe: frei.hoehe || null };
     }
   }
   console.log(`  → kein brauchbares Motiv zu „${szenen.join("“ / „")}“ – Titelfolie bleibt beim Icon.`);

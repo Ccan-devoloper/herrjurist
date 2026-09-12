@@ -35,7 +35,10 @@ export function kontext(opt = {}) {
     handle: opt.handle ?? CONFIG.marke.handle,
     fach: opt.fach || null,
     fachLabel: opt.fachLabel || (opt.fach ? FAECHER[opt.fach]?.label : "Examenswissen") || "Examenswissen",
-    klausur: opt.klausur || (opt.fach ? FAECHER[opt.fach]?.klausur : 3) || 3,
+    /* ?? statt ||: Klausurtag 0 ist ein gültiger Wert (Mindset, Kopfsache)
+       und darf nicht zu 3 werden - sonst erscheint ein Mindset-Beitrag in der
+       Farbe und mit dem Etikett des dritten Prüfungstags. */
+    klausur: opt.klausur ?? (opt.fach ? FAECHER[opt.fach]?.klausur : 3) ?? 3,
   };
 }
 

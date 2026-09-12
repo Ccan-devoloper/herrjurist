@@ -75,7 +75,7 @@ async function motivBesorgen(ziel, was = "Motiv") {
   if (!ziel || ziel.bild || !ziel.bildSzene) return;
   try {
     const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil) });
-    if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; }
+    if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null; }
   } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
 }
 
@@ -85,7 +85,7 @@ async function titelfolieBebildern(beitrag) {
   if (!titelfolie || titelfolie.bild) return;
   try {
     const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil) });
-    if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; }
+    if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; titelfolie.bildBreite = treffer.breite || null; titelfolie.bildHoehe = treffer.hoehe || null; }
   } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
 }
 

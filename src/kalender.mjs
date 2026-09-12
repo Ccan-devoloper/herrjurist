@@ -123,7 +123,10 @@ export const MINDSET_THEMEN = [
 
 export function mindsetThema(datum) {
   const tage = Math.floor(Date.UTC(+datum.slice(0, 4), +datum.slice(5, 7) - 1, +datum.slice(8, 10)) / 86400000);
-  return MINDSET_THEMEN[Math.floor(tage / 7) % MINDSET_THEMEN.length];
+  /* Fach und Klausurtag werden überschrieben: Ein Mindset-Thema gehört zu
+     keinem Prüfungstag. Vorher trug es ein zufälliges Fach - das Reel „Tag 1
+     war schlecht" erschien so unter der Überschrift „Bilanzsteuerrecht". */
+  return { ...MINDSET_THEMEN[Math.floor(tage / 7) % MINDSET_THEMEN.length], fach: "mindset", klausur: 0 };
 }
 
 /* Anlass für genau dieses Datum (oder null). */

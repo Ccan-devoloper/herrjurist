@@ -55,6 +55,13 @@ export function schaerfe(pfad, N = 256) {
 }
 export const SCHAERFE_MIN = 120;
 
+/** Breite und Höhe einer Bilddatei. */
+export function masse(pfad) {
+  const r = spawnSync(ffmpegPfad(), ["-hide_banner", "-i", pfad, "-f", "null", "-"], { encoding: "utf8" });
+  const g = String(r.stderr || "").match(/,\s(\d+)x(\d+)/);
+  return g ? { breite: Number(g[1]), hoehe: Number(g[2]) } : null;
+}
+
 /**
  * Schneidet die durchsichtigen Ränder weg, sodass das Motiv das Bild ausfüllt.
  * Ohne diesen Schritt bleibt das freigestellte Motiv so klein wie im
@@ -148,7 +155,11 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
      Kopf fehlt. Unten darf es anschneiden - da läuft es ohnehin aus der
      Kachel. */
   const rand = randkontakt(ziel);
-  if (rand && (rand.oben > 0.02 || rand.links > 0.06 || rand.rechts > 0.06)) {
+  /* Streng an Oberkante und Seiten: Ein Motiv, das dort vom Fotorand
+     abgeschnitten ist, wirkt freigestellt wie ein Fehler - der Kopf fehlt,
+     der Arm endet im Nichts. Unten darf es anschneiden, dort läuft es
+     ohnehin aus der Kachel. */
+  if (rand && (rand.oben > 0.01 || rand.links > 0.03 || rand.rechts > 0.03)) {
     console.log(`  → freigestelltes Motiv verworfen (vom Fotorand angeschnitten: oben ${(rand.oben * 100).toFixed(0)} %, links ${(rand.links * 100).toFixed(0)} %, rechts ${(rand.rechts * 100).toFixed(0)} %) – Titelfolie bleibt beim Icon.`);
     fs.rmSync(ziel, { force: true });
     return null;
@@ -156,7 +167,17 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
   /* Deckung wird am ungeschnittenen Bild gemessen (dort sagt sie etwas über
      die Qualität der Freistellung), zugeschnitten wird danach. */
   const geschnitten = zuschneiden(ziel);
-  return { pfad: randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten, deckung: d };
+  const m = masse(geschnitten);
+  /* Extreme Seitenverhältnisse sind fast immer ein Bruchstück (ein Arm, eine
+     Tischkante) statt eines Motivs. */
+  const verhaeltnis = m ? m.breite / m.hoehe : 1;
+  if (verhaeltnis > 2.4 || verhaeltnis < 0.28) {
+    console.log(`  → freigestelltes Motiv verworfen (Seitenverhältnis ${verhaeltnis.toFixed(2)} – wohl nur ein Bruchstück).`);
+    fs.rmSync(geschnitten, { force: true });
+    return null;
+  }
+  const fertig = randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten;
+  return { pfad: fertig, deckung: d, ...(masse(fertig) || {}) };
 }
 
 /**

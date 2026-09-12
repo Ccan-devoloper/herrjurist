@@ -41,4 +41,7 @@ export const FAECHER = {
      Raster bunt bleibt, und die Fusszeile traegt "Klausurtechnik" statt eines
      Rechtsgebiets. */
   methodik: { label: "Klausur- und Lernmethodik", kurz: "Klausurtechnik", gebiet: 0 },
+  /* Kein Fachstoff, sondern Kopf und Vorbereitung: Umgang mit Rueckschlaegen,
+     Lernrhythmus, Pruefungsangst. Gebiet 0 = eigene Farbe (stile.mjs). */
+  mindset: { label: "Kopfsache", kurz: "Kopfsache", gebiet: 0 },
 };
