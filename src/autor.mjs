@@ -340,10 +340,17 @@ function themaText(thema) {
      die teuerste Reaktion: Der Lauf bricht ab, obwohl das Modell auch ohne
      Skelett schreiben kann. */
   if (!thema?.fach) return "";
-  const f = FAECHER[thema.fach];
+  /* Methodik-Themen (Klausurtechnik, Mindset) gehören zu keinem einzelnen
+     Prüfungstag: ihr Fach trägt klausur 0, und KLAUSUREN kennt nur 1-3.
+     Ohne diese Klammer stürzte der Samstags-Reel-Lauf hier ab. */
+  const f = FAECHER[thema.fach] || { label: thema.fach, klausur: thema.klausur || 0 };
+  /* Der Klausurtag am Fach steht nur bei Fachthemen. Ein Mindset-Thema trägt
+     ihn allein für die Farbe der Kachel - im Auftrag an das Modell wäre
+     "Klausur- und Lernmethodik (Zivilrecht)" eine falsche Fährte. */
+  const klausurLabel = thema.typ === "mindset" ? null : KLAUSUREN[f.klausur]?.label || KLAUSUREN[thema.klausur]?.label || null;
   const k = thema.kern;
   const zeilen = [
-    `Fach: ${f.label} (${KLAUSUREN[f.klausur].label})`,
+    klausurLabel ? `Fach: ${f.label} (${klausurLabel})` : `Fach: ${f.label}`,
     `Thema: ${thema.titel}`,
     `Examenspriorität: ${thema.prioritaet === "hoch" ? "Dauerbrenner (nahezu jährlich geprüft)" : thema.prioritaet === "mittel" ? "regelmäßig geprüft" : "selten geprüft, aber punktestark"}`,
     thema.normen.length ? `Normen: ${thema.normen.join(" · ")}` : "",

@@ -1159,3 +1159,20 @@ test("Samstags-Reel: das Mindset-Thema wird aufgelöst, obwohl es nicht im Pool 
   const { pruefeBeitrag } = await import("../src/pruefung.mjs");
   assert.ok(pruefeBeitrag({ caption: themaFuer(gespeichert.themaId).titel }));
 });
+
+test("Themen-Skelett: Methodik-Themen ohne Klausurtag brechen den Lauf nicht ab", async () => {
+  const { FAECHER, KLAUSUREN } = await import("../src/inhalte.mjs");
+  const { mindsetThema } = await import("../src/kalender.mjs");
+  const t = mindsetThema("2026-09-12");
+  /* Genau die Zeile, die am 12.09. abstürzte: Methodik trägt klausur 0,
+     KLAUSUREN kennt nur 1–3. */
+  const f = FAECHER[t.fach] || { label: t.fach, klausur: t.klausur || 0 };
+  const label = KLAUSUREN[f.klausur]?.label || KLAUSUREN[t.klausur]?.label || null;
+  assert.ok(f.label, `kein Label für Fach ${t.fach}`);
+  assert.doesNotThrow(() => (label ? `Fach: ${f.label} (${label})` : `Fach: ${f.label}`));
+  /* Und jedes Fach des Pools lässt sich beschriften. */
+  for (const [name, fach] of Object.entries(FAECHER)) {
+    assert.ok(fach.label, `Fach ${name} ohne Label`);
+    assert.ok(fach.klausur === 0 || KLAUSUREN[fach.klausur], `Fach ${name}: Klausurtag ${fach.klausur} unbekannt`);
+  }
+});
