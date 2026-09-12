@@ -21,6 +21,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { Hosting } from "../src/hosting.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "../src/render.mjs";
+import { stickerFarbe } from "../src/stile.mjs";
 import { titelbild } from "../src/bilder.mjs";
 import { reelBauen } from "../src/reel.mjs";
 import { heuteIso } from "../src/zeit.mjs";
@@ -46,7 +47,7 @@ for (const datei of dateien) {
     if (inhalt.folien) {
       const titelfolie = inhalt.folien.find((f) => f.art === "titel");
       if (titelfolie) {
-        const treffer = await titelbild(inhalt);
+        const treffer = await titelbild(inhalt, null, { randFarbe: stickerFarbe(inhalt.klausur, CONFIG.marke.stil) });
         if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; }
       }
       const pfade = await beitragRendern(inhalt, path.join(ziel, slot), { variante: 0 });

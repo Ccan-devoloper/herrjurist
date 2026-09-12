@@ -163,6 +163,14 @@ const ZUSATZ = {
 };
 for (const [alt, neue] of Object.entries(ZUSATZ)) for (const k of neue) if (!ICONS[k]) ICONS[k] = ICONS[alt];
 
+/* Farbe des Sticker-Rands um freigestellte Motive: die Zweitfarbe des
+   Klausurtags (Gelb auf Blau, Blau auf Orange, Orange auf Gruen) - sie hebt
+   sich von der Flaeche UND vom Foto ab. Ohne Tagesfarben: Weiss. */
+export function stickerFarbe(klausur, stilName = process.env.IG_STIL || "bunt") {
+  const s = STILE[stilName] || STILE.bunt;
+  return s?.tagFarben?.[klausur]?.akzent2 || s?.tagFarben?.[3]?.akzent2 || "#ffffff";
+}
+
 export function iconSvg(name, groesse = 96) {
   /* Farbig, wenn der Iconify-Satz da ist (icons.mjs); die Strichgrafik
      darunter bleibt der Rückfall für Umgebungen ohne das Paket. */
