@@ -165,7 +165,7 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
        Szene passt, kostet nichts mehr. */
     if (archiv) {
       for (const szene of szenen) {
-        const fund = passendesMotiv(archiv, szene, datum, { mindestTage: CONFIG.bilder.ki.wiederTage });
+        const fund = passendesMotiv(archiv, szene, datum, { mindestTage: CONFIG.bilder.ki.wiederTage, schwelle: CONFIG.bilder.ki.aehnlich });
         if (!fund) continue;
         const wieder = motivHervorholen(path.join(archivDir, fund.eintrag.datei), { randFarbe: opt.randFarbe || null });
         if (!wieder) continue;
@@ -181,7 +181,7 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
       if (!motiv) continue;
       if (motiv.ohneRand) {
         if (archivDir) {
-          try { motivAblegen(archivDir, archiv || { motive: [] }, { szene, quelle: motiv.ohneRand, datum, breite: motiv.breite, hoehe: motiv.hoehe, max: CONFIG.bilder.ki.archivMax }); }
+          try { motivAblegen(archivDir, archiv || { motive: [] }, { szene, quelle: motiv.ohneRand, datum, breite: motiv.breite, hoehe: motiv.hoehe, themaId: beitrag?.themaId || null, max: CONFIG.bilder.ki.archivMax }); }
           catch (e) { console.warn(`  ! Motiv nicht archiviert: ${e.message}`); }
         }
         fs.rmSync(motiv.ohneRand, { force: true });

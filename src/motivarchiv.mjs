@@ -12,6 +12,8 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
+import { ffmpegPfad } from "./stimme.mjs";
 
 const INDEX = "motive.json";
 
@@ -38,7 +40,7 @@ const tage = (von, bis) => Math.round((new Date(`${bis}T12:00:00Z`) - new Date(`
  * Sucht ein Motiv, das zur Szene passt und lange genug her ist.
  * @returns {{eintrag:object, aehnlich:number, alter:number}|null}
  */
-export function passendesMotiv(archiv, szene, datum, { mindestTage = 90, schwelle = 0.6 } = {}) {
+export function passendesMotiv(archiv, szene, datum, { mindestTage = 90, schwelle = 0.85 } = {}) {
   let bestes = null;
   for (const e of archiv?.motive || []) {
     const zuletzt = e.zuletzt || e.gezeichnet;
@@ -63,13 +65,26 @@ export function archivSpeichern(dir, archiv) {
   fs.writeFileSync(path.join(dir, INDEX), JSON.stringify(archiv, null, 2));
 }
 
+/**
+ * PNG nach WebP, mit Transparenz. Eine flache Illustration schrumpft dabei auf
+ * etwa ein Fuenftel - das entscheidet darueber, ob das Archiv anderthalb Jahre
+ * tragen kann oder nach vier Monaten anfaengt, Brauchbares hinauszuwerfen.
+ * Klappt es nicht (ffmpeg ohne libwebp), bleibt es beim PNG.
+ */
+export function nachWebp(quelle, ziel) {
+  const s = spawnSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-i", quelle, "-c:v", "libwebp", "-lossless", "0", "-q:v", "88", "-frames:v", "1", ziel], { encoding: "utf8", timeout: 60000 });
+  if (s.status !== 0 || !fs.existsSync(ziel) || fs.statSync(ziel).size < 500) { fs.rmSync(ziel, { force: true }); return null; }
+  return ziel;
+}
+
 /** Legt ein frisch gezeichnetes Motiv ab (ohne Rand). */
-export function motivAblegen(dir, archiv, { szene, quelle, datum, breite, hoehe, max = 300 }) {
+export function motivAblegen(dir, archiv, { szene, quelle, datum, breite, hoehe, themaId = null, max = 1500 }) {
   if (!dir || !fs.existsSync(quelle)) return archiv;
   fs.mkdirSync(dir, { recursive: true });
-  const name = `${datum}-${Math.random().toString(36).slice(2, 8)}.png`;
-  fs.copyFileSync(quelle, path.join(dir, name));
-  archiv.motive = [...(archiv.motive || []), { datei: name, szene, gezeichnet: datum, zuletzt: datum, benutzt: 1, breite: breite || null, hoehe: hoehe || null }];
+  const kennung = `${datum}-${Math.random().toString(36).slice(2, 8)}`;
+  let name = `${kennung}.webp`;
+  if (!nachWebp(quelle, path.join(dir, name))) { name = `${kennung}.png`; fs.copyFileSync(quelle, path.join(dir, name)); }
+  archiv.motive = [...(archiv.motive || []), { datei: name, szene, themaId, gezeichnet: datum, zuletzt: datum, benutzt: 1, breite: breite || null, hoehe: hoehe || null }];
   /* Deckel gegen ein Archiv, das mit den Jahren den Zweig sprengt: Das am
      laengsten ungenutzte faellt zuerst. */
   while (archiv.motive.length > max) {
