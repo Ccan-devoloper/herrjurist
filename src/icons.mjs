@@ -33,7 +33,7 @@ export const ZUORDNUNG = {
   fabrik: "factory", person: "bust-in-silhouette", personen: "busts-in-silhouette", globus: "globe-with-meridians",
   paragraf: "books", haken: "check-mark-button", kreuz: "cross-mark", zielscheibe: "bullseye", trophaee: "trophy",
   /* Story-Arten und Folienbausteine */
-  merke: "light-bulb", fehler: "cross-mark", frage: "thinking-face", norm: "open-book", formel: "abacus",
+  streitstand: "balance-scale", merke: "light-bulb", fehler: "cross-mark", frage: "thinking-face", norm: "open-book", formel: "abacus",
   begriff: "books", tipp: "light-bulb", zahl: "bar-chart", countdown: "hourglass-done", lesezeichen: "bookmark",
   teilen: "envelope-with-arrow", folgen: "raised-hand",
   /* Themennah: Personen und Orte */

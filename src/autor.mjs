@@ -214,7 +214,7 @@ const STORY_SCHEMA = {
         additionalProperties: false,
         properties: {
           slot: { type: "string" },
-          art: { type: "string", enum: ["frage", "antwort", "norm", "merksatz", "formel", "begriff", "fehler", "tipp", "zahl"] },
+          art: { type: "string", enum: ["frage", "antwort", "norm", "streitstand", "merksatz", "formel", "begriff", "fehler", "tipp", "zahl"] },
           ueberzeile: { type: ["string", "null"] },
           titel: { type: ["string", "null"] },
           text: { type: ["string", "null"] },
@@ -587,6 +587,7 @@ Arten:
 - frage: titel = Prüfungsfrage (max. 90 Zeichen), optionen = 3 kurze Antwortmöglichkeiten (max. 60 Zeichen), ueberzeile = „Prüfungsfrage <Fach>“
 - antwort: siehe Auftrag
 - norm: norm = die Norm in Kurzform (z. B. „§ 80 Abs. 5 VwGO“), titel = worum es geht (max. 60 Zeichen), text = ein Prüfungstipp dazu (max. 180 Zeichen)
+- streitstand: der Meinungsstreit, wie ihn die Klausur verlangt. titel = die Streitfrage als Frage (max. 80 Zeichen), norm = die Norm, um die gestritten wird, optionen = GENAU ZWEI Ansichten, jede in der Form „Label: Aussage" – das Label ist die Zuordnung („Rechtsprechung", „h.M.", „Literatur", „a.A.", „Eingeschränkte Schuldtheorie"), die Aussage sagt in einem Satz, was diese Ansicht annimmt (je max. 110 Zeichen). text = der STREITENTSCHEID: welcher Ansicht du folgst und mit welchem Argument, plus – wenn beide zum selben Ergebnis kommen – der Satz, dass der Streit hier dahinstehen kann (max. 190 Zeichen). Nimm nur Streitstände, die es wirklich gibt, und ordne die Ansichten korrekt zu; erfinde keine Meinungen.
 - merksatz: text = ein Satz, der hängen bleibt (max. 120 Zeichen), titel = Thema (max. 60 Zeichen)
 - formel: titel = Name des Rechenwegs, formel = Formel (max. 60 Zeichen), text = Erklärung mit eigenem Zahlenbeispiel (max. 180 Zeichen)
 - begriff: titel = Begriff, norm = Norm, text = Definition in eigenen Worten (max. 200 Zeichen), icon
@@ -611,6 +612,9 @@ Alles in eigenen Worten, juristisch korrekt, mit Norm. Nicht benötigte Felder n
     if (p.art === "countdown") { o.zahl = String(p.tageBisExamen); o.fortschritt = Math.round(100 - Math.min(100, p.tageBisExamen / 150 * 100)); o.ueberzeile = "Noch"; }
     o.fachLabel = FAECHER[o.fach]?.label || "Examenswissen";
     felderKuerzen(o, ["titel", "text", "norm", "formel", "richtigText", "falsch", "ueberzeile"]);
+    /* Auch in den Ansichten eines Streitstands steht die Kurzform auf der
+       Kachel - dort stecken die meisten Normzitate der Story. */
+    if (Array.isArray(o.optionen)) o.optionen = o.optionen.map((x) => normKurz(String(x)));
     const ergebnis = pruefeBeitrag({ stories: [o] });
     if (!ergebnis.ok) { o.beanstandet = ergebnis.fehler; }
     return o;
