@@ -10,6 +10,7 @@ import { tageBis, minutenVon, hhmm, heuteIso } from "../src/zeit.mjs";
 import { tokenVerschluesseln, tokenEntschluesseln } from "../src/instagram.mjs";
 import fs from "node:fs";
 import os from "node:os";
+import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { CONFIG } from "../src/config.mjs";
 
@@ -1387,4 +1388,28 @@ test("Zweitmeinung: nur bestätigte Einwände bleiben, ohne Urteil gilt der Einw
   assert.deepEqual(bestaetigt.map((b) => b.stelle), ["B", "C"]);
   assert.deepEqual(urteileAnwenden(befunde, []).bestaetigt.length, 3);
   assert.equal(CONFIG.faktencheck.zweitmeinung, true, "Zweitmeinung ist Standard");
+});
+
+test("Freisteller: ein halbdurchsichtiger Schleier wird verworfen, ein festes Motiv nicht", async () => {
+  const { alphaProfil, FESTIGKEIT_MIN } = await import("../src/freistellen.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "alpha-"));
+  const ff = process.env.FFMPEG_PATH || "ffmpeg";
+  const bauen = (name, alpha) => {
+    /* Ein Quadrat in der Bildmitte mit der gegebenen Deckkraft, ringsum leer. */
+    const p = path.join(dir, name);
+    const r = spawnSync(ff, ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=black@0:s=192x192,format=rgba",
+      "-f", "lavfi", "-i", `color=c=white@${alpha}:s=96x96,format=rgba`,
+      "-filter_complex", "[0][1]overlay=48:48:format=auto", "-frames:v", "1", "-update", "1", p], { encoding: "utf8" });
+    return r.status === 0 && fs.existsSync(p) ? p : null;
+  };
+  const fest = bauen("fest.png", 1);
+  const schleier = bauen("schleier.png", 0.18);
+  if (!fest || !schleier) { fs.rmSync(dir, { recursive: true, force: true }); return; }   // ohne ffmpeg kein Test
+  const pf = alphaProfil(fest), ps = alphaProfil(schleier);
+  /* Beide belegen dieselbe Fläche - der Mittelwert unterscheidet sie kaum
+     genug, die Festigkeit dagegen eindeutig. */
+  assert.ok(pf.festigkeit > 0.9, `festes Motiv: Festigkeit ${pf.festigkeit}`);
+  assert.ok(ps.festigkeit < FESTIGKEIT_MIN, `Schleier: Festigkeit ${ps.festigkeit}`);
+  assert.ok(ps.mittel > 0.02, "der Schleier belegt durchaus Fläche - genau deshalb rutschte er durch");
+  fs.rmSync(dir, { recursive: true, force: true });
 });
