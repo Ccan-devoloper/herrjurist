@@ -495,10 +495,7 @@ async function main() {
         eintrag.status = "veroeffentlicht"; eintrag.medienId = medienId; eintrag.veroeffentlicht = new Date().toISOString();
         vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: "reel", thema: reel.themaId, fach: reel.fach, titel: reel.szenen[0]?.titel || reel.kurztitel, hookTyp: reel.hookTyp, hookMuster: reel.hookMuster, medienId, variante: varianteReel, hashtags: reel.hashtags, stimmeId: r.stimmeId || null, stimmeName: r.stimmeName || null, layout: r.layout || null, dauer: Math.round(r.dauer * 10) / 10, veroeffentlicht: new Date().toISOString() });
         eintrag.kanaele = await verteilen({ art: "reel", videoUrl, videoPfad: r.video, bildUrls: [coverUrl], titel: reel.kurztitel || reel.szenen[0]?.titel, text: caption, hashtags: reel.hashtags }, { log, trockenlauf: trocken, stateDir: hosting.stateDir });
-        /* Die Teaser-Story kuendigt das Reel mit dem Aufhaenger an, nicht mit
-           dem Kurzetikett - dieselbe Ueberschrift wie auf dem Cover und im
-           Video. Der Untertitel der ersten Szene wird die zweite Zeile. */
-        fertigeBeitraege.set(eintrag.slot, { ...reel, folien: [{ art: "titel", titel: reel.szenen[0]?.titel, icon: reel.szenen[0]?.icon }], kurztitel: reel.szenen[0]?.titel || reel.kurztitel });
+        fertigeBeitraege.set(eintrag.slot, { ...reel, folien: [{ art: "titel", titel: reel.szenen[0]?.titel, icon: reel.szenen[0]?.icon }], kurztitel: reel.kurztitel });
         ledgerSpeichern(ledgerPfad, ledger); planSpeichern(hosting, plan);
         ruecklageAktualisieren();
         hosting.commit(`Veröffentlicht: Reel ${datum} ${eintrag.slot}`); await hosting.push();

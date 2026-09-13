@@ -489,14 +489,13 @@ test("Reel-Cover zeigt Thema, Fach und Dauer", async () => {
   const { coverDaten } = await import("../src/reel.mjs");
   const reel = { fach: "ust", klausur: 1, kurztitel: "Organschaft: Wer schuldet die Umsatzsteuer?", szenen: [{ titel: "Organschaft" }, { titel: "Schritt 1", icon: "kreislauf" }] };
   const daten = coverDaten(reel, { gesamt: 44.6 });
-  /* Auf dem Cover steht der Aufhaenger, nicht das Kurzetikett - sonst tragen
-     Standbild und Video zwei verschiedene Ueberschriften. */
-  assert.equal(daten.titel, reel.szenen[0].titel);
-  assert.equal(coverDaten({ ...reel, szenen: [] }, { gesamt: 44.6 }).titel, reel.kurztitel, "ohne Szenen bleibt das Kurzetikett");
+  /* Der Kurztitel fasst das ganze Reel zusammen und darf vom ersten
+     gesprochenen Satz abweichen - er steht auf dem Cover. */
+  assert.equal(daten.titel, reel.kurztitel);
   assert.equal(daten.ueberzeile, "Reel · 45 Sekunden");
   assert.equal(daten.icon, "kreislauf");
   const html = coverHtml(daten, kontext({ fach: "ust", klausur: 1 }));
-  assert.ok(html.includes("Organschaft"), "Thema fehlt");
+  assert.ok(html.includes("Umsatzsteuer?"), "Thema fehlt");
   assert.ok(html.includes("reelmarke"), "Reel-Kennzeichnung fehlt");
   assert.ok(html.includes("45 Sekunden"), "Dauer fehlt");
   assert.ok(html.includes("class=\"story cover\""), "Cover-Klasse fehlt");
@@ -1639,4 +1638,36 @@ test("Langes Wort bleibt in seiner Pille – gemessen am Text, nicht an scrollWi
   }
   assert.equal(verletzt, 0, `die Überschrift ragt in ${verletzt} Zeilen über ihre Pille hinaus`);
   fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik", async () => {
+  const { coverHtml, folieHtml } = await import("../src/vorlagen.mjs");
+  const ctx = kontext({ fach: "zpo", klausur: 1 });
+  const titel = "Kosten und Anwaltszuziehung trennen";
+  const cover = coverHtml({ titel, ueberzeile: "Reel · 91 Sekunden", dauerText: "In 91 Sekunden erklärt", icon: "waage", fach: "zpo", klausur: 1 }, ctx);
+  const folie = folieHtml({ art: "titel", titel, untertitel: "Dauerbrenner im Examen", icon: "waage" }, ctx, 1, 6);
+
+  /* Beide setzen den Titel in Pillen ZEILE FÜR ZEILE. Bis zum 13.09. legte
+     nur die Titelfolie die .z-Spanne an; das Cover bekam einen einzigen
+     Kasten um den ganzen Titel und sah im Profilraster aus wie ein fremder
+     Kanal. */
+  for (const [was, html] of [["Cover", cover], ["Titelfolie", folie]]) {
+    assert.ok(/<h1[^>]*><span class="z">/.test(html), `${was}: Titel ohne Zeilenpille`);
+  }
+  /* Und das Cover nimmt die Story-Regel zurück, die einen Grund um das ganze
+     h1 legt - sonst läge die Pille in der Pille. */
+  assert.ok(/\.story\.cover h1\{[^}]*background:none/.test(cover), "Cover: der Kasten um das ganze h1 ist nicht zurückgenommen");
+  /* Gleiche Schriftgrößen: Was die Titelfolie im bunten Stil setzt, setzt das
+     Cover auch - sonst steht dieselbe Überschrift zweimal verschieden groß. */
+  const buntGroesse = folie.match(/h1\{margin-top:72px;font-size:(\d+)px/)?.[1];
+  const coverGroesse = cover.match(/\.story\.cover h1\{[^}]*font-size:(\d+)px/)?.[1];
+  assert.ok(buntGroesse, "Titelfolie: Schriftgröße nicht gefunden");
+  assert.equal(coverGroesse, buntGroesse);
+  /* Auch die beiden Stufen für lange Titel. Gesucht wird das Paar, das im
+     bunten Stil für die Titelfolie gilt - „.story h1.klein" ist eine andere
+     Regel und darf nicht dazwischenfunken. */
+  const stufen = folie.match(/(?:^|[};\n])h1\.klein\{font-size:(\d+)px\}h1\.winzig\{font-size:(\d+)px\}/);
+  assert.ok(stufen, "Titelfolie: Stufen für lange Titel nicht gefunden");
+  assert.equal(cover.match(/\.story\.cover h1\.klein\{font-size:(\d+)px/)?.[1], stufen[1], "Größe für .klein weicht ab");
+  assert.equal(cover.match(/\.story\.cover h1\.winzig\{font-size:(\d+)px/)?.[1], stufen[2], "Größe für .winzig weicht ab");
 });
