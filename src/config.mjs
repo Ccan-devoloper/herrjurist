@@ -62,6 +62,10 @@ export const CONFIG = {
        doch wieder, bekommt der Autor die Auflage, es anders zu verpacken
        (planer.mjs, thema.zuletzt). */
     themenSperreTage: Number(env("IG_THEMENSPERRE_TAGE", "200")),
+    /* Eigene Sperre für Story-Themen. Kürzer als bei Beiträgen, weil täglich
+       neun Stories laufen und der Vorrat je Art sonst nicht reicht; greift der
+       Vorrat nicht, kommt die Art an diesem Tag seltener dran (planer.mjs). */
+    storySperreTage: Number(env("IG_STORYSPERRE_TAGE", "60")),
     /* Gewichtung nach Examenspriorität (🔴/🟠/🟢) – wie auf der Webseite. */
     prioritaetGewicht: { hoch: 60, mittel: 25, selten: 15 },
     /* Wöchentlicher Formatplan der Beiträge (0 = Sonntag). Ein Format aus

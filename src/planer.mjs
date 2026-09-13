@@ -78,24 +78,45 @@ function gewichteteWahl(kandidaten, zufall, ledger, strategie = null) {
 /* Was wurde zu einem Thema zuletzt veröffentlicht? Der jüngste Eintrag zählt –
    daraus wird die Sperre berechnet und, bei einer Wiederholung, die Auflage an
    den Autor, das Thema anders zu verpacken. */
-function letzteBeitraege(ledger) {
+/** Wann ein Thema zuletzt lief - getrennt nach Beitrag und Story. */
+function letzteNutzung(ledger, art) {
   const m = new Map();
   for (const e of ledger.veroeffentlicht || []) {
-    if (!e.thema || e.art !== "beitrag") continue;
+    if (!e.thema || e.art !== art) continue;
     const alt = m.get(e.thema);
     if (!alt || (e.datum || "") > (alt.datum || "")) m.set(e.thema, e);
   }
   return m;
 }
 
-function verfuegbar(pool, ledger, datum, benutzt) {
-  const sperre = CONFIG.plan.themenSperreTage;
-  const zuletzt = letzteBeitraege(ledger);
+/**
+ * Themen, die für diese Art gerade frei sind.
+ *
+ * Beiträge und Stories haben getrennte Sperren: Eine Story darf ein Thema
+ * aufgreifen, das als Beitrag lief (und umgekehrt) - das ist Wiederholung,
+ * kein Doppel. Zwei Stories zum selben Thema kurz hintereinander sind es
+ * schon: Am 12. und 13.09. stand zweimal „Dienst- oder Werkvertrag?" als
+ * Norm des Tages, weil die Sperre Stories gar nicht ansah.
+ */
+function verfuegbar(pool, ledger, datum, benutzt, art = "beitrag") {
+  const sperre = art === "story" ? CONFIG.plan.storySperreTage : CONFIG.plan.themenSperreTage;
+  const zuletzt = letzteNutzung(ledger, art);
   return pool.filter((t) => {
     if (benutzt.has(t.id)) return false;
     const e = zuletzt.get(t.id);
     return !e || tageBis(datum, new Date(`${e.datum}T12:00:00Z`)) >= sperre;
   });
+}
+
+/**
+ * Notfall, wenn der Vorrat einer Story-Art erschöpft ist: das am längsten
+ * zurückliegende Thema zuerst. Betrifft vor allem Rechenwege - bei Herr
+ * Jurist gibt es dafür nur eine Handvoll Themen.
+ */
+function aeltesteZuerst(pool, ledger, benutzt, art = "story") {
+  const zuletzt = letzteNutzung(ledger, art);
+  const wann = (t) => zuletzt.get(t.id)?.datum || "0000-00-00";
+  return pool.filter((t) => !benutzt.has(t.id)).sort((a, b) => wann(a).localeCompare(wann(b))).slice(0, 5);
 }
 
 function storyZeiten(anzahl, zufall) {
@@ -148,7 +169,7 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
   const ledgerKopie = { ...ledger, fachZaehler: { ...(ledger.fachZaehler || {}) } };
 
   const beitraegeBisher = [];
-  const vorher = letzteBeitraege(ledger);
+  const vorher = letzteNutzung(ledger, "beitrag");
   const beitraege = formate.map((format, i) => {
     const typen = FORMAT_QUELLEN[format] || [];
     let thema = null;
@@ -198,7 +219,15 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
     let thema = null;
     const typen = { frage: ["quiz", "karteikarte"], norm: ["modul", "begriff"], merksatz: ["modul"], formel: ["formel"], begriff: ["begriff", "karteikarte"], fehler: ["modul"], tipp: ["modul"], zahl: ["formel", "modul"] }[art];
     if (typen) {
-      const kandidaten = verfuegbar(pool, ledgerKopie, datum, benutzt).filter((t) => typen.includes(t.typ));
+      const passend = pool.filter((t) => typen.includes(t.typ));
+      let kandidaten = verfuegbar(passend, ledgerKopie, datum, benutzt, "story");
+      /* Vorrat dieser Art erschöpft? Erst eine andere Art versuchen - erst
+         wenn die Runde fast durch ist, das älteste Thema wiederholen. So
+         erscheinen Rechenwege bei dünner Auswahl seltener statt doppelt. */
+      if (!kandidaten.length) {
+        if (k < 25) continue;
+        kandidaten = aeltesteZuerst(passend, ledgerKopie, benutzt);
+      }
       if (!kandidaten.length) continue;
       thema = gewichteteWahl(kandidaten, zufall, ledgerKopie, strategie);
       benutzt.add(thema.id);
