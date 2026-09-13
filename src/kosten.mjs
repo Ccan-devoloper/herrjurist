@@ -47,6 +47,27 @@ export const reservierung = () => reserviert;
     Lauf des Tages damit weiterrechnet statt mit der Schätzung. */
 export const messungen = () => ({ ...GEMESSEN });
 
+/* Wie viel vom Tagesbudget für das Reel zurückgelegt wird.
+   Die Zahl aus der Konfiguration war eine Schätzung aus der Anfangszeit und
+   blieb es: 0,11 $ standen jeden Tag fest, obwohl ein Reel gemessen die
+   Hälfte kostet. Am 13.09. kippte das den Tag – ein beanstandeter Entwurf
+   hatte Geld gekostet, und vom Rest war so viel gebunden, dass kein Beitrag
+   mehr geschrieben werden durfte, während das Reel auf Geld saß, das es nie
+   brauchen würde. Jetzt zählt der mittlere Reel-Tag der letzten Woche plus ein
+   Viertel Zuschlag; die Konfiguration ist nur noch die Obergrenze, solange
+   nichts gemessen wurde. */
+export function reelReserve(tage = {}, deckel = 0.11, fenster = 7) {
+  const werte = Object.keys(tage).sort().slice(-fenster)
+    .map((d) => (tage[d]?.zwecke?.reel || 0) + (tage[d]?.zwecke?.["reel-faktencheck"] || 0))
+    .filter((v) => v > 0);
+  if (!werte.length) return deckel;
+  /* Der Mittelwert der Tage, nicht der teuerste: Ein Tag mit Neuversuch darf
+     nicht jeden folgenden Tag Geld binden. Der Zuschlag deckt die Schwankung. */
+  const sortiert = werte.sort((a, b) => a - b);
+  const mitte = sortiert.length % 2 ? sortiert[(sortiert.length - 1) / 2] : (sortiert[sortiert.length / 2 - 1] + sortiert[sortiert.length / 2]) / 2;
+  return Math.min(deckel, Math.max(0.05, Math.round(mitte * 1.25 * 1000) / 1000));
+}
+
 export const tagesStand = () => vorbelastung + summe();
 export const tagesLimit = () => limitUsd;
 

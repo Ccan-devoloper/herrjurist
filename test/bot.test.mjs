@@ -808,7 +808,7 @@ test("Strenger Faktencheck: ohne Prüfung erscheint kein Beitrag", async () => {
   const alt = CONFIG.faktencheck.aktiv;
   CONFIG.faktencheck.aktiv = false;
   const r = await pruefeFakten({ folien: [{ art: "titel", titel: "Test" }] });
-  assert.deepEqual(r, { ok: true, fehler: [], hinweise: [], korrekturen: [] });
+  assert.deepEqual(r, { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] });
   CONFIG.faktencheck.aktiv = alt;
   assert.equal(CONFIG.faktencheck.strikt, true, "streng ist der Standard");
 });
@@ -1300,4 +1300,32 @@ test("Erfundene Firmennamen werden erkannt und aus früheren Inhalten gesperrt",
   const ergebnis = pruefeBeitrag({ folien: [{ art: "titel", titel: "Frage" }, { art: "text", titel: "Fall", text: "Die Nordlicht GmbH verkauft eine Maschine an die Nordfeld KG." }, { art: "cta" }], caption: "Test" });
   assert.ok(ergebnis.fehler.some((f) => /Nordlicht/.test(f) && /Nordfeld/.test(f)));
   fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("Reel-Reserve folgt den gemessenen Reel-Tagen statt der Schätzung", async () => {
+  const { reelReserve } = await import("../src/kosten.mjs");
+  /* Ohne Messung bleibt es beim Wert aus der Konfiguration. */
+  assert.equal(reelReserve({}, 0.11), 0.11);
+  /* Drei Tage, einer davon ein Ausreißer mit Neuversuch: der mittlere zählt. */
+  const tage = {
+    "2026-09-10": { zwecke: { reel: 0.06, "reel-faktencheck": 0.006 } },
+    "2026-09-11": { zwecke: { reel: 0.094, "reel-faktencheck": 0.007 } },
+    "2026-09-12": { zwecke: { reel: 0.044, "reel-faktencheck": 0.002 } },
+    "2026-09-13": { zwecke: { stories: 0.08 } },
+  };
+  const r = reelReserve(tage, 0.11);
+  assert.ok(r > 0.05 && r < 0.11, `Reserve ${r} liegt nicht zwischen Untergrenze und Deckel`);
+  assert.equal(r, 0.083);
+  /* Der Deckel bleibt hart: teure Tage binden nie mehr als konfiguriert. */
+  assert.equal(reelReserve({ a: { zwecke: { reel: 0.5 } } }, 0.11), 0.11);
+  /* Untergrenze gegen einen einzelnen Billigtag. */
+  assert.equal(reelReserve({ a: { zwecke: { reel: 0.01 } } }, 0.11), 0.05);
+});
+
+test("Fachfehler mit austauschbarer Stelle wird berichtigt, nicht neu geschrieben", async () => {
+  const { korrekturenAnwenden } = await import("../src/faktencheck.mjs");
+  const beitrag = { folien: [{ art: "text", titel: "Prüfung", text: "Die Klage prüft Rechtswidrigkeit und Rechtsverletzung." }] };
+  const n = korrekturenAnwenden(beitrag, [{ original: "Rechtswidrigkeit und Rechtsverletzung", ersatz: "Rechtswidrigkeit und Verletzung in eigenen Rechten" }]);
+  assert.equal(n, 1);
+  assert.match(beitrag.folien[0].text, /Verletzung in eigenen Rechten/);
 });
