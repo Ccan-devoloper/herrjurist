@@ -149,6 +149,51 @@ export function uebernahmeLaeufe(text, k = korpus()) {
   return laeufe;
 }
 
+/* Nachträglich gesperrte Namen (z. B. aus früheren Beiträgen) kommen in
+   denselben Topf wie die Sperrliste: Prompt und Prüfung sehen sie gleich. */
+export function namenSperren(liste) {
+  const k = korpus();
+  for (const n of liste || []) if (n && !k.namen.includes(n)) k.namen.push(n);
+  return k.namen.length;
+}
+
+/* Erfundene Firmennamen in einem Text („Nordlicht GmbH“ → „Nordlicht“).
+   Nur der Stamm zählt, damit auch „Nordlicht KG“ oder „Nordlicht AG“ als
+   Wiederholung gilt. Gattungswörter und Artikel davor sind keine Namen. */
+const FIRMENFORM = /(?:^|[^A-Za-zÄÖÜäöüß-])((?:[A-ZÄÖÜ][a-zäöüß]+(?:-[A-ZÄÖÜ][a-zäöüß]+)?)(?: [A-ZÄÖÜ][a-zäöüß]+)?) (?:GmbH & Co\. KG|GmbH|KG|AG|OHG|UG|GbR|e\. ?K\.|SE)(?![A-Za-zäöüß])/g;
+const KEIN_FIRMENNAME = /^(?:Die|Der|Das|Des|Dem|Den|Eine?|Einer|Diese|Dieser|Jede|Jeder|Keine|Unsere|Ihre|Seine|Neue|Alte|Zwei|Drei|Vier|Beteiligung|Holding|Tochter|Mutter|Vertrieb|Handel|Bau|Immobilien|Verwaltung|Beratung|Kapital|Personen|Gesellschaft|Firma|Mini-Fall|Beispiel|Fall|Zwischen)$/;
+export function firmenNamen(text) {
+  const namen = new Set();
+  for (const m of String(text).matchAll(FIRMENFORM)) {
+    /* Voranstehende Artikel und Gattungswörter („Mini-Fall Nordlicht GmbH“) gehören nicht zum Namen. */
+    const teile = m[1].trim().split(" ");
+    while (teile.length > 1 && (KEIN_FIRMENNAME.test(teile[0]) || /(?:beispiel|fall|sachverhalt|firma)$/i.test(teile[0]))) teile.shift();
+    const stamm = teile.join(" ");
+    const letztes = stamm.split(" ").pop();
+    if (KEIN_FIRMENNAME.test(stamm) || KEIN_FIRMENNAME.test(letztes) || /(?:ung|heit|keit|schaft)$/.test(letztes) || stamm.length < 4) continue;
+    namen.add(stamm);
+  }
+  return [...namen];
+}
+
+/* Firmennamen aus allen bereits geschriebenen Inhalten der letzten Tage –
+   bis zum Vortag, damit ein heute schon geschriebener Text sich nicht selbst
+   sperrt, wenn er vor dem Veröffentlichen erneut geprüft wird. Ein
+   erfundener Name ist nur dann unverdächtig, wenn er jedes Mal ein anderer
+   ist: dieselbe „Nordlicht GmbH“ in zehn Beiträgen wirkt wie ein
+   übernommener Fall. */
+export function benutzteFirmen(inhalteDir, datum, tage = 180) {
+  if (!inhalteDir || !fs.existsSync(inhalteDir)) return [];
+  const ab = new Date(new Date(`${datum}T12:00:00Z`).getTime() - tage * 864e5).toISOString().slice(0, 10);
+  const namen = new Set();
+  for (const datei of fs.readdirSync(inhalteDir).sort()) {
+    const tag = datei.slice(0, 10);
+    if (!datei.endsWith(".json") || tag < ab || tag >= datum) continue;
+    try { for (const n of firmenNamen(fs.readFileSync(path.join(inhalteDir, datei), "utf8"))) namen.add(n); } catch { /* defekte Datei zählt nicht */ }
+  }
+  return [...namen];
+}
+
 export function gesperrteNamen(text, k = korpus()) {
   const t = ` ${String(text)} `;
   return k.namen.filter((n) => new RegExp(`(^|[^a-zäöüß])${n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-zäöüß]|$)`, "u").test(t));

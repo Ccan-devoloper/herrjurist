@@ -22,7 +22,7 @@ import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken } from "./planer.mjs";
-import { pruefeBeitrag } from "./pruefung.mjs";
+import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben } from "./autor.mjs";
 import { reelBauen } from "./reel.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
@@ -94,6 +94,12 @@ async function main() {
 
   const hosting = new Hosting({ pushen: !nurPlanen }).vorbereiten();
   const ledgerPfad = path.join(hosting.stateDir, "ledger.json");
+
+  /* Erfundene Firmennamen früherer Beiträge sperren: Der Autor bekommt sie
+     als Sperrliste, die Prüfung weist Wiederholungen ab. So gibt es keine
+     Haus-Firma, die in jedem zweiten Beitrag auftaucht. */
+  const alteFirmen = benutzteFirmen(path.join(hosting.stateDir, "inhalte"), datum);
+  if (alteFirmen.length) namenSperren(alteFirmen);
 
   /* Tagesdeckel: bisheriger Verbrauch des Tages aus state/kosten.json, jeder
      weitere Aufruf wird sofort dort festgehalten. */
