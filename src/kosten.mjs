@@ -17,7 +17,12 @@ let limitUsd = Infinity, vorbelastung = 0, speichern = null;
 /* Für das Reel des Tages zurückgelegter Betrag. Alle anderen Aufrufe hören
    entsprechend früher auf, damit das Reel am Abend noch geschrieben werden
    kann – es soll täglich erscheinen. */
-let reserviert = 0, reserviertFuer = "";
+let reserviert = 0, reserviertFuer = ["reel"], reserviertLabel = "das Reel";
+/* Zwecke, die auf die Rücklage zugreifen dürfen – als Liste, denn die Rücklage
+   gilt inzwischen allen noch zu schreibenden Beiträgen des Tages, nicht nur
+   dem Reel. Verglichen wird der Zweck-Schlüssel, nicht der Wortlaut: Der
+   „Story-Faktencheck“ enthält zwar „faktencheck“, bleibt aber außen vor. */
+const zweckListe = (f) => (Array.isArray(f) ? f : [f]).map((x) => String(x).toLowerCase()).filter(Boolean);
 
 export class BudgetFehler extends Error {}
 
@@ -35,12 +40,13 @@ export function budgetSetzen(opt = {}) {
   vorbelastung = opt.bisher ?? 0;
   speichern = opt.speichern ?? null;
   reserviert = opt.reserviert ?? 0;
-  reserviertFuer = (opt.reserviertFuer ?? "reel").toLowerCase();
+  reserviertFuer = zweckListe(opt.reserviertFuer ?? "reel");
+  reserviertLabel = opt.reserviertLabel ?? "das Reel";
 }
 
 /* Hebt die Rücklage auf, sobald das Reel steht (oder feststeht, dass heute
    keines mehr kommt). Danach darf der Rest des Tages sie ausschöpfen. */
-export function reservieren(betrag, fuer = "reel") { reserviert = Math.max(0, Number(betrag) || 0); reserviertFuer = String(fuer).toLowerCase(); }
+export function reservieren(betrag, fuer = "reel", label = "das Reel") { reserviert = Math.max(0, Number(betrag) || 0); reserviertFuer = zweckListe(fuer); reserviertLabel = label; }
 export function reservierungAufheben() { reserviert = 0; }
 export const reservierung = () => reserviert;
 /** Teuerster Aufruf je Zweck – wandert in state/kosten.json, damit der nächste
@@ -106,13 +112,15 @@ const schluessel = (zweck) => Object.keys(ERWARTET).sort((a, b) => b.length - a.
    obwohl es bezahlbar gewesen wäre. */
 const GEMESSEN = {};
 const erwartetFuer = (zweck) => { const k = schluessel(zweck); if (!k) return STANDARD; return GEMESSEN[k] ?? ERWARTET[k]; };
+/* Für die Rücklage im Lauf: was ein Aufruf dieses Zwecks heute voraussichtlich kostet. */
+export const erwartet = (zweck) => erwartetFuer(zweck);
 
-const darfReserve = (zweck) => Boolean(reserviertFuer) && String(zweck).toLowerCase().includes(reserviertFuer);
+const darfReserve = (zweck) => reserviertFuer.includes(schluessel(zweck) || String(zweck).toLowerCase());
 export const budgetFrei = (zweck = "") => tagesStand() + erwartetFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
 
 export function budgetPruefen(zweck = "Claude-Aufruf") {
   if (budgetFrei(zweck)) return;
-  const rest = reserviert && !darfReserve(zweck) ? ` (davon ${reserviert.toFixed(2)} $ für das Reel zurückgelegt)` : "";
+  const rest = reserviert && !darfReserve(zweck) ? ` (davon ${reserviert.toFixed(2)} $ für ${reserviertLabel} zurückgelegt)` : "";
   throw new BudgetFehler(`Tagesbudget erreicht (${tagesStand().toFixed(3)} $ von ${limitUsd.toFixed(2)} $)${rest} – ${zweck} wartet bis morgen.`);
 }
 

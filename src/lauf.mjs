@@ -21,7 +21,7 @@ import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool } from "./inhalte.mjs";
-import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken } from "./planer.mjs";
+import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben } from "./autor.mjs";
 import { reelBauen } from "./reel.mjs";
@@ -34,7 +34,7 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, reservierungAufheben, tagesStand, tagesLimit, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -92,7 +92,10 @@ async function titelfolieBebildern(beitrag) {
 async function main() {
   log(`Instagram-Bot · ${datum} · Stil ${CONFIG.marke.stil} · ${trocken ? "TROCKENLAUF" : "live"}`);
 
-  const hosting = new Hosting({ pushen: !nurPlanen }).vorbereiten();
+  /* IG_NO_PUSH=true: nichts in den Assets-Zweig pushen – für Trockenläufe
+     gegen eine Kopie des Zustands. Ein Trockenlauf am 13.09. hatte sonst
+     Beispieltexte für den Folgetag in den echten Zweig geschoben. */
+  const hosting = new Hosting({ pushen: !nurPlanen && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
   const ledgerPfad = path.join(hosting.stateDir, "ledger.json");
 
   /* Erfundene Firmennamen früherer Beiträge sperren: Der Autor bekommt sie
@@ -183,6 +186,15 @@ async function main() {
       beitraege: p.beitraege.map((b) => ({ slot: b.slot, zeit: b.zeit, format: b.format, themaId: b.thema?.id || null, themaTitel: b.thema?.titel || null, fach: b.thema?.fach || null, lang: b.lang, status: "geplant" })),
       stories: p.stories.map((s) => ({ slot: s.slot, zeit: s.zeit, art: s.art, themaId: s.thema?.id || null, beitragSlot: s.beitragSlot || null, tageBisExamen: s.tageBisExamen, status: "geplant" })),
     };
+    /* Übertrag von gestern: nicht erschienene Beiträge zuerst. Ein schon
+       geschriebener Text zieht mit um und kostet nichts mehr. */
+    const gestern = new Date(new Date(`${datum}T12:00:00Z`).getTime() - 86400000).toISOString().slice(0, 10);
+    const planGestern = hosting.jsonLesen(`plaene/${gestern}.json`, null);
+    for (const { alt, ziel } of uebertragen(plan, planGestern?.trocken ? null : planGestern, gestern)) {
+      const text = alt.textFehler ? null : hosting.jsonLesen(`inhalte/${gestern}-${alt.slot}.json`, null);
+      if (text) { text.slug = `${datum}-${ziel.slot}`; hosting.jsonSchreiben(`inhalte/${datum}-${ziel.slot}.json`, text); }
+      log(`  Übertrag von gestern: ${alt.format} „${alt.themaTitel || alt.slot}“ → ${ziel.slot} ${ziel.zeit}${text ? " (Text vorhanden)" : ""}`);
+    }
     planSpeichern(hosting, plan);
     log(`Tagesplan erzeugt: ${plan.beitraege.length} Beiträge, ${plan.stories.length} Stories`);
     if (CONFIG.plan.zeitLernen) {
@@ -198,13 +210,24 @@ async function main() {
 
   if (auffuellen > 0) { await auffuellenLauf(auffuellen, { hosting, ledger, ledgerPfad, pool, poolIndex, strategie }); return; }
 
-  /* Das Reel des Tages ist gesetzt: Solange es aussteht, bleibt ein Teil des
-     Tagesbudgets dafür zurückgelegt, damit es nicht an Beiträgen, Recherche
-     oder Auffüllen scheitert. */
-  const reelOffen = plan.beitraege.some((b) => b.format === "reel" && b.status !== "veroeffentlicht" && !b.fehler);
-  const reserve = reelReserve(kostenStart.tage, CONFIG.ki.reelReserveUsd);
-  if (reelOffen && !trocken) { reservieren(reserve); log(`  ${reserve.toFixed(3)} $ für das Reel zurückgelegt`); }
-  else reservierungAufheben();
+  /* Rücklage für alles, was heute noch zu schreiben ist: Solange ein Beitrag
+     oder das Reel keinen Text hat, bleibt sein erwarteter Preis zurückgelegt,
+     damit Stories, Interaktion oder Auffüllen ihn nicht aufbrauchen. Am
+     13.09. war nur das Reel geschützt – und zwei Beiträge fielen aus. Die
+     Rücklage schrumpft mit jedem geschriebenen Text. */
+  const textDatei = (b) => `inhalte/${datum}-${b.slot}.json`;
+  const textFehlt = (b) => b.status !== "veroeffentlicht" && !b.fehler && !b.textFehler && !hosting.jsonLesen(textDatei(b), null);
+  const ruecklageAktualisieren = () => {
+    const offen = trocken ? [] : plan.beitraege.filter(textFehlt);
+    let summe = 0;
+    for (const b of offen) summe += b.format === "reel" ? reelReserve(kostenStart.tage, CONFIG.ki.reelReserveUsd) : erwartet("autor") + erwartet("faktencheck");
+    summe = Math.round(summe * 1000) / 1000;
+    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "recherche", "reel", "reel-faktencheck"], `${offen.length} noch zu schreibende Beiträge`);
+    else reservierungAufheben();
+    return summe;
+  };
+  const ruecklage = ruecklageAktualisieren();
+  if (ruecklage > 0) log(`  ${ruecklage.toFixed(3)} $ für ${plan.beitraege.filter(textFehlt).length} noch zu schreibende Beiträge zurückgelegt`);
 
   const jetzt = lokaleMinuten();
   const faellig = (e) => e.status !== "veroeffentlicht" && (alles || minutenVon(e.zeit) <= jetzt);
@@ -279,6 +302,66 @@ async function main() {
      sonst frisst es morgens das Tagesbudget, und Reel und Stories fallen aus. */
   const tagesplanFertig = plan.beitraege.every((b) => b.status === "veroeffentlicht" || b.fehler);
   const auffuellOffen = !trocken && !nurPlanen && tagesplanFertig && (() => { const a = hosting.jsonLesen("auffuellen.json", null); return a && a.fertig < a.ziel; })();
+  /* --- Texte des Tages vorab ---------------------------------------------
+     Reel und Beiträge bekommen ihren Text im ersten Lauf des Tages, solange
+     das Budget voll ist – nicht erst zur Sendezeit. Was morgens nicht
+     bezahlbar ist, weiß man morgens; abends ist es zu spät. Reihenfolge:
+     erst das Reel (größte Reichweite), dann die Beiträge nach Uhrzeit.
+     Ausnahme: die Lösungsskizze am Klausurtag braucht die Berichte des
+     Nachmittags. Geschriebene Texte liegen unter inhalte/ und kosten später
+     nichts mehr. */
+  const textBesorgen = async (eintrag) => {
+    const vorhanden = hosting.jsonLesen(textDatei(eintrag), null);
+    if (vorhanden) return vorhanden;
+    const thema = themaFuer(eintrag.themaId);
+    let text;
+    if (eintrag.format === "reel") {
+      text = await reelSchreiben({ thema, datum, lang: Boolean(eintrag.lang), anlass: plan.anlass, strategie });
+    } else {
+      let recherche = null, wochenThemen = null;
+      if (eintrag.format === "aktuell" || eintrag.format === "loesungsskizze") {
+        const bisher = (ledger.veroeffentlicht || []).filter((e) => e.format === "aktuell").slice(-12).map((e) => e.titel);
+        recherche = eintrag.format === "loesungsskizze" ? await loesungsRecherchieren(datum, eintrag.anlass || plan.abendAnlass) : await aktuellRecherchieren(datum, bisher);
+        log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
+      }
+      if (eintrag.format === "wochenrueckblick") {
+        const grenze = new Date(new Date(`${datum}T12:00:00Z`).getTime() - 7 * 86400000).toISOString().slice(0, 10);
+        wochenThemen = (ledger.veroeffentlicht || []).filter((e) => e.art === "beitrag" && e.datum >= grenze).map((e) => e.titel);
+        if (!wochenThemen.length) wochenThemen = pool.filter((t) => t.prioritaet === "hoch").slice(0, 5).map((t) => t.titel);
+      }
+      text = await beitragSchreiben({ format: eintrag.format, thema, datum, recherche, wochenThemen, anlass: eintrag.format === "anlass" ? plan.anlass : eintrag.format === "loesungsskizze" ? plan.abendAnlass : null, strategie });
+    }
+    text.slug = `${datum}-${eintrag.slot}`;
+    hosting.jsonSchreiben(textDatei(eintrag), text);
+    ruecklageAktualisieren();
+    return text;
+  };
+  const vorab = plan.beitraege.filter((b) => textFehlt(b) && b.format !== "loesungsskizze").sort((a, b) => (a.format === "reel" ? -1 : 0) - (b.format === "reel" ? -1 : 0));
+  let vorabGeschrieben = 0, vorabGescheitert = 0;
+  for (const eintrag of vorab) {
+    try {
+      log(`Text vorab: ${eintrag.format === "reel" ? "Reel" : "Beitrag"} ${eintrag.slot} ${eintrag.themaTitel || ""}`);
+      await textBesorgen(eintrag);
+      vorabGeschrieben++;
+    } catch (e) {
+      if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); break; }
+      /* Nach allen Versuchen nicht freigegeben: heute nicht noch einmal
+         bezahlen – morgen mit frischem Entwurf, der Plan trägt ihn über.
+         Alles andere (Netz, API) ist vorübergehend: der nächste Lauf
+         versucht es wieder, ohne dass etwas verloren ist. */
+      if (/nicht freigegeben/.test(e.message)) {
+        eintrag.textFehler = `${new Date().toISOString()} ${e.message}`;
+        eintrag.fehler = eintrag.textFehler;
+        vorabGescheitert++;
+      }
+      console.error(`  ✗ Text ${eintrag.slot}: ${e.message.split("\n")[0]}`);
+    }
+  }
+  if (vorabGeschrieben || vorabGescheitert) {
+    planSpeichern(hosting, plan);
+    hosting.commit(`Texte ${datum} vorab (${vorabGeschrieben})`); await hosting.push();
+  }
+
   if (!beitraegeFaellig.length && !storiesFaellig.length && !auffuellOffen) { log("Nichts fällig."); return; }
   const frei = () => kontingent.maximum - kontingent.genutzt - CONFIG.instagram.sicherheitsabstandLimit;
 
@@ -333,15 +416,11 @@ async function main() {
   /* Dann die Beiträge (wichtiger), zuletzt die Stories veröffentlichen. */
   for (const eintrag of beitraegeFaellig) {
     if (frei() <= 0) { log("Tageskontingent erschöpft – Beitrag verschoben."); break; }
+    if (eintrag.textFehler && !hosting.jsonLesen(textDatei(eintrag), null)) continue;
     try {
       log(`Beitrag ${eintrag.slot} (${eintrag.format}) ${eintrag.themaTitel || ""}`);
       if (eintrag.format === "reel") {
-        let reel = hosting.jsonLesen(`inhalte/${datum}-${eintrag.slot}.json`, null);
-        if (!reel) {
-          reel = await reelSchreiben({ thema: themaFuer(eintrag.themaId), datum, lang: Boolean(eintrag.lang), anlass: plan.anlass, strategie });
-          reel.slug = `${datum}-${eintrag.slot}`;
-          hosting.jsonSchreiben(`inhalte/${datum}-${eintrag.slot}.json`, reel);
-        }
+        const reel = await textBesorgen(eintrag);
         const varianteReel = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
         const gewaehlteStimme = stimmeWaehlen({ kandidaten: stimmenListe?.kandidaten || [], ledger, datum, fest: stimmenListe?.fest || null });
         await motivBesorgen(reel, "Reel-Cover");
@@ -363,29 +442,12 @@ async function main() {
         eintrag.kanaele = await verteilen({ art: "reel", videoUrl, videoPfad: r.video, bildUrls: [coverUrl], titel: reel.kurztitel || reel.szenen[0]?.titel, text: caption, hashtags: reel.hashtags }, { log, trockenlauf: trocken, stateDir: hosting.stateDir });
         fertigeBeitraege.set(eintrag.slot, { ...reel, folien: [{ art: "titel", titel: reel.szenen[0]?.titel, icon: reel.szenen[0]?.icon }], kurztitel: reel.kurztitel });
         ledgerSpeichern(ledgerPfad, ledger); planSpeichern(hosting, plan);
-        reservierungAufheben();   // Reel steht, der Rest des Tages darf die Rücklage nutzen
+        ruecklageAktualisieren();
         hosting.commit(`Veröffentlicht: Reel ${datum} ${eintrag.slot}`); await hosting.push();
         log(`  ✓ Reel ${medienId} (${r.dauer.toFixed(0)} s, Stimme: ${r.anbieter})`);
         continue;
       }
-      let beitrag = hosting.jsonLesen(`inhalte/${datum}-${eintrag.slot}.json`, null);
-      if (!beitrag) {
-        const thema = themaFuer(eintrag.themaId);
-        let recherche = null, wochenThemen = null;
-        if (eintrag.format === "aktuell" || eintrag.format === "loesungsskizze") {
-          const bisher = (ledger.veroeffentlicht || []).filter((e) => e.format === "aktuell").slice(-12).map((e) => e.titel);
-          recherche = eintrag.format === "loesungsskizze" ? await loesungsRecherchieren(datum, eintrag.anlass || plan.abendAnlass) : await aktuellRecherchieren(datum, bisher);
-          log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
-        }
-        if (eintrag.format === "wochenrueckblick") {
-          const grenze = new Date(new Date(`${datum}T12:00:00Z`).getTime() - 7 * 86400000).toISOString().slice(0, 10);
-          wochenThemen = (ledger.veroeffentlicht || []).filter((e) => e.art === "beitrag" && e.datum >= grenze).map((e) => e.titel);
-          if (!wochenThemen.length) wochenThemen = pool.filter((t) => t.prioritaet === "hoch").slice(0, 5).map((t) => t.titel);
-        }
-        beitrag = await beitragSchreiben({ format: eintrag.format, thema, datum, recherche, wochenThemen, anlass: eintrag.format === "anlass" ? plan.anlass : eintrag.format === "loesungsskizze" ? plan.abendAnlass : null, strategie });
-        beitrag.slug = `${datum}-${eintrag.slot}`;
-        hosting.jsonSchreiben(`inhalte/${datum}-${eintrag.slot}.json`, beitrag);
-      }
+      const beitrag = await textBesorgen(eintrag);
       const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
       /* Titelbild: Der Autor hat eine Szene beschrieben, bilder.mjs sucht sie.
          Ohne Treffer bleibt es bei der Icon-Bühne - ein beliebiges Symbolfoto

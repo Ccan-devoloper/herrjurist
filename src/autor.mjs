@@ -257,7 +257,7 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
     thinking: { type: "adaptive" },
     output_config: { effort, format: { type: "json_schema", schema } },
   };
-  budgetPruefen(zweck === "reel" ? "Reel-Skript schreiben" : "Text schreiben");
+  budgetPruefen({ reel: "Reel-Skript schreiben", stories: "Stories schreiben" }[zweck] || "Text schreiben (Autor)");
   let response;
   try {
     response = await client().messages.create(basis);
