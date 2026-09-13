@@ -47,7 +47,7 @@ for (const datei of dateien) {
     if (inhalt.folien) {
       const titelfolie = inhalt.folien.find((f) => f.art === "titel");
       if (titelfolie) {
-        const treffer = await titelbild(inhalt, null, { randFarbe: stickerFarbe(inhalt.klausur, CONFIG.marke.stil) });
+        const treffer = await titelbild(inhalt, null, { randFarbe: stickerFarbe(inhalt.klausur, CONFIG.marke.stil), archivDir: path.join(hosting.stateDir, "motive"), datum });
         if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; }
       }
       const pfade = await beitragRendern(inhalt, path.join(ziel, slot), { variante: 0 });
