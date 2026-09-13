@@ -294,6 +294,31 @@ export function auffuellplan(anzahl, ledger = ledgerLaden(), pool = themenpool()
 /* Schwarz/Weiß-Wechsel: immer das Gegenteil des zuletzt veröffentlichten
    Beitrags – unabhängig von Fehlschlägen, Slots oder Tagen. So bleibt das
    Schachbrett im Profil lückenlos. */
+/* Übertrag: Was gestern nicht erschienen ist, kommt heute zuerst – an Stelle
+   eines neu gezogenen Themas gleicher Art (Reel für Reel, Beitrag für
+   Beitrag), damit der Tag nicht teurer wird. Das verdrängte Thema war noch
+   nicht vermerkt und bleibt im Pool. Höchstens einmal, damit ein Thema, das
+   zweimal scheitert, nicht ewig kreist. Formate, die an ihrem Tag hängen
+   (Lösungsskizze zum Klausurtag, Aktuelles, Anlass), bleiben zurück. */
+export function uebertragen(plan, planGestern, gestern) {
+  const fest = new Set(["loesungsskizze", "aktuell", "anlass"]);
+  const offen = (planGestern?.beitraege || []).filter((b) => b.status !== "veroeffentlicht" && !(b.uebertragen >= 1) && !fest.has(b.format) && (b.themaId || b.format === "wochenrueckblick"));
+  const uebernommen = [];
+  for (const alt of offen) {
+    const istReel = alt.format === "reel";
+    let ziel = plan.beitraege.find((b) => (b.format === "reel") === istReel && !b.uebertragenVon);
+    const mitnahme = { format: alt.format, themaId: alt.themaId || null, themaTitel: alt.themaTitel || null, fach: alt.fach || null, lang: alt.lang, uebertragenVon: `${gestern}-${alt.slot}`, uebertragen: (alt.uebertragen || 0) + 1 };
+    if (ziel) Object.assign(ziel, mitnahme);
+    else {
+      const letzte = plan.beitraege[plan.beitraege.length - 1];
+      ziel = { slot: `b${plan.beitraege.length + 1}`, zeit: letzte?.zeit || "12:30", status: "geplant", ...mitnahme };
+      plan.beitraege.push(ziel);
+    }
+    uebernommen.push({ alt, ziel });
+  }
+  return uebernommen;
+}
+
 export function naechsteVariante(ledger) {
   const letzter = [...(ledger.veroeffentlicht || [])].reverse().find((e) => e.art === "beitrag" && e.medienId && e.medienId !== "trocken" && e.variante != null);
   return letzter ? 1 - letzter.variante : 0;

@@ -1329,3 +1329,48 @@ test("Fachfehler mit austauschbarer Stelle wird berichtigt, nicht neu geschriebe
   assert.equal(n, 1);
   assert.match(beitrag.folien[0].text, /Verletzung in eigenen Rechten/);
 });
+
+test("Rücklage gilt allen noch zu schreibenden Beiträgen, nicht den Stories", async () => {
+  const { budgetSetzen, budgetFrei, reservieren, reservierungAufheben, erwartet } = await import("../src/kosten.mjs");
+  budgetSetzen({ limitUsd: 0.15, bisher: 0.05 });
+  reservieren(0.1, ["autor", "faktencheck", "recherche", "reel", "reel-faktencheck"], "zwei Beiträge");
+  assert.equal(budgetFrei("stories"), false, "Stories dürfen die Rücklage nicht anfassen");
+  assert.equal(budgetFrei("Story-Faktencheck"), false, "der Story-Faktencheck auch nicht, obwohl er „faktencheck“ enthält");
+  assert.equal(budgetFrei("Text schreiben (Autor)"), true, "ein Beitrag darf – unter dem Etikett, das der Autor wirklich meldet");
+  assert.equal(budgetFrei("Stories schreiben"), false, "Stories nicht");
+  assert.equal(budgetFrei("Reel-Skript schreiben"), true, "das Reel-Skript darf");
+  assert.equal(budgetFrei("Reel-Faktencheck"), true, "das Reel darf");
+  reservierungAufheben();
+  assert.equal(budgetFrei("stories"), true);
+  assert.ok(erwartet("autor") > 0 && erwartet("reel") > 0);
+  budgetSetzen({});
+});
+
+test("Übertrag: nicht erschienene Beiträge von gestern ersetzen neue Themen gleicher Art", async () => {
+  const { uebertragen } = await import("../src/planer.mjs");
+  const gestern = { datum: "2026-09-13", beitraege: [
+    { slot: "b1", format: "wochenrueckblick", status: "geplant" },
+    { slot: "b2", format: "schema", themaId: "x-1", themaTitel: "Thema X", fach: "zpo", status: "geplant" },
+    { slot: "b3", format: "reel", themaId: "y-2", themaTitel: "Thema Y", fach: "strafat", status: "geplant" },
+    { slot: "b4", format: "schema", themaId: "z-3", themaTitel: "Schon einmal übertragen", status: "geplant", uebertragen: 1 },
+    { slot: "b5", format: "aktuell", themaId: "a-4", status: "geplant" },
+  ] };
+  const heute = { datum: "2026-09-14", beitraege: [
+    { slot: "b1", zeit: "10:30", format: "pruefungsfrage", themaId: "neu-1", themaTitel: "Neu 1", status: "geplant" },
+    { slot: "b2", zeit: "20:30", format: "reel", themaId: "neu-2", themaTitel: "Neu 2", status: "geplant" },
+  ] };
+  const u = uebertragen(heute, gestern, "2026-09-13");
+  assert.equal(u.length, 3, "Wochenrückblick, Schema und Reel kommen mit; das schon übertragene und das Aktuelle nicht");
+  /* Der Wochenrückblick nimmt den ersten Beitragsplatz, das Schema wird angehängt, das Reel ersetzt das Reel. */
+  assert.equal(heute.beitraege[0].format, "wochenrueckblick");
+  assert.equal(heute.beitraege[0].uebertragenVon, "2026-09-13-b1");
+  assert.equal(heute.beitraege[0].zeit, "10:30", "die Uhrzeit von heute bleibt");
+  assert.equal(heute.beitraege[1].themaId, "y-2");
+  assert.equal(heute.beitraege[1].format, "reel");
+  assert.equal(heute.beitraege[2].themaId, "x-1");
+  assert.equal(heute.beitraege[2].slot, "b3");
+  assert.equal(heute.beitraege[2].uebertragen, 1);
+  assert.equal(heute.beitraege.length, 3);
+  /* Ohne gestrigen Plan passiert nichts. */
+  assert.deepEqual(uebertragen({ beitraege: [] }, null, "2026-09-13"), []);
+});
