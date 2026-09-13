@@ -1374,3 +1374,17 @@ test("Übertrag: nicht erschienene Beiträge von gestern ersetzen neue Themen gl
   /* Ohne gestrigen Plan passiert nichts. */
   assert.deepEqual(uebertragen({ beitraege: [] }, null, "2026-09-13"), []);
 });
+
+test("Zweitmeinung: nur bestätigte Einwände bleiben, ohne Urteil gilt der Einwand", async () => {
+  const { urteileAnwenden } = await import("../src/faktencheck.mjs");
+  const befunde = [
+    { stelle: "A", problem: "§ 28 Abs. 1 StGB gilt nicht für Anstifter", korrektur: "…" },
+    { stelle: "B", problem: "Absatz falsch", korrektur: "Abs. 2 statt Abs. 1" },
+    { stelle: "C", problem: "ohne Urteil", korrektur: "…" },
+  ];
+  const { bestaetigt, verworfen } = urteileAnwenden(befunde, [{ nr: 1, zutreffend: false, begruendung: "§ 28 Abs. 1 StGB erfasst Teilnehmer" }, { nr: 2, zutreffend: true, begruendung: "stimmt" }]);
+  assert.deepEqual(verworfen.map((b) => b.stelle), ["A"]);
+  assert.deepEqual(bestaetigt.map((b) => b.stelle), ["B", "C"]);
+  assert.deepEqual(urteileAnwenden(befunde, []).bestaetigt.length, 3);
+  assert.equal(CONFIG.faktencheck.zweitmeinung, true, "Zweitmeinung ist Standard");
+});
