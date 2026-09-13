@@ -322,6 +322,22 @@ export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.
  * Das Tagesbudget ist davon ausgenommen: Ein BudgetFehler heißt „später
  * weiter“, nicht „durchwinken“ – er wandert nach oben, wo der Lauf ihn kennt.
  */
+/* Letzter Ausweg vor der Neufassung: Hat der Faktencheck zu JEDEM Fehler eine
+   austauschbare Wortfolge geliefert, wird sie ersetzt und der Text noch einmal
+   geprüft. Ein Faktencheck kostet ein Zehntel einer Neufassung; misslingt die
+   Berichtigung, geht es den bisherigen Weg. */
+async function nachbessern(inhalt, fakten, pruefen, zweck = "faktencheck") {
+  if (!fakten.behebbar?.length || fakten.behebbar.length < fakten.fehler.length) return null;
+  const n = korrekturenAnwenden(inhalt, fakten.behebbar);
+  if (!n) return null;
+  console.warn(`  ${n} Stelle(n) berichtigt statt neu geschrieben – wird erneut geprüft.`);
+  if (pruefen && !pruefen(inhalt).ok) return null;
+  try {
+    const zweite = await pruefeFakten(inhalt, zweck);
+    return zweite.ok ? zweite : null;
+  } catch { return null; }
+}
+
 async function faktenSicher(inhalt, zweck = "faktencheck", opt = {}) {
   try {
     return await pruefeFakten(inhalt, zweck, opt);
@@ -504,6 +520,8 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
          nicht neu geschrieben - das kostet keinen weiteren Aufruf. */
       korrekturenAnwenden(beitrag, fakten.korrekturen);
       if (fakten.ok) { beitrag.faktenHinweise = fakten.hinweise; return beitrag; }
+      const berichtigt = await nachbessern(beitrag, fakten, pruefeBeitrag);
+      if (berichtigt) { beitrag.faktenHinweise = berichtigt.hinweise; return beitrag; }
       ergebnis.fehler.push(...fakten.fehler.map((f) => `Fachlicher Fehler: ${f}`));
     }
     feedback = ergebnis.fehler.map((f) => `- ${f}`).join("\n");
@@ -750,6 +768,8 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       const fakten = await faktenSicher(reel, "reel-faktencheck");
       korrekturenAnwenden(reel, fakten.korrekturen);
       if (fakten.ok) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; return reel; }
+      const berichtigtesReel = await nachbessern(reel, fakten, null, "reel-faktencheck");
+      if (berichtigtesReel) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; return reel; }
       ergebnis.fehler.push(...fakten.fehler.map((f) => `Fachlicher Fehler: ${f}`));
     }
     feedback = ergebnis.fehler.map((f) => `- ${f}`).join("\n");

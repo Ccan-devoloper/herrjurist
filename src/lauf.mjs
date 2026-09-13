@@ -34,7 +34,7 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reservierungAufheben, tagesStand, tagesLimit, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, reservierungAufheben, tagesStand, tagesLimit, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -196,7 +196,8 @@ async function main() {
      Tagesbudgets dafür zurückgelegt, damit es nicht an Beiträgen, Recherche
      oder Auffüllen scheitert. */
   const reelOffen = plan.beitraege.some((b) => b.format === "reel" && b.status !== "veroeffentlicht" && !b.fehler);
-  if (reelOffen && !trocken) { reservieren(CONFIG.ki.reelReserveUsd); log(`  ${CONFIG.ki.reelReserveUsd.toFixed(2)} $ für das Reel zurückgelegt`); }
+  const reserve = reelReserve(kostenStart.tage, CONFIG.ki.reelReserveUsd);
+  if (reelOffen && !trocken) { reservieren(reserve); log(`  ${reserve.toFixed(3)} $ für das Reel zurückgelegt`); }
   else reservierungAufheben();
 
   const jetzt = lokaleMinuten();
