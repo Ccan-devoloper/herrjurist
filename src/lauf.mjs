@@ -71,10 +71,14 @@ function bildnachweis(beitrag) {
 
 /* Motiv für Reel-Cover oder Story: dieselbe Suche wie für die Titelfolie
    (bildSzene → Pexels → freistellen), abgelegt am Objekt selbst. */
+/* Verzeichnis der archivierten Motive. Steht erst fest, wenn der Asset-Zweig
+   ausgecheckt ist - bis dahin null, dann wird nichts archiviert. */
+let motivArchivDir = null;
+
 async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
   if (!ziel || ziel.bild || !ziel.bildSzene) return;
   try {
-    const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), ...opt });
+    const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, ...opt });
     if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null; }
   } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
 }
@@ -84,7 +88,7 @@ async function titelfolieBebildern(beitrag) {
   const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
   if (!titelfolie || titelfolie.bild) return;
   try {
-    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil) });
+    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum });
     if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; titelfolie.bildBreite = treffer.breite || null; titelfolie.bildHoehe = treffer.hoehe || null; }
   } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
 }
@@ -96,6 +100,7 @@ async function main() {
      gegen eine Kopie des Zustands. Ein Trockenlauf am 13.09. hatte sonst
      Beispieltexte für den Folgetag in den echten Zweig geschoben. */
   const hosting = new Hosting({ pushen: !nurPlanen && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
+  motivArchivDir = path.join(hosting.stateDir, "motive");
   const ledgerPfad = path.join(hosting.stateDir, "ledger.json");
 
   /* Erfundene Firmennamen früherer Beiträge sperren: Der Autor bekommt sie

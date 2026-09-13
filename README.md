@@ -145,6 +145,8 @@ GitHub → Repository → *Settings* → *Secrets and variables* → *Actions*
 | --- | --- | --- |
 | `IG_BILD_KI` | leer | `false` schaltet das Zeichnen ab und sucht wieder Stockfotos |
 | `IG_BILD_KI_GUETE` | `low` | Güte der gezeichneten Motive: `low` ≈ 0,005 $, `medium` ≈ 0,04 $ je Bild |
+| `IG_MOTIV_WIEDER_TAGE` | `90` | so viele Tage muss ein gezeichnetes Motiv ruhen, bevor es wiederverwendet wird |
+| `IG_MOTIV_ARCHIV_MAX` | `300` | so viele Motive hebt das Archiv auf; darüber fällt das am längsten ungenutzte heraus |
 | `IG_HANDLE` | leer | Handle unten links auf jeder Kachel – solange leer, steht dort nichts |
 | `IG_STIL` | `bunt` | Stil: `bunt` (vollflächig in der Klausurtag-Farbe, Pills, mehrere Elemente) · `kanzlei` (schwarz, herrjurist-Look) · `klausurbogen` (Papier/Tinte wie die Webseite) · `campus` (Indigo/Limette). Der Workflow liest diese Variable bewusst **nicht** aus den Repo-Variablen; wer den Stil ändern will, setzt sie im Workflow unter `env`. |
 | `IG_KI_RECHERCHE_SUCHEN` | `4` | Websuchen je Recherche (Format `aktuell`, Lösungsskizzen); jede Suche kostet 0,01 $ plus die Ergebnis-Tokens |

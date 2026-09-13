@@ -77,8 +77,25 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
     return null;
   }
   const geschnitten = zuschneiden(roh);
+  /* Eine randlose Kopie fuers Archiv: Der farbige Rand haengt am Rechtsgebiet
+     und wird bei jeder Verwendung neu gezogen. */
+  const ohneRand = geschnitten.replace(/\.png$/, "-roh.png");
+  fs.copyFileSync(geschnitten, ohneRand);
   const fertig = randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten;
   const m = masse(fertig) || {};
   console.log(`  → Motiv gezeichnet: „${szene}" (${(prof.festigkeit * 100).toFixed(0)} % deckend)`);
+  return { pfad: fertig, ohneRand, breite: m.breite || null, hoehe: m.hoehe || null };
+}
+
+/**
+ * Holt ein archiviertes Motiv hervor und zieht den Rand in der heutigen Farbe.
+ * @returns {{pfad:string, breite:number, hoehe:number}|null}
+ */
+export function motivHervorholen(quelle, { randFarbe = null } = {}) {
+  if (!fs.existsSync(quelle)) return null;
+  const kopie = path.join(os.tmpdir(), `archiv-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
+  fs.copyFileSync(quelle, kopie);
+  const fertig = randFarbe ? bestickern(kopie, randFarbe) : kopie;
+  const m = masse(fertig) || {};
   return { pfad: fertig, breite: m.breite || null, hoehe: m.hoehe || null };
 }

@@ -263,6 +263,11 @@ export const CONFIG = {
          zurück, deshalb wird er hier gesetzt - bewusst über dem Listenpreis. */
       preisUsd: Number(env("IG_BILD_KI_PREIS_USD", "0.01")),
       zeitlimitMs: Number(env("IG_BILD_KI_ZEITLIMIT_MS", "120000")),
+      /* Gezeichnete Motive werden aufgehoben und spaeter wiederverwendet -
+         aber nur mit deutlichem Abstand. Zweimal dasselbe Bild in einer Woche
+         faellt auf, zweimal im Quartal bemerkt niemand. */
+      wiederTage: Number(env("IG_MOTIV_WIEDER_TAGE", "90")),
+      archivMax: Number(env("IG_MOTIV_ARCHIV_MAX", "300")),
     },
   },
 

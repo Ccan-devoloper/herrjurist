@@ -19,7 +19,8 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { CONFIG } from "./config.mjs";
-import { bildKiAktiv, motivZeichnen } from "./bildki.mjs";
+import { bildKiAktiv, motivZeichnen, motivHervorholen } from "./bildki.mjs";
+import { archivLaden, passendesMotiv, motivAblegen, verwendungVermerken } from "./motivarchiv.mjs";
 import { freistellen } from "./freistellen.mjs";
 
 const API = "https://api.pexels.com/v1/search";
@@ -157,9 +158,34 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
        spränge den Tagesdeckel; Stories bleiben beim Icon, das dort ohnehin
        ruhiger wirkt. */
     if (opt.ki === false) return null;
+    const archivDir = opt.archivDir || null;
+    const datum = opt.datum || new Date().toISOString().slice(0, 10);
+    const archiv = archivDir ? archivLaden(archivDir) : null;
+    /* Erst im Archiv nachsehen: Ein Motiv, das lange genug her ist und zur
+       Szene passt, kostet nichts mehr. */
+    if (archiv) {
+      for (const szene of szenen) {
+        const fund = passendesMotiv(archiv, szene, datum, { mindestTage: CONFIG.bilder.ki.wiederTage });
+        if (!fund) continue;
+        const wieder = motivHervorholen(path.join(archivDir, fund.eintrag.datei), { randFarbe: opt.randFarbe || null });
+        if (!wieder) continue;
+        verwendungVermerken(archivDir, archiv, fund.eintrag, datum);
+        const bild = `data:image/png;base64,${fs.readFileSync(wieder.pfad).toString("base64")}`;
+        fs.rmSync(wieder.pfad, { force: true });
+        console.log(`  → Motiv aus dem Archiv: „${fund.eintrag.szene}" für „${szene}" (${fund.alter} Tage alt, ${(fund.aehnlich * 100).toFixed(0)} % Übereinstimmung) - kostet nichts.`);
+        return { bild, quelle: null, seite: null, frei: true, breite: wieder.breite, hoehe: wieder.hoehe };
+      }
+    }
     for (const szene of szenen) {
       const motiv = await motivZeichnen(szene, { randFarbe: opt.randFarbe || null, zweck: opt.zweck || "bild" });
       if (!motiv) continue;
+      if (motiv.ohneRand) {
+        if (archivDir) {
+          try { motivAblegen(archivDir, archiv || { motive: [] }, { szene, quelle: motiv.ohneRand, datum, breite: motiv.breite, hoehe: motiv.hoehe, max: CONFIG.bilder.ki.archivMax }); }
+          catch (e) { console.warn(`  ! Motiv nicht archiviert: ${e.message}`); }
+        }
+        fs.rmSync(motiv.ohneRand, { force: true });
+      }
       const bild = `data:image/png;base64,${fs.readFileSync(motiv.pfad).toString("base64")}`;
       fs.rmSync(motiv.pfad, { force: true });
       return { bild, quelle: null, seite: null, frei: true, breite: motiv.breite, hoehe: motiv.hoehe };

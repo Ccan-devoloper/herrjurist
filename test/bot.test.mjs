@@ -1447,3 +1447,48 @@ test("Gezeichnet wird nur für den Feed, nicht für neun Stories am Tag", async 
   assert.equal(ohne, null);
   Object.assign(CONFIG.bilder.ki, alt);
 });
+
+test("Motiv-Archiv: gleiche Szene ja, aber erst nach langer Pause", async () => {
+  const { aehnlichkeit, passendesMotiv } = await import("../src/motivarchiv.mjs");
+  /* Fuellwoerter duerfen den Vergleich nicht aufblaehen. */
+  assert.equal(aehnlichkeit("person reviewing notes at a desk", "person reviewing notes at desk"), 1);
+  assert.ok(aehnlichkeit("court clerk stamping legal document", "judge stamping a document") < 0.6, "verschiedene Motive gelten nicht als gleich");
+  const archiv = { motive: [
+    { datei: "alt.png", szene: "person reviewing notes at a desk", gezeichnet: "2026-03-01", zuletzt: "2026-03-01" },
+    { datei: "frisch.png", szene: "a calculator and a ledger", gezeichnet: "2026-09-01", zuletzt: "2026-09-01" },
+  ] };
+  /* Passt und ist lange her: wird hervorgeholt. */
+  const fund = passendesMotiv(archiv, "person reviewing notes at desk", "2026-09-13", { mindestTage: 90 });
+  assert.ok(fund, "das alte Motiv haette passen muessen");
+  assert.equal(fund.eintrag.datei, "alt.png");
+  assert.ok(fund.alter > 90);
+  /* Passt, ist aber zu frisch: wird neu gezeichnet. */
+  assert.equal(passendesMotiv(archiv, "a calculator and a ledger", "2026-09-13", { mindestTage: 90 }), null);
+  /* Passt gar nicht. */
+  assert.equal(passendesMotiv(archiv, "a lighthouse in a storm", "2026-09-13", { mindestTage: 90 }), null);
+  assert.equal(CONFIG.bilder.ki.wiederTage >= 60, true, "der Abstand muss deutlich sein");
+});
+
+test("Motiv-Archiv: ablegen, wiederfinden, Deckel einhalten", async () => {
+  const { motivAblegen, archivLaden, passendesMotiv, verwendungVermerken } = await import("../src/motivarchiv.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "motive-"));
+  const quelle = path.join(dir, "quelle.png");
+  fs.writeFileSync(quelle, "nicht wirklich ein Bild");
+  let archiv = { motive: [] };
+  archiv = motivAblegen(dir, archiv, { szene: "a gavel on a wooden desk", quelle, datum: "2026-01-10", breite: 900, hoehe: 700, max: 2 });
+  assert.equal(archiv.motive.length, 1);
+  assert.ok(fs.existsSync(path.join(dir, archiv.motive[0].datei)), "die Bilddatei fehlt im Archiv");
+  /* Gespeichert und wieder eingelesen bleibt es auffindbar. */
+  const gelesen = archivLaden(dir);
+  const fund = passendesMotiv(gelesen, "a gavel on a desk", "2026-09-13", { mindestTage: 90 });
+  assert.ok(fund, "nach dem Neuladen nicht wiedergefunden");
+  verwendungVermerken(dir, gelesen, fund.eintrag, "2026-09-13");
+  assert.equal(archivLaden(dir).motive[0].zuletzt, "2026-09-13");
+  assert.equal(archivLaden(dir).motive[0].benutzt, 2);
+  /* Der Deckel greift: Das am laengsten ungenutzte faellt heraus. */
+  archiv = motivAblegen(dir, archivLaden(dir), { szene: "zwei", quelle, datum: "2026-02-10", max: 2 });
+  archiv = motivAblegen(dir, archiv, { szene: "drei", quelle, datum: "2026-03-10", max: 2 });
+  assert.equal(archiv.motive.length, 2);
+  assert.ok(!archiv.motive.some((m) => m.szene === "zwei"), "das aelteste haette weichen muessen");
+  fs.rmSync(dir, { recursive: true, force: true });
+});
