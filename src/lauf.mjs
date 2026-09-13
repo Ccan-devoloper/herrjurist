@@ -150,17 +150,29 @@ async function main() {
      danach steht die Liste in state/stimmen.json. Welche davon spricht, sagt
      stimmeWaehlen() je Reel – bis eine gewonnen hat. */
   let stimmenListe = hosting.jsonLesen("stimmen.json", null);
-  if (CONFIG.reel.elevenlabsKey && CONFIG.reel.stimmeLernen && !stimmenListe?.kandidaten?.length && !stimmeStand().erschoepft) {
+  /* Gespeicherte Kandidaten aus der Zeit vor der Deutsch-Regel werfen wir
+     hier raus. Danach ist die Liste leer und die Suche laeuft neu - sonst
+     spraeche weiter eine englische Stimme, weil die Liste ja „voll" ist. */
+  if (CONFIG.reel.nurDeutscheStimme && stimmenListe?.kandidaten?.some((k) => !k.deutsch)) {
+    const behalten = stimmenListe.kandidaten.filter((k) => k.deutsch);
+    log(`Stimmen: ${stimmenListe.kandidaten.length - behalten.length} nicht deutschsprachige entfernt.`);
+    stimmenListe = { ...stimmenListe, kandidaten: behalten, fest: behalten.some((k) => k.id === stimmenListe.fest?.id) ? stimmenListe.fest : null };
+    hosting.jsonSchreiben("stimmen.json", stimmenListe);
+  }
+  /* Findet die Suche nichts, wird sie nicht jeden Tag wiederholt: Ein
+     kostenloses Abo bekommt auch morgen keine deutsche Bibliotheksstimme.
+     Einmal die Woche nachsehen genuegt - falls der Tarif wechselt. */
+  const sucheFaellig = !stimmenListe?.gesucht || (Date.now() - Date.parse(stimmenListe.gesucht)) > 7 * 86400000;
+  if (CONFIG.reel.elevenlabsKey && CONFIG.reel.stimmeLernen && !stimmenListe?.kandidaten?.length && sucheFaellig && !stimmeStand().erschoepft) {
     try {
       const roh = await kandidatenSuchen({ anzahl: CONFIG.reel.stimmeAnzahl, abo: stimmeStand().abo });
       const bezahlt = String(stimmeStand().abo || "") !== "free";
       const kandidaten = [];
       for (const k of roh) kandidaten.push(await stimmeUebernehmen(k, { bezahlt }));
-      if (kandidaten.length) {
-        stimmenListe = { gesucht: new Date().toISOString(), kandidaten, fest: null };
-        hosting.jsonSchreiben("stimmen.json", stimmenListe);
-        log(`Stimmen gefunden: ${kandidaten.map((k) => `${k.name} (${k.geschlecht || "?"}, ${k.beschreibung || k.einsatz || "–"})`).join(" · ")}`);
-      }
+      stimmenListe = { gesucht: new Date().toISOString(), kandidaten, fest: null };
+      hosting.jsonSchreiben("stimmen.json", stimmenListe);
+      if (kandidaten.length) log(`Stimmen gefunden: ${kandidaten.map((k) => `${k.name} (${k.geschlecht || "?"}, ${k.beschreibung || k.einsatz || "–"})`).join(" · ")}`);
+      else log("Stimmen: keine deutschsprachige bei ElevenLabs verfügbar – es spricht Piper (de_DE-thorsten-high).");
     } catch (e) { console.warn(`  ! Stimmensuche fehlgeschlagen: ${e.message}`); }
   }
   const ledger = ledgerLaden(ledgerPfad);

@@ -37,6 +37,25 @@ const BEWERTUNG = {
 
 const wert = (tabelle, schluessel) => tabelle[String(schluessel || "").toLowerCase()] ?? 0;
 
+/* Akzente, die fuer einen deutschen Muttersprachler stehen. „german" ist die
+   Angabe der Bibliothek; oesterreichisch und schweizerisch gehen genauso
+   durch, sie lesen ein Gesetzeskuerzel richtig. Alles andere - american,
+   british, australian - liest „BGB" als „bie-dschie-bie" und „Glaeubiger"
+   mit englischem G. Genau das war auf beiden Kanaelen zu hoeren. */
+const DEUTSCHE_AKZENTE = /^(german|austrian|swiss|de(_|-)?de|deutsch)/i;
+
+/** Spricht diese Stimme Deutsch als Muttersprache? */
+export function istDeutsch(v) {
+  const sprache = String(v.language || v.fine_tuning?.language || "").toLowerCase();
+  const akzent = String(v.accent || v.labels?.accent || "");
+  if (DEUTSCHE_AKZENTE.test(akzent)) return true;
+  /* Eine Bibliotheksstimme ohne Akzentangabe, aber mit Sprache „de", ist eine
+     deutsche Aufnahme - die Bibliothek fuehrt sie unter dieser Sprache. */
+  if (sprache === "de" && !akzent) return true;
+  const sprachen = v.verified_languages || v.fine_tuning?.verified_languages || [];
+  return Array.isArray(sprachen) && sprachen.some((l) => String(l.language || l).toLowerCase() === "de");
+}
+
 /**
  * Bewertet eine Stimme aus der Bibliothek. Rückgabe null heißt: kommt nicht in
  * Frage (falsche Sprache, für das kostenlose Abo gesperrt, Kinderstimme …).
@@ -45,6 +64,11 @@ export function stimmeBewerten(v) {
   const sprache = String(v.language || v.fine_tuning?.language || "").toLowerCase();
   if (sprache && sprache !== "de") return null;
   if (/child|young_child/i.test(v.age || "")) return null;
+  /* Deutsch spricht nur, wer Deutsch kann. Die Sprachangabe allein genuegt
+     nicht: Die vorinstallierten Stimmen sind alle englisch aufgenommen und
+     tragen dort ueberhaupt keine Sprache. Der Akzent verraet es. */
+  const deutsch = istDeutsch(v);
+  if (CONFIG.reel.nurDeutscheStimme && !deutsch) return null;
   let p = wert(BEWERTUNG.sprache, sprache) + wert(BEWERTUNG.einsatz, v.use_case) + wert(BEWERTUNG.alter, v.age);
   for (const [begriff, bonus] of Object.entries(BEWERTUNG.beschreibung)) {
     if (new RegExp(begriff, "i").test(`${v.descriptive || ""} ${v.description || ""}`)) p += bonus;
@@ -54,7 +78,7 @@ export function stimmeBewerten(v) {
      das vor dem ersten eigenen Reel vorliegt – aber nur ein leichter Daumen. */
   const nutzung = Number(v.cloned_by_count || 0) + Number(v.usage_character_count_1y || 0) / 1e6;
   return { id: v.voice_id, name: v.name, geschlecht: v.gender || null, alter: v.age || null, einsatz: v.use_case || null,
-    beschreibung: v.descriptive || null, akzent: v.accent || null, besitzer: v.public_owner_id || null,
+    beschreibung: v.descriptive || null, akzent: v.accent || null, besitzer: v.public_owner_id || null, deutsch,
     punkte: Number((p + Math.log10(1 + nutzung) * 0.6).toFixed(2)) };
 }
 
@@ -80,8 +104,13 @@ async function kontoStimmen({ nurFrei = false } = {}) {
   const out = [];
   for (const v of j.voices || []) {
     if (nurFrei && String(v.category || "").toLowerCase() !== "premade") continue;
-    const b = stimmeBewerten({ ...v, language: "de", use_case: v.labels?.use_case, age: v.labels?.age,
-      descriptive: v.labels?.descriptive || v.labels?.description, gender: v.labels?.gender, accent: v.labels?.accent });
+    /* Frueher stand hier language: "de" - eine Behauptung, keine Angabe. Damit
+       rutschte jede englische Stimme als deutsche durch, und genau die haben
+       auf beiden Kanaelen die Normen zerlegt. Jetzt zaehlt, was dransteht. */
+    const b = stimmeBewerten({ ...v, language: v.labels?.language || v.fine_tuning?.language || "",
+      use_case: v.labels?.use_case, age: v.labels?.age,
+      descriptive: v.labels?.descriptive || v.labels?.description, gender: v.labels?.gender, accent: v.labels?.accent,
+      verified_languages: v.verified_languages || v.fine_tuning?.verified_languages });
     if (b) out.push({ ...b, quelle: "konto", kategorie: v.category || null });
   }
   return out;
@@ -113,6 +142,10 @@ export async function kandidatenSuchen({ anzahl = 3, abo = null } = {}) {
     }
   }
   if (!gefunden.length) gefunden.push(...(await kontoStimmen({ nurFrei: !bezahlt })));
+  /* Bleibt nichts uebrig, ist das kein Fehler, sondern die Lage: Das
+     kostenlose Abo kennt keine deutsche Stimme. Dann spricht die deutsche
+     Offline-Stimme (Piper), und die Reels klingen wenigstens richtig. */
+  if (!gefunden.length) console.log("  → Keine deutschsprachige ElevenLabs-Stimme verfügbar – es spricht die deutsche Offline-Stimme.");
   const sortiert = gefunden.sort((a, b) => b.punkte - a.punkte);
   /* Nicht drei Varianten derselben Stimmlage: je Geschlecht höchstens zwei. */
   const auswahl = [], jeGeschlecht = {};
@@ -177,8 +210,12 @@ export function gewinner(statistik, kandidaten, { mindestens = CONFIG.reel.stimm
  */
 export function stimmeWaehlen({ kandidaten, ledger, datum, fest = null, zufall = Math.random }) {
   if (CONFIG.reel.stimme && !CONFIG.reel.stimmeLernen) return { id: CONFIG.reel.stimme, name: "fest eingestellt" };
+  /* Altbestand aus state/stimmen.json: Bis zum 13.09. standen dort englische
+     Stimmen. Sie fliegen beim Lesen raus, damit kein Reel mehr mit falsch
+     gesprochenen Normen herauskommt, bis die Liste neu gesucht ist. */
+  if (CONFIG.reel.nurDeutscheStimme) kandidaten = (kandidaten || []).filter((k) => k.deutsch);
   if (!kandidaten?.length) return CONFIG.reel.stimme ? { id: CONFIG.reel.stimme, name: "fest eingestellt" } : null;
-  if (fest) return fest;
+  if (fest && (!CONFIG.reel.nurDeutscheStimme || kandidaten.some((k) => k.id === fest.id))) return fest;
   const stat = stimmenStatistik(ledger, datum ? new Date(`${datum}T12:00:00Z`) : new Date());
   const gesamt = Math.max(1, stat.gesamt);
   const bewertet = kandidaten.map((k) => {

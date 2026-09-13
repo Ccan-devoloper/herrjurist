@@ -212,7 +212,12 @@ async function szenenSprechen(reel, audioDir, anbieter, stimmeId = null) {
    ElevenLabs-Monatsguthaben noch trägt (stimme.mjs). */
 export async function zeitplanErstellen(reel, audioDir, opt = {}) {
   const zeichen = reel.szenen.reduce((a, s) => a + String(s.sprecher || "").length, 0);
-  const anbieter = opt.anbieter || (await anbieterFuerText(zeichen));
+  /* Ohne gewaehlte Stimme wird ElevenLabs gar nicht erst gefragt. Die Auswahl
+     laesst nur noch deutschsprachige Stimmen durch (stimmen.mjs); ist keine
+     dabei, ist die deutsche Offline-Stimme die richtige Antwort und nicht ein
+     englischer Sprecher, der „Paragraf 294 BGB" zerlegt. */
+  const ohneStimme = CONFIG.reel.nurDeutscheStimme && !opt.stimmeId && !CONFIG.reel.stimme;
+  const anbieter = opt.anbieter || (ohneStimme ? offlineAnbieter() : await anbieterFuerText(zeichen));
   const plan = await szenenSprechen(reel, audioDir, anbieter, opt.stimmeId || null);
   /* Ist das Guthaben mitten im Reel ausgegangen, sprechen jetzt zwei Stimmen im
      selben Video. Dann lieber alles noch einmal offline – das kostet nichts. */

@@ -750,7 +750,15 @@ test("Die Stimme wird ausprobiert und erst bei klarem Vorsprung festgeschrieben"
   assert.ok(erzaehler.punkte > (werbung?.punkte ?? -1));
   assert.equal(stimmeBewerten({ voice_id: "c", name: "Kid", language: "de", age: "child", use_case: "narrative_story" }), null);
 
-  const kandidaten = [{ id: "a", name: "Anna" }, { id: "b", name: "Bert" }, { id: "c", name: "Carla" }];
+  /* Deutsch-Regel: Eine englisch aufgenommene Stimme kommt gar nicht erst in
+     die Auswahl - sie liest „§ 294 BGB" falsch. */
+  assert.equal(stimmeBewerten({ voice_id: "d", name: "Daniel", gender: "male", age: "middle_aged", use_case: "informative_educational", descriptive: "professional", accent: "british" }), null);
+  assert.ok(stimmeBewerten({ voice_id: "e", name: "Erik", gender: "male", age: "middle_aged", use_case: "informative_educational", accent: "german" })?.deutsch);
+
+  const kandidaten = [{ id: "a", name: "Anna", deutsch: true }, { id: "b", name: "Bert", deutsch: true }, { id: "c", name: "Carla", deutsch: true }];
+  /* Stehen nur englische Stimmen in der Liste, wird keine gewaehlt - dann
+     spricht die deutsche Offline-Stimme. */
+  assert.equal(stimmeWaehlen({ kandidaten: [{ id: "x", name: "Alice", deutsch: false }], ledger: { veroeffentlicht: [] }, datum: "2026-09-15" }), null);
   const leer = { veroeffentlicht: [] };
   const gesehen = new Set();
   for (let i = 0; i < 40; i++) gesehen.add(stimmeWaehlen({ kandidaten, ledger: leer, datum: "2026-09-15" }).id);
