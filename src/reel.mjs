@@ -468,7 +468,12 @@ function klangbettFilter(dauer) {
 export function coverDaten(reel, plan) {
   const sekunden = Math.round(plan?.gesamt || 0);
   return {
-    titel: reel.kurztitel || reel.szenen?.[0]?.titel || "Reel",
+    /* Auf dem Cover steht der Aufhaenger, nicht das Kurzetikett. Am 13.09.
+       zeigte das Cover „Kosten und Anwaltszuziehung trennen", waehrend das
+       Reel mit „Widerspruch gewonnen - Anwalt vergessen?" begann: zwei
+       Ueberschriften fuer dieselbe Sache. Wer das Standbild sieht und dann
+       das Video startet, soll denselben Satz wiederfinden. */
+    titel: reel.szenen?.[0]?.titel || reel.kurztitel || "Reel",
     ueberzeile: sekunden ? `Reel · ${sekunden} Sekunden` : "Reel",
     dauerText: sekunden ? `In ${sekunden} Sekunden erklärt` : "",
     icon: reel.szenen?.find((s) => s.icon)?.icon || "paragraf",
