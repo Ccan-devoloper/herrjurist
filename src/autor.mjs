@@ -676,8 +676,11 @@ const REEL_SCHEMA = {
           norm: { type: ["string", "null"] },
           icon: { type: ["string", "null"] },
           sprecher: { type: "string" },
+          marken: { type: "array", items: { type: "string" } },
+          bildSzene: { type: ["string", "null"] },
+          kreuz: { type: "boolean" },
         },
-        required: ["art", "nummer", "titel", "unter", "text", "norm", "icon", "sprecher"],
+        required: ["art", "nummer", "titel", "unter", "text", "norm", "icon", "sprecher", "marken", "bildSzene", "kreuz"],
       },
     },
     caption: { type: "string" },
@@ -709,7 +712,13 @@ Du schreibst ein Skript aus Szenen. Jede Szene hat einen kurzen Bildschirmtext u
 - Sprechertext: So, wie ein Mensch spricht, nicht wie ein Lehrbuch. Kurze Hauptsätze, direkte Ansprache, gelegentlich ein Gedankenstrich als Pause, ein „Also:“, „Kurz gesagt:“, „Und jetzt der Punkt, den fast alle übersehen.“ Keine Klammern, keine Abkürzungen (schreibe „Paragraf zweihundertneunundvierzig Absatz eins“ als „Paragraf 249 Absatz 1“ – die Stimme liest Ziffern korrekt). Keine Aufzählungszeichen. Je Szene 1–3 Sätze, insgesamt 110–150 Wörter.
 - Szene 1 ist der Hook. Wie er zu bauen ist, steht unten in einem eigenen Abschnitt; er entscheidet über die Reichweite des ganzen Reels.
 - cta: Der Kern in einem Satz, dann die Aufforderung zu folgen – ohne Website, ohne Produkt. Kündige NICHTS an: kein „Nächstes Mal zeige ich dir …“, kein „Im nächsten Reel …“, kein „Teil 2 folgt“. Was hier steht, muss auch in einem Jahr noch stimmen.
-- icon nur beim hook.`;
+- icon nur beim hook.
+
+### Felder für die Bühnen-Darstellung
+Das Reel wird abwechselnd in zwei Layouts gebaut. Die folgenden drei Felder braucht das zweite – fülle sie IMMER aus, auch wenn du nicht weißt, welches gerade dran ist.
+- marken: ein bis zwei sehr kurze Stichwortzeilen je Szene, die den Kern der Szene tragen. 2 bis 6 Wörter, KEIN ganzer Satz, kein Punkt am Ende. Sie stehen groß auf der Bühne, während die Stimme erklärt – sie wiederholen den Sprechertext also nicht, sie verdichten ihn. Genau EIN Wort je Zeile setzt du in *Sternchen*; das wird farbig hervorgehoben, und es muss das Wort sein, auf das es ankommt. Beispiele: „Schuldner *bietet an*“, „§ 294 BGB: *tatsächliches* Angebot“, „Frist *entbehrlich*“. Bei der cta-Szene genügt eine Zeile.
+- bildSzene je Szene: eine ENGLISCHE Beschreibung einer konkreten Alltagsszene mit EINER Person oder EINEM Gegenstand, 3 bis 6 Wörter, nach denselben Regeln wie das Cover-Motiv unten. Sie wird als freigestellte Figur groß neben den Text gestellt und muss zu DIESER Szene passen, nicht zum Thema allgemein: für „Der Gläubiger nimmt nicht an“ etwa „person with folded arms turning away“. Keine Fachvokabeln, keine Symbolbild-Klassiker, keine Gruppen. Fällt dir nichts Konkretes ein: null.
+- kreuz: true genau dann, wenn die letzte marken-Zeile etwas benennt, das gerade NICHT gilt oder NICHT nötig ist („Verschulden nötig?“, „Fristsetzung erforderlich?“). Dann wird ein rotes Kreuz danebengesetzt. Sonst false. Höchstens eine Szene je Reel bekommt true.`;
 
 /* Reel-Skript schreiben (Szenen mit Bildschirm- und Sprechertext). */
 export async function reelSchreiben({ thema, datum, lang = false, anlass = null, strategie = null }) {
@@ -748,6 +757,9 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       /* Auf dem Bildschirm die Kurzform, in der Stimme die ausgeschriebene
          Fassung – „(1)“ würde sonst als „Klammer auf eins“ vorgelesen. */
       felderKuerzen(o, ["titel", "unter", "text", "norm"]);
+      /* Die Stichwortzeilen der Buehne sind Bildschirmtext: Kurzform, und die
+         Sternchen-Markierung bleibt stehen. */
+      if (Array.isArray(o.marken)) o.marken = o.marken.map((m) => normKurz(String(m))).filter(Boolean).slice(0, 2);
       if (o.sprecher) o.sprecher = normGesprochen(o.sprecher);
       return o;
     });
