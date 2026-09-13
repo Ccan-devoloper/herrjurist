@@ -71,10 +71,10 @@ function bildnachweis(beitrag) {
 
 /* Motiv für Reel-Cover oder Story: dieselbe Suche wie für die Titelfolie
    (bildSzene → Pexels → freistellen), abgelegt am Objekt selbst. */
-async function motivBesorgen(ziel, was = "Motiv") {
+async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
   if (!ziel || ziel.bild || !ziel.bildSzene) return;
   try {
-    const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil) });
+    const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), ...opt });
     if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null; }
   } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
 }
@@ -505,7 +505,7 @@ async function main() {
       }
       /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
          Tipp); der Teaser bringt das Bild des Beitrags schon mit. */
-      await motivBesorgen(story, "Story-Motiv");
+      await motivBesorgen(story, "Story-Motiv", { ki: false });
       const bild = await storyRendern(story, path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`), { variante: varianteStory(eintrag.slot) });
       const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
       const medienId = await ig.storyPosten({ bildUrl: url });

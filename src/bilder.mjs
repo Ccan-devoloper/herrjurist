@@ -19,6 +19,7 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { CONFIG } from "./config.mjs";
+import { bildKiAktiv, motivZeichnen } from "./bildki.mjs";
 import { freistellen } from "./freistellen.mjs";
 
 const API = "https://api.pexels.com/v1/search";
@@ -140,10 +141,33 @@ export async function fotoLaden(foto, ablage = null) {
  * Gibt { bild, quelle, frei } oder null zurück; null heißt: Icon-Bühne.
  */
 export async function titelbild(beitrag, ablage = null, opt = {}) {
-  if (!CONFIG.bilder.aktiv || !CONFIG.bilder.key) return null;
+  if (!CONFIG.bilder.aktiv) return null;
   /* Zwei Szenen vom Autor: Liefert die erste nichts Brauchbares, die zweite. */
   const szenen = [beitrag?.bildSzene || beitrag?.folien?.[0]?.bildSzene, beitrag?.bildSzeneAlt || beitrag?.folien?.[0]?.bildSzeneAlt].filter(Boolean);
   if (!szenen.length) return null;
+
+  /* Zeichnen geht vor Suchen: Das Motiv entsteht zum Thema und kommt
+     freigestellt - kein Stockfoto, das danebenliegt, kein Freisteller, der
+     misslingt, kein Bildnachweis auf der Kachel. Misslingt es, bleibt die
+     Titelfolie beim Icon; die Fotosuche springt dann nicht ein, sie war ja
+     der Grund für die Umstellung. */
+  if (bildKiAktiv()) {
+    /* Gezeichnet wird nur, was im Feed steht: Titelfolien und Reel-Cover.
+       Neun Stories am Tag mitzuzeichnen wäre das Vierfache an Bildern und
+       spränge den Tagesdeckel; Stories bleiben beim Icon, das dort ohnehin
+       ruhiger wirkt. */
+    if (opt.ki === false) return null;
+    for (const szene of szenen) {
+      const motiv = await motivZeichnen(szene, { randFarbe: opt.randFarbe || null, zweck: opt.zweck || "bild" });
+      if (!motiv) continue;
+      const bild = `data:image/png;base64,${fs.readFileSync(motiv.pfad).toString("base64")}`;
+      fs.rmSync(motiv.pfad, { force: true });
+      return { bild, quelle: null, seite: null, frei: true, breite: motiv.breite, hoehe: motiv.hoehe };
+    }
+    console.log(`  → kein Motiv zu „${szenen.join("\u201c / \u201e")}" - Titelfolie bleibt beim Icon.`);
+    return null;
+  }
+  if (!CONFIG.bilder.key) return null;
   let ersterRoh = null, erstesFoto = null, ersteSzene = null;
   for (const szene of szenen) {
     const kandidaten = await fotoKandidaten(szene, opt);
