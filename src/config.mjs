@@ -110,6 +110,11 @@ export const CONFIG = {
        Zielgruppe auf, die ihn gerade lernt. IG_FAKTENCHECK_STRIKT=false
        lässt ungeprüfte Beiträge wieder durch. */
     strikt: env("IG_FAKTENCHECK_STRIKT", "true") === "true",
+    /* Zweitmeinung: Fehlerbefunde des Prüfers beurteilt das stärkere Modell,
+       bevor ein Entwurf verworfen wird. IG_FAKTENCHECK_ZWEITMEINUNG=false
+       schaltet sie ab; IG_KI_MODELL_ZWEITMEINUNG wählt das Modell. */
+    zweitmeinung: env("IG_FAKTENCHECK_ZWEITMEINUNG", "true") === "true",
+    zweitmeinungModell: env("IG_KI_MODELL_ZWEITMEINUNG", ""),
   },
 
   /* Schlüsselwort-Nachrichten: „Kommentiere SCHEMA …“ → Karte per Direktnachricht */

@@ -8,7 +8,7 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
-import { erfassen, budgetPruefen } from "./kosten.mjs";
+import { erfassen, budgetPruefen, BudgetFehler } from "./kosten.mjs";
 
 let clientCache = null;
 const client = () => (clientCache ||= new Anthropic({ maxRetries: 3, timeout: 5 * 60 * 1000 }));
@@ -122,7 +122,7 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
   try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); } catch { return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] }; }
   /* Weiche Beanstandungen („irreführend“, „präzisieren“, „missverständlich“) sind
      keine Fehler, die eine teure Neufassung rechtfertigen – sie werden zu Hinweisen. */
-  const WEICH = /irreführend|präzisier|missverständlich|ungenau|unscharf|unschärfe|ausdrucksweise|formulierung|konzeptionell|didaktisch|sollte (?:ergänzt|erwähnt|klargestellt)|könnte|empfehl|verkürzt|vereinfacht|mathematisch (?:richtig|korrekt)|ist (?:zwar |dann )?(?:sachlich )?korrekt/i;
+  const WEICH = /irreführend|präzisier|missverständlich|ungenau|unscharf|unschärfe|ausdrucksweise|formulierung|konzeptionell|didaktisch|sollte (?:ergänzt|erwähnt|klargestellt)|könnte|empfehl|verkürzt|vereinfacht|mathematisch (?:richtig|korrekt)|ist (?:zwar |dann )?(?:sachlich )?korrekt|suggeriert|wird dem aufbau nicht gerecht|deutlicher|gestaffelt|darstellung/i;
   const ist = (b) => b.schwere === "fehler" && !WEICH.test(`${b.problem} ${b.korrektur}`);
   /* Sprachversehen mit brauchbarer Fundstelle werden ersetzt, nicht neu
      geschrieben. Ohne verwertbares Original (zu kurz, oder Original gleich
@@ -133,9 +133,87 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
      berichtigen und erneut prüfen ist ein Zehntel so teuer wie eine
      Neufassung – und rettet einen Beitrag, der sonst ganz ausfiele. */
   const brauchbar = (b) => b.original && b.ersatz && b.original !== b.ersatz && b.original.trim().split(/\s+/).length >= 2;
-  const behebbar = daten.befunde.filter((b) => ist(b) && brauchbar(b)).map((b) => ({ original: b.original, ersatz: b.ersatz }));
-  const fehler = daten.befunde.filter(ist).map((b) => `${b.stelle}: ${b.problem} → ${b.korrektur}`);
-  const hinweise = daten.befunde.filter((b) => !ist(b) && !sprache(b)).map((b) => `${b.stelle}: ${b.problem}`);
+  /* Zweitmeinung: Kein Entwurf wird verworfen, weil EIN Prüfmodell einen
+     Fehler sieht. Am 13.09. lehnte der Prüfer in beiden Kanälen korrekte
+     Wochenrückblicke ab („§ 28 Abs. 1 StGB gilt nicht für Anstifter“,
+     „Teilwert-AfA steht im BewG“ – beides falsch) und jede Ablehnung
+     kostete eine Neufassung, bis das Tagesbudget leer war. Jetzt beurteilt
+     das stärkere Modell jeden Fehlerbefund einzeln; nur was es bestätigt,
+     führt zur Neufassung. Das kostet einen Bruchteil einer Neufassung und
+     nur dann, wenn überhaupt etwas beanstandet wurde. */
+  let bestaetigt = daten.befunde.filter(ist);
+  let verworfen = [];
+  if (bestaetigt.length && CONFIG.faktencheck.zweitmeinung) {
+    try {
+      const urteile = await zweitmeinung(textAus(beitrag), bestaetigt, zweck);
+      ({ bestaetigt, verworfen } = urteileAnwenden(bestaetigt, urteile));
+      if (verworfen.length) console.log(`  Zweitmeinung: ${verworfen.length} von ${verworfen.length + bestaetigt.length} Einwänden nicht bestätigt – ${verworfen.map((b) => `„${b.stelle}“`).join(", ")}`);
+    } catch (e) {
+      if (e instanceof BudgetFehler) throw e;
+      console.warn(`  ! Zweitmeinung nicht möglich (${e.message.split("\n")[0].slice(0, 120)}) – Einwände gelten.`);
+    }
+  }
+  const behebbar = bestaetigt.filter(brauchbar).map((b) => ({ original: b.original, ersatz: b.ersatz }));
+  const fehler = bestaetigt.map((b) => `${b.stelle}: ${b.problem} → ${b.korrektur}`);
+  const hinweise = [...daten.befunde.filter((b) => !ist(b) && !sprache(b)).map((b) => `${b.stelle}: ${b.problem}`), ...verworfen.map((b) => `${b.stelle}: ${b.problem} (Zweitmeinung: kein Fehler)`)];
   if (korrekturen.length) console.log(`  Sprachkorrekturen: ${korrekturen.map((k) => `„${k.original}“ → „${k.ersatz}“`).join(" · ")}`);
   return { ok: fehler.length === 0, fehler, hinweise, korrekturen, behebbar };
+}
+
+/* Welche Einwände nach der Zweitmeinung bestehen bleiben. Fehlt ein Urteil
+   zu einem Einwand, bleibt er bestehen – im Zweifel gilt der Einwand. */
+export function urteileAnwenden(befunde, urteile = []) {
+  const bestaetigt = [], verworfen = [];
+  befunde.forEach((b, i) => {
+    const u = (urteile || []).find((x) => Number(x.nr) === i + 1);
+    if (u && u.zutreffend === false) verworfen.push(b); else bestaetigt.push(b);
+  });
+  return { bestaetigt, verworfen };
+}
+
+const SCHIEDS_SCHEMA = {
+  type: "object",
+  properties: {
+    urteile: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: { nr: { type: "integer" }, zutreffend: { type: "boolean" }, begruendung: { type: "string" } },
+        required: ["nr", "zutreffend", "begruendung"],
+      },
+    },
+  },
+  required: ["urteile"],
+};
+
+const SCHIEDS_SYSTEM = `Du bist Schiedsrichter:in zwischen einem juristischen Fachtext und den Einwänden eines Prüfers (deutsches Recht, Rechtsstand 2026). Du bekommst den Text und nummerierte Einwände. Beurteile JEDEN Einwand einzeln und unabhängig:
+- zutreffend = true: Der Text ist an dieser Stelle wirklich falsch – falsche Norm, falscher Absatz, falsche Rechtsfolge, falsche Zuordnung, aufgehobenes Recht. In der Klausur gäbe es dafür Abzug.
+- zutreffend = false: Der Text ist korrekt oder vertretbar, und der Einwand irrt – etwa weil der Prüfer eine Norm falsch versteht, eine vertretbare Ansicht als Fehler wertet, eine Vereinfachung rügt, die für das Format zulässig ist, oder Stil und Didaktik kritisiert.
+Prüfe die Norm selbst nach, bevor du urteilst; wiederhole nicht den Einwand. Bist du unsicher, ob der Text falsch ist, ist der Einwand NICHT zutreffend – nur ein klar belegter Fehler zählt. Begründung in höchstens zwei Sätzen.`;
+
+async function zweitmeinung(text, befunde, zweck = "faktencheck") {
+  budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck (Zweitmeinung)", "story-faktencheck": "Story-Faktencheck (Zweitmeinung)" }[zweck] || "Faktencheck (Zweitmeinung)");
+  const modell = CONFIG.faktencheck.zweitmeinungModell || CONFIG.ki.modell;
+  const user = `Text:\n\n${text}\n\nEinwände des Prüfers:\n${befunde.map((b, i) => `${i + 1}. [${b.stelle}] ${b.problem} → ${b.korrektur}`).join("\n")}\n\nBeurteile jeden Einwand.`;
+  const basis = {
+    model: modell,
+    max_tokens: 4000,
+    system: [{ type: "text", text: SCHIEDS_SYSTEM, cache_control: { type: "ephemeral" } }],
+    messages: [{ role: "user", content: user }],
+    thinking: { type: "adaptive" },
+    output_config: { effort: "high", format: { type: "json_schema", schema: SCHIEDS_SCHEMA } },
+  };
+  let response;
+  try {
+    response = await client().messages.create(basis);
+  } catch (e) {
+    if (!(e instanceof Anthropic.BadRequestError)) throw e;
+    const { thinking, output_config, ...rest } = basis;
+    response = await client().messages.create({ ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHIEDS_SCHEMA)}` }] });
+  }
+  erfassen(modell, response.usage, zweck);
+  const antwort = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
+  const daten = JSON.parse(antwort.slice(antwort.indexOf("{"), antwort.lastIndexOf("}") + 1));
+  for (const u of daten.urteile || []) if (u.zutreffend === false) console.log(`    Einwand ${u.nr} verworfen: ${String(u.begruendung || "").slice(0, 160)}`);
+  return daten.urteile || [];
 }
