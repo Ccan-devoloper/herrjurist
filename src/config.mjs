@@ -248,6 +248,22 @@ export const CONFIG = {
        Karte (true). Standard ist kein Bild – ein halb ausgeschnittenes oder
        aufgeklebtes Motiv fällt sofort auf. */
     rechteckErlaubt: env("IG_BILDER_RECHTECK", "false") === "true",
+    /* Motive erzeugen statt suchen. Sobald OPENAI_API_KEY gesetzt ist, wird
+       das Motiv zum Thema gezeichnet - freigestellt geliefert, ohne
+       Bildnachweis und ohne rembg. Stockfotos passten oft nicht zum Text
+       (Atemmasken bei Betrugsstrafbarkeit), und das Freistellen misslang
+       regelmässig. IG_BILD_KI=false schaltet zurück auf Pexels. */
+    ki: {
+      key: env("OPENAI_API_KEY", ""),
+      aktiv: env("IG_BILD_KI", "true") === "true" && Boolean(env("OPENAI_API_KEY", "")),
+      modell: env("IG_BILD_KI_MODELL", "gpt-image-1-mini"),
+      guete: env("IG_BILD_KI_GUETE", "low"),          // low ~0,005 $, medium ~0,04 $ je Bild
+      groesse: env("IG_BILD_KI_GROESSE", "1024x1024"),
+      /* Preis je Bild für den Tagesdeckel. Die Schnittstelle meldet ihn nicht
+         zurück, deshalb wird er hier gesetzt - bewusst über dem Listenpreis. */
+      preisUsd: Number(env("IG_BILD_KI_PREIS_USD", "0.01")),
+      zeitlimitMs: Number(env("IG_BILD_KI_ZEITLIMIT_MS", "120000")),
+    },
   },
 
   /* Interaktion: Kommentare unter den eigenen Beiträgen beantworten -------- */

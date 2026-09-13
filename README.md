@@ -137,11 +137,14 @@ GitHub → Repository → *Settings* → *Secrets and variables* → *Actions*
 | `IG_ACCOUNT_ID` | Instagram-Konto-ID (Zahl) |
 | `IG_TOKEN_KEY` | frei gewählter Schlüssel für den Token-Tresor |
 | `ELEVENLABS_API_KEY` | *optional*: Schlüssel von elevenlabs.io – Reels sprechen dann mit ElevenLabs, solange das Monatsguthaben reicht, danach mit Piper |
+| `OPENAI_API_KEY` | *optional*: Schlüssel von platform.openai.com – die Motive auf Titelfolien und Reel-Covern werden dann zum Thema gezeichnet statt als Stockfoto gesucht. Ohne den Schlüssel bleibt es bei Pexels bzw. beim Icon. Rund 0,01 $ je Bild, 2–3 Bilder am Tag |
 
 **Variables** (Reiter *Variables*)
 
 | Name | Beispiel | Bedeutung |
 | --- | --- | --- |
+| `IG_BILD_KI` | leer | `false` schaltet das Zeichnen ab und sucht wieder Stockfotos |
+| `IG_BILD_KI_GUETE` | `low` | Güte der gezeichneten Motive: `low` ≈ 0,005 $, `medium` ≈ 0,04 $ je Bild |
 | `IG_HANDLE` | leer | Handle unten links auf jeder Kachel – solange leer, steht dort nichts |
 | `IG_STIL` | `bunt` | Stil: `bunt` (vollflächig in der Klausurtag-Farbe, Pills, mehrere Elemente) · `kanzlei` (schwarz, herrjurist-Look) · `klausurbogen` (Papier/Tinte wie die Webseite) · `campus` (Indigo/Limette). Der Workflow liest diese Variable bewusst **nicht** aus den Repo-Variablen; wer den Stil ändern will, setzt sie im Workflow unter `env`. |
 | `IG_KI_RECHERCHE_SUCHEN` | `4` | Websuchen je Recherche (Format `aktuell`, Lösungsskizzen); jede Suche kostet 0,01 $ plus die Ergebnis-Tokens |

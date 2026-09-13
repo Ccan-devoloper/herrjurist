@@ -1413,3 +1413,37 @@ test("Freisteller: ein halbdurchsichtiger Schleier wird verworfen, ein festes Mo
   assert.ok(ps.mittel > 0.02, "der Schleier belegt durchaus Fläche - genau deshalb rutschte er durch");
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+test("Bildauftrag: ein Gegenstand, kein Text, durchsichtiger Grund", async () => {
+  const { bildAuftrag, bildKiAktiv } = await import("../src/bildki.mjs");
+  const a = bildAuftrag("a judge's gavel on a desk");
+  assert.match(a, /judge's gavel/);
+  for (const muss of [/no text/i, /no letters/i, /no numbers/i, /no logos/i, /transparent background/i, /exactly one/i]) {
+    assert.match(a, muss, `Auftrag ohne „${muss}": ${a}`);
+  }
+  /* Ohne Schlüssel bleibt alles beim Alten - der Bot läuft weiter mit Icons. */
+  assert.equal(bildKiAktiv(), Boolean(CONFIG.bilder.ki.key) && CONFIG.bilder.ki.aktiv);
+  assert.equal(CONFIG.bilder.ki.preisUsd > 0, true, "ein erzeugtes Bild muss den Tagesdeckel belasten");
+});
+
+test("Erzeugte Bilder belasten den Tagesdeckel wie jeder andere Posten", async () => {
+  const { budgetSetzen, erfassenStueck, tagesStand, budgetFrei } = await import("../src/kosten.mjs");
+  budgetSetzen({ limitUsd: 0.05 });
+  const vorher = tagesStand();
+  erfassenStueck(0.01, "bild", "Testmotiv");
+  assert.ok(tagesStand() - vorher > 0.009, "der Posten fehlt in der Tagessumme");
+  erfassenStueck(0.03, "bild", "noch ein Motiv");
+  assert.equal(budgetFrei("bild"), false, "über dem Deckel darf kein weiteres Bild gezeichnet werden");
+  budgetSetzen({});
+});
+
+test("Gezeichnet wird nur für den Feed, nicht für neun Stories am Tag", async () => {
+  const { titelbild } = await import("../src/bilder.mjs");
+  const alt = { ...CONFIG.bilder.ki };
+  Object.assign(CONFIG.bilder.ki, { key: "test", aktiv: true });
+  /* Mit ki:false wird nichts gezeichnet und auch kein Foto gesucht - die
+     Kachel bleibt beim Icon, ohne dass ein Aufruf Geld kostet. */
+  const ohne = await titelbild({ bildSzene: "a calculator on a desk" }, null, { ki: false });
+  assert.equal(ohne, null);
+  Object.assign(CONFIG.bilder.ki, alt);
+});

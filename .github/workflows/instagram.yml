@@ -125,6 +125,9 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IG_BILD_KI: ${{ vars.IG_BILD_KI }}
+          IG_BILD_KI_GUETE: ${{ vars.IG_BILD_KI_GUETE }}
           IG_BILDER_FREISTELLEN: ${{ vars.IG_BILDER_FREISTELLEN }}
           IG_BILDER: ${{ vars.IG_BILDER }}
           ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}

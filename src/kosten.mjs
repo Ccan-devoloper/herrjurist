@@ -95,6 +95,7 @@ const ERWARTET = {
   beitrag: 0.05,
   autor: 0.05,
   reel: 0.06,
+  bild: 0.01,
 };
 const STANDARD = 0.05;
 /* Längste Übereinstimmung gewinnt: „reel-faktencheck“ enthält „reel“. */
@@ -137,6 +138,22 @@ export function erfassen(modell, usage, zweck = "") {
   console.log(`  $ ${usd.toFixed(4)} ${zweck || modell} · ${k(usage.input_tokens || 0)} ein / ${k(usage.output_tokens || 0)} aus / ${k(usage.cache_read_input_tokens || 0)} Cache`);
   if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
   return usd;
+}
+
+/**
+ * Ein Posten, dessen Preis nicht aus Token folgt, sondern pro Stück feststeht -
+ * ein erzeugtes Bild etwa. Der Preis kommt aus der Konfiguration, weil die
+ * Bild-Schnittstelle ihn nicht zurückmeldet; er ist bewusst etwas höher
+ * angesetzt als der Listenpreis, damit der Tagesdeckel nie zu niedrig rechnet.
+ */
+export function erfassenStueck(usd, zweck = "bild", was = "") {
+  const betrag = Math.max(0, Number(usd) || 0);
+  posten.push({ modell: zweck, zweck, usd: betrag, ein: 0, aus: 0, cache: 0 });
+  const zweckSchluessel = schluessel(zweck);
+  if (zweckSchluessel) GEMESSEN[zweckSchluessel] = Math.max(GEMESSEN[zweckSchluessel] ?? 0, betrag);
+  console.log(`  $ ${betrag.toFixed(4)} ${zweck}${was ? ` · ${was}` : ""}`);
+  if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
+  return betrag;
 }
 
 /** Kosten dieses Laufs je Zweck (z. B. recherche, beitrag, faktencheck). */
