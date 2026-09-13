@@ -1570,3 +1570,30 @@ test("Erklärvideo: Stichworte, Zeitpunkte und Bühne", async () => {
   assert.notEqual(layoutFuer("2026-09-14"), layoutFuer("2026-09-15"));
   assert.equal(layoutFuer("2026-09-14"), "erklaer");
 });
+
+test("Erklärvideo: kein Bild ist besser als ein falsches", async () => {
+  const { motiveVerteilen } = await import("../src/erklaervideo.mjs");
+
+  /* Die erste Szene hat kein Motiv bekommen - dann bleibt die Bühne leer.
+     Ein Bild aus einer späteren Szene wäre hier schlicht das falsche. */
+  const a = [{ bild: null }, { bild: "B" }, { bild: "C" }];
+  motiveVerteilen(a);
+  assert.equal(a[0].bild, null);
+
+  /* Eine Lücke mittendrin übernimmt die Figur der VORHERIGEN Szene, nicht
+     irgendeine: dieselbe Person läuft durch zwei zusammenhängende Schritte. */
+  const b = [{ bild: "A" }, { bild: null }, { bild: "C" }, { bild: null }];
+  const zahlen = motiveVerteilen(b);
+  assert.equal(b[1].bild, "A");
+  assert.equal(b[3].bild, "C");
+  assert.deepEqual(zahlen, { mit: 4, eigene: 2 });
+
+  /* Das Medaillon blickt auf den vorigen Schritt zurück - erst ab dem
+     dritten, und nie auf dasselbe Bild, das ohnehin groß danebensteht. */
+  const c = [{ bild: "A" }, { bild: "B" }, { bild: "C" }, { bild: "C" }];
+  motiveVerteilen(c);
+  assert.equal(c[0].medaillon, undefined);
+  assert.equal(c[1].medaillon, undefined);
+  assert.equal(c[2].medaillon, "B");
+  assert.equal(c[3].medaillon, undefined, "dasselbe Bild zweimal wäre ein Versehen");
+});

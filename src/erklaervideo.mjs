@@ -70,6 +70,36 @@ export function markenFuer(szene, hoechstens = 2) {
     .map((t) => (t.length <= 46 ? t : (t.slice(0, 46).replace(/[,\s][^,\s]*$/, "") || t.slice(0, 46)) + " …"));
 }
 
+/**
+ * Verteilt die geholten Motive auf die Szenen. Hier entscheidet sich, ob ein
+ * Bild zum Text passt - deshalb steht die Regel bewusst eng:
+ *
+ *   · Jede Szene zeigt ihr eigenes Motiv, wenn sie eines hat.
+ *   · Hat sie keines (der Autor hat keine Szene beschrieben, oder das
+ *     Zeichnen misslang), uebernimmt sie das der VORHERIGEN Szene. Nicht
+ *     irgendeines: So laeuft dieselbe Figur durch zwei zusammenhaengende
+ *     Schritte, statt dass mitten im Reel ein Gegenstand auftaucht, von dem
+ *     gerade keine Rede ist.
+ *   · Steht vorher noch gar nichts, bleibt die Buehne leer. Ein Bild, das
+ *     nicht zum Text passt, ist schlechter als keines.
+ *   · Das Medaillon zeigt die Figur des vorigen Schritts, klein daneben - ein
+ *     Rueckblick auf das, worueber gerade gesprochen wurde. Erst ab dem
+ *     dritten Schritt und nur, wenn es wirklich ein anderes Bild ist.
+ *
+ * @returns {{mit:number, eigene:number}} wie viele Szenen ein Bild tragen und
+ *   wie viele verschiedene Bilder es sind. Liegt „eigene" deutlich unter der
+ *   Szenenzahl, wiederholt sich die Figur oft - das faellt beim Zusehen auf.
+ */
+export function motiveVerteilen(szenen) {
+  szenen.forEach((s, i) => { if (!s.bild && i > 0) s.bild = szenen[i - 1].bild || null; });
+  szenen.forEach((s, i) => {
+    if (i < 2 || !s.bild) return;
+    const vorige = szenen[i - 1]?.bild;
+    if (vorige && vorige !== s.bild) s.medaillon = vorige;
+  });
+  return { mit: szenen.filter((s) => s.bild).length, eigene: new Set(szenen.map((s) => s.bild).filter(Boolean)).size };
+}
+
 /* Zeitpunkte der Eintritte einer Szene. Gemessen am Vorbild: Die Figur kommt
    kurz nach Kapitelbeginn, die Plaketten verteilen sich ueber die gesprochene
    Strecke, das Medaillon sitzt im letzten Drittel. */
