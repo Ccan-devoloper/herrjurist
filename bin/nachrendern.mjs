@@ -24,6 +24,9 @@ import { beitragRendern, storyRendern, browserBeenden } from "../src/render.mjs"
 import { stickerFarbe } from "../src/stile.mjs";
 import { titelbild } from "../src/bilder.mjs";
 import { reelBauen } from "../src/reel.mjs";
+import { stimmeWaehlen } from "../src/stimmen.mjs";
+import { stimmeStandVerbinden } from "../src/stimme.mjs";
+import { ledgerLaden } from "../src/planer.mjs";
 import { heuteIso } from "../src/zeit.mjs";
 import { CONFIG } from "../src/config.mjs";
 
@@ -32,6 +35,16 @@ const ziel = process.argv[3] || path.resolve("out", `nach-${datum}`);
 
 const ablegen = process.env.IG_ABLEGEN === "1";
 const hosting = new Hosting({ pushen: ablegen }).vorbereiten();
+/* Ohne Stimmenauswahl faellt das Nachrendern auf die Offline-Stimme zurueck -
+   und klingt dann anders als das veroeffentlichte Reel. Fuer einen Vergleich
+   ist das wertlos, also waehlt es dieselbe Stimme wie der Tageslauf. */
+stimmeStandVerbinden({ lesen: () => hosting.jsonLesen("stimme.json", null), schreiben: (s) => hosting.jsonSchreiben("stimme.json", s) });
+const stimmenListe = hosting.jsonLesen("stimmen.json", null);
+const gewaehlteStimme = stimmenListe?.kandidaten?.length
+  ? stimmeWaehlen({ kandidaten: stimmenListe.kandidaten, ledger: ledgerLaden(path.join(hosting.stateDir, "ledger.json")), datum, fest: stimmenListe.fest || null })
+  : null;
+if (gewaehlteStimme) console.log(`Stimme: ${gewaehlteStimme.name}`);
+
 const dir = path.join(hosting.stateDir, "inhalte");
 if (!fs.existsSync(dir)) { console.error(`Keine Inhalte in ${dir}`); process.exit(1); }
 
@@ -61,7 +74,7 @@ for (const datei of dateien) {
       /* Das Reel kostet auch hier keinen Claude-Aufruf – der Text steht ja
          schon. Die Stimme wird allerdings neu gesprochen; das geht auf das
          Kontingent von ElevenLabs (oder auf Piper, wenn es erschöpft ist). */
-      const r = await reelBauen(inhalt, path.join(ziel, slot), { datum, hintergrundDir: path.join(hosting.stateDir, "hintergrund") });
+      const r = await reelBauen(inhalt, path.join(ziel, slot), { datum, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
       n += 2;
       console.log(`  ${slot}: Reel ${r.dauer.toFixed(1)} s${r.echt ? "" : " (Ersatzstimme)"} → ${path.basename(r.video)}`);
     }
