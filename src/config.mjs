@@ -267,7 +267,15 @@ export const CONFIG = {
          aber nur mit deutlichem Abstand. Zweimal dasselbe Bild in einer Woche
          faellt auf, zweimal im Quartal bemerkt niemand. */
       wiederTage: Number(env("IG_MOTIV_WIEDER_TAGE", "90")),
-      archivMax: Number(env("IG_MOTIV_ARCHIV_MAX", "300")),
+      /* Wie genau die Szene treffen muss, damit ein altes Motiv wieder
+         hervorgeholt wird. 0,85 heisst: praktisch dieselbe Szene. */
+      aehnlich: Number(env("IG_MOTIV_AEHNLICH", "0.85")),
+      /* Der Deckel muss groesser sein als das, was in der Ruhefrist plus einem
+         Themenumlauf anfaellt - sonst wirft das Archiv ein Motiv genau dann
+         hinaus, wenn es wieder verwendbar waere. Bei zwei bis drei Bildern am
+         Tag reichen 1500 fuer rund anderthalb Jahre; als WebP sind das etwa
+         45 MB. */
+      archivMax: Number(env("IG_MOTIV_ARCHIV_MAX", "1500")),
     },
   },
 

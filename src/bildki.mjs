@@ -12,6 +12,8 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
+import { ffmpegPfad } from "./stimme.mjs";
 import { CONFIG } from "./config.mjs";
 import { budgetPruefen, erfassenStueck } from "./kosten.mjs";
 import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse } from "./freistellen.mjs";
@@ -94,7 +96,12 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
 export function motivHervorholen(quelle, { randFarbe = null } = {}) {
   if (!fs.existsSync(quelle)) return null;
   const kopie = path.join(os.tmpdir(), `archiv-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
-  fs.copyFileSync(quelle, kopie);
+  /* Der Rand wird auf einem PNG gezogen; ein archiviertes WebP muss dafuer
+     zurueckverwandelt werden. */
+  if (/\.webp$/i.test(quelle)) {
+    const s = spawnSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-i", quelle, "-frames:v", "1", "-update", "1", kopie], { encoding: "utf8", timeout: 60000 });
+    if (s.status !== 0 || !fs.existsSync(kopie)) { console.warn("  ! Archiviertes Motiv nicht lesbar."); return null; }
+  } else fs.copyFileSync(quelle, kopie);
   const fertig = randFarbe ? bestickern(kopie, randFarbe) : kopie;
   const m = masse(fertig) || {};
   return { pfad: fertig, breite: m.breite || null, hoehe: m.hoehe || null };

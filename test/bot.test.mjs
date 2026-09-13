@@ -1452,13 +1452,16 @@ test("Motiv-Archiv: gleiche Szene ja, aber erst nach langer Pause", async () => 
   const { aehnlichkeit, passendesMotiv } = await import("../src/motivarchiv.mjs");
   /* Fuellwoerter duerfen den Vergleich nicht aufblaehen. */
   assert.equal(aehnlichkeit("person reviewing notes at a desk", "person reviewing notes at desk"), 1);
-  assert.ok(aehnlichkeit("court clerk stamping legal document", "judge stamping a document") < 0.6, "verschiedene Motive gelten nicht als gleich");
+  assert.ok(aehnlichkeit("court clerk stamping legal document", "judge stamping a document") < 0.85, "verschiedene Motive gelten nicht als gleich");
+  /* Bei 85 % reicht ein fehlendes Wort nicht mehr: „a gavel on a wooden desk"
+     ist nicht dasselbe Motiv wie „a gavel on a desk". */
+  assert.ok(aehnlichkeit("a gavel on a wooden desk", "a gavel on a desk") < 0.85);
   const archiv = { motive: [
     { datei: "alt.png", szene: "person reviewing notes at a desk", gezeichnet: "2026-03-01", zuletzt: "2026-03-01" },
     { datei: "frisch.png", szene: "a calculator and a ledger", gezeichnet: "2026-09-01", zuletzt: "2026-09-01" },
   ] };
   /* Passt und ist lange her: wird hervorgeholt. */
-  const fund = passendesMotiv(archiv, "person reviewing notes at desk", "2026-09-13", { mindestTage: 90 });
+  const fund = passendesMotiv(archiv, "person reviewing notes at desk", "2026-09-13", { mindestTage: 90, schwelle: 0.85 });
   assert.ok(fund, "das alte Motiv haette passen muessen");
   assert.equal(fund.eintrag.datei, "alt.png");
   assert.ok(fund.alter > 90);
@@ -1467,6 +1470,10 @@ test("Motiv-Archiv: gleiche Szene ja, aber erst nach langer Pause", async () => 
   /* Passt gar nicht. */
   assert.equal(passendesMotiv(archiv, "a lighthouse in a storm", "2026-09-13", { mindestTage: 90 }), null);
   assert.equal(CONFIG.bilder.ki.wiederTage >= 60, true, "der Abstand muss deutlich sein");
+  assert.equal(CONFIG.bilder.ki.aehnlich >= 0.85, true, "die Szene muss praktisch dieselbe sein");
+  /* Der Deckel muss laenger reichen als Ruhefrist plus Themenumlauf, sonst
+     fliegt ein Motiv genau dann hinaus, wenn es wieder verwendbar waere. */
+  assert.ok(CONFIG.bilder.ki.archivMax >= 3 * (CONFIG.bilder.ki.wiederTage + 200), `Archivdeckel ${CONFIG.bilder.ki.archivMax} zu klein`);
 });
 
 test("Motiv-Archiv: ablegen, wiederfinden, Deckel einhalten", async () => {
@@ -1480,7 +1487,7 @@ test("Motiv-Archiv: ablegen, wiederfinden, Deckel einhalten", async () => {
   assert.ok(fs.existsSync(path.join(dir, archiv.motive[0].datei)), "die Bilddatei fehlt im Archiv");
   /* Gespeichert und wieder eingelesen bleibt es auffindbar. */
   const gelesen = archivLaden(dir);
-  const fund = passendesMotiv(gelesen, "a gavel on a desk", "2026-09-13", { mindestTage: 90 });
+  const fund = passendesMotiv(gelesen, "a gavel on a wooden desk", "2026-09-13", { mindestTage: 90 });
   assert.ok(fund, "nach dem Neuladen nicht wiedergefunden");
   verwendungVermerken(dir, gelesen, fund.eintrag, "2026-09-13");
   assert.equal(archivLaden(dir).motive[0].zuletzt, "2026-09-13");
@@ -1490,5 +1497,28 @@ test("Motiv-Archiv: ablegen, wiederfinden, Deckel einhalten", async () => {
   archiv = motivAblegen(dir, archiv, { szene: "drei", quelle, datum: "2026-03-10", max: 2 });
   assert.equal(archiv.motive.length, 2);
   assert.ok(!archiv.motive.some((m) => m.szene === "zwei"), "das aelteste haette weichen muessen");
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("Archiviert wird als WebP, mit Transparenz und deutlich kleiner", async () => {
+  const { nachWebp } = await import("../src/motivarchiv.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "webp-"));
+  const ff = process.env.FFMPEG_PATH || "ffmpeg";
+  const png = path.join(dir, "motiv.png");
+  /* Ein Bild mit durchsichtigem Rand und deckender Mitte. */
+  const bau = spawnSync(ff, ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=black@0:s=512x512,format=rgba",
+    "-f", "lavfi", "-i", "testsrc2=s=256x256,format=rgba", "-filter_complex", "[0][1]overlay=128:128:format=auto",
+    "-frames:v", "1", "-update", "1", png], { encoding: "utf8" });
+  if (bau.status !== 0 || !fs.existsSync(png)) { fs.rmSync(dir, { recursive: true, force: true }); return; }
+  const webp = nachWebp(png, path.join(dir, "motiv.webp"));
+  if (!webp) { fs.rmSync(dir, { recursive: true, force: true }); return; }   // ffmpeg ohne libwebp: PNG bleibt
+  assert.ok(fs.statSync(webp).size < fs.statSync(png).size, "WebP muss kleiner sein als das PNG");
+  /* Der Alphakanal muss die Umwandlung ueberleben - sonst klebt spaeter ein
+     schwarzes Rechteck auf der Kachel. */
+  const alpha = spawnSync(ff, ["-hide_banner", "-loglevel", "error", "-i", webp, "-vf", "alphaextract,scale=16:16", "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 20 });
+  assert.equal(alpha.status, 0);
+  const werte = [...alpha.stdout];
+  assert.ok(werte.some((v) => v < 40), "der durchsichtige Rand fehlt");
+  assert.ok(werte.some((v) => v > 200), "die deckende Mitte fehlt");
   fs.rmSync(dir, { recursive: true, force: true });
 });
