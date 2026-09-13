@@ -27,6 +27,32 @@ export function rembgVorhanden() {
  * Nahe 1 heißt: Es wurde nichts entfernt (der Hintergrund blieb stehen).
  * Nahe 0 heißt: Es wurde alles entfernt. Beides ist unbrauchbar.
  */
+/**
+ * Profil des Alphakanals: Wie viel Fläche das Motiv einnimmt UND wie fest es
+ * steht. Der Mittelwert allein sagt darüber nichts: Ein sauber freigestelltes
+ * Motiv und ein durchsichtiger Schleier über die halbe Fläche ergeben
+ * denselben Wert (am 13.09. 0,11 gegen 0,17 beim guten Motiv). Deshalb zählt
+ * hier zusätzlich, welcher Anteil der belegten Fläche wirklich deckend ist:
+ * Ein echter Freisteller ist innen blickdicht und nur an der Kante weich;
+ * ein misslungener besteht fast nur aus halbdurchsichtigen Pixeln und
+ * erscheint auf der Kachel als Geist.
+ * @returns {{mittel:number, belegt:number, fest:number, festigkeit:number}|null}
+ */
+export function alphaProfil(pngPfad, N = 96) {
+  const r = spawnSync(ffmpegPfad(), ["-hide_banner", "-loglevel", "error", "-i", pngPfad,
+    "-vf", `alphaextract,scale=${N}:${N}`, "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 22 });
+  if (r.status !== 0 || r.stdout?.length !== N * N) return null;
+  let summe = 0, belegt = 0, fest = 0;
+  for (const b of r.stdout) { summe += b; if (b >= 24) belegt++; if (b >= 200) fest++; }
+  const n = r.stdout.length;
+  return { mittel: summe / (n * 255), belegt: belegt / n, fest: fest / n, festigkeit: belegt ? fest / belegt : 0 };
+}
+
+/* Wie viel der belegten Fläche deckend sein muss. Gute Freisteller liegen
+   über 0,8 - die weiche Kante ist nur ein schmaler Saum. Alles unter 0,55
+   ist ein Schleier, kein Motiv. */
+export const FESTIGKEIT_MIN = 0.55;
+
 export function deckung(pngPfad) {
   const r = spawnSync(ffmpegPfad(), ["-hide_banner", "-loglevel", "error", "-i", pngPfad,
     "-vf", "alphaextract,scale=48:48", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 20 });
@@ -142,11 +168,21 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
     console.warn(`  ! Freistellen fehlgeschlagen: ${(r.stderr || "").slice(0, 160)}`);
     return null;
   }
-  const d = deckung(ziel);
+  const prof = alphaProfil(ziel);
+  const d = prof ? prof.mittel : null;
   /* Zu viel übrig heißt: Der Hintergrund wurde nicht erkannt, das Motiv steht
      weiter im Kasten. Zu wenig heißt: Es ist nichts mehr da. */
   if (d == null || d > max || d < min) {
     console.log(`  → freigestelltes Motiv verworfen (Deckung ${d == null ? "?" : (d * 100).toFixed(0) + " %"}) – Titelfolie bleibt beim Icon.`);
+    fs.rmSync(ziel, { force: true });
+    return null;
+  }
+  /* Der eigentliche Härtetest: Steht das Motiv, oder ist es ein Schleier?
+     Am 13.09. gingen auf beiden Kanälen Kacheln mit einem kaum sichtbaren,
+     halbdurchsichtigen Fleck heraus - die Deckung lag mit 11 % im erlaubten
+     Bereich, weil sie nur den Mittelwert misst. */
+  if (prof.festigkeit < FESTIGKEIT_MIN) {
+    console.log(`  → freigestelltes Motiv verworfen (nur ${(prof.festigkeit * 100).toFixed(0)} % der Fläche deckend, der Rest durchsichtig - das gäbe einen Schleier) – Titelfolie bleibt beim Icon.`);
     fs.rmSync(ziel, { force: true });
     return null;
   }
@@ -177,7 +213,7 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
     return null;
   }
   const fertig = randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten;
-  return { pfad: fertig, deckung: d, ...(masse(fertig) || {}) };
+  return { pfad: fertig, deckung: d, festigkeit: prof.festigkeit, ...(masse(fertig) || {}) };
 }
 
 /**
