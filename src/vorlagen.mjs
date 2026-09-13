@@ -393,7 +393,20 @@ em{color:${p.akzent2}}
 .story .illu{color:${p.dunkel};opacity:1;left:auto;right:70px;bottom:220px}
 .story .geist{display:none}
 .story .pille{margin-top:56px}
-.story.cover .dauer{font-family:"Caveat";font-size:52px;color:${p.dunkel};opacity:1;margin-top:24px}
+/* Das Reel-Cover traegt dieselbe Ueberschrift wie die Titelfolie eines
+   Karussells: eine Pille je Zeile, nicht ein Kasten um den ganzen Titel. Bis
+   zum 13.09. war das Cover der einzige Ort mit dem Kasten - im Profilraster
+   standen beide Formate nebeneinander und sahen aus wie zwei Kanaele.
+   Die Story-Regel (ein Grund um das ganze h1) wird dafuer zurueckgenommen. */
+.story.cover h1{background:none;padding:0;width:auto;font-size:100px;line-height:1.5;margin-top:96px}
+.story.cover h1.klein{font-size:86px}
+.story.cover h1.winzig{font-size:74px}
+.story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.14em .5em;border-radius:48px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
+/* Handschrift mit Pfeil, genau wie auf der Titelfolie. */
+.story.cover .dauer{font-family:"Caveat";font-size:56px;font-weight:700;color:${p.dunkel};opacity:1;white-space:nowrap;
+  margin-top:44px;margin-left:300px;padding-left:170px;position:relative;transform:rotate(-4deg);width:fit-content}
+.story.cover .dauer::before{content:"";position:absolute;left:0;top:-30px;width:150px;height:110px;background:${pfeil} no-repeat center/contain}
 .story.cover .buehne::before{background:rgba(255,255,255,.75);opacity:1}
 .story.cover .buehne .icon{color:${p.dunkel}}
 /* Reels */
@@ -702,8 +715,8 @@ export function coverHtml(daten, ctx) {
   const inhalt = `
     ${kopf(ctx, "")}
     <span class="reelmarke">Reel</span>
-    <div class="ueberzeile">${esc(daten.ueberzeile || "Reel")}</div>
-    <h1 class="${titelKlasse(daten.titel)}">${markierenTitel(daten.titel)}</h1>
+    <h1 class="${titelKlasse(daten.titel)}"><span class="z">${markierenTitel(daten.titel)}</span></h1>
+    <div class="unter">${esc(daten.ueberzeile || "Reel")}</div>
     ${daten.dauerText ? `<div class="dauer">${esc(daten.dauerText)}</div>` : ""}
     ${daten.bild ? fotoBuehne(daten, BUEHNE_STORY) : `<div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>`}
     ${fuss(ctx)}`;
