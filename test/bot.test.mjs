@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { themenpool, poolStatistik, FAECHER } from "../src/inhalte.mjs";
-import { pruefeBeitrag, uebernahmen, uebernahmeLaeufe, gesperrteNamen, korpus } from "../src/pruefung.mjs";
+import { pruefeBeitrag, uebernahmen, uebernahmeLaeufe, gesperrteNamen, korpus, firmenNamen, benutzteFirmen, namenSperren } from "../src/pruefung.mjs";
 import { tagesplan, vermerken, ledgerLaden } from "../src/planer.mjs";
 import { folieHtml, storyHtml, coverHtml, FOLIEN_ARTEN, STORY_ARTEN } from "../src/vorlagen.mjs";
 import { kontext } from "../src/render.mjs";
@@ -9,6 +9,8 @@ import { STILE } from "../src/stile.mjs";
 import { tageBis, minutenVon, hhmm, heuteIso } from "../src/zeit.mjs";
 import { tokenVerschluesseln, tokenEntschluesseln } from "../src/instagram.mjs";
 import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
 import { CONFIG } from "../src/config.mjs";
 
 const beispiele = JSON.parse(fs.readFileSync(new URL("../beispiele/inhalte.json", import.meta.url), "utf8"));
@@ -68,7 +70,7 @@ test("Prüfung sperrt Namen von der Sperrliste, erfundene Fälle bleiben frei", 
      stammen könnten – gesperrt ist nur, was ausdrücklich auf der Sperrliste
      steht. Frei erfundene Parteien sind der Normalfall. */
   assert.equal(gesperrteNamen("A verkauft B einen Gebrauchtwagen.", k).length, 0);
-  assert.equal(gesperrteNamen("Die Nordlicht GmbH klagt gegen die Stadt.", k).length, 0);
+  assert.equal(gesperrteNamen("Die Nordlicht GmbH klagt gegen die Stadt.", k).length, 1);
   const mitListe = { ...k, namen: ["Kartoffelpülpe"] };
   assert.ok(gesperrteNamen("Der Fall Kartoffelpülpe ist bekannt.", mitListe).length > 0);
 });
@@ -1282,4 +1284,20 @@ test("Story-Arten mit dünnem Vorrat laufen im Takt, nicht täglich", async () =
   for (const art of ["frage", "antwort", "norm", "streitstand", "merksatz", "begriff", "fehler", "tipp", "zahl"]) {
     assert.ok(gesehen.has(art), `Art ${art} kommt in drei Wochen nie vor`);
   }
+});
+
+test("Erfundene Firmennamen werden erkannt und aus früheren Inhalten gesperrt", () => {
+  assert.deepEqual(firmenNamen("Die Rheinperle GmbH liefert an die Kornblume KG. Die GmbH haftet. Eine Beteiligung GmbH zählt nicht. Mini-Fall Nordlicht GmbH: Der Malerbetrieb Roth GmbH zahlt."), ["Rheinperle", "Kornblume", "Nordlicht", "Malerbetrieb Roth"]);
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "inhalte-"));
+  fs.writeFileSync(path.join(dir, "2026-09-05-b1.json"), JSON.stringify({ caption: "Die Nordfeld GmbH kauft eine Maschine." }));
+  fs.writeFileSync(path.join(dir, "2026-09-13-s3.json"), JSON.stringify({ text: "Die Heutig AG zahlt." }));
+  fs.writeFileSync(path.join(dir, "2025-01-01-b1.json"), JSON.stringify({ text: "Die Uralt OHG." }));
+  const namen = benutzteFirmen(dir, "2026-09-13");
+  assert.deepEqual(namen, ["Nordfeld"]);
+  namenSperren(namen);
+  assert.ok(gesperrteNamen("Die Nordfeld KG erwirbt ein Grundstück.").includes("Nordfeld"));
+  assert.ok(gesperrteNamen("Die Nordlicht GmbH kauft.").includes("Nordlicht"));
+  const ergebnis = pruefeBeitrag({ folien: [{ art: "titel", titel: "Frage" }, { art: "text", titel: "Fall", text: "Die Nordlicht GmbH verkauft eine Maschine an die Nordfeld KG." }, { art: "cta" }], caption: "Test" });
+  assert.ok(ergebnis.fehler.some((f) => /Nordlicht/.test(f) && /Nordfeld/.test(f)));
+  fs.rmSync(dir, { recursive: true, force: true });
 });
