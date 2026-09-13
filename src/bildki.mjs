@@ -27,8 +27,14 @@ export const bildKiAktiv = () => Boolean(CONFIG.bilder.ki.aktiv && CONFIG.bilder
 export function bildAuftrag(szene, { stil = "" } = {}) {
   return [
     `Flat vector illustration: ${String(szene).trim()}.`,
-    "Exactly one clear subject, centred, seen from a slight angle, nothing cropped.",
-    "Bold simple shapes, soft shading, warm friendly palette, thick clean outlines, modern editorial style.",
+    "Exactly one clear subject, centred, seen from the front or in three-quarter view, nothing cropped.",
+    /* Haende und kleine Requisiten sind die Stelle, an der billige Bilder
+       auseinanderfallen: verbogene Finger, ein Stift ohne Spitze, eine Lampe,
+       die keine mehr ist. Also gar nichts greifen lassen. */
+    "Keep the pose calm and simple: arms relaxed at the sides or lightly folded, hands open and empty.",
+    "Do not let the subject hold, grip or carry anything - if the scene mentions an object, place that object on the ground or on a surface next to the subject, clearly separate from the hands.",
+    "No small fiddly props, no thin stems, no objects near the face, no crossed or overlapping limbs.",
+    "Bold simple shapes, even line weight, flat colours with soft shading, clean readable silhouette, correct anatomy and natural proportions.",
     stil,
     "Absolutely no text, no letters, no words, no numbers, no signage, no logos, no watermark, no signature.",
     "No background, no ground shadow, no frame - the subject stands alone on a fully transparent background.",
