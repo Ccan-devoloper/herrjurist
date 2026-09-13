@@ -211,7 +211,7 @@ export const CONFIG = {
     /* So viele gemessene Reels braucht ein Fenster, bevor es gegen die anderen
        antritt - darunter wird weiter reihum ausprobiert. */
     dauerMessungen: Number(env("IG_REEL_DAUER_MESSUNGEN", "3")),
-    hintergrundmusik: env("IG_REEL_MUSIK", "true") === "true",  // dezentes, synthetisch erzeugtes Klangbett
+    hintergrundmusik: env("IG_REEL_MUSIK", "false") === "true",  // Klangbett aus: der Akkord legte sich stoerend unter die Stimme
     /* Split-Screen: das obere Drittel zeigt eine ruhige Animation, täglich
        rotierend. IG_REEL_ANIMATION=labyrinth|marble|ring legt eine fest. */
     animationen: ["labyrinth", "marble", "ring"],
