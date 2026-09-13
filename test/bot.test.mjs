@@ -489,11 +489,14 @@ test("Reel-Cover zeigt Thema, Fach und Dauer", async () => {
   const { coverDaten } = await import("../src/reel.mjs");
   const reel = { fach: "ust", klausur: 1, kurztitel: "Organschaft: Wer schuldet die Umsatzsteuer?", szenen: [{ titel: "Organschaft" }, { titel: "Schritt 1", icon: "kreislauf" }] };
   const daten = coverDaten(reel, { gesamt: 44.6 });
-  assert.equal(daten.titel, reel.kurztitel);
+  /* Auf dem Cover steht der Aufhaenger, nicht das Kurzetikett - sonst tragen
+     Standbild und Video zwei verschiedene Ueberschriften. */
+  assert.equal(daten.titel, reel.szenen[0].titel);
+  assert.equal(coverDaten({ ...reel, szenen: [] }, { gesamt: 44.6 }).titel, reel.kurztitel, "ohne Szenen bleibt das Kurzetikett");
   assert.equal(daten.ueberzeile, "Reel · 45 Sekunden");
   assert.equal(daten.icon, "kreislauf");
   const html = coverHtml(daten, kontext({ fach: "ust", klausur: 1 }));
-  assert.ok(html.includes("Umsatzsteuer?"), "Thema fehlt");
+  assert.ok(html.includes("Organschaft"), "Thema fehlt");
   assert.ok(html.includes("reelmarke"), "Reel-Kennzeichnung fehlt");
   assert.ok(html.includes("45 Sekunden"), "Dauer fehlt");
   assert.ok(html.includes("class=\"story cover\""), "Cover-Klasse fehlt");
@@ -1236,8 +1239,12 @@ test("Motiv-Bühne: gleiche Fläche für jede Bildform", async () => {
 test("Story mit Motiv: alle Inhaltsblöcke gleich breit, Nachweis Ton in Ton", async () => {
   const { storyHtml } = await import("../src/vorlagen.mjs");
   const html = storyHtml({ art: "begriff", titel: "Begriff", norm: "§ 1 BGB", text: "Text", bild: "data:image/png;base64,iVBORw0KGgo=", bildFrei: true, bildBreite: 600, bildHoehe: 400, bildQuelle: "Foto: X / Pexels" }, kontext({ fach: null, klausur: 1 }));
-  const regel = html.match(/\.story:has\(\.frei\)[^{]*\{max-width:640px\}/)?.[0] || "";
-  for (const teil of [".norm", ".text", ".karte", "h1"]) assert.ok(regel.includes(teil), `${teil} fehlt in der Breitenregel`);
+  const regel = html.match(/\.story:has\(\.frei\)[^{]*\{max-width:(\d+)px\}/);
+  assert.ok(regel, "Breitenregel fehlt");
+  for (const teil of [".norm", ".text", ".karte", "h1"]) assert.ok(regel[0].includes(teil), `${teil} fehlt in der Breitenregel`);
+  /* Breit genug, dass ein langes deutsches Wort hineinpasst: „Vollstreckungs-
+     klausel" brauchte am 13.09. rund 800 px und ragte aus seiner Pille. */
+  assert.ok(Number(regel[1]) >= 800, `Inhaltsspalte zu schmal (${regel[1]} px)`);
   /* Die Bühne trägt die gerechneten Maße, nicht die feste Box. */
   assert.ok(/class="frei" style="width:\d+px;height:\d+px"/.test(html), "Bühne ohne gerechnete Maße");
   assert.ok(html.includes("Foto: X / Pexels"), "Bildnachweis fehlt");
@@ -1596,4 +1603,40 @@ test("Erklärvideo: kein Bild ist besser als ein falsches", async () => {
   assert.equal(c[1].medaillon, undefined);
   assert.equal(c[2].medaillon, "B");
   assert.equal(c[3].medaillon, undefined, "dasselbe Bild zweimal wäre ein Versehen");
+});
+
+test("Langes Wort bleibt in seiner Pille – gemessen am Text, nicht an scrollWidth", async () => {
+  const { storyRendern, browserBeenden } = await import("../src/render.mjs");
+  const { spawnSync } = await import("node:child_process");
+  const ff = process.env.FFMPEG_PATH || "ffmpeg";
+  if (spawnSync("sh", ["-c", `command -v ${ff}`], { stdio: "ignore" }).status !== 0) return;
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "pille-"));
+  const ziel = path.join(dir, "story.jpg");
+  /* Dieselbe Lage wie am 13.09.: ein Motiv auf der Story (deshalb die
+     schmalere Spalte) und ein Wort, das breiter ist als die Spalte. Die
+     Ueberschrift traegt im bunten Stil width:fit-content samt Hoechstbreite -
+     dann meldet scrollWidth keinen Ueberlauf, obwohl das Wort neben seinem
+     farbigen Grund steht. */
+  await storyRendern({
+    art: "teaser", fach: "zpo", klausur: 1, fachLabel: "Zivilprozessrecht",
+    titel: "Vollstreckungsklausel Prüfschema", text: "Kurz.", pille: "Jetzt im Feed",
+    bild: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
+    bildFrei: true, bildBreite: 600, bildHoehe: 800,
+  }, ziel);
+  await browserBeenden();
+
+  /* Aus dem fertigen Bild lesen: Wo endet die dunkle Pille, wo die weisse
+     Schrift? Steht die Schrift weiter rechts, ragt sie hinaus. */
+  const roh = spawnSync(ff, ["-hide_banner", "-loglevel", "error", "-i", ziel, "-vf", "format=gray", "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 26 });
+  assert.equal(roh.status, 0);
+  const bild = roh.stdout, B = 1080;
+  let verletzt = 0;
+  for (let y = 420; y < 620; y += 4) {
+    const zeile = bild.subarray(y * B, (y + 1) * B);
+    let pille = -1, schrift = -1;
+    for (let x = 0; x < B; x++) { if (zeile[x] < 60) pille = x; if (zeile[x] > 200) schrift = x; }
+    if (pille > 0 && schrift > pille + 2) verletzt++;
+  }
+  assert.equal(verletzt, 0, `die Überschrift ragt in ${verletzt} Zeilen über ihre Pille hinaus`);
+  fs.rmSync(dir, { recursive: true, force: true });
 });

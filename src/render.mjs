@@ -77,9 +77,32 @@ function einpassen() {
         mit „width:fit-content“ (im bunten Stil etwa die Titelpille) wachsen
         sonst über die Kachel hinaus, ohne selbst zu überlaufen. */
   const innenRechts = wurzel.getBoundingClientRect().right - parseFloat(getComputedStyle(wurzel).paddingRight || 0);
+  /* Breitestes einzelnes Wort eines Elements. scrollWidth genuegt dafuer
+     nicht: Ein Kasten mit width:fit-content und einer Hoechstbreite - im
+     bunten Stil traegt die Story-Ueberschrift beides - meldet scrollWidth
+     gleich clientWidth, obwohl das Wort darin laengst ueber den farbigen
+     Grund hinausragt. Genau so stand am 13.09. „Vollstreckungsklausel" 50
+     Pixel weit neben seiner Pille. Gemessen wird deshalb direkt am Text. */
+  const breitestesWort = (el) => {
+    const bereich = document.createRange();
+    let breit = 0;
+    const lauf = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    for (let k = lauf.nextNode(); k; k = lauf.nextNode()) {
+      const text = k.nodeValue;
+      for (const treffer of text.matchAll(/\S+/g)) {
+        bereich.setStart(k, treffer.index);
+        bereich.setEnd(k, treffer.index + treffer[0].length);
+        breit = Math.max(breit, bereich.getBoundingClientRect().width);
+      }
+    }
+    return breit;
+  };
   for (const el of wurzel.querySelectorAll("h1,h2,h3,.merke,.norm,.zahl-unter,.karte .t,.pille,.ueberzeile,.formel,.zeile")) {
     let n = 0;
-    while ((el.scrollWidth > el.clientWidth + 1 || el.getBoundingClientRect().right > innenRechts + 1) && n++ < 20) setze(el, 0.94);
+    const passtNicht = () => el.scrollWidth > el.clientWidth + 1
+      || el.getBoundingClientRect().right > innenRechts + 1
+      || breitestesWort(el) > el.clientWidth + 1;
+    while (passtNicht() && n++ < 20) setze(el, 0.94);
   }
   /* 2. Gesamthöhe: Fußzeile muss innerhalb der Kachel bleiben. Liegt ein Foto
         auf der Kachel, ist dessen Oberkante die Grenze – sonst schiebt sich

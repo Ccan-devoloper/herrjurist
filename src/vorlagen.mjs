@@ -185,8 +185,14 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story .bildquelle{position:absolute;left:84px;bottom:96px;font-size:22px;color:var(--text-weich);opacity:.85;z-index:3}
 /* Steht ein Motiv auf der Story, ruecken ALLE Inhaltsbloecke auf dieselbe
    Breite. Vorher galt das nur fuer Text und Hinweis - die Normzeile lief
-   weiter ueber die volle Kachel, und die Kachel sah verrutscht aus. */
-.story:has(.frei) .hinweis,.story:has(.frei) .text,.story:has(.frei) .norm,.story:has(.frei) .karte,.story:has(.frei) .optionen,.story:has(.frei) h1,.story:has(.frei) .zahl-unter{max-width:640px}
+   weiter ueber die volle Kachel, und die Kachel sah verrutscht aus.
+   820 statt frueher 640: Das Motiv sitzt unten rechts (720 breit, 820 hoch)
+   und beginnt erst bei y 1100 - die Bloecke darueber stossen gar nicht an es
+   an. Mit 640 blieb rechts ein Drittel der Kachel leer, und ein langes
+   deutsches Wort wie „Vollstreckungsklausel" passte selbst in der kleinsten
+   Schrift nicht mehr hinein. Dass der Text nicht ins Motiv laeuft, regelt
+   einpassen() ueber die Hoehe, nicht ueber die Breite. */
+.story:has(.frei) .hinweis,.story:has(.frei) .text,.story:has(.frei) .norm,.story:has(.frei) .karte,.story:has(.frei) .optionen,.story:has(.frei) h1,.story:has(.frei) .zahl-unter{max-width:820px}
 .story.cover:has(.frei) .buehne{display:none}
 .story .pille{font-size:36px;padding:20px 40px;margin-top:56px}
 .story .fuss{font-size:32px}
@@ -398,7 +404,11 @@ em{color:${p.akzent2}}
 .reel .kopf .etikett{position:static;clip-path:none;border-radius:40px;padding:10px 26px}
 .reel .kopf .zaehler{position:static;width:auto;height:auto;background:none;color:${p.dunkel};font-size:28px}
 .reel .hook h1{font-size:68px;line-height:1.15;margin-top:0;width:fit-content;background:${p.dunkel};color:#fff;padding:.22em .5em;border-radius:48px}
-.reel .hook .unter{margin-left:0}
+/* Die Unterzeile des Aufhaengers sitzt auf der hellen Pille und muss die
+   dunkle Farbe tragen. Ohne diese Zeile erbte sie „--text-weich", das im
+   bunten Stil ein sehr helles Blau ist - hell auf hell, und die Zeile war
+   im Video praktisch unsichtbar (Campus-Reel vom 13.09.). */
+.reel .hook .unter{margin-left:0;color:${p.dunkel}}
 .reel .schritt .nummer{color:#fff}
 .reel .schritt h2{margin-top:0;font-size:60px}
 .reel .schritt .text,.reel .ctablock .text{color:${p.dunkel};background:none;padding:0;margin-top:14px}
