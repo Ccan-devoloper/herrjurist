@@ -25,6 +25,7 @@ import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, ueber
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
+import { motiveVerteilen } from "./erklaervideo.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
@@ -97,26 +98,16 @@ async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
 async function erklaerMotive(reel) {
   const deckel = Math.max(0, CONFIG.reel.erklaerBilder);
   let gezeichnet = 0;
-  const fertige = [];
   for (const szene of reel.szenen) {
-    if (szene.bild) { fertige.push(szene.bild); continue; }
-    if (!szene.bildSzene) { szene.bild = fertige.length ? fertige[fertige.length % fertige.length] : null; continue; }
-    if (gezeichnet >= deckel && fertige.length) { szene.bild = fertige[(fertige.length - 1) % fertige.length]; continue; }
+    if (szene.bild || !szene.bildSzene) continue;
     const vorher = tagesStand();
-    await motivBesorgen(szene, "Erklärbild", { randFarbe: null });
-    if (szene.bild) {
-      fertige.push(szene.bild);
-      if (tagesStand() > vorher) gezeichnet++;
-    }
+    /* Ist der Deckel erreicht, wird weiter im Archiv gesucht, aber nicht mehr
+       gezeichnet. Ein passendes altes Motiv kostet nichts und trifft das
+       Thema - die wiederholte Figur der Nachbarszene tut das nicht. */
+    await motivBesorgen(szene, "Erklärbild", { randFarbe: null, nurArchiv: gezeichnet >= deckel });
+    if (szene.bild && tagesStand() > vorher) gezeichnet++;
   }
-  /* Das Zweitbild im Medaillon kostet nie etwas: Es kommt nur aus dem, was
-     dieses Reel ohnehin schon hat - die Figur der Nachbarszene. */
-  reel.szenen.forEach((s, i) => {
-    if (!s.bild || reel.szenen.length < 3) return;
-    const andere = reel.szenen.map((x) => x.bild).filter((b) => b && b !== s.bild);
-    if (andere.length) s.medaillon = andere[i % andere.length];
-  });
-  return fertige.length;
+  return motiveVerteilen(reel.szenen);
 }
 
 /* Setzt das Foto auf die Titelfolie, sofern eines gefunden wird. */
@@ -482,8 +473,11 @@ async function main() {
            bauen. */
         const layout = layoutFuer(datum);
         if (layout === "erklaer") {
-          const n = await erklaerMotive(reel);
-          log(`  Erklärvideo: ${n} Motiv${n === 1 ? "" : "e"} für ${reel.szenen.length} Szenen.`);
+          const m = await erklaerMotive(reel);
+          /* „eigene" zaehlt die verschiedenen Bilder: Je weiter die Zahl unter
+             der Szenenzahl liegt, desto oefter musste eine Szene die Figur der
+             vorherigen uebernehmen - das faellt beim Zusehen auf. */
+          log(`  Erklärvideo: ${m.eigene} verschiedene Motive auf ${m.mit} von ${reel.szenen.length} Szenen.`);
         }
         const r = await reelBauen(reel, path.join(AUSGABE, "reels", eintrag.slot), { variante: varianteReel, datum, layout, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
         log(`  Reel gebaut: ${r.dauer.toFixed(1)} s · Layout ${r.layout} · Stimme ${r.anbieter}${r.stimmeName ? ` „${r.stimmeName}“` : ""} · Animation ${r.animation}`);

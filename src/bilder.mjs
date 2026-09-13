@@ -176,6 +176,10 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
         return { bild, quelle: null, seite: null, frei: true, breite: wieder.breite, hoehe: wieder.hoehe };
       }
     }
+    /* Erklaervideo mit vielen Szenen: Ab dem Deckel wird nicht mehr gezeichnet,
+       aber weiter im Archiv gesucht - ein passendes altes Motiv ist immer
+       besser als die wiederholte Figur der Nachbarszene und kostet nichts. */
+    if (opt.nurArchiv) return null;
     for (const szene of szenen) {
       const motiv = await motivZeichnen(szene, { randFarbe: opt.randFarbe || null, zweck: opt.zweck || "bild" });
       if (!motiv) continue;
