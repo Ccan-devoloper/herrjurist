@@ -24,7 +24,7 @@ import { themenpool } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben } from "./autor.mjs";
-import { reelBauen } from "./reel.mjs";
+import { reelBauen, layoutFuer } from "./reel.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
@@ -81,6 +81,42 @@ async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
     const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, ...opt });
     if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null; }
   } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
+}
+
+/**
+ * Motive fuer das Erklaervideo: je Szene eine Figur. Anders als beim Cover
+ * bekommen sie keinen Stickerrand - sie stehen gross und angeschnitten auf
+ * der Buehne, ein weisser Saum saehe dort aus wie ein Ausschneidefehler.
+ *
+ * Der Deckel je Reel ist der eigentliche Punkt: Vier Motive kosten vier Cent,
+ * acht waeren die Haelfte des Tagesbudgets. Was darueber hinausgeht, nimmt
+ * eine Figur aus einer frueheren Szene desselben Reels - im Vorbild taucht
+ * dieselbe Figur ohnehin mehrfach auf. Motive aus dem Archiv kosten nichts
+ * und zaehlen deshalb nicht gegen den Deckel.
+ */
+async function erklaerMotive(reel) {
+  const deckel = Math.max(0, CONFIG.reel.erklaerBilder);
+  let gezeichnet = 0;
+  const fertige = [];
+  for (const szene of reel.szenen) {
+    if (szene.bild) { fertige.push(szene.bild); continue; }
+    if (!szene.bildSzene) { szene.bild = fertige.length ? fertige[fertige.length % fertige.length] : null; continue; }
+    if (gezeichnet >= deckel && fertige.length) { szene.bild = fertige[(fertige.length - 1) % fertige.length]; continue; }
+    const vorher = tagesStand();
+    await motivBesorgen(szene, "Erklärbild", { randFarbe: null });
+    if (szene.bild) {
+      fertige.push(szene.bild);
+      if (tagesStand() > vorher) gezeichnet++;
+    }
+  }
+  /* Das Zweitbild im Medaillon kostet nie etwas: Es kommt nur aus dem, was
+     dieses Reel ohnehin schon hat - die Figur der Nachbarszene. */
+  reel.szenen.forEach((s, i) => {
+    if (!s.bild || reel.szenen.length < 3) return;
+    const andere = reel.szenen.map((x) => x.bild).filter((b) => b && b !== s.bild);
+    if (andere.length) s.medaillon = andere[i % andere.length];
+  });
+  return fertige.length;
 }
 
 /* Setzt das Foto auf die Titelfolie, sofern eines gefunden wird. */
@@ -441,8 +477,16 @@ async function main() {
         const varianteReel = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
         const gewaehlteStimme = stimmeWaehlen({ kandidaten: stimmenListe?.kandidaten || [], ledger, datum, fest: stimmenListe?.fest || null });
         await motivBesorgen(reel, "Reel-Cover");
-        const r = await reelBauen(reel, path.join(AUSGABE, "reels", eintrag.slot), { variante: varianteReel, datum, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
-        log(`  Reel gebaut: ${r.dauer.toFixed(1)} s · Stimme ${r.anbieter}${r.stimmeName ? ` „${r.stimmeName}“` : ""} · Animation ${r.animation}`);
+        /* Das Erklaervideo lebt von den Figuren - ohne sie faellt reelBauen()
+           auf das klassische Layout zurueck. Deshalb erst die Motive, dann
+           bauen. */
+        const layout = layoutFuer(datum);
+        if (layout === "erklaer") {
+          const n = await erklaerMotive(reel);
+          log(`  Erklärvideo: ${n} Motiv${n === 1 ? "" : "e"} für ${reel.szenen.length} Szenen.`);
+        }
+        const r = await reelBauen(reel, path.join(AUSGABE, "reels", eintrag.slot), { variante: varianteReel, datum, layout, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
+        log(`  Reel gebaut: ${r.dauer.toFixed(1)} s · Layout ${r.layout} · Stimme ${r.anbieter}${r.stimmeName ? ` „${r.stimmeName}“` : ""} · Animation ${r.animation}`);
         /* Stimme vom Tarif gesperrt: aus der Liste werfen, beim nächsten Lauf
            wird neu gesucht – sonst bliebe ElevenLabs dauerhaft ungenutzt. */
         if (gewaehlteStimme && stimmeIstGesperrt(gewaehlteStimme.id) && stimmenListe?.kandidaten) {
@@ -455,7 +499,7 @@ async function main() {
         const medienId = await ig.reelPosten({ videoUrl, coverUrl, caption });
         kontingent.genutzt += 1;
         eintrag.status = "veroeffentlicht"; eintrag.medienId = medienId; eintrag.veroeffentlicht = new Date().toISOString();
-        vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: "reel", thema: reel.themaId, fach: reel.fach, titel: reel.szenen[0]?.titel || reel.kurztitel, hookTyp: reel.hookTyp, hookMuster: reel.hookMuster, medienId, variante: varianteReel, hashtags: reel.hashtags, stimmeId: r.stimmeId || null, stimmeName: r.stimmeName || null, dauer: Math.round(r.dauer * 10) / 10, veroeffentlicht: new Date().toISOString() });
+        vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: "reel", thema: reel.themaId, fach: reel.fach, titel: reel.szenen[0]?.titel || reel.kurztitel, hookTyp: reel.hookTyp, hookMuster: reel.hookMuster, medienId, variante: varianteReel, hashtags: reel.hashtags, stimmeId: r.stimmeId || null, stimmeName: r.stimmeName || null, layout: r.layout || null, dauer: Math.round(r.dauer * 10) / 10, veroeffentlicht: new Date().toISOString() });
         eintrag.kanaele = await verteilen({ art: "reel", videoUrl, videoPfad: r.video, bildUrls: [coverUrl], titel: reel.kurztitel || reel.szenen[0]?.titel, text: caption, hashtags: reel.hashtags }, { log, trockenlauf: trocken, stateDir: hosting.stateDir });
         fertigeBeitraege.set(eintrag.slot, { ...reel, folien: [{ art: "titel", titel: reel.szenen[0]?.titel, icon: reel.szenen[0]?.icon }], kurztitel: reel.kurztitel });
         ledgerSpeichern(ledgerPfad, ledger); planSpeichern(hosting, plan);

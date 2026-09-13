@@ -1530,3 +1530,43 @@ test("Archiviert wird als WebP, mit Transparenz und deutlich kleiner", async () 
   assert.ok(werte.some((v) => v > 200), "die deckende Mitte fehlt");
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+test("Erklärvideo: Stichworte, Zeitpunkte und Bühne", async () => {
+  const { markenFuer, eintritte, zeilen, erklaerHtml } = await import("../src/erklaervideo.mjs");
+  const { layoutFuer } = await import("../src/reel.mjs");
+
+  /* Der Autor liefert die Stichworte; ohne sie wird der Bildschirmtext am
+     ersten Satzzeichen zerlegt statt ungekürzt auf die Plakette gelegt. */
+  assert.deepEqual(markenFuer({ marken: ["Schuldner *bietet an*", "§ 294 BGB", "zu viel"] }), ["Schuldner *bietet an*", "§ 294 BGB"]);
+  const abgeleitet = markenFuer({ text: "Verpflichtung gegenüber einem Dritten; nicht gegenüber dir selbst." });
+  assert.equal(abgeleitet.length, 2);
+  assert.ok(abgeleitet.every((m) => m.length <= 50 && !/[.;]$/.test(m)));
+  assert.deepEqual(markenFuer({}), []);
+
+  /* Die Eintritte liegen in der Szene und nacheinander - nichts darf vor dem
+     Kapitelbeginn oder nach seinem Ende auftauchen. */
+  const z = eintritte({ start: 10, dauer: 12 }, ["a", "b"]);
+  assert.ok(z.figur > 10 && z.figur < 22);
+  assert.ok(z.plaketten[0] > z.figur && z.plaketten[1] > z.plaketten[0]);
+  assert.ok(z.medaillon > z.plaketten[1] && z.medaillon < 22);
+
+  /* Überschrift: möglichst wenige Zeilen, und keine, die ein Wort zerreißt. */
+  assert.deepEqual(zeilen("Wann liegt Annahmeverzug vor?"), ["Wann liegt", "Annahmeverzug vor?"]);
+  assert.equal(zeilen("Kurz").length, 1);
+
+  /* Die Bühne trägt die Farbe des Klausurtags, nicht irgendein Blau. */
+  const { stil: stilLaden } = await import("../src/stile.mjs");
+  const stil = stilLaden("bunt");
+  const reel = { szenen: [{ titel: "Erste Frage", marken: ["Antwort *hier*"], bild: "data:image/png;base64,AA", kreuz: true }] };
+  const plan = { szenen: [{ index: 0, start: 0, dauer: 10 }], gesamt: 10 };
+  const html = erklaerHtml(reel, plan, { stil, klausur: 1, handle: "@test", fachLabel: "Zivilrecht" });
+  assert.ok(html.includes(stil.tagFarben[1].grund), "Bühnenfarbe des Klausurtags fehlt");
+  assert.ok(html.includes("<b>hier</b>"), "das hervorgehobene Wort fehlt");
+  assert.ok(/Antwort <b>/.test(html), "das Leerzeichen vor dem hervorgehobenen Wort fehlt");
+  assert.ok(html.includes("kreuz"), "das rote Kreuz fehlt");
+  assert.ok(!/aevalsrc|klangbett/i.test(html), "im Erklärvideo darf kein Klang stecken");
+
+  /* Beide Layouts lösen sich ab, damit die Zahlen vergleichbar bleiben. */
+  assert.notEqual(layoutFuer("2026-09-14"), layoutFuer("2026-09-15"));
+  assert.equal(layoutFuer("2026-09-14"), "erklaer");
+});

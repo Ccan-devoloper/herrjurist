@@ -13,6 +13,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { browserStarten, coverRendern } from "./render.mjs";
 import { css, klausurCss, buntCss, fussRechts } from "./vorlagen.mjs";
+import { erklaerHtml } from "./erklaervideo.mjs";
 import { normKurz, normGesprochen } from "./normen.mjs";
 import { stil as stilLaden, iconSvg } from "./stile.mjs";
 import { FAECHER } from "./inhalte.mjs";
@@ -423,6 +424,20 @@ window.setzeZeit = function (t) {
 </script></body></html>`;
 }
 
+/**
+ * Welches Layout baut dieses Reel? „wechsel" loest die beiden Tag fuer Tag
+ * ab - so laufen beide unter denselben Bedingungen und die Zahlen im Ledger
+ * lassen sich vergleichen.
+ */
+export function layoutFuer(datum) {
+  const wunsch = String(CONFIG.reel.layout || "wechsel").toLowerCase();
+  if (wunsch === "klassisch" || wunsch === "erklaer") return wunsch;
+  const tage = Math.floor(Date.UTC(+datum.slice(0, 4), +datum.slice(5, 7) - 1, +datum.slice(8, 10)) / 86400000);
+  /* Gerade Tage erklaeren, ungerade bleiben klassisch. Der 14.09.2026 faellt
+     damit auf das Erklaervideo - der erste Tag, an dem es laufen soll. */
+  return tage % 2 === 0 ? "erklaer" : "klassisch";
+}
+
 /* Frames rendern. */
 async function framesRendern(html, plan, frameDir, fps, transparent = false) {
   fs.mkdirSync(frameDir, { recursive: true });
@@ -479,24 +494,34 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
   fs.mkdirSync(ausgabeDir, { recursive: true });
   const plan = await zeitplanErstellen(reel, path.join(ausgabeDir, "audio"), { stimmeId: opt.stimmeId || null, stimmeName: opt.stimmeName || null });
   const frameDir = path.join(ausgabeDir, "frames");
-  const n = await framesRendern(reelHtml(reel, plan, ctx), plan, frameDir, fps, !!clip);
+  /* Das Erklaervideo braucht seine eigene Buehne und keinen Hintergrundclip -
+     die Flaeche ist das Bild. Ohne Motive faellt es auf das bisherige Layout
+     zurueck: eine leere Buehne waere schlechter als die gewohnte Karte. */
+  const layout = opt.layout || layoutFuer(datum);
+  const hatMotive = reel.szenen.some((s) => s.bild);
+  const erklaer = layout === "erklaer" && hatMotive;
+  if (layout === "erklaer" && !hatMotive) console.warn("  ! Erklärvideo ohne Motive - es wird das klassische Layout gebaut.");
+  const seite = erklaer ? erklaerHtml(reel, plan, ctx) : reelHtml(reel, plan, ctx);
+  const n = await framesRendern(seite, plan, frameDir, fps, !erklaer && !!clip);
 
+  /* Ab hier zaehlt nur noch, ob wirklich mit Clip gerendert wurde. */
+  const clipAktiv = erklaer ? null : clip;
   const video = path.join(ausgabeDir, `${reel.slug || "reel"}.mp4`);
   const cover = path.join(ausgabeDir, `${reel.slug || "reel"}-cover.jpg`);
-  const frames = path.join(frameDir, clip ? "f%05d.png" : "f%05d.jpg");
+  const frames = path.join(frameDir, clipAktiv ? "f%05d.png" : "f%05d.jpg");
   /* Mit Clip: Eingabe 0 = geloopter Hintergrund, Eingabe 1 = transparente Frames. */
   const args = ["-y", "-hide_banner", "-loglevel", "error"];
-  if (clip) args.push("-stream_loop", "-1", "-i", clip);
+  if (clipAktiv) args.push("-stream_loop", "-1", "-i", clipAktiv);
   args.push("-framerate", String(fps), "-i", frames);
-  const vEingaben = clip ? 2 : 1;
+  const vEingaben = clipAktiv ? 2 : 1;
   const audioEingaben = plan.szenen.filter((s) => s.audio);
   for (const s of audioEingaben) args.push("-i", s.audio);
   const filter = [];
   const mix = [];
-  if (clip) filter.push(`[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=${fps},setpts=PTS-STARTPTS[bg]`, `[bg][1:v]overlay=0:0:shortest=1[vout]`);
+  if (clipAktiv) filter.push(`[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=${fps},setpts=PTS-STARTPTS[bg]`, `[bg][1:v]overlay=0:0:shortest=1[vout]`);
   audioEingaben.forEach((s, k) => { filter.push(`[${k + vEingaben}:a]aresample=48000,adelay=${Math.round(s.audioStart * 1000)}|${Math.round(s.audioStart * 1000)},apad=whole_dur=${plan.gesamt.toFixed(2)}[v${k}]`); mix.push(`[v${k}]`); });
   if (CONFIG.reel.hintergrundmusik) { filter.push(`${klangbettFilter(plan.gesamt)}[bett]`); mix.push("[bett]"); }
-  const videoMap = clip ? "[vout]" : "0:v";
+  const videoMap = clipAktiv ? "[vout]" : "0:v";
   if (mix.length) {
     filter.push(`${mix.join("")}amix=inputs=${mix.length}:normalize=0:duration=first,alimiter=limit=0.95[aout]`);
     args.push("-filter_complex", filter.join(";"), "-map", videoMap, "-map", "[aout]", "-c:a", "aac", "-b:a", "160k", "-ar", "48000");
@@ -515,11 +540,11 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
   } catch (e) {
     console.warn(`  ! Cover nicht gerendert (${e.message}) – nehme ein Bild aus dem Video.`);
     const coverFrame = Math.min(n - 1, Math.round(0.9 * fps));
-    if (clip) execFileSync(ffmpegPfad(), ["-y", "-hide_banner", "-loglevel", "error", "-ss", (coverFrame / fps).toFixed(2), "-i", video, "-frames:v", "1", "-q:v", "3", cover], { stdio: ["ignore", "pipe", "pipe"] });
+    if (clipAktiv) execFileSync(ffmpegPfad(), ["-y", "-hide_banner", "-loglevel", "error", "-ss", (coverFrame / fps).toFixed(2), "-i", video, "-frames:v", "1", "-q:v", "3", cover], { stdio: ["ignore", "pipe", "pipe"] });
     else fs.copyFileSync(path.join(frameDir, `f${String(coverFrame).padStart(5, "0")}.jpg`), cover);
   }
   if (!opt.framesBehalten) fs.rmSync(frameDir, { recursive: true, force: true });
-  return { video, cover, dauer: plan.gesamt, echt: plan.echt, anbieter: plan.anbieter, stimmeId: plan.stimmeId, stimmeName: plan.stimmeName || null, szenen: plan.szenen.length, animation: clip ? `Clip ${path.basename(clip)}` : ctx.animation };
+  return { video, cover, dauer: plan.gesamt, echt: plan.echt, anbieter: plan.anbieter, stimmeId: plan.stimmeId, stimmeName: plan.stimmeName || null, szenen: plan.szenen.length, layout: erklaer ? "erklaer" : "klassisch", animation: erklaer ? "Erklärvideo" : clipAktiv ? `Clip ${path.basename(clipAktiv)}` : ctx.animation };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
