@@ -207,7 +207,21 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
   /* Stories: Teaser je Beitrag + eigenständige Karten, bis zur Tagesmenge. */
   const stories = [];
   for (const b of beitraege) stories.push({ art: "teaser", beitragSlot: b.slot, zeit: b.zeit });
-  const eigenstaendig = ["frage", "norm", "countdown", "merksatz", "formel", "begriff", "fehler", "tipp", "zahl"];
+  /* Zwei Arten stehen jeden Tag: Die Quizfrage ist das stärkste Format für
+     Antworten, die Norm des Tages der Markenkern. Der Rest rotiert, damit
+     über die Woche alle Arten drankommen - vorher lief die Liste jeden Tag
+     von vorn und "fehler", "tipp" und "zahl" kamen nie an die Reihe, weil das
+     Tageskontingent vorher voll war. */
+  const FEST = ["frage", "norm"];
+  const WECHSELND = ["streitstand", "merksatz", "begriff", "fehler", "tipp", "zahl", "formel"];
+  /* Arten mit dünnem Vorrat laufen im Takt statt täglich: Für Rechenwege gibt
+     es in Jura nur eine Handvoll Themen - täglich hiesse alle fünf Tage
+     dasselbe. Der Takt zählt Tage seit 1970, ist also für jeden Kalendertag
+     derselbe, egal wann der Plan entsteht. */
+  const tagesZahl = Math.floor(Date.UTC(+datum.slice(0, 4), +datum.slice(5, 7) - 1, +datum.slice(8, 10)) / 86400000);
+  const takt = CONFIG.plan.storyArtTakt || {};
+  const versatz = tagesZahl % WECHSELND.length;
+  const eigenstaendig = [...FEST, "countdown", ...WECHSELND.slice(versatz), ...WECHSELND.slice(0, versatz)];
   const tageBisExamen = CONFIG.examen.schriftlich ? tageBis(CONFIG.examen.schriftlich, new Date(`${datum}T12:00:00Z`)) : -1;
   let k = 0;
   /* Prüfungstage: nur Teaser-Stories – das Budget gehört der Lösungsskizze am Abend. */
@@ -216,8 +230,9 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
     const art = eigenstaendig[k % eigenstaendig.length];
     k++;
     if (art === "countdown" && (tageBisExamen < 0 || tageBisExamen > 200)) continue;
+    if (takt[art] && tagesZahl % takt[art] !== 0) continue;
     let thema = null;
-    const typen = { frage: ["quiz", "karteikarte"], norm: ["modul", "begriff"], merksatz: ["modul"], formel: ["formel"], begriff: ["begriff", "karteikarte"], fehler: ["modul"], tipp: ["modul"], zahl: ["formel", "modul"] }[art];
+    const typen = { frage: ["quiz", "karteikarte"], norm: ["modul", "begriff"], streitstand: ["schema", "modul"], merksatz: ["modul"], formel: ["formel"], begriff: ["begriff", "karteikarte"], fehler: ["modul"], tipp: ["modul"], zahl: ["formel", "modul"] }[art];
     if (typen) {
       const passend = pool.filter((t) => typen.includes(t.typ));
       let kandidaten = verfuegbar(passend, ledgerKopie, datum, benutzt, "story");

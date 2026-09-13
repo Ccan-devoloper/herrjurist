@@ -66,6 +66,10 @@ export const CONFIG = {
        neun Stories laufen und der Vorrat je Art sonst nicht reicht; greift der
        Vorrat nicht, kommt die Art an diesem Tag seltener dran (planer.mjs). */
     storySperreTage: Number(env("IG_STORYSPERRE_TAGE", "60")),
+    /* Story-Arten, die nur alle n Tage laufen. Rechenwege sind in Jura die
+       Ausnahme - fünf Themen im ganzen Pool. Täglich wäre das alle fünf Tage
+       dieselbe Formel; alle drei Wochen ist es eine Abwechslung. */
+    storyArtTakt: { formel: 21 },
     /* Gewichtung nach Examenspriorität (🔴/🟠/🟢) – wie auf der Webseite. */
     prioritaetGewicht: { hoch: 60, mittel: 25, selten: 15 },
     /* Wöchentlicher Formatplan der Beiträge (0 = Sonntag). Ein Format aus

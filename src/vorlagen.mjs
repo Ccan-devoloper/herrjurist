@@ -199,6 +199,15 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story .geist{font-size:1200px;top:520px}
 .story .balken{margin-top:110px;margin-bottom:auto;height:16px;border-radius:999px;background:var(--linie);overflow:hidden}
 .story .balken i{display:block;height:100%;background:var(--akzent)}
+/* Streitstand: zwei Ansichten untereinander, darunter der Entscheid - er
+   traegt die Akzentfarbe, weil er in der Klausur die Punkte bringt. */
+.story .norm.klein{margin-top:30px;font-size:44px}
+.story .ansichten{margin-top:40px;display:flex;flex-direction:column;gap:20px}
+.story .ansichten div{background:var(--flaeche);border:3px solid var(--linie);border-radius:var(--ecken);padding:28px 34px}
+.story .ansichten div b{display:block;font-family:var(--titel);font-size:34px;color:var(--akzent);margin-bottom:8px}
+.story .ansichten div span{display:block;font-size:38px;line-height:1.35}
+.story .karte.entscheid{margin-top:28px;border-color:var(--ok)}
+.story .karte.entscheid .t{font-size:34px;letter-spacing:.06em;text-transform:uppercase;color:var(--ok)}
 .story .pfeil{margin-top:auto;text-align:center;font-size:34px;color:var(--text-weich);letter-spacing:.12em;text-transform:uppercase}
 /* Reel-Cover: das Standbild, das im Feed und im Profilraster für das Reel steht.
    Alles Wichtige liegt im mittleren 4:5-Bereich (y 285–1635), den Instagram
@@ -360,6 +369,10 @@ em{color:${p.akzent2}}
 .story .text{font-size:42px}
 .story .norm{background:var(--flaeche);border-radius:30px;padding:30px 36px;color:${p.dunkel};font-size:54px}
 .story .optionen div{border:0;border-radius:30px;color:#1c1c22;font-size:40px}
+.story .ansichten div{border:0;border-radius:30px;color:#1c1c22}
+.story .ansichten div b{color:${p.dunkel}}
+.story .karte.entscheid{border:0;box-shadow:inset 0 0 0 5px ${p.dunkel}}
+.story .karte.entscheid .t{color:${p.dunkel}}
 .story .optionen div b{color:${p.dunkel}}
 .story .optionen div.richtig{box-shadow:inset 0 0 0 5px ${p.dunkel}}
 .story .zahl{color:#fff;text-shadow:0 12px 40px rgba(0,0,0,.18)}
@@ -597,6 +610,20 @@ const STORIES = {
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
     <div class="geist">§</div>
+    ${fuss(ctx)}`,
+  /* Der Meinungsstreit - das, was eine Jura-Klausur von jedem anderen Fach
+     unterscheidet. Zwei Ansichten nebeneinander, darunter der Streitentscheid:
+     genau die Reihenfolge, in der er in der Klausur geschrieben wird. */
+  streitstand: (s, ctx) => `
+    ${ueberzeile("streitstand", s.ueberzeile || "Streitstand")}
+    <h1 class="klein">${markierenTitel(s.titel)}</h1>
+    ${s.norm ? `<div class="norm klein">${esc(s.norm)}</div>` : ""}
+    <div class="ansichten">${(s.optionen || []).slice(0, 2).map((o) => {
+      const [kopf, ...rest] = String(o).split(":");
+      const text = rest.join(":").trim();
+      return `<div><b>${markieren(text ? kopf : "Ansicht")}</b><span>${markieren(text || kopf)}</span></div>`;
+    }).join("")}</div>
+    ${s.text ? `<div class="karte entscheid"><div class="t">Streitentscheid</div><div class="u">${markieren(s.text)}</div></div>` : ""}
     ${fuss(ctx)}`,
   merksatz: (s, ctx) => `
     ${sk(ctx)}

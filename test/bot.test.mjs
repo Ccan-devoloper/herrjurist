@@ -1231,3 +1231,55 @@ test("Story mit Motiv: alle Inhaltsblöcke gleich breit, Nachweis Ton in Ton", a
   assert.ok(/class="frei" style="width:\d+px;height:\d+px"/.test(html), "Bühne ohne gerechnete Maße");
   assert.ok(html.includes("Foto: X / Pexels"), "Bildnachweis fehlt");
 });
+
+test("Streitstand als Story-Art: zwei Ansichten und der Entscheid", async () => {
+  const { storyHtml, STORY_ARTEN } = await import("../src/vorlagen.mjs");
+  const { farbIcon } = await import("../src/icons.mjs");
+  assert.ok(STORY_ARTEN.includes("streitstand"));
+  assert.ok(farbIcon("streitstand", 48)?.includes("<svg"), "kein Zeichen für den Streitstand");
+  const html = storyHtml({
+    art: "streitstand", titel: "Wann beginnt der Versuch beim Unterlassen?", norm: "§ 22 StGB",
+    optionen: ["Rechtsprechung: Mit der ersten Rettungsmöglichkeit.", "h.L.: Erst mit der letzten."],
+    text: "Der Rechtsprechung folgen: Wer die erste Chance verstreichen lässt, gibt das Geschehen aus der Hand.",
+  }, kontext({ fach: "strafat", klausur: 2 }));
+  /* Label und Aussage werden getrennt dargestellt. */
+  assert.ok(html.includes("<b>Rechtsprechung</b>"), "Label der ersten Ansicht fehlt");
+  assert.ok(html.includes("<b>h.L.</b>"), "Label der zweiten Ansicht fehlt");
+  assert.ok(html.includes("Streitentscheid"), "Streitentscheid fehlt");
+  /* Nur zwei Ansichten, auch wenn das Modell mehr liefert. */
+  const drei = storyHtml({ art: "streitstand", titel: "T", optionen: ["A: eins", "B: zwei", "C: drei"], text: "x" }, kontext({ fach: "strafat", klausur: 2 }));
+  assert.ok(!drei.includes("<b>C</b>"), "dritte Ansicht wird gezeigt");
+  /* Ohne Doppelpunkt bleibt die Aussage stehen, das Label wird allgemein. */
+  const ohne = storyHtml({ art: "streitstand", titel: "T", optionen: ["Eine Ansicht ohne Label"], text: "x" }, kontext({ fach: "strafat", klausur: 2 }));
+  assert.ok(ohne.includes("Eine Ansicht ohne Label") && ohne.includes("<b>Ansicht</b>"));
+});
+
+test("Story-Arten mit dünnem Vorrat laufen im Takt, nicht täglich", async () => {
+  const { tagesplan } = await import("../src/planer.mjs");
+  const { themenpool } = await import("../src/inhalte.mjs");
+  const pool = themenpool();
+  const ledger = { veroeffentlicht: [] };
+  const takt = CONFIG.plan.storyArtTakt || {};
+  assert.ok(takt.formel >= 14, `Rechenwege sollten selten sein, Takt ist ${takt.formel}`);
+  /* Über drei Wochen darf höchstens an jedem n-ten Tag ein Rechenweg stehen. */
+  let mitFormel = 0, mitStreitstand = 0;
+  for (let i = 0; i < 21; i++) {
+    const d = new Date(Date.UTC(2026, 8, 14 + i)).toISOString().slice(0, 10);
+    const arten = tagesplan(d, ledger, pool, null).stories.map((s) => s.art);
+    if (arten.includes("formel")) mitFormel++;
+    if (arten.includes("streitstand")) mitStreitstand++;
+  }
+  assert.ok(mitFormel <= 2, `Rechenweg an ${mitFormel} von 21 Tagen - zu oft`);
+  /* Der Streitstand rotiert mit den anderen Arten - regelmäßig, aber nicht
+     täglich; so bekommen auch Fehler, Tipp und Zahl ihren Platz. */
+  assert.ok(mitStreitstand >= 6, `Streitstand nur an ${mitStreitstand} von 21 Tagen`);
+  /* Über drei Wochen kommt jede Art mindestens einmal vor. */
+  const gesehen = new Set();
+  for (let i = 0; i < 21; i++) {
+    const d = new Date(Date.UTC(2026, 8, 14 + i)).toISOString().slice(0, 10);
+    for (const s of tagesplan(d, ledger, pool, null).stories) gesehen.add(s.art);
+  }
+  for (const art of ["frage", "antwort", "norm", "streitstand", "merksatz", "begriff", "fehler", "tipp", "zahl"]) {
+    assert.ok(gesehen.has(art), `Art ${art} kommt in drei Wochen nie vor`);
+  }
+});
