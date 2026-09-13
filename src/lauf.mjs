@@ -104,8 +104,14 @@ async function main() {
   /* Tagesdeckel: bisheriger Verbrauch des Tages aus state/kosten.json, jeder
      weitere Aufruf wird sofort dort festgehalten. */
   const kostenStart = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} });
+  /* Ausnahmen vom Tagesdeckel, je Datum, im Zustand des Kanals
+     (state/budget-ausnahmen.json, etwa { "2026-09-13": 0.40 }). Für genau
+     einen Tag, danach gilt wieder der Deckel aus der Konfiguration. */
+  const ausnahmen = hosting.jsonLesen("budget-ausnahmen.json", {});
+  const tagesLimitUsd = Number(ausnahmen?.[datum]) > 0 ? Number(ausnahmen[datum]) : CONFIG.ki.tagesBudgetUsd;
+  if (tagesLimitUsd !== CONFIG.ki.tagesBudgetUsd) log(`  Tagesdeckel heute ausnahmsweise ${tagesLimitUsd.toFixed(2)} $ (statt ${CONFIG.ki.tagesBudgetUsd.toFixed(2)} $)`);
   budgetSetzen({
-    limitUsd: CONFIG.ki.tagesBudgetUsd,
+    limitUsd: tagesLimitUsd,
     bisher: kostenStart.tage?.[datum]?.usd || 0,
     gemessen: kostenStart.tage?.[datum]?.messungen || {},
     speichern: (usd, aufrufe, zwecke, gemessen) => {
