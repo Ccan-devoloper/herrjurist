@@ -117,7 +117,21 @@ const erwartetFuer = (zweck) => { const k = schluessel(zweck); if (!k) return ST
 export const erwartet = (zweck) => erwartetFuer(zweck);
 
 const darfReserve = (zweck) => reserviertFuer.includes(schluessel(zweck) || String(zweck).toLowerCase());
-export const budgetFrei = (zweck = "") => tagesStand() + erwartetFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
+
+/* Wenn es eng wird, weicht das Bild - nie die Prüfung.
+
+   Beides läuft über denselben Deckel, und bisher verlor schlicht, wer zuletzt
+   dran war. Damit konnte ein gezeichnetes Motiv den Faktencheck des
+   Abendbeitrags auffressen. Die Rangfolge ist aber eindeutig: Ein Beitrag
+   ohne eigenes Motiv trägt ein Icon und sieht nüchterner aus. Ein Beitrag
+   ohne Faktencheck kann falsch sein.
+
+   Deshalb hört das Zeichnen früher auf als der harte Deckel: Der Abstand
+   reicht für die Prüfungen, die am selben Tag noch kommen. */
+const PRUEF_ABSTAND = Number(process.env.IG_PRUEF_ABSTAND_USD || 0.03);
+const abstandFuer = (zweck) => (schluessel(zweck) === "bild" ? PRUEF_ABSTAND : 0);
+
+export const budgetFrei = (zweck = "") => tagesStand() + erwartetFuer(zweck) + abstandFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
 
 export function budgetPruefen(zweck = "Claude-Aufruf") {
   if (budgetFrei(zweck)) return;

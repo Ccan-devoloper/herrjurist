@@ -127,9 +127,28 @@ export function zahlenLastig(beitrag) {
 export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "", streng = null } = {}) {
   if (!CONFIG.faktencheck.aktiv) return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] };
   budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck", "story-faktencheck": "Story-Faktencheck" }[zweck] || "Faktencheck");
-  const scharf = streng ?? zahlenLastig(beitrag);
+  /* Beiträge und Reels gehen immer an den strengen Prüfer.
+
+     Die Auswertung der letzten fünf Tage war eindeutig: Der günstige Prüfer
+     arbeitet - er fand auf 6 von 13 Beiträgen echte Feinheiten (§ 729 ZPO
+     statt § 726, die Einordnung des § 28 StGB, einen unscharfen
+     Prognosemaßstab). Beim Beitrag vom 14.09. gab er aber genau einen
+     Hinweis, und zwar zur Folie DANEBEN, während die vertauschte Erbquote
+     unbeanstandet blieb. Er hat hingeschaut und es nicht gesehen.
+
+     Fehler sind eben nicht nur Zahlen: ein falscher Absatz, eine falsch
+     zugeordnete Ansicht, ein Aufbau in der falschen Reihenfolge - all das
+     kostet in der Klausur Punkte, und all das hängt an der Stärke des
+     prüfenden Modells. Ein Beitrag steht dauerhaft im Feed.
+
+     Stories bleiben beim günstigen Prüfer: Sie verschwinden nach 24 Stunden,
+     und alle neun werden in EINEM Aufruf geprüft - eine Aufwertung schlüge
+     dort am stärksten aufs Budget und am wenigsten auf die Haltbarkeit
+     durch. Wird in einer Story gerechnet, greift die Eskalation trotzdem. */
+  const stories = zweck === "story-faktencheck";
+  const scharf = streng ?? (!stories || zahlenLastig(beitrag));
   const modell = (scharf && CONFIG.ki.modellPruefungStreng) || CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben;
-  if (scharf) console.log(`  Faktencheck streng (${modell}) – im Beitrag wird gerechnet.`);
+  if (scharf) console.log(`  Faktencheck streng (${modell})${stories ? " – in einer Story wird gerechnet." : ""}`);
   const haiku = /haiku/i.test(modell);
   const user = `Prüfe diesen Text:\n\n${textAus(beitrag)}${hinweis ? `\n\n${hinweis}` : ""}`;
   const basis = {
