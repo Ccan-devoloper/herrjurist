@@ -178,6 +178,26 @@ export const CONFIG = {
     sicherheitsabstandLimit: 10,                            // Reserve unter dem 100er-Tageslimit
   },
 
+  /* Wissensbasis: verschlüsselter Volltext als Belegstelle beim Schreiben ---
+     Das Repo ist öffentlich, das Material nicht: daten/wissen/*.enc liegt im
+     Tresor, der Schlüssel steht nur im GitHub-Actions-Secret IG_WISSEN_KEY.
+     Fehlt er, schreibt der Bot wie vorher – ohne Belegstelle, aber er
+     schreibt. Ein fehlender Schlüssel darf keinen Beitrag kosten. */
+  wissen: {
+    schluessel: env("IG_WISSEN_KEY", ""),
+    /* Wie viel Text das Modell je Beitrag mitbekommt. 4000 Zeichen sind rund
+       1200 Token, bei Sonnet also gut 0,004 $ – bei drei Beiträgen am Tag
+       etwa 0,012 $ von 0,27 $. Genauigkeit für Kleingeld. */
+    zeichen: Number(env("IG_WISSEN_ZEICHEN", "4000")),
+    /* Darunter gilt ein Kapitel als "passt nicht wirklich". Lieber keine
+       Belegstelle als die zum Nachbarthema – eine falsche Quelle ist
+       schlimmer als gar keine. */
+    schwelle: Number(env("IG_WISSEN_SCHWELLE", "8")),
+    /* Und der Vorsprung vor dem zweitbesten Kapitel: Liegen zwei fast
+       gleichauf, passt keines von beiden allein. */
+    vorsprung: Number(env("IG_WISSEN_VORSPRUNG", "1.2")),
+  },
+
   /* Reels: kurze Videos aus den Beiträgen mit Sprecherstimme --------------- */
   reel: {
     /* Reels sind standardmäßig aktiv; die Stimme kommt von ElevenLabs (Schlüssel)

@@ -52,6 +52,17 @@ else {
 if (!process.env.IG_TOKEN_KEY) warnung("IG_TOKEN_KEY fehlt – ein verlängerter Token kann nicht gespeichert werden und läuft irgendwann ab.");
 else gut("IG_TOKEN_KEY gesetzt, verlängerte Token werden verschlüsselt abgelegt");
 
+/* Die Wissensbasis ist kein Muss: Ohne sie schreibt der Bot wie vorher. Aber
+   wenn der Tresor da ist und der Schlüssel nicht passt, will man das hier
+   sehen und nicht erst am leisen Wegfall der Belegstellen merken. */
+{
+  const { wissenIndex } = await import("../src/wissen.mjs");
+  const index = wissenIndex();
+  if (!process.env.IG_WISSEN_KEY) warnung("IG_WISSEN_KEY fehlt – die Beiträge entstehen ohne Belegstelle aus dem Handbuch (kein Ausfall, nur weniger genau).");
+  else if (!index.length) warnung("IG_WISSEN_KEY gesetzt, aber kein Kapitel lesbar – falscher Schlüssel oder leerer Tresor?");
+  else gut(`Wissensbasis offen: ${index.length} Kapitel aus ${new Set(index.map((k) => k.band)).size} Bänden`);
+}
+
 /* 2. Texte und Prüfung --------------------------------------------------- */
 console.log(zeilen.splice(0).join("\n") + "\n\nTexte");
 /* Der Schlüssel steht nicht in CONFIG – das SDK liest ihn selbst aus der
