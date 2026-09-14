@@ -214,9 +214,12 @@ Drei Dinge, die bewusst so sind:
   deshalb gar keine Stelle: Beide Kapitel passen halb, und halb passend ist schlechter als nichts.
   Aktuell haben 308 der 904 Themen eine Belegstelle, 96 davon über einen fest eingetragenen Zeiger
   (`wissen: "4/2"` = Band 4, Kapitel 2).
-- **Quelle, keine Vorlage.** Im Auftrag ans Modell steht ausdrücklich: Zahlen und Reihenfolgen
-  übernehmen, keinen Satz abschreiben, keine Gliederung spiegeln. Der Kanal hat eine eigene Stimme,
-  und das Urheberrecht gilt auch für Material, das man selbst hochgeladen hat.
+- **Was übernommen werden darf, steht im Auftrag ans Modell** – und zwar dreigeteilt, nicht pauschal:
+  *Prüfungsschemata, Aufbau und Definitionen* dürfen der Belegstelle folgen, denn ein anerkanntes
+  Schema ist Allgemeingut und soll in der Klausur wiedererkannt werden. *Fälle* dürfen übernommen
+  werden, aber mit anderen Namen, Orten, Beträgen und Daten. *Erklärender Fließtext* entsteht in
+  eigenen Worten – nicht aus Rechtsgründen, sondern weil ein abgeschriebener Lehrbuchabsatz zwischen
+  den anderen Beiträgen wie ein Fremdkörper klingt.
 
 Kosten: rund 1200 Token je Beitrag, also ~0,004 $ – bei drei Beiträgen am Tag etwa 0,012 $ von 0,27 $.
 
