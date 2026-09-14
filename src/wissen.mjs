@@ -7,9 +7,11 @@
    und Streitstaende muss das Modell sonst aus dem Gedaechtnis holen.
 
    Hier liegt der Volltext dazu. Vor dem Schreiben sucht der Autor das Kapitel
-   zum Thema heraus und bekommt es als Quelle mit - nicht zum Abschreiben,
-   sondern damit er die Zahlen und die Reihenfolge nicht erfindet. Der
-   Faktencheck bekommt dieselbe Stelle und prueft dagegen.
+   zum Thema heraus und bekommt es als Quelle mit, damit er Zahlen und
+   Reihenfolgen nicht erfindet. Der Faktencheck bekommt dieselbe Stelle und
+   prueft dagegen. Was uebernommen werden darf und was nicht, steht unten bei
+   belegstelle() - kurz: Schemata ja, Faelle mit geaenderten Namen, Prosa in
+   eigenen Worten.
 
    VERSCHLUESSELT: Das Repo ist oeffentlich, das Material ist es nicht. Die
    Baende liegen als .enc im Verzeichnis daten/wissen - AES-256-GCM, Schluessel
@@ -281,16 +283,25 @@ export function zuschneiden(kapitel, opt = {}) {
   return { ...kapitel, text };
 }
 
-/* Der Block, der im Auftrag an das Modell landet. Die Warnung davor ist
-   nicht schmueckend: Das Material ist nicht zum Abschreiben da, weder
-   urheberrechtlich noch stilistisch - der Kanal hat eine eigene Stimme. */
+/* Der Block, der im Auftrag an das Modell landet.
+
+   Die Regel ist bewusst dreigeteilt statt pauschal "nicht abschreiben". Ein
+   anerkanntes Prüfungsschema ist Allgemeingut - es umzubauen, nur damit es
+   anders aussieht, macht den Beitrag schlechter, nicht eigenständiger. Bei
+   Fällen genügen andere Namen und Zahlen. Und die Erklärprosa schreibt der
+   Bot selbst, aber nicht aus Rechtsgründen: Ein abgeschriebener
+   Lehrbuchabsatz klingt auf Instagram wie ein Fremdkörper. */
 export function belegstelle(thema, opt = {}) {
   const k = wissenFuer(thema, opt);
   if (!k) return "";
   const woher = `${k.bandTitel}${k.teil ? `, ${k.teil}` : ""}, Kapitel ${k.nr}: ${k.titel}`;
   return [
     `BELEGSTELLE AUS DEM HANDBUCH (${woher}).`,
-    "Sie ist Faktenquelle, keine Textvorlage: Zahlen, Fristen, Reihenfolgen, Normen und Streitstände daraus übernehmen, die Formulierung aber vollständig selbst schreiben. Keinen Satz abschreiben, keine Gliederung spiegeln. Was hier nicht steht, ist deshalb nicht falsch – aber was hier steht, gilt.",
+    "Was darin steht, gilt: Zahlen, Fristen, Normen, Reihenfolgen und Streitstände daraus übernehmen. Was nicht darin steht, ist deshalb nicht falsch.",
+    "So damit umgehen:",
+    "– Prüfungsschemata, Aufbau und Definitionen dürfen der Belegstelle folgen. Ein anerkanntes Schema ist Allgemeingut; baue es nicht um, nur damit es anders aussieht – die Leute sollen es in der Klausur wiedererkennen.",
+    "– Fälle und Beispiele darfst du übernehmen, aber ändere Namen, Orte, Beträge, Waren und Daten. Der Rechtskern bleibt, die Einkleidung wird deine.",
+    "– Erklärenden Fließtext schreibe in eigenen Worten. Nicht aus Rechtsgründen, sondern weil dieser Kanal eine eigene Stimme hat: Ein abgeschriebener Lehrbuchabsatz klingt zwischen den anderen Beiträgen wie ein Fremdkörper.",
     k.text,
     "ENDE DER BELEGSTELLE.",
   ].join("\n");
