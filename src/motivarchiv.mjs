@@ -40,13 +40,23 @@ const tage = (von, bis) => Math.round((new Date(`${bis}T12:00:00Z`) - new Date(`
  * Sucht ein Motiv, das zur Szene passt und lange genug her ist.
  * @returns {{eintrag:object, aehnlich:number, alter:number}|null}
  */
-export function passendesMotiv(archiv, szene, datum, { mindestTage = 90, schwelle = 0.85 } = {}) {
+export function passendesMotiv(archiv, szene, datum, { mindestTage = 90, schwelle = 0.85, themaId = null } = {}) {
   let bestes = null;
   for (const e of archiv?.motive || []) {
     const zuletzt = e.zuletzt || e.gezeichnet;
     if (!zuletzt) continue;
     const alter = tage(zuletzt, datum);
-    if (alter < mindestTage) continue;
+    /* Die Sperrfrist hält dasselbe Bild aus dem Feed fern - sie gilt aber
+       nicht für den Beitrag, zu dem das Motiv gehört. Wird derselbe Beitrag
+       noch einmal gerendert, weil er berichtigt und neu gestellt wird, ist
+       sein eigenes Motiv die richtige Wahl, nicht ein frisch gezeichnetes.
+
+       Am 14.09. fehlte die Ausnahme: Die Neuveröffentlichung des
+       Erbrechtsbeitrags zeichnete dieselbe Szene ein zweites Mal. Das kostete
+       nicht nur 0,01 $ - es lieferte auch die Figur mit dem abgeschnittenen
+       Kopf, während das brauchbare Motiv im Archiv lag. */
+    const eigenes = themaId && e.themaId && e.themaId === themaId;
+    if (!eigenes && alter < mindestTage) continue;
     const a = aehnlichkeit(szene, e.szene);
     if (a < schwelle) continue;
     /* Bei gleicher Passung das aeltere - es war am laengsten nicht zu sehen. */

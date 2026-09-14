@@ -1964,3 +1964,41 @@ test("Wenn es eng wird, weicht das Bild – nicht die Prüfung", async () => {
   assert.equal(budgetFrei("Faktencheck"), true);
   budgetSetzen({});
 });
+
+test("Angeschnittene Motive werden auch dann verworfen, wenn sie gezeichnet sind", async () => {
+  const { randVerdacht, RAND_GRENZE } = await import("../src/freistellen.mjs");
+  const { bildAuftrag } = await import("../src/bildki.mjs");
+  /* Die gemessenen Werte des Motivs, das am 14.09. auf der Erbrechts-Kachel
+     stand: 46 % der obersten Bildzeile deckend, der Kopf glatt abgeschnitten,
+     der Stickerrand quer über den Scheitel. Die Prüfung dafür gab es - aber
+     nur im Pfad für gesuchte Fotos, nicht für gezeichnete Motive. */
+  assert.ok(randVerdacht({ oben: 0.46, unten: 0.23, links: 0, rechts: 0 }), "der abgeschnittene Kopf muss auffallen");
+  /* Unten darf ein Motiv anschneiden - dort läuft die Figur ohnehin aus der
+     Kachel. Sonst würde jede Figur verworfen, die auf dem Boden steht. */
+  assert.equal(randVerdacht({ oben: 0, unten: 0.6, links: 0, rechts: 0 }), null);
+  assert.equal(randVerdacht({ oben: 0, unten: 0, links: 0, rechts: 0 }), null);
+  assert.ok(randVerdacht({ oben: 0, unten: 0, links: 0.2, rechts: 0 }), "seitlich angeschnitten zählt auch");
+  assert.equal(randVerdacht(null), null, "ohne Messung keine Beanstandung – sonst fiele jedes Motiv aus");
+  assert.ok(RAND_GRENZE.oben < RAND_GRENZE.seite, "oben wird strenger gemessen als an den Seiten");
+
+  /* Und der Auftrag verlangt den Platz jetzt ausdrücklich, statt nur das
+     Anschneiden zu verbieten. */
+  const auftrag = bildAuftrag("elderly woman holding old photograph");
+  assert.match(auftrag, /clear empty margin on all four sides/i);
+  assert.doesNotMatch(auftrag, /filling the frame/i, "„filling the frame“ widerspricht der Randvorgabe");
+});
+
+test("Derselbe Beitrag bekommt sein eigenes Motiv zurück, nicht ein neu gezeichnetes", async () => {
+  const { passendesMotiv } = await import("../src/motivarchiv.mjs");
+  const archiv = { motive: [{ datei: "a.webp", szene: "elderly woman holding old photograph", themaId: "famerb-257", gezeichnet: "2026-09-14", zuletzt: "2026-09-14" }] };
+  const heute = "2026-09-14";
+  /* Ohne Themenbezug greift die Sperrfrist: Dasselbe Bild soll sich im Feed
+     nicht binnen 90 Tagen wiederholen. */
+  assert.equal(passendesMotiv(archiv, "elderly woman holding old photograph", heute, { mindestTage: 90 }), null);
+  /* Beim selben Beitrag ist es kein Wiederholen, sondern dasselbe Bild zum
+     selben Text - etwa wenn er berichtigt und neu gestellt wird. */
+  const fund = passendesMotiv(archiv, "elderly woman holding old photograph", heute, { mindestTage: 90, themaId: "famerb-257" });
+  assert.equal(fund?.eintrag.datei, "a.webp");
+  /* Ein fremdes Thema darf die Sperrfrist nicht aushebeln. */
+  assert.equal(passendesMotiv(archiv, "elderly woman holding old photograph", heute, { mindestTage: 90, themaId: "stpo-785" }), null);
+});
