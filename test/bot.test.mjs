@@ -1797,3 +1797,76 @@ test("Wissensbasis: jeder Zeiger am Thema trifft ein Kapitel, das es gibt", asyn
   assert.deepEqual(kaputt.map((t) => `${t.titel} → ${t.wissen}`), []);
   wissenLeeren();
 });
+
+test("Bildauftrag: ohne Person in der Szene wird auch keine gezeichnet", async () => {
+  const { bildAuftrag } = await import("../src/bildki.mjs");
+  /* Der Fehler vom 14.09.: Der Auftrag sprach immer von Armen, Haenden und
+     Anatomie. Aus "scale balancing two stacks" wurde damit zuverlaessig ein
+     Mensch neben einer Waage - und aus einem Reel ueber das steuerliche
+     Einlagekonto eine Bilderfolge mit einem Mann und einem Einmachglas. */
+  const sache = bildAuftrag("ledger page with running balance column");
+  assert.match(sache, /no people|no faces|no hands/i, "ohne Person muss der Auftrag Menschen ausschliessen");
+  assert.doesNotMatch(sache, /arms relaxed|natural proportions/i, "ohne Person keine Koerperhaltungs-Regeln");
+
+  const mensch = bildAuftrag("person dropping letter into mailbox");
+  assert.match(mensch, /arms relaxed/i, "mit Person bleiben die Haltungsregeln");
+  assert.doesNotMatch(mensch, /no people/i, "mit Person darf der Auftrag Menschen nicht verbieten");
+
+  /* Unverhandelbar in beiden Faellen. */
+  for (const a of [sache, mensch]) {
+    assert.match(a, /no text, no letters/i);
+    assert.match(a, /transparent background/i);
+  }
+});
+
+test("Erklärvideo: die Marke bleibt im sichtbaren Bereich und auf einer Zeile", async () => {
+  const { chromium } = await import("playwright");
+  const { erklaerHtml } = await import("../src/erklaervideo.mjs");
+  const { stil } = await import("../src/stile.mjs");
+  const { CONFIG } = await import("../src/config.mjs");
+  let browser;
+  try { browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH }); }
+  catch { return; /* ohne Browser kein Pixeltest */ }
+  try {
+    /* Genau die Marke aus dem Reel vom 14.09., die auf dem Telefon
+       angeschnitten war. Bei 50px ist sie breiter als der sichere Bereich,
+       muss also kleiner werden statt umzubrechen. */
+    const reel = {
+      fach: "zpo", klausur: 1, fachLabel: "Zivilprozessrecht",
+      szenen: [{ art: "schritt", titel: "Bestand vom Vorjahr", marken: ["Vorjahresbestand: *übernehmen*"], sprecher: "x" }],
+    };
+    const plan = { szenen: [{ index: 0, start: 0, dauer: 5, sprichVon: 0.3, sprichDauer: 4.4 }], dauer: 5 };
+    const ctx = { stil: stil(CONFIG.marke.stil), handle: "test", fach: "zpo", klausur: 1, fachLabel: "Zivilprozessrecht", farbeJeKlausur: CONFIG.marke.farbeJeKlausur };
+    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+    await page.setContent(erklaerHtml(reel, plan, ctx), { waitUntil: "load" });
+    /* Wie im Renderer: erst die Schriften, dann das erste Bild. Vor dieser
+       Aenderung lief das Einpassen beim Parsen, also gegen die Ersatzschrift -
+       die Messung war damit wertlos. */
+    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(() => window.setzeZeit(0));
+    const m = await page.evaluate(() => {
+      const el = document.querySelector(".szene");
+      el.style.display = "block";
+      const k = el.querySelector(".plakette");
+      /* Die Ruhelage messen, nicht die Einflugbahn: Zum Zeitpunkt 0 steht die
+         Plakette noch ausserhalb des Bildes, das ist die Animation. */
+      k.style.transform = "none";
+      const bereich = document.createRange();
+      let links = Infinity, rechts = -Infinity, zeilen = 0;
+      const lauf = document.createTreeWalker(k, NodeFilter.SHOW_TEXT);
+      for (let n = lauf.nextNode(); n; n = lauf.nextNode()) {
+        bereich.selectNodeContents(n);
+        for (const r of bereich.getClientRects()) { links = Math.min(links, r.left); rechts = Math.max(rechts, r.right); zeilen = Math.max(zeilen, r.top); }
+      }
+      const kasten = k.getBoundingClientRect();
+      return { links, rechts, hoehe: kasten.height, px: parseFloat(getComputedStyle(k).fontSize) };
+    });
+    /* Der Kasten darf ueber den Rand ragen - die Schrift nie. */
+    assert.ok(m.links >= 56, `Schrift beginnt bei ${Math.round(m.links)}px, mindestens 56 erwartet`);
+    assert.ok(m.rechts <= 1024, `Schrift endet bei ${Math.round(m.rechts)}px, hoechstens 1024 erlaubt`);
+    /* Eine Zeile: sonst bliebe der Kasten auf voller Breite stehen und zoege
+       einen leeren Schwanz ueber den Bildrand. */
+    assert.ok(m.hoehe < 130, `Marke bricht um (Kastenhoehe ${Math.round(m.hoehe)}px)`);
+    assert.ok(m.px < 50, "die Marke haette verkleinert werden muessen");
+  } finally { await browser.close(); }
+});

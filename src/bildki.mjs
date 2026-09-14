@@ -24,17 +24,34 @@ export const bildKiAktiv = () => Boolean(CONFIG.bilder.ki.aktiv && CONFIG.bilder
    malen Buchstaben, die wie Recht aussehen und keines sind - auf einem
    Examenskanal ein Eigentor) und genau ein Gegenstand, damit das Motiv auf der
    Kachel noch zu erkennen ist. */
+/* Nennt die Szene ueberhaupt einen Menschen? Bis zum 14.09. wurde diese Frage
+   nie gestellt - der Auftrag sprach immer von Armen, Haenden, Gliedmassen und
+   Anatomie. Damit wurde aus "scale balancing two stacks" zuverlaessig ein
+   Mensch, der neben einer Waage steht, und aus einem Reel ueber das steuerliche
+   Einlagekonto eine Bilderfolge mit einem Mann und einem Einmachglas. */
+const MENSCH = /\b(person|people|man|men|woman|women|someone|somebody|child|student|clerk|official|customer|client|worker|employee|judge|lawyer|defendant|witness|teacher|hand|hands|figure)\b/i;
+
 export function bildAuftrag(szene, { stil = "" } = {}) {
+  const text = String(szene).trim();
+  const mitMensch = MENSCH.test(text);
   return [
-    `Flat vector illustration: ${String(szene).trim()}.`,
+    `Flat vector illustration: ${text}.`,
     "Exactly one clear subject, centred, seen from the front or in three-quarter view, nothing cropped.",
-    /* Haende und kleine Requisiten sind die Stelle, an der billige Bilder
-       auseinanderfallen: verbogene Finger, ein Stift ohne Spitze, eine Lampe,
-       die keine mehr ist. Also gar nichts greifen lassen. */
-    "Keep the pose calm and simple: arms relaxed at the sides or lightly folded, hands open and empty.",
-    "Do not let the subject hold, grip or carry anything - if the scene mentions an object, place that object on the ground or on a surface next to the subject, clearly separate from the hands.",
-    "No small fiddly props, no thin stems, no objects near the face, no crossed or overlapping limbs.",
-    "Bold simple shapes, even line weight, flat colours with soft shading, clean readable silhouette, correct anatomy and natural proportions.",
+    ...(mitMensch
+      /* Haende und kleine Requisiten sind die Stelle, an der billige Bilder
+         auseinanderfallen: verbogene Finger, ein Stift ohne Spitze, eine Lampe,
+         die keine mehr ist. Also gar nichts greifen lassen. */
+      ? ["Keep the pose calm and simple: arms relaxed at the sides or lightly folded, hands open and empty.",
+        "Do not let the subject hold, grip or carry anything - if the scene mentions an object, place that object on the ground or on a surface next to the subject, clearly separate from the hands.",
+        "No small fiddly props, no thin stems, no objects near the face, no crossed or overlapping limbs.",
+        "Correct anatomy and natural proportions."]
+      /* Kein Mensch in der Szene: dann auch keinen dazuerfinden. Das Modell
+         moebliert eine Szene sonst von sich aus mit einer Figur, und die Figur
+         zieht dann alle Aufmerksamkeit auf sich - der Gegenstand, um den es
+         geht, wird zur Requisite in ihrer Hand. */
+      : ["Draw the object itself, filling the frame. Absolutely no people, no faces, no hands, no arms, no body parts, no silhouettes of persons.",
+        "Show the object large, complete and instantly recognisable, at a slight angle so its shape reads clearly."]),
+    "Bold simple shapes, even line weight, flat colours with soft shading, clean readable silhouette.",
     stil,
     "Absolutely no text, no letters, no words, no numbers, no signage, no logos, no watermark, no signature.",
     "No background, no ground shadow, no frame - the subject stands alone on a fully transparent background.",
