@@ -233,6 +233,63 @@ const EXAMENSABLAUF = [
   [/\b(n(ä|ae)chste[ns]?\s+(Mal|Reel|Beitrag|Woche)\s+(zeige|erkl(ä|ae)re|geht|kommt|schauen|sehen)|Teil\s+2\s+folgt|dazu\s+mehr\s+im\s+n(ä|ae)chsten)/i, "Keine Ankündigung auf ein nächstes Mal – der Beitrag muss für sich stehen."],
 ];
 
+/* ==========================================================================
+   Normfallen: feste Zahlen, die im Gesetz stehen und nicht verhandelbar sind.
+
+   Am 14.09. ging ein Beitrag zur gesetzlichen Erbfolge raus, der die Ehefrau
+   neben zwei Kindern auf 3/4 setzte. Richtig ist 1/2. Der Fehler: § 1931
+   Abs. 1 BGB gibt dem Ehegatten neben Verwandten ERSTER Ordnung ein Viertel
+   und nur neben der zweiten Ordnung oder Großeltern die Hälfte - der Beitrag
+   hatte beide Fälle vertauscht und dann noch § 1371 I BGB daraufgerechnet.
+
+   Warum das durch alle Netze fiel:
+   - Der Faktencheck ist ein Modell und hat es schlicht übersehen.
+   - Die Quotensumme stimmte (3/4 + 1/8 + 1/8 = 1), eine Summenprobe hätte
+     also nichts gemerkt.
+   - Die Wissensbasis nennt die Quoten gar nicht, sie sagt nur, das
+     Ehegattenerbrecht sei "mit dem Güterstand zu kombinieren".
+
+   Gegen so etwas hilft kein weiteres Modell, sondern eine Handvoll fester
+   Regeln, die rechnen statt zu urteilen. Sie kosten nichts, laufen vor jedem
+   Modellaufruf und sind absichtlich eng: Lieber wenige Fälle sicher als viele
+   halb. Wer eine neue Regel aufnimmt, nimmt eine auf, die er beweisen kann.
+   ========================================================================== */
+
+/* Ein Bruch, der einer Norm zugeordnet wird: "1/4 (§ 1931 I BGB)". Genau die
+   Form, in der eine Quote auf den Fall angewendet wird - im Unterschied zum
+   erklärenden Satz "neben der ersten Ordnung 1/4, neben der zweiten 1/2",
+   der beide Zahlen nennen darf und muss. */
+const QUOTE_ZU_NORM = /(\d+)\s*\/\s*(\d+)\s*\(\s*§+\s*(\d+[a-z]?)/g;
+
+const ERSTE_ORDNUNG = /\b(Kind(er|es|ern)?|Abkömmling|Abkömmlinge|Sohn|Tochter|erste[nr]?\s+Ordnung)\b/i;
+const ZWEITE_ORDNUNG = /\b(Eltern|Mutter|Vater|Geschwister|Bruder|Schwester|zweite[nr]?\s+Ordnung|Großeltern)\b/i;
+
+export function normfallen(text) {
+  const fehler = [];
+
+  /* § 1931 Abs. 1 BGB: 1/4 neben der ersten Ordnung, 1/2 neben der zweiten
+     oder neben Großeltern. Geprüft wird nur die angewendete Quote. */
+  for (const [, zaehler, nenner, norm] of text.matchAll(QUOTE_ZU_NORM)) {
+    if (norm !== "1931") continue;
+    const anteil = Number(zaehler) / Number(nenner);
+    const kinder = ERSTE_ORDNUNG.test(text);
+    if (kinder && anteil !== 0.25) {
+      fehler.push(`§ 1931 Abs. 1 BGB: Neben Verwandten der ersten Ordnung (hier: Kinder/Abkömmlinge) erbt der Ehegatte 1/4, nicht ${zaehler}/${nenner}. Die Hälfte gilt nur neben der zweiten Ordnung oder neben Großeltern.`);
+    } else if (!kinder && ZWEITE_ORDNUNG.test(text) && anteil !== 0.5) {
+      fehler.push(`§ 1931 Abs. 1 BGB: Neben Verwandten der zweiten Ordnung oder Großeltern erbt der Ehegatte 1/2, nicht ${zaehler}/${nenner}.`);
+    }
+  }
+
+  /* § 1371 Abs. 1 BGB setzt Zugewinngemeinschaft voraus. Wer das Viertel
+     aufschlägt, ohne den Güterstand zu nennen, rechnet auf einer Annahme,
+     die im Sachverhalt nicht steht. */
+  if (/§+\s*1371/.test(text) && !/Zugewinngemeinschaft|gesetzlich(en|er)\s+Güterstand/i.test(text)) {
+    fehler.push("§ 1371 Abs. 1 BGB gilt nur bei Zugewinngemeinschaft – der Güterstand muss im Sachverhalt genannt sein, sonst steht die Quote auf einer Annahme.");
+  }
+
+  return fehler;
+}
+
 /* Normen sind wörtlich erlaubt – sie sind Gesetzestext-Zitate, keine Übernahme.
    Deshalb werden Normzitate (auch ohne Gesetzesangabe, in beliebiger
    Reihenfolge von Abs./S./Nr./Buchst.) vor dem Shingle-Vergleich entfernt. */
@@ -241,13 +298,34 @@ export function ohneNormen(text) {
   return String(text).replace(NORM, " NORM ").replace(/\b(Abs|S|Nr|Buchst|Hs|Alt)\.\s*\d+[a-z]?/g, " NORM ").replace(/\(\d+[a-z]?\)/g, " NORM ");
 }
 
+/* Alles, was auf einer Kachel steht - und zwar wirklich alles.
+
+   Bis zum 14.09. fehlten hier ausgerechnet die Felder der Rechenfolie:
+   formel, zeilen, ergebnis. Die Folie, auf der die Zahlen stehen, war für
+   jede Prüfung in dieser Datei unsichtbar - für die Übernahmeprüfung, für
+   die Namenssperre, für die Examensablauf-Regeln. Aufgefallen ist es, als
+   die falsche Erbquote durchlief: Der Faktencheck sah die Formel (siehe
+   textAus in faktencheck.mjs), diese Prüfung nicht.
+
+   Wer hier ein Feld ergänzt, ergänzt es auch in textAus - die beiden müssen
+   dasselbe sehen. */
 function alleTexte(beitrag) {
   const teile = [];
   for (const f of beitrag.folien || []) {
-    teile.push(f.titel || "", f.text || "", ...(f.punkte || []), ...(f.schritte || []).map((s) => (typeof s === "string" ? s : `${s.titel || ""} ${s.text || ""}`)), f.links?.text || "", f.rechts?.text || "", ...(f.links?.punkte || []), ...(f.rechts?.punkte || []));
+    teile.push(
+      f.titel || "", f.untertitel || "", f.text || "", f.definition || "",
+      ...(f.punkte || []),
+      ...(f.schritte || []).map((s) => (typeof s === "string" ? s : `${s.titel || ""} ${s.text || ""}`)),
+      f.formel || "", ...(f.zeilen || []), f.ergebnis || "", f.erklaerung || "",
+      f.links?.titel || "", f.rechts?.titel || "", f.links?.text || "", f.rechts?.text || "",
+      ...(f.links?.punkte || []), ...(f.rechts?.punkte || []),
+    );
   }
-  teile.push(beitrag.caption || "");
-  for (const s of beitrag.stories || []) teile.push(s.titel || "", s.text || "", ...(s.optionen || []));
+  teile.push(beitrag.caption || "", beitrag.kurztitel || "");
+  for (const s of beitrag.szenen || []) teile.push(s.titel || "", s.text || "", s.norm || "", s.sprecher || "", ...(s.marken || []));
+  for (const s of beitrag.stories || []) {
+    teile.push(s.ueberzeile || "", s.titel || "", s.text || "", s.norm || "", s.formel || "", s.zahl || "", s.richtigText || "", s.falsch || "", ...(s.optionen || []));
+  }
   return teile.filter(Boolean);
 }
 
@@ -275,6 +353,11 @@ export function pruefeBeitrag(beitrag, opt = {}) {
     const treffer = gesamt.match(muster);
     if (treffer) fehler.push(`„${treffer[0]}“: ${grund}`);
   }
+
+  /* 3c. Normfallen: feste Gesetzeszahlen, die nicht verhandelbar sind.
+        Deterministisch und vor jedem Modellaufruf - hier kostet ein Fund
+        nichts, im Feed kostet er den Beitrag. */
+  fehler.push(...normfallen(gesamt));
 
   /* 4. Formales */
   if (beitrag.folien) {
