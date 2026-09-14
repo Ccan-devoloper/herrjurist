@@ -20,9 +20,15 @@ ein Wort gelesen ist:
 
 | Gebiet | Farbe | Fächer |
 | --- | --- | --- |
-| Zivilrecht | Blau `#2d5be3` | BGB AT, Schuldrecht AT/BT, Sachenrecht, Deliktsrecht, Arbeitsrecht, Familien-/Erbrecht, HGB/GesR, ZPO |
-| Strafrecht | Orange `#ff7a45` | Strafrecht AT, Strafrecht BT, StPO |
-| Öffentliches Recht | Grün `#23d98b` | Staatsrecht, Grundrechte, Verwaltungsrecht AT, Besonderes Verwaltungsrecht, VwGO, Europarecht |
+| Zivilrecht | Blau `#2d5be3` | BGB AT, Schuldrecht AT/BT, Sachenrecht, Deliktsrecht, Arbeitsrecht, Familien-/Erbrecht, HGB/GesR, ZPO, IPR, Assessor ZR, Zwangsvollstreckung |
+| Strafrecht | Orange `#ff7a45` | Strafrecht AT, Strafrecht BT, StPO, Anklage, Revision |
+| Öffentliches Recht | Grün `#23d98b` | Staatsrecht, Grundrechte, Verwaltungsrecht AT, Besonderes Verwaltungsrecht, VwGO, Europarecht, Assessor ÖR |
+
+Das zweite Staatsexamen trägt seit dem 14.09.2026 eigene Fächer (`assessorz`, `zwangsv`,
+`assessoroer`, `anklage`, `revision`). Sie behalten die Farbe ihres Gebiets, sagen auf der Kachel
+aber, dass es um die Assessorklausur geht – vorher stand über einem Beitrag zur Tenorierung
+dasselbe „ZPO“ wie über einem zur Rechtshängigkeit. Der Planer verteilt gleichmäßig über alle
+Fächer, neue Fächer rutschen deshalb von selbst in den Plan.
 
 ## Unterschiede zum Schwester-Bot (Examenscampus)
 
