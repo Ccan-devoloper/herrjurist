@@ -1879,3 +1879,54 @@ test("Erklärvideo: die Marke bleibt im sichtbaren Bereich und auf einer Zeile",
     assert.ok(m.px < 50, "die Marke haette verkleinert werden muessen");
   } finally { await browser.close(); }
 });
+
+test("Erbquote: § 1931 neben Kindern ist 1/4 – der Fehler vom 14.09. wird gefangen", async () => {
+  const { pruefeBeitrag, normfallen } = await import("../src/pruefung.mjs");
+  /* Wortgleich die Folie, die veröffentlicht wurde. Die Ehefrau stand dort
+     neben zwei Kindern auf 3/4; richtig ist 1/2, weil § 1931 Abs. 1 BGB
+     neben der ERSTEN Ordnung nur ein Viertel gibt. */
+  const falsch = {
+    folien: [
+      { art: "text", titel: "Der Fall", text: "Herr Bosse stirbt ohne Testament. Er lebte in Zugewinngemeinschaft. Er hinterlässt seine Ehefrau, zwei Kinder und seine Mutter. Wer erbt was?" },
+      { art: "rechnung", titel: "Quoten im Beispiel",
+        formel: "Ehefrau: 1/2 (§ 1931 BGB) + 1/4 (§ 1371 I BGB) = 3/4",
+        zeilen: ["Kinder (2): teilen 1/4 nach § 1924 IV BGB → je 1/8"],
+        ergebnis: "Ehefrau 3/4, Kinder je 1/8, Mutter 0" },
+    ],
+  };
+  const r = pruefeBeitrag(falsch);
+  assert.equal(r.ok, false, "die falsche Quote muss beanstandet werden");
+  assert.ok(r.fehler.some((f) => /1931/.test(f) && /1\/4/.test(f)), `erwartet wurde ein Befund zu § 1931, bekommen: ${JSON.stringify(r.fehler)}`);
+
+  /* Die berichtigte Fassung muss durchgehen - sonst steht der Kanal still. */
+  const richtig = JSON.parse(JSON.stringify(falsch));
+  richtig.folien[1].formel = "Ehefrau: 1/4 (§ 1931 I BGB) + 1/4 (§ 1371 I BGB) = 1/2";
+  richtig.folien[1].zeilen = ["Kinder (2): teilen die andere Hälfte nach § 1924 IV BGB → je 1/4"];
+  richtig.folien[1].ergebnis = "Ehefrau 1/2, Kinder je 1/4, Mutter 0";
+  assert.deepEqual(normfallen(JSON.stringify(richtig)), []);
+
+  /* Der erklärende Satz darf beide Zahlen nennen - er wendet sie nicht an. */
+  assert.deepEqual(normfallen("§ 1931 Abs. 1 BGB: neben der ersten Ordnung 1/4, neben der zweiten Ordnung oder Großeltern 1/2. Kinder gehen vor."), []);
+
+  /* Ohne Kinder, neben der Mutter: dort ist die Hälfte richtig. */
+  assert.deepEqual(normfallen("Der Erblasser hinterlässt seine Ehefrau und seine Mutter. Ehefrau: 1/2 (§ 1931 BGB) bei Zugewinngemeinschaft."), []);
+  assert.ok(normfallen("Der Erblasser hinterlässt seine Ehefrau und seine Mutter. Ehefrau: 1/4 (§ 1931 BGB) bei Zugewinngemeinschaft.").length);
+
+  /* § 1371 ohne Güterstand im Sachverhalt: die Quote stünde auf einer Annahme. */
+  assert.ok(normfallen("Ehefrau: 1/4 (§ 1931 BGB) + 1/4 (§ 1371 I BGB). Kinder erben den Rest.").some((f) => /1371/.test(f)));
+});
+
+test("Die Rechenfolie ist für die Prüfung sichtbar – formel, zeilen, ergebnis", async () => {
+  const { pruefeBeitrag } = await import("../src/pruefung.mjs");
+  /* Der stille Teil des Fehlers vom 14.09.: alleTexte() las die Felder der
+     Rechenfolie gar nicht aus. Die Folie mit den Zahlen war für jede Prüfung
+     in pruefung.mjs unsichtbar - auch für die Namenssperre und die
+     Uebernahmepruefung. */
+  const mitZahlenInDerFormel = {
+    folien: [
+      { art: "text", titel: "Der Fall", text: "Zwei Kinder und die Ehefrau erben. Zugewinngemeinschaft." },
+      { art: "rechnung", titel: "Quoten", formel: "Ehefrau: 3/4 (§ 1931 BGB)", zeilen: [], ergebnis: "" },
+    ],
+  };
+  assert.equal(pruefeBeitrag(mitZahlenInDerFormel).ok, false, "was nur in der Formel steht, muss trotzdem geprüft werden");
+});
