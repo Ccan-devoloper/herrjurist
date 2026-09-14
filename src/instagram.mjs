@@ -23,6 +23,19 @@ const schlafen = (ms) => new Promise((r) => setTimeout(r, ms));
 export /* Fehlercodes, die ein Ratenlimit der App melden (Stundenfenster). */
 const RATE_LIMIT = [4, 17, 32, 613];
 const RATE_LIMIT_VERSUCHE = 6;
+/* „Only photo or video can be accepted as media type" (9004/2207052) heisst
+   nicht, dass das Bild falsch waere - es heisst, dass Instagram die Datei
+   nicht laden konnte. Der Lauf prueft vorher selbst, ob sie oeffentlich
+   erreichbar ist (hosting.erreichbar), und Instagram holt sie Sekunden
+   spaeter von einer anderen Kante des CDN, die sie noch nicht hat. Am
+   14.09. fiel dadurch der erste Campus-Beitrag aus, obwohl die Kachel
+   einwandfrei war. Also nachfassen statt aufgeben. */
+const HOL_FEHLER = 9004;
+const HOL_SUBCODE = "2207052";
+const HOL_VERSUCHE = 4;
+/* Die Wartezeit wird bei Bedarf gelesen, nicht beim Laden des Moduls - so
+   kann ein Test sie kurz stellen, auch wenn das Modul schon geladen ist. */
+const holWartenMs = () => Number(process.env.IG_HOL_WARTEN_MS || 20000);
 
 class InstagramFehler extends Error {
   constructor(nachricht, details) { super(nachricht); this.details = details; }
@@ -134,6 +147,15 @@ export class Instagram {
         const sekunden = 60 * i;
         console.warn(`  ! Instagram-Ratenlimit (code ${err.code}) – warte ${sekunden} s (${i}/${RATE_LIMIT_VERSUCHE - 1})`);
         await schlafen(sekunden * 1000);
+        continue;
+      }
+      /* Instagram hat die Datei nicht laden koennen: kurz warten und erneut
+         anlegen, bis das CDN sie ueberall hat. */
+      if (err.code === HOL_FEHLER && String(err.error_subcode) === HOL_SUBCODE) {
+        if (i >= HOL_VERSUCHE) throw letzter;
+        const warten = holWartenMs() * i;
+        console.warn(`  ! Instagram konnte die Datei nicht laden – warte ${Math.round(warten / 1000)} s und lege sie erneut an (${i}/${HOL_VERSUCHE - 1})`);
+        await schlafen(warten);
         continue;
       }
       /* Vorübergehende Fehler (Serverfehler, kurzzeitige Störung) erneut versuchen. */
