@@ -398,9 +398,15 @@ em{color:${p.akzent2}}
    zum 13.09. war das Cover der einzige Ort mit dem Kasten - im Profilraster
    standen beide Formate nebeneinander und sahen aus wie zwei Kanaele.
    Die Story-Regel (ein Grund um das ganze h1) wird dafuer zurueckgenommen. */
-.story.cover h1{background:none;padding:0;width:auto;font-size:100px;line-height:1.5;margin-top:96px}
-.story.cover h1.klein{font-size:86px}
-.story.cover h1.winzig{font-size:74px}
+/* Das Cover ist 1920 hoch, die Karussellkachel 1350. Dieselbe Schriftgroesse
+   wirkt darauf deshalb ein Drittel kleiner - im Profilraster stehen beide
+   nebeneinander, und das Reel fiel als das schwaechere auf. Gemessen belegte
+   die Ueberschrift dort 15,6 % der Hoehe gegen 33,3 % auf der Kachel. Die
+   Groessen sind mit 1920/1350 = 1,42 hochgerechnet, damit die Wirkung gleich
+   ist statt der Zahl. */
+.story.cover h1{background:none;padding:0;width:auto;font-size:142px;line-height:1.5;margin-top:102px}
+.story.cover h1.klein{font-size:122px}
+.story.cover h1.winzig{font-size:105px}
 .story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.14em .5em;border-radius:48px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
 /* Handschrift mit Pfeil, genau wie auf der Titelfolie. */
