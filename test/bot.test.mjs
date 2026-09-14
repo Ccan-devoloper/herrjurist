@@ -1657,19 +1657,28 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
   /* Und das Cover nimmt die Story-Regel zurück, die einen Grund um das ganze
      h1 legt - sonst läge die Pille in der Pille. */
   assert.ok(/\.story\.cover h1\{[^}]*background:none/.test(cover), "Cover: der Kasten um das ganze h1 ist nicht zurückgenommen");
-  /* Gleiche Schriftgrößen: Was die Titelfolie im bunten Stil setzt, setzt das
-     Cover auch - sonst steht dieselbe Überschrift zweimal verschieden groß. */
-  const buntGroesse = folie.match(/h1\{margin-top:72px;font-size:(\d+)px/)?.[1];
-  const coverGroesse = cover.match(/\.story\.cover h1\{[^}]*font-size:(\d+)px/)?.[1];
+  /* Gleiche WIRKUNG, nicht gleiche Zahl: Das Cover ist 1920 hoch, die
+     Titelfolie 1350. Bis zum 14.09. stand auf beiden 100px - im Profilraster
+     wirkte die Reel-Überschrift dadurch ein Drittel kleiner und fiel als die
+     schwächere auf (gemessen: 15,6 % der Kachelhöhe gegen 33,3 %). Die
+     Cover-Größe ist deshalb mit 1920/1350 hochgerechnet. */
+  const buntGroesse = Number(folie.match(/h1\{margin-top:72px;font-size:(\d+)px/)?.[1]);
+  const coverGroesse = Number(cover.match(/\.story\.cover h1\{[^}]*font-size:(\d+)px/)?.[1]);
   assert.ok(buntGroesse, "Titelfolie: Schriftgröße nicht gefunden");
-  assert.equal(coverGroesse, buntGroesse);
+  const faktor = 1920 / 1350;
+  assert.ok(Math.abs(coverGroesse / buntGroesse - faktor) < 0.05,
+    `Cover ${coverGroesse}px zu Titelfolie ${buntGroesse}px ergibt ${(coverGroesse / buntGroesse).toFixed(2)}, erwartet ${faktor.toFixed(2)}`);
   /* Auch die beiden Stufen für lange Titel. Gesucht wird das Paar, das im
      bunten Stil für die Titelfolie gilt - „.story h1.klein" ist eine andere
      Regel und darf nicht dazwischenfunken. */
   const stufen = folie.match(/(?:^|[};\n])h1\.klein\{font-size:(\d+)px\}h1\.winzig\{font-size:(\d+)px\}/);
   assert.ok(stufen, "Titelfolie: Stufen für lange Titel nicht gefunden");
-  assert.equal(cover.match(/\.story\.cover h1\.klein\{font-size:(\d+)px/)?.[1], stufen[1], "Größe für .klein weicht ab");
-  assert.equal(cover.match(/\.story\.cover h1\.winzig\{font-size:(\d+)px/)?.[1], stufen[2], "Größe für .winzig weicht ab");
+  const coverKlein = Number(cover.match(/\.story\.cover h1\.klein\{font-size:(\d+)px\}/)?.[1]);
+  const coverWinzig = Number(cover.match(/\.story\.cover h1\.winzig\{font-size:(\d+)px\}/)?.[1]);
+  for (const [name, gross, klein] of [["klein", Number(stufen[1]), coverKlein], ["winzig", Number(stufen[2]), coverWinzig]]) {
+    assert.ok(klein, `Cover: Stufe ${name} nicht gefunden`);
+    assert.ok(Math.abs(klein / gross - faktor) < 0.05, `Cover-Stufe ${name}: ${klein}px zu ${gross}px`);
+  }
 });
 
 test("Instagram: „Datei nicht ladbar“ wird nachgefasst, nicht aufgegeben", async () => {
@@ -2001,4 +2010,34 @@ test("Derselbe Beitrag bekommt sein eigenes Motiv zurück, nicht ein neu gezeich
   assert.equal(fund?.eintrag.datei, "a.webp");
   /* Ein fremdes Thema darf die Sperrfrist nicht aushebeln. */
   assert.equal(passendesMotiv(archiv, "elderly woman holding old photograph", heute, { mindestTage: 90, themaId: "stpo-785" }), null);
+});
+
+test("Das Reel wählt zuerst und rotiert über die Rechtsgebiete", async () => {
+  const { tagesplan, ledgerLaden, vermerken } = await import("../src/planer.mjs");
+  const pool = themenpool();
+  const ledger = JSON.parse(JSON.stringify(ledgerLaden()));
+  ledger.veroeffentlicht = [];
+  /* Bis zum 14.09. stand das Reel im Plan an letzter Stelle und bekam damit
+     nicht die beste Wahl, sondern den Rest: Der Farbwechsel-Filter verbot ihm
+     die Gebiete der Kachelbeiträge, und die nehmen fast immer Zivil- und
+     Strafrecht. Die ersten fünf Reels des Kanals waren deshalb alle grün. */
+  const gebiete = [];
+  for (let t = 0; t < 12; t++) {
+    const datum = new Date(Date.UTC(2026, 9, 5 + t)).toISOString().slice(0, 10);
+    const plan = tagesplan(datum, ledger, pool);
+    const reel = plan.beitraege.find((b) => b.format === "reel");
+    if (!reel?.thema) continue;
+    const g = FAECHER[reel.thema.fach]?.klausur;
+    if (g) gebiete.push(g);
+    vermerken(ledger, { datum, art: "beitrag", slot: "b3", format: "reel", fach: reel.thema.fach, thema: reel.thema.id, veroeffentlicht: datum });
+  }
+  assert.ok(gebiete.length >= 8, `zu wenige Reels im Versuch: ${gebiete.length}`);
+  const je = { 1: 0, 2: 0, 3: 0 };
+  for (const g of gebiete) je[g]++;
+  /* Kein Gebiet darf mehr als die Hälfte der Reels stellen. */
+  for (const [g, n] of Object.entries(je)) {
+    assert.ok(n <= Math.ceil(gebiete.length / 2), `Gebiet ${g} stellt ${n} von ${gebiete.length} Reels`);
+  }
+  /* Und jedes Gebiet muss überhaupt vorkommen - genau das war der Befund. */
+  for (const g of [1, 2, 3]) assert.ok(je[g] > 0, `Gebiet ${g} kam in ${gebiete.length} Reels nie vor`);
 });
