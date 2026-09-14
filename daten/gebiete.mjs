@@ -26,15 +26,26 @@ export const FAECHER = {
   famerb:  { label: "Familien- und Erbrecht", kurz: "FamR/ErbR", gebiet: 1 },
   handelsg:{ label: "Handels- und Gesellschaftsrecht", kurz: "HGB/GesR", gebiet: 1 },
   zpo:     { label: "Zivilprozessrecht",      kurz: "ZPO",       gebiet: 1 },
+  /* Zweites Staatsexamen. Bis hierher trugen Urteilsaufbau, Tenor, Relation
+     und Anwaltsklausur dasselbe Etikett "ZPO" wie eine Frage zur
+     Rechtshaengigkeit - im Raster war beides nicht zu unterscheiden. Die
+     Assessorfaecher tragen die Farbe ihres Gebiets weiter, sagen auf der
+     Kachel aber, worum es geht: um die Klausur des zweiten Examens. */
+  assessorz:  { label: "Zivilrechtliche Assessorklausur", kurz: "Assessor ZR", gebiet: 1 },
+  zwangsv:    { label: "Zwangsvollstreckung",  kurz: "ZwVollstr", gebiet: 1 },
+  ipr:        { label: "Internationales Privatrecht", kurz: "IPR", gebiet: 1 },
   strafat: { label: "Strafrecht AT",          kurz: "StrafR AT", gebiet: 2 },
   strafbt: { label: "Strafrecht BT",          kurz: "StrafR BT", gebiet: 2 },
   stpo:    { label: "Strafprozessrecht",      kurz: "StPO",      gebiet: 2 },
+  anklage:    { label: "Anklage und Strafakte", kurz: "Anklage",  gebiet: 2 },
+  revision:   { label: "Revision im Strafverfahren", kurz: "Revision", gebiet: 2 },
   staat:   { label: "Staatsrecht",            kurz: "StaatsR",   gebiet: 3 },
   grundr:  { label: "Grundrechte",            kurz: "GrundR",    gebiet: 3 },
   verwalt: { label: "Verwaltungsrecht AT",    kurz: "VerwR AT",  gebiet: 3 },
   verwbt:  { label: "Besonderes Verwaltungsrecht", kurz: "Bes. VerwR", gebiet: 3 },
   vwgo:    { label: "Verwaltungsprozessrecht",kurz: "VwGO",      gebiet: 3 },
   europa:  { label: "Europarecht",            kurz: "EuR",       gebiet: 3 },
+  assessoroer: { label: "Öffentlich-rechtliche Assessorklausur", kurz: "Assessor ÖR", gebiet: 3 },
   /* Klausur- und Lernmethodik gehoert zu keinem Rechtsgebiet: Obersatztechnik
      gilt im Zivilrecht wie im Strafrecht. Gebiet 0 heisst "ohne festes Gebiet" -
      inhalte.mjs verteilt diese Themen reihum ueber die drei Farben, damit das

@@ -1696,3 +1696,38 @@ test("Instagram: „Datei nicht ladbar“ wird nachgefasst, nicht aufgegeben", a
     assert.ok(Date.now() - t0 >= 0);
   } finally { globalThis.fetch = echt; }
 });
+
+test("Jedes Fach trägt Themen, und der Auftrag ans Modell kennt jedes Fach", async () => {
+  const pool = themenpool();
+  const belegt = new Set(pool.map((t) => t.fach));
+  /* "mindset" ist absichtlich leer: Kopfsache-Beiträge entstehen frei, ohne
+     Themeneintrag. Jedes andere Fach muss Stoff haben, sonst steht ein
+     Etikett in der Tabelle, das nie auf einer Kachel erscheint. */
+  for (const id of Object.keys(FAECHER)) {
+    if (id === "mindset") continue;
+    assert.ok(belegt.has(id), `Fach ${id} hat kein einziges Thema`);
+  }
+  /* Die Faecherliste im Recherche-Auftrag wird aus der Tabelle gebaut. Waere
+     sie von Hand gepflegt, ordnete das Modell einen Beitrag zur Tenorierung
+     wieder "zpo" zu - so sind die Assessorthemen urspruenglich dort gelandet. */
+  const quelle = await fs.promises.readFile(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  assert.ok(!/bgbat, schuld, schuldbt/.test(quelle), "die Faecherliste steht noch fest im Prompt");
+  assert.ok(/\$\{FACH_LISTE\}/.test(quelle), "der Prompt muss die abgeleitete Liste einsetzen");
+});
+
+test("Das zweite Examen hat eigene Fächer statt des Etiketts der ersten Instanz", () => {
+  const pool = themenpool();
+  const zweitExamen = ["assessorz", "zwangsv", "assessoroer", "anklage", "revision"];
+  for (const id of zweitExamen) {
+    const themen = pool.filter((t) => t.fach === id);
+    assert.ok(themen.length >= 10, `${id} braucht Stoff für mehr als ein paar Wochen, hat ${themen.length}`);
+    /* Die Farbe bleibt die des Rechtsgebiets - ein Assessorbeitrag im
+       Strafrecht ist orange wie jeder andere Strafrechtsbeitrag. */
+    assert.ok([1, 2, 3].includes(FAECHER[id].klausur), `${id} muss zu einem Rechtsgebiet gehören`);
+  }
+  /* Tenorierung, Anklagesatz und Revisionsbegründung haben unter "ZPO",
+     "VwGO" und "StPO" gestanden - dort darf jetzt nichts davon mehr liegen. */
+  const falschAbgelegt = pool.filter((t) => ["zpo", "vwgo", "stpo"].includes(t.fach)
+    && /Tenor|Relation|Anklageschrift|Anklagesatz|Revisionsgutachten|Widerspruchsbescheid|Urteilsklausur|Aktenvortrag/i.test(t.titel));
+  assert.deepEqual(falschAbgelegt.map((t) => t.titel), [], "diese Themen gehören in die Assessorfächer");
+});

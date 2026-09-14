@@ -288,11 +288,18 @@ const GEBIET_TAGS = { 1: "#zivilrecht", 2: "#strafrecht", 3: "#öffentlichesrech
    Zivilrechtsbeitrag - fuer die Leute, die dem Tag folgen, ein Fehlgriff, und
    fuer die Lernschleife ein verfaelschter Messwert. */
 const FACH_TAGS = {
-  1: ["#zivilrecht", "#bgbat", "#schuldrecht", "#sachenrecht", "#zpo", "#familienrecht", "#erbrecht", "#handelsrecht", "#arbeitsrecht"],
-  2: ["#strafrecht", "#stpo", "#strafprozessrecht"],
-  3: ["#öffentlichesrecht", "#verwaltungsrecht", "#staatsrecht", "#grundrechte", "#verfassungsrecht", "#europarecht", "#vwgo"],
+  1: ["#zivilrecht", "#bgbat", "#schuldrecht", "#sachenrecht", "#zpo", "#zwangsvollstreckung", "#familienrecht", "#erbrecht", "#handelsrecht", "#arbeitsrecht"],
+  2: ["#strafrecht", "#stpo", "#strafprozessrecht", "#anklageschrift", "#revisionsklausur"],
+  3: ["#öffentlichesrecht", "#verwaltungsrecht", "#staatsrecht", "#grundrechte", "#verfassungsrecht", "#europarecht", "#vwgo", "#assessorklausur"],
 };
 const ALLE_GEBIET_TAGS = Object.values(FACH_TAGS).flat();
+
+/* Die Faecherliste fuer das Modell wird aus der Tabelle gebaut, nicht von Hand
+   gepflegt. Sonst kennt der Recherche-Auftrag ein neu angelegtes Fach nicht,
+   und das Modell muss den Assessorstoff in "zpo" zwaengen - genau so ist der
+   ganze Stoff des zweiten Examens urspruenglich unter dem Etikett "ZPO",
+   "VwGO" und "StPO" gelandet. */
+const FACH_LISTE = Object.keys(FAECHER).filter((id) => FAECHER[id].klausur !== 0).join(", ");
 
 export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.floor(Date.now() / 86400000), klausur = null) {
   const norm = (h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase().replace(/\s+/g, "");
@@ -540,7 +547,7 @@ Nutze ausschließlich frei zugängliche Quellen: die Entscheidungsdatenbanken de
 Bereits behandelt (nicht erneut): ${bereitsBehandelt.join("; ") || "–"}.
 
 Wähle dann DIE eine Neuigkeit mit dem größten Examensbezug aus – lieber eine Entscheidung zu einem Klausurklassiker als eine spektakuläre Randfrage. Antworte mit:
-1. Auswahl: Titel, Datum, Aktenzeichen, Fach (eines von: bgbat, schuld, schuldbt, sachen, delikt, bereich, gesetzs, arbeit, famerb, handelsg, zpo, strafat, strafbt, stpo, staat, grundr, verwalt, verwbt, vwgo, europa)
+1. Auswahl: Titel, Datum, Aktenzeichen, Fach (eines von: ${FACH_LISTE})
 2. Notizen: Was ist passiert, welche Norm trägt die Entscheidung, was ändert sich gegenüber der bisherigen Linie, und was heißt das für die Klausur (max. 200 Wörter, eigene Worte)
 3. Quellen: 2–3 URLs`;
   return webRecherche(frage, "recherche");
@@ -557,7 +564,7 @@ Recherchiere Berichte von Kandidat:innen zur Examensklausur ${jahr}${gebiet ? ` 
 
 Antworte mit:
 1. Titel: ein kurzer Titel
-2. Fach: das passende Fach (bgbat, schuld, schuldbt, sachen, delikt, bereich, gesetzs, arbeit, famerb, handelsg, zpo, strafat, strafbt, stpo, staat, grundr, verwalt, verwbt, vwgo, europa)
+2. Fach: das passende Fach (${FACH_LISTE})
 3. Notizen (max. 300 Wörter, eigene Worte): die berichteten Probleme je Aufgabe, mit Angabe, wie oft und wie sicher sie berichtet werden (mehrfach / einzeln / unsicher). Gibt es noch keine belastbaren Berichte, sage das ausdrücklich und nenne stattdessen die erfahrungsgemäßen Dauerbrenner dieses Rechtsgebiets.
 4. Quellen: 2–4 URLs`;
   return webRecherche(frage, "recherche-loesung");
