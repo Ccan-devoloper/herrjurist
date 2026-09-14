@@ -138,9 +138,19 @@ export class Hosting {
     let letzter = "";
     while (Date.now() - start < maxSekunden * 1000) {
       try {
-        const res = await fetch(url, { method: "HEAD", cache: "no-store" });
-        if (res.ok && /(image\/jpeg|video\/mp4|application\/octet-stream)/.test(res.headers.get("content-type") || "")) return true;
-        letzter = `${res.status} ${res.headers.get("content-type")}`;
+        /* GET statt HEAD: Ein CDN beantwortet beide Wege getrennt, und am
+           14.09. meldete HEAD bereits „da", waehrend Instagram die Datei
+           ueber GET noch nicht bekam. Mehr als den Anfang brauchen wir
+           nicht - der Abbruch spart die Leitung. */
+        const steuerung = new AbortController();
+        const res = await fetch(url, { cache: "no-store", headers: { Range: "bytes=0-1023" }, signal: steuerung.signal });
+        const art = res.headers.get("content-type") || "";
+        if (res.ok && /(image\/jpeg|video\/mp4|application\/octet-stream)/.test(art)) {
+          await res.arrayBuffer().catch(() => null);
+          return true;
+        }
+        steuerung.abort();
+        letzter = `${res.status} ${art}`;
       } catch (e) { letzter = e.message; }
       await schlafen(5000);
     }

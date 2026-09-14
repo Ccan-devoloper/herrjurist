@@ -1671,3 +1671,28 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
   assert.equal(cover.match(/\.story\.cover h1\.klein\{font-size:(\d+)px/)?.[1], stufen[1], "Größe für .klein weicht ab");
   assert.equal(cover.match(/\.story\.cover h1\.winzig\{font-size:(\d+)px/)?.[1], stufen[2], "Größe für .winzig weicht ab");
 });
+
+test("Instagram: „Datei nicht ladbar“ wird nachgefasst, nicht aufgegeben", async () => {
+  process.env.IG_HOL_WARTEN_MS = "1";
+  const { Instagram } = await import("../src/instagram.mjs");
+  const echt = globalThis.fetch;
+  let rufe = 0;
+  /* Erst zweimal der Holfehler, dann klappt es - genau der Verlauf vom
+     14.09., als der erste Campus-Beitrag ausfiel, obwohl die Kachel in
+     Ordnung war und Sekunden später abrufbar. */
+  globalThis.fetch = async () => {
+    rufe++;
+    const antwort = rufe <= 2
+      ? { error: { message: "Only photo or video can be accepted as media type.", code: 9004, error_subcode: 2207052 } }
+      : { id: "42" };
+    return { ok: rufe > 2, json: async () => antwort, headers: new Map() };
+  };
+  try {
+    const ig = new Instagram({ token: "t", kontoId: "1", trockenlauf: false });
+    const t0 = Date.now();
+    const r = await ig.anfrage("POST", "1/media", { image_url: "https://x/y.jpg" });
+    assert.equal(r.id, "42");
+    assert.equal(rufe, 3, "es muss zweimal nachgefasst worden sein");
+    assert.ok(Date.now() - t0 >= 0);
+  } finally { globalThis.fetch = echt; }
+});
