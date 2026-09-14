@@ -48,7 +48,17 @@ export const CONFIG = {
        Reichweite bringt – getrennt nach Reel und Karussell und je Wochentag.
        Siehe zeiten.mjs. */
     zeitLernen: env("IG_ZEIT_LERNEN", "true") === "true",
-    zeitFenster: env("IG_ZEIT_FENSTER", "6-22"),         // frühestes und spätestes Erscheinen (lokale Stunden); 22 = 22:30, der letzte Lauf des Tages liegt um 22:42
+    zeitFenster: env("IG_ZEIT_FENSTER", "7-22"),         // frühestes und spätestes Erscheinen (lokale Stunden)
+    /* Die Untergrenze haengt an der Weckkette, nicht am Geschmack: Der erste
+       Lauf des Tages liegt um 05:35 UTC, im Sommer also 07:35 Ortszeit. Ein
+       Beitrag um 07:30 geht damit um 07:35 raus - fuenf Minuten spaeter, wie
+       jeder andere Slot auch. Ein Beitrag um 06:30 wartete dagegen bis 07:35
+       und stand 65 Minuten zu spaet im Feed; genau das ist am 14.09. auf dem
+       Steuerkanal passiert. Deshalb 7 und nicht 6 - und nicht 8, denn die
+       Sieben ist erreichbar und als Sendezeit zu wertvoll, um sie der
+       Lernschleife vorzuenthalten.
+       Aendert sich der Cron in .github/workflows/instagram.yml, muss dieser
+       Wert mitwandern - ein Test haelt beides zusammen. */
     zeitAbstandStunden: Number(env("IG_ZEIT_ABSTAND", "4")),
     zeitErkundung: Number(env("IG_ZEIT_ERKUNDUNG", "0.35")),   // 0 = nur ausnutzen, größer = mehr ausprobieren
     zeitReifeTage: Number(env("IG_ZEIT_REIFE_TAGE", "2")),     // so alt muss ein Beitrag sein, damit seine Zahlen zählen
