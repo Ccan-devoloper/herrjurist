@@ -1812,6 +1812,15 @@ test("Bildauftrag: ohne Person in der Szene wird auch keine gezeichnet", async (
   assert.match(mensch, /arms relaxed/i, "mit Person bleiben die Haltungsregeln");
   assert.doesNotMatch(mensch, /no people/i, "mit Person darf der Auftrag Menschen nicht verbieten");
 
+  /* "official" ist als Beiwort kein Mensch. Ohne diese Unterscheidung wurde
+     aus "official notice with embossed seal" - einem Schriftstueck - wieder
+     eine Figur mit Requisite. */
+  const { menschInSzene } = await import("../src/bildki.mjs");
+  assert.equal(menschInSzene("official notice with embossed seal"), false);
+  assert.equal(menschInSzene("official letter with red stamp"), false);
+  assert.equal(menschInSzene("stopped by official"), true);
+  assert.equal(menschInSzene("official stamping a form"), true);
+
   /* Unverhandelbar in beiden Faellen. */
   for (const a of [sache, mensch]) {
     assert.match(a, /no text, no letters/i);

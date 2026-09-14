@@ -20,20 +20,29 @@ import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse } from "./f
 
 export const bildKiAktiv = () => Boolean(CONFIG.bilder.ki.aktiv && CONFIG.bilder.ki.key);
 
-/* Der Hausstil. Zwei Dinge sind nicht verhandelbar: kein Text im Bild (Modelle
-   malen Buchstaben, die wie Recht aussehen und keines sind - auf einem
-   Examenskanal ein Eigentor) und genau ein Gegenstand, damit das Motiv auf der
-   Kachel noch zu erkennen ist. */
 /* Nennt die Szene ueberhaupt einen Menschen? Bis zum 14.09. wurde diese Frage
    nie gestellt - der Auftrag sprach immer von Armen, Haenden, Gliedmassen und
    Anatomie. Damit wurde aus "scale balancing two stacks" zuverlaessig ein
    Mensch, der neben einer Waage steht, und aus einem Reel ueber das steuerliche
    Einlagekonto eine Bilderfolge mit einem Mann und einem Einmachglas. */
-const MENSCH = /\b(person|people|man|men|woman|women|someone|somebody|child|student|clerk|official|customer|client|worker|employee|judge|lawyer|defendant|witness|teacher|hand|hands|figure)\b/i;
+const MENSCH = /\b(persons?|people|m[ae]n|wom[ae]n|someone|somebody|child(ren)?|students?|clerks?|customers?|workers?|employees?|judges?|lawyers?|defendants?|witnesses?|teachers?|vendors?|applicants?|officers?|hands?)\b/i;
+/* "official" ist die Stolperfalle: als Hauptwort ein Beamter, als Beiwort nur
+   amtlich. "official notice with embossed seal" ist ein Schriftstueck, "stopped
+   by official" ein Mensch. Unterschieden wird an der Stellung - steht danach
+   noch ein Hauptwort, ist es ein Beiwort. */
+const AMTSPERSON = /\bofficials?\b(?!\s+[a-z])|\bofficials?\s+\w+ing\b/i;
 
+export function menschInSzene(text) {
+  return MENSCH.test(text) || AMTSPERSON.test(text);
+}
+
+/* Der Hausstil. Zwei Dinge sind nicht verhandelbar: kein Text im Bild (Modelle
+   malen Buchstaben, die wie Recht aussehen und keines sind - auf einem
+   Examenskanal ein Eigentor) und genau ein Gegenstand, damit das Motiv auf der
+   Kachel noch zu erkennen ist. */
 export function bildAuftrag(szene, { stil = "" } = {}) {
   const text = String(szene).trim();
-  const mitMensch = MENSCH.test(text);
+  const mitMensch = menschInSzene(text);
   return [
     `Flat vector illustration: ${text}.`,
     "Exactly one clear subject, centred, seen from the front or in three-quarter view, nothing cropped.",
