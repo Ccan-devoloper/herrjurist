@@ -53,6 +53,12 @@ const SYSTEM = `Du bist Prüfer:in für juristische Fachtexte (erstes und zweite
 
 Zusätzlich – und nur das – prüfst du die Sprache auf offensichtliche Versehen: doppelte Wörter („U hat U selbst“), fehlende Wörter, verdrehte Buchstaben, ein falscher Kasus, eine abgebrochene Klammer. Dazu gehören auch Überschriften, die grammatisch nicht aufgehen: „Wochenrückblick: alles sitzen?“ ist falsch (richtig: „sitzt alles?“), ebenso ein Bezugsfehler zwischen Subjekt und Verb. Eine knappe Nominalphrase ohne Verb ist dagegen als Überschrift in Ordnung („Mord und Totschlag: das Verhältnis“). Melde solche Versehen als „sprache“ und gib in „original“ die fehlerhafte Wortfolge exakt so an, wie sie im Text steht (mindestens drei Wörter, damit die Stelle eindeutig ist), in „ersatz“ die berichtigte Fassung mit denselben Wörtern drumherum. Stilfragen, Umformulierungen und Kürzungen sind keine Sprachversehen – nur, was ein Korrektor mit dem Rotstift anstreichen würde. Auch bei einem fachlichen „fehler“ gibst du „original“ und „ersatz“ an, WENN er sich durch Austausch einer Wortfolge beheben lässt (falscher Absatz, falsche Zahl, falsch benanntes Merkmal, falsch zugeordnete Ansicht): „original“ die falsche Stelle exakt wie im Text, „ersatz“ dieselbe Stelle richtig, ohne den Satz umzubauen. Braucht die Berichtigung mehr als das – fehlt ein Sachverhalt, stimmt der Aufbau nicht, ist die Aussage im Kern falsch –, bleiben beide Felder leer. Bei allen übrigen Befunden ebenfalls.
 
+Zahlen rechnest du nach, statt sie zu überfliegen. Für jede Zahl im Text – Bruchteil, Quote, Frist, Betrag, Schwellenwert – prüfst du einzeln:
+1. Trägt die zitierte Norm genau diese Zahl? Mach dir die Tatbestandsvariante klar, aus der sie folgt. Eine Zahl, die du nicht aus der genannten Norm herleiten kannst, ist ein Fehler.
+2. Hängt die Zahl an einer Voraussetzung, die im Sachverhalt stehen muss – Güterstand, Ordnung der Verwandten, Fristbeginn, Rechtsform? Fehlt diese Angabe im Text, ist das ein Fehler: Die Zahl steht dann auf einer Annahme.
+3. Geht die Rechnung auf? Teilquoten müssen zusammen das Ganze ergeben.
+Eine Rechnung, die am Ende aufgeht, kann trotzdem auf einer falschen Ausgangszahl beruhen – prüfe deshalb jede Zahl für sich, nicht nur die Summe. Hat eine Norm je nach Fallgruppe verschiedene Werte (etwa der Ehegattenerbteil neben Verwandten erster gegenüber zweiter Ordnung), sag dir ausdrücklich, welche Fallgruppe hier vorliegt, und prüfe erst dann, ob der Text den passenden Wert genommen hat.
+
 Melde als „fehler“ nur, was eindeutig falsch ist und in der Klausur Punkte kosten würde. Als „unsicher“ alles, was du nicht sicher beurteilen kannst – gerade bei Streitständen und Landesrecht lieber „unsicher“ als eine falsche Korrektur. Als „hinweis“ Unschärfen, die vertretbar sind. Keine Stil- oder Formatkritik, und keine Kritik daran, dass eine vertretbare Ansicht vertreten wird. Wenn alles korrekt ist, gib eine leere Liste zurück.`;
 
 export function textAus(beitrag) {
@@ -96,10 +102,34 @@ export function korrekturenAnwenden(obj, korrekturen = []) {
 /**
  * @returns {{ok:boolean, fehler:string[], hinweise:string[], korrekturen:{original:string, ersatz:string}[], behebbar:{original:string, ersatz:string}[]}}
  */
-export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "" } = {}) {
+/* Wird in diesem Beitrag gerechnet? Dann prüft nicht das billigste Modell.
+
+   Am 14.09. ging eine Erbquote raus, die Ehefrau und Kinder vertauscht hatte.
+   Geprüft hatte Haiku, geschrieben Sonnet - das schwächere Modell sollte den
+   Fehler des stärkeren finden. Bei allem anderen ist das vertretbar, bei
+   Zahlen nicht: Eine falsche Zahl ist eindeutig falsch, sie steht groß auf
+   der Kachel, und wer sie abschreibt, schreibt sie in die Klausur.
+
+   Der Filter ist absichtlich weit - lieber ein paar Beiträge zu viel streng
+   geprüft als der eine zu wenig. Teuer wird das nicht: In fünf Tagen traf es
+   1 von 13 Beiträgen. */
+const BRUCH_ZU_NORM = /\d+\s*\/\s*\d+\s*\(\s*§/;
+const ZAHLWORT = /\b(Quote|Quoten|Erbteil|Bruchteil|Prozent|Frist von|Schwellenwert|Betrag|Hälfte|Drittel|Viertel|Achtel)\b/i;
+
+export function zahlenLastig(beitrag) {
+  for (const f of beitrag?.folien || []) {
+    if (f.art === "rechnung" || f.formel) return true;
+  }
+  const text = JSON.stringify(beitrag || {});
+  return BRUCH_ZU_NORM.test(text) || ZAHLWORT.test(text);
+}
+
+export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "", streng = null } = {}) {
   if (!CONFIG.faktencheck.aktiv) return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] };
   budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck", "story-faktencheck": "Story-Faktencheck" }[zweck] || "Faktencheck");
-  const modell = CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben;
+  const scharf = streng ?? zahlenLastig(beitrag);
+  const modell = (scharf && CONFIG.ki.modellPruefungStreng) || CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben;
+  if (scharf) console.log(`  Faktencheck streng (${modell}) – im Beitrag wird gerechnet.`);
   const haiku = /haiku/i.test(modell);
   const user = `Prüfe diesen Text:\n\n${textAus(beitrag)}${hinweis ? `\n\n${hinweis}` : ""}`;
   const basis = {
