@@ -216,6 +216,22 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
   return { pfad: fertig, deckung: d, festigkeit: prof.festigkeit, ...(masse(fertig) || {}) };
 }
 
+/* Ist das Motiv am Rand angeschnitten? Oben und an den Seiten darf es das
+   nicht: Dort wirkt ein abgeschnittener Kopf oder ein Arm, der im Nichts
+   endet, wie ein Fehler. Unten darf es anschneiden - dort läuft die Figur
+   ohnehin aus der Kachel.
+
+   Als eigene Funktion, damit die Entscheidung prüfbar ist, ohne dass dafür
+   ein Bild und ffmpeg nötig sind. */
+export const RAND_GRENZE = { oben: 0.01, seite: 0.03 };
+export function randVerdacht(rand) {
+  if (!rand) return null;
+  if (rand.oben > RAND_GRENZE.oben) return `oben ${(rand.oben * 100).toFixed(0)} %`;
+  if (rand.links > RAND_GRENZE.seite) return `links ${(rand.links * 100).toFixed(0)} %`;
+  if (rand.rechts > RAND_GRENZE.seite) return `rechts ${(rand.rechts * 100).toFixed(0)} %`;
+  return null;
+}
+
 /**
  * Anteil der deckenden Pixel in der äußersten Reihe je Bildrand (0–1).
  * Berührt das Motiv den oberen oder einen seitlichen Rand, ist es im Foto

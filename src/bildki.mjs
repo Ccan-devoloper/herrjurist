@@ -16,7 +16,7 @@ import { spawnSync } from "node:child_process";
 import { ffmpegPfad } from "./stimme.mjs";
 import { CONFIG } from "./config.mjs";
 import { budgetPruefen, erfassenStueck } from "./kosten.mjs";
-import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse } from "./freistellen.mjs";
+import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht } from "./freistellen.mjs";
 
 export const bildKiAktiv = () => Boolean(CONFIG.bilder.ki.aktiv && CONFIG.bilder.ki.key);
 
@@ -45,7 +45,11 @@ export function bildAuftrag(szene, { stil = "" } = {}) {
   const mitMensch = menschInSzene(text);
   return [
     `Flat vector illustration: ${text}.`,
-    "Exactly one clear subject, centred, seen from the front or in three-quarter view, nothing cropped.",
+    "Exactly one clear subject, centred, seen from the front or in three-quarter view.",
+    /* "nothing cropped" allein hat nicht gereicht: Am 14.09. kam eine Figur
+       zurueck, deren Kopf oben glatt am Bildrand endete. Das Modell braucht
+       die Ansage als Platzvorgabe, nicht als Verbot. */
+    "Frame the subject with clear empty margin on all four sides: the whole subject must be inside the image with visible transparent space above the head, below the feet and to the left and right. Never let any part touch or run past an edge. Rather draw the subject smaller than risk cutting it off.",
     ...(mitMensch
       /* Haende und kleine Requisiten sind die Stelle, an der billige Bilder
          auseinanderfallen: verbogene Finger, ein Stift ohne Spitze, eine Lampe,
@@ -58,8 +62,8 @@ export function bildAuftrag(szene, { stil = "" } = {}) {
          moebliert eine Szene sonst von sich aus mit einer Figur, und die Figur
          zieht dann alle Aufmerksamkeit auf sich - der Gegenstand, um den es
          geht, wird zur Requisite in ihrer Hand. */
-      : ["Draw the object itself, filling the frame. Absolutely no people, no faces, no hands, no arms, no body parts, no silhouettes of persons.",
-        "Show the object large, complete and instantly recognisable, at a slight angle so its shape reads clearly."]),
+      : ["Draw the object itself. Absolutely no people, no faces, no hands, no arms, no body parts, no silhouettes of persons.",
+        "Show the object complete and instantly recognisable, at a slight angle so its shape reads clearly - large within the margin, but never beyond it."]),
     "Bold simple shapes, even line weight, flat colours with soft shading, clean readable silhouette.",
     stil,
     "Absolutely no text, no letters, no words, no numbers, no signage, no logos, no watermark, no signature.",
@@ -107,6 +111,19 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
   const prof = alphaProfil(roh);
   if (!prof || prof.festigkeit < FESTIGKEIT_MIN || prof.belegt < 0.02) {
     console.warn(`  ! Gezeichnetes Motiv unbrauchbar (${prof ? `${(prof.festigkeit * 100).toFixed(0)} % deckend, ${(prof.belegt * 100).toFixed(0)} % belegt` : "kein Alphakanal"}) - Titelfolie bleibt beim Icon.`);
+    fs.rmSync(roh, { force: true });
+    return null;
+  }
+  /* Angeschnitten? Diese Prüfung gab es bisher nur für gesuchte Fotos, nicht
+     für gezeichnete Motive - und genau dort fehlte sie. Am 14.09. stand auf
+     der Kachel zum Erbrecht eine Frau, deren Kopf oben glatt abgeschnitten
+     war: 46 % der obersten Bildzeile waren deckend, der Stickerrand lief quer
+     über den Scheitel. Das Modell hatte die Figur über den Rand hinaus
+     gezeichnet, und niemand hat hingesehen. */
+  const rand = randkontakt(roh);
+  const verdacht = randVerdacht(rand);
+  if (verdacht) {
+    console.warn(`  ! Gezeichnetes Motiv angeschnitten (${verdacht} deckend am Bildrand) – verworfen, Motiv kommt aus dem Archiv oder es bleibt beim Icon.`);
     fs.rmSync(roh, { force: true });
     return null;
   }

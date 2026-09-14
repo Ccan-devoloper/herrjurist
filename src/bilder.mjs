@@ -165,7 +165,7 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
        Szene passt, kostet nichts mehr. */
     if (archiv) {
       for (const szene of szenen) {
-        const fund = passendesMotiv(archiv, szene, datum, { mindestTage: CONFIG.bilder.ki.wiederTage, schwelle: CONFIG.bilder.ki.aehnlich });
+        const fund = passendesMotiv(archiv, szene, datum, { mindestTage: CONFIG.bilder.ki.wiederTage, schwelle: CONFIG.bilder.ki.aehnlich, themaId: beitrag?.themaId || null });
         if (!fund) continue;
         const wieder = motivHervorholen(path.join(archivDir, fund.eintrag.datei), { randFarbe: opt.randFarbe || null });
         if (!wieder) continue;
