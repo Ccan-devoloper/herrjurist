@@ -1946,3 +1946,21 @@ test("Wo gerechnet wird, prüft nicht das billigste Modell", async () => {
   assert.ok(CONFIG.ki.modellPruefungStreng, "es muss ein strenger Prüfer gesetzt sein");
   assert.notEqual(CONFIG.ki.modellPruefungStreng, CONFIG.ki.modellPruefung, "der strenge Prüfer darf nicht derselbe sein");
 });
+
+test("Wenn es eng wird, weicht das Bild – nicht die Prüfung", async () => {
+  const { budgetSetzen, budgetFrei } = await import("../src/kosten.mjs");
+  /* Der Stand von heute Abend: 0,25 $ verbraucht, Deckel 0,27 $. Beides -
+     ein Bild (0,01 $) und ein Faktencheck (0,01 $) - passt rechnerisch noch,
+     aber nicht beides. Bisher gewann, wer zuerst dran war. */
+  budgetSetzen({ limitUsd: 0.27, bisher: 0.25 });
+  assert.equal(budgetFrei("Faktencheck"), true, "der Faktencheck muss noch laufen dürfen");
+  assert.equal(budgetFrei("Bild zeichnen"), false, "das Bild muss zurückstehen");
+  assert.equal(budgetFrei("Erklärbild"), false, "auch die Reel-Motive stehen zurück");
+
+  /* Früh am Tag ist Platz für beides - der Abstand darf das Zeichnen nicht
+     grundsätzlich verhindern, sonst gäbe es nie wieder ein Motiv. */
+  budgetSetzen({ limitUsd: 0.27, bisher: 0.05 });
+  assert.equal(budgetFrei("Bild zeichnen"), true);
+  assert.equal(budgetFrei("Faktencheck"), true);
+  budgetSetzen({});
+});
