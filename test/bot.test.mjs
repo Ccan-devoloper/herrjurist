@@ -1930,3 +1930,19 @@ test("Die Rechenfolie ist für die Prüfung sichtbar – formel, zeilen, ergebni
   };
   assert.equal(pruefeBeitrag(mitZahlenInDerFormel).ok, false, "was nur in der Formel steht, muss trotzdem geprüft werden");
 });
+
+test("Wo gerechnet wird, prüft nicht das billigste Modell", async () => {
+  const { zahlenLastig } = await import("../src/faktencheck.mjs");
+  const { CONFIG } = await import("../src/config.mjs");
+  /* Am 14.09. prüfte Haiku, was Sonnet geschrieben hatte, und sah die
+     vertauschte Erbquote nicht. Bei Zahlen ist das die falsche Sparsamkeit:
+     Eine falsche Zahl steht groß auf der Kachel und wandert in die Klausur. */
+  assert.ok(zahlenLastig({ folien: [{ art: "rechnung", formel: "Ehefrau: 1/4 (§ 1931 I BGB)" }] }));
+  assert.ok(zahlenLastig({ folien: [{ art: "text", text: "Die Ehefrau erbt die Hälfte." }] }));
+  assert.ok(zahlenLastig({ folien: [{ art: "text", text: "Sie bekommt 1/2 (§ 1931 BGB)." }] }));
+  /* Ein Beitrag ohne Zahlen bleibt beim günstigen Prüfer – sonst wäre die
+     Eskalation keine Eskalation, sondern der Normalfall. */
+  assert.equal(zahlenLastig({ folien: [{ art: "text", text: "Der Gutachtenstil beginnt mit dem Obersatz." }] }), false);
+  assert.ok(CONFIG.ki.modellPruefungStreng, "es muss ein strenger Prüfer gesetzt sein");
+  assert.notEqual(CONFIG.ki.modellPruefungStreng, CONFIG.ki.modellPruefung, "der strenge Prüfer darf nicht derselbe sein");
+});

@@ -152,6 +152,13 @@ export const CONFIG = {
     modell: env("IG_KI_MODELL", "claude-sonnet-5"),
     modellNeben: env("IG_KI_MODELL_NEBEN", env("IG_KI_MODELL", "claude-sonnet-5")),
     modellPruefung: env("IG_KI_MODELL_PRUEFUNG", "claude-haiku-4-5-20251001"),
+    /* Der strenge Prüfer für Beiträge, in denen gerechnet wird. Am 14.09. ist
+       eine falsche Erbquote durchgelaufen: Haiku prüfte, was Sonnet
+       geschrieben hatte, und sah die vertauschte Quote des § 1931 BGB nicht.
+       Rechenfolien sind selten (1 von 13 Beiträgen in fünf Tagen), deshalb
+       kostet die Eskalation im Schnitt fast nichts – am Tag, an dem sie
+       greift, etwa 0,009 $ mehr. */
+    modellPruefungStreng: env("IG_KI_MODELL_PRUEFUNG_STRENG", "claude-sonnet-5"),
     effort: env("IG_KI_EFFORT", "low"),   // „low“: etwa halbe Kosten je Entwurf, Faktencheck fängt Fehler ab
     rechercheSuchen: Number(env("IG_KI_RECHERCHE_SUCHEN", "4")),   // Websuchen je Recherche (je 0,01 $ plus Ergebnis-Tokens)
     maxVersuche: Number(env("IG_KI_VERSUCHE", "2")),
