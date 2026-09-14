@@ -142,6 +142,7 @@ GitHub → Repository → *Settings* → *Secrets and variables* → *Actions*
 | `IG_ACCESS_TOKEN` | Instagram-Token aus Schritt 2 |
 | `IG_ACCOUNT_ID` | Instagram-Konto-ID (Zahl) |
 | `IG_TOKEN_KEY` | frei gewählter Schlüssel für den Token-Tresor |
+| `IG_WISSEN_KEY` | Schlüssel für die Wissensbasis (`daten/wissen`). Fehlt er, schreibt der Bot ohne Belegstelle weiter – es fällt kein Beitrag aus |
 | `ELEVENLABS_API_KEY` | *optional*: Schlüssel von elevenlabs.io – Reels sprechen dann mit ElevenLabs, solange das Monatsguthaben reicht, danach mit Piper |
 | `OPENAI_API_KEY` | *optional*: Schlüssel von platform.openai.com – die Motive auf Titelfolien und Reel-Covern werden dann zum Thema gezeichnet statt als Stockfoto gesucht. Ohne den Schlüssel bleibt es bei Pexels bzw. beim Icon. Rund 0,01 $ je Bild, 2–3 Bilder am Tag |
 
@@ -183,6 +184,41 @@ GitHub → Repository → *Settings* → *Secrets and variables* → *Actions*
 legt Bilder und Zustand im Zweig `instagram-assets` ab, veröffentlicht aber nichts. Bilder ansehen unter
 `instagram-assets/bilder/<Datum>/`. Danach Modus **live** einmal manuell starten – ab dann läuft der
 Zeitplan (stündlich, Cron in `.github/workflows/instagram.yml`) von selbst.
+
+## Wissensbasis: der Volltext als Belegstelle
+
+Der Themenpool (`daten/themen.mjs`) ist ein Gerüst – Titel, Normen, zwei Stichworte. Das reicht, damit
+ein Beitrag entsteht, aber nicht immer, damit die Fristen, Reihenfolgen und Tenorformeln darin stimmen.
+Deshalb liegt in `daten/wissen` der Volltext des Jura-Gesamtwissens (9 Bände, 384 Kapitel, 1,1 MB):
+Vor dem Schreiben sucht `src/wissen.mjs` das Kapitel zum Thema heraus, der Autor bekommt es als Quelle
+mit, und der Faktencheck prüft **gegen dieselbe Stelle**.
+
+**Verschlüsselt, weil dieses Repo öffentlich ist.** Die Bände liegen als `*.txt.enc` im Tresor –
+AES-256-GCM, Schlüssel aus dem Secret `IG_WISSEN_KEY`, gleiche Bauart wie der Token-Tresor. Wer das
+Repo im Browser öffnet, sieht Zufallsbytes. Der Klartext ist per `.gitignore` gesperrt und kann nicht
+versehentlich mitcommittet werden.
+
+```
+node bin/wissen-tresor.mjs pruefen              # was liegt im Tresor?
+node bin/wissen-tresor.mjs packen <ordner>      # *.txt → *.txt.enc
+node bin/wissen-tresor.mjs auspacken <ordner>   # zurück in Klartext
+```
+
+Drei Dinge, die bewusst so sind:
+
+- **Ohne Schlüssel läuft alles weiter.** Fehlt `IG_WISSEN_KEY` oder passt er nicht, schreibt der Bot
+  wie vorher – ohne Belegstelle, aber er schreibt. Eine verschlossene Wissensbasis darf keinen Beitrag
+  kosten.
+- **Lieber keine Quelle als die falsche.** Ein Kapitel wird nur genommen, wenn es sein Rechtsgebiet
+  teilt und den Zweitplatzierten deutlich schlägt. „Wie grenzt man Diebstahl und Betrug ab?“ bekommt
+  deshalb gar keine Stelle: Beide Kapitel passen halb, und halb passend ist schlechter als nichts.
+  Aktuell haben 308 der 904 Themen eine Belegstelle, 96 davon über einen fest eingetragenen Zeiger
+  (`wissen: "4/2"` = Band 4, Kapitel 2).
+- **Quelle, keine Vorlage.** Im Auftrag ans Modell steht ausdrücklich: Zahlen und Reihenfolgen
+  übernehmen, keinen Satz abschreiben, keine Gliederung spiegeln. Der Kanal hat eine eigene Stimme,
+  und das Urheberrecht gilt auch für Material, das man selbst hochgeladen hat.
+
+Kosten: rund 1200 Token je Beitrag, also ~0,004 $ – bei drei Beiträgen am Tag etwa 0,012 $ von 0,27 $.
 
 ## Pausieren und Modus
 

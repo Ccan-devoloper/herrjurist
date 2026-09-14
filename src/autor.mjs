@@ -12,6 +12,7 @@ import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
 import { FAECHER, KLAUSUREN } from "./inhalte.mjs";
+import { belegstelle } from "./wissen.mjs";
 import { ICONS } from "./stile.mjs";
 import { folieLeer, pruefeBeitrag, korpus } from "./pruefung.mjs";
 import { datumLesbar, tageBis } from "./zeit.mjs";
@@ -345,6 +346,17 @@ async function nachbessern(inhalt, fakten, pruefen, zweck = "faktencheck") {
   } catch { return null; }
 }
 
+/* Dieselbe Belegstelle, die der Autor beim Schreiben hatte, bekommt auch der
+   Faktencheck. Sonst prüft er den Text gegen sein Gedächtnis, während der
+   Autor gegen das Handbuch geschrieben hat – und beanstandet dann Fristen und
+   Reihenfolgen, die genau so im Handbuch stehen. Das kostete jedes Mal eine
+   Neufassung. */
+export function pruefHinweis(thema) {
+  const quelle = belegstelle(thema);
+  if (!quelle) return "";
+  return `${quelle}\n\nDer Text oben wurde auf dieser Grundlage geschrieben. Was mit der Belegstelle übereinstimmt, ist richtig – beanstande es nicht. Beanstande, was ihr widerspricht, und was darüber hinaus behauptet wird, ohne zu stimmen.`;
+}
+
 async function faktenSicher(inhalt, zweck = "faktencheck", opt = {}) {
   try {
     return await pruefeFakten(inhalt, zweck, opt);
@@ -398,6 +410,12 @@ function themaText(thema) {
       `Verpacke es diesmal komplett anders: anderer Einstieg, anderer Blickwinkel, andere Beispiele, anderer Titel. Wiederhole den alten Titel weder wörtlich noch sinngemäß. Wähle eine andere Seite des Themas – etwa die typische Klausurfalle statt der Definition, den Streitstand statt des Schemas, den Fall statt der Regel.`,
     );
   }
+  /* Zuletzt, damit der lange Block nicht zwischen den Stichworten steht: die
+     Belegstelle aus der Wissensbasis. Sie ist der Unterschied zwischen "das
+     Modell erinnert sich an die Frist" und "die Frist steht da". Fehlt der
+     Schlüssel oder passt kein Kapitel, bleibt die Zeile leer und der Beitrag
+     entsteht wie vor dieser Änderung. */
+  zeilen.push(belegstelle(thema));
   return zeilen.filter(Boolean).join("\n");
 }
 
@@ -522,7 +540,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
     const beitrag = nachbereiten(daten, { format, thema, fach, klausur, strategie });
     const ergebnis = pruefeBeitrag(beitrag);
     if (ergebnis.ok) {
-      const fakten = await faktenSicher(beitrag);
+      const fakten = await faktenSicher(beitrag, "faktencheck", { hinweis: pruefHinweis(thema) });
       /* Sprachversehen (doppelte oder fehlende Wörter) werden im Text ersetzt,
          nicht neu geschrieben - das kostet keinen weiteren Aufruf. */
       korrekturenAnwenden(beitrag, fakten.korrekturen);
@@ -786,7 +804,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
     const min = Math.round(zielVon * 0.75), max = Math.round(zielBis * 1.25);
     if (woerter < min || woerter > max) ergebnis.fehler.push(`Sprechertext hat ${woerter} Wörter (Ziel ${zielVon}–${zielBis})`);
     if (!ergebnis.fehler.length) {
-      const fakten = await faktenSicher(reel, "reel-faktencheck");
+      const fakten = await faktenSicher(reel, "reel-faktencheck", { hinweis: pruefHinweis(thema) });
       korrekturenAnwenden(reel, fakten.korrekturen);
       if (fakten.ok) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; return reel; }
       const berichtigtesReel = await nachbessern(reel, fakten, null, "reel-faktencheck");

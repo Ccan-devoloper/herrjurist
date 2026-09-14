@@ -72,6 +72,11 @@ export function themenpool() {
          der Autor erwähnt es, wo es den Zuschnitt ändert (Gutachtenstil im
          ersten, Urteils-/Aktenvortragsstil im zweiten Examen). */
       examen: t.examen || null,
+      /* Herkunft im Handbuch und, wo gesetzt, der Zeiger auf das Kapitel der
+         Wissensbasis ("4/2" = Band 4, Kapitel 2). Ohne Zeiger sucht
+         wissen.mjs die Belegstelle selbst über Titel und Normen. */
+      quelle: t.quelle || null,
+      wissen: t.wissen || null,
     };
   });
 }

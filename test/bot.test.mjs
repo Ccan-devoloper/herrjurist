@@ -1731,3 +1731,69 @@ test("Das zweite Examen hat eigene Fächer statt des Etiketts der ersten Instanz
     && /Tenor|Relation|Anklageschrift|Anklagesatz|Revisionsgutachten|Widerspruchsbescheid|Urteilsklausur|Aktenvortrag/i.test(t.titel));
   assert.deepEqual(falschAbgelegt.map((t) => t.titel), [], "diese Themen gehören in die Assessorfächer");
 });
+
+test("Wissensbasis: ohne Schlüssel bleibt der Tresor zu, mit Schlüssel liest er sich", async () => {
+  const { wissenVerschluesseln, wissenEntschluesseln, wissenIndex, wissenLeeren } = await import("../src/wissen.mjs");
+  const klartext = "# Band 4 - Probe\n\n# 2. Relationstechnik\nKlägerstation, Beklagtenstation, Beweisstation.\n";
+  const tresor = wissenVerschluesseln(klartext, "probe-schluessel");
+  /* Der springende Punkt: Das Repo ist öffentlich. Wer die Datei im Browser
+     öffnet, darf kein Wort davon lesen können. */
+  assert.ok(!tresor.includes(Buffer.from("Relationstechnik")), "Klartext steht noch in der Datei");
+  assert.ok(!tresor.includes(Buffer.from("Band 4")), "Klartext steht noch in der Datei");
+  assert.equal(wissenEntschluesseln(tresor, "probe-schluessel"), klartext);
+  /* Falscher Schlüssel: GCM merkt das am Prüfsiegel und wirft, statt Unsinn
+     zurückzugeben - sonst landete Datenmüll als "Belegstelle" im Prompt. */
+  assert.throws(() => wissenEntschluesseln(tresor, "falscher-schluessel"));
+  assert.equal(wissenEntschluesseln(tresor, ""), null);
+
+  const ordner = await fs.promises.mkdtemp(path.join(os.tmpdir(), "wissen-"));
+  await fs.promises.writeFile(path.join(ordner, "band-4-probe.txt.enc"), tresor);
+  wissenLeeren();
+  const index = wissenIndex({ geheim: "probe-schluessel", ordner, neu: true });
+  assert.equal(index.length, 1);
+  assert.equal(index[0].id, "4/2");
+  assert.equal(index[0].titel, "Relationstechnik");
+  /* Ohne Schlüssel kein Index – und vor allem kein Absturz. */
+  wissenLeeren();
+  assert.deepEqual(wissenIndex({ geheim: "", ordner, neu: true }), []);
+  wissenLeeren();
+});
+
+test("Wissensbasis: lieber keine Belegstelle als die zum Nachbarthema", async () => {
+  const { wissenFuer, wissenLeeren } = await import("../src/wissen.mjs");
+  const ordner = await fs.promises.mkdtemp(path.join(os.tmpdir(), "wissen-"));
+  await fs.promises.writeFile(path.join(ordner, "band-3-strafrecht.txt"),
+    "# Band 3 - Strafrecht\n\n# 16. Diebstahl und Unterschlagung\nWegnahme, Gewahrsam, Zueignungsabsicht.\n\n# 17. Betrug und Computerbetrug\nTäuschung, Irrtum, Vermögensverfügung, Vermögensschaden.\n\n# 26. Beweisverwertungsverbote\nUnselbständige und selbständige Verwertungsverbote, Abwägungslehre.\n");
+  await fs.promises.writeFile(path.join(ordner, "band-5-oeffentlich.txt"),
+    "# Band 5 - Öffentliches Recht im 2. Staatsexamen\n\n# 5. Vorläufige Vollstreckbarkeit\nDer Ausspruch richtet sich nach § 167 VwGO.\n");
+  const opt = { ordner, neu: true };
+
+  wissenLeeren();
+  const treffer = wissenFuer({ titel: "Welche Beweisverwertungsverbote gibt es?", klausur: 2, normen: [], kern: {} }, opt);
+  assert.equal(treffer?.titel, "Beweisverwertungsverbote");
+
+  /* Zwei Kapitel fast gleichauf heißt: keines von beiden ist DIE Stelle.
+     Eine halb passende Quelle im Prompt ist schlimmer als gar keine. */
+  wissenLeeren();
+  assert.equal(wissenFuer({ titel: "Wie grenzt man Diebstahl und Betrug ab?", klausur: 2, normen: [], kern: {} }, opt), null);
+
+  /* Und quer durchs Rechtsgebiet nie: Die vorläufige Vollstreckbarkeit des
+     Verwaltungsurteils ist nicht die des Zivilurteils. */
+  wissenLeeren();
+  assert.equal(wissenFuer({ titel: "Wann ist ein Urteil vorläufig vollstreckbar?", klausur: 1, normen: [], kern: {} }, opt), null);
+  wissenLeeren();
+});
+
+test("Wissensbasis: jeder Zeiger am Thema trifft ein Kapitel, das es gibt", async () => {
+  const { wissenIndex, wissenLeeren } = await import("../src/wissen.mjs");
+  wissenLeeren();
+  const index = wissenIndex({ neu: true });
+  /* Ohne Schlüssel (so läuft der Test normalerweise) ist der Index leer –
+     dann ist hier nichts zu prüfen. Mit Schlüssel muss jeder Zeiger sitzen:
+     Ein Zeiger ins Leere fällt sonst still auf die Wortsuche zurück. */
+  if (!index.length) return;
+  const ids = new Set(index.map((k) => k.id));
+  const kaputt = themenpool().filter((t) => t.wissen && !ids.has(t.wissen));
+  assert.deepEqual(kaputt.map((t) => `${t.titel} → ${t.wissen}`), []);
+  wissenLeeren();
+});
