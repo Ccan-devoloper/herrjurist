@@ -33,6 +33,12 @@ import { CONFIG } from "./config.mjs";
 import { normKurz } from "./normen.mjs";
 
 const B = 1080, H = 1920;
+/* Wie weit die Plakette ueber den Bildrand hinausragt (nur der Kasten) und wie
+   weit die Schrift in jedem Fall vom Bildrand wegbleibt. Instagram legt rechts
+   die Schaltflaechen und unten die Bildunterschrift ueber das Video, und
+   Telefone runden die Ecken ab - 56px sind das Mindeste, damit nichts
+   angeschnitten wirkt. */
+const UEBERSTAND = 40, SICHER = 56;
 
 const schuetzen = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const esc = (s) => schuetzen(normKurz(s));
@@ -179,14 +185,26 @@ h1{position:absolute;top:104px;left:60px;right:60px;display:flex;flex-direction:
 h1 span{display:inline-block;font-size:74px;font-weight:800;color:${kopfFarbe};line-height:1.1;letter-spacing:-0.5px;
         padding-bottom:12px;border-bottom:5px solid ${kopfFarbe}66}
 
-/* Plaketten: halbdurchsichtiges Schwarz, linksbuendig, ueber den Rand hinaus. */
-.plaketten{position:absolute;top:640px;display:flex;flex-direction:column;gap:26px}
-[data-seite="rechts"] .plaketten{left:-64px;align-items:flex-start}
-[data-seite="links"]  .plaketten{right:-64px;align-items:flex-end}
-.plakette{position:relative;max-width:900px;background:rgba(0,0,0,.44);color:#fff;font-size:50px;font-weight:600;
+/* Plaketten: halbdurchsichtiges Schwarz, linksbuendig, ueber den Rand hinaus.
+
+   Der Ueberstand ist Absicht (so sitzt er im Vorbild), die Schrift darf davon
+   aber nichts abbekommen. Am 14.09. stand der Text 24px vom Bildrand entfernt:
+   auf dem Telefon lag er damit unter der abgerundeten Ecke und den Schaltflaechen,
+   die Instagram ueber das Video legt. Deshalb zwei getrennte Masse - wie weit
+   der Kasten hinausragt (UEBERSTAND) und wie weit die Schrift vom Bildrand
+   wegbleibt (SICHER). Das Polster auf der Ueberstandsseite ist die Summe. */
+.plaketten{position:absolute;top:640px;display:flex;flex-direction:column;gap:26px;max-width:${B - 2 * SICHER + UEBERSTAND}px}
+[data-seite="rechts"] .plaketten{left:-${UEBERSTAND}px;align-items:flex-start}
+[data-seite="links"]  .plaketten{right:-${UEBERSTAND}px;align-items:flex-end}
+/* Eine Marke ist eine Stichwortzeile, keine Fliesstextzeile: Sie steht auf
+   EINER Zeile, notfalls kleiner. Mit Umbruch blieb der Kasten auf voller
+   Breite stehen und zog einen leeren Schwanz ueber den Bildrand, waehrend die
+   Schrift links klebte - genau das war am 14.09. zu sehen. */
+.plakette{position:relative;max-width:100%;white-space:nowrap;background:rgba(0,0,0,.44);color:#fff;font-size:50px;font-weight:600;
           line-height:1.24;border-radius:12px;padding:20px 34px;opacity:0;text-align:left}
-[data-seite="rechts"] .plakette{padding-left:88px}
-[data-seite="links"]  .plakette{padding-right:88px}
+.plakette.umbruch{white-space:normal}
+[data-seite="rechts"] .plakette{padding-left:${UEBERSTAND + SICHER}px}
+[data-seite="links"]  .plakette{padding-right:${UEBERSTAND + SICHER}px}
 /* Wo ein Kreuz sitzt, bekommt die Plakette an dieser Seite Luft. */
 [data-seite="rechts"] .plakette.mit-kreuz{padding-right:170px}
 [data-seite="links"]  .plakette.mit-kreuz{padding-left:170px}
@@ -221,6 +239,9 @@ const aus = (x) => (x <= 0 ? 0 : x >= 1 ? 1 : 1 - Math.pow(1 - x, 3));
 const knapp = (x) => (x <= 0 ? 0 : x >= 1 ? 1 : 1 + 1.9 * Math.pow(x - 1, 3) + 1.1 * Math.pow(x - 1, 2));
 const teile = [...document.querySelectorAll(".szene")];
 window.setzeZeit = function (t) {
+  /* Sicherheitsnetz: Der Renderer wartet vor dem ersten Bild auf die
+     Schriften, also ist spaetestens hier die Messung belastbar. */
+  if (!eingepasst && document.fonts.status === "loaded") einpassen();
   teile.forEach((el, i) => {
     const s = SZENEN[i];
     const sichtbar = t >= s.von - WISCH && t < s.bis;
@@ -255,21 +276,58 @@ window.setzeZeit = function (t) {
     }
   });
 };
-/* Ueberschriften, die nicht passen, werden verkleinert - einmal beim Aufbau. */
-(function einpassen() {
+/* Was nicht passt, wird verkleinert - einmal, aber erst wenn die Schriften da
+   sind. Genau daran lag es am 14.09.: Dieses Stueck lief beim Parsen, also
+   gegen die Ersatzschrift des Systems. Inter ist schmaler, die Messung war
+   damit hinfaellig, und auf dem Telefon stand die Marke dann doch ueber dem
+   Rand. Der Renderer wartet auf document.fonts.ready, bevor er das erste Bild
+   holt - deshalb ist der erste setzeZeit-Aufruf der sichere Zeitpunkt. */
+let eingepasst = false;
+function einpassen() {
+  eingepasst = true;
   for (const el of teile) {
+    const vorher = el.style.display;
     el.style.display = "block";
     for (const k of el.querySelectorAll("h1 span")) {
       let px = parseFloat(getComputedStyle(k).fontSize);
       for (let i = 0; i < 14 && k.scrollWidth > k.parentElement.clientWidth; i++) { px *= 0.94; k.style.fontSize = px + "px"; }
     }
+    /* Eine Marke ist eine Stichwortzeile: Sie steht auf EINER Zeile, notfalls
+       kleiner - dann umschliesst der Kasten genau seine Schrift. Vorher wurde
+       nur die Hoehe geprueft, eine zu breite Zeile also umgebrochen, und der
+       Kasten blieb auf voller Breite stehen: Schrift links, leerer Schwanz
+       ueber den Bildrand. Erst wenn Verkleinern an seine Grenze kommt, ist der
+       Umbruch das kleinere Uebel gegenueber unlesbarer Schrift. */
     for (const k of el.querySelectorAll(".plakette")) {
       let px = parseFloat(getComputedStyle(k).fontSize);
-      for (let i = 0; i < 10 && k.scrollHeight > 190; i++) { px *= 0.94; k.style.fontSize = px + "px"; }
+      /* Gemessen wird die Schrift, nicht der Kasten. Ein Kasten mit max-width
+         meldet scrollWidth === clientWidth, auch wenn die Zeile sichtbar
+         hinauslaeuft - derselbe Stolperstein wie bei den Titelzeilen der
+         Karussells. Der Bereich (Range) sagt die Wahrheit. */
+      const schriftBreite = () => {
+        const bereich = document.createRange();
+        let links = Infinity, rechts = -Infinity;
+        const lauf = document.createTreeWalker(k, NodeFilter.SHOW_TEXT);
+        for (let n = lauf.nextNode(); n; n = lauf.nextNode()) {
+          bereich.selectNodeContents(n);
+          for (const r of bereich.getClientRects()) { links = Math.min(links, r.left); rechts = Math.max(rechts, r.right); }
+        }
+        return rechts > links ? rechts - links : 0;
+      };
+      const platz = () => { const cs = getComputedStyle(k); return k.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight); };
+      const passtNicht = () => schriftBreite() > platz() + 0.5;
+      let i = 0;
+      for (; i < 9 && passtNicht(); i++) { px *= 0.94; k.style.fontSize = px + "px"; }
+      if (passtNicht()) {
+        k.classList.add("umbruch");
+        for (; i < 16 && (k.scrollHeight > 230 || passtNicht()); i++) { px *= 0.94; k.style.fontSize = px + "px"; }
+      }
     }
-    el.style.display = "none";
+    el.style.display = vorher;
   }
-})();
+}
+window.einpassen = einpassen;
+document.fonts.ready.then(() => { if (!eingepasst) einpassen(); });
 window.setzeZeit(0);
 </script></body></html>`;
 }
