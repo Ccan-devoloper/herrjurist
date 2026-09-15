@@ -135,8 +135,10 @@ if (scopes) {
 console.log("\nKanten");
 let medien = [];
 try {
-  const r = await ig.anfrage("GET", `${ig.kontoId || "me"}/media`, { fields: "id,comments_count,permalink", limit: 10 });
-  medien = r.data || [];
+  /* 25 statt 10: Ein Testkommentar landet nicht zwingend auf einem der
+     zehn neuesten Beiträge, und ein zu kleiner Ausschnitt hat heute schon
+     einmal eine falsche Sicherheit erzeugt. Die Aufrufe kosten nichts. */
+  medien = await ig.alleSeiten(`${ig.kontoId || "me"}/media`, { fields: "id,comments_count,permalink,timestamp", limit: 25 }, { maxSeiten: 1 });
   gut(`Medien lesen: ${medien.length} Beiträge (instagram_business_basic)`);
 } catch (e) { fehler(`Medien lesen: ${e.message}`); }
 
@@ -158,6 +160,7 @@ for (const m of medien) {
     gezaehlt += zaehler;
     if (n) {
       gut(`Kommentare zu ${m.id}: ${n} geliefert (Zähler sagt ${zaehler}).`);
+      gut(`    ${m.permalink || "(ohne Link)"}`);
       for (const c of k.data.slice(0, 3)) gut(`    @${c.username || "?"}: ${String(c.text || "").slice(0, 60)}`);
     } else if (zaehler) {
       stumm++;
