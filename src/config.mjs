@@ -199,6 +199,15 @@ export const CONFIG = {
     version: env("IG_GRAPH_VERSION", "v23.0"),
     kontoId: env("IG_ACCOUNT_ID", ""),
     token: env("IG_ACCESS_TOKEN", ""),
+    /* App-ID und App-Geheimnis, nur für die Token-Prüfung. debug_token ist der
+       einzige Weg, die Berechtigungen eines Tokens ABZULESEN statt sie zu
+       erraten - und der Aufruf verlangt ein App-Token aus beidem. Über
+       graph.instagram.com antwortet debug_token mit "Application does not have
+       permission for this action"; über graph.facebook.com klappt er.
+       Der Bot braucht beides für den Betrieb nicht. Fehlen sie, sagt die
+       Prüfung das und verlässt sich auf den Kantentest. */
+    appId: env("IG_APP_ID", ""),
+    appGeheim: env("IG_APP_SECRET", ""),
     tokenSchluessel: env("IG_TOKEN_KEY", ""),               // verschlüsselt den aufgefrischten Token im Asset-Zweig
     trockenlauf: env("IG_DRY_RUN", "false") === "true",     // true: alles erzeugen, nichts veröffentlichen
     sicherheitsabstandLimit: 10,                            // Reserve unter dem 100er-Tageslimit

@@ -75,14 +75,39 @@ try {
    entscheiden unten die Kanten selbst. */
 console.log("\nBerechtigungen");
 let scopes = null;
-try {
-  const url = new URL(`${ig.basis}/debug_token`);
-  url.searchParams.set("input_token", ig.token);
-  url.searchParams.set("access_token", ig.token);
-  const json = await (await fetch(url)).json();
-  scopes = json?.data?.scopes || null;
-  if (!scopes) warnung(`debug_token nennt keine Berechtigungen (${knapp(json, 300)}) – der Kantentest unten entscheidet.`);
-} catch (e) { warnung(`debug_token nicht erreichbar (${e.message}) – der Kantentest unten entscheidet.`); }
+
+/* Erster Weg: das App-Token aus App-ID und App-Geheimnis. Nur so nennt
+   debug_token die Berechtigungen wirklich beim Namen. Der Aufruf geht an
+   graph.facebook.com - über graph.instagram.com antwortet er mit
+   "Application does not have permission for this action". */
+const { appId, appGeheim } = CONFIG.instagram;
+if (appId && appGeheim) {
+  try {
+    const url = new URL("https://graph.facebook.com/v23.0/debug_token");
+    url.searchParams.set("input_token", ig.token);
+    url.searchParams.set("access_token", `${appId}|${appGeheim}`);
+    const json = await (await fetch(url)).json();
+    scopes = json?.data?.scopes || null;
+    if (scopes) gut(`debug_token nennt ${scopes.length} Berechtigung(en) am Token.`);
+    else warnung(`debug_token mit App-Token liefert keine Liste: ${knapp(json, 300)}`);
+  } catch (e) { warnung(`debug_token nicht erreichbar (${e.message}).`); }
+} else {
+  warnung("IG_APP_ID und IG_APP_SECRET sind nicht gesetzt – ohne sie lassen sich die Berechtigungen am Token nicht ablesen, nur erraten. Beide stehen im Meta-Dashboard unter App-Einstellungen → Allgemein und gehören als Secrets ins Repo.");
+}
+
+/* Zweiter Weg, falls das App-Token fehlt: derselbe Aufruf mit dem Token als
+   eigenem Prüfer. Über graph.instagram.com schlägt er meist fehl - der
+   Versuch kostet aber nichts. */
+if (!scopes) {
+  try {
+    const url = new URL(`${ig.basis}/debug_token`);
+    url.searchParams.set("input_token", ig.token);
+    url.searchParams.set("access_token", ig.token);
+    const json = await (await fetch(url)).json();
+    scopes = json?.data?.scopes || null;
+    if (!scopes) warnung(`Auch ohne App-Token nennt debug_token nichts (${knapp(json, 200)}) – der Kantentest unten entscheidet.`);
+  } catch (e) { warnung(`debug_token nicht erreichbar (${e.message}) – der Kantentest unten entscheidet.`); }
+}
 
 if (scopes) {
   for (const [name, zweck] of Object.entries(NOETIG)) {
