@@ -2068,36 +2068,28 @@ test("Die früheste geplante Uhrzeit ist von der Weckkette auch erreichbar", asy
     `Untergrenze ${frueheste} ist zu hoch – die Stunde davor wäre um ${ersterLaufLokal}:${minute} erreichbar gewesen`);
 });
 
-test("Fehlerklassen werden dort importiert, wo sie geprüft werden", async () => {
-  /* Am 15.09. verwarf der Morgenlauf beide Texte mit „BudgetFehler is not
-     defined". autor.mjs prüfte `e instanceof BudgetFehler`, ohne die Klasse zu
-     importieren - seit dem 13.09. Auffällig wurde es erst, als der Faktencheck
-     tatsächlich einmal warf: Bis dahin lief die Zeile nie. Genau deshalb fängt
-     kein Test mit echtem Ablauf so etwas; gesucht wird im Quelltext.
 
-     Geprüft wird nur `instanceof X` und `new X` mit einer Klasse, die ein
-     Nachbarmodul exportiert - eindeutig genug, um ohne Fehlalarme auszukommen. */
-  const dir = new URL("../src/", import.meta.url);
-  const dateien = (await fs.promises.readdir(dir)).filter((f) => f.endsWith(".mjs"));
-  const fremd = new Map();
-  for (const f of dateien) {
-    const q = await fs.promises.readFile(new URL(f, dir), "utf8");
-    for (const m of q.matchAll(/^export\s+class\s+([A-Za-z_$][\w$]*)/gm)) fremd.set(m[1], f);
+test("Bezahlte Entwürfe überleben den Lauf, in dem sie entstanden sind", async () => {
+  const { entwurfsspeicher, entwuerfeAufraeumen } = await import("../src/autor.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "entwuerfe-"));
+  try {
+    entwurfsspeicher(dir);
+    /* Der Speicher wird über strukturiert() gefüllt, und das ruft das Modell.
+       Geprüft wird deshalb, was ohne Netz prüfbar ist: dass abgelegte Entwürfe
+       nach Alter verschwinden und frische liegen bleiben. Ohne Aufräumen
+       wüchse der Asset-Zweig mit jedem Tag. */
+    const schreib = (name, datum) => fs.writeFileSync(path.join(dir, name), JSON.stringify({ datum, zweck: "autor", daten: { titel: name } }));
+    schreib("heute.json", "2026-09-15");
+    schreib("vorgestern.json", "2026-09-13");
+    schreib("uralt.json", "2026-08-01");
+    schreib("kaputt.json", "2026-09-15");
+    fs.writeFileSync(path.join(dir, "kaputt.json"), "{kein json");
+    const weg = entwuerfeAufraeumen(3, "2026-09-15");
+    const da = fs.readdirSync(dir).sort();
+    assert.deepEqual(da, ["heute.json", "vorgestern.json"], `übrig: ${da.join(", ")}`);
+    assert.equal(weg, 2, "Anzahl der entfernten Entwürfe stimmt nicht");
+  } finally {
+    entwurfsspeicher(null);
+    fs.rmSync(dir, { recursive: true, force: true });
   }
-  assert.ok(fremd.has("BudgetFehler"), "BudgetFehler sollte als Klasse exportiert sein");
-  const fehlend = [];
-  for (const f of dateien) {
-    const q = await fs.promises.readFile(new URL(f, dir), "utf8");
-    const importiert = new Set();
-    for (const m of q.matchAll(/import\s*(?:[\w$]+\s*,\s*)?\{([^}]*)\}\s*from/g)) {
-      for (const t of m[1].split(",")) { const n = t.split(/\s+as\s+/).pop().trim(); if (n) importiert.add(n); }
-    }
-    const lokal = new Set([...q.matchAll(/(?:^|\s)(?:export\s+)?class\s+([A-Za-z_$][\w$]*)/g)].map((m) => m[1]));
-    for (const m of q.matchAll(/\b(?:instanceof|new)\s+([A-Z][\w$]*)/g)) {
-      const n = m[1];
-      if (!fremd.has(n) || fremd.get(n) === f || importiert.has(n) || lokal.has(n)) continue;
-      fehlend.push(`${f}: ${m[0]} – ${n} kommt aus ${fremd.get(n)}`);
-    }
-  }
-  assert.deepEqual(fehlend, [], `nicht importierte Klassen:\n  ${fehlend.join("\n  ")}`);
 });

@@ -23,7 +23,7 @@ import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
-import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben } from "./autor.mjs";
+import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
@@ -128,6 +128,10 @@ async function main() {
      Beispieltexte für den Folgetag in den echten Zweig geschoben. */
   const hosting = new Hosting({ pushen: !nurPlanen && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
   motivArchivDir = path.join(hosting.stateDir, "motive");
+  /* Bezahlte Entwürfe überleben den Lauf, in dem sie entstanden sind - siehe
+     autor.mjs. Aufgeräumt wird gleich zu Beginn, damit der Zweig nicht wächst. */
+  entwurfsspeicher(path.join(hosting.stateDir, "entwuerfe"));
+  entwuerfeAufraeumen();
   const ledgerPfad = path.join(hosting.stateDir, "ledger.json");
 
   /* Erfundene Firmennamen früherer Beiträge sperren: Der Autor bekommt sie

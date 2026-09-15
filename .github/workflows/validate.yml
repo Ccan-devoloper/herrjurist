@@ -1,0 +1,35 @@
+name: Validate
+
+# Bis zum 15.09. lief dieser Code durch keine CI. Auf dem Schwesterkanal
+# kosteten an einem Tag zwei Fehler derselben Art - ein Bezeichner benutzt,
+# aber nirgends definiert - zwei Tagesbudgets, ohne dass ein Beitrag erschien.
+# Beide haette `no-undef` in einer Sekunde gefunden.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Abhängigkeiten
+        run: npm ci
+      - name: Linter
+        run: npm run lint
+      # ffmpeg und Chromium braucht die Testreihe wirklich - ohne sie fallen
+      # fünf Tests mit „spawnSync ffmpeg ENOENT“ aus.
+      - name: ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Chromium
+        run: npx playwright install --with-deps chromium || npx playwright install chromium
+      - name: Tests
+        run: npm test

@@ -11,7 +11,8 @@
     "beispiele": "node src/beispiele.mjs",
     "token:pruefen": "node src/instagram.mjs --pruefen",
     "stimmen": "node bin/stimmen.mjs",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "lint": "eslint src bin test"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.123.0",
@@ -20,5 +21,8 @@
     "@iconify/utils": "^3.1.7",
     "nodemailer": "^6.10.1",
     "playwright": "^1.62.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5"
   }
 }
