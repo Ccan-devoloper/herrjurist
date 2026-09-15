@@ -381,6 +381,25 @@ test("Tagesdeckel: Verbrauch wird gezählt, weitere Aufrufe werden gestoppt", as
   assert.equal(k.budgetFrei(), true);
 });
 
+
+test("Antworten haben einen eigenen Topf: Inhaltsdeckel voll, Antworten laufen weiter – und umgekehrt", async () => {
+  const k = await import("../src/kosten.mjs");
+  k.budgetSetzen({ limitUsd: 0.10, bisher: 0.09, antwortLimitUsd: 0.08, bisherAntworten: 0.01 });
+  assert.equal(k.budgetFrei("beitrag"), false, "Inhalt ist voll");
+  assert.equal(k.budgetFrei("kommentare"), true, "Antworten haben noch Platz");
+  assert.equal(k.budgetFrei("nachrichten"), true);
+  const vorher = k.tagesStand();
+  k.erfassen("claude-opus-5", { input_tokens: 1000, output_tokens: 2000 }, "kommentare");   // 0,055 $
+  assert.equal(k.tagesStand(), vorher, "Antworten belasten den Inhaltsdeckel nicht");
+  assert.ok(k.antwortStand() > 0.06, "aber den Antworttopf");
+  /* Ab jetzt rechnet der Topf mit dem gemessenen Wert (0,055), nicht mehr mit der Schätzung. */
+  assert.equal(k.budgetFrei("kommentare"), false, "0,065 + 0,055 gemessen ≥ 0,08");
+  assert.throws(() => k.budgetPruefen("Kommentare beantworten"), /Antwortbudget/);
+  k.budgetSetzen({ limitUsd: 0.10, bisher: 0.0, antwortLimitUsd: 0.08, bisherAntworten: 0.08 });
+  assert.equal(k.budgetFrei("kommentare"), false, "Antworttopf voll");
+  assert.equal(k.budgetFrei("beitrag"), true, "Inhalt läuft weiter");
+  k.budgetSetzen({});
+});
 test("Tagesdeckel: nach der ersten Messung zählt die Messung, nicht die Schätzung", async () => {
   const k = await import("../src/kosten.mjs");
   /* Der Fall vom 11.09.: Ein Reel-Entwurf kostete 0,047 $, wurde vom
@@ -2164,17 +2183,19 @@ test("Postfach: die Grenze zur Einzelfallberatung steht im Systemtext", async ()
   }
 });
 
-test("Kommentare und Nachrichten werden nicht mit dem Standardwert erschlagen", async () => {
+test("Kommentare und Nachrichten haben eine eigene, bezahlbare Schätzung", async () => {
   const { erwartet } = await import("../src/kosten.mjs");
-  /* Beide laufen über das günstige Modell und fassen alle offenen Fälle in
-     EINEN Aufruf. Ohne eigenen Eintrag griff der Standardwert von 0,05 $ –
-     das Zehnfache des Wirklichen. An einem vollen Tag reichte das, um die
-     Antworten stumm ausfallen zu lassen: Der Deckel rechnete mit Geld, das
-     nie ausgegeben worden wäre. */
+  const { CONFIG } = await import("../src/config.mjs");
+  /* Seit dem 15.09. schreibt das starke Modell die Antworten und sie laufen
+     über einen eigenen Topf (CONFIG.antworten). Die Schätzung muss zwei
+     Dinge leisten: Sie darf nicht der blinde Standardwert sein, und sie muss
+     unter dem Antwortdeckel liegen - sonst könnte an einem frischen Tag kein
+     einziger Aufruf starten. */
   for (const zweck of ["Kommentare beantworten", "Nachrichten beantworten"]) {
     const wert = erwartet(zweck);
-    assert.ok(wert <= 0.015, `${zweck}: ${wert} $ erwartet – zu hoch für einen Haiku-Aufruf`);
     assert.ok(wert > 0, `${zweck}: keine Schätzung`);
+    assert.ok(wert < CONFIG.antworten.tagesBudgetUsd, `${zweck}: ${wert} $ erwartet – übersteigt den Antwortdeckel ${CONFIG.antworten.tagesBudgetUsd} $`);
+    assert.equal(wert, erwartet(zweck.split(" ")[0].toLowerCase()), `${zweck}: Wortlaut und Schlüssel müssen dieselbe Schätzung liefern`);
   }
   /* Der teure Weg bleibt teuer geschätzt – sonst reißt die Rücklage. */
   assert.ok(erwartet("Reel-Skript schreiben") >= 0.05, "das Reel wird zu billig geschätzt");
