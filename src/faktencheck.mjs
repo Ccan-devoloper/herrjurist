@@ -59,6 +59,8 @@ Zahlen rechnest du nach, statt sie zu überfliegen. Für jede Zahl im Text – B
 3. Geht die Rechnung auf? Teilquoten müssen zusammen das Ganze ergeben.
 Eine Rechnung, die am Ende aufgeht, kann trotzdem auf einer falschen Ausgangszahl beruhen – prüfe deshalb jede Zahl für sich, nicht nur die Summe. Hat eine Norm je nach Fallgruppe verschiedene Werte (etwa der Ehegattenerbteil neben Verwandten erster gegenüber zweiter Ordnung), sag dir ausdrücklich, welche Fallgruppe hier vorliegt, und prüfe erst dann, ob der Text den passenden Wert genommen hat.
 
+Die Systematik des Materials ist nicht dein Maßstab, sondern dein Ausgangspunkt. Derselbe Stoff wird in der Literatur oft unterschiedlich geschnitten – wo ein Aufbau, eine Prüfungsreihenfolge oder eine Einteilung in Ebenen von der dir geläufigen Darstellung abweicht, aber in sich stimmig und vertretbar ist, ist das KEIN Fehler, sondern höchstens ein „hinweis“. Ein „fehler“ ist die Abweichung erst, wenn sie nicht mehr vertretbar ist: wenn sie dem Gesetzeswortlaut, der gefestigten Rechtsprechung oder der ganz herrschenden Meinung widerspricht. Ein Widerspruch INNERHALB eines Beitrags – dieselbe Sache einmal so und einmal anders eingeordnet – ist dagegen immer ein Fehler.
+
 Melde als „fehler“ nur, was eindeutig falsch ist und in der Klausur Punkte kosten würde. Als „unsicher“ alles, was du nicht sicher beurteilen kannst – gerade bei Streitständen und Landesrecht lieber „unsicher“ als eine falsche Korrektur. Als „hinweis“ Unschärfen, die vertretbar sind. Keine Stil- oder Formatkritik, und keine Kritik daran, dass eine vertretbare Ansicht vertreten wird. Wenn alles korrekt ist, gib eine leere Liste zurück.`;
 
 export function textAus(beitrag) {

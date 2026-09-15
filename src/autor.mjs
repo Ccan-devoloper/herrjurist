@@ -120,6 +120,7 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Keine Rechenwege, keine Buchungssätze, keine Steuerfächer. Das ist ein Kanal zum juristischen Staatsexamen.
 
 ## Eigenständigkeit (sehr wichtig)
+- Das Material im Themen-Skelett und in der Wissensbasis ist fachlich maßgeblich. Wo es eine Systematik vorgibt – einen Aufbau, eine Prüfungsreihenfolge, eine Einteilung in Ebenen –, folgst du ihr, auch wenn du eine andere Darstellung kennst. Lehrbücher schneiden denselben Stoff oft unterschiedlich; beide Schnitte können vertretbar sein, und der Kanal spricht mit einer Stimme. Zwei Grenzen: Der Wortlaut ist immer deiner. Und wenn eine Aussage fachlich nicht vertretbar ist – sie widerspricht dem Gesetz, der gefestigten Rechtsprechung oder der ganz herrschenden Meinung –, übernimmst du sie nicht, sondern schreibst das Richtige.
 - Du bekommst ein Themen-Skelett (Frage, Normen, Stichpunkte). Formuliere ALLES neu, in eigenen Worten und eigener Struktur. Übernimm keine Sätze, keine Aufzählungsreihenfolgen, keine Beispielzahlen.
 - Fälle, Beispiele, Namen und Zahlen erfindest du selbst – und jedes Mal neu: andere Branche, anderer Ort, anderer Name als in früheren Texten. Nie ein Name, der im Ausgangsmaterial vorkommt, nie ein Name aus der Sperrliste, und nie zweimal derselbe Firmen- oder Personenname in verschiedenen Beiträgen.
 - Keine Bezüge auf Kurse, Skripte, Seiten, Folien, Fallnummern, Dozenten oder Lernplattformen.
@@ -461,9 +462,9 @@ function themaText(thema) {
     thema.normen.length ? `Normen: ${thema.normen.join(" · ")}` : "",
     thema.examen && thema.examen !== "1. Examen" ? `Prüfungsbezug: ${thema.examen}${/2\./.test(thema.examen) ? " – im zweiten Examen zählt die praktische Seite: Entscheidungsform, Tenor, Zweckmäßigkeit, Urteils- statt Gutachtenstil." : ""}` : "",
   ];
-  if (k.einordnung?.length) zeilen.push(`Einordnung (nur als Gedankenstütze, nicht übernehmen): ${k.einordnung.join(" ")}`);
+  if (k.einordnung?.length) zeilen.push(`Einordnung (fachlich maßgeblich, in eigenen Worten wiedergeben): ${k.einordnung.join(" ")}`);
   if (k.lernziele?.length) zeilen.push(`Worauf es ankommt: ${k.lernziele.join("; ")}`);
-  if (k.pruefschritte?.length) zeilen.push(`Prüfgedanken (Reihenfolge und Wortlaut selbst neu aufbauen): ${k.pruefschritte.join(" | ")}`);
+  if (k.pruefschritte?.length) zeilen.push(`Prüfgedanken (Systematik und Reihenfolge übernehmen, Wortlaut selbst formulieren): ${k.pruefschritte.join(" | ")}`);
   if (k.merksatz) zeilen.push(`Kernaussage: ${k.merksatz}`);
   if (k.fehler?.length) zeilen.push(`Typische Fehler: ${k.fehler.join("; ")}`);
   if (k.frage) zeilen.push(`Frage: ${k.frage}`, `Antwortkern: ${k.antwort || ""}`);
