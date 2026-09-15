@@ -2179,3 +2179,21 @@ test("Kommentare und Nachrichten werden nicht mit dem Standardwert erschlagen", 
   /* Der teure Weg bleibt teuer geschätzt – sonst reißt die Rücklage. */
   assert.ok(erwartet("Reel-Skript schreiben") >= 0.05, "das Reel wird zu billig geschätzt");
 });
+
+test("Token-Tresor: ohne Herkunftsvermerk gewinnt das Secret", async () => {
+  const quelle = await fs.promises.readFile(new URL("../src/instagram.mjs", import.meta.url), "utf8");
+  /* Am 15.09. wurde ein neu gesetztes Secret mit zwei zusätzlichen
+     Berechtigungen stillschweigend verworfen. Die Bedingung lautete
+     `t.herkunft && secret && t.herkunft !== secret` – bei einem Tresor ohne
+     Herkunft knipste das erste Glied die ganze Prüfung aus, und der alte
+     Token lief weiter. Der Tresor stammte vom 11.09. um 05:43, die Prüfung
+     kam 17 Stunden später dazu.
+
+     Ein Eintrag ohne Herkunft ist gerade der Fall, in dem man ihm nicht
+     trauen darf – geprüft wird deshalb der Quelltext der Bedingung. */
+  assert.doesNotMatch(quelle, /if \(t\.herkunft && secret && t\.herkunft !== secret\)/,
+    "die alte Bedingung steht wieder da – ein Tresor ohne Herkunft gewinnt dann erneut");
+  assert.match(quelle, /if \(secret && t\.herkunft !== secret\)/,
+    "die Herkunftsprüfung greift nicht mehr bei fehlendem Vermerk");
+  assert.match(quelle, /Tresor ohne Herkunftsvermerk/, "der Fall wird nicht sichtbar protokolliert");
+});

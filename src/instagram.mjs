@@ -100,8 +100,17 @@ export class Instagram {
       const t = tokenEntschluesseln(fs.readFileSync(this.tresorDatei, "utf8"));
       if (!t?.token) return false;
       const secret = fingerabdruck(CONFIG.instagram.token);
-      if (t.herkunft && secret && t.herkunft !== secret) {
-        console.log("Neuer Token im Secret erkannt – der Tresor wird ab jetzt von diesem Token aus geführt.");
+      /* Fehlt die Herkunft, stammt der Eintrag aus der Zeit vor dieser
+         Prüfung - und dann weiß niemand, von welchem Secret er abstammt.
+         Genau dann darf der Tresor NICHT gewinnen: Am 15.09. wurde ein neu
+         gesetztes Secret mit zwei zusätzlichen Berechtigungen stillschweigend
+         verworfen, weil `t.herkunft &&` die ganze Bedingung ausknipste. Der
+         Tresor dieses Kanals war am 11.09. um 05:43 geschrieben worden, die
+         Herkunftsprüfung kam 17 Stunden später dazu. */
+      if (secret && t.herkunft !== secret) {
+        console.log(t.herkunft
+          ? "Neuer Token im Secret erkannt – der Tresor wird ab jetzt von diesem Token aus geführt."
+          : "Tresor ohne Herkunftsvermerk – das Secret gewinnt und der Tresor wird davon aus neu geführt.");
         this.tokenAblauf = null;
         this.tresorSpeichern();
         return false;
