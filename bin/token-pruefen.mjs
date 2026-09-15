@@ -112,17 +112,25 @@ if (!mitKommentaren.length) {
     try {
       const k = await ig.anfrage("GET", `${m.id}/comments`, { fields: "id,text,username,timestamp", limit: 50 });
       const n = (k.data || []).length;
-      if (n) gut(`Kommentare zu ${m.id}: ${n} von ${m.comments_count} geliefert.`);
-      else fehler(`Kommentare zu ${m.id}: comments_count=${m.comments_count}, geliefert 0. Rohantwort ${knapp(k)} – der Token trägt instagram_business_manage_comments nicht.`);
+      if (n) { gut(`Kommentare zu ${m.id}: ${n} von ${m.comments_count} geliefert.`); continue; }
+      /* Leer mit Cursorn heißt: gefunden und beim Ausliefern aussortiert.
+         Eine Kante, die nichts kennt, liefert keine Cursor. */
+      const cursor = k.paging?.cursors?.after ? " (mit Cursor – die Kante kennt Einträge und liefert sie nicht)" : "";
+      fehler(`Kommentare zu ${m.id}: comments_count=${m.comments_count}, geliefert 0${cursor}. Rohantwort ${knapp(k)}`);
+      const knoten = await ig.anfrage("GET", `${m.id}`, { fields: "comments_count,comments{id,text,username,timestamp}" });
+      const ueber = knoten.comments?.data || [];
+      if (ueber.length) warnung(`Über den Medienknoten kommen ${ueber.length} Kommentare an – die Kante /comments ist der Fehler, nicht der Token.`);
+      else warnung(`Auch der Medienknoten liefert nichts: ${knapp(knoten, 300)}`);
     } catch (e) { fehler(`Kommentare zu ${m.id}: ${e.message}`); }
   }
 }
 
 try {
-  const c = await ig.anfrage("GET", `${ig.kontoId || "me"}/conversations`, { fields: "id,updated_time", limit: 10 });
-  const n = (c.data || []).length;
-  if (n) gut(`Unterhaltungen: ${n} (instagram_business_manage_messages)`);
-  else warnung(`Unterhaltungen: 0. Rohantwort ${knapp(c)} – entweder wirklich leer oder instagram_business_manage_messages fehlt.`);
+  /* Über alle Seiten: Die erste Seite kann leer sein und trotzdem eine
+     weitere ankündigen – genau das war am 15.09. der Fall. */
+  const alle = await ig.alleSeiten(`${ig.kontoId || "me"}/conversations`, { platform: "instagram", fields: "id,updated_time", limit: 10 });
+  if (alle.length) gut(`Unterhaltungen: ${alle.length} über alle Seiten (instagram_business_manage_messages)`);
+  else warnung("Unterhaltungen: 0, auch über alle Seiten. Entweder hat wirklich niemand geschrieben, oder instagram_business_manage_messages fehlt.");
 } catch (e) { fehler(`Unterhaltungen: ${e.message}`); }
 
 try {
@@ -135,9 +143,17 @@ console.log("");
 if (blocker) {
   console.log(`${blocker} Punkt(e) offen.
 
-Ein Token trägt die Berechtigungen, die beim Erzeugen angehakt waren – nicht
-die, die heute in den App-Einstellungen stehen. Ein nachträglich gesetzter
-Schalter wirkt also erst auf einen NEU erzeugten Token.
+Ob es am Token liegt, sagen die Zeilen oben – nicht diese Anleitung:
+
+  · Meldet eine Kante einen Fehler oder nennt debug_token die Berechtigung
+    nicht, fehlt sie am Token. Dann hilft ein neuer Token (unten).
+  · Kommt 200 mit leerer Liste UND einem Cursor zurück, während andere
+    Kanten derselben Berechtigungsstufe liefern, liegt es nicht am Token.
+    Dann ist die Abfrage dran, nicht das Meta-Dashboard.
+
+Falls ein neuer Token nötig ist: Ein Token trägt die Berechtigungen, die beim
+Erzeugen angehakt waren – ein nachträglich gesetzter Schalter wirkt erst auf
+einen NEU erzeugten Token.
 
   1. Meta-Dashboard → App → Instagram → API-Einrichtung mit Instagram-Login
   2. Bei „Zugriffstoken generieren“ alle fünf Berechtigungen anhaken
