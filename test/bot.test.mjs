@@ -2093,3 +2093,73 @@ test("Bezahlte Entwürfe überleben den Lauf, in dem sie entstanden sind", async
     fs.rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test("Postfach: nur offene Nachrichten innerhalb der Frist", async () => {
+  const { offeneNachrichten, FRIST_STUNDEN } = await import("../src/postfach.mjs");
+  const ICH = "17841400000000000";
+  const jetzt = Date.parse("2026-09-15T12:00:00Z");
+  const vorStunden = (h) => new Date(jetzt - h * 3600000).toISOString();
+  const von = (id, name) => ({ id, username: name });
+
+  const k = (id, msgs) => ({ id, messages: { data: msgs } });
+  const konv = [
+    /* frisch und offen – muss beantwortet werden */
+    k("c1", [{ id: "m1", from: von("u1", "lena"), message: "Ist die Drittwirkung der Grundrechte im Zivilrecht klausurrelevant?", created_time: vorStunden(2) }]),
+    /* wir haben zuletzt geschrieben – nichts offen */
+    k("c2", [
+      { id: "m2", from: von("u2", "tim"), message: "Danke!", created_time: vorStunden(5) },
+      { id: "m3", from: von(ICH, "herrjurist"), message: "Gern!", created_time: vorStunden(4) },
+    ]),
+    /* zu alt – Instagram nimmt keine Antwort mehr an */
+    k("c3", [{ id: "m4", from: von("u3", "jo"), message: "Kurze Frage zur StPO", created_time: vorStunden(FRIST_STUNDEN + 1) }]),
+    /* ohne Text (Sticker, geteilter Beitrag) */
+    k("c4", [{ id: "m5", from: von("u4", "mia"), message: "", created_time: vorStunden(1) }]),
+    /* nur Emoji */
+    k("c5", [{ id: "m6", from: von("u5", "ben"), message: "🔥🔥", created_time: vorStunden(1) }]),
+    /* Werbung */
+    k("c6", [{ id: "m7", from: von("u6", "spam"), message: "Hi, Interesse an einer Kooperation?", created_time: vorStunden(1) }]),
+    /* schon behandelt */
+    k("c7", [{ id: "m8", from: von("u7", "alt"), message: "Frage von gestern", created_time: vorStunden(3) }]),
+  ];
+  const ledger = { postfach: [{ nachrichtId: "m8" }] };
+  const offen = offeneNachrichten(konv, ICH, ledger, jetzt);
+  assert.deepEqual(offen.map((o) => o.id), ["m1"], `unerwartet offen: ${offen.map((o) => o.id).join(", ")}`);
+  assert.equal(offen[0].empfaengerId, "u1", "die Antwort ginge an die falsche Person");
+
+  const gruende = Object.fromEntries((offen.uebersprungen || []).map((u) => [u.id, u.grund]));
+  assert.match(gruende.m4 || "", /Stunden/, "die Frist wird nicht als Grund genannt");
+  assert.equal(gruende.m5, "ohne Text");
+  assert.equal(gruende.m6, "nur Emoji");
+  assert.equal(gruende.m7, "Werbung");
+  assert.equal(gruende.m8, "bereits behandelt");
+  /* c2 taucht gar nicht auf: Wer zuletzt geschrieben hat, entscheidet. */
+  assert.ok(!(offen.uebersprungen || []).some((u) => u.id === "m3"), "eigene Nachricht wurde geprüft statt übergangen");
+});
+
+test("Postfach: der Verlauf kommt mit, die eigene Stimme ist erkennbar", async () => {
+  const { offeneNachrichten } = await import("../src/postfach.mjs");
+  const ICH = "17841400000000000";
+  const jetzt = Date.parse("2026-09-15T12:00:00Z");
+  const konv = [{ id: "c1", messages: { data: [
+    { id: "m1", from: { id: "u1", username: "lena" }, message: "Wie prüfe ich die Versammlungsfreiheit?", created_time: new Date(jetzt - 3 * 3600000).toISOString() },
+    { id: "m2", from: { id: ICH, username: "herrjurist" }, message: "Schutzbereich, Eingriff, Rechtfertigung – in dieser Reihenfolge.", created_time: new Date(jetzt - 2.5 * 3600000).toISOString() },
+    { id: "m3", from: { id: "u1", username: "lena" }, message: "Und wenn der Eingriff mittelbar ist?", created_time: new Date(jetzt - 1 * 3600000).toISOString() },
+  ] } }];
+  const offen = offeneNachrichten(konv, ICH, { postfach: [] }, jetzt);
+  assert.equal(offen.length, 1);
+  assert.equal(offen[0].id, "m3", "die letzte fremde Nachricht ist die offene");
+  assert.equal(offen[0].verlauf.length, 2, "der Verlauf fehlt");
+  assert.deepEqual(offen[0].verlauf.map((v) => v.wer), ["person", "kanal"], "die eigene Stimme wird nicht erkannt");
+});
+
+test("Postfach: die Grenze zur Einzelfallberatung steht im Systemtext", async () => {
+  const quelle = await fs.promises.readFile(new URL("../src/postfach.mjs", import.meta.url), "utf8");
+  /* Auf einem Jurakanal ist das keine Geschmacksfrage: Rechtsdienstleistung in einer
+     fremden Angelegenheit ist nach § 3 RDG vorbehalten. Eine DM ist der Ort,
+     an dem genau danach gefragt wird. */
+  assert.match(quelle, /RDG/, "der Systemtext nennt die Norm nicht");
+  assert.match(quelle, /Rechtslage.*geht.*was soll ich tun/s, "die Trennlinie fehlt");
+  for (const wort of ["Werbung", "Kooperationsanfragen", "Sperrliste"]) {
+    assert.ok(quelle.includes(wort), `im Systemtext fehlt: ${wort}`);
+  }
+});

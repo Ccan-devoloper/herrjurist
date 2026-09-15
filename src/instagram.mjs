@@ -338,6 +338,35 @@ export class Instagram {
     }
   }
 
+  /* ------------------------------------------------------------------------
+     Postfach: Unterhaltungen lesen und beantworten.
+
+     Instagram liefert die Unterhaltungen mitsamt den letzten Nachrichten. Wer
+     geschrieben hat, steht in "from" - der Abgleich mit der eigenen Konto-ID
+     entscheidet, ob eine Nachricht von außen kam oder von uns.
+
+     Braucht instagram_business_manage_messages. Fehlt die Berechtigung,
+     liefert der Endpunkt nichts; das wird sichtbar protokolliert statt still
+     als "kein Posteingang" durchzugehen.
+     ------------------------------------------------------------------------ */
+  async konversationen(anzahl = 25, jeUnterhaltung = 12) {
+    const felder = `id,updated_time,participants,messages.limit(${jeUnterhaltung}){id,from,to,message,created_time}`;
+    const r = await this.anfrage("GET", `${this.kontoId}/conversations`, { platform: "instagram", fields: felder, limit: anzahl });
+    return r.data || [];
+  }
+
+  /* Eine Nachricht an eine Person schicken. Instagram erlaubt das nur
+     innerhalb von 24 Stunden nach deren letzter Nachricht - die Frist prüft
+     postfach.mjs, bevor es hier landet. */
+  async nachrichtSenden(empfaengerId, text) {
+    if (this.trockenlauf) { this.protokoll.push({ art: "nachricht", empfaengerId, text }); return "trocken"; }
+    const r = await this.anfrage("POST", `${this.kontoId}/messages`, {
+      recipient: JSON.stringify({ id: empfaengerId }),
+      message: JSON.stringify({ text }),
+    }, { versuche: 1 });
+    return r?.message_id || r?.recipient_id || "ok";
+  }
+
   /* Eigener Nutzername (für die Erkennung eigener Kommentare). */
   async eigenerName() {
     if (this.host === "facebook") return (await this.anfrage("GET", `${this.kontoId}`, { fields: "username" })).username;
