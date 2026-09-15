@@ -382,6 +382,48 @@ test("Tagesdeckel: Verbrauch wird gezählt, weitere Aufrufe werden gestoppt", as
 });
 
 
+test("Story-Antwort im Postfach bekommt ihren Bezug – statt einer Rückfrage", async () => {
+  const { offeneNachrichten, antwortenFormulieren } = await import("../src/postfach.mjs");
+  /* Am 15.09. fragte jemand unter einer Story „Ist das hier die erbrechtliche
+     oder die familienrechtliche Lösung?“ und bekam zurück: „Magst du mir kurz
+     sagen, welchen Punkt du meinst?“ Instagram hatte die Nachricht als
+     Story-Antwort markiert – das Feld wurde nur nie abgefragt. */
+  const ledger = { postfach: [], veroeffentlicht: [
+    { datum: new Date().toISOString().slice(0, 10), art: "story", titel: "Wann ist eine Versammlung friedlich?", medienId: "111" },
+    { datum: new Date().toISOString().slice(0, 10), art: "beitrag", titel: "Beschuldigter oder Zeuge? § 136 StPO", medienId: "222" },
+  ] };
+  const nachricht = (extra) => [{ id: "k1", messages: { data: [{
+    id: "m1", from: { id: "99", username: "ysf.kmn" }, message: "Gilt das auch bei Sitzblockaden?",
+    created_time: new Date().toISOString(), ...extra,
+  }] } }];
+
+  const mitBezug = offeneNachrichten(nachricht({ reply_to: { story: { id: "111" } } }), "1", ledger);
+  assert.equal(mitBezug.length, 1);
+  assert.match(mitBezug[0].bezug, /Versammlung friedlich/, "die Story-ID muss im Ledger aufgelöst werden");
+
+  /* Unbekannte Story: ehrlich benennen, nicht erfinden. */
+  const fremd = offeneNachrichten(nachricht({ reply_to: { story: { id: "999" } } }), "1", ledger);
+  assert.match(fremd[0].bezug, /nicht auffindbar/);
+
+  /* Ohne reply_to bleibt der Bezug leer – aber die letzten Inhalte stehen als
+     Hintergrund bereit, damit das Modell zuordnen kann. */
+  const ohne = offeneNachrichten(nachricht({}), "1", ledger);
+  assert.equal(ohne[0].bezug, null);
+  assert.equal(ohne.zuletzt.length, 2, "die letzten Veröffentlichungen fehlen als Hintergrund");
+
+  /* Der Prompt darf den Bezug nicht unterschlagen. */
+  let gesehen = null;
+  const echt = globalThis.fetch;
+  globalThis.fetch = async (url, opt) => { gesehen = JSON.parse(opt.body); return echt(url, opt); };
+  try { await antwortenFormulieren(mitBezug, mitBezug.zuletzt); } catch { /* kein Schlüssel im Test – der Prompt steht trotzdem */ }
+  globalThis.fetch = echt;
+  if (gesehen) {
+    const text = gesehen.messages[0].content;
+    assert.match(text, /Bezug: Story/, "der Bezug fehlt im Prompt");
+    assert.match(text, /Zuletzt erschienen/, "der Hintergrund fehlt im Prompt");
+  }
+});
+
 test("Antworten haben einen eigenen Topf: Inhaltsdeckel voll, Antworten laufen weiter – und umgekehrt", async () => {
   const k = await import("../src/kosten.mjs");
   k.budgetSetzen({ limitUsd: 0.10, bisher: 0.09, antwortLimitUsd: 0.08, bisherAntworten: 0.01 });

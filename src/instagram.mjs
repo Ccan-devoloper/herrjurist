@@ -428,9 +428,27 @@ export class Instagram {
      liefert der Endpunkt nichts; das wird sichtbar protokolliert statt still
      als "kein Posteingang" durchzugehen.
      ------------------------------------------------------------------------ */
+  /* Unterhaltungen samt Bezug der einzelnen Nachrichten.
+
+     Der Bezug ist der Unterschied zwischen einer brauchbaren und einer
+     peinlichen Antwort. Am 15.09. fragte jemand unter einer Story „Ist das
+     hier die erbrechtliche oder die familienrechtliche Lösung?“ - und der
+     Bot fragte zurück, worum es gehe. Instagram hatte die Nachricht als
+     Story-Antwort markiert; wir haben das Feld nur nie abgefragt.
+
+     Zwei Anläufe, weil `reply_to` nicht auf jeder API-Fassung existiert und
+     ein unbekanntes Feld die ganze Abfrage mit 400 abbrechen ließe. Ohne
+     Bezug läuft alles weiter wie bisher - nur eben blind. */
   async konversationen(anzahl = 25, jeUnterhaltung = 12) {
-    const felder = `id,updated_time,participants,messages.limit(${jeUnterhaltung}){id,from,to,message,created_time}`;
-    return this.alleSeiten(`${this.kontoId}/conversations`, { platform: "instagram", fields: felder, limit: anzahl });
+    const kern = `id,from,to,message,created_time`;
+    const bauen = (m) => `id,updated_time,participants,messages.limit(${jeUnterhaltung}){${m}}`;
+    const pfad = `${this.kontoId}/conversations`;
+    try {
+      return await this.alleSeiten(pfad, { platform: "instagram", fields: bauen(`${kern},reply_to{story{id,url},message{id}}`), limit: anzahl });
+    } catch (e) {
+      console.warn(`  ! Unterhaltungen ohne Bezug (reply_to nicht abfragbar: ${e.message.split("\n")[0].slice(0, 120)})`);
+      return this.alleSeiten(pfad, { platform: "instagram", fields: bauen(kern), limit: anzahl });
+    }
   }
 
   /* Eine Nachricht an eine Person schicken. Instagram erlaubt das nur

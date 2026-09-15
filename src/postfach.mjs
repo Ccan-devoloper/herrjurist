@@ -54,6 +54,10 @@ Eine Direktnachricht ist persönlicher als ein Kommentar – und genau deshalb i
 - Fragen zu einer KONKRETEN eigenen Rechtssache beantwortest du nicht. „Mein Vermieter hat gekündigt, was kann ich tun?“, „Lohnt sich Widerspruch gegen meinen Bescheid?“, „Habe ich Anspruch auf …?“ – das ist Rechtsdienstleistung in einer fremden Angelegenheit und nach § 3 RDG den Anwält:innen vorbehalten. Sag freundlich, dass du dazu nichts sagen darfst, nenne wenn möglich die allgemeine Regel dahinter, und verweise auf anwaltliche Beratung. Kein „aber grundsätzlich wäre in deinem Fall …“.
 - Die Grenze verläuft zwischen „wie ist die Rechtslage“ (geht) und „was soll ich tun“ (geht nicht).
 
+- WENN ein Bezug angegeben ist (Story oder Beitrag, auf den sich die Nachricht bezieht), beantworte die Frage zu genau diesem Inhalt. Frag dann NICHT zurück, worum es geht - das weißt du. Beispiel: Bezug „Wann ist eine Versammlung friedlich?“ und die Frage „Gilt das auch bei Sitzblockaden?“ ist eine Frage zu genau dieser Story.
+- Steht kein Bezug dabei, sondern nur „Zuletzt erschienen“, dann ordne die Frage einem dieser Inhalte zu, wenn sie erkennbar dazu passt. Nur wenn mehrere gleich gut passen oder keiner, frag kurz zurück.
+- Zurückfragen ist der letzte Ausweg, nicht der erste Reflex.
+
 Weitere Regeln:
 - Höchstens 500 Zeichen je Antwort, meistens zwei bis vier Sätze. Höchstens ein Emoji.
 - Lob oder Dank: kurz bedanken, eine Frage zurückstellen, die zum Weiterreden einlädt.
@@ -87,6 +91,16 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
   const uebersprungen = [];
   const skip = (n, von, grund) => uebersprungen.push({ id: n.id, von, text: (n.message || "").slice(0, 60), grund });
 
+  /* Was der Kanal zuletzt veröffentlicht hat, nach Medien-ID. Damit wird aus
+     einer Story-Antwort ein Thema statt einer anonymen ID. */
+  const nachId = new Map();
+  for (const e of ledger.veroeffentlicht || []) if (e.medienId) nachId.set(String(e.medienId), e);
+  const grenzeBezug = new Date(jetzt - 3 * 86400000).toISOString().slice(0, 10);
+  const zuletzt = (ledger.veroeffentlicht || [])
+    .filter((e) => String(e.datum || "") >= grenzeBezug && e.titel)
+    .slice(-12)
+    .map((e) => ({ art: e.art === "story" ? "Story" : "Beitrag", titel: String(e.titel).slice(0, 110) }));
+
   for (const k of konversationen || []) {
     const nachrichten = [...(k.messages?.data || [])].sort((a, b) => new Date(a.created_time) - new Date(b.created_time));
     if (!nachrichten.length) continue;
@@ -114,23 +128,37 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
       text: String(m.message || "").trim().slice(0, 300),
     })).filter((m) => m.text);
 
-    offen.push({ id: letzte.id, text, von, empfaengerId: letzte.from?.id, konversationId: k.id, zeit: letzte.created_time, verlauf });
+    /* Bezug: Story-Antwort oder Antwort auf eine frühere Nachricht. Die ID
+       schlagen wir im Ledger nach - dort steht der Titel dessen, was wir
+       selbst veröffentlicht haben. */
+    const storyId = letzte.reply_to?.story?.id;
+    const eintrag = storyId ? nachId.get(String(storyId)) : null;
+    const bezug = eintrag
+      ? `${eintrag.art === "story" ? "Story" : "Beitrag"} „${String(eintrag.titel || "").slice(0, 140)}“`
+      : (storyId || letzte.reply_to?.story?.url) ? "Antwort auf eine unserer Stories (Inhalt nicht auffindbar)" : null;
+
+    offen.push({ id: letzte.id, text, von, empfaengerId: letzte.from?.id, konversationId: k.id, zeit: letzte.created_time, verlauf, bezug });
   }
 
   offen.sort((a, b) => new Date(a.zeit) - new Date(b.zeit));
   offen.uebersprungen = uebersprungen;
+  offen.zuletzt = zuletzt;
   return offen;
 }
 
 /* Antworten in einem Aufruf formulieren - wie bei den Kommentaren. Ein Aufruf
    für alle offenen Nachrichten, nicht einer je Nachricht. */
-export async function antwortenFormulieren(nachrichten) {
+export async function antwortenFormulieren(nachrichten, zuletzt = []) {
   if (!nachrichten.length) return [];
-  const user = `Beantworte die folgenden Direktnachrichten. „Verlauf“ nennt, was in derselben Unterhaltung davor stand.
-
+  const hintergrund = zuletzt.length
+    ? `\nZuletzt erschienen (falls kein Bezug dabeisteht, passt die Frage oft zu einem davon):\n${zuletzt.map((e) => `- ${e.art}: „${e.titel}“`).join("\n")}\n`
+    : "";
+  const user = `Beantworte die folgenden Direktnachrichten. „Bezug“ nennt die Story oder den Beitrag, auf den sich die Nachricht bezieht; „Verlauf“, was in derselben Unterhaltung davor stand.
+${hintergrund}
 ${nachrichten.map((n) => {
+    const b = n.bezug ? `\n  Bezug: ${n.bezug}` : "";
     const v = n.verlauf?.length ? `\n  Verlauf: ${n.verlauf.map((m) => `${m.wer === "kanal" ? "wir" : "sie/er"}: „${m.text}“`).join(" | ")}` : "";
-    return `- id ${n.id} · von @${n.von}: „${n.text}“${v}`;
+    return `- id ${n.id} · von @${n.von}: „${n.text}“${b}${v}`;
   }).join("\n")}
 
 Sperrliste: ${korpus().namen.join(", ")}
@@ -170,7 +198,7 @@ export async function nachrichtenBeantworten(ig, ledger, { log = console.log } =
   if (!offen.length) return { unterhaltungen: konversationen.length, offen: 0, beantwortet: 0 };
 
   log(`Postfach: ${offen.length} offene Nachrichten in ${konversationen.length} Unterhaltungen`);
-  const antworten = await antwortenFormulieren(offen);
+  const antworten = await antwortenFormulieren(offen, alle.zuletzt || []);
   const nachId = new Map(antworten.map((a) => [a.id, a.text]));
   const gruende = new Map(antworten.map((a) => [a.id, a.grund]));
   let n = 0;
