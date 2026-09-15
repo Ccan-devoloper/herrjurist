@@ -140,26 +140,35 @@ try {
   gut(`Medien lesen: ${medien.length} Beiträge (instagram_business_basic)`);
 } catch (e) { fehler(`Medien lesen: ${e.message}`); }
 
-const mitKommentaren = medien.filter((m) => (m.comments_count || 0) > 0);
-if (!mitKommentaren.length) {
-  warnung("Kein Beitrag meldet Kommentare – die Kommentarkante lässt sich gerade nicht prüfen. Schreib einen Testkommentar und starte erneut.");
-} else {
-  for (const m of mitKommentaren.slice(0, 3)) {
-    try {
-      const k = await ig.anfrage("GET", `${m.id}/comments`, { fields: "id,text,username,timestamp", limit: 50 });
-      const n = (k.data || []).length;
-      if (n) { gut(`Kommentare zu ${m.id}: ${n} von ${m.comments_count} geliefert.`); continue; }
-      /* Leer mit Cursorn heißt: gefunden und beim Ausliefern aussortiert.
-         Eine Kante, die nichts kennt, liefert keine Cursor. */
-      const cursor = k.paging?.cursors?.after ? " (mit Cursor – die Kante kennt Einträge und liefert sie nicht)" : "";
-      fehler(`Kommentare zu ${m.id}: comments_count=${m.comments_count}, geliefert 0${cursor}. Rohantwort ${knapp(k)}`);
-      const knoten = await ig.anfrage("GET", `${m.id}`, { fields: "comments_count,comments{id,text,username,timestamp}" });
-      const ueber = knoten.comments?.data || [];
-      if (ueber.length) warnung(`Über den Medienknoten kommen ${ueber.length} Kommentare an – die Kante /comments ist der Fehler, nicht der Token.`);
-      else warnung(`Auch der Medienknoten liefert nichts: ${knapp(knoten, 300)}`);
-    } catch (e) { fehler(`Kommentare zu ${m.id}: ${e.message}`); }
-  }
+/* JEDEN Beitrag fragen, nicht nur die mit comments_count > 0.
+
+   Am 15.09. hat mich genau diese Abkürzung blind gemacht: Die Prüfung sah
+   nur Beiträge, deren Zähler etwas meldete, und übersah damit zwei frisch
+   geschriebene Kommentare. Der Zähler aus /media steht seit Stunden
+   unverändert auf 1 und 2 - über hinzugefügte und wieder gelöschte
+   Kommentare hinweg. Er ist also zwischengespeichert und taugt nicht als
+   Vorfilter. Die Kante selbst ist die Quelle, nicht der Zähler. */
+let gefunden = 0, gezaehlt = 0, stumm = 0;
+for (const m of medien) {
+  try {
+    const k = await ig.anfrage("GET", `${m.id}/comments`, { fields: "id,text,username,timestamp", limit: 50 });
+    const n = (k.data || []).length;
+    const zaehler = m.comments_count || 0;
+    gefunden += n;
+    gezaehlt += zaehler;
+    if (n) {
+      gut(`Kommentare zu ${m.id}: ${n} geliefert (Zähler sagt ${zaehler}).`);
+      for (const c of k.data.slice(0, 3)) gut(`    @${c.username || "?"}: ${String(c.text || "").slice(0, 60)}`);
+    } else if (zaehler) {
+      stumm++;
+      const cursor = k.paging?.cursors?.after ? ", mit Cursor" : "";
+      warnung(`Kommentare zu ${m.id}: Zähler ${zaehler}, geliefert 0${cursor}.`);
+    }
+  } catch (e) { fehler(`Kommentare zu ${m.id}: ${e.message}`); }
 }
+if (gefunden) gut(`Kommentare gesamt: ${gefunden} geliefert über ${medien.length} Beiträge (Zählerstand zusammen ${gezaehlt}).`);
+else if (gezaehlt) fehler(`Kein einziger Kommentar geliefert, obwohl die Zähler zusammen ${gezaehlt} melden (${stumm} stumme Beiträge).`);
+else warnung("Kein Beitrag meldet Kommentare und keiner liefert welche – schreib einen Testkommentar und starte erneut.");
 
 try {
   /* Über alle Seiten: Die erste Seite kann leer sein und trotzdem eine
