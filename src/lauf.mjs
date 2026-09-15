@@ -30,6 +30,7 @@ import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
 import { kommentareBeantworten } from "./interaktion.mjs";
+import { nachrichtenBeantworten } from "./postfach.mjs";
 import { lernschleife } from "./insights.mjs";
 import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
@@ -300,6 +301,19 @@ async function main() {
         log(`Interaktion: ${r.beantwortet} Antworten (${r.geprueft} Beiträge, ${r.kommentare ?? 0} Kommentare geprüft)`);
       } catch (e) {
         if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`); else console.error(`  ✗ Interaktion: ${e.message}`);
+      }
+    }
+    /* Postfach: Direktnachrichten beantworten – ebenfalls bei jedem Lauf.
+       Instagram nimmt eine Antwort nur binnen 24 Stunden an, stündlich reicht
+       dafür bequem. Fehlt die Berechtigung am Token, kommt der Endpunkt leer
+       zurück; das wird gemeldet und der Lauf geht weiter. */
+    if (CONFIG.postfach.aktiv) {
+      try {
+        const r = await nachrichtenBeantworten(ig, ledger, { log });
+        if (r.beantwortet) { ledgerSpeichern(ledgerPfad, ledger); hosting.commit(`Nachrichten beantwortet ${datum}`); await hosting.push(); }
+        log(`Postfach: ${r.beantwortet} Antworten (${r.unterhaltungen} Unterhaltungen, ${r.offen} offen)`);
+      } catch (e) {
+        if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`); else console.error(`  ✗ Postfach: ${e.message}`);
       }
     }
     /* Schlüsselwort-Nachrichten: Spickzettel-Karten an Kommentierende. */

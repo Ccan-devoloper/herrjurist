@@ -330,6 +330,16 @@ export const CONFIG = {
   },
 
   /* Interaktion: Kommentare unter den eigenen Beiträgen beantworten -------- */
+  /* Postfach: Direktnachrichten beantworten. Braucht am Token die Berechtigung
+     instagram_business_manage_messages. Fehlt sie, liefert der Endpunkt nichts
+     und der Lauf meldet das - er bricht nicht ab. */
+  postfach: {
+    aktiv: env("IG_POSTFACH", "true") === "true",
+    unterhaltungen: Number(env("IG_POSTFACH_UNTERHALTUNGEN", 25)),
+    maxJeLauf: Number(env("IG_POSTFACH_MAX", 10)),
+    maxZeichen: Number(env("IG_POSTFACH_ZEICHEN", 500)),
+  },
+
   interaktion: {
     aktiv: env("IG_INTERAKTION", "true") === "true",
     maxAntwortenJeLauf: Number(env("IG_MAX_ANTWORTEN", 15)),
