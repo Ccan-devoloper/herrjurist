@@ -194,12 +194,17 @@ export class Instagram {
      Lauf nicht aufhält. Instagram-Kanten kosten nichts, nur Zeit. */
   async alleSeiten(pfad, params = {}, { maxSeiten = 10 } = {}) {
     const alles = [];
-    let after = null;
+    let after = null, leer = 0;
     for (let seite = 1; seite <= maxSeiten; seite++) {
       const r = await this.anfrage("GET", pfad, after ? { ...params, after } : params);
-      alles.push(...(r.data || []));
+      const dazu = r.data || [];
+      alles.push(...dazu);
+      /* Instagram kündigt gelegentlich Seite um Seite an, ohne je etwas zu
+         liefern. Nach drei leeren Seiten am Stück ist Schluss - sonst kostet
+         eine stumme Kante jeden Lauf eine halbe Minute. */
+      leer = dazu.length ? 0 : leer + 1;
       after = r.paging?.cursors?.after;
-      if (!r.paging?.next || !after) break;
+      if (!r.paging?.next || !after || leer >= 3) break;
     }
     return alles;
   }
