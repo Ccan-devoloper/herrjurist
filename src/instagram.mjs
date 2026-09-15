@@ -345,11 +345,19 @@ export class Instagram {
            Kante: dieselben Daten, anderer Weg bei Instagram. Bleibt auch der
            leer, steht das mit der Rohantwort im Log - nachprüfbar statt
            geraten. Beide Aufrufe kosten nichts. */
-        const FELDER = "id,text,username,timestamp,hidden,like_count,replies.limit(50){id,text,username,timestamp}";
-        let daten = await this.alleSeiten(`${m.id}/comments`, { fields: FELDER, limit: 50 });
+        /* Der Name fremder Verfasser steht über Instagram-Login im Unterfeld
+           from{username}; das Feld username ist nur beim eigenen Konto gefüllt.
+           Der erste Live-Lauf am 15.09. zeigte deshalb "@?" bei jedem fremden
+           Kommentar - Antworten gingen trotzdem raus (sie hängen an der ID),
+           aber Log und Modellkontext hatten keinen Namen. Beides abfragen und
+           auf ein Feld zusammenführen; auch bei den Antworten darunter. */
+        const FELDER = "id,text,username,from{id,username},timestamp,hidden,like_count,replies.limit(50){id,text,username,from{id,username},timestamp}";
+        const mitName = (c) => ({ ...c, username: c.username || c.from?.username || "" });
+        let daten = (await this.alleSeiten(`${m.id}/comments`, { fields: FELDER, limit: 50 }))
+          .map((c) => ({ ...mitName(c), replies: c.replies ? { data: (c.replies.data || []).map(mitName) } : c.replies }));
         if (m.comments_count > 0 && !daten.length) {
-          const knoten = await this.anfrage("GET", `${m.id}`, { fields: "comments_count,comments{id,text,username,timestamp}" });
-          const ueberKnoten = knoten.comments?.data || [];
+          const knoten = await this.anfrage("GET", `${m.id}`, { fields: "comments_count,comments{id,text,username,from{id,username},timestamp}" });
+          const ueberKnoten = (knoten.comments?.data || []).map(mitName);
           if (ueberKnoten.length) {
             console.warn(`  ! Beitrag ${m.id}: ${ueberKnoten.length} Kommentare kamen erst über den Medienknoten - die Kante /comments liefert sie nicht.`);
             daten = ueberKnoten;
