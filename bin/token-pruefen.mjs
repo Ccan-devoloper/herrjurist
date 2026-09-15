@@ -135,10 +135,19 @@ if (scopes) {
 console.log("\nKanten");
 let medien = [];
 try {
-  /* 25 statt 10: Ein Testkommentar landet nicht zwingend auf einem der
-     zehn neuesten Beiträge, und ein zu kleiner Ausschnitt hat heute schon
-     einmal eine falsche Sicherheit erzeugt. Die Aufrufe kosten nichts. */
-  medien = await ig.alleSeiten(`${ig.kontoId || "me"}/media`, { fields: "id,comments_count,permalink,timestamp", limit: 25 }, { maxSeiten: 1 });
+  /* ALLE Beiträge, nicht die neuesten N.
+
+     Erst waren es zehn, dann 25 - und beide Male hätte ein Kommentar auf
+     einem älteren Beitrag unbemerkt bleiben können. Genau das ist am
+     15.09. passiert: Die Testkommentare standen auf älteren Beiträgen, und
+     ich habe daraus voreilig geschlossen, die API halte sie zurück.
+
+     Die Medienliste selbst ist billig - 50 Einträge je Aufruf. Teuer wäre
+     erst, jeden Beitrag einzeln nach Kommentaren zu fragen; das bleibt
+     deshalb unten auf die beschränkt, die überhaupt einen Zähler melden,
+     und ist zusätzlich gedeckelt. Das Stundenlimit der App liegt bei rund
+     200 Aufrufen, und das Veröffentlichen hat Vorrang. */
+  medien = await ig.alleSeiten(`${ig.kontoId || "me"}/media`, { fields: "id,comments_count,permalink,timestamp", limit: 50 }, { maxSeiten: 12 });
   gut(`Medien lesen: ${medien.length} Beiträge (instagram_business_basic)`);
 } catch (e) { fehler(`Medien lesen: ${e.message}`); }
 
@@ -150,8 +159,12 @@ try {
    unverändert auf 1 und 2 - über hinzugefügte und wieder gelöschte
    Kommentare hinweg. Er ist also zwischengespeichert und taugt nicht als
    Vorfilter. Die Kante selbst ist die Quelle, nicht der Zähler. */
+const MAX_ABFRAGEN = 60;
+const zuPruefen = medien.filter((m) => (m.comments_count || 0) > 0).slice(0, MAX_ABFRAGEN);
+const uebersprungen = medien.filter((m) => (m.comments_count || 0) > 0).length - zuPruefen.length;
+gut(`${medien.length} Beiträge insgesamt, davon ${zuPruefen.length + uebersprungen} mit Zählerstand${uebersprungen ? ` (die ersten ${MAX_ABFRAGEN} werden gefragt)` : ""}.`);
 let gefunden = 0, gezaehlt = 0, stumm = 0;
-for (const m of medien) {
+for (const m of zuPruefen) {
   try {
     const k = await ig.anfrage("GET", `${m.id}/comments`, { fields: "id,text,username,timestamp", limit: 50 });
     const n = (k.data || []).length;
@@ -170,8 +183,8 @@ for (const m of medien) {
   } catch (e) { fehler(`Kommentare zu ${m.id}: ${e.message}`); }
 }
 if (gefunden) gut(`Kommentare gesamt: ${gefunden} geliefert über ${medien.length} Beiträge (Zählerstand zusammen ${gezaehlt}).`);
-else if (gezaehlt) fehler(`Kein einziger Kommentar geliefert, obwohl die Zähler zusammen ${gezaehlt} melden (${stumm} stumme Beiträge).`);
-else warnung("Kein Beitrag meldet Kommentare und keiner liefert welche – schreib einen Testkommentar und starte erneut.");
+else if (gezaehlt) fehler(`Kein einziger Kommentar geliefert, obwohl die Zähler zusammen ${gezaehlt} melden (${stumm} stumme Beiträge von ${medien.length} geprüften).`);
+else warnung(`Kein Beitrag meldet Kommentare (${medien.length} geprüft) – schreib einen Testkommentar und starte erneut.`);
 
 try {
   /* Über alle Seiten: Die erste Seite kann leer sein und trotzdem eine
