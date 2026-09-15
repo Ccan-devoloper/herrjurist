@@ -293,9 +293,35 @@ export class Instagram {
     const medien = r.data || [];
     for (const m of medien) {
       try {
-        const k = await this.anfrage("GET", `${m.id}/comments`, { fields: "id,text,username,timestamp,hidden,like_count,replies.limit(50){id,text,username,timestamp}", limit: 50 });
-        m.comments = { data: k.data || [] };
-        if (m.comments_count > 0 && !m.comments.data.length) console.warn(`  ! Beitrag ${m.id}: comments_count=${m.comments_count}, aber keine Kommentare geliefert – Berechtigung instagram_business_manage_comments prüfen (Token neu erzeugen).`);
+        /* Zwei Anläufe, vom Reichen zum Schlichten.
+
+           Am 15.09. kamen über Stunden 200er mit leerer Liste zurück, obwohl
+           comments_count 1 und 2 meldete - auch für einen Kommentar, der
+           Minuten zuvor geschrieben worden war. Kein Fehler, nur nichts drin.
+           Verdächtig ist das verschachtelte Unterfeld: Dass
+           Feldverschachtelung über graph.instagram.com unzuverlässig ist,
+           steht seit Langem oben in diesem Kommentar - für replies{} war es
+           nie geprüft.
+
+           Bringt der reiche Aufruf nichts und sollte etwas da sein, folgt
+           derselbe Aufruf ohne replies{}. Liefert der etwas, lag es an der
+           Verschachtelung; liefert auch er nichts, liegt es am Token. Der
+           Unterschied steht dann im Log, statt erraten zu werden. */
+        const FELDER_REICH = "id,text,username,timestamp,hidden,like_count,replies.limit(50){id,text,username,timestamp}";
+        const FELDER_SCHLICHT = "id,text,username,timestamp,like_count";
+        let k = await this.anfrage("GET", `${m.id}/comments`, { fields: FELDER_REICH, limit: 50 });
+        let daten = k.data || [];
+        if (m.comments_count > 0 && !daten.length) {
+          const einfach = await this.anfrage("GET", `${m.id}/comments`, { fields: FELDER_SCHLICHT, limit: 50 });
+          const schlicht = einfach.data || [];
+          if (schlicht.length) {
+            console.warn(`  ! Beitrag ${m.id}: ${schlicht.length} Kommentare kamen erst ohne replies{} – die Feldverschachtelung schluckt sie.`);
+            daten = schlicht;
+          } else {
+            console.warn(`  ! Beitrag ${m.id}: comments_count=${m.comments_count}, aber beide Abfragen leer (mit und ohne replies{}) – es liegt nicht an den Feldern. Berechtigung instagram_business_manage_comments am Token prüfen.`);
+          }
+        }
+        m.comments = { data: daten };
       } catch (e) {
         m.comments = { data: [] };
         console.error(`  ✗ Kommentare zu ${m.id}: ${e.message}`);
