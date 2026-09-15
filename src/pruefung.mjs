@@ -317,8 +317,13 @@ function alleTexte(beitrag) {
       ...(f.punkte || []),
       ...(f.schritte || []).map((s) => (typeof s === "string" ? s : `${s.titel || ""} ${s.text || ""}`)),
       f.formel || "", ...(f.zeilen || []), f.ergebnis || "", f.erklaerung || "",
-      f.links?.titel || "", f.rechts?.titel || "", f.links?.text || "", f.rechts?.text || "",
-      ...(f.links?.punkte || []), ...(f.rechts?.punkte || []),
+      /* Jede Spalte am Stück: Überschrift, Text, Punkte. Vorher standen erst
+         beide Überschriften und dann alle Punkte hintereinander - damit ging
+         verloren, zu welcher Seite ein Punkt gehört, und genau das IST bei
+         einer Vergleichsfolie die Aussage. Auf dem Schwesterkanal stand
+         deshalb am 15.09. ein Punkt der linken Spalte im Prüftext direkt
+         hinter der rechten Überschrift. */
+      ...[f.links, f.rechts].filter(Boolean).flatMap((sp) => [sp.titel || "", sp.text || "", ...(sp.punkte || [])]),
     );
   }
   teile.push(beitrag.caption || "", beitrag.kurztitel || "");
