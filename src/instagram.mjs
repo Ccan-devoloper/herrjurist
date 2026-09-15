@@ -175,6 +175,35 @@ export class Instagram {
   }
 
   /* Verbindung, Konto und Token prüfen. */
+  /* Eine Kante vollständig lesen, über alle Seiten hinweg.
+
+     Der Token-Lauf vom 15.09. hat gezeigt, dass eine erste Seite leer sein
+     kann und trotzdem eine weitere folgt. /conversations antwortete:
+
+       {"data":[],"paging":{"cursors":{"after":"..."},"next":"https://..."}}
+
+     Wer nur `data` der ersten Seite nimmt, sieht null Unterhaltungen - und
+     genau das stand seit Tagen im Log. Ein `next` ist die Zusage der API,
+     dass es weitergeht; leer heißt hier nicht zu Ende.
+
+     Weitergeblättert wird über den Cursor, nicht über die fertige URL aus
+     `next`: In der steht der Zugangstoken im Klartext, und der hat weder in
+     einem Protokoll noch in einer Fehlermeldung etwas verloren.
+
+     maxSeiten begrenzt den Aufruf, damit eine ungewöhnlich lange Kante den
+     Lauf nicht aufhält. Instagram-Kanten kosten nichts, nur Zeit. */
+  async alleSeiten(pfad, params = {}, { maxSeiten = 10 } = {}) {
+    const alles = [];
+    let after = null;
+    for (let seite = 1; seite <= maxSeiten; seite++) {
+      const r = await this.anfrage("GET", pfad, after ? { ...params, after } : params);
+      alles.push(...(r.data || []));
+      after = r.paging?.cursors?.after;
+      if (!r.paging?.next || !after) break;
+    }
+    return alles;
+  }
+
   async pruefen() {
     const felder = "id,username";
     const konto = this.host === "facebook"
@@ -293,32 +322,34 @@ export class Instagram {
     const medien = r.data || [];
     for (const m of medien) {
       try {
-        /* Zwei Anläufe, vom Reichen zum Schlichten.
+        /* Zwei Anläufe - der zweite über einen anderen Weg.
 
-           Am 15.09. kamen über Stunden 200er mit leerer Liste zurück, obwohl
-           comments_count 1 und 2 meldete - auch für einen Kommentar, der
-           Minuten zuvor geschrieben worden war. Kein Fehler, nur nichts drin.
-           Verdächtig ist das verschachtelte Unterfeld: Dass
-           Feldverschachtelung über graph.instagram.com unzuverlässig ist,
-           steht seit Langem oben in diesem Kommentar - für replies{} war es
-           nie geprüft.
+           Der erste Verdacht, die Feldverschachtelung replies{}, ist am
+           15.09. widerlegt worden: Beide Abfragen kamen leer zurück, mit und
+           ohne das Unterfeld. Die Rohantwort war dabei aufschlussreich:
 
-           Bringt der reiche Aufruf nichts und sollte etwas da sein, folgt
-           derselbe Aufruf ohne replies{}. Liefert der etwas, lag es an der
-           Verschachtelung; liefert auch er nichts, liegt es am Token. Der
-           Unterschied steht dann im Log, statt erraten zu werden. */
-        const FELDER_REICH = "id,text,username,timestamp,hidden,like_count,replies.limit(50){id,text,username,timestamp}";
-        const FELDER_SCHLICHT = "id,text,username,timestamp,like_count";
-        let k = await this.anfrage("GET", `${m.id}/comments`, { fields: FELDER_REICH, limit: 50 });
-        let daten = k.data || [];
+             {"data":[],"paging":{"cursors":{"before":"...","after":"..."}}}
+
+           Leer, aber mit Cursorn. Eine Kante, die nichts kennt, liefert keine
+           Cursor - die API hat also etwas gefunden und beim Ausliefern
+           aussortiert. Gegen einen fehlenden Anspruch am Token spricht
+           derselbe Lauf: /insights lieferte Kennzahlen, und diese
+           Berechtigung wurde zusammen mit der für Kommentare erteilt.
+
+           Deshalb der zweite Anlauf über den Medienknoten statt über die
+           Kante: dieselben Daten, anderer Weg bei Instagram. Bleibt auch der
+           leer, steht das mit der Rohantwort im Log - nachprüfbar statt
+           geraten. Beide Aufrufe kosten nichts. */
+        const FELDER = "id,text,username,timestamp,hidden,like_count,replies.limit(50){id,text,username,timestamp}";
+        let daten = await this.alleSeiten(`${m.id}/comments`, { fields: FELDER, limit: 50 });
         if (m.comments_count > 0 && !daten.length) {
-          const einfach = await this.anfrage("GET", `${m.id}/comments`, { fields: FELDER_SCHLICHT, limit: 50 });
-          const schlicht = einfach.data || [];
-          if (schlicht.length) {
-            console.warn(`  ! Beitrag ${m.id}: ${schlicht.length} Kommentare kamen erst ohne replies{} – die Feldverschachtelung schluckt sie.`);
-            daten = schlicht;
+          const knoten = await this.anfrage("GET", `${m.id}`, { fields: "comments_count,comments{id,text,username,timestamp}" });
+          const ueberKnoten = knoten.comments?.data || [];
+          if (ueberKnoten.length) {
+            console.warn(`  ! Beitrag ${m.id}: ${ueberKnoten.length} Kommentare kamen erst über den Medienknoten - die Kante /comments liefert sie nicht.`);
+            daten = ueberKnoten;
           } else {
-            console.warn(`  ! Beitrag ${m.id}: comments_count=${m.comments_count}, aber beide Abfragen leer (mit und ohne replies{}) – es liegt nicht an den Feldern. Berechtigung instagram_business_manage_comments am Token prüfen.`);
+            console.warn(`  ! Beitrag ${m.id}: comments_count=${m.comments_count}, geliefert 0 - weder über die Kante noch über den Medienknoten. Antwort des Knotens: ${JSON.stringify(knoten).slice(0, 300)}`);
           }
         }
         m.comments = { data: daten };
@@ -386,8 +417,7 @@ export class Instagram {
      ------------------------------------------------------------------------ */
   async konversationen(anzahl = 25, jeUnterhaltung = 12) {
     const felder = `id,updated_time,participants,messages.limit(${jeUnterhaltung}){id,from,to,message,created_time}`;
-    const r = await this.anfrage("GET", `${this.kontoId}/conversations`, { platform: "instagram", fields: felder, limit: anzahl });
-    return r.data || [];
+    return this.alleSeiten(`${this.kontoId}/conversations`, { platform: "instagram", fields: felder, limit: anzahl });
   }
 
   /* Eine Nachricht an eine Person schicken. Instagram erlaubt das nur
