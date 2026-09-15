@@ -2163,3 +2163,19 @@ test("Postfach: die Grenze zur Einzelfallberatung steht im Systemtext", async ()
     assert.ok(quelle.includes(wort), `im Systemtext fehlt: ${wort}`);
   }
 });
+
+test("Kommentare und Nachrichten werden nicht mit dem Standardwert erschlagen", async () => {
+  const { erwartet } = await import("../src/kosten.mjs");
+  /* Beide laufen über das günstige Modell und fassen alle offenen Fälle in
+     EINEN Aufruf. Ohne eigenen Eintrag griff der Standardwert von 0,05 $ –
+     das Zehnfache des Wirklichen. An einem vollen Tag reichte das, um die
+     Antworten stumm ausfallen zu lassen: Der Deckel rechnete mit Geld, das
+     nie ausgegeben worden wäre. */
+  for (const zweck of ["Kommentare beantworten", "Nachrichten beantworten"]) {
+    const wert = erwartet(zweck);
+    assert.ok(wert <= 0.015, `${zweck}: ${wert} $ erwartet – zu hoch für einen Haiku-Aufruf`);
+    assert.ok(wert > 0, `${zweck}: keine Schätzung`);
+  }
+  /* Der teure Weg bleibt teuer geschätzt – sonst reißt die Rücklage. */
+  assert.ok(erwartet("Reel-Skript schreiben") >= 0.05, "das Reel wird zu billig geschätzt");
+});

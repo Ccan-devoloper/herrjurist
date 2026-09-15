@@ -96,6 +96,13 @@ const ERWARTET = {
   autor: 0.05,
   reel: 0.06,
   bild: 0.01,
+  /* Kommentare und Nachrichten laufen ueber das guenstige Modell und fassen
+     alle offenen Faelle in EINEN Aufruf. Ohne eigenen Eintrag griff der
+     Standardwert von 0,05 $ - das Zehnfache des Wirklichen. An einem vollen
+     Tag reichte das, um die Antworten stumm ausfallen zu lassen: Der Deckel
+     rechnete mit Geld, das nie ausgegeben worden waere. */
+  kommentare: 0.01,
+  nachrichten: 0.01,
 };
 const STANDARD = 0.05;
 /* Längste Übereinstimmung gewinnt: „reel-faktencheck“ enthält „reel“. */
