@@ -172,7 +172,16 @@ export const CONFIG = {
     effort: env("IG_KI_EFFORT", "low"),   // „low“: etwa halbe Kosten je Entwurf, Faktencheck fängt Fehler ab
     rechercheSuchen: Number(env("IG_KI_RECHERCHE_SUCHEN", "4")),   // Websuchen je Recherche (je 0,01 $ plus Ergebnis-Tokens)
     maxVersuche: Number(env("IG_KI_VERSUCHE", "2")),
-    tagesBudgetUsd: Number(env("IG_TAGESBUDGET_USD", "0.27")),
+    /* Tagesdeckel. Von 0,27 auf 0,32 $ angehoben, nachdem am 15.09. gemessen
+       war, was der strenge Prüfer wirklich kostet: Die Faktenchecks lagen an
+       dem Tag bei 0,0528 $ gegen 0,0174 $ am 14.09., als noch überwiegend das
+       günstige Modell prüfte - also rund 0,035 $ mehr. Genau dieser Betrag
+       fehlte danach für die gezeichneten Motive: 0,2529 $ gingen in Texte und
+       Prüfung, für "bild" blieb 0,0000 $, und die Beiträge trugen Icons.
+       Beides zusammen geht in 0,27 $ nicht auf. Entschieden wurde für die
+       strenge Prüfung ALLER Formate einschließlich der Reels - lieber fünf
+       Cent mehr am Tag als ein fachlicher Fehler im Feed. */
+    tagesBudgetUsd: Number(env("IG_TAGESBUDGET_USD", "0.32")),
     /* Rücklage für das Reel des Tages: Es soll täglich erscheinen, darf also
        nicht daran scheitern, dass Beiträge und Recherche das Budget vorher
        aufbrauchen. */
