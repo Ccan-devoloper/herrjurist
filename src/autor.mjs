@@ -15,7 +15,8 @@ import { FAECHER, KLAUSUREN } from "./inhalte.mjs";
 import { belegstelle } from "./wissen.mjs";
 import { ICONS } from "./stile.mjs";
 import { folieLeer, pruefeBeitrag, korpus } from "./pruefung.mjs";
-import { datumLesbar, tageBis } from "./zeit.mjs";
+import { createHash } from "node:crypto";
+import { datumLesbar, tageBis, heuteIso } from "./zeit.mjs";
 import { erfassen, budgetPruefen, BudgetFehler } from "./kosten.mjs";
 import { pruefeFakten, korrekturenAnwenden } from "./faktencheck.mjs";
 import { hookWaehlen as hookMusterWaehlen, hookAnleitung, pruefeHook, hookTypErkennen } from "./hooks.mjs";
@@ -247,6 +248,65 @@ function jsonAus(text) {
   return JSON.parse(text.slice(start, ende + 1));
 }
 
+/* ==========================================================================
+   Entwurfsspeicher: Was einmal bezahlt ist, wird nicht zweimal bezahlt.
+
+   Am 15.09. schrieb der Morgenlauf beide Texte, bezahlte 0,241 $ - und warf
+   sie weg, weil eine Zeile hinter dem Faktencheck einen ReferenceError warf.
+   Der Lauf endete ordentlich, der Zustand wurde gepusht, nur der Inhalt war
+   nirgends: Gespeichert wird erst, was die Prüfung überstanden hat. Damit war
+   das Tagesbudget verbraucht, ohne dass ein einziger Beitrag existierte.
+
+   Deshalb liegt die Antwort des Modells jetzt auf Platte, sobald sie da ist -
+   vor jeder Prüfung. Ein zweiter Lauf mit derselben Vorlage bekommt sie
+   geschenkt. Der Schlüssel ist die Vorlage selbst (Modell, Systemtext,
+   Auftrag, Schema): Ändert sich daran etwas - und sei es nur die
+   Beanstandung, die in den zweiten Versuch wandert -, ist es ein anderer
+   Auftrag und wird neu gerechnet.
+
+   Der Speicher ist kein Ersatz für die Prüfung: Abgelegt wird der rohe
+   Entwurf, geprüft wird er bei jedem Lauf aufs Neue. Ein Entwurf, der gestern
+   durchgefallen ist, fällt heute wieder durch - nur eben umsonst. */
+let entwurfDir = null;
+export function entwurfsspeicher(dir) { entwurfDir = dir; }
+const entwurfSchluessel = (o) => createHash("sha256").update(JSON.stringify(o)).digest("hex").slice(0, 16);
+
+function entwurfLesen(schluessel) {
+  if (!entwurfDir) return null;
+  try {
+    const p = path.join(entwurfDir, `${schluessel}.json`);
+    return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8")) : null;
+  } catch { return null; }
+}
+
+/* Schlägt das Ablegen fehl, ist das kein Grund, den Beitrag zu verlieren -
+   dann wird eben morgen noch einmal bezahlt. */
+function entwurfAblegen(schluessel, zweck, daten) {
+  if (!entwurfDir) return;
+  try {
+    fs.mkdirSync(entwurfDir, { recursive: true });
+    fs.writeFileSync(path.join(entwurfDir, `${schluessel}.json`), JSON.stringify({ datum: heuteIso(), zweck, daten }, null, 2));
+  } catch (e) { console.warn(`  ! Entwurf nicht ablegbar (${e.message})`); }
+}
+
+/* Aufräumen, sonst wächst der Zweig mit jedem Tag. Drei Tage reichen: Sie
+   decken den Ausfall und den Nachlauf, alles Ältere ist längst erschienen. */
+export function entwuerfeAufraeumen(tage = 3, heute = heuteIso()) {
+  if (!entwurfDir || !fs.existsSync(entwurfDir)) return 0;
+  const grenze = new Date(new Date(`${heute}T12:00:00Z`).getTime() - tage * 86400000).toISOString().slice(0, 10);
+  let weg = 0;
+  for (const name of fs.readdirSync(entwurfDir)) {
+    if (!name.endsWith(".json")) continue;
+    const p = path.join(entwurfDir, name);
+    try {
+      if ((JSON.parse(fs.readFileSync(p, "utf8")).datum || "9999") >= grenze) continue;
+    } catch { /* unlesbar ist so gut wie alt */ }
+    fs.rmSync(p, { force: true });
+    weg++;
+  }
+  return weg;
+}
+
 /* Ein strukturierter Aufruf. Fällt bei Ablehnung oder Schema-Problemen auf
    einen zweiten Weg zurück, damit der Tageslauf nicht stehen bleibt. */
 async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, effort = CONFIG.ki.effort, zweck = "autor" }) {
@@ -258,6 +318,12 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
     thinking: { type: "adaptive" },
     output_config: { effort, format: { type: "json_schema", schema } },
   };
+  const schluessel = entwurfSchluessel({ modell, system, user, schema });
+  const gelegt = entwurfLesen(schluessel);
+  if (gelegt) {
+    console.log(`  ↻ Entwurf aus dem Speicher vom ${gelegt.datum} (${zweck}, 0,0000 $)`);
+    return { daten: gelegt.daten, usage: null };
+  }
   budgetPruefen({ reel: "Reel-Skript schreiben", stories: "Stories schreiben" }[zweck] || "Text schreiben (Autor)");
   let response;
   try {
@@ -274,7 +340,11 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
     throw new Error(`Modell hat abgelehnt: ${response.stop_details?.explanation || "ohne Begründung"}`);
   }
   if (response.stop_reason === "max_tokens") throw new Error("Antwort abgeschnitten (max_tokens)");
-  return { daten: jsonAus(textAus(response)), usage: response.usage };
+  const daten = jsonAus(textAus(response));
+  /* Erst ablegen, dann zurückgeben: Was zwischen hier und der Prüfung schiefgeht,
+     darf das Geld nicht mitnehmen. */
+  entwurfAblegen(schluessel, zweck, daten);
+  return { daten, usage: response.usage };
 }
 
 /* Hashtags: Vorschläge des Modells + Kern-Hashtags, sortiert nach gelerntem
