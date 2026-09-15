@@ -82,15 +82,26 @@ let scopes = null;
    "Application does not have permission for this action". */
 const { appId, appGeheim } = CONFIG.instagram;
 if (appId && appGeheim) {
-  try {
-    const url = new URL("https://graph.facebook.com/v23.0/debug_token");
-    url.searchParams.set("input_token", ig.token);
-    url.searchParams.set("access_token", `${appId}|${appGeheim}`);
-    const json = await (await fetch(url)).json();
-    scopes = json?.data?.scopes || null;
-    if (scopes) gut(`debug_token nennt ${scopes.length} Berechtigung(en) am Token.`);
-    else warnung(`debug_token mit App-Token liefert keine Liste: ${knapp(json, 300)}`);
-  } catch (e) { warnung(`debug_token nicht erreichbar (${e.message}).`); }
+  /* Meta antwortet auf diesen Aufruf gern mit "(#2) Service temporarily
+     unavailable". Das Feld is_transient sagt selbst, dass es vorübergeht -
+     also warten und erneut fragen, statt daraus einen Befund zu machen. */
+  for (let versuch = 1; versuch <= 4 && !scopes; versuch++) {
+    try {
+      const url = new URL("https://graph.facebook.com/v23.0/debug_token");
+      url.searchParams.set("input_token", ig.token);
+      url.searchParams.set("access_token", `${appId}|${appGeheim}`);
+      const json = await (await fetch(url)).json();
+      scopes = json?.data?.scopes || null;
+      if (scopes) { gut(`debug_token nennt ${scopes.length} Berechtigung(en) am Token.`); break; }
+      if (json?.error?.is_transient && versuch < 4) {
+        console.log(`  · debug_token: ${json.error.message} – erneut in ${3 * versuch} s (${versuch}/3)`);
+        await new Promise((r) => setTimeout(r, 3000 * versuch));
+        continue;
+      }
+      warnung(`debug_token mit App-Token liefert keine Liste: ${knapp(json, 300)}`);
+      break;
+    } catch (e) { warnung(`debug_token nicht erreichbar (${e.message}).`); break; }
+  }
 } else {
   warnung("IG_APP_ID und IG_APP_SECRET sind nicht gesetzt – ohne sie lassen sich die Berechtigungen am Token nicht ablesen, nur erraten. Beide stehen im Meta-Dashboard unter App-Einstellungen → Allgemein und gehören als Secrets ins Repo.");
 }
