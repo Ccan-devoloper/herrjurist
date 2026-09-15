@@ -2067,3 +2067,37 @@ test("Die früheste geplante Uhrzeit ist von der Weckkette auch erreichbar", asy
   assert.ok(laufMinuten < slotMinuten + 60,
     `Untergrenze ${frueheste} ist zu hoch – die Stunde davor wäre um ${ersterLaufLokal}:${minute} erreichbar gewesen`);
 });
+
+test("Fehlerklassen werden dort importiert, wo sie geprüft werden", async () => {
+  /* Am 15.09. verwarf der Morgenlauf beide Texte mit „BudgetFehler is not
+     defined". autor.mjs prüfte `e instanceof BudgetFehler`, ohne die Klasse zu
+     importieren - seit dem 13.09. Auffällig wurde es erst, als der Faktencheck
+     tatsächlich einmal warf: Bis dahin lief die Zeile nie. Genau deshalb fängt
+     kein Test mit echtem Ablauf so etwas; gesucht wird im Quelltext.
+
+     Geprüft wird nur `instanceof X` und `new X` mit einer Klasse, die ein
+     Nachbarmodul exportiert - eindeutig genug, um ohne Fehlalarme auszukommen. */
+  const dir = new URL("../src/", import.meta.url);
+  const dateien = (await fs.promises.readdir(dir)).filter((f) => f.endsWith(".mjs"));
+  const fremd = new Map();
+  for (const f of dateien) {
+    const q = await fs.promises.readFile(new URL(f, dir), "utf8");
+    for (const m of q.matchAll(/^export\s+class\s+([A-Za-z_$][\w$]*)/gm)) fremd.set(m[1], f);
+  }
+  assert.ok(fremd.has("BudgetFehler"), "BudgetFehler sollte als Klasse exportiert sein");
+  const fehlend = [];
+  for (const f of dateien) {
+    const q = await fs.promises.readFile(new URL(f, dir), "utf8");
+    const importiert = new Set();
+    for (const m of q.matchAll(/import\s*(?:[\w$]+\s*,\s*)?\{([^}]*)\}\s*from/g)) {
+      for (const t of m[1].split(",")) { const n = t.split(/\s+as\s+/).pop().trim(); if (n) importiert.add(n); }
+    }
+    const lokal = new Set([...q.matchAll(/(?:^|\s)(?:export\s+)?class\s+([A-Za-z_$][\w$]*)/g)].map((m) => m[1]));
+    for (const m of q.matchAll(/\b(?:instanceof|new)\s+([A-Z][\w$]*)/g)) {
+      const n = m[1];
+      if (!fremd.has(n) || fremd.get(n) === f || importiert.has(n) || lokal.has(n)) continue;
+      fehlend.push(`${f}: ${m[0]} – ${n} kommt aus ${fremd.get(n)}`);
+    }
+  }
+  assert.deepEqual(fehlend, [], `nicht importierte Klassen:\n  ${fehlend.join("\n  ")}`);
+});
