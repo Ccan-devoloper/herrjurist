@@ -10,10 +10,10 @@ on:
   workflow_dispatch:
     inputs:
       modus:
-        description: "trocken = nur erzeugen und in den Asset-Zweig legen · live = veröffentlichen · planen = nur Tagesplan zeigen · nachrendern = gespeicherten Tag ohne Claude-Kosten neu bauen · startklar = nur prüfen, ob alles zum Veröffentlichen bereitsteht"
+        description: "trocken = nur erzeugen und in den Asset-Zweig legen · live = veröffentlichen · planen = nur Tagesplan zeigen · nachrendern = gespeicherten Tag ohne Claude-Kosten neu bauen · startklar = nur prüfen, ob alles zum Veröffentlichen bereitsteht · token = prüfen, welche Berechtigungen der Token trägt (kostenlos)"
         type: choice
         default: trocken
-        options: [trocken, live, planen, nachrendern, startklar]
+        options: [trocken, live, planen, nachrendern, startklar, token]
       datum:
         description: "Nur für nachrendern: welcher Tag (JJJJ-MM-TT, leer = heute)"
         type: string
@@ -138,7 +138,10 @@ jobs:
           IG_REELS: ${{ vars.IG_REELS }}
           IG_REEL_TAGE: ${{ vars.IG_REEL_TAGE }}
           IG_REEL_ANIMATION: ${{ vars.IG_REEL_ANIMATION }}
-          IG_TAGESBUDGET_USD: ${{ vars.IG_TAGESBUDGET_USD }}
+          # Kein IG_TAGESBUDGET_USD aus vars mehr: Die Variable stand auf 0.27 und
+          # hat den im Code beschlossenen Deckel still überschrieben - die Änderung
+          # lief durch Review und CI und wirkte trotzdem nicht. Der Deckel steht
+          # jetzt nur noch in src/config.mjs, wo er nachvollziehbar ist.
           IG_KI_MODELL_PRUEFUNG: ${{ vars.IG_KI_MODELL_PRUEFUNG }}
           IG_KI_VERSUCHE: ${{ vars.IG_KI_VERSUCHE }}
           IG_STIMME: ${{ vars.IG_STIMME }}
@@ -186,6 +189,10 @@ jobs:
           # Mal auf - der Tagesetat bleibt unberührt. Ergebnis: vorschau/<datum>/
           # Startklar spricht mit Instagram, veroeffentlicht aber nichts - und
           # ruft Claude kein einziges Mal auf.
+          if [ "${{ github.event.inputs.modus }}" = "token" ]; then
+            node bin/token-pruefen.mjs
+            exit $?
+          fi
           if [ "${{ github.event.inputs.modus }}" = "startklar" ]; then
             node bin/startklar.mjs
             exit $?
