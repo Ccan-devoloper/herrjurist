@@ -36,7 +36,7 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -150,22 +150,30 @@ async function main() {
   const ausnahmen = hosting.jsonLesen("budget-ausnahmen.json", {});
   const tagesLimitUsd = Number(ausnahmen?.[datum]) > 0 ? Number(ausnahmen[datum]) : CONFIG.ki.tagesBudgetUsd;
   if (tagesLimitUsd !== CONFIG.ki.tagesBudgetUsd) log(`  Tagesdeckel heute ausnahmsweise ${tagesLimitUsd.toFixed(2)} $ (statt ${CONFIG.ki.tagesBudgetUsd.toFixed(2)} $)`);
+  /* Der Antworttopf (Kommentare, Nachrichten) wird getrennt geführt. Ein
+     Tageseintrag von vor dieser Trennung hat noch kein Feld `antworten`;
+     dann steckt der Betrag im Gesamtwert und wird einmalig herausgerechnet. */
+  const heute = kostenStart.tage?.[datum] || {};
+  const antwortenBisher = heute.antworten ?? Number(((heute.zwecke?.kommentare || 0) + (heute.zwecke?.nachrichten || 0)).toFixed(4));
+  const inhaltBisher = heute.antworten != null ? (heute.usd || 0) : Math.max(0, (heute.usd || 0) - antwortenBisher);
   budgetSetzen({
     limitUsd: tagesLimitUsd,
-    bisher: kostenStart.tage?.[datum]?.usd || 0,
+    antwortLimitUsd: CONFIG.antworten.tagesBudgetUsd,
+    bisher: inhaltBisher,
+    bisherAntworten: antwortenBisher,
     gemessen: kostenStart.tage?.[datum]?.messungen || {},
-    speichern: (usd, aufrufe, zwecke, gemessen) => {
+    speichern: (usd, aufrufe, zwecke, gemessen, antworten) => {
       const k = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} }); k.tage = k.tage || {};
       const alt = kostenStart.tage?.[datum] || {};
       const gesamtZwecke = { ...(alt.zwecke || {}) };
       for (const [z, betrag] of Object.entries(zwecke || {})) gesamtZwecke[z] = Number(((alt.zwecke?.[z] || 0) + betrag).toFixed(4));
       const hoechste = { ...(alt.messungen || {}) };
       for (const [z, betrag] of Object.entries(gemessen || {})) hoechste[z] = Number(Math.max(hoechste[z] || 0, betrag).toFixed(4));
-      k.tage[datum] = { usd: Number(usd.toFixed(4)), aufrufe: (alt.aufrufe || 0) + aufrufe, zwecke: gesamtZwecke, messungen: hoechste, stand: new Date().toISOString() };
+      k.tage[datum] = { usd: Number(usd.toFixed(4)), antworten: Number((antworten || 0).toFixed(4)), aufrufe: (alt.aufrufe || 0) + aufrufe, zwecke: gesamtZwecke, messungen: hoechste, stand: new Date().toISOString() };
       hosting.jsonSchreiben("kosten.json", k);
     },
   });
-  log(`Tagesbudget: ${tagesStand().toFixed(3)} $ von ${tagesLimit().toFixed(2)} $ verbraucht`);
+  log(`Tagesbudget: ${tagesStand().toFixed(3)} $ von ${tagesLimit().toFixed(2)} $ verbraucht · Antworten: ${antwortStand().toFixed(3)} $ von ${antwortLimit().toFixed(2)} $`);
 
   /* Stimmen-Kontingent: ElevenLabs, solange das Monatsguthaben des Abos reicht,
      danach automatisch Piper. Der Stand überdauert den Lauf im Assets-Zweig. */

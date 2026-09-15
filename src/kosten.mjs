@@ -14,6 +14,12 @@ const posten = [];
    Läufe des Tages + dieser Lauf) unter der Grenze liegt. Ist sie erreicht,
    wirft budgetPruefen() einen BudgetFehler – der Rest wartet bis morgen. */
 let limitUsd = Infinity, vorbelastung = 0, speichern = null;
+/* Zweiter Topf: Antworten auf Kommentare und Nachrichten. Sie zählen nicht
+   gegen den Inhaltsdeckel und der Inhalt nicht gegen sie. Beide Töpfe haben
+   ihren eigenen Stand und ihre eigene Grenze; nur die Posten-Liste ist
+   gemeinsam, getrennt wird nach Zweck. */
+let antwortLimitUsd = Infinity, antwortVorbelastung = 0;
+const ANTWORT_ZWECKE = ["kommentare", "nachrichten"];
 /* Für das Reel des Tages zurückgelegter Betrag. Alle anderen Aufrufe hören
    entsprechend früher auf, damit das Reel am Abend noch geschrieben werden
    kann – es soll täglich erscheinen. */
@@ -38,6 +44,8 @@ export function budgetSetzen(opt = {}) {
   Object.assign(GEMESSEN, opt.gemessen || {});
   limitUsd = opt.limitUsd ?? Infinity;
   vorbelastung = opt.bisher ?? 0;
+  antwortLimitUsd = opt.antwortLimitUsd ?? Infinity;
+  antwortVorbelastung = opt.bisherAntworten ?? 0;
   speichern = opt.speichern ?? null;
   reserviert = opt.reserviert ?? 0;
   reserviertFuer = zweckListe(opt.reserviertFuer ?? "reel");
@@ -74,8 +82,11 @@ export function reelReserve(tage = {}, deckel = 0.11, fenster = 7) {
   return Math.min(deckel, Math.max(0.05, Math.round(mitte * 1.25 * 1000) / 1000));
 }
 
-export const tagesStand = () => vorbelastung + summe();
+const istAntwort = (zweck) => ANTWORT_ZWECKE.includes(schluessel(zweck));
+export const tagesStand = () => vorbelastung + summeInhalt();
 export const tagesLimit = () => limitUsd;
+export const antwortStand = () => antwortVorbelastung + summeAntworten();
+export const antwortLimit = () => antwortLimitUsd;
 
 /* --- Was ein Aufruf kostet, bevor er läuft ------------------------------
    Geprüft wird vor dem Aufruf, gezählt danach. Eine pauschale Reserve von
@@ -104,6 +115,11 @@ const ERWARTET = {
   kommentare: 0.01,
   nachrichten: 0.01,
 };
+/* Seit dem 15.09. schreibt das starke Modell die Antworten (siehe
+   CONFIG.antworten); die 0,01 $ oben stammen aus der Haiku-Zeit. Der Wert
+   hier gilt, bis der erste Aufruf des Tages gemessen ist. */
+ERWARTET.kommentare = 0.05;
+ERWARTET.nachrichten = 0.05;
 const STANDARD = 0.05;
 /* Längste Übereinstimmung gewinnt: „reel-faktencheck“ enthält „reel“. */
 const schluessel = (zweck) => Object.keys(ERWARTET).sort((a, b) => b.length - a.length).find((n) => String(zweck).toLowerCase().includes(n)) || null;
@@ -138,10 +154,13 @@ const darfReserve = (zweck) => reserviertFuer.includes(schluessel(zweck) || Stri
 const PRUEF_ABSTAND = Number(process.env.IG_PRUEF_ABSTAND_USD || 0.03);
 const abstandFuer = (zweck) => (schluessel(zweck) === "bild" ? PRUEF_ABSTAND : 0);
 
-export const budgetFrei = (zweck = "") => tagesStand() + erwartetFuer(zweck) + abstandFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
+export const budgetFrei = (zweck = "") => istAntwort(zweck)
+  ? antwortStand() + erwartetFuer(zweck) < antwortLimitUsd
+  : tagesStand() + erwartetFuer(zweck) + abstandFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
 
 export function budgetPruefen(zweck = "Claude-Aufruf") {
   if (budgetFrei(zweck)) return;
+  if (istAntwort(zweck)) throw new BudgetFehler(`Antwortbudget erreicht (${antwortStand().toFixed(3)} $ von ${antwortLimitUsd.toFixed(2)} $) – ${zweck} wartet bis morgen.`);
   const rest = reserviert && !darfReserve(zweck) ? ` (davon ${reserviert.toFixed(2)} $ für ${reserviertLabel} zurückgelegt)` : "";
   throw new BudgetFehler(`Tagesbudget erreicht (${tagesStand().toFixed(3)} $ von ${limitUsd.toFixed(2)} $)${rest} – ${zweck} wartet bis morgen.`);
 }
@@ -157,7 +176,7 @@ export function erfassen(modell, usage, zweck = "") {
   if (zweckSchluessel) GEMESSEN[zweckSchluessel] = Math.max(GEMESSEN[zweckSchluessel] ?? 0, usd);
   const k = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n));
   console.log(`  $ ${usd.toFixed(4)} ${zweck || modell} · ${k(usage.input_tokens || 0)} ein / ${k(usage.output_tokens || 0)} aus / ${k(usage.cache_read_input_tokens || 0)} Cache`);
-  if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
+  if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen(), antwortStand()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
   return usd;
 }
 
@@ -173,7 +192,7 @@ export function erfassenStueck(usd, zweck = "bild", was = "") {
   const zweckSchluessel = schluessel(zweck);
   if (zweckSchluessel) GEMESSEN[zweckSchluessel] = Math.max(GEMESSEN[zweckSchluessel] ?? 0, betrag);
   console.log(`  $ ${betrag.toFixed(4)} ${zweck}${was ? ` · ${was}` : ""}`);
-  if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
+  if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen(), antwortStand()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
   return betrag;
 }
 
@@ -186,6 +205,13 @@ export function jeZweck() {
 
 export function summe() {
   return posten.reduce((a, b) => a + b.usd, 0);
+}
+/* Die beiden Töpfe, getrennt nach Zweck. */
+export function summeInhalt() {
+  return posten.filter((p) => !istAntwort(p.zweck || "")).reduce((a, b) => a + b.usd, 0);
+}
+export function summeAntworten() {
+  return posten.filter((p) => istAntwort(p.zweck || "")).reduce((a, b) => a + b.usd, 0);
 }
 
 export function abschluss() {

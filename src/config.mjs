@@ -351,6 +351,20 @@ export const CONFIG = {
   /* Postfach: Direktnachrichten beantworten. Braucht am Token die Berechtigung
      instagram_business_manage_messages. Fehlt sie, liefert der Endpunkt nichts
      und der Lauf meldet das - er bricht nicht ab. */
+  /* Antworten auf Kommentare und Direktnachrichten: eigener Topf, eigenes
+     Modell. Entscheidung vom 15.09.: Die ersten beiden Antworten kamen vom
+     günstigen Modell und trugen je ein ungenaues Normzitat - inhaltlich
+     vertretbar, im Detail falsch. Bei Rechts- und Steuerfragen muss die
+     Antwort beim ersten Mal sitzen; ein Nachbessern gibt es öffentlich nicht.
+     Deshalb das starke Modell, und damit es den Beiträgen nichts wegnimmt,
+     ein eigener Tagesdeckel, der zum Inhaltsdeckel HINZUKOMMT. Ist er
+     erreicht, warten die Antworten bis morgen - die Beiträge nicht. */
+  antworten: {
+    modell: env("IG_KI_MODELL_ANTWORTEN", "claude-opus-5"),
+    aufwand: env("IG_ANTWORT_AUFWAND", "high"),                 // Denktiefe: low | medium | high
+    tagesBudgetUsd: Number(env("IG_ANTWORT_BUDGET_USD", "0.25")),
+  },
+
   postfach: {
     aktiv: env("IG_POSTFACH", "true") === "true",
     unterhaltungen: Number(env("IG_POSTFACH_UNTERHALTUNGEN", 25)),
