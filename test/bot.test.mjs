@@ -382,6 +382,27 @@ test("Tagesdeckel: Verbrauch wird gezählt, weitere Aufrufe werden gestoppt", as
 });
 
 
+test("Recherche: Cache-Marke im Aufruf und eine Schätzung, die den Tag nicht sprengt", async () => {
+  const { rechercheAnfrage } = await import("../src/autor.mjs");
+  const { erwartet } = await import("../src/kosten.mjs");
+  const { CONFIG } = await import("../src/config.mjs");
+  /* Am 16.09. kostete EIN Recherche-Aufruf 0,252 $ bei einer Schätzung von
+     0,05 $ und lieferte null Quellen – danach fielen auf beiden Kanälen alle
+     Beiträge und Stories des Tages aus. Ursache: Bei jedem `pause_turn` wurde
+     der ganze Verlauf samt Suchergebnissen erneut voll bezahlt. */
+  const anfrage = rechercheAnfrage("Was gibt es Neues?");
+  assert.deepEqual(anfrage.cache_control, { type: "ephemeral" }, "ohne Cache-Marke wird jede pause_turn-Runde voll bezahlt");
+  assert.equal(anfrage.tools[0].name, "web_search");
+  assert.ok(anfrage.tools[0].max_uses > 0, "die Zahl der Websuchen muss begrenzt bleiben");
+
+  /* Die Schätzung muss zwei Dinge leisten: ehrlicher sein als die alten
+     0,05 $ und klein genug bleiben, dass ein einzelner Aufruf nicht den
+     halben Tag frisst. */
+  const schaetzung = erwartet("Recherche");
+  assert.ok(schaetzung > 0.05, `Recherche wird mit ${schaetzung} $ immer noch zu billig geschätzt`);
+  assert.ok(schaetzung <= CONFIG.ki.tagesBudgetUsd / 2, `eine Recherche (${schaetzung} $) darf nicht mehr als den halben Tagesdeckel (${CONFIG.ki.tagesBudgetUsd} $) beanspruchen`);
+});
+
 test("Story-Antwort im Postfach bekommt ihren Bezug – statt einer Rückfrage", async () => {
   const { offeneNachrichten, antwortenFormulieren } = await import("../src/postfach.mjs");
   /* Am 15.09. fragte jemand unter einer Story „Ist das hier die erbrechtliche

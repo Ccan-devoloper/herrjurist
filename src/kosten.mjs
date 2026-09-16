@@ -101,7 +101,12 @@ const ERWARTET = {
   "story-faktencheck": 0.01,
   "reel-faktencheck": 0.01,
   faktencheck: 0.01,
-  recherche: 0.05,
+  /* 0,05 war geraten. Gemessen am 16.09.: 0,25 $ - ohne Cache wurde bei
+     jedem pause_turn der ganze Verlauf neu bezahlt. Mit der Cache-Marke in
+     autor.mjs liegt der Aufruf deutlich darunter; bis der erste Lauf eines
+     Tages das gemessen hat, rechnet der Deckel mit 0,12 $ statt mit einer
+     Zahl, die den Tag sprengen kann. */
+  recherche: 0.12,
   stories: 0.05,
   beitrag: 0.05,
   autor: 0.05,

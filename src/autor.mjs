@@ -17,7 +17,7 @@ import { ICONS } from "./stile.mjs";
 import { folieLeer, pruefeBeitrag, korpus } from "./pruefung.mjs";
 import { createHash } from "node:crypto";
 import { datumLesbar, tageBis, heuteIso } from "./zeit.mjs";
-import { erfassen, budgetPruefen, BudgetFehler } from "./kosten.mjs";
+import { erfassen, budgetPruefen, budgetFrei, BudgetFehler } from "./kosten.mjs";
 import { pruefeFakten, korrekturenAnwenden } from "./faktencheck.mjs";
 import { hookWaehlen as hookMusterWaehlen, hookAnleitung, pruefeHook, hookTypErkennen } from "./hooks.mjs";
 import { dauerWaehlen } from "./insights.mjs";
@@ -659,20 +659,56 @@ Antworte mit:
   return webRecherche(frage, "recherche-loesung");
 }
 
-async function webRecherche(frage, zweck = "recherche") {
-  const params = {
+/* Web-Recherche.
+
+   Am 16.09. hat dieser eine Aufruf beide Kanäle lahmgelegt:
+
+     $ 0.2520 recherche · 116.2k ein / 2.0k aus / 0 Cache
+       Recherche: (ohne Titel) · 0 Quellen
+       ⏸ Tagesbudget erreicht (0.375 $ von 0.32 $)
+
+   116.000 Eingabe-Token für null Quellen, geschätzt waren 0,05 $. Danach
+   fielen auf beiden Kanälen alle Beiträge und Stories des Tages aus.
+
+   Zwei Fehler steckten darin, beide hier behoben:
+
+   1. KEIN CACHE. Ein `pause_turn` heißt: dieselbe Unterhaltung noch einmal
+      schicken, damit die Suche weiterläuft. Die Suchergebnisse wachsen dabei
+      mit jeder Runde - und ohne Cache-Marke wurde jede Runde der komplette
+      bisherige Verlauf erneut voll bezahlt. Fünf Runden ergeben so das
+      Vielfache dessen, was die Suche selbst kostet. Die Marke am Ende der
+      Nachrichtenliste lässt jede Folgerunde zum Zehntel lesen.
+
+   2. KEINE BREMSE IM LAUF. Geprüft wurde einmal vorher, mit einer Schätzung.
+      Lag die daneben, lief der Aufruf trotzdem bis zum Ende. Jetzt wird vor
+      jeder weiteren Runde erneut geprüft; ist der Deckel erreicht, bricht die
+      Recherche mit dem ab, was sie bis dahin hat. Ein halbes Ergebnis ist
+      besser als ein verlorener Tag. */
+export function rechercheAnfrage(frage) {
+  return {
     model: CONFIG.ki.modellNeben,
     max_tokens: 8000,
     thinking: { type: "adaptive" },
     output_config: { effort: CONFIG.ki.effort },
+    /* Cacht den letzten cachefähigen Block der Anfrage - bei jeder weiteren
+       Runde also den gesamten Verlauf samt Suchergebnissen. */
+    cache_control: { type: "ephemeral" },
     tools: [{ type: "web_search_20260209", name: "web_search", max_uses: CONFIG.ki.rechercheSuchen, user_location: { type: "approximate", country: "DE", timezone: "Europe/Berlin" } }],
     messages: [{ role: "user", content: frage }],
   };
+}
+
+async function webRecherche(frage, zweck = "recherche") {
+  const params = rechercheAnfrage(frage);
   budgetPruefen("Recherche");
   let response = await client().messages.create(params);
   erfassen(CONFIG.ki.modellNeben, response.usage, zweck);
   let runden = 0;
   while (response.stop_reason === "pause_turn" && runden++ < 4) {
+    if (!budgetFrei(zweck)) {
+      console.warn(`  ! Recherche nach ${runden} Runde(n) abgebrochen – der Tagesdeckel lässt keine weitere zu. Der Rest des Tages bleibt bezahlbar.`);
+      break;
+    }
     params.messages.push({ role: "assistant", content: response.content });
     response = await client().messages.create(params);
     erfassen(CONFIG.ki.modellNeben, response.usage, zweck);
@@ -680,6 +716,10 @@ async function webRecherche(frage, zweck = "recherche") {
   const text = textAus(response);
   const fachTreffer = text.match(/Fach\s*[:：]\s*(ao|ust|erbst|kst|istr|bilanz|persg)/i);
   const quellen = [...new Set((text.match(/https?:\/\/[^\s)>\]]+/g) || []))].slice(0, 4);
+  /* Eine Recherche ohne Quellen ist kein Ergebnis, sondern ein bezahlter
+     Fehlschlag. Sie muss im Log auffallen, sonst sucht man die Ursache beim
+     nächsten Mal wieder von vorn. */
+  if (!quellen.length) console.warn(`  ! Recherche (${zweck}) ohne Quellen und ohne verwertbaren Text – der Aufruf ist bezahlt, das Ergebnis leer.`);
   return { notizen: text, quellen, fach: fachTreffer ? fachTreffer[1].toLowerCase() : "methodik", titel: (text.match(/Titel\s*[:：]\s*(.+)/i) || [])[1]?.trim() || "" };
 }
 
