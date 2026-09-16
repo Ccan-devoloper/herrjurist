@@ -199,7 +199,11 @@ export function gesperrteNamen(text, k = korpus()) {
   return k.namen.filter((n) => new RegExp(`(^|[^a-zäöüß])${n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-zäöüß]|$)`, "u").test(t));
 }
 
-const QUELLENBEZUG = /\b(laut Quelle|Quelle|Seite \d+|Folie|Mitschrift|Skript|Originalfall|Fall \d{2,3}|Hausaufgabe|Musterlösung der Finanzverwaltung|Frame)\b/i;
+/* „Skript“ nur noch als Quellenangabe, nicht als blosses Wort: „laut Skript“
+   ist ein Verweis auf das Kursmaterial, „nimm dir heute dein Skript vor“ ist
+   ein Lerntipp. Auf dem Schwesterkanal kostete genau dieser Unterschied am
+   16.09. eine Countdown-Story. */
+const QUELLENBEZUG = /\b(laut Quelle|Quelle|Seite \d+|Folie|Mitschrift|(?:laut|im|aus dem|nach dem|siehe) Skript|Skript,? S\. ?\d+|Originalfall|Fall \d{2,3}|Hausaufgabe|Musterlösung der Finanzverwaltung|Frame)\b/i;
 
 /* Vorstellungen vom Prüfungsablauf, die aus dem Steuerberaterexamen stammen und
    im Staatsexamen falsch sind. Als Regel steht das im Auftrag ans Modell, aber

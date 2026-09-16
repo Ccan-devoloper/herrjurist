@@ -2339,3 +2339,14 @@ test("Bezahlte Story-Texte überleben ein leeres Budget und erscheinen erst nach
   assert.match(lauf, /storiesPruefen\(ungeprueft\)/, "der Tageslauf holt die offene Prüfung nicht nach");
   assert.ok(BudgetFehler);
 });
+
+test("Die Quellensperre trifft Verweise, nicht das blosse Wort", () => {
+  /* 16.09. auf dem Schwesterkanal: Das blosse Wort „Skript“ in einem Lerntipp
+     galt als Verweis auf das Kursmaterial, die Story fiel aus. Die Sperre
+     bleibt, sie zielt jetzt genauer. */
+  const f = (t) => pruefeBeitrag({ stories: [{ slot: "s1", art: "norm", titel: "T", text: t }] });
+  assert.ok(f("Nimm dir heute dein Skript vor und wiederhole die Fristen.").ok, "Lerntipp zu Unrecht beanstandet");
+  for (const t of ["Laut Skript gilt das anders.", "Siehe Skript, S. 42.", "Das steht auf Seite 12."]) {
+    assert.ok(!f(t).ok, `durchgerutscht: „${t}“`);
+  }
+});
