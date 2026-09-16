@@ -42,6 +42,13 @@ const QUELLEN = [
   { name: "Bundesgesetzblatt (recht.bund.de)", art: "liste", url: "https://www.recht.bund.de/bgbl" },
   { name: "Gesetze im Internet", art: "nachschlag", url: "https://www.gesetze-im-internet.de/aktuell.html" },
   { name: "Rechtsprechung im Internet", art: "nachschlag", url: "https://www.rechtsprechung-im-internet.de/jportal/portal/page/bsjrsprod.psml" },
+  /* Universitaere Fallbesprechungen: Sie sagen nicht nur, WAS entschieden
+     wurde, sondern warum es examensrelevant ist - genau die Auswahl, die
+     eine Pressemitteilung nicht leistet. Uebernommen wird davon nichts:
+     Der Beitrag entsteht in eigenen Worten, die Entscheidung selbst ist
+     die Quelle. */
+  { name: "Uni Bielefeld · Aktuelle Rechtsprechung (Weiler)", art: "liste", url: "https://www.uni-bielefeld.de/fakultaeten/rechtswissenschaft/ls/weiler/aktuelle_rechtsprechung/" },
+  { name: "Uni Würzburg · FamoS-Fälle", art: "liste", url: "https://famos.jura.uni-wuerzburg.de/faelle/" },
 ];
 
 const kurz = (s, n = 70) => String(s).replace(/\s+/g, " ").trim().slice(0, n);
