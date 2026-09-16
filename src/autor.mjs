@@ -39,8 +39,8 @@ function client() {
 export const FORMATE = {
   pruefungsfrage: {
     label: "Prüfungsfrage",
-    anleitung: "Folie 1: eine echte Prüfungsfrage als Aufhänger (so, wie sie in der Klausur oder mündlichen Prüfung fallen könnte). Folien 2–4: die Antwort in klaren Schritten oder Punkten mit den tragenden Normen. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
-    folien: ["titel", "text|schritte", "text|vergleich", "merke", "cta"],
+    anleitung: "Folie 1: eine echte Prüfungsfrage als Aufhänger (so, wie sie in der Klausur oder mündlichen Prüfung fallen könnte). Dann entscheide dich für einen von zwei Wegen und halte ihn durch: ENTWEDER du antwortest abstrakt – dann kommen auf keiner Folie erfundene Personen, Namen oder Beträge vor – ODER du legst einen Fall zugrunde; dann gehört Folie 2 dem Sachverhalt (art text, Titel „Sachverhalt“): der Fall in 2–4 Sätzen, mit allen Namen, Beträgen und Daten, die die Lösung danach benutzt. Wer auf Folie 3 „Finn“ liest, muss auf Folie 2 erfahren haben, wer Finn ist. Die Caption zählt dafür nicht – sie ist zugeklappt, und die meisten lesen nur die Folien. Danach: die Antwort in klaren Schritten oder Punkten mit den tragenden Normen. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
+    folien: ["titel", "text (Sachverhalt, nur wenn der Beitrag einen Fall erzählt)", "text|schritte", "text|vergleich", "merke", "cta"],
   },
   fehlerfalle: {
     label: "Fehlerfalle",

@@ -105,7 +105,7 @@ async function erklaerMotive(reel) {
     /* Ist der Deckel erreicht, wird weiter im Archiv gesucht, aber nicht mehr
        gezeichnet. Ein passendes altes Motiv kostet nichts und trifft das
        Thema - die wiederholte Figur der Nachbarszene tut das nicht. */
-    await motivBesorgen(szene, "Erklärbild", { randFarbe: null, nurArchiv: gezeichnet >= deckel });
+    await motivBesorgen(szene, "Erklärbild", { randFarbe: null, nurArchiv: gezeichnet >= deckel, zweck: "erklaerbild" });
     if (szene.bild && tagesStand() > vorher) gezeichnet++;
   }
   return motiveVerteilen(reel.szenen);
@@ -286,7 +286,14 @@ async function main() {
        Stories aus. Eine Recherche schmückt einen Beitrag; ein Beitrag ohne
        Recherche erscheint trotzdem. Deshalb darf sie nur von dem leben, was
        über der Rücklage frei ist. */
-    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck"], `${offen.length} noch zu schreibende Beiträge`);
+    /* Das Erklaervideo lebt von seinen Figuren: Fehlt das Geld fuer die
+       Motive, baut reelBauen() still das klassische Layout - am 16.09. genau
+       so passiert. Solange das Reel des Tages aussteht und das Erklaer-Layout
+       gilt, bleibt sein Bildbudget zurueckgelegt. */
+    const erklaerOffen = !trocken && layoutFuer(datum) === "erklaer"
+      && plan.beitraege.some((b) => b.format === "reel" && b.status !== "veroeffentlicht" && !b.fehler);
+    if (erklaerOffen) summe = Math.round((summe + CONFIG.reel.erklaerBilder * erwartet("erklaerbild")) * 1000) / 1000;
+    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen ? " und die Figuren des Erklärvideos" : ""}`);
     else reservierungAufheben();
     return summe;
   };

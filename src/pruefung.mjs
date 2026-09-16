@@ -338,6 +338,63 @@ function alleTexte(beitrag) {
   return teile.filter(Boolean);
 }
 
+/* Fallnamen ohne Sachverhalt.
+
+   Am 16.09. erschien ein Karussell zur Leistungskondiktion, das ab Folie 2
+   von „Finn" und „Nora" erzaehlte - Betraege, Ueberweisung, Reise. Wer die
+   beiden sind, stand nur in der Caption, und die ist zugeklappt. Wer auf
+   einer Folie handelt, muss auf einer Folie eingefuehrt worden sein.
+
+   Gesucht wird die typische Fallhandlung: Name + Taetigkeitswort. Kopula
+   („ist", „war") bleibt bewusst draussen - „Fraglich ist ..." ist kein Fall,
+   sondern juristische Normalsprache. Zusaetzlich braucht es zwei
+   verschiedene Namen oder zwei Handlungen, damit ein einzelner Satzanfang
+   keinen fertigen Beitrag kippt. */
+const FALLHANDLUNG = /(?:^|[.!?;:]\s+|\n)([A-ZÄÖÜ][a-zäöüß]{2,})\s+(?:hat|hatte|kauft|kaufte|verkauft|verkaufte|zahlt|zahlte|überweist|überwies|erhält|erhielt|bucht|buchte|klagt|klagte|gibt|gab|schuldet|schuldete|verlangt|verlangte|liefert|lieferte|bestellt|bestellte|vermietet|vermietete|erbt|erbte|schließt|schloss|meldet|meldete|beantragt|beantragte|veräußert|veräußerte|entnimmt|entnahm|bilanziert|bilanzierte|unterschreibt|unterschrieb|kündigt|kündigte|widerruft|widerrief|ficht|focht)\b/g;
+const SACHVERHALT_TITEL = /^(sachverhalt|der sachverhalt|der fall|fall|ausgangsfall|worum es geht)\b/i;
+/* Satzanfaenge, die wie ein Name aussehen, aber keiner sind. */
+const KEIN_FALLNAME = new Set(["wichtig", "entscheidend", "fraglich", "problematisch", "ergänzend", "zusätzlich", "anders",
+  "ebenso", "darüber", "hierbei", "dabei", "danach", "deshalb", "daher", "zudem", "allerdings", "jedoch", "sodann",
+  "schließlich", "letztlich", "grundsätzlich", "ausnahmsweise", "folglich", "mithin", "insoweit", "insbesondere",
+  "typisch", "klassisch", "denkbar", "möglich", "nötig", "erforderlich", "maßgeblich", "relevant", "umstritten",
+  "strittig", "richtig", "falsch", "damit", "dazu", "dann", "hier", "dort", "jeder", "jede", "jedes", "niemand",
+  "dieser", "diese", "dieses", "beide", "keiner", "keine", "wer", "was", "wann", "warum", "wie", "wenn", "aber",
+  "auch", "noch", "erst", "nur", "sogar", "gerade", "eben", "trotzdem", "dennoch", "wichtige", "viele", "manche"]);
+
+const folienText = (f) => [
+  f.titel, f.untertitel, f.text, f.definition,
+  ...(f.punkte || []),
+  /* Schritt-Ueberschrift und Schritt-Text auf eigene Zeilen: In einer Zeile
+     stuende „Etwas erlangt Finn hat 4.320 Euro ..." - der Name saesse mitten
+     im Satz und die Fallhandlung bliebe unsichtbar. */
+  ...(f.schritte || []).flatMap((s) => (typeof s === "string" ? [s] : [s.titel || "", s.text || ""])),
+  f.ergebnis, f.erklaerung,
+  ...[f.links, f.rechts].filter(Boolean).flatMap((sp) => [sp.titel, sp.text, ...(sp.punkte || [])]),
+].filter(Boolean).join("\n");
+
+export function fallnamenOhneSachverhalt(beitrag) {
+  const folien = beitrag?.folien || [];
+  if (folien.length < 2) return [];
+  const istSachverhalt = (f) => SACHVERHALT_TITEL.test(String(f.titel || "").trim());
+  /* Alles, was im Sachverhalt steht, gilt als vorgestellt. */
+  const vorgestellt = new Set();
+  for (const f of folien.filter(istSachverhalt)) {
+    for (const m of folienText(f).matchAll(/\b([A-ZÄÖÜ][a-zäöüß]{2,})\b/g)) vorgestellt.add(m[1]);
+  }
+  const zaehler = new Map();
+  for (const f of folien) {
+    if (istSachverhalt(f)) continue;
+    for (const m of folienText(f).matchAll(FALLHANDLUNG)) {
+      const name = m[1];
+      if (vorgestellt.has(name) || KEIN_FALLNAME.has(name.toLowerCase())) continue;
+      zaehler.set(name, (zaehler.get(name) || 0) + 1);
+    }
+  }
+  const namen = [...zaehler.keys()];
+  const handlungen = [...zaehler.values()].reduce((a, b) => a + b, 0);
+  return namen.length >= 2 || handlungen >= 2 ? namen : [];
+}
+
 export function pruefeBeitrag(beitrag, opt = {}) {
   const fehler = [];
   const k = opt.korpus || korpus();
@@ -353,6 +410,10 @@ export function pruefeBeitrag(beitrag, opt = {}) {
   /* 2. Namen aus den Fällen */
   const namen = gesperrteNamen(gesamt, k);
   if (namen.length) fehler.push(`Gesperrte Fallnamen verwendet (bitte andere, frei erfundene Namen): ${[...new Set(namen)].join(", ")}`);
+
+  /* 2c. Fallnamen, die nur die Caption kennt. */
+  const ohneSachverhalt = fallnamenOhneSachverhalt(beitrag);
+  if (ohneSachverhalt.length) fehler.push(`${ohneSachverhalt.join(" und ")} handel${ohneSachverhalt.length > 1 ? "n" : "t"} auf den Folien, ohne vorgestellt zu sein: Entweder eine Folie „Sachverhalt“ direkt nach der Titelfolie (Fall in 2–4 Sätzen, mit allen Namen und Zahlen, die die Lösung benutzt) – oder den Beitrag abstrakt formulieren, ganz ohne Namen. Die Caption genügt nicht, sie ist zugeklappt.`);
 
   /* 3. Quellenbezüge */
   if (QUELLENBEZUG.test(gesamt)) fehler.push(`Bezug auf Kursquelle/Seiten/Fallnummern entfernen: ${gesamt.match(QUELLENBEZUG)[0]}`);

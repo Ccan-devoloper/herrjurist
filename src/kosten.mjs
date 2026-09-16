@@ -112,6 +112,10 @@ const ERWARTET = {
   autor: 0.05,
   reel: 0.06,
   bild: 0.01,
+  /* Die Figuren des Erklaervideos tragen einen eigenen Zweck, damit die
+     Ruecklage sie schuetzen kann, ohne jedes andere Bild mitzuschuetzen.
+     Ohne sie faellt das Reel auf das klassische Layout zurueck. */
+  erklaerbild: 0.01,
   /* Kommentare und Nachrichten laufen ueber das guenstige Modell und fassen
      alle offenen Faelle in EINEN Aufruf. Ohne eigenen Eintrag griff der
      Standardwert von 0,05 $ - das Zehnfache des Wirklichen. An einem vollen

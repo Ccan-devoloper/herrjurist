@@ -2350,3 +2350,58 @@ test("Die Quellensperre trifft Verweise, nicht das blosse Wort", () => {
     assert.ok(!f(t).ok, `durchgerutscht: „${t}“`);
   }
 });
+
+test("Wer auf den Folien handelt, wird auf den Folien vorgestellt", async () => {
+  /* 16.09.: Ein Karussell zur Leistungskondiktion erzählte ab Folie 2 von
+     „Finn" und „Nora" – wer die beiden sind, stand nur in der Caption, und
+     die ist zugeklappt. */
+  const { fallnamenOhneSachverhalt } = await import("../src/pruefung.mjs");
+  const derFall = {
+    folien: [
+      { art: "titel", titel: "4.320 Euro zu viel – wie viel muss zurück?" },
+      { art: "schritte", titel: "Der Grundaufbau", schritte: [
+        { titel: "Etwas erlangt", text: "Finn hat 4.320 Euro zu viel erhalten." },
+        { titel: "Durch Leistung", text: "Nora hat bewusst fremdes Vermögen gemehrt." },
+      ] },
+      { art: "text", titel: "Was jetzt gilt", punkte: ["Finn bucht davon eine ohnehin geplante Reise."] },
+    ],
+    caption: "Nora überweist Finn aus Versehen zu viel Geld.",
+  };
+  assert.deepEqual(fallnamenOhneSachverhalt(derFall).sort(), ["Finn", "Nora"],
+    "die Fallnamen ohne Sachverhalt werden nicht erkannt");
+
+  /* Mit Sachverhaltsfolie ist alles vorgestellt – der Beitrag geht durch. */
+  const mitSachverhalt = { ...derFall, folien: [
+    derFall.folien[0],
+    { art: "text", titel: "Sachverhalt", text: "Nora überweist Finn 4.320 Euro zu viel. Finn bucht davon eine ohnehin geplante Reise." },
+    ...derFall.folien.slice(1),
+  ] };
+  assert.deepEqual(fallnamenOhneSachverhalt(mitSachverhalt), [],
+    "ein Beitrag mit Sachverhaltsfolie wird zu Unrecht beanstandet");
+
+  /* Juristische Normalsprache ist keine Falldarstellung. */
+  const abstrakt = { folien: [
+    { art: "titel", titel: "Wie prüft man die Leistungskondiktion?" },
+    { art: "text", titel: "Aufbau", punkte: [
+      "Fraglich ist, ob ein Rechtsgrund besteht.",
+      "Entscheidend ist der Empfängerhorizont.",
+      "Grundsätzlich hat der Bereicherungsschuldner Wertersatz zu leisten.",
+    ] },
+  ] };
+  assert.deepEqual(fallnamenOhneSachverhalt(abstrakt), [],
+    "abstrakte Fachsprache wird als Falldarstellung missverstanden");
+});
+
+test("Das Erklärvideo läuft fünf Tage am Stück und hat Budget für seine Figuren", async () => {
+  const { layoutFuer } = await import("../src/reel.mjs");
+  for (const d of ["2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20", "2026-09-21"]) {
+    assert.equal(layoutFuer(d), "erklaer", `${d} baut nicht das Erklärvideo`);
+  }
+  /* Danach läuft das Fenster von selbst ab – niemand muss etwas zurücksetzen. */
+  assert.equal(layoutFuer("2026-09-23"), "klassisch", "das Fenster endet nicht von selbst");
+
+  /* Die Figuren tragen einen eigenen Zweck, damit die Rücklage sie schützt. */
+  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  assert.match(lauf, /zweck: "erklaerbild"/, "die Erklärbilder laufen nicht unter eigenem Zweck");
+  assert.match(lauf, /"reel-faktencheck", "erklaerbild"/, "die Rücklage schützt die Figuren des Erklärvideos nicht");
+});

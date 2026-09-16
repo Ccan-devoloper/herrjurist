@@ -429,9 +429,17 @@ window.setzeZeit = function (t) {
  * ab - so laufen beide unter denselben Bedingungen und die Zahlen im Ledger
  * lassen sich vergleichen.
  */
+/* Fuenf Tage am Stueck das Erklaervideo, auf beiden Kanaelen: Der Nutzer
+   will die neue Variante sehen, statt sie sich jeden zweiten Tag zwischen
+   klassischen Reels zusammenzusuchen. Das Fenster laeuft von selbst ab -
+   danach greift der taegliche Wechsel wieder, ohne dass jemand etwas
+   zuruecksetzen muss. Eine ausdrueckliche Einstellung geht weiterhin vor. */
+const ERKLAER_FENSTER = { von: "2026-09-17", bis: "2026-09-21" };
+
 export function layoutFuer(datum) {
   const wunsch = String(CONFIG.reel.layout || "wechsel").toLowerCase();
   if (wunsch === "klassisch" || wunsch === "erklaer") return wunsch;
+  if (datum >= ERKLAER_FENSTER.von && datum <= ERKLAER_FENSTER.bis) return "erklaer";
   const tage = Math.floor(Date.UTC(+datum.slice(0, 4), +datum.slice(5, 7) - 1, +datum.slice(8, 10)) / 86400000);
   /* Gerade Tage erklaeren, ungerade bleiben klassisch. Der 14.09.2026 faellt
      damit auf das Erklaervideo - der erste Tag, an dem es laufen soll. */
