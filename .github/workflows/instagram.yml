@@ -10,10 +10,10 @@ on:
   workflow_dispatch:
     inputs:
       modus:
-        description: "trocken = nur erzeugen und in den Asset-Zweig legen · live = veröffentlichen · planen = nur Tagesplan zeigen · nachrendern = gespeicherten Tag ohne Claude-Kosten neu bauen · startklar = nur prüfen, ob alles zum Veröffentlichen bereitsteht · token = prüfen, welche Berechtigungen der Token trägt (kostenlos)"
+        description: "trocken = nur erzeugen und in den Asset-Zweig legen · live = veröffentlichen · planen = nur Tagesplan zeigen · nachrendern = gespeicherten Tag ohne Claude-Kosten neu bauen · startklar = nur prüfen, ob alles zum Veröffentlichen bereitsteht · token = prüfen, welche Berechtigungen der Token trägt (kostenlos) · quellen = prüfen, welche Recherche-Quellen erreichbar sind und eine datierte Liste liefern (kostenlos)"
         type: choice
         default: trocken
-        options: [trocken, live, planen, nachrendern, startklar, token]
+        options: [trocken, live, planen, nachrendern, startklar, token, quellen]
       datum:
         description: "Nur für nachrendern: welcher Tag (JJJJ-MM-TT, leer = heute)"
         type: string
@@ -193,6 +193,10 @@ jobs:
           # ruft Claude kein einziges Mal auf.
           if [ "${{ github.event.inputs.modus }}" = "token" ]; then
             node bin/token-pruefen.mjs
+            exit $?
+          fi
+          if [ "${{ github.event.inputs.modus }}" = "quellen" ]; then
+            node bin/quellen-pruefen.mjs
             exit $?
           fi
           if [ "${{ github.event.inputs.modus }}" = "startklar" ]; then
