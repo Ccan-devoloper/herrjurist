@@ -279,7 +279,14 @@ async function main() {
     let summe = 0;
     for (const b of offen) summe += b.format === "reel" ? reelReserve(kostenStart.tage, CONFIG.ki.reelReserveUsd) : erwartet("autor") + erwartet("faktencheck");
     summe = Math.round(summe * 1000) / 1000;
-    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "recherche", "reel", "reel-faktencheck"], `${offen.length} noch zu schreibende Beiträge`);
+    /* Die Rücklage gehört den Beiträgen, die heute noch geschrieben werden
+       müssen - und nur ihnen. „recherche" stand hier bis zum 16.09. mit in
+       der Liste; an dem Tag hat ein einziger Recherche-Aufruf die Rücklage
+       aufgebraucht und danach fielen auf beiden Kanälen ALLE Beiträge und
+       Stories aus. Eine Recherche schmückt einen Beitrag; ein Beitrag ohne
+       Recherche erscheint trotzdem. Deshalb darf sie nur von dem leben, was
+       über der Rücklage frei ist. */
+    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck"], `${offen.length} noch zu schreibende Beiträge`);
     else reservierungAufheben();
     return summe;
   };

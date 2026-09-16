@@ -684,6 +684,13 @@ Antworte mit:
       jeder weiteren Runde erneut geprüft; ist der Deckel erreicht, bricht die
       Recherche mit dem ab, was sie bis dahin hat. Ein halbes Ergebnis ist
       besser als ein verlorener Tag. */
+/* Runden, die eine Recherche weiterlaufen darf. Am 16.09. standen hier vier
+   und die Suche war danach IMMER NOCH nicht fertig: Der letzte Durchgang
+   endete mit stop_reason „pause_turn", also mitten in der Recherche, und
+   lieferte deshalb keinen Text - 0,25 $ für nichts. Weniger Suchen (siehe
+   rechercheAnfrage) führen schneller zu einem Ergebnis als mehr Runden. */
+const RECHERCHE_RUNDEN = 3;
+
 export function rechercheAnfrage(frage) {
   return {
     model: CONFIG.ki.modellNeben,
@@ -693,7 +700,7 @@ export function rechercheAnfrage(frage) {
     /* Cacht den letzten cachefähigen Block der Anfrage - bei jeder weiteren
        Runde also den gesamten Verlauf samt Suchergebnissen. */
     cache_control: { type: "ephemeral" },
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: CONFIG.ki.rechercheSuchen, user_location: { type: "approximate", country: "DE", timezone: "Europe/Berlin" } }],
+    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: Math.min(CONFIG.ki.rechercheSuchen, 2), user_location: { type: "approximate", country: "DE", timezone: "Europe/Berlin" } }],
     messages: [{ role: "user", content: frage }],
   };
 }
@@ -704,7 +711,7 @@ async function webRecherche(frage, zweck = "recherche") {
   let response = await client().messages.create(params);
   erfassen(CONFIG.ki.modellNeben, response.usage, zweck);
   let runden = 0;
-  while (response.stop_reason === "pause_turn" && runden++ < 4) {
+  while (response.stop_reason === "pause_turn" && runden++ < RECHERCHE_RUNDEN) {
     if (!budgetFrei(zweck)) {
       console.warn(`  ! Recherche nach ${runden} Runde(n) abgebrochen – der Tagesdeckel lässt keine weitere zu. Der Rest des Tages bleibt bezahlbar.`);
       break;
@@ -719,7 +726,8 @@ async function webRecherche(frage, zweck = "recherche") {
   /* Eine Recherche ohne Quellen ist kein Ergebnis, sondern ein bezahlter
      Fehlschlag. Sie muss im Log auffallen, sonst sucht man die Ursache beim
      nächsten Mal wieder von vorn. */
-  if (!quellen.length) console.warn(`  ! Recherche (${zweck}) ohne Quellen und ohne verwertbaren Text – der Aufruf ist bezahlt, das Ergebnis leer.`);
+  if (response.stop_reason === "pause_turn") console.warn(`  ! Recherche (${zweck}) war nach ${RECHERCHE_RUNDEN} Runden immer noch am Suchen – abgebrochen, der Beitrag entsteht ohne sie.`);
+  else if (!quellen.length) console.warn(`  ! Recherche (${zweck}) ohne Quellen und ohne verwertbaren Text – der Aufruf ist bezahlt, das Ergebnis leer.`);
   return { notizen: text, quellen, fach: fachTreffer ? fachTreffer[1].toLowerCase() : "methodik", titel: (text.match(/Titel\s*[:：]\s*(.+)/i) || [])[1]?.trim() || "" };
 }
 

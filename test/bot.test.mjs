@@ -382,6 +382,31 @@ test("Tagesdeckel: Verbrauch wird gezählt, weitere Aufrufe werden gestoppt", as
 });
 
 
+test("Die Rücklage für die Beiträge ist vor der Recherche sicher", async () => {
+  const k = await import("../src/kosten.mjs");
+  /* Am 16.09. hat ein einziger Recherche-Aufruf die Rücklage aufgebraucht,
+     die für zwei noch zu schreibende Beiträge gedacht war. Danach fielen auf
+     beiden Kanälen alle Beiträge und Stories des Tages aus. Eine Recherche
+     schmückt einen Beitrag; ein Beitrag ohne Recherche erscheint trotzdem. */
+  k.budgetSetzen({ limitUsd: 0.32, bisher: 0.12 });
+  k.reservieren(0.12, ["autor", "faktencheck", "reel", "reel-faktencheck"], "2 Beiträge");
+  assert.equal(k.budgetFrei("autor"), true, "der Beitrag darf die Rücklage nutzen");
+  assert.equal(k.budgetFrei("Recherche"), false,
+    "die Recherche darf die Rücklage NICHT anrühren – genau das hat am 16.09. den Tag gekostet");
+
+  /* Am frischen Tag darf sie – aber nur mit doppeltem Spielraum, weil ihre
+     Schätzung erwiesenermaßen um das Fünffache danebenliegen kann. Damit
+     läuft eine Recherche früh am Tag, wenn Luft da ist, und nie mehr als
+     letzte Handlung, die den Rest mitreißt. */
+  const schaetzung = k.erwartet("recherche");
+  k.budgetSetzen({ limitUsd: 0.32, bisher: 0 });
+  assert.equal(k.budgetFrei("Recherche"), true, "am frischen Tag mit voller Luft darf sie laufen");
+  k.budgetSetzen({ limitUsd: 0.32, bisher: 0.32 - schaetzung * 1.5 });
+  assert.equal(k.budgetFrei("autor"), true, "für einen Beitrag reicht die einfache Schätzung");
+  assert.equal(k.budgetFrei("Recherche"), false, "anderthalb Schätzungen Luft sind der Recherche zu wenig");
+  k.budgetSetzen({});
+});
+
 test("Recherche: Cache-Marke im Aufruf und eine Schätzung, die den Tag nicht sprengt", async () => {
   const { rechercheAnfrage } = await import("../src/autor.mjs");
   const { erwartet } = await import("../src/kosten.mjs");
