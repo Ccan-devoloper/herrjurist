@@ -20,19 +20,28 @@ const ZEITLIMIT = 20000;
    Datenbanken (beck-online, juris, Wolters Kluwer) stehen bewusst nicht
    hier - deren Inhalte dürfen nicht weitergegeben werden. */
 const QUELLEN = [
-  { name: "BGH · Pressemitteilungen (RSS)", art: "rss", url: "https://www.bundesgerichtshof.de/SiteGlobals/Functions/RSSFeed/DE/Pressemitteilungen/RSSNewsfeed_Pressemitteilungen.xml" },
+  // BGH – die Jahresliste hat sich bewährt; der geratene RSS-Pfad war ein 404.
   { name: "BGH · Pressemitteilungen 2026", art: "liste", url: "https://www.bundesgerichtshof.de/DE/Presse/Pressemitteilungen/2026/pressemitteilungen2026_node.html" },
-  { name: "BVerfG · Pressemitteilungen", art: "liste", url: "https://www.bundesverfassungsgericht.de/DE/Aktuelles/Pressemitteilungen/pressemitteilungen_node.html" },
-  { name: "BVerfG · Entscheidungen (RSS)", art: "rss", url: "https://www.bundesverfassungsgericht.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSSNewsfeed.xml" },
-  { name: "BVerwG · Pressemitteilungen", art: "liste", url: "https://www.bundesverwaltungsgericht.de/pressemitteilungen" },
+  { name: "BGH · Entscheidungen (juris-Liste)", art: "liste", url: "https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/list.py?Gericht=bgh&Sort=3&Art=pm" },
+  // BVerfG – mehrere Kandidaten, der Formularpfad kam aus der Suche.
+  { name: "BVerfG · Aktuelles", art: "liste", url: "https://www.bundesverfassungsgericht.de/DE/Aktuelles/aktuelles_node.html" },
+  { name: "BVerfG · Pressemitteilungssuche", art: "liste", url: "https://www.bundesverfassungsgericht.de/SiteGlobals/Forms/Suche/Pressemitteilungssuche/Pressemitteilungssuche_Formular.html" },
+  { name: "BVerfG · Entscheidungen 2026", art: "liste", url: "https://www.bundesverfassungsgericht.de/DE/Entscheidungen/entscheidungen_node.html" },
+  // BVerwG – eigener Pfad mit .php, nicht das Bund-Schema.
+  { name: "BVerwG · Pressemitteilungen", art: "liste", url: "https://www.bundesverwaltungsgericht.de/presse/pressemitteilungen/pressemitteilungen.php" },
+  { name: "BVerwG · Entscheidungen", art: "liste", url: "https://www.bundesverwaltungsgericht.de/entscheidungen/entscheidungen.php" },
+  // BAG
+  { name: "BAG · Pressemitteilungen", art: "liste", url: "https://www.bundesarbeitsgericht.de/pressemitteilungen/" },
   { name: "BAG · RSS-Übersicht", art: "liste", url: "https://www.bundesarbeitsgericht.de/rss-feeds/" },
-  { name: "BAG · Pressemitteilungen (RSS)", art: "rss", url: "https://www.bundesarbeitsgericht.de/rss/pressemitteilungen.xml" },
-  { name: "EuGH · Pressemitteilungen", art: "liste", url: "https://curia.europa.eu/jcms/jcms/Jo2_16799/de/" },
-  { name: "Rechtsprechung im Internet", art: "nachschlag", url: "https://www.rechtsprechung-im-internet.de/" },
-  { name: "Gesetze im Internet", art: "nachschlag", url: "https://www.gesetze-im-internet.de/" },
+  { name: "BAG · Entscheidungen", art: "liste", url: "https://www.bundesarbeitsgericht.de/entscheidungen/" },
+  // EuGH
+  { name: "EuGH · Pressemitteilungen", art: "liste", url: "https://curia.europa.eu/jcms/jcms/Jo2_7052/de/" },
+  { name: "EuGH · Aktuelles", art: "liste", url: "https://curia.europa.eu/jcms/jcms/j_6/de/" },
+  // Freie Datenbanken und amtliche Verkündung
+  { name: "dejure.org", art: "liste", url: "https://dejure.org/" },
   { name: "Bundesgesetzblatt (recht.bund.de)", art: "liste", url: "https://www.recht.bund.de/bgbl" },
-  { name: "dejure.org", art: "nachschlag", url: "https://dejure.org/" },
-  { name: "openJur", art: "nachschlag", url: "https://openjur.de/" },
+  { name: "Gesetze im Internet", art: "nachschlag", url: "https://www.gesetze-im-internet.de/aktuell.html" },
+  { name: "Rechtsprechung im Internet", art: "nachschlag", url: "https://www.rechtsprechung-im-internet.de/jportal/portal/page/bsjrsprod.psml" },
 ];
 
 const kurz = (s, n = 70) => String(s).replace(/\s+/g, " ").trim().slice(0, n);
