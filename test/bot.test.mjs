@@ -2405,3 +2405,34 @@ test("Das Erklärvideo läuft fünf Tage am Stück und hat Budget für seine Fig
   assert.match(lauf, /zweck: "erklaerbild"/, "die Erklärbilder laufen nicht unter eigenem Zweck");
   assert.match(lauf, /"reel-faktencheck", "erklaerbild"/, "die Rücklage schützt die Figuren des Erklärvideos nicht");
 });
+
+test("Jeden Tag ein Rechtsgebiet je Beitrag, und rotierend", async () => {
+  const { gebieteDesTages } = await import("../src/planer.mjs");
+
+  /* Drei Plätze, drei Gebiete – jedes genau einmal. */
+  for (const d of ["2026-09-17", "2026-09-18", "2026-09-19"]) {
+    assert.deepEqual([...gebieteDesTages(d, 3)].sort(), [1, 2, 3], `${d} verteilt die Gebiete nicht sauber`);
+  }
+  /* Und die Reihenfolge wandert Tag für Tag weiter, statt stehen zu bleiben. */
+  const a = gebieteDesTages("2026-09-17", 3);
+  const b = gebieteDesTages("2026-09-18", 3);
+  const c = gebieteDesTages("2026-09-19", 3);
+  assert.notDeepEqual(a, b, "die Zuteilung rotiert nicht");
+  assert.notDeepEqual(b, c, "die Zuteilung rotiert nicht");
+  assert.deepEqual(gebieteDesTages("2026-09-20", 3), a, "nach drei Tagen ist der Kreis nicht geschlossen");
+
+  /* Weniger Plätze (Mittwoch: „aktuell" folgt der Nachrichtenlage, Samstag:
+     Mindset-Reel) – dann eben zwei verschiedene Gebiete, nie zweimal dasselbe. */
+  const zwei = gebieteDesTages("2026-09-23", 2);
+  assert.equal(zwei.length, 2);
+  assert.notEqual(zwei[0], zwei[1], "bei zwei Plätzen doppelt sich das Gebiet");
+
+  /* Im echten Plan: An einem vollen Werktag tragen die drei Beiträge drei
+     verschiedene Gebiete. Vorher entschied das eine gewichtete Zufallswahl,
+     und die ersten fünf Reels des Kanals waren allesamt grün. */
+  const { tagesplan, ledgerLaden } = await import("../src/planer.mjs");
+  const plan = tagesplan("2026-09-17", ledgerLaden(), themenpool());
+  const gebiete = plan.beitraege.map((x) => x.thema?.klausur).filter(Boolean);
+  assert.equal(new Set(gebiete).size, gebiete.length, "zwei Beiträge desselben Tages tragen dasselbe Rechtsgebiet");
+  assert.equal(gebiete.length, 3, "der Werktag trägt nicht drei Fachbeiträge");
+});

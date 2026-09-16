@@ -20,7 +20,7 @@ import { CONFIG } from "./config.mjs";
 import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
-import { themenpool } from "./inhalte.mjs";
+import { themenpool, KLAUSUREN } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
@@ -76,6 +76,16 @@ function bildnachweis(beitrag) {
 /* Verzeichnis der archivierten Motive. Steht erst fest, wenn der Asset-Zweig
    ausgecheckt ist - bis dahin null, dann wird nichts archiviert. */
 let motivArchivDir = null;
+
+/* Welches Rechtsgebiet fehlt dem Tag noch? Zwei der drei Beitraege bekommen
+   ihr Gebiet fest zugeteilt (planer.mjs); „aktuell" hat keines, weil es der
+   Nachrichtenlage folgt. Das uebrige Gebiet geht als Wunsch in die Recherche -
+   so zeigt auch der Mittwoch moeglichst alle drei Farben. */
+function fehlendesGebiet(plan) {
+  const belegt = new Set((plan?.beitraege || []).map((b) => b.thema?.klausur).filter(Boolean));
+  const offen = [1, 2, 3].filter((g) => !belegt.has(g));
+  return offen.length === 1 ? KLAUSUREN[offen[0]]?.label || null : null;
+}
 
 async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
   if (!ziel || ziel.bild || !ziel.bildSzene) return;
@@ -409,7 +419,9 @@ async function main() {
       if (eintrag.format === "aktuell" || eintrag.format === "loesungsskizze") {
         const bisher = (ledger.veroeffentlicht || []).filter((e) => e.format === "aktuell").slice(-12).map((e) => e.titel);
         try {
-          recherche = eintrag.format === "loesungsskizze" ? await loesungsRecherchieren(datum, eintrag.anlass || plan.abendAnlass) : await aktuellRecherchieren(datum, bisher);
+          recherche = eintrag.format === "loesungsskizze"
+            ? await loesungsRecherchieren(datum, eintrag.anlass || plan.abendAnlass)
+            : await aktuellRecherchieren(datum, bisher, fehlendesGebiet(plan));
           log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
         } catch (e) {
           if (!(e instanceof BudgetFehler)) throw e;

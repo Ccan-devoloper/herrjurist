@@ -10,7 +10,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { CONFIG } from "./config.mjs";
-import { themenpool, FAECHER } from "./inhalte.mjs";
+import { themenpool, FAECHER, KLAUSUREN } from "./inhalte.mjs";
 import { heuteIso, wochentag, minutenVon, hhmm, tageBis } from "./zeit.mjs";
 import { anlaesseFuer, mindsetThema } from "./kalender.mjs";
 import { zeitenWaehlen } from "./zeiten.mjs";
@@ -55,6 +55,26 @@ export const FORMAT_QUELLEN = {
   wochenrueckblick: [],
   aktuell:        [],
 };
+
+/* Ein Rechtsgebiet je Beitrag - und taeglich rotierend.
+
+   Bis zum 16.09. entschied eine gewichtete Zufallswahl mit Rueckstands-Bonus,
+   welches Gebiet drankommt. Im Mittel war das ausgeglichen, an einem einzelnen
+   Tag aber beliebig: Zwei Beitraege konnten dasselbe Gebiet tragen, ein
+   drittes fehlte ganz. Dabei gibt es bei drei Beitraegen taeglich genau drei
+   Gebiete - Zivilrecht, Strafrecht, Oeffentliches Recht. Jedes bekommt seinen
+   Beitrag, und welches Gebiet welchen Platz im Tag besetzt, wandert Tag fuer
+   Tag weiter: mal ist das Reel zivilrechtlich, mal strafrechtlich, mal
+   oeffentlich-rechtlich.
+
+   Beitraege ohne Thema aus dem Pool zaehlen nicht mit - „aktuell" folgt der
+   Nachrichtenlage, das Samstags-Reel traegt ein Mindset-Thema. Sie wuerden
+   sonst ein Gebiet verbrauchen, das sie gar nicht zeigen. */
+export function gebieteDesTages(datum, plaetze) {
+  const tage = Math.floor(Date.UTC(+datum.slice(0, 4), +datum.slice(5, 7) - 1, +datum.slice(8, 10)) / 86400000);
+  const start = ((tage % 3) + 3) % 3;
+  return Array.from({ length: Math.max(0, plaetze) }, (_, i) => ((start + i) % 3) + 1);
+}
 
 function gewichteteWahl(kandidaten, zufall, ledger, strategie = null) {
   const g = CONFIG.plan.prioritaetGewicht;
@@ -189,18 +209,16 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
      Uhrzeit) bleibt unverändert - nur die Wahl des Themas wird vorgezogen. */
   const reihenfolge = formate.map((_, i) => i).sort((a, b) => (formate[b] === "reel" ? 1 : 0) - (formate[a] === "reel" ? 1 : 0));
 
-  /* Und es nimmt das Rechtsgebiet, das bei den Reels am längsten nicht dran
-     war. Die gewichtete Wahl allein genügt hier nicht: Sie zieht über die
-     FÄCHER aus, und das Zivilrecht stellt elf davon gegen fünf im Strafrecht.
-     Wer nur zuerst wählen darf, landet damit fast immer im Zivilrecht - eine
-     Schieflage wie vorher, nur in die andere Richtung. Das Reel ist das
-     Format mit der größten Reichweite; es soll den ganzen Stoff zeigen. */
-  const reelGebiet = () => {
-    const letzte = (ledger.veroeffentlicht || []).filter((e) => e.format === "reel").slice(-6);
-    const zaehler = { 1: 0, 2: 0, 3: 0 };
-    for (const e of letzte) { const g = FAECHER[e.fach]?.klausur; if (zaehler[g] !== undefined) zaehler[g]++; }
-    return Number(Object.keys(zaehler).sort((a, b) => zaehler[a] - zaehler[b] || Number(a) - Number(b))[0]);
-  };
+  /* Welcher Slot traegt heute welches Rechtsgebiet? Zugeteilt wird nur an
+     Slots, die sich aus dem Themenpool bedienen. Das loest zugleich das alte
+     Reel-Problem: Die ersten fuenf Reels des Kanals waren allesamt gruen,
+     weil die Kachelbeitraege sich zuerst Zivil- und Strafrecht nahmen und
+     fuer das Reel das Oeffentliche Recht uebrig blieb. Jetzt steht das Gebiet
+     jedes Slots vorher fest und wandert taeglich weiter. */
+  const ausPool = (f) => (FORMAT_QUELLEN[f] || []).length > 0;
+  const poolSlots = formate.map((f, i) => i).filter((i) => ausPool(formate[i]) && !(formate[i] === "reel" && wt === 6));
+  const rotation = gebieteDesTages(datum, poolSlots.length);
+  const gebietFuer = new Map(poolSlots.map((slot, k) => [slot, rotation[k]]));
   const beitraege = new Array(formate.length);
   for (const i of reihenfolge) {
     const format = formate[i];
@@ -216,16 +234,14 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
          wählen (siehe unten, thema.zuletzt). */
       const frisch = kandidaten.filter((t) => vorher.get(t.id)?.format !== format);
       if (frisch.length >= 3) kandidaten = frisch;
-      /* Farbwechsel: Zwei Beiträge am selben Tag sollen nicht dasselbe
-         Rechtsgebiet tragen – im Profilraster sähe das aus wie ein Doppelpost. */
-      const schonHeute = new Set(beitraegeBisher.map((b) => b.thema?.klausur).filter(Boolean));
-      const andereFarbe = kandidaten.filter((t) => !schonHeute.has(t.klausur));
-      if (andereFarbe.length >= 3) kandidaten = andereFarbe;
-      /* Das Reel zuerst auf das Gebiet, das bei den Reels am längsten nicht
-         dran war - siehe reelGebiet() oben. */
-      if (format === "reel") {
-        const dran = kandidaten.filter((t) => t.klausur === reelGebiet());
-        if (dran.length >= 3) kandidaten = dran;
+      /* Das Rechtsgebiet dieses Slots steht fest - hart, nicht als Wunsch.
+         Nur wenn der Pool dafür kein freies Thema mehr hergibt, weicht der
+         Slot aus: ein Beitrag im Nachbargebiet ist besser als keiner. */
+      const ziel = gebietFuer.get(i);
+      if (ziel) {
+        const imGebiet = kandidaten.filter((t) => t.klausur === ziel);
+        if (imGebiet.length) kandidaten = imGebiet;
+        else console.warn(`  ! ${KLAUSUREN[ziel]?.kurz || ziel}: kein freies Thema für „${format}“ – dieser Slot weicht heute aus.`);
       }
       thema = gewichteteWahl(kandidaten.length ? kandidaten : pool.filter((t) => typen.includes(t.typ)), zufall, ledgerKopie, strategie);
       /* War das Thema schon einmal dran, reist die Vorgeschichte mit: Format,
