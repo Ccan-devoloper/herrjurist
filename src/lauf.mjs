@@ -21,7 +21,7 @@ import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool } from "./inhalte.mjs";
-import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen } from "./planer.mjs";
+import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
@@ -387,6 +387,9 @@ async function main() {
      Ausnahme: die Lösungsskizze am Klausurtag braucht die Berichte des
      Nachmittags. Geschriebene Texte liegen unter inhalte/ und kosten später
      nichts mehr. */
+  /* Themen, die heute schon vergeben sind - damit ein Ausweichbeitrag nicht
+     dasselbe Thema nimmt wie ein anderer Slot. */
+  const belegteThemen = new Set([...plan.beitraege, ...plan.stories].map((e) => e.themaId).filter(Boolean));
   const textBesorgen = async (eintrag) => {
     const vorhanden = hosting.jsonLesen(textDatei(eintrag), null);
     if (vorhanden) return vorhanden;
@@ -398,8 +401,29 @@ async function main() {
       let recherche = null, wochenThemen = null;
       if (eintrag.format === "aktuell" || eintrag.format === "loesungsskizze") {
         const bisher = (ledger.veroeffentlicht || []).filter((e) => e.format === "aktuell").slice(-12).map((e) => e.titel);
-        recherche = eintrag.format === "loesungsskizze" ? await loesungsRecherchieren(datum, eintrag.anlass || plan.abendAnlass) : await aktuellRecherchieren(datum, bisher);
-        log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
+        try {
+          recherche = eintrag.format === "loesungsskizze" ? await loesungsRecherchieren(datum, eintrag.anlass || plan.abendAnlass) : await aktuellRecherchieren(datum, bisher);
+          log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
+        } catch (e) {
+          if (!(e instanceof BudgetFehler)) throw e;
+          /* Kein Geld für die Recherche - aber ein Beitrag ohne Recherche ist
+             besser als kein Beitrag. „aktuell" und „loesungsskizze" leben von
+             ihr und haben kein eigenes Thema; also weicht der Slot auf ein
+             Format aus, das sich aus dem Themenpool bedient.
+
+             Am 16.09. fehlte genau das: Die Recherche verbrauchte den Tag,
+             danach warf sie einen BudgetFehler, der durch textBesorgen nach
+             oben durchschlug - und der Beitrag fiel ersatzlos aus. */
+          log(`  ⏸ ${e.message}`);
+          const frei = pool.filter((t) => !belegteThemen.has(t.id) && (FORMAT_QUELLEN.pruefungsfrage || []).includes(t.typ));
+          const ausweich = frei.find(Boolean) || pool.find((t) => !belegteThemen.has(t.id));
+          if (!ausweich) throw e;
+          belegteThemen.add(ausweich.id);
+          eintrag.format = "pruefungsfrage";
+          eintrag.themaId = ausweich.id;
+          log(`  → „pruefungsfrage" statt Recherche: „${ausweich.titel}" - ein Beitrag ohne Recherche ist besser als keiner.`);
+          return textBesorgen(eintrag);
+        }
       }
       if (eintrag.format === "wochenrueckblick") {
         const grenze = new Date(new Date(`${datum}T12:00:00Z`).getTime() - 7 * 86400000).toISOString().slice(0, 10);
