@@ -54,9 +54,19 @@ Eine Direktnachricht ist persönlicher als ein Kommentar – und genau deshalb i
 - Fragen zu einer KONKRETEN eigenen Rechtssache beantwortest du nicht. „Mein Vermieter hat gekündigt, was kann ich tun?“, „Lohnt sich Widerspruch gegen meinen Bescheid?“, „Habe ich Anspruch auf …?“ – das ist Rechtsdienstleistung in einer fremden Angelegenheit und nach § 3 RDG den Anwält:innen vorbehalten. Sag freundlich, dass du dazu nichts sagen darfst, nenne wenn möglich die allgemeine Regel dahinter, und verweise auf anwaltliche Beratung. Kein „aber grundsätzlich wäre in deinem Fall …“.
 - Die Grenze verläuft zwischen „wie ist die Rechtslage“ (geht) und „was soll ich tun“ (geht nicht).
 
-- WENN ein Bezug angegeben ist (Story oder Beitrag, auf den sich die Nachricht bezieht), beantworte die Frage zu genau diesem Inhalt. Frag dann NICHT zurück, worum es geht - das weißt du. Beispiel: Bezug „Wann ist eine Versammlung friedlich?“ und die Frage „Gilt das auch bei Sitzblockaden?“ ist eine Frage zu genau dieser Story.
-- Steht kein Bezug dabei, sondern nur „Zuletzt erschienen“, dann ordne die Frage einem dieser Inhalte zu, wenn sie erkennbar dazu passt. Nur wenn mehrere gleich gut passen oder keiner, frag kurz zurück.
-- Zurückfragen ist der letzte Ausweg, nicht der erste Reflex.
+Woher du weißt, worum es geht – und was du tust, wenn du es nicht weißt:
+- Steht ein „Bezug“ dabei, ist die Sache klar: Beantworte die Frage zu GENAU diesem Inhalt und frag nicht zurück, worum es geht.
+- Nennt die Nachricht das Thema selbst („Wie ist das bei der Anfechtung?“), antworte darauf.
+- Steht als Bezug, dass es eine Story-Antwort ist, die Story aber nicht zugeordnet werden konnte: Frag in EINEM kurzen Satz nach, welche Story gemeint ist. Das ist keine Schwäche, sondern das Einzige, was hier richtig ist.
+- RATE NIEMALS. Du erfindest kein Thema und schreibst nie „Ich tippe auf …“, „Vermutlich meinst du …“, „Falls du etwas anderes meinst …“. Eine selbstbewusst falsche Antwort ist der schlimmste Ausgang – schlimmer als eine Rückfrage, schlimmer als gar keine Antwort. Am 16.09. wurde auf eine Frage zur Beweislast im Zivilprozess eine Prüfung der Anfechtung geschickt; so etwas darf nicht noch einmal passieren.
+- „Zuletzt erschienen“ ist HINTERGRUND, keine Zuordnungshilfe. Daraus darfst du nur schließen, wenn die Frage unmissverständlich zu genau einem Eintrag passt und zu keinem anderen. Sind mehrere Einträge zur selben Uhrzeit erschienen, sagt die Liste gar nichts – dann frag.
+
+So klingst du:
+- Wie ein Mensch, der zwischendurch am Handy antwortet. Zwei bis vier Sätze, höchstens 500 Zeichen, höchstens ein Emoji.
+- Keine Paragrafenketten in einer DM. Ein, zwei Normen reichen; der Rest ist Prosa.
+- Keine Sätze über dich selbst und deine Arbeitsweise: kein „dann baue ich dir den Aufbau dazu“, kein „schreib mir einfach das Stichwort“, kein Anbieten von Leistungen, keine Ankündigung, was du als Nächstes tun würdest.
+- Keine Aufzählungszeichen, keine Überschriften, keine Nummerierung. Fließtext.
+- Nicht überfreundlich und nicht anbiedernd. Kein „Gerne!“, kein „Super Frage!“, kein Ausrufezeichen-Stakkato.
 
 Weitere Regeln:
 - Höchstens 500 Zeichen je Antwort, meistens zwei bis vier Sätze. Höchstens ein Emoji.
@@ -96,10 +106,20 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
   const nachId = new Map();
   for (const e of ledger.veroeffentlicht || []) if (e.medienId) nachId.set(String(e.medienId), e);
   const grenzeBezug = new Date(jetzt - 3 * 86400000).toISOString().slice(0, 10);
+  /* Mit Uhrzeit, nicht nur mit Titel: Wurden neun Stories innerhalb von zwei
+     Minuten veroeffentlicht, taugt die Liste NICHT zum Zuordnen - und das
+     muss das Modell sehen koennen, statt zu raten. */
+  const heute = new Date(jetzt).toISOString().slice(0, 10);
+  const wannText = (e) => {
+    const t = e.veroeffentlicht ? new Date(e.veroeffentlicht) : null;
+    if (!t || Number.isNaN(t.getTime())) return String(e.datum || "");
+    const uhr = t.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit", timeZone: CONFIG.marke.zeitzone || "Europe/Berlin" });
+    return `${e.datum === heute ? "heute" : e.datum} ${uhr}`;
+  };
   const zuletzt = (ledger.veroeffentlicht || [])
     .filter((e) => String(e.datum || "") >= grenzeBezug && e.titel)
     .slice(-12)
-    .map((e) => ({ art: e.art === "story" ? "Story" : "Beitrag", titel: String(e.titel).slice(0, 110) }));
+    .map((e) => ({ art: e.art === "story" ? "Story" : "Beitrag", titel: String(e.titel).slice(0, 110), wann: wannText(e) }));
 
   for (const k of konversationen || []) {
     const nachrichten = [...(k.messages?.data || [])].sort((a, b) => new Date(a.created_time) - new Date(b.created_time));
@@ -131,13 +151,22 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
     /* Bezug: Story-Antwort oder Antwort auf eine frühere Nachricht. Die ID
        schlagen wir im Ledger nach - dort steht der Titel dessen, was wir
        selbst veröffentlicht haben. */
-    const storyId = letzte.reply_to?.story?.id;
-    const eintrag = storyId ? nachId.get(String(storyId)) : null;
+    /* Instagram legt den Bezug einer Story-Antwort nicht immer an dieselbe
+       Stelle - am 16.09. fehlte `reply_to` an einer Story-Antwort ganz, und
+       der Bot riet daraufhin ein Thema zusammen („Ich tippe auf die
+       Anfechtung"). Deshalb wird an jeder Stelle nachgesehen, die die ID
+       tragen kann, und festgehalten, WOHER sie kam - sonst tappt man beim
+       naechsten Mal wieder im Dunkeln. */
+    const idKandidaten = [letzte.reply_to?.story?.id, letzte.story?.id, letzte.reply_to?.message?.id]
+      .filter(Boolean).map(String);
+    const istStoryAntwort = Boolean(letzte.reply_to?.story || letzte.story);
+    const eintrag = idKandidaten.map((id) => nachId.get(id)).find(Boolean) || null;
     const bezug = eintrag
       ? `${eintrag.art === "story" ? "Story" : "Beitrag"} „${String(eintrag.titel || "").slice(0, 140)}“`
-      : (storyId || letzte.reply_to?.story?.url) ? "Antwort auf eine unserer Stories (Inhalt nicht auffindbar)" : null;
+      : istStoryAntwort ? "Die Nachricht ist eine Antwort auf eine unserer Stories – WELCHE, hat Instagram nicht mitgeliefert" : null;
+    const bezugQuelle = eintrag ? "aufgelöst" : istStoryAntwort ? "Story-Antwort ohne Zuordnung" : "kein Bezug";
 
-    offen.push({ id: letzte.id, text, von, empfaengerId: letzte.from?.id, konversationId: k.id, zeit: letzte.created_time, verlauf, bezug });
+    offen.push({ id: letzte.id, text, von, empfaengerId: letzte.from?.id, konversationId: k.id, zeit: letzte.created_time, verlauf, bezug, bezugQuelle });
   }
 
   offen.sort((a, b) => new Date(a.zeit) - new Date(b.zeit));
@@ -151,7 +180,7 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
 export async function antwortenFormulieren(nachrichten, zuletzt = []) {
   if (!nachrichten.length) return [];
   const hintergrund = zuletzt.length
-    ? `\nZuletzt erschienen (falls kein Bezug dabeisteht, passt die Frage oft zu einem davon):\n${zuletzt.map((e) => `- ${e.art}: „${e.titel}“`).join("\n")}\n`
+    ? `\nZuletzt erschienen (nur als Hintergrund – daraus darfst du NICHT raten):\n${zuletzt.map((e) => `- ${e.wann} · ${e.art}: „${e.titel}“`).join("\n")}\n`
     : "";
   const user = `Beantworte die folgenden Direktnachrichten. „Bezug“ nennt die Story oder den Beitrag, auf den sich die Nachricht bezieht; „Verlauf“, was in derselben Unterhaltung davor stand.
 ${hintergrund}
@@ -198,6 +227,10 @@ export async function nachrichtenBeantworten(ig, ledger, { log = console.log } =
   if (!offen.length) return { unterhaltungen: konversationen.length, offen: 0, beantwortet: 0 };
 
   log(`Postfach: ${offen.length} offene Nachrichten in ${konversationen.length} Unterhaltungen`);
+  /* Woher der Bezug kam, gehoert ins Log. Am 16.09. stand dort nur die
+     Antwort - dass ihr der Bezug fehlte, war nicht zu sehen, und die Ursache
+     musste im Nachhinein rekonstruiert werden. */
+  for (const n of offen) log(`  · Bezug @${n.von}: ${n.bezugQuelle}${n.bezug ? ` – ${n.bezug.slice(0, 90)}` : ""}`);
   const antworten = await antwortenFormulieren(offen, alle.zuletzt || []);
   const nachId = new Map(antworten.map((a) => [a.id, a.text]));
   const gruende = new Map(antworten.map((a) => [a.id, a.grund]));

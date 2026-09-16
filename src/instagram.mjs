@@ -443,11 +443,28 @@ export class Instagram {
     const kern = `id,from,to,message,created_time`;
     const bauen = (m) => `id,updated_time,participants,messages.limit(${jeUnterhaltung}){${m}}`;
     const pfad = `${this.kontoId}/conversations`;
-    try {
-      return await this.alleSeiten(pfad, { platform: "instagram", fields: bauen(`${kern},reply_to{story{id,url},message{id}}`), limit: anzahl });
-    } catch (e) {
-      console.warn(`  ! Unterhaltungen ohne Bezug (reply_to nicht abfragbar: ${e.message.split("\n")[0].slice(0, 120)})`);
-      return this.alleSeiten(pfad, { platform: "instagram", fields: bauen(kern), limit: anzahl });
+    /* Der Bezug einer Story-Antwort kommt nicht zuverlaessig im selben Feld.
+       Am 16.09. antwortete jemand auf eine Story, `reply_to` fehlte an dieser
+       Nachricht - und der Bot riet daraufhin ein Thema zusammen. Deshalb
+       werden mehrere Felder abgefragt, die die Story tragen koennen, und der
+       Reihe nach abgestuft: Faellt die reiche Abfrage durch (ein unbekanntes
+       Feld laesst die GANZE Abfrage mit 400 scheitern), bleibt die naechste
+       uebrig, statt gleich beim nackten Kern zu landen. */
+    const stufen = [
+      `${kern},story,reply_to{story{id,url},message{id}},attachments{id,image_data,video_data}`,
+      `${kern},story,reply_to{story{id,url},message{id}}`,
+      `${kern},reply_to{story{id,url},message{id}}`,
+      kern,
+    ];
+    for (let i = 0; i < stufen.length; i++) {
+      try {
+        const daten = await this.alleSeiten(pfad, { platform: "instagram", fields: bauen(stufen[i]), limit: anzahl });
+        if (i) console.warn(`  ! Unterhaltungen mit eingeschraenktem Bezug (Stufe ${i + 1} von ${stufen.length})`);
+        return daten;
+      } catch (e) {
+        if (i === stufen.length - 1) throw e;
+        console.warn(`  ! Bezugsfelder Stufe ${i + 1} nicht abfragbar: ${e.message.split("\n")[0].slice(0, 110)}`);
+      }
     }
   }
 

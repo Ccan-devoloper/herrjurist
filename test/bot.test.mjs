@@ -449,7 +449,7 @@ test("Story-Antwort im Postfach bekommt ihren Bezug – statt einer Rückfrage",
 
   /* Unbekannte Story: ehrlich benennen, nicht erfinden. */
   const fremd = offeneNachrichten(nachricht({ reply_to: { story: { id: "999" } } }), "1", ledger);
-  assert.match(fremd[0].bezug, /nicht auffindbar/);
+  assert.match(fremd[0].bezug, /WELCHE, hat Instagram nicht mitgeliefert/);
 
   /* Ohne reply_to bleibt der Bezug leer – aber die letzten Inhalte stehen als
      Hintergrund bereit, damit das Modell zuordnen kann. */
@@ -2494,4 +2494,48 @@ test("Die Recherche zeigt nur auf geprüfte Quellen und darf leer ausgehen", asy
   const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
   assert.match(lauf, /KEINE_NEUIGKEIT/, "der Tageslauf wertet das leere Ergebnis nicht aus");
   assert.match(lauf, /aufThemenpoolAusweichen/, "der Ausweg auf den Themenpool ist nicht benannt");
+});
+
+test("Story-Antworten: Bezug aus jeder Quelle, und nie geraten", async () => {
+  /* 16.09.: Jemand antwortete auf die Story „Wonach richtet sich die
+     Verteilung der Beweislast im Zivilprozess?" mit „Wie prüfe ich das in der
+     Klausur?". An dieser Nachricht fehlte `reply_to`, der Bot hatte nur die
+     Hintergrundliste - und schickte eine Prüfung der ANFECHTUNG los, mit den
+     Worten „Ich tippe auf die Anfechtung". Das war das Thema eines anderen
+     Beitrags desselben Tages. */
+  const { offeneNachrichten } = await import("../src/postfach.mjs");
+  const jetzt = new Date("2026-09-16T15:00:00Z").getTime();
+  const ledger = { veroeffentlicht: [
+    { art: "story", medienId: "S7", titel: "Wonach richtet sich die Verteilung der Beweislast?", datum: "2026-09-16", veroeffentlicht: "2026-09-16T07:10:00.000Z" },
+    { art: "beitrag", medienId: "B1", titel: "Voraussetzungen der Anfechtung", datum: "2026-09-16", veroeffentlicht: "2026-09-16T06:20:00.000Z" },
+  ] };
+  const bauen = (letzte) => [{ id: "k1", messages: { data: [{ id: "m1", from: { id: "99", username: "test" }, message: "Wie prüfe ich das in der Klausur?", created_time: new Date(jetzt - 3600000).toISOString(), ...letzte }] } }];
+
+  /* Die ID kann an drei Stellen stehen - jede muss zum Ziel führen. */
+  for (const feld of [
+    { reply_to: { story: { id: "S7" } } },
+    { story: { id: "S7" } },
+    { reply_to: { message: { id: "S7" } } },
+  ]) {
+    const offen = offeneNachrichten(bauen(feld), "1", ledger, jetzt);
+    assert.equal(offen.length, 1);
+    assert.match(offen[0].bezug || "", /Beweislast/, `Bezug nicht gefunden aus ${JSON.stringify(feld)}`);
+    assert.equal(offen[0].bezugQuelle, "aufgelöst");
+  }
+
+  /* Story-Antwort ohne verwertbare ID: Das muss als solches benannt sein,
+     damit das Modell nachfragt statt zu raten. */
+  const ohne = offeneNachrichten(bauen({ reply_to: { story: { url: "https://cdn.example/x.jpg" } } }), "1", ledger, jetzt);
+  assert.equal(ohne[0].bezugQuelle, "Story-Antwort ohne Zuordnung");
+  assert.match(ohne[0].bezug || "", /WELCHE/, "dem Modell wird nicht gesagt, dass die Story unbekannt ist");
+
+  /* Die Hintergrundliste trägt Uhrzeiten - neun Stories in zwei Minuten
+     taugen nicht zum Zuordnen, und das muss sichtbar sein. */
+  assert.ok(ohne.zuletzt.every((e) => e.wann), "der Hintergrundliste fehlt die Uhrzeit");
+
+  /* Und die Regeln verbieten das Raten ausdrücklich. */
+  const quelle = fs.readFileSync(new URL("../src/postfach.mjs", import.meta.url), "utf8");
+  assert.match(quelle, /RATE NIEMALS/, "das Rateverbot fehlt");
+  assert.match(quelle, /Ich tippe auf/, "die konkrete Fehlformulierung ist nicht gesperrt");
+  assert.match(quelle, /HINTERGRUND, keine Zuordnungshilfe/, "die Hintergrundliste ist nicht als solche gekennzeichnet");
 });
