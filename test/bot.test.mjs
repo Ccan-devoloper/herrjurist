@@ -2558,20 +2558,28 @@ test("Story-Antwort ohne ID: laufende Stories statt Gesprächsverlauf", async ()
     created_time: new Date(jetzt - 600000).toISOString(), ...extra,
   }] } }];
 
-  /* Instagram nennt eine ID aus einem ANDEREN Namensraum – die Uhrzeit der
-     laufenden Story verbindet sie mit unserem Eintrag. */
+  /* Eine fremde ID darf NICHT über die Uhrzeit zugeordnet werden. Unsere neun
+     Stories erscheinen im Minutenabstand; ein Zeitfenster träfe womöglich die
+     Nachbarstory. Eine falsche Zuordnung ist schlimmer als keine. */
   const laufend = [{ id: "IG-FREMD-7", timestamp: "2026-09-16T07:10:30.000Z" }];
   const ueberZeit = offeneNachrichten(konv({ reply_to: { story: { id: "IG-FREMD-7" } } }), "1", ledger, jetzt, laufend);
-  assert.equal(ueberZeit[0].bezugQuelle, "aufgelöst", "die Brücke über den Veröffentlichungszeitpunkt greift nicht");
-  assert.match(ueberZeit[0].bezug, /Beweislast/);
+  assert.equal(ueberZeit[0].bezugQuelle, "Story-Antwort ohne Zuordnung",
+    "eine fremde ID wurde über die Uhrzeit zugeordnet – genau das darf nicht passieren");
+
+  /* Stimmt die ID dagegen überein, ist es eine echte Zuordnung. */
+  const echt = offeneNachrichten(konv({ reply_to: { story: { id: "EIGEN-7" } } }), "1", ledger, jetzt, []);
+  assert.equal(echt[0].bezugQuelle, "aufgelöst");
+  assert.match(echt[0].bezug, /Beweislast/);
 
   /* Gar keine ID: Dann muss wenigstens feststehen, WELCHE Stories laufen –
      sonst kann nur allgemein zurückgefragt werden. */
   const ohneId = offeneNachrichten(konv({ reply_to: { story: { url: "https://cdn.example/x.jpg" } } }), "1", ledger, jetzt, laufend);
   assert.equal(ohneId[0].bezugQuelle, "Story-Antwort ohne Zuordnung");
   assert.match(ohneId[0].bezugRoh, /ids=\[keine\] url=ja/, "die rohen Felder fehlen im Log");
-  assert.equal(ohneId.laufend.length, 1, "die laufenden Stories stehen dem Modell nicht zur Verfügung");
-  assert.match(ohneId.laufend[0].titel, /Beweislast/);
+  /* Ohne verwertbare ID greift der Ledger-Fallback: BEIDE heutigen Stories
+     sind Kandidaten für die Rückfrage – zugeordnet wird keine. */
+  assert.equal(ohneId.laufend.length, 2, "die laufenden Stories stehen dem Modell nicht zur Verfügung");
+  assert.ok(ohneId.laufend.some((e) => /Beweislast/.test(e.titel)));
 
   /* Und die Regel sagt ausdrücklich, dass der Verlauf hier nicht das Thema
      bestimmt - genau daran ist die Antwort heute gescheitert. */
@@ -2596,6 +2604,9 @@ test("Liefert Instagram gar nichts, kommen die laufenden Stories aus dem eigenen
     { art: "beitrag", medienId: "B2", titel: "Wie prüft man die Leistungskondiktion?", datum: "2026-09-16", veroeffentlicht: "2026-09-16T06:20:00.000Z" },
     /* Eine Story von vorgestern - aus dem 24-Stunden-Fenster heraus. */
     { art: "story", medienId: "S0", titel: "Alte Story von vorgestern", datum: "2026-09-14", veroeffentlicht: "2026-09-14T07:00:00.000Z" },
+    /* So sahen Story-Einträge bis zum 16.09. aus: GAR KEIN Zeitstempel. Genau
+       daran wäre die Fallback-Liste still leer geblieben. */
+    { art: "story", medienId: "S3", titel: "Story von heute ohne Zeitstempel", datum: "2026-09-16" },
   ] };
   const konv = [{ id: "k1", messages: { data: [{
     id: "m1", from: { id: "99", username: "test" },
@@ -2609,11 +2620,12 @@ test("Liefert Instagram gar nichts, kommen die laufenden Stories aus dem eigenen
   assert.match(offen[0].bezugRoh, /ids=\[keine\] url=nein/, "die rohen Felder werden nicht protokolliert");
 
   const titel = offen.laufend.map((e) => e.titel);
-  assert.equal(titel.length, 2, `es sollten genau die zwei heutigen Stories sein, waren: ${titel.join(" | ")}`);
+  assert.equal(titel.length, 3, `es sollten die drei heutigen Stories sein, waren: ${titel.join(" | ")}`);
+  assert.ok(titel.some((t) => /ohne Zeitstempel/.test(t)), "Stories ohne Zeitstempel fallen aus der Liste – der echte Ledger hat keinen");
   assert.ok(titel.some((t) => /Schutzauftrag/.test(t)) && titel.some((t) => /Nebenbestimmung/.test(t)));
   assert.ok(!titel.some((t) => /Leistungskondiktion/.test(t)), "ein Beitrag steht als Story-Kandidat drin");
   assert.ok(!titel.some((t) => /vorgestern/.test(t)), "eine abgelaufene Story steht noch drin");
-  assert.ok(offen.laufend.every((e) => e.wann), "den Kandidaten fehlt die Uhrzeit");
+  assert.ok(offen.laufend.every((e) => e.wann), "den Kandidaten fehlt die Zeitangabe");
 
   /* Und beim Nachfragen dürfen nur Stories angeboten werden. */
   const quelle = fs.readFileSync(new URL("../src/postfach.mjs", import.meta.url), "utf8");

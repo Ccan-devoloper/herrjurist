@@ -119,30 +119,37 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
     const uhr = t.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit", timeZone: CONFIG.marke.zeitzone || "Europe/Berlin" });
     return `${e.datum === heute ? "heute" : e.datum} ${uhr}`;
   };
+  /* Welche Stories laufen gerade? Das ist die Grundlage fuer eine BRAUCHBARE
+     Rueckfrage - nicht fuer eine automatische Zuordnung.
+
+     Die Zeitstempel-Bruecke von heute Abend ist wieder draussen. Sie sollte
+     eine fremde Story-ID ueber die Uhrzeit auf unseren Eintrag abbilden, war
+     aber aus zwei Gruenden untauglich: Unsere neun Stories erscheinen im
+     Minutenabstand, ein Zwei-Minuten-Fenster haette also die Nachbarstory
+     treffen koennen - und eine falsche Zuordnung ist schlimmer als keine.
+     Zugeordnet wird nur noch ueber eine echte, uebereinstimmende ID. */
   const laufendeMitTitel = [];
   for (const st of laufend || []) {
-    const t = st.timestamp ? new Date(st.timestamp).getTime() : NaN;
-    const treffer = (ledger.veroeffentlicht || [])
-      .filter((e) => e.art === "story" && e.veroeffentlicht && e.titel)
-      .map((e) => ({ e, abstand: Math.abs(new Date(e.veroeffentlicht).getTime() - t) }))
-      .filter((x) => x.abstand < 120000)
-      .sort((a, b) => a.abstand - b.abstand)[0]?.e;
-    if (treffer && st.id) nachId.set(String(st.id), treffer);
-    if (treffer) laufendeMitTitel.push({ titel: String(treffer.titel).slice(0, 110), wann: wannText(treffer) });
+    const e = st.id ? nachId.get(String(st.id)) : null;
+    if (e?.titel) laufendeMitTitel.push({ titel: String(e.titel).slice(0, 110), wann: wannText(e) });
   }
-  /* Und wenn Instagram gar nichts liefert - am 16.09. kam „Laufende Stories: 0"
-     zurueck, der Zugang ueber Instagram Login kennt den Endpunkt offenbar
-     nicht -, nehmen wir unser eigenes Protokoll. Was in den letzten 24 Stunden
-     als Story erschienen ist, laeuft noch; das wissen wir besser als jede
-     Abfrage, denn wir haben es selbst veroeffentlicht. */
+  /* Liefert Instagram nichts - am 16.09. kam „Laufende Stories: 0", der Zugang
+     ueber Instagram Login kennt den Endpunkt offenbar nicht -, nehmen wir das
+     eigene Protokoll. Der Zeitstempel fehlt bei aelteren Eintraegen (Stories
+     bekamen ihn erst ab dem 16.09.); dann zaehlt das Datum. */
   if (!laufendeMitTitel.length) {
     const vor24h = jetzt - 24 * 3600000;
+    const gestern = new Date(jetzt - 86400000).toISOString().slice(0, 10);
     for (const e of ledger.veroeffentlicht || []) {
-      if (e.art !== "story" || !e.titel || !e.veroeffentlicht) continue;
-      if (new Date(e.veroeffentlicht).getTime() < vor24h) continue;
-      laufendeMitTitel.push({ titel: String(e.titel).slice(0, 110), wann: wannText(e) });
+      if (e.art !== "story" || !e.titel) continue;
+      const t = e.veroeffentlicht ? new Date(e.veroeffentlicht).getTime() : NaN;
+      const frisch = Number.isNaN(t)
+        ? String(e.datum || "") >= gestern           // ohne Uhrzeit: nach Datum
+        : t >= vor24h;                               // mit Uhrzeit: exakt
+      if (frisch) laufendeMitTitel.push({ titel: String(e.titel).slice(0, 110), wann: wannText(e) });
     }
   }
+
   const grenzeBezug = new Date(jetzt - 3 * 86400000).toISOString().slice(0, 10);
   /* Mit Uhrzeit, nicht nur mit Titel: Wurden neun Stories innerhalb von zwei
      Minuten veroeffentlicht, taugt die Liste NICHT zum Zuordnen - und das
