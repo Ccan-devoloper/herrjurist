@@ -782,22 +782,42 @@ Alles in eigenen Worten, juristisch korrekt, mit Norm. Nicht benötigte Felder n
     return o;
   });
 
-  /* Faktencheck über alle Stories des Tages in einem Aufruf. Beiträge und
-     Reels liefen von Anfang an dagegen, Stories nicht - dabei sind sie neun
-     von elf Veröffentlichungen am Tag, und die erste live gegangene Story trug
-     prompt eine falsch zugeordnete Norm. Befunde landen in `beanstandet`;
-     damit greift die Schleife im Tageslauf, die beanstandete Slots ohnehin
-     einmal neu schreiben lässt. */
-  const fakten = await faktenSicher({ stories: liste }, "story-faktencheck", {
-    hinweis: "Jede Kachel steht für sich. Nenne zu jedem Befund den Slot in eckigen Klammern, genau so, wie er im Kopf der Kachel steht (zum Beispiel [s5]).",
-  });
-  korrekturenAnwenden({ stories: liste }, fakten.korrekturen);
-  for (const f of fakten.fehler || []) {
-    const treffer = String(f).match(/\[?\b(s\d+)\b\]?/);
-    /* Ohne erkennbaren Slot lässt sich der Befund keiner Kachel zuordnen -
-       dann werden lieber alle neu geschrieben als eine falsche zu posten. */
-    const ziele = treffer ? liste.filter((o) => o.slot === treffer[1]) : liste;
-    for (const o of ziele) (o.beanstandet ||= []).push(String(f));
+  return storiesPruefen(liste);
+}
+
+/* Faktencheck über alle Stories des Tages in einem Aufruf. Beiträge und
+   Reels liefen von Anfang an dagegen, Stories nicht - dabei sind sie neun
+   von elf Veröffentlichungen am Tag, und die erste live gegangene Story trug
+   prompt eine falsch zugeordnete Norm. Befunde landen in `beanstandet`;
+   damit greift die Schleife im Tageslauf, die beanstandete Slots ohnehin
+   einmal neu schreiben lässt.
+
+   Reicht das Budget für die Prüfung nicht, fliegt der Aufruf nicht mehr
+   heraus: Die Texte sind geschrieben und bezahlt, sie tragen dann
+   `faktencheckOffen` und warten gespeichert auf ihre Prüfung. Ein späterer
+   Lauf holt sie nach, ohne sie noch einmal schreiben zu lassen. Ungeprüft
+   erscheint keine von ihnen. Am 16.09. gingen an dieser Stelle auf dem
+   Schwesterkanal neun bezahlte Story-Texte verloren, weil der Fehler den
+   ganzen Aufruf mitnahm. */
+export async function storiesPruefen(liste) {
+  if (!liste.length) return liste;
+  try {
+    const fakten = await faktenSicher({ stories: liste }, "story-faktencheck", {
+      hinweis: "Jede Kachel steht für sich. Nenne zu jedem Befund den Slot in eckigen Klammern, genau so, wie er im Kopf der Kachel steht (zum Beispiel [s5]).",
+    });
+    korrekturenAnwenden({ stories: liste }, fakten.korrekturen);
+    for (const f of fakten.fehler || []) {
+      const treffer = String(f).match(/\[?\b(s\d+)\b\]?/);
+      /* Ohne erkennbaren Slot lässt sich der Befund keiner Kachel zuordnen -
+         dann werden lieber alle neu geschrieben als eine falsche zu posten. */
+      const ziele = treffer ? liste.filter((o) => o.slot === treffer[1]) : liste;
+      for (const o of ziele) (o.beanstandet ||= []).push(String(f));
+    }
+    for (const o of liste) delete o.faktencheckOffen;
+  } catch (e) {
+    if (!(e instanceof BudgetFehler)) throw e;
+    console.warn(`  ⏸ ${e.message.split("\n")[0]} – die Story-Texte bleiben gespeichert und werden im nächsten Lauf geprüft.`);
+    for (const o of liste) o.faktencheckOffen = true;
   }
   return liste;
 }

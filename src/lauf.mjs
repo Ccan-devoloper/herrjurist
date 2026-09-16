@@ -23,7 +23,7 @@ import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
-import { beitragSchreiben, storiesSchreiben, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
+import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
@@ -512,6 +512,22 @@ async function main() {
         else { fehler++; console.error(`  ✗ Stories schreiben: ${e.message}`); }
       }
     }
+    /* Texte, die geschrieben und bezahlt sind, deren Faktencheck aber am
+       Budget scheiterte, liegen unter inhalte/ und tragen `faktencheckOffen`.
+       Sie werden hier nachgeprüft - das kostet nur die Prüfung, nicht das
+       Schreiben. Klappt es wieder nicht, warten sie auf den nächsten Lauf. */
+    const ungeprueft = [...geschrieben.values()].filter((s) => s.faktencheckOffen);
+    if (ungeprueft.length) {
+      log(`  ${ungeprueft.length} Story-Texte warten auf ihren Faktencheck – wird nachgeholt`);
+      try {
+        await storiesPruefen(ungeprueft);
+        for (const s of ungeprueft) hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s);
+        hosting.commit(`Story-Faktencheck nachgeholt ${datum}`);
+      } catch (e) {
+        if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`);
+        else { fehler++; console.error(`  ✗ Story-Faktencheck nachholen: ${e.message}`); }
+      }
+    }
   }
 
   /* Dann die Beiträge (wichtiger), zuletzt die Stories veröffentlichen. */
@@ -605,7 +621,10 @@ async function main() {
         story = teaserAusBeitrag(beitrag, eintrag.slot);
       } else {
         story = geschrieben.get(eintrag.slot);
-        if (!story) continue;
+        if (!story) { log(`Story ${eintrag.slot}: kein Text vorhanden – später.`); continue; }
+        /* Ungeprüft erscheint nichts. Der Text bleibt liegen, der nächste
+           Lauf holt den Faktencheck nach und veröffentlicht dann. */
+        if (story.faktencheckOffen) { log(`Story ${eintrag.slot}: Faktencheck steht noch aus – später.`); continue; }
         /* Frühere Beanstandungen mit den heutigen Regeln nachprüfen: Wurde die
            Prüfung seither entschärft (etwa Fachsprache statt Abschreiben), darf
            die Story doch erscheinen, statt dauerhaft zu fehlen. */

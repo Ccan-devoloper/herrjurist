@@ -2306,3 +2306,36 @@ test("Token-Tresor: ohne Herkunftsvermerk gewinnt das Secret", async () => {
     "die Herkunftsprüfung greift nicht mehr bei fehlendem Vermerk");
   assert.match(quelle, /Tresor ohne Herkunftsvermerk/, "der Fall wird nicht sichtbar protokolliert");
 });
+
+test("Bezahlte Story-Texte überleben ein leeres Budget und erscheinen erst nach ihrer Prüfung", async () => {
+  /* 16.09.: Auf dem Schwesterkanal waren neun Story-Texte geschrieben und
+     bezahlt (0,068 $), der Faktencheck lief (0,018 $) - und dann warf die
+     optionale Zweitmeinung einen BudgetFehler, der den ganzen Aufruf
+     mitriss. Aus `storiesSchreiben` kam nichts zurück, nichts wurde
+     gespeichert, sieben von neun Stories fielen aus. Das darf nicht wieder
+     passieren. */
+  const { budgetSetzen, BudgetFehler } = await import("../src/kosten.mjs");
+  const { storiesPruefen } = await import("../src/autor.mjs");
+
+  const liste = [{ slot: "s3", art: "merksatz", titel: "Anfechtung", text: "Die Anfechtung wirkt auf den Zeitpunkt des Vertragsschlusses zurück." }];
+  budgetSetzen({ limitUsd: 0.1, bisher: 0.1 });
+  const zurueck = await storiesPruefen(liste);
+  budgetSetzen({ limitUsd: Infinity, bisher: 0 });
+
+  assert.equal(zurueck.length, 1, "der bezahlte Text ging verloren statt erhalten zu bleiben");
+  assert.equal(zurueck[0].titel, "Anfechtung", "der Text wurde unterwegs verändert");
+  assert.ok(zurueck[0].faktencheckOffen, "die ausstehende Prüfung ist nicht vermerkt – der Text erschiene ungeprüft");
+
+  /* Die Zweitmeinung ist eine Zusatzrunde: Ein BudgetFehler dort darf den
+     Prüfer nicht sprengen, sonst stirbt der Aufruf an einer Kür. */
+  const fc = fs.readFileSync(new URL("../src/faktencheck.mjs", import.meta.url), "utf8");
+  assert.ok(!/catch \(e\) \{\s*\n\s*if \(e instanceof BudgetFehler\) throw e;\s*\n\s*console\.warn\(`  ! Zweitmeinung/.test(fc),
+    "die Zweitmeinung wirft den BudgetFehler wieder nach oben");
+  assert.match(fc, /Einwände gelten ohne Zweitmeinung/, "der günstige Ausweg ohne Zweitmeinung fehlt");
+
+  /* Und ungeprüft erscheint nichts. */
+  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  assert.match(lauf, /if \(story\.faktencheckOffen\)/, "der Tageslauf veröffentlicht Stories mit offener Prüfung");
+  assert.match(lauf, /storiesPruefen\(ungeprueft\)/, "der Tageslauf holt die offene Prüfung nicht nach");
+  assert.ok(BudgetFehler);
+});

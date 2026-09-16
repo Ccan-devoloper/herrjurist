@@ -205,8 +205,14 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
       ({ bestaetigt, verworfen } = urteileAnwenden(bestaetigt, urteile));
       if (verworfen.length) console.log(`  Zweitmeinung: ${verworfen.length} von ${verworfen.length + bestaetigt.length} Einwänden nicht bestätigt – ${verworfen.map((b) => `„${b.stelle}“`).join(", ")}`);
     } catch (e) {
-      if (e instanceof BudgetFehler) throw e;
-      console.warn(`  ! Zweitmeinung nicht möglich (${e.message.split("\n")[0].slice(0, 120)}) – Einwände gelten.`);
+      /* Die Zweitmeinung ist eine Zusatzrunde, kein Pflichtteil. Reicht das
+         Budget dafür nicht, gelten die Einwände - der Aufruf darf daran
+         nicht sterben. Am 16.09. riss genau dieses `throw` neun bereits
+         geschriebene und bezahlte Story-Texte mit sich: Der Prüfer war
+         fertig, nur die Zweitmeinung war zu teuer, und weil der Fehler
+         nach oben durchschlug, kam aus `storiesSchreiben` nichts zurück. */
+      if (e instanceof BudgetFehler) console.warn(`  ! ${e.message.split("\n")[0]} – Einwände gelten ohne Zweitmeinung.`);
+      else console.warn(`  ! Zweitmeinung nicht möglich (${e.message.split("\n")[0].slice(0, 120)}) – Einwände gelten.`);
     }
   }
   const behebbar = bestaetigt.filter(brauchbar).map((b) => ({ original: b.original, ersatz: b.ersatz }));
