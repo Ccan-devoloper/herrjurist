@@ -217,8 +217,15 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
      jedes Slots vorher fest und wandert taeglich weiter. */
   const ausPool = (f) => (FORMAT_QUELLEN[f] || []).length > 0;
   const poolSlots = formate.map((f, i) => i).filter((i) => ausPool(formate[i]) && !(formate[i] === "reel" && wt === 6));
-  const rotation = gebieteDesTages(datum, poolSlots.length);
-  const gebietFuer = new Map(poolSlots.map((slot, k) => [slot, rotation[k]]));
+  /* Zugeteilt wird nach PLATZ im Tag, nicht nach Reihenfolge der Pool-Slots.
+     Der Unterschied ist nicht akademisch: Zaehlte man die Pool-Slots durch,
+     rueckte mittwochs b2 auf das Gebiet von b1 nach, weil „aktuell" kein
+     Thema aus dem Pool zieht - und b1 spraenge von Tag zu Tag, statt sauber
+     Strafrecht → Oeffentliches Recht → Zivilrecht zu wandern. Ein Slot ohne
+     Pool-Thema laesst sein Gebiet lieber liegen; es geht als Wunsch in die
+     Recherche (siehe fehlendesGebiet() in lauf.mjs). */
+  const rotation = gebieteDesTages(datum, formate.length);
+  const gebietFuer = new Map(poolSlots.map((slot) => [slot, rotation[slot]]));
   const beitraege = new Array(formate.length);
   for (const i of reihenfolge) {
     const format = formate[i];

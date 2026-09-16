@@ -2436,3 +2436,32 @@ test("Jeden Tag ein Rechtsgebiet je Beitrag, und rotierend", async () => {
   assert.equal(new Set(gebiete).size, gebiete.length, "zwei Beiträge desselben Tages tragen dasselbe Rechtsgebiet");
   assert.equal(gebiete.length, 3, "der Werktag trägt nicht drei Fachbeiträge");
 });
+
+test("Über sechs Wochen trägt jedes Rechtsgebiet gleich viele Beiträge", async () => {
+  /* Die Zuteilung geht nach PLATZ im Tag, nicht nach Reihenfolge der
+     Pool-Slots. Zählte man die Pool-Slots durch, rückte mittwochs b2 auf das
+     Gebiet von b1 nach (weil „aktuell" kein Pool-Thema zieht) und b1 spränge
+     von Tag zu Tag. Gemessen kostete das spürbar Gleichmaß: 27/26/25 Beiträge
+     und 9/10/7 Reels statt der glatten Verteilung hier. */
+  const { tagesplan, ledgerLaden } = await import("../src/planer.mjs");
+  const ledger = ledgerLaden();
+  const pool = themenpool();
+  const gesamt = {}, alsReel = {}, alsErster = {};
+  const zaehl = (o, k) => { if (k) o[k] = (o[k] || 0) + 1; };
+  for (let i = 0; i < 42; i++) {
+    const datum = new Date(Date.UTC(2026, 8, 17) + i * 864e5).toISOString().slice(0, 10);
+    const plan = tagesplan(datum, ledger, pool);
+    /* Kein Tag trägt zweimal dasselbe Gebiet – im Profilraster sähe das aus
+       wie ein Doppelpost. */
+    const heute = plan.beitraege.map((b) => b.thema?.klausur).filter(Boolean);
+    assert.equal(new Set(heute).size, heute.length, `${datum}: zwei Beiträge im selben Rechtsgebiet`);
+    for (const g of heute) zaehl(gesamt, g);
+    zaehl(alsReel, plan.beitraege.find((b) => b.format === "reel")?.thema?.klausur);
+    zaehl(alsErster, plan.beitraege[0]?.thema?.klausur);
+  }
+  for (const [was, zaehler] of [["insgesamt", gesamt], ["als Reel", alsReel], ["als erster Beitrag", alsErster]]) {
+    const werte = [1, 2, 3].map((g) => zaehler[g] || 0);
+    assert.equal(new Set(werte).size, 1,
+      `${was} ungleich verteilt: Zivilrecht ${werte[0]}, Strafrecht ${werte[1]}, Öffentliches Recht ${werte[2]}`);
+  }
+});
