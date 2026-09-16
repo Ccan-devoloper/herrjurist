@@ -57,7 +57,7 @@ Eine Direktnachricht ist persönlicher als ein Kommentar – und genau deshalb i
 Woher du weißt, worum es geht – und was du tust, wenn du es nicht weißt:
 - Steht ein „Bezug“ dabei, ist die Sache klar: Beantworte die Frage zu GENAU diesem Inhalt und frag nicht zurück, worum es geht.
 - Nennt die Nachricht das Thema selbst („Wie ist das bei der Anfechtung?“), antworte darauf.
-- Steht als Bezug, dass es eine Story-Antwort ist, die Story aber nicht zugeordnet werden konnte: Dann ist der VERLAUF NICHT der Bezug. Wer gerade auf eine Story antwortet, meint diese Story – nicht das Thema von gestern. Sieh in „Aktuell laufende Stories“ nach: Passt genau eine davon erkennbar zur Frage, beantworte sie dazu. Passen mehrere oder keine, frag in EINEM kurzen Satz nach und nenne die wahrscheinlichste beim Namen („Meinst du die zum Streitstand Beweislast?“). Das ist keine Schwäche, sondern das Einzige, was hier richtig ist.
+- Steht als Bezug, dass es eine Story-Antwort ist, die Story aber nicht zugeordnet werden konnte: Dann ist der VERLAUF NICHT der Bezug. Wer gerade auf eine Story antwortet, meint diese Story – nicht das Thema von gestern. Sieh in „Aktuell laufende Stories“ nach: Passt genau eine davon erkennbar zur Frage, beantworte sie dazu. Passen mehrere oder keine, frag in EINEM kurzen Satz nach und biete zwei bis drei der LAUFENDEN Stories zur Auswahl an („Meinst du die zur Norm des Tages, die Prüfungsfrage zum Verwaltungsrecht oder die zum Streitstand Beweislast?“). Nenne dabei NIEMALS einen Beitrag aus „Zuletzt erschienen“ – auf einen Beitrag kann man nicht per Story antworten. Das ist keine Schwäche, sondern das Einzige, was hier richtig ist.
 - Am 16.09. kam auf eine Antwort zur Beweislast-Story die Frage „Wo müsste ich das genau einbauen und prüfen?“ – und zurück ging eine Antwort zum Unterhaltsrecht, weil das im Verlauf davor stand. Der Verlauf hilft beim Ton und beim Wiederholungsschutz, er bestimmt aber nicht das Thema.
 - RATE NIEMALS. Du erfindest kein Thema und schreibst nie „Ich tippe auf …“, „Vermutlich meinst du …“, „Falls du etwas anderes meinst …“. Eine selbstbewusst falsche Antwort ist der schlimmste Ausgang – schlimmer als eine Rückfrage, schlimmer als gar keine Antwort. Am 16.09. wurde auf eine Frage zur Beweislast im Zivilprozess eine Prüfung der Anfechtung geschickt; so etwas darf nicht noch einmal passieren.
 - „Zuletzt erschienen“ ist HINTERGRUND, keine Zuordnungshilfe. Daraus darfst du nur schließen, wenn die Frage unmissverständlich zu genau einem Eintrag passt und zu keinem anderen. Sind mehrere Einträge zur selben Uhrzeit erschienen, sagt die Liste gar nichts – dann frag.
@@ -112,6 +112,13 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
      Stories erscheinen sekundengenau protokolliert; zwei Minuten Abstand
      reichen zur Zuordnung und sind eng genug, um nicht die Nachbarstory zu
      erwischen. */
+  const heute = new Date(jetzt).toISOString().slice(0, 10);
+  const wannText = (e) => {
+    const t = e.veroeffentlicht ? new Date(e.veroeffentlicht) : null;
+    if (!t || Number.isNaN(t.getTime())) return String(e.datum || "");
+    const uhr = t.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit", timeZone: CONFIG.marke.zeitzone || "Europe/Berlin" });
+    return `${e.datum === heute ? "heute" : e.datum} ${uhr}`;
+  };
   const laufendeMitTitel = [];
   for (const st of laufend || []) {
     const t = st.timestamp ? new Date(st.timestamp).getTime() : NaN;
@@ -121,19 +128,25 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
       .filter((x) => x.abstand < 120000)
       .sort((a, b) => a.abstand - b.abstand)[0]?.e;
     if (treffer && st.id) nachId.set(String(st.id), treffer);
-    if (treffer) laufendeMitTitel.push({ titel: String(treffer.titel).slice(0, 110) });
+    if (treffer) laufendeMitTitel.push({ titel: String(treffer.titel).slice(0, 110), wann: wannText(treffer) });
+  }
+  /* Und wenn Instagram gar nichts liefert - am 16.09. kam „Laufende Stories: 0"
+     zurueck, der Zugang ueber Instagram Login kennt den Endpunkt offenbar
+     nicht -, nehmen wir unser eigenes Protokoll. Was in den letzten 24 Stunden
+     als Story erschienen ist, laeuft noch; das wissen wir besser als jede
+     Abfrage, denn wir haben es selbst veroeffentlicht. */
+  if (!laufendeMitTitel.length) {
+    const vor24h = jetzt - 24 * 3600000;
+    for (const e of ledger.veroeffentlicht || []) {
+      if (e.art !== "story" || !e.titel || !e.veroeffentlicht) continue;
+      if (new Date(e.veroeffentlicht).getTime() < vor24h) continue;
+      laufendeMitTitel.push({ titel: String(e.titel).slice(0, 110), wann: wannText(e) });
+    }
   }
   const grenzeBezug = new Date(jetzt - 3 * 86400000).toISOString().slice(0, 10);
   /* Mit Uhrzeit, nicht nur mit Titel: Wurden neun Stories innerhalb von zwei
      Minuten veroeffentlicht, taugt die Liste NICHT zum Zuordnen - und das
      muss das Modell sehen koennen, statt zu raten. */
-  const heute = new Date(jetzt).toISOString().slice(0, 10);
-  const wannText = (e) => {
-    const t = e.veroeffentlicht ? new Date(e.veroeffentlicht) : null;
-    if (!t || Number.isNaN(t.getTime())) return String(e.datum || "");
-    const uhr = t.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit", timeZone: CONFIG.marke.zeitzone || "Europe/Berlin" });
-    return `${e.datum === heute ? "heute" : e.datum} ${uhr}`;
-  };
   const zuletzt = (ledger.veroeffentlicht || [])
     .filter((e) => String(e.datum || "") >= grenzeBezug && e.titel)
     .slice(-12)
@@ -208,7 +221,7 @@ export async function antwortenFormulieren(nachrichten, zuletzt = [], laufend = 
     ? `\nZuletzt erschienen (nur als Hintergrund – daraus darfst du NICHT raten):\n${zuletzt.map((e) => `- ${e.wann} · ${e.art}: „${e.titel}“`).join("\n")}\n`
     : "";
   const live = laufend.length
-    ? `\nAktuell laufende Stories (auf eine davon bezieht sich eine Story-Antwort):\n${laufend.map((e) => `- „${e.titel}“`).join("\n")}\n`
+    ? `\nAktuell laufende Stories – NUR diese kommen für eine Story-Antwort in Frage, Beiträge nicht:\n${laufend.map((e) => `- ${e.wann} · „${e.titel}“`).join("\n")}\n`
     : "";
   const user = `Beantworte die folgenden Direktnachrichten. „Bezug“ nennt die Story oder den Beitrag, auf den sich die Nachricht bezieht; „Verlauf“, was in derselben Unterhaltung davor stand.
 ${live}${hintergrund}

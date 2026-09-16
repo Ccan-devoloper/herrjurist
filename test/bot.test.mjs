@@ -2579,3 +2579,43 @@ test("Story-Antwort ohne ID: laufende Stories statt Gesprächsverlauf", async ()
   assert.match(quelle, /VERLAUF NICHT der Bezug/, "die Regel gegen den Verlauf als Thema fehlt");
   assert.match(quelle, /Aktuell laufende Stories/, "die laufenden Stories kommen nicht in den Prompt");
 });
+
+test("Liefert Instagram gar nichts, kommen die laufenden Stories aus dem eigenen Protokoll", async () => {
+  /* 16.09., zweiter Test: Im Log stand „(ids=[keine] url=nein)" und
+     „Laufende Stories: 0". Instagram schickt das Feld reply_to.story als
+     LEERES Objekt und kennt den /stories-Endpunkt bei diesem Zugang nicht.
+     Damit ist über die API nichts zu holen - wohl aber aus dem eigenen
+     Ledger: Was wir in den letzten 24 Stunden als Story veröffentlicht
+     haben, läuft noch. */
+  const { offeneNachrichten } = await import("../src/postfach.mjs");
+  const jetzt = new Date("2026-09-16T17:45:00Z").getTime();
+  const ledger = { veroeffentlicht: [
+    { art: "story", medienId: "S1", titel: "Grundrechte als Schutzauftrag des Staates", datum: "2026-09-16", veroeffentlicht: "2026-09-16T07:09:00.000Z" },
+    { art: "story", medienId: "S2", titel: "Kann jede rechtswidrige Nebenbestimmung isoliert angegriffen werden?", datum: "2026-09-16", veroeffentlicht: "2026-09-16T07:11:00.000Z" },
+    /* Ein Beitrag - der darf NICHT als Story-Kandidat auftauchen. */
+    { art: "beitrag", medienId: "B2", titel: "Wie prüft man die Leistungskondiktion?", datum: "2026-09-16", veroeffentlicht: "2026-09-16T06:20:00.000Z" },
+    /* Eine Story von vorgestern - aus dem 24-Stunden-Fenster heraus. */
+    { art: "story", medienId: "S0", titel: "Alte Story von vorgestern", datum: "2026-09-14", veroeffentlicht: "2026-09-14T07:00:00.000Z" },
+  ] };
+  const konv = [{ id: "k1", messages: { data: [{
+    id: "m1", from: { id: "99", username: "test" },
+    message: "Wo muss ich das in der Klausur prüfen?",
+    created_time: new Date(jetzt - 600000).toISOString(),
+    reply_to: { story: {} },   // genau das, was Instagram schickt: leer
+  }] } }];
+
+  const offen = offeneNachrichten(konv, "1", ledger, jetzt, []);
+  assert.equal(offen[0].bezugQuelle, "Story-Antwort ohne Zuordnung");
+  assert.match(offen[0].bezugRoh, /ids=\[keine\] url=nein/, "die rohen Felder werden nicht protokolliert");
+
+  const titel = offen.laufend.map((e) => e.titel);
+  assert.equal(titel.length, 2, `es sollten genau die zwei heutigen Stories sein, waren: ${titel.join(" | ")}`);
+  assert.ok(titel.some((t) => /Schutzauftrag/.test(t)) && titel.some((t) => /Nebenbestimmung/.test(t)));
+  assert.ok(!titel.some((t) => /Leistungskondiktion/.test(t)), "ein Beitrag steht als Story-Kandidat drin");
+  assert.ok(!titel.some((t) => /vorgestern/.test(t)), "eine abgelaufene Story steht noch drin");
+  assert.ok(offen.laufend.every((e) => e.wann), "den Kandidaten fehlt die Uhrzeit");
+
+  /* Und beim Nachfragen dürfen nur Stories angeboten werden. */
+  const quelle = fs.readFileSync(new URL("../src/postfach.mjs", import.meta.url), "utf8");
+  assert.match(quelle, /NIEMALS einen Beitrag aus „Zuletzt erschienen“/, "die Regel gegen Beiträge als Story-Kandidat fehlt");
+});
