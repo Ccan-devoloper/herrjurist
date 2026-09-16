@@ -628,22 +628,54 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
 }
 
 /* Web-Recherche für das Format „aktuell“ (Server-Tool Websuche). */
+/* Die Quellen sind nicht geraten, sondern geprüft: bin/quellen-pruefen.mjs
+   ruft jede einzeln ab und sagt, ob sie antwortet und eine datierte Liste
+   trägt. Der erste Lauf am 16.09. zeigte, wie nötig das war - von dreizehn
+   Kandidaten waren zehn tot (das BVerwG benutzt .php-Pfade, der BGH hat
+   keinen RSS-Feed, das BVerfG liegt unter /DE/Presse/). Eine Recherche, die
+   auf tote Seiten zeigt, sucht frei weiter - und genau das kostete an
+   diesem Tag 0,25 $ ohne ein einziges Ergebnis. */
+const QUELLEN_JURA = `Auswahlhilfe (dort steht, WARUM eine Entscheidung examensrelevant ist - damit fängst du an):
+- Aktuelle Rechtsprechung, Lehrstuhl Weiler, Uni Bielefeld: https://www.uni-bielefeld.de/fakultaeten/rechtswissenschaft/ls/weiler/aktuelle_rechtsprechung/
+- FamoS, Fälle des Monats, Uni Würzburg: https://famos.jura.uni-wuerzburg.de/faelle/
+
+Amtliche Quellen (dort holst du Aktenzeichen, Datum und die tragenden Gründe):
+- BGH, Pressemitteilungen 2026: https://www.bundesgerichtshof.de/DE/Presse/Pressemitteilungen/2026/pressemitteilungen2026_node.html
+- BGH, Entscheidungen: https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/list.py?Gericht=bgh&Sort=3&Art=pm
+- BVerfG, Pressemitteilungen: https://www.bundesverfassungsgericht.de/DE/Presse/Pressemitteilungen/pressemitteilungen_node.html
+- BVerwG, Pressemitteilungen: https://www.bundesverwaltungsgericht.de/presse/pressemitteilungen/pressemitteilungen.php
+- BAG: https://www.bundesarbeitsgericht.de/pressestelle/ und https://www.bundesarbeitsgericht.de/entscheidungen/
+- EuGH, Pressemitteilungen: https://curia.europa.eu/jcms/jcms/Jo2_7052/de/
+- dejure.org: https://dejure.org/
+- Bundesgesetzblatt: https://www.recht.bund.de/bgbl`;
+
 export async function aktuellRecherchieren(datum, bereitsBehandelt = [], gebiet = null) {
   /* Das Rechtsgebiet des Tages als Wunsch, nicht als Auftrag: Die
      Nachrichtenlage laesst sich nicht einteilen, und eine erzwungene
      Randentscheidung aus dem richtigen Gebiet waere schlechter als eine
      starke aus dem falschen. */
-  const wunsch = gebiet ? `\n\nWenn die Auswahl es hergibt, nimm bevorzugt eine Neuigkeit aus dem ${gebiet} - heute fehlt dieses Gebiet sonst im Kanal. Zwingend ist das nicht: Eine starke Entscheidung aus einem anderen Gebiet geht einer schwachen aus dem gewuenschten vor.` : "";
-  const frage = `Heute ist der ${datumLesbar(datum)}. Recherchiere 3–5 aktuelle Neuigkeiten aus den letzten 6 Wochen, die für Kandidat:innen des ersten und zweiten juristischen Staatsexamens relevant sind: neue Entscheidungen von BGH, BVerfG, BVerwG, BAG oder EuGH mit Examensbezug, Gesetzesänderungen (BGB, StGB, StPO, ZPO, GG, VwGO, VwVfG, HGB, GmbHG, ArbR), Änderungen an Juristenausbildungsgesetzen oder Prüfungsordnungen der Länder.
+  const wunsch = gebiet ? `\n- Wenn die Auswahl es hergibt, nimm bevorzugt etwas aus dem ${gebiet}; heute fehlt dieses Gebiet sonst im Kanal. Zwingend ist das nicht.` : "";
+  const frage = `Heute ist der ${datumLesbar(datum)}. Finde EINE aktuelle Neuigkeit der letzten 6 Wochen, die für Kandidat:innen des ersten oder zweiten juristischen Staatsexamens wirklich zählt: eine Entscheidung von BGH, BVerfG, BVerwG, BAG oder EuGH zu einem Klausurthema, eine Gesetzesänderung (BGB, StGB, StPO, ZPO, GG, VwGO, VwVfG, HGB, GmbHG, ArbR) oder eine Änderung an Juristenausbildungsgesetzen oder Prüfungsordnungen.
 
-Nutze ausschließlich frei zugängliche Quellen: die Entscheidungsdatenbanken der Gerichte selbst (bundesgerichtshof.de, bundesverfassungsgericht.de, bundesverwaltungsgericht.de, bundesarbeitsgericht.de, curia.europa.eu), rechtsprechung-im-internet.de, gesetze-im-internet.de, dejure.org, openjur.de, Bundesgesetzblatt, Landesjustizprüfungsämter. KEINE kostenpflichtigen Datenbanken (beck-online, juris, Wolters Kluwer) – deren Inhalte dürfen nicht weitergegeben werden; die amtlichen Entscheidungsgründe sind ohnehin frei.
+${QUELLEN_JURA}
+
+So arbeitest du:
+- Fang bei der Auswahlhilfe an. Diese Seiten sind kurz und datiert und sagen dir, was examensrelevant ist. Findest du dort etwas Passendes, ist die Suche beendet - such nicht weiter nach etwas noch Besserem.
+- HÖCHSTENS ZWEI Suchvorgänge. Danach schreibst du mit dem, was du hast.
+- Von den Besprechungen übernimmst du KEINEN Satz und KEINE Gliederung. Sie sagen dir nur, worauf es ankommt; der Beitrag entsteht aus der Entscheidung selbst, in eigenen Worten. Als Quelle nennst du die Entscheidung, nicht die Besprechung.
+- KEINE kostenpflichtigen Datenbanken (beck-online, juris-Volltexte, Wolters Kluwer). Die amtlichen Gründe sind frei zugänglich.
+- Lieber eine Entscheidung zu einem Klausurklassiker als eine spektakuläre Randfrage.${wunsch}
 
 Bereits behandelt (nicht erneut): ${bereitsBehandelt.join("; ") || "–"}.
 
-Wähle dann DIE eine Neuigkeit mit dem größten Examensbezug aus – lieber eine Entscheidung zu einem Klausurklassiker als eine spektakuläre Randfrage. Antworte mit:
-1. Auswahl: Titel, Datum, Aktenzeichen, Fach (eines von: ${FACH_LISTE})
-2. Notizen: Was ist passiert, welche Norm trägt die Entscheidung, was ändert sich gegenüber der bisherigen Linie, und was heißt das für die Klausur (max. 200 Wörter, eigene Worte)
-3. Quellen: 2–3 URLs${wunsch}`;
+Antworte mit:
+1. Titel: kurzer Titel
+2. Datum und Aktenzeichen
+3. Fach: eines von ${FACH_LISTE}
+4. Notizen: Was ist passiert, welche Norm trägt es, was ändert sich gegenüber der bisherigen Linie, was heißt das für die Klausur (max. 200 Wörter, eigene Worte)
+5. Quellen: 2–3 URLs
+
+Findest du nach zwei Suchen nichts, was diese Maßstäbe erfüllt, antworte NUR mit dem Wort KEINE_NEUIGKEIT und sonst nichts. Das ist kein Fehler, sondern ein sauberes Ergebnis - der Beitrag entsteht dann aus dem Themenpool.`;
   return webRecherche(frage, "recherche");
 }
 

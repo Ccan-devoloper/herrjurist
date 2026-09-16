@@ -407,6 +407,26 @@ async function main() {
   /* Themen, die heute schon vergeben sind - damit ein Ausweichbeitrag nicht
      dasselbe Thema nimmt wie ein anderer Slot. */
   const belegteThemen = new Set([...plan.beitraege, ...plan.stories].map((e) => e.themaId).filter(Boolean));
+  /* Ein Slot, dessen Recherche nichts hergibt, faellt nicht aus: Er nimmt ein
+     Thema aus dem Pool. „aktuell" und „loesungsskizze" leben von der
+     Recherche und haben kein eigenes Thema - ohne diesen Ausweg fehlte der
+     Beitrag ganz. Am 16.09. war genau das der Fall.
+
+     Zwei Wege fuehren hierher: kein Geld fuer die Recherche (BudgetFehler)
+     oder eine Recherche, die sauber nichts gefunden hat. Der zweite Weg ist
+     kein Fehler: Lieber ein guter Beitrag aus dem Pool als einer ueber eine
+     Neuigkeit ohne Pruefungsbezug. */
+  const aufThemenpoolAusweichen = (eintrag) => {
+    const frei = pool.filter((t) => !belegteThemen.has(t.id) && (FORMAT_QUELLEN.pruefungsfrage || []).includes(t.typ));
+    const ausweich = frei.find(Boolean) || pool.find((t) => !belegteThemen.has(t.id));
+    if (!ausweich) return null;
+    belegteThemen.add(ausweich.id);
+    eintrag.format = "pruefungsfrage";
+    eintrag.themaId = ausweich.id;
+    log(`  → „pruefungsfrage" statt Recherche: „${ausweich.titel}" - ein Beitrag ohne Recherche ist besser als keiner.`);
+    return textBesorgen(eintrag);
+  };
+
   const textBesorgen = async (eintrag) => {
     const vorhanden = hosting.jsonLesen(textDatei(eintrag), null);
     if (vorhanden) return vorhanden;
@@ -422,7 +442,17 @@ async function main() {
           recherche = eintrag.format === "loesungsskizze"
             ? await loesungsRecherchieren(datum, eintrag.anlass || plan.abendAnlass)
             : await aktuellRecherchieren(datum, bisher, fehlendesGebiet(plan));
-          log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
+          /* „KEINE_NEUIGKEIT" ist die verabredete Antwort fuer: nichts
+             gefunden, was den Massstab haelt. Ebenso zaehlt ein Ergebnis
+             ohne jede Quelle - daraus laesst sich kein belegter Beitrag
+             bauen. Beides fuehrt sofort auf den Themenpool, statt einen
+             duennen Beitrag zu erzwingen. */
+          const leer = /KEINE_NEUIGKEIT/i.test(recherche.notizen || "") || !recherche.quellen.length;
+          if (leer) {
+            log(`  Recherche ohne verwertbares Ergebnis${/KEINE_NEUIGKEIT/i.test(recherche.notizen || "") ? " (nichts mit Prüfungsbezug gefunden)" : " (keine Quellen)"}.`);
+            const ersatz = aufThemenpoolAusweichen(eintrag);
+            if (ersatz) return ersatz;
+          } else log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
         } catch (e) {
           if (!(e instanceof BudgetFehler)) throw e;
           /* Kein Geld für die Recherche - aber ein Beitrag ohne Recherche ist
@@ -434,14 +464,9 @@ async function main() {
              danach warf sie einen BudgetFehler, der durch textBesorgen nach
              oben durchschlug - und der Beitrag fiel ersatzlos aus. */
           log(`  ⏸ ${e.message}`);
-          const frei = pool.filter((t) => !belegteThemen.has(t.id) && (FORMAT_QUELLEN.pruefungsfrage || []).includes(t.typ));
-          const ausweich = frei.find(Boolean) || pool.find((t) => !belegteThemen.has(t.id));
-          if (!ausweich) throw e;
-          belegteThemen.add(ausweich.id);
-          eintrag.format = "pruefungsfrage";
-          eintrag.themaId = ausweich.id;
-          log(`  → „pruefungsfrage" statt Recherche: „${ausweich.titel}" - ein Beitrag ohne Recherche ist besser als keiner.`);
-          return textBesorgen(eintrag);
+          const ersatz = aufThemenpoolAusweichen(eintrag);
+          if (!ersatz) throw e;
+          return ersatz;
         }
       }
       if (eintrag.format === "wochenrueckblick") {

@@ -2465,3 +2465,33 @@ test("Über sechs Wochen trägt jedes Rechtsgebiet gleich viele Beiträge", asyn
       `${was} ungleich verteilt: Zivilrecht ${werte[0]}, Strafrecht ${werte[1]}, Öffentliches Recht ${werte[2]}`);
   }
 });
+
+test("Die Recherche zeigt nur auf geprüfte Quellen und darf leer ausgehen", async () => {
+  /* 16.09.: Von dreizehn Quellen im Prompt waren zehn tot - alle von Hand
+     geraten. Eine Recherche, die auf tote Seiten zeigt, sucht frei weiter
+     und zahlt jede Runde mit. Die Quellen stehen jetzt in
+     bin/quellen-pruefen.mjs und werden dort abgerufen, bevor sie in den
+     Prompt kommen. */
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  const pruefer = fs.readFileSync(new URL("../bin/quellen-pruefen.mjs", import.meta.url), "utf8");
+
+  /* Jede URL aus dem Recherche-Prompt muss in der Quellenprüfung stehen -
+     sonst behauptet der Prompt etwas, das nie jemand abgerufen hat. */
+  const block = autor.slice(autor.indexOf("const QUELLEN_JURA"), autor.indexOf("export async function aktuellRecherchieren"));
+  const urls = [...block.matchAll(/https?:\/\/[^\s`]+/g)].map((m) => m[0]);
+  assert.ok(urls.length >= 8, `zu wenige Quellen im Prompt: ${urls.length}`);
+  for (const u of urls) assert.ok(pruefer.includes(u), `ungeprüfte Quelle im Prompt: ${u}`);
+
+  /* Tote Quellen aus früheren Läufen dürfen nicht zurückkehren. */
+  for (const tot of ["RSSNewsfeed_Pressemitteilungen.xml", "/DE/Aktuelles/aktuelles_node.html", "gesetze-im-internet.de", "rechtsprechung-im-internet.de"]) {
+    assert.ok(!block.includes(tot), `zweimal nicht erreichbare Quelle steht wieder im Prompt: ${tot}`);
+  }
+
+  /* „Nichts gefunden" ist ein sauberes Ergebnis, kein Fehler - und führt
+     ohne weitere Kosten auf den Themenpool. */
+  assert.match(autor, /KEINE_NEUIGKEIT/, "dem Modell fehlt der Weg, sauber nichts zu finden");
+  assert.match(autor, /HÖCHSTENS ZWEI Suchvorgänge/, "die Suche ist nicht begrenzt");
+  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  assert.match(lauf, /KEINE_NEUIGKEIT/, "der Tageslauf wertet das leere Ergebnis nicht aus");
+  assert.match(lauf, /aufThemenpoolAusweichen/, "der Ausweg auf den Themenpool ist nicht benannt");
+});
