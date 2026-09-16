@@ -2539,3 +2539,43 @@ test("Story-Antworten: Bezug aus jeder Quelle, und nie geraten", async () => {
   assert.match(quelle, /Ich tippe auf/, "die konkrete Fehlformulierung ist nicht gesperrt");
   assert.match(quelle, /HINTERGRUND, keine Zuordnungshilfe/, "die Hintergrundliste ist nicht als solche gekennzeichnet");
 });
+
+test("Story-Antwort ohne ID: laufende Stories statt Gesprächsverlauf", async () => {
+  /* 16.09., der echte Testfall: Jemand antwortete auf die Beweislast-Story
+     mit „Wo müsste ich das genau einbauen und prüfen?". Instagram meldete
+     die Nachricht als Story-Antwort, gab aber keine verwertbare ID mit. Der
+     Bot nahm den Verlauf – dort stand Unterhaltsrecht von vorher – und
+     antwortete zum falschen Thema. */
+  const { offeneNachrichten } = await import("../src/postfach.mjs");
+  const jetzt = new Date("2026-09-16T16:40:00Z").getTime();
+  const ledger = { veroeffentlicht: [
+    { art: "story", medienId: "EIGEN-7", titel: "Wonach richtet sich die Verteilung der Beweislast?", datum: "2026-09-16", veroeffentlicht: "2026-09-16T07:10:00.000Z" },
+    { art: "story", medienId: "EIGEN-3", titel: "Trennungsunterhalt: die Voraussetzungen", datum: "2026-09-16", veroeffentlicht: "2026-09-16T07:09:00.000Z" },
+  ] };
+  const konv = (extra) => [{ id: "k1", messages: { data: [{
+    id: "m1", from: { id: "99", username: "nachfolgeberatung" },
+    message: "Wo müsste ich das genau einbauen und prüfen?",
+    created_time: new Date(jetzt - 600000).toISOString(), ...extra,
+  }] } }];
+
+  /* Instagram nennt eine ID aus einem ANDEREN Namensraum – die Uhrzeit der
+     laufenden Story verbindet sie mit unserem Eintrag. */
+  const laufend = [{ id: "IG-FREMD-7", timestamp: "2026-09-16T07:10:30.000Z" }];
+  const ueberZeit = offeneNachrichten(konv({ reply_to: { story: { id: "IG-FREMD-7" } } }), "1", ledger, jetzt, laufend);
+  assert.equal(ueberZeit[0].bezugQuelle, "aufgelöst", "die Brücke über den Veröffentlichungszeitpunkt greift nicht");
+  assert.match(ueberZeit[0].bezug, /Beweislast/);
+
+  /* Gar keine ID: Dann muss wenigstens feststehen, WELCHE Stories laufen –
+     sonst kann nur allgemein zurückgefragt werden. */
+  const ohneId = offeneNachrichten(konv({ reply_to: { story: { url: "https://cdn.example/x.jpg" } } }), "1", ledger, jetzt, laufend);
+  assert.equal(ohneId[0].bezugQuelle, "Story-Antwort ohne Zuordnung");
+  assert.match(ohneId[0].bezugRoh, /ids=\[keine\] url=ja/, "die rohen Felder fehlen im Log");
+  assert.equal(ohneId.laufend.length, 1, "die laufenden Stories stehen dem Modell nicht zur Verfügung");
+  assert.match(ohneId.laufend[0].titel, /Beweislast/);
+
+  /* Und die Regel sagt ausdrücklich, dass der Verlauf hier nicht das Thema
+     bestimmt - genau daran ist die Antwort heute gescheitert. */
+  const quelle = fs.readFileSync(new URL("../src/postfach.mjs", import.meta.url), "utf8");
+  assert.match(quelle, /VERLAUF NICHT der Bezug/, "die Regel gegen den Verlauf als Thema fehlt");
+  assert.match(quelle, /Aktuell laufende Stories/, "die laufenden Stories kommen nicht in den Prompt");
+});

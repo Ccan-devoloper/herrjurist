@@ -439,6 +439,28 @@ export class Instagram {
      Zwei Anläufe, weil `reply_to` nicht auf jeder API-Fassung existiert und
      ein unbekanntes Feld die ganze Abfrage mit 400 abbrechen ließe. Ohne
      Bezug läuft alles weiter wie bisher - nur eben blind. */
+  /**
+   * Die eigenen Stories, die gerade laufen (24-Stunden-Fenster).
+   *
+   * Zweite Quelle fuer die Zuordnung einer Story-Antwort: Am 16.09. meldete
+   * Instagram eine Nachricht als Story-Antwort, gab aber keine verwertbare ID
+   * mit. Der Bot nahm daraufhin den Gespraechsverlauf - und antwortete zum
+   * Thema von vorgestern. Wer gerade auf eine Story antwortet, meint diese
+   * Story; und welche ueberhaupt in Frage kommen, steht hier.
+   *
+   * Faellt der Aufruf durch (fehlende Berechtigung), ist das kein Grund zum
+   * Abbruch - dann fehlt eben diese eine Hilfe.
+   */
+  async laufendeStories() {
+    try {
+      const daten = await this.anfrage("GET", `${this.kontoId}/stories`, { fields: "id,timestamp,media_type,permalink" });
+      return daten?.data || [];
+    } catch (e) {
+      console.warn(`  ! Laufende Stories nicht abfragbar: ${e.message.split("\n")[0].slice(0, 110)}`);
+      return [];
+    }
+  }
+
   async konversationen(anzahl = 25, jeUnterhaltung = 12) {
     const kern = `id,from,to,message,created_time`;
     const bauen = (m) => `id,updated_time,participants,messages.limit(${jeUnterhaltung}){${m}}`;
