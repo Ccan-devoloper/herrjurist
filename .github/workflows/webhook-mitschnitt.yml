@@ -1,0 +1,68 @@
+name: Webhook-Mitschnitt
+
+# Nimmt die Rohereignisse entgegen, die der Cloudflare-Worker weiterreicht,
+# und haengt sie im Asset-Zweig an state/webhook-roh.jsonl an.
+#
+# Warum nicht direkt in eine Datenbank? Weil der Bot seinen Zustand ohnehin
+# im Asset-Zweig fuehrt: versioniert, lesbar, ohne weiteren Dienst, der Geld
+# kosten oder ausfallen kann. Und weil die Frage, die hier beantwortet wird,
+# eine einmalige ist - was schickt Meta bei einer Story-Antwort wirklich?
+#
+# Es wird NICHTS beantwortet. Reiner Mitschnitt.
+
+on:
+  repository_dispatch:
+    types: [instagram-webhook]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: webhook-mitschnitt
+  cancel-in-progress: false
+
+jobs:
+  mitschneiden:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: instagram-assets
+          fetch-depth: 1
+
+      - name: Rohereignis anhängen
+        env:
+          ROH: ${{ github.event.client_payload.roh }}
+          EMPFANGEN: ${{ github.event.client_payload.empfangen }}
+        run: |
+          set -euo pipefail
+          mkdir -p state
+          # Base64 zurueck in JSON, eine Zeile je Ereignis (JSONL).
+          python3 - <<'PY'
+          import base64, json, os, pathlib
+          roh = base64.b64decode(os.environ["ROH"])
+          try:
+              daten = json.loads(roh)
+          except Exception as e:
+              daten = {"_nicht_lesbar": str(e), "_text": roh.decode("utf-8", "replace")[:4000]}
+          zeile = json.dumps({"empfangen": os.environ.get("EMPFANGEN", ""), "ereignis": daten}, ensure_ascii=False)
+          p = pathlib.Path("state/webhook-roh.jsonl")
+          with p.open("a", encoding="utf-8") as f:
+              f.write(zeile + "\n")
+          print("Mitgeschnitten:", zeile[:400])
+          PY
+
+      - name: Ablegen
+        run: |
+          set -euo pipefail
+          git config user.name instagram-bot
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/webhook-roh.jsonl
+          git commit -m "Webhook-Mitschnitt $(date -u +%FT%TZ)" || { echo "nichts Neues"; exit 0; }
+          # Mehrere Ereignisse koennen gleichzeitig ankommen - deshalb erst
+          # nachziehen, dann schieben.
+          for i in 1 2 3 4; do
+            git pull --rebase origin instagram-assets && git push origin HEAD:instagram-assets && exit 0
+            sleep $((i * 3))
+          done
+          exit 1

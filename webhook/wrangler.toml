@@ -1,0 +1,10 @@
+# Cloudflare Worker: Mitschnitt der Instagram-Webhooks.
+# Bereitstellen mit:  npx wrangler deploy
+# Secrets setzen mit: npx wrangler secret put VERIFY_TOKEN   (usw.)
+name = "instagram-webhook-mitschnitt"
+main = "worker.mjs"
+compatibility_date = "2026-09-16"
+
+[vars]
+# Kein Geheimnis - nur, wohin die Ereignisse gehen.
+GITHUB_REPO = "Ccan-devoloper/herrjurist"

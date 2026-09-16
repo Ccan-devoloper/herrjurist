@@ -2631,3 +2631,28 @@ test("Liefert Instagram gar nichts, kommen die laufenden Stories aus dem eigenen
   const quelle = fs.readFileSync(new URL("../src/postfach.mjs", import.meta.url), "utf8");
   assert.match(quelle, /NIEMALS einen Beitrag aus „Zuletzt erschienen“/, "die Regel gegen Beiträge als Story-Kandidat fehlt");
 });
+
+test("Der Mitschnitt-Worker prüft die Signatur auf den rohen Bytes", async () => {
+  /* Die Signaturprüfung ist die einzige Verteidigung des Endpunkts: Ohne sie
+     kann jeder beliebige Daten in den Mitschnitt schreiben. Zwei Fehler sind
+     dabei üblich und beide still - über dem neu serialisierten JSON prüfen
+     statt über den rohen Bytes, und mit === vergleichen statt in konstanter
+     Zeit. */
+  const quelle = fs.readFileSync(new URL("../webhook/worker.mjs", import.meta.url), "utf8");
+  assert.match(quelle, /await request\.arrayBuffer\(\)/, "der rohe Body wird nicht erhalten");
+  assert.match(quelle, /x-hub-signature-256/, "die Signatur wird nicht geprüft");
+  assert.match(quelle, /unterschied \|=/, "der Vergleich läuft nicht in konstanter Zeit");
+  /* Erst prüfen, dann weiterreichen - nie umgekehrt. */
+  assert.ok(quelle.indexOf("signaturStimmt") < quelle.indexOf("ctx.waitUntil"),
+    "das Ereignis wird weitergereicht, bevor die Signatur geprüft ist");
+  /* Und die Challenge, ohne die sich der Webhook nicht abonnieren lässt. */
+  assert.match(quelle, /hub\.challenge/, "die Einrichtungsprüfung von Meta fehlt");
+  /* Kein Geheimnis im Code. */
+  for (const s of ["VERIFY_TOKEN", "APP_SECRET", "GITHUB_TOKEN"]) {
+    assert.match(quelle, new RegExp(`env\\.${s}`), `${s} wird nicht aus der Umgebung gelesen`);
+  }
+  assert.ok(!/EAA[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}/.test(quelle), "im Worker steht ein Token im Klartext");
+
+  /* Der Mitschnitt darf nichts beantworten - das ist sein ganzer Sinn. */
+  assert.ok(!/nachrichtSenden|\/messages/.test(quelle), "der Mitschnitt sendet Nachrichten");
+});
