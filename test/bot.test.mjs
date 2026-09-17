@@ -2783,3 +2783,66 @@ test("Rücklage übersteigt nie das noch freie Budget", async () => {
   /* Cent-Bruchteile dürfen sich nicht zu einem Phantombetrag aufaddieren. */
   assert.equal(bezahlbareSumme([0.0001, 0.0001, 0.0001], 1), 0);
 });
+
+/* --------------------------------------------------------------------------
+   Obergrenze je Beitrag UND eigener Topf für die Stories.
+
+   Beschluss des Betreibers am 17.09.: höchstens 0,10 $ je Beitrag - aber es
+   muss sichergestellt sein, dass das reicht und trotzdem alle Beiträge, Reels
+   und Stories erscheinen. Genau das rechnen diese Tests nach.
+   -------------------------------------------------------------------------- */
+test("Ein voller Tag passt unter den Deckel von 0,32 $", async () => {
+  const k = await import("../src/kosten.mjs");
+  const { CONFIG } = await import("../src/config.mjs");
+
+  /* Was ein voller Tag an Schreibarbeit kostet, zu den Erwartungswerten. */
+  const karussell = k.erwartet("autor") + k.erwartet("faktencheck");
+  const reel      = k.erwartet("reel") + k.erwartet("reel-faktencheck");
+  const stories   = k.erwartet("stories") + k.erwartet("story-faktencheck");
+  const motive    = CONFIG.reel.erklaerBilder * k.erwartet("erklaerbild");
+
+  const vollerTag = 2 * karussell + reel + stories + motive;
+  assert.ok(vollerTag <= 0.32,
+    `Ein voller Tag (2 Karussells + Reel + 9 Stories + ${CONFIG.reel.erklaerBilder} Motive) kostet ${vollerTag.toFixed(3)} $ und muss unter 0,32 $ bleiben`);
+
+  /* Und die Obergrenze darf nicht unter dem liegen, was ein Beitrag normal
+     braucht - sonst stellt sie gesunde Beiträge zurück. */
+  assert.ok(CONFIG.ki.maxJeBeitragUsd > karussell,
+    `Obergrenze ${CONFIG.ki.maxJeBeitragUsd} $ muss über den normalen Kosten eines Beitrags (${karussell.toFixed(3)} $) liegen`);
+  assert.ok(CONFIG.ki.maxJeBeitragUsd > reel,
+    `Obergrenze ${CONFIG.ki.maxJeBeitragUsd} $ muss über den normalen Kosten eines Reels (${reel.toFixed(3)} $) liegen`);
+});
+
+test("Ein teurer Beitrag frisst die Stories nicht mehr auf", async () => {
+  const k = await import("../src/kosten.mjs");
+  k.budgetSetzen({ limitUsd: 0.32 });
+
+  /* Die Stories bekommen ihren eigenen Topf. */
+  k.reservieren(0.06, ["stories", "story-faktencheck"], "die Stories", "stories");
+  assert.equal(k.fremdeReserve("autor"), 0.06, "für den Autor ist der Story-Topf gesperrt");
+  assert.equal(k.fremdeReserve("stories"), 0, "die Stories kommen an ihren eigenen Topf");
+
+  /* Der Beitrag läuft gegen seine Obergrenze, nicht gegen den Tag. */
+  k.postenBeginnen("Beitrag b1", 0.10);
+  k.erfassenStueck(0.095, "autor", "erster Entwurf und zwei Prüfrunden");
+  assert.throws(() => k.budgetPruefen("faktencheck"), k.PostenFehler,
+    "die dritte Runde reisst die Obergrenze des Beitrags");
+  /* PostenFehler bleibt ein BudgetFehler - alte Behandlungen greifen weiter. */
+  assert.ok(new k.PostenFehler("x") instanceof k.BudgetFehler);
+  k.postenBeenden();
+
+  /* Entscheidend: Die Stories können danach trotzdem noch geschrieben werden. */
+  assert.ok(k.budgetFrei("stories"),
+    "nach dem zurückgestellten Beitrag muss für die Stories noch Geld da sein");
+});
+
+test("Ohne eigenen Topf wäre genau der Fehler vom 17.09. wieder da", async () => {
+  const k = await import("../src/kosten.mjs");
+  k.budgetSetzen({ limitUsd: 0.32 });
+  k.erfassenStueck(0.275, "autor", "wie in der Nacht zum 17.09.");
+  /* Ohne Story-Topf: Die Rücklage der Beiträge sperrt die Stories aus. */
+  k.reservieren(0.13, ["autor", "faktencheck", "reel"], "noch zu schreibende Beiträge", "beitraege");
+  assert.equal(k.budgetFrei("stories"), false, "so sah es am 17.09. aus");
+  /* Genau dagegen hilft bezahlbareSumme: 0.13 waren nie bezahlbar. */
+  assert.equal(k.bezahlbareSumme([0.085], k.tagesLimit() - k.tagesStand()), 0);
+});

@@ -36,7 +36,7 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, PostenFehler, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -316,8 +316,21 @@ async function main() {
       && plan.beitraege.some((b) => b.format === "reel" && b.status !== "veroeffentlicht" && !b.fehler);
     const erklaerPreis = CONFIG.reel.erklaerBilder * erwartet("erklaerbild");
     if (erklaerOffen && summe + erklaerPreis <= freiJetzt) summe = runden(summe + erklaerPreis);
-    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen && summe >= erklaerPreis ? " und die Figuren des Erklärvideos" : ""}`);
-    else reservierungAufheben();
+    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen && summe >= erklaerPreis ? " und die Figuren des Erklärvideos" : ""}`, "beitraege");
+    else reservierungAufheben("beitraege");
+
+    /* Eigener Topf für die Stories - und das ist der Kern der Reparatur vom
+       17.09. Bisher hatten nur die Beiträge eine Rücklage; die Stories lebten
+       von dem, was übrig blieb. Ein Beitrag, der sich verteuert, hat sie
+       damit einfach mitgegessen: An dem Tag kosteten drei Faktencheck-Runden
+       für EINEN Beitrag 0.19 $, und alle neun Stories fielen aus.
+       Ein Topf, den die Beiträge nicht öffnen können, verhindert das. */
+    const storiesOffen = trocken ? [] : (plan.stories || [])
+      .filter((st) => st.art !== "teaser" && st.status !== "veroeffentlicht")
+      .filter((st) => !hosting.jsonLesen(`inhalte/${datum}-${st.slot}.json`, null));
+    const storyPreis = storiesOffen.length ? erwartet("stories") + erwartet("story-faktencheck") : 0;
+    if (storyPreis > 0) reservieren(storyPreis, ["stories", "story-faktencheck"], `${storiesOffen.length} noch zu schreibende Stories`, "stories");
+    else reservierungAufheben("stories");
     return summe;
   };
   const ruecklage = ruecklageAktualisieren();
@@ -499,9 +512,14 @@ async function main() {
   for (const eintrag of vorab) {
     try {
       log(`Text vorab: ${eintrag.format === "reel" ? "Reel" : "Beitrag"} ${eintrag.slot} ${eintrag.themaTitel || ""}`);
+      postenBeginnen(`Beitrag ${eintrag.slot}`, CONFIG.ki.maxJeBeitragUsd);
       await textBesorgen(eintrag);
       vorabGeschrieben++;
     } catch (e) {
+      /* Nur DIESER Beitrag ist am Ende, nicht der Tag: weitermachen mit dem
+         nächsten. Ein `break` hier hätte am 17.09. nach dem ersten teuren
+         Beitrag alles Übrige mitgerissen. */
+      if (e instanceof PostenFehler) { log(`  ⏸ ${e.message}`); continue; }
       if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); break; }
       /* Nach allen Versuchen nicht freigegeben: heute nicht noch einmal
          bezahlen – morgen mit frischem Entwurf, der Plan trägt ihn über.
@@ -513,6 +531,8 @@ async function main() {
         vorabGescheitert++;
       }
       console.error(`  ✗ Text ${eintrag.slot}: ${e.message.split("\n")[0]}`);
+    } finally {
+      postenBeenden();
     }
   }
   if (vorabGeschrieben || vorabGescheitert) {

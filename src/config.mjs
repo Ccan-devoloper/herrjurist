@@ -186,6 +186,11 @@ export const CONFIG = {
        nicht daran scheitern, dass Beiträge und Recherche das Budget vorher
        aufbrauchen. */
     reelReserveUsd: Number(env("IG_REEL_RESERVE_USD", "0.11")),
+    /* Obergrenze je Beitrag. Ein normaler Beitrag kostet 0.06-0.085 $; wer
+       0.10 $ reisst, hat sich in Korrekturrunden verfangen und wird
+       zurueckgestellt, statt den Tag aufzuessen (17.09.: ein Beitrag 0.19 $,
+       danach fielen b2 und alle neun Stories aus). */
+    maxJeBeitragUsd: Number(env("IG_MAX_JE_BEITRAG_USD", "0.10")),
   },
 
   /* Instagram Graph API -------------------------------------------------- */

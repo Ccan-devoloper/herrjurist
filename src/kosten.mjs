@@ -23,7 +23,15 @@ const ANTWORT_ZWECKE = ["kommentare", "nachrichten"];
 /* Für das Reel des Tages zurückgelegter Betrag. Alle anderen Aufrufe hören
    entsprechend früher auf, damit das Reel am Abend noch geschrieben werden
    kann – es soll täglich erscheinen. */
-let reserviert = 0, reserviertFuer = ["reel"], reserviertLabel = "das Reel";
+/* Mehrere Toepfe, nicht einer. Ein einziger Topf mit Freigabeliste kann nicht
+   ausdruecken, dass Beitraege und Stories sich gegenseitig NICHT bedienen
+   duerfen: Wer auf der Liste steht, kommt an alles. Am 17.09. hat genau das
+   den Tag gekostet - das Schreiben eines Beitrags durfte das Geld der neun
+   Stories mitverbrauchen, weil die Stories gar keinen eigenen Topf hatten.
+
+   Jeder Topf nennt die Zwecke, die IHN leeren duerfen. Fuer jeden anderen
+   Zweck ist er gesperrt. */
+const reserven = new Map();
 /* Zwecke, die auf die Rücklage zugreifen dürfen – als Liste, denn die Rücklage
    gilt inzwischen allen noch zu schreibenden Beiträgen des Tages, nicht nur
    dem Reel. Verglichen wird der Zweck-Schlüssel, nicht der Wortlaut: Der
@@ -47,16 +55,30 @@ export function budgetSetzen(opt = {}) {
   antwortLimitUsd = opt.antwortLimitUsd ?? Infinity;
   antwortVorbelastung = opt.bisherAntworten ?? 0;
   speichern = opt.speichern ?? null;
-  reserviert = opt.reserviert ?? 0;
-  reserviertFuer = zweckListe(opt.reserviertFuer ?? "reel");
-  reserviertLabel = opt.reserviertLabel ?? "das Reel";
+  reserven.clear();
+  if (opt.reserviert) reserven.set("beitraege", { betrag: opt.reserviert, fuer: zweckListe(opt.reserviertFuer ?? "reel"), label: opt.reserviertLabel ?? "das Reel" });
+  postenBeenden();
 }
 
 /* Hebt die Rücklage auf, sobald das Reel steht (oder feststeht, dass heute
    keines mehr kommt). Danach darf der Rest des Tages sie ausschöpfen. */
-export function reservieren(betrag, fuer = "reel", label = "das Reel") { reserviert = Math.max(0, Number(betrag) || 0); reserviertFuer = zweckListe(fuer); reserviertLabel = label; }
-export function reservierungAufheben() { reserviert = 0; }
-export const reservierung = () => reserviert;
+export function reservieren(betrag, fuer = "reel", label = "das Reel", topf = "beitraege") {
+  const b = Math.max(0, Number(betrag) || 0);
+  if (b > 0) reserven.set(topf, { betrag: b, fuer: zweckListe(fuer), label });
+  else reserven.delete(topf);
+}
+export function reservierungAufheben(topf = "beitraege") { if (topf == null) reserven.clear(); else reserven.delete(topf); }
+/** Summe aller Toepfe (fuer Anzeige und Tests). */
+export const reservierung = () => runden([...reserven.values()].reduce((a, r) => a + r.betrag, 0));
+/** Was diesem Zweck VERSPERRT ist: alle Toepfe, die ihn nicht freigeben. */
+export function fremdeReserve(zweck) {
+  const k = schluessel(zweck) || String(zweck).toLowerCase();
+  return runden([...reserven.values()].filter((r) => !r.fuer.includes(k)).reduce((a, r) => a + r.betrag, 0));
+}
+const fremdeLabel = (zweck) => {
+  const k = schluessel(zweck) || String(zweck).toLowerCase();
+  return [...reserven.values()].filter((r) => !r.fuer.includes(k)).map((r) => r.label).join(" und ");
+};
 /** Teuerster Aufruf je Zweck – wandert in state/kosten.json, damit der nächste
     Lauf des Tages damit weiterrechnet statt mit der Schätzung. */
 export const messungen = () => ({ ...GEMESSEN });
@@ -148,7 +170,6 @@ const erwartetFuer = (zweck) => { const k = schluessel(zweck); if (!k) return ST
 /* Für die Rücklage im Lauf: was ein Aufruf dieses Zwecks heute voraussichtlich kostet. */
 export const erwartet = (zweck) => erwartetFuer(zweck);
 
-const darfReserve = (zweck) => reserviertFuer.includes(schluessel(zweck) || String(zweck).toLowerCase());
 
 /* Zwecke, die einen Beitrag schmücken, aber nicht tragen. Sie brauchen den
    doppelten Spielraum ihrer Schätzung, bevor sie starten dürfen.
@@ -173,17 +194,51 @@ const kuerFaktor = (zweck) => (KUER.includes(schluessel(zweck) || String(zweck).
 
    Deshalb hört das Zeichnen früher auf als der harte Deckel: Der Abstand
    reicht für die Prüfungen, die am selben Tag noch kommen. */
+/* Obergrenze je Beitrag.
+
+   In der Nacht zum 17.09. verbrauchte EIN Beitrag 0.19 $ von 0.32 $: drei
+   Faktencheck-Runden und ein Neuschreiben, weil der Entwurf die
+   Regelbeispiele des § 243 StGB zweimal in Abs. 2 statt Abs. 1 S. 2
+   verortete. Die Pruefung hatte fachlich recht - aber danach war b2
+   unbezahlbar und alle neun Stories fielen aus.
+
+   Ein Beitrag, der seine Grenze reisst, wird deshalb ZURUECKGESTELLT, nicht
+   ungeprueft veroeffentlicht: Sein Entwurf bleibt gespeichert und wartet auf
+   den naechsten Tag. Der Rest des Tages behaelt sein Geld. */
+let postenGrenze = Infinity, postenStart = 0, postenLabel = "";
+export function postenBeginnen(label, grenze) {
+  postenLabel = label; postenStart = tagesStand();
+  postenGrenze = Number.isFinite(grenze) && grenze > 0 ? grenze : Infinity;
+}
+export function postenBeenden() { postenGrenze = Infinity; postenStart = 0; postenLabel = ""; }
+/** Was der laufende Posten bisher gekostet hat. */
+export const postenStand = () => runden(Math.max(0, tagesStand() - postenStart));
+/** Eigener Fehlertyp: Nur DIESER Posten ist am Ende, nicht der Tag. */
+export class PostenFehler extends BudgetFehler {}
+
 const PRUEF_ABSTAND = Number(process.env.IG_PRUEF_ABSTAND_USD || 0.03);
 const abstandFuer = (zweck) => (schluessel(zweck) === "bild" ? PRUEF_ABSTAND : 0);
 
+/* Reicht die Obergrenze des laufenden Postens noch? Antwortzwecke haben einen
+   eigenen Topf und kennen keine Posten. */
+const postenFrei = (zweck) => istAntwort(zweck)
+  || postenStand() + erwartetFuer(zweck) * kuerFaktor(zweck) <= postenGrenze;
+
 export const budgetFrei = (zweck = "") => istAntwort(zweck)
   ? antwortStand() + erwartetFuer(zweck) < antwortLimitUsd
-  : tagesStand() + erwartetFuer(zweck) * kuerFaktor(zweck) + abstandFuer(zweck) + (darfReserve(zweck) ? 0 : reserviert) < limitUsd;
+  : postenFrei(zweck)
+    && tagesStand() + erwartetFuer(zweck) * kuerFaktor(zweck) + abstandFuer(zweck) + fremdeReserve(zweck) < limitUsd;
 
 export function budgetPruefen(zweck = "Claude-Aufruf") {
   if (budgetFrei(zweck)) return;
   if (istAntwort(zweck)) throw new BudgetFehler(`Antwortbudget erreicht (${antwortStand().toFixed(3)} $ von ${antwortLimitUsd.toFixed(2)} $) – ${zweck} wartet bis morgen.`);
-  const rest = reserviert && !darfReserve(zweck) ? ` (davon ${reserviert.toFixed(2)} $ für ${reserviertLabel} zurückgelegt)` : "";
+  /* Zuerst der Posten: Ist NUR er am Ende, geht der Tag weiter. Die
+     Unterscheidung traegt der Fehlertyp, nicht der Wortlaut. */
+  if (!postenFrei(zweck)) {
+    throw new PostenFehler(`Obergrenze für ${postenLabel || "diesen Beitrag"} erreicht (${postenStand().toFixed(3)} $ von ${postenGrenze.toFixed(2)} $) – zurückgestellt, der Entwurf wartet auf morgen. Der Rest des Tages behält sein Geld.`);
+  }
+  const fremd = fremdeReserve(zweck);
+  const rest = fremd ? ` (davon ${fremd.toFixed(2)} $ für ${fremdeLabel(zweck)} zurückgelegt)` : "";
   throw new BudgetFehler(`Tagesbudget erreicht (${tagesStand().toFixed(3)} $ von ${limitUsd.toFixed(2)} $)${rest} – ${zweck} wartet bis morgen.`);
 }
 
