@@ -2896,9 +2896,15 @@ test("Erklärvideo-Figuren werden unter ihrem eigenen Zweck geprüft, nicht als 
   k.erfassenStueck(0.43, "autor", "Tag fast voll");
   /* Die Rücklage für die vier Figuren, wie lauf.mjs sie anlegt. */
   k.reservieren(0.04, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], "die Figuren des Erklärvideos", "beitraege");
-  /* Unter dem alten Zweck „Bild zeichnen" blockiert die eigene Rücklage das
-     Bild: 0.43 + 0.01 + 0.03 Abstand + 0.04 fremd = 0.51 > 0.48. */
-  assert.equal(k.budgetFrei("Bild zeichnen"), false, "so scheiterte das Erklärvideo am 16.09.");
+  /* Seit dem 17.09. zählt für ein Beitragsbild nur der Sicherheitsabstand,
+     nicht die Rücklage anderer Zwecke: 0.43 + 0.01 + 0.03 = 0.47 < 0.48 -
+     das Bild darf. Ein Cent soll nicht vor zwölf Cent Rücklage weichen; an
+     diesem Tag blieb jeder Beitrag beider Kanäle ohne Bild. */
+  assert.equal(k.budgetFrei("Bild zeichnen"), true, "die Rücklage des Abend-Reels blockiert das Morgenbild nicht mehr");
+  /* Der Abstand selbst schützt weiter die Prüfung: Ist der Tag wirklich voll,
+     weicht das Bild. */
+  k.erfassenStueck(0.02, "autor", "noch ein Stück");
+  assert.equal(k.budgetFrei("Bild zeichnen"), false, "0.45 + 0.01 + 0.03 = 0.49 > 0.48");
   /* Unter dem richtigen Zweck ist die Rücklage die eigene: 0.43 + 0.01 < 0.48. */
   assert.equal(k.budgetFrei("Figur zeichnen (erklaerbild)"), true, "die Figur darf ihre eigene Rücklage benutzen");
   const bildki = fs.readFileSync(new URL("../src/bildki.mjs", import.meta.url), "utf8");

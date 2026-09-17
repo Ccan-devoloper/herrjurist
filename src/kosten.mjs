@@ -221,6 +221,15 @@ export const postenStand = () => runden(Math.max(0, tagesStand() - postenStart))
 export class PostenFehler extends BudgetFehler {}
 
 const PRUEF_ABSTAND = Number(process.env.IG_PRUEF_ABSTAND_USD || 0.03);
+
+/* Ein Beitragsbild kostet einen Cent. Am 17.09. wurde es auf beiden Kanaelen
+   den ganzen Tag abgelehnt, weil die Ruecklage fuer das Abend-Reel (0,04 bis
+   0,12 $) gegen den Morgenbeitrag gerechnet wurde - das Bild wich vor einem
+   Betrag, der zwoelfmal so gross ist wie es selbst. Fuer das Bild zaehlt
+   deshalb nur der Sicherheitsabstand (er schuetzt die Pruefung), nicht die
+   Ruecklage anderer Zwecke. Schlimmstenfalls nehmen drei Bilder 0,03 $ aus der
+   Ruecklage - genau der Abstand, der dafuer da ist. */
+const reserveGegen = (zweck) => (schluessel(zweck) === "bild" ? 0 : fremdeReserve(zweck));
 const abstandFuer = (zweck) => (schluessel(zweck) === "bild" ? PRUEF_ABSTAND : 0);
 
 /* Reicht die Obergrenze des laufenden Postens noch? Antwortzwecke haben einen
@@ -231,7 +240,7 @@ const postenFrei = (zweck) => istAntwort(zweck)
 export const budgetFrei = (zweck = "") => istAntwort(zweck)
   ? antwortStand() + erwartetFuer(zweck) < antwortLimitUsd
   : postenFrei(zweck)
-    && tagesStand() + erwartetFuer(zweck) * kuerFaktor(zweck) + abstandFuer(zweck) + fremdeReserve(zweck) < limitUsd;
+    && tagesStand() + erwartetFuer(zweck) * kuerFaktor(zweck) + abstandFuer(zweck) + reserveGegen(zweck) < limitUsd;
 
 export function budgetPruefen(zweck = "Claude-Aufruf") {
   if (budgetFrei(zweck)) return;
