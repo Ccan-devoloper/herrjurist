@@ -341,7 +341,7 @@ async function main() {
        zurück; das wird gemeldet und der Lauf geht weiter. */
     if (CONFIG.postfach.aktiv) {
       try {
-        const r = await nachrichtenBeantworten(ig, ledger, { log });
+        const r = await nachrichtenBeantworten(ig, ledger, { log, stateDir: hosting.stateDir });
         if (r.beantwortet) { ledgerSpeichern(ledgerPfad, ledger); hosting.commit(`Nachrichten beantwortet ${datum}`); await hosting.push(); }
         log(`Postfach: ${r.beantwortet} Antworten (${r.unterhaltungen} Unterhaltungen, ${r.offen} offen)`);
       } catch (e) {

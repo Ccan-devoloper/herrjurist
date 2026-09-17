@@ -59,8 +59,24 @@ npx wrangler secret put GITHUB_TOKEN
 
 - `VERIFY_TOKEN` — frei gewählt, irgendeine lange Zeichenfolge. Du brauchst
   sie gleich in Schritt 5 noch einmal.
-- `APP_SECRET` — der App-Geheimcode aus dem Meta-Dashboard
-  (App → Einstellungen → Allgemein → App-Geheimcode).
+- `APP_SECRET` — der **Instagram**-App-Geheimcode:
+  Meta-Dashboard → Instagram → *API-Einrichtung mit Instagram-Login* → Schritt 1.
+
+  > Nicht der Geheimcode unter *App-Einstellungen → Grundeinstellungen*. Bei
+  > einer App mit Instagram-Login signiert Meta mit dem Instagram-eigenen
+  > Geheimcode. Der falsche Wert fällt nirgends auf: Die Einrichtungsprüfung
+  > ist ein GET und läuft durch, erst die eingehenden Ereignisse scheitern
+  > still an der Signatur — 401, kein Eintrag, kein Fehler im Protokoll.
+  > Genau daran hing es am 17.09. einen Abend lang.
+
+- `ROUTEN` — optional, `<kontoId>=<owner/repo>,<kontoId>=<owner/repo>`.
+  Beide Kanäle hängen an derselben Meta-App, ihre Ereignisse kommen also über
+  dieselbe Adresse herein. Ohne Verteilung landeten Campus-Nachrichten im
+  Jura-Repository. Die Konto-ID steht im Ereignis unter `entry[].id`.
+  Unbekannte Konten fallen auf `GITHUB_REPO` zurück.
+
+  Der `GITHUB_TOKEN` braucht dann Schreibrechte (*Contents*) auf **beide**
+  Repositories.
 - `GITHUB_TOKEN` — der Token aus Schritt 3.
 
 **Die Werte gehören nur hierhin, nicht in den Chat und nicht ins Repository.**

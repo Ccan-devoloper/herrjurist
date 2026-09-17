@@ -2656,3 +2656,96 @@ test("Der Mitschnitt-Worker prüft die Signatur auf den rohen Bytes", async () =
   /* Der Mitschnitt darf nichts beantworten - das ist sein ganzer Sinn. */
   assert.ok(!/nachrichtSenden|\/messages/.test(quelle), "der Mitschnitt sendet Nachrichten");
 });
+
+/* --------------------------------------------------------------------------
+   Story-Zuordnung aus dem Webhook.
+
+   Am 17.09. wurde mitgeschnitten, was Meta beim Eingang einer Story-Antwort
+   wirklich schickt. Ergebnis: `message.reply_to.story.id` ist da - waehrend
+   derselbe Vorgang ueber /conversations ein leeres `reply_to` lieferte. Der
+   Test benutzt deshalb das ECHTE Ereignis, nicht ein ausgedachtes, und die
+   Gegenprobe (normale DM ohne Story) gleich mit.
+   -------------------------------------------------------------------------- */
+test("Story-Bezug kommt aus dem Webhook, wenn der Abruf ihn verschweigt", async () => {
+  const { offeneNachrichten } = await import("../src/postfach.mjs");
+  const jetzt = Date.parse("2026-09-17T00:20:00Z");
+
+  /* Wortgetreu aus state/webhook-roh.jsonl, gekuerzt um die Signatur-URL. */
+  const MID = "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDQ2NTY0NTEwODc3";
+  const webhookBezug = {
+    [MID]: { storyId: "17908618605537083", absender: "1079335494816469", text: "Test Beweislast", zeit: 1789603907432 },
+  };
+  const ledger = {
+    postfach: [],
+    veroeffentlicht: [{ medienId: "17908618605537083", art: "story", titel: "Beweislast beim Anscheinsbeweis", datum: "2026-09-16" }],
+  };
+  /* So, wie /conversations es geliefert hat: OHNE reply_to. */
+  const konv = [{
+    id: "k1",
+    messages: { data: [{ id: MID, message: "Test Beweislast", from: { id: "1079335494816469" }, created_time: "2026-09-17T00:11:47+0000" }] },
+  }];
+
+  const ohneTabelle = offeneNachrichten(konv, "17841446564510877", ledger, jetzt, []);
+  assert.equal(ohneTabelle[0].bezug, null, "ohne Webhook hat der Abruf keinen Bezug - das war der Fehler vom 16.09.");
+
+  const mitTabelle = offeneNachrichten(konv, "17841446564510877", ledger, jetzt, [], webhookBezug);
+  assert.match(mitTabelle[0].bezug, /Beweislast beim Anscheinsbeweis/, "mit Webhook steht die richtige Story fest");
+  assert.equal(mitTabelle[0].bezugQuelle, "aufgelöst");
+  assert.equal(mitTabelle[0].bezugWie, "webhook/mid");
+});
+
+test("Zweitschluessel Absender+Text traegt, wenn die Nachrichten-ID abweicht", async () => {
+  const { offeneNachrichten } = await import("../src/postfach.mjs");
+  const jetzt = Date.parse("2026-09-17T00:20:00Z");
+  const webhookBezug = {
+    "mid-aus-dem-ereignis": { storyId: "S7", absender: "42", text: "Test Beweislast", zeit: jetzt - 60000 },
+  };
+  const ledger = { postfach: [], veroeffentlicht: [{ medienId: "S7", art: "story", titel: "Anscheinsbeweis", datum: "2026-09-16" }] };
+  const konv = [{
+    id: "k1",
+    messages: { data: [{ id: "voellig-andere-id", message: "Test Beweislast", from: { id: "42" }, created_time: "2026-09-17T00:11:47+0000" }] },
+  }];
+  const offen = offeneNachrichten(konv, "1", ledger, jetzt, [], webhookBezug);
+  assert.match(offen[0].bezug, /Anscheinsbeweis/);
+  assert.equal(offen[0].bezugWie, "webhook/absender+text");
+
+  /* Und die Gegenprobe: Ein anderer Absender mit demselben Wortlaut darf den
+     Bezug NICHT erben. Sonst raet der Bot wieder, nur subtiler. */
+  const fremd = [{
+    id: "k2",
+    messages: { data: [{ id: "x", message: "Test Beweislast", from: { id: "999" }, created_time: "2026-09-17T00:11:47+0000" }] },
+  }];
+  assert.equal(offeneNachrichten(fremd, "1", ledger, jetzt, [], webhookBezug)[0].bezug, null);
+});
+
+test("Normale DM ohne Story bekommt keinen Bezug angedichtet", async () => {
+  const { offeneNachrichten } = await import("../src/postfach.mjs");
+  const jetzt = Date.parse("2026-09-17T00:20:00Z");
+  /* Zweites echtes Ereignis vom 17.09.: "Test ohne Story" kam ohne reply_to
+     herein - der Webhook unterscheidet die beiden Faelle also selbst. */
+  const webhookBezug = { "mid-a": { storyId: "S7", absender: "42", text: "Test Beweislast", zeit: jetzt - 60000 } };
+  const ledger = { postfach: [], veroeffentlicht: [{ medienId: "S7", art: "story", titel: "Anscheinsbeweis", datum: "2026-09-16" }] };
+  const konv = [{
+    id: "k1",
+    messages: { data: [{ id: "mid-b", message: "Test ohne Story", from: { id: "42" }, created_time: "2026-09-17T00:11:55+0000" }] },
+  }];
+  const offen = offeneNachrichten(konv, "1", ledger, jetzt, [], webhookBezug);
+  assert.equal(offen[0].bezug, null);
+  assert.equal(offen[0].bezugQuelle, "kein Bezug");
+});
+
+test("Fehlende Zuordnungsdatei laesst den Lauf unberuehrt", async () => {
+  const { webhookBezugLaden } = await import("../src/postfach.mjs");
+  assert.deepEqual(webhookBezugLaden(null), {});
+  assert.deepEqual(webhookBezugLaden("/gibt/es/nicht"), {});
+});
+
+test("Worker verteilt nach Konto-ID auf das richtige Repository", async () => {
+  const quelle = fs.readFileSync(new URL("../webhook/worker.mjs", import.meta.url), "utf8");
+  assert.match(quelle, /ROUTEN/, "Verteilung ist konfigurierbar");
+  assert.match(quelle, /zieleFuer\(env, roh\)/, "vor dem Senden wird das Ziel bestimmt");
+  /* Die Signaturpruefung muss VOR der Verteilung bleiben - sonst wuerde ein
+     Fremder bestimmen, in welches Repository geschrieben wird. */
+  assert.ok(quelle.indexOf("signaturStimmt(roh") < quelle.indexOf("zieleFuer(env, roh)"),
+    "Signatur wird vor der Verteilung geprueft");
+});

@@ -50,6 +50,54 @@ jobs:
           with p.open("a", encoding="utf-8") as f:
               f.write(zeile + "\n")
           print("Mitgeschnitten:", zeile[:400])
+
+          # --------------------------------------------------------------
+          # Zuordnungstabelle: Nachrichten-ID -> Story.
+          #
+          # Das ist der eigentliche Zweck. Der nachtraegliche Abruf ueber
+          # /conversations liefert bei einer Story-Antwort ein leeres
+          # `reply_to` - im EINGEHENDEN Ereignis steht die Story-ID dagegen
+          # drin (am 17.09. mitgeschnitten und belegt). Wer den Bezug haben
+          # will, muss ihn hier festhalten; spaeter ist er weg.
+          # --------------------------------------------------------------
+          import time
+          bp = pathlib.Path("state/story-bezug.json")
+          try:
+              bezug = json.loads(bp.read_text(encoding="utf-8")) if bp.exists() else {}
+              if not isinstance(bezug, dict):
+                  bezug = {}
+          except Exception:
+              bezug = {}
+
+          neu = 0
+          for eintrag in (daten.get("entry") or []):
+              for m in (eintrag.get("messaging") or []):
+                  nachricht = m.get("message") or {}
+                  story = ((nachricht.get("reply_to") or {}).get("story")) or {}
+                  mid = nachricht.get("mid")
+                  if not story.get("id") or not mid:
+                      continue
+                  bezug[mid] = {
+                      "storyId": str(story["id"]),
+                      "url": story.get("url", "")[:400],
+                      "absender": str((m.get("sender") or {}).get("id") or ""),
+                      "konto": str(eintrag.get("id") or ""),
+                      # Wortlaut als Zweitschluessel, falls der Abruf eine
+                      # andere Nachrichten-ID fuehrt als das Ereignis.
+                      "text": (nachricht.get("text") or "")[:300],
+                      "zeit": int(m.get("timestamp") or eintrag.get("time") or time.time() * 1000),
+                  }
+                  neu += 1
+
+          # Aufraeumen: Instagram nimmt nach 24 Stunden keine Antwort mehr an,
+          # aelteres ist also wertlos. 48 Stunden Puffer, hoechstens 500
+          # Eintraege - die Datei soll nicht unbemerkt wachsen.
+          grenze = time.time() * 1000 - 48 * 3600 * 1000
+          bezug = {k: v for k, v in bezug.items() if float(v.get("zeit") or 0) >= grenze}
+          if len(bezug) > 500:
+              bezug = dict(sorted(bezug.items(), key=lambda kv: -float(kv[1].get("zeit") or 0))[:500])
+          bp.write_text(json.dumps(bezug, ensure_ascii=False, indent=1), encoding="utf-8")
+          print(f"Story-Zuordnung: {neu} neu, {len(bezug)} gespeichert")
           PY
 
       - name: Ablegen
@@ -57,7 +105,7 @@ jobs:
           set -euo pipefail
           git config user.name instagram-bot
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/webhook-roh.jsonl
+          git add state/webhook-roh.jsonl state/story-bezug.json
           git commit -m "Webhook-Mitschnitt $(date -u +%FT%TZ)" || { echo "nichts Neues"; exit 0; }
           # Mehrere Ereignisse koennen gleichzeitig ankommen - deshalb erst
           # nachziehen, dann schieben.

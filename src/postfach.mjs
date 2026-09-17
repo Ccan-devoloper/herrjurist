@@ -17,6 +17,8 @@
    Geschmacksfrage, sondern § 3 RDG.
    ========================================================================== */
 
+import fs from "node:fs";
+import path from "node:path";
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
 import { budgetPruefen, erfassen } from "./kosten.mjs";
@@ -96,7 +98,29 @@ const WERBUNG = /\b(kooperation|zusammenarbeit|werbung|rabatt|gutschein|promo|fo
  * @param {object} ledger
  * @returns {object[]} mit .uebersprungen als Beiwerk
  */
-export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date.now(), laufend = []) {
+export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date.now(), laufend = [], webhookBezug = {}) {
+  /* Die Zuordnungstabelle aus dem Webhook. Sie ist die EINZIGE Quelle, die
+     den Story-Bezug nachweislich fuehrt: Am 17.09. wurde mitgeschnitten, was
+     Meta beim Eingang wirklich schickt - in `message.reply_to.story.id` stand
+     die ID, waehrend derselbe Vorgang ueber /conversations ein leeres
+     `reply_to` lieferte. Der nachtraegliche Abruf verliert den Bezug; das
+     eingehende Ereignis hat ihn. Deshalb steht diese Tabelle hier an erster
+     Stelle und nicht als Notbehelf am Ende. */
+  const ausWebhook = (nachricht) => {
+    const direkt = webhookBezug[String(nachricht.id || "")];
+    if (direkt?.storyId) return { ...direkt, wie: "mid" };
+    /* Zweitschluessel Absender+Text: Falls der Abruf eine andere
+       Nachrichten-ID fuehrt als das Ereignis, traegt der Wortlaut die
+       Zuordnung. Exakter Vergleich - kein Raten, keine Aehnlichkeit. */
+    const t = String(nachricht.message || "").trim();
+    const von = String(nachricht.from?.id || "");
+    if (!t || !von) return null;
+    for (const w of Object.values(webhookBezug)) {
+      if (w?.storyId && String(w.absender) === von && String(w.text || "").trim() === t) return { ...w, wie: "absender+text" };
+    }
+    return null;
+  };
+
   const beantwortet = new Set(ledger.postfach?.map((n) => n.nachrichtId) || []);
   const offen = [];
   const uebersprungen = [];
@@ -195,22 +219,30 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
        Anfechtung"). Deshalb wird an jeder Stelle nachgesehen, die die ID
        tragen kann, und festgehalten, WOHER sie kam - sonst tappt man beim
        naechsten Mal wieder im Dunkeln. */
-    const idKandidaten = [letzte.reply_to?.story?.id, letzte.story?.id, letzte.reply_to?.message?.id]
+    const webhook = ausWebhook(letzte);
+    const idKandidaten = [webhook?.storyId, letzte.reply_to?.story?.id, letzte.story?.id, letzte.reply_to?.message?.id]
       .filter(Boolean).map(String);
-    const istStoryAntwort = Boolean(letzte.reply_to?.story || letzte.story);
+    const istStoryAntwort = Boolean(webhook?.storyId || letzte.reply_to?.story || letzte.story);
     const eintrag = idKandidaten.map((id) => nachId.get(id)).find(Boolean) || null;
     const bezug = eintrag
       ? `${eintrag.art === "story" ? "Story" : "Beitrag"} „${String(eintrag.titel || "").slice(0, 140)}“`
       : istStoryAntwort ? "Die Nachricht ist eine Antwort auf eine unserer Stories – WELCHE, hat Instagram nicht mitgeliefert" : null;
     const bezugQuelle = eintrag ? "aufgelöst" : istStoryAntwort ? "Story-Antwort ohne Zuordnung" : "kein Bezug";
+    /* Auf WELCHEM Weg der Bezug kam, ist eine reine Diagnosefrage - deshalb
+       ein eigenes Feld und nicht in `bezugQuelle` hineingeschrieben. Nur so
+       laesst sich spaeter ablesen, ob der Webhook traegt oder ob wieder der
+       Abruf einspringen musste. */
+    const bezugWie = !eintrag ? ""
+      : webhook?.storyId && String(webhook.storyId) === String(eintrag.medienId) ? `webhook/${webhook.wie}`
+      : "abruf";
     /* Welche IDs Instagram ueberhaupt geschickt hat, gehoert ins Log: Ohne das
        bleibt offen, ob gar keine ID kam oder eine aus einem anderen
        Namensraum - und damit auch, was zu tun ist. */
     const bezugRoh = istStoryAntwort && !eintrag
-      ? `ids=[${idKandidaten.join(",") || "keine"}] url=${letzte.reply_to?.story?.url ? "ja" : "nein"}`
+      ? `ids=[${idKandidaten.join(",") || "keine"}] url=${letzte.reply_to?.story?.url || webhook?.url ? "ja" : "nein"} webhook=${webhook ? webhook.wie : "nein"}`
       : "";
 
-    offen.push({ id: letzte.id, text, von, empfaengerId: letzte.from?.id, konversationId: k.id, zeit: letzte.created_time, verlauf, bezug, bezugQuelle, bezugRoh });
+    offen.push({ id: letzte.id, text, von, empfaengerId: letzte.from?.id, konversationId: k.id, zeit: letzte.created_time, verlauf, bezug, bezugQuelle, bezugWie, bezugRoh });
   }
 
   offen.sort((a, b) => new Date(a.zeit) - new Date(b.zeit));
@@ -265,13 +297,31 @@ Gib für jede id an, ob geantwortet werden soll (antworten), den Grund bei Nein 
  * Kompletter Postfachlauf.
  * @returns {{unterhaltungen:number, offen:number, beantwortet:number}}
  */
-export async function nachrichtenBeantworten(ig, ledger, { log = console.log } = {}) {
+/* Die Zuordnungstabelle, die der Webhook fuellt. Fehlt sie, faellt alles auf
+   den Abruf zurueck wie bisher - der Lauf darf daran nie scheitern. */
+export function webhookBezugLaden(stateDir) {
+  if (!stateDir) return {};
+  try {
+    const p = path.join(stateDir, "story-bezug.json");
+    if (!fs.existsSync(p)) return {};
+    const d = JSON.parse(fs.readFileSync(p, "utf8"));
+    return d && typeof d === "object" ? d : {};
+  } catch (e) {
+    console.warn(`  ! Story-Zuordnung nicht lesbar (${e.message.split("\n")[0].slice(0, 80)}) – es gilt nur der Abruf.`);
+    return {};
+  }
+}
+
+export async function nachrichtenBeantworten(ig, ledger, { log = console.log, stateDir = null } = {}) {
   const konversationen = await ig.konversationen(CONFIG.postfach.unterhaltungen);
   /* Welche Stories gerade laufen, ist die zweite Quelle fuer die Zuordnung -
      und, wenn sie doch misslingt, die Grundlage fuer eine gezielte Rueckfrage
      statt einer allgemeinen. */
   const laufend = await ig.laufendeStories();
-  const alle = offeneNachrichten(konversationen, ig.kontoId, ledger, Date.now(), laufend);
+  const webhookBezug = webhookBezugLaden(stateDir);
+  const bezugAnzahl = Object.keys(webhookBezug).length;
+  if (bezugAnzahl) log(`  · Story-Zuordnung aus dem Webhook: ${bezugAnzahl} Einträge`);
+  const alle = offeneNachrichten(konversationen, ig.kontoId, ledger, Date.now(), laufend, webhookBezug);
   for (const u of alle.uebersprungen || []) {
     if (u.grund !== "bereits behandelt") log(`  · Nachricht von @${u.von} „${u.text}“ → übersprungen (${u.grund})`);
   }
@@ -282,7 +332,7 @@ export async function nachrichtenBeantworten(ig, ledger, { log = console.log } =
   /* Woher der Bezug kam, gehoert ins Log. Am 16.09. stand dort nur die
      Antwort - dass ihr der Bezug fehlte, war nicht zu sehen, und die Ursache
      musste im Nachhinein rekonstruiert werden. */
-  for (const n of offen) log(`  · Bezug @${n.von}: ${n.bezugQuelle}${n.bezugRoh ? ` (${n.bezugRoh})` : ""}${n.bezug ? ` – ${n.bezug.slice(0, 90)}` : ""}`);
+  for (const n of offen) log(`  · Bezug @${n.von}: ${n.bezugQuelle}${n.bezugWie ? ` über ${n.bezugWie}` : ""}${n.bezugRoh ? ` (${n.bezugRoh})` : ""}${n.bezug ? ` – ${n.bezug.slice(0, 90)}` : ""}`);
   log(`  · Laufende Stories: ${alle.laufend?.length || 0}`);
   const antworten = await antwortenFormulieren(offen, alle.zuletzt || [], alle.laufend || []);
   const nachId = new Map(antworten.map((a) => [a.id, a.text]));

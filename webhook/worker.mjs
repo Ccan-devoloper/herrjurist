@@ -26,7 +26,12 @@
  *   VERIFY_TOKEN   - frei gewählt, muss bei Meta identisch eingetragen sein
  *   APP_SECRET     - App-Geheimcode aus dem Meta-Dashboard
  *   GITHUB_TOKEN   - Fine-grained PAT, nur "Contents: Read and write"
- *   GITHUB_REPO    - z. B. Ccan-devoloper/herrjurist
+ *   GITHUB_REPO    - Rueckfallziel, z. B. Ccan-devoloper/herrjurist
+ *   ROUTEN         - optional, "<kontoId>=<owner/repo>,<kontoId>=<owner/repo>"
+ *                    Beide Kanaele haengen an DERSELBEN Meta-App, also kommen
+ *                    ihre Ereignisse ueber dieselbe Adresse herein. Ohne
+ *                    Verteilung landeten Campus-Nachrichten im Jura-Repo.
+ *                    Die Konto-ID steht in entry[].id.
  */
 
 /* Signaturprüfung auf den ROHEN Bytes. Wer den Body erst parst und dann
@@ -52,8 +57,26 @@ async function signaturStimmt(roh, kopf, geheim) {
 
 /* Das Rohereignis nach GitHub reichen. Base64, damit kein Zeichen unterwegs
    verlorengeht, und als EIN Feld - client_payload verträgt nur wenige. */
-async function anGithub(env, roh) {
-  const antwort = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}/dispatches`, {
+/* Welche Repositories dieses Ereignis betrifft. Unbekannte Konten fallen auf
+   GITHUB_REPO zurueck, damit ein neues Konto nicht stillschweigend ins Leere
+   sendet - lieber im falschen Protokoll als gar nicht. */
+function zieleFuer(env, roh) {
+  const ziele = new Set();
+  const karte = new Map(
+    String(env.ROUTEN || "").split(",").map((t) => t.trim()).filter(Boolean)
+      .map((t) => t.split("=")).filter((a) => a.length === 2)
+      .map(([k, v]) => [k.trim(), v.trim()]),
+  );
+  try {
+    const daten = JSON.parse(new TextDecoder().decode(roh));
+    for (const e of daten?.entry || []) ziele.add(karte.get(String(e?.id)) || env.GITHUB_REPO);
+  } catch { /* Unlesbares geht ans Rueckfallziel - der Mitschnitt soll es sehen. */ }
+  if (!ziele.size) ziele.add(env.GITHUB_REPO);
+  return [...ziele].filter(Boolean);
+}
+
+async function anGithub(env, roh, repo) {
+  const antwort = await fetch(`https://api.github.com/repos/${repo}/dispatches`, {
     method: "POST",
     headers: {
       authorization: `Bearer ${env.GITHUB_TOKEN}`,
@@ -66,7 +89,7 @@ async function anGithub(env, roh) {
       client_payload: { roh: btoa(String.fromCharCode(...new Uint8Array(roh))), empfangen: new Date().toISOString() },
     }),
   });
-  if (!antwort.ok) console.log(`GitHub lehnte ab: ${antwort.status}`);
+  if (!antwort.ok) console.log(`GitHub lehnte ab (${repo}): ${antwort.status}`);
 }
 
 export default {
@@ -94,7 +117,7 @@ export default {
     /* Meta erwartet schnell ein 200 und stellt sonst erneut zu. Das
        Weiterreichen läuft deshalb NACH der Antwort weiter - waitUntil hält
        den Worker dafür am Leben, ohne Meta warten zu lassen. */
-    ctx.waitUntil(anGithub(env, roh));
+    for (const repo of zieleFuer(env, roh)) ctx.waitUntil(anGithub(env, roh, repo));
     return new Response("EVENT_RECEIVED", { status: 200 });
   },
 };
