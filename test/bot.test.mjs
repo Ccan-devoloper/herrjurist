@@ -2855,9 +2855,13 @@ test("Faktencheck: unlesbares oder verweigertes Ergebnis ist KEIN bestandenes", 
   /* Bis zum 17.09. stand hier `return { ok: true }` für beide Fälle. */
   assert.ok(!/catch \{ return \{ ok: true/.test(quelle), "kein stilles Bestehen bei unlesbarem JSON");
   assert.ok(!/=== "refusal"\) return \{ ok: true/.test(quelle), "kein stilles Bestehen bei Verweigerung");
-  assert.match(quelle, /throw new Error\(`Faktencheck nicht auswertbar: Modell hat die Prüfung abgelehnt/);
-  assert.match(quelle, /throw new Error\(`Faktencheck nicht auswertbar: keine lesbare JSON-Antwort/);
+  assert.match(quelle, /throw new Error\(`Modell hat die Prüfung abgelehnt/);
+  assert.match(quelle, /throw new Error\(`keine lesbare JSON-Antwort/);
   assert.match(quelle, /Antwort ohne Befundliste/);
+  /* Und bevor ein Fehler entsteht, gibt es einen zweiten Anlauf ohne Schema -
+     ein einzelner Fehlversuch soll keinen Beitrag um eine Stunde verschieben. */
+  assert.match(quelle, /zweiter Anlauf ohne Schema/);
+  assert.match(quelle, /throw new Error\(`Faktencheck nicht auswertbar: \$\{ersterFehler\.message\}; zweiter Anlauf/);
   /* Und faktenSicher setzt das um: streng heißt, der Beitrag erscheint nicht. */
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   assert.match(autor, /Faktencheck nicht möglich \(\$\{e\.message[^}]*\}\) – der Beitrag erscheint nicht\./);

@@ -185,29 +185,40 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
     ...(haiku ? {} : { thinking: { type: "adaptive" } }),
     output_config: { ...(haiku ? {} : { effort: "medium" }), format: { type: "json_schema", schema: SCHEMA } },
   };
-  let response;
-  try {
-    response = await client().messages.create(basis);
-  } catch (e) {
-    if (!(e instanceof Anthropic.BadRequestError)) throw e;
-    /* Rückfall: ohne Denken und ohne Schema-Format, JSON per Anweisung. */
-    const { thinking, output_config, ...rest } = basis;
-    response = await client().messages.create({ ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHEMA)}` }] });
+  /* Zwei Anläufe, bevor ein Fehler entsteht: erst mit Schema und Denken,
+     dann - wenn die Antwort nicht lesbar ist oder das Modell ablehnt - ohne
+     beides, JSON per Anweisung. Ein unlesbares Ergebnis war bis zum 17.09.
+     ein stilles Bestehen; ein einzelner Fehlversuch soll aber auch keinen
+     Beitrag um eine Stunde verschieben. Der zweite Anlauf kostet im seltenen
+     Fall etwa so viel wie der erste. */
+  const ohneSchema = () => { const { thinking, output_config, ...rest } = basis; return { ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHEMA)}` }] }; };
+  const auswerten = (response) => {
+    if (response.stop_reason === "refusal") throw new Error(`Modell hat die Prüfung abgelehnt (${response.stop_details?.explanation || "ohne Begründung"})`);
+    const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
+    let d;
+    try { d = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); }
+    catch (e) { throw new Error(`keine lesbare JSON-Antwort (${e.message.slice(0, 80)})`); }
+    if (!Array.isArray(d?.befunde)) throw new Error("Antwort ohne Befundliste");
+    return d;
+  };
+  let daten, ersterFehler = null;
+  for (const [nr, anfrage] of [[1, () => basis], [2, ohneSchema]]) {
+    let response;
+    try {
+      response = await client().messages.create(anfrage());
+    } catch (e) {
+      if (!(e instanceof Anthropic.BadRequestError) || nr === 2) throw e;
+      /* Schema oder Denken nicht erlaubt: direkt zum zweiten Weg. */
+      continue;
+    }
+    erfassen(modell, response.usage, zweck);
+    try { daten = auswerten(response); break; }
+    catch (e) {
+      ersterFehler ||= e;
+      if (nr === 2) throw new Error(`Faktencheck nicht auswertbar: ${ersterFehler.message}; zweiter Anlauf: ${e.message}`);
+      console.warn(`  ! Faktencheck-Ergebnis nicht auswertbar (${e.message.slice(0, 80)}) – zweiter Anlauf ohne Schema.`);
+    }
   }
-  erfassen(modell, response.usage, zweck);
-  /* Ein Prüfergebnis, das sich nicht auswerten lässt, ist KEIN bestandenes.
-     Bis zum 17.09. stand hier `return { ok: true }` - für eine Verweigerung
-     des Modells ebenso wie für unlesbares JSON. Ein Text, dessen Prüfung
-     technisch ausfiel, wäre damit als geprüft veröffentlicht worden. Der
-     Fehler fliegt stattdessen nach oben; faktenSicher() entscheidet dann
-     nach CONFIG.faktencheck.strikt, ob der Text zurückgehalten wird
-     (Standard) oder mit Warnung durchgeht. */
-  if (response.stop_reason === "refusal") throw new Error(`Faktencheck nicht auswertbar: Modell hat die Prüfung abgelehnt (${response.stop_details?.explanation || "ohne Begründung"})`);
-  const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
-  let daten;
-  try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); }
-  catch (e) { throw new Error(`Faktencheck nicht auswertbar: keine lesbare JSON-Antwort (${e.message.slice(0, 80)})`); }
-  if (!Array.isArray(daten?.befunde)) throw new Error("Faktencheck nicht auswertbar: Antwort ohne Befundliste");
   const { fehler: gefunden, korrekturen, weich, brauchbar } = befundeSortieren(daten.befunde);
   let bestaetigt = gefunden;
   let verworfen = [];
