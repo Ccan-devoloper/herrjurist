@@ -30,6 +30,8 @@ if (!nutzer || !passwort) { console.error("✗ IG_PRIVAT_USER und IG_PRIVAT_PASS
 if (!CONFIG.interaktiv.schluessel) { console.error("✗ IG_PRIVAT_KEY fehlt – ohne ihn lässt sich die Sitzung nicht verschlüsseln."); process.exit(2); }
 
 console.log(`Melde @${nutzer} an – von diesem Anschluss, nicht aus der CI.`);
+console.log("Falls Instagram einen Bestätigungscode schickt: Er wird hier abgefragt.");
+console.log("Es kann ein paar Minuten dauern, bis die Mail da ist – das Fenster wartet.\n");
 try {
   const { tresor } = await anmeldenNur();
   console.log("\n✓ Angemeldet. Diesen Wert als GitHub-Secret IG_PRIVAT_SITZUNG eintragen:\n");
@@ -38,7 +40,8 @@ try {
   console.log("trotzdem gehört er nur in das Secret-Feld, sonst nirgendwohin.");
 } catch (e) {
   console.error(`\n✗ Anmeldung fehlgeschlagen (${e.art || "fehler"}): ${e.message}`);
-  if (e.art === "challenge") console.error("  Erst in der Instagram-App anmelden und bestätigen, dann hier noch einmal.");
+  if (e.art === "challenge") console.error("  Code falsch, abgelaufen oder nicht eingegeben. Neuen Code abwarten und noch einmal.\n  Hilft das nicht: erst in der Instagram-App anmelden und dort bestätigen.");
+  if (e.art === "zeitlimit") console.error("  Fünfzehn Minuten ohne Abschluss. Wahrscheinlich kam die Code-Abfrage und blieb unbeantwortet.");
   if (e.art === "aufbau") console.error("  Fehlt instagrapi? →  pip install instagrapi");
   process.exit(1);
 }

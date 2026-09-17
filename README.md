@@ -540,6 +540,12 @@ pip install instagrapi
 IG_PRIVAT_USER=… IG_PRIVAT_PASS=… IG_PRIVAT_KEY=… npm run interaktiv:anmelden
 ```
 
+Verlangt Instagram dabei einen Bestätigungscode (nach einem auffälligen
+Anmeldeversuch ist das der Normalfall), fragt der Befehl ihn ab und wartet bis
+zu fünfzehn Minuten auf die Eingabe. Der Code kommt per Mail von Instagram und
+gehört ausschließlich in diese Abfrage – **niemals in einen Chat, ein Ticket
+oder eine Notiz**; er ist zusammen mit dem Passwort ein Kontozugang.
+
 Der Befehl gibt einen verschlüsselten Wert aus – der kommt als Secret
 `IG_PRIVAT_SITZUNG` nach GitHub. Er ist ohne `IG_PRIVAT_KEY` wertlos, gehört
 aber trotzdem nur ins Secret-Feld.

@@ -205,7 +205,13 @@ export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDi
 /* Nur anmelden, nichts veröffentlichen: der Weg für den eigenen Rechner.
    Gibt den verschlüsselten Tresor zurück, der als Secret hinterlegt wird. */
 export async function anmeldenNur({ nutzer = CONFIG.interaktiv.nutzer, passwort = CONFIG.interaktiv.passwort, python, skript = BRUECKE } = {}) {
-  const antwort = await bruecke({ aktion: "anmelden", nutzer, passwort, sitzung: null, neuanmeldungErlaubt: true }, { python, skript });
+  /* Viel Zeit: Hier wird unter Umständen ein Bestätigungscode aus der Mail
+     abgetippt. Das Zeitlimit des Tageslaufs (drei Minuten) wäre zu knapp -
+     bis die Mail da ist, vergehen schon mal ein paar Minuten. */
+  const antwort = await bruecke(
+    { aktion: "anmelden", nutzer, passwort, sitzung: null, neuanmeldungErlaubt: true },
+    { python, skript, zeitlimit: 15 * 60e3 },
+  );
   if (!antwort.ok) throw new InteraktivFehler(antwort.fehler || "Anmeldung fehlgeschlagen", antwort.art || "login");
   return { sitzung: antwort.sitzung, tresor: tresorSchreiben({ nutzer: String(nutzer || ""), sitzung: antwort.sitzung }) };
 }

@@ -39,6 +39,34 @@ def antwort(**felder):
     sys.exit(0 if felder.get("ok") else 1)
 
 
+def code_abfragen(nutzer, wahl):
+    """Bestaetigungscode vom Menschen erfragen - NUR bei der Anmeldung von Hand.
+
+    stdin ist hier schon aufgebraucht (dort kam der Auftrag herein), deshalb
+    wird die Konsole direkt geoeffnet: /dev/tty unter macOS und Linux, CON
+    unter Windows. Die Frage geht nach stderr, damit stdout eine einzige
+    lesbare JSON-Zeile bleibt.
+
+    In der CI wird dieser Handler nie gesetzt. Ein Prozess, der dort auf eine
+    Eingabe wartet, haengt bis zum Zeitlimit - und niemand sieht die Frage.
+    """
+    sys.stderr.write(
+        f"\n  Instagram verlangt einen Bestaetigungscode fuer @{nutzer} (Weg: {wahl}).\n"
+        f"  Er steht in der Mail bzw. SMS von Instagram.\n  Code: "
+    )
+    sys.stderr.flush()
+    for konsole in ("/dev/tty", "CON"):
+        try:
+            with open(konsole, "r", encoding="utf-8") as f:
+                code = f.readline().strip()
+            if code:
+                return code
+        except OSError:
+            continue
+    sys.stderr.write("\n  Keine Konsole fuer die Eingabe gefunden.\n")
+    return ""
+
+
 def main():
     auftrag = json.load(sys.stdin)
     nur_anmelden = auftrag.get("aktion") == "anmelden"
@@ -58,6 +86,11 @@ def main():
 
     client = Client()
     client.delay_range = [2, 6]          # kein Stakkato - das fällt auf
+    # Nur bei der Anmeldung von Hand darf nach einem Code gefragt werden.
+    # Das ist der Normalfall geworden, seit Instagram am 17.09. den Versuch
+    # aus der CI als fremd eingestuft und eine Bestaetigungsmail geschickt hat.
+    if nur_anmelden:
+        client.challenge_code_handler = code_abfragen
 
     # --- Anmelden -------------------------------------------------------
     # Zuerst mit der gespeicherten Sitzung. Nur wenn die nicht mehr trägt,
@@ -83,7 +116,11 @@ def main():
         except TwoFactorRequired:
             antwort(ok=False, art="challenge", fehler="Zwei-Faktor-Bestätigung verlangt - von Hand anmelden und Sitzung neu erzeugen")
         except ChallengeRequired:
-            antwort(ok=False, art="challenge", fehler="Instagram verlangt eine Bestätigung (Challenge) - NICHT wiederholen")
+            antwort(ok=False, art="challenge", fehler=(
+                "Instagram verlangt eine Bestätigung (Challenge) - NICHT wiederholen"
+                if not nur_anmelden else
+                "Die Bestätigung ist nicht durchgegangen - Code falsch, abgelaufen oder keine Eingabe"
+            ))
         except PleaseWaitFewMinutes as e:
             antwort(ok=False, art="bremse", fehler=f"Instagram bremst: {e}")
         except Exception as e:                                     # noqa: BLE001 - jeder Fehler ist hier ein Rückfall
