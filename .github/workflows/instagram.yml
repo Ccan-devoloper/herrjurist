@@ -182,6 +182,7 @@ jobs:
           # selbst an: Eine Anmeldung von der Runner-IP hat Instagram am 17.09.
           # mit "Please wait a few minutes" abgewiesen.
           IG_PRIVAT_SITZUNG: ${{ secrets.IG_PRIVAT_SITZUNG }}
+          IG_PRIVAT_KEY: ${{ secrets.IG_PRIVAT_KEY }}
           IG_PYTHON: ${{ github.workspace }}/.venv-ig/bin/python
           BERICHT_EMAIL: ${{ vars.BERICHT_EMAIL }}
           SMTP_HOST: ${{ vars.SMTP_HOST }}

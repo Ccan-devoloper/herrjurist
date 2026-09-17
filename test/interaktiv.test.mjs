@@ -6,7 +6,7 @@ import path from "node:path";
 
 /* Der Schlüssel muss stehen, bevor config.mjs geladen wird - die Konfiguration
    liest die Umgebung beim Import. Deshalb erst setzen, dann dynamisch laden. */
-process.env.IG_TOKEN_KEY = process.env.IG_TOKEN_KEY || "test-schluessel-nur-fuer-den-lauf";
+process.env.IG_PRIVAT_KEY = process.env.IG_PRIVAT_KEY || "test-schluessel-nur-fuer-den-lauf";
 const { CONFIG } = await import("../src/config.mjs");
 const {
   interaktivGeplant, umfrageBauen, sperreAktiv, sperreSetzen,
@@ -80,9 +80,9 @@ test("Ohne Datei zieht die Saat aus dem Secret", async () => {
   /* Der Weg, der am 17.09. nötig wurde: Die CI darf sich nicht anmelden
      (Rechenzentrums-IP), also kommt die Sitzung einmalig vom eigenen Rechner
      und liegt als Secret. Ohne diesen Rückfall stünde die CI ohne Sitzung da. */
-  const { tokenVerschluesseln } = await import("../src/instagram.mjs");
+  const { tresorSchreiben } = await import("../src/interaktiv.mjs");
   const dir = tmpdir();
-  const saat = tokenVerschluesseln({ nutzer: "testkonto", sitzung: { authorization_data: { sessionid: "aus-dem-secret" } } });
+  const saat = tresorSchreiben({ nutzer: "testkonto", sitzung: { authorization_data: { sessionid: "aus-dem-secret" } } });
   assert.deepEqual(sitzungLaden(dir, "testkonto", saat), { authorization_data: { sessionid: "aus-dem-secret" } });
   assert.equal(sitzungLaden(dir, "jemand-anderes", saat), null, "auch die Saat gilt nur für ihr Konto");
 

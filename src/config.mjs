@@ -259,6 +259,13 @@ export const CONFIG = {
        verschlüsselt als Secret. Sie ist die Saat: Fehlt im Asset-Zweig eine
        Sitzung, wird diese genommen. */
     sitzungSaat: env("IG_PRIVAT_SITZUNG", ""),
+    /* EIGENER Schlüssel für den Sitzungstresor, nicht IG_TOKEN_KEY. Zwei
+       Gründe: Die Sitzung wird am eigenen Rechner erzeugt, also muss der
+       Schlüssel dort bekannt sein - IG_TOKEN_KEY ist er nicht, und ihn dafür
+       zu wechseln hieße, am Token-Tresor des Bots zu rühren. Und es sind
+       zwei verschiedene Geheimnisklassen: ein API-Token gegen ein ganzes
+       Konto. Fehlt er, gilt ersatzweise IG_TOKEN_KEY. */
+    schluessel: env("IG_PRIVAT_KEY", env("IG_TOKEN_KEY", "")),
     /* Darf sich der Lauf mit Name und Passwort NEU anmelden? Standard nein.
        Am 17.09. hat Instagram die Erstanmeldung vom GitHub-Runner mit
        "Please wait a few minutes" abgewiesen - Rechenzentrums-IP. Eine

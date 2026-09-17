@@ -27,8 +27,8 @@ import { execFile } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import crypto from "node:crypto";
 import { CONFIG } from "./config.mjs";
-import { tokenVerschluesseln, tokenEntschluesseln } from "./instagram.mjs";
 
 const HIER = path.dirname(fileURLToPath(import.meta.url));
 export const BRUECKE = path.resolve(HIER, "..", "bin", "story_privat.py");
@@ -76,8 +76,31 @@ export function sperreSetzen(ledger, grund, { stunden = CONFIG.interaktiv.sperre
 }
 
 /* --- Sitzungstresor ------------------------------------------------------
-   Dieselbe Verschlüsselung wie beim Token: Der Asset-Zweig ist öffentlich,
-   und eine Instagram-Sitzung im Klartext wäre dort ein Konto zum Mitnehmen. */
+   Dieselbe Bauart wie beim Token-Tresor (AES-256-GCM), aber mit EIGENEM
+   Schlüssel: Der Asset-Zweig ist öffentlich, und eine Instagram-Sitzung im
+   Klartext wäre dort ein Konto zum Mitnehmen. Der eigene Schlüssel ist nötig,
+   weil die Sitzung am eigenen Rechner entsteht - dort muss er bekannt sein. */
+function tresorSchluessel() {
+  const s = CONFIG.interaktiv.schluessel;
+  if (!s) throw new Error("IG_PRIVAT_KEY fehlt");
+  return crypto.createHash("sha256").update(s).digest();
+}
+
+export function tresorSchreiben(daten) {
+  const iv = crypto.randomBytes(12);
+  const c = crypto.createCipheriv("aes-256-gcm", tresorSchluessel(), iv);
+  const enc = Buffer.concat([c.update(JSON.stringify(daten), "utf8"), c.final()]);
+  return Buffer.concat([iv, c.getAuthTag(), enc]).toString("base64");
+}
+
+export function tresorOeffnen(text) {
+  const buf = Buffer.from(text, "base64");
+  const iv = buf.subarray(0, 12), tag = buf.subarray(12, 28), enc = buf.subarray(28);
+  const d = crypto.createDecipheriv("aes-256-gcm", tresorSchluessel(), iv);
+  d.setAuthTag(tag);
+  return JSON.parse(Buffer.concat([d.update(enc), d.final()]).toString("utf8"));
+}
+
 const sitzungsPfad = (stateDir) => path.join(stateDir, SITZUNGSDATEI);
 
 /* Die Sitzung wird zum Kontonamen gespeichert. Ohne diesen Schlüssel würde
@@ -86,7 +109,7 @@ const sitzungsPfad = (stateDir) => path.join(stateDir, SITZUNGSDATEI);
    Übernahme aus. Passt der Name nicht, gilt die Sitzung als nicht vorhanden. */
 function tresorLesen(text, nutzer) {
   try {
-    const tresor = tokenEntschluesseln(text);
+    const tresor = tresorOeffnen(text);
     if (!tresor || typeof tresor !== "object") return null;
     if (String(tresor.nutzer || "").toLowerCase() !== String(nutzer || "").toLowerCase()) return null;
     return tresor.sitzung || null;
@@ -109,7 +132,7 @@ export function sitzungLaden(stateDir, nutzer = CONFIG.interaktiv.nutzer, saat =
 export function sitzungSichern(stateDir, sitzung, nutzer = CONFIG.interaktiv.nutzer) {
   if (!sitzung) return false;
   try {
-    fs.writeFileSync(sitzungsPfad(stateDir), tokenVerschluesseln({ nutzer: String(nutzer || ""), sitzung }));
+    fs.writeFileSync(sitzungsPfad(stateDir), tresorSchreiben({ nutzer: String(nutzer || ""), sitzung }));
     return true;
   } catch (e) {
     console.warn(`  ! Sitzung nicht gespeichert (${e.message}) – beim nächsten Lauf wird neu angemeldet.`);
@@ -184,5 +207,5 @@ export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDi
 export async function anmeldenNur({ nutzer = CONFIG.interaktiv.nutzer, passwort = CONFIG.interaktiv.passwort, python, skript = BRUECKE } = {}) {
   const antwort = await bruecke({ aktion: "anmelden", nutzer, passwort, sitzung: null, neuanmeldungErlaubt: true }, { python, skript });
   if (!antwort.ok) throw new InteraktivFehler(antwort.fehler || "Anmeldung fehlgeschlagen", antwort.art || "login");
-  return { sitzung: antwort.sitzung, tresor: tokenVerschluesseln({ nutzer: String(nutzer || ""), sitzung: antwort.sitzung }) };
+  return { sitzung: antwort.sitzung, tresor: tresorSchreiben({ nutzer: String(nutzer || ""), sitzung: antwort.sitzung }) };
 }

@@ -537,11 +537,11 @@ noch diese Sitzung (`IG_PRIVAT_NEUANMELDUNG` steht auf `false`).
 
 ```
 pip install instagrapi
-IG_PRIVAT_USER=… IG_PRIVAT_PASS=… IG_TOKEN_KEY=… npm run interaktiv:anmelden
+IG_PRIVAT_USER=… IG_PRIVAT_PASS=… IG_PRIVAT_KEY=… npm run interaktiv:anmelden
 ```
 
 Der Befehl gibt einen verschlüsselten Wert aus – der kommt als Secret
-`IG_PRIVAT_SITZUNG` nach GitHub. Er ist ohne `IG_TOKEN_KEY` wertlos, gehört
+`IG_PRIVAT_SITZUNG` nach GitHub. Er ist ohne `IG_PRIVAT_KEY` wertlos, gehört
 aber trotzdem nur ins Secret-Feld.
 
 ### Einrichten
@@ -554,9 +554,13 @@ aber trotzdem nur ins Secret-Feld.
 3. GitHub → Settings → Secrets: `IG_PRIVAT_USER` (Kontoname) und
    `IG_PRIVAT_PASS` (**das Konto-Passwort**, nicht ein Token – es öffnet das
    ganze Konto und gehört nirgendwo sonst hin).
-4. Einmal am eigenen Rechner anmelden (siehe oben) und `IG_PRIVAT_SITZUNG`
-   als drittes Secret eintragen.
-5. GitHub → Variables: `IG_INTERAKTIV` = `true`. Ohne diese Variable wird
+4. Einen eigenen Schlüssel erzeugen (`node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"`)
+   und als Secret `IG_PRIVAT_KEY` eintragen – **nicht** `IG_TOKEN_KEY` dafür
+   benutzen: Der verschlüsselt den Graph-Token des Bots, und die Sitzung muss
+   am eigenen Rechner verschlüsselt werden können.
+5. Einmal am eigenen Rechner anmelden (siehe oben) und die Ausgabe als Secret
+   `IG_PRIVAT_SITZUNG` eintragen.
+6. GitHub → Variables: `IG_INTERAKTIV` = `true`. Ohne diese Variable wird
    instagrapi nicht einmal installiert.
 
 Nach dem ersten erfolgreichen Lauf liegt die dann aktuelle Sitzung

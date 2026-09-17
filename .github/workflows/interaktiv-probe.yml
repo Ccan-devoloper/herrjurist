@@ -64,7 +64,7 @@ jobs:
 
       - name: Probe
         env:
-          IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+          IG_PRIVAT_KEY: ${{ secrets.IG_PRIVAT_KEY }}
           IG_PRIVAT_USER: ${{ secrets.IG_PRIVAT_USER }}
           IG_PRIVAT_PASS: ${{ secrets.IG_PRIVAT_PASS }}
           # Einmal am eigenen Rechner erzeugt (bin/interaktiv-anmelden.mjs).
