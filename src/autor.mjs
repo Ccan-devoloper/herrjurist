@@ -614,7 +614,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
       feedback ? `\n## Beanstandungen am vorherigen Entwurf – bitte beheben\n${feedback}\n\nVorheriger Entwurf:\n${JSON.stringify(letzter)}` : "",
       `\nErstelle jetzt den Beitrag als JSON.`,
     ].filter(Boolean).join("\n");
-    const { daten } = await strukturiert({ system: SYSTEM, user, schema: BEITRAG_SCHEMA });
+    const { daten } = await strukturiert({ system: SYSTEM, user, schema: BEITRAG_SCHEMA, effort: CONFIG.ki.effortBeitrag });
     const beitrag = nachbereiten(daten, { format, thema, fach, klausur, strategie });
     const ergebnis = pruefeBeitrag(beitrag);
     if (ergebnis.ok) {
@@ -965,7 +965,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       feedback ? `\n## Beanstandungen am vorherigen Entwurf – bitte beheben\n${feedback}\n\nVorheriger Entwurf:\n${JSON.stringify(letzter)}` : "",
       `\nErstelle jetzt das Reel-Skript als JSON.`,
     ].filter(Boolean).join("\n");
-    const { daten } = await strukturiert({ system: SYSTEM, user, schema: REEL_SCHEMA, zweck: "reel" });
+    const { daten } = await strukturiert({ system: SYSTEM, user, schema: REEL_SCHEMA, zweck: "reel", effort: CONFIG.ki.effortBeitrag });
     const szenen = daten.szenen.map((s) => {
       const o = {};
       for (const [k, v] of Object.entries(s)) if (v != null) o[k] = v;

@@ -170,6 +170,15 @@ export const CONFIG = {
        greift, etwa 0,009 $ mehr. */
     modellPruefungStreng: env("IG_KI_MODELL_PRUEFUNG_STRENG", "claude-sonnet-5"),
     effort: env("IG_KI_EFFORT", "low"),   // „low“: etwa halbe Kosten je Entwurf, Faktencheck fängt Fehler ab
+    /* Messversuch ab 18.09. (Beschluss des Betreibers): Beiträge und Reels
+       schreiben mit „medium", Stories bleiben bei „low". In der Nacht zum
+       17.09. brauchte ein Beitrag mit „low" drei Prüfrunden und ein
+       Neuschreiben (0,19 $). Ein Entwurf mit „medium" kostet mehr je
+       Aufruf, könnte aber Prüfrunden sparen - ob das unterm Strich billiger
+       ist, hat nie jemand gemessen. Verglichen wird nach einer Woche über
+       state/kosten.json: autor + faktencheck je Tag gegen die Woche davor.
+       IG_KI_EFFORT_BEITRAG=low stellt zurück. */
+    effortBeitrag: env("IG_KI_EFFORT_BEITRAG", "medium"),
     rechercheSuchen: Number(env("IG_KI_RECHERCHE_SUCHEN", "4")),   // Websuchen je Recherche (je 0,01 $ plus Ergebnis-Tokens)
     maxVersuche: Number(env("IG_KI_VERSUCHE", "2")),
     /* Tagesdeckel. Von 0,27 auf 0,32 $ angehoben, nachdem am 15.09. gemessen

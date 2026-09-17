@@ -2964,3 +2964,13 @@ test("Planmäßige Läufe halten die Concurrency-Gruppe höchstens zwei Stunden"
   const wf = fs.readFileSync(new URL("../.github/workflows/instagram.yml", import.meta.url), "utf8");
   assert.match(wf, /timeout-minutes: \$\{\{ \(github\.event_name == 'schedule' \|\| github\.event\.inputs\.wecker == 'true'\) && 120 \|\| 300 \}\}/);
 });
+
+test("Messversuch: Beiträge und Reels schreiben mit medium, Stories bleiben bei low", async () => {
+  const { CONFIG } = await import("../src/config.mjs");
+  assert.equal(CONFIG.ki.effortBeitrag, "medium");
+  assert.equal(CONFIG.ki.effort, "low");
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  assert.match(autor, /schema: BEITRAG_SCHEMA, effort: CONFIG\.ki\.effortBeitrag/);
+  assert.match(autor, /schema: REEL_SCHEMA, zweck: "reel", effort: CONFIG\.ki\.effortBeitrag/);
+  assert.match(autor, /schema: STORY_SCHEMA, modell: CONFIG\.ki\.modellNeben, effort: CONFIG\.ki\.effort/);
+});
