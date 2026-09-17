@@ -211,6 +211,8 @@ export function postenBeginnen(label, grenze) {
   postenGrenze = Number.isFinite(grenze) && grenze > 0 ? grenze : Infinity;
 }
 export function postenBeenden() { postenGrenze = Infinity; postenStart = 0; postenLabel = ""; }
+/** Läuft gerade ein Posten? Ein verschachtelter Aufruf soll ihn fortführen, nicht neu beginnen. */
+export const postenAktiv = () => Number.isFinite(postenGrenze);
 /** Was der laufende Posten bisher gekostet hat. */
 export const postenStand = () => runden(Math.max(0, tagesStand() - postenStart));
 /** Eigener Fehlertyp: Nur DIESER Posten ist am Ende, nicht der Tag. */

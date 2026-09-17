@@ -43,7 +43,11 @@ jobs:
   posten:
     if: github.event.inputs.nur_wecken != 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    # Ein planmäßiger Stundenlauf braucht wenige Minuten; hängt er (Browser,
+    # Upload, Netz), hielt er mit 300 Minuten die Concurrency-Gruppe fünf
+    # Stunden und damit fünf Slots. Nur ein manueller Lauf (Auffüllen mit
+    # Pausen zwischen den Beiträgen) darf so lange dauern.
+    timeout-minutes: ${{ (github.event_name == 'schedule' || github.event.inputs.wecker == 'true') && 120 || 300 }}
     # Nur ein veröffentlichender Lauf zur Zeit – die Weckkette (Job unten) hält
     # die Gruppe nicht, damit Zeitplan und Kette sich nicht gegenseitig blockieren.
     concurrency:

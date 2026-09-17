@@ -77,7 +77,16 @@ export function bildAuftrag(szene, { stil = "" } = {}) {
  */
 export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck = "bild" } = {}) {
   if (!bildKiAktiv() || !szene) return null;
-  budgetPruefen("Bild zeichnen");
+  /* Der Zweck entscheidet, welcher Topf gilt. Bis zum 17.09. stand hier für
+     JEDES Bild „Bild zeichnen" - auch für die Figuren des Erklärvideos, die
+     unter dem Zweck „erklaerbild" laufen und dafür eine eigene Rücklage
+     haben. Geprüft wurde dann unter dem Schlüssel „bild": mit dem
+     Sicherheitsabstand für Schmuckbilder UND mit der eigenen Rücklage als
+     FREMDER Rücklage. Das Bild blockierte sich damit selbst, sobald der Tag
+     eng wurde - und das Reel fiel auf das klassische Layout zurück, obwohl
+     das Geld dafür ausdrücklich zurückgelegt war. Der Schlüssel muss im
+     Zwecktext stehen, weil kosten.mjs ihn daraus liest. */
+  budgetPruefen(zweck === "erklaerbild" ? "Figur zeichnen (erklaerbild)" : "Bild zeichnen");
   const ki = CONFIG.bilder.ki;
   const steuerung = new AbortController();
   const wecker = setTimeout(() => steuerung.abort(), ki.zeitlimitMs);

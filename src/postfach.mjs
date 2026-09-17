@@ -285,7 +285,13 @@ Gib für jede id an, ob geantwortet werden soll (antworten), den Grund bei Nein 
   erfassen(CONFIG.antworten.modell, response.usage, "nachrichten");
   if (response.stop_reason === "refusal") return [];
   const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
-  const daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+  /* Unlesbar heißt: diesmal keine Antworten, nächste Stunde wieder. Der
+     Aufruf ist bezahlt und gebucht; ein Absturz des ganzen Postfachschritts
+     wäre teurer, weil er auch das Protokoll und den Ledger-Stand mitnähme. */
+  let daten;
+  try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); }
+  catch (e) { console.warn(`  ! Antworten nicht lesbar (${e.message.slice(0, 80)}) – diesmal keine Antworten.`); return []; }
+  if (!Array.isArray(daten?.antworten)) return [];
   return daten.antworten.map((a) => ({
     id: a.id,
     text: a.antworten && a.text && a.text.trim().length > 0 ? a.text.trim().slice(0, CONFIG.postfach.maxZeichen) : null,
@@ -312,6 +318,22 @@ export function webhookBezugLaden(stateDir) {
   }
 }
 
+/* Übersprungene Einträge je Grund zusammenfassen - eine Zeile je Grund mit
+   bis zu drei Beispielen, statt einer Zeile je Eintrag. „bereits behandelt"
+   ist Normalbetrieb und wird nicht gemeldet. */
+export function uebersprungeneMelden(liste, log = console.log, wer = "von") {
+  const gruppen = new Map();
+  for (const u of liste) {
+    if (u.grund === "bereits behandelt") continue;
+    if (!gruppen.has(u.grund)) gruppen.set(u.grund, []);
+    gruppen.get(u.grund).push(u);
+  }
+  for (const [grund, eintraege] of gruppen) {
+    const beispiele = eintraege.slice(0, 3).map((u) => `@${u[wer] || u.username || "?"}${u.text ? ` „${String(u.text).slice(0, 40)}“` : ""}`).join(", ");
+    log(`  · ${eintraege.length} übersprungen (${grund})${beispiele ? `: ${beispiele}${eintraege.length > 3 ? ", …" : ""}` : ""}`);
+  }
+}
+
 export async function nachrichtenBeantworten(ig, ledger, { log = console.log, stateDir = null } = {}) {
   const konversationen = await ig.konversationen(CONFIG.postfach.unterhaltungen);
   /* Welche Stories gerade laufen, ist die zweite Quelle fuer die Zuordnung -
@@ -322,9 +344,10 @@ export async function nachrichtenBeantworten(ig, ledger, { log = console.log, st
   const bezugAnzahl = Object.keys(webhookBezug).length;
   if (bezugAnzahl) log(`  · Story-Zuordnung aus dem Webhook: ${bezugAnzahl} Einträge`);
   const alle = offeneNachrichten(konversationen, ig.kontoId, ledger, Date.now(), laufend, webhookBezug);
-  for (const u of alle.uebersprungen || []) {
-    if (u.grund !== "bereits behandelt") log(`  · Nachricht von @${u.von} „${u.text}“ → übersprungen (${u.grund})`);
-  }
+  /* Übersprungenes gebündelt: 250 Unterhaltungen ergaben am 17.09. rund 80
+     Zeilen „übersprungen (ohne Text)" je Lauf, und die eine Zeile, auf die
+     es ankam, ging darin unter. Je Grund eine Zeile mit Beispielen. */
+  uebersprungeneMelden(alle.uebersprungen || [], log);
   const offen = alle.slice(0, CONFIG.postfach.maxJeLauf);
   if (!offen.length) return { unterhaltungen: konversationen.length, offen: 0, beantwortet: 0 };
 

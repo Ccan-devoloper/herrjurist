@@ -2846,3 +2846,121 @@ test("Ohne eigenen Topf wäre genau der Fehler vom 17.09. wieder da", async () =
   /* Genau dagegen hilft bezahlbareSumme: 0.13 waren nie bezahlbar. */
   assert.equal(k.bezahlbareSumme([0.085], k.tagesLimit() - k.tagesStand()), 0);
 });
+
+/* ==========================================================================
+   Tiefenprüfung 17.09.: sieben Befunde, jeder mit Test.
+   ========================================================================== */
+test("Faktencheck: unlesbares oder verweigertes Ergebnis ist KEIN bestandenes", async () => {
+  const quelle = fs.readFileSync(new URL("../src/faktencheck.mjs", import.meta.url), "utf8");
+  /* Bis zum 17.09. stand hier `return { ok: true }` für beide Fälle. */
+  assert.ok(!/catch \{ return \{ ok: true/.test(quelle), "kein stilles Bestehen bei unlesbarem JSON");
+  assert.ok(!/=== "refusal"\) return \{ ok: true/.test(quelle), "kein stilles Bestehen bei Verweigerung");
+  assert.match(quelle, /throw new Error\(`Faktencheck nicht auswertbar: Modell hat die Prüfung abgelehnt/);
+  assert.match(quelle, /throw new Error\(`Faktencheck nicht auswertbar: keine lesbare JSON-Antwort/);
+  assert.match(quelle, /Antwort ohne Befundliste/);
+  /* Und faktenSicher setzt das um: streng heißt, der Beitrag erscheint nicht. */
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  assert.match(autor, /Faktencheck nicht möglich \(\$\{e\.message[^}]*\}\) – der Beitrag erscheint nicht\./);
+});
+
+test("Faktencheck: ein weich formulierter Fehler MIT Ersetzung bleibt ein Fehler", async () => {
+  const { befundeSortieren } = await import("../src/faktencheck.mjs");
+  const befunde = [
+    /* Weich formuliert, aber mit konkreter Fundstelle: das ist ein Fehler. */
+    { schwere: "fehler", stelle: "Folie 2", problem: "Die Zuordnung ist ungenau", korrektur: "Abs. 2", original: "§ 823 Abs. 1 BGB greift", ersatz: "§ 823 Abs. 2 BGB greift" },
+    /* Weich formuliert ohne Fundstelle: Hinweis. */
+    { schwere: "fehler", stelle: "Folie 3", problem: "Die Darstellung ist etwas verkürzt", korrektur: "ausführlicher", original: "", ersatz: "" },
+    /* Hart formuliert ohne Fundstelle: Fehler. */
+    { schwere: "fehler", stelle: "Folie 4", problem: "§ 243 Abs. 2 StGB enthält keine Regelbeispiele", korrektur: "Abs. 1 S. 2", original: "", ersatz: "" },
+    /* Sprachversehen mit Fundstelle: Korrektur, kein Fehler. */
+    { schwere: "sprache", stelle: "Folie 1", problem: "doppeltes Wort", korrektur: "", original: "hat hat der", ersatz: "hat der" },
+    /* Unsicher: Hinweis. */
+    { schwere: "unsicher", stelle: "Caption", problem: "Streitstand offen?", korrektur: "", original: "", ersatz: "" },
+  ];
+  const s = befundeSortieren(befunde);
+  assert.deepEqual(s.fehler.map((b) => b.stelle), ["Folie 2", "Folie 4"], "weich + Ersetzung zählt, weich ohne nicht");
+  assert.deepEqual(s.korrekturen, [{ original: "hat hat der", ersatz: "hat der" }]);
+  assert.deepEqual(s.weich.map((b) => b.stelle), ["Folie 3", "Caption"]);
+  assert.equal(s.brauchbar(befunde[0]), true);
+  assert.equal(s.brauchbar({ original: "x", ersatz: "y" }), false, "ein Wort ist keine eindeutige Fundstelle");
+  assert.deepEqual(befundeSortieren([]).fehler, []);
+});
+
+test("Erklärvideo-Figuren werden unter ihrem eigenen Zweck geprüft, nicht als Schmuckbild", async () => {
+  const k = await import("../src/kosten.mjs");
+  k.budgetSetzen({ limitUsd: 0.48 });
+  k.erfassenStueck(0.43, "autor", "Tag fast voll");
+  /* Die Rücklage für die vier Figuren, wie lauf.mjs sie anlegt. */
+  k.reservieren(0.04, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], "die Figuren des Erklärvideos", "beitraege");
+  /* Unter dem alten Zweck „Bild zeichnen" blockiert die eigene Rücklage das
+     Bild: 0.43 + 0.01 + 0.03 Abstand + 0.04 fremd = 0.51 > 0.48. */
+  assert.equal(k.budgetFrei("Bild zeichnen"), false, "so scheiterte das Erklärvideo am 16.09.");
+  /* Unter dem richtigen Zweck ist die Rücklage die eigene: 0.43 + 0.01 < 0.48. */
+  assert.equal(k.budgetFrei("Figur zeichnen (erklaerbild)"), true, "die Figur darf ihre eigene Rücklage benutzen");
+  const bildki = fs.readFileSync(new URL("../src/bildki.mjs", import.meta.url), "utf8");
+  assert.match(bildki, /budgetPruefen\(zweck === "erklaerbild" \? "Figur zeichnen \(erklaerbild\)" : "Bild zeichnen"\)/);
+});
+
+test("Obergrenze je Beitrag gilt in jedem Schreibpfad, verschachtelt läuft der Posten weiter", async () => {
+  const k = await import("../src/kosten.mjs");
+  k.budgetSetzen({ limitUsd: 1 });
+  assert.equal(k.postenAktiv(), false);
+  k.postenBeginnen("Beitrag b1", 0.10);
+  assert.equal(k.postenAktiv(), true);
+  k.erfassenStueck(0.06, "autor", "Entwurf");
+  /* Ein Ausweichbeitrag ruft textBesorgen aus textBesorgen - der Posten
+     darf dabei nicht neu beginnen, sonst zählte der Entwurf davor nicht. */
+  assert.equal(k.postenStand(), 0.06);
+  k.postenBeenden();
+  assert.equal(k.postenAktiv(), false);
+  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  assert.match(lauf, /const eigenerPosten = !postenAktiv\(\);/, "textBesorgen prüft, ob schon ein Posten läuft");
+  assert.match(lauf, /postenBeginnen\(`Auffüllen \$\{eintrag\.slot\}`, CONFIG\.ki\.maxJeBeitragUsd\)/, "auch das Auffüllen hat die Grenze");
+  assert.ok(!/postenBeginnen\(`Beitrag \$\{eintrag\.slot\}`, CONFIG\.ki\.maxJeBeitragUsd\);\n\s+await textBesorgen/.test(lauf), "die Vorab-Schleife beginnt keinen zweiten Posten");
+});
+
+test("nachbessern reicht einen BudgetFehler weiter statt einen neuen Entwurf zu provozieren", async () => {
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  const block = autor.slice(autor.indexOf("async function nachbessern"), autor.indexOf("export function pruefHinweis"));
+  assert.match(block, /if \(e instanceof BudgetFehler\) throw e;/);
+  assert.ok(!/catch \{ return null; \}/.test(block), "kein stilles Schlucken mehr");
+});
+
+test("Story-Faktencheck: jeder Ausfall hält die Texte, verwirft sie nicht", async () => {
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  const block = autor.slice(autor.indexOf("export async function storiesPruefen"), autor.indexOf("const REEL_SCHEMA"));
+  assert.ok(!/if \(!\(e instanceof BudgetFehler\)\) throw e;/.test(block), "ein technischer Ausfall fliegt nicht mehr nach oben");
+  assert.match(block, /for \(const o of liste\) o\.faktencheckOffen = true;/);
+});
+
+test("Übersprungene Nachrichten und Kommentare werden je Grund gebündelt gemeldet", async () => {
+  const { uebersprungeneMelden } = await import("../src/postfach.mjs");
+  const zeilen = [];
+  const liste = [
+    ...Array.from({ length: 40 }, (_, i) => ({ von: `leer${i}`, text: "", grund: "ohne Text" })),
+    { von: "a", text: "Danke!", grund: "älter als 24 Stunden – Instagram nimmt keine Antwort mehr an" },
+    { von: "b", text: "🎉", grund: "nur Emoji" },
+    { von: "c", text: "x", grund: "bereits behandelt" },
+  ];
+  uebersprungeneMelden(liste, (z) => zeilen.push(z));
+  assert.equal(zeilen.length, 3, "eine Zeile je Grund, „bereits behandelt“ gar nicht");
+  assert.match(zeilen[0], /^  · 40 übersprungen \(ohne Text\): @leer0, @leer1, @leer2, …$/);
+  assert.match(zeilen[1], /1 übersprungen \(älter als 24 Stunden/);
+  /* Kommentare tragen den Namen unter `username`. */
+  const z2 = [];
+  uebersprungeneMelden([{ username: "k1", text: "hi", grund: "nur Emoji" }], (z) => z2.push(z), "username");
+  assert.match(z2[0], /@k1/);
+});
+
+test("Antwortpfade überleben ein unlesbares Modellergebnis", async () => {
+  for (const datei of ["postfach", "interaktion"]) {
+    const q = fs.readFileSync(new URL(`../src/${datei}.mjs`, import.meta.url), "utf8");
+    assert.match(q, /catch \(e\) \{ console\.warn\(`  ! Antworten nicht lesbar/, `${datei}: JSON-Fehler wird abgefangen`);
+    assert.match(q, /if \(!Array\.isArray\(daten\?\.antworten\)\) return \[\];/, `${datei}: fehlende Liste heißt keine Antworten`);
+  }
+});
+
+test("Planmäßige Läufe halten die Concurrency-Gruppe höchstens zwei Stunden", async () => {
+  const wf = fs.readFileSync(new URL("../.github/workflows/instagram.yml", import.meta.url), "utf8");
+  assert.match(wf, /timeout-minutes: \$\{\{ \(github\.event_name == 'schedule' \|\| github\.event\.inputs\.wecker == 'true'\) && 120 \|\| 300 \}\}/);
+});

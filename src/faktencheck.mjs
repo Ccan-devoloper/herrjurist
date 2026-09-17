@@ -104,6 +104,29 @@ export function korrekturenAnwenden(obj, korrekturen = []) {
 /**
  * @returns {{ok:boolean, fehler:string[], hinweise:string[], korrekturen:{original:string, ersatz:string}[], behebbar:{original:string, ersatz:string}[]}}
  */
+/* Befunde des Prüfers sortieren - als reine Funktion, damit ein Test sie
+   greift. Weiche Beanstandungen („irreführend“, „präzisieren“,
+   „missverständlich“) sind keine Fehler, die eine teure Neufassung
+   rechtfertigen – sie werden zu Hinweisen. AUSSER der Prüfer liefert eine
+   konkrete Ersetzung (original → ersatz) mit: Dann ist es ein Fehler mit
+   Fundstelle, egal wie freundlich er formuliert ist, und die Berichtigung
+   kostet nur eine Nachprüfung. Sonst wäre ein falscher Absatz mit dem Wort
+   „ungenau" in der Begründung als Hinweis durchgerutscht. */
+const WEICH = /irreführend|präzisier|missverständlich|ungenau|unscharf|unschärfe|ausdrucksweise|formulierung|konzeptionell|didaktisch|sollte (?:ergänzt|erwähnt|klargestellt)|könnte|empfehl|verkürzt|vereinfacht|mathematisch (?:richtig|korrekt)|ist (?:zwar |dann )?(?:sachlich )?korrekt|suggeriert|wird dem aufbau nicht gerecht|deutlicher|gestaffelt|darstellung/i;
+export function befundeSortieren(befunde = []) {
+  const brauchbar = (b) => Boolean(b?.original && b?.ersatz && b.original !== b.ersatz && String(b.original).trim().split(/\s+/).length >= 2);
+  const sprache = (b) => b?.schwere === "sprache";
+  const ist = (b) => b?.schwere === "fehler" && (brauchbar(b) || !WEICH.test(`${b.problem} ${b.korrektur}`));
+  return {
+    fehler: befunde.filter(ist),
+    /* Sprachversehen mit brauchbarer Fundstelle werden ersetzt, nicht neu
+       geschrieben. Ohne verwertbares Original bleibt es ein Hinweis. */
+    korrekturen: befunde.filter((b) => sprache(b) && brauchbar(b)).map((b) => ({ original: b.original, ersatz: b.ersatz })),
+    weich: befunde.filter((b) => !ist(b) && !sprache(b)),
+    brauchbar,
+  };
+}
+
 /* Wird in diesem Beitrag gerechnet? Dann prüft nicht das billigste Modell.
 
    Am 14.09. ging eine Erbquote raus, die Ehefrau und Kinder vertauscht hatte.
@@ -172,32 +195,21 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
     response = await client().messages.create({ ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHEMA)}` }] });
   }
   erfassen(modell, response.usage, zweck);
-  if (response.stop_reason === "refusal") return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] };
+  /* Ein Prüfergebnis, das sich nicht auswerten lässt, ist KEIN bestandenes.
+     Bis zum 17.09. stand hier `return { ok: true }` - für eine Verweigerung
+     des Modells ebenso wie für unlesbares JSON. Ein Text, dessen Prüfung
+     technisch ausfiel, wäre damit als geprüft veröffentlicht worden. Der
+     Fehler fliegt stattdessen nach oben; faktenSicher() entscheidet dann
+     nach CONFIG.faktencheck.strikt, ob der Text zurückgehalten wird
+     (Standard) oder mit Warnung durchgeht. */
+  if (response.stop_reason === "refusal") throw new Error(`Faktencheck nicht auswertbar: Modell hat die Prüfung abgelehnt (${response.stop_details?.explanation || "ohne Begründung"})`);
   const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
   let daten;
-  try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); } catch { return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] }; }
-  /* Weiche Beanstandungen („irreführend“, „präzisieren“, „missverständlich“) sind
-     keine Fehler, die eine teure Neufassung rechtfertigen – sie werden zu Hinweisen. */
-  const WEICH = /irreführend|präzisier|missverständlich|ungenau|unscharf|unschärfe|ausdrucksweise|formulierung|konzeptionell|didaktisch|sollte (?:ergänzt|erwähnt|klargestellt)|könnte|empfehl|verkürzt|vereinfacht|mathematisch (?:richtig|korrekt)|ist (?:zwar |dann )?(?:sachlich )?korrekt|suggeriert|wird dem aufbau nicht gerecht|deutlicher|gestaffelt|darstellung/i;
-  const ist = (b) => b.schwere === "fehler" && !WEICH.test(`${b.problem} ${b.korrektur}`);
-  /* Sprachversehen mit brauchbarer Fundstelle werden ersetzt, nicht neu
-     geschrieben. Ohne verwertbares Original (zu kurz, oder Original gleich
-     Ersatz) bleibt es ein Hinweis. */
-  const sprache = (b) => b.schwere === "sprache";
-  const korrekturen = daten.befunde.filter((b) => sprache(b) && b.original && b.ersatz && b.original !== b.ersatz && b.original.trim().split(/\s+/).length >= 2).map((b) => ({ original: b.original, ersatz: b.ersatz }));
-  /* Fachfehler, die sich durch Austausch einer Wortfolge beheben lassen:
-     berichtigen und erneut prüfen ist ein Zehntel so teuer wie eine
-     Neufassung – und rettet einen Beitrag, der sonst ganz ausfiele. */
-  const brauchbar = (b) => b.original && b.ersatz && b.original !== b.ersatz && b.original.trim().split(/\s+/).length >= 2;
-  /* Zweitmeinung: Kein Entwurf wird verworfen, weil EIN Prüfmodell einen
-     Fehler sieht. Am 13.09. lehnte der Prüfer in beiden Kanälen korrekte
-     Wochenrückblicke ab („§ 28 Abs. 1 StGB gilt nicht für Anstifter“,
-     „Teilwert-AfA steht im BewG“ – beides falsch) und jede Ablehnung
-     kostete eine Neufassung, bis das Tagesbudget leer war. Jetzt beurteilt
-     das stärkere Modell jeden Fehlerbefund einzeln; nur was es bestätigt,
-     führt zur Neufassung. Das kostet einen Bruchteil einer Neufassung und
-     nur dann, wenn überhaupt etwas beanstandet wurde. */
-  let bestaetigt = daten.befunde.filter(ist);
+  try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); }
+  catch (e) { throw new Error(`Faktencheck nicht auswertbar: keine lesbare JSON-Antwort (${e.message.slice(0, 80)})`); }
+  if (!Array.isArray(daten?.befunde)) throw new Error("Faktencheck nicht auswertbar: Antwort ohne Befundliste");
+  const { fehler: gefunden, korrekturen, weich, brauchbar } = befundeSortieren(daten.befunde);
+  let bestaetigt = gefunden;
   let verworfen = [];
   if (bestaetigt.length && CONFIG.faktencheck.zweitmeinung) {
     try {
@@ -217,7 +229,7 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
   }
   const behebbar = bestaetigt.filter(brauchbar).map((b) => ({ original: b.original, ersatz: b.ersatz }));
   const fehler = bestaetigt.map((b) => `${b.stelle}: ${b.problem} → ${b.korrektur}`);
-  const hinweise = [...daten.befunde.filter((b) => !ist(b) && !sprache(b)).map((b) => `${b.stelle}: ${b.problem}`), ...verworfen.map((b) => `${b.stelle}: ${b.problem} (Zweitmeinung: kein Fehler)`)];
+  const hinweise = [...weich.map((b) => `${b.stelle}: ${b.problem}`), ...verworfen.map((b) => `${b.stelle}: ${b.problem} (Zweitmeinung: kein Fehler)`)];
   if (korrekturen.length) console.log(`  Sprachkorrekturen: ${korrekturen.map((k) => `„${k.original}“ → „${k.ersatz}“`).join(" · ")}`);
   return { ok: fehler.length === 0, fehler, hinweise, korrekturen, behebbar };
 }

@@ -414,7 +414,14 @@ async function nachbessern(inhalt, fakten, pruefen, zweck = "faktencheck") {
   try {
     const zweite = await pruefeFakten(inhalt, zweck);
     return zweite.ok ? zweite : null;
-  } catch { return null; }
+  } catch (e) {
+    /* Ist das Geld alle, darf das nicht wie „Berichtigung hat nicht
+       gereicht" aussehen - sonst schreibt der Aufrufer einen NEUEN Entwurf
+       und gibt noch mehr aus. Der Fehler geht nach oben, der berichtigte
+       Entwurf liegt im Speicher und wartet auf morgen. */
+    if (e instanceof BudgetFehler) throw e;
+    return null;
+  }
 }
 
 /* Dieselbe Belegstelle, die der Autor beim Schreiben hatte, bekommt auch der
@@ -852,8 +859,12 @@ export async function storiesPruefen(liste) {
     }
     for (const o of liste) delete o.faktencheckOffen;
   } catch (e) {
-    if (!(e instanceof BudgetFehler)) throw e;
-    console.warn(`  ⏸ ${e.message.split("\n")[0]} – die Story-Texte bleiben gespeichert und werden im nächsten Lauf geprüft.`);
+    /* Nicht nur beim Budget: Auch ein technischer Ausfall der Prüfung
+       (API-Störung, unlesbares Ergebnis) darf die bezahlten Texte nicht
+       mitreißen. Sie bleiben gespeichert, tragen `faktencheckOffen` und
+       werden im nächsten Lauf geprüft. Ungeprüft erscheint keine. */
+    if (e instanceof BudgetFehler) console.warn(`  ⏸ ${e.message.split("\n")[0]} – die Story-Texte bleiben gespeichert und werden im nächsten Lauf geprüft.`);
+    else console.warn(`  ! Story-Faktencheck ausgefallen (${e.message.split("\n")[0].slice(0, 120)}) – die Texte bleiben gespeichert und werden im nächsten Lauf geprüft.`);
     for (const o of liste) o.faktencheckOffen = true;
   }
   return liste;

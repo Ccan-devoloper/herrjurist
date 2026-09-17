@@ -36,7 +36,7 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, PostenFehler, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -473,6 +473,20 @@ async function main() {
   const textBesorgen = async (eintrag) => {
     const vorhanden = hosting.jsonLesen(textDatei(eintrag), null);
     if (vorhanden) return vorhanden;
+    /* Die Obergrenze je Beitrag gilt HIER, nicht nur in der Vorab-Schleife:
+       textBesorgen läuft auch zur Sendezeit (Lösungsskizze, oder wenn das
+       Vorschreiben vorübergehend scheiterte). Ein Ausweichbeitrag ruft
+       textBesorgen aus textBesorgen heraus - dann läuft der Posten weiter,
+       statt neu zu beginnen, sonst zählte die Recherche davor nicht mit. */
+    const eigenerPosten = !postenAktiv();
+    if (eigenerPosten) postenBeginnen(`Beitrag ${eintrag.slot}`, CONFIG.ki.maxJeBeitragUsd);
+    try {
+      return await textSchreiben(eintrag);
+    } finally {
+      if (eigenerPosten) postenBeenden();
+    }
+  };
+  const textSchreiben = async (eintrag) => {
     const thema = themaFuer(eintrag.themaId);
     let text;
     if (eintrag.format === "reel") {
@@ -529,7 +543,6 @@ async function main() {
   for (const eintrag of vorab) {
     try {
       log(`Text vorab: ${eintrag.format === "reel" ? "Reel" : "Beitrag"} ${eintrag.slot} ${eintrag.themaTitel || ""}`);
-      postenBeginnen(`Beitrag ${eintrag.slot}`, CONFIG.ki.maxJeBeitragUsd);
       await textBesorgen(eintrag);
       vorabGeschrieben++;
     } catch (e) {
@@ -548,8 +561,6 @@ async function main() {
         vorabGescheitert++;
       }
       console.error(`  ✗ Text ${eintrag.slot}: ${e.message.split("\n")[0]}`);
-    } finally {
-      postenBeenden();
     }
   }
   if (vorabGeschrieben || vorabGescheitert) {
@@ -815,7 +826,9 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
       log(`Auffüllen ${i + 1}/${ziel}: ${eintrag.format} · ${eintrag.thema.titel}`);
       let beitrag = hosting.jsonLesen(`inhalte/${slot}.json`, null);
       if (!beitrag) {
-        beitrag = await beitragSchreiben({ format: eintrag.format, thema: eintrag.thema, datum, strategie });
+        postenBeginnen(`Auffüllen ${eintrag.slot}`, CONFIG.ki.maxJeBeitragUsd);
+        try { beitrag = await beitragSchreiben({ format: eintrag.format, thema: eintrag.thema, datum, strategie }); }
+        finally { postenBeenden(); }
         beitrag.slug = slot;
         hosting.jsonSchreiben(`inhalte/${slot}.json`, beitrag);
       }

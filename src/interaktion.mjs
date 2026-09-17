@@ -12,6 +12,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
 import { budgetPruefen, erfassen } from "./kosten.mjs";
+import { uebersprungeneMelden } from "./postfach.mjs";
 import { korpus } from "./pruefung.mjs";
 
 let clientCache = null;
@@ -103,7 +104,10 @@ Gib für jede id an, ob geantwortet werden soll (antworten), den Grund bei Nein 
   erfassen(CONFIG.antworten.modell, response.usage, "kommentare");
   if (response.stop_reason === "refusal") return [];
   const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
-  const daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+  let daten;
+  try { daten = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); }
+  catch (e) { console.warn(`  ! Antworten nicht lesbar (${e.message.slice(0, 80)}) – diesmal keine Antworten.`); return []; }
+  if (!Array.isArray(daten?.antworten)) return [];
   return daten.antworten.map((a) => ({ id: a.id, text: a.antworten && a.text && a.text.trim().length > 0 ? a.text.trim().slice(0, 300) : null, grund: a.grund || null }));
 }
 
@@ -116,7 +120,7 @@ export async function kommentareBeantworten(ig, ledger, { log = console.log } = 
   const medien = await ig.neuesteMedien(CONFIG.interaktion.beitraegeZurueck);
   const alle = offeneKommentare(medien, eigener, ledger);
   const gesamtKommentare = medien.reduce((n, m) => n + (m.comments?.data?.length || 0), 0);
-  for (const u of alle.uebersprungen || []) if (u.grund !== "bereits behandelt") log(`  · Kommentar von @${u.username || "?"} „${u.text}“ → übersprungen (${u.grund})`);
+  uebersprungeneMelden(alle.uebersprungen || [], log, "username");
   const offen = alle.slice(0, CONFIG.interaktion.maxAntwortenJeLauf);
   if (!offen.length) return { geprueft: medien.length, kommentare: gesamtKommentare, beantwortet: 0 };
   log(`Interaktion: ${offen.length} neue Kommentare unter ${medien.length} Beiträgen (${gesamtKommentare} gesamt)`);
