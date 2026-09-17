@@ -58,7 +58,7 @@ test("Sperre: gesetzt, wirksam, und danach wieder frei", () => {
 
 test("Sitzung liegt verschlüsselt, nicht im Klartext", () => {
   const dir = tmpdir();
-  assert.equal(sitzungLaden(dir), null, "ohne Datei keine Sitzung");
+  assert.equal(sitzungLaden(dir, "", ""), null, "ohne Datei und ohne Saat keine Sitzung");
   const sitzung = { uuids: { phone_id: "abc-123" }, authorization_data: { ds_user_id: "42", sessionid: "geheime-sitzung" } };
   assert.equal(sitzungSichern(dir, sitzung), true);
   const roh = fs.readFileSync(path.join(dir, "instagrapi.enc"), "utf8");
@@ -72,14 +72,29 @@ test("Die Sitzung des Testkontos wird nicht für den echten Kanal benutzt", () =
      einer Übernahme aus - genau das, was eine Challenge auslöst. */
   const dir = tmpdir();
   sitzungSichern(dir, { authorization_data: { sessionid: "vom-testkonto" } }, "testkonto");
-  assert.equal(sitzungLaden(dir, "herrjurist"), null, "fremde Sitzung darf nicht gelten");
-  assert.deepEqual(sitzungLaden(dir, "TESTKONTO"), { authorization_data: { sessionid: "vom-testkonto" } }, "Groß- und Kleinschreibung ist egal");
+  assert.equal(sitzungLaden(dir, "herrjurist", ""), null, "fremde Sitzung darf nicht gelten");
+  assert.deepEqual(sitzungLaden(dir, "TESTKONTO", ""), { authorization_data: { sessionid: "vom-testkonto" } }, "Groß- und Kleinschreibung ist egal");
+});
+
+test("Ohne Datei zieht die Saat aus dem Secret", async () => {
+  /* Der Weg, der am 17.09. nötig wurde: Die CI darf sich nicht anmelden
+     (Rechenzentrums-IP), also kommt die Sitzung einmalig vom eigenen Rechner
+     und liegt als Secret. Ohne diesen Rückfall stünde die CI ohne Sitzung da. */
+  const { tokenVerschluesseln } = await import("../src/instagram.mjs");
+  const dir = tmpdir();
+  const saat = tokenVerschluesseln({ nutzer: "testkonto", sitzung: { authorization_data: { sessionid: "aus-dem-secret" } } });
+  assert.deepEqual(sitzungLaden(dir, "testkonto", saat), { authorization_data: { sessionid: "aus-dem-secret" } });
+  assert.equal(sitzungLaden(dir, "jemand-anderes", saat), null, "auch die Saat gilt nur für ihr Konto");
+
+  /* Die Datei im Asset-Zweig hat Vorrang – sie ist die frischere. */
+  sitzungSichern(dir, { authorization_data: { sessionid: "aus-dem-zweig" } }, "testkonto");
+  assert.deepEqual(sitzungLaden(dir, "testkonto", saat), { authorization_data: { sessionid: "aus-dem-zweig" } });
 });
 
 test("Beschädigte Sitzungsdatei wirft nicht, sie gilt als keine", () => {
   const dir = tmpdir();
   fs.writeFileSync(path.join(dir, "instagrapi.enc"), "kein gültiger Tresor");
-  assert.equal(sitzungLaden(dir), null);
+  assert.equal(sitzungLaden(dir, "", ""), null);
 });
 
 /* --- Der Weg, der das Konto schützt --------------------------------------

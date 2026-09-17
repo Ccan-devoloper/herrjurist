@@ -178,6 +178,10 @@ jobs:
           IG_INTERAKTIV_ARTEN: ${{ vars.IG_INTERAKTIV_ARTEN }}
           IG_PRIVAT_USER: ${{ secrets.IG_PRIVAT_USER }}
           IG_PRIVAT_PASS: ${{ secrets.IG_PRIVAT_PASS }}
+          # Einmal am eigenen Rechner erzeugt. Der Tageslauf meldet sich NIE
+          # selbst an: Eine Anmeldung von der Runner-IP hat Instagram am 17.09.
+          # mit "Please wait a few minutes" abgewiesen.
+          IG_PRIVAT_SITZUNG: ${{ secrets.IG_PRIVAT_SITZUNG }}
           IG_PYTHON: ${{ github.workspace }}/.venv-ig/bin/python
           BERICHT_EMAIL: ${{ vars.BERICHT_EMAIL }}
           SMTP_HOST: ${{ vars.SMTP_HOST }}

@@ -255,6 +255,15 @@ export const CONFIG = {
        erst wieder versuchen. Eine Wiederholungsschleife gegen eine
        Anmeldesperre ist genau das, was ein Konto endgültig kostet. */
     sperreStunden: Number(env("IG_INTERAKTIV_SPERRE_H", 24)),
+    /* Die Sitzung, einmal vom eigenen Rechner erzeugt (bin/interaktiv-anmelden.mjs),
+       verschlüsselt als Secret. Sie ist die Saat: Fehlt im Asset-Zweig eine
+       Sitzung, wird diese genommen. */
+    sitzungSaat: env("IG_PRIVAT_SITZUNG", ""),
+    /* Darf sich der Lauf mit Name und Passwort NEU anmelden? Standard nein.
+       Am 17.09. hat Instagram die Erstanmeldung vom GitHub-Runner mit
+       "Please wait a few minutes" abgewiesen - Rechenzentrums-IP. Eine
+       Neuanmeldung gehört an einen normalen Anschluss, nicht in die CI. */
+    neuanmeldung: env("IG_PRIVAT_NEUANMELDUNG", "false") === "true",
     zeitlimitSekunden: Number(env("IG_INTERAKTIV_TIMEOUT", 180)),
     python: env("IG_PYTHON", "python3"),
   },

@@ -72,6 +72,10 @@ try {
 } catch (e) {
   console.error(`\n✗ Nicht veröffentlicht (${e.art || "fehler"}): ${e.message}`);
   if (e.art === "challenge") console.error("  Instagram verlangt eine Bestätigung. In der App anmelden, bestätigen, dann erneut – NICHT sofort wiederholen.");
+  if (e.art === "sitzung") console.error("  Es liegt keine gültige Sitzung vor und Neuanmeldung ist aus. Einmal am eigenen Rechner\n  anmelden (node bin/interaktiv-anmelden.mjs) und den Wert als Secret IG_PRIVAT_SITZUNG eintragen.");
+  if (["challenge", "bremse"].includes(e.art)) {
+    console.error("  Hinweis: Im Tageslauf würde der Weg jetzt 24 Stunden ruhen. Diese Probe führt kein\n  Ledger, hier ist also nichts gespeichert – trotzdem nicht sofort wiederholen.");
+  }
   if (e.art === "aufbau") console.error("  Läuft instagrapi in dieser Umgebung? IG_PYTHON zeigt auf: " + CONFIG.interaktiv.python);
   process.exit(1);
 }

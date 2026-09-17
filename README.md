@@ -523,21 +523,45 @@ unterstützt Umfrage und Link erstklassig; für die anderen müsste die Nutzlast
 geraten werden, und eine geratene Nutzlast postet im Zweifel eine kaputte Story.
 Das lohnt erst, wenn der Weg mit der Umfrage nachweislich trägt.
 
+### Die Anmeldung gehört NICHT in die CI
+
+Am 17.09. hat die erste Probe genau daran gelegen: Instagram wies die
+Anmeldung vom GitHub-Runner mit *„Please wait a few minutes before you try
+again"* ab. GitHub-Actions-Runner stehen in Azure-Rechenzentren, und eine
+Anmeldung von einer Rechenzentrums-IP ist für Instagram das auffälligste
+Muster überhaupt. Wiederholen hilft dagegen nicht – es macht es schlimmer.
+
+Deshalb: **einmal vom eigenen Rechner anmelden**, die Sitzung verschlüsselt
+als Secret hinterlegen, und die CI meldet sich nie wieder an. Sie benutzt nur
+noch diese Sitzung (`IG_PRIVAT_NEUANMELDUNG` steht auf `false`).
+
+```
+pip install instagrapi
+IG_PRIVAT_USER=… IG_PRIVAT_PASS=… IG_TOKEN_KEY=… npm run interaktiv:anmelden
+```
+
+Der Befehl gibt einen verschlüsselten Wert aus – der kommt als Secret
+`IG_PRIVAT_SITZUNG` nach GitHub. Er ist ohne `IG_TOKEN_KEY` wertlos, gehört
+aber trotzdem nur ins Secret-Feld.
+
 ### Einrichten
 
 1. **Zuerst mit einem Testkonto.** Nicht mit dem Hauptkonto anfangen – das ist
    keine Förmlichkeit, sondern der Unterschied zwischen einem Fehlversuch und
    einem gesperrten Kanal.
-2. GitHub → Settings → Secrets: `IG_PRIVAT_USER` (Kontoname) und
+2. Zwei-Faktor-Anmeldung muss für dieses Konto **aus** sein, sonst bleibt es bei
+   der Challenge stehen.
+3. GitHub → Settings → Secrets: `IG_PRIVAT_USER` (Kontoname) und
    `IG_PRIVAT_PASS` (**das Konto-Passwort**, nicht ein Token – es öffnet das
    ganze Konto und gehört nirgendwo sonst hin).
-3. GitHub → Variables: `IG_INTERAKTIV` = `true`. Ohne diese Variable wird
+4. Einmal am eigenen Rechner anmelden (siehe oben) und `IG_PRIVAT_SITZUNG`
+   als drittes Secret eintragen.
+5. GitHub → Variables: `IG_INTERAKTIV` = `true`. Ohne diese Variable wird
    instagrapi nicht einmal installiert.
-4. Zwei-Faktor-Anmeldung muss für dieses Konto **aus** sein, sonst bleibt es bei
-   der Challenge stehen.
-5. Nach dem ersten erfolgreichen Lauf liegt die Sitzung verschlüsselt unter
-   `state/instagrapi.enc` im Asset-Zweig (Schlüssel: `IG_TOKEN_KEY`). Ab dann
-   meldet sich der Bot nicht mehr neu an.
+
+Nach dem ersten erfolgreichen Lauf liegt die dann aktuelle Sitzung
+verschlüsselt unter `state/instagrapi.enc` im Asset-Zweig und hat Vorrang vor
+dem Secret; das Secret bleibt der Rückfall, falls die Datei verlorengeht.
 
 Optional: `IG_INTERAKTIV_ARTEN` (Standard `frage`) bestimmt, welche Story-Arten
 eine Umfrage bekommen.

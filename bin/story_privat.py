@@ -41,8 +41,9 @@ def antwort(**felder):
 
 def main():
     auftrag = json.load(sys.stdin)
-    bild = Path(auftrag["bild"])
-    if not bild.exists():
+    nur_anmelden = auftrag.get("aktion") == "anmelden"
+    bild = Path(auftrag.get("bild") or "")
+    if not nur_anmelden and not bild.exists():
         antwort(ok=False, art="aufruf", fehler=f"Bild nicht gefunden: {bild}")
 
     try:
@@ -87,6 +88,14 @@ def main():
             antwort(ok=False, art="bremse", fehler=f"Instagram bremst: {e}")
         except Exception as e:                                     # noqa: BLE001 - jeder Fehler ist hier ein Rückfall
             antwort(ok=False, art="login", fehler=f"{type(e).__name__}: {e}")
+
+    # Nur anmelden: Das ist der Weg, der vom EIGENEN Rechner aus gegangen
+    # wird. Eine Erstanmeldung von einer Rechenzentrums-IP (und ein
+    # GitHub-Actions-Runner ist genau das) ist fuer Instagram das
+    # auffaelligste Muster ueberhaupt - am 17.09. mit "Please wait a few
+    # minutes" quittiert. Von zu Hause angemeldet, traegt die Sitzung.
+    if nur_anmelden:
+        antwort(ok=True, medienId="", sitzung=client.get_settings())
 
     # --- Story hochladen ------------------------------------------------
     polls, links = [], []

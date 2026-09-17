@@ -14,6 +14,11 @@ name: Interaktive Story · Einzelprobe
 
 on:
   workflow_dispatch:
+    inputs:
+      neuanmeldung:
+        description: "Neu anmelden statt die hinterlegte Sitzung zu benutzen (fast immer NEIN: Instagram weist Anmeldungen von Rechenzentrums-IPs ab)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -62,6 +67,10 @@ jobs:
           IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
           IG_PRIVAT_USER: ${{ secrets.IG_PRIVAT_USER }}
           IG_PRIVAT_PASS: ${{ secrets.IG_PRIVAT_PASS }}
+          # Einmal am eigenen Rechner erzeugt (bin/interaktiv-anmelden.mjs).
+          # Ohne sie meldet sich hier nichts an - siehe Eingabe oben.
+          IG_PRIVAT_SITZUNG: ${{ secrets.IG_PRIVAT_SITZUNG }}
+          IG_PRIVAT_NEUANMELDUNG: ${{ github.event.inputs.neuanmeldung }}
           IG_MARKE: ${{ vars.IG_MARKE }}
           IG_PYTHON: ${{ github.workspace }}/.venv-ig/bin/python
         run: node bin/interaktiv-probe.mjs --state assets/state

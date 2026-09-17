@@ -84,15 +84,26 @@ const sitzungsPfad = (stateDir) => path.join(stateDir, SITZUNGSDATEI);
    beim Wechsel vom Testkonto auf den echten Kanal die fremde Sitzung mit den
    neuen Zugangsdaten probiert - und genau das sieht für Instagram nach einer
    Übernahme aus. Passt der Name nicht, gilt die Sitzung als nicht vorhanden. */
-export function sitzungLaden(stateDir, nutzer = CONFIG.interaktiv.nutzer) {
-  const p = sitzungsPfad(stateDir);
-  if (!fs.existsSync(p)) return null;
+function tresorLesen(text, nutzer) {
   try {
-    const tresor = tokenEntschluesseln(fs.readFileSync(p, "utf8"));
+    const tresor = tokenEntschluesseln(text);
     if (!tresor || typeof tresor !== "object") return null;
     if (String(tresor.nutzer || "").toLowerCase() !== String(nutzer || "").toLowerCase()) return null;
     return tresor.sitzung || null;
   } catch { return null; }
+}
+
+/* Erst der Asset-Zweig, dann die Saat aus dem Secret. Die Saat entsteht einmal
+   am eigenen Rechner (bin/interaktiv-anmelden.mjs) - denn eine Erstanmeldung
+   vom GitHub-Runner weist Instagram ab ("Please wait a few minutes", am 17.09.
+   belegt): Rechenzentrums-IPs sind dort das auffälligste Muster. */
+export function sitzungLaden(stateDir, nutzer = CONFIG.interaktiv.nutzer, saat = CONFIG.interaktiv.sitzungSaat) {
+  const p = sitzungsPfad(stateDir);
+  if (fs.existsSync(p)) {
+    const ausDatei = tresorLesen(fs.readFileSync(p, "utf8"), nutzer);
+    if (ausDatei) return ausDatei;
+  }
+  return saat ? tresorLesen(String(saat).trim(), nutzer) : null;
 }
 
 export function sitzungSichern(stateDir, sitzung, nutzer = CONFIG.interaktiv.nutzer) {
@@ -146,6 +157,10 @@ export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDi
     nutzer,
     passwort,
     sitzung,
+    /* In der CI ist eine Neuanmeldung verboten. Fehlt oder trägt die Sitzung
+       nicht, bricht die Brücke ab, statt von einer Rechenzentrums-IP eine
+       Anmeldung zu versuchen - das würde nur eine Sperre einbringen. */
+    neuanmeldungErlaubt: CONFIG.interaktiv.neuanmeldung,
     umfrage,
     link,
   }, { python, skript });
@@ -162,4 +177,12 @@ export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDi
     throw new InteraktivFehler(antwort.fehler || "unbekannter Fehler", antwort.art || "sonstig");
   }
   return String(antwort.medienId);
+}
+
+/* Nur anmelden, nichts veröffentlichen: der Weg für den eigenen Rechner.
+   Gibt den verschlüsselten Tresor zurück, der als Secret hinterlegt wird. */
+export async function anmeldenNur({ nutzer = CONFIG.interaktiv.nutzer, passwort = CONFIG.interaktiv.passwort, python, skript = BRUECKE } = {}) {
+  const antwort = await bruecke({ aktion: "anmelden", nutzer, passwort, sitzung: null, neuanmeldungErlaubt: true }, { python, skript });
+  if (!antwort.ok) throw new InteraktivFehler(antwort.fehler || "Anmeldung fehlgeschlagen", antwort.art || "login");
+  return { sitzung: antwort.sitzung, tresor: tokenVerschluesseln({ nutzer: String(nutzer || ""), sitzung: antwort.sitzung }) };
 }
