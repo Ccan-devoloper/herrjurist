@@ -42,23 +42,27 @@ export function kontext(opt = {}) {
   };
 }
 
-async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_RENDER_SKALA || 1)) {
+async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_RENDER_SKALA || 1), messen = null) {
   const b = await browserStarten();
   const page = await b.newPage({ viewport: { width: masse.breite, height: masse.hoehe }, deviceScaleFactor: skala });
   const tmp = path.join(os.tmpdir(), `ig-${process.pid}-${Math.random().toString(36).slice(2)}.html`);
   fs.writeFileSync(tmp, html);
+  let kasten = null;
   try {
     await page.goto(`file://${tmp}`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(einpassen);
     await page.waitForTimeout(60);
+    /* NACH dem Einpassen messen: Der Text wird dort verkleinert, bis alles
+       oberhalb der Fußzeile bleibt - vorher gemessen wäre der Kasten falsch. */
+    if (messen) kasten = await page.locator(messen).first().boundingBox().catch(() => null);
     fs.mkdirSync(path.dirname(zielPfad), { recursive: true });
     await page.screenshot({ path: zielPfad, type: "jpeg", quality: skala < 1 ? 80 : 92, fullPage: false });
   } finally {
     await page.close();
     fs.rmSync(tmp, { force: true });
   }
-  return zielPfad;
+  return messen ? { pfad: zielPfad, kasten } : zielPfad;
 }
 
 /* Läuft im Browser: verkleinert Text, bis nichts mehr über den rechten Rand
@@ -147,6 +151,19 @@ export async function beitragRendern(beitrag, zielVerzeichnis, opt = {}) {
 export async function storyRendern(story, zielPfad, opt = {}) {
   const ctx = kontext({ ...opt, fach: story.fach, klausur: story.klausur, fachLabel: story.fachLabel, variante: opt.variante ?? story.variante });
   return htmlZuJpeg(storyHtml(story, ctx), MASSE.story, zielPfad);
+}
+
+/* Interaktive Fassung einer Story: rendert wie storyRendern und misst
+   zusätzlich den freigehaltenen Streifen für den Umfrage-Sticker. Bewusst eine
+   eigene Funktion statt eines weiteren Rückgabewerts von storyRendern - die
+   Zusage "gibt einen Pfad zurück" haben dort schon mehrere Aufrufer. */
+export async function storyRendernInteraktiv(story, zielPfad, opt = {}) {
+  const ctx = kontext({ ...opt, fach: story.fach, klausur: story.klausur, fachLabel: story.fachLabel, variante: opt.variante ?? story.variante });
+  const { pfad, kasten } = await htmlZuJpeg(
+    storyHtml({ ...story, interaktiv: true }, ctx), MASSE.story, zielPfad,
+    Number(process.env.IG_RENDER_SKALA || 1), ".umfrageplatz",
+  );
+  return { pfad, platz: kasten, masse: MASSE.story };
 }
 
 /* Cover eines Reels (Standbild für Feed und Profilraster). */

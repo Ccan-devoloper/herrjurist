@@ -227,6 +227,38 @@ export const CONFIG = {
     sicherheitsabstandLimit: 10,                            // Reserve unter dem 100er-Tageslimit
   },
 
+  /* Interaktive Stories über die private Schnittstelle (instagrapi) ---------
+     Die offizielle Publishing-API kennt keinen nativen Umfrage-Sticker. Eine
+     ins Bild gemalte Umfrage sieht aus wie eine, ist aber nicht antippbar und
+     liefert keine Ergebnisse. Für echte Interaktion führt kein Weg an der
+     privaten Schnittstelle vorbei - und die ist nicht freigegeben.
+
+     Deshalb ist das hier ein ZUSATZ, nie der einzige Weg: Scheitert der
+     private Weg, geht dieselbe Story über die Graph API raus wie bisher. Und
+     der Schalter steht auf aus, bis er mit einem Testkonto belegt ist.
+
+     Die Zugangsdaten sind ein viel größeres Geheimnis als ein API-Token: Sie
+     öffnen das ganze Konto. Sie gehören in GitHub-Secrets und nirgendwo sonst
+     hin. Die Sitzung liegt verschlüsselt im Asset-Zweig (IG_TOKEN_KEY) - eine
+     bestehende Sitzung sieht für Instagram nach dem immer gleichen Gerät aus,
+     eine Neuanmeldung von wechselnder Runner-IP nach einer Übernahme. */
+  interaktiv: {
+    aktiv: env("IG_INTERAKTIV", "false") === "true",
+    nutzer: env("IG_PRIVAT_USER", ""),
+    passwort: env("IG_PRIVAT_PASS", ""),
+    /* Welche Story-Arten eine Umfrage bekommen. "frage" trägt im Bild schon
+       A/B/C mit den ausformulierten Antworten - der Sticker muss die langen
+       Antworten also gar nicht tragen, er fragt nur ab. */
+    arten: env("IG_INTERAKTIV_ARTEN", "frage").split(",").map((a) => a.trim()).filter(Boolean),
+    stickerFrage: env("IG_INTERAKTIV_FRAGE", "Was stimmt?"),
+    /* Nach einer Challenge oder einer Bremse von Instagram: so lange gar nicht
+       erst wieder versuchen. Eine Wiederholungsschleife gegen eine
+       Anmeldesperre ist genau das, was ein Konto endgültig kostet. */
+    sperreStunden: Number(env("IG_INTERAKTIV_SPERRE_H", 24)),
+    zeitlimitSekunden: Number(env("IG_INTERAKTIV_TIMEOUT", 180)),
+    python: env("IG_PYTHON", "python3"),
+  },
+
   /* Wissensbasis: verschlüsselter Volltext als Belegstelle beim Schreiben ---
      Das Repo ist öffentlich, das Material nicht: daten/wissen/*.enc liegt im
      Tresor, der Schlüssel steht nur im GitHub-Actions-Secret IG_WISSEN_KEY.

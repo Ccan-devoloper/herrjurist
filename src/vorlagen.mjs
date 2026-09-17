@@ -215,6 +215,7 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story .karte.entscheid{margin-top:28px;border-color:var(--ok)}
 .story .karte.entscheid .t{font-size:34px;letter-spacing:.06em;text-transform:uppercase;color:var(--ok)}
 .story .pfeil{margin-top:auto;text-align:center;font-size:34px;color:var(--text-weich);letter-spacing:.12em;text-transform:uppercase}
+.story .umfrageplatz{margin-top:auto;height:300px;flex:none}
 /* Reel-Cover: das Standbild, das im Feed und im Profilraster für das Reel steht.
    Alles Wichtige liegt im mittleren 4:5-Bereich (y 285–1635), den Instagram
    dort zeigt. */
@@ -623,7 +624,14 @@ const STORIES = {
     ${ueberzeile("frage", s.ueberzeile || "Prüfungsfrage")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.optionen?.length ? `<div class="optionen">${s.optionen.map((o, k) => `<div><b>${"ABCD"[k]}</b><span>${markieren(o)}</span></div>`).join("")}</div>` : ""}
-    <div class="pfeil">Antwort in der nächsten Story →</div>
+    ${s.interaktiv
+      /* Interaktive Fassung: Statt des Hinweises bleibt ein freier Streifen,
+         auf den der native Umfrage-Sticker gelegt wird. Der Platz wird nach
+         dem Rendern gemessen (render.mjs) - geschätzte Koordinaten lägen bei
+         einem längeren Titel irgendwann auf dem Text. Die Antworten stehen
+         schon oben; der Sticker fragt nur A/B/C ab. */
+      ? `<div class="umfrageplatz"></div>`
+      : `<div class="pfeil">Antwort in der nächsten Story →</div>`}
     ${fuss(ctx)}`,
   antwort: (s, ctx) => `
     ${sk(ctx)}

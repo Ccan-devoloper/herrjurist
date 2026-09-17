@@ -475,6 +475,77 @@ Lokal testen: `node src/reel.mjs beispiele/reel.json beispiele/reel-out` baut da
 mit der besten verfügbaren Stimme (`IG_STIMME=aus` für ein stummes Storyboard). Voraussetzung: `ffmpeg`
 im Pfad (auf den GitHub-Runnern vorinstalliert) oder `FFMPEG_PATH`.
 
+## Interaktive Stories (native Umfrage)
+
+Die offizielle Publishing-API von Meta kennt **keinen** nativen Umfrage-Sticker.
+Eine ins Bild gemalte Umfrage sieht aus wie eine, ist aber nicht antippbar,
+erzeugt keine Stimmen und liefert keine Ergebnisse. Für echte Interaktion führt
+kein Weg an der privaten Schnittstelle (instagrapi) vorbei.
+
+Deshalb ein **Hybrid**: Alle normalen Stories gehen weiter über die Graph API.
+Nur die Prüfungsfrage-Story nimmt den zweiten Weg – und auch die nur als
+Zusatz, nie als einziger Weg.
+
+### Wie es aussieht
+
+Im Bild stehen wie bisher die Frage und A/B/C mit den ausformulierten
+Antworten. Statt „Antwort in der nächsten Story →" bleibt unten ein Streifen
+frei; dort liegt der native Sticker und fragt nur **„Was stimmt?"** mit A/B/C
+ab. Die langen Antworten muss der Sticker so gar nicht tragen – in einen
+Instagram-Umfrage-Sticker passen ohnehin nur ein paar Zeichen.
+
+Wo genau der Sticker sitzt, wird **nach dem Rendern gemessen** (`.umfrageplatz`),
+nicht geschätzt. Bei einem längeren Titel verschiebt sich das Layout, und
+geratene Koordinaten lägen dann auf dem Text.
+
+### Die Risiken, ungeschönt
+
+Die private Schnittstelle ist von Meta nicht freigegeben. Was schiefgehen kann:
+
+1. **Kontosperre.** Automatisierter Zugriff außerhalb der freigegebenen
+   Schnittstellen kann gegen die Instagram-Bedingungen verstoßen. Das ist der
+   größtmögliche Ausfall – größer als jeder Tag ohne Beitrag.
+2. **Anmelde-Challenge.** Wechselnde Runner-IPs sehen für Instagram nach einer
+   Übernahme aus. Deshalb wird die Sitzung wiederverwendet und verschlüsselt
+   abgelegt; nach einer Challenge wird **24 Stunden gar nicht erst wieder
+   versucht** (`ledger.interaktivSperreBis`). Eine Wiederholungsschleife gegen
+   eine Anmeldesperre ist genau das, was ein Konto endgültig kostet.
+3. **Endpunkte ändern sich.** Was heute lädt, kann nach einem App-Update von
+   Instagram fehlschlagen.
+
+Gegen alle drei hilft dieselbe Bauweise: **Der Zusatzweg darf nie der einzige
+sein.** Scheitert er, wird dieselbe Story ganz normal gerendert und über die
+Graph API veröffentlicht. Eine Story fällt nie aus, nur weil die Umfrage nicht
+gesetzt werden konnte.
+
+Nicht eingebaut sind **Quiz, Emoji-Slider und Frage-Sticker**. instagrapi
+unterstützt Umfrage und Link erstklassig; für die anderen müsste die Nutzlast
+geraten werden, und eine geratene Nutzlast postet im Zweifel eine kaputte Story.
+Das lohnt erst, wenn der Weg mit der Umfrage nachweislich trägt.
+
+### Einrichten
+
+1. **Zuerst mit einem Testkonto.** Nicht mit dem Hauptkonto anfangen – das ist
+   keine Förmlichkeit, sondern der Unterschied zwischen einem Fehlversuch und
+   einem gesperrten Kanal.
+2. GitHub → Settings → Secrets: `IG_PRIVAT_USER` (Kontoname) und
+   `IG_PRIVAT_PASS` (**das Konto-Passwort**, nicht ein Token – es öffnet das
+   ganze Konto und gehört nirgendwo sonst hin).
+3. GitHub → Variables: `IG_INTERAKTIV` = `true`. Ohne diese Variable wird
+   instagrapi nicht einmal installiert.
+4. Zwei-Faktor-Anmeldung muss für dieses Konto **aus** sein, sonst bleibt es bei
+   der Challenge stehen.
+5. Nach dem ersten erfolgreichen Lauf liegt die Sitzung verschlüsselt unter
+   `state/instagrapi.enc` im Asset-Zweig (Schlüssel: `IG_TOKEN_KEY`). Ab dann
+   meldet sich der Bot nicht mehr neu an.
+
+Optional: `IG_INTERAKTIV_ARTEN` (Standard `frage`) bestimmt, welche Story-Arten
+eine Umfrage bekommen.
+
+Im Protokoll steht bei Erfolg `✓ Story s4 frage mit Umfrage`. Steht dort
+stattdessen `! Umfrage für Story s4 nicht gesetzt (…) – normale Story folgt`,
+ist der Rückfall gelaufen: Die Story ist draußen, nur ohne Sticker.
+
 ## Wachstumsbausteine (alle automatisch)
 
 **Lernschleife.** Einmal täglich liest der Bot die Instagram-Statistiken (Reichweite, Speicherungen,

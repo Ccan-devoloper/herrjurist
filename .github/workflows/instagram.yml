@@ -119,6 +119,20 @@ jobs:
           fi
           ls -la ~/.cache/piper-voices
 
+      # Interaktive Stories (native Umfrage) laufen ueber instagrapi. Bewusst in
+      # einem EIGENEN venv: Der Lauf bringt schon rembg und onnxruntime mit,
+      # die auf bestimmte Versionen von numpy und Pillow festgelegt sind.
+      # Ein zusaetzliches Paket in dieselbe Umgebung zu legen, kann diese
+      # Festlegungen verschieben - und dann faellt der Freisteller aus, nicht
+      # der Zusatzweg. Der Schritt laeuft nur, wenn der Schalter an ist.
+      - name: instagrapi (nur fuer interaktive Stories)
+        if: vars.IG_INTERAKTIV == 'true'
+        run: |
+          python3 -m venv .venv-ig
+          .venv-ig/bin/pip install --quiet --upgrade pip
+          .venv-ig/bin/pip install --quiet instagrapi
+          .venv-ig/bin/python -c "import instagrapi; print('instagrapi', instagrapi.__version__)"
+
       - name: Tageslauf
         working-directory: .
         env:
@@ -156,6 +170,15 @@ jobs:
           IG_FAKTENCHECK_STRIKT: ${{ vars.IG_FAKTENCHECK_STRIKT }}
           IG_LERNEN: ${{ vars.IG_LERNEN }}
           IG_NACHRICHTEN: ${{ vars.IG_NACHRICHTEN }}
+          # Interaktive Stories ueber die private Schnittstelle. IG_PRIVAT_PASS
+          # ist das Passwort des Kontos, nicht ein API-Token: Es oeffnet das
+          # ganze Konto. Es steht nur hier als Secret und darf nirgendwo sonst
+          # auftauchen. Ohne IG_INTERAKTIV=true wird es gar nicht erst benutzt.
+          IG_INTERAKTIV: ${{ vars.IG_INTERAKTIV }}
+          IG_INTERAKTIV_ARTEN: ${{ vars.IG_INTERAKTIV_ARTEN }}
+          IG_PRIVAT_USER: ${{ secrets.IG_PRIVAT_USER }}
+          IG_PRIVAT_PASS: ${{ secrets.IG_PRIVAT_PASS }}
+          IG_PYTHON: ${{ github.workspace }}/.venv-ig/bin/python
           BERICHT_EMAIL: ${{ vars.BERICHT_EMAIL }}
           SMTP_HOST: ${{ vars.SMTP_HOST }}
           SMTP_PORT: ${{ vars.SMTP_PORT }}

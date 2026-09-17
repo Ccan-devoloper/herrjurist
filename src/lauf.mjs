@@ -26,7 +26,8 @@ import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
-import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
+import { beitragRendern, storyRendern, storyRendernInteraktiv, browserBeenden } from "./render.mjs";
+import { interaktivGeplant, interaktivPosten, umfrageBauen, sperreAktiv } from "./interaktiv.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
 import { kommentareBeantworten } from "./interaktion.mjs";
@@ -752,10 +753,35 @@ async function main() {
       /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
          Tipp); der Teaser bringt das Bild des Beitrags schon mit. */
       await motivBesorgen(story, "Story-Motiv", { ki: false });
-      const bild = await storyRendern(story, path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`), { variante: varianteStory(eintrag.slot) });
-      const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
-      const medienId = await ig.storyPosten({ bildUrl: url });
-      kontingent.genutzt += 1;
+      const zielBild = path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`);
+      const stilOpt = { variante: varianteStory(eintrag.slot) };
+
+      /* Interaktive Story (native Umfrage) über die private Schnittstelle.
+         Sie bekommt ein eigenes Bild, das unten Platz für den Sticker lässt.
+         Geht der Weg nicht - Challenge, Bremse, geänderter Endpunkt -, wird
+         ganz normal gerendert und über die Graph API veröffentlicht: Eine
+         Story fällt nie aus, nur weil der Zusatzweg klemmt. */
+      let medienId = null;
+      if (!trocken && interaktivGeplant(story) && !sperreAktiv(ledger)) {
+        try {
+          const { pfad, platz } = await storyRendernInteraktiv(story, zielBild, stilOpt);
+          medienId = await interaktivPosten({ bildPfad: pfad, umfrage: umfrageBauen(story, platz), stateDir: hosting.stateDir, ledger, log });
+          eintrag.interaktiv = true;
+          /* Das Bild geht trotzdem in den Asset-Zweig - instagrapi lädt die
+             lokale Datei hoch, aber das Archiv soll lückenlos bleiben. */
+          await hosting.veroeffentlichen([pfad], datum, `Story ${datum} ${eintrag.slot} (interaktiv)`);
+        } catch (e) {
+          console.warn(`  ! Umfrage für Story ${eintrag.slot} nicht gesetzt (${e.art || "fehler"}: ${e.message}) – normale Story folgt.`);
+        }
+      }
+
+      if (!medienId) {
+        const bild = await storyRendern(story, zielBild, stilOpt);
+        const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
+        medienId = await ig.storyPosten({ bildUrl: url });
+        /* Nur der offizielle Weg zählt auf das Tageskontingent der Graph-API. */
+        kontingent.genutzt += 1;
+      }
       eintrag.status = "veroeffentlicht";
       eintrag.medienId = medienId;
       eintrag.veroeffentlicht = new Date().toISOString();
@@ -764,7 +790,7 @@ async function main() {
       planSpeichern(hosting, plan);
       hosting.commit(`Veröffentlicht: Story ${datum} ${eintrag.slot}`);
       await hosting.push();
-      log(`  ✓ Story ${eintrag.slot} ${story.art} → ${medienId}`);
+      log(`  ✓ Story ${eintrag.slot} ${story.art}${eintrag.interaktiv ? " mit Umfrage" : ""} → ${medienId}`);
     } catch (e) {
       if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); continue; }
       fehler++;
