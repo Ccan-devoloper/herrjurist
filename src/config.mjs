@@ -388,6 +388,11 @@ export const CONFIG = {
       aktiv: env("IG_BILD_KI", "true") === "true" && Boolean(env("OPENAI_API_KEY", "")),
       modell: env("IG_BILD_KI_MODELL", "gpt-image-1-mini"),
       guete: env("IG_BILD_KI_GUETE", "low"),          // low ~0,005 $, medium ~0,04 $ je Bild
+      /* Aussehen der Titelbilder: "foto" = fotorealistisch (seit 18.09., auf
+         Wunsch des Betreibers - die Cover sollen echt wirken), "flach" =
+         Flat-Vector wie bisher. Die Figuren des Erklärvideos bleiben flach;
+         das ist dort Teil des Layouts. */
+      look: env("IG_BILD_LOOK", "foto"),
       groesse: env("IG_BILD_KI_GROESSE", "1024x1024"),
       /* Preis je Bild für den Tagesdeckel. Die Schnittstelle meldet ihn nicht
          zurück, deshalb wird er hier gesetzt - bewusst über dem Listenpreis. */

@@ -40,9 +40,11 @@ const tage = (von, bis) => Math.round((new Date(`${bis}T12:00:00Z`) - new Date(`
  * Sucht ein Motiv, das zur Szene passt und lange genug her ist.
  * @returns {{eintrag:object, aehnlich:number, alter:number}|null}
  */
-export function passendesMotiv(archiv, szene, datum, { mindestTage = 90, schwelle = 0.85, themaId = null } = {}) {
+export function passendesMotiv(archiv, szene, datum, { mindestTage = 90, schwelle = 0.85, themaId = null, look = null } = {}) {
   let bestes = null;
   for (const e of archiv?.motive || []) {
+    /* Motive ohne Vermerk stammen aus der Zeit vor dem 18.09. und sind flach. */
+    if (look && (e.look || "flach") !== look) continue;
     const zuletzt = e.zuletzt || e.gezeichnet;
     if (!zuletzt) continue;
     const alter = tage(zuletzt, datum);
@@ -88,13 +90,13 @@ export function nachWebp(quelle, ziel) {
 }
 
 /** Legt ein frisch gezeichnetes Motiv ab (ohne Rand). */
-export function motivAblegen(dir, archiv, { szene, quelle, datum, breite, hoehe, themaId = null, max = 1500 }) {
+export function motivAblegen(dir, archiv, { szene, quelle, datum, breite, hoehe, themaId = null, look = "flach", max = 1500 }) {
   if (!dir || !fs.existsSync(quelle)) return archiv;
   fs.mkdirSync(dir, { recursive: true });
   const kennung = `${datum}-${Math.random().toString(36).slice(2, 8)}`;
   let name = `${kennung}.webp`;
   if (!nachWebp(quelle, path.join(dir, name))) { name = `${kennung}.png`; fs.copyFileSync(quelle, path.join(dir, name)); }
-  archiv.motive = [...(archiv.motive || []), { datei: name, szene, themaId, gezeichnet: datum, zuletzt: datum, benutzt: 1, breite: breite || null, hoehe: hoehe || null }];
+  archiv.motive = [...(archiv.motive || []), { datei: name, szene, themaId, look, gezeichnet: datum, zuletzt: datum, benutzt: 1, breite: breite || null, hoehe: hoehe || null }];
   /* Deckel gegen ein Archiv, das mit den Jahren den Zweig sprengt: Das am
      laengsten ungenutzte faellt zuerst. */
   while (archiv.motive.length > max) {

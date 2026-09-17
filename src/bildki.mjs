@@ -40,11 +40,12 @@ export function menschInSzene(text) {
    malen Buchstaben, die wie Recht aussehen und keines sind - auf einem
    Examenskanal ein Eigentor) und genau ein Gegenstand, damit das Motiv auf der
    Kachel noch zu erkennen ist. */
-export function bildAuftrag(szene, { stil = "" } = {}) {
+export function bildAuftrag(szene, { stil = "", look = "flach" } = {}) {
   const text = String(szene).trim();
   const mitMensch = menschInSzene(text);
+  const foto = look === "foto";
   return [
-    `Flat vector illustration: ${text}.`,
+    foto ? `Photorealistic photograph: ${text}.` : `Flat vector illustration: ${text}.`,
     "Exactly one clear subject, centred, seen from the front or in three-quarter view.",
     /* "nothing cropped" allein hat nicht gereicht: Am 14.09. kam eine Figur
        zurueck, deren Kopf oben glatt am Bildrand endete. Das Modell braucht
@@ -62,9 +63,14 @@ export function bildAuftrag(szene, { stil = "" } = {}) {
          moebliert eine Szene sonst von sich aus mit einer Figur, und die Figur
          zieht dann alle Aufmerksamkeit auf sich - der Gegenstand, um den es
          geht, wird zur Requisite in ihrer Hand. */
-      : ["Draw the object itself. Absolutely no people, no faces, no hands, no arms, no body parts, no silhouettes of persons.",
+      : [`${foto ? "Photograph" : "Draw"} the object itself. Absolutely no people, no faces, no hands, no arms, no body parts, no silhouettes of persons.`,
         "Show the object complete and instantly recognisable, at a slight angle so its shape reads clearly - large within the margin, but never beyond it."]),
-    "Bold simple shapes, even line weight, flat colours with soft shading, clean readable silhouette.",
+    foto
+      /* "Echt" heisst: Materialien, Licht und Proportionen wie in einer
+         Fotografie. Ohne diese Ansage liefert das Modell auf "photograph"
+         gern ein glattes 3D-Rendering mit Cartoon-Gesicht. */
+      ? "Real materials and textures, soft natural daylight, gentle shallow depth of field, true-to-life colours, the look of a 50 mm lens. It must read as a genuine photograph - not an illustration, not a 3D render, not a painting, no cartoon proportions, no exaggerated features."
+      : "Bold simple shapes, even line weight, flat colours with soft shading, clean readable silhouette.",
     stil,
     "Absolutely no text, no letters, no words, no numbers, no signage, no logos, no watermark, no signature.",
     /* Urkunden, Formulare und Schilder sind die Stelle, an der das Verbot
@@ -79,7 +85,9 @@ export function bildAuftrag(szene, { stil = "" } = {}) {
  * Zeichnet ein Motiv und gibt es freigestellt zurück.
  * @returns {Promise<{pfad:string, breite:number, hoehe:number}|null>} null = nicht brauchbar
  */
-export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck = "bild" } = {}) {
+export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck = "bild", look = null } = {}) {
+  /* Titelbilder im eingestellten Look, Erklärfiguren immer flach. */
+  const aussehen = look || (zweck === "erklaerbild" ? "flach" : CONFIG.bilder.ki.look || "flach");
   if (!bildKiAktiv() || !szene) return null;
   /* Der Zweck entscheidet, welcher Topf gilt. Bis zum 17.09. stand hier für
      JEDES Bild „Bild zeichnen" - auch für die Figuren des Erklärvideos, die
@@ -99,7 +107,7 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
     antwort = await fetch("https://api.openai.com/v1/images/generations", {
       method: "POST",
       headers: { Authorization: `Bearer ${ki.key}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ model: ki.modell, prompt: bildAuftrag(szene, { stil }), n: 1, size: ki.groesse, quality: ki.guete, background: "transparent", output_format: "png" }),
+      body: JSON.stringify({ model: ki.modell, prompt: bildAuftrag(szene, { stil, look: aussehen }), n: 1, size: ki.groesse, quality: ki.guete, background: "transparent", output_format: "png" }),
       signal: steuerung.signal,
     });
   } catch (e) {

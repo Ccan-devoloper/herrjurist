@@ -161,11 +161,14 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
     const archivDir = opt.archivDir || null;
     const datum = opt.datum || new Date().toISOString().slice(0, 10);
     const archiv = archivDir ? archivLaden(archivDir) : null;
+    /* Ein Foto-Cover darf nicht mit einer flachen Figur aus dem Archiv
+       bedient werden und umgekehrt - sonst mischen sich die Looks im Feed. */
+    const look = (opt.zweck || "bild") === "erklaerbild" ? "flach" : CONFIG.bilder.ki.look || "flach";
     /* Erst im Archiv nachsehen: Ein Motiv, das lange genug her ist und zur
        Szene passt, kostet nichts mehr. */
     if (archiv) {
       for (const szene of szenen) {
-        const fund = passendesMotiv(archiv, szene, datum, { mindestTage: CONFIG.bilder.ki.wiederTage, schwelle: CONFIG.bilder.ki.aehnlich, themaId: beitrag?.themaId || null });
+        const fund = passendesMotiv(archiv, szene, datum, { mindestTage: CONFIG.bilder.ki.wiederTage, schwelle: CONFIG.bilder.ki.aehnlich, themaId: beitrag?.themaId || null, look });
         if (!fund) continue;
         const wieder = motivHervorholen(path.join(archivDir, fund.eintrag.datei), { randFarbe: opt.randFarbe || null });
         if (!wieder) continue;
@@ -181,11 +184,11 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
        besser als die wiederholte Figur der Nachbarszene und kostet nichts. */
     if (opt.nurArchiv) return null;
     for (const szene of szenen) {
-      const motiv = await motivZeichnen(szene, { randFarbe: opt.randFarbe || null, zweck: opt.zweck || "bild" });
+      const motiv = await motivZeichnen(szene, { randFarbe: opt.randFarbe || null, zweck: opt.zweck || "bild", look });
       if (!motiv) continue;
       if (motiv.ohneRand) {
         if (archivDir) {
-          try { motivAblegen(archivDir, archiv || { motive: [] }, { szene, quelle: motiv.ohneRand, datum, breite: motiv.breite, hoehe: motiv.hoehe, themaId: beitrag?.themaId || null, max: CONFIG.bilder.ki.archivMax }); }
+          try { motivAblegen(archivDir, archiv || { motive: [] }, { szene, quelle: motiv.ohneRand, datum, breite: motiv.breite, hoehe: motiv.hoehe, themaId: beitrag?.themaId || null, look, max: CONFIG.bilder.ki.archivMax }); }
           catch (e) { console.warn(`  ! Motiv nicht archiviert: ${e.message}`); }
         }
         fs.rmSync(motiv.ohneRand, { force: true });
