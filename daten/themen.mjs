@@ -69,6 +69,7 @@ export const THEMEN = [
   { fach: "delikt", titel: "Was ist das Recht am eingerichteten und ausgeübten Gewerbebetrieb?", normen: ["§ 823 Abs. 1 BGB"], prioritaet: "mittel" },
   { fach: "delikt", titel: "Wie prüft man die Verkehrssicherungspflicht?", normen: ["§ 823 Abs. 1 BGB"], prioritaet: "hoch" },
   { fach: "delikt", titel: "Wann greift die Produzentenhaftung neben dem ProdHaftG?", normen: ["§ 823 Abs. 1 BGB", "§ 1 ProdHaftG"], prioritaet: "mittel" },
+  { fach: "delikt", titel: "Wann haftet der Tierhalter und wann greift die Entlastung beim Nutztier?", normen: ["§ 833 BGB", "§ 834 BGB"], prioritaet: "mittel" },
 
   /* ---- Zivilrecht: Arbeitsrecht ------------------------------------------ */
   { fach: "arbeit", titel: "Was sind die wichtigsten Rechtsfolgen einer Schwangerschaft im Arbeitsrecht?", normen: ["§ 17 MuSchG", "§ 3 MuSchG", "§ 15 BEEG"], prioritaet: "mittel" },
@@ -496,6 +497,7 @@ export const THEMEN = [
   { fach: "verwalt", titel: "Was ist der Folgenbeseitigungsanspruch?", normen: ["Art. 20 Abs. 3 GG"], prioritaet: "hoch" },
   { fach: "verwalt", titel: "Wie prüft man den Amtshaftungsanspruch?", normen: ["§ 839 BGB", "Art. 34 GG"], prioritaet: "hoch" },
   { fach: "verwalt", titel: "Was ist ein enteignungsgleicher Eingriff?", normen: ["Art. 14 GG"], prioritaet: "mittel" },
+  { fach: "verwalt", titel: "Was ist ein enteignender Eingriff und wie grenzt er sich vom enteignungsgleichen ab?", normen: ["Art. 14 GG"], prioritaet: "mittel" },
   { fach: "verwbt", titel: "Wie prüft man den Nachbarschutz im Baurecht?", normen: ["§ 31 Abs. 2 BauGB", "§ 34 BauGB"], prioritaet: "hoch" },
   { fach: "verwbt", titel: "Wann ist eine Standardmaßnahme der Polizei zulässig?", normen: ["Polizeigesetze der Länder"], prioritaet: "hoch" },
   { fach: "verwbt", titel: "Wie prüft man die Rechtmäßigkeit eines Platzverweises?", normen: ["Polizeigesetze der Länder"], prioritaet: "mittel" },
