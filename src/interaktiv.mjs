@@ -80,16 +80,25 @@ export function sperreSetzen(ledger, grund, { stunden = CONFIG.interaktiv.sperre
    und eine Instagram-Sitzung im Klartext wäre dort ein Konto zum Mitnehmen. */
 const sitzungsPfad = (stateDir) => path.join(stateDir, SITZUNGSDATEI);
 
-export function sitzungLaden(stateDir) {
+/* Die Sitzung wird zum Kontonamen gespeichert. Ohne diesen Schlüssel würde
+   beim Wechsel vom Testkonto auf den echten Kanal die fremde Sitzung mit den
+   neuen Zugangsdaten probiert - und genau das sieht für Instagram nach einer
+   Übernahme aus. Passt der Name nicht, gilt die Sitzung als nicht vorhanden. */
+export function sitzungLaden(stateDir, nutzer = CONFIG.interaktiv.nutzer) {
   const p = sitzungsPfad(stateDir);
   if (!fs.existsSync(p)) return null;
-  try { return tokenEntschluesseln(fs.readFileSync(p, "utf8")); } catch { return null; }
+  try {
+    const tresor = tokenEntschluesseln(fs.readFileSync(p, "utf8"));
+    if (!tresor || typeof tresor !== "object") return null;
+    if (String(tresor.nutzer || "").toLowerCase() !== String(nutzer || "").toLowerCase()) return null;
+    return tresor.sitzung || null;
+  } catch { return null; }
 }
 
-export function sitzungSichern(stateDir, sitzung) {
+export function sitzungSichern(stateDir, sitzung, nutzer = CONFIG.interaktiv.nutzer) {
   if (!sitzung) return false;
   try {
-    fs.writeFileSync(sitzungsPfad(stateDir), tokenVerschluesseln(sitzung));
+    fs.writeFileSync(sitzungsPfad(stateDir), tokenVerschluesseln({ nutzer: String(nutzer || ""), sitzung }));
     return true;
   } catch (e) {
     console.warn(`  ! Sitzung nicht gespeichert (${e.message}) – beim nächsten Lauf wird neu angemeldet.`);
@@ -125,17 +134,17 @@ function bruecke(auftrag, opt = {}) {
  *
  * @returns {Promise<string>} Medien-ID der Story
  */
-export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDir, ledger = {}, log = console.log, python, skript = BRUECKE }) {
+export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDir, ledger = {}, log = console.log, python, skript = BRUECKE, nutzer = CONFIG.interaktiv.nutzer, passwort = CONFIG.interaktiv.passwort }) {
   if (sperreAktiv(ledger)) {
     throw new InteraktivFehler(`Gesperrt bis ${ledger.interaktivSperreBis} (${ledger.interaktivSperreGrund || "ohne Grund"})`, "gesperrt");
   }
   if (!fs.existsSync(skript)) throw new InteraktivFehler(`Brücke fehlt: ${skript}`, "aufbau");
 
-  const sitzung = sitzungLaden(stateDir);
+  const sitzung = sitzungLaden(stateDir, nutzer);
   const antwort = await bruecke({
     bild: path.resolve(bildPfad),
-    nutzer: CONFIG.interaktiv.nutzer,
-    passwort: CONFIG.interaktiv.passwort,
+    nutzer,
+    passwort,
     sitzung,
     umfrage,
     link,
@@ -143,7 +152,7 @@ export async function interaktivPosten({ bildPfad, umfrage, link = null, stateDi
 
   /* Die Sitzung kommt auch aus einem gescheiterten Versuch zurück und ist dann
      oft die frischere - erst sichern, dann urteilen. */
-  if (antwort.sitzung) sitzungSichern(stateDir, antwort.sitzung);
+  if (antwort.sitzung) sitzungSichern(stateDir, antwort.sitzung, nutzer);
 
   if (!antwort.ok) {
     if (["challenge", "bremse"].includes(antwort.art)) {

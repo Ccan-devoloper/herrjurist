@@ -542,6 +542,20 @@ Das lohnt erst, wenn der Weg mit der Umfrage nachweislich trägt.
 Optional: `IG_INTERAKTIV_ARTEN` (Standard `frage`) bestimmt, welche Story-Arten
 eine Umfrage bekommen.
 
+### Einzelprobe (so wird mit dem Testkonto geprüft)
+
+Im Tageslauf lässt sich der Weg nicht mit einem Testkonto prüfen: Ginge die
+Prüfungsfrage-Story an das Testkonto, fehlte sie beim echten Kanal – der Weg
+war ja erfolgreich. Dafür gibt es den Workflow **„Interaktive Story ·
+Einzelprobe"** (Actions → Run workflow). Er veröffentlicht *eine* Beispielstory
+mit Umfrage auf dem Konto aus `IG_PRIVAT_USER`, fasst weder Tagesplan noch
+Ledger an und benutzt die Graph API überhaupt nicht. Das gerenderte Bild hängt
+als Artefakt am Lauf.
+
+Die Sitzung wird **zum Kontonamen** abgelegt. Beim Wechsel vom Testkonto auf
+den echten Kanal wird sie deshalb nicht wiederverwendet – eine fremde Sitzung
+mit neuen Zugangsdaten sähe für Instagram nach einer Übernahme aus.
+
 Im Protokoll steht bei Erfolg `✓ Story s4 frage mit Umfrage`. Steht dort
 stattdessen `! Umfrage für Story s4 nicht gesetzt (…) – normale Story folgt`,
 ist der Rückfall gelaufen: Die Story ist draußen, nur ohne Sticker.

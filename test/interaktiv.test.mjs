@@ -66,6 +66,16 @@ test("Sitzung liegt verschlüsselt, nicht im Klartext", () => {
   assert.deepEqual(sitzungLaden(dir), sitzung);
 });
 
+test("Die Sitzung des Testkontos wird nicht für den echten Kanal benutzt", () => {
+  /* Der Grund, warum die Sitzung zum Kontonamen gespeichert wird: Eine fremde
+     Sitzung mit neuen Zugangsdaten zu probieren, sieht für Instagram nach
+     einer Übernahme aus - genau das, was eine Challenge auslöst. */
+  const dir = tmpdir();
+  sitzungSichern(dir, { authorization_data: { sessionid: "vom-testkonto" } }, "testkonto");
+  assert.equal(sitzungLaden(dir, "herrjurist"), null, "fremde Sitzung darf nicht gelten");
+  assert.deepEqual(sitzungLaden(dir, "TESTKONTO"), { authorization_data: { sessionid: "vom-testkonto" } }, "Groß- und Kleinschreibung ist egal");
+});
+
 test("Beschädigte Sitzungsdatei wirft nicht, sie gilt als keine", () => {
   const dir = tmpdir();
   fs.writeFileSync(path.join(dir, "instagrapi.enc"), "kein gültiger Tresor");

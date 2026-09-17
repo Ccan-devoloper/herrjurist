@@ -1,0 +1,91 @@
+name: Interaktive Story · Einzelprobe
+
+# Eine einzelne Story mit nativer Umfrage veroeffentlichen - von Hand
+# angestossen, ausserhalb des Tageslaufs.
+#
+# Warum getrennt: Im Tageslauf laesst sich der Weg nicht mit einem Testkonto
+# pruefen. Ginge die Pruefungsfrage-Story an das Testkonto, fehlte sie beim
+# echten Kanal - der Weg war ja erfolgreich. Diese Probe fasst weder Tagesplan
+# noch Ledger an und veroeffentlicht nichts ueber die Graph API.
+#
+# Die Sitzung wird zum Kontonamen im Asset-Zweig abgelegt. Beim Wechsel vom
+# Testkonto auf den echten Kanal wird sie deshalb NICHT wiederverwendet -
+# eine fremde Sitzung mit neuen Zugangsdaten saehe nach einer Uebernahme aus.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Nicht gleichzeitig mit dem Tageslauf: zwei Anmeldungen desselben Kontos aus
+# zwei Laeufen sind genau das Muster, das Instagram misstrauisch macht.
+concurrency:
+  group: instagram-bot
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          ref: instagram-assets
+          fetch-depth: 1
+          path: assets
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - run: npm ci
+
+      - name: Chromium
+        run: |
+          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list || true
+          npx playwright install --with-deps chromium || npx playwright install chromium
+
+      - name: instagrapi
+        run: |
+          python3 -m venv .venv-ig
+          .venv-ig/bin/pip install --quiet --upgrade pip
+          .venv-ig/bin/pip install --quiet instagrapi
+          .venv-ig/bin/python -c "import instagrapi; print('instagrapi', instagrapi.__version__)"
+
+      - name: Probe
+        env:
+          IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+          IG_PRIVAT_USER: ${{ secrets.IG_PRIVAT_USER }}
+          IG_PRIVAT_PASS: ${{ secrets.IG_PRIVAT_PASS }}
+          IG_MARKE: ${{ vars.IG_MARKE }}
+          IG_PYTHON: ${{ github.workspace }}/.venv-ig/bin/python
+        run: node bin/interaktiv-probe.mjs --state assets/state
+
+      - name: Bild zum Nachsehen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: interaktiv-probe
+          path: out/probe/
+          if-no-files-found: ignore
+
+      - name: Sitzung ablegen
+        if: always()
+        working-directory: assets
+        run: |
+          set -euo pipefail
+          git config user.name instagram-bot
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/instagrapi.enc 2>/dev/null || true
+          git diff --cached --quiet && { echo "keine neue Sitzung"; exit 0; }
+          git commit -m "Sitzung für interaktive Stories $(date -u +%FT%TZ)"
+          for i in 1 2 3 4; do
+            git pull --rebase origin instagram-assets && git push origin HEAD:instagram-assets && exit 0
+            sleep $((i * 3))
+          done
+          exit 1
