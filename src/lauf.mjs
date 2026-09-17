@@ -325,11 +325,28 @@ async function main() {
        damit einfach mitgegessen: An dem Tag kosteten drei Faktencheck-Runden
        für EINEN Beitrag 0.19 $, und alle neun Stories fielen aus.
        Ein Topf, den die Beiträge nicht öffnen können, verhindert das. */
-    const storiesOffen = trocken ? [] : (plan.stories || [])
+    const storyStand = trocken ? [] : (plan.stories || [])
       .filter((st) => st.art !== "teaser" && st.status !== "veroeffentlicht")
-      .filter((st) => !hosting.jsonLesen(`inhalte/${datum}-${st.slot}.json`, null));
-    const storyPreis = storiesOffen.length ? erwartet("stories") + erwartet("story-faktencheck") : 0;
-    if (storyPreis > 0) reservieren(storyPreis, ["stories", "story-faktencheck"], `${storiesOffen.length} noch zu schreibende Stories`, "stories");
+      .map((st) => hosting.jsonLesen(`inhalte/${datum}-${st.slot}.json`, null));
+    const ungeschrieben = storyStand.filter((v) => !v).length;
+    /* Geschrieben, aber noch nicht geprüft - und das ist der Fall, den die
+       erste Fassung dieses Topfes übersehen hat. Am 17.09. um 07:46 waren
+       sechs Story-Texte bezahlt und fertig, der Topf war damit aufgehoben,
+       und der Faktencheck hatte nichts mehr, wovon er leben konnte. Ein Text
+       ohne Prüfung wird nie veröffentlicht: Das Geld für das Schreiben wäre
+       verbrannt gewesen. Der Topf hält deshalb bis zur PRÜFUNG, nicht bis
+       zum Text. */
+    const ungeprueft = storyStand.filter((v) => v && v.faktencheckOffen).length;
+    const storyWunsch = ungeschrieben
+      ? erwartet("stories") + erwartet("story-faktencheck")
+      : ungeprueft ? erwartet("story-faktencheck") : 0;
+    /* Auch dieser Topf darf nie mehr halten, als überhaupt noch da ist -
+       sonst ist es wieder der Fehler, den bezahlbareSumme behebt. */
+    const storyPreis = bezahlbareSumme([storyWunsch], Math.max(0, freiJetzt - summe));
+    const storyLabel = ungeschrieben
+      ? `${ungeschrieben} noch zu schreibende Stories`
+      : `${ungeprueft} Story-Texte, deren Prüfung aussteht`;
+    if (storyPreis > 0) reservieren(storyPreis, ["stories", "story-faktencheck"], storyLabel, "stories");
     else reservierungAufheben("stories");
     return summe;
   };
@@ -595,6 +612,12 @@ async function main() {
        Schreiben. Klappt es wieder nicht, warten sie auf den nächsten Lauf. */
     const ungeprueft = [...geschrieben.values()].filter((s) => s.faktencheckOffen);
     if (ungeprueft.length) {
+      /* Erst neu rechnen, dann prüfen. Die Rücklage stammt sonst aus der Zeit
+         VOR dem Schreiben der Texte und hält Geld für Dinge zurück, die
+         inzwischen unbezahlbar geworden sind - am 17.09. lagen so 0.04 $ für
+         die Erklärfiguren fest, während nur 0.035 $ frei waren, und der
+         Faktencheck der sechs fertigen Stories kam nicht mehr durch. */
+      ruecklageAktualisieren();
       log(`  ${ungeprueft.length} Story-Texte warten auf ihren Faktencheck – wird nachgeholt`);
       try {
         await storiesPruefen(ungeprueft);
