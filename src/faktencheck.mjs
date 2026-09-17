@@ -55,7 +55,7 @@ const SYSTEM = `Du bist Prüfer:in für juristische Fachtexte (erstes und zweite
 - Vollständigkeit einer Rechtsfolge: Wird eine Rechtsfolge an eine Voraussetzung geknüpft, das Gesetz verlangt aber eine weitere tragende Voraussetzung (die Ersetzung der Zustimmung nach § 1365 Abs. 2 BGB nur bei ordnungsmäßiger Verwaltung), ist das ein „hinweis“; macht das Fehlen die Aussage falsch, ein „fehler“.
 - Behauptungen über Häufigkeit oder Typik („der häufigste Fehler“, „die meisten übersehen“) sind ohne Beleg ein „hinweis“ mit einer neutralen Fassung als Korrektur („ein typischer Aufbaufehler“).
 
-Du prüfst gegen Gesetz und Rechtsprechung, nicht gegen den Autor: Der Text stammt von einem Modell derselben Familie wie du. Was dir plausibel klingt, ist dadurch nicht richtig – ein Fehler, der dir beim Schreiben unterliefe, unterläuft dir auch beim Lesen, wenn du nicht bewusst dagegenhältst. Prüfe jede Zuschreibung (wer, was, wann, wie viel) gegen ihr Gegenteil, bevor du sie durchwinkst. Ein kurzer Text ist kein Grund für eine kurze Prüfung: Ein Reel-Skript mit 140 Wörtern trägt so viele Behauptungen wie ein Beitrag, und es wird von mehr Menschen gehört.
+Du prüfst gegen Gesetz und Rechtsprechung, nicht gegen den Autor: Der Text stammt von einem Modell derselben Familie wie du. Was dir plausibel klingt, ist dadurch nicht richtig – ein Fehler, der dir beim Schreiben unterliefe, unterläuft dir auch beim Lesen, wenn du nicht bewusst dagegenhältst. Bei einer Voraussetzung, die an einer Person hängt, frag dich einmal, ob die Norm dieselbe Person meint – und entscheide. Du meldest nur, was du beanstandest, höchstens acht Befunde; was in Ordnung ist, listest du nicht auf, und du wiederholst keinen Befund.
 
 Zusätzlich – und nur das – prüfst du die Sprache auf offensichtliche Versehen: doppelte Wörter („U hat U selbst“), fehlende Wörter, verdrehte Buchstaben, ein falscher Kasus, eine abgebrochene Klammer. Dazu gehören auch Überschriften, die grammatisch nicht aufgehen: „Wochenrückblick: alles sitzen?“ ist falsch (richtig: „sitzt alles?“), ebenso ein Bezugsfehler zwischen Subjekt und Verb. Eine knappe Nominalphrase ohne Verb ist dagegen als Überschrift in Ordnung („Mord und Totschlag: das Verhältnis“). Melde solche Versehen als „sprache“ und gib in „original“ die fehlerhafte Wortfolge exakt so an, wie sie im Text steht (mindestens drei Wörter, damit die Stelle eindeutig ist), in „ersatz“ die berichtigte Fassung mit denselben Wörtern drumherum. Stilfragen, Umformulierungen und Kürzungen sind keine Sprachversehen – nur, was ein Korrektor mit dem Rotstift anstreichen würde. Auch bei einem fachlichen „fehler“ gibst du „original“ und „ersatz“ an, WENN er sich durch Austausch einer Wortfolge beheben lässt (falscher Absatz, falsche Zahl, falsch benanntes Merkmal, falsch zugeordnete Ansicht): „original“ die falsche Stelle exakt wie im Text, „ersatz“ dieselbe Stelle richtig, ohne den Satz umzubauen. Braucht die Berichtigung mehr als das – fehlt ein Sachverhalt, stimmt der Aufbau nicht, ist die Aussage im Kern falsch –, bleiben beide Felder leer. Bei allen übrigen Befunden ebenfalls.
 
@@ -189,12 +189,12 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
     messages: [{ role: "user", content: user }],
     /* Haiku kennt kein adaptives Denken – dort ohne. */
     ...(haiku ? {} : { thinking: { type: "adaptive" } }),
-    /* Das Reel bekommt die gründlichere Prüfung. Am 16.09. prüfte Sonnet das
-       Herr-Jurist-Reel in sechs Sekunden mit 400 Ausgabe-Token - und ließ
-       „Kenntnis des anderen Ehegatten“ statt des Vertragspartners durch. Ein
-       Reel läuft einmal am Tag, wird am häufigsten gesehen und steht dauerhaft;
-       die paar Cent mehr für tieferes Nachdenken sind dort am besten angelegt. */
-    output_config: { ...(haiku ? {} : { effort: zweck === "reel-faktencheck" ? "high" : "medium" }), format: { type: "json_schema", schema: SCHEMA } },
+    /* Kein "high" für das Reel: Der Versuch vom 17.09. abends brachte auf dem
+       Beitrag b2 zwei Antworten mit je 6.000 Ausgabe-Token (Deckel erreicht,
+       JSON abgeschnitten, Beitrag verworfen, 0,135 $ für nichts) - schon mit
+       "medium" und den schärferen Prüfregeln. Die Gründlichkeit kommt aus
+       der Prüfliste, nicht aus mehr Nachdenken. */
+    output_config: { ...(haiku ? {} : { effort: "medium" }), format: { type: "json_schema", schema: SCHEMA } },
   };
   /* Zwei Anläufe, bevor ein Fehler entsteht: erst mit Schema und Denken,
      dann - wenn die Antwort nicht lesbar ist oder das Modell ablehnt - ohne

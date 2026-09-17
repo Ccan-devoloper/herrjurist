@@ -179,6 +179,11 @@ export const CONFIG = {
        state/kosten.json: autor + faktencheck je Tag gegen die Woche davor.
        IG_KI_EFFORT_BEITRAG=low stellt zurück. */
     effortBeitrag: env("IG_KI_EFFORT_BEITRAG", "medium"),
+    /* Reels getrennt: In der Nacht zum 18.09. kostete das Reel-Skript mit
+       "medium" auf beiden Kanälen mehr als die Obergrenze je Beitrag (0,116 $
+       und 0,143 $, 7.800 bzw. 10.100 Ausgabe-Token für 140 Wörter) und wurde
+       zurückgestellt. Mit "low" lag es am Vortag bei 0,070 $. */
+    effortReel: env("IG_KI_EFFORT_REEL", "low"),
     rechercheSuchen: Number(env("IG_KI_RECHERCHE_SUCHEN", "4")),   // Websuchen je Recherche (je 0,01 $ plus Ergebnis-Tokens)
     maxVersuche: Number(env("IG_KI_VERSUCHE", "2")),
     /* Tagesdeckel. Von 0,27 auf 0,32 $ angehoben, nachdem am 15.09. gemessen
