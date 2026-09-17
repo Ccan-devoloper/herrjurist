@@ -298,6 +298,22 @@ export function normfallen(text) {
    Deshalb werden Normzitate (auch ohne Gesetzesangabe, in beliebiger
    Reihenfolge von Abs./S./Nr./Buchst.) vor dem Shingle-Vergleich entfernt. */
 const NORM = /(?:§§?|Art\.|Artikel|R|H)\s*\d+(?:\.\d+)?[a-z]?(?:\s*(?:\(\d+[a-z]?\)|[a-z]{2}\)|Abs\.|Absatz|S\.|Satz|Nr\.|Nummer|Buchst\.|Buchstabe|Hs\.|Halbsatz|Alt\.|Var\.|lit\.)\s*[\da-z]*\)?)*(?:\s*(?:i\.?\s?V\.?\s?m\.?|iVm|in Verbindung mit)\s*(?:§§?\s*)?\d+[a-z]?(?:\s*(?:Abs\.|S\.|Nr\.|Buchst\.)\s*[\da-z]+)*)?\s*(?:BGB|StGB|StPO|ZPO|GG|VwGO|VwVfG|HGB|GmbHG|AktG|InsO|GVG|ArbGG|KSchG|BetrVG|MuSchG|BEEG|TVG|ProdHaftG|StVG|StVO|OWiG|JGG|GewO|BauGB|BImSchG|PolG|SGB|AEUV|EUV|GRCh|EMRK|BVerfGG|RVG|BRAO|FamFG|WEG|ErbbauRG)?\b/g;
+/* Eine Norm ohne Gesetz ist auf der Buehne wertlos: „§ 20" sagt niemandem,
+   welches Gesetz gemeint ist. Am 17.09. standen „§ 3 vs. § 7", „§ 20" und
+   „§ 9 + § 11" auf den Stichwortzeilen eines Reels - das ErbStG stand nur im
+   Datensatz, nicht im Bild. Gefunden wird jede Paragrafen- oder
+   Artikelnennung, hinter der bis zum Ende der Zeile kein Gesetzeskuerzel mehr
+   folgt. Aufzaehlungen („§ 9 + § 11 ErbStG") gelten damit als versorgt. */
+const GESETZ_KUERZEL = /\b(?:BGB|StGB|StPO|ZPO|GG|VwGO|VwVfG|HGB|GmbHG|AktG|InsO|GVG|ArbGG|KSchG|BetrVG|MuSchG|BEEG|TVG|ProdHaftG|StVG|StVO|OWiG|JGG|GewO|BauGB|BImSchG|PolG|SGB|AEUV|EUV|GRCh|EMRK|BVerfGG|RVG|BRAO|FamFG|WEG|ErbbauRG)\b/;
+export function normenOhneGesetz(text) {
+  const t = String(text || "");
+  const treffer = [];
+  for (const m of t.matchAll(/(?:§§?|Art\.|Artikel)\s*\d+[a-z]?/g)) {
+    if (!GESETZ_KUERZEL.test(t.slice(m.index + m[0].length))) treffer.push(m[0]);
+  }
+  return treffer;
+}
+
 export function ohneNormen(text) {
   return String(text).replace(NORM, " NORM ").replace(/\b(Abs|S|Nr|Buchst|Hs|Alt)\.\s*\d+[a-z]?/g, " NORM ").replace(/\(\d+[a-z]?\)/g, " NORM ");
 }

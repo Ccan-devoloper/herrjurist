@@ -316,7 +316,7 @@ async function main() {
       && plan.beitraege.some((b) => b.format === "reel" && b.status !== "veroeffentlicht" && !b.fehler);
     const erklaerPreis = CONFIG.reel.erklaerBilder * erwartet("erklaerbild");
     if (erklaerOffen && summe + erklaerPreis <= freiJetzt) summe = runden(summe + erklaerPreis);
-    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen && summe >= erklaerPreis ? " und die Figuren des Erklärvideos" : ""}`, "beitraege");
+    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild", "bildregie"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen && summe >= erklaerPreis ? " und die Figuren des Erklärvideos" : ""}`, "beitraege");
     else reservierungAufheben("beitraege");
 
     /* Eigener Topf für die Stories - und das ist der Kern der Reparatur vom

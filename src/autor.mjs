@@ -14,7 +14,7 @@ import { CONFIG } from "./config.mjs";
 import { FAECHER, KLAUSUREN } from "./inhalte.mjs";
 import { belegstelle } from "./wissen.mjs";
 import { ICONS } from "./stile.mjs";
-import { folieLeer, pruefeBeitrag, korpus } from "./pruefung.mjs";
+import { folieLeer, pruefeBeitrag, korpus, normenOhneGesetz } from "./pruefung.mjs";
 import { createHash } from "node:crypto";
 import { datumLesbar, tageBis, heuteIso } from "./zeit.mjs";
 import { erfassen, budgetPruefen, budgetFrei, BudgetFehler } from "./kosten.mjs";
@@ -928,7 +928,7 @@ Du schreibst ein Skript aus Szenen. Jede Szene hat einen kurzen Bildschirmtext u
 
 ### Felder für die Bühnen-Darstellung
 Das Reel wird abwechselnd in zwei Layouts gebaut. Die folgenden drei Felder braucht das zweite – fülle sie IMMER aus, auch wenn du nicht weißt, welches gerade dran ist.
-- marken: ein bis zwei sehr kurze Stichwortzeilen je Szene, die den Kern der Szene tragen. 2 bis 6 Wörter, KEIN ganzer Satz, kein Punkt am Ende. Sie stehen groß auf der Bühne, während die Stimme erklärt – sie wiederholen den Sprechertext also nicht, sie verdichten ihn. Genau EIN Wort je Zeile setzt du in *Sternchen*; das wird farbig hervorgehoben, und es muss das Wort sein, auf das es ankommt. Beispiele: „Schuldner *bietet an*“, „§ 294 BGB: *tatsächliches* Angebot“, „Frist *entbehrlich*“. Bei der cta-Szene genügt eine Zeile.
+- marken: ein bis zwei sehr kurze Stichwortzeilen je Szene, die den Kern der Szene tragen. 2 bis 6 Wörter, KEIN ganzer Satz, kein Punkt am Ende. Sie stehen groß auf der Bühne, während die Stimme erklärt – sie wiederholen den Sprechertext also nicht, sie verdichten ihn. Genau EIN Wort je Zeile setzt du in *Sternchen*; das wird farbig hervorgehoben, und es muss das Wort sein, auf das es ankommt. Jede Norm auf der Bühne trägt ihr Gesetz – „§ 20 BGB", nie „§ 20"; bei zwei Normen desselben Gesetzes genügt es einmal am Ende („§ 9 + § 11 BGB"). Ein Paragraf ohne Gesetz wird abgelehnt. Beispiele: „Schuldner *bietet an*“, „§ 294 BGB: *tatsächliches* Angebot“, „Frist *entbehrlich*“. Bei der cta-Szene genügt eine Zeile.
 - bildSzene je Szene: eine ENGLISCHE Beschreibung dessen, was zu DIESER Szene gezeigt wird – 3 bis 6 Wörter. Sie wird freigestellt groß neben den Text gestellt.
   ZUERST der Gegenstand, nicht der Mensch. Zeige das Ding, um das es juristisch geht: die Akte, den Bescheid, das Urteil, den Vertrag, die Anklageschrift, das Grundbuch, die Tatwaffe, das Schriftstück, die Frist im Kalender. Nur wenn die Szene wirklich von einer HANDLUNG einer Person lebt („der Gläubiger nimmt nicht an“), darf eine Person vorkommen. Steht keine Person in der Beschreibung, wird auch keine gezeichnet – das ist so gewollt.
   Entscheidend ist der Fachbezug, nicht die Pantomime. Falsch wäre für das steuerliche Einlagekonto „person adding coins to jar“: Münzen in einem Glas könnten zu jedem Thema der Welt gehören. Richtig wären Dinge, die in genau diesem Thema wirklich vorkommen – für die Anklageschrift „stapled court document with sections“, für die Zwangsvollstreckung „sealed enforcement order with stamp“. Prüfe jede Beschreibung mit der Gegenfrage: „Könnte dieses Bild genauso gut zu einem ganz anderen juristischen Thema gehören?“ Wenn ja, ist es zu allgemein – such etwas Spezifischeres.
@@ -983,6 +983,14 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
     /* Prüfung über die Folien-Logik: Szenen als Folien, Sprechertext als Text. */
     const ergebnis = pruefeBeitrag({ folien: [{ art: "titel", titel: szenen[0]?.titel || "" }, ...szenen.slice(1).map((s) => ({ art: "text", titel: s.titel, text: `${s.text || ""} ${s.sprecher}` })), { art: "cta" }], caption: reel.caption, hashtags: reel.hashtags });
     ergebnis.fehler.push(...pruefeHook(szenen[0]));
+    /* Bühnentext: Jede Norm auf einer Stichwortzeile braucht ihr Gesetz. */
+    for (const s of szenen) {
+      for (const m of s.marken || []) {
+        const nackt = normenOhneGesetz(m);
+        if (nackt.length) ergebnis.fehler.push(`Stichwortzeile „${m}“ nennt ${nackt.join(", ")} ohne Gesetz – auf der Bühne immer mit Gesetz („§ 20 BGB“)`);
+      }
+      if (s.norm && normenOhneGesetz(s.norm).length) ergebnis.fehler.push(`Norm „${s.norm}“ ohne Gesetz`);
+    }
     /* Die Annahmegrenze folgt dem gewählten Zeitfenster. Stand sie fest, wurde
        jedes längere Reel abgelehnt, obwohl die Anleitung genau diese Länge
        verlangt hatte - ein Nachschlag pro Reel, und nach drei Versuchen gar
@@ -995,9 +1003,9 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
     if (!ergebnis.fehler.length) {
       const fakten = await faktenSicher(reel, "reel-faktencheck", { hinweis: pruefHinweis(thema) });
       korrekturenAnwenden(reel, fakten.korrekturen);
-      if (fakten.ok) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; return reel; }
+      if (fakten.ok) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; await bildregieSicher(reel); return reel; }
       const berichtigtesReel = await nachbessern(reel, fakten, null, "reel-faktencheck");
-      if (berichtigtesReel) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; return reel; }
+      if (berichtigtesReel) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; await bildregieSicher(reel); return reel; }
       ergebnis.fehler.push(...fakten.fehler.map((f) => `Fachlicher Fehler: ${f}`));
     }
     feedback = ergebnis.fehler.map((f) => `- ${f}`).join("\n");
@@ -1008,6 +1016,79 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
 }
 
 /* Teaser-Story aus einem fertigen Beitrag – ohne KI-Aufruf. */
+
+/* ==========================================================================
+   Bildregie: ein zweiter Blick auf die Motive des Erklaervideos.
+
+   Am 17.09. trug ein Reel zur Erbschaftsteuer diese Motive: ein Notizblock
+   fuer „fuenf Punkte", zwei Briefumschlaege fuer „Schenkung oder Erbfall",
+   Pass und Schluessel fuer die Steuerpflicht. Alles Metaphern - nichts,
+   woran jemand den Inhalt erkennt. Der Autor hatte eine strenge Anleitung
+   und hat sie beim Schreiben trotzdem beiseitegelegt, weil er in dem Moment
+   den TEXT baut, nicht das Bild.
+
+   Deshalb fragt ein eigener, billiger Aufruf hinterher je Szene: Zeigt das
+   Motiv den Gegenstand, um den es hier fachlich geht? Und wenn nicht: welchen
+   dann? Ein Aufruf je Reel, das guenstige Modell, wenige Cent. Faellt er
+   aus (Budget, Netz), bleiben die Motive des Autors - lieber so als kein
+   Reel.
+   ========================================================================== */
+const BILDREGIE_SCHEMA = {
+  type: "object", additionalProperties: false,
+  properties: { szenen: { type: "array", items: { type: "object", additionalProperties: false,
+    properties: { nr: { type: "integer" }, passt: { type: "boolean" }, grund: { type: "string" }, besser: { type: ["string", "null"] } },
+    required: ["nr", "passt", "grund", "besser"] } } },
+  required: ["szenen"],
+};
+const BILDREGIE_SYSTEM = `Du bist Bildredakteur:in eines Instagram-Kanals für das Recht. Du bekommst die Szenen eines Erklärvideos: Titel, Sprechertext und das vorgeschlagene Motiv (englisch, wird als freigestellte Illustration groß neben den Text gesetzt).
+
+Beurteile jedes Motiv mit EINER Frage: Zeigt es den Gegenstand, um den es in DIESER Szene fachlich geht – so, dass eine Examenskandidat:in es beim Zusehen sofort dem Inhalt zuordnet? Metaphern gelten NICHT: Briefumschläge für „Erbfall oder Schenkung", ein Notizblock für „fünf Prüfungspunkte", ein Pass für „Steuerpflicht", Münzen für „Bewertung", eine Waage für „Abwägung" – das könnte jedes Thema der Welt sein. Auch ein Motiv, das nur zum Oberthema passt, aber nicht zu dieser Szene, passt nicht.
+
+Passt es nicht, nenne ein besseres: englisch, 3 bis 8 Wörter, EIN Gegenstand, keine Schrift im Bild, keine Person (außer die Szene lebt von einer Handlung), kein Symbolbild-Klassiker. Nimm die Dinge, die in diesem Rechtsgebiet wirklich vorkommen: Klageschrift mit Gerichtsstempel, Urteil mit Siegel, Anklageschrift, Bescheid mit Rechtsbehelfsbelehrung, Kaufvertrag mit zwei Unterschriften, Mietvertrag, Grundbuchauszug, Kalenderblatt mit markierter Frist, Mahnbescheid, Vollstreckungstitel, Testament, Führerschein, Tatwaffe (Messer, Brecheisen), Handschellen, Versammlungsplakat, Baugenehmigung. Der Gegenstand muss zur Aussage der Szene passen, nicht nur zum Thema des Reels – zwei Szenen desselben Reels bekommen nie dasselbe Motiv. Fällt dir nichts ein, das wirklich passt: besser = null und passt = false; dann übernimmt die Szene das Motiv der Nachbarszene.`;
+
+export async function bildregie(reel) {
+  const szenen = reel?.szenen || [];
+  if (!szenen.some((s) => s.bildSzene)) return { geprueft: 0, ersetzt: 0 };
+  const user = `Reel-Thema: ${reel.kurztitel || szenen[0]?.titel || ""}\n\n${szenen.map((s, i) => `Szene ${i + 1} [${s.art}]\n  Titel: ${s.titel || ""}\n  Sprecher: ${s.sprecher || ""}\n  Motiv: ${s.bildSzene || "(keins)"}`).join("\n\n")}\n\nBeurteile jede Szene.`;
+  budgetPruefen("Bildregie (bildregie)");
+  let response;
+  try {
+    response = await client().messages.create({
+      model: CONFIG.ki.modellNeben, max_tokens: 3000,
+      system: [{ type: "text", text: BILDREGIE_SYSTEM, cache_control: { type: "ephemeral" } }],
+      messages: [{ role: "user", content: user }],
+      thinking: { type: "adaptive" },
+      output_config: { effort: "low", format: { type: "json_schema", schema: BILDREGIE_SCHEMA } },
+    });
+  } catch (e) {
+    if (e instanceof BudgetFehler) throw e;
+    console.warn(`  ! Bildregie nicht möglich (${e.message.split("\n")[0].slice(0, 100)}) – Motive des Autors bleiben.`);
+    return { geprueft: 0, ersetzt: 0 };
+  }
+  erfassen(CONFIG.ki.modellNeben, response.usage, "bildregie");
+  let daten;
+  try { const t = textAus(response); daten = JSON.parse(t.slice(t.indexOf("{"), t.lastIndexOf("}") + 1)); }
+  catch { console.warn("  ! Bildregie: Antwort nicht lesbar – Motive des Autors bleiben."); return { geprueft: 0, ersetzt: 0 }; }
+  let ersetzt = 0;
+  for (const u of daten?.szenen || []) {
+    const s = szenen[Number(u.nr) - 1];
+    if (!s || u.passt) continue;
+    const besser = typeof u.besser === "string" && u.besser.trim().split(/\s+/).length >= 2 ? u.besser.trim() : null;
+    console.log(`  Bildregie Szene ${u.nr}: „${s.bildSzene}“ passt nicht (${String(u.grund || "").slice(0, 90)})${besser ? ` → „${besser}“` : " → Motiv der Nachbarszene"}`);
+    s.bildSzene = besser;
+    ersetzt++;
+  }
+  return { geprueft: (daten?.szenen || []).length, ersetzt };
+}
+
+
+/* Die Regie darf das Reel nie kosten: Budget- und Netzfehler werden gemeldet,
+   das Reel geht mit den Motiven des Autors weiter. */
+async function bildregieSicher(reel) {
+  try { const r = await bildregie(reel); if (r.geprueft) console.log(`  Bildregie: ${r.ersetzt} von ${r.geprueft} Motiven ersetzt.`); }
+  catch (e) { console.warn(`  ! Bildregie übersprungen (${e.message.split("\n")[0].slice(0, 100)}) – Motive des Autors bleiben.`); }
+}
+
 export function teaserAusBeitrag(beitrag, slot) {
   return {
     slot, art: "teaser", fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel,

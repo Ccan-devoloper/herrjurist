@@ -138,6 +138,8 @@ const ERWARTET = {
      Ruecklage sie schuetzen kann, ohne jedes andere Bild mitzuschuetzen.
      Ohne sie faellt das Reel auf das klassische Layout zurueck. */
   erklaerbild: 0.01,
+  /* Ein Aufruf je Reel, guenstiges Modell, wenige Szenen: Cent-Betrag. */
+  bildregie: 0.01,
   /* Kommentare und Nachrichten laufen ueber das guenstige Modell und fassen
      alle offenen Faelle in EINEN Aufruf. Ohne eigenen Eintrag griff der
      Standardwert von 0,05 $ - das Zehnfache des Wirklichen. An einem vollen
