@@ -239,3 +239,33 @@ export function summeAntworten() {
 export function abschluss() {
   return { usd: summe(), aufrufe: posten.length, cacheAnteil: posten.length ? posten.reduce((a, b) => a + b.cache, 0) / Math.max(1, posten.reduce((a, b) => a + b.ein + b.cache, 0)) : 0, posten: [...posten] };
 }
+
+/* Auf drei Nachkommastellen - Cent-Bruchteile sollen sich nicht ueber viele
+   Laeufe zu einem Phantombetrag aufaddieren. */
+export const runden = (x) => Math.round(x * 1000) / 1000;
+
+/**
+ * Wie viel von einer Wunschliste zurueckgelegt werden darf, wenn nur `frei`
+ * uebrig ist: der Reihe nach aufsummieren, beim ersten Posten abbrechen, der
+ * nicht mehr hineinpasst.
+ *
+ * Der Grund steht im Protokoll vom 17.09.: 0.13 $ lagen fuer einen Beitrag
+ * und die Erklaerfiguren zurueck, frei waren 0.045 $. Der Beitrag war davon
+ * nie zu bezahlen - seine Ruecklage hat aber die neun Stories blockiert, die
+ * zusammen weniger gekostet haetten. Geld fuer etwas Unbezahlbares
+ * zurueckzulegen heisst, es zweimal zu verlieren.
+ *
+ * Bewusst der Reihe nach und nicht "was am besten passt": Die Reihenfolge ist
+ * die Rangfolge. Was passt, behaelt seinen Vorrang; was nicht passt, gibt den
+ * Rest fuer das Billigere frei.
+ */
+export function bezahlbareSumme(preise, frei) {
+  const grenze = Math.max(0, Number(frei) || 0);
+  let summe = 0;
+  for (const p of preise) {
+    const preis = Math.max(0, Number(p) || 0);
+    if (summe + preis > grenze) break;
+    summe += preis;
+  }
+  return runden(summe);
+}

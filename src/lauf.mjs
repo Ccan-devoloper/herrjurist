@@ -36,7 +36,7 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -129,36 +129,6 @@ async function titelfolieBebildern(beitrag) {
     const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum });
     if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; titelfolie.bildBreite = treffer.breite || null; titelfolie.bildHoehe = treffer.hoehe || null; }
   } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
-}
-
-/* Auf drei Nachkommastellen - Cent-Bruchteile sollen sich nicht ueber viele
-   Laeufe zu einem Phantombetrag aufaddieren. */
-export const runden = (x) => Math.round(x * 1000) / 1000;
-
-/**
- * Wie viel von einer Wunschliste zurueckgelegt werden darf, wenn nur `frei`
- * uebrig ist: der Reihe nach aufsummieren, beim ersten Posten abbrechen, der
- * nicht mehr hineinpasst.
- *
- * Der Grund steht im Protokoll vom 17.09.: 0.13 $ lagen fuer einen Beitrag
- * und die Erklaerfiguren zurueck, frei waren 0.045 $. Der Beitrag war davon
- * nie zu bezahlen - seine Ruecklage hat aber die neun Stories blockiert, die
- * zusammen weniger gekostet haetten. Geld fuer etwas Unbezahlbares
- * zurueckzulegen heisst, es zweimal zu verlieren.
- *
- * Bewusst der Reihe nach und nicht "was am besten passt": Die Reihenfolge ist
- * die Rangfolge. Was passt, behaelt seinen Vorrang; was nicht passt, gibt den
- * Rest fuer das Billigere frei.
- */
-export function bezahlbareSumme(preise, frei) {
-  const grenze = Math.max(0, Number(frei) || 0);
-  let summe = 0;
-  for (const p of preise) {
-    const preis = Math.max(0, Number(p) || 0);
-    if (summe + preis > grenze) break;
-    summe += preis;
-  }
-  return runden(summe);
 }
 
 async function main() {
