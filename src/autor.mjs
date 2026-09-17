@@ -432,7 +432,7 @@ async function nachbessern(inhalt, fakten, pruefen, zweck = "faktencheck") {
 export function pruefHinweis(thema) {
   const quelle = belegstelle(thema);
   if (!quelle) return "";
-  return `${quelle}\n\nDer Text oben wurde auf dieser Grundlage geschrieben. Was mit der Belegstelle übereinstimmt, ist richtig – beanstande es nicht. Beanstande, was ihr widerspricht, und was darüber hinaus behauptet wird, ohne zu stimmen.`;
+  return `${quelle}\n\nDer Text oben wurde auf dieser Grundlage geschrieben. Was mit der Belegstelle übereinstimmt, beanstande nicht. Was sie nicht abdeckt, prüfst du mit voller Strenge gegen Gesetz und Rechtsprechung – die Belegstelle ist eine Stütze für das, was sie sagt, kein Freibrief für das, was sie nicht sagt.`;
 }
 
 async function faktenSicher(inhalt, zweck = "faktencheck", opt = {}) {
@@ -925,6 +925,11 @@ Du schreibst ein Skript aus Szenen. Jede Szene hat einen kurzen Bildschirmtext u
 - Szene 1 ist der Hook. Wie er zu bauen ist, steht unten in einem eigenen Abschnitt; er entscheidet über die Reichweite des ganzen Reels.
 - cta: Der Kern in einem Satz, dann die Aufforderung zu folgen – ohne Website, ohne Produkt. Kündige NICHTS an: kein „Nächstes Mal zeige ich dir …“, kein „Im nächsten Reel …“, kein „Teil 2 folgt“. Was hier steht, muss auch in einem Jahr noch stimmen.
 - icon nur beim hook.
+- Genauigkeit im Sprechertext: Jede Voraussetzung, die an einer Person hängt, nennt diese Person mit ihrer Rolle – „der Vertragspartner muss wissen“, „der Erwerber schuldet“ –, nie „der andere“, „man“ oder „eine beteiligte Person“. Staffelt das Gesetz oder die Rechtsprechung einen Wert nach Fallgruppen, nennst du die Staffelung („über 85 Prozent bei kleinem, über 90 Prozent bei großem Vermögen“), nicht eine verschmolzene Spanne. Hängt eine Rechtsfolge an mehr als einer Voraussetzung, nennst du die tragende mit – fünf Wörter mehr sind billiger als ein Fehler, der dauerhaft im Feed steht.
+- Keine Behauptungen über Häufigkeit, die du nicht belegen kannst: nicht „der häufigste Fehler“, nicht „die meisten übersehen“ – sondern „ein typischer Aufbaufehler“.
+- Der Bildschirmtext der Hook-Szene trägt die Frage oder Entscheidung selbst – das Wort, um das es geht („Vertrag wirksam?“, „Wer haftet?“, „Strafbar?“), nicht nur den Sachverhalt. Wer ohne Ton schaut, muss in der ersten Sekunde sehen, was auf dem Spiel steht.
+- kurztitel verspricht genau das, was das Reel liefert: Fünf Vorfragen heißen „5 Vorfragen“, nicht „Lösungsaufbau“; ein Ausschnitt heißt nicht „das komplette Schema“.
+- Die Weiterleitungs-Aufforderung in der cta-Szene nennt den Empfänger konkret und aus dem Inhalt heraus („Schick das der Person in deiner Lerngruppe, die 85 und 90 immer verwechselt“), nicht allgemein „Schick das deiner Lerngruppe“.
 
 ### Felder für die Bühnen-Darstellung
 Das Reel wird abwechselnd in zwei Layouts gebaut. Die folgenden drei Felder braucht das zweite – fülle sie IMMER aus, auch wenn du nicht weißt, welches gerade dran ist.
@@ -933,6 +938,7 @@ Das Reel wird abwechselnd in zwei Layouts gebaut. Die folgenden drei Felder brau
   ZUERST der Gegenstand, nicht der Mensch. Zeige das Ding, um das es juristisch geht: die Akte, den Bescheid, das Urteil, den Vertrag, die Anklageschrift, das Grundbuch, die Tatwaffe, das Schriftstück, die Frist im Kalender. Nur wenn die Szene wirklich von einer HANDLUNG einer Person lebt („der Gläubiger nimmt nicht an“), darf eine Person vorkommen. Steht keine Person in der Beschreibung, wird auch keine gezeichnet – das ist so gewollt.
   Entscheidend ist der Fachbezug, nicht die Pantomime. Falsch wäre für das steuerliche Einlagekonto „person adding coins to jar“: Münzen in einem Glas könnten zu jedem Thema der Welt gehören. Richtig wären Dinge, die in genau diesem Thema wirklich vorkommen – für die Anklageschrift „stapled court document with sections“, für die Zwangsvollstreckung „sealed enforcement order with stamp“. Prüfe jede Beschreibung mit der Gegenfrage: „Könnte dieses Bild genauso gut zu einem ganz anderen juristischen Thema gehören?“ Wenn ja, ist es zu allgemein – such etwas Spezifischeres.
   Jede Szene bekommt ihr eigenes Bild; gib nicht zweimal dieselbe oder eine fast gleiche Beschreibung an. Keine Fachvokabeln im Bildauftrag („anwartschaftsrecht“, „revision“ – das Modell malt sonst Buchstaben), keine Symbolbild-Klassiker (Waage vor Bücherwand, Richterhammer, Handschlag im Anzug, Paragrafenzeichen), keine Gruppen.
+  Schriftstücke ohne lesbare Beschriftung: kein Schild, kein Etikett, keine Urkunde mit Titelzeile, kein Formular mit Feldnamen – das Modell schreibt sonst englische Wörter ins Bild („FARMHOUSE DEED“), und die stehen dann groß im Reel. Beschreibe ein Schriftstück über Form und Zustand („folded letter with wax seal“, „stapled document with sections“), nie über das, was daraufsteht.
   Fällt dir für eine Szene nichts ein, das wirklich zu ihrer Aussage passt: null. Dann übernimmt sie das Motiv der vorherigen Szene, und das ist besser als ein Bild, das danebenliegt.
 - kreuz: true genau dann, wenn die letzte marken-Zeile etwas benennt, das gerade NICHT gilt oder NICHT nötig ist („Verschulden nötig?“, „Fristsetzung erforderlich?“). Dann wird ein rotes Kreuz danebengesetzt. Sonst false. Höchstens eine Szene je Reel bekommt true.`;
 
@@ -991,6 +997,12 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       }
       if (s.norm && normenOhneGesetz(s.norm).length) ergebnis.fehler.push(`Norm „${s.norm}“ ohne Gesetz`);
     }
+    /* Auch die Stimme nennt das Gesetz. Geprüft wird der ganze Sprechtext am
+       Stück: Wird das Gesetz irgendwo danach genannt, reicht das der Hörerin;
+       wird es NIE genannt (Campus-Reel vom 17.09.: „Paragraf 3 oder Paragraf 7
+       Absatz 1 Nummer 1“, kein ErbStG), ist das ein Fehler. */
+    const nacktGesprochen = normenOhneGesetz(szenen.map((s) => s.sprecher || "").join(" "));
+    if (nacktGesprochen.length) ergebnis.fehler.push(`Sprechertext nennt ${[...new Set(nacktGesprochen)].join(", ")} ohne Gesetz – auch gesprochen gehört das Gesetz dazu („Paragraf 1365 BGB“)`);
     /* Die Annahmegrenze folgt dem gewählten Zeitfenster. Stand sie fest, wurde
        jedes längere Reel abgelehnt, obwohl die Anleitung genau diese Länge
        verlangt hatte - ein Nachschlag pro Reel, und nach drei Versuchen gar

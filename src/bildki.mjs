@@ -67,6 +67,10 @@ export function bildAuftrag(szene, { stil = "" } = {}) {
     "Bold simple shapes, even line weight, flat colours with soft shading, clean readable silhouette.",
     stil,
     "Absolutely no text, no letters, no words, no numbers, no signage, no logos, no watermark, no signature.",
+    /* Urkunden, Formulare und Schilder sind die Stelle, an der das Verbot
+       kippt: Das Modell "beschriftet" sie wie von selbst. Am 17.09. stand
+       "FARMHOUSE DEED" gross im Reel. Also Leerseiten und Platzhalterlinien. */
+    "If the subject is a document, certificate, form, letter, book cover or sign, draw it with blank pages or abstract wavy placeholder lines only - never legible or pseudo-legible writing, never a title line, never a stamp with words.",
     "No background, no ground shadow, no frame - the subject stands alone on a fully transparent background.",
   ].filter(Boolean).join(" ");
 }

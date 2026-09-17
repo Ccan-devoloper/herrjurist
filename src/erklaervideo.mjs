@@ -150,6 +150,13 @@ export function erklaerHtml(reel, plan, ctx) {
   const kopfFarbe = p.dunkel || "#0b0b0d";
 
   const daten = [];
+  /* Wie viele nummerierte Schritte hat das Reel? Davon haengt der Fortschritt ab. */
+  const schritte = (reel.szenen || []).filter((z) => z && z.art === "schritt").length;
+  const fortschritt = (inhalt) => {
+    if (schritte < 2 || inhalt.art !== "schritt" || !Number.isInteger(inhalt.nummer)) return "";
+    const punkte = Array.from({ length: schritte }, (_, k) => `<i class="${k + 1 < inhalt.nummer ? "vorbei" : k + 1 === inhalt.nummer ? "jetzt" : ""}"></i>`).join("");
+    return `<div class="fortschritt">${punkte}<span>${inhalt.nummer}/${schritte}</span></div>`;
+  };
   const abschnitte = plan.szenen.map((s, i) => {
     const inhalt = reel.szenen[s.index] || reel.szenen[i] || {};
     const marken = markenFuer(inhalt, CONFIG.reel.erklaerMarken);
@@ -166,6 +173,7 @@ export function erklaerHtml(reel, plan, ctx) {
     }).join("");
     return `<section class="szene" data-seite="${seite}" style="--buehne:${i % 2 === 0 ? p.grund : dunklerTon(p.grund, p.dunkel)}">
       <h1>${zeilen(inhalt.titel).map((z) => `<span>${esc(z)}</span>`).join("")}</h1>
+      ${fortschritt(inhalt)}
       <div class="plaketten">${plaketten}</div>
       ${med ? `<div class="medaillon"><img src="${med}" alt=""></div>` : ""}
       ${figur ? `<div class="figur"><img src="${figur}" alt=""></div>` : ""}
@@ -181,7 +189,10 @@ html,body{width:${B}px;height:${H}px;overflow:hidden;background:#000;font-family
 
 /* Ueberschrift: weisser Text mit feinem Unterstrich je Zeile. Im Vorbild
    traegt die Ueberschrift nie einen Kasten. */
-h1{position:absolute;top:104px;left:60px;right:60px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+/* Sichere Zone: Instagram legt oben Kopfzeile und Kontoname ueber das Video.
+   Bei top:104px lag die Ueberschrift darunter. Meta empfiehlt, zentrale
+   Botschaften aus den oberen rund 14 Prozent herauszuhalten - das sind 270px. */
+h1{position:absolute;top:250px;left:60px;right:60px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
 h1 span{display:inline-block;font-size:74px;font-weight:800;color:${kopfFarbe};line-height:1.1;letter-spacing:-0.5px;
         padding-bottom:12px;border-bottom:5px solid ${kopfFarbe}66}
 
@@ -193,6 +204,15 @@ h1 span{display:inline-block;font-size:74px;font-weight:800;color:${kopfFarbe};l
    die Instagram ueber das Video legt. Deshalb zwei getrennte Masse - wie weit
    der Kasten hinausragt (UEBERSTAND) und wie weit die Schrift vom Bildrand
    wegbleibt (SICHER). Das Polster auf der Ueberstandsseite ist die Summe. */
+/* Fortschritt bei nummerierten Schritten: Punkte plus "2/5". Ein Reel, das
+   fuenf Punkte verspricht, zeigt sonst nie, wo man gerade steht - und die
+   gefuehlte Laenge waechst mit jeder Szene, deren Ende man nicht absehen kann. */
+.fortschritt{position:absolute;top:588px;display:flex;align-items:center;gap:12px;font-size:30px;font-weight:700;color:${kopfFarbe}b0}
+[data-seite="rechts"] .fortschritt{left:${SICHER}px}
+[data-seite="links"]  .fortschritt{right:${SICHER}px;flex-direction:row-reverse}
+.fortschritt i{display:block;width:20px;height:20px;border-radius:50%;background:${kopfFarbe}40}
+.fortschritt i.vorbei{background:${kopfFarbe}}
+.fortschritt i.jetzt{background:${akzent};transform:scale(1.25)}
 .plaketten{position:absolute;top:640px;display:flex;flex-direction:column;gap:26px;max-width:${B - 2 * SICHER + UEBERSTAND}px}
 [data-seite="rechts"] .plaketten{left:-${UEBERSTAND}px;align-items:flex-start}
 [data-seite="links"]  .plaketten{right:-${UEBERSTAND}px;align-items:flex-end}
