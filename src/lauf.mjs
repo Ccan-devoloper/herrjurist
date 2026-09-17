@@ -131,6 +131,36 @@ async function titelfolieBebildern(beitrag) {
   } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
 }
 
+/* Auf drei Nachkommastellen - Cent-Bruchteile sollen sich nicht ueber viele
+   Laeufe zu einem Phantombetrag aufaddieren. */
+export const runden = (x) => Math.round(x * 1000) / 1000;
+
+/**
+ * Wie viel von einer Wunschliste zurueckgelegt werden darf, wenn nur `frei`
+ * uebrig ist: der Reihe nach aufsummieren, beim ersten Posten abbrechen, der
+ * nicht mehr hineinpasst.
+ *
+ * Der Grund steht im Protokoll vom 17.09.: 0.13 $ lagen fuer einen Beitrag
+ * und die Erklaerfiguren zurueck, frei waren 0.045 $. Der Beitrag war davon
+ * nie zu bezahlen - seine Ruecklage hat aber die neun Stories blockiert, die
+ * zusammen weniger gekostet haetten. Geld fuer etwas Unbezahlbares
+ * zurueckzulegen heisst, es zweimal zu verlieren.
+ *
+ * Bewusst der Reihe nach und nicht "was am besten passt": Die Reihenfolge ist
+ * die Rangfolge. Was passt, behaelt seinen Vorrang; was nicht passt, gibt den
+ * Rest fuer das Billigere frei.
+ */
+export function bezahlbareSumme(preise, frei) {
+  const grenze = Math.max(0, Number(frei) || 0);
+  let summe = 0;
+  for (const p of preise) {
+    const preis = Math.max(0, Number(p) || 0);
+    if (summe + preis > grenze) break;
+    summe += preis;
+  }
+  return runden(summe);
+}
+
 async function main() {
   log(`Instagram-Bot · ${datum} · Stil ${CONFIG.marke.stil} · ${trocken ? "TROCKENLAUF" : "live"}`);
 
@@ -277,7 +307,7 @@ async function main() {
 
   if (auffuellen > 0) { await auffuellenLauf(auffuellen, { hosting, ledger, ledgerPfad, pool, poolIndex, strategie }); return; }
 
-  /* Rücklage für alles, was heute noch zu schreiben ist: Solange ein Beitrag
+    /* Rücklage für alles, was heute noch zu schreiben ist: Solange ein Beitrag
      oder das Reel keinen Text hat, bleibt sein erwarteter Preis zurückgelegt,
      damit Stories, Interaktion oder Auffüllen ihn nicht aufbrauchen. Am
      13.09. war nur das Reel geschützt – und zwei Beiträge fielen aus. Die
@@ -286,9 +316,21 @@ async function main() {
   const textFehlt = (b) => b.status !== "veroeffentlicht" && !b.fehler && !b.textFehler && !hosting.jsonLesen(textDatei(b), null);
   const ruecklageAktualisieren = () => {
     const offen = trocken ? [] : plan.beitraege.filter(textFehlt);
-    let summe = 0;
-    for (const b of offen) summe += b.format === "reel" ? reelReserve(kostenStart.tage, CONFIG.ki.reelReserveUsd) : erwartet("autor") + erwartet("faktencheck");
-    summe = Math.round(summe * 1000) / 1000;
+    /* Zurückgelegt wird nur, was vom Rest des Tages auch WIRKLICH bezahlbar
+       ist. Am 17.09. lagen 0.13 $ für einen Beitrag und die Erklärfiguren
+       zurück, während nur noch 0.045 $ frei waren: Der Beitrag war davon nie
+       zu bezahlen, seine Rücklage hat aber die neun Stories blockiert, die
+       zusammen weniger gekostet hätten. Geld für etwas Unbezahlbares
+       zurückzulegen heißt, es zweimal zu verlieren.
+
+       Deshalb: der Reihe nach aufsummieren und beim ersten Posten abbrechen,
+       der nicht mehr hineinpasst. Was passt, behält seinen Vorrang - was
+       nicht passt, gibt den Rest für das Billigere frei. */
+    const freiJetzt = Math.max(0, tagesLimit() - tagesStand());
+    const preisFuer = (b) => (b.format === "reel"
+      ? reelReserve(kostenStart.tage, CONFIG.ki.reelReserveUsd)
+      : erwartet("autor") + erwartet("faktencheck"));
+    let summe = bezahlbareSumme(offen.map(preisFuer), freiJetzt);
     /* Die Rücklage gehört den Beiträgen, die heute noch geschrieben werden
        müssen - und nur ihnen. „recherche" stand hier bis zum 16.09. mit in
        der Liste; an dem Tag hat ein einziger Recherche-Aufruf die Rücklage
@@ -302,8 +344,9 @@ async function main() {
        gilt, bleibt sein Bildbudget zurueckgelegt. */
     const erklaerOffen = !trocken && layoutFuer(datum) === "erklaer"
       && plan.beitraege.some((b) => b.format === "reel" && b.status !== "veroeffentlicht" && !b.fehler);
-    if (erklaerOffen) summe = Math.round((summe + CONFIG.reel.erklaerBilder * erwartet("erklaerbild")) * 1000) / 1000;
-    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen ? " und die Figuren des Erklärvideos" : ""}`);
+    const erklaerPreis = CONFIG.reel.erklaerBilder * erwartet("erklaerbild");
+    if (erklaerOffen && summe + erklaerPreis <= freiJetzt) summe = runden(summe + erklaerPreis);
+    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen && summe >= erklaerPreis ? " und die Figuren des Erklärvideos" : ""}`);
     else reservierungAufheben();
     return summe;
   };

@@ -2749,3 +2749,37 @@ test("Worker verteilt nach Konto-ID auf das richtige Repository", async () => {
   assert.ok(quelle.indexOf("signaturStimmt(roh") < quelle.indexOf("zieleFuer(env, roh)"),
     "Signatur wird vor der Verteilung geprueft");
 });
+
+/* --------------------------------------------------------------------------
+   Rücklage: nur zurücklegen, was auch bezahlbar ist.
+
+   Am 17.09. lagen 0.13 $ für einen noch zu schreibenden Beitrag und die vier
+   Erklärfiguren zurück, während vom Tagesdeckel nur noch 0.045 $ frei waren.
+   Der Beitrag war davon nie zu bezahlen - seine Rücklage hat aber die neun
+   Stories blockiert, die zusammen weniger gekostet hätten. Ergebnis: 0 von 3
+   Beiträgen, 0 von 9 Stories.
+   -------------------------------------------------------------------------- */
+test("Rücklage übersteigt nie das noch freie Budget", async () => {
+  const { bezahlbareSumme } = await import("../src/lauf.mjs");
+
+  /* Der Fall vom 17.09.: b2 kostet erwartet 0.085, frei sind 0.045. */
+  assert.equal(bezahlbareSumme([0.085], 0.045), 0, "Unbezahlbares wird nicht zurückgelegt");
+
+  /* Reicht es, bleibt der Vorrang: der Beitrag bekommt sein Geld. */
+  assert.equal(bezahlbareSumme([0.085], 0.2), 0.085);
+
+  /* Mehrere Beiträge: der Reihe nach, Abbruch beim ersten, der nicht passt.
+     Die Reihenfolge IST die Rangfolge - es wird nicht umsortiert, damit der
+     dritte Beitrag sich nicht am zweiten vorbeidrängt. */
+  assert.equal(bezahlbareSumme([0.06, 0.06, 0.06], 0.13), 0.12);
+  assert.equal(bezahlbareSumme([0.20, 0.01], 0.15), 0, "nach dem ersten Fehlschlag wird abgebrochen");
+
+  /* Nichts offen, nichts frei, Unsinn im Eingang. */
+  assert.equal(bezahlbareSumme([], 0.3), 0);
+  assert.equal(bezahlbareSumme([0.05], 0), 0);
+  assert.equal(bezahlbareSumme([0.05], -1), 0);
+  assert.equal(bezahlbareSumme([null, undefined, "x"], 0.3), 0);
+
+  /* Cent-Bruchteile dürfen sich nicht zu einem Phantombetrag aufaddieren. */
+  assert.equal(bezahlbareSumme([0.0001, 0.0001, 0.0001], 1), 0);
+});
