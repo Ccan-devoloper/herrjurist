@@ -1084,9 +1084,10 @@ export async function bildregie(reel) {
 
 /* Die Regie darf das Reel nie kosten: Budget- und Netzfehler werden gemeldet,
    das Reel geht mit den Motiven des Autors weiter. */
-async function bildregieSicher(reel) {
-  try { const r = await bildregie(reel); if (r.geprueft) console.log(`  Bildregie: ${r.ersetzt} von ${r.geprueft} Motiven ersetzt.`); }
-  catch (e) { console.warn(`  ! Bildregie übersprungen (${e.message.split("\n")[0].slice(0, 100)}) – Motive des Autors bleiben.`); }
+export async function bildregieSicher(reel) {
+  if (!reel || reel.bildregie) return false;
+  try { const r = await bildregie(reel); if (r.geprueft) console.log(`  Bildregie: ${r.ersetzt} von ${r.geprueft} Motiven ersetzt.`); reel.bildregie = true; return true; }
+  catch (e) { console.warn(`  ! Bildregie übersprungen (${e.message.split("\n")[0].slice(0, 100)}) – Motive des Autors bleiben.`); return false; }
 }
 
 export function teaserAusBeitrag(beitrag, slot) {

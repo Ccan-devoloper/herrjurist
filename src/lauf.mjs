@@ -23,7 +23,7 @@ import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool, KLAUSUREN } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
-import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
+import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
 import { beitragRendern, storyRendern, browserBeenden } from "./render.mjs";
@@ -657,6 +657,10 @@ async function main() {
            bauen. */
         const layout = layoutFuer(datum);
         if (layout === "erklaer") {
+          /* Ein Text, der vor der Bildregie geschrieben wurde (Nachtlauf vor
+             dem 17.09.), bekommt sie hier nachgeholt - einmal, dann steht es
+             im gespeicherten Text. */
+          if (await bildregieSicher(reel)) hosting.jsonSchreiben(textDatei(eintrag), reel);
           const m = await erklaerMotive(reel);
           /* „eigene" zaehlt die verschiedenen Bilder: Je weiter die Zahl unter
              der Szenenzahl liegt, desto oefter musste eine Szene die Figur der
