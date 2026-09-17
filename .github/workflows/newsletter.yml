@@ -1,0 +1,73 @@
+name: Newsletter
+
+# Gegenstelle zur Landingpage (newsletter/worker.mjs). Der Worker kann kein
+# SMTP; er meldet die drei Ereignisse hierher, und erst hier wird eine Mail
+# verschickt und die verschluesselte Liste im Asset-Zweig fortgeschrieben.
+#
+# Die Adresse kommt ausschliesslich im signierten Token herein und wird hier
+# erneut geprueft. Sie wird nie in einen Shell-Befehl eingesetzt (sondern nur
+# als Umgebungsvariable weitergereicht) und steht im Protokoll nur maskiert -
+# die Laeufe eines oeffentlichen Repositories kann jeder lesen.
+
+on:
+  repository_dispatch:
+    types: [newsletter-anmeldung, newsletter-bestaetigt, newsletter-abmeldung]
+
+permissions:
+  contents: write
+
+# Zwei Bestaetigungen in derselben Minute wuerden sonst auf denselben Stand
+# der Liste schreiben und einander ueberholen.
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+jobs:
+  verarbeiten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          ref: instagram-assets
+          fetch-depth: 1
+          path: assets
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - run: npm ci
+
+      - name: Ereignis verarbeiten
+        env:
+          NL_EREIGNIS: ${{ github.event.action }}
+          NL_TOKEN: ${{ github.event.client_payload.token }}
+          NEWSLETTER_SECRET: ${{ secrets.NEWSLETTER_SECRET }}
+          NEWSLETTER_URL: ${{ vars.NEWSLETTER_URL }}
+          IG_MARKE: ${{ vars.IG_MARKE }}
+          SMTP_HOST: ${{ vars.SMTP_HOST }}
+          SMTP_PORT: ${{ vars.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ vars.SMTP_FROM }}
+        run: node bin/newsletter.mjs --datei assets/state/newsletter.enc --zahlen assets/state/newsletter-zahlen.json
+
+      - name: Liste ablegen
+        working-directory: assets
+        run: |
+          set -euo pipefail
+          git config user.name instagram-bot
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/newsletter.enc state/newsletter-zahlen.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "nichts Neues"; exit 0; }
+          git commit -m "Newsletter-Liste $(date -u +%FT%TZ)"
+          for i in 1 2 3 4; do
+            git pull --rebase origin instagram-assets && git push origin HEAD:instagram-assets && exit 0
+            sleep $((i * 3))
+          done
+          exit 1

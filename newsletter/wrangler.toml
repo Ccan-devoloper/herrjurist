@@ -1,0 +1,17 @@
+# Cloudflare Worker: Newsletter-Landingpage (Versuchsaufbau).
+# Bereitstellen mit:  npx wrangler deploy
+# Secrets setzen mit: npx wrangler secret put NEWSLETTER_SECRET   (und GITHUB_TOKEN)
+name = "herrjurist-newsletter"
+main = "worker.mjs"
+compatibility_date = "2026-09-17"
+
+[vars]
+# Keine Geheimnisse - nur Anzeige und Ziel.
+GITHUB_REPO = "Ccan-devoloper/herrjurist"
+MARKE = "Herr Jurist"
+# Pflichtangaben nach § 5 DDG. Vor dem ersten oeffentlichen Link ausfuellen -
+# im Cloudflare-Dashboard unter Settings > Variables, NICHT hier im Repository:
+# eine private Anschrift gehoert nicht in ein oeffentliches Repository.
+# ANBIETER  = "Vorname Nachname"
+# ANSCHRIFT = "Strasse 1, 12345 Ort"
+# KONTAKT   = "kontakt@..."
