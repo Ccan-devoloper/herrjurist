@@ -134,7 +134,13 @@ export const antwortLimit = () => antwortLimitUsd;
    höheren Wert weiter. */
 const ERWARTET = {
   "story-faktencheck": 0.01,
-  "reel-faktencheck": 0.02,   // seit 18.09. mit effort high; gemessen vorher 0,014 $
+  /* Seit dem 18.09. prueft Opus das Reel (Beschluss des Betreibers). Opus
+     kostet das Zweieinhalbfache von Sonnet; die letzte Sonnet-Messung lag bei
+     0,035 $ fuer 2,3k Ausgabe-Token, also rund 0,09 $. Die Zahl steht hier,
+     BEVOR der erste Aufruf sie misst - genau das hat heute frueh gefehlt, als
+     der Deckel eine Woche lang mit 0,01 $ fuer eine Pruefung plante, die
+     0,07 $ kostete. */
+  "reel-faktencheck": 0.09,
   faktencheck: 0.01,
   /* 0,05 war geraten. Gemessen am 16.09.: 0,25 $ - ohne Cache wurde bei
      jedem pause_turn der ganze Verlauf neu bezahlt. Mit der Cache-Marke in

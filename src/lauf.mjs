@@ -482,7 +482,9 @@ async function main() {
        textBesorgen aus textBesorgen heraus - dann läuft der Posten weiter,
        statt neu zu beginnen, sonst zählte die Recherche davor nicht mit. */
     const eigenerPosten = !postenAktiv();
-    if (eigenerPosten) postenBeginnen(`Beitrag ${eintrag.slot}`, CONFIG.ki.maxJeBeitragUsd);
+    /* Das Reel hat eine eigene Obergrenze: laengeres Skript, teurerer
+       Pruefer. Ein Deckel, der es planmaessig zurueckstellt, waere keiner. */
+    if (eigenerPosten) postenBeginnen(`${eintrag.format === "reel" ? "Reel" : "Beitrag"} ${eintrag.slot}`, eintrag.format === "reel" ? CONFIG.ki.maxJeReelUsd : CONFIG.ki.maxJeBeitragUsd);
     try {
       return await textSchreiben(eintrag);
     } finally {

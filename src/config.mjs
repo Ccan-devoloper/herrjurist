@@ -211,6 +211,17 @@ export const CONFIG = {
        kostet die Eskalation im Schnitt fast nichts – am Tag, an dem sie
        greift, etwa 0,009 $ mehr. */
     modellPruefungStreng: env("IG_KI_MODELL_PRUEFUNG_STRENG", "claude-sonnet-5"),
+    /* Nur das Reel prueft das teure Modell (Beschluss des Betreibers,
+       18.09.). Begruendung: Ein Reel laeuft einmal am Tag, wird am haeufigsten
+       gesehen und bleibt stehen; ein Fehler darin wiegt schwerer als in einem
+       Beitrag, der im Feed nach unten rutscht. Opus kostet je Million Token
+       das Zweieinhalbfache von Sonnet (5 statt 2 bei der Eingabe, 25 statt 10
+       bei der Ausgabe) - gemessen an der Reel-Pruefung vom 18.09. (2,3k
+       Ausgabe-Token, 0,035 $) sind das rund 0,09 $ statt 0,035 $, also gut
+       0,05 $ mehr am Tag. Beitraege und Stories bleiben bei Sonnet.
+
+       IG_KI_MODELL_PRUEFUNG_REEL leer setzen schaltet zurueck auf Sonnet. */
+    modellPruefungReel: env("IG_KI_MODELL_PRUEFUNG_REEL", "claude-opus-5"),
     effort: env("IG_KI_EFFORT", "low"),   // „low“: etwa halbe Kosten je Entwurf, Faktencheck fängt Fehler ab
     /* Messversuch ab 18.09. (Beschluss des Betreibers): Beiträge und Reels
        schreiben mit „medium", Stories bleiben bei „low". In der Nacht zum
@@ -258,6 +269,13 @@ export const CONFIG = {
        und einer Neufassung 0,19 $ und nahm neun Stories mit. Das fängt sie
        weiterhin ab. */
     maxJeBeitragUsd: Number(env("IG_MAX_JE_BEITRAG_USD", "0.15")),
+    /* Das Reel hat seine eigene Obergrenze, seit Opus es prueft. Sein Skript
+       kostet gemessen 0,116 $, die Opus-Pruefung rund 0,09 $ - zusammen schon
+       0,21 $. Mit der Beitragsgrenze von 0,15 $ waere das Reel an dem Tag
+       zurueckgestellt worden, an dem es zum ersten Mal geprueft wird; mit
+       0,30 $ traegt sie Skript plus zwei Pruefrunden. Der Tagesdeckel bleibt
+       darueber die eigentliche Bremse. */
+    maxJeReelUsd: Number(env("IG_MAX_JE_REEL_USD", "0.30")),
   },
 
   /* Instagram Graph API -------------------------------------------------- */

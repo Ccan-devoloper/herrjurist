@@ -45,12 +45,18 @@ export function bildAuftrag(szene, { stil = "", look = "flach" } = {}) {
   const mitMensch = menschInSzene(text);
   const foto = look === "foto";
   return [
+    /* Die Ansage steht vorn und am Ende, und sie lautet "ohne Hintergrund" -
+       so, wie der Betreiber sie am 18.09. selbst erfolgreich erprobt hat. Das
+       Wort "transparent" kommt im Auftrag nicht mehr vor: Es ist ein Wort aus
+       der Dateiwelt, nicht aus der Bildwelt, und das Modell hat darauf mit
+       gemalten Studiohintergruenden geantwortet. */
+    "Cut-out image WITHOUT ANY BACKGROUND.",
     foto ? `Photorealistic photograph: ${text}.` : `Flat vector illustration: ${text}.`,
     "Exactly one clear subject, centred, seen from the front or in three-quarter view.",
     /* "nothing cropped" allein hat nicht gereicht: Am 14.09. kam eine Figur
        zurueck, deren Kopf oben glatt am Bildrand endete. Das Modell braucht
        die Ansage als Platzvorgabe, nicht als Verbot. */
-    "Frame the subject with clear empty margin on all four sides: the whole subject must be inside the image with visible transparent space above the head, below the feet and to the left and right. Never let any part touch or run past an edge. Rather draw the subject smaller than risk cutting it off.",
+    "Frame the subject with clear empty margin on all four sides: the whole subject must be inside the image with visible empty space above the head, below the feet and to the left and right. Never let any part touch or run past an edge. Rather draw the subject smaller than risk cutting it off.",
     ...(mitMensch
       /* Haende und kleine Requisiten sind die Stelle, an der billige Bilder
          auseinanderfallen: verbogene Finger, ein Stift ohne Spitze, eine Lampe,
@@ -77,7 +83,7 @@ export function bildAuftrag(szene, { stil = "", look = "flach" } = {}) {
        kippt: Das Modell "beschriftet" sie wie von selbst. Am 17.09. stand
        "FARMHOUSE DEED" gross im Reel. Also Leerseiten und Platzhalterlinien. */
     "If the subject is a document, certificate, form, letter, book cover or sign, draw it with blank pages or abstract wavy placeholder lines only - never legible or pseudo-legible writing, never a title line, never a stamp with words.",
-    "No background, no ground shadow, no frame - the subject stands alone on a fully transparent background.",
+    "Deliver it WITHOUT A BACKGROUND: nothing behind the subject, no backdrop, no room, no surface, no ground shadow, no frame - the subject cut out and standing alone.",
   ].filter(Boolean).join(" ");
 }
 

@@ -253,7 +253,10 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
      durch. Wird in einer Story gerechnet, greift die Eskalation trotzdem. */
   const stories = zweck === "story-faktencheck";
   const scharf = streng ?? (!stories || zahlenLastig(beitrag));
-  const modell = (scharf && CONFIG.ki.modellPruefungStreng) || CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben;
+  const reel = zweck === "reel-faktencheck";
+  const modell = (reel && CONFIG.ki.modellPruefungReel)
+    || (scharf && CONFIG.ki.modellPruefungStreng)
+    || CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben;
   if (scharf) console.log(`  Faktencheck streng (${modell})${stories ? " – in einer Story wird gerechnet." : ""}`);
   const haiku = /haiku/i.test(modell);
   const user = `Prüfe diesen Text:\n\n${textAus(beitrag)}${hinweis ? `\n\n${hinweis}` : ""}`;
