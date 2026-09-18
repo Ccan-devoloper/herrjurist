@@ -76,7 +76,46 @@ export function textAus(beitrag) {
   /* Stories tragen den Slot im Kopf, damit ein Befund einer einzelnen Kachel
      zugeordnet werden kann - neun Stories in einem Aufruf zu pruefen ist
      bezahlbar, neun einzelne Aufrufe waeren es nicht. */
-  for (const s of beitrag.stories || []) teile.push(`[Story ${s.slot} ${s.art}] ${[s.ueberzeile, s.titel, s.norm, s.formel, s.zahl, s.text, ...(s.optionen || []), s.richtigText, s.falsch].filter(Boolean).join(" · ")}`);
+  /* Quiz-Kacheln brauchen eine eigene Darstellung (Safety 0b). Bisher
+     standen die Optionen als blosse Aufzaehlung im Text, und WELCHE davon als
+     richtig markiert ist, stand nirgends - der Index `richtig` war fuer den
+     Pruefer unsichtbar. Er konnte damit gar nicht bemerken, dass ein formal
+     gueltiger Index auf die fachlich falsche Option zeigt. Genau das ist am
+     16.09. passiert.
+
+     Ausserdem gehoeren Frage und Antwort zusammen: Sie werden unter einem
+     gemeinsamen Kopf ausgegeben, damit der Pruefer Widersprueche zwischen
+     ihnen ueberhaupt sehen kann. */
+  const buchstabe = (i) => String.fromCharCode(65 + i);
+  const quizPaare = new Map();
+  for (const s of beitrag.stories || []) {
+    const istQuiz = (s.art === "frage" || s.art === "antwort") && Array.isArray(s.optionen) && s.optionen.length;
+    if (istQuiz) {
+      const k = s.pairId || s.themaId || `einzeln-${s.slot}`;
+      const e = quizPaare.get(k) || {};
+      e[s.art] = s;
+      quizPaare.set(k, e);
+      continue;
+    }
+    teile.push(`[Story ${s.slot} ${s.art}] ${[s.ueberzeile, s.titel, s.norm, s.formel, s.zahl, s.text, s.richtigText, s.falsch].filter(Boolean).join(" · ")}`);
+  }
+  for (const [schluessel, { frage, antwort }] of quizPaare) {
+    const zeilen = [`[QuizPair ${schluessel}]`];
+    if (frage) {
+      zeilen.push(`FRAGE [Story ${frage.slot} frage]`, ...[frage.ueberzeile, frage.titel, frage.text, frage.norm].filter(Boolean).map((x) => `  ${x}`));
+      frage.optionen.forEach((o, i) => zeilen.push(`  ${buchstabe(i)}: ${o}`));
+      if (Number.isInteger(frage.richtig)) zeilen.push(`  ALS RICHTIG MARKIERT: ${buchstabe(frage.richtig)} - ${frage.optionen[frage.richtig] ?? "(Option fehlt)"}`);
+    }
+    if (antwort) {
+      zeilen.push(`ANTWORT [Story ${antwort.slot} antwort]`, ...[antwort.ueberzeile, antwort.titel].filter(Boolean).map((x) => `  ${x}`));
+      if (!frage) antwort.optionen.forEach((o, i) => zeilen.push(`  ${buchstabe(i)}: ${o}`));
+      zeilen.push(Number.isInteger(antwort.richtig)
+        ? `  ALS RICHTIG MARKIERT: ${buchstabe(antwort.richtig)} - ${antwort.optionen[antwort.richtig] ?? "(Option fehlt)"}`
+        : "  ALS RICHTIG MARKIERT: (keine Markierung)");
+      for (const x of [antwort.text, antwort.richtigText, antwort.falsch, antwort.norm].filter(Boolean)) zeilen.push(`  ${x}`);
+    }
+    teile.push(zeilen.join("\n"));
+  }
   if (beitrag.caption) teile.push(`[Caption] ${beitrag.caption}`);
   /* Der Kurztitel stand bisher in keiner Pruefung - dabei ist er die
      Ueberschrift der Teaser-Story und des Reel-Covers, also das, was die

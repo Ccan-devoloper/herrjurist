@@ -880,7 +880,7 @@ export async function storiesPruefen(liste) {
   if (!liste.length) return liste;
   try {
     const fakten = await faktenSicher({ stories: liste }, "story-faktencheck", {
-      hinweis: "Jede Kachel steht für sich. Nenne zu jedem Befund den Slot in eckigen Klammern, genau so, wie er im Kopf der Kachel steht (zum Beispiel [s5]).",
+      hinweis: "Jede Kachel steht für sich - mit einer Ausnahme: Was unter [QuizPair] steht, ist EIN Gegenstand. Frage und Antwort gehören dort zusammen, und du beanstandest ausdrücklich, wenn die als richtig markierte Option fachlich nicht die richtige ist oder wenn Frage und Antwort einander widersprechen. Nenne zu jedem Befund den Slot in eckigen Klammern, genau so, wie er im Kopf der Kachel steht (zum Beispiel [s5]).",
     });
     korrekturenAnwenden({ stories: liste }, fakten.korrekturen);
     for (const f of fakten.fehler || []) {
