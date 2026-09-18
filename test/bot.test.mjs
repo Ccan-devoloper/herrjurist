@@ -4024,8 +4024,9 @@ test("1a: Optionale Verbesserungen dürfen das Pflichtprodukt nicht verdrängen"
   /* Ein optionales Erklärbild (0,01 $) würde die Rücklage anknabbern. */
   assert.throws(() => budget.zulassen("erklaerbild", 0.01, { optional: true }), AdmissionAbgelehnt,
     "optional kommt nicht an der Pflichtrücklage vorbei");
-  assert.equal(budget.frei("core", { optional: true }), 0.005, "für Optionales bleiben 0,005 $");
-  assert.equal(budget.frei("core"), 0.04, "für Pflicht weiterhin 0,04 $");
+  assert.equal(budget.frei("core"), 0.005, "neben der Rücklage bleiben 0,005 $ für alles andere");
+  assert.equal(budget.frei("core", { ohnePflicht: "reel-faktencheck" }), 0.04,
+    "nur der Faktencheck selbst darf seine eigene Rücklage einlösen");
 
   /* Der Pflichtaufruf selbst kommt durch – er darf seine eigene Rücklage nutzen. */
   const pflicht = budget.zulassen("reel-faktencheck", 0.035, { pflichtName: "reel-faktencheck" });
@@ -4038,4 +4039,179 @@ test("1a: Optionale Verbesserungen dürfen das Pflichtprodukt nicht verdrängen"
   bild.buchen(0.01);
   assert.equal(budget.stand().verbraucht.core, 0.32, "der Deckel ist punktgenau ausgeschöpft");
   assert.throws(() => budget.zulassen("bild", 0.001, { optional: true }), AdmissionAbgelehnt);
+});
+
+test("1a: Was gesendet wurde, gibt kein Geld zurück", async () => {
+  /* Der gefährlichste Randfall der Admission: Ein Fehler kann auch NACH dem
+     Senden auftreten – HTTP-Abbruch, unlesbares Schema, Parser. Dann sind
+     Tokens verbraucht. Gäbe die Admission die Reserve zurück, dürfte der
+     nächste Aufruf dasselbe Geld ein zweites Mal ausgeben, während die
+     Rechnung des Anbieters weiterläuft. */
+  const { budgetStarten, ZUSTAND } = await import("../src/budget.mjs");
+  const bauen = () => budgetStarten({ deckel: { core: 0.10, engagement: 0.25, research: 0.12 } });
+
+  /* 1. Fehler VOR dem Senden: Die Reserve kommt vollständig zurück. */
+  const a = bauen();
+  await assert.rejects(() => a.mitAdmission("autor", 0.02, async () => {
+    throw new Error("Schlüssel fehlt"); // noch nichts gesendet
+  }), /Schlüssel fehlt/);
+  assert.equal(a.frei("core"), 0.10, "nichts verbraucht");
+  assert.equal(a.stand().verbraucht.core, 0);
+
+  /* 2. Fehler NACH dem Senden, Usage bekannt: echte Kosten buchen, Rest frei. */
+  const b = bauen();
+  await assert.rejects(() => b.mitAdmission("autor", 0.02, async (griff) => {
+    griff.gesendet();
+    griff.kosten(0.012);          // die Antwort kam, die Usage steht fest
+    throw new Error("JSON kaputt"); // und erst danach zerbricht der Parser
+  }), /JSON kaputt/);
+  assert.equal(b.stand().verbraucht.core, 0.012, "die echten Kosten sind gebucht");
+  assert.equal(b.frei("core"), 0.088, "nur der Rest ist wieder frei");
+
+  /* 3. Fehler NACH dem Senden, Usage unbekannt: Die Reserve bleibt weg. */
+  const c = bauen();
+  await assert.rejects(() => c.mitAdmission("autor", 0.02, async (griff) => {
+    griff.gesendet();
+    throw new Error("Verbindung abgebrochen");
+  }), /Verbindung abgebrochen/);
+  assert.equal(c.stand().verbraucht.core, 0.02,
+    "konservativ gilt der Worst Case als ausgegeben – der Anbieter könnte ihn berechnet haben");
+  assert.equal(c.frei("core"), 0.08, "die Reserve wird NICHT wieder verfügbar");
+  assert.equal(c.stand().ungeklaert.length, 1, "und der Fall steht als ungeklärt im Protokoll");
+  assert.equal(c.stand().ungeklaert[0].zweck, "autor");
+
+  /* freigeben() nach dem Senden ist kein Rückgeld, sondern ein ungeklärter Fall. */
+  const d = bauen();
+  const griff = d.zulassen("autor", 0.02);
+  assert.equal(griff.zustand, ZUSTAND.RESERVIERT);
+  griff.gesendet();
+  assert.equal(griff.zustand, ZUSTAND.GESENDET);
+  griff.freigeben();
+  assert.equal(griff.zustand, ZUSTAND.UNGEKLAERT, "freigeben() nach dem Senden wird zu ungeklaert");
+  assert.equal(d.stand().verbraucht.core, 0.02);
+
+  /* Und vor dem Senden bleibt freigeben() echtes Rückgeld. */
+  const e = bauen();
+  const g2 = e.zulassen("autor", 0.02);
+  g2.freigeben();
+  assert.equal(g2.zustand, ZUSTAND.VERFALLEN);
+  assert.equal(e.frei("core"), 0.10);
+});
+
+test("1a: Mehr ausgeben als zugesagt sperrt den Topf", async () => {
+  const { budgetStarten, InvarianteVerletzt, TopfGesperrt, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+
+  const griff = budget.zulassen("faktencheck", 0.020);
+  griff.gesendet();
+  assert.throws(() => griff.buchen(0.025), InvarianteVerletzt,
+    "eine gebrochene Zusage ist ein Fehler, kein Rundungsergebnis");
+
+  /* Das Geld ist ausgegeben – es wird vollständig verbucht. */
+  assert.equal(budget.stand().verbraucht.core, 0.025, "die tatsächlichen Kosten stehen im Topf");
+  assert.equal(budget.stand().verletzungen.length, 1);
+  assert.deepEqual(budget.stand().verletzungen[0], { zweck: "faktencheck", topf: "core", reservedUsd: 0.02, actualUsd: 0.025 });
+
+  /* Aber der Topf hat seine Zusage verloren und nimmt nichts mehr an. */
+  assert.ok(budget.gesperrt("core"), "core ist gesperrt");
+  assert.throws(() => budget.zulassen("autor", 0.001), TopfGesperrt,
+    "kein weiterer Aufruf darf den Schaden vergrößern");
+  assert.throws(() => budget.zulassen("reel", 0.20), TopfGesperrt);
+
+  /* Die anderen Töpfe sind davon unberührt. */
+  assert.equal(budget.gesperrt("engagement"), null);
+  budget.zulassen("kommentare", 0.05).freigeben();
+
+  /* Research trägt bewusst keine Cent-Zusage: dort keine Verletzung, keine Sperre. */
+  const r = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const rg = r.zulassen("recherche", 0.05);
+  rg.gesendet();
+  rg.buchen(0.07);
+  assert.equal(r.stand().verbraucht.research, 0.07, "die echten Kosten stehen da");
+  assert.equal(r.gesperrt("research"), null,
+    "für Server-Tools wird keine Cent-Garantie behauptet – also auch keine gebrochen");
+  assert.equal(r.stand().verletzungen.length, 0);
+
+  /* Der reguläre Fall bleibt regulär. */
+  const ok = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const g = ok.zulassen("autor", 0.020); g.gesendet(); g.buchen(0.018);
+  assert.equal(ok.gesperrt("core"), null);
+  assert.equal(ok.stand().verbraucht.core, 0.018);
+  assert.doesNotThrow(() => ok.zulassen("faktencheck", 0.01).freigeben());
+  assert.throws(() => ok.zulassen("reel", 0.40), AdmissionAbgelehnt, "der Deckel gilt weiterhin");
+});
+
+test("1a: Pflichtrücklagen schützen sich gegenseitig", async () => {
+  const { budgetStarten, AdmissionAbgelehnt, PflichtUeberreserviert } = await import("../src/budget.mjs");
+  /* Semantik ausdrücklich: JEDER Aufruf respektiert ALLE Pflichtrücklagen –
+     außer seiner eigenen, die er unter ihrem Namen anmeldet. */
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.22 } });
+  assert.equal(budget.frei("core"), 0.10);
+
+  budget.pflichtRuecklage("reel", "reel", 0.06);
+  budget.pflichtRuecklage("faktencheck", "reel-faktencheck", 0.04);
+  assert.equal(budget.frei("core"), 0, "beide Rücklagen zusammen füllen den Rest");
+
+  /* Ein optionaler Aufruf kommt an keiner Rücklage vorbei. */
+  assert.throws(() => budget.zulassen("erklaerbild", 0.01, { optional: true }), AdmissionAbgelehnt);
+
+  /* Ein anderer Pflichtaufruf ebenso wenig: Er darf nicht 0,08 nehmen und
+     damit den Faktencheck unmöglich machen. */
+  assert.throws(() => budget.zulassen("stories", 0.08), AdmissionAbgelehnt,
+    "fremdes Pflichtgeld ist tabu");
+
+  /* Das Reel darf seine EIGENE Rücklage einlösen … */
+  assert.equal(budget.frei("core", { ohnePflicht: "reel" }), 0.06);
+  const reel = budget.zulassen("reel", 0.06, { pflichtName: "reel" });
+  reel.gesendet(); reel.buchen(0.05);
+  budget.pflichtAufloesen("reel");
+
+  /* … und danach steht die Rücklage des Faktenchecks unverändert da. */
+  assert.equal(budget.stand().verbraucht.core, 0.27);
+  assert.equal(budget.frei("core"), 0.01, "0,04 liegen weiter für den Faktencheck zurück");
+  assert.equal(budget.frei("core", { ohnePflicht: "faktencheck" }), 0.05);
+  const fc = budget.zulassen("reel-faktencheck", 0.04, { pflichtName: "faktencheck" });
+  fc.gesendet(); fc.buchen(0.035);
+  budget.pflichtAufloesen("faktencheck");
+  assert.equal(budget.stand().verbraucht.core, 0.305, "beide Pflichtstücke sind bezahlt");
+
+  /* Eine Rücklage, die der Topf nicht mehr hergibt, wird nicht still angenommen. */
+  const eng = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.30 } });
+  eng.pflichtRuecklage("reel", "reel", 0.015);
+  assert.throws(() => eng.pflichtRuecklage("faktencheck", "reel-faktencheck", 0.03), PflichtUeberreserviert,
+    "dass das Pflichtprodukt nicht mehr finanzierbar ist, ist eine Nachricht – keine Rundungsfrage");
+  assert.equal(Object.keys(eng.stand().pflicht).length, 1, "die unmögliche Rücklage wird nicht gespeichert");
+});
+
+test("1a: Überlappende Admissions buchen sich nicht gegenseitig über", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const budget = budgetStarten({ deckel: { core: 0.06, engagement: 0.25, research: 0.12 } });
+
+  /* Zwei Aufrufe laufen gleichzeitig – beide Reservierungen zählen. */
+  const a = budget.zulassen("autor", 0.025);
+  const b = budget.zulassen("faktencheck", 0.025);
+  assert.equal(budget.frei("core"), 0.01, "beide Reservierungen sind belegt");
+  assert.throws(() => budget.zulassen("stories", 0.02), AdmissionAbgelehnt, "der dritte passt nicht mehr");
+
+  /* Sie enden in umgekehrter Reihenfolge – jede löst nur ihre eigene Reserve. */
+  b.gesendet(); b.buchen(0.020);
+  assert.equal(budget.frei("core"), 0.015);
+  a.gesendet(); a.buchen(0.010);
+  assert.equal(budget.stand().verbraucht.core, 0.03);
+  assert.equal(budget.stand().reserviert.core, 0, "keine Reserve bleibt hängen");
+  assert.equal(budget.frei("core"), 0.03);
+
+  /* Ein zweites Abrechnen desselben Griffs ist ein Fehler, kein Doppelbuchen. */
+  assert.throws(() => a.buchen(0.01), /bereits abgeschlossen/);
+  assert.equal(budget.stand().verbraucht.core, 0.03);
+
+  /* Parallel gestartete Aufrufe über mitAdmission(): der dritte wird abgelehnt. */
+  const parallel = budgetStarten({ deckel: { core: 0.05, engagement: 0.25, research: 0.12 } });
+  const lauf = (usd) => parallel.mitAdmission("autor", 0.02, async (griff) => {
+    griff.gesendet(); await new Promise((r) => setTimeout(r, 5)); griff.kosten(usd); return { usd };
+  });
+  const ergebnisse = await Promise.allSettled([lauf(0.02), lauf(0.02), lauf(0.02)]);
+  assert.deepEqual(ergebnisse.map((r) => r.status), ["fulfilled", "fulfilled", "rejected"]);
+  assert.ok(ergebnisse[2].reason instanceof AdmissionAbgelehnt);
+  assert.equal(parallel.stand().verbraucht.core, 0.04, "genau zwei Aufrufe sind bezahlt");
 });
