@@ -61,6 +61,24 @@ const tagIndex = Math.floor(new Date(`${datum}T12:00:00Z`).getTime() / 86400000)
 const varianteStory = (slot) => (CONFIG.marke.farbeJeKlausur ? 0 : (Number(slot.slice(1)) - 1) % 2);
 
 /* Plan serialisierbar machen: Themen nur als ID + Titel, Inhalte separat. */
+/* Was ein Lauf bezahlt hat, muss er auch sichern - selbst dann, wenn er nichts
+   veroeffentlicht und selbst dann, wenn er mit einem Fehler endet.
+
+   Am 18.09. fehlte genau das. Die Zeile "Nichts faellig" stand VOR dem Block,
+   der den Zustand festschreibt, und kehrte mit `return` zurueck. Zwei Laeufe
+   schrieben denselben Beitrag fuer zusammen 0,166 $; weil sie nichts
+   veroeffentlichten, landeten weder der bezahlte Entwurf noch die Kosten im
+   Asset-Zweig. Der naechste Lauf fand keinen Entwurf, schrieb ihn noch einmal
+   und bezahlte noch einmal - und der Tagesdeckel rechnete die ganze Zeit mit
+   einem Stand, der 0,17 $ zu niedrig war.
+
+   Die Funktion haengt deshalb nicht mehr im Ablauf von main(), sondern wird
+   dort einmal gesetzt und am Ende des Prozesses in jedem Fall aufgerufen. Sie
+   sichert genau einmal; ein zweiter Aufruf tut nichts, damit die Wochenkosten
+   nicht doppelt gezaehlt werden. */
+let zustandSichern = async () => {};
+let zustandGesichert = false;
+
 function planSpeichern(hosting, plan) {
   hosting.jsonSchreiben(`plaene/${plan.datum}.json`, plan);
 }
@@ -272,6 +290,30 @@ async function main() {
       log(`  Uhrzeiten: ${zs.gesamt ? `aus ${zs.gesamt} gemessenen Beiträgen gelernt` : "noch ohne Messungen"}${zs.gesamt < 20 ? ", weitere Stunden werden ausprobiert" : ""}`);
     }
   }
+  zustandSichern = async (nachricht = `Zustand ${datum}`) => {
+    if (zustandGesichert) return;
+    zustandGesichert = true;
+    /* Kosten der Woche und Fehler für den Bericht festhalten. */
+    const kosten = kostenAbschluss();
+    if (kosten.aufrufe) {
+      const k = hosting.jsonLesen("kosten.json", { wochen: {} });
+      const kw = wochenKennung(datum);
+      const w = k.wochen[kw] || { usd: 0, aufrufe: 0, cacheSumme: 0 };
+      w.usd += kosten.usd; w.aufrufe += kosten.aufrufe; w.cacheSumme += kosten.cacheAnteil * kosten.aufrufe; w.cacheAnteil = w.cacheSumme / w.aufrufe;
+      k.wochen[kw] = w;
+      hosting.jsonSchreiben("kosten.json", k);
+    }
+    const fehlerListe = hosting.jsonLesen("fehler.json", []);
+    for (const e of [...plan.beitraege, ...plan.stories]) if (e.fehler && !fehlerListe.includes(e.fehler)) fehlerListe.push(e.fehler);
+    hosting.jsonSchreiben("fehler.json", fehlerListe.slice(-50));
+
+    const geloescht = hosting.aufraeumen();
+    if (geloescht) hosting.commit(`Alte Bilder entfernt (${geloescht} Tage)`);
+    planSpeichern(hosting, plan);
+    hosting.commit(nachricht);
+    await hosting.push();
+  };
+
   if (nurPlanen) {
     for (const b of plan.beitraege) log(`  ${b.zeit} Beitrag ${b.slot} ${b.format} ${b.themaTitel || ""} [${b.status}]`);
     for (const s of plan.stories) log(`  ${s.zeit} Story ${s.slot} ${s.art} ${s.beitragSlot ? "→ " + s.beitragSlot : themaFuer(s.themaId)?.titel || ""} [${s.status}]`);
@@ -816,25 +858,7 @@ async function main() {
     catch (e) { fehler++; console.error(`  ✗ Auffüllen: ${e.message}`); }
   }
 
-  /* Kosten der Woche und Fehler für den Bericht festhalten. */
-  const kosten = kostenAbschluss();
-  if (kosten.aufrufe) {
-    const k = hosting.jsonLesen("kosten.json", { wochen: {} });
-    const kw = wochenKennung(datum);
-    const w = k.wochen[kw] || { usd: 0, aufrufe: 0, cacheSumme: 0 };
-    w.usd += kosten.usd; w.aufrufe += kosten.aufrufe; w.cacheSumme += kosten.cacheAnteil * kosten.aufrufe; w.cacheAnteil = w.cacheSumme / w.aufrufe;
-    k.wochen[kw] = w;
-    hosting.jsonSchreiben("kosten.json", k);
-  }
-  const fehlerListe = hosting.jsonLesen("fehler.json", []);
-  for (const e of [...plan.beitraege, ...plan.stories]) if (e.fehler && !fehlerListe.includes(e.fehler)) fehlerListe.push(e.fehler);
-  hosting.jsonSchreiben("fehler.json", fehlerListe.slice(-50));
-
-  const geloescht = hosting.aufraeumen();
-  if (geloescht) hosting.commit(`Alte Bilder entfernt (${geloescht} Tage)`);
-  planSpeichern(hosting, plan);
-  hosting.commit(`Zustand ${datum}`);
-  await hosting.push();
+  await zustandSichern(`Zustand ${datum}`);
   if (trocken && ig.protokoll.length) fs.writeFileSync(path.join(AUSGABE, "trockenlauf.json"), JSON.stringify(ig.protokoll, null, 2));
   log(`Fertig · ${plan.beitraege.filter((b) => b.status === "veroeffentlicht").length}/${plan.beitraege.length} Beiträge, ${plan.stories.filter((s) => s.status === "veroeffentlicht").length}/${plan.stories.length} Stories · Fehler: ${fehler}`);
   if (fehler) process.exitCode = 1;
@@ -942,4 +966,11 @@ main()
     if (/access blocked|code 200\b/i.test(e.message || "")) console.error("\nMeta hat den API-Zugriff der App gesperrt („API access blocked“). Das lässt sich nur im Meta-App-Dashboard klären (Benachrichtigungen/„Alerts“, App-Review → Einschränkungen, ggf. Einspruch) bzw. in der Instagram-App unter Kontostatus. Der Bot versucht es stündlich weiter und läuft von selbst wieder an, sobald die Sperre aufgehoben ist.");
     process.exitCode = 1;
   })
-  .finally(() => browserBeenden());
+  /* Letzte Instanz: Auch ein abgebrochener oder fruehzeitig zurueckgekehrter
+     Lauf schreibt fest, was er bezahlt hat. Schlaegt das Sichern selbst fehl,
+     darf es den urspruenglichen Fehler nicht verdecken. */
+  .finally(async () => {
+    try { await zustandSichern(); }
+    catch (e) { console.error(`  ! Zustand nicht gesichert: ${e.message}`); process.exitCode = 1; }
+    browserBeenden();
+  });

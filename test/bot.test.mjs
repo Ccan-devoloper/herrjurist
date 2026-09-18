@@ -3154,3 +3154,36 @@ test("Ein Beitrag passt mit Schreiben und zwei Prüfungen unter die Obergrenze",
   erfassen("claude-sonnet-5", { input_tokens: 1500, output_tokens: 6000 }, "autor");
   assert.equal(budgetFrei("Faktencheck"), false, "die Neufassungs-Schleife wird gestoppt");
 });
+
+test("Kein Lauf endet, ohne zu sichern, was er bezahlt hat", async () => {
+  /* 18.09.: Die Zeile „Nichts fällig" stand vor dem Block, der den Zustand
+     festschreibt, und kehrte mit return zurück. Zwei Läufe schrieben denselben
+     Beitrag für zusammen 0,166 $ und verloren beides - den bezahlten Entwurf
+     und den Kosteneintrag. Der Tagesdeckel rechnete stundenlang mit einem zu
+     niedrigen Stand.
+
+     Geprüft wird deterministisch an der Quelle, weil ein vollständiger
+     Tageslauf im Test nicht ohne Netz, Bilder und Instagram läuft. */
+  const quelle = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+
+  assert.match(quelle, /let zustandGesichert = false;/,
+    "die Sicherung braucht eine Sperre gegen doppeltes Zählen");
+  assert.match(quelle, /zustandSichern = async \(nachricht = `Zustand \$\{datum\}`\) => \{\s*\n\s*if \(zustandGesichert\) return;/,
+    "die Sicherung muss beim zweiten Aufruf nichts mehr tun");
+
+  /* Die Wochenkosten dürfen nur an EINER Stelle aufaddiert werden. */
+  const wochenAddition = (quelle.match(/w\.usd \+= kosten\.usd/g) || []).length;
+  assert.equal(wochenAddition, 1, "die Wochenkosten werden an genau einer Stelle fortgeschrieben");
+
+  /* Und der Prozess sichert am Ende in jedem Fall - auch nach einem Fehler. */
+  const schluss = quelle.slice(quelle.indexOf("main()"));
+  assert.match(schluss, /\.finally\(async \(\) => \{[\s\S]*await zustandSichern\(\)/,
+    "am Prozessende muss der Zustand gesichert werden, auch wenn der Lauf abgebrochen ist");
+  assert.match(schluss, /catch \(e\) \{ console\.error\(`  ! Zustand nicht gesichert/,
+    "ein Fehler beim Sichern darf den ursprünglichen Fehler nicht verdecken");
+
+  /* Jeder Rückgabepfad in main() liegt hinter dieser Sicherung: Der Lauf endet
+     entweder über das Prozessende (finally) oder über den Aufruf am Schluss. */
+  assert.match(quelle, /await zustandSichern\(`Zustand \$\{datum\}`\);/,
+    "der reguläre Abschluss ruft die Sicherung auf");
+});
