@@ -14,7 +14,7 @@ import { CONFIG } from "./config.mjs";
 import { FAECHER, KLAUSUREN } from "./inhalte.mjs";
 import { belegstelle } from "./wissen.mjs";
 import { ICONS } from "./stile.mjs";
-import { folieLeer, pruefeBeitrag, korpus, normenOhneGesetz, quizBefunde } from "./pruefung.mjs";
+import { folieLeer, pruefeBeitrag, korpus, normenOhneGesetz, quizBefunde, fachpruefungAbschliessen } from "./pruefung.mjs";
 import { createHash } from "node:crypto";
 import { datumLesbar, tageBis, heuteIso } from "./zeit.mjs";
 import { erfassen, budgetPruefen, budgetFrei, BudgetFehler } from "./kosten.mjs";
@@ -883,16 +883,23 @@ export async function storiesPruefen(liste) {
       hinweis: "Jede Kachel steht für sich - mit einer Ausnahme: Was unter [QuizPair] steht, ist EIN Gegenstand. Frage und Antwort gehören dort zusammen, und du beanstandest ausdrücklich, wenn die als richtig markierte Option fachlich nicht die richtige ist oder wenn Frage und Antwort einander widersprechen. Nenne zu jedem Befund den Slot in eckigen Klammern, genau so, wie er im Kopf der Kachel steht (zum Beispiel [s5]).",
     });
     korrekturenAnwenden({ stories: liste }, fakten.korrekturen);
+    /* Das Ergebnis dieser Pruefung wird erst gesammelt und dann als Ganzes
+       gesetzt: Eine fachliche Vollpruefung ersetzt die fachlichen Befunde der
+       geprueften Fassung, sie haengt sie nicht an. Findet sie nichts, ist der
+       alte fachliche Befund erledigt - sonst haette eine einmal beanstandete
+       Kachel keinen Weg zurueck, auch wenn der Text laengst korrigiert ist.
+       Befunde anderer Herkunft (Form, Quiz) bleiben unberuehrt. */
+    const neueBefunde = liste.map(() => []);
     for (const f of fakten.fehler || []) {
       const treffer = String(f).match(/\[?\b(s\d+)\b\]?/);
       /* Ohne erkennbaren Slot lässt sich der Befund keiner Kachel zuordnen -
          dann werden lieber alle neu geschrieben als eine falsche zu posten. */
-      const ziele = treffer ? liste.filter((o) => o.slot === treffer[1]) : liste;
-      /* Fachliche Befunde in ihr eigenes Feld: Ein spaeterer Formcheck darf
-         sie nicht schliessen (Safety 0c). */
-      for (const o of ziele) (o.beanstandetFachlich ||= []).push(String(f));
+      liste.forEach((o, i) => { if (!treffer || o.slot === treffer[1]) neueBefunde[i].push(String(f)); });
     }
-    for (const o of liste) delete o.faktencheckOffen;
+    /* Fachliche Befunde in ihr eigenes Feld, mit Stempel der geprueften
+       Fassung: Ein spaeterer Formcheck darf sie nicht schliessen (Safety 0c),
+       eine spaetere Vollpruefung derselben Fassung schon. */
+    liste.forEach((o, i) => fachpruefungAbschliessen(o, neueBefunde[i]));
   } catch (e) {
     /* Nicht nur beim Budget: Auch ein technischer Ausfall der Prüfung
        (API-Störung, unlesbares Ergebnis) darf die bezahlten Texte nicht

@@ -3167,39 +3167,6 @@ test("Ein Beitrag passt mit Schreiben und zwei Prüfungen unter die Obergrenze",
   assert.equal(budgetFrei("Faktencheck"), false, "die Neufassungs-Schleife wird gestoppt");
 });
 
-test("Kein Lauf endet, ohne zu sichern, was er bezahlt hat", async () => {
-  /* 18.09.: Die Zeile „Nichts fällig" stand vor dem Block, der den Zustand
-     festschreibt, und kehrte mit return zurück. Zwei Läufe schrieben denselben
-     Beitrag für zusammen 0,166 $ und verloren beides - den bezahlten Entwurf
-     und den Kosteneintrag. Der Tagesdeckel rechnete stundenlang mit einem zu
-     niedrigen Stand.
-
-     Geprüft wird deterministisch an der Quelle, weil ein vollständiger
-     Tageslauf im Test nicht ohne Netz, Bilder und Instagram läuft. */
-  const quelle = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
-
-  assert.match(quelle, /let zustandGesichert = false;/,
-    "die Sicherung braucht eine Sperre gegen doppeltes Zählen");
-  assert.match(quelle, /zustandSichern = async \(nachricht = `Zustand \$\{datum\}`\) => \{\s*\n\s*if \(zustandGesichert\) return;/,
-    "die Sicherung muss beim zweiten Aufruf nichts mehr tun");
-
-  /* Die Wochenkosten dürfen nur an EINER Stelle aufaddiert werden. */
-  const wochenAddition = (quelle.match(/w\.usd \+= kosten\.usd/g) || []).length;
-  assert.equal(wochenAddition, 1, "die Wochenkosten werden an genau einer Stelle fortgeschrieben");
-
-  /* Und der Prozess sichert am Ende in jedem Fall - auch nach einem Fehler. */
-  const schluss = quelle.slice(quelle.indexOf("main()"));
-  assert.match(schluss, /\.finally\(async \(\) => \{[\s\S]*await zustandSichern\(\)/,
-    "am Prozessende muss der Zustand gesichert werden, auch wenn der Lauf abgebrochen ist");
-  assert.match(schluss, /catch \(e\) \{ console\.error\(`  ! Zustand nicht gesichert/,
-    "ein Fehler beim Sichern darf den ursprünglichen Fehler nicht verdecken");
-
-  /* Jeder Rückgabepfad in main() liegt hinter dieser Sicherung: Der Lauf endet
-     entweder über das Prozessende (finally) oder über den Aufruf am Schluss. */
-  assert.match(quelle, /await zustandSichern\(`Zustand \$\{datum\}`\);/,
-    "der reguläre Abschluss ruft die Sicherung auf");
-});
-
 test("Safety 0a: Quiz-Invarianten halten Frage und Antwort zusammen", async () => {
   const { quizBefunde, QUIZ_OPTIONEN } = await import("../src/pruefung.mjs");
   const frage = (o, extra = {}) => ({ slot: "s3", art: "frage", pairId: "t1", optionen: o, richtig: null, ...extra });
@@ -3244,24 +3211,24 @@ test("Safety 0a: Quiz-Invarianten halten Frage und Antwort zusammen", async () =
 
   /* Andere Story-Arten bleiben unberührt. */
   assert.deepEqual(quizBefunde([{ slot: "s7", art: "merksatz", text: "x" }]), []);
-});
 
-test("Safety 0a: keine Antwort vor ihrer Frage", async () => {
-  const { quizReihenfolge } = await import("../src/pruefung.mjs");
-  const antwort = { slot: "s5", art: "antwort", themaId: "t1" };
-  const frage = (status, extra = {}) => ({ slot: "s4", art: "frage", themaId: "t1", status, ...extra });
-
-  assert.equal(quizReihenfolge(antwort, [frage("veroeffentlicht"), antwort]).status, "frei");
-  assert.equal(quizReihenfolge(antwort, [frage("geplant"), antwort]).status, "warten",
-    "solange die Frage aussteht, wartet die Antwort");
-  assert.equal(quizReihenfolge(antwort, [frage("uebersprungen"), antwort]).status, "verfallen",
-    "eine übersprungene Frage nimmt ihre Antwort mit");
-  assert.equal(quizReihenfolge(antwort, [frage("geplant", { fehler: "2026-09-18 kaputt" }), antwort]).status, "verfallen",
-    "eine endgültig gescheiterte Frage nimmt ihre Antwort mit");
-  assert.equal(quizReihenfolge(antwort, [antwort]).status, "frei",
-    "ohne zugehörige Frage im Plan gilt die alte Regel");
-  /* Die Uhrzeit entscheidet nicht - der Zustand tut es. */
-  assert.equal(quizReihenfolge(antwort, [{ ...frage("geplant"), zeit: "06:00" }, antwort]).status, "warten");
+  /* Dieselbe Optionsfolge vom 16.09. noch einmal - diesmal nicht gegen die
+     Invariante, sondern gegen das Gate, das vor dem Veröffentlichen läuft.
+     Der Fehler von damals muss auf BEIDEN Wegen auffallen, und zwar auch von
+     der Frage aus: Sie war die Kachel, die zuerst hinausging. */
+  const { quizPaarFreigabe } = await import("../src/pruefung.mjs");
+  const planSep16 = [
+    { slot: "s3", art: "frage", themaId: "t1", zeit: "09:00", status: "geplant" },
+    { slot: "s4", art: "antwort", themaId: "t1", zeit: "12:00", status: "geplant" },
+  ];
+  const textSep16 = {
+    s3: { ...frage(["Wirtschaftsgut", "Rückstellung", "Merkposten"]), titel: "Was liegt vor?", text: "Welche Einordnung trifft zu?", befundeTypisiert: true },
+    s4: { ...antwort(["Wirtschaftsgut", "Merkposten", "Rückstellung"], 1), titel: "Die Lösung", text: "Es handelt sich um eine Rückstellung.", befundeTypisiert: true },
+  };
+  const gate = quizPaarFreigabe(planSep16[0], planSep16, (slot) => textSep16[slot] || null);
+  assert.notEqual(gate.status, "frei", "die Frage vom 16.09. hätte nicht hinausgehen dürfen");
+  assert.equal(gate.status, "verfallen");
+  assert.match(gate.grund, /Platz 2/);
 });
 
 test("Safety 0c: ein Formcheck löscht keinen fachlichen Befund", async () => {
@@ -3337,26 +3304,288 @@ test("Safety 0b: der Prüfer sieht, welche Option als richtig markiert ist", asy
   assert.match(autor, /Was unter \[QuizPair\] steht, ist EIN Gegenstand/);
 });
 
-test("Safety 0: ein Quizslot wird nie allein neu geschrieben", async () => {
-  /* 16.09.: Beanstandet war nur eine der beiden Kacheln, neu geschrieben wurde
-     auch nur sie - und passte danach nicht mehr zur anderen. Der zweite
-     Versuch muss den Partner mitnehmen, solange er noch nicht draußen ist,
-     und ihn als unveränderlich behandeln, wenn er schon draußen ist. */
-  const quelle = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+/* ---------------------------------------------------------------------------
+   Safety 0 – Verhaltenstests statt Quelltextproben.
 
-  assert.match(quelle, /const partnerVon = \(slot\) => \{/, "der Neuversuch kennt den Partner eines Quizslots nicht");
-  assert.match(quelle, /if \(partner\.status !== "veroeffentlicht"\) \{ slots\.add\(partner\.slot\); continue; \}/,
-    "ein noch nicht veröffentlichter Partner muss mit neu geschrieben werden");
-  assert.match(quelle, /ist bereits veröffentlicht und darf nicht verändert werden/,
-    "ein veröffentlichter Partner muss als unveränderlich vorgegeben werden");
-  assert.match(quelle, /Übernimm exakt diese Optionen in exakt dieser Reihenfolge/,
-    "die Optionsfolge des veröffentlichten Partners muss vorgegeben werden");
-  assert.match(quelle, /const zweite = await storiesSchreiben\(auftrag\(mitPartner\), datum, hinweis\);/,
-    "der zweite Versuch schreibt weiterhin nur die beanstandeten Slots");
+   Die erste Fassung dieser Tests las den Quelltext und suchte Zeilen darin.
+   Das faengt eine geloeschte Zeile, aber kein falsches Verhalten: Ein Gate,
+   das die richtigen Zeilen enthaelt und trotzdem freigibt, waere durchgekommen.
+   Die folgenden Tests rufen die Funktionen auf und pruefen, was sie tun.
+   --------------------------------------------------------------------------- */
 
-  /* Und was dabei herauskommt, läuft durch dieselbe Paarprüfung: Die
-     Invarianten greifen in storiesSchreiben für die ganze Lieferung. */
-  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
-  assert.match(autor, /for \(const f of quizBefunde\(liste\)\)/,
-    "die Quiz-Invarianten müssen über die ganze Lieferung laufen");
+/* Ein sauberes Quiz-Paar als Ausgangslage. Aus dem realen Vorfall vom
+   16.09.2026: dieselbe Optionsfolge in beiden Kacheln. */
+const QUIZ_OPTIONEN_FIXTURE = ["Wirtschaftsgut", "Rückstellung", "Merkposten"];
+const quizFrage = (extra = {}) => ({
+  slot: "s3", art: "frage", pairId: "t1", titel: "Was liegt hier vor?",
+  text: "Der Unternehmer aktiviert einen Posten. Welche Einordnung trifft zu?",
+  optionen: [...QUIZ_OPTIONEN_FIXTURE], richtig: null, befundeTypisiert: true, ...extra,
+});
+const quizAntwort = (extra = {}) => ({
+  slot: "s4", art: "antwort", pairId: "t1", titel: "Die Lösung",
+  text: "Es handelt sich um ein Wirtschaftsgut.",
+  optionen: [...QUIZ_OPTIONEN_FIXTURE], richtig: 0, befundeTypisiert: true, ...extra,
+});
+/* Plan-Eintraege tragen Status und Paar-Schluessel, nicht den Text. */
+const planPaar = (fStatus = "geplant", aStatus = "geplant", extra = {}) => ([
+  { slot: "s3", art: "frage", themaId: "t1", zeit: "09:00", status: fStatus, ...(extra.frage || {}) },
+  { slot: "s4", art: "antwort", themaId: "t1", zeit: "12:00", status: aStatus, ...(extra.antwort || {}) },
+]);
+
+test("Safety 0a: das Gate laesst keine halbe Quiz-Kachel durch", async () => {
+  const { quizPaarFreigabe } = await import("../src/pruefung.mjs");
+  const leser = (dateien) => (slot) => dateien[slot] || null;
+
+  /* 1. Frage sauber, Antwort fehlt: Die Frage darf nicht erscheinen. Eine
+        Frage ohne Antwort bleibt unbeantwortet - die Kachel wartet. */
+  const ohneAntwort = quizPaarFreigabe(planPaar()[0], planPaar(), leser({ s3: quizFrage() }));
+  assert.equal(ohneAntwort.status, "warten", "ohne Antworttext darf die Frage nicht raus");
+  assert.notEqual(ohneAntwort.status, "frei");
+
+  /* 2. Antwort noch im Faktencheck: Die Frage wartet, sie verfaellt nicht. */
+  const offen = quizPaarFreigabe(planPaar()[0], planPaar(), leser({ s3: quizFrage(), s4: quizAntwort({ faktencheckOffen: true }) }));
+  assert.equal(offen.status, "warten", "ein offener Faktencheck der Antwort haelt die Frage zurueck");
+
+  /* 3. Antwort fachlich beanstandet: Das ist kein Warten, das ist ein Nein.
+        Genau hier lief der Faktencheck der Gegenseite frueher ins Leere. */
+  const fachlich = quizPaarFreigabe(planPaar()[0], planPaar(), leser({ s3: quizFrage(), s4: quizAntwort({ beanstandetFachlich: ["[s4] § 5 EStG trägt das nicht."] }) }));
+  assert.equal(fachlich.status, "verfallen", "ein fachlicher Befund an der Antwort blockiert die Frage");
+  assert.match(fachlich.grund, /fachlich beanstandet/);
+
+  /* 4. Beide Seiten fuer sich sauber, aber die Optionen driften auseinander.
+        Der Vorfall vom 16.09.2026, diesmal am Frage-Gate: A/B/C gegen A/C/B. */
+  const driftend = quizPaarFreigabe(planPaar()[0], planPaar(), leser({
+    s3: quizFrage(),
+    s4: quizAntwort({ optionen: ["Wirtschaftsgut", "Merkposten", "Rückstellung"], richtig: 1 }),
+  }));
+  assert.equal(driftend.status, "verfallen", "verschobene Optionen duerfen nicht veroeffentlicht werden");
+  assert.match(driftend.grund, /Platz 2/, "der Grund benennt die Stelle");
+
+  /* 5. Eine Antwort ohne Frage im Plan ist ein widerspruechlicher Zustand -
+        niemals frei. Frueher galt hier die alte Regel und liess sie durch. */
+  const verwaist = quizPaarFreigabe(planPaar()[1], [planPaar()[1]], leser({ s4: quizAntwort() }));
+  assert.equal(verwaist.status, "inkonsistent");
+  assert.notEqual(verwaist.status, "frei");
+
+  /* 6. Die Frage gilt laut Plan als veroeffentlicht, ihr gespeicherter Text
+        fehlt: Dann ist das Paar nicht mehr pruefbar, die Antwort bleibt drin. */
+  const fehlendeQuelle = quizPaarFreigabe(planPaar("veroeffentlicht")[1], planPaar("veroeffentlicht"), leser({ s4: quizAntwort() }));
+  assert.equal(fehlendeQuelle.status, "inkonsistent");
+  assert.match(fehlendeQuelle.grund, /nicht pruefbar/);
+
+  /* Und der Normalfall bleibt normal: Frage erst, dann Antwort. */
+  const alles = { s3: quizFrage(), s4: quizAntwort() };
+  assert.equal(quizPaarFreigabe(planPaar()[0], planPaar(), leser(alles)).status, "frei", "die saubere Frage darf raus");
+  assert.equal(quizPaarFreigabe(planPaar()[1], planPaar(), leser(alles)).status, "warten",
+    "die Antwort wartet, solange die Frage nicht draussen ist");
+  assert.equal(quizPaarFreigabe(planPaar("veroeffentlicht")[1], planPaar("veroeffentlicht"), leser(alles)).status, "frei",
+    "nach der veroeffentlichten Frage darf die Antwort folgen");
+
+  /* Eine uebersprungene Frage nimmt ihre Antwort mit. */
+  assert.equal(quizPaarFreigabe(planPaar("uebersprungen")[1], planPaar("uebersprungen"), leser(alles)).status, "verfallen");
+});
+
+test("Safety 0d: der zweite Versuch nimmt den Partner mit", async () => {
+  const { quizNachschlag } = await import("../src/pruefung.mjs");
+
+  /* 7. Partial State vom 16.09.: Die Frage wird beanstandet, die Antwort liegt
+        gespeichert und unveroeffentlicht daneben. Wer jetzt nur die Frage neu
+        schreibt, erzeugt genau die Drift. Beide muessen mit. */
+  const plan = planPaar();
+  const strittig = [quizFrage({ beanstandet: ["Story „Was liegt hier vor?“: Text zu lang"] })];
+  const a = quizNachschlag(strittig, plan, (slot) => (slot === "s4" ? quizAntwort({ beanstandetFachlich: ["[s4] falsch"] }) : null));
+  assert.deepEqual(a.slots.map((s) => s.slot).sort(), ["s3", "s4"],
+    "eine beanstandete Antwort wird gemeinsam mit der Frage neu geschrieben");
+  assert.equal(a.festeOptionen.length, 0, "eine beanstandete Gegenseite gibt keine Optionen vor");
+  assert.ok(a.paarSlots.has("s3") && a.paarSlots.has("s4"), "beide Slots gelten als Paar-Slots");
+
+  /* Dasselbe, wenn der Partnertext ueberhaupt fehlt. */
+  const b = quizNachschlag(strittig, plan, () => null);
+  assert.deepEqual(b.slots.map((s) => s.slot).sort(), ["s3", "s4"], "ein fehlender Partnertext wird mitgeschrieben");
+
+  /* 8. Ist der Partner schon draussen, ist er unveraenderlich: Er wird NICHT
+        neu geschrieben, seine Optionsfolge wird woertlich vorgegeben. */
+  const veroeffentlicht = planPaar("veroeffentlicht");
+  const c = quizNachschlag(
+    [quizAntwort({ beanstandet: ["Story „Die Lösung“: Text zu lang"] })],
+    veroeffentlicht,
+    (slot) => (slot === "s3" ? quizFrage() : null),
+  );
+  assert.deepEqual(c.slots.map((s) => s.slot), ["s4"], "die veroeffentlichte Frage wird nicht angefasst");
+  assert.equal(c.festeOptionen.length, 1);
+  assert.match(c.festeOptionen[0], /bereits veröffentlicht und darf nicht verändert werden/);
+  assert.match(c.festeOptionen[0], /Übernimm exakt diese Optionen in exakt dieser Reihenfolge/);
+  for (const o of QUIZ_OPTIONEN_FIXTURE) assert.ok(c.festeOptionen[0].includes(o), `Option „${o}“ fehlt in der Vorgabe`);
+
+  /* Geschrieben, sauber, aber noch nicht draussen: ebenfalls unveraenderlich -
+     dieser Fall fehlte in der ersten Fassung ganz, weil nur die Slots ohne
+     gespeicherte Datei betrachtet wurden. */
+  const d = quizNachschlag(
+    [quizAntwort({ beanstandet: ["Story „Die Lösung“: Text zu lang"] })],
+    plan,
+    (slot) => (slot === "s3" ? quizFrage() : null),
+  );
+  assert.deepEqual(d.slots.map((s) => s.slot), ["s4"], "eine saubere, gespeicherte Frage wird nicht neu geschrieben");
+  assert.match(d.festeOptionen[0], /bereits geschrieben und wird nicht angefasst/);
+
+  /* Veroeffentlicht, aber ohne brauchbaren Text: kein stiller Rewrite, sondern
+     eine Warnung - das Gate sperrt das Paar ohnehin. */
+  const e = quizNachschlag([quizAntwort({ beanstandet: ["zu lang"] })], veroeffentlicht, () => null);
+  assert.deepEqual(e.slots.map((s) => s.slot), ["s4"]);
+  assert.equal(e.festeOptionen.length, 0);
+  assert.match(e.warnungen[0], /liefert aber keine Optionen/);
+
+  /* Nicht-Quiz-Slots bleiben, wie sie waren: keine Partnersuche, kein Paar. */
+  const merksatz = { slot: "s7", art: "merksatz", themaId: "t9", status: "geplant" };
+  const f = quizNachschlag([{ slot: "s7", beanstandet: ["zu lang"] }], [merksatz], () => null);
+  assert.deepEqual(f.slots.map((s) => s.slot), ["s7"]);
+  assert.equal(f.paarSlots.size, 0);
+});
+
+test("Safety 0: eine neue fachliche Pruefung ersetzt den alten fachlichen Befund", async () => {
+  const { fachpruefungAbschliessen, fachStempel, storyFreigabe } = await import("../src/pruefung.mjs");
+
+  /* 11. Der Text wurde beanstandet, korrigiert und neu geprueft - diesmal ohne
+         Befund. Frueher blieb der alte Befund haengen: Die Kachel war nicht
+         mehr zu retten, obwohl die Sache geklaert war. */
+  const story = quizAntwort({ beanstandetFachlich: ["[s4] § 5 EStG trägt das nicht."] });
+  assert.equal(storyFreigabe(story).frei, false, "Ausgangslage: fachlich beanstandet");
+
+  fachpruefungAbschliessen(story, []);
+  assert.equal(story.beanstandetFachlich, undefined, "eine saubere Vollpruefung schliesst den alten Befund");
+  assert.equal(storyFreigabe(story).frei, true, "danach darf die Kachel erscheinen");
+  assert.equal(story.fachStand, fachStempel(story), "die geprüfte Fassung ist gestempelt");
+  assert.equal(story.befundeTypisiert, true);
+
+  /* Eine neue Pruefung mit Befund ersetzt ebenfalls - sie haengt nicht an. */
+  fachpruefungAbschliessen(story, ["[s4] neuer Befund"]);
+  assert.deepEqual(story.beanstandetFachlich, ["[s4] neuer Befund"]);
+  fachpruefungAbschliessen(story, ["[s4] wieder ein anderer"]);
+  assert.deepEqual(story.beanstandetFachlich, ["[s4] wieder ein anderer"], "zwei Laeufe ergeben keine zwei Befundsaetze");
+
+  /* Befunde anderer Herkunft bleiben unberuehrt: Der Formcheck gehoert nicht
+     dem Faktencheck (Safety 0c, andere Richtung). */
+  const mitForm = quizAntwort({ beanstandet: ["Story „Die Lösung“: Text zu lang (999 > 200)"], beanstandetFachlich: ["[s4] falsch"] });
+  fachpruefungAbschliessen(mitForm, []);
+  assert.deepEqual(mitForm.beanstandet, ["Story „Die Lösung“: Text zu lang (999 > 200)"],
+    "der fachliche Abschluss fasst den Formbefund nicht an");
+
+  /* Und ein offener Faktencheck gilt nach der Pruefung als erledigt. */
+  const warAusgefallen = quizAntwort({ faktencheckOffen: true });
+  fachpruefungAbschliessen(warAusgefallen, []);
+  assert.equal(warAusgefallen.faktencheckOffen, undefined);
+
+  /* Der Stempel unterscheidet Fassungen: Wird der Text geaendert, passt er
+     nicht mehr - daran erkennt ein spaeterer Lauf, dass neu geprueft werden
+     muss. */
+  const vorher = fachStempel(story);
+  assert.notEqual(fachStempel({ ...story, text: "Ein anderer Text." }), vorher);
+  assert.notEqual(fachStempel({ ...story, optionen: ["Wirtschaftsgut", "Merkposten", "Rückstellung"] }), vorher);
+  assert.equal(fachStempel({ ...story }), vorher, "gleiche Fassung, gleicher Stempel");
+});
+
+test("Kein Lauf endet, ohne zu sichern, was er bezahlt hat", async () => {
+  /* 18.09.: Die Zeile „Nichts fällig" stand vor dem Block, der den Zustand
+     festschreibt, und kehrte mit return zurück. Zwei Läufe schrieben denselben
+     Beitrag für zusammen 0,166 $ und verloren beides - den bezahlten Entwurf
+     und den Kosteneintrag.
+
+     Die Reparatur war zunächst ein einziger Schalter, der zu früh gesetzt
+     wurde: Schlug der Push fehl, galt der Zustand trotzdem als gesichert.
+     Jetzt sind es drei getrennte Zustände, und die werden hier vorgeführt. */
+  const { zustandsSicherung } = await import("../src/zustand.mjs");
+
+  const bauen = (opt = {}) => {
+    const dateien = { "kosten.json": { wochen: {} } };
+    const protokoll = [];
+    const hosting = {
+      jsonLesen: (name, standard) => (name in dateien ? JSON.parse(JSON.stringify(dateien[name])) : standard),
+      jsonSchreiben: (name, wert) => { dateien[name] = JSON.parse(JSON.stringify(wert)); protokoll.push(`schreiben:${name}`); },
+      aufraeumen: () => 0,
+      commit: (n) => { protokoll.push(`commit:${n}`); if (opt.commitFehler?.()) throw new Error("git commit verweigert"); return true; },
+      push: async () => { protokoll.push("push"); if (opt.pushFehler?.()) throw new Error("push abgelehnt"); return true; },
+    };
+    const plan = { datum: "2026-09-18", beitraege: [{ slot: "b1", fehler: "2026-09-18 kaputt" }], stories: [] };
+    const sichern = zustandsSicherung({
+      hosting, plan, datum: "2026-09-18",
+      kostenAbschluss: () => ({ usd: 0.12, aufrufe: 4, cacheAnteil: 0.5 }),
+      wochenKennung: () => "2026-W38",
+      planSpeichern: (h, p) => h.jsonSchreiben(`plaene/${p.datum}.json`, p),
+    });
+    return { sichern, dateien, protokoll };
+  };
+
+  /* 9. Der erste Push scheitert, der zweite gelingt: Der Zustand wird durable,
+        und die Wochenkosten stehen trotzdem nur einmal in der Datei. */
+  let pushKaputt = true;
+  const a = bauen({ pushFehler: () => pushKaputt });
+  await assert.rejects(() => a.sichern(), /push abgelehnt/, "ein gescheiterter Push muss sichtbar sein");
+  assert.equal(a.sichern.stand().vorbereitet, true, "der Commit steht");
+  assert.equal(a.sichern.stand().durable, false, "ohne Push ist nichts durable");
+  pushKaputt = false;
+  await a.sichern();
+  assert.equal(a.sichern.stand().durable, true, "der zweite Versuch macht den Zustand durable");
+  assert.equal(a.dateien["kosten.json"].wochen["2026-W38"].usd, 0.12, "die Wochenkosten wurden genau einmal addiert");
+  assert.equal(a.dateien["kosten.json"].wochen["2026-W38"].aufrufe, 4);
+  assert.equal(a.protokoll.filter((p) => p === "push").length, 2, "der Push wurde wiederholt");
+  assert.ok(a.dateien["fehler.json"].includes("2026-09-18 kaputt"), "der Fehler des Tages steht im Bericht");
+
+  /* Ein dritter Aufruf (das `finally` am Prozessende) tut nichts mehr. */
+  await a.sichern();
+  assert.equal(a.protokoll.filter((p) => p === "push").length, 2, "was durable ist, wird nicht noch einmal gepusht");
+  assert.equal(a.dateien["kosten.json"].wochen["2026-W38"].usd, 0.12, "und nichts wird nachträglich addiert");
+
+  /* 10. Ein echter Commitfehler darf nicht als Erfolg durchgehen: kein Push,
+         kein „vorbereitet", und der Fehler faellt sichtbar durch. */
+  let commitKaputt = true;
+  const b = bauen({ commitFehler: () => commitKaputt });
+  await assert.rejects(() => b.sichern(), /git commit verweigert/);
+  assert.equal(b.sichern.stand().vorbereitet, false, "ein gescheiterter Commit ist keine Vorbereitung");
+  assert.equal(b.sichern.stand().durable, false);
+  assert.equal(b.protokoll.filter((p) => p === "push").length, 0, "ohne Commit wird nichts gepusht");
+
+  /* Und nach der Reparatur: Der Zweitversuch zaehlt die Kosten nicht erneut. */
+  commitKaputt = false;
+  await b.sichern();
+  assert.equal(b.sichern.stand().durable, true);
+  assert.equal(b.dateien["kosten.json"].wochen["2026-W38"].usd, 0.12,
+    "auch nach einem gescheiterten Commit stehen die Wochenkosten nur einmal");
+
+  /* Die Wochenkosten dürfen nur an EINER Stelle aufaddiert werden. */
+  const quelle = fs.readFileSync(new URL("../src/zustand.mjs", import.meta.url), "utf8");
+  assert.equal((quelle.match(/w\.usd \+= kosten\.usd/g) || []).length, 1,
+    "die Wochenkosten werden an genau einer Stelle fortgeschrieben");
+
+  /* Und der Prozess sichert am Ende in jedem Fall - auch nach einem Fehler. */
+  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  const schluss = lauf.slice(lauf.indexOf("main()"));
+  assert.match(schluss, /\.finally\(async \(\) => \{[\s\S]*await zustandSichern\(\)/,
+    "am Prozessende muss der Zustand gesichert werden, auch wenn der Lauf abgebrochen ist");
+  assert.match(schluss, /catch \(e\) \{ console\.error\(`  ! Zustand nicht gesichert/,
+    "ein Fehler beim Sichern darf den ursprünglichen Fehler nicht verdecken");
+  assert.match(lauf, /await zustandSichern\(`Zustand \$\{datum\}`\);/,
+    "der reguläre Abschluss ruft die Sicherung auf");
+});
+
+test("Ein Commit ohne Änderung ist kein Fehler – ein abgelehnter Commit schon", async () => {
+  /* Hosting.commit() verschluckte beides zu `false`. Wer damit Zustand
+     festschreibt, haelt einen abgelehnten Commit dann faelschlich fuer
+     erledigt. Hier laeuft echtes Git in einem Wegwerf-Verzeichnis. */
+  const { Hosting } = await import("../src/hosting.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "commit-"));
+  const git = (...args) => spawnSync("git", args, { cwd: dir, encoding: "utf8" });
+  git("init", "--quiet", "-b", "test");
+  const h = new Hosting({ verzeichnis: dir, pushen: false, basisUrl: "https://example.invalid" });
+
+  fs.writeFileSync(path.join(dir, "a.txt"), "eins\n");
+  assert.equal(h.commit("erste Fassung"), true, "eine Änderung wird committet");
+  assert.equal(h.commit("nichts passiert"), false, "ohne Änderung ist nichts zu tun - und das ist kein Fehler");
+
+  /* Ein echter Fehler: Ein pre-commit-Hook lehnt ab. */
+  fs.mkdirSync(path.join(dir, ".git", "hooks"), { recursive: true });
+  fs.writeFileSync(path.join(dir, ".git", "hooks", "pre-commit"), "#!/bin/sh\nexit 1\n", { mode: 0o755 });
+  fs.writeFileSync(path.join(dir, "a.txt"), "zwei\n");
+  assert.throws(() => h.commit("wird abgelehnt"), /./, "ein abgelehnter Commit muss sichtbar fehlschlagen");
+
+  fs.rmSync(dir, { recursive: true, force: true });
 });
