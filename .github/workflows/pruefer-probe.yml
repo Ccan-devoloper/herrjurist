@@ -1,0 +1,57 @@
+name: Prüfer · Vergleichsprobe
+
+# Stellt Prüfmodelle an denselben Text und misst Fund und Preis.
+#
+# Warum als eigener Lauf: Der Schlüssel liegt hier, nicht auf dem Rechner des
+# Betreibers, und der Tageslauf ist der falsche Ort für einen Versuch. Diese
+# Probe fasst weder Tagesplan noch Ledger an und veröffentlicht nichts.
+#
+# Der Text trägt einen bekannten Fehler: Bei § 1365 BGB muss der
+# VERTRAGSPARTNER wissen, dass es um das ganze Vermögen geht. Am 16.09. hat
+# der damalige Prüfer genau das durchgewunken.
+
+on:
+  workflow_dispatch:
+    inputs:
+      modelle:
+        description: "OpenAI-Modelle, durch Komma getrennt"
+        default: "gpt-5-mini,gpt-5"
+      claude:
+        description: "Zum Vergleich auch den bisherigen Prüfer (Claude) laufen lassen"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --omit=dev
+
+      - name: OpenAI-Modelle
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IG_FAKTENCHECK_ANBIETER: openai
+        run: |
+          IFS=',' read -ra MODELLE <<< "${{ inputs.modelle }}"
+          for m in "${MODELLE[@]}"; do
+            echo "::group::$m"
+            IG_FAKTENCHECK_OPENAI_MODELL="$m" node bin/pruefer-probe.mjs || echo "  !! $m gescheitert"
+            echo "::endgroup::"
+          done
+
+      - name: Bisheriger Prüfer (Claude)
+        if: ${{ inputs.claude }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IG_FAKTENCHECK_ANBIETER: claude
+        run: node bin/pruefer-probe.mjs

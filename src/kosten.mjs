@@ -5,6 +5,13 @@ const PREISE = {
   "claude-opus-4-8": { ein: 5, aus: 25, cacheLesen: 0.5, cacheSchreiben: 6.25 },
   "claude-haiku-4-5": { ein: 1, aus: 5, cacheLesen: 0.1, cacheSchreiben: 1.25 },
   "claude-haiku-4-5-20251001": { ein: 1, aus: 5, cacheLesen: 0.1, cacheSchreiben: 1.25 },
+  /* Der Prüfer läuft seit dem 18.09. bei OpenAI. Preise je Million Token aus
+     der Preisliste des Anbieters; ein Aufruf schreibt seine Token ins
+     Protokoll, damit die Rechnung nachprüfbar bleibt. Denk-Token zählen dort
+     als Ausgabe - sie sind in output_tokens enthalten. */
+  "gpt-5": { ein: 1.25, aus: 10, cacheLesen: 0.125, cacheSchreiben: 1.25 },
+  "gpt-5-mini": { ein: 0.25, aus: 2, cacheLesen: 0.025, cacheSchreiben: 0.25 },
+  "gpt-5-nano": { ein: 0.05, aus: 0.4, cacheLesen: 0.005, cacheSchreiben: 0.05 },
 };
 
 const posten = [];

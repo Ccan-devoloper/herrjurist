@@ -155,6 +155,81 @@ export function zahlenLastig(beitrag) {
   return BRUCH_ZU_NORM.test(text) || ZAHLWORT.test(text);
 }
 
+/* --- Prüfer bei OpenAI --------------------------------------------------
+   Ein Aufruf, ein Schema, dieselbe Befundliste wie bisher. Die Antwort wird
+   genauso ausgewertet wie die von Claude; für alles danach (Sortierung der
+   Befunde, Zweitmeinung, Berichtigung) ändert sich nichts.
+
+   Scheitert er - kein Schlüssel, HTTP-Fehler, Zeitlimit, unlesbare Antwort -,
+   gibt er null zurück und der bisherige Prüfer übernimmt. Ein Kanal, der
+   nichts veröffentlicht, weil ein Anbieter hustet, wäre der schlechtere
+   Tausch. */
+export async function openaiPruefen({ system, user, modell, aufwand, zweck, schema = SCHEMA, fetchFn = fetch }) {
+  const key = CONFIG.faktencheck.openai.key;
+  if (!key) { console.warn("  ! Prüfer OpenAI: kein OPENAI_API_KEY – Prüfung läuft über Claude."); return null; }
+  const steuerung = new AbortController();
+  const wecker = setTimeout(() => steuerung.abort(), CONFIG.faktencheck.openai.zeitlimitMs);
+  let antwort;
+  try {
+    antwort = await fetchFn("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: modell,
+        input: [
+          { role: "system", content: system },
+          { role: "user", content: user },
+        ],
+        reasoning: { effort: aufwand },
+        text: { format: { type: "json_schema", name: "faktencheck", strict: true, schema } },
+        max_output_tokens: 8000,
+      }),
+      signal: steuerung.signal,
+    });
+  } catch (e) {
+    console.warn(`  ! Prüfer OpenAI nicht erreichbar (${e.name === "AbortError" ? "Zeitlimit" : e.message}) – Prüfung läuft über Claude.`);
+    return null;
+  } finally { clearTimeout(wecker); }
+  if (!antwort.ok) {
+    const text = await antwort.text().catch(() => "");
+    console.warn(`  ! Prüfer OpenAI antwortet HTTP ${antwort.status}: ${text.slice(0, 200)} – Prüfung läuft über Claude.`);
+    return null;
+  }
+  const daten = await antwort.json().catch(() => null);
+  /* Bezahlt wird, sobald die Antwort da ist - auch wenn sie gleich verworfen
+     wird. Ein Posten, der nicht gebucht wird, fehlt dem Tagesdeckel.
+     input_tokens enthält bei OpenAI die zwischengespeicherten Token; sie
+     werden abgezogen, sonst zählte derselbe Token zweimal. */
+  const nutzung = daten?.usage || null;
+  if (nutzung) {
+    const gecacht = nutzung.input_tokens_details?.cached_tokens || 0;
+    erfassen(modell, {
+      input_tokens: Math.max(0, (nutzung.input_tokens || 0) - gecacht),
+      output_tokens: nutzung.output_tokens || 0,
+      cache_read_input_tokens: gecacht,
+    }, zweck);
+  }
+  if (daten?.status === "incomplete") {
+    console.warn(`  ! Prüfer OpenAI: Antwort unvollständig (${daten?.incomplete_details?.reason || "ohne Grund"}) – Prüfung läuft über Claude.`);
+    return null;
+  }
+  /* Die Antwort steckt im ersten Textblock der Nachricht; die Denkblöcke
+     davor tragen keinen Text. */
+  const bloecke = Array.isArray(daten?.output) ? daten.output : [];
+  const text = bloecke.flatMap((b) => (Array.isArray(b?.content) ? b.content : []))
+    .filter((c) => typeof c?.text === "string").map((c) => c.text).join("")
+    || (typeof daten?.output_text === "string" ? daten.output_text : "");
+  if (!text) { console.warn("  ! Prüfer OpenAI: Antwort ohne Text – Prüfung läuft über Claude."); return null; }
+  try {
+    const d = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+    if (!Array.isArray(d?.befunde)) throw new Error("Antwort ohne Befundliste");
+    return d;
+  } catch (e) {
+    console.warn(`  ! Prüfer OpenAI: ${e.message.slice(0, 80)} – Prüfung läuft über Claude.`);
+    return null;
+  }
+}
+
 export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "", streng = null } = {}) {
   if (!CONFIG.faktencheck.aktiv) return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] };
   budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck", "story-faktencheck": "Story-Faktencheck" }[zweck] || "Faktencheck");
@@ -228,7 +303,16 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
     return d;
   };
   let daten, ersterFehler = null;
-  for (const [nr, anfrage] of [[1, () => basis], [2, ohneSchema]]) {
+  /* Erst OpenAI, dann - nur wenn dort nichts Brauchbares herauskommt - der
+     bisherige Weg. Der Rückfall kostet im Ausfall einen zweiten Aufruf; das
+     ist der Preis dafür, dass kein Beitrag an einem fremden Anbieter hängt. */
+  if (CONFIG.faktencheck.anbieter === "openai") {
+    const oa = CONFIG.faktencheck.openai;
+    const oaModell = scharf ? oa.modellStreng : oa.modellLocker;
+    console.log(`  Prüfer: ${oaModell} (OpenAI, Aufwand ${oa.aufwand})`);
+    daten = await openaiPruefen({ system: SYSTEM, user, modell: oaModell, aufwand: oa.aufwand, zweck });
+  }
+  for (const [nr, anfrage] of (daten ? [] : [[1, () => basis], [2, ohneSchema]])) {
     let response;
     try {
       response = await client().messages.create(anfrage());
