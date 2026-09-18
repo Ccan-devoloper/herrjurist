@@ -19,13 +19,10 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
-import { budgetPruefen, erfassen } from "./kosten.mjs";
+import { claudeAufruf } from "./anbieter.mjs";
 import { korpus } from "./pruefung.mjs";
 
-let clientCache = null;
-const client = () => (clientCache ||= new Anthropic({ maxRetries: 3, timeout: 5 * 60 * 1000 }));
 
 const ANTWORT_SCHEMA = {
   type: "object",
@@ -273,16 +270,17 @@ ${nachrichten.map((n) => {
 Sperrliste: ${korpus().namen.join(", ")}
 
 Gib für jede id an, ob geantwortet werden soll (antworten), den Grund bei Nein (grund) und den Antworttext (text, null bei Nein).`;
-  budgetPruefen("Nachrichten beantworten");
-  const response = await client().messages.create({
-    model: CONFIG.antworten.modell,
-    max_tokens: 8000,
-    system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
-    messages: [{ role: "user", content: user }],
-    thinking: { type: "adaptive" },
-    output_config: { effort: CONFIG.antworten.aufwand, format: { type: "json_schema", schema: ANTWORT_SCHEMA } },
+  const response = await claudeAufruf({
+    zweck: "nachrichten", modell: CONFIG.antworten.modell,
+    params: {
+      model: CONFIG.antworten.modell,
+      max_tokens: 8000,
+      system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
+      messages: [{ role: "user", content: user }],
+      thinking: { type: "adaptive" },
+      output_config: { effort: CONFIG.antworten.aufwand, format: { type: "json_schema", schema: ANTWORT_SCHEMA } },
+    },
   });
-  erfassen(CONFIG.antworten.modell, response.usage, "nachrichten");
   if (response.stop_reason === "refusal") return [];
   const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
   /* Unlesbar heißt: diesmal keine Antworten, nächste Stunde wieder. Der

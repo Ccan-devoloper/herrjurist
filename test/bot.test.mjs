@@ -2937,8 +2937,16 @@ test("Erklärvideo-Figuren werden unter ihrem eigenen Zweck geprüft, nicht als 
   assert.equal(k.budgetFrei("Bild zeichnen"), false, "0.45 + 0.01 + 0.03 = 0.49 > 0.48");
   /* Unter dem richtigen Zweck ist die Rücklage die eigene: 0.43 + 0.01 < 0.48. */
   assert.equal(k.budgetFrei("Figur zeichnen (erklaerbild)"), true, "die Figur darf ihre eigene Rücklage benutzen");
+  /* Seit 1a entscheidet die Admission des eigenen Zwecks, nicht mehr ein
+     Zwecktext im alten Deckel: Das Bild geht durch bildAufruf() und traegt
+     dabei „bild" oder „erklaerbild" als Zweck - beide im Core-Topf, beide
+     als optional gekennzeichnet. */
   const bildki = fs.readFileSync(new URL("../src/bildki.mjs", import.meta.url), "utf8");
-  assert.match(bildki, /budgetPruefen\(zweck === "erklaerbild" \? "Figur zeichnen \(erklaerbild\)" : "Bild zeichnen"\)/);
+  assert.match(bildki, /await bildAufruf\(\{\s*\n?\s*zweck, modell: ki\.modell, optional: true/,
+    "das Bild geht unter seinem eigenen Zweck durch die Tür");
+  const { ZWECK_TOPF } = await import("../src/budget.mjs");
+  assert.equal(ZWECK_TOPF.bild, "core");
+  assert.equal(ZWECK_TOPF.erklaerbild, "core");
 });
 
 test("Obergrenze je Beitrag gilt in jedem Schreibpfad, verschachtelt läuft der Posten weiter", async () => {
@@ -3043,7 +3051,7 @@ test("Bildregie: Metaphern fliegen, Fachgegenstände bleiben, Ausfall kostet das
   assert.equal(typeof bildregie, "function");
   /* Ohne Motive kein Aufruf - und damit kein Geld. */
   assert.deepEqual(await bildregie({ szenen: [{ art: "hook", titel: "x", sprecher: "y" }] }), { geprueft: 0, ersetzt: 0 });
-  assert.match(autor, /budgetPruefen\("Bildregie \(bildregie\)"\)/, "die Regie hat ihren eigenen Zweck im Deckel");
+  assert.match(autor, /zweck: "bildregie"/, "die Regie hat ihren eigenen Zweck und damit ihre eigene Admission");
   assert.match(autor, /await bildregieSicher\(reel\); return reel;/, "läuft vor jeder Rückgabe des Reels");
   assert.match(autor, /Bildregie übersprungen/, "und ein Ausfall lässt das Reel durch");
   assert.match(autor, /Metaphern gelten NICHT/, "die Regel steht im Systemtext");
@@ -4480,4 +4488,121 @@ test("1a: Ein geplanter Lauf kann seinen Deckel nicht selbst anheben", async () 
   const geschummelt = { ...echt, ausloeser: "schedule" };
   assert.throws(() => richtlinieGate({ konfiguration: geschummelt, produkt, erwartet, ceilings, ceilingPolicy, zwecke, zweckTopf: ZWECK_TOPF }),
     RichtlinieVerletzt, "Break Glass und Zeitplan schließen sich aus");
+});
+
+test("1a: Jeder Anbieteraufruf geht durch die Admission – auch Fallback und Retry", async () => {
+  const { claudeAufruf, kontextSetzen, kontextLoeschen, klientSetzen, OhneKontext, tagesplanWorstCase }
+    = await import("../src/anbieter.mjs");
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "tuer-"));
+  const antwort = (out) => ({ usage: { input_tokens: 1000, output_tokens: out }, stop_reason: "end_turn", content: [{ type: "text", text: "{}" }] });
+
+  /* Ohne Laufkontext gibt es kein Budget – und damit keinen Aufruf. */
+  kontextLoeschen();
+  await assert.rejects(() => claudeAufruf({ zweck: "autor", params: { model: "claude-sonnet-5", max_tokens: 1000 } }), OhneKontext);
+
+  /* Mit Kontext: Der Worst Case folgt dem Ceiling, nicht der Schätzung. */
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+
+  let gerufen = 0;
+  klientSetzen({ messages: { create: async () => { gerufen++; return antwort(2000); } } });
+
+  await claudeAufruf({ zweck: "autor", params: { model: "claude-sonnet-5", max_tokens: 2000, messages: [{ role: "user", content: "x" }] }, attempt: 1, slot: "b1" });
+  assert.equal(gerufen, 1);
+  const nachErstem = budget.stand().verbraucht.core;
+  assert.ok(nachErstem > 0 && nachErstem < 0.03, `tatsächliche Kosten gebucht (${nachErstem})`);
+  assert.equal(budget.stand().reserviert.core, 0, "die Reserve ist aufgelöst");
+
+  /* Ein zweiter Versuch ist ein eigener Aufruf mit eigener Admission und
+     eigener Telemetriezeile. */
+  await claudeAufruf({ zweck: "autor", params: { model: "claude-sonnet-5", max_tokens: 2000, messages: [{ role: "user", content: "x" }] }, attempt: 2, slot: "b1" });
+  assert.equal(gerufen, 2);
+  const zeilen = telemetrie.zeilen();
+  assert.equal(zeilen.length, 2);
+  assert.deepEqual(zeilen.map((z) => z.attempt), [1, 2], "Retry erscheint als eigener Versuch");
+  assert.equal(zeilen[0].bucket, "core");
+  assert.equal(zeilen[0].sent, true);
+  assert.ok(zeilen[0].reservedUsd > zeilen[0].actualUsd, "reserviert wurde der Worst Case, gebucht der echte Preis");
+  assert.ok(zeilen[0].releasedUsd > 0);
+  assert.ok(zeilen[0].profileId.startsWith("autor:"));
+
+  /* Ein Aufruf, dessen Ceiling nicht mehr in den Resttopf passt, startet nicht. */
+  const knapp = budgetStarten({ deckel: { core: 0.05, engagement: 0.25, research: 0.12 } });
+  kontextSetzen({ budget: knapp, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  const vorher = gerufen;
+  await assert.rejects(() => claudeAufruf({
+    zweck: "autor", params: { model: "claude-sonnet-5", max_tokens: 16000, messages: [{ role: "user", content: "x" }] }, slot: "b2",
+  }), AdmissionAbgelehnt, "16k Ceiling passen nicht in 0,05 $");
+  assert.equal(gerufen, vorher, "der Anbieter wurde nicht gerufen");
+  assert.equal(knapp.stand().verbraucht.core, 0, "und nichts verbraucht");
+  const abgelehnt = telemetrie.zeilen().at(-1);
+  assert.equal(abgelehnt.sent, false);
+  assert.equal(abgelehnt.outcome, "abgelehnt");
+  assert.equal(abgelehnt.errorType, "AdmissionAbgelehnt");
+
+  /* Ein Fehler NACH dem Senden gibt kein Geld zurück. */
+  const nach = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  kontextSetzen({ budget: nach, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  klientSetzen({ messages: { create: async () => { throw new Error("Verbindung abgebrochen"); } } });
+  await assert.rejects(() => claudeAufruf({ zweck: "faktencheck", params: { model: "claude-sonnet-5", max_tokens: 4000, messages: [{ role: "user", content: "x" }] } }), /Verbindung/);
+  assert.ok(nach.stand().verbraucht.core > 0, "die Reservierung gilt als verbraucht");
+  assert.equal(nach.stand().ungeklaert.length, 1);
+  const letzte = telemetrie.zeilen().at(-1);
+  assert.equal(letzte.sent, true);
+  assert.equal(letzte.spendUnknown, true);
+  assert.equal(letzte.releasedUsd, 0);
+
+  /* Und der unbequeme Befund steht als Signal zur Verfügung. */
+  const plan = tagesplanWorstCase({
+    posten: [
+      { name: "b1 autor", modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 },
+      { name: "b1 faktencheck", modell: "claude-sonnet-5", maxTokens: 6000, eingabeTokens: 4000 },
+    ],
+    deckelCore: 0.32,
+  });
+  assert.equal(plan.dailyPlanNotWorstCaseFundable, false, "zwei Aufrufe passen noch");
+  const ganz = tagesplanWorstCase({
+    posten: Array.from({ length: 9 }, () => ({ modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 })),
+    deckelCore: 0.32,
+  });
+  assert.equal(ganz.dailyPlanNotWorstCaseFundable, true, "das ganze Pflichtprodukt im Worst Case nicht");
+  assert.match(ganz.hinweis, /Kostenzusage hält, eine Verfügbarkeitszusage gibt es damit nicht/);
+
+  kontextLoeschen();
+  klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a: Kein bezahlter Anbieteraufruf außerhalb der einen Tür", async () => {
+  /* Der eigentliche Beweis: nicht die sechs bekannten Stellen abhaken,
+     sondern zeigen, dass es keine siebte geben kann. */
+  const quellen = fs.readdirSync(new URL("../src/", import.meta.url))
+    .filter((f) => f.endsWith(".mjs") && f !== "anbieter.mjs");
+
+  const einstiegspunkte = [
+    { muster: /\.messages\.create\s*\(/, was: "Anthropic messages.create" },
+    { muster: /api\.openai\.com/, was: "OpenAI-Endpunkt" },
+    { muster: /api\.anthropic\.com/, was: "Anthropic-Endpunkt" },
+    { muster: /\bnew\s+Anthropic\s*\(/, was: "Anthropic-Client" },
+  ];
+
+  const funde = [];
+  for (const datei of quellen) {
+    const text = fs.readFileSync(new URL(`../src/${datei}`, import.meta.url), "utf8");
+    /* Kommentare zählen nicht – sie rufen niemanden. */
+    const code = text.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+    for (const e of einstiegspunkte) if (e.muster.test(code)) funde.push(`${datei}: ${e.was}`);
+  }
+  assert.deepEqual(funde, [],
+    `Bezahlte Anbieteraufrufe außerhalb von anbieter.mjs:\n${funde.join("\n")}`);
+
+  /* Und in der Tür selbst hängt jeder Aufruf an einer Admission. */
+  const tuer = fs.readFileSync(new URL("../src/anbieter.mjs", import.meta.url), "utf8");
+  assert.match(tuer, /budget\.zulassen\(/, "die Tür fragt das Budget");
+  assert.match(tuer, /griff\.gesendet\(\)/, "und markiert das Absenden");
+  assert.equal((tuer.match(/budget\.zulassen\(/g) || []).length >= 2, true);
 });

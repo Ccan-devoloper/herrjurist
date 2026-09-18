@@ -17,7 +17,9 @@ import { ICONS } from "./stile.mjs";
 import { folieLeer, pruefeBeitrag, korpus, normenOhneGesetz, quizBefunde, fachpruefungAbschliessen } from "./pruefung.mjs";
 import { createHash } from "node:crypto";
 import { datumLesbar, tageBis, heuteIso } from "./zeit.mjs";
-import { erfassen, budgetPruefen, budgetFrei, BudgetFehler } from "./kosten.mjs";
+import { erfassen, budgetFrei, BudgetFehler } from "./kosten.mjs";
+import { claudeAufruf } from "./anbieter.mjs";
+import { rechercheAuftrag, ResearchGrenze } from "./research.mjs";
 import { pruefeFakten, korrekturenAnwenden } from "./faktencheck.mjs";
 import { hookWaehlen as hookMusterWaehlen, hookAnleitung, pruefeHook, hookTypErkennen } from "./hooks.mjs";
 import { dauerWaehlen } from "./insights.mjs";
@@ -29,11 +31,6 @@ const hier = path.dirname(fileURLToPath(import.meta.url));
 const beispiele = JSON.parse(fs.readFileSync(path.resolve(hier, "../beispiele/inhalte.json"), "utf8"));
 const beispielReel = JSON.parse(fs.readFileSync(path.resolve(hier, "../beispiele/reel.json"), "utf8"));
 
-let clientCache = null;
-function client() {
-  if (!clientCache) clientCache = new Anthropic({ maxRetries: 3, timeout: 10 * 60 * 1000 });
-  return clientCache;
-}
 
 /* Beitragsformate – was der Autor je Format bauen soll. */
 export const FORMATE = {
@@ -341,17 +338,22 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
     console.log(`  ↻ Entwurf aus dem Speicher vom ${gelegt.datum} (${zweck}, 0,0000 $)`);
     return { daten: gelegt.daten, usage: null, schluessel };
   }
-  budgetPruefen({ reel: "Reel-Skript schreiben", stories: "Stories schreiben" }[zweck] || "Text schreiben (Autor)");
+  /* Jeder Versuch ist ein eigener bezahlter Aufruf und braucht seine eigene
+     Zulassung. Der Schema-Fallback lief frueher auf der Pruefung des
+     Erstaufrufs mit - ein einziger BadRequest verdoppelte damit den Preis,
+     ohne dass der Deckel davon wusste. */
   let response;
   try {
-    response = await client().messages.create(basis);
+    response = await claudeAufruf({ zweck, params: basis, modell, attempt: 1, slot: zweck });
   } catch (e) {
     if (e instanceof Anthropic.BadRequestError && /output_config|schema|format/i.test(e.message)) {
       const { output_config, ...ohneFormat } = basis;
-      response = await client().messages.create({ ...ohneFormat, output_config: { effort }, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(schema)}` }] });
+      response = await claudeAufruf({
+        zweck, modell, attempt: 2, slot: zweck,
+        params: { ...ohneFormat, output_config: { effort }, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(schema)}` }] },
+      });
     } else throw e;
   }
-  erfassen(modell, response.usage, zweck);
   if (response.stop_reason === "refusal") {
     if (modell !== "claude-opus-4-8") return strukturiert({ system, user, schema, modell: "claude-opus-4-8", effort, zweck });
     throw new Error(`Modell hat abgelehnt: ${response.stop_details?.explanation || "ohne Begründung"}`);
@@ -769,19 +771,39 @@ export function rechercheAnfrage(frage) {
 
 async function webRecherche(frage, zweck = "recherche") {
   const params = rechercheAnfrage(frage);
-  budgetPruefen("Recherche");
-  let response = await client().messages.create(params);
-  erfassen(CONFIG.ki.modellNeben, response.usage, zweck);
+  /* Das Suchkontingent gilt fuer den GANZEN Auftrag. `max_uses` gilt je
+     Anfrage - bei pause_turn bekam das Modell bisher wieder zwei Suchen, nach
+     vier Runden also acht. Der Auftrag fuehrt jetzt den Zaehler, und jede
+     Fortsetzung ist ein eigener bezahlter Aufruf mit eigener Zulassung. */
+  const auftrag = rechercheAuftrag({ maxAnfragen: RECHERCHE_RUNDEN + 1 });
+  const suchenSetzen = (anzahl) => {
+    for (const t of params.tools || []) if (t.name === "web_search") t.max_uses = anzahl;
+  };
+  const erste = auftrag.anfrageBeginnen();
+  suchenSetzen(erste.maxUses);
+  let response = await claudeAufruf({ zweck, params, modell: CONFIG.ki.modellNeben, attempt: erste.nummer, slot: zweck });
+  auftrag.antwortVerbuchen(response.usage);
   let runden = 0;
   while (response.stop_reason === "pause_turn" && runden++ < RECHERCHE_RUNDEN) {
-    if (!budgetFrei(zweck)) {
-      console.warn(`  ! Recherche nach ${runden} Runde(n) abgebrochen – der Tagesdeckel lässt keine weitere zu. Der Rest des Tages bleibt bezahlbar.`);
-      break;
-    }
+    const darf = auftrag.darfAnfragen({ brauchtSuche: true });
+    if (!darf.ok) { console.warn(`  ! Recherche nach ${runden} Runde(n) beendet: ${darf.grund}.`); break; }
+    let weiter;
+    try { weiter = auftrag.anfrageBeginnen(); }
+    catch (e) { if (e instanceof ResearchGrenze) { console.warn(`  ! Recherche beendet: ${e.message}`); break; } throw e; }
+    suchenSetzen(weiter.maxUses);
     params.messages.push({ role: "assistant", content: response.content });
-    response = await client().messages.create(params);
-    erfassen(CONFIG.ki.modellNeben, response.usage, zweck);
+    try {
+      response = await claudeAufruf({ zweck, params, modell: CONFIG.ki.modellNeben, attempt: weiter.nummer, slot: zweck });
+    } catch (e) {
+      if (e instanceof BudgetFehler || e?.name === "AdmissionAbgelehnt") {
+        console.warn(`  ! Recherche nach ${runden} Runde(n) abgebrochen – das Research-Budget lässt keine weitere zu.`);
+        break;
+      }
+      throw e;
+    }
+    auftrag.antwortVerbuchen(response.usage);
   }
+  console.log(`  Recherche: ${auftrag.stand().anfragen} Anfrage(n), ${auftrag.stand().suchenVerbraucht} von ${auftrag.stand().maxSuchen} Suchen.`);
   const text = textAus(response);
   const fachTreffer = text.match(/Fach\s*[:：]\s*(ao|ust|erbst|kst|istr|bilanz|persg)/i);
   const quellen = [...new Set((text.match(/https?:\/\/[^\s)>\]]+/g) || []))].slice(0, 4);
@@ -1105,22 +1127,25 @@ export async function bildregie(reel) {
   const szenen = reel?.szenen || [];
   if (!szenen.some((s) => s.bildSzene)) return { geprueft: 0, ersetzt: 0 };
   const user = `Reel-Thema: ${reel.kurztitel || szenen[0]?.titel || ""}\n\n${szenen.map((s, i) => `Szene ${i + 1} [${s.art}]\n  Titel: ${s.titel || ""}\n  Sprecher: ${s.sprecher || ""}\n  Motiv: ${s.bildSzene || "(keins)"}`).join("\n\n")}\n\nBeurteile jede Szene.`;
-  budgetPruefen("Bildregie (bildregie)");
+
   let response;
   try {
-    response = await client().messages.create({
-      model: CONFIG.ki.modellNeben, max_tokens: 3000,
-      system: [{ type: "text", text: BILDREGIE_SYSTEM, cache_control: { type: "ephemeral" } }],
-      messages: [{ role: "user", content: user }],
-      thinking: { type: "adaptive" },
-      output_config: { effort: "low", format: { type: "json_schema", schema: BILDREGIE_SCHEMA } },
+    response = await claudeAufruf({
+      zweck: "bildregie", modell: CONFIG.ki.modellNeben, slot: reel?.slug || "reel",
+      params: {
+        model: CONFIG.ki.modellNeben, max_tokens: 3000,
+        system: [{ type: "text", text: BILDREGIE_SYSTEM, cache_control: { type: "ephemeral" } }],
+        messages: [{ role: "user", content: user }],
+        thinking: { type: "adaptive" },
+        output_config: { effort: "low", format: { type: "json_schema", schema: BILDREGIE_SCHEMA } },
+      },
     });
   } catch (e) {
     if (e instanceof BudgetFehler) throw e;
     console.warn(`  ! Bildregie nicht möglich (${e.message.split("\n")[0].slice(0, 100)}) – Motive des Autors bleiben.`);
     return { geprueft: 0, ersetzt: 0 };
   }
-  erfassen(CONFIG.ki.modellNeben, response.usage, "bildregie");
+
   let daten;
   try { const t = textAus(response); daten = JSON.parse(t.slice(t.indexOf("{"), t.lastIndexOf("}") + 1)); }
   catch { console.warn("  ! Bildregie: Antwort nicht lesbar – Motive des Autors bleiben."); return { geprueft: 0, ersetzt: 0 }; }

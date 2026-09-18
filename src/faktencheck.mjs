@@ -8,10 +8,9 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
-import { erfassen, budgetPruefen, BudgetFehler } from "./kosten.mjs";
+import { BudgetFehler } from "./kosten.mjs";
+import { claudeAufruf, openaiAufruf } from "./anbieter.mjs";
 
-let clientCache = null;
-const client = () => (clientCache ||= new Anthropic({ maxRetries: 3, timeout: 5 * 60 * 1000 }));
 
 const SCHEMA = {
   type: "object",
@@ -206,14 +205,11 @@ export function zahlenLastig(beitrag) {
 export async function openaiPruefen({ system, user, modell, aufwand, zweck, schema = SCHEMA, fetchFn = fetch }) {
   const key = CONFIG.faktencheck.openai.key;
   if (!key) { console.warn("  ! Prüfer OpenAI: kein OPENAI_API_KEY – Prüfung läuft über Claude."); return null; }
-  const steuerung = new AbortController();
-  const wecker = setTimeout(() => steuerung.abort(), CONFIG.faktencheck.openai.zeitlimitMs);
   let antwort;
   try {
-    antwort = await fetchFn("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-      body: JSON.stringify({
+    antwort = await openaiAufruf({
+      zweck, modell, fetchFn,
+      params: {
         model: modell,
         input: [
           { role: "system", content: system },
@@ -222,32 +218,15 @@ export async function openaiPruefen({ system, user, modell, aufwand, zweck, sche
         reasoning: { effort: aufwand },
         text: { format: { type: "json_schema", name: "faktencheck", strict: true, schema } },
         max_output_tokens: 8000,
-      }),
-      signal: steuerung.signal,
+      },
     });
   } catch (e) {
     console.warn(`  ! Prüfer OpenAI nicht erreichbar (${e.name === "AbortError" ? "Zeitlimit" : e.message}) – Prüfung läuft über Claude.`);
     return null;
-  } finally { clearTimeout(wecker); }
-  if (!antwort.ok) {
-    const text = await antwort.text().catch(() => "");
-    console.warn(`  ! Prüfer OpenAI antwortet HTTP ${antwort.status}: ${text.slice(0, 200)} – Prüfung läuft über Claude.`);
-    return null;
   }
-  const daten = await antwort.json().catch(() => null);
-  /* Bezahlt wird, sobald die Antwort da ist - auch wenn sie gleich verworfen
-     wird. Ein Posten, der nicht gebucht wird, fehlt dem Tagesdeckel.
-     input_tokens enthält bei OpenAI die zwischengespeicherten Token; sie
-     werden abgezogen, sonst zählte derselbe Token zweimal. */
-  const nutzung = daten?.usage || null;
-  if (nutzung) {
-    const gecacht = nutzung.input_tokens_details?.cached_tokens || 0;
-    erfassen(modell, {
-      input_tokens: Math.max(0, (nutzung.input_tokens || 0) - gecacht),
-      output_tokens: nutzung.output_tokens || 0,
-      cache_read_input_tokens: gecacht,
-    }, zweck);
-  }
+  /* Bezahlt und gebucht hat die Tür bereits - sie sieht die Antwort zuerst.
+     Hier geht es nur noch darum, ob sie brauchbar ist. */
+  const daten = antwort;
   if (daten?.status === "incomplete") {
     console.warn(`  ! Prüfer OpenAI: Antwort unvollständig (${daten?.incomplete_details?.reason || "ohne Grund"}) – Prüfung läuft über Claude.`);
     return null;
@@ -271,7 +250,6 @@ export async function openaiPruefen({ system, user, modell, aufwand, zweck, sche
 
 export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "", streng = null } = {}) {
   if (!CONFIG.faktencheck.aktiv) return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] };
-  budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck", "story-faktencheck": "Story-Faktencheck" }[zweck] || "Faktencheck");
   /* Beiträge und Reels gehen immer an den strengen Prüfer.
 
      Die Auswertung der letzten fünf Tage war eindeutig: Der günstige Prüfer
@@ -354,16 +332,17 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
     console.log(`  Prüfer: ${oaModell} (OpenAI, Aufwand ${oa.aufwand})`);
     daten = await openaiPruefen({ system: SYSTEM, user, modell: oaModell, aufwand: oa.aufwand, zweck });
   }
+  /* Zwei Anlaeufe, zwei eigene Zulassungen: Der zweite lief frueher auf der
+     Pruefung des ersten mit. */
   for (const [nr, anfrage] of (daten ? [] : [[1, () => basis], [2, ohneSchema]])) {
     let response;
     try {
-      response = await client().messages.create(anfrage());
+      response = await claudeAufruf({ zweck, params: anfrage(), modell, attempt: nr });
     } catch (e) {
       if (!(e instanceof Anthropic.BadRequestError) || nr === 2) throw e;
       /* Schema oder Denken nicht erlaubt: direkt zum zweiten Weg. */
       continue;
     }
-    erfassen(modell, response.usage, zweck);
     try { daten = auswerten(response); break; }
     catch (e) {
       ersterFehler ||= e;
@@ -429,7 +408,6 @@ const SCHIEDS_SYSTEM = `Du bist Schiedsrichter:in zwischen einem juristischen Fa
 Prüfe die Norm selbst nach, bevor du urteilst; wiederhole nicht den Einwand. Bist du unsicher, ob der Text falsch ist, ist der Einwand NICHT zutreffend – nur ein klar belegter Fehler zählt. Begründung in höchstens zwei Sätzen.`;
 
 async function zweitmeinung(text, befunde, zweck = "faktencheck") {
-  budgetPruefen({ "reel-faktencheck": "Reel-Faktencheck (Zweitmeinung)", "story-faktencheck": "Story-Faktencheck (Zweitmeinung)" }[zweck] || "Faktencheck (Zweitmeinung)");
   const modell = CONFIG.faktencheck.zweitmeinungModell || CONFIG.ki.modell;
   const user = `Text:\n\n${text}\n\nEinwände des Prüfers:\n${befunde.map((b, i) => `${i + 1}. [${b.stelle}] ${b.problem} → ${b.korrektur}`).join("\n")}\n\nBeurteile jeden Einwand.`;
   const basis = {
@@ -442,13 +420,15 @@ async function zweitmeinung(text, befunde, zweck = "faktencheck") {
   };
   let response;
   try {
-    response = await client().messages.create(basis);
+    response = await claudeAufruf({ zweck, params: basis, modell, attempt: 1 });
   } catch (e) {
     if (!(e instanceof Anthropic.BadRequestError)) throw e;
     const { thinking, output_config, ...rest } = basis;
-    response = await client().messages.create({ ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHIEDS_SCHEMA)}` }] });
+    response = await claudeAufruf({
+      zweck, modell, attempt: 2,
+      params: { ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHIEDS_SCHEMA)}` }] },
+    });
   }
-  erfassen(modell, response.usage, zweck);
   const antwort = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
   const daten = JSON.parse(antwort.slice(antwort.indexOf("{"), antwort.lastIndexOf("}") + 1));
   for (const u of daten.urteile || []) if (u.zutreffend === false) console.log(`    Einwand ${u.nr} verworfen: ${String(u.begruendung || "").slice(0, 160)}`);

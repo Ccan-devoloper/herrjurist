@@ -15,7 +15,7 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { ffmpegPfad } from "./stimme.mjs";
 import { CONFIG } from "./config.mjs";
-import { budgetPruefen, erfassenStueck } from "./kosten.mjs";
+import { bildAufruf } from "./anbieter.mjs";
 import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
 
 export const bildKiAktiv = () => Boolean(CONFIG.bilder.ki.aktiv && CONFIG.bilder.ki.key);
@@ -104,36 +104,30 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
      eng wurde - und das Reel fiel auf das klassische Layout zurück, obwohl
      das Geld dafür ausdrücklich zurückgelegt war. Der Schlüssel muss im
      Zwecktext stehen, weil kosten.mjs ihn daraus liest. */
-  budgetPruefen(zweck === "erklaerbild" ? "Figur zeichnen (erklaerbild)" : "Bild zeichnen");
   const ki = CONFIG.bilder.ki;
-  const steuerung = new AbortController();
-  const wecker = setTimeout(() => steuerung.abort(), ki.zeitlimitMs);
-  let antwort;
+  let daten;
   try {
-    antwort = await fetch("https://api.openai.com/v1/images/generations", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${ki.key}`, "Content-Type": "application/json" },
-      /* Der durchsichtige Hintergrund wird immer verlangt - im Auftragstext
-         und hier im Aufruf. Kommt er so zurueck, ist das Motiv ohne weiteren
-         Schritt verwendbar, und genau das ist der Regelfall beim flachen
-         Look. */
-      body: JSON.stringify({ model: ki.modell, prompt: bildAuftrag(szene, { stil, look: aussehen }), n: 1, size: ki.groesse, quality: ki.guete, background: "transparent", output_format: "png" }),
-      signal: steuerung.signal,
+    /* Ein gezeichnetes Motiv ist fast immer optionale Qualitaet: Ohne es
+       bleibt die Icon-Buehne. Es geht deshalb durch dieselbe Tuer wie jeder
+       bezahlte Aufruf - und hinter alle Pflichtruecklagen.
+
+       Der durchsichtige Hintergrund wird immer verlangt - im Auftragstext und
+       hier im Aufruf. Kommt er so zurueck, ist das Motiv ohne weiteren
+       Schritt verwendbar, und genau das ist der Regelfall beim flachen Look. */
+    daten = await bildAufruf({
+      zweck, modell: ki.modell, optional: true, preisUsd: ki.preisUsd, zeitlimitMs: ki.zeitlimitMs, slot: szene,
+      auftrag: {
+        key: ki.key,
+        koerper: { model: ki.modell, prompt: bildAuftrag(szene, { stil, look: aussehen }), n: 1, size: ki.groesse, quality: ki.guete, background: "transparent", output_format: "png" },
+      },
     });
   } catch (e) {
-    console.warn(`  ! Motiv zeichnen fehlgeschlagen (${e.name === "AbortError" ? "Zeitlimit" : e.message}) - Titelfolie bleibt beim Icon.`);
-    return null;
-  } finally { clearTimeout(wecker); }
-  if (!antwort.ok) {
-    const text = await antwort.text().catch(() => "");
-    console.warn(`  ! Motiv zeichnen fehlgeschlagen (HTTP ${antwort.status}): ${text.slice(0, 200)}`);
+    console.warn(`  ! Motiv zeichnen fehlgeschlagen (${e.name === "AbortError" ? "Zeitlimit" : e.message.slice(0, 120)}) - Titelfolie bleibt beim Icon.`);
     return null;
   }
-  const daten = await antwort.json().catch(() => null);
   const b64 = daten?.data?.[0]?.b64_json;
   /* Bezahlt wird, sobald das Bild da ist - auch wenn es gleich verworfen wird.
      Ein Posten, der nicht gebucht wird, fehlt dem Tagesdeckel. */
-  if (daten) erfassenStueck(ki.preisUsd, zweck, szene);
   if (!b64) { console.warn("  ! Motiv zeichnen: keine Bilddaten zurückgekommen."); return null; }
   const roh = path.join(os.tmpdir(), `ki-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
   fs.writeFileSync(roh, Buffer.from(b64, "base64"));

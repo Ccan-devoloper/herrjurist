@@ -16,6 +16,34 @@ const PREISE = {
 
 const posten = [];
 
+/**
+ * Der teuerste denkbare Ausgang EINES Aufrufs - die Zahl, die vor dem Start
+ * reserviert wird.
+ *
+ * Sie folgt aus dem Token-Ceiling, nicht aus einer Schaetzung: Ein Aufruf
+ * kann hoechstens `maxTokens` ausgeben, und mehr als die uebergebene Eingabe
+ * schickt er nicht hin. Schaetzungen waren genau das Problem - am 18.09. war
+ * der Faktencheck mit 0,01 $ angesetzt und kostete 0,072 $. Ein Deckel, der
+ * auf Schaetzungen steht, haelt nur so lange, wie die Schaetzung stimmt.
+ *
+ * Der Aufschlag deckt, was die Rechnung nicht kennt: Denk-Token zaehlen bei
+ * manchen Anbietern zur Ausgabe, und Cache-Schreibvorgaenge kosten mehr als
+ * gewoehnliche Eingabe.
+ */
+export function obergrenzeUsd({ modell, maxTokens = 0, eingabeTokens = 0, aufschlag = 1.15 }) {
+  const p = PREISE[modell] || PREISE["claude-opus-5"];
+  const roh = ((Number(eingabeTokens) || 0) * p.cacheSchreiben + (Number(maxTokens) || 0) * p.aus) / 1e6;
+  return Math.round(roh * aufschlag * 1e6) / 1e6;
+}
+
+/** Was ein Aufruf laut Nutzungsmeldung gekostet hat - ohne ihn zu erfassen. */
+export function preisAus(modell, usage) {
+  if (!usage) return 0;
+  const p = PREISE[modell] || PREISE["claude-opus-5"];
+  return ((usage.input_tokens || 0) * p.ein + (usage.output_tokens || 0) * p.aus
+    + (usage.cache_read_input_tokens || 0) * p.cacheLesen + (usage.cache_creation_input_tokens || 0) * p.cacheSchreiben) / 1e6;
+}
+
 /* --- Tagesdeckel -------------------------------------------------------
    Vor jedem Claude-Aufruf wird geprüft, ob der Tagesverbrauch (bisherige
    Läufe des Tages + dieser Lauf) unter der Grenze liegt. Ist sie erreicht,
