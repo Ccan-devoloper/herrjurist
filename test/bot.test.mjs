@@ -3882,3 +3882,160 @@ test("Die Zustandssicherung verbucht Kosten erst nach dem Schreiben und vertraut
   assert.equal((quelle.match(/w\.usd \+= kostenSnapshot\.usd/g) || []).length, 1,
     "die Wochenkosten werden an genau einer Stelle fortgeschrieben");
 });
+
+/* ---------------------------------------------------------------------------
+   Phase 1a: drei getrennte Töpfe, harte Zweck-Zuordnung, Admission vor jedem
+   bezahlten Aufruf.
+
+   Der alte Deckel prüfte einmal vor dem ersten Call und danach nicht mehr.
+   Am 18.09. kostete Herr Jurist 0,742 $ bei einem Tagesziel von 0,32 $.
+   --------------------------------------------------------------------------- */
+
+test("1a: Ein unbekannter Zweck wird abgelehnt, bevor der Anbieter gerufen wird", async () => {
+  const { budgetStarten, topfFuer, UnbekannterZweck, ZWECK_TOPF } = await import("../src/budget.mjs");
+
+  assert.throws(() => topfFuer("voellig-neuer-zweck"), UnbekannterZweck,
+    "ein Zweck ohne Topf ist ein Programmierfehler, kein Sonderfall");
+  assert.throws(() => topfFuer(undefined), UnbekannterZweck);
+  assert.throws(() => topfFuer(""), UnbekannterZweck);
+
+  /* Und die Ablehnung passiert in der Admission – vor jedem Anbieteraufruf. */
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  let anbieterGerufen = false;
+  await assert.rejects(
+    () => budget.mitAdmission("voellig-neuer-zweck", 0.001, async () => { anbieterGerufen = true; return { usd: 0.001 }; }),
+    UnbekannterZweck);
+  assert.equal(anbieterGerufen, false, "der Anbieter darf gar nicht erst gerufen werden");
+
+  /* Die Zuordnung ist vollständig für alles, was im Code wirklich abgerechnet wird. */
+  for (const zweck of ["autor", "reel", "stories", "faktencheck", "reel-faktencheck", "story-faktencheck",
+    "bildregie", "bild", "erklaerbild", "loesungsskizze", "loesung", "kommentare", "nachrichten",
+    "recherche", "recherche-loesung"]) {
+    assert.ok(ZWECK_TOPF[zweck], `„${zweck}“ braucht einen Topf`);
+  }
+  assert.equal(ZWECK_TOPF.autor, "core");
+  assert.equal(ZWECK_TOPF.kommentare, "engagement");
+  assert.equal(ZWECK_TOPF.recherche, "research");
+  assert.equal(ZWECK_TOPF.stories, "core", "das Schreiben des Inhalts bleibt Core, auch nach einer Recherche");
+});
+
+test("1a: Der Worst Case entscheidet, nicht der erhoffte Preis", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.30 } });
+
+  assert.equal(budget.frei("core"), 0.02, "0,30 von 0,32 sind verbraucht");
+
+  /* Passt: 0,015 im Worst Case. */
+  const a = budget.zulassen("autor", 0.015);
+  assert.equal(budget.frei("core"), 0.005, "die Reservierung belegt den Topf sofort");
+
+  /* Solange die Reservierung offen ist, kommt nichts Teures mehr durch. */
+  assert.throws(() => budget.zulassen("faktencheck", 0.01), AdmissionAbgelehnt);
+
+  /* Der Aufruf war billiger als befürchtet – der Rest kommt zurück. */
+  a.buchen(0.009);
+  assert.equal(budget.frei("core"), 0.011, "die ungenutzte Reserve ist wieder frei");
+  assert.equal(budget.stand().verbraucht.core, 0.309);
+
+  /* Ein Aufruf, dessen Worst Case den Deckel reißen würde, startet nicht. */
+  let gerufen = false;
+  await assert.rejects(
+    () => budget.mitAdmission("reel", 0.05, async () => { gerufen = true; return { usd: 0.02 }; }),
+    AdmissionAbgelehnt);
+  assert.equal(gerufen, false, "kein Aufruf, dessen Worst Case nicht mehr passt");
+  assert.equal(budget.frei("core"), 0.011, "und der Topf bleibt unberührt");
+
+  /* Ein gescheiterter Aufruf gibt seine Reservierung vollständig zurück. */
+  await assert.rejects(
+    () => budget.mitAdmission("faktencheck", 0.01, async () => { throw new Error("Anbieter kaputt"); }),
+    /Anbieter kaputt/);
+  assert.equal(budget.frei("core"), 0.011, "nach dem Fehler ist die Reserve zurück");
+});
+
+test("1a: Jeder Versuch braucht seine eigene Admission", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  /* Genau hier lag das Leck: Erstaufruf, Schema-Fallback, Retry, Zweitmeinung
+     liefen früher auf EINER Prüfung. Ein Schema-Fehler verdoppelte den Preis,
+     ohne dass der Deckel davon wusste. */
+  const budget = budgetStarten({ deckel: { core: 0.05, engagement: 0.25, research: 0.12 } });
+
+  const versuche = [];
+  const versuch = async (name, worstCase, usd) => {
+    versuche.push(name);
+    return budget.mitAdmission("faktencheck", worstCase, async () => ({ usd }));
+  };
+
+  await versuch("erstaufruf", 0.02, 0.02);
+  await versuch("schema-fallback", 0.02, 0.02);
+  assert.equal(budget.stand().verbraucht.core, 0.04);
+
+  /* Der dritte Versuch passt nicht mehr – und wird abgelehnt, nicht bezahlt. */
+  await assert.rejects(() => versuch("zweitmeinung", 0.02, 0.02), AdmissionAbgelehnt);
+  assert.equal(budget.stand().verbraucht.core, 0.04, "der abgelehnte Versuch hat nichts gekostet");
+  assert.deepEqual(versuche, ["erstaufruf", "schema-fallback", "zweitmeinung"]);
+
+  /* Auch der Provider-Fallback ist ein eigener Aufruf mit eigener Admission. */
+  const knapp = budgetStarten({ deckel: { core: 0.03, engagement: 0.25, research: 0.12 } });
+  await knapp.mitAdmission("faktencheck", 0.02, async () => ({ usd: 0.02 }));
+  await assert.rejects(() => knapp.mitAdmission("faktencheck", 0.02, async () => ({ usd: 0.02 })),
+    AdmissionAbgelehnt, "der Anbieterwechsel bekommt keine Freifahrt auf der ersten Prüfung");
+});
+
+test("1a: Kein Topf leiht dem anderen", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const budget = budgetStarten({
+    deckel: { core: 0.32, engagement: 0.25, research: 0.12 },
+    bisher: { core: 0.32, engagement: 0.0, research: 0.0 },
+  });
+
+  /* Core ist voll – Engagement und Research haben davon nichts. */
+  assert.throws(() => budget.zulassen("autor", 0.001), AdmissionAbgelehnt, "Core ist erschöpft");
+  budget.zulassen("kommentare", 0.20).buchen(0.20);
+  budget.zulassen("recherche", 0.10).buchen(0.10);
+  assert.equal(budget.stand().verbraucht.engagement, 0.20);
+  assert.equal(budget.stand().verbraucht.research, 0.10);
+  assert.throws(() => budget.zulassen("reel", 0.001), AdmissionAbgelehnt,
+    "und Core bleibt erschöpft, egal wie viel anderswo frei ist");
+
+  /* Umgekehrt genauso: ein voller Engagement-Topf nimmt Core nichts weg. */
+  const b2 = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { engagement: 0.25 } });
+  assert.throws(() => b2.zulassen("nachrichten", 0.001), AdmissionAbgelehnt);
+  b2.zulassen("autor", 0.30).buchen(0.30);
+  assert.equal(b2.stand().verbraucht.core, 0.30, "Core ist unberührt vom vollen Engagement-Topf");
+
+  /* Und Research nimmt Core nichts weg. */
+  const b3 = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { research: 0.12 } });
+  assert.throws(() => b3.zulassen("recherche", 0.001), AdmissionAbgelehnt);
+  b3.zulassen("faktencheck", 0.30).buchen(0.30);
+  assert.equal(b3.stand().verbraucht.core, 0.30);
+});
+
+test("1a: Optionale Verbesserungen dürfen das Pflichtprodukt nicht verdrängen", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  /* 18.09.: Drei zusätzliche Erklärbilder kosteten 0,030 $. Sie waren in
+     Ordnung, weil der Sonderdeckel noch Platz hatte. Unter 0,32 $ gilt:
+     zuerst das Pflichtprodukt absichern. */
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.28 } });
+  assert.equal(budget.frei("core"), 0.04);
+
+  /* Der Faktencheck des Abendreels ist Pflicht und braucht 0,035 $. */
+  budget.pflichtRuecklage("reel-faktencheck", "reel-faktencheck", 0.035);
+
+  /* Ein optionales Erklärbild (0,01 $) würde die Rücklage anknabbern. */
+  assert.throws(() => budget.zulassen("erklaerbild", 0.01, { optional: true }), AdmissionAbgelehnt,
+    "optional kommt nicht an der Pflichtrücklage vorbei");
+  assert.equal(budget.frei("core", { optional: true }), 0.005, "für Optionales bleiben 0,005 $");
+  assert.equal(budget.frei("core"), 0.04, "für Pflicht weiterhin 0,04 $");
+
+  /* Der Pflichtaufruf selbst kommt durch – er darf seine eigene Rücklage nutzen. */
+  const pflicht = budget.zulassen("reel-faktencheck", 0.035, { pflichtName: "reel-faktencheck" });
+  pflicht.buchen(0.030);
+  budget.pflichtAufloesen("reel-faktencheck");
+  assert.equal(budget.stand().verbraucht.core, 0.31);
+
+  /* Danach ist wieder Platz für das Optionale. */
+  const bild = budget.zulassen("erklaerbild", 0.01, { optional: true });
+  bild.buchen(0.01);
+  assert.equal(budget.stand().verbraucht.core, 0.32, "der Deckel ist punktgenau ausgeschöpft");
+  assert.throws(() => budget.zulassen("bild", 0.001, { optional: true }), AdmissionAbgelehnt);
+});
