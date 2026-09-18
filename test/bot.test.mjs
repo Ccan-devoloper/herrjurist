@@ -3484,89 +3484,6 @@ test("Safety 0: eine neue fachliche Pruefung ersetzt den alten fachlichen Befund
   assert.equal(fachStempel({ ...story }), vorher, "gleiche Fassung, gleicher Stempel");
 });
 
-test("Kein Lauf endet, ohne zu sichern, was er bezahlt hat", async () => {
-  /* 18.09.: Die Zeile „Nichts fällig" stand vor dem Block, der den Zustand
-     festschreibt, und kehrte mit return zurück. Zwei Läufe schrieben denselben
-     Beitrag für zusammen 0,166 $ und verloren beides - den bezahlten Entwurf
-     und den Kosteneintrag.
-
-     Die Reparatur war zunächst ein einziger Schalter, der zu früh gesetzt
-     wurde: Schlug der Push fehl, galt der Zustand trotzdem als gesichert.
-     Jetzt sind es drei getrennte Zustände, und die werden hier vorgeführt. */
-  const { zustandsSicherung } = await import("../src/zustand.mjs");
-
-  const bauen = (opt = {}) => {
-    const dateien = { "kosten.json": { wochen: {} } };
-    const protokoll = [];
-    const hosting = {
-      jsonLesen: (name, standard) => (name in dateien ? JSON.parse(JSON.stringify(dateien[name])) : standard),
-      jsonSchreiben: (name, wert) => { dateien[name] = JSON.parse(JSON.stringify(wert)); protokoll.push(`schreiben:${name}`); },
-      aufraeumen: () => 0,
-      commit: (n) => { protokoll.push(`commit:${n}`); if (opt.commitFehler?.()) throw new Error("git commit verweigert"); return true; },
-      push: async () => { protokoll.push("push"); if (opt.pushFehler?.()) throw new Error("push abgelehnt"); return true; },
-    };
-    const plan = { datum: "2026-09-18", beitraege: [{ slot: "b1", fehler: "2026-09-18 kaputt" }], stories: [] };
-    const sichern = zustandsSicherung({
-      hosting, plan, datum: "2026-09-18",
-      kostenAbschluss: () => ({ usd: 0.12, aufrufe: 4, cacheAnteil: 0.5 }),
-      wochenKennung: () => "2026-W38",
-      planSpeichern: (h, p) => h.jsonSchreiben(`plaene/${p.datum}.json`, p),
-    });
-    return { sichern, dateien, protokoll };
-  };
-
-  /* 9. Der erste Push scheitert, der zweite gelingt: Der Zustand wird durable,
-        und die Wochenkosten stehen trotzdem nur einmal in der Datei. */
-  let pushKaputt = true;
-  const a = bauen({ pushFehler: () => pushKaputt });
-  await assert.rejects(() => a.sichern(), /push abgelehnt/, "ein gescheiterter Push muss sichtbar sein");
-  assert.equal(a.sichern.stand().vorbereitet, true, "der Commit steht");
-  assert.equal(a.sichern.stand().durable, false, "ohne Push ist nichts durable");
-  pushKaputt = false;
-  await a.sichern();
-  assert.equal(a.sichern.stand().durable, true, "der zweite Versuch macht den Zustand durable");
-  assert.equal(a.dateien["kosten.json"].wochen["2026-W38"].usd, 0.12, "die Wochenkosten wurden genau einmal addiert");
-  assert.equal(a.dateien["kosten.json"].wochen["2026-W38"].aufrufe, 4);
-  assert.equal(a.protokoll.filter((p) => p === "push").length, 2, "der Push wurde wiederholt");
-  assert.ok(a.dateien["fehler.json"].includes("2026-09-18 kaputt"), "der Fehler des Tages steht im Bericht");
-
-  /* Ein dritter Aufruf (das `finally` am Prozessende) tut nichts mehr. */
-  await a.sichern();
-  assert.equal(a.protokoll.filter((p) => p === "push").length, 2, "was durable ist, wird nicht noch einmal gepusht");
-  assert.equal(a.dateien["kosten.json"].wochen["2026-W38"].usd, 0.12, "und nichts wird nachträglich addiert");
-
-  /* 10. Ein echter Commitfehler darf nicht als Erfolg durchgehen: kein Push,
-         kein „vorbereitet", und der Fehler faellt sichtbar durch. */
-  let commitKaputt = true;
-  const b = bauen({ commitFehler: () => commitKaputt });
-  await assert.rejects(() => b.sichern(), /git commit verweigert/);
-  assert.equal(b.sichern.stand().vorbereitet, false, "ein gescheiterter Commit ist keine Vorbereitung");
-  assert.equal(b.sichern.stand().durable, false);
-  assert.equal(b.protokoll.filter((p) => p === "push").length, 0, "ohne Commit wird nichts gepusht");
-
-  /* Und nach der Reparatur: Der Zweitversuch zaehlt die Kosten nicht erneut. */
-  commitKaputt = false;
-  await b.sichern();
-  assert.equal(b.sichern.stand().durable, true);
-  assert.equal(b.dateien["kosten.json"].wochen["2026-W38"].usd, 0.12,
-    "auch nach einem gescheiterten Commit stehen die Wochenkosten nur einmal");
-
-  /* Die Wochenkosten dürfen nur an EINER Stelle aufaddiert werden. */
-  const quelle = fs.readFileSync(new URL("../src/zustand.mjs", import.meta.url), "utf8");
-  assert.equal((quelle.match(/w\.usd \+= kosten\.usd/g) || []).length, 1,
-    "die Wochenkosten werden an genau einer Stelle fortgeschrieben");
-
-  /* Und der Prozess sichert am Ende in jedem Fall - auch nach einem Fehler. */
-  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
-  const schluss = lauf.slice(lauf.indexOf("main()"));
-  assert.match(schluss, /\.finally\(async \(\) => \{[\s\S]*await zustandSichern\(\)/,
-    "am Prozessende muss der Zustand gesichert werden, auch wenn der Lauf abgebrochen ist");
-  assert.match(schluss, /catch \(e\) \{ console\.error\(`  ! Zustand nicht gesichert/,
-    "ein Fehler beim Sichern darf den ursprünglichen Fehler nicht verdecken");
-  assert.match(lauf, /await zustandSichern\(`Zustand \$\{datum\}`\);/,
-    "der reguläre Abschluss ruft die Sicherung auf");
-});
-
 test("Ein Commit ohne Änderung ist kein Fehler – ein abgelehnter Commit schon", async () => {
   /* Hosting.commit() verschluckte beides zu `false`. Wer damit Zustand
      festschreibt, haelt einen abgelehnten Commit dann faelschlich fuer
@@ -3600,7 +3517,7 @@ test("Ein Commit ohne Änderung ist kein Fehler – ein abgelehnter Commit schon
    --------------------------------------------------------------------------- */
 
 test("Ein Probelauf gilt nie als veröffentlicht – Feed, Reel und Story", async () => {
-  const { veroeffentlichungEintragen, veroeffentlichtBestaetigt, echteMedienId, ausTrockenlauf, PROBE_KENNUNG }
+  const { veroeffentlichungEintragen, veroeffentlichtBestaetigt, echteMedienId, PROBE_KENNUNG }
     = await import("../src/veroeffentlichung.mjs");
 
   /* Was Instagram zurückgibt, ist eine Ziffernfolge. Alles andere nicht. */
@@ -3612,24 +3529,23 @@ test("Ein Probelauf gilt nie als veröffentlicht – Feed, Reel und Story", asyn
   /* Die drei Sendewege, jeder mit demselben Vertrag. */
   for (const art of ["beitrag", "reel", "story"]) {
     const eintrag = { slot: "x1", zeit: "12:30", art, status: "geplant" };
+    const vorher = JSON.parse(JSON.stringify(eintrag));
 
-    /* Trockenlauf: Der Eintrag bleibt geplant, nichts wird behauptet. */
-    const probe = veroeffentlichungEintragen(eintrag, PROBE_KENNUNG, { jetzt: "2026-09-18T16:04:59.205Z" });
+    /* Trockenlauf: Der Eintrag bleibt UNVERÄNDERT. Kein Status, keine ID -
+       und auch kein Vermerk: Ein Feld im Plan wäre selbst eine Verschmutzung
+       (die erste Fassung dieser Reparatur legte eines an). */
+    const probe = veroeffentlichungEintragen(eintrag, PROBE_KENNUNG);
     assert.equal(probe.bestaetigt, false, `${art}: ein Probelauf ist keine Veröffentlichung`);
-    assert.equal(eintrag.status, "geplant", `${art}: der Status bleibt geplant`);
-    assert.equal(eintrag.medienId, undefined, `${art}: keine Medien-ID im Produktionszustand`);
-    assert.equal(eintrag.veroeffentlicht, undefined, `${art}: kein Veröffentlichungszeitpunkt`);
-    assert.deepEqual(eintrag.probelauf, { zeit: "2026-09-18T16:04:59.205Z", kennung: PROBE_KENNUNG },
-      `${art}: der Probelauf wird sichtbar vermerkt, aber in einem eigenen Feld`);
+    assert.equal(probe.kennung, PROBE_KENNUNG, `${art}: die Kennung geht ans Protokoll zurück`);
+    assert.deepEqual(eintrag, vorher, `${art}: der Plan-Eintrag wird nicht angefasst`);
     assert.equal(veroeffentlichtBestaetigt(eintrag), false, `${art}: nichts darf sich darauf stützen`);
 
-    /* Und der echte Lauf danach räumt den Vermerk weg. */
+    /* Und der echte Lauf danach trägt ein. */
     const echt = veroeffentlichungEintragen(eintrag, "17908485354484188", { jetzt: "2026-09-18T16:15:00.000Z" });
     assert.equal(echt.bestaetigt, true, `${art}: eine echte Medien-ID zählt`);
     assert.equal(eintrag.status, "veroeffentlicht");
     assert.equal(eintrag.medienId, "17908485354484188");
     assert.equal(eintrag.veroeffentlicht, "2026-09-18T16:15:00.000Z");
-    assert.equal(eintrag.probelauf, undefined, `${art}: der Probelauf-Vermerk verschwindet`);
     assert.equal(veroeffentlichtBestaetigt(eintrag), true);
   }
 
@@ -3639,42 +3555,231 @@ test("Ein Probelauf gilt nie als veröffentlicht – Feed, Reel und Story", asyn
   assert.equal(veroeffentlichtBestaetigt({ status: "veroeffentlicht" }), false, "Status ohne ID");
   assert.equal(veroeffentlichtBestaetigt({ status: "geplant", medienId: "17908485354484188" }), false,
     "ID ohne Status ist ebenfalls kein Beleg");
-
-  /* Ein Plan mit solchen Spuren wird live verworfen. */
-  const sauber = { beitraege: [{ slot: "b1", status: "veroeffentlicht", medienId: "18073311611740667" }], stories: [] };
-  assert.equal(ausTrockenlauf(sauber), false, "ein echter Plan bleibt gültig");
-  assert.equal(ausTrockenlauf({ ...sauber, trocken: true }), true, "die Marke am Plan");
-  assert.equal(ausTrockenlauf({ beitraege: [{ slot: "b2", status: "veroeffentlicht", medienId: "trocken" }], stories: [] }), true,
-    "der Fall vom 18.09.");
-  assert.equal(ausTrockenlauf({ beitraege: [], stories: [{ slot: "s2", status: "geplant", probelauf: { kennung: "trocken" } }] }), true,
-    "auch der neue, ehrliche Vermerk macht den Plan für einen Livelauf unbrauchbar");
-  assert.equal(ausTrockenlauf({ beitraege: [{ slot: "b3", status: "veroeffentlicht", medienId: "probe-42" }], stories: [] }), true,
-    "jede Ersatzkennung, nicht nur die Zeichenfolge „trocken“");
 });
 
-test("Der Tageslauf schreibt Ledger und Teaser nur auf bestätigte Veröffentlichungen", async () => {
-  /* Die Verdrahtung im Ablauf selbst lässt sich ohne Netz, Bilder und
-     Instagram nicht ausführen; geprüft wird deshalb an der Quelle, dass die
-     drei Sendewege und der Teaser die gemeinsame Regel benutzen. */
+test("Ein Trockenlauf mitten am Tag kostet keinen veröffentlichten Slot", async () => {
+  /* Der Fall, der die erste Fassung dieser Reparatur widerlegt hat: Sie
+     vermerkte den Probelauf im Plan, eine spätere Prüfung erkannte daran
+     einen „kontaminierten“ Plan und verwarf ihn ganz – samt der beiden
+     Beiträge, die wirklich draußen waren. Die hätte der nächste Lauf noch
+     einmal veröffentlicht. */
+  const { veroeffentlichungEintragen, planBereinigen, planNurAusTrockenlauf, veroeffentlichtBestaetigt }
+    = await import("../src/veroeffentlichung.mjs");
+
+  const plan = {
+    datum: "2026-09-18",
+    beitraege: [
+      { slot: "b1", zeit: "08:30", format: "minifall", status: "veroeffentlicht", medienId: "18073311611740667", veroeffentlicht: "2026-09-18T06:46:00.000Z" },
+      { slot: "b2", zeit: "12:30", format: "pruefungsfrage", status: "veroeffentlicht", medienId: "17908485354484188", veroeffentlicht: "2026-09-18T16:15:00.000Z" },
+      { slot: "b3", zeit: "19:30", format: "reel", status: "geplant" },
+    ],
+    stories: [
+      { slot: "s1", zeit: "08:30", art: "teaser", beitragSlot: "b1", status: "veroeffentlicht", medienId: "17968846791174489" },
+      { slot: "s3", zeit: "19:30", art: "teaser", beitragSlot: "b3", status: "geplant" },
+    ],
+  };
+  const vorher = JSON.parse(JSON.stringify(plan));
+
+  /* 1. Der Trockenlauf für b3. */
+  const probe = veroeffentlichungEintragen(plan.beitraege[2], "trocken");
+  assert.equal(probe.bestaetigt, false);
+  assert.deepEqual(plan, vorher, "der Trockenlauf hinterlässt im Plan keine Spur");
+
+  /* 2. Der Livelauf danach: Der Plan wird nicht neu erzeugt … */
+  assert.equal(planNurAusTrockenlauf(plan), false,
+    "ein Plan mit echten Veröffentlichungen wird nie verworfen");
+  const bereinigt = planBereinigen(plan);
+  assert.deepEqual(bereinigt, [], "es gibt nichts zu bereinigen");
+
+  /* … b1 und b2 bleiben exakt veröffentlicht … */
+  assert.equal(veroeffentlichtBestaetigt(plan.beitraege[0]), true);
+  assert.equal(veroeffentlichtBestaetigt(plan.beitraege[1]), true);
+  assert.equal(plan.beitraege[0].medienId, "18073311611740667");
+  assert.equal(plan.beitraege[1].medienId, "17908485354484188");
+  assert.equal(veroeffentlichtBestaetigt(plan.stories[0]), true);
+
+  /* … und nur b3 ist noch fällig. */
+  assert.deepEqual(
+    [...plan.beitraege, ...plan.stories].filter((e) => e.status === "geplant").map((e) => e.slot),
+    ["b3", "s3"], "offen sind das Reel und sein Teaser – sonst nichts");
+  assert.deepEqual(plan, vorher, "der ganze Plan ist unverändert durch den Trockenlauf gegangen");
+
+  /* 3. Der Livelauf veröffentlicht b3 wirklich – erst dann darf der Teaser. */
+  assert.equal(veroeffentlichtBestaetigt(plan.beitraege[2]), false, "vor dem Senden: kein Teaser");
+  veroeffentlichungEintragen(plan.beitraege[2], "18125726395891138");
+  assert.equal(veroeffentlichtBestaetigt(plan.beitraege[2]), true, "nach dem Senden: der Teaser darf");
+});
+
+test("Altbestand wird Eintrag für Eintrag bereinigt, nicht der ganze Tag verworfen", async () => {
+  const { planBereinigen, planNurAusTrockenlauf, veroeffentlichtBestaetigt }
+    = await import("../src/veroeffentlichung.mjs");
+
+  /* Ein Plan von vor der Reparatur: zwei echte Veröffentlichungen, zwei
+     Schein-Veröffentlichungen aus einem Trockenlauf. */
+  const plan = {
+    trocken: false,
+    beitraege: [
+      { slot: "b1", status: "veroeffentlicht", medienId: "18073311611740667" },
+      { slot: "b2", status: "veroeffentlicht", medienId: "trocken", veroeffentlicht: "2026-09-18T16:04:59.205Z", kanaele: {} },
+    ],
+    stories: [
+      { slot: "s1", status: "veroeffentlicht", medienId: "17968846791174489" },
+      { slot: "s2", status: "veroeffentlicht", medienId: "trocken", probelauf: { kennung: "trocken" } },
+    ],
+  };
+
+  const bereinigt = planBereinigen(plan);
+  assert.deepEqual(bereinigt.map((b) => b.slot), ["b2", "s2"], "nur die unbelegten Slots");
+
+  /* Die echten bleiben unangetastet - das ist der Punkt. */
+  assert.equal(plan.beitraege[0].medienId, "18073311611740667");
+  assert.equal(veroeffentlichtBestaetigt(plan.beitraege[0]), true);
+  assert.equal(veroeffentlichtBestaetigt(plan.stories[0]), true);
+
+  /* Die unbelegten werden wieder fällig, fail closed, ohne Reste. */
+  assert.equal(plan.beitraege[1].status, "geplant");
+  assert.equal(plan.beitraege[1].medienId, undefined);
+  assert.equal(plan.beitraege[1].veroeffentlicht, undefined);
+  assert.equal(plan.beitraege[1].kanaele, undefined);
+  assert.equal(plan.stories[1].status, "geplant");
+  assert.equal(plan.stories[1].probelauf, undefined, "das Feld aus der ersten Fassung fliegt raus");
+
+  /* Ein zweiter Durchgang findet nichts mehr. */
+  assert.deepEqual(planBereinigen(plan), [], "die Bereinigung ist idempotent");
+
+  /* Ein Plan, der KOMPLETT aus einem Trockenlauf stammt, darf neu erzeugt
+     werden – dabei geht nichts verloren. */
+  assert.equal(planNurAusTrockenlauf({ trocken: true, beitraege: [{ slot: "b1", status: "geplant" }], stories: [] }), true);
+  assert.equal(planNurAusTrockenlauf({ trocken: true, beitraege: [{ slot: "b1", status: "veroeffentlicht", medienId: "18073311611740667" }], stories: [] }), false,
+    "sobald etwas echt draußen ist, wird bereinigt statt verworfen");
+  assert.equal(planNurAusTrockenlauf({ beitraege: [], stories: [] }), false, "ohne Marke gar nicht");
+});
+
+test("Der Tageslauf schreibt Ledger, Teaser und Protokoll nach derselben Regel", async () => {
+  /* Der vollständige Tageslauf braucht Netz, Bilder und Instagram; geprüft
+     wird deshalb an der Quelle, dass die vier Sendewege die gemeinsame Regel
+     benutzen. Das ist ein Wächter gegen Rückfall, kein Verhaltensbeleg – der
+     steht in den drei Tests darüber. */
   const quelle = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
 
-  /* Kein Sendeweg setzt den Status mehr von Hand. */
   assert.equal((quelle.match(/eintrag\.status = "veroeffentlicht"/g) || []).length, 0,
     "der Status wird nur noch in veroeffentlichung.mjs gesetzt");
   assert.equal((quelle.match(/eintrag\.medienId = medienId/g) || []).length, 0,
     "die Medien-ID wird nur noch dort eingetragen");
 
-  /* Jeder vermerken()-Aufruf im Tageslauf hängt an einer Bestätigung. */
   for (const zeile of quelle.split("\n").filter((z) => z.includes("vermerken(ledger,"))) {
     assert.match(zeile, /if \((echt\.bestaetigt|echteMedienId\(medienId\))\) vermerken\(ledger,/,
       `ein Ledger-Eintrag ohne Bestätigung: ${zeile.trim().slice(0, 80)}`);
   }
 
-  /* Der Teaser fragt die Bestätigung, nicht den Planstatus. */
   assert.match(quelle, /if \(!beitrag \|\| !veroeffentlichtBestaetigt\(b\)\)/,
     "der Teaser darf sich nicht auf den Planstatus allein stützen");
-
-  /* Und der Fortschritt des Auffüllens zählt nur echte Beiträge. */
   assert.match(quelle, /if \(echteMedienId\(medienId\)\) stand\.fertig = i \+ 1;/,
     "ein Trockenlauf darf den Auffüll-Fortschritt nicht weiterzählen");
+
+  /* Das Protokoll des Trockenlaufs geht in die lokale Ausgabe, nicht in den
+     Asset-Zweig und nicht in den Plan. */
+  assert.match(quelle, /fs\.writeFileSync\(path\.join\(AUSGABE, "trockenlauf\.json"\)/,
+    "das Protokoll gehört in out/<datum>/");
+  assert.equal(/hosting\.jsonSchreiben\([^)]*trockenlauf/.test(quelle), false,
+    "das Protokoll darf nicht in den Asset-Zweig");
+  assert.equal(/eintrag\.probelauf/.test(quelle), false,
+    "kein Probelauf-Vermerk im Plan-Eintrag");
+
+  /* Und der Prozess sichert am Ende in jedem Fall - auch nach einem Fehler.
+     18.09.: Die Zeile „Nichts fällig" stand vor dem Block, der den Zustand
+     festschreibt, und kehrte mit return zurück. Zwei Läufe verloren dabei
+     zusammen 0,166 $ an bezahlter Arbeit. */
+  const schluss = quelle.slice(quelle.indexOf("main()"));
+  assert.match(schluss, /\.finally\(async \(\) => \{[\s\S]*await zustandSichern\(\)/,
+    "am Prozessende muss der Zustand gesichert werden, auch wenn der Lauf abgebrochen ist");
+  assert.match(schluss, /catch \(e\) \{ console\.error\(`  ! Zustand nicht gesichert/,
+    "ein Fehler beim Sichern darf den ursprünglichen Fehler nicht verdecken");
+  assert.match(quelle, /await zustandSichern\(`Zustand \$\{datum\}`\);/,
+    "der reguläre Abschluss ruft die Sicherung auf");
+});
+
+test("Die Zustandssicherung verbucht Kosten erst nach dem Schreiben und vertraut dem Push nicht blind", async () => {
+  const { zustandsSicherung } = await import("../src/zustand.mjs");
+
+  const bauen = (opt = {}) => {
+    const dateien = { "kosten.json": { wochen: {} } };
+    const protokoll = [];
+    const hosting = {
+      pushen: opt.pushen ?? true,
+      jsonLesen: (name, standard) => (name in dateien ? JSON.parse(JSON.stringify(dateien[name])) : standard),
+      jsonSchreiben: (name, wert) => {
+        protokoll.push(`schreiben:${name}`);
+        if (name === "kosten.json" && opt.kostenFehler?.()) throw new Error("kosten.json nicht schreibbar");
+        dateien[name] = JSON.parse(JSON.stringify(wert));
+      },
+      aufraeumen: () => 0,
+      commit: (n) => { protokoll.push(`commit:${n}`); return true; },
+      push: async () => { protokoll.push("push"); return opt.push ? opt.push() : true; },
+    };
+    let abschluesse = 0;
+    const sichern = zustandsSicherung({
+      hosting, plan: { datum: "2026-09-18", beitraege: [], stories: [] }, datum: "2026-09-18",
+      kostenAbschluss: () => { abschluesse++; return { usd: 0.12, aufrufe: 4, cacheAnteil: 0.5 }; },
+      wochenKennung: () => "2026-W38",
+      planSpeichern: (h, p) => h.jsonSchreiben(`plaene/${p.datum}.json`, p),
+      remoteNoetig: opt.remoteNoetig,
+    });
+    return { sichern, dateien, protokoll, abschluesse: () => abschluesse };
+  };
+  const woche = (d) => d["kosten.json"].wochen["2026-W38"];
+
+  /* (a) Das Schreiben der Kosten scheitert. Früher galt der Betrag trotzdem
+         als verbucht – er fehlte danach einfach. Jetzt bleibt er wiederholbar,
+         und der Snapshot wird nur einmal erhoben. */
+  let kostenKaputt = true;
+  const a = bauen({ kostenFehler: () => kostenKaputt });
+  await assert.rejects(() => a.sichern(), /kosten\.json nicht schreibbar/);
+  assert.equal(a.sichern.stand().kostenErhoben, true, "erhoben ist er");
+  assert.equal(a.sichern.stand().kostenAngewendet, false, "aber nicht verbucht");
+  assert.equal(woche(a.dateien), undefined, "und steht nirgends");
+
+  kostenKaputt = false;
+  await a.sichern();
+  assert.equal(a.sichern.stand().kostenAngewendet, true);
+  assert.equal(a.sichern.stand().durable, true);
+  assert.equal(woche(a.dateien).usd, 0.12, "genau einmal verbucht");
+  assert.equal(woche(a.dateien).aufrufe, 4);
+  assert.equal(a.abschluesse(), 1, "der Snapshot wurde genau einmal erhoben");
+
+  await a.sichern();
+  assert.equal(woche(a.dateien).usd, 0.12, "ein dritter Aufruf addiert nichts");
+
+  /* (b) push() liefert false, obwohl Remote-Durability verlangt ist: Das ist
+         kein Erfolg. Der Zustand bleibt nicht durable, der Fehler ist sichtbar. */
+  let pushErgebnis = false;
+  const b = bauen({ push: () => pushErgebnis });
+  await assert.rejects(() => b.sichern(), /Push nicht bestaetigt/);
+  assert.equal(b.sichern.stand().durable, false, "ein unbestätigter Push macht nichts durable");
+  assert.equal(b.sichern.stand().vorbereitet, true, "der Commit steht trotzdem");
+  assert.equal(woche(b.dateien).usd, 0.12, "die Kosten sind verbucht");
+
+  pushErgebnis = true;
+  await b.sichern();
+  assert.equal(b.sichern.stand().durable, true, "der zweite Versuch bestätigt");
+  assert.equal(b.protokoll.filter((p) => p === "push").length, 2, "der Push wurde wiederholt");
+  assert.equal(woche(b.dateien).usd, 0.12, "und die Kosten stehen weiterhin genau einmal da");
+
+  /* Ein Lauf ohne Remote-Durability (IG_NO_PUSH) ist damit zufrieden - aber
+     ausdrücklich, und er sagt es. */
+  const c = bauen({ pushen: false, push: () => false });
+  const ergebnis = await c.sichern();
+  assert.equal(ergebnis.durable, true, "lokal gesichert reicht, wenn nicht gepusht wird");
+  assert.equal(ergebnis.ohneRemote, true, "und das wird ausgewiesen");
+
+  /* Umgekehrt: Wer Remote-Durability ausdrücklich verlangt, bekommt sie auch
+     dann geprüft, wenn das Hosting nicht pusht. */
+  const d = bauen({ pushen: false, push: () => false, remoteNoetig: true });
+  await assert.rejects(() => d.sichern(), /Push nicht bestaetigt/);
+  assert.equal(d.sichern.stand().durable, false);
+
+  /* Die Wochenkosten dürfen nur an EINER Stelle aufaddiert werden. */
+  const quelle = fs.readFileSync(new URL("../src/zustand.mjs", import.meta.url), "utf8");
+  assert.equal((quelle.match(/w\.usd \+= kostenSnapshot\.usd/g) || []).length, 1,
+    "die Wochenkosten werden an genau einer Stelle fortgeschrieben");
 });

@@ -39,7 +39,7 @@ import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
 import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, vortagsSchaetzung, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
 import { zustandsSicherung } from "./zustand.mjs";
-import { veroeffentlichungEintragen, veroeffentlichtBestaetigt, ausTrockenlauf, echteMedienId } from "./veroeffentlichung.mjs";
+import { veroeffentlichungEintragen, veroeffentlichtBestaetigt, planBereinigen, planNurAusTrockenlauf, echteMedienId } from "./veroeffentlichung.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -80,6 +80,11 @@ const varianteStory = (slot) => (CONFIG.marke.farbeJeKlausur ? 0 : (Number(slot.
    steht in src/zustand.mjs - ein gescheiterter Push wird dort erneut
    versucht, ohne die Wochenkosten ein zweites Mal zu addieren. */
 let zustandSichern = async () => {};
+
+/* Was ein Lauf gesendet haette, aber nicht gesendet hat. Steht bewusst nur
+   hier im Speicher und landet am Ende in out/<datum>/trockenlauf.json - nicht
+   im Tagesplan, den der naechste Livelauf liest. */
+const probelaeufe = [];
 
 function planSpeichern(hosting, plan) {
   hosting.jsonSchreiben(`plaene/${plan.datum}.json`, plan);
@@ -262,13 +267,22 @@ async function main() {
 
   /* Plan des Tages – nur einmal erzeugen, danach fortschreiben. */
   let plan = hosting.jsonLesen(`plaene/${datum}.json`, null);
-  /* Ein Plan aus einem Trockenlauf gilt live nicht – er wird verworfen und neu
-     erzeugt, sonst hält der Bot alles für bereits veröffentlicht. Geprüft wird
-     auf jede Veröffentlichung ohne echte Medien-ID, nicht nur auf die
-     Zeichenfolge „trocken“: Eine andere Ersatzkennung wäre durchgerutscht. */
-  if (plan && !trocken && ausTrockenlauf(plan)) {
-    log("Tagesplan stammt aus einem Trockenlauf – wird neu erzeugt.");
+  /* Altbestand in Ordnung bringen, ohne den Tag wegzuwerfen.
+
+     Früher wurde ein Plan mit Trockenlauf-Spuren komplett verworfen und neu
+     erzeugt. Das ist zu grob: Stehen daneben echte Veröffentlichungen, gehen
+     deren Zustände verloren, und der Bot schickt sie ein zweites Mal hinaus.
+     Jetzt wird genau das zurückgesetzt, was keine echte Medien-ID trägt -
+     fail closed, Eintrag für Eintrag. Nur ein Plan, der vollständig aus einem
+     Trockenlauf stammt und noch nichts Echtes enthält, wird neu erzeugt;
+     dabei geht nichts verloren. */
+  if (plan && !trocken && planNurAusTrockenlauf(plan)) {
+    log("Tagesplan stammt vollständig aus einem Trockenlauf und enthält nichts Veröffentlichtes – wird neu erzeugt.");
     plan = null;
+  } else if (plan && !trocken) {
+    const bereinigt = planBereinigen(plan);
+    for (const b of bereinigt) log(`  ! Slot ${b.slot} ${b.grund} – gilt wieder als geplant.`);
+    if (bereinigt.length) { delete plan.trocken; planSpeichern(hosting, plan); }
   }
   if (!plan) {
     const p = tagesplan(datum, ledger, pool, strategie);
@@ -722,7 +736,7 @@ async function main() {
         const medienId = await ig.reelPosten({ videoUrl, coverUrl, caption });
         kontingent.genutzt += 1;
         const echt = veroeffentlichungEintragen(eintrag, medienId);
-        if (!echt.bestaetigt) log(`  ○ Probelauf: Reel ${eintrag.slot} ${echt.grund} – bleibt geplant.`);
+        if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "reel", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Reel ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
         if (echt.bestaetigt) vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: "reel", thema: reel.themaId, fach: reel.fach, titel: reel.szenen[0]?.titel || reel.kurztitel, hookTyp: reel.hookTyp, hookMuster: reel.hookMuster, medienId, variante: varianteReel, hashtags: reel.hashtags, stimmeId: r.stimmeId || null, stimmeName: r.stimmeName || null, layout: r.layout || null, dauer: Math.round(r.dauer * 10) / 10, veroeffentlicht: new Date().toISOString() });
         if (echt.bestaetigt) eintrag.kanaele = await verteilen({ art: "reel", videoUrl, videoPfad: r.video, bildUrls: [coverUrl], titel: reel.kurztitel || reel.szenen[0]?.titel, text: caption, hashtags: reel.hashtags }, { log, trockenlauf: trocken, stateDir: hosting.stateDir });
         fertigeBeitraege.set(eintrag.slot, { ...reel, folien: [{ art: "titel", titel: reel.szenen[0]?.titel, icon: reel.szenen[0]?.icon }], kurztitel: reel.kurztitel });
@@ -747,7 +761,7 @@ async function main() {
       const medienId = schonDa || await ig.beitragPosten({ bildUrls: urls, caption });
       kontingent.genutzt += 1;
       const echt = veroeffentlichungEintragen(eintrag, medienId);
-      if (!echt.bestaetigt) log(`  ○ Probelauf: Beitrag ${eintrag.slot} ${echt.grund} – bleibt geplant.`);
+      if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "beitrag", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Beitrag ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
       const karteIndex = beitrag.folien.findIndex((f) => f.art === "karte");
       if (echt.bestaetigt) vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: eintrag.format, thema: beitrag.themaId, fach: beitrag.fach, titel: beitrag.folien[0].titel, hookTyp: beitrag.hookTyp, medienId, variante, hashtags: beitrag.hashtags, veroeffentlicht: new Date().toISOString(), karteUrl: karteIndex >= 0 ? urls[karteIndex] : null });
       fertigeBeitraege.set(eintrag.slot, beitrag);
@@ -855,13 +869,14 @@ async function main() {
         kontingent.genutzt += 1;
       }
       const echt = veroeffentlichungEintragen(eintrag, medienId);
-      if (!echt.bestaetigt) log(`  ○ Probelauf: Story ${eintrag.slot} ${echt.grund} – bleibt geplant.`);
+      if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "story", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Story ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
       if (echt.bestaetigt) vermerken(ledger, { datum, art: "story", slot: eintrag.slot, storyArt: story.art, thema: story.themaId || eintrag.themaId || null, fach: story.fach, titel: story.titel || story.text || "", medienId, veroeffentlicht: new Date().toISOString() });
       ledgerSpeichern(ledgerPfad, ledger);
       planSpeichern(hosting, plan);
       hosting.commit(`Veröffentlicht: Story ${datum} ${eintrag.slot}`);
       await hosting.push();
-      log(`  ✓ Story ${eintrag.slot} ${story.art}${eintrag.interaktiv ? " mit Umfrage" : ""} → ${medienId}`);
+      if (echt.bestaetigt) log(`  ✓ Story ${eintrag.slot} ${story.art}${eintrag.interaktiv ? " mit Umfrage" : ""} → ${medienId}`);
+      else log(`  ○ Story ${eintrag.slot} ${story.art} gerendert, aber nicht gesendet.`);
     } catch (e) {
       if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); continue; }
       fehler++;
@@ -884,7 +899,14 @@ async function main() {
   }
 
   await zustandSichern(`Zustand ${datum}`);
-  if (trocken && ig.protokoll.length) fs.writeFileSync(path.join(AUSGABE, "trockenlauf.json"), JSON.stringify(ig.protokoll, null, 2));
+  /* Das Protokoll des Trockenlaufs: nur lokal, nie im Asset-Zweig. Es sagt,
+     was hinausgegangen WÄRE - und lässt den Tagesplan in Ruhe. */
+  if (ig.protokoll.length || probelaeufe.length) {
+    fs.mkdirSync(AUSGABE, { recursive: true });
+    fs.writeFileSync(path.join(AUSGABE, "trockenlauf.json"),
+      JSON.stringify({ datum, trocken, gesendet: ig.protokoll, nichtVeroeffentlicht: probelaeufe }, null, 2));
+  }
+  if (probelaeufe.length) log(`Probelauf: ${probelaeufe.length} Posten wurden erzeugt, aber nicht veröffentlicht (out/${datum}/trockenlauf.json).`);
   log(`Fertig · ${plan.beitraege.filter((b) => b.status === "veroeffentlicht").length}/${plan.beitraege.length} Beiträge, ${plan.stories.filter((s) => s.status === "veroeffentlicht").length}/${plan.stories.length} Stories · Fehler: ${fehler}`);
   if (fehler) process.exitCode = 1;
 }
@@ -924,7 +946,7 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
       const medienId = schonDa || await ig.beitragPosten({ bildUrls: urls, caption });
       const karteIndex = beitrag.folien.findIndex((f) => f.art === "karte");
       /* Bei einem bereits vorhandenen Beitrag ist die gemessene Variante die des Vorgängers – nicht eintragen. */
-      if (!echteMedienId(medienId)) log(`  ○ Probelauf: ${eintrag.slot} ohne Medien-ID – nicht vermerkt.`);
+      if (!echteMedienId(medienId)) { probelaeufe.push({ slot: eintrag.slot, art: "auffuellen", kennung: String(medienId ?? ""), zeit: new Date().toISOString() }); log(`  ○ Probelauf: ${eintrag.slot} ohne Medien-ID – nicht vermerkt.`); }
       if (echteMedienId(medienId)) vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: eintrag.format, thema: beitrag.themaId, fach: beitrag.fach, titel: beitrag.folien[0].titel, hookTyp: beitrag.hookTyp, medienId, variante: schonDa ? null : variante, hashtags: beitrag.hashtags, veroeffentlicht: new Date().toISOString(), karteUrl: karteIndex >= 0 ? urls[karteIndex] : null });
       /* Der Fortschritt zaehlt nur, was wirklich erschienen ist - sonst
          glaubt der naechste Lauf, ein Trockenlauf haette den Feed gefuellt. */

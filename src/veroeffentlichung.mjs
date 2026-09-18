@@ -5,16 +5,17 @@
    Er hat nichts an Instagram geschickt - und trotzdem Plan und Ledger so
    beschrieben, als waere es geschehen: `status: "veroeffentlicht"`,
    `medienId: "trocken"`. Der naechste Lauf haette Beitrag und Story
-   uebersprungen, und der Tag waere still ausgefallen. Aufgefallen ist es nur,
-   weil jemand nachgesehen hat.
+   uebersprungen, und der Tag waere still ausgefallen.
 
-   Die Lehre ist nicht „im Trockenlauf weniger schreiben“, sondern: Ein Posten
-   gilt erst als veroeffentlicht, wenn Instagram eine Medien-ID zurueckgegeben
-   hat. Alles andere ist ein Probelauf und wird auch so vermerkt - sichtbar,
-   aber ohne Wirkung auf den Produktionszustand.
-
-   Die Unterscheidung steht hier und nicht verstreut an den vier Sendestellen,
-   damit sie an allen vieren dieselbe ist.
+   Die Regel: Ein Posten gilt erst als veroeffentlicht, wenn Instagram eine
+   Medien-ID zurueckgegeben hat. Alles andere ist ein Probelauf - und ein
+   Probelauf hinterlaesst im Produktionszustand GAR NICHTS. Auch keinen
+   Vermerk: Die erste Fassung dieser Reparatur legte ein Feld `probelauf` an,
+   und eine spaetere Pruefung erkannte daran einen kontaminierten Plan und
+   verwarf ihn ganz. Ein Trockenlauf mitten am Tag haette damit die bereits
+   veroeffentlichten Slots aus dem Plan geloescht - schlimmer als der Fehler,
+   den er verhindern sollte. Was ein Trockenlauf getan haette, gehoert in sein
+   eigenes Protokoll, nicht in den Tagesplan.
    ========================================================================== */
 
 /* Kennung, die der Instagram-Client im Trockenlauf statt einer Medien-ID
@@ -48,38 +49,66 @@ export function veroeffentlichtBestaetigt(eintrag) {
 /**
  * Traegt das Ergebnis eines Sendeversuchs in den Plan-Eintrag ein.
  *
- * Bestaetigt (echte Medien-ID): Status, ID und Zeitpunkt werden gesetzt, ein
- * frueherer Probelauf-Vermerk verschwindet - der Eintrag ist jetzt echt.
+ * Bestaetigt (echte Medien-ID): Status, ID und Zeitpunkt werden gesetzt.
  *
- * Nicht bestaetigt (Trockenlauf, leere Antwort): Der Eintrag bleibt
- * `geplant`. Vermerkt wird nur, dass ein Probelauf ihn erzeugt hat, unter
- * einem eigenen Feld, das keine Produktionslogik liest.
+ * Nicht bestaetigt: Der Eintrag wird NICHT angefasst. Er bleibt so, wie er
+ * war - in aller Regel `geplant`. Der Aufrufer bekommt die Beschreibung
+ * zurueck und schreibt sie in das Protokoll des Trockenlaufs.
  *
- * @returns {{bestaetigt: boolean, medienId: string|null, grund: string}}
+ * @returns {{bestaetigt: boolean, medienId: string|null, kennung: string, grund: string}}
  */
 export function veroeffentlichungEintragen(eintrag, medienId, opt = {}) {
-  if (!eintrag) return { bestaetigt: false, medienId: null, grund: "kein Plan-Eintrag" };
-  const jetzt = opt.jetzt || new Date().toISOString();
+  if (!eintrag) return { bestaetigt: false, medienId: null, kennung: "", grund: "kein Plan-Eintrag" };
   if (!echteMedienId(medienId)) {
     const kennung = typeof medienId === "string" && medienId ? medienId : PROBE_KENNUNG;
-    eintrag.probelauf = { zeit: jetzt, kennung };
-    return { bestaetigt: false, medienId: null, grund: `ohne Medien-ID von Instagram (${kennung})` };
+    return { bestaetigt: false, medienId: null, kennung, grund: `ohne Medien-ID von Instagram (${kennung})` };
   }
-  delete eintrag.probelauf;
   eintrag.status = "veroeffentlicht";
   eintrag.medienId = medienId;
-  eintrag.veroeffentlicht = jetzt;
-  return { bestaetigt: true, medienId, grund: "" };
+  eintrag.veroeffentlicht = opt.jetzt || new Date().toISOString();
+  return { bestaetigt: true, medienId, kennung: "", grund: "" };
 }
 
 /**
- * Traegt ein alter Plan Spuren eines Trockenlaufs? Solche Plaene wurden live
- * schon bisher verworfen; geprueft wurde aber nur auf die Zeichenfolge
- * „trocken“. Jede andere Ersatzkennung waere durchgerutscht.
+ * Altbestand in Ordnung bringen, Eintrag fuer Eintrag.
+ *
+ * Plaene von vor dieser Reparatur koennen Slots enthalten, die als
+ * veroeffentlicht gelten, ohne es zu sein. Frueher wurde deshalb der ganze
+ * Tagesplan verworfen und neu erzeugt. Das ist zu grob: Stehen daneben echte
+ * Veroeffentlichungen, gehen deren Zustaende verloren, und der Bot schickt
+ * sie ein zweites Mal hinaus.
+ *
+ * Stattdessen wird genau das zurueckgesetzt, was nicht belegt ist. Ein Slot
+ * ohne echte Medien-ID gilt als nicht erschienen (fail closed) und wird
+ * wieder faellig; alle uebrigen bleiben unangetastet.
+ *
+ * @returns {Array<{slot: string, grund: string}>} was bereinigt wurde
  */
-export function ausTrockenlauf(plan) {
-  if (!plan) return false;
-  if (plan.trocken) return true;
-  return [...(plan.beitraege || []), ...(plan.stories || [])]
-    .some((e) => e && (e.probelauf || (e.status === "veroeffentlicht" && !echteMedienId(e.medienId))));
+export function planBereinigen(plan) {
+  const bereinigt = [];
+  for (const e of [...(plan?.beitraege || []), ...(plan?.stories || [])]) {
+    if (!e) continue;
+    /* Feld aus der ersten Fassung dieser Reparatur - es gehoert nicht in den
+       Plan und wird kommentarlos entfernt. */
+    if (e.probelauf) delete e.probelauf;
+    if (e.status === "veroeffentlicht" && !echteMedienId(e.medienId)) {
+      bereinigt.push({ slot: e.slot, grund: `galt als veroeffentlicht, Medien-ID „${e.medienId ?? "fehlt"}“ ist keine` });
+      delete e.medienId;
+      delete e.veroeffentlicht;
+      delete e.kanaele;
+      e.status = "geplant";
+    }
+  }
+  return bereinigt;
+}
+
+/**
+ * Ein Plan, der KOMPLETT aus einem Trockenlauf stammt und noch nichts
+ * Echtes enthaelt, darf neu erzeugt werden - dabei geht nichts verloren.
+ * Sobald auch nur ein Slot bestaetigt veroeffentlicht ist, wird er
+ * stattdessen bereinigt.
+ */
+export function planNurAusTrockenlauf(plan) {
+  if (!plan?.trocken) return false;
+  return ![...(plan.beitraege || []), ...(plan.stories || [])].some(veroeffentlichtBestaetigt);
 }
