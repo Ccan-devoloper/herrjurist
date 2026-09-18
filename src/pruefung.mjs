@@ -505,21 +505,182 @@ export function quizBefunde(stories = []) {
 }
 
 /**
- * Darf diese Antwort-Story jetzt erscheinen? Eine Antwort ohne ihre Frage ist
- * fuer die Lesenden sinnlos; am 16.09. ging sie beim Schwesterkanal sogar
- * zuerst raus. Geplante Uhrzeiten sind keine Abhaengigkeit - der Zustand ist
- * es.
- * @returns {{status:"frei"|"warten"|"verfallen", frage:object|null, grund:string}}
+ * Freigabe eines Quiz-Paares unmittelbar vor der Veroeffentlichung.
+ *
+ * Das Quiz ist fachlich EIN Gegenstand. Der erste aeussere Schritt - die
+ * Veroeffentlichung einer der beiden Kacheln - darf erst erfolgen, wenn das
+ * ganze Paar sendebereit ist. Die erste Fassung dieses Gates schuetzte nur die
+ * Antwortseite; eine Frage konnte erscheinen, obwohl ihre Antwort fehlte, noch
+ * ungeprueft war, fachlich beanstandet war oder andere Optionen trug.
+ *
+ * Drei Wege fuehren hier zu "nicht veroeffentlichen", und sie bedeuten
+ * Verschiedenes:
+ *   warten        - der Zustand kann sich noch klaeren, der naechste Lauf sieht neu nach
+ *   verfallen     - das Paar erscheint heute nicht mehr
+ *   inkonsistent  - Plan und gespeicherter Zustand widersprechen sich; das ist
+ *                   ein Fehlerzustand, kein normaler Ablauf, und wird als
+ *                   solcher vermerkt. Fail closed: im Zweifel nicht senden.
+ *
+ * @param {object} eintrag       Plan-Eintrag der Story, die jetzt erscheinen soll
+ * @param {object[]} planStories alle Story-Eintraege des Tagesplans
+ * @param {(slot:string)=>object|null} textLesen liest den gespeicherten Kandidaten
+ * @returns {{status:"frei"|"warten"|"verfallen"|"inkonsistent", grund:string, partner:object|null}}
  */
-export function quizReihenfolge(antwortEintrag, planStories = []) {
-  const k = paarSchluessel(antwortEintrag);
-  const frage = (planStories || []).find((s) => s.art === "frage" && paarSchluessel(s) === k && k != null) || null;
-  if (!frage) return { status: "frei", frage: null, grund: "keine zugehoerige Frage im Plan" };
-  if (frage.status === "veroeffentlicht") return { status: "frei", frage, grund: "Frage ist veroeffentlicht" };
-  if (frage.fehler || frage.status === "uebersprungen") {
-    return { status: "verfallen", frage, grund: `Frage ${frage.slot} erscheint heute nicht` };
+export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => null) {
+  if (!eintrag || !QUIZ_ARTEN.includes(eintrag.art)) return { status: "frei", grund: "keine Quiz-Kachel", partner: null };
+  const schluessel = paarSchluessel(eintrag);
+  if (!schluessel) return { status: "inkonsistent", grund: "Quiz-Kachel ohne Paar-Schluessel", partner: null };
+  const gegenart = eintrag.art === "frage" ? "antwort" : "frage";
+  const partner = (planStories || []).find((s) => s && s.art === gegenart && paarSchluessel(s) === schluessel) || null;
+  /* Kein Gegenstueck im Plan ist kein harmloser Sonderfall, sondern ein
+     widerspruechlicher Zustand: Eine Antwort ohne Frage ist fuer die Lesenden
+     sinnlos, eine Frage ohne Antwort bleibt unbeantwortet. */
+  if (!partner) return { status: "inkonsistent", grund: `kein Gegenstueck (${gegenart}) im Plan`, partner: null };
+  if (partner.fehler || partner.status === "uebersprungen") {
+    return { status: "verfallen", grund: `${gegenart} ${partner.slot} erscheint heute nicht`, partner };
   }
-  return { status: "warten", frage, grund: `Frage ${frage.slot} ist noch nicht veroeffentlicht` };
+
+  const eigen = textLesen(eintrag.slot);
+  if (!eigen) return { status: "warten", grund: "eigener Text fehlt noch", partner };
+  const partnerText = textLesen(partner.slot);
+  if (!partnerText) {
+    /* Der Plan sagt veroeffentlicht, der gespeicherte Text fehlt: Dann laesst
+       sich das Paar nicht mehr pruefen. Keine Einzelpruefung als Ersatz. */
+    if (partner.status === "veroeffentlicht") {
+      return { status: "inkonsistent", grund: `${gegenart} ${partner.slot} gilt als veroeffentlicht, ihr gespeicherter Text fehlt - das Paar ist nicht pruefbar`, partner };
+    }
+    return { status: "warten", grund: `${gegenart} ${partner.slot} hat noch keinen Text`, partner };
+  }
+
+  const partnerFrei = storyFreigabe(partnerText);
+  if (!partnerFrei.frei) {
+    return { status: partnerFrei.warten ? "warten" : "verfallen", grund: `${gegenart} ${partner.slot}: ${partnerFrei.grund}`, partner };
+  }
+
+  /* Der Paar-Schluessel wird beim Vergleich mitgegeben: Ein Kandidat aus der
+     Zeit vor pairId traegt ihn sonst nicht, und die Paarpruefung fiele still
+     aus. */
+  const mitSchluessel = (o, art) => ({ ...o, art, pairId: schluessel });
+  const frage = eintrag.art === "frage" ? mitSchluessel(eigen, "frage") : mitSchluessel(partnerText, "frage");
+  const antwort = eintrag.art === "frage" ? mitSchluessel(partnerText, "antwort") : mitSchluessel(eigen, "antwort");
+  const befunde = quizBefunde([frage, antwort]);
+  if (befunde.length) return { status: "verfallen", grund: befunde.join(" · "), partner };
+
+  /* Reihenfolge: Die Antwort wartet auf ihre veroeffentlichte Frage. */
+  if (eintrag.art === "antwort" && partner.status !== "veroeffentlicht") {
+    return { status: "warten", grund: `Frage ${partner.slot} ist noch nicht veroeffentlicht`, partner };
+  }
+  return { status: "frei", grund: "", partner };
+}
+
+/* --- Der zweite Versuch nimmt den Partner mit (Safety 0d) ---------------
+   Am 16.09. war nur eine der beiden Quiz-Kacheln beanstandet. Neu geschrieben
+   wurde auch nur sie - und passte danach nicht mehr zur anderen: dieselbe
+   Frage, andere Optionen. Wer ein Paar zur Haelfte neu schreibt, erzeugt die
+   Drift, die er verhindern will.
+
+   Drei Faelle, drei Wege:
+     veroeffentlicht       unveraenderlich, gibt die Optionen vor
+     gespeichert, sauber   unveraenderlich, gibt die Optionen vor
+     fehlt oder beanstandet gemeinsam neu schreiben
+
+   Wichtig ist die Quelle der Entscheidung: der Zustand des ganzen Paares, nicht
+   die Teilmenge der Slots ohne gespeicherte Datei. Ein Partner, der geschrieben,
+   aber noch nicht veroeffentlicht ist, steht in dieser Teilmenge nicht.
+
+   @param {object[]} strittig    beanstandete Entwuerfe (mit .slot)
+   @param {object[]} planStories Plan-Eintraege des Tages
+   @param {Function} textLesen   (slot) => gespeicherter Text oder null
+   @returns {{slots: object[], paarSlots: Set<string>, festeOptionen: string[], warnungen: string[]}}
+*/
+export const alleBefunde = (s) => [...(s?.beanstandet || []), ...(s?.beanstandetFachlich || [])];
+
+export function quizNachschlag(strittig = [], planStories = [], textLesen = () => null) {
+  const planStory = (slot) => (planStories || []).find((x) => x && x.slot === slot) || null;
+  const partnerVon = (slot) => {
+    const e = planStory(slot);
+    if (!e || !QUIZ_ARTEN.includes(e.art)) return null;
+    const gegenart = e.art === "frage" ? "antwort" : "frage";
+    const schluessel = paarSchluessel(e);
+    if (!schluessel) return null;
+    return (planStories || []).find((x) => x && x.art === gegenart && paarSchluessel(x) === schluessel) || null;
+  };
+
+  const neuSchreiben = new Map();
+  for (const s of strittig) { const e = planStory(s.slot); if (e) neuSchreiben.set(s.slot, e); }
+  const paarSlots = new Set();
+  const festeOptionen = [];
+  const warnungen = [];
+
+  for (const s of strittig) {
+    const partner = partnerVon(s.slot);
+    if (!partner) continue;
+    paarSlots.add(s.slot);
+    const partnerText = textLesen(partner.slot);
+    const unveraenderlich = partnerText && !alleBefunde(partnerText).length && partnerText.optionen?.length;
+    if (unveraenderlich) {
+      const wie = partner.status === "veroeffentlicht"
+        ? "ist bereits veröffentlicht und darf nicht verändert werden"
+        : "ist bereits geschrieben und wird nicht angefasst";
+      const wer = partner.art === "frage" ? "Frage" : "Antwort";
+      festeOptionen.push(`Slot ${s.slot}: Die zugehörige ${wer} (Slot ${partner.slot}) ${wie}. Übernimm exakt diese Optionen in exakt dieser Reihenfolge: ${partnerText.optionen.map((o, i) => `${String.fromCharCode(65 + i)}) ${o}`).join(" | ")}.`);
+      continue;
+    }
+    if (partner.status === "veroeffentlicht") {
+      /* Veroeffentlicht, aber kein brauchbarer Text: Dann laesst sich nichts
+         Passendes erzeugen. Das Gate blockiert das Paar ohnehin. */
+      warnungen.push(`Partner ${partner.slot} gilt als veröffentlicht, liefert aber keine Optionen - das Paar bleibt gesperrt.`);
+      continue;
+    }
+    const e = planStory(partner.slot);
+    if (e) { neuSchreiben.set(partner.slot, e); paarSlots.add(partner.slot); }
+  }
+
+  return { slots: [...neuSchreiben.values()], paarSlots, festeOptionen, warnungen };
+}
+
+/* --- Lebenslauf eines fachlichen Befundes (Safety 0, Nachtrag) ----------
+   Ein fachlicher Befund gehoert zu genau EINER Fassung eines Textes. Bisher
+   hingen neue Befunde nur hinten an: Lief der Faktencheck ein zweites Mal
+   ueber denselben Text und war diesmal zufrieden, blieb der alte Befund
+   trotzdem stehen - die Kachel war nicht mehr zu retten, obwohl die Sache
+   geklaert war. Umgekehrt konnten Befunde einer laengst ueberschriebenen
+   Fassung eine neue Fassung blockieren.
+
+   Deshalb traegt jede fachlich geprueften Kachel einen Stempel ihrer Fassung.
+   Eine neue fachliche Vollpruefung ersetzt die fachlichen Befunde dieser
+   Fassung vollstaendig; Befunde anderer Herkunft (Form, Quiz-Invarianten)
+   bleiben unberuehrt.
+
+   Der Stempel ist bewusst schlicht und ohne Krypto-Anspruch: Er muss zwei
+   Fassungen unterscheiden koennen, nicht Faelschungen abwehren. */
+const STEMPEL_FELDER = ["slot", "art", "titel", "text", "norm", "formel", "richtigText", "falsch", "ueberzeile", "zahl", "richtig"];
+
+export function fachStempel(story) {
+  if (!story) return "";
+  const teile = STEMPEL_FELDER.map((k) => `${k}=${story[k] ?? ""}`);
+  if (Array.isArray(story.optionen)) teile.push(`optionen=${story.optionen.join("\u0001")}`);
+  const roh = teile.join("\u0002");
+  let h = 2166136261;
+  for (let i = 0; i < roh.length; i++) { h ^= roh.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return `${(h >>> 0).toString(36)}-${roh.length}`;
+}
+
+/**
+ * Schliesst eine fachliche Vollpruefung ab: Die uebergebenen Befunde sind das
+ * vollstaendige fachliche Ergebnis fuer diese Fassung und ersetzen alles, was
+ * vorher fachlich beanstandet war. Eine leere Liste heisst also: fachlich
+ * sauber - und der alte Befund ist erledigt.
+ */
+export function fachpruefungAbschliessen(story, befunde = []) {
+  if (!story) return story;
+  const liste = (befunde || []).map(String).filter(Boolean);
+  if (liste.length) story.beanstandetFachlich = liste;
+  else delete story.beanstandetFachlich;
+  delete story.faktencheckOffen;
+  story.befundeTypisiert = true;
+  story.fachStand = fachStempel(story);
+  return story;
 }
 
 /* --- Wer darf welchen Befund schliessen? (Safety 0c) ---------------------

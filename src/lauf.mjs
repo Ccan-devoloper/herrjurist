@@ -22,7 +22,7 @@ import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool, KLAUSUREN } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
-import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizReihenfolge, storyFreigabe } from "./pruefung.mjs";
+import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizPaarFreigabe, storyFreigabe, quizNachschlag, alleBefunde } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
@@ -38,6 +38,7 @@ import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
 import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, vortagsSchaetzung, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
+import { zustandsSicherung } from "./zustand.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -73,11 +74,11 @@ const varianteStory = (slot) => (CONFIG.marke.farbeJeKlausur ? 0 : (Number(slot.
    einem Stand, der 0,17 $ zu niedrig war.
 
    Die Funktion haengt deshalb nicht mehr im Ablauf von main(), sondern wird
-   dort einmal gesetzt und am Ende des Prozesses in jedem Fall aufgerufen. Sie
-   sichert genau einmal; ein zweiter Aufruf tut nichts, damit die Wochenkosten
-   nicht doppelt gezaehlt werden. */
+   dort einmal gesetzt und am Ende des Prozesses in jedem Fall aufgerufen. Was
+   sie genau einmal tut (Kosten) und was sie wiederholen darf (Commit, Push),
+   steht in src/zustand.mjs - ein gescheiterter Push wird dort erneut
+   versucht, ohne die Wochenkosten ein zweites Mal zu addieren. */
 let zustandSichern = async () => {};
-let zustandGesichert = false;
 
 function planSpeichern(hosting, plan) {
   hosting.jsonSchreiben(`plaene/${plan.datum}.json`, plan);
@@ -290,29 +291,7 @@ async function main() {
       log(`  Uhrzeiten: ${zs.gesamt ? `aus ${zs.gesamt} gemessenen Beiträgen gelernt` : "noch ohne Messungen"}${zs.gesamt < 20 ? ", weitere Stunden werden ausprobiert" : ""}`);
     }
   }
-  zustandSichern = async (nachricht = `Zustand ${datum}`) => {
-    if (zustandGesichert) return;
-    zustandGesichert = true;
-    /* Kosten der Woche und Fehler für den Bericht festhalten. */
-    const kosten = kostenAbschluss();
-    if (kosten.aufrufe) {
-      const k = hosting.jsonLesen("kosten.json", { wochen: {} });
-      const kw = wochenKennung(datum);
-      const w = k.wochen[kw] || { usd: 0, aufrufe: 0, cacheSumme: 0 };
-      w.usd += kosten.usd; w.aufrufe += kosten.aufrufe; w.cacheSumme += kosten.cacheAnteil * kosten.aufrufe; w.cacheAnteil = w.cacheSumme / w.aufrufe;
-      k.wochen[kw] = w;
-      hosting.jsonSchreiben("kosten.json", k);
-    }
-    const fehlerListe = hosting.jsonLesen("fehler.json", []);
-    for (const e of [...plan.beitraege, ...plan.stories]) if (e.fehler && !fehlerListe.includes(e.fehler)) fehlerListe.push(e.fehler);
-    hosting.jsonSchreiben("fehler.json", fehlerListe.slice(-50));
-
-    const geloescht = hosting.aufraeumen();
-    if (geloescht) hosting.commit(`Alte Bilder entfernt (${geloescht} Tage)`);
-    planSpeichern(hosting, plan);
-    hosting.commit(nachricht);
-    await hosting.push();
-  };
+  zustandSichern = zustandsSicherung({ hosting, plan, datum, kostenAbschluss, wochenKennung, planSpeichern });
 
   if (nurPlanen) {
     for (const b of plan.beitraege) log(`  ${b.zeit} Beitrag ${b.slot} ${b.format} ${b.themaTitel || ""} [${b.status}]`);
@@ -644,44 +623,27 @@ async function main() {
         /* Beanstandete Slots einmal neu schreiben statt sie zu verlieren: ein
            Nachschlag für zwei, drei Slots kostet nur wenige Cent. */
         hosting.commit(`Story-Texte ${datum}`);
-        const alleBefunde = (s) => [...(s.beanstandet || []), ...(s.beanstandetFachlich || [])];
         const strittig = neu.filter((s) => alleBefunde(s).length);
         if (strittig.length) try {
-          /* Safety 0, Abschnitt 10: Ein Quizslot wird nie allein neu
-             geschrieben. Genau das ist am 16.09. passiert - nur die Antwort
-             wurde neu erzeugt, und sie passte danach nicht mehr zu ihrer
-             Frage. Ist der Partner noch nicht draussen, wird er mit neu
-             geschrieben; ist er schon veroeffentlicht, ist er unveraenderlich
-             und gibt die Optionen vor. */
-          const planStory = (slot) => plan.stories.find((x) => x.slot === slot);
-          const partnerVon = (slot) => {
-            const e = planStory(slot);
-            if (!e || (e.art !== "frage" && e.art !== "antwort")) return null;
-            const gegen = e.art === "frage" ? "antwort" : "frage";
-            return plan.stories.find((x) => x.art === gegen && x.themaId && x.themaId === e.themaId) || null;
-          };
-          const slots = new Set(strittig.map((s) => s.slot));
-          const festeOptionen = [];
-          for (const s of strittig) {
-            const partner = partnerVon(s.slot);
-            if (!partner) continue;
-            if (partner.status !== "veroeffentlicht") { slots.add(partner.slot); continue; }
-            const fest = geschrieben.get(partner.slot) || hosting.jsonLesen(`inhalte/${datum}-${partner.slot}.json`, null);
-            if (fest?.optionen?.length) {
-              festeOptionen.push(`Slot ${s.slot}: Die zugehörige ${partner.art === "frage" ? "Frage" : "Antwort"} (Slot ${partner.slot}) ist bereits veröffentlicht und darf nicht verändert werden. Übernimm exakt diese Optionen in exakt dieser Reihenfolge: ${fest.optionen.map((o, i) => `${String.fromCharCode(65 + i)}) ${o}`).join(" | ")}.`);
-            }
-          }
-          const mitPartner = offen.filter((o) => slots.has(o.slot));
+          /* Safety 0d: Ein Quizslot wird nie allein neu geschrieben. Welche
+             Slots mitmuessen und welcher Partner unveraenderlich ist, steht in
+             quizNachschlag() - dort ist es ohne Netz und Instagram pruefbar. */
+          const partnerText = (slot) => geschrieben.get(slot) || hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null);
+          const { slots: mitPartner, paarSlots, festeOptionen, warnungen } = quizNachschlag(strittig, plan.stories, partnerText);
+          for (const w of warnungen) console.warn(`  ! ${w}`);
           const hinweis = [
             `Die folgenden Entwürfe wurden abgelehnt – formuliere sie vollständig neu:\n${strittig.map((s) => `- Slot ${s.slot}: ${alleBefunde(s).join("; ")}`).join("\n")}`,
             mitPartner.length > strittig.length ? "Frage und Antwort eines Quiz gehören zusammen: Beide Kacheln werden gemeinsam neu geschrieben und müssen dieselben Optionen in derselben Reihenfolge tragen." : "",
             ...festeOptionen,
           ].filter(Boolean).join("\n\n");
-          log(`  ${strittig.length} Story-Entwürfe beanstandet – zweiter Versuch${mitPartner.length > strittig.length ? ` (mit ${mitPartner.length - strittig.length} Partner-Kachel)` : ""}`);
+          log(`  ${strittig.length} Story-Entwürfe beanstandet – zweiter Versuch${mitPartner.length > strittig.length ? ` (mit ${mitPartner.length - strittig.length} Partner-Kachel)` : ""}${festeOptionen.length ? `, ${festeOptionen.length} Partner unverändert` : ""}`);
           const zweite = await storiesSchreiben(auftrag(mitPartner), datum, hinweis);
           for (const s of zweite) {
             const vorher = geschrieben.get(s.slot);
-            if (alleBefunde(s).length && vorher && !alleBefunde(vorher).length) continue;
+            /* Bei Paaren gilt die neue Lieferung als Ganzes: Eine alte
+               Haelfte mit einer neuen zu mischen ist genau die Drift, die
+               verhindert werden soll. */
+            if (!paarSlots.has(s.slot) && alleBefunde(s).length && vorher && !alleBefunde(vorher).length) continue;
             hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s); geschrieben.set(s.slot, s);
           }
           hosting.commit(`Story-Texte ${datum} (zweiter Versuch)`);
@@ -829,35 +791,27 @@ async function main() {
           hosting.jsonSchreiben(`inhalte/${datum}-${eintrag.slot}.json`, story);
         }
       }
-      /* Safety 0a: Eine Antwort erscheint nie vor ihrer Frage, und nur mit
-         ihr zusammen. Geplante Uhrzeiten sind keine Abhaengigkeit - am 16.09.
-         stand die Antwort beim Schwesterkanal Minuten VOR der endgueltigen
-         Frage im Kanal. Faellt die Frage endgueltig aus, faellt die Antwort
-         mit ihr; eine Antwort ohne Frage ist fuer die Lesenden nichts wert.
-
-         Direkt davor noch einmal die Paarpruefung auf dem, was wirklich
-         veroeffentlicht wird: Zwischen Schreiben und Senden kann ein
-         einzelner Slot neu geschrieben worden sein. */
-      if (eintrag.art === "antwort") {
-        const ordnung = quizReihenfolge(eintrag, plan.stories);
-        if (ordnung.status === "warten") { log(`Story ${eintrag.slot}: ${ordnung.grund} - spaeter.`); continue; }
-        if (ordnung.status === "verfallen") {
-          log(`Story ${eintrag.slot}: ${ordnung.grund} - die Antwort entfaellt mit ihr.`);
-          eintrag.status = "uebersprungen"; continue;
-        }
-        if (ordnung.frage) {
-          const frageText = hosting.jsonLesen(`inhalte/${datum}-${ordnung.frage.slot}.json`, null);
-          const paarBefunde = quizBefunde([frageText, story].filter(Boolean));
-          if (paarBefunde.length) {
-            log(`Story ${eintrag.slot} passt nicht mehr zur Frage ${ordnung.frage.slot}: ${paarBefunde.join(" · ")} - uebersprungen.`);
-            eintrag.status = "uebersprungen"; continue;
+      /* Safety 0: Das Quiz ist EIN Gegenstand. Weder Frage noch Antwort
+         erscheinen allein - erst wenn beide Kacheln gespeichert, freigegeben
+         und zueinander passend sind, geht die erste von beiden raus. Geprueft
+         wird hier auf dem, was wirklich gespeichert ist, nicht auf dem, was
+         der Plan behauptet: Zwischen Schreiben und Senden kann ein einzelner
+         Slot neu geschrieben worden sein, und genau das ist am 16.09.
+         passiert. */
+      if (eintrag.art === "frage" || eintrag.art === "antwort") {
+        const paar = quizPaarFreigabe(eintrag, plan.stories, (slot) => hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null));
+        if (paar.status !== "frei") {
+          const nachsatz = paar.status === "warten" ? "spaeter." : "uebersprungen.";
+          log(`Story ${eintrag.slot}: ${paar.grund} - ${nachsatz}`);
+          if (paar.status !== "warten") eintrag.status = "uebersprungen";
+          /* Ein widerspruechlicher Zustand ist kein normaler Ablauf: Er wird
+             am Eintrag vermerkt, damit er im Bericht auftaucht, statt still
+             jeden Lauf zu wiederholen. */
+          if (paar.status === "inkonsistent") {
+            eintrag.fehler = `${new Date().toISOString()} Quiz-Paar inkonsistent: ${paar.grund}`;
+            console.warn(`  ! Quiz-Paar ${eintrag.slot}: ${paar.grund}`);
           }
-        }
-      } else if (eintrag.art === "frage") {
-        const eigene = quizBefunde([story]);
-        if (eigene.length) {
-          log(`Story ${eintrag.slot} beanstandet: ${eigene.join(" · ")} - uebersprungen.`);
-          eintrag.status = "uebersprungen"; continue;
+          continue;
         }
       }
 
