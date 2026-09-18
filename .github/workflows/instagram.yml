@@ -34,6 +34,14 @@ on:
         description: "Intern: nichts veröffentlichen, nur die Weckkette fortsetzen"
         type: boolean
         default: false
+      break_glass_usd:
+        description: "Break Glass: Core-Deckel NUR FÜR DIESEN LAUF auf diesen Betrag (leer = Regeldeckel 0,32 $). Nur von Hand, nie aus dem Zeitplan."
+        type: string
+        default: ""
+      break_glass_grund:
+        description: "Break Glass: Begründung (Pflicht, sonst wirkt der Betrag nicht)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -162,6 +170,12 @@ jobs:
           # hat den im Code beschlossenen Deckel still überschrieben - die Änderung
           # lief durch Review und CI und wirkte trotzdem nicht. Der Deckel steht
           # jetzt nur noch in src/config.mjs, wo er nachvollziehbar ist.
+          # Break Glass: wirkt nur bei workflow_dispatch, nur mit Begründung und
+          # nur für diesen einen Lauf. Ein Lauf aus dem Zeitplan bekommt die
+          # Variablen gar nicht erst gesetzt - richtlinie.mjs lehnt ihn sonst ab.
+          IG_BREAK_GLASS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_usd != '' && github.event.inputs.break_glass_grund != '' }}
+          IG_BREAK_GLASS_USD: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_usd || '' }}
+          IG_BREAK_GLASS_GRUND: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_grund || '' }}
           IG_KI_MODELL_PRUEFUNG: ${{ vars.IG_KI_MODELL_PRUEFUNG }}
           IG_KI_VERSUCHE: ${{ vars.IG_KI_VERSUCHE }}
           IG_STIMME: ${{ vars.IG_STIMME }}
@@ -244,6 +258,21 @@ jobs:
           if [ "${{ github.event.inputs.alles }}" = "true" ]; then ARGS="$ARGS --alles"; fi
           if [ -n "${{ github.event.inputs.auffuellen }}" ]; then ARGS="$ARGS --auffuellen=${{ github.event.inputs.auffuellen }}"; fi
           node src/lauf.mjs $ARGS
+
+      # Rohtelemetrie: eine NDJSON-Zeile je bezahltem Aufruf, mit Versuch,
+      # Modell, Tokens, Ceiling, reserviert/tatsächlich/freigegeben. Sie gehört
+      # NICHT in den Asset-Zweig - ein Git-Zweig ist kein Zeitreihenspeicher,
+      # und jeder Klon schleppte die Historie mit. Hier liegt sie als Artefakt
+      # mit begrenzter Aufbewahrung; im Asset-Zweig stehen nur die kleinen
+      # rollenden Fenster je Profil (state/profile.json).
+      - name: Telemetrie sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: telemetrie-${{ github.run_id }}
+          path: out/**/telemetrie.ndjson
+          if-no-files-found: ignore
+          retention-days: 30
 
       - name: Ausgaben sichern (bei Fehlern zur Diagnose)
         if: failure()

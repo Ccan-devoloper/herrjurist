@@ -4606,3 +4606,134 @@ test("1a: Kein bezahlter Anbieteraufruf außerhalb der einen Tür", async () => 
   assert.match(tuer, /griff\.gesendet\(\)/, "und markiert das Absenden");
   assert.equal((tuer.match(/budget\.zulassen\(/g) || []).length >= 2, true);
 });
+
+test("1a Simulation: ein günstiger Tag bleibt unter 0,32 $ und liefert vollständig", async () => {
+  const { budgetStarten } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "sim1-"));
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+
+  /* Gemessene Größenordnung eines guten Tages (14.09.: 0,232 $ Core). */
+  const gemessen = { autor: 1800, faktencheck: 900, reel: 2200, "reel-faktencheck": 700, stories: 1900, "story-faktencheck": 500, bildregie: 400 };
+  klientSetzen({ messages: { create: async (p) => ({ usage: { input_tokens: 1500, output_tokens: p.__aus }, stop_reason: "end_turn", content: [{ type: "text", text: "{}" }] }) } });
+
+  const ruf = (zweck, ceiling, aus, slot) => claudeAufruf({
+    zweck, slot, modell: "claude-sonnet-5",
+    params: { model: "claude-sonnet-5", max_tokens: ceiling, __aus: aus, messages: [{ role: "user", content: "x" }] },
+  });
+
+  /* Das vollständige Pflichtprodukt von Herr Jurist: 2 Karussells + 1 Reel + Stories. */
+  await ruf("autor", 4000, gemessen.autor, "b1");
+  await ruf("faktencheck", 2000, gemessen.faktencheck, "b1");
+  await ruf("autor", 4000, gemessen.autor, "b2");
+  await ruf("faktencheck", 2000, gemessen.faktencheck, "b2");
+  await ruf("reel", 4000, gemessen.reel, "b3");
+  await ruf("reel-faktencheck", 2000, gemessen["reel-faktencheck"], "b3");
+  await ruf("stories", 4000, gemessen.stories, "s*");
+  await ruf("story-faktencheck", 2000, gemessen["story-faktencheck"], "s*");
+  await ruf("bildregie", 1000, gemessen.bildregie, "b3");
+
+  const stand = budget.stand();
+  assert.equal(stand.verbraucht.core <= 0.32, true, `Core ${stand.verbraucht.core} über dem Deckel`);
+  assert.equal(telemetrie.zeilen().length, 9, "neun Pflichtaufrufe, neun Telemetriezeilen");
+  assert.equal(telemetrie.zeilen().every((z) => z.sent && z.outcome === "ok"), true, "alle durchgelaufen");
+  assert.equal(stand.gesperrt.core, null, "kein Topf gesperrt");
+  assert.equal(stand.ungeklaert.length, 0);
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a Simulation: der zu teure Pflichtaufruf startet nicht – und wird gemeldet", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
+  const { obergrenzeUsd } = await import("../src/kosten.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "sim2-"));
+  /* Der Tag ist fast voll: 0,30 von 0,32 $ sind verbraucht. */
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.30 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+
+  let anbieterGerufen = 0;
+  klientSetzen({ messages: { create: async () => { anbieterGerufen++; return { usage: { input_tokens: 1000, output_tokens: 500 }, stop_reason: "end_turn", content: [] }; } } });
+
+  /* Der nächste notwendige Aufruf hat sein Ceiling bei 16.000 Token. Sein
+     Worst Case liegt weit über dem Rest – er startet nicht. */
+  const worstCase = obergrenzeUsd({ modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 });
+  assert.ok(worstCase > 0.02, `Worst Case ${worstCase} $ passt nicht in 0,02 $ Rest`);
+
+  const plan = { beitraege: [{ slot: "b3", format: "reel", status: "geplant" }], stories: [] };
+  let fehler = null;
+  try {
+    await claudeAufruf({ zweck: "reel", slot: "b3", modell: "claude-sonnet-5",
+      params: { model: "claude-sonnet-5", max_tokens: 16000, messages: [{ role: "user", content: "x" }] } });
+  } catch (e) {
+    fehler = e;
+    /* So meldet lauf.mjs den Slot – sichtbar, nicht still. */
+    if (e instanceof AdmissionAbgelehnt) plan.beitraege[0].budgetBlockiert = { seit: "2026-09-19T18:00:00.000Z", grund: e.message, topf: e.topf };
+  }
+
+  assert.ok(fehler instanceof AdmissionAbgelehnt, "abgelehnt, nicht gestartet");
+  assert.equal(anbieterGerufen, 0, "der Anbieter wurde nicht gerufen");
+  assert.equal(budget.stand().verbraucht.core, 0.30, "kein Cent zusätzlich – kein Overspend");
+  assert.ok(budget.stand().verbraucht.core <= 0.32);
+  assert.ok(plan.beitraege[0].budgetBlockiert, "der Slot ist als budget-blockiert vermerkt");
+  assert.match(plan.beitraege[0].budgetBlockiert.grund, /nicht mehr zulässig/);
+  assert.equal(plan.beitraege[0].status, "geplant", "er gilt nicht als veröffentlicht");
+
+  /* Die Ablehnung steht in der Telemetrie – mit Reservierung und Grund. */
+  const zeile = telemetrie.zeilen().at(-1);
+  assert.equal(zeile.sent, false);
+  assert.equal(zeile.outcome, "abgelehnt");
+  assert.equal(zeile.errorType, "AdmissionAbgelehnt");
+  assert.equal(zeile.actualUsd, 0);
+  assert.equal(zeile.maxTokens, 16000, "das Ceiling steht dabei – es wurde NICHT gesenkt");
+
+  /* Und das Ceiling bleibt, was es war: keine automatische Senkung, damit es
+     rechnerisch passt. */
+  const { leeresFenster, fensterAktualisieren, ceilingVorschlag } = await import("../src/profile.mjs");
+  let f = leeresFenster("reel:x", "reel / sonnet-5 / low / v1");
+  for (let i = 0; i < 30; i++) f = fensterAktualisieren(f, { ausgabeTokens: 2200, stopReason: "end_turn", ceiling: 16000 });
+  assert.equal(f.aktuellesCeiling, 16000);
+  assert.equal(ceilingVorschlag(f).angewendet, false, "der Vorschlag bleibt ein Vorschlag");
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a: Der Worst Case des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {
+  /* Fall 3 aus der Anweisung braucht den Reservebestand und ist noch nicht
+     gebaut. Was 1a leisten kann, ist die Kostenzusage; die Verfügbarkeits-
+     zusage steht ausdrücklich aus. Dieser Test hält den Befund fest, damit
+     er nicht in einem Bericht verschwindet. */
+  const { tagesplanWorstCase } = await import("../src/anbieter.mjs");
+
+  const pflichtHerrJurist = [
+    { name: "b1 Text", modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 },
+    { name: "b1 Faktencheck", modell: "claude-sonnet-5", maxTokens: 6000, eingabeTokens: 4000 },
+    { name: "b2 Text", modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 },
+    { name: "b2 Faktencheck", modell: "claude-sonnet-5", maxTokens: 6000, eingabeTokens: 4000 },
+    { name: "b3 Reel", modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 },
+    { name: "b3 Reel-Faktencheck", modell: "claude-opus-5", maxTokens: 6000, eingabeTokens: 4000 },
+    { name: "Stories", modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 },
+    { name: "Story-Faktencheck", modell: "claude-haiku-4-5-20251001", maxTokens: 6000, eingabeTokens: 4000 },
+  ];
+  const wc = tagesplanWorstCase({ posten: pflichtHerrJurist, deckelCore: 0.32 });
+
+  assert.equal(wc.dailyPlanNotWorstCaseFundable, true,
+    "mit den heutigen Ceilings ist das Pflichtprodukt im Worst Case nicht finanzierbar");
+  assert.ok(wc.summe > 1.0, `Worst Case ${wc.summe} $ gegen 0,32 $ Deckel`);
+  assert.match(wc.hinweis, /Kostenzusage hält, eine Verfügbarkeitszusage gibt es damit nicht/);
+
+  /* Der Befund ist kein Grund, den Deckel still anzuheben … */
+  assert.equal(wc.deckelCore, 0.32);
+  /* … und auch keiner, die Ceilings zurechtzuschneiden: Sie stehen unverändert
+     in den Posten. */
+  assert.deepEqual(wc.posten.map((p) => p.maxTokens), [16000, 6000, 16000, 6000, 16000, 6000, 16000, 6000]);
+});

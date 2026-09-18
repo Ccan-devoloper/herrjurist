@@ -39,6 +39,10 @@ import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
 import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, vortagsSchaetzung, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
 import { zustandsSicherung } from "./zustand.mjs";
+import { budgetStarten, ZWECK_TOPF, AdmissionAbgelehnt, TopfGesperrt } from "./budget.mjs";
+import { telemetrieStarten } from "./telemetrie.mjs";
+import { kontextSetzen, tagesplanWorstCase } from "./anbieter.mjs";
+import { effektiveKonfiguration, richtlinieGate, REGEL_DECKEL } from "./richtlinie.mjs";
 import { veroeffentlichungEintragen, veroeffentlichtBestaetigt, planBereinigen, planNurAusTrockenlauf, echteMedienId } from "./veroeffentlichung.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
@@ -79,6 +83,12 @@ const varianteStory = (slot) => (CONFIG.marke.farbeJeKlausur ? 0 : (Number(slot.
    sie genau einmal tut (Kosten) und was sie wiederholen darf (Commit, Push),
    steht in src/zustand.mjs - ein gescheiterter Push wird dort erneut
    versucht, ohne die Wochenkosten ein zweites Mal zu addieren. */
+/* Die zugesagte Tagesmenge dieses Kanals. Sie steht hier und nicht in einer
+   Umgebungsvariablen, damit eine stille Aenderung auffaellt: Das Gate vor dem
+   ersten bezahlten Aufruf vergleicht die effektive Konfiguration dagegen. */
+const KANAL = "herrjurist";
+const PRODUKT = { reelZusaetzlich: true, beitraegeWerktag: 2, storiesProTag: 9 };
+
 let zustandSichern = async () => {};
 
 /* Was ein Lauf gesendet haette, aber nicht gesendet hat. Steht bewusst nur
@@ -184,8 +194,44 @@ async function main() {
      (state/budget-ausnahmen.json, etwa { "2026-09-13": 0.40 }). Für genau
      einen Tag, danach gilt wieder der Deckel aus der Konfiguration. */
   const ausnahmen = hosting.jsonLesen("budget-ausnahmen.json", {});
-  const tagesLimitUsd = Number(ausnahmen?.[datum]) > 0 ? Number(ausnahmen[datum]) : CONFIG.ki.tagesBudgetUsd;
-  if (tagesLimitUsd !== CONFIG.ki.tagesBudgetUsd) log(`  Tagesdeckel heute ausnahmsweise ${tagesLimitUsd.toFixed(2)} $ (statt ${CONFIG.ki.tagesBudgetUsd.toFixed(2)} $)`);
+
+  /* --- Phase 1a: drei Töpfe, effektive Konfiguration, Admission ---------
+     Die Datums-Ausnahmen bleiben als Audit-Historie stehen, heben aber
+     keinen geplanten Lauf mehr an. Eine Anhebung ist eine manuelle Handlung
+     mit Begründung - am 18.09. lief der Bot mit 0,80 $ statt 0,32 $, ohne
+     dass an diesem Tag jemand etwas entschieden hätte. */
+  const ausloeser = process.env.GITHUB_EVENT_NAME || (process.env.CI ? "unbekannt" : "lokal");
+  const konfiguration = effektiveKonfiguration({
+    ausloeser, datum, ausnahmen,
+    deckel: { core: CONFIG.ki.tagesBudgetUsd, engagement: CONFIG.antworten.tagesBudgetUsd, research: CONFIG.ki.researchBudgetUsd ?? REGEL_DECKEL.research },
+    breakGlass: {
+      aktiv: String(process.env.IG_BREAK_GLASS || "") === "true",
+      betragUsd: Number(process.env.IG_BREAK_GLASS_USD || 0),
+      grund: process.env.IG_BREAK_GLASS_GRUND || "",
+    },
+  });
+  for (const h of konfiguration.hinweise) log(`  ${h}`);
+  richtlinieGate({
+    konfiguration,
+    /* Die Produktmenge ist das Versprechen an die Leser, keine Stellschraube
+       fuer Kostenprobleme: Herr Jurist 2 Karussells + 1 Reel, Examens Campus
+       1 Karussell + 1 Reel, dazu die Stories. Stimmt sie nicht, startet der
+       Lauf nicht. */
+    produkt: {
+      reelZusaetzlich: !!CONFIG.reel?.zusaetzlich,
+      beitraegeWerktag: CONFIG.plan.beitraegeWerktag,
+      storiesProTag: CONFIG.plan.storiesProTag,
+    },
+    erwartet: {
+      reelZusaetzlich: PRODUKT.reelZusaetzlich,
+      beitraegeWerktag: PRODUKT.beitraegeWerktag,
+      storiesProTag: PRODUKT.storiesProTag,
+    },
+    researchSuchen: Math.min(CONFIG.ki.rechercheSuchen ?? 2, 2),
+    zwecke: Object.keys(ZWECK_TOPF), zweckTopf: ZWECK_TOPF,
+  });
+
+  const tagesLimitUsd = konfiguration.deckel.core;
   /* Der Antworttopf (Kommentare, Nachrichten) wird getrennt geführt. Ein
      Tageseintrag von vor dieser Trennung hat noch kein Feld `antworten`;
      dann steckt der Betrag im Gesamtwert und wird einmalig herausgerechnet. */
@@ -212,6 +258,24 @@ async function main() {
     },
   });
   log(`Tagesbudget: ${tagesStand().toFixed(3)} $ von ${tagesLimit().toFixed(2)} $ verbraucht · Antworten: ${antwortStand().toFixed(3)} $ von ${antwortLimit().toFixed(2)} $`);
+
+  /* Was heute schon ausgegeben wurde, je Topf - aus den Zwecken des Tages. */
+  const bisherJeTopf = { core: 0, engagement: 0, research: 0 };
+  for (const [zweck, betrag] of Object.entries(heute.zwecke || {})) {
+    const topf = ZWECK_TOPF[zweck];
+    if (topf) bisherJeTopf[topf] += Number(betrag) || 0;
+    else console.warn(`  ! Zweck „${zweck}“ aus dem Tagesstand hat keinen Topf - er zählt gegen keinen Deckel.`);
+  }
+  const telemetrie = telemetrieStarten({ datum, kanal: KANAL, dir: AUSGABE, breakGlass: konfiguration.breakGlass.aktiv });
+  const budget = budgetStarten({
+    deckel: konfiguration.deckel, bisher: bisherJeTopf, breakGlass: konfiguration.breakGlass.aktiv,
+    protokoll: () => {},
+  });
+  kontextSetzen({ budget, telemetrie, kanal: KANAL, datum });
+  log(`  Töpfe: Core ${bisherJeTopf.core.toFixed(3)}/${konfiguration.deckel.core.toFixed(2)} · `
+    + `Engagement ${bisherJeTopf.engagement.toFixed(3)}/${konfiguration.deckel.engagement.toFixed(2)} · `
+    + `Research ${bisherJeTopf.research.toFixed(3)}/${konfiguration.deckel.research.toFixed(2)} $`
+    + `${konfiguration.breakGlass.aktiv ? ` · BREAK GLASS: „${konfiguration.breakGlass.grund}“` : ""}`);
 
   /* Stimmen-Kontingent: ElevenLabs, solange das Monatsguthaben des Abos reicht,
      danach automatisch Piper. Der Stand überdauert den Lauf im Assets-Zweig. */
@@ -400,6 +464,27 @@ async function main() {
   };
   const ruecklage = ruecklageAktualisieren();
   if (ruecklage > 0) log(`  ${ruecklage.toFixed(3)} $ für ${plan.beitraege.filter(textFehlt).length} noch zu schreibende Beiträge zurückgelegt`);
+
+  /* Der unbequeme Befund, einmal je Lauf: Mit den heutigen Hard Ceilings
+     liegt der Worst Case des Pflichtprodukts ueber dem Core-Deckel. Das
+     heisst nicht, dass der Tag teuer wird - gemessen kostet er einen
+     Bruchteil. Es heisst, dass niemand vorher garantieren kann, dass jeder
+     Pflichtaufruf stattfindet, wenn jeder sein Ceiling ausschoepft. Die
+     Kostenzusage haelt; die Verfuegbarkeitszusage braucht den Reservebestand. */
+  const wc = tagesplanWorstCase({
+    deckelCore: konfiguration.deckel.core,
+    posten: [
+      ...plan.beitraege.filter((b) => b.status !== "veroeffentlicht").flatMap((b) => ([
+        { name: `${b.slot} Text`, modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: 3000 },
+        { name: `${b.slot} Faktencheck`, modell: b.format === "reel" ? (CONFIG.ki.modellPruefungReel || CONFIG.ki.modell) : CONFIG.ki.modell, maxTokens: 6000, eingabeTokens: 4000 },
+      ])),
+      ...(plan.stories.some((x) => x.status !== "veroeffentlicht" && x.art !== "teaser")
+        ? [{ name: "Stories", modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: 3000 },
+           { name: "Story-Faktencheck", modell: CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben, maxTokens: 6000, eingabeTokens: 4000 }]
+        : []),
+    ],
+  });
+  if (wc.dailyPlanNotWorstCaseFundable) log(`  ! dailyPlanNotWorstCaseFundable: ${wc.hinweis}`);
 
   const jetzt = lokaleMinuten();
   const faellig = (e) => e.status !== "veroeffentlicht" && (alles || minutenVon(e.zeit) <= jetzt);
@@ -782,6 +867,14 @@ async function main() {
       if (echt.bestaetigt) log(`  ✓ ${medienId} (${urls.length} Folien)`);
       else log(`  ○ Beitrag ${eintrag.slot} gerendert (${urls.length} Folien), aber nicht gesendet.`);
     } catch (e) {
+      /* Ein Slot, der am Budget scheitert, faellt nicht still aus: Er wird
+         gemeldet, im Plan vermerkt und landet im Bericht. Fail closed heisst
+         nicht schweigen. */
+      if (e instanceof AdmissionAbgelehnt || e instanceof TopfGesperrt) {
+        eintrag.budgetBlockiert = { seit: new Date().toISOString(), grund: e.message, topf: e.topf || null };
+        log(`  ⛔ ${eintrag.slot} budget-blockiert: ${e.message}`);
+        continue;
+      }
       if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); continue; }
       fehler++;
       eintrag.fehler = `${new Date().toISOString()} ${e.message}`;
@@ -907,6 +1000,25 @@ async function main() {
   }
 
   await zustandSichern(`Zustand ${datum}`);
+  /* Telemetrie: Die Rohzeilen bleiben lokal (out/<datum>/telemetrie.ndjson)
+     und gehen als Actions-Artefakt. In den Asset-Zweig kommen nur die kleinen
+     rollenden Fenster - ein Git-Zweig ist kein Zeitreihenspeicher. */
+  if (telemetrie.anzahl()) {
+    const bestand = hosting.jsonLesen("profile.json", {});
+    hosting.jsonSchreiben("profile.json", telemetrie.fensterFortschreiben(bestand));
+    const u = telemetrie.uebersicht();
+    for (const [topf, z] of Object.entries(u.jeTopf)) {
+      log(`  Telemetrie ${topf}: ${z.aufrufe} Aufrufe, ${z.usd.toFixed(4)} $`
+        + `${z.ungeklaert ? `, ${z.ungeklaert} ungeklärt` : ""}${z.abschnitte ? `, ${z.abschnitte} abgeschnitten` : ""}`);
+    }
+  }
+  const budgetStand = budget.stand();
+  log(`  Töpfe am Ende: Core ${budgetStand.verbraucht.core.toFixed(4)}/${budgetStand.deckel.core.toFixed(2)} · `
+    + `Engagement ${budgetStand.verbraucht.engagement.toFixed(4)}/${budgetStand.deckel.engagement.toFixed(2)} · `
+    + `Research ${budgetStand.verbraucht.research.toFixed(4)}/${budgetStand.deckel.research.toFixed(2)} $`);
+  const blockiert = [...plan.beitraege, ...plan.stories].filter((e) => e.budgetBlockiert);
+  if (blockiert.length) log(`  ⛔ ${blockiert.length} Slot(s) budget-blockiert: ${blockiert.map((e) => e.slot).join(", ")} - sie erscheinen heute nicht.`);
+
   /* Das Protokoll des Trockenlaufs: nur lokal, nie im Asset-Zweig. Es sagt,
      was hinausgegangen WÄRE - und lässt den Tagesplan in Ruhe. */
   if (ig.protokoll.length || probelaeufe.length) {
