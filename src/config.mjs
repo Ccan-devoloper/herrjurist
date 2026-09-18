@@ -246,7 +246,18 @@ export const CONFIG = {
        0.10 $ reisst, hat sich in Korrekturrunden verfangen und wird
        zurueckgestellt, statt den Tag aufzuessen (17.09.: ein Beitrag 0.19 $,
        danach fielen b2 und alle neun Stories aus). */
-    maxJeBeitragUsd: Number(env("IG_MAX_JE_BEITRAG_USD", "0.10")),
+    /* Obergrenze je Beitrag. 0,10 $ stammte aus der Zeit, als ein Entwurf
+       0,05 $ und seine Prüfung 0,01 $ kostete. Gemessen am 18.09.: Schreiben
+       0,077 $, Prüfung 0,034 $ - zusammen 0,111 $. Ein einziger Beitrag passte
+       damit nicht mehr in einen Lauf, und der Beitrag b2 wurde an diesem Tag
+       viermal angefasst, ohne je zu erscheinen: Jeder Lauf schrieb oder
+       prüfte, riss die Grenze und stellte zurück.
+
+       0,15 $ trägt Schreiben plus zwei Prüfrunden. Die Grenze bleibt, wofür
+       sie gedacht war: Am 17.09. verbrauchte EIN Beitrag mit drei Prüfrunden
+       und einer Neufassung 0,19 $ und nahm neun Stories mit. Das fängt sie
+       weiterhin ab. */
+    maxJeBeitragUsd: Number(env("IG_MAX_JE_BEITRAG_USD", "0.15")),
   },
 
   /* Instagram Graph API -------------------------------------------------- */

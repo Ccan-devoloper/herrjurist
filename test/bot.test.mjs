@@ -3105,3 +3105,24 @@ test("Foto-Look bestellt keinen durchsichtigen Hintergrund, Flat-Look schon", as
   const { freistellen } = await import("../src/freistellen.mjs");
   assert.equal(freistellen("/gibt-es-nicht.png", { schaerfePruefen: false }), null, "kennt die Option und stirbt nicht daran");
 });
+
+test("Ein Beitrag passt mit Schreiben und zwei Prüfungen unter die Obergrenze", async () => {
+  const { CONFIG } = await import("../src/config.mjs");
+  const { budgetSetzen, postenBeginnen, budgetFrei, erfassen } = await import("../src/kosten.mjs");
+  /* Gemessen am 18.09.: Schreiben 0,077 $, Prüfung 0,034 $. Mit der alten
+     Grenze von 0,10 $ passte kein einziger Beitrag mehr in einen Lauf - b2
+     wurde an diesem Tag viermal angefasst und erschien nicht. */
+  budgetSetzen({ limitUsd: 5, gemessen: { autor: 0.077, faktencheck: 0.034 } });
+  postenBeginnen("Beitrag b2", CONFIG.ki.maxJeBeitragUsd);
+  assert.equal(budgetFrei("Text schreiben (Autor)"), true, "schreiben muss gehen");
+  erfassen("claude-sonnet-5", { input_tokens: 900, output_tokens: 4500 }, "autor");
+  assert.equal(budgetFrei("Faktencheck"), true, "die Prüfung danach muss in denselben Lauf passen");
+  erfassen("claude-sonnet-5", { input_tokens: 1200, output_tokens: 2200 }, "faktencheck");
+  assert.equal(budgetFrei("Faktencheck"), true, "und eine zweite Runde nach einer Berichtigung auch");
+  /* Aber nicht beliebig weiter: Der Ausreißer vom 17.09. - ein Beitrag, der
+     nach Beanstandungen ganz neu geschrieben wurde und mit 0,19 $ neun
+     Stories mitnahm - muss weiter auflaufen. */
+  erfassen("claude-sonnet-5", { input_tokens: 1500, output_tokens: 6000 }, "autor");
+  erfassen("claude-sonnet-5", { input_tokens: 1500, output_tokens: 6000 }, "autor");
+  assert.equal(budgetFrei("Faktencheck"), false, "die Neufassungs-Schleife wird gestoppt");
+});
