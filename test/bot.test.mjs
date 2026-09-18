@@ -2412,10 +2412,21 @@ test("Das Erklärvideo läuft fünf Tage am Stück und hat Budget für seine Fig
   /* Danach läuft das Fenster von selbst ab – niemand muss etwas zurücksetzen. */
   assert.equal(layoutFuer("2026-09-23"), "klassisch", "das Fenster endet nicht von selbst");
 
-  /* Die Figuren tragen einen eigenen Zweck, damit die Rücklage sie schützt. */
+  /* Die Figuren tragen einen eigenen Zweck - und der ist eine Kür. Solange
+     bezahlte Pflichtarbeit aussteht, bekommen sie kein Geld; danach schon.
+     Die alte Rücklagenliste aus kosten.mjs hat das entschieden, ohne dass sie
+     noch jemand prüfte; jetzt entscheidet es die Admission. */
   const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
   assert.match(lauf, /zweck: "erklaerbild"/, "die Erklärbilder laufen nicht unter eigenem Zweck");
-  assert.match(lauf, /"reel-faktencheck", "erklaerbild"/, "die Rücklage schützt die Figuren des Erklärvideos nicht");
+  assert.match(lauf, /optionalSperren\(/, "der Lauf sperrt bezahlte Küren nicht, solange Pflicht aussteht");
+
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const b = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  b.optionalSperren("Bezahlte Pflichtarbeit steht aus: 1 Beitrag/Reel.");
+  assert.throws(() => b.zulassen("erklaerbild", 0.01, { optional: true }), AdmissionAbgelehnt,
+    "die Figuren laufen, obwohl Pflichtarbeit aussteht");
+  b.optionalFreigeben();
+  assert.ok(b.zulassen("erklaerbild", 0.01, { optional: true }), "nach der Pflicht bekommen sie ihr Geld");
 });
 
 test("Jeden Tag ein Rechtsgebiet je Beitrag, und rotierend", async () => {
@@ -3057,8 +3068,13 @@ test("Bildregie: Metaphern fliegen, Fachgegenstände bleiben, Ausfall kostet das
   assert.match(autor, /Metaphern gelten NICHT/, "die Regel steht im Systemtext");
   const k = await import("../src/kosten.mjs");
   assert.equal(k.erwartet("bildregie"), 0.01, "Cent-Betrag, nicht der Standardwert");
-  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
-  assert.match(lauf, /"erklaerbild", "bildregie"\]/, "die Regie darf an die Rücklage der Beiträge");
+  /* Die Bildregie ist Pflicht, keine Kür: Ohne sie hat das Reel keine
+     Bildanweisungen. Sie darf deshalb auch dann laufen, wenn bezahlte Küren
+     gesperrt sind. */
+  const { budgetStarten } = await import("../src/budget.mjs");
+  const b = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  b.optionalSperren("Bezahlte Pflichtarbeit steht aus.");
+  assert.ok(b.zulassen("bildregie", 0.02), "die Regie wird als Kür behandelt und fällt aus");
 });
 
 test("Eine Berichtigung landet im abgelegten Entwurf, nicht nur im laufenden Prozess", async () => {
@@ -4764,6 +4780,403 @@ test("1a Simulation: das optionale Bild wird abgelehnt – das Pflichtstück lä
   assert.equal(telemetrie.zeilen().length, 2, "beide Aufrufe stehen in der Telemetrie - der abgelehnte auch");
 
   kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+/* ===== 1a-Nachbesserung: die sechs Befunde der Gegenprüfung ================ */
+
+test("1a+: Die Eingabeschranke ist beweisbar, nicht geschätzt", async () => {
+  /* chars/3.5 war eine Faustregel für deutschen Fließtext. Die Admission
+     stand darauf - und damit auf einer Annahme über den Prompt. */
+  const { eingabeObergrenzeTokens, eingabeGrenze } = await import("../src/eingabe.mjs");
+  const alteSchaetzung = (p) => Math.ceil((JSON.stringify(p.system || "") + JSON.stringify(p.messages || "")).length / 3.5);
+
+  const basis = {
+    model: "claude-sonnet-5", max_tokens: 4000,
+    system: "Du schreibst juristische Beiträge. ".repeat(50),
+    messages: [{ role: "user", content: "Schreibe zu § 823 BGB. ".repeat(80) }],
+  };
+
+  /* a) Werkzeuge und Schema zählen mit - sie fehlten in der alten Rechnung
+        komplett, sind aber Eingabe und kosten Eingabepreis. */
+  const mitWerkzeug = { ...basis, tools: [{ name: "suche", input_schema: { type: "object", properties: Object.fromEntries([...Array(50)].map((_, i) => [`feld${i}`, { type: "string", description: `Beschreibung von Feld ${i}` }])) } }] };
+  const mitSchema = { ...basis, output_config: { format: { schema: { type: "object", properties: Object.fromEntries([...Array(50)].map((_, i) => [`s${i}`, { type: "string" }])) } } } };
+  assert.ok(eingabeObergrenzeTokens(mitWerkzeug) > eingabeObergrenzeTokens(basis) + 500,
+    "das Werkzeugschema vergrößert die Schranke nicht");
+  assert.ok(eingabeObergrenzeTokens(mitSchema) > eingabeObergrenzeTokens(basis) + 200,
+    "das Ausgabeschema vergrößert die Schranke nicht");
+  assert.equal(alteSchaetzung(mitWerkzeug), alteSchaetzung(basis),
+    "Kontrolle: die alte Schätzung hat den Unterschied gar nicht gesehen");
+
+  /* b) Tokenreicher Unicode: Wo die alte Schätzung um ein Vielfaches zu
+        NIEDRIG lag, liegt die Schranke darüber. */
+  const dicht = { model: "claude-sonnet-5", messages: [{ role: "user", content: "日本語のテキスト😀§±→".repeat(200) }] };
+  const schranke = eingabeObergrenzeTokens(dicht);
+  const zeichen = dicht.messages[0].content.length;
+  assert.ok(schranke >= zeichen, `Schranke ${schranke} unter der Zeichenzahl ${zeichen} - bei CJK ist ~1 Token je Zeichen möglich`);
+  assert.ok(alteSchaetzung(dicht) < zeichen,
+    "Kontrolle: die alte Schätzung lag unter der Zeichenzahl und damit möglicherweise unter der Tokenzahl");
+
+  /* Der Zählendpunkt darf die Schranke anheben, nie senken. */
+  assert.equal(eingabeGrenze(basis, 5), eingabeObergrenzeTokens(basis), "ein kleiner Zählwert senkt die Schranke");
+  assert.equal(eingabeGrenze(basis, 10 ** 7), 10 ** 7, "ein größerer Zählwert wird nicht ignoriert");
+});
+
+test("1a+: Ein Aufruf, dessen Input+Output den Resttopf sprengen könnte, startet nicht", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
+  const { obergrenzeUsd } = await import("../src/kosten.mjs");
+  const { eingabeObergrenzeTokens } = await import("../src/eingabe.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "preflight-"));
+  /* Der Ausgabeteil allein passt bequem: 500 Token bei Haiku sind 0,0029 $.
+     Erst die Eingabe macht den Aufruf zu teuer - und genau diesen Fall hat
+     die alte Schätzung um den Faktor 3,5 kleingerechnet. */
+  const langerText = "Sachverhalt: ".repeat(4000);
+  const params = { model: "claude-haiku-4-5-20251001", max_tokens: 500, messages: [{ role: "user", content: langerText }] };
+  const echterWorstCase = obergrenzeUsd({ modell: "claude-haiku-4-5-20251001", maxTokens: 500, eingabeTokens: eingabeObergrenzeTokens(params) });
+  const alterWorstCase = obergrenzeUsd({ modell: "claude-haiku-4-5-20251001", maxTokens: 500, eingabeTokens: Math.ceil(JSON.stringify(params.messages).length / 3.5) });
+  assert.ok(echterWorstCase > alterWorstCase * 2, "die Schranke ist nicht deutlich konservativer als die alte Schätzung");
+
+  /* Frei ist ein Betrag, der zwischen beiden liegt: Die alte Rechnung hätte
+     den Aufruf zugelassen, die neue lehnt ihn ab. */
+  const frei = (echterWorstCase + alterWorstCase) / 2;
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.32 - frei } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  let gerufen = 0;
+  klientSetzen({ messages: { create: async () => { gerufen++; return { usage: { input_tokens: 1, output_tokens: 1 }, content: [] }; } } });
+
+  await assert.rejects(() => claudeAufruf({ zweck: "faktencheck", slot: "b1", params }), AdmissionAbgelehnt);
+  assert.equal(gerufen, 0, "der Anbieter wurde trotz zu knappen Budgets gerufen");
+  assert.equal(telemetrie.zeilen().at(-1).outcome, "abgelehnt");
+  assert.ok(telemetrie.zeilen().at(-1).inputBoundTokens >= eingabeObergrenzeTokens(params) - 1,
+    "die Schranke steht nicht in der Telemetrie");
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a+: Ein Absturz nach dem Senden vergisst das Geld nicht", async () => {
+  /* Die vier Fälle der Fehlerinjektion - jeder über eine echte
+     Journal-Instanz, nicht über eine nachgebaute Logik. */
+  const { journalStarten, JZUSTAND } = await import("../src/journal.mjs");
+
+  /* Der Zwischenspeicher steht für den Asset-Zweig: Was hier landet, hat den
+     Absturz überlebt. */
+  let platte = null;
+  const lesen = () => (platte ? JSON.parse(platte) : null);
+  const schreiben = async (inhalt) => { platte = JSON.stringify(inhalt); return true; };
+  const neuerLauf = () => journalStarten({ lesen, schreiben, datum: "2026-09-19", kanal: "herrjurist" });
+
+  /* A) Absturz NACH der durablen Reservierung, VOR dem Senden.
+        Der Sendevermerk fehlt - es wurde beweisbar nichts gesendet. */
+  const lauf1 = neuerLauf();
+  await lauf1.reservieren({ bucket: "core", purpose: "autor", reservedUsd: 0.05, slot: "b1" });
+  /* … hier stirbt der Runner. */
+  const nach1 = neuerLauf().uebernahme();
+  assert.equal(nach1.vorbelastung.core, 0, "eine nie gesendete Reservierung blockiert weiter Geld");
+  assert.equal(nach1.freigegeben.length, 1, "sie wird nicht freigegeben");
+
+  /* B) Absturz UNMITTELBAR nach dem Senden. */
+  platte = null;
+  const lauf2 = neuerLauf();
+  const id2 = await lauf2.reservieren({ bucket: "core", purpose: "autor", reservedUsd: 0.05, slot: "b1" });
+  await lauf2.senden(id2);
+  /* … hier stirbt der Runner, während der Anbieter rechnet. */
+  const nach2 = neuerLauf();
+  const u2 = nach2.uebernahme();
+  assert.equal(u2.vorbelastung.core, 0.05, "das Geld wird ein zweites Mal freigegeben");
+  assert.equal(u2.blockiert.length, 1);
+  assert.equal(u2.blockiert[0].state, JZUSTAND.UNGEKLAERT);
+
+  /* C) Absturz nach bekannter Usage, vor dem Tagesabschluss: Die Abrechnung
+        stand nur im Speicher. Konservativ bleibt die Reservierung stehen -
+        sie ist größer als die tatsächlichen Kosten, nie kleiner. */
+  platte = null;
+  const lauf3 = neuerLauf();
+  const id3 = await lauf3.reservieren({ bucket: "core", purpose: "reel", reservedUsd: 0.08, slot: "b3" });
+  await lauf3.senden(id3);
+  lauf3.abrechnen(id3, 0.021);        // bekannt, aber noch nicht geschrieben
+  /* … Runner tot, kein abschluss(). */
+  const u3 = neuerLauf().uebernahme();
+  assert.equal(u3.vorbelastung.core, 0.08, "der Betrag ist im Folgelauf nicht mehr sichtbar");
+  assert.ok(u3.vorbelastung.core >= 0.021, "der konservative Wert liegt unter den echten Kosten");
+
+  /* D) Zwei Stundenläufe desselben Tages: Lauf 2 beginnt mit allem, was
+        Lauf 1 abgerechnet ODER offen gelassen hat. */
+  platte = null;
+  const lauf4 = neuerLauf();
+  const a = await lauf4.reservieren({ bucket: "core", purpose: "autor", reservedUsd: 0.06 });
+  await lauf4.senden(a); lauf4.abrechnen(a, 0.019);
+  const b = await lauf4.reservieren({ bucket: "core", purpose: "faktencheck", reservedUsd: 0.04 });
+  await lauf4.senden(b); lauf4.ungeklaert(b, "Verbindung abgebrochen");
+  const c = await lauf4.reservieren({ bucket: "engagement", purpose: "kommentare", reservedUsd: 0.03 });
+  await lauf4.senden(c); lauf4.abrechnen(c, 0.008);
+  await lauf4.abschluss();
+
+  const u4 = neuerLauf().uebernahme();
+  assert.equal(u4.vorbelastung.core, 0.059, "0,019 abgerechnet + 0,04 ungeklärt");
+  assert.equal(u4.vorbelastung.engagement, 0.008);
+  assert.equal(u4.vorbelastung.research, 0, "Research hat nichts verbraucht");
+
+  /* Und ein Journal des Vortags gilt nicht weiter: Töpfe sind Tagessache. */
+  const morgen = journalStarten({ lesen, schreiben, datum: "2026-09-20", kanal: "herrjurist" });
+  assert.equal(morgen.uebernahme().vorbelastung.core, 0, "der Vortag belastet den neuen Tag");
+});
+
+test("1a+: Wird die Reservierung nicht durable, findet der Aufruf nicht statt", async () => {
+  const { budgetStarten } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { journalStarten, JournalNichtDurable } = await import("../src/journal.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "nichtdurable-"));
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  /* Der Push bestätigt nicht - etwa weil der Asset-Zweig auseinanderlief. */
+  const journal = journalStarten({ lesen: () => null, schreiben: async () => false, datum: "2026-09-19", remoteNoetig: true });
+  kontextSetzen({ budget, telemetrie, journal, kanal: "herrjurist", datum: "2026-09-19" });
+
+  let gerufen = 0;
+  klientSetzen({ messages: { create: async () => { gerufen++; return { usage: { input_tokens: 10, output_tokens: 10 }, content: [] }; } } });
+
+  await assert.rejects(() => claudeAufruf({
+    zweck: "autor", slot: "b1", modell: "claude-sonnet-5",
+    params: { model: "claude-sonnet-5", max_tokens: 2000, messages: [{ role: "user", content: "x" }] },
+  }), JournalNichtDurable);
+
+  assert.equal(gerufen, 0, "gesendet, obwohl die Reservierung den nächsten Lauf nicht erreicht hätte");
+  assert.equal(budget.stand().verbraucht.core, 0, "und es wurde trotzdem Geld gebucht");
+  assert.equal(budget.frei("core"), 0.32, "die Reservierung wurde nicht zurückgegeben");
+  assert.equal(telemetrie.zeilen().at(-1).errorType, "JournalNichtDurable");
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a+: Solange bezahlte Pflichtarbeit aussteht, bekommt keine Kür Geld", async () => {
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, bildAufruf, claudeAufruf } = await import("../src/anbieter.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "kuer-"));
+  /* Der Topf ist fast leer erst NACH der Pflicht - hier ist reichlich Geld da.
+     Die Kür fällt trotzdem aus, weil die Pflicht noch aussteht. Genau das
+     unterscheidet die Regel von einer Rücklage: Sie rechnet nicht, sie
+     ordnet. */
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  budget.optionalSperren("Bezahlte Pflichtarbeit steht aus: 1 Beitrag/Reel, 9 Story-Texte.");
+
+  let bildAnfragen = 0;
+  const fetchFn = async () => { bildAnfragen++; return { ok: true, json: async () => ({ data: [] }) }; };
+  await assert.rejects(() => bildAufruf({ zweck: "erklaerbild", optional: true, slot: "b3", preisUsd: 0.01, auftrag: { key: "k", koerper: {} }, fetchFn }), AdmissionAbgelehnt);
+  assert.equal(bildAnfragen, 0, "die Bild-API wurde gerufen");
+  assert.match(telemetrie.zeilen().at(-1).errorType, /AdmissionAbgelehnt/);
+  assert.equal(budget.frei("core"), 0.32, "der Topf ist unberührt - es lag nicht am Geld, sondern an der Reihenfolge");
+
+  /* Die Pflicht selbst läuft dabei völlig normal weiter. */
+  klientSetzen({ messages: { create: async () => ({ usage: { input_tokens: 2000, output_tokens: 900 }, stop_reason: "end_turn", content: [{ type: "text", text: "{}" }] }) } });
+  const antwort = await claudeAufruf({ zweck: "stories", slot: "s*", modell: "claude-sonnet-5", params: { model: "claude-sonnet-5", max_tokens: 3000, messages: [{ role: "user", content: "x" }] } });
+  assert.ok(antwort, "die Pflicht wurde von der Kürsperre mitgetroffen");
+
+  /* Nach der Pflicht ist der Rest des Topfes wieder für Küren da. */
+  budget.optionalFreigeben();
+  const bild = await bildAufruf({ zweck: "erklaerbild", optional: true, slot: "b3", preisUsd: 0.01, auftrag: { key: "k", koerper: {} }, fetchFn });
+  assert.ok(bild, "nach der Pflicht bleibt die Kür gesperrt");
+  assert.equal(bildAnfragen, 1);
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a+: Die rollenden Profilfenster überleben den Runner", async () => {
+  /* Vorher wurde profile.json NACH zustandSichern geschrieben. Der Commit war
+     da durch, ein zweiter kam nicht - und mit dem Runner verschwanden die
+     Messwerte. Der Test läuft deshalb über zwei getrennte „Läufe“ mit einem
+     Speicher dazwischen, nicht innerhalb eines Prozesses. */
+  const { zustandsSicherung } = await import("../src/zustand.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+
+  const platte = new Map();           // steht für den Asset-Zweig
+  const commits = [];
+  const hostingBauen = () => ({
+    pushen: true,
+    jsonLesen: (n, vor) => (platte.has(n) ? JSON.parse(platte.get(n)) : vor),
+    jsonSchreiben: (n, d) => platte.set(n, JSON.stringify(d)),
+    aufraeumen: () => 0,
+    commit: (m) => { commits.push({ m, inhalt: new Map(platte) }); return true; },
+    push: async () => true,
+  });
+
+  const einLauf = async (ausgabeTokens) => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), "profil-"));
+    const hosting = hostingBauen();
+    const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+    telemetrie.aufruf({
+      purpose: "autor", bucket: "core", provider: "anthropic", model: "claude-sonnet-5",
+      profileId: "autor:fest", calibrationFamily: "autor / claude-sonnet-5", attempt: 1,
+      maxTokens: 16000, outputTokens: ausgabeTokens, stopReason: "end_turn",
+      sent: true, actualUsd: 0.02, outcome: "ok",
+    });
+    const sichern = zustandsSicherung({
+      hosting, plan: { beitraege: [], stories: [] }, datum: "2026-09-19",
+      kostenAbschluss: () => ({ usd: 0, aufrufe: 0, cacheAnteil: 0 }),
+      wochenKennung: () => "2026-W38", planSpeichern: () => {},
+      vorSichern: () => {
+        const bestand = hosting.jsonLesen("profile.json", {});
+        hosting.jsonSchreiben("profile.json", telemetrie.fensterFortschreiben(bestand));
+      },
+    });
+    await sichern("Zustand");
+    fs.rmSync(dir, { recursive: true, force: true });
+  };
+
+  await einLauf(1800);
+  /* Der entscheidende Punkt: Der Wert steht im COMMIT, nicht erst danach. */
+  const letzterCommit = commits.at(-1);
+  assert.ok(letzterCommit.inhalt.has("profile.json"),
+    "profile.json war beim Commit noch nicht geschrieben - es hätte den Runner nicht überlebt");
+  const imCommit = JSON.parse(letzterCommit.inhalt.get("profile.json"));
+  assert.deepEqual(imCommit["autor:fest"].letzteAusgabeTokens, [1800]);
+
+  /* Runner weg, neuer Prozess, derselbe Asset-Zweig. */
+  await einLauf(2100);
+  const fenster = JSON.parse(platte.get("profile.json"))["autor:fest"];
+  assert.deepEqual(fenster.letzteAusgabeTokens, [1800, 2100],
+    "der Messwert des ersten Laufs ist verloren gegangen");
+  assert.equal(fenster.aufrufeGesamt, 2);
+});
+
+test("1a+: Das Gate prüft gegen die Richtlinie, nicht gegen sich selbst", async () => {
+  /* Der Maßstab kam bisher aus derselben CONFIG, die geprüft wurde: Wer dort
+     core auf 0,40 stellte, verschob effektiven Deckel UND Maßstab gemeinsam -
+     und das Gate war zufrieden. */
+  const { effektiveKonfiguration, richtlinieGate, RichtlinieVerletzt, REGEL_DECKEL } = await import("../src/richtlinie.mjs");
+  assert.deepEqual({ ...REGEL_DECKEL }, { core: 0.32, engagement: 0.25, research: 0.12 });
+
+  const pruefen = (deckel, ausloeser = "schedule") => richtlinieGate({
+    konfiguration: effektiveKonfiguration({ ausloeser, datum: "2026-09-19", deckel }),
+  });
+
+  assert.ok(pruefen({ core: 0.32, engagement: 0.25, research: 0.12 }).ok, "die richtige Konfiguration wird abgelehnt");
+  for (const [feld, wert] of [["core", 0.33], ["engagement", 0.26], ["research", 0.13]]) {
+    const deckel = { core: 0.32, engagement: 0.25, research: 0.12, [feld]: wert };
+    assert.throws(() => pruefen(deckel), RichtlinieVerletzt, `CONFIG ${feld}=${wert} kommt durch das Gate`);
+    try { pruefen(deckel); } catch (e) {
+      assert.ok(e.befunde.some((b) => b.includes("Richtlinie")), `der Befund nennt die Richtlinie nicht: ${e.befunde.join(" | ")}`);
+    }
+  }
+  /* Auch nach unten: Eine stille Absenkung ist ebenfalls eine Policy-Änderung. */
+  assert.throws(() => pruefen({ core: 0.20, engagement: 0.25, research: 0.12 }), RichtlinieVerletzt);
+
+  /* Break Glass bleibt die einzige Ausnahme - und nur von Hand. */
+  const bg = effektiveKonfiguration({
+    ausloeser: "workflow_dispatch", datum: "2026-09-19", deckel: REGEL_DECKEL,
+    breakGlass: { aktiv: true, betragUsd: 0.5, grund: "Nachholtag" },
+  });
+  assert.ok(richtlinieGate({ konfiguration: bg }).ok, "Break Glass von Hand wird abgelehnt");
+  assert.equal(bg.deckel.core, 0.5);
+});
+
+test("1a+: Eine Invariantenverletzung erscheint mit ihrem echten Betrag", async () => {
+  const { budgetStarten, InvarianteVerletzt } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "invariante-"));
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+
+  /* Der Anbieter meldet mehr Ausgabetoken, als das Ceiling zuließ - der Fall,
+     für den die Invariante da ist. */
+  klientSetzen({ messages: { create: async () => ({ usage: { input_tokens: 1000, output_tokens: 400000 }, stop_reason: "end_turn", content: [] }) } });
+  await assert.rejects(() => claudeAufruf({
+    zweck: "autor", slot: "b1", modell: "claude-sonnet-5",
+    params: { model: "claude-sonnet-5", max_tokens: 100, messages: [{ role: "user", content: "x" }] },
+  }), InvarianteVerletzt);
+
+  const zeile = telemetrie.zeilen().at(-1);
+  assert.equal(zeile.outcome, "invariant_violation", "die Verletzung steht als ungeklärter Fall in der Telemetrie");
+  assert.equal(zeile.spendUnknown, false, "die Kosten waren bekannt - sie dürfen nicht als unbekannt gelten");
+  assert.ok(zeile.actualUsd > 0, "der tatsächliche Betrag fehlt");
+  assert.ok(zeile.actualUsd > zeile.reservedUsd, "der Betrag ist nicht der überschrittene");
+  assert.equal(zeile.sent, true);
+  /* Und der Topf ist gesperrt, damit niemand den Schaden vergrößert. */
+  assert.ok(budget.gesperrt("core"), "der Topf läuft weiter");
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a+: Die alte Reservelogik entscheidet über keinen bezahlten Aufruf mehr", async () => {
+  /* Zwei Reservierungssysteme nebeneinander sind schlechter als eines, das
+     hart ist: Das alte aus kosten.mjs rechnete mit ERWARTETEN Preisen und
+     wurde seit der Verdrahtung der Admission von keinem Aufruf mehr gefragt -
+     es sah nur noch aus wie eine Sicherung. */
+  const quellen = fs.readdirSync(new URL("../src/", import.meta.url)).filter((f) => f.endsWith(".mjs") && f !== "kosten.mjs");
+  const funde = [];
+  for (const datei of quellen) {
+    const text = fs.readFileSync(new URL(`../src/${datei}`, import.meta.url), "utf8")
+      .replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+    /* Der Punkt davor ist wichtig: journal.reservieren() ist die NEUE,
+       durable Reservierung und hat mit der alten nichts zu tun. Gesucht sind
+       die freien Aufrufe der Funktionen aus kosten.mjs. */
+    for (const muster of [/(?<![.\w])budgetPruefen\s*\(/, /(?<![.\w])reservieren\s*\(/, /(?<![.\w])reservierungAufheben\s*\(/, /(?<![.\w])fremdeReserve\s*\(/]) {
+      if (muster.test(text)) funde.push(`${datei}: ${muster}`);
+    }
+  }
+  assert.deepEqual(funde, [], `alte Reservelogik im Produktionscode:\n${funde.join("\n")}`);
+
+  /* Und die Zuständigkeit ist eindeutig: Wer bezahlen will, fragt budget.zulassen. */
+  const tuer = fs.readFileSync(new URL("../src/anbieter.mjs", import.meta.url), "utf8");
+  assert.ok(!/budgetPruefen/.test(tuer), "die Tür fragt noch den alten Deckel");
+  assert.match(tuer, /budget\.zulassen\(/);
+});
+
+test("1a+: Gecachte OpenAI-Token werden einmal berechnet, nicht zweimal", async () => {
+  /* Anthropic: input_tokens zählt NUR die ungecachten Token.
+     OpenAI:    input_tokens ist die Gesamtzahl, cached_tokens eine Teilmenge.
+     Wer das gleichsetzt, bezahlt den gecachten Anteil doppelt. */
+  const { budgetStarten } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, openaiAufruf } = await import("../src/anbieter.mjs");
+  const { preisAus } = await import("../src/kosten.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "cache-"));
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+
+  const fetchFn = async () => ({
+    ok: true,
+    json: async () => ({ usage: { input_tokens: 10000, output_tokens: 1000, input_tokens_details: { cached_tokens: 8000 } } }),
+  });
+  /* Die Anfrage trägt den Text, den der Anbieter später als 10.000
+     Eingabetoken meldet - sonst prüft der Test einen Fall, den es nicht gibt:
+     Die Byte-Schranke gilt für das, was WIR schicken. Was der Anbieter
+     zusätzlich in den Kontext legt (serverseitige Werkzeuge, fortgesetzte
+     Antworten), deckt sie nicht ab; solche Pfade laufen deshalb über den
+     Research-Topf mit seiner ausdrücklich weicheren Zusage. */
+  const langerText = "Prüfe diesen Beitrag auf fachliche Fehler. ".repeat(1000);
+  await openaiAufruf({ zweck: "faktencheck", modell: "gpt-5-mini", slot: "b1", fetchFn,
+    params: { model: "gpt-5-mini", max_output_tokens: 1000, input: [{ role: "user", content: langerText }] } });
+
+  const zeile = telemetrie.zeilen().at(-1);
+  assert.equal(zeile.inputTokens, 2000, "die ungecachten Token sind nicht 10000 - 8000");
+  assert.equal(zeile.cacheReadTokens, 8000);
+
+  /* 2000 × 0,25 + 8000 × 0,025 + 1000 × 2,00 je Million. */
+  const erwartet = (2000 * 0.25 + 8000 * 0.025 + 1000 * 2) / 1e6;
+  assert.ok(Math.abs(zeile.actualUsd - erwartet) < 1e-9, `${zeile.actualUsd} statt ${erwartet}`);
+  /* Die alte Rechnung hätte die 8000 zusätzlich zum vollen Preis gezählt. */
+  const alt = preisAus("gpt-5-mini", { input_tokens: 10000, output_tokens: 1000, cache_read_input_tokens: 8000 });
+  assert.ok(alt > zeile.actualUsd, "Kontrolle: die alte Rechnung war nicht teurer");
+
+  kontextLoeschen();
   fs.rmSync(dir, { recursive: true, force: true });
 });
 test("1a: Der Worst Case des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {

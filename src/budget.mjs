@@ -86,11 +86,13 @@ export class UnbekannterZweck extends Error {
 
 /** Abgelehnte Admission: Der Aufruf hat nie stattgefunden. */
 export class AdmissionAbgelehnt extends Error {
-  constructor(zweck, topf, verlangt, frei, deckel) {
+  constructor(zweck, topf, verlangt, frei, deckel, grund = null) {
     super(`${zweck}: ${verlangt.toFixed(4)} $ im Topf „${topf}“ nicht mehr zulässig `
-      + `(frei ${frei.toFixed(4)} $ von ${deckel.toFixed(4)} $) - der Aufruf startet nicht.`);
+      + `(frei ${frei.toFixed(4)} $ von ${deckel.toFixed(4)} $) - der Aufruf startet nicht.`
+      + (grund ? ` ${grund}` : ""));
     this.name = "AdmissionAbgelehnt";
     this.zweck = zweck; this.topf = topf; this.verlangt = verlangt; this.frei = frei; this.deckel = deckel;
+    this.grund = grund;
   }
 }
 
@@ -166,6 +168,19 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
   const ungeklaert = [];
   /* Rücklagen für Pflichtinhalte, je Name ein Betrag. */
   const pflicht = new Map();
+  /* Solange bezahlte Pflichtarbeit aussteht, ist das sichere Budget für
+     bezahlte KÜREN null.
+
+     Warum so grob und nicht fein über Rücklagen: Eine Rücklage müsste den
+     harten Worst Case der ausstehenden Pflichtaufrufe zurücklegen, und der
+     liegt über dem ganzen Topf (siehe tagesplanWorstCase). Eine KLEINERE
+     Rücklage - etwa der gemessene Durchschnitt - sähe ordentlich aus und wäre
+     eine erfundene Zahl: Sie würde eine Verfügbarkeit zusagen, die niemand
+     nachrechnen kann. Lieber eine harte, ehrliche Regel, die manchmal ein
+     schönes Bild kostet, als eine weiche, die manchmal einen Pflichtbeitrag
+     kostet. Kostenlose Ausweichwege (Archivbild, Icon, reines Layout) laufen
+     ohnehin nicht über diesen Weg und bleiben erlaubt. */
+  let optionalSperre = null;
 
   const pflichtSumme = (topf, ohne = null) => {
     let s = 0;
@@ -204,6 +219,10 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
     const verlangt = runden(Math.max(0, Number(worstCase) || 0));
     const eigene = opt.optional ? null : (opt.pflichtName || null);
     const verfuegbar = frei(topf, { ohnePflicht: eigene });
+    if (opt.optional && optionalSperre) {
+      protokoll({ art: "admission", ergebnis: "abgelehnt", zweck, topf, reservedUsd: verlangt, frei: verfuegbar, optional: true, breakGlass });
+      throw new AdmissionAbgelehnt(zweck, topf, verlangt, verfuegbar, deckel[topf], optionalSperre);
+    }
     if (verlangt > verfuegbar) {
       protokoll({ art: "admission", ergebnis: "abgelehnt", zweck, topf, reservedUsd: verlangt, frei: verfuegbar, optional: !!opt.optional, breakGlass });
       throw new AdmissionAbgelehnt(zweck, topf, verlangt, verfuegbar, deckel[topf]);
@@ -338,8 +357,17 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
   };
   const pflichtAufloesen = (name) => pflicht.delete(name);
 
+  /**
+   * Sperrt bezahlte optionale Aufrufe, solange bezahlte Pflichtarbeit
+   * aussteht. `grund` steht danach in der Ablehnung und im Protokoll.
+   */
+  const optionalSperren = (grund) => { optionalSperre = grund || "Bezahlte Pflichtarbeit steht noch aus."; return optionalSperre; };
+  const optionalFreigeben = () => { optionalSperre = null; };
+  const optionalGesperrt = () => optionalSperre;
+
   return {
     zulassen, mitAdmission, pflichtRuecklage, pflichtAufloesen, frei, breakGlass,
+    optionalSperren, optionalFreigeben, optionalGesperrt,
     gesperrt: (topf) => gesperrt[topf] || null,
     stand: () => ({
       deckel: { ...deckel },
@@ -347,6 +375,7 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
       reserviert: { ...reserviert },
       pflicht: Object.fromEntries([...pflicht].map(([n, r]) => [n, { ...r }])),
       gesperrt: { ...gesperrt },
+      optionalSperre,
       verletzungen: [...verletzungen],
       ungeklaert: [...ungeklaert],
       breakGlass,

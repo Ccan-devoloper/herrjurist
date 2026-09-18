@@ -37,10 +37,11 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, vortagsSchaetzung, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, erwartet, vortagsSchaetzung, tagesStand, tagesLimit, antwortStand, antwortLimit, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
 import { zustandsSicherung } from "./zustand.mjs";
 import { budgetStarten, ZWECK_TOPF, AdmissionAbgelehnt, TopfGesperrt } from "./budget.mjs";
 import { telemetrieStarten } from "./telemetrie.mjs";
+import { journalStarten } from "./journal.mjs";
 import { kontextSetzen, tagesplanWorstCase } from "./anbieter.mjs";
 import { effektiveKonfiguration, richtlinieGate, REGEL_DECKEL } from "./richtlinie.mjs";
 import { veroeffentlichungEintragen, veroeffentlichtBestaetigt, planBereinigen, planNurAusTrockenlauf, echteMedienId } from "./veroeffentlichung.mjs";
@@ -267,11 +268,45 @@ async function main() {
     else console.warn(`  ! Zweck „${zweck}“ aus dem Tagesstand hat keinen Topf - er zählt gegen keinen Deckel.`);
   }
   const telemetrie = telemetrieStarten({ datum, kanal: KANAL, dir: AUSGABE, breakGlass: konfiguration.breakGlass.aktiv });
+
+  /* Das Budget-Journal: Reservierungen, die diesen Prozess ueberleben.
+
+     Ohne es gilt der Tagesdeckel nur INNERHALB eines Laufs. Stirbt der Runner
+     nach dem Senden hart, weiss der naechste Stundenlauf von diesem Geld
+     nichts und darf es ein zweites Mal ausgeben - sechzehnmal am Tag ist das
+     kein theoretischer Fall. */
+  const journal = journalStarten({
+    datum, kanal: KANAL,
+    lesen: () => hosting.jsonLesen("budget-journal.json", null),
+    schreiben: async (inhalt) => {
+      hosting.jsonSchreiben("budget-journal.json", inhalt);
+      hosting.commit(`Budget-Journal ${datum}`);
+      const gepusht = await hosting.push();
+      /* Ohne Remote (IG_NO_PUSH) ist die lokale Datei die Durability, die es
+         gibt - dann wird sie auch nicht mehr verlangt. */
+      return gepusht || hosting.pushen === false;
+    },
+    remoteNoetig: hosting.pushen !== false,
+  });
+  const uebernommen = journal.uebernahme();
+  if (uebernommen.freigegeben.length || uebernommen.blockiert.length) {
+    log(`  Journal: ${uebernommen.freigegeben.length} Reservierung(en) aus einem abgebrochenen Lauf freigegeben `
+      + `(beweisbar nicht gesendet), ${uebernommen.blockiert.length} bleiben blockiert (gesendet, nie abgerechnet).`);
+    for (const e of uebernommen.blockiert) log(`    ! ${e.purpose}${e.slot ? ` (${e.slot})` : ""}: ${e.reservedUsd.toFixed(4)} $ gelten als verbraucht`);
+    await journal.abschluss();
+  }
+  /* Der groessere der beiden Staende gilt. kosten.json kennt die abgerechneten
+     Betraege frueherer Laeufe, das Journal zusaetzlich die ungeklaerten - und
+     solange beide gefuehrt werden, ist der hoehere Wert der ehrliche. */
+  for (const t of Object.keys(bisherJeTopf)) {
+    bisherJeTopf[t] = Math.max(bisherJeTopf[t], uebernommen.vorbelastung[t] || 0);
+  }
+
   const budget = budgetStarten({
     deckel: konfiguration.deckel, bisher: bisherJeTopf, breakGlass: konfiguration.breakGlass.aktiv,
     protokoll: () => {},
   });
-  kontextSetzen({ budget, telemetrie, kanal: KANAL, datum });
+  kontextSetzen({ budget, telemetrie, journal, kanal: KANAL, datum });
   log(`  Töpfe: Core ${bisherJeTopf.core.toFixed(3)}/${konfiguration.deckel.core.toFixed(2)} · `
     + `Engagement ${bisherJeTopf.engagement.toFixed(3)}/${konfiguration.deckel.engagement.toFixed(2)} · `
     + `Research ${bisherJeTopf.research.toFixed(3)}/${konfiguration.deckel.research.toFixed(2)} $`
@@ -379,7 +414,22 @@ async function main() {
       log(`  Uhrzeiten: ${zs.gesamt ? `aus ${zs.gesamt} gemessenen Beiträgen gelernt` : "noch ohne Messungen"}${zs.gesamt < 20 ? ", weitere Stunden werden ausprobiert" : ""}`);
     }
   }
-  zustandSichern = zustandsSicherung({ hosting, plan, datum, kostenAbschluss, wochenKennung, planSpeichern });
+  zustandSichern = zustandsSicherung({
+    hosting, plan, datum, kostenAbschluss, wochenKennung, planSpeichern,
+    /* Die rollenden Profilfenster gehoeren zum gesicherten Zustand, nicht in
+       einen Nachtrag danach: Sie werden innerhalb der Sicherung geschrieben,
+       vor Commit und Push, und ueberstehen damit das Ende des Runners. Die
+       Rohzeilen bleiben lokal und gehen als Artefakt. */
+    vorSichern: () => {
+      /* Das Journal schreibt seine offenen Uebergaenge (abgerechnet,
+         ungeklaert) hier mit fest - sie durften bis dahin im Speicher
+         stehen, weil ihr Verlust nur konservativer, nie riskanter rechnet. */
+      hosting.jsonSchreiben("budget-journal.json", { datum, kanal: KANAL, eintraege: journal.eintraege(), stand: new Date().toISOString() });
+      if (!telemetrie?.anzahl?.()) return;
+      const bestand = hosting.jsonLesen("profile.json", {});
+      hosting.jsonSchreiben("profile.json", telemetrie.fensterFortschreiben(bestand));
+    },
+  });
 
   if (nurPlanen) {
     for (const b of plan.beitraege) log(`  ${b.zeit} Beitrag ${b.slot} ${b.format} ${b.themaTitel || ""} [${b.status}]`);
@@ -396,74 +446,52 @@ async function main() {
      Rücklage schrumpft mit jedem geschriebenen Text. */
   const textDatei = (b) => `inhalte/${datum}-${b.slot}.json`;
   const textFehlt = (b) => b.status !== "veroeffentlicht" && !b.fehler && !b.textFehler && !hosting.jsonLesen(textDatei(b), null);
-  const ruecklageAktualisieren = () => {
-    const offen = trocken ? [] : plan.beitraege.filter(textFehlt);
-    /* Zurückgelegt wird nur, was vom Rest des Tages auch WIRKLICH bezahlbar
-       ist. Am 17.09. lagen 0.13 $ für einen Beitrag und die Erklärfiguren
-       zurück, während nur noch 0.045 $ frei waren: Der Beitrag war davon nie
-       zu bezahlen, seine Rücklage hat aber die neun Stories blockiert, die
-       zusammen weniger gekostet hätten. Geld für etwas Unbezahlbares
-       zurückzulegen heißt, es zweimal zu verlieren.
+  /* Die ehrliche Produktionsregel bis zum Reservebestand.
 
-       Deshalb: der Reihe nach aufsummieren und beim ersten Posten abbrechen,
-       der nicht mehr hineinpasst. Was passt, behält seinen Vorrang - was
-       nicht passt, gibt den Rest für das Billigere frei. */
-    const freiJetzt = Math.max(0, tagesLimit() - tagesStand());
-    const preisFuer = (b) => (b.format === "reel"
-      ? reelReserve(kostenStart.tage, CONFIG.ki.reelReserveUsd)
-      : erwartet("autor") + erwartet("faktencheck"));
-    let summe = bezahlbareSumme(offen.map(preisFuer), freiJetzt);
-    /* Die Rücklage gehört den Beiträgen, die heute noch geschrieben werden
-       müssen - und nur ihnen. „recherche" stand hier bis zum 16.09. mit in
-       der Liste; an dem Tag hat ein einziger Recherche-Aufruf die Rücklage
-       aufgebraucht und danach fielen auf beiden Kanälen ALLE Beiträge und
-       Stories aus. Eine Recherche schmückt einen Beitrag; ein Beitrag ohne
-       Recherche erscheint trotzdem. Deshalb darf sie nur von dem leben, was
-       über der Rücklage frei ist. */
-    /* Das Erklaervideo lebt von seinen Figuren: Fehlt das Geld fuer die
-       Motive, baut reelBauen() still das klassische Layout - am 16.09. genau
-       so passiert. Solange das Reel des Tages aussteht und das Erklaer-Layout
-       gilt, bleibt sein Bildbudget zurueckgelegt. */
-    const erklaerOffen = !trocken && layoutFuer(datum) === "erklaer"
-      && plan.beitraege.some((b) => b.format === "reel" && b.status !== "veroeffentlicht" && !b.fehler);
-    const erklaerPreis = CONFIG.reel.erklaerBilder * erwartet("erklaerbild");
-    if (erklaerOffen && summe + erklaerPreis <= freiJetzt) summe = runden(summe + erklaerPreis);
-    if (summe > 0) reservieren(summe, ["autor", "faktencheck", "reel", "reel-faktencheck", "erklaerbild", "bildregie"], `${offen.length} noch zu schreibende Beiträge${erklaerOffen && summe >= erklaerPreis ? " und die Figuren des Erklärvideos" : ""}`, "beitraege");
-    else reservierungAufheben("beitraege");
+     Vorher standen hier Rücklagen des alten Deckels aus kosten.mjs. Sie
+     rechneten mit erwarteten Preisen, und seit alle bezahlten Aufrufe durch
+     die Admission gehen, prüfte sie niemand mehr: zwei Reservierungssysteme
+     nebeneinander, von denen nur eines noch etwas entschied. Zwei Systeme,
+     die sich widersprechen können, sind schlechter als eines, das hart ist.
 
-    /* Eigener Topf für die Stories - und das ist der Kern der Reparatur vom
-       17.09. Bisher hatten nur die Beiträge eine Rücklage; die Stories lebten
-       von dem, was übrig blieb. Ein Beitrag, der sich verteuert, hat sie
-       damit einfach mitgegessen: An dem Tag kosteten drei Faktencheck-Runden
-       für EINEN Beitrag 0.19 $, und alle neun Stories fielen aus.
-       Ein Topf, den die Beiträge nicht öffnen können, verhindert das. */
-    const storyStand = trocken ? [] : (plan.stories || [])
+     Was bleibt, ist die Frage, die sie beantworten sollten: Darf eine Kür
+     Geld ausgeben, das die Pflicht noch braucht? Die Antwort kann heute nur
+     nein sein, und zwar ohne Zwischentöne. Der harte Worst Case der
+     ausstehenden Pflichtaufrufe übersteigt den ganzen Topf (siehe
+     dailyPlanNotWorstCaseFundable) - eine Rücklage, die kleiner ist als
+     dieser Worst Case, wäre eine erfundene Zahl mit einer erfundenen
+     Sicherheit daran.
+
+     Also: Solange bezahlte Pflichtarbeit aussteht, ist das sichere Budget für
+     bezahlte Küren null. Kostenlose Wege - Archivbild, Icon, reines Layout -
+     laufen nicht über die Admission und bleiben offen. Sobald die Pflicht des
+     Tages durch ist, ist der Rest des Topfes wieder für Küren da. */
+  const storyPflichtOffen = () => {
+    const stand = (plan.stories || [])
       .filter((st) => st.art !== "teaser" && st.status !== "veroeffentlicht")
       .map((st) => hosting.jsonLesen(`inhalte/${datum}-${st.slot}.json`, null));
-    const ungeschrieben = storyStand.filter((v) => !v).length;
-    /* Geschrieben, aber noch nicht geprüft - und das ist der Fall, den die
-       erste Fassung dieses Topfes übersehen hat. Am 17.09. um 07:46 waren
-       sechs Story-Texte bezahlt und fertig, der Topf war damit aufgehoben,
-       und der Faktencheck hatte nichts mehr, wovon er leben konnte. Ein Text
-       ohne Prüfung wird nie veröffentlicht: Das Geld für das Schreiben wäre
-       verbrannt gewesen. Der Topf hält deshalb bis zur PRÜFUNG, nicht bis
-       zum Text. */
-    const ungeprueft = storyStand.filter((v) => v && v.faktencheckOffen).length;
-    const storyWunsch = ungeschrieben
-      ? erwartet("stories") + erwartet("story-faktencheck")
-      : ungeprueft ? erwartet("story-faktencheck") : 0;
-    /* Auch dieser Topf darf nie mehr halten, als überhaupt noch da ist -
-       sonst ist es wieder der Fehler, den bezahlbareSumme behebt. */
-    const storyPreis = bezahlbareSumme([storyWunsch], Math.max(0, freiJetzt - summe));
-    const storyLabel = ungeschrieben
-      ? `${ungeschrieben} noch zu schreibende Stories`
-      : `${ungeprueft} Story-Texte, deren Prüfung aussteht`;
-    if (storyPreis > 0) reservieren(storyPreis, ["stories", "story-faktencheck"], storyLabel, "stories");
-    else reservierungAufheben("stories");
-    return summe;
+    const ungeschrieben = stand.filter((v) => !v).length;
+    /* Ein Text ohne Prüfung wird nie veröffentlicht - das Geld fürs Schreiben
+       wäre verbrannt. Die Pflicht endet deshalb mit der Prüfung, nicht mit
+       dem Text. */
+    const ungeprueft = stand.filter((v) => v && v.faktencheckOffen).length;
+    return { ungeschrieben, ungeprueft };
   };
-  const ruecklage = ruecklageAktualisieren();
-  if (ruecklage > 0) log(`  ${ruecklage.toFixed(3)} $ für ${plan.beitraege.filter(textFehlt).length} noch zu schreibende Beiträge zurückgelegt`);
+
+  const ruecklageAktualisieren = () => {
+    if (trocken) { budget.optionalFreigeben(); return []; }
+    const offeneBeitraege = plan.beitraege.filter(textFehlt);
+    const { ungeschrieben, ungeprueft } = storyPflichtOffen();
+    const offen = [];
+    if (offeneBeitraege.length) offen.push(`${offeneBeitraege.length} Beitrag/Reel`);
+    if (ungeschrieben) offen.push(`${ungeschrieben} Story-Texte`);
+    if (ungeprueft) offen.push(`${ungeprueft} Story-Prüfungen`);
+    if (offen.length) budget.optionalSperren(`Bezahlte Pflichtarbeit steht aus: ${offen.join(", ")}. Bezahlte Küren warten.`);
+    else budget.optionalFreigeben();
+    return offen;
+  };
+  const pflichtOffen = ruecklageAktualisieren();
+  if (pflichtOffen.length) log(`  Bezahlte Küren gesperrt, solange Pflichtarbeit aussteht: ${pflichtOffen.join(", ")}`);
 
   /* Der unbequeme Befund, einmal je Lauf: Mit den heutigen Hard Ceilings
      liegt der Worst Case des Pflichtprodukts ueber dem Core-Deckel. Das
@@ -471,16 +499,21 @@ async function main() {
      Bruchteil. Es heisst, dass niemand vorher garantieren kann, dass jeder
      Pflichtaufruf stattfindet, wenn jeder sein Ceiling ausschoepft. Die
      Kostenzusage haelt; die Verfuegbarkeitszusage braucht den Reservebestand. */
+  /* Die Eingabezahlen hier sind PLANUNGSWERTE, keine Zusage: Zum Zeitpunkt
+     der Planung gibt es die Anfragen noch nicht, also auch keine Schranke
+     ueber ihre Bytes. Sie sind an gemessenen Prompts geeicht und bewusst
+     grosszuegig. Die harte Schranke entsteht erst je Aufruf in eingabe.mjs. */
+  const EIN_LANG = 16000, EIN_PRUEFUNG = 12000;
   const wc = tagesplanWorstCase({
     deckelCore: konfiguration.deckel.core,
     posten: [
       ...plan.beitraege.filter((b) => b.status !== "veroeffentlicht").flatMap((b) => ([
-        { name: `${b.slot} Text`, modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: 3000 },
-        { name: `${b.slot} Faktencheck`, modell: b.format === "reel" ? (CONFIG.ki.modellPruefungReel || CONFIG.ki.modell) : CONFIG.ki.modell, maxTokens: 6000, eingabeTokens: 4000 },
+        { name: `${b.slot} Text`, modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: EIN_LANG },
+        { name: `${b.slot} Faktencheck`, modell: b.format === "reel" ? (CONFIG.ki.modellPruefungReel || CONFIG.ki.modell) : CONFIG.ki.modell, maxTokens: 6000, eingabeTokens: EIN_PRUEFUNG },
       ])),
       ...(plan.stories.some((x) => x.status !== "veroeffentlicht" && x.art !== "teaser")
-        ? [{ name: "Stories", modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: 3000 },
-           { name: "Story-Faktencheck", modell: CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben, maxTokens: 6000, eingabeTokens: 4000 }]
+        ? [{ name: "Stories", modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: EIN_LANG },
+           { name: "Story-Faktencheck", modell: CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben, maxTokens: 6000, eingabeTokens: EIN_PRUEFUNG }]
         : []),
     ],
   });
@@ -1000,12 +1033,9 @@ async function main() {
   }
 
   await zustandSichern(`Zustand ${datum}`);
-  /* Telemetrie: Die Rohzeilen bleiben lokal (out/<datum>/telemetrie.ndjson)
-     und gehen als Actions-Artefakt. In den Asset-Zweig kommen nur die kleinen
-     rollenden Fenster - ein Git-Zweig ist kein Zeitreihenspeicher. */
+  /* Die rollenden Fenster hat die Sicherung selbst geschrieben (vorSichern);
+     hier steht nur noch, was im Protokoll erscheinen soll. */
   if (telemetrie.anzahl()) {
-    const bestand = hosting.jsonLesen("profile.json", {});
-    hosting.jsonSchreiben("profile.json", telemetrie.fensterFortschreiben(bestand));
     const u = telemetrie.uebersicht();
     for (const [topf, z] of Object.entries(u.jeTopf)) {
       log(`  Telemetrie ${topf}: ${z.aufrufe} Aufrufe, ${z.usd.toFixed(4)} $`

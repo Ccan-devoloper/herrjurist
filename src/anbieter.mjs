@@ -33,6 +33,8 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
 import { obergrenzeUsd, preisAus, erfassen, erfassenStueck } from "./kosten.mjs";
+import { InvarianteVerletzt } from "./budget.mjs";
+import { eingabeGrenze } from "./eingabe.mjs";
 import { exaktesProfil, kalibrierFamilie, bausteinHash } from "./profile.mjs";
 
 /* --- Laufkontext ---------------------------------------------------------
@@ -63,11 +65,29 @@ let klient = null;
 const client = () => (klient ||= anthropic());
 export function klientSetzen(k) { klient = k; }   /* nur für Tests */
 
-/** Grobe Schätzung der Eingabelänge - für den Worst Case reicht die Größenordnung. */
-const eingabeSchaetzen = (params) => {
-  const text = JSON.stringify(params?.system || "") + JSON.stringify(params?.messages || "");
-  return Math.ceil(text.length / 3.5);
-};
+/* Der Zählendpunkt von Anthropic, wo es ihn gibt. Er kostet nichts und ist
+   genauer als jede Schranke - aber Anthropic nennt ihn selbst eine Schätzung,
+   und eine Schätzung trägt keine Zusage. Er ergänzt die beweisbare Schranke
+   aus eingabe.mjs, er ersetzt sie nicht (siehe eingabeGrenze). Scheitert er,
+   läuft der Aufruf mit der Schranke weiter - fail open ist hier richtig, weil
+   die Schranke allein schon sicher ist.
+
+   Abschaltbar mit IG_TOKEN_ZAEHLEN=false, falls der Endpunkt limitiert. */
+const zaehlenAktiv = () => String(process.env.IG_TOKEN_ZAEHLEN || "") !== "false";
+
+async function eingabeZaehlen(params) {
+  if (!zaehlenAktiv()) return null;
+  const c = client();
+  if (typeof c?.messages?.countTokens !== "function") return null;
+  try {
+    const körper = { model: params.model, messages: params.messages || [] };
+    if (params.system) körper.system = params.system;
+    if (params.tools) körper.tools = params.tools;
+    const r = await c.messages.countTokens(körper);
+    const n = Number(r?.input_tokens);
+    return Number.isFinite(n) ? n : null;
+  } catch { return null; }
+}
 
 function profilVon({ zweck, provider, modell, params, promptVersion, effort, denkmodus }) {
   const schemaHash = bausteinHash(params?.output_config?.format?.schema || params?.text?.format || null);
@@ -84,14 +104,21 @@ function profilVon({ zweck, provider, modell, params, promptVersion, effort, den
  */
 async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, optional, pflichtName, effort, denkmodus, promptVersion, senden, preis }) {
   if (!kontext?.budget) throw new OhneKontext(zweck);
-  const { budget, telemetrie } = kontext;
+  const { budget, telemetrie, journal } = kontext;
   const { profil, familie, maxTokens } = profilVon({ zweck, provider, modell, params, promptVersion, effort, denkmodus });
-  const eingabeTokens = eingabeSchaetzen(params);
+  /* Beide Seiten des Worst Case sind jetzt Obergrenzen, nicht Schätzungen:
+     die Ausgabe über das konfigurierte Ceiling, die Eingabe über die
+     beweisbare Byte-Schranke aus eingabe.mjs (ergänzt um den Zählendpunkt,
+     wo es ihn gibt). Vorher stand auf der Eingabeseite chars/3.5 - und damit
+     stand die ganze Vorabzusage auf einer Faustregel. */
+  const gezaehlt = provider === "anthropic" ? await eingabeZaehlen(params) : null;
+  const eingabeTokens = eingabeGrenze(params, gezaehlt);
   const worstCase = obergrenzeUsd({ modell, maxTokens: maxTokens || 0, eingabeTokens });
 
   const roh = {
     purpose: zweck, bucket: null, slot, provider, model: modell, effort, thinkingMode: denkmodus,
     attempt, profileId: profil.id, calibrationFamily: familie, maxTokens,
+    inputBoundTokens: eingabeTokens, inputCountedTokens: gezaehlt,
   };
 
   let griff;
@@ -105,13 +132,34 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
   roh.reservedUsd = griff.reservedUsd;
   roh.breakGlass = griff.breakGlass;
 
+  /* Schritt 1 der Durability: Die Reservierung muss den Lauf ueberdauern,
+     BEVOR der Anbieter sie zu sehen bekommt. Wird sie nicht durable, findet
+     der Aufruf nicht statt - fail closed. */
+  let reservierung = null;
+  if (journal) {
+    try {
+      reservierung = await journal.reservieren({ bucket: griff.topf, purpose: zweck, attempt, reservedUsd: griff.reservedUsd, slot });
+    } catch (e) {
+      griff.freigeben();
+      telemetrie?.aufruf({ ...roh, sent: false, actualUsd: 0, releasedUsd: griff.reservedUsd, outcome: "abgelehnt", errorType: e.name, approved: false });
+      throw e;
+    }
+  }
+  roh.reservationId = reservierung;
+
   try {
+    /* Schritt 2: der Sendevermerk, unmittelbar vor dem Absenden. Erst er
+       macht spaeter unterscheidbar, ob ein Absturz vor oder nach dem Senden
+       kam. Scheitert er, ist nichts gesendet - der Fehler faellt in den
+       catch, und dort gibt istGesendet() korrekt false zurueck. */
+    if (journal && reservierung) await journal.senden(reservierung);
     griff.gesendet();
     const antwort = await senden();
     const usd = preis(antwort);
     griff.kosten(usd);
     const usage = antwort?.usage || {};
     griff.buchen(usd);
+    journal?.abrechnen(reservierung, usd);
     telemetrie?.aufruf({
       ...roh, sent: true, actualUsd: usd, usd,
       releasedUsd: Math.max(0, Math.round((griff.reservedUsd - usd) * 1e6) / 1e6),
@@ -125,9 +173,22 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
     });
     return antwort;
   } catch (e) {
+    /* Eine Invariantenverletzung ist das Gegenteil eines ungeklaerten Falls:
+       Die Usage lag vor, die Kosten sind gebucht, der Topf ist gesperrt. Sie
+       als „Kosten unbekannt“ zu protokollieren wuerde die eine Zeile
+       unbrauchbar machen, die hinterher erklaert, was schiefging. */
+    if (e instanceof InvarianteVerletzt) {
+      journal?.abrechnen(reservierung, e.tatsaechlich);
+      telemetrie?.aufruf({
+        ...roh, sent: true, spendUnknown: false,
+        actualUsd: e.tatsaechlich, usd: e.tatsaechlich, releasedUsd: 0,
+        outcome: "invariant_violation", errorType: e.name, approved: false,
+      });
+      throw e;
+    }
     const gesendet = griff.istGesendet();
-    if (!gesendet) griff.freigeben();
-    else griff.ungeklaert(e?.name || "Fehler nach dem Senden");
+    if (!gesendet) { griff.freigeben(); journal?.verfallen(reservierung, e?.name || "vor dem Senden abgebrochen"); }
+    else { griff.ungeklaert(e?.name || "Fehler nach dem Senden"); journal?.ungeklaert(reservierung, e?.name || "Fehler nach dem Senden"); }
     telemetrie?.aufruf({
       ...roh, sent: gesendet, spendUnknown: gesendet, actualUsd: gesendet ? null : 0,
       releasedUsd: gesendet ? 0 : griff.reservedUsd,
@@ -167,11 +228,24 @@ export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = 
       });
       if (!r.ok) throw new Error(`OpenAI ${r.status}: ${(await r.text()).slice(0, 200)}`);
       const d = await r.json();
-      /* Usage vereinheitlichen, damit Preis und Telemetrie dieselbe Sprache sprechen. */
+      /* Usage vereinheitlichen, damit Preis und Telemetrie dieselbe Sprache
+         sprechen - und dabei der Unterschied zwischen den Anbietern:
+
+           Anthropic  input_tokens zaehlt NUR die ungecachten Token;
+                      cache_read und cache_creation stehen daneben.
+           OpenAI     input_tokens ist die GESAMTZAHL, cached_tokens ist eine
+                      TEILMENGE davon.
+
+         Wer das gleichsetzt, bezahlt den gecachten Anteil zweimal - einmal
+         zum vollen, einmal zum Cachepreis. Das erzeugt keinen Overspend (die
+         Zahl ist zu hoch, nicht zu niedrig), blockiert aber unnoetig Budget
+         und verfaelscht Telemetrie und Kalibrierung. */
+      const gesamtEin = d.usage?.input_tokens || 0;
+      const gecacht = Math.min(gesamtEin, d.usage?.input_tokens_details?.cached_tokens || 0);
       d.usage = {
-        input_tokens: d.usage?.input_tokens || 0,
+        input_tokens: Math.max(0, gesamtEin - gecacht),
         output_tokens: d.usage?.output_tokens || 0,
-        cache_read_input_tokens: d.usage?.input_tokens_details?.cached_tokens || 0,
+        cache_read_input_tokens: gecacht,
         cache_creation_input_tokens: 0,
       };
       return d;
@@ -188,7 +262,7 @@ export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = 
  */
 export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null, preisUsd = null, slot = null, optional = true, modell = "gpt-image-1-mini", zeitlimitMs = 120000, url = "https://api.openai.com/v1/images/generations", fetchFn = fetch }) {
   if (!kontext?.budget) throw new OhneKontext(zweck);
-  const { budget, telemetrie } = kontext;
+  const { budget, telemetrie, journal } = kontext;
   const stueck = preisUsd ?? CONFIG.bilder?.ki?.preisUsd ?? 0.01;
   const roh = { purpose: zweck, provider: "openai", model: modell, attempt: 1, slot, maxTokens: null, profileId: `${zweck}:stueck`, calibrationFamily: `${zweck} / ${modell} / - / stueck` };
 
@@ -200,6 +274,17 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     throw e;
   }
   roh.bucket = griff.topf; roh.reservedUsd = griff.reservedUsd; roh.breakGlass = griff.breakGlass;
+  let reservierung = null;
+  if (journal) {
+    try {
+      reservierung = await journal.reservieren({ bucket: griff.topf, purpose: zweck, attempt: 1, reservedUsd: griff.reservedUsd, slot });
+    } catch (e) {
+      griff.freigeben();
+      telemetrie?.aufruf({ ...roh, sent: false, actualUsd: 0, releasedUsd: griff.reservedUsd, outcome: "abgelehnt", errorType: e.name, approved: false });
+      throw e;
+    }
+  }
+  roh.reservationId = reservierung;
   /* Ohne eigene Sendefunktion macht die Tuer den Aufruf selbst - der
      Endpunkt gehoert hierher, damit es ausserhalb keinen zweiten gibt. */
   const senderStandard = async () => {
@@ -218,16 +303,24 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
   };
 
   try {
+    if (journal && reservierung) await journal.senden(reservierung);
     griff.gesendet();
     const ergebnis = await (senden || senderStandard)();
     griff.kosten(stueck);
     griff.buchen(stueck);
+    journal?.abrechnen(reservierung, stueck);
     erfassenStueck(stueck, zweck);
     telemetrie?.aufruf({ ...roh, sent: true, actualUsd: stueck, usd: stueck, releasedUsd: 0, outcome: "ok", approved: true });
     return ergebnis;
   } catch (e) {
+    if (e instanceof InvarianteVerletzt) {
+      journal?.abrechnen(reservierung, e.tatsaechlich);
+      telemetrie?.aufruf({ ...roh, sent: true, spendUnknown: false, actualUsd: e.tatsaechlich, usd: e.tatsaechlich, releasedUsd: 0, outcome: "invariant_violation", errorType: e.name, approved: false });
+      throw e;
+    }
     const gesendet = griff.istGesendet();
-    if (!gesendet) griff.freigeben(); else griff.ungeklaert(e?.name || "Fehler nach dem Senden");
+    if (!gesendet) { griff.freigeben(); journal?.verfallen(reservierung, e?.name || "vor dem Senden abgebrochen"); }
+    else { griff.ungeklaert(e?.name || "Fehler nach dem Senden"); journal?.ungeklaert(reservierung, e?.name || "Fehler nach dem Senden"); }
     telemetrie?.aufruf({ ...roh, sent: gesendet, spendUnknown: gesendet, actualUsd: gesendet ? null : 0, releasedUsd: gesendet ? 0 : stueck, outcome: gesendet ? "ungeklaert" : "nicht-gesendet", errorType: e?.name || "Fehler", approved: false });
     throw e;
   }

@@ -46,7 +46,7 @@
  * @param {Function} o.planSpeichern   (hosting, plan) => void
  * @returns {Function} async (nachricht) => {kostenFest, vorbereitet, durable}
  */
-export function zustandsSicherung({ hosting, plan, datum, kostenAbschluss, wochenKennung, planSpeichern, remoteNoetig }) {
+export function zustandsSicherung({ hosting, plan, datum, kostenAbschluss, wochenKennung, planSpeichern, remoteNoetig, vorSichern = null }) {
   let kostenSnapshot = null;
   let kostenAngewendet = false;
   let vorbereitet = false;
@@ -86,6 +86,16 @@ export function zustandsSicherung({ hosting, plan, datum, kostenAbschluss, woche
         if (e.fehler && !fehlerListe.includes(e.fehler)) fehlerListe.push(e.fehler);
       }
       hosting.jsonSchreiben("fehler.json", fehlerListe.slice(-50));
+
+      /* Alles, was diesen Lauf ueberdauern soll, wird HIER geschrieben - vor
+         Commit und Push. Frueher stand das rollende Profilfenster hinter
+         zustandSichern(); der Commit war da schon durch, ein zweiter kam
+         nicht, und mit dem Runner verschwanden die Messwerte. Wer Zustand
+         nach der Sicherung schreibt, schreibt ihn in den Papierkorb. */
+      if (vorSichern) {
+        try { vorSichern(); }
+        catch (e) { console.error(`  ✗ Zusatzzustand nicht geschrieben: ${e.message}`); }
+      }
 
       const geloescht = hosting.aufraeumen();
       if (geloescht) hosting.commit(`Alte Bilder entfernt (${geloescht} Tage)`);

@@ -35,9 +35,10 @@ export const ROHFELDER = [
   "timestamp", "date", "channel", "purpose", "bucket", "slot",
   "provider", "model", "effort", "thinkingMode", "attempt",
   "profileId", "calibrationFamily",
-  "maxTokens", "inputTokens", "outputTokens", "thinkingTokens",
+  "maxTokens", "inputBoundTokens", "inputCountedTokens",
+  "inputTokens", "outputTokens", "thinkingTokens",
   "cacheReadTokens", "cacheWriteTokens", "serverToolUsage",
-  "stopReason", "sent", "spendUnknown",
+  "stopReason", "sent", "spendUnknown", "reservationId",
   "reservedUsd", "actualUsd", "releasedUsd", "usd",
   "breakGlass", "outcome", "approved", "errorType",
 ];

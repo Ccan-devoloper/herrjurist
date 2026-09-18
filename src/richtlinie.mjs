@@ -103,12 +103,34 @@ export function richtlinieGate({
   const { deckel, breakGlass, ausloeser, regel } = konfiguration;
   const geplant = ausloeser === "schedule";
 
-  if (geplant) {
-    if (deckel.core !== regel.core) befunde.push(`Core-Deckel ${deckel.core} statt ${regel.core} in einem geplanten Lauf`);
-    if (breakGlass.aktiv) befunde.push("Break Glass in einem geplanten Lauf aktiv");
+  /* Geprüft wird gegen REGEL_DECKEL - die normative Konstante in diesem
+     Modul -, NICHT gegen `konfiguration.regel`.
+
+     Der Unterschied ist der ganze Sinn des Gates: `konfiguration.regel` ist
+     eine Kopie dessen, was CONFIG mitgebracht hat. Verstellt jemand dort
+     versehentlich core auf 0,40 $, wandern effektiver Deckel UND „Regel“
+     gemeinsam auf 0,40 - und ein Vergleich der beiden fällt zufrieden aus.
+     Ein Gate, das seinen Maßstab vom Geprüften bezieht, prüft nichts.
+
+     Break Glass bleibt die einzige Ausnahme für Core, und die gibt es nur
+     manuell. Engagement und Research kennen gar keine. */
+  const norm = REGEL_DECKEL;
+  for (const topf of ["core", "engagement", "research"]) {
+    if (Number(regel[topf]) !== norm[topf]) {
+      befunde.push(`Regeldeckel ${topf} = ${regel[topf]} weicht von der Richtlinie ${norm[topf]} ab `
+        + `(CONFIG darf die Policy nicht verschieben)`);
+    }
   }
-  if (deckel.engagement !== regel.engagement) befunde.push(`Engagement-Deckel ${deckel.engagement} statt ${regel.engagement}`);
-  if (deckel.research !== regel.research) befunde.push(`Research-Deckel ${deckel.research} statt ${regel.research}`);
+  if (Number(deckel.engagement) !== norm.engagement) befunde.push(`Engagement-Deckel ${deckel.engagement} statt ${norm.engagement}`);
+  if (Number(deckel.research) !== norm.research) befunde.push(`Research-Deckel ${deckel.research} statt ${norm.research}`);
+  if (breakGlass.aktiv) {
+    if (geplant) befunde.push("Break Glass in einem geplanten Lauf aktiv");
+    else if (Number(deckel.core) !== Number(breakGlass.betragUsd)) {
+      befunde.push(`Core-Deckel ${deckel.core} passt nicht zum Break-Glass-Betrag ${breakGlass.betragUsd}`);
+    }
+  } else if (Number(deckel.core) !== norm.core) {
+    befunde.push(`Core-Deckel ${deckel.core} statt ${norm.core} ohne Break Glass`);
+  }
 
   /* Produktmenge: Sie ist das Versprechen an die Leser und keine Stellschraube
      für Kostenprobleme. */
