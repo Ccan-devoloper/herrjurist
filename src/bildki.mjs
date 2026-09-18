@@ -16,7 +16,7 @@ import { spawnSync } from "node:child_process";
 import { ffmpegPfad } from "./stimme.mjs";
 import { CONFIG } from "./config.mjs";
 import { budgetPruefen, erfassenStueck } from "./kosten.mjs";
-import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht } from "./freistellen.mjs";
+import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
 
 export const bildKiAktiv = () => Boolean(CONFIG.bilder.ki.aktiv && CONFIG.bilder.ki.key);
 
@@ -107,7 +107,21 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
     antwort = await fetch("https://api.openai.com/v1/images/generations", {
       method: "POST",
       headers: { Authorization: `Bearer ${ki.key}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ model: ki.modell, prompt: bildAuftrag(szene, { stil, look: aussehen }), n: 1, size: ki.groesse, quality: ki.guete, background: "transparent", output_format: "png" }),
+      /* Kein Transparenzwunsch beim Foto-Look. Die Probe vom 18.09. hat
+         gezeigt, warum die Titelbilder trotz ausdruecklichem Fotoauftrag flach
+         blieben: Verlangt man eine Fotografie, malt das Modell IMMER einen
+         Hintergrund dazu - alle drei Proben kamen mit Studiogrund zurueck,
+         obwohl "background: transparent" gesetzt war. Ein Bild ohne
+         Alphakanal verwirft diese Funktion aber als unbrauchbar. Uebrig blieb
+         also gerade das, was wie ein Aufkleber aussieht: die flache
+         Illustration. Die Pipeline hat den Foto-Look systematisch
+         aussortiert.
+
+         Deshalb: Foto mit Hintergrund bestellen und ihn oertlich wegschneiden
+         - mit demselben Freisteller, der die gefundenen Fotos seit jeher
+         freistellt. Er kostet nichts und prueft Deckung, Festigkeit,
+         Anschnitt und Seitenverhaeltnis gleich mit. */
+      body: JSON.stringify({ model: ki.modell, prompt: bildAuftrag(szene, { stil, look: aussehen }), n: 1, size: ki.groesse, quality: ki.guete, ...(aussehen === "foto" ? {} : { background: "transparent" }), output_format: "png" }),
       signal: steuerung.signal,
     });
   } catch (e) {
@@ -127,6 +141,22 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
   if (!b64) { console.warn("  ! Motiv zeichnen: keine Bilddaten zurückgekommen."); return null; }
   const roh = path.join(os.tmpdir(), `ki-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
   fs.writeFileSync(roh, Buffer.from(b64, "base64"));
+  if (aussehen === "foto") {
+    /* Der Freisteller traegt hier alle Pruefungen: unscharf faellt aus (beim
+       gezeichneten Bild abgeschaltet, die weiche Tiefenschaerfe ist
+       bestellt), zu viel oder zu wenig Deckung, Schleier, Anschnitt oben oder
+       seitlich, Bruchstueck-Seitenverhaeltnis. Kommt nichts zurueck, bleibt
+       es beim Icon - wie bisher. */
+    const frei = freistellen(roh, { randFarbe: null, schaerfePruefen: false });
+    fs.rmSync(roh, { force: true });
+    if (!frei?.pfad) { console.warn(`  ! Gezeichnetes Foto nicht freistellbar - Titelfolie bleibt beim Icon.`); return null; }
+    const ohneRandFoto = frei.pfad.replace(/\.png$/, "-roh.png");
+    fs.copyFileSync(frei.pfad, ohneRandFoto);
+    const fertigFoto = randFarbe ? bestickern(frei.pfad, randFarbe) : frei.pfad;
+    const mFoto = masse(fertigFoto) || {};
+    console.log(`  → Motiv fotografiert: „${szene}" (Deckung ${(frei.deckung * 100).toFixed(0)} %, freigestellt)`);
+    return { pfad: fertigFoto, ohneRand: ohneRandFoto, breite: mFoto.breite || null, hoehe: mFoto.hoehe || null };
+  }
   /* Dieselbe Härteprüfung wie beim Freisteller: Ein weicher Schleier ist auch
      dann ein Schleier, wenn ihn niemand ausgeschnitten hat. */
   const prof = alphaProfil(roh);

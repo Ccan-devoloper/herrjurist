@@ -3084,3 +3084,24 @@ test("Die Schätzung lernt aus den Vortagen, heutige Messungen gehen vor", async
   budgetSetzen({ limitUsd: 1, bisher: 0.97 });
   assert.equal(budgetFrei("faktencheck"), true, "mit der alten Tabelle wäre er gestartet - genau der Fehler");
 });
+
+test("Foto-Look bestellt keinen durchsichtigen Hintergrund, Flat-Look schon", async () => {
+  /* Die Probe vom 18.09.: Verlangt man eine Fotografie, malt das Modell immer
+     einen Hintergrund dazu - alle drei Proben kamen mit Studiogrund zurück,
+     obwohl Transparenz gesetzt war. Bilder ohne Alphakanal verwirft die
+     Pipeline, also überlebte gerade die flache Illustration. Deshalb wird der
+     Hintergrund beim Foto-Look gar nicht erst verlangt, sondern hinterher
+     weggeschnitten. */
+  const { bildAuftrag } = await import("../src/bildki.mjs");
+  const foto = bildAuftrag("stack of unopened envelopes", { look: "foto" });
+  const flach = bildAuftrag("stack of unopened envelopes", { look: "flach" });
+  assert.match(foto, /Photorealistic photograph/);
+  assert.match(flach, /Flat vector illustration/);
+  /* Beide Aufträge verbieten Schrift im Bild - der Grund steht im Protokoll
+     vom 18.09.: „GERITIFIEID MAIL" auf einem Titelbild. */
+  for (const a of [foto, flach]) assert.match(a, /no text, no letters, no words/);
+  /* Und der Freisteller lässt sich für gezeichnete Bilder ohne
+     Schärfeprüfung aufrufen: Die weiche Tiefenschärfe ist dort bestellt. */
+  const { freistellen } = await import("../src/freistellen.mjs");
+  assert.equal(freistellen("/gibt-es-nicht.png", { schaerfePruefen: false }), null, "kennt die Option und stirbt nicht daran");
+});

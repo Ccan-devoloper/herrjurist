@@ -151,9 +151,14 @@ export function bestickern(pngPfad, farbe, dicke = 12) {
  * Stellt ein Bild frei.
  * @returns {{pfad:string, deckung:number}|null} null = nicht brauchbar
  */
-export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.env.IG_BILDER_MODELL || "isnet-general-use", randFarbe = null } = {}) {
+/* schaerfePruefen: Die Schaerfegrenze ist fuer gefundene Fotos da - unter
+   Tausenden Treffern ist der naechste Kandidat einen Griff entfernt. Ein
+   gezeichnetes Motiv ist bezahlt und einmalig, und der Fotoauftrag verlangt
+   ausdruecklich eine weiche Tiefenschaerfe; dieselbe Grenze wuerde dort das
+   verwerfen, was bestellt wurde. */
+export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.env.IG_BILDER_MODELL || "isnet-general-use", randFarbe = null, schaerfePruefen = true } = {}) {
   if (!rembgVorhanden()) return null;
-  const sch = schaerfe(quelle);
+  const sch = schaerfePruefen ? schaerfe(quelle) : null;
   if (sch != null && sch < SCHAERFE_MIN) {
     console.log(`  → Foto verworfen (unscharf, Schärfe ${Math.round(sch)}) – nächster Kandidat.`);
     return null;
