@@ -4707,6 +4707,65 @@ test("1a Simulation: der zu teure Pflichtaufruf startet nicht – und wird gemel
   fs.rmSync(dir, { recursive: true, force: true });
 });
 
+test("1a Simulation: das optionale Bild wird abgelehnt – das Pflichtstück läuft weiter", async () => {
+  /* Der Fall, der im Alltag am häufigsten eintritt: Der Tag ist fast voll,
+     ein Pflichtstück steht noch aus, und ein zusätzliches Erklärbild wäre
+     nett. Das Bild darf dann nicht stattfinden - und zwar so, dass der
+     Anbieter gar nicht erst gerufen wird. */
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, bildAufruf, claudeAufruf } = await import("../src/anbieter.mjs");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "sim3-"));
+  /* 0,29 von 0,32 $ sind verbraucht; 0,025 $ liegen für den ausstehenden
+     Story-Faktencheck zurück. Frei für alles andere: 0,005 $. */
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.29 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  budget.pflichtRuecklage("story-faktencheck", "story-faktencheck", 0.025);
+  assert.equal(budget.frei("core"), 0.005, "neben der Rücklage bleiben 0,005 $");
+
+  let bildAnfragen = 0;
+  const fetchFn = async () => { bildAnfragen++; return { ok: true, json: async () => ({ data: [{ b64_json: "x" }] }) }; };
+
+  /* Das optionale Bild kostet 0,01 $ - mehr, als neben der Rücklage frei
+     ist. Es startet nicht. */
+  let fehler = null;
+  try {
+    await bildAufruf({ zweck: "erklaerbild", optional: true, slot: "b3", preisUsd: 0.01,
+      auftrag: { key: "k", koerper: {} }, fetchFn });
+  } catch (e) { fehler = e; }
+
+  assert.ok(fehler instanceof AdmissionAbgelehnt, "das optionale Bild wird abgelehnt");
+  assert.equal(bildAnfragen, 0, "die Bild-API wurde nicht gerufen");
+  assert.equal(budget.stand().verbraucht.core, 0.29, "kein Cent zusätzlich");
+
+  const abgelehnt = telemetrie.zeilen().at(-1);
+  assert.equal(abgelehnt.purpose, "erklaerbild");
+  assert.equal(abgelehnt.sent, false);
+  assert.equal(abgelehnt.outcome, "abgelehnt");
+  assert.equal(abgelehnt.actualUsd, 0);
+
+  /* Und jetzt der Punkt: Das Pflichtstück, für das zurückgelegt wurde, läuft
+     trotzdem - es löst seine eigene Rücklage ein. */
+  klientSetzen({ messages: { create: async () => ({ usage: { input_tokens: 4000, output_tokens: 600 }, stop_reason: "end_turn", content: [{ type: "text", text: "{}" }] }) } });
+  const antwort = await claudeAufruf({
+    zweck: "story-faktencheck", slot: "s*", modell: "claude-haiku-4-5-20251001",
+    pflichtName: "story-faktencheck",
+    params: { model: "claude-haiku-4-5-20251001", max_tokens: 3000, messages: [{ role: "user", content: "x" }] },
+  });
+  assert.ok(antwort, "der Pflichtaufruf ist durchgelaufen");
+  budget.pflichtAufloesen("story-faktencheck");
+
+  const stand = budget.stand();
+  assert.ok(stand.verbraucht.core <= 0.32, `Core ${stand.verbraucht.core} über dem Deckel`);
+  assert.ok(stand.verbraucht.core > 0.29, "der Pflichtaufruf hat bezahlt");
+  assert.equal(stand.gesperrt.core, null);
+  assert.equal(telemetrie.zeilen().length, 2, "beide Aufrufe stehen in der Telemetrie - der abgelehnte auch");
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
 test("1a: Der Worst Case des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {
   /* Fall 3 aus der Anweisung braucht den Reservebestand und ist noch nicht
      gebaut. Was 1a leisten kann, ist die Kostenzusage; die Verfügbarkeits-
