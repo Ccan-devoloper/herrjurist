@@ -44,6 +44,20 @@ export const REGEL_DECKEL = Object.freeze({ core: 0.32, engagement: 0.25, resear
  */
 export const PROVIDER_GUARD_USD = 0.02;
 
+/**
+ * Der normative Mindestabstand für Scheduled Production.
+ *
+ * Ein geplanter Lauf darf ihn nicht unterschreiten. Sonst wäre der Guard
+ * genau das, was er ersetzen soll: eine Zusage, die eine Umgebungsvariable
+ * still aushebeln kann. IG_PROVIDER_GUARD_USD=0 in den Repository-Variablen
+ * hätte gereicht - und niemandem wäre es aufgefallen.
+ *
+ * Nach oben ist offen: Ein größerer Abstand ist konservativer und deshalb
+ * erlaubt. Eine ABSENKUNG ist eine Policy-Änderung und gehört in diese Zeile,
+ * versioniert und im Diff sichtbar, nicht in eine Umgebung.
+ */
+export const POLICY_PROVIDER_GUARD_USD = 0.02;
+
 export function providerGuard(roh = process.env.IG_PROVIDER_GUARD_USD) {
   const n = Number(roh);
   return Number.isFinite(n) && n >= 0 ? n : PROVIDER_GUARD_USD;
@@ -167,6 +181,16 @@ export function richtlinieGate({
      für Kostenprobleme. */
   for (const [feld, soll] of Object.entries(erwartet)) {
     if (produkt[feld] !== soll) befunde.push(`Produktmenge ${feld}: ${produkt[feld]} statt ${soll}`);
+  }
+
+  /* Der Provider-Guard ist Teil der Policy, nicht der Umgebung. Ein
+     geplanter Lauf mit zu kleinem Abstand startet nicht. */
+  const guard = Number(konfiguration.providerGuardUsd);
+  if (!Number.isFinite(guard) || guard < 0) {
+    befunde.push(`Provider-Guard ${konfiguration.providerGuardUsd} ist kein gültiger Betrag`);
+  } else if (geplant && guard < POLICY_PROVIDER_GUARD_USD) {
+    befunde.push(`Provider-Guard ${guard.toFixed(4)} $ unter dem Policy-Mindestwert ${POLICY_PROVIDER_GUARD_USD.toFixed(4)} $ `
+      + `in einem geplanten Lauf - eine Absenkung ist eine versionierte Policy-Änderung, keine Umgebungsvariable`);
   }
 
   if (researchSuchen > 2) befunde.push(`Research-Suchlimit ${researchSuchen} über dem erlaubten Höchstwert 2`);

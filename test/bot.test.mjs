@@ -16,6 +16,10 @@ import { CONFIG } from "../src/config.mjs";
 
 const beispiele = JSON.parse(fs.readFileSync(new URL("../beispiele/inhalte.json", import.meta.url), "utf8"));
 
+/* Quelltext ohne Kommentare - fuer Pruefungen, bei denen die REIHENFOLGE
+   von Anweisungen zaehlt und eine Erklaerung im Kommentar sie verschoebe. */
+const ohneKommentare = (t) => t.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+
 test("Themenpool: alle Fächer vertreten, alle drei Gebiete, saubere Titel", () => {
   const pool = themenpool();
   const st = poolStatistik(pool);
@@ -2984,7 +2988,7 @@ test("nachbessern reicht einen BudgetFehler weiter statt einen neuen Entwurf zu 
   /* Seit es die gemeinsame Oberklasse gibt, wird nicht mehr auf einen
      einzelnen Fehlertyp geprüft: Admission, gesperrter Topf und ein nicht
      durable gewordenes Journal sagen dasselbe wie der alte BudgetFehler. */
-  assert.match(block, /if \(istBudgetStopp\(e\)\) throw e;/);
+  assert.match(block, /if \(istKostenKontrollFehler\(e\)\) throw e;/);
   assert.ok(!/catch \{ return null; \}/.test(block), "kein stilles Schlucken mehr");
 });
 
@@ -5278,7 +5282,7 @@ test("1a RC3: Ein Budgetstopp erzeugt niemals eine fachliche Freigabe", async ()
      bei einem technischen Ausfall `ok: true` zurück. Eine Admission-Ablehnung
      dort hineinlaufen zu lassen hieße: kein Geld für die Prüfung, also gilt
      der Beitrag als geprüft. */
-  const { istBudgetStopp, BudgetStopp, budgetStoppGrund } = await import("../src/budgetstopp.mjs");
+  const { istBudgetStopp, BudgetStopp, budgetStoppGrund } = await import("../src/kostenfehler.mjs");
   const { BudgetFehler, PostenFehler } = await import("../src/kosten.mjs");
   const { AdmissionAbgelehnt, TopfGesperrt, PflichtUeberreserviert } = await import("../src/budget.mjs");
   const { JournalNichtDurable } = await import("../src/journal.mjs");
@@ -5312,20 +5316,20 @@ test("1a RC3: Ein Budgetstopp erzeugt niemals eine fachliche Freigabe", async ()
   const fc = fs.readFileSync(new URL("../src/faktencheck.mjs", import.meta.url), "utf8");
 
   const faktenBlock = autor.slice(autor.indexOf("async function faktenSicher"), autor.indexOf("export function themaText"));
-  assert.match(faktenBlock, /if \(istBudgetStopp\(e\)\) throw e;/, "Faktencheck: ein Budgetstopp wird nicht nach oben gereicht");
-  assert.ok(faktenBlock.indexOf("istBudgetStopp(e)") < faktenBlock.indexOf("CONFIG.faktencheck.strikt"),
+  assert.match(faktenBlock, /if \(istKostenKontrollFehler\(e\)\) throw e;/, "Faktencheck: ein Budgetstopp wird nicht nach oben gereicht");
+  assert.ok(ohneKommentare(faktenBlock).indexOf("istKostenKontrollFehler(e)") < ohneKommentare(faktenBlock).indexOf("CONFIG.faktencheck.strikt"),
     "Faktencheck: der Budgetstopp wird erst NACH dem Strikt-Zweig geprüft - er könnte eine Freigabe erzeugen");
 
   const storyBlock = autor.slice(autor.indexOf("export async function storiesPruefen"), autor.indexOf("const REEL_SCHEMA"));
-  assert.match(storyBlock, /istBudgetStopp\(e\)/, "Story-Prüfung: kein Budgetstopp-Zweig");
+  assert.match(storyBlock, /istKostenKontrollFehler\(e\)/, "Story-Prüfung: kein Budgetstopp-Zweig");
   assert.match(storyBlock, /faktencheckOffen = true/, "Story-Prüfung: die Texte gelten nicht als offen");
 
   const rechercheBlock = autor.slice(autor.indexOf("Web-Recherche"), autor.indexOf("export async function bildregie") + 1 || undefined);
-  assert.match(rechercheBlock, /istBudgetStopp\(e\)/, "Research: kein sauberer Budgetstopp-Zweig");
+  assert.match(rechercheBlock, /istKostenKontrollFehler\(e\)/, "Research: kein sauberer Budgetstopp-Zweig");
 
-  assert.match(lauf, /if \(istBudgetStopp\(e\)\) log\(`  ⏸ \$\{e\.message\}`\); else console\.error\(`  ✗ Interaktion/, "Engagement: Budgetstopp nicht getrennt protokolliert");
+  assert.match(lauf, /if \(istKostenKontrollFehler\(e\)\) log\(`  ⏸ \$\{e\.message\}`\); else console\.error\(`  ✗ Interaktion/, "Engagement: Budgetstopp nicht getrennt protokolliert");
   assert.match(lauf, /eintrag\.budgetBlockiert = \{[\s\S]{0,200}?art: e\.name \}/, "Feed/Reel: der blockierte Slot hält die Art des Stopps nicht fest");
-  assert.match(fc, /istBudgetStopp\(e\)/, "Zweitmeinung: kein Budgetstopp-Zweig");
+  assert.match(fc, /istKostenKontrollFehler\(e\)/, "Zweitmeinung: kein Budgetstopp-Zweig");
 
   /* Nirgends mehr ein Vergleich auf den alten Einzeltyp. */
   for (const [name, quelle] of [["autor.mjs", autor], ["lauf.mjs", lauf], ["faktencheck.mjs", fc]]) {
@@ -5455,6 +5459,231 @@ test("1a RC3: Der Cutover addiert den Altbestand, statt ihn zu maximieren", asyn
   /* Ein neuer Tag beginnt wieder bei seiner eigenen Baseline. */
   const l3 = journalStarten({ lesen: lesen2, schreiben: schreiben2, datum: "2026-09-21", legacyBaseline: { core: 0, engagement: 0, research: 0 } });
   assert.equal(l3.uebernahme().vorbelastung.core, 0, "der Vortag belastet den neuen Tag");
+});
+/* ===== 1a-RC4: zwei Codefehler, zwei Abnahmepunkte ======================== */
+
+test("1a RC4: Die Baseline überlebt den echten Tagesabschluss", async () => {
+  /* Der Blocker: lauf.mjs baute das Journalobjekt beim Tagesabschluss selbst
+     nach und liess legacyBaseline weg. Der naechste Runner leitete sie wieder
+     aus kosten.json ab - inklusive der Aufrufe, die im Journal schon standen.
+     Aus 0,13 wurden 0,16. Der Test laeuft deshalb ueber den ECHTEN
+     zustandSichern/vorSichern-Pfad, nicht ueber journal.abschluss(). */
+  const { journalStarten } = await import("../src/journal.mjs");
+  const { zustandsSicherung } = await import("../src/zustand.mjs");
+
+  const platte = new Map();                       // steht für den Asset-Zweig
+  const hostingBauen = () => ({
+    pushen: true,
+    jsonLesen: (n, vor) => (platte.has(n) ? JSON.parse(platte.get(n)) : vor),
+    jsonSchreiben: (n, d) => platte.set(n, JSON.stringify(d)),
+    aufraeumen: () => 0, commit: () => true, push: async () => true,
+  });
+
+  /* Ein Lauf, wie ihn lauf.mjs baut: Journal anlegen, Aufruf verbuchen,
+     Zustand über zustandSichern sichern - mit vorSichern wie im Produktivcode. */
+  const einLauf = async ({ legacyBaseline, arbeit }) => {
+    const hosting = hostingBauen();
+    const journal = journalStarten({
+      datum: "2026-09-19", kanal: "herrjurist", legacyBaseline,
+      lesen: () => hosting.jsonLesen("budget-journal.json", null),
+      schreiben: async (inhalt) => { hosting.jsonSchreiben("budget-journal.json", inhalt); return await hosting.push(); },
+    });
+    const uebernommen = journal.uebernahme();
+    await arbeit(journal);
+    const sichern = zustandsSicherung({
+      hosting, plan: { beitraege: [], stories: [] }, datum: "2026-09-19",
+      kostenAbschluss: () => ({ usd: 0, aufrufe: 0, cacheAnteil: 0 }),
+      wochenKennung: () => "2026-W38", planSpeichern: () => {},
+      /* genau die Zeile aus lauf.mjs */
+      vorSichern: () => hosting.jsonSchreiben("budget-journal.json", journal.snapshot()),
+    });
+    await sichern("Zustand");
+    return uebernommen;
+  };
+
+  /* Lauf 1: Altbestand 0,10 aus kosten.json, ein Aufruf kostet 0,03. */
+  await einLauf({
+    legacyBaseline: { core: 0.10, engagement: 0, research: 0 },
+    arbeit: async (j) => {
+      const id = await j.reservieren({ bucket: "core", purpose: "autor", reservedUsd: 0.05 });
+      await j.senden(id);
+      j.abrechnen(id, 0.03);
+    },
+  });
+
+  /* Der Tagesabschluss muss die Baseline mitgeschrieben haben. */
+  const geschrieben = JSON.parse(platte.get("budget-journal.json"));
+  assert.ok(geschrieben.legacyBaseline, "legacyBaseline fehlt im geschriebenen Journal");
+  assert.equal(geschrieben.legacyBaseline.core, 0.10);
+  assert.equal(geschrieben.eintraege.length, 1);
+  assert.equal(geschrieben.eintraege[0].state, "settled", "die Abrechnung wurde nicht mitgeschrieben");
+
+  /* Lauf 2: kosten.json steht inzwischen bei 0,13 und wird als Baseline
+     hereingereicht - der neue Runner weiss es nicht besser. */
+  const u2 = await einLauf({ legacyBaseline: { core: 0.13, engagement: 0, research: 0 }, arbeit: async () => {} });
+  assert.equal(u2.vorbelastung.core, 0.13,
+    "0,10 eingefroren + 0,03 abgerechnet = 0,13; ohne mitgeschriebene Baseline wären es 0,16 gewesen");
+  assert.notEqual(u2.vorbelastung.core, 0.16, "der Aufruf wird doppelt gezählt");
+
+  /* Und der ungeklärte Fall über denselben Pfad: 0,10 + 0,08 = 0,18. */
+  platte.clear();
+  await einLauf({
+    legacyBaseline: { core: 0.10, engagement: 0, research: 0 },
+    arbeit: async (j) => {
+      const id = await j.reservieren({ bucket: "core", purpose: "reel", reservedUsd: 0.08 });
+      await j.senden(id);
+      j.ungeklaert(id, "Verbindung abgebrochen");
+    },
+  });
+  const u3 = await einLauf({ legacyBaseline: { core: 0.10, engagement: 0, research: 0 }, arbeit: async () => {} });
+  assert.equal(u3.vorbelastung.core, 0.18, "0,10 Altbestand + 0,08 ungeklärt");
+
+  /* Niemand ausser dem Journal baut das Format. */
+  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  assert.match(lauf, /jsonSchreiben\("budget-journal\.json", journal\.snapshot\(\)\)/,
+    "lauf.mjs schreibt das Journal nicht über snapshot()");
+  assert.ok(!/budget-journal\.json",\s*\{/.test(lauf), "irgendwo wird das Journalobjekt von Hand gebaut");
+});
+
+test("1a RC4: Kein Kostenkontrollfehler erzeugt eine fachliche Freigabe", async () => {
+  /* Mit IG_FAKTENCHECK_STRIKT=false gibt faktenSicher() auf dem allgemeinen
+     Fehlerpfad { ok: true } zurück. Fünf Fehlerarten dürfen dort nie
+     ankommen - und eine muss es weiterhin. */
+  const { istKostenKontrollFehler, istBudgetStopp, KostenKontrollFehler, BudgetStopp } = await import("../src/kostenfehler.mjs");
+  const { AdmissionAbgelehnt, InvarianteVerletzt, UnbekannterZweck, TopfGesperrt } = await import("../src/budget.mjs");
+  const { OhneKontext } = await import("../src/anbieter.mjs");
+  const { JournalNichtDurable } = await import("../src/journal.mjs");
+  const { BudgetFehler } = await import("../src/kosten.mjs");
+
+  const faelle = {
+    A_AdmissionAbgelehnt: new AdmissionAbgelehnt("faktencheck", "core", 0.2, 0.01, 0.32),
+    B_InvarianteVerletzt: new InvarianteVerletzt("faktencheck", "core", 0.05, 0.09),
+    C_UnbekannterZweck: new UnbekannterZweck("neuer-zweck"),
+    D_OhneKontext: new OhneKontext("faktencheck"),
+    E_TopfGesperrt: new TopfGesperrt("core", "Invariante verletzt"),
+    F_JournalNichtDurable: new JournalNichtDurable("faktencheck", "sendevermerk"),
+    G_BudgetFehler: new BudgetFehler("Tagesbudget erreicht"),
+  };
+  for (const [name, e] of Object.entries(faelle)) {
+    assert.ok(e instanceof KostenKontrollFehler, `${name} hängt nicht an KostenKontrollFehler`);
+    assert.ok(istKostenKontrollFehler(e), `${name} wird nicht erkannt - Degrade-Pfad erreichbar`);
+  }
+  /* Die engere Klasse trennt weiterhin sauber: gesendet ist nicht gestoppt. */
+  assert.ok(!istBudgetStopp(faelle.B_InvarianteVerletzt), "InvarianteVerletzt ist kein Stopp VOR dem Senden");
+  assert.ok(!istBudgetStopp(faelle.C_UnbekannterZweck));
+  assert.ok(!istBudgetStopp(faelle.D_OhneKontext));
+  assert.ok(istBudgetStopp(faelle.A_AdmissionAbgelehnt));
+  assert.ok(faelle.A_AdmissionAbgelehnt instanceof BudgetStopp);
+
+  /* E) Ein echter technischer Fehler behält seinen Degrade-Pfad. */
+  for (const e of [new Error("Prüfer antwortet nicht"), new TypeError("kaputt"), new SyntaxError("JSON")]) {
+    assert.ok(!istKostenKontrollFehler(e), `${e.name} wird fälschlich der Kostenkontrolle zugeschlagen`);
+  }
+  /* Auch über Modulgrenzen, wo instanceof versagt. */
+  assert.ok(istKostenKontrollFehler({ name: "InvarianteVerletzt" }));
+  assert.ok(istKostenKontrollFehler({ kostenKontrolle: true, name: "Irgendwas" }));
+
+  /* Und im Quelltext: die weite Prüfung steht VOR dem Degrade. */
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  const roh = autor.slice(autor.indexOf("async function faktenSicher"), autor.indexOf("export function themaText"));
+  assert.match(roh, /if \(istKostenKontrollFehler\(e\)\) throw e;/,
+    "faktenSicher prüft nicht auf die weite Klasse");
+  /* Ohne Kommentare, sonst verschiebt eine Erklärung im Kommentar die
+     Reihenfolge - der Kommentar oben nennt „{ ok: true }" bewusst. */
+  const block = ohneKommentare(roh);
+  assert.ok(block.indexOf("istKostenKontrollFehler(e)") < block.indexOf("CONFIG.faktencheck.strikt"),
+    "die Prüfung steht nach dem Strikt-Zweig - ein Kostenfehler könnte eine Freigabe erzeugen");
+  assert.ok(block.indexOf("istKostenKontrollFehler(e)") < block.indexOf("ok: true"),
+    "die Prüfung steht nach dem Freigabepfad");
+  assert.ok(!/istBudgetStopp\(e\)/.test(block), "die enge Prüfung deckt InvarianteVerletzt nicht ab");
+});
+
+test("1a RC4: faktenSicher gibt bei strikt=false kein ok für einen Kostenfehler", async () => {
+  /* Der Verhaltenstest zum vorigen: derselbe Pfad, einmal gelaufen. Der
+     Degrade-Zweig wird nachgebaut, weil faktenSicher nicht exportiert ist -
+     aber mit der ECHTEN Prüffunktion aus dem Produktionscode. */
+  const { istKostenKontrollFehler } = await import("../src/kostenfehler.mjs");
+  const { AdmissionAbgelehnt, InvarianteVerletzt, UnbekannterZweck } = await import("../src/budget.mjs");
+  const { OhneKontext } = await import("../src/anbieter.mjs");
+
+  const strikt = false;                    // IG_FAKTENCHECK_STRIKT=false
+  const faktenSicherNachbau = (e) => {
+    if (istKostenKontrollFehler(e)) throw e;
+    if (strikt) throw new Error("Faktencheck nicht möglich");
+    return { ok: true, fehler: [], hinweise: [], korrekturen: [], behebbar: [] };
+  };
+
+  for (const [name, e] of [
+    ["A AdmissionAbgelehnt", new AdmissionAbgelehnt("faktencheck", "core", 0.2, 0.01, 0.32)],
+    ["B InvarianteVerletzt", new InvarianteVerletzt("faktencheck", "core", 0.05, 0.09)],
+    ["C UnbekannterZweck", new UnbekannterZweck("neuer-zweck")],
+    ["D OhneKontext", new OhneKontext("faktencheck")],
+  ]) {
+    assert.throws(() => faktenSicherNachbau(e), (geworfen) => geworfen === e,
+      `${name}: der Fehler wurde geschluckt und der Beitrag freigegeben`);
+  }
+  /* E) Der technische Ausfall darf den definierten Degrade nehmen. */
+  const r = faktenSicherNachbau(new Error("Prüfer antwortet nicht"));
+  assert.equal(r.ok, true, "der definierte Degrade-Pfad für technische Fehler ist verschwunden");
+});
+
+test("1a RC4: Keine Beweisbehauptung mehr in irgendeiner Quelldatei", async () => {
+  /* Der RC3-Test grepte nur eingabe.mjs und belegte deshalb nicht, was der
+     Bericht behauptete. Jetzt über alle Quelldateien beider Kanäle. */
+  const verbotene = [
+    { muster: /beweisbare\w*\s+(Byte-|Eingabe-|Token-)?Schranke/i, was: "„beweisbare Schranke“" },
+    { muster: /beweist\s+alle/i, was: "„beweist alle …“" },
+    { muster: /Schranke\s+aller\s+abgerechneten/i, was: "„Schranke aller abgerechneten …“" },
+    { muster: /mathematisch\s+(niemals|bewiesen|garantiert|sicher)/i, was: "„mathematisch niemals/bewiesen“" },
+    { muster: /kann\s+(den\s+Deckel\s+)?niemals\s+über/i, was: "„kann niemals über …“" },
+  ];
+  const dateien = fs.readdirSync(new URL("../src/", import.meta.url)).filter((f) => f.endsWith(".mjs"));
+  const funde = [];
+  for (const datei of dateien) {
+    const text = fs.readFileSync(new URL(`../src/${datei}`, import.meta.url), "utf8");
+    for (const v of verbotene) if (v.muster.test(text)) funde.push(`${datei}: ${v.was}`);
+  }
+  assert.deepEqual(funde, [], `Beweisbehauptung im Produktionscode:\n${funde.join("\n")}`);
+
+  /* „beweisbar nicht gesendet" im Journal bleibt zulässig und ist ein anderer
+     Satz: Ob ein durabler Schreibvorgang stattgefunden hat, ist eine Tatsache
+     über unsere eigene Datei - keine Aussage über die Tokenisierung des
+     Anbieters. */
+  const journal = fs.readFileSync(new URL("../src/journal.mjs", import.meta.url), "utf8");
+  assert.match(journal, /beweisbar nicht gesendet/i, "die zulässige Aussage wurde versehentlich mitentfernt");
+
+  /* Und die Tür beschreibt die Eingabeseite korrekt. */
+  const tuer = fs.readFileSync(new URL("../src/anbieter.mjs", import.meta.url), "utf8");
+  assert.match(tuer, /clientInputBound/, "die Tür benennt die clientseitige Schranke nicht");
+  assert.match(tuer, /ohne die Token, die der\s*\n?\s*Anbieter selbst hinzufügt/,
+    "die Tür sagt nicht, was die Schranke NICHT leistet");
+});
+
+test("1a RC4: Ein geplanter Lauf kann den Provider-Guard nicht per Umgebung absenken", async () => {
+  const { effektiveKonfiguration, richtlinieGate, RichtlinieVerletzt, POLICY_PROVIDER_GUARD_USD, providerGuard } = await import("../src/richtlinie.mjs");
+  assert.equal(POLICY_PROVIDER_GUARD_USD, 0.02);
+
+  const mitGuard = (guard, ausloeser = "schedule") => {
+    const k = effektiveKonfiguration({ ausloeser, datum: "2026-09-19" });
+    k.providerGuardUsd = guard;
+    k.betriebsDeckel = Object.fromEntries(Object.entries(k.deckel).map(([t, v]) => [t, v - guard]));
+    return () => richtlinieGate({ konfiguration: k });
+  };
+
+  assert.ok(mitGuard(0.02)().ok, "der Regelfall wird abgelehnt");
+  assert.ok(mitGuard(0.05)().ok, "ein größerer, konservativerer Guard ist nicht erlaubt");
+  for (const zuKlein of [0, 0.001, 0.0199]) {
+    assert.throws(mitGuard(zuKlein), RichtlinieVerletzt, `Guard ${zuKlein} kommt durch das Gate`);
+    try { mitGuard(zuKlein)(); } catch (e) {
+      assert.ok(e.befunde.some((b) => /Policy-Mindestwert/.test(b)), `der Befund nennt den Mindestwert nicht: ${e.befunde.join(" | ")}`);
+    }
+  }
+  assert.throws(mitGuard(Number.NaN), RichtlinieVerletzt, "ein unbrauchbarer Betrag kommt durch");
+
+  /* Die Umgebungsvariable wirkt weiterhin - aber nur nach oben oder von Hand. */
+  assert.equal(providerGuard("0.05"), 0.05);
+  assert.equal(providerGuard("0"), 0, "die Umgebung kann den Wert setzen …");
+  assert.ok(mitGuard(0, "workflow_dispatch")().ok, "… und von Hand ist das erlaubt - dort entscheidet ein Mensch");
 });
 test("1a: Der Worst Case des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {
   /* Fall 3 aus der Anweisung braucht den Reservebestand und ist noch nicht

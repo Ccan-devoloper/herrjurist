@@ -27,7 +27,7 @@
    ========================================================================== */
 
 /** Über den ganzen Auftrag, nicht je Anfrage. */
-import { BudgetStopp } from "./budgetstopp.mjs";
+import { BudgetStopp } from "./kostenfehler.mjs";
 
 export const SUCHEN_JE_AUFTRAG = 2;
 

@@ -1,4 +1,4 @@
-import { BudgetStopp } from "./budgetstopp.mjs";
+import { BudgetStopp } from "./kostenfehler.mjs";
 /* Verbrauch der Claude API mitschreiben (für den Wochenbericht). */
 const PREISE = {
   "claude-opus-5": { ein: 5, aus: 25, cacheLesen: 0.5, cacheSchreiben: 6.25 },

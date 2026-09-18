@@ -17,11 +17,12 @@
    Was hier bei JEDEM Aufruf passiert:
 
      1. Worst Case rechnen: Ausgabe aus dem konfigurierten Hard Ceiling,
-        Eingabe aus admissionBound() - dem groesseren von clientseitiger
-        Schranke und Zaehlendpunkt. Beides ist konservativ, keines ist ein
-        Beweis: Was der Anbieter selbst injiziert, steht in keinem Koerper,
-        den wir vorher wiegen koennen (siehe eingabe.mjs). Dafuer liegt der
-        Provider-Guard unter dem Policy-Deckel.
+        Eingabe aus admissionBound() - dem groesseren aus konservativem
+        clientInputBound ueber den GESENDETEN Request und dem Zaehlwert des
+        Anbieters. Beides ist konservativ; was der Anbieter zusaetzlich
+        injiziert und berechnet, erfasst es nicht - es steht in keinem
+        Koerper, den wir vorher wiegen koennen (Belege in eingabe.mjs).
+        Dafuer liegt der Provider-Guard unter dem Policy-Deckel.
      2. Admission aus dem Topf des Zwecks. Passt der Worst Case nicht,
         startet der Aufruf nicht (fail closed).
      3. `gesendet()` unmittelbar vor dem Absenden. Ab hier gibt es kein Geld
@@ -38,6 +39,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
 import { obergrenzeUsd, preisAus, erfassen, erfassenStueck } from "./kosten.mjs";
 import { InvarianteVerletzt } from "./budget.mjs";
+import { KostenKontrollFehler } from "./kostenfehler.mjs";
 import { admissionBound, clientInputBound, zaehlKoerper } from "./eingabe.mjs";
 import { exaktesProfil, kalibrierFamilie, bausteinHash } from "./profile.mjs";
 
@@ -51,7 +53,7 @@ export function kontextSetzen(neu) { kontext = neu; return kontext; }
 export function kontextLesen() { return kontext; }
 export function kontextLoeschen() { kontext = null; }
 
-export class OhneKontext extends Error {
+export class OhneKontext extends KostenKontrollFehler {
   constructor(zweck) {
     super(`Bezahlter Aufruf „${zweck}“ ohne Laufkontext: Es gibt kein Budget, aus dem er zugelassen werden könnte. `
       + `Wer einen Anbieter ruft, muss vorher kontextSetzen({ budget, telemetrie, kanal, datum }) aufrufen.`);
@@ -113,11 +115,11 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
   if (!kontext?.budget) throw new OhneKontext(zweck);
   const { budget, telemetrie, journal } = kontext;
   const { profil, familie, maxTokens } = profilVon({ zweck, provider, modell, params, promptVersion, effort, denkmodus });
-  /* Beide Seiten des Worst Case sind jetzt Obergrenzen, nicht Schätzungen:
-     die Ausgabe über das konfigurierte Ceiling, die Eingabe über die
-     beweisbare Byte-Schranke aus eingabe.mjs (ergänzt um den Zählendpunkt,
-     wo es ihn gibt). Vorher stand auf der Eingabeseite chars/3.5 - und damit
-     stand die ganze Vorabzusage auf einer Faustregel. */
+  /* Die Ausgabeseite ist eine echte Obergrenze (das Ceiling erzwingt der
+     Anbieter). Die Eingabeseite ist ein konservativer clientInputBound über
+     den gesendeten Request, angehoben durch den Zählwert des Anbieters, wo
+     es ihn gibt - nicht mehr chars/3.5, aber ohne die Token, die der
+     Anbieter selbst hinzufügt und berechnet (eingabe.mjs sagt, warum). */
   const clientBound = clientInputBound(params);
   const gezaehlt = provider === "anthropic" ? await eingabeZaehlen(params) : null;
   const eingabeTokens = admissionBound(params, gezaehlt);

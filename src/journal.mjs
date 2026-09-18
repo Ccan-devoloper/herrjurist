@@ -68,7 +68,7 @@
    addiert, weil die Baseline nicht mitwächst.
    ========================================================================== */
 
-import { BudgetStopp } from "./budgetstopp.mjs";
+import { BudgetStopp } from "./kostenfehler.mjs";
 
 export const JZUSTAND = Object.freeze({
   RESERVIERT: "reserved",
@@ -244,6 +244,20 @@ export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNo
 
   return {
     uebernahme, reservieren, senden, abrechnen, ungeklaert, verfallen, abschluss,
+    /**
+     * Der vollständige Journalstand, so wie er auf die Platte gehört.
+     *
+     * Die EINE Quelle des Formats. Vorher baute lauf.mjs das Objekt beim
+     * Tagesabschluss von Hand nach - und liess dabei legacyBaseline weg. Der
+     * naechste Runner leitete die Baseline dann wieder aus kosten.json ab,
+     * die inzwischen die abgerechneten Journal-Aufrufe enthielt: derselbe
+     * Aufruf zaehlte zweimal, und die Cutover-Reparatur war im
+     * Integrationspfad wieder aufgehoben.
+     *
+     * Wer das Journal schreibt, schreibt DAS hier. Ein Feld, das kuenftig
+     * dazukommt, kommt an einer Stelle dazu.
+     */
+    snapshot: () => inhalt(eintraege),
     eintraege: () => eintraege.map((e) => ({ ...e })),
     letzterFehler: () => schreibFehler,
     legacyBaseline: () => ({ ...baseline }),

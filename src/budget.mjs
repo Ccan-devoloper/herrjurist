@@ -27,7 +27,7 @@
       nicht, und umgekehrt. Kein Übertrag in den Folgetag.
    ========================================================================== */
 
-import { BudgetStopp } from "./budgetstopp.mjs";
+import { BudgetStopp, KostenKontrollFehler } from "./kostenfehler.mjs";
 
 /* --- Die Töpfe ---------------------------------------------------------- */
 export const TOEPFE = ["core", "engagement", "research"];
@@ -76,7 +76,7 @@ export const ZWECK_TOPF = Object.freeze({
 const HARTE_TOEPFE = new Set(["core", "engagement"]);
 
 /** Ein Zweck ohne Topf ist ein Programmierfehler, kein Sonderfall. */
-export class UnbekannterZweck extends Error {
+export class UnbekannterZweck extends KostenKontrollFehler {
   constructor(zweck) {
     super(`Kostenpflichtiger Zweck „${zweck}“ ist keinem Budgettopf zugeordnet. `
       + `Zulässig: ${Object.keys(ZWECK_TOPF).join(", ")}. `
@@ -103,7 +103,7 @@ export class AdmissionAbgelehnt extends BudgetStopp {
  * nicht zurückzuholen - aber der Topf hat seine Zusage verloren und wird
  * gesperrt, damit kein weiterer Aufruf den Schaden vergrößert.
  */
-export class InvarianteVerletzt extends Error {
+export class InvarianteVerletzt extends KostenKontrollFehler {
   constructor(zweck, topf, reserviert, tatsaechlich) {
     super(`${zweck}: tatsächlich ${tatsaechlich.toFixed(4)} $ gegen zugesagte ${reserviert.toFixed(4)} $ `
       + `im Topf „${topf}“. Der Betrag ist verbucht; der Topf ist für weitere Aufrufe gesperrt.`);

@@ -24,9 +24,9 @@
 
    Fast alle Core-Aufrufe hier benutzen Structured Outputs. Es gibt also
    berechnete Eingabetoken, die in unserem Anfragekörper nicht vorkommen.
-   Damit ist die Byte-Schranke KEINE obere Grenze aller abgerechneten
-   Eingabetoken, und ein Satz wie „Scheduled Core kann mathematisch niemals
-   über 0,32 $ liegen" wäre falsch.
+   Damit erfasst die Byte-Schranke nicht, was der Anbieter zusaetzlich
+   hinzufuegt und berechnet. Ein Satz, der daraus eine Obergrenze ALLER abgerechneten
+   Eingabetoken macht, wäre damit falsch - und steht deshalb nirgends mehr.
 
    WAS DER ZÄHLENDPUNKT KANN
    `POST /v1/messages/count_tokens` nimmt denselben Anfragekörper an - laut
