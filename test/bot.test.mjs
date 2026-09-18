@@ -3096,6 +3096,10 @@ test("Foto-Look bestellt keinen durchsichtigen Hintergrund, Flat-Look schon", as
   const foto = bildAuftrag("stack of unopened envelopes", { look: "foto" });
   const flach = bildAuftrag("stack of unopened envelopes", { look: "flach" });
   assert.match(foto, /Photorealistic photograph/);
+  /* Der durchsichtige Hintergrund wird in BEIDEN Aufträgen verlangt - auf
+     Wunsch des Betreibers steht der Wunsch immer im Auftrag, und nur wenn
+     das Modell ihn ignoriert, wird nachträglich freigestellt. */
+  for (const a of [foto, flach]) assert.match(a, /fully transparent background/);
   assert.match(flach, /Flat vector illustration/);
   /* Beide Aufträge verbieten Schrift im Bild - der Grund steht im Protokoll
      vom 18.09.: „GERITIFIEID MAIL" auf einem Titelbild. */
