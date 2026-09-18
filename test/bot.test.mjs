@@ -4215,3 +4215,269 @@ test("1a: Überlappende Admissions buchen sich nicht gegenseitig über", async (
   assert.ok(ergebnisse[2].reason instanceof AdmissionAbgelehnt);
   assert.equal(parallel.stand().verbraucht.core, 0.04, "genau zwei Aufrufe sind bezahlt");
 });
+
+test("1a: Telemetrie erfasst auch die Fehlerpfade und landet nicht im Asset-Zweig", async () => {
+  const { telemetrieStarten, ROHFELDER } = await import("../src/telemetrie.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "telemetrie-"));
+  const t = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+
+  /* Ein gelungener Aufruf. */
+  t.aufruf({
+    purpose: "autor", bucket: "core", slot: "b1", provider: "anthropic", model: "claude-sonnet-5",
+    effort: "low", thinkingMode: "adaptive", attempt: 1, profileId: "autor:abc123",
+    calibrationFamily: "autor / claude-sonnet-5 / low / beitrag-v3",
+    maxTokens: 16000, inputTokens: 1500, outputTokens: 4200, cacheReadTokens: 900, cacheWriteTokens: 0,
+    stopReason: "end_turn", sent: true, reservedUsd: 0.02, actualUsd: 0.0143, releasedUsd: 0.0057,
+    outcome: "ok", approved: true,
+  });
+
+  /* Ein zweiter Versuch nach Schema-Fehler – eigener Attempt, eigene Zeile. */
+  t.aufruf({
+    purpose: "autor", bucket: "core", slot: "b1", provider: "anthropic", model: "claude-sonnet-5",
+    attempt: 2, profileId: "autor:abc123", maxTokens: 16000, inputTokens: 1500, outputTokens: 16000,
+    stopReason: "max_tokens", sent: true, reservedUsd: 0.02, actualUsd: 0.0195, releasedUsd: 0.0005,
+    outcome: "abgeschnitten", errorType: "schema", approved: false,
+  });
+
+  /* Ein Aufruf, der nach dem Senden abriss – Kosten unbekannt. */
+  t.aufruf({
+    purpose: "faktencheck", bucket: "core", slot: "b1", provider: "openai", model: "gpt-5-mini",
+    attempt: 1, profileId: "faktencheck:def456", maxTokens: 8000,
+    sent: true, spendUnknown: true, reservedUsd: 0.01, actualUsd: null, releasedUsd: 0,
+    outcome: "ungeklaert", errorType: "connection reset",
+  });
+
+  /* Und einer, der gar nicht erst startete. */
+  t.aufruf({
+    purpose: "erklaerbild", bucket: "core", provider: "openai", model: "gpt-image-1-mini",
+    attempt: 1, sent: false, reservedUsd: 0.01, actualUsd: 0, releasedUsd: 0.01,
+    outcome: "abgelehnt", errorType: "AdmissionAbgelehnt",
+  });
+
+  assert.equal(t.anzahl(), 4, "jeder Aufruf eine Zeile – auch die gescheiterten");
+
+  /* NDJSON: eine Zeile je Aufruf, jede für sich lesbar. */
+  const roh = fs.readFileSync(t.datei, "utf8").trim().split("\n");
+  assert.equal(roh.length, 4);
+  const erste = JSON.parse(roh[0]);
+  for (const feld of ROHFELDER) assert.ok(feld in erste, `Feld „${feld}“ fehlt in der Rohzeile`);
+  assert.equal(erste.date, "2026-09-19");
+  assert.equal(erste.channel, "herrjurist");
+  assert.equal(erste.usd, 0.0143, "usd folgt den tatsächlichen Kosten");
+  assert.equal(JSON.parse(roh[2]).spendUnknown, true, "der ungeklärte Fall ist als solcher markiert");
+  assert.equal(JSON.parse(roh[3]).sent, false, "und der nie gestartete auch");
+
+  /* Die Datei liegt in der lokalen Ausgabe, nicht im Asset-Zweig. */
+  assert.match(t.datei, /telemetrie\.ndjson$/);
+  assert.equal(t.datei.startsWith(dir), true, "Rohdaten bleiben in out/<datum>/");
+
+  /* Die Übersicht ist klein genug für den Bericht. */
+  const u = t.uebersicht();
+  assert.equal(u.jeTopf.core.aufrufe, 4);
+  assert.equal(u.jeTopf.core.ungeklaert, 1);
+  assert.equal(u.jeTopf.core.abschnitte, 1);
+
+  /* Die rollenden Fenster entstehen aus den Rohzeilen – mit den Fehlern. */
+  const fenster = t.fensterFortschreiben();
+  const f = fenster["autor:abc123"];
+  assert.equal(f.aufrufeGesamt, 2);
+  assert.equal(f.erfolgreicheAufrufe, 1, "der abgeschnittene zählt nicht als Erfolg");
+  assert.equal(f.abschnitte, 1);
+  assert.equal(f.schemaFehler, 1);
+  assert.deepEqual(f.letzteAusgabeTokens, [4200], "nur die vollständige Antwort geht in die Messreihe");
+  assert.equal(f.aktuellesCeiling, 16000);
+  assert.equal(fenster["faktencheck:def456"].anbieterFehler, 1, "der Verbindungsabriss zählt als Anbieterfehler");
+
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a: Ceilings werden gemessen und vorgeschlagen, nie automatisch geändert", async () => {
+  const { leeresFenster, fensterAktualisieren, perzentile, abschneideGrenze, ceilingVorschlag, CHECKPOINTS, exaktesProfil, kalibrierFamilie }
+    = await import("../src/profile.mjs");
+
+  /* Das exakte Profil hängt an der Struktur, nicht am Beitragstext. */
+  const basis = { zweck: "autor", provider: "anthropic", modell: "claude-sonnet-5", effort: "low", maxTokens: 16000, systemHash: "sys1", schemaHash: "sch1" };
+  assert.equal(exaktesProfil(basis).id, exaktesProfil({ ...basis }).id, "gleiche Struktur, gleiches Profil");
+  assert.notEqual(exaktesProfil(basis).id, exaktesProfil({ ...basis, maxTokens: 8000 }).id, "anderes Ceiling, anderes Profil");
+  assert.notEqual(exaktesProfil(basis).id, exaktesProfil({ ...basis, schemaHash: "sch2" }).id, "anderes Schema, anderes Profil");
+  assert.notEqual(exaktesProfil(basis).id, exaktesProfil({ ...basis, effort: "high" }).id);
+  assert.equal(kalibrierFamilie({ zweck: "reel-autor", modell: "sonnet-5", effort: "low", schemaVersion: "reel-schema-v3" }),
+    "reel-autor / sonnet-5 / low / reel-schema-v3", "die Familie ist lesbar, nicht gehasht");
+
+  /* Die Obergrenze bei null Abschnitten ist die geschlossene Form. */
+  assert.ok(Math.abs(abschneideGrenze(20, 0) - (1 - Math.pow(0.05, 1 / 20))) < 1e-12);
+  assert.ok(Math.abs(abschneideGrenze(20, 0) - 0.1391) < 0.001, "n=20 ohne Abschnitt heißt noch 13,9 % Restrisiko");
+  assert.ok(abschneideGrenze(100, 0) < abschneideGrenze(20, 0), "mehr Messungen, engere Schranke");
+  /* Mit Abschnitten die exakte einseitige Binomialgrenze. */
+  assert.ok(abschneideGrenze(40, 2) > 2 / 40, "die Schranke liegt über der beobachteten Quote");
+  assert.ok(abschneideGrenze(40, 2) < 0.20);
+  assert.equal(abschneideGrenze(0, 0), null, "ohne Daten keine Aussage");
+
+  /* Ein Fenster füllt sich – und behält die Rohwerte, nicht nur p95. */
+  let f = leeresFenster("autor:abc", "autor / sonnet-5 / low / v3");
+  assert.equal(f.unkalibriert, true, "ein neues Profil gilt als unkalibriert");
+  for (let i = 0; i < 25; i++) f = fensterAktualisieren(f, { ausgabeTokens: 3000 + i * 40, stopReason: "end_turn", ceiling: 16000 });
+  assert.equal(f.erfolgreicheAufrufe, 25);
+  assert.equal(f.letzteAusgabeTokens.length, 25, "die Rohwerte bleiben – daraus lässt sich später jeder Perzentil rechnen");
+  assert.equal(f.unkalibriert, false, "ab 20 Messungen gilt es als kalibriert");
+  assert.deepEqual(CHECKPOINTS, [20, 40, 60, 100]);
+
+  const vorschlag = ceilingVorschlag(f);
+  assert.equal(vorschlag.aktuellesCeiling, 16000, "das harte Ceiling steht unverändert da");
+  assert.ok(vorschlag.vorschlag < 16000, "die Messung legt ein kleineres nahe");
+  assert.equal(vorschlag.angewendet, false, "aber nichts wird automatisch geändert");
+  assert.equal(perzentile(f.letzteAusgabeTokens).p95 <= vorschlag.vorschlag, true);
+
+  /* Auch nach hundert braven Aufrufen bleibt das Ceiling, was es war. */
+  const vorher = f.aktuellesCeiling;
+  for (let i = 0; i < 100; i++) f = fensterAktualisieren(f, { ausgabeTokens: 2000, stopReason: "end_turn", ceiling: 16000 });
+  assert.equal(f.aktuellesCeiling, vorher, "kein automatisches Heruntersetzen");
+  assert.equal(f.letzteAusgabeTokens.length, 100, "das Fenster bleibt bei hundert Werten");
+
+  /* Und Abschnitte werden getrennt gezählt, nicht unterschlagen. */
+  let g = leeresFenster("reel:xyz", "reel / sonnet-5 / low / v2");
+  g = fensterAktualisieren(g, { ausgabeTokens: 8000, stopReason: "max_tokens", ceiling: 8000 });
+  g = fensterAktualisieren(g, { fehlerArt: "anbieter", ceiling: 8000 });
+  g = fensterAktualisieren(g, { ausgabeTokens: 5000, stopReason: "end_turn", ceiling: 8000 });
+  assert.equal(g.aufrufeGesamt, 3);
+  assert.equal(g.erfolgreicheAufrufe, 1);
+  assert.equal(g.abschnitte, 1);
+  assert.equal(g.anbieterFehler, 1);
+  assert.deepEqual(g.letzteAusgabeTokens, [5000], "der abgeschnittene Wert verfälscht die Messreihe nicht");
+});
+
+test("1a: Das Suchkontingent gilt für den ganzen Research-Auftrag, nicht je Anfrage", async () => {
+  const { rechercheAuftrag, ResearchGrenze, SUCHEN_JE_AUFTRAG, researchZeile } = await import("../src/research.mjs");
+  assert.equal(SUCHEN_JE_AUFTRAG, 2);
+
+  /* Der Fall aus der Anweisung: Anfrage 1 verbraucht beide Suchen. Die
+     pause_turn-Fortsetzung darf dann keine weiteren zwei bekommen – genau
+     das passierte bisher, weil max_uses pro Anfrage gilt. */
+  const a = rechercheAuftrag();
+  const erste = a.anfrageBeginnen();
+  assert.equal(erste.maxUses, 2, "die erste Anfrage darf zweimal suchen");
+  a.antwortVerbuchen({ server_tool_use: { web_search_requests: 2 } });
+  assert.equal(a.restSuchen(), 0, "danach ist das Kontingent des Auftrags leer");
+  assert.equal(a.darfAnfragen().ok, false);
+  assert.throws(() => a.anfrageBeginnen(), ResearchGrenze,
+    "keine Fortsetzung mit frischem Suchkontingent");
+
+  /* Anfrage 1 verbraucht eine Suche → die Fortsetzung bekommt höchstens eine. */
+  const b = rechercheAuftrag();
+  assert.equal(b.anfrageBeginnen().maxUses, 2);
+  b.antwortVerbuchen({ server_tool_use: { web_search_requests: 1 } });
+  assert.equal(b.restSuchen(), 1);
+  const zweite = b.anfrageBeginnen();
+  assert.equal(zweite.maxUses, 1, "nur noch eine – nicht wieder zwei");
+  assert.equal(zweite.nummer, 2);
+  b.antwortVerbuchen({ server_tool_use: { web_search_requests: 1 } });
+  assert.equal(b.restSuchen(), 0);
+  assert.throws(() => b.anfrageBeginnen(), ResearchGrenze);
+
+  /* Eine Antwort ohne Suche verbraucht nichts – gezählt wird die gemeldete
+     Nutzung, nicht die Erlaubnis. */
+  const c = rechercheAuftrag();
+  c.anfrageBeginnen();
+  c.antwortVerbuchen({});
+  assert.equal(c.restSuchen(), 2, "max_uses ist eine Obergrenze, keine Buchung");
+  assert.equal(c.stand().anfragen, 1);
+
+  /* Die Zahl der Anfragen ist ebenfalls begrenzt – auch wenn noch Suchen frei wären. */
+  const d = rechercheAuftrag({ maxSuchen: 9, maxAnfragen: 2 });
+  d.anfrageBeginnen(); d.antwortVerbuchen({ server_tool_use: { web_search_requests: 1 } });
+  d.anfrageBeginnen(); d.antwortVerbuchen({ server_tool_use: { web_search_requests: 1 } });
+  assert.equal(d.restSuchen(), 7, "Suchen wären noch frei …");
+  assert.throws(() => d.anfrageBeginnen(), /Anfragen sind das Limit/, "… aber die Runden sind es nicht");
+
+  /* Eine Runde, die keine Suche mehr braucht, ist nach verbrauchtem
+     Kontingent weiterhin zulässig – Nachdenken ohne Suche. */
+  const e = rechercheAuftrag();
+  e.anfrageBeginnen(); e.antwortVerbuchen({ server_tool_use: { web_search_requests: 2 } });
+  assert.equal(e.darfAnfragen({ brauchtSuche: false }).ok, true);
+  assert.equal(e.anfrageBeginnen({ brauchtSuche: false }).maxUses, 0, "aber ohne jedes Suchkontingent");
+
+  /* Der Protokollsatz behauptet keine Garantie, er nennt den Stand. */
+  assert.equal(researchZeile(0, 0.12), "Research used: $0.000 / $0.120");
+  assert.equal(researchZeile(0.0734, 0.12), "Research used: $0.073 / $0.120");
+});
+
+test("1a: Ein geplanter Lauf kann seinen Deckel nicht selbst anheben", async () => {
+  const { effektiveKonfiguration, richtlinieGate, RichtlinieVerletzt, REGEL_DECKEL } = await import("../src/richtlinie.mjs");
+  const { ZWECK_TOPF } = await import("../src/budget.mjs");
+  assert.deepEqual(REGEL_DECKEL, { core: 0.32, engagement: 0.25, research: 0.12 });
+
+  /* Die Ausnahmedatei von heute – mit dem Eintrag, der den 23.09. betrifft. */
+  const ausnahmen = { "2026-09-13": 0.5, "2026-09-17": 0.48, "2026-09-18": 0.8, "2026-09-23": 0.45 };
+
+  /* Ein geplanter Lauf am 23.09.: 0,45 wirkt NICHT mehr. */
+  const k = effektiveKonfiguration({ ausloeser: "schedule", ausnahmen, datum: "2026-09-23" });
+  assert.equal(k.deckel.core, 0.32, "Core bleibt bei 0,32 – die alte Ausnahme ist Historie");
+  assert.equal(k.deckel.research, 0.12, "Research hat seinen eigenen Topf");
+  assert.equal(k.deckel.engagement, 0.25);
+  assert.notEqual(k.deckel.core, 0.45, "ausdrücklich nicht 0,45 Core");
+  assert.notEqual(k.deckel.core + k.deckel.research, 0.57, "und erst recht nicht 0,45 + 0,12");
+  assert.match(k.hinweise.join(" "), /steht in der Historie, wirkt aber nicht mehr/);
+  assert.equal(k.breakGlass.aktiv, false);
+
+  /* Dasselbe an einem Tag mit alter Ausnahme (18.09., 0,80). */
+  const alt = effektiveKonfiguration({ ausloeser: "schedule", ausnahmen, datum: "2026-09-18" });
+  assert.equal(alt.deckel.core, 0.32, "auch rückwirkend hebt keine Datei den geplanten Lauf an");
+
+  /* Break Glass aus dem Zeitplan: abgelehnt. */
+  const versuch = effektiveKonfiguration({
+    ausloeser: "schedule", ausnahmen, datum: "2026-09-23",
+    breakGlass: { aktiv: true, betragUsd: 0.9, grund: "der Tag soll vollständig erscheinen" },
+  });
+  assert.equal(versuch.breakGlass.aktiv, false, "ein geplanter Lauf zieht kein Break Glass");
+  assert.equal(versuch.deckel.core, 0.32);
+  assert.match(versuch.hinweise.join(" "), /aus einem geplanten Lauf verlangt - abgelehnt/);
+
+  /* Break Glass von Hand: nur mit Begründung und sinnvollem Betrag. */
+  const ohneGrund = effektiveKonfiguration({
+    ausloeser: "workflow_dispatch", datum: "2026-09-23",
+    breakGlass: { aktiv: true, betragUsd: 0.9, grund: "   " },
+  });
+  assert.equal(ohneGrund.breakGlass.aktiv, false, "ohne Begründung kein Break Glass");
+  assert.equal(ohneGrund.deckel.core, 0.32);
+
+  const zuKlein = effektiveKonfiguration({
+    ausloeser: "workflow_dispatch", datum: "2026-09-23",
+    breakGlass: { aktiv: true, betragUsd: 0.2, grund: "Tippfehler" },
+  });
+  assert.equal(zuKlein.breakGlass.aktiv, false);
+
+  const echt = effektiveKonfiguration({
+    ausloeser: "workflow_dispatch", datum: "2026-09-23",
+    breakGlass: { aktiv: true, betragUsd: 0.42, grund: "Messtag Recherche, Betreiberentscheidung" },
+  });
+  assert.equal(echt.breakGlass.aktiv, true);
+  assert.equal(echt.deckel.core, 0.42, "nur der ausdrücklich genannte Betrag");
+  assert.equal(echt.breakGlass.grund, "Messtag Recherche, Betreiberentscheidung");
+  assert.equal(echt.deckel.engagement, 0.25, "die anderen Töpfe bleiben unberührt");
+  assert.equal(echt.deckel.research, 0.12);
+
+  /* Das Gate lässt einen geplanten Lauf mit falscher Konfiguration nicht starten. */
+  const produkt = { reelZusaetzlich: true, feedBeitraege: 3 };
+  const erwartet = { reelZusaetzlich: true, feedBeitraege: 3 };
+  const ceilings = { "autor": 16000, "recherche": 8000 };
+  const ceilingPolicy = { "autor": { min: 4000, max: 16000 }, "recherche": { min: 2000, max: 8000 } };
+  const zwecke = Object.keys(ZWECK_TOPF);
+
+  assert.deepEqual(
+    richtlinieGate({ konfiguration: k, produkt, erwartet, ceilings, ceilingPolicy, researchSuchen: 2, zwecke, zweckTopf: ZWECK_TOPF }),
+    { ok: true, deckel: k.deckel, breakGlass: k.breakGlass });
+
+  /* Produktmenge verändert → Start verweigert. */
+  assert.throws(() => richtlinieGate({ konfiguration: k, produkt: { reelZusaetzlich: false, feedBeitraege: 2 }, erwartet, ceilings, ceilingPolicy, zwecke, zweckTopf: ZWECK_TOPF }),
+    RichtlinieVerletzt, "die Produktmenge ist keine Stellschraube für Kostenprobleme");
+
+  /* Unbekannter Zweck, Suchlimit, Ceiling außerhalb der Richtlinie. */
+  assert.throws(() => richtlinieGate({ konfiguration: k, produkt, erwartet, ceilings, ceilingPolicy, zwecke: [...zwecke, "neuer-zweck"], zweckTopf: ZWECK_TOPF }), RichtlinieVerletzt);
+  assert.throws(() => richtlinieGate({ konfiguration: k, produkt, erwartet, ceilings, ceilingPolicy, researchSuchen: 3, zwecke, zweckTopf: ZWECK_TOPF }), RichtlinieVerletzt);
+  assert.throws(() => richtlinieGate({ konfiguration: k, produkt, erwartet, ceilings: { autor: 32000, recherche: 8000 }, ceilingPolicy, zwecke, zweckTopf: ZWECK_TOPF }), RichtlinieVerletzt);
+
+  /* Und ein geplanter Lauf mit aktivem Break Glass kommt nicht durch das Gate. */
+  const geschummelt = { ...echt, ausloeser: "schedule" };
+  assert.throws(() => richtlinieGate({ konfiguration: geschummelt, produkt, erwartet, ceilings, ceilingPolicy, zwecke, zweckTopf: ZWECK_TOPF }),
+    RichtlinieVerletzt, "Break Glass und Zeitplan schließen sich aus");
+});
