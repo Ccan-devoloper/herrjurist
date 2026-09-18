@@ -41,7 +41,34 @@
 
    Die Richtung des Fehlers ist der ganze Punkt: Wir verlieren im Zweifel
    Spielraum, nie Kontrolle.
+
+   Zwei Dinge, die beim Gegenlesen aufgefallen sind und hier ausdrücklich
+   gelöst werden:
+
+   TRANSAKTIONALITÄT. Ein Schreibvorgang darf den maßgeblichen Zustand erst
+   ändern, wenn er bestätigt ist. Die erste Fassung setzte den Eintrag lokal
+   auf `sent`, schrieb, und warf bei fehlgeschlagenem Push. Der Anbieter wurde
+   korrekt nicht gerufen - aber die lokale Datei trug bereits `sent`, und ein
+   späterer Push (etwa der Tagesabschluss) hätte diesen Zustand doch noch
+   hinausgetragen. Der nächste Lauf hätte Geld blockiert, das nie ausgegeben
+   wurde: kein Overspend, aber ein Phantomverbrauch, der Pflichtinhalte
+   verdrängt. Jetzt wird auf einer Kopie gearbeitet; erst die bestätigte
+   Durability übernimmt sie. Scheitert sie, wird der alte Stand
+   zurückgeschrieben, damit auch ein späterer Push nichts Falsches trägt.
+
+   CUTOVER. Das Journal kennt nur, was seit seiner Einführung durch es
+   hindurchgegangen ist. Was der Tag davor schon gekostet hat, steht in
+   kosten.json. Ein `max(kosten.json, journal)` wäre bequem und falsch: Sind
+   die beiden Mengen disjunkt - 0,10 $ aus der Zeit davor, 0,08 $ ungeklärt
+   danach -, ist der wahre Stand 0,18 $ und nicht 0,10 $. Deshalb wird der
+   Altbestand EINMAL beim Anlegen des Tagesjournals als `legacyBaseline`
+   eingefroren; danach ist das Journal für diesen Tag maßgeblich und der
+   Stand ist Baseline + Beiträge des Journals. Dieselben abgerechneten
+   Aufrufe stehen zwar auch in kosten.json, werden aber nicht ein zweites Mal
+   addiert, weil die Baseline nicht mitwächst.
    ========================================================================== */
+
+import { BudgetStopp } from "./budgetstopp.mjs";
 
 export const JZUSTAND = Object.freeze({
   RESERVIERT: "reserved",
@@ -55,7 +82,7 @@ const TOEPFE = ["core", "engagement", "research"];
 const runden = (n) => Math.round((Number(n) || 0) * 1e6) / 1e6;
 
 /** Die durable Sicherung hat nicht bestätigt - der Aufruf findet nicht statt. */
-export class JournalNichtDurable extends Error {
+export class JournalNichtDurable extends BudgetStopp {
   constructor(zweck, phase) {
     super(`Budget-Journal für „${zweck}“ (${phase}) ist nicht durable geworden. `
       + `Der Aufruf wird nicht gesendet: Eine Reservierung, die den nächsten Lauf nicht erreicht, `
@@ -75,18 +102,37 @@ export class JournalNichtDurable extends Error {
  * @param {string}   o.kanal
  * @param {boolean}  o.remoteNoetig  ob eine Bestätigung verlangt wird
  */
-export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNoetig = true }) {
+export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNoetig = true, legacyBaseline = null }) {
   const bestand = lesen?.() || null;
   /* Ein Journal des Vortags ist erledigt - Töpfe gelten je Tag. */
-  const eintraege = bestand?.datum === datum && Array.isArray(bestand.eintraege) ? bestand.eintraege.map((e) => ({ ...e })) : [];
+  const heutiges = bestand?.datum === datum ? bestand : null;
+  let eintraege = heutiges && Array.isArray(heutiges.eintraege) ? heutiges.eintraege.map((e) => ({ ...e })) : [];
+
+  /* Die Baseline wird genau EINMAL je Tag festgeschrieben - beim Anlegen des
+     Journals. Gibt es schon eines, gilt dessen Baseline; ein späterer Lauf
+     darf sie nicht aus einer inzwischen gewachsenen kosten.json neu ableiten,
+     sonst zählt er die Aufrufe des Journals ein zweites Mal. */
+  const basis = Object.fromEntries(TOEPFE.map((t) => [t, 0]));
+  const baseline = heutiges?.legacyBaseline
+    ? { ...basis, ...heutiges.legacyBaseline }
+    : { ...basis, ...(legacyBaseline || {}) };
+  const baselineNeu = !heutiges?.legacyBaseline;
+
   let laufendeNummer = eintraege.length;
   let schreibFehler = null;
 
-  const inhalt = () => ({ datum, kanal, eintraege, stand: new Date().toISOString() });
+  const inhalt = (liste = eintraege) => ({
+    datum, kanal, legacyBaseline: baseline, eintraege: liste, stand: new Date().toISOString(),
+  });
 
-  const sichern = async (zweck, phase) => {
+  /**
+   * Schreibt einen Stand durable. `liste` ist der Stand, der gelten SOLL -
+   * nicht zwingend der, der gerade im Speicher steht. Erst der bestätigte
+   * Schreibvorgang macht ihn maßgeblich.
+   */
+  const sichern = async (liste, zweck, phase) => {
     let ok = false;
-    try { ok = await schreiben(inhalt()); }
+    try { ok = await schreiben(inhalt(liste)); }
     catch (e) { schreibFehler = e; ok = false; }
     if (!ok && remoteNoetig) throw new JournalNichtDurable(zweck, phase);
     return ok;
@@ -97,7 +143,9 @@ export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNo
    * blockiert. Wird einmal zu Laufbeginn aufgerufen.
    */
   const uebernahme = () => {
-    const vorbelastung = Object.fromEntries(TOEPFE.map((t) => [t, 0]));
+    /* Der Stand ist Baseline PLUS die Beiträge des Journals - nicht das
+       Maximum von beidem. Die beiden Mengen sind disjunkt. */
+    const vorbelastung = Object.fromEntries(TOEPFE.map((t) => [t, runden(baseline[t] || 0)]));
     const freigegeben = [];
     const blockiert = [];
     for (const e of eintraege) {
@@ -130,55 +178,78 @@ export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNo
   /** Schritt 1: durable, bevor irgendetwas gesendet wird. */
   const reservieren = async ({ bucket, purpose, attempt = 1, reservedUsd, slot = null }) => {
     const jetzt = new Date().toISOString();
-    const reservationId = `${datum}-${String(++laufendeNummer).padStart(4, "0")}-${purpose}`;
-    eintraege.push({
+    const reservationId = `${datum}-${String(laufendeNummer + 1).padStart(4, "0")}-${purpose}`;
+    const neuerEintrag = {
       reservationId, date: datum, bucket, purpose, attempt, slot,
       reservedUsd: runden(reservedUsd), actualUsd: null,
       state: JZUSTAND.RESERVIERT, createdAt: jetzt, updatedAt: jetzt,
-    });
-    await sichern(purpose, "reservierung");
+    };
+    /* Erst schreiben, dann übernehmen. Scheitert der Schreibvorgang, hat es
+       diese Reservierung nie gegeben - und der Aufruf findet nicht statt.
+       Trägt ein späterer Push den Eintrag doch noch hinaus, steht er auf
+       `reserved`; der nächste Lauf gibt ihn frei, weil der Sendevermerk
+       fehlt. Das ist die sichere Richtung. */
+    await sichern([...eintraege, neuerEintrag], purpose, "reservierung");
+    eintraege = [...eintraege, neuerEintrag];
+    laufendeNummer += 1;
     return reservationId;
   };
 
-  /** Schritt 2: durable, unmittelbar vor dem Absenden. */
+  /**
+   * Schritt 2: durable, unmittelbar vor dem Absenden - und transaktional.
+   *
+   * Der maßgebliche Zustand wird ERST nach bestätigter Durability auf `sent`
+   * gesetzt. Scheitert der Schreibvorgang, wird der alte Stand
+   * zurückgeschrieben: Ein späterer Push darf kein `sent` hinaustragen für
+   * einen Aufruf, der nie gesendet wurde - das wäre Phantomverbrauch, der
+   * echte Pflichtinhalte verdrängt.
+   */
   const senden = async (id) => {
-    const e = finden(id);
-    if (!e) return false;
-    e.state = JZUSTAND.GESENDET;
-    e.updatedAt = new Date().toISOString();
-    await sichern(e.purpose, "sendevermerk");
+    const alt = finden(id);
+    if (!alt) return false;
+    const naechster = eintraege.map((e) => (e.reservationId === id
+      ? { ...e, state: JZUSTAND.GESENDET, updatedAt: new Date().toISOString() }
+      : e));
+    try {
+      await sichern(naechster, alt.purpose, "sendevermerk");
+    } catch (fehler) {
+      /* Zurückrollen, und zwar auch auf der Platte. Ein Fehlschlag hier ist
+         nicht schlimm - der maßgebliche Stand im Speicher ist ohnehin der
+         alte, und die nächste Sicherung schreibt ihn erneut. */
+      try { await schreiben(inhalt(eintraege)); } catch { /* der Stand im Speicher bleibt maßgeblich */ }
+      throw fehler;
+    }
+    eintraege = naechster;
     return true;
   };
 
   /* Ab hier nur noch im Speicher: Diese Übergänge dürfen verlorengehen, ohne
      dass die Zusage bricht - der nächste Lauf rechnet dann konservativer. */
-  const abrechnen = (id, actualUsd) => {
+  const aendern = (id, felder, nurWenn = null) => {
     const e = finden(id); if (!e) return false;
-    e.state = JZUSTAND.ABGERECHNET; e.actualUsd = runden(actualUsd); e.updatedAt = new Date().toISOString();
+    if (nurWenn && !nurWenn(e)) return false;
+    eintraege = eintraege.map((x) => (x.reservationId === id
+      ? { ...x, ...felder, updatedAt: new Date().toISOString() } : x));
     return true;
   };
-  const ungeklaert = (id, grund = "Kosten nach dem Senden unbekannt") => {
-    const e = finden(id); if (!e) return false;
-    e.state = JZUSTAND.UNGEKLAERT; e.grund = grund; e.updatedAt = new Date().toISOString();
-    return true;
-  };
-  const verfallen = (id, grund = "vor dem Senden abgebrochen") => {
-    const e = finden(id); if (!e) return false;
-    if (e.state === JZUSTAND.RESERVIERT) { e.state = JZUSTAND.VERFALLEN; e.grund = grund; e.updatedAt = new Date().toISOString(); }
-    return true;
-  };
+  const abrechnen = (id, actualUsd) => aendern(id, { state: JZUSTAND.ABGERECHNET, actualUsd: runden(actualUsd) });
+  const ungeklaert = (id, grund = "Kosten nach dem Senden unbekannt") => aendern(id, { state: JZUSTAND.UNGEKLAERT, grund });
+  const verfallen = (id, grund = "vor dem Senden abgebrochen") =>
+    aendern(id, { state: JZUSTAND.VERFALLEN, grund }, (e) => e.state === JZUSTAND.RESERVIERT);
 
   /** Am Ende des Laufs: die offenen Übergänge festschreiben. */
   const abschluss = async () => {
-    try { return await schreiben(inhalt()); } catch { return false; }
+    try { return await schreiben(inhalt(eintraege)); } catch { return false; }
   };
 
   return {
     uebernahme, reservieren, senden, abrechnen, ungeklaert, verfallen, abschluss,
     eintraege: () => eintraege.map((e) => ({ ...e })),
     letzterFehler: () => schreibFehler,
+    legacyBaseline: () => ({ ...baseline }),
+    baselineNeu: () => baselineNeu,
     stand: () => ({
-      datum, anzahl: eintraege.length,
+      datum, anzahl: eintraege.length, legacyBaseline: { ...baseline },
       jeZustand: eintraege.reduce((a, e) => ({ ...a, [e.state]: (a[e.state] || 0) + 1 }), {}),
     }),
   };

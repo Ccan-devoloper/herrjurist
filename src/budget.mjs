@@ -27,6 +27,8 @@
       nicht, und umgekehrt. Kein Übertrag in den Folgetag.
    ========================================================================== */
 
+import { BudgetStopp } from "./budgetstopp.mjs";
+
 /* --- Die Töpfe ---------------------------------------------------------- */
 export const TOEPFE = ["core", "engagement", "research"];
 
@@ -85,7 +87,7 @@ export class UnbekannterZweck extends Error {
 }
 
 /** Abgelehnte Admission: Der Aufruf hat nie stattgefunden. */
-export class AdmissionAbgelehnt extends Error {
+export class AdmissionAbgelehnt extends BudgetStopp {
   constructor(zweck, topf, verlangt, frei, deckel, grund = null) {
     super(`${zweck}: ${verlangt.toFixed(4)} $ im Topf „${topf}“ nicht mehr zulässig `
       + `(frei ${frei.toFixed(4)} $ von ${deckel.toFixed(4)} $) - der Aufruf startet nicht.`
@@ -111,7 +113,7 @@ export class InvarianteVerletzt extends Error {
 }
 
 /** Es ist mehr für Pflichtinhalte zurückgelegt, als der Topf noch hergibt. */
-export class PflichtUeberreserviert extends Error {
+export class PflichtUeberreserviert extends BudgetStopp {
   constructor(topf, verlangt, frei) {
     super(`Pflichtrücklagen im Topf „${topf}“ verlangen ${verlangt.toFixed(4)} $, frei sind ${frei.toFixed(4)} $. `
       + `Das Pflichtprodukt ist so nicht vollständig finanzierbar - die Entscheidung gehört nach oben, nicht in eine stille Kürzung.`);
@@ -121,7 +123,7 @@ export class PflichtUeberreserviert extends Error {
 }
 
 /** Der Topf ist nach einer Invariantenverletzung gesperrt. */
-export class TopfGesperrt extends Error {
+export class TopfGesperrt extends BudgetStopp {
   constructor(topf, grund) {
     super(`Topf „${topf}“ ist gesperrt: ${grund}`);
     this.name = "TopfGesperrt";

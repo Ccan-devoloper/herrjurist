@@ -1,3 +1,4 @@
+import { BudgetStopp } from "./budgetstopp.mjs";
 /* Verbrauch der Claude API mitschreiben (für den Wochenbericht). */
 const PREISE = {
   "claude-opus-5": { ein: 5, aus: 25, cacheLesen: 0.5, cacheSchreiben: 6.25 },
@@ -73,7 +74,7 @@ const reserven = new Map();
    „Story-Faktencheck“ enthält zwar „faktencheck“, bleibt aber außen vor. */
 const zweckListe = (f) => (Array.isArray(f) ? f : [f]).map((x) => String(x).toLowerCase()).filter(Boolean);
 
-export class BudgetFehler extends Error {}
+export class BudgetFehler extends BudgetStopp {}
 
 export function budgetSetzen(opt = {}) {
   /* Beginn eines Laufs: Die Posten der bisherigen Läufe des Tages stecken in

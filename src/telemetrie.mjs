@@ -35,12 +35,12 @@ export const ROHFELDER = [
   "timestamp", "date", "channel", "purpose", "bucket", "slot",
   "provider", "model", "effort", "thinkingMode", "attempt",
   "profileId", "calibrationFamily",
-  "maxTokens", "inputBoundTokens", "inputCountedTokens",
+  "maxTokens", "clientInputBoundTokens", "providerCountTokens", "admissionBoundTokens",
   "inputTokens", "outputTokens", "thinkingTokens",
   "cacheReadTokens", "cacheWriteTokens", "serverToolUsage",
   "stopReason", "sent", "spendUnknown", "reservationId",
   "reservedUsd", "actualUsd", "releasedUsd", "usd",
-  "breakGlass", "outcome", "approved", "errorType",
+  "breakGlass", "providerGuardUsd", "outcome", "approved", "errorType",
 ];
 
 /**
@@ -52,7 +52,7 @@ export const ROHFELDER = [
  * @param {string} o.dir     lokales Ausgabeverzeichnis (out/<datum>)
  * @param {boolean} o.breakGlass
  */
-export function telemetrieStarten({ datum, kanal, dir, breakGlass = false }) {
+export function telemetrieStarten({ datum, kanal, dir, breakGlass = false, providerGuardUsd = null }) {
   const datei = path.join(dir, "telemetrie.ndjson");
   const zeilen = [];
   let offen = null;
@@ -79,6 +79,7 @@ export function telemetrieStarten({ datum, kanal, dir, breakGlass = false }) {
     eintrag.date = roh.date || datum;
     eintrag.channel = roh.channel || kanal;
     eintrag.breakGlass = roh.breakGlass ?? breakGlass;
+    eintrag.providerGuardUsd = roh.providerGuardUsd ?? providerGuardUsd;
     eintrag.sent = roh.sent ?? false;
     eintrag.spendUnknown = roh.spendUnknown ?? false;
     eintrag.usd = roh.usd ?? roh.actualUsd ?? null;

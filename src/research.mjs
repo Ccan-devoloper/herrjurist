@@ -27,9 +27,11 @@
    ========================================================================== */
 
 /** Über den ganzen Auftrag, nicht je Anfrage. */
+import { BudgetStopp } from "./budgetstopp.mjs";
+
 export const SUCHEN_JE_AUFTRAG = 2;
 
-export class ResearchGrenze extends Error {
+export class ResearchGrenze extends BudgetStopp {
   constructor(nachricht) { super(nachricht); this.name = "ResearchGrenze"; }
 }
 

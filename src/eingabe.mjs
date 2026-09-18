@@ -1,51 +1,71 @@
 /* ==========================================================================
-   Wie viel Eingabe ein Aufruf HÖCHSTENS hat.
+   Wie viel Eingabe ein Aufruf kostet - und was daran zugesagt werden kann.
 
-   Bisher stand hier eine Schätzung: die Länge des serialisierten Prompts
-   geteilt durch 3,5. Das war bequem und falsch. Falsch nicht, weil die Zahl
-   meistens danebenlag - meistens lag sie ordentlich -, sondern weil auf ihr
-   eine Zusage stand, die sie nicht tragen kann:
+   Die erste Fassung stand auf einer Schätzung: Promptlänge geteilt durch 3,5.
+   Die zweite ersetzte sie durch eine Byte-Schranke und nannte sie einen
+   Beweis. Der Beweis trägt nicht, und das ist wichtiger als die Schranke.
 
-     - 3,5 Zeichen je Token gilt für deutschen Fließtext. Für dichten JSON,
-       für Tabellen, für Paragraphenzeichen, für Emoji, für kyrillische oder
-       japanische Zeichen gilt es nicht; dort sind es schnell 1,5 oder 1.
-     - `tools` fehlten in der Rechnung komplett. Ein Werkzeugschema ist
-       Eingabe und kostet Eingabepreis.
-     - Das Structured-Output-Schema fehlte ebenso.
-     - Und der Aufschlag von 15 % war gesetzt, nicht bewiesen.
+   WAS DIE BYTE-SCHRANKE KANN
+   Beide Anbieter tokenisieren mit byte-level BPE; ein Token dekodiert zu
+   mindestens einem Byte, also kodieren b Bytes zu höchstens b Token. Das ist
+   eine belastbare Überlegung - ABER sie stützt sich auf eine Eigenschaft des
+   Tokenizers, die kein Anbieter öffentlich zusichert, und sie begrenzt nur,
+   was WIR senden.
 
-   Eine Admission, die auf einer Schätzung steht, hält nur so lange, wie die
-   Schätzung stimmt. Genau das war der Fehler vom 18.09., eine Ebene tiefer.
+   WAS SIE NICHT KANN - und das ist dokumentiert, nicht vermutet
+   Anthropic schreibt zu Structured Outputs:
 
-   Deshalb hier eine BEWEISBARE obere Schranke statt einer Schätzung.
+     „When using structured outputs, Claude automatically receives an
+      additional system prompt explaining the expected output format. This
+      means: Your input token count is slightly higher. The injected prompt
+      costs you tokens like any other system prompt."
+     (platform.claude.com/docs/en/build-with-claude/structured-outputs,
+      Abschnitt „Prompt modification and token costs")
 
-   Der Satz, auf dem sie steht:
+   Fast alle Core-Aufrufe hier benutzen Structured Outputs. Es gibt also
+   berechnete Eingabetoken, die in unserem Anfragekörper nicht vorkommen.
+   Damit ist die Byte-Schranke KEINE obere Grenze aller abgerechneten
+   Eingabetoken, und ein Satz wie „Scheduled Core kann mathematisch niemals
+   über 0,32 $ liegen" wäre falsch.
 
-     Anthropic und OpenAI tokenisieren beide mit byte-level BPE. Jedes Token
-     des Vokabulars dekodiert zu mindestens EINEM Byte. Also dekodieren n
-     Token zu mindestens n Bytes; also kodiert eine Folge von b Bytes zu
-     HÖCHSTENS b Token.
+   WAS DER ZÄHLENDPUNKT KANN
+   `POST /v1/messages/count_tokens` nimmt denselben Anfragekörper an - laut
+   API-Referenz messages, model, system, tools, tool_choice, thinking,
+   output_config und cache_control. Er ist kostenlos und hat ein eigenes
+   Ratenlimit. Mit output_config kann er den injizierten Systemprompt
+   mitrechnen; wir übergeben deshalb ALLE unterstützten Felder, nicht eine
+   gepflegte Teilmenge - die kleine Teilmenge war genau der Fehler, durch den
+   tools und Schema aus der alten Rechnung fielen.
 
-   Wir zählen die UTF-8-Bytes der vollständigen serialisierten Anfrage. Das
-   ist großzügig - die JSON-Syntax (Anführungszeichen, Klammern,
-   Feldnamen) zählt mit, und die ist im Ergebnis kein Text, sondern Struktur.
-   Großzügig in die sichere Richtung ist genau das, was eine Vorabzusage
-   braucht.
+   Aber auch er ist keine Garantie. Anthropic sagt dazu selbst:
 
-   Was der Satz NICHT abdeckt, und was deshalb als Pauschale dazukommt:
-   Sondertoken, die die API selbst um jede Nachricht legt (Rollenmarken,
-   Trenner). Sie dekodieren zu null Inhaltsbytes. Dafür steht OVERHEAD_JE_-
-   NACHRICHT - reichlich bemessen, es geht um einstellige Zahlen je Nachricht.
+     „The token count is an estimate. In some cases, the actual number of
+      input tokens used when creating a message might differ by a small
+      amount."
+     (platform.claude.com/docs/en/build-with-claude/token-counting)
 
-   Grenzen dieser Schranke, ausdrücklich:
+   Eine dokumentierte MAXIMALE Abweichung gibt es nicht. „Small amount" ist
+   keine Zahl, auf die man einen Deckel stellt.
 
-     - Für serverseitige Werkzeuge (Websuche) gilt sie nicht: Deren Ergebnisse
-       kommen NACH dem Absenden in den Verlauf und stehen in keiner Anfrage,
-       die wir vorher wiegen könnten. Der Research-Topf sagt deshalb die Zahl
-       der Anfragen und Suchen zu, nicht den Cent - so steht es dort, und so
-       bleibt es.
-     - Sie ist lose: typisch das Drei- bis Vierfache der echten Tokenzahl. Das
-       kostet Spielraum im Topf. Ein Deckel, der hält, ist das wert.
+   Für serverseitige Werkzeuge (Websuche) lehnt der Endpunkt die Anfrage
+   ohnehin mit invalid_request_error ab - dort gibt es keinen Vorabwert, und
+   deshalb sagt der Research-Topf die Zahl der Anfragen und Suchen zu, nicht
+   den Cent.
+
+   WAS DARAUS FOLGT
+   Fünf Größen, die auseinandergehalten werden müssen:
+
+     clientInputBound       konservative Schranke über das, was wir senden
+     providerCountEstimate  vollständiger Zählwert, wo verfügbar
+     admissionBound         max(beide) - die Zahl, die reserviert wird
+     actualUsage            was der Anbieter hinterher meldet
+     invariantViolation     actualUsage > admissionBound
+
+   Und darüber, in richtlinie.mjs, die Trennung zwischen dem Policy-Deckel
+   (0,32 $) und der operativen Admissiongrenze darunter. Der Abstand ist ein
+   Guard gegen genau die Unschärfe, die oben dokumentiert ist - eine
+   konservative Betriebsgrenze, kein Beweis. Ohne zugesicherte Maximal-
+   abweichung oder einen anbieterseitigen Ausgabedeckel gibt es keinen.
    ========================================================================== */
 
 /** Sondertoken je Nachricht (Rollenmarke, Trenner). Reichlich bemessen. */
@@ -53,21 +73,33 @@ export const OVERHEAD_JE_NACHRICHT = 8;
 /** Feste Pauschale je Anfrage (Systemrahmen, Abschlussmarken). */
 export const OVERHEAD_FEST = 64;
 
+/**
+ * Felder, die der Zählendpunkt laut API-Referenz annimmt. Die Liste steht
+ * hier, damit ein neues Feld an EINER Stelle nachgetragen wird, statt an der
+ * Aufrufstelle vergessen zu werden.
+ */
+export const ZAEHL_FELDER = Object.freeze([
+  "model", "messages", "system", "tools", "tool_choice", "thinking",
+  "output_config", "cache_control",
+]);
+
 const byteLaenge = (s) => (typeof Buffer !== "undefined"
   ? Buffer.byteLength(s, "utf8")
   : new TextEncoder().encode(s).length);
 
 /**
- * Die obere Schranke der Eingabetoken EINER Anfrage.
+ * Die konservative Schranke über den von UNS gesendeten Anfragekörper.
  *
- * Bewusst über die GESAMTE Anfrage, nicht über ausgewählte Felder: Wer
- * einzelne Felder aufzählt, vergisst beim nächsten Feature eines - `tools`
- * und das Schema waren genau so verlorengegangen.
+ * Bewusst über die GESAMTE Anfrage, nicht über ausgewählte Felder: Wer Felder
+ * aufzählt, vergisst beim nächsten Feature eines - `tools` und das Schema
+ * waren genau so verlorengegangen.
+ *
+ * Sie begrenzt NICHT, was der Anbieter zusätzlich injiziert (siehe oben).
  *
  * @param {object} params  der vollständige Anfragekörper
- * @returns {number} Tokenobergrenze (ganzzahlig)
+ * @returns {number} Tokenschranke (ganzzahlig)
  */
-export function eingabeObergrenzeTokens(params) {
+export function clientInputBound(params) {
   if (!params || typeof params !== "object") return OVERHEAD_FEST;
   let roh;
   try { roh = JSON.stringify(params); } catch { roh = String(params); }
@@ -78,18 +110,33 @@ export function eingabeObergrenzeTokens(params) {
 }
 
 /**
- * Nimmt die beweisbare Schranke und, falls vorhanden, das Ergebnis des
- * Zählendpunkts - und nimmt den GRÖSSEREN Wert.
+ * Baut den Körper für den Zählendpunkt: alle unterstützten Felder aus der
+ * echten Anfrage, unverändert übernommen.
  *
- * Warum nicht den kleineren, wo der Zähler doch genauer ist: Anthropic
- * bezeichnet `count_tokens` selbst als Schätzung. Eine Schätzung darf eine
- * bewiesene Schranke ergänzen, nicht sie unterbieten - sonst steht die Zusage
- * wieder auf dem Wort eines Dritten. Liegt der Zähler über der Schranke, ist
- * entweder unsere Annahme falsch oder die Anfrage ungewöhnlich; in beiden
- * Fällen ist die größere Zahl die richtige.
+ * `null`, wenn der Aufruf dort nicht zählbar ist - serverseitige Werkzeuge
+ * (Websuche, Code-Ausführung) lehnt der Endpunkt ab.
  */
-export function eingabeGrenze(params, gezaehlt = null) {
-  const schranke = eingabeObergrenzeTokens(params);
-  const z = Number(gezaehlt);
-  return Number.isFinite(z) && z > schranke ? Math.ceil(z) : schranke;
+export function zaehlKoerper(params) {
+  if (!params || typeof params !== "object") return null;
+  const serverWerkzeug = (params.tools || []).some((t) => typeof t?.type === "string"
+    && /^(web_search|web_fetch|code_execution|tool_search)/.test(t.type));
+  if (serverWerkzeug) return null;
+  const koerper = {};
+  for (const feld of ZAEHL_FELDER) if (params[feld] !== undefined) koerper[feld] = params[feld];
+  return koerper.model && koerper.messages ? koerper : null;
+}
+
+/**
+ * Die Zahl, die reserviert wird.
+ *
+ * Der Zählwert darf die Schranke nur ANHEBEN, nie senken. Er ist laut
+ * Anbieter eine Schätzung; eine Schätzung darf eine konservative Rechnung
+ * ergänzen, nicht sie unterbieten. Liegt er darüber - etwa weil er den
+ * injizierten Systemprompt der Structured Outputs mitzählt -, ist er die
+ * richtige Zahl.
+ */
+export function admissionBound(params, providerCountEstimate = null) {
+  const client = clientInputBound(params);
+  const z = Number(providerCountEstimate);
+  return Number.isFinite(z) && z > client ? Math.ceil(z) : client;
 }

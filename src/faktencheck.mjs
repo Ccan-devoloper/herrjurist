@@ -8,6 +8,7 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
+import { istBudgetStopp } from "./budgetstopp.mjs";
 import { BudgetFehler } from "./kosten.mjs";
 import { claudeAufruf, openaiAufruf } from "./anbieter.mjs";
 
@@ -365,7 +366,7 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
          geschriebene und bezahlte Story-Texte mit sich: Der Prüfer war
          fertig, nur die Zweitmeinung war zu teuer, und weil der Fehler
          nach oben durchschlug, kam aus `storiesSchreiben` nichts zurück. */
-      if (e instanceof BudgetFehler) console.warn(`  ! ${e.message.split("\n")[0]} – Einwände gelten ohne Zweitmeinung.`);
+      if (istBudgetStopp(e)) console.warn(`  ! ${e.message.split("\n")[0]} – Einwände gelten ohne Zweitmeinung.`);
       else console.warn(`  ! Zweitmeinung nicht möglich (${e.message.split("\n")[0].slice(0, 120)}) – Einwände gelten.`);
     }
   }

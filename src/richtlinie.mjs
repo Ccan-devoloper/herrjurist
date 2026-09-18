@@ -25,6 +25,30 @@
 
 export const REGEL_DECKEL = Object.freeze({ core: 0.32, engagement: 0.25, research: 0.12 });
 
+/**
+ * Der Abstand zwischen dem Policy-Deckel und der Grenze, bis zu der Aufrufe
+ * überhaupt zugelassen werden.
+ *
+ * Er ist da, weil die Vorabrechnung nicht exakt sein KANN: Anthropic injiziert
+ * bei Structured Outputs einen zusätzlichen, berechneten Systemprompt, und der
+ * Zählendpunkt ist laut Anbieter eine Schätzung ohne zugesicherte
+ * Maximalabweichung (Belege in eingabe.mjs). Was nicht exakt vorhersagbar ist,
+ * bekommt Abstand statt einer Behauptung.
+ *
+ * Das ist eine konservative BETRIEBSGRENZE, kein Beweis. Sie macht ein
+ * Überschreiten unwahrscheinlich, nicht unmöglich; unmöglich würde erst ein
+ * anbieterseitiger Ausgabedeckel machen, den es nicht gibt.
+ *
+ * Über IG_PROVIDER_GUARD_USD einstellbar, damit der Wert an den gemessenen
+ * Abweichungen wachsen oder schrumpfen kann, statt geraten zu bleiben.
+ */
+export const PROVIDER_GUARD_USD = 0.02;
+
+export function providerGuard(roh = process.env.IG_PROVIDER_GUARD_USD) {
+  const n = Number(roh);
+  return Number.isFinite(n) && n >= 0 ? n : PROVIDER_GUARD_USD;
+}
+
 export class RichtlinieVerletzt extends Error {
   constructor(befunde) {
     super(`Effektive Konfiguration unzulässig:\n${befunde.map((b) => `  - ${b}`).join("\n")}`);
@@ -81,7 +105,14 @@ export function effektiveKonfiguration({
     }
   }
 
-  return { deckel: effektiv, breakGlass: bg, ausloeser, hinweise, regel: { ...deckel } };
+  /* Policy-Deckel und Betriebsgrenze sind zwei Zahlen, nicht eine. Zugelassen
+     wird bis zur Betriebsgrenze; der Policy-Deckel ist die Zusage. */
+  const guard = providerGuard();
+  const betrieb = Object.fromEntries(Object.entries(effektiv)
+    .map(([t, v]) => [t, Math.round(Math.max(0, v - guard) * 1e6) / 1e6]));
+  if (guard > 0) hinweise.push(`Provider-Guard ${guard.toFixed(4)} $ je Topf: zugelassen wird bis Core ${betrieb.core.toFixed(4)} $, zugesagt sind ${effektiv.core.toFixed(2)} $.`);
+
+  return { deckel: effektiv, betriebsDeckel: betrieb, providerGuardUsd: guard, breakGlass: bg, ausloeser, hinweise, regel: { ...deckel } };
 }
 
 /**

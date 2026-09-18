@@ -2981,14 +2981,17 @@ test("Obergrenze je Beitrag gilt in jedem Schreibpfad, verschachtelt läuft der 
 test("nachbessern reicht einen BudgetFehler weiter statt einen neuen Entwurf zu provozieren", async () => {
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   const block = autor.slice(autor.indexOf("async function nachbessern"), autor.indexOf("export function pruefHinweis"));
-  assert.match(block, /if \(e instanceof BudgetFehler\) throw e;/);
+  /* Seit es die gemeinsame Oberklasse gibt, wird nicht mehr auf einen
+     einzelnen Fehlertyp geprüft: Admission, gesperrter Topf und ein nicht
+     durable gewordenes Journal sagen dasselbe wie der alte BudgetFehler. */
+  assert.match(block, /if \(istBudgetStopp\(e\)\) throw e;/);
   assert.ok(!/catch \{ return null; \}/.test(block), "kein stilles Schlucken mehr");
 });
 
 test("Story-Faktencheck: jeder Ausfall hält die Texte, verwirft sie nicht", async () => {
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   const block = autor.slice(autor.indexOf("export async function storiesPruefen"), autor.indexOf("const REEL_SCHEMA"));
-  assert.ok(!/if \(!\(e instanceof BudgetFehler\)\) throw e;/.test(block), "ein technischer Ausfall fliegt nicht mehr nach oben");
+  assert.ok(!/throw e;/.test(block), "ein technischer Ausfall fliegt nicht mehr nach oben");
   assert.match(block, /for \(const o of liste\) o\.faktencheckOffen = true;/);
 });
 
@@ -4784,10 +4787,10 @@ test("1a Simulation: das optionale Bild wird abgelehnt – das Pflichtstück lä
 });
 /* ===== 1a-Nachbesserung: die sechs Befunde der Gegenprüfung ================ */
 
-test("1a+: Die Eingabeschranke ist beweisbar, nicht geschätzt", async () => {
+test("1a+: Die Eingabeschranke ist konservativ - und deckt den Anbieter nicht ab", async () => {
   /* chars/3.5 war eine Faustregel für deutschen Fließtext. Die Admission
      stand darauf - und damit auf einer Annahme über den Prompt. */
-  const { eingabeObergrenzeTokens, eingabeGrenze } = await import("../src/eingabe.mjs");
+  const { clientInputBound: eingabeObergrenzeTokens, admissionBound: eingabeGrenze, zaehlKoerper, ZAEHL_FELDER } = await import("../src/eingabe.mjs");
   const alteSchaetzung = (p) => Math.ceil((JSON.stringify(p.system || "") + JSON.stringify(p.messages || "")).length / 3.5);
 
   const basis = {
@@ -4826,7 +4829,7 @@ test("1a+: Ein Aufruf, dessen Input+Output den Resttopf sprengen könnte, starte
   const { telemetrieStarten } = await import("../src/telemetrie.mjs");
   const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
   const { obergrenzeUsd } = await import("../src/kosten.mjs");
-  const { eingabeObergrenzeTokens } = await import("../src/eingabe.mjs");
+  const { clientInputBound: eingabeObergrenzeTokens } = await import("../src/eingabe.mjs");
 
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "preflight-"));
   /* Der Ausgabeteil allein passt bequem: 500 Token bei Haiku sind 0,0029 $.
@@ -4850,8 +4853,10 @@ test("1a+: Ein Aufruf, dessen Input+Output den Resttopf sprengen könnte, starte
   await assert.rejects(() => claudeAufruf({ zweck: "faktencheck", slot: "b1", params }), AdmissionAbgelehnt);
   assert.equal(gerufen, 0, "der Anbieter wurde trotz zu knappen Budgets gerufen");
   assert.equal(telemetrie.zeilen().at(-1).outcome, "abgelehnt");
-  assert.ok(telemetrie.zeilen().at(-1).inputBoundTokens >= eingabeObergrenzeTokens(params) - 1,
-    "die Schranke steht nicht in der Telemetrie");
+  const z = telemetrie.zeilen().at(-1);
+  assert.equal(z.clientInputBoundTokens, eingabeObergrenzeTokens(params), "die clientseitige Schranke fehlt in der Telemetrie");
+  assert.equal(z.admissionBoundTokens, eingabeObergrenzeTokens(params), "die Admissiongrenze fehlt in der Telemetrie");
+  assert.equal(z.providerCountTokens, null, "ohne Zählendpunkt steht dort kein Wert");
 
   kontextLoeschen(); klientSetzen(null);
   fs.rmSync(dir, { recursive: true, force: true });
@@ -5178,6 +5183,278 @@ test("1a+: Gecachte OpenAI-Token werden einmal berechnet, nicht zweimal", async 
 
   kontextLoeschen();
   fs.rmSync(dir, { recursive: true, force: true });
+});
+/* ===== 1a-RC3: die vier Befunde der dritten Gegenprüfung =================== */
+
+test("1a RC3: Der Zählendpunkt bekommt den vollständigen Request, nicht eine Teilmenge", async () => {
+  /* Anthropic fügt bei Structured Outputs einen zusätzlichen System-Prompt
+     hinzu, der berechnet wird - er steht in KEINER Anfrage, die wir vorher
+     wiegen können. Der Zählendpunkt kann ihn mitrechnen, aber nur, wenn er
+     output_config überhaupt zu sehen bekommt. Die alte Fassung übergab
+     model/messages/system/tools - das Schema fiel heraus. */
+  const { zaehlKoerper, ZAEHL_FELDER } = await import("../src/eingabe.mjs");
+
+  const schema = { type: "object", additionalProperties: false, properties: { a: { type: "string" } }, required: ["a"] };
+  const params = {
+    model: "claude-sonnet-5", max_tokens: 4000,
+    system: "Systemtext", messages: [{ role: "user", content: "x" }],
+    tools: [{ name: "t", input_schema: { type: "object" } }],
+    tool_choice: { type: "auto" },
+    thinking: { type: "adaptive" },
+    output_config: { format: { type: "json_schema", schema } },
+    cache_control: { type: "ephemeral" },
+  };
+  const koerper = zaehlKoerper(params);
+
+  for (const feld of ["model", "messages", "system", "tools", "tool_choice", "thinking", "output_config", "cache_control"]) {
+    assert.ok(feld in koerper, `${feld} fehlt im Zähl-Request`);
+    assert.deepEqual(koerper[feld], params[feld], `${feld} wurde verändert statt unverändert übergeben`);
+  }
+  assert.deepEqual([...ZAEHL_FELDER].sort(), ["cache_control", "messages", "model", "output_config", "system", "thinking", "tool_choice", "tools"]);
+  /* max_tokens ist eine Ausgabegrenze und gehört nicht in einen Eingabezähler. */
+  assert.ok(!("max_tokens" in koerper), "max_tokens gehört nicht in den Zähl-Request");
+
+  /* Serverseitige Werkzeuge lehnt der Endpunkt ab - dort gibt es keinen
+     Vorabwert, und genau deshalb sagt der Research-Topf Anfragen und Suchen
+     zu, nicht den Cent. */
+  assert.equal(zaehlKoerper({ model: "m", messages: [], tools: [{ type: "web_search_20260209", name: "web_search" }] }), null);
+  assert.equal(zaehlKoerper({ model: "m", messages: [], tools: [{ type: "code_execution_20260521", name: "code_execution" }] }), null);
+});
+
+test("1a RC3: Die Admissiongrenze ist die größere der beiden Zahlen - und heißt nicht Beweis", async () => {
+  const { clientInputBound, admissionBound } = await import("../src/eingabe.mjs");
+  const params = { model: "claude-sonnet-5", max_tokens: 2000, messages: [{ role: "user", content: "Text ".repeat(200) }] };
+  const client = clientInputBound(params);
+
+  assert.equal(admissionBound(params, null), client, "ohne Zählwert gilt die clientseitige Schranke");
+  assert.equal(admissionBound(params, client - 500), client, "ein kleinerer Zählwert darf die Schranke nicht senken");
+  assert.equal(admissionBound(params, client + 500), client + 500, "ein größerer Zählwert muss sie anheben");
+
+  /* Der injizierte Systemprompt der Structured Outputs ist genau der Fall, in
+     dem der Zählwert über der Byte-Schranke liegen kann. */
+  const mitSchema = { ...params, output_config: { format: { type: "json_schema", schema: { type: "object" } } } };
+  assert.ok(admissionBound(mitSchema, clientInputBound(mitSchema) + 300) > clientInputBound(mitSchema));
+
+  /* Und im Quelltext steht keine Beweisbehauptung mehr. */
+  const quelle = fs.readFileSync(new URL("../src/eingabe.mjs", import.meta.url), "utf8");
+  assert.ok(!/BEWEISBARE|mathematisch bewiesen|beweisbare Schranke/i.test(quelle),
+    "die Datei behauptet weiterhin einen Beweis");
+  assert.match(quelle, /additional system prompt/, "der Beleg aus der Anbieterdokumentation fehlt");
+  assert.match(quelle, /is an estimate/, "der Beleg zur Schätzung des Zählendpunkts fehlt");
+});
+
+test("1a RC3: Der Provider-Guard liegt sichtbar unter dem Policy-Deckel", async () => {
+  const { effektiveKonfiguration, providerGuard, REGEL_DECKEL } = await import("../src/richtlinie.mjs");
+  const k = effektiveKonfiguration({ ausloeser: "schedule", datum: "2026-09-19" });
+
+  assert.equal(k.deckel.core, 0.32, "der Policy-Deckel ist die Zusage und bleibt 0,32 $");
+  assert.ok(k.betriebsDeckel.core < k.deckel.core, "die Betriebsgrenze liegt nicht unter dem Policy-Deckel");
+  assert.equal(Math.round((k.deckel.core - k.betriebsDeckel.core) * 1e6) / 1e6, k.providerGuardUsd);
+  for (const t of ["engagement", "research"]) {
+    assert.ok(k.betriebsDeckel[t] < REGEL_DECKEL[t], `${t} hat keinen Guard`);
+  }
+  assert.ok(k.hinweise.some((h) => /Guard/.test(h)), "der Guard steht in keinem Hinweis");
+  assert.equal(providerGuard("0.05"), 0.05, "der Guard ist nicht konfigurierbar");
+  assert.equal(providerGuard("quatsch"), 0.02, "ein unbrauchbarer Wert fällt nicht auf den Standard zurück");
+
+  /* Zugelassen wird bis zur Betriebsgrenze. */
+  const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  const b = budgetStarten({ deckel: k.betriebsDeckel });
+  assert.equal(b.frei("core"), k.betriebsDeckel.core);
+  assert.throws(() => b.zulassen("autor", 0.315), AdmissionAbgelehnt,
+    "ein Aufruf zwischen Betriebsgrenze und Policy-Deckel wird zugelassen");
+
+  /* Und die Telemetrie weist ihn aus. */
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "guard-"));
+  const t = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir, providerGuardUsd: k.providerGuardUsd });
+  t.aufruf({ purpose: "autor", bucket: "core", sent: true, actualUsd: 0.01, outcome: "ok" });
+  assert.equal(t.zeilen().at(-1).providerGuardUsd, k.providerGuardUsd, "der Guard fehlt in der Telemetrie");
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a RC3: Ein Budgetstopp erzeugt niemals eine fachliche Freigabe", async () => {
+  /* Der gefährlichste Pfad: Bei IG_FAKTENCHECK_STRIKT=false gibt faktenSicher()
+     bei einem technischen Ausfall `ok: true` zurück. Eine Admission-Ablehnung
+     dort hineinlaufen zu lassen hieße: kein Geld für die Prüfung, also gilt
+     der Beitrag als geprüft. */
+  const { istBudgetStopp, BudgetStopp, budgetStoppGrund } = await import("../src/budgetstopp.mjs");
+  const { BudgetFehler, PostenFehler } = await import("../src/kosten.mjs");
+  const { AdmissionAbgelehnt, TopfGesperrt, PflichtUeberreserviert } = await import("../src/budget.mjs");
+  const { JournalNichtDurable } = await import("../src/journal.mjs");
+  const { ResearchGrenze } = await import("../src/research.mjs");
+
+  const stopps = [
+    new BudgetFehler("Tagesbudget erreicht"),
+    new PostenFehler("Posten zu teuer"),
+    new AdmissionAbgelehnt("autor", "core", 0.2, 0.01, 0.32),
+    new TopfGesperrt("core", "Invariante verletzt"),
+    new PflichtUeberreserviert("core", 0.3, 0.1),
+    new JournalNichtDurable("autor", "reservierung"),
+    new ResearchGrenze("Suchkontingent aufgebraucht"),
+  ];
+  for (const e of stopps) {
+    assert.ok(istBudgetStopp(e), `${e.name} gilt nicht als Budgetstopp`);
+    assert.ok(e instanceof BudgetStopp, `${e.name} hängt nicht an der Oberklasse`);
+    assert.ok(budgetStoppGrund(e).length > 0);
+  }
+  /* Echte technische Fehler dürfen NICHT hineinrutschen - sonst würde ein
+     Modellausfall künftig wie ein Budgetstopp behandelt. */
+  for (const e of [new Error("Modell antwortet nicht"), new TypeError("kaputt"), null, undefined, { name: "SyntaxError" }]) {
+    assert.ok(!istBudgetStopp(e), `${e?.name || e} wird fälschlich als Budgetstopp gewertet`);
+  }
+  /* Auch über Modulgrenzen hinweg, wo instanceof versagt. */
+  assert.ok(istBudgetStopp({ name: "AdmissionAbgelehnt", message: "x" }), "ein fremder Fehler gleichen Namens wird nicht erkannt");
+
+  /* Und die fünf Klassen im Quelltext. */
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  const fc = fs.readFileSync(new URL("../src/faktencheck.mjs", import.meta.url), "utf8");
+
+  const faktenBlock = autor.slice(autor.indexOf("async function faktenSicher"), autor.indexOf("export function themaText"));
+  assert.match(faktenBlock, /if \(istBudgetStopp\(e\)\) throw e;/, "Faktencheck: ein Budgetstopp wird nicht nach oben gereicht");
+  assert.ok(faktenBlock.indexOf("istBudgetStopp(e)") < faktenBlock.indexOf("CONFIG.faktencheck.strikt"),
+    "Faktencheck: der Budgetstopp wird erst NACH dem Strikt-Zweig geprüft - er könnte eine Freigabe erzeugen");
+
+  const storyBlock = autor.slice(autor.indexOf("export async function storiesPruefen"), autor.indexOf("const REEL_SCHEMA"));
+  assert.match(storyBlock, /istBudgetStopp\(e\)/, "Story-Prüfung: kein Budgetstopp-Zweig");
+  assert.match(storyBlock, /faktencheckOffen = true/, "Story-Prüfung: die Texte gelten nicht als offen");
+
+  const rechercheBlock = autor.slice(autor.indexOf("Web-Recherche"), autor.indexOf("export async function bildregie") + 1 || undefined);
+  assert.match(rechercheBlock, /istBudgetStopp\(e\)/, "Research: kein sauberer Budgetstopp-Zweig");
+
+  assert.match(lauf, /if \(istBudgetStopp\(e\)\) log\(`  ⏸ \$\{e\.message\}`\); else console\.error\(`  ✗ Interaktion/, "Engagement: Budgetstopp nicht getrennt protokolliert");
+  assert.match(lauf, /eintrag\.budgetBlockiert = \{[\s\S]{0,200}?art: e\.name \}/, "Feed/Reel: der blockierte Slot hält die Art des Stopps nicht fest");
+  assert.match(fc, /istBudgetStopp\(e\)/, "Zweitmeinung: kein Budgetstopp-Zweig");
+
+  /* Nirgends mehr ein Vergleich auf den alten Einzeltyp. */
+  for (const [name, quelle] of [["autor.mjs", autor], ["lauf.mjs", lauf], ["faktencheck.mjs", fc]]) {
+    assert.ok(!/instanceof BudgetFehler/.test(quelle), `${name} prüft noch auf den alten Einzeltyp`);
+  }
+});
+
+test("1a RC3: Ein fehlgeschlagener Sendevermerk hinterlässt kein Phantom-sent", async () => {
+  /* Der Ablauf, der das Geld eines nie gesendeten Aufrufs blockiert hätte:
+     senden() setzt lokal auf "sent", der Push scheitert, der Provider wird
+     korrekt nicht gerufen - und ein SPÄTERER Push trägt das "sent" doch
+     hinaus. Der nächste Lauf hält dann Geld für möglicherweise ausgegeben,
+     das nie ausgegeben wurde. Kein Overspend, aber Phantomverbrauch, der
+     Pflichtinhalte verdrängt. */
+  const { journalStarten, JZUSTAND, JournalNichtDurable } = await import("../src/journal.mjs");
+  const { budgetStarten } = await import("../src/budget.mjs");
+  const { telemetrieStarten } = await import("../src/telemetrie.mjs");
+  const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
+
+  let platte = null;
+  /* Der lokale Commit gelingt IMMER - nur der Push entscheidet über
+     Durability. Genau in dieser Lücke entstand das Phantom: Die Datei trug
+     schon „sent", der Push dazu scheiterte, und der nächste gelungene Push
+     trug es hinaus. Der erste Schreibvorgang (die Reservierung) wird durable,
+     der zweite (der Sendevermerk) nicht. */
+  let schreibVorgang = 0;
+  let pushGeht = true;
+  const lesen = () => (platte ? JSON.parse(platte) : null);
+  const schreiben = async (inhalt) => {
+    platte = JSON.stringify(inhalt);
+    schreibVorgang += 1;
+    return pushGeht && schreibVorgang !== 2;
+  };
+
+  const journal = journalStarten({ lesen, schreiben, datum: "2026-09-19", kanal: "herrjurist" });
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "phantom-"));
+  const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
+  const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
+  kontextSetzen({ budget, telemetrie, journal, kanal: "herrjurist", datum: "2026-09-19" });
+
+  let gerufen = 0;
+  klientSetzen({ messages: { create: async () => { gerufen++; return { usage: { input_tokens: 10, output_tokens: 10 }, content: [] }; } } });
+
+  /* 1. Die Reservierung wird durable (Schreibvorgang 1).
+     2./3. Der Sendevermerk wird lokal geschrieben, sein Push scheitert (2). */
+  await assert.rejects(() => claudeAufruf({
+    zweck: "autor", slot: "b1", modell: "claude-sonnet-5",
+    params: { model: "claude-sonnet-5", max_tokens: 2000, messages: [{ role: "user", content: "x" }] },
+  }), JournalNichtDurable);
+
+  /* 4. Der Provider wurde nicht gerufen. */
+  assert.equal(gerufen, 0, "gesendet, obwohl der Sendevermerk nicht durable wurde");
+
+  /* 5. Später gelingt irgendein Push - etwa der Tagesabschluss. */
+  assert.ok(schreibVorgang >= 3, "nach dem gescheiterten Sendevermerk wurde nicht zurückgerollt");
+  await journal.abschluss();
+  assert.ok(pushGeht);
+
+  /* 6./7. Ein neuer Runner liest das Journal. */
+  const nachher = journalStarten({ lesen, schreiben, datum: "2026-09-19", kanal: "herrjurist" });
+  const eintraege = nachher.eintraege();
+  assert.equal(eintraege.length, 1, "genau eine Reservierung sollte im Journal stehen");
+  assert.notEqual(eintraege[0].state, JZUSTAND.GESENDET, "der Eintrag steht als gesendet im Journal - Phantom");
+  assert.notEqual(eintraege[0].state, JZUSTAND.UNGEKLAERT, "der Eintrag gilt als ungeklärt - Phantom");
+  /* Zulässig sind zwei Ausgänge, beide harmlos: `reserved` (der Folgelauf
+     gibt frei, weil der Sendevermerk fehlt) oder `expired` (der Lauf selbst
+     hat schon aufgeräumt, weil er weiß, dass er nichts gesendet hat). Der
+     zweite ist der bessere - er braucht den Folgelauf nicht mehr. */
+  assert.ok([JZUSTAND.RESERVIERT, JZUSTAND.VERFALLEN].includes(eintraege[0].state),
+    `unerwarteter Zustand: ${eintraege[0].state}`);
+
+  /* 8. Und kein Phantomverbrauch - das ist der eigentliche Prüfstein. */
+  const u = nachher.uebernahme();
+  assert.equal(u.vorbelastung.core, 0, "Geld für einen nie gesendeten Aufruf bleibt blockiert");
+  assert.equal(u.blockiert.length, 0, "der Aufruf gilt als möglicherweise bezahlt");
+
+  kontextLoeschen(); klientSetzen(null);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("1a RC3: Der Cutover addiert den Altbestand, statt ihn zu maximieren", async () => {
+  /* max(kosten.json, journal) ist nur richtig, wenn das Journal alle Aufrufe
+     des Tages kennt. Beim Mid-Day-Cutover sind die Mengen disjunkt: 0,10 $
+     von vorher und 0,08 $ ungeklärt von nachher ergeben 0,18 $, nicht 0,10 $. */
+  const { journalStarten } = await import("../src/journal.mjs");
+
+  let platte = null;
+  const lesen = () => (platte ? JSON.parse(platte) : null);
+  const schreiben = async (i) => { platte = JSON.stringify(i); return true; };
+
+  /* Erster Lauf nach der Einführung: Der Altbestand wird eingefroren. */
+  const lauf1 = journalStarten({ lesen, schreiben, datum: "2026-09-19", legacyBaseline: { core: 0.10, engagement: 0, research: 0 } });
+  assert.equal(lauf1.baselineNeu(), true);
+  assert.equal(lauf1.uebernahme().vorbelastung.core, 0.10, "der Altbestand fehlt");
+
+  const a = await lauf1.reservieren({ bucket: "core", purpose: "autor", reservedUsd: 0.08 });
+  await lauf1.senden(a);
+  lauf1.ungeklaert(a, "Verbindung abgebrochen");
+  await lauf1.abschluss();
+
+  /* Nächster Lauf: 0,10 aus der Zeit davor PLUS 0,08 ungeklärt danach. */
+  const lauf2 = journalStarten({ lesen, schreiben, datum: "2026-09-19", legacyBaseline: { core: 0.10, engagement: 0, research: 0 } });
+  assert.equal(lauf2.baselineNeu(), false, "die Baseline darf nicht neu gesetzt werden");
+  assert.equal(lauf2.uebernahme().vorbelastung.core, 0.18,
+    "max() hätte hier 0,10 ergeben - das Geld des ungeklärten Aufrufs wäre ein zweites Mal ausgebbar");
+
+  /* Und die Gegenprobe: Ein abgerechneter Aufruf steht inzwischen AUCH in
+     kosten.json. Die Baseline wächst trotzdem nicht mit - sonst zählte er
+     doppelt. */
+  let platte2 = null;
+  const lesen2 = () => (platte2 ? JSON.parse(platte2) : null);
+  const schreiben2 = async (i) => { platte2 = JSON.stringify(i); return true; };
+
+  const l1 = journalStarten({ lesen: lesen2, schreiben: schreiben2, datum: "2026-09-20", legacyBaseline: { core: 0.10, engagement: 0, research: 0 } });
+  const b = await l1.reservieren({ bucket: "core", purpose: "autor", reservedUsd: 0.05 });
+  await l1.senden(b);
+  l1.abrechnen(b, 0.03);
+  await l1.abschluss();
+
+  /* kosten.json steht jetzt bei 0,13 - der nächste Lauf reicht das als
+     legacyBaseline herein, weil er es nicht besser weiß. */
+  const l2 = journalStarten({ lesen: lesen2, schreiben: schreiben2, datum: "2026-09-20", legacyBaseline: { core: 0.13, engagement: 0, research: 0 } });
+  assert.equal(l2.uebernahme().vorbelastung.core, 0.13,
+    "0,10 eingefroren + 0,03 abgerechnet = 0,13; die hereingereichten 0,13 dürfen nicht noch einmal obendrauf");
+  assert.equal(l2.legacyBaseline().core, 0.10, "die eingefrorene Baseline wurde überschrieben");
+
+  /* Ein neuer Tag beginnt wieder bei seiner eigenen Baseline. */
+  const l3 = journalStarten({ lesen: lesen2, schreiben: schreiben2, datum: "2026-09-21", legacyBaseline: { core: 0, engagement: 0, research: 0 } });
+  assert.equal(l3.uebernahme().vorbelastung.core, 0, "der Vortag belastet den neuen Tag");
 });
 test("1a: Der Worst Case des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {
   /* Fall 3 aus der Anweisung braucht den Reservebestand und ist noch nicht

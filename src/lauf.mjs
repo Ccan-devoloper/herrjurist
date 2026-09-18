@@ -17,6 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
+import { istBudgetStopp, budgetStoppGrund } from "./budgetstopp.mjs";
 import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
@@ -232,7 +233,7 @@ async function main() {
     zwecke: Object.keys(ZWECK_TOPF), zweckTopf: ZWECK_TOPF,
   });
 
-  const tagesLimitUsd = konfiguration.deckel.core;
+  const tagesLimitUsd = konfiguration.betriebsDeckel.core;
   /* Der Antworttopf (Kommentare, Nachrichten) wird getrennt geführt. Ein
      Tageseintrag von vor dieser Trennung hat noch kein Feld `antworten`;
      dann steckt der Betrag im Gesamtwert und wird einmalig herausgerechnet. */
@@ -267,7 +268,10 @@ async function main() {
     if (topf) bisherJeTopf[topf] += Number(betrag) || 0;
     else console.warn(`  ! Zweck „${zweck}“ aus dem Tagesstand hat keinen Topf - er zählt gegen keinen Deckel.`);
   }
-  const telemetrie = telemetrieStarten({ datum, kanal: KANAL, dir: AUSGABE, breakGlass: konfiguration.breakGlass.aktiv });
+  const telemetrie = telemetrieStarten({
+    datum, kanal: KANAL, dir: AUSGABE, breakGlass: konfiguration.breakGlass.aktiv,
+    providerGuardUsd: konfiguration.providerGuardUsd,
+  });
 
   /* Das Budget-Journal: Reservierungen, die diesen Prozess ueberleben.
 
@@ -287,29 +291,44 @@ async function main() {
       return gepusht || hosting.pushen === false;
     },
     remoteNoetig: hosting.pushen !== false,
+    /* Der Altbestand aus kosten.json wird EINMAL je Tag eingefroren. Danach
+       ist das Journal massgeblich; die Baseline waechst nicht mit, sonst
+       zaehlten die abgerechneten Aufrufe des Journals doppelt - sie stehen ja
+       auch in kosten.json. Ein max() ueber beide waere bequem und falsch:
+       Sind die Mengen disjunkt (0,10 $ davor, 0,08 $ ungeklaert danach), ist
+       der wahre Stand 0,18 $ und nicht 0,10 $. */
+    legacyBaseline: bisherJeTopf,
   });
   const uebernommen = journal.uebernahme();
+  if (journal.baselineNeu()) {
+    const b = journal.legacyBaseline();
+    log(`  Journal fuer ${datum} angelegt · Altbestand eingefroren: Core ${b.core.toFixed(4)} · Engagement ${b.engagement.toFixed(4)} · Research ${b.research.toFixed(4)} $`);
+  }
   if (uebernommen.freigegeben.length || uebernommen.blockiert.length) {
     log(`  Journal: ${uebernommen.freigegeben.length} Reservierung(en) aus einem abgebrochenen Lauf freigegeben `
       + `(beweisbar nicht gesendet), ${uebernommen.blockiert.length} bleiben blockiert (gesendet, nie abgerechnet).`);
     for (const e of uebernommen.blockiert) log(`    ! ${e.purpose}${e.slot ? ` (${e.slot})` : ""}: ${e.reservedUsd.toFixed(4)} $ gelten als verbraucht`);
     await journal.abschluss();
   }
-  /* Der groessere der beiden Staende gilt. kosten.json kennt die abgerechneten
-     Betraege frueherer Laeufe, das Journal zusaetzlich die ungeklaerten - und
-     solange beide gefuehrt werden, ist der hoehere Wert der ehrliche. */
-  for (const t of Object.keys(bisherJeTopf)) {
-    bisherJeTopf[t] = Math.max(bisherJeTopf[t], uebernommen.vorbelastung[t] || 0);
-  }
+  /* Das Journal ist ab hier die eine Quelle: eingefrorener Altbestand plus
+     seine eigenen Eintraege. Kein Maximum, keine zweite Rechnung. */
+  for (const t of Object.keys(bisherJeTopf)) bisherJeTopf[t] = uebernommen.vorbelastung[t] || 0;
 
+  /* Zugelassen wird bis zur BETRIEBSGRENZE, nicht bis zum Policy-Deckel. Der
+     Abstand dazwischen ist der Provider-Guard: Was der Anbieter bei
+     Structured Outputs selbst an Systemprompt hinzufuegt, wird berechnet und
+     steht in keiner Anfrage, die wir vorher wiegen koennen; und der
+     Zaehlendpunkt ist laut Anbieter eine Schaetzung ohne zugesicherte
+     Maximalabweichung. Was nicht exakt vorhersagbar ist, bekommt Abstand. */
   const budget = budgetStarten({
-    deckel: konfiguration.deckel, bisher: bisherJeTopf, breakGlass: konfiguration.breakGlass.aktiv,
+    deckel: konfiguration.betriebsDeckel, bisher: bisherJeTopf, breakGlass: konfiguration.breakGlass.aktiv,
     protokoll: () => {},
   });
   kontextSetzen({ budget, telemetrie, journal, kanal: KANAL, datum });
-  log(`  Töpfe: Core ${bisherJeTopf.core.toFixed(3)}/${konfiguration.deckel.core.toFixed(2)} · `
-    + `Engagement ${bisherJeTopf.engagement.toFixed(3)}/${konfiguration.deckel.engagement.toFixed(2)} · `
-    + `Research ${bisherJeTopf.research.toFixed(3)}/${konfiguration.deckel.research.toFixed(2)} $`
+  log(`  Töpfe (Betriebsgrenze, Policy ${konfiguration.deckel.core.toFixed(2)} $ minus Guard ${konfiguration.providerGuardUsd.toFixed(4)} $): `
+    + `Core ${bisherJeTopf.core.toFixed(3)}/${konfiguration.betriebsDeckel.core.toFixed(4)} · `
+    + `Engagement ${bisherJeTopf.engagement.toFixed(3)}/${konfiguration.betriebsDeckel.engagement.toFixed(4)} · `
+    + `Research ${bisherJeTopf.research.toFixed(3)}/${konfiguration.betriebsDeckel.research.toFixed(4)} $`
     + `${konfiguration.breakGlass.aktiv ? ` · BREAK GLASS: „${konfiguration.breakGlass.grund}“` : ""}`);
 
   /* Stimmen-Kontingent: ElevenLabs, solange das Monatsguthaben des Abos reicht,
@@ -541,7 +560,7 @@ async function main() {
         if (r.beantwortet) { ledgerSpeichern(ledgerPfad, ledger); hosting.commit(`Kommentare beantwortet ${datum}`); await hosting.push(); }
         log(`Interaktion: ${r.beantwortet} Antworten (${r.geprueft} Beiträge, ${r.kommentare ?? 0} Kommentare geprüft)`);
       } catch (e) {
-        if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`); else console.error(`  ✗ Interaktion: ${e.message}`);
+        if (istBudgetStopp(e)) log(`  ⏸ ${e.message}`); else console.error(`  ✗ Interaktion: ${e.message}`);
       }
     }
     /* Postfach: Direktnachrichten beantworten – ebenfalls bei jedem Lauf.
@@ -554,7 +573,7 @@ async function main() {
         if (r.beantwortet) { ledgerSpeichern(ledgerPfad, ledger); hosting.commit(`Nachrichten beantwortet ${datum}`); await hosting.push(); }
         log(`Postfach: ${r.beantwortet} Antworten (${r.unterhaltungen} Unterhaltungen, ${r.offen} offen)`);
       } catch (e) {
-        if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`); else console.error(`  ✗ Postfach: ${e.message}`);
+        if (istBudgetStopp(e)) log(`  ⏸ ${e.message}`); else console.error(`  ✗ Postfach: ${e.message}`);
       }
     }
     /* Schlüsselwort-Nachrichten: Spickzettel-Karten an Kommentierende. */
@@ -679,7 +698,7 @@ async function main() {
             if (ersatz) return ersatz;
           } else log(`  Recherche: ${recherche.titel || "(ohne Titel)"} · ${recherche.quellen.length} Quellen`);
         } catch (e) {
-          if (!(e instanceof BudgetFehler)) throw e;
+          if (!istBudgetStopp(e)) throw e;
           /* Kein Geld für die Recherche - aber ein Beitrag ohne Recherche ist
              besser als kein Beitrag. „aktuell" und „loesungsskizze" leben von
              ihr und haben kein eigenes Thema; also weicht der Slot auf ein
@@ -717,8 +736,8 @@ async function main() {
       /* Nur DIESER Beitrag ist am Ende, nicht der Tag: weitermachen mit dem
          nächsten. Ein `break` hier hätte am 17.09. nach dem ersten teuren
          Beitrag alles Übrige mitgerissen. */
-      if (e instanceof PostenFehler) { log(`  ⏸ ${e.message}`); continue; }
-      if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); break; }
+      if (e?.name === "PostenFehler") { log(`  ⏸ ${e.message}`); continue; }
+      if (istBudgetStopp(e)) { log(`  ⏸ ${e.message}`); break; }
       /* Nach allen Versuchen nicht freigegeben: heute nicht noch einmal
          bezahlen – morgen mit frischem Entwurf, der Plan trägt ihn über.
          Alles andere (Netz, API) ist vorübergehend: der nächste Lauf
@@ -790,11 +809,11 @@ async function main() {
           }
           hosting.commit(`Story-Texte ${datum} (zweiter Versuch)`);
         } catch (e) {
-          if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`);
+          if (istBudgetStopp(e)) log(`  ⏸ ${e.message}`);
           else console.error(`  ✗ Stories nachschreiben: ${e.message}`);
         }
       } catch (e) {
-        if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`);
+        if (istBudgetStopp(e)) log(`  ⏸ ${e.message}`);
         else { fehler++; console.error(`  ✗ Stories schreiben: ${e.message}`); }
       }
     }
@@ -816,7 +835,7 @@ async function main() {
         for (const s of ungeprueft) hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s);
         hosting.commit(`Story-Faktencheck nachgeholt ${datum}`);
       } catch (e) {
-        if (e instanceof BudgetFehler) log(`  ⏸ ${e.message}`);
+        if (istBudgetStopp(e)) log(`  ⏸ ${e.message}`);
         else { fehler++; console.error(`  ✗ Story-Faktencheck nachholen: ${e.message}`); }
       }
     }
@@ -903,12 +922,15 @@ async function main() {
       /* Ein Slot, der am Budget scheitert, faellt nicht still aus: Er wird
          gemeldet, im Plan vermerkt und landet im Bericht. Fail closed heisst
          nicht schweigen. */
-      if (e instanceof AdmissionAbgelehnt || e instanceof TopfGesperrt) {
-        eintrag.budgetBlockiert = { seit: new Date().toISOString(), grund: e.message, topf: e.topf || null };
-        log(`  ⛔ ${eintrag.slot} budget-blockiert: ${e.message}`);
+      /* Jeder Budgetstopp - Admission, gesperrter Topf, nicht durable
+         gewordenes Journal, alter Deckel - bedeutet dasselbe: Der Slot bleibt
+         geplant und erscheint heute nicht. Unterschieden wird nur, wie
+         ausführlich vermerkt wird. */
+      if (istBudgetStopp(e)) {
+        eintrag.budgetBlockiert = { seit: new Date().toISOString(), grund: budgetStoppGrund(e), topf: e.topf || null, art: e.name };
+        log(`  ⛔ ${eintrag.slot} budget-blockiert: ${budgetStoppGrund(e)}`);
         continue;
       }
-      if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); continue; }
       fehler++;
       eintrag.fehler = `${new Date().toISOString()} ${e.message}`;
       planSpeichern(hosting, plan);
@@ -1012,7 +1034,7 @@ async function main() {
       if (echt.bestaetigt) log(`  ✓ Story ${eintrag.slot} ${story.art}${eintrag.interaktiv ? " mit Umfrage" : ""} → ${medienId}`);
       else log(`  ○ Story ${eintrag.slot} ${story.art} gerendert, aber nicht gesendet.`);
     } catch (e) {
-      if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message}`); continue; }
+      if (istBudgetStopp(e)) { log(`  ⏸ ${e.message}`); continue; }
       fehler++;
       eintrag.fehler = `${new Date().toISOString()} ${e.message}`;
       planSpeichern(hosting, plan);
@@ -1112,7 +1134,7 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
       if (i + 1 < grenze && !trocken) await new Promise((r) => setTimeout(r, CONFIG.instagram.auffuellPauseSekunden * 1000));
     } catch (e) {
       console.error(`  ✗ Auffüllen ${i + 1}: ${e.message}`);
-      if (e instanceof BudgetFehler) { log(`  ⏸ ${e.message} Auffüllen wird morgen fortgesetzt.`); budgetStopp = true; break; }
+      if (istBudgetStopp(e)) { log(`  ⏸ ${e.message} Auffüllen wird morgen fortgesetzt.`); budgetStopp = true; break; }
       if (/credit|billing|insufficient|402|quota/i.test(e.message)) { console.error("Guthaben oder Kontingent erschöpft – Auffüllen wird beim nächsten Aufruf fortgesetzt."); break; }
       const ratenlimit = /request limit|code (4|17|32|613)\b/i.test(e.message);
       if (ratenlimit) {

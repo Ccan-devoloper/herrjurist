@@ -16,8 +16,12 @@
 
    Was hier bei JEDEM Aufruf passiert:
 
-     1. Worst Case aus dem konfigurierten Hard Ceiling rechnen - nicht aus
-        einer Schaetzung. Schaetzungen waren das Problem.
+     1. Worst Case rechnen: Ausgabe aus dem konfigurierten Hard Ceiling,
+        Eingabe aus admissionBound() - dem groesseren von clientseitiger
+        Schranke und Zaehlendpunkt. Beides ist konservativ, keines ist ein
+        Beweis: Was der Anbieter selbst injiziert, steht in keinem Koerper,
+        den wir vorher wiegen koennen (siehe eingabe.mjs). Dafuer liegt der
+        Provider-Guard unter dem Policy-Deckel.
      2. Admission aus dem Topf des Zwecks. Passt der Worst Case nicht,
         startet der Aufruf nicht (fail closed).
      3. `gesendet()` unmittelbar vor dem Absenden. Ab hier gibt es kein Geld
@@ -34,7 +38,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
 import { obergrenzeUsd, preisAus, erfassen, erfassenStueck } from "./kosten.mjs";
 import { InvarianteVerletzt } from "./budget.mjs";
-import { eingabeGrenze } from "./eingabe.mjs";
+import { admissionBound, clientInputBound, zaehlKoerper } from "./eingabe.mjs";
 import { exaktesProfil, kalibrierFamilie, bausteinHash } from "./profile.mjs";
 
 /* --- Laufkontext ---------------------------------------------------------
@@ -65,25 +69,28 @@ let klient = null;
 const client = () => (klient ||= anthropic());
 export function klientSetzen(k) { klient = k; }   /* nur für Tests */
 
-/* Der Zählendpunkt von Anthropic, wo es ihn gibt. Er kostet nichts und ist
-   genauer als jede Schranke - aber Anthropic nennt ihn selbst eine Schätzung,
-   und eine Schätzung trägt keine Zusage. Er ergänzt die beweisbare Schranke
-   aus eingabe.mjs, er ersetzt sie nicht (siehe eingabeGrenze). Scheitert er,
-   läuft der Aufruf mit der Schranke weiter - fail open ist hier richtig, weil
-   die Schranke allein schon sicher ist.
+/* Der Zählendpunkt von Anthropic. Kostenlos, eigenes Ratenlimit - und der
+   einzige Weg, die Eingabetoken zu erfassen, die Anthropic bei Structured
+   Outputs selbst hinzufügt und berechnet (Belege in eingabe.mjs). Übergeben
+   wird der VOLLSTÄNDIGE unterstützte Anfragekörper, nicht eine gepflegte
+   Teilmenge: Die kleine Teilmenge war der Fehler, durch den tools und Schema
+   aus der alten Rechnung fielen.
 
-   Abschaltbar mit IG_TOKEN_ZAEHLEN=false, falls der Endpunkt limitiert. */
+   Scheitert er, läuft der Aufruf mit der clientseitigen Schranke weiter. Das
+   ist kein Freibrief - die Schranke deckt den injizierten Prompt nicht ab -,
+   sondern der Grund, warum darüber der Provider-Guard liegt.
+
+   Abschaltbar mit IG_TOKEN_ZAEHLEN=false, falls das Ratenlimit drückt. */
 const zaehlenAktiv = () => String(process.env.IG_TOKEN_ZAEHLEN || "") !== "false";
 
 async function eingabeZaehlen(params) {
   if (!zaehlenAktiv()) return null;
+  const koerper = zaehlKoerper(params);
+  if (!koerper) return null;
   const c = client();
   if (typeof c?.messages?.countTokens !== "function") return null;
   try {
-    const körper = { model: params.model, messages: params.messages || [] };
-    if (params.system) körper.system = params.system;
-    if (params.tools) körper.tools = params.tools;
-    const r = await c.messages.countTokens(körper);
+    const r = await c.messages.countTokens(koerper);
     const n = Number(r?.input_tokens);
     return Number.isFinite(n) ? n : null;
   } catch { return null; }
@@ -111,14 +118,16 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
      beweisbare Byte-Schranke aus eingabe.mjs (ergänzt um den Zählendpunkt,
      wo es ihn gibt). Vorher stand auf der Eingabeseite chars/3.5 - und damit
      stand die ganze Vorabzusage auf einer Faustregel. */
+  const clientBound = clientInputBound(params);
   const gezaehlt = provider === "anthropic" ? await eingabeZaehlen(params) : null;
-  const eingabeTokens = eingabeGrenze(params, gezaehlt);
+  const eingabeTokens = admissionBound(params, gezaehlt);
   const worstCase = obergrenzeUsd({ modell, maxTokens: maxTokens || 0, eingabeTokens });
 
   const roh = {
     purpose: zweck, bucket: null, slot, provider, model: modell, effort, thinkingMode: denkmodus,
     attempt, profileId: profil.id, calibrationFamily: familie, maxTokens,
-    inputBoundTokens: eingabeTokens, inputCountedTokens: gezaehlt,
+    clientInputBoundTokens: clientBound, providerCountTokens: gezaehlt,
+    admissionBoundTokens: eingabeTokens,
   };
 
   let griff;
