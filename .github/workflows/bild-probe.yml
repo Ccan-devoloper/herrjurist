@@ -1,0 +1,52 @@
+name: Titelbild · Vergleichsprobe
+
+# Zeichnet dasselbe Motiv in drei Einstellungen und legt die Bilder in den
+# Asset-Zweig, damit man sie ansehen kann.
+#
+# Warum als eigener Lauf: Der Schlüssel liegt hier, und der Tageslauf ist der
+# falsche Ort für einen Versuch. Es wird nichts veröffentlicht und kein
+# Tagesplan angefasst.
+
+on:
+  workflow_dispatch:
+    inputs:
+      motiv:
+        description: "Motiv (englisch, 3-6 Wörter)"
+        default: "stack of unopened envelopes"
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: instagram-assets
+          fetch-depth: 1
+          path: assets
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --omit=dev
+
+      - name: Freisteller
+        run: pipx install rembg[cli] || python3 -m pip install --user "rembg[cli]"
+
+      - name: Drei Wege zeichnen
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node bin/bild-probe.mjs "${{ inputs.motiv }}" "assets/proben/$(date -u +%Y-%m-%d-%H%M)"
+
+      - name: In den Asset-Zweig legen
+        working-directory: assets
+        run: |
+          git config user.name instagram-bot
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add proben
+          git commit -m "Titelbild-Probe $(date -u +%Y-%m-%dT%H:%M)" || exit 0
+          git push origin HEAD:instagram-assets
