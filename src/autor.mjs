@@ -290,6 +290,22 @@ function entwurfAblegen(schluessel, zweck, daten) {
   } catch (e) { console.warn(`  ! Entwurf nicht ablegbar (${e.message})`); }
 }
 
+/* Eine Berichtigung gehört in den Speicher, nicht nur in den laufenden
+   Prozess. Am 18.09. fand der Faktencheck an b2 eine Stelle, sie wurde
+   ersetzt - und die Nachprüfung scheiterte an der Obergrenze des Beitrags.
+   Der Speicher hielt aber den UNBERICHTIGTEN Entwurf: Der nächste Lauf hätte
+   dieselbe Prüfung für 0,06 $ wiederholt, dieselbe Stelle gefunden und wäre
+   an derselben Grenze gescheitert - jede Stunde, bis der Tag leer ist.
+   Deshalb wird jede Ersetzung auch auf den abgelegten Entwurf angewandt. */
+export function entwurfBerichtigen(schluessel, korrekturen = []) {
+  if (!entwurfDir || !schluessel || !korrekturen.length) return 0;
+  const gelegt = entwurfLesen(schluessel);
+  if (!gelegt?.daten) return 0;
+  const n = korrekturenAnwenden(gelegt.daten, korrekturen);
+  if (n > 0) entwurfAblegen(schluessel, gelegt.zweck, gelegt.daten);
+  return n;
+}
+
 /* Aufräumen, sonst wächst der Zweig mit jedem Tag. Drei Tage reichen: Sie
    decken den Ausfall und den Nachlauf, alles Ältere ist längst erschienen. */
 export function entwuerfeAufraeumen(tage = 3, heute = heuteIso()) {
@@ -323,7 +339,7 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
   const gelegt = entwurfLesen(schluessel);
   if (gelegt) {
     console.log(`  ↻ Entwurf aus dem Speicher vom ${gelegt.datum} (${zweck}, 0,0000 $)`);
-    return { daten: gelegt.daten, usage: null };
+    return { daten: gelegt.daten, usage: null, schluessel };
   }
   budgetPruefen({ reel: "Reel-Skript schreiben", stories: "Stories schreiben" }[zweck] || "Text schreiben (Autor)");
   let response;
@@ -345,7 +361,7 @@ async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, e
   /* Erst ablegen, dann zurückgeben: Was zwischen hier und der Prüfung schiefgeht,
      darf das Geld nicht mitnehmen. */
   entwurfAblegen(schluessel, zweck, daten);
-  return { daten, usage: response.usage };
+  return { daten, usage: response.usage, schluessel };
 }
 
 /* Hashtags: Vorschläge des Modells + Kern-Hashtags, sortiert nach gelerntem
@@ -405,10 +421,11 @@ export function hashtagsWaehlen(vorschlaege, kern, strategie = null, tag = Math.
    austauschbare Wortfolge geliefert, wird sie ersetzt und der Text noch einmal
    geprüft. Ein Faktencheck kostet ein Zehntel einer Neufassung; misslingt die
    Berichtigung, geht es den bisherigen Weg. */
-async function nachbessern(inhalt, fakten, pruefen, zweck = "faktencheck") {
+async function nachbessern(inhalt, fakten, pruefen, zweck = "faktencheck", schluessel = null) {
   if (!fakten.behebbar?.length || fakten.behebbar.length < fakten.fehler.length) return null;
   const n = korrekturenAnwenden(inhalt, fakten.behebbar);
   if (!n) return null;
+  entwurfBerichtigen(schluessel, fakten.behebbar);
   console.warn(`  ${n} Stelle(n) berichtigt statt neu geschrieben – wird erneut geprüft.`);
   if (pruefen && !pruefen(inhalt).ok) return null;
   try {
@@ -614,7 +631,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
       feedback ? `\n## Beanstandungen am vorherigen Entwurf – bitte beheben\n${feedback}\n\nVorheriger Entwurf:\n${JSON.stringify(letzter)}` : "",
       `\nErstelle jetzt den Beitrag als JSON.`,
     ].filter(Boolean).join("\n");
-    const { daten } = await strukturiert({ system: SYSTEM, user, schema: BEITRAG_SCHEMA, effort: CONFIG.ki.effortBeitrag });
+    const { daten, schluessel } = await strukturiert({ system: SYSTEM, user, schema: BEITRAG_SCHEMA, effort: CONFIG.ki.effortBeitrag });
     const beitrag = nachbereiten(daten, { format, thema, fach, klausur, strategie });
     const ergebnis = pruefeBeitrag(beitrag);
     if (ergebnis.ok) {
@@ -622,8 +639,9 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
       /* Sprachversehen (doppelte oder fehlende Wörter) werden im Text ersetzt,
          nicht neu geschrieben - das kostet keinen weiteren Aufruf. */
       korrekturenAnwenden(beitrag, fakten.korrekturen);
+      entwurfBerichtigen(schluessel, fakten.korrekturen);
       if (fakten.ok) { beitrag.faktenHinweise = fakten.hinweise; return beitrag; }
-      const berichtigt = await nachbessern(beitrag, fakten, pruefeBeitrag);
+      const berichtigt = await nachbessern(beitrag, fakten, pruefeBeitrag, "faktencheck", schluessel);
       if (berichtigt) { beitrag.faktenHinweise = berichtigt.hinweise; return beitrag; }
       ergebnis.fehler.push(...fakten.fehler.map((f) => `Fachlicher Fehler: ${f}`));
     }
@@ -971,7 +989,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       feedback ? `\n## Beanstandungen am vorherigen Entwurf – bitte beheben\n${feedback}\n\nVorheriger Entwurf:\n${JSON.stringify(letzter)}` : "",
       `\nErstelle jetzt das Reel-Skript als JSON.`,
     ].filter(Boolean).join("\n");
-    const { daten } = await strukturiert({ system: SYSTEM, user, schema: REEL_SCHEMA, zweck: "reel", effort: CONFIG.ki.effortReel });
+    const { daten, schluessel } = await strukturiert({ system: SYSTEM, user, schema: REEL_SCHEMA, zweck: "reel", effort: CONFIG.ki.effortReel });
     const szenen = daten.szenen.map((s) => {
       const o = {};
       for (const [k, v] of Object.entries(s)) if (v != null) o[k] = v;
@@ -1015,8 +1033,9 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
     if (!ergebnis.fehler.length) {
       const fakten = await faktenSicher(reel, "reel-faktencheck", { hinweis: pruefHinweis(thema) });
       korrekturenAnwenden(reel, fakten.korrekturen);
+      entwurfBerichtigen(schluessel, fakten.korrekturen);
       if (fakten.ok) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; await bildregieSicher(reel); return reel; }
-      const berichtigtesReel = await nachbessern(reel, fakten, null, "reel-faktencheck");
+      const berichtigtesReel = await nachbessern(reel, fakten, null, "reel-faktencheck", schluessel);
       if (berichtigtesReel) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; await bildregieSicher(reel); return reel; }
       ergebnis.fehler.push(...fakten.fehler.map((f) => `Fachlicher Fehler: ${f}`));
     }

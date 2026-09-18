@@ -3022,3 +3022,29 @@ test("Bildregie: Metaphern fliegen, Fachgegenstände bleiben, Ausfall kostet das
   const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
   assert.match(lauf, /"erklaerbild", "bildregie"\]/, "die Regie darf an die Rücklage der Beiträge");
 });
+
+test("Eine Berichtigung landet im abgelegten Entwurf, nicht nur im laufenden Prozess", async () => {
+  const { entwurfsspeicher, entwurfBerichtigen } = await import("../src/autor.mjs");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "entwuerfe-"));
+  try {
+    entwurfsspeicher(dir);
+    /* 18.09.: Der Faktencheck fand an b2 eine Stelle, die Ersetzung griff im
+       Prozess, die Nachprüfung scheiterte an der Obergrenze - und der Speicher
+       hielt weiter den alten Text. Jeder folgende Lauf hätte dieselbe Prüfung
+       bezahlt und wäre an derselben Stelle gescheitert. */
+    fs.writeFileSync(path.join(dir, "abc.json"), JSON.stringify({ datum: "2026-09-18", zweck: "autor", daten: { folien: [{ text: "Die Frist beträgt einen Monat." }], caption: "Frist: einen Monat." } }));
+    const n = entwurfBerichtigen("abc", [{ original: "einen Monat", ersatz: "zwei Wochen" }]);
+    assert.equal(n, 2, "beide Stellen ersetzt");
+    const neu = JSON.parse(fs.readFileSync(path.join(dir, "abc.json"), "utf8"));
+    assert.equal(neu.daten.folien[0].text, "Die Frist beträgt zwei Wochen.");
+    assert.equal(neu.daten.caption, "Frist: zwei Wochen.");
+    assert.equal(neu.zweck, "autor", "Zweck bleibt erhalten");
+    /* Ohne Treffer wird nichts geschrieben; ohne Schlüssel oder Speicher auch nicht. */
+    assert.equal(entwurfBerichtigen("abc", [{ original: "gibt es nicht", ersatz: "x" }]), 0);
+    assert.equal(entwurfBerichtigen(null, [{ original: "zwei Wochen", ersatz: "x" }]), 0);
+    assert.equal(entwurfBerichtigen("fehlt", [{ original: "zwei Wochen", ersatz: "x" }]), 0);
+  } finally {
+    entwurfsspeicher(null);
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
