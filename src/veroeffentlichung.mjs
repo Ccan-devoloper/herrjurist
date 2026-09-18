@@ -70,36 +70,100 @@ export function veroeffentlichungEintragen(eintrag, medienId, opt = {}) {
 }
 
 /**
+ * Woran laesst sich BEWEISEN, dass dieser Zustand aus einem Trockenlauf
+ * stammt? Nur mit einem solchen Beweis darf ein Slot zurueckgesetzt werden.
+ *
+ * Der Unterschied ist nicht akademisch. Zwei Zustaende sehen im Plan gleich
+ * aus - „veroeffentlicht“ ohne brauchbare Medien-ID -, haben aber
+ * entgegengesetzte sichere Behandlungen:
+ *
+ *   Trockenlauf          Der Beitrag ist NIE erschienen. Zuruecksetzen ist
+ *                        richtig; nichts zu tun hiesse, den Slot zu verlieren.
+ *   Abbruch nach dem     Der Beitrag IST erschienen, nur die Quittung ging
+ *   Senden               verloren (Runner weg, Prozess getoetet, Push
+ *                        gescheitert). Zuruecksetzen hiesse, ihn ein zweites
+ *                        Mal zu posten.
+ *
+ * Ohne Beweis gilt der zweite Fall. Ein Doppelpost ist oeffentlich und nicht
+ * zurueckzunehmen; ein blockierter Slot ist ein Eintrag im Bericht.
+ *
+ * @returns {string|null} der Nachweis, oder null wenn es keinen gibt
+ */
+export function trockenlaufNachweis(eintrag, plan = null) {
+  if (!eintrag) return null;
+  /* Die Kennung, die der Instagram-Client im Trockenlauf zurueckgibt. Sie
+     entsteht nirgends sonst. */
+  if (typeof eintrag.medienId === "string" && eintrag.medienId.trim() === PROBE_KENNUNG) {
+    return `Medien-ID „${PROBE_KENNUNG}“ - die Kennung des Trockenlaufs`;
+  }
+  /* Marke aus der ersten Fassung dieser Reparatur (18.09.). Sie wurde nur
+     dort gesetzt, wo nichts gesendet wurde. */
+  if (eintrag.probelauf) return "Probelauf-Marke aus einer frueheren Fassung";
+  /* Ein Plan, der als Ganzes aus einem Trockenlauf stammt und nichts
+     bestaetigt Veroeffentlichtes enthaelt. */
+  if (planNurAusTrockenlauf(plan)) return "der gesamte Plan stammt aus einem Trockenlauf";
+  return null;
+}
+
+/**
  * Altbestand in Ordnung bringen, Eintrag fuer Eintrag.
  *
  * Plaene von vor dieser Reparatur koennen Slots enthalten, die als
  * veroeffentlicht gelten, ohne es zu sein. Frueher wurde deshalb der ganze
  * Tagesplan verworfen und neu erzeugt. Das ist zu grob: Stehen daneben echte
- * Veroeffentlichungen, gehen deren Zustaende verloren, und der Bot schickt
- * sie ein zweites Mal hinaus.
+ * Veroeffentlichungen, gehen deren Zustaende verloren.
  *
- * Stattdessen wird genau das zurueckgesetzt, was nicht belegt ist. Ein Slot
- * ohne echte Medien-ID gilt als nicht erschienen (fail closed) und wird
- * wieder faellig; alle uebrigen bleiben unangetastet.
+ * Jetzt entscheidet der Nachweis:
  *
- * @returns {Array<{slot: string, grund: string}>} was bereinigt wurde
+ *   mit Nachweis    -> zuruecksetzen, der Slot wird wieder faellig
+ *   ohne Nachweis   -> BLOCKIEREN. Der Status bleibt „veroeffentlicht“, damit
+ *                      der Slot nicht erneut faellig wird; ein Marker sagt,
+ *                      dass die Veroeffentlichung unbestaetigt ist, und
+ *                      veroeffentlichtBestaetigt() bleibt false, damit sich
+ *                      auch nichts darauf stuetzt. Fail closed in beide
+ *                      Richtungen: kein Doppelpost, kein stiller Beleg.
+ *
+ * @returns {{bereinigt: Array, unklar: Array}}
  */
-export function planBereinigen(plan) {
+export function planBereinigen(plan, opt = {}) {
+  const jetzt = opt.jetzt || new Date().toISOString();
   const bereinigt = [];
+  const unklar = [];
   for (const e of [...(plan?.beitraege || []), ...(plan?.stories || [])]) {
     if (!e) continue;
-    /* Feld aus der ersten Fassung dieser Reparatur - es gehoert nicht in den
-       Plan und wird kommentarlos entfernt. */
-    if (e.probelauf) delete e.probelauf;
-    if (e.status === "veroeffentlicht" && !echteMedienId(e.medienId)) {
-      bereinigt.push({ slot: e.slot, grund: `galt als veroeffentlicht, Medien-ID „${e.medienId ?? "fehlt"}“ ist keine` });
+    if (e.status !== "veroeffentlicht" || echteMedienId(e.medienId)) {
+      /* Kein Widerspruch: Nur das Feld aus der ersten Fassung raeumen wir weg,
+         es gehoert nicht in den Plan. */
+      if (e.probelauf) delete e.probelauf;
+      continue;
+    }
+    const nachweis = trockenlaufNachweis(e, plan);
+    if (nachweis) {
+      bereinigt.push({ slot: e.slot, grund: nachweis });
       delete e.medienId;
       delete e.veroeffentlicht;
       delete e.kanaele;
+      delete e.probelauf;
+      delete e.veroeffentlichungUnklar;
       e.status = "geplant";
+      continue;
     }
+    /* Kein Nachweis: Der Slot bleibt gesperrt, bis ein Mensch oder eine
+       spaetere Reconciliation ihn aufloest. */
+    const grund = `als veroeffentlicht markiert, Medien-ID „${e.medienId ?? "fehlt"}“ ist keine - und kein Nachweis, dass es ein Trockenlauf war`;
+    if (!e.veroeffentlichungUnklar) e.veroeffentlichungUnklar = { seit: jetzt, medienId: e.medienId ?? null, grund };
+    unklar.push({ slot: e.slot, grund });
   }
-  return bereinigt;
+  return { bereinigt, unklar };
+}
+
+/**
+ * Ist dieser Eintrag als unbestaetigt gesperrt? Solche Slots erscheinen im
+ * Bericht und warten auf eine Aufloesung - sie werden weder erneut
+ * veroeffentlicht noch als Beleg verwendet.
+ */
+export function veroeffentlichungUnklar(eintrag) {
+  return !!eintrag?.veroeffentlichungUnklar;
 }
 
 /**

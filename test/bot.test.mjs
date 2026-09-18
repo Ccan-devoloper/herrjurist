@@ -3588,8 +3588,9 @@ test("Ein Trockenlauf mitten am Tag kostet keinen veröffentlichten Slot", async
   /* 2. Der Livelauf danach: Der Plan wird nicht neu erzeugt … */
   assert.equal(planNurAusTrockenlauf(plan), false,
     "ein Plan mit echten Veröffentlichungen wird nie verworfen");
-  const bereinigt = planBereinigen(plan);
+  const { bereinigt, unklar } = planBereinigen(plan);
   assert.deepEqual(bereinigt, [], "es gibt nichts zu bereinigen");
+  assert.deepEqual(unklar, [], "und nichts Unklares");
 
   /* … b1 und b2 bleiben exakt veröffentlicht … */
   assert.equal(veroeffentlichtBestaetigt(plan.beitraege[0]), true);
@@ -3628,8 +3629,9 @@ test("Altbestand wird Eintrag für Eintrag bereinigt, nicht der ganze Tag verwor
     ],
   };
 
-  const bereinigt = planBereinigen(plan);
-  assert.deepEqual(bereinigt.map((b) => b.slot), ["b2", "s2"], "nur die unbelegten Slots");
+  const { bereinigt, unklar } = planBereinigen(plan);
+  assert.deepEqual(bereinigt.map((b) => b.slot), ["b2", "s2"], "nur die nachweislich trockenen Slots");
+  assert.deepEqual(unklar, [], "beide tragen die Kennung „trocken“ – kein Zweifelsfall");
 
   /* Die echten bleiben unangetastet - das ist der Punkt. */
   assert.equal(plan.beitraege[0].medienId, "18073311611740667");
@@ -3645,7 +3647,7 @@ test("Altbestand wird Eintrag für Eintrag bereinigt, nicht der ganze Tag verwor
   assert.equal(plan.stories[1].probelauf, undefined, "das Feld aus der ersten Fassung fliegt raus");
 
   /* Ein zweiter Durchgang findet nichts mehr. */
-  assert.deepEqual(planBereinigen(plan), [], "die Bereinigung ist idempotent");
+  assert.deepEqual(planBereinigen(plan).bereinigt, [], "die Bereinigung ist idempotent");
 
   /* Ein Plan, der KOMPLETT aus einem Trockenlauf stammt, darf neu erzeugt
      werden – dabei geht nichts verloren. */
@@ -3697,6 +3699,103 @@ test("Der Tageslauf schreibt Ledger, Teaser und Protokoll nach derselben Regel",
     "ein Fehler beim Sichern darf den ursprünglichen Fehler nicht verdecken");
   assert.match(quelle, /await zustandSichern\(`Zustand \$\{datum\}`\);/,
     "der reguläre Abschluss ruft die Sicherung auf");
+});
+
+test("Ohne Nachweis wird ein unklarer Publish-Zustand gesperrt, nicht zurückgesetzt", async () => {
+  /* Zwei Zustände sehen im Plan gleich aus – „veröffentlicht“ ohne brauchbare
+     Medien-ID –, brauchen aber entgegengesetzte Behandlungen:
+
+       Trockenlauf            nie erschienen  → zurücksetzen
+       Abbruch nach dem Post  erschienen, Quittung weg → sperren
+
+     Ohne Beweis gilt der zweite Fall: Ein Doppelpost ist öffentlich und nicht
+     zurückzunehmen, ein gesperrter Slot ist ein Eintrag im Bericht. */
+  const { planBereinigen, trockenlaufNachweis, veroeffentlichtBestaetigt, veroeffentlichungUnklar, planNurAusTrockenlauf }
+    = await import("../src/veroeffentlichung.mjs");
+
+  const eintrag = (extra) => ({ slot: "b1", zeit: "08:30", status: "veroeffentlicht", ...extra });
+
+  /* 1. medienId „trocken“ – die Kennung entsteht nirgends sonst. */
+  const p1 = { beitraege: [eintrag({ medienId: "trocken", veroeffentlicht: "2026-09-18T16:04:59.205Z", kanaele: {} })], stories: [] };
+  const r1 = planBereinigen(p1);
+  assert.deepEqual(r1.bereinigt.map((b) => b.slot), ["b1"]);
+  assert.deepEqual(r1.unklar, []);
+  assert.equal(p1.beitraege[0].status, "geplant", "der Trockenlauf-Slot wird wieder fällig");
+  assert.equal(p1.beitraege[0].medienId, undefined);
+  assert.equal(p1.beitraege[0].veroeffentlicht, undefined);
+  assert.equal(p1.beitraege[0].kanaele, undefined);
+  assert.match(r1.bereinigt[0].grund, /Kennung des Trockenlaufs/);
+
+  /* 2. Die Probelauf-Marke aus der ersten Fassung der Reparatur. */
+  const p2 = { beitraege: [], stories: [eintrag({ slot: "s2", medienId: null, probelauf: { kennung: "trocken", zeit: "2026-09-18T16:05:02.126Z" } })] };
+  const r2 = planBereinigen(p2);
+  assert.deepEqual(r2.bereinigt.map((b) => b.slot), ["s2"]);
+  assert.equal(p2.stories[0].status, "geplant");
+  assert.equal(p2.stories[0].probelauf, undefined, "die Marke selbst fliegt raus");
+  assert.match(r2.bereinigt[0].grund, /Probelauf-Marke/);
+
+  /* 3. Ein Plan, der als Ganzes aus einem Trockenlauf stammt. */
+  const p3 = { trocken: true, beitraege: [eintrag({ medienId: null })], stories: [] };
+  assert.equal(planNurAusTrockenlauf(p3), true, "nichts Echtes darin");
+  const r3 = planBereinigen(p3);
+  assert.deepEqual(r3.bereinigt.map((b) => b.slot), ["b1"]);
+  assert.deepEqual(r3.unklar, []);
+  assert.equal(p3.beitraege[0].status, "geplant");
+
+  /* 4. Medien-ID fehlt, KEINE Trockenlauf-Evidenz: Der Beitrag kann draußen
+        sein und die Quittung verloren gegangen. Nicht zurücksetzen. */
+  const p4 = { beitraege: [eintrag({ veroeffentlicht: "2026-09-18T12:30:00.000Z" })], stories: [] };
+  assert.equal(trockenlaufNachweis(p4.beitraege[0], p4), null, "es gibt keinen Nachweis");
+  const r4 = planBereinigen(p4, { jetzt: "2026-09-18T21:00:00.000Z" });
+  assert.deepEqual(r4.bereinigt, [], "nichts wird zurückgesetzt");
+  assert.deepEqual(r4.unklar.map((u) => u.slot), ["b1"]);
+  assert.equal(p4.beitraege[0].status, "veroeffentlicht",
+    "der Status bleibt – sonst würde der Slot wieder fällig und der Beitrag ein zweites Mal gepostet");
+  assert.equal(veroeffentlichungUnklar(p4.beitraege[0]), true, "als unklar gekennzeichnet");
+  assert.equal(p4.beitraege[0].veroeffentlichungUnklar.seit, "2026-09-18T21:00:00.000Z");
+  assert.equal(veroeffentlichtBestaetigt(p4.beitraege[0]), false,
+    "und trotzdem kein Beleg: nichts darf sich darauf stützen");
+
+  /* Der Slot ist damit weder fällig noch bestätigt – genau das ist fail closed. */
+  const faellig = (e) => e.status !== "veroeffentlicht";
+  assert.equal(faellig(p4.beitraege[0]), false, "wird nicht erneut veröffentlicht");
+
+  /* 5. Eine andere unbrauchbare ID, ebenfalls ohne Evidenz. */
+  for (const kaputt of ["abc123", "", "   ", "17e9", "post-42"]) {
+    const p5 = { beitraege: [eintrag({ medienId: kaputt })], stories: [] };
+    const r5 = planBereinigen(p5);
+    assert.deepEqual(r5.bereinigt, [], `„${kaputt}“ ist kein Trockenlauf-Nachweis`);
+    assert.deepEqual(r5.unklar.map((u) => u.slot), ["b1"]);
+    assert.equal(p5.beitraege[0].status, "veroeffentlicht");
+    assert.equal(veroeffentlichtBestaetigt(p5.beitraege[0]), false);
+  }
+
+  /* 6. Eine echte Veröffentlichung bleibt vollständig unverändert. */
+  const echt = { slot: "b2", status: "veroeffentlicht", medienId: "17908485354484188", veroeffentlicht: "2026-09-18T16:15:00.000Z", kanaele: { threads: "x" } };
+  const p6 = { beitraege: [JSON.parse(JSON.stringify(echt))], stories: [] };
+  const r6 = planBereinigen(p6);
+  assert.deepEqual(r6.bereinigt, []);
+  assert.deepEqual(r6.unklar, []);
+  assert.deepEqual(p6.beitraege[0], echt, "kein Feld angefasst");
+  assert.equal(veroeffentlichtBestaetigt(p6.beitraege[0]), true);
+
+  /* 7. Ein zweiter Durchgang ist idempotent – auch über beide Fälle hinweg. */
+  const p7 = {
+    beitraege: [
+      { slot: "b1", status: "veroeffentlicht", medienId: "18073311611740667" },
+      { slot: "b2", status: "veroeffentlicht", medienId: "trocken" },
+      { slot: "b3", status: "veroeffentlicht" },
+    ],
+    stories: [],
+  };
+  const erst = planBereinigen(p7, { jetzt: "2026-09-18T21:00:00.000Z" });
+  assert.deepEqual(erst.bereinigt.map((b) => b.slot), ["b2"]);
+  assert.deepEqual(erst.unklar.map((u) => u.slot), ["b3"]);
+  const nachher = JSON.parse(JSON.stringify(p7));
+  const zweit = planBereinigen(p7, { jetzt: "2026-09-19T05:35:00.000Z" });
+  assert.deepEqual(zweit.bereinigt, [], "nichts mehr zurückzusetzen");
+  assert.deepEqual(zweit.unklar.map((u) => u.slot), ["b3"], "der unklare Slot bleibt gemeldet");
+  assert.deepEqual(p7, nachher, "aber der Plan ändert sich nicht mehr – auch der Zeitstempel nicht");
 });
 
 test("Die Zustandssicherung verbucht Kosten erst nach dem Schreiben und vertraut dem Push nicht blind", async () => {

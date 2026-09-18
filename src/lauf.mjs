@@ -280,9 +280,17 @@ async function main() {
     log("Tagesplan stammt vollständig aus einem Trockenlauf und enthält nichts Veröffentlichtes – wird neu erzeugt.");
     plan = null;
   } else if (plan && !trocken) {
-    const bereinigt = planBereinigen(plan);
-    for (const b of bereinigt) log(`  ! Slot ${b.slot} ${b.grund} – gilt wieder als geplant.`);
-    if (bereinigt.length) { delete plan.trocken; planSpeichern(hosting, plan); }
+    const { bereinigt, unklar } = planBereinigen(plan);
+    for (const b of bereinigt) log(`  ! Slot ${b.slot}: ${b.grund} – gilt wieder als geplant.`);
+    /* Ohne Nachweis wird nichts zurückgesetzt: Der Slot könnte erschienen
+       sein, und ein zweiter Post ließe sich nicht zurücknehmen. Er bleibt
+       gesperrt und steht im Bericht, bis jemand ihn auflöst. */
+    for (const u of unklar) {
+      console.warn(`  ! Slot ${u.slot}: ${u.grund} – bleibt gesperrt, wird NICHT erneut veröffentlicht.`);
+      const eintrag = [...plan.beitraege, ...plan.stories].find((e) => e.slot === u.slot);
+      if (eintrag && !eintrag.fehler) eintrag.fehler = `${new Date().toISOString()} Veröffentlichung unbestätigt: ${u.grund}`;
+    }
+    if (bereinigt.length || unklar.length) { delete plan.trocken; planSpeichern(hosting, plan); }
   }
   if (!plan) {
     const p = tagesplan(datum, ledger, pool, strategie);
