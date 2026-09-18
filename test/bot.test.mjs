@@ -3187,3 +3187,67 @@ test("Kein Lauf endet, ohne zu sichern, was er bezahlt hat", async () => {
   assert.match(quelle, /await zustandSichern\(`Zustand \$\{datum\}`\);/,
     "der reguläre Abschluss ruft die Sicherung auf");
 });
+
+test("Safety 0a: Quiz-Invarianten halten Frage und Antwort zusammen", async () => {
+  const { quizBefunde, QUIZ_OPTIONEN } = await import("../src/pruefung.mjs");
+  const frage = (o, extra = {}) => ({ slot: "s3", art: "frage", pairId: "t1", optionen: o, richtig: null, ...extra });
+  const antwort = (o, r, extra = {}) => ({ slot: "s4", art: "antwort", pairId: "t1", optionen: o, richtig: r, ...extra });
+  const ABC = ["Wirtschaftsgut", "Rückstellung", "Merkposten"];
+
+  assert.equal(QUIZ_OPTIONEN, 3);
+
+  /* Der Index muss in die Liste zeigen - strukturell, kostenlos. */
+  assert.equal(quizBefunde([antwort(ABC, -1)]).length, 1, "negativer Index");
+  assert.equal(quizBefunde([antwort(ABC, 3)]).length, 1, "Index hinter der letzten Option");
+  assert.equal(quizBefunde([antwort(ABC, 1.5)]).length, 1, "kein ganzzahliger Index");
+  assert.equal(quizBefunde([antwort(ABC, null)]).length, 1, "eine Antwort ohne Markierung ist keine Antwort");
+  for (const r of [0, 1, 2]) assert.deepEqual(quizBefunde([antwort(ABC, r)]), [], `Index ${r} ist zulässig`);
+
+  /* Drei Optionen, keine leer. */
+  assert.equal(quizBefunde([antwort(["A", "B"], 1)]).length, 1, "zwei Optionen");
+  assert.equal(quizBefunde([antwort(["A", "  ", "C"], 1)]).length, 1, "leere Option");
+
+  /* Das Paar: gleiche Folge, gleiche Reihenfolge. */
+  assert.deepEqual(quizBefunde([frage(ABC), antwort(ABC, 1)]), [], "identische Folge ist in Ordnung");
+
+  /* Der reale Vorfall vom 16.09.2026 (Examens Campus): Nach dem isolierten
+     Neuschreiben trug die Frage A/B/C, die bereits bestehende Antwort
+     A/C/B mit richtig=1. Die Frage sagte damit inhaltlich Merkposten, die
+     Antwort markierte Rückstellung. */
+  const sep16 = quizBefunde([
+    frage(["Wirtschaftsgut", "Rückstellung", "Merkposten"]),
+    antwort(["Wirtschaftsgut", "Merkposten", "Rückstellung"], 1),
+  ]);
+  assert.equal(sep16.length, 1, "vertauschte Optionen müssen auffallen");
+  assert.match(sep16[0], /Platz 2/, "der Befund benennt die Stelle");
+  assert.match(sep16[0], /\[s4\]/, "der Befund benennt den Slot");
+
+  /* Zwei Markierungen, die sich widersprechen. */
+  const doppelt = quizBefunde([frage(ABC, { richtig: 2 }), antwort(ABC, 1)]);
+  assert.equal(doppelt.length, 1, "Frage und Antwort dürfen nicht verschiedene Optionen markieren");
+
+  /* Ohne gemeinsamen Schlüssel wird nichts zusammengerechnet. */
+  assert.deepEqual(quizBefunde([frage(ABC, { pairId: "t1" }), antwort(["X", "Y", "Z"], 0, { pairId: "t2" })]), [],
+    "verschiedene Themen sind kein Paar");
+
+  /* Andere Story-Arten bleiben unberührt. */
+  assert.deepEqual(quizBefunde([{ slot: "s7", art: "merksatz", text: "x" }]), []);
+});
+
+test("Safety 0a: keine Antwort vor ihrer Frage", async () => {
+  const { quizReihenfolge } = await import("../src/pruefung.mjs");
+  const antwort = { slot: "s5", art: "antwort", themaId: "t1" };
+  const frage = (status, extra = {}) => ({ slot: "s4", art: "frage", themaId: "t1", status, ...extra });
+
+  assert.equal(quizReihenfolge(antwort, [frage("veroeffentlicht"), antwort]).status, "frei");
+  assert.equal(quizReihenfolge(antwort, [frage("geplant"), antwort]).status, "warten",
+    "solange die Frage aussteht, wartet die Antwort");
+  assert.equal(quizReihenfolge(antwort, [frage("uebersprungen"), antwort]).status, "verfallen",
+    "eine übersprungene Frage nimmt ihre Antwort mit");
+  assert.equal(quizReihenfolge(antwort, [frage("geplant", { fehler: "2026-09-18 kaputt" }), antwort]).status, "verfallen",
+    "eine endgültig gescheiterte Frage nimmt ihre Antwort mit");
+  assert.equal(quizReihenfolge(antwort, [antwort]).status, "frei",
+    "ohne zugehörige Frage im Plan gilt die alte Regel");
+  /* Die Uhrzeit entscheidet nicht - der Zustand tut es. */
+  assert.equal(quizReihenfolge(antwort, [{ ...frage("geplant"), zeit: "06:00" }, antwort]).status, "warten");
+});

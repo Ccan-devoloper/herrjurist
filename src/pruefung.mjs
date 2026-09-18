@@ -426,6 +426,102 @@ export function fallnamenOhneSachverhalt(beitrag) {
   return namen.length >= 2 || handlungen >= 2 ? namen : [];
 }
 
+/* --- Quiz-Invarianten (Safety 0a) ---------------------------------------
+   Anlass ist ein echter Vorfall vom 16.09.2026 auf beiden Kanaelen: Eine
+   Frage-Story und ihre Antwort-Story wurden getrennt neu geschrieben. Danach
+   zeigte die Frage die Optionen A Wirtschaftsgut / B Rueckstellung /
+   C Merkposten, die bereits bestehende Antwort trug dieselben Optionen in
+   anderer Reihenfolge und markierte Index 1. Inhaltlich sagte die Frage damit
+   C, die Antwort markierte B. Beim Schwesterkanal erschien die Antwort
+   ausserdem einige Minuten VOR der endgueltigen Frage.
+
+   Die Optionsfolge ist Semantik, nicht Darstellung: [A,B,C] ist nicht [A,C,B].
+   Deshalb wird elementweise verglichen, nicht als Menge. Und der Index wird
+   strukturell geprueft - das kostet nichts und faengt genau den Fall, in dem
+   ein formal gueltiger Index auf die falsche Option zeigt, weil sich die
+   Reihenfolge darunter geaendert hat.
+
+   Diese Pruefung ist deterministisch. Sie ersetzt nicht die fachliche Frage,
+   ob die markierte Option auch die richtige ist - dafuer muss der Faktencheck
+   die Markierung ausdruecklich sehen (Safety 0b). */
+export const QUIZ_OPTIONEN = 3;
+const QUIZ_ARTEN = ["frage", "antwort"];
+
+/** Schluessel, unter dem Frage und Antwort zusammengehoeren. */
+export const paarSchluessel = (s) => s?.pairId || s?.themaId || null;
+
+/**
+ * Deterministische Befunde zu Quiz-Stories. Leeres Array heisst: in Ordnung.
+ * @param {object[]} stories - Story-Objekte, gern gemischt mit anderen Arten.
+ * @returns {string[]} Befunde im Klartext, je mit Slot in eckigen Klammern.
+ */
+export function quizBefunde(stories = []) {
+  const fehler = [];
+  const quiz = (stories || []).filter((s) => s && QUIZ_ARTEN.includes(s.art));
+  for (const s of quiz) {
+    const wo = `[${s.slot || s.art}]`;
+    const opt = s.optionen;
+    if (!Array.isArray(opt) || opt.length !== QUIZ_OPTIONEN) {
+      fehler.push(`${wo} Quiz braucht genau ${QUIZ_OPTIONEN} Optionen (gefunden: ${Array.isArray(opt) ? opt.length : "keine"}).`);
+      continue;
+    }
+    if (opt.some((o) => typeof o !== "string" || !o.trim())) {
+      fehler.push(`${wo} Quiz enthaelt eine leere Option.`);
+      continue;
+    }
+    /* Die Antwort MUSS markieren, die Frage darf. Ein Index ausserhalb der
+       Liste ist immer ein Fehler - auch dann, wenn er nur um eins daneben
+       liegt. */
+    const markiert = s.richtig;
+    if (s.art === "antwort" || markiert != null) {
+      if (!Number.isInteger(markiert) || markiert < 0 || markiert >= opt.length) {
+        fehler.push(`${wo} Markierte Option „${markiert}" liegt ausserhalb der ${opt.length} Optionen.`);
+      }
+    }
+  }
+  /* Paarpruefung: gleiche Optionen in gleicher Reihenfolge, gleiche Markierung. */
+  const paare = new Map();
+  for (const s of quiz) {
+    const k = paarSchluessel(s);
+    if (!k) continue;
+    const eintrag = paare.get(k) || {};
+    eintrag[s.art] = s;
+    paare.set(k, eintrag);
+  }
+  for (const [, { frage, antwort }] of paare) {
+    if (!frage || !antwort) continue;
+    const a = frage.optionen, b = antwort.optionen;
+    if (!Array.isArray(a) || !Array.isArray(b) || a.length !== b.length) continue;   // schon oben gemeldet
+    const abweichung = a.findIndex((x, i) => x !== b[i]);
+    if (abweichung >= 0) {
+      fehler.push(`[${antwort.slot}] Antwort und Frage [${frage.slot}] tragen nicht dieselbe Optionsfolge: Platz ${abweichung + 1} ist „${b[abweichung]}" statt „${a[abweichung]}". Die Reihenfolge ist Teil der Aussage.`);
+      continue;
+    }
+    if (frage.richtig != null && antwort.richtig != null && frage.richtig !== antwort.richtig) {
+      fehler.push(`[${antwort.slot}] Frage [${frage.slot}] markiert Option ${frage.richtig + 1}, die Antwort Option ${antwort.richtig + 1}.`);
+    }
+  }
+  return fehler;
+}
+
+/**
+ * Darf diese Antwort-Story jetzt erscheinen? Eine Antwort ohne ihre Frage ist
+ * fuer die Lesenden sinnlos; am 16.09. ging sie beim Schwesterkanal sogar
+ * zuerst raus. Geplante Uhrzeiten sind keine Abhaengigkeit - der Zustand ist
+ * es.
+ * @returns {{status:"frei"|"warten"|"verfallen", frage:object|null, grund:string}}
+ */
+export function quizReihenfolge(antwortEintrag, planStories = []) {
+  const k = paarSchluessel(antwortEintrag);
+  const frage = (planStories || []).find((s) => s.art === "frage" && paarSchluessel(s) === k && k != null) || null;
+  if (!frage) return { status: "frei", frage: null, grund: "keine zugehoerige Frage im Plan" };
+  if (frage.status === "veroeffentlicht") return { status: "frei", frage, grund: "Frage ist veroeffentlicht" };
+  if (frage.fehler || frage.status === "uebersprungen") {
+    return { status: "verfallen", frage, grund: `Frage ${frage.slot} erscheint heute nicht` };
+  }
+  return { status: "warten", frage, grund: `Frage ${frage.slot} ist noch nicht veroeffentlicht` };
+}
+
 export function pruefeBeitrag(beitrag, opt = {}) {
   const fehler = [];
   const k = opt.korpus || korpus();

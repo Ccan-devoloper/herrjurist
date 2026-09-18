@@ -22,7 +22,7 @@ import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool, KLAUSUREN } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
-import { pruefeBeitrag, benutzteFirmen, namenSperren } from "./pruefung.mjs";
+import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizReihenfolge } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
@@ -796,6 +796,38 @@ async function main() {
           else { log(`Story ${eintrag.slot} beanstandet: ${erneut.fehler.join("; ")} – übersprungen.`); eintrag.status = "uebersprungen"; continue; }
         }
       }
+      /* Safety 0a: Eine Antwort erscheint nie vor ihrer Frage, und nur mit
+         ihr zusammen. Geplante Uhrzeiten sind keine Abhaengigkeit - am 16.09.
+         stand die Antwort beim Schwesterkanal Minuten VOR der endgueltigen
+         Frage im Kanal. Faellt die Frage endgueltig aus, faellt die Antwort
+         mit ihr; eine Antwort ohne Frage ist fuer die Lesenden nichts wert.
+
+         Direkt davor noch einmal die Paarpruefung auf dem, was wirklich
+         veroeffentlicht wird: Zwischen Schreiben und Senden kann ein
+         einzelner Slot neu geschrieben worden sein. */
+      if (eintrag.art === "antwort") {
+        const ordnung = quizReihenfolge(eintrag, plan.stories);
+        if (ordnung.status === "warten") { log(`Story ${eintrag.slot}: ${ordnung.grund} - spaeter.`); continue; }
+        if (ordnung.status === "verfallen") {
+          log(`Story ${eintrag.slot}: ${ordnung.grund} - die Antwort entfaellt mit ihr.`);
+          eintrag.status = "uebersprungen"; continue;
+        }
+        if (ordnung.frage) {
+          const frageText = hosting.jsonLesen(`inhalte/${datum}-${ordnung.frage.slot}.json`, null);
+          const paarBefunde = quizBefunde([frageText, story].filter(Boolean));
+          if (paarBefunde.length) {
+            log(`Story ${eintrag.slot} passt nicht mehr zur Frage ${ordnung.frage.slot}: ${paarBefunde.join(" · ")} - uebersprungen.`);
+            eintrag.status = "uebersprungen"; continue;
+          }
+        }
+      } else if (eintrag.art === "frage") {
+        const eigene = quizBefunde([story]);
+        if (eigene.length) {
+          log(`Story ${eintrag.slot} beanstandet: ${eigene.join(" · ")} - uebersprungen.`);
+          eintrag.status = "uebersprungen"; continue;
+        }
+      }
+
       /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
          Tipp); der Teaser bringt das Bild des Beitrags schon mit. */
       await motivBesorgen(story, "Story-Motiv", { ki: false });
