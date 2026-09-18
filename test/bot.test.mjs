@@ -3336,3 +3336,27 @@ test("Safety 0b: der Prüfer sieht, welche Option als richtig markiert ist", asy
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   assert.match(autor, /Was unter \[QuizPair\] steht, ist EIN Gegenstand/);
 });
+
+test("Safety 0: ein Quizslot wird nie allein neu geschrieben", async () => {
+  /* 16.09.: Beanstandet war nur eine der beiden Kacheln, neu geschrieben wurde
+     auch nur sie - und passte danach nicht mehr zur anderen. Der zweite
+     Versuch muss den Partner mitnehmen, solange er noch nicht draußen ist,
+     und ihn als unveränderlich behandeln, wenn er schon draußen ist. */
+  const quelle = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+
+  assert.match(quelle, /const partnerVon = \(slot\) => \{/, "der Neuversuch kennt den Partner eines Quizslots nicht");
+  assert.match(quelle, /if \(partner\.status !== "veroeffentlicht"\) \{ slots\.add\(partner\.slot\); continue; \}/,
+    "ein noch nicht veröffentlichter Partner muss mit neu geschrieben werden");
+  assert.match(quelle, /ist bereits veröffentlicht und darf nicht verändert werden/,
+    "ein veröffentlichter Partner muss als unveränderlich vorgegeben werden");
+  assert.match(quelle, /Übernimm exakt diese Optionen in exakt dieser Reihenfolge/,
+    "die Optionsfolge des veröffentlichten Partners muss vorgegeben werden");
+  assert.match(quelle, /const zweite = await storiesSchreiben\(auftrag\(mitPartner\), datum, hinweis\);/,
+    "der zweite Versuch schreibt weiterhin nur die beanstandeten Slots");
+
+  /* Und was dabei herauskommt, läuft durch dieselbe Paarprüfung: Die
+     Invarianten greifen in storiesSchreiben für die ganze Lieferung. */
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  assert.match(autor, /for \(const f of quizBefunde\(liste\)\)/,
+    "die Quiz-Invarianten müssen über die ganze Lieferung laufen");
+});

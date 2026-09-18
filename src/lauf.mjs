@@ -647,9 +647,38 @@ async function main() {
         const alleBefunde = (s) => [...(s.beanstandet || []), ...(s.beanstandetFachlich || [])];
         const strittig = neu.filter((s) => alleBefunde(s).length);
         if (strittig.length) try {
-          const hinweis = `Die folgenden Entwürfe wurden abgelehnt – formuliere sie vollständig neu:\n${strittig.map((s) => `- Slot ${s.slot}: ${alleBefunde(s).join("; ")}`).join("\n")}`;
-          log(`  ${strittig.length} Story-Entwürfe beanstandet – zweiter Versuch`);
-          const zweite = await storiesSchreiben(auftrag(offen.filter((o) => strittig.some((s) => s.slot === o.slot))), datum, hinweis);
+          /* Safety 0, Abschnitt 10: Ein Quizslot wird nie allein neu
+             geschrieben. Genau das ist am 16.09. passiert - nur die Antwort
+             wurde neu erzeugt, und sie passte danach nicht mehr zu ihrer
+             Frage. Ist der Partner noch nicht draussen, wird er mit neu
+             geschrieben; ist er schon veroeffentlicht, ist er unveraenderlich
+             und gibt die Optionen vor. */
+          const planStory = (slot) => plan.stories.find((x) => x.slot === slot);
+          const partnerVon = (slot) => {
+            const e = planStory(slot);
+            if (!e || (e.art !== "frage" && e.art !== "antwort")) return null;
+            const gegen = e.art === "frage" ? "antwort" : "frage";
+            return plan.stories.find((x) => x.art === gegen && x.themaId && x.themaId === e.themaId) || null;
+          };
+          const slots = new Set(strittig.map((s) => s.slot));
+          const festeOptionen = [];
+          for (const s of strittig) {
+            const partner = partnerVon(s.slot);
+            if (!partner) continue;
+            if (partner.status !== "veroeffentlicht") { slots.add(partner.slot); continue; }
+            const fest = geschrieben.get(partner.slot) || hosting.jsonLesen(`inhalte/${datum}-${partner.slot}.json`, null);
+            if (fest?.optionen?.length) {
+              festeOptionen.push(`Slot ${s.slot}: Die zugehörige ${partner.art === "frage" ? "Frage" : "Antwort"} (Slot ${partner.slot}) ist bereits veröffentlicht und darf nicht verändert werden. Übernimm exakt diese Optionen in exakt dieser Reihenfolge: ${fest.optionen.map((o, i) => `${String.fromCharCode(65 + i)}) ${o}`).join(" | ")}.`);
+            }
+          }
+          const mitPartner = offen.filter((o) => slots.has(o.slot));
+          const hinweis = [
+            `Die folgenden Entwürfe wurden abgelehnt – formuliere sie vollständig neu:\n${strittig.map((s) => `- Slot ${s.slot}: ${alleBefunde(s).join("; ")}`).join("\n")}`,
+            mitPartner.length > strittig.length ? "Frage und Antwort eines Quiz gehören zusammen: Beide Kacheln werden gemeinsam neu geschrieben und müssen dieselben Optionen in derselben Reihenfolge tragen." : "",
+            ...festeOptionen,
+          ].filter(Boolean).join("\n\n");
+          log(`  ${strittig.length} Story-Entwürfe beanstandet – zweiter Versuch${mitPartner.length > strittig.length ? ` (mit ${mitPartner.length - strittig.length} Partner-Kachel)` : ""}`);
+          const zweite = await storiesSchreiben(auftrag(mitPartner), datum, hinweis);
           for (const s of zweite) {
             const vorher = geschrieben.get(s.slot);
             if (alleBefunde(s).length && vorher && !alleBefunde(vorher).length) continue;
