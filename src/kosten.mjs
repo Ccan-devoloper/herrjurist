@@ -50,6 +50,12 @@ export function budgetSetzen(opt = {}) {
      wieder mit der Tabelle rechnen, wenn der Lauf um 19:43 schon weiß, was
      ein Reel heute tatsächlich kostet. */
   Object.assign(GEMESSEN, opt.gemessen || {});
+  /* Der teuerste gemessene Aufruf je Zweck aus den letzten Tagen. Er gilt nur,
+     solange der heutige Lauf fuer diesen Zweck noch nichts gemessen hat: Wird
+     ein Zweck heute billiger, rechnet der Rest des Tages sofort mit dem neuen
+     Preis - sonst blockierte ein teurer Tag die drei folgenden. */
+  for (const k of Object.keys(VORTAG)) delete VORTAG[k];
+  Object.assign(VORTAG, opt.vortag || {});
   limitUsd = opt.limitUsd ?? Infinity;
   vorbelastung = opt.bisher ?? 0;
   antwortLimitUsd = opt.antwortLimitUsd ?? Infinity;
@@ -155,6 +161,30 @@ ERWARTET.kommentare = 0.05;
 ERWARTET.nachrichten = 0.05;
 const STANDARD = 0.05;
 /* Längste Übereinstimmung gewinnt: „reel-faktencheck“ enthält „reel“. */
+/* Was die letzten Tage gemessen haben. Bis zum 18.09. startete jeder Tag mit
+   der Tabelle oben - auch dann, wenn die Messungen sie laengst widerlegt
+   hatten. Der Faktencheck steht dort mit 0,01 $; gemessen kostete er am
+   16.09. 0,050 $, am 17.09. 0,035 $, am 18.09. 0,072 $. Der Deckel rechnete
+   also mit einem Bruchteil des wirklichen Preises, legte zu wenig zurueck und
+   riss mitten am Tag. Schlimmer noch: Weil die Tabelle die Schaetzung war,
+   bestaetigte sie jede Nachfrage, ob das Budget reicht - die Zahl, mit der
+   geplant wurde, und die Zahl, gegen die geprueft wurde, waren dieselbe
+   falsche.
+
+   Die Erfahrung der Vortage fuellt jetzt die Luecke, bis der erste Aufruf des
+   Tages seinen eigenen Messwert liefert. */
+const VORTAG = {};
+export function vortagsSchaetzung(tage = {}, heute = "", fenster = 3) {
+  const tabelle = {};
+  for (const d of Object.keys(tage).filter((x) => x !== heute).sort().slice(-fenster)) {
+    for (const [zweck, wert] of Object.entries(tage[d]?.messungen || {})) {
+      const v = Number(wert) || 0;
+      if (v > 0) tabelle[zweck] = Math.max(tabelle[zweck] || 0, v);
+    }
+  }
+  return tabelle;
+}
+
 const schluessel = (zweck) => Object.keys(ERWARTET).sort((a, b) => b.length - a.length).find((n) => String(zweck).toLowerCase().includes(n)) || null;
 
 /* Was ein Zweck in diesem Lauf tatsächlich gekostet hat (teuerster Aufruf).
@@ -168,7 +198,14 @@ const schluessel = (zweck) => Object.keys(ERWARTET).sort((a, b) => b.length - a.
    damit lag der Deckel rechnerisch 0,005 $ zu tief. Das Reel fiel aus,
    obwohl es bezahlbar gewesen wäre. */
 const GEMESSEN = {};
-const erwartetFuer = (zweck) => { const k = schluessel(zweck); if (!k) return STANDARD; return GEMESSEN[k] ?? ERWARTET[k]; };
+/* Reihenfolge: heute gemessen schlaegt Vortag schlaegt Tabelle. Die Tabelle
+   bleibt Untergrenze - sie ist die vorsichtige Annahme, die Erfahrung darf sie
+   anheben, nicht senken. */
+const erwartetFuer = (zweck) => {
+  const k = schluessel(zweck);
+  if (!k) return STANDARD;
+  return GEMESSEN[k] ?? Math.max(VORTAG[k] ?? 0, ERWARTET[k] ?? STANDARD);
+};
 /* Für die Rücklage im Lauf: was ein Aufruf dieses Zwecks heute voraussichtlich kostet. */
 export const erwartet = (zweck) => erwartetFuer(zweck);
 
@@ -263,9 +300,18 @@ export function erfassen(modell, usage, zweck = "") {
   /* Der Rest des Laufs rechnet ab jetzt mit dem gemessenen Wert (dem teuersten
      Aufruf dieses Zwecks), nicht mehr mit der Schätzung. */
   const zweckSchluessel = schluessel(zweck);
+  /* Vor dem Ueberschreiben merken, womit dieser Aufruf veranschlagt war. */
+  const veranschlagt = zweckSchluessel ? erwartetFuer(zweckSchluessel) : 0;
   if (zweckSchluessel) GEMESSEN[zweckSchluessel] = Math.max(GEMESSEN[zweckSchluessel] ?? 0, usd);
   const k = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n));
   console.log(`  $ ${usd.toFixed(4)} ${zweck || modell} · ${k(usage.input_tokens || 0)} ein / ${k(usage.output_tokens || 0)} aus / ${k(usage.cache_read_input_tokens || 0)} Cache`);
+  /* Eine Schaetzung, die um die Haelfte daneben liegt, ist keine Schaetzung
+     mehr - und sie bleibt es still, wenn niemand sie anspricht. Genau so ist
+     der Faktencheck vom 13.09. bis zum 18.09. von 0,01 auf 0,07 $ gewandert,
+     ohne dass irgendwo ein Satz dazu im Protokoll stand. */
+  if (veranschlagt > 0 && usd > veranschlagt * 1.5) {
+    console.warn(`  ! Schätzung gerissen: „${zweck || modell}" war mit ${veranschlagt.toFixed(4)} $ angesetzt, kostet aber ${usd.toFixed(4)} $ (${(usd / veranschlagt).toFixed(1)}-fach). Der Rest des Tages rechnet mit dem höheren Wert.`);
+  }
   if (speichern) { try { speichern(tagesStand(), posten.length, jeZweck(), messungen(), antwortStand()); } catch (e) { console.warn(`  ! Kosten nicht gespeichert: ${e.message}`); } }
   return usd;
 }

@@ -37,7 +37,7 @@ import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
 import { berichtErstellen, berichtSenden } from "./bericht.mjs";
-import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, reservieren, reelReserve, erwartet, vortagsSchaetzung, reservierungAufheben, tagesStand, tagesLimit, antwortStand, antwortLimit, bezahlbareSumme, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
 import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
 import { titelbild } from "./bilder.mjs";
@@ -173,6 +173,8 @@ async function main() {
     bisher: inhaltBisher,
     bisherAntworten: antwortenBisher,
     gemessen: kostenStart.tage?.[datum]?.messungen || {},
+    /* Was die Vortage gemessen haben, bis der heutige Lauf eigene Zahlen hat. */
+    vortag: vortagsSchaetzung(kostenStart.tage || {}, datum),
     speichern: (usd, aufrufe, zwecke, gemessen, antworten) => {
       const k = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} }); k.tage = k.tage || {};
       const alt = kostenStart.tage?.[datum] || {};

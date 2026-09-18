@@ -194,7 +194,19 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
        JSON abgeschnitten, Beitrag verworfen, 0,135 $ für nichts) - schon mit
        "medium" und den schärferen Prüfregeln. Die Gründlichkeit kommt aus
        der Prüfliste, nicht aus mehr Nachdenken. */
-    output_config: { ...(haiku ? {} : { effort: "medium" }), format: { type: "json_schema", schema: SCHEMA } },
+    /* Der Aufwand richtet sich nach der Laenge des Textes, nicht nach seiner
+       Wichtigkeit. Gemessen am 18.09.: Das Reel-Skript (140 Woerter) kam mit
+       "medium" auf 2,3k Ausgabe-Token und 0,035 $ - ein Beitrag auf 5,9k und
+       0,062 $, also genau an den Deckel von 6.000, an dem in der Nacht zwei
+       Antworten abgeschnitten wurden und 0,135 $ verfielen.
+
+       Der Beitrag prueft deshalb mit "low", das Reel behaelt "medium". Die
+       Gruendlichkeit kommt ohnehin aus der Pruefliste, nicht aus der Denkzeit:
+       Der Fehler vom 16.09. (Kenntnis des Ehegatten statt des
+       Vertragspartners) entstand bei "medium" mit 400 Ausgabe-Token - laenger
+       nachzudenken haette ihn nicht gefunden, die Kategorie "Personenbezug"
+       findet ihn. */
+    output_config: { ...(haiku ? {} : { effort: zweck === "reel-faktencheck" ? "medium" : "low" }), format: { type: "json_schema", schema: SCHEMA } },
   };
   /* Zwei Anläufe, bevor ein Fehler entsteht: erst mit Schema und Denken,
      dann - wenn die Antwort nicht lesbar ist oder das Modell ablehnt - ohne
@@ -207,6 +219,9 @@ export async function pruefeFakten(beitrag, zweck = "faktencheck", { hinweis = "
     if (response.stop_reason === "refusal") throw new Error(`Modell hat die Prüfung abgelehnt (${response.stop_details?.explanation || "ohne Begründung"})`);
     const text = response.content.filter((b) => b.type === "text").map((b) => b.text).join("");
     let d;
+    /* Abgeschnitten ist etwas anderes als unlesbar: Das Protokoll soll den
+       Deckel nennen, sonst sucht man den Fehler im Modell statt im Limit. */
+    if (response.stop_reason === "max_tokens") throw new Error(`Antwort am Ausgabedeckel abgeschnitten (${basis.max_tokens} Token)`);
     try { d = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)); }
     catch (e) { throw new Error(`keine lesbare JSON-Antwort (${e.message.slice(0, 80)})`); }
     if (!Array.isArray(d?.befunde)) throw new Error("Antwort ohne Befundliste");

@@ -3048,3 +3048,39 @@ test("Eine Berichtigung landet im abgelegten Entwurf, nicht nur im laufenden Pro
     fs.rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test("Die Schätzung lernt aus den Vortagen, heutige Messungen gehen vor", async () => {
+  const { vortagsSchaetzung, budgetSetzen, erwartet, budgetFrei } = await import("../src/kosten.mjs");
+  /* Der Fehler vom 18.09.: Der Faktencheck stand in der Tabelle mit 0,01 $,
+     gemessen kostete er seit dem 16.09. das Fünf- bis Siebenfache. Jeder Tag
+     startete trotzdem wieder mit 0,01 $ - der Deckel plante mit einer Zahl,
+     die die Wirklichkeit längst widerlegt hatte. */
+  const tage = {
+    "2026-09-14": { messungen: { faktencheck: 0.005 } },
+    "2026-09-15": { messungen: { faktencheck: 0.0188 } },
+    "2026-09-16": { messungen: { faktencheck: 0.0501, reel: 0.09 } },
+    "2026-09-17": { messungen: { faktencheck: 0.0354 } },
+    "2026-09-18": { messungen: { faktencheck: 0.99 } },
+  };
+  const v = vortagsSchaetzung(tage, "2026-09-18", 3);
+  assert.equal(v.faktencheck, 0.0501, "teuerster Aufruf der letzten drei Tage");
+  assert.equal(v.reel, 0.09, "auch Zwecke, die nur an einem der Tage vorkamen");
+  assert.ok(!("stories" in v), "unbekannte Zwecke bleiben leer");
+  /* Der laufende Tag zählt nicht mit: sonst rechnete der Nachmittag mit dem
+     Ausrutscher des Vormittags weiter, obwohl der Lauf ihn ohnehin misst. */
+  assert.ok(v.faktencheck < 0.99);
+
+  budgetSetzen({ limitUsd: 1, vortag: v });
+  assert.equal(erwartet("faktencheck"), 0.0501, "Vortag schlägt die Tabelle (0,01 $)");
+  assert.equal(erwartet("recherche"), 0.12, "die Tabelle bleibt Untergrenze, wo sie höher liegt");
+  /* Heute gemessen schlägt den Vortag - ein billiger gewordener Zweck darf
+     nicht drei Tage lang teuer gerechnet werden. */
+  budgetSetzen({ limitUsd: 1, vortag: v, gemessen: { faktencheck: 0.012 } });
+  assert.equal(erwartet("faktencheck"), 0.012);
+  /* Und die Zahl wirkt: Mit 0,05 $ Erwartung ist bei 0,97 $ Stand Schluss,
+     mit 0,01 $ wäre der Aufruf noch gestartet. */
+  budgetSetzen({ limitUsd: 1, bisher: 0.97, vortag: v });
+  assert.equal(budgetFrei("faktencheck"), false, "teurer Aufruf startet nicht mehr");
+  budgetSetzen({ limitUsd: 1, bisher: 0.97 });
+  assert.equal(budgetFrei("faktencheck"), true, "mit der alten Tabelle wäre er gestartet - genau der Fehler");
+});
