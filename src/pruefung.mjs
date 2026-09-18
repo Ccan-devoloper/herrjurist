@@ -522,6 +522,40 @@ export function quizReihenfolge(antwortEintrag, planStories = []) {
   return { status: "warten", frage, grund: `Frage ${frage.slot} ist noch nicht veroeffentlicht` };
 }
 
+/* --- Wer darf welchen Befund schliessen? (Safety 0c) ---------------------
+   Bis zum 18.09. lagen zwei verschiedene Dinge im selben Feld `beanstandet`:
+   die Befunde der deterministischen Formpruefung und die Befunde des
+   fachlichen Faktenchecks. Vor dem Veroeffentlichen lief dann die FORMpruefung
+   noch einmal, und wenn sie nichts fand, wurde das Feld geleert - damit konnte
+   eine schwaechere Pruefung einen fachlichen Befund beseitigen. Ein
+   Zeichenzaehler entschied ueber eine falsche Rechtsfolge.
+
+   Jetzt sind die Befunde getrennt: `beanstandet` gehoert der Form,
+   `beanstandetFachlich` der Sache. Jede Pruefung darf nur ihre eigenen
+   Befunde schliessen. Ein fachlicher Befund verschwindet nur durch eine neue
+   fachliche Pruefung.
+
+   Altbestand ohne Herkunft (`befundeTypisiert` fehlt) gilt als ungeklaert und
+   wird nicht durch einen Formcheck freigegeben - er braucht eine vollstaendige
+   neue Pruefung oder er erscheint nicht. */
+export function storyFreigabe(story) {
+  if (!story) return { frei: false, warten: true, grund: "kein Text vorhanden" };
+  if (story.faktencheckOffen) return { frei: false, warten: true, grund: "Faktencheck steht noch aus" };
+  const fachlich = story.beanstandetFachlich || [];
+  if (fachlich.length) return { frei: false, warten: false, grund: `fachlich beanstandet: ${fachlich.join("; ")}` };
+  const form = story.beanstandet || [];
+  if (form.length) {
+    if (!story.befundeTypisiert) {
+      return { frei: false, warten: false, grund: `Befund ohne Herkunft (Altbestand): ${form.join("; ")} - braucht eine vollstaendige neue Pruefung` };
+    }
+    const erneut = pruefeBeitrag({ stories: [story] });
+    const quiz = quizBefunde([story]);
+    if (erneut.ok && !quiz.length) return { frei: true, bereinigt: true, grund: "fruehere Formbeanstandung gilt nach heutigen Regeln nicht mehr" };
+    return { frei: false, warten: false, grund: [...erneut.fehler, ...quiz].join("; ") };
+  }
+  return { frei: true, bereinigt: false, grund: "" };
+}
+
 export function pruefeBeitrag(beitrag, opt = {}) {
   const fehler = [];
   const k = opt.korpus || korpus();

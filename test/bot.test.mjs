@@ -2333,9 +2333,15 @@ test("Bezahlte Story-Texte überleben ein leeres Budget und erscheinen erst nach
     "die Zweitmeinung wirft den BudgetFehler wieder nach oben");
   assert.match(fc, /Einwände gelten ohne Zweitmeinung/, "der günstige Ausweg ohne Zweitmeinung fehlt");
 
-  /* Und ungeprüft erscheint nichts. */
+  /* Und ungeprüft erscheint nichts. Die Entscheidung dazu ist seit dem
+     18.09. eine eigene Funktion (Safety 0c) - geprüft wird sie dort, hier
+     zählt nur, dass der Tageslauf sie auch fragt. */
   const lauf = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
-  assert.match(lauf, /if \(story\.faktencheckOffen\)/, "der Tageslauf veröffentlicht Stories mit offener Prüfung");
+  const pruef = fs.readFileSync(new URL("../src/pruefung.mjs", import.meta.url), "utf8");
+  assert.match(pruef, /if \(story\.faktencheckOffen\) return \{ frei: false, warten: true/,
+    "die Freigabe lässt Stories mit offener Prüfung durch");
+  assert.match(lauf, /const freigabe = storyFreigabe\(story\);/,
+    "der Tageslauf fragt die Freigabe nicht");
   assert.match(lauf, /storiesPruefen\(ungeprueft\)/, "der Tageslauf holt die offene Prüfung nicht nach");
   assert.ok(BudgetFehler);
 });
@@ -3250,4 +3256,44 @@ test("Safety 0a: keine Antwort vor ihrer Frage", async () => {
     "ohne zugehörige Frage im Plan gilt die alte Regel");
   /* Die Uhrzeit entscheidet nicht - der Zustand tut es. */
   assert.equal(quizReihenfolge(antwort, [{ ...frage("geplant"), zeit: "06:00" }, antwort]).status, "warten");
+});
+
+test("Safety 0c: ein Formcheck löscht keinen fachlichen Befund", async () => {
+  const { storyFreigabe } = await import("../src/pruefung.mjs");
+  const sauber = { slot: "s7", art: "merksatz", titel: "Kurz", text: "Ein kurzer, unauffälliger Merksatz.", befundeTypisiert: true };
+
+  /* Der Normalfall: nichts beanstandet, die Story darf erscheinen. */
+  assert.equal(storyFreigabe(sauber).frei, true);
+
+  /* Der Kern des Befunds V12: Ein fachlicher Befund liegt vor, die
+     Formprüfung ist zufrieden - die Story darf trotzdem nicht erscheinen. */
+  const fachlich = { ...sauber, beanstandetFachlich: ["[s7] § 433 BGB trägt diese Aussage nicht."] };
+  const f = storyFreigabe(fachlich);
+  assert.equal(f.frei, false, "ein fachlicher Befund bleibt aktiv, auch wenn die Form stimmt");
+  assert.match(f.grund, /fachlich beanstandet/);
+  assert.equal(f.warten, false, "das ist kein Warten, sondern ein Nein");
+
+  /* Eine reine Formbeanstandung darf eine erneute Formprüfung aufheben. */
+  const form = { ...sauber, beanstandet: ["Story „Kurz“: Text zu lang (999 > 200)"] };
+  const g = storyFreigabe(form);
+  assert.equal(g.frei, true, "die Formprüfung darf ihren eigenen Befund schließen");
+  assert.equal(g.bereinigt, true, "und der Befund wird dann entfernt");
+
+  /* Altbestand ohne Herkunft: kein Freifahrtschein durch den Formcheck. */
+  const alt = { ...sauber, befundeTypisiert: undefined, beanstandet: ["irgendein Befund von gestern"] };
+  delete alt.befundeTypisiert;
+  const h = storyFreigabe(alt);
+  assert.equal(h.frei, false, "ein Befund ohne Herkunft bleibt zu");
+  assert.match(h.grund, /Altbestand/);
+
+  /* Ungeprüft erscheint nichts - aber das ist Warten, kein Verwerfen. */
+  const offen = storyFreigabe({ ...sauber, faktencheckOffen: true });
+  assert.equal(offen.frei, false);
+  assert.equal(offen.warten, true, "der Text wartet auf seine Prüfung, statt verworfen zu werden");
+
+  /* Auch die Quiz-Invarianten gehören zur deterministischen Prüfung: Eine
+     Story mit Formbefund und kaputtem Quiz kommt nicht durch. */
+  const quiz = { slot: "s5", art: "antwort", pairId: "t1", optionen: ["A", "B", "C"], richtig: 7,
+    titel: "Antwort", text: "kurz", befundeTypisiert: true, beanstandet: ["alter Formbefund"] };
+  assert.equal(storyFreigabe(quiz).frei, false, "ein kaputter Index bleibt ein Hindernis");
 });

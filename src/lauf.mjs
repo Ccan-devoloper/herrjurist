@@ -22,7 +22,7 @@ import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool, KLAUSUREN } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
-import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizReihenfolge } from "./pruefung.mjs";
+import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizReihenfolge, storyFreigabe } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
@@ -644,14 +644,15 @@ async function main() {
         /* Beanstandete Slots einmal neu schreiben statt sie zu verlieren: ein
            Nachschlag für zwei, drei Slots kostet nur wenige Cent. */
         hosting.commit(`Story-Texte ${datum}`);
-        const strittig = neu.filter((s) => s.beanstandet);
+        const alleBefunde = (s) => [...(s.beanstandet || []), ...(s.beanstandetFachlich || [])];
+        const strittig = neu.filter((s) => alleBefunde(s).length);
         if (strittig.length) try {
-          const hinweis = `Die folgenden Entwürfe wurden abgelehnt – formuliere sie vollständig neu:\n${strittig.map((s) => `- Slot ${s.slot}: ${s.beanstandet.join("; ")}`).join("\n")}`;
+          const hinweis = `Die folgenden Entwürfe wurden abgelehnt – formuliere sie vollständig neu:\n${strittig.map((s) => `- Slot ${s.slot}: ${alleBefunde(s).join("; ")}`).join("\n")}`;
           log(`  ${strittig.length} Story-Entwürfe beanstandet – zweiter Versuch`);
           const zweite = await storiesSchreiben(auftrag(offen.filter((o) => strittig.some((s) => s.slot === o.slot))), datum, hinweis);
           for (const s of zweite) {
             const vorher = geschrieben.get(s.slot);
-            if (s.beanstandet && vorher && !vorher.beanstandet) continue;
+            if (alleBefunde(s).length && vorher && !alleBefunde(vorher).length) continue;
             hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s); geschrieben.set(s.slot, s);
           }
           hosting.commit(`Story-Texte ${datum} (zweiter Versuch)`);
@@ -783,17 +784,20 @@ async function main() {
         story = teaserAusBeitrag(beitrag, eintrag.slot);
       } else {
         story = geschrieben.get(eintrag.slot);
-        if (!story) { log(`Story ${eintrag.slot}: kein Text vorhanden – später.`); continue; }
-        /* Ungeprüft erscheint nichts. Der Text bleibt liegen, der nächste
-           Lauf holt den Faktencheck nach und veröffentlicht dann. */
-        if (story.faktencheckOffen) { log(`Story ${eintrag.slot}: Faktencheck steht noch aus – später.`); continue; }
-        /* Frühere Beanstandungen mit den heutigen Regeln nachprüfen: Wurde die
-           Prüfung seither entschärft (etwa Fachsprache statt Abschreiben), darf
-           die Story doch erscheinen, statt dauerhaft zu fehlen. */
-        if (story.beanstandet) {
-          const erneut = pruefeBeitrag({ stories: [story] });
-          if (erneut.ok) { delete story.beanstandet; hosting.jsonSchreiben(`inhalte/${datum}-${eintrag.slot}.json`, story); }
-          else { log(`Story ${eintrag.slot} beanstandet: ${erneut.fehler.join("; ")} – übersprungen.`); eintrag.status = "uebersprungen"; continue; }
+        /* Eine Stelle entscheidet, ob diese Story erscheinen darf: ungeprüft
+           nicht, fachlich beanstandet nicht, und ein Befund ohne Herkunft aus
+           dem Altbestand auch nicht. Eine frühere FORMbeanstandung darf nur
+           eine erneute Formprüfung aufheben - nie einen fachlichen Befund
+           (Safety 0c, Review-Auftrag Abschnitte 13 bis 15). */
+        const freigabe = storyFreigabe(story);
+        if (!freigabe.frei) {
+          log(`Story ${eintrag.slot}: ${freigabe.grund}${freigabe.warten ? " – später." : " – übersprungen."}`);
+          if (!freigabe.warten) eintrag.status = "uebersprungen";
+          continue;
+        }
+        if (freigabe.bereinigt) {
+          delete story.beanstandet;
+          hosting.jsonSchreiben(`inhalte/${datum}-${eintrag.slot}.json`, story);
         }
       }
       /* Safety 0a: Eine Antwort erscheint nie vor ihrer Frage, und nur mit

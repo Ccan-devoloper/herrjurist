@@ -845,6 +845,9 @@ Alles in eigenen Worten, juristisch korrekt, mit Norm. Nicht benötigte Felder n
     if (Array.isArray(o.optionen)) o.optionen = o.optionen.map((x) => normKurz(String(x)));
     const ergebnis = pruefeBeitrag({ stories: [o] });
     if (!ergebnis.ok) { o.beanstandet = ergebnis.fehler; }
+    /* Die Marke sagt spaeteren Laeufen, dass die Befunde dieser Story nach
+       Herkunft getrennt sind. Ohne sie gilt ein Befund als ungeklaert. */
+    o.befundeTypisiert = true;
     return o;
   });
   /* Quiz-Invarianten ueber die ganze Lieferung: Einzelbefunde und die
@@ -885,7 +888,9 @@ export async function storiesPruefen(liste) {
       /* Ohne erkennbaren Slot lässt sich der Befund keiner Kachel zuordnen -
          dann werden lieber alle neu geschrieben als eine falsche zu posten. */
       const ziele = treffer ? liste.filter((o) => o.slot === treffer[1]) : liste;
-      for (const o of ziele) (o.beanstandet ||= []).push(String(f));
+      /* Fachliche Befunde in ihr eigenes Feld: Ein spaeterer Formcheck darf
+         sie nicht schliessen (Safety 0c). */
+      for (const o of ziele) (o.beanstandetFachlich ||= []).push(String(f));
     }
     for (const o of liste) delete o.faktencheckOffen;
   } catch (e) {
