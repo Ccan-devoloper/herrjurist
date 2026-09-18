@@ -93,11 +93,19 @@ export class Hosting {
     return this;
   }
 
+  /* Zwei Ausgaenge, die nicht dasselbe bedeuten:
+       false  - es gab nichts zu committen (Normalfall, kein Fehler)
+       Wurf   - git hat den Commit wirklich verweigert
+     Frueher wurde beides zu `false` verschluckt, und der Aufrufer sah den
+     Unterschied nicht. Wer damit Zustand festschreibt, haelt einen
+     gescheiterten Commit dann faelschlich fuer erledigt. */
   commit(nachricht) {
     git(["config", "user.name", process.env.GIT_AUTHOR_NAME || "instagram-bot"], this.dir);
     git(["config", "user.email", process.env.GIT_AUTHOR_EMAIL || "instagram-bot@users.noreply.github.com"], this.dir);
     git(["add", "-A"], this.dir);
-    try { git(["commit", "--quiet", "-m", nachricht], this.dir); return true; } catch { return false; }
+    if (!git(["status", "--porcelain"], this.dir)) return false;
+    git(["commit", "--quiet", "-m", nachricht], this.dir);
+    return true;
   }
 
   async push() {
