@@ -20,6 +20,9 @@ on:
         description: "Zum Vergleich auch den bisherigen Prüfer (Claude) laufen lassen"
         type: boolean
         default: true
+      claude_modell:
+        description: "Welches Claude-Modell prüft (leer = claude-sonnet-5 wie im Betrieb)"
+        default: ""
 
 permissions:
   contents: read
@@ -42,6 +45,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IG_FAKTENCHECK_ANBIETER: openai
         run: |
+          if [ -z "${{ inputs.modelle }}" ]; then echo "Keine OpenAI-Modelle angefragt."; exit 0; fi
           IFS=',' read -ra MODELLE <<< "${{ inputs.modelle }}"
           for m in "${MODELLE[@]}"; do
             echo "::group::$m"
@@ -54,4 +58,5 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IG_FAKTENCHECK_ANBIETER: claude
+          IG_KI_MODELL_PRUEFUNG_STRENG: ${{ inputs.claude_modell }}
         run: node bin/pruefer-probe.mjs
