@@ -3589,3 +3589,92 @@ test("Ein Commit ohne Änderung ist kein Fehler – ein abgelehnter Commit schon
 
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+/* ---------------------------------------------------------------------------
+   Ein Trockenlauf ist keine Veröffentlichung.
+
+   18.09.2026: Ein von Hand ausgelöster Lauf lief im Standardmodus „trocken“.
+   Er schickte nichts an Instagram und schrieb trotzdem in Plan und Ledger,
+   Beitrag und Story seien veröffentlicht – mit `medienId: "trocken"`. Der
+   nächste Lauf hätte beide übersprungen; der Tag wäre still ausgefallen.
+   --------------------------------------------------------------------------- */
+
+test("Ein Probelauf gilt nie als veröffentlicht – Feed, Reel und Story", async () => {
+  const { veroeffentlichungEintragen, veroeffentlichtBestaetigt, echteMedienId, ausTrockenlauf, PROBE_KENNUNG }
+    = await import("../src/veroeffentlichung.mjs");
+
+  /* Was Instagram zurückgibt, ist eine Ziffernfolge. Alles andere nicht. */
+  assert.equal(echteMedienId("18125726395891138"), true, "echte Medien-ID vom 18.09.");
+  assert.equal(echteMedienId(PROBE_KENNUNG), false, "die Kennung des Trockenlaufs");
+  for (const mist of [null, undefined, "", "   ", 18125726395891138, "17e9", "trocken-1", {}, []])
+    assert.equal(echteMedienId(mist), false, `„${String(mist)}“ ist keine Medien-ID`);
+
+  /* Die drei Sendewege, jeder mit demselben Vertrag. */
+  for (const art of ["beitrag", "reel", "story"]) {
+    const eintrag = { slot: "x1", zeit: "12:30", art, status: "geplant" };
+
+    /* Trockenlauf: Der Eintrag bleibt geplant, nichts wird behauptet. */
+    const probe = veroeffentlichungEintragen(eintrag, PROBE_KENNUNG, { jetzt: "2026-09-18T16:04:59.205Z" });
+    assert.equal(probe.bestaetigt, false, `${art}: ein Probelauf ist keine Veröffentlichung`);
+    assert.equal(eintrag.status, "geplant", `${art}: der Status bleibt geplant`);
+    assert.equal(eintrag.medienId, undefined, `${art}: keine Medien-ID im Produktionszustand`);
+    assert.equal(eintrag.veroeffentlicht, undefined, `${art}: kein Veröffentlichungszeitpunkt`);
+    assert.deepEqual(eintrag.probelauf, { zeit: "2026-09-18T16:04:59.205Z", kennung: PROBE_KENNUNG },
+      `${art}: der Probelauf wird sichtbar vermerkt, aber in einem eigenen Feld`);
+    assert.equal(veroeffentlichtBestaetigt(eintrag), false, `${art}: nichts darf sich darauf stützen`);
+
+    /* Und der echte Lauf danach räumt den Vermerk weg. */
+    const echt = veroeffentlichungEintragen(eintrag, "17908485354484188", { jetzt: "2026-09-18T16:15:00.000Z" });
+    assert.equal(echt.bestaetigt, true, `${art}: eine echte Medien-ID zählt`);
+    assert.equal(eintrag.status, "veroeffentlicht");
+    assert.equal(eintrag.medienId, "17908485354484188");
+    assert.equal(eintrag.veroeffentlicht, "2026-09-18T16:15:00.000Z");
+    assert.equal(eintrag.probelauf, undefined, `${art}: der Probelauf-Vermerk verschwindet`);
+    assert.equal(veroeffentlichtBestaetigt(eintrag), true);
+  }
+
+  /* Der Kern des Vorfalls: Status „veröffentlicht“ ohne echte ID zählt nicht. */
+  assert.equal(veroeffentlichtBestaetigt({ status: "veroeffentlicht", medienId: "trocken" }), false,
+    "genau dieser Zustand stand am 18.09. im Plan");
+  assert.equal(veroeffentlichtBestaetigt({ status: "veroeffentlicht" }), false, "Status ohne ID");
+  assert.equal(veroeffentlichtBestaetigt({ status: "geplant", medienId: "17908485354484188" }), false,
+    "ID ohne Status ist ebenfalls kein Beleg");
+
+  /* Ein Plan mit solchen Spuren wird live verworfen. */
+  const sauber = { beitraege: [{ slot: "b1", status: "veroeffentlicht", medienId: "18073311611740667" }], stories: [] };
+  assert.equal(ausTrockenlauf(sauber), false, "ein echter Plan bleibt gültig");
+  assert.equal(ausTrockenlauf({ ...sauber, trocken: true }), true, "die Marke am Plan");
+  assert.equal(ausTrockenlauf({ beitraege: [{ slot: "b2", status: "veroeffentlicht", medienId: "trocken" }], stories: [] }), true,
+    "der Fall vom 18.09.");
+  assert.equal(ausTrockenlauf({ beitraege: [], stories: [{ slot: "s2", status: "geplant", probelauf: { kennung: "trocken" } }] }), true,
+    "auch der neue, ehrliche Vermerk macht den Plan für einen Livelauf unbrauchbar");
+  assert.equal(ausTrockenlauf({ beitraege: [{ slot: "b3", status: "veroeffentlicht", medienId: "probe-42" }], stories: [] }), true,
+    "jede Ersatzkennung, nicht nur die Zeichenfolge „trocken“");
+});
+
+test("Der Tageslauf schreibt Ledger und Teaser nur auf bestätigte Veröffentlichungen", async () => {
+  /* Die Verdrahtung im Ablauf selbst lässt sich ohne Netz, Bilder und
+     Instagram nicht ausführen; geprüft wird deshalb an der Quelle, dass die
+     drei Sendewege und der Teaser die gemeinsame Regel benutzen. */
+  const quelle = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+
+  /* Kein Sendeweg setzt den Status mehr von Hand. */
+  assert.equal((quelle.match(/eintrag\.status = "veroeffentlicht"/g) || []).length, 0,
+    "der Status wird nur noch in veroeffentlichung.mjs gesetzt");
+  assert.equal((quelle.match(/eintrag\.medienId = medienId/g) || []).length, 0,
+    "die Medien-ID wird nur noch dort eingetragen");
+
+  /* Jeder vermerken()-Aufruf im Tageslauf hängt an einer Bestätigung. */
+  for (const zeile of quelle.split("\n").filter((z) => z.includes("vermerken(ledger,"))) {
+    assert.match(zeile, /if \((echt\.bestaetigt|echteMedienId\(medienId\))\) vermerken\(ledger,/,
+      `ein Ledger-Eintrag ohne Bestätigung: ${zeile.trim().slice(0, 80)}`);
+  }
+
+  /* Der Teaser fragt die Bestätigung, nicht den Planstatus. */
+  assert.match(quelle, /if \(!beitrag \|\| !veroeffentlichtBestaetigt\(b\)\)/,
+    "der Teaser darf sich nicht auf den Planstatus allein stützen");
+
+  /* Und der Fortschritt des Auffüllens zählt nur echte Beiträge. */
+  assert.match(quelle, /if \(echteMedienId\(medienId\)\) stand\.fertig = i \+ 1;/,
+    "ein Trockenlauf darf den Auffüll-Fortschritt nicht weiterzählen");
+});
