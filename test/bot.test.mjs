@@ -3272,7 +3272,7 @@ test("Safety 0c: ein Formcheck löscht keinen fachlichen Befund", async () => {
   const f = storyFreigabe(fachlich);
   assert.equal(f.frei, false, "ein fachlicher Befund bleibt aktiv, auch wenn die Form stimmt");
   assert.match(f.grund, /fachlich beanstandet/);
-  assert.equal(f.warten, false, "das ist kein Warten, sondern ein Nein");
+  assert.equal(f.warten, true, "fachliche Beanstandungen warten auf Korrektur und dürfen bis dahin nicht erscheinen");
 
   /* Eine reine Formbeanstandung darf eine erneute Formprüfung aufheben. */
   const form = { ...sauber, beanstandet: ["Story „Kurz“: Text zu lang (999 > 200)"] };
@@ -3319,8 +3319,9 @@ test("Safety 0b: der Prüfer sieht, welche Option als richtig markiert ist", asy
     "die Optionen tragen Buchstaben in ihrer Reihenfolge");
   /* Die Frage steht vor der Antwort, damit der Widerspruch sichtbar wird. */
   assert.ok(text.indexOf("FRAGE [Story s4") < text.indexOf("ANTWORT [Story s5"));
-  /* Andere Kacheln bleiben, wie sie waren. */
-  assert.match(text, /\[Story s7 merksatz\] Merksatz · Ein kurzer Satz\./);
+  /* Andere Kacheln bleiben enthalten; die Felder sind jetzt ausdrücklich benannt,
+     damit der Faktenchecker Werte wie zahl=17 eindeutig zuordnen kann. */
+  assert.match(text, /\[Story s7 merksatz\] titel=Merksatz · text=Ein kurzer Satz\./);
 
   /* Eine Antwort ohne Markierung fällt auf. */
   const ohne = textAus({ stories: [{ slot: "s5", art: "antwort", pairId: "t2", optionen: ["A", "B", "C"], richtig: null }] });
@@ -3374,10 +3375,10 @@ test("Safety 0a: das Gate laesst keine halbe Quiz-Kachel durch", async () => {
   const offen = quizPaarFreigabe(planPaar()[0], planPaar(), leser({ s3: quizFrage(), s4: quizAntwort({ faktencheckOffen: true }) }));
   assert.equal(offen.status, "warten", "ein offener Faktencheck der Antwort haelt die Frage zurueck");
 
-  /* 3. Antwort fachlich beanstandet: Das ist kein Warten, das ist ein Nein.
+  /* 3. Antwort fachlich beanstandet: Das Paar bleibt gesperrt, aber reparierbar.
         Genau hier lief der Faktencheck der Gegenseite frueher ins Leere. */
   const fachlich = quizPaarFreigabe(planPaar()[0], planPaar(), leser({ s3: quizFrage(), s4: quizAntwort({ beanstandetFachlich: ["[s4] § 5 EStG trägt das nicht."] }) }));
-  assert.equal(fachlich.status, "verfallen", "ein fachlicher Befund an der Antwort blockiert die Frage");
+  assert.equal(fachlich.status, "warten", "ein fachlicher Befund blockiert das Paar, bis die Antwort korrigiert und erneut geprüft ist");
   assert.match(fachlich.grund, /fachlich beanstandet/);
 
   /* 4. Beide Seiten fuer sich sauber, aber die Optionen driften auseinander.
