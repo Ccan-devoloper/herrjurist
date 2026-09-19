@@ -3031,12 +3031,12 @@ test("Planmäßige Läufe halten die Concurrency-Gruppe höchstens zwei Stunden"
   assert.match(wf, /timeout-minutes: \$\{\{ \(github\.event_name == 'schedule' \|\| github\.event\.inputs\.wecker == 'true'\) && 120 \|\| 300 \}\}/);
 });
 
-test("Messversuch: Beiträge schreiben mit medium, Reels und Stories bleiben bei low", async () => {
+test("Produktionsmodus: Beiträge, Reels und Stories schreiben mit low", async () => {
   /* Reels sind seit der Nacht zum 18.09. aus dem Versuch heraus: Mit medium
      kostete das Skript auf beiden Kanälen mehr als die Obergrenze je Beitrag
      (0,116 $ und 0,143 $) und wurde zurückgestellt. */
   const { CONFIG } = await import("../src/config.mjs");
-  assert.equal(CONFIG.ki.effortBeitrag, "medium");
+  assert.equal(CONFIG.ki.effortBeitrag, "low");
   assert.equal(CONFIG.ki.effortReel, "low");
   assert.equal(CONFIG.ki.effort, "low");
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
