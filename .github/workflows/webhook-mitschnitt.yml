@@ -1,14 +1,9 @@
-name: Webhook-Mitschnitt
+name: Webhook-Story-Bezug
 
-# Nimmt die Rohereignisse entgegen, die der Cloudflare-Worker weiterreicht,
-# und haengt sie im Asset-Zweig an state/webhook-roh.jsonl an.
+# Nimmt eingehende Instagram-Webhooks entgegen und speichert ausschließlich
+# die kurzlebige Story-Zuordnung. Rohereignisse, Absender-IDs und DM-Wortlaut
+# werden nicht persistiert.
 #
-# Warum nicht direkt in eine Datenbank? Weil der Bot seinen Zustand ohnehin
-# im Asset-Zweig fuehrt: versioniert, lesbar, ohne weiteren Dienst, der Geld
-# kosten oder ausfallen kann. Und weil die Frage, die hier beantwortet wird,
-# eine einmalige ist - was schickt Meta bei einer Story-Antwort wirklich?
-#
-# Es wird NICHTS beantwortet. Reiner Mitschnitt.
 
 on:
   repository_dispatch:
@@ -30,14 +25,13 @@ jobs:
           ref: instagram-assets
           fetch-depth: 1
 
-      - name: Rohereignis anhängen
+      - name: Story-Zuordnung datensparsam speichern
         env:
           ROH: ${{ github.event.client_payload.roh }}
           EMPFANGEN: ${{ github.event.client_payload.empfangen }}
         run: |
           set -euo pipefail
           mkdir -p state
-          # Base64 zurueck in JSON, eine Zeile je Ereignis (JSONL).
           python3 - <<'PY'
           import base64, json, os, pathlib
           roh = base64.b64decode(os.environ["ROH"])
@@ -45,11 +39,8 @@ jobs:
               daten = json.loads(roh)
           except Exception as e:
               daten = {"_nicht_lesbar": str(e), "_text": roh.decode("utf-8", "replace")[:4000]}
-          zeile = json.dumps({"empfangen": os.environ.get("EMPFANGEN", ""), "ereignis": daten}, ensure_ascii=False)
-          p = pathlib.Path("state/webhook-roh.jsonl")
-          with p.open("a", encoding="utf-8") as f:
-              f.write(zeile + "\n")
-          print("Mitgeschnitten:", zeile[:400])
+          # Das Rohereignis bleibt ausschließlich im Arbeitsspeicher dieses
+          # Actions-Laufs. Es wird bewusst nicht in Git geschrieben.
 
           # --------------------------------------------------------------
           # Zuordnungstabelle: Nachrichten-ID -> Story.
@@ -79,12 +70,12 @@ jobs:
                       continue
                   bezug[mid] = {
                       "storyId": str(story["id"]),
-                      "url": story.get("url", "")[:400],
-                      "absender": str((m.get("sender") or {}).get("id") or ""),
-                      "konto": str(eintrag.get("id") or ""),
-                      # Wortlaut als Zweitschluessel, falls der Abruf eine
-                      # andere Nachrichten-ID fuehrt als das Ereignis.
-                      "text": (nachricht.get("text") or "")[:300],
+                      # Falls /conversations eine abweichende Nachrichten-ID
+                      # liefert, bleibt ein exakter Fallback möglich, ohne
+                      # Absender-ID oder Nachrichtentext zu speichern.
+                      "fallbackHash": __import__("hashlib").sha256(
+                          (str((m.get("sender") or {}).get("id") or "") + "\\0" + (nachricht.get("text") or "").strip()).encode("utf-8")
+                      ).hexdigest(),
                       "zeit": int(m.get("timestamp") or eintrag.get("time") or time.time() * 1000),
                   }
                   neu += 1
@@ -105,8 +96,8 @@ jobs:
           set -euo pipefail
           git config user.name instagram-bot
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/webhook-roh.jsonl state/story-bezug.json
-          git commit -m "Webhook-Mitschnitt $(date -u +%FT%TZ)" || { echo "nichts Neues"; exit 0; }
+          git add state/story-bezug.json
+          git commit -m "Story-Zuordnung $(date -u +%FT%TZ)" || { echo "nichts Neues"; exit 0; }
           # Mehrere Ereignisse koennen gleichzeitig ankommen - deshalb erst
           # nachziehen, dann schieben.
           for i in 1 2 3 4; do
