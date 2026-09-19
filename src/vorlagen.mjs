@@ -505,7 +505,10 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   /* Zum Motiv das farbige Zeichen des Themas, gross und leicht gedreht links
      daneben - Motiv und Zeichen zusammen, wie auf den Vorbildkacheln. Nur die
      farbige Fassung; die Strichgrafik wuerde neben einem Foto duenn wirken. */
-  const zeichen = folie.icon && klasse === "frei" ? farbIcon(folie.icon, 240) : null;
+  /* Cover-Regel: Fotomotiv UND thematisches Icon. Auch ein rechteckiges
+     Notfallfoto darf das Icon nicht verlieren. */
+  const icon = ICONS[folie.icon] ? folie.icon : "paragraf";
+  const zeichen = farbIcon(icon, klasse === "frei" ? 240 : 180);
   const box = klasse === "frei" ? motivBuehne(folie.bildBreite, folie.bildHoehe, ziel) : null;
   const stil = box ? ` style="width:${box.breite}px;height:${box.hoehe}px"` : "";
   return `<div class="${klasse}"${stil}><img src="${esc(folie.bild)}" alt=""></div>${zeichen ? `<div class="frei-zeichen">${zeichen}</div>` : ""}`;
