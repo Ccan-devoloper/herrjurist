@@ -141,7 +141,8 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Folienarten: titel (Frage/Aufhänger), text (Titel + Text oder Punkte), schritte (nummeriert, je Schritt titel + text), vergleich (links/rechts mit titel + punkte), rechnung (formel, zeilen, ergebnis), karte (dichter Spickzettel: schritte mit kurzem titel + norm im text), merke (ein Satz, der hängen bleibt), cta (Abschluss mit Folgen-Aufforderung).
 - hooks: drei alternative Titel für Folie 1 mit unterschiedlichem Einstieg: (1) konkrete Prüfungsfrage/Entscheidung, (2) echte Abgrenzung oder belegbare Falle, (3) klarer Ablauf/Nutzen oder kurzer Falltrigger. Der Titel nennt das juristische Thema selbst – kein austauschbares „Kennst du das?“ und kein künstliches Geheimnis. Keine erfundenen Häufigkeiten, Punktzahlen, Korrektorenvorlieben oder Superlative.
 - Die erste Zeile der Caption ist gleichzeitig Suchtext: Sie nennt das Thema mit den Wörtern, die jemand bei Instagram oder Google eintippen würde (z. B. „Annahmeverzug Voraussetzungen Rechtsfolgen“), natürlich eingebettet in den Hook.
-- Folie-1-Titel: 5–10 gut lesbare Wörter, ideal 35–70 Zeichen, maximal 80. Er muss ohne Caption und ohne Ton verständlich machen, welche Rechtsfrage/Abgrenzung folgt. Andere Titel maximal 60 Zeichen.
+- Folie-1-Titel: 5–10 gut lesbare Wörter, ideal 35–70 Zeichen, maximal 80.
+- Folie 2 löst den Swipe ein: keine zweite Teaser-Kachel und kein Fülltext. Sie gibt sofort die entscheidende Abgrenzung, den Sachverhalt oder den ersten echten Prüfungsschritt, damit der Nutzen nach dem Wischen sichtbar wird. Er muss ohne Caption und ohne Ton verständlich machen, welche Rechtsfrage/Abgrenzung folgt. Andere Titel maximal 60 Zeichen.
 - Je Folie maximal 5 Punkte / 5 Schritte, insgesamt maximal 380 Zeichen Text je Folie; bei „vergleich“ je Spalte maximal 3 Punkte à 60 Zeichen.
 - Kernaussagen und Merksätze aus dem Skelett NIE übernehmen, auch nicht leicht umgestellt – schreibe einen eigenen Merksatz mit anderem Satzbau und anderen Wörtern.
 - Hervorhebungen mit *Sternchen* um das Wort – sparsam, ein bis zwei je Folie.
@@ -573,7 +574,7 @@ function prioritaetText(stufe, seed = "") {
 }
 
 /* Nachbearbeitung: leere Felder entfernen, Titelfolie normieren, Hashtags säubern. */
-const HOOK_UNBELEGT = /fast alle|die meisten|kaum jemand|niemand|jeder macht|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
+const HOOK_UNBELEGT = /fast alle|die meisten|kaum jemand|niemand|jeder macht|in jeder.{0,24}klausur|kommt (?:fast )?jedes jahr|immer dran|verrät|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
 const HOOK_GENERISCH = /^(kenn(?:st|en) du|das stimmt so nicht|schluss mit|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles)[!? .]*$/i;
 const HOOK_STOP = new Set(["der","die","das","den","dem","des","ein","eine","einer","eines","und","oder","mit","ohne","für","von","bei","was","wie","wann","warum","welche","welcher","welches","prüfen","prüfung"]);
 const hookWoerter = (s) => String(s || "").toLocaleLowerCase("de-DE").match(/[\p{L}\p{N}§]+/gu) || [];

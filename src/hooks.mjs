@@ -81,7 +81,7 @@ export const HOOKS = {
 export const HOOK_TYPEN = Object.keys(HOOKS);
 
 const SCHWACHE_OEFFNER = /^\s*(hallo|hi\b|hey|guten (morgen|tag|abend)|willkommen|schön,? dass|heute (geht|zeige|sprechen|schauen|lernen)|in diesem (video|reel|beitrag)|wir (schauen|sprechen|klären)|lass uns|ich (zeige|erkläre) (dir|euch) (heute|jetzt))/i;
-const UNBELEGTE_CLAIMS = /fast alle|die meisten|kaum jemand|niemand|jeder macht|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
+const UNBELEGTE_CLAIMS = /fast alle|die meisten|kaum jemand|niemand|jeder macht|in jeder.{0,24}klausur|kommt (?:fast )?jedes jahr|immer dran|verrät|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
 const GENERISCHER_TITEL = /^(kenn(?:st|en) du (?:das|diesen moment)|das stimmt so nicht|schluss mit raten|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles)[!? .]*$/i;
 
 export const HOOK_GRENZEN = { titelWoerter: 7, sprecherWoerter: 20 };
