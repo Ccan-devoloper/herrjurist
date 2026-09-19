@@ -98,7 +98,10 @@ export function textAus(beitrag) {
       quizPaare.set(k, e);
       continue;
     }
-    const felder = [["ueberzeile", s.ueberzeile], ["titel", s.titel], ["norm", s.norm], ["formel", s.formel], ["zahl", s.zahl], ["text", s.text], ["richtigText", s.richtigText], ["falsch", s.falsch]]\n      .filter(([, v]) => v != null && String(v).length)\n      .map(([k, v]) => `${k}=${v}`);\n    teile.push(`[Story ${s.slot} ${s.art}] ${felder.join(" · ")}`);
+    const felder = [["ueberzeile", s.ueberzeile], ["titel", s.titel], ["norm", s.norm], ["formel", s.formel], ["zahl", s.zahl], ["text", s.text], ["richtigText", s.richtigText], ["falsch", s.falsch]]
+      .filter(([, v]) => v != null && String(v).length)
+      .map(([k, v]) => `${k}=${v}`);
+    teile.push(`[Story ${s.slot} ${s.art}] ${felder.join(" · ")}`);
   }
   for (const [schluessel, { frage, antwort }] of quizPaare) {
     const zeilen = [`[QuizPair ${schluessel}]`];
