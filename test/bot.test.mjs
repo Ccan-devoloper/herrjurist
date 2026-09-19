@@ -678,7 +678,7 @@ test("Uhrzeiten werden gelernt: Erkundung ohne Daten, beste Stunde mit Daten", a
   assert.equal(stat.gesamt, 40);
   assert.ok(stat.stunden["reel|19"].mittel > stat.stunden["reel|11"].mittel);
   const zeiten = zeitenWaehlen({ formate: ["spickzettel", "reel"], datum: "2026-09-21", ledger, zufall: rngFuer("x") });
-  assert.equal(zeiten[0], "08:30", zeiten.join(" "));
+  assert.equal(zeiten[0], "08:00", zeiten.join(" "));
   assert.equal(zeiten[1], "19:30", zeiten.join(" "));
 
   /* Zu dünne Datenlage (junges Konto, kaum Reichweite): Es wird weiter
@@ -6963,4 +6963,21 @@ test("Carousel-Cover erzwingt Foto-Look, Erklärbilder bleiben flach", () => {
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   assert.match(autor, /NUR Folie 1 \(Cover\/Titelfolie\) bekommt ein Foto/);
   assert.match(autor, /Alle inneren Karussell-Slides bleiben reine Text-\/Strukturfolien/);
+});
+
+
+test("Fotoausfall darf keinen Carousel-Slot blockieren", () => {
+  const q = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  assert.match(q, /kein fotorealistisches Cover verfügbar – Veröffentlichung mit Icon-Cover/);
+  assert.ok(!/kein fotorealistisches Cover[^\n]*\n\s*continue;/.test(q), "Cover-Ausfall blockiert wieder einen Pflichtslot");
+  assert.ok(!/kein fotorealistisches Cover[^\n]*\n\s*return null;/.test(q), "Cover-Ausfall verwirft wieder einen Reservebeitrag");
+});
+
+test("Zeitlernen startet an den Kanalankern und lernt danach weiter", async () => {
+  const { zeitenWaehlen } = await import("../src/zeiten.mjs");
+  const leer = { veroeffentlicht: [] };
+  const formate = ["spickzettel", "schema", "reel"];
+  const z = zeitenWaehlen({ formate, datum: "2026-09-21", ledger: leer, zufall: () => 0 });
+  assert.deepEqual(z, ["08:00","12:30","18:30"], `Cold-Start-Anker: ${z.join(" ")}`);
+  assert.equal(CONFIG.plan.zeitErkundung, 0.20);
 });

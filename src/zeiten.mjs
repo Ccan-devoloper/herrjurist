@@ -188,7 +188,29 @@ export function zeitenWaehlen({ formate, datum, ledger, strategie = null, zufall
      an das Ende des Fensters - 22:30 statt 20:30. Gesucht wird jetzt die
      Kombination mit der höchsten Summe, Reihenfolge und Mindestabstand
      bleiben. Bei drei Beiträgen und 17 Stunden sind das 680 Kombinationen. */
-  const werte = formate.map((f) => { const klasse = klasseVon(f); const m = {}; for (const h of alle) m[h] = stundenWert(h, { klasse, wochentag, statistik: stat, strategie }).wert; return m; });
+  /* Kanal-spezifische Startanker lösen nur den Cold Start. Für mehrere
+     Karussells zählt die Reihenfolge innerhalb derselben Klasse. Sobald
+     eigene Daten belastbar sind, wird der Ankerbonus exakt null. */
+  const anker = formate.map((f, i) => {
+    const klasse = klasseVon(f);
+    const ordinal = formate.slice(0, i).filter((x) => klasseVon(x) === klasse).length;
+    const liste = CONFIG.plan.zeitStartAnker?.[klasse] || [];
+    const roh = liste.length ? liste[Math.min(ordinal, liste.length - 1)] : null;
+    return typeof roh === "string" && /^\d{1,2}:\d{2}$/.test(roh) ? minutenVon(roh) : null;
+  });
+  const werte = formate.map((f, i) => {
+    const klasse = klasseVon(f), m = {};
+    for (const h of alle) {
+      let wert = stundenWert(h, { klasse, wochentag, statistik: stat, strategie }).wert;
+      if (!stat.belastbar && anker[i] != null) {
+        const dist = Math.abs(h - Math.floor(anker[i] / 60));
+        if (dist === 0) wert += CONFIG.plan.zeitStartBonus;
+        else if (dist === 1) wert += CONFIG.plan.zeitStartBonus * 0.25;
+      }
+      m[h] = wert;
+    }
+    return m;
+  });
   let besteSumme = -Infinity, spitze = [];
   const suche = (i, ab, bisher, summe) => {
     if (i === formate.length) {
@@ -201,11 +223,15 @@ export function zeitenWaehlen({ formate, datum, ledger, strategie = null, zufall
   };
   suche(0, alle[0], [], 0);
   /* Passt der Abstand nicht in das Fenster: der Reihe nach so dicht wie möglich. */
-  if (!spitze.length) { const g = []; for (let i = 0; i < formate.length; i++) g.push(Math.min(alle.at(-1), (g.at(-1) ?? alle[0] - abstand) + abstand)); return g.map((h) => hhmm(h * 60 + 30)); }
+  if (!spitze.length) {
+    const g = [];
+    for (let i = 0; i < formate.length; i++) g.push(Math.min(alle.at(-1), (g.at(-1) ?? alle[0] - abstand) + abstand));
+    return g.map((h, i) => hhmm(h * 60 + (anker[i] == null ? 30 : anker[i] % 60)));
+  }
   /* Gleichauf liegende Kombinationen werden je Tag zufällig, aber
      reproduzierbar aufgelöst - so wandert die Zeit beim Ausprobieren. */
   const gewaehlt = spitze[Math.floor(zufall() * spitze.length)];
-  return gewaehlt.map((h) => hhmm(h * 60 + 30));
+  return gewaehlt.map((h, i) => hhmm(h * 60 + (anker[i] == null ? 30 : anker[i] % 60)));
 }
 
 /**

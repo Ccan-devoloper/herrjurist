@@ -43,7 +43,7 @@ export const CONFIG = {
     beitraegeWochenende: Number(env("IG_BEITRAEGE_WOCHENENDE", 2)),
     storiesProTag: Number(env("IG_STORIES_PRO_TAG", 9)),   // Instagram-Limit über die API: 100 Veröffentlichungen / 24 h
     /* Lokale Uhrzeiten (Europe/Berlin), zu denen Beiträge erscheinen. */
-    beitragsZeiten: ["09:30", "12:30", "19:30"],   // nur ohne Lernschleife (IG_ZEIT_LERNEN=false); sonst zeiten.mjs
+    beitragsZeiten: ["08:00","12:30","18:30"],   // ohne Lernschleife; mit Lernen zugleich die Cold-Start-Anker
     /* Lernende Uhrzeiten: Der Bot probiert Stunden aus und behält, was
        Reichweite bringt – getrennt nach Reel und Karussell und je Wochentag.
        Siehe zeiten.mjs. */
@@ -60,7 +60,12 @@ export const CONFIG = {
        Aendert sich der Cron in .github/workflows/instagram.yml, muss dieser
        Wert mitwandern - ein Test haelt beides zusammen. */
     zeitAbstandStunden: Number(env("IG_ZEIT_ABSTAND", "4")),
-    zeitErkundung: Number(env("IG_ZEIT_ERKUNDUNG", "0.35")),   // 0 = nur ausnutzen, größer = mehr ausprobieren
+    /* Startfenster aus externer Forschung plus Zielgruppenlogik; eigene
+       Instagram-Daten dürfen sie vollständig überstimmen, sobald die
+       Messbasis belastbar ist. Die Erkundung bleibt bewusst moderat. */
+    zeitStartAnker: { karussell: ["08:00","12:30"], reel: ["18:30"] },
+    zeitStartBonus: Number(env("IG_ZEIT_START_BONUS", "0.18")),
+    zeitErkundung: Number(env("IG_ZEIT_ERKUNDUNG", "0.20")),   // 0 = nur ausnutzen, größer = mehr ausprobieren
     zeitReifeTage: Number(env("IG_ZEIT_REIFE_TAGE", "2")),     // so alt muss ein Beitrag sein, damit seine Zahlen zählen
     zeitMindestMessungen: Number(env("IG_ZEIT_MESSUNGEN", "8")),   // so viele Beiträge müssen überhaupt Wirkung zeigen, sonst wird nur ausprobiert
     zeitMindestWirkung: Number(env("IG_ZEIT_WIRKUNG", "1")),       // mittlere Punkte je Beitrag, ab denen die Zahlen die Uhrzeit bestimmen

@@ -945,13 +945,12 @@ async function main() {
       }
       const beitrag = await textBesorgen(eintrag);
       const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
-      /* Produktregel: Karussell = fotorealistisches Cover + Icon; innere
-         Slides bleiben bildfrei. Archiv/Pexels/Bild-KI bilden die automatische
-         Rettungskette. Ohne Cover wird nicht still eine Icon-only-Kachel
-         veröffentlicht, sondern der Slot später erneut versucht. */
+      /* Produktregel: Karussell = bevorzugt fotorealistisches Cover + Icon;
+         innere Slides bleiben bildfrei. Archiv/Pexels/Bild-KI bilden die
+         automatische Rettungskette. Scheitern alle Bildquellen, gewinnt
+         Availability: das bestehende Icon-Cover wird trotzdem veröffentlicht. */
       if (!(await titelfolieBebildern(beitrag))) {
-        console.warn(`  ! Beitrag ${eintrag.slot}: kein fotorealistisches Cover verfügbar – Veröffentlichung wird verschoben.`);
-        continue;
+        console.warn(`  ! Beitrag ${eintrag.slot}: kein fotorealistisches Cover verfügbar – Veröffentlichung mit Icon-Cover.`);
       }
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
@@ -1184,8 +1183,7 @@ async function main() {
     try { beitrag = await beitragSchreiben({ format: RESERVE_FORMATE[thema.typ], thema, datum, strategie }); }
     finally { if (eigenerPosten) postenBeenden(); }
     if (!(await titelfolieBebildern(beitrag))) {
-      console.warn(`  ! Vorrat ${id}: kein fotorealistisches Cover – Eintrag wird nicht angelegt.`);
-      return null;
+      console.warn(`  ! Vorrat ${id}: kein fotorealistisches Cover – Reserve wird mit Icon-Cover gerendert.`);
     }
     const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
     const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "reserve", id), { variante });
@@ -1284,8 +1282,7 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
         hosting.jsonSchreiben(`inhalte/${slot}.json`, beitrag);
       }
       if (!(await titelfolieBebildern(beitrag))) {
-        console.warn(`  ! Auffüllen ${eintrag.slot}: kein fotorealistisches Cover – wird später erneut versucht.`);
-        continue;
+        console.warn(`  ! Auffüllen ${eintrag.slot}: kein fotorealistisches Cover – Veröffentlichung mit Icon-Cover.`);
       }
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "auffuellen"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Auffüllen ${slot}`);
