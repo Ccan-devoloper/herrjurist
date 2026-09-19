@@ -9,6 +9,7 @@ import { STILE } from "../src/stile.mjs";
 import { tageBis, minutenVon, hhmm, heuteIso } from "../src/zeit.mjs";
 import { tokenVerschluesseln, tokenEntschluesseln } from "../src/instagram.mjs";
 import fs from "node:fs";
+import crypto from "node:crypto";
 import os from "node:os";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
@@ -2700,7 +2701,7 @@ test("Story-Bezug kommt aus dem Webhook, wenn der Abruf ihn verschweigt", async 
   /* Wortgetreu aus state/webhook-roh.jsonl, gekuerzt um die Signatur-URL. */
   const MID = "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDQ2NTY0NTEwODc3";
   const webhookBezug = {
-    [MID]: { storyId: "17908618605537083", absender: "1079335494816469", text: "Test Beweislast", zeit: 1789603907432 },
+    [MID]: { storyId: "17908618605537083", zeit: 1789603907432 },
   };
   const ledger = {
     postfach: [],
@@ -2725,7 +2726,7 @@ test("Zweitschluessel Absender+Text traegt, wenn die Nachrichten-ID abweicht", a
   const { offeneNachrichten } = await import("../src/postfach.mjs");
   const jetzt = Date.parse("2026-09-17T00:20:00Z");
   const webhookBezug = {
-    "mid-aus-dem-ereignis": { storyId: "S7", absender: "42", text: "Test Beweislast", zeit: jetzt - 60000 },
+    "mid-aus-dem-ereignis": { storyId: "S7", fallbackHash: crypto.createHash("sha256").update("42\0Test Beweislast").digest("hex"), zeit: jetzt - 60000 },
   };
   const ledger = { postfach: [], veroeffentlicht: [{ medienId: "S7", art: "story", titel: "Anscheinsbeweis", datum: "2026-09-16" }] };
   const konv = [{
@@ -2734,7 +2735,7 @@ test("Zweitschluessel Absender+Text traegt, wenn die Nachrichten-ID abweicht", a
   }];
   const offen = offeneNachrichten(konv, "1", ledger, jetzt, [], webhookBezug);
   assert.match(offen[0].bezug, /Anscheinsbeweis/);
-  assert.equal(offen[0].bezugWie, "webhook/absender+text");
+  assert.equal(offen[0].bezugWie, "webhook/hash");
 
   /* Und die Gegenprobe: Ein anderer Absender mit demselben Wortlaut darf den
      Bezug NICHT erben. Sonst raet der Bot wieder, nur subtiler. */
@@ -2750,7 +2751,7 @@ test("Normale DM ohne Story bekommt keinen Bezug angedichtet", async () => {
   const jetzt = Date.parse("2026-09-17T00:20:00Z");
   /* Zweites echtes Ereignis vom 17.09.: "Test ohne Story" kam ohne reply_to
      herein - der Webhook unterscheidet die beiden Faelle also selbst. */
-  const webhookBezug = { "mid-a": { storyId: "S7", absender: "42", text: "Test Beweislast", zeit: jetzt - 60000 } };
+  const webhookBezug = { "mid-a": { storyId: "S7", fallbackHash: crypto.createHash("sha256").update("42\0Test Beweislast").digest("hex"), zeit: jetzt - 60000 } };
   const ledger = { postfach: [], veroeffentlicht: [{ medienId: "S7", art: "story", titel: "Anscheinsbeweis", datum: "2026-09-16" }] };
   const konv = [{
     id: "k1",

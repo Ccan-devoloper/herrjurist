@@ -1,0 +1,50 @@
+name: Themenpool schützen
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "bin/themen-tresor.mjs"
+      - "daten/themen.loader.mjs"
+      - ".github/workflows/themenpool-schuetzen.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: themenpool-schuetzen
+  cancel-in-progress: false
+
+jobs:
+  verschluesseln:
+    runs-on: ubuntu-latest
+    env:
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Schlüssel prüfen
+        run: |
+          test -n "$IG_WISSEN_KEY" || { echo "IG_WISSEN_KEY fehlt"; exit 1; }
+
+      - name: Themenpool verschlüsseln
+        run: |
+          node bin/themen-tresor.mjs packen daten/themen.mjs
+          cp daten/themen.loader.mjs daten/themen.mjs
+          node bin/themen-tresor.mjs pruefen
+
+      - name: Geschützten Pool auf main schreiben
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daten/themen.mjs daten/themen.json.enc
+          git commit -m "Themenpool verschlüsseln" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
