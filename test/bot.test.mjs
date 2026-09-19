@@ -6851,3 +6851,25 @@ test("Vorrat im Tageslauf 13: der Entnahmepfad kann gar keinen bezahlten Aufruf 
     }
   }
 });
+
+
+/* ===== Produktionsbudget: 19.09.2026 ====================================== */
+test("Produktionsbudget: Pflichtaufrufe reservieren reale Groessen statt 16k pauschal", async () => {
+  const { AUSGABE_CEILINGS } = await import("../src/autor.mjs");
+  const { admissionReserveUsd } = await import("../src/kosten.mjs");
+  assert.deepEqual({ ...AUSGABE_CEILINGS }, { autor: 6000, reel: 4000, stories: 4500 });
+  for (const [zweck, maxTokens] of Object.entries(AUSGABE_CEILINGS)) {
+    const usd = admissionReserveUsd({ modell: "claude-sonnet-5", maxTokens, eingabeTokens: 5000 });
+    assert.ok(usd < 0.12, `${zweck}: Admission ${usd} $ ist wieder tagesblockierend`);
+  }
+  const a = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  assert.ok(!/max_tokens:\s*16000/.test(a));
+  const f = fs.readFileSync(new URL("../src/faktencheck.mjs", import.meta.url), "utf8");
+  assert.ok(!/max_tokens:\s*6000/.test(f));
+});
+test("Produktionsbudget: guenstige Defaults und Reserve kann sich aufbauen", () => {
+  const c = fs.readFileSync(new URL("../src/config.mjs", import.meta.url), "utf8");
+  assert.match(c, /modellPruefungReel:\s*env\("IG_KI_MODELL_PRUEFUNG_REEL",\s*"claude-sonnet-5"\)/);
+  assert.match(c, /effortBeitrag:\s*env\("IG_KI_EFFORT_BEITRAG",\s*"low"\)/);
+  assert.match(c, /reserveNachschubMinUsd:\s*Number\(env\("IG_RESERVE_NACHSCHUB_MIN_USD",\s*"0\.08"\)\)/);
+});

@@ -322,12 +322,19 @@ export function entwuerfeAufraeumen(tage = 3, heute = heuteIso()) {
   return weg;
 }
 
+/* Ausgabedeckel je Pflichtaufgabe. 16.000 Token fuer jeden strukturierten
+   Aufruf blockierten am 19.09. die Admission nach nur einem realen Aufruf,
+   obwohl die fertigen Reels nur rund 2.000 Ausgabe-Token brauchten. Die Werte
+   hier sind harte Provider-Ceilings, keine Zielgroessen; Telemetrie bleibt
+   die Grundlage fuer spaetere Anpassungen. */
+export const AUSGABE_CEILINGS = Object.freeze({ autor: 6000, reel: 4000, stories: 4500 });
+
 /* Ein strukturierter Aufruf. Fällt bei Ablehnung oder Schema-Problemen auf
    einen zweiten Weg zurück, damit der Tageslauf nicht stehen bleibt. */
 async function strukturiert({ system, user, schema, modell = CONFIG.ki.modell, effort = CONFIG.ki.effort, zweck = "autor" }) {
   const basis = {
     model: modell,
-    max_tokens: 16000,
+    max_tokens: AUSGABE_CEILINGS[zweck] || 6000,
     system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
     messages: [{ role: "user", content: user }],
     thinking: { type: "adaptive" },
@@ -1109,7 +1116,12 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
     const woerter = szenen.reduce((n, s) => n + s.sprecher.split(/\s+/).length, 0);
     const zielVon = Math.round(von * WOERTER_JE_SEKUNDE), zielBis = Math.round(bis * WOERTER_JE_SEKUNDE);
     const min = Math.round(zielVon * 0.75), max = Math.round(zielBis * 1.25);
-    if (woerter < min || woerter > max) ergebnis.fehler.push(`Sprechertext hat ${woerter} Wörter (Ziel ${zielVon}–${zielBis})`);
+    /* Das gelernte Zeitfenster ist ein Optimierungsziel, kein Grund fuer eine
+       bezahlte Neufassung. Neu geschrieben wird nur, wenn die absolute
+       technische Reel-Grenze gerissen wuerde. */
+    const absolutMax = Math.round(CONFIG.reel.maxSekunden * WOERTER_JE_SEKUNDE);
+    if (woerter > absolutMax) ergebnis.fehler.push(`Sprechertext hat ${woerter} Wörter (absolute Grenze ${absolutMax})`);
+    else if (woerter < min || woerter > max) console.warn(`  ! Reel-Laenge ${woerter} Wörter außerhalb Ziel ${zielVon}–${zielBis}; wird ohne bezahlte Neufassung verwendet.`);
     if (!ergebnis.fehler.length) {
       const fakten = await faktenSicher(reel, "reel-faktencheck", { hinweis: pruefHinweis(thema) });
       korrekturenAnwenden(reel, fakten.korrekturen);

@@ -1180,7 +1180,7 @@ async function main() {
       const vorher = reserveBestand.length;
       const auf = await reserveAuffuellen({
         bestand: reserveBestand, heute: datum, kanal: KANAL, budget,
-        beitragsGrenzeUsd: CONFIG.ki.maxJeBeitragUsd,
+        beitragsGrenzeUsd: CONFIG.ki.reserveNachschubMinUsd,
         erzeugen: reserveBeitragErzeugen,
         speichern: (neuerBestand) => { reserveBestand = neuerBestand; hosting.jsonSchreiben(BESTAND_DATEI, bestandInhalt(neuerBestand, KANAL)); },
         log,

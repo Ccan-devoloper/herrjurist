@@ -221,7 +221,7 @@ export const CONFIG = {
        0,05 $ mehr am Tag. Beitraege und Stories bleiben bei Sonnet.
 
        IG_KI_MODELL_PRUEFUNG_REEL leer setzen schaltet zurueck auf Sonnet. */
-    modellPruefungReel: env("IG_KI_MODELL_PRUEFUNG_REEL", "claude-opus-5"),
+    modellPruefungReel: env("IG_KI_MODELL_PRUEFUNG_REEL", "claude-sonnet-5"),
     effort: env("IG_KI_EFFORT", "low"),   // „low“: etwa halbe Kosten je Entwurf, Faktencheck fängt Fehler ab
     /* Messversuch ab 18.09. (Beschluss des Betreibers): Beiträge und Reels
        schreiben mit „medium", Stories bleiben bei „low". In der Nacht zum
@@ -231,7 +231,7 @@ export const CONFIG = {
        ist, hat nie jemand gemessen. Verglichen wird nach einer Woche über
        state/kosten.json: autor + faktencheck je Tag gegen die Woche davor.
        IG_KI_EFFORT_BEITRAG=low stellt zurück. */
-    effortBeitrag: env("IG_KI_EFFORT_BEITRAG", "medium"),
+    effortBeitrag: env("IG_KI_EFFORT_BEITRAG", "low"),
     /* Reels getrennt: In der Nacht zum 18.09. kostete das Reel-Skript mit
        "medium" auf beiden Kanälen mehr als die Obergrenze je Beitrag (0,116 $
        und 0,143 $, 7.800 bzw. 10.100 Ausgabe-Token für 140 Wörter) und wurde
@@ -269,6 +269,9 @@ export const CONFIG = {
        und einer Neufassung 0,19 $ und nahm neun Stories mit. Das fängt sie
        weiterhin ab. */
     maxJeBeitragUsd: Number(env("IG_MAX_JE_BEITRAG_USD", "0.15")),
+    /* Nur die Startschwelle fuer einen Reserve-Nachschubversuch. Die echte
+       Kostenkontrolle bleibt vor jedem Anbieteraufruf aktiv. */
+    reserveNachschubMinUsd: Number(env("IG_RESERVE_NACHSCHUB_MIN_USD", "0.08")),
     /* Das Reel hat seine eigene Obergrenze, seit Opus es prueft. Sein Skript
        kostet gemessen 0,116 $, die Opus-Pruefung rund 0,09 $ - zusammen schon
        0,21 $. Mit der Beitragsgrenze von 0,15 $ waere das Reel an dem Tag
