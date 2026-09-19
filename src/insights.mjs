@@ -22,6 +22,16 @@ const METRIKEN_REEL_WATCH = "ig_reels_avg_watch_time,ig_reels_video_view_total_t
    API-Version liefert sie, deshalb mit Rückfall auf die Grundmetriken. */
 const METRIKEN_WACHSTUM = "follows,profile_visits";
 
+/* Stories haben einen eigenen Metriksatz. Anders als Feed/Reels sind ihre
+   Insights nur kurz verfuegbar; deshalb werden sie durch den stuendlichen
+   Lauf separat eingesammelt und dauerhaft ins Ledger geschrieben. */
+const METRIKEN_STORY_KERN = "reach,views,shares,total_interactions";
+const METRIKEN_STORY_AKTION = "replies,follows,profile_visits,profile_activity";
+const STORY_INSIGHTS_MIN_ALTER_STUNDEN = 1;
+const STORY_INSIGHTS_MAX_ALTER_STUNDEN = 23.75;
+const STORY_INSIGHTS_ABSTAND_STUNDEN = 4;
+const STORY_INSIGHTS_ENDSPURT_ABSTAND_STUNDEN = 2;
+
 function werte(r) {
   const o = {};
   for (const m of r.data || []) o[m.name] = m.values?.[0]?.value ?? m.total_value?.value ?? 0;
@@ -51,6 +61,108 @@ export async function medienInsights(ig, medium) {
   } catch {
     return null;
   }
+}
+
+
+/* Story-Navigation kommt als Breakdown statt als normale Zahl. Den Gesamtwert
+   behalten wir und legen die einzelnen Aktionen daneben ab, sofern Meta sie
+   liefert (z. B. taps_forward, taps_back, exits, swipe_forward). */
+function storyNavigationWerte(r) {
+  const out = werte(r);
+  const m = (r.data || []).find((x) => x.name === "navigation");
+  const breakdowns = m?.total_value?.breakdowns || m?.values?.[0]?.value?.breakdowns || [];
+  const results = breakdowns.flatMap((b) => b?.results || []);
+  let summe = 0, gefunden = 0;
+  for (const x of results) {
+    const roh = x?.dimension_values?.[0] ?? x?.dimension_value ?? x?.name ?? null;
+    if (!roh) continue;
+    const wert = Number(x?.value) || 0;
+    const schluessel = `navigation_${String(roh).toLowerCase().replace(/^story_/, "").replace(/[^a-z0-9]+/g, "_")}`;
+    out[schluessel] = wert;
+    summe += wert;
+    gefunden++;
+  }
+  if (gefunden && !(Number(out.navigation) > 0)) out.navigation = summe;
+  return out;
+}
+
+/* Kennzahlen einer Story. Metriken werden in kleinen Gruppen und bei Bedarf
+   einzeln abgefragt: Ein Feld, das auf einer API-Version nicht verfuegbar ist,
+   darf nicht verhindern, dass die uebrigen Story-Daten gespeichert werden. */
+export async function storyInsights(ig, storyId) {
+  if (!storyId) return null;
+  const out = {};
+  const sammeln = async (metric) => {
+    try {
+      Object.assign(out, werte(await ig.anfrage("GET", `${storyId}/insights`, { metric }, { versuche: 1 })));
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  for (const gruppe of [METRIKEN_STORY_KERN, METRIKEN_STORY_AKTION]) {
+    if (!(await sammeln(gruppe))) {
+      for (const metric of gruppe.split(",")) await sammeln(metric);
+    }
+  }
+
+  try {
+    Object.assign(out, storyNavigationWerte(await ig.anfrage(
+      "GET", `${storyId}/insights`,
+      { metric: "navigation", breakdown: "story_navigation_action_type" },
+      { versuche: 1 },
+    )));
+  } catch { /* optional; Kernmetriken bleiben */ }
+
+  /* Seit 2026 liefert Meta Link-Klicks fuer Stories nur ueber Facebook-Login.
+     Bei Instagram-Login wird die Abfrage bewusst ausgelassen. */
+  if (ig.host === "facebook") await sammeln("link_clicks");
+
+  return Object.keys(out).length ? out : null;
+}
+
+/* Story-Insights muessen eingesammelt werden, solange die Story noch lebt.
+   Der Bot laeuft stuendlich, misst aber nicht bei jedem Lauf: normal alle vier
+   Stunden, in den letzten Stunden vor Ablauf alle zwei. So bleibt der letzte
+   gespeicherte Stand nah am 24-h-Endwert, ohne die API unnoetig zu belasten. */
+export async function storyInsightsAktualisieren(ig, ledger, {
+  log = console.log,
+  jetzt = new Date(),
+  mindestAlterStunden = STORY_INSIGHTS_MIN_ALTER_STUNDEN,
+  maxAlterStunden = STORY_INSIGHTS_MAX_ALTER_STUNDEN,
+  abstandStunden = STORY_INSIGHTS_ABSTAND_STUNDEN,
+  endspurtAbstandStunden = STORY_INSIGHTS_ENDSPURT_ABSTAND_STUNDEN,
+} = {}) {
+  const jetztDatum = jetzt instanceof Date ? jetzt : new Date(jetzt);
+  const jetztMs = jetztDatum.getTime();
+  if (!Number.isFinite(jetztMs)) throw new Error("Ungueltiger Zeitpunkt fuer Story-Insights");
+
+  const stories = (ledger.veroeffentlicht || []).filter((e) =>
+    e.art === "story" && e.medienId && e.medienId !== "trocken");
+  let gemessen = 0, versucht = 0;
+
+  for (const e of stories) {
+    const veroeffentlichtMs = new Date(e.veroeffentlicht || `${e.datum}T12:00:00Z`).getTime();
+    if (!Number.isFinite(veroeffentlichtMs)) continue;
+    const alterStunden = (jetztMs - veroeffentlichtMs) / 3600000;
+    if (alterStunden < mindestAlterStunden || alterStunden >= maxAlterStunden) continue;
+
+    const letzterMs = e.insightsStand ? new Date(e.insightsStand).getTime() : NaN;
+    const noetigerAbstand = alterStunden >= 20 ? endspurtAbstandStunden : abstandStunden;
+    if (Number.isFinite(letzterMs) && (jetztMs - letzterMs) / 3600000 < noetigerAbstand) continue;
+
+    versucht++;
+    const m = await storyInsights(ig, e.medienId);
+    if (!m) continue;
+    e.insights = m;
+    e.insightsStand = jetztDatum.toISOString();
+    e.insightsAlterStunden = Math.round(alterStunden * 10) / 10;
+    gemessen++;
+  }
+
+  if (versucht) log(`Story-Insights: ${gemessen}/${versucht} Storys gespeichert`);
+  return { gemessen, versucht };
 }
 
 /* Konto: Follower, Reichweite der letzten 7 Tage, Online-Stunden. */

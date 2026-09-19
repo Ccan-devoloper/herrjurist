@@ -33,7 +33,7 @@ import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
 import { kommentareBeantworten } from "./interaktion.mjs";
 import { nachrichtenBeantworten } from "./postfach.mjs";
-import { lernschleife } from "./insights.mjs";
+import { lernschleife, storyInsightsAktualisieren } from "./insights.mjs";
 import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
@@ -640,6 +640,21 @@ async function main() {
     } catch (e) {
       console.error(`  ✗ Nachrichten: ${e.message}`);
     }
+    /* Story-Insights: im stuendlichen Lauf sichern, solange die Story noch lebt.
+       Anders als die taegliche Lernschleife darf das nicht nur einmal am Tag
+       passieren, weil Meta Story-Insights nach dem 24-h-Fenster nicht mehr
+       verlaesslich bereitstellt. */
+    try {
+      const r = await storyInsightsAktualisieren(ig, ledger, { log });
+      if (r.gemessen) {
+        ledgerSpeichern(ledgerPfad, ledger);
+        hosting.commit(`Story-Insights ${datum}`);
+        await hosting.push();
+      }
+    } catch (e) {
+      console.error(`  ✗ Story-Insights: ${e.message}`);
+    }
+
     /* Lernschleife: einmal am Tag beim ersten Lauf (Insights, Strategie, Follower). */
     const wochenStand = hosting.jsonLesen("lernschleife.json", { datum: null });
     if (wochenStand.datum !== datum) {
