@@ -88,6 +88,26 @@ export const FRIST_STUNDEN = 24;
 const NUR_EMOJI = /^[\p{Extended_Pictographic}\s!.?]+$/u;
 const WERBUNG = /\b(kooperation|zusammenarbeit|werbung|rabatt|gutschein|promo|follow4follow|f4f|gewinnspiel|invest|krypto|bitcoin|trading|abnehmen|onlyfans)\b/i;
 
+/* Im öffentlichen Ledger landet nur ein nicht umkehrbarer Fingerabdruck der
+   Nachrichten-ID. Benutzername, Konversations-ID, Antwort-ID und Wortlaut
+   werden für den Wiederholungsschutz nicht benötigt. */
+export function nachrichtHash(id) {
+  return id ? crypto.createHash("sha256").update(String(id)).digest("hex") : "";
+}
+
+export function postfachAnonymisieren(liste = []) {
+  if (!Array.isArray(liste)) return [];
+  return liste.map((x) => {
+    const hash = x?.nachrichtHash || nachrichtHash(x?.nachrichtId);
+    if (!hash || !x?.datum) return null;
+    return {
+      nachrichtHash: hash,
+      datum: String(x.datum).slice(0, 10),
+      status: x.status || (x.uebersprungen ? "uebersprungen" : "beantwortet"),
+    };
+  }).filter(Boolean);
+}
+
 /**
  * Sammelt die Nachrichten, die eine Antwort brauchen.
  *
@@ -121,7 +141,7 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
     return null;
   };
 
-  const beantwortet = new Set(ledger.postfach?.map((n) => n.nachrichtId) || []);
+  const beantwortet = new Set(postfachAnonymisieren(ledger.postfach).map((n) => n.nachrichtHash));
   const offen = [];
   const uebersprungen = [];
   const skip = (n, von, grund) => uebersprungen.push({ id: n.id, von, text: (n.message || "").slice(0, 60), grund });
@@ -192,7 +212,7 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
     if (letzte.from?.id && String(letzte.from.id) === String(eigeneId)) continue;
     const von = letzte.from?.username || letzte.from?.id || "?";
 
-    if (beantwortet.has(letzte.id)) { skip(letzte, von, "bereits behandelt"); continue; }
+    if (beantwortet.has(nachrichtHash(letzte.id))) { skip(letzte, von, "bereits behandelt"); continue; }
     const text = String(letzte.message || "").trim();
     /* Bilder, Sticker und geteilte Beiträge kommen ohne Text an. Darauf lässt
        sich nichts Sinnvolles antworten. */
@@ -267,7 +287,7 @@ ${live}${hintergrund}
 ${nachrichten.map((n) => {
     const b = n.bezug ? `\n  Bezug: ${n.bezug}` : "";
     const v = n.verlauf?.length ? `\n  Verlauf: ${n.verlauf.map((m) => `${m.wer === "kanal" ? "wir" : "sie/er"}: „${m.text}“`).join(" | ")}` : "";
-    return `- id ${n.id} · von @${n.von}: „${n.text}“${b}${v}`;
+    return `- id ${n.id}: „${n.text}“${b}${v}`;
   }).join("\n")}
 
 Sperrliste: ${korpus().namen.join(", ")}
@@ -322,20 +342,19 @@ export function webhookBezugLaden(stateDir) {
 /* Übersprungene Einträge je Grund zusammenfassen - eine Zeile je Grund mit
    bis zu drei Beispielen, statt einer Zeile je Eintrag. „bereits behandelt"
    ist Normalbetrieb und wird nicht gemeldet. */
-export function uebersprungeneMelden(liste, log = console.log, wer = "von") {
+export function uebersprungeneMelden(liste, log = console.log) {
   const gruppen = new Map();
   for (const u of liste) {
     if (u.grund === "bereits behandelt") continue;
     if (!gruppen.has(u.grund)) gruppen.set(u.grund, []);
     gruppen.get(u.grund).push(u);
   }
-  for (const [grund, eintraege] of gruppen) {
-    const beispiele = eintraege.slice(0, 3).map((u) => `@${u[wer] || u.username || "?"}${u.text ? ` „${String(u.text).slice(0, 40)}“` : ""}`).join(", ");
-    log(`  · ${eintraege.length} übersprungen (${grund})${beispiele ? `: ${beispiele}${eintraege.length > 3 ? ", …" : ""}` : ""}`);
-  }
+  for (const [grund, eintraege] of gruppen) log(`  · ${eintraege.length} übersprungen (${grund})`);
 }
 
 export async function nachrichtenBeantworten(ig, ledger, { log = console.log, stateDir = null } = {}) {
+  /* Alte Einträge werden auch ohne neue DM sofort auf das anonyme Schema reduziert. */
+  ledger.postfach = postfachAnonymisieren(ledger.postfach);
   const konversationen = await ig.konversationen(CONFIG.postfach.unterhaltungen);
   /* Welche Stories gerade laufen, ist die zweite Quelle fuer die Zuordnung -
      und, wenn sie doch misslingt, die Grundlage fuer eine gezielte Rueckfrage
@@ -356,28 +375,28 @@ export async function nachrichtenBeantworten(ig, ledger, { log = console.log, st
   /* Woher der Bezug kam, gehoert ins Log. Am 16.09. stand dort nur die
      Antwort - dass ihr der Bezug fehlte, war nicht zu sehen, und die Ursache
      musste im Nachhinein rekonstruiert werden. */
-  for (const n of offen) log(`  · Bezug @${n.von}: ${n.bezugQuelle}${n.bezugWie ? ` über ${n.bezugWie}` : ""}${n.bezugRoh ? ` (${n.bezugRoh})` : ""}${n.bezug ? ` – ${n.bezug.slice(0, 90)}` : ""}`);
+  for (const n of offen) log(`  · Bezug Nachricht ${nachrichtHash(n.id).slice(0, 10)}: ${n.bezugQuelle}${n.bezugWie ? ` über ${n.bezugWie}` : ""}${n.bezug ? ` – ${n.bezug.slice(0, 90)}` : ""}`);
   log(`  · Laufende Stories: ${alle.laufend?.length || 0}`);
   const antworten = await antwortenFormulieren(offen, alle.zuletzt || [], alle.laufend || []);
   const nachId = new Map(antworten.map((a) => [a.id, a.text]));
   const gruende = new Map(antworten.map((a) => [a.id, a.grund]));
   let n = 0;
-  ledger.postfach = ledger.postfach || [];
   for (const nachricht of offen) {
     const text = nachId.get(nachricht.id);
-    const eintrag = { nachrichtId: nachricht.id, konversationId: nachricht.konversationId, datum: new Date().toISOString().slice(0, 10), von: nachricht.von };
+    const hash = nachrichtHash(nachricht.id);
+    const eintrag = { nachrichtHash: hash, datum: new Date().toISOString().slice(0, 10) };
     if (!text) {
-      ledger.postfach.push({ ...eintrag, uebersprungen: true });
-      log(`  · @${nachricht.von} „${nachricht.text.slice(0, 60)}“ → keine Antwort (${gruende.get(nachricht.id) || "vom Modell übersprungen"})`);
+      ledger.postfach.push({ ...eintrag, status: "uebersprungen" });
+      log(`  · Nachricht ${hash.slice(0, 10)}: keine Antwort (${gruende.get(nachricht.id) || "vom Modell übersprungen"})`);
       continue;
     }
     try {
-      const antwortId = await ig.nachrichtSenden(nachricht.empfaengerId, text);
-      ledger.postfach.push({ ...eintrag, antwortId, text });
+      await ig.nachrichtSenden(nachricht.empfaengerId, text);
+      ledger.postfach.push({ ...eintrag, status: "beantwortet" });
       n++;
-      log(`  ↳ @${nachricht.von}: „${nachricht.text.slice(0, 60)}“ → „${text.slice(0, 80)}“`);
+      log(`  ↳ Nachricht ${hash.slice(0, 10)}: beantwortet`);
     } catch (e) {
-      console.error(`  ✗ Antwort an @${nachricht.von}: ${e.message}`);
+      console.error(`  ✗ Antwort auf Nachricht ${hash.slice(0, 10)}: ${e.message}`);
     }
   }
   /* Ledger schlank halten - wie bei den Kommentaren. */
