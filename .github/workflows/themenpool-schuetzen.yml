@@ -1,12 +1,6 @@
 name: Themenpool schützen
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "bin/themen-tresor.mjs"
-      - "daten/themen.loader.mjs"
-      - ".github/workflows/themenpool-schuetzen.yml"
   workflow_dispatch:
 
 permissions:
