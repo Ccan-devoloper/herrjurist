@@ -598,6 +598,17 @@ export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => nu
 */
 export const alleBefunde = (s) => [...(s?.beanstandet || []), ...(s?.beanstandetFachlich || [])];
 
+/**
+ * Waehlt gespeicherte Story-Entwuerfe aus, die in einem spaeteren Lauf
+ * erneut repariert werden muessen. Neu in diesem Lauf erzeugte Texte gehoeren
+ * nicht hierher; fuer sie existiert bereits die unmittelbare Reparaturschleife.
+ */
+export function persistierteStoryBeanstandungen(geschrieben, vorhandeneSlots = new Set()) {
+  const werte = geschrieben instanceof Map ? [...geschrieben.values()] : Array.isArray(geschrieben) ? geschrieben : [];
+  const slots = vorhandeneSlots instanceof Set ? vorhandeneSlots : new Set(vorhandeneSlots || []);
+  return werte.filter((s) => s?.slot && slots.has(s.slot) && alleBefunde(s).length);
+}
+
 export function quizNachschlag(strittig = [], planStories = [], textLesen = () => null) {
   const planStory = (slot) => (planStories || []).find((x) => x && x.slot === slot) || null;
   const partnerVon = (slot) => {
