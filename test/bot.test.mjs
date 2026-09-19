@@ -6819,3 +6819,35 @@ test("Vorrat im Tageslauf 12: die Reihenfolge steht so in lauf.mjs - nicht nur i
   /* 6. Die Vorratsbilder gehen nicht in die Datumsrotation. */
   assert.match(ohneKommentar, /hosting\.veroeffentlichen\(bilder, pfad, `Vorrat/);
 });
+
+test("Vorrat im Tageslauf 13: der Entnahmepfad kann gar keinen bezahlten Aufruf erreichen", async () => {
+  /* Die Namensprüfungen oben sehen nur, was in reservelauf.mjs SELBST steht.
+     Ein `import { claudeAufruf } from "./anbieter.mjs"` mit anderem Namen
+     ginge daran vorbei. Hier wird stattdessen die ganze transitive Hülle
+     bestimmt: Welche Module sind vom Entnahmepfad aus überhaupt erreichbar?
+
+     Drei sind es, und mehr dürfen es nicht werden. Die Entnahme am
+     Blockadetag ist damit nicht durch Disziplin kostenlos, sondern weil es
+     keinen Weg zu einem bezahlten Modul gibt. */
+  const gesehen = new Set();
+  const gehen = (datei) => {
+    if (gesehen.has(datei)) return;
+    gesehen.add(datei);
+    const quelle = fs.readFileSync(new URL(`../src/${datei}`, import.meta.url), "utf8");
+    for (const m of quelle.matchAll(/from "\.\/([\w.-]+\.mjs)"/g)) gehen(m[1]);
+  };
+  gehen("reservelauf.mjs");
+
+  assert.deepEqual([...gesehen].sort(), ["kostenfehler.mjs", "reserve.mjs", "reservelauf.mjs"],
+    `der Entnahmepfad erreicht jetzt mehr als die drei erlaubten Module: ${[...gesehen].sort().join(", ")}`);
+  /* Und die drei tragen keinen bezahlten Pfad. Geprüft wird der CODE, ohne
+     Kommentare: reservelauf.mjs erklärt in seinem Kopf, warum der Renderer
+     die Farbe aus dem Beitrag nimmt - das ist eine Erklärung, kein Zugriff. */
+  for (const datei of gesehen) {
+    const quelle = fs.readFileSync(new URL(`../src/${datei}`, import.meta.url), "utf8")
+      .replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+    for (const verboten of [/anbieter\.mjs/, /\bkosten\.mjs/, /budget\.mjs/, /autor\.mjs/, /render\.mjs/, /bilder\.mjs/, /instagram\.mjs/, /hosting\.mjs/]) {
+      assert.ok(!verboten.test(quelle), `${datei} greift auf ${verboten} zu - die Entnahme muss kostenlos bleiben`);
+    }
+  }
+});
