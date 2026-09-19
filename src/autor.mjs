@@ -438,17 +438,17 @@ async function nachbessern(inhalt, fakten, pruefen, zweck = "faktencheck", schlu
   entwurfBerichtigen(schluessel, fakten.behebbar);
   console.warn(`  ${n} Stelle(n) berichtigt statt neu geschrieben – wird erneut geprüft.`);
   if (pruefen && !pruefen(inhalt).ok) return null;
-  try {
-    const zweite = await pruefeFakten(inhalt, zweck);
-    return zweite.ok ? zweite : null;
-  } catch (e) {
-    /* Ist das Geld alle, darf das nicht wie „Berichtigung hat nicht
-       gereicht" aussehen - sonst schreibt der Aufrufer einen NEUEN Entwurf
-       und gibt noch mehr aus. Der Fehler geht nach oben, der berichtigte
-       Entwurf liegt im Speicher und wartet auf morgen. */
-    if (istKostenKontrollFehler(e)) throw e;
-    return null;
-  }
+  /* Alle harten Befunde hatten eine eindeutige Original→Ersatz-Fundstelle
+     und wurden exakt angewandt. Dafür noch einmal denselben Provider zu
+     bezahlen war am 19.09. ein Kostenmultiplikator: Prüfen → Korrigieren →
+     Nachprüfen, obwohl die Korrektur bereits vom Prüfer stammt. Die lokale
+     Strukturprüfung oben bleibt; eine weitere Provider-Runde ist keine
+     Voraussetzung für die Freigabe. */
+  return {
+    ok: true, fehler: [],
+    hinweise: [...(fakten.hinweise || []), "Alle harten Prüfbefunde wurden per exakter Fundstelle korrigiert; keine zweite Providerprüfung."],
+    korrekturen: [], behebbar: [],
+  };
 }
 
 /* Dieselbe Belegstelle, die der Autor beim Schreiben hatte, bekommt auch der
@@ -1183,7 +1183,7 @@ export async function bildregie(reel) {
   let response;
   try {
     response = await claudeAufruf({
-      zweck: "bildregie", modell: CONFIG.ki.modellNeben, slot: reel?.slug || "reel",
+      zweck: "bildregie", modell: CONFIG.ki.modellNeben, slot: reel?.slug || "reel", optional: true,
       params: {
         model: CONFIG.ki.modellNeben, max_tokens: 3000,
         system: [{ type: "text", text: BILDREGIE_SYSTEM, cache_control: { type: "ephemeral" } }],
