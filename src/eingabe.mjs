@@ -53,13 +53,31 @@
    den Cent.
 
    WAS DARAUS FOLGT
-   Fünf Größen, die auseinandergehalten werden müssen:
+   Größen, die auseinandergehalten werden müssen - und zwar in ZWEI Einheiten.
+   Sie zu vermischen ist der bequemste Weg, sich selbst zu täuschen:
 
-     clientInputBound       konservative Schranke über das, was wir senden
-     providerCountEstimate  vollständiger Zählwert, wo verfügbar
-     admissionBound         max(beide) - die Zahl, die reserviert wird
-     actualUsage            was der Anbieter hinterher meldet
-     invariantViolation     actualUsage > admissionBound
+     TOKEN
+       clientInputBoundTokens   konservative Schranke über das, was wir senden
+       providerCountTokens      vollständiger Zählwert, wo verfügbar
+       admissionBoundTokens     max(beide) - die Eingabezahl, mit der gerechnet wird
+       actualInputTokens        was der Anbieter hinterher meldet
+
+     DOLLAR
+       admissionReserveUsd      aus admissionBoundTokens und dem Ceiling
+                                gerechnet - der reservierte Betrag
+       actualUsd                was der Aufruf laut Usage gekostet hat
+
+     Die KOSTENINVARIANTE ist eine Aussage über Dollar:
+
+       invariantViolation   actualUsd > admissionReserveUsd
+
+     Auf der Tokenebene gilt die entsprechende Aussage getrennt:
+
+       actualInputTokens > admissionBoundTokens
+
+     Beides kann unabhängig voneinander eintreten - die Tokenschranke kann
+     halten, während der Dollarbetrag reißt (etwa bei einer Preisänderung),
+     und umgekehrt.
 
    Und darüber, in richtlinie.mjs, die Trennung zwischen dem Policy-Deckel
    (0,32 $) und der operativen Admissiongrenze darunter. Der Abstand ist ein

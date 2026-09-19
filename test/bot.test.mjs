@@ -5955,3 +5955,208 @@ test("1a: Der Admissionbedarf des Pflichtprodukts liegt über dem Deckel – und
      in den Posten. */
   assert.deepEqual(wc.posten.map((p) => p.maxTokens), [16000, 6000, 16000, 6000, 16000, 6000, 16000, 6000]);
 });
+
+/* ===== Reservebestand: die Policy ======================================== */
+
+const reserveBeitrag = (zusatz = {}) => ({
+  format: "karussell", themaId: "kst-schema-1", fach: "kst",
+  folien: [
+    { art: "titel", titel: "Das KSt-Grundschema" },
+    { art: "text", titel: "Aufbau", text: "Zuerst die Steuerpflicht, dann die Einkommensermittlung, dann die Tarifanwendung." },
+    { art: "karte" }, { art: "cta" },
+  ],
+  caption: "Das Grundschema in der richtigen Reihenfolge.",
+  ...zusatz,
+});
+const reserveEintrag = (zusatz = {}) => ({
+  id: "r1", kanal: "examenscampus",
+  erstelltAm: "2026-09-01", verfaelltAm: "2026-09-22",
+  themaId: "kst-schema-1", fach: "kst", typ: "schema", format: "karussell",
+  beitrag: reserveBeitrag(), bildUrls: ["https://x/1.png", "https://x/2.png"],
+  caption: "Das Grundschema in der richtigen Reihenfolge.", hashtags: ["#steuerberater"],
+  faktenFreigabe: { ok: true, geprueftAm: "2026-09-01T10:00:00.000Z", hinweise: [] },
+  regelVersion: 1,
+  ...zusatz,
+});
+
+test("Reserve: nur alterungsarme Themenarten kommen überhaupt in Frage", async () => {
+  const { themaTauglich, RESERVE_TYPEN } = await import("../src/reserve.mjs");
+
+  for (const typ of ["schema", "begriff"]) {
+    assert.equal(themaTauglich({ typ }).ok, true, `${typ} sollte zulässig sein`);
+  }
+  /* Module und Karteikarten tragen regelmäßig Jahreswerte, Formeln tragen
+     Sätze und Grenzen, Quiz gehört nicht in diese Phase. */
+  for (const typ of ["modul", "karteikarte", "formel", "quiz", undefined, null, "irgendwas"]) {
+    const r = themaTauglich({ typ });
+    assert.equal(r.ok, false, `${typ} darf nicht in den Vorrat`);
+    assert.ok(r.gruende.length, "die Ablehnung wird nicht begründet");
+  }
+  assert.equal(themaTauglich(null).ok, false, "ohne Thema kein Vorrat");
+  assert.deepEqual([...RESERVE_TYPEN], ["schema", "begriff"]);
+});
+
+test("Reserve: zeitabhängige Inhalte fallen durch, auch bei tauglichem Thema", async () => {
+  const { inhaltTauglich, reserveTauglich } = await import("../src/reserve.mjs");
+
+  /* Der Regelfall: reine Systematik, kein Zeitbezug. */
+  assert.equal(inhaltTauglich(reserveBeitrag()).ok, true, "reine Systematik wird abgelehnt");
+
+  /* Und die Fälle, die der Vorrat NICHT tragen darf. Jeder einzeln, damit
+     eine gelockerte Regel sichtbar wird. */
+  const faelle = [
+    ["Jahreszahl", { text: "Seit 2025 gilt die neue Reihenfolge." }],
+    ["Geldbetrag", { text: "Der Betrag von 1.000 € bleibt außer Ansatz." }],
+    ["Prozentsatz", { text: "Der Satz beträgt 15 % des Einkommens." }],
+    ["Verwaltungsanweisung", { text: "Das BMF sieht das anders." }],
+    ["Entscheidung", { text: "Der BFH hat das entschieden." }],
+    ["Fundstelle", { text: "Urteil vom 3. März, Az. I R 1/24." }],
+    ["Betragsgrenze", { text: "Der Freibetrag mindert die Bemessungsgrundlage." }],
+    ["Pauschale", { text: "Stattdessen greift die Pauschale." }],
+    ["Zeitbezug", { text: "Ab dem Veranlagungszeitraum gilt das nicht mehr." }],
+    ["Rechtsstand", { text: "Rechtsstand beachten." }],
+  ];
+  for (const [was, folie] of faelle) {
+    const b = reserveBeitrag({ folien: [{ art: "titel", titel: "X" }, { art: "text", titel: "Y", ...folie }] });
+    const r = inhaltTauglich(b);
+    assert.equal(r.ok, false, `${was} kommt durch: ${folie.text}`);
+    assert.ok(r.gruende.length, `${was} wird nicht begründet`);
+  }
+
+  /* Auch in der Caption, nicht nur in den Folien. */
+  assert.equal(inhaltTauglich(reserveBeitrag({ caption: "Stand 2026." })).ok, false, "die Caption wird nicht geprüft");
+
+  /* Recherche macht den Inhalt abhängig von einer Quelle, die altert. */
+  assert.equal(inhaltTauglich(reserveBeitrag({ format: "aktuell" })).ok, false);
+  assert.equal(inhaltTauglich(reserveBeitrag({ quellen: [{ url: "https://x" }] })).ok, false);
+  assert.equal(inhaltTauglich(reserveBeitrag({ recherche: true })).ok, false);
+
+  /* Beide Tore müssen offen sein - ein tauglicher Inhalt zum untauglichen
+     Thema reicht nicht, und umgekehrt auch nicht. */
+  assert.equal(reserveTauglich({ thema: { typ: "schema" }, beitrag: reserveBeitrag() }).ok, true);
+  assert.equal(reserveTauglich({ thema: { typ: "modul" }, beitrag: reserveBeitrag() }).ok, false);
+  assert.equal(reserveTauglich({ thema: { typ: "schema" }, beitrag: reserveBeitrag({ caption: "1.000 €" }) }).ok, false);
+});
+
+test("Reserve: ein Slug mit Jahreszahl sperrt den Beitrag nicht aus", async () => {
+  /* Die naheliegende Falle: Wer über das ganze Objekt sucht, findet in
+     `slug: "2026-09-19-b1"` eine Jahreszahl und sperrt damit jeden Beitrag
+     aus. Gesucht wird deshalb nur im Inhaltstext. */
+  const { inhaltTauglich, inhaltsText } = await import("../src/reserve.mjs");
+  const b = reserveBeitrag({ slug: "2026-09-19-b1", themaId: "kst-2024-schema", bildUrls: ["https://x/2025/1.png"] });
+  assert.equal(inhaltTauglich(b).ok, true, "Slug, Themen-ID oder Bildpfad sperren den Beitrag aus");
+  const text = inhaltsText(b);
+  assert.ok(!text.includes("2026-09-19"), "der Slug landet im geprüften Text");
+  assert.ok(text.includes("Steuerpflicht"), "der eigentliche Inhalt fehlt im geprüften Text");
+});
+
+test("Reserve: unvollständige Einträge werden nicht aufgenommen", async () => {
+  /* Ein halber Eintrag ist schlimmer als keiner: Er belegt einen Platz und
+     faellt am Blockadetag durch - wo es kein Geld gibt, ihn zu retten. */
+  const { vollstaendig, eintragBauen } = await import("../src/reserve.mjs");
+
+  assert.equal(vollstaendig(reserveEintrag()).ok, true, "der vollständige Eintrag wird abgelehnt");
+  for (const [feld, kaputt] of [
+    ["Beitragstext", { beitrag: { folien: [] } }],
+    ["Caption", { caption: "" }],
+    ["gerenderte Bilder", { bildUrls: [] }],
+    ["Faktenfreigabe", { faktenFreigabe: { ok: false } }],
+    ["Zeitpunkt der Faktenfreigabe", { faktenFreigabe: { ok: true } }],
+  ]) {
+    const r = vollstaendig(reserveEintrag(kaputt));
+    assert.equal(r.ok, false, `${feld} fehlt und faellt nicht auf`);
+    assert.ok(r.fehlend.some((f) => f.includes(feld.split(" ")[0])), `${feld}: ${r.fehlend.join(", ")}`);
+  }
+
+  /* eintragBauen nimmt nur an, was beide Tore passiert UND vollständig ist. */
+  const gut = eintragBauen({
+    id: "r9", kanal: "examenscampus", erstelltAm: "2026-09-19",
+    thema: { id: "kst-schema-1", fach: "kst", typ: "schema" },
+    beitrag: reserveBeitrag(), bildUrls: ["https://x/1.png"], caption: "Systematik.",
+    faktenFreigabe: { ok: true, geprueftAm: "2026-09-19T10:00:00.000Z" },
+  });
+  assert.equal(gut.ok, true, `Aufnahme abgelehnt: ${gut.gruende.join(" | ")}`);
+  assert.equal(gut.eintrag.verfaelltAm, "2026-10-10", "21 Tage Haltbarkeit");
+  assert.equal(gut.eintrag.regelVersion, 1);
+
+  const ohneBild = eintragBauen({
+    id: "r10", kanal: "examenscampus", erstelltAm: "2026-09-19",
+    thema: { id: "x", typ: "schema" }, beitrag: reserveBeitrag(),
+    bildUrls: [], caption: "Systematik.", faktenFreigabe: { ok: true, geprueftAm: "2026-09-19T10:00:00.000Z" },
+  });
+  assert.equal(ohneBild.ok, false, "ein Eintrag ohne Bilder wird aufgenommen");
+  assert.equal(ohneBild.eintrag, null);
+});
+
+test("Reserve: die Haltbarkeit ist hart - kein Nachcheck, keine Verlängerung", async () => {
+  const { abgelaufen, bestandPruefen, bedarf, TTL_TAGE, ZIEL_BESTAND, verfallsdatum } = await import("../src/reserve.mjs");
+  assert.equal(TTL_TAGE, 21);
+  assert.equal(ZIEL_BESTAND, 4);
+  assert.equal(verfallsdatum("2026-09-01"), "2026-09-22");
+
+  const frisch = reserveEintrag({ id: "a", erstelltAm: "2026-09-19", verfaelltAm: "2026-10-10" });
+  const alt = reserveEintrag({ id: "b", erstelltAm: "2026-08-01", verfaelltAm: "2026-08-22" });
+  assert.equal(abgelaufen(frisch, "2026-09-25"), false);
+  assert.equal(abgelaufen(alt, "2026-09-25"), true);
+  assert.equal(abgelaufen(alt, "2026-08-22"), false, "am letzten Tag gilt er noch");
+  assert.equal(abgelaufen(alt, "2026-08-23"), true, "einen Tag später nicht mehr");
+  assert.equal(abgelaufen({ id: "c" }, "2026-09-25"), true, "ohne Datum im Zweifel weg");
+
+  const { gueltig, verfallen } = bestandPruefen([frisch, alt], "2026-09-25");
+  assert.deepEqual(gueltig.map((e) => e.id), ["a"]);
+  assert.deepEqual(verfallen.map((e) => e.id), ["b"]);
+  assert.match(verfallen[0].grund, /TTL abgelaufen/);
+
+  /* Eine Regeländerung lässt den Altbestand nicht stillschweigend mitgelten. */
+  const alteRegel = reserveEintrag({ id: "d", erstelltAm: "2026-09-19", verfaelltAm: "2026-10-10", regelVersion: 0 });
+  assert.equal(bestandPruefen([alteRegel], "2026-09-25").gueltig.length, 0);
+  assert.match(bestandPruefen([alteRegel], "2026-09-25").verfallen[0].grund, /Regelversion/);
+
+  /* Bedarf: was zum Ziel fehlt - kein Mindestverbrauch. */
+  assert.equal(bedarf([], "2026-09-25"), 4);
+  assert.equal(bedarf([frisch], "2026-09-25"), 3);
+  assert.equal(bedarf([frisch, alt], "2026-09-25"), 3, "das Abgelaufene zählt nicht mit");
+  assert.equal(bedarf([frisch, frisch, frisch, frisch], "2026-09-25"), 0, "bei vollem Bestand wird nichts erzeugt");
+  assert.equal(bedarf([frisch, frisch, frisch, frisch, frisch], "2026-09-25"), 0, "und erst recht nicht darüber hinaus");
+});
+
+test("Reserve: die Entnahme kostet nichts und wiederholt kein junges Thema", async () => {
+  const { entnehmen } = await import("../src/reserve.mjs");
+
+  const a = reserveEintrag({ id: "a", themaId: "t-alt", erstelltAm: "2026-09-02", verfaelltAm: "2026-09-23" });
+  const b = reserveEintrag({ id: "b", themaId: "t-neu", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01" });
+  const weg = reserveEintrag({ id: "c", themaId: "t-weg", erstelltAm: "2026-08-01", verfaelltAm: "2026-08-22" });
+
+  /* Das Älteste zuerst: Was zuerst verfällt, wird zuerst gebraucht. */
+  const r1 = entnehmen([b, a, weg], { heute: "2026-09-19" });
+  assert.equal(r1.eintrag.id, "a", "nicht das älteste Stück genommen");
+  assert.deepEqual(r1.rest.map((e) => e.id), ["b"], "der Rest stimmt nicht");
+  assert.deepEqual(r1.verfallen.map((e) => e.id), ["c"]);
+
+  /* Ein Thema, das kürzlich erschienen ist, wird übersprungen. */
+  const ledger = { beitraege: [{ datum: "2026-09-05", thema: "t-alt" }] };
+  const r2 = entnehmen([b, a], { heute: "2026-09-19", ledger });
+  assert.equal(r2.eintrag.id, "b", "die Dublette wurde genommen");
+
+  /* Sind alle Themen jung, wird nichts entnommen - und der Grund steht da. */
+  const r3 = entnehmen([a, b], { heute: "2026-09-19", ledger: { beitraege: [{ datum: "2026-09-05", thema: "t-alt" }, { datum: "2026-09-06", thema: "t-neu" }] } });
+  assert.equal(r3.eintrag, null);
+  assert.match(r3.grund, /letzten 60 Tagen erschienen/);
+
+  /* Ein altes Vorkommen desselben Themas blockiert nicht ewig. */
+  const r4 = entnehmen([a], { heute: "2026-09-19", ledger: { beitraege: [{ datum: "2026-01-05", thema: "t-alt" }] } });
+  assert.equal(r4.eintrag.id, "a", "ein halbes Jahr altes Thema blockiert weiterhin");
+
+  /* Leerer Bestand: kein Absturz, ein benennbarer Grund. */
+  const r5 = entnehmen([], { heute: "2026-09-19" });
+  assert.equal(r5.eintrag, null);
+  assert.match(r5.grund, /kein gültiger Vorratsbeitrag/);
+
+  /* Und der Kern: Das Modul ruft keinen Anbieter und kein Budget. Die
+     Entnahme am Blockadetag muss ohne jeden bezahlten Aufruf funktionieren. */
+  const quelle = fs.readFileSync(new URL("../src/reserve.mjs", import.meta.url), "utf8");
+  for (const verboten of [/claudeAufruf/, /openaiAufruf/, /bildAufruf/, /budget\./, /anbieter\.mjs/, /import .*kosten\.mjs/]) {
+    assert.ok(!verboten.test(quelle), `die Reserve-Policy greift auf ${verboten} zu - die Entnahme muss kostenlos sein`);
+  }
+  assert.ok(!/^import /m.test(quelle), "die Reserve-Policy hat Abhängigkeiten - sie soll für sich stehen");
+});
