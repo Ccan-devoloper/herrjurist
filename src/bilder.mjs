@@ -283,8 +283,10 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
     }
   }
   console.log(`  → kein brauchbares Motiv zu „${szenen.join("“ / „")}“ – Titelfolie bleibt beim Icon.`);
-  /* Freistellen misslungen: lieber kein Bild als ein aufgeklebtes Rechteck. */
-  if (!CONFIG.bilder.rechteckErlaubt || !ersterRoh) return null;
+  /* Für ein Cover gilt Foto + Icon härter als die alte ästhetische Präferenz
+     gegen rechteckige Fotos: Wenn Freistellen scheitert, rettet die echte
+     Fotokarte die Veröffentlichung weiterhin kostenlos. */
+  if (!ersterRoh) return null;
   console.log(`  → Titelbild als Karte: „${ersteSzene}“ · ${erstesFoto.fotograf || "Pexels"}`);
   return { bild: `data:image/jpeg;base64,${fs.readFileSync(ersterRoh).toString("base64")}`, quelle: `Foto: ${erstesFoto.fotograf || "Pexels"} / Pexels`, seite: erstesFoto.seite, frei: false, typ: "foto" };
 }
