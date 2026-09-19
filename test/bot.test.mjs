@@ -6815,7 +6815,7 @@ test("Vorrat im Tageslauf 12: die Reihenfolge steht so in lauf.mjs - nicht nur i
   assert.ok(sperre > storySchleife, "die Pflichtsperre wird vor dem Auffüllen nicht nachgezogen");
 
   /* 5. Die Beitragsgrenze ist die konfigurierte, keine eigene Zahl. */
-  assert.match(ohneKommentar, /beitragsGrenzeUsd: CONFIG\.ki\.maxJeBeitragUsd/);
+  assert.match(ohneKommentar, /beitragsGrenzeUsd: CONFIG\.ki\.reserveNachschubMinUsd/);
   /* 6. Die Vorratsbilder gehen nicht in die Datumsrotation. */
   assert.match(ohneKommentar, /hosting\.veroeffentlichen\(bilder, pfad, `Vorrat/);
 });
