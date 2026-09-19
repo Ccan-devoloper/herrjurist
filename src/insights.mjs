@@ -17,6 +17,7 @@ import { hhmm } from "./zeit.mjs";
 
 const METRIKEN_BILD = "reach,saved,shares,likes,comments,total_interactions";
 const METRIKEN_REEL = "reach,saved,shares,likes,comments,total_interactions,views";
+const METRIKEN_REEL_WATCH = "ig_reels_avg_watch_time,ig_reels_video_view_total_time";
 /* Wachstumskennzahlen: neue Follower und Profilbesuche je Beitrag – nicht jede
    API-Version liefert sie, deshalb mit Rückfall auf die Grundmetriken. */
 const METRIKEN_WACHSTUM = "follows,profile_visits";
@@ -29,13 +30,24 @@ function werte(r) {
 
 /* Kennzahlen eines Mediums (Fehler → null, z. B. fehlende Berechtigung). */
 export async function medienInsights(ig, medium) {
-  const basis = medium.media_type === "VIDEO" || medium.media_product_type === "REELS" ? METRIKEN_REEL : METRIKEN_BILD;
+  const istReel = medium.media_type === "VIDEO" || medium.media_product_type === "REELS";
+  const basis = istReel ? METRIKEN_REEL : METRIKEN_BILD;
   try {
+    let out;
     try {
-      return werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: `${basis},${METRIKEN_WACHSTUM}` }, { versuche: 1 }));
+      out = werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: `${basis},${METRIKEN_WACHSTUM}` }, { versuche: 1 }));
     } catch {
-      return werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: basis }));
+      out = werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: basis }));
     }
+    /* Instagram nennt neben Sends/Likes auch Watch Time als zentrales
+       Rankingsignal. Die Reel-Watch-Metriken werden separat abgefragt:
+       Falls ein Konto/API-Stand sie nicht liefert, verlieren wir dadurch
+       nicht die robusten Basis-Insights. */
+    if (istReel) {
+      try { Object.assign(out, werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: METRIKEN_REEL_WATCH }, { versuche: 1 }))); }
+      catch { /* optionale Metrik, Basiswerte bleiben */ }
+    }
+    return out;
   } catch {
     return null;
   }
@@ -69,13 +81,21 @@ export function punkte(m) {
    Reichweite bekam. Fuer neue Zielgruppen ist Teilen/Senden pro Reach das
    wichtigste direkt verfuegbare Signal; bei Lerncontent kommt Save/Reach als
    Nutzwert dazu. Likes/Follows bleiben drin, aber ebenfalls normalisiert. */
-export function hookPunkte(m) {
+export function hookPunkte(m, dauerSekunden = null) {
   if (!m) return null;
   const reach = Number(m.reach) || 0;
   if (reach <= 0) return punkte(m);
   const pro = (x) => (Number(x) || 0) / reach;
-  return pro(m.shares) * 8 + pro(m.saved) * 5 + pro(m.likes) * 2
+  let score = pro(m.shares) * 8 + pro(m.saved) * 5 + pro(m.likes) * 2
     + pro(m.comments) * 2 + pro(m.follows) * 12 + pro(m.profile_visits) * 3;
+  /* Meta liefert die durchschnittliche Reel-Watch-Time in Millisekunden.
+     Normalisiert auf die echte Reel-Dauer misst sie Retention statt bloss
+     "laengeres Video = mehr Sekunden". Gedeckelt, damit ein einzelnes
+     Watch-Signal Shares/Saves nicht komplett ueberstimmt. */
+  const avgMs = Number(m.ig_reels_avg_watch_time) || 0;
+  const dauerMs = Number(dauerSekunden) > 0 ? Number(dauerSekunden) * 1000 : 0;
+  if (avgMs > 0 && dauerMs > 0) score += Math.min(1.5, avgMs / dauerMs) * 0.5;
+  return score;
 }
 
 /* Hashtag-Lernschleife: Welche Hashtags stehen unter den Beiträgen, die Follower
@@ -136,10 +156,10 @@ export function strategieAbleiten(ledger, konto = {}) {
   const strategie = { stand: new Date().toISOString().slice(0, 10), beitraege: eintraege.length, formatGewicht: {}, fachGewicht: {}, hookGewicht: {}, besteStunden: null, follower: konto.follower ?? null, reichweite7: konto.reichweite7 ?? null };
   if (eintraege.length >= 6) {
     const mittel = eintraege.reduce((a, e) => a + punkte(e.insights), 0) / eintraege.length || 1;
-    const gruppe = (key, scorer = punkte) => {
+    const gruppe = (key, scorer = (m) => punkte(m)) => {
       const g = {};
-      for (const e of eintraege) { const k = e[key]; if (!k) continue; (g[k] ||= []).push(scorer(e.insights)); }
-      const alle = eintraege.map((e) => scorer(e.insights)).filter((x) => Number.isFinite(x));
+      for (const e of eintraege) { const k = e[key]; if (!k) continue; (g[k] ||= []).push(scorer(e.insights, e)); }
+      const alle = eintraege.map((e) => scorer(e.insights, e)).filter((x) => Number.isFinite(x));
       const basis = alle.reduce((a, b) => a + b, 0) / (alle.length || 1) || 1;
       const out = {};
       for (const [k, v] of Object.entries(g)) if (v.length >= 2) out[k] = Math.max(0.5, Math.min(2, (v.reduce((a, b) => a + b, 0) / v.length) / basis));
@@ -150,7 +170,7 @@ export function strategieAbleiten(ledger, konto = {}) {
     /* Hooks lernen aus Reaktionen PRO REACH, nicht aus absoluter Reichweite:
        Sonst gewinnt das Muster, das schon ausgespielt wurde, statt das Muster,
        das Menschen zum Weiterleiten/Speichern gebracht hat. */
-    strategie.hookGewicht = { ...gruppe("hookTyp", hookPunkte), ...gruppe("hookMuster", hookPunkte) };
+    strategie.hookGewicht = { ...gruppe("hookTyp", (m, e) => hookPunkte(m, e.dauer)), ...gruppe("hookMuster", (m, e) => hookPunkte(m, e.dauer)) };
   }
   /* Reel-Länge: Wie viele Reels je Fenster gemessen sind und wie sie liefen.
      Die Messungen stehen auch dann schon zur Verfügung, wenn es für Gewichte

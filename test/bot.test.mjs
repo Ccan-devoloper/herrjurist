@@ -6901,3 +6901,13 @@ test("Veröffentlichung räumt einen alten Budgetblocker", async () => {
   planBereinigen(alt);
   assert.equal(alt.beitraege[0].budgetBlockiert, undefined);
 });
+
+
+test("Hook-Lernen nimmt Reel-Watch-Time normalisiert auf", async () => {
+  const { hookPunkte } = await import("../src/insights.mjs");
+  const basis = { reach: 1000, shares: 10, saved: 10, likes: 30 };
+  const kurzGehalten = hookPunkte({ ...basis, ig_reels_avg_watch_time: 30000 }, 40);
+  const langVerloren = hookPunkte({ ...basis, ig_reels_avg_watch_time: 30000 }, 80);
+  assert.ok(kurzGehalten > langVerloren, "gleiche Watch-Sekunden werden nicht auf Reel-Dauer normalisiert");
+  assert.equal(hookPunkte(basis, 40), hookPunkte(basis), "fehlende Watch-Metrik verändert Nicht-Reels");
+});
