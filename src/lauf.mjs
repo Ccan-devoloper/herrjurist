@@ -165,7 +165,14 @@ async function erklaerMotive(reel) {
 async function titelfolieBebildern(beitrag) {
   const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
   if (!titelfolie) return false;
-  if (titelfolie.bild) return true;
+  /* Alte gespeicherte Cover ohne Herkunftsmarker können aus der früheren
+     Flat-Illustrationsphase stammen. Nur explizit fotografische Cover oder
+     echte Pexels-Fotos werden unverändert übernommen; alles andere wird
+     einmal sauber neu beschafft. */
+  if (titelfolie.bild && (titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
+  if (titelfolie.bild) {
+    for (const k of ["bild","bildQuelle","bildFrei","bildBreite","bildHoehe","bildTyp"]) delete titelfolie[k];
+  }
   try {
     const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum });
     if (!treffer) return false;
