@@ -43,6 +43,7 @@ import { zustandsSicherung } from "./zustand.mjs";
 import { budgetStarten, ZWECK_TOPF, AdmissionAbgelehnt, TopfGesperrt } from "./budget.mjs";
 import { telemetrieStarten } from "./telemetrie.mjs";
 import { journalStarten } from "./journal.mjs";
+import { gemeinschaftsBudget } from "./gemeinschaftsbudget.mjs";
 import { bestandLaden, bestandInhalt, reserveAufraeumen, reserveEntnehmen, reserveAuffuellen, ersatzZulaessig, BESTAND_DATEI } from "./reservelauf.mjs";
 import { themaTauglich, ZIEL_BESTAND, RESERVE_FORMATE, DUBLETTEN_TAGE } from "./reserve.mjs";
 import { kontextSetzen, tagesplanAdmissionBedarf } from "./anbieter.mjs";
@@ -354,11 +355,377 @@ async function main() {
      steht in keiner Anfrage, die wir vorher wiegen koennen; und der
      Zaehlendpunkt ist laut Anbieter eine Schaetzung ohne zugesicherte
      Maximalabweichung. Was nicht exakt vorhersagbar ist, bekommt Abstand. */
+  const gemeinschaft = trocken
+    ? { fremdFrei: { core: 0, engagement: 0, research: 0 }, grund: "Trockenlauf" }
+    : await gemeinschaftsBudget({ kanal: KANAL, datum, deckel: konfiguration.betriebsDeckel });
   const budget = budgetStarten({
-    deckel: konfiguration.betriebsDeckel, bisher: bisherJeTopf, breakGlass: konfiguration.breakGlass.aktiv,
-    protokoll: () => {},
+    deckel: konfiguration.betriebsDeckel, bisher: bisherJeTopf, fremdFrei: gemeinschaft.fremdFrei,
+    breakGlass: konfiguration.breakGlass.aktiv, protokoll: () => {},
   });
   kontextSetzen({ budget, telemetrie, journal, kanal: KANAL, datum });
+  const fremdSumme = Object.values(gemeinschaft.fremdFrei || {}).reduce((a, b) => a + Number(b || 0), 0);
+  if (fremdSumme > 0) {
+    log(`  Gemeinschaftsbudget: Schwesterkanal ist pflichtseitig vorbereitet; frei für Pflichtaufrufe: Core ${(gemeinschaft.fremdFrei.core || 0).toFixed(4)} · Engagement ${(gemeinschaft.fremdFrei.engagement || 0).toFixed(4)} · Research ${(gemeinschaft.fremdFrei.research || 0).toFixed(4)} /* ==========================================================================
+   Tageslauf – wird stündlich von GitHub Actions gestartet.
+
+   1. Asset-Zweig holen (Bilder, Ledger, Tagesplan, Token-Tresor)
+   2. Tagesplan laden oder für heute erzeugen
+   3. Alle fälligen, noch nicht veröffentlichten Einträge abarbeiten:
+      schreiben → prüfen → rendern → hochladen → veröffentlichen → vermerken
+   4. Zustand committen und pushen
+
+   Optionen:  --nur-planen   Plan anzeigen, nichts erzeugen
+              --nur-rendern  Inhalte erzeugen und rendern, nichts veröffentlichen (wie IG_DRY_RUN=true)
+              --datum=YYYY-MM-DD  Plan eines anderen Tages (für Tests)
+              --alles        alle Einträge des Tages sofort (ohne Uhrzeit-Prüfung)
+   ========================================================================== */
+
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { CONFIG } from "./config.mjs";
+import { istKostenKontrollFehler, budgetStoppGrund } from "./kostenfehler.mjs";
+import { mindsetThema } from "./kalender.mjs";
+import { stickerFarbe } from "./stile.mjs";
+import { zeitStatistik } from "./zeiten.mjs";
+import { themenpool, KLAUSUREN } from "./inhalte.mjs";
+import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
+import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizPaarFreigabe, storyFreigabe, quizNachschlag, alleBefunde } from "./pruefung.mjs";
+import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
+import { reelBauen, layoutFuer } from "./reel.mjs";
+import { motiveVerteilen } from "./erklaervideo.mjs";
+import { beitragRendern, storyRendern, storyRendernInteraktiv, browserBeenden } from "./render.mjs";
+import { interaktivGeplant, interaktivPosten, umfrageBauen, sperreAktiv } from "./interaktiv.mjs";
+import { Instagram } from "./instagram.mjs";
+import { Hosting } from "./hosting.mjs";
+import { kommentareBeantworten } from "./interaktion.mjs";
+import { nachrichtenBeantworten } from "./postfach.mjs";
+import { lernschleife } from "./insights.mjs";
+import { verteilen } from "./verteilen.mjs";
+import { varianteErmitteln } from "./wechsel.mjs";
+import { kartenVerschicken } from "./nachrichten.mjs";
+import { berichtErstellen, berichtSenden } from "./bericht.mjs";
+import { abschluss as kostenAbschluss, budgetSetzen, erwartet, vortagsSchaetzung, tagesStand, tagesLimit, antwortStand, antwortLimit, runden, postenBeginnen, postenBeenden, postenAktiv, PostenFehler, BudgetFehler } from "./kosten.mjs";
+import { zustandsSicherung } from "./zustand.mjs";
+import { budgetStarten, ZWECK_TOPF, AdmissionAbgelehnt, TopfGesperrt } from "./budget.mjs";
+import { telemetrieStarten } from "./telemetrie.mjs";
+import { journalStarten } from "./journal.mjs";
+import { gemeinschaftsBudget } from "./gemeinschaftsbudget.mjs";
+import { bestandLaden, bestandInhalt, reserveAufraeumen, reserveEntnehmen, reserveAuffuellen, ersatzZulaessig, BESTAND_DATEI } from "./reservelauf.mjs";
+import { themaTauglich, ZIEL_BESTAND, RESERVE_FORMATE, DUBLETTEN_TAGE } from "./reserve.mjs";
+import { kontextSetzen, tagesplanAdmissionBedarf } from "./anbieter.mjs";
+import { effektiveKonfiguration, richtlinieGate, REGEL_DECKEL } from "./richtlinie.mjs";
+import { veroeffentlichungEintragen, veroeffentlichtBestaetigt, planBereinigen, planNurAusTrockenlauf, echteMedienId } from "./veroeffentlichung.mjs";
+import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
+import { kandidatenSuchen, stimmeUebernehmen, stimmeWaehlen, gewinner, stimmenStatistik } from "./stimmen.mjs";
+import { titelbild } from "./bilder.mjs";
+import { wochentag } from "./zeit.mjs";
+import { heuteIso, lokaleMinuten, minutenVon } from "./zeit.mjs";
+
+const hier = path.dirname(fileURLToPath(import.meta.url));
+const args = new Map(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, "").split("="); return [k, v ?? true]; }));
+const datum = args.get("datum") || heuteIso();
+const nurPlanen = args.has("nur-planen");
+const trocken = args.has("nur-rendern") || CONFIG.instagram.trockenlauf;
+const alles = args.has("alles");
+const auffuellen = Number(args.get("auffuellen") || 0);
+const AUSGABE = path.resolve(hier, "../out", datum);
+
+function log(...t) { console.log(new Date().toISOString().slice(11, 19), ...t); }
+
+/* Schwarz/Weiß-Wechsel: Beiträge alternieren fortlaufend über alle Tage
+   (Schachbrett im Profil), Stories alternieren innerhalb des Tages. */
+const tagIndex = Math.floor(new Date(`${datum}T12:00:00Z`).getTime() / 86400000);
+const varianteStory = (slot) => (CONFIG.marke.farbeJeKlausur ? 0 : (Number(slot.slice(1)) - 1) % 2);
+
+/* Plan serialisierbar machen: Themen nur als ID + Titel, Inhalte separat. */
+/* Was ein Lauf bezahlt hat, muss er auch sichern - selbst dann, wenn er nichts
+   veroeffentlicht und selbst dann, wenn er mit einem Fehler endet.
+
+   Am 18.09. fehlte genau das. Die Zeile "Nichts faellig" stand VOR dem Block,
+   der den Zustand festschreibt, und kehrte mit `return` zurueck. Zwei Laeufe
+   schrieben denselben Beitrag fuer zusammen 0,166 $; weil sie nichts
+   veroeffentlichten, landeten weder der bezahlte Entwurf noch die Kosten im
+   Asset-Zweig. Der naechste Lauf fand keinen Entwurf, schrieb ihn noch einmal
+   und bezahlte noch einmal - und der Tagesdeckel rechnete die ganze Zeit mit
+   einem Stand, der 0,17 $ zu niedrig war.
+
+   Die Funktion haengt deshalb nicht mehr im Ablauf von main(), sondern wird
+   dort einmal gesetzt und am Ende des Prozesses in jedem Fall aufgerufen. Was
+   sie genau einmal tut (Kosten) und was sie wiederholen darf (Commit, Push),
+   steht in src/zustand.mjs - ein gescheiterter Push wird dort erneut
+   versucht, ohne die Wochenkosten ein zweites Mal zu addieren. */
+/* Die zugesagte Tagesmenge dieses Kanals. Sie steht hier und nicht in einer
+   Umgebungsvariablen, damit eine stille Aenderung auffaellt: Das Gate vor dem
+   ersten bezahlten Aufruf vergleicht die effektive Konfiguration dagegen. */
+const KANAL = "herrjurist";
+const PRODUKT = { reelZusaetzlich: true, beitraegeWerktag: 2, storiesProTag: 9 };
+
+let zustandSichern = async () => {};
+
+/* Was ein Lauf gesendet haette, aber nicht gesendet hat. Steht bewusst nur
+   hier im Speicher und landet am Ende in out/<datum>/trockenlauf.json - nicht
+   im Tagesplan, den der naechste Livelauf liest. */
+const probelaeufe = [];
+
+function planSpeichern(hosting, plan) {
+  hosting.jsonSchreiben(`plaene/${plan.datum}.json`, plan);
+}
+
+/* Bildnachweis fuer die Caption. Pexels verlangt einen sichtbaren Hinweis auf
+   die Quelle; auf der Kachel stoert er, in der Caption nicht. */
+function bildnachweis(beitrag) {
+  const q = beitrag?.folien?.find((f) => f.art === "titel")?.bildQuelle;
+  return q ? `\n\n${q}` : "";
+}
+
+/* Motiv für Reel-Cover oder Story: dieselbe Suche wie für die Titelfolie
+   (bildSzene → Pexels → freistellen), abgelegt am Objekt selbst. */
+/* Verzeichnis der archivierten Motive. Steht erst fest, wenn der Asset-Zweig
+   ausgecheckt ist - bis dahin null, dann wird nichts archiviert. */
+let motivArchivDir = null;
+
+/* Welches Rechtsgebiet fehlt dem Tag noch? Zwei der drei Beitraege bekommen
+   ihr Gebiet fest zugeteilt (planer.mjs); „aktuell" hat keines, weil es der
+   Nachrichtenlage folgt. Das uebrige Gebiet geht als Wunsch in die Recherche -
+   so zeigt auch der Mittwoch moeglichst alle drei Farben. */
+function fehlendesGebiet(plan) {
+  const belegt = new Set((plan?.beitraege || []).map((b) => b.thema?.klausur).filter(Boolean));
+  const offen = [1, 2, 3].filter((g) => !belegt.has(g));
+  return offen.length === 1 ? KLAUSUREN[offen[0]]?.label || null : null;
+}
+
+async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
+  if (!ziel || ziel.bild || !ziel.bildSzene) return;
+  try {
+    const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, ...opt });
+    if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null; }
+  } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
+}
+
+/**
+ * Motive fuer das Erklaervideo: je Szene eine Figur. Anders als beim Cover
+ * bekommen sie keinen Stickerrand - sie stehen gross und angeschnitten auf
+ * der Buehne, ein weisser Saum saehe dort aus wie ein Ausschneidefehler.
+ *
+ * Der Deckel je Reel ist der eigentliche Punkt: Vier Motive kosten vier Cent,
+ * acht waeren die Haelfte des Tagesbudgets. Was darueber hinausgeht, nimmt
+ * eine Figur aus einer frueheren Szene desselben Reels - im Vorbild taucht
+ * dieselbe Figur ohnehin mehrfach auf. Motive aus dem Archiv kosten nichts
+ * und zaehlen deshalb nicht gegen den Deckel.
+ */
+async function erklaerMotive(reel) {
+  const deckel = Math.max(0, CONFIG.reel.erklaerBilder);
+  let gezeichnet = 0;
+  for (const szene of reel.szenen) {
+    if (szene.bild || !szene.bildSzene) continue;
+    const vorher = tagesStand();
+    /* Ist der Deckel erreicht, wird weiter im Archiv gesucht, aber nicht mehr
+       gezeichnet. Ein passendes altes Motiv kostet nichts und trifft das
+       Thema - die wiederholte Figur der Nachbarszene tut das nicht. */
+    await motivBesorgen(szene, "Erklärbild", { randFarbe: null, nurArchiv: gezeichnet >= deckel, zweck: "erklaerbild" });
+    if (szene.bild && tagesStand() > vorher) gezeichnet++;
+  }
+  return motiveVerteilen(reel.szenen);
+}
+
+/* Setzt das Foto auf die Titelfolie, sofern eines gefunden wird. */
+async function titelfolieBebildern(beitrag) {
+  const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
+  if (!titelfolie) return false;
+  /* Alte gespeicherte Cover ohne Herkunftsmarker können aus der früheren
+     Flat-Illustrationsphase stammen. Nur explizit fotografische Cover oder
+     echte Pexels-Fotos werden unverändert übernommen; alles andere wird
+     einmal sauber neu beschafft. */
+  if (titelfolie.bild && (titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
+  if (titelfolie.bild) {
+    for (const k of ["bild","bildQuelle","bildFrei","bildBreite","bildHoehe","bildTyp"]) delete titelfolie[k];
+  }
+  try {
+    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum });
+    if (!treffer) return false;
+    titelfolie.bild = treffer.bild;
+    titelfolie.bildQuelle = treffer.quelle;
+    titelfolie.bildFrei = treffer.frei !== false;
+    titelfolie.bildBreite = treffer.breite || null;
+    titelfolie.bildHoehe = treffer.hoehe || null;
+    titelfolie.bildTyp = treffer.typ || "foto";
+    return true;
+  } catch (e) {
+    console.warn(`  ! Titelbild: ${e.message}`);
+    return false;
+  }
+}
+
+async function main() {
+  log(`Instagram-Bot · ${datum} · Stil ${CONFIG.marke.stil} · ${trocken ? "TROCKENLAUF" : "live"}`);
+
+  /* IG_NO_PUSH=true: nichts in den Assets-Zweig pushen – für Trockenläufe
+     gegen eine Kopie des Zustands. Ein Trockenlauf am 13.09. hatte sonst
+     Beispieltexte für den Folgetag in den echten Zweig geschoben. */
+  const hosting = new Hosting({ pushen: !nurPlanen && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
+  motivArchivDir = path.join(hosting.stateDir, "motive");
+  /* Bezahlte Entwürfe überleben den Lauf, in dem sie entstanden sind - siehe
+     autor.mjs. Aufgeräumt wird gleich zu Beginn, damit der Zweig nicht wächst. */
+  entwurfsspeicher(path.join(hosting.stateDir, "entwuerfe"));
+  entwuerfeAufraeumen();
+  const ledgerPfad = path.join(hosting.stateDir, "ledger.json");
+
+  /* Erfundene Firmennamen früherer Beiträge sperren: Der Autor bekommt sie
+     als Sperrliste, die Prüfung weist Wiederholungen ab. So gibt es keine
+     Haus-Firma, die in jedem zweiten Beitrag auftaucht. */
+  const alteFirmen = benutzteFirmen(path.join(hosting.stateDir, "inhalte"), datum);
+  if (alteFirmen.length) namenSperren(alteFirmen);
+
+  /* Tagesdeckel: bisheriger Verbrauch des Tages aus state/kosten.json, jeder
+     weitere Aufruf wird sofort dort festgehalten. */
+  const kostenStart = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} });
+  /* Ausnahmen vom Tagesdeckel, je Datum, im Zustand des Kanals
+     (state/budget-ausnahmen.json, etwa { "2026-09-13": 0.40 }). Für genau
+     einen Tag, danach gilt wieder der Deckel aus der Konfiguration. */
+  const ausnahmen = hosting.jsonLesen("budget-ausnahmen.json", {});
+
+  /* --- Phase 1a: drei Töpfe, effektive Konfiguration, Admission ---------
+     Die Datums-Ausnahmen bleiben als Audit-Historie stehen, heben aber
+     keinen geplanten Lauf mehr an. Eine Anhebung ist eine manuelle Handlung
+     mit Begründung - am 18.09. lief der Bot mit 0,80 $ statt 0,32 $, ohne
+     dass an diesem Tag jemand etwas entschieden hätte. */
+  const ausloeser = process.env.GITHUB_EVENT_NAME || (process.env.CI ? "unbekannt" : "lokal");
+  const konfiguration = effektiveKonfiguration({
+    ausloeser, datum, ausnahmen,
+    deckel: { core: CONFIG.ki.tagesBudgetUsd, engagement: CONFIG.antworten.tagesBudgetUsd, research: CONFIG.ki.researchBudgetUsd ?? REGEL_DECKEL.research },
+    breakGlass: {
+      aktiv: String(process.env.IG_BREAK_GLASS || "") === "true",
+      betragUsd: Number(process.env.IG_BREAK_GLASS_USD || 0),
+      grund: process.env.IG_BREAK_GLASS_GRUND || "",
+    },
+  });
+  for (const h of konfiguration.hinweise) log(`  ${h}`);
+  richtlinieGate({
+    konfiguration,
+    /* Die Produktmenge ist das Versprechen an die Leser, keine Stellschraube
+       fuer Kostenprobleme: Herr Jurist 2 Karussells + 1 Reel, Examens Campus
+       1 Karussell + 1 Reel, dazu die Stories. Stimmt sie nicht, startet der
+       Lauf nicht. */
+    produkt: {
+      reelZusaetzlich: !!CONFIG.reel?.zusaetzlich,
+      beitraegeWerktag: CONFIG.plan.beitraegeWerktag,
+      storiesProTag: CONFIG.plan.storiesProTag,
+    },
+    erwartet: {
+      reelZusaetzlich: PRODUKT.reelZusaetzlich,
+      beitraegeWerktag: PRODUKT.beitraegeWerktag,
+      storiesProTag: PRODUKT.storiesProTag,
+    },
+    researchSuchen: Math.min(CONFIG.ki.rechercheSuchen ?? 2, 2),
+    zwecke: Object.keys(ZWECK_TOPF), zweckTopf: ZWECK_TOPF,
+  });
+
+  const tagesLimitUsd = konfiguration.betriebsDeckel.core;
+  /* Der Antworttopf (Kommentare, Nachrichten) wird getrennt geführt. Ein
+     Tageseintrag von vor dieser Trennung hat noch kein Feld `antworten`;
+     dann steckt der Betrag im Gesamtwert und wird einmalig herausgerechnet. */
+  const heute = kostenStart.tage?.[datum] || {};
+  const antwortenBisher = heute.antworten ?? Number(((heute.zwecke?.kommentare || 0) + (heute.zwecke?.nachrichten || 0)).toFixed(4));
+  const inhaltBisher = heute.antworten != null ? (heute.usd || 0) : Math.max(0, (heute.usd || 0) - antwortenBisher);
+  budgetSetzen({
+    limitUsd: tagesLimitUsd,
+    antwortLimitUsd: CONFIG.antworten.tagesBudgetUsd,
+    bisher: inhaltBisher,
+    bisherAntworten: antwortenBisher,
+    gemessen: kostenStart.tage?.[datum]?.messungen || {},
+    /* Was die Vortage gemessen haben, bis der heutige Lauf eigene Zahlen hat. */
+    vortag: vortagsSchaetzung(kostenStart.tage || {}, datum),
+    speichern: (usd, aufrufe, zwecke, gemessen, antworten) => {
+      const k = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} }); k.tage = k.tage || {};
+      const alt = kostenStart.tage?.[datum] || {};
+      const gesamtZwecke = { ...(alt.zwecke || {}) };
+      for (const [z, betrag] of Object.entries(zwecke || {})) gesamtZwecke[z] = Number(((alt.zwecke?.[z] || 0) + betrag).toFixed(4));
+      const hoechste = { ...(alt.messungen || {}) };
+      for (const [z, betrag] of Object.entries(gemessen || {})) hoechste[z] = Number(Math.max(hoechste[z] || 0, betrag).toFixed(4));
+      k.tage[datum] = { usd: Number(usd.toFixed(4)), antworten: Number((antworten || 0).toFixed(4)), aufrufe: (alt.aufrufe || 0) + aufrufe, zwecke: gesamtZwecke, messungen: hoechste, stand: new Date().toISOString() };
+      hosting.jsonSchreiben("kosten.json", k);
+    },
+  });
+  log(`Tagesbudget: ${tagesStand().toFixed(3)} $ von ${tagesLimit().toFixed(2)} $ verbraucht · Antworten: ${antwortStand().toFixed(3)} $ von ${antwortLimit().toFixed(2)} $`);
+
+  /* Was heute schon ausgegeben wurde, je Topf - aus den Zwecken des Tages. */
+  const bisherJeTopf = { core: 0, engagement: 0, research: 0 };
+  for (const [zweck, betrag] of Object.entries(heute.zwecke || {})) {
+    const topf = ZWECK_TOPF[zweck];
+    if (topf) bisherJeTopf[topf] += Number(betrag) || 0;
+    else console.warn(`  ! Zweck „${zweck}“ aus dem Tagesstand hat keinen Topf - er zählt gegen keinen Deckel.`);
+  }
+  const telemetrie = telemetrieStarten({
+    datum, kanal: KANAL, dir: AUSGABE, breakGlass: konfiguration.breakGlass.aktiv,
+    providerGuardUsd: konfiguration.providerGuardUsd,
+  });
+
+  /* Das Budget-Journal: Reservierungen, die diesen Prozess ueberleben.
+
+     Ohne es gilt der Tagesdeckel nur INNERHALB eines Laufs. Stirbt der Runner
+     nach dem Senden hart, weiss der naechste Stundenlauf von diesem Geld
+     nichts und darf es ein zweites Mal ausgeben - sechzehnmal am Tag ist das
+     kein theoretischer Fall. */
+  const journal = journalStarten({
+    datum, kanal: KANAL,
+    lesen: () => hosting.jsonLesen("budget-journal.json", null),
+    schreiben: async (inhalt) => {
+      hosting.jsonSchreiben("budget-journal.json", inhalt);
+      hosting.commit(`Budget-Journal ${datum}`);
+      const gepusht = await hosting.push();
+      /* Ohne Remote (IG_NO_PUSH) ist die lokale Datei die Durability, die es
+         gibt - dann wird sie auch nicht mehr verlangt. */
+      return gepusht || hosting.pushen === false;
+    },
+    remoteNoetig: hosting.pushen !== false,
+    /* Der Altbestand aus kosten.json wird EINMAL je Tag eingefroren. Danach
+       ist das Journal massgeblich; die Baseline waechst nicht mit, sonst
+       zaehlten die abgerechneten Aufrufe des Journals doppelt - sie stehen ja
+       auch in kosten.json. Ein max() ueber beide waere bequem und falsch:
+       Sind die Mengen disjunkt (0,10 $ davor, 0,08 $ ungeklaert danach), ist
+       der wahre Stand 0,18 $ und nicht 0,10 $. */
+    legacyBaseline: bisherJeTopf,
+  });
+  /* Der Vorrat wird zuerst aufgeraeumt: Was abgelaufen ist, fliegt samt
+     Bildern raus, bevor irgendetwas darauf zurueckgreift. Kein Nachcheck,
+     keine Verlaengerung - Ersatz entsteht spaeter an einem guenstigen Tag. */
+  let reserveBestand = bestandLaden(hosting);
+  {
+    const vorher = reserveBestand.length;
+    const auf = reserveAufraeumen({ hosting, bestand: reserveBestand, heute: datum, log });
+    reserveBestand = auf.bestand;
+    if (auf.entfernt.length) {
+      hosting.jsonSchreiben(BESTAND_DATEI, bestandInhalt(reserveBestand, KANAL));
+      log(`  Vorrat: ${auf.entfernt.length} von ${vorher} Einträgen verworfen, ${reserveBestand.length} gültig.`);
+    }
+  }
+
+  const uebernommen = journal.uebernahme();
+  if (journal.baselineNeu()) {
+    const b = journal.legacyBaseline();
+    log(`  Journal fuer ${datum} angelegt · Altbestand eingefroren: Core ${b.core.toFixed(4)} · Engagement ${b.engagement.toFixed(4)} · Research ${b.research.toFixed(4)} $`);
+  }
+  if (uebernommen.freigegeben.length || uebernommen.blockiert.length) {
+    log(`  Journal: ${uebernommen.freigegeben.length} Reservierung(en) aus einem abgebrochenen Lauf freigegeben `
+      + `(beweisbar nicht gesendet), ${uebernommen.blockiert.length} bleiben blockiert (gesendet, nie abgerechnet).`);
+    for (const e of uebernommen.blockiert) log(`    ! ${e.purpose}${e.slot ? ` (${e.slot})` : ""}: ${e.reservedUsd.toFixed(4)} $ gelten als verbraucht`);
+    await journal.abschluss();
+  }
+  /* Das Journal ist ab hier die eine Quelle: eingefrorener Altbestand plus
+     seine eigenen Eintraege. Kein Maximum, keine zweite Rechnung. */
+  for (const t of Object.keys(bisherJeTopf)) bisherJeTopf[t] = uebernommen.vorbelastung[t] || 0;
+
+  /* Zugelassen wird bis zur BETRIEBSGRENZE, nicht bis zum Policy-Deckel. Der
+     Abstand dazwischen ist der Provider-Guard: Was der Anbieter bei
+     Structured Outputs selbst an Systemprompt hinzufuegt, wird berechnet und
+     steht in keiner Anfrage, die wir vorher wiegen koennen; und der
+     Zaehlendpunkt ist laut Anbieter eine Schaetzung ohne zugesicherte
+     Maximalabweichung. Was nicht exakt vorhersagbar ist, bekommt Abstand. */
+);
+  } else {
+    log(`  Gemeinschaftsbudget: kein Schwester-Rest freigegeben (${gemeinschaft.grund}).`);
+  }
   log(`  Töpfe (Betriebsgrenze, Policy ${konfiguration.deckel.core.toFixed(2)} $ minus Guard ${konfiguration.providerGuardUsd.toFixed(4)} $): `
     + `Core ${bisherJeTopf.core.toFixed(3)}/${konfiguration.betriebsDeckel.core.toFixed(4)} · `
     + `Engagement ${bisherJeTopf.engagement.toFixed(3)}/${konfiguration.betriebsDeckel.engagement.toFixed(4)} · `
@@ -687,6 +1054,7 @@ async function main() {
   const eigenstaendig = plan.stories.filter((s) => s.art !== "teaser" && s.status !== "veroeffentlicht");
   if (eigenstaendig.length) {
     const vorhanden = eigenstaendig.map((s) => [s.slot, hosting.jsonLesen(`inhalte/${datum}-${s.slot}.json`, null)]);
+    const vorhandenSlots = new Set(vorhanden.filter(([, v]) => Boolean(v)).map(([slot]) => slot));
     const offen = vorhanden.filter(([, v]) => !v).map(([slot]) => eigenstaendig.find((s) => s.slot === slot));
     for (const [slot, v] of vorhanden) if (v) geschrieben.set(slot, v);
     if (offen.length) {
@@ -731,6 +1099,44 @@ async function main() {
         else { fehler++; console.error(`  ✗ Stories schreiben: ${e.message}`); }
       }
     }
+    /* Persistierte Beanstandungen sind kein Endzustand. Die bisherige
+       Reparaturschleife sah nur Texte, die IN DIESEM Lauf neu entstanden.
+       Scheiterte ihr zweiter Versuch am Budget, lag der beanstandete Text
+       danach dauerhaft auf Platte und wurde in allen Folgeläufen nur noch
+       übersprungen. Vorhandene beanstandete Entwürfe bekommen deshalb in
+       jedem späteren Lauf genau einen neuen Reparaturversuch. */
+    const erneutStrittig = [...geschrieben.values()]
+      .filter((s) => vorhandenSlots.has(s.slot) && alleBefunde(s).length);
+    if (erneutStrittig.length) {
+      try {
+        const auftrag = (liste) => liste.map((s) => ({
+          slot: s.slot, art: s.art, thema: themaFuer(s.themaId), tageBisExamen: s.tageBisExamen,
+        }));
+        const partnerText = (slot) => geschrieben.get(slot) || hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null);
+        const { slots: mitPartner, paarSlots, festeOptionen, warnungen } = quizNachschlag(erneutStrittig, plan.stories, partnerText);
+        for (const w of warnungen) console.warn(`  ! ${w}`);
+        const hinweis = [
+          `Diese gespeicherten Entwürfe wurden in einem früheren Lauf beanstandet. Korrigiere die genannten Fehler vollständig; ein beanstandeter Slot darf nicht einfach ausfallen:\n${erneutStrittig.map((s) => `- Slot ${s.slot}: ${alleBefunde(s).join("; ")}`).join("\n")}`,
+          mitPartner.length > erneutStrittig.length ? "Frage und Antwort eines Quiz gehören zusammen: Beide Kacheln werden gemeinsam neu geschrieben und müssen dieselben Optionen in derselben Reihenfolge tragen." : "",
+          ...festeOptionen,
+        ].filter(Boolean).join("\n\n");
+        log(`  ${erneutStrittig.length} gespeicherte Story-Beanstandung(en) – erneuter Reparaturversuch`);
+        const repariert = await storiesSchreiben(auftrag(mitPartner), datum, hinweis);
+        for (const s of repariert) {
+          const vorher = geschrieben.get(s.slot);
+          if (!paarSlots.has(s.slot) && alleBefunde(s).length && vorher && !alleBefunde(vorher).length) continue;
+          hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s);
+          geschrieben.set(s.slot, s);
+        }
+        hosting.commit(`Story-Texte ${datum} (persistierte Beanstandungen repariert)`);
+      } catch (e) {
+        /* Budgetmangel ist WARTEN, nicht AUSFALL. Die Datei und der Planstatus
+           bleiben erhalten; der nächste Stundenlauf versucht es erneut. */
+        if (istKostenKontrollFehler(e)) log(`  ⏸ Story-Reparatur wartet auf Budget: ${e.message}`);
+        else { fehler++; console.error(`  ✗ Persistierte Stories nachschreiben: ${e.message}`); }
+      }
+    }
+
     /* Texte, die geschrieben und bezahlt sind, deren Faktencheck aber am
        Budget scheiterte, liegen unter inhalte/ und tragen `faktencheckOffen`.
        Sie werden hier nachgeprüft - das kostet nur die Prüfung, nicht das
