@@ -23,7 +23,7 @@ import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
 import { themenpool, KLAUSUREN } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
-import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizPaarFreigabe, storyFreigabe, quizNachschlag, alleBefunde } from "./pruefung.mjs";
+import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizPaarFreigabe, storyFreigabe, quizNachschlag, alleBefunde, persistierteStoryBeanstandungen } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
 import { reelBauen, layoutFuer } from "./reel.mjs";
 import { motiveVerteilen } from "./erklaervideo.mjs";
@@ -750,8 +750,7 @@ async function main() {
        danach dauerhaft auf Platte und wurde in allen Folgeläufen nur noch
        übersprungen. Vorhandene beanstandete Entwürfe bekommen deshalb in
        jedem späteren Lauf genau einen neuen Reparaturversuch. */
-    const erneutStrittig = [...geschrieben.values()]
-      .filter((s) => vorhandenSlots.has(s.slot) && alleBefunde(s).length);
+    const erneutStrittig = persistierteStoryBeanstandungen(geschrieben, vorhandenSlots);
     if (erneutStrittig.length) {
       try {
         const auftrag = (liste) => liste.map((s) => ({
