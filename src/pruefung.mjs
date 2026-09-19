@@ -536,9 +536,7 @@ export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => nu
      widerspruechlicher Zustand: Eine Antwort ohne Frage ist fuer die Lesenden
      sinnlos, eine Frage ohne Antwort bleibt unbeantwortet. */
   if (!partner) return { status: "inkonsistent", grund: `kein Gegenstueck (${gegenart}) im Plan`, partner: null };
-  if (partner.fehler || partner.status === "uebersprungen") {
-    return { status: "verfallen", grund: `${gegenart} ${partner.slot} erscheint heute nicht`, partner };
-  }
+  /* Ein früheres „uebersprungen“ ist kein Endzustand mehr: Fach- und\n     Formfehler werden in späteren Läufen repariert. Nur ein harter, separat\n     vermerkter Laufzeitfehler macht das Gegenstück unbrauchbar. */\n  if (partner.fehler) {\n    return { status: "verfallen", grund: `${gegenart} ${partner.slot} hat einen harten Veröffentlichungsfehler`, partner };\n  }
 
   const eigen = textLesen(eintrag.slot);
   if (!eigen) return { status: "warten", grund: "eigener Text fehlt noch", partner };
@@ -703,16 +701,16 @@ export function storyFreigabe(story) {
   if (!story) return { frei: false, warten: true, grund: "kein Text vorhanden" };
   if (story.faktencheckOffen) return { frei: false, warten: true, grund: "Faktencheck steht noch aus" };
   const fachlich = story.beanstandetFachlich || [];
-  if (fachlich.length) return { frei: false, warten: false, grund: `fachlich beanstandet: ${fachlich.join("; ")}` };
+  if (fachlich.length) return { frei: false, warten: true, grund: `fachlich beanstandet, wird erneut korrigiert: ${fachlich.join("; ")}` };
   const form = story.beanstandet || [];
   if (form.length) {
     if (!story.befundeTypisiert) {
-      return { frei: false, warten: false, grund: `Befund ohne Herkunft (Altbestand): ${form.join("; ")} - braucht eine vollstaendige neue Pruefung` };
+      return { frei: false, warten: true, grund: `Befund ohne Herkunft (Altbestand): ${form.join("; ")} - wird neu geschrieben und vollstaendig geprueft` };
     }
     const erneut = pruefeBeitrag({ stories: [story] });
     const quiz = quizBefunde([story]);
     if (erneut.ok && !quiz.length) return { frei: true, bereinigt: true, grund: "fruehere Formbeanstandung gilt nach heutigen Regeln nicht mehr" };
-    return { frei: false, warten: false, grund: [...erneut.fehler, ...quiz].join("; ") };
+    return { frei: false, warten: true, grund: `Form-/Quizbefund, wird erneut korrigiert: ${[...erneut.fehler, ...quiz].join("; ")}` };
   }
   return { frei: true, bereinigt: false, grund: "" };
 }
