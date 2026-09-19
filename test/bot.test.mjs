@@ -907,9 +907,11 @@ test("Titelbild: Szene statt Vokabel, Querformat, kein Treffer heißt kein Bild"
   globalThis.fetch = async () => antwort([]);
   assert.equal(await fotoSuchen("annahmeverzug"), null);
 
-  /* Ohne Szene wird gar nicht erst gesucht. */
-  globalThis.fetch = async () => { throw new Error("darf nicht fragen"); };
-  assert.equal(await titelbild({ folien: [{ art: "titel" }] }), null);
+  /* Ohne Modell-Szene gibt es jetzt eine deterministische fotografierbare
+     Fallback-Szene; wenn auch der kostenlose Suchpfad keinen Treffer hat,
+     bleibt der technische Ausfall sichtbar. */
+  globalThis.fetch = async () => antwort([]);
+  assert.equal(await titelbild({ folien: [{ art: "titel", icon: "kalender" }] }), null);
 
   globalThis.fetch = fetchAlt;
   CONFIG.bilder.key = key;
@@ -6923,4 +6925,42 @@ test("Pflichtreihenfolge: Story-Batch vor späteren Feed-Texten", () => {
   assert.match(q, /if \(eigenstaendig\.length\) \{/);
   assert.match(q, /const vorab = plan\.beitraege[\s\S]*?sort\(\(a, b\) => minutenVon\(a\.zeit\) - minutenVon\(b\.zeit\)\)/);
   assert.ok(!/maxTokens: 16000/.test(q.slice(q.indexOf("tagesplanAdmissionBedarf"), q.indexOf("const jetzt = lokaleMinuten"))), "Planungsnachweis nutzt alte Output-Ceilings");
+});
+
+
+test("Karussell-Bildregel: Foto nur auf Cover", async () => {
+  const { carouselBildregeln } = await import("../src/render.mjs");
+  const beitrag = { folien: [
+    { art: "titel", icon: "kalender", bild: "cover", bildQuelle: "Q", bildFrei: true, bildBreite: 800, bildHoehe: 600 },
+    { art: "text", titel: "Innen", bild: "darf-nicht", bildQuelle: "X", bildFrei: true, bildBreite: 500, bildHoehe: 500 },
+    { art: "cta", bild: "auch-nicht" },
+  ] };
+  carouselBildregeln(beitrag);
+  assert.equal(beitrag.folien[0].bild, "cover");
+  for (const f of beitrag.folien.slice(1)) {
+    for (const k of ["bild","bildQuelle","bildFrei","bildBreite","bildHoehe","bildTyp"]) assert.equal(f[k], undefined, `${f.art} enthält noch ${k}`);
+  }
+});
+
+test("Cover-Fallback liefert immer eine fotografierbare Szene", async () => {
+  const { fallbackBildSzene } = await import("../src/bilder.mjs");
+  assert.match(fallbackBildSzene({ folien: [{ art: "titel", icon: "kalender" }] }), /calendar/i);
+  assert.ok(fallbackBildSzene({ folien: [{ art: "titel", icon: "unbekannt" }] }).length > 10);
+});
+
+test("Coverfoto trägt auch als Rechteck ein thematisches Icon", async () => {
+  const { folieHtml } = await import("../src/vorlagen.mjs");
+  const { kontext } = await import("../src/render.mjs");
+  for (const frei of [true, false]) {
+    const html = folieHtml({ art:"titel", titel:"Frist richtig prüfen", icon:"kalender", bild:"data:image/png;base64,AA==", bildFrei:frei, bildBreite:700, bildHoehe:500 }, kontext({ fach:null, klausur:1 }), 1, 4);
+    assert.match(html, /frei-zeichen/, `Icon fehlt bei bildFrei=${frei}`);
+  }
+});
+
+test("Carousel-Cover erzwingt Foto-Look, Erklärbilder bleiben flach", () => {
+  const q = fs.readFileSync(new URL("../src/bilder.mjs", import.meta.url), "utf8");
+  assert.match(q, /const look = \(opt\.zweck \|\| "bild"\) === "erklaerbild" \? "flach" : "foto"/);
+  const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
+  assert.match(autor, /NUR Folie 1 \(Cover\/Titelfolie\) bekommt ein Foto/);
+  assert.match(autor, /Alle inneren Karussell-Slides bleiben reine Text-\/Strukturfolien/);
 });
