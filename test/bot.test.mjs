@@ -3008,12 +3008,14 @@ test("Übersprungene Nachrichten und Kommentare werden je Grund gebündelt gemel
   ];
   uebersprungeneMelden(liste, (z) => zeilen.push(z));
   assert.equal(zeilen.length, 3, "eine Zeile je Grund, „bereits behandelt“ gar nicht");
-  assert.match(zeilen[0], /^  · 40 übersprungen \(ohne Text\): @leer0, @leer1, @leer2, …$/);
+  assert.equal(zeilen[0], "  · 40 übersprungen (ohne Text)");
   assert.match(zeilen[1], /1 übersprungen \(älter als 24 Stunden/);
-  /* Kommentare tragen den Namen unter `username`. */
+  /* Öffentliche Logs dürfen weder Benutzername noch DM-Wortlaut enthalten. */
   const z2 = [];
   uebersprungeneMelden([{ username: "k1", text: "hi", grund: "nur Emoji" }], (z) => z2.push(z), "username");
-  assert.match(z2[0], /@k1/);
+  assert.equal(z2[0], "  · 1 übersprungen (nur Emoji)");
+  assert.equal(z2[0].includes("k1"), false);
+  assert.equal(z2[0].includes("hi"), false);
 });
 
 test("Antwortpfade überleben ein unlesbares Modellergebnis", async () => {
