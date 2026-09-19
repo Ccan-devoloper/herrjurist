@@ -158,6 +158,36 @@ export function fallbackBildSzene(beitrag = {}) {
   };
   return szenen[icon] || "student reviewing case files";
 }
+/* Kostenloser Primärpfad für Cover: ein echtes Pexels-Foto wird zuerst
+   freigestellt; wenn alle Freisteller scheitern, ist eine saubere Fotokarte
+   immer noch besser als eine reine Icon-Kachel oder ein bezahlter Bildaufruf.
+   Der alte Schalter rechteckErlaubt gilt damit nicht für diesen letzten
+   Cover-Notfall – die neue Produktregel „Foto + Icon“ hat Vorrang. */
+async function kostenlosesCoverFoto(szenen, ablage, opt = {}) {
+  if (!CONFIG.bilder.key) return null;
+  let notfall = null;
+  for (const szene of szenen) {
+    const kandidaten = await fotoKandidaten(szene, opt);
+    for (const foto of kandidaten) {
+      const roh = await fotoDatei(foto, ablage || os.tmpdir());
+      if (!roh) continue;
+      const quelle = `Foto: ${foto.fotograf || "Pexels"} / Pexels`;
+      if (!notfall) notfall = { roh, foto, szene, quelle };
+      if (!CONFIG.bilder.freistellen) {
+        return { bild: `data:image/jpeg;base64,${fs.readFileSync(roh).toString("base64")}`, quelle, seite: foto.seite, frei: false, typ: "foto" };
+      }
+      const frei = freistellen(roh, { randFarbe: opt.randFarbe || null });
+      if (!frei) continue;
+      const bild = `data:image/png;base64,${fs.readFileSync(frei.pfad).toString("base64")}`;
+      fs.rmSync(frei.pfad, { force: true });
+      console.log(`  → kostenloses Coverfoto: „${szene}“ · ${foto.fotograf || "Pexels"}`);
+      return { bild, quelle, seite: foto.seite, frei: true, breite: frei.breite || null, hoehe: frei.hoehe || null, typ: "foto" };
+    }
+  }
+  if (!notfall) return null;
+  console.log(`  → kostenloses Coverfoto als Karte: „${notfall.szene}“ · ${notfall.foto.fotograf || "Pexels"}`);
+  return { bild: `data:image/jpeg;base64,${fs.readFileSync(notfall.roh).toString("base64")}`, quelle: notfall.quelle, seite: notfall.foto.seite, frei: false, typ: "foto" };
+}
 export async function titelbild(beitrag, ablage = null, opt = {}) {
   if (!CONFIG.bilder.aktiv) return null;
   /* Zwei Szenen vom Autor: Liefert die erste nichts Brauchbares, die zweite. */
@@ -198,6 +228,12 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
         return { bild, quelle: null, seite: null, frei: true, breite: wieder.breite, hoehe: wieder.hoehe, typ: look === "foto" ? "foto" : "illustration" };
       }
     }
+    /* Kostenlose reale Fotografie vor Bild-KI: Der Tagesdeckel soll für
+       Pflichttext und Faktenprüfung frei bleiben. */
+    if ((opt.zweck || "bild") !== "erklaerbild" && opt.ki !== false) {
+      const gratis = await kostenlosesCoverFoto(szenen, ablage, opt);
+      if (gratis) return gratis;
+    }
     /* Erklaervideo mit vielen Szenen: Ab dem Deckel wird nicht mehr gezeichnet,
        aber weiter im Archiv gesucht - ein passendes altes Motiv ist immer
        besser als die wiederholte Figur der Nachbarszene und kostet nichts. */
@@ -216,8 +252,8 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
       fs.rmSync(motiv.pfad, { force: true });
       return { bild, quelle: null, seite: null, frei: true, breite: motiv.breite, hoehe: motiv.hoehe, typ: look === "foto" ? "foto" : "illustration" };
     }
-    console.log(`  → kein Motiv zu „${szenen.join("\u201c / \u201e")}" - Titelfolie bleibt beim Icon.`);
-    /* KI fehlgeschlagen: kostenloser Pexels-Pfad darunter bleibt als Rettungsweg. */
+    console.log(`  → kein fotorealistisches KI-Motiv zu „${szenen.join("\u201c / \u201e")}".`);
+    return null;
   }
   if (!CONFIG.bilder.key) return null;
   let ersterRoh = null, erstesFoto = null, ersteSzene = null;
