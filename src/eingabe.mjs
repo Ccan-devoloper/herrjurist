@@ -145,16 +145,28 @@ export function zaehlKoerper(params) {
 }
 
 /**
- * Die Zahl, die reserviert wird.
+ * Die OPERATIVE Eingabezahl fuer die Admission.
  *
- * Der Zählwert darf die Schranke nur ANHEBEN, nie senken. Er ist laut
- * Anbieter eine Schätzung; eine Schätzung darf eine konservative Rechnung
- * ergänzen, nicht sie unterbieten. Liegt er darüber - etwa weil er den
- * injizierten Systemprompt der Structured Outputs mitzählt -, ist er die
- * richtige Zahl.
+ * Wenn der kostenlose Provider-Zaehler einen Wert liefert, ist er die
+ * bessere Betriebsgrundlage: Er sieht den vollstaendigen Request inklusive
+ * des fuer Structured Outputs injizierten Prompts. Die Bytezahl des JSON-
+ * Koerpers ist dagegen nur eine absichtlich extrem grobe clientseitige
+ * Schranke und lag am 19.09. bei langen Schemas so weit ueber der realen
+ * Tokenzahl, dass ein 0,32-$-Tag trotz realer Kosten um wenige Cent schon vor
+ * dem Senden blockiert wurde.
+ *
+ * Der Zaehler bleibt eine Schaetzung, also bekommt er 10 % plus 256 Token
+ * Puffer. Das ist KEINE mathematische Garantie; genau fuer die verbleibende
+ * Unschaerfe existieren Provider-Guard und die Dollar-Invariante. Faellt der
+ * Zaehler aus oder ist fuer Server-Tools nicht verfuegbar, bleibt die
+ * clientseitige Byte-Schranke der konservative Fallback.
  */
+export const PROVIDER_COUNT_FAKTOR = 1.10;
+export const PROVIDER_COUNT_PUFFER = 256;
 export function admissionBound(params, providerCountEstimate = null) {
-  const client = clientInputBound(params);
   const z = Number(providerCountEstimate);
-  return Number.isFinite(z) && z > client ? Math.ceil(z) : client;
+  if (Number.isFinite(z) && z >= 0) {
+    return Math.ceil(z * PROVIDER_COUNT_FAKTOR + PROVIDER_COUNT_PUFFER);
+  }
+  return clientInputBound(params);
 }
