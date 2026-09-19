@@ -164,11 +164,22 @@ async function erklaerMotive(reel) {
 /* Setzt das Foto auf die Titelfolie, sofern eines gefunden wird. */
 async function titelfolieBebildern(beitrag) {
   const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
-  if (!titelfolie || titelfolie.bild) return;
+  if (!titelfolie) return false;
+  if (titelfolie.bild) return true;
   try {
     const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum });
-    if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; titelfolie.bildBreite = treffer.breite || null; titelfolie.bildHoehe = treffer.hoehe || null; }
-  } catch (e) { console.warn(`  ! Titelbild: ${e.message}`); }
+    if (!treffer) return false;
+    titelfolie.bild = treffer.bild;
+    titelfolie.bildQuelle = treffer.quelle;
+    titelfolie.bildFrei = treffer.frei !== false;
+    titelfolie.bildBreite = treffer.breite || null;
+    titelfolie.bildHoehe = treffer.hoehe || null;
+    titelfolie.bildTyp = treffer.typ || "foto";
+    return true;
+  } catch (e) {
+    console.warn(`  ! Titelbild: ${e.message}`);
+    return false;
+  }
 }
 
 async function main() {
@@ -927,10 +938,14 @@ async function main() {
       }
       const beitrag = await textBesorgen(eintrag);
       const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
-      /* Titelbild: Der Autor hat eine Szene beschrieben, bilder.mjs sucht sie.
-         Ohne Treffer bleibt es bei der Icon-Bühne - ein beliebiges Symbolfoto
-         waere schlechter als keines. */
-      await titelfolieBebildern(beitrag);
+      /* Produktregel: Karussell = fotorealistisches Cover + Icon; innere
+         Slides bleiben bildfrei. Archiv/Pexels/Bild-KI bilden die automatische
+         Rettungskette. Ohne Cover wird nicht still eine Icon-only-Kachel
+         veröffentlicht, sondern der Slot später erneut versucht. */
+      if (!(await titelfolieBebildern(beitrag))) {
+        console.warn(`  ! Beitrag ${eintrag.slot}: kein fotorealistisches Cover verfügbar – Veröffentlichung wird verschoben.`);
+        continue;
+      }
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
       const caption = `${beitrag.caption}${bildnachweis(beitrag)}\n\n${beitrag.hashtags.join(" ")}`;
@@ -1161,7 +1176,10 @@ async function main() {
     if (eigenerPosten) postenBeginnen(`Vorrat ${id}`, CONFIG.ki.maxJeBeitragUsd);
     try { beitrag = await beitragSchreiben({ format: RESERVE_FORMATE[thema.typ], thema, datum, strategie }); }
     finally { if (eigenerPosten) postenBeenden(); }
-    await titelfolieBebildern(beitrag);
+    if (!(await titelfolieBebildern(beitrag))) {
+      console.warn(`  ! Vorrat ${id}: kein fotorealistisches Cover – Eintrag wird nicht angelegt.`);
+      return null;
+    }
     const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
     const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "reserve", id), { variante });
     const bildUrls = await hosting.veroeffentlichen(bilder, pfad, `Vorrat ${id}`);
@@ -1258,7 +1276,10 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
         beitrag.slug = slot;
         hosting.jsonSchreiben(`inhalte/${slot}.json`, beitrag);
       }
-      await titelfolieBebildern(beitrag);
+      if (!(await titelfolieBebildern(beitrag))) {
+        console.warn(`  ! Auffüllen ${eintrag.slot}: kein fotorealistisches Cover – wird später erneut versucht.`);
+        continue;
+      }
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "auffuellen"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Auffüllen ${slot}`);
       const caption = `${beitrag.caption}${bildnachweis(beitrag)}\n\n${beitrag.hashtags.join(" ")}`;
