@@ -66,6 +66,11 @@ export function veroeffentlichungEintragen(eintrag, medienId, opt = {}) {
   eintrag.status = "veroeffentlicht";
   eintrag.medienId = medienId;
   eintrag.veroeffentlicht = opt.jetzt || new Date().toISOString();
+  /* Ein frueherer Admission-Stopp beschreibt nicht mehr den Zustand dieses
+     Slots, sobald Instagram eine echte Medien-ID bestaetigt hat. Das Feld
+     blieb bisher stehen und der Abschlussbericht behauptete dann zugleich
+     "veroeffentlicht" und "erscheint heute nicht". */
+  delete eintrag.budgetBlockiert;
   return { bestaetigt: true, medienId, kennung: "", grund: "" };
 }
 
@@ -132,9 +137,11 @@ export function planBereinigen(plan, opt = {}) {
   for (const e of [...(plan?.beitraege || []), ...(plan?.stories || [])]) {
     if (!e) continue;
     if (e.status !== "veroeffentlicht" || echteMedienId(e.medienId)) {
-      /* Kein Widerspruch: Nur das Feld aus der ersten Fassung raeumen wir weg,
-         es gehoert nicht in den Plan. */
+      /* Kein Widerspruch: Nur Altmarker raeumen. Ein bestaetigt
+         veroeffentlichter Slot ist definitionsgemaess nicht mehr
+         budget-blockiert - auch wenn ein frueherer Lauf daran scheiterte. */
       if (e.probelauf) delete e.probelauf;
+      if (e.status === "veroeffentlicht" && echteMedienId(e.medienId)) delete e.budgetBlockiert;
       continue;
     }
     const nachweis = trockenlaufNachweis(e, plan);

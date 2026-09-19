@@ -6889,3 +6889,15 @@ test("Reel-Hooks verbieten unbelegte Reichweiten- und Punkteversprechen", async 
   assert.ok(!/fast alle|die meisten|teuerste denkfehler|volle punkte|punktegeschenk|prüfer:innen lieben/i.test(beispiele));
   assert.ok(pruefeHook({ titel: "Fast alle machen diesen Fehler", sprecher: "Fast alle machen hier denselben Fehler." }).length > 0);
 });
+
+
+test("Veröffentlichung räumt einen alten Budgetblocker", async () => {
+  const { veroeffentlichungEintragen, planBereinigen } = await import("../src/veroeffentlichung.mjs");
+  const e = { slot: "b1", status: "geplant", budgetBlockiert: { grund: "alt" } };
+  const r = veroeffentlichungEintragen(e, "18106644886917440", { jetzt: "2026-09-19T10:00:00Z" });
+  assert.equal(r.bestaetigt, true);
+  assert.equal(e.budgetBlockiert, undefined);
+  const alt = { datum: "2026-09-19", beitraege: [{ ...e, budgetBlockiert: { grund: "aus altem Runner" } }], stories: [] };
+  planBereinigen(alt);
+  assert.equal(alt.beitraege[0].budgetBlockiert, undefined);
+});
