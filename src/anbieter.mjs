@@ -17,12 +17,10 @@
    Was hier bei JEDEM Aufruf passiert:
 
      1. Admission Reserve rechnen: Ausgabe aus dem konfigurierten Hard
-        Ceiling, Eingabe aus admissionBound() - dem groesseren aus
-        konservativem clientInputBound ueber den GESENDETEN Request und dem
-        Zaehlwert des Anbieters. Beides ist konservativ; was der Anbieter
-        zusaetzlich injiziert und berechnet, erfasst es nicht - es steht in
-        keinem Koerper, den wir vorher wiegen koennen (Belege in
-        eingabe.mjs). Ein bewiesener Provider-Worst-Case ist das nicht;
+        Ceiling, Eingabe aus admissionBound(): wenn verfuegbar der kostenlose
+        Provider-Zaehler mit Sicherheitsaufschlag, sonst der konservative
+        clientInputBound ueber den GESENDETEN Request. Auch das ist kein
+        bewiesener Provider-Worst-Case;
         dafuer liegt der Provider-Guard unter dem Policy cap, und dahinter
         prueft die Invariante.
      2. Admission aus dem Topf des Zwecks. Passt die Reserve nicht,
