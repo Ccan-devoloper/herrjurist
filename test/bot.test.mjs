@@ -6911,3 +6911,16 @@ test("Hook-Lernen nimmt Reel-Watch-Time normalisiert auf", async () => {
   assert.ok(kurzGehalten > langVerloren, "gleiche Watch-Sekunden werden nicht auf Reel-Dauer normalisiert");
   assert.equal(hookPunkte(basis, 40), hookPunkte(basis), "fehlende Watch-Metrik verändert Nicht-Reels");
 });
+
+
+test("Pflichtreihenfolge: Story-Batch vor späteren Feed-Texten", () => {
+  const q = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  const story = q.indexOf("const eigenstaendig = plan.stories.filter");
+  const feed = q.indexOf("const vorab = plan.beitraege.filter");
+  const ende = q.indexOf("if (!beitraegeFaellig.length && !storiesFaellig.length && !auffuellOffen)");
+  assert.ok(story > 0 && feed > story, "Feed wird wieder vor den Story-Pflichttexten vorgeschrieben");
+  assert.ok(ende > feed, "Lauf kehrt zurück, bevor Pflichttexte vorbereitet sind");
+  assert.match(q, /if \(eigenstaendig\.length\) \{/);
+  assert.match(q, /const vorab = plan\.beitraege[\s\S]*?sort\(\(a, b\) => minutenVon\(a\.zeit\) - minutenVon\(b\.zeit\)\)/);
+  assert.ok(!/maxTokens: 16000/.test(q.slice(q.indexOf("tagesplanAdmissionBedarf"), q.indexOf("const jetzt = lokaleMinuten"))), "Planungsnachweis nutzt alte Output-Ceilings");
+});

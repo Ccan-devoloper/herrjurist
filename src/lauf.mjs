@@ -553,12 +553,12 @@ async function main() {
     deckelCore: konfiguration.deckel.core,
     posten: [
       ...plan.beitraege.filter((b) => b.status !== "veroeffentlicht").flatMap((b) => ([
-        { name: `${b.slot} Text`, modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: EIN_LANG },
-        { name: `${b.slot} Faktencheck`, modell: b.format === "reel" ? (CONFIG.ki.modellPruefungReel || CONFIG.ki.modell) : CONFIG.ki.modell, maxTokens: 6000, eingabeTokens: EIN_PRUEFUNG },
+        { name: `${b.slot} Text`, modell: CONFIG.ki.modell, maxTokens: b.format === "reel" ? 4000 : 6000, eingabeTokens: EIN_LANG },
+        { name: `${b.slot} Faktencheck`, modell: b.format === "reel" ? (CONFIG.ki.modellPruefungReel || CONFIG.ki.modell) : CONFIG.ki.modell, maxTokens: 3000, eingabeTokens: EIN_PRUEFUNG },
       ])),
       ...(plan.stories.some((x) => x.status !== "veroeffentlicht" && x.art !== "teaser")
-        ? [{ name: "Stories", modell: CONFIG.ki.modell, maxTokens: 16000, eingabeTokens: EIN_LANG },
-           { name: "Story-Faktencheck", modell: CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben, maxTokens: 6000, eingabeTokens: EIN_PRUEFUNG }]
+        ? [{ name: "Stories", modell: CONFIG.ki.modell, maxTokens: 4500, eingabeTokens: EIN_LANG },
+           { name: "Story-Faktencheck", modell: CONFIG.ki.modellPruefung || CONFIG.ki.modellNeben, maxTokens: 3000, eingabeTokens: EIN_PRUEFUNG }]
         : []),
     ],
   });
@@ -650,11 +650,99 @@ async function main() {
      sonst frisst es morgens das Tagesbudget, und Reel und Stories fallen aus. */
   const tagesplanFertig = plan.beitraege.every((b) => b.status === "veroeffentlicht" || b.fehler);
   const auffuellOffen = !trocken && !nurPlanen && tagesplanFertig && (() => { const a = hosting.jsonLesen("auffuellen.json", null); return a && a.fertig < a.ziel; })();
+  /* Pflicht-Texte nach Fälligkeit absichern -----------------------------
+     Die eigenständigen Stories haben morgens die ersten Slots des Tages und
+     entstehen als ein günstiger Batch. Sie müssen deshalb VOR dem
+     Vorschreiben späterer Feed-Slots gebaut und geprüft werden. Die alte
+     Reihenfolge schrieb zuerst Reel und alle Feed-Texte; am 19.09. war danach
+     kein Admission-Spielraum mehr für die schon fälligen Stories. */
+  let fehler = 0;
+  /* Story-Texte des ganzen Tages zuerst, in einem einzigen günstigen KI-Aufruf:
+     Sie kosten nur wenige Cent, würden aber ausfallen, wenn erst die teuren
+     Beiträge das Tagesbudget aufbrauchen (so am 09.09.: fünf Abend-Stories
+     blieben liegen). Einmal geschrieben, liegen sie unter inhalte/ und werden
+     in späteren Läufen des Tages nur noch gerendert. */
+  const geschrieben = new Map();
+  /* Auch früher übersprungene Slots gehören dazu: Ihr Text liegt bereits unter
+     inhalte/ und wird vor dem Veröffentlichen erneut geprüft. Ohne sie fehlte
+     der Text später im Veröffentlichungslauf und die Story fiele ganz aus. */
+  const eigenstaendig = plan.stories.filter((s) => s.art !== "teaser" && s.status !== "veroeffentlicht");
+  if (eigenstaendig.length) {
+    const vorhanden = eigenstaendig.map((s) => [s.slot, hosting.jsonLesen(`inhalte/${datum}-${s.slot}.json`, null)]);
+    const offen = vorhanden.filter(([, v]) => !v).map(([slot]) => eigenstaendig.find((s) => s.slot === slot));
+    for (const [slot, v] of vorhanden) if (v) geschrieben.set(slot, v);
+    if (offen.length) {
+      try {
+        const auftrag = (liste) => liste.map((s) => ({ slot: s.slot, art: s.art, thema: themaFuer(s.themaId), tageBisExamen: s.tageBisExamen }));
+        const neu = await storiesSchreiben(auftrag(offen), datum);
+        for (const s of neu) { hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s); geschrieben.set(s.slot, s); }
+        log(`  Story-Texte für ${neu.length} Slots geschrieben`);
+        /* Beanstandete Slots einmal neu schreiben statt sie zu verlieren: ein
+           Nachschlag für zwei, drei Slots kostet nur wenige Cent. */
+        hosting.commit(`Story-Texte ${datum}`);
+        const strittig = neu.filter((s) => alleBefunde(s).length);
+        if (strittig.length) try {
+          /* Safety 0d: Ein Quizslot wird nie allein neu geschrieben. Welche
+             Slots mitmuessen und welcher Partner unveraenderlich ist, steht in
+             quizNachschlag() - dort ist es ohne Netz und Instagram pruefbar. */
+          const partnerText = (slot) => geschrieben.get(slot) || hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null);
+          const { slots: mitPartner, paarSlots, festeOptionen, warnungen } = quizNachschlag(strittig, plan.stories, partnerText);
+          for (const w of warnungen) console.warn(`  ! ${w}`);
+          const hinweis = [
+            `Die folgenden Entwürfe wurden abgelehnt – formuliere sie vollständig neu:\n${strittig.map((s) => `- Slot ${s.slot}: ${alleBefunde(s).join("; ")}`).join("\n")}`,
+            mitPartner.length > strittig.length ? "Frage und Antwort eines Quiz gehören zusammen: Beide Kacheln werden gemeinsam neu geschrieben und müssen dieselben Optionen in derselben Reihenfolge tragen." : "",
+            ...festeOptionen,
+          ].filter(Boolean).join("\n\n");
+          log(`  ${strittig.length} Story-Entwürfe beanstandet – zweiter Versuch${mitPartner.length > strittig.length ? ` (mit ${mitPartner.length - strittig.length} Partner-Kachel)` : ""}${festeOptionen.length ? `, ${festeOptionen.length} Partner unverändert` : ""}`);
+          const zweite = await storiesSchreiben(auftrag(mitPartner), datum, hinweis);
+          for (const s of zweite) {
+            const vorher = geschrieben.get(s.slot);
+            /* Bei Paaren gilt die neue Lieferung als Ganzes: Eine alte
+               Haelfte mit einer neuen zu mischen ist genau die Drift, die
+               verhindert werden soll. */
+            if (!paarSlots.has(s.slot) && alleBefunde(s).length && vorher && !alleBefunde(vorher).length) continue;
+            hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s); geschrieben.set(s.slot, s);
+          }
+          hosting.commit(`Story-Texte ${datum} (zweiter Versuch)`);
+        } catch (e) {
+          if (istKostenKontrollFehler(e)) log(`  ⏸ ${e.message}`);
+          else console.error(`  ✗ Stories nachschreiben: ${e.message}`);
+        }
+      } catch (e) {
+        if (istKostenKontrollFehler(e)) log(`  ⏸ ${e.message}`);
+        else { fehler++; console.error(`  ✗ Stories schreiben: ${e.message}`); }
+      }
+    }
+    /* Texte, die geschrieben und bezahlt sind, deren Faktencheck aber am
+       Budget scheiterte, liegen unter inhalte/ und tragen `faktencheckOffen`.
+       Sie werden hier nachgeprüft - das kostet nur die Prüfung, nicht das
+       Schreiben. Klappt es wieder nicht, warten sie auf den nächsten Lauf. */
+    const ungeprueft = [...geschrieben.values()].filter((s) => s.faktencheckOffen);
+    if (ungeprueft.length) {
+      /* Erst neu rechnen, dann prüfen. Die Rücklage stammt sonst aus der Zeit
+         VOR dem Schreiben der Texte und hält Geld für Dinge zurück, die
+         inzwischen unbezahlbar geworden sind - am 17.09. lagen so 0.04 $ für
+         die Erklärfiguren fest, während nur 0.035 $ frei waren, und der
+         Faktencheck der sechs fertigen Stories kam nicht mehr durch. */
+      ruecklageAktualisieren();
+      log(`  ${ungeprueft.length} Story-Texte warten auf ihren Faktencheck – wird nachgeholt`);
+      try {
+        await storiesPruefen(ungeprueft);
+        for (const s of ungeprueft) hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s);
+        hosting.commit(`Story-Faktencheck nachgeholt ${datum}`);
+      } catch (e) {
+        if (istKostenKontrollFehler(e)) log(`  ⏸ ${e.message}`);
+        else { fehler++; console.error(`  ✗ Story-Faktencheck nachholen: ${e.message}`); }
+      }
+    }
+  }
+
+
   /* --- Texte des Tages vorab ---------------------------------------------
      Reel und Beiträge bekommen ihren Text im ersten Lauf des Tages, solange
      das Budget voll ist – nicht erst zur Sendezeit. Was morgens nicht
-     bezahlbar ist, weiß man morgens; abends ist es zu spät. Reihenfolge:
-     erst das Reel (größte Reichweite), dann die Beiträge nach Uhrzeit.
+     bezahlbar ist, weiß man morgens; abends ist es zu spät. Nach dem
+     Story-Batch folgen die Feed-Slots in ihrer tatsächlichen Sende-Reihenfolge.
      Ausnahme: die Lösungsskizze am Klausurtag braucht die Berichte des
      Nachmittags. Geschriebene Texte liegen unter inhalte/ und kosten später
      nichts mehr. */
@@ -751,7 +839,7 @@ async function main() {
     ruecklageAktualisieren();
     return text;
   };
-  const vorab = plan.beitraege.filter((b) => textFehlt(b) && b.format !== "loesungsskizze").sort((a, b) => (a.format === "reel" ? -1 : 0) - (b.format === "reel" ? -1 : 0));
+  const vorab = plan.beitraege.filter((b) => textFehlt(b) && b.format !== "loesungsskizze").sort((a, b) => minutenVon(a.zeit) - minutenVon(b.zeit));
   let vorabGeschrieben = 0, vorabGescheitert = 0;
   for (const eintrag of vorab) {
     try {
@@ -785,89 +873,8 @@ async function main() {
   const frei = () => kontingent.maximum - kontingent.genutzt - CONFIG.instagram.sicherheitsabstandLimit;
 
   const fertigeBeitraege = new Map();   // slot → Beitrag (für Teaser)
-  let fehler = 0;
 
-  /* Story-Texte des ganzen Tages zuerst, in einem einzigen günstigen KI-Aufruf:
-     Sie kosten nur wenige Cent, würden aber ausfallen, wenn erst die teuren
-     Beiträge das Tagesbudget aufbrauchen (so am 09.09.: fünf Abend-Stories
-     blieben liegen). Einmal geschrieben, liegen sie unter inhalte/ und werden
-     in späteren Läufen des Tages nur noch gerendert. */
-  const geschrieben = new Map();
-  /* Auch früher übersprungene Slots gehören dazu: Ihr Text liegt bereits unter
-     inhalte/ und wird vor dem Veröffentlichen erneut geprüft. Ohne sie fehlte
-     der Text später im Veröffentlichungslauf und die Story fiele ganz aus. */
-  const eigenstaendig = plan.stories.filter((s) => s.art !== "teaser" && s.status !== "veroeffentlicht");
-  if (eigenstaendig.length && (storiesFaellig.length || beitraegeFaellig.length)) {
-    const vorhanden = eigenstaendig.map((s) => [s.slot, hosting.jsonLesen(`inhalte/${datum}-${s.slot}.json`, null)]);
-    const offen = vorhanden.filter(([, v]) => !v).map(([slot]) => eigenstaendig.find((s) => s.slot === slot));
-    for (const [slot, v] of vorhanden) if (v) geschrieben.set(slot, v);
-    if (offen.length) {
-      try {
-        const auftrag = (liste) => liste.map((s) => ({ slot: s.slot, art: s.art, thema: themaFuer(s.themaId), tageBisExamen: s.tageBisExamen }));
-        const neu = await storiesSchreiben(auftrag(offen), datum);
-        for (const s of neu) { hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s); geschrieben.set(s.slot, s); }
-        log(`  Story-Texte für ${neu.length} Slots geschrieben`);
-        /* Beanstandete Slots einmal neu schreiben statt sie zu verlieren: ein
-           Nachschlag für zwei, drei Slots kostet nur wenige Cent. */
-        hosting.commit(`Story-Texte ${datum}`);
-        const strittig = neu.filter((s) => alleBefunde(s).length);
-        if (strittig.length) try {
-          /* Safety 0d: Ein Quizslot wird nie allein neu geschrieben. Welche
-             Slots mitmuessen und welcher Partner unveraenderlich ist, steht in
-             quizNachschlag() - dort ist es ohne Netz und Instagram pruefbar. */
-          const partnerText = (slot) => geschrieben.get(slot) || hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null);
-          const { slots: mitPartner, paarSlots, festeOptionen, warnungen } = quizNachschlag(strittig, plan.stories, partnerText);
-          for (const w of warnungen) console.warn(`  ! ${w}`);
-          const hinweis = [
-            `Die folgenden Entwürfe wurden abgelehnt – formuliere sie vollständig neu:\n${strittig.map((s) => `- Slot ${s.slot}: ${alleBefunde(s).join("; ")}`).join("\n")}`,
-            mitPartner.length > strittig.length ? "Frage und Antwort eines Quiz gehören zusammen: Beide Kacheln werden gemeinsam neu geschrieben und müssen dieselben Optionen in derselben Reihenfolge tragen." : "",
-            ...festeOptionen,
-          ].filter(Boolean).join("\n\n");
-          log(`  ${strittig.length} Story-Entwürfe beanstandet – zweiter Versuch${mitPartner.length > strittig.length ? ` (mit ${mitPartner.length - strittig.length} Partner-Kachel)` : ""}${festeOptionen.length ? `, ${festeOptionen.length} Partner unverändert` : ""}`);
-          const zweite = await storiesSchreiben(auftrag(mitPartner), datum, hinweis);
-          for (const s of zweite) {
-            const vorher = geschrieben.get(s.slot);
-            /* Bei Paaren gilt die neue Lieferung als Ganzes: Eine alte
-               Haelfte mit einer neuen zu mischen ist genau die Drift, die
-               verhindert werden soll. */
-            if (!paarSlots.has(s.slot) && alleBefunde(s).length && vorher && !alleBefunde(vorher).length) continue;
-            hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s); geschrieben.set(s.slot, s);
-          }
-          hosting.commit(`Story-Texte ${datum} (zweiter Versuch)`);
-        } catch (e) {
-          if (istKostenKontrollFehler(e)) log(`  ⏸ ${e.message}`);
-          else console.error(`  ✗ Stories nachschreiben: ${e.message}`);
-        }
-      } catch (e) {
-        if (istKostenKontrollFehler(e)) log(`  ⏸ ${e.message}`);
-        else { fehler++; console.error(`  ✗ Stories schreiben: ${e.message}`); }
-      }
-    }
-    /* Texte, die geschrieben und bezahlt sind, deren Faktencheck aber am
-       Budget scheiterte, liegen unter inhalte/ und tragen `faktencheckOffen`.
-       Sie werden hier nachgeprüft - das kostet nur die Prüfung, nicht das
-       Schreiben. Klappt es wieder nicht, warten sie auf den nächsten Lauf. */
-    const ungeprueft = [...geschrieben.values()].filter((s) => s.faktencheckOffen);
-    if (ungeprueft.length) {
-      /* Erst neu rechnen, dann prüfen. Die Rücklage stammt sonst aus der Zeit
-         VOR dem Schreiben der Texte und hält Geld für Dinge zurück, die
-         inzwischen unbezahlbar geworden sind - am 17.09. lagen so 0.04 $ für
-         die Erklärfiguren fest, während nur 0.035 $ frei waren, und der
-         Faktencheck der sechs fertigen Stories kam nicht mehr durch. */
-      ruecklageAktualisieren();
-      log(`  ${ungeprueft.length} Story-Texte warten auf ihren Faktencheck – wird nachgeholt`);
-      try {
-        await storiesPruefen(ungeprueft);
-        for (const s of ungeprueft) hosting.jsonSchreiben(`inhalte/${datum}-${s.slot}.json`, s);
-        hosting.commit(`Story-Faktencheck nachgeholt ${datum}`);
-      } catch (e) {
-        if (istKostenKontrollFehler(e)) log(`  ⏸ ${e.message}`);
-        else { fehler++; console.error(`  ✗ Story-Faktencheck nachholen: ${e.message}`); }
-      }
-    }
-  }
-
-  /* Dann die Beiträge (wichtiger), zuletzt die Stories veröffentlichen. */
+  /* Story-Texte dräge (wichtiger), zuletzt die Stories veröffentlichen. */
   for (const eintrag of beitraegeFaellig) {
     if (frei() <= 0) { log("Tageskontingent erschöpft – Beitrag verschoben."); break; }
     if (eintrag.textFehler && !hosting.jsonLesen(textDatei(eintrag), null)) continue;
