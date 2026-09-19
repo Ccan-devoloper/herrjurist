@@ -201,6 +201,24 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
       });
       throw e;
     }
+    /* Ein explizites HTTP 400 ist kein ungeklärter Providerverbrauch:
+       Der Anbieter hat die Anfrage als ungültig zurückgewiesen, bevor ein
+       Modelllauf/Usage entstehen konnte. Am 19.09. hat der Faktencheck danach
+       korrekt mit seinem schemafreien Fallback weitergemacht, das Journal
+       hielt die 400er-Reservierung aber trotzdem als „ungeklärt verbraucht“
+       fest und blockierte so echte Pflichtarbeit. 400 wird deshalb mit 0 $
+       abgerechnet; Netzabbrüche/5xx bleiben weiterhin konservativ ungeklärt. */
+    if (Number(e?.status) === 400) {
+      griff.kosten(0);
+      griff.buchen(0);
+      journal?.abrechnen(reservierung, 0);
+      telemetrie?.aufruf({
+        ...roh, sent: true, spendUnknown: false, actualUsd: 0, usd: 0,
+        releasedUsd: griff.reservedUsd, outcome: "provider_rejected_400",
+        errorType: e?.name || "HTTP400", approved: false,
+      });
+      throw e;
+    }
     const gesendet = griff.istGesendet();
     if (!gesendet) { griff.freigeben(); journal?.verfallen(reservierung, e?.name || "vor dem Senden abgebrochen"); }
     else { griff.ungeklaert(e?.name || "Fehler nach dem Senden"); journal?.ungeklaert(reservierung, e?.name || "Fehler nach dem Senden"); }
