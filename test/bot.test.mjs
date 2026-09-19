@@ -5683,7 +5683,12 @@ test("1a RC4: Ein geplanter Lauf kann den Provider-Guard nicht per Umgebung abse
   /* Die Umgebungsvariable wirkt weiterhin - aber nur nach oben oder von Hand. */
   assert.equal(providerGuard("0.05"), 0.05);
   assert.equal(providerGuard("0"), 0, "die Umgebung kann den Wert setzen …");
-  assert.ok(mitGuard(0, "workflow_dispatch")().ok, "… und von Hand ist das erlaubt - dort entscheidet ein Mensch");
+  /* … aber seit RC6 gilt der Mindestwert in JEDEM Produktionslauf. Die
+     RC5-Ausnahme fuer workflow_dispatch beschrieb einen Workflow-Pfad, den es
+     gar nicht gibt - und waere ohne Betrag und Begruendung auch kein Break
+     Glass gewesen. Siehe den RC6-Test. */
+  assert.throws(mitGuard(0, "workflow_dispatch"), RichtlinieVerletzt,
+    "von Hand laesst sich der Guard weiterhin absenken");
 });
 /* ===== 1a-RC5: Garantiesprache und Guard-Pfad =========================== */
 
@@ -5776,86 +5781,150 @@ test("1a RC5: Keine kostenbezogene Aussage behauptet mehr Sicherheit, als es gib
     "die zulässige Aussage über den durablen Schreibvorgang wurde mitentfernt");
 });
 
-test("1a RC5: Der Guard-Pfad Umgebung → Konfiguration → Gate, ohne nachträgliche Mutation", async () => {
-  /* Der RC4-Test setzte NaN direkt in die Konfiguration und prüfte dann das
-     Gate. Der echte Parser verhält sich anders - also belegte der Test einen
-     Pfad, den es so nicht gibt. Hier läuft alles durch:
-        IG_PROVIDER_GUARD_USD → providerGuardLesen → effektiveKonfiguration
-                              → richtlinieGate                               */
+test("1a RC6: Der Mindestguard gilt in jedem Produktionslauf, auch von Hand", async () => {
+  /* RC5 liess fuer workflow_dispatch eine Ausnahme und nannte sie „wie Break
+     Glass". Sie war aus zwei Gruenden falsch: Es gibt keinen Workflow-Input
+     fuer den Guard und keine Uebergabe von IG_PROVIDER_GUARD_USD an den
+     Tageslauf - die Ausnahme beschrieb einen Weg, den es nicht gibt. Und sie
+     waere kein Break Glass gewesen: Dort braucht es Betrag UND Begruendung,
+     hier haette ein Haekchen genuegt.
+
+     Der Test laeuft den echten Pfad, ohne nachtraeglich mutierte Konfiguration:
+       IG_PROVIDER_GUARD_USD → providerGuardLesen → effektiveKonfiguration
+                             → richtlinieGate                                */
   const { providerGuardLesen, effektiveKonfiguration, richtlinieGate, RichtlinieVerletzt,
-    POLICY_PROVIDER_GUARD_USD, PROVIDER_GUARD_USD } = await import("../src/richtlinie.mjs");
+    POLICY_PROVIDER_GUARD_USD, PROVIDER_GUARD_USD, REGEL_DECKEL } = await import("../src/richtlinie.mjs");
 
   const vorher = process.env.IG_PROVIDER_GUARD_USD;
-  const durchlauf = (roh, ausloeser = "schedule") => {
+  const durchlauf = (roh, ausloeser, breakGlass = null) => {
     if (roh === undefined) delete process.env.IG_PROVIDER_GUARD_USD;
     else process.env.IG_PROVIDER_GUARD_USD = roh;
-    const konfiguration = effektiveKonfiguration({ ausloeser, datum: "2026-09-19" });
+    const konfiguration = effektiveKonfiguration({ ausloeser, datum: "2026-09-19", breakGlass });
     try { richtlinieGate({ konfiguration }); return { ok: true, konfiguration }; }
     catch (e) { return { ok: false, fehler: e, konfiguration }; }
   };
+  const guardBefund = (r) => (r.fehler?.befunde || []).filter((b) => /Guard|GUARD/.test(b));
 
   try {
-    /* unset → Standard 0,02 */
-    const a = durchlauf(undefined);
-    assert.equal(a.konfiguration.providerGuardUsd, PROVIDER_GUARD_USD);
-    assert.equal(a.konfiguration.providerGuard.quelle, "standard");
-    assert.ok(a.ok, "der Regelfall ohne gesetzte Variable startet nicht");
-    assert.equal(a.konfiguration.betriebsDeckel.core, 0.30);
-
-    /* "0.02" → erlaubt */
-    const b = durchlauf("0.02");
-    assert.ok(b.ok);
-    assert.equal(b.konfiguration.providerGuard.quelle, "umgebung");
-
-    /* "0.05" → erlaubt, konservativer ist immer zulässig */
-    const c = durchlauf("0.05");
-    assert.ok(c.ok, "ein größerer Guard wird abgelehnt");
-    assert.equal(c.konfiguration.betriebsDeckel.core, 0.27);
-
-    /* "0" → im geplanten Lauf abgelehnt */
-    const d = durchlauf("0");
-    assert.ok(!d.ok && d.fehler instanceof RichtlinieVerletzt, "Guard 0 kommt durch das Gate");
-    assert.ok(d.fehler.befunde.some((x) => /Policy-Mindestwert/.test(x)));
     assert.equal(POLICY_PROVIDER_GUARD_USD, 0.02);
+    assert.equal(PROVIDER_GUARD_USD, 0.02);
 
-    /* "0.0199" → knapp darunter, ebenfalls abgelehnt */
-    const e = durchlauf("0.0199");
-    assert.ok(!e.ok && e.fehler instanceof RichtlinieVerletzt, "0,0199 kommt durch das Gate");
+    /* Erlaubt - und zwar unter BEIDEN Ausloesern gleich. */
+    for (const ausloeser of ["schedule", "workflow_dispatch"]) {
+      const unset = durchlauf(undefined, ausloeser);
+      assert.ok(unset.ok, `${ausloeser}: nicht gesetzt wird abgelehnt`);
+      assert.equal(unset.konfiguration.providerGuardUsd, 0.02);
+      assert.equal(unset.konfiguration.providerGuard.quelle, "standard");
+      assert.equal(unset.konfiguration.betriebsDeckel.core, 0.30);
 
-    /* Ungültiger String → Variante A: Konfigurationsfehler, kein stiller
-       Rückfall. Der Betrag im Ergebnis ist trotzdem der sichere Standard,
-       falls ihn jemand ohne Gate benutzt. */
-    for (const murks of ["quatsch", "-1", "0,02", "NaN"]) {
-      const f = durchlauf(murks);
-      assert.ok(!f.ok && f.fehler instanceof RichtlinieVerletzt, `„${murks}“ kommt durch das Gate`);
-      assert.ok(f.fehler.befunde.some((x) => x.includes("kein gültiger Betrag")),
-        `„${murks}“ wird nicht als Konfigurationsfehler gemeldet: ${f.fehler.befunde.join(" | ")}`);
-      assert.equal(providerGuardLesen(murks).gueltig, false);
-      assert.equal(providerGuardLesen(murks).quelle, "ungueltig");
-      assert.equal(providerGuardLesen(murks).usd, PROVIDER_GUARD_USD, "der Rückfallwert ist nicht der sichere");
-      assert.ok(f.konfiguration.hinweise.some((h) => /kein gültiger Betrag/.test(h)),
-        "der Lauf meldet den Konfigurationsfehler nicht");
+      const leer = durchlauf("", ausloeser);
+      assert.ok(leer.ok, `${ausloeser}: Leerstring wird abgelehnt`);
+      assert.equal(leer.konfiguration.providerGuard.quelle, "standard",
+        "eine leere Actions-Variable muss als nicht gesetzt gelten");
+
+      const genau = durchlauf("0.02", ausloeser);
+      assert.ok(genau.ok, `${ausloeser}: 0,02 wird abgelehnt`);
+      assert.equal(genau.konfiguration.providerGuard.quelle, "umgebung");
+
+      const groesser = durchlauf("0.05", ausloeser);
+      assert.ok(groesser.ok, `${ausloeser}: ein groesserer Guard wird abgelehnt`);
+      assert.equal(groesser.konfiguration.betriebsDeckel.core, 0.27,
+        "der groessere Abstand wirkt auch wirklich");
     }
-    /* Ein ungültiger Wert ist auch von Hand ein Fehler - ein Tippfehler wird
-       nicht dadurch richtig, dass ein Mensch den Lauf gestartet hat. */
-    assert.ok(!durchlauf("quatsch", "workflow_dispatch").ok);
 
-    /* Leerstring zählt als „nicht gesetzt“ - so verhalten sich leere
-       GitHub-Actions-Variablen. */
-    const g = durchlauf("");
-    assert.ok(g.ok);
-    assert.equal(g.konfiguration.providerGuard.quelle, "standard");
+    /* Abgelehnt - ebenfalls unter BEIDEN Ausloesern. Das ist der Kern von RC6. */
+    for (const ausloeser of ["schedule", "workflow_dispatch"]) {
+      for (const zuKlein of ["0", "0.0199", "0.01"]) {
+        const r = durchlauf(zuKlein, ausloeser);
+        assert.ok(!r.ok && r.fehler instanceof RichtlinieVerletzt,
+          `${ausloeser}: Guard ${zuKlein} kommt durch das Gate`);
+        assert.ok(guardBefund(r).some((b) => /Policy-Mindestwert/.test(b)),
+          `${ausloeser}: der Befund nennt den Mindestwert nicht`);
+        assert.ok(guardBefund(r).some((b) => /Break Glass hebt den Core-Deckel/.test(b)),
+          `${ausloeser}: der Befund erklaert die Zustaendigkeit von Break Glass nicht`);
+      }
+      /* Ein gesetzter, unbrauchbarer Wert bleibt in jedem Lauf ein Fehler. */
+      for (const murks of ["quatsch", "-1", "0,02", "NaN"]) {
+        const r = durchlauf(murks, ausloeser);
+        assert.ok(!r.ok && r.fehler instanceof RichtlinieVerletzt, `${ausloeser}: Wert ${murks} kommt durch`);
+        assert.ok(guardBefund(r).some((b) => b.includes("kein gültiger Betrag")));
+        assert.equal(providerGuardLesen(murks).gueltig, false);
+        assert.equal(providerGuardLesen(murks).usd, PROVIDER_GUARD_USD, "der Rueckfallwert ist nicht der sichere");
+      }
+    }
 
-    /* Von Hand mit 0: erlaubt, weil dort ein Mensch entscheidet - dieselbe
-       Semantik wie beim Break Glass. */
-    const h = durchlauf("0", "workflow_dispatch");
-    assert.ok(h.ok, "manuell darf der Guard nicht abgesenkt werden");
-    assert.equal(h.konfiguration.betriebsDeckel.core, 0.32);
+    /* Break Glass bleibt unveraendert moeglich - und laesst den Abstand in
+       Ruhe. Das ist die Trennung, die RC5 vermischt hatte: Break Glass hebt
+       den Core-Deckel, der Guard bleibt darunter stehen. */
+    const bg = durchlauf(undefined, "workflow_dispatch", { aktiv: true, betragUsd: 0.5, grund: "Nachholtag" });
+    assert.ok(bg.ok, "Break Glass von Hand wird abgelehnt");
+    assert.equal(bg.konfiguration.deckel.core, 0.5, "der Core-Deckel wurde nicht angehoben");
+    assert.equal(bg.konfiguration.providerGuardUsd, 0.02, "Break Glass hat den Guard veraendert");
+    assert.equal(bg.konfiguration.betriebsDeckel.core, 0.48, "der Abstand unter dem angehobenen Deckel fehlt");
+    assert.equal(bg.konfiguration.breakGlass.aktiv, true);
+
+    /* Und auch mit Break Glass laesst sich der Guard nicht absenken. */
+    const bgKlein = durchlauf("0", "workflow_dispatch", { aktiv: true, betragUsd: 0.5, grund: "Nachholtag" });
+    assert.ok(!bgKlein.ok, "Break Glass oeffnet einen Weg, den Guard abzusenken");
+    assert.ok(guardBefund(bgKlein).some((b) => /Policy-Mindestwert/.test(b)));
+
+    /* Break Glass aus dem Zeitplan bleibt wirkungslos - unveraendert aus RC4.
+       Der Lauf bricht nicht ab, die Anhebung wird schlicht nicht wirksam und
+       steht als Hinweis im Protokoll. Das ist die richtige Reaktion: Ein
+       geplanter Lauf soll am Regeldeckel weiterarbeiten, nicht ausfallen. */
+    const bgPlan = durchlauf(undefined, "schedule", { aktiv: true, betragUsd: 0.5, grund: "x" });
+    assert.ok(bgPlan.ok, "ein geplanter Lauf faellt wegen einer ignorierten Anhebung aus");
+    assert.equal(bgPlan.konfiguration.breakGlass.aktiv, false, "Break Glass wirkt aus dem Zeitplan");
+    assert.equal(bgPlan.konfiguration.deckel.core, 0.32, "der Deckel wurde aus dem Zeitplan angehoben");
+    assert.ok(bgPlan.konfiguration.hinweise.some((h) => /Break Glass aus einem geplanten Lauf/.test(h)),
+      "die abgelehnte Anhebung steht in keinem Hinweis");
+    assert.deepEqual({ ...REGEL_DECKEL }, { core: 0.32, engagement: 0.25, research: 0.12 });
   } finally {
     if (vorher === undefined) delete process.env.IG_PROVIDER_GUARD_USD;
     else process.env.IG_PROVIDER_GUARD_USD = vorher;
   }
 });
+
+test("1a RC6: Es gibt keinen zweiten, unverdrahteten Weg am Guard vorbei", async () => {
+  /* Die RC5-Ausnahme behauptete einen manuellen Pfad, den es im Workflow gar
+     nicht gab. Dieser Test haelt beides fest: dass das Gate keine Ausnahme
+     nach Ausloeser mehr kennt, und dass der Kommentar daneben nicht laenger
+     das Gegenteil sagt. */
+  const richtlinie = fs.readFileSync(new URL("../src/richtlinie.mjs", import.meta.url), "utf8");
+
+  /* Der Guard-Zweig im Gate haengt an keinem Ausloeser mehr. */
+  const gate = richtlinie.slice(richtlinie.indexOf("export function richtlinieGate"));
+  const guardZweig = gate.slice(gate.indexOf("POLICY_PROVIDER_GUARD_USD") - 200, gate.indexOf("POLICY_PROVIDER_GUARD_USD") + 200);
+  assert.ok(!/geplant\s*&&\s*guard\s*</.test(guardZweig),
+    "der Mindestguard gilt weiterhin nur fuer geplante Laeufe");
+  assert.match(gate, /guard < POLICY_PROVIDER_GUARD_USD/, "die Mindestpruefung fehlt");
+
+  /* Und der Kommentar sagt dasselbe wie das Gate. */
+  assert.match(richtlinie, /JEDEM Produktionslauf/, "die Policy nennt ihren Geltungsbereich nicht");
+  assert.ok(!/wie Break Glass/i.test(richtlinie), "die alte Gleichsetzung mit Break Glass steht noch da");
+  assert.match(richtlinie, /Break Glass bleibt zuständig für die bewusste Anhebung des Core-Deckels/,
+    "die Zustaendigkeit von Break Glass ist nicht abgegrenzt");
+
+  /* „Ausgabedeckel" trug zwei Bedeutungen - Token und Dollar. */
+  assert.ok(!/anbieterseitiger Ausgabedeckel/.test(richtlinie),
+    "der Begriff Ausgabedeckel steht weiter fuer zwei verschiedene Dinge");
+  assert.match(richtlinie, /KOSTEN-HARDCAP je Anfrage/, "der gemeinte Dollar-Hardcap ist nicht benannt");
+  assert.match(richtlinie, /max_tokens.*begrenzt die Ausgabe-TOKEN|begrenzt die Ausgabe-TOKEN/s,
+    "der Unterschied zu max_tokens ist nicht festgehalten");
+
+  /* Der Workflow kennt keinen Guard-Input - und soll auch keinen bekommen.
+     Break Glass hat seine beiden Eingaben, der Guard hat keine. */
+  const pfade = ["../.github/workflows/instagram.yml", "../../.github/workflows/instagram.yml"];
+  let workflow = null;
+  for (const pfad of pfade) {
+    try { workflow = fs.readFileSync(new URL(pfad, import.meta.url), "utf8"); break; } catch { /* der andere Kanal */ }
+  }
+  assert.ok(workflow, "der Workflow wurde nicht gefunden");
+  assert.ok(!/IG_PROVIDER_GUARD_USD/.test(workflow),
+    "der Workflow reicht den Guard durch - dann braucht es auch eine Policy dafuer");
+  assert.match(workflow, /break_glass_grund/, "Break Glass hat seine Begruendungseingabe verloren");
+});
+
 test("1a: Der Admissionbedarf des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {
   /* Fall 3 aus der Anweisung braucht den Reservebestand und ist noch nicht
      gebaut. Was 1a leisten kann, ist die Kostenzusage; die Verfügbarkeits-

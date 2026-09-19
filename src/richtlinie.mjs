@@ -37,24 +37,44 @@ export const REGEL_DECKEL = Object.freeze({ core: 0.32, engagement: 0.25, resear
  *
  * Das ist eine konservative BETRIEBSGRENZE, kein Beweis. Sie macht ein
  * Überschreiten unwahrscheinlich, nicht unmöglich; unmöglich würde erst ein
- * anbieterseitiger Ausgabedeckel machen, den es nicht gibt.
+ * anbieterseitiger KOSTEN-HARDCAP je Anfrage machen - ein Dollarbetrag, ab
+ * dem der Anbieter die Anfrage selbst abbricht. Den gibt es nicht.
  *
- * Über IG_PROVIDER_GUARD_USD einstellbar, damit der Wert an den gemessenen
- * Abweichungen wachsen oder schrumpfen kann, statt geraten zu bleiben.
+ * Ausdrücklich nicht gemeint ist `max_tokens` / `max_output_tokens`: Das
+ * begrenzt die Ausgabe-TOKEN und tut das auch zuverlässig - nur eben in
+ * Token, nicht in Dollar, und nur auf der Ausgabeseite. „Ausgabedeckel"
+ * stand hier für beides und trug damit zwei Bedeutungen.
+ *
+ * Über IG_PROVIDER_GUARD_USD lässt sich der Abstand VERGRÖSSERN, damit er an
+ * gemessenen Abweichungen wachsen kann, statt geraten zu bleiben. Verkleinern
+ * lässt er sich damit nicht (siehe POLICY_PROVIDER_GUARD_USD).
  */
 export const PROVIDER_GUARD_USD = 0.02;
 
 /**
- * Der normative Mindestabstand für Scheduled Production.
+ * Der normative Mindestabstand - für JEDEN Produktionslauf, auch den von Hand
+ * gestarteten.
  *
- * Ein geplanter Lauf darf ihn nicht unterschreiten. Sonst wäre der Guard
- * genau das, was er ersetzen soll: eine Zusage, die eine Umgebungsvariable
- * still aushebeln kann. IG_PROVIDER_GUARD_USD=0 in den Repository-Variablen
- * hätte gereicht - und niemandem wäre es aufgefallen.
+ * RC5 hat hier eine Ausnahme für `workflow_dispatch` gelassen und sie „wie
+ * Break Glass" genannt. Das war aus zwei Gründen falsch:
  *
- * Nach oben ist offen: Ein größerer Abstand ist konservativer und deshalb
- * erlaubt. Eine ABSENKUNG ist eine Policy-Änderung und gehört in diese Zeile,
- * versioniert und im Diff sichtbar, nicht in eine Umgebung.
+ *   Erstens war sie gar nicht verdrahtet. Es gibt keinen Workflow-Input für
+ *   den Guard und keine Übergabe von IG_PROVIDER_GUARD_USD an den Tageslauf.
+ *   Die Ausnahme beschrieb einen Weg, den es nicht gibt.
+ *
+ *   Zweitens wäre sie kein Break Glass gewesen. Break Glass verlangt einen
+ *   ausdrücklichen Betrag UND eine Begründung, beides als Workflow-Eingabe,
+ *   beides im Lauf protokolliert. Für die Guard-Absenkung hätte allein
+ *   `workflow_dispatch` genügt - ein Häkchen ohne Aussage. Und dieser Satz
+ *   stand direkt neben der Ausnahme: „Eine Absenkung gehört versioniert in
+ *   diese Zeile, nicht in eine Umgebung."
+ *
+ * Also eine Policy statt zweier: Nach oben ist offen, ein größerer Abstand
+ * ist konservativer und jederzeit erlaubt. Nach unten führt genau ein Weg -
+ * diese Zeile zu ändern, versioniert und im Diff sichtbar.
+ *
+ * Break Glass bleibt zuständig für die bewusste Anhebung des Core-Deckels.
+ * Es hebt den Deckel; den Abstand darunter lässt es unberührt.
  */
 export const POLICY_PROVIDER_GUARD_USD = 0.02;
 
@@ -221,8 +241,9 @@ export function richtlinieGate({
     if (produkt[feld] !== soll) befunde.push(`Produktmenge ${feld}: ${produkt[feld]} statt ${soll}`);
   }
 
-  /* Der Provider-Guard ist Teil der Policy, nicht der Umgebung. Ein
-     geplanter Lauf mit zu kleinem Abstand startet nicht. */
+  /* Der Provider-Guard ist Teil der Policy, nicht der Umgebung - und zwar in
+     JEDEM Produktionslauf. Ein zu kleiner Abstand startet nicht, egal wer den
+     Lauf ausgelöst hat. */
   const guard = Number(konfiguration.providerGuardUsd);
   const guardStand = konfiguration.providerGuard || null;
   if (guardStand && guardStand.gueltig === false) {
@@ -231,9 +252,10 @@ export function richtlinieGate({
     befunde.push(`IG_PROVIDER_GUARD_USD=„${guardStand.roh}" ist kein gültiger Betrag`);
   } else if (!Number.isFinite(guard) || guard < 0) {
     befunde.push(`Provider-Guard ${konfiguration.providerGuardUsd} ist kein gültiger Betrag`);
-  } else if (geplant && guard < POLICY_PROVIDER_GUARD_USD) {
+  } else if (guard < POLICY_PROVIDER_GUARD_USD) {
     befunde.push(`Provider-Guard ${guard.toFixed(4)} $ unter dem Policy-Mindestwert ${POLICY_PROVIDER_GUARD_USD.toFixed(4)} $ `
-      + `in einem geplanten Lauf - eine Absenkung ist eine versionierte Policy-Änderung, keine Umgebungsvariable`);
+      + `- eine Absenkung ist eine versionierte Policy-Änderung, keine Umgebungsvariable. `
+      + `Break Glass hebt den Core-Deckel, nicht den Abstand darunter.`);
   }
 
   if (researchSuchen > 2) befunde.push(`Research-Suchlimit ${researchSuchen} über dem erlaubten Höchstwert 2`);
