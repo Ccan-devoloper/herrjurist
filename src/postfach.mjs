@@ -99,10 +99,10 @@ export function postfachAnonymisieren(liste = []) {
   if (!Array.isArray(liste)) return [];
   return liste.map((x) => {
     const hash = x?.nachrichtHash || nachrichtHash(x?.nachrichtId);
-    if (!hash || !x?.datum) return null;
+    if (!hash) return null;
     return {
       nachrichtHash: hash,
-      datum: String(x.datum).slice(0, 10),
+      datum: String(x?.datum || "").slice(0, 10),
       status: x.status || (x.uebersprungen ? "uebersprungen" : "beantwortet"),
     };
   }).filter(Boolean);
