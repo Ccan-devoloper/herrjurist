@@ -421,12 +421,12 @@ async function zweitmeinung(text, befunde, zweck = "faktencheck") {
   };
   let response;
   try {
-    response = await claudeAufruf({ zweck, params: basis, modell, attempt: 1 });
+    response = await claudeAufruf({ zweck, params: basis, modell, attempt: 1, optional: true });
   } catch (e) {
     if (!(e instanceof Anthropic.BadRequestError)) throw e;
     const { thinking, output_config, ...rest } = basis;
     response = await claudeAufruf({
-      zweck, modell, attempt: 2,
+      zweck, modell, attempt: 2, optional: true,
       params: { ...rest, messages: [{ role: "user", content: `${user}\n\nAntworte ausschließlich mit einem JSON-Objekt nach diesem Schema:\n${JSON.stringify(SCHIEDS_SCHEMA)}` }] },
     });
   }
