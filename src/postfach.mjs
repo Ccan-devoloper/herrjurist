@@ -18,6 +18,7 @@
    ========================================================================== */
 
 import fs from "node:fs";
+import crypto from "node:crypto";
 import path from "node:path";
 import { CONFIG } from "./config.mjs";
 import { claudeAufruf } from "./anbieter.mjs";
@@ -106,14 +107,16 @@ export function offeneNachrichten(konversationen, eigeneId, ledger, jetzt = Date
   const ausWebhook = (nachricht) => {
     const direkt = webhookBezug[String(nachricht.id || "")];
     if (direkt?.storyId) return { ...direkt, wie: "mid" };
-    /* Zweitschluessel Absender+Text: Falls der Abruf eine andere
-       Nachrichten-ID fuehrt als das Ereignis, traegt der Wortlaut die
-       Zuordnung. Exakter Vergleich - kein Raten, keine Aehnlichkeit. */
+    /* Datenschutzfreundlicher Zweitschluessel: Der öffentliche State enthält
+       weder Absender-ID noch Nachrichtentext. Beide werden nur lokal zu einem
+       SHA-256-Fingerabdruck verbunden; damit bleibt die exakte Zuordnung
+       möglich, ohne den Wortlaut einer DM zu persistieren. */
     const t = String(nachricht.message || "").trim();
     const von = String(nachricht.from?.id || "");
     if (!t || !von) return null;
+    const fallbackHash = crypto.createHash("sha256").update(`${von}\0${t}`).digest("hex");
     for (const w of Object.values(webhookBezug)) {
-      if (w?.storyId && String(w.absender) === von && String(w.text || "").trim() === t) return { ...w, wie: "absender+text" };
+      if (w?.storyId && w.fallbackHash === fallbackHash) return { ...w, wie: "hash" };
     }
     return null;
   };
