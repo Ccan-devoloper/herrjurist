@@ -536,7 +536,12 @@ export function quizPaarFreigabe(eintrag, planStories = [], textLesen = () => nu
      widerspruechlicher Zustand: Eine Antwort ohne Frage ist fuer die Lesenden
      sinnlos, eine Frage ohne Antwort bleibt unbeantwortet. */
   if (!partner) return { status: "inkonsistent", grund: `kein Gegenstueck (${gegenart}) im Plan`, partner: null };
-  /* Ein früheres „uebersprungen“ ist kein Endzustand mehr: Fach- und\n     Formfehler werden in späteren Läufen repariert. Nur ein harter, separat\n     vermerkter Laufzeitfehler macht das Gegenstück unbrauchbar. */\n  if (partner.fehler) {\n    return { status: "verfallen", grund: `${gegenart} ${partner.slot} hat einen harten Veröffentlichungsfehler`, partner };\n  }
+  /* Ein früheres „uebersprungen“ ist kein Endzustand mehr: Fach- und
+     Formfehler werden in späteren Läufen repariert. Nur ein harter, separat
+     vermerkter Laufzeitfehler macht das Gegenstück unbrauchbar. */
+  if (partner.fehler) {
+    return { status: "verfallen", grund: `${gegenart} ${partner.slot} hat einen harten Veröffentlichungsfehler`, partner };
+  }
 
   const eigen = textLesen(eintrag.slot);
   if (!eigen) return { status: "warten", grund: "eigener Text fehlt noch", partner };
