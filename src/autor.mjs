@@ -139,9 +139,9 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 
 ## Form
 - Folienarten: titel (Frage/Aufhänger), text (Titel + Text oder Punkte), schritte (nummeriert, je Schritt titel + text), vergleich (links/rechts mit titel + punkte), rechnung (formel, zeilen, ergebnis), karte (dichter Spickzettel: schritte mit kurzem titel + norm im text), merke (ein Satz, der hängen bleibt), cta (Abschluss mit Folgen-Aufforderung).
-- hooks: drei alternative Titel für Folie 1 in unterschiedlichen Typen – eine Frage, ein Fehler-/Falle-Hook („Der Fehler, der … kostet“), ein Zahlen-Hook (Frist, Prozentsatz, Betrag). Folie 1 trägt den besten davon.
+- hooks: drei alternative Titel für Folie 1 mit unterschiedlichem Einstieg: (1) konkrete Prüfungsfrage/Entscheidung, (2) echte Abgrenzung oder belegbare Falle, (3) klarer Ablauf/Nutzen oder kurzer Falltrigger. Der Titel nennt das juristische Thema selbst – kein austauschbares „Kennst du das?“ und kein künstliches Geheimnis. Keine erfundenen Häufigkeiten, Punktzahlen, Korrektorenvorlieben oder Superlative.
 - Die erste Zeile der Caption ist gleichzeitig Suchtext: Sie nennt das Thema mit den Wörtern, die jemand bei Instagram oder Google eintippen würde (z. B. „Annahmeverzug Voraussetzungen Rechtsfolgen“), natürlich eingebettet in den Hook.
-- Folie-1-Titel: eine Frage, ideal 45–80 Zeichen, maximal 100. Andere Titel maximal 60 Zeichen.
+- Folie-1-Titel: 5–10 gut lesbare Wörter, ideal 35–70 Zeichen, maximal 80. Er muss ohne Caption und ohne Ton verständlich machen, welche Rechtsfrage/Abgrenzung folgt. Andere Titel maximal 60 Zeichen.
 - Je Folie maximal 5 Punkte / 5 Schritte, insgesamt maximal 380 Zeichen Text je Folie; bei „vergleich“ je Spalte maximal 3 Punkte à 60 Zeichen.
 - Kernaussagen und Merksätze aus dem Skelett NIE übernehmen, auch nicht leicht umgestellt – schreibe einen eigenen Merksatz mit anderem Satzbau und anderen Wörtern.
 - Hervorhebungen mit *Sternchen* um das Wort – sparsam, ein bis zwei je Folie.
@@ -557,9 +557,12 @@ function themaText(thema) {
    Worte. Die Wahl haengt am Thema, damit derselbe Beitrag beim Nachrendern
    gleich aussieht - im Feed wechselt es von Beitrag zu Beitrag. */
 const PRIORITAET_TEXTE = {
-  hoch: ["Dauerbrenner im Examen", "Kommt fast jedes Jahr dran", "Examensklassiker", "Prüfer:innen lieben das", "Das musst du können"],
-  mittel: ["Regelmäßig geprüft", "Kommt immer wieder dran", "Fester Bestandteil im Examen", "Gehört ins Repertoire"],
-  selten: ["Seltener, aber punktestark", "Wenn es kommt, zählt es doppelt", "Unterschätzt – und punktestark", "Die Punkte, die andere liegen lassen"],
+  /* Die Prioritaetsstufe kommt aus dem Themeninventar. Die Pille darf diese
+     Einstufung benennen, aber keine erfundene Jahreshaeufigkeit,
+     Korrektorenvorliebe oder Punktwirkung daraus machen. */
+  hoch: ["Hohe Examenspriorität", "Klausurrelevant", "Examensklassiker", "Sicher beherrschen", "Grundbaustein fürs Examen"],
+  mittel: ["Mittlere Examenspriorität", "Gehört ins Repertoire", "Wichtig für den Aufbau", "Prüfungssicher einordnen", "Solides Examenswissen"],
+  selten: ["Vertiefungsstoff", "Seltenerer Prüfungsstoff", "Gut zur Abgrenzung", "Detail mit Systembezug", "Sauber einordnen"],
 };
 const HINWEISE = ["So geht's!", "Swipe →", "Schau rein", "Merk dir das", "Kurz erklärt", "Das musst du wissen", "Weiter geht's →", "Lies weiter"];
 const streuung = (text) => { let h = 7; for (const c of String(text)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
@@ -570,26 +573,39 @@ function prioritaetText(stufe, seed = "") {
 }
 
 /* Nachbearbeitung: leere Felder entfernen, Titelfolie normieren, Hashtags säubern. */
-/* Besten Hook wählen: gelernte Gewichte je Hook-Typ, sonst Heuristik (Länge, Frageform). */
-function hookWaehlen(daten, strategie) {
+const HOOK_UNBELEGT = /fast alle|die meisten|kaum jemand|niemand|jeder macht|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
+const HOOK_GENERISCH = /^(kenn(?:st|en) du|das stimmt so nicht|schluss mit|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles)[!? .]*$/i;
+const HOOK_STOP = new Set(["der","die","das","den","dem","des","ein","eine","einer","eines","und","oder","mit","ohne","für","von","bei","was","wie","wann","warum","welche","welcher","welches","prüfen","prüfung"]);
+const hookWoerter = (s) => String(s || "").toLocaleLowerCase("de-DE").match(/[\p{L}\p{N}§]+/gu) || [];
+
+/* Besten Carousel-Hook wählen. Das gelernte Muster bleibt wichtig, bekommt
+   aber zwei harte Leitplanken: Thema auf der ersten Kachel erkennbar und kein
+   unbelegtes Clickbait-Versprechen. */
+function hookWaehlen(daten, strategie, thema = null) {
   const kandidaten = [...(daten.hooks || [])];
   const erster = daten.folien?.[0]?.titel;
   if (erster && !kandidaten.some((h) => h.titel === erster)) kandidaten.unshift({ typ: hookTyp(erster), titel: erster });
   if (!kandidaten.length) return null;
   const g = strategie?.hookGewicht || {};
+  const themaText = [thema?.titel, ...(thema?.normen || [])].filter(Boolean).join(" ");
+  const themaWoerter = new Set(hookWoerter(themaText).filter((w) => w.length >= 4 && !HOOK_STOP.has(w)));
   const bewertet = kandidaten.map((h) => {
-    const l = h.titel.length;
+    const titel = String(h.titel || "").trim();
+    const woerter = hookWoerter(titel);
     let p = (g[h.typ] ?? 1) * 10;
-    if (l >= 45 && l <= 80) p += 3; else if (l > 100) p -= 4;
-    if (/\d/.test(h.titel)) p += 1;
-    if (/\?$/.test(h.titel.trim())) p += 1;
+    if (woerter.length >= 5 && woerter.length <= 10) p += 3;
+    else if (woerter.length > 12 || titel.length > 80) p -= 5;
+    if (/\?$/.test(titel)) p += 1;
+    if (themaWoerter.size && woerter.some((w) => themaWoerter.has(w))) p += 4;
+    if (HOOK_UNBELEGT.test(titel)) p -= 30;
+    if (HOOK_GENERISCH.test(titel)) p -= 12;
     return { ...h, p };
   }).sort((a, b) => b.p - a.p);
   return bewertet[0];
 }
 
 function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
-  const hook = hookWaehlen(daten, strategie);
+  const hook = hookWaehlen(daten, strategie, thema);
   if (hook && daten.folien?.[0]) daten.folien[0].titel = hook.titel;
   const folien = (daten.folien || []).map((f) => {
     const o = {};

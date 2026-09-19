@@ -65,6 +65,19 @@ export function punkte(m) {
   return (m.follows || 0) * 10 + (m.profile_visits || 0) + (m.saved || 0) * 3 + (m.shares || 0) * 4 + (m.comments || 0) * 2 + (m.likes || 0) + (m.reach || 0) / 100 + (m.views || 0) / 300;
 }
 
+/* Hook-Lernen darf nicht bloss den Hook belohnen, der zufaellig schon mehr
+   Reichweite bekam. Fuer neue Zielgruppen ist Teilen/Senden pro Reach das
+   wichtigste direkt verfuegbare Signal; bei Lerncontent kommt Save/Reach als
+   Nutzwert dazu. Likes/Follows bleiben drin, aber ebenfalls normalisiert. */
+export function hookPunkte(m) {
+  if (!m) return null;
+  const reach = Number(m.reach) || 0;
+  if (reach <= 0) return punkte(m);
+  const pro = (x) => (Number(x) || 0) / reach;
+  return pro(m.shares) * 8 + pro(m.saved) * 5 + pro(m.likes) * 2
+    + pro(m.comments) * 2 + pro(m.follows) * 12 + pro(m.profile_visits) * 3;
+}
+
 /* Hashtag-Lernschleife: Welche Hashtags stehen unter den Beiträgen, die Follower
    und Reichweite bringen? Gewicht relativ zum Schnitt (0,5–2), plus Summe
    neuer Follower je Hashtag für den Bericht. */
@@ -123,19 +136,21 @@ export function strategieAbleiten(ledger, konto = {}) {
   const strategie = { stand: new Date().toISOString().slice(0, 10), beitraege: eintraege.length, formatGewicht: {}, fachGewicht: {}, hookGewicht: {}, besteStunden: null, follower: konto.follower ?? null, reichweite7: konto.reichweite7 ?? null };
   if (eintraege.length >= 6) {
     const mittel = eintraege.reduce((a, e) => a + punkte(e.insights), 0) / eintraege.length || 1;
-    const gruppe = (key) => {
+    const gruppe = (key, scorer = punkte) => {
       const g = {};
-      for (const e of eintraege) { const k = e[key]; if (!k) continue; (g[k] ||= []).push(punkte(e.insights)); }
+      for (const e of eintraege) { const k = e[key]; if (!k) continue; (g[k] ||= []).push(scorer(e.insights)); }
+      const alle = eintraege.map((e) => scorer(e.insights)).filter((x) => Number.isFinite(x));
+      const basis = alle.reduce((a, b) => a + b, 0) / (alle.length || 1) || 1;
       const out = {};
-      for (const [k, v] of Object.entries(g)) if (v.length >= 2) out[k] = Math.max(0.5, Math.min(2, (v.reduce((a, b) => a + b, 0) / v.length) / mittel));
+      for (const [k, v] of Object.entries(g)) if (v.length >= 2) out[k] = Math.max(0.5, Math.min(2, (v.reduce((a, b) => a + b, 0) / v.length) / basis));
       return out;
     };
     strategie.formatGewicht = gruppe("format");
     strategie.fachGewicht = gruppe("fach");
-    /* Hooks: Gemessen wird das erkannte Muster; bei Reels steht zusätzlich das
-       beauftragte Muster im Ledger. Beides fließt in dieselbe Tabelle, damit die
-       Rotation in hooks.mjs davon lernt. */
-    strategie.hookGewicht = { ...gruppe("hookTyp"), ...gruppe("hookMuster") };
+    /* Hooks lernen aus Reaktionen PRO REACH, nicht aus absoluter Reichweite:
+       Sonst gewinnt das Muster, das schon ausgespielt wurde, statt das Muster,
+       das Menschen zum Weiterleiten/Speichern gebracht hat. */
+    strategie.hookGewicht = { ...gruppe("hookTyp", hookPunkte), ...gruppe("hookMuster", hookPunkte) };
   }
   /* Reel-Länge: Wie viele Reels je Fenster gemessen sind und wie sie liefen.
      Die Messungen stehen auch dann schon zur Verfügung, wenn es für Gewichte

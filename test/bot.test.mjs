@@ -2982,14 +2982,11 @@ test("Obergrenze je Beitrag gilt in jedem Schreibpfad, verschachtelt läuft der 
   assert.ok(!/postenBeginnen\(`Beitrag \$\{eintrag\.slot\}`, CONFIG\.ki\.maxJeBeitragUsd\);\n\s+await textBesorgen/.test(lauf), "die Vorab-Schleife beginnt keinen zweiten Posten");
 });
 
-test("nachbessern reicht einen BudgetFehler weiter statt einen neuen Entwurf zu provozieren", async () => {
+test("nachbessern bezahlt nach exakten Fundstellen keine zweite Providerprüfung", async () => {
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   const block = autor.slice(autor.indexOf("async function nachbessern"), autor.indexOf("export function pruefHinweis"));
-  /* Seit es die gemeinsame Oberklasse gibt, wird nicht mehr auf einen
-     einzelnen Fehlertyp geprüft: Admission, gesperrter Topf und ein nicht
-     durable gewordenes Journal sagen dasselbe wie der alte BudgetFehler. */
-  assert.match(block, /if \(istKostenKontrollFehler\(e\)\) throw e;/);
-  assert.ok(!/catch \{ return null; \}/.test(block), "kein stilles Schlucken mehr");
+  assert.match(block, /Alle harten Prüfbefunde wurden per exakter Fundstelle korrigiert/);
+  assert.ok(!/await pruefeFakten\(/.test(block), "nach exakter Korrektur wird wieder eine zweite Providerprüfung bezahlt");
 });
 
 test("Story-Faktencheck: jeder Ausfall hält die Texte, verwirft sie nicht", async () => {
@@ -4823,9 +4820,12 @@ test("1a+: Die Eingabeschranke ist konservativ - und deckt den Anbieter nicht ab
   assert.ok(alteSchaetzung(dicht) < zeichen,
     "Kontrolle: die alte Schätzung lag unter der Zeichenzahl und damit möglicherweise unter der Tokenzahl");
 
-  /* Der Zählendpunkt darf die Schranke anheben, nie senken. */
-  assert.equal(eingabeGrenze(basis, 5), eingabeObergrenzeTokens(basis), "ein kleiner Zählwert senkt die Schranke");
-  assert.equal(eingabeGrenze(basis, 10 ** 7), 10 ** 7, "ein größerer Zählwert wird nicht ignoriert");
+  /* Mit echtem Provider-Zählwert gilt dessen gepufferter Wert operativ; ohne
+     Zählwert fällt die Admission auf die grobe clientseitige Schranke zurück. */
+  const { PROVIDER_COUNT_FAKTOR, PROVIDER_COUNT_PUFFER } = await import("../src/eingabe.mjs");
+  assert.equal(eingabeGrenze(basis, null), eingabeObergrenzeTokens(basis), "fehlender Zählwert löst den Fallback nicht aus");
+  assert.equal(eingabeGrenze(basis, 5), Math.ceil(5 * PROVIDER_COUNT_FAKTOR + PROVIDER_COUNT_PUFFER));
+  assert.equal(eingabeGrenze(basis, 10 ** 7), Math.ceil(10 ** 7 * PROVIDER_COUNT_FAKTOR + PROVIDER_COUNT_PUFFER));
 });
 
 test("1a+: Ein Aufruf, dessen Input+Output den Resttopf sprengen könnte, startet nicht", async () => {
@@ -5225,19 +5225,22 @@ test("1a RC3: Der Zählendpunkt bekommt den vollständigen Request, nicht eine T
   assert.equal(zaehlKoerper({ model: "m", messages: [], tools: [{ type: "code_execution_20260521", name: "code_execution" }] }), null);
 });
 
-test("1a RC3: Die Admissiongrenze ist die größere der beiden Zahlen - und heißt nicht Beweis", async () => {
-  const { clientInputBound, admissionBound } = await import("../src/eingabe.mjs");
+test("1a RC3: Provider-Zählwert ist operativ, die Byte-Schranke ist der Fallback", async () => {
+  const { clientInputBound, admissionBound, PROVIDER_COUNT_FAKTOR, PROVIDER_COUNT_PUFFER } = await import("../src/eingabe.mjs");
   const params = { model: "claude-sonnet-5", max_tokens: 2000, messages: [{ role: "user", content: "Text ".repeat(200) }] };
   const client = clientInputBound(params);
+  const gepuffert = (n) => Math.ceil(n * PROVIDER_COUNT_FAKTOR + PROVIDER_COUNT_PUFFER);
 
   assert.equal(admissionBound(params, null), client, "ohne Zählwert gilt die clientseitige Schranke");
-  assert.equal(admissionBound(params, client - 500), client, "ein kleinerer Zählwert darf die Schranke nicht senken");
-  assert.equal(admissionBound(params, client + 500), client + 500, "ein größerer Zählwert muss sie anheben");
+  assert.equal(admissionBound(params, undefined), client, "undefined darf nicht als Tokenzahl 0 gelten");
+  assert.equal(admissionBound(params, ""), client, "leerer Zählwert darf nicht als Tokenzahl 0 gelten");
+  assert.equal(admissionBound(params, client - 500), gepuffert(client - 500), "Provider-Zählwert wird nicht als operative Grundlage genutzt");
+  assert.equal(admissionBound(params, client + 500), gepuffert(client + 500), "Puffer auf Provider-Zählwert fehlt");
 
-  /* Der injizierte Systemprompt der Structured Outputs ist genau der Fall, in
-     dem der Zählwert über der Byte-Schranke liegen kann. */
+  /* Structured Outputs sind gerade der Grund, den Provider-Zähler der groben
+     Request-Bytezahl vorzuziehen: er sieht auch den injizierten Prompt. */
   const mitSchema = { ...params, output_config: { format: { type: "json_schema", schema: { type: "object" } } } };
-  assert.ok(admissionBound(mitSchema, clientInputBound(mitSchema) + 300) > clientInputBound(mitSchema));
+  assert.equal(admissionBound(mitSchema, 1200), gepuffert(1200));
 
   /* Und im Quelltext steht keine Beweisbehauptung mehr. */
   const quelle = fs.readFileSync(new URL("../src/eingabe.mjs", import.meta.url), "utf8");
@@ -6872,4 +6875,19 @@ test("Produktionsbudget: guenstige Defaults und Reserve kann sich aufbauen", () 
   assert.match(c, /modellPruefungReel:\s*env\("IG_KI_MODELL_PRUEFUNG_REEL",\s*"claude-sonnet-5"\)/);
   assert.match(c, /effortBeitrag:\s*env\("IG_KI_EFFORT_BEITRAG",\s*"low"\)/);
   assert.match(c, /reserveNachschubMinUsd:\s*Number\(env\("IG_RESERVE_NACHSCHUB_MIN_USD",\s*"0\.08"\)\)/);
+});
+
+
+test("Hook-Lernen bevorzugt Weiterleitungen pro Reach statt bloßer Größe", async () => {
+  const { hookPunkte } = await import("../src/insights.mjs");
+  const eng = hookPunkte({ reach: 1000, shares: 20, saved: 20, likes: 60 });
+  const breit = hookPunkte({ reach: 10000, shares: 20, saved: 20, likes: 60 });
+  assert.ok(eng > breit, "absolute Reichweite überstimmt wieder die Hook-Reaktion pro Reach");
+});
+
+test("Reel-Hooks verbieten unbelegte Reichweiten- und Punkteversprechen", async () => {
+  const { HOOKS, pruefeHook } = await import("../src/hooks.mjs");
+  const beispiele = JSON.stringify(HOOKS);
+  assert.ok(!/fast alle|die meisten|teuerste denkfehler|volle punkte|punktegeschenk|prüfer:innen lieben/i.test(beispiele));
+  assert.ok(pruefeHook({ titel: "Fast alle machen diesen Fehler", sprecher: "Fast alle machen hier denselben Fehler." }).length > 0);
 });

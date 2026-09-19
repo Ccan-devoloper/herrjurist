@@ -164,9 +164,12 @@ export function zaehlKoerper(params) {
 export const PROVIDER_COUNT_FAKTOR = 1.10;
 export const PROVIDER_COUNT_PUFFER = 256;
 export function admissionBound(params, providerCountEstimate = null) {
-  const z = Number(providerCountEstimate);
-  if (Number.isFinite(z) && z >= 0) {
-    return Math.ceil(z * PROVIDER_COUNT_FAKTOR + PROVIDER_COUNT_PUFFER);
+  /* Number(null) === 0. Ohne diese ausdrueckliche Abfrage wurde ein FEHLENDER
+     Zaehlerwert deshalb am 19.09. zu 256 Token Admission statt zum
+     clientseitigen Fallback. Das unterreservierte insbesondere OpenAI-Pfade. */
+  if (providerCountEstimate !== null && providerCountEstimate !== undefined && providerCountEstimate !== "") {
+    const z = Number(providerCountEstimate);
+    if (Number.isFinite(z) && z >= 0) return Math.ceil(z * PROVIDER_COUNT_FAKTOR + PROVIDER_COUNT_PUFFER);
   }
   return clientInputBound(params);
 }

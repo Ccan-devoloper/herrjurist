@@ -1,124 +1,91 @@
 /* ==========================================================================
-   Hooks für Reels: die ersten zwei Sekunden.
+   Hooks für Reels: Thema sofort erkennbar, Nutzen sofort klar.
 
-   Instagram entscheidet über die Verteilung eines Reels vor allem danach, wie
-   viele Zuschauer über die Drei-Sekunden-Marke hinaus dabeibleiben. Wer dort
-   abspringt, kostet Reichweite; ein Reel mit starkem Halt wird um ein
-   Vielfaches weiter ausgespielt. Deshalb hat jedes Reel hier einen Hook nach
-   festem Muster – und der Bildschirmtext trägt ihn allein, weil viele ohne Ton
-   schauen.
+   Fuer die Verteilung zaehlen vor allem Aufmerksamkeit und Weiterleitungen.
+   Daraus folgt fuer einen Examenskanal NICHT mehr Clickbait, sondern mehr
+   Praezision: Wer den Kanal noch nicht kennt, muss in der ersten Kachel bzw.
+   im ersten Satz erkennen, welche Rechtsfrage geloest wird und warum der
+   Inhalt fuer die Klausur nuetzlich ist.
 
-   Die Muster stammen aus der Praxis kurzer Videos – Neugier und Wissenslücke,
-   Alltagsbezug, Problem und Abhilfe, Widerspruch, direkte Frage, steile
-   Behauptung, Preisschild, Szene – und sind hier auf das juristische Staatsexamen
-   übersetzt. Welches Muster ein Tag bekommt, entscheidet die Rotation; was
-   messbar besser lief, wird bevorzugt (insights.mjs liefert hookGewicht).
-
-   Gesprochen wird der Hook anders als der Rest: langsamer, etwas lauter, mit
-   einer Pause danach (stimme.mjs, reel.mjs).
+   Keine erfundenen Haeufigkeiten, Punktwerte, Korrektorenvorlieben oder
+   Superlative. Ein guter Hook verspricht nur, was das Reel danach einloest.
    ========================================================================== */
 
-/**
- * Die Muster. `regel` geht wörtlich in den Auftrag an das Modell,
- * `beispiele` zeigen den Ton an fachlichen Themen.
- */
 export const HOOKS = {
-  fehler: {
-    name: "Fehler-Hook",
-    regel: "Benenne den Fehler, den fast alle machen, bevor du die Lösung zeigst. Kein Vorwurf, sondern Wiedererkennung.",
-    beispiele: [
-      { titel: "Der teuerste Denkfehler", sprecher: "Fast alle prüfen hier den Anspruch zuerst. Genau das kostet die Punkte." },
-      { titel: "Falsches Gericht, Klage weg?", sprecher: "Die Klage landet beim unzuständigen Gericht – und viele schreiben sofort: unzulässig." },
-    ],
-  },
   frage: {
-    name: "Direkte Frage",
-    regel: "Stelle eine Frage, die man im Examen beantworten können muss und bei der man kurz zögert. Die Antwort kommt erst später im Reel.",
+    name: "Prüfungsfrage",
+    regel: "Stelle die konkrete Rechtsfrage, die das Reel beantwortet. Der Fachbegriff oder die Norm gehört in den Bildschirmtext.",
     beispiele: [
-      { titel: "Wer trägt die Gefahr?", sprecher: "Der Käufer nimmt die Ware nicht an, dann verbrennt das Lager. Wer zahlt?" },
-      { titel: "Heimtücke oder nicht?", sprecher: "Das Opfer ahnt nichts, der Täter weiß das. Reicht das für Paragraf 211?" },
+      { titel: "§ 123 oder § 80 V?", sprecher: "Wann brauchst du Paragraf 123 VwGO – und wann Paragraf 80 Absatz 5?" },
+      { titel: "Heimtücke trotz offenen Angriffs?", sprecher: "Kann Heimtücke vorliegen, obwohl der Täter dem Opfer offen gegenübertritt?" },
     ],
   },
-  luecke: {
-    name: "Wissenslücke",
-    regel: "Zeige, dass es eine bestimmte Stelle gibt, die alles entscheidet, ohne sie sofort zu verraten.",
+  abgrenzung: {
+    name: "Abgrenzung",
+    regel: "Stelle zwei klausurrelevante Alternativen gegeneinander. Beide Begriffe müssen auf dem Bildschirm stehen.",
     beispiele: [
-      { titel: "Ein Halbsatz entscheidet", sprecher: "In Paragraf 123 Absatz 5 VwGO steckt ein Halbsatz, der über den ganzen Antrag entscheidet." },
-      { titel: "Die Reihenfolge ist alles", sprecher: "Zwei Prüfungsschritte, eine Reihenfolge – und nur eine davon führt zur richtigen Lösung." },
+      { titel: "Anfechtung oder Rücktritt?", sprecher: "Ein Irrtum und ein Mangel treffen zusammen – welcher Weg gehört zuerst in die Prüfung?" },
+      { titel: "Raub oder räuberische Erpressung?", sprecher: "Woran trennst du Raub und räuberische Erpressung im Aufbau sauber?" },
     ],
   },
-  behauptung: {
-    name: "Steile Behauptung",
-    regel: "Stelle eine These auf, die zunächst widerspricht, und löse sie im Reel fachlich sauber auf. Keine Übertreibung, die du nicht belegst.",
+  fehler: {
+    name: "Konkrete Falle",
+    regel: "Benenne einen sachlich belegbaren Aufbau- oder Zuordnungsfehler. Behaupte nicht, wie viele ihn machen oder wie viele Punkte er kostet.",
     beispiele: [
-      { titel: "Zulässigkeit ist geschenkt", sprecher: "Die Zulässigkeit ist der einfachste Punktelieferant in jeder Klausur. Ernsthaft." },
-      { titel: "Auswendig lernen bringt nichts", sprecher: "Das Schema auswendig zu können reicht hier nicht. Es kommt auf die Abgrenzung an." },
+      { titel: "Hier kippt der Anspruch", sprecher: "Wenn du Annahmeverzug und Unmöglichkeit vertauschst, prüfst du ab hier die falsche Rechtsfolge." },
+      { titel: "Falscher Antrag, falscher Aufbau", sprecher: "Bei Paragraf 80 Absatz 5 entscheidet schon der Antrag, welchen Prüfungsmaßstab du brauchst." },
     ],
   },
-  kosten: {
-    name: "Preisschild",
-    regel: "Sage konkret, was der Fehler oder das Wissen im Examen wert ist. Zahlen nur, wenn sie aus dem Themen-Skelett stammen – niemals erfundene Statistiken.",
+  reihenfolge: {
+    name: "Reihenfolge",
+    regel: "Zeige die Stelle, an der eine Prüfungsreihenfolge entscheidet. Formuliere als konkrete 'was zuerst?'-Frage.",
     beispiele: [
-      { titel: "Das kostet dich Punkte", sprecher: "Wer hier den falschen Absatz zitiert, verliert die halbe Prüfung." },
-      { titel: "Drei Sätze, volle Punkte", sprecher: "Für diesen Prüfungspunkt brauchst du drei Sätze. Mehr will der Korrektor nicht." },
+      { titel: "Was prüfst du zuerst?", sprecher: "Bei Konkurrenzen entscheidet die Reihenfolge, ob dein weiterer Aufbau überhaupt passt." },
+      { titel: "Erst Anspruch, dann Einrede?", sprecher: "Wo gehört die Verjährung hin, damit Anspruch und Einrede sauber getrennt bleiben?" },
     ],
   },
-  szene: {
-    name: "Szene aus der Klausur",
-    regel: "Setze die Zuschauer mitten in die Prüfungssituation, in der zweiten Person, im Präsens.",
+  fall: {
+    name: "Mini-Fall",
+    regel: "Beginne mit einem sehr kurzen Sachverhaltsmoment und nenne die Rechtsfrage noch in derselben Hook-Szene.",
     beispiele: [
-      { titel: "Stunde drei, Blatt vier", sprecher: "Du liest den Sachverhalt zum dritten Mal und weißt nicht, wo du anfangen sollst." },
-      { titel: "Der Satz im Sachverhalt", sprecher: "Ein Nebensatz im Sachverhalt – und plötzlich läuft die ganze Prüfung anders." },
+      { titel: "Ware weg – wer trägt?", sprecher: "Der Käufer nimmt nicht ab, danach geht die Ware unter: Wer trägt jetzt die Gegenleistungsgefahr?" },
+      { titel: "Bescheid da, Tatsache neu", sprecher: "Nach dem Steuerbescheid taucht eine neue Tatsache auf – hier entscheidet die Korrekturvorschrift." },
     ],
   },
-  alltag: {
-    name: "Alltag beim Lernen",
-    regel: "Sprich ein Gefühl aus, das jede und jeder beim Lernen kennt, und knüpfe daran das Fachthema. Wiedererkennung vor Fachbegriff.",
+  norm: {
+    name: "Norm-Anker",
+    regel: "Nutze eine konkrete Norm als Wiedererkennungsanker und sage, welche Entscheidung an ihr hängt.",
     beispiele: [
-      { titel: "Kennst du diesen Moment?", sprecher: "Du hast das Schema dreimal gelernt und in der Klausur ist es weg." },
-      { titel: "Immer dieselbe Stelle", sprecher: "Jedes Mal, wenn die Kausalität dran ist, fängst du wieder von vorne an." },
+      { titel: "§ 254 BGB: wo genau?", sprecher: "Paragraf 254 BGB ist schnell genannt – entscheidend ist, an welcher Stelle du ihn einbaust." },
+      { titel: "§ 28 StGB: welche Ebene?", sprecher: "Paragraf 28 StGB löst nicht jedes Beteiligungsproblem gleich – zuerst brauchst du die richtige Ebene." },
     ],
   },
   widerspruch: {
-    name: "Widerspruch",
-    regel: "Stelle eine verbreitete Annahme in Frage, die tatsächlich falsch ist, und löse sie fachlich auf. Nur echte Irrtümer, keine Strohmänner.",
+    name: "Irrtum korrigieren",
+    regel: "Korrigiere nur eine tatsächlich falsche Aussage, die du im Reel fachlich begründen kannst. Kein Strohmann, kein 'alle lernen das falsch'.",
     beispiele: [
-      { titel: "Das stimmt so nicht", sprecher: "Der Widerspruch hemmt die Vollziehung immer? Genau umgekehrt." },
-      { titel: "Fast alle lernen das falsch", sprecher: "Der Erlaubnistatbestandsirrtum ist ein Verbotsirrtum? Nicht nach herrschender Lehre." },
+      { titel: "Widerspruch stoppt Vollziehung?", sprecher: "Nein – Widerspruch und aufschiebende Wirkung musst du sauber auseinanderhalten." },
+      { titel: "Verbotsirrtum bei ETBI?", sprecher: "Den Erlaubnistatbestandsirrtum ordnest du nicht einfach wie einen normalen Verbotsirrtum ein." },
     ],
   },
   loesung: {
-    name: "Problem und Abhilfe",
-    regel: "Nenne den Schmerzpunkt und verspreche im selben Atemzug die Abhilfe, die das Reel liefert. Das Versprechen muss das Reel auch einlösen.",
+    name: "Konkreter Ablauf",
+    regel: "Versprich einen kleinen, klaren Ablauf, den das Reel vollständig liefert. Zahlen nur, wenn genau so viele Schritte folgen.",
     beispiele: [
-      { titel: "Schluss mit Raten", sprecher: "Du weißt nie, wo die Prüfung anfängt? Dafür gibt es genau eine Reihenfolge." },
-      { titel: "Nie wieder Klageart-Chaos", sprecher: "Du suchst jedes Mal die richtige Klageart? Mit drei Fragen bist du in zwanzig Sekunden durch." },
-    ],
-  },
-  kontrast: {
-    name: "Vorher und nachher",
-    regel: "Stelle zwei Wege gegenüber: den, den die meisten gehen, und den, der zur Lösung führt.",
-    beispiele: [
-      { titel: "So nicht, sondern so", sprecher: "Die meisten fangen beim Verschulden an. Der Korrektor erwartet die Zurechnung." },
-      { titel: "Zwei Zeilen Unterschied", sprecher: "Derselbe Streit, zwei Sätze mehr – und aus vier Punkten werden sieben." },
+      { titel: "Drei Schritte zur Klageart", sprecher: "Mit drei Fragen kommst du von Begehren und Maßnahme zur passenden Klageart." },
+      { titel: "So ordnest du Konkurrenzen", sprecher: "Erst Gesetzeseinheit, dann Tateinheit oder Tatmehrheit – genau diese Reihenfolge bauen wir auf." },
     ],
   },
 };
 
 export const HOOK_TYPEN = Object.keys(HOOKS);
 
-/* Öffner, die die ersten Sekunden verschenken. Wer so anfängt, verliert die
-   Hälfte der Zuschauer, bevor der Inhalt beginnt. */
-const SCHWACHE_OEFFNER = /^\s*(hallo|hi\b|hey|guten (morgen|tag|abend)|willkommen|schön,? dass|heute (geht|zeige|sprechen|schauen|lernen)|in diesem (video|reel|beitrag)|wir (schauen|sprechen|klären)|lass uns|kurz (erklärt|gesagt)[:,]?\s*$|ich (zeige|erkläre) (dir|euch) (heute|jetzt))/i;
+const SCHWACHE_OEFFNER = /^\s*(hallo|hi\b|hey|guten (morgen|tag|abend)|willkommen|schön,? dass|heute (geht|zeige|sprechen|schauen|lernen)|in diesem (video|reel|beitrag)|wir (schauen|sprechen|klären)|lass uns|ich (zeige|erkläre) (dir|euch) (heute|jetzt))/i;
+const UNBELEGTE_CLAIMS = /fast alle|die meisten|kaum jemand|niemand|jeder macht|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
+const GENERISCHER_TITEL = /^(kenn(?:st|en) du (?:das|diesen moment)|das stimmt so nicht|schluss mit raten|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles)[!? .]*$/i;
 
-/** Höchstlängen: Der Bildschirmtext muss ohne Ton wirken, gesprochen bleibt er ein Satz. */
-export const HOOK_GRENZEN = { titelWoerter: 6, sprecherWoerter: 18 };
+export const HOOK_GRENZEN = { titelWoerter: 7, sprecherWoerter: 20 };
 
-/**
- * Welches Muster bekommt dieser Tag? Grundlage ist eine Rotation, damit sich
- * die Hooks nicht wiederholen. Sobald die Lernschleife Gewichte liefert,
- * fallen deutlich schwächere Muster aus der Rotation heraus.
- */
 export function hookWaehlen(datum, strategie = null) {
   const gewicht = strategie?.hookGewicht || {};
   const stark = HOOK_TYPEN.filter((t) => (gewicht[t] ?? 1) >= 0.75);
@@ -127,23 +94,18 @@ export function hookWaehlen(datum, strategie = null) {
   return auswahl[((tag % auswahl.length) + auswahl.length) % auswahl.length];
 }
 
-/** Der Abschnitt, der im Auftrag an das Modell steht. */
 export function hookAnleitung(typ) {
   const h = HOOKS[typ] || HOOKS.frage;
   const beispiele = h.beispiele.map((b) => `  · Bildschirm: „${b.titel}“ – gesprochen: „${b.sprecher}“`).join("\n");
   return `## Hook (Szene 1) – Muster „${h.name}“
 ${h.regel}
-Der Bildschirmtext trägt den Hook allein: höchstens ${HOOK_GRENZEN.titelWoerter} Wörter, groß und lesbar, denn viele schauen ohne Ton.
-Gesprochen ist der Hook EIN Satz mit höchstens ${HOOK_GRENZEN.sprecherWoerter} Wörtern und steht ganz am Anfang – keine Begrüßung, keine Ankündigung, kein „In diesem Reel“.
-Er nennt noch nicht die Lösung; die kommt in den folgenden Szenen.
+Der Bildschirmtext muss OHNE Ton und OHNE Caption verständlich sein: höchstens ${HOOK_GRENZEN.titelWoerter} Wörter, groß lesbar, mit Rechtsfrage, Norm oder Abgrenzungsbegriffen statt einer austauschbaren Neugierformel.
+Gesprochen ist der Hook EIN Satz mit höchstens ${HOOK_GRENZEN.sprecherWoerter} Wörtern und steht ganz am Anfang – keine Begrüßung und keine Ankündigung.
+Kein erfundener Konsens („fast alle“), keine erfundene Punktwirkung, kein Korrektoren-Mindreading. Das Versprechen der Hook-Szene muss das Reel vollständig einlösen.
 So klingt das Muster (andere Themen):
 ${beispiele}`;
 }
 
-/**
- * Prüft die erste Szene: Trägt sie wirklich einen Hook?
- * @returns {string[]} Beanstandungen (leer = in Ordnung)
- */
 export function pruefeHook(szene) {
   const fehler = [];
   if (!szene) return ["Erste Szene fehlt – ohne Hook kein Reel"];
@@ -152,28 +114,24 @@ export function pruefeHook(szene) {
   if (!titel) fehler.push("Hook: Der Bildschirmtext der ersten Szene fehlt");
   const titelWoerter = titel.split(/\s+/).filter(Boolean).length;
   if (titelWoerter > HOOK_GRENZEN.titelWoerter) fehler.push(`Hook: Bildschirmtext hat ${titelWoerter} Wörter (höchstens ${HOOK_GRENZEN.titelWoerter})`);
-  if (SCHWACHE_OEFFNER.test(sprecher)) fehler.push(`Hook: schwacher Einstieg („${sprecher.split(/[.!?]/)[0].slice(0, 40)}…“) – die ersten Sekunden gehören dem Aufhänger, nicht der Begrüßung`);
+  if (SCHWACHE_OEFFNER.test(sprecher)) fehler.push("Hook: Die ersten Sekunden beginnen mit Ankündigung/Begrüßung statt mit der Sache");
+  if (UNBELEGTE_CLAIMS.test(`${titel} ${sprecher}`)) fehler.push("Hook: unbelegte Häufigkeits-, Punkte- oder Korrektorenbehauptung");
+  if (GENERISCHER_TITEL.test(titel)) fehler.push("Hook: Bildschirmtext ist ohne Ton zu generisch – Rechtsfrage/Begriff muss auf die erste Szene");
   const ersterSatz = sprecher.split(/(?<=[.!?])\s/)[0] || "";
   const satzWoerter = ersterSatz.split(/\s+/).filter(Boolean).length;
   if (satzWoerter > HOOK_GRENZEN.sprecherWoerter) fehler.push(`Hook: gesprochener Aufhänger hat ${satzWoerter} Wörter (höchstens ${HOOK_GRENZEN.sprecherWoerter})`);
   return fehler;
 }
 
-/**
- * Ordnet einen fertigen Hook einem Muster zu – Grundlage für die Lernschleife,
- * die misst, welches Muster Follower und Reichweite bringt.
- */
 export function hookTypErkennen(titel = "", sprecher = "") {
   const t = `${titel} ${sprecher}`;
-  if (/stimmt so nicht|genau umgekehrt|lernen das falsch|angeblich|stimmt nicht/i.test(t)) return "widerspruch";
-  if (/schluss mit|nie wieder|dafür gibt es|so gehts|so geht's/i.test(t)) return "loesung";
-  if (/kennst du|jedes mal|immer dieselbe|jeder kennt|geht dir auch/i.test(t)) return "alltag";
+  if (/\boder\b|vs\.?|unterschied|abgrenz/i.test(titel)) return "abgrenzung";
+  if (/was prüfst du zuerst|erst .* dann|reihenfolge/i.test(t)) return "reihenfolge";
+  if (/^§|paragraf|§\s*\d/i.test(titel)) return "norm";
+  if (/drei schritte|vier schritte|so ordnest|so prüfst/i.test(t)) return "loesung";
+  if (/stimmt (?:so )?nicht|nein\b|nicht einfach|genau umgekehrt/i.test(t)) return "widerspruch";
+  if (/fehler|falle|falsch|vertausch|kippt/i.test(t)) return "fehler";
   if (/\?/.test(titel)) return "frage";
-  if (/fehler|falle|falsch|übersehen|vergessen|die meisten|fast alle/i.test(t)) return "fehler";
-  if (/punkt(e|en)?|kostet|wert|note|bringt dir/i.test(t)) return "kosten";
-  if (/\bdu\b|\bdir\b|minute|blatt|sitzt|liest/i.test(t)) return "szene";
-  if (/statt|sondern|anstatt|vorher|nachher|zwei wege/i.test(t)) return "kontrast";
-  if (/entscheidet|steckt|geheim|kaum jemand|übersieht/i.test(t)) return "luecke";
-  if (/^(nie|immer|vergiss|kein|niemand|jeder)/i.test(titel.trim()) || /ernsthaft|wirklich wahr|glaub/i.test(t)) return "behauptung";
-  return "aussage";
+  if (/\bdu\b|\bdir\b|bescheid|ware|vertrag|opfer|täter|käufer|kläger/i.test(t)) return "fall";
+  return "frage";
 }
