@@ -165,14 +165,16 @@ export const ZUSTAND = Object.freeze({
  * @param {object}   o
  * @param {object}   o.deckel     {core, engagement, research} in USD
  * @param {object}   o.bisher     schon heute verbraucht, je Topf
+ * @param {object}   o.fremdFrei  nachweislich freier Schwester-Rest je Topf; nur Pflichtarbeit darf ihn nutzen
  * @param {boolean}  o.breakGlass ausdrücklich manuell erhöhter Lauf
  * @param {Function} o.protokoll  (eintrag) => void, für die Telemetrie
  */
-export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protokoll = () => {} }) {
+export function budgetStarten({ deckel, bisher = {}, fremdFrei = {}, breakGlass = false, protokoll = () => {} }) {
   for (const t of TOEPFE) {
     if (!(t in deckel)) throw new Error(`Budgettopf „${t}“ hat keinen Deckel - Scheduled Production darf so nicht starten.`);
   }
   const verbraucht = Object.fromEntries(TOEPFE.map((t) => [t, Number(bisher[t] || 0)]));
+  const fremd = Object.fromEntries(TOEPFE.map((t) => [t, Math.max(0, Number(fremdFrei[t] || 0))]));
   const reserviert = Object.fromEntries(TOEPFE.map((t) => [t, 0]));
   const gesperrt = Object.fromEntries(TOEPFE.map((t) => [t, null]));
   const verletzungen = [];
@@ -208,8 +210,9 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
    * Damit kann weder ein optionales Bild noch ein anderer Pflichtaufruf das
    * Geld verbrauchen, das für ein noch ausstehendes Pflichtstück zurückliegt.
    */
-  const frei = (topf, { ohnePflicht = null } = {}) =>
-    runden(deckel[topf] - verbraucht[topf] - reserviert[topf] - pflichtSumme(topf, ohnePflicht));
+  const effektiverDeckel = (topf, optional = false) => runden(Number(deckel[topf] || 0) + (optional ? 0 : Number(fremd[topf] || 0)));
+  const frei = (topf, { ohnePflicht = null, optional = false } = {}) =>
+    runden(effektiverDeckel(topf, optional) - verbraucht[topf] - reserviert[topf] - pflichtSumme(topf, ohnePflicht));
 
   const sperren = (topf, grund) => { if (!gesperrt[topf]) gesperrt[topf] = grund; };
 
@@ -230,14 +233,15 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
     if (gesperrt[topf]) throw new TopfGesperrt(topf, gesperrt[topf]);
     const verlangt = runden(Math.max(0, Number(admissionReserve) || 0));
     const eigene = opt.optional ? null : (opt.pflichtName || null);
-    const verfuegbar = frei(topf, { ohnePflicht: eigene });
+    const verfuegbar = frei(topf, { ohnePflicht: eigene, optional: !!opt.optional });
+    const admissionDeckel = effektiverDeckel(topf, !!opt.optional);
     if (opt.optional && optionalSperre) {
       protokoll({ art: "admission", ergebnis: "abgelehnt", zweck, topf, reservedUsd: verlangt, frei: verfuegbar, optional: true, breakGlass });
-      throw new AdmissionAbgelehnt(zweck, topf, verlangt, verfuegbar, deckel[topf], optionalSperre);
+      throw new AdmissionAbgelehnt(zweck, topf, verlangt, verfuegbar, admissionDeckel, optionalSperre);
     }
     if (verlangt > verfuegbar) {
       protokoll({ art: "admission", ergebnis: "abgelehnt", zweck, topf, reservedUsd: verlangt, frei: verfuegbar, optional: !!opt.optional, breakGlass });
-      throw new AdmissionAbgelehnt(zweck, topf, verlangt, verfuegbar, deckel[topf]);
+      throw new AdmissionAbgelehnt(zweck, topf, verlangt, verfuegbar, admissionDeckel);
     }
     reserviert[topf] = runden(reserviert[topf] + verlangt);
     protokoll({ art: "admission", ergebnis: "zugelassen", zweck, topf, reservedUsd: verlangt, frei: verfuegbar, optional: !!opt.optional, breakGlass });
@@ -359,7 +363,7 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
     const topf = topfFuer(zweck);
     const betrag = runden(Math.max(0, Number(usd) || 0));
     if (betrag <= 0) { pflicht.delete(name); return 0; }
-    const platz = runden(deckel[topf] - verbraucht[topf] - reserviert[topf] - pflichtSumme(topf, name));
+    const platz = runden(effektiverDeckel(topf, false) - verbraucht[topf] - reserviert[topf] - pflichtSumme(topf, name));
     if (betrag > platz) {
       pflicht.delete(name);
       throw new PflichtUeberreserviert(topf, betrag, platz);
@@ -383,6 +387,7 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
     gesperrt: (topf) => gesperrt[topf] || null,
     stand: () => ({
       deckel: { ...deckel },
+      fremdFrei: { ...fremd },
       verbraucht: { ...verbraucht },
       reserviert: { ...reserviert },
       pflicht: Object.fromEntries([...pflicht].map(([n, r]) => [n, { ...r }])),
