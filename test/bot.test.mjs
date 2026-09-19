@@ -6160,3 +6160,232 @@ test("Reserve: die Entnahme kostet nichts und wiederholt kein junges Thema", asy
   }
   assert.ok(!/^import /m.test(quelle), "die Reserve-Policy hat Abhängigkeiten - sie soll für sich stehen");
 });
+/* ===== Reservebestand: die Mechanik ====================================== */
+
+const resHosting = () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "reshost-"));
+  const state = new Map();
+  fs.mkdirSync(path.join(dir, "bilder", "reserve"), { recursive: true });
+  return {
+    dir,
+    jsonLesen: (n, vor) => (state.has(n) ? JSON.parse(state.get(n)) : vor),
+    jsonSchreiben: (n, d) => state.set(n, JSON.stringify(d)),
+    _state: state,
+    _bilderAnlegen: (id) => {
+      const o = path.join(dir, "bilder", "reserve", String(id));
+      fs.mkdirSync(o, { recursive: true });
+      fs.writeFileSync(path.join(o, "1.png"), "x");
+      return o;
+    },
+  };
+};
+
+test("Reserve-Mechanik: die Entnahme veröffentlicht unverändert und kostet nichts", async () => {
+  const { reserveEntnehmen } = await import("../src/reservelauf.mjs");
+  const { echteMedienId } = await import("../src/veroeffentlichung.mjs");
+
+  const hosting = resHosting();
+  hosting._bilderAnlegen("r-tag2");
+  /* Ein Tag-2-Inhalt, gerendert in Tag-2-Farbe, entnommen an einem Tag, an
+     dem ein Tag-1-Thema geplant war. */
+  const eintrag = {
+    id: "r-tag2", kanal: "examenscampus", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01",
+    themaId: "kst-schema-1", fach: "kst", klausur: 2, typ: "schema", format: "karussell",
+    beitrag: { folien: [{ art: "titel", titel: "Das KSt-Grundschema" }], fach: "kst", klausur: 2 },
+    bildUrls: ["https://assets/bilder/reserve/r-tag2/1-abc.png", "https://assets/bilder/reserve/r-tag2/2-abc.png"],
+    caption: "Systematik.", hashtags: ["#x"],
+    faktenFreigabe: { ok: true, geprueftAm: "2026-09-10T08:00:00.000Z" },
+    regelVersion: 1,
+  };
+
+  const gesendet = [];
+  const ig = { beitragPosten: async (p) => { gesendet.push(p); return "17900000000000001"; } };
+  const ledger = { beitraege: [] };
+  const eintraege = [];
+
+  const r = await reserveEntnehmen({
+    hosting, bestand: [eintrag], heute: "2026-09-19", ledger, ig, slot: "b1",
+    echteMedienId, vermerken: (l, e) => { eintraege.push(e); l.beitraege.push(e); },
+  });
+
+  assert.equal(r.medienId, "17900000000000001");
+  assert.equal(r.bestand.length, 0, "der entnommene Eintrag bleibt im Bestand");
+
+  /* 1. UNVERÄNDERT: genau die gespeicherten URLs, genau die Caption. */
+  assert.equal(gesendet.length, 1);
+  assert.deepEqual(gesendet[0].bildUrls, eintrag.bildUrls, "die Bilder wurden ersetzt oder neu erzeugt");
+  assert.equal(gesendet[0].caption, "Systematik.");
+
+  /* 2. EIGENE FARBE: Fach und Klausurtag des Inhalts landen im Ledger -
+        nicht die des Entnahmetags. */
+  assert.equal(eintraege[0].fach, "kst");
+  assert.equal(eintraege[0].klausur, 2, "der Klausurtag des Entnahmetags hat den des Inhalts überschrieben");
+  assert.equal(eintraege[0].ausReserve, "r-tag2", "die Herkunft steht nicht im Ledger");
+  assert.equal(eintraege[0].slot, "b1");
+
+  /* 3. KOSTENLOS: Die Mechanik ruft keinen Anbieter und rendert nicht. */
+  const quelle = fs.readFileSync(new URL("../src/reservelauf.mjs", import.meta.url), "utf8");
+  for (const verboten of [/claudeAufruf/, /openaiAufruf/, /bildAufruf/, /beitragRendern/, /beitragSchreiben/, /titelfolieBebildern/, /veroeffentlichen\(/]) {
+    assert.ok(!verboten.test(quelle), `die Mechanik greift auf ${verboten} zu - die Entnahme muss kostenlos sein`);
+  }
+
+  /* Und die Bilder sind danach weg - Instagram hat sie geholt. */
+  assert.ok(!fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "r-tag2")), "die Bilder des entnommenen Eintrags bleiben liegen");
+  fs.rmSync(hosting.dir, { recursive: true, force: true });
+});
+
+test("Reserve-Mechanik: ohne Medien-ID bleibt der Eintrag im Bestand", async () => {
+  /* Dieselbe Disziplin wie beim Tagesplan: Was nicht bestätigt draußen ist,
+     gilt nicht als verbraucht - sonst ist der Vorrat weg und der Beitrag
+     trotzdem nicht erschienen. */
+  const { reserveEntnehmen } = await import("../src/reservelauf.mjs");
+  const { echteMedienId } = await import("../src/veroeffentlichung.mjs");
+
+  const hosting = resHosting();
+  hosting._bilderAnlegen("r1");
+  const eintrag = {
+    id: "r1", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01", themaId: "t", fach: "kst", klausur: 2,
+    beitrag: { folien: [{ art: "titel", titel: "X" }] }, bildUrls: ["https://a/1.png"],
+    caption: "c", faktenFreigabe: { ok: true, geprueftAm: "2026-09-10T08:00:00.000Z" }, regelVersion: 1,
+  };
+  let vermerkt = 0;
+  const r = await reserveEntnehmen({
+    hosting, bestand: [eintrag], heute: "2026-09-19", ledger: { beitraege: [] },
+    ig: { beitragPosten: async () => "trocken" }, slot: "b1",
+    echteMedienId, vermerken: () => { vermerkt++; },
+  });
+  assert.equal(r.medienId, null);
+  assert.equal(r.bestand.length, 1, "der Eintrag wurde trotz fehlender Medien-ID verbraucht");
+  assert.equal(vermerkt, 0, "ein Trockenlauf wurde in den Ledger geschrieben");
+  assert.ok(fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "r1")), "die Bilder wurden voreilig gelöscht");
+  fs.rmSync(hosting.dir, { recursive: true, force: true });
+});
+
+test("Reserve-Mechanik: Vorratsbilder entgehen der Bildrotation", async () => {
+  /* hosting.aufraeumen() löscht Bildordner mit Datumsnamen, die älter als 21
+     Tage sind - dieselbe Frist wie die Haltbarkeit. Ein am 01.09. erzeugter
+     Eintrag gilt bis zum 22.09. und hätte am 22.09. keine Bilder mehr.
+     Deshalb liegen sie unter bilder/reserve/<id>. */
+  const { RESERVE_ORDNER, reservePfad, bilderLoeschen } = await import("../src/reservelauf.mjs");
+  assert.equal(RESERVE_ORDNER, "reserve");
+  assert.equal(reservePfad("r1"), "reserve/r1");
+
+  /* Die Rotation erkennt nur Datumsordner. */
+  const datumsOrdner = /^\d{4}-\d{2}-\d{2}$/;
+  assert.equal(datumsOrdner.test("reserve"), false, "der Vorratsordner sieht aus wie ein Datum und wird rotiert");
+  assert.equal(datumsOrdner.test("2026-09-01"), true, "die Rotation erkennt Datumsordner nicht mehr");
+
+  /* Und der Vorrat räumt seine Bilder selbst weg. */
+  const hosting = resHosting();
+  hosting._bilderAnlegen("r1");
+  assert.equal(bilderLoeschen(hosting, "r1"), true);
+  assert.ok(!fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "r1")));
+  assert.equal(bilderLoeschen(hosting, "gibtsnicht"), false, "ein fehlender Ordner darf keinen Fehler werfen");
+  fs.rmSync(hosting.dir, { recursive: true, force: true });
+});
+
+test("Reserve-Mechanik: aufgefüllt wird nur aus echtem Restbudget", async () => {
+  const { reserveAuffuellen } = await import("../src/reservelauf.mjs");
+  const { budgetStarten } = await import("../src/budget.mjs");
+
+  const thema = { id: "t1", fach: "kst", klausur: 2, typ: "schema" };
+  const beitrag = {
+    format: "karussell",
+    folien: [{ art: "titel", titel: "Das Grundschema" }, { art: "text", titel: "Aufbau", text: "Erst die Steuerpflicht, dann die Ermittlung." }],
+    caption: "Systematik.",
+  };
+  const rohBauen = () => ({ thema, beitrag, bildUrls: ["https://a/1.png"], caption: "Systematik.", hashtags: [], faktenFreigabe: { ok: true, geprueftAm: "2026-09-19T08:00:00.000Z" } });
+
+  /* 1. Steht Pflichtarbeit aus, passiert nichts - egal wie voll der Topf ist. */
+  const b1 = budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 } });
+  b1.optionalSperren("Bezahlte Pflichtarbeit steht aus: 1 Beitrag/Reel.");
+  let gerufen = 0;
+  const r1 = await reserveAuffuellen({
+    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b1,
+    erzeugen: async () => { gerufen++; return rohBauen(); }, speichern: async () => {},
+    kostenJeBeitragUsd: 0.08,
+  });
+  assert.equal(gerufen, 0, "bei ausstehender Pflichtarbeit wurde produziert");
+  assert.equal(r1.erzeugt, 0);
+  assert.match(r1.grund, /Pflichtarbeit steht aus/);
+
+  /* 2. Kein Restbudget: kein Mindestverbrauch, es entsteht nichts. */
+  const b2 = budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 }, bisher: { core: 0.28 } });
+  const r2 = await reserveAuffuellen({
+    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b2,
+    erzeugen: async () => { gerufen++; return rohBauen(); }, speichern: async () => {},
+    kostenJeBeitragUsd: 0.08,
+  });
+  assert.equal(gerufen, 0, "ohne Restbudget wurde produziert");
+  assert.match(r2.grund, /Restbudget/);
+
+  /* 3. Günstiger Tag, Pflicht durch: genau EIN Beitrag je Lauf. */
+  const b3 = budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 }, bisher: { core: 0.05 } });
+  const gespeichert = [];
+  const r3 = await reserveAuffuellen({
+    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b3,
+    erzeugen: async () => { gerufen++; return rohBauen(); },
+    speichern: async (b) => gespeichert.push(b.length),
+    kostenJeBeitragUsd: 0.08,
+  });
+  assert.equal(gerufen, 1, "es wurde nicht genau ein Beitrag erzeugt");
+  assert.equal(r3.erzeugt, 1);
+  assert.equal(r3.bestand.length, 1);
+  assert.equal(r3.bestand[0].klausur, 2, "der Klausurtag fehlt im Eintrag");
+  assert.equal(r3.bestand[0].fach, "kst");
+  assert.equal(r3.bestand[0].verfaelltAm, "2026-10-10");
+  assert.deepEqual(gespeichert, [1], "der Bestand wurde nicht nach jedem Stück gesichert");
+
+  /* 4. Voller Bestand: es entsteht nichts. */
+  const voll = Array.from({ length: 4 }, (_, i) => ({
+    id: `v${i}`, erstelltAm: "2026-09-18", verfaelltAm: "2026-10-09", themaId: `t${i}`,
+    beitrag: { folien: [{ art: "titel", titel: "X" }] }, bildUrls: ["https://a/1.png"],
+    caption: "c", faktenFreigabe: { ok: true, geprueftAm: "2026-09-18T08:00:00.000Z" }, regelVersion: 1,
+  }));
+  const r4 = await reserveAuffuellen({
+    bestand: voll, heute: "2026-09-19", kanal: "examenscampus",
+    budget: budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 } }),
+    erzeugen: async () => { gerufen++; return rohBauen(); }, speichern: async () => {},
+    kostenJeBeitragUsd: 0.08,
+  });
+  assert.equal(r4.erzeugt, 0);
+  assert.match(r4.grund, /Bestand voll/);
+  assert.equal(gerufen, 1, "bei vollem Bestand wurde nachproduziert");
+
+  /* 5. Was die Tore nicht passiert, wird nicht aufgenommen - und der Versuch
+        wird nicht blind wiederholt, weil jeder Versuch Geld kostet. */
+  const b5 = budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 } });
+  let versuche = 0;
+  const r5 = await reserveAuffuellen({
+    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b5,
+    erzeugen: async () => { versuche++; return { ...rohBauen(), thema: { ...thema, typ: "modul" } }; },
+    speichern: async () => {}, kostenJeBeitragUsd: 0.08, maxJeLauf: 3,
+  });
+  assert.equal(r5.erzeugt, 0, "ein untauglicher Beitrag wurde aufgenommen");
+  assert.equal(versuche, 1, "der untaugliche Versuch wurde wiederholt - das kostet jedes Mal");
+});
+
+test("Reserve-Mechanik: Abgelaufenes fliegt samt Bildern raus, ohne Nachcheck", async () => {
+  const { reserveAufraeumen } = await import("../src/reservelauf.mjs");
+  const hosting = resHosting();
+  hosting._bilderAnlegen("alt");
+  hosting._bilderAnlegen("frisch");
+
+  const mach = (id, erstelltAm, verfaelltAm) => ({
+    id, erstelltAm, verfaelltAm, themaId: id,
+    beitrag: { folien: [{ art: "titel", titel: "X" }] }, bildUrls: ["https://a/1.png"],
+    caption: "c", faktenFreigabe: { ok: true, geprueftAm: `${erstelltAm}T08:00:00.000Z` }, regelVersion: 1,
+  });
+  const zeilen = [];
+  const r = reserveAufraeumen({
+    hosting, heute: "2026-09-25", log: (z) => zeilen.push(z),
+    bestand: [mach("alt", "2026-08-01", "2026-08-22"), mach("frisch", "2026-09-19", "2026-10-10")],
+  });
+
+  assert.deepEqual(r.bestand.map((e) => e.id), ["frisch"]);
+  assert.deepEqual(r.entfernt.map((e) => e.id), ["alt"]);
+  assert.ok(!fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "alt")), "die Bilder des Abgelaufenen bleiben liegen");
+  assert.ok(fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "frisch")), "die Bilder des gültigen Eintrags wurden gelöscht");
+  assert.ok(zeilen.some((z) => /verworfen/.test(z)), "das Verwerfen wird nicht protokolliert");
+  fs.rmSync(hosting.dir, { recursive: true, force: true });
+});

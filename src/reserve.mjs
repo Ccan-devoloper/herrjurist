@@ -243,7 +243,14 @@ export function eintragBauen({ id, kanal, thema, beitrag, bildUrls, caption, has
     erstelltAm: alsTag(erstelltAm),
     verfaelltAm: verfallsdatum(erstelltAm),
     themaId: thema?.id ?? beitrag?.themaId ?? null,
+    /* Fach UND Klausurtag gehoeren zum Eintrag, nicht zum Entnahmetag.
+       Die Farbe codiert den fachlichen Klausurtag des INHALTS - so ist es
+       im Renderer ohnehin (render.mjs nimmt fach/klausur aus dem Beitrag),
+       und so bleibt es. Ein Tag-2-Inhalt bleibt Tag-2-farbig, auch wenn er
+       an einem Tag erscheint, an dem ein Tag-1-Thema geplant war. Sonst
+       wuerde die Marke ausgerechnet im Notfall das Falsche behaupten. */
     fach: thema?.fach ?? beitrag?.fach ?? null,
+    klausur: thema?.klausur ?? beitrag?.klausur ?? null,
     typ: thema?.typ ?? null,
     format: beitrag?.format || "karussell",
     beitrag, bildUrls, caption, hashtags,
