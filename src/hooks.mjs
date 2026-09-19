@@ -32,7 +32,7 @@ export const HOOKS = {
     name: "Konkrete Falle",
     regel: "Benenne einen sachlich belegbaren Aufbau- oder Zuordnungsfehler. Behaupte nicht, wie viele ihn machen oder wie viele Punkte er kostet.",
     beispiele: [
-      { titel: "Hier kippt der Anspruch", sprecher: "Wenn du Annahmeverzug und Unmöglichkeit vertauschst, prüfst du ab hier die falsche Rechtsfolge." },
+      { titel: "Annahmeverzug: hier kippt der Anspruch", sprecher: "Wenn du Annahmeverzug und Unmöglichkeit vertauschst, prüfst du ab hier die falsche Rechtsfolge." },
       { titel: "Falscher Antrag, falscher Aufbau", sprecher: "Bei Paragraf 80 Absatz 5 entscheidet schon der Antrag, welchen Prüfungsmaßstab du brauchst." },
     ],
   },
@@ -40,7 +40,7 @@ export const HOOKS = {
     name: "Reihenfolge",
     regel: "Zeige die Stelle, an der eine Prüfungsreihenfolge entscheidet. Formuliere als konkrete 'was zuerst?'-Frage.",
     beispiele: [
-      { titel: "Was prüfst du zuerst?", sprecher: "Bei Konkurrenzen entscheidet die Reihenfolge, ob dein weiterer Aufbau überhaupt passt." },
+      { titel: "Konkurrenzen: was prüfst du zuerst?", sprecher: "Bei Konkurrenzen entscheidet die Reihenfolge, ob dein weiterer Aufbau überhaupt passt." },
       { titel: "Erst Anspruch, dann Einrede?", sprecher: "Wo gehört die Verjährung hin, damit Anspruch und Einrede sauber getrennt bleiben?" },
     ],
   },
@@ -82,7 +82,7 @@ export const HOOK_TYPEN = Object.keys(HOOKS);
 
 const SCHWACHE_OEFFNER = /^\s*(hallo|hi\b|hey|guten (morgen|tag|abend)|willkommen|schön,? dass|heute (geht|zeige|sprechen|schauen|lernen)|in diesem (video|reel|beitrag)|wir (schauen|sprechen|klären)|lass uns|ich (zeige|erkläre) (dir|euch) (heute|jetzt))/i;
 const UNBELEGTE_CLAIMS = /fast alle|die meisten|kaum jemand|niemand|jeder macht|in jeder.{0,24}klausur|kommt (?:fast )?jedes jahr|immer dran|verrät|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
-const GENERISCHER_TITEL = /^(kenn(?:st|en) du (?:das|diesen moment)|das stimmt so nicht|schluss mit raten|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles)[!? .]*$/i;
+const GENERISCHER_TITEL = /^(kenn(?:st|en) du (?:das|diesen moment)|das stimmt so nicht|schluss mit raten|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles|was prüfst du zuerst\??|hier kippt (?:der|die|das) [^!?]+)[!? .]*$/i;
 
 export const HOOK_GRENZEN = { titelWoerter: 7, sprecherWoerter: 20 };
 
