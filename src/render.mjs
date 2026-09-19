@@ -135,8 +135,20 @@ function einpassen() {
   while (!passt() && n++ < 14) for (const el of textElemente) setze(el, 0.95);
 }
 
+/* Harte Markenregel: Nur das Cover eines Karussells darf ein Foto tragen.
+   Alte gespeicherte Inhalte und spätere Prompt-Änderungen können damit kein
+   Bild auf eine innere Lernfolie schleusen. */
+export function carouselBildregeln(beitrag) {
+  if (!beitrag?.folien?.length) return beitrag;
+  const bildFelder = ["bild", "bildQuelle", "bildFrei", "bildBreite", "bildHoehe", "bildTyp"];
+  for (let i = 1; i < beitrag.folien.length; i++) {
+    for (const feld of bildFelder) delete beitrag.folien[i][feld];
+  }
+  return beitrag;
+}
 /* Rendert alle Folien eines Beitrags → Liste der JPEG-Pfade. */
 export async function beitragRendern(beitrag, zielVerzeichnis, opt = {}) {
+  carouselBildregeln(beitrag);
   const ctx = kontext({ ...opt, fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel, variante: opt.variante ?? beitrag.variante });
   const pfade = [];
   const n = beitrag.folien.length;
