@@ -3410,8 +3410,10 @@ test("Safety 0a: das Gate laesst keine halbe Quiz-Kachel durch", async () => {
   assert.equal(quizPaarFreigabe(planPaar("veroeffentlicht")[1], planPaar("veroeffentlicht"), leser(alles)).status, "frei",
     "nach der veroeffentlichten Frage darf die Antwort folgen");
 
-  /* Eine uebersprungene Frage nimmt ihre Antwort mit. */
-  assert.equal(quizPaarFreigabe(planPaar("uebersprungen")[1], planPaar("uebersprungen"), leser(alles)).status, "verfallen");
+  /* Ein frueher als uebersprungen markiertes Paar ist jetzt reparierbar:
+     Die Antwort bleibt gesperrt und wartet, bis die Frage wieder freigegeben
+     und tatsaechlich veroeffentlicht wurde. */
+  assert.equal(quizPaarFreigabe(planPaar("uebersprungen")[1], planPaar("uebersprungen"), leser(alles)).status, "warten");
 });
 
 test("Safety 0d: der zweite Versuch nimmt den Partner mit", async () => {
