@@ -472,8 +472,29 @@ async function faktenSicher(inhalt, zweck = "faktencheck", opt = {}) {
       throw new Error(`Faktencheck nicht möglich (${e.message.split("\n")[0].slice(0, 160)}) – der Beitrag erscheint nicht.`);
     }
     console.warn(`  ! Faktencheck nicht möglich (${e.message.split("\n")[0].slice(0, 160)}) – Entwurf wird ohne Faktencheck übernommen.`);
-    return { ok: true, fehler: [], hinweise: [`Faktencheck ausgefallen: ${e.message.slice(0, 120)}`] };
+    /* `ausgefallen` haelt den Unterschied fest, den `ok: true` hier
+       verschluckt: geprueft und bestanden gegen nicht geprueft. Der Tagesbetrieb
+       darf mit dem Entwurf weiterarbeiten - der Vorrat nicht. Er wird 21 Tage
+       nicht mehr angefasst, und am Blockadetag gibt es kein Geld fuer eine
+       nachgeholte Pruefung. */
+    return { ok: true, ausgefallen: true, fehler: [], hinweise: [`Faktencheck ausgefallen: ${e.message.slice(0, 120)}`] };
   }
+}
+
+/**
+ * Haelt am Beitrag fest, WIE er freigegeben wurde - nicht nur, DASS er
+ * zurueckkam. Der Tagesbetrieb liest das nicht; der Vorrat schon: Was er
+ * aufnimmt, liegt bis zu 21 Tage ungeprueft, also muss die Pruefung vorher
+ * wirklich gelaufen sein.
+ */
+function freigabeStempeln(beitrag, fakten) {
+  beitrag.faktenFreigabe = {
+    ok: true,
+    geprueftAm: new Date().toISOString(),
+    ausgefallen: !!fakten?.ausgefallen,
+    hinweise: fakten?.hinweise || [],
+  };
+  return beitrag;
 }
 
 function themaText(thema) {
@@ -651,9 +672,9 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
          nicht neu geschrieben - das kostet keinen weiteren Aufruf. */
       korrekturenAnwenden(beitrag, fakten.korrekturen);
       entwurfBerichtigen(schluessel, fakten.korrekturen);
-      if (fakten.ok) { beitrag.faktenHinweise = fakten.hinweise; return beitrag; }
+      if (fakten.ok) { beitrag.faktenHinweise = fakten.hinweise; return freigabeStempeln(beitrag, fakten); }
       const berichtigt = await nachbessern(beitrag, fakten, pruefeBeitrag, "faktencheck", schluessel);
-      if (berichtigt) { beitrag.faktenHinweise = berichtigt.hinweise; return beitrag; }
+      if (berichtigt) { beitrag.faktenHinweise = berichtigt.hinweise; return freigabeStempeln(beitrag, berichtigt); }
       ergebnis.fehler.push(...fakten.fehler.map((f) => `Fachlicher Fehler: ${f}`));
     }
     feedback = ergebnis.fehler.map((f) => `- ${f}`).join("\n");

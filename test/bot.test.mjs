@@ -5959,21 +5959,21 @@ test("1a: Der Admissionbedarf des Pflichtprodukts liegt über dem Deckel – und
 /* ===== Reservebestand: die Policy ======================================== */
 
 const reserveBeitrag = (zusatz = {}) => ({
-  format: "karussell", themaId: "kst-schema-1", fach: "kst",
+  format: "karussell", themaId: "strafat-schema-1", fach: "strafat",
   folien: [
-    { art: "titel", titel: "Das KSt-Grundschema" },
-    { art: "text", titel: "Aufbau", text: "Zuerst die Steuerpflicht, dann die Einkommensermittlung, dann die Tarifanwendung." },
+    { art: "titel", titel: "Der dreistufige Deliktsaufbau" },
+    { art: "text", titel: "Aufbau", text: "Zuerst der Tatbestand, dann die Rechtswidrigkeit, dann die Schuld." },
     { art: "karte" }, { art: "cta" },
   ],
-  caption: "Das Grundschema in der richtigen Reihenfolge.",
+  caption: "Der Aufbau in der richtigen Reihenfolge.",
   ...zusatz,
 });
 const reserveEintrag = (zusatz = {}) => ({
-  id: "r1", kanal: "examenscampus",
+  id: "r1", kanal: "herrjurist",
   erstelltAm: "2026-09-01", verfaelltAm: "2026-09-22",
-  themaId: "kst-schema-1", fach: "kst", typ: "schema", format: "karussell",
+  themaId: "strafat-schema-1", fach: "strafat", typ: "schema", format: "karussell",
   beitrag: reserveBeitrag(), bildUrls: ["https://x/1.png", "https://x/2.png"],
-  caption: "Das Grundschema in der richtigen Reihenfolge.", hashtags: ["#steuerberater"],
+  caption: "Der Aufbau in der richtigen Reihenfolge.\n\n#jurastudium", hashtags: ["#jurastudium"],
   faktenFreigabe: { ok: true, geprueftAm: "2026-09-01T10:00:00.000Z", hinweise: [] },
   regelVersion: 1,
   ...zusatz,
@@ -6043,11 +6043,11 @@ test("Reserve: ein Slug mit Jahreszahl sperrt den Beitrag nicht aus", async () =
      `slug: "2026-09-19-b1"` eine Jahreszahl und sperrt damit jeden Beitrag
      aus. Gesucht wird deshalb nur im Inhaltstext. */
   const { inhaltTauglich, inhaltsText } = await import("../src/reserve.mjs");
-  const b = reserveBeitrag({ slug: "2026-09-19-b1", themaId: "kst-2024-schema", bildUrls: ["https://x/2025/1.png"] });
+  const b = reserveBeitrag({ slug: "2026-09-19-b1", themaId: "strafat-2024-schema", bildUrls: ["https://x/2025/1.png"] });
   assert.equal(inhaltTauglich(b).ok, true, "Slug, Themen-ID oder Bildpfad sperren den Beitrag aus");
   const text = inhaltsText(b);
   assert.ok(!text.includes("2026-09-19"), "der Slug landet im geprüften Text");
-  assert.ok(text.includes("Steuerpflicht"), "der eigentliche Inhalt fehlt im geprüften Text");
+  assert.ok(text.includes("Tatbestand"), "der eigentliche Inhalt fehlt im geprüften Text");
 });
 
 test("Reserve: unvollständige Einträge werden nicht aufgenommen", async () => {
@@ -6062,6 +6062,13 @@ test("Reserve: unvollständige Einträge werden nicht aufgenommen", async () => 
     ["gerenderte Bilder", { bildUrls: [] }],
     ["Faktenfreigabe", { faktenFreigabe: { ok: false } }],
     ["Zeitpunkt der Faktenfreigabe", { faktenFreigabe: { ok: true } }],
+    /* Die gespeicherte Caption IST die Publikationscaption - am Blockadetag
+       wird nichts mehr zusammengesetzt, und bereitsVeroeffentlicht()
+       vergleicht genau diesen Text. */
+    ["Hashtags", { caption: "Nur der Text, ohne Hashtags." }],
+    /* Ein ausgefallener Pruefer ist im Tagesbetrieb ein Degrade, im Vorrat
+       nicht: Der Beitrag liegt 21 Tage, und es gibt keinen Nachcheck. */
+    ["tatsaechlich", { faktenFreigabe: { ok: true, geprueftAm: "2026-09-01T10:00:00.000Z", ausgefallen: true } }],
   ]) {
     const r = vollstaendig(reserveEintrag(kaputt));
     assert.equal(r.ok, false, `${feld} fehlt und faellt nicht auf`);
@@ -6070,8 +6077,8 @@ test("Reserve: unvollständige Einträge werden nicht aufgenommen", async () => 
 
   /* eintragBauen nimmt nur an, was beide Tore passiert UND vollständig ist. */
   const gut = eintragBauen({
-    id: "r9", kanal: "examenscampus", erstelltAm: "2026-09-19",
-    thema: { id: "kst-schema-1", fach: "kst", typ: "schema" },
+    id: "r9", kanal: "herrjurist", erstelltAm: "2026-09-19",
+    thema: { id: "strafat-schema-1", fach: "strafat", typ: "schema" },
     beitrag: reserveBeitrag(), bildUrls: ["https://x/1.png"], caption: "Systematik.",
     faktenFreigabe: { ok: true, geprueftAm: "2026-09-19T10:00:00.000Z" },
   });
@@ -6080,7 +6087,7 @@ test("Reserve: unvollständige Einträge werden nicht aufgenommen", async () => 
   assert.equal(gut.eintrag.regelVersion, 1);
 
   const ohneBild = eintragBauen({
-    id: "r10", kanal: "examenscampus", erstelltAm: "2026-09-19",
+    id: "r10", kanal: "herrjurist", erstelltAm: "2026-09-19",
     thema: { id: "x", typ: "schema" }, beitrag: reserveBeitrag(),
     bildUrls: [], caption: "Systematik.", faktenFreigabe: { ok: true, geprueftAm: "2026-09-19T10:00:00.000Z" },
   });
@@ -6133,19 +6140,32 @@ test("Reserve: die Entnahme kostet nichts und wiederholt kein junges Thema", asy
   assert.deepEqual(r1.rest.map((e) => e.id), ["b"], "der Rest stimmt nicht");
   assert.deepEqual(r1.verfallen.map((e) => e.id), ["c"]);
 
-  /* Ein Thema, das kürzlich erschienen ist, wird übersprungen. */
-  const ledger = { beitraege: [{ datum: "2026-09-05", thema: "t-alt" }] };
+  /* Ein Thema, das kürzlich erschienen ist, wird übersprungen. Die Form ist
+     die ECHTE - so, wie vermerken() den Ledger schreibt. Ein erfundener
+     Feldname hätte den Dublettenschutz still wirkungslos gemacht. */
+  const ledger = { veroeffentlicht: [{ datum: "2026-09-05", art: "beitrag", thema: "t-alt" }] };
   const r2 = entnehmen([b, a], { heute: "2026-09-19", ledger });
   assert.equal(r2.eintrag.id, "b", "die Dublette wurde genommen");
 
   /* Sind alle Themen jung, wird nichts entnommen - und der Grund steht da. */
-  const r3 = entnehmen([a, b], { heute: "2026-09-19", ledger: { beitraege: [{ datum: "2026-09-05", thema: "t-alt" }, { datum: "2026-09-06", thema: "t-neu" }] } });
+  const r3 = entnehmen([a, b], { heute: "2026-09-19", ledger: { veroeffentlicht: [{ datum: "2026-09-05", art: "beitrag", thema: "t-alt" }, { datum: "2026-09-06", art: "beitrag", thema: "t-neu" }] } });
   assert.equal(r3.eintrag, null);
   assert.match(r3.grund, /letzten 60 Tagen erschienen/);
 
   /* Ein altes Vorkommen desselben Themas blockiert nicht ewig. */
-  const r4 = entnehmen([a], { heute: "2026-09-19", ledger: { beitraege: [{ datum: "2026-01-05", thema: "t-alt" }] } });
+  const r4 = entnehmen([a], { heute: "2026-09-19", ledger: { veroeffentlicht: [{ datum: "2026-01-05", art: "beitrag", thema: "t-alt" }] } });
   assert.equal(r4.eintrag.id, "a", "ein halbes Jahr altes Thema blockiert weiterhin");
+
+  /* Eine Story zum selben Thema sperrt den Feed-Beitrag nicht: Sie ist ein
+     anderes Produkt, und der Vorrat haelt Feed-Beitraege. */
+  const r6 = entnehmen([a], { heute: "2026-09-19", ledger: { veroeffentlicht: [{ datum: "2026-09-18", art: "story", thema: "t-alt" }] } });
+  assert.equal(r6.eintrag.id, "a", "eine Story sperrt den Vorratsbeitrag zum selben Thema");
+
+  /* Und der Feldname ist nicht frei erfunden: So schreibt vermerken(). */
+  const { vermerken: ledgerVermerken } = await import("../src/planer.mjs");
+  const echt = ledgerVermerken({}, { datum: "2026-09-18", art: "beitrag", thema: "t-alt", fach: "strafat" });
+  assert.equal(entnehmen([a], { heute: "2026-09-19", ledger: echt }).eintrag, null,
+    "der Dublettenschutz greift nicht auf dem Ledger, den vermerken() wirklich schreibt");
 
   /* Leerer Bestand: kein Absturz, ein benennbarer Grund. */
   const r5 = entnehmen([], { heute: "2026-09-19" });
@@ -6160,6 +6180,7 @@ test("Reserve: die Entnahme kostet nichts und wiederholt kein junges Thema", asy
   }
   assert.ok(!/^import /m.test(quelle), "die Reserve-Policy hat Abhängigkeiten - sie soll für sich stehen");
 });
+
 /* ===== Reservebestand: die Mechanik ====================================== */
 
 const resHosting = () => {
@@ -6189,23 +6210,27 @@ test("Reserve-Mechanik: die Entnahme veröffentlicht unverändert und kostet nic
   /* Ein Tag-2-Inhalt, gerendert in Tag-2-Farbe, entnommen an einem Tag, an
      dem ein Tag-1-Thema geplant war. */
   const eintrag = {
-    id: "r-tag2", kanal: "examenscampus", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01",
-    themaId: "kst-schema-1", fach: "kst", klausur: 2, typ: "schema", format: "karussell",
-    beitrag: { folien: [{ art: "titel", titel: "Das KSt-Grundschema" }], fach: "kst", klausur: 2 },
+    id: "r-tag2", kanal: "herrjurist", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01",
+    themaId: "strafat-schema-1", fach: "strafat", klausur: 2, typ: "schema", format: "karussell",
+    beitrag: { folien: [{ art: "titel", titel: "Der dreistufige Deliktsaufbau" }], fach: "strafat", klausur: 2 },
     bildUrls: ["https://assets/bilder/reserve/r-tag2/1-abc.png", "https://assets/bilder/reserve/r-tag2/2-abc.png"],
-    caption: "Systematik.", hashtags: ["#x"],
+    caption: "Systematik.\n\n#x", hashtags: ["#x"],
     faktenFreigabe: { ok: true, geprueftAm: "2026-09-10T08:00:00.000Z" },
     regelVersion: 1,
   };
 
   const gesendet = [];
-  const ig = { beitragPosten: async (p) => { gesendet.push(p); return "17900000000000001"; } };
-  const ledger = { beitraege: [] };
+  const ig = { bereitsVeroeffentlicht: async () => null, beitragPosten: async (p) => { gesendet.push(p); return "17900000000000001"; } };
+  const ledger = { veroeffentlicht: [] };
   const eintraege = [];
+  const inhalte = new Map();
+  const planEintrag = { slot: "b1", status: "geplant", format: "karussell", zeit: "09:00" };
 
   const r = await reserveEntnehmen({
-    hosting, bestand: [eintrag], heute: "2026-09-19", ledger, ig, slot: "b1",
-    echteMedienId, vermerken: (l, e) => { eintraege.push(e); l.beitraege.push(e); },
+    hosting, bestand: [eintrag], heute: "2026-09-19", ledger, ig, slot: "b1", eintrag: planEintrag,
+    echteMedienId, veroeffentlichungEintragen: (e, id) => { e.status = "veroeffentlicht"; e.medienId = id; return { bestaetigt: true }; },
+    vermerken: (l, e) => { eintraege.push(e); l.veroeffentlicht.push(e); },
+    inhaltSpeichern: (slot, b) => inhalte.set(slot, b),
   });
 
   assert.equal(r.medienId, "17900000000000001");
@@ -6214,11 +6239,11 @@ test("Reserve-Mechanik: die Entnahme veröffentlicht unverändert und kostet nic
   /* 1. UNVERÄNDERT: genau die gespeicherten URLs, genau die Caption. */
   assert.equal(gesendet.length, 1);
   assert.deepEqual(gesendet[0].bildUrls, eintrag.bildUrls, "die Bilder wurden ersetzt oder neu erzeugt");
-  assert.equal(gesendet[0].caption, "Systematik.");
+  assert.equal(gesendet[0].caption, "Systematik.\n\n#x", "die Caption wurde beim Senden neu zusammengesetzt");
 
   /* 2. EIGENE FARBE: Fach und Klausurtag des Inhalts landen im Ledger -
         nicht die des Entnahmetags. */
-  assert.equal(eintraege[0].fach, "kst");
+  assert.equal(eintraege[0].fach, "strafat");
   assert.equal(eintraege[0].klausur, 2, "der Klausurtag des Entnahmetags hat den des Inhalts überschrieben");
   assert.equal(eintraege[0].ausReserve, "r-tag2", "die Herkunft steht nicht im Ledger");
   assert.equal(eintraege[0].slot, "b1");
@@ -6229,8 +6254,20 @@ test("Reserve-Mechanik: die Entnahme veröffentlicht unverändert und kostet nic
     assert.ok(!verboten.test(quelle), `die Mechanik greift auf ${verboten} zu - die Entnahme muss kostenlos sein`);
   }
 
-  /* Und die Bilder sind danach weg - Instagram hat sie geholt. */
-  assert.ok(!fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "r-tag2")), "die Bilder des entnommenen Eintrags bleiben liegen");
+  /* 4. DER TEASER FINDET IHN: Der veröffentlichte Inhalt wird der Inhalt des
+        Slots - sonst kündigt ein Teaser nach einem Runner-Wechsel den
+        geplanten, nie erschienenen Beitrag an. */
+  assert.equal(inhalte.get("b1").ausReserve, "r-tag2");
+  assert.equal(inhalte.get("b1").folien[0].titel, "Der dreistufige Deliktsaufbau");
+  assert.equal(planEintrag.status, "veroeffentlicht");
+  assert.equal(planEintrag.ausReserve, "r-tag2");
+
+  /* 5. DIE BILDER BLEIBEN, BIS DER ZUSTAND DURABLE IST. Erst der Aufrufer
+        löscht sie - nach Ledger, Commit und Push. Stirbt der Runner davor,
+        braucht der nächste sie womöglich noch. */
+  assert.ok(fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "r-tag2")), "die Bilder wurden vor dem durablen Zustand gelöscht");
+  r.nachDurable();
+  assert.ok(!fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "r-tag2")), "nachDurable() räumt die Bilder nicht weg");
   fs.rmSync(hosting.dir, { recursive: true, force: true });
 });
 
@@ -6244,16 +6281,19 @@ test("Reserve-Mechanik: ohne Medien-ID bleibt der Eintrag im Bestand", async () 
   const hosting = resHosting();
   hosting._bilderAnlegen("r1");
   const eintrag = {
-    id: "r1", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01", themaId: "t", fach: "kst", klausur: 2,
+    id: "r1", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01", themaId: "t", fach: "strafat", klausur: 2,
     beitrag: { folien: [{ art: "titel", titel: "X" }] }, bildUrls: ["https://a/1.png"],
     caption: "c", faktenFreigabe: { ok: true, geprueftAm: "2026-09-10T08:00:00.000Z" }, regelVersion: 1,
   };
-  let vermerkt = 0;
+  let vermerkt = 0, gespeichert = 0;
   const r = await reserveEntnehmen({
-    hosting, bestand: [eintrag], heute: "2026-09-19", ledger: { beitraege: [] },
-    ig: { beitragPosten: async () => "trocken" }, slot: "b1",
-    echteMedienId, vermerken: () => { vermerkt++; },
+    hosting, bestand: [eintrag], heute: "2026-09-19", ledger: { veroeffentlicht: [] },
+    ig: { bereitsVeroeffentlicht: async () => null, beitragPosten: async () => "trocken" },
+    slot: "b1", eintrag: { slot: "b1", status: "geplant" },
+    echteMedienId, veroeffentlichungEintragen: () => ({ bestaetigt: true }),
+    vermerken: () => { vermerkt++; }, inhaltSpeichern: () => { gespeichert++; },
   });
+  assert.equal(gespeichert, 0, "ohne Medien-ID wurde der Slot-Inhalt überschrieben");
   assert.equal(r.medienId, null);
   assert.equal(r.bestand.length, 1, "der Eintrag wurde trotz fehlender Medien-ID verbraucht");
   assert.equal(vermerkt, 0, "ein Trockenlauf wurde in den Ledger geschrieben");
@@ -6288,10 +6328,10 @@ test("Reserve-Mechanik: aufgefüllt wird nur aus echtem Restbudget", async () =>
   const { reserveAuffuellen } = await import("../src/reservelauf.mjs");
   const { budgetStarten } = await import("../src/budget.mjs");
 
-  const thema = { id: "t1", fach: "kst", klausur: 2, typ: "schema" };
+  const thema = { id: "t1", fach: "strafat", klausur: 2, typ: "schema" };
   const beitrag = {
     format: "karussell",
-    folien: [{ art: "titel", titel: "Das Grundschema" }, { art: "text", titel: "Aufbau", text: "Erst die Steuerpflicht, dann die Ermittlung." }],
+    folien: [{ art: "titel", titel: "Der Deliktsaufbau" }, { art: "text", titel: "Aufbau", text: "Erst der Tatbestand, dann die Rechtswidrigkeit." }],
     caption: "Systematik.",
   };
   const rohBauen = () => ({ thema, beitrag, bildUrls: ["https://a/1.png"], caption: "Systematik.", hashtags: [], faktenFreigabe: { ok: true, geprueftAm: "2026-09-19T08:00:00.000Z" } });
@@ -6301,9 +6341,9 @@ test("Reserve-Mechanik: aufgefüllt wird nur aus echtem Restbudget", async () =>
   b1.optionalSperren("Bezahlte Pflichtarbeit steht aus: 1 Beitrag/Reel.");
   let gerufen = 0;
   const r1 = await reserveAuffuellen({
-    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b1,
+    bestand: [], heute: "2026-09-19", kanal: "herrjurist", budget: b1,
     erzeugen: async () => { gerufen++; return rohBauen(); }, speichern: async () => {},
-    kostenJeBeitragUsd: 0.08,
+    beitragsGrenzeUsd: 0.08,
   });
   assert.equal(gerufen, 0, "bei ausstehender Pflichtarbeit wurde produziert");
   assert.equal(r1.erzeugt, 0);
@@ -6312,9 +6352,9 @@ test("Reserve-Mechanik: aufgefüllt wird nur aus echtem Restbudget", async () =>
   /* 2. Kein Restbudget: kein Mindestverbrauch, es entsteht nichts. */
   const b2 = budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 }, bisher: { core: 0.28 } });
   const r2 = await reserveAuffuellen({
-    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b2,
+    bestand: [], heute: "2026-09-19", kanal: "herrjurist", budget: b2,
     erzeugen: async () => { gerufen++; return rohBauen(); }, speichern: async () => {},
-    kostenJeBeitragUsd: 0.08,
+    beitragsGrenzeUsd: 0.08,
   });
   assert.equal(gerufen, 0, "ohne Restbudget wurde produziert");
   assert.match(r2.grund, /Restbudget/);
@@ -6323,16 +6363,16 @@ test("Reserve-Mechanik: aufgefüllt wird nur aus echtem Restbudget", async () =>
   const b3 = budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 }, bisher: { core: 0.05 } });
   const gespeichert = [];
   const r3 = await reserveAuffuellen({
-    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b3,
+    bestand: [], heute: "2026-09-19", kanal: "herrjurist", budget: b3,
     erzeugen: async () => { gerufen++; return rohBauen(); },
     speichern: async (b) => gespeichert.push(b.length),
-    kostenJeBeitragUsd: 0.08,
+    beitragsGrenzeUsd: 0.08,
   });
   assert.equal(gerufen, 1, "es wurde nicht genau ein Beitrag erzeugt");
   assert.equal(r3.erzeugt, 1);
   assert.equal(r3.bestand.length, 1);
   assert.equal(r3.bestand[0].klausur, 2, "der Klausurtag fehlt im Eintrag");
-  assert.equal(r3.bestand[0].fach, "kst");
+  assert.equal(r3.bestand[0].fach, "strafat");
   assert.equal(r3.bestand[0].verfaelltAm, "2026-10-10");
   assert.deepEqual(gespeichert, [1], "der Bestand wurde nicht nach jedem Stück gesichert");
 
@@ -6343,10 +6383,10 @@ test("Reserve-Mechanik: aufgefüllt wird nur aus echtem Restbudget", async () =>
     caption: "c", faktenFreigabe: { ok: true, geprueftAm: "2026-09-18T08:00:00.000Z" }, regelVersion: 1,
   }));
   const r4 = await reserveAuffuellen({
-    bestand: voll, heute: "2026-09-19", kanal: "examenscampus",
+    bestand: voll, heute: "2026-09-19", kanal: "herrjurist",
     budget: budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 } }),
     erzeugen: async () => { gerufen++; return rohBauen(); }, speichern: async () => {},
-    kostenJeBeitragUsd: 0.08,
+    beitragsGrenzeUsd: 0.08,
   });
   assert.equal(r4.erzeugt, 0);
   assert.match(r4.grund, /Bestand voll/);
@@ -6357,9 +6397,9 @@ test("Reserve-Mechanik: aufgefüllt wird nur aus echtem Restbudget", async () =>
   const b5 = budgetStarten({ deckel: { core: 0.30, engagement: 0.23, research: 0.10 } });
   let versuche = 0;
   const r5 = await reserveAuffuellen({
-    bestand: [], heute: "2026-09-19", kanal: "examenscampus", budget: b5,
+    bestand: [], heute: "2026-09-19", kanal: "herrjurist", budget: b5,
     erzeugen: async () => { versuche++; return { ...rohBauen(), thema: { ...thema, typ: "modul" } }; },
-    speichern: async () => {}, kostenJeBeitragUsd: 0.08, maxJeLauf: 3,
+    speichern: async () => {}, beitragsGrenzeUsd: 0.08, maxJeLauf: 3,
   });
   assert.equal(r5.erzeugt, 0, "ein untauglicher Beitrag wurde aufgenommen");
   assert.equal(versuche, 1, "der untaugliche Versuch wurde wiederholt - das kostet jedes Mal");
@@ -6388,4 +6428,394 @@ test("Reserve-Mechanik: Abgelaufenes fliegt samt Bildern raus, ohne Nachcheck", 
   assert.ok(fs.existsSync(path.join(hosting.dir, "bilder", "reserve", "frisch")), "die Bilder des gültigen Eintrags wurden gelöscht");
   assert.ok(zeilen.some((z) => /verworfen/.test(z)), "das Verwerfen wird nicht protokolliert");
   fs.rmSync(hosting.dir, { recursive: true, force: true });
+});
+
+/* ===== Reservebestand im Tageslauf: Integration ==========================
+
+   Was hier geprüft wird, ist nicht mehr die Regel und nicht mehr die
+   Mechanik für sich, sondern ihr Zusammenspiel mit dem Tageslauf: die
+   Reihenfolge, die Dauerhaftigkeit und das, was ein zweiter Runner davon
+   vorfindet.
+
+   Der Aufbau spiegelt lauf.mjs, ohne Git, Netz und Instagram zu brauchen:
+   `runner()` ist derselbe Ablauf wie der Fangzweig der Beitragsschleife -
+   laden, aufräumen, entnehmen, durable machen, erst dann die Bilder weg.
+   Damit Spiegel und Original nicht auseinanderlaufen, prüft der letzte Test
+   die Reihenfolge direkt in der Quelle von lauf.mjs.
+   ========================================================================= */
+
+/* Ein Instagram, das sich merkt, was draußen steht - und Captions genauso
+   vergleicht wie der echte Client: über den gespeicherten Text. */
+const resInstagram = () => {
+  const feed = [];
+  return {
+    feed,
+    stuerzeNachSenden: false,
+    async bereitsVeroeffentlicht(caption) {
+      const t = feed.find((p) => p.caption === caption);
+      return t ? t.medienId : null;
+    },
+    async beitragPosten({ bildUrls, caption }) {
+      const medienId = `179${String(feed.length + 1).padStart(14, "0")}`;
+      feed.push({ bildUrls, caption, medienId });
+      if (this.stuerzeNachSenden) throw new Error("RUNNER-ABSTURZ nach dem Senden");
+      return medienId;
+    },
+  };
+};
+
+const resVorrat = (zusatz = {}) => ({
+  id: "r-vorrat", kanal: "herrjurist", erstelltAm: "2026-09-10", verfaelltAm: "2026-10-01",
+  themaId: "strafat-schema-1", fach: "strafat", klausur: 2, typ: "schema", format: "karussell",
+  beitrag: { format: "karussell", themaId: "strafat-schema-1", fach: "strafat", klausur: 2, kurztitel: "Deliktsaufbau",
+    folien: [{ art: "titel", titel: "Der dreistufige Deliktsaufbau", icon: "schema" }, { art: "text", titel: "Aufbau", text: "Erst der Tatbestand, dann die Rechtswidrigkeit." }] },
+  bildUrls: ["https://assets/bilder/reserve/r-vorrat/1-abc.png", "https://assets/bilder/reserve/r-vorrat/2-abc.png"],
+  caption: "Der Aufbau in der richtigen Reihenfolge.\n\n#staatsexamen #strafrecht",
+  hashtags: ["#staatsexamen", "#strafrecht"],
+  faktenFreigabe: { ok: true, geprueftAm: "2026-09-10T08:00:00.000Z", ausgefallen: false, hinweise: [] },
+  regelVersion: 1,
+  ...zusatz,
+});
+
+/**
+ * Ein Runner - derselbe Ablauf wie in lauf.mjs, mit denselben Bausteinen.
+ *
+ * `welt` ist der dauerhafte Teil: Hosting (state + Bilder auf Platte), Plan,
+ * Ledger, Instagram. Er überlebt den Runner, genau wie der Asset-Zweig einen
+ * Stundenlauf überlebt.
+ */
+const resWelt = ({ eintraege = [resVorrat()], plan = null } = {}) => {
+  const hosting = resHosting();
+  for (const e of eintraege) hosting._bilderAnlegen(e.id);
+  hosting.jsonSchreiben("reserve.json", { kanal: "herrjurist", ziel: 4, eintraege });
+  hosting.jsonSchreiben("plan.json", plan || { beitraege: [{ slot: "b1", zeit: "09:00", format: "karussell", themaId: "strafat-modul-7", status: "geplant" }], stories: [] });
+  hosting.jsonSchreiben("ledger.json", { veroeffentlicht: [] });
+  return { hosting, ig: resInstagram(), ledger: null, plan: null, protokoll: [] };
+};
+
+async function runner(welt, { fehler, slot = "b1", trocken = false, sichernWirft = false } = {}) {
+  const { bestandLaden, bestandInhalt, reserveAufraeumen, reserveEntnehmen, ersatzZulaessig, BESTAND_DATEI } = await import("../src/reservelauf.mjs");
+  const { istKostenKontrollFehler, budgetStoppGrund } = await import("../src/kostenfehler.mjs");
+  const { echteMedienId, veroeffentlichungEintragen } = await import("../src/veroeffentlichung.mjs");
+  const log = (z) => welt.protokoll.push(z);
+
+  /* Ein Runner beginnt bei null: frischer Klon des Asset-Zweigs, nichts aus
+     dem Arbeitsspeicher des vorigen. Nur was gepusht wurde, ist da. */
+  welt.plan = welt.hosting.jsonLesen("plan.json", null);
+  welt.ledger = welt.hosting.jsonLesen("ledger.json", null);
+
+  /* --- Laufbeginn: laden, aufräumen, durable sichern, wenn sich etwas ändert */
+  let bestand = bestandLaden(welt.hosting);
+  const auf = reserveAufraeumen({ hosting: welt.hosting, bestand, heute: "2026-09-19", log });
+  bestand = auf.bestand;
+  if (auf.entfernt.length || auf.verwaist.length) welt.hosting.jsonSchreiben(BESTAND_DATEI, bestandInhalt(bestand, "herrjurist"));
+
+  const eintrag = welt.plan.beitraege.find((b) => b.slot === slot) || welt.plan.stories.find((b) => b.slot === slot);
+  /* Ein Slot, der schon veröffentlicht ist, wird gar nicht mehr angefasst. */
+  if (eintrag.status === "veroeffentlicht") { log(`  ${slot} steht bereits - übersprungen.`); return { bestand, bearbeitet: false }; }
+
+  /* --- Der Fangzweig der Beitragsschleife ------------------------------- */
+  if (!istKostenKontrollFehler(fehler)) { eintrag.fehler = String(fehler.message); return { bestand, bearbeitet: true, ersetzt: false }; }
+  eintrag.budgetBlockiert = { seit: "2026-09-19T09:00:00.000Z", grund: budgetStoppGrund(fehler), topf: fehler.topf || null, art: fehler.name };
+
+  const zulaessig = ersatzZulaessig({ eintrag, fehler });
+  if (trocken || !zulaessig.ok) { if (!zulaessig.ok) log(`  Vorrat: kein Ersatz für ${slot} - ${zulaessig.grund}`); return { bestand, bearbeitet: true, ersetzt: false, zulaessig }; }
+
+  const r = await reserveEntnehmen({
+    hosting: welt.hosting, bestand, heute: "2026-09-19", ledger: welt.ledger, ig: welt.ig,
+    eintrag, slot, echteMedienId, veroeffentlichungEintragen,
+    vermerken: (l, e) => { l.veroeffentlicht.push(e); },
+    inhaltSpeichern: (s, b) => welt.hosting.jsonSchreiben(`inhalte/2026-09-19-${s}.json`, b),
+    log,
+  });
+  if (!r.medienId) return { bestand: r.bestand, bearbeitet: true, ersetzt: false, grund: r.grund };
+
+  /* Ledger → Bestand/Plan → EIN Zustands-Commit mit Push → erst danach die
+     Bilder. Durable ist, was gepusht wurde: Ein Absturz davor lässt den
+     nächsten Runner denselben Ausgangszustand vorfinden. */
+  bestand = r.bestand;
+  if (sichernWirft) throw new Error("RUNNER-ABSTURZ vor dem Push");
+  welt.hosting.jsonSchreiben("ledger.json", welt.ledger);
+  welt.hosting.jsonSchreiben("plan.json", welt.plan);
+  welt.hosting.jsonSchreiben(BESTAND_DATEI, bestandInhalt(bestand, "herrjurist"));
+  r.nachDurable();
+  return { bestand, bearbeitet: true, ersetzt: true, medienId: r.medienId, wiedergefunden: r.wiedergefunden };
+}
+
+const budgetFehlerBauen = async () => {
+  const { AdmissionAbgelehnt } = await import("../src/budget.mjs");
+  return new AdmissionAbgelehnt("autor", "core", 0.1200, 0.0150, 0.3000);
+};
+
+test("Vorrat im Tageslauf 1: kostenblockierter Feed-Slot wird aus dem Vorrat bedient - ohne einen bezahlten Aufruf", async () => {
+  const welt = resWelt();
+  const r = await runner(welt, { fehler: await budgetFehlerBauen() });
+
+  assert.equal(r.ersetzt, true, "der blockierte Slot blieb leer, obwohl Vorrat da war");
+  assert.equal(welt.ig.feed.length, 1);
+  /* Unverändert: genau die gespeicherten Bilder, genau die gespeicherte Caption. */
+  assert.deepEqual(welt.ig.feed[0].bildUrls, resVorrat().bildUrls, "die Bilder wurden neu gerendert oder ersetzt");
+  assert.equal(welt.ig.feed[0].caption, resVorrat().caption, "die Caption wurde bei der Entnahme neu zusammengesetzt");
+  /* Die Farbe des eigenen Klausurtags, nicht die des Entnahmetags. */
+  assert.equal(welt.ledger.veroeffentlicht[0].klausur, 2);
+  assert.equal(welt.ledger.veroeffentlicht[0].fach, "strafat");
+  assert.equal(welt.ledger.veroeffentlicht[0].ausReserve, "r-vorrat");
+  fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 2: nach der Entnahme ist der Slot durable veröffentlicht - der nächste Runner fasst ihn nicht mehr an", async () => {
+  const welt = resWelt();
+  await runner(welt, { fehler: await budgetFehlerBauen() });
+
+  assert.equal(welt.plan.beitraege[0].status, "veroeffentlicht");
+  assert.equal(welt.plan.beitraege[0].ausReserve, "r-vorrat");
+  /* Und alles davon steht auf Platte, nicht nur im Arbeitsspeicher. */
+  assert.equal(welt.hosting.jsonLesen("plan.json").beitraege[0].status, "veroeffentlicht");
+  assert.equal(welt.hosting.jsonLesen("reserve.json").eintraege.length, 0, "der entnommene Eintrag steht noch im gespeicherten Bestand");
+  assert.equal(welt.hosting.jsonLesen("ledger.json").veroeffentlicht.length, 1);
+
+  const zweiter = await runner(welt, { fehler: await budgetFehlerBauen() });
+  assert.equal(zweiter.bearbeitet, false, "der zweite Runner hat den fertigen Slot noch einmal bearbeitet");
+  assert.equal(welt.ig.feed.length, 1, "der zweite Runner hat ein zweites Mal gepostet");
+  fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 3: Absturz nach dem Senden, vor dem Push - der nächste Runner erzeugt KEIN Duplikat", async () => {
+  /* Der gefährlichste Ablauf überhaupt: Instagram hat den Beitrag, der
+     Runner stirbt, nichts davon ist durable. Der nächste Lauf sieht einen
+     blockierten Slot und einen vollen Vorrat - und darf trotzdem nicht
+     posten. Die Wiedererkennung hängt an der gespeicherten Caption. */
+  const welt = resWelt();
+  welt.ig.stuerzeNachSenden = true;
+  const blockade = await budgetFehlerBauen();
+  await assert.rejects(() => runner(welt, { fehler: blockade }), /RUNNER-ABSTURZ/);
+
+  assert.equal(welt.ig.feed.length, 1, "der Beitrag steht nicht auf Instagram");
+  assert.equal(welt.plan.beitraege[0].status, "geplant", "der Plan wurde trotz Absturz fortgeschrieben");
+  assert.equal(welt.hosting.jsonLesen("reserve.json").eintraege.length, 1, "der Vorratseintrag wurde trotz Absturz verbraucht");
+  assert.ok(fs.existsSync(path.join(welt.hosting.dir, "bilder", "reserve", "r-vorrat")), "die Bilder wurden trotz Absturz gelöscht");
+
+  /* Zweiter Runner, dieselbe Welt. */
+  welt.ig.stuerzeNachSenden = false;
+  const r2 = await runner(welt, { fehler: await budgetFehlerBauen() });
+
+  assert.equal(welt.ig.feed.length, 1, "der zweite Runner hat den Beitrag ein zweites Mal gepostet");
+  assert.equal(r2.ersetzt, true, "der zweite Runner hat die bestehende Veröffentlichung nicht übernommen");
+  assert.equal(r2.wiedergefunden, true, "die Wiedererkennung über die gespeicherte Caption hat nicht gegriffen");
+  assert.equal(r2.medienId, welt.ig.feed[0].medienId);
+  assert.equal(welt.plan.beitraege[0].status, "veroeffentlicht");
+  assert.equal(welt.hosting.jsonLesen("reserve.json").eintraege.length, 0);
+  fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 4: der Teaser nach einem Runner-Wechsel meint den wirklich erschienenen Vorratsbeitrag", async () => {
+  /* Der Teaser lädt nach einem Runner-Wechsel inhalte/<datum>-<slot>.json.
+     Stünde dort noch der geplante, nie erschienene Beitrag, kündigte die
+     Story am Abend etwas an, das es nicht gibt. */
+  const welt = resWelt();
+  /* Was der Tag ursprünglich vorhatte - ein anderes Thema, ein anderer Tag. */
+  welt.hosting.jsonSchreiben("inhalte/2026-09-19-b1.json", { themaId: "strafat-modul-7", fach: "bgbat", klausur: 1, folien: [{ art: "titel", titel: "Der geplante, nie erschienene Beitrag" }], caption: "geplant" });
+
+  await runner(welt, { fehler: await budgetFehlerBauen() });
+
+  /* Ein NEUER Runner - nichts aus dem Arbeitsspeicher des ersten. */
+  const { teaserAusBeitrag } = await import("../src/autor.mjs");
+  const geladen = welt.hosting.jsonLesen("inhalte/2026-09-19-b1.json", null);
+  assert.equal(geladen.ausReserve, "r-vorrat", "der Slot trägt noch den geplanten Inhalt");
+  assert.equal(geladen.folien[0].titel, "Der dreistufige Deliktsaufbau");
+  assert.equal(geladen.fach, "strafat", "der Teaser bekäme das falsche Fach - und damit die falsche Farbe");
+  assert.equal(geladen.klausur, 2);
+
+  const teaser = teaserAusBeitrag(geladen, "s3");
+  const text = JSON.stringify(teaser);
+  assert.ok(text.includes("Deliktsaufbau"), `der Teaser meint nicht den erschienenen Beitrag: ${text}`);
+  assert.ok(!text.includes("nie erschienene"), "der Teaser kündigt den geplanten Beitrag an, der nie erschienen ist");
+  fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 5: ein technischer Fehler bekommt keinen Ersatz", async () => {
+  /* Der Vorrat ist Verfügbarkeit bei Kostenblockade, kein allgemeiner
+     Fehler-Fallback. Ein Renderfehler, ein Anbieterausfall, ein
+     Instagram-Fehler: Ein Ersatzbeitrag würde sie nur verdecken. */
+  for (const fehler of [
+    new Error("Chromium konnte nicht starten"),
+    new Error("Instagram: Container nicht fertig (code 9007)"),
+    new Error("Beitrag „X“ nach 3 Versuchen nicht freigegeben"),
+    Object.assign(new Error("anthropic 529 overloaded"), { name: "AnbieterFehler" }),
+  ]) {
+    const welt = resWelt();
+    const r = await runner(welt, { fehler });
+    assert.equal(r.ersetzt, false, `„${fehler.message}“ wurde aus dem Vorrat ersetzt`);
+    assert.equal(welt.ig.feed.length, 0);
+    assert.equal(welt.hosting.jsonLesen("reserve.json").eintraege.length, 1, "der Vorrat wurde für einen technischen Fehler verbraucht");
+    assert.equal(welt.plan.beitraege[0].status, "geplant");
+    fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+  }
+});
+
+test("Vorrat im Tageslauf 6: Reels und Stories werden nicht aus dem Vorrat ersetzt", async () => {
+  /* Der Vorrat hält Feed-Beiträge. Ein Karussell an Stelle eines Reels wäre
+     ein anderes Produkt, eine Story an Stelle eines Reels erst recht. */
+  const reelWelt = resWelt({ plan: { beitraege: [{ slot: "b3", zeit: "18:00", format: "reel", status: "geplant" }], stories: [] } });
+  const r1 = await runner(reelWelt, { fehler: await budgetFehlerBauen(), slot: "b3" });
+  assert.equal(r1.ersetzt, false, "ein Reel wurde durch ein Karussell ersetzt");
+  assert.match(r1.zulaessig.grund, /Reels/);
+  assert.equal(reelWelt.ig.feed.length, 0);
+  fs.rmSync(reelWelt.hosting.dir, { recursive: true, force: true });
+
+  const storyWelt = resWelt({ plan: { beitraege: [], stories: [{ slot: "s2", zeit: "12:00", art: "begriff", status: "geplant" }] } });
+  const r2 = await runner(storyWelt, { fehler: await budgetFehlerBauen(), slot: "s2" });
+  assert.equal(r2.ersetzt, false, "eine Story wurde durch einen Feed-Beitrag ersetzt");
+  assert.match(r2.zulaessig.grund, /begriff/);
+  assert.equal(storyWelt.ig.feed.length, 0);
+  fs.rmSync(storyWelt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 7: leerer oder abgelaufener Vorrat - der Slot bleibt blockiert, der Lauf stürzt nicht ab", async () => {
+  /* Der Vorrat ist eine Versicherung, keine Garantie. Ist er leer, ist der
+     Tag so schlecht wie vorher - aber nicht schlechter. */
+  const leer = resWelt({ eintraege: [] });
+  const r1 = await runner(leer, { fehler: await budgetFehlerBauen() });
+  assert.equal(r1.ersetzt, false);
+  assert.match(r1.grund, /kein gültiger Vorratsbeitrag/);
+  assert.equal(leer.plan.beitraege[0].status, "geplant");
+  assert.ok(leer.plan.beitraege[0].budgetBlockiert, "die Blockade wurde nicht vermerkt");
+  fs.rmSync(leer.hosting.dir, { recursive: true, force: true });
+
+  /* Abgelaufen: verworfen, kein bezahlter Nachcheck, keine Verlängerung. */
+  const alt = resWelt({ eintraege: [resVorrat({ id: "r-alt", erstelltAm: "2026-08-01", verfaelltAm: "2026-08-22" })] });
+  const r2 = await runner(alt, { fehler: await budgetFehlerBauen() });
+  assert.equal(r2.ersetzt, false);
+  assert.equal(alt.hosting.jsonLesen("reserve.json").eintraege.length, 0, "der abgelaufene Eintrag liegt noch im Bestand");
+  assert.ok(!fs.existsSync(path.join(alt.hosting.dir, "bilder", "reserve", "r-alt")), "die Bilder des abgelaufenen Eintrags liegen noch da");
+  assert.ok(alt.protokoll.some((z) => /verworfen/.test(z)));
+  fs.rmSync(alt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 8: ein Thema, das gerade erschienen ist, kommt nicht sofort noch einmal", async () => {
+  const welt = resWelt();
+  welt.hosting.jsonSchreiben("ledger.json", { veroeffentlicht: [{ datum: "2026-09-12", art: "beitrag", thema: "strafat-schema-1" }] });
+  const r = await runner(welt, { fehler: await budgetFehlerBauen() });
+
+  assert.equal(r.ersetzt, false, "dasselbe Thema erschien binnen einer Woche zweimal");
+  assert.match(r.grund, /letzten 60 Tagen erschienen/);
+  /* Der Eintrag bleibt liegen - er ist nicht schlecht, nur heute unpassend. */
+  assert.equal(welt.hosting.jsonLesen("reserve.json").eintraege.length, 1, "der Eintrag wurde wegen einer Dublette weggeworfen");
+  fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 9: die Bilder fallen erst nach dem durablen Zustand - ein Absturz davor behält sie", async () => {
+  /* Die Reihenfolge ist die eigentliche Aussage: Slot, Inhalt, Ledger,
+     Bestand, EIN Zustands-Commit - und erst danach die Bilder. Wer sie
+     vorher löscht, hat nach einem gescheiterten Push nichts mehr in der
+     Hand, falls die Wiedererkennung wider Erwarten nicht greift. */
+  const welt = resWelt();
+  const blockade = await budgetFehlerBauen();
+  await assert.rejects(() => runner(welt, { fehler: blockade, sichernWirft: true }), /vor dem Push/);
+  assert.ok(fs.existsSync(path.join(welt.hosting.dir, "bilder", "reserve", "r-vorrat")), "die Bilder wurden vor dem durablen Zustand gelöscht");
+
+  /* Der nächste Runner findet die Veröffentlichung wieder und räumt dann auf. */
+  const r2 = await runner(welt, { fehler: await budgetFehlerBauen() });
+  assert.equal(r2.wiedergefunden, true);
+  assert.equal(welt.ig.feed.length, 1);
+  assert.ok(!fs.existsSync(path.join(welt.hosting.dir, "bilder", "reserve", "r-vorrat")), "die Bilder blieben nach dem durablen Zustand liegen");
+  fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 10: Bildordner ohne Eintrag werden weggeräumt", async () => {
+  /* Sie entstehen, wenn die Bilder hochgeladen sind und der Eintrag danach
+     an Tor 2 scheitert oder der Runner stirbt. Weil bilder/reserve/ bewusst
+     außerhalb der Datumsrotation liegt, räumt sie sonst niemand weg. */
+  const welt = resWelt();
+  welt.hosting._bilderAnlegen("2026-09-19-rxyz");
+  assert.ok(fs.existsSync(path.join(welt.hosting.dir, "bilder", "reserve", "2026-09-19-rxyz")));
+
+  await runner(welt, { fehler: await budgetFehlerBauen() });
+  assert.ok(!fs.existsSync(path.join(welt.hosting.dir, "bilder", "reserve", "2026-09-19-rxyz")), "ein Bildordner ohne Eintrag bleibt ewig liegen");
+  /* Die Bilder des gültigen Eintrags fasst das Aufräumen nicht an - sie
+     werden erst nach der Veröffentlichung gelöscht. */
+  assert.ok(welt.ig.feed.length === 1);
+  fs.rmSync(welt.hosting.dir, { recursive: true, force: true });
+});
+
+test("Vorrat im Tageslauf 11: nachgefüllt wird zuletzt, höchstens um einen Beitrag und nur aus echtem Restbudget", async () => {
+  const { reserveAuffuellen } = await import("../src/reservelauf.mjs");
+  const { budgetStarten } = await import("../src/budget.mjs");
+  const roh = () => ({
+    thema: { id: "t-neu", fach: "staat", klausur: 1, typ: "schema" },
+    beitrag: { format: "karussell", folien: [{ art: "titel", titel: "Der Deliktsaufbau" }, { art: "text", titel: "A", text: "Erst der Tatbestand." }], caption: "Systematik." },
+    bildUrls: ["https://a/1.png"], caption: "Systematik.\n\n#x", hashtags: ["#x"],
+    faktenFreigabe: { ok: true, geprueftAm: "2026-09-19T08:00:00.000Z", ausgefallen: false },
+  });
+  const deckel = { core: 0.30, engagement: 0.23, research: 0.10 };
+
+  /* Solange bezahlte Pflichtarbeit aussteht: kein einziger Aufruf. Das ist
+     dieselbe Sperre, die für jede andere bezahlte Kür gilt. */
+  const gesperrt = budgetStarten({ deckel });
+  gesperrt.optionalSperren("Bezahlte Pflichtarbeit steht aus: 1 Beitrag/Reel.");
+  let gerufen = 0;
+  const a = await reserveAuffuellen({ bestand: [], heute: "2026-09-19", kanal: "herrjurist", budget: gesperrt, beitragsGrenzeUsd: 0.08, erzeugen: async () => { gerufen++; return roh(); }, speichern: async () => {} });
+  assert.equal(gerufen, 0);
+  assert.match(a.grund, /Pflichtarbeit steht aus/);
+
+  /* Pflicht durch, aber der Topf trägt die Beitragsgrenze nicht mehr: kein
+     Mindestverbrauch, es entsteht nichts. */
+  const knapp = budgetStarten({ deckel, bisher: { core: 0.27 } });
+  const b = await reserveAuffuellen({ bestand: [], heute: "2026-09-19", kanal: "herrjurist", budget: knapp, beitragsGrenzeUsd: 0.08, erzeugen: async () => { gerufen++; return roh(); }, speichern: async () => {} });
+  assert.equal(gerufen, 0, "aus einem Restbudget unter der Beitragsgrenze wurde produziert");
+  assert.match(b.grund, /Restbudget .* trägt die Beitragsgrenze/);
+  assert.ok(!/Worst Case/i.test(b.grund), "die alte, irreführende Wortwahl ist zurück");
+
+  /* Günstiger Tag, Pflicht durch, Bedarf 4 - und trotzdem genau einer. */
+  const guenstig = budgetStarten({ deckel, bisher: { core: 0.04 } });
+  const gespeichert = [];
+  const c = await reserveAuffuellen({ bestand: [], heute: "2026-09-19", kanal: "herrjurist", budget: guenstig, beitragsGrenzeUsd: 0.08, erzeugen: async () => { gerufen++; return roh(); }, speichern: async (n) => gespeichert.push(n.length) });
+  assert.equal(gerufen, 1, "es wurde mehr als ein Beitrag je Lauf erzeugt");
+  assert.equal(c.erzeugt, 1);
+  assert.deepEqual(gespeichert, [1], "der Bestand wurde nicht sofort gesichert");
+  assert.equal(c.bestand[0].klausur, 1, "der Eintrag trägt den Klausurtag seines eigenen Fachs nicht");
+  assert.equal(c.bestand[0].verfaelltAm, "2026-10-10");
+});
+
+test("Vorrat im Tageslauf 12: die Reihenfolge steht so in lauf.mjs - nicht nur im Spiegel dieses Tests", async () => {
+  /* Die Tests oben prüfen einen nachgebauten Ablauf. Damit Nachbau und
+     Original nicht auseinanderlaufen, wird die Reihenfolge hier direkt in
+     der Quelle festgehalten. */
+  const quelle = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
+  const ohneKommentar = quelle.replace(/\/\*[\s\S]*?\*\//g, "");
+  const wo = (muster) => { const i = ohneKommentar.search(muster); assert.ok(i > 0, `nicht gefunden: ${muster}`); return i; };
+
+  /* 1. Der Vorrat wird am Laufbeginn geladen und aufgeräumt. */
+  const laden = wo(/bestandLaden\(hosting\)/);
+  const aufraeumen = wo(/reserveAufraeumen\(\{/);
+  assert.ok(laden < aufraeumen, "aufgeräumt wird vor dem Laden");
+
+  /* 2. Die Entnahme hängt am Kostenkontrollfehler und an ersatzZulaessig. */
+  const blockiert = wo(/istKostenKontrollFehler\(e\)\) \{\s*eintrag\.budgetBlockiert/);
+  const zulaessig = wo(/ersatzZulaessig\(\{ eintrag, fehler: e \}\)/);
+  const entnehmen = wo(/await reserveEntnehmen\(\{/);
+  assert.ok(blockiert < zulaessig && zulaessig < entnehmen, "die Entnahme hängt nicht am Kostenkontrollfehler");
+
+  /* 3. Ledger → Zustand sichern → erst dann die Bilder. */
+  const ledger = ohneKommentar.indexOf("ledgerSpeichern(ledgerPfad, ledger);", entnehmen);
+  const sichern = ohneKommentar.indexOf("await zustandSichern(`Reserve", entnehmen);
+  const bilder = ohneKommentar.indexOf("r.nachDurable();", entnehmen);
+  assert.ok(entnehmen < ledger, "der Ledger wird vor der Entnahme geschrieben");
+  assert.ok(ledger < sichern, "der Zustand wird vor dem Ledger gesichert");
+  assert.ok(sichern > 0 && bilder > sichern, "die Bilder fallen vor dem durablen Zustand");
+
+  /* 4. Nachgefüllt wird ganz am Ende - nach Beiträgen UND Stories, und erst
+        nach einer frisch nachgezogenen Pflichtsperre. */
+  const storySchleife = wo(/for \(const eintrag of storiesFaellig\)/);
+  const auffuellen = wo(/await reserveAuffuellen\(\{/);
+  const schlussSichern = ohneKommentar.indexOf("await zustandSichern(`Zustand ${datum}`)");
+  assert.ok(storySchleife < auffuellen, "der Vorrat wird vor den Stories aufgefüllt");
+  assert.ok(auffuellen < schlussSichern, "das Auffüllen liegt hinter der Schlusssicherung");
+  const sperre = ohneKommentar.lastIndexOf("ruecklageAktualisieren();", auffuellen);
+  assert.ok(sperre > storySchleife, "die Pflichtsperre wird vor dem Auffüllen nicht nachgezogen");
+
+  /* 5. Die Beitragsgrenze ist die konfigurierte, keine eigene Zahl. */
+  assert.match(ohneKommentar, /beitragsGrenzeUsd: CONFIG\.ki\.maxJeBeitragUsd/);
+  /* 6. Die Vorratsbilder gehen nicht in die Datumsrotation. */
+  assert.match(ohneKommentar, /hosting\.veroeffentlichen\(bilder, pfad, `Vorrat/);
 });

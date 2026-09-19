@@ -32,6 +32,23 @@
 import fs from "node:fs";
 import path from "node:path";
 import { bestandPruefen, bedarf, entnehmen, eintragBauen, ZIEL_BESTAND } from "./reserve.mjs";
+import { istKostenKontrollFehler } from "./kostenfehler.mjs";
+
+/**
+ * Wann der Vorrat ueberhaupt eingreift - und wann nicht.
+ *
+ * Er ist Verfuegbarkeit bei KOSTENBLOCKADE, kein allgemeiner Fehler-Fallback.
+ * Ein technischer Anbieterfehler, ein fachlich nicht freigegebener Inhalt, ein
+ * Instagram-Fehler: Das sind andere Probleme, und ein Ersatzbeitrag wuerde sie
+ * nur verdecken. Reels und Stories bleiben ebenfalls aussen vor - der Vorrat
+ * haelt Feed-Beitraege.
+ */
+export function ersatzZulaessig({ eintrag, fehler }) {
+  if (!istKostenKontrollFehler(fehler)) return { ok: false, grund: `kein Kostenkontrollfehler (${fehler?.name || "unbekannt"})` };
+  if (eintrag?.format === "reel") return { ok: false, grund: "Reels werden nicht aus dem Vorrat ersetzt" };
+  if (eintrag?.art && eintrag.art !== "beitrag") return { ok: false, grund: `${eintrag.art} wird nicht aus dem Vorrat ersetzt` };
+  return { ok: true, grund: null };
+}
 
 /** Ablageort der Vorratsbilder - bewusst kein Datum, siehe oben. */
 export const RESERVE_ORDNER = "reserve";
@@ -68,7 +85,34 @@ export function reserveAufraeumen({ hosting, bestand, heute, log = () => {} }) {
     bilderLoeschen(hosting, e.id);
     log(`  Vorrat: ${e.id} verworfen (${e.grund})`);
   }
-  return { bestand: gueltig, entfernt: verfallen };
+  const verwaist = bilderVerwaist(hosting, gueltig);
+  if (verwaist.length) log(`  Vorrat: ${verwaist.length} Bildordner ohne Eintrag entfernt (${verwaist.join(", ")})`);
+  return { bestand: gueltig, entfernt: verfallen, verwaist };
+}
+
+/**
+ * Bildordner ohne Eintrag im Bestand.
+ *
+ * Sie entstehen genau einmal: Die Bilder werden hochgeladen und gepusht,
+ * BEVOR der Eintrag steht - und dazwischen kann der Beitrag an Tor 2
+ * scheitern oder der Runner sterben. Weil `bilder/reserve/` bewusst
+ * ausserhalb der Datumsrotation liegt, raeumt sie sonst niemand weg. Ein
+ * Vorrat, der seinen eigenen Muell nicht aufraeumt, laesst den Zweig
+ * wachsen, bis das Klonen im Stundenlauf teuer wird.
+ */
+export function bilderVerwaist(hosting, bestand) {
+  const weg = [];
+  try {
+    const wurzel = path.join(hosting.dir, "bilder", RESERVE_ORDNER);
+    if (!fs.existsSync(wurzel)) return weg;
+    const bekannt = new Set(bestand.map((e) => String(e.id)));
+    for (const d of fs.readdirSync(wurzel)) {
+      if (bekannt.has(d)) continue;
+      fs.rmSync(path.join(wurzel, d), { recursive: true, force: true });
+      weg.push(d);
+    }
+  } catch { /* ein misslungenes Aufraeumen darf keinen Lauf kosten */ }
+  return weg;
 }
 
 /**
@@ -79,36 +123,69 @@ export function reserveAufraeumen({ hosting, bestand, heute, log = () => {} }) {
  * Fehler, sondern der Normalfall eines leeren Vorrats; der Slot bleibt dann
  * blockiert wie bisher.
  */
-export async function reserveEntnehmen({ hosting, bestand, heute, ledger, ig, slot, echteMedienId, vermerken, log = () => {} }) {
+export async function reserveEntnehmen({
+  hosting, bestand, heute, ledger, ig, eintrag, slot,
+  echteMedienId, veroeffentlichungEintragen, vermerken, inhaltSpeichern,
+  log = () => {},
+}) {
+  const kennung = slot || eintrag?.slot || "?";
   const wahl = entnehmen(bestand, { heute, ledger });
   for (const e of wahl.verfallen) bilderLoeschen(hosting, e.id);
   if (!wahl.eintrag) {
-    log(`  Vorrat: kein Ersatz für ${slot} (${wahl.grund})`);
-    return { eintrag: null, medienId: null, bestand: wahl.rest, grund: wahl.grund };
+    log(`  Vorrat: kein Ersatz für ${kennung} (${wahl.grund})`);
+    return { eintrag: null, medienId: null, bestand: wahl.rest, grund: wahl.grund, nachDurable: () => {} };
   }
 
   const e = wahl.eintrag;
-  log(`  Vorrat: ${slot} wird durch ${e.id} ersetzt (${e.fach || "?"}, Klausurtag ${e.klausur ?? "?"}) - unverändert, ohne Neurendern`);
+  log(`  Vorrat: ${kennung} wird durch ${e.id} ersetzt (${e.fach || "?"}, Klausurtag ${e.klausur ?? "?"}) - unverändert, ohne Neurendern`);
+
+  /* IDEMPOTENZ, wie im normalen Feed. Der gefaehrliche Ablauf ohne sie:
+     Instagram nimmt den Beitrag an, die Medien-ID kommt zurueck, der Runner
+     stirbt vor reserve.json, Ledger und Push - und der naechste Lauf sieht
+     denselben Vorratseintrag und postet ihn ein zweites Mal. Oeffentlich und
+     nicht zurueckzunehmen.
+
+     Verglichen wird die GESPEICHERTE Publikationscaption, unveraendert. */
+  const schonDa = await ig.bereitsVeroeffentlicht(e.caption);
+  if (schonDa) log(`  Vorrat: ${e.id} steht bereits auf Instagram (${schonDa}) - wird nur noch vermerkt.`);
 
   /* Genau hier: die gespeicherten URLs, so wie sie sind. Kein Rendern, kein
-     Umfärben, keine Farbe aus dem Tagesplan. */
-  const medienId = await ig.beitragPosten({ bildUrls: e.bildUrls, caption: e.caption });
+     Umfaerben, keine Farbe aus dem Tagesplan. */
+  const medienId = schonDa || await ig.beitragPosten({ bildUrls: e.bildUrls, caption: e.caption });
   if (!echteMedienId(medienId)) {
     log(`  ○ Vorrat: ${e.id} ohne Medien-ID - der Eintrag bleibt im Bestand.`);
-    return { eintrag: e, medienId: null, bestand, grund: "keine Medien-ID" };
+    return { eintrag: e, medienId: null, bestand, grund: "keine Medien-ID", nachDurable: () => {} };
   }
 
+  /* Ab hier ohne fachliche Arbeit dazwischen: Slot, Inhalt, Ledger, Bestand -
+     und dann EIN Zustands-Commit des Aufrufers. */
+  const echt = veroeffentlichungEintragen(eintrag, medienId);
+  if (!echt?.bestaetigt) {
+    log(`  ○ Vorrat: ${e.id} ${echt?.grund || "nicht bestätigt"} - der Eintrag bleibt im Bestand.`);
+    return { eintrag: e, medienId: null, bestand, grund: echt?.grund || "nicht bestätigt", nachDurable: () => {} };
+  }
+  eintrag.ausReserve = e.id;
+
+  /* Der veroeffentlichte Inhalt wird der Inhalt dieses Slots. Damit findet
+     jeder Folgepfad ihn ohne neue Aufloesung - insbesondere der Teaser, der
+     nach einem Runner-Wechsel inhalte/<datum>-<slot>.json laedt und sonst den
+     geplanten, nie erschienenen Beitrag ankuendigen wuerde. */
+  inhaltSpeichern(eintrag.slot, { ...e.beitrag, ausReserve: e.id, caption: e.caption, hashtags: e.hashtags || [] });
+
   vermerken(ledger, {
-    datum: heute, art: "beitrag", slot, format: e.format || "karussell",
+    datum: heute, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, format: e.format || "karussell",
     thema: e.themaId, fach: e.fach, klausur: e.klausur,
     titel: e.beitrag?.folien?.[0]?.titel || null,
     hashtags: e.hashtags || [], medienId,
-    ausReserve: e.id,
+    ausReserve: e.id, wiedergefunden: !!schonDa,
     veroeffentlicht: new Date().toISOString(),
   });
 
-  bilderLoeschen(hosting, e.id);
-  return { eintrag: e, medienId, bestand: wahl.rest, grund: null };
+  /* Die Bilder erst NACH dem durablen Zustand loeschen. Scheitert der Push,
+     steigt der naechste Lauf ueber bereitsVeroeffentlicht() wieder ein - und
+     falls der Beitrag dort wider Erwarten nicht gefunden wird, braucht er die
+     Bilder noch. */
+  return { eintrag: e, medienId, bestand: wahl.rest, wiedergefunden: !!schonDa, grund: null, nachDurable: () => bilderLoeschen(hosting, e.id) };
 }
 
 /**
@@ -117,8 +194,8 @@ export async function reserveEntnehmen({ hosting, bestand, heute, ledger, ig, sl
  * Die Reihenfolge ist die Regel:
  *   1. Steht bezahlte Pflichtarbeit aus, passiert hier gar nichts.
  *   2. Ist der Bestand voll, passiert nichts.
- *   3. Reicht das freie Budget den Worst Case eines Beitrags nicht, passiert
- *      nichts. Es gibt keinen Mindestverbrauch.
+ *   3. Traegt das freie Restbudget die konfigurierte Beitragsgrenze nicht,
+ *      passiert nichts. Es gibt keinen Mindestverbrauch.
  *
  * `erzeugen()` macht die teure Arbeit (schreiben, prüfen, rendern, Bilder
  * ablegen) und wird hereingereicht - diese Datei soll ohne Anbieter testbar
@@ -126,7 +203,7 @@ export async function reserveEntnehmen({ hosting, bestand, heute, ledger, ig, sl
  */
 export async function reserveAuffuellen({
   bestand, heute, kanal, budget, erzeugen, speichern,
-  kostenJeBeitragUsd, ziel = ZIEL_BESTAND, maxJeLauf = 1, log = () => {},
+  beitragsGrenzeUsd, ziel = ZIEL_BESTAND, maxJeLauf = 1, log = () => {},
 }) {
   const offen = bedarf(bestand, heute, ziel);
   if (!offen) return { bestand, erzeugt: 0, grund: "Bestand voll" };
@@ -138,8 +215,8 @@ export async function reserveAuffuellen({
   let erzeugt = 0;
   for (let i = 0; i < Math.min(offen, maxJeLauf); i++) {
     const frei = budget?.frei?.("core") ?? 0;
-    if (frei < kostenJeBeitragUsd) {
-      return { bestand: neu, erzeugt, grund: `Restbudget ${frei.toFixed(4)} $ trägt keinen Vorratsbeitrag (${kostenJeBeitragUsd.toFixed(4)} $)` };
+    if (frei < beitragsGrenzeUsd) {
+      return { bestand: neu, erzeugt, grund: `Restbudget ${frei.toFixed(4)} $ trägt die Beitragsgrenze ${beitragsGrenzeUsd.toFixed(4)} $ nicht` };
     }
     const id = `${heute}-r${Date.now().toString(36)}`;
     const roh = await erzeugen({ id, pfad: reservePfad(id), heute });

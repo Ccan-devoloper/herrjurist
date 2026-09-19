@@ -43,6 +43,8 @@ import { zustandsSicherung } from "./zustand.mjs";
 import { budgetStarten, ZWECK_TOPF, AdmissionAbgelehnt, TopfGesperrt } from "./budget.mjs";
 import { telemetrieStarten } from "./telemetrie.mjs";
 import { journalStarten } from "./journal.mjs";
+import { bestandLaden, bestandInhalt, reserveAufraeumen, reserveEntnehmen, reserveAuffuellen, ersatzZulaessig, BESTAND_DATEI } from "./reservelauf.mjs";
+import { themaTauglich, ZIEL_BESTAND, RESERVE_FORMATE, DUBLETTEN_TAGE } from "./reserve.mjs";
 import { kontextSetzen, tagesplanAdmissionBedarf } from "./anbieter.mjs";
 import { effektiveKonfiguration, richtlinieGate, REGEL_DECKEL } from "./richtlinie.mjs";
 import { veroeffentlichungEintragen, veroeffentlichtBestaetigt, planBereinigen, planNurAusTrockenlauf, echteMedienId } from "./veroeffentlichung.mjs";
@@ -299,6 +301,20 @@ async function main() {
        der wahre Stand 0,18 $ und nicht 0,10 $. */
     legacyBaseline: bisherJeTopf,
   });
+  /* Der Vorrat wird zuerst aufgeraeumt: Was abgelaufen ist, fliegt samt
+     Bildern raus, bevor irgendetwas darauf zurueckgreift. Kein Nachcheck,
+     keine Verlaengerung - Ersatz entsteht spaeter an einem guenstigen Tag. */
+  let reserveBestand = bestandLaden(hosting);
+  {
+    const vorher = reserveBestand.length;
+    const auf = reserveAufraeumen({ hosting, bestand: reserveBestand, heute: datum, log });
+    reserveBestand = auf.bestand;
+    if (auf.entfernt.length) {
+      hosting.jsonSchreiben(BESTAND_DATEI, bestandInhalt(reserveBestand, KANAL));
+      log(`  Vorrat: ${auf.entfernt.length} von ${vorher} Einträgen verworfen, ${reserveBestand.length} gültig.`);
+    }
+  }
+
   const uebernommen = journal.uebernahme();
   if (journal.baselineNeu()) {
     const b = journal.legacyBaseline();
@@ -451,6 +467,7 @@ async function main() {
          standen. Ein von Hand nachgebautes Format ist ein Format, das
          auseinanderlaeuft. */
       hosting.jsonSchreiben("budget-journal.json", journal.snapshot());
+      hosting.jsonSchreiben(BESTAND_DATEI, bestandInhalt(reserveBestand, KANAL));
       if (!telemetrie?.anzahl?.()) return;
       const bestand = hosting.jsonLesen("profile.json", {});
       hosting.jsonSchreiben("profile.json", telemetrie.fensterFortschreiben(bestand));
@@ -938,6 +955,42 @@ async function main() {
       if (istKostenKontrollFehler(e)) {
         eintrag.budgetBlockiert = { seit: new Date().toISOString(), grund: budgetStoppGrund(e), topf: e.topf || null, art: e.name };
         log(`  ⛔ ${eintrag.slot} budget-blockiert: ${budgetStoppGrund(e)}`);
+
+        /* Der Vorrat greift genau hier und nur hier: ein Feed-Beitrag, der an
+           der Kostenkontrolle scheitert. Kein allgemeiner Fehler-Fallback -
+           ein technischer Ausfall oder ein fachlich beanstandeter Inhalt sind
+           andere Probleme, und ein Ersatzbeitrag wuerde sie verdecken. */
+        const zulaessig = ersatzZulaessig({ eintrag, fehler: e });
+        if (!trocken && zulaessig.ok) {
+          try {
+            const r = await reserveEntnehmen({
+              hosting, bestand: reserveBestand, heute: datum, ledger, ig,
+              eintrag, slot: eintrag.slot,
+              echteMedienId, veroeffentlichungEintragen, vermerken,
+              inhaltSpeichern: (slot, beitrag) => hosting.jsonSchreiben(`inhalte/${datum}-${slot}.json`, beitrag),
+              log,
+            });
+            if (r.medienId) {
+              reserveBestand = r.bestand;
+              /* Ohne fachliche Arbeit dazwischen: Slot, Inhalt und Ledger
+                 stehen, jetzt wird derselbe Zustand durable gemacht. Erst
+                 danach duerfen die Vorratsbilder weg - scheitert der Push,
+                 steigt der naechste Lauf ueber bereitsVeroeffentlicht() wieder
+                 ein und braucht sie womoeglich noch. */
+              ledgerSpeichern(ledgerPfad, ledger);
+              await zustandSichern(`Reserve ${eintrag.slot} ${datum}`);
+              r.nachDurable();
+              log(`  ✓ ${r.medienId} aus dem Vorrat${r.wiedergefunden ? " (bereits veröffentlicht, nur vermerkt)" : ""}`);
+              continue;
+            }
+          } catch (rf) {
+            /* Ein Fehler beim Ersatz darf den Lauf nicht kosten - der Slot
+               bleibt dann blockiert wie ohne Vorrat. */
+            console.error(`  ✗ Vorrat für ${eintrag.slot}: ${rf.message}`);
+          }
+        } else if (!zulaessig.ok) {
+          log(`  Vorrat: kein Ersatz für ${eintrag.slot} - ${zulaessig.grund}`);
+        }
         continue;
       }
       fehler++;
@@ -1061,6 +1114,86 @@ async function main() {
     log(`Auffüllen fortsetzen: ${auffuellStand.fertig}/${auffuellStand.ziel}`);
     try { await auffuellenLauf(auffuellStand.ziel, { hosting, ledger, ledgerPfad, pool, poolIndex, strategie, maxJeLauf: 4 }); }
     catch (e) { fehler++; console.error(`  ✗ Auffüllen: ${e.message}`); }
+  }
+
+  /* Ein Thema fuer den Vorrat: Tor 1 der Policy, und dann nur solche, die
+     weder heute geplant sind, noch schon im Bestand liegen, noch in der
+     Dublettenfrist erschienen sind. Was hier schon aussortiert wird, kostet
+     spaeter kein Geld - Tor 2 prueft erst den fertigen, bezahlten Text. */
+  const reserveThemaWaehlen = () => {
+    const imBestand = new Set(reserveBestand.map((e) => e.themaId).filter(Boolean));
+    const grenze = new Date(new Date(`${datum}T00:00:00Z`).getTime() - DUBLETTEN_TAGE * 86400000).toISOString().slice(0, 10);
+    const jung = new Set((ledger.veroeffentlicht || []).filter((e) => String(e.datum || "") >= grenze && e.thema).map((e) => e.thema));
+    const frei = pool.filter((t) => themaTauglich(t).ok && !belegteThemen.has(t.id) && !imBestand.has(t.id) && !jung.has(t.id));
+    if (!frei.length) return null;
+    /* Kein Zufall: das Thema, dessen Fach im Bestand am duennsten vertreten
+       ist. Ein Vorrat aus vier Beitraegen desselben Klausurtags waere am
+       Blockadetag eine schlechte Auswahl. */
+    const jeFach = new Map();
+    for (const e of reserveBestand) jeFach.set(e.fach, (jeFach.get(e.fach) || 0) + 1);
+    return [...frei].sort((a, b) => (jeFach.get(a.fach) || 0) - (jeFach.get(b.fach) || 0) || String(a.id).localeCompare(String(b.id)))[0];
+  };
+
+  /* Die teure Haelfte des Nachschubs: schreiben, pruefen, rendern, ablegen.
+     Sie laeuft unter derselben Beitragsgrenze wie ein Pflichtbeitrag und
+     legt ihre Bilder unter bilder/reserve/<id>/ ab - ausserhalb der
+     Datumsrotation, die sonst genau am 21. Tag zuschlagen wuerde. */
+  const reserveBeitragErzeugen = async ({ id, pfad }) => {
+    const thema = reserveThemaWaehlen();
+    if (!thema) return null;
+    log(`  Vorrat: ${id} wird erzeugt · ${thema.typ} · ${thema.titel}`);
+    /* Das Thema gilt ab jetzt als belegt, auch wenn der Beitrag gleich an
+       Tor 2 scheitert: Ein zweiter Versuch am selben Thema im selben Lauf
+       koennte nur dasselbe Ergebnis kaufen. */
+    belegteThemen.add(thema.id);
+    let beitrag;
+    /* Dieselbe Obergrenze wie fuer einen Pflichtbeitrag - und dasselbe
+       Verschachtelungsverbot wie in textBesorgen: Ein laufender Posten wird
+       fortgefuehrt, nicht ueberschrieben. */
+    const eigenerPosten = !postenAktiv();
+    if (eigenerPosten) postenBeginnen(`Vorrat ${id}`, CONFIG.ki.maxJeBeitragUsd);
+    try { beitrag = await beitragSchreiben({ format: RESERVE_FORMATE[thema.typ], thema, datum, strategie }); }
+    finally { if (eigenerPosten) postenBeenden(); }
+    await titelfolieBebildern(beitrag);
+    const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
+    const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "reserve", id), { variante });
+    const bildUrls = await hosting.veroeffentlichen(bilder, pfad, `Vorrat ${id}`);
+    /* Die Publikationscaption entsteht HIER, in genau derselben Form wie im
+       Tageslauf - und wird so gespeichert. Am Blockadetag wird nichts mehr
+       zusammengesetzt; bereitsVeroeffentlicht() vergleicht diesen Text. */
+    const caption = `${beitrag.caption}${bildnachweis(beitrag)}\n\n${beitrag.hashtags.join(" ")}`;
+    return { thema, beitrag, bildUrls, caption, hashtags: beitrag.hashtags || [], faktenFreigabe: beitrag.faktenFreigabe };
+  };
+
+  /* ---- Vorrat auffüllen: ganz am Ende, aus echtem Restbudget ------------
+     Die Reihenfolge des Tages ist bewusst so und nicht anders:
+       Pflichtbeiträge → kostenlose Entnahme auf einem kostenblockierten Slot
+       → Stories → und erst hier, wenn KEINE bezahlte Pflichtarbeit mehr offen
+       ist, höchstens EIN Nachschub.
+     Der Vorrat ist die Versicherung, nicht das Produkt. Er darf dem heutigen
+     Pflichtprodukt nie einen Cent wegnehmen. Die Sperre dafür ist dieselbe,
+     die schon für jede andere bezahlte Kür gilt (budget.optionalGesperrt),
+     hier nur noch einmal frisch nachgezogen. */
+  if (!trocken && !nurPlanen) {
+    ruecklageAktualisieren();
+    try {
+      const vorher = reserveBestand.length;
+      const auf = await reserveAuffuellen({
+        bestand: reserveBestand, heute: datum, kanal: KANAL, budget,
+        beitragsGrenzeUsd: CONFIG.ki.maxJeBeitragUsd,
+        erzeugen: reserveBeitragErzeugen,
+        speichern: (neuerBestand) => { reserveBestand = neuerBestand; hosting.jsonSchreiben(BESTAND_DATEI, bestandInhalt(neuerBestand, KANAL)); },
+        log,
+      });
+      reserveBestand = auf.bestand;
+      if (auf.erzeugt) log(`  Vorrat: ${auf.erzeugt} Beitrag/Beiträge erzeugt (${vorher} → ${reserveBestand.length}/${ZIEL_BESTAND}).`);
+      else if (auf.grund) log(`  Vorrat: kein Nachschub - ${auf.grund}.`);
+    } catch (e) {
+      /* Der Nachschub ist eine Kür. Scheitert er, hat der Tag trotzdem
+         stattgefunden - er wird gemeldet, nicht als Tagesfehler gezählt. */
+      if (istKostenKontrollFehler(e)) log(`  ⏸ Vorrat: ${e.message}`);
+      else console.error(`  ✗ Vorrat: ${e.message}`);
+    }
   }
 
   await zustandSichern(`Zustand ${datum}`);

@@ -39,9 +39,9 @@
    Beitrag mit veraltetem Rechtsstand.
 
    WAS DIESES MODUL NICHT TUT: Es füllt nichts auf und entnimmt nichts von
-   selbst. Es ist die Regel, nach der das später entschieden wird. Die
-   Verdrahtung in den Tageslauf kommt als eigener Schritt - erst die Policy,
-   dann die Mechanik.
+   selbst, und es kennt weder Git noch Instagram. Es ist die Regel, nach der
+   das entschieden wird. Die Mechanik steht in reservelauf.mjs, der Ort im
+   Tag in lauf.mjs.
    ========================================================================== */
 
 /** Zielbestand: drei decken einen vollständigen Blockadetag, einer ist Puffer
@@ -53,6 +53,16 @@ export const TTL_TAGE = 21;
 
 /** Tor 1: Themenarten, die von sich aus nicht altern. */
 export const RESERVE_TYPEN = Object.freeze(["schema", "begriff"]);
+
+/** Format, in dem eine taugliche Themenart geschrieben wird. Nicht jedes
+    Format nimmt jede Themenart (FORMAT_QUELLEN im Planer), und der Vorrat
+    darf sich diese Zuordnung nicht selbst ausdenken. */
+export const RESERVE_FORMATE = Object.freeze({ schema: "schema", begriff: "vergleich" });
+
+/** Dublettenschutz: So lange gilt ein Thema als verbraucht. Eine Zahl, zwei
+    Verwender - die Entnahme prueft damit, die Nachschubwahl wirft damit schon
+    vorher weg, was bei der Entnahme ohnehin liegen bliebe. */
+export const DUBLETTEN_TAGE = 60;
 
 /** Version der Regel - steht in jedem Eintrag, damit eine Regeländerung den
     Altbestand nicht stillschweigend mitgelten lässt. */
@@ -133,9 +143,27 @@ export function vollstaendig(eintrag) {
   const fehlend = [];
   if (!eintrag?.beitrag?.folien?.length) fehlend.push("Beitragstext");
   if (!eintrag?.caption) fehlend.push("Caption");
+  /* Die gespeicherte Caption MUSS die spaetere Publikationscaption sein -
+     vollstaendig, mit Hashtags und Bildnachweis. Am Blockadetag wird nichts
+     mehr zusammengesetzt: Erstens kostet Zusammensetzen Gelegenheit zu
+     Fehlern, und zweitens haengt die Wiedererkennung nach einem Absturz
+     daran. bereitsVeroeffentlicht() vergleicht genau diesen Text; weicht er
+     um ein Zeichen ab, findet der naechste Lauf den Beitrag nicht und postet
+     ihn ein zweites Mal. */
+  const hashtags = Array.isArray(eintrag?.hashtags) ? eintrag.hashtags : [];
+  if (hashtags.length && !hashtags.every((h) => String(eintrag.caption || "").includes(h))) {
+    fehlend.push("Hashtags in der Publikationscaption (sie wird nicht mehr zusammengesetzt)");
+  }
   if (!Array.isArray(eintrag?.bildUrls) || !eintrag.bildUrls.length) fehlend.push("gerenderte Bilder");
   if (!eintrag?.faktenFreigabe?.ok) fehlend.push("Faktenfreigabe");
   if (!eintrag?.faktenFreigabe?.geprueftAm) fehlend.push("Zeitpunkt der Faktenfreigabe");
+  /* Ein ausgefallener Pruefer ist im Tagesbetrieb ein vertretbarer Degrade:
+     Der Beitrag erscheint heute, und morgen ist der Pruefer wieder da. Im
+     Vorrat ist er es nicht. Dort liegt der Beitrag bis zu 21 Tage, niemand
+     schaut ihn noch einmal an, und am Blockadetag gibt es kein Geld fuer eine
+     nachgeholte Pruefung. Was ungeprueft hineinkommt, geht ungeprueft
+     hinaus. */
+  if (eintrag?.faktenFreigabe?.ausgefallen) fehlend.push("tatsaechlich gelaufene Faktenpruefung (der Pruefer ist ausgefallen)");
   return { ok: fehlend.length === 0, fehlend };
 }
 
@@ -202,12 +230,18 @@ export function bedarf(bestand = [], heute, ziel = ZIEL_BESTAND) {
  * Genommen wird das ÄLTESTE taugliche Stück: Was zuerst verfällt, wird zuerst
  * gebraucht.
  */
-export function entnehmen(bestand = [], { heute, ledger = null, dublettenTage = 60 } = {}) {
+export function entnehmen(bestand = [], { heute, ledger = null, dublettenTage = DUBLETTEN_TAGE } = {}) {
   const { gueltig, verfallen } = bestandPruefen(bestand, heute);
+  /* Der Ledger fuehrt seine Veroeffentlichungen unter `veroeffentlicht`, mit
+     `thema` als Themen-ID und `art` als Gattung - genau so, wie vermerken()
+     ihn schreibt. Ein anderer Feldname waere hier still wirkungslos: Der
+     Dublettenschutz wuerde nie greifen, und niemand saehe es, weil das
+     Ergebnis dann einfach ein Beitrag mehr ist. */
   const jung = new Set();
-  if (ledger?.beitraege?.length) {
+  const veroeffentlicht = ledger?.veroeffentlicht;
+  if (veroeffentlicht?.length) {
     const grenze = new Date(new Date(`${alsTag(heute)}T00:00:00Z`).getTime() - dublettenTage * TAG_MS).toISOString().slice(0, 10);
-    for (const b of ledger.beitraege) if (alsTag(b.datum) >= grenze && b.thema) jung.add(b.thema);
+    for (const b of veroeffentlicht) if (alsTag(b.datum) >= grenze && b.thema && b.art !== "story") jung.add(b.thema);
   }
   const frei = gueltig.filter((e) => !jung.has(e.themaId));
   if (!frei.length) {
