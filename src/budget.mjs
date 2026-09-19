@@ -15,8 +15,11 @@
       hier und nirgends sonst. Ein unbekannter Zweck wird abgelehnt - nicht
       still nach Core gebucht.
 
-   2. Vor jedem Aufruf wird sein WORST CASE reserviert, nicht sein erhoffter
-      Preis. Passt der Worst Case nicht mehr, startet der Aufruf nicht.
+   2. Vor jedem Aufruf wird eine ADMISSION RESERVE zurückgelegt - ein
+      konservativer Betrag, nicht der erhoffte Preis. Passt sie nicht mehr,
+      startet der Aufruf nicht. Sie ist kein bewiesener Höchstpreis des
+      Anbieters (warum nicht, steht in eingabe.mjs); dass die tatsächlichen
+      Kosten darüber liegen KÖNNEN, ist als Invariantenbruch modelliert.
 
    3. Was der Anbieter berechnet haben KÖNNTE, wird nicht wieder freigegeben.
       Ein Fehler nach dem Senden ist kein „hat nicht stattgefunden“: Tokens
@@ -67,11 +70,17 @@ export const ZWECK_TOPF = Object.freeze({
 });
 
 /**
- * Töpfe mit harter Vorab-Zusage. Für sie gilt: tatsächliche Kosten <=
- * reservierte Kosten. Research steht bewusst NICHT darin - dort erzeugen
- * serverseitige Suchen Eingabe-Token, deren Dollarwert vor dem Start nicht
- * exakt bekannt ist. Diese Grenze ist eine Zusage über die Zahl der Aufrufe
- * und Suchen, nicht über den Cent - und das wird hier nicht anders behauptet.
+ * Töpfe, in denen ein Überschreiten der Reserve als INVARIANTENBRUCH
+ * behandelt wird: Liegen die tatsächlichen Kosten über dem reservierten
+ * Betrag, fällt der Fehler sichtbar durch und der Topf wird gesperrt.
+ *
+ * Das ist eine Erkennungs- und Abschaltregel, keine Zusage, dass der Fall
+ * nicht eintritt - eintreten kann er, sonst bräuchte es sie nicht.
+ *
+ * Research steht bewusst NICHT darin: Dort erzeugen serverseitige Suchen
+ * Eingabe-Token, deren Dollarwert vor dem Start nicht bekannt ist. Was dort
+ * zugesagt wird, ist die Zahl der Anfragen und Suchen, nicht der Cent - und
+ * das wird nirgends anders behauptet.
  */
 const HARTE_TOEPFE = new Set(["core", "engagement"]);
 
@@ -174,8 +183,8 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
      bezahlte KÜREN null.
 
      Warum so grob und nicht fein über Rücklagen: Eine Rücklage müsste den
-     harten Worst Case der ausstehenden Pflichtaufrufe zurücklegen, und der
-     liegt über dem ganzen Topf (siehe tagesplanWorstCase). Eine KLEINERE
+     vollen Admissionbedarf der ausstehenden Pflichtaufrufe zurücklegen, und
+     der liegt über dem ganzen Topf (siehe tagesplanAdmissionBedarf). Eine KLEINERE
      Rücklage - etwa der gemessene Durchschnitt - sähe ordentlich aus und wäre
      eine erfundene Zahl: Sie würde eine Verfügbarkeit zusagen, die niemand
      nachrechnen kann. Lieber eine harte, ehrliche Regel, die manchmal ein
@@ -207,18 +216,19 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
   /**
    * Lässt einen bezahlten Aufruf zu - oder eben nicht.
    *
-   * `worstCase` ist der teuerste Ausgang dieses Aufrufs, nicht sein
-   * erwarteter Preis. Nur so kann ein voll ausgeschöpfter Aufruf den Topf
-   * nicht über den Deckel treiben.
+   * `admissionReserve` ist der konservativ gerechnete Betrag dieses Aufrufs,
+   * nicht sein erwarteter Preis - damit ein voll ausgeschöpfter Aufruf den
+   * Topf nicht über die Betriebsgrenze treibt. Ein bewiesener Höchstpreis
+   * ist er nicht; dafür gibt es die Invariantenprüfung in buchen().
    *
    * `opt.pflichtName` meldet den Aufruf als Einlösung genau dieser Rücklage.
    * `opt.optional` ist Kennzeichnung für die Telemetrie; optionale Aufrufe
    * melden keine Rücklage an und stehen damit hinter allen Pflichtstücken.
    */
-  const zulassen = (zweck, worstCase, opt = {}) => {
+  const zulassen = (zweck, admissionReserve, opt = {}) => {
     const topf = topfFuer(zweck);
     if (gesperrt[topf]) throw new TopfGesperrt(topf, gesperrt[topf]);
-    const verlangt = runden(Math.max(0, Number(worstCase) || 0));
+    const verlangt = runden(Math.max(0, Number(admissionReserve) || 0));
     const eigene = opt.optional ? null : (opt.pflichtName || null);
     const verfuegbar = frei(topf, { ohnePflicht: eigene });
     if (opt.optional && optionalSperre) {
@@ -323,8 +333,8 @@ export function budgetStarten({ deckel, bisher = {}, breakGlass = false, protoko
    * bekannt ist. Danach entscheidet der Zustand, was mit der Reservierung
    * passiert - nicht die Frage, ob eine Ausnahme geflogen ist.
    */
-  const mitAdmission = async (zweck, worstCase, arbeit, opt = {}) => {
-    const griff = zulassen(zweck, worstCase, opt);
+  const mitAdmission = async (zweck, admissionReserve, arbeit, opt = {}) => {
+    const griff = zulassen(zweck, admissionReserve, opt);
     try {
       const ergebnis = await arbeit(griff);
       const usd = ergebnis && typeof ergebnis === "object" && "usd" in ergebnis ? ergebnis.usd : undefined;

@@ -58,9 +58,36 @@ export const PROVIDER_GUARD_USD = 0.02;
  */
 export const POLICY_PROVIDER_GUARD_USD = 0.02;
 
+/**
+ * Liest den Guard aus der Umgebung - und unterscheidet dabei „nicht gesetzt"
+ * von „falsch gesetzt".
+ *
+ * Variante A, ausdrücklich gewählt: Ein GESETZTER, aber unbrauchbarer Wert
+ * ist ein Konfigurationsfehler und wird abgelehnt, nicht still durch den
+ * Standard ersetzt. Ein stiller Fallback auf einen Tippfehler ist genau die
+ * Fehlerklasse, die dieses Projekt den ganzen Abend ausgebaut hat: Er sieht
+ * aus wie Sicherheit und ist eine verschluckte Meldung. Wer den Abstand
+ * ändern will, soll merken, ob es geklappt hat.
+ *
+ * Nicht gesetzt ist dagegen kein Fehler - dann gilt der Standard.
+ *
+ * @returns {{usd:number, quelle:"standard"|"umgebung"|"ungueltig", gueltig:boolean, roh:string|null}}
+ */
+export function providerGuardLesen(roh = process.env.IG_PROVIDER_GUARD_USD) {
+  const text = roh === undefined || roh === null ? "" : String(roh).trim();
+  if (text === "") return { usd: PROVIDER_GUARD_USD, quelle: "standard", gueltig: true, roh: null };
+  const n = Number(text);
+  if (!Number.isFinite(n) || n < 0) {
+    /* Der Rückfallwert ist trotzdem der sichere - falls jemand das Ergebnis
+       benutzt, ohne das Gate zu fragen. Das Gate fragt. */
+    return { usd: PROVIDER_GUARD_USD, quelle: "ungueltig", gueltig: false, roh: text };
+  }
+  return { usd: n, quelle: "umgebung", gueltig: true, roh: text };
+}
+
+/** Nur der Betrag - für Aufrufer, die die Herkunft nicht brauchen. */
 export function providerGuard(roh = process.env.IG_PROVIDER_GUARD_USD) {
-  const n = Number(roh);
-  return Number.isFinite(n) && n >= 0 ? n : PROVIDER_GUARD_USD;
+  return providerGuardLesen(roh).usd;
 }
 
 export class RichtlinieVerletzt extends Error {
@@ -121,12 +148,23 @@ export function effektiveKonfiguration({
 
   /* Policy-Deckel und Betriebsgrenze sind zwei Zahlen, nicht eine. Zugelassen
      wird bis zur Betriebsgrenze; der Policy-Deckel ist die Zusage. */
-  const guard = providerGuard();
+  const guardStand = providerGuardLesen();
+  const guard = guardStand.usd;
   const betrieb = Object.fromEntries(Object.entries(effektiv)
     .map(([t, v]) => [t, Math.round(Math.max(0, v - guard) * 1e6) / 1e6]));
-  if (guard > 0) hinweise.push(`Provider-Guard ${guard.toFixed(4)} $ je Topf: zugelassen wird bis Core ${betrieb.core.toFixed(4)} $, zugesagt sind ${effektiv.core.toFixed(2)} $.`);
+  if (!guardStand.gueltig) {
+    hinweise.push(`IG_PROVIDER_GUARD_USD=„${guardStand.roh}" ist kein gültiger Betrag - der Lauf startet nicht. `
+      + `Ein gesetzter, unbrauchbarer Wert wird nicht still durch den Standard ersetzt.`);
+  } else if (guard > 0) {
+    hinweise.push(`Provider-Guard ${guard.toFixed(4)} $ je Topf (${guardStand.quelle}): zugelassen wird bis Core ${betrieb.core.toFixed(4)} $, `
+      + `Policy cap ist ${effektiv.core.toFixed(2)} $.`);
+  }
 
-  return { deckel: effektiv, betriebsDeckel: betrieb, providerGuardUsd: guard, breakGlass: bg, ausloeser, hinweise, regel: { ...deckel } };
+  return {
+    deckel: effektiv, betriebsDeckel: betrieb,
+    providerGuardUsd: guard, providerGuard: guardStand,
+    breakGlass: bg, ausloeser, hinweise, regel: { ...deckel },
+  };
 }
 
 /**
@@ -186,7 +224,12 @@ export function richtlinieGate({
   /* Der Provider-Guard ist Teil der Policy, nicht der Umgebung. Ein
      geplanter Lauf mit zu kleinem Abstand startet nicht. */
   const guard = Number(konfiguration.providerGuardUsd);
-  if (!Number.isFinite(guard) || guard < 0) {
+  const guardStand = konfiguration.providerGuard || null;
+  if (guardStand && guardStand.gueltig === false) {
+    /* Variante A: gesetzt und unbrauchbar ist ein Konfigurationsfehler - in
+       jedem Lauf, nicht nur im geplanten. */
+    befunde.push(`IG_PROVIDER_GUARD_USD=„${guardStand.roh}" ist kein gültiger Betrag`);
+  } else if (!Number.isFinite(guard) || guard < 0) {
     befunde.push(`Provider-Guard ${konfiguration.providerGuardUsd} ist kein gültiger Betrag`);
   } else if (geplant && guard < POLICY_PROVIDER_GUARD_USD) {
     befunde.push(`Provider-Guard ${guard.toFixed(4)} $ unter dem Policy-Mindestwert ${POLICY_PROVIDER_GUARD_USD.toFixed(4)} $ `

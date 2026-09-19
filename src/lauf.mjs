@@ -43,7 +43,7 @@ import { zustandsSicherung } from "./zustand.mjs";
 import { budgetStarten, ZWECK_TOPF, AdmissionAbgelehnt, TopfGesperrt } from "./budget.mjs";
 import { telemetrieStarten } from "./telemetrie.mjs";
 import { journalStarten } from "./journal.mjs";
-import { kontextSetzen, tagesplanWorstCase } from "./anbieter.mjs";
+import { kontextSetzen, tagesplanAdmissionBedarf } from "./anbieter.mjs";
 import { effektiveKonfiguration, richtlinieGate, REGEL_DECKEL } from "./richtlinie.mjs";
 import { veroeffentlichungEintragen, veroeffentlichtBestaetigt, planBereinigen, planNurAusTrockenlauf, echteMedienId } from "./veroeffentlichung.mjs";
 import { stimmeStandVerbinden, stimmeStand, stimmeIstGesperrt } from "./stimme.mjs";
@@ -482,11 +482,11 @@ async function main() {
 
      Was bleibt, ist die Frage, die sie beantworten sollten: Darf eine Kür
      Geld ausgeben, das die Pflicht noch braucht? Die Antwort kann heute nur
-     nein sein, und zwar ohne Zwischentöne. Der harte Worst Case der
+     nein sein, und zwar ohne Zwischentöne. Der volle Admissionbedarf der
      ausstehenden Pflichtaufrufe übersteigt den ganzen Topf (siehe
-     dailyPlanNotWorstCaseFundable) - eine Rücklage, die kleiner ist als
-     dieser Worst Case, wäre eine erfundene Zahl mit einer erfundenen
-     Sicherheit daran.
+     dailyPlanNotAdmissibleAtCap) - eine Rücklage, die kleiner ist als
+     dieser Bedarf, wäre eine erfundene Zahl mit einer erfundenen Sicherheit
+     daran.
 
      Also: Solange bezahlte Pflichtarbeit aussteht, ist das sichere Budget für
      bezahlte Küren null. Kostenlose Wege - Archivbild, Icon, reines Layout -
@@ -519,18 +519,20 @@ async function main() {
   const pflichtOffen = ruecklageAktualisieren();
   if (pflichtOffen.length) log(`  Bezahlte Küren gesperrt, solange Pflichtarbeit aussteht: ${pflichtOffen.join(", ")}`);
 
-  /* Der unbequeme Befund, einmal je Lauf: Mit den heutigen Hard Ceilings
-     liegt der Worst Case des Pflichtprodukts ueber dem Core-Deckel. Das
+  /* Der unbequeme Befund, einmal je Lauf: Mit den heutigen Ceilings liegt
+     der Admissionbedarf des Pflichtprodukts ueber dem Core-Deckel. Das
      heisst nicht, dass der Tag teuer wird - gemessen kostet er einen
-     Bruchteil. Es heisst, dass niemand vorher garantieren kann, dass jeder
-     Pflichtaufruf stattfindet, wenn jeder sein Ceiling ausschoepft. Die
-     Kostenzusage haelt; die Verfuegbarkeitszusage braucht den Reservebestand. */
-  /* Die Eingabezahlen hier sind PLANUNGSWERTE, keine Zusage: Zum Zeitpunkt
-     der Planung gibt es die Anfragen noch nicht, also auch keine Schranke
-     ueber ihre Bytes. Sie sind an gemessenen Prompts geeicht und bewusst
-     grosszuegig. Die harte Schranke entsteht erst je Aufruf in eingabe.mjs. */
+     Bruchteil. Es heisst, dass niemand vorher sagen kann, dass jeder
+     Pflichtaufruf zugelassen wird, wenn jeder seine Reserve in voller Hoehe
+     anmeldet. Die Verfuegbarkeitszusage braucht den Reservebestand.
+
+     Die Eingabezahlen hier sind PLANUNGSWERTE: Zum Zeitpunkt der Planung
+     gibt es die Anfragen noch nicht, also auch keine Rechnung ueber ihre
+     Bytes. Sie sind an gemessenen Prompts geeicht und bewusst grosszuegig.
+     Die Admissiongrenze je Aufruf entsteht erst spaeter, in eingabe.mjs -
+     und auch sie ist ein konservativer Wert, kein bewiesener Hoechstpreis. */
   const EIN_LANG = 16000, EIN_PRUEFUNG = 12000;
-  const wc = tagesplanWorstCase({
+  const wc = tagesplanAdmissionBedarf({
     deckelCore: konfiguration.deckel.core,
     posten: [
       ...plan.beitraege.filter((b) => b.status !== "veroeffentlicht").flatMap((b) => ([
@@ -543,7 +545,7 @@ async function main() {
         : []),
     ],
   });
-  if (wc.dailyPlanNotWorstCaseFundable) log(`  ! dailyPlanNotWorstCaseFundable: ${wc.hinweis}`);
+  if (wc.dailyPlanNotAdmissibleAtCap) log(`  ! dailyPlanNotAdmissibleAtCap: ${wc.hinweis}`);
 
   const jetzt = lokaleMinuten();
   const faellig = (e) => e.status !== "veroeffentlicht" && (alles || minutenVon(e.zeit) <= jetzt);

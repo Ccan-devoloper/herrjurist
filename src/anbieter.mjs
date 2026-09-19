@@ -16,28 +16,31 @@
 
    Was hier bei JEDEM Aufruf passiert:
 
-     1. Worst Case rechnen: Ausgabe aus dem konfigurierten Hard Ceiling,
-        Eingabe aus admissionBound() - dem groesseren aus konservativem
-        clientInputBound ueber den GESENDETEN Request und dem Zaehlwert des
-        Anbieters. Beides ist konservativ; was der Anbieter zusaetzlich
-        injiziert und berechnet, erfasst es nicht - es steht in keinem
-        Koerper, den wir vorher wiegen koennen (Belege in eingabe.mjs).
-        Dafuer liegt der Provider-Guard unter dem Policy-Deckel.
-     2. Admission aus dem Topf des Zwecks. Passt der Worst Case nicht,
+     1. Admission Reserve rechnen: Ausgabe aus dem konfigurierten Hard
+        Ceiling, Eingabe aus admissionBound() - dem groesseren aus
+        konservativem clientInputBound ueber den GESENDETEN Request und dem
+        Zaehlwert des Anbieters. Beides ist konservativ; was der Anbieter
+        zusaetzlich injiziert und berechnet, erfasst es nicht - es steht in
+        keinem Koerper, den wir vorher wiegen koennen (Belege in
+        eingabe.mjs). Ein bewiesener Provider-Worst-Case ist das nicht;
+        dafuer liegt der Provider-Guard unter dem Policy cap, und dahinter
+        prueft die Invariante.
+     2. Admission aus dem Topf des Zwecks. Passt die Reserve nicht,
         startet der Aufruf nicht (fail closed).
      3. `gesendet()` unmittelbar vor dem Absenden. Ab hier gibt es kein Geld
         zurueck.
      4. Tatsaechliche Kosten buchen, Rest freigeben.
      5. Eine Telemetriezeile - auch wenn es schiefging.
 
-   Wichtig und ausdruecklich: Der Hard Ceiling begrenzt die Kosten EINES
+   Wichtig und ausdruecklich: Das Ceiling begrenzt die AUSGABE eines
    Aufrufs. Dass die Summe aller Pflichtaufrufe eines Tages unter dem
-   Tagesdeckel bleibt, folgt daraus NICHT - siehe tagesplanWorstCase().
+   Tagesdeckel bleibt, folgt daraus NICHT - siehe
+   tagesplanAdmissionBedarf().
    ========================================================================== */
 
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
-import { obergrenzeUsd, preisAus, erfassen, erfassenStueck } from "./kosten.mjs";
+import { admissionReserveUsd, preisAus, erfassen, erfassenStueck } from "./kosten.mjs";
 import { InvarianteVerletzt } from "./budget.mjs";
 import { KostenKontrollFehler } from "./kostenfehler.mjs";
 import { admissionBound, clientInputBound, zaehlKoerper } from "./eingabe.mjs";
@@ -115,15 +118,16 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
   if (!kontext?.budget) throw new OhneKontext(zweck);
   const { budget, telemetrie, journal } = kontext;
   const { profil, familie, maxTokens } = profilVon({ zweck, provider, modell, params, promptVersion, effort, denkmodus });
-  /* Die Ausgabeseite ist eine echte Obergrenze (das Ceiling erzwingt der
-     Anbieter). Die Eingabeseite ist ein konservativer clientInputBound über
-     den gesendeten Request, angehoben durch den Zählwert des Anbieters, wo
-     es ihn gibt - nicht mehr chars/3.5, aber ohne die Token, die der
-     Anbieter selbst hinzufügt und berechnet (eingabe.mjs sagt, warum). */
+  /* Die Ausgabeseite ist gedeckelt (das Ceiling erzwingt der Anbieter). Die
+     Eingabeseite ist ein konservativer clientInputBound über den gesendeten
+     Request, angehoben durch den Zählwert des Anbieters, wo es ihn gibt -
+     nicht mehr chars/3.5, aber ohne die Token, die der Anbieter selbst
+     hinzufügt und berechnet (eingabe.mjs sagt, warum). Zusammen ergeben sie
+     die Admission Reserve, nicht eine bewiesene Kostenobergrenze. */
   const clientBound = clientInputBound(params);
   const gezaehlt = provider === "anthropic" ? await eingabeZaehlen(params) : null;
   const eingabeTokens = admissionBound(params, gezaehlt);
-  const worstCase = obergrenzeUsd({ modell, maxTokens: maxTokens || 0, eingabeTokens });
+  const admissionReserve = admissionReserveUsd({ modell, maxTokens: maxTokens || 0, eingabeTokens });
 
   const roh = {
     purpose: zweck, bucket: null, slot, provider, model: modell, effort, thinkingMode: denkmodus,
@@ -134,9 +138,9 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
 
   let griff;
   try {
-    griff = budget.zulassen(zweck, worstCase, { optional, pflichtName });
+    griff = budget.zulassen(zweck, admissionReserve, { optional, pflichtName });
   } catch (e) {
-    telemetrie?.aufruf({ ...roh, sent: false, reservedUsd: worstCase, actualUsd: 0, releasedUsd: 0, outcome: "abgelehnt", errorType: e.name, approved: false });
+    telemetrie?.aufruf({ ...roh, sent: false, reservedUsd: admissionReserve, actualUsd: 0, releasedUsd: 0, outcome: "abgelehnt", errorType: e.name, approved: false });
     throw e;
   }
   roh.bucket = griff.topf;
@@ -338,32 +342,47 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
 }
 
 /**
- * Was das Pflichtprodukt eines Tages im Worst Case kostet - und ob der
- * Tagesdeckel das überhaupt tragen kann.
+ * Was das Pflichtprodukt eines Tages an ADMISSION verlangen würde - und ob
+ * der Tagesdeckel das überhaupt trägt.
  *
- * Diese Zahl ist unbequem und gehört trotzdem ins Protokoll: Mit den heutigen
- * Hard Ceilings (Autor 16k, Prüfer 6k) liegt sie über dem Core-Deckel. Das
- * heißt NICHT, dass der Tag teuer wird - gemessen kostet er einen Bruchteil.
- * Es heißt, dass niemand VORHER garantieren kann, dass jeder Pflichtaufruf
- * stattfindet, wenn jeder von ihnen sein Ceiling ausschöpft.
+ * Ausdrücklich KEIN Provider-Worst-Case, und der Name sagt das jetzt auch.
+ * Zwei Gründe:
  *
- * Die Kostenzusage bleibt hart. Die Verfügbarkeitszusage kann die Admission
- * allein nicht geben - dafür braucht es den freigegebenen Reservebestand.
+ *   - Die Eingabezahlen sind PLANUNGSWERTE. Zum Zeitpunkt der Planung gibt
+ *     es die Anfragen noch nicht, also auch keine Schranke über ihre Bytes.
+ *   - Und selbst mit echten Anfragen wäre die Summe kein bewiesener
+ *     Höchstpreis, sondern die Summe konservativer Admissionwerte.
+ *
+ * Die Zahl ist trotzdem unbequem und gehört ins Protokoll: Mit den heutigen
+ * Ceilings liegt sie weit über dem Core-Deckel. Das heißt nicht, dass der
+ * Tag teuer wird - gemessen kostet er einen Bruchteil. Es heißt, dass
+ * niemand vorher sagen kann, dass jeder Pflichtaufruf zugelassen wird, wenn
+ * jeder seine Reserve in voller Höhe anmeldet.
+ *
+ * Die Verfügbarkeitszusage kann die Admission allein ohnehin nicht geben -
+ * dafür braucht es den Reservebestand.
  */
-export function tagesplanWorstCase({ posten = [], deckelCore = 0.32 }) {
-  const einzeln = posten.map((p) => ({ ...p, worstCase: obergrenzeUsd({ modell: p.modell, maxTokens: p.maxTokens, eingabeTokens: p.eingabeTokens || 0 }) }));
-  const summe = Math.round(einzeln.reduce((a, p) => a + p.worstCase, 0) * 1e6) / 1e6;
+export function tagesplanAdmissionBedarf({ posten = [], deckelCore = 0.32 }) {
+  const einzeln = posten.map((p) => ({ ...p, admissionReserve: admissionReserveUsd({ modell: p.modell, maxTokens: p.maxTokens, eingabeTokens: p.eingabeTokens || 0 }) }));
+  const summe = Math.round(einzeln.reduce((a, p) => a + p.admissionReserve, 0) * 1e6) / 1e6;
   return {
     posten: einzeln,
     summe,
     deckelCore,
-    dailyPlanNotWorstCaseFundable: summe > deckelCore,
+    /* Der Name hiess bis RC4 dailyPlanNotWorstCaseFundable. Er behauptete
+       einen Provider-Worst-Case, der es nie war: Die Eingabezahlen sind
+       Planungswerte, und die Summe ist eine Summe von Admissionwerten. Ein
+       Signal, dessen Name mehr verspricht als die Zahl, ist ein schlechtes
+       Signal - auch wenn der alte Name aus der ursprünglichen Anforderung
+       stammt. */
+    dailyPlanNotAdmissibleAtCap: summe > deckelCore,
     /* Bewusst als Signal benannt, nicht als Fehler: Es ist ein
        Kalibrierungs- und Verfügbarkeitshinweis, kein Grund, still den
        Deckel anzuheben. */
+    basis: "planungswerte",
     hinweis: summe > deckelCore
-      ? `Worst Case des Pflichtprodukts ${summe.toFixed(4)} $ über dem Core-Deckel ${deckelCore.toFixed(2)} $ - `
-        + `die Kostenzusage hält, eine Verfügbarkeitszusage gibt es damit nicht.`
+      ? `Admissionbedarf des Pflichtprodukts ${summe.toFixed(4)} $ (aus Planungswerten) über dem Core-Deckel ${deckelCore.toFixed(2)} $ - `
+        + `jeder einzelne Aufruf wird weiter gegen die Betriebsgrenze geprüft, eine Verfügbarkeitszusage gibt es damit nicht.`
       : "",
   };
 }

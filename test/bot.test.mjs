@@ -4514,7 +4514,7 @@ test("1a: Ein geplanter Lauf kann seinen Deckel nicht selbst anheben", async () 
 });
 
 test("1a: Jeder Anbieteraufruf geht durch die Admission – auch Fallback und Retry", async () => {
-  const { claudeAufruf, kontextSetzen, kontextLoeschen, klientSetzen, OhneKontext, tagesplanWorstCase }
+  const { claudeAufruf, kontextSetzen, kontextLoeschen, klientSetzen, OhneKontext, tagesplanAdmissionBedarf: tagesplanWorstCase }
     = await import("../src/anbieter.mjs");
   const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
   const { telemetrieStarten } = await import("../src/telemetrie.mjs");
@@ -4587,13 +4587,13 @@ test("1a: Jeder Anbieteraufruf geht durch die Admission – auch Fallback und Re
     ],
     deckelCore: 0.32,
   });
-  assert.equal(plan.dailyPlanNotWorstCaseFundable, false, "zwei Aufrufe passen noch");
+  assert.equal(plan.dailyPlanNotAdmissibleAtCap, false, "zwei Aufrufe passen noch");
   const ganz = tagesplanWorstCase({
     posten: Array.from({ length: 9 }, () => ({ modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 })),
     deckelCore: 0.32,
   });
-  assert.equal(ganz.dailyPlanNotWorstCaseFundable, true, "das ganze Pflichtprodukt im Worst Case nicht");
-  assert.match(ganz.hinweis, /Kostenzusage hält, eine Verfügbarkeitszusage gibt es damit nicht/);
+  assert.equal(ganz.dailyPlanNotAdmissibleAtCap, true, "das ganze Pflichtprodukt nicht");
+  assert.match(ganz.hinweis, /aus Planungswerten.*Verfügbarkeitszusage gibt es damit nicht/);
 
   kontextLoeschen();
   klientSetzen(null);
@@ -4675,7 +4675,7 @@ test("1a Simulation: der zu teure Pflichtaufruf startet nicht – und wird gemel
   const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
   const { telemetrieStarten } = await import("../src/telemetrie.mjs");
   const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
-  const { obergrenzeUsd } = await import("../src/kosten.mjs");
+  const { admissionReserveUsd: obergrenzeUsd } = await import("../src/kosten.mjs");
 
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "sim2-"));
   /* Der Tag ist fast voll: 0,30 von 0,32 $ sind verbraucht. */
@@ -4832,7 +4832,7 @@ test("1a+: Ein Aufruf, dessen Input+Output den Resttopf sprengen könnte, starte
   const { budgetStarten, AdmissionAbgelehnt } = await import("../src/budget.mjs");
   const { telemetrieStarten } = await import("../src/telemetrie.mjs");
   const { kontextSetzen, kontextLoeschen, klientSetzen, claudeAufruf } = await import("../src/anbieter.mjs");
-  const { obergrenzeUsd } = await import("../src/kosten.mjs");
+  const { admissionReserveUsd: obergrenzeUsd } = await import("../src/kosten.mjs");
   const { clientInputBound: eingabeObergrenzeTokens } = await import("../src/eingabe.mjs");
 
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "preflight-"));
@@ -5655,7 +5655,7 @@ test("1a RC4: Keine Beweisbehauptung mehr in irgendeiner Quelldatei", async () =
   /* Und die Tür beschreibt die Eingabeseite korrekt. */
   const tuer = fs.readFileSync(new URL("../src/anbieter.mjs", import.meta.url), "utf8");
   assert.match(tuer, /clientInputBound/, "die Tür benennt die clientseitige Schranke nicht");
-  assert.match(tuer, /ohne die Token, die der\s*\n?\s*Anbieter selbst hinzufügt/,
+  assert.match(tuer, /ohne die Token, die der Anbieter selbst\s*\n?\s*hinzufügt und berechnet/,
     "die Tür sagt nicht, was die Schranke NICHT leistet");
 });
 
@@ -5685,12 +5685,183 @@ test("1a RC4: Ein geplanter Lauf kann den Provider-Guard nicht per Umgebung abse
   assert.equal(providerGuard("0"), 0, "die Umgebung kann den Wert setzen …");
   assert.ok(mitGuard(0, "workflow_dispatch")().ok, "… und von Hand ist das erlaubt - dort entscheidet ein Mensch");
 });
-test("1a: Der Worst Case des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {
+/* ===== 1a-RC5: Garantiesprache und Guard-Pfad =========================== */
+
+test("1a RC5: Keine kostenbezogene Aussage behauptet mehr Sicherheit, als es gibt", async () => {
+  /* Der RC4-Test verbot fünf Schlagwörter und leitete daraus „global geprüft"
+     ab. Das war zu wenig: Im Code standen weiter Aussagen, die mit RC4s
+     eigener Rücknahme kollidierten - „Die Kostenzusage bleibt hart", „der
+     teuerste denkbare Ausgang EINES Aufrufs", „harte Vorab-Zusage: tatsächliche
+     Kosten <= reservierte Kosten". Dieser Test nimmt die konkret gefundenen
+     Altformulierungen als Ausgangspunkt.
+
+     Er prüft Quelltext UND die Texte, die zur Laufzeit entstehen. Ein
+     Kommentar, der die Wahrheit sagt, nützt wenig, wenn das Protokoll etwas
+     anderes behauptet. */
+  const verbotene = [
+    /* Die konkret beanstandeten Altformulierungen */
+    { muster: /Kostenzusage (bleibt hart|hält|haelt)/i, was: "„Kostenzusage hält/bleibt hart“" },
+    { muster: /harte\s+(Vorab-)?Zusage/i, was: "„harte (Vorab-)Zusage“" },
+    { muster: /tatsächliche Kosten\s*<=\s*reservierte/i, was: "„tatsächliche Kosten <= reservierte“" },
+    { muster: /teuerste\s+denkbare\s+Ausgang/i, was: "„der teuerste denkbare Ausgang“" },
+    { muster: /harte\s+Schranke/i, was: "„harte Schranke“" },
+    { muster: /WORST\s+CASE\s+reserviert/i, was: "„WORST CASE reserviert“" },
+    /* Und die Muster aus RC4 */
+    { muster: /beweisbare\w*\s+(Byte-|Eingabe-|Token-)?Schranke/i, was: "„beweisbare Schranke“" },
+    { muster: /beweist\s+alle/i, was: "„beweist alle …“" },
+    { muster: /Schranke\s+aller\s+abgerechneten/i, was: "„Schranke aller abgerechneten …“" },
+    { muster: /mathematisch\s+(niemals|bewiesen|garantiert|sicher)/i, was: "„mathematisch niemals/bewiesen“" },
+    { muster: /kann\s+(den\s+Deckel\s+)?niemals\s+über/i, was: "„kann niemals über …“" },
+  ];
+
+  /* Die Gattung selbst - eine Reserve als bewiesene Providergrenze - wird
+     SATZWEISE geprüft, nicht per Muster. Grund: Genau dieselben Wörter stehen
+     in den Sätzen, die das Gegenteil sagen („… ist eine Reserve, nicht eine
+     bewiesene Kostenobergrenze"). Ein Muster kann eine Behauptung nicht von
+     ihrer Verneinung unterscheiden; ein Satz mit „nicht" oder „kein" ist keine
+     Zusage. */
+  const RESERVE = /(admissionBound|Admission Reserve|Reserve|Reservierung|admissionReserve)/i;
+  const BEWEIS = /(bewiesen|beweisbar|garantiert|mathematisch|kann nicht überschritten|niemals überschritten)/i;
+  const VERNEINT = /\b(nicht|kein|keine|keinen|keiner|ohne|statt)\b/i;
+  const behauptungen = (text) => text
+    .split(/(?<=[.:;!?])\s+|\n\s*\n/)
+    .map((satz) => satz.replace(/\s+/g, " ").trim())
+    .filter((satz) => RESERVE.test(satz) && BEWEIS.test(satz) && !VERNEINT.test(satz));
+
+  /* Kostenrelevante Module - nicht der ganze Baum: „Obergrenze je Beitrag" in
+     config.mjs ist unsere eigene Ausgabengrenze und keine Aussage über den
+     Anbieter. Gemeint sind Admission, Kostenzusage und Providergrenzen. */
+  const kostenModule = ["anbieter.mjs", "budget.mjs", "kosten.mjs", "eingabe.mjs", "journal.mjs", "richtlinie.mjs", "kostenfehler.mjs", "lauf.mjs", "telemetrie.mjs"];
+  const funde = [];
+  for (const datei of kostenModule) {
+    let text;
+    try { text = fs.readFileSync(new URL(`../src/${datei}`, import.meta.url), "utf8"); } catch { continue; }
+    for (const v of verbotene) if (v.muster.test(text)) funde.push(`${datei}: ${v.was}`);
+    for (const satz of behauptungen(text)) funde.push(`${datei}: Reserve als bewiesene Grenze – „${satz.slice(0, 90)}“`);
+  }
+  assert.deepEqual(funde, [], `Zu starke Kostenaussage im Quelltext:\n${funde.join("\n")}`);
+
+  /* Die Laufzeittexte, erzeugt, nicht gelesen. */
+  const { tagesplanAdmissionBedarf } = await import("../src/anbieter.mjs");
+  const knapp = tagesplanAdmissionBedarf({
+    posten: Array.from({ length: 9 }, () => ({ modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 16000 })),
+    deckelCore: 0.32,
+  });
+  for (const v of verbotene) {
+    assert.ok(!v.muster.test(knapp.hinweis), `Laufzeithinweis enthält ${v.was}: ${knapp.hinweis}`);
+  }
+  assert.deepEqual(behauptungen(knapp.hinweis), [], "der Laufzeithinweis behauptet eine bewiesene Grenze");
+  /* Und er sagt ausdrücklich, worauf er beruht. */
+  assert.match(knapp.hinweis, /Planungswerten/, "der Laufzeithinweis nennt die Planungswerte nicht");
+  assert.match(knapp.hinweis, /Admissionbedarf/, "der Laufzeithinweis nennt die Zahl weiter Worst Case");
+  assert.equal(knapp.basis, "planungswerte");
+  assert.equal(knapp.dailyPlanNotAdmissibleAtCap, true);
+  assert.ok(!("dailyPlanNotWorstCaseFundable" in knapp),
+    "das alte Signal behauptet weiter einen Provider-Worst-Case");
+
+  const { effektiveKonfiguration } = await import("../src/richtlinie.mjs");
+  for (const h of effektiveKonfiguration({ ausloeser: "schedule", datum: "2026-09-19" }).hinweise) {
+    for (const v of verbotene) assert.ok(!v.muster.test(h), `Konfigurationshinweis enthält ${v.was}: ${h}`);
+  }
+
+  /* Die Begriffe, die es stattdessen gibt - und zwar benannt. */
+  const kosten = fs.readFileSync(new URL("../src/kosten.mjs", import.meta.url), "utf8");
+  assert.match(kosten, /export function admissionReserveUsd/, "die Reserve heißt weiter „Obergrenze“");
+  const richtlinie = fs.readFileSync(new URL("../src/richtlinie.mjs", import.meta.url), "utf8");
+  assert.match(richtlinie, /Policy cap/, "Policy cap ist nicht benannt");
+
+  /* Zulässig bleibt eine Aussage über eine echte lokale Tatsache. */
+  const journal = fs.readFileSync(new URL("../src/journal.mjs", import.meta.url), "utf8");
+  assert.match(journal, /beweisbar nicht gesendet/i,
+    "die zulässige Aussage über den durablen Schreibvorgang wurde mitentfernt");
+});
+
+test("1a RC5: Der Guard-Pfad Umgebung → Konfiguration → Gate, ohne nachträgliche Mutation", async () => {
+  /* Der RC4-Test setzte NaN direkt in die Konfiguration und prüfte dann das
+     Gate. Der echte Parser verhält sich anders - also belegte der Test einen
+     Pfad, den es so nicht gibt. Hier läuft alles durch:
+        IG_PROVIDER_GUARD_USD → providerGuardLesen → effektiveKonfiguration
+                              → richtlinieGate                               */
+  const { providerGuardLesen, effektiveKonfiguration, richtlinieGate, RichtlinieVerletzt,
+    POLICY_PROVIDER_GUARD_USD, PROVIDER_GUARD_USD } = await import("../src/richtlinie.mjs");
+
+  const vorher = process.env.IG_PROVIDER_GUARD_USD;
+  const durchlauf = (roh, ausloeser = "schedule") => {
+    if (roh === undefined) delete process.env.IG_PROVIDER_GUARD_USD;
+    else process.env.IG_PROVIDER_GUARD_USD = roh;
+    const konfiguration = effektiveKonfiguration({ ausloeser, datum: "2026-09-19" });
+    try { richtlinieGate({ konfiguration }); return { ok: true, konfiguration }; }
+    catch (e) { return { ok: false, fehler: e, konfiguration }; }
+  };
+
+  try {
+    /* unset → Standard 0,02 */
+    const a = durchlauf(undefined);
+    assert.equal(a.konfiguration.providerGuardUsd, PROVIDER_GUARD_USD);
+    assert.equal(a.konfiguration.providerGuard.quelle, "standard");
+    assert.ok(a.ok, "der Regelfall ohne gesetzte Variable startet nicht");
+    assert.equal(a.konfiguration.betriebsDeckel.core, 0.30);
+
+    /* "0.02" → erlaubt */
+    const b = durchlauf("0.02");
+    assert.ok(b.ok);
+    assert.equal(b.konfiguration.providerGuard.quelle, "umgebung");
+
+    /* "0.05" → erlaubt, konservativer ist immer zulässig */
+    const c = durchlauf("0.05");
+    assert.ok(c.ok, "ein größerer Guard wird abgelehnt");
+    assert.equal(c.konfiguration.betriebsDeckel.core, 0.27);
+
+    /* "0" → im geplanten Lauf abgelehnt */
+    const d = durchlauf("0");
+    assert.ok(!d.ok && d.fehler instanceof RichtlinieVerletzt, "Guard 0 kommt durch das Gate");
+    assert.ok(d.fehler.befunde.some((x) => /Policy-Mindestwert/.test(x)));
+    assert.equal(POLICY_PROVIDER_GUARD_USD, 0.02);
+
+    /* "0.0199" → knapp darunter, ebenfalls abgelehnt */
+    const e = durchlauf("0.0199");
+    assert.ok(!e.ok && e.fehler instanceof RichtlinieVerletzt, "0,0199 kommt durch das Gate");
+
+    /* Ungültiger String → Variante A: Konfigurationsfehler, kein stiller
+       Rückfall. Der Betrag im Ergebnis ist trotzdem der sichere Standard,
+       falls ihn jemand ohne Gate benutzt. */
+    for (const murks of ["quatsch", "-1", "0,02", "NaN"]) {
+      const f = durchlauf(murks);
+      assert.ok(!f.ok && f.fehler instanceof RichtlinieVerletzt, `„${murks}“ kommt durch das Gate`);
+      assert.ok(f.fehler.befunde.some((x) => x.includes("kein gültiger Betrag")),
+        `„${murks}“ wird nicht als Konfigurationsfehler gemeldet: ${f.fehler.befunde.join(" | ")}`);
+      assert.equal(providerGuardLesen(murks).gueltig, false);
+      assert.equal(providerGuardLesen(murks).quelle, "ungueltig");
+      assert.equal(providerGuardLesen(murks).usd, PROVIDER_GUARD_USD, "der Rückfallwert ist nicht der sichere");
+      assert.ok(f.konfiguration.hinweise.some((h) => /kein gültiger Betrag/.test(h)),
+        "der Lauf meldet den Konfigurationsfehler nicht");
+    }
+    /* Ein ungültiger Wert ist auch von Hand ein Fehler - ein Tippfehler wird
+       nicht dadurch richtig, dass ein Mensch den Lauf gestartet hat. */
+    assert.ok(!durchlauf("quatsch", "workflow_dispatch").ok);
+
+    /* Leerstring zählt als „nicht gesetzt“ - so verhalten sich leere
+       GitHub-Actions-Variablen. */
+    const g = durchlauf("");
+    assert.ok(g.ok);
+    assert.equal(g.konfiguration.providerGuard.quelle, "standard");
+
+    /* Von Hand mit 0: erlaubt, weil dort ein Mensch entscheidet - dieselbe
+       Semantik wie beim Break Glass. */
+    const h = durchlauf("0", "workflow_dispatch");
+    assert.ok(h.ok, "manuell darf der Guard nicht abgesenkt werden");
+    assert.equal(h.konfiguration.betriebsDeckel.core, 0.32);
+  } finally {
+    if (vorher === undefined) delete process.env.IG_PROVIDER_GUARD_USD;
+    else process.env.IG_PROVIDER_GUARD_USD = vorher;
+  }
+});
+test("1a: Der Admissionbedarf des Pflichtprodukts liegt über dem Deckel – und wird so benannt", async () => {
   /* Fall 3 aus der Anweisung braucht den Reservebestand und ist noch nicht
      gebaut. Was 1a leisten kann, ist die Kostenzusage; die Verfügbarkeits-
      zusage steht ausdrücklich aus. Dieser Test hält den Befund fest, damit
      er nicht in einem Bericht verschwindet. */
-  const { tagesplanWorstCase } = await import("../src/anbieter.mjs");
+  const { tagesplanAdmissionBedarf: tagesplanWorstCase } = await import("../src/anbieter.mjs");
 
   const pflichtHerrJurist = [
     { name: "b1 Text", modell: "claude-sonnet-5", maxTokens: 16000, eingabeTokens: 3000 },
@@ -5704,10 +5875,10 @@ test("1a: Der Worst Case des Pflichtprodukts liegt über dem Deckel – und wird
   ];
   const wc = tagesplanWorstCase({ posten: pflichtHerrJurist, deckelCore: 0.32 });
 
-  assert.equal(wc.dailyPlanNotWorstCaseFundable, true,
+  assert.equal(wc.dailyPlanNotAdmissibleAtCap, true,
     "mit den heutigen Ceilings ist das Pflichtprodukt im Worst Case nicht finanzierbar");
   assert.ok(wc.summe > 1.0, `Worst Case ${wc.summe} $ gegen 0,32 $ Deckel`);
-  assert.match(wc.hinweis, /Kostenzusage hält, eine Verfügbarkeitszusage gibt es damit nicht/);
+  assert.match(wc.hinweis, /Admissionbedarf des Pflichtprodukts.*aus Planungswerten.*Verfügbarkeitszusage gibt es damit nicht/);
 
   /* Der Befund ist kein Grund, den Deckel still anzuheben … */
   assert.equal(wc.deckelCore, 0.32);

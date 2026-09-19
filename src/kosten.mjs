@@ -18,20 +18,26 @@ const PREISE = {
 const posten = [];
 
 /**
- * Der teuerste denkbare Ausgang EINES Aufrufs - die Zahl, die vor dem Start
- * reserviert wird.
+ * Die ADMISSION RESERVE eines Aufrufs: der Betrag, der vor dem Start
+ * zurückgelegt wird.
  *
- * Sie folgt aus dem Token-Ceiling, nicht aus einer Schaetzung: Ein Aufruf
- * kann hoechstens `maxTokens` ausgeben, und mehr als die uebergebene Eingabe
- * schickt er nicht hin. Schaetzungen waren genau das Problem - am 18.09. war
- * der Faktencheck mit 0,01 $ angesetzt und kostete 0,072 $. Ein Deckel, der
- * auf Schaetzungen steht, haelt nur so lange, wie die Schaetzung stimmt.
+ * Bewusst nicht mehr „Obergrenze" oder „Worst Case" genannt. Die
+ * Ausgabeseite ist tatsächlich gedeckelt - mehr als `maxTokens` gibt der
+ * Anbieter nicht aus, das erzwingt er selbst. Die EINGABESEITE ist es nicht:
+ * Anthropic fügt bei Structured Outputs einen eigenen, berechneten
+ * Systemprompt hinzu, der in keiner Anfrage steht, die wir vorher wiegen
+ * können, und der Zählendpunkt nennt sich selbst eine Schätzung (Belege in
+ * eingabe.mjs).
  *
- * Der Aufschlag deckt, was die Rechnung nicht kennt: Denk-Token zaehlen bei
- * manchen Anbietern zur Ausgabe, und Cache-Schreibvorgaenge kosten mehr als
- * gewoehnliche Eingabe.
+ * Diese Zahl ist deshalb ein konservativer Admissionwert, keine bewiesene
+ * Kostenobergrenze des Anbieters. Dass sie in aller Regel über den
+ * tatsächlichen Kosten liegt, ist die Erwartung; dass sie es immer tut, wird
+ * hier nicht behauptet. Genau dafür gibt es den Provider-Guard unter dem
+ * Policy cap und die Invariantenprüfung dahinter.
+ *
+ * Der Aufschlag ist Marge, nicht Beweis.
  */
-export function obergrenzeUsd({ modell, maxTokens = 0, eingabeTokens = 0, aufschlag = 1.15 }) {
+export function admissionReserveUsd({ modell, maxTokens = 0, eingabeTokens = 0, aufschlag = 1.15 }) {
   const p = PREISE[modell] || PREISE["claude-opus-5"];
   const roh = ((Number(eingabeTokens) || 0) * p.cacheSchreiben + (Number(maxTokens) || 0) * p.aus) / 1e6;
   return Math.round(roh * aufschlag * 1e6) / 1e6;
