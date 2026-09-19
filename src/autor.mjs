@@ -1123,7 +1123,13 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
     if (woerter > absolutMax) ergebnis.fehler.push(`Sprechertext hat ${woerter} Wörter (absolute Grenze ${absolutMax})`);
     else if (woerter < min || woerter > max) console.warn(`  ! Reel-Laenge ${woerter} Wörter außerhalb Ziel ${zielVon}–${zielBis}; wird ohne bezahlte Neufassung verwendet.`);
     if (!ergebnis.fehler.length) {
-      const fakten = await faktenSicher(reel, "reel-faktencheck", { hinweis: pruefHinweis(thema) });
+      /* Mindset-Reels enthalten bewusst keinen Rechtsstoff. Ein bezahlter
+         juristischer Faktencheck hat hier am 19.09. Budget gebunden, ohne
+         Rechtsaussagen zu pruefen. Form, Laenge und Sprechertext sind bereits
+         deterministisch geprueft; fachliche Reels behalten den Providercheck. */
+      const fakten = thema?.typ === "mindset"
+        ? { ok: true, fehler: [], hinweise: ["Mindset-Reel: kein bezahlter Rechts-Faktencheck nötig."], korrekturen: [], behebbar: [] }
+        : await faktenSicher(reel, "reel-faktencheck", { hinweis: pruefHinweis(thema) });
       korrekturenAnwenden(reel, fakten.korrekturen);
       entwurfBerichtigen(schluessel, fakten.korrekturen);
       if (fakten.ok) { reel.hookTyp = hookTypErkennen(szenen[0]?.titel || "", szenen[0]?.sprecher || ""); reel.hookMuster = hookMuster; await bildregieSicher(reel); return reel; }
