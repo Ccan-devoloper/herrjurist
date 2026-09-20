@@ -41,6 +41,58 @@ function webCandidates(html,via){
  for(const m of src.matchAll(/href=["'](?:https?:\/\/imginn\.com)?\/p\/([A-Za-z0-9_-]+)\/?["']/gi))push(`https://www.instagram.com/p/${m[1]}/`,m.index||0);
  return hits;
 }
+
+const PROFILE_HANDLES = CFG.domain==='steuer'
+ ? ['knollsteuer','steuerfachschuleendriss','studienwerkdersteuerberater','nwbverlag','zweisteuerberater']
+ : [];
+function igItem(item,handle){
+ const code=item?.code||item?.shortcode||item?.node?.shortcode;
+ if(!code)return null;
+ const product=item?.product_type||item?.node?.product_type||'';
+ const mediaType=item?.media_type||item?.node?.media_type;
+ const reel=product==='clips'||product==='reels'||mediaType===2;
+ const caption=item?.caption?.text||item?.node?.edge_media_to_caption?.edges?.[0]?.node?.text||item?.node?.caption||'';
+ const ts=item?.taken_at||item?.node?.taken_at_timestamp;
+ return {
+   id:String(item?.pk||item?.id||item?.node?.id||('profile-'+code)),
+   permalink:`https://www.instagram.com/${reel?'reel':'p'}/${code}/`,
+   media_type:reel?'REELS':'IMAGE',
+   caption, timestamp:ts?new Date(Number(ts)*1000).toISOString():null,
+   like_count:Number(item?.like_count||item?.node?.edge_liked_by?.count||item?.node?.edge_media_preview_like?.count||0),
+   comments_count:Number(item?.comment_count||item?.node?.edge_media_to_comment?.count||0),
+   foundVia:`@${handle}`
+ };
+}
+async function collectProfiles(){
+ const out=[],errors=[];
+ if(!PROFILE_HANDLES.length)return {out,errors};
+ const headers={
+   'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
+   'x-ig-app-id':'936619743392459',
+   'accept':'*/*',
+   'accept-language':'de-DE,de;q=0.9,en;q=0.7'
+ };
+ for(const handle of PROFILE_HANDLES){
+  try{
+   const u=`https://i.instagram.com/api/v1/users/web_profile_info/?username=${encodeURIComponent(handle)}`;
+   const r=await fetch(u,{headers:{...headers,referer:`https://www.instagram.com/${handle}/`},redirect:'follow'});
+   if(!r.ok)throw new Error(`web_profile_info HTTP ${r.status}`);
+   const j=await r.json();
+   const user=j?.data?.user||j?.user;
+   const edges=user?.edge_owner_to_timeline_media?.edges||user?.edge_felix_video_timeline?.edges||[];
+   for(const e of edges){const x=igItem(e,handle);if(x)out.push(x)}
+   const uid=user?.id||user?.pk;
+   if(!edges.length&&uid){
+    try{
+     const fr=await fetch(`https://www.instagram.com/api/v1/feed/user/${uid}/?count=12`,{headers:{...headers,referer:`https://www.instagram.com/${handle}/`},redirect:'follow'});
+     if(fr.ok){const fj=await fr.json();for(const it of fj?.items||[]){const x=igItem(it,handle);if(x)out.push(x)}}
+     else errors.push({source:'InstagramWebFeed',query:handle,message:`HTTP ${fr.status}`});
+    }catch(e){errors.push({source:'InstagramWebFeed',query:handle,message:e.message})}
+   }
+  }catch(e){errors.push({source:'InstagramWebProfile',query:handle,message:e.message})}
+ }
+ return {out,errors};
+}
 async function collectWeb(){
  const out=[],errors=[];
  const ua={'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36','accept-language':'de-DE,de;q=0.9,en;q=0.7'};
@@ -77,6 +129,12 @@ if(id){
   errs.push(...r.errors.map(e=>({...e,base:a.base,auth:a.label})));
   if(r.out.length){found=r.out;used=a.base;source='meta-hashtags';break}
  }
+}
+if(!found.length){
+ const p=await collectProfiles();
+ found=p.out;
+ errs.push(...p.errors);
+ if(found.length) source='public-instagram-profile';
 }
 if(!found.length){
  const w=await collectWeb();
