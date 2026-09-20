@@ -77,8 +77,8 @@ export const FORMATE = {
   },
   wochenrueckblick: {
     label: "Wochenrückblick",
-    anleitung: "Folie 1: „Hast du diese Woche alles mitgenommen?“. Folien 2–3: die Themen der Woche als Kurz-Wiederholung in Punkten (je ein Satz pro Thema, mit Norm). Folie 4: Lernplan-Tipp fürs Wochenende. Letzte Folie: CTA.",
-    folien: ["titel", "text", "text", "merke", "cta"],
+    anleitung: "Folie 1: „Hast du diese Woche alles mitgenommen?“. Folie 2 gehört ausschließlich zum Zivilrecht, Folie 3 ausschließlich zum Strafrecht, Folie 4 ausschließlich zum Öffentlichen Recht. Ordne alle Wochenthemen nach dem mitgelieferten Rechtsgebiet ein; Unterfächer sind keine eigenen Rechtsgebiete. Insbesondere gehört BGB AT immer zum Zivilrecht. Überschriften dürfen Rechtsgebiete nie bündeln (also nicht „Zivil- und Strafrecht“ oder „Öffentliches Recht und BGB AT“). Folie 5: Klausurtechnik/Lernplan-Tipp fürs Wochenende; Themen aus Klausur- und Lernmethodik dürfen hier kurz aufgegriffen werden. Letzte Folie: CTA.",
+    folien: ["titel", "text", "text", "text", "text", "cta"],
   },
   spickzettel: {
     label: "Spickzettel",
@@ -662,6 +662,31 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
   };
 }
 
+export function wochenThemenPrompt(wochenThemen = []) {
+  const gruppen = new Map([[1, []], [2, []], [3, []], [0, []]]);
+  for (const roh of wochenThemen || []) {
+    const t = typeof roh === "string" ? { titel: roh } : (roh || {});
+    const titel = String(t.titel || "").trim();
+    if (!titel) continue;
+    const fach = t.fach || null;
+    const gebiet = Number.isInteger(t.gebiet) ? t.gebiet : (FAECHER[fach]?.klausur ?? 0);
+    const ziel = [1, 2, 3].includes(gebiet) ? gebiet : 0;
+    const fachLabel = t.fachLabel || FAECHER[fach]?.kurz || "";
+    gruppen.get(ziel).push(`${fachLabel ? `[${fachLabel}] ` : ""}${titel}`);
+  }
+
+  const abschnitt = (gebiet, label) => {
+    const eintraege = gruppen.get(gebiet);
+    return `### ${label}\n${eintraege.length ? eintraege.map((t) => `- ${t}`).join("\n") : "- (keine veröffentlichten Themen in diesem Gebiet)"}`;
+  };
+  return [
+    abschnitt(1, KLAUSUREN[1].label),
+    abschnitt(2, KLAUSUREN[2].label),
+    abschnitt(3, KLAUSUREN[3].label),
+    abschnitt(0, "Klausur- und Lernmethodik / sonstige Themen"),
+  ].join("\n\n");
+}
+
 /**
  * Schreibt einen Beitrag. Prüft ihn (pruefung.mjs) und lässt bei Beanstandung
  * bis zu CONFIG.ki.maxVersuche Mal nachbessern.
@@ -681,7 +706,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
       `Empfohlene Folienfolge: ${spec.folien.join(" → ")} (bei „a|b“ wähle die passendere Art).`,
       thema ? `\n## Themen-Skelett\n${themaText(thema)}` : "",
       recherche ? `\n## Rechercheergebnis (Web, ${datumLesbar(datum)})\n${recherche.notizen}\n\nQuellen: ${recherche.quellen.join(" · ")}` : "",
-      wochenThemen?.length ? `\n## Themen dieser Woche\n${wochenThemen.map((t) => `- ${t}`).join("\n")}` : "",
+      wochenThemen?.length ? `\n## Themen dieser Woche – verbindlich nach Rechtsgebiet\n${wochenThemenPrompt(wochenThemen)}` : "",
       anlass ? `\n## Anlass\n${anlass.titel}: ${anlass.kontext}` : "",
       `\nPhase im Prüfungsjahr: ${phase(datum)}.`,
       "",
