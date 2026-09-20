@@ -15,6 +15,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { manuellFinalisiert } from "./finalisierung.mjs";
 import { THEMEN } from "../daten/themen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
@@ -606,7 +607,7 @@ export const alleBefunde = (s) => [...(s?.beanstandet || []), ...(s?.beanstandet
 export function persistierteStoryBeanstandungen(geschrieben, vorhandeneSlots = new Set()) {
   const werte = geschrieben instanceof Map ? [...geschrieben.values()] : Array.isArray(geschrieben) ? geschrieben : [];
   const slots = vorhandeneSlots instanceof Set ? vorhandeneSlots : new Set(vorhandeneSlots || []);
-  return werte.filter((s) => s?.slot && slots.has(s.slot) && alleBefunde(s).length);
+  return werte.filter((s) => s?.slot && slots.has(s.slot) && !manuellFinalisiert(s) && alleBefunde(s).length);
 }
 
 export function quizNachschlag(strittig = [], planStories = [], textLesen = () => null) {
@@ -631,7 +632,7 @@ export function quizNachschlag(strittig = [], planStories = [], textLesen = () =
     if (!partner) continue;
     paarSlots.add(s.slot);
     const partnerText = textLesen(partner.slot);
-    const unveraenderlich = partnerText && !alleBefunde(partnerText).length && partnerText.optionen?.length;
+    const unveraenderlich = partnerText && (manuellFinalisiert(partnerText) || !alleBefunde(partnerText).length) && partnerText.optionen?.length;
     if (unveraenderlich) {
       const wie = partner.status === "veroeffentlicht"
         ? "ist bereits veröffentlicht und darf nicht verändert werden"
@@ -715,6 +716,14 @@ export function fachpruefungAbschliessen(story, befunde = []) {
    neue Pruefung oder er erscheint nicht. */
 export function storyFreigabe(story) {
   if (!story) return { frei: false, warten: true, grund: "kein Text vorhanden" };
+  /* Eine im Chat finalisierte Story wird nicht wieder in die bezahlte
+     Reparatur-/Faktencheck-Schleife geschickt. Ein kostenloser lokaler
+     Formcheck bleibt als letzte Schranke erhalten. */
+  if (manuellFinalisiert(story)) {
+    const lokal = pruefeBeitrag({ stories: [story] });
+    if (!lokal.ok) return { frei: false, warten: false, grund: `manuell finalisiert, aber lokal ungueltig: ${lokal.fehler.join("; ")}` };
+    return { frei: true, bereinigt: false, manuell: true, grund: "manuell finalisiert – kein API-Faktencheck" };
+  }
   if (story.faktencheckOffen) return { frei: false, warten: true, grund: "Faktencheck steht noch aus" };
   const fachlich = story.beanstandetFachlich || [];
   if (fachlich.length) return { frei: false, warten: true, grund: `fachlich beanstandet, wird erneut korrigiert: ${fachlich.join("; ")}` };
