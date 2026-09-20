@@ -47,12 +47,11 @@ export const FAECHER = {
   europa:  { label: "Europarecht",            kurz: "EuR",       gebiet: 3 },
   assessoroer: { label: "Öffentlich-rechtliche Assessorklausur", kurz: "Assessor ÖR", gebiet: 3 },
   /* Klausur- und Lernmethodik gehoert zu keinem Rechtsgebiet: Obersatztechnik
-     gilt im Zivilrecht wie im Strafrecht. Gebiet 0 heisst "ohne festes Gebiet" -
-     inhalte.mjs verteilt diese Themen reihum ueber die drei Farben, damit das
-     Raster bunt bleibt, und die Fusszeile traegt "Klausurtechnik" statt eines
-     Rechtsgebiets. */
+     gilt im Zivilrecht wie im Strafrecht. Gebiet 0 ist die feste violette
+     Methodik-Farbe. Der Planer setzt Methodik bewusst nur in Sonder-Slots,
+     damit sie nie einen der drei Fach-Slots ersetzt. */
   methodik: { label: "Klausur- und Lernmethodik", kurz: "Klausurtechnik", gebiet: 0 },
   /* Kein Fachstoff, sondern Kopf und Vorbereitung: Umgang mit Rueckschlaegen,
-     Lernrhythmus, Pruefungsangst. Gebiet 0 = eigene Farbe (stile.mjs). */
+     Lernrhythmus, Pruefungsangst. Gebiet 0 = dieselbe violette Sonderfarbe. */
   mindset: { label: "Kopfsache", kurz: "Kopfsache", gebiet: 0 },
 };
