@@ -199,6 +199,50 @@ test("Interaktion: nur fremde, neue, unbeantwortete Kommentare werden ausgewähl
   assert.equal(offen[0].beitrag, "Teilwert?");
 });
 
+test("Interaktion: „Gerne beides“ bekommt den vollständigen Reply-Thread", async () => {
+  const { offeneKommentare, kommentarPrompt } = await import("../src/interaktion.mjs");
+  const t1 = new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString();
+  const t2 = new Date(Date.now() - 90 * 60 * 1000).toISOString();
+  const t3 = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+  const medien = [{ id: "m-thread", caption: "Rückstellung dem Grunde nach\nmehr", comments: { data: [{
+    id: "c-frage", text: "Könnt ihr ein Video zur Abgrenzung machen?", username: "jees", timestamp: t1,
+    replies: { data: [
+      { id: "r-kanal", text: "Interessiert dich eher die handelsrechtliche Abgrenzung oder die steuerliche Anerkennung?", username: "meinkanal", timestamp: t2 },
+      { id: "r-folge", text: "Gerne beides", username: "jees", timestamp: t3 },
+    ] },
+  }] } }];
+  const offen = offeneKommentare(medien, "meinkanal", { interaktionen: [] });
+  assert.deepEqual(offen.map((k) => k.id), ["r-folge"]);
+  assert.deepEqual(offen[0].kontext.map((v) => v.text), [
+    "Könnt ihr ein Video zur Abgrenzung machen?",
+    "Interessiert dich eher die handelsrechtliche Abgrenzung oder die steuerliche Anerkennung?",
+  ]);
+  const prompt = kommentarPrompt(offen);
+  assert.match(prompt, /Thread davor:/);
+  assert.match(prompt, /handelsrechtliche Abgrenzung oder die steuerliche Anerkennung/);
+  assert.match(prompt, /Aktueller Kommentar[^\n]*Gerne beides/);
+});
+
+test("Interaktion: flach gelieferter Folgekommentar nutzt den letzten Austausch am selben Beitrag", async () => {
+  const { offeneKommentare } = await import("../src/interaktion.mjs");
+  const t1 = new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString();
+  const t2 = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+  const medien = [{ id: "m-flach", caption: "Rückstellung dem Grunde nach\nmehr", comments: { data: [
+    { id: "c-alt", text: "Könnt ihr ein Video zur Abgrenzung machen?", username: "jees", timestamp: t1, replies: { data: [] } },
+    { id: "c-neu", text: "Gerne beides", username: "jees", timestamp: t2, replies: { data: [] } },
+  ] } }];
+  const ledger = { interaktionen: [{
+    kommentarId: "c-alt", medienId: "m-flach", datum: new Date().toISOString().slice(0, 10),
+    von: "jees", text: "Interessiert dich eher die handelsrechtliche Abgrenzung oder die steuerliche Anerkennung?",
+  }] };
+  const offen = offeneKommentare(medien, "meinkanal", ledger);
+  assert.deepEqual(offen.map((k) => k.id), ["c-neu"]);
+  assert.deepEqual(offen[0].kontext.map((v) => v.text), [
+    "Könnt ihr ein Video zur Abgrenzung machen?",
+    "Interessiert dich eher die handelsrechtliche Abgrenzung oder die steuerliche Anerkennung?",
+  ]);
+});
+
 test("Vorlagen rendern jede Folien- und Story-Art in jedem Stil ohne leere Felder", () => {
   for (const stilName of Object.keys(STILE)) {
     const ctx = kontext({ stil: stilName, fach: "ust" });
