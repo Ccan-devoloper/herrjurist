@@ -1203,7 +1203,7 @@ Fehlt das vorgeschlagene Motiv oder passt es nicht, nenne ein besseres: englisch
 
 export async function bildregie(reel) {
   const szenen = reel?.szenen || [];
-  if (!szenen.length) return { geprueft: 0, ersetzt: 0 };
+  if (!szenen.some((s) => s.bildSzene)) return { geprueft: 0, ersetzt: 0 };
   const user = `Reel-Thema: ${reel.kurztitel || szenen[0]?.titel || ""}\n\n${szenen.map((s, i) => `Szene ${i + 1} [${s.art}]\n  Titel: ${s.titel || ""}\n  Sprecher: ${s.sprecher || ""}\n  Motiv: ${s.bildSzene || "(keins)"}`).join("\n\n")}\n\nBeurteile jede Szene.`;
 
   let response;
@@ -1248,19 +1248,39 @@ export async function bildregie(reel) {
 
 /* Die Regie darf das Reel nie kosten: Budget- und Netzfehler werden gemeldet,
    das Reel geht mit den Motiven des Autors weiter. */
+function fehlendeBildszenenErgaenzen(reel) {
+  let n = 0;
+  for (const s of reel?.szenen || []) {
+    if (s.bildSzene) continue;
+    const titel = String(s.titel || reel?.kurztitel || "").trim();
+    const detail = String(s.text || s.unter || "").replace(/\s+/g, " ").trim().slice(0, 120);
+    const prompt = [titel, detail].filter(Boolean).join("; ");
+    if (!prompt) continue;
+    s.bildSzene = prompt;
+    n++;
+  }
+  return n;
+}
+
 export async function bildregieSicher(reel) {
   if (!reel) return false;
   const luecken = (reel.szenen || []).some((s) => !s.bildSzene);
   if (reel.bildregie && !luecken) return false;
-  /* Manuelle Finalisierung schützt weiterhin den fachlichen Text. Fehlen aber
-     Bildaufträge, darf die reine Bildregie sie ergänzen; sonst könnte ein
-     finalisiertes Reel nie im gewünschten Erklärformat gerendert werden. */
-  if (manuellFinalisiert(reel) && !luecken) { reel.bildregie = true; return false; }
+  /* Manuelle Finalisierung schützt den fachlichen Text und bleibt kostenlos.
+     Fehlen nur die Bildaufträge, werden sie deterministisch aus dem bereits
+     freigegebenen Szenentitel/-text ergänzt. So bleibt das Erklärlayout
+     vollständig, ohne kurz vor dem Rendern noch einmal ein LLM zu bezahlen. */
+  if (manuellFinalisiert(reel)) {
+    const ergaenzt = fehlendeBildszenenErgaenzen(reel);
+    reel.bildregie = true;
+    if (ergaenzt) console.log(`  Bildregie: ${ergaenzt} fehlende Bildaufträge aus finalisierten Szenen ergänzt.`);
+    return ergaenzt > 0;
+  }
   try {
     const r = await bildregie(reel);
     if (r.geprueft) console.log(`  Bildregie: ${r.ersetzt} von ${r.geprueft} Motiven ersetzt.`);
-    reel.bildregie = !(reel.szenen || []).some((s) => !s.bildSzene);
-    return r.geprueft > 0 || r.ersetzt > 0;
+    reel.bildregie = true;
+    return true;
   } catch (e) {
     console.warn(`  ! Bildregie übersprungen (${e.message.split("\n")[0].slice(0, 100)}) – Erklärlayout bleibt trotzdem aktiv.`);
     return false;
