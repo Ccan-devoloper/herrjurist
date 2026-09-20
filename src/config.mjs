@@ -400,11 +400,10 @@ export const CONFIG = {
        ElevenLabs-Abo ist das der Regelfall -, spricht die deutsche
        Offline-Stimme Piper. IG_STIMME_NUR_DEUTSCH=false hebt die Regel auf. */
     nurDeutscheStimme: env("IG_STIMME_NUR_DEUTSCH", "true") === "true",
-    /* Zwei Reel-Layouts im Wechsel: „klassisch" ist die bisherige Karte mit
-       Animation und Untertiteln, „erklaer" die Buehne mit grosser Figur und
-       Stichwort-Plaketten (erklaervideo.mjs). „wechsel" laesst sie sich
-       taeglich abloesen, damit die Zahlen sagen koennen, welches traegt. */
-    layout: env("IG_REEL_LAYOUT", "wechsel"),
+    /* Das Erklärvideo ist dauerhaft Standard. Nur eine ausdrückliche
+       Einstellung IG_REEL_LAYOUT=klassisch schaltet zurück; "wechsel" wird
+       aus Kompatibilitätsgründen wie "erklaer" behandelt. */
+    layout: env("IG_REEL_LAYOUT", "erklaer"),
     erklaerMarken: Number(env("IG_REEL_MARKEN", "2")),        // Plaketten je Szene
     erklaerBilder: Number(env("IG_REEL_BILDER", "4")),        // hoechstens so viele Motive je Reel neu zeichnen
     stimmeLernen: env("IG_STIMME_LERNEN", "true") === "true",

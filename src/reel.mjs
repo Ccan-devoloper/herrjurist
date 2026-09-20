@@ -429,21 +429,12 @@ window.setzeZeit = function (t) {
  * ab - so laufen beide unter denselben Bedingungen und die Zahlen im Ledger
  * lassen sich vergleichen.
  */
-/* Fuenf Tage am Stueck das Erklaervideo, auf beiden Kanaelen: Der Nutzer
-   will die neue Variante sehen, statt sie sich jeden zweiten Tag zwischen
-   klassischen Reels zusammenzusuchen. Das Fenster laeuft von selbst ab -
-   danach greift der taegliche Wechsel wieder, ohne dass jemand etwas
-   zuruecksetzen muss. Eine ausdrueckliche Einstellung geht weiterhin vor. */
-const ERKLAER_FENSTER = { von: "2026-09-17", bis: "2026-09-21" };
-
-export function layoutFuer(datum) {
-  const wunsch = String(CONFIG.reel.layout || "wechsel").toLowerCase();
-  if (wunsch === "klassisch" || wunsch === "erklaer") return wunsch;
-  if (datum >= ERKLAER_FENSTER.von && datum <= ERKLAER_FENSTER.bis) return "erklaer";
-  const tage = Math.floor(Date.UTC(+datum.slice(0, 4), +datum.slice(5, 7) - 1, +datum.slice(8, 10)) / 86400000);
-  /* Gerade Tage erklaeren, ungerade bleiben klassisch. Der 14.09.2026 faellt
-     damit auf das Erklaervideo - der erste Tag, an dem es laufen soll. */
-  return tage % 2 === 0 ? "erklaer" : "klassisch";
+/* Das Erklaervideo ist der dauerhafte Standard. Es bleibt aktiv, bis
+   ausdrücklich "klassisch" konfiguriert wird. Der frühere Tageswechsel und
+   das befristete Testfenster dürfen das Format nicht mehr selbständig ändern. */
+export function layoutFuer() {
+  const wunsch = String(CONFIG.reel.layout || "erklaer").toLowerCase();
+  return wunsch === "klassisch" ? "klassisch" : "erklaer";
 }
 
 /* Frames rendern. */
@@ -505,13 +496,13 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
   fs.mkdirSync(ausgabeDir, { recursive: true });
   const plan = await zeitplanErstellen(reel, path.join(ausgabeDir, "audio"), { stimmeId: opt.stimmeId || null, stimmeName: opt.stimmeName || null });
   const frameDir = path.join(ausgabeDir, "frames");
-  /* Das Erklaervideo braucht seine eigene Buehne und keinen Hintergrundclip -
-     die Flaeche ist das Bild. Ohne Motive faellt es auf das bisherige Layout
-     zurueck: eine leere Buehne waere schlechter als die gewohnte Karte. */
+  /* Das Erklaervideo bleibt auch dann aktiv, wenn die Motiv-Erzeugung einmal
+     ausfaellt. Eine leere Figur ist sichtbar weniger schlimm als ein stiller
+     Rueckfall in das alte Reel-Format, den der Betreiber nicht angeordnet hat. */
   const layout = opt.layout || layoutFuer(datum);
   const hatMotive = reel.szenen.some((s) => s.bild);
-  const erklaer = layout === "erklaer" && hatMotive;
-  if (layout === "erklaer" && !hatMotive) console.warn("  ! Erklärvideo ohne Motive - es wird das klassische Layout gebaut.");
+  const erklaer = layout === "erklaer";
+  if (erklaer && !hatMotive) console.warn("  ! Erklärvideo ohne Motive - neues Layout bleibt aktiv.");
   const seite = erklaer ? erklaerHtml(reel, plan, ctx) : reelHtml(reel, plan, ctx);
   const n = await framesRendern(seite, plan, frameDir, fps, !erklaer && !!clip);
 
