@@ -1,4 +1,4 @@
-name: Reichweiten-Vorschläge · Herr Jurist
+name: Reichweiten-Vorschläge · beide Kanäle
 
 on:
   push:
@@ -14,19 +14,20 @@ permissions:
   contents: write
 
 concurrency:
-  group: reichweite-herrjurist
+  group: reichweite-beide-kanaele
   cancel-in-progress: true
 
 jobs:
   sammeln:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Posts finden und verschlüsseln
+
+      - name: Herr-Jurist-Posts finden und verschlüsseln
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
@@ -34,9 +35,21 @@ jobs:
           IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
           IG_GRAPH_VERSION: ${{ vars.IG_GRAPH_VERSION }}
           REICHWEITE_KANAL: herrjurist
-          REICHWEITE_OUT: ${{ github.workspace }}/out/reichweite.enc.json
+          REICHWEITE_OUT: ${{ github.workspace }}/out/herrjurist.enc.json
         run: node reichweite/sammeln.mjs
-      - name: Verschlüsselten Datenblock aktualisieren
+
+      - name: Examenscampus-Posts mit demselben Meta-Public-Content-Zugang finden
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
+          IG_GRAPH_VERSION: ${{ vars.IG_GRAPH_VERSION }}
+          REICHWEITE_KANAL: examenscampus
+          REICHWEITE_OUT: ${{ github.workspace }}/out/examenscampus.enc.json
+        run: node reichweite/sammeln.mjs
+
+      - name: Nur verschlüsselte Datenblöcke aktualisieren
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -47,7 +60,8 @@ jobs:
           cd /tmp/reichweite-data
           git switch -C reichweite-data origin/reichweite-data
           mkdir -p reichweite
-          cp "$GITHUB_WORKSPACE/out/reichweite.enc.json" reichweite/data.enc.json
-          git add reichweite/data.enc.json
-          git commit -m "data: Reichweiten-Vorschläge $(date -u +%F-%H%M)" || exit 0
+          cp "$GITHUB_WORKSPACE/out/herrjurist.enc.json" reichweite/data.enc.json
+          cp "$GITHUB_WORKSPACE/out/examenscampus.enc.json" reichweite/examenscampus.enc.json
+          git add reichweite/data.enc.json reichweite/examenscampus.enc.json
+          git commit -m "data: Reichweiten-Vorschläge beide Kanäle $(date -u +%F-%H%M)" || exit 0
           git push origin HEAD:reichweite-data
