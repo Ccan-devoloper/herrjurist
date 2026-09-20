@@ -59,7 +59,8 @@ import { heuteIso, lokaleMinuten, minutenVon } from "./zeit.mjs";
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const args = new Map(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, "").split("="); return [k, v ?? true]; }));
 const datum = args.get("datum") || heuteIso();
-const nurPlanen = args.has("nur-planen");
+const vorplanen = args.has("vorplanen");
+const nurPlanen = args.has("nur-planen") || vorplanen;
 const trocken = args.has("nur-rendern") || CONFIG.instagram.trockenlauf;
 const alles = args.has("alles");
 const auffuellen = Number(args.get("auffuellen") || 0);
@@ -197,7 +198,7 @@ async function main() {
   /* IG_NO_PUSH=true: nichts in den Assets-Zweig pushen – für Trockenläufe
      gegen eine Kopie des Zustands. Ein Trockenlauf am 13.09. hatte sonst
      Beispieltexte für den Folgetag in den echten Zweig geschoben. */
-  const hosting = new Hosting({ pushen: !nurPlanen && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
+  const hosting = new Hosting({ pushen: (vorplanen || !nurPlanen) && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
   motivArchivDir = path.join(hosting.stateDir, "motive");
   /* Bezahlte Entwürfe überleben den Lauf, in dem sie entstanden sind - siehe
      autor.mjs. Aufgeräumt wird gleich zu Beginn, damit der Zweig nicht wächst. */
