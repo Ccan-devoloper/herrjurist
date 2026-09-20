@@ -61,6 +61,20 @@ test("manuell finalisiertes Reel bekommt keine nachträgliche LLM-Bildregie", as
   assert.equal(reel.bildregie, true);
 });
 
+test("manuell finalisiertes Reel ergänzt fehlende Bildaufträge ohne LLM", async () => {
+  const reel = {
+    manuellGeprueft: true,
+    bildregie: true,
+    kurztitel: "Prüfschema",
+    szenen: [{ titel: "Wichtiger Grund?", text: "Fortsetzung bis zum Vertragsende ist unzumutbar.", bildSzene: null }],
+  };
+  const geaendert = await bildregieSicher(reel);
+  assert.equal(geaendert, true);
+  assert.equal(reel.bildregie, true);
+  assert.match(reel.szenen[0].bildSzene, /Wichtiger Grund/);
+  assert.match(reel.szenen[0].bildSzene, /unzumutbar/);
+});
+
 
 test("vollständig im Chat finalisierte Tage erzeugen keinen bezahlten Vorrat", () => {
   const plan = {
