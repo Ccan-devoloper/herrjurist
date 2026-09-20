@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { manuellFinalisiert } from "../src/finalisierung.mjs";
+import { manuellFinalisiert, tagesinhaltManuellFinalisiert } from "../src/finalisierung.mjs";
 import { persistierteStoryBeanstandungen, storyFreigabe } from "../src/pruefung.mjs";
 import { storiesPruefen, bildregieSicher } from "../src/autor.mjs";
 
@@ -59,4 +59,19 @@ test("manuell finalisiertes Reel bekommt keine nachträgliche LLM-Bildregie", as
   const geaendert = await bildregieSicher(reel);
   assert.equal(geaendert, false);
   assert.equal(reel.bildregie, true);
+});
+
+
+test("vollständig im Chat finalisierte Tage erzeugen keinen bezahlten Vorrat", () => {
+  const plan = {
+    beitraege: [{ slot: "b1" }, { slot: "b2" }],
+    stories: [{ slot: "s1", art: "teaser" }, { slot: "s2", art: "tipp" }],
+  };
+  const texte = {
+    b1: { manuellGeprueft: true },
+    b2: { manuellGeprueft: true },
+    s2: { manuellGeprueft: true },
+  };
+  assert.equal(tagesinhaltManuellFinalisiert(plan, (slot) => texte[slot] || null), true);
+  assert.equal(tagesinhaltManuellFinalisiert(plan, (slot) => slot === "b2" ? null : texte[slot] || null), false);
 });
