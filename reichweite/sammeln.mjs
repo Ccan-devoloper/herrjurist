@@ -18,6 +18,11 @@ const norm=s=>CFG.domain==='steuer'
  :(s.match(/(?:§{1,2}\s*\d+[a-z]?(?:\s*(?:Abs\.?|S\.?|Satz|Nr\.?)\s*\d+[a-z]?)?\s*(?:BGB|StGB|StPO|ZPO|VwGO|VwVfG|GG|HGB)|Art\.?\s*\d+[a-z]?(?:\s*Abs\.?\s*\d+)?\s*(?:GG|AEUV|EUV)?)/i)?.[0]||'');
 const labels={ao:'der Abgabenordnung',estg:'dem EStG',ustg:'dem UStG',kstg:'dem KStG',gewstg:'dem GewStG',bgb:'dem BGB',stgb:'dem StGB',vwgo:'der VwGO',gg:'den Grundrechten',zivilrecht:'dem Zivilrecht',strafrecht:'dem Strafrecht','öffentliches recht':'dem Öffentlichen Recht',umsatzsteuer:'der Umsatzsteuer',bilanz:'der Bilanzierung',steuerrecht:'dem Steuerrecht',staatsexamen:'dem Staatsexamen',jurastudium:'dem Jurastudium',referendariat:'dem Referendariat'};
 function topic(s){const l=s.toLowerCase(),k=CFG.keys.find(x=>l.includes(x));if(k)return labels[k]||k;const t=clean(s).split(/(?<=[.!?])\s+/)[0].split(/\s+/).slice(0,10).join(' ');return t?`„${t.slice(0,80)}${t.length>80?'…':''}“`:'dem Thema'}
+const REL=CFG.domain==='steuer'
+ ?{strong:['steuerberaterprüfung','steuerberaterexamen','steuerrecht','abgabenordnung','estg','ustg','kstg','gewstg','erbstg','bewg','umwstg','bilanzsteuerrecht','einkommensteuer','umsatzsteuer','körperschaftsteuer','gewerbesteuer','erbschaftsteuer','jahresabschluss','steuerfachwirt'],weak:['steuerberater','klausur','prüfung','examen','bilanz','buchführung','lernen'],negative:['stellenangebot','wir suchen','bewerbung','karriere','gewinnspiel','rabatt','kanzleialltag','team-event']}
+ :{strong:['staatsexamen','jurastudium','referendariat','zivilrecht','strafrecht','öffentliches recht','bgb','stgb','zpo','stpo','vwgo','vwvfg','grundgesetz','bverfg','bgh','eugh','examensklausur'],weak:['jura','jurist','klausur','prüfung','examen','urteil','beschluss','lernen','jurastudent'],negative:['stellenangebot','wir suchen','bewerbung','karriere','gewinnspiel','rabatt','kanzleialltag','law firm','team-event']};
+function relevance(s){const t=clean(s).toLowerCase(),strong=REL.strong.filter(k=>t.includes(k)),weak=REL.weak.filter(k=>t.includes(k)),negative=REL.negative.filter(k=>t.includes(k)),statute=Boolean(norm(s));return{strong,weak,negative,statute,relevant:statute||strong.length>0||weak.length>=2}}
+
 function comments(m){const s=clean(m.caption),t=topic(s),n=norm(s),court=/\b(bgh|bverfg|bverwg|bfh|eugh|olg|fg)\b/i.test(s),exam=/\b(examen|staatsexamen|steuerberaterprüfung|steuerberaterexamen|klausur|prüfung)\b/i.test(s);let a;
  if(CFG.domain==='steuer') a=n?[`Guter Punkt zu ${t}. Gerade für die StB-Prüfung lohnt es sich, ${n} nicht isoliert zu lernen, sondern den Prüfungsschritt sauber einzuordnen.`,`Sehr anschaulich. Bei ${t} ist für die Klausur gerade die Verknüpfung mit ${n} spannend.`]:exam?[`Treffend auf den Punkt gebracht. Bei ${t} ist in der StB-Prüfung oft die saubere Reihenfolge wichtiger als noch mehr Einzelwissen.`,`Guter Examenshinweis. ${t} wird deutlich sicherer, wenn man es einmal klausurmäßig durchprüft.`]:[`Spannender Beitrag zu ${t}. Genau solche Praxisbezüge helfen, den Stoff fürs Steuerberaterexamen wirklich einzuordnen.`,`Guter Impuls zu ${t}. Für die Examensvorbereitung würde ich daraus direkt einen Mini-Fall machen.`];
  else a=n?[`Starker Punkt zu ${t}. Für die Klausur ist bei ${n} die Einordnung im richtigen Prüfungsschritt entscheidend.`,`Sehr anschaulich erklärt. ${n} wird examensfest, wenn man ${t} direkt mit der passenden Prüfungsstelle verknüpft.`]:court?[`Spannende Entscheidung. Für Examenskandidaten ist bei ${t} vor allem interessant, an welcher Stelle im Gutachten die Aussage des Gerichts wirklich etwas verändert.`,`Danke fürs Aufbereiten. Bei ${t} würde ich mir fürs Examen direkt Problemtrigger, Prüfungsstelle und Rechtsfolge notieren.`]:exam?[`Treffend formuliert. Bei ${t} bringt fürs Examen eine klare Prüfungsreihenfolge meistens mehr als noch mehr Detailwissen.`,`Guter Examenshinweis. ${t} wird deutlich sicherer, wenn man es einmal in einer kurzen Lösungsskizze übt.`]:[`Spannender Beitrag zu ${t}. Gerade fürs Examen hilft es, daraus direkt einen Problemtrigger und die passende Prüfungsstelle abzuleiten.`,`Sehr verständlich dargestellt. ${t} bleibt besser hängen, wenn man es mit einem kurzen Fall statt nur abstrakt lernt.`];
@@ -51,12 +56,13 @@ function igItem(item,handle){
  const product=item?.product_type||item?.node?.product_type||'';
  const mediaType=item?.media_type||item?.node?.media_type;
  const reel=product==='clips'||product==='reels'||mediaType===2;
+ const carousel=mediaType===8||Array.isArray(item?.carousel_media)||item?.node?.__typename==='GraphSidecar';
  const caption=item?.caption?.text||item?.node?.edge_media_to_caption?.edges?.[0]?.node?.text||item?.node?.caption||'';
  const ts=item?.taken_at||item?.node?.taken_at_timestamp;
  return {
    id:String(item?.pk||item?.id||item?.node?.id||('profile-'+code)),
    permalink:`https://www.instagram.com/${reel?'reel':'p'}/${code}/`,
-   media_type:reel?'REELS':'IMAGE',
+   media_type:reel?'REELS':carousel?'CAROUSEL_ALBUM':'IMAGE',
    caption, timestamp:ts?new Date(Number(ts)*1000).toISOString():null,
    like_count:Number(item?.like_count||item?.node?.edge_liked_by?.count||item?.node?.edge_media_preview_like?.count||0),
    comments_count:Number(item?.comment_count||item?.node?.edge_media_to_comment?.count||0),
@@ -108,7 +114,30 @@ async function collectWeb(){
  return {out,errors};
 }
 
-function rank(items){const map=new Map;for(const m of items)map.set(m.id||m.permalink,m);const now=Date.now();return [...map.values()].map(m=>{const s=clean(m.caption).toLowerCase(),hits=CFG.keys.filter(k=>s.includes(k)).length,age=m.timestamp?Math.max(0,(now-Date.parse(m.timestamp))/36e5):96,score=Math.round((hits*10+Math.max(0,42-age/2.5)+Math.log10((+m.like_count||0)+1)*8+Math.log10((+m.comments_count||0)+1)*14)*10)/10,[c,a]=comments(m);return{id:m.id,permalink:m.permalink,mediaType:m.media_type||'',timestamp:m.timestamp||null,likeCount:+m.like_count||0,commentCount:+m.comments_count||0,caption:cut(m.caption),foundVia:m.foundVia,score,comment:c,alternativeComment:a}}).filter(x=>x.score>=10).sort((a,b)=>b.score-a.score).slice(0,18)}
+function rank(items){
+ const map=new Map;for(const m of items)map.set(m.id||m.permalink,m);
+ const now=Date.now();
+ const scored=[...map.values()].map(m=>{
+  const caption=clean(m.caption),rel=relevance(caption),age=m.timestamp?Math.max(0,(now-Date.parse(m.timestamp))/36e5):96;
+  if(!rel.relevant||age>24*21)return null;
+  const freshness=Math.max(0,36-age/3),engagement=Math.log10((+m.like_count||0)+1)*5+Math.log10((+m.comments_count||0)+1)*9;
+  const formatBonus=m.media_type==='CAROUSEL_ALBUM'?6:m.media_type==='IMAGE'?3:0;
+  const score=Math.round((rel.strong.length*18+rel.weak.length*6+(rel.statute?20:0)-rel.negative.length*15+freshness+engagement+formatBonus)*10)/10;
+  const [c,a]=comments(m);
+  return{id:m.id,permalink:m.permalink,mediaType:m.media_type||'',timestamp:m.timestamp||null,likeCount:+m.like_count||0,commentCount:+m.comments_count||0,caption:cut(m.caption),foundVia:m.foundVia,score,matchedTerms:[...rel.strong,...rel.weak].slice(0,5),comment:c,alternativeComment:a};
+ }).filter(Boolean).filter(x=>x.score>=30).sort((a,b)=>b.score-a.score);
+ const selected=[],sources=new Map;let reels=0;
+ for(const x of scored){
+  const isReel=/REEL/i.test(x.mediaType),source=String(x.foundVia||'');
+  if(isReel&&reels>=6)continue;
+  if(source.startsWith('@')&&(sources.get(source)||0)>=3)continue;
+  selected.push(x);
+  if(isReel)reels++;
+  sources.set(source,(sources.get(source)||0)+1);
+  if(selected.length>=18)break;
+ }
+ return selected;
+}
 function encrypt(payload,pem){const k=crypto.randomBytes(32),iv=crypto.randomBytes(12),c=crypto.createCipheriv('aes-256-gcm',k,iv);c.setAAD(Buffer.from('reichweite-data-v1'));const data=Buffer.concat([c.update(Buffer.from(JSON.stringify(payload))),c.final()]);const tag=c.getAuthTag(),wk=crypto.publicEncrypt({key:pem,oaepHash:'sha256',padding:crypto.constants.RSA_PKCS1_OAEP_PADDING},k);return{version:1,alg:'RSA-OAEP-256+A256GCM',aad:'reichweite-data-v1',createdAt:new Date().toISOString(),iv:iv.toString('base64'),tag:tag.toString('base64'),key:wk.toString('base64'),data:data.toString('base64')}}
 
 const token=process.env.IG_ACCESS_TOKEN||'',fbToken=process.env.FB_PAGE_TOKEN||'',id=process.env.IG_ACCOUNT_ID||'',ver=process.env.IG_GRAPH_VERSION||'v23.0',host=process.env.IG_GRAPH_HOST||'instagram',out=process.env.REICHWEITE_OUT||path.resolve('out/reichweite.enc.json'),pem=await fs.readFile(path.join(dir,'public-key.pem'),'utf8');
