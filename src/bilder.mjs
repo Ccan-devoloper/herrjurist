@@ -165,11 +165,10 @@ export function fallbackBildSzene(beitrag = {}) {
   };
   return szenen[icon] || "student reviewing case file";
 }
-/* Kostenloser Primärpfad für Cover: ein echtes Pexels-Foto wird zuerst
-   freigestellt; wenn alle Freisteller scheitern, ist eine saubere Fotokarte
-   immer noch besser als eine reine Icon-Kachel oder ein bezahlter Bildaufruf.
-   Der alte Schalter rechteckErlaubt gilt damit nicht für diesen letzten
-   Cover-Notfall – die neue Produktregel „Foto + Icon“ hat Vorrang. */
+/* Kostenloser Primärpfad für Cover: Pexels wird zuerst versucht, aber nur
+   als sauber freigestelltes Hauptmotiv. Scheitern alle Kandidaten an Schärfe,
+   Anschnitt, Transparenz oder Motiv-Komplexität, geht die Pipeline weiter zur
+   Bild-KI statt ein rohes Stockfoto in die Kachel zu zwingen. */
 async function kostenlosesCoverFoto(szenen, ablage, opt = {}) {
   if (!CONFIG.bilder.key) return null;
   for (const szene of szenen) {
