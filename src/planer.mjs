@@ -248,16 +248,25 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
          wählen (siehe unten, thema.zuletzt). */
       const frisch = kandidaten.filter((t) => vorher.get(t.id)?.format !== format);
       if (frisch.length >= 3) kandidaten = frisch;
-      /* Das Rechtsgebiet dieses Slots steht fest - hart, nicht als Wunsch.
-         Nur wenn der Pool dafür kein freies Thema mehr hergibt, weicht der
-         Slot aus: ein Beitrag im Nachbargebiet ist besser als keiner. */
+      /* Die sichtbare Kategorie dieses Slots steht fest - hart, nicht als
+         Wunsch. Ist innerhalb der Wiederholsperre nichts frei, wird lieber das
+         älteste Farbfeld wiederverwendet als in eine andere Farbe zu springen. */
       const ziel = gebietFuer.get(i);
       if (ziel != null) {
         const imGebiet = kandidaten.filter((t) => t.klausur === ziel);
         if (imGebiet.length) kandidaten = imGebiet;
-        else console.warn(`  ! ${FEED_KATEGORIEN[ziel] || KLAUSUREN[ziel]?.kurz || ziel}: kein freies Thema für „${format}“ – dieser Slot weicht heute aus.`);
+        else {
+          const farbReserve = pool.filter((t) => typen.includes(t.typ) && t.klausur === ziel && !benutzt.has(t.id));
+          if (farbReserve.length) {
+            kandidaten = aeltesteZuerst(farbReserve, ledgerKopie, benutzt, "beitrag");
+            console.warn(`  ! ${FEED_KATEGORIEN[ziel] || KLAUSUREN[ziel]?.kurz || ziel}: Wiederholsperre erschöpft für „${format}“ – ältestes Thema derselben Farbe wird genommen.`);
+          }
+        }
       }
-      thema = gewichteteWahl(kandidaten.length ? kandidaten : pool.filter((t) => typen.includes(t.typ)), zufall, ledgerKopie, strategie);
+      const notfall = ziel != null
+        ? pool.filter((t) => typen.includes(t.typ) && t.klausur === ziel)
+        : pool.filter((t) => typen.includes(t.typ));
+      thema = gewichteteWahl(kandidaten.length ? kandidaten : notfall, zufall, ledgerKopie, strategie);
       /* War das Thema schon einmal dran, reist die Vorgeschichte mit: Format,
          Hook und Titel von damals. Der Autor darf sich davon nicht wiederholen. */
       const alt = vorher.get(thema.id);
