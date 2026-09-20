@@ -26,6 +26,36 @@ async function get(base,ep,p,token){const u=new URL(`${base}/${ep.replace(/^\//,
 async function collect(base,id,token){const out=[],errors=[];let own=new Set;try{const x=await get(base,`${id}/media`,{fields:'id',limit:100},token);own=new Set((x.data||[]).map(x=>x.id))}catch{}
  for(const tag of CFG.tags){try{let h;try{h=await get(base,`${id}/hashtag_search`,{q:tag},token)}catch{h=await get(base,'ig_hashtag_search',{user_id:id,q:tag},token)}const hid=h.data?.[0]?.id;if(!hid)continue;const x=await get(base,`${hid}/recent_media`,{user_id:id,fields:'id,caption,media_type,permalink,timestamp,like_count,comments_count',limit:30},token);for(const m of x.data||[])if(m.permalink&&!own.has(m.id))out.push({...m,foundVia:tag})}catch(e){errors.push({tag,message:e.message,code:e.code||null});if([10,100,190,200].includes(+e.code))break}}
  return {out,errors}}
+
+const WEB_QUERIES = CFG.domain==='steuer'
+ ? ['steuerberaterprüfung steuerrecht examen','steuerberaterexamen klausur AO EStG','steuerberaterprüfung 2026 lernen']
+ : ['jura staatsexamen klausur','jurastudium examen BGB','jura examensvorbereitung rechtsprechung'];
+const decodeHtml=s=>String(s||'').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(+n));
+const stripHtml=s=>decodeHtml(String(s||'').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim());
+function webCandidates(html,via){
+ const src=String(html||'').replace(/\\\//g,'/'), hits=[];
+ const push=(url,idx)=>{try{url=decodeURIComponent(url)}catch{};url=decodeHtml(url);const m=url.match(/https?:\/\/(?:www\.)?instagram\.com\/(p|reel)\/([A-Za-z0-9_-]+)/i);if(!m)return;const permalink=`https://www.instagram.com/${m[1]}/${m[2]}/`;const context=stripHtml(src.slice(Math.max(0,idx-900),Math.min(src.length,idx+1600)));hits.push({id:`web-${m[2]}`,permalink,media_type:m[1].toLowerCase()==='reel'?'REELS':'IMAGE',caption:cut(context,650),timestamp:null,like_count:0,comments_count:0,foundVia:via})};
+ for(const m of src.matchAll(/https?:\/\/(?:www\.)?instagram\.com\/(?:p|reel)\/[A-Za-z0-9_-]+/gi))push(m[0],m.index||0);
+ for(const m of src.matchAll(/https?%3A%2F%2F(?:www\.)?instagram\.com%2F(?:p|reel)%2F[A-Za-z0-9_-]+/gi))push(m[0],m.index||0);
+ for(const m of src.matchAll(/(?:uddg|url)=([^"'&\s>]+)/gi))push(m[1],m.index||0);
+ for(const m of src.matchAll(/href=["'](?:https?:\/\/imginn\.com)?\/p\/([A-Za-z0-9_-]+)\/?["']/gi))push(`https://www.instagram.com/p/${m[1]}/`,m.index||0);
+ return hits;
+}
+async function collectWeb(){
+ const out=[],errors=[];
+ const ua={'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36','accept-language':'de-DE,de;q=0.9,en;q=0.7'};
+ for(const q0 of WEB_QUERIES){
+  const q=`site:instagram.com/reel/ OR site:instagram.com/p/ ${q0}`;
+  const urls=[
+   ['DuckDuckGo',`https://html.duckduckgo.com/html/?q=${encodeURIComponent(q)}`],
+   ['Bing',`https://www.bing.com/search?q=${encodeURIComponent(q)}&count=30&setlang=de-DE`]
+  ];
+  for(const [name,url] of urls)try{const r=await fetch(url,{headers:ua,redirect:'follow'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const h=await r.text();out.push(...webCandidates(h,`${name}: ${q0}`))}catch(e){errors.push({source:name,query:q0,message:e.message})}
+ }
+ for(const tag of CFG.tags.slice(0,6))try{const r=await fetch(`https://imginn.com/tags/${encodeURIComponent(tag)}/`,{headers:ua,redirect:'follow'});if(!r.ok)throw new Error(`HTTP ${r.status}`);out.push(...webCandidates(await r.text(),`Imginn #${tag}`))}catch(e){errors.push({source:'Imginn',query:tag,message:e.message})}
+ return {out,errors};
+}
+
 function rank(items){const map=new Map;for(const m of items)map.set(m.id||m.permalink,m);const now=Date.now();return [...map.values()].map(m=>{const s=clean(m.caption).toLowerCase(),hits=CFG.keys.filter(k=>s.includes(k)).length,age=m.timestamp?Math.max(0,(now-Date.parse(m.timestamp))/36e5):96,score=Math.round((hits*10+Math.max(0,42-age/2.5)+Math.log10((+m.like_count||0)+1)*8+Math.log10((+m.comments_count||0)+1)*14)*10)/10,[c,a]=comments(m);return{id:m.id,permalink:m.permalink,mediaType:m.media_type||'',timestamp:m.timestamp||null,likeCount:+m.like_count||0,commentCount:+m.comments_count||0,caption:cut(m.caption),foundVia:m.foundVia,score,comment:c,alternativeComment:a}}).filter(x=>x.score>=10).sort((a,b)=>b.score-a.score).slice(0,18)}
 function encrypt(payload,pem){const k=crypto.randomBytes(32),iv=crypto.randomBytes(12),c=crypto.createCipheriv('aes-256-gcm',k,iv);c.setAAD(Buffer.from('reichweite-data-v1'));const data=Buffer.concat([c.update(Buffer.from(JSON.stringify(payload))),c.final()]);const tag=c.getAuthTag(),wk=crypto.publicEncrypt({key:pem,oaepHash:'sha256',padding:crypto.constants.RSA_PKCS1_OAEP_PADDING},k);return{version:1,alg:'RSA-OAEP-256+A256GCM',aad:'reichweite-data-v1',createdAt:new Date().toISOString(),iv:iv.toString('base64'),tag:tag.toString('base64'),key:wk.toString('base64'),data:data.toString('base64')}}
 
