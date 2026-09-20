@@ -28,6 +28,32 @@ export const KLAUSUREN = {
 
 export { GEBIETE };
 
+/* Sichtbare Feed-Kategorien. 0 = Methodik/Mindset (violett), 1–3 =
+   Rechtsgebiete, 4 = Wochenrückblick. Diese Funktion bildet die Farbe ab,
+   nicht nur die interne Themenzuordnung, und funktioniert deshalb auch mit
+   gespeicherten Tagesplänen und alten Ledger-Einträgen. */
+export const FEED_KATEGORIEN = {
+  0: "Klausurmethodik",
+  1: "Zivilrecht",
+  2: "Strafrecht",
+  3: "Öffentliches Recht",
+  4: "Wochenrückblick",
+};
+
+export function feedKategorie(eintrag = {}) {
+  if (eintrag?.format === "wochenrueckblick" || eintrag?.fach === "wochenrueckblick") return 4;
+  const fach = eintrag?.fach || eintrag?.thema?.fach;
+  if (fach && FAECHER[fach]) return FAECHER[fach].klausur;
+  if (eintrag?.klausur != null && Number.isFinite(Number(eintrag.klausur))) return Number(eintrag.klausur);
+  if (eintrag?.thema?.klausur != null && Number.isFinite(Number(eintrag.thema.klausur))) return Number(eintrag.thema.klausur);
+  return null;
+}
+
+export function feedFolgeErlaubt(vorher, nachher) {
+  const a = feedKategorie(vorher), b = feedKategorie(nachher);
+  return a == null || b == null || a !== b;
+}
+
 /* Welche Sorte Thema ist das? Der Planer wählt danach aus, welches Format zu
    welchem Thema passt: Ein Schema trägt einen Schema-Beitrag, eine Abgrenzung
    trägt einen Vergleich. Erkennbar ist das an der Frage selbst. */
@@ -48,9 +74,11 @@ export function themenpool() {
     const fach = FAECHER[t.fach];
     if (!fach) throw new Error(`Thema ${i} nennt ein unbekanntes Fach: ${t.fach}`);
     const typ = t.typ || typVon(t.titel);
-    /* Gebiet 0 (Methodik): reihum eine der drei Farben, damit diese Beiträge
-       nicht alle gleich aussehen – die Ecke sagt ohnehin „Klausurtechnik“. */
-    const klausur = fach.klausur || ((i % 3) + 1);
+    /* Gebiet 0 (Methodik/Mindset) bleibt sichtbar immer violett. Früher
+       wurden diese Themen intern auf 1/2/3 verteilt; dadurch konnten drei
+       Methodik-Beiträge als drei verschiedene Rechtsgebiete geplant werden
+       und anschließend trotzdem alle lila im Feed erscheinen. */
+    const klausur = fach.klausur;
     return {
       id: t.id || `${t.fach}-${String(i + 1).padStart(3, "0")}`,
       fach: t.fach,
