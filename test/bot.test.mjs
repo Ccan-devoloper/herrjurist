@@ -2994,7 +2994,7 @@ test("Story-Faktencheck: jeder Ausfall hält die Texte, verwirft sie nicht", asy
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   const block = autor.slice(autor.indexOf("export async function storiesPruefen"), autor.indexOf("const REEL_SCHEMA"));
   assert.ok(!/throw e;/.test(block), "ein technischer Ausfall fliegt nicht mehr nach oben");
-  assert.match(block, /for \(const o of liste\) o\.faktencheckOffen = true;/);
+  assert.match(block, /for \(const o of pruefliste\) o\.faktencheckOffen = true;/, "nur nicht manuell finalisierte Stories werden bei Prüfausfall wieder als offen markiert");
 });
 
 test("Übersprungene Nachrichten und Kommentare werden je Grund gebündelt gemeldet", async () => {
