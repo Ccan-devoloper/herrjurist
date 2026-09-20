@@ -21,7 +21,7 @@ import { istKostenKontrollFehler, budgetStoppGrund } from "./kostenfehler.mjs";
 import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
 import { zeitStatistik } from "./zeiten.mjs";
-import { themenpool, KLAUSUREN } from "./inhalte.mjs";
+import { themenpool, KLAUSUREN, FAECHER } from "./inhalte.mjs";
 import { tagesplan, auffuellplan, ledgerLaden, ledgerSpeichern, vermerken, uebertragen, FORMAT_QUELLEN } from "./planer.mjs";
 import { pruefeBeitrag, benutzteFirmen, namenSperren, quizBefunde, quizPaarFreigabe, storyFreigabe, quizNachschlag, alleBefunde, persistierteStoryBeanstandungen } from "./pruefung.mjs";
 import { beitragSchreiben, storiesSchreiben, storiesPruefen, teaserAusBeitrag, bildregieSicher, aktuellRecherchieren, loesungsRecherchieren, reelSchreiben, entwurfsspeicher, entwuerfeAufraeumen } from "./autor.mjs";
@@ -912,8 +912,29 @@ async function main() {
       }
       if (eintrag.format === "wochenrueckblick") {
         const grenze = new Date(new Date(`${datum}T12:00:00Z`).getTime() - 7 * 86400000).toISOString().slice(0, 10);
-        wochenThemen = (ledger.veroeffentlicht || []).filter((e) => e.art === "beitrag" && e.datum >= grenze).map((e) => e.titel);
-        if (!wochenThemen.length) wochenThemen = pool.filter((t) => t.prioritaet === "hoch").slice(0, 5).map((t) => t.titel);
+        const poolNachId = new Map(pool.map((t) => [t.id, t]));
+        wochenThemen = (ledger.veroeffentlicht || [])
+          .filter((e) => e.art === "beitrag" && e.datum >= grenze && e.titel)
+          .map((e) => {
+            const quellThema = e.thema ? poolNachId.get(e.thema) : null;
+            const fach = e.fach || quellThema?.fach || null;
+            return {
+              titel: e.titel,
+              fach,
+              fachLabel: FAECHER[fach]?.kurz || null,
+              gebiet: quellThema?.klausur ?? FAECHER[fach]?.klausur ?? 0,
+            };
+          });
+        /* Ein frischer/trockener Ledger hat noch keine echte Woche. Dann
+           trotzdem nicht die ersten fünf Pool-Themen mischen, sondern je
+           Rechtsgebiet genau einen hoch priorisierten Vertreter nehmen. */
+        if (!wochenThemen.length) {
+          wochenThemen = [1, 2, 3].map((gebiet) => {
+            const t = pool.find((x) => x.klausur === gebiet && x.prioritaet === "hoch")
+              || pool.find((x) => x.klausur === gebiet);
+            return t ? { titel: t.titel, fach: t.fach, fachLabel: FAECHER[t.fach]?.kurz || null, gebiet } : null;
+          }).filter(Boolean);
+        }
       }
       text = await beitragSchreiben({ format: eintrag.format, thema, datum, recherche, wochenThemen, anlass: eintrag.format === "anlass" ? plan.anlass : eintrag.format === "loesungsskizze" ? plan.abendAnlass : null, strategie });
     }
