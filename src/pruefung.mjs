@@ -64,7 +64,7 @@ export function pruefeWochenrueckblick(beitrag) {
   const gebiete = [
     { index: 1, label: "Zivilrecht", muster: /\bZivilrecht\b/i },
     { index: 2, label: "Strafrecht", muster: /\bStrafrecht\b/i },
-    { index: 3, label: "Öffentliches Recht", muster: /\b(?:Öffentliches|Oeffentliches)\s+Recht\b/i },
+    { index: 3, label: "Öffentliches Recht", muster: /(?:Öffentliches|Oeffentliches)\s+Recht\b/i },
   ];
   for (const g of gebiete) {
     const titel = String(folien[g.index]?.titel || "");
