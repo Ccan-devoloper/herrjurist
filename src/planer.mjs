@@ -10,7 +10,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { CONFIG } from "./config.mjs";
-import { themenpool, FAECHER, KLAUSUREN } from "./inhalte.mjs";
+import { themenpool, FAECHER, KLAUSUREN, FEED_KATEGORIEN, feedKategorie } from "./inhalte.mjs";
 import { heuteIso, wochentag, minutenVon, hhmm, tageBis } from "./zeit.mjs";
 import { anlaesseFuer, mindsetThema } from "./kalender.mjs";
 import { zeitenWaehlen } from "./zeiten.mjs";
@@ -225,7 +225,14 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
      Pool-Thema laesst sein Gebiet lieber liegen; es geht als Wunsch in die
      Recherche (siehe fehlendesGebiet() in lauf.mjs). */
   const rotation = gebieteDesTages(datum, formate.length);
-  const gebietFuer = new Map(poolSlots.map((slot) => [slot, rotation[slot]]));
+  /* Samstag gehört der erste Karussell-Slot bewusst der violetten
+     Klausurmethodik. Das Reel ist ebenfalls violett (Mindset), dazwischen
+     liegt ein Fachbeitrag. So können beide Sonderformate am selben Tag
+     erscheinen, ohne im Feed direkt aufeinanderzufolgen. */
+  const gebietFuer = new Map(poolSlots.map((slot) => [
+    slot,
+    wt === 6 && formate[slot] === "klausurtechnik" ? 0 : rotation[slot],
+  ]));
   const beitraege = new Array(formate.length);
   for (const i of reihenfolge) {
     const format = formate[i];
@@ -245,10 +252,10 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
          Nur wenn der Pool dafür kein freies Thema mehr hergibt, weicht der
          Slot aus: ein Beitrag im Nachbargebiet ist besser als keiner. */
       const ziel = gebietFuer.get(i);
-      if (ziel) {
+      if (ziel != null) {
         const imGebiet = kandidaten.filter((t) => t.klausur === ziel);
         if (imGebiet.length) kandidaten = imGebiet;
-        else console.warn(`  ! ${KLAUSUREN[ziel]?.kurz || ziel}: kein freies Thema für „${format}“ – dieser Slot weicht heute aus.`);
+        else console.warn(`  ! ${FEED_KATEGORIEN[ziel] || KLAUSUREN[ziel]?.kurz || ziel}: kein freies Thema für „${format}“ – dieser Slot weicht heute aus.`);
       }
       thema = gewichteteWahl(kandidaten.length ? kandidaten : pool.filter((t) => typen.includes(t.typ)), zufall, ledgerKopie, strategie);
       /* War das Thema schon einmal dran, reist die Vorgeschichte mit: Format,
@@ -261,7 +268,15 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
     /* Samstags-Reel: Mindset statt Fachthema – holt Menschen ab, die Fachposts nie sehen. */
     if (format === "reel" && wt === 6) thema = mindsetThema(datum);
     const zeit = format === "loesungsskizze" ? abendAnlass.zeit : (zeiten[i] || zeiten.at(-1));
-    const eintrag = { slot: `b${i + 1}`, zeit, format, thema, anlass: format === "anlass" ? anlass : format === "loesungsskizze" ? abendAnlass : undefined, lang: format === "reel" ? CONFIG.reel.langeTage.includes(wt) : undefined };
+    /* Sichtbare Kategorie wird am Plan festgehalten. Das ist besonders für
+       freie Formate wichtig: „aktuell“ hat noch kein Thema, der
+       Wochenrückblick nie eines. */
+    const klausur = format === "wochenrueckblick"
+      ? 4
+      : (format === "reel" && wt === 6)
+        ? 0
+        : (thema?.klausur ?? rotation[i] ?? null);
+    const eintrag = { slot: `b${i + 1}`, zeit, format, thema, klausur, anlass: format === "anlass" ? anlass : format === "loesungsskizze" ? abendAnlass : undefined, lang: format === "reel" ? CONFIG.reel.langeTage.includes(wt) : undefined };
     beitraegeBisher.push(eintrag);
     beitraege[i] = eintrag;
   }
@@ -368,14 +383,29 @@ export function uebertragen(plan, planGestern, gestern) {
   const uebernommen = [];
   for (const alt of offen) {
     const istReel = alt.format === "reel";
-    let ziel = plan.beitraege.find((b) => (b.format === "reel") === istReel && !b.uebertragenVon);
-    const mitnahme = { format: alt.format, themaId: alt.themaId || null, themaTitel: alt.themaTitel || null, fach: alt.fach || null, lang: alt.lang, uebertragenVon: `${gestern}-${alt.slot}`, uebertragen: (alt.uebertragen || 0) + 1 };
-    if (ziel) Object.assign(ziel, mitnahme);
-    else {
-      const letzte = plan.beitraege[plan.beitraege.length - 1];
-      ziel = { slot: `b${plan.beitraege.length + 1}`, zeit: letzte?.zeit || "12:30", status: "geplant", ...mitnahme };
-      plan.beitraege.push(ziel);
-    }
+    const kategorie = feedKategorie(alt);
+    /* Übertrag darf die Farbfolge nicht verändern. Ein alter Beitrag ersetzt
+       nur einen heutigen Platz derselben sichtbaren Kategorie und derselben
+       Medienart. Gibt es so einen Platz nicht, bleibt er zurück. Dadurch
+       wandert z. B. ein Sonntags-Wochenrückblick nicht in den Montag. */
+    const ziel = plan.beitraege.find((b) =>
+      (b.format === "reel") === istReel &&
+      !b.uebertragenVon &&
+      kategorie != null &&
+      feedKategorie(b) === kategorie
+    );
+    if (!ziel) continue;
+    const mitnahme = {
+      format: alt.format,
+      themaId: alt.themaId || null,
+      themaTitel: alt.themaTitel || null,
+      fach: alt.fach || null,
+      klausur: kategorie,
+      lang: alt.lang,
+      uebertragenVon: `${gestern}-${alt.slot}`,
+      uebertragen: (alt.uebertragen || 0) + 1,
+    };
+    Object.assign(ziel, mitnahme);
     uebernommen.push({ alt, ziel });
   }
   return uebernommen;
