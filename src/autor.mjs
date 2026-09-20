@@ -11,6 +11,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config.mjs";
+import { manuellFinalisiert } from "./finalisierung.mjs";
 import { istKostenKontrollFehler } from "./kostenfehler.mjs";
 import { FAECHER, KLAUSUREN } from "./inhalte.mjs";
 import { belegstelle } from "./wissen.mjs";
@@ -960,28 +961,33 @@ Alles in eigenen Worten, juristisch korrekt, mit Norm. Nicht benötigte Felder n
    ganzen Aufruf mitnahm. */
 export async function storiesPruefen(liste) {
   if (!liste.length) return liste;
+  /* Im Chat finalisierte Kacheln sind fachlich abgeschlossen. Sie werden
+     weder erneut an ein Modell geschickt noch bei einem Fehler des
+     automatischen Batches wieder als "offen" markiert. */
+  const pruefliste = liste.filter((s) => !manuellFinalisiert(s));
+  if (!pruefliste.length) return liste;
   try {
-    const fakten = await faktenSicher({ stories: liste }, "story-faktencheck", {
+    const fakten = await faktenSicher({ stories: pruefliste }, "story-faktencheck", {
       hinweis: "Jede Kachel steht für sich - mit einer Ausnahme: Was unter [QuizPair] steht, ist EIN Gegenstand. Frage und Antwort gehören dort zusammen, und du beanstandest ausdrücklich, wenn die als richtig markierte Option fachlich nicht die richtige ist oder wenn Frage und Antwort einander widersprechen. Nenne zu jedem Befund den Slot in eckigen Klammern, genau so, wie er im Kopf der Kachel steht (zum Beispiel [s5]).",
     });
-    korrekturenAnwenden({ stories: liste }, fakten.korrekturen);
+    korrekturenAnwenden({ stories: pruefliste }, fakten.korrekturen);
     /* Das Ergebnis dieser Pruefung wird erst gesammelt und dann als Ganzes
        gesetzt: Eine fachliche Vollpruefung ersetzt die fachlichen Befunde der
        geprueften Fassung, sie haengt sie nicht an. Findet sie nichts, ist der
        alte fachliche Befund erledigt - sonst haette eine einmal beanstandete
        Kachel keinen Weg zurueck, auch wenn der Text laengst korrigiert ist.
        Befunde anderer Herkunft (Form, Quiz) bleiben unberuehrt. */
-    const neueBefunde = liste.map(() => []);
+    const neueBefunde = pruefliste.map(() => []);
     for (const f of fakten.fehler || []) {
       const treffer = String(f).match(/\[?\b(s\d+)\b\]?/);
       /* Ohne erkennbaren Slot lässt sich der Befund keiner Kachel zuordnen -
          dann werden lieber alle neu geschrieben als eine falsche zu posten. */
-      liste.forEach((o, i) => { if (!treffer || o.slot === treffer[1]) neueBefunde[i].push(String(f)); });
+      pruefliste.forEach((o, i) => { if (!treffer || o.slot === treffer[1]) neueBefunde[i].push(String(f)); });
     }
     /* Fachliche Befunde in ihr eigenes Feld, mit Stempel der geprueften
        Fassung: Ein spaeterer Formcheck darf sie nicht schliessen (Safety 0c),
        eine spaetere Vollpruefung derselben Fassung schon. */
-    liste.forEach((o, i) => fachpruefungAbschliessen(o, neueBefunde[i]));
+    pruefliste.forEach((o, i) => fachpruefungAbschliessen(o, neueBefunde[i]));
   } catch (e) {
     /* Nicht nur beim Budget: Auch ein technischer Ausfall der Prüfung
        (API-Störung, unlesbares Ergebnis) darf die bezahlten Texte nicht
@@ -989,7 +995,7 @@ export async function storiesPruefen(liste) {
        werden im nächsten Lauf geprüft. Ungeprüft erscheint keine. */
     if (istKostenKontrollFehler(e)) console.warn(`  ⏸ ${e.message.split("\n")[0]} – die Story-Texte bleiben gespeichert und werden im nächsten Lauf geprüft.`);
     else console.warn(`  ! Story-Faktencheck ausgefallen (${e.message.split("\n")[0].slice(0, 120)}) – die Texte bleiben gespeichert und werden im nächsten Lauf geprüft.`);
-    for (const o of liste) o.faktencheckOffen = true;
+    for (const o of pruefliste) o.faktencheckOffen = true;
   }
   return liste;
 }
@@ -1237,6 +1243,9 @@ export async function bildregie(reel) {
    das Reel geht mit den Motiven des Autors weiter. */
 export async function bildregieSicher(reel) {
   if (!reel || reel.bildregie) return false;
+  /* Bei einem morgens im Chat finalisierten Reel ist die Szenen-/Bildregie
+     Teil der Freigabe. Kein weiterer LLM-Aufruf kurz vor dem Rendern. */
+  if (manuellFinalisiert(reel)) { reel.bildregie = true; return false; }
   try { const r = await bildregie(reel); if (r.geprueft) console.log(`  Bildregie: ${r.ersetzt} von ${r.geprueft} Motiven ersetzt.`); reel.bildregie = true; return true; }
   catch (e) { console.warn(`  ! Bildregie übersprungen (${e.message.split("\n")[0].slice(0, 100)}) – Motive des Autors bleiben.`); return false; }
 }
