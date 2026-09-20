@@ -59,14 +59,23 @@ async function collectWeb(){
 function rank(items){const map=new Map;for(const m of items)map.set(m.id||m.permalink,m);const now=Date.now();return [...map.values()].map(m=>{const s=clean(m.caption).toLowerCase(),hits=CFG.keys.filter(k=>s.includes(k)).length,age=m.timestamp?Math.max(0,(now-Date.parse(m.timestamp))/36e5):96,score=Math.round((hits*10+Math.max(0,42-age/2.5)+Math.log10((+m.like_count||0)+1)*8+Math.log10((+m.comments_count||0)+1)*14)*10)/10,[c,a]=comments(m);return{id:m.id,permalink:m.permalink,mediaType:m.media_type||'',timestamp:m.timestamp||null,likeCount:+m.like_count||0,commentCount:+m.comments_count||0,caption:cut(m.caption),foundVia:m.foundVia,score,comment:c,alternativeComment:a}}).filter(x=>x.score>=10).sort((a,b)=>b.score-a.score).slice(0,18)}
 function encrypt(payload,pem){const k=crypto.randomBytes(32),iv=crypto.randomBytes(12),c=crypto.createCipheriv('aes-256-gcm',k,iv);c.setAAD(Buffer.from('reichweite-data-v1'));const data=Buffer.concat([c.update(Buffer.from(JSON.stringify(payload))),c.final()]);const tag=c.getAuthTag(),wk=crypto.publicEncrypt({key:pem,oaepHash:'sha256',padding:crypto.constants.RSA_PKCS1_OAEP_PADDING},k);return{version:1,alg:'RSA-OAEP-256+A256GCM',aad:'reichweite-data-v1',createdAt:new Date().toISOString(),iv:iv.toString('base64'),tag:tag.toString('base64'),key:wk.toString('base64'),data:data.toString('base64')}}
 
-const token=process.env.IG_ACCESS_TOKEN||'',id=process.env.IG_ACCOUNT_ID||'',ver=process.env.IG_GRAPH_VERSION||'v23.0',host=process.env.IG_GRAPH_HOST||'instagram',out=process.env.REICHWEITE_OUT||path.resolve('out/reichweite.enc.json'),pem=await fs.readFile(path.join(dir,'public-key.pem'),'utf8');
+const token=process.env.IG_ACCESS_TOKEN||'',fbToken=process.env.FB_PAGE_TOKEN||'',id=process.env.IG_ACCOUNT_ID||'',ver=process.env.IG_GRAPH_VERSION||'v23.0',host=process.env.IG_GRAPH_HOST||'instagram',out=process.env.REICHWEITE_OUT||path.resolve('out/reichweite.enc.json'),pem=await fs.readFile(path.join(dir,'public-key.pem'),'utf8');
 let found=[],errs=[],used=null,source=null;
-if(token&&id){
- const fb=`https://graph.facebook.com/${ver}`,ig=`https://graph.instagram.com/${ver}`,bases=[...new Set([host==='facebook'?fb:ig,fb,ig])];
- for(const b of bases){
-  const r=await collect(b,id,token);
-  errs.push(...r.errors.map(e=>({...e,base:b})));
-  if(r.out.length){found=r.out;used=b;source='meta-hashtags';break}
+if(id){
+ const fb=`https://graph.facebook.com/${ver}`,ig=`https://graph.instagram.com/${ver}`;
+ const attempts=[];
+ if(token) attempts.push({base:host==='facebook'?fb:ig,token,label:'instagram-konfig'});
+ if(fbToken) attempts.push({base:fb,token:fbToken,label:'facebook-seite'});
+ if(token && host!=='instagram') attempts.push({base:ig,token,label:'instagram-login'});
+ if(token && host!=='facebook') attempts.push({base:fb,token,label:'facebook-mit-ig-token'});
+ const seen=new Set();
+ for(const a of attempts){
+  const k=a.base+'|'+a.token;
+  if(seen.has(k)) continue;
+  seen.add(k);
+  const r=await collect(a.base,id,a.token);
+  errs.push(...r.errors.map(e=>({...e,base:a.base,auth:a.label})));
+  if(r.out.length){found=r.out;used=a.base;source='meta-hashtags';break}
  }
 }
 if(!found.length){
