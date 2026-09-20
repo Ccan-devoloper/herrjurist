@@ -60,5 +60,26 @@ function rank(items){const map=new Map;for(const m of items)map.set(m.id||m.perm
 function encrypt(payload,pem){const k=crypto.randomBytes(32),iv=crypto.randomBytes(12),c=crypto.createCipheriv('aes-256-gcm',k,iv);c.setAAD(Buffer.from('reichweite-data-v1'));const data=Buffer.concat([c.update(Buffer.from(JSON.stringify(payload))),c.final()]);const tag=c.getAuthTag(),wk=crypto.publicEncrypt({key:pem,oaepHash:'sha256',padding:crypto.constants.RSA_PKCS1_OAEP_PADDING},k);return{version:1,alg:'RSA-OAEP-256+A256GCM',aad:'reichweite-data-v1',createdAt:new Date().toISOString(),iv:iv.toString('base64'),tag:tag.toString('base64'),key:wk.toString('base64'),data:data.toString('base64')}}
 
 const token=process.env.IG_ACCESS_TOKEN||'',id=process.env.IG_ACCOUNT_ID||'',ver=process.env.IG_GRAPH_VERSION||'v23.0',host=process.env.IG_GRAPH_HOST||'instagram',out=process.env.REICHWEITE_OUT||path.resolve('out/reichweite.enc.json'),pem=await fs.readFile(path.join(dir,'public-key.pem'),'utf8');
-let payload;if(!token||!id)payload={channel:CH,label:CFG.label,generatedAt:new Date().toISOString(),status:'konfiguration-fehlt',posts:[],message:'IG_ACCESS_TOKEN oder IG_ACCOUNT_ID fehlt.'};else{const fb=`https://graph.facebook.com/${ver}`,ig=`https://graph.instagram.com/${ver}`,bases=[...new Set([host==='facebook'?fb:ig,fb,ig])];let found=[],errs=[],used=null;for(const b of bases){const r=await collect(b,id,token);errs.push(...r.errors.map(e=>({...e,base:b})));if(r.out.length){found=r.out;used=b;break}}const posts=rank(found);payload={channel:CH,label:CFG.label,generatedAt:new Date().toISOString(),status:posts.length?'ok':'keine-treffer',source:'meta-hashtags',apiBase:used,posts,message:posts.length?`${posts.length} öffentliche Posts ausgewählt.`:'Keine geeigneten öffentlichen Posts gefunden. Eventuell fehlt der Meta-App der Public-Content-Zugriff.',errors:errs.slice(0,8)}}
+let found=[],errs=[],used=null,source=null;
+if(token&&id){
+ const fb=`https://graph.facebook.com/${ver}`,ig=`https://graph.instagram.com/${ver}`,bases=[...new Set([host==='facebook'?fb:ig,fb,ig])];
+ for(const b of bases){
+  const r=await collect(b,id,token);
+  errs.push(...r.errors.map(e=>({...e,base:b})));
+  if(r.out.length){found=r.out;used=b;source='meta-hashtags';break}
+ }
+}
+if(!found.length){
+ const w=await collectWeb();
+ found=w.out;
+ errs.push(...w.errors);
+ if(found.length) source='public-web-search';
+}
+const posts=rank(found);
+const payload={
+ channel:CH,label:CFG.label,generatedAt:new Date().toISOString(),
+ status:posts.length?'ok':'keine-treffer',source,apiBase:used,posts,
+ message:posts.length?`${posts.length} öffentliche Instagram-Posts ausgewählt.`:'Keine geeigneten öffentlichen Instagram-Posts gefunden. Meta-Public-Content ist nicht freigeschaltet und die kostenfreie Websuche lieferte keine verwertbaren Direktlinks.',
+ errors:errs.slice(0,12)
+};
 await fs.mkdir(path.dirname(out),{recursive:true});await fs.writeFile(out,JSON.stringify(encrypt(payload,pem),null,2)+'\n');console.log(`[reichweite] ${CFG.label}: ${payload.posts?.length||0} Vorschläge · ${payload.status}`);
