@@ -53,6 +53,39 @@ export function pruefeAufbau(folien) {
   return fehler;
 }
 
+export function pruefeWochenrueckblick(beitrag) {
+  if (beitrag?.format !== "wochenrueckblick") return [];
+  const folien = beitrag.folien || [];
+  const fehler = [];
+  if (folien.length !== 6) {
+    fehler.push("Wochenrückblick: genau 6 Folien erwartet (Cover, Zivilrecht, Strafrecht, Öffentliches Recht, Klausurtechnik/Lernplan, CTA)");
+  }
+
+  const gebiete = [
+    { index: 1, label: "Zivilrecht", muster: /\bZivilrecht\b/i },
+    { index: 2, label: "Strafrecht", muster: /\bStrafrecht\b/i },
+    { index: 3, label: "Öffentliches Recht", muster: /\b(?:Öffentliches|Oeffentliches)\s+Recht\b/i },
+  ];
+  for (const g of gebiete) {
+    const titel = String(folien[g.index]?.titel || "");
+    if (!g.muster.test(titel)) fehler.push(`Wochenrückblick: Folie ${g.index + 1} muss eine eigene „${g.label}“-Folie sein`);
+    for (const anderes of gebiete) {
+      if (anderes.index !== g.index && anderes.muster.test(titel)) {
+        fehler.push(`Wochenrückblick: Folie ${g.index + 1} darf „${g.label}“ nicht mit „${anderes.label}“ in einer Überschrift bündeln`);
+      }
+    }
+  }
+
+  const bgbAt = /\bBGB\s*(?:AT|Allgemeiner(?:\s+Teil)?)\b/i;
+  for (const index of [2, 3]) {
+    const folie = folien[index];
+    if (folie && bgbAt.test(JSON.stringify(folie))) {
+      fehler.push(`Wochenrückblick: BGB AT gehört zum Zivilrecht und darf nicht auf Folie ${index + 1} stehen`);
+    }
+  }
+  return fehler;
+}
+
 export const GRENZEN = {
   titelZeichen: 110,
   folienTextZeichen: 600,   // der Renderer passt Text automatisch ein; erst deutliche Überlänge kostet eine Neufassung
@@ -775,6 +808,7 @@ export function pruefeBeitrag(beitrag, opt = {}) {
     });
     if (!beitrag.folien[0]?.titel) fehler.push("Folie 1 braucht einen Titel (die Frage/den Aufhänger)");
     fehler.push(...pruefeAufbau(beitrag.folien));
+    fehler.push(...pruefeWochenrueckblick(beitrag));
   }
   if (beitrag.caption != null) {
     if (beitrag.caption.length > GRENZEN.captionZeichen) fehler.push(`Caption zu lang (${beitrag.caption.length})`);
