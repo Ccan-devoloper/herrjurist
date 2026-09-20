@@ -1694,9 +1694,11 @@ test("Erklärvideo: Stichworte, Zeitpunkte und Bühne", async () => {
   assert.ok(html.includes("kreuz"), "das rote Kreuz fehlt");
   assert.ok(!/aevalsrc|klangbett/i.test(html), "im Erklärvideo darf kein Klang stecken");
 
-  /* Beide Layouts lösen sich ab, damit die Zahlen vergleichbar bleiben. */
-  assert.notEqual(layoutFuer("2026-09-14"), layoutFuer("2026-09-15"));
+  /* Das Erklärlayout bleibt dauerhaft aktiv, bis ausdrücklich klassisch
+     konfiguriert wird. Ein Datumswechsel darf es nicht mehr zurückdrehen. */
   assert.equal(layoutFuer("2026-09-14"), "erklaer");
+  assert.equal(layoutFuer("2026-09-15"), "erklaer");
+  assert.equal(layoutFuer("2026-10-15"), "erklaer");
 });
 
 test("Erklärvideo: kein Bild ist besser als ein falsches", async () => {
@@ -2413,13 +2415,11 @@ test("Wer auf den Folien handelt, wird auf den Folien vorgestellt", async () => 
     "abstrakte Fachsprache wird als Falldarstellung missverstanden");
 });
 
-test("Das Erklärvideo läuft fünf Tage am Stück und hat Budget für seine Figuren", async () => {
+test("Das Erklärvideo bleibt dauerhaft aktiv und hat Budget für seine Figuren", async () => {
   const { layoutFuer } = await import("../src/reel.mjs");
-  for (const d of ["2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20", "2026-09-21"]) {
+  for (const d of ["2026-09-17", "2026-09-18", "2026-09-21", "2026-09-23", "2027-01-15"]) {
     assert.equal(layoutFuer(d), "erklaer", `${d} baut nicht das Erklärvideo`);
   }
-  /* Danach läuft das Fenster von selbst ab – niemand muss etwas zurücksetzen. */
-  assert.equal(layoutFuer("2026-09-23"), "klassisch", "das Fenster endet nicht von selbst");
 
   /* Die Figuren tragen einen eigenen Zweck - und der ist eine Kür. Solange
      bezahlte Pflichtarbeit aussteht, bekommen sie kein Geld; danach schon.
