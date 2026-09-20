@@ -179,7 +179,7 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story .merke{font-size:96px}
 /* Motiv in Story und Reel-Cover: unten rechts, laeuft aus der Kachel; der
    Text darueber bleibt frei, die Fusszeile liegt ueber dem Motiv. */
-.story .frei{width:720px;height:820px;right:0;bottom:0}
+.story .frei{width:720px;height:820px;right:40px;bottom:44px}
 .story .foto{left:84px;right:84px;bottom:150px;height:600px}
 .story:has(.frei) .fuss,.story:has(.foto) .fuss{z-index:3}
 .story .bildquelle{position:absolute;left:84px;bottom:96px;font-size:22px;color:var(--text-weich);opacity:.85;z-index:3}
@@ -300,7 +300,7 @@ h1 em{color:${p.akzent2}}
    Buendig am rechten Rand statt darueber hinaus: Solange die Motive als
    Briefmarke in der Ecke sassen, schnitt der Ueberstand nur Luft ab - jetzt
    wuerde er das Motiv selbst anschneiden. */
-.frei{position:absolute;right:0;bottom:0;width:640px;height:620px;z-index:1;pointer-events:none}
+.frei{position:absolute;right:36px;bottom:34px;width:640px;height:620px;z-index:1;pointer-events:none}
 /* Links neben dem Motiv, unterhalb der Pfeilzeile: Der Kasten des Motivs
    beginnt bei x = 440 px, die Pfeilzeile endet auch bei vier Titelzeilen
    oberhalb von y = 860 px - dazwischen ist die Flaeche frei. */
@@ -326,8 +326,8 @@ h1 em{color:${p.akzent2}}
 .art-titel:has(.frei) .pille{margin-left:20px;z-index:3}
 .art-titel:has(.frei) .fuss{z-index:3}
 .art-titel:has(.frei) .fuss .klausur{background:var(--grund);padding:6px 18px;border-radius:30px}
-.foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1}
-.foto img{width:100%;height:100%;object-fit:cover;display:block}
+.foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1;background:rgba(255,255,255,.14);padding:18px;box-sizing:border-box}
+.foto img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:28px}
 .illu{right:auto;left:330px;bottom:70px;width:420px;height:420px;color:${p.dunkel};opacity:1;z-index:1}
 .illu::before{display:none}
 .illu .icon{width:380px;height:380px}
@@ -492,8 +492,8 @@ export function motivBuehne(breite, hoehe, ziel) {
 }
 
 /* Ziele je Format: Die Fläche entspricht etwa 60 % der alten festen Box. */
-export const BUEHNE_BEITRAG = { flaeche: 640 * 620 * 0.72, maxB: 900, maxH: 700 };
-export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.72, maxB: 1000, maxH: 950 };
+export const BUEHNE_BEITRAG = { flaeche: 640 * 620 * 0.62, maxB: 820, maxH: 640 };
+export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.62, maxB: 920, maxH: 850 };
 
 function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   /* Freigestellt: Das Motiv laeuft unten rechts aus der Kachel, ohne Rahmen.
