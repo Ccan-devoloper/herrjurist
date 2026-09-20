@@ -18,6 +18,7 @@ import { hhmm } from "./zeit.mjs";
 const METRIKEN_BILD = "reach,saved,shares,likes,comments,total_interactions";
 const METRIKEN_REEL = "reach,saved,shares,likes,comments,total_interactions,views";
 const METRIKEN_REEL_WATCH = "ig_reels_avg_watch_time,ig_reels_video_view_total_time";
+const METRIK_REEL_SKIP = "reels_skip_rate";
 /* Wachstumskennzahlen: neue Follower und Profilbesuche je Beitrag – nicht jede
    API-Version liefert sie, deshalb mit Rückfall auf die Grundmetriken. */
 const METRIKEN_WACHSTUM = "follows,profile_visits";
@@ -31,6 +32,15 @@ const STORY_INSIGHTS_MIN_ALTER_STUNDEN = 1;
 const STORY_INSIGHTS_MAX_ALTER_STUNDEN = 23.75;
 const STORY_INSIGHTS_ABSTAND_STUNDEN = 4;
 const STORY_INSIGHTS_ENDSPURT_ABSTAND_STUNDEN = 2;
+
+/* Dashboard-Snapshots: Feed/Reels werden in den ersten sieben Tagen mehrfach
+   gemessen. So bleibt nicht nur der Endstand erhalten, sondern auch die
+   Wachstumskurve eines Inhalts. Das separate JSON ist absichtlich kompakt und
+   wird vom Dashboard direkt aus dem Asset-Zweig gelesen. */
+const SNAPSHOT_MIN_ALTER_STUNDEN = 0.75;
+const SNAPSHOT_MAX_ALTER_STUNDEN = 168.5;
+const SNAPSHOT_MAX_PRO_MEDIUM = 24;
+const SNAPSHOT_MAX_KONTO = 1500;
 
 function werte(r) {
   const o = {};
@@ -56,6 +66,10 @@ export async function medienInsights(ig, medium) {
     if (istReel) {
       try { Object.assign(out, werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: METRIKEN_REEL_WATCH }, { versuche: 1 }))); }
       catch { /* optionale Metrik, Basiswerte bleiben */ }
+      /* Meta liefert die Skip-Rate nicht auf jedem Konto/API-Stand. Deshalb
+         separat: Ein unbekanntes Feld darf die Watch-Time nicht mitreißen. */
+      try { Object.assign(out, werte(await ig.anfrage("GET", `${medium.id}/insights`, { metric: METRIK_REEL_SKIP }, { versuche: 1 }))); }
+      catch { /* optional */ }
     }
     return out;
   } catch {
@@ -133,6 +147,7 @@ export async function storyInsightsAktualisieren(ig, ledger, {
   maxAlterStunden = STORY_INSIGHTS_MAX_ALTER_STUNDEN,
   abstandStunden = STORY_INSIGHTS_ABSTAND_STUNDEN,
   endspurtAbstandStunden = STORY_INSIGHTS_ENDSPURT_ABSTAND_STUNDEN,
+  snapshots = null,
 } = {}) {
   const jetztDatum = jetzt instanceof Date ? jetzt : new Date(jetzt);
   const jetztMs = jetztDatum.getTime();
@@ -158,11 +173,158 @@ export async function storyInsightsAktualisieren(ig, ledger, {
     e.insights = m;
     e.insightsStand = jetztDatum.toISOString();
     e.insightsAlterStunden = Math.round(alterStunden * 10) / 10;
+    if (snapshots) snapshotHinzufuegen(snapshots, e, m, alterStunden, e.insightsStand);
     gemessen++;
   }
 
   if (versucht) log(`Story-Insights: ${gemessen}/${versucht} Storys gespeichert`);
   return { gemessen, versucht };
+}
+
+/* --------------------------------------------------------------------------
+   Zeitreihen fuer das Dashboard
+   -------------------------------------------------------------------------- */
+
+function snapshotAbstandStunden(alterStunden) {
+  if (alterStunden < 6) return 1.5;
+  if (alterStunden < 24) return 3;
+  if (alterStunden < 72) return 8;
+  return 24;
+}
+
+function snapshotMetriken(m = {}) {
+  const out = {};
+  for (const [k, v] of Object.entries(m)) {
+    if (typeof v === "number" && Number.isFinite(v)) out[k] = v;
+  }
+  return out;
+}
+
+function snapshotFaellig(bestand, e, alterStunden, jetztMs) {
+  const liste = bestand?.medien?.[String(e.medienId)]?.snapshots || [];
+  if (!liste.length) return true;
+  const letzterMs = Date.parse(liste.at(-1)?.stand || "");
+  if (!Number.isFinite(letzterMs)) return true;
+  return (jetztMs - letzterMs) / 3600000 >= snapshotAbstandStunden(alterStunden);
+}
+
+export function snapshotHinzufuegen(bestand, e, metriken, alterStunden, stand = new Date().toISOString()) {
+  if (!bestand || !e?.medienId || !metriken) return bestand;
+  bestand.version = 1;
+  bestand.medien ||= {};
+  const id = String(e.medienId);
+  const alt = bestand.medien[id] || {};
+  const meta = {
+    art: e.art || null,
+    datum: e.datum || null,
+    titel: e.titel || null,
+    format: e.format || null,
+    fach: e.fach || null,
+    hook: e.hookTyp || e.hookMuster || null,
+    dauer: Number(e.dauer) || null,
+    veroeffentlicht: e.veroeffentlicht || null,
+  };
+  const snapshots = [...(alt.snapshots || []), {
+    stand,
+    alterStunden: Math.round(Number(alterStunden) * 10) / 10,
+    ...snapshotMetriken(metriken),
+  }].slice(-SNAPSHOT_MAX_PRO_MEDIUM);
+  bestand.medien[id] = { ...alt, ...meta, snapshots };
+  bestand.stand = stand;
+
+  /* Alte Medien entfernen, damit die State-Datei auch nach Monaten klein
+     bleibt. 120 Tage reichen fuer Dashboard und Langzeitvergleich; die
+     Tagesaggregate bleiben separat erhalten. */
+  const grenze = Date.now() - 120 * 86400000;
+  for (const [mediumId, eintrag] of Object.entries(bestand.medien)) {
+    const t = Date.parse(eintrag.veroeffentlicht || `${eintrag.datum || ""}T12:00:00Z`);
+    if (Number.isFinite(t) && t < grenze) delete bestand.medien[mediumId];
+  }
+  return bestand;
+}
+
+/* Feed/Reels: in den ersten sieben Tagen eine echte Wachstumskurve aufbauen.
+   Bestehende alte Posts werden nicht kuenstlich rueckdatiert; beim ersten Lauf
+   entsteht einfach der erste Snapshot mit seinem tatsaechlichen Alter. */
+export async function medienSnapshotsAktualisieren(ig, ledger, snapshots, {
+  log = console.log,
+  jetzt = new Date(),
+  maxProLauf = 8,
+} = {}) {
+  const jetztDatum = jetzt instanceof Date ? jetzt : new Date(jetzt);
+  const jetztMs = jetztDatum.getTime();
+  if (!Number.isFinite(jetztMs)) throw new Error("Ungueltiger Zeitpunkt fuer Medien-Snapshots");
+  snapshots ||= { version: 1, medien: {}, konto: [] };
+  snapshots.medien ||= {};
+
+  const kandidaten = (ledger.veroeffentlicht || []).filter((e) => {
+    if (e.art !== "beitrag" || !e.medienId || e.medienId === "trocken") return false;
+    const veroeffentlichtMs = Date.parse(e.veroeffentlicht || `${e.datum}T12:00:00Z`);
+    if (!Number.isFinite(veroeffentlichtMs)) return false;
+    const alter = (jetztMs - veroeffentlichtMs) / 3600000;
+    return alter >= SNAPSHOT_MIN_ALTER_STUNDEN
+      && alter <= SNAPSHOT_MAX_ALTER_STUNDEN
+      && snapshotFaellig(snapshots, e, alter, jetztMs);
+  }).slice(0, Math.max(1, Number(maxProLauf) || 8));
+
+  if (!kandidaten.length) return { gemessen: 0, versucht: 0 };
+
+  const medienTypen = new Map();
+  try {
+    const liste = await ig.anfrage("GET", `${ig.kontoId}/media`, { fields: "id,media_type,media_product_type,timestamp", limit: 60 });
+    for (const m of liste.data || []) medienTypen.set(String(m.id), m);
+  } catch { /* Fallback ueber Ledger-Format */ }
+
+  let gemessen = 0;
+  for (const e of kandidaten) {
+    const veroeffentlichtMs = Date.parse(e.veroeffentlicht || `${e.datum}T12:00:00Z`);
+    const alterStunden = (jetztMs - veroeffentlichtMs) / 3600000;
+    const medium = medienTypen.get(String(e.medienId))
+      || { id: e.medienId, media_type: e.format === "reel" ? "VIDEO" : "CAROUSEL_ALBUM", media_product_type: e.format === "reel" ? "REELS" : undefined };
+    const m = await medienInsights(ig, medium);
+    if (!m) continue;
+    e.insights = m;
+    e.insightsStand = jetztDatum.toISOString();
+    e.insightsAlterStunden = Math.round(alterStunden * 10) / 10;
+    snapshotHinzufuegen(snapshots, e, m, alterStunden, e.insightsStand);
+    gemessen++;
+  }
+
+  if (kandidaten.length) log(`Medien-Snapshots: ${gemessen}/${kandidaten.length} Feed/Reels gespeichert`);
+  return { gemessen, versucht: kandidaten.length };
+}
+
+/* Ein leichter Konto-Snapshot pro Stundenlauf. Damit kann das Dashboard auch
+   intraday einen Follower-Verlauf zeigen, ohne die schwere Lernschleife
+   stuendlich auszufuehren. */
+export async function kontoSnapshotAktualisieren(ig, snapshots, {
+  log = console.log,
+  jetzt = new Date(),
+  minAbstandStunden = 0.8,
+} = {}) {
+  const jetztDatum = jetzt instanceof Date ? jetzt : new Date(jetzt);
+  const jetztMs = jetztDatum.getTime();
+  if (!Number.isFinite(jetztMs)) throw new Error("Ungueltiger Zeitpunkt fuer Konto-Snapshot");
+  snapshots ||= { version: 1, medien: {}, konto: [] };
+  snapshots.konto ||= [];
+  const letzterMs = Date.parse(snapshots.konto.at(-1)?.stand || "");
+  if (Number.isFinite(letzterMs) && (jetztMs - letzterMs) / 3600000 < minAbstandStunden) {
+    return { gemessen: 0, versucht: 0 };
+  }
+  try {
+    const k = await ig.anfrage("GET", ig.kontoId, { fields: "followers_count,media_count" }, { versuche: 1 });
+    snapshots.konto.push({
+      stand: jetztDatum.toISOString(),
+      follower: Number(k.followers_count) || 0,
+      medien: Number(k.media_count) || 0,
+    });
+    snapshots.konto = snapshots.konto.slice(-SNAPSHOT_MAX_KONTO);
+    snapshots.stand = jetztDatum.toISOString();
+    log(`Konto-Snapshot: ${Number(k.followers_count) || 0} Follower`);
+    return { gemessen: 1, versucht: 1 };
+  } catch {
+    return { gemessen: 0, versucht: 1 };
+  }
 }
 
 /* Konto: Follower, Reichweite der letzten 7 Tage, Online-Stunden. */
