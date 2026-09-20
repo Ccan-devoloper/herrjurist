@@ -21,7 +21,7 @@ function topic(s){const l=s.toLowerCase(),k=CFG.keys.find(x=>l.includes(x));if(k
 const REL=CFG.domain==='steuer'
  ?{strong:['steuerberaterprüfung','steuerberaterexamen','steuerrecht','abgabenordnung','estg','ustg','kstg','gewstg','erbstg','bewg','umwstg','bilanzsteuerrecht','einkommensteuer','umsatzsteuer','körperschaftsteuer','gewerbesteuer','erbschaftsteuer','jahresabschluss','steuerfachwirt'],weak:['steuerberater','klausur','prüfung','examen','bilanz','buchführung','lernen'],negative:['stellenangebot','wir suchen','bewerbung','karriere','gewinnspiel','rabatt','kanzleialltag','team-event']}
  :{strong:['staatsexamen','jurastudium','referendariat','zivilrecht','strafrecht','öffentliches recht','bgb','stgb','zpo','stpo','vwgo','vwvfg','grundgesetz','bverfg','bgh','eugh','examensklausur'],weak:['jura','jurist','klausur','prüfung','examen','urteil','beschluss','lernen','jurastudent'],negative:['stellenangebot','wir suchen','bewerbung','karriere','gewinnspiel','rabatt','kanzleialltag','law firm','team-event']};
-function relevance(s){const t=clean(s).toLowerCase(),strong=REL.strong.filter(k=>t.includes(k)),weak=REL.weak.filter(k=>t.includes(k)),negative=REL.negative.filter(k=>t.includes(k)),statute=Boolean(norm(s));return{strong,weak,negative,statute,relevant:statute||strong.length>0||weak.length>=2}}
+function relevance(s,trusted=false){const t=clean(s).toLowerCase(),strong=REL.strong.filter(k=>t.includes(k)),weak=REL.weak.filter(k=>t.includes(k)),negative=REL.negative.filter(k=>t.includes(k)),statute=Boolean(norm(s));return{strong,weak,negative,statute,relevant:statute||strong.length>0||weak.length>=2||(trusted&&weak.length>=1&&negative.length===0)}}
 
 function comments(m){const s=clean(m.caption),t=topic(s),n=norm(s),court=/\b(bgh|bverfg|bverwg|bfh|eugh|olg|fg)\b/i.test(s),exam=/\b(examen|staatsexamen|steuerberaterprüfung|steuerberaterexamen|klausur|prüfung)\b/i.test(s);let a;
  if(CFG.domain==='steuer') a=n?[`Guter Punkt zu ${t}. Gerade für die StB-Prüfung lohnt es sich, ${n} nicht isoliert zu lernen, sondern den Prüfungsschritt sauber einzuordnen.`,`Sehr anschaulich. Bei ${t} ist für die Klausur gerade die Verknüpfung mit ${n} spannend.`]:exam?[`Treffend auf den Punkt gebracht. Bei ${t} ist in der StB-Prüfung oft die saubere Reihenfolge wichtiger als noch mehr Einzelwissen.`,`Guter Examenshinweis. ${t} wird deutlich sicherer, wenn man es einmal klausurmäßig durchprüft.`]:[`Spannender Beitrag zu ${t}. Genau solche Praxisbezüge helfen, den Stoff fürs Steuerberaterexamen wirklich einzuordnen.`,`Guter Impuls zu ${t}. Für die Examensvorbereitung würde ich daraus direkt einen Mini-Fall machen.`];
@@ -118,14 +118,14 @@ function rank(items){
  const map=new Map;for(const m of items)map.set(m.id||m.permalink,m);
  const now=Date.now();
  const scored=[...map.values()].map(m=>{
-  const caption=clean(m.caption),rel=relevance(caption),age=m.timestamp?Math.max(0,(now-Date.parse(m.timestamp))/36e5):96;
-  if(!rel.relevant||age>24*21)return null;
+  const caption=clean(m.caption),trusted=String(m.foundVia||'').startsWith('@'),rel=relevance(caption,trusted),age=m.timestamp?Math.max(0,(now-Date.parse(m.timestamp))/36e5):96;
+  if(!rel.relevant||age>24*90)return null;
   const freshness=Math.max(0,36-age/3),engagement=Math.log10((+m.like_count||0)+1)*5+Math.log10((+m.comments_count||0)+1)*9;
   const formatBonus=m.media_type==='CAROUSEL_ALBUM'?6:m.media_type==='IMAGE'?3:0;
   const score=Math.round((rel.strong.length*18+rel.weak.length*6+(rel.statute?20:0)-rel.negative.length*15+freshness+engagement+formatBonus)*10)/10;
   const [c,a]=comments(m);
   return{id:m.id,permalink:m.permalink,mediaType:m.media_type||'',timestamp:m.timestamp||null,likeCount:+m.like_count||0,commentCount:+m.comments_count||0,caption:cut(m.caption),foundVia:m.foundVia,score,matchedTerms:[...rel.strong,...rel.weak].slice(0,5),comment:c,alternativeComment:a};
- }).filter(Boolean).filter(x=>x.score>=30).sort((a,b)=>b.score-a.score);
+ }).filter(Boolean).filter(x=>x.score>=20).sort((a,b)=>b.score-a.score);
  const selected=[],sources=new Map;let reels=0;
  for(const x of scored){
   const isReel=/REEL/i.test(x.mediaType),source=String(x.foundVia||'');
