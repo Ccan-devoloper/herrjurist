@@ -650,7 +650,7 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
   const kern = CONFIG.hashtags.kern;
   const tags = hashtagsWaehlen(daten.hashtags || [], kern, strategie, undefined, klausur);
   return {
-    format, fach, klausur, fachLabel: FAECHER[fach]?.label || "Examenswissen",
+    format, fach, klausur, fachLabel: format === "wochenrueckblick" ? "Wochenrückblick" : (FAECHER[fach]?.label || "Examenswissen"),
     themaId: thema?.id || null,
     folien,
     caption: (daten.caption || "").trim(),
@@ -670,8 +670,9 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
 export async function beitragSchreiben({ format, thema, datum, recherche, wochenThemen, anlass, strategie }) {
   if (process.env.IG_AUTOR === "beispiele") return beispielBeitrag(format, thema);
   const spec = FORMATE[format] || FORMATE.pruefungsfrage;
-  const fach = thema?.fach || recherche?.fach || "methodik";
-  const klausur = FAECHER[fach]?.klausur ?? 3;
+  const istWochenrueckblick = format === "wochenrueckblick";
+  const fach = istWochenrueckblick ? "wochenrueckblick" : (thema?.fach || recherche?.fach || "methodik");
+  const klausur = istWochenrueckblick ? 4 : (FAECHER[fach]?.klausur ?? 3);
   const sperr = korpus().namen;
   let feedback = "";
   let letzter = null;
@@ -738,7 +739,7 @@ export async function aktuellRecherchieren(datum, bereitsBehandelt = [], gebiet 
      Nachrichtenlage laesst sich nicht einteilen, und eine erzwungene
      Randentscheidung aus dem richtigen Gebiet waere schlechter als eine
      starke aus dem falschen. */
-  const wunsch = gebiet ? `\n- Wenn die Auswahl es hergibt, nimm bevorzugt etwas aus dem ${gebiet}; heute fehlt dieses Gebiet sonst im Kanal. Zwingend ist das nicht.` : "";
+  const wunsch = gebiet ? `\n- Dieser Slot gehört heute zwingend in das ${gebiet}. Nimm nur eine Neuigkeit aus diesem Rechtsgebiet. Wenn du dort in den letzten 6 Wochen nichts Belastbares mit echtem Examensbezug findest, antworte exakt KEINE_NEUIGKEIT statt auf ein anderes Rechtsgebiet auszuweichen.` : "";
   const frage = `Heute ist der ${datumLesbar(datum)}. Finde EINE aktuelle Neuigkeit der letzten 6 Wochen, die für Kandidat:innen des ersten oder zweiten juristischen Staatsexamens wirklich zählt: eine Entscheidung von BGH, BVerfG, BVerwG, BAG oder EuGH zu einem Klausurthema, eine Gesetzesänderung (BGB, StGB, StPO, ZPO, GG, VwGO, VwVfG, HGB, GmbHG, ArbR) oder eine Änderung an Juristenausbildungsgesetzen oder Prüfungsordnungen.
 
 ${QUELLEN_JURA}
@@ -1269,8 +1270,9 @@ export function teaserAusBeitrag(beitrag, slot) {
    ohne API-Aufruf. Für lokale Tests des Renderns und Hochladens. --- */
 function beispielBeitrag(format, thema) {
   const b = beispiele.beitraege.find((x) => x.format === format) || beispiele.beitraege[0];
-  const fach = thema?.fach || b.fach;
-  return nachbereiten({ ...b, kurztitel: b.folien[0].titel, quellen: [] }, { format, thema, fach, klausur: FAECHER[fach]?.klausur || b.klausur });
+  const fach = format === "wochenrueckblick" ? "wochenrueckblick" : (thema?.fach || b.fach);
+  const klausur = format === "wochenrueckblick" ? 4 : (FAECHER[fach]?.klausur ?? b.klausur);
+  return nachbereiten({ ...b, kurztitel: b.folien[0].titel, quellen: [] }, { format, thema, fach, klausur });
 }
 
 function beispielStories(plan) {

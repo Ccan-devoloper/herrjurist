@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { themenpool, poolStatistik, FAECHER } from "../src/inhalte.mjs";
+import { themenpool, poolStatistik, FAECHER, feedKategorie, feedFolgeErlaubt } from "../src/inhalte.mjs";
 import { pruefeBeitrag, uebernahmen, uebernahmeLaeufe, gesperrteNamen, korpus, firmenNamen, benutzteFirmen, namenSperren } from "../src/pruefung.mjs";
 import { tagesplan, vermerken, ledgerLaden } from "../src/planer.mjs";
 import { folieHtml, storyHtml, coverHtml, FOLIEN_ARTEN, STORY_ARTEN } from "../src/vorlagen.mjs";
@@ -41,6 +41,9 @@ test("Themenpool: alle Fächer vertreten, alle drei Gebiete, saubere Titel", () 
   for (const t of pool) assert.ok(t.titel.length >= 4 && t.titel.length <= 140, `Titel unbrauchbar: ${t.titel}`);
   /* „mindset" ist kein Pool-Fach: Diese Themen stehen im Kalender. */
   for (const f of Object.keys(FAECHER).filter((x) => x !== "mindset")) assert.ok(st.jeFach[f] > 0, `Fach ${f} fehlt`);
+  /* Methodik ist eine echte fünfte Feed-Kategorie und darf nicht mehr intern
+     als Blau/Orange/Grün getarnt werden. */
+  for (const t of pool.filter((x) => x.fach === "methodik")) assert.equal(t.klausur, 0, `Methodik-Thema ${t.id} ist nicht violett`);
   for (const t of pool) {
     assert.ok(!/Originalfall|Hausaufgabe|Seite \d/i.test(t.titel), `Quellenbezug im Titel: ${t.titel}`);
     assert.ok(["hoch", "mittel", "selten"].includes(t.prioritaet));
@@ -118,6 +121,7 @@ test("Tagesplan ist deterministisch, ohne Themen-Dopplung, ohne Countdown", () =
   const so = tagesplan("2026-09-13", ledgerLaden(), pool);
   assert.equal(so.beitraege.length, CONFIG.plan.beitraegeWochenende + (CONFIG.reel.zusaetzlich ? 1 : 0));
   assert.equal(so.beitraege[0].format, "wochenrueckblick");
+  assert.equal(feedKategorie(so.beitraege[0]), 4, "Wochenrückblick hat keine eigene Feed-Kategorie");
 });
 
 test("Ledger sperrt Themen für die Wiederholfrist", () => {
@@ -1318,11 +1322,14 @@ test("Mindset: eigene Farbe, eigenes Etikett, kein Prüfungstag", async () => {
   assert.equal(t.fach, "mindset");
   assert.equal(t.klausur, 0);
   assert.equal(FAECHER.mindset.label, "Kopfsache");
-  /* Klausurtag 0 hat eine eigene Farbe, die sich von allen dreien unterscheidet. */
+  /* Klausurtag 0 hat eine eigene Farbe; der Wochenrückblick bekommt als
+     fünfte Kategorie ebenfalls eine eigene, goldene Fläche. */
   const f = STILE.bunt.tagFarben;
   assert.ok(f[0]?.grund, "keine Farbe für Klausurtag 0");
-  assert.equal(new Set([f[0].grund, f[1].grund, f[2].grund, f[3].grund]).size, 4);
+  assert.ok(f[4]?.grund, "keine Farbe für Wochenrückblick");
+  assert.equal(new Set([f[0].grund, f[1].grund, f[2].grund, f[3].grund, f[4].grund]).size, 5);
   assert.equal(fussRechts({ fach: "mindset", klausur: 0 }), "Kopfsache");
+  assert.equal(fussRechts({ fach: "wochenrueckblick", klausur: 4 }), "Wochenrückblick");
   /* Und die 0 überlebt den Weg bis in die Kachel - vorher wurde sie zu 3. */
   const ctx = kontext({ fach: "mindset", klausur: 0 });
   assert.equal(ctx.klausur, 0);
@@ -1479,31 +1486,28 @@ test("Rücklage gilt allen noch zu schreibenden Beiträgen, nicht den Stories", 
   budgetSetzen({});
 });
 
-test("Übertrag: nicht erschienene Beiträge von gestern ersetzen neue Themen gleicher Art", async () => {
+test("Übertrag ersetzt nur denselben Farbslot und verschiebt keinen Wochenrückblick", async () => {
   const { uebertragen } = await import("../src/planer.mjs");
   const gestern = { datum: "2026-09-13", beitraege: [
-    { slot: "b1", format: "wochenrueckblick", status: "geplant" },
-    { slot: "b2", format: "schema", themaId: "x-1", themaTitel: "Thema X", fach: "zpo", status: "geplant" },
-    { slot: "b3", format: "reel", themaId: "y-2", themaTitel: "Thema Y", fach: "strafat", status: "geplant" },
-    { slot: "b4", format: "schema", themaId: "z-3", themaTitel: "Schon einmal übertragen", status: "geplant", uebertragen: 1 },
-    { slot: "b5", format: "aktuell", themaId: "a-4", status: "geplant" },
+    { slot: "b1", format: "wochenrueckblick", klausur: 4, status: "geplant" },
+    { slot: "b2", format: "schema", themaId: "x-1", themaTitel: "Thema X", fach: "zpo", klausur: 1, status: "geplant" },
+    { slot: "b3", format: "reel", themaId: "y-2", themaTitel: "Thema Y", fach: "strafat", klausur: 2, status: "geplant" },
+    { slot: "b4", format: "schema", themaId: "z-3", themaTitel: "Schon einmal übertragen", fach: "vwgo", klausur: 3, status: "geplant", uebertragen: 1 },
+    { slot: "b5", format: "aktuell", themaId: "a-4", fach: "vwgo", klausur: 3, status: "geplant" },
   ] };
   const heute = { datum: "2026-09-14", beitraege: [
-    { slot: "b1", zeit: "10:30", format: "pruefungsfrage", themaId: "neu-1", themaTitel: "Neu 1", status: "geplant" },
-    { slot: "b2", zeit: "20:30", format: "reel", themaId: "neu-2", themaTitel: "Neu 2", status: "geplant" },
+    { slot: "b1", zeit: "10:30", format: "pruefungsfrage", themaId: "neu-1", themaTitel: "Neu 1", fach: "bgbat", klausur: 1, status: "geplant" },
+    { slot: "b2", zeit: "20:30", format: "reel", themaId: "neu-2", themaTitel: "Neu 2", fach: "strafbt", klausur: 2, status: "geplant" },
   ] };
   const u = uebertragen(heute, gestern, "2026-09-13");
-  assert.equal(u.length, 3, "Wochenrückblick, Schema und Reel kommen mit; das schon übertragene und das Aktuelle nicht");
-  /* Der Wochenrückblick nimmt den ersten Beitragsplatz, das Schema wird angehängt, das Reel ersetzt das Reel. */
-  assert.equal(heute.beitraege[0].format, "wochenrueckblick");
-  assert.equal(heute.beitraege[0].uebertragenVon, "2026-09-13-b1");
+  assert.equal(u.length, 2, "nur Schema und Reel mit gleichem Farbslot dürfen mitkommen");
+  assert.equal(heute.beitraege[0].themaId, "x-1");
+  assert.equal(heute.beitraege[0].klausur, 1);
   assert.equal(heute.beitraege[0].zeit, "10:30", "die Uhrzeit von heute bleibt");
   assert.equal(heute.beitraege[1].themaId, "y-2");
-  assert.equal(heute.beitraege[1].format, "reel");
-  assert.equal(heute.beitraege[2].themaId, "x-1");
-  assert.equal(heute.beitraege[2].slot, "b3");
-  assert.equal(heute.beitraege[2].uebertragen, 1);
-  assert.equal(heute.beitraege.length, 3);
+  assert.equal(heute.beitraege[1].klausur, 2);
+  assert.ok(!heute.beitraege.some((b) => b.format === "wochenrueckblick"), "Sonntags-Rückblick ist in den Montag gerutscht");
+  assert.equal(heute.beitraege.length, 2);
   /* Ohne gestrigen Plan passiert nichts. */
   assert.deepEqual(uebertragen({ beitraege: [] }, null, "2026-09-13"), []);
 });
@@ -2434,35 +2438,49 @@ test("Das Erklärvideo läuft fünf Tage am Stück und hat Budget für seine Fig
   assert.ok(b.zulassen("erklaerbild", 0.01, { optional: true }), "nach der Pflicht bekommen sie ihr Geld");
 });
 
-test("Jeden Tag ein Rechtsgebiet je Beitrag, und rotierend", async () => {
+test("Werktags drei Rechtsgebiete, Wochenende mit Sonderfarben, nie dieselbe Farbe direkt nacheinander", async () => {
   const { gebieteDesTages } = await import("../src/planer.mjs");
 
-  /* Drei Plätze, drei Gebiete – jedes genau einmal. */
-  for (const d of ["2026-09-17", "2026-09-18", "2026-09-19"]) {
+  /* Drei Fachplätze rotieren weiterhin täglich durch Blau/Orange/Grün. */
+  for (const d of ["2026-09-17", "2026-09-18", "2026-09-21"]) {
     assert.deepEqual([...gebieteDesTages(d, 3)].sort(), [1, 2, 3], `${d} verteilt die Gebiete nicht sauber`);
   }
-  /* Und die Reihenfolge wandert Tag für Tag weiter, statt stehen zu bleiben. */
   const a = gebieteDesTages("2026-09-17", 3);
   const b = gebieteDesTages("2026-09-18", 3);
-  const c = gebieteDesTages("2026-09-19", 3);
   assert.notDeepEqual(a, b, "die Zuteilung rotiert nicht");
-  assert.notDeepEqual(b, c, "die Zuteilung rotiert nicht");
-  assert.deepEqual(gebieteDesTages("2026-09-20", 3), a, "nach drei Tagen ist der Kreis nicht geschlossen");
 
-  /* Weniger Plätze (Mittwoch: „aktuell" folgt der Nachrichtenlage, Samstag:
-     Mindset-Reel) – dann eben zwei verschiedene Gebiete, nie zweimal dasselbe. */
-  const zwei = gebieteDesTages("2026-09-23", 2);
-  assert.equal(zwei.length, 2);
-  assert.notEqual(zwei[0], zwei[1], "bei zwei Plätzen doppelt sich das Gebiet");
+  /* Im echten Werktagsplan sind alle drei sichtbaren Kategorien Fachfarben –
+     auch Methodik-Themen dürfen keinen Fachslot mehr besetzen. */
+  const werktag = tagesplan("2026-09-17", ledgerLaden(), themenpool());
+  assert.deepEqual([...werktag.beitraege.map(feedKategorie)].sort(), [1, 2, 3]);
 
-  /* Im echten Plan: An einem vollen Werktag tragen die drei Beiträge drei
-     verschiedene Gebiete. Vorher entschied das eine gewichtete Zufallswahl,
-     und die ersten fünf Reels des Kanals waren allesamt grün. */
-  const { tagesplan, ledgerLaden } = await import("../src/planer.mjs");
-  const plan = tagesplan("2026-09-17", ledgerLaden(), themenpool());
-  const gebiete = plan.beitraege.map((x) => x.thema?.klausur).filter(Boolean);
-  assert.equal(new Set(gebiete).size, gebiete.length, "zwei Beiträge desselben Tages tragen dasselbe Rechtsgebiet");
-  assert.equal(gebiete.length, 3, "der Werktag trägt nicht drei Fachbeiträge");
+  /* Samstag: violette Methodik, Fachbeitrag, violettes Mindset-Reel.
+     Sonntag: eigener Wochenrückblick, danach zwei verschiedene Fachfarben. */
+  const samstag = tagesplan("2026-09-19", ledgerLaden(), themenpool());
+  const sa = samstag.beitraege.map(feedKategorie);
+  assert.equal(sa[0], 0, `Samstag startet nicht mit Methodik: ${sa}`);
+  assert.ok([1, 2, 3].includes(sa[1]), `Samstags-Mitte ist kein Fachbeitrag: ${sa}`);
+  assert.equal(sa[2], 0, `Samstags-Reel ist nicht violett: ${sa}`);
+  assert.ok(feedFolgeErlaubt(samstag.beitraege[0], samstag.beitraege[1]));
+  assert.ok(feedFolgeErlaubt(samstag.beitraege[1], samstag.beitraege[2]));
+
+  const sonntag = tagesplan("2026-09-20", ledgerLaden(), themenpool());
+  const so = sonntag.beitraege.map(feedKategorie);
+  assert.equal(so[0], 4, `Sonntag startet nicht mit Wochenrückblick: ${so}`);
+  assert.ok([1, 2, 3].includes(so[1]) && [1, 2, 3].includes(so[2]));
+  assert.notEqual(so[1], so[2], `Sonntag doppelt ein Rechtsgebiet: ${so}`);
+
+  /* Die komplette geplante Feed-Folge über zwei Wochen hat keine gleichen
+     Nachbarn – ausdrücklich auch über Tagesgrenzen hinweg. */
+  const folge = [];
+  for (let i = 0; i < 14; i++) {
+    const datum = new Date(Date.UTC(2026, 8, 17) + i * 864e5).toISOString().slice(0, 10);
+    for (const beitrag of tagesplan(datum, ledgerLaden(), themenpool()).beitraege) folge.push({ datum, beitrag, k: feedKategorie(beitrag) });
+  }
+  for (let i = 1; i < folge.length; i++) {
+    assert.notEqual(folge[i - 1].k, folge[i].k,
+      `${folge[i - 1].datum}/${folge[i].datum}: Kategorie ${folge[i].k} folgt direkt auf sich selbst`);
+  }
 });
 
 test("Über sechs Wochen trägt jedes Rechtsgebiet gleich viele Beiträge", async () => {

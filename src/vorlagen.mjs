@@ -17,7 +17,7 @@ export const MASSE = {
   story: { breite: 1080, hoehe: 1920 },
 };
 
-export const KLAUSUR_FARBE = { 0: "k0", 1: "k1", 2: "k2", 3: "k3" };
+export const KLAUSUR_FARBE = { 0: "k0", 1: "k1", 2: "k2", 3: "k3", 4: "k4" };
 
 export function esc(s) {
   return String(s ?? "")
@@ -460,7 +460,7 @@ function fuss(ctx) {
 }
 /* Die Marke sortiert nach Rechtsgebiet - das steht in der Fusszeile, so wie
    beim Steuerkanal der Klausurtag. */
-export const KLAUSUR_KURZ = { 1: "Zivilrecht", 2: "Strafrecht", 3: "Öffentliches Recht" };
+export const KLAUSUR_KURZ = { 1: "Zivilrecht", 2: "Strafrecht", 3: "Öffentliches Recht", 4: "Wochenrückblick" };
 
 /* Dasselbe Etikett, das die Fusszeile der Kachel traegt - das Reel nutzt es mit. */
 export function fussRechts(ctx) {

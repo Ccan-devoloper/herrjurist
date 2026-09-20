@@ -33,7 +33,7 @@ export const STILE = {
     farben: {
       grund: "#ffffff", flaeche: "#f3f3f5", text: "#0b0b0d", textWeich: "#55555e", linie: "#d9d9de",
       akzent: "#0b0b0d", pille: "#0b0b0d", pilleText: "#ffffff",
-      k1: "#2f63e0", k2: "#e0501f", k3: "#1f9c5a",
+      k0: "#6b4bd6", k1: "#2f63e0", k2: "#e0501f", k3: "#1f9c5a", k4: "#d6a900",
       ok: "#1f9c5a", warn: "#c97a00", rot: "#d92d2d",
     },
     ecken: "6px",
@@ -51,7 +51,7 @@ export const STILE = {
     farben: {
       grund: "#23d98b", flaeche: "rgba(255,255,255,.92)", text: "#0b4a33", textWeich: "#1d5c44", linie: "rgba(255,255,255,.45)",
       akzent: "#0b4a33", pille: "#0b4a33", pilleText: "#ffffff",
-      k1: "#2d5be3", k2: "#ff7a45", k3: "#23d98b",
+      k0: "#6b4bd6", k1: "#2d5be3", k2: "#ff7a45", k3: "#23d98b", k4: "#f2c94c",
       ok: "#0b4a33", warn: "#7a3a10", rot: "#b3261e",
     },
     /* Palette je Klausurtag: Grund, dunkle Kontrastfarbe, helle und lila Pille, Zweitakzent. */
@@ -66,6 +66,9 @@ export const STILE = {
       1: { grund: "#2d5be3", dunkel: "#0c1b4d", hell: "#e3ebff", lila: "#cdbcff", akzent2: "#ffd166", weich: "#dbe4ff" },
       2: { grund: "#ff7a45", dunkel: "#3a1708", hell: "#fff0e6", lila: "#ffd9c2", akzent2: "#2d5be3" },
       3: { grund: "#23d98b", dunkel: "#0b4a33", hell: "#e9fff4", lila: "#d9c8ff", akzent2: "#ff7a45" },
+      /* Wochenrückblick: eigene goldene Kategorie, damit der Sonntag im Raster
+         sofort als Zusammenfassung erkennbar ist. */
+      4: { grund: "#f2c94c", dunkel: "#4a3500", hell: "#fff7d6", lila: "#efe1a6", akzent2: "#6b4bd6", weich: "#5b460d" },
     },
     ecken: "30px",
   },
@@ -80,7 +83,7 @@ export const STILE = {
     farben: {
       grund: "#f6f2e9", flaeche: "#fffdf8", text: "#12233f", textWeich: "#5b6478", linie: "#cfc6b4",
       akzent: "#12233f", pille: "#12233f", pilleText: "#f6f2e9",
-      k1: "#1f5fbf", k2: "#c8102e", k3: "#1b8a4c",
+      k0: "#6b4bd6", k1: "#1f5fbf", k2: "#c8102e", k3: "#1b8a4c", k4: "#d6a900",
       ok: "#1b8a4c", warn: "#d97a00", rot: "#c8102e",
     },
     ecken: "2px",
@@ -96,7 +99,7 @@ export const STILE = {
     farben: {
       grund: "#141a3a", flaeche: "#1d2550", text: "#f7f8ff", textWeich: "#aab2d9", linie: "#2e3870",
       akzent: "#d6ff4a", pille: "#d6ff4a", pilleText: "#141a3a",
-      k1: "#6ea8ff", k2: "#ff8a5b", k3: "#5cf0a8",
+      k0: "#8f72ea", k1: "#6ea8ff", k2: "#ff8a5b", k3: "#5cf0a8", k4: "#f2c94c",
       ok: "#5cf0a8", warn: "#ffc860", rot: "#ff6b6b",
     },
     ecken: "22px",

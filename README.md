@@ -13,16 +13,23 @@ Themenpool (daten/themen.mjs)  →  Tagesplan  →  Claude schreibt  →  Prüfu
                                             Instagram Graph API: Carousel / Story / Reel
 ```
 
-## Markenkern: sortiert nach Rechtsgebiet
+## Markenkern: fünf sichtbare Feed-Kategorien
 
-Jeder Beitrag gehört zu genau einem Gebiet und trägt dessen Farbe – im Profilraster erkennbar, bevor
-ein Wort gelesen ist:
+Fachbeiträge tragen die Farbe ihres Rechtsgebiets. Dazu kommen zwei klar getrennte Sonderkategorien,
+damit das Profilraster schon vor dem Lesen erkennen lässt, welche Art Inhalt folgt:
 
-| Gebiet | Farbe | Fächer |
+| Kategorie | Farbe | Inhalt |
 | --- | --- | --- |
 | Zivilrecht | Blau `#2d5be3` | BGB AT, Schuldrecht AT/BT, Sachenrecht, Deliktsrecht, Arbeitsrecht, Familien-/Erbrecht, HGB/GesR, ZPO, IPR, Assessor ZR, Zwangsvollstreckung |
 | Strafrecht | Orange `#ff7a45` | Strafrecht AT, Strafrecht BT, StPO, Anklage, Revision |
 | Öffentliches Recht | Grün `#23d98b` | Staatsrecht, Grundrechte, Verwaltungsrecht AT, Besonderes Verwaltungsrecht, VwGO, Europarecht, Assessor ÖR |
+| Klausurmethodik / Kopfsache | Violett `#6b4bd6` | Klausurtechnik, Lernmethodik, Mindset |
+| Wochenrückblick | Gold `#f2c94c` | sonntägliche Zusammenfassung der Woche |
+
+**Rotationsregel:** Zwei Veröffentlichungen derselben sichtbaren Kategorie stehen nie direkt
+hintereinander. Montag bis Freitag bestehen die drei Feed-Slots weiterhin aus genau einem
+Zivilrechts-, einem Strafrechts- und einem Öffentlich-Recht-Beitrag; ihre Reihenfolge rotiert täglich.
+Am Wochenende werden Violett und Gold dazwischengelegt, ohne die Nachbarregel zu brechen.
 
 Das zweite Staatsexamen trägt seit dem 14.09.2026 eigene Fächer (`assessorz`, `zwangsv`,
 `assessoroer`, `anklage`, `revision`). Sie behalten die Farbe ihres Gebiets, sagen auf der Kachel
@@ -48,7 +55,7 @@ aufzumachen, wenn er sich auswirkt.
 
 | | Werktag | Wochenende |
 | --- | --- | --- |
-| Beiträge (Carousel, 4–5 Folien, 1080×1350) | 3 (07:30 · 12:30 · 18:00) | 2 |
+| Feed-Veröffentlichungen | 3 (2 Carousels + 1 Reel) | 3 (2 Carousels + 1 Reel) |
 | Stories (1080×1920) | 9, verteilt 07:00–21:30 | 9 |
 
 **Beitragsformate** (Wochenplan in `src/config.mjs`): Prüfungsfrage · Fehlerfalle · Prüfschema ·
