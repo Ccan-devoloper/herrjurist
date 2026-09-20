@@ -17,6 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
+import { manuellFinalisiert } from "./finalisierung.mjs";
 import { istKostenKontrollFehler, budgetStoppGrund } from "./kostenfehler.mjs";
 import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
@@ -58,7 +59,8 @@ import { heuteIso, lokaleMinuten, minutenVon } from "./zeit.mjs";
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const args = new Map(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, "").split("="); return [k, v ?? true]; }));
 const datum = args.get("datum") || heuteIso();
-const nurPlanen = args.has("nur-planen");
+const vorplanen = args.has("vorplanen");
+const nurPlanen = args.has("nur-planen") || vorplanen;
 const trocken = args.has("nur-rendern") || CONFIG.instagram.trockenlauf;
 const alles = args.has("alles");
 const auffuellen = Number(args.get("auffuellen") || 0);
@@ -196,7 +198,7 @@ async function main() {
   /* IG_NO_PUSH=true: nichts in den Assets-Zweig pushen – für Trockenläufe
      gegen eine Kopie des Zustands. Ein Trockenlauf am 13.09. hatte sonst
      Beispieltexte für den Folgetag in den echten Zweig geschoben. */
-  const hosting = new Hosting({ pushen: !nurPlanen && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
+  const hosting = new Hosting({ pushen: (vorplanen || !nurPlanen) && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
   motivArchivDir = path.join(hosting.stateDir, "motive");
   /* Bezahlte Entwürfe überleben den Lauf, in dem sie entstanden sind - siehe
      autor.mjs. Aufgeräumt wird gleich zu Beginn, damit der Zweig nicht wächst. */
@@ -510,6 +512,17 @@ async function main() {
     return;
   }
 
+  /* Hybridbetrieb: Der Tagesplan liegt bereits vor, aber vor 07:00 Uhr
+     Ortszeit bekommt die manuelle Chat-Finalisierung Vorrang. Ein früher
+     Winter-Lauf (06:35) soll nicht ausgerechnet wenige Minuten vor der
+     menschlichen Freigabe kostenpflichtig alle Texte erzeugen. Ab 07:00
+     bleibt die bisherige API-Pipeline als Ausfallsicherung vollständig aktiv.
+     Die Postingzeiten selbst werden NICHT verändert. */
+  if (!trocken && !alles && lokaleMinuten() < 7 * 60) {
+    log("Chat-Finalisierungsfenster bis 07:00 – Plan steht, kostenpflichtige Inhaltserzeugung wartet.");
+    return;
+  }
+
   if (auffuellen > 0) { await auffuellenLauf(auffuellen, { hosting, ledger, ledgerPfad, pool, poolIndex, strategie }); return; }
 
     /* Rücklage für alles, was heute noch zu schreiben ist: Solange ein Beitrag
@@ -547,7 +560,7 @@ async function main() {
     /* Ein Text ohne Prüfung wird nie veröffentlicht - das Geld fürs Schreiben
        wäre verbrannt. Die Pflicht endet deshalb mit der Prüfung, nicht mit
        dem Text. */
-    const ungeprueft = stand.filter((v) => v && v.faktencheckOffen).length;
+    const ungeprueft = stand.filter((v) => v && !manuellFinalisiert(v) && v.faktencheckOffen).length;
     return { ungeschrieben, ungeprueft };
   };
 
@@ -800,7 +813,7 @@ async function main() {
        Budget scheiterte, liegen unter inhalte/ und tragen `faktencheckOffen`.
        Sie werden hier nachgeprüft - das kostet nur die Prüfung, nicht das
        Schreiben. Klappt es wieder nicht, warten sie auf den nächsten Lauf. */
-    const ungeprueft = [...geschrieben.values()].filter((s) => s.faktencheckOffen);
+    const ungeprueft = [...geschrieben.values()].filter((s) => !manuellFinalisiert(s) && s.faktencheckOffen);
     if (ungeprueft.length) {
       /* Erst neu rechnen, dann prüfen. Die Rücklage stammt sonst aus der Zeit
          VOR dem Schreiben der Texte und hält Geld für Dinge zurück, die

@@ -15,6 +15,8 @@
    Auffuellen, Kommentare usw. bleiben am lokalen Deckel.
    ========================================================================== */
 
+import { manuellFinalisiert } from "./finalisierung.mjs";
+
 const TOEPFE = ["core", "engagement", "research"];
 const SCHWESTER = {
   examenscampus: "Ccan-devoloper/herrjurist",
@@ -44,10 +46,12 @@ export function journalVerbrauch(journal, datum) {
   return out;
 }
 
-const inhaltSauber = (x) => !!x
-  && !x.faktencheckOffen
-  && !(x.beanstandet || []).length
-  && !(x.beanstandetFachlich || []).length;
+const inhaltSauber = (x) => !!x && (
+  manuellFinalisiert(x)
+  || (!x.faktencheckOffen
+    && !(x.beanstandet || []).length
+    && !(x.beanstandetFachlich || []).length)
+);
 
 /* Der Schwesterkanal darf Restbudget erst verleihen, wenn kein Pflichttext
    mehr erzeugt oder fachlich repariert werden muss. Veröffentlichen/rendern
