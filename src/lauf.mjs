@@ -17,7 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
-import { manuellFinalisiert } from "./finalisierung.mjs";
+import { manuellFinalisiert, tagesinhaltManuellFinalisiert } from "./finalisierung.mjs";
 import { istKostenKontrollFehler, budgetStoppGrund } from "./kostenfehler.mjs";
 import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
@@ -1282,7 +1282,13 @@ async function main() {
      Pflichtprodukt nie einen Cent wegnehmen. Die Sperre dafür ist dieselbe,
      die schon für jede andere bezahlte Kür gilt (budget.optionalGesperrt),
      hier nur noch einmal frisch nachgezogen. */
-  if (!trocken && !nurPlanen) {
+  const chatTagFinalisiert = tagesinhaltManuellFinalisiert(
+    plan,
+    (slot) => hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null),
+  );
+  if (chatTagFinalisiert) {
+    log("  Vorrat: kein bezahlter Nachschub – Tagesinhalt wurde im Chat vollständig finalisiert.");
+  } else if (!trocken && !nurPlanen) {
     ruecklageAktualisieren();
     try {
       const vorher = reserveBestand.length;
