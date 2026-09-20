@@ -34,7 +34,7 @@ import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
 import { kommentareBeantworten } from "./interaktion.mjs";
 import { nachrichtenBeantworten } from "./postfach.mjs";
-import { lernschleife, storyInsightsAktualisieren } from "./insights.mjs";
+import { lernschleife, storyInsightsAktualisieren, medienSnapshotsAktualisieren, kontoSnapshotAktualisieren } from "./insights.mjs";
 import { verteilen } from "./verteilen.mjs";
 import { varianteErmitteln } from "./wechsel.mjs";
 import { kartenVerschicken } from "./nachrichten.mjs";
@@ -653,19 +653,22 @@ async function main() {
     } catch (e) {
       console.error(`  ✗ Nachrichten: ${e.message}`);
     }
-    /* Story-Insights: im stuendlichen Lauf sichern, solange die Story noch lebt.
-       Anders als die taegliche Lernschleife darf das nicht nur einmal am Tag
-       passieren, weil Meta Story-Insights nach dem 24-h-Fenster nicht mehr
-       verlaesslich bereitstellt. */
+    /* Dashboard-Snapshots: Stories, Feed/Reels und der Followerstand werden
+       im Stundenlauf als Zeitreihe gesichert. Der Ledger behaelt weiterhin
+       jeweils den neuesten Stand; insight-snapshots.json bewahrt den Verlauf. */
     try {
-      const r = await storyInsightsAktualisieren(ig, ledger, { log });
-      if (r.gemessen) {
+      const snapshots = hosting.jsonLesen("insight-snapshots.json", { version: 1, stand: null, medien: {}, konto: [] });
+      const story = await storyInsightsAktualisieren(ig, ledger, { log, snapshots });
+      const medien = await medienSnapshotsAktualisieren(ig, ledger, snapshots, { log });
+      const konto = await kontoSnapshotAktualisieren(ig, snapshots, { log });
+      if (story.gemessen || medien.gemessen || konto.gemessen) {
+        hosting.jsonSchreiben("insight-snapshots.json", snapshots);
         ledgerSpeichern(ledgerPfad, ledger);
-        hosting.commit(`Story-Insights ${datum}`);
+        hosting.commit(`Insight-Snapshots ${datum}`);
         await hosting.push();
       }
     } catch (e) {
-      console.error(`  ✗ Story-Insights: ${e.message}`);
+      console.error(`  ✗ Insight-Snapshots: ${e.message}`);
     }
 
     /* Lernschleife: einmal am Tag beim ersten Lauf (Insights, Strategie, Follower). */
