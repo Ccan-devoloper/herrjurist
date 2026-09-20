@@ -16,7 +16,7 @@ import { spawnSync } from "node:child_process";
 import { ffmpegPfad } from "./stimme.mjs";
 import { CONFIG } from "./config.mjs";
 import { bildAufruf } from "./anbieter.mjs";
-import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
+import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen, komponentenProfil, komponentenVerdacht } from "./freistellen.mjs";
 
 export const bildKiAktiv = () => Boolean(CONFIG.bilder.ki.aktiv && CONFIG.bilder.ki.key);
 
@@ -53,6 +53,7 @@ export function bildAuftrag(szene, { stil = "", look = "flach" } = {}) {
     "Cut-out image WITHOUT ANY BACKGROUND.",
     foto ? `Photorealistic photograph: ${text}.` : `Flat vector illustration: ${text}.`,
     "Exactly one clear subject, centred, seen from the front or in three-quarter view.",
+    "If the scene mentions several objects, choose the single most important subject and OMIT the others. Never make a collage, still-life cluster or pile of separate props.",
     /* "nothing cropped" allein hat nicht gereicht: Am 14.09. kam eine Figur
        zurueck, deren Kopf oben glatt am Bildrand endete. Das Modell braucht
        die Ansage als Platzvorgabe, nicht als Verbot. */
@@ -166,6 +167,13 @@ export async function motivZeichnen(szene, { randFarbe = null, stil = "", zweck 
     fs.rmSync(roh, { force: true });
     return null;
   }
+  const teile = komponentenProfil(roh);
+  const teileFehler = komponentenVerdacht(teile);
+  if (teileFehler) {
+    console.warn(`  ! Gezeichnetes Motiv zu unruhig (${teileFehler}) – verworfen.`);
+    fs.rmSync(roh, { force: true });
+    return null;
+  }
   /* Angeschnitten? Diese Prüfung gab es bisher nur für gesuchte Fotos, nicht
      für gezeichnete Motive - und genau dort fehlte sie. Am 14.09. stand auf
      der Kachel zum Erbrecht eine Frau, deren Kopf oben glatt abgeschnitten
@@ -203,6 +211,14 @@ export function motivHervorholen(quelle, { randFarbe = null } = {}) {
     const s = spawnSync(ffmpegPfad(), ["-y", "-loglevel", "error", "-i", quelle, "-frames:v", "1", "-update", "1", kopie], { encoding: "utf8", timeout: 60000 });
     if (s.status !== 0 || !fs.existsSync(kopie)) { console.warn("  ! Archiviertes Motiv nicht lesbar."); return null; }
   } else fs.copyFileSync(quelle, kopie);
+  const teile = komponentenProfil(kopie);
+  const teileFehler = komponentenVerdacht(teile);
+  const randFehler = randVerdacht(randkontakt(kopie));
+  if (teileFehler || randFehler) {
+    console.warn(`  ! Archivmotiv verworfen (${teileFehler || `Anschnitt ${randFehler}`}).`);
+    fs.rmSync(kopie, { force: true });
+    return null;
+  }
   const fertig = randFarbe ? bestickern(kopie, randFarbe) : kopie;
   const m = masse(fertig) || {};
   return { pfad: fertig, breite: m.breite || null, hoehe: m.hoehe || null };

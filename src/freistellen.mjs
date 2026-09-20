@@ -48,6 +48,54 @@ export function alphaProfil(pngPfad, N = 96) {
   return { mittel: summe / (n * 255), belegt: belegt / n, fest: fest / n, festigkeit: belegt ? fest / belegt : 0 };
 }
 
+/* Ein gutes Cover hat EIN klares Hauptmotiv. Drei freigestellte Inseln
+   (Kalender + Akten + Taschenrechner usw.) sehen auf der kleinen Kachel wie
+   eine zufällige Collage aus. Kleine Krümel/Schatten werden ignoriert. */
+export const KOMPONENTEN_MAX = 2;
+export const HAUPTMOTIV_MIN = 0.72;
+
+export function komponentenAusAlpha(bytes, N = 96, { schwelle = 128, minPixel = null } = {}) {
+  if (!bytes || bytes.length !== N * N) return null;
+  const min = minPixel ?? Math.max(8, Math.round(N * N * 0.0015));
+  const gesehen = new Uint8Array(N * N);
+  const groessen = [];
+  const nachbarn = [[-1,-1],[0,-1],[1,-1],[-1,0],[1,0],[-1,1],[0,1],[1,1]];
+  for (let start = 0; start < bytes.length; start++) {
+    if (gesehen[start] || bytes[start] < schwelle) continue;
+    gesehen[start] = 1;
+    const stapel = [start];
+    let n = 0;
+    while (stapel.length) {
+      const i = stapel.pop(); n++;
+      const x = i % N, y = Math.floor(i / N);
+      for (const [dx, dy] of nachbarn) {
+        const xx = x + dx, yy = y + dy;
+        if (xx < 0 || yy < 0 || xx >= N || yy >= N) continue;
+        const j = yy * N + xx;
+        if (!gesehen[j] && bytes[j] >= schwelle) { gesehen[j] = 1; stapel.push(j); }
+      }
+    }
+    if (n >= min) groessen.push(n);
+  }
+  groessen.sort((a, b) => b - a);
+  const pixel = groessen.reduce((a, b) => a + b, 0);
+  return { anzahl: groessen.length, groesste: groessen[0] || 0, groessteAnteil: pixel ? (groessen[0] || 0) / pixel : 0, pixel };
+}
+
+export function komponentenProfil(pngPfad, N = 96) {
+  const r = spawnSync(ffmpegPfad(), ["-hide_banner", "-loglevel", "error", "-i", pngPfad,
+    "-vf", `alphaextract,scale=${N}:${N}`, "-frames:v", "1", "-f", "rawvideo", "-pix_fmt", "gray", "-"], { maxBuffer: 1 << 22 });
+  if (r.status !== 0 || r.stdout?.length !== N * N) return null;
+  return komponentenAusAlpha(r.stdout, N);
+}
+
+export function komponentenVerdacht(profil) {
+  if (!profil) return null;
+  if (profil.anzahl > KOMPONENTEN_MAX) return `${profil.anzahl} getrennte Hauptteile`;
+  if (profil.anzahl && profil.groessteAnteil < HAUPTMOTIV_MIN) return `größter Teil nur ${Math.round(profil.groessteAnteil * 100)} %`;
+  return null;
+}
+
 /* Wie viel der belegten Fläche deckend sein muss. Gute Freisteller liegen
    über 0,8 - die weiche Kante ist nur ein schmaler Saum. Alles unter 0,55
    ist ein Schleier, kein Motiv. */
@@ -114,7 +162,7 @@ export function zuschneiden(pngPfad) {
   if (!g) return pngPfad;
   const [B, H] = [Number(g[1]), Number(g[2])];
   /* Etwas Luft stehen lassen, sonst klebt das Motiv am Rand. */
-  const luft = 2;
+  const luft = 5;
   const x = Math.max(0, Math.floor(((l - luft) / N) * B));
   const y = Math.max(0, Math.floor(((o - luft) / N) * H));
   const bb = Math.min(B - x, Math.ceil(((re - l + 1 + 2 * luft) / N) * B));
@@ -191,6 +239,13 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
     fs.rmSync(ziel, { force: true });
     return null;
   }
+  const teile = komponentenProfil(ziel);
+  const teileFehler = komponentenVerdacht(teile);
+  if (teileFehler) {
+    console.log(`  → freigestelltes Motiv verworfen (${teileFehler} – zu viele konkurrierende Bildelemente).`);
+    fs.rmSync(ziel, { force: true });
+    return null;
+  }
   /* Ein Motiv, das oben oder seitlich vom Fotorand abgeschnitten ist, wirkt
      auf der Kachel wie ein Fehler: Der Richterhammer endet in der Luft, der
      Kopf fehlt. Unten darf es anschneiden - da läuft es ohnehin aus der
@@ -200,8 +255,9 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
      abgeschnitten ist, wirkt freigestellt wie ein Fehler - der Kopf fehlt,
      der Arm endet im Nichts. Unten darf es anschneiden, dort läuft es
      ohnehin aus der Kachel. */
-  if (rand && (rand.oben > 0.01 || rand.links > 0.03 || rand.rechts > 0.03)) {
-    console.log(`  → freigestelltes Motiv verworfen (vom Fotorand angeschnitten: oben ${(rand.oben * 100).toFixed(0)} %, links ${(rand.links * 100).toFixed(0)} %, rechts ${(rand.rechts * 100).toFixed(0)} %) – Titelfolie bleibt beim Icon.`);
+  const randFehler = freistellerRandVerdacht(rand);
+  if (randFehler) {
+    console.log(`  → freigestelltes Motiv verworfen (vom Fotorand angeschnitten: ${randFehler}) – nächster Kandidat.`);
     fs.rmSync(ziel, { force: true });
     return null;
   }
@@ -218,7 +274,7 @@ export function freistellen(quelle, { min = 0.06, max = 0.82, modell = process.e
     return null;
   }
   const fertig = randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten;
-  return { pfad: fertig, deckung: d, festigkeit: prof.festigkeit, ...(masse(fertig) || {}) };
+  return { pfad: fertig, deckung: d, festigkeit: prof.festigkeit, komponenten: teile, ...(masse(fertig) || {}) };
 }
 
 /* Ist das Motiv am Rand angeschnitten? Oben und an den Seiten darf es das
@@ -234,6 +290,16 @@ export function randVerdacht(rand) {
   if (rand.oben > RAND_GRENZE.oben) return `oben ${(rand.oben * 100).toFixed(0)} %`;
   if (rand.links > RAND_GRENZE.seite) return `links ${(rand.links * 100).toFixed(0)} %`;
   if (rand.rechts > RAND_GRENZE.seite) return `rechts ${(rand.rechts * 100).toFixed(0)} %`;
+  return null;
+}
+
+/* Unten darf das Motiv die Kante berühren, aber nicht über einen großen Teil
+   bereits im Ausgangsfoto abgeschnitten sein. */
+export const RAND_UNTEN_MAX = 0.35;
+export function freistellerRandVerdacht(rand) {
+  const normal = randVerdacht(rand);
+  if (normal) return normal;
+  if (rand?.unten > RAND_UNTEN_MAX) return `unten ${(rand.unten * 100).toFixed(0)} %`;
   return null;
 }
 
