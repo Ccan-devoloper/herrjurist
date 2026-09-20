@@ -48,7 +48,7 @@ function webCandidates(html,via){
 }
 
 const PROFILE_HANDLES = CFG.domain==='steuer'
- ? ['knollsteuer','steuerfachschuleendriss','studienwerkdersteuerberater','nwbverlag','zweisteuerberater']
+ ? ['knollsteuer','steuerfachschuleendriss','studienwerkdersteuerberater','tax_academy.de','tax_thkoeln']
  : [];
 function igItem(item,handle){
  const code=item?.code||item?.shortcode||item?.node?.shortcode;
