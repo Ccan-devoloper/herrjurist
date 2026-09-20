@@ -1199,11 +1199,11 @@ const BILDREGIE_SYSTEM = `Du bist Bildredakteur:in eines Instagram-Kanals für d
 
 Beurteile jedes Motiv mit EINER Frage: Zeigt es den Gegenstand, um den es in DIESER Szene fachlich geht – so, dass eine Examenskandidat:in es beim Zusehen sofort dem Inhalt zuordnet? Metaphern gelten NICHT: Briefumschläge für „Erbfall oder Schenkung", ein Notizblock für „fünf Prüfungspunkte", ein Pass für „Steuerpflicht", Münzen für „Bewertung", eine Waage für „Abwägung" – das könnte jedes Thema der Welt sein. Auch ein Motiv, das nur zum Oberthema passt, aber nicht zu dieser Szene, passt nicht.
 
-Passt es nicht, nenne ein besseres: englisch, 3 bis 8 Wörter, EIN Gegenstand, keine Schrift im Bild, keine Person (außer die Szene lebt von einer Handlung), kein Symbolbild-Klassiker. Nimm die Dinge, die in diesem Rechtsgebiet wirklich vorkommen: Klageschrift mit Gerichtsstempel, Urteil mit Siegel, Anklageschrift, Bescheid mit Rechtsbehelfsbelehrung, Kaufvertrag mit zwei Unterschriften, Mietvertrag, Grundbuchauszug, Kalenderblatt mit markierter Frist, Mahnbescheid, Vollstreckungstitel, Testament, Führerschein, Tatwaffe (Messer, Brecheisen), Handschellen, Versammlungsplakat, Baugenehmigung. Der Gegenstand muss zur Aussage der Szene passen, nicht nur zum Thema des Reels – zwei Szenen desselben Reels bekommen nie dasselbe Motiv. Fällt dir nichts ein, das wirklich passt: besser = null und passt = false; dann übernimmt die Szene das Motiv der Nachbarszene.`;
+Fehlt das vorgeschlagene Motiv oder passt es nicht, nenne ein besseres: englisch, 3 bis 8 Wörter, EIN Gegenstand, keine Schrift im Bild, keine Person (außer die Szene lebt von einer Handlung), kein Symbolbild-Klassiker. Nimm die Dinge, die in diesem Rechtsgebiet wirklich vorkommen: Klageschrift mit Gerichtsstempel, Urteil mit Siegel, Anklageschrift, Bescheid mit Rechtsbehelfsbelehrung, Kaufvertrag mit zwei Unterschriften, Mietvertrag, Grundbuchauszug, Kalenderblatt mit markierter Frist, Mahnbescheid, Vollstreckungstitel, Testament, Führerschein, Tatwaffe (Messer, Brecheisen), Handschellen, Versammlungsplakat, Baugenehmigung. Der Gegenstand muss zur Aussage der Szene passen, nicht nur zum Thema des Reels – zwei Szenen desselben Reels bekommen nie dasselbe Motiv. Fällt dir nichts ein, das wirklich passt: besser = null und passt = false; dann übernimmt die Szene das Motiv der Nachbarszene.`;
 
 export async function bildregie(reel) {
   const szenen = reel?.szenen || [];
-  if (!szenen.some((s) => s.bildSzene)) return { geprueft: 0, ersetzt: 0 };
+  if (!szenen.length) return { geprueft: 0, ersetzt: 0 };
   const user = `Reel-Thema: ${reel.kurztitel || szenen[0]?.titel || ""}\n\n${szenen.map((s, i) => `Szene ${i + 1} [${s.art}]\n  Titel: ${s.titel || ""}\n  Sprecher: ${s.sprecher || ""}\n  Motiv: ${s.bildSzene || "(keins)"}`).join("\n\n")}\n\nBeurteile jede Szene.`;
 
   let response;
@@ -1230,10 +1230,16 @@ export async function bildregie(reel) {
   let ersetzt = 0;
   for (const u of daten?.szenen || []) {
     const s = szenen[Number(u.nr) - 1];
-    if (!s || u.passt) continue;
+    if (!s) continue;
+    const fehlt = !s.bildSzene;
+    if (u.passt && !fehlt) continue;
     const besser = typeof u.besser === "string" && u.besser.trim().split(/\s+/).length >= 2 ? u.besser.trim() : null;
-    console.log(`  Bildregie Szene ${u.nr}: „${s.bildSzene}“ passt nicht (${String(u.grund || "").slice(0, 90)})${besser ? ` → „${besser}“` : " → Motiv der Nachbarszene"}`);
-    s.bildSzene = besser;
+    /* Bei manuell finalisierten Reels kann die Bildregie komplett fehlen.
+       Liefert der Bildredaktions-Aufruf ausnahmsweise keinen Ersatz, ist der
+       Szenentitel immer noch ein besserer Bildauftrag als gar keiner. */
+    const neu = besser || (fehlt ? String(s.titel || reel.kurztitel || "").trim() : null);
+    console.log(`  Bildregie Szene ${u.nr}: „${s.bildSzene || "(keins)"}“ ${fehlt ? "fehlt" : "passt nicht"} (${String(u.grund || "").slice(0, 90)})${neu ? ` → „${neu}“` : " → Motiv der Nachbarszene"}`);
+    s.bildSzene = neu;
     ersetzt++;
   }
   return { geprueft: (daten?.szenen || []).length, ersetzt };
@@ -1243,12 +1249,22 @@ export async function bildregie(reel) {
 /* Die Regie darf das Reel nie kosten: Budget- und Netzfehler werden gemeldet,
    das Reel geht mit den Motiven des Autors weiter. */
 export async function bildregieSicher(reel) {
-  if (!reel || reel.bildregie) return false;
-  /* Bei einem morgens im Chat finalisierten Reel ist die Szenen-/Bildregie
-     Teil der Freigabe. Kein weiterer LLM-Aufruf kurz vor dem Rendern. */
-  if (manuellFinalisiert(reel)) { reel.bildregie = true; return false; }
-  try { const r = await bildregie(reel); if (r.geprueft) console.log(`  Bildregie: ${r.ersetzt} von ${r.geprueft} Motiven ersetzt.`); reel.bildregie = true; return true; }
-  catch (e) { console.warn(`  ! Bildregie übersprungen (${e.message.split("\n")[0].slice(0, 100)}) – Motive des Autors bleiben.`); return false; }
+  if (!reel) return false;
+  const luecken = (reel.szenen || []).some((s) => !s.bildSzene);
+  if (reel.bildregie && !luecken) return false;
+  /* Manuelle Finalisierung schützt weiterhin den fachlichen Text. Fehlen aber
+     Bildaufträge, darf die reine Bildregie sie ergänzen; sonst könnte ein
+     finalisiertes Reel nie im gewünschten Erklärformat gerendert werden. */
+  if (manuellFinalisiert(reel) && !luecken) { reel.bildregie = true; return false; }
+  try {
+    const r = await bildregie(reel);
+    if (r.geprueft) console.log(`  Bildregie: ${r.ersetzt} von ${r.geprueft} Motiven ersetzt.`);
+    reel.bildregie = !(reel.szenen || []).some((s) => !s.bildSzene);
+    return r.geprueft > 0 || r.ersetzt > 0;
+  } catch (e) {
+    console.warn(`  ! Bildregie übersprungen (${e.message.split("\n")[0].slice(0, 100)}) – Erklärlayout bleibt trotzdem aktiv.`);
+    return false;
+  }
 }
 
 export function teaserAusBeitrag(beitrag, slot) {
