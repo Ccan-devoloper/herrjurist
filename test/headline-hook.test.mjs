@@ -31,8 +31,8 @@ test("Autoren-Zeilen werden als getrennte kompakte Titelpillen gerendert", () =>
 
   assert.match(html, /titel-stack/);
   assert.equal((html.match(/class="titel-zeile"/g) || []).length, 3);
-  assert.match(html, /gap:8px/);
-  assert.match(html, /border-radius:28px/);
+  assert.match(html, /gap:7px/);
+  assert.match(html, /border-radius:30px/);
 });
 
 test("Hook-Regie lässt konkrete Fragen gegen Fehler- und Nutzenhooks antreten", () => {
