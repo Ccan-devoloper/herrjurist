@@ -1298,6 +1298,7 @@ export function teaserAusBeitrag(beitrag, slot) {
        mit demselben Bild an. */
     bild: beitrag.folien[0].bild || null, bildFrei: beitrag.folien[0].bildFrei !== false, bildQuelle: beitrag.folien[0].bildQuelle || null,
     bildBreite: beitrag.folien[0].bildBreite || null, bildHoehe: beitrag.folien[0].bildHoehe || null,
+    bildTyp: beitrag.folien[0].bildTyp || null, bildCharaktere: beitrag.folien[0].bildCharaktere || null,
     pille: "Jetzt im Feed",
   };
 }
