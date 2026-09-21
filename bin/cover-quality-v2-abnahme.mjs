@@ -67,7 +67,7 @@ const faelle = [
     thema: "Wann beginnt der Versuch?",
     titelZeilen: ["Wann beginnt", "der Versuch?"],
     coverText: "§ 22 StGB ist die Schwelle", icon: "blitz",
-    bildSzene: "hand stops at threshold before irreversible action",
+    bildSzene: "abstract token crosses a bright boundary from planning area into execution area",
     erwartet: ["rex", "mara"],
   },
   {
