@@ -7041,11 +7041,11 @@ test("Charakter-Cover folgt strukturierter Regie statt fester Paarlogik", async 
   const solo = charaktereFuer({ coverCharaktere: ["mara"], titel: "Blackout in der Klausur" });
   assert.deepEqual(solo.map((x) => x.id), ["mara"]);
 
-  const trio = charaktereFuer({ coverCharaktere: ["zylla", "form7", "rex"], titel: "Mehrpersonenfall" });
-  assert.deepEqual(trio.map((x) => x.id), ["zylla", "form7", "rex"]);
+  const gruppe = charaktereFuer({ coverCharaktere: ["zylla", "form7", "rex", "brakk"], titel: "Mehrpersonenfall" });
+  assert.deepEqual(gruppe.map((x) => x.id), ["zylla", "form7", "rex", "brakk"]);
 
   const prompt = charakterPrompt({ coverCharaktere: ["mara"], bildSzene: "scout stops before deadline gate" }, solo);
-  assert.match(prompt, /one, two or three characters/i);
+  assert.match(prompt, /one or more characters/i);
   assert.match(prompt, /Use no prop when gesture alone explains the point/i);
   assert.ok(!/one or two characters only/i.test(prompt), "alte starre Figurenanzahl ist noch im Prompt");
 });
