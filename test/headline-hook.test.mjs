@@ -4,6 +4,7 @@ import fs from "node:fs";
 
 import { titelZeilen, folieHtml } from "../src/vorlagen.mjs";
 import { kontext } from "../src/render.mjs";
+import { hookTyp } from "../src/insights.mjs";
 
 test("Cover-Titel werden in semantische, kurze Zeilen zerlegt", () => {
   assert.deepEqual(
@@ -34,11 +35,20 @@ test("Autoren-Zeilen werden als getrennte kompakte Titelpillen gerendert", () =>
   assert.match(html, /border-radius:28px/);
 });
 
-test("Hook-Regie belohnt Sofortnutzen statt nackter offener Frage", () => {
+test("Hook-Regie lässt konkrete Fragen gegen Fehler- und Nutzenhooks antreten", () => {
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
-  assert.match(autor, /Slide 1 ist der Scroll-Stopper/);
-  assert.match(autor, /§ 80 Abs\. 5 VwGO\? Erst Vollziehung prüfen/);
-  assert.match(autor, /HOOK_NUTZEN/);
-  assert.match(autor, /endetOffen && !hatNutzen/);
+  assert.match(autor, /drei alternative Titel.*konkrete juristische Frage/s);
+  assert.match(autor, /echten Meta-Insights/);
+  assert.match(autor, /Stoppt die Anfechtung die Vollziehung\?/);
+  assert.match(autor, /HOOK_KONKRETE_FRAGE/);
+  assert.match(autor, /if \(konkreteFrage\) p \+= 3/);
+  assert.match(autor, /else if \(endetOffen && !hatNutzen\) p -= 4/);
   assert.match(autor, /zeilen: \{ type: "array"/);
+});
+
+test("Normfragen bleiben Fragen und werden nicht als Zahlenhook gelernt", () => {
+  assert.equal(hookTyp("§ 80 Abs. 5 VwGO?"), "frage");
+  assert.equal(hookTyp("Wann greift § 626 BGB?"), "frage");
+  assert.equal(hookTyp("7 Themen, eine Wochenendstunde"), "zahl");
+  assert.equal(hookTyp("Der Fehler bei § 122 BGB"), "fehler");
 });

@@ -141,10 +141,10 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 
 ## Form
 - Folienarten: titel (Frage/Aufhänger), text (Titel + Text oder Punkte), schritte (nummeriert, je Schritt titel + text), vergleich (links/rechts mit titel + punkte), rechnung (formel, zeilen, ergebnis), karte (dichter Spickzettel: schritte mit kurzem titel + norm im text), merke (ein Satz, der hängen bleibt), cta (Abschluss mit Folgen-Aufforderung).
-- hooks: drei alternative Titel für Folie 1 mit unterschiedlichem Einstieg. Slide 1 ist der Scroll-Stopper, darf aber nicht bloß neugierig machen: Er zeigt schon eine verwertbare Orientierung und lässt die Begründung, Voraussetzungen oder Ausnahme für den Swipe offen. Bevorzugte Muster sind: „§ 80 Abs. 5 VwGO? Erst Vollziehung prüfen“, „Anfechtung: Erst Irrtum, dann Kausalität“, „Besitz ist nicht automatisch Eigentum“, „Zulässigkeit kommt vor Begründetheit“, „Versuch beginnt vor dem letzten Handgriff“. Eine reine offene Frage wie „Stoppt die Anfechtung die Vollziehung?“ ist nur dann stark genug, wenn sie im selben Titel noch einen konkreten Prüfimpuls oder eine Abgrenzung bekommt. Der Titel nennt das juristische Thema selbst – kein austauschbares „Kennst du das?“ und kein künstliches Geheimnis. Keine erfundenen Häufigkeiten, Punktzahlen, Korrektorenvorlieben oder Superlative.
+- hooks: drei alternative Titel für Folie 1 mit unterschiedlichem Einstieg: (1) eine konkrete juristische Frage, (2) Fehler/Falle, (3) Regel/Abgrenzung/Prüfreihenfolge. Die Auswahl trifft anschließend die Lernschleife anhand der echten Meta-Insights (Saves, Shares, Follows, Profilbesuche pro Reach). Fragen bleiben ausdrücklich erlaubt und können gewinnen, wenn die Frage selbst schon konkret und examensnah ist – z. B. „Stoppt die Anfechtung die Vollziehung?“, „Wie prüfst du Vollstreckungsklausel und Klauselrechtsbehelfe richtig durch?“ oder „Wann greift § 626 BGB?“. Vermeide dagegen vage Quizfragen wie „Kennst du das?“ oder „Was gilt hier?“. Fehler-Hooks sollen eine echte, fachlich belegbare Falle benennen; Regel-Hooks dürfen Sofortnutzen geben („Erst Irrtum, dann Kausalität“), müssen aber ein konkretes juristisches Problem nennen. Der Titel nennt das Thema selbst und darf neugierig machen, ohne künstliches Geheimnis. Keine erfundenen Häufigkeiten, Punktzahlen, Korrektorenvorlieben oder Superlative.
 - Jeder hook hat zusätzlich zeilen: 2 bis 4 semantische Anzeigezeilen, die GENAU dieselben Wörter wie titel enthalten. Trenne nach Sinn, nicht nach Zufall. Normen bleiben zusammen („§ 80 Abs. 5 VwGO?“), Gegensatz- und Reihenfolgebausteine bleiben lesbar („kommt vor“, „Erst Irrtum, dann“). Möglichst keine Zeile über ca. 18–20 sichtbare Zeichen; einzelne lange Fachwörter dürfen allein stehen. Keine isolierten Artikel oder Präpositionen. Die Zeilen werden als einzelne dunkle Titel-Pillen gerendert.
 - Die erste Zeile der Caption ist gleichzeitig Suchtext: Sie nennt das Thema mit den Wörtern, die jemand bei Instagram oder Google eintippen würde (z. B. „Annahmeverzug Voraussetzungen Rechtsfolgen“), natürlich eingebettet in den Hook.
-- Folie-1-Titel: 5–11 gut lesbare Wörter, ideal 32–68 Zeichen, maximal 80. Er kombiniert Hook + Sofortnutzen: konkrete Norm, Abgrenzung, Reihenfolge, Rechtsfolge oder Fehlerimpuls. Nicht die ganze Lösung verraten; der Swipe erklärt das Warum, die Voraussetzungen und Ausnahmen.
+- Folie-1-Titel: 5–11 gut lesbare Wörter, ideal 32–68 Zeichen, maximal 80. Gute Formen sind konkrete Prüfungsfrage, Fehler/Falle oder klare Abgrenzung/Reihenfolge. Eine konkrete Frage muss nicht künstlich noch eine Antwortzeile anhängen, wenn das Rechtsproblem selbst schon präzise genug ist. Nicht die ganze Lösung verraten; der Swipe erklärt das Warum, die Voraussetzungen und Ausnahmen.
 - Folie 2 löst den Swipe ein und funktioniert zugleich als zweite Einstiegsfolie: keine zweite Teaser-Kachel und kein Fülltext. Sie gibt sofort die entscheidende Abgrenzung, den Sachverhalt oder den ersten echten Prüfungsschritt. Ihr Titel muss auch dann verständlich sein, wenn Instagram diese Folie zuerst zeigt. Andere Titel maximal 60 Zeichen.
 - Je Folie maximal 5 Punkte / 5 Schritte, insgesamt maximal 380 Zeichen Text je Folie; bei „vergleich“ je Spalte maximal 3 Punkte à 60 Zeichen.
 - Kernaussagen und Merksätze aus dem Skelett NIE übernehmen, auch nicht leicht umgestellt – schreibe einen eigenen Merksatz mit anderem Satzbau und anderen Wörtern.
@@ -585,12 +585,13 @@ function prioritaetText(stufe, seed = "") {
 /* Nachbearbeitung: leere Felder entfernen, Titelfolie normieren, Hashtags säubern. */
 const HOOK_UNBELEGT = /fast alle|die meisten|kaum jemand|niemand|jeder macht|in jeder.{0,24}klausur|kommt (?:fast )?jedes jahr|immer dran|verrät|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
 const HOOK_GENERISCH = /^(kenn(?:st|en) du|das stimmt so nicht|schluss mit|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles)[!? .]*$/i;
-/* Der Cover-Hook soll schon Orientierung liefern, ohne die Folien 2+ zu
-   entwerten. Reihenfolge, Gegensatz, Bedingung oder Norm+Prüfimpuls sind
-   starke Nutzensignale; eine nackte offene Frage bekommt dagegen keinen
-   automatischen Bonus mehr. */
+/* Die Meta-Lernschleife gewichtet Hook-Typen bereits mit echten Reaktionen
+   pro Reach. Deshalb keine pauschale Strafe fuer Fragen: Konkrete juristische
+   Fragen, Fehler/Fallen und Nutzwert-Hooks konkurrieren datengetrieben. Nur
+   vage, themenarme Quizfragen werden abgestraft. */
 const HOOK_NUTZEN = /\b(?:erst|dann|vor|nach|kommt vor|geht vor|nicht automatisch|ohne\b.+\bkein|nur wenn|ausnahme|fehler|prüf(?:en|e)|unterscheid|trenn|beginnt|entscheidet|reihenfolge)\b/i;
 const HOOK_NORM = /(?:§{1,2}|Art\.)\s*\d/i;
+const HOOK_KONKRETE_FRAGE = /^(?:wie\s+prüf|wann\s+(?:ist|liegt|greift|muss|darf|beginnt)|warum\b|welche[rs]?\b|stoppt\b|verhindert\b|reicht\b|braucht\b|kann\b|darf\b|muss\b|gilt\b|führt\b)/i;
 const HOOK_STOP = new Set(["der","die","das","den","dem","des","ein","eine","einer","eines","und","oder","mit","ohne","für","von","bei","was","wie","wann","warum","welche","welcher","welches","prüfen","prüfung"]);
 const hookWoerter = (s) => String(s || "").toLocaleLowerCase("de-DE").match(/[\p{L}\p{N}§]+/gu) || [];
 
@@ -612,6 +613,8 @@ function hookWaehlen(daten, strategie, thema = null) {
     const hatNorm = HOOK_NORM.test(titel);
     const endetOffen = /\?$/.test(titel);
     const frageMitWeiterfuehrung = /\?.+\S/.test(titel);
+    const themaTreffer = themaWoerter.size && woerter.some((w) => themaWoerter.has(w));
+    const konkreteFrage = endetOffen && (HOOK_KONKRETE_FRAGE.test(titel) || hatNorm || themaTreffer);
     let p = (g[h.typ] ?? 1) * 10;
     if (woerter.length >= 5 && woerter.length <= 11) p += 4;
     else if (woerter.length > 12 || titel.length > 80) p -= 6;
@@ -619,8 +622,9 @@ function hookWaehlen(daten, strategie, thema = null) {
     if (hatNutzen) p += 5;
     if (hatNorm) p += 2;
     if (frageMitWeiterfuehrung) p += 2;
-    else if (endetOffen && !hatNutzen) p -= 3;
-    if (themaWoerter.size && woerter.some((w) => themaWoerter.has(w))) p += 6;
+    if (konkreteFrage) p += 3;
+    else if (endetOffen && !hatNutzen) p -= 4;
+    if (themaTreffer) p += 6;
     if (Array.isArray(h.zeilen) && h.zeilen.length >= 2 && h.zeilen.length <= 4) p += 1;
     if (HOOK_UNBELEGT.test(titel)) p -= 30;
     if (HOOK_GENERISCH.test(titel)) p -= 12;
