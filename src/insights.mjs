@@ -485,9 +485,16 @@ function istSommerzeit(d = new Date()) {
 
 /* Hook-Typ eines Titels (für die Lernschleife). */
 export function hookTyp(titel = "") {
-  if (/\d/.test(titel) && /%|€|Tage|Jahre|Prozent|\d{2,}/.test(titel)) return "zahl";
-  if (/Fehler|Falle|falsch|übersehen|vergessen|kostet/i.test(titel)) return "fehler";
-  if (/\?$/.test(titel.trim())) return "frage";
+  const text = String(titel || "").trim();
+  /* Paragraphen-/Artikelnummern sind fachlicher Anker, kein Zahlen-Hook.
+     Sonst wuerden neue Titel wie „§ 80 Abs. 5 VwGO?“ faelschlich gegen echte
+     Zahlen-Hooks wie „7 Themen …“ gelernt. */
+  const ohneNormen = text
+    .replace(/§{1,2}\s*\d+[a-z]?(?:\s*Abs\.\s*\d+[a-z]?)?(?:\s*S\.\s*\d+)?/gi, "")
+    .replace(/Art\.\s*\d+[a-z]?(?:\s*Abs\.\s*\d+)?/gi, "");
+  if (/Fehler|Falle|falsch|übersehen|vergessen|kostet/i.test(text)) return "fehler";
+  if (/\?$/.test(text)) return "frage";
+  if (/\d/.test(ohneNormen) && /%|€|Tage|Jahre|Prozent|\d{2,}/.test(ohneNormen)) return "zahl";
   return "aussage";
 }
 
