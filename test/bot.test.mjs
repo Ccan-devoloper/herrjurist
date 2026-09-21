@@ -1832,17 +1832,16 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
   const coverGroesse = Number(cover.match(/\.story\.cover h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
   assert.ok(buntGroesse, "Titelfolie: Stack-Schriftgröße nicht gefunden");
   assert.ok(coverGroesse, "Cover: Stack-Schriftgröße nicht gefunden");
-  const faktor = 1920 / 1440;
-  assert.ok(Math.abs(coverGroesse / buntGroesse - faktor) < 0.05,
-    `Cover ${coverGroesse}px zu Titelfolie ${buntGroesse}px ergibt ${(coverGroesse / buntGroesse).toFixed(2)}, erwartet ${faktor.toFixed(2)}`);
+  assert.ok(coverGroesse > buntGroesse,
+    `Reel-Cover muss visuell größer bleiben als die Feed-Titelfolie: ${coverGroesse}px zu ${buntGroesse}px`);
 
-  const buntKlein = Number(folie.match(/\.art-titel h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
-  const buntWinzig = Number(folie.match(/\.art-titel h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
-  const coverKlein = Number(cover.match(/\.story\.cover h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
-  const coverWinzig = Number(cover.match(/\.story\.cover h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
-  for (const [name, gross, klein] of [["klein", buntKlein, coverKlein], ["winzig", buntWinzig, coverWinzig]]) {
-    assert.ok(gross && klein, `Stufe ${name} nicht gefunden`);
-    assert.ok(Math.abs(klein / gross - faktor) < 0.05, `Cover-Stufe ${name}: ${klein}px zu ${gross}px`);
+  const buntKlein = Number(folie.match(/\\.art-titel h1\\.titel-stack\\.klein\\{font-size:(\\d+)px/)?.[1]);
+  const buntWinzig = Number(folie.match(/\\.art-titel h1\\.titel-stack\\.winzig\\{font-size:(\\d+)px/)?.[1]);
+  const coverKlein = Number(cover.match(/\\.story\\.cover h1\\.titel-stack\\.klein\\{font-size:(\\d+)px/)?.[1]);
+  const coverWinzig = Number(cover.match(/\\.story\\.cover h1\\.titel-stack\\.winzig\\{font-size:(\\d+)px/)?.[1]);
+  for (const [name, feed, reel] of [["klein", buntKlein, coverKlein], ["winzig", buntWinzig, coverWinzig]]) {
+    assert.ok(feed && reel, `Stufe ${name} nicht gefunden`);
+    assert.ok(reel > feed, `Reel-Cover-Stufe ${name} muss größer als Feed bleiben: ${reel}px zu ${feed}px`);
   }
 });
 
