@@ -488,7 +488,7 @@ export function hookTyp(titel = "") {
   const text = String(titel || "").trim();
   /* Paragraphen-/Artikelnummern sind fachlicher Anker, kein Zahlen-Hook.
      Sonst wuerden neue Titel wie „§ 80 Abs. 5 VwGO?“ faelschlich gegen echte
-     Zahlen-Hooks wie „7 Themen …“ gelernt. */
+     Zahlenlisten wie „7 Themen …“ gelernt. */
   const ohneNormen = text
     .replace(/§{1,2}\s*\d+[a-z]?(?:\s*Abs\.\s*\d+[a-z]?)?(?:\s*S\.\s*\d+)?/gi, "")
     .replace(/Art\.\s*\d+[a-z]?(?:\s*Abs\.\s*\d+)?/gi, "");
