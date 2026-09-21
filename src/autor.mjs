@@ -141,10 +141,11 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 
 ## Form
 - Folienarten: titel (Frage/Aufhänger), text (Titel + Text oder Punkte), schritte (nummeriert, je Schritt titel + text), vergleich (links/rechts mit titel + punkte), rechnung (formel, zeilen, ergebnis), karte (dichter Spickzettel: schritte mit kurzem titel + norm im text), merke (ein Satz, der hängen bleibt), cta (Abschluss mit Folgen-Aufforderung).
-- hooks: drei alternative Titel für Folie 1 mit unterschiedlichem Einstieg: (1) konkrete Prüfungsfrage/Entscheidung, (2) echte Abgrenzung oder belegbare Falle, (3) klarer Ablauf/Nutzen oder kurzer Falltrigger. Der Titel nennt das juristische Thema selbst – kein austauschbares „Kennst du das?“ und kein künstliches Geheimnis. Keine erfundenen Häufigkeiten, Punktzahlen, Korrektorenvorlieben oder Superlative.
+- hooks: drei alternative Titel für Folie 1 mit unterschiedlichem Einstieg. Slide 1 ist der Scroll-Stopper, darf aber nicht bloß neugierig machen: Er zeigt schon eine verwertbare Orientierung und lässt die Begründung, Voraussetzungen oder Ausnahme für den Swipe offen. Bevorzugte Muster sind: „§ 80 Abs. 5 VwGO? Erst Vollziehung prüfen“, „Anfechtung: Erst Irrtum, dann Kausalität“, „Besitz ist nicht automatisch Eigentum“, „Zulässigkeit kommt vor Begründetheit“, „Versuch beginnt vor dem letzten Handgriff“. Eine reine offene Frage wie „Stoppt die Anfechtung die Vollziehung?“ ist nur dann stark genug, wenn sie im selben Titel noch einen konkreten Prüfimpuls oder eine Abgrenzung bekommt. Der Titel nennt das juristische Thema selbst – kein austauschbares „Kennst du das?“ und kein künstliches Geheimnis. Keine erfundenen Häufigkeiten, Punktzahlen, Korrektorenvorlieben oder Superlative.
+- Jeder hook hat zusätzlich zeilen: 2 bis 4 semantische Anzeigezeilen, die GENAU dieselben Wörter wie titel enthalten. Trenne nach Sinn, nicht nach Zufall. Normen bleiben zusammen („§ 80 Abs. 5 VwGO?“), Gegensatz- und Reihenfolgebausteine bleiben lesbar („kommt vor“, „Erst Irrtum, dann“). Möglichst keine Zeile über ca. 18–20 sichtbare Zeichen; einzelne lange Fachwörter dürfen allein stehen. Keine isolierten Artikel oder Präpositionen. Die Zeilen werden als einzelne dunkle Titel-Pillen gerendert.
 - Die erste Zeile der Caption ist gleichzeitig Suchtext: Sie nennt das Thema mit den Wörtern, die jemand bei Instagram oder Google eintippen würde (z. B. „Annahmeverzug Voraussetzungen Rechtsfolgen“), natürlich eingebettet in den Hook.
-- Folie-1-Titel: 5–10 gut lesbare Wörter, ideal 35–70 Zeichen, maximal 80.
-- Folie 2 löst den Swipe ein: keine zweite Teaser-Kachel und kein Fülltext. Sie gibt sofort die entscheidende Abgrenzung, den Sachverhalt oder den ersten echten Prüfungsschritt, damit der Nutzen nach dem Wischen sichtbar wird. Er muss ohne Caption und ohne Ton verständlich machen, welche Rechtsfrage/Abgrenzung folgt. Andere Titel maximal 60 Zeichen.
+- Folie-1-Titel: 5–11 gut lesbare Wörter, ideal 32–68 Zeichen, maximal 80. Er kombiniert Hook + Sofortnutzen: konkrete Norm, Abgrenzung, Reihenfolge, Rechtsfolge oder Fehlerimpuls. Nicht die ganze Lösung verraten; der Swipe erklärt das Warum, die Voraussetzungen und Ausnahmen.
+- Folie 2 löst den Swipe ein und funktioniert zugleich als zweite Einstiegsfolie: keine zweite Teaser-Kachel und kein Fülltext. Sie gibt sofort die entscheidende Abgrenzung, den Sachverhalt oder den ersten echten Prüfungsschritt. Ihr Titel muss auch dann verständlich sein, wenn Instagram diese Folie zuerst zeigt. Andere Titel maximal 60 Zeichen.
 - Je Folie maximal 5 Punkte / 5 Schritte, insgesamt maximal 380 Zeichen Text je Folie; bei „vergleich“ je Spalte maximal 3 Punkte à 60 Zeichen.
 - Kernaussagen und Merksätze aus dem Skelett NIE übernehmen, auch nicht leicht umgestellt – schreibe einen eigenen Merksatz mit anderem Satzbau und anderen Wörtern.
 - Hervorhebungen mit *Sternchen* um das Wort – sparsam, ein bis zwei je Folie.
@@ -208,7 +209,7 @@ const BEITRAG_SCHEMA = {
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
     quellen: { type: ["array", "null"], items: { type: "string" } },
-    hooks: { type: ["array", "null"], items: { type: "object", additionalProperties: false, properties: { typ: { type: "string", enum: ["frage", "fehler", "zahl", "aussage"] }, titel: { type: "string" } }, required: ["typ", "titel"] } },
+    hooks: { type: ["array", "null"], items: { type: "object", additionalProperties: false, properties: { typ: { type: "string", enum: ["frage", "fehler", "zahl", "aussage"] }, titel: { type: "string" }, zeilen: { type: "array", items: { type: "string" }, minItems: 2, maxItems: 4 } }, required: ["typ", "titel", "zeilen"] } },
   },
   required: ["folien", "caption", "hashtags", "kurztitel", "coverCharaktere", "coverText", "bildSzene", "bildSzeneAlt", "quellen", "hooks"],
 };
@@ -584,6 +585,12 @@ function prioritaetText(stufe, seed = "") {
 /* Nachbearbeitung: leere Felder entfernen, Titelfolie normieren, Hashtags säubern. */
 const HOOK_UNBELEGT = /fast alle|die meisten|kaum jemand|niemand|jeder macht|in jeder.{0,24}klausur|kommt (?:fast )?jedes jahr|immer dran|verrät|häufigste|teuerste|volle punkte|halbe (?:klausur|punkte)|prüfer(?::innen|innen)? (?:lieben|erwarten)|garantiert|punktegeschenk/i;
 const HOOK_GENERISCH = /^(kenn(?:st|en) du|das stimmt so nicht|schluss mit|so nicht,? sondern so|ein halbsatz entscheidet|die reihenfolge ist alles)[!? .]*$/i;
+/* Der Cover-Hook soll schon Orientierung liefern, ohne die Folien 2+ zu
+   entwerten. Reihenfolge, Gegensatz, Bedingung oder Norm+Prüfimpuls sind
+   starke Nutzensignale; eine nackte offene Frage bekommt dagegen keinen
+   automatischen Bonus mehr. */
+const HOOK_NUTZEN = /\b(?:erst|dann|vor|nach|kommt vor|geht vor|nicht automatisch|ohne\b.+\bkein|nur wenn|ausnahme|fehler|prüf(?:en|e)|unterscheid|trenn|beginnt|entscheidet|reihenfolge)\b/i;
+const HOOK_NORM = /(?:§{1,2}|Art\.)\s*\d/i;
 const HOOK_STOP = new Set(["der","die","das","den","dem","des","ein","eine","einer","eines","und","oder","mit","ohne","für","von","bei","was","wie","wann","warum","welche","welcher","welches","prüfen","prüfung"]);
 const hookWoerter = (s) => String(s || "").toLocaleLowerCase("de-DE").match(/[\p{L}\p{N}§]+/gu) || [];
 
@@ -601,11 +608,20 @@ function hookWaehlen(daten, strategie, thema = null) {
   const bewertet = kandidaten.map((h) => {
     const titel = String(h.titel || "").trim();
     const woerter = hookWoerter(titel);
+    const hatNutzen = HOOK_NUTZEN.test(titel);
+    const hatNorm = HOOK_NORM.test(titel);
+    const endetOffen = /\?$/.test(titel);
+    const frageMitWeiterfuehrung = /\?.+\S/.test(titel);
     let p = (g[h.typ] ?? 1) * 10;
-    if (woerter.length >= 5 && woerter.length <= 10) p += 3;
-    else if (woerter.length > 12 || titel.length > 80) p -= 5;
-    if (/\?$/.test(titel)) p += 1;
-    if (themaWoerter.size && woerter.some((w) => themaWoerter.has(w))) p += 4;
+    if (woerter.length >= 5 && woerter.length <= 11) p += 4;
+    else if (woerter.length > 12 || titel.length > 80) p -= 6;
+    if (titel.length >= 32 && titel.length <= 68) p += 2;
+    if (hatNutzen) p += 5;
+    if (hatNorm) p += 2;
+    if (frageMitWeiterfuehrung) p += 2;
+    else if (endetOffen && !hatNutzen) p -= 3;
+    if (themaWoerter.size && woerter.some((w) => themaWoerter.has(w))) p += 6;
+    if (Array.isArray(h.zeilen) && h.zeilen.length >= 2 && h.zeilen.length <= 4) p += 1;
     if (HOOK_UNBELEGT.test(titel)) p -= 30;
     if (HOOK_GENERISCH.test(titel)) p -= 12;
     return { ...h, p };
@@ -631,7 +647,10 @@ function coverTextKurz(text) {
 
 function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
   const hook = hookWaehlen(daten, strategie, thema);
-  if (hook && daten.folien?.[0]) daten.folien[0].titel = hook.titel;
+  if (hook && daten.folien?.[0]) {
+    daten.folien[0].titel = hook.titel;
+    if (Array.isArray(hook.zeilen) && hook.zeilen.length >= 2) daten.folien[0].titelZeilen = hook.zeilen.slice(0, 4);
+  }
   const folien = (daten.folien || []).map((f) => {
     const o = {};
     for (const [k, v] of Object.entries(f)) if (v != null && !(Array.isArray(v) && v.length === 0)) o[k] = v;
