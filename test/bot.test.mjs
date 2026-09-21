@@ -7028,8 +7028,10 @@ test("Carousel-Cover bleibt auf Folie 1 und Erklärbilder bleiben flach", () => 
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   assert.match(autor, /NUR Folie 1 \(Cover\/Titelfolie\) bekommt eine Charakter-Szene/);
   assert.match(autor, /Alle inneren Karussell-Slides bleiben reine Text-\/Strukturfolien/);
-  assert.match(autor, /Charakterwahl ist NICHT deine Aufgabe/);
-  assert.match(autor, /coverText: optionaler DEUTSCHER Merksatz/);
+  assert.match(autor, /VISUELLE COVER-REGIE IST TEIL DEINER REDAKTIONELLEN AUFGABE/);
+  assert.match(autor, /coverRegie: PFLICHTOBJEKT/);
+  assert.match(autor, /coverText: PFLICHT/);
+  assert.doesNotMatch(autor, /Charakterwahl ist NICHT deine Aufgabe/);
 });
 
 
