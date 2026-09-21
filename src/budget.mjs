@@ -58,6 +58,7 @@ export const ZWECK_TOPF = Object.freeze({
   "story-faktencheck": "core",
   bildregie: "core",
   bild: "core",
+  "bild-qa": "core",
   erklaerbild: "core",
   loesungsskizze: "core",
   loesung: "core",
