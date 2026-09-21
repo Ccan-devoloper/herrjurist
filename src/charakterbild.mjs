@@ -85,7 +85,7 @@ const REGELN = [
 function idsAusRegie(ziel = {}) {
   const roh = ziel.coverCharaktere || ziel?.folien?.find?.((f) => f.art === "titel")?.coverCharaktere;
   if (!Array.isArray(roh)) return [];
-  return [...new Set(roh.map((x) => String(x || "").toLowerCase()).filter((id) => CHARAKTERE[id]))].slice(0, 3);
+  return [...new Set(roh.map((x) => String(x || "").toLowerCase()).filter((id) => CHARAKTERE[id]))].slice(0, 6);
 }
 
 export function charaktereFuer(ziel = {}) {
@@ -101,6 +101,7 @@ function handlungFuer(ziel, chars) {
   const a = chars[0]?.name || "the character";
   const b = chars[1]?.name || "another character";
   const c = chars[2]?.name || "a third character";
+  const gruppe = chars.map((x) => x.name).join(", ");
   if (/kuendig|kündig/i.test(text)) return `${a} hands ${b} a blank termination letter; ${b} reacts surprised while ${a} clearly ends the relationship.`;
   if (/142|unfall|unfallort|24 stunden/i.test(text)) return `${a} turns away from a lightly damaged small car as if leaving the accident scene, while ${b} stops them and points back to the car.`;
   if (/streit|ansicht|ergebnis|vergleich/i.test(text)) return `${a} carefully compares two different blank solution sheets side by side while ${b} waits before starting an argument.`;
@@ -114,7 +115,7 @@ function handlungFuer(ziel, chars) {
   if (/dieb|raub|straf|tatbestand/i.test(text)) return `${a} reenacts the concrete act while ${b} inspects the sequence step by step.`;
   const cue = String(ziel?.bildSzene || ziel?.titel || ziel?.kurztitel || "a legal exam problem").trim();
   if (chars.length === 1) return `${a} acts out this concrete exam situation in one immediately readable pose: ${cue}.`;
-  if (chars.length >= 3) return `${a}, ${b} and ${c} form one coherent interaction that makes this concrete exam situation instantly understandable: ${cue}.`;
+  if (chars.length >= 3) return `${gruppe} form one coherent interaction that makes this concrete exam situation instantly understandable: ${cue}.`;
   return `${a} and ${b} act out this concrete exam situation: ${cue}. Their interaction, not mere posing, must communicate the point.`;
 }
 
@@ -127,7 +128,7 @@ export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel)) {
   return [
     "Create a NEW flat 2D sci-fi comedy cartoon vignette using the supplied recurring character reference image(s).",
     referenzen,
-    "Use exactly the selected recurring characters. The selection may contain one, two or three characters; do not invent extra people or duplicate a character.",
+    "Use exactly the selected recurring characters. The selection may contain one or more characters, up to the six supplied recurring identities; do not invent extra people or duplicate a character.",
     "Do not copy the reference poses. Redraw the same identities in a new, topic-specific interaction.",
     `Scene action: ${handlung}`,
     `Legal-topic context, only to understand the visual meaning: ${kontext}`,
@@ -265,7 +266,7 @@ function qa(roh, randFarbe = null) {
 export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "bild", slot = null } = {}) {
   if (!charakterBildAktiv() || !ziel) return null;
   const cfg = CONFIG.bilder.charaktere;
-  const chars = charaktereFuer(ziel).slice(0, 3);
+  const chars = charaktereFuer(ziel).slice(0, 6);
   if (!chars.length || chars.some((c) => !fs.existsSync(path.join(basis, c.datei)))) return null;
   const prompt = charakterPrompt(ziel, chars);
   const versuche = [
