@@ -288,10 +288,36 @@ export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = 
 }
 
 /**
+ * Rohtransport fuer GPT-Image-Edits. Die Budget-/Journal-/Telemetrie-Tuer
+ * bleibt bildAufruf(); diese Funktion haelt lediglich auch den Multipart-
+ * Provider-Endpunkt in derselben zentralen Anbieterdatei.
+ */
+export async function openaiBildEditSenden({ form, key, zeitlimitMs = 120000, fetchFn = fetch }) {
+  const steuerung = new AbortController();
+  const wecker = setTimeout(() => steuerung.abort(), zeitlimitMs);
+  try {
+    const r = await fetchFn("https://api.openai.com/v1/images/edits", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${key || ""}` },
+      body: form,
+      signal: steuerung.signal,
+    });
+    if (r.ok) return await r.json();
+    const body = (await r.text().catch(() => "")).slice(0, 500);
+    const fehler = new Error(`OpenAI image edit ${r.status}: ${body}`);
+    fehler.status = r.status;
+    fehler.retryAfter = Number(r.headers.get("retry-after") || 0);
+    throw fehler;
+  } finally {
+    clearTimeout(wecker);
+  }
+}
+
+/**
  * Ein erzeugtes Bild. Der Preis steht pro Stück fest, das Ceiling ist hier
  * keine Token-, sondern eine Stückgrenze.
  */
-export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null, preisUsd = null, slot = null, optional = true, modell = "gpt-image-1-mini", zeitlimitMs = 120000, url = "https://api.openai.com/v1/images/generations", fetchFn = fetch }) {
+export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null, preisUsd = null, slot = null, optional = true, modell = "gpt-image-1-mini", zeitlimitMs = 120000, url = "https://api.openai.com/v1/images/generations", fetchFn = fetch, kostenAusAntwort = null }) {
   if (!kontext?.budget) throw new OhneKontext(zweck);
   const { budget, telemetrie, journal } = kontext;
   const stueck = preisUsd ?? CONFIG.bilder?.ki?.preisUsd ?? 0.01;
@@ -337,11 +363,17 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     if (journal && reservierung) await journal.senden(reservierung);
     griff.gesendet();
     const ergebnis = await (senden || senderStandard)();
-    griff.kosten(stueck);
-    griff.buchen(stueck);
-    journal?.abrechnen(reservierung, stueck);
-    erfassenStueck(stueck, zweck);
-    telemetrie?.aufruf({ ...roh, sent: true, actualUsd: stueck, usd: stueck, releasedUsd: 0, outcome: "ok", approved: true });
+    /* Bildmodelle ab GPT Image 2.5 melden ihren echten Tokenverbrauch. Fuer
+       Kostenmessungen und die spaetere Kalibrierung buchen wir deshalb nach
+       Usage, wenn der Aufrufer eine Kostenfunktion liefert. Die Admission
+       bleibt konservativ beim vorab reservierten Betrag. */
+    const gemessen = typeof kostenAusAntwort === "function" ? Number(kostenAusAntwort(ergebnis)) : NaN;
+    const tatsaechlich = Number.isFinite(gemessen) && gemessen >= 0 ? gemessen : stueck;
+    griff.kosten(tatsaechlich);
+    griff.buchen(tatsaechlich);
+    journal?.abrechnen(reservierung, tatsaechlich);
+    erfassenStueck(tatsaechlich, zweck);
+    telemetrie?.aufruf({ ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich, releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true });
     return ergebnis;
   } catch (e) {
     if (e instanceof InvarianteVerletzt) {

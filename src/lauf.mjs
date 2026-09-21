@@ -134,7 +134,11 @@ async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
   if (!ziel || ziel.bild || !ziel.bildSzene) return;
   try {
     const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, ...opt });
-    if (treffer) { ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false; ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null; }
+    if (treffer) {
+      ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false;
+      ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null;
+      ziel.bildTyp = treffer.typ || null; ziel.bildCharaktere = treffer.charaktere || null;
+    }
   } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
 }
 
@@ -172,7 +176,7 @@ async function titelfolieBebildern(beitrag) {
      Flat-Illustrationsphase stammen. Nur explizit fotografische Cover oder
      echte Pexels-Fotos werden unverändert übernommen; alles andere wird
      einmal sauber neu beschafft. */
-  if (titelfolie.bild && (titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
+  if (titelfolie.bild && (titelfolie.bildTyp === "charakter" || titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
   if (titelfolie.bild) {
     for (const k of ["bild","bildQuelle","bildFrei","bildBreite","bildHoehe","bildTyp"]) delete titelfolie[k];
   }
@@ -185,6 +189,9 @@ async function titelfolieBebildern(beitrag) {
     titelfolie.bildBreite = treffer.breite || null;
     titelfolie.bildHoehe = treffer.hoehe || null;
     titelfolie.bildTyp = treffer.typ || "foto";
+    titelfolie.bildCharaktere = treffer.charaktere || null;
+    titelfolie.bildPrompt = treffer.prompt || null;
+    titelfolie.bildKostenUsd = treffer.kostenUsd ?? null;
     return true;
   } catch (e) {
     console.warn(`  ! Titelbild: ${e.message}`);
@@ -1065,7 +1072,7 @@ async function main() {
          automatische Rettungskette. Scheitern alle Bildquellen, gewinnt
          Availability: das bestehende Icon-Cover wird trotzdem veröffentlicht. */
       if (!(await titelfolieBebildern(beitrag))) {
-        console.warn(`  ! Beitrag ${eintrag.slot}: kein fotorealistisches Cover verfügbar – Veröffentlichung mit Icon-Cover.`);
+        console.warn(`  ! Beitrag ${eintrag.slot}: kein Charakter-Cover verfügbar – Veröffentlichung mit Icon-Cover.`);
       }
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
@@ -1298,7 +1305,7 @@ async function main() {
     try { beitrag = await beitragSchreiben({ format: RESERVE_FORMATE[thema.typ], thema, datum, strategie }); }
     finally { if (eigenerPosten) postenBeenden(); }
     if (!(await titelfolieBebildern(beitrag))) {
-      console.warn(`  ! Vorrat ${id}: kein fotorealistisches Cover – Reserve wird mit Icon-Cover gerendert.`);
+      console.warn(`  ! Vorrat ${id}: kein Charakter-Cover – Reserve wird mit Icon-Cover gerendert.`);
     }
     const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
     const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "reserve", id), { variante });
@@ -1403,7 +1410,7 @@ async function auffuellenLauf(ziel, { hosting, ledger, ledgerPfad, pool, poolInd
         hosting.jsonSchreiben(`inhalte/${slot}.json`, beitrag);
       }
       if (!(await titelfolieBebildern(beitrag))) {
-        console.warn(`  ! Auffüllen ${eintrag.slot}: kein fotorealistisches Cover – Veröffentlichung mit Icon-Cover.`);
+        console.warn(`  ! Auffüllen ${eintrag.slot}: kein Charakter-Cover – Veröffentlichung mit Icon-Cover.`);
       }
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "auffuellen"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Auffüllen ${slot}`);
