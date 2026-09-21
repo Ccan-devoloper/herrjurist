@@ -110,6 +110,37 @@ export function providerGuard(roh = process.env.IG_PROVIDER_GUARD_USD) {
   return providerGuardLesen(roh).usd;
 }
 
+/**
+ * Temporäre Kostenmessung für den Core-Topf.
+ *
+ * Anders als Break Glass darf diese Ausnahme auch in geplanten Läufen gelten,
+ * aber nur bis zu einem festen ISO-Zeitpunkt. Danach fällt der Lauf ohne
+ * weiteren Commit automatisch auf den Regeldeckel zurück. Betrag und Ende
+ * müssen gemeinsam gesetzt und gültig sein; halbe oder fehlerhafte
+ * Konfigurationen werden vom Gate abgelehnt.
+ */
+export function kostenmessungLesen({
+  bis = process.env.IG_KOSTENMESSUNG_BIS,
+  coreUsd = process.env.IG_KOSTENMESSUNG_CORE_USD,
+  jetzt = Date.now(),
+} = {}) {
+  const bisText = bis == null ? "" : String(bis).trim();
+  const coreText = coreUsd == null ? "" : String(coreUsd).trim();
+  if (!bisText && !coreText) {
+    return { aktiv: false, gueltig: true, abgelaufen: false, bis: null, coreUsd: null };
+  }
+  if (!bisText || !coreText) {
+    return { aktiv: false, gueltig: false, abgelaufen: false, bis: bisText || null, coreUsd: null };
+  }
+  const ende = Date.parse(bisText);
+  const betrag = Number(coreText);
+  if (!Number.isFinite(ende) || !Number.isFinite(betrag) || betrag <= REGEL_DECKEL.core) {
+    return { aktiv: false, gueltig: false, abgelaufen: false, bis: bisText, coreUsd: Number.isFinite(betrag) ? betrag : null };
+  }
+  const aktiv = Number(jetzt) < ende;
+  return { aktiv, gueltig: true, abgelaufen: !aktiv, bis: new Date(ende).toISOString(), coreUsd: betrag };
+}
+
 export class RichtlinieVerletzt extends Error {
   constructor(befunde) {
     super(`Effektive Konfiguration unzulässig:\n${befunde.map((b) => `  - ${b}`).join("\n")}`);
@@ -132,6 +163,7 @@ export class RichtlinieVerletzt extends Error {
 export function effektiveKonfiguration({
   ausloeser, deckel = REGEL_DECKEL, ausnahmen = {}, datum,
   breakGlass = null, researchGetrennt = true,
+  kostenMessung = kostenmessungLesen(),
 }) {
   const hinweise = [];
   const effektiv = { core: Number(deckel.core), engagement: Number(deckel.engagement), research: Number(deckel.research) };
@@ -166,6 +198,18 @@ export function effektiveKonfiguration({
     }
   }
 
+  const km = kostenMessung || { aktiv: false, gueltig: true, abgelaufen: false, bis: null, coreUsd: null };
+  if (!km.gueltig) {
+    hinweise.push("Temporäre Kostenmessung ist unvollständig oder ungültig - der Lauf startet nicht.");
+  } else if (km.aktiv && !bg.aktiv) {
+    effektiv.core = Number(km.coreUsd);
+    hinweise.push(`Kostenmessung aktiv bis ${km.bis}: Core-Deckel vorübergehend ${effektiv.core.toFixed(5)} $.`);
+  } else if (km.aktiv && bg.aktiv) {
+    hinweise.push(`Kostenmessung ist bis ${km.bis} aktiv; der manuelle Break-Glass-Betrag hat für diesen Lauf Vorrang.`);
+  } else if (km.abgelaufen) {
+    hinweise.push(`Kostenmessung seit ${km.bis} abgelaufen - Core wieder am Regeldeckel.`);
+  }
+
   /* Policy-Deckel und Betriebsgrenze sind zwei Zahlen, nicht eine. Zugelassen
      wird bis zur Betriebsgrenze; der Policy-Deckel ist die Zusage. */
   const guardStand = providerGuardLesen();
@@ -183,7 +227,7 @@ export function effektiveKonfiguration({
   return {
     deckel: effektiv, betriebsDeckel: betrieb,
     providerGuardUsd: guard, providerGuard: guardStand,
-    breakGlass: bg, ausloeser, hinweise, regel: { ...deckel },
+    breakGlass: bg, kostenMessung: km, ausloeser, hinweise, regel: { ...deckel },
   };
 }
 
@@ -203,7 +247,7 @@ export function richtlinieGate({
   researchSuchen = 2, zwecke = [], zweckTopf = {},
 }) {
   const befunde = [];
-  const { deckel, breakGlass, ausloeser, regel } = konfiguration;
+  const { deckel, breakGlass, ausloeser, regel, kostenMessung = { aktiv: false, gueltig: true } } = konfiguration;
   const geplant = ausloeser === "schedule";
 
   /* Geprüft wird gegen REGEL_DECKEL - die normative Konstante in diesem
@@ -226,13 +270,20 @@ export function richtlinieGate({
   }
   if (Number(deckel.engagement) !== norm.engagement) befunde.push(`Engagement-Deckel ${deckel.engagement} statt ${norm.engagement}`);
   if (Number(deckel.research) !== norm.research) befunde.push(`Research-Deckel ${deckel.research} statt ${norm.research}`);
+  if (kostenMessung.gueltig === false) {
+    befunde.push("Temporäre Kostenmessung ist ungültig oder unvollständig");
+  }
   if (breakGlass.aktiv) {
     if (geplant) befunde.push("Break Glass in einem geplanten Lauf aktiv");
     else if (Number(deckel.core) !== Number(breakGlass.betragUsd)) {
       befunde.push(`Core-Deckel ${deckel.core} passt nicht zum Break-Glass-Betrag ${breakGlass.betragUsd}`);
     }
+  } else if (kostenMessung.aktiv) {
+    if (Number(deckel.core) !== Number(kostenMessung.coreUsd)) {
+      befunde.push(`Core-Deckel ${deckel.core} passt nicht zur temporären Kostenmessung ${kostenMessung.coreUsd}`);
+    }
   } else if (Number(deckel.core) !== norm.core) {
-    befunde.push(`Core-Deckel ${deckel.core} statt ${norm.core} ohne Break Glass`);
+    befunde.push(`Core-Deckel ${deckel.core} statt ${norm.core} ohne Break Glass oder aktive Kostenmessung`);
   }
 
   /* Produktmenge: Sie ist das Versprechen an die Leser und keine Stellschraube
