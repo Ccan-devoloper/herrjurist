@@ -5,7 +5,7 @@
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { iconSvg, ICONS } from "./stile.mjs";
+import { iconSvg, ICONS, lernPalette } from "./stile.mjs";
 import { farbIcon } from "./icons.mjs";
 import { normKurz } from "./normen.mjs";
 
@@ -245,7 +245,7 @@ const PFEIL = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBo
 export function buntCss(ctx) {
   const stil = ctx?.stil;
   if (!stil || (stil.familie || stil.id) !== "bunt") return "";
-  const p = stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3];
+  const p = lernPalette(ctx.fach, stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3]);
   const pfeil = `url("data:image/svg+xml,${PFEIL.replace("%23111", encodeURIComponent(p.dunkel))}")`;
   return `
 :root{--grund:${p.grund};--text:${p.dunkel};--text-weich:${p.weich || p.dunkel};--akzent:${p.dunkel};--pille:${p.dunkel};--pille-text:#fff;--flaeche:rgba(255,255,255,.92);--linie:rgba(255,255,255,.45);--hell:${p.hell};--lila:${p.lila};--akzent2:${p.akzent2}}
