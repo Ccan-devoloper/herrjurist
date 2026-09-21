@@ -7048,7 +7048,7 @@ test("Charakter-Cover folgt semantischer Markenregie; nur manuelle Wahl darf ueb
   assert.ok(!/another character|official|clerk|detective/i.test(prompt), "Fremdrolle ist wieder im Prompt");
 });
 
-test("Charakter-Cover nutzt eine deutlich groessere Buehne und optionalen Merksatz", async () => {
+test("Charakter-Cover nutzt eine deutlich groessere Buehne; Handschrift steckt im KI-Motiv", async () => {
   const { BUEHNE_BEITRAG, BUEHNE_CHARAKTER, folieHtml } = await import("../src/vorlagen.mjs");
   const { kontext } = await import("../src/render.mjs");
   assert.ok(BUEHNE_CHARAKTER.flaeche > BUEHNE_BEITRAG.flaeche * 2, "Charakterbuehne ist noch zu klein");
@@ -7059,8 +7059,8 @@ test("Charakter-Cover nutzt eine deutlich groessere Buehne und optionalen Merksa
     bild: "data:image/png;base64,AA==", bildFrei: true, bildTyp: "charakter",
     bildBreite: 900, bildHoehe: 700,
   }, kontext({ fach: null, klausur: 1 }), 1, 6);
-  assert.match(html, /cover-hinweis/);
-  assert.match(html, /Ohne Zugang keine Frist/);
+  assert.doesNotMatch(html, /cover-hinweis/);
+  assert.doesNotMatch(html, /Ohne Zugang keine Frist/);
   assert.match(html, /frei charakter/);
 });
 
