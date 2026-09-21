@@ -16,10 +16,14 @@ const hier = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(hier, "..");
 const out = path.join(root, "out", "cover-quality-v2");
 const coversDir = path.join(out, "covers");
+const motifsDir = path.join(out, "motifs");
 const reelDir = path.join(out, "reel");
+const reelMotifsDir = path.join(reelDir, "motifs");
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(coversDir, { recursive: true });
+fs.mkdirSync(motifsDir, { recursive: true });
 fs.mkdirSync(reelDir, { recursive: true });
+fs.mkdirSync(reelMotifsDir, { recursive: true });
 
 const faelle = [
   {
@@ -209,6 +213,10 @@ async function coverAbnahme() {
     const motiv = await charakterMotivZeichnen(ziel, { zweck: "bild", slot });
     if (!motiv) throw new Error(`${slot}: kein Charakterbild hat beide QA-Stufen bestanden`);
     try {
+      /* QA-freigegebenes Rohmotiv im Artifact behalten. Damit koennen reine
+         Layoutaenderungen spaeter ohne erneuten Bild-API-Aufruf gerendert werden. */
+      const motivDatei = path.join(motifsDir, `${slot}.png`);
+      fs.copyFileSync(motiv.pfad, motivDatei);
       const folie = {
         art: "titel",
         titel: fall.thema,
@@ -216,7 +224,7 @@ async function coverAbnahme() {
         icon: fall.icon,
         coverText: fall.coverText,
         coverBadge: COVER_BADGES[fall.nr] || "Klausurrelevant",
-        bild: dateiDaten(motiv.pfad),
+        bild: dateiDaten(motivDatei),
         bildFrei: true,
         bildBreite: motiv.breite || null,
         bildHoehe: motiv.hoehe || null,
@@ -253,11 +261,15 @@ async function coverAbnahme() {
         attempt: motiv.attempt,
         qaFirstPass: motiv.qaFirstPass,
         qaAttempts: motiv.qaAttempts,
+        motifPath: path.relative(root, motivDatei),
+        motifDimensions: { width: Number(motiv.breite || 0), height: Number(motiv.hoehe || 0) },
         imageCostUsd: tel.imageCostUsd,
         visionQaCostUsd: tel.visionQaCostUsd,
         totalCostUsd: tel.totalCostUsd,
         tokenUsage: tel.tokenUsage,
         path: path.relative(root, datei),
+        motifPath: path.relative(root, motivDatei),
+        motifDimensions: { width: Number(motiv.breite || 0), height: Number(motiv.hoehe || 0) },
         dimensions: dim,
       });
     } finally {
@@ -298,7 +310,9 @@ async function reelAbnahme() {
     const motiv = await charakterMotivZeichnen(ziel, { zweck: "erklaerbild", slot });
     if (!motiv) throw new Error(`${slot}: kein Reel-Charakterbild hat beide QA-Stufen bestanden`);
     try {
-      s.bild = dateiDaten(motiv.pfad);
+      const motivDatei = path.join(reelMotifsDir, `${slot}.png`);
+      fs.copyFileSync(motiv.pfad, motivDatei);
+      s.bild = dateiDaten(motivDatei);
       s.bildFrei = true;
       s.bildTyp = "charakter";
       s.bildCharaktere = motiv.charaktere;
@@ -379,6 +393,7 @@ try {
     `Commit: ${report.commit || "local"}`,
     `10 covers: ${cover.ergebnisse.length}`,
     `Contact sheet: ${cover.kontakt}`,
+    "QA-approved raw motifs: out/cover-quality-v2/motifs + reel/motifs",
     `Reel: ${reel.video}`,
     `Measured provider cost: $${totalActualUsd.toFixed(6)}`,
     "No Instagram/Meta publishing was performed.",
