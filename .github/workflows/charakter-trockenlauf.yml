@@ -1,0 +1,56 @@
+name: Charakter-Cover · Trockenlauf
+
+on:
+  push:
+    branches:
+      - feature/charakter-cover-sunburst
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rendern:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Abhängigkeiten
+        run: npm ci
+
+      - name: Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Freisteller
+        run: pip install --quiet "rembg[cli]" onnxruntime
+
+      - name: Asset-Zweig holen
+        run: git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
+
+      - name: Zehn Charakter-Motive trocken rendern
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IG_CHARAKTERE: "true"
+          IG_CHARAKTER_MODELL: "gpt-image-2.5-sunburst-2026-09-08"
+          IG_CHARAKTER_GUETE: "medium"
+          IG_CHARAKTER_RETRY_GUETE: "high"
+          IG_RENDER_SKALA: "1"
+        run: node bin/charakter-trockenlauf.mjs
+
+      - name: Ergebnisse
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: charakter-trockenlauf-${{ github.run_id }}
+          path: out/charakter-test
+          if-no-files-found: error
+          retention-days: 7
