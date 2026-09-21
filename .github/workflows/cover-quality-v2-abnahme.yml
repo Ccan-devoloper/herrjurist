@@ -7,6 +7,7 @@ on:
     paths:
       - "src/**"
       - "bin/cover-quality-v2-abnahme.mjs"
+      - "bin/cover-quality-v2-single.mjs"
       - "test/**"
       - ".github/workflows/cover-quality-v2-abnahme.yml"
       - "assets/charaktere/**"
@@ -74,13 +75,27 @@ jobs:
           test -n "$IG_WISSEN_KEY" || (echo "IG_WISSEN_KEY secret missing" && exit 1)
 
       - name: Run real 10-cover and reel acceptance
+        if: ${{ !contains(github.event.head_commit.message, '[single-cover]') }}
         run: node bin/cover-quality-v2-abnahme.mjs
 
-      - name: Upload visual acceptance artifact
-        if: always()
+      - name: Run exactly one new Strafrecht cover
+        if: ${{ contains(github.event.head_commit.message, '[single-cover]') }}
+        run: node bin/cover-quality-v2-single.mjs
+
+      - name: Upload full visual acceptance artifact
+        if: ${{ always() && !contains(github.event.head_commit.message, '[single-cover]') }}
         uses: actions/upload-artifact@v4
         with:
           name: cover-quality-v2-real-${{ github.sha }}
           path: out/cover-quality-v2
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload single-cover artifact
+        if: ${{ always() && contains(github.event.head_commit.message, '[single-cover]') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: cover-quality-v2-single-strafrecht-${{ github.sha }}
+          path: out/cover-quality-v2-single
           if-no-files-found: warn
           retention-days: 14
