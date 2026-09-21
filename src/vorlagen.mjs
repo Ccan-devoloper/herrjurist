@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HTML-Vorlagen für Beitragsfolien (1080×1350) und Stories (1080×1920).
+   HTML-Vorlagen für Beitragsfolien (1080×1440, 3:4) und Stories (1080×1920).
    Eine Vorlage je Folienart; das Aussehen kommt aus stile.mjs.
    ========================================================================== */
 
@@ -13,7 +13,7 @@ const hier = path.dirname(fileURLToPath(import.meta.url));
 export const FONT_DIR = path.resolve(hier, "../fonts");
 
 export const MASSE = {
-  beitrag: { breite: 1080, hoehe: 1350 },
+  beitrag: { breite: 1080, hoehe: 1440 },
   story: { breite: 1080, hoehe: 1920 },
 };
 
@@ -500,7 +500,7 @@ export function motivBuehne(breite, hoehe, ziel) {
    fast die ganze untere Haelfte: Sie sollen eine kleine Handlung tragen,
    nicht wie ein Sticker in der Ecke stehen. */
 export const BUEHNE_BEITRAG = { flaeche: 640 * 620 * 0.62, maxB: 820, maxH: 640 };
-export const BUEHNE_CHARAKTER = { flaeche: 980 * 740 * 0.90, maxB: 1000, maxH: 760 };
+export const BUEHNE_CHARAKTER = { flaeche: 1000 * 790 * 0.90, maxB: 1020, maxH: 800 };
 export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.62, maxB: 920, maxH: 850 };
 
 function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
