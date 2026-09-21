@@ -245,21 +245,21 @@ function handlungFuer(ziel, chars) {
 
 export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrektur = "") {
   const referenzen = chars.map((ch, i) =>
-    \`Reference image \${i + 1} is the ONLY canonical identity for \${ch.name}: \${ch.kurz}. Match that exact face/head shape, body proportions, skin/fur/material colours, outfit, accessories and silhouette.\`
+    `Reference image ${i + 1} is the ONLY canonical identity for ${ch.name}: ${ch.kurz}. Match that exact face/head shape, body proportions, skin/fur/material colours, outfit, accessories and silhouette.`
   ).join(" ");
   const handlung = handlungFuer(ziel, chars);
   const kontext = themenKontext(ziel);
   const korrekturText = korrektur
-    ? \`Quality-review correction for this redraw: \${String(korrektur).slice(0, 700)}\`
+    ? `Quality-review correction for this redraw: ${String(korrektur).slice(0, 700)}`
     : "";
 
   return [
     "Create a NEW premium 2D editorial sci-fi comedy illustration for the lower half of a 3:4 Instagram cover.",
     referenzen,
-    \`Use EXACTLY \${chars.length} recurring character identity/identities: \${chars.map((x) => x.name).join(", ")}. No other human, humanoid, robot, creature, face, body, silhouette or duplicate of a selected character may appear.\`,
+    `Use EXACTLY ${chars.length} recurring character identity/identities: ${chars.map((x) => x.name).join(", ")}. No other human, humanoid, robot, creature, face, body, silhouette or duplicate of a selected character may appear.`,
     "The supplied references define identity, not pose. Redraw those same identities in a new topic-specific action.",
-    \`Scene direction: \${handlung}\`,
-    \`Legal context for meaning only, NOT a request to add people or text: \${kontext}\`,
+    `Scene direction: ${handlung}`,
+    `Legal context for meaning only, NOT a request to add people or text: ${kontext}`,
     korrekturText,
     "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the Herrjurist renderer can place a large title above it. Use the lower roughly 60 percent of the imagined 3:4 cover; do not build a background.",
     "Characters must interact rather than pose independently. Every selected character needs a clear job in the scene. Use only props that make the legal point instantly understandable; omit props that do not help.",
@@ -436,27 +436,27 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
         text: [
           "You are the final visual quality gate for a recurring-character editorial cartoon.",
           "Image 1 is the generated candidate. Every following image is the exact canonical reference for one selected recurring character, in the same order as the names below.",
-          \`Selected characters: \${chars.map((x) => x.name).join(", ")}.\`,
-          \`Required count of recurring characters in the candidate: exactly \${chars.length}.\`,
+          `Selected characters: ${chars.map((x) => x.name).join(", ")}.`,
+          `Required count of recurring characters in the candidate: exactly ${chars.length}.`,
           "Reject the candidate if ANY additional human, humanoid, robot, creature, face, body, portrait or duplicate character appears, even in the background or on a screen.",
           "Compare identity carefully: head/face shape, body proportions, skin/material colour, outfit, signature accessories and silhouette must remain recognisably the same as the references.",
           "Reject severe anatomy defects, fused/extra limbs or hands, missing essential body parts, cropped heads/feet/hover bases, accidental amputations, or important props cut off.",
           "Reject a flat generic clip-art look if it loses the polished inked editorial-cartoon finish of the references.",
           "Reject generated readable text, letters, numbers, citations, logos or gibberish. Abstract check marks and simple unlabeled shapes are allowed.",
           "The scene must communicate the requested legal idea at a glance and the selected characters must interact coherently.",
-          \`Legal scene context: \${themenKontext(ziel)}\`,
-          \`Expected action: \${handlungFuer(ziel, chars)}\`,
+          `Legal scene context: ${themenKontext(ziel)}`,
+          `Expected action: ${handlungFuer(ziel, chars)}`,
           "Set ok=true only if every quality criterion passes. retryHint must be a short concrete redraw instruction, or an empty string when ok=true.",
         ].join("\n"),
       },
       {
         type: "input_image",
-        image_url: \`data:image/png;base64,\${fs.readFileSync(kandidatPfad).toString("base64")}\`,
+        image_url: `data:image/png;base64,${fs.readFileSync(kandidatPfad).toString("base64")}`,
         detail: "high",
       },
       ...refs.map((p) => ({
         type: "input_image",
-        image_url: \`data:image/jpeg;base64,\${fs.readFileSync(p).toString("base64")}\`,
+        image_url: `data:image/jpeg;base64,${fs.readFileSync(p).toString("base64")}`,
         detail: "high",
       })),
     ];
@@ -504,7 +504,7 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
     return {
       ok: false,
       unavailable: true,
-      issues: [\`visuelle QA nicht verfuegbar: \${String(e?.message || e).slice(0, 160)}\`],
+      issues: [`visuelle QA nicht verfuegbar: ${String(e?.message || e).slice(0, 160)}`],
       retryHint: "Preserve the exact selected identities, include no extra characters, and redraw with clean anatomy and full uncropped bodies.",
     };
   } finally {
@@ -566,7 +566,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       if (!fertig) {
         korrektur = "Keep every selected character and important prop fully inside the frame with clean transparent edges and no cropping.";
         qaVersuche.push({ attempt: i + 1, quality: v.quality, technischOk: false, visuellOk: false, issues: ["technische Alpha-/Crop-QA nicht bestanden"], retryHint: korrektur });
-        console.warn(\`  ! Charakterbild technische QA fehlgeschlagen (\${chars.map((x) => x.name).join(" + ")}, Versuch \${i + 1})\`);
+        console.warn(`  ! Charakterbild technische QA fehlgeschlagen (${chars.map((x) => x.name).join(" + ")}, Versuch ${i + 1})`);
         continue;
       }
 
@@ -581,7 +581,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       });
       if (!visuell.ok) {
         const grund = (visuell.issues || []).slice(0, 4).join("; ") || "visuelle Marken-QA nicht bestanden";
-        console.warn(\`  ! Charakterbild visuelle QA fehlgeschlagen (\${chars.map((x) => x.name).join(" + ")}, Versuch \${i + 1}): \${grund.slice(0, 320)}\`);
+        console.warn(`  ! Charakterbild visuelle QA fehlgeschlagen (${chars.map((x) => x.name).join(" + ")}, Versuch ${i + 1}): ${grund.slice(0, 320)}`);
         korrektur = visuell.retryHint || grund;
         verwerfen(fertig);
         fertig = null;
@@ -589,7 +589,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       }
 
       const kosten = bildKostenUsd(daten);
-      console.log(\`  → Charakterbild: \${chars.map((x) => x.name).join(" + ")} · \${v.quality} · visuelle QA ✓\${kosten != null ? \` · \${kosten.toFixed(4)} $\` : ""}\`);
+      console.log(`  → Charakterbild: ${chars.map((x) => x.name).join(" + ")} · ${v.quality} · visuelle QA ✓${kosten != null ? ` · ${kosten.toFixed(4)} $` : ""}`);
       return {
         ...fertig,
         charaktere: chars.map((x) => x.name),
@@ -604,7 +604,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       };
     } catch (e) {
       if (fertig) verwerfen(fertig);
-      console.warn(\`  ! Charakterbild Versuch \${i + 1} fehlgeschlagen: \${String(e?.message || e).slice(0, 180)}\`);
+      console.warn(`  ! Charakterbild Versuch ${i + 1} fehlgeschlagen: ${String(e?.message || e).slice(0, 180)}`);
       /* Ein echter Eingabefehler wird durch mehr Bildqualitaet nicht besser.
          Ein 429 sowie visuelle/technische Ablehnungen duerfen dagegen in den
          zweiten kontrollierten Versuch. */
@@ -612,6 +612,6 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
     }
   }
 
-  console.warn(\`  ! Kein Charakter-Cover hat beide QA-Schranken bestanden: \${chars.map((x) => x.name).join(" + ")}. Sauberes Icon-Cover statt Markenfehler.\`);
+  console.warn(`  ! Kein Charakter-Cover hat beide QA-Schranken bestanden: ${chars.map((x) => x.name).join(" + ")}. Sauberes Icon-Cover statt Markenfehler.`);
   return null;
 }
