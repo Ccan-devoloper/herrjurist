@@ -1,3 +1,4 @@
+/* global FormData, Blob */
 /**
  * Wiederkehrende Herr-Jurist-Charaktere als thematische Cover- und Reel-Szenen.
  *
