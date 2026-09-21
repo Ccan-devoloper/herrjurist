@@ -122,51 +122,153 @@ export function charaktereFuer(ziel = {}) {
   return fallbackCharaktere(text).map((id) => CHARAKTERE[id]);
 }
 
-function handlungFuer(ziel, chars) {
-  const text = zielText(ziel);
-  const a = chars[0]?.name || "the character";
-  const b = chars[1]?.name || "another character";
-  const c = chars[2]?.name || "a third character";
-  const gruppe = chars.map((x) => x.name).join(", ");
-  if (/kuendig|kündig/i.test(text)) return `${a} hands ${b} a blank termination letter; ${b} reacts surprised while ${a} clearly ends the relationship.`;
-  if (/142|unfall|unfallort|24 stunden/i.test(text)) return `${a} turns away from a lightly damaged small car as if leaving the accident scene, while ${b} stops them and points back to the car.`;
-  if (/streit|ansicht|ergebnis|vergleich/i.test(text)) return `${a} carefully compares two different blank solution sheets side by side while ${b} waits before starting an argument.`;
-  if (/anfecht|irrtum/i.test(text)) return `${a} points out an obvious mistake on a blank contract while ${b} suddenly realizes the error.`;
-  if (/angebot|annahme|vertragsschluss|schaufenster/i.test(text)) return `${a} presents a blank offer sheet while ${b} deliberately decides whether to accept it.`;
-  if (/besitz|eigentum/i.test(text)) return `${a} holds a house key while ${b} points to a separate blank ownership document, making clear that possession and ownership are different.`;
-  if (/versuch|letzten handgriff|unmittelbar/i.test(text)) return `${a} is just about to complete a decisive action while ${b} stops and examines the moment immediately before completion.`;
-  if (/zulaess|zuläss|begruendet|begründet/i.test(text)) return `${a} checks a first procedural gate on a blank checklist before allowing ${b} to move to a clearly separate second stage.`;
-  if (/vollzieh|aufschieb/i.test(text)) return `${a} checks whether a process is already running before ${b} reaches for a large pause switch.`;
-  if (/frist|kalender|zugang/i.test(text)) return `${a} points at a blank calendar while ${b} holds a sealed blank envelope, both concentrating on the correct timing.`;
-  if (/dieb|raub|straf|tatbestand/i.test(text)) return `${a} reenacts the concrete act while ${b} inspects the sequence step by step.`;
-  const cue = String(ziel?.bildSzene || ziel?.titel || ziel?.kurztitel || "a legal exam problem").trim();
-  if (chars.length === 1) return `${a} acts out this concrete exam situation in one immediately readable pose: ${cue}.`;
-  if (chars.length >= 3) return `${gruppe} form one coherent interaction that makes this concrete exam situation instantly understandable: ${cue}.`;
-  return `${a} and ${b} act out this concrete exam situation: ${cue}. Their interaction, not mere posing, must communicate the point.`;
+function themenKontext(ziel = {}) {
+  const titel = ziel?.folien?.find?.((f) => f.art === "titel")?.titel || "";
+  return [
+    ziel.kurztitel, ziel.fachLabel, ziel.fach, ziel.format, titel,
+    ziel.titel, ziel.unter, ziel.text, ziel.sprecher, ziel.norm, ziel.coverText,
+  ].filter(Boolean).join(" · ").slice(0, 900);
 }
 
-export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel)) {
-  const referenzen = chars.map((c, i) =>
-    `Reference image ${i + 1} is ${c.name}: ${c.kurz}. Preserve this exact character identity, face, body proportions, outfit, colours and distinctive features.`
+function handlungFuer(ziel, chars) {
+  const text = zielText(ziel);
+  const namen = chars.map((x) => x.name);
+  const a = namen[0];
+  const b = namen[1];
+  const c = namen[2];
+
+  /* Jede Regie nennt ausschliesslich Figuren, die auch wirklich als Referenz
+     mitgeschickt werden. Kein "another character", kein Polizist, Clerk,
+     Detective oder sonstige Platzhalterrolle: Genau diese Woerter haben die
+     Fremdcharaktere in den ersten Trockenlaeufen erzeugt. */
+  const solo = (satz) => satz.replaceAll("{A}", a);
+  const duo = (satz, fallback) => b
+    ? satz.replaceAll("{A}", a).replaceAll("{B}", b)
+    : solo(fallback);
+  const trio = (satz, fallback) => c
+    ? satz.replaceAll("{A}", a).replaceAll("{B}", b).replaceAll("{C}", c)
+    : duo(fallback, fallback);
+
+  if (/kuendig|kündig|arbeitsrecht|zugang.*frist|fristbeginn/i.test(text)) {
+    return duo(
+      "{A} calmly hands {B} one sealed blank envelope while a simple blank calendar beside them marks the timing; {B} reacts to receiving it.",
+      "{A} holds one sealed blank envelope beside a simple blank calendar and clearly points to the moment of receipt."
+    );
+  }
+  if (/142|unfall|unfallort|unerlaub.*entfern|verkehrsunfall/i.test(text)) {
+    return duo(
+      "{A} stands beside a lightly damaged small red car and starts to step away; {B} firmly blocks the path and points back to the accident scene.",
+      "{A} stands beside a lightly damaged small red car, pauses mid-step and points back to the accident scene."
+    );
+  }
+  if (/versuch|unmittelbar|letzten handgriff|§\s*22\s*stgb/i.test(text)) {
+    return duo(
+      "{A} reaches toward a large glowing green machine button just before pressing it; {B} sharply stops {A}'s hand at the decisive last moment.",
+      "{A} freezes with one hand a few centimetres above a large glowing green machine button, visibly at the decisive last moment."
+    );
+  }
+  if (/besitz|eigentum|985|sachenrecht/i.test(text)) {
+    return duo(
+      "{A} carries a heavy wooden crate and a house key while {B} points to a separate blank ownership document with a seal, visibly separating possession from ownership.",
+      "{A} holds a house key in one hand and a separate blank ownership document with a seal in the other, clearly comparing the two."
+    );
+  }
+  if (/anfecht|irrtum|kausal|119/i.test(text)) {
+    return duo(
+      "{A} presents a clean two-step clipboard with only abstract check marks while {B} compares two visibly different glowing devices and notices the mistake.",
+      "{A} compares two visibly different objects, notices the mistake, and points from the first object to the resulting decision."
+    );
+  }
+  if (/angebot|annahme|schaufenster|invitatio|vertragsschluss/i.test(text)) {
+    return duo(
+      "{A} gestures toward one displayed product behind a small glass showcase while {B} holds a blank clipboard and deliberately points out that no contract has been concluded yet.",
+      "{A} studies one displayed product behind a small glass showcase while holding a blank contract folder closed."
+    );
+  }
+  if (/zpo|zivilprozess|zwangsvoll|vollstreckungsklausel|zuläss|zulaess|begründet|begruendet/i.test(text)) {
+    return duo(
+      "{A} sorts two clearly separate blank case-file stacks in the correct order while {B} points first to the left stack and only then to the right stack.",
+      "{A} sorts two clearly separate blank case-file stacks in a strict first-then-second order."
+    );
+  }
+  if (/vollzieh|aufschieb|80\s*(abs|ii|2|5)|vwgo|bescheid/i.test(text)) {
+    return duo(
+      "{A} points at a barrier that is already moving while {B} studies one blank warning notice and reaches toward a separate pause control, checking the exception first.",
+      "{A} studies one blank warning notice beside a moving barrier and clearly checks whether the process is already running before touching a pause control."
+    );
+  }
+  if (/280|pflichtverletz|leistungsstör|leistungsstoer|schadensersatz|schuldrecht/i.test(text)) {
+    return duo(
+      "{A} inspects a broken device and traces the defect back through a short chain of three abstract checkpoints while {B} explains the order with a pointer.",
+      "{A} inspects a broken device and traces the defect through three abstract checkpoints in a clear order."
+    );
+  }
+  if (/streit|ansicht|ergebnis|vergleich|methodik/i.test(text)) {
+    return duo(
+      "{A} compares two blank solution sheets side by side and first checks whether their result symbols match; {B} waits with a pointer until that comparison is finished.",
+      "{A} compares two blank solution sheets side by side before deciding whether an argument is needed."
+    );
+  }
+  if (/frist|kalender|zugang/i.test(text)) {
+    return duo(
+      "{A} points at a simple blank calendar while {B} holds one sealed blank envelope, both focused on the exact moment of receipt.",
+      "{A} holds one sealed blank envelope beside a simple blank calendar and points at the moment of receipt."
+    );
+  }
+  if (/mittaeter|mittäter|mehrpersonen|dreiperson|vertretung/i.test(text)) {
+    return trio(
+      "{A}, {B} and {C} form one connected action around a single legal object: one acts, one observes the allocation of roles, and one checks a blank decision board.",
+      "{A} and {B} act on opposite sides of one shared legal object while clearly showing two different roles."
+    );
+  }
+  if (/definition|begriff|dogmatik/i.test(text)) {
+    return solo("{A} teaches one precise concept with a pointer and a clean abstract diagram made only of shapes, arrows and check marks.");
+  }
+  if (/mindset|blackout|zeitdruck|perfektion|nervos/i.test(text)) {
+    return solo("{A} calmly checks a compact blank exam checklist under visible time pressure, focused and unimpressed.");
+  }
+
+  if (chars.length >= 3) {
+    return trio(
+      "{A}, {B} and {C} form one coherent interaction around a single topic-relevant legal prop; every selected character has a clear role and nobody else is present.",
+      "{A} and {B} interact around one topic-relevant legal prop and make the legal distinction visually obvious."
+    );
+  }
+  if (chars.length === 2) {
+    return duo(
+      "{A} and {B} interact around one topic-relevant legal prop and make the legal distinction visually obvious through gesture and reaction.",
+      "{A} demonstrates the legal distinction with one topic-relevant prop in a single readable pose."
+    );
+  }
+  return solo("{A} demonstrates the legal idea with one topic-relevant prop in a single immediately readable pose.");
+}
+
+export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrektur = "") {
+  const referenzen = chars.map((ch, i) =>
+    \`Reference image \${i + 1} is the ONLY canonical identity for \${ch.name}: \${ch.kurz}. Match that exact face/head shape, body proportions, skin/fur/material colours, outfit, accessories and silhouette.\`
   ).join(" ");
-  const kontext = zielText(ziel).slice(0, 1100);
   const handlung = handlungFuer(ziel, chars);
+  const kontext = themenKontext(ziel);
+  const korrekturText = korrektur
+    ? \`Quality-review correction for this redraw: \${String(korrektur).slice(0, 700)}\`
+    : "";
+
   return [
-    "Create a NEW flat 2D sci-fi comedy cartoon vignette using the supplied recurring character reference image(s).",
+    "Create a NEW premium 2D editorial sci-fi comedy illustration for the lower half of a 3:4 Instagram cover.",
     referenzen,
-    "Use exactly the selected recurring characters. The selection may contain one or more characters, up to the six supplied recurring identities; do not invent extra people or duplicate a character.",
-    "Do not copy the reference poses. Redraw the same identities in a new, topic-specific interaction.",
-    `Scene action: ${handlung}`,
-    `Legal-topic context, only to understand the visual meaning: ${kontext}`,
-    "Choose props by meaning, not by formula. Use no prop when gesture alone explains the point; use one or more clearly relevant objects when they make the legal distinction immediately understandable.",
-    "Build one coherent scene, not separate portraits. Characters may stand on either side of a central object, overlap naturally, point, hand things over, stop each other, compare documents or demonstrate a sequence.",
-    "Make the vignette visually substantial: the complete scene should occupy roughly 85 to 92 percent of the usable canvas width or height while still keeping every head, hand, foot and essential prop fully visible.",
-    "Keep silhouettes readable at Instagram thumbnail size. Exaggerate gesture and facial reaction enough that the action is understood before reading the caption.",
-    "Do not render explanatory prose inside the illustration. Documents, screens and signs should stay blank or use simple abstract marks; a short deterministic callout, when useful, is added later by the Herrjurist renderer so spelling stays correct.",
-    "No background and no scenery: transparent background, no room, no landscape and no decorative frame. Ground shadows that belong directly under the characters or object are allowed.",
-    "Use only a modest transparent safety margin around the complete vignette; do not shrink the scene into a small sticker in one corner.",
-    "Bold clean outlines, flat colours, subtle simple shading, consistent with the supplied original character artwork.",
-  ].join(" ");
+    \`Use EXACTLY \${chars.length} recurring character identity/identities: \${chars.map((x) => x.name).join(", ")}. No other human, humanoid, robot, creature, face, body, silhouette or duplicate of a selected character may appear.\`,
+    "The supplied references define identity, not pose. Redraw those same identities in a new topic-specific action.",
+    \`Scene direction: \${handlung}\`,
+    \`Legal context for meaning only, NOT a request to add people or text: \${kontext}\`,
+    korrekturText,
+    "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the Herrjurist renderer can place a large title above it. Use the lower roughly 60 percent of the imagined 3:4 cover; do not build a background.",
+    "Characters must interact rather than pose independently. Every selected character needs a clear job in the scene. Use only props that make the legal point instantly understandable; omit props that do not help.",
+    "Show complete readable anatomy: full heads and faces, all essential hands/fingers, feet or hover bases, and every important prop. No fused hands, spare limbs, duplicated body parts, cropped heads or accidental amputations.",
+    "Polished premium cartoon finish matching the references: confident clean ink outlines, controlled cel shading, subtle material highlights and texture, expressive faces, precise accessories, clean edges and consistent proportions. Do NOT simplify into flat clip-art and do NOT switch to 3D, photorealism, watercolor or sketch style.",
+    "Absolutely no explanatory prose, letters, numbers, law citations, labels, logos, signatures or gibberish inside the generated illustration. Papers, screens, folders and signs must be blank or contain only simple abstract shapes/check marks. Herrjurist adds all readable text later.",
+    "Transparent background only. No room, landscape, wall, decorative frame or colored sticker outline. A soft ground shadow directly under the selected characters or main prop is allowed.",
+    "Fill the transparent image confidently: the complete vignette should occupy about 88 to 94 percent of the usable width or height while retaining a small clean safety margin around every body part and prop.",
+  ].filter(Boolean).join(" ");
 }
 
 export function bildKostenUsd(antwort) {
