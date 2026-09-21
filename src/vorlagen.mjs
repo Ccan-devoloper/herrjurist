@@ -269,10 +269,10 @@ h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;b
 /* Titelfolie: echte Einzelpillen pro Sinneinheit. Weniger Innenabstand und
    nur 8 px Abstand zwischen den Zeilen erzeugen einen kompakten, auf dem
    Handy schnell scanbaren Titelblock. */
-.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:fit-content;max-width:100%;font-size:86px;line-height:1.02;letter-spacing:-.018em;text-wrap:initial}
-.art-titel h1.titel-stack.klein{font-size:78px}
-.art-titel h1.titel-stack.winzig{font-size:68px}
-.art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:928px;background:${p.dunkel};color:#fff;padding:10px 24px 12px;border-radius:28px;white-space:nowrap}
+.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:6px;width:fit-content;max-width:100%;font-size:92px;line-height:1.01;letter-spacing:-.022em;text-wrap:initial}
+.art-titel h1.titel-stack.klein{font-size:84px}
+.art-titel h1.titel-stack.winzig{font-size:76px}
+.art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:928px;background:${p.dunkel};color:#fff;padding:11px 25px 13px;border-radius:28px;white-space:nowrap}
 .art-titel h1.titel-stack .titel-zeile em{color:${p.akzent2}}
 h1 em{color:${p.akzent2}}
 .unter{margin-top:22px;display:inline-block;width:fit-content;background:${p.hell};color:${p.dunkel};padding:12px 30px;border-radius:40px;font-weight:700;font-size:36px;line-height:1.25;margin-left:24px}
@@ -328,15 +328,14 @@ h1 em{color:${p.akzent2}}
    zwoelf verkettete drop-shadows brachten Chromium zum Stehen. Hier nur
    noch der weiche Schatten, der den Sticker von der Flaeche hebt. */
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
-.frei.charakter{right:18px;bottom:22px}
+.frei.charakter{right:10px;bottom:16px;width:820px;height:735px}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
-.art-titel h1,.art-titel .kopf,.art-titel .pille,.art-titel .prio{position:relative;z-index:3}
-.cover-hinweis{position:absolute;left:74px;bottom:285px;max-width:340px;z-index:4;font-family:"Caveat";font-size:46px;line-height:1.02;font-weight:700;color:${p.dunkel};transform:rotate(-4deg);text-wrap:balance}
+.art-titel h1,.art-titel .kopf,.art-titel .prio{position:relative;z-index:3}
+.cover-hinweis{position:absolute;left:70px;bottom:318px;max-width:370px;z-index:4;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};transform:rotate(-4deg);text-wrap:balance}
 .cover-hinweis::before{content:"↘";display:block;font-size:72px;line-height:.7;margin-left:-12px;margin-bottom:8px;transform:rotate(10deg)}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
-.art-titel:has(.frei) .pille{margin-left:20px;z-index:3}
 .art-titel:has(.frei) .fuss{z-index:3}
 .art-titel:has(.frei) .fuss .klausur{background:var(--grund);padding:6px 18px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1;background:rgba(255,255,255,.14);padding:18px;box-sizing:border-box}
@@ -592,9 +591,9 @@ export function titelZeilen(titel, vorgegeben = null) {
   }
 
   const bauen = (max) => teile.flatMap((teil) => zeilenGreedy(teil, max));
-  let zeilen = bauen(17);
-  if (zeilen.length > 4) zeilen = bauen(20);
-  if (zeilen.length > 4) zeilen = bauen(23);
+  let zeilen = bauen(16);
+  if (zeilen.length > 4) zeilen = bauen(19);
+  if (zeilen.length > 4) zeilen = bauen(22);
   while (zeilen.length > 4) {
     const letzte = zeilen.pop();
     zeilen[zeilen.length - 1] = `${zeilen.at(-1)} ${letzte}`;
@@ -606,7 +605,18 @@ function titelKlasse(t, zeilen = null) {
   const z = titelZeilen(t, zeilen);
   const max = Math.max(0, ...z.map(sichtbareLaenge));
   const l = (t || "").length;
-  return l > 92 || max > 24 ? "winzig" : l > 68 || max > 20 ? "klein" : "";
+  return l > 86 || max > 23 ? "winzig" : l > 64 || max > 19 ? "klein" : "";
+}
+
+function coverHinweisText(f = {}) {
+  const sauber = (x) => String(x || "").replace(/\s+/g, " ").trim();
+  const cover = sauber(f.coverText);
+  if (cover) return cover;
+  const alt = sauber(f.hinweis);
+  /* Alte Entwuerfe tragen zufaellige UI-Floskeln. Die hochwertigen Referenzen
+     haben dagegen genau EINEN inhaltlichen Handschrift-Hinweis. */
+  if (!alt || /^(so geht.?s!?|swipen?\s*→?|schau rein!?|merk dir das!?|weiter!?|lesen!?|prüf das!?|pruef das!?)$/i.test(alt)) return "";
+  return alt;
 }
 
 function titelBlock(titel, zeilen, ctx) {
@@ -618,16 +628,20 @@ function titelBlock(titel, zeilen, ctx) {
 }
 
 const FOLIEN = {
-  titel: (f, ctx, i, n) => `
+  titel: (f, ctx, i, n) => {
+    const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
+    const handschrift = bunt ? coverHinweisText(f) : "";
+    return `
     ${kopf(ctx, "")}
     ${titelBlock(f.titel, f.titelZeilen, ctx)}
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
     ${f.prioritaet ? `<div class="prio ${f.prioritaet}"><i></i>${esc(f.prioritaetText || "")}</div>` : ""}
-    <div><span class="pille">${esc((ctx.stil.familie || ctx.stil.id) === "bunt" ? (f.hinweis || "So geht's!") : (f.pille || "Swipen →"))}</span></div>
-    ${f.coverText ? `<div class="cover-hinweis">${esc(f.coverText)}</div>` : ""}
+    ${!bunt && f.pille ? `<div><span class="pille">${esc(f.pille)}</span></div>` : ""}
+    ${handschrift ? `<div class="cover-hinweis">${esc(handschrift)}</div>` : ""}
     ${f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f)}
-    ${!f.bild && (ctx.stil.familie || ctx.stil.id) === "bunt" ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
-    ${fuss(ctx)}`,
+    ${!f.bild && bunt ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
+    ${fuss(ctx)}`;
+  },
   text: (f, ctx, i, n) => `
     ${kopf(ctx, `${i}/${n}`)}
     <h2>${markierenTitel(f.titel)}</h2>
