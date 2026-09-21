@@ -36,7 +36,7 @@ test("cover-quality-v2: alle kanonischen Charakterreferenzen sind dekodierbare J
   }
 });
 
-test("cover-quality-v2: semantische Charakterauswahl fuer die Kernfaelle", () => {
+test("cover-quality-v2: Legacy-Fallback bleibt fuer alte Inhalte deterministisch", () => {
   assert.deepEqual(ids({ titel: "Wann beginnt der Versuch? § 22 StGB" }), ["rex", "mara"]);
   assert.deepEqual(ids({ titel: "§ 142 StGB richtig aufbauen" }), ["rex", "mara"]);
   assert.deepEqual(ids({ titel: "§ 985 BGB: Eigentümer gegen Besitzer", fach: "sachen" }), ["brakk", "form7"]);
@@ -62,6 +62,22 @@ test("cover-quality-v2: explizit manuelle/chat Charakterwahl darf ueberschreiben
     titel: "§ 142 StGB richtig aufbauen",
     coverCharaktereManuell: ["flux"],
   }), ["flux"]);
+});
+test("cover-quality-v2: strukturierte Cover-Regie darf Cast und Szene frei bestimmen", () => {
+  const ziel = {
+    titel: "Vollstreckungsklausel und Klauselrechtsbehelfe",
+    fach: "zpo",
+    coverRegie: {
+      charaktere: ["rex", "zylla"],
+      kernidee: "Eine formale Freigabe entscheidet, ob es weitergeht.",
+      handlung: "{A} tries to pass a sealed case capsule through a checkpoint while {B} discovers the missing clearance tag.",
+      alternative: "{A} holds a locked legal crate while {B} finds the one matching clearance key.",
+    },
+  };
+  assert.deepEqual(ids(ziel), ["rex", "zylla"]);
+  const prompt = charakterPrompt(ziel);
+  assert.match(prompt, /sealed case capsule/);
+  assert.doesNotMatch(prompt, /three separate blank legal objects/);
 });
 
 test("cover-quality-v2: Prompt erfindet keine Fremdrollen", () => {
@@ -97,8 +113,8 @@ test("cover-quality-v2: generische Coverhinweise werden nicht gerendert", () => 
   assert.doesNotMatch(html, /<div class="cover-hinweis">/);
 });
 
-test("cover-quality-v2: Produktionsparameter und 3:4-Format bleiben kompatibel", () => {
-  assert.deepEqual(MASSE.beitrag, { breite: 1080, hoehe: 1440 });
+test("cover-quality-v2: Produktionsparameter und 4:5-Format entsprechen dem Referenzlook", () => {
+  assert.deepEqual(MASSE.beitrag, { breite: 1080, hoehe: 1350 });
   assert.equal(CONFIG.bilder.charaktere.guete, "high");
   assert.equal(CONFIG.bilder.charaktere.retryGuete, "xhigh");
   assert.equal(CONFIG.bilder.charaktere.reelGuete, "medium");

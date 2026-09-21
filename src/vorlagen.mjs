@@ -13,7 +13,7 @@ const hier = path.dirname(fileURLToPath(import.meta.url));
 export const FONT_DIR = path.resolve(hier, "../fonts");
 
 export const MASSE = {
-  beitrag: { breite: 1080, hoehe: 1440 },
+  beitrag: { breite: 1080, hoehe: 1350 },
   story: { breite: 1080, hoehe: 1920 },
 };
 
@@ -257,7 +257,7 @@ export function buntCss(ctx) {
 .kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}
 .kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1}
 .kopf .etikett .punkt{display:none}
-.kopf .zaehler{position:absolute;right:46px;top:40px;width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.9);color:${p.dunkel};font-family:"Inter";font-weight:700;font-size:26px;display:flex;align-items:center;justify-content:center}
+.kopf .zaehler{position:absolute;right:38px;top:30px;width:68px;height:68px;border-radius:50%;background:${p.dunkel};color:#fff;font-family:"Inter";font-weight:700;font-size:25px;display:flex;align-items:center;justify-content:center}
 .kopf .zaehler:empty{display:none}
 /* Titel als Pillen, Zeile für Zeile. Die erste Folie wird im Feed als
    Vorschaubild von 300 px Breite gesehen – dort entscheidet die Schriftgröße,
@@ -275,6 +275,7 @@ h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;b
 .art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:928px;background:${p.dunkel};color:#fff;padding:11px 25px 13px;border-radius:28px;white-space:nowrap}
 .art-titel h1.titel-stack .titel-zeile em{color:${p.akzent2}}
 h1 em{color:${p.akzent2}}
+.cover-badge{margin-top:18px;margin-left:18px;width:fit-content;background:#fff0d6;color:${p.dunkel};padding:9px 24px 10px;border-radius:999px;font-family:"Inter";font-weight:700;font-size:29px;line-height:1.05;position:relative;z-index:4}
 .unter{margin-top:22px;display:inline-block;width:fit-content;background:${p.hell};color:${p.dunkel};padding:12px 30px;border-radius:40px;font-weight:700;font-size:36px;line-height:1.25;margin-left:24px}
 .prio{margin-top:20px;margin-left:24px;width:fit-content;background:${p.lila};color:${p.dunkel};padding:10px 26px;border-radius:40px;text-transform:none;letter-spacing:0;font-size:28px}
 .prio i{display:none}
@@ -328,16 +329,16 @@ h1 em{color:${p.akzent2}}
    zwoelf verkettete drop-shadows brachten Chromium zum Stehen. Hier nur
    noch der weiche Schatten, der den Sticker von der Flaeche hebt. */
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
-.frei.charakter{right:10px;bottom:16px;width:820px;height:735px}
+.frei.charakter{right:0;bottom:8px;width:860px;height:720px}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
 .art-titel h1,.art-titel .kopf,.art-titel .prio{position:relative;z-index:3}
-.cover-hinweis{position:absolute;left:70px;bottom:318px;max-width:370px;z-index:4;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};transform:rotate(-4deg);text-wrap:balance}
+.cover-hinweis{position:absolute;left:56px;bottom:245px;max-width:305px;z-index:4;font-family:"Caveat";font-size:49px;line-height:1.01;font-weight:700;color:${p.dunkel};transform:rotate(-4deg);text-wrap:balance}
 .cover-hinweis::before{content:"↘";display:block;font-size:72px;line-height:.7;margin-left:-12px;margin-bottom:8px;transform:rotate(10deg)}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
 .art-titel:has(.frei) .fuss{z-index:3}
-.art-titel:has(.frei) .fuss .klausur{background:var(--grund);padding:6px 18px;border-radius:30px}
+.art-titel:has(.frei) .fuss .klausur{background:var(--hell);color:${p.dunkel};padding:7px 20px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1;background:rgba(255,255,255,.14);padding:18px;box-sizing:border-box}
 .foto img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:28px}
 .illu{right:auto;left:330px;bottom:70px;width:420px;height:420px;color:${p.dunkel};opacity:1;z-index:1}
@@ -509,7 +510,7 @@ export function motivBuehne(breite, hoehe, ziel) {
    fast die ganze untere Haelfte: Sie sollen eine kleine Handlung tragen,
    nicht wie ein Sticker in der Ecke stehen. */
 export const BUEHNE_BEITRAG = { flaeche: 640 * 620 * 0.62, maxB: 820, maxH: 640 };
-export const BUEHNE_CHARAKTER = { flaeche: 1000 * 790 * 0.90, maxB: 1020, maxH: 800 };
+export const BUEHNE_CHARAKTER = { flaeche: 1020 * 750 * 0.96, maxB: 1040, maxH: 760 };
 export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.62, maxB: 920, maxH: 850 };
 
 function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
@@ -634,11 +635,12 @@ const FOLIEN = {
   titel: (f, ctx, i, n) => {
     const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
     const handschrift = bunt ? coverHinweisText(f) : "";
+    const badge = String(f.coverBadge || f.prioritaetText || "").trim();
     return `
-    ${kopf(ctx, "")}
+    ${kopf(ctx, n > 1 ? `${i}/${n}` : "")}
     ${titelBlock(f.titel, f.titelZeilen, ctx)}
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
-    ${f.prioritaet ? `<div class="prio ${f.prioritaet}"><i></i>${esc(f.prioritaetText || "")}</div>` : ""}
+    ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
     ${!bunt && f.pille ? `<div><span class="pille">${esc(f.pille)}</span></div>` : ""}
     ${handschrift ? `<div class="cover-hinweis">${esc(handschrift)}</div>` : ""}
     ${f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f)}

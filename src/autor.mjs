@@ -154,10 +154,14 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Hashtags: 8–14 Stück, deutsch, kleingeschrieben, spezifisch zum Thema plus diese Kernhashtags: ${CONFIG.hashtags.kern.join(" ")}.
 - kurztitel: 3–6 Wörter für die Story-Ankündigung und das Reel-Cover. Er muss grammatisch aufgehen: entweder eine Nominalphrase ohne Verb („Mord und Totschlag: das Verhältnis“) oder ein vollständiger Satz/eine vollständige Frage („Sitzt alles?“). Falsch wäre „Wochenrückblick: alles sitzen?“ – ein Infinitiv ohne Subjektbezug.
 - BILDREGEL FÜR KARUSSELLS: NUR Folie 1 (Cover/Titelfolie) bekommt eine Charakter-Szene. Alle inneren Karussell-Slides bleiben reine Text-/Strukturfolien: niemals Bildhintergrund oder dekoratives Motiv; dort sind nur Typografie, Kästen, Linien, Pfeile und kleine Icons erlaubt.
-- Charakterwahl ist NICHT deine Aufgabe. Die sechs wiederkehrenden Herrjurist-Figuren werden nach dem Text deterministisch vom Marken-System ausgewählt. Erfinde deshalb weder Figuren noch Rollen für das Cover.
-- bildSzene: PFLICHT. Eine ENGLISCHE semantische Bildnotiz in 3 bis 10 Wörtern. Nenne nur die juristische Handlung bzw. hilfreiche Gegenstände, KEINE Personenrollen und KEINE Charaktere. Gute Beispiele: „sealed termination letter beside deadline calendar“, „crate key and ownership document“, „hand stopped just before portal button“. Diese Notiz ist nur Kontext; die endgültige Charakterregie kommt aus dem Marken-System.
-- coverText: optionaler DEUTSCHER Merksatz mit 2 bis 6 Wörtern, höchstens 36 Zeichen. Nur setzen, wenn er neben Titel und Szene einen zusätzlichen Sofort-Aha-Effekt bringt. Nicht den Titel wiederholen. Beispiele: „Ohne Zugang keine Frist“, „Reihenfolge merken“, „Nicht verwechseln“, „Ausnahme zuerst prüfen“. Der Renderer setzt ihn handschriftlich; das Bildmodell schreibt ihn NICHT.
-- bildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.
+- VISUELLE COVER-REGIE IST TEIL DEINER REDAKTIONELLEN AUFGABE. Schreibe nicht nur den juristischen Text, sondern entwickle für Folie 1 ein eigenständiges Bildkonzept. Keine feste Bildformel je Rechtsgebiet: derselbe Themenbereich darf morgen völlig anders inszeniert werden.
+- Wiederkehrender Cast: rex = nervöser Portal-Mechaniker (Praxis, Fehler, Ursache/Wirkung); zylla = neugierige Alien-Figur (Entdecken, Vertrag/Kommunikation, Kontrast); form7 = schwebender Bürokratie-Droide (Ordnung, Formalien, Prüfung); brakk = kräftiger Kristall-Minenarbeiter (Besitz, Sachen, physische Last/Handlung); flux = Wurm-Professor mit Zeigestab (Erklären, Dogmatik, Systematik); mara = erfahrene Expeditionistin (Entscheidung, Grenze, Druck, Ausnahme). Wähle für jedes Cover 1 oder 2 Figuren, deren Rollen zur konkreten visuellen Idee passen. Nicht ein Rechtsgebiet dauerhaft an ein Figurenpaar koppeln.
+- coverRegie: PFLICHTOBJEKT mit charaktere (1–2 IDs aus rex, zylla, form7, brakk, flux, mara), kernidee (ein deutscher Satz: welcher Gedanke soll visuell hängen bleiben?), handlung (ENGLISCH, ca. 25–70 Wörter: EINE klare, originelle Interaktion der gewählten Figuren mit 1–2 starken Requisiten; Figuren mit {A} und {B} bezeichnen), alternative (ENGLISCH: wirklich anderes Bildkonzept für einen dritten Versuch). Keine Pixelkoordinaten, keine starre Links-rechts-Choreografie, keine unnötigen Objektzählungen. Nur Details festlegen, die für den juristischen Sinn nötig sind.
+- Variation ist Markenqualität: bevorzuge eine neue Metapher, Pose oder Requisite gegenüber dem naheliegenden Standardschema. Die Szene soll wie eine kleine Episode aus demselben Sci-Fi-Jura-Universum wirken, nicht wie ein Lehrbuchdiagramm.
+- bildSzene: PFLICHT. 3 bis 10 englische Wörter als semantische Kurzfassung der coverRegie, ohne Charakter-Namen. Sie bleibt für Archivsuche und Legacy-Fallback erhalten.
+- bildSzeneAlt: PFLICHT. 3 bis 10 englische Wörter für die alternative Idee.
+- coverBadge: PFLICHT, 1 bis 3 deutsche Wörter, klein und redaktionell (z. B. „Fehlerfalle“, „Klausurrelevant“, „Examensklassiker“, „Schemawissen“, „Praxisrelevant“, „Klausurtechnik“). Nicht immer dasselbe Badge.
+- coverText: PFLICHT. Ein DEUTSCHER handschriftlicher Hinweis mit 2 bis 6 Wörtern, höchstens 36 Zeichen, der einen zusätzlichen fachlichen Aha-Effekt gibt. Kein UX-Text wie „Swipe“, „Schau rein“ oder „Kurz erklärt“, und nicht den Titel wiederholen.
 
 
 ## Beispiel eines fertigen Beitrags (Format Streitstand)
@@ -205,12 +209,24 @@ const BEITRAG_SCHEMA = {
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
     coverText: { type: ["string", "null"] },
+    coverBadge: { type: ["string", "null"] },
+    coverRegie: {
+      type: ["object", "null"],
+      additionalProperties: false,
+      properties: {
+        charaktere: { type: "array", minItems: 1, maxItems: 2, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
+        kernidee: { type: "string" },
+        handlung: { type: "string" },
+        alternative: { type: ["string", "null"] },
+      },
+      required: ["charaktere", "kernidee", "handlung", "alternative"],
+    },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
     quellen: { type: ["array", "null"], items: { type: "string" } },
     hooks: { type: ["array", "null"], items: { type: "object", additionalProperties: false, properties: { typ: { type: "string", enum: ["frage", "fehler", "zahl", "aussage"] }, titel: { type: "string" }, zeilen: { type: "array", items: { type: "string" }, minItems: 2, maxItems: 4 } }, required: ["typ", "titel", "zeilen"] } },
   },
-  required: ["folien", "caption", "hashtags", "kurztitel", "coverText", "bildSzene", "bildSzeneAlt", "quellen", "hooks"],
+  required: ["folien", "caption", "hashtags", "kurztitel", "coverText", "coverBadge", "coverRegie", "bildSzene", "bildSzeneAlt", "quellen", "hooks"],
 };
 
 const STORY_SCHEMA = {
@@ -674,6 +690,8 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     if (!folien[0].hinweis) folien[0].hinweis = auswahl(HINWEISE, `hinweis:${seed}`);
     const coverText = coverTextKurz(daten.coverText);
     if (coverText) folien[0].coverText = coverText;
+    const coverBadge = String(daten.coverBadge || "").replace(/\s+/g, " ").trim().slice(0, 32);
+    if (coverBadge) folien[0].coverBadge = coverBadge;
     if (!ICONS[folien[0].icon]) folien[0].icon = "paragraf";
   }
   if (folien.at(-1)?.art !== "cta") folien.push({ art: "cta", titel: "Schick das deiner Lerngruppe.", punkte: ["Weiterleiten an die Lerngruppe", "Speichern und vor der Klausur wiederholen", "Folgen: sortiert nach Klausurtag"] });
@@ -697,6 +715,8 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     hashtags: tags,
     kurztitel: daten.kurztitel || folien[0]?.titel || "",
     coverText: coverTextKurz(daten.coverText),
+    coverBadge: String(daten.coverBadge || "").replace(/\s+/g, " ").trim().slice(0, 32) || null,
+    coverRegie: daten.coverRegie || null,
     bildSzene: daten.bildSzene || null,
     bildSzeneAlt: daten.bildSzeneAlt || null,
     quellen: daten.quellen || [],

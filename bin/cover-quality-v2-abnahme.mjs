@@ -104,6 +104,19 @@ const faelle = [
   },
 ];
 
+const COVER_BADGES = {
+  1: "Fehlerfalle",
+  2: "Schemawissen",
+  3: "Examensklassiker",
+  4: "Praxisrelevant",
+  5: "Klausurrelevant",
+  6: "Fehlerfalle",
+  7: "Examensklassiker",
+  8: "Fehlerfalle",
+  9: "Klausurrelevant",
+  10: "Wochencheck",
+};
+
 const events = [];
 const telemetrie = {
   aufruf(eintrag) {
@@ -168,8 +181,8 @@ function dimensionen(pfad) {
 function kontaktbogen(pfade, ziel) {
   const args = ["-y", "-hide_banner", "-loglevel", "error"];
   for (const p of pfade) args.push("-i", p);
-  const skalen = pfade.map((_, i) => `[${i}:v]scale=324:432[v${i}]`).join(";");
-  const layout = pfade.map((_, i) => `${(i % 5) * 324}_${Math.floor(i / 5) * 432}`).join("|");
+  const skalen = pfade.map((_, i) => `[${i}:v]scale=324:405[v${i}]`).join(";");
+  const layout = pfade.map((_, i) => `${(i % 5) * 324}_${Math.floor(i / 5) * 405}`).join("|");
   const eingaben = pfade.map((_, i) => `[v${i}]`).join("");
   args.push("-filter_complex", `${skalen};${eingaben}xstack=inputs=${pfade.length}:layout=${layout}[out]`, "-map", "[out]", "-frames:v", "1", "-q:v", "2", ziel);
   execFileSync(ffmpegPfad(), args, { stdio: ["ignore", "pipe", "pipe"] });
@@ -192,9 +205,6 @@ async function coverAbnahme() {
       coverText: fall.coverText,
     };
     const gewaehlt = ids(ziel);
-    if (JSON.stringify(gewaehlt) !== JSON.stringify(fall.erwartet)) {
-      throw new Error(`${slot}: Charakterwahl ${gewaehlt.join("+")} statt ${fall.erwartet.join("+")}`);
-    }
 
     const motiv = await charakterMotivZeichnen(ziel, { zweck: "bild", slot });
     if (!motiv) throw new Error(`${slot}: kein Charakterbild hat beide QA-Stufen bestanden`);
@@ -205,6 +215,7 @@ async function coverAbnahme() {
         titelZeilen: fall.titelZeilen,
         icon: fall.icon,
         coverText: fall.coverText,
+        coverBadge: COVER_BADGES[fall.nr] || "Klausurrelevant",
         bild: dateiDaten(motiv.pfad),
         bildFrei: true,
         bildBreite: motiv.breite || null,
@@ -224,7 +235,7 @@ async function coverAbnahme() {
       const datei = path.join(coversDir, `${slot}.jpg`);
       if (render !== datei) fs.renameSync(render, datei);
       const dim = dimensionen(datei);
-      if (dim.width !== 1080 || dim.height !== 1440) throw new Error(`${slot}: falsches Format ${dim.width}x${dim.height}`);
+      if (dim.width !== 1080 || dim.height !== 1350) throw new Error(`${slot}: falsches Format ${dim.width}x${dim.height}`);
       coverPfade.push(datei);
       const tel = telemetryFuer(slot);
       if (tel.unknownSpend) throw new Error(`${slot}: unbekannter Providerverbrauch in Telemetrie`);
@@ -237,7 +248,7 @@ async function coverAbnahme() {
         fach: fall.fach,
         charaktere: motiv.charaktere,
         charakterIds: motiv.charakterIds,
-        expectedCharacterIds: fall.erwartet,
+        selectedCharacterIds: gewaehlt,
         quality: motiv.quality,
         attempt: motiv.attempt,
         qaFirstPass: motiv.qaFirstPass,

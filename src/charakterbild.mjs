@@ -58,8 +58,21 @@ function zielText(ziel = {}) {
     ziel.kurztitel, ziel.fachLabel, ziel.fach, ziel.format, titel,
     ziel.titel, ziel.unter, ziel.text, ziel.sprecher, ziel.norm,
     ziel.bildSzene, ziel.bildSzeneAlt, ziel.coverText,
+    ziel.coverRegie?.kernidee, ziel.coverRegie?.handlung,
     ...(Array.isArray(ziel.coverCharaktere) ? ziel.coverCharaktere : []),
   ].filter(Boolean).join(" · ");
+}
+
+function coverRegieAus(ziel = {}) {
+  const roh = ziel?.coverRegieManuell || ziel?.coverRegie || null;
+  if (!roh || typeof roh !== "object" || Array.isArray(roh)) return null;
+  const sauber = (x, max = 900) => String(x || "").replace(/\s+/g, " ").trim().slice(0, max);
+  return {
+    charaktere: Array.isArray(roh.charaktere) ? roh.charaktere.map((x) => String(x || "").toLowerCase()) : [],
+    kernidee: sauber(roh.kernidee, 500),
+    handlung: sauber(roh.handlung, 1200),
+    alternative: sauber(roh.alternative, 1200),
+  };
 }
 
 const REGELN = [
@@ -88,6 +101,12 @@ const REGELN = [
 ];
 
 function idsAusManuellerRegie(ziel = {}) {
+  /* Eine strukturierte Cover-Regie ist bereits eine ausdrueckliche kreative
+     Entscheidung des Redaktionsschritts. Sie darf den Legacy-Fallback nach
+     Fachwoertern ueberschreiben. */
+  const regie = coverRegieAus(ziel);
+  const regieIds = [...new Set((regie?.charaktere || []).filter((id) => CHARAKTERE[id]))].slice(0, 2);
+  if (regieIds.length) return regieIds;
   /* Nur eine AUSDRUECKLICHE menschliche/Chat-Freigabe darf die semantische
      Charakterregie ueberschreiben. Das alte Feld coverCharaktere kam auch aus
      dem Claude-Fallback und hat die guten Themenregeln deshalb ungewollt
@@ -149,6 +168,25 @@ function handlungFuer(ziel, chars) {
   const trio = (satz, fallback) => c
     ? satz.replaceAll("{A}", a).replaceAll("{B}", b).replaceAll("{C}", c)
     : duo(fallback, fallback);
+  /* Creative direction from the editorial layer wins. The old topic-specific
+     choreography below is only a compatibility fallback for legacy content.
+     New posts should arrive with coverRegie; older manually finalised posts at
+     least carry bildSzene, which is treated as an open semantic brief rather
+     than a pixel-by-pixel storyboard. */
+  const regie = coverRegieAus(ziel);
+  const einsetzen = (satz) => String(satz || "")
+    .replaceAll("{A}", a || "")
+    .replaceAll("{B}", b || "")
+    .replaceAll("{C}", c || "");
+  if (regie?.handlung) return einsetzen(regie.handlung);
+  const motiv = String(ziel?.bildSzene || "").replace(/\s+/g, " ").trim();
+  if (motiv) {
+    if (chars.length >= 2) return duo(
+      `{A} and {B} create one clear, lively interaction that makes this legal idea instantly readable: ${motiv}. Choose natural poses and only the concrete props that help the idea. Keep the composition simple, editorial and surprising; do not force a predefined left/right order or diagram unless the legal meaning truly requires it.`,
+      `{A} demonstrates this legal idea in one clear action: ${motiv}. Use one strong concrete prop and a simple readable composition.`
+    );
+    return solo(`{A} demonstrates this legal idea in one clear action: ${motiv}. Use one strong concrete prop and a simple readable composition.`);
+  }
 
   if (/kuendig|kündig|arbeitsrecht|zugang.*frist|fristbeginn/i.test(text)) {
     return duo(
@@ -262,7 +300,7 @@ export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrekt
     `Scene direction: ${handlung}`,
     `Legal context for meaning only, NOT a request to add people or text: ${kontext}`,
     korrekturText,
-    "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the Herrjurist renderer can place a large title above it. Use the lower roughly 60 percent of the imagined 3:4 cover; do not build a background.",
+    "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the renderer can place a large title above it. The finished feed cover is 4:5. Keep the leftmost roughly 16 percent of the lower scene relatively quiet (no faces or essential props) so a short handwritten annotation can sit there without collision. Do not build a background.",
     "Characters must interact rather than pose independently. Every selected character needs a clear job in the scene. Use only props that make the legal point instantly understandable; omit props that do not help.",
     "Show complete readable anatomy: full heads and faces, all essential hands/fingers, feet or hover bases, and every important prop. No fused hands, spare limbs, duplicated body parts, cropped heads or accidental amputations.",
     "Polished premium cartoon finish matching the references: confident clean ink outlines, controlled cel shading, subtle material highlights and texture, expressive faces, precise accessories, clean edges and consistent proportions. Do NOT simplify into flat clip-art and do NOT switch to 3D, photorealism, watercolor or sketch style.",
@@ -443,7 +481,9 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
           "Reject generated readable text, letters, numbers, citations, logos or gibberish. Abstract check marks and simple unlabeled shapes are allowed.",
           "The scene must communicate the requested legal idea at a glance and the selected characters must interact coherently.",
           `Legal scene context: ${themenKontext(ziel)}`,
-          `Expected action: ${handlungFuer(ziel, chars)}`,
+          `Creative direction used for generation: ${handlungFuer(ziel, chars)}`,
+          "Judge sceneOk by the SEMANTIC result: the legal idea must be understandable at a glance and the character interaction must be coherent. Do not reject merely because left/right placement, exact prop count, pose, pointing direction or other staging differs from the creative direction unless that detail is essential to the legal meaning.",
+          "Prefer a strong, simple editorial metaphor over a literal flowchart. Variation is desirable when the legal meaning and recurring-character identities remain clear.",
           "Set ok=true only if every quality criterion passes. retryHint must be a short concrete redraw instruction, or an empty string when ok=true.",
         ].join("\n"),
       },
@@ -531,7 +571,9 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
   const versuche = [
     { quality: reelSzene ? cfg.reelGuete : cfg.guete, reserve: cfg.reserveUsd },
     { quality: reelSzene ? cfg.reelRetryGuete : cfg.retryGuete, reserve: cfg.retryReserveUsd },
+    { quality: reelSzene ? cfg.reelRetryGuete : cfg.retryGuete, reserve: cfg.retryReserveUsd },
   ];
+  const freieRegie = coverRegieAus(ziel);
   let korrektur = "";
   const qaVersuche = [];
   const editRefs = [];
@@ -549,7 +591,10 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
   try {
     for (let i = 0; i < versuche.length; i++) {
     const v = versuche[i];
-    const prompt = charakterPrompt(ziel, chars, korrektur);
+    const zielVersuch = i >= 2 && freieRegie?.alternative
+      ? { ...ziel, coverRegie: { ...freieRegie, handlung: freieRegie.alternative } }
+      : ziel;
+    const prompt = charakterPrompt(zielVersuch, chars, korrektur);
     let fertig = null;
     try {
       const daten = await bildAufruf({
@@ -580,7 +625,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         continue;
       }
 
-      const visuell = await qaVisuell(fertig.ohneRand || fertig.pfad, chars, ziel, slot);
+      const visuell = await qaVisuell(fertig.ohneRand || fertig.pfad, chars, zielVersuch, slot);
       qaVersuche.push({
         attempt: i + 1,
         quality: v.quality,
@@ -618,7 +663,11 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       /* Ein echter Eingabefehler wird durch mehr Bildqualitaet nicht besser.
          Ein 429 sowie visuelle/technische Ablehnungen duerfen dagegen in den
          zweiten kontrollierten Versuch. */
-      if (Number(e?.status) >= 400 && Number(e?.status) < 500 && Number(e?.status) !== 429) break;
+      if (Number(e?.status) >= 400 && Number(e?.status) < 500 && Number(e?.status) !== 429) {
+        const sicherheit = /safety|rejected|policy/i.test(String(e?.message || ""));
+        if (!(sicherheit && freieRegie?.alternative && i < versuche.length - 1)) break;
+        korrektur = "Use the alternate safe visual concept. Keep the legal idea abstract, non-threatening and editorial.";
+      }
     }
   }
 
