@@ -1815,36 +1815,32 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
   const cover = coverHtml({ titel, ueberzeile: "Reel · 91 Sekunden", dauerText: "In 91 Sekunden erklärt", icon: "waage", fach: "zpo", klausur: 1 }, ctx);
   const folie = folieHtml({ art: "titel", titel, untertitel: "Dauerbrenner im Examen", icon: "waage" }, ctx, 1, 6);
 
-  /* Beide setzen den Titel in Pillen ZEILE FÜR ZEILE. Bis zum 13.09. legte
-     nur die Titelfolie die .z-Spanne an; das Cover bekam einen einzigen
-     Kasten um den ganzen Titel und sah im Profilraster aus wie ein fremder
-     Kanal. */
+  /* Beide nutzen im bunten Markenstil denselben semantischen Titel-Stack:
+     eine dunkle Pille je Sinneinheit statt Browser-Zufallsumbruch. */
   for (const [was, html] of [["Cover", cover], ["Titelfolie", folie]]) {
-    assert.ok(/<h1[^>]*><span class="z">/.test(html), `${was}: Titel ohne Zeilenpille`);
+    assert.ok(/<h1[^>]*titel-stack/.test(html), `${was}: semantischer Titel-Stack fehlt`);
+    assert.ok(/class="titel-zeile"/.test(html), `${was}: einzelne Titelpillen fehlen`);
   }
-  /* Und das Cover nimmt die Story-Regel zurück, die einen Grund um das ganze
-     h1 legt - sonst läge die Pille in der Pille. */
+  /* Das Reel-Cover nimmt weiterhin die Story-Regel zurück, die sonst einen
+     zusätzlichen Hintergrund um den ganzen h1 legen würde. */
   assert.ok(/\.story\.cover h1\{[^}]*background:none/.test(cover), "Cover: der Kasten um das ganze h1 ist nicht zurückgenommen");
-  /* Gleiche WIRKUNG, nicht gleiche Zahl: Das Cover ist 1920 hoch, die
-     Titelfolie 1350. Bis zum 14.09. stand auf beiden 100px - im Profilraster
-     wirkte die Reel-Überschrift dadurch ein Drittel kleiner und fiel als die
-     schwächere auf (gemessen: 15,6 % der Kachelhöhe gegen 33,3 %). Die
-     Cover-Größe ist deshalb mit 1920/1350 hochgerechnet. */
-  const buntGroesse = Number(folie.match(/h1\{margin-top:72px;font-size:(\d+)px/)?.[1]);
-  const coverGroesse = Number(cover.match(/\.story\.cover h1\{[^}]*font-size:(\d+)px/)?.[1]);
-  assert.ok(buntGroesse, "Titelfolie: Schriftgröße nicht gefunden");
-  const faktor = 1920 / 1350;
+
+  /* Gleiche optische Wirkung: Reel-Cover 1920 hoch, Feed-Cover 1440 hoch.
+     Die Stack-Schriftgrößen werden deshalb mit ca. 4/3 skaliert. */
+  const buntGroesse = Number(folie.match(/\.art-titel h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
+  const coverGroesse = Number(cover.match(/\.story\.cover h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
+  assert.ok(buntGroesse, "Titelfolie: Stack-Schriftgröße nicht gefunden");
+  assert.ok(coverGroesse, "Cover: Stack-Schriftgröße nicht gefunden");
+  const faktor = 1920 / 1440;
   assert.ok(Math.abs(coverGroesse / buntGroesse - faktor) < 0.05,
     `Cover ${coverGroesse}px zu Titelfolie ${buntGroesse}px ergibt ${(coverGroesse / buntGroesse).toFixed(2)}, erwartet ${faktor.toFixed(2)}`);
-  /* Auch die beiden Stufen für lange Titel. Gesucht wird das Paar, das im
-     bunten Stil für die Titelfolie gilt - „.story h1.klein" ist eine andere
-     Regel und darf nicht dazwischenfunken. */
-  const stufen = folie.match(/(?:^|[};\n])h1\.klein\{font-size:(\d+)px\}h1\.winzig\{font-size:(\d+)px\}/);
-  assert.ok(stufen, "Titelfolie: Stufen für lange Titel nicht gefunden");
-  const coverKlein = Number(cover.match(/\.story\.cover h1\.klein\{font-size:(\d+)px\}/)?.[1]);
-  const coverWinzig = Number(cover.match(/\.story\.cover h1\.winzig\{font-size:(\d+)px\}/)?.[1]);
-  for (const [name, gross, klein] of [["klein", Number(stufen[1]), coverKlein], ["winzig", Number(stufen[2]), coverWinzig]]) {
-    assert.ok(klein, `Cover: Stufe ${name} nicht gefunden`);
+
+  const buntKlein = Number(folie.match(/\.art-titel h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
+  const buntWinzig = Number(folie.match(/\.art-titel h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
+  const coverKlein = Number(cover.match(/\.story\.cover h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
+  const coverWinzig = Number(cover.match(/\.story\.cover h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
+  for (const [name, gross, klein] of [["klein", buntKlein, coverKlein], ["winzig", buntWinzig, coverWinzig]]) {
+    assert.ok(gross && klein, `Stufe ${name} nicht gefunden`);
     assert.ok(Math.abs(klein / gross - faktor) < 0.05, `Cover-Stufe ${name}: ${klein}px zu ${gross}px`);
   }
 });

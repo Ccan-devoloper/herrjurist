@@ -263,9 +263,17 @@ export function buntCss(ctx) {
    Vorschaubild von 300 px Breite gesehen – dort entscheidet die Schriftgröße,
    ob jemand den Beitrag überhaupt liest. Deshalb so groß wie möglich; zu
    lange Titel fängt einpassen() ab. */
-h1{margin-top:72px;font-size:100px;line-height:1.5}
-h1.klein{font-size:86px}h1.winzig{font-size:74px}
-h1 .z{background:${p.dunkel};color:#fff;padding:.14em .5em;border-radius:48px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h1{margin-top:68px;font-size:96px;line-height:1.16}
+h1.klein{font-size:82px}h1.winzig{font-size:70px}
+h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+/* Titelfolie: echte Einzelpillen pro Sinneinheit. Weniger Innenabstand und
+   nur 8 px Abstand zwischen den Zeilen erzeugen einen kompakten, auf dem
+   Handy schnell scanbaren Titelblock. */
+.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:fit-content;max-width:100%;font-size:86px;line-height:1.02;letter-spacing:-.018em;text-wrap:initial}
+.art-titel h1.titel-stack.klein{font-size:78px}
+.art-titel h1.titel-stack.winzig{font-size:68px}
+.art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:928px;background:${p.dunkel};color:#fff;padding:10px 24px 12px;border-radius:28px;white-space:nowrap}
+.art-titel h1.titel-stack .titel-zeile em{color:${p.akzent2}}
 h1 em{color:${p.akzent2}}
 .unter{margin-top:22px;display:inline-block;width:fit-content;background:${p.hell};color:${p.dunkel};padding:12px 30px;border-radius:40px;font-weight:700;font-size:36px;line-height:1.25;margin-left:24px}
 .prio{margin-top:20px;margin-left:24px;width:fit-content;background:${p.lila};color:${p.dunkel};padding:10px 26px;border-radius:40px;text-transform:none;letter-spacing:0;font-size:28px}
@@ -410,10 +418,14 @@ em{color:${p.akzent2}}
    die Ueberschrift dort 15,6 % der Hoehe gegen 33,3 % auf der Kachel. Die
    Groessen sind mit 1920/1350 = 1,42 hochgerechnet, damit die Wirkung gleich
    ist statt der Zahl. */
-.story.cover h1{background:none;padding:0;width:auto;font-size:142px;line-height:1.5;margin-top:102px}
+.story.cover h1{background:none;padding:0;width:auto;font-size:142px;line-height:1.35;margin-top:102px}
 .story.cover h1.klein{font-size:122px}
 .story.cover h1.winzig{font-size:105px}
-.story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.14em .5em;border-radius:48px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:40px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:fit-content;max-width:100%;font-size:115px;line-height:1.02;letter-spacing:-.018em}
+.story.cover h1.titel-stack.klein{font-size:104px}
+.story.cover h1.titel-stack.winzig{font-size:91px}
+.story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;background:${p.dunkel};color:#fff;padding:14px 34px 16px;border-radius:38px;white-space:nowrap}
 .story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
 /* Handschrift mit Pfeil, genau wie auf der Titelfolie. */
 .story.cover .dauer{font-family:"Caveat";font-size:56px;font-weight:700;color:${p.dunkel};opacity:1;white-space:nowrap;
@@ -536,15 +548,79 @@ function zweitIcon(icon) {
   return paare[icon] || "dokument";
 }
 
-function titelKlasse(t) {
+function sichtbareLaenge(s) {
+  return String(s || "").replace(/\*/g, "").replace(/\s+/g, " ").trim().length;
+}
+
+function zeilenGreedy(text, max = 17) {
+  const woerter = String(text || "").trim().split(/\s+/).filter(Boolean);
+  const out = [];
+  let aktuell = "";
+  for (const wort of woerter) {
+    const kandidat = aktuell ? `${aktuell} ${wort}` : wort;
+    if (!aktuell || sichtbareLaenge(kandidat) <= max) aktuell = kandidat;
+    else {
+      out.push(aktuell);
+      aktuell = wort;
+    }
+  }
+  if (aktuell) out.push(aktuell);
+  return out;
+}
+
+/* Semantische Zeilen statt Browser-Zufallsumbruch. Jede dunkle Pille ist eine
+   Sinneinheit: Norm, Gegensatz, Reihenfolge oder Ergebnis. Neue Beiträge
+   liefern die Zeilen aus der Hook-Regie; Altbestand bekommt einen
+   deterministischen Fallback. */
+export function titelZeilen(titel, vorgegeben = null) {
+  const sauber = String(titel || "").replace(/\s+/g, " ").trim();
+  const explizit = Array.isArray(vorgegeben)
+    ? vorgegeben.map((x) => String(x || "").replace(/\s+/g, " ").trim()).filter(Boolean).slice(0, 4)
+    : [];
+  if (explizit.length >= 2) return explizit;
+
+  const relation = sauber.match(/^(.+?)\s+(kommt vor|ist nicht automatisch)\s+(.+)$/i);
+  if (relation) return [relation[1], relation[2], relation[3]];
+
+  const teile = [];
+  const trenner = sauber.match(/^(.+?[?:])\s+(.+)$/);
+  if (trenner) {
+    teile.push(trenner[1]);
+    teile.push(trenner[2]);
+  } else {
+    teile.push(sauber);
+  }
+
+  const bauen = (max) => teile.flatMap((teil) => zeilenGreedy(teil, max));
+  let zeilen = bauen(17);
+  if (zeilen.length > 4) zeilen = bauen(20);
+  if (zeilen.length > 4) zeilen = bauen(23);
+  while (zeilen.length > 4) {
+    const letzte = zeilen.pop();
+    zeilen[zeilen.length - 1] = `${zeilen.at(-1)} ${letzte}`;
+  }
+  return zeilen.filter(Boolean);
+}
+
+function titelKlasse(t, zeilen = null) {
+  const z = titelZeilen(t, zeilen);
+  const max = Math.max(0, ...z.map(sichtbareLaenge));
   const l = (t || "").length;
-  return l > 92 ? "winzig" : l > 62 ? "klein" : "";
+  return l > 92 || max > 24 ? "winzig" : l > 68 || max > 20 ? "klein" : "";
+}
+
+function titelBlock(titel, zeilen, ctx) {
+  const klasse = titelKlasse(titel, zeilen);
+  if ((ctx?.stil?.familie || ctx?.stil?.id) === "bunt") {
+    return `<h1 class="${klasse} titel-stack">${titelZeilen(titel, zeilen).map((z) => `<span class="titel-zeile">${markierenTitel(z)}</span>`).join("")}</h1>`;
+  }
+  return `<h1 class="${klasse}"><span class="z">${markierenTitel(titel)}</span></h1>`;
 }
 
 const FOLIEN = {
   titel: (f, ctx, i, n) => `
     ${kopf(ctx, "")}
-    <h1 class="${titelKlasse(f.titel)}"><span class="z">${markierenTitel(f.titel)}</span></h1>
+    ${titelBlock(f.titel, f.titelZeilen, ctx)}
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
     ${f.prioritaet ? `<div class="prio ${f.prioritaet}"><i></i>${esc(f.prioritaetText || "")}</div>` : ""}
     <div><span class="pille">${esc((ctx.stil.familie || ctx.stil.id) === "bunt" ? (f.hinweis || "So geht's!") : (f.pille || "Swipen →"))}</span></div>
@@ -738,7 +814,7 @@ export function coverHtml(daten, ctx) {
   const inhalt = `
     ${kopf(ctx, "")}
     <span class="reelmarke">Reel</span>
-    <h1 class="${titelKlasse(daten.titel)}"><span class="z">${markierenTitel(daten.titel)}</span></h1>
+    ${titelBlock(daten.titel, daten.titelZeilen, ctx)}
     <div class="unter">${esc(daten.ueberzeile || "Reel")}</div>
     ${daten.dauerText ? `<div class="dauer">${esc(daten.dauerText)}</div>` : ""}
     ${daten.bild ? fotoBuehne(daten, BUEHNE_STORY) : `<div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>`}
