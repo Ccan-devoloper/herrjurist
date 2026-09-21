@@ -171,6 +171,7 @@ try {
       bildHoehe: motiv.hoehe || null,
       bildTyp: "charakter",
       bildCharaktere: motiv.charaktere,
+      coverHinweisPlan: motiv.annotationPlan || null,
     };
     const beitrag = {
       format: "pruefungsfrage",
@@ -219,6 +220,7 @@ try {
         attempt: motiv.attempt,
         qaFirstPass: motiv.qaFirstPass,
         qaAttempts: motiv.qaAttempts,
+        annotationPlan: motiv.annotationPlan || null,
         imagePath: path.relative(root, datei),
         motifPath: path.relative(root, motivDatei),
         motifDimensions: { width: Number(motiv.breite || 0), height: Number(motiv.hoehe || 0) },
