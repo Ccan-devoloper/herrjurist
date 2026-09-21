@@ -288,6 +288,32 @@ export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = 
 }
 
 /**
+ * Rohtransport fuer GPT-Image-Edits. Die Budget-/Journal-/Telemetrie-Tuer
+ * bleibt bildAufruf(); diese Funktion haelt lediglich auch den Multipart-
+ * Provider-Endpunkt in derselben zentralen Anbieterdatei.
+ */
+export async function openaiBildEditSenden({ form, key, zeitlimitMs = 120000, fetchFn = fetch }) {
+  const steuerung = new AbortController();
+  const wecker = setTimeout(() => steuerung.abort(), zeitlimitMs);
+  try {
+    const r = await fetchFn("https://api.openai.com/v1/images/edits", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${key || ""}` },
+      body: form,
+      signal: steuerung.signal,
+    });
+    if (r.ok) return await r.json();
+    const body = (await r.text().catch(() => "")).slice(0, 500);
+    const fehler = new Error(`OpenAI image edit ${r.status}: ${body}`);
+    fehler.status = r.status;
+    fehler.retryAfter = Number(r.headers.get("retry-after") || 0);
+    throw fehler;
+  } finally {
+    clearTimeout(wecker);
+  }
+}
+
+/**
  * Ein erzeugtes Bild. Der Preis steht pro Stück fest, das Ceiling ist hier
  * keine Token-, sondern eine Stückgrenze.
  */
