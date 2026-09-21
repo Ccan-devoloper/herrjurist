@@ -242,10 +242,43 @@ export function klausurCss(ctx) {
 /* Stil „bunt“: Vollfläche in der Tagesfarbe; alle Bausteine werden zu Pillen,
    Karten und Badges – ohne die Vorlagen selbst zu ändern. */
 const PFEIL = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 110" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14 C 30 70, 70 92, 128 86"/><path d="M108 66 L 130 86 L 106 100"/></svg>`);
+const FARBTEST_FACH = {
+  bgbat:   { grund: "#8AF0A6", dunkel: "#0A2B1C", hell: "#EFFFF1", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#1E5A40" },
+  schuld:  { grund: "#6DBEFD", dunkel: "#092653", hell: "#EAF5FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#173F78" },
+  schuldbt:{ grund: "#6DBEFD", dunkel: "#092653", hell: "#EAF5FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#173F78" },
+  delikt:  { grund: "#6DBEFD", dunkel: "#092653", hell: "#EAF5FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#173F78" },
+  bereich: { grund: "#6DBEFD", dunkel: "#092653", hell: "#EAF5FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#173F78" },
+  gesetzs: { grund: "#6DBEFD", dunkel: "#092653", hell: "#EAF5FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#173F78" },
+  sachen:  { grund: "#E8D0A0", dunkel: "#372B11", hell: "#FFF7E6", lila: "#F4E6C8", akzent2: "#8D62E8", weich: "#5E4B25" },
+  arbeit:  { grund: "#15DDDB", dunkel: "#052234", hell: "#E6FFFE", lila: "#FFF1D5", akzent2: "#8D62E8", weich: "#124958" },
+  famerb:  { grund: "#15DDDB", dunkel: "#052234", hell: "#E6FFFE", lila: "#FFF1D5", akzent2: "#8D62E8", weich: "#124958" },
+  handelsg:{ grund: "#15DDDB", dunkel: "#052234", hell: "#E6FFFE", lila: "#FFF1D5", akzent2: "#8D62E8", weich: "#124958" },
+  ipr:     { grund: "#15DDDB", dunkel: "#052234", hell: "#E6FFFE", lila: "#FFF1D5", akzent2: "#8D62E8", weich: "#124958" },
+  zpo:     { grund: "#388FEA", dunkel: "#081941", hell: "#E8F2FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#DCEBFF" },
+  zwangsv: { grund: "#388FEA", dunkel: "#081941", hell: "#E8F2FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#DCEBFF" },
+  assessorz:{grund: "#388FEA", dunkel: "#081941", hell: "#E8F2FF", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#DCEBFF" },
+  strafat: { grund: "#D97371", dunkel: "#461214", hell: "#FFF0F0", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6D2B2E" },
+  strafbt: { grund: "#FB902F", dunkel: "#351A0A", hell: "#FFF0E2", lila: "#FFF1D5", akzent2: "#388FEA", weich: "#633513" },
+  stpo:    { grund: "#FB902F", dunkel: "#351A0A", hell: "#FFF0E2", lila: "#FFF1D5", akzent2: "#388FEA", weich: "#633513" },
+  anklage: { grund: "#FB902F", dunkel: "#351A0A", hell: "#FFF0E2", lila: "#FFF1D5", akzent2: "#388FEA", weich: "#633513" },
+  revision:{ grund: "#FB902F", dunkel: "#351A0A", hell: "#FFF0E2", lila: "#FFF1D5", akzent2: "#388FEA", weich: "#633513" },
+  staat:   { grund: "#E41D78", dunkel: "#330122", hell: "#FFEAF4", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6C1644" },
+  grundr:  { grund: "#E41D78", dunkel: "#330122", hell: "#FFEAF4", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6C1644" },
+  verwalt: { grund: "#E41D78", dunkel: "#330122", hell: "#FFEAF4", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6C1644" },
+  verwbt:  { grund: "#E41D78", dunkel: "#330122", hell: "#FFEAF4", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6C1644" },
+  vwgo:    { grund: "#E41D78", dunkel: "#330122", hell: "#FFEAF4", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6C1644" },
+  europa:  { grund: "#E41D78", dunkel: "#330122", hell: "#FFEAF4", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6C1644" },
+  assessoroer:{ grund: "#E41D78", dunkel: "#330122", hell: "#FFEAF4", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#6C1644" },
+  methodik:{ grund: "#36E6B2", dunkel: "#11183A", hell: "#E7FFF7", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#173E46" },
+  mindset: { grund: "#36E6B2", dunkel: "#11183A", hell: "#E7FFF7", lila: "#FFF1D5", akzent2: "#F7C948", weich: "#173E46" },
+  wochenrueckblick:{ grund: "#F1EBDD", dunkel: "#171717", hell: "#FFFFFF", lila: "#EDE5F7", akzent2: "#8D62E8", weich: "#4A4741" },
+};
+
 export function buntCss(ctx) {
   const stil = ctx?.stil;
   if (!stil || (stil.familie || stil.id) !== "bunt") return "";
-  const p = stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3];
+  const testPalette = String(process.env.IG_FARBTEST || "") === "true" ? FARBTEST_FACH?.[ctx?.fach] : null;
+  const p = testPalette || stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3];
   const pfeil = `url("data:image/svg+xml,${PFEIL.replace("%23111", encodeURIComponent(p.dunkel))}")`;
   return `
 :root{--grund:${p.grund};--text:${p.dunkel};--text-weich:${p.weich || p.dunkel};--akzent:${p.dunkel};--pille:${p.dunkel};--pille-text:#fff;--flaeche:rgba(255,255,255,.92);--linie:rgba(255,255,255,.45);--hell:${p.hell};--lila:${p.lila};--akzent2:${p.akzent2}}
