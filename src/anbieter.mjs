@@ -391,7 +391,19 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     griff.buchen(tatsaechlich);
     journal?.abrechnen(reservierung, tatsaechlich);
     erfassenStueck(tatsaechlich, zweck);
-    telemetrie?.aufruf({ ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich, releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true });
+    const usage = ergebnis?.usage || {};
+    const inDetails = usage.input_tokens_details || {};
+    const outDetails = usage.output_tokens_details || {};
+    telemetrie?.aufruf({
+      ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich,
+      releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true,
+      inputTokens: usage.input_tokens ?? null,
+      outputTokens: usage.output_tokens ?? null,
+      imageInputTokens: inDetails.image_tokens ?? null,
+      textInputTokens: inDetails.text_tokens ?? null,
+      imageOutputTokens: outDetails.image_tokens ?? null,
+      textOutputTokens: outDetails.text_tokens ?? null,
+    });
     return ergebnis;
   } catch (e) {
     if (e instanceof InvarianteVerletzt) {
