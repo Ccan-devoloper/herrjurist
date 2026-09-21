@@ -1835,10 +1835,10 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
   assert.ok(coverGroesse > buntGroesse,
     `Reel-Cover muss visuell größer bleiben als die Feed-Titelfolie: ${coverGroesse}px zu ${buntGroesse}px`);
 
-  const buntKlein = Number(folie.match(/\\.art-titel h1\\.titel-stack\\.klein\\{font-size:(\\d+)px/)?.[1]);
-  const buntWinzig = Number(folie.match(/\\.art-titel h1\\.titel-stack\\.winzig\\{font-size:(\\d+)px/)?.[1]);
-  const coverKlein = Number(cover.match(/\\.story\\.cover h1\\.titel-stack\\.klein\\{font-size:(\\d+)px/)?.[1]);
-  const coverWinzig = Number(cover.match(/\\.story\\.cover h1\\.titel-stack\\.winzig\\{font-size:(\\d+)px/)?.[1]);
+  const buntKlein = Number(folie.match(/\.art-titel h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
+  const buntWinzig = Number(folie.match(/\.art-titel h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
+  const coverKlein = Number(cover.match(/\.story\.cover h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
+  const coverWinzig = Number(cover.match(/\.story\.cover h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
   for (const [name, feed, reel] of [["klein", buntKlein, coverKlein], ["winzig", buntWinzig, coverWinzig]]) {
     assert.ok(feed && reel, `Stufe ${name} nicht gefunden`);
     assert.ok(reel > feed, `Reel-Cover-Stufe ${name} muss größer als Feed bleiben: ${reel}px zu ${feed}px`);
