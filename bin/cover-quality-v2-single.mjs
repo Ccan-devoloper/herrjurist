@@ -110,7 +110,7 @@ async function regieErzeugen(thema, fachLabel) {
     text: { format: { type: "json_schema", name: "herrjurist_single_cover_regie", strict: true, schema: REGIE_SCHEMA } },
   };
   const antwort = await openaiAufruf({
-    zweck: "cover-regie",
+    zweck: "bildregie",
     modell: "gpt-5.4-mini",
     params,
     optional: false,
@@ -221,7 +221,7 @@ try {
         dimensions: dim,
       },
       costUsd: {
-        director: sum(events.filter((e) => e.purpose === "cover-regie")),
+        director: sum(events.filter((e) => e.purpose === "bildregie")),
         image: sum(events.filter((e) => e.purpose === "bild" || e.purpose === "erklaerbild")),
         visionQa: sum(events.filter((e) => e.purpose === "bild-qa")),
         total: sum(events),
