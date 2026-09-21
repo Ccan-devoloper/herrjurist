@@ -503,6 +503,7 @@ export const CONFIG = {
       groesse: env("IG_CHARAKTER_GROESSE", "1024x1024"),
       reserveUsd: Number(env("IG_CHARAKTER_RESERVE_USD", "0.12")),
       retryReserveUsd: Number(env("IG_CHARAKTER_RETRY_RESERVE_USD", "0.24")),
+      minAbstandMs: Number(env("IG_CHARAKTER_MIN_ABSTAND_MS", "13000")),
       zeitlimitMs: Number(env("IG_CHARAKTER_ZEITLIMIT_MS", "180000")),
     },
   },
