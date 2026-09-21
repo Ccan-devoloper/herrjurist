@@ -59,7 +59,7 @@ function zielText(ziel = {}) {
     ziel.titel, ziel.unter, ziel.text, ziel.sprecher, ziel.norm,
     ziel.bildSzene, ziel.bildSzeneAlt, ziel.coverText,
     ziel.coverRegie?.kernidee, ziel.coverRegie?.handlung,
-    ziel.coverRegie?.hinweisZiel, ziel.coverRegie?.hinweisZone,
+    ziel.coverRegie?.hinweisRegie, ziel.coverRegie?.hinweisZiel, ziel.coverRegie?.hinweisZone,
     ...(Array.isArray(ziel.coverCharaktere) ? ziel.coverCharaktere : []),
   ].filter(Boolean).join(" · ");
 }
@@ -73,10 +73,14 @@ function coverRegieAus(ziel = {}) {
     kernidee: sauber(roh.kernidee, 500),
     handlung: sauber(roh.handlung, 1200),
     alternative: sauber(roh.alternative, 1200),
-    hinweisZiel: sauber(roh.hinweisZiel, 180),
-    hinweisZone: ["auto", "left-mid", "left-low", "right-mid", "right-low"].includes(String(roh.hinweisZone || "").toLowerCase())
-      ? String(roh.hinweisZone).toLowerCase()
-      : "auto",
+    hinweisRegie: sauber(
+      roh.hinweisRegie
+        || [
+          roh.hinweisZone ? `Place the handwritten note naturally around ${roh.hinweisZone} if the composition supports it.` : "",
+          roh.hinweisZiel ? `Draw a loose arrow toward ${roh.hinweisZiel}.` : "",
+        ].filter(Boolean).join(" "),
+      900,
+    ),
   };
 }
 
@@ -287,25 +291,25 @@ function handlungFuer(ziel, chars) {
   return solo("{A} demonstrates the legal idea with one topic-relevant prop in a single immediately readable pose.");
 }
 
-function hinweisKomposition(ziel = {}) {
+function coverTextAus(ziel = {}) {
+  const titelFolie = ziel?.folien?.find?.((f) => f.art === "titel") || {};
+  return String(ziel.coverText || titelFolie.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
+}
+
+function hinweisBildRegie(ziel = {}) {
   const regie = coverRegieAus(ziel);
-  const zone = regie?.hinweisZone || "auto";
-  const zonenText = {
-    "left-mid": "The editor mildly prefers a handwriting pocket around the left-middle edge of the lower scene.",
-    "left-low": "The editor mildly prefers a handwriting pocket around the lower-left edge of the scene.",
-    "right-mid": "The editor mildly prefers a handwriting pocket around the right-middle edge of the lower scene.",
-    "right-low": "The editor mildly prefers a handwriting pocket around the lower-right edge of the scene.",
-    auto: "The editor has no fixed side preference for the later handwriting overlay.",
-  }[zone] || "";
-  const zielText = regie?.hinweisZiel
-    ? `If it stays natural, keep this semantic arrow target visually reachable from a nearby quiet pocket: ${regie.hinweisZiel}.`
-    : "";
+  const text = coverTextAus(ziel);
+  if (!text) return "Do not add a handwritten annotation or arrow to this vignette.";
+  const kreativeRegie = regie?.hinweisRegie
+    || "Use a natural pocket of negative space close to the action and point the arrow toward the most relevant legal prop.";
   return [
-    "Herrjurist will add the handwritten note and arrow AFTER image generation. Do NOT draw handwriting, arrows, labels or annotation marks into the illustration.",
-    zonenText,
-    zielText,
-    "This is only a soft composition preference. Do not distort character poses or weaken the legal scene just to reserve space; the renderer may choose another overlay zone.",
-  ].filter(Boolean).join(" ");
+    `Add exactly ONE short handwritten editorial annotation as part of the transparent vignette. Its readable text must be EXACTLY: <<<${text}>>>.`,
+    `Creative annotation direction: ${kreativeRegie}`,
+    "You decide the annotation's exact position, angle, arrow curvature and visual rhythm from the actual scene. Keep it organic, like a hand-drawn editorial note in the golden references.",
+    "The note and arrow may overlap empty transparent space or minor background edges, but must not cover faces, hands, the central legal prop, or the fixed title/badge area above the vignette.",
+    "Keep the annotation visually close enough to the characters/prop that the cropped transparent motif remains compact and the characters stay large in the final cover.",
+    "The annotation above is the ONLY readable text permitted inside the generated image.",
+  ].join(" ");
 }
 
 export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrektur = "") {
@@ -319,19 +323,19 @@ export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrekt
     : "";
 
   return [
-    "Create a NEW premium 2D editorial sci-fi comedy illustration for the lower half of a 3:4 Instagram cover.",
+    "Create a NEW premium 2D editorial sci-fi comedy illustration for the lower half of a 4:5 Instagram cover.",
     referenzen,
     `Use EXACTLY ${chars.length} recurring character identity/identities: ${chars.map((x) => x.name).join(", ")}. No other human, humanoid, robot, creature, face, body, silhouette or duplicate of a selected character may appear.`,
     "The supplied references define identity, not pose. Redraw those same identities in a new topic-specific action.",
     `Scene direction: ${handlung}`,
-    `Legal context for meaning only, NOT a request to add people or text: ${kontext}`,
+    `Legal context for meaning only, NOT a request to add people or any text beyond the exact handwritten annotation specified below: ${kontext}`,
     korrekturText,
     "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the renderer can place a large title above it. The finished feed cover is 4:5. Do not build a background.",
-    hinweisKomposition(ziel),
+    hinweisBildRegie(ziel),
     "Characters must interact rather than pose independently. Every selected character needs a clear job in the scene. Use only props that make the legal point instantly understandable; omit props that do not help.",
     "Show complete readable anatomy: full heads and faces, all essential hands/fingers, feet or hover bases, and every important prop. No fused hands, spare limbs, duplicated body parts, cropped heads or accidental amputations.",
     "Polished premium cartoon finish matching the references: confident clean ink outlines, controlled cel shading, subtle material highlights and texture, expressive faces, precise accessories, clean edges and consistent proportions. Do NOT simplify into flat clip-art and do NOT switch to 3D, photorealism, watercolor or sketch style.",
-    "Absolutely no explanatory prose, letters, numbers, law citations, labels, logos, signatures or gibberish inside the generated illustration. Papers, screens, folders and signs must be blank or contain only simple abstract shapes/check marks. Herrjurist adds all readable text later.",
+    "Outside the one exact handwritten cover annotation specified above, absolutely no explanatory prose, letters, numbers, law citations, labels, logos, signatures or gibberish may appear. Papers, screens, folders and signs must otherwise be blank or contain only simple abstract shapes/check marks.",
     "Transparent background only. No room, landscape, wall, decorative frame or colored sticker outline. A soft ground shadow directly under the selected characters or main prop is allowed.",
     "Fill the transparent image confidently: the complete vignette should occupy about 88 to 94 percent of the usable width or height while retaining a small clean safety margin around every body part and prop.",
   ].filter(Boolean).join(" ");
@@ -466,13 +470,14 @@ const BILD_QA_SCHEMA = {
     cropOk: { type: "boolean" },
     styleOk: { type: "boolean" },
     sceneOk: { type: "boolean" },
+    annotationOk: { type: "boolean" },
     textArtifacts: { type: "boolean" },
     issues: { type: "array", items: { type: "string" } },
     retryHint: { type: "string" },
   },
   required: [
     "ok", "identityOk", "extraCharacters", "duplicateCharacters",
-    "anatomyOk", "cropOk", "styleOk", "sceneOk", "textArtifacts",
+    "anatomyOk", "cropOk", "styleOk", "sceneOk", "annotationOk", "textArtifacts",
     "issues", "retryHint",
   ],
 };
@@ -505,7 +510,10 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
           "Compare identity carefully: head/face shape, body proportions, skin/material colour, outfit, signature accessories and silhouette must remain recognisably the same as the references.",
           "Reject severe anatomy defects, fused/extra limbs or hands, missing essential body parts, cropped heads/feet/hover bases, accidental amputations, or important props cut off.",
           "Reject a flat generic clip-art look if it loses the polished inked editorial-cartoon finish of the references.",
-          "Reject generated readable text, letters, numbers, citations, logos or gibberish. Abstract check marks and simple unlabeled shapes are allowed.",
+          `The candidate MUST contain exactly one handwritten cover annotation with this exact readable text: <<<${coverTextAus(ziel)}>>>. If that text is missing, misspelled, duplicated or materially altered, set annotationOk=false.`,
+          `Annotation/arrow creative direction: ${coverRegieAus(ziel)?.hinweisRegie || "place it naturally in free space and point to the legally relevant scene element"}`,
+          "The handwritten note and its loose arrow should feel organically composed with the scene and must not cover faces, important hands or the central legal prop.",
+          "Any OTHER readable text, letters, numbers, citations, logos or gibberish are textArtifacts and must be rejected. Abstract check marks and simple unlabeled shapes are allowed.",
           "The scene must communicate the requested legal idea at a glance and the selected characters must interact coherently.",
           `Legal scene context: ${themenKontext(ziel)}`,
           `Creative direction used for generation: ${handlungFuer(ziel, chars)}`,
@@ -559,6 +567,7 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
       && daten?.cropOk
       && daten?.styleOk
       && daten?.sceneOk
+      && daten?.annotationOk
       && !daten?.textArtifacts;
     return { ...daten, ok: Boolean(daten?.ok && logischOk) };
   } catch (e) {
@@ -570,7 +579,7 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
       ok: false,
       unavailable: true,
       issues: [`visuelle QA nicht verfuegbar: ${String(e?.message || e).slice(0, 160)}`],
-      retryHint: "Preserve the exact selected identities, include no extra characters, and redraw with clean anatomy and full uncropped bodies.",
+      retryHint: `Preserve the exact selected identities, include no extra characters, redraw with clean anatomy, and render the handwritten annotation exactly as: ${coverTextAus(ziel)}.`,
     };
   } finally {
     for (const p of refs) fs.rmSync(p, { force: true });

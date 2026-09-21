@@ -8,7 +8,7 @@ Diese Dateien definieren die **visuelle Sprache und das Qualitätsniveau** der H
 - Dunkles Fachband oben links.
 - Sehr dominante weiße Headline in 2–4 dunklen, einzeln gerundeten Titelblöcken.
 - Kleine helle redaktionelle Badge direkt unter dem Titel.
-- Kurzer handschriftlicher juristischer Aha-Hinweis links im unteren Bereich, idealerweise mit klarer Pfeil-/Gestenbeziehung zur Szene.
+- Kurzer handschriftlicher juristischer Aha-Hinweis mit klarer Pfeilbeziehung zur Szene. Seine konkrete Position, Neigung und Pfeilführung entstehen aus der jeweiligen Bildregie und sind nicht auf eine feste Seite beschränkt.
 - Große, hochwertige 2D-Charakterbühne im unteren Bereich; Figuren und Hauptrequisiten sind auf Mobilgröße sofort erkennbar.
 - Kleine Fach-/Bereichspille unten rechts.
 - Bei Karussells: dunkler runder Seitenzähler oben rechts, z. B. „1/6“.
@@ -47,4 +47,6 @@ Für visuelle QA und Renderer-Entwicklung dienen die Referenzen als **Qualitäts
 
 ## Layout-Abnahme
 
-Die Referenzen priorisieren eine dichte mobile Komposition: Fachband bündig oben links, großer Titelblock mit wenig Leerraum, Badge unmittelbar darunter, Handschrift klar mit der Szene verbunden und eine große Charakterbühne, die bis in den mittleren Bildbereich reicht. Diese Geometrie wird im Renderer angenähert; die konkrete Szene bleibt Aufgabe der dynamischen Regie.
+Die Referenzen priorisieren eine dichte mobile Komposition. Der Renderer hält nur die wiederkehrende Marken-Geometrie fest: 4:5-Format, Fachband, obere Titelposition, feste Schriftstufen der Titelpillen, Pillenabstände/-innenabstände/-maximalbreite, Badge-Geometrie, Footer und Seitenzähler. Der Titel darf nicht wegen der Charakterbühne dynamisch kleingerechnet werden.
+
+Die konkrete Szene bleibt Aufgabe der dynamischen Regie. Dazu gehören Figuren, Requisiten, Posen sowie Position, Neigung und Pfeilführung des handschriftlichen Aha-Hinweises. Handschrift und Pfeil werden als Teil des KI-Motivs komponiert; der Renderer verschiebt sie nicht nachträglich in feste Zonen. Der exakte `coverText` bleibt dabei redaktionell vorgegeben und wird von der visuellen QA auf Schreibweise und sinnvolle Pfeilbeziehung geprüft.

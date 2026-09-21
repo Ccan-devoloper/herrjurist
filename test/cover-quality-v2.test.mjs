@@ -67,21 +67,23 @@ test("cover-quality-v2: strukturierte Cover-Regie darf Cast und Szene frei besti
   const ziel = {
     titel: "Vollstreckungsklausel und Klauselrechtsbehelfe",
     fach: "zpo",
+    coverText: "Freigabe fehlt",
     coverRegie: {
       charaktere: ["rex", "zylla"],
       kernidee: "Eine formale Freigabe entscheidet, ob es weitergeht.",
       handlung: "{A} tries to pass a sealed case capsule through a checkpoint while {B} discovers the missing clearance tag.",
       alternative: "{A} holds a locked legal crate while {B} finds the one matching clearance key.",
-      hinweisZiel: "the missing clearance tag",
-      hinweisZone: "left-mid",
+      hinweisRegie: "Write the note in the natural empty pocket above the checkpoint action, tilt it slightly, and curve one loose arrow down toward the missing clearance tag.",
     },
   };
   assert.deepEqual(ids(ziel), ["rex", "zylla"]);
   const prompt = charakterPrompt(ziel);
   assert.match(prompt, /sealed case capsule/);
-  assert.match(prompt, /left-middle edge/);
+  assert.match(prompt, /Freigabe fehlt/);
   assert.match(prompt, /missing clearance tag/);
-  assert.match(prompt, /Do NOT draw handwriting, arrows/i);
+  assert.match(prompt, /exactly ONE short handwritten editorial annotation/i);
+  assert.match(prompt, /one loose arrow/i);
+  assert.doesNotMatch(prompt, /Do NOT draw handwriting, arrows/i);
   assert.doesNotMatch(prompt, /leftmost roughly 16 percent/i);
   assert.doesNotMatch(prompt, /three separate blank legal objects/);
 });
@@ -155,11 +157,13 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   const cssText = buntCss(ctx);
   assert.match(cssText, /\.art-titel\{padding-left:52px;padding-right:52px\}/);
   assert.match(cssText, /\.art-titel>\.kopf\{left:-52px;top:0;right:-52px\}/);
-  assert.match(cssText, /font-size:104px/);
+  assert.match(cssText, /\.art-titel h1\.titel-stack\{[^}]*gap:7px[^}]*margin-top:10px[^}]*font-size:104px/);
+  assert.match(cssText, /\.art-titel h1\.titel-stack\.klein\{font-size:94px\}/);
+  assert.match(cssText, /\.art-titel h1\.titel-stack\.winzig\{font-size:84px\}/);
+  assert.match(cssText, /\.art-titel h1\.titel-stack \.titel-zeile\{[^}]*max-width:976px[^}]*padding:12px 27px 14px[^}]*border-radius:30px/);
+  assert.match(cssText, /\.cover-badge\{[^}]*margin-top:15px[^}]*padding:10px 26px 11px[^}]*font-size:30px/);
   assert.match(cssText, /\.frei\.charakter\{right:-12px;bottom:-6px;width:1050px;height:980px\}/);
-  assert.match(cssText, /\.art-titel h1\.titel-stack\{[^}]*margin-top:10px/);
-  assert.match(cssText, /\.cover-hinweis\{[^}]*z-index:6/);
-  assert.match(cssText, /\.cover-hinweis-pfeil\{/);
+  assert.doesNotMatch(cssText, /\.cover-hinweis\{/);
   assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
 
   const html = folieHtml({
@@ -168,14 +172,11 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
     titelZeilen: ["Zulässigkeit", "kommt vor", "Begründetheit"],
     coverBadge: "Klausurrelevant",
     coverText: "Reihenfolge merken",
-    coverHinweisZone: "right-mid",
-    coverHinweisZiel: "document stack",
     icon: "dokument",
   }, ctx, 1, 6);
   assert.match(html, />1\/6</);
-  assert.match(html, /class="cover-hinweis" data-zone="right-mid" data-ziel="document stack"/);
-  assert.match(html, /class="cover-hinweis-text"/);
-  assert.match(html, /class="cover-hinweis-pfeil"/);
+  assert.doesNotMatch(html, /Reihenfolge merken/);
+  assert.doesNotMatch(html, /cover-hinweis/);
 });
 
 test("cover-quality-v2: vereinbarte Lernfamilienfarben sind permanent verdrahtet", () => {

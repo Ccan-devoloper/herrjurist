@@ -337,11 +337,8 @@ h1 em{color:${p.akzent2}}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
-/* Handschrift und Pfeil sind ein separates Overlay. Die Position hier ist
-   nur Fallback; render.mjs bewertet spaeter mehrere moegliche Zonen. */
-.cover-hinweis{position:absolute;left:52px;top:650px;width:fit-content;max-width:325px;z-index:6;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-wrap:balance;pointer-events:none}
-.cover-hinweis-text{display:block;transform:rotate(-4deg);transform-origin:left center}
-.cover-hinweis-pfeil{position:absolute;left:-6px;top:calc(100% + 8px);width:150px;height:110px;background:${pfeil} no-repeat center/contain;transform-origin:12px 14px;pointer-events:none}
+/* Handschrift und Pfeil gehoeren zum KI-Motiv. Der Renderer mischt sich
+   bewusst nicht in deren konkrete Komposition ein. */
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -661,17 +658,6 @@ function titelKlasse(t, zeilen = null) {
   return l > 86 || max > 23 ? "winzig" : l > 64 || max > 19 ? "klein" : "";
 }
 
-function coverHinweisText(f = {}) {
-  const sauber = (x) => String(x || "").replace(/\s+/g, " ").trim();
-  const cover = sauber(f.coverText);
-  if (cover) return cover;
-  const alt = sauber(f.hinweis);
-  /* Alte Entwuerfe tragen zufaellige UI-Floskeln. Die hochwertigen Referenzen
-     haben dagegen genau EINEN inhaltlichen Handschrift-Hinweis. */
-  if (!alt || /^(so geht.?s!?|swipen?\s*→?|schau rein!?|merk dir das!?|weiter!?|lesen!?|prüf das!?|pruef das!?)$/i.test(alt)) return "";
-  return alt;
-}
-
 function titelBlock(titel, zeilen, ctx) {
   const klasse = titelKlasse(titel, zeilen);
   if ((ctx?.stil?.familie || ctx?.stil?.id) === "bunt") {
@@ -683,18 +669,13 @@ function titelBlock(titel, zeilen, ctx) {
 const FOLIEN = {
   titel: (f, ctx, i, n) => {
     const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
-    const handschrift = bunt ? coverHinweisText(f) : "";
     const badge = String(f.coverBadge || f.prioritaetText || "").trim();
-    const hinweisZoneRoh = String(f.coverHinweisZone || "auto").toLowerCase();
-    const hinweisZone = ["auto", "left-mid", "left-low", "right-mid", "right-low"].includes(hinweisZoneRoh) ? hinweisZoneRoh : "auto";
-    const hinweisZiel = String(f.coverHinweisZiel || "").replace(/\s+/g, " ").trim().slice(0, 120);
     return `
     ${kopf(ctx, n > 1 ? `${i}/${n}` : "")}
     ${titelBlock(f.titel, f.titelZeilen, ctx)}
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
     ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
     ${!bunt && f.pille ? `<div><span class="pille">${esc(f.pille)}</span></div>` : ""}
-    ${handschrift ? `<div class="cover-hinweis" data-zone="${esc(hinweisZone)}" data-ziel="${esc(hinweisZiel)}"><span class="cover-hinweis-text">${esc(handschrift)}</span><span class="cover-hinweis-pfeil" aria-hidden="true"></span></div>` : ""}
     ${f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f)}
     ${!f.bild && bunt ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
     ${fuss(ctx)}`;
