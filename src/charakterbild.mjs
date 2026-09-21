@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { CONFIG } from "./config.mjs";
 import { ffmpegPfad } from "./stimme.mjs";
-import { bildAufruf, openaiBildEditSenden } from "./anbieter.mjs";
+import { bildAufruf, openaiAufruf, openaiBildEditSenden } from "./anbieter.mjs";
 import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
@@ -82,18 +82,40 @@ const REGELN = [
   { re: /sache|mangel|schaden|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
 ];
 
-function idsAusRegie(ziel = {}) {
-  const roh = ziel.coverCharaktere || ziel?.folien?.find?.((f) => f.art === "titel")?.coverCharaktere;
+function idsAusManuellerRegie(ziel = {}) {
+  /* Nur eine AUSDRUECKLICHE menschliche/Chat-Freigabe darf die semantische
+     Charakterregie ueberschreiben. Das alte Feld coverCharaktere kam auch aus
+     dem Claude-Fallback und hat die guten Themenregeln deshalb ungewollt
+     ausgehebelt. Alte automatische Werte werden ab jetzt ignoriert. */
+  const titel = ziel?.folien?.find?.((f) => f.art === "titel") || {};
+  const quelle = String(ziel.coverCharaktereQuelle || titel.coverCharaktereQuelle || "").toLowerCase();
+  const roh = ziel.coverCharaktereManuell || titel.coverCharaktereManuell
+    || (["chat", "manuell", "human"].includes(quelle) ? (ziel.coverCharaktere || titel.coverCharaktere) : null);
   if (!Array.isArray(roh)) return [];
   return [...new Set(roh.map((x) => String(x || "").toLowerCase()).filter((id) => CHARAKTERE[id]))].slice(0, 6);
 }
 
+function fallbackCharaktere(text) {
+  /* Auch im generischen Fallback soll FORM-7 nicht jeden zweiten Beitrag
+     uebernehmen. Eine kleine deterministische Streuung ueber den Inhalt sorgt
+     fuer Cast-Balance, ohne Zufall und ohne externes Modell. */
+  const paare = [
+    ["rex", "flux"],
+    ["zylla", "mara"],
+    ["brakk", "flux"],
+    ["zylla", "rex"],
+  ];
+  let h = 0;
+  for (const ch of String(text || "")) h = ((h * 31) + ch.charCodeAt(0)) >>> 0;
+  return paare[h % paare.length];
+}
+
 export function charaktereFuer(ziel = {}) {
-  const vorgegeben = idsAusRegie(ziel);
-  if (vorgegeben.length) return vorgegeben.map((id) => CHARAKTERE[id]);
+  const manuell = idsAusManuellerRegie(ziel);
+  if (manuell.length) return manuell.map((id) => CHARAKTERE[id]);
   const text = zielText(ziel);
   for (const regel of REGELN) if (regel.re.test(text)) return regel.ids.map((id) => CHARAKTERE[id]);
-  return [CHARAKTERE.form7, CHARAKTERE.flux];
+  return fallbackCharaktere(text).map((id) => CHARAKTERE[id]);
 }
 
 function handlungFuer(ziel, chars) {
