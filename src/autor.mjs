@@ -153,7 +153,7 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Hashtags: 8–14 Stück, deutsch, kleingeschrieben, spezifisch zum Thema plus diese Kernhashtags: ${CONFIG.hashtags.kern.join(" ")}.
 - kurztitel: 3–6 Wörter für die Story-Ankündigung und das Reel-Cover. Er muss grammatisch aufgehen: entweder eine Nominalphrase ohne Verb („Mord und Totschlag: das Verhältnis“) oder ein vollständiger Satz/eine vollständige Frage („Sitzt alles?“). Falsch wäre „Wochenrückblick: alles sitzen?“ – ein Infinitiv ohne Subjektbezug.
 - BILDREGEL FÜR KARUSSELLS: NUR Folie 1 (Cover/Titelfolie) bekommt eine Charakter-Szene. Alle inneren Karussell-Slides bleiben reine Text-/Strukturfolien: niemals Bildhintergrund oder dekoratives Motiv; dort sind nur Typografie, Kästen, Linien, Pfeile und kleine Icons erlaubt.
-- coverCharaktere: PFLICHT. Wähle die KLEINSTE sinnvolle Gruppe aus diesen IDs: rex, zylla, form7, brakk, flux, mara. Ein Charakter ist richtig, wenn eine einzelne Handlung genügt; zwei oder drei nur, wenn Interaktion, Rollen oder ein Gegensatz dadurch sofort verständlicher werden. Keine feste Paarlogik. Orientierung: Rex = Reparatur/Fehlersuche/chaotische Handlung, Zylla = Vertrag/Kommunikation/typischer Fehler, FORM-7 = Schema/Akte/Verfahren, Brakk = schwere Streitstände/Sachenrecht/harte Tatsachen, Flux = Erklärung/Dogmatik/Lehre, Mara = Taktik/Prüferblick/Stoppen/Überleben.
+- coverCharaktere: PFLICHT. Wähle die KLEINSTE sinnvolle Gruppe aus diesen IDs: rex, zylla, form7, brakk, flux, mara. Ein Charakter ist richtig, wenn eine einzelne Handlung genügt; mehrere nur, wenn Interaktion, Rollen oder ein Gegensatz dadurch sofort verständlicher werden. Nutze so viele wie nötig, aber nie zusätzliche Figuren nur zur Dekoration. Keine feste Paarlogik. Orientierung: Rex = Reparatur/Fehlersuche/chaotische Handlung, Zylla = Vertrag/Kommunikation/typischer Fehler, FORM-7 = Schema/Akte/Verfahren, Brakk = schwere Streitstände/Sachenrecht/harte Tatsachen, Flux = Erklärung/Dogmatik/Lehre, Mara = Taktik/Prüferblick/Stoppen/Überleben.
 - bildSzene: PFLICHT. Eine ENGLISCHE, konkrete Regieanweisung für die Szene, 4 bis 12 Wörter. Beschreibe die sichtbare Handlung und nur die Gegenstände, die zum sofortigen Verständnis beitragen. Ein Gegenstand ist KEIN Muss. Es dürfen auch mehrere unmittelbar nötige Gegenstände vorkommen, wenn der juristische Gegensatz sonst nicht sichtbar wird. Keine abstrakten Symbolbilder. Beispiele: „student hands professor sealed termination letter“, „miner carries crate while robot shows ownership deed“, „scout blocks mechanic before portal button“.
 - coverText: optionaler DEUTSCHER Merksatz mit 2 bis 6 Wörtern, höchstens 36 Zeichen. Nur setzen, wenn er neben Titel und Szene einen zusätzlichen Sofort-Aha-Effekt bringt. Nicht den Titel wiederholen. Beispiele: „Ohne Zugang keine Frist“, „Reihenfolge merken“, „Nicht verwechseln“, „Ausnahme zuerst prüfen“. Der Renderer setzt ihn handschriftlich; das Bildmodell schreibt ihn NICHT.
 - bildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.
@@ -203,7 +203,7 @@ const BEITRAG_SCHEMA = {
     caption: { type: "string" },
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
-    coverCharaktere: { type: "array", minItems: 1, maxItems: 3, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
+    coverCharaktere: { type: "array", minItems: 1, maxItems: 6, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
     coverText: { type: ["string", "null"] },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
@@ -616,7 +616,7 @@ function hookWaehlen(daten, strategie, thema = null) {
 const COVER_CHAR_IDS = new Set(["rex", "zylla", "form7", "brakk", "flux", "mara"]);
 function coverCharaktereKurz(liste) {
   if (!Array.isArray(liste)) return [];
-  return [...new Set(liste.map((x) => String(x || "").toLowerCase()).filter((x) => COVER_CHAR_IDS.has(x)))].slice(0, 3);
+  return [...new Set(liste.map((x) => String(x || "").toLowerCase()).filter((x) => COVER_CHAR_IDS.has(x)))].slice(0, 6);
 }
 function coverTextKurz(text) {
   if (!text) return null;
@@ -1056,7 +1056,7 @@ const REEL_SCHEMA = {
     caption: { type: "string" },
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
-    coverCharaktere: { type: "array", minItems: 1, maxItems: 3, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
+    coverCharaktere: { type: "array", minItems: 1, maxItems: 6, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
     coverText: { type: ["string", "null"] },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
@@ -1120,7 +1120,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       laengenAnleitung(von, bis, lang),
       REEL_ANLEITUNG,
       hookAnleitung(hookMuster),
-      "\n## Cover-Motiv\ncoverCharaktere: wähle 1 bis 3 IDs aus rex, zylla, form7, brakk, flux, mara; so wenige wie möglich, so viele wie für die Rechtsidee nötig. Keine feste Paarlogik.\ncoverText: optional 2 bis 6 deutsche Wörter (max. 36 Zeichen), nur wenn ein zusätzlicher Merksatz das Cover sofort verständlicher macht. Nicht den Titel wiederholen.\nbildSzene: eine ENGLISCHE konkrete Regieanweisung in 4 bis 12 Wörtern. Beschreibe Handlung und nur die wirklich hilfreichen Gegenstände; null ist hier nicht erlaubt. Ein Gegenstand ist kein Muss, mehrere sind erlaubt, wenn sie fachlich nötig sind.\nbildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.",
+      "\n## Cover-Motiv\ncoverCharaktere: wähle mindestens 1 ID aus rex, zylla, form7, brakk, flux, mara; so wenige wie möglich, so viele wie für die Rechtsidee nötig. Keine feste Paarlogik.\ncoverText: optional 2 bis 6 deutsche Wörter (max. 36 Zeichen), nur wenn ein zusätzlicher Merksatz das Cover sofort verständlicher macht. Nicht den Titel wiederholen.\nbildSzene: eine ENGLISCHE konkrete Regieanweisung in 4 bis 12 Wörtern. Beschreibe Handlung und nur die wirklich hilfreichen Gegenstände; null ist hier nicht erlaubt. Ein Gegenstand ist kein Muss, mehrere sind erlaubt, wenn sie fachlich nötig sind.\nbildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.",
       `\n## Normen\n${NORM_REGEL}\n${NORM_REGEL_STIMME}`,
       anlass ? `\n## Anlass\n${anlass.titel}: ${anlass.kontext}` : "",
       `Phase im Prüfungsjahr: ${phase(datum)}.`,
