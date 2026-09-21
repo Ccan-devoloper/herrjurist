@@ -265,7 +265,12 @@ export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = 
         headers: { "content-type": "application/json", authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
         body: JSON.stringify(params),
       });
-      if (!r.ok) throw new Error(`OpenAI ${r.status}: ${(await r.text()).slice(0, 200)}`);
+      if (!r.ok) {
+        const fehler = new Error(`OpenAI ${r.status}: ${(await r.text()).slice(0, 200)}`);
+        fehler.status = r.status;
+        fehler.retryAfter = Number(r.headers?.get?.("retry-after") || 0);
+        throw fehler;
+      }
       const d = await r.json();
       /* Usage vereinheitlichen, damit Preis und Telemetrie dieselbe Sprache
          sprechen - und dabei der Unterschied zwischen den Anbietern:
@@ -362,7 +367,12 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
         body: JSON.stringify(auftrag?.koerper || {}),
         signal: steuerung.signal,
       });
-      if (!r.ok) throw new Error(`HTTP ${r.status}: ${(await r.text().catch(() => "")).slice(0, 200)}`);
+      if (!r.ok) {
+        const fehler = new Error(`HTTP ${r.status}: ${(await r.text().catch(() => "")).slice(0, 200)}`);
+        fehler.status = r.status;
+        fehler.retryAfter = Number(r.headers?.get?.("retry-after") || 0);
+        throw fehler;
+      }
       return await r.json();
     } finally { clearTimeout(wecker); }
   };
@@ -387,6 +397,17 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     if (e instanceof InvarianteVerletzt) {
       journal?.abrechnen(reservierung, e.tatsaechlich);
       telemetrie?.aufruf({ ...roh, sent: true, spendUnknown: false, actualUsd: e.tatsaechlich, usd: e.tatsaechlich, releasedUsd: 0, outcome: "invariant_violation", errorType: e.name, approved: false });
+      throw e;
+    }
+    /* Ein vom Images-Endpunkt explizit als ungueltig abgelehnter Request hat
+       keinen Modelllauf erzeugt. Genau wie beim Responses-Endpunkt darf ein
+       HTTP 400 deshalb nicht als unbekannter Providerverbrauch die komplette
+       Bildreserve verbrennen. Netz-/5xx-Fehler bleiben konservativ ungeklärt. */
+    if (Number(e?.status) === 400) {
+      griff.kosten(0);
+      griff.buchen(0);
+      journal?.abrechnen(reservierung, 0);
+      telemetrie?.aufruf({ ...roh, sent: true, spendUnknown: false, actualUsd: 0, usd: 0, releasedUsd: stueck, outcome: "provider_rejected", errorType: e.name || "HTTP400", approved: false });
       throw e;
     }
     const gesendet = griff.istGesendet();
