@@ -495,6 +495,16 @@ export const CONFIG = {
          45 MB. */
       archivMax: Number(env("IG_MOTIV_ARCHIV_MAX", "1500")),
     },
+    charaktere: {
+      aktiv: env("IG_CHARAKTERE", "true") === "true",
+      modell: env("IG_CHARAKTER_MODELL", "gpt-image-2.5-sunburst-2026-09-08"),
+      guete: env("IG_CHARAKTER_GUETE", "medium"),
+      retryGuete: env("IG_CHARAKTER_RETRY_GUETE", "high"),
+      groesse: env("IG_CHARAKTER_GROESSE", "1024x1024"),
+      reserveUsd: Number(env("IG_CHARAKTER_RESERVE_USD", "0.12")),
+      retryReserveUsd: Number(env("IG_CHARAKTER_RETRY_RESERVE_USD", "0.24")),
+      zeitlimitMs: Number(env("IG_CHARAKTER_ZEITLIMIT_MS", "180000")),
+    },
   },
 
   /* Interaktion: Kommentare unter den eigenen Beiträgen beantworten -------- */
