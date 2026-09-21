@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { CONFIG } from "./config.mjs";
 import { ffmpegPfad } from "./stimme.mjs";
-import { bildAufruf } from "./anbieter.mjs";
+import { bildAufruf, openaiBildEditSenden } from "./anbieter.mjs";
 import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
@@ -178,29 +178,19 @@ async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimit
       form.append("size", size);
       form.append("background", "transparent");
       form.append("output_format", "png");
-      const steuerung = new AbortController();
-      const wecker = setTimeout(() => steuerung.abort(), zeitlimitMs);
       try {
         /* Tier 1 erlaubt fuer GPT Image derzeit nur wenige Bilder pro Minute.
            Auch ein erfolgreicher Aufruf zaehlt; deshalb nicht erst nach 429
            bremsen, sondern jeden Bildstart bewusst auseinanderziehen. */
         await ratenfensterWarten(Number(CONFIG.bilder?.charaktere?.minAbstandMs || 13000));
-        const r = await fetch("https://api.openai.com/v1/images/edits", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${key}` },
-          body: form,
-          signal: steuerung.signal,
-        });
-        if (r.ok) return await r.json();
-        const body = (await r.text().catch(() => "")).slice(0, 500);
-        const fehler = new Error(`OpenAI image edit ${r.status}: ${body}`);
-        fehler.status = r.status;
-        if (r.status !== 429 || rateVersuch === 2) throw fehler;
-        const retry = Number(r.headers.get("retry-after") || 0);
+        return await openaiBildEditSenden({ form, key, zeitlimitMs });
+      } catch (fehler) {
+        if (Number(fehler?.status) !== 429 || rateVersuch === 2) throw fehler;
+        const retry = Number(fehler?.retryAfter || 0);
         const warten = Math.max(13000, Number.isFinite(retry) ? retry * 1000 : 0);
         console.warn(`  ! GPT-Image-Ratenlimit; ${Math.ceil(warten / 1000)} s Pause, dann gleicher Versuch erneut.`);
         await schlafen(warten);
-      } finally { clearTimeout(wecker); }
+      }
     }
     throw new Error("GPT-Image-Ratenlimit nach drei Versuchen");
   } finally {
