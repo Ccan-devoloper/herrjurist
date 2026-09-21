@@ -7034,11 +7034,11 @@ test("Carousel-Cover erzwingt Foto-Look, Erklärbilder bleiben flach", () => {
 });
 
 
-test("Fotoausfall darf keinen Carousel-Slot blockieren", () => {
+test("Charakterbildausfall darf keinen Carousel-Slot blockieren", () => {
   const q = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
-  assert.match(q, /kein fotorealistisches Cover verfügbar – Veröffentlichung mit Icon-Cover/);
-  assert.ok(!/kein fotorealistisches Cover[^\n]*\n\s*continue;/.test(q), "Cover-Ausfall blockiert wieder einen Pflichtslot");
-  assert.ok(!/kein fotorealistisches Cover[^\n]*\n\s*return null;/.test(q), "Cover-Ausfall verwirft wieder einen Reservebeitrag");
+  assert.match(q, /kein Charakter-Cover – Veröffentlichung mit Icon-Cover/);
+  assert.ok(!/kein Charakter-Cover[^\n]*\n\s*continue;/.test(q), "Cover-Ausfall blockiert wieder einen Pflichtslot");
+  assert.ok(!/kein Charakter-Cover[^\n]*\n\s*return null;/.test(q), "Cover-Ausfall verwirft wieder einen Reservebeitrag");
 });
 
 test("Zeitlernen startet an den Kanalankern und lernt danach weiter", async () => {
