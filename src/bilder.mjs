@@ -213,6 +213,7 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
       bild, quelle: null, seite: null, frei: true,
       breite: motiv.breite, hoehe: motiv.hoehe,
       typ: "charakter", charaktere: motiv.charaktere || [], prompt: motiv.prompt || null,
+      coverHinweisPlan: motiv.annotationPlan || null,
       kostenUsd: motiv.kostenUsd ?? null,
     };
   }
