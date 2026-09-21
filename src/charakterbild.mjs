@@ -3,10 +3,10 @@
  * Wiederkehrende Herr-Jurist-Charaktere als thematische Cover- und Reel-Szenen.
  *
  * Anders als die fruehere Stockfoto-/Einzelmotiv-Pipeline entstehen hier keine
- * austauschbaren Gegenstaende. Ein oder zwei feste Figuren werden aus ihren
- * Referenzbildern in eine neue, zum juristischen Thema passende Handlung
- * gesetzt. Die Referenzbilder bleiben gleich; Szene, Pose und Requisite sind
- * fuer jeden Beitrag neu.
+ * austauschbaren Gegenstaende. Je nach Inhalt werden eine, zwei oder mehrere
+ * feste Figuren aus ihren Referenzbildern in eine neue, zum juristischen Thema
+ * passende Handlung gesetzt. Requisiten sind kein Muss: Entscheidend ist, dass
+ * die Szene den juristischen Gedanken sofort sichtbar macht.
  */
 import fs from "node:fs";
 import os from "node:os";
@@ -57,23 +57,40 @@ function zielText(ziel = {}) {
   return [
     ziel.kurztitel, ziel.fachLabel, ziel.fach, ziel.format, titel,
     ziel.titel, ziel.unter, ziel.text, ziel.sprecher, ziel.norm,
-    ziel.bildSzene, ziel.bildSzeneAlt,
+    ziel.bildSzene, ziel.bildSzeneAlt, ziel.coverText,
+    ...(Array.isArray(ziel.coverCharaktere) ? ziel.coverCharaktere : []),
   ].filter(Boolean).join(" · ");
 }
 
 const REGELN = [
-  /* Spezifische Rechtsgebiete zuerst: Ein "Aufbau" zu § 142 StGB bleibt
-     Strafrecht und ein "Tenor" nach VwGO bleibt Oeffentliches Recht. */
-  { re: /straf|tatbestand|versuch|diebstahl|raub|koerper|körper|gewalt|unfall|142|flucht|taeter|täter|mittaeter|mittäter/i, ids: ["brakk", "form7"] },
-  { re: /verwalt|vwgo|grundrecht|versammlung|polizei|behoerd|behörd|bescheid|vollzieh|oeffentlich|öffentlich/i, ids: ["mara", "form7"] },
-  { re: /besitz|eigentum|sache|mangel|schaden|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
+  /* Fallback nur fuer Altbestand ohne strukturierte Cover-Regie. Neue Inhalte
+     liefern coverCharaktere direkt aus dem Autoren-Aufruf. Die Regeln duerfen
+     bewusst 1, 2 oder 3 Figuren liefern. */
+  { re: /142|unfall|unfallort|verkehrsunfall|flucht/i, ids: ["rex", "mara"] },
+  { re: /versuch|unmittelbar|letzten handgriff/i, ids: ["rex", "mara"] },
+  { re: /besitz|eigentum/i, ids: ["brakk", "form7"] },
+  { re: /anfecht|irrtum|kausal/i, ids: ["form7", "rex"] },
+  { re: /angebot|annahme|schaufenster|invitatio/i, ids: ["form7", "zylla"] },
+  { re: /kuendig|kündig|zugang|fristbeginn/i, ids: ["zylla", "flux"] },
+  { re: /vollzieh|aufschieb|80 abs|verwalt|vwgo|bescheid/i, ids: ["mara", "form7"] },
+  { re: /mittaeter|mittäter|mehrpersonen|dreiperson|vertretung/i, ids: ["brakk", "zylla", "form7"] },
+  { re: /definition|begriff|dogmatik/i, ids: ["flux"] },
+  { re: /mindset|blackout|zeitdruck|perfektion/i, ids: ["mara"] },
+  { re: /schema|pruef|prüf|aufbau|zulaess|zuläss|begruendet|begründet|klausur|methodik/i, ids: ["form7", "flux"] },
+  { re: /straf|tatbestand|diebstahl|raub|koerper|körper|gewalt/i, ids: ["brakk", "form7"] },
   { re: /erbe|testament|famil|nachlass|erbrecht/i, ids: ["mara", "flux"] },
-  { re: /mindset|blackout|keine ahnung|lernen|wiederhol|zeitdruck|perfektion/i, ids: ["mara", "flux"] },
-  { re: /kuendig|kündig|vertrag|angebot|annahme|willenserklaer|willenserklär|zugang|anfecht|irrtum|widerruf|ruecktritt|rücktritt/i, ids: ["zylla", "flux"] },
-  { re: /schema|pruef|prüf|aufbau|streit|ansicht|vergleich|klausur|zulaess|zuläss|begruendet|begründet|frist|tenor|rechtsbehelf|verfahren/i, ids: ["form7", "flux"] },
+  { re: /sache|mangel|schaden|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
 ];
 
+function idsAusRegie(ziel = {}) {
+  const roh = ziel.coverCharaktere || ziel?.folien?.find?.((f) => f.art === "titel")?.coverCharaktere;
+  if (!Array.isArray(roh)) return [];
+  return [...new Set(roh.map((x) => String(x || "").toLowerCase()).filter((id) => CHARAKTERE[id]))].slice(0, 3);
+}
+
 export function charaktereFuer(ziel = {}) {
+  const vorgegeben = idsAusRegie(ziel);
+  if (vorgegeben.length) return vorgegeben.map((id) => CHARAKTERE[id]);
   const text = zielText(ziel);
   for (const regel of REGELN) if (regel.re.test(text)) return regel.ids.map((id) => CHARAKTERE[id]);
   return [CHARAKTERE.form7, CHARAKTERE.flux];
@@ -81,8 +98,9 @@ export function charaktereFuer(ziel = {}) {
 
 function handlungFuer(ziel, chars) {
   const text = zielText(ziel);
-  const a = chars[0]?.name || "the first character";
-  const b = chars[1]?.name || "the second character";
+  const a = chars[0]?.name || "the character";
+  const b = chars[1]?.name || "another character";
+  const c = chars[2]?.name || "a third character";
   if (/kuendig|kündig/i.test(text)) return `${a} hands ${b} a blank termination letter; ${b} reacts surprised while ${a} clearly ends the relationship.`;
   if (/142|unfall|unfallort|24 stunden/i.test(text)) return `${a} turns away from a lightly damaged small car as if leaving the accident scene, while ${b} stops them and points back to the car.`;
   if (/streit|ansicht|ergebnis|vergleich/i.test(text)) return `${a} carefully compares two different blank solution sheets side by side while ${b} waits before starting an argument.`;
@@ -93,28 +111,33 @@ function handlungFuer(ziel, chars) {
   if (/zulaess|zuläss|begruendet|begründet/i.test(text)) return `${a} checks a first procedural gate on a blank checklist before allowing ${b} to move to a clearly separate second stage.`;
   if (/vollzieh|aufschieb/i.test(text)) return `${a} checks whether a process is already running before ${b} reaches for a large pause switch.`;
   if (/frist|kalender|zugang/i.test(text)) return `${a} points at a blank calendar while ${b} holds a sealed blank envelope, both concentrating on the correct timing.`;
-  if (/dieb|raub|straf|tatbestand/i.test(text)) return `${a} reenacts the concrete act with one simple prop while ${b} inspects the sequence step by step.`;
+  if (/dieb|raub|straf|tatbestand/i.test(text)) return `${a} reenacts the concrete act while ${b} inspects the sequence step by step.`;
   const cue = String(ziel?.bildSzene || ziel?.titel || ziel?.kurztitel || "a legal exam problem").trim();
-  return `${a} and ${b} act out this concrete exam situation: ${cue}. One character performs the action, the other visibly checks or reacts to it.`;
+  if (chars.length === 1) return `${a} acts out this concrete exam situation in one immediately readable pose: ${cue}.`;
+  if (chars.length >= 3) return `${a}, ${b} and ${c} form one coherent interaction that makes this concrete exam situation instantly understandable: ${cue}.`;
+  return `${a} and ${b} act out this concrete exam situation: ${cue}. Their interaction, not mere posing, must communicate the point.`;
 }
 
 export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel)) {
   const referenzen = chars.map((c, i) =>
     `Reference image ${i + 1} is ${c.name}: ${c.kurz}. Preserve this exact character identity, face, body proportions, outfit, colours and distinctive features.`
   ).join(" ");
-  const kontext = zielText(ziel).slice(0, 900);
+  const kontext = zielText(ziel).slice(0, 1100);
   const handlung = handlungFuer(ziel, chars);
   return [
-    "Create a NEW flat 2D sci-fi comedy cartoon scene using the supplied character reference image(s).",
+    "Create a NEW flat 2D sci-fi comedy cartoon vignette using the supplied recurring character reference image(s).",
     referenzen,
-    "Do not copy the reference pose; redraw the same character(s) in a new pose and interaction.",
+    "Use exactly the selected recurring characters. The selection may contain one, two or three characters; do not invent extra people or duplicate a character.",
+    "Do not copy the reference poses. Redraw the same identities in a new, topic-specific interaction.",
     `Scene action: ${handlung}`,
     `Legal-topic context, only to understand the visual meaning: ${kontext}`,
-    "Use one coherent scene, not separate portraits. Show one or two characters only, plus at most one large simple prop that is essential to the action.",
-    "Keep silhouettes readable at Instagram thumbnail size. Exaggerate gesture and facial reaction enough to communicate the action instantly.",
-    "Absolutely no text, no letters, no words, no numbers, no paragraph symbols, no logos, no watermark. Documents and screens must be blank or use abstract non-letter lines only.",
-    "No background and no scenery: transparent background, nothing behind the characters, no room, no floor, no landscape, no frame. A small prop may touch the characters if the action requires it.",
-    "Leave clear transparent margin around the complete scene on all four sides. Do not crop heads, feet, hands, hair, crystals or props.",
+    "Choose props by meaning, not by formula. Use no prop when gesture alone explains the point; use one or more clearly relevant objects when they make the legal distinction immediately understandable.",
+    "Build one coherent scene, not separate portraits. Characters may stand on either side of a central object, overlap naturally, point, hand things over, stop each other, compare documents or demonstrate a sequence.",
+    "Make the vignette visually substantial: the complete scene should occupy roughly 85 to 92 percent of the usable canvas width or height while still keeping every head, hand, foot and essential prop fully visible.",
+    "Keep silhouettes readable at Instagram thumbnail size. Exaggerate gesture and facial reaction enough that the action is understood before reading the caption.",
+    "Do not render explanatory prose inside the illustration. Documents, screens and signs should stay blank or use simple abstract marks; a short deterministic callout, when useful, is added later by the Herrjurist renderer so spelling stays correct.",
+    "No background and no scenery: transparent background, no room, no landscape and no decorative frame. Ground shadows that belong directly under the characters or object are allowed.",
+    "Use only a modest transparent safety margin around the complete vignette; do not shrink the scene into a small sticker in one corner.",
     "Bold clean outlines, flat colours, subtle simple shading, consistent with the supplied original character artwork.",
   ].join(" ");
 }
@@ -242,7 +265,7 @@ function qa(roh, randFarbe = null) {
 export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "bild", slot = null } = {}) {
   if (!charakterBildAktiv() || !ziel) return null;
   const cfg = CONFIG.bilder.charaktere;
-  const chars = charaktereFuer(ziel).slice(0, 2);
+  const chars = charaktereFuer(ziel).slice(0, 3);
   if (!chars.length || chars.some((c) => !fs.existsSync(path.join(basis, c.datei)))) return null;
   const prompt = charakterPrompt(ziel, chars);
   const versuche = [
@@ -267,7 +290,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       });
       const roh = dateiAusAntwort(daten);
       if (!roh) continue;
-      const fertig = qa(roh, randFarbe);
+      const fertig = qa(roh, cfg.randAktiv ? randFarbe : null);
       if (!fertig) {
         console.warn(`  ! Charakterbild QA fehlgeschlagen (${chars.map((c) => c.name).join(" + ")}, Versuch ${i + 1})`);
         continue;
