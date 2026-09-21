@@ -7027,23 +7027,23 @@ test("Carousel-Cover bleibt auf Folie 1 und Erklärbilder bleiben flach", () => 
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   assert.match(autor, /NUR Folie 1 \(Cover\/Titelfolie\) bekommt eine Charakter-Szene/);
   assert.match(autor, /Alle inneren Karussell-Slides bleiben reine Text-\/Strukturfolien/);
-  assert.match(autor, /coverCharaktere: PFLICHT/);
+  assert.match(autor, /Charakterwahl ist NICHT deine Aufgabe/);
   assert.match(autor, /coverText: optionaler DEUTSCHER Merksatz/);
 });
 
 
-test("Charakter-Cover folgt strukturierter Regie statt fester Paarlogik", async () => {
+test("Charakter-Cover folgt semantischer Markenregie; nur manuelle Wahl darf ueberschreiben", async () => {
   const { charaktereFuer, charakterPrompt } = await import("../src/charakterbild.mjs");
-  const solo = charaktereFuer({ coverCharaktere: ["mara"], titel: "Blackout in der Klausur" });
-  assert.deepEqual(solo.map((x) => x.id), ["mara"]);
+  const automatisch = charaktereFuer({ titel: "Wann beginnt der Versuch?", coverCharaktere: ["flux"] });
+  assert.deepEqual(automatisch.map((x) => x.id), ["rex", "mara"]);
 
-  const gruppe = charaktereFuer({ coverCharaktere: ["zylla", "form7", "rex", "brakk"], titel: "Mehrpersonenfall" });
-  assert.deepEqual(gruppe.map((x) => x.id), ["zylla", "form7", "rex", "brakk"]);
+  const manuell = charaktereFuer({ titel: "Wann beginnt der Versuch?", coverCharaktere: ["zylla"], coverCharaktereQuelle: "chat" });
+  assert.deepEqual(manuell.map((x) => x.id), ["zylla"]);
 
-  const prompt = charakterPrompt({ coverCharaktere: ["mara"], bildSzene: "scout stops before deadline gate" }, solo);
-  assert.match(prompt, /one or more characters/i);
-  assert.match(prompt, /Use no prop when gesture alone explains the point/i);
-  assert.ok(!/one or two characters only/i.test(prompt), "alte starre Figurenanzahl ist noch im Prompt");
+  const prompt = charakterPrompt({ titel: "Wann beginnt der Versuch?", bildSzene: "hand stopped before glowing button" }, automatisch);
+  assert.match(prompt, /Use EXACTLY 2 recurring character/i);
+  assert.match(prompt, /No other human, humanoid, robot, creature/i);
+  assert.ok(!/another character|official|clerk|detective/i.test(prompt), "Fremdrolle ist wieder im Prompt");
 });
 
 test("Charakter-Cover nutzt eine deutlich groessere Buehne und optionalen Merksatz", async () => {
