@@ -546,7 +546,7 @@ export const CONFIG = {
        "instagram-assets" dieses Repositories über raw.githubusercontent.com. */
     zweig: env("IG_ASSET_BRANCH", "instagram-assets"),
     basisUrl: env("IG_ASSET_BASE_URL", ""),                 // leer = automatisch aus dem git-Remote ableiten
-    verzeichnis: env("IG_ASSET_DIR", "assets"),             // lokaler Checkout des Asset-Zweigs
+    verzeichnis: env("IG_ASSET_DIR", ".instagram-assets"),  // lokaler Checkout des Asset-Zweigs; getrennt von assets/charaktere
   },
 
   /* Hashtags: kleiner fester Kern + themenabhängige aus dem Autor. */
