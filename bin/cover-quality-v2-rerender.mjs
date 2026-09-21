@@ -48,6 +48,11 @@ const folie = {
   bildHoehe: cover.motifDimensions?.height || 960,
   bildTyp: "charakter",
   bildCharaktere: cover.renderedCharacters || [],
+  coverHinweisPlan: cover.annotationPlan || {
+    noteX: 0.52, noteY: 0.14,
+    targetX: 0.62, targetY: 0.47,
+    rotationDeg: -4, bend: 0.35,
+  },
 };
 const beitrag = {
   format: "pruefungsfrage",
