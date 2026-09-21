@@ -1,4 +1,4 @@
-name: Farbwelten · echter E2E-Trockenlauf # retry-2
+name: Farbwelten · echter E2E-Trockenlauf # retry-3-case7
 
 on:
   push:
@@ -55,6 +55,7 @@ jobs:
           IG_DRY_RUN: "true"
           IG_NO_PUSH: "true"
           IG_ABLEGEN: "0"
+          IG_FARBTEST_ONLY: "07-straf-bt"
         run: node bin/farbwelten-e2e-trockenlauf.mjs
 
       - name: Kontaktbogen bauen
