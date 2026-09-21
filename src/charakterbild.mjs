@@ -164,8 +164,8 @@ function handlungFuer(ziel, chars) {
   }
   if (/versuch|unmittelbar|letzten handgriff|§\s*22\s*stgb/i.test(text)) {
     return duo(
-      "{A} reaches toward a large glowing green machine button just before pressing it; {B} sharply stops {A}'s hand at the decisive last moment.",
-      "{A} freezes with one hand a few centimetres above a large glowing green machine button, visibly at the decisive last moment."
+      "{A} moves one bright abstract token from a planning area across a clearly visible glowing boundary line into a separate execution area; {B} points exactly at the boundary crossing. The scene is purely symbolic and contains no weapons, injury, danger or threatening action.",
+      "{A} moves one bright abstract token across a clearly visible glowing boundary from a planning area into a separate execution area. The scene is purely symbolic and safe."
     );
   }
   if (/besitz|eigentum|985|sachenrecht/i.test(text)) {
