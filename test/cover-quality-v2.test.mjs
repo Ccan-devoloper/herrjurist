@@ -95,6 +95,21 @@ test("cover-quality-v2: Prompt erfindet keine Fremdrollen", () => {
   }
 });
 
+test("cover-quality-v2: juristische Fundstellen brechen nur an sinnvollen Grenzen", () => {
+  assert.deepEqual(
+    titelZeilen("Was verlangt § 344 Abs. 2 Satz 2 StPO?"),
+    ["Was verlangt", "§ 344 Abs. 2", "Satz 2 StPO?"],
+  );
+  assert.deepEqual(
+    titelZeilen("Was verlangt § 344 Abs. 2 Satz 2 StPO?", ["Was verlangt §", "344 Abs. 2 Satz", "2 StPO?"]),
+    ["Was verlangt", "§ 344 Abs. 2", "Satz 2 StPO?"],
+  );
+  assert.deepEqual(
+    titelZeilen("§ 80 Abs. 5 VwGO? Erst Vollziehung prüfen"),
+    ["§ 80 Abs. 5 VwGO?", "Erst Vollziehung", "prüfen"],
+  );
+});
+
 test("cover-quality-v2: Titelpillen bleiben bei hoechstens vier semantischen Zeilen", () => {
   assert.equal(titelZeilen("A B C D E F G H I J", ["A", "B", "C", "D", "E", "F"]).length, 4);
   const auto = titelZeilen("Eigenschaftsirrtum ist kein Motivirrtum – merk dir die Ausnahme");
