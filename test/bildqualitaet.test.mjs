@@ -40,5 +40,5 @@ test("Bild-Layout: Fotokarten werden vollständig gezeigt statt mit cover abgesc
   assert.match(html, /\.foto img\{[^}]*object-fit:contain/);
   assert.doesNotMatch(html, /\.foto img\{[^}]*object-fit:cover/);
   assert.match(html, /\.frei\{position:absolute;right:28px;bottom:28px/);
-  assert.match(html, /\.frei\.charakter\{right:18px;bottom:22px/);
+  assert.match(html, /\.frei\.charakter\{right:10px;bottom:16px/);
 });

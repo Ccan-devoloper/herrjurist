@@ -1213,12 +1213,13 @@ test("Motive auf Reel-Cover und Stories, Nebentext auf Blau hell", async () => {
   /* Der Teaser trägt das Bild des Beitrags. */
   const t = teaserAusBeitrag({ fach: "strafbt", klausur: 2, kurztitel: "K", folien: [{ art: "titel", titel: "T", bild, bildFrei: true, bildQuelle: "Q" }] }, "s1");
   assert.equal(t.bild, bild);
-  /* Blau (Klausur 1): weicher Text hell; auf weißen Flächen dunkel. */
-  const blau = folieHtml({ art: "text", titel: "T", text: "x" }, kontext({ fach: "zivil", klausur: 1 }), 2, 3);
-  assert.ok(/--text-weich:#dbe4ff/.test(blau), "helle Weichfarbe fehlt");
-  assert.ok(/\.text[^{]*\{--text-weich:#0c1b4d\}/.test(blau) || /\.text,[^{]*\{--text-weich:#0c1b4d\}/.test(blau), "dunkle Weichfarbe auf weißen Flächen fehlt");
+  /* Lernfamilienfarben: Schuldrecht hellblau, Strafrecht BT orange; auf
+     weißen Flächen bleibt jeweils die dunkle Kontrastfarbe erhalten. */
+  const blau = folieHtml({ art: "text", titel: "T", text: "x" }, kontext({ fach: "schuld", klausur: 1 }), 2, 3);
+  assert.ok(/--text-weich:#092653/.test(blau), "Schuldrecht-Kontrastfarbe fehlt");
+  assert.ok(/\.text[^{]*\{--text-weich:#092653\}/.test(blau) || /\.text,[^{]*\{--text-weich:#092653\}/.test(blau), "dunkle Schuldrecht-Farbe auf weißen Flächen fehlt");
   const orange = folieHtml({ art: "text", titel: "T", text: "x" }, ctx, 2, 3);
-  assert.ok(/--text-weich:#3a1708/.test(orange));
+  assert.ok(/--text-weich:#351A0A/i.test(orange));
 });
 
 test("Token-Tresor: ein neu gesetztes Secret gewinnt gegen den gespeicherten Token", async () => {
@@ -1360,7 +1361,7 @@ test("Themen-Skelett: Methodik-Themen ohne Klausurtag brechen den Lauf nicht ab"
 test("Mindset: eigene Farbe, eigenes Etikett, kein Prüfungstag", async () => {
   const { mindsetThema } = await import("../src/kalender.mjs");
   const { FAECHER } = await import("../src/inhalte.mjs");
-  const { STILE } = await import("../src/stile.mjs");
+  const { STILE, lernPalette } = await import("../src/stile.mjs");
   const { folieHtml, coverHtml, fussRechts } = await import("../src/vorlagen.mjs");
   const t = mindsetThema("2026-09-12");
   assert.equal(t.fach, "mindset");
@@ -1379,7 +1380,7 @@ test("Mindset: eigene Farbe, eigenes Etikett, kein Prüfungstag", async () => {
   assert.equal(ctx.klausur, 0);
   const html = folieHtml({ art: "titel", titel: "T" }, ctx, 1, 1);
   const flaeche = html.match(/\.folie,\.story,\.reel\{background:(#[0-9a-f]{6})/i)?.[1];
-  assert.equal(flaeche?.toLowerCase(), f[0].grund.toLowerCase(), `Kachelfläche ${flaeche} statt Mindset-Farbe`);
+  assert.equal(flaeche?.toLowerCase(), lernPalette("mindset").grund.toLowerCase(), `Kachelfläche ${flaeche} statt vereinbarter Mindset-Farbe`);
   assert.ok(coverHtml({ titel: "T" }, ctx).includes("Kopfsache"));
 });
 

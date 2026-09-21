@@ -269,7 +269,7 @@ h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;b
 /* Titelfolie: echte Einzelpillen pro Sinneinheit. Weniger Innenabstand und
    nur 8 px Abstand zwischen den Zeilen erzeugen einen kompakten, auf dem
    Handy schnell scanbaren Titelblock. */
-.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:6px;width:fit-content;max-width:100%;font-size:92px;line-height:1.01;letter-spacing:-.022em;text-wrap:initial}
+.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:fit-content;max-width:100%;font-size:92px;line-height:1.01;letter-spacing:-.022em;text-wrap:initial}
 .art-titel h1.titel-stack.klein{font-size:84px}
 .art-titel h1.titel-stack.winzig{font-size:76px}
 .art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:928px;background:${p.dunkel};color:#fff;padding:11px 25px 13px;border-radius:28px;white-space:nowrap}
@@ -411,19 +411,17 @@ em{color:${p.akzent2}}
    zum 13.09. war das Cover der einzige Ort mit dem Kasten - im Profilraster
    standen beide Formate nebeneinander und sahen aus wie zwei Kanaele.
    Die Story-Regel (ein Grund um das ganze h1) wird dafuer zurueckgenommen. */
-/* Das Cover ist 1920 hoch, die Karussellkachel 1350. Dieselbe Schriftgroesse
-   wirkt darauf deshalb ein Drittel kleiner - im Profilraster stehen beide
-   nebeneinander, und das Reel fiel als das schwaechere auf. Gemessen belegte
-   die Ueberschrift dort 15,6 % der Hoehe gegen 33,3 % auf der Kachel. Die
-   Groessen sind mit 1920/1350 = 1,42 hochgerechnet, damit die Wirkung gleich
-   ist statt der Zahl. */
+/* Das Cover ist 1920 hoch, die Karussellkachel 1440. Dieselbe Schriftgroesse
+   wirkt darauf deshalb ein Viertel kleiner - im Profilraster stehen beide
+   nebeneinander. Die Titel-Stacks werden mit 1920/1440 = 4/3 skaliert, damit
+   die optische Wirkung beider Feed-Formate gleich bleibt. */
 .story.cover h1{background:none;padding:0;width:auto;font-size:142px;line-height:1.35;margin-top:102px}
 .story.cover h1.klein{font-size:122px}
 .story.cover h1.winzig{font-size:105px}
 .story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:40px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:fit-content;max-width:100%;font-size:115px;line-height:1.02;letter-spacing:-.018em}
-.story.cover h1.titel-stack.klein{font-size:104px}
-.story.cover h1.titel-stack.winzig{font-size:91px}
+.story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:fit-content;max-width:100%;font-size:123px;line-height:1.02;letter-spacing:-.018em}
+.story.cover h1.titel-stack.klein{font-size:112px}
+.story.cover h1.titel-stack.winzig{font-size:101px}
 .story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;background:${p.dunkel};color:#fff;padding:14px 34px 16px;border-radius:38px;white-space:nowrap}
 .story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
 /* Handschrift mit Pfeil, genau wie auf der Titelfolie. */
@@ -590,7 +588,12 @@ export function titelZeilen(titel, vorgegeben = null) {
     teile.push(sauber);
   }
 
-  const bauen = (max) => teile.flatMap((teil) => zeilenGreedy(teil, max));
+  /* Normzitate sind eine semantische Einheit. Ein Zeilenumbruch zwischen
+     "§ 80 Abs. 5" und "VwGO" ist fachlich und optisch schlechter als eine
+     etwas längere Pille; deshalb bleiben bekannte Gesetzeszitate zusammen. */
+  const istNormEinheit = (teil) => /^(?:§§?|Art\.)\s/i.test(teil)
+    && /\b(?:BGB|ZPO|StGB|StPO|GVG|VwGO|VwVfG|BauGB|BauNVO|GewO|POG|PolG|GG|HGB|GmbHG|AktG|InsO|ArbGG|BetrVG|KSchG|TzBfG|SGB|FamFG|WEG|ProdHaftG|StVG|StVO|OWiG|JGG|BeurkG|GBO|ErbbauRG|UWG|MarkenG|UrhG|PatG|AO|EStG|UStG|EGBGB|AEUV|EUV|GRCh|EMRK)[?!:]?$/i.test(teil);
+  const bauen = (max) => teile.flatMap((teil) => istNormEinheit(teil) ? [teil] : zeilenGreedy(teil, max));
   let zeilen = bauen(16);
   if (zeilen.length > 4) zeilen = bauen(19);
   if (zeilen.length > 4) zeilen = bauen(22);

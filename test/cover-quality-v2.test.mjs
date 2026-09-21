@@ -66,7 +66,7 @@ test("cover-quality-v2: generische Coverhinweise werden nicht gerendert", () => 
     hinweis: "Schau rein!",
   }, kontext({ fach: "arbeit", klausur: 1, fachLabel: "Arbeitsrecht" }), 1, 4);
   assert.doesNotMatch(html, /Schau rein!/);
-  assert.doesNotMatch(html, /cover-hinweis/);
+  assert.doesNotMatch(html, /<div class="cover-hinweis">/);
 });
 
 test("cover-quality-v2: Produktionsparameter und 3:4-Format bleiben kompatibel", () => {

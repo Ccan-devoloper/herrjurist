@@ -49,6 +49,11 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Install test media dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
       - name: Static and regression checks
         run: |
           npm run lint
@@ -57,7 +62,7 @@ jobs:
       - name: Install rendering dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg libttspico-utils python3-pip
+          sudo apt-get install -y libttspico-utils python3-pip
           npx playwright install --with-deps chromium
           python3 -m pip install --break-system-packages "rembg[cpu]"
 
