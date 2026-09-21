@@ -361,7 +361,7 @@ function dateiAusAntwort(daten) {
   return roh;
 }
 
-function qa(roh, randFarbe = null) {
+function qaTechnisch(roh, randFarbe = null) {
   let arbeitsPfad = roh;
   let prof = alphaProfil(arbeitsPfad);
   const alphaTaugt = prof && prof.festigkeit >= FESTIGKEIT_MIN && prof.belegt >= 0.02;
@@ -390,22 +390,155 @@ function qa(roh, randFarbe = null) {
   return { pfad: fertig, ohneRand, breite: m.breite || null, hoehe: m.hoehe || null };
 }
 
+const BILD_QA_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    ok: { type: "boolean" },
+    identityOk: { type: "boolean" },
+    extraCharacters: { type: "boolean" },
+    duplicateCharacters: { type: "boolean" },
+    anatomyOk: { type: "boolean" },
+    cropOk: { type: "boolean" },
+    styleOk: { type: "boolean" },
+    sceneOk: { type: "boolean" },
+    textArtifacts: { type: "boolean" },
+    issues: { type: "array", items: { type: "string" } },
+    retryHint: { type: "string" },
+  },
+  required: [
+    "ok", "identityOk", "extraCharacters", "duplicateCharacters",
+    "anatomyOk", "cropOk", "styleOk", "sceneOk", "textArtifacts",
+    "issues", "retryHint",
+  ],
+};
+
+function responsesText(antwort) {
+  if (typeof antwort?.output_text === "string") return antwort.output_text;
+  return (antwort?.output || [])
+    .flatMap((o) => o?.content || [])
+    .filter((x) => x?.type === "output_text" || x?.type === "text")
+    .map((x) => x?.text || "")
+    .join("\n");
+}
+
+async function qaVisuell(kandidatPfad, chars, ziel, slot) {
+  const cfg = CONFIG.bilder.charaktere;
+  if (!cfg.qaAktiv) return { ok: true, uebersprungen: true, issues: [] };
+
+  const refs = [];
+  try {
+    for (const ch of chars) refs.push(referenzNormalisieren(ch));
+    const inhalt = [
+      {
+        type: "input_text",
+        text: [
+          "You are the final visual quality gate for a recurring-character editorial cartoon.",
+          "Image 1 is the generated candidate. Every following image is the exact canonical reference for one selected recurring character, in the same order as the names below.",
+          \`Selected characters: \${chars.map((x) => x.name).join(", ")}.\`,
+          \`Required count of recurring characters in the candidate: exactly \${chars.length}.\`,
+          "Reject the candidate if ANY additional human, humanoid, robot, creature, face, body, portrait or duplicate character appears, even in the background or on a screen.",
+          "Compare identity carefully: head/face shape, body proportions, skin/material colour, outfit, signature accessories and silhouette must remain recognisably the same as the references.",
+          "Reject severe anatomy defects, fused/extra limbs or hands, missing essential body parts, cropped heads/feet/hover bases, accidental amputations, or important props cut off.",
+          "Reject a flat generic clip-art look if it loses the polished inked editorial-cartoon finish of the references.",
+          "Reject generated readable text, letters, numbers, citations, logos or gibberish. Abstract check marks and simple unlabeled shapes are allowed.",
+          "The scene must communicate the requested legal idea at a glance and the selected characters must interact coherently.",
+          \`Legal scene context: \${themenKontext(ziel)}\`,
+          \`Expected action: \${handlungFuer(ziel, chars)}\`,
+          "Set ok=true only if every quality criterion passes. retryHint must be a short concrete redraw instruction, or an empty string when ok=true.",
+        ].join("\n"),
+      },
+      {
+        type: "input_image",
+        image_url: \`data:image/png;base64,\${fs.readFileSync(kandidatPfad).toString("base64")}\`,
+        detail: "high",
+      },
+      ...refs.map((p) => ({
+        type: "input_image",
+        image_url: \`data:image/jpeg;base64,\${fs.readFileSync(p).toString("base64")}\`,
+        detail: "high",
+      })),
+    ];
+
+    const params = {
+      model: cfg.qaModell,
+      max_output_tokens: cfg.qaMaxTokens,
+      reasoning: { effort: "low" },
+      input: [{ role: "user", content: inhalt }],
+      text: {
+        format: {
+          type: "json_schema",
+          name: "herrjurist_character_cover_qa",
+          strict: true,
+          schema: BILD_QA_SCHEMA,
+        },
+      },
+    };
+
+    const antwort = await openaiAufruf({
+      zweck: "bild-qa",
+      modell: cfg.qaModell,
+      params,
+      optional: true,
+      admissionInputTokens: cfg.qaAdmissionInputTokens,
+      slot: slot || ziel?.slug || ziel?.themaId || "charakter-qa",
+      promptVersion: "cover-qa-v2",
+    });
+    const roh = responsesText(antwort);
+    const daten = JSON.parse(roh.slice(roh.indexOf("{"), roh.lastIndexOf("}") + 1));
+    const logischOk = daten?.identityOk
+      && !daten?.extraCharacters
+      && !daten?.duplicateCharacters
+      && daten?.anatomyOk
+      && daten?.cropOk
+      && daten?.styleOk
+      && daten?.sceneOk
+      && !daten?.textArtifacts;
+    return { ...daten, ok: Boolean(daten?.ok && logischOk) };
+  } catch (e) {
+    /* Quality first: Wenn die zweite Schranke nicht pruefen kann, wird das
+       Bild nicht still als "gut genug" durchgereicht. Der Renderer faellt
+       dann auf sein sauberes Icon-Cover zurueck statt eine Markenabweichung
+       zu veroeffentlichen. */
+    return {
+      ok: false,
+      unavailable: true,
+      issues: [\`visuelle QA nicht verfuegbar: \${String(e?.message || e).slice(0, 160)}\`],
+      retryHint: "Preserve the exact selected identities, include no extra characters, and redraw with clean anatomy and full uncropped bodies.",
+    };
+  } finally {
+    for (const p of refs) fs.rmSync(p, { force: true });
+  }
+}
+
+function verwerfen(bild) {
+  if (!bild) return;
+  for (const p of new Set([bild.pfad, bild.ohneRand].filter(Boolean))) fs.rmSync(p, { force: true });
+}
+
 /**
  * Erzeugt eine neue thematische Szene mit den festen Herr-Jurist-Charakteren.
- * Ein QA-Fehler bekommt genau einen zweiten Versuch in hoeherer Qualitaet.
+ * Feed-Cover starten in high; nur ein technisch oder visuell beanstandetes
+ * Ergebnis bekommt genau einen xhigh-Neuversuch. Reel-Szenen starten aus
+ * Kostengruenden in medium und eskalieren auf high.
  */
 export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "bild", slot = null } = {}) {
   if (!charakterBildAktiv() || !ziel) return null;
   const cfg = CONFIG.bilder.charaktere;
   const chars = charaktereFuer(ziel).slice(0, 6);
-  if (!chars.length || chars.some((c) => !fs.existsSync(path.join(basis, c.datei)))) return null;
-  const prompt = charakterPrompt(ziel, chars);
+  if (!chars.length || chars.some((ch) => !fs.existsSync(path.join(basis, ch.datei)))) return null;
+
+  const reelSzene = zweck === "erklaerbild";
   const versuche = [
-    { quality: cfg.guete, reserve: cfg.reserveUsd },
-    { quality: cfg.retryGuete, reserve: cfg.retryReserveUsd },
+    { quality: reelSzene ? cfg.reelGuete : cfg.guete, reserve: cfg.reserveUsd },
+    { quality: reelSzene ? cfg.reelRetryGuete : cfg.retryGuete, reserve: cfg.retryReserveUsd },
   ];
+  let korrektur = "";
+
   for (let i = 0; i < versuche.length; i++) {
     const v = versuche[i];
+    const prompt = charakterPrompt(ziel, chars, korrektur);
+    let fertig = null;
     try {
       const daten = await bildAufruf({
         zweck,
@@ -421,22 +554,48 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         kostenAusAntwort: bildKostenUsd,
       });
       const roh = dateiAusAntwort(daten);
-      if (!roh) continue;
-      const fertig = qa(roh, cfg.randAktiv ? randFarbe : null);
-      if (!fertig) {
-        console.warn(`  ! Charakterbild QA fehlgeschlagen (${chars.map((c) => c.name).join(" + ")}, Versuch ${i + 1})`);
+      if (!roh) {
+        korrektur = "Return one complete transparent PNG illustration containing only the selected recurring characters.";
         continue;
       }
+
+      fertig = qaTechnisch(roh, cfg.randAktiv ? randFarbe : null);
+      if (!fertig) {
+        korrektur = "Keep every selected character and important prop fully inside the frame with clean transparent edges and no cropping.";
+        console.warn(\`  ! Charakterbild technische QA fehlgeschlagen (\${chars.map((x) => x.name).join(" + ")}, Versuch \${i + 1})\`);
+        continue;
+      }
+
+      const visuell = await qaVisuell(fertig.ohneRand || fertig.pfad, chars, ziel, slot);
+      if (!visuell.ok) {
+        const grund = (visuell.issues || []).slice(0, 4).join("; ") || "visuelle Marken-QA nicht bestanden";
+        console.warn(\`  ! Charakterbild visuelle QA fehlgeschlagen (\${chars.map((x) => x.name).join(" + ")}, Versuch \${i + 1}): \${grund.slice(0, 320)}\`);
+        korrektur = visuell.retryHint || grund;
+        verwerfen(fertig);
+        fertig = null;
+        continue;
+      }
+
       const kosten = bildKostenUsd(daten);
-      console.log(`  → Charakterbild: ${chars.map((c) => c.name).join(" + ")} · ${v.quality}${kosten != null ? ` · ${kosten.toFixed(4)} $` : ""}`);
-      return { ...fertig, charaktere: chars.map((c) => c.name), prompt, kostenUsd: kosten };
+      console.log(\`  → Charakterbild: \${chars.map((x) => x.name).join(" + ")} · \${v.quality} · visuelle QA ✓\${kosten != null ? \` · \${kosten.toFixed(4)} $\` : ""}\`);
+      return {
+        ...fertig,
+        charaktere: chars.map((x) => x.name),
+        charakterIds: chars.map((x) => x.id),
+        prompt,
+        kostenUsd: kosten,
+        qa: visuell,
+      };
     } catch (e) {
-      console.warn(`  ! Charakterbild Versuch ${i + 1} fehlgeschlagen: ${e.message.slice(0, 180)}`);
-      /* Ein 4xx-Eingabefehler wird durch hoehere Qualitaet nicht besser.
-         Nur ein inhaltlich/visuell misslungenes, aber technisch erzeugtes Bild
-         bekommt den teureren High-Retry. */
+      if (fertig) verwerfen(fertig);
+      console.warn(\`  ! Charakterbild Versuch \${i + 1} fehlgeschlagen: \${String(e?.message || e).slice(0, 180)}\`);
+      /* Ein echter Eingabefehler wird durch mehr Bildqualitaet nicht besser.
+         Ein 429 sowie visuelle/technische Ablehnungen duerfen dagegen in den
+         zweiten kontrollierten Versuch. */
       if (Number(e?.status) >= 400 && Number(e?.status) < 500 && Number(e?.status) !== 429) break;
     }
   }
+
+  console.warn(\`  ! Kein Charakter-Cover hat beide QA-Schranken bestanden: \${chars.map((x) => x.name).join(" + ")}. Sauberes Icon-Cover statt Markenfehler.\`);
   return null;
 }
