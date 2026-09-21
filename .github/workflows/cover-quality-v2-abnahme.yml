@@ -1,0 +1,77 @@
+name: Cover Quality v2 Real Acceptance
+
+on:
+  push:
+    branches:
+      - feature/cover-quality-v2
+    paths:
+      - "src/**"
+      - "bin/cover-quality-v2-abnahme.mjs"
+      - "test/**"
+      - ".github/workflows/cover-quality-v2-abnahme.yml"
+      - "assets/charaktere/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cover-quality-v2-acceptance
+  cancel-in-progress: false
+
+jobs:
+  real-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      IG_STIL: bunt
+      IG_CHARAKTERE: "true"
+      IG_CHARAKTER_GUETE: high
+      IG_CHARAKTER_RETRY_GUETE: xhigh
+      IG_CHARAKTER_REEL_GUETE: medium
+      IG_CHARAKTER_REEL_RETRY_GUETE: high
+      IG_CHARAKTER_QA: "true"
+      IG_CHARAKTER_QA_MODELL: gpt-5.4-mini
+      IG_CHARAKTER_REFERENZ_KANTE: "768"
+      IG_CHARAKTER_MIN_ABSTAND_MS: "13000"
+      IG_RENDER_SKALA: "1"
+      IG_STIMME: pico
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Static and regression checks
+        run: |
+          npm run lint
+          npm test
+
+      - name: Install rendering dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libttspico-utils python3-pip
+          npx playwright install --with-deps chromium
+          python3 -m pip install --break-system-packages "rembg[cpu]"
+
+      - name: Require provider secret
+        run: |
+          test -n "$OPENAI_API_KEY" || (echo "OPENAI_API_KEY secret missing" && exit 1)
+
+      - name: Run real 10-cover and reel acceptance
+        run: node bin/cover-quality-v2-abnahme.mjs
+
+      - name: Upload visual acceptance artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cover-quality-v2-real-${{ github.sha }}
+          path: out/cover-quality-v2
+          if-no-files-found: warn
+          retention-days: 14
