@@ -335,7 +335,8 @@ h1 em{color:${p.akzent2}}
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
 .frei.charakter{right:-12px;bottom:-6px;width:1050px;height:980px}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
-.art-titel h1,.art-titel .kopf,.art-titel .prio{position:relative;z-index:3}
+.art-titel h1,.art-titel .prio{position:relative;z-index:3}
+.art-titel .kopf{z-index:3}
 /* Handschrift und Pfeil sind ein separates Overlay. Die Position hier ist
    nur Fallback; render.mjs bewertet spaeter mehrere moegliche Zonen. */
 .cover-hinweis{position:absolute;left:52px;top:650px;width:fit-content;max-width:325px;z-index:6;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-wrap:balance;pointer-events:none}
