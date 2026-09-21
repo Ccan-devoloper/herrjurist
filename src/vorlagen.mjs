@@ -337,8 +337,13 @@ h1 em{color:${p.akzent2}}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
-/* Handschrift und Pfeil gehoeren zum KI-Motiv. Der Renderer mischt sich
-   bewusst nicht in deren konkrete Komposition ein. */
+/* Die KI bestimmt Position, Pfeilziel, Neigung und Krümmung anhand des
+   tatsächlichen Motivs. Der Renderer zeichnet nur den exakten redaktionellen
+   Text und den Markenpfeil an diesen KI-bestimmten Koordinaten. */
+.cover-hinweis{position:absolute;left:0;top:0;z-index:7;max-width:360px;width:max-content;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-align:center;text-wrap:balance;pointer-events:none;transform-origin:center center}
+.cover-hinweis-pfeil{position:absolute;inset:0;width:100%;height:100%;z-index:6;overflow:visible;pointer-events:none;color:${p.dunkel}}
+.cover-hinweis-kurve{fill:none;stroke:currentColor;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.cover-hinweis-arrowhead{fill:currentColor;stroke:none}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -658,6 +663,28 @@ function titelKlasse(t, zeilen = null) {
   return l > 86 || max > 23 ? "winzig" : l > 64 || max > 19 ? "klein" : "";
 }
 
+function coverHinweisPlan(f = {}) {
+  const p = f.coverHinweisPlan;
+  const text = String(f.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
+  if (!text || !p || typeof p !== "object" || Array.isArray(p)) return null;
+  const zahl = (x, fallback = 0) => Number.isFinite(Number(x)) ? Number(x) : fallback;
+  return {
+    text,
+    noteX: Math.max(-0.18, Math.min(1.18, zahl(p.noteX, 0.25))),
+    noteY: Math.max(-0.18, Math.min(1.18, zahl(p.noteY, 0.28))),
+    targetX: Math.max(0, Math.min(1, zahl(p.targetX, 0.5))),
+    targetY: Math.max(0, Math.min(1, zahl(p.targetY, 0.55))),
+    rotationDeg: Math.max(-12, Math.min(12, zahl(p.rotationDeg, -4))),
+    bend: Math.max(-1, Math.min(1, zahl(p.bend, 0.35))),
+  };
+}
+
+function coverHinweisHtml(f = {}) {
+  const p = coverHinweisPlan(f);
+  if (!p) return "";
+  return `<div class="cover-hinweis" data-note-x="${p.noteX}" data-note-y="${p.noteY}" data-target-x="${p.targetX}" data-target-y="${p.targetY}" data-rotation="${p.rotationDeg}" data-bend="${p.bend}">${esc(p.text)}</div><svg class="cover-hinweis-pfeil" viewBox="0 0 1080 1350" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="cover-arrow-head" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L11,6 L0,12" class="cover-hinweis-arrowhead"/></marker></defs><path class="cover-hinweis-kurve" d="" marker-end="url(#cover-arrow-head)"/></svg>`;
+}
+
 function titelBlock(titel, zeilen, ctx) {
   const klasse = titelKlasse(titel, zeilen);
   if ((ctx?.stil?.familie || ctx?.stil?.id) === "bunt") {
@@ -677,6 +704,7 @@ const FOLIEN = {
     ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
     ${!bunt && f.pille ? `<div><span class="pille">${esc(f.pille)}</span></div>` : ""}
     ${f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f)}
+    ${bunt && f.bild ? coverHinweisHtml(f) : ""}
     ${!f.bild && bunt ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
     ${fuss(ctx)}`;
   },
