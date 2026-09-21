@@ -40,6 +40,6 @@ test("Bild-Layout: Motive bleiben vollständig und Charaktere nutzen eine eigene
   assert.match(html, /\.foto img\{[^}]*object-fit:contain/);
   assert.doesNotMatch(html, /\.foto img\{[^}]*object-fit:cover/);
   assert.match(html, /\.frei\{[^}]*position:absolute[^}]*bottom:\d+px/);
-  assert.match(html, /\.frei\.charakter\{[^}]*bottom:\d+px[^}]*width:\d+px[^}]*height:\d+px/);
+  assert.match(html, /\.frei\.charakter\{[^}]*bottom:(?:0|\d+px)[^}]*width:\d+px[^}]*height:\d+px/);
   assert.match(html, /\.frei\.charakter img\{[^}]*object-position:center bottom/);
 });
