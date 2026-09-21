@@ -7025,12 +7025,14 @@ test("Coverfoto trägt auch als Rechteck ein thematisches Icon", async () => {
   }
 });
 
-test("Carousel-Cover erzwingt Foto-Look, Erklärbilder bleiben flach", () => {
+test("Carousel-Cover bleibt auf Folie 1 und Erklärbilder bleiben flach", () => {
   const q = fs.readFileSync(new URL("../src/bilder.mjs", import.meta.url), "utf8");
   assert.match(q, /const look = \(opt\.zweck \|\| "bild"\) === "erklaerbild" \? "flach" : "foto"/);
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
-  assert.match(autor, /NUR Folie 1 \(Cover\/Titelfolie\) bekommt ein Foto/);
+  assert.match(autor, /NUR Folie 1 \(Cover\/Titelfolie\) bekommt eine Charakter-Szene/);
   assert.match(autor, /Alle inneren Karussell-Slides bleiben reine Text-\/Strukturfolien/);
+  assert.match(autor, /coverCharaktere: PFLICHT/);
+  assert.match(autor, /coverText: optionaler DEUTSCHER Merksatz/);
 });
 
 
