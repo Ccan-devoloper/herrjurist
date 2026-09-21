@@ -249,12 +249,12 @@ export function buntCss(ctx) {
   const pfeil = `url("data:image/svg+xml,${PFEIL.replace("%23111", encodeURIComponent(p.dunkel))}")`;
   return `
 :root{--grund:${p.grund};--text:${p.dunkel};--text-weich:${p.weich || p.dunkel};--akzent:${p.dunkel};--pille:${p.dunkel};--pille-text:#fff;--flaeche:rgba(255,255,255,.92);--linie:rgba(255,255,255,.45);--hell:${p.hell};--lila:${p.lila};--akzent2:${p.akzent2}}
-.folie,.story,.reel{background:${p.grund};color:${p.dunkel}}
+.folie,.story,.reel{background:${p.grund};color:${p.dunkel}}\n/* Cover v2 nutzt die Breite wie die Golden References aggressiver als die Inhaltsfolien. */\n.art-titel{padding-left:52px;padding-right:52px}
 /* Auf weißen Flächen bleibt Nebentext dunkel - die helle Weichfarbe gilt
    nur direkt auf der Grundfarbe. */
 .text,ul.punkte li,ol.schritte li,.spalte,.rechnung,.cta .liste div,.story .karte,.story .optionen div,.story .norm,.merke,.reel .merkeblock .norm{--text-weich:${p.dunkel}}
 /* Ecke oben links: dunkles Band mit dem Fach; oben rechts der Zähler im weißen Kreis */
-.kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}
+.kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}\n/* Fachband auf Titelfolien buendig an die obere linke Bildkante ziehen. */\n.art-titel>.kopf{left:-52px;top:-72px;right:-52px}
 .kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1}
 .kopf .etikett .punkt{display:none}
 .kopf .zaehler{position:absolute;right:38px;top:30px;width:68px;height:68px;border-radius:50%;background:${p.dunkel};color:#fff;font-family:"Inter";font-weight:700;font-size:25px;display:flex;align-items:center;justify-content:center}
@@ -269,13 +269,13 @@ h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;b
 /* Titelfolie: echte Einzelpillen pro Sinneinheit. Weniger Innenabstand und
    nur 8 px Abstand zwischen den Zeilen erzeugen einen kompakten, auf dem
    Handy schnell scanbaren Titelblock. */
-.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:fit-content;max-width:100%;font-size:92px;line-height:1.01;letter-spacing:-.022em;text-wrap:initial}
-.art-titel h1.titel-stack.klein{font-size:84px}
-.art-titel h1.titel-stack.winzig{font-size:76px}
-.art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:928px;background:${p.dunkel};color:#fff;padding:11px 25px 13px;border-radius:28px;white-space:nowrap}
+.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:7px;width:fit-content;max-width:100%;font-size:104px;line-height:.99;letter-spacing:-.025em;text-wrap:initial}
+.art-titel h1.titel-stack.klein{font-size:94px}
+.art-titel h1.titel-stack.winzig{font-size:84px}
+.art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:976px;background:${p.dunkel};color:#fff;padding:12px 27px 14px;border-radius:30px;white-space:nowrap}
 .art-titel h1.titel-stack .titel-zeile em{color:${p.akzent2}}
 h1 em{color:${p.akzent2}}
-.cover-badge{margin-top:18px;margin-left:18px;width:fit-content;background:#fff0d6;color:${p.dunkel};padding:9px 24px 10px;border-radius:999px;font-family:"Inter";font-weight:700;font-size:29px;line-height:1.05;position:relative;z-index:4}
+.cover-badge{margin-top:15px;margin-left:10px;width:fit-content;background:#fff0d6;color:${p.dunkel};padding:10px 26px 11px;border-radius:999px;font-family:"Inter";font-weight:700;font-size:30px;line-height:1.05;position:relative;z-index:4}
 .unter{margin-top:22px;display:inline-block;width:fit-content;background:${p.hell};color:${p.dunkel};padding:12px 30px;border-radius:40px;font-weight:700;font-size:36px;line-height:1.25;margin-left:24px}
 .prio{margin-top:20px;margin-left:24px;width:fit-content;background:${p.lila};color:${p.dunkel};padding:10px 26px;border-radius:40px;text-transform:none;letter-spacing:0;font-size:28px}
 .prio i{display:none}
@@ -329,15 +329,15 @@ h1 em{color:${p.akzent2}}
    zwoelf verkettete drop-shadows brachten Chromium zum Stehen. Hier nur
    noch der weiche Schatten, der den Sticker von der Flaeche hebt. */
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
-.frei.charakter{right:0;bottom:8px;width:860px;height:720px}
+.frei.charakter{right:-6px;bottom:0;width:940px;height:800px}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
 .art-titel h1,.art-titel .kopf,.art-titel .prio{position:relative;z-index:3}
-.cover-hinweis{position:absolute;left:56px;bottom:245px;max-width:305px;z-index:4;font-family:"Caveat";font-size:49px;line-height:1.01;font-weight:700;color:${p.dunkel};transform:rotate(-4deg);text-wrap:balance}
-.cover-hinweis::before{content:"↘";display:block;font-size:72px;line-height:.7;margin-left:-12px;margin-bottom:8px;transform:rotate(10deg)}
+.cover-hinweis{position:absolute;left:52px;bottom:490px;max-width:325px;z-index:4;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};transform:rotate(-4deg);text-wrap:balance}
+.cover-hinweis::before{content:"";position:absolute;left:-6px;top:calc(100% + 6px);width:132px;height:96px;background:${pfeil} no-repeat center/contain;transform:rotate(10deg)}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
-.art-titel:has(.frei) .fuss{z-index:3}
+.art-titel:has(.frei) .fuss{position:absolute;left:52px;right:28px;bottom:24px;margin-top:0;z-index:3}
 .art-titel:has(.frei) .fuss .klausur{background:var(--hell);color:${p.dunkel};padding:7px 20px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1;background:rgba(255,255,255,.14);padding:18px;box-sizing:border-box}
 .foto img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:28px}
@@ -510,7 +510,7 @@ export function motivBuehne(breite, hoehe, ziel) {
    fast die ganze untere Haelfte: Sie sollen eine kleine Handlung tragen,
    nicht wie ein Sticker in der Ecke stehen. */
 export const BUEHNE_BEITRAG = { flaeche: 640 * 620 * 0.62, maxB: 820, maxH: 640 };
-export const BUEHNE_CHARAKTER = { flaeche: 1020 * 750 * 0.96, maxB: 1040, maxH: 760 };
+export const BUEHNE_CHARAKTER = { flaeche: 1040 * 820 * 0.98, maxB: 1060, maxH: 820 };
 export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.62, maxB: 920, maxH: 850 };
 
 function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {

@@ -27,7 +27,7 @@ Insbesondere darf aus diesen Referenzen **keine Regel wie „ZPO = FORM-7 + Flux
 
 ## Dateien
 
-`reference-images.zip` enthält zehn bewusst verkleinerte Repo-Kopien der freigegebenen Referenzcover. Die hochgeladenen Ausgangsbilder lagen bei 1122×1402 px; die Repo-Kopien sind nur für Layout-, QA- und Creative-Director-Vergleiche gedacht, damit das Repository nicht unnötig mit großen Binärdateien wächst.
+`reference-images.zip` enthält zehn bewusst verkleinerte Repo-Kopien der freigegebenen Referenzcover. Die hochgeladenen Ausgangsbilder lagen bei 1122×1402 px; das Archiv enthält bewusst kompakte Vorschaubilder als visuelle Anker für Layout, QA und Creative Direction. Es ist nicht für OCR oder Pixel-Matching gedacht und hält das Repository klein.
 
 Die zehn Motive sind:
 1. Strafrecht AT – Versuch / unmittelbares Ansetzen
@@ -44,3 +44,4 @@ Die zehn Motive sind:
 ## Verwendung
 
 Für visuelle QA und Renderer-Entwicklung dienen die Referenzen als **Qualitätsmaßstab**, nicht als Pixel- oder Szenen-Matching. Neue Cover sollen sich wie dieselbe Marke anfühlen, aber als neue Episode des Universums erkennbar bleiben.
+\n## Layout-Abnahme\n\nDie Referenzen priorisieren eine dichte mobile Komposition: Fachband bündig oben links, großer Titelblock mit wenig Leerraum, Badge unmittelbar darunter, Handschrift klar mit der Szene verbunden und eine große Charakterbühne, die bis in den mittleren Bildbereich reicht. Diese Geometrie wird im Renderer angenähert; die konkrete Szene bleibt Aufgabe der dynamischen Regie.\n

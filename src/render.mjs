@@ -125,7 +125,7 @@ function einpassen() {
      Zeichen neben dem Motiv (frei-zeichen) steht bewusst unterhalb der
      Textgrenze - wuerde es mitgezaehlt, schrumpfte der Titel 14 Runden lang
      bis auf die Untergrenze, obwohl er laengst passt. */
-  const ausser = (c) => ["geist", "illu", "foto", "frei", "frei-zeichen", "bildquelle", "fuss"].some((k) => c.classList.contains(k));
+  const ausser = (c) => ["geist", "illu", "foto", "frei", "frei-zeichen", "bildquelle", "cover-hinweis", "fuss"].some((k) => c.classList.contains(k));
   const passt = () => {
     const unten = Math.max(...textElemente.map((e) => e.getBoundingClientRect().bottom));
     const kinderUnten = Math.max(...[...wurzel.children].filter((c) => !ausser(c)).map((c) => c.getBoundingClientRect().bottom));
