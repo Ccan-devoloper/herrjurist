@@ -81,9 +81,9 @@ test("cover-quality-v2: strukturierte Cover-Regie darf Cast und Szene frei besti
   assert.match(prompt, /sealed case capsule/);
   assert.match(prompt, /Freigabe fehlt/);
   assert.match(prompt, /missing clearance tag/);
-  assert.match(prompt, /exactly ONE short handwritten editorial annotation/i);
-  assert.match(prompt, /one loose arrow/i);
-  assert.doesNotMatch(prompt, /Do NOT draw handwriting, arrows/i);
+  assert.match(prompt, /later renderer will add this exact handwritten cover note/i);
+  assert.match(prompt, /Do NOT draw the note, any arrow/i);
+  assert.doesNotMatch(prompt, /exactly ONE short handwritten editorial annotation/i);
   assert.doesNotMatch(prompt, /leftmost roughly 16 percent/i);
   assert.doesNotMatch(prompt, /three separate blank legal objects/);
 });
@@ -163,7 +163,8 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.match(cssText, /\.art-titel h1\.titel-stack \.titel-zeile\{[^}]*max-width:976px[^}]*padding:12px 27px 14px[^}]*border-radius:30px/);
   assert.match(cssText, /\.cover-badge\{[^}]*margin-top:15px[^}]*padding:10px 26px 11px[^}]*font-size:30px/);
   assert.match(cssText, /\.frei\.charakter\{right:-12px;bottom:-6px;width:1050px;height:980px\}/);
-  assert.doesNotMatch(cssText, /\.cover-hinweis\{/);
+  assert.match(cssText, /\.cover-hinweis\{[^}]*font-family:"Caveat"[^}]*font-size:52px/);
+  assert.match(cssText, /\.cover-hinweis-kurve\{[^}]*stroke-width:8/);
   assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
 
   const html = folieHtml({
@@ -172,11 +173,23 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
     titelZeilen: ["Zulässigkeit", "kommt vor", "Begründetheit"],
     coverBadge: "Klausurrelevant",
     coverText: "Reihenfolge merken",
+    coverHinweisPlan: {
+      noteX: 0.24, noteY: 0.22,
+      targetX: 0.62, targetY: 0.56,
+      rotationDeg: -5, bend: 0.4,
+    },
+    bild: "data:image/png;base64,AA==",
+    bildFrei: true,
+    bildTyp: "charakter",
+    bildBreite: 900,
+    bildHoehe: 700,
     icon: "dokument",
   }, ctx, 1, 6);
   assert.match(html, />1\/6</);
-  assert.doesNotMatch(html, /Reihenfolge merken/);
-  assert.doesNotMatch(html, /cover-hinweis/);
+  assert.match(html, /class="cover-hinweis"[^>]*data-note-x="0.24"/);
+  assert.match(html, />Reihenfolge merken<\/div>/);
+  assert.match(html, /class="cover-hinweis-pfeil"/);
+  assert.match(html, /class="cover-hinweis-kurve"/);
 });
 
 test("cover-quality-v2: vereinbarte Lernfamilienfarben sind permanent verdrahtet", () => {
