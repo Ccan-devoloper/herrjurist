@@ -422,9 +422,9 @@ em{color:${p.akzent2}}
 .story.cover h1.klein{font-size:122px}
 .story.cover h1.winzig{font-size:105px}
 .story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:40px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:fit-content;max-width:100%;font-size:122px;line-height:1.02;letter-spacing:-.018em}
-.story.cover h1.titel-stack.klein{font-size:108px}
-.story.cover h1.titel-stack.winzig{font-size:94px}
+.story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:fit-content;max-width:100%;font-size:115px;line-height:1.02;letter-spacing:-.018em}
+.story.cover h1.titel-stack.klein{font-size:104px}
+.story.cover h1.titel-stack.winzig{font-size:91px}
 .story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;background:${p.dunkel};color:#fff;padding:14px 34px 16px;border-radius:38px;white-space:nowrap}
 .story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
 /* Handschrift mit Pfeil, genau wie auf der Titelfolie. */
