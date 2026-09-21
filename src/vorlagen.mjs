@@ -300,7 +300,7 @@ h1 em{color:${p.akzent2}}
    Buendig am rechten Rand statt darueber hinaus: Solange die Motive als
    Briefmarke in der Ecke sassen, schnitt der Ueberstand nur Luft ab - jetzt
    wuerde er das Motiv selbst anschneiden. */
-.frei{position:absolute;right:36px;bottom:34px;width:640px;height:620px;z-index:1;pointer-events:none}
+.frei{position:absolute;right:28px;bottom:28px;width:760px;height:700px;z-index:1;pointer-events:none}
 /* Links neben dem Motiv, unterhalb der Pfeilzeile: Der Kasten des Motivs
    beginnt bei x = 440 px, die Pfeilzeile endet auch bei vier Titelzeilen
    oberhalb von y = 860 px - dazwischen ist die Flaeche frei. */
@@ -320,7 +320,11 @@ h1 em{color:${p.akzent2}}
    zwoelf verkettete drop-shadows brachten Chromium zum Stehen. Hier nur
    noch der weiche Schatten, der den Sticker von der Flaeche hebt. */
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
-.frei.charakter img{object-position:center bottom;filter:drop-shadow(0 22px 34px rgba(0,0,0,.24))}
+.frei.charakter{right:18px;bottom:22px}
+.frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
+.art-titel h1,.art-titel .kopf,.art-titel .pille,.art-titel .prio{position:relative;z-index:3}
+.cover-hinweis{position:absolute;left:74px;bottom:285px;max-width:340px;z-index:4;font-family:"Caveat";font-size:46px;line-height:1.02;font-weight:700;color:${p.dunkel};transform:rotate(-4deg);text-wrap:balance}
+.cover-hinweis::before{content:"↘";display:block;font-size:72px;line-height:.7;margin-left:-12px;margin-bottom:8px;transform:rotate(10deg)}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -492,8 +496,11 @@ export function motivBuehne(breite, hoehe, ziel) {
   return { breite: Math.round(b), hoehe: Math.round(h) };
 }
 
-/* Ziele je Format: Die Fläche entspricht etwa 60 % der alten festen Box. */
+/* Normale Freisteller bleiben kompakt. Charakter-Szenen bekommen dagegen
+   fast die ganze untere Haelfte: Sie sollen eine kleine Handlung tragen,
+   nicht wie ein Sticker in der Ecke stehen. */
 export const BUEHNE_BEITRAG = { flaeche: 640 * 620 * 0.62, maxB: 820, maxH: 640 };
+export const BUEHNE_CHARAKTER = { flaeche: 980 * 740 * 0.90, maxB: 1000, maxH: 760 };
 export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.62, maxB: 920, maxH: 850 };
 
 function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
@@ -506,9 +513,7 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
      ueberladen; Stock-/Fallbackmotive behalten das Icon wie bisher. */
   const icon = ICONS[folie.icon] ? folie.icon : "paragraf";
   const zeichen = istCharakter ? "" : farbIcon(icon, klasse.startsWith("frei") ? 240 : 180);
-  const charakterZiel = istCharakter
-    ? { flaeche: 760 * 650 * 0.72, maxB: 900, maxH: 690 }
-    : ziel;
+  const charakterZiel = istCharakter ? BUEHNE_CHARAKTER : ziel;
   const box = folie.bildFrei !== false ? motivBuehne(folie.bildBreite, folie.bildHoehe, charakterZiel) : null;
   const stil = box ? ` style="width:${box.breite}px;height:${box.hoehe}px"` : "";
   return `<div class="${klasse}"${stil}><img src="${esc(folie.bild)}" alt=""></div>${zeichen ? `<div class="frei-zeichen">${zeichen}</div>` : ""}`;
@@ -543,6 +548,7 @@ const FOLIEN = {
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
     ${f.prioritaet ? `<div class="prio ${f.prioritaet}"><i></i>${esc(f.prioritaetText || "")}</div>` : ""}
     <div><span class="pille">${esc((ctx.stil.familie || ctx.stil.id) === "bunt" ? (f.hinweis || "So geht's!") : (f.pille || "Swipen →"))}</span></div>
+    ${f.coverText ? `<div class="cover-hinweis">${esc(f.coverText)}</div>` : ""}
     ${f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f)}
     ${!f.bild && (ctx.stil.familie || ctx.stil.id) === "bunt" ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
     ${fuss(ctx)}`,
