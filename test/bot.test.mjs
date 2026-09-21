@@ -7034,6 +7034,43 @@ test("Carousel-Cover erzwingt Foto-Look, Erklärbilder bleiben flach", () => {
 });
 
 
+test("Charakter-Cover folgt strukturierter Regie statt fester Paarlogik", async () => {
+  const { charaktereFuer, charakterPrompt } = await import("../src/charakterbild.mjs");
+  const solo = charaktereFuer({ coverCharaktere: ["mara"], titel: "Blackout in der Klausur" });
+  assert.deepEqual(solo.map((x) => x.id), ["mara"]);
+
+  const trio = charaktereFuer({ coverCharaktere: ["zylla", "form7", "rex"], titel: "Mehrpersonenfall" });
+  assert.deepEqual(trio.map((x) => x.id), ["zylla", "form7", "rex"]);
+
+  const prompt = charakterPrompt({ coverCharaktere: ["mara"], bildSzene: "scout stops before deadline gate" }, solo);
+  assert.match(prompt, /one, two or three characters/i);
+  assert.match(prompt, /Use no prop when gesture alone explains the point/i);
+  assert.ok(!/one or two characters only/i.test(prompt), "alte starre Figurenanzahl ist noch im Prompt");
+});
+
+test("Charakter-Cover nutzt eine deutlich groessere Buehne und optionalen Merksatz", async () => {
+  const { BUEHNE_BEITRAG, BUEHNE_CHARAKTER, folieHtml } = await import("../src/vorlagen.mjs");
+  const { kontext } = await import("../src/render.mjs");
+  assert.ok(BUEHNE_CHARAKTER.flaeche > BUEHNE_BEITRAG.flaeche * 2, "Charakterbuehne ist noch zu klein");
+  assert.ok(BUEHNE_CHARAKTER.maxB >= 980);
+  const html = folieHtml({
+    art: "titel", titel: "Kündigung: Zugang prüfen", icon: "umschlag",
+    coverText: "Ohne Zugang keine Frist",
+    bild: "data:image/png;base64,AA==", bildFrei: true, bildTyp: "charakter",
+    bildBreite: 900, bildHoehe: 700,
+  }, kontext({ fach: null, klausur: 1 }), 1, 6);
+  assert.match(html, /cover-hinweis/);
+  assert.match(html, /Ohne Zugang keine Frist/);
+  assert.match(html, /frei charakter/);
+});
+
+test("Charakter-Stickerrand ist standardmaessig ausgeschaltet", () => {
+  const q = fs.readFileSync(new URL("../src/config.mjs", import.meta.url), "utf8");
+  assert.match(q, /IG_CHARAKTER_RAND", "false"/);
+  const ch = fs.readFileSync(new URL("../src/charakterbild.mjs", import.meta.url), "utf8");
+  assert.match(ch, /cfg\.randAktiv \? randFarbe : null/);
+});
+
 test("Charakterbildausfall darf keinen Carousel-Slot blockieren", () => {
   const q = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
   assert.match(q, /kein Charakter-Cover – Veröffentlichung mit Icon-Cover/);
