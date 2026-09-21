@@ -11,7 +11,9 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 import { CONFIG } from "./config.mjs";
+import { ffmpegPfad } from "./stimme.mjs";
 import { bildAufruf } from "./anbieter.mjs";
 import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
 
@@ -127,32 +129,69 @@ export function bildKostenUsd(antwort) {
   return Number(usd.toFixed(6));
 }
 
-async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimitMs }) {
-  const form = new FormData();
-  form.append("model", modell);
-  for (const c of chars) {
-    const datei = path.join(basis, c.datei);
-    const b64 = fs.readFileSync(datei, "utf8").trim();
-    const bytes = Buffer.from(b64, "base64");
-    form.append("image[]", new Blob([bytes], { type: "image/jpeg" }), c.datei.replace(/\.b64$/, ""));
-  }
-  form.append("prompt", prompt);
-  form.append("quality", quality);
-  form.append("size", size);
-  form.append("background", "transparent");
-  form.append("output_format", "png");
-  const steuerung = new AbortController();
-  const wecker = setTimeout(() => steuerung.abort(), zeitlimitMs);
+function referenzNormalisieren(char) {
+  const quelle = path.join(basis, char.datei);
+  const b64 = fs.readFileSync(quelle, "utf8").trim();
+  const roh = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}.jpg`);
+  const norm = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}-384.jpg`);
+  fs.writeFileSync(roh, Buffer.from(b64, "base64"));
   try {
-    const r = await fetch("https://api.openai.com/v1/images/edits", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${key}` },
-      body: form,
-      signal: steuerung.signal,
-    });
-    if (!r.ok) throw new Error(`OpenAI image edit ${r.status}: ${(await r.text().catch(() => "")).slice(0, 220)}`);
-    return await r.json();
-  } finally { clearTimeout(wecker); }
+    /* Die ersten Testreferenzen waren extrem kleine Thumbnails. GPT Image
+       lehnt solche Dateien als ungueltige Bildeingabe ab. Vor jedem Upload
+       werden sie daher in ein echtes 384x384-JPEG mit weissem Rand
+       normalisiert; der Charakter selbst wird dabei nicht veraendert. */
+    execFileSync(ffmpegPfad(), [
+      "-y", "-loglevel", "error", "-i", roh,
+      "-vf", "scale=336:336:force_original_aspect_ratio=decrease,pad=384:384:(ow-iw)/2:(oh-ih)/2:color=white",
+      "-frames:v", "1", "-q:v", "3", norm,
+    ]);
+    return norm;
+  } finally {
+    fs.rmSync(roh, { force: true });
+  }
+}
+
+const schlafen = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimitMs }) {
+  const refs = chars.map(referenzNormalisieren);
+  try {
+    for (let rateVersuch = 0; rateVersuch < 3; rateVersuch++) {
+      const form = new FormData();
+      form.append("model", modell);
+      refs.forEach((datei, i) => {
+        const bytes = fs.readFileSync(datei);
+        form.append("image[]", new Blob([bytes], { type: "image/jpeg" }), `${chars[i].id}.jpg`);
+      });
+      form.append("prompt", prompt);
+      form.append("quality", quality);
+      form.append("size", size);
+      form.append("background", "transparent");
+      form.append("output_format", "png");
+      const steuerung = new AbortController();
+      const wecker = setTimeout(() => steuerung.abort(), zeitlimitMs);
+      try {
+        const r = await fetch("https://api.openai.com/v1/images/edits", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${key}` },
+          body: form,
+          signal: steuerung.signal,
+        });
+        if (r.ok) return await r.json();
+        const body = (await r.text().catch(() => "")).slice(0, 500);
+        const fehler = new Error(`OpenAI image edit ${r.status}: ${body}`);
+        fehler.status = r.status;
+        if (r.status !== 429 || rateVersuch === 2) throw fehler;
+        const retry = Number(r.headers.get("retry-after") || 0);
+        const warten = Math.max(13000, Number.isFinite(retry) ? retry * 1000 : 0);
+        console.warn(`  ! GPT-Image-Ratenlimit; ${Math.ceil(warten / 1000)} s Pause, dann gleicher Versuch erneut.`);
+        await schlafen(warten);
+      } finally { clearTimeout(wecker); }
+    }
+    throw new Error("GPT-Image-Ratenlimit nach drei Versuchen");
+  } finally {
+    for (const p of refs) fs.rmSync(p, { force: true });
+  }
 }
 
 function dateiAusAntwort(daten) {
@@ -234,6 +273,10 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       return { ...fertig, charaktere: chars.map((c) => c.name), prompt, kostenUsd: kosten };
     } catch (e) {
       console.warn(`  ! Charakterbild Versuch ${i + 1} fehlgeschlagen: ${e.message.slice(0, 180)}`);
+      /* Ein 4xx-Eingabefehler wird durch hoehere Qualitaet nicht besser.
+         Nur ein inhaltlich/visuell misslungenes, aber technisch erzeugtes Bild
+         bekommt den teureren High-Retry. */
+      if (Number(e?.status) >= 400 && Number(e?.status) < 500 && Number(e?.status) !== 429) break;
     }
   }
   return null;
