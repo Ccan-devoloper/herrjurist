@@ -148,12 +148,15 @@ function coverHinweisPlatzieren() {
   ) + 24;
   const untereGrenze = (fuss?.getBoundingClientRect().top || root.bottom - 24) - 18;
 
-  const basisY = clamp(obereGrenze - root.top + 36, 520, 760);
+  const basisY = clamp(obereGrenze - root.top + 18, 455, 660);
+  const mitteX = clamp((root.width - 330) / 2, 270, 390);
   const zonen = {
-    "left-mid": { x: 50, y: basisY },
-    "left-low": { x: 54, y: clamp(untereGrenze - root.top - 270, basisY + 80, 900) },
-    "right-mid": { x: root.width - 365, y: basisY + 10 },
-    "right-low": { x: root.width - 365, y: clamp(untereGrenze - root.top - 270, basisY + 90, 900) },
+    "center-mid": { x: mitteX, y: basisY },
+    "center-low": { x: mitteX - 35, y: clamp(basisY + 95, 520, 760) },
+    "left-mid": { x: 52, y: basisY + 18 },
+    "left-low": { x: 54, y: clamp(untereGrenze - root.top - 270, basisY + 95, 850) },
+    "right-mid": { x: root.width - 365, y: basisY + 18 },
+    "right-low": { x: root.width - 365, y: clamp(untereGrenze - root.top - 270, basisY + 95, 850) },
   };
   const bevorzugt = String(hinweis.dataset.zone || "auto");
   const reihenfolge = Object.keys(zonen).sort((a, b) =>
@@ -196,7 +199,13 @@ function coverHinweisPlatzieren() {
           for (const p of motivPunkte) {
             if (p.x >= r.left - 8 && p.x <= r.right + 8 && p.y >= r.top - 8 && p.y <= r.bottom + 8) treffer++;
           }
-          score += treffer * 115;
+          score += treffer * 72;
+
+          /* Die Referenzen setzen die Handschrift oft in die lebendige Luecke
+             zwischen Titel und Szene. Das ist fuer auto nur ein Bonus, keine
+             feste Position. */
+          if (bevorzugt === "auto" && zone === "center-mid") score -= 680;
+          if (bevorzugt === "auto" && zone === "center-low") score -= 320;
 
           /* Regie-Zone ist nur Praeferenz, kein Befehl. */
           if (bevorzugt !== "auto" && zone !== bevorzugt) score += 520;
@@ -230,7 +239,17 @@ function coverHinweisPlatzieren() {
   const mitte = { x: (r.left + r.right) / 2, y: (r.top + r.bottom) / 2 };
   let ziel = null;
   let dist = Infinity;
-  for (const p of motivPunkte) {
+  const innen = (p) => {
+    if (best.zone.startsWith("left") || best.zone.startsWith("center")) {
+      return p.x > r.right + 20 && p.y > r.bottom + 55;
+    }
+    if (best.zone.startsWith("right")) {
+      return p.x < r.left - 20 && p.y > r.bottom + 55;
+    }
+    return true;
+  };
+  const kandidaten = motivPunkte.filter(innen);
+  for (const p of (kandidaten.length ? kandidaten : motivPunkte)) {
     /* Pfeilziel nicht unter die Schrift legen. */
     if (p.x >= r.left - 18 && p.x <= r.right + 18 && p.y >= r.top - 18 && p.y <= r.bottom + 18) continue;
     const d = abstand2(mitte, p);

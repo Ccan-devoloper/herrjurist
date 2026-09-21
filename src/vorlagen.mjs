@@ -273,7 +273,7 @@ h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;b
 /* Titelfolie: echte Einzelpillen pro Sinneinheit. Weniger Innenabstand und
    nur 8 px Abstand zwischen den Zeilen erzeugen einen kompakten, auf dem
    Handy schnell scanbaren Titelblock. */
-.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:7px;width:fit-content;max-width:100%;font-size:104px;line-height:.99;letter-spacing:-.025em;text-wrap:initial}
+.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:7px;width:fit-content;max-width:100%;margin-top:10px;font-size:104px;line-height:.99;letter-spacing:-.025em;text-wrap:initial}
 .art-titel h1.titel-stack.klein{font-size:94px}
 .art-titel h1.titel-stack.winzig{font-size:84px}
 .art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:976px;background:${p.dunkel};color:#fff;padding:12px 27px 14px;border-radius:30px;white-space:nowrap}
@@ -333,7 +333,7 @@ h1 em{color:${p.akzent2}}
    zwoelf verkettete drop-shadows brachten Chromium zum Stehen. Hier nur
    noch der weiche Schatten, der den Sticker von der Flaeche hebt. */
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
-.frei.charakter{right:-6px;bottom:0;width:940px;height:800px}
+.frei.charakter{right:-12px;bottom:-6px;width:1050px;height:980px}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
 .art-titel h1,.art-titel .kopf,.art-titel .prio{position:relative;z-index:3}
 /* Handschrift und Pfeil sind ein separates Overlay. Die Position hier ist
@@ -517,7 +517,7 @@ export function motivBuehne(breite, hoehe, ziel) {
    fast die ganze untere Haelfte: Sie sollen eine kleine Handlung tragen,
    nicht wie ein Sticker in der Ecke stehen. */
 export const BUEHNE_BEITRAG = { flaeche: 640 * 620 * 0.62, maxB: 820, maxH: 640 };
-export const BUEHNE_CHARAKTER = { flaeche: 1040 * 820 * 0.98, maxB: 1060, maxH: 820 };
+export const BUEHNE_CHARAKTER = { flaeche: 1080 * 960 * 0.98, maxB: 1100, maxH: 1000 };
 export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.62, maxB: 920, maxH: 850 };
 
 function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {

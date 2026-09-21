@@ -149,14 +149,15 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.equal(archiv[0], 0x50, "ZIP-Signatur P fehlt");
   assert.equal(archiv[1], 0x4b, "ZIP-Signatur K fehlt");
 
-  assert.deepEqual(BUEHNE_CHARAKTER, { flaeche: 1040 * 820 * 0.98, maxB: 1060, maxH: 820 });
+  assert.deepEqual(BUEHNE_CHARAKTER, { flaeche: 1080 * 960 * 0.98, maxB: 1100, maxH: 1000 });
 
   const ctx = kontext({ fach: "zpo", klausur: 1, fachLabel: "ZPO" });
   const cssText = buntCss(ctx);
   assert.match(cssText, /\.art-titel\{padding-left:52px;padding-right:52px\}/);
   assert.match(cssText, /\.art-titel>\.kopf\{left:-52px;top:-72px;right:-52px\}/);
   assert.match(cssText, /font-size:104px/);
-  assert.match(cssText, /\.frei\.charakter\{right:-6px;bottom:0;width:940px;height:800px\}/);
+  assert.match(cssText, /\.frei\.charakter\{right:-12px;bottom:-6px;width:1050px;height:980px\}/);
+  assert.match(cssText, /\.art-titel h1\.titel-stack\{[^}]*margin-top:10px/);
   assert.match(cssText, /\.cover-hinweis\{[^}]*z-index:6/);
   assert.match(cssText, /\.cover-hinweis-pfeil\{/);
   assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
