@@ -186,10 +186,10 @@ function handlungFuer(ziel, chars) {
       "{A} studies one displayed product behind a small glass showcase while holding a blank contract folder closed."
     );
   }
-  if (/zpo|zivilprozess|zwangsvoll|vollstreckungsklausel|zuläss|zulaess|begründet|begruendet/i.test(text)) {
+  if (/zpo|zivilprozess|zwangsvoll|vollstreckungsklausel|klauselrechtsbehelf|zuläss|zulaess|begründet|begruendet/i.test(text)) {
     return duo(
-      "{A} sorts two clearly separate blank case-file stacks in the correct order while {B} points first to the left stack and only then to the right stack.",
-      "{A} sorts two clearly separate blank case-file stacks in a strict first-then-second order."
+      "{A} physically moves three separate blank legal objects from left to right through a single obvious process: first a sealed document, then a second blank file marked only with one abstract check mark, then a final remedy folder. Three large unlabeled arrow shapes connect object 1 to object 2 to object 3. {B} stands beside the chain and points forward toward the NEXT object only. The three objects must be visibly different, spatially separated and ordered left-to-right; do not show two ambiguous piles or a static comparison.",
+      "{A} physically moves three separate blank legal objects through one obvious left-to-right three-step chain, connected by large unlabeled arrows."
     );
   }
   if (/vollzieh|aufschieb|80\s*(abs|ii|2|5)|vwgo|bescheid/i.test(text)) {
