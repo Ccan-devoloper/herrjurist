@@ -20,6 +20,7 @@ import path from "node:path";
 import os from "node:os";
 import { CONFIG } from "./config.mjs";
 import { bildKiAktiv, motivZeichnen, motivHervorholen } from "./bildki.mjs";
+import { charakterBildAktiv, charakterMotivZeichnen } from "./charakterbild.mjs";
 import { archivLaden, passendesMotiv, motivAblegen, verwendungVermerken } from "./motivarchiv.mjs";
 import { freistellen } from "./freistellen.mjs";
 
@@ -191,6 +192,31 @@ async function kostenlosesCoverFoto(szenen, ablage, opt = {}) {
 }
 export async function titelbild(beitrag, ablage = null, opt = {}) {
   if (!CONFIG.bilder.aktiv) return null;
+
+  /* Neuer Markenpfad: Fuer Feed-Cover und Erklaer-Reels wird zuerst eine
+     frische Szene mit den festen Herr-Jurist-Charakteren erzeugt. Anders als
+     das alte Motivarchiv wird das fertige Bild NICHT wiederverwendet; nur die
+     sechs Referenzfiguren sind konstant. Scheitern beide Qualitaetsversuche,
+     bleibt bewusst das bestehende Icon-Layout statt auf Stockfotos
+     zurueckzufallen. */
+  if (charakterBildAktiv() && opt.charaktere !== false) {
+    const motiv = await charakterMotivZeichnen(beitrag, {
+      randFarbe: opt.randFarbe || null,
+      zweck: opt.zweck || "bild",
+      slot: opt.slot || beitrag?.slug || beitrag?.themaId || null,
+    });
+    if (!motiv) return null;
+    const bild = `data:image/png;base64,${fs.readFileSync(motiv.pfad).toString("base64")}`;
+    fs.rmSync(motiv.pfad, { force: true });
+    if (motiv.ohneRand) fs.rmSync(motiv.ohneRand, { force: true });
+    return {
+      bild, quelle: null, seite: null, frei: true,
+      breite: motiv.breite, hoehe: motiv.hoehe,
+      typ: "charakter", charaktere: motiv.charaktere || [], prompt: motiv.prompt || null,
+      kostenUsd: motiv.kostenUsd ?? null,
+    };
+  }
+
   /* Zwei Szenen vom Autor: Liefert die erste nichts Brauchbares, die zweite. */
   const fallback = fallbackBildSzene(beitrag);
   const szenen = [beitrag?.bildSzene || beitrag?.folien?.[0]?.bildSzene || fallback, beitrag?.bildSzeneAlt || beitrag?.folien?.[0]?.bildSzeneAlt].filter(Boolean);
