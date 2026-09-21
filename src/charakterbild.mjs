@@ -296,11 +296,6 @@ function coverTextAus(ziel = {}) {
   return String(ziel.coverText || titelFolie.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
 }
 
-function coverTextAus(ziel = {}) {
-  const titelFolie = ziel?.folien?.find?.((f) => f.art === "titel") || {};
-  return String(ziel.coverText || titelFolie.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
-}
-
 function hinweisBildRegie(ziel = {}) {
   const regie = coverRegieAus(ziel);
   const text = coverTextAus(ziel);
