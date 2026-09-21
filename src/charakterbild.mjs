@@ -20,28 +20,28 @@ const basis = path.resolve(hier, "../assets/charaktere");
 
 export const CHARAKTERE = Object.freeze({
   rex: {
-    id: "rex", name: "Rex Rohrbruch", datei: "rex-rohrbruch.jpg",
-    kurz: "grey long-faced portal mechanic in a patched blue work suit, brown cap and heavy boots",
+    id: "rex", name: "Rex Rohrbruch", datei: "rex-rohrbruch.jpg.b64",
+    kurz: "lanky light-skinned anxious male portal mechanic with messy brown hair, patched blue-grey work suit, brown boots, tool backpack and traces of green portal fluid",
   },
   zylla: {
-    id: "zylla", name: "Zylla Glitch", datei: "zylla-glitch.jpg",
-    kurz: "purple-skinned alien woman with a huge magenta ponytail, black sleeveless top, ripped blue jeans and white boots",
+    id: "zylla", name: "Zylla Glitch", datei: "zylla-glitch.jpg.b64",
+    kurz: "slim green-skinned alien woman with magenta swept hair, two antennae, oversized lavender iridescent jacket, black top, black skinny trousers and pink-white sneakers",
   },
   form7: {
-    id: "form7", name: "FORM-7", datei: "form-7.jpg",
-    kurz: "small blue-grey inspection drone with a rounded square body, one cyan eye, thin mechanical arms and a black cap",
+    id: "form7", name: "FORM-7", datei: "form-7.jpg.b64",
+    kurz: "floating pale-blue round-headed bureaucratic drone with sleepy half-lidded eyes, dark side panels, a small gold antenna-crown, white-gold uniform torso, clipboard and tiny side pods",
   },
   brakk: {
-    id: "brakk", name: "Brakk Quarzfaust", datei: "brakk-quarzfaust.jpg",
-    kurz: "tall muscular red-orange alien with yellow crystal growths on head and shoulders, grey work trousers",
+    id: "brakk", name: "Brakk Quarzfaust", datei: "brakk-quarzfaust.jpg.b64",
+    kurz: "very muscular tan miner with a square jaw, purple-blue crystal growths on shoulders and head, miner headlamp, brown bib overalls, heavy grey boots and gloves",
   },
   flux: {
-    id: "flux", name: "Prof. Wurmfried Flux", datei: "prof-wurmfried-flux.jpg",
-    kurz: "elderly pale-blue scientist with mint-green hair, drooping moustache, white lab coat and black tie",
+    id: "flux", name: "Prof. Wurmfried Flux", datei: "prof-wurmfried-flux.jpg.b64",
+    kurz: "tall pink segmented worm-like professor with large round glasses, sparse hair, cheerful face, white-gold academic tunic, pointer and round hover base",
   },
   mara: {
-    id: "mara", name: "Mara Sternpfad", datei: "mara-sternpfad.jpg",
-    kurz: "older dark-skinned woman with a huge dark-blue afro, round glasses, blue scarf and field jacket",
+    id: "mara", name: "Mara Sternpfad", datei: "mara-sternpfad.jpg.b64",
+    kurz: "older light-skinned woman with grey hair in a messy bun, yellow cap, cigarette, orange vest over black top, olive cargo trousers and a large green expedition backpack with antenna dish and many pouches",
   },
 });
 
@@ -132,8 +132,9 @@ async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimit
   form.append("model", modell);
   for (const c of chars) {
     const datei = path.join(basis, c.datei);
-    const bytes = fs.readFileSync(datei);
-    form.append("image[]", new Blob([bytes], { type: "image/jpeg" }), c.datei);
+    const b64 = fs.readFileSync(datei, "utf8").trim();
+    const bytes = Buffer.from(b64, "base64");
+    form.append("image[]", new Blob([bytes], { type: "image/jpeg" }), c.datei.replace(/\.b64$/, ""));
   }
   form.append("prompt", prompt);
   form.append("quality", quality);
