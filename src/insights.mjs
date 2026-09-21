@@ -494,7 +494,11 @@ export function hookTyp(titel = "") {
     .replace(/Art\.\s*\d+[a-z]?(?:\s*Abs\.\s*\d+)?/gi, "");
   if (/Fehler|Falle|falsch|übersehen|vergessen|kostet/i.test(text)) return "fehler";
   if (/\?$/.test(text)) return "frage";
-  if (/\d/.test(ohneNormen) && /%|€|Tage|Jahre|Prozent|\d{2,}/.test(ohneNormen)) return "zahl";
+  if (
+    /\d/.test(ohneNormen)
+    && (/%|€|Tage|Jahre|Prozent|\d{2,}/i.test(ohneNormen)
+      || /\b\d+\s+(?:themen|schritte|fehler|regeln|gründe|punkte|fragen|fälle)\b/i.test(ohneNormen))
+  ) return "zahl";
   return "aussage";
 }
 
