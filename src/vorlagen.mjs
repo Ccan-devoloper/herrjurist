@@ -249,12 +249,16 @@ export function buntCss(ctx) {
   const pfeil = `url("data:image/svg+xml,${PFEIL.replace("%23111", encodeURIComponent(p.dunkel))}")`;
   return `
 :root{--grund:${p.grund};--text:${p.dunkel};--text-weich:${p.weich || p.dunkel};--akzent:${p.dunkel};--pille:${p.dunkel};--pille-text:#fff;--flaeche:rgba(255,255,255,.92);--linie:rgba(255,255,255,.45);--hell:${p.hell};--lila:${p.lila};--akzent2:${p.akzent2}}
-.folie,.story,.reel{background:${p.grund};color:${p.dunkel}}\n/* Cover v2 nutzt die Breite wie die Golden References aggressiver als die Inhaltsfolien. */\n.art-titel{padding-left:52px;padding-right:52px}
+.folie,.story,.reel{background:${p.grund};color:${p.dunkel}}
+/* Cover v2 nutzt die Breite wie die Golden References aggressiver als die Inhaltsfolien. */
+.art-titel{padding-left:52px;padding-right:52px}
 /* Auf weißen Flächen bleibt Nebentext dunkel - die helle Weichfarbe gilt
    nur direkt auf der Grundfarbe. */
 .text,ul.punkte li,ol.schritte li,.spalte,.rechnung,.cta .liste div,.story .karte,.story .optionen div,.story .norm,.merke,.reel .merkeblock .norm{--text-weich:${p.dunkel}}
 /* Ecke oben links: dunkles Band mit dem Fach; oben rechts der Zähler im weißen Kreis */
-.kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}\n/* Fachband auf Titelfolien buendig an die obere linke Bildkante ziehen. */\n.art-titel>.kopf{left:-52px;top:-72px;right:-52px}
+.kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}
+/* Fachband auf Titelfolien buendig an die obere linke Bildkante ziehen. */
+.art-titel>.kopf{left:-52px;top:-72px;right:-52px}
 .kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1}
 .kopf .etikett .punkt{display:none}
 .kopf .zaehler{position:absolute;right:38px;top:30px;width:68px;height:68px;border-radius:50%;background:${p.dunkel};color:#fff;font-family:"Inter";font-weight:700;font-size:25px;display:flex;align-items:center;justify-content:center}

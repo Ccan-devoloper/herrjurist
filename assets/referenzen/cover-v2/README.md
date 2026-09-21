@@ -44,4 +44,7 @@ Die zehn Motive sind:
 ## Verwendung
 
 Für visuelle QA und Renderer-Entwicklung dienen die Referenzen als **Qualitätsmaßstab**, nicht als Pixel- oder Szenen-Matching. Neue Cover sollen sich wie dieselbe Marke anfühlen, aber als neue Episode des Universums erkennbar bleiben.
-\n## Layout-Abnahme\n\nDie Referenzen priorisieren eine dichte mobile Komposition: Fachband bündig oben links, großer Titelblock mit wenig Leerraum, Badge unmittelbar darunter, Handschrift klar mit der Szene verbunden und eine große Charakterbühne, die bis in den mittleren Bildbereich reicht. Diese Geometrie wird im Renderer angenähert; die konkrete Szene bleibt Aufgabe der dynamischen Regie.\n
+
+## Layout-Abnahme
+
+Die Referenzen priorisieren eine dichte mobile Komposition: Fachband bündig oben links, großer Titelblock mit wenig Leerraum, Badge unmittelbar darunter, Handschrift klar mit der Szene verbunden und eine große Charakterbühne, die bis in den mittleren Bildbereich reicht. Diese Geometrie wird im Renderer angenähert; die konkrete Szene bleibt Aufgabe der dynamischen Regie.
