@@ -296,19 +296,22 @@ function coverTextAus(ziel = {}) {
   return String(ziel.coverText || titelFolie.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
 }
 
+function coverTextAus(ziel = {}) {
+  const titelFolie = ziel?.folien?.find?.((f) => f.art === "titel") || {};
+  return String(ziel.coverText || titelFolie.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
+}
+
 function hinweisBildRegie(ziel = {}) {
   const regie = coverRegieAus(ziel);
   const text = coverTextAus(ziel);
-  if (!text) return "Do not add a handwritten annotation or arrow to this vignette.";
+  if (!text) return "No handwritten cover annotation is needed. Do not draw arrows or readable text.";
   const kreativeRegie = regie?.hinweisRegie
-    || "Use a natural pocket of negative space close to the action and point the arrow toward the most relevant legal prop.";
+    || "Use a natural pocket of negative space close to the action; the later arrow should be able to point clearly toward the most relevant legal prop.";
   return [
-    `Add exactly ONE short handwritten editorial annotation as part of the transparent vignette. Its readable text must be EXACTLY: <<<${text}>>>.`,
-    `Creative annotation direction: ${kreativeRegie}`,
-    "You decide the annotation's exact position, angle, arrow curvature and visual rhythm from the actual scene. Keep it organic, like a hand-drawn editorial note in the golden references.",
-    "The note and arrow may overlap empty transparent space or minor background edges, but must not cover faces, hands, the central legal prop, or the fixed title/badge area above the vignette.",
-    "Keep the annotation visually close enough to the characters/prop that the cropped transparent motif remains compact and the characters stay large in the final cover.",
-    "The annotation above is the ONLY readable text permitted inside the generated image.",
+    `A later renderer will add this exact handwritten cover note: <<<${text}>>>. Do NOT draw the note, any arrow, or any readable text yourself.`,
+    `Editorial annotation intent: ${kreativeRegie}`,
+    "Compose the characters and props so that this later annotation can sit naturally near the action in an organic pocket of negative space.",
+    "Do not reserve a fixed left/right strip and do not weaken the legal scene just to make space. The visual QA will inspect the actual finished vignette and choose the final note position and arrow target.",
   ].join(" ");
 }
 
@@ -335,7 +338,7 @@ export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrekt
     "Characters must interact rather than pose independently. Every selected character needs a clear job in the scene. Use only props that make the legal point instantly understandable; omit props that do not help.",
     "Show complete readable anatomy: full heads and faces, all essential hands/fingers, feet or hover bases, and every important prop. No fused hands, spare limbs, duplicated body parts, cropped heads or accidental amputations.",
     "Polished premium cartoon finish matching the references: confident clean ink outlines, controlled cel shading, subtle material highlights and texture, expressive faces, precise accessories, clean edges and consistent proportions. Do NOT simplify into flat clip-art and do NOT switch to 3D, photorealism, watercolor or sketch style.",
-    "Outside the one exact handwritten cover annotation specified above, absolutely no explanatory prose, letters, numbers, law citations, labels, logos, signatures or gibberish may appear. Papers, screens, folders and signs must otherwise be blank or contain only simple abstract shapes/check marks.",
+    "Absolutely no readable text, handwriting, arrows, explanatory prose, letters, numbers, law citations, labels, logos, signatures or gibberish may appear in the generated illustration. Papers, screens, folders and signs must be blank or contain only simple abstract shapes/check marks. The renderer adds the cover annotation later.",
     "Transparent background only. No room, landscape, wall, decorative frame or colored sticker outline. A soft ground shadow directly under the selected characters or main prop is allowed.",
     "Fill the transparent image confidently: the complete vignette should occupy about 88 to 94 percent of the usable width or height while retaining a small clean safety margin around every body part and prop.",
   ].filter(Boolean).join(" ");
@@ -470,14 +473,26 @@ const BILD_QA_SCHEMA = {
     cropOk: { type: "boolean" },
     styleOk: { type: "boolean" },
     sceneOk: { type: "boolean" },
-    annotationOk: { type: "boolean" },
     textArtifacts: { type: "boolean" },
+    annotationPlan: {
+      type: ["object", "null"],
+      additionalProperties: false,
+      properties: {
+        noteX: { type: "number" },
+        noteY: { type: "number" },
+        targetX: { type: "number" },
+        targetY: { type: "number" },
+        rotationDeg: { type: "number" },
+        bend: { type: "number" },
+      },
+      required: ["noteX", "noteY", "targetX", "targetY", "rotationDeg", "bend"],
+    },
     issues: { type: "array", items: { type: "string" } },
     retryHint: { type: "string" },
   },
   required: [
     "ok", "identityOk", "extraCharacters", "duplicateCharacters",
-    "anatomyOk", "cropOk", "styleOk", "sceneOk", "annotationOk", "textArtifacts",
+    "anatomyOk", "cropOk", "styleOk", "sceneOk", "textArtifacts", "annotationPlan",
     "issues", "retryHint",
   ],
 };
@@ -510,10 +525,12 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
           "Compare identity carefully: head/face shape, body proportions, skin/material colour, outfit, signature accessories and silhouette must remain recognisably the same as the references.",
           "Reject severe anatomy defects, fused/extra limbs or hands, missing essential body parts, cropped heads/feet/hover bases, accidental amputations, or important props cut off.",
           "Reject a flat generic clip-art look if it loses the polished inked editorial-cartoon finish of the references.",
-          `The candidate MUST contain exactly one handwritten cover annotation with this exact readable text: <<<${coverTextAus(ziel)}>>>. If that text is missing, misspelled, duplicated or materially altered, set annotationOk=false.`,
-          `Annotation/arrow creative direction: ${coverRegieAus(ziel)?.hinweisRegie || "place it naturally in free space and point to the legally relevant scene element"}`,
-          "The handwritten note and its loose arrow should feel organically composed with the scene and must not cover faces, important hands or the central legal prop.",
-          "Any OTHER readable text, letters, numbers, citations, logos or gibberish are textArtifacts and must be rejected. Abstract check marks and simple unlabeled shapes are allowed.",
+          "Reject ANY generated readable text, handwriting, arrows, letters, numbers, citations, logos or gibberish. The renderer adds the handwritten note later. Abstract check marks and simple unlabeled shapes are allowed.",
+          `The later renderer must write this exact cover note: <<<${coverTextAus(ziel)}>>>.`,
+          `Editorial annotation intent from the human/authoring step: ${coverRegieAus(ziel)?.hinweisRegie || "place it naturally in free space and point to the legally relevant scene element"}`,
+          "If a cover note is present, plan its final placement from the ACTUAL candidate image now. annotationPlan coordinates are relative to Image 1 after cropping: (0,0)=top-left and (1,1)=bottom-right. noteX/noteY are the CENTER of the later handwritten note; they may range roughly from -0.15 to 1.15 when the best pocket sits just outside the opaque motif. targetX/targetY must point to the concrete legally relevant character/prop and should normally stay within 0..1. rotationDeg should stay subtle, usually -10..10. bend controls the curved arrow from -1 to 1.",
+          "Choose annotationPlan so the exact note can occupy genuine negative space, stay visually close to the action, and avoid faces, important hands and the central legal prop. The arrow must unambiguously point to the intended legal element. Do not force a fixed left/right formula.",
+          "If no cover note is requested, return annotationPlan=null.",
           "The scene must communicate the requested legal idea at a glance and the selected characters must interact coherently.",
           `Legal scene context: ${themenKontext(ziel)}`,
           `Creative direction used for generation: ${handlungFuer(ziel, chars)}`,
@@ -560,6 +577,18 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
     });
     const roh = responsesText(antwort);
     const daten = JSON.parse(roh.slice(roh.indexOf("{"), roh.lastIndexOf("}") + 1));
+    const p = daten?.annotationPlan;
+    const zahl = (x, fallback = 0) => Number.isFinite(Number(x)) ? Number(x) : fallback;
+    const annotationPlan = p && typeof p === "object"
+      ? {
+          noteX: Math.max(-0.18, Math.min(1.18, zahl(p.noteX, 0.25))),
+          noteY: Math.max(-0.18, Math.min(1.18, zahl(p.noteY, 0.28))),
+          targetX: Math.max(0, Math.min(1, zahl(p.targetX, 0.5))),
+          targetY: Math.max(0, Math.min(1, zahl(p.targetY, 0.55))),
+          rotationDeg: Math.max(-12, Math.min(12, zahl(p.rotationDeg, -4))),
+          bend: Math.max(-1, Math.min(1, zahl(p.bend, 0.35))),
+        }
+      : null;
     const logischOk = daten?.identityOk
       && !daten?.extraCharacters
       && !daten?.duplicateCharacters
@@ -567,9 +596,8 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
       && daten?.cropOk
       && daten?.styleOk
       && daten?.sceneOk
-      && daten?.annotationOk
       && !daten?.textArtifacts;
-    return { ...daten, ok: Boolean(daten?.ok && logischOk) };
+    return { ...daten, annotationPlan, ok: Boolean(daten?.ok && logischOk) };
   } catch (e) {
     /* Quality first: Wenn die zweite Schranke nicht pruefen kann, wird das
        Bild nicht still als "gut genug" durchgereicht. Der Renderer faellt
@@ -579,7 +607,8 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
       ok: false,
       unavailable: true,
       issues: [`visuelle QA nicht verfuegbar: ${String(e?.message || e).slice(0, 160)}`],
-      retryHint: `Preserve the exact selected identities, include no extra characters, redraw with clean anatomy, and render the handwritten annotation exactly as: ${coverTextAus(ziel)}.`,
+      annotationPlan: null,
+      retryHint: "Preserve the exact selected identities, include no extra characters, keep the image free of all readable text/arrows, and redraw with clean anatomy and full uncropped bodies.",
     };
   } finally {
     for (const p of refs) fs.rmSync(p, { force: true });
@@ -691,6 +720,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         attempt: i + 1,
         qaFirstPass: i === 0,
         qaAttempts: qaVersuche,
+        annotationPlan: visuell.annotationPlan || null,
         qa: visuell,
       };
     } catch (e) {
