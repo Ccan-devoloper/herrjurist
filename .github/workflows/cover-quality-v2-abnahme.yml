@@ -49,6 +49,7 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      # Several regression tests synthesize fixtures with ffmpeg.
       - name: Install test media dependency
         run: |
           sudo apt-get update
