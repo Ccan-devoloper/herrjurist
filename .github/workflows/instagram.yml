@@ -176,6 +176,11 @@ jobs:
           IG_BREAK_GLASS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_usd != '' && github.event.inputs.break_glass_grund != '' }}
           IG_BREAK_GLASS_USD: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_usd || '' }}
           IG_BREAK_GLASS_GRUND: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.break_glass_grund || '' }}
+          # Temporäre 24h-Kostenmessung: 1 EUR entspricht beim Aktivieren
+          # 1.14847 USD. Die Policy-Funktion prüft den festen Ablaufzeitpunkt
+          # selbst; danach gilt automatisch wieder der Regeldeckel.
+          IG_KOSTENMESSUNG_CORE_USD: "1.14847"
+          IG_KOSTENMESSUNG_BIS: "2026-09-22T02:06:26.000Z"
           IG_KI_MODELL_PRUEFUNG: ${{ vars.IG_KI_MODELL_PRUEFUNG }}
           IG_KI_VERSUCHE: ${{ vars.IG_KI_VERSUCHE }}
           IG_STIMME: ${{ vars.IG_STIMME }}
