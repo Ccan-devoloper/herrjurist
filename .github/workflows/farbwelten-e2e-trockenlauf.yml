@@ -1,0 +1,108 @@
+name: Farbwelten · echter E2E-Trockenlauf
+
+on:
+  push:
+    branches:
+      - dryrun/farbwelten-e2e-20260921
+    paths:
+      - ".github/workflows/farbwelten-e2e-trockenlauf.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  trockenlauf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Asset-Zweig für gelernte Strategie holen
+        run: git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Abhängigkeiten
+        run: npm ci
+
+      - name: Chromium installieren
+        run: |
+          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list || true
+          npx playwright install --with-deps chromium || npx playwright install chromium
+
+      - name: Freisteller und ffmpeg installieren
+        run: |
+          pip install --quiet "rembg[cli]" onnxruntime pillow
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+
+      - name: Zehn echte Provider-Trockenläufe erzeugen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+          IG_STIL: "bunt"
+          IG_FARBTEST: "true"
+          IG_CHARAKTERE: "true"
+          IG_CHARAKTER_RAND: "false"
+          IG_BILDER: "true"
+          IG_BILD_KI: "true"
+          IG_TOKEN_ZAEHLEN: "true"
+          IG_DRY_RUN: "true"
+          IG_NO_PUSH: "true"
+          IG_ABLEGEN: "0"
+        run: node bin/farbwelten-e2e-trockenlauf.mjs
+
+      - name: Kontaktbogen bauen
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+          root=Path("out/farbwelten-e2e")
+          mf=root/"manifest.json"
+          if not mf.exists():
+              print("Kein Manifest, Kontaktbogen entfällt.")
+              raise SystemExit(0)
+          data=json.loads(mf.read_text())
+          covers=[]
+          for x in data.get("manifest",[]):
+              if not x.get("ok") or not x.get("cover"): continue
+              p=root/x["cover"]
+              if p.exists(): covers.append((x,p))
+          if not covers:
+              print("Keine Cover gefunden.")
+              raise SystemExit(0)
+          tw,th=324,432
+          gap=24
+          cols=2
+          rows=(len(covers)+cols-1)//cols
+          sheet=Image.new("RGB",(cols*tw+(cols+1)*gap,rows*(th+52)+(rows+1)*gap),"white")
+          draw=ImageDraw.Draw(sheet)
+          try: font=ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",18)
+          except: font=ImageFont.load_default()
+          for i,(x,p) in enumerate(covers):
+              im=Image.open(p).convert("RGB")
+              im.thumbnail((tw,th))
+              cx=gap+(i%cols)*(tw+gap)
+              cy=gap+(i//cols)*(th+52+gap)
+              sheet.paste(im,(cx+(tw-im.width)//2,cy))
+              draw.text((cx,cy+th+10),f'{x["nr"]}. {x["gruppe"]}',fill="black",font=font)
+          out=root/"kontaktbogen.jpg"
+          sheet.save(out,quality=92)
+          print(out)
+          PY
+
+      - name: Ergebnisse sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: farbwelten-e2e-${{ github.run_id }}
+          path: out/farbwelten-e2e
+          if-no-files-found: warn
+          retention-days: 7
