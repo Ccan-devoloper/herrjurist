@@ -1,6 +1,10 @@
 name: Charakter-Cover · Trockenlauf
 
 on:
+  push:
+    branches: [feature/charakter-cover-sunburst]
+    paths:
+      - ".github/workflows/charakter-trockenlauf.yml"
   workflow_dispatch:
 
 permissions:
