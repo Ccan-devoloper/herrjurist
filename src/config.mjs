@@ -504,6 +504,11 @@ export const CONFIG = {
          visuell beanstandetes Bild eskaliert einmal auf xhigh. */
       guete: env("IG_CHARAKTER_GUETE", "high"),
       retryGuete: env("IG_CHARAKTER_RETRY_GUETE", "xhigh"),
+      /* Im Reel stehen mehrere Motive nur wenige Sekunden. Dort bleibt medium
+         der wirtschaftliche Erstversuch; ein beanstandetes Motiv steigt auf
+         high. Cover selbst laufen immer ueber high/xhigh. */
+      reelGuete: env("IG_CHARAKTER_REEL_GUETE", "medium"),
+      reelRetryGuete: env("IG_CHARAKTER_REEL_RETRY_GUETE", "high"),
       groesse: env("IG_CHARAKTER_GROESSE", "1024x1024"),
       reserveUsd: Number(env("IG_CHARAKTER_RESERVE_USD", "0.12")),
       retryReserveUsd: Number(env("IG_CHARAKTER_RETRY_RESERVE_USD", "0.24")),
