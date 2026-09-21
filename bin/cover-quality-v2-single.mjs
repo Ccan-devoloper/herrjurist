@@ -78,10 +78,12 @@ const REGIE_SCHEMA = {
     kernidee: { type: "string" },
     handlung: { type: "string" },
     alternative: { type: "string" },
+    hinweisZiel: { type: "string" },
+    hinweisZone: { type: "string", enum: ["auto", "left-mid", "left-low", "right-mid", "right-low"] },
     coverText: { type: "string" },
     coverBadge: { type: "string", enum: ["Fehlerfalle", "Examensklassiker", "Klausurrelevant", "Schemawissen", "Praxisrelevant"] },
   },
-  required: ["charaktere", "kernidee", "handlung", "alternative", "coverText", "coverBadge"],
+  required: ["charaktere", "kernidee", "handlung", "alternative", "hinweisZiel", "hinweisZone", "coverText", "coverBadge"],
 };
 
 async function regieErzeugen(thema, fachLabel) {
@@ -101,6 +103,8 @@ async function regieErzeugen(thema, fachLabel) {
     "Die Handlung muss in ENGLISCH 25–70 Wörter lang sein, genau eine klare Interaktion mit höchstens 1–2 starken Requisiten zeigen und den juristischen Gedanken ohne lesbaren Text verständlich machen.",
     "Keine Pixelkoordinaten, keine starre Links-rechts-Anordnung, keine unnötigen Objektzählungen, keine Zusatzfiguren, keine Richterhämmer/Gesetzbücher als generische Symbolik.",
     "coverText: DEUTSCH, 2–6 Wörter, höchstens 36 Zeichen, zusätzlicher Aha-Effekt statt Titelwiederholung.",
+    "hinweisZiel: ENGLISCH, kurz, das konkrete Objekt/Detail in der Szene, auf das der spätere Pfeil zeigen soll.",
+    "hinweisZone: nur weiche Präferenz auto/left-mid/left-low/right-mid/right-low; keine Koordinaten.",
   ].filter(Boolean).join("\n");
   const params = {
     model: "gpt-5.4-mini",
@@ -145,6 +149,8 @@ try {
       kernidee: regie.kernidee,
       handlung: regie.handlung,
       alternative: regie.alternative,
+      hinweisZiel: regie.hinweisZiel,
+      hinweisZone: regie.hinweisZone,
     },
   };
 
@@ -162,6 +168,8 @@ try {
       icon: "paragraf",
       coverText: regie.coverText,
       coverBadge: regie.coverBadge,
+      coverHinweisZiel: regie.hinweisZiel,
+      coverHinweisZone: regie.hinweisZone,
       bild: dateiDaten(motivDatei),
       bildFrei: true,
       bildBreite: motiv.breite || null,
@@ -207,6 +215,8 @@ try {
           coreIdea: regie.kernidee,
           action: regie.handlung,
           alternative: regie.alternative,
+          hintTarget: regie.hinweisZiel,
+          hintZone: regie.hinweisZone,
         },
         selectedCharacterIds,
         renderedCharacterIds: motiv.charakterIds,

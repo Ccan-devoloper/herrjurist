@@ -107,8 +107,18 @@ function coverHinweisPlatzieren() {
     const scale = Math.min(r.width / img.naturalWidth, r.height / img.naturalHeight);
     const dw = img.naturalWidth * scale;
     const dh = img.naturalHeight * scale;
-    const ox = r.left + (r.width - dw) / 2;
-    const oy = r.top + (r.height - dh) / 2;
+    const objectPosition = String(getComputedStyle(img).objectPosition || "50% 50%").toLowerCase();
+    const [px = "50%", py = "50%"] = objectPosition.split(/\s+/);
+    const faktor = (wert, achse) => {
+      if (wert === "left" || wert === "top") return 0;
+      if (wert === "right" || wert === "bottom") return 1;
+      if (wert === "center") return 0.5;
+      if (/%$/.test(wert)) return clamp(parseFloat(wert) / 100, 0, 1);
+      const n = parseFloat(wert);
+      return Number.isFinite(n) ? clamp(n / Math.max(1, achse), 0, 1) : 0.5;
+    };
+    const ox = r.left + (r.width - dw) * faktor(px, r.width);
+    const oy = r.top + (r.height - dh) * faktor(py, r.height);
     bildKasten = { left: ox, top: oy, right: ox + dw, bottom: oy + dh, width: dw, height: dh };
     try {
       const n = 72;
@@ -336,7 +346,15 @@ export async function beitragRendern(beitrag, zielVerzeichnis, opt = {}) {
   const pfade = [];
   const n = beitrag.folien.length;
   for (let i = 0; i < n; i++) {
-    const html = folieHtml(beitrag.folien[i], ctx, i + 1, n);
+    const basisFolie = beitrag.folien[i];
+    const folie = i === 0 && beitrag.coverRegie
+      ? {
+          ...basisFolie,
+          coverHinweisZone: basisFolie.coverHinweisZone ?? beitrag.coverRegie.hinweisZone ?? "auto",
+          coverHinweisZiel: basisFolie.coverHinweisZiel ?? beitrag.coverRegie.hinweisZiel ?? "",
+        }
+      : basisFolie;
+    const html = folieHtml(folie, ctx, i + 1, n);
     const ziel = path.join(zielVerzeichnis, `${beitrag.slug || "beitrag"}-${String(i + 1).padStart(2, "0")}.jpg`);
     pfade.push(await htmlZuJpeg(html, MASSE.beitrag, ziel));
   }
