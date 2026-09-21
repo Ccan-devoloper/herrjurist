@@ -61,13 +61,15 @@ function zielText(ziel = {}) {
 }
 
 const REGELN = [
-  { re: /kuendig|kündig|vertrag|angebot|annahme|willenserklaer|willenserklär|zugang|anfecht|irrtum|widerruf|ruecktritt|rücktritt/i, ids: ["zylla", "flux"] },
-  { re: /schema|pruef|prüf|aufbau|streit|ansicht|vergleich|klausur|zulaess|zuläss|begruendet|begründet|frist|tenor|rechtsbehelf|verfahren/i, ids: ["form7", "flux"] },
-  { re: /verwalt|vwgo|grundrecht|versammlung|polizei|behoerd|behörd|bescheid|vollzieh|oeffentlich|öffentlich/i, ids: ["mara", "form7"] },
+  /* Spezifische Rechtsgebiete zuerst: Ein "Aufbau" zu § 142 StGB bleibt
+     Strafrecht und ein "Tenor" nach VwGO bleibt Oeffentliches Recht. */
   { re: /straf|tatbestand|versuch|diebstahl|raub|koerper|körper|gewalt|unfall|142|flucht|taeter|täter|mittaeter|mittäter/i, ids: ["brakk", "form7"] },
+  { re: /verwalt|vwgo|grundrecht|versammlung|polizei|behoerd|behörd|bescheid|vollzieh|oeffentlich|öffentlich/i, ids: ["mara", "form7"] },
   { re: /besitz|eigentum|sache|mangel|schaden|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
   { re: /erbe|testament|famil|nachlass|erbrecht/i, ids: ["mara", "flux"] },
   { re: /mindset|blackout|keine ahnung|lernen|wiederhol|zeitdruck|perfektion/i, ids: ["mara", "flux"] },
+  { re: /kuendig|kündig|vertrag|angebot|annahme|willenserklaer|willenserklär|zugang|anfecht|irrtum|widerruf|ruecktritt|rücktritt/i, ids: ["zylla", "flux"] },
+  { re: /schema|pruef|prüf|aufbau|streit|ansicht|vergleich|klausur|zulaess|zuläss|begruendet|begründet|frist|tenor|rechtsbehelf|verfahren/i, ids: ["form7", "flux"] },
 ];
 
 export function charaktereFuer(ziel = {}) {
@@ -152,6 +154,13 @@ function referenzNormalisieren(char) {
 }
 
 const schlafen = (ms) => new Promise((r) => setTimeout(r, ms));
+let letzterBildStart = 0;
+
+async function ratenfensterWarten(ms = 13000) {
+  const warten = Math.max(0, letzterBildStart + ms - Date.now());
+  if (warten > 0) await schlafen(warten);
+  letzterBildStart = Date.now();
+}
 
 async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimitMs }) {
   const refs = chars.map(referenzNormalisieren);
@@ -171,6 +180,10 @@ async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimit
       const steuerung = new AbortController();
       const wecker = setTimeout(() => steuerung.abort(), zeitlimitMs);
       try {
+        /* Tier 1 erlaubt fuer GPT Image derzeit nur wenige Bilder pro Minute.
+           Auch ein erfolgreicher Aufruf zaehlt; deshalb nicht erst nach 429
+           bremsen, sondern jeden Bildstart bewusst auseinanderziehen. */
+        await ratenfensterWarten(Number(CONFIG.bilder?.charaktere?.minAbstandMs || 13000));
         const r = await fetch("https://api.openai.com/v1/images/edits", {
           method: "POST",
           headers: { Authorization: `Bearer ${key}` },
