@@ -320,6 +320,7 @@ h1 em{color:${p.akzent2}}
    zwoelf verkettete drop-shadows brachten Chromium zum Stehen. Hier nur
    noch der weiche Schatten, der den Sticker von der Flaeche hebt. */
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
+.frei.charakter img{object-position:center bottom;filter:drop-shadow(0 22px 34px rgba(0,0,0,.24))}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -498,18 +499,17 @@ export const BUEHNE_STORY = { flaeche: 720 * 820 * 0.62, maxB: 920, maxH: 850 };
 function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   /* Freigestellt: Das Motiv laeuft unten rechts aus der Kachel, ohne Rahmen.
      Nicht freigestellt (Notfall): als abgerundete Karte. */
-  const klasse = folie.bildFrei === false ? "foto" : "frei";
-  /* Der Bildnachweis steht in der Caption, nicht auf der Kachel: Pexels
-     verlangt einen sichtbaren Hinweis, aber nicht an einer bestimmten Stelle -
-     und auf dem Bild stoert er die Gestaltung. */
-  /* Zum Motiv das farbige Zeichen des Themas, gross und leicht gedreht links
-     daneben - Motiv und Zeichen zusammen, wie auf den Vorbildkacheln. Nur die
-     farbige Fassung; die Strichgrafik wuerde neben einem Foto duenn wirken. */
-  /* Cover-Regel: Fotomotiv UND thematisches Icon. Auch ein rechteckiges
-     Notfallfoto darf das Icon nicht verlieren. */
+  const istCharakter = folie.bildTyp === "charakter";
+  const klasse = folie.bildFrei === false ? "foto" : `frei${istCharakter ? " charakter" : ""}`;
+  /* Charakter-Szenen sind selbst das Markenzeichen. Neben zwei handelnden
+     Figuren noch ein grosses Themen-Icon zu setzen wuerde die Cover wieder
+     ueberladen; Stock-/Fallbackmotive behalten das Icon wie bisher. */
   const icon = ICONS[folie.icon] ? folie.icon : "paragraf";
-  const zeichen = farbIcon(icon, klasse === "frei" ? 240 : 180);
-  const box = klasse === "frei" ? motivBuehne(folie.bildBreite, folie.bildHoehe, ziel) : null;
+  const zeichen = istCharakter ? "" : farbIcon(icon, klasse.startsWith("frei") ? 240 : 180);
+  const charakterZiel = istCharakter
+    ? { flaeche: 760 * 650 * 0.72, maxB: 900, maxH: 690 }
+    : ziel;
+  const box = folie.bildFrei !== false ? motivBuehne(folie.bildBreite, folie.bildHoehe, charakterZiel) : null;
   const stil = box ? ` style="width:${box.breite}px;height:${box.hoehe}px"` : "";
   return `<div class="${klasse}"${stil}><img src="${esc(folie.bild)}" alt=""></div>${zeichen ? `<div class="frei-zeichen">${zeichen}</div>` : ""}`;
 }
