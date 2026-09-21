@@ -72,11 +72,17 @@ test("cover-quality-v2: strukturierte Cover-Regie darf Cast und Szene frei besti
       kernidee: "Eine formale Freigabe entscheidet, ob es weitergeht.",
       handlung: "{A} tries to pass a sealed case capsule through a checkpoint while {B} discovers the missing clearance tag.",
       alternative: "{A} holds a locked legal crate while {B} finds the one matching clearance key.",
+      hinweisZiel: "the missing clearance tag",
+      hinweisZone: "left-mid",
     },
   };
   assert.deepEqual(ids(ziel), ["rex", "zylla"]);
   const prompt = charakterPrompt(ziel);
   assert.match(prompt, /sealed case capsule/);
+  assert.match(prompt, /left-middle edge/);
+  assert.match(prompt, /missing clearance tag/);
+  assert.match(prompt, /Do NOT draw handwriting, arrows/i);
+  assert.doesNotMatch(prompt, /leftmost roughly 16 percent/i);
   assert.doesNotMatch(prompt, /three separate blank legal objects/);
 });
 
@@ -151,7 +157,8 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.match(cssText, /\.art-titel>\.kopf\{left:-52px;top:-72px;right:-52px\}/);
   assert.match(cssText, /font-size:104px/);
   assert.match(cssText, /\.frei\.charakter\{right:-6px;bottom:0;width:940px;height:800px\}/);
-  assert.match(cssText, /\.cover-hinweis\{[^}]*bottom:490px/);
+  assert.match(cssText, /\.cover-hinweis\{[^}]*z-index:6/);
+  assert.match(cssText, /\.cover-hinweis-pfeil\{/);
   assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
 
   const html = folieHtml({
@@ -160,9 +167,14 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
     titelZeilen: ["Zulässigkeit", "kommt vor", "Begründetheit"],
     coverBadge: "Klausurrelevant",
     coverText: "Reihenfolge merken",
+    coverHinweisZone: "right-mid",
+    coverHinweisZiel: "document stack",
     icon: "dokument",
   }, ctx, 1, 6);
   assert.match(html, />1\/6</);
+  assert.match(html, /class="cover-hinweis" data-zone="right-mid" data-ziel="document stack"/);
+  assert.match(html, /class="cover-hinweis-text"/);
+  assert.match(html, /class="cover-hinweis-pfeil"/);
 });
 
 test("cover-quality-v2: vereinbarte Lernfamilienfarben sind permanent verdrahtet", () => {

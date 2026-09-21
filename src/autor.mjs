@@ -156,7 +156,7 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - BILDREGEL FÜR KARUSSELLS: NUR Folie 1 (Cover/Titelfolie) bekommt eine Charakter-Szene. Alle inneren Karussell-Slides bleiben reine Text-/Strukturfolien: niemals Bildhintergrund oder dekoratives Motiv; dort sind nur Typografie, Kästen, Linien, Pfeile und kleine Icons erlaubt.
 - VISUELLE COVER-REGIE IST TEIL DEINER REDAKTIONELLEN AUFGABE. Schreibe nicht nur den juristischen Text, sondern entwickle für Folie 1 ein eigenständiges Bildkonzept. Keine feste Bildformel je Rechtsgebiet: derselbe Themenbereich darf morgen völlig anders inszeniert werden.
 - Wiederkehrender Cast: rex = nervöser Portal-Mechaniker (Praxis, Fehler, Ursache/Wirkung); zylla = neugierige Alien-Figur (Entdecken, Vertrag/Kommunikation, Kontrast); form7 = schwebender Bürokratie-Droide (Ordnung, Formalien, Prüfung); brakk = kräftiger Kristall-Minenarbeiter (Besitz, Sachen, physische Last/Handlung); flux = Wurm-Professor mit Zeigestab (Erklären, Dogmatik, Systematik); mara = erfahrene Expeditionistin (Entscheidung, Grenze, Druck, Ausnahme). Wähle für jedes Cover 1 oder 2 Figuren, deren Rollen zur konkreten visuellen Idee passen. Nicht ein Rechtsgebiet dauerhaft an ein Figurenpaar koppeln.
-- coverRegie: PFLICHTOBJEKT mit charaktere (1–2 IDs aus rex, zylla, form7, brakk, flux, mara), kernidee (ein deutscher Satz: welcher Gedanke soll visuell hängen bleiben?), handlung (ENGLISCH, ca. 25–70 Wörter: EINE klare, originelle Interaktion der gewählten Figuren mit 1–2 starken Requisiten; Figuren mit {A} und {B} bezeichnen), alternative (ENGLISCH: wirklich anderes Bildkonzept für einen dritten Versuch). Keine Pixelkoordinaten, keine starre Links-rechts-Choreografie, keine unnötigen Objektzählungen. Nur Details festlegen, die für den juristischen Sinn nötig sind.
+- coverRegie: PFLICHTOBJEKT mit charaktere (1–2 IDs aus rex, zylla, form7, brakk, flux, mara), kernidee (ein deutscher Satz: welcher Gedanke soll visuell hängen bleiben?), handlung (ENGLISCH, ca. 25–70 Wörter: EINE klare, originelle Interaktion der gewählten Figuren mit 1–2 starken Requisiten; Figuren mit {A} und {B} bezeichnen), alternative (ENGLISCH: wirklich anderes Bildkonzept für einen dritten Versuch), hinweisZiel (ENGLISCH, kurz: welches konkrete Szenenelement soll der spätere Handschrift-Pfeil gedanklich adressieren?) und hinweisZone (nur eine WEICHE Präferenz aus auto, left-mid, left-low, right-mid, right-low). Keine Pixelkoordinaten, keine starre Links-rechts-Choreografie, keine unnötigen Objektzählungen. Der Renderer darf die Wunschzone wegen Kollisionen überstimmen. Nur Details festlegen, die für den juristischen Sinn nötig sind.
 - Variation ist Markenqualität: bevorzuge eine neue Metapher, Pose oder Requisite gegenüber dem naheliegenden Standardschema. Die Szene soll wie eine kleine Episode aus demselben Sci-Fi-Jura-Universum wirken, nicht wie ein Lehrbuchdiagramm.
 - bildSzene: PFLICHT. 3 bis 10 englische Wörter als semantische Kurzfassung der coverRegie, ohne Charakter-Namen. Sie bleibt für Archivsuche und Legacy-Fallback erhalten.
 - bildSzeneAlt: PFLICHT. 3 bis 10 englische Wörter für die alternative Idee.
@@ -218,8 +218,10 @@ const BEITRAG_SCHEMA = {
         kernidee: { type: "string" },
         handlung: { type: "string" },
         alternative: { type: ["string", "null"] },
+        hinweisZiel: { type: ["string", "null"] },
+        hinweisZone: { type: ["string", "null"], enum: ["auto", "left-mid", "left-low", "right-mid", "right-low", null] },
       },
-      required: ["charaktere", "kernidee", "handlung", "alternative"],
+      required: ["charaktere", "kernidee", "handlung", "alternative", "hinweisZiel", "hinweisZone"],
     },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
@@ -692,6 +694,11 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     if (coverText) folien[0].coverText = coverText;
     const coverBadge = String(daten.coverBadge || "").replace(/\s+/g, " ").trim().slice(0, 32);
     if (coverBadge) folien[0].coverBadge = coverBadge;
+    const regie = daten.coverRegie && typeof daten.coverRegie === "object" ? daten.coverRegie : null;
+    const zone = String(regie?.hinweisZone || "auto").toLowerCase();
+    folien[0].coverHinweisZone = ["auto", "left-mid", "left-low", "right-mid", "right-low"].includes(zone) ? zone : "auto";
+    const ziel = String(regie?.hinweisZiel || "").replace(/\s+/g, " ").trim().slice(0, 120);
+    if (ziel) folien[0].coverHinweisZiel = ziel;
     if (!ICONS[folien[0].icon]) folien[0].icon = "paragraf";
   }
   if (folien.at(-1)?.art !== "cta") folien.push({ art: "cta", titel: "Schick das deiner Lerngruppe.", punkte: ["Weiterleiten an die Lerngruppe", "Speichern und vor der Klausur wiederholen", "Folgen: sortiert nach Klausurtag"] });

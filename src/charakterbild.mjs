@@ -59,6 +59,7 @@ function zielText(ziel = {}) {
     ziel.titel, ziel.unter, ziel.text, ziel.sprecher, ziel.norm,
     ziel.bildSzene, ziel.bildSzeneAlt, ziel.coverText,
     ziel.coverRegie?.kernidee, ziel.coverRegie?.handlung,
+    ziel.coverRegie?.hinweisZiel, ziel.coverRegie?.hinweisZone,
     ...(Array.isArray(ziel.coverCharaktere) ? ziel.coverCharaktere : []),
   ].filter(Boolean).join(" · ");
 }
@@ -72,6 +73,10 @@ function coverRegieAus(ziel = {}) {
     kernidee: sauber(roh.kernidee, 500),
     handlung: sauber(roh.handlung, 1200),
     alternative: sauber(roh.alternative, 1200),
+    hinweisZiel: sauber(roh.hinweisZiel, 180),
+    hinweisZone: ["auto", "left-mid", "left-low", "right-mid", "right-low"].includes(String(roh.hinweisZone || "").toLowerCase())
+      ? String(roh.hinweisZone).toLowerCase()
+      : "auto",
   };
 }
 
@@ -282,6 +287,27 @@ function handlungFuer(ziel, chars) {
   return solo("{A} demonstrates the legal idea with one topic-relevant prop in a single immediately readable pose.");
 }
 
+function hinweisKomposition(ziel = {}) {
+  const regie = coverRegieAus(ziel);
+  const zone = regie?.hinweisZone || "auto";
+  const zonenText = {
+    "left-mid": "The editor mildly prefers a handwriting pocket around the left-middle edge of the lower scene.",
+    "left-low": "The editor mildly prefers a handwriting pocket around the lower-left edge of the scene.",
+    "right-mid": "The editor mildly prefers a handwriting pocket around the right-middle edge of the lower scene.",
+    "right-low": "The editor mildly prefers a handwriting pocket around the lower-right edge of the scene.",
+    auto: "The editor has no fixed side preference for the later handwriting overlay.",
+  }[zone] || "";
+  const zielText = regie?.hinweisZiel
+    ? `If it stays natural, keep this semantic arrow target visually reachable from a nearby quiet pocket: ${regie.hinweisZiel}.`
+    : "";
+  return [
+    "Herrjurist will add the handwritten note and arrow AFTER image generation. Do NOT draw handwriting, arrows, labels or annotation marks into the illustration.",
+    zonenText,
+    zielText,
+    "This is only a soft composition preference. Do not distort character poses or weaken the legal scene just to reserve space; the renderer may choose another overlay zone.",
+  ].filter(Boolean).join(" ");
+}
+
 export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrektur = "") {
   const referenzen = chars.map((ch, i) =>
     `Reference image ${i + 1} is the ONLY canonical identity for ${ch.name}: ${ch.kurz}. Match that exact face/head shape, body proportions, skin/fur/material colours, outfit, accessories and silhouette.`
@@ -300,7 +326,8 @@ export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrekt
     `Scene direction: ${handlung}`,
     `Legal context for meaning only, NOT a request to add people or text: ${kontext}`,
     korrekturText,
-    "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the renderer can place a large title above it. The finished feed cover is 4:5. Keep the leftmost roughly 16 percent of the lower scene relatively quiet (no faces or essential props) so a short handwritten annotation can sit there without collision. Do not build a background.",
+    "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the renderer can place a large title above it. The finished feed cover is 4:5. Do not build a background.",
+    hinweisKomposition(ziel),
     "Characters must interact rather than pose independently. Every selected character needs a clear job in the scene. Use only props that make the legal point instantly understandable; omit props that do not help.",
     "Show complete readable anatomy: full heads and faces, all essential hands/fingers, feet or hover bases, and every important prop. No fused hands, spare limbs, duplicated body parts, cropped heads or accidental amputations.",
     "Polished premium cartoon finish matching the references: confident clean ink outlines, controlled cel shading, subtle material highlights and texture, expressive faces, precise accessories, clean edges and consistent proportions. Do NOT simplify into flat clip-art and do NOT switch to 3D, photorealism, watercolor or sketch style.",

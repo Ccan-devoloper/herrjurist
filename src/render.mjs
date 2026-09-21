@@ -52,6 +52,7 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     await page.goto(`file://${tmp}`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(einpassen);
+    await page.evaluate(coverHinweisPlatzieren);
     await page.waitForTimeout(60);
     /* NACH dem Einpassen messen: Der Text wird dort verkleinert, bis alles
        oberhalb der Fußzeile bleibt - vorher gemessen wäre der Kasten falsch. */
@@ -63,6 +64,188 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     fs.rmSync(tmp, { force: true });
   }
   return messen ? { pfad: zielPfad, kasten } : zielPfad;
+}
+
+/* Positioniert den handschriftlichen Cover-Hinweis erst NACH dem Text-Fit.
+   Es gibt bewusst keine festen Koordinaten pro Fach oder Szene: mehrere
+   plausible Zonen werden anhand des tatsaechlich gerenderten Motivs bewertet.
+   Die Wunschzone aus der Regie ist nur ein kleiner Bonus. */
+function coverHinweisPlatzieren() {
+  const wurzel = document.querySelector(".folie.art-titel");
+  const hinweis = wurzel?.querySelector(".cover-hinweis");
+  if (!wurzel || !hinweis) return;
+
+  const text = hinweis.querySelector(".cover-hinweis-text");
+  const pfeil = hinweis.querySelector(".cover-hinweis-pfeil");
+  if (!text || !pfeil) return;
+
+  const root = wurzel.getBoundingClientRect();
+  const titel = wurzel.querySelector("h1.titel-stack, h1");
+  const badge = wurzel.querySelector(".cover-badge");
+  const kopf = wurzel.querySelector(".kopf");
+  const fuss = wurzel.querySelector(".fuss");
+  const img = wurzel.querySelector(".frei.charakter img, .frei img");
+
+  const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+  const flaeche = (a, b, rand = 0) => {
+    if (!a || !b) return 0;
+    const l = Math.max(a.left - rand, b.left);
+    const r = Math.min(a.right + rand, b.right);
+    const o = Math.max(a.top - rand, b.top);
+    const u = Math.min(a.bottom + rand, b.bottom);
+    return Math.max(0, r - l) * Math.max(0, u - o);
+  };
+  const abstand2 = (a, b) => (a.x - b.x) ** 2 + (a.y - b.y) ** 2;
+
+  /* Transparente PNG wirklich auswerten statt den ganzen 940px-Motivkasten
+     als belegt anzusehen. So darf Handschrift in echte Negativflaeche neben
+     Armen/Props rutschen, ohne Gesichter oder Koerper zu ueberdecken. */
+  const motivPunkte = [];
+  let bildKasten = null;
+  if (img?.complete && img.naturalWidth && img.naturalHeight) {
+    const r = img.getBoundingClientRect();
+    const scale = Math.min(r.width / img.naturalWidth, r.height / img.naturalHeight);
+    const dw = img.naturalWidth * scale;
+    const dh = img.naturalHeight * scale;
+    const ox = r.left + (r.width - dw) / 2;
+    const oy = r.top + (r.height - dh) / 2;
+    bildKasten = { left: ox, top: oy, right: ox + dw, bottom: oy + dh, width: dw, height: dh };
+    try {
+      const n = 72;
+      const canvas = document.createElement("canvas");
+      canvas.width = n; canvas.height = n;
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      ctx.drawImage(img, 0, 0, n, n);
+      const daten = ctx.getImageData(0, 0, n, n).data;
+      for (let y = 0; y < n; y += 2) for (let x = 0; x < n; x += 2) {
+        if (daten[(y * n + x) * 4 + 3] < 42) continue;
+        motivPunkte.push({
+          x: ox + ((x + 0.5) / n) * dw,
+          y: oy + ((y + 0.5) / n) * dh,
+        });
+      }
+    } catch {
+      /* Data-URI-Motive sind same-origin; der Fallback bleibt fuer exotische
+         Quellen trotzdem funktionsfaehig. */
+    }
+  }
+
+  const blocker = [titel, badge, kopf, fuss].filter(Boolean).map((e) => e.getBoundingClientRect());
+  const obereGrenze = Math.max(
+    root.top + 150,
+    titel?.getBoundingClientRect().bottom || root.top,
+    badge?.getBoundingClientRect().bottom || root.top,
+  ) + 24;
+  const untereGrenze = (fuss?.getBoundingClientRect().top || root.bottom - 24) - 18;
+
+  const basisY = clamp(obereGrenze - root.top + 36, 520, 760);
+  const zonen = {
+    "left-mid": { x: 50, y: basisY },
+    "left-low": { x: 54, y: clamp(untereGrenze - root.top - 270, basisY + 80, 900) },
+    "right-mid": { x: root.width - 365, y: basisY + 10 },
+    "right-low": { x: root.width - 365, y: clamp(untereGrenze - root.top - 270, basisY + 90, 900) },
+  };
+  const bevorzugt = String(hinweis.dataset.zone || "auto");
+  const reihenfolge = Object.keys(zonen).sort((a, b) =>
+    (a === bevorzugt ? -1 : 0) - (b === bevorzugt ? -1 : 0)
+  );
+
+  const varianten = [];
+  const groessen = [52, 48, 44];
+  const drehungen = [-5, -2, 3];
+  const yOffsets = [0, -42, 42];
+
+  for (const zone of reihenfolge) {
+    for (const font of groessen) {
+      for (const rot of drehungen) {
+        for (const dy of yOffsets) {
+          const pos = zonen[zone];
+          hinweis.style.left = `${pos.x}px`;
+          hinweis.style.top = `${pos.y + dy}px`;
+          hinweis.style.bottom = "auto";
+          hinweis.style.fontSize = `${font}px`;
+          text.style.transform = `rotate(${rot}deg)`;
+          pfeil.style.display = "none";
+
+          const r = hinweis.getBoundingClientRect();
+          let score = 0;
+
+          /* Canvas-Rand ist die einzige echte Geometriegrenze. */
+          if (r.left < root.left + 24) score += (root.left + 24 - r.left) * 900;
+          if (r.right > root.right - 24) score += (r.right - (root.right - 24)) * 900;
+          if (r.top < root.top + 100) score += (root.top + 100 - r.top) * 900;
+          if (r.bottom > root.bottom - 90) score += (r.bottom - (root.bottom - 90)) * 900;
+
+          /* Markenbestandteile sollen praktisch frei bleiben, sind aber als
+             Score statt starrem IF modelliert. */
+          for (const b of blocker) score += flaeche(r, b, 8) * 2.4;
+
+          /* Motivkollision wird anhand der Alpha-Maske bewertet. Ein paar
+             Randpixel sind okay; viel Figur unter dem Text ist teuer. */
+          let treffer = 0;
+          for (const p of motivPunkte) {
+            if (p.x >= r.left - 8 && p.x <= r.right + 8 && p.y >= r.top - 8 && p.y <= r.bottom + 8) treffer++;
+          }
+          score += treffer * 115;
+
+          /* Regie-Zone ist nur Praeferenz, kein Befehl. */
+          if (bevorzugt !== "auto" && zone !== bevorzugt) score += 520;
+
+          /* Ein Pfeil soll weder 20px noch eine halbe Kachel lang werden. */
+          if (motivPunkte.length) {
+            const mitte = { x: (r.left + r.right) / 2, y: (r.top + r.bottom) / 2 };
+            let min = Infinity;
+            for (const p of motivPunkte) min = Math.min(min, Math.sqrt(abstand2(mitte, p)));
+            score += Math.abs(clamp(min, 120, 360) - 215) * 1.2;
+          }
+
+          /* Groessere Handschrift bevorzugen, solange sie nicht kollidiert. */
+          score += (52 - font) * 9;
+          varianten.push({ score, zone, font, rot, x: pos.x, y: pos.y + dy });
+        }
+      }
+    }
+  }
+
+  varianten.sort((a, b) => a.score - b.score);
+  const best = varianten[0];
+  if (!best) return;
+  hinweis.style.left = `${best.x}px`;
+  hinweis.style.top = `${best.y}px`;
+  hinweis.style.bottom = "auto";
+  hinweis.style.fontSize = `${best.font}px`;
+  text.style.transform = `rotate(${best.rot}deg)`;
+
+  const r = hinweis.getBoundingClientRect();
+  const mitte = { x: (r.left + r.right) / 2, y: (r.top + r.bottom) / 2 };
+  let ziel = null;
+  let dist = Infinity;
+  for (const p of motivPunkte) {
+    /* Pfeilziel nicht unter die Schrift legen. */
+    if (p.x >= r.left - 18 && p.x <= r.right + 18 && p.y >= r.top - 18 && p.y <= r.bottom + 18) continue;
+    const d = abstand2(mitte, p);
+    if (d < dist) { dist = d; ziel = p; }
+  }
+  if (!ziel && bildKasten) ziel = { x: (bildKasten.left + bildKasten.right) / 2, y: (bildKasten.top + bildKasten.bottom) / 2 };
+  if (!ziel) { pfeil.style.display = "none"; return; }
+
+  const dx = ziel.x - mitte.x;
+  const dy = ziel.y - mitte.y;
+  let start = { x: mitte.x, y: mitte.y };
+  if (Math.abs(dx) >= Math.abs(dy)) start.x = dx >= 0 ? r.right + 4 : r.left - 4;
+  else start.y = dy >= 0 ? r.bottom + 4 : r.top - 4;
+
+  const vx = ziel.x - start.x;
+  const vy = ziel.y - start.y;
+  const laenge = Math.hypot(vx, vy);
+  const winkel = Math.atan2(vy, vx) * 180 / Math.PI;
+  const skalierung = clamp(laenge / 142, 0.72, 1.38);
+  pfeil.style.display = "block";
+  pfeil.style.left = `${start.x - r.left - 12}px`;
+  pfeil.style.top = `${start.y - r.top - 14}px`;
+  /* Das Marken-SVG zeigt in seiner Grundform etwa 31 Grad nach rechts unten. */
+  pfeil.style.transform = `rotate(${winkel - 31}deg) scale(${skalierung})`;
+  hinweis.dataset.gewaehlteZone = best.zone;
 }
 
 /* Läuft im Browser: verkleinert Text, bis nichts mehr über den rechten Rand
