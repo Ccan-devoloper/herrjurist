@@ -79,8 +79,9 @@ const REGELN = [
   { re: /280|pflichtverletz|leistungsstör|leistungsstoer|schadensersatz|schuldrecht/i, ids: ["rex", "flux"] },
   { re: /mittaeter|mittäter|mehrpersonen|dreiperson|vertretung/i, ids: ["brakk", "zylla", "form7"] },
   { re: /definition|begriff|dogmatik/i, ids: ["flux"] },
-  { re: /mindset|blackout|zeitdruck|perfektion|nervos/i, ids: ["mara"] },
+  // Konkrete Methodik-Signale muessen vor dem generischen Fachlabel "Mindset" gewinnen.
   { re: /streitstand|ansichten|ergebnis vergleichen|methodik|anspruchsgrundlage|aufbau/i, ids: ["form7", "flux"] },
+  { re: /mindset|blackout|zeitdruck|perfektion|nervos/i, ids: ["mara"] },
   { re: /strafrecht bt|diebstahl|raub|betrug|körperverletz|koerperverletz|gewalt/i, ids: ["brakk", "rex"] },
   { re: /erbe|testament|famil|nachlass|erbrecht/i, ids: ["mara", "flux"] },
   { re: /mangel|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
