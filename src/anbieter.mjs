@@ -112,7 +112,7 @@ function profilVon({ zweck, provider, modell, params, promptVersion, effort, den
  * Der gemeinsame Ablauf aller Anbieter. `senden` bekommt den Griff und macht
  * genau einen Anbieteraufruf.
  */
-async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, optional, pflichtName, effort, denkmodus, promptVersion, senden, preis }) {
+async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, optional, pflichtName, effort, denkmodus, promptVersion, senden, preis, admissionInputTokens = null }) {
   if (!kontext?.budget) throw new OhneKontext(zweck);
   const { budget, telemetrie, journal } = kontext;
   const { profil, familie, maxTokens } = profilVon({ zweck, provider, modell, params, promptVersion, effort, denkmodus });
@@ -124,7 +124,14 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
      die Admission Reserve, nicht eine bewiesene Kostenobergrenze. */
   const clientBound = clientInputBound(params);
   const gezaehlt = provider === "anthropic" ? await eingabeZaehlen(params) : null;
-  const eingabeTokens = admissionBound(params, gezaehlt);
+  /* Bei multimodalen OpenAI-Anfragen steckt das Bild als Base64 im JSON.
+     Zeichen/4 waere dort keine Tokenabschaetzung, sondern zaehlt die
+     Transportkodierung. Aufrufer duerfen deshalb fuer solche Requests einen
+     konservativen Bild-Token-Bound melden; die tatsaechliche Usage wird nach
+     dem Aufruf wie gewohnt vom Provider abgerechnet. */
+  const eingabeTokens = admissionInputTokens != null
+    ? Math.max(0, Number(admissionInputTokens) || 0)
+    : admissionBound(params, gezaehlt);
   const admissionReserve = admissionReserveUsd({ modell, maxTokens: maxTokens || 0, eingabeTokens });
 
   const roh = {
@@ -247,10 +254,11 @@ export async function claudeAufruf({ zweck, params, modell = null, attempt = 1, 
 }
 
 /** Ein OpenAI-Aufruf (Prüfer). */
-export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = null, url = "https://api.openai.com/v1/responses", fetchFn = fetch, promptVersion = "1" }) {
+export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = null, optional = false, admissionInputTokens = null, url = "https://api.openai.com/v1/responses", fetchFn = fetch, promptVersion = "1" }) {
   const antwort = await durchDieTuer({
-    zweck, provider: "openai", modell, params, attempt, slot, optional: false, pflichtName: null,
+    zweck, provider: "openai", modell, params, attempt, slot, optional, pflichtName: null,
     effort: params?.reasoning?.effort ?? null, denkmodus: null, promptVersion,
+    admissionInputTokens,
     senden: async () => {
       const r = await fetchFn(url, {
         method: "POST",
