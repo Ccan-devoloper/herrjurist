@@ -52,6 +52,7 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     await page.goto(`file://${tmp}`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(einpassen);
+    await page.evaluate(coverHinweisAusPlanPlatzieren);
     await page.waitForTimeout(60);
     /* NACH dem Einpassen messen: Der Text wird dort verkleinert, bis alles
        oberhalb der Fußzeile bleibt - vorher gemessen wäre der Kasten falsch. */
@@ -63,6 +64,89 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     fs.rmSync(tmp, { force: true });
   }
   return messen ? { pfad: zielPfad, kasten } : zielPfad;
+}
+
+/* Setzt die Handschrift exakt nach dem von der visuellen KI-QA gelieferten
+   Plan. Keine Zonensuche und kein eigenes Kompositions-Scoring: Der Renderer
+   mappt nur die normalisierten KI-Koordinaten auf das tatsächlich dargestellte
+   transparente Motiv und hält Text/Pfeil innerhalb der technischen Safe Area. */
+function coverHinweisAusPlanPlatzieren() {
+  const wurzel = document.querySelector(".folie.art-titel");
+  const hinweis = wurzel?.querySelector(".cover-hinweis");
+  const svg = wurzel?.querySelector(".cover-hinweis-pfeil");
+  const pfad = svg?.querySelector(".cover-hinweis-kurve");
+  const img = wurzel?.querySelector(".frei.charakter img, .frei img");
+  if (!wurzel || !hinweis || !svg || !pfad || !img?.complete || !img.naturalWidth || !img.naturalHeight) return;
+
+  const root = wurzel.getBoundingClientRect();
+  const ir = img.getBoundingClientRect();
+  const scale = Math.min(ir.width / img.naturalWidth, ir.height / img.naturalHeight);
+  const dw = img.naturalWidth * scale;
+  const dh = img.naturalHeight * scale;
+  const cs = getComputedStyle(img);
+  const pos = String(cs.objectPosition || "50% 50%").toLowerCase().split(/\s+/);
+  const faktor = (wert, achse) => {
+    if (wert === "left" || wert === "top") return 0;
+    if (wert === "right" || wert === "bottom") return 1;
+    if (wert === "center") return 0.5;
+    if (/%$/.test(wert)) return Math.max(0, Math.min(1, parseFloat(wert) / 100));
+    const n = parseFloat(wert);
+    return Number.isFinite(n) ? Math.max(0, Math.min(1, n / Math.max(1, achse))) : 0.5;
+  };
+  const ox = ir.left + (ir.width - dw) * faktor(pos[0] || "50%", ir.width);
+  const oy = ir.top + (ir.height - dh) * faktor(pos[1] || pos[0] || "50%", ir.height);
+
+  const n = (k, f) => Number.isFinite(Number(hinweis.dataset[k])) ? Number(hinweis.dataset[k]) : f;
+  let x = ox + n("noteX", 0.25) * dw;
+  let y = oy + n("noteY", 0.28) * dh;
+  const tx = ox + n("targetX", 0.5) * dw;
+  const ty = oy + n("targetY", 0.55) * dh;
+  const rotation = Math.max(-12, Math.min(12, n("rotation", -4)));
+  const bend = Math.max(-1, Math.min(1, n("bend", 0.35)));
+
+  hinweis.style.left = `${x - root.left}px`;
+  hinweis.style.top = `${y - root.top}px`;
+  hinweis.style.transform = `translate(-50%,-50%) rotate(${rotation}deg)`;
+
+  let hr = hinweis.getBoundingClientRect();
+  const titel = wurzel.querySelector("h1.titel-stack, h1");
+  const badge = wurzel.querySelector(".cover-badge");
+  const fuss = wurzel.querySelector(".fuss");
+  const minTop = Math.max(titel?.getBoundingClientRect().bottom || root.top, badge?.getBoundingClientRect().bottom || root.top) + 10;
+  const maxBottom = (fuss?.getBoundingClientRect().top || root.bottom - 18) - 10;
+  let sx = 0, sy = 0;
+  if (hr.left < root.left + 24) sx += root.left + 24 - hr.left;
+  if (hr.right > root.right - 24) sx -= hr.right - (root.right - 24);
+  if (hr.top < minTop) sy += minTop - hr.top;
+  if (hr.bottom > maxBottom) sy -= hr.bottom - maxBottom;
+  x += sx; y += sy;
+  hinweis.style.left = `${x - root.left}px`;
+  hinweis.style.top = `${y - root.top}px`;
+  hr = hinweis.getBoundingClientRect();
+
+  const cx = (hr.left + hr.right) / 2;
+  const cy = (hr.top + hr.bottom) / 2;
+  const dx = tx - cx, dy = ty - cy;
+  const hw = Math.max(1, hr.width / 2 + 8), hh = Math.max(1, hr.height / 2 + 8);
+  const ax = Math.abs(dx) > 0.001 ? hw / Math.abs(dx) : Infinity;
+  const ay = Math.abs(dy) > 0.001 ? hh / Math.abs(dy) : Infinity;
+  const edge = Math.min(ax, ay, 1);
+  const startX = cx + dx * edge;
+  const startY = cy + dy * edge;
+  const mx = (startX + tx) / 2;
+  const my = (startY + ty) / 2;
+  const laenge = Math.max(1, Math.hypot(tx - startX, ty - startY));
+  const normalX = -(ty - startY) / laenge;
+  const normalY = (tx - startX) / laenge;
+  const krumm = Math.min(155, laenge * 0.30) * bend;
+  const ctrlX = mx + normalX * krumm;
+  const ctrlY = my + normalY * krumm;
+
+  const rel = (a, b) => [a - root.left, b - root.top].map((v) => Number(v.toFixed(1)));
+  const [sx2, sy2] = rel(startX, startY);
+  const [cx2, cy2] = rel(ctrlX, ctrlY);
+  const [tx2, ty2] = rel(tx, ty);
+  pfad.setAttribute("d", `M ${sx2} ${sy2} Q ${cx2} ${cy2} ${tx2} ${ty2}`);
 }
 
 /* Läuft im Browser: verkleinert Text, bis nichts mehr über den rechten Rand
@@ -124,7 +208,7 @@ function einpassen() {
      Zeichen neben dem Motiv (frei-zeichen) steht bewusst unterhalb der
      Textgrenze - wuerde es mitgezaehlt, schrumpfte der Titel 14 Runden lang
      bis auf die Untergrenze, obwohl er laengst passt. */
-  const ausser = (c) => ["geist", "illu", "foto", "frei", "frei-zeichen", "bildquelle", "fuss"].some((k) => c.classList.contains(k));
+  const ausser = (c) => ["geist", "illu", "foto", "frei", "frei-zeichen", "bildquelle", "cover-hinweis", "cover-hinweis-pfeil", "fuss"].some((k) => c.classList.contains(k));
   const passt = () => {
     const unten = Math.max(...textElemente.map((e) => e.getBoundingClientRect().bottom));
     const kinderUnten = Math.max(...[...wurzel.children].filter((c) => !ausser(c)).map((c) => c.getBoundingClientRect().bottom));
@@ -139,7 +223,7 @@ function einpassen() {
    Bild auf eine innere Lernfolie schleusen. */
 export function carouselBildregeln(beitrag) {
   if (!beitrag?.folien?.length) return beitrag;
-  const bildFelder = ["bild", "bildQuelle", "bildFrei", "bildBreite", "bildHoehe", "bildTyp"];
+  const bildFelder = ["bild", "bildQuelle", "bildFrei", "bildBreite", "bildHoehe", "bildTyp", "coverHinweisPlan"];
   for (let i = 1; i < beitrag.folien.length; i++) {
     for (const feld of bildFelder) delete beitrag.folien[i][feld];
   }
