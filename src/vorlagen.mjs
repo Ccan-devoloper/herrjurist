@@ -1165,7 +1165,7 @@ function zeilenMitNormZitat(teil, max = 19) {
   const m = text.match(NORM_IM_TEXT);
   if (!m) return null;
   const davor = m[1] || "";
-  const danach = m[4] || "";
+  const danach = m[3] || "";
   const normStart = davor.length;
   const normEnd = text.length - danach.length;
   const norm = text.slice(normStart, normEnd).trim();
