@@ -504,6 +504,10 @@ export const CONFIG = {
       reserveUsd: Number(env("IG_CHARAKTER_RESERVE_USD", "0.12")),
       retryReserveUsd: Number(env("IG_CHARAKTER_RETRY_RESERVE_USD", "0.24")),
       minAbstandMs: Number(env("IG_CHARAKTER_MIN_ABSTAND_MS", "13000")),
+      /* Farbige Sticker-Umrandung ist fuer die neue grosse Szenenkomposition
+         standardmaessig aus. Sie kann spaeter ohne Codeaenderung wieder
+         eingeschaltet werden. */
+      randAktiv: env("IG_CHARAKTER_RAND", "false") === "true",
       zeitlimitMs: Number(env("IG_CHARAKTER_ZEITLIMIT_MS", "180000")),
     },
   },
