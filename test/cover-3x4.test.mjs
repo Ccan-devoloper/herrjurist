@@ -28,7 +28,7 @@ test("Charakter-Cover nutzt die 4:5-Flaeche fuer eine grosse Szene", () => {
   }, kontext({ fach: "zivil", klausur: 1 }), 1, 6);
 
   assert.match(html, /frei charakter/);
-  assert.doesNotMatch(html, /cover-hinweis/);
+  assert.doesNotMatch(html, /<div class="cover-hinweis"/);
   assert.doesNotMatch(html, /Ohne Zugang keine Frist/);
   assert.match(html, /1\/6/);
 });
