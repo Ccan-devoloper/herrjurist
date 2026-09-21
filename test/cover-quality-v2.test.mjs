@@ -17,9 +17,15 @@ test("cover-quality-v2: alle kanonischen Charakterreferenzen sind dekodierbare J
   try {
     for (const ch of Object.values(CHARAKTERE)) {
       const b64 = fs.readFileSync(new URL(`../assets/charaktere/${ch.datei}`, import.meta.url), "utf8").trim();
+      assert.match(b64, /^[A-Za-z0-9+/]+={0,2}$/, `${ch.name}: Referenz enthaelt Nicht-Base64-Zeichen oder Platzhalter`);
       const roh = path.join(dir, `${ch.id}.jpg`);
       const probe = path.join(dir, `${ch.id}-probe.png`);
-      fs.writeFileSync(roh, Buffer.from(b64, "base64"));
+      const bytes = Buffer.from(b64, "base64");
+      assert.equal(bytes[0], 0xff, `${ch.name}: JPEG-SOI fehlt`);
+      assert.equal(bytes[1], 0xd8, `${ch.name}: JPEG-SOI fehlt`);
+      assert.equal(bytes.at(-2), 0xff, `${ch.name}: JPEG-EOI fehlt`);
+      assert.equal(bytes.at(-1), 0xd9, `${ch.name}: JPEG-EOI fehlt`);
+      fs.writeFileSync(roh, bytes);
       assert.doesNotThrow(() => execFileSync("ffmpeg", [
         "-y", "-loglevel", "error", "-i", roh, "-frames:v", "1", probe,
       ]), `${ch.name}: Masterreferenz ist nicht dekodierbar`);

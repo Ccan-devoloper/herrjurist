@@ -296,10 +296,9 @@ function referenzNormalisieren(char) {
   let erfolgreich = false;
   try {
     /* Masterreferenzen behalten ihre Proportion und bekommen lediglich eine
-       neutrale quadratische Uploadflaeche. Frueher wurden winzige Thumbnails
-       auf 384 px aufgeblasen; das vergroesserte nur Pixel, nicht Identitaet.
-       Die neuen Referenzen liegen selbst hochaufgeloest vor und werden fuer
-       Bildmodell UND Vision-QA auf einer 768er Flaeche bereitgestellt. */
+       neutrale quadratische Uploadflaeche. Die Normalisierung veraendert die
+       Identitaet nicht; sie sorgt nur fuer einen stabilen Upload fuer
+       Bildmodell UND Vision-QA. */
     execFileSync(ffmpegPfad(), [
       "-y", "-loglevel", "error", "-i", roh,
       "-vf", `scale=${innen}:${innen}:force_original_aspect_ratio=decrease,pad=${kante}:${kante}:(ow-iw)/2:(oh-ih)/2:color=white`,
