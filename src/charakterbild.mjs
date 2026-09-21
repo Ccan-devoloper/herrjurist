@@ -279,8 +279,9 @@ export function bildKostenUsd(antwort) {
   const bildEin = Number(d.image_tokens || 0);
   const textEin = Number(d.text_tokens || Math.max(0, Number(u.input_tokens || 0) - bildEin));
   const bildAus = Number(od.image_tokens || u.output_tokens || 0);
-  const textAus = Number(od.text_tokens || 0);
-  const usd = bildEin * 8 / 1e6 + textEin * 5 / 1e6 + bildAus * 30 / 1e6 + textAus * 10 / 1e6;
+  /* GPT Image 2.5 berechnet Text nur als Eingabe; das Modell gibt Bilder,
+     keinen kostenpflichtigen Text aus. */
+  const usd = bildEin * 8 / 1e6 + textEin * 5 / 1e6 + bildAus * 30 / 1e6;
   return Number(usd.toFixed(6));
 }
 
@@ -534,6 +535,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
     { quality: reelSzene ? cfg.reelRetryGuete : cfg.retryGuete, reserve: cfg.retryReserveUsd },
   ];
   let korrektur = "";
+  const qaVersuche = [];
 
   for (let i = 0; i < versuche.length; i++) {
     const v = versuche[i];
@@ -556,17 +558,27 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
       const roh = dateiAusAntwort(daten);
       if (!roh) {
         korrektur = "Return one complete transparent PNG illustration containing only the selected recurring characters.";
+        qaVersuche.push({ attempt: i + 1, quality: v.quality, technischOk: false, visuellOk: false, issues: ["Bildantwort ohne PNG"], retryHint: korrektur });
         continue;
       }
 
       fertig = qaTechnisch(roh, cfg.randAktiv ? randFarbe : null);
       if (!fertig) {
         korrektur = "Keep every selected character and important prop fully inside the frame with clean transparent edges and no cropping.";
+        qaVersuche.push({ attempt: i + 1, quality: v.quality, technischOk: false, visuellOk: false, issues: ["technische Alpha-/Crop-QA nicht bestanden"], retryHint: korrektur });
         console.warn(\`  ! Charakterbild technische QA fehlgeschlagen (\${chars.map((x) => x.name).join(" + ")}, Versuch \${i + 1})\`);
         continue;
       }
 
       const visuell = await qaVisuell(fertig.ohneRand || fertig.pfad, chars, ziel, slot);
+      qaVersuche.push({
+        attempt: i + 1,
+        quality: v.quality,
+        technischOk: true,
+        visuellOk: Boolean(visuell.ok),
+        issues: [...(visuell.issues || [])],
+        retryHint: visuell.retryHint || "",
+      });
       if (!visuell.ok) {
         const grund = (visuell.issues || []).slice(0, 4).join("; ") || "visuelle Marken-QA nicht bestanden";
         console.warn(\`  ! Charakterbild visuelle QA fehlgeschlagen (\${chars.map((x) => x.name).join(" + ")}, Versuch \${i + 1}): \${grund.slice(0, 320)}\`);
@@ -584,6 +596,10 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         charakterIds: chars.map((x) => x.id),
         prompt,
         kostenUsd: kosten,
+        quality: v.quality,
+        attempt: i + 1,
+        qaFirstPass: i === 0,
+        qaAttempts: qaVersuche,
         qa: visuell,
       };
     } catch (e) {
