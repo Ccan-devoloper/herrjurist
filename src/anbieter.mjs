@@ -373,7 +373,14 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     griff.buchen(tatsaechlich);
     journal?.abrechnen(reservierung, tatsaechlich);
     erfassenStueck(tatsaechlich, zweck);
-    telemetrie?.aufruf({ ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich, releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true });
+    const bildUsage = ergebnis?.usage || {};
+    telemetrie?.aufruf({
+      ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich,
+      releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true,
+      inputTokens: bildUsage.input_tokens ?? bildUsage.input_tokens_details?.total ?? null,
+      outputTokens: bildUsage.output_tokens ?? null,
+      cacheReadTokens: bildUsage.input_tokens_details?.cached_tokens ?? null,
+    });
     return ergebnis;
   } catch (e) {
     if (e instanceof InvarianteVerletzt) {
