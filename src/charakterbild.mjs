@@ -287,18 +287,21 @@ export function bildKostenUsd(antwort) {
 function referenzNormalisieren(char) {
   const quelle = path.join(basis, char.datei);
   const b64 = fs.readFileSync(quelle, "utf8").trim();
+  const kante = Math.max(512, Math.min(1024, Number(CONFIG.bilder?.charaktere?.referenzKante || 768)));
+  const innen = Math.max(448, kante - 64);
   const roh = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}.jpg`);
-  const norm = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}-384.jpg`);
+  const norm = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}-${kante}.jpg`);
   fs.writeFileSync(roh, Buffer.from(b64, "base64"));
   try {
-    /* Die ersten Testreferenzen waren extrem kleine Thumbnails. GPT Image
-       lehnt solche Dateien als ungueltige Bildeingabe ab. Vor jedem Upload
-       werden sie daher in ein echtes 384x384-JPEG mit weissem Rand
-       normalisiert; der Charakter selbst wird dabei nicht veraendert. */
+    /* Masterreferenzen behalten ihre Proportion und bekommen lediglich eine
+       neutrale quadratische Uploadflaeche. Frueher wurden winzige Thumbnails
+       auf 384 px aufgeblasen; das vergroesserte nur Pixel, nicht Identitaet.
+       Die neuen Referenzen liegen selbst hochaufgeloest vor und werden fuer
+       Bildmodell UND Vision-QA auf einer 768er Flaeche bereitgestellt. */
     execFileSync(ffmpegPfad(), [
       "-y", "-loglevel", "error", "-i", roh,
-      "-vf", "scale=336:336:force_original_aspect_ratio=decrease,pad=384:384:(ow-iw)/2:(oh-ih)/2:color=white",
-      "-frames:v", "1", "-q:v", "3", norm,
+      "-vf", `scale=${innen}:${innen}:force_original_aspect_ratio=decrease,pad=${kante}:${kante}:(ow-iw)/2:(oh-ih)/2:color=white`,
+      "-frames:v", "1", "-q:v", "2", norm,
     ]);
     return norm;
   } finally {
