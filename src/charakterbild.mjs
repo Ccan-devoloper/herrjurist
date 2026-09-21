@@ -63,23 +63,27 @@ function zielText(ziel = {}) {
 }
 
 const REGELN = [
-  /* Fallback nur fuer Altbestand ohne strukturierte Cover-Regie. Neue Inhalte
-     liefern coverCharaktere direkt aus dem Autoren-Aufruf. Die Regeln duerfen
-     bewusst 1, 2 oder 3 Figuren liefern. */
-  { re: /142|unfall|unfallort|verkehrsunfall|flucht/i, ids: ["rex", "mara"] },
-  { re: /versuch|unmittelbar|letzten handgriff/i, ids: ["rex", "mara"] },
-  { re: /besitz|eigentum/i, ids: ["brakk", "form7"] },
-  { re: /anfecht|irrtum|kausal/i, ids: ["form7", "rex"] },
-  { re: /angebot|annahme|schaufenster|invitatio/i, ids: ["form7", "zylla"] },
-  { re: /kuendig|kündig|zugang|fristbeginn/i, ids: ["zylla", "flux"] },
-  { re: /vollzieh|aufschieb|80 abs|verwalt|vwgo|bescheid/i, ids: ["mara", "form7"] },
+  /* Die Reihenfolge ist Regie: konkrete Rechtsbilder vor generischen
+     Methodik-Woertern. Sie reproduziert bewusst die starken Paarungen der
+     freigegebenen Referenzcover und sorgt zugleich dafuer, dass alle sechs
+     Figuren echte Rollen im Feed haben. */
+  { re: /wochenrueckblick|wochenrückblick|themen der woche|wiederholung der woche/i, ids: ["zylla", "form7"] },
+  { re: /142|unfall|unfallort|verkehrsunfall|unerlaub.*entfern|flucht/i, ids: ["rex", "mara"] },
+  { re: /versuch|unmittelbar|letzten handgriff|§\s*22\s*stgb/i, ids: ["rex", "mara"] },
+  { re: /besitz|eigentum|§\s*985|sachenrecht|gutglaub|übereign|uebereign/i, ids: ["brakk", "form7"] },
+  { re: /anfecht|irrtum|kausal|§\s*119/i, ids: ["form7", "rex"] },
+  { re: /angebot|annahme|schaufenster|invitatio|vertragsschluss/i, ids: ["zylla", "form7"] },
+  { re: /kuendig|kündig|arbeitsrecht|zugang.*frist|fristbeginn/i, ids: ["zylla", "flux"] },
+  { re: /zpo|zivilprozess|zwangsvoll|vollstreckungsklausel|zulässigkeit.*begründet|zulaessigkeit.*begruendet/i, ids: ["form7", "flux"] },
+  { re: /vollzieh|aufschieb|80\s*(abs|ii|2|5)|verwaltungsprozess|vwgo|bescheid/i, ids: ["mara", "form7"] },
+  { re: /280|pflichtverletz|leistungsstör|leistungsstoer|schadensersatz|schuldrecht/i, ids: ["rex", "flux"] },
   { re: /mittaeter|mittäter|mehrpersonen|dreiperson|vertretung/i, ids: ["brakk", "zylla", "form7"] },
   { re: /definition|begriff|dogmatik/i, ids: ["flux"] },
-  { re: /mindset|blackout|zeitdruck|perfektion/i, ids: ["mara"] },
-  { re: /schema|pruef|prüf|aufbau|zulaess|zuläss|begruendet|begründet|klausur|methodik/i, ids: ["form7", "flux"] },
-  { re: /straf|tatbestand|diebstahl|raub|koerper|körper|gewalt/i, ids: ["brakk", "form7"] },
+  { re: /mindset|blackout|zeitdruck|perfektion|nervos/i, ids: ["mara"] },
+  { re: /streitstand|ansichten|ergebnis vergleichen|methodik|anspruchsgrundlage|aufbau/i, ids: ["form7", "flux"] },
+  { re: /strafrecht bt|diebstahl|raub|betrug|körperverletz|koerperverletz|gewalt/i, ids: ["brakk", "rex"] },
   { re: /erbe|testament|famil|nachlass|erbrecht/i, ids: ["mara", "flux"] },
-  { re: /sache|mangel|schaden|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
+  { re: /mangel|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
 ];
 
 function idsAusManuellerRegie(ziel = {}) {
