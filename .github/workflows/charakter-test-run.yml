@@ -1,5 +1,5 @@
 name: Charakter-Cover · Einmalige Probe
-# Trigger: 2026-09-21
+# Trigger: 2026-09-21-rerun-2
 
 on:
   push:
@@ -25,6 +25,7 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+      - run: npm test
       - run: npx playwright install --with-deps chromium
       - run: pip install --quiet "rembg[cli]" onnxruntime
       - run: git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
