@@ -8,6 +8,7 @@ on:
       - "src/**"
       - "bin/cover-quality-v2-abnahme.mjs"
       - "bin/cover-quality-v2-single.mjs"
+      - "bin/cover-quality-v2-rerender.mjs"
       - "test/**"
       - ".github/workflows/cover-quality-v2-abnahme.yml"
       - "assets/charaktere/**"
@@ -15,6 +16,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 concurrency:
   group: cover-quality-v2-acceptance
@@ -65,26 +67,47 @@ jobs:
           npm test
 
       - name: Install rendering dependencies
+        if: ${{ !contains(github.event.head_commit.message, '[rerender-only]') }}
         run: |
           sudo apt-get update
           sudo apt-get install -y libttspico-utils python3-pip
           python3 -m pip install --break-system-packages "rembg[cpu]"
 
       - name: Require provider secrets
+        if: ${{ !contains(github.event.head_commit.message, '[rerender-only]') }}
         run: |
           test -n "$OPENAI_API_KEY" || (echo "OPENAI_API_KEY secret missing" && exit 1)
           test -n "$IG_WISSEN_KEY" || (echo "IG_WISSEN_KEY secret missing" && exit 1)
 
+      - name: Download saved QA-approved motif
+        if: ${{ contains(github.event.head_commit.message, '[rerender-only]') }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf .rerender-source
+          mkdir -p .rerender-source
+          gh run download 35658855942 \
+            -n cover-quality-v2-single-strafrecht-b1a98968fca0d5d219fd15f945fe5b795472756d \
+            -D .rerender-source
+
+      - name: Re-render saved §344 cover without provider calls
+        if: ${{ contains(github.event.head_commit.message, '[rerender-only]') }}
+        env:
+          HJ_RERENDER_SOURCE: .rerender-source
+          HJ_HINT_TARGET: "the incomplete revision brief held by Rex"
+          HJ_HINT_ZONE: "auto"
+        run: node bin/cover-quality-v2-rerender.mjs
+
       - name: Run real 10-cover and reel acceptance
-        if: ${{ !contains(github.event.head_commit.message, '[single-cover]') }}
+        if: ${{ !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
         run: node bin/cover-quality-v2-abnahme.mjs
 
       - name: Run exactly one new Strafrecht cover
-        if: ${{ contains(github.event.head_commit.message, '[single-cover]') }}
+        if: ${{ contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
         run: node bin/cover-quality-v2-single.mjs
 
       - name: Upload full visual acceptance artifact
-        if: ${{ always() && !contains(github.event.head_commit.message, '[single-cover]') }}
+        if: ${{ always() && !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
         uses: actions/upload-artifact@v4
         with:
           name: cover-quality-v2-real-${{ github.sha }}
@@ -93,11 +116,20 @@ jobs:
           retention-days: 14
 
       - name: Upload single-cover artifact
-        if: ${{ always() && contains(github.event.head_commit.message, '[single-cover]') }}
+        if: ${{ always() && contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
         uses: actions/upload-artifact@v4
         with:
           name: cover-quality-v2-single-strafrecht-${{ github.sha }}
           path: out/cover-quality-v2-single
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload zero-cost rerender artifact
+        if: ${{ always() && contains(github.event.head_commit.message, '[rerender-only]') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: cover-quality-v2-rerender-${{ github.sha }}
+          path: out/cover-quality-v2-rerender
           if-no-files-found: warn
           retention-days: 14
 
