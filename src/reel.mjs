@@ -477,6 +477,8 @@ export function coverDaten(reel, plan) {
     /* Freigestelltes Motiv (bilder.mjs) statt Icon-Bühne, wenn eines da ist. */
     bild: reel.bild || null, bildFrei: reel.bildFrei !== false, bildQuelle: reel.bildQuelle || null,
     bildBreite: reel.bildBreite || null, bildHoehe: reel.bildHoehe || null,
+    bildTyp: reel.bildTyp || null,
+    coverText: reel.coverText || null,
     fach: reel.fach,
     klausur: reel.klausur,
     fachLabel: FAECHER[reel.fach]?.label,
