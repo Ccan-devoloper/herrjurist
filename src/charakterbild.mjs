@@ -293,6 +293,7 @@ function referenzNormalisieren(char) {
   const roh = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}.jpg`);
   const norm = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}-${kante}.jpg`);
   fs.writeFileSync(roh, Buffer.from(b64, "base64"));
+  let erfolgreich = false;
   try {
     /* Masterreferenzen behalten ihre Proportion und bekommen lediglich eine
        neutrale quadratische Uploadflaeche. Frueher wurden winzige Thumbnails
@@ -304,9 +305,11 @@ function referenzNormalisieren(char) {
       "-vf", `scale=${innen}:${innen}:force_original_aspect_ratio=decrease,pad=${kante}:${kante}:(ow-iw)/2:(oh-ih)/2:color=white`,
       "-frames:v", "1", "-q:v", "2", norm,
     ]);
+    erfolgreich = true;
     return norm;
   } finally {
     fs.rmSync(roh, { force: true });
+    if (!erfolgreich) fs.rmSync(norm, { force: true });
   }
 }
 
@@ -319,10 +322,8 @@ async function ratenfensterWarten(ms = 13000) {
   letzterBildStart = Date.now();
 }
 
-async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimitMs }) {
-  const refs = chars.map(referenzNormalisieren);
-  try {
-    for (let rateVersuch = 0; rateVersuch < 3; rateVersuch++) {
+async function editAufruf({ chars, refs, prompt, quality, size, key, modell, zeitlimitMs }) {
+  for (let rateVersuch = 0; rateVersuch < 3; rateVersuch++) {
       const form = new FormData();
       form.append("model", modell);
       refs.forEach((datei, i) => {
@@ -347,11 +348,8 @@ async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimit
         console.warn(`  ! GPT-Image-Ratenlimit; ${Math.ceil(warten / 1000)} s Pause, dann gleicher Versuch erneut.`);
         await schlafen(warten);
       }
-    }
-    throw new Error("GPT-Image-Ratenlimit nach drei Versuchen");
-  } finally {
-    for (const p of refs) fs.rmSync(p, { force: true });
   }
+  throw new Error("GPT-Image-Ratenlimit nach drei Versuchen");
 }
 
 function dateiAusAntwort(daten) {
@@ -536,8 +534,20 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
   ];
   let korrektur = "";
   const qaVersuche = [];
+  const editRefs = [];
+  try {
+    /* Lokale Referenzvorbereitung muss VOR der Budget-/Provider-Tuer liegen.
+       Sonst sieht ein defektes Master-JPEG wie ein bereits gesendeter Aufruf
+       mit unbekannten Kosten aus, obwohl kein Byte den Anbieter erreicht hat. */
+    for (const ch of chars) editRefs.push(referenzNormalisieren(ch));
+  } catch (e) {
+    for (const p of editRefs) fs.rmSync(p, { force: true });
+    console.warn(`  ! Charakterreferenz lokal nicht lesbar (${chars.map((x) => x.name).join(" + ")}): ${String(e?.message || e).slice(0, 180)}`);
+    return null;
+  }
 
-  for (let i = 0; i < versuche.length; i++) {
+  try {
+    for (let i = 0; i < versuche.length; i++) {
     const v = versuche[i];
     const prompt = charakterPrompt(ziel, chars, korrektur);
     let fertig = null;
@@ -550,7 +560,7 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         zeitlimitMs: cfg.zeitlimitMs,
         slot: slot || ziel?.slug || ziel?.themaId || ziel?.titel || "charakter",
         senden: () => editAufruf({
-          chars, prompt, quality: v.quality, size: cfg.groesse,
+          chars, refs: editRefs, prompt, quality: v.quality, size: cfg.groesse,
           key: CONFIG.bilder.ki.key, modell: cfg.modell, zeitlimitMs: cfg.zeitlimitMs,
         }),
         kostenAusAntwort: bildKostenUsd,
@@ -612,6 +622,9 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
     }
   }
 
-  console.warn(`  ! Kein Charakter-Cover hat beide QA-Schranken bestanden: ${chars.map((x) => x.name).join(" + ")}. Sauberes Icon-Cover statt Markenfehler.`);
-  return null;
+    console.warn(`  ! Kein Charakter-Cover hat beide QA-Schranken bestanden: ${chars.map((x) => x.name).join(" + ")}. Sauberes Icon-Cover statt Markenfehler.`);
+    return null;
+  } finally {
+    for (const p of editRefs) fs.rmSync(p, { force: true });
+  }
 }

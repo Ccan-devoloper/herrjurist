@@ -1,12 +1,34 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { charaktereFuer, charakterPrompt } from "../src/charakterbild.mjs";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
+import { CHARAKTERE, charaktereFuer, charakterPrompt } from "../src/charakterbild.mjs";
 import { titelZeilen, folieHtml, MASSE } from "../src/vorlagen.mjs";
 import { kontext } from "../src/render.mjs";
 import { CONFIG } from "../src/config.mjs";
 import { lernPalette } from "../src/stile.mjs";
 
 const ids = (ziel) => charaktereFuer(ziel).map((x) => x.id);
+
+test("cover-quality-v2: alle kanonischen Charakterreferenzen sind dekodierbare JPEGs", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "hj-ref-test-"));
+  try {
+    for (const ch of Object.values(CHARAKTERE)) {
+      const b64 = fs.readFileSync(new URL(`../assets/charaktere/${ch.datei}`, import.meta.url), "utf8").trim();
+      const roh = path.join(dir, `${ch.id}.jpg`);
+      const probe = path.join(dir, `${ch.id}-probe.png`);
+      fs.writeFileSync(roh, Buffer.from(b64, "base64"));
+      assert.doesNotThrow(() => execFileSync("ffmpeg", [
+        "-y", "-loglevel", "error", "-i", roh, "-frames:v", "1", probe,
+      ]), `${ch.name}: Masterreferenz ist nicht dekodierbar`);
+      assert.ok(fs.existsSync(probe) && fs.statSync(probe).size > 0, `${ch.name}: ffmpeg erzeugt kein Prüfbild`);
+    }
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
 
 test("cover-quality-v2: semantische Charakterauswahl fuer die Kernfaelle", () => {
   assert.deepEqual(ids({ titel: "Wann beginnt der Versuch? § 22 StGB" }), ["rex", "mara"]);
