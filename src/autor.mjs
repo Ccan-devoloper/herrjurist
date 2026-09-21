@@ -154,8 +154,8 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Hashtags: 8–14 Stück, deutsch, kleingeschrieben, spezifisch zum Thema plus diese Kernhashtags: ${CONFIG.hashtags.kern.join(" ")}.
 - kurztitel: 3–6 Wörter für die Story-Ankündigung und das Reel-Cover. Er muss grammatisch aufgehen: entweder eine Nominalphrase ohne Verb („Mord und Totschlag: das Verhältnis“) oder ein vollständiger Satz/eine vollständige Frage („Sitzt alles?“). Falsch wäre „Wochenrückblick: alles sitzen?“ – ein Infinitiv ohne Subjektbezug.
 - BILDREGEL FÜR KARUSSELLS: NUR Folie 1 (Cover/Titelfolie) bekommt eine Charakter-Szene. Alle inneren Karussell-Slides bleiben reine Text-/Strukturfolien: niemals Bildhintergrund oder dekoratives Motiv; dort sind nur Typografie, Kästen, Linien, Pfeile und kleine Icons erlaubt.
-- coverCharaktere: PFLICHT. Wähle die KLEINSTE sinnvolle Gruppe aus diesen IDs: rex, zylla, form7, brakk, flux, mara. Ein Charakter ist richtig, wenn eine einzelne Handlung genügt; mehrere nur, wenn Interaktion, Rollen oder ein Gegensatz dadurch sofort verständlicher werden. Nutze so viele wie nötig, aber nie zusätzliche Figuren nur zur Dekoration. Keine feste Paarlogik. Orientierung: Rex = Reparatur/Fehlersuche/chaotische Handlung, Zylla = Vertrag/Kommunikation/typischer Fehler, FORM-7 = Schema/Akte/Verfahren, Brakk = schwere Streitstände/Sachenrecht/harte Tatsachen, Flux = Erklärung/Dogmatik/Lehre, Mara = Taktik/Prüferblick/Stoppen/Überleben.
-- bildSzene: PFLICHT. Eine ENGLISCHE, konkrete Regieanweisung für die Szene, 4 bis 12 Wörter. Beschreibe die sichtbare Handlung und nur die Gegenstände, die zum sofortigen Verständnis beitragen. Ein Gegenstand ist KEIN Muss. Es dürfen auch mehrere unmittelbar nötige Gegenstände vorkommen, wenn der juristische Gegensatz sonst nicht sichtbar wird. Keine abstrakten Symbolbilder. Beispiele: „student hands professor sealed termination letter“, „miner carries crate while robot shows ownership deed“, „scout blocks mechanic before portal button“.
+- Charakterwahl ist NICHT deine Aufgabe. Die sechs wiederkehrenden Herrjurist-Figuren werden nach dem Text deterministisch vom Marken-System ausgewählt. Erfinde deshalb weder Figuren noch Rollen für das Cover.
+- bildSzene: PFLICHT. Eine ENGLISCHE semantische Bildnotiz in 3 bis 10 Wörtern. Nenne nur die juristische Handlung bzw. hilfreiche Gegenstände, KEINE Personenrollen und KEINE Charaktere. Gute Beispiele: „sealed termination letter beside deadline calendar“, „crate key and ownership document“, „hand stopped just before portal button“. Diese Notiz ist nur Kontext; die endgültige Charakterregie kommt aus dem Marken-System.
 - coverText: optionaler DEUTSCHER Merksatz mit 2 bis 6 Wörtern, höchstens 36 Zeichen. Nur setzen, wenn er neben Titel und Szene einen zusätzlichen Sofort-Aha-Effekt bringt. Nicht den Titel wiederholen. Beispiele: „Ohne Zugang keine Frist“, „Reihenfolge merken“, „Nicht verwechseln“, „Ausnahme zuerst prüfen“. Der Renderer setzt ihn handschriftlich; das Bildmodell schreibt ihn NICHT.
 - bildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.
 
@@ -204,14 +204,13 @@ const BEITRAG_SCHEMA = {
     caption: { type: "string" },
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
-    coverCharaktere: { type: "array", minItems: 1, maxItems: 6, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
     coverText: { type: ["string", "null"] },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
     quellen: { type: ["array", "null"], items: { type: "string" } },
     hooks: { type: ["array", "null"], items: { type: "object", additionalProperties: false, properties: { typ: { type: "string", enum: ["frage", "fehler", "zahl", "aussage"] }, titel: { type: "string" }, zeilen: { type: "array", items: { type: "string" }, minItems: 2, maxItems: 4 } }, required: ["typ", "titel", "zeilen"] } },
   },
-  required: ["folien", "caption", "hashtags", "kurztitel", "coverCharaktere", "coverText", "bildSzene", "bildSzeneAlt", "quellen", "hooks"],
+  required: ["folien", "caption", "hashtags", "kurztitel", "coverText", "bildSzene", "bildSzeneAlt", "quellen", "hooks"],
 };
 
 const STORY_SCHEMA = {
@@ -633,11 +632,6 @@ function hookWaehlen(daten, strategie, thema = null) {
   return bewertet[0];
 }
 
-const COVER_CHAR_IDS = new Set(["rex", "zylla", "form7", "brakk", "flux", "mara"]);
-function coverCharaktereKurz(liste) {
-  if (!Array.isArray(liste)) return [];
-  return [...new Set(liste.map((x) => String(x || "").toLowerCase()).filter((x) => COVER_CHAR_IDS.has(x)))].slice(0, 6);
-}
 function coverTextKurz(text) {
   if (!text) return null;
   const sauber = normKurz(String(text)).replace(/\s+/g, " ").trim();
@@ -678,8 +672,6 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     const seed = thema?.id || folien[0].titel || "";
     if (thema?.prioritaet) { folien[0].prioritaet = thema.prioritaet; folien[0].prioritaetText = prioritaetText(thema.prioritaet, seed); }
     if (!folien[0].hinweis) folien[0].hinweis = auswahl(HINWEISE, `hinweis:${seed}`);
-    const chars = coverCharaktereKurz(daten.coverCharaktere);
-    if (chars.length) folien[0].coverCharaktere = chars;
     const coverText = coverTextKurz(daten.coverText);
     if (coverText) folien[0].coverText = coverText;
     if (!ICONS[folien[0].icon]) folien[0].icon = "paragraf";
@@ -704,7 +696,6 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     caption: (daten.caption || "").trim(),
     hashtags: tags,
     kurztitel: daten.kurztitel || folien[0]?.titel || "",
-    coverCharaktere: coverCharaktereKurz(daten.coverCharaktere),
     coverText: coverTextKurz(daten.coverText),
     bildSzene: daten.bildSzene || null,
     bildSzeneAlt: daten.bildSzeneAlt || null,
@@ -1079,12 +1070,11 @@ const REEL_SCHEMA = {
     caption: { type: "string" },
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
-    coverCharaktere: { type: "array", minItems: 1, maxItems: 6, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
     coverText: { type: ["string", "null"] },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
   },
-  required: ["szenen", "caption", "hashtags", "kurztitel", "coverCharaktere", "coverText", "bildSzene", "bildSzeneAlt"],
+  required: ["szenen", "caption", "hashtags", "kurztitel", "coverText", "bildSzene", "bildSzeneAlt"],
 };
 
 /* Sprechtempo einer deutschen Vorlesestimme: rund 2,4 Wörter je Sekunde.
@@ -1143,7 +1133,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       laengenAnleitung(von, bis, lang),
       REEL_ANLEITUNG,
       hookAnleitung(hookMuster),
-      "\n## Cover-Motiv\ncoverCharaktere: wähle mindestens 1 ID aus rex, zylla, form7, brakk, flux, mara; so wenige wie möglich, so viele wie für die Rechtsidee nötig. Keine feste Paarlogik.\ncoverText: optional 2 bis 6 deutsche Wörter (max. 36 Zeichen), nur wenn ein zusätzlicher Merksatz das Cover sofort verständlicher macht. Nicht den Titel wiederholen.\nbildSzene: eine ENGLISCHE konkrete Regieanweisung in 4 bis 12 Wörtern. Beschreibe Handlung und nur die wirklich hilfreichen Gegenstände; null ist hier nicht erlaubt. Ein Gegenstand ist kein Muss, mehrere sind erlaubt, wenn sie fachlich nötig sind.\nbildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.",
+      "\n## Cover-Motiv\nDie Charakterwahl übernimmt nachher deterministisch das Herrjurist-Marken-System; nenne hier keine Figuren oder Personenrollen.\ncoverText: optional 2 bis 6 deutsche Wörter (max. 36 Zeichen), nur wenn ein zusätzlicher Merksatz das Cover sofort verständlicher macht. Nicht den Titel wiederholen.\nbildSzene: eine ENGLISCHE semantische Bildnotiz in 3 bis 10 Wörtern: nur Handlung/Gegenstand, keine Personenrolle, keine Figur. null ist hier nicht erlaubt.\nbildSzeneAlt: eine zweite, deutlich andere sachliche Bildnotiz zum selben Thema als Ersatz; sonst null.",
       `\n## Normen\n${NORM_REGEL}\n${NORM_REGEL_STIMME}`,
       anlass ? `\n## Anlass\n${anlass.titel}: ${anlass.kontext}` : "",
       `Phase im Prüfungsjahr: ${phase(datum)}.`,
@@ -1168,7 +1158,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       if (o.sprecher) o.sprecher = normGesprochen(o.sprecher);
       return o;
     });
-    const reel = { format: "reel", fach, klausur, fachLabel: FAECHER[fach]?.label, themaId: thema?.id || null, szenen, caption: normKurz((daten.caption || "").trim()), hashtags: [...new Set([...(daten.hashtags || []).map((h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase()), ...CONFIG.hashtags.kern])].slice(0, CONFIG.hashtags.maxJeBeitrag), kurztitel: daten.kurztitel || szenen[0]?.titel || "", coverCharaktere: coverCharaktereKurz(daten.coverCharaktere), coverText: coverTextKurz(daten.coverText), bildSzene: daten.bildSzene || null, bildSzeneAlt: daten.bildSzeneAlt || null };
+    const reel = { format: "reel", fach, klausur, fachLabel: FAECHER[fach]?.label, themaId: thema?.id || null, szenen, caption: normKurz((daten.caption || "").trim()), hashtags: [...new Set([...(daten.hashtags || []).map((h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase()), ...CONFIG.hashtags.kern])].slice(0, CONFIG.hashtags.maxJeBeitrag), kurztitel: daten.kurztitel || szenen[0]?.titel || "", coverText: coverTextKurz(daten.coverText), bildSzene: daten.bildSzene || null, bildSzeneAlt: daten.bildSzeneAlt || null };
     /* Prüfung über die Folien-Logik: Szenen als Folien, Sprechertext als Text. */
     const ergebnis = pruefeBeitrag({ folien: [{ art: "titel", titel: szenen[0]?.titel || "" }, ...szenen.slice(1).map((s) => ({ art: "text", titel: s.titel, text: `${s.text || ""} ${s.sprecher}` })), { art: "cta" }], caption: reel.caption, hashtags: reel.hashtags });
     ergebnis.fehler.push(...pruefeHook(szenen[0]));
