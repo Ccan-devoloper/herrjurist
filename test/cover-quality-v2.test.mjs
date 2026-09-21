@@ -154,7 +154,7 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   const ctx = kontext({ fach: "zpo", klausur: 1, fachLabel: "ZPO" });
   const cssText = buntCss(ctx);
   assert.match(cssText, /\.art-titel\{padding-left:52px;padding-right:52px\}/);
-  assert.match(cssText, /\.art-titel>\.kopf\{left:-52px;top:-72px;right:-52px\}/);
+  assert.match(cssText, /\.art-titel>\.kopf\{left:-52px;top:0;right:-52px\}/);
   assert.match(cssText, /font-size:104px/);
   assert.match(cssText, /\.frei\.charakter\{right:-12px;bottom:-6px;width:1050px;height:980px\}/);
   assert.match(cssText, /\.art-titel h1\.titel-stack\{[^}]*margin-top:10px/);

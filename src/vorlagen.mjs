@@ -258,7 +258,7 @@ export function buntCss(ctx) {
 /* Ecke oben links: dunkles Band mit dem Fach; oben rechts der Zähler im weißen Kreis */
 .kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}
 /* Fachband auf Titelfolien buendig an die obere linke Bildkante ziehen. */
-.art-titel>.kopf{left:-52px;top:-72px;right:-52px}
+.art-titel>.kopf{left:-52px;top:0;right:-52px}
 .kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1}
 .kopf .etikett .punkt{display:none}
 .kopf .zaehler{position:absolute;right:38px;top:30px;width:68px;height:68px;border-radius:50%;background:${p.dunkel};color:#fff;font-family:"Inter";font-weight:700;font-size:25px;display:flex;align-items:center;justify-content:center}
