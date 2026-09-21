@@ -49,11 +49,13 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
-      # Several regression tests synthesize fixtures with ffmpeg.
-      - name: Install test media dependency
+      # Regression tests synthesize ffmpeg fixtures and render one Playwright
+      # screenshot, so both runtime dependencies must exist before npm test.
+      - name: Install test media dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
+          npx playwright install --with-deps chromium
 
       - name: Static and regression checks
         run: |
@@ -64,7 +66,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libttspico-utils python3-pip
-          npx playwright install --with-deps chromium
           python3 -m pip install --break-system-packages "rembg[cpu]"
 
       - name: Require provider secrets
