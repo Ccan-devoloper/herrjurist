@@ -38,17 +38,17 @@ const beispielReel = JSON.parse(fs.readFileSync(path.resolve(hier, "../beispiele
 export const FORMATE = {
   pruefungsfrage: {
     label: "Prüfungsfrage",
-    anleitung: "Folie 1: eine echte Prüfungsfrage als Aufhänger (so, wie sie in der Klausur oder mündlichen Prüfung fallen könnte). Dann entscheide dich für einen von zwei Wegen und halte ihn durch: ENTWEDER du antwortest abstrakt – dann kommen auf keiner Folie erfundene Personen, Namen oder Beträge vor – ODER du legst einen Fall zugrunde; dann gehört Folie 2 dem Sachverhalt (art text, Titel „Sachverhalt“): der Fall in 2–4 Sätzen, mit allen Namen, Beträgen und Daten, die die Lösung danach benutzt. Wer auf Folie 3 „Finn“ liest, muss auf Folie 2 erfahren haben, wer Finn ist. Die Caption zählt dafür nicht – sie ist zugeklappt, und die meisten lesen nur die Folien. Danach: die Antwort in klaren Schritten oder Punkten mit den tragenden Normen. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
+    anleitung: "Folie 1: eine echte Prüfungsfrage als Aufhänger, aber möglichst mit einem kurzen Prüfimpuls im selben Titel, der schon Orientierung gibt und trotzdem das Warum offenlässt (z. B. „§ 80 Abs. 5 VwGO? Erst Vollziehung prüfen“). Dann entscheide dich für einen von zwei Wegen und halte ihn durch: ENTWEDER du antwortest abstrakt – dann kommen auf keiner Folie erfundene Personen, Namen oder Beträge vor – ODER du legst einen Fall zugrunde; dann gehört Folie 2 dem Sachverhalt (art text, Titel „Sachverhalt“): der Fall in 2–4 Sätzen, mit allen Namen, Beträgen und Daten, die die Lösung danach benutzt. Wer auf Folie 3 „Finn“ liest, muss auf Folie 2 erfahren haben, wer Finn ist. Die Caption zählt dafür nicht – sie ist zugeklappt, und die meisten lesen nur die Folien. Danach: die Antwort in klaren Schritten oder Punkten mit den tragenden Normen. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
     folien: ["titel", "text (Sachverhalt, nur wenn der Beitrag einen Fall erzählt)", "text|schritte", "text|vergleich", "merke", "cta"],
   },
   fehlerfalle: {
     label: "Fehlerfalle",
-    anleitung: "Folie 1: die Falle als Frage oder Warnung. Folie 2: Vergleich „Richtig“ (links) vs. „Klassischer Fehler“ (rechts). Folie 3: die Begründung mit Norm. Letzte Folie: CTA.",
+    anleitung: "Folie 1: die Falle als konkrete Warnung oder Frage mit Prüfimpuls – lieber „Anfechtung: Erst Irrtum, dann Kausalität“ als eine bloß offene Frage. Folie 2: Vergleich „Richtig“ (links) vs. „Klassischer Fehler“ (rechts). Folie 3: die Begründung mit Norm. Letzte Folie: CTA.",
     folien: ["titel", "vergleich", "text", "cta"],
   },
   schema: {
     label: "Prüfschema",
-    anleitung: "Folie 1: „Wie prüfe ich …?“. Folie 2 (und ggf. 3): das Schema als nummerierte Schritte, je Schritt ein Titel und ein knapper Hinweis, ggf. Norm. Folie danach: worauf Korrektoren achten (Punkte). Letzte Folie: CTA. Das Schema muss eigenständig strukturiert sein – nicht die Gliederung eines Lehrbuchs oder Skripts abbilden.",
+    anleitung: "Folie 1: der Prüfablauf als merkfähiger Hook – bevorzugt eine konkrete Reihenfolge oder Priorität („Zulässigkeit kommt vor Begründetheit“) statt nur „Wie prüfe ich …?“. Folie 2 (und ggf. 3): das Schema als nummerierte Schritte, je Schritt ein Titel und ein knapper Hinweis, ggf. Norm. Folie danach: worauf Korrektoren achten (Punkte). Letzte Folie: CTA. Das Schema muss eigenständig strukturiert sein – nicht die Gliederung eines Lehrbuchs oder Skripts abbilden.",
     folien: ["titel", "schritte", "schritte|text", "merke", "cta"],
   },
   rechenweg: {
@@ -63,17 +63,17 @@ export const FORMATE = {
   },
   vergleich: {
     label: "Gegenüberstellung",
-    anleitung: "Folie 1: „Was ist der Unterschied zwischen A und B?“. Folie 2: Vergleich in zwei Spalten. Folie 3: Wann welche Seite greift, mit Norm. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
+    anleitung: "Folie 1: die Abgrenzung schon als prägnanter Gegensatz („Besitz ist nicht automatisch Eigentum“) oder als konkrete Entscheidungsfrage mit Hinweis. Folie 2: Vergleich in zwei Spalten. Folie 3: Wann welche Seite greift, mit Norm. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
     folien: ["titel", "vergleich", "text", "merke", "cta"],
   },
   streitstand: {
     label: "Streitstand",
-    anleitung: "Folie 1: die Streitfrage als Frage („Wie ist das Verhältnis von A zu B?“). Folie 2: der Sachverhalt in zwei Sätzen, an dem der Streit sichtbar wird. Folie 3: die Ansichten gegenübergestellt – links die Rechtsprechung, rechts die Gegenansicht, je mit dem tragenden Argument. Folie 4: der Streitentscheid – welche Ansicht überzeugt und warum, oder wann der Streit dahinstehen kann. Vorletzte Folie: Merksatz. Letzte Folie: CTA. Wichtig: Keine Ansicht als „falsch“ abtun; in der Klausur zählt die saubere Auseinandersetzung.",
+    anleitung: "Folie 1: die Streitfrage mit erkennbarem Konflikt und Orientierung; eine Frage ist gut, wenn der Titel zugleich zeigt, woran die Entscheidung hängt. Folie 2: der Sachverhalt in zwei Sätzen, an dem der Streit sichtbar wird. Folie 3: die Ansichten gegenübergestellt – links die Rechtsprechung, rechts die Gegenansicht, je mit dem tragenden Argument. Folie 4: der Streitentscheid – welche Ansicht überzeugt und warum, oder wann der Streit dahinstehen kann. Vorletzte Folie: Merksatz. Letzte Folie: CTA. Wichtig: Keine Ansicht als „falsch“ abtun; in der Klausur zählt die saubere Auseinandersetzung.",
     folien: ["titel", "text", "vergleich", "text", "merke", "cta"],
   },
   klausurtechnik: {
     label: "Klausurtechnik",
-    anleitung: "Folie 1: eine Frage zur Klausurstrategie (Zeit, Aufbau, Darstellung, Punktevergabe). Folien 2–3: konkrete, umsetzbare Tipps als Punkte oder Schritte. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
+    anleitung: "Folie 1: eine merkfähige Klausurregel oder zugespitzte Frage mit direktem Handlungsimpuls (Zeit, Aufbau, Darstellung, Punktevergabe). Folien 2–3: konkrete, umsetzbare Tipps als Punkte oder Schritte. Vorletzte Folie: Merksatz. Letzte Folie: CTA.",
     folien: ["titel", "schritte", "text", "merke", "cta"],
   },
   wochenrueckblick: {
