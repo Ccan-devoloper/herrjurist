@@ -280,7 +280,7 @@ async function reelAbnahme() {
   for (let i = 0; i < basisReel.szenen.length; i++) {
     const slot = `reel-szene-${String(i + 1).padStart(2, "0")}`;
     const s = basisReel.szenen[i];
-    const ziel = { ...basisReel, ...s, format: "reel-szene", slug: slot };
+    const ziel = { ...basisReel, ...s, format: "reel-szene", slug: slot, coverCharaktere: ["rex", "flux"] };
     const gewaehlt = ids(ziel);
     const erwartet = ["rex", "flux"];
     if (JSON.stringify(gewaehlt) !== JSON.stringify(erwartet)) throw new Error(`${slot}: Charakterwahl ${gewaehlt.join("+")} statt rex+flux`);
