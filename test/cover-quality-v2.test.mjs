@@ -5,7 +5,7 @@ import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { CHARAKTERE, charaktereFuer, charakterPrompt } from "../src/charakterbild.mjs";
-import { titelZeilen, folieHtml, MASSE } from "../src/vorlagen.mjs";
+import { titelZeilen, folieHtml, buntCss, BUEHNE_CHARAKTER, MASSE } from "../src/vorlagen.mjs";
 import { kontext } from "../src/render.mjs";
 import { CONFIG } from "../src/config.mjs";
 import { lernPalette } from "../src/stile.mjs";
@@ -120,6 +120,34 @@ test("cover-quality-v2: Produktionsparameter und 4:5-Format entsprechen dem Refe
   assert.equal(CONFIG.bilder.charaktere.reelGuete, "medium");
   assert.equal(CONFIG.bilder.charaktere.reelRetryGuete, "high");
   assert.equal(CONFIG.bilder.charaktere.qaAktiv, true);
+});
+
+test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesichert", () => {
+  const archiv = fs.readFileSync(new URL("../assets/referenzen/cover-v2/reference-images.zip", import.meta.url));
+  assert.ok(archiv.length > 10_000, "Referenzarchiv ist unerwartet leer/klein");
+  assert.equal(archiv[0], 0x50, "ZIP-Signatur P fehlt");
+  assert.equal(archiv[1], 0x4b, "ZIP-Signatur K fehlt");
+
+  assert.deepEqual(BUEHNE_CHARAKTER, { flaeche: 1040 * 820 * 0.98, maxB: 1060, maxH: 820 });
+
+  const ctx = kontext({ fach: "zpo", klausur: 1, fachLabel: "ZPO" });
+  const cssText = buntCss(ctx);
+  assert.match(cssText, /\.art-titel\{padding-left:52px;padding-right:52px\}/);
+  assert.match(cssText, /\.art-titel>\.kopf\{left:-52px;top:-72px;right:-52px\}/);
+  assert.match(cssText, /font-size:104px/);
+  assert.match(cssText, /\.frei\.charakter\{right:-6px;bottom:0;width:940px;height:800px\}/);
+  assert.match(cssText, /\.cover-hinweis\{[^}]*bottom:490px/);
+  assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
+
+  const html = folieHtml({
+    art: "titel",
+    titel: "Zulässigkeit kommt vor Begründetheit",
+    titelZeilen: ["Zulässigkeit", "kommt vor", "Begründetheit"],
+    coverBadge: "Klausurrelevant",
+    coverText: "Reihenfolge merken",
+    icon: "dokument",
+  }, ctx, 1, 6);
+  assert.match(html, />1\/6</);
 });
 
 test("cover-quality-v2: vereinbarte Lernfamilienfarben sind permanent verdrahtet", () => {
