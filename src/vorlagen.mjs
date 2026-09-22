@@ -728,7 +728,7 @@ const FOLIEN = {
     const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
     const badge = String(f.coverBadge || f.prioritaetText || "").trim();
     return `
-    ${kopf(ctx, n > 1 ? `${i}/${n}` : "")}
+    ${kopf(ctx, "")}
     ${titelBlock(f.titel, f.titelZeilen, ctx)}
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
     ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}

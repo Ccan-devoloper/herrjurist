@@ -197,7 +197,13 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
     bildHoehe: 700,
     icon: "dokument",
   }, ctx, 1, 6);
-  assert.match(html, />1\/6</);
+  assert.doesNotMatch(html, />1\/6</);
+  const inner = folieHtml({
+    art: "text",
+    titel: "Zwischenfolie",
+    text: "Inhalt",
+  }, ctx, 2, 6);
+  assert.match(inner, />2\/6</);
   assert.match(html, /class="cover-hinweis"[^>]*data-note-x="0.24"/);
   assert.match(html, />Reihenfolge merken<\/div>/);
   assert.doesNotMatch(html, /class="cover-hinweis-pfeil"/);
