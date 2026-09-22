@@ -29,7 +29,7 @@ const budget = budgetStarten({
   protokoll: () => {},
 });
 budgetSetzen({ limitUsd: 0.35, antwortLimitUsd: 0.35 });
-kontextSetzen({ budget, telemetrie, journal: null, kanal: "herrjurist-cover-quality-v2-single-sterbehilfe", datum: "acceptance-single" });
+kontextSetzen({ budget, telemetrie, journal: null, kanal: "herrjurist-cover-quality-v2-single-alic", datum: "acceptance-single" });
 
 const round = (n) => Number(Number(n || 0).toFixed(6));
 const sum = (liste, feld = "actualUsd") => round(liste.reduce((a, x) => a + (Number.isFinite(Number(x?.[feld])) ? Number(x[feld]) : 0), 0));
@@ -55,11 +55,11 @@ function motivAufraeumen(motiv) {
 }
 
 function themaWaehlen() {
-  const sterbehilfe = /sterbehilfe|t[oö]tung\s+auf\s+verlangen|suizid|behandlungsabbruch|patientenverf[uü]gung|§\s*216\s*stgb|216\s*stgb/i;
+  const alic = /actio\s+libera\s+in\s+causa|a\.\s*l\.\s*i\.\s*c\.|alic/i;
   const prioritaet = { hoch: 0, mittel: 1, niedrig: 2 };
   const kandidaten = themenpool()
     .filter((t) => Number(t.klausur) === 2)
-    .filter((t) => sterbehilfe.test([
+    .filter((t) => alic.test([
       t.titel,
       ...(t.normen || []),
       ...(t.kern?.lernziele || []),
@@ -73,7 +73,7 @@ function themaWaehlen() {
       || String(a.id).localeCompare(String(b.id))
     );
   if (!kandidaten.length) {
-    throw new Error("Im entschlüsselten Strafrecht-Themenpool wurde kein Sterbehilfe-/§216-/Suizid-/Behandlungsabbruch-Thema gefunden. Kein Fallback-Thema wird erzeugt.");
+    throw new Error("Im entschlüsselten Strafrecht-Themenpool wurde kein Thema zur actio libera in causa gefunden. Kein Fallback-Thema wird erzeugt.");
   }
   return kandidaten[0];
 }
@@ -125,7 +125,7 @@ async function regieErzeugen(thema, fachLabel) {
     params,
     optional: false,
     admissionInputTokens: 2200,
-    slot: "single-cover-regie-sterbehilfe",
+    slot: "single-cover-regie-alic",
     promptVersion: "single-cover-regie-v1",
   });
   const roh = responsesText(antwort);
@@ -139,7 +139,7 @@ try {
   const thema = themaWaehlen();
   const fachLabel = FAECHER[thema.fach]?.label || "Strafrecht";
   const regie = await regieErzeugen(thema, fachLabel);
-  const slot = "single-strafrecht-sterbehilfe";
+  const slot = "single-strafrecht-alic";
   const ziel = {
     format: "pruefungsfrage",
     fach: thema.fach,
@@ -246,7 +246,7 @@ try {
     };
     fs.writeFileSync(path.join(out, "manifest.json"), JSON.stringify(report, null, 2));
     fs.writeFileSync(path.join(out, "README.txt"), [
-      "Herrjurist Cover Quality v2 – single Strafrecht Sterbehilfe acceptance",
+      "Herrjurist Cover Quality v2 – single Strafrecht Actio-libera-in-causa acceptance",
       `Topic: ${thema.titel}`,
       `Artifact cover: ${path.relative(root, datei)}`,
       `Measured provider cost: $${report.costUsd.total.toFixed(6)}`,
