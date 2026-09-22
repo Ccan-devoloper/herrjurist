@@ -259,7 +259,8 @@ export function buntCss(ctx) {
 .kopf{position:absolute;left:0;top:0;right:0;height:120px;padding:0}
 /* Fachband auf Titelfolien buendig an die obere linke Bildkante ziehen. */
 .art-titel>.kopf{left:-52px;top:0;right:-52px}
-.kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1}
+.kopf .etikett{position:absolute;left:0;top:0;font-family:"Inter";font-weight:700;font-size:28px;letter-spacing:.02em;text-transform:none;background:${p.dunkel};color:#fff;padding:16px 46px 16px 40px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);flex-direction:row;line-height:1.1;white-space:nowrap;box-sizing:border-box}
+.art-titel>.kopf .etikett{padding-left:92px;padding-right:52px}
 .kopf .etikett .punkt{display:none}
 .kopf .zaehler{position:absolute;right:38px;top:30px;width:68px;height:68px;border-radius:50%;background:${p.dunkel};color:#fff;font-family:"Inter";font-weight:700;font-size:25px;display:flex;align-items:center;justify-content:center}
 .kopf .zaehler:empty{display:none}
@@ -273,7 +274,7 @@ h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;b
 /* Titelfolie: echte Einzelpillen pro Sinneinheit. Weniger Innenabstand und
    nur 8 px Abstand zwischen den Zeilen erzeugen einen kompakten, auf dem
    Handy schnell scanbaren Titelblock. */
-.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:7px;width:fit-content;max-width:100%;margin-top:10px;font-size:104px;line-height:.99;letter-spacing:-.025em;text-wrap:initial}
+.art-titel h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:5px;width:fit-content;max-width:100%;margin-top:10px;font-size:104px;line-height:.99;letter-spacing:-.025em;text-wrap:initial}
 .art-titel h1.titel-stack.klein{font-size:94px}
 .art-titel h1.titel-stack.winzig{font-size:84px}
 .art-titel h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:976px;background:${p.dunkel};color:#fff;padding:12px 27px 14px;border-radius:30px;white-space:nowrap}
@@ -342,8 +343,7 @@ h1 em{color:${p.akzent2}}
    Text und den Markenpfeil an diesen KI-bestimmten Koordinaten. */
 .cover-hinweis{position:absolute;left:0;top:0;z-index:7;max-width:360px;width:max-content;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-align:center;text-wrap:balance;pointer-events:none;transform-origin:center center}
 .cover-hinweis-pfeil{position:absolute;inset:0;width:100%;height:100%;z-index:6;overflow:visible;pointer-events:none;color:${p.dunkel}}
-.cover-hinweis-kurve{fill:none;stroke:currentColor;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
-.cover-hinweis-arrowhead{fill:currentColor;stroke:none}
+.cover-hinweis-kurve,.cover-hinweis-spitze{fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -614,6 +614,33 @@ function zeilenMitNormZitat(teil, max = 19) {
   ].filter(Boolean);
 }
 
+/* Explizite KI-Zeilen sind redaktionell wertvoll, aber keine Zeile darf
+   technisch aus ihrer Pille laufen. Wir teilen deshalb nur wirklich zu lange
+   Mehrwort-Zeilen weiter auf. Einzelne lange Fachwoerter bleiben ungeteilt und
+   nutzen die vorhandenen festen Schriftstufen. */
+function expliziteTitelZeilenAnpassen(zeilen, max = 21) {
+  let out = [...zeilen];
+  let guard = 0;
+  while (out.length < 4 && guard++ < 8) {
+    let index = -1;
+    let laenge = max;
+    for (let i = 0; i < out.length; i++) {
+      const z = String(out[i] || "").trim();
+      if (!/\s/.test(z)) continue;
+      const l = sichtbareLaenge(z);
+      if (l > laenge) { laenge = l; index = i; }
+    }
+    if (index < 0) break;
+
+    const original = out[index];
+    const mitNorm = zeilenMitNormZitat(original, Math.min(max, 19));
+    let split = mitNorm && mitNorm.length > 1 ? mitNorm : zeilenGreedy(original, max);
+    if (split.length <= 1 || out.length - 1 + split.length > 4) break;
+    out.splice(index, 1, ...split);
+  }
+  return out;
+}
+
 /* Semantische Zeilen statt Browser-Zufallsumbruch. Jede dunkle Pille ist eine
    Sinneinheit: Norm, Gegensatz, Reihenfolge oder Ergebnis. Neue Beiträge
    liefern die Zeilen aus der Hook-Regie; Altbestand bekommt einen
@@ -623,7 +650,11 @@ export function titelZeilen(titel, vorgegeben = null) {
   const explizit = Array.isArray(vorgegeben)
     ? vorgegeben.map((x) => String(x || "").replace(/\s+/g, " ").trim()).filter(Boolean).slice(0, 4)
     : [];
-  if (explizit.length >= 2 && !haengenderNormbruch(explizit)) return explizit;
+  if (explizit.length >= 2 && !haengenderNormbruch(explizit)) {
+    const angepasst = expliziteTitelZeilenAnpassen(explizit, 21);
+    const technischPlausibel = angepasst.every((z) => sichtbareLaenge(z) <= 21 || !/\s/.test(z));
+    if (technischPlausibel && angepasst.length <= 4 && !haengenderNormbruch(angepasst)) return angepasst;
+  }
 
   const relation = sauber.match(/^(.+?)\s+(kommt vor|ist nicht automatisch)\s+(.+)$/i);
   if (relation) return [relation[1], relation[2], relation[3]];
@@ -659,8 +690,9 @@ export function titelZeilen(titel, vorgegeben = null) {
 function titelKlasse(t, zeilen = null) {
   const z = titelZeilen(t, zeilen);
   const max = Math.max(0, ...z.map(sichtbareLaenge));
-  const l = (t || "").length;
-  return l > 86 || max > 23 ? "winzig" : l > 64 || max > 19 ? "klein" : "";
+  if (max > 22) return "winzig";
+  if (max > 19 || (z.length === 4 && max > 16)) return "klein";
+  return "";
 }
 
 function coverHinweisPlan(f = {}) {
@@ -682,7 +714,7 @@ function coverHinweisPlan(f = {}) {
 function coverHinweisHtml(f = {}) {
   const p = coverHinweisPlan(f);
   if (!p) return "";
-  return `<div class="cover-hinweis" data-note-x="${p.noteX}" data-note-y="${p.noteY}" data-target-x="${p.targetX}" data-target-y="${p.targetY}" data-rotation="${p.rotationDeg}" data-bend="${p.bend}">${esc(p.text)}</div><svg class="cover-hinweis-pfeil" viewBox="0 0 1080 1350" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="cover-arrow-head" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L11,6 L0,12" class="cover-hinweis-arrowhead"/></marker></defs><path class="cover-hinweis-kurve" d="" marker-end="url(#cover-arrow-head)"/></svg>`;
+  return `<div class="cover-hinweis" data-note-x="${p.noteX}" data-note-y="${p.noteY}" data-target-x="${p.targetX}" data-target-y="${p.targetY}" data-rotation="${p.rotationDeg}" data-bend="${p.bend}">${esc(p.text)}</div><svg class="cover-hinweis-pfeil" viewBox="0 0 1080 1350" preserveAspectRatio="none" aria-hidden="true"><path class="cover-hinweis-kurve" d=""/><path class="cover-hinweis-spitze" d=""/></svg>`;
 }
 
 function titelBlock(titel, zeilen, ctx) {
