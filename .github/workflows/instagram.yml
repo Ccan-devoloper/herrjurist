@@ -5,6 +5,8 @@ name: Instagram-Bot · Herr Jurist
 # Hinweis: GitHub registriert den Zeitplan erst, wenn diese Datei auf dem
 # Standardzweig geändert wurde; ein Lauf ist idempotent (nur fällige Einträge).
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "35 5-20 * * *"
   workflow_dispatch:
