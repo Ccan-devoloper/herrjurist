@@ -9,6 +9,8 @@ on:
       - "bin/cover-quality-v2-abnahme.mjs"
       - "bin/cover-quality-v2-single.mjs"
       - "bin/cover-quality-v2-rerender.mjs"
+      - "bin/cover-quality-v2-oer-dryrun.mjs"
+      - "prompts/herrjurist-daily-finalization.txt"
       - "test/**"
       - ".github/workflows/cover-quality-v2-abnahme.yml"
       - "assets/charaktere/**"
@@ -98,16 +100,20 @@ jobs:
           HJ_HINT_ZONE: "auto"
         run: node bin/cover-quality-v2-rerender.mjs
 
+      - name: Run one exact-prompt public-law cover dry-run
+        if: ${{ contains(github.event.head_commit.message, '[single-oer-dryrun]') }}
+        run: node bin/cover-quality-v2-oer-dryrun.mjs
+
       - name: Run real 10-cover and reel acceptance
-        if: ${{ !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
+        if: ${{ !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
         run: node bin/cover-quality-v2-abnahme.mjs
 
       - name: Run exactly one new Strafrecht cover
-        if: ${{ contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
+        if: ${{ contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
         run: node bin/cover-quality-v2-single.mjs
 
       - name: Upload full visual acceptance artifact
-        if: ${{ always() && !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
+        if: ${{ always() && !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
         uses: actions/upload-artifact@v4
         with:
           name: cover-quality-v2-real-${{ github.sha }}
@@ -121,6 +127,15 @@ jobs:
         with:
           name: cover-quality-v2-single-strafrecht-${{ github.sha }}
           path: out/cover-quality-v2-single
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload public-law exact-prompt dry-run artifact
+        if: ${{ always() && contains(github.event.head_commit.message, '[single-oer-dryrun]') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: cover-quality-v2-oer-prompt-dryrun-${{ github.sha }}
+          path: out/cover-quality-v2-oer-dryrun
           if-no-files-found: warn
           retention-days: 14
 
