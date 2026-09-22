@@ -1,3 +1,5 @@
+import { MANUELLER_COVER_FALLNAMEN_HINWEIS } from "./charaktere.mjs";
+
 /* ==========================================================================
    Manuelle Tagesfinalisierung.
 
@@ -26,6 +28,7 @@
    sichtbar ist. Die lokale Pruefung erzwingt sie zusaetzlich vor dem Posten. */
 export const MANUELLE_FINALISIERUNG_REGELN = Object.freeze({
   zahl: "Bei art=zahl: konkrete, thematisch tragende Ziffernangabe; max. 8 Zeichen; mindestens eine Ziffer; keine Wortwerte und keine bloße Paragraphennummer.",
+  charakterNamen: MANUELLER_COVER_FALLNAMEN_HINWEIS,
 });
 
 export function manuellFinalisiert(inhalt) {

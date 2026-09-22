@@ -14,6 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { CONFIG } from "./config.mjs";
+import { CHARAKTER_NAMEN } from "./charaktere.mjs";
 import { ffmpegPfad } from "./stimme.mjs";
 import { bildAufruf, openaiAufruf, openaiBildEditSenden } from "./anbieter.mjs";
 import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, freistellen } from "./freistellen.mjs";
@@ -23,27 +24,27 @@ const basis = path.resolve(hier, "../assets/charaktere");
 
 export const CHARAKTERE = Object.freeze({
   rex: {
-    id: "rex", name: "Rex Rohrbruch", datei: "rex-rohrbruch.jpg.b64",
+    id: "rex", name: CHARAKTER_NAMEN.rex, datei: "rex-rohrbruch.jpg.b64",
     kurz: "lanky light-skinned anxious male portal mechanic with messy brown hair, patched blue-grey work suit, brown boots, tool backpack and traces of green portal fluid",
   },
   zylla: {
-    id: "zylla", name: "Zylla Glitch", datei: "zylla-glitch.jpg.b64",
+    id: "zylla", name: CHARAKTER_NAMEN.zylla, datei: "zylla-glitch.jpg.b64",
     kurz: "slim green-skinned alien woman with magenta swept hair, two antennae, oversized lavender iridescent jacket, black top, black skinny trousers and pink-white sneakers",
   },
   form7: {
-    id: "form7", name: "FORM-7", datei: "form-7.jpg.b64",
+    id: "form7", name: CHARAKTER_NAMEN.form7, datei: "form-7.jpg.b64",
     kurz: "floating pale-blue round-headed bureaucratic drone with sleepy half-lidded eyes, dark side panels, a small gold antenna-crown, white-gold uniform torso, clipboard and tiny side pods",
   },
   brakk: {
-    id: "brakk", name: "Brakk Quarzfaust", datei: "brakk-quarzfaust.jpg.b64",
+    id: "brakk", name: CHARAKTER_NAMEN.brakk, datei: "brakk-quarzfaust.jpg.b64",
     kurz: "very muscular tan miner with a square jaw, purple-blue crystal growths on shoulders and head, miner headlamp, brown bib overalls, heavy grey boots and gloves",
   },
   flux: {
-    id: "flux", name: "Prof. Wurmfried Flux", datei: "prof-wurmfried-flux.jpg.b64",
+    id: "flux", name: CHARAKTER_NAMEN.flux, datei: "prof-wurmfried-flux.jpg.b64",
     kurz: "tall pink segmented worm-like professor with large round glasses, sparse hair, cheerful face, white-gold academic tunic, pointer and round hover base",
   },
   mara: {
-    id: "mara", name: "Mara Sternpfad", datei: "mara-sternpfad.jpg.b64",
+    id: "mara", name: CHARAKTER_NAMEN.mara, datei: "mara-sternpfad.jpg.b64",
     kurz: "older light-skinned woman with grey hair in a messy bun, yellow cap, cigarette, orange vest over black top, olive cargo trousers and a large green expedition backpack with antenna dish and many pouches",
   },
 });
