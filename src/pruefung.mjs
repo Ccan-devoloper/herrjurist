@@ -797,7 +797,7 @@ export function pruefeBeitrag(beitrag, opt = {}) {
       if (!zahl) fehler.push("Story „Zahl des Tages“ braucht eine konkrete, zum Thema passende Zahl.");
       else {
         if (zahl.length > 8) fehler.push(`Story „Zahl des Tages“: Zahl zu lang (${zahl.length} > 8 Zeichen)`);
-        if (!/\\d/.test(zahl)) fehler.push(`Story „Zahl des Tages“: „${zahl}“ ist keine konkrete Zahl. Erlaubt sind z. B. „0 %“, „14 Tage“ oder „3 Jahre“.`);
+        if (!/\d/.test(zahl)) fehler.push(`Story „Zahl des Tages“: „${zahl}“ ist keine konkrete Zahl. Erlaubt sind z. B. „0 %“, „14 Tage“ oder „3 Jahre“.`);
       }
     }
   }
