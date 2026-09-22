@@ -1,367 +1,43 @@
-@GitHub Prüfe und finalisiere heute Examenscampus und Herr Jurist vollständig.
+@GitHub Finalisiere heute Examenscampus und Herr Jurist anhand der aktuellen Tagespläne in Ccan-devoloper/steuerberater und Ccan-devoloper/herrjurist. Prüfe zuerst den aktuellen GitHub-Stand. Veröffentlichungszeiten und Lernschleife nicht ändern. Bereits manuellGeprueft: true ohne offene Beanstandung nicht erneut bearbeiten.
 
-Nutze die aktuellen Tagespläne in
-Ccan-devoloper/steuerberater
-und
-Ccan-devoloper/herrjurist.
+EXAMENSCAMPUS: Prüfe alle heutigen Beiträge, Stories und Reels fachlich/redaktionell und korrigiere nur wenn nötig.
 
-Prüfe zuerst den aktuellen GitHub-Stand und arbeite auf Basis der dort tatsächlich vorhandenen Tagespläne, Inhalte und bereits erfolgten Finalisierungen.
+HERR JURIST: Visuelle Redaktion gehört zur Finalisierung. Nutze assets/referenzen/cover-v2 als Golden References für Markenlook und Qualitätsniveau, nicht als Storyboard.
 
-Erstelle bzw. korrigiere alle Beiträge, Stories und Reels für heute und prüfe sie fachlich vollständig.
+Neue/geänderte Feed-Cover sind AI-FIRST: Erzeuge das vollständige 4:5-Cover als eine Bildkomposition. Der Renderer darf danach nur technisch exportieren (1080×1350/Dateiformat), nicht Titel, Badge, Handschrift oder Szene kreativ neu zusammensetzen.
 
-Ändere die geplanten Veröffentlichungszeiten und die Lernschleife nicht.
+Vor der Bildgenerierung speichere:
+- folien[0].titelZeilen: 2–4 kurze semantische Zeilen; Normen sauber zusammenhalten, nie direkt nach §/Art./Abs./Satz/S./Nr./Alt./lit. trennen.
+- folien[0].coverBadge: kurze redaktionelle Badge.
+- coverText: 2–6 Wörter, fachlicher Aha-Hinweis, kein UX-Text.
+- coverRegie.charaktere: 1–2 IDs aus rex, zylla, form7, brakk, flux, mara.
+- coverRegie.kernidee: ein juristischer Kerngedanke.
+- coverRegie.handlung: englische originelle Szene mit {A}/{B}, wenigen starken Requisiten, ohne Pixelkoordinaten/starre Links-Rechts-Choreografie.
+- coverRegie.hinweisRegie: englische Vorgabe für natürliche Handschrift-/Pfeilkomposition und KONKRETES fachliches Pfeilziel.
+- coverRegie.alternative: wirklich anderes Retry-Konzept.
+- bildSzene/bildSzeneAlt: kurze englische Zusammenfassungen.
 
-Inhalte, die für heute bereits manuellGeprueft: true sind und keine offene Beanstandung haben, nicht erneut schreiben oder verändern.
+Wähle Figuren und Metapher aus dem konkreten Thema; keine feste Fach→Figur-Formel. Variiere gegenüber zuletzt verwendeten Covern.
 
-
-HERR JURIST – VISUELLE REDAKTION
-
-Für Herr Jurist gehört die visuelle Redaktion ausdrücklich zur Finalisierung.
-
-Bevor du einen neuen oder geänderten Inhalt mit manuellGeprueft: true freigibst, entwickle aus dem konkreten juristischen Thema eine eigenständige Szene im Herr-Jurist-Universum.
-
-Nutze die Golden References unter
-assets/referenzen/cover-v2
-als verbindlichen Maßstab für Markenwirkung, visuelle Dichte, Proportionen und Qualitätsniveau.
-
-Die Referenzen sind KEINE festen Storyboards.
-
-Verwende insbesondere keine feste Bildformel je Rechtsgebiet und übernimm nicht automatisch dieselben Charakterpaare, Requisiten oder Posen für ähnliche Themen.
-
-
-TRENNUNG VON MARKENLAYOUT UND KREATIVER REGIE
-
-Der Renderer ist für die wiederkehrende Marken-Geometrie zuständig.
-
-Dazu gehören insbesondere:
-- 4:5-Format
-- Fachband oben links; dessen Geometrie, Innenabstände und bündiger Sitz am linken/oberen Rand werden einheitlich per Renderer/CSS festgelegt
-- Position des Titelblocks
-- Schriftgrößen der Titelpillen
-- Pillen-Innenabstände
-- Rundung der Pillen
-- maximale Pillenbreite
-- Abstand zwischen den Titelpillen
-- Abstand des Titelblocks nach oben
-- Größe und Abstand der hellen Badge
-- Fachpille/Footer
-- Karussell-Zähler
-
-Diese Geometrie nicht kreativ neu erfinden.
-
-Insbesondere darf die Titelschrift nicht wegen einer großen Charakterillustration automatisch klein gerechnet werden.
-
-Wenn ein Titel mit der festen großen Referenz-Typografie nicht funktioniert, verbessere zuerst folien[0].titelZeilen.
-
-
-Die konkrete Szene ist dagegen Aufgabe der KI.
-
-Dazu gehören:
-- Auswahl der Figuren
-- Figureninteraktion
-- Posen
-- Blickrichtungen
-- Requisiten
-- visuelle Metapher
-- Größenverhältnisse innerhalb der Szene
-- freie Flächen
-- visuelle Blickführung
-- die gewünschte Beziehung zwischen handschriftlichem Hinweis und Szene
-- das konkrete Objekt, auf das der spätere Pfeil zeigen soll
-
-Keine starre Links-/Rechts-Choreografie und keine Pixelkoordinaten vorgeben.
-
-
-CHARAKTERAUSWAHL
-
-Prüfe zunächst den juristischen Kern und entscheide dann kreativ, welche 1–2 der sechs wiederkehrenden Figuren für die konkrete Bildidee am besten funktionieren:
-
-rex
-zylla
-form7
-brakk
-flux
-mara
-
-Rollen als Inspiration:
-
-rex:
-nervöser Portal-Mechaniker; Praxis, Fehler, Ursache/Wirkung
-
-zylla:
-neugierige Alien-Figur; Entdecken, Vertrag/Kommunikation, Kontrast
-
-form7:
-schwebender Bürokratie-Droide; Ordnung, Formalien, Prüfung
-
-brakk:
-kräftiger Kristall-Minenarbeiter; Besitz, Sachen, physische Last/Handlung
-
-flux:
-Wurm-Professor mit Zeigestab; Erklären, Dogmatik, Systematik
-
-mara:
-erfahrene Expeditionistin; Entscheidung, Grenze, Druck, Ausnahme
-
-Diese Rollen sind KEINE feste Zuordnung zu Rechtsgebieten.
-
-Berücksichtige nach Möglichkeit die zuletzt verwendeten Figuren und Szenentypen, damit Cast, Requisiten, Posen und Metaphern im Feed variieren.
-
-
-FÜR JEDES NEUE HERR-JURIST-COVER SPEICHERN
-
-folien[0].titelZeilen
-
-2–4 semantische Anzeigezeilen.
-
-Trenne nach Sinn und nicht nach bloßer Zeichenanzahl.
-
-Juristische Fundstellen müssen sinnvoll zusammenbleiben.
-
-Niemals direkt nach
-§
-Art.
-Abs.
-Satz
-S.
-Nr.
-Alt.
-lit.
-umbrechen.
-
-Beispiel:
-
-Was verlangt
-§ 344 Abs. 2
-Satz 2 StPO?
-
-Die Zeilen müssen mit der festen großen Renderer-Typografie funktionieren.
-
-Zielwert: höchstens ungefähr 21 sichtbare Zeichen pro Titelzeile. Wenn eine Mehrwort-Zeile länger wäre, teile sie lieber in eine zusätzliche semantische Pille auf. Einzelne lange Fachwörter dürfen allein stehen. Der Renderer führt zusätzlich einen harten Geometrie-Preflight aus und schrumpft eine überlange Coverzeile nicht still.
-
-
-folien[0].coverBadge
-
-Kurze redaktionelle Badge, typischerweise 1–3 Wörter.
-
-Zum Beispiel:
-Fehlerfalle
-Klausurrelevant
-Examensklassiker
-Schemawissen
-Praxisrelevant
-Klausurtechnik
-
-Eine passendere eigene Formulierung ist erlaubt.
-
-Nicht mechanisch immer dieselbe Badge verwenden.
-
-
-coverText
-
-Ein kurzer deutscher fachlicher Aha-Hinweis mit 2–6 Wörtern.
-
-Er soll einen zusätzlichen Gedanken liefern und nicht bloß den Titel wiederholen.
-
-Kein UX-Text wie:
-Swipe
-Schau rein
-Kurz erklärt
-Weiter
-
-Der Wortlaut von coverText ist verbindlich.
-
-Die Bild-KI darf ihn NICHT selbst schreiben.
-
-
-coverRegie.charaktere
-
-1–2 passende Charakter-IDs.
-
-
-coverRegie.kernidee
-
-Ein deutscher Satz mit dem einen juristischen Gedanken, der visuell hängen bleiben soll.
-
-
-coverRegie.handlung
-
-Englische, klare und originelle Szenenregie.
-
-Verwende für die ausgewählten Figuren {A} und gegebenenfalls {B}.
-
-Beschreibe EINE leicht erfassbare Interaktion.
-
-Nutze nur wenige Requisiten, die den juristischen Gedanken wirklich verständlicher machen.
-
-Keine Pixelkoordinaten.
-
-Keine starre Links-/Rechts-Anordnung.
-
-Keine unnötigen Objektzählungen.
-
-Keine generischen Gesetzbücher, Richterhämmer oder Lehrbuchdiagramme, wenn eine stärkere thematische Metapher möglich ist.
-
-
-coverRegie.hinweisRegie
-
-Englische kreative Regie für die spätere handschriftliche Annotation.
-
-Beschreibe in ungefähr 18–55 Wörtern:
-
-- welche freie Fläche der konkreten Szene sich natürlich für den Hinweis eignet,
-- wie sich der Hinweis ungefähr zur Handlung verhalten soll,
-- auf welches KONKRETE Szenenelement der Pfeil fachlich zeigen soll,
-- welche ungefähre Bewegungsrichtung oder Pfeilkrümmung zur Szene passt.
-
-Keine Pixelkoordinaten und keine feste Standardzone wie „immer links“.
-
-Die endgültige Position wird erst NACH der Bildgenerierung von der visuellen KI-QA anhand des tatsächlich entstandenen Motivs bestimmt.
-
-Der Renderer zeichnet danach den exakten coverText und den Pfeil an der von der KI-QA festgelegten Stelle.
-
-Der Renderer entscheidet NICHT selbst kreativ über links/rechts oder das Pfeilziel.
-
-
-coverRegie.alternative
-
-Ein wirklich anderes, ebenfalls fachlich passendes englisches Bildkonzept für einen möglichen Retry.
-
-Nicht nur dieselbe Szene mit anderer Pose beschreiben.
-
-
-bildSzene
-
-3–10 englische Wörter als kurze semantische Zusammenfassung des Hauptkonzepts.
-
-
-bildSzeneAlt
-
-3–10 englische Wörter als kurze semantische Zusammenfassung der alternativen Idee.
-
-
-BILDGENERIERUNG
-
-Die Charakterillustration selbst darf KEINE lesbare Schrift und KEINEN Pfeil enthalten.
-
-Keine:
-- Überschriften
-- Gesetzeszitate
-- Beschriftungen
-- Logos
-- handschriftlichen Hinweise
-- Pfeile
-- Fantasieschrift
-
-Dokumente, Schilder und Displays im Motiv bleiben leer oder enthalten nur einfache abstrakte Formen bzw. Checkmarks.
-
-Handschrift und Pfeil werden später technisch ergänzt.
-
-
-HANDschrift UND PFEIL
-
-Nach der eigentlichen Bildgenerierung bestimmt die visuelle KI-QA anhand des tatsächlich erzeugten Motivs:
-
-- den Mittelpunkt des handschriftlichen Hinweises,
-- das konkrete Pfeilziel,
-- eine leichte Rotation des Hinweises,
-- die Krümmung des Pfeils.
-
-Die KI soll dafür echte freie Fläche der konkreten Szene verwenden.
-
-Der Hinweis darf insbesondere nicht:
-- Gesichter verdecken,
-- wichtige Hände verdecken,
-- den zentralen juristischen Gegenstand verdecken,
-- den Titelblock überlagern,
-- die Badge überlagern.
-
-Der Pfeil muss fachlich eindeutig auf das beabsichtigte Szenenelement zeigen.
-
-Wähle für Hinweis und Pfeil die sinnvollste echte Negativfläche nahe an der Handlung, nicht bloß irgendeine leere Ecke. Hinweis und Ziel sollen so nah beieinander liegen, dass der Pfeil kompakt, klar und redaktionell wirkt und nicht quer durch die Szene wandert.
-
-Der Renderer setzt anschließend den exakten coverText in der etablierten Herr-Jurist-Handschrift und zeichnet den Markenpfeil entsprechend dieses KI-Plans. Der Pfeil soll wie in den Golden References wirken: locker geschwungen, runde dunkle Linie und offene zweistrichige Pfeilspitze – kein gefülltes Dreieck.
-
-Der Renderer darf die KI-Position nur minimal aus technischen Gründen innerhalb der Canvas-/Safe-Area halten.
-
-Keine nachträgliche automatische Links-/Rechts-Zonensuche.
-
-
-SZENENGRÖSSE UND KOMPOSITION
-
-Die Szene soll den verfügbaren unteren Coverbereich selbstbewusst und groß nutzen.
-
-Figuren und zentrale Requisiten müssen bereits in kleiner Feed-Darstellung gut erkennbar sein.
-
-Vermeide:
-- kleine Stickeroptik in einer riesigen Leerfläche,
-- unnötig große tote Farbflächen,
-- voneinander unabhängige Figuren,
-- zu viele kleine Requisiten,
-- starre Lehrbuchdiagramme.
-
-Zwischen Titel-/Badge-Bereich und Szene darf organische Negativfläche entstehen, insbesondere wenn sie der handschriftlichen Annotation dient.
-
-Diese freie Fläche aber nicht pauschal auf einer bestimmten Seite reservieren.
-
-
-VISUELLE ZIELQUALITÄT
-
-Die Zielqualität entspricht den etablierten Herr-Jurist-Golden-References:
-
-- kräftige fachabhängige Vollfarbe
+Das komplette Cover soll gemeinsam enthalten:
+- fachabhängige Vollfarbe
 - dunkles Fachband oben links
-- sehr große weiße Headline in dunklen einzelnen Titelpillen
-- minimal enger, konsistenter Abstand zwischen den Titelpillen
-- kompakter Titelblock mit wenig unnötigem Leerraum
-- kleine helle redaktionelle Badge unmittelbar darunter
-- kurzer handschriftlicher fachlicher Hinweis
-- klarer organischer Pfeil zur Szene
-- große hochwertige 2D-Charakterszene
-- klare Silhouetten
-- ausdrucksstarke Interaktion
-- höchstens wenige starke Requisiten
+- sehr große weiße Headline in 2–4 dunklen gerundeten Pillen
+- kleine helle Badge direkt darunter
+- exakten coverText handschriftlich + lockeren geschwungenen Pfeil mit offener Spitze
+- große hochwertige 2D-Charakterszene im unteren Bereich
 - kleine Fachpille unten rechts
-- bei Karussells Seitenzähler oben rechts
+- bei Karussells exakten Zähler oben rechts
 
-Markengeometrie konsistent.
+ALLE sichtbaren Texte müssen exakt den Sollwerten entsprechen; keine zusätzliche lesbare Schrift/Fantasieschrift. Titel nicht klein rechnen: lieber titelZeilen besser formulieren. Szene groß, wenige starke Props, klare Silhouetten, wenig tote Fläche. Handschrift/Pfeil in sinnvoller Negativfläche nahe der Handlung und ohne Gesichter/zentrale Props zu verdecken. Sensible Strafrechtsthemen nur symbolisch, ohne Verletzung/Tod/Selbstverletzungshandlung.
 
-Konkrete Szene kreativ und variabel.
+VISUAL QA vor Freigabe: Solltexte exakt? keine Zusatzschrift? Golden-Reference-Markenlook? Charakteridentitäten/Anatomie sauber? Fachband/Pillen nicht abgeschnitten? Szene groß und juristische Idee verständlich? Handschrift/Pfeil sinnvoll? Bei Fehler gezielt maximal EINEN Retry; danach nicht ungeprüft veröffentlichen.
 
+Reel-Bilder ebenfalls AI-first aus dem jeweiligen Sprecherinhalt als kleine Episoden; keine generischen Standarddiagramme.
 
-REELS
-
-Bei Herr-Jurist-Reels gilt dasselbe kreative Prinzip auch für die einzelnen Bildszenen.
-
-Jede Bildszene soll aus dem konkreten Sprecherinhalt entstehen und als kleine Episode desselben Universums funktionieren.
-
-Nicht lediglich abstrakte Standardobjekte oder immer dieselben Lehrbuchdiagramme verwenden.
-
-Die wiederkehrenden Figuren dürfen je nach Sprecherinhalt unterschiedlich eingesetzt werden.
-
-
-ABSCHLUSSPRÜFUNG
-
-Prüfe vor der Freigabe insbesondere:
-
-- Ist der juristische Inhalt fachlich korrekt?
-- Ist der Titel klausurtauglich und verständlich?
-- Sind die Titelzeilen semantisch sinnvoll?
-- Sind Normzitate sauber gebrochen?
-- Ist die Bildidee aus genau diesem Thema entstanden?
-- Ist die Figurenwahl nachvollziehbar, ohne starre Fachzuordnung?
-- Ist die Szene gegenüber den letzten Covers ausreichend variabel?
-- Ist coverText ein echter fachlicher Aha-Hinweis?
-- Beschreibt hinweisRegie ein konkretes fachliches Pfeilziel?
-- Ist die Szene groß und im Feed sofort lesbar?
-- Entspricht das geplante Ergebnis der visuellen Dichte der Golden References?
-
-Erst wenn Inhalt, fachliche Prüfung und visuelle Regie vollständig sind:
-
+Erst nach fachlich und visuell bestandener Prüfung setzen:
 manuellGeprueft: true
 finalisiertVon: "chat"
-finalisiertAm: <aktueller Zeitstempel>
+finalisiertAm: <aktueller ISO-Zeitstempel>
 
-setzen.
-
-Danach dürfen keine unnötigen Text- oder Regie-API-Aufrufe mehr nötig sein.
+Danach keine unnötigen Text-/Regie-/Bildaufrufe mehr.
