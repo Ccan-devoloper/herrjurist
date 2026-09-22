@@ -36,11 +36,6 @@ const zip=path.join(root,"assets","referenzen","cover-v2","reference-images.zip"
 const refs=path.join(out,"golden-references");
 fs.mkdirSync(refs,{recursive:true});
 execFileSync("unzip",["-j","-o",zip,"-d",refs],{stdio:"inherit"});
-
-for(const p of [
-  "assets/referenzen/cover-v2/README.md",
-  "assets/referenzen/cover-v2/manifest.json"
-]){
-  fs.copyFileSync(path.join(root,p),path.join(out,path.basename(p)));
-}
+fs.copyFileSync(path.join(root,"assets/referenzen/cover-v2/README.md"),path.join(out,"README.md"));
+fs.copyFileSync(path.join(root,"assets/referenzen/cover-v2/manifest.json"),path.join(out,"manifest.json"));
 console.log(JSON.stringify({selected:auswahl?.id||null,title:auswahl?.titel||null,fach:auswahl?.fach||null,matchCount:matches.length},null,2));
