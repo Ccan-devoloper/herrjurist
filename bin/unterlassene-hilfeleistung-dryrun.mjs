@@ -23,20 +23,19 @@ fs.mkdirSync(out, { recursive: true });
 
 const norm = (v) => String(v || "").toLowerCase()
   .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-const topic = THEMEN.find((t) => norm(t.titel || t.title).includes("unterlassene hilfeleistung"))
+const poolTopic = THEMEN.find((t) => norm(t.titel || t.title).includes("unterlassene hilfeleistung"))
   || THEMEN.find((t) => JSON.stringify(t).includes("323c"));
-if (!topic) {
-  const candidates = THEMEN.filter((t) => {
-    const hay = norm(JSON.stringify(t));
-    return hay.includes("hilfe") || hay.includes("unterlass") || hay.includes("323") || hay.includes("notfall");
-  }).map((t) => ({
-    id: t.id || t.themaId || null,
-    titel: t.titel || t.title || null,
-    normen: t.normen || null,
-    fach: t.fach || null
-  }));
-  console.log("DIAG_MATCHING_TOPICS=" + JSON.stringify(candidates));
-  throw new Error("Thema 'Unterlassene Hilfeleistung' / § 323c nicht im entschluesselten Themenpool gefunden.");
+const topic = poolTopic || {
+  id: "dryrun-strafbt-323c",
+  titel: "Unterlassene Hilfeleistung",
+  fach: "strafbt",
+  fachLabel: "Strafrecht BT",
+  normen: ["§ 323c Abs. 1 StGB"],
+  prioritaet: "hoch"
+};
+const topicSource = poolTopic ? "encrypted-themenpool" : "manual-fallback-requested-theme-not-present-in-pool";
+if (!poolTopic) {
+  console.log("THEMENPOOL_NOTE=Unterlassene Hilfeleistung / § 323c is not present in the encrypted Themenpool; using a clearly marked dry-run-only manual fallback so the visual regression can complete.");
 }
 
 const motifBytes = fs.readFileSync(motif);
@@ -148,7 +147,8 @@ const manifest = {
   generatedAt: new Date().toISOString(),
   productionBaseCommit: "94abb7742b2383cb85fbbedc634c0329b441be5f",
   dryRunCommit: process.env.GITHUB_SHA || null,
-  topicFromEncryptedPool: topic,
+  topic: topic,
+  topicSource,
   motif: "single-strafrecht-fahrlaessige-toetung.png",
   motifOriginalPath: path.relative(root, motif),
   motifSourceArtifactId: 10676033128,
@@ -165,7 +165,8 @@ const manifest = {
 fs.writeFileSync(path.join(out, "manifest.json"), JSON.stringify(manifest, null, 2));
 fs.writeFileSync(path.join(out, "README.txt"), [
   "Herr Jurist – zero-cost production renderer dry run",
-  "Theme: Unterlassene Hilfeleistung (resolved from encrypted Themenpool)",
+  "Theme: Unterlassene Hilfeleistung",
+  `Theme source: ${topicSource}`,
   "Motif: existing Fahrlaessige-Toetung transparent PNG",
   "Renderer: current production main contract",
   "Provider/API cost: $0.00",
@@ -174,7 +175,7 @@ fs.writeFileSync(path.join(out, "README.txt"), [
 
 await browserBeenden();
 console.log(JSON.stringify({
-  topic: { id: themaId, title: topic.titel || topic.title, normen: topic.normen },
+  topic: { id: themaId, title: topic.titel || topic.title, normen: topic.normen, source: topicSource },
   motif: path.relative(root, motif),
   providerCostUsd: 0,
   externalProviderCalls: false,
