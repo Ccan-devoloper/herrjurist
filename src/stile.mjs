@@ -4,16 +4,18 @@ import { farbIcon } from "./icons.mjs";
    sie die Stofffamilien, die beim Wiederholen auch fachlich getrennt gelernt
    werden. Wochenrueckblick bleibt bewusst eine Formatfarbe. */
 export const LERNFARBEN = Object.freeze({
-  bgbat:       { grund: "#8AF0A6", dunkel: "#0A2B1C", hell: "#E5FBEA", lila: "#D3F7DD", akzent2: "#8AF0A6", weich: "#0A2B1C" },
-  schuld:      { grund: "#6DBEFD", dunkel: "#092653", hell: "#E5F3FF", lila: "#D2E9FC", akzent2: "#6DBEFD", weich: "#092653" },
-  sachen:      { grund: "#E8D0A0", dunkel: "#372B11", hell: "#FAF1DE", lila: "#F3E3C2", akzent2: "#E8D0A0", weich: "#372B11" },
-  nebenfach:   { grund: "#15DDDB", dunkel: "#052234", hell: "#DDF9F9", lila: "#C8F3F2", akzent2: "#15DDDB", weich: "#052234" },
-  zpo:         { grund: "#388FEA", dunkel: "#081941", hell: "#E1EEFC", lila: "#CBDEFA", akzent2: "#388FEA", weich: "#E8F2FF" },
-  strafat:     { grund: "#D97371", dunkel: "#461214", hell: "#F7E6E5", lila: "#F0D1D0", akzent2: "#D97371", weich: "#461214" },
-  strafbt:     { grund: "#FB902F", dunkel: "#351A0A", hell: "#FFF0E0", lila: "#FBE0C5", akzent2: "#FB902F", weich: "#351A0A" },
-  oeffentlich: { grund: "#E41D78", dunkel: "#330122", hell: "#FCE1ED", lila: "#F8C9DF", akzent2: "#E41D78", weich: "#FFF0F7" },
-  methodik:    { grund: "#36E6B2", dunkel: "#11183A", hell: "#E1FBF3", lila: "#C9F6E9", akzent2: "#36E6B2", weich: "#11183A" },
-  woche:       { grund: "#F1EBDD", dunkel: "#171717", hell: "#FAF8F2", lila: "#E7DFCD", akzent2: "#F1EBDD", weich: "#171717" },
+  /* zitat ist bewusst eine eigene, je Lernfamilie eindeutige Kontrastfarbe.
+     Merksatz-Anfuehrungszeichen duerfen nie wieder in der Grundfarbe verschwinden. */
+  bgbat:       { grund: "#8AF0A6", dunkel: "#0A2B1C", hell: "#E5FBEA", lila: "#D3F7DD", akzent2: "#8AF0A6", zitat: "#4A136B", weich: "#0A2B1C" },
+  schuld:      { grund: "#6DBEFD", dunkel: "#092653", hell: "#E5F3FF", lila: "#D2E9FC", akzent2: "#6DBEFD", zitat: "#5A1F00", weich: "#092653" },
+  sachen:      { grund: "#E8D0A0", dunkel: "#372B11", hell: "#FAF1DE", lila: "#F3E3C2", akzent2: "#E8D0A0", zitat: "#173A7A", weich: "#372B11" },
+  nebenfach:   { grund: "#15DDDB", dunkel: "#052234", hell: "#DDF9F9", lila: "#C8F3F2", akzent2: "#15DDDB", zitat: "#5A0A46", weich: "#052234" },
+  zpo:         { grund: "#388FEA", dunkel: "#081941", hell: "#E1EEFC", lila: "#CBDEFA", akzent2: "#388FEA", zitat: "#140B3D", weich: "#E8F2FF" },
+  strafat:     { grund: "#D97371", dunkel: "#461214", hell: "#F7E6E5", lila: "#F0D1D0", akzent2: "#D97371", zitat: "#2E143F", weich: "#461214" },
+  strafbt:     { grund: "#FB902F", dunkel: "#351A0A", hell: "#FFF0E0", lila: "#FBE0C5", akzent2: "#FB902F", zitat: "#082A4F", weich: "#351A0A" },
+  oeffentlich: { grund: "#E41D78", dunkel: "#330122", hell: "#FCE1ED", lila: "#F8C9DF", akzent2: "#E41D78", zitat: "#05000A", weich: "#FFF0F7" },
+  methodik:    { grund: "#36E6B2", dunkel: "#11183A", hell: "#E1FBF3", lila: "#C9F6E9", akzent2: "#36E6B2", zitat: "#4A0F24", weich: "#11183A" },
+  woche:       { grund: "#F1EBDD", dunkel: "#171717", hell: "#FAF8F2", lila: "#E7DFCD", akzent2: "#F1EBDD", zitat: "#283B8F", weich: "#171717" },
 });
 
 const FACH_LERNFARBE = Object.freeze({
