@@ -262,7 +262,7 @@ function einpassen() {
    Bild auf eine innere Lernfolie schleusen. */
 export function carouselBildregeln(beitrag) {
   if (!beitrag?.folien?.length) return beitrag;
-  const bildFelder = ["bild", "bildQuelle", "bildFrei", "bildBreite", "bildHoehe", "bildTyp", "coverHinweisPlan"];
+  const bildFelder = ["bild", "bildQuelle", "bildFrei", "bildBreite", "bildHoehe", "bildTyp", "coverHinweisPlan", "bildAssetPfad"];
   for (let i = 1; i < beitrag.folien.length; i++) {
     for (const feld of bildFelder) delete beitrag.folien[i][feld];
   }
