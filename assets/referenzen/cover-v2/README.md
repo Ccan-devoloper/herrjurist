@@ -11,7 +11,7 @@ Diese Dateien definieren die **visuelle Sprache und das Qualitätsniveau** der H
 - Kurzer handschriftlicher juristischer Aha-Hinweis ohne Pfeil. Seine konkrete Position und leichte Neigung entstehen aus der jeweiligen Bildregie und sind nicht auf eine feste Seite beschränkt.
 - Große, hochwertige 2D-Charakterbühne im unteren Bereich; Figuren und Hauptrequisiten sind auf Mobilgröße sofort erkennbar.
 - Kleine Fach-/Bereichspille unten rechts.
-- Bei Karussells: dunkler runder Seitenzähler oben rechts, z. B. „1/6“.
+- Bei Karussells: auf dem Cover keine Seitenangabe; ab Folie 2 dunkler runder Seitenzähler oben rechts, z. B. „2/6“.
 - Kräftige fachabhängige Vollflächenfarben und klare Silhouetten.
 
 ## Ausdrücklich variieren
@@ -47,7 +47,7 @@ Für visuelle QA und Renderer-Entwicklung dienen die Referenzen als **Qualitäts
 
 ## Layout-Abnahme
 
-Die Referenzen priorisieren eine dichte mobile Komposition. Der Renderer hält nur die wiederkehrende Marken-Geometrie fest: 4:5-Format, ein bündiges und unverrückbares Fachband mit einheitlicher CSS-Geometrie, obere Titelposition, feste Schriftstufen der Titelpillen, minimal enger Pillenabstand, Pillen-Innenabstände/-maximalbreite, Badge-Geometrie, Footer und Seitenzähler. Der Titel darf nicht wegen der Charakterbühne dynamisch kleingerechnet werden. Mehrwort-Zeilen werden vor dem Rendern auf höchstens ungefähr 21 sichtbare Zeichen neu verteilt; verbleibender Pillen-Overflow ist ein harter Preflight-Fehler statt eines stillen Schrumpfens.
+Die Referenzen priorisieren eine dichte mobile Komposition. Der Renderer hält nur die wiederkehrende Marken-Geometrie fest: 4:5-Format, ein bündiges und unverrückbares Fachband mit einheitlicher CSS-Geometrie, obere Titelposition, feste Schriftstufen der Titelpillen, minimal enger Pillenabstand, Pillen-Innenabstände/-maximalbreite, Badge-Geometrie, Footer sowie Seitenzähler nur auf den Innenfolien; das Cover bleibt ohne Seitenzähler. Der Titel darf nicht wegen der Charakterbühne dynamisch kleingerechnet werden. Mehrwort-Zeilen werden vor dem Rendern auf höchstens ungefähr 21 sichtbare Zeichen neu verteilt; verbleibender Pillen-Overflow ist ein harter Preflight-Fehler statt eines stillen Schrumpfens.
 
 Die konkrete Szene bleibt Aufgabe der dynamischen Regie. Dazu gehören Figuren, Requisiten, Posen sowie die gewünschte Beziehung zwischen handschriftlichem Aha-Hinweis und Szene. Das Bildmodell selbst erzeugt **keine** Handschrift und **keinen** Pfeil; der Renderer ergänzt ausschließlich den Hinweistext.
 
