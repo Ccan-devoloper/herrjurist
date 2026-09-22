@@ -35,10 +35,11 @@ test("Bild-Pipeline: KI-Auftrag erzwingt ein einzelnes Motiv statt Objekt-Collag
   assert.match(prompt, /never make a collage/i);
 });
 
-test("Bild-Layout: Fotokarten werden vollständig gezeigt statt mit cover abgeschnitten", () => {
+test("Bild-Layout: Motive bleiben vollständig und Charaktere nutzen eine eigene untere Bühne", () => {
   const html = folieHtml({ art:"titel", titel:"Test", icon:"kalender", bild:"data:image/jpeg;base64,AA==", bildFrei:false }, kontext({ fach:null, klausur:1 }), 1, 1);
   assert.match(html, /\.foto img\{[^}]*object-fit:contain/);
   assert.doesNotMatch(html, /\.foto img\{[^}]*object-fit:cover/);
-  assert.match(html, /\.frei\{position:absolute;right:28px;bottom:28px/);
-  assert.match(html, /\.frei\.charakter\{right:18px;bottom:22px/);
+  assert.match(html, /\.frei\{[^}]*position:absolute[^}]*bottom:\d+px/);
+  assert.match(html, /\.frei\.charakter\{[^}]*bottom:(?:0|-?\d+px)[^}]*width:\d+px[^}]*height:\d+px/);
+  assert.match(html, /\.frei\.charakter img\{[^}]*object-position:center bottom/);
 });

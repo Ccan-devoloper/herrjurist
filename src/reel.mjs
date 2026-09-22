@@ -15,7 +15,7 @@ import { browserStarten, coverRendern } from "./render.mjs";
 import { css, klausurCss, buntCss, fussRechts } from "./vorlagen.mjs";
 import { erklaerHtml } from "./erklaervideo.mjs";
 import { normKurz, normGesprochen } from "./normen.mjs";
-import { stil as stilLaden, iconSvg } from "./stile.mjs";
+import { stil as stilLaden, iconSvg, lernPalette } from "./stile.mjs";
 import { FAECHER } from "./inhalte.mjs";
 import { CONFIG } from "./config.mjs";
 import { sprechen, ffmpegPfad, anbieterFuerText, offlineAnbieter } from "./stimme.mjs";
@@ -162,7 +162,9 @@ const ZEICHNER = { labyrinth: zeichneLabyrinth, marble: zeichneMarble, ring: zei
    dahintergelegt. */
 function overlayCss(ctx) {
   const stil = ctx.stil;
-  const p = (stil.familie || stil.id) === "bunt" ? (stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3]) : { grund: stil.farben.grund, dunkel: stil.farben.text, hell: stil.farben.flaeche };
+  const p = (stil.familie || stil.id) === "bunt"
+    ? lernPalette(ctx.fach, stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3])
+    : { grund: stil.farben.grund, dunkel: stil.farben.text, hell: stil.farben.flaeche };
   return `
 .reel{background:transparent}
 canvas#oben,.trenner{display:none}

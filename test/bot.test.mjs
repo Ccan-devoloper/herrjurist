@@ -1213,12 +1213,13 @@ test("Motive auf Reel-Cover und Stories, Nebentext auf Blau hell", async () => {
   /* Der Teaser trägt das Bild des Beitrags. */
   const t = teaserAusBeitrag({ fach: "strafbt", klausur: 2, kurztitel: "K", folien: [{ art: "titel", titel: "T", bild, bildFrei: true, bildQuelle: "Q" }] }, "s1");
   assert.equal(t.bild, bild);
-  /* Blau (Klausur 1): weicher Text hell; auf weißen Flächen dunkel. */
-  const blau = folieHtml({ art: "text", titel: "T", text: "x" }, kontext({ fach: "zivil", klausur: 1 }), 2, 3);
-  assert.ok(/--text-weich:#dbe4ff/.test(blau), "helle Weichfarbe fehlt");
-  assert.ok(/\.text[^{]*\{--text-weich:#0c1b4d\}/.test(blau) || /\.text,[^{]*\{--text-weich:#0c1b4d\}/.test(blau), "dunkle Weichfarbe auf weißen Flächen fehlt");
+  /* Lernfamilienfarben: Schuldrecht hellblau, Strafrecht BT orange; auf
+     weißen Flächen bleibt jeweils die dunkle Kontrastfarbe erhalten. */
+  const blau = folieHtml({ art: "text", titel: "T", text: "x" }, kontext({ fach: "schuld", klausur: 1 }), 2, 3);
+  assert.ok(/--text-weich:#092653/.test(blau), "Schuldrecht-Kontrastfarbe fehlt");
+  assert.ok(/\.text[^{]*\{--text-weich:#092653\}/.test(blau) || /\.text,[^{]*\{--text-weich:#092653\}/.test(blau), "dunkle Schuldrecht-Farbe auf weißen Flächen fehlt");
   const orange = folieHtml({ art: "text", titel: "T", text: "x" }, ctx, 2, 3);
-  assert.ok(/--text-weich:#3a1708/.test(orange));
+  assert.ok(/--text-weich:#351A0A/i.test(orange));
 });
 
 test("Token-Tresor: ein neu gesetztes Secret gewinnt gegen den gespeicherten Token", async () => {
@@ -1360,7 +1361,7 @@ test("Themen-Skelett: Methodik-Themen ohne Klausurtag brechen den Lauf nicht ab"
 test("Mindset: eigene Farbe, eigenes Etikett, kein Prüfungstag", async () => {
   const { mindsetThema } = await import("../src/kalender.mjs");
   const { FAECHER } = await import("../src/inhalte.mjs");
-  const { STILE } = await import("../src/stile.mjs");
+  const { STILE, lernPalette } = await import("../src/stile.mjs");
   const { folieHtml, coverHtml, fussRechts } = await import("../src/vorlagen.mjs");
   const t = mindsetThema("2026-09-12");
   assert.equal(t.fach, "mindset");
@@ -1379,7 +1380,7 @@ test("Mindset: eigene Farbe, eigenes Etikett, kein Prüfungstag", async () => {
   assert.equal(ctx.klausur, 0);
   const html = folieHtml({ art: "titel", titel: "T" }, ctx, 1, 1);
   const flaeche = html.match(/\.folie,\.story,\.reel\{background:(#[0-9a-f]{6})/i)?.[1];
-  assert.equal(flaeche?.toLowerCase(), f[0].grund.toLowerCase(), `Kachelfläche ${flaeche} statt Mindset-Farbe`);
+  assert.equal(flaeche?.toLowerCase(), lernPalette("mindset").grund.toLowerCase(), `Kachelfläche ${flaeche} statt vereinbarter Mindset-Farbe`);
   assert.ok(coverHtml({ titel: "T" }, ctx).includes("Kopfsache"));
 });
 
@@ -1831,17 +1832,16 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
   const coverGroesse = Number(cover.match(/\.story\.cover h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
   assert.ok(buntGroesse, "Titelfolie: Stack-Schriftgröße nicht gefunden");
   assert.ok(coverGroesse, "Cover: Stack-Schriftgröße nicht gefunden");
-  const faktor = 1920 / 1440;
-  assert.ok(Math.abs(coverGroesse / buntGroesse - faktor) < 0.05,
-    `Cover ${coverGroesse}px zu Titelfolie ${buntGroesse}px ergibt ${(coverGroesse / buntGroesse).toFixed(2)}, erwartet ${faktor.toFixed(2)}`);
+  assert.ok(coverGroesse > buntGroesse,
+    `Reel-Cover muss visuell größer bleiben als die Feed-Titelfolie: ${coverGroesse}px zu ${buntGroesse}px`);
 
   const buntKlein = Number(folie.match(/\.art-titel h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
   const buntWinzig = Number(folie.match(/\.art-titel h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
   const coverKlein = Number(cover.match(/\.story\.cover h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
   const coverWinzig = Number(cover.match(/\.story\.cover h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
-  for (const [name, gross, klein] of [["klein", buntKlein, coverKlein], ["winzig", buntWinzig, coverWinzig]]) {
-    assert.ok(gross && klein, `Stufe ${name} nicht gefunden`);
-    assert.ok(Math.abs(klein / gross - faktor) < 0.05, `Cover-Stufe ${name}: ${klein}px zu ${gross}px`);
+  for (const [name, feed, reel] of [["klein", buntKlein, coverKlein], ["winzig", buntWinzig, coverWinzig]]) {
+    assert.ok(feed && reel, `Stufe ${name} nicht gefunden`);
+    assert.ok(reel > feed, `Reel-Cover-Stufe ${name} muss größer als Feed bleiben: ${reel}px zu ${feed}px`);
   }
 });
 
@@ -7049,26 +7049,28 @@ test("Carousel-Cover bleibt auf Folie 1 und Erklärbilder bleiben flach", () => 
   const autor = fs.readFileSync(new URL("../src/autor.mjs", import.meta.url), "utf8");
   assert.match(autor, /NUR Folie 1 \(Cover\/Titelfolie\) bekommt eine Charakter-Szene/);
   assert.match(autor, /Alle inneren Karussell-Slides bleiben reine Text-\/Strukturfolien/);
-  assert.match(autor, /coverCharaktere: PFLICHT/);
-  assert.match(autor, /coverText: optionaler DEUTSCHER Merksatz/);
+  assert.match(autor, /VISUELLE COVER-REGIE IST TEIL DEINER REDAKTIONELLEN AUFGABE/);
+  assert.match(autor, /coverRegie: PFLICHTOBJEKT/);
+  assert.match(autor, /coverText: PFLICHT/);
+  assert.doesNotMatch(autor, /Charakterwahl ist NICHT deine Aufgabe/);
 });
 
 
-test("Charakter-Cover folgt strukturierter Regie statt fester Paarlogik", async () => {
+test("Charakter-Cover folgt semantischer Markenregie; nur manuelle Wahl darf ueberschreiben", async () => {
   const { charaktereFuer, charakterPrompt } = await import("../src/charakterbild.mjs");
-  const solo = charaktereFuer({ coverCharaktere: ["mara"], titel: "Blackout in der Klausur" });
-  assert.deepEqual(solo.map((x) => x.id), ["mara"]);
+  const automatisch = charaktereFuer({ titel: "Wann beginnt der Versuch?", coverCharaktere: ["flux"] });
+  assert.deepEqual(automatisch.map((x) => x.id), ["rex", "mara"]);
 
-  const gruppe = charaktereFuer({ coverCharaktere: ["zylla", "form7", "rex", "brakk"], titel: "Mehrpersonenfall" });
-  assert.deepEqual(gruppe.map((x) => x.id), ["zylla", "form7", "rex", "brakk"]);
+  const manuell = charaktereFuer({ titel: "Wann beginnt der Versuch?", coverCharaktere: ["zylla"], coverCharaktereQuelle: "chat" });
+  assert.deepEqual(manuell.map((x) => x.id), ["zylla"]);
 
-  const prompt = charakterPrompt({ coverCharaktere: ["mara"], bildSzene: "scout stops before deadline gate" }, solo);
-  assert.match(prompt, /one or more characters/i);
-  assert.match(prompt, /Use no prop when gesture alone explains the point/i);
-  assert.ok(!/one or two characters only/i.test(prompt), "alte starre Figurenanzahl ist noch im Prompt");
+  const prompt = charakterPrompt({ titel: "Wann beginnt der Versuch?", bildSzene: "hand stopped before glowing button" }, automatisch);
+  assert.match(prompt, /Use EXACTLY 2 recurring character/i);
+  assert.match(prompt, /No other human, humanoid, robot, creature/i);
+  assert.ok(!/another character|official|clerk|detective/i.test(prompt), "Fremdrolle ist wieder im Prompt");
 });
 
-test("Charakter-Cover nutzt eine deutlich groessere Buehne und optionalen Merksatz", async () => {
+test("Charakter-Cover nutzt eine deutlich groessere Buehne; Handschrift braucht einen KI-Plan", async () => {
   const { BUEHNE_BEITRAG, BUEHNE_CHARAKTER, folieHtml } = await import("../src/vorlagen.mjs");
   const { kontext } = await import("../src/render.mjs");
   assert.ok(BUEHNE_CHARAKTER.flaeche > BUEHNE_BEITRAG.flaeche * 2, "Charakterbuehne ist noch zu klein");
@@ -7079,8 +7081,8 @@ test("Charakter-Cover nutzt eine deutlich groessere Buehne und optionalen Merksa
     bild: "data:image/png;base64,AA==", bildFrei: true, bildTyp: "charakter",
     bildBreite: 900, bildHoehe: 700,
   }, kontext({ fach: null, klausur: 1 }), 1, 6);
-  assert.match(html, /cover-hinweis/);
-  assert.match(html, /Ohne Zugang keine Frist/);
+  assert.doesNotMatch(html, /<div class="cover-hinweis"/);
+  assert.doesNotMatch(html, /Ohne Zugang keine Frist/);
   assert.match(html, /frei charakter/);
 });
 

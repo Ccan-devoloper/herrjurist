@@ -15,8 +15,8 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { CONFIG } from "./config.mjs";
 import { ffmpegPfad } from "./stimme.mjs";
-import { bildAufruf, openaiBildEditSenden } from "./anbieter.mjs";
-import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
+import { bildAufruf, openaiAufruf, openaiBildEditSenden } from "./anbieter.mjs";
+import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, freistellen } from "./freistellen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const basis = path.resolve(hier, "../assets/charaktere");
@@ -58,89 +58,285 @@ function zielText(ziel = {}) {
     ziel.kurztitel, ziel.fachLabel, ziel.fach, ziel.format, titel,
     ziel.titel, ziel.unter, ziel.text, ziel.sprecher, ziel.norm,
     ziel.bildSzene, ziel.bildSzeneAlt, ziel.coverText,
+    ziel.coverRegie?.kernidee, ziel.coverRegie?.handlung,
+    ziel.coverRegie?.hinweisRegie, ziel.coverRegie?.hinweisZiel, ziel.coverRegie?.hinweisZone,
     ...(Array.isArray(ziel.coverCharaktere) ? ziel.coverCharaktere : []),
   ].filter(Boolean).join(" · ");
 }
 
+function coverRegieAus(ziel = {}) {
+  const roh = ziel?.coverRegieManuell || ziel?.coverRegie || null;
+  if (!roh || typeof roh !== "object" || Array.isArray(roh)) return null;
+  const sauber = (x, max = 900) => String(x || "").replace(/\s+/g, " ").trim().slice(0, max);
+  return {
+    charaktere: Array.isArray(roh.charaktere) ? roh.charaktere.map((x) => String(x || "").toLowerCase()) : [],
+    kernidee: sauber(roh.kernidee, 500),
+    handlung: sauber(roh.handlung, 1200),
+    alternative: sauber(roh.alternative, 1200),
+    hinweisRegie: sauber(
+      roh.hinweisRegie
+        || [
+          roh.hinweisZone ? `Place the handwritten note naturally around ${roh.hinweisZone} if the composition supports it.` : "",
+          roh.hinweisZiel ? `Draw a loose arrow toward ${roh.hinweisZiel}.` : "",
+        ].filter(Boolean).join(" "),
+      900,
+    ),
+  };
+}
+
 const REGELN = [
-  /* Fallback nur fuer Altbestand ohne strukturierte Cover-Regie. Neue Inhalte
-     liefern coverCharaktere direkt aus dem Autoren-Aufruf. Die Regeln duerfen
-     bewusst 1, 2 oder 3 Figuren liefern. */
-  { re: /142|unfall|unfallort|verkehrsunfall|flucht/i, ids: ["rex", "mara"] },
-  { re: /versuch|unmittelbar|letzten handgriff/i, ids: ["rex", "mara"] },
-  { re: /besitz|eigentum/i, ids: ["brakk", "form7"] },
-  { re: /anfecht|irrtum|kausal/i, ids: ["form7", "rex"] },
-  { re: /angebot|annahme|schaufenster|invitatio/i, ids: ["form7", "zylla"] },
-  { re: /kuendig|kündig|zugang|fristbeginn/i, ids: ["zylla", "flux"] },
-  { re: /vollzieh|aufschieb|80 abs|verwalt|vwgo|bescheid/i, ids: ["mara", "form7"] },
+  /* Die Reihenfolge ist Regie: konkrete Rechtsbilder vor generischen
+     Methodik-Woertern. Sie reproduziert bewusst die starken Paarungen der
+     freigegebenen Referenzcover und sorgt zugleich dafuer, dass alle sechs
+     Figuren echte Rollen im Feed haben. */
+  { re: /wochenrueckblick|wochenrückblick|themen der woche|wiederholung der woche/i, ids: ["zylla", "form7"] },
+  { re: /142|unfall|unfallort|verkehrsunfall|unerlaub.*entfern|flucht/i, ids: ["rex", "mara"] },
+  { re: /versuch|unmittelbar|letzten handgriff|§\s*22\s*stgb/i, ids: ["rex", "mara"] },
+  { re: /besitz|eigentum|§\s*985|sachenrecht|gutglaub|übereign|uebereign/i, ids: ["brakk", "form7"] },
+  { re: /anfecht|irrtum|kausal|§\s*119/i, ids: ["form7", "rex"] },
+  { re: /angebot|annahme|schaufenster|invitatio|vertragsschluss/i, ids: ["zylla", "form7"] },
+  { re: /kuendig|kündig|arbeitsrecht|zugang.*frist|fristbeginn/i, ids: ["zylla", "flux"] },
+  { re: /zpo|zivilprozess|zwangsvoll|vollstreckungsklausel|zulässigkeit.*begründet|zulaessigkeit.*begruendet/i, ids: ["form7", "flux"] },
+  { re: /vollzieh|aufschieb|80\s*(abs|ii|2|5)|verwaltungsprozess|vwgo|bescheid/i, ids: ["mara", "form7"] },
+  { re: /280|pflichtverletz|leistungsstör|leistungsstoer|schadensersatz|schuldrecht/i, ids: ["rex", "flux"] },
   { re: /mittaeter|mittäter|mehrpersonen|dreiperson|vertretung/i, ids: ["brakk", "zylla", "form7"] },
   { re: /definition|begriff|dogmatik/i, ids: ["flux"] },
-  { re: /mindset|blackout|zeitdruck|perfektion/i, ids: ["mara"] },
-  { re: /schema|pruef|prüf|aufbau|zulaess|zuläss|begruendet|begründet|klausur|methodik/i, ids: ["form7", "flux"] },
-  { re: /straf|tatbestand|diebstahl|raub|koerper|körper|gewalt/i, ids: ["brakk", "form7"] },
+  // Konkrete Methodik-Signale muessen vor dem generischen Fachlabel "Mindset" gewinnen.
+  { re: /streitstand|ansichten|ergebnis vergleichen|methodik|anspruchsgrundlage|aufbau/i, ids: ["form7", "flux"] },
+  { re: /mindset|blackout|zeitdruck|perfektion|nervos/i, ids: ["mara"] },
+  { re: /strafrecht bt|diebstahl|raub|betrug|körperverletz|koerperverletz|gewalt/i, ids: ["brakk", "rex"] },
   { re: /erbe|testament|famil|nachlass|erbrecht/i, ids: ["mara", "flux"] },
-  { re: /sache|mangel|schaden|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
+  { re: /mangel|werk|repar|bau|kauf|liefer/i, ids: ["rex", "brakk"] },
 ];
 
-function idsAusRegie(ziel = {}) {
-  const roh = ziel.coverCharaktere || ziel?.folien?.find?.((f) => f.art === "titel")?.coverCharaktere;
+function idsAusManuellerRegie(ziel = {}) {
+  /* Eine strukturierte Cover-Regie ist bereits eine ausdrueckliche kreative
+     Entscheidung des Redaktionsschritts. Sie darf den Legacy-Fallback nach
+     Fachwoertern ueberschreiben. */
+  const regie = coverRegieAus(ziel);
+  const regieIds = [...new Set((regie?.charaktere || []).filter((id) => CHARAKTERE[id]))].slice(0, 2);
+  if (regieIds.length) return regieIds;
+  /* Nur eine AUSDRUECKLICHE menschliche/Chat-Freigabe darf die semantische
+     Charakterregie ueberschreiben. Das alte Feld coverCharaktere kam auch aus
+     dem Claude-Fallback und hat die guten Themenregeln deshalb ungewollt
+     ausgehebelt. Alte automatische Werte werden ab jetzt ignoriert. */
+  const titel = ziel?.folien?.find?.((f) => f.art === "titel") || {};
+  const quelle = String(ziel.coverCharaktereQuelle || titel.coverCharaktereQuelle || "").toLowerCase();
+  const roh = ziel.coverCharaktereManuell || titel.coverCharaktereManuell
+    || (["chat", "manuell", "human"].includes(quelle) ? (ziel.coverCharaktere || titel.coverCharaktere) : null);
   if (!Array.isArray(roh)) return [];
   return [...new Set(roh.map((x) => String(x || "").toLowerCase()).filter((id) => CHARAKTERE[id]))].slice(0, 6);
 }
 
+function fallbackCharaktere(text) {
+  /* Auch im generischen Fallback soll FORM-7 nicht jeden zweiten Beitrag
+     uebernehmen. Eine kleine deterministische Streuung ueber den Inhalt sorgt
+     fuer Cast-Balance, ohne Zufall und ohne externes Modell. */
+  const paare = [
+    ["rex", "flux"],
+    ["zylla", "mara"],
+    ["brakk", "flux"],
+    ["zylla", "rex"],
+  ];
+  let h = 0;
+  for (const ch of String(text || "")) h = ((h * 31) + ch.charCodeAt(0)) >>> 0;
+  return paare[h % paare.length];
+}
+
 export function charaktereFuer(ziel = {}) {
-  const vorgegeben = idsAusRegie(ziel);
-  if (vorgegeben.length) return vorgegeben.map((id) => CHARAKTERE[id]);
+  const manuell = idsAusManuellerRegie(ziel);
+  if (manuell.length) return manuell.map((id) => CHARAKTERE[id]);
   const text = zielText(ziel);
   for (const regel of REGELN) if (regel.re.test(text)) return regel.ids.map((id) => CHARAKTERE[id]);
-  return [CHARAKTERE.form7, CHARAKTERE.flux];
+  return fallbackCharaktere(text).map((id) => CHARAKTERE[id]);
+}
+
+function themenKontext(ziel = {}) {
+  const titel = ziel?.folien?.find?.((f) => f.art === "titel")?.titel || "";
+  return [
+    ziel.kurztitel, ziel.fachLabel, ziel.fach, ziel.format, titel,
+    ziel.titel, ziel.unter, ziel.text, ziel.sprecher, ziel.norm, ziel.coverText,
+  ].filter(Boolean).join(" · ").slice(0, 900);
 }
 
 function handlungFuer(ziel, chars) {
   const text = zielText(ziel);
-  const a = chars[0]?.name || "the character";
-  const b = chars[1]?.name || "another character";
-  const c = chars[2]?.name || "a third character";
-  const gruppe = chars.map((x) => x.name).join(", ");
-  if (/kuendig|kündig/i.test(text)) return `${a} hands ${b} a blank termination letter; ${b} reacts surprised while ${a} clearly ends the relationship.`;
-  if (/142|unfall|unfallort|24 stunden/i.test(text)) return `${a} turns away from a lightly damaged small car as if leaving the accident scene, while ${b} stops them and points back to the car.`;
-  if (/streit|ansicht|ergebnis|vergleich/i.test(text)) return `${a} carefully compares two different blank solution sheets side by side while ${b} waits before starting an argument.`;
-  if (/anfecht|irrtum/i.test(text)) return `${a} points out an obvious mistake on a blank contract while ${b} suddenly realizes the error.`;
-  if (/angebot|annahme|vertragsschluss|schaufenster/i.test(text)) return `${a} presents a blank offer sheet while ${b} deliberately decides whether to accept it.`;
-  if (/besitz|eigentum/i.test(text)) return `${a} holds a house key while ${b} points to a separate blank ownership document, making clear that possession and ownership are different.`;
-  if (/versuch|letzten handgriff|unmittelbar/i.test(text)) return `${a} is just about to complete a decisive action while ${b} stops and examines the moment immediately before completion.`;
-  if (/zulaess|zuläss|begruendet|begründet/i.test(text)) return `${a} checks a first procedural gate on a blank checklist before allowing ${b} to move to a clearly separate second stage.`;
-  if (/vollzieh|aufschieb/i.test(text)) return `${a} checks whether a process is already running before ${b} reaches for a large pause switch.`;
-  if (/frist|kalender|zugang/i.test(text)) return `${a} points at a blank calendar while ${b} holds a sealed blank envelope, both concentrating on the correct timing.`;
-  if (/dieb|raub|straf|tatbestand/i.test(text)) return `${a} reenacts the concrete act while ${b} inspects the sequence step by step.`;
-  const cue = String(ziel?.bildSzene || ziel?.titel || ziel?.kurztitel || "a legal exam problem").trim();
-  if (chars.length === 1) return `${a} acts out this concrete exam situation in one immediately readable pose: ${cue}.`;
-  if (chars.length >= 3) return `${gruppe} form one coherent interaction that makes this concrete exam situation instantly understandable: ${cue}.`;
-  return `${a} and ${b} act out this concrete exam situation: ${cue}. Their interaction, not mere posing, must communicate the point.`;
+  const namen = chars.map((x) => x.name);
+  const a = namen[0];
+  const b = namen[1];
+  const c = namen[2];
+
+  /* Jede Regie nennt ausschliesslich Figuren, die auch wirklich als Referenz
+     mitgeschickt werden. Kein "another character", kein Polizist, Clerk,
+     Detective oder sonstige Platzhalterrolle: Genau diese Woerter haben die
+     Fremdcharaktere in den ersten Trockenlaeufen erzeugt. */
+  const solo = (satz) => satz.replaceAll("{A}", a);
+  const duo = (satz, fallback) => b
+    ? satz.replaceAll("{A}", a).replaceAll("{B}", b)
+    : solo(fallback);
+  const trio = (satz, fallback) => c
+    ? satz.replaceAll("{A}", a).replaceAll("{B}", b).replaceAll("{C}", c)
+    : duo(fallback, fallback);
+  /* Creative direction from the editorial layer wins. The old topic-specific
+     choreography below is only a compatibility fallback for legacy content.
+     New posts should arrive with coverRegie; older manually finalised posts at
+     least carry bildSzene, which is treated as an open semantic brief rather
+     than a pixel-by-pixel storyboard. */
+  const regie = coverRegieAus(ziel);
+  const einsetzen = (satz) => String(satz || "")
+    .replaceAll("{A}", a || "")
+    .replaceAll("{B}", b || "")
+    .replaceAll("{C}", c || "");
+  if (regie?.handlung) return einsetzen(regie.handlung);
+  const motiv = String(ziel?.bildSzene || "").replace(/\s+/g, " ").trim();
+  if (motiv) {
+    if (chars.length >= 2) return duo(
+      `{A} and {B} create one clear, lively interaction that makes this legal idea instantly readable: ${motiv}. Choose natural poses and only the concrete props that help the idea. Keep the composition simple, editorial and surprising; do not force a predefined left/right order or diagram unless the legal meaning truly requires it.`,
+      `{A} demonstrates this legal idea in one clear action: ${motiv}. Use one strong concrete prop and a simple readable composition.`
+    );
+    return solo(`{A} demonstrates this legal idea in one clear action: ${motiv}. Use one strong concrete prop and a simple readable composition.`);
+  }
+
+  if (/kuendig|kündig|arbeitsrecht|zugang.*frist|fristbeginn/i.test(text)) {
+    return duo(
+      "{A} calmly hands {B} one sealed blank envelope while a simple blank calendar beside them marks the timing; {B} reacts to receiving it.",
+      "{A} holds one sealed blank envelope beside a simple blank calendar and clearly points to the moment of receipt."
+    );
+  }
+  if (/142|unfall|unfallort|unerlaub.*entfern|verkehrsunfall/i.test(text)) {
+    return duo(
+      "{A} stands beside a lightly damaged small red car and starts to step away; {B} firmly blocks the path and points back to the accident scene.",
+      "{A} stands beside a lightly damaged small red car, pauses mid-step and points back to the accident scene."
+    );
+  }
+  if (/versuch|unmittelbar|letzten handgriff|§\s*22\s*stgb/i.test(text)) {
+    return duo(
+      "{A} moves one bright abstract token from a planning area across a clearly visible glowing boundary line into a separate execution area; {B} points exactly at the boundary crossing. The scene is purely symbolic and contains no weapons, injury, danger or threatening action.",
+      "{A} moves one bright abstract token across a clearly visible glowing boundary from a planning area into a separate execution area. The scene is purely symbolic and safe."
+    );
+  }
+  if (/besitz|eigentum|985|sachenrecht/i.test(text)) {
+    return duo(
+      "{A} carries a heavy wooden crate and a house key while {B} points to a separate blank ownership document with a seal, visibly separating possession from ownership.",
+      "{A} holds a house key in one hand and a separate blank ownership document with a seal in the other, clearly comparing the two."
+    );
+  }
+  if (/anfecht|irrtum|kausal|119/i.test(text)) {
+    return duo(
+      "{A} presents a clean two-step clipboard with only abstract check marks while {B} compares two visibly different glowing devices and notices the mistake.",
+      "{A} compares two visibly different objects, notices the mistake, and points from the first object to the resulting decision."
+    );
+  }
+  if (/angebot|annahme|schaufenster|invitatio|vertragsschluss/i.test(text)) {
+    return duo(
+      "{A} gestures toward one displayed product behind a small glass showcase while {B} holds a blank clipboard and deliberately points out that no contract has been concluded yet.",
+      "{A} studies one displayed product behind a small glass showcase while holding a blank contract folder closed."
+    );
+  }
+  if (/zpo|zivilprozess|zwangsvoll|vollstreckungsklausel|klauselrechtsbehelf|zuläss|zulaess|begründet|begruendet/i.test(text)) {
+    return duo(
+      "{A} physically moves three separate blank legal objects from left to right through a single obvious process: first a sealed document, then a second blank file marked only with one abstract check mark, then a final remedy folder. Three large unlabeled arrow shapes connect object 1 to object 2 to object 3. {B} stands beside the chain and points forward toward the NEXT object only. The three objects must be visibly different, spatially separated and ordered left-to-right; do not show two ambiguous piles or a static comparison.",
+      "{A} physically moves three separate blank legal objects through one obvious left-to-right three-step chain, connected by large unlabeled arrows."
+    );
+  }
+  if (/vollzieh|aufschieb|80\s*(abs|ii|2|5)|vwgo|bescheid/i.test(text)) {
+    return duo(
+      "{A} points at a barrier that is already moving while {B} studies one blank warning notice and reaches toward a separate pause control, checking the exception first.",
+      "{A} studies one blank warning notice beside a moving barrier and clearly checks whether the process is already running before touching a pause control."
+    );
+  }
+  if (/280|pflichtverletz|leistungsstör|leistungsstoer|schadensersatz|schuldrecht/i.test(text)) {
+    return duo(
+      "{A} inspects a broken device and traces the defect back through a short chain of three abstract checkpoints while {B} explains the order with a pointer.",
+      "{A} inspects a broken device and traces the defect through three abstract checkpoints in a clear order."
+    );
+  }
+  if (/streit|ansicht|ergebnis|vergleich|methodik/i.test(text)) {
+    return duo(
+      "{A} compares two blank solution sheets side by side and first checks whether their result symbols match; {B} waits with a pointer until that comparison is finished.",
+      "{A} compares two blank solution sheets side by side before deciding whether an argument is needed."
+    );
+  }
+  if (/frist|kalender|zugang/i.test(text)) {
+    return duo(
+      "{A} points at a simple blank calendar while {B} holds one sealed blank envelope, both focused on the exact moment of receipt.",
+      "{A} holds one sealed blank envelope beside a simple blank calendar and points at the moment of receipt."
+    );
+  }
+  if (/mittaeter|mittäter|mehrpersonen|dreiperson|vertretung/i.test(text)) {
+    return trio(
+      "{A}, {B} and {C} form one connected action around a single legal object: one acts, one observes the allocation of roles, and one checks a blank decision board.",
+      "{A} and {B} act on opposite sides of one shared legal object while clearly showing two different roles."
+    );
+  }
+  if (/definition|begriff|dogmatik/i.test(text)) {
+    return solo("{A} teaches one precise concept with a pointer and a clean abstract diagram made only of shapes, arrows and check marks.");
+  }
+  if (/mindset|blackout|zeitdruck|perfektion|nervos/i.test(text)) {
+    return solo("{A} calmly checks a compact blank exam checklist under visible time pressure, focused and unimpressed.");
+  }
+
+  if (chars.length >= 3) {
+    return trio(
+      "{A}, {B} and {C} form one coherent interaction around a single topic-relevant legal prop; every selected character has a clear role and nobody else is present.",
+      "{A} and {B} interact around one topic-relevant legal prop and make the legal distinction visually obvious."
+    );
+  }
+  if (chars.length === 2) {
+    return duo(
+      "{A} and {B} interact around one topic-relevant legal prop and make the legal distinction visually obvious through gesture and reaction.",
+      "{A} demonstrates the legal distinction with one topic-relevant prop in a single readable pose."
+    );
+  }
+  return solo("{A} demonstrates the legal idea with one topic-relevant prop in a single immediately readable pose.");
 }
 
-export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel)) {
-  const referenzen = chars.map((c, i) =>
-    `Reference image ${i + 1} is ${c.name}: ${c.kurz}. Preserve this exact character identity, face, body proportions, outfit, colours and distinctive features.`
-  ).join(" ");
-  const kontext = zielText(ziel).slice(0, 1100);
-  const handlung = handlungFuer(ziel, chars);
+function coverTextAus(ziel = {}) {
+  const titelFolie = ziel?.folien?.find?.((f) => f.art === "titel") || {};
+  return String(ziel.coverText || titelFolie.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
+}
+
+function hinweisBildRegie(ziel = {}) {
+  const regie = coverRegieAus(ziel);
+  const text = coverTextAus(ziel);
+  if (!text) return "No handwritten cover annotation is needed. Do not draw arrows or readable text.";
+  const kreativeRegie = regie?.hinweisRegie
+    || "Use a natural pocket of negative space close to the action and near the most relevant legal prop.";
   return [
-    "Create a NEW flat 2D sci-fi comedy cartoon vignette using the supplied recurring character reference image(s).",
-    referenzen,
-    "Use exactly the selected recurring characters. The selection may contain one or more characters, up to the six supplied recurring identities; do not invent extra people or duplicate a character.",
-    "Do not copy the reference poses. Redraw the same identities in a new, topic-specific interaction.",
-    `Scene action: ${handlung}`,
-    `Legal-topic context, only to understand the visual meaning: ${kontext}`,
-    "Choose props by meaning, not by formula. Use no prop when gesture alone explains the point; use one or more clearly relevant objects when they make the legal distinction immediately understandable.",
-    "Build one coherent scene, not separate portraits. Characters may stand on either side of a central object, overlap naturally, point, hand things over, stop each other, compare documents or demonstrate a sequence.",
-    "Make the vignette visually substantial: the complete scene should occupy roughly 85 to 92 percent of the usable canvas width or height while still keeping every head, hand, foot and essential prop fully visible.",
-    "Keep silhouettes readable at Instagram thumbnail size. Exaggerate gesture and facial reaction enough that the action is understood before reading the caption.",
-    "Do not render explanatory prose inside the illustration. Documents, screens and signs should stay blank or use simple abstract marks; a short deterministic callout, when useful, is added later by the Herrjurist renderer so spelling stays correct.",
-    "No background and no scenery: transparent background, no room, no landscape and no decorative frame. Ground shadows that belong directly under the characters or object are allowed.",
-    "Use only a modest transparent safety margin around the complete vignette; do not shrink the scene into a small sticker in one corner.",
-    "Bold clean outlines, flat colours, subtle simple shading, consistent with the supplied original character artwork.",
+    `A later renderer will add this exact handwritten cover note: <<<${text}>>>. Do NOT draw the note, any arrow, or any readable text yourself.`,
+    `Editorial annotation intent: ${kreativeRegie}`,
+    "Compose the characters and props so that this later annotation can sit naturally near the action in an organic pocket of negative space.",
+    "Do not reserve a fixed left/right strip and do not weaken the legal scene just to make space. The visual QA will inspect the actual finished vignette and choose only the final note position; the renderer will not add an arrow.",
   ].join(" ");
+}
+
+export function charakterPrompt(ziel = {}, chars = charaktereFuer(ziel), korrektur = "") {
+  const referenzen = chars.map((ch, i) =>
+    `Reference image ${i + 1} is the ONLY canonical identity for ${ch.name}: ${ch.kurz}. Match that exact face/head shape, body proportions, skin/fur/material colours, outfit, accessories and silhouette.`
+  ).join(" ");
+  const handlung = handlungFuer(ziel, chars);
+  const kontext = themenKontext(ziel);
+  const korrekturText = korrektur
+    ? `Quality-review correction for this redraw: ${String(korrektur).slice(0, 700)}`
+    : "";
+
+  return [
+    "Create a NEW premium 2D editorial sci-fi comedy illustration for the lower half of a 4:5 Instagram cover.",
+    referenzen,
+    `Use EXACTLY ${chars.length} recurring character identity/identities: ${chars.map((x) => x.name).join(", ")}. No other human, humanoid, robot, creature, face, body, silhouette or duplicate of a selected character may appear.`,
+    "The supplied references define identity, not pose. Redraw those same identities in a new topic-specific action.",
+    `Scene direction: ${handlung}`,
+    `Legal context for meaning only, NOT a request to add people or any text beyond the exact handwritten annotation specified below: ${kontext}`,
+    korrekturText,
+    "Composition: one coherent editorial-cartoon vignette, preferably wider than tall for two or more characters. Keep the visual centre low so the renderer can place a large title above it. The finished feed cover is 4:5. Do not build a background.",
+    hinweisBildRegie(ziel),
+    "Characters must interact rather than pose independently. Every selected character needs a clear job in the scene. Use only props that make the legal point instantly understandable; omit props that do not help.",
+    "Show complete readable anatomy: full heads and faces, all essential hands/fingers, feet or hover bases, and every important prop. No fused hands, spare limbs, duplicated body parts, cropped heads or accidental amputations.",
+    "Polished premium cartoon finish matching the references: confident clean ink outlines, controlled cel shading, subtle material highlights and texture, expressive faces, precise accessories, clean edges and consistent proportions. Do NOT simplify into flat clip-art and do NOT switch to 3D, photorealism, watercolor or sketch style.",
+    "Absolutely no readable text, handwriting, arrows, explanatory prose, letters, numbers, law citations, labels, logos, signatures or gibberish may appear in the generated illustration. Papers, screens, folders and signs must be blank or contain only simple abstract shapes/check marks. The renderer adds the cover annotation later.",
+    "Transparent background only. No room, landscape, wall, decorative frame or colored sticker outline. A soft ground shadow directly under the selected characters or main prop is allowed.",
+    "Fill the transparent image confidently: the complete vignette should occupy about 88 to 94 percent of the usable width or height while retaining a small clean safety margin around every body part and prop.",
+  ].filter(Boolean).join(" ");
 }
 
 export function bildKostenUsd(antwort) {
@@ -151,30 +347,36 @@ export function bildKostenUsd(antwort) {
   const bildEin = Number(d.image_tokens || 0);
   const textEin = Number(d.text_tokens || Math.max(0, Number(u.input_tokens || 0) - bildEin));
   const bildAus = Number(od.image_tokens || u.output_tokens || 0);
-  const textAus = Number(od.text_tokens || 0);
-  const usd = bildEin * 8 / 1e6 + textEin * 5 / 1e6 + bildAus * 30 / 1e6 + textAus * 10 / 1e6;
+  /* GPT Image 2.5 berechnet Text nur als Eingabe; das Modell gibt Bilder,
+     keinen kostenpflichtigen Text aus. */
+  const usd = bildEin * 8 / 1e6 + textEin * 5 / 1e6 + bildAus * 30 / 1e6;
   return Number(usd.toFixed(6));
 }
 
 function referenzNormalisieren(char) {
   const quelle = path.join(basis, char.datei);
   const b64 = fs.readFileSync(quelle, "utf8").trim();
+  const kante = Math.max(512, Math.min(1024, Number(CONFIG.bilder?.charaktere?.referenzKante || 768)));
+  const innen = Math.max(448, kante - 64);
   const roh = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}.jpg`);
-  const norm = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}-384.jpg`);
+  const norm = path.join(os.tmpdir(), `hj-ref-${char.id}-${process.pid}-${Date.now()}-${kante}.jpg`);
   fs.writeFileSync(roh, Buffer.from(b64, "base64"));
+  let erfolgreich = false;
   try {
-    /* Die ersten Testreferenzen waren extrem kleine Thumbnails. GPT Image
-       lehnt solche Dateien als ungueltige Bildeingabe ab. Vor jedem Upload
-       werden sie daher in ein echtes 384x384-JPEG mit weissem Rand
-       normalisiert; der Charakter selbst wird dabei nicht veraendert. */
+    /* Masterreferenzen behalten ihre Proportion und bekommen lediglich eine
+       neutrale quadratische Uploadflaeche. Die Normalisierung veraendert die
+       Identitaet nicht; sie sorgt nur fuer einen stabilen Upload fuer
+       Bildmodell UND Vision-QA. */
     execFileSync(ffmpegPfad(), [
       "-y", "-loglevel", "error", "-i", roh,
-      "-vf", "scale=336:336:force_original_aspect_ratio=decrease,pad=384:384:(ow-iw)/2:(oh-ih)/2:color=white",
-      "-frames:v", "1", "-q:v", "3", norm,
+      "-vf", `scale=${innen}:${innen}:force_original_aspect_ratio=decrease,pad=${kante}:${kante}:(ow-iw)/2:(oh-ih)/2:color=white`,
+      "-frames:v", "1", "-q:v", "2", norm,
     ]);
+    erfolgreich = true;
     return norm;
   } finally {
     fs.rmSync(roh, { force: true });
+    if (!erfolgreich) fs.rmSync(norm, { force: true });
   }
 }
 
@@ -187,10 +389,8 @@ async function ratenfensterWarten(ms = 13000) {
   letzterBildStart = Date.now();
 }
 
-async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimitMs }) {
-  const refs = chars.map(referenzNormalisieren);
-  try {
-    for (let rateVersuch = 0; rateVersuch < 3; rateVersuch++) {
+async function editAufruf({ chars, refs, prompt, quality, size, key, modell, zeitlimitMs }) {
+  for (let rateVersuch = 0; rateVersuch < 3; rateVersuch++) {
       const form = new FormData();
       form.append("model", modell);
       refs.forEach((datei, i) => {
@@ -215,11 +415,8 @@ async function editAufruf({ chars, prompt, quality, size, key, modell, zeitlimit
         console.warn(`  ! GPT-Image-Ratenlimit; ${Math.ceil(warten / 1000)} s Pause, dann gleicher Versuch erneut.`);
         await schlafen(warten);
       }
-    }
-    throw new Error("GPT-Image-Ratenlimit nach drei Versuchen");
-  } finally {
-    for (const p of refs) fs.rmSync(p, { force: true });
   }
+  throw new Error("GPT-Image-Ratenlimit nach drei Versuchen");
 }
 
 function dateiAusAntwort(daten) {
@@ -230,51 +427,302 @@ function dateiAusAntwort(daten) {
   return roh;
 }
 
-function qa(roh, randFarbe = null) {
-  let arbeitsPfad = roh;
+function qaTechnisch(roh, randFarbe = null) {
+  const details = {
+    source: masse(roh) || null,
+    rembgUsed: false,
+    alphaBefore: null,
+    alphaAfter: null,
+    rand: null,
+  };
+  const kopie = path.join(os.tmpdir(), `charakter-qa-${process.pid}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
+  fs.copyFileSync(roh, kopie);
+  let arbeitsPfad = kopie;
   let prof = alphaProfil(arbeitsPfad);
+  details.alphaBefore = prof || null;
   const alphaTaugt = prof && prof.festigkeit >= FESTIGKEIT_MIN && prof.belegt >= 0.02;
+
   if (!alphaTaugt) {
+    details.rembgUsed = true;
     const frei = freistellen(arbeitsPfad, { randFarbe: null, schaerfePruefen: false });
     fs.rmSync(arbeitsPfad, { force: true });
-    if (!frei?.pfad) return null;
+    if (!frei?.pfad) {
+      return {
+        ok: false,
+        reason: "freisteller-fehlgeschlagen",
+        message: "Transparenz war unbrauchbar und der lokale Freisteller lieferte kein verwendbares Motiv.",
+        details,
+      };
+    }
     arbeitsPfad = frei.pfad;
     prof = alphaProfil(arbeitsPfad);
   }
-  if (!prof || prof.festigkeit < FESTIGKEIT_MIN || prof.belegt < 0.02) {
+
+  details.alphaAfter = prof || null;
+  if (!prof) {
     fs.rmSync(arbeitsPfad, { force: true });
-    return null;
+    return { ok: false, reason: "alpha-profil-fehlt", message: "Alphakanal konnte nicht ausgewertet werden.", details };
   }
-  const randFehler = randVerdacht(randkontakt(arbeitsPfad));
-  if (randFehler) {
+  if (prof.festigkeit < FESTIGKEIT_MIN) {
     fs.rmSync(arbeitsPfad, { force: true });
-    return null;
+    return {
+      ok: false,
+      reason: "alpha-zu-weich",
+      message: `Nur ${Math.round(prof.festigkeit * 100)} % der belegten Fläche sind deckend; Mindestwert ${Math.round(FESTIGKEIT_MIN * 100)} %.`,
+      details,
+    };
   }
+  if (prof.belegt < 0.02) {
+    fs.rmSync(arbeitsPfad, { force: true });
+    return {
+      ok: false,
+      reason: "motivflaeche-zu-klein",
+      message: `Nur ${(prof.belegt * 100).toFixed(1)} % der Fläche sind belegt; Mindestwert 2,0 %.`,
+      details,
+    };
+  }
+
+  const rand = randkontakt(arbeitsPfad);
+  /* Randkontakt bleibt als Diagnosewert erhalten, ist aber keine harte
+     technische Sperre mehr. Visuelle Crop-/Anatomiefehler prüft anschließend
+     die visuelle QA am tatsächlichen Motiv. */
+  details.rand = rand || null;
+
   const geschnitten = zuschneiden(arbeitsPfad);
   if (geschnitten !== arbeitsPfad) fs.rmSync(arbeitsPfad, { force: true });
   const ohneRand = geschnitten.replace(/\.png$/, "-roh.png");
   fs.copyFileSync(geschnitten, ohneRand);
   const fertig = randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten;
   const m = masse(fertig) || {};
-  return { pfad: fertig, ohneRand, breite: m.breite || null, hoehe: m.hoehe || null };
+  return {
+    ok: true,
+    pfad: fertig,
+    ohneRand,
+    breite: m.breite || null,
+    hoehe: m.hoehe || null,
+    details,
+  };
+}
+
+function debugVersuchAblegen(debugDir, { attempt, quality, roh = null, verarbeitet = null, technisch = null, visuell = null, fehler = null } = {}) {
+  if (!debugDir) return;
+  try {
+    const ziel = path.join(debugDir, `attempt-${attempt}-${quality || "unknown"}`);
+    fs.mkdirSync(ziel, { recursive: true });
+    if (roh && fs.existsSync(roh)) fs.copyFileSync(roh, path.join(ziel, "raw.png"));
+    if (verarbeitet && fs.existsSync(verarbeitet)) fs.copyFileSync(verarbeitet, path.join(ziel, "processed.png"));
+    fs.writeFileSync(path.join(ziel, "qa.json"), JSON.stringify({
+      attempt,
+      quality,
+      technisch: technisch || null,
+      visuell: visuell || null,
+      fehler: fehler || null,
+    }, null, 2));
+  } catch (e) {
+    console.warn(`  ! Debug-Artefakt für Versuch ${attempt} konnte nicht geschrieben werden: ${String(e?.message || e).slice(0, 160)}`);
+  }
+}
+
+const BILD_QA_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    ok: { type: "boolean" },
+    identityOk: { type: "boolean" },
+    extraCharacters: { type: "boolean" },
+    duplicateCharacters: { type: "boolean" },
+    anatomyOk: { type: "boolean" },
+    cropOk: { type: "boolean" },
+    styleOk: { type: "boolean" },
+    sceneOk: { type: "boolean" },
+    textArtifacts: { type: "boolean" },
+    annotationPlan: {
+      type: ["object", "null"],
+      additionalProperties: false,
+      properties: {
+        noteX: { type: "number" },
+        noteY: { type: "number" },
+        targetX: { type: "number" },
+        targetY: { type: "number" },
+        rotationDeg: { type: "number" },
+        bend: { type: "number" },
+      },
+      required: ["noteX", "noteY", "targetX", "targetY", "rotationDeg", "bend"],
+    },
+    issues: { type: "array", items: { type: "string" } },
+    retryHint: { type: "string" },
+  },
+  required: [
+    "ok", "identityOk", "extraCharacters", "duplicateCharacters",
+    "anatomyOk", "cropOk", "styleOk", "sceneOk", "textArtifacts", "annotationPlan",
+    "issues", "retryHint",
+  ],
+};
+
+function responsesText(antwort) {
+  if (typeof antwort?.output_text === "string") return antwort.output_text;
+  return (antwort?.output || [])
+    .flatMap((o) => o?.content || [])
+    .filter((x) => x?.type === "output_text" || x?.type === "text")
+    .map((x) => x?.text || "")
+    .join("\n");
+}
+
+async function qaVisuell(kandidatPfad, chars, ziel, slot) {
+  const cfg = CONFIG.bilder.charaktere;
+  if (!cfg.qaAktiv) return { ok: true, uebersprungen: true, issues: [] };
+
+  const refs = [];
+  try {
+    for (const ch of chars) refs.push(referenzNormalisieren(ch));
+    const inhalt = [
+      {
+        type: "input_text",
+        text: [
+          "You are the final visual quality gate for a recurring-character editorial cartoon.",
+          "Image 1 is the generated candidate. Every following image is the exact canonical reference for one selected recurring character, in the same order as the names below.",
+          `Selected characters: ${chars.map((x) => x.name).join(", ")}.`,
+          `Required count of recurring characters in the candidate: exactly ${chars.length}.`,
+          "Reject the candidate if ANY additional human, humanoid, robot, creature, face, body, portrait or duplicate character appears, even in the background or on a screen.",
+          "Compare identity carefully: head/face shape, body proportions, skin/material colour, outfit, signature accessories and silhouette must remain recognisably the same as the references.",
+          "Reject severe anatomy defects, fused/extra limbs or hands, missing essential body parts, cropped heads/feet/hover bases, accidental amputations, or important props cut off.",
+          "Reject a flat generic clip-art look if it loses the polished inked editorial-cartoon finish of the references.",
+          "Reject ANY generated readable text, handwriting, arrows, letters, numbers, citations, logos or gibberish. The renderer adds the handwritten note later. Abstract check marks and simple unlabeled shapes are allowed.",
+          `The later renderer must write this exact cover note: <<<${coverTextAus(ziel)}>>>.`,
+          `Editorial annotation intent from the human/authoring step: ${coverRegieAus(ziel)?.hinweisRegie || "place it naturally in free space and point to the legally relevant scene element"}`,
+          "If a cover note is present, plan its final placement from the ACTUAL candidate image now. annotationPlan coordinates are relative to Image 1 after cropping: (0,0)=top-left and (1,1)=bottom-right. noteX/noteY are the CENTER of the later handwritten note; they may range roughly from -0.15 to 1.15 when the best pocket sits just outside the opaque motif. targetX/targetY identify the concrete legally relevant character/prop only as a semantic proximity anchor and should normally stay within 0..1. rotationDeg should stay subtle, usually -10..10. bend is retained only for schema compatibility and is not rendered.",
+          "Choose annotationPlan so the exact note can occupy the BEST genuine negative space near the action, not a merely empty corner. Prefer a compact editorial relationship: the note should sit naturally near the relevant legal element while keeping faces, important hands and the central prop unobscured. No arrow will be added by the renderer. Do not force a fixed left/right formula.",
+          "If no cover note is requested, return annotationPlan=null.",
+          "The scene must communicate the requested legal idea at a glance and the selected characters must interact coherently.",
+          `Legal scene context: ${themenKontext(ziel)}`,
+          `Creative direction used for generation: ${handlungFuer(ziel, chars)}`,
+          "Judge sceneOk by the SEMANTIC result: the legal idea must be understandable at a glance and the character interaction must be coherent. Do not reject merely because left/right placement, exact prop count, pose, pointing direction or other staging differs from the creative direction unless that detail is essential to the legal meaning.",
+          "Prefer a strong, simple editorial metaphor over a literal flowchart. Variation is desirable when the legal meaning and recurring-character identities remain clear.",
+          "Set ok=true only if every quality criterion passes. retryHint must be a short concrete redraw instruction, or an empty string when ok=true.",
+        ].join("\n"),
+      },
+      {
+        type: "input_image",
+        image_url: `data:image/png;base64,${fs.readFileSync(kandidatPfad).toString("base64")}`,
+        detail: "high",
+      },
+      ...refs.map((p) => ({
+        type: "input_image",
+        image_url: `data:image/jpeg;base64,${fs.readFileSync(p).toString("base64")}`,
+        detail: "high",
+      })),
+    ];
+
+    const params = {
+      model: cfg.qaModell,
+      max_output_tokens: cfg.qaMaxTokens,
+      reasoning: { effort: "low" },
+      input: [{ role: "user", content: inhalt }],
+      text: {
+        format: {
+          type: "json_schema",
+          name: "herrjurist_character_cover_qa",
+          strict: true,
+          schema: BILD_QA_SCHEMA,
+        },
+      },
+    };
+
+    const antwort = await openaiAufruf({
+      zweck: "bild-qa",
+      modell: cfg.qaModell,
+      params,
+      optional: true,
+      admissionInputTokens: cfg.qaAdmissionInputTokens,
+      slot: slot || ziel?.slug || ziel?.themaId || "charakter-qa",
+      promptVersion: "cover-qa-v2",
+    });
+    const roh = responsesText(antwort);
+    const daten = JSON.parse(roh.slice(roh.indexOf("{"), roh.lastIndexOf("}") + 1));
+    const p = daten?.annotationPlan;
+    const zahl = (x, fallback = 0) => Number.isFinite(Number(x)) ? Number(x) : fallback;
+    const annotationPlan = p && typeof p === "object"
+      ? {
+          noteX: Math.max(-0.18, Math.min(1.18, zahl(p.noteX, 0.25))),
+          noteY: Math.max(-0.18, Math.min(1.18, zahl(p.noteY, 0.28))),
+          targetX: Math.max(0, Math.min(1, zahl(p.targetX, 0.5))),
+          targetY: Math.max(0, Math.min(1, zahl(p.targetY, 0.55))),
+          rotationDeg: Math.max(-12, Math.min(12, zahl(p.rotationDeg, -4))),
+          bend: Math.max(-1, Math.min(1, zahl(p.bend, 0.35))),
+        }
+      : null;
+    const logischOk = daten?.identityOk
+      && !daten?.extraCharacters
+      && !daten?.duplicateCharacters
+      && daten?.anatomyOk
+      && daten?.cropOk
+      && daten?.styleOk
+      && daten?.sceneOk
+      && !daten?.textArtifacts;
+    return { ...daten, annotationPlan, ok: Boolean(daten?.ok && logischOk) };
+  } catch (e) {
+    /* Quality first: Wenn die zweite Schranke nicht pruefen kann, wird das
+       Bild nicht still als "gut genug" durchgereicht. Der Renderer faellt
+       dann auf sein sauberes Icon-Cover zurueck statt eine Markenabweichung
+       zu veroeffentlichen. */
+    return {
+      ok: false,
+      unavailable: true,
+      issues: [`visuelle QA nicht verfuegbar: ${String(e?.message || e).slice(0, 160)}`],
+      annotationPlan: null,
+      retryHint: "Preserve the exact selected identities, include no extra characters, keep the image free of all readable text/arrows, and redraw with clean anatomy and full uncropped bodies.",
+    };
+  } finally {
+    for (const p of refs) fs.rmSync(p, { force: true });
+  }
+}
+
+function verwerfen(bild) {
+  if (!bild) return;
+  for (const p of new Set([bild.pfad, bild.ohneRand].filter(Boolean))) fs.rmSync(p, { force: true });
 }
 
 /**
  * Erzeugt eine neue thematische Szene mit den festen Herr-Jurist-Charakteren.
- * Ein QA-Fehler bekommt genau einen zweiten Versuch in hoeherer Qualitaet.
+ * Feed-Cover starten in high; nur ein technisch oder visuell beanstandetes
+ * Ergebnis bekommt genau einen xhigh-Neuversuch. Reel-Szenen starten aus
+ * Kostengruenden in medium und eskalieren auf high.
  */
-export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "bild", slot = null } = {}) {
+export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "bild", slot = null, debugDir = null } = {}) {
   if (!charakterBildAktiv() || !ziel) return null;
   const cfg = CONFIG.bilder.charaktere;
   const chars = charaktereFuer(ziel).slice(0, 6);
-  if (!chars.length || chars.some((c) => !fs.existsSync(path.join(basis, c.datei)))) return null;
-  const prompt = charakterPrompt(ziel, chars);
+  if (!chars.length || chars.some((ch) => !fs.existsSync(path.join(basis, ch.datei)))) return null;
+
+  const reelSzene = zweck === "erklaerbild";
   const versuche = [
-    { quality: cfg.guete, reserve: cfg.reserveUsd },
-    { quality: cfg.retryGuete, reserve: cfg.retryReserveUsd },
+    { quality: reelSzene ? cfg.reelGuete : cfg.guete, reserve: cfg.reserveUsd },
+    { quality: reelSzene ? cfg.reelRetryGuete : cfg.retryGuete, reserve: cfg.retryReserveUsd },
+    { quality: reelSzene ? cfg.reelRetryGuete : cfg.retryGuete, reserve: cfg.retryReserveUsd },
   ];
-  for (let i = 0; i < versuche.length; i++) {
+  const freieRegie = coverRegieAus(ziel);
+  let korrektur = "";
+  const qaVersuche = [];
+  const editRefs = [];
+  try {
+    /* Lokale Referenzvorbereitung muss VOR der Budget-/Provider-Tuer liegen.
+       Sonst sieht ein defektes Master-JPEG wie ein bereits gesendeter Aufruf
+       mit unbekannten Kosten aus, obwohl kein Byte den Anbieter erreicht hat. */
+    for (const ch of chars) editRefs.push(referenzNormalisieren(ch));
+  } catch (e) {
+    for (const p of editRefs) fs.rmSync(p, { force: true });
+    console.warn(`  ! Charakterreferenz lokal nicht lesbar (${chars.map((x) => x.name).join(" + ")}): ${String(e?.message || e).slice(0, 180)}`);
+    return null;
+  }
+
+  try {
+    for (let i = 0; i < versuche.length; i++) {
     const v = versuche[i];
+    const zielVersuch = i >= 2 && freieRegie?.alternative
+      ? { ...ziel, coverRegie: { ...freieRegie, handlung: freieRegie.alternative } }
+      : ziel;
+    const prompt = charakterPrompt(zielVersuch, chars, korrektur);
+    let fertig = null;
     try {
       const daten = await bildAufruf({
         zweck,
@@ -284,28 +732,98 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         zeitlimitMs: cfg.zeitlimitMs,
         slot: slot || ziel?.slug || ziel?.themaId || ziel?.titel || "charakter",
         senden: () => editAufruf({
-          chars, prompt, quality: v.quality, size: cfg.groesse,
+          chars, refs: editRefs, prompt, quality: v.quality, size: cfg.groesse,
           key: CONFIG.bilder.ki.key, modell: cfg.modell, zeitlimitMs: cfg.zeitlimitMs,
         }),
         kostenAusAntwort: bildKostenUsd,
       });
       const roh = dateiAusAntwort(daten);
-      if (!roh) continue;
-      const fertig = qa(roh, cfg.randAktiv ? randFarbe : null);
-      if (!fertig) {
-        console.warn(`  ! Charakterbild QA fehlgeschlagen (${chars.map((c) => c.name).join(" + ")}, Versuch ${i + 1})`);
+      if (!roh) {
+        korrektur = "Return one complete transparent PNG illustration containing only the selected recurring characters.";
+        qaVersuche.push({ attempt: i + 1, quality: v.quality, technischOk: false, visuellOk: false, issues: ["Bildantwort ohne PNG"], retryHint: korrektur });
         continue;
       }
+
+      const technisch = qaTechnisch(roh, cfg.randAktiv ? randFarbe : null);
+      fertig = technisch?.ok ? technisch : null;
+      if (!technisch?.ok) {
+        korrektur = "Keep every selected character and important prop fully inside the frame with clean transparent edges and no cropping.";
+        const grund = technisch?.message || technisch?.reason || "technische Alpha-/Crop-QA nicht bestanden";
+        qaVersuche.push({
+          attempt: i + 1,
+          quality: v.quality,
+          technischOk: false,
+          visuellOk: false,
+          technischeQa: technisch?.details || null,
+          issues: [grund],
+          retryHint: korrektur,
+        });
+        debugVersuchAblegen(debugDir, { attempt: i + 1, quality: v.quality, roh, technisch });
+        console.warn(`  ! Charakterbild technische QA fehlgeschlagen (${chars.map((x) => x.name).join(" + ")}, Versuch ${i + 1}): ${grund} · Messwerte ${JSON.stringify(technisch?.details || {})}`);
+        fs.rmSync(roh, { force: true });
+        continue;
+      }
+
+      const visuell = await qaVisuell(fertig.ohneRand || fertig.pfad, chars, zielVersuch, slot);
+      qaVersuche.push({
+        attempt: i + 1,
+        quality: v.quality,
+        technischOk: true,
+        visuellOk: Boolean(visuell.ok),
+        technischeQa: technisch?.details || null,
+        issues: [...(visuell.issues || [])],
+        retryHint: visuell.retryHint || "",
+      });
+      debugVersuchAblegen(debugDir, {
+        attempt: i + 1,
+        quality: v.quality,
+        roh,
+        verarbeitet: fertig.ohneRand || fertig.pfad,
+        technisch,
+        visuell,
+      });
+      fs.rmSync(roh, { force: true });
+      if (!visuell.ok) {
+        const grund = (visuell.issues || []).slice(0, 4).join("; ") || "visuelle Marken-QA nicht bestanden";
+        console.warn(`  ! Charakterbild visuelle QA fehlgeschlagen (${chars.map((x) => x.name).join(" + ")}, Versuch ${i + 1}): ${grund.slice(0, 320)}`);
+        korrektur = visuell.retryHint || grund;
+        verwerfen(fertig);
+        fertig = null;
+        continue;
+      }
+
       const kosten = bildKostenUsd(daten);
-      console.log(`  → Charakterbild: ${chars.map((c) => c.name).join(" + ")} · ${v.quality}${kosten != null ? ` · ${kosten.toFixed(4)} $` : ""}`);
-      return { ...fertig, charaktere: chars.map((c) => c.name), prompt, kostenUsd: kosten };
+      console.log(`  → Charakterbild: ${chars.map((x) => x.name).join(" + ")} · ${v.quality} · visuelle QA ✓${kosten != null ? ` · ${kosten.toFixed(4)} $` : ""}`);
+      return {
+        ...fertig,
+        charaktere: chars.map((x) => x.name),
+        charakterIds: chars.map((x) => x.id),
+        prompt,
+        kostenUsd: kosten,
+        quality: v.quality,
+        attempt: i + 1,
+        qaFirstPass: i === 0,
+        qaAttempts: qaVersuche,
+        annotationPlan: visuell.annotationPlan || null,
+        qa: visuell,
+      };
     } catch (e) {
-      console.warn(`  ! Charakterbild Versuch ${i + 1} fehlgeschlagen: ${e.message.slice(0, 180)}`);
-      /* Ein 4xx-Eingabefehler wird durch hoehere Qualitaet nicht besser.
-         Nur ein inhaltlich/visuell misslungenes, aber technisch erzeugtes Bild
-         bekommt den teureren High-Retry. */
-      if (Number(e?.status) >= 400 && Number(e?.status) < 500 && Number(e?.status) !== 429) break;
+      if (fertig) verwerfen(fertig);
+      console.warn(`  ! Charakterbild Versuch ${i + 1} fehlgeschlagen: ${String(e?.message || e).slice(0, 180)}`);
+      /* Ein echter Eingabefehler wird durch mehr Bildqualitaet nicht besser.
+         Ein 429 sowie visuelle/technische Ablehnungen duerfen dagegen in den
+         zweiten kontrollierten Versuch. */
+      if (Number(e?.status) >= 400 && Number(e?.status) < 500 && Number(e?.status) !== 429) {
+        const sicherheit = /safety|rejected|policy/i.test(String(e?.message || ""));
+        if (!(sicherheit && freieRegie?.alternative && i < versuche.length - 1)) break;
+        korrektur = "Use the alternate safe visual concept. Keep the legal idea abstract, non-threatening and editorial.";
+      }
     }
   }
-  return null;
+
+    console.warn(`  ! Kein Charakter-Cover hat beide QA-Schranken bestanden: ${chars.map((x) => x.name).join(" + ")}. Sauberes Icon-Cover statt Markenfehler.`);
+    return null;
+  } finally {
+    for (const p of editRefs) fs.rmSync(p, { force: true });
+  }
 }

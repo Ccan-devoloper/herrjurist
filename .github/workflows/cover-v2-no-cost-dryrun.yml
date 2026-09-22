@@ -1,0 +1,48 @@
+name: Cover v2 · zero-cost last feed dry run
+
+on:
+  push:
+    branches:
+      - fix/cover-v2-no-arrow
+    paths:
+      - "test/last-feed-dryrun-trigger.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      IG_STIL: bunt
+      IG_CHARAKTERE: "false"
+      IG_BILD_KI: "false"
+      IG_BILDER: "false"
+      IG_NO_PUSH: "true"
+      GIT_AUTHOR_NAME: instagram-bot
+      GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Offline rendering dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python3 -m pip install --quiet pillow
+          npx playwright install --with-deps chromium || npx playwright install chromium
+      - name: Re-render latest published feed post with no provider calls
+        run: node bin/cover-v2-last-feed-dryrun.mjs
+      - name: Upload zero-cost result
+        uses: actions/upload-artifact@v4
+        with:
+          name: cover-v2-last-feed-zero-cost-${{ github.sha }}
+          path: out/cover-v2-last-feed-dryrun
+          if-no-files-found: error
+          retention-days: 7

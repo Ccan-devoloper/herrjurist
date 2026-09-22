@@ -498,15 +498,32 @@ export const CONFIG = {
     charaktere: {
       aktiv: env("IG_CHARAKTERE", "true") === "true",
       modell: env("IG_CHARAKTER_MODELL", "gpt-image-2.5-sunburst-2026-09-08"),
-      guete: env("IG_CHARAKTER_GUETE", "medium"),
-      retryGuete: env("IG_CHARAKTER_RETRY_GUETE", "high"),
+      /* Feed-Cover sind Markenmaterial. Medium war fuer Entwuerfe brauchbar,
+         liess aber Identitaetsdrift, schwache Haende und vereinfachte Outfits
+         zu oft durch. High ist deshalb der Produktionsstandard; nur ein
+         visuell beanstandetes Bild eskaliert einmal auf xhigh. */
+      guete: env("IG_CHARAKTER_GUETE", "high"),
+      retryGuete: env("IG_CHARAKTER_RETRY_GUETE", "xhigh"),
+      /* Im Reel stehen mehrere Motive nur wenige Sekunden. Dort bleibt medium
+         der wirtschaftliche Erstversuch; ein beanstandetes Motiv steigt auf
+         high. Cover selbst laufen immer ueber high/xhigh. */
+      reelGuete: env("IG_CHARAKTER_REEL_GUETE", "medium"),
+      reelRetryGuete: env("IG_CHARAKTER_REEL_RETRY_GUETE", "high"),
       groesse: env("IG_CHARAKTER_GROESSE", "1024x1024"),
       reserveUsd: Number(env("IG_CHARAKTER_RESERVE_USD", "0.12")),
       retryReserveUsd: Number(env("IG_CHARAKTER_RETRY_RESERVE_USD", "0.24")),
       minAbstandMs: Number(env("IG_CHARAKTER_MIN_ABSTAND_MS", "13000")),
-      /* Farbige Sticker-Umrandung ist fuer die neue grosse Szenenkomposition
-         standardmaessig aus. Sie kann spaeter ohne Codeaenderung wieder
-         eingeschaltet werden. */
+      referenzKante: Number(env("IG_CHARAKTER_REFERENZ_KANTE", "768")),
+      /* Zweite Qualitaetsschranke nach der technischen Alpha-/Crop-QA:
+         ein Vision-Modell sieht Kandidat UND exakte Charakterreferenzen und
+         verwirft Fremdfiguren, Duplikate, Identitaetsdrift, grobe Anatomie-
+         oder Anschnittfehler. Ohne bestandene QA wird kein KI-Cover benutzt. */
+      qaAktiv: env("IG_CHARAKTER_QA", "true") === "true",
+      qaModell: env("IG_CHARAKTER_QA_MODELL", "gpt-5.4-mini"),
+      qaMaxTokens: Number(env("IG_CHARAKTER_QA_MAX_TOKENS", "700")),
+      qaAdmissionInputTokens: Number(env("IG_CHARAKTER_QA_INPUT_RESERVE", "22000")),
+      /* Farbige Sticker-Umrandung bleibt fuer die grosse Szenenkomposition
+         aus. Sie kann spaeter ohne Codeaenderung wieder eingeschaltet werden. */
       randAktiv: env("IG_CHARAKTER_RAND", "false") === "true",
       zeitlimitMs: Number(env("IG_CHARAKTER_ZEITLIMIT_MS", "180000")),
     },
