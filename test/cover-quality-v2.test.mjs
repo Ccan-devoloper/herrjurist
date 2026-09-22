@@ -118,6 +118,16 @@ test("cover-quality-v2: juristische Fundstellen brechen nur an sinnvollen Grenze
   );
 });
 
+test("cover-quality-v2: zu lange explizite Mehrwortzeilen werden vor dem Rendern neu verteilt", () => {
+  assert.deepEqual(
+    titelZeilen(
+      "Anhörung vor dem belastenden Verwaltungsakt nach § 28 VwVfG?",
+      ["Anhörung vor dem", "belastenden Verwaltungsakt", "nach § 28 VwVfG?"],
+    ),
+    ["Anhörung vor dem", "belastenden", "Verwaltungsakt", "nach § 28 VwVfG?"],
+  );
+});
+
 test("cover-quality-v2: Titelpillen bleiben bei hoechstens vier semantischen Zeilen", () => {
   assert.equal(titelZeilen("A B C D E F G H I J", ["A", "B", "C", "D", "E", "F"]).length, 4);
   const auto = titelZeilen("Eigenschaftsirrtum ist kein Motivirrtum – merk dir die Ausnahme");
@@ -157,14 +167,15 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   const cssText = buntCss(ctx);
   assert.match(cssText, /\.art-titel\{padding-left:52px;padding-right:52px\}/);
   assert.match(cssText, /\.art-titel>\.kopf\{left:-52px;top:0;right:-52px\}/);
-  assert.match(cssText, /\.art-titel h1\.titel-stack\{[^}]*gap:7px[^}]*margin-top:10px[^}]*font-size:104px/);
+  assert.match(cssText, /\.art-titel>\.kopf \.etikett\{padding-left:92px;padding-right:52px\}/);
+  assert.match(cssText, /\.art-titel h1\.titel-stack\{[^}]*gap:5px[^}]*margin-top:10px[^}]*font-size:104px/);
   assert.match(cssText, /\.art-titel h1\.titel-stack\.klein\{font-size:94px\}/);
   assert.match(cssText, /\.art-titel h1\.titel-stack\.winzig\{font-size:84px\}/);
   assert.match(cssText, /\.art-titel h1\.titel-stack \.titel-zeile\{[^}]*max-width:976px[^}]*padding:12px 27px 14px[^}]*border-radius:30px/);
   assert.match(cssText, /\.cover-badge\{[^}]*margin-top:15px[^}]*padding:10px 26px 11px[^}]*font-size:30px/);
   assert.match(cssText, /\.frei\.charakter\{right:-12px;bottom:-6px;width:1050px;height:980px\}/);
   assert.match(cssText, /\.cover-hinweis\{[^}]*font-family:"Caveat"[^}]*font-size:52px/);
-  assert.match(cssText, /\.cover-hinweis-kurve\{[^}]*stroke-width:8/);
+  assert.match(cssText, /\.cover-hinweis-kurve,\.cover-hinweis-spitze\{[^}]*stroke-width:7/);
   assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
 
   const html = folieHtml({
@@ -190,6 +201,8 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.match(html, />Reihenfolge merken<\/div>/);
   assert.match(html, /class="cover-hinweis-pfeil"/);
   assert.match(html, /class="cover-hinweis-kurve"/);
+  assert.match(html, /class="cover-hinweis-spitze"/);
+  assert.doesNotMatch(html, /marker-end=/);
 });
 
 test("cover-quality-v2: vereinbarte Lernfamilienfarben sind permanent verdrahtet", () => {
