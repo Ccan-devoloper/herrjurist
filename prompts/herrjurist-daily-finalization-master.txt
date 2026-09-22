@@ -1,0 +1,85 @@
+@GitHub Prüfe und finalisiere heute Examenscampus und Herr Jurist vollständig. Nutze die aktuellen Tagespläne in Ccan-devoloper/steuerberater und Ccan-devoloper/herrjurist. Prüfe zuerst den aktuellen GitHub-Stand.
+
+ALLGEMEIN
+- Veröffentlichungszeiten und Lernschleife niemals verändern.
+- Inhalte mit manuellGeprueft: true ohne offene Beanstandung nicht erneut schreiben oder generieren.
+- Fachliche Richtigkeit hat Vorrang vor Stil und Kosten.
+- Keine unnötigen Provider-Aufrufe, Varianten oder Retries.
+- Erst nach vollständiger fachlicher und visueller Prüfung finalisieren.
+
+EXAMENSCAMPUS
+Prüfe und finalisiere alle heute anstehenden Beiträge, Stories und Reels fachlich und redaktionell. Korrigiere nur wenn nötig. Bei Freigabe setze manuellGeprueft: true, finalisiertVon: "chat", finalisiertAm: <aktueller ISO-Zeitstempel>.
+
+HERR JURIST – AI-FIRST
+Für Herr Jurist ist die visuelle Redaktion Teil der Finalisierung. Nutze assets/referenzen/cover-v2 als Golden References für Markenwirkung, Dichte, Proportionen und Qualitätsniveau, niemals als festes Storyboard.
+
+Wichtig: Neue oder geänderte Feed-Cover werden primär als vollständige Bildkomposition direkt mit Bild-KI erzeugt. Der Renderer ist danach nur für technische Ausgabe zuständig (1080×1350, Dateiformat, Export, Posting-Artefakt) und baut das Cover nicht kreativ aus CSS-Einzelteilen nach.
+
+Die Bild-KI komponiert als EIN Bild:
+- fachabhängige Vollflächenfarbe
+- dunkles Fachband oben links
+- 2–4 sehr große weiße Titelzeilen in einzelnen dunklen gerundeten Pillen
+- kleine helle Badge direkt darunter
+- kurzen handschriftlichen Aha-Hinweis mit locker geschwungenem offenen Pfeil
+- große hochwertige 2D-Charakterszene im unteren Bereich
+- kleine Fachpille unten rechts
+- bei Karussells den Seitenzähler oben rechts
+
+Alle sichtbaren Solltexte müssen im fertigen Bild EXAKT stimmen. Kein Buchstabendreher, keine Fantasieschrift, kein falsches §-Zeichen, keine zusätzliche lesbare Schrift.
+
+KREATIVE REGIE
+Entwickle aus dem konkreten juristischen Thema eine eigenständige Szene. Keine feste Bildformel nach Rechtsgebiet. Wähle kreativ 1–2 wiederkehrende Figuren aus rex, zylla, form7, brakk, flux, mara. Berücksichtige zuletzt verwendete Figuren, Requisiten und Szenentypen, damit der Feed variiert.
+
+Rollen sind Inspiration, keine Fachzuordnung:
+rex = Praxis/Fehler/Ursache-Wirkung
+zylla = Entdecken/Kommunikation/Kontrast
+form7 = Formalien/Ordnung/Prüfung
+brakk = Besitz/Sachen/physische Handlung
+flux = Erklärung/Dogmatik/Systematik
+mara = Entscheidung/Grenze/Druck/Ausnahme
+
+FÜR JEDES NEUE HERR-JURIST-COVER SPEICHERN
+- folien[0].titelZeilen: 2–4 semantische Anzeigezeilen. Normzitate sinnvoll zusammenhalten; nie direkt nach §, Art., Abs., Satz, S., Nr., Alt., lit. umbrechen. Lange Mehrwortzeilen lieber teilen.
+- folien[0].coverBadge: kurze redaktionelle Badge, z. B. Fehlerfalle, Klausurrelevant, Examensklassiker, Schemawissen, Praxisrelevant oder passendere eigene Formulierung.
+- coverText: 2–6 deutsche Wörter, fachlicher Aha-Hinweis, keine UX-Floskel.
+- coverRegie.charaktere: 1–2 passende IDs.
+- coverRegie.kernidee: der eine juristische Gedanke, der hängen bleiben soll.
+- coverRegie.handlung: englische klare originelle Szene mit {A}/{B}, wenigen starken Requisiten, ohne Pixelkoordinaten oder starre Links-Rechts-Choreografie.
+- coverRegie.hinweisRegie: englische kreative Vorgabe, wo Handschrift/Pfeil natürlich in der Gesamtkomposition sitzen und auf welches konkrete fachliche Element der Pfeil zeigen soll.
+- coverRegie.alternative: wirklich anderes fachlich passendes Konzept für einen Retry.
+- bildSzene und bildSzeneAlt: kurze englische semantische Zusammenfassungen.
+
+TITEL
+Titelzeilen müssen als große Pills funktionieren. Ziel sind kurze semantische Zeilen; juristische Fundstellen sauber halten. Wenn ein Titel sperrig ist, bessere zuerst titelZeilen bzw. Formulierung aus, statt das Cover klein zu machen.
+
+BILDGENERIERUNG
+Erzeuge das vollständige Cover im Stil der Golden References. Die Referenzen definieren Markenlook, nicht konkrete Figuren oder Props.
+- Szene groß und dominant, keine Stickeroptik.
+- wenige starke Requisiten, klare Silhouetten, expressive Interaktion.
+- Handschrift und Pfeil organisch in echte Negativfläche nahe der Handlung integrieren.
+- Pfeil locker geschwungen mit offener zweistrichiger Spitze, fachlich eindeutig.
+- nichts Wichtiges verdecken.
+- bei sensiblen Strafrechtsthemen ausschließlich symbolische Lernmetaphern; keine Verletzung, kein Tod, keine Selbstverletzungshandlung oder grafische Darstellung.
+
+VISUAL QA
+Prüfe das fertige Bild gegen Solltexte und Golden References:
+1. Titelzeilen, Fachband, Badge, coverText, Fachpille und ggf. Zähler exakt?
+2. Keine zusätzliche lesbare Schrift?
+3. Charakteridentitäten sauber, keine Zusatz-/Doppelfiguren, Anatomie sauber?
+4. Titel groß und kompakt, keine überlaufenden Pillen, kein abgeschnittenes Fachband?
+5. Badge, Handschrift und Pfeil sinnvoll?
+6. Szene groß, keine tote Fläche, juristische Idee auf Mobilgröße lesbar?
+7. Markenwirkung klar Herr Jurist?
+
+Bei Fehlern gezielt EINEN Retry durchführen; bei erneutem Fehler nicht ungeprüft veröffentlichen.
+
+REELS
+Für Herr-Jurist-Reels gilt AI-first auch für die einzelnen Bildszenen: jede Szene entsteht aus dem konkreten Sprecherinhalt als kleine Episode desselben Universums. Keine generischen Lehrbuchdiagramme. Bestehende technische Reel-Komposition, Timing und Sprechertexte nicht unnötig verändern.
+
+FINALISIERUNG
+Erst wenn Fachinhalt, Texte und visuelles Ergebnis bestanden sind:
+manuellGeprueft: true
+finalisiertVon: "chat"
+finalisiertAm: <aktueller ISO-Zeitstempel>
+
+Danach keine unnötigen Text-, Regie- oder Bildaufrufe mehr.
