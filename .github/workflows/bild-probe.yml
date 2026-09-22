@@ -9,9 +9,6 @@ name: Titelbild · Vergleichsprobe
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/.bild-probe-trigger"
     inputs:
       motiv:
         description: "Motiv (englisch, 3-6 Wörter)"
@@ -43,7 +40,7 @@ jobs:
       - name: Drei Wege zeichnen
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: node bin/bild-probe.mjs "${{ inputs.motiv || 'microphone beside constitutional law book' }}" "assets/proben/$(date -u +%Y-%m-%d-%H%M)"
+        run: node bin/bild-probe.mjs "${{ inputs.motiv }}" "assets/proben/$(date -u +%Y-%m-%d-%H%M)"
 
       - name: In den Asset-Zweig legen
         working-directory: assets
