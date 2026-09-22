@@ -1,8 +1,12 @@
 name: fal.ai · Video-Test
 
-# Reiner manueller Testpfad. Er wird weder vom Zeitplan noch vom
-# Instagram-Lauf aufgerufen und kann daher keine laufende Produktion veraendern.
+# Isolierter Testpfad. Auf dem Feature-Branch laeuft er einmal beim Aendern
+# dieser Workflow-Datei, damit die API-Verbindung mit dem hinterlegten Secret
+# geprueft werden kann. Nach dem Test bleibt nur workflow_dispatch relevant.
 on:
+  push:
+    branches: ["feature/fal-video-testpfad"]
+    paths: [".github/workflows/fal-video-test.yml"]
   workflow_dispatch:
     inputs:
       bild:
@@ -31,8 +35,8 @@ jobs:
       - name: fal.ai-Verbindung pruefen und 6-Sekunden-Clip erzeugen
         env:
           FAL_KEY: ${{ secrets.FAL_KEY }}
-          BILD: ${{ github.event.inputs.bild }}
-          PROMPT: ${{ github.event.inputs.prompt }}
+          BILD: ${{ github.event.inputs.bild || 'assets/charaktere/rex-rohrbruch.jpg.b64' }}
+          PROMPT: ${{ github.event.inputs.prompt || 'Subtle premium editorial character animation. Preserve the exact illustrated character identity, face, body proportions, outfit, colors and line style. Natural blinking and breathing, a small cautious head turn and minimal hand movement. Very gentle camera push-in. No morphing, no new objects, no text, no logos, no style change, no camera shake.' }}
         run: |
           test -n "$FAL_KEY" || { echo "FAL_KEY fehlt."; exit 2; }
           test -f "$BILD" || { echo "Bild nicht gefunden: $BILD"; exit 2; }
