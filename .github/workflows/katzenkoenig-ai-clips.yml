@@ -1,0 +1,41 @@
+name: Katzenkönig · Voice-Test
+
+on:
+  push:
+    branches: ["feature/fal-video-testpfad"]
+    paths: [".github/workflows/katzenkoenig-ai-clips.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: ffmpeg und Piper-Fallback
+        run: |
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+          pip install --quiet piper-tts
+          mkdir -p ~/.cache/piper-voices
+          if [ ! -f ~/.cache/piper-voices/de_DE-thorsten-high.onnx ]; then
+            python3 -m piper.download_voices --data-dir ~/.cache/piper-voices de_DE-thorsten-high
+          fi
+      - name: Voiceover erzeugen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+          ELEVENLABS_MODEL: ${{ vars.ELEVENLABS_MODEL }}
+          PIPER_MODEL: /home/runner/.cache/piper-voices/de_DE-thorsten-high.onnx
+        run: node bin/katzenkoenig-voice.mjs
+      - name: Voice sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: katzenkoenig-voice-${{ github.run_id }}
+          path: out/katzenkoenig-audio
+          retention-days: 7
