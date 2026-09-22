@@ -694,6 +694,17 @@ function ueberzeile(art, text) {
   return `<div class="ueberzeile">${zeichen ? `<span class="uz-icon">${zeichen}</span>` : ""}<span>${esc(text)}</span></div>`;
 }
 
+/* Zahl-des-Tages bleibt absichtlich riesig, wird aber nach Zeichenlaenge
+   abgestuft. Die fachliche Validierung begrenzt das Feld zusaetzlich auf acht
+   Zeichen und verlangt mindestens eine Ziffer. So kann selbst ein manuell
+   finalisierter Wert nicht mehr rechts aus der Story laufen. */
+function storyZahlGroesse(wert) {
+  const laenge = String(wert ?? "").trim().length;
+  if (laenge <= 3) return 300;
+  if (laenge <= 5) return 230;
+  return 180;
+}
+
 const STORIES = {
   teaser: (s, ctx) => `
     ${sk(ctx)}
@@ -778,7 +789,7 @@ const STORIES = {
   zahl: (s, ctx) => `
     ${sk(ctx)}
     ${ueberzeile("zahl", s.ueberzeile || "Zahl des Tages")}
-    <div class="zahl" style="font-size:300px">${esc(s.zahl)}</div>
+    <div class="zahl" style="font-size:${storyZahlGroesse(s.zahl)}px;white-space:nowrap;max-width:100%">${esc(s.zahl)}</div>
     <div class="zahl-unter">${markierenTitel(s.titel)}</div>
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
     ${fuss(ctx)}`,

@@ -231,7 +231,7 @@ const STORY_SCHEMA = {
           text: { type: ["string", "null"] },
           norm: { type: ["string", "null"] },
           formel: { type: ["string", "null"] },
-          zahl: { type: ["string", "null"] },
+          zahl: { type: ["string", "null"], maxLength: 8 },
           optionen: { type: ["array", "null"], items: { type: "string" } },
           richtig: { type: ["integer", "null"] },
           falsch: { type: ["string", "null"] },
@@ -952,7 +952,7 @@ Arten:
 - fehler: titel = die Falle (max. 70 Zeichen), falsch = der Fehler (max. 120 Zeichen), richtigText = die richtige Lösung mit Norm (max. 160 Zeichen)
 - tipp: titel = Klausurtipp (max. 70 Zeichen), text = Umsetzung (max. 180 Zeichen), icon
 - bildSzene (nur bei begriff und tipp, sonst null): eine ENGLISCHE, fotografierbare Alltagsszene in 3–6 Wörtern, nach der sich in einer Fotodatenbank suchen lässt und die das Thema bildlich greifbar macht („woman reading letter at kitchen table“). Keine Fachvokabeln, keine abstrakten Begriffe, keine Symbolbild-Klassiker (Richterhammer, Waage, Gesetzbuch, Taschenrechner, Münzstapel, Händedruck). Nur Motive, die ganz im Bild sind – eine Person vom Kopf bis zur Hüfte, ein Gegenstand mit Rand ringsum. Beschreibe ein Schriftstück NIE über das, was daraufsteht, sondern über Form und Zustand („folded letter with wax seal“, „stapled document with sections“, „open ring binder“) - und meide Motive, die von Beschriftung leben (Briefumschlag mit Aufdruck, Schild, Etikett, Buchdeckel, Urkunde, Stempel). Das Zeichenmodell schreibt sonst englische Wörter ins Bild, und zwar falsch geschrieben: Am 18.09. stand „GERITIFIEID MAIL“ auf dem Titelbild eines Beitrags zum Öffentlichen Recht. Fällt dir keine echte Szene ein: null.
-- zahl: zahl = eine markante Zahl/Frist/Prozentsatz (max. 8 Zeichen), titel = was sie bedeutet (max. 60 Zeichen), text = Norm und Kontext (max. 160 Zeichen)
+- zahl: zahl = eine konkrete, zum Thema passende Ziffernangabe (max. 8 Zeichen), die die Kernaussage der Story trägt, z. B. „0 %“, „14 Tage“, „3 Jahre“ oder „100 %“. Niemals Wörter wie „automatisch“, „sofort“ oder „immer“ in das Feld zahl schreiben und nicht bloß eine Paragraphennummer als Zahl ausgeben. titel = was genau diese Zahl fachlich bedeutet (max. 60 Zeichen), text = Norm und Kontext (max. 160 Zeichen)
 
 Aufträge:
 ${auftraege}

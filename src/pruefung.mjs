@@ -792,6 +792,14 @@ export function pruefeBeitrag(beitrag, opt = {}) {
   for (const s of beitrag.stories || []) {
     const l = (s.text || "").length;
     if (l > GRENZEN.storyTextZeichen) fehler.push(`Story „${s.titel || s.art}“: Text zu lang (${l} > ${GRENZEN.storyTextZeichen})`);
+    if (s.art === "zahl") {
+      const zahl = String(s.zahl ?? "").trim();
+      if (!zahl) fehler.push("Story „Zahl des Tages“ braucht eine konkrete, zum Thema passende Zahl.");
+      else {
+        if (zahl.length > 8) fehler.push(`Story „Zahl des Tages“: Zahl zu lang (${zahl.length} > 8 Zeichen)`);
+        if (!/\\d/.test(zahl)) fehler.push(`Story „Zahl des Tages“: „${zahl}“ ist keine konkrete Zahl. Erlaubt sind z. B. „0 %“, „14 Tage“ oder „3 Jahre“.`);
+      }
+    }
   }
 
   return { ok: fehler.length === 0, fehler };

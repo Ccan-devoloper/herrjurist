@@ -3360,6 +3360,28 @@ test("Safety 0c: ein Formcheck löscht keinen fachlichen Befund", async () => {
   assert.equal(storyFreigabe(quiz).frei, false, "ein kaputter Index bleibt ein Hindernis");
 });
 
+test("Safety 0d: Zahl-des-Tages verlangt auch bei manueller Finalisierung eine echte Zahl", async () => {
+  const { storyFreigabe } = await import("../src/pruefung.mjs");
+
+  const wortwert = {
+    slot: "s7", art: "zahl", titel: "Minderung tritt kraft Gesetzes ein",
+    text: "Kurz.", zahl: "automatisch", befundeTypisiert: true,
+    manuellGeprueft: true, finalisiertVon: "chat",
+  };
+  const blockiert = storyFreigabe(wortwert);
+  assert.equal(blockiert.frei, false, "manuell finalisiert darf die lokale Formschranke nicht umgehen");
+  assert.match(blockiert.grund, /keine konkrete Zahl/);
+
+  const passend = {
+    ...wortwert,
+    titel: "Miete bei völliger Unbrauchbarkeit",
+    zahl: "0 %",
+  };
+  const frei = storyFreigabe(passend);
+  assert.equal(frei.frei, true, "eine kurze echte Zahl bleibt auch manuell finalisiert freigabefähig");
+  assert.equal(frei.manuell, true);
+});
+
 test("Safety 0b: der Prüfer sieht, welche Option als richtig markiert ist", async () => {
   const { textAus } = await import("../src/faktencheck.mjs");
   /* Bis zum 18.09. standen die Optionen als blosse Aufzählung im Prüftext,

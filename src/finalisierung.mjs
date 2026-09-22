@@ -13,6 +13,21 @@
    unberührt.
    ========================================================================== */
 
+/* WICHTIG FUER MANUELLE PRUEFUNG/ERSTELLUNG IM CHAT ODER DURCH EINE KI:
+   "manuellGeprueft" bedeutet fachlich final, nicht "Formregeln ueberspringen".
+   Insbesondere bei Story art=zahl muss `zahl` eine ECHTE, zum konkreten
+   Themenbeitrag passende Ziffernangabe sein (max. 8 Zeichen), z. B. "0 %",
+   "14 Tage", "3 Jahre" oder "100 %". Woerter wie "automatisch", "sofort" oder
+   "immer" gehoeren in Titel/Text, niemals in `zahl`. Eine Paragraphennummer
+   allein ist ebenfalls keine sinnvolle "Zahl des Tages".
+
+   Diese Regel steht hier bewusst direkt am manuellen Finalisierungs-Gate, damit
+   sie bei spaeterer Chat-/KI-Finalisierung zusammen mit der Kostenschutzlogik
+   sichtbar ist. Die lokale Pruefung erzwingt sie zusaetzlich vor dem Posten. */
+export const MANUELLE_FINALISIERUNG_REGELN = Object.freeze({
+  zahl: "Bei art=zahl: konkrete, thematisch tragende Ziffernangabe; max. 8 Zeichen; mindestens eine Ziffer; keine Wortwerte und keine bloße Paragraphennummer.",
+});
+
 export function manuellFinalisiert(inhalt) {
   return inhalt?.manuellGeprueft === true;
 }
