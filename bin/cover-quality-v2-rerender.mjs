@@ -209,3 +209,4 @@ try {
 } finally {
   await browserBeenden().catch(() => {});
 }
+// Verify cover-v2 handwritten-note rendering without arrows.
