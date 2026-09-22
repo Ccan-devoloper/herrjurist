@@ -1,0 +1,34 @@
+name: Carousel prompt dry-run input
+
+on:
+  push:
+    branches:
+      - feature/cover-quality-v2
+    paths:
+      - "test/carousel-dryrun-trigger.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - name: Decrypt matching pool topic and unpack golden references
+        env:
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+        run: node bin/carousel-prompt-dryrun-input.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carousel-prompt-dryrun-input-${{ github.sha }}
+          path: out/carousel-prompt-dryrun-input
+          retention-days: 2
