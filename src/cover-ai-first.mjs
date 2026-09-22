@@ -267,9 +267,10 @@ export async function aiCoverZeichnen(ziel,{slot=null}={}) {
     }
     const refs=[...charRefs,...goldenRefs];
     let correction="";
+    const aiFirstQuality = CONFIG.bilder.charaktere.retryGuete || "xhigh";
     const attempts=[
-      {quality:CONFIG.bilder.charaktere.guete||"high",reserve:Math.max(0.14,Number(CONFIG.bilder.charaktere.reserveUsd||0.12)),alternative:false},
-      {quality:CONFIG.bilder.charaktere.retryGuete||"xhigh",reserve:Math.max(0.26,Number(CONFIG.bilder.charaktere.retryReserveUsd||0.24)),alternative:true},
+      {quality:aiFirstQuality,reserve:Math.max(0.26,Number(CONFIG.bilder.charaktere.retryReserveUsd||0.24)),alternative:false},
+      {quality:aiFirstQuality,reserve:Math.max(0.26,Number(CONFIG.bilder.charaktere.retryReserveUsd||0.24)),alternative:true},
     ];
     for(let i=0;i<attempts.length;i++){
       const a=attempts[i];
@@ -297,9 +298,12 @@ export async function aiCoverZeichnen(ziel,{slot=null}={}) {
       fs.rmSync(raw,{force:true}); raw=null;
       const q=await qa(cropped,ziel,chars,charRefs,goldenRefs,slot);
       qaAttempts.push({attempt:i+1,quality:a.quality,...q});
+      console.log(`  → AI-first Cover QA Versuch ${i + 1}: ${q.ok ? "OK" : "RETRY"} · ${(q.issues || []).join(" | ") || "keine Beanstandung"}`);
       if(q.ok){
+        const accepted = cropped;
+        cropped = null;
         return {
-          pfad:cropped,breite:1080,hoehe:1350,quality:a.quality,attempt:i+1,
+          pfad:accepted,breite:1080,hoehe:1350,quality:a.quality,attempt:i+1,
           qaFirstPass:i===0,qaAttempts,qa:q,
           charakterIds:chars.map((x)=>x.id),charaktere:chars.map((x)=>x.name),
           prompt:promptText,
