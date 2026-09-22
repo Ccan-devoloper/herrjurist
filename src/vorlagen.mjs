@@ -728,7 +728,7 @@ function titelBlock(titel, zeilen, ctx) {
 
 const FOLIEN = {
   titel: (f, ctx, i, n) => {
-    if (f.bild && f.bildTyp === "ai-cover") {
+    if (f.bild && (f.bildTyp === "ai-cover" || f.bildTyp === "chat-native-cover")) {
       return `<img class="ai-cover-full" src="${esc(f.bild)}" alt="">`;
     }
     const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
