@@ -200,7 +200,7 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
      sechs Referenzfiguren sind konstant. Scheitern beide Qualitaetsversuche,
      bleibt bewusst das bestehende Icon-Layout statt auf Stockfotos
      zurueckzufallen. */
-  if (beitrag?.folien?.some?.((f) => f.art === "titel") && (opt.zweck || "bild") !== "erklaerbild" && aiCoverAktiv() && opt.charaktere !== false) {
+  if (opt.aiFirstCover === true && beitrag?.folien?.some?.((f) => f.art === "titel") && (opt.zweck || "bild") !== "erklaerbild" && aiCoverAktiv() && opt.charaktere !== false) {
     const cover = await aiCoverZeichnen(beitrag, {
       slot: opt.slot || beitrag?.slug || beitrag?.themaId || null,
     });
