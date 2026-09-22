@@ -29,7 +29,7 @@ const budget = budgetStarten({
   protokoll: () => {},
 });
 budgetSetzen({ limitUsd: 0.35, antwortLimitUsd: 0.35 });
-kontextSetzen({ budget, telemetrie, journal: null, kanal: "herrjurist-cover-quality-v2-single", datum: "acceptance-single" });
+kontextSetzen({ budget, telemetrie, journal: null, kanal: "herrjurist-cover-quality-v2-single-sterbehilfe", datum: "acceptance-single" });
 
 const round = (n) => Number(Number(n || 0).toFixed(6));
 const sum = (liste, feld = "actualUsd") => round(liste.reduce((a, x) => a + (Number.isFinite(Number(x?.[feld])) ? Number(x[feld]) : 0), 0));
@@ -55,18 +55,26 @@ function motivAufraeumen(motiv) {
 }
 
 function themaWaehlen() {
-  const schonVerwendet = /wann beginnt der versuch|§\s*22\s*stgb|§\s*142\s*stgb|142\s*stgb|unfallort|unerlaub.*entfern/i;
+  const sterbehilfe = /sterbehilfe|t[oö]tung\s+auf\s+verlangen|suizid|behandlungsabbruch|patientenverf[uü]gung|§\s*216\s*stgb|216\s*stgb/i;
   const prioritaet = { hoch: 0, mittel: 1, niedrig: 2 };
   const kandidaten = themenpool()
     .filter((t) => Number(t.klausur) === 2)
-    .filter((t) => !schonVerwendet.test(String(t.titel || "")))
-    .filter((t) => String(t.titel || "").trim().length >= 18)
+    .filter((t) => sterbehilfe.test([
+      t.titel,
+      ...(t.normen || []),
+      ...(t.kern?.lernziele || []),
+      ...(t.kern?.pruefschritte || []),
+      t.kern?.merksatz,
+      ...(t.kern?.fehler || []),
+    ].filter(Boolean).join(" | ")))
     .sort((a, b) =>
       (prioritaet[a.prioritaet] ?? 9) - (prioritaet[b.prioritaet] ?? 9)
       || Number(Boolean(b.kern?.merksatz)) - Number(Boolean(a.kern?.merksatz))
       || String(a.id).localeCompare(String(b.id))
     );
-  if (!kandidaten.length) throw new Error("Kein neues Strafrecht-Thema außerhalb der bisherigen Versuch-/§142-Abnahme gefunden.");
+  if (!kandidaten.length) {
+    throw new Error("Im entschlüsselten Strafrecht-Themenpool wurde kein Sterbehilfe-/§216-/Suizid-/Behandlungsabbruch-Thema gefunden. Kein Fallback-Thema wird erzeugt.");
+  }
   return kandidaten[0];
 }
 
@@ -117,7 +125,7 @@ async function regieErzeugen(thema, fachLabel) {
     params,
     optional: false,
     admissionInputTokens: 2200,
-    slot: "single-cover-regie",
+    slot: "single-cover-regie-sterbehilfe",
     promptVersion: "single-cover-regie-v1",
   });
   const roh = responsesText(antwort);
@@ -131,7 +139,7 @@ try {
   const thema = themaWaehlen();
   const fachLabel = FAECHER[thema.fach]?.label || "Strafrecht";
   const regie = await regieErzeugen(thema, fachLabel);
-  const slot = "single-strafrecht";
+  const slot = "single-strafrecht-sterbehilfe";
   const ziel = {
     format: "pruefungsfrage",
     fach: thema.fach,
@@ -238,7 +246,7 @@ try {
     };
     fs.writeFileSync(path.join(out, "manifest.json"), JSON.stringify(report, null, 2));
     fs.writeFileSync(path.join(out, "README.txt"), [
-      "Herrjurist Cover Quality v2 – single Strafrecht acceptance",
+      "Herrjurist Cover Quality v2 – single Strafrecht Sterbehilfe acceptance",
       `Topic: ${thema.titel}`,
       `Artifact cover: ${path.relative(root, datei)}`,
       `Measured provider cost: $${report.costUsd.total.toFixed(6)}`,
