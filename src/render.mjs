@@ -87,18 +87,13 @@ function coverTitelGeometriePruefen() {
   if (fehler.length) throw new Error(`Cover-Titelzeile passt nicht in die feste Markenpille: ${fehler.join(" | ")}`);
 }
 
-/* Setzt die Handschrift exakt nach dem von der visuellen KI-QA gelieferten
-   Plan. Keine Zonensuche und kein eigenes Kompositions-Scoring: Der Renderer
-   mappt nur die normalisierten KI-Koordinaten auf das tatsächlich dargestellte
-   transparente Motiv und hält Text/Pfeil innerhalb der technischen Safe Area. */
+/* Setzt den handschriftlichen Hinweis nach dem von der visuellen KI-QA
+   gelieferten Plan. Cover-v2 zeichnet bewusst keinen Pfeil mehr. */
 function coverHinweisAusPlanPlatzieren() {
   const wurzel = document.querySelector(".folie.art-titel");
   const hinweis = wurzel?.querySelector(".cover-hinweis");
-  const svg = wurzel?.querySelector(".cover-hinweis-pfeil");
-  const pfad = svg?.querySelector(".cover-hinweis-kurve");
-  const spitze = svg?.querySelector(".cover-hinweis-spitze");
   const img = wurzel?.querySelector(".frei.charakter img, .frei img");
-  if (!wurzel || !hinweis || !svg || !pfad || !spitze || !img?.complete || !img.naturalWidth || !img.naturalHeight) return;
+  if (!wurzel || !hinweis || !img?.complete || !img.naturalWidth || !img.naturalHeight) return;
 
   const root = wurzel.getBoundingClientRect();
   const ir = img.getBoundingClientRect();
@@ -124,7 +119,6 @@ function coverHinweisAusPlanPlatzieren() {
   const tx = ox + n("targetX", 0.5) * dw;
   const ty = oy + n("targetY", 0.55) * dh;
   const rotation = Math.max(-12, Math.min(12, n("rotation", -4)));
-  const bend = Math.max(-1, Math.min(1, n("bend", 0.35)));
 
   const titel = wurzel.querySelector("h1.titel-stack, h1");
   const badge = wurzel.querySelector(".cover-badge");
@@ -238,104 +232,9 @@ function coverHinweisAusPlanPlatzieren() {
   hinweis.style.transform = `translate(-50%,-50%) rotate(${rotation}deg)`;
   hr = hinweis.getBoundingClientRect();
 
-  const cx = (hr.left + hr.right) / 2;
-  const cy = (hr.top + hr.bottom) / 2;
-  const dx = tx - cx, dy = ty - cy;
-  const hw = Math.max(1, hr.width / 2 + 8), hh = Math.max(1, hr.height / 2 + 8);
-  const ax = Math.abs(dx) > 0.001 ? hw / Math.abs(dx) : Infinity;
-  const ay = Math.abs(dy) > 0.001 ? hh / Math.abs(dy) : Infinity;
-  const edge = Math.min(ax, ay, 1);
-  const startX = cx + dx * edge;
-  const startY = cy + dy * edge;
-  const laenge = Math.max(1, Math.hypot(tx - startX, ty - startY));
-  const normalX = -(ty - startY) / laenge;
-  const normalY = (tx - startX) / laenge;
-
-  const pfeilGeometrie = (biegung) => {
-    const mx = (startX + tx) / 2;
-    const my = (startY + ty) / 2;
-    const krumm = Math.min(155, laenge * 0.30) * biegung;
-    return {
-      ctrlX: mx + normalX * krumm,
-      ctrlY: my + normalY * krumm,
-      biegung,
-    };
-  };
-
-  const punktAufKurve = (g, t) => {
-    const q = 1 - t;
-    return {
-      x: q * q * startX + 2 * q * t * g.ctrlX + t * t * tx,
-      y: q * q * startY + 2 * q * t * g.ctrlY + t * t * ty,
-    };
-  };
-
-  const pfeilScore = (g) => {
-    if (!alpha) return Math.abs(g.biegung - bend);
-    let kollision = 0;
-    let ausserhalb = 0;
-    /* Die letzten 18 % duerfen in das Zielobjekt laufen - genau dort soll die
-       Pfeilspitze ja landen. Der restliche Pfeil soll rechnerisch frei bleiben. */
-    for (let i = 1; i <= 20; i++) {
-      const t = i / 25; // bis 0.80
-      const p = punktAufKurve(g, t);
-      if (p.x < minLeft || p.x > maxRight || p.y < minTop || p.y > maxBottom) ausserhalb++;
-      if (alphaAn(p.x, p.y) > 0.12) kollision++;
-      /* Auch etwas neben der Mittellinie pruefen: ein 7px-Strich braucht
-         realen Freiraum, nicht nur einen einzigen transparenten Pixelpfad. */
-      if (alphaAn(p.x + normalX * 7, p.y + normalY * 7) > 0.12) kollision++;
-      if (alphaAn(p.x - normalX * 7, p.y - normalY * 7) > 0.12) kollision++;
-    }
-    return kollision * 1000 + ausserhalb * 5000 + Math.abs(g.biegung - bend) * 18;
-  };
-
-  const biegungen = [...new Set([
-    bend,
-    Math.max(-1, Math.min(1, bend + 0.28)),
-    Math.max(-1, Math.min(1, bend - 0.28)),
-    Math.max(-1, Math.min(1, bend + 0.55)),
-    Math.max(-1, Math.min(1, bend - 0.55)),
-    0,
-    0.75,
-    -0.75,
-  ].map((z) => Number(z.toFixed(2))))];
-
-  let g = pfeilGeometrie(biegungen[0]);
-  let gScore = pfeilScore(g);
-  for (const b of biegungen.slice(1)) {
-    const kandidat = pfeilGeometrie(b);
-    const score = pfeilScore(kandidat);
-    if (score < gScore) {
-      g = kandidat;
-      gScore = score;
-    }
-  }
-
   hinweis.dataset.freeScore = String(Number(besterScore.toFixed(2)));
-  hinweis.dataset.arrowFreeScore = String(Number(gScore.toFixed(2)));
-
-  const rel = (a, b) => [a - root.left, b - root.top].map((v) => Number(v.toFixed(1)));
-  const [sx2, sy2] = rel(startX, startY);
-  const [cx2, cy2] = rel(g.ctrlX, g.ctrlY);
-  const [tx2, ty2] = rel(tx, ty);
-  pfad.setAttribute("d", `M ${sx2} ${sy2} Q ${cx2} ${cy2} ${tx2} ${ty2}`);
-
-  /* Offene, handgezeichnete Pfeilspitze wie in den Golden References. */
-  const tangentX = tx - g.ctrlX;
-  const tangentY = ty - g.ctrlY;
-  const tangentLen = Math.max(1, Math.hypot(tangentX, tangentY));
-  const ux = tangentX / tangentLen;
-  const uy = tangentY / tangentLen;
-  const nx = -uy;
-  const ny = ux;
-  const kopfLaenge = 30;
-  const fluegel = 16;
-  const basisX = tx - ux * kopfLaenge;
-  const basisY = ty - uy * kopfLaenge;
-  const [a1x, a1y] = rel(basisX + nx * fluegel, basisY + ny * fluegel);
-  const [a2x, a2y] = rel(basisX - nx * fluegel, basisY - ny * fluegel);
-  spitze.setAttribute("d", `M ${a1x} ${a1y} L ${tx2} ${ty2} L ${a2x} ${a2y}`);
 }
+
 
 /* Läuft im Browser: verkleinert Text, bis nichts mehr über den rechten Rand
    hinausragt und der Inhalt oberhalb der Fußzeile bleibt. */
