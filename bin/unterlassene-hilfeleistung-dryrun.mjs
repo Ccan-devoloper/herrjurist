@@ -25,7 +25,19 @@ const norm = (v) => String(v || "").toLowerCase()
   .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const topic = THEMEN.find((t) => norm(t.titel || t.title).includes("unterlassene hilfeleistung"))
   || THEMEN.find((t) => JSON.stringify(t).includes("323c"));
-if (!topic) throw new Error("Thema 'Unterlassene Hilfeleistung' / § 323c nicht im entschluesselten Themenpool gefunden.");
+if (!topic) {
+  const candidates = THEMEN.filter((t) => {
+    const hay = norm(JSON.stringify(t));
+    return hay.includes("hilfe") || hay.includes("unterlass") || hay.includes("323") || hay.includes("notfall");
+  }).map((t) => ({
+    id: t.id || t.themaId || null,
+    titel: t.titel || t.title || null,
+    normen: t.normen || null,
+    fach: t.fach || null
+  }));
+  console.log("DIAG_MATCHING_TOPICS=" + JSON.stringify(candidates));
+  throw new Error("Thema 'Unterlassene Hilfeleistung' / § 323c nicht im entschluesselten Themenpool gefunden.");
+}
 
 const motifBytes = fs.readFileSync(motif);
 const motifData = `data:image/png;base64,${motifBytes.toString("base64")}`;
