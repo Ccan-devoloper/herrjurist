@@ -45,10 +45,20 @@ Die zehn Motive sind:
 
 Für visuelle QA und Renderer-Entwicklung dienen die Referenzen als **Qualitätsmaßstab**, nicht als Pixel- oder Szenen-Matching. Neue Cover sollen sich wie dieselbe Marke anfühlen, aber als neue Episode des Universums erkennbar bleiben.
 
-## Layout-Abnahme
+## AI-first-Abnahme
 
-Die Referenzen priorisieren eine dichte mobile Komposition. Der Renderer hält nur die wiederkehrende Marken-Geometrie fest: 4:5-Format, ein bündiges und unverrückbares Fachband mit einheitlicher CSS-Geometrie, obere Titelposition, feste Schriftstufen der Titelpillen, minimal enger Pillenabstand, Pillen-Innenabstände/-maximalbreite, Badge-Geometrie, Footer und Seitenzähler. Der Titel darf nicht wegen der Charakterbühne dynamisch kleingerechnet werden. Mehrwort-Zeilen werden vor dem Rendern auf höchstens ungefähr 21 sichtbare Zeichen neu verteilt; verbleibender Pillen-Overflow ist ein harter Preflight-Fehler statt eines stillen Schrumpfens.
+Die Golden References definieren die visuelle Gesamtwirkung. Neue Feed-Cover werden deshalb als **vollständige Bildkomposition** erzeugt: Vollflächenfarbe, Fachband, Titelpillen, Badge, Handschrift/Pfeil, Charakterbühne, Fachpille und ggf. Seitenzähler entstehen gemeinsam im Bildmodell.
 
-Die konkrete Szene bleibt Aufgabe der dynamischen Regie. Dazu gehören Figuren, Requisiten, Posen sowie die gewünschte Beziehung zwischen handschriftlichem Aha-Hinweis und Szene. Das Bildmodell selbst erzeugt **keine** Handschrift und **keinen** Pfeil.
+Vor der Generierung werden die Solltexte redaktionell festgelegt und die Titelzeilen semantisch normalisiert. Das Bildmodell erhält ausgewählte Golden References nur als Marken-/Layoutanker und die gewählten Charakterreferenzen nur als Identitätsanker. Es darf daraus keine feste Fach→Figur-, Prop- oder Szenenformel ableiten.
 
-Nach der Bildgenerierung sieht die bereits vorhandene visuelle KI-QA das tatsächliche freigestellte Motiv und liefert einen normalisierten `annotationPlan`: Mittelpunkt des Hinweises, konkretes Pfeilziel, leichte Rotation und Pfeilkrümmung. Damit bestimmt weiterhin die KI die reale Komposition – aber anhand des wirklich entstandenen Bildes statt anhand starrer Zonen. Der Renderer zeichnet anschließend den redaktionell vorgegebenen `coverText` exakt in Caveat sowie den Markenpfeil entlang dieses KI-Plans. Der Pfeil verwendet die Referenzoptik: lockere Kurve, runder dunkler Strich und offene zweistrichige Pfeilspitze statt gefülltem Dreieck. Er darf nur technisch innerhalb der Safe Area korrigieren; eine eigene links/rechts-Zonensuche oder ein Kompositions-Scoring findet nicht statt.
+Die finale Vision-QA prüft insbesondere:
+- exakte Schreibweise aller vorgesehenen sichtbaren Texte,
+- keine zusätzliche lesbare Schrift,
+- Golden-Reference-Markenwirkung und visuelle Dichte,
+- große, klare Szene ohne tote Fläche,
+- Charakteridentität/Anatomie,
+- sauberes Fachband, Titelpillen, Badge, Handschrift und Pfeil.
+
+Bei Fehlern gibt es höchstens einen gezielten Retry. Besteht auch dieser nicht, darf das Cover nicht ungeprüft veröffentlicht werden.
+
+Der Renderer baut ein bestandenes AI-first-Cover **nicht** nochmals aus CSS-Elementen zusammen. Er behandelt es als fertiges 1080×1350-Vollbild und übernimmt nur technische Ausgabe/Export. Die bisherige Renderer-Komposition bleibt ausschließlich als Fallback für Altinhalte bzw. nicht-AI-first-Cover erhalten.
