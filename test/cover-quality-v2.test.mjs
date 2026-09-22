@@ -175,7 +175,8 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.match(cssText, /\.cover-badge\{[^}]*margin-top:15px[^}]*padding:10px 26px 11px[^}]*font-size:30px/);
   assert.match(cssText, /\.frei\.charakter\{right:-12px;bottom:-6px;width:1050px;height:980px\}/);
   assert.match(cssText, /\.cover-hinweis\{[^}]*font-family:"Caveat"[^}]*font-size:52px/);
-  assert.match(cssText, /\.cover-hinweis-kurve,\.cover-hinweis-spitze\{[^}]*stroke-width:7/);
+  assert.doesNotMatch(cssText, /\.cover-hinweis-kurve,\.cover-hinweis-spitze/);
+  assert.doesNotMatch(cssText, /\.cover-hinweis-pfeil/);
   assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
 
   const html = folieHtml({
@@ -199,9 +200,9 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.match(html, />1\/6</);
   assert.match(html, /class="cover-hinweis"[^>]*data-note-x="0.24"/);
   assert.match(html, />Reihenfolge merken<\/div>/);
-  assert.match(html, /class="cover-hinweis-pfeil"/);
-  assert.match(html, /class="cover-hinweis-kurve"/);
-  assert.match(html, /class="cover-hinweis-spitze"/);
+  assert.doesNotMatch(html, /class="cover-hinweis-pfeil"/);
+  assert.doesNotMatch(html, /class="cover-hinweis-kurve"/);
+  assert.doesNotMatch(html, /class="cover-hinweis-spitze"/);
   assert.doesNotMatch(html, /marker-end=/);
 });
 
