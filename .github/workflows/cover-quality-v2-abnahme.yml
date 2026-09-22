@@ -10,6 +10,7 @@ on:
       - "bin/cover-quality-v2-single.mjs"
       - "bin/cover-quality-v2-rerender.mjs"
       - "bin/cover-quality-v2-oer-dryrun.mjs"
+      - "bin/carousel-prompt-dryrun-input.mjs"
       - "prompts/herrjurist-daily-finalization.txt"
       - "test/**"
       - ".github/workflows/cover-quality-v2-abnahme.yml"
@@ -69,7 +70,7 @@ jobs:
           npm test
 
       - name: Install rendering dependencies
-        if: ${{ !contains(github.event.head_commit.message, '[rerender-only]') }}
+        if: ${{ !contains(github.event.head_commit.message, '[rerender-only]') && !contains(github.event.head_commit.message, '[carousel-input]') }}
         run: |
           sudo apt-get update
           sudo apt-get install -y libttspico-utils python3-pip
@@ -104,16 +105,20 @@ jobs:
         if: ${{ contains(github.event.head_commit.message, '[single-oer-dryrun]') }}
         run: node bin/cover-quality-v2-oer-dryrun.mjs
 
+      - name: Prepare carousel prompt dry-run input
+        if: ${{ contains(github.event.head_commit.message, '[carousel-input]') }}
+        run: node bin/carousel-prompt-dryrun-input.mjs
+
       - name: Run real 10-cover and reel acceptance
-        if: ${{ !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
+        if: ${{ !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') && !contains(github.event.head_commit.message, '[carousel-input]') }}
         run: node bin/cover-quality-v2-abnahme.mjs
 
       - name: Run exactly one new Strafrecht cover
-        if: ${{ contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
+        if: ${{ contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') && !contains(github.event.head_commit.message, '[carousel-input]') }}
         run: node bin/cover-quality-v2-single.mjs
 
       - name: Upload full visual acceptance artifact
-        if: ${{ always() && !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') }}
+        if: ${{ always() && !contains(github.event.head_commit.message, '[single-cover]') && !contains(github.event.head_commit.message, '[single-oer-dryrun]') && !contains(github.event.head_commit.message, '[rerender-only]') && !contains(github.event.head_commit.message, '[carousel-input]') }}
         uses: actions/upload-artifact@v4
         with:
           name: cover-quality-v2-real-${{ github.sha }}
@@ -138,6 +143,15 @@ jobs:
           path: out/cover-quality-v2-oer-dryrun
           if-no-files-found: warn
           retention-days: 14
+
+      - name: Upload carousel prompt dry-run input artifact
+        if: ${{ always() && contains(github.event.head_commit.message, '[carousel-input]') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: carousel-prompt-dryrun-input-${{ github.sha }}
+          path: out/carousel-prompt-dryrun-input
+          if-no-files-found: warn
+          retention-days: 2
 
       - name: Upload zero-cost rerender artifact
         if: ${{ always() && contains(github.event.head_commit.message, '[rerender-only]') }}
