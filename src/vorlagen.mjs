@@ -338,12 +338,10 @@ h1 em{color:${p.akzent2}}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
-/* Die KI bestimmt Position, Pfeilziel, Neigung und Krümmung anhand des
-   tatsächlichen Motivs. Der Renderer zeichnet nur den exakten redaktionellen
-   Text und den Markenpfeil an diesen KI-bestimmten Koordinaten. */
+/* Die KI bestimmt die bevorzugte Position des handschriftlichen Hinweises.
+   Der Renderer zeichnet ausschließlich den Text. Cover-v2 ergänzt bewusst
+   keinen Pfeil mehr. */
 .cover-hinweis{position:absolute;left:0;top:0;z-index:7;max-width:360px;width:max-content;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-align:center;text-wrap:balance;pointer-events:none;transform-origin:center center}
-.cover-hinweis-pfeil{position:absolute;inset:0;width:100%;height:100%;z-index:6;overflow:visible;pointer-events:none;color:${p.dunkel}}
-.cover-hinweis-kurve,.cover-hinweis-spitze{fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -714,7 +712,7 @@ function coverHinweisPlan(f = {}) {
 function coverHinweisHtml(f = {}) {
   const p = coverHinweisPlan(f);
   if (!p) return "";
-  return `<div class="cover-hinweis" data-note-x="${p.noteX}" data-note-y="${p.noteY}" data-target-x="${p.targetX}" data-target-y="${p.targetY}" data-rotation="${p.rotationDeg}" data-bend="${p.bend}">${esc(p.text)}</div><svg class="cover-hinweis-pfeil" viewBox="0 0 1080 1350" preserveAspectRatio="none" aria-hidden="true"><path class="cover-hinweis-kurve" d=""/><path class="cover-hinweis-spitze" d=""/></svg>`;
+  return `<div class="cover-hinweis" data-note-x="${p.noteX}" data-note-y="${p.noteY}" data-target-x="${p.targetX}" data-target-y="${p.targetY}" data-rotation="${p.rotationDeg}">${esc(p.text)}</div>`;
 }
 
 function titelBlock(titel, zeilen, ctx) {
