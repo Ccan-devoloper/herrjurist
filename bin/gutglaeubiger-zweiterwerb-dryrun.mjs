@@ -20,7 +20,7 @@ const norm = (v) => String(v || "").toLowerCase()
   .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
   .replace(/ß/g, "ss");
 
-const topic = THEMEN.find((t) => norm(t.titel || t.title).includes("gutglaubiger zweiterwerb"))
+let topic = THEMEN.find((t) => norm(t.titel || t.title).includes("gutglaubiger zweiterwerb"))
   || THEMEN.find((t) => norm(JSON.stringify(t)).includes("gutglaubig") && norm(JSON.stringify(t)).includes("zweiterwerb"))
   || THEMEN.find((t) => norm(t.titel || t.title).includes("zweiterwerb"));
 
