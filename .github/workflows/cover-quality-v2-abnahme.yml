@@ -81,18 +81,25 @@ jobs:
           test -n "$OPENAI_API_KEY" || (echo "OPENAI_API_KEY secret missing" && exit 1)
           test -n "$IG_WISSEN_KEY" || (echo "IG_WISSEN_KEY secret missing" && exit 1)
 
-      - name: Download saved QA-approved motif
+      - name: Download saved paid rerender source
         if: ${{ contains(github.event.head_commit.message, '[rerender-only]') }}
         env:
           GH_TOKEN: ${{ github.token }}
+          HJ_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           rm -rf .rerender-source
           mkdir -p .rerender-source
-          gh run download 35658855942 \
-            -n cover-quality-v2-single-strafrecht-b1a98968fca0d5d219fd15f945fe5b795472756d \
-            -D .rerender-source
+          if [[ "$HJ_COMMIT_MESSAGE" == *"[fahrlaessige-toetung]"* ]]; then
+            gh run download 35684151355 \
+              -n cover-quality-v2-single-strafrecht-d2fb60df1525ec99429e07f7111521642ddd4df2 \
+              -D .rerender-source
+          else
+            gh run download 35658855942 \
+              -n cover-quality-v2-single-strafrecht-b1a98968fca0d5d219fd15f945fe5b795472756d \
+              -D .rerender-source
+          fi
 
-      - name: Re-render saved §344 cover without provider calls
+      - name: Re-render saved cover without provider calls
         if: ${{ contains(github.event.head_commit.message, '[rerender-only]') }}
         env:
           HJ_RERENDER_SOURCE: .rerender-source
