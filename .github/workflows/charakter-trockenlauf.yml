@@ -2,9 +2,6 @@ name: Charakter-Cover · Trockenlauf
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/.charakter-meinungsfreiheit-trigger"
 
 permissions:
   contents: read
@@ -42,7 +39,7 @@ jobs:
       - name: Asset-Zweig holen
         run: git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
 
-      - name: Charakter-Cover Meinungsfreiheit rendern
+      - name: Zehn Charakter-Motive trocken rendern
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
@@ -51,13 +48,13 @@ jobs:
           IG_CHARAKTER_GUETE: "medium"
           IG_CHARAKTER_RETRY_GUETE: "high"
           IG_RENDER_SKALA: "1"
-        run: node bin/charakter-meinungsfreiheit-probe.mjs
+        run: node bin/charakter-trockenlauf.mjs
 
       - name: Ergebnisse
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: charakter-meinungsfreiheit-${{ github.run_id }}
-          path: out/charakter-meinungsfreiheit
+          name: charakter-trockenlauf-${{ github.run_id }}
+          path: out/charakter-test
           if-no-files-found: error
           retention-days: 7
