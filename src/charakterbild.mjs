@@ -301,12 +301,12 @@ function hinweisBildRegie(ziel = {}) {
   const text = coverTextAus(ziel);
   if (!text) return "No handwritten cover annotation is needed. Do not draw arrows or readable text.";
   const kreativeRegie = regie?.hinweisRegie
-    || "Use a natural pocket of negative space close to the action; the later arrow should be able to point clearly toward the most relevant legal prop.";
+    || "Use a natural pocket of negative space close to the action and near the most relevant legal prop.";
   return [
     `A later renderer will add this exact handwritten cover note: <<<${text}>>>. Do NOT draw the note, any arrow, or any readable text yourself.`,
     `Editorial annotation intent: ${kreativeRegie}`,
     "Compose the characters and props so that this later annotation can sit naturally near the action in an organic pocket of negative space.",
-    "Do not reserve a fixed left/right strip and do not weaken the legal scene just to make space. The visual QA will inspect the actual finished vignette and choose the final note position and arrow target.",
+    "Do not reserve a fixed left/right strip and do not weaken the legal scene just to make space. The visual QA will inspect the actual finished vignette and choose only the final note position; the renderer will not add an arrow.",
   ].join(" ");
 }
 
@@ -590,8 +590,8 @@ async function qaVisuell(kandidatPfad, chars, ziel, slot) {
           "Reject ANY generated readable text, handwriting, arrows, letters, numbers, citations, logos or gibberish. The renderer adds the handwritten note later. Abstract check marks and simple unlabeled shapes are allowed.",
           `The later renderer must write this exact cover note: <<<${coverTextAus(ziel)}>>>.`,
           `Editorial annotation intent from the human/authoring step: ${coverRegieAus(ziel)?.hinweisRegie || "place it naturally in free space and point to the legally relevant scene element"}`,
-          "If a cover note is present, plan its final placement from the ACTUAL candidate image now. annotationPlan coordinates are relative to Image 1 after cropping: (0,0)=top-left and (1,1)=bottom-right. noteX/noteY are the CENTER of the later handwritten note; they may range roughly from -0.15 to 1.15 when the best pocket sits just outside the opaque motif. targetX/targetY must point to the concrete legally relevant character/prop and should normally stay within 0..1. rotationDeg should stay subtle, usually -10..10. bend controls a loose curved editorial arrow from -1 to 1.",
-          "Choose annotationPlan so the exact note can occupy the BEST genuine negative space near the action, not a merely empty corner. Prefer a compact editorial relationship: the note should sit close enough that the later curved arrow is visually purposeful rather than long or wandering. Keep the arrow corridor clear of faces, important hands and the central legal prop, and point unambiguously to the intended legal element. The renderer will draw the arrow with a rounded hand-drawn stroke and an OPEN two-stroke arrowhead like the golden references. Do not force a fixed left/right formula.",
+          "If a cover note is present, plan its final placement from the ACTUAL candidate image now. annotationPlan coordinates are relative to Image 1 after cropping: (0,0)=top-left and (1,1)=bottom-right. noteX/noteY are the CENTER of the later handwritten note; they may range roughly from -0.15 to 1.15 when the best pocket sits just outside the opaque motif. targetX/targetY identify the concrete legally relevant character/prop only as a semantic proximity anchor and should normally stay within 0..1. rotationDeg should stay subtle, usually -10..10. bend is retained only for schema compatibility and is not rendered.",
+          "Choose annotationPlan so the exact note can occupy the BEST genuine negative space near the action, not a merely empty corner. Prefer a compact editorial relationship: the note should sit naturally near the relevant legal element while keeping faces, important hands and the central prop unobscured. No arrow will be added by the renderer. Do not force a fixed left/right formula.",
           "If no cover note is requested, return annotationPlan=null.",
           "The scene must communicate the requested legal idea at a glance and the selected characters must interact coherently.",
           `Legal scene context: ${themenKontext(ziel)}`,
