@@ -1,0 +1,61 @@
+name: Gutgläubiger Zweiterwerb · zero-cost dry run
+
+on:
+  push:
+    branches:
+      - dryrun/gutglaeubiger-zweiterwerb-fahrlaessige-toetung
+    paths:
+      - "test/gutglaeubiger-zweiterwerb-dryrun-trigger.txt"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      IG_STIL: bunt
+      IG_CHARAKTERE: "false"
+      IG_BILD_KI: "false"
+      IG_BILDER: "false"
+      IG_NO_PUSH: "true"
+      HJ_FAHR_SOURCE: ".fahr-source"
+      DRYRUN_BASE_COMMIT: "2eff3fc896eae768a0712ed70a957c18314e2e24"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Chromium
+        run: npx playwright install --with-deps chromium || npx playwright install chromium
+
+      - name: Download exact existing Fahrlaessige-Toetung motif
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf .fahr-source /tmp/fahr-source.zip
+          mkdir -p .fahr-source
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/10708830448/zip" > /tmp/fahr-source.zip
+          unzip -q /tmp/fahr-source.zip -d .fahr-source
+          test -f .fahr-source/single-strafrecht-fahrlaessige-toetung.png
+          file .fahr-source/single-strafrecht-fahrlaessige-toetung.png
+
+      - name: Resolve gutgläubiger Zweiterwerb from encrypted pool and render all slides
+        run: node bin/gutglaeubiger-zweiterwerb-dryrun.mjs
+
+      - name: Upload zero-cost result
+        uses: actions/upload-artifact@v4
+        with:
+          name: gutglaeubiger-zweiterwerb-dryrun-${{ github.sha }}
+          path: out/gutglaeubiger-zweiterwerb-dryrun
+          if-no-files-found: error
+          retention-days: 7
