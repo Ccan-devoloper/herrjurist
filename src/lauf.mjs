@@ -114,6 +114,17 @@ function bildnachweis(beitrag) {
   return q ? `\n\n${q}` : "";
 }
 
+function repoAssetDataUri(relativ) {
+  const roh = String(relativ || "").trim().replace(/\\/g, "/");
+  if (!roh || roh.startsWith("/") || roh.includes("..")) throw new Error("Ungültiger Repo-Bildpfad");
+  const datei = path.resolve(hier, "..", roh);
+  const basis = path.resolve(hier, "..") + path.sep;
+  if (!datei.startsWith(basis) || !fs.existsSync(datei)) throw new Error(`Repo-Bild fehlt: ${roh}`);
+  const ext = path.extname(datei).toLowerCase();
+  const mime = ext === ".png" ? "image/png" : ext === ".webp" ? "image/webp" : "image/jpeg";
+  return `data:${mime};base64,${fs.readFileSync(datei).toString("base64")}`;
+}
+
 /* Motiv für Reel-Cover oder Story: dieselbe Suche wie für die Titelfolie
    (bildSzene → Pexels → freistellen), abgelegt am Objekt selbst. */
 /* Verzeichnis der archivierten Motive. Steht erst fest, wenn der Asset-Zweig
@@ -131,8 +142,16 @@ function fehlendesGebiet(plan) {
 }
 
 async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
-  if (!ziel || ziel.bild || !ziel.bildSzene) return;
+  if (!ziel || ziel.bild) return;
   try {
+    if (ziel.bildAssetPfad) {
+      ziel.bild = repoAssetDataUri(ziel.bildAssetPfad);
+      ziel.bildQuelle = null;
+      ziel.bildFrei = false;
+      ziel.bildTyp = "chat-native";
+      return;
+    }
+    if (!ziel.bildSzene) return;
     const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, ...opt });
     if (treffer) {
       ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false;
@@ -158,7 +177,8 @@ async function erklaerMotive(reel) {
   const deckel = Math.max(0, CONFIG.reel.erklaerBilder);
   let gezeichnet = 0;
   for (const szene of reel.szenen) {
-    if (szene.bild || !szene.bildSzene) continue;
+    if (szene.bild) continue;
+    if (!szene.bildAssetPfad && !szene.bildSzene) continue;
     const vorher = tagesStand();
     /* Ist der Deckel erreicht, wird weiter im Archiv gesucht, aber nicht mehr
        gezeichnet. Ein passendes altes Motiv kostet nichts und trifft das
@@ -173,16 +193,23 @@ async function erklaerMotive(reel) {
 async function titelfolieBebildern(beitrag) {
   const titelfolie = beitrag?.folien?.find((f) => f.art === "titel");
   if (!titelfolie) return false;
+  if (titelfolie.bildAssetPfad) {
+    titelfolie.bild = repoAssetDataUri(titelfolie.bildAssetPfad);
+    titelfolie.bildQuelle = null;
+    titelfolie.bildFrei = false;
+    titelfolie.bildTyp = "chat-native-cover";
+    return true;
+  }
   /* Alte gespeicherte Cover ohne Herkunftsmarker können aus der früheren
      Flat-Illustrationsphase stammen. Nur explizit fotografische Cover oder
      echte Pexels-Fotos werden unverändert übernommen; alles andere wird
      einmal sauber neu beschafft. */
-  if (titelfolie.bild && (titelfolie.bildTyp === "ai-cover" || titelfolie.bildTyp === "charakter" || titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
+  if (titelfolie.bild && (titelfolie.bildTyp === "ai-cover" || titelfolie.bildTyp === "chat-native-cover" || titelfolie.bildTyp === "charakter" || titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
   if (titelfolie.bild) {
     for (const k of ["bild","bildQuelle","bildFrei","bildBreite","bildHoehe","bildTyp"]) delete titelfolie[k];
   }
   try {
-    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, aiFirstCover: true });
+    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum });
     if (!treffer) return false;
     titelfolie.bild = treffer.bild;
     titelfolie.bildQuelle = treffer.quelle;
