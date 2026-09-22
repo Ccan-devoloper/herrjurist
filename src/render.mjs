@@ -52,6 +52,7 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     await page.goto(`file://${tmp}`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(einpassen);
+    await page.evaluate(coverTitelGeometriePruefen);
     await page.evaluate(coverHinweisAusPlanPlatzieren);
     await page.waitForTimeout(60);
     /* NACH dem Einpassen messen: Der Text wird dort verkleinert, bis alles
@@ -66,6 +67,26 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
   return messen ? { pfad: zielPfad, kasten } : zielPfad;
 }
 
+/* Titelpillen sind feste Marken-Geometrie. Anders als normale Folientexte
+   werden sie nicht nachträglich kleingerechnet. Falls eine semantische Zeile
+   trotz der vorherigen Zeilen-Normalisierung noch aus der Pille läuft, ist das
+   ein redaktioneller Fehler und kein Anlass für stilles CSS-Schrumpfen. */
+function coverTitelGeometriePruefen() {
+  const wurzel = document.querySelector(".folie.art-titel");
+  const titel = wurzel?.querySelector("h1.titel-stack");
+  if (!wurzel || !titel) return;
+  const root = wurzel.getBoundingClientRect();
+  const rechts = root.right - 52;
+  const fehler = [];
+  for (const zeile of titel.querySelectorAll(".titel-zeile")) {
+    const box = zeile.getBoundingClientRect();
+    if (zeile.scrollWidth > zeile.clientWidth + 1 || box.right > rechts + 1) {
+      fehler.push(String(zeile.textContent || "").trim());
+    }
+  }
+  if (fehler.length) throw new Error(`Cover-Titelzeile passt nicht in die feste Markenpille: ${fehler.join(" | ")}`);
+}
+
 /* Setzt die Handschrift exakt nach dem von der visuellen KI-QA gelieferten
    Plan. Keine Zonensuche und kein eigenes Kompositions-Scoring: Der Renderer
    mappt nur die normalisierten KI-Koordinaten auf das tatsächlich dargestellte
@@ -75,8 +96,9 @@ function coverHinweisAusPlanPlatzieren() {
   const hinweis = wurzel?.querySelector(".cover-hinweis");
   const svg = wurzel?.querySelector(".cover-hinweis-pfeil");
   const pfad = svg?.querySelector(".cover-hinweis-kurve");
+  const spitze = svg?.querySelector(".cover-hinweis-spitze");
   const img = wurzel?.querySelector(".frei.charakter img, .frei img");
-  if (!wurzel || !hinweis || !svg || !pfad || !img?.complete || !img.naturalWidth || !img.naturalHeight) return;
+  if (!wurzel || !hinweis || !svg || !pfad || !spitze || !img?.complete || !img.naturalWidth || !img.naturalHeight) return;
 
   const root = wurzel.getBoundingClientRect();
   const ir = img.getBoundingClientRect();
@@ -147,6 +169,23 @@ function coverHinweisAusPlanPlatzieren() {
   const [cx2, cy2] = rel(ctrlX, ctrlY);
   const [tx2, ty2] = rel(tx, ty);
   pfad.setAttribute("d", `M ${sx2} ${sy2} Q ${cx2} ${cy2} ${tx2} ${ty2}`);
+
+  /* Offene, handgezeichnete Pfeilspitze wie in den Golden References:
+     keine gefüllte Marker-Dreiecksspitze, sondern zwei runde Striche. */
+  const tangentX = tx - ctrlX;
+  const tangentY = ty - ctrlY;
+  const tangentLen = Math.max(1, Math.hypot(tangentX, tangentY));
+  const ux = tangentX / tangentLen;
+  const uy = tangentY / tangentLen;
+  const nx = -uy;
+  const ny = ux;
+  const kopfLaenge = 30;
+  const fluegel = 16;
+  const basisX = tx - ux * kopfLaenge;
+  const basisY = ty - uy * kopfLaenge;
+  const [a1x, a1y] = rel(basisX + nx * fluegel, basisY + ny * fluegel);
+  const [a2x, a2y] = rel(basisX - nx * fluegel, basisY - ny * fluegel);
+  spitze.setAttribute("d", `M ${a1x} ${a1y} L ${tx2} ${ty2} L ${a2x} ${a2y}`);
 }
 
 /* Läuft im Browser: verkleinert Text, bis nichts mehr über den rechten Rand
