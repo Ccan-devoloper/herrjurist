@@ -112,7 +112,7 @@ function profilVon({ zweck, provider, modell, params, promptVersion, effort, den
  * Der gemeinsame Ablauf aller Anbieter. `senden` bekommt den Griff und macht
  * genau einen Anbieteraufruf.
  */
-async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, optional, pflichtName, effort, denkmodus, promptVersion, senden, preis }) {
+async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, optional, pflichtName, effort, denkmodus, promptVersion, senden, preis, admissionInputTokens = null }) {
   if (!kontext?.budget) throw new OhneKontext(zweck);
   const { budget, telemetrie, journal } = kontext;
   const { profil, familie, maxTokens } = profilVon({ zweck, provider, modell, params, promptVersion, effort, denkmodus });
@@ -124,7 +124,14 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
      die Admission Reserve, nicht eine bewiesene Kostenobergrenze. */
   const clientBound = clientInputBound(params);
   const gezaehlt = provider === "anthropic" ? await eingabeZaehlen(params) : null;
-  const eingabeTokens = admissionBound(params, gezaehlt);
+  /* Bei multimodalen OpenAI-Anfragen steckt das Bild als Base64 im JSON.
+     Zeichen/4 waere dort keine Tokenabschaetzung, sondern zaehlt die
+     Transportkodierung. Aufrufer duerfen deshalb fuer solche Requests einen
+     konservativen Bild-Token-Bound melden; die tatsaechliche Usage wird nach
+     dem Aufruf wie gewohnt vom Provider abgerechnet. */
+  const eingabeTokens = admissionInputTokens != null
+    ? Math.max(0, Number(admissionInputTokens) || 0)
+    : admissionBound(params, gezaehlt);
   const admissionReserve = admissionReserveUsd({ modell, maxTokens: maxTokens || 0, eingabeTokens });
 
   const roh = {
@@ -247,17 +254,23 @@ export async function claudeAufruf({ zweck, params, modell = null, attempt = 1, 
 }
 
 /** Ein OpenAI-Aufruf (Prüfer). */
-export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = null, url = "https://api.openai.com/v1/responses", fetchFn = fetch, promptVersion = "1" }) {
+export async function openaiAufruf({ zweck, params, modell, attempt = 1, slot = null, optional = false, admissionInputTokens = null, url = "https://api.openai.com/v1/responses", fetchFn = fetch, promptVersion = "1" }) {
   const antwort = await durchDieTuer({
-    zweck, provider: "openai", modell, params, attempt, slot, optional: false, pflichtName: null,
+    zweck, provider: "openai", modell, params, attempt, slot, optional, pflichtName: null,
     effort: params?.reasoning?.effort ?? null, denkmodus: null, promptVersion,
+    admissionInputTokens,
     senden: async () => {
       const r = await fetchFn(url, {
         method: "POST",
         headers: { "content-type": "application/json", authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
         body: JSON.stringify(params),
       });
-      if (!r.ok) throw new Error(`OpenAI ${r.status}: ${(await r.text()).slice(0, 200)}`);
+      if (!r.ok) {
+        const fehler = new Error(`OpenAI ${r.status}: ${(await r.text()).slice(0, 200)}`);
+        fehler.status = r.status;
+        fehler.retryAfter = Number(r.headers?.get?.("retry-after") || 0);
+        throw fehler;
+      }
       const d = await r.json();
       /* Usage vereinheitlichen, damit Preis und Telemetrie dieselbe Sprache
          sprechen - und dabei der Unterschied zwischen den Anbietern:
@@ -354,7 +367,12 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
         body: JSON.stringify(auftrag?.koerper || {}),
         signal: steuerung.signal,
       });
-      if (!r.ok) throw new Error(`HTTP ${r.status}: ${(await r.text().catch(() => "")).slice(0, 200)}`);
+      if (!r.ok) {
+        const fehler = new Error(`HTTP ${r.status}: ${(await r.text().catch(() => "")).slice(0, 200)}`);
+        fehler.status = r.status;
+        fehler.retryAfter = Number(r.headers?.get?.("retry-after") || 0);
+        throw fehler;
+      }
       return await r.json();
     } finally { clearTimeout(wecker); }
   };
@@ -373,12 +391,35 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     griff.buchen(tatsaechlich);
     journal?.abrechnen(reservierung, tatsaechlich);
     erfassenStueck(tatsaechlich, zweck);
-    telemetrie?.aufruf({ ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich, releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true });
+    const usage = ergebnis?.usage || {};
+    const inDetails = usage.input_tokens_details || {};
+    const outDetails = usage.output_tokens_details || {};
+    telemetrie?.aufruf({
+      ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich,
+      releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true,
+      inputTokens: usage.input_tokens ?? null,
+      outputTokens: usage.output_tokens ?? null,
+      imageInputTokens: inDetails.image_tokens ?? null,
+      textInputTokens: inDetails.text_tokens ?? null,
+      imageOutputTokens: outDetails.image_tokens ?? null,
+      textOutputTokens: outDetails.text_tokens ?? null,
+    });
     return ergebnis;
   } catch (e) {
     if (e instanceof InvarianteVerletzt) {
       journal?.abrechnen(reservierung, e.tatsaechlich);
       telemetrie?.aufruf({ ...roh, sent: true, spendUnknown: false, actualUsd: e.tatsaechlich, usd: e.tatsaechlich, releasedUsd: 0, outcome: "invariant_violation", errorType: e.name, approved: false });
+      throw e;
+    }
+    /* Ein vom Images-Endpunkt explizit als ungueltig abgelehnter Request hat
+       keinen Modelllauf erzeugt. Genau wie beim Responses-Endpunkt darf ein
+       HTTP 400 deshalb nicht als unbekannter Providerverbrauch die komplette
+       Bildreserve verbrennen. Netz-/5xx-Fehler bleiben konservativ ungeklärt. */
+    if (Number(e?.status) === 400) {
+      griff.kosten(0);
+      griff.buchen(0);
+      journal?.abrechnen(reservierung, 0);
+      telemetrie?.aufruf({ ...roh, sent: true, spendUnknown: false, actualUsd: 0, usd: 0, releasedUsd: stueck, outcome: "provider_rejected", errorType: e.name || "HTTP400", approved: false });
       throw e;
     }
     const gesendet = griff.istGesendet();

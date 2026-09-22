@@ -138,6 +138,7 @@ async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
       ziel.bild = treffer.bild; ziel.bildQuelle = treffer.quelle; ziel.bildFrei = treffer.frei !== false;
       ziel.bildBreite = treffer.breite || null; ziel.bildHoehe = treffer.hoehe || null;
       ziel.bildTyp = treffer.typ || null; ziel.bildCharaktere = treffer.charaktere || null;
+      ziel.coverHinweisPlan = treffer.coverHinweisPlan || null;
     }
   } catch (e) { console.warn(`  ! ${was}: ${e.message}`); }
 }
@@ -190,6 +191,7 @@ async function titelfolieBebildern(beitrag) {
     titelfolie.bildHoehe = treffer.hoehe || null;
     titelfolie.bildTyp = treffer.typ || "foto";
     titelfolie.bildCharaktere = treffer.charaktere || null;
+    titelfolie.coverHinweisPlan = treffer.coverHinweisPlan || null;
     titelfolie.bildPrompt = treffer.prompt || null;
     titelfolie.bildKostenUsd = treffer.kostenUsd ?? null;
     return true;

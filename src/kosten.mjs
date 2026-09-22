@@ -11,6 +11,11 @@ const PREISE = {
      Protokoll, damit die Rechnung nachprüfbar bleibt. Denk-Token zählen dort
      als Ausgabe - sie sind in output_tokens enthalten. */
   "gpt-5": { ein: 1.25, aus: 10, cacheLesen: 0.125, cacheSchreiben: 1.25 },
+  /* Visuelle Cover-QA: kleines multimodales Modell. Cache-Schreiben ist fuer
+     OpenAI hier praktisch 0 (die Responses-API meldet keine separate
+     Cache-Creation); fuer konservative Admission rechnen wir den normalen
+     Eingabepreis. */
+  "gpt-5.4-mini": { ein: 0.75, aus: 4.5, cacheLesen: 0.075, cacheSchreiben: 0.75 },
   "gpt-5-mini": { ein: 0.25, aus: 2, cacheLesen: 0.025, cacheSchreiben: 0.25 },
   "gpt-5-nano": { ein: 0.05, aus: 0.4, cacheLesen: 0.005, cacheSchreiben: 0.05 },
 };

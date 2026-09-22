@@ -31,6 +31,7 @@
 import fs from "node:fs";
 import { CONFIG } from "./config.mjs";
 import { normKurz } from "./normen.mjs";
+import { lernPalette } from "./stile.mjs";
 
 const B = 1080, H = 1920;
 /* Wie weit die Plakette ueber den Bildrand hinausragt (nur der Kasten) und wie
@@ -142,7 +143,7 @@ const bildDaten = (q) => {
  */
 export function erklaerHtml(reel, plan, ctx) {
   const stil = ctx.stil;
-  const p = stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3] || { grund: stil.farben.grund, dunkel: stil.farben.text, akzent2: stil.farben.akzent };
+  const p = lernPalette(ctx.fach, stil.tagFarben?.[ctx.klausur] || stil.tagFarben?.[3]) || { grund: stil.farben.grund, dunkel: stil.farben.text, akzent2: stil.farben.akzent };
   const akzent = p.akzent2 || "#ffd166";
   /* Schrift in der dunklen Farbe des Klausurtags - so steht sie auf jeder
      Buehnenfarbe, auch auf dem hellen Gruen des dritten Tages, und passt zu

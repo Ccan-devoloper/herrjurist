@@ -28,6 +28,7 @@ import { dauerWaehlen } from "./insights.mjs";
 import { normKurz, normGesprochen, felderKuerzen, NORM_REGEL, NORM_REGEL_STIMME } from "./normen.mjs";
 import { hookTyp } from "./insights.mjs";
 import { phase } from "./kalender.mjs";
+import { titelZeilen } from "./vorlagen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const beispiele = JSON.parse(fs.readFileSync(path.resolve(hier, "../beispiele/inhalte.json"), "utf8"));
@@ -142,7 +143,7 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 ## Form
 - Folienarten: titel (Frage/Aufhänger), text (Titel + Text oder Punkte), schritte (nummeriert, je Schritt titel + text), vergleich (links/rechts mit titel + punkte), rechnung (formel, zeilen, ergebnis), karte (dichter Spickzettel: schritte mit kurzem titel + norm im text), merke (ein Satz, der hängen bleibt), cta (Abschluss mit Folgen-Aufforderung).
 - hooks: drei alternative Titel für Folie 1 mit unterschiedlichem Einstieg: (1) eine konkrete juristische Frage, (2) Fehler/Falle, (3) Regel/Abgrenzung/Prüfreihenfolge. Die Auswahl trifft anschließend die Lernschleife anhand der echten Meta-Insights (Saves, Shares, Follows, Profilbesuche pro Reach). Fragen bleiben ausdrücklich erlaubt und können gewinnen, wenn die Frage selbst schon konkret und examensnah ist – z. B. „Stoppt die Anfechtung die Vollziehung?“, „Wie prüfst du Vollstreckungsklausel und Klauselrechtsbehelfe richtig durch?“ oder „Wann greift § 626 BGB?“. Vermeide dagegen vage Quizfragen wie „Kennst du das?“ oder „Was gilt hier?“. Fehler-Hooks sollen eine echte, fachlich belegbare Falle benennen; Regel-Hooks dürfen Sofortnutzen geben („Erst Irrtum, dann Kausalität“), müssen aber ein konkretes juristisches Problem nennen. Der Titel nennt das Thema selbst und darf neugierig machen, ohne künstliches Geheimnis. Keine erfundenen Häufigkeiten, Punktzahlen, Korrektorenvorlieben oder Superlative.
-- Jeder hook hat zusätzlich zeilen: 2 bis 4 semantische Anzeigezeilen, die GENAU dieselben Wörter wie titel enthalten. Trenne nach Sinn, nicht nach Zufall. Normen bleiben zusammen („§ 80 Abs. 5 VwGO?“), Gegensatz- und Reihenfolgebausteine bleiben lesbar („kommt vor“, „Erst Irrtum, dann“). Möglichst keine Zeile über ca. 18–20 sichtbare Zeichen; einzelne lange Fachwörter dürfen allein stehen. Keine isolierten Artikel oder Präpositionen. Die Zeilen werden als einzelne dunkle Titel-Pillen gerendert.
+- Jeder hook hat zusätzlich zeilen: 2 bis 4 semantische Anzeigezeilen, die GENAU dieselben Wörter wie titel enthalten. Trenne nach Sinn, nicht nach Zufall. Normen bleiben zusammen („§ 80 Abs. 5 VwGO?“). Bei langen Fundstellen darfst du vor „Satz“, „Nr.“, „Alt.“ oder „lit.“ umbrechen, aber NIE direkt nach „§“, „Art.“, „Abs.“, „Satz“, „S.“, „Nr.“, „Alt.“ oder „lit.“; „§ 344 Abs. 2 Satz 2 StPO“ wird z. B. zu „§ 344 Abs. 2“ / „Satz 2 StPO“. Gegensatz- und Reihenfolgebausteine bleiben lesbar („kommt vor“, „Erst Irrtum, dann“). Zielwert: höchstens ca. 21 sichtbare Zeichen pro Zeile; wenn eine Mehrwort-Zeile länger wäre, teile sie lieber in eine zusätzliche Pille auf, statt eine überlange Pille zu erzeugen. Einzelne lange Fachwörter dürfen allein stehen. Keine isolierten Artikel oder Präpositionen. Der Renderer verwendet feste Titelgrößen und schrumpft überlange Coverzeilen nicht still; deshalb muss die Zeilenstruktur vor der Bildgenerierung technisch plausibel sein.
 - Die erste Zeile der Caption ist gleichzeitig Suchtext: Sie nennt das Thema mit den Wörtern, die jemand bei Instagram oder Google eintippen würde (z. B. „Annahmeverzug Voraussetzungen Rechtsfolgen“), natürlich eingebettet in den Hook.
 - Folie-1-Titel: 5–11 gut lesbare Wörter, ideal 32–68 Zeichen, maximal 80. Gute Formen sind konkrete Prüfungsfrage, Fehler/Falle oder klare Abgrenzung/Reihenfolge. Eine konkrete Frage muss nicht künstlich noch eine Antwortzeile anhängen, wenn das Rechtsproblem selbst schon präzise genug ist. Nicht die ganze Lösung verraten; der Swipe erklärt das Warum, die Voraussetzungen und Ausnahmen.
 - Folie 2 löst den Swipe ein und funktioniert zugleich als zweite Einstiegsfolie: keine zweite Teaser-Kachel und kein Fülltext. Sie gibt sofort die entscheidende Abgrenzung, den Sachverhalt oder den ersten echten Prüfungsschritt. Ihr Titel muss auch dann verständlich sein, wenn Instagram diese Folie zuerst zeigt. Andere Titel maximal 60 Zeichen.
@@ -154,10 +155,14 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Hashtags: 8–14 Stück, deutsch, kleingeschrieben, spezifisch zum Thema plus diese Kernhashtags: ${CONFIG.hashtags.kern.join(" ")}.
 - kurztitel: 3–6 Wörter für die Story-Ankündigung und das Reel-Cover. Er muss grammatisch aufgehen: entweder eine Nominalphrase ohne Verb („Mord und Totschlag: das Verhältnis“) oder ein vollständiger Satz/eine vollständige Frage („Sitzt alles?“). Falsch wäre „Wochenrückblick: alles sitzen?“ – ein Infinitiv ohne Subjektbezug.
 - BILDREGEL FÜR KARUSSELLS: NUR Folie 1 (Cover/Titelfolie) bekommt eine Charakter-Szene. Alle inneren Karussell-Slides bleiben reine Text-/Strukturfolien: niemals Bildhintergrund oder dekoratives Motiv; dort sind nur Typografie, Kästen, Linien, Pfeile und kleine Icons erlaubt.
-- coverCharaktere: PFLICHT. Wähle die KLEINSTE sinnvolle Gruppe aus diesen IDs: rex, zylla, form7, brakk, flux, mara. Ein Charakter ist richtig, wenn eine einzelne Handlung genügt; mehrere nur, wenn Interaktion, Rollen oder ein Gegensatz dadurch sofort verständlicher werden. Nutze so viele wie nötig, aber nie zusätzliche Figuren nur zur Dekoration. Keine feste Paarlogik. Orientierung: Rex = Reparatur/Fehlersuche/chaotische Handlung, Zylla = Vertrag/Kommunikation/typischer Fehler, FORM-7 = Schema/Akte/Verfahren, Brakk = schwere Streitstände/Sachenrecht/harte Tatsachen, Flux = Erklärung/Dogmatik/Lehre, Mara = Taktik/Prüferblick/Stoppen/Überleben.
-- bildSzene: PFLICHT. Eine ENGLISCHE, konkrete Regieanweisung für die Szene, 4 bis 12 Wörter. Beschreibe die sichtbare Handlung und nur die Gegenstände, die zum sofortigen Verständnis beitragen. Ein Gegenstand ist KEIN Muss. Es dürfen auch mehrere unmittelbar nötige Gegenstände vorkommen, wenn der juristische Gegensatz sonst nicht sichtbar wird. Keine abstrakten Symbolbilder. Beispiele: „student hands professor sealed termination letter“, „miner carries crate while robot shows ownership deed“, „scout blocks mechanic before portal button“.
-- coverText: optionaler DEUTSCHER Merksatz mit 2 bis 6 Wörtern, höchstens 36 Zeichen. Nur setzen, wenn er neben Titel und Szene einen zusätzlichen Sofort-Aha-Effekt bringt. Nicht den Titel wiederholen. Beispiele: „Ohne Zugang keine Frist“, „Reihenfolge merken“, „Nicht verwechseln“, „Ausnahme zuerst prüfen“. Der Renderer setzt ihn handschriftlich; das Bildmodell schreibt ihn NICHT.
-- bildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.
+- VISUELLE COVER-REGIE IST TEIL DEINER REDAKTIONELLEN AUFGABE. Schreibe nicht nur den juristischen Text, sondern entwickle für Folie 1 ein eigenständiges Bildkonzept. Keine feste Bildformel je Rechtsgebiet: derselbe Themenbereich darf morgen völlig anders inszeniert werden.
+- Wiederkehrender Cast: rex = nervöser Portal-Mechaniker (Praxis, Fehler, Ursache/Wirkung); zylla = neugierige Alien-Figur (Entdecken, Vertrag/Kommunikation, Kontrast); form7 = schwebender Bürokratie-Droide (Ordnung, Formalien, Prüfung); brakk = kräftiger Kristall-Minenarbeiter (Besitz, Sachen, physische Last/Handlung); flux = Wurm-Professor mit Zeigestab (Erklären, Dogmatik, Systematik); mara = erfahrene Expeditionistin (Entscheidung, Grenze, Druck, Ausnahme). Wähle für jedes Cover 1 oder 2 Figuren, deren Rollen zur konkreten visuellen Idee passen. Nicht ein Rechtsgebiet dauerhaft an ein Figurenpaar koppeln.
+- coverRegie: PFLICHTOBJEKT mit charaktere (1–2 IDs aus rex, zylla, form7, brakk, flux, mara), kernidee (ein deutscher Satz: welcher Gedanke soll visuell hängen bleiben?), handlung (ENGLISCH, ca. 25–70 Wörter: EINE klare, originelle Interaktion der gewählten Figuren mit 1–2 starken Requisiten; Figuren mit {A} und {B} bezeichnen), alternative (ENGLISCH: wirklich anderes Bildkonzept für einen dritten Versuch) und hinweisRegie (ENGLISCH, ca. 18–55 Wörter: kreative Anordnung des handschriftlichen coverText im freien Raum der konkreten Szene, das konkrete Szenenelement als Pfeilziel und eine lockere, geschwungene Pfeilbewegung wie in den Golden References). Keine Pixelkoordinaten, keine feste Links-/Rechtszone, keine starre Choreografie. Die kreative Position und Pfeilidee sind Teil der KI-Regie. Nach der Bildgenerierung bestimmt die visuelle KI-QA anhand des tatsächlich entstandenen Motivs die konkrete Hinweisposition und das Pfeilziel; der Renderer zeichnet anschließend den EXAKTEN coverText und einen offenen, handgezeichnet wirkenden Markenpfeil an dieser KI-bestimmten Stelle. Handschrift/Pfeil dürfen weder Gesichter noch den zentralen juristischen Gegenstand verdecken.
+- Variation ist Markenqualität: bevorzuge eine neue Metapher, Pose oder Requisite gegenüber dem naheliegenden Standardschema. Die Szene soll wie eine kleine Episode aus demselben Sci-Fi-Jura-Universum wirken, nicht wie ein Lehrbuchdiagramm.
+- bildSzene: PFLICHT. 3 bis 10 englische Wörter als semantische Kurzfassung der coverRegie, ohne Charakter-Namen. Sie bleibt für Archivsuche und Legacy-Fallback erhalten.
+- bildSzeneAlt: PFLICHT. 3 bis 10 englische Wörter für die alternative Idee.
+- coverBadge: PFLICHT, 1 bis 3 deutsche Wörter, klein und redaktionell (z. B. „Fehlerfalle“, „Klausurrelevant“, „Examensklassiker“, „Schemawissen“, „Praxisrelevant“, „Klausurtechnik“). Nicht immer dasselbe Badge.
+- coverText: PFLICHT. Ein DEUTSCHER handschriftlicher Hinweis mit 2 bis 6 Wörtern, höchstens 36 Zeichen, der einen zusätzlichen fachlichen Aha-Effekt gibt. Kein UX-Text wie „Swipe“, „Schau rein“ oder „Kurz erklärt“, und nicht den Titel wiederholen.
 
 
 ## Beispiel eines fertigen Beitrags (Format Streitstand)
@@ -204,14 +209,26 @@ const BEITRAG_SCHEMA = {
     caption: { type: "string" },
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
-    coverCharaktere: { type: "array", minItems: 1, maxItems: 6, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
     coverText: { type: ["string", "null"] },
+    coverBadge: { type: ["string", "null"] },
+    coverRegie: {
+      type: ["object", "null"],
+      additionalProperties: false,
+      properties: {
+        charaktere: { type: "array", minItems: 1, maxItems: 2, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
+        kernidee: { type: "string" },
+        handlung: { type: "string" },
+        alternative: { type: ["string", "null"] },
+        hinweisRegie: { type: "string" },
+      },
+      required: ["charaktere", "kernidee", "handlung", "alternative", "hinweisRegie"],
+    },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
     quellen: { type: ["array", "null"], items: { type: "string" } },
     hooks: { type: ["array", "null"], items: { type: "object", additionalProperties: false, properties: { typ: { type: "string", enum: ["frage", "fehler", "zahl", "aussage"] }, titel: { type: "string" }, zeilen: { type: "array", items: { type: "string" }, minItems: 2, maxItems: 4 } }, required: ["typ", "titel", "zeilen"] } },
   },
-  required: ["folien", "caption", "hashtags", "kurztitel", "coverCharaktere", "coverText", "bildSzene", "bildSzeneAlt", "quellen", "hooks"],
+  required: ["folien", "caption", "hashtags", "kurztitel", "coverText", "coverBadge", "coverRegie", "bildSzene", "bildSzeneAlt", "quellen", "hooks"],
 };
 
 const STORY_SCHEMA = {
@@ -633,11 +650,6 @@ function hookWaehlen(daten, strategie, thema = null) {
   return bewertet[0];
 }
 
-const COVER_CHAR_IDS = new Set(["rex", "zylla", "form7", "brakk", "flux", "mara"]);
-function coverCharaktereKurz(liste) {
-  if (!Array.isArray(liste)) return [];
-  return [...new Set(liste.map((x) => String(x || "").toLowerCase()).filter((x) => COVER_CHAR_IDS.has(x)))].slice(0, 6);
-}
 function coverTextKurz(text) {
   if (!text) return null;
   const sauber = normKurz(String(text)).replace(/\s+/g, " ").trim();
@@ -676,12 +688,13 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     folien[0].art = "titel";
     folien[0].pille = "Swipen →";
     const seed = thema?.id || folien[0].titel || "";
+    if (folien[0].titel) folien[0].titelZeilen = titelZeilen(folien[0].titel, folien[0].titelZeilen);
     if (thema?.prioritaet) { folien[0].prioritaet = thema.prioritaet; folien[0].prioritaetText = prioritaetText(thema.prioritaet, seed); }
     if (!folien[0].hinweis) folien[0].hinweis = auswahl(HINWEISE, `hinweis:${seed}`);
-    const chars = coverCharaktereKurz(daten.coverCharaktere);
-    if (chars.length) folien[0].coverCharaktere = chars;
     const coverText = coverTextKurz(daten.coverText);
     if (coverText) folien[0].coverText = coverText;
+    const coverBadge = String(daten.coverBadge || "").replace(/\s+/g, " ").trim().slice(0, 32);
+    if (coverBadge) folien[0].coverBadge = coverBadge;
     if (!ICONS[folien[0].icon]) folien[0].icon = "paragraf";
   }
   if (folien.at(-1)?.art !== "cta") folien.push({ art: "cta", titel: "Schick das deiner Lerngruppe.", punkte: ["Weiterleiten an die Lerngruppe", "Speichern und vor der Klausur wiederholen", "Folgen: sortiert nach Klausurtag"] });
@@ -704,8 +717,9 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     caption: (daten.caption || "").trim(),
     hashtags: tags,
     kurztitel: daten.kurztitel || folien[0]?.titel || "",
-    coverCharaktere: coverCharaktereKurz(daten.coverCharaktere),
     coverText: coverTextKurz(daten.coverText),
+    coverBadge: String(daten.coverBadge || "").replace(/\s+/g, " ").trim().slice(0, 32) || null,
+    coverRegie: daten.coverRegie || null,
     bildSzene: daten.bildSzene || null,
     bildSzeneAlt: daten.bildSzeneAlt || null,
     quellen: daten.quellen || [],
@@ -1079,12 +1093,11 @@ const REEL_SCHEMA = {
     caption: { type: "string" },
     hashtags: { type: "array", items: { type: "string" } },
     kurztitel: { type: "string" },
-    coverCharaktere: { type: "array", minItems: 1, maxItems: 6, items: { type: "string", enum: ["rex", "zylla", "form7", "brakk", "flux", "mara"] } },
     coverText: { type: ["string", "null"] },
     bildSzene: { type: ["string", "null"] },
     bildSzeneAlt: { type: ["string", "null"] },
   },
-  required: ["szenen", "caption", "hashtags", "kurztitel", "coverCharaktere", "coverText", "bildSzene", "bildSzeneAlt"],
+  required: ["szenen", "caption", "hashtags", "kurztitel", "coverText", "bildSzene", "bildSzeneAlt"],
 };
 
 /* Sprechtempo einer deutschen Vorlesestimme: rund 2,4 Wörter je Sekunde.
@@ -1143,7 +1156,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       laengenAnleitung(von, bis, lang),
       REEL_ANLEITUNG,
       hookAnleitung(hookMuster),
-      "\n## Cover-Motiv\ncoverCharaktere: wähle mindestens 1 ID aus rex, zylla, form7, brakk, flux, mara; so wenige wie möglich, so viele wie für die Rechtsidee nötig. Keine feste Paarlogik.\ncoverText: optional 2 bis 6 deutsche Wörter (max. 36 Zeichen), nur wenn ein zusätzlicher Merksatz das Cover sofort verständlicher macht. Nicht den Titel wiederholen.\nbildSzene: eine ENGLISCHE konkrete Regieanweisung in 4 bis 12 Wörtern. Beschreibe Handlung und nur die wirklich hilfreichen Gegenstände; null ist hier nicht erlaubt. Ein Gegenstand ist kein Muss, mehrere sind erlaubt, wenn sie fachlich nötig sind.\nbildSzeneAlt: eine zweite, deutlich andere konkrete Regieanweisung zum selben Thema als Ersatz; sonst null.",
+      "\n## Cover-Motiv\nDie Charakterwahl übernimmt nachher deterministisch das Herrjurist-Marken-System; nenne hier keine Figuren oder Personenrollen.\ncoverText: optional 2 bis 6 deutsche Wörter (max. 36 Zeichen), nur wenn ein zusätzlicher Merksatz das Cover sofort verständlicher macht. Nicht den Titel wiederholen.\nbildSzene: eine ENGLISCHE semantische Bildnotiz in 3 bis 10 Wörtern: nur Handlung/Gegenstand, keine Personenrolle, keine Figur. null ist hier nicht erlaubt.\nbildSzeneAlt: eine zweite, deutlich andere sachliche Bildnotiz zum selben Thema als Ersatz; sonst null.",
       `\n## Normen\n${NORM_REGEL}\n${NORM_REGEL_STIMME}`,
       anlass ? `\n## Anlass\n${anlass.titel}: ${anlass.kontext}` : "",
       `Phase im Prüfungsjahr: ${phase(datum)}.`,
@@ -1168,7 +1181,7 @@ export async function reelSchreiben({ thema, datum, lang = false, anlass = null,
       if (o.sprecher) o.sprecher = normGesprochen(o.sprecher);
       return o;
     });
-    const reel = { format: "reel", fach, klausur, fachLabel: FAECHER[fach]?.label, themaId: thema?.id || null, szenen, caption: normKurz((daten.caption || "").trim()), hashtags: [...new Set([...(daten.hashtags || []).map((h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase()), ...CONFIG.hashtags.kern])].slice(0, CONFIG.hashtags.maxJeBeitrag), kurztitel: daten.kurztitel || szenen[0]?.titel || "", coverCharaktere: coverCharaktereKurz(daten.coverCharaktere), coverText: coverTextKurz(daten.coverText), bildSzene: daten.bildSzene || null, bildSzeneAlt: daten.bildSzeneAlt || null };
+    const reel = { format: "reel", fach, klausur, fachLabel: FAECHER[fach]?.label, themaId: thema?.id || null, szenen, caption: normKurz((daten.caption || "").trim()), hashtags: [...new Set([...(daten.hashtags || []).map((h) => (h.startsWith("#") ? h : `#${h}`).toLowerCase()), ...CONFIG.hashtags.kern])].slice(0, CONFIG.hashtags.maxJeBeitrag), kurztitel: daten.kurztitel || szenen[0]?.titel || "", coverText: coverTextKurz(daten.coverText), bildSzene: daten.bildSzene || null, bildSzeneAlt: daten.bildSzeneAlt || null };
     /* Prüfung über die Folien-Logik: Szenen als Folien, Sprechertext als Text. */
     const ergebnis = pruefeBeitrag({ folien: [{ art: "titel", titel: szenen[0]?.titel || "" }, ...szenen.slice(1).map((s) => ({ art: "text", titel: s.titel, text: `${s.text || ""} ${s.sprecher}` })), { art: "cta" }], caption: reel.caption, hashtags: reel.hashtags });
     ergebnis.fehler.push(...pruefeHook(szenen[0]));
