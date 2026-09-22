@@ -177,7 +177,7 @@ async function titelfolieBebildern(beitrag) {
      Flat-Illustrationsphase stammen. Nur explizit fotografische Cover oder
      echte Pexels-Fotos werden unverändert übernommen; alles andere wird
      einmal sauber neu beschafft. */
-  if (titelfolie.bild && (titelfolie.bildTyp === "charakter" || titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
+  if (titelfolie.bild && (titelfolie.bildTyp === "ai-cover" || titelfolie.bildTyp === "charakter" || titelfolie.bildTyp === "foto" || /Pexels/i.test(titelfolie.bildQuelle || ""))) return true;
   if (titelfolie.bild) {
     for (const k of ["bild","bildQuelle","bildFrei","bildBreite","bildHoehe","bildTyp"]) delete titelfolie[k];
   }
@@ -192,6 +192,8 @@ async function titelfolieBebildern(beitrag) {
     titelfolie.bildTyp = treffer.typ || "foto";
     titelfolie.bildCharaktere = treffer.charaktere || null;
     titelfolie.coverHinweisPlan = treffer.coverHinweisPlan || null;
+    titelfolie.coverQa = treffer.coverQa || null;
+    titelfolie.coverQaAttempts = treffer.coverQaAttempts || [];
     titelfolie.bildPrompt = treffer.prompt || null;
     titelfolie.bildKostenUsd = treffer.kostenUsd ?? null;
     return true;
