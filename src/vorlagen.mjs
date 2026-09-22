@@ -378,7 +378,7 @@ ol.schritte.karte li::before{width:56px;height:56px;font-size:30px}
 .rechnung .formel{color:${p.dunkel}}
 .rechnung .ergebnis{border-top-color:rgba(0,0,0,.15)}
 .merke{font-size:66px;line-height:1.7}
-.merke::before,.merke::after{color:${p.akzent2}}
+.merke::before,.merke::after{color:${p.zitat || p.akzent2}}
 em{color:${p.akzent2}}
 .text em,ul.punkte em,ol.schritte em,.spalte em{color:${p.dunkel};text-decoration:underline;text-decoration-color:${p.akzent2};text-decoration-thickness:4px;text-underline-offset:6px}
 .cta{margin-top:auto;margin-bottom:auto}
