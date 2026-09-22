@@ -1,0 +1,32 @@
+name: Katzenkönig · zwei KI-Clips
+
+on:
+  push:
+    branches: ["feature/fal-video-testpfad"]
+    paths: [".github/workflows/katzenkoenig-ai-clips.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  clips:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Zwei fal.ai-Clips erzeugen
+        env:
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+        run: |
+          test -n "$FAL_KEY" || { echo "FAL_KEY fehlt"; exit 2; }
+          node bin/katzenkoenig-ai-clips.mjs
+      - name: Clips sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: katzenkoenig-ai-clips-${{ github.run_id }}
+          path: out/katzenkoenig-ai
+          retention-days: 7
