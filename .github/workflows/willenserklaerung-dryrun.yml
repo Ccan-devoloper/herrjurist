@@ -1,0 +1,60 @@
+name: Willenserklärung · zero-cost dry run
+
+on:
+  push:
+    branches:
+      - dryrun/willenserklaerung-single-strafrecht
+    paths:
+      - "test/willenserklaerung-dryrun-trigger.txt"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      IG_STIL: bunt
+      IG_CHARAKTERE: "false"
+      IG_BILD_KI: "false"
+      IG_BILDER: "false"
+      IG_NO_PUSH: "true"
+      HJ_SINGLE_SOURCE: ".single-source"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Chromium
+        run: npx playwright install --with-deps chromium || npx playwright install chromium
+
+      - name: Download exact existing single-strafrecht.png
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf .single-source /tmp/single-source.zip
+          mkdir -p .single-source
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/10665974713/zip" > /tmp/single-source.zip
+          unzip -q /tmp/single-source.zip -d .single-source
+          test -f .single-source/motifs/single-strafrecht.png
+          file .single-source/motifs/single-strafrecht.png
+
+      - name: Resolve Willenserklärung from encrypted pool and render all slides
+        run: node bin/willenserklaerung-dryrun.mjs
+
+      - name: Upload zero-cost result
+        uses: actions/upload-artifact@v4
+        with:
+          name: willenserklaerung-dryrun-${{ github.sha }}
+          path: out/willenserklaerung-dryrun
+          if-no-files-found: error
+          retention-days: 7
