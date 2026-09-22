@@ -88,10 +88,10 @@ function charRef(char) {
 function goldenRef(name) {
   if (!fs.existsSync(goldenZip)) return null;
   try {
-    const liste = execFileSync("unzip", ["-Z1", goldenZip], { encoding: "utf8" }).split(/\r?\n/).filter(Boolean);
+    const liste = execFileSync("unzip", ["-Z1", goldenZip], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).split(/\r?\n/).filter(Boolean);
     const entry = liste.find((x) => x === name || x.endsWith(`/${name}`));
     if (!entry) return null;
-    const bytes = execFileSync("unzip", ["-p", goldenZip, entry], { encoding: null, maxBuffer: 20 * 1024 * 1024 });
+    const bytes = execFileSync("unzip", ["-p", goldenZip, entry], { encoding: null, maxBuffer: 20 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"] });
     const p = path.join(os.tmpdir(), `hj-ai-cover-golden-${path.basename(name)}-${process.pid}-${Date.now()}.jpg`);
     fs.writeFileSync(p, bytes);
     return p;
