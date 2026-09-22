@@ -1,0 +1,61 @@
+name: Meinungsfreiheit + ALIC · zero-cost dry run
+
+on:
+  push:
+    branches:
+      - dryrun/meinungsfreiheit-alic
+    paths:
+      - "test/meinungsfreiheit-alic-dryrun-trigger.txt"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      IG_STIL: bunt
+      IG_CHARAKTERE: "false"
+      IG_BILD_KI: "false"
+      IG_BILDER: "false"
+      IG_NO_PUSH: "true"
+      HJ_ALIC_SOURCE: ".alic-source"
+      DRYRUN_BASE_COMMIT: "2eff3fc896eae768a0712ed70a957c18314e2e24"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Chromium
+        run: npx playwright install --with-deps chromium || npx playwright install chromium
+
+      - name: Download exact existing ALIC motif
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf .alic-source /tmp/alic-source.zip
+          mkdir -p .alic-source
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/10674227857/zip" > /tmp/alic-source.zip
+          unzip -q /tmp/alic-source.zip -d .alic-source
+          test -f .alic-source/motifs/single-strafrecht-alic.png
+          file .alic-source/motifs/single-strafrecht-alic.png
+
+      - name: Resolve Meinungsfreiheit from encrypted pool and render all slides
+        run: node bin/meinungsfreiheit-alic-dryrun.mjs
+
+      - name: Upload zero-cost result
+        uses: actions/upload-artifact@v4
+        with:
+          name: meinungsfreiheit-alic-dryrun-${{ github.sha }}
+          path: out/meinungsfreiheit-alic-dryrun
+          if-no-files-found: error
+          retention-days: 7
