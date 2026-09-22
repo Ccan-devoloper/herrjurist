@@ -21,6 +21,7 @@ import os from "node:os";
 import { CONFIG } from "./config.mjs";
 import { bildKiAktiv, motivZeichnen, motivHervorholen } from "./bildki.mjs";
 import { charakterBildAktiv, charakterMotivZeichnen } from "./charakterbild.mjs";
+import { aiCoverAktiv, aiCoverZeichnen } from "./cover-ai-first.mjs";
 import { archivLaden, passendesMotiv, motivAblegen, verwendungVermerken } from "./motivarchiv.mjs";
 import { freistellen } from "./freistellen.mjs";
 
@@ -199,6 +200,22 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
      sechs Referenzfiguren sind konstant. Scheitern beide Qualitaetsversuche,
      bleibt bewusst das bestehende Icon-Layout statt auf Stockfotos
      zurueckzufallen. */
+  if ((opt.zweck || "bild") !== "erklaerbild" && aiCoverAktiv() && opt.charaktere !== false) {
+    const cover = await aiCoverZeichnen(beitrag, {
+      slot: opt.slot || beitrag?.slug || beitrag?.themaId || null,
+    });
+    if (!cover) return null;
+    const bild = `data:image/png;base64,${fs.readFileSync(cover.pfad).toString("base64")}`;
+    fs.rmSync(cover.pfad, { force: true });
+    return {
+      bild, quelle: null, seite: null, frei: false,
+      breite: cover.breite, hoehe: cover.hoehe,
+      typ: "ai-cover", charaktere: cover.charaktere || [], prompt: cover.prompt || null,
+      coverQa: cover.qa || null, coverQaAttempts: cover.qaAttempts || [],
+      kostenUsd: null,
+    };
+  }
+
   if (charakterBildAktiv() && opt.charaktere !== false) {
     const motiv = await charakterMotivZeichnen(beitrag, {
       randFarbe: opt.randFarbe || null,
