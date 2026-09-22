@@ -24,22 +24,36 @@ const topic = THEMEN.find((t) => norm(t.titel || t.title).includes("gutglaubiger
   || THEMEN.find((t) => norm(JSON.stringify(t)).includes("gutglaubig") && norm(JSON.stringify(t)).includes("zweiterwerb"))
   || THEMEN.find((t) => norm(t.titel || t.title).includes("zweiterwerb"));
 
+let topicSource = "encrypted-themenpool-exact";
+let requestedSubtopic = null;
 if (!topic) {
-  const candidates = THEMEN.filter((t) => {
-    const hay = norm(JSON.stringify(t));
-    return hay.includes("gutglaub") || hay.includes("zweiterwerb") || hay.includes("hypothek") || hay.includes("vormerkung");
-  }).slice(0, 50).map((t) => ({
-    id: t.id || t.themaId || null,
-    titel: t.titel || t.title || null,
-    normen: t.normen || null,
-    fach: t.fach || null,
-    fachLabel: t.fachLabel || null
-  }));
-  console.log("DIAG_MATCHING_TOPICS=" + JSON.stringify(candidates));
-  throw new Error("Thema 'gutgläubiger Zweiterwerb' nicht im entschlüsselten Themenpool gefunden.");
+  const related = THEMEN.find((t) => norm(t.titel || t.title).includes("hypothek: entstehung, ubertragung, einreden"))
+    || THEMEN.find((t) => {
+      const hay = norm(t.titel || t.title);
+      return hay.includes("hypothek") && hay.includes("ubertragung");
+    });
+  if (!related) {
+    const candidates = THEMEN.filter((t) => {
+      const hay = norm(JSON.stringify(t));
+      return hay.includes("gutglaub") || hay.includes("zweiterwerb") || hay.includes("hypothek") || hay.includes("vormerkung");
+    }).slice(0, 50).map((t) => ({
+      id: t.id || t.themaId || null,
+      titel: t.titel || t.title || null,
+      normen: t.normen || null,
+      fach: t.fach || null,
+      fachLabel: t.fachLabel || null
+    }));
+    console.log("DIAG_MATCHING_TOPICS=" + JSON.stringify(candidates));
+    throw new Error("Weder exaktes Thema noch passender Hypothek-Pool-Eintrag gefunden.");
+  }
+  topic = related;
+  topicSource = "encrypted-themenpool-related-hypothek-topic";
+  requestedSubtopic = "Gutgläubiger Zweiterwerb der Hypothek";
+  console.log("POOL_NOTE=Exakter Titel 'gutgläubiger Zweiterwerb' ist nicht im Pool; verwendet wird der Pool-Eintrag '" + (topic.titel || topic.title) + "' mit dem gewünschten Unterthema gutgläubiger Zweiterwerb.");
 }
 
-const title = String(topic.titel || topic.title || "Gutgläubiger Zweiterwerb");
+const poolTitle = String(topic.titel || topic.title || "Gutgläubiger Zweiterwerb");
+const title = requestedSubtopic || poolTitle;
 const titleHay = norm(title);
 const normen = Array.isArray(topic.normen) ? topic.normen : [];
 const normenText = normen.length ? normen.join(", ") : "die einschlägigen Gutglaubensvorschriften des BGB";
@@ -198,7 +212,9 @@ const manifest = {
   generatedAt: new Date().toISOString(),
   productionBaseCommit: process.env.DRYRUN_BASE_COMMIT || null,
   dryRunCommit: process.env.GITHUB_SHA || null,
-  topicSource: "encrypted-themenpool",
+  topicSource,
+  poolTopicTitle: poolTitle,
+  requestedSubtopic,
   topic,
   motif: "single-strafrecht-fahrlaessige-toetung.png",
   motifSourceArtifactId: 10708830448,
