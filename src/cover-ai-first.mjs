@@ -15,7 +15,7 @@ import { CONFIG } from "./config.mjs";
 import { ffmpegPfad } from "./stimme.mjs";
 import { lernPalette } from "./stile.mjs";
 import { bildAufruf, openaiAufruf, openaiBildEditSenden } from "./anbieter.mjs";
-import { CHARAKTERE, charaktereFuer, bildKostenUsd } from "./charakterbild.mjs";
+import { charaktereFuer, bildKostenUsd } from "./charakterbild.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(hier, "..");
