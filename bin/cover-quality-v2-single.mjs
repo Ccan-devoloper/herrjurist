@@ -55,18 +55,11 @@ function motivAufraeumen(motiv) {
 }
 
 function themaWaehlen() {
-  const gesucht = /fahrl[aä]ssig(?:e|er|en|em|es)?\s+t[oö]tung|§\s*222\s*stgb/i;
+  const gesucht = /fahrl[aä]ssig(?:e|er|en|em|es)?\s+t[oö]tung/i;
   const prioritaet = { hoch: 0, mittel: 1, niedrig: 2 };
   const kandidaten = themenpool()
     .filter((t) => Number(t.klausur) === 2)
-    .filter((t) => gesucht.test([
-      t.titel,
-      ...(t.normen || []),
-      ...(t.kern?.lernziele || []),
-      ...(t.kern?.pruefschritte || []),
-      t.kern?.merksatz,
-      ...(t.kern?.fehler || []),
-    ].filter(Boolean).join(" | ")))
+    .filter((t) => gesucht.test(String(t.titel || "")))
     .sort((a, b) =>
       (prioritaet[a.prioritaet] ?? 9) - (prioritaet[b.prioritaet] ?? 9)
       || Number(Boolean(b.kern?.merksatz)) - Number(Boolean(a.kern?.merksatz))
