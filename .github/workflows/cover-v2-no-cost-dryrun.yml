@@ -16,6 +16,7 @@ jobs:
     timeout-minutes: 20
     env:
       GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
       IG_STIL: bunt
       IG_CHARAKTERE: "false"
       IG_BILD_KI: "false"
