@@ -35,7 +35,7 @@ Der Renderer ist für die wiederkehrende Marken-Geometrie zuständig.
 
 Dazu gehören insbesondere:
 - 4:5-Format
-- Fachband oben links
+- Fachband oben links; dessen Geometrie, Innenabstände und bündiger Sitz am linken/oberen Rand werden einheitlich per Renderer/CSS festgelegt
 - Position des Titelblocks
 - Schriftgrößen der Titelpillen
 - Pillen-Innenabstände
@@ -136,6 +136,8 @@ Was verlangt
 Satz 2 StPO?
 
 Die Zeilen müssen mit der festen großen Renderer-Typografie funktionieren.
+
+Zielwert: höchstens ungefähr 21 sichtbare Zeichen pro Titelzeile. Wenn eine Mehrwort-Zeile länger wäre, teile sie lieber in eine zusätzliche semantische Pille auf. Einzelne lange Fachwörter dürfen allein stehen. Der Renderer führt zusätzlich einen harten Geometrie-Preflight aus und schrumpft eine überlange Coverzeile nicht still.
 
 
 folien[0].coverBadge
@@ -276,7 +278,9 @@ Der Hinweis darf insbesondere nicht:
 
 Der Pfeil muss fachlich eindeutig auf das beabsichtigte Szenenelement zeigen.
 
-Der Renderer setzt anschließend den exakten coverText in der etablierten Herr-Jurist-Handschrift und zeichnet den Markenpfeil entsprechend dieses KI-Plans.
+Wähle für Hinweis und Pfeil die sinnvollste echte Negativfläche nahe an der Handlung, nicht bloß irgendeine leere Ecke. Hinweis und Ziel sollen so nah beieinander liegen, dass der Pfeil kompakt, klar und redaktionell wirkt und nicht quer durch die Szene wandert.
+
+Der Renderer setzt anschließend den exakten coverText in der etablierten Herr-Jurist-Handschrift und zeichnet den Markenpfeil entsprechend dieses KI-Plans. Der Pfeil soll wie in den Golden References wirken: locker geschwungen, runde dunkle Linie und offene zweistrichige Pfeilspitze – kein gefülltes Dreieck.
 
 Der Renderer darf die KI-Position nur minimal aus technischen Gründen innerhalb der Canvas-/Safe-Area halten.
 
@@ -308,6 +312,7 @@ Die Zielqualität entspricht den etablierten Herr-Jurist-Golden-References:
 - kräftige fachabhängige Vollfarbe
 - dunkles Fachband oben links
 - sehr große weiße Headline in dunklen einzelnen Titelpillen
+- minimal enger, konsistenter Abstand zwischen den Titelpillen
 - kompakter Titelblock mit wenig unnötigem Leerraum
 - kleine helle redaktionelle Badge unmittelbar darunter
 - kurzer handschriftlicher fachlicher Hinweis
