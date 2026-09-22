@@ -182,7 +182,7 @@ async function titelfolieBebildern(beitrag) {
     for (const k of ["bild","bildQuelle","bildFrei","bildBreite","bildHoehe","bildTyp"]) delete titelfolie[k];
   }
   try {
-    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum });
+    const treffer = await titelbild(beitrag, null, { randFarbe: stickerFarbe(beitrag.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, aiFirstCover: true });
     if (!treffer) return false;
     titelfolie.bild = treffer.bild;
     titelfolie.bildQuelle = treffer.quelle;
