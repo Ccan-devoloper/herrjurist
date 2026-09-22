@@ -1,0 +1,54 @@
+name: Unterlassene Hilfeleistung · zero-cost dry run
+
+on:
+  push:
+    branches:
+      - dryrun/unterlassene-hilfeleistung
+    paths:
+      - "test/unterlassene-hilfeleistung-dryrun-trigger.txt"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      IG_STIL: bunt
+      IG_CHARAKTERE: "false"
+      IG_BILD_KI: "false"
+      IG_BILDER: "false"
+      IG_NO_PUSH: "true"
+      HJ_FAHR_SOURCE: ".fahr-source"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Chromium
+        run: npx playwright install --with-deps chromium || npx playwright install chromium
+      - name: Download existing Fahrlaessige-Toetung transparent motif
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf .fahr-source /tmp/fahr-source.zip
+          mkdir -p .fahr-source
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/10676033128/zip" > /tmp/fahr-source.zip
+          unzip -q /tmp/fahr-source.zip -d .fahr-source
+          test -f .fahr-source/debug/attempt-2-xhigh/raw.png
+          file .fahr-source/debug/attempt-2-xhigh/raw.png
+      - name: Resolve theme from encrypted pool and render cover + all slides
+        run: node bin/unterlassene-hilfeleistung-dryrun.mjs
+      - name: Upload zero-cost result
+        uses: actions/upload-artifact@v4
+        with:
+          name: unterlassene-hilfeleistung-dryrun-${{ github.sha }}
+          path: out/unterlassene-hilfeleistung-dryrun
+          if-no-files-found: error
+          retention-days: 7
