@@ -4,7 +4,8 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { themenpool, FAECHER } from "../src/inhalte.mjs";
-import { CHARAKTERE, charakterMotivZeichnen, charaktereFuer } from "../src/charakterbild.mjs";
+import { CHARAKTERE, charaktereFuer } from "../src/charakterbild.mjs";
+import { aiCoverZeichnen } from "../src/cover-ai-first.mjs";
 import { beitragRendern, browserBeenden } from "../src/render.mjs";
 import { titelZeilen } from "../src/vorlagen.mjs";
 import { budgetStarten } from "../src/budget.mjs";
@@ -140,6 +141,14 @@ try {
   const fachLabel = FAECHER[thema.fach]?.label || "Strafrecht";
   const regie = await regieErzeugen(thema, fachLabel);
   const slot = "single-strafrecht-sterbehilfe";
+  const folie = {
+    art: "titel",
+    titel: thema.titel,
+    titelZeilen: titelZeilen(thema.titel),
+    icon: "paragraf",
+    coverText: regie.coverText,
+    coverBadge: regie.coverBadge,
+  };
   const ziel = {
     format: "pruefungsfrage",
     fach: thema.fach,
@@ -150,6 +159,7 @@ try {
     titel: thema.titel,
     kurztitel: thema.titel,
     coverText: regie.coverText,
+    coverBadge: regie.coverBadge,
     coverRegie: {
       charaktere: regie.charaktere,
       kernidee: regie.kernidee,
@@ -157,30 +167,23 @@ try {
       alternative: regie.alternative,
       hinweisRegie: regie.hinweisRegie,
     },
+    folien: [folie],
   };
 
   const selectedCharacterIds = charaktereFuer(ziel).map((x) => x.id);
-  const motiv = await charakterMotivZeichnen(ziel, { zweck: "bild", slot });
-  if (!motiv) throw new Error("Kein Charakterbild hat technische und visuelle QA bestanden.");
+  const motiv = await aiCoverZeichnen(ziel, { slot });
+  if (!motiv) throw new Error("Kein AI-first Komplettcover hat die visuelle QA bestanden.");
 
   try {
-    const motivDatei = path.join(motifsDir, `${slot}.png`);
+    const motivDatei = path.join(motifsDir, `${slot}-ai-first.png`);
     fs.copyFileSync(motiv.pfad, motivDatei);
-    const folie = {
-      art: "titel",
-      titel: thema.titel,
-      titelZeilen: titelZeilen(thema.titel),
-      icon: "paragraf",
-      coverText: regie.coverText,
-      coverBadge: regie.coverBadge,
-      bild: dateiDaten(motivDatei),
-      bildFrei: true,
-      bildBreite: motiv.breite || null,
-      bildHoehe: motiv.hoehe || null,
-      bildTyp: "charakter",
-      bildCharaktere: motiv.charaktere,
-      coverHinweisPlan: motiv.annotationPlan || null,
-    };
+    folie.bild = dateiDaten(motivDatei);
+    folie.bildFrei = false;
+    folie.bildBreite = motiv.breite || 1080;
+    folie.bildHoehe = motiv.hoehe || 1350;
+    folie.bildTyp = "ai-cover";
+    folie.bildCharaktere = motiv.charaktere;
+    folie.coverQa = motiv.qa || null;
     const beitrag = {
       format: "pruefungsfrage",
       fach: thema.fach,
@@ -228,7 +231,8 @@ try {
         attempt: motiv.attempt,
         qaFirstPass: motiv.qaFirstPass,
         qaAttempts: motiv.qaAttempts,
-        annotationPlan: motiv.annotationPlan || null,
+        finalQa: motiv.qa || null,
+        aiFirst: true,
         imagePath: path.relative(root, datei),
         motifPath: path.relative(root, motivDatei),
         motifDimensions: { width: Number(motiv.breite || 0), height: Number(motiv.hoehe || 0) },
@@ -246,11 +250,11 @@ try {
     };
     fs.writeFileSync(path.join(out, "manifest.json"), JSON.stringify(report, null, 2));
     fs.writeFileSync(path.join(out, "README.txt"), [
-      "Herrjurist Cover Quality v2 – single Strafrecht Sterbehilfe acceptance",
+      "Herrjurist AI-first – single Strafrecht Sterbehilfe acceptance",
       `Topic: ${thema.titel}`,
       `Artifact cover: ${path.relative(root, datei)}`,
       `Measured provider cost: $${report.costUsd.total.toFixed(6)}`,
-      "Exactly one cover was generated. No reel and no publishing.",
+      "Exactly one AI-first full cover was generated. No reel and no publishing.",
     ].join("\n") + "\n");
     console.log(JSON.stringify({ topic: thema.titel, costUsd: report.costUsd, quality: motiv.quality, attempt: motiv.attempt }, null, 2));
   } finally {
