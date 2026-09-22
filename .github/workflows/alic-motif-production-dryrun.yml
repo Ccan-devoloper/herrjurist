@@ -1,0 +1,60 @@
+name: ALIC motif · production dry run
+
+on:
+  push:
+    branches:
+      - dryrun/alic-motif-check
+    paths:
+      - "test/alic-motif-dryrun-trigger.txt"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      IG_STIL: bunt
+      IG_CHARAKTERE: "false"
+      IG_BILD_KI: "false"
+      IG_BILDER: "false"
+      IG_NO_PUSH: "true"
+      HJ_ALIC_SOURCE: ".alic-source"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Chromium
+        run: npx playwright install --with-deps chromium || npx playwright install chromium
+
+      - name: Download exact already-paid ALIC motif artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf .alic-source /tmp/alic-artifact.zip
+          mkdir -p .alic-source
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/10674227857/zip" > /tmp/alic-artifact.zip
+          unzip -q /tmp/alic-artifact.zip -d .alic-source
+          test -f .alic-source/motifs/single-strafrecht-alic.png
+          file .alic-source/motifs/single-strafrecht-alic.png
+
+      - name: Render saved last feed with exact ALIC motif and zero provider calls
+        run: node bin/alic-motif-production-dryrun.mjs
+
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: alic-motif-production-dryrun-${{ github.sha }}
+          path: out/alic-motif-production-dryrun
+          if-no-files-found: error
+          retention-days: 7
