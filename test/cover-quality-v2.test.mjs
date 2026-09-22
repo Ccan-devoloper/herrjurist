@@ -212,6 +212,37 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.doesNotMatch(html, /marker-end=/);
 });
 
+test("cover-quality-v2: Merksatz-Anfuehrungszeichen haben je Lernfamilie eine eigene Kontrastfarbe", () => {
+  const faecher = ["bgbat", "schuld", "sachen", "arbeit", "zpo", "strafat", "strafbt", "vwgo", "methodik", "wochenrueckblick"];
+  const linear = (wert) => {
+    const c = wert / 255;
+    return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  };
+  const luminanz = (hex) => {
+    const h = String(hex).replace("#", "");
+    const [r, g, b] = [0, 2, 4].map((i) => linear(parseInt(h.slice(i, i + 2), 16)));
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const kontrast = (a, b) => {
+    const [hell, dunkel] = [luminanz(a), luminanz(b)].sort((x, y) => y - x);
+    return (hell + 0.05) / (dunkel + 0.05);
+  };
+
+  const zitatfarben = [];
+  for (const fach of faecher) {
+    const p = lernPalette(fach);
+    assert.ok(p?.zitat, `${fach}: eigene Zitatfarbe fehlt`);
+    assert.notEqual(p.zitat.toLowerCase(), p.grund.toLowerCase(), `${fach}: Zitatfarbe entspricht dem Hintergrund`);
+    assert.ok(kontrast(p.zitat, p.grund) >= 4.5,
+      `${fach}: Zitatfarbe ${p.zitat} hat auf ${p.grund} zu wenig Kontrast (${kontrast(p.zitat, p.grund).toFixed(2)}:1)`);
+    const cssText = buntCss(kontext({ fach, klausur: 1, fachLabel: fach }));
+    assert.ok(cssText.includes(`.merke::before,.merke::after{color:${p.zitat}}`),
+      `${fach}: Renderer nutzt die Zitatfarbe nicht`);
+    zitatfarben.push(p.zitat.toLowerCase());
+  }
+  assert.equal(new Set(zitatfarben).size, zitatfarben.length, "Jede Lernfamilie soll eine eigene Zitatfarbe haben");
+});
+
 test("cover-quality-v2: vereinbarte Lernfamilienfarben sind permanent verdrahtet", () => {
   const erwartet = {
     bgbat: ["#8AF0A6", "#0A2B1C"],
