@@ -119,31 +119,123 @@ function coverHinweisAusPlanPlatzieren() {
   const oy = ir.top + (ir.height - dh) * faktor(pos[1] || pos[0] || "50%", ir.height);
 
   const n = (k, f) => Number.isFinite(Number(hinweis.dataset[k])) ? Number(hinweis.dataset[k]) : f;
-  let x = ox + n("noteX", 0.25) * dw;
-  let y = oy + n("noteY", 0.28) * dh;
+  const geplantX = ox + n("noteX", 0.25) * dw;
+  const geplantY = oy + n("noteY", 0.28) * dh;
   const tx = ox + n("targetX", 0.5) * dw;
   const ty = oy + n("targetY", 0.55) * dh;
   const rotation = Math.max(-12, Math.min(12, n("rotation", -4)));
   const bend = Math.max(-1, Math.min(1, n("bend", 0.35)));
 
-  hinweis.style.left = `${x - root.left}px`;
-  hinweis.style.top = `${y - root.top}px`;
-  hinweis.style.transform = `translate(-50%,-50%) rotate(${rotation}deg)`;
-
-  let hr = hinweis.getBoundingClientRect();
   const titel = wurzel.querySelector("h1.titel-stack, h1");
   const badge = wurzel.querySelector(".cover-badge");
   const fuss = wurzel.querySelector(".fuss");
-  const minTop = Math.max(titel?.getBoundingClientRect().bottom || root.top, badge?.getBoundingClientRect().bottom || root.top) + 10;
-  const maxBottom = (fuss?.getBoundingClientRect().top || root.bottom - 18) - 10;
-  let sx = 0, sy = 0;
-  if (hr.left < root.left + 24) sx += root.left + 24 - hr.left;
-  if (hr.right > root.right - 24) sx -= hr.right - (root.right - 24);
-  if (hr.top < minTop) sy += minTop - hr.top;
-  if (hr.bottom > maxBottom) sy -= hr.bottom - maxBottom;
-  x += sx; y += sy;
+  const minTop = Math.max(titel?.getBoundingClientRect().bottom || root.top, badge?.getBoundingClientRect().bottom || root.top) + 14;
+  const maxBottom = (fuss?.getBoundingClientRect().top || root.bottom - 18) - 12;
+  const minLeft = root.left + 24;
+  const maxRight = root.right - 24;
+
+  /* Transparenzmaske des tatsaechlichen KI-Motivs. Data-URI/PNG-Motive koennen
+     direkt gelesen werden. Falls ein Browser das Canvas wegen der Bildquelle
+     sperrt, bleibt die Platzierung geometrisch sicher und faellt auf die
+     KI-Wunschposition zurueck. */
+  let alpha = null;
+  let alphaBreite = 0;
+  let alphaHoehe = 0;
+  try {
+    const canvas = document.createElement("canvas");
+    alphaBreite = img.naturalWidth;
+    alphaHoehe = img.naturalHeight;
+    canvas.width = alphaBreite;
+    canvas.height = alphaHoehe;
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    ctx.drawImage(img, 0, 0);
+    alpha = ctx.getImageData(0, 0, alphaBreite, alphaHoehe).data;
+  } catch {
+    alpha = null;
+  }
+
+  const alphaAn = (px, py) => {
+    if (!alpha) return 0;
+    if (px < ox || px > ox + dw || py < oy || py > oy + dh) return 0;
+    const ix = Math.max(0, Math.min(alphaBreite - 1, Math.round((px - ox) / Math.max(1, dw) * (alphaBreite - 1))));
+    const iy = Math.max(0, Math.min(alphaHoehe - 1, Math.round((py - oy) / Math.max(1, dh) * (alphaHoehe - 1))));
+    return alpha[(iy * alphaBreite + ix) * 4 + 3] / 255;
+  };
+
+  const belegungRechteck = (cx, cy, breite, hoehe) => {
+    if (!alpha) return 0;
+    const randX = 16, randY = 12;
+    const l = cx - breite / 2 - randX;
+    const r = cx + breite / 2 + randX;
+    const o = cy - hoehe / 2 - randY;
+    const u = cy + hoehe / 2 + randY;
+    let belegt = 0, gesamt = 0;
+    const spalten = 13, zeilen = 7;
+    for (let yy = 0; yy < zeilen; yy++) {
+      const py = o + (u - o) * (yy + 0.5) / zeilen;
+      for (let xx = 0; xx < spalten; xx++) {
+        const px = l + (r - l) * (xx + 0.5) / spalten;
+        gesamt++;
+        if (alphaAn(px, py) > 0.12) belegt++;
+      }
+    }
+    return gesamt ? belegt / gesamt : 0;
+  };
+
+  /* Zuerst nur zur Groessenmessung an der KI-Wunschposition rendern. Danach
+     wird die naechste wirklich freie Flaeche gesucht. */
+  hinweis.style.left = `${geplantX - root.left}px`;
+  hinweis.style.top = `${geplantY - root.top}px`;
+  hinweis.style.transform = `translate(-50%,-50%) rotate(${rotation}deg)`;
+  let hr = hinweis.getBoundingClientRect();
+  const noteW = Math.max(80, hr.width);
+  const noteH = Math.max(42, hr.height);
+
+  const passtTechnisch = (cx, cy) =>
+    cx - noteW / 2 >= minLeft
+    && cx + noteW / 2 <= maxRight
+    && cy - noteH / 2 >= minTop
+    && cy + noteH / 2 <= maxBottom;
+
+  const kandidatScore = (cx, cy) => {
+    if (!passtTechnisch(cx, cy)) return Infinity;
+    const belegung = belegungRechteck(cx, cy, noteW, noteH);
+    const abstandPlan = Math.hypot(cx - geplantX, cy - geplantY);
+    const abstandZiel = Math.hypot(cx - tx, cy - ty);
+    /* Belegung dominiert deutlich. Distanz ist nur Tie-Breaker, damit der
+       Hinweis moeglichst nahe an der KI-Idee und der Handlung bleibt. */
+    return belegung * 100000 + abstandPlan * 0.34 + abstandZiel * 0.08;
+  };
+
+  let x = geplantX;
+  let y = geplantY;
+  let besterScore = kandidatScore(x, y);
+
+  if (alpha) {
+    const schrittX = 34;
+    const schrittY = 30;
+    const startX = minLeft + noteW / 2;
+    const endeX = maxRight - noteW / 2;
+    const startY = minTop + noteH / 2;
+    const endeY = maxBottom - noteH / 2;
+    for (let cy = startY; cy <= endeY; cy += schrittY) {
+      for (let cx = startX; cx <= endeX; cx += schrittX) {
+        const score = kandidatScore(cx, cy);
+        if (score < besterScore) {
+          besterScore = score;
+          x = cx;
+          y = cy;
+        }
+      }
+    }
+  }
+
+  /* Letzte technische Korrektur an der Safe Area; keine kreative Zonenlogik. */
+  x = Math.max(minLeft + noteW / 2, Math.min(maxRight - noteW / 2, x));
+  y = Math.max(minTop + noteH / 2, Math.min(maxBottom - noteH / 2, y));
   hinweis.style.left = `${x - root.left}px`;
   hinweis.style.top = `${y - root.top}px`;
+  hinweis.style.transform = `translate(-50%,-50%) rotate(${rotation}deg)`;
   hr = hinweis.getBoundingClientRect();
 
   const cx = (hr.left + hr.right) / 2;
@@ -155,25 +247,82 @@ function coverHinweisAusPlanPlatzieren() {
   const edge = Math.min(ax, ay, 1);
   const startX = cx + dx * edge;
   const startY = cy + dy * edge;
-  const mx = (startX + tx) / 2;
-  const my = (startY + ty) / 2;
   const laenge = Math.max(1, Math.hypot(tx - startX, ty - startY));
   const normalX = -(ty - startY) / laenge;
   const normalY = (tx - startX) / laenge;
-  const krumm = Math.min(155, laenge * 0.30) * bend;
-  const ctrlX = mx + normalX * krumm;
-  const ctrlY = my + normalY * krumm;
+
+  const pfeilGeometrie = (biegung) => {
+    const mx = (startX + tx) / 2;
+    const my = (startY + ty) / 2;
+    const krumm = Math.min(155, laenge * 0.30) * biegung;
+    return {
+      ctrlX: mx + normalX * krumm,
+      ctrlY: my + normalY * krumm,
+      biegung,
+    };
+  };
+
+  const punktAufKurve = (g, t) => {
+    const q = 1 - t;
+    return {
+      x: q * q * startX + 2 * q * t * g.ctrlX + t * t * tx,
+      y: q * q * startY + 2 * q * t * g.ctrlY + t * t * ty,
+    };
+  };
+
+  const pfeilScore = (g) => {
+    if (!alpha) return Math.abs(g.biegung - bend);
+    let kollision = 0;
+    let ausserhalb = 0;
+    /* Die letzten 18 % duerfen in das Zielobjekt laufen - genau dort soll die
+       Pfeilspitze ja landen. Der restliche Pfeil soll rechnerisch frei bleiben. */
+    for (let i = 1; i <= 20; i++) {
+      const t = i / 25; // bis 0.80
+      const p = punktAufKurve(g, t);
+      if (p.x < minLeft || p.x > maxRight || p.y < minTop || p.y > maxBottom) ausserhalb++;
+      if (alphaAn(p.x, p.y) > 0.12) kollision++;
+      /* Auch etwas neben der Mittellinie pruefen: ein 7px-Strich braucht
+         realen Freiraum, nicht nur einen einzigen transparenten Pixelpfad. */
+      if (alphaAn(p.x + normalX * 7, p.y + normalY * 7) > 0.12) kollision++;
+      if (alphaAn(p.x - normalX * 7, p.y - normalY * 7) > 0.12) kollision++;
+    }
+    return kollision * 1000 + ausserhalb * 5000 + Math.abs(g.biegung - bend) * 18;
+  };
+
+  const biegungen = [...new Set([
+    bend,
+    Math.max(-1, Math.min(1, bend + 0.28)),
+    Math.max(-1, Math.min(1, bend - 0.28)),
+    Math.max(-1, Math.min(1, bend + 0.55)),
+    Math.max(-1, Math.min(1, bend - 0.55)),
+    0,
+    0.75,
+    -0.75,
+  ].map((z) => Number(z.toFixed(2))))];
+
+  let g = pfeilGeometrie(biegungen[0]);
+  let gScore = pfeilScore(g);
+  for (const b of biegungen.slice(1)) {
+    const kandidat = pfeilGeometrie(b);
+    const score = pfeilScore(kandidat);
+    if (score < gScore) {
+      g = kandidat;
+      gScore = score;
+    }
+  }
+
+  hinweis.dataset.freeScore = String(Number(besterScore.toFixed(2)));
+  hinweis.dataset.arrowFreeScore = String(Number(gScore.toFixed(2)));
 
   const rel = (a, b) => [a - root.left, b - root.top].map((v) => Number(v.toFixed(1)));
   const [sx2, sy2] = rel(startX, startY);
-  const [cx2, cy2] = rel(ctrlX, ctrlY);
+  const [cx2, cy2] = rel(g.ctrlX, g.ctrlY);
   const [tx2, ty2] = rel(tx, ty);
   pfad.setAttribute("d", `M ${sx2} ${sy2} Q ${cx2} ${cy2} ${tx2} ${ty2}`);
 
-  /* Offene, handgezeichnete Pfeilspitze wie in den Golden References:
-     keine gefüllte Marker-Dreiecksspitze, sondern zwei runde Striche. */
-  const tangentX = tx - ctrlX;
-  const tangentY = ty - ctrlY;
+  /* Offene, handgezeichnete Pfeilspitze wie in den Golden References. */
+  const tangentX = tx - g.ctrlX;
+  const tangentY = ty - g.ctrlY;
   const tangentLen = Math.max(1, Math.hypot(tangentX, tangentY));
   const ux = tangentX / tangentLen;
   const uy = tangentY / tangentLen;
