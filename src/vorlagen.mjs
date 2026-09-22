@@ -252,7 +252,6 @@ export function buntCss(ctx) {
 .folie,.story,.reel{background:${p.grund};color:${p.dunkel}}
 /* Cover v2 nutzt die Breite wie die Golden References aggressiver als die Inhaltsfolien. */
 .art-titel{padding-left:52px;padding-right:52px}
-.ai-cover-full{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover;z-index:20;display:block}
 /* Auf weißen Flächen bleibt Nebentext dunkel - die helle Weichfarbe gilt
    nur direkt auf der Grundfarbe. */
 .text,ul.punkte li,ol.schritte li,.spalte,.rechnung,.cta .liste div,.story .karte,.story .optionen div,.story .norm,.merke,.reel .merkeblock .norm{--text-weich:${p.dunkel}}
@@ -728,9 +727,6 @@ function titelBlock(titel, zeilen, ctx) {
 
 const FOLIEN = {
   titel: (f, ctx, i, n) => {
-    if (f.bild && (f.bildTyp === "ai-cover" || f.bildTyp === "chat-native-cover")) {
-      return `<img class="ai-cover-full" src="${esc(f.bild)}" alt="">`;
-    }
     const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
     const badge = String(f.coverBadge || f.prioritaetText || "").trim();
     return `

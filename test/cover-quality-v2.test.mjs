@@ -205,23 +205,6 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.doesNotMatch(html, /marker-end=/);
 });
 
-test("cover-quality-v2: ChatGPT-native Komplettcover wird ohne Renderer-Overlay ausgegeben", () => {
-  const ctx = kontext({ fach: "strafat", klausur: 2, fachLabel: "Strafrecht AT", stil: "bunt" });
-  const html = folieHtml({
-    art: "titel",
-    titel: "Darf nicht zusätzlich erscheinen",
-    coverBadge: "Nicht darüberlegen",
-    coverText: "Nicht darüberlegen",
-    bild: "data:image/png;base64,AA==",
-    bildTyp: "chat-native-cover",
-  }, ctx, 1, 6);
-  assert.match(html, /class="ai-cover-full"/);
-  assert.match(html, /data:image\/png;base64,AA==/);
-  assert.doesNotMatch(html, /Darf nicht zusätzlich erscheinen/);
-  assert.doesNotMatch(html, /Nicht darüberlegen/);
-  assert.doesNotMatch(html, />1\/6</);
-});
-
 test("cover-quality-v2: vereinbarte Lernfamilienfarben sind permanent verdrahtet", () => {
   const erwartet = {
     bgbat: ["#8AF0A6", "#0A2B1C"],

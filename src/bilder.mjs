@@ -199,7 +199,6 @@ export async function titelbild(beitrag, ablage = null, opt = {}) {
      sechs Referenzfiguren sind konstant. Scheitern beide Qualitaetsversuche,
      bleibt bewusst das bestehende Icon-Layout statt auf Stockfotos
      zurueckzufallen. */
-
   if (charakterBildAktiv() && opt.charaktere !== false) {
     const motiv = await charakterMotivZeichnen(beitrag, {
       randFarbe: opt.randFarbe || null,
