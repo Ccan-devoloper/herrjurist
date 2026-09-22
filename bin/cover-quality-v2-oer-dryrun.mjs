@@ -10,6 +10,7 @@ import { budgetStarten } from "../src/budget.mjs";
 import { kontextSetzen, kontextLoeschen, openaiAufruf } from "../src/anbieter.mjs";
 import { budgetSetzen } from "../src/kosten.mjs";
 import { CONFIG } from "../src/config.mjs";
+import { titelZeilen } from "../src/vorlagen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(hier, "..");
@@ -98,6 +99,7 @@ async function promptTrockenlauf() {
   d.coverBadge=String(d.coverBadge||"").replace(/\s+/g," ").trim().slice(0,32);
   d.titel=String(d.titel||"").replace(/\s+/g," ").trim().slice(0,160);
   d.titelZeilen=(d.titelZeilen||[]).map(x=>String(x||"").replace(/\s+/g," ").trim()).filter(Boolean).slice(0,4);
+  d.titelZeilen=titelZeilen(d.titel,d.titelZeilen);
   if(d.titelZeilen.length<2) throw new Error("Prompt dry-run returned fewer than 2 semantic title lines.");
   return d;
 }
