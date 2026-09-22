@@ -260,3 +260,4 @@ try {
   await browserBeenden().catch(() => {});
   kontextLoeschen();
 }
+// Acceptance control marker: intentional cancellation checkpoint.
