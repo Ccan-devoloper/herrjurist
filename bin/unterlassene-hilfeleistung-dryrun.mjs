@@ -48,7 +48,7 @@ const themaId = topic.id || topic.themaId || "strafbt-323c";
 const inhalt = {
   format: "minifall",
   fach,
-  klausur: Number(topic.prioritaet === "hoch" ? 3 : 2),
+  klausur: 2,
   fachLabel,
   themaId,
   folien: [
