@@ -74,8 +74,8 @@ const COVER_SCHEMA = {
 async function promptTrockenlauf() {
   const params={
     model:"gpt-5.4-mini",
-    reasoning:{effort:"medium"},
-    max_output_tokens:1800,
+    reasoning:{effort:"low"},
+    max_output_tokens:3000,
     instructions:[
       "DRY-RUN SCOPE OVERRIDE: Apply the user's exact prompt only to ONE Herr-Jurist cover.",
       "Do not publish, do not alter schedules, do not write any repository state, and do not create stories/reels or Examenscampus content.",
@@ -90,7 +90,7 @@ async function promptTrockenlauf() {
   };
   const a=await openaiAufruf({
     zweck:"bildregie",modell:"gpt-5.4-mini",params,optional:false,
-    admissionInputTokens:6500,slot:"oer-dryrun-regie",promptVersion:"exact-daily-prompt-oer-dryrun-v1"
+    admissionInputTokens:6500,slot:"oer-dryrun-regie",promptVersion:"exact-daily-prompt-oer-dryrun-v2"
   });
   const raw=responseText(a);
   const d=JSON.parse(raw.slice(raw.indexOf("{"),raw.lastIndexOf("}")+1));
