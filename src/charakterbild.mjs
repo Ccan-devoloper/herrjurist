@@ -16,7 +16,7 @@ import { execFileSync } from "node:child_process";
 import { CONFIG } from "./config.mjs";
 import { ffmpegPfad } from "./stimme.mjs";
 import { bildAufruf, openaiAufruf, openaiBildEditSenden } from "./anbieter.mjs";
-import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, randVerdacht, freistellen } from "./freistellen.mjs";
+import { alphaProfil, FESTIGKEIT_MIN, zuschneiden, bestickern, masse, randkontakt, freistellen } from "./freistellen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
 const basis = path.resolve(hier, "../assets/charaktere");
@@ -483,17 +483,10 @@ function qaTechnisch(roh, randFarbe = null) {
   }
 
   const rand = randkontakt(arbeitsPfad);
+  /* Randkontakt bleibt als Diagnosewert erhalten, ist aber keine harte
+     technische Sperre mehr. Visuelle Crop-/Anatomiefehler prüft anschließend
+     die visuelle QA am tatsächlichen Motiv. */
   details.rand = rand || null;
-  const randFehler = randVerdacht(rand);
-  if (randFehler) {
-    fs.rmSync(arbeitsPfad, { force: true });
-    return {
-      ok: false,
-      reason: "randkontakt",
-      message: `Motiv berührt den verbotenen Bildrand: ${randFehler}.`,
-      details,
-    };
-  }
 
   const geschnitten = zuschneiden(arbeitsPfad);
   if (geschnitten !== arbeitsPfad) fs.rmSync(arbeitsPfad, { force: true });
