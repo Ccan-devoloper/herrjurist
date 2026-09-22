@@ -428,32 +428,106 @@ function dateiAusAntwort(daten) {
 }
 
 function qaTechnisch(roh, randFarbe = null) {
-  let arbeitsPfad = roh;
+  const details = {
+    source: masse(roh) || null,
+    rembgUsed: false,
+    alphaBefore: null,
+    alphaAfter: null,
+    rand: null,
+  };
+  const kopie = path.join(os.tmpdir(), `charakter-qa-${process.pid}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.png`);
+  fs.copyFileSync(roh, kopie);
+  let arbeitsPfad = kopie;
   let prof = alphaProfil(arbeitsPfad);
+  details.alphaBefore = prof || null;
   const alphaTaugt = prof && prof.festigkeit >= FESTIGKEIT_MIN && prof.belegt >= 0.02;
+
   if (!alphaTaugt) {
+    details.rembgUsed = true;
     const frei = freistellen(arbeitsPfad, { randFarbe: null, schaerfePruefen: false });
     fs.rmSync(arbeitsPfad, { force: true });
-    if (!frei?.pfad) return null;
+    if (!frei?.pfad) {
+      return {
+        ok: false,
+        reason: "freisteller-fehlgeschlagen",
+        message: "Transparenz war unbrauchbar und der lokale Freisteller lieferte kein verwendbares Motiv.",
+        details,
+      };
+    }
     arbeitsPfad = frei.pfad;
     prof = alphaProfil(arbeitsPfad);
   }
-  if (!prof || prof.festigkeit < FESTIGKEIT_MIN || prof.belegt < 0.02) {
+
+  details.alphaAfter = prof || null;
+  if (!prof) {
     fs.rmSync(arbeitsPfad, { force: true });
-    return null;
+    return { ok: false, reason: "alpha-profil-fehlt", message: "Alphakanal konnte nicht ausgewertet werden.", details };
   }
-  const randFehler = randVerdacht(randkontakt(arbeitsPfad));
+  if (prof.festigkeit < FESTIGKEIT_MIN) {
+    fs.rmSync(arbeitsPfad, { force: true });
+    return {
+      ok: false,
+      reason: "alpha-zu-weich",
+      message: `Nur ${Math.round(prof.festigkeit * 100)} % der belegten Fläche sind deckend; Mindestwert ${Math.round(FESTIGKEIT_MIN * 100)} %.`,
+      details,
+    };
+  }
+  if (prof.belegt < 0.02) {
+    fs.rmSync(arbeitsPfad, { force: true });
+    return {
+      ok: false,
+      reason: "motivflaeche-zu-klein",
+      message: `Nur ${(prof.belegt * 100).toFixed(1)} % der Fläche sind belegt; Mindestwert 2,0 %.`,
+      details,
+    };
+  }
+
+  const rand = randkontakt(arbeitsPfad);
+  details.rand = rand || null;
+  const randFehler = randVerdacht(rand);
   if (randFehler) {
     fs.rmSync(arbeitsPfad, { force: true });
-    return null;
+    return {
+      ok: false,
+      reason: "randkontakt",
+      message: `Motiv berührt den verbotenen Bildrand: ${randFehler}.`,
+      details,
+    };
   }
+
   const geschnitten = zuschneiden(arbeitsPfad);
   if (geschnitten !== arbeitsPfad) fs.rmSync(arbeitsPfad, { force: true });
   const ohneRand = geschnitten.replace(/\.png$/, "-roh.png");
   fs.copyFileSync(geschnitten, ohneRand);
   const fertig = randFarbe ? bestickern(geschnitten, randFarbe) : geschnitten;
   const m = masse(fertig) || {};
-  return { pfad: fertig, ohneRand, breite: m.breite || null, hoehe: m.hoehe || null };
+  return {
+    ok: true,
+    pfad: fertig,
+    ohneRand,
+    breite: m.breite || null,
+    hoehe: m.hoehe || null,
+    details,
+  };
+}
+
+function debugVersuchAblegen(debugDir, { attempt, quality, roh = null, verarbeitet = null, technisch = null, visuell = null, fehler = null } = {}) {
+  if (!debugDir) return;
+  try {
+    const ziel = path.join(debugDir, `attempt-${attempt}-${quality || "unknown"}`);
+    fs.mkdirSync(ziel, { recursive: true });
+    if (roh && fs.existsSync(roh)) fs.copyFileSync(roh, path.join(ziel, "raw.png"));
+    if (verarbeitet && fs.existsSync(verarbeitet)) fs.copyFileSync(verarbeitet, path.join(ziel, "processed.png"));
+    fs.writeFileSync(path.join(ziel, "qa.json"), JSON.stringify({
+      attempt,
+      quality,
+      technisch: technisch || null,
+      visuell: visuell || null,
+      fehler: fehler || null,
+    }, null, 2));
+  } catch (e) {
+    console.warn(`  ! Debug-Artefakt für Versuch ${attempt} konnte nicht geschrieben werden: ${String(e?.message || e).slice(0, 160)}`);
+  }
 }
 
 const BILD_QA_SCHEMA = {
@@ -621,7 +695,7 @@ function verwerfen(bild) {
  * Ergebnis bekommt genau einen xhigh-Neuversuch. Reel-Szenen starten aus
  * Kostengruenden in medium und eskalieren auf high.
  */
-export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "bild", slot = null } = {}) {
+export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "bild", slot = null, debugDir = null } = {}) {
   if (!charakterBildAktiv() || !ziel) return null;
   const cfg = CONFIG.bilder.charaktere;
   const chars = charaktereFuer(ziel).slice(0, 6);
@@ -677,11 +751,23 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         continue;
       }
 
-      fertig = qaTechnisch(roh, cfg.randAktiv ? randFarbe : null);
-      if (!fertig) {
+      const technisch = qaTechnisch(roh, cfg.randAktiv ? randFarbe : null);
+      fertig = technisch?.ok ? technisch : null;
+      if (!technisch?.ok) {
         korrektur = "Keep every selected character and important prop fully inside the frame with clean transparent edges and no cropping.";
-        qaVersuche.push({ attempt: i + 1, quality: v.quality, technischOk: false, visuellOk: false, issues: ["technische Alpha-/Crop-QA nicht bestanden"], retryHint: korrektur });
-        console.warn(`  ! Charakterbild technische QA fehlgeschlagen (${chars.map((x) => x.name).join(" + ")}, Versuch ${i + 1})`);
+        const grund = technisch?.message || technisch?.reason || "technische Alpha-/Crop-QA nicht bestanden";
+        qaVersuche.push({
+          attempt: i + 1,
+          quality: v.quality,
+          technischOk: false,
+          visuellOk: false,
+          technischeQa: technisch?.details || null,
+          issues: [grund],
+          retryHint: korrektur,
+        });
+        debugVersuchAblegen(debugDir, { attempt: i + 1, quality: v.quality, roh, technisch });
+        console.warn(`  ! Charakterbild technische QA fehlgeschlagen (${chars.map((x) => x.name).join(" + ")}, Versuch ${i + 1}): ${grund} · Messwerte ${JSON.stringify(technisch?.details || {})}`);
+        fs.rmSync(roh, { force: true });
         continue;
       }
 
@@ -691,9 +777,19 @@ export async function charakterMotivZeichnen(ziel, { randFarbe = null, zweck = "
         quality: v.quality,
         technischOk: true,
         visuellOk: Boolean(visuell.ok),
+        technischeQa: technisch?.details || null,
         issues: [...(visuell.issues || [])],
         retryHint: visuell.retryHint || "",
       });
+      debugVersuchAblegen(debugDir, {
+        attempt: i + 1,
+        quality: v.quality,
+        roh,
+        verarbeitet: fertig.ohneRand || fertig.pfad,
+        technisch,
+        visuell,
+      });
+      fs.rmSync(roh, { force: true });
       if (!visuell.ok) {
         const grund = (visuell.issues || []).slice(0, 4).join("; ") || "visuelle Marken-QA nicht bestanden";
         console.warn(`  ! Charakterbild visuelle QA fehlgeschlagen (${chars.map((x) => x.name).join(" + ")}, Versuch ${i + 1}): ${grund.slice(0, 320)}`);

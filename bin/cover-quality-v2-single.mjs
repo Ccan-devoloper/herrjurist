@@ -24,11 +24,11 @@ fs.mkdirSync(motifsDir, { recursive: true });
 const events = [];
 const telemetrie = { aufruf(e) { events.push({ zeit: new Date().toISOString(), ...e }); } };
 const budget = budgetStarten({
-  deckel: { core: 0.35, engagement: 0, research: 0 },
+  deckel: { core: 0.55, engagement: 0, research: 0 },
   bisher: { core: 0, engagement: 0, research: 0 },
   protokoll: () => {},
 });
-budgetSetzen({ limitUsd: 0.35, antwortLimitUsd: 0.35 });
+budgetSetzen({ limitUsd: 0.55, antwortLimitUsd: 0.55 });
 kontextSetzen({ budget, telemetrie, journal: null, kanal: "herrjurist-cover-quality-v2-single-fahrlaessige-toetung", datum: "acceptance-single" });
 
 const round = (n) => Number(Number(n || 0).toFixed(6));
@@ -160,7 +160,11 @@ try {
   };
 
   const selectedCharacterIds = charaktereFuer(ziel).map((x) => x.id);
-  const motiv = await charakterMotivZeichnen(ziel, { zweck: "bild", slot });
+  const motiv = await charakterMotivZeichnen(ziel, {
+    zweck: "bild",
+    slot,
+    debugDir: path.join(out, "debug"),
+  });
   if (!motiv) throw new Error("Kein Charakterbild hat technische und visuelle QA bestanden.");
 
   try {
