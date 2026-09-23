@@ -600,7 +600,13 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
       await coverRendern(coverDaten(reel, plan), cover);
     }
   } catch (e) {
-    console.warn(`  ! Cover nicht gerendert (${e.message}) – nehme ein Bild aus dem Video.`);
+    /* Im aktuellen Erklaervideo-Format darf ein Coverfehler nicht heimlich
+       wieder ein Videoframe als altes Reel-Cover ausgeben. Das war optisch
+       ein Formatwechsel, obwohl nur eine Titelzeile zu breit war. */
+    if (erklaer || reel.coverBildAuslassen === true) {
+      throw new Error(`Reel-Cover konnte nicht markenkonform gerendert werden: ${e.message}`);
+    }
+    console.warn(`  ! Legacy-Cover nicht gerendert (${e.message}) – nehme ein Bild aus dem Video.`);
     const coverFrame = Math.min(n - 1, Math.round(0.9 * fps));
     if (clipAktiv) execFileSync(ffmpegPfad(), ["-y", "-hide_banner", "-loglevel", "error", "-ss", (coverFrame / fps).toFixed(2), "-i", video, "-frames:v", "1", "-q:v", "3", cover], { stdio: ["ignore", "pipe", "pipe"] });
     else fs.copyFileSync(path.join(frameDir, `f${String(coverFrame).padStart(5, "0")}.jpg`), cover);
