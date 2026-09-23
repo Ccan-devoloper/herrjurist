@@ -1,4 +1,4 @@
-name: Chat finalize 2026-09-23 · visual preview
+name: Chat finalize 2026-09-23 · visual preview v2
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
@@ -8,9 +8,12 @@ permissions:
 jobs:
   preview:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -25,7 +28,7 @@ jobs:
           pip install --quiet "rembg[cli]" onnxruntime
           sudo apt-get update -qq >/dev/null
           sudo apt-get install -y -qq ffmpeg >/dev/null
-      - name: Render today's stored finalization candidates
+      - name: Render today's Herr-Jurist previews with character QA
         env:
           GITHUB_TOKEN: ${{ github.token }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -35,9 +38,12 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           IG_BILD_KI: "true"
           IG_BILDER: "true"
+          IG_CHARAKTERE: "true"
+          IG_CHARAKTER_QA: "true"
           IG_BILDER_FREISTELLEN: "true"
-          IG_DRY_RUN: "true"
           IG_ABLEGEN: "1"
+          IG_PREVIEW_BUDGET_USD: "1.50"
+          IG_ASSET_BRANCH: "instagram-assets"
           GIT_AUTHOR_NAME: instagram-bot
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: node bin/nachrendern.mjs 2026-09-23
