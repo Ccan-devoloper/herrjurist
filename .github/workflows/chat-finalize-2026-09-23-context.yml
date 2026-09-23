@@ -1,51 +1,86 @@
-name: Export final b3 package 2026-09-23
+name: Chat finalize 2026-09-23 · b3 full-motive rerender
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
     paths: [.github/workflows/chat-finalize-2026-09-23-context.yml]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  package:
+  render:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: instagram-assets
-      - name: Build ZIP payload
-        run: |
-          mkdir -p export/final export/scenes export/qa export/state
-          cp vorschau/2026-09-23/b3-2026-09-23-b3-final-reel-v1.mp4 export/final/
-          cp vorschau/2026-09-23/b3-2026-09-23-b3-final-cover-v1.jpg export/final/
-          cp vorschau/2026-09-23/b3-scenes-final-v1/scene-*.png export/scenes/
-          cp vorschau/2026-09-23/b3-scenes-final-v1/manifest.json export/scenes/
-          cp vorschau/2026-09-23/b3-qa-final-v1/qa-*.jpg export/qa/
-          cp vorschau/2026-09-23/b3-stable-qa-v1/frame-*.jpg export/qa/
-          cp state/inhalte/2026-09-23-b3.json export/state/
-          cat > export/README.txt <<'TXT'
-          Herr Jurist · b3 · 2026-09-23
-          Thema: Anwaltsklausur: Klageerwiderung und Verteidigungsstrategie
-
-          final/
-            Finales Reel (MP4) und finales Cover (JPG)
-          scenes/
-            Fünf unterschiedliche Reel-Motive + Manifest
-          qa/
-            QA-Frames und stabile Kontrollframes
-          state/
-            Finaler Inhaltsstand aus state/inhalte/2026-09-23-b3.json
-
-          Finaler Stand:
-            7 Szenen
-            5 unterschiedliche Motive
-            Reel-Dauer 87,56 s
-            Layout: Erklärvideo
-            Stimme: Piper
-            manuellGeprueft: true
-          TXT
-      - uses: actions/upload-artifact@v4
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
         with:
-          name: herrjurist-b3-final-2026-09-23
-          path: export
-          if-no-files-found: error
-          retention-days: 7
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Chromium
+        run: |
+          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list || true
+          npx playwright install --with-deps chromium || npx playwright install chromium
+      - name: Free local render dependencies
+        run: |
+          pip install --quiet piper-tts
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+          if [ ! -f ~/.cache/piper-voices/de_DE-thorsten-high.onnx ]; then
+            mkdir -p ~/.cache/piper-voices
+            python3 -m piper.download_voices --data-dir ~/.cache/piper-voices de_DE-thorsten-high
+          fi
+      - name: Rerender approved b3 with complete motives
+        env:
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+          IG_STIMME: "piper"
+        run: |
+          git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
+          git show origin/instagram-assets:state/inhalte/2026-09-23-b3.json > /tmp/b3.json
+          cat > .chat-rerender-b3.mjs <<'NODE'
+          import fs from "node:fs";
+          import path from "node:path";
+          import { reelBauen } from "./src/reel.mjs";
+          import { browserBeenden } from "./src/render.mjs";
+
+          const reel=JSON.parse(fs.readFileSync("/tmp/b3.json","utf8"));
+          delete reel.reelFinalUrl;
+          delete reel.reelFinalDauer;
+          delete reel.reelFinalLayout;
+          delete reel.reelFinalStimmeAnbieter;
+          const out="/tmp/b3-v2";
+          fs.mkdirSync(out,{recursive:true});
+          const r=await reelBauen(reel,out,{
+            datum:"2026-09-23",
+            layout:"erklaer",
+            framesBehalten:true
+          });
+          fs.writeFileSync("/tmp/b3-v2-result.json",JSON.stringify({
+            dauer:r.dauer,anbieter:r.anbieter,layout:r.layout,
+            video:r.video,cover:r.cover
+          },null,2));
+          await browserBeenden();
+          NODE
+          node .chat-rerender-b3.mjs
+          rm .chat-rerender-b3.mjs
+
+          git worktree add -B chat-assets /tmp/assets origin/instagram-assets
+          mkdir -p /tmp/assets/vorschau/2026-09-23/b3-full-motive-qa-v2
+          cp /tmp/b3-v2/2026-09-23-b3.mp4 /tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-final-reel-v2.mp4
+          cp /tmp/b3-v2/2026-09-23-b3-cover.jpg /tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-final-cover-v2.jpg
+
+          video=/tmp/b3-v2/2026-09-23-b3.mp4
+          for t in 8 20 33 45 58 70 82; do
+            ffmpeg -y -hide_banner -loglevel error -ss "$t" -i "$video" -frames:v 1 -q:v 2 "/tmp/assets/vorschau/2026-09-23/b3-full-motive-qa-v2/frame-${t}s.jpg"
+          done
+          cp /tmp/b3-v2-result.json /tmp/assets/vorschau/2026-09-23/b3-full-motive-qa-v2/render.json
+
+          cd /tmp/assets
+          git config user.name instagram-bot
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add vorschau/2026-09-23/b3-2026-09-23-b3-final-reel-v2.mp4                   vorschau/2026-09-23/b3-2026-09-23-b3-final-cover-v2.jpg                   vorschau/2026-09-23/b3-full-motive-qa-v2
+          git commit -m "Rendere b3 mit vollständig sichtbaren Reel-Motiven"
+          git pull --rebase origin instagram-assets
+          git push origin HEAD:instagram-assets
