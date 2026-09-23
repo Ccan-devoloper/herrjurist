@@ -1,5 +1,5 @@
 {
-  "stand": "2026-09-23T18:30:00Z",
+  "stand": "2026-09-23T18:35:00Z",
   "modus": "lokal-ohne-provider",
   "tage": {
     "2026-09-24": {
