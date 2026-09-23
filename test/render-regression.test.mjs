@@ -5,7 +5,7 @@ import os from "node:os";
 import path from "node:path";
 
 import { storyHtml, buntCss } from "../src/vorlagen.mjs";
-import { kontext, coverRendern, browserStarten, browserBeenden } from "../src/render.mjs";
+import { kontext, coverRendern, browserStarten, browserBeenden, storyTitelEinpassen } from "../src/render.mjs";
 
 test.after(async () => { await browserBeenden().catch(() => {}); });
 
@@ -63,6 +63,7 @@ test("Kurzer Norm-Story-Titel nutzt die Breite und bleibt bei hoechstens zwei Ze
     try {
       await page.goto(`file://${datei}`, { waitUntil: "load" });
       await page.evaluate(() => document.fonts.ready);
+      await page.evaluate(storyTitelEinpassen);
       const messung = await page.locator(".story h1").evaluate((el) => {
         const cs = getComputedStyle(el);
         const lineHeight = parseFloat(cs.lineHeight);
