@@ -45,17 +45,17 @@ jobs:
         run: |
           git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
           git worktree add -B chat-assets /tmp/assets origin/instagram-assets
-          cat > /tmp/b3-reel-finalize.mjs <<'NODE'
+          cat > .chat-b3-reel-finalize.mjs <<'NODE'
           import fs from "node:fs";
           import path from "node:path";
           import { execFileSync } from "node:child_process";
-          import { charakterMotivZeichnen } from process.cwd() + "/src/charakterbild.mjs";
-          import { budgetStarten } from process.cwd() + "/src/budget.mjs";
-          import { telemetrieStarten } from process.cwd() + "/src/telemetrie.mjs";
-          import { kontextSetzen } from process.cwd() + "/src/anbieter.mjs";
-          import { motiveVerteilen } from process.cwd() + "/src/erklaervideo.mjs";
-          import { reelBauen } from process.cwd() + "/src/reel.mjs";
-          import { browserBeenden } from process.cwd() + "/src/render.mjs";
+          import { charakterMotivZeichnen } from "./src/charakterbild.mjs";
+          import { budgetStarten } from "./src/budget.mjs";
+          import { telemetrieStarten } from "./src/telemetrie.mjs";
+          import { kontextSetzen } from "./src/anbieter.mjs";
+          import { motiveVerteilen } from "./src/erklaervideo.mjs";
+          import { reelBauen } from "./src/reel.mjs";
+          import { browserBeenden } from "./src/render.mjs";
 
           const datum="2026-09-23";
           const assets="/tmp/assets";
@@ -155,7 +155,8 @@ jobs:
           await browserBeenden();
           console.log("B3_FINAL_MANIFEST "+JSON.stringify(manifest));
           NODE
-          node /tmp/b3-reel-finalize.mjs
+          node .chat-b3-reel-finalize.mjs
+          rm .chat-b3-reel-finalize.mjs
       - name: Commit generated motives, QA frames and final reel preview
         run: |
           cd /tmp/assets
