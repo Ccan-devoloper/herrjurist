@@ -1,7 +1,7 @@
 {
-  "stand": "2026-09-23T21:12:00Z",
+  "stand": "2026-09-23T21:15:00Z",
   "modus": "lokal-ohne-provider",
-  "grund": "Review-Regeln A-G auf 2026-09-24 und 2026-09-25 uebertragen",
+  "grund": "Wiederholung nach rein lokalem Renderer-Fix; weiterhin ohne Provider",
   "tage": {
     "2026-09-24": {
       "stories": [
