@@ -138,13 +138,13 @@ test("CTA kann inhaltsspezifische Icons statt zyklischer Deko vorgeben", () => {
   const spezifisch = folieHtml({
     art: "cta",
     titel: "TKZ als Startblock",
-    punkte: ["Titel benennen", "Klausel prüfen", "Zustellung prüfen", "Vollstreckung starten"],
+    punkte: ["A", "B", "C", "D"],
     icons: ["dokument", "lupe", "umschlag", "hammer"],
   }, ctx, 7, 7);
   const fallback = folieHtml({
     art: "cta",
     titel: "TKZ als Startblock",
-    punkte: ["Titel benennen", "Klausel prüfen", "Zustellung prüfen", "Vollstreckung starten"],
+    punkte: ["A", "B", "C", "D"],
   }, ctx, 7, 7);
   assert.notEqual(spezifisch, fallback);
 });
