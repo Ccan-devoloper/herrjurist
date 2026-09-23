@@ -506,6 +506,20 @@ async function freigegebenesCoverLaden(url, ziel) {
   return ziel;
 }
 
+async function freigegebenesReelLaden(url, ziel) {
+  const u = new URL(String(url || ""));
+  if (u.protocol !== "https:" || u.hostname !== "raw.githubusercontent.com") {
+    throw new Error("Freigegebenes Reel muss von raw.githubusercontent.com stammen.");
+  }
+  const r = await fetch(u);
+  if (!r.ok) throw new Error(`Freigegebenes Reel nicht ladbar: HTTP ${r.status}`);
+  const daten = Buffer.from(await r.arrayBuffer());
+  const ftyp = daten.subarray(0, 64).includes(Buffer.from("ftyp"));
+  if (daten.length < 100_000 || !ftyp) throw new Error("Freigegebenes Reel ist keine plausible MP4-Datei.");
+  fs.writeFileSync(ziel, daten);
+  return ziel;
+}
+
 /**
  * Baut das Reel. Rückgabe: { video, cover, dauer, echt }
  */
@@ -517,6 +531,25 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
   const clip = opt.clip === null ? null : (opt.clip || hintergrundClip(opt.hintergrundDir, datum));
   const ctx = { stil: stilLaden(opt.stil || (hell ? "kanzlei-hell" : CONFIG.marke.stil)), handle: CONFIG.marke.handle, fach: reel.fach, klausur: reel.klausur ?? FAECHER[reel.fach]?.klausur ?? 3, fachLabel: FAECHER[reel.fach]?.label || "Examenswissen", animation: opt.animation || animationFuer(datum), farbeJeKlausur: CONFIG.marke.farbeJeKlausur, clip };
   fs.mkdirSync(ausgabeDir, { recursive: true });
+  const video = path.join(ausgabeDir, `${reel.slug || "reel"}.mp4`);
+  const cover = path.join(ausgabeDir, `${reel.slug || "reel"}-cover.jpg`);
+  if (reel.reelFinalUrl) {
+    const dauer = Number(reel.reelFinalDauer);
+    if (!Number.isFinite(dauer) || dauer <= 0) throw new Error("Freigegebenes Reel braucht reelFinalDauer.");
+    if (!reel.coverFinalUrl) throw new Error("Freigegebenes Reel braucht ein freigegebenes Cover.");
+    await freigegebenesReelLaden(reel.reelFinalUrl, video);
+    await freigegebenesCoverLaden(reel.coverFinalUrl, cover);
+    console.log("  → vorab visuell freigegebenes Reel + Cover exakt wiederverwendet (0 $ Providerkosten).");
+    return {
+      video, cover, dauer, echt: true,
+      anbieter: reel.reelFinalStimmeAnbieter || "piper",
+      stimmeId: reel.reelFinalStimmeId || null,
+      stimmeName: reel.reelFinalStimmeName || null,
+      szenen: reel.szenen?.length || 0,
+      layout: reel.reelFinalLayout || "erklaer",
+      animation: "Freigegebenes Reel",
+    };
+  }
   const plan = await zeitplanErstellen(reel, path.join(ausgabeDir, "audio"), { stimmeId: opt.stimmeId || null, stimmeName: opt.stimmeName || null });
   const frameDir = path.join(ausgabeDir, "frames");
   /* Das Erklaervideo bleibt auch dann aktiv, wenn die Motiv-Erzeugung einmal
@@ -531,8 +564,6 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
 
   /* Ab hier zaehlt nur noch, ob wirklich mit Clip gerendert wurde. */
   const clipAktiv = erklaer ? null : clip;
-  const video = path.join(ausgabeDir, `${reel.slug || "reel"}.mp4`);
-  const cover = path.join(ausgabeDir, `${reel.slug || "reel"}-cover.jpg`);
   const frames = path.join(frameDir, clipAktiv ? "f%05d.png" : "f%05d.jpg");
   /* Mit Clip: Eingabe 0 = geloopter Hintergrund, Eingabe 1 = transparente Frames. */
   const args = ["-y", "-hide_banner", "-loglevel", "error"];
