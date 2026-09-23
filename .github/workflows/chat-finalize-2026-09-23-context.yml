@@ -1,34 +1,66 @@
-name: Chat finalize 2026-09-23 · verify b3 v3 reuse
+name: Export final b3 v3 zoom package 2026-09-23
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
     paths: [.github/workflows/chat-finalize-2026-09-23-context.yml]
+permissions:
+  contents: read
 jobs:
-  verify:
+  package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Reuse exact approved v3 reel without provider credentials
-        env:
-          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+          ref: instagram-assets
+      - name: Add current renderer code
         run: |
-          curl -fsSL https://raw.githubusercontent.com/Ccan-devoloper/herrjurist/instagram-assets/state/inhalte/2026-09-23-b3.json -o /tmp/b3.json
-          cat > .chat-v3-reuse.mjs <<'NODE'
-          import fs from "node:fs";
-          import { reelBauen } from "./src/reel.mjs";
-          const reel=JSON.parse(fs.readFileSync("/tmp/b3.json","utf8"));
-          const r=await reelBauen(reel,"/tmp/reuse-v3",{datum:"2026-09-23",layout:"erklaer"});
-          if(Math.abs(r.dauer-87.96)>0.001) throw new Error("duration mismatch");
-          if(!fs.existsSync(r.video)||fs.statSync(r.video).size<100000) throw new Error("video missing");
-          if(!fs.existsSync(r.cover)||fs.statSync(r.cover).size<10000) throw new Error("cover missing");
-          console.log(JSON.stringify({ok:true,dauer:r.dauer,layout:r.layout,anbieter:r.anbieter,videoBytes:fs.statSync(r.video).size,coverBytes:fs.statSync(r.cover).size}));
-          NODE
-          node .chat-v3-reuse.mjs
-          rm .chat-v3-reuse.mjs
+          mkdir -p export/final export/scenes export/qa export/state export/code
+          git show origin/main:src/erklaervideo.mjs > export/code/erklaervideo.mjs
+          git show origin/main:test/bot.test.mjs > export/code/bot.test.mjs
+      - name: Build ZIP payload
+        run: |
+          cp vorschau/2026-09-23/b3-2026-09-23-b3-final-reel-v3.mp4 export/final/
+          cp vorschau/2026-09-23/b3-2026-09-23-b3-final-cover-v3.jpg export/final/
+          cp vorschau/2026-09-23/b3-scenes-final-v1/scene-*.png export/scenes/
+          cp vorschau/2026-09-23/b3-scenes-final-v1/manifest.json export/scenes/
+          cp vorschau/2026-09-23/b3-zoom-qa-v3/frame-*.jpg export/qa/
+          cp vorschau/2026-09-23/b3-zoom-qa-v3/zoom-check-*.jpg export/qa/
+          cp vorschau/2026-09-23/b3-zoom-qa-v3/render.json export/qa/
+          cp state/inhalte/2026-09-23-b3.json export/state/
+          cat > export/README.txt <<'TXT'
+          Herr Jurist · b3 · 2026-09-23 · final v3
+
+          final/
+            Finales Reel v3 (MP4) und finales Cover v3 (JPG)
+
+          scenes/
+            Fünf unterschiedliche, bereits erzeugte Reel-Motive + Manifest
+
+          qa/
+            QA-Frames des v3-Renders
+            zoom-check-45s.jpg und zoom-check-49s.jpg zeigen denselben Szeneninhalt
+            zu zwei Zeitpunkten und machen den subtilen Zoom nachvollziehbar.
+
+          state/
+            Finaler Inhaltsstand aus state/inhalte/2026-09-23-b3.json
+
+          code/
+            Aktueller Reel-Renderer und Regressionstest aus main
+
+          Finaler Stand:
+            7 Szenen
+            5 unterschiedliche Motive
+            Motive vollständig innerhalb der 9:16-Szene
+            leichter kontinuierlicher Zoom nach dem Einflug: 1,0000 -> max. 1,0250
+            Reel-Dauer 87,96 s
+            Layout: Erklärvideo
+            Stimme: Piper
+            manuellGeprueft: true
+            zusätzliche Bild-/LLM-Providerkosten für diesen Rerender: 0 $
+          TXT
+      - uses: actions/upload-artifact@v4
+        with:
+          name: herrjurist-b3-final-v3-zoom-2026-09-23
+          path: export
+          if-no-files-found: error
+          retention-days: 7
