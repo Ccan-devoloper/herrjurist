@@ -202,7 +202,7 @@ const FOLIE_SCHEMA = {
     icon: { type: ["string", "null"] },
     icons: { type: ["array", "null"], items: { type: "string" } },
   },
-  required: ["art", "titel", "untertitel", "text", "punkte", "schritte", "links", "rechts", "formel", "zeilen", "ergebnis", "icon"],
+  required: ["art", "titel", "untertitel", "text", "punkte", "schritte", "links", "rechts", "formel", "zeilen", "ergebnis", "icon", "icons"],
 };
 
 const BEITRAG_SCHEMA = {
@@ -261,7 +261,7 @@ const STORY_SCHEMA = {
           icon: { type: ["string", "null"] },
           bildSzene: { type: ["string", "null"] },
         },
-        required: ["slot", "art", "ueberzeile", "titel", "text", "norm", "formel", "zahl", "optionen", "richtig", "falsch", "richtigText", "icon", "bildSzene"],
+        required: ["slot", "art", "ueberzeile", "titel", "text", "norm", "formel", "zahl", "punkte", "optionen", "richtig", "falsch", "richtigText", "icon", "bildSzene"],
       },
     },
   },
