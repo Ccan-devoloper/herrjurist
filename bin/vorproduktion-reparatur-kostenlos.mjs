@@ -6,9 +6,10 @@ import path from "node:path";
 
 import { Hosting } from "../src/hosting.mjs";
 import { chromium } from "playwright";
-import { storyHtml, coverHtml, folieHtml, MASSE } from "../src/vorlagen.mjs";
+import { storyHtml, coverHtml, MASSE } from "../src/vorlagen.mjs";
 import { stil as stilLaden } from "../src/stile.mjs";
 import { CONFIG } from "../src/config.mjs";
+import { beitragRendern, browserBeenden as renderBrowserBeenden } from "../src/render.mjs";
 
 for (const key of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "ELEVENLABS_API_KEY", "PEXELS_API_KEY"]) {
   if (process.env[key]) throw new Error(`Kostenlose Reparatur verweigert Provider-Secret: ${key}`);
@@ -151,12 +152,6 @@ async function storyRendernLokal(story, ziel) {
 async function coverRendernLokal(daten, ziel) {
   return htmlZuJpegLokal(coverHtml(daten, ctxFuer(daten)), ziel, MASSE.story);
 }
-async function folieRendernLokal(beitrag, index, ziel) {
-  const folie = beitrag.folien?.[index - 1];
-  if (!folie) throw new Error(`${beitrag.slug || "Beitrag"}: Folie ${index} fehlt`);
-  const ctx = ctxFuer(beitrag);
-  return htmlZuJpegLokal(folieHtml(folie, ctx, index, beitrag.folien.length), ziel, MASSE.beitrag);
-}
 function teaserFuer(slot, beitrag, beitragSlot) {
   return {
     slot,
@@ -206,6 +201,9 @@ try {
     for (const [slot, seiten] of Object.entries(eintrag.carouselSlides || {})) {
       const beitrag = structuredClone(tag.inhalte?.[slot]);
       if (!Array.isArray(beitrag?.folien)) throw new Error(`${datum} ${slot}: Karussell fehlt`);
+      const tmpKarussell = path.join(temp, "carousel", datum, slot);
+      fs.mkdirSync(tmpKarussell, { recursive: true });
+      const gerendert = await beitragRendern(beitrag, tmpKarussell, { variante: 0 });
       for (const seite of seiten || []) {
         const index = Number(seite);
         if (!Number.isInteger(index) || index < 1 || index > beitrag.folien.length) {
@@ -213,7 +211,8 @@ try {
         }
         const slug = beitrag.slug || `${datum}-${slot}`;
         const ziel = path.join(hosting.dir, "vorproduktion", datum, "fertig", slot, `${slug}-${String(index).padStart(2, "0")}.jpg`);
-        await folieRendernLokal(beitrag, index, ziel);
+        fs.mkdirSync(path.dirname(ziel), { recursive: true });
+        fs.copyFileSync(gerendert[index - 1], ziel);
         m.carouselSlides.push(path.relative(hosting.dir, ziel));
       }
     }
@@ -309,6 +308,7 @@ try {
   await hosting.push();
 } finally {
   if (browser) await browser.close().catch(() => {});
+  await renderBrowserBeenden().catch(() => {});
   fs.rmSync(temp, { recursive: true, force: true });
 }
 
