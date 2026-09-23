@@ -14,12 +14,25 @@ import os from "node:os";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { CONFIG } from "../src/config.mjs";
+import { journalStarten as journalTestStarten } from "../src/journal.mjs";
 
 const beispiele = JSON.parse(fs.readFileSync(new URL("../beispiele/inhalte.json", import.meta.url), "utf8"));
 
 /* Quelltext ohne Kommentare - fuer Pruefungen, bei denen die REIHENFOLGE
    von Anweisungen zaehlt und eine Erklaerung im Kommentar sie verschoebe. */
 const ohneKommentare = (t) => t.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+
+/* Bezahlte Provider-Tests laufen wie die Produktion mit einem durablen
+   Kostenjournal. Der Speicher hier steht für den Asset-Zweig; jeder
+   Schreibvorgang gilt sofort als bestätigt. */
+function testKostenjournal(datum = "2026-09-19") {
+  let bestand = null;
+  return journalTestStarten({
+    datum, kanal: "herrjurist",
+    lesen: () => bestand,
+    schreiben: async (inhalt) => { bestand = structuredClone(inhalt); return true; },
+  });
+}
 
 test("Themenpool: alle Fächer vertreten, alle drei Gebiete, saubere Titel", () => {
   const pool = themenpool();
@@ -4632,7 +4645,7 @@ test("1a: Jeder Anbieteraufruf geht durch die Admission – auch Fallback und Re
   /* Mit Kontext: Der Worst Case folgt dem Ceiling, nicht der Schätzung. */
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
 
   let gerufen = 0;
   klientSetzen({ messages: { create: async () => { gerufen++; return antwort(2000); } } });
@@ -4658,7 +4671,7 @@ test("1a: Jeder Anbieteraufruf geht durch die Admission – auch Fallback und Re
 
   /* Ein Aufruf, dessen Ceiling nicht mehr in den Resttopf passt, startet nicht. */
   const knapp = budgetStarten({ deckel: { core: 0.05, engagement: 0.25, research: 0.12 } });
-  kontextSetzen({ budget: knapp, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget: knapp, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
   const vorher = gerufen;
   await assert.rejects(() => claudeAufruf({
     zweck: "autor", params: { model: "claude-sonnet-5", max_tokens: 16000, messages: [{ role: "user", content: "x" }] }, slot: "b2",
@@ -4672,7 +4685,7 @@ test("1a: Jeder Anbieteraufruf geht durch die Admission – auch Fallback und Re
 
   /* Ein Fehler NACH dem Senden gibt kein Geld zurück. */
   const nach = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
-  kontextSetzen({ budget: nach, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget: nach, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
   klientSetzen({ messages: { create: async () => { throw new Error("Verbindung abgebrochen"); } } });
   await assert.rejects(() => claudeAufruf({ zweck: "faktencheck", params: { model: "claude-sonnet-5", max_tokens: 4000, messages: [{ role: "user", content: "x" }] } }), /Verbindung/);
   assert.ok(nach.stand().verbraucht.core > 0, "die Reservierung gilt als verbraucht");
@@ -4741,7 +4754,7 @@ test("1a Simulation: ein günstiger Tag bleibt unter 0,32 $ und liefert vollstä
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "sim1-"));
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
 
   /* Gemessene Größenordnung eines guten Tages (14.09.: 0,232 $ Core). */
   const gemessen = { autor: 1800, faktencheck: 900, reel: 2200, "reel-faktencheck": 700, stories: 1900, "story-faktencheck": 500, bildregie: 400 };
@@ -4784,7 +4797,7 @@ test("1a Simulation: der zu teure Pflichtaufruf startet nicht – und wird gemel
   /* Der Tag ist fast voll: 0,30 von 0,32 $ sind verbraucht. */
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.30 } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
 
   let anbieterGerufen = 0;
   klientSetzen({ messages: { create: async () => { anbieterGerufen++; return { usage: { input_tokens: 1000, output_tokens: 500 }, stop_reason: "end_turn", content: [] }; } } });
@@ -4847,7 +4860,7 @@ test("1a Simulation: das optionale Bild wird abgelehnt – das Pflichtstück lä
      Story-Faktencheck zurück. Frei für alles andere: 0,005 $. */
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.29 } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
   budget.pflichtRuecklage("story-faktencheck", "story-faktencheck", 0.025);
   assert.equal(budget.frei("core"), 0.005, "neben der Rücklage bleiben 0,005 $");
 
@@ -4956,7 +4969,7 @@ test("1a+: Ein Aufruf, dessen Input+Output den Resttopf sprengen könnte, starte
   const frei = (echterWorstCase + alterWorstCase) / 2;
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 }, bisher: { core: 0.32 - frei } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
   let gerufen = 0;
   klientSetzen({ messages: { create: async () => { gerufen++; return { usage: { input_tokens: 1, output_tokens: 1 }, content: [] }; } } });
 
@@ -5081,7 +5094,7 @@ test("1a+: Solange bezahlte Pflichtarbeit aussteht, bekommt keine Kür Geld", as
      ordnet. */
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
   budget.optionalSperren("Bezahlte Pflichtarbeit steht aus: 1 Beitrag/Reel, 9 Story-Texte.");
 
   let bildAnfragen = 0;
@@ -5203,7 +5216,7 @@ test("1a+: Eine Invariantenverletzung erscheint mit ihrem echten Betrag", async 
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "invariante-"));
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
 
   /* Der Anbieter meldet mehr Ausgabetoken, als das Ceiling zuließ - der Fall,
      für den die Invariante da ist. */
@@ -5263,7 +5276,7 @@ test("1a+: Gecachte OpenAI-Token werden einmal berechnet, nicht zweimal", async 
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "cache-"));
   const budget = budgetStarten({ deckel: { core: 0.32, engagement: 0.25, research: 0.12 } });
   const telemetrie = telemetrieStarten({ datum: "2026-09-19", kanal: "herrjurist", dir });
-  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum: "2026-09-19" });
+  kontextSetzen({ budget, telemetrie, journal: testKostenjournal(), kanal: "herrjurist", datum: "2026-09-19" });
 
   const fetchFn = async () => ({
     ok: true,
