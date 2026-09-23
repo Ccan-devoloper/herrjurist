@@ -146,7 +146,6 @@ try {
         "--output", freigestellt,
         "--crop-y", "980",
       ];
-      if (Number(reel.klausur) === 2) lokalArgs.push("--aggressive-footer");
       execFileSync("python3", lokalArgs, { stdio: "inherit" });
 
       const puffer = fs.readFileSync(freigestellt);
