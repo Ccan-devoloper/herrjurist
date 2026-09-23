@@ -704,9 +704,16 @@ function titelKlasse(t, zeilen = null) {
 }
 
 function coverHinweisPlan(f = {}) {
-  const p = f.coverHinweisPlan;
   const text = String(f.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
-  if (!text || !p || typeof p !== "object" || Array.isArray(p)) return null;
+  if (!text) return null;
+  const p = f.coverHinweisPlan;
+  /* Review-Cover ohne Motiv behalten trotzdem den redaktionellen Aha-Hinweis.
+     Ohne Bild-QA existiert naturgemaess kein Motiv-Anker; deshalb liegt die
+     Notiz in einer festen, freien unteren Zone. */
+  if (f.coverBildAuslassen === true && (!p || typeof p !== "object" || Array.isArray(p))) {
+    return { text, noteX: 0.12, noteY: 0.72, targetX: 0.5, targetY: 0.76, rotationDeg: -4, bend: 0 };
+  }
+  if (!p || typeof p !== "object" || Array.isArray(p)) return null;
   const zahl = (x, fallback = 0) => Number.isFinite(Number(x)) ? Number(x) : fallback;
   return {
     text,
@@ -744,7 +751,7 @@ const FOLIEN = {
     ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
     ${!bunt && f.pille ? `<div><span class="pille">${esc(f.pille)}</span></div>` : ""}
     ${f.coverBildAuslassen ? "" : (f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f))}
-    ${!f.coverBildAuslassen && bunt && f.bild ? coverHinweisHtml(f) : ""}
+    ${bunt && (f.bild || f.coverBildAuslassen) ? coverHinweisHtml(f) : ""}
     ${!f.coverBildAuslassen && !f.bild && bunt ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
     ${fuss(ctx)}`;
   },
@@ -976,7 +983,7 @@ export function coverHtml(daten, ctx) {
     ${titelBlock(daten.titel, daten.titelZeilen, ctx)}
     ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
     ${daten.coverBildAuslassen ? "" : (daten.bild ? fotoBuehne(daten, BUEHNE_STORY) : `<div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>`)}
-    ${!daten.coverBildAuslassen && bunt && daten.bild ? coverHinweisHtml(daten) : ""}
+    ${bunt && (daten.bild || daten.coverBildAuslassen) ? coverHinweisHtml(daten) : ""}
     ${fuss(ctx)}`;
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>${css(ctx.stil, "story")}${klausurCss(ctx)}${buntCss(ctx)}</style></head>
 <body class="stil-${ctx.stil.id} familie-${ctx.stil.familie || ctx.stil.id}"><div class="story cover">${inhalt}</div></body></html>`;
