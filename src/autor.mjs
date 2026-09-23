@@ -80,8 +80,8 @@ export const FORMATE = {
   },
   wochenrueckblick: {
     label: "Wochenrückblick",
-    anleitung: "Folie 1: „Hast du diese Woche alles mitgenommen?“. Folien 2–3: die Themen der Woche als Kurz-Wiederholung in Punkten (je ein Satz pro Thema, mit Norm). Folie 4: Lernplan-Tipp fürs Wochenende. Letzte Folie: CTA.",
-    folien: ["titel", "text", "text", "merke", "cta"],
+    anleitung: "Folie 1: Wochenrückblick als klare Zusammenfassung. Danach strikt nach Lernfamilien trennen: genau eine eigene Folie Zivilrecht, eine eigene Folie Strafrecht, eine eigene Folie Öffentliches Recht und eine eigene Folie für unabhängige Themen wie Klausurtechnik/Mindset. Niemals Rechtsgebiete auf derselben Rückblickfolie mischen. Jede Fachfolie enthält nur die Themen dieser Familie in knappen Punkten mit Norm, soweit einschlägig. Vorletzte Folie: kurzer Selbsttest/Lernplan für die nächste Wiederholung. Letzte Folie: CTA.",
+    folien: ["titel", "text (Zivilrecht)", "text (Strafrecht)", "text (Öffentliches Recht)", "text (Unabhängig)", "text|merke", "cta"],
   },
   spickzettel: {
     label: "Spickzettel",
@@ -140,6 +140,8 @@ const SYSTEM = `Du bist Redakteur:in ${KANAL} für Menschen, die sich auf das er
 - Der Beitrag muss aus sich heraus verständlich sein: Jede Zahl, jeder Name, jeder Fall, auf den Titel, Rechnung oder Lösung Bezug nehmen, wird vorher auf einer eigenen Folie eingeführt (z. B. Folie „Sachverhalt“). Nie auf etwas verweisen, das nicht auf den Folien steht.
 - Jede Folie außer der CTA hat einen Titel UND Inhalt (Text, Punkte, Schritte, Rechnung). Nie eine leere Folie, nie nur eine Überschrift.
 - Genau eine CTA-Folie, und zwar als letzte. Folie 1 ist die einzige Titelfolie.
+- CTA-Icons/Figuren müssen zum jeweiligen Punkt passen. Verwende bei cta optional das Feld icons parallel zu punkte (z. B. dokument für Titel/Norm, lupe für Prüfung/Klausel, umschlag für Zustellung, hammer für Vollstreckung/Gericht, buch für Wiederholung, personen für Lerngruppe). Keine rein zyklische Deko.
+- Bei Story-art "zahl" muss die große Zahl sofort nachvollziehbar sein: Liefere im Feld punkte GENAU so viele sichtbar getrennte Kurzeinträge wie die Zahl angibt (bei 2–6). Kein bloßer Fließtext, aus dem man die Anzahl erst herauslesen muss.
 
 ## Form
 - Folienarten: titel (Frage/Aufhänger), text (Titel + Text oder Punkte), schritte (nummeriert, je Schritt titel + text), vergleich (links/rechts mit titel + punkte), rechnung (formel, zeilen, ergebnis), karte (dichter Spickzettel: schritte mit kurzem titel + norm im text), merke (ein Satz, der hängen bleibt), cta (Abschluss mit Folgen-Aufforderung).
@@ -198,6 +200,7 @@ const FOLIE_SCHEMA = {
     zeilen: { type: ["array", "null"], items: { type: "string" } },
     ergebnis: { type: ["string", "null"] },
     icon: { type: ["string", "null"] },
+    icons: { type: ["array", "null"], items: { type: "string" } },
   },
   required: ["art", "titel", "untertitel", "text", "punkte", "schritte", "links", "rechts", "formel", "zeilen", "ergebnis", "icon"],
 };
@@ -254,6 +257,7 @@ const STORY_SCHEMA = {
           richtig: { type: ["integer", "null"] },
           falsch: { type: ["string", "null"] },
           richtigText: { type: ["string", "null"] },
+          punkte: { type: ["array", "null"], items: { type: "string" } },
           icon: { type: ["string", "null"] },
           bildSzene: { type: ["string", "null"] },
         },
