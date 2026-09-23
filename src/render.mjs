@@ -4,6 +4,7 @@
    ========================================================================== */
 
 import fs from "node:fs";
+import crypto from "node:crypto";
 import os from "node:os";
 import path from "node:path";
 import { chromium } from "playwright";
@@ -316,6 +317,29 @@ export function carouselBildregeln(beitrag) {
   }
   return beitrag;
 }
+async function freigegebenesBeitragsCoverLaden(beitrag, ziel) {
+  const u = new URL(String(beitrag?.coverFinalUrl || ""));
+  if (u.protocol !== "https:" || u.hostname !== "raw.githubusercontent.com") {
+    throw new Error("Freigegebenes Beitrags-Cover muss von raw.githubusercontent.com stammen.");
+  }
+  const erwartet = String(beitrag?.coverFinalSha256 || "").toLowerCase();
+  if (!/^[a-f0-9]{64}$/.test(erwartet)) {
+    throw new Error("Freigegebenes Beitrags-Cover braucht coverFinalSha256.");
+  }
+  const r = await fetch(u);
+  if (!r.ok) throw new Error(`Freigegebenes Beitrags-Cover nicht ladbar: HTTP ${r.status}`);
+  const daten = Buffer.from(await r.arrayBuffer());
+  const jpeg = daten.length > 10_000 && daten[0] === 0xff && daten[1] === 0xd8;
+  if (!jpeg) throw new Error("Freigegebenes Beitrags-Cover ist keine plausible JPEG-Datei.");
+  const ist = crypto.createHash("sha256").update(daten).digest("hex");
+  if (ist !== erwartet) {
+    throw new Error(`Freigegebenes Beitrags-Cover hat falschen SHA-256: erwartet ${erwartet}, erhalten ${ist}`);
+  }
+  fs.mkdirSync(path.dirname(ziel), { recursive: true });
+  fs.writeFileSync(ziel, daten);
+  return ziel;
+}
+
 /* Rendert alle Folien eines Beitrags → Liste der JPEG-Pfade. */
 export async function beitragRendern(beitrag, zielVerzeichnis, opt = {}) {
   carouselBildregeln(beitrag);
@@ -324,8 +348,12 @@ export async function beitragRendern(beitrag, zielVerzeichnis, opt = {}) {
   const n = beitrag.folien.length;
   for (let i = 0; i < n; i++) {
     const folie = beitrag.folien[i];
-    const html = folieHtml(folie, ctx, i + 1, n);
     const ziel = path.join(zielVerzeichnis, `${beitrag.slug || "beitrag"}-${String(i + 1).padStart(2, "0")}.jpg`);
+    if (i === 0 && beitrag.coverFinalUrl) {
+      pfade.push(await freigegebenesBeitragsCoverLaden(beitrag, ziel));
+      continue;
+    }
+    const html = folieHtml(folie, ctx, i + 1, n);
     pfade.push(await htmlZuJpeg(html, MASSE.beitrag, ziel));
   }
   return pfade;
