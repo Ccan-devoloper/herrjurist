@@ -54,6 +54,39 @@ function ctxFuer(x = {}) {
     klausur: x.klausur ?? 3,
   };
 }
+function storyTitelEinpassenLokal() {
+  const wurzel = document.querySelector(".story:not(.cover)");
+  const titel = wurzel?.querySelector("h1");
+  if (!wurzel || !titel) return;
+
+  const text = String(titel.textContent || "").trim().replace(/\s+/g, " ");
+  if (!text || text.length > 44) return;
+
+  titel.style.width = "max-content";
+  titel.style.maxWidth = "100%";
+  titel.style.textWrap = "wrap";
+
+  const zeilen = () => {
+    const cs = getComputedStyle(titel);
+    const lh = parseFloat(cs.lineHeight);
+    const innen = titel.clientHeight
+      - parseFloat(cs.paddingTop || 0)
+      - parseFloat(cs.paddingBottom || 0);
+    return lh > 0 ? Math.max(1, Math.round(innen / lh)) : 1;
+  };
+
+  let groesse = parseFloat(getComputedStyle(titel).fontSize);
+  const mindest = 62;
+  let n = 0;
+  while (zeilen() > 2 && groesse > mindest + 0.5 && n++ < 18) {
+    groesse = Math.max(mindest, groesse * 0.96);
+    titel.style.fontSize = `${groesse}px`;
+  }
+  if (zeilen() > 2) {
+    throw new Error(`Kurzer Story-Titel braucht trotz Auto-Fit mehr als zwei Zeilen: ${text}`);
+  }
+}
+
 function lokalEinpassen() {
   const wurzel = document.querySelector(".story");
   if (!wurzel) return;
@@ -94,6 +127,7 @@ async function htmlZuJpegLokal(html, ziel) {
   try {
     await page.goto(`file://${tmpHtml}`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(storyTitelEinpassenLokal);
     await page.evaluate(lokalEinpassen);
     await page.evaluate(coverTitelEinpassenLokal);
     fs.mkdirSync(path.dirname(ziel), { recursive: true });
