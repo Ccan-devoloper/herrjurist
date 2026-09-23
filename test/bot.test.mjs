@@ -113,6 +113,28 @@ test("Prüfung meldet zu lange Titel und Quellenbezug", () => {
   assert.ok(r.fehler.some((f) => /Kursquelle/.test(f)));
 });
 
+test("Wochenrückblick benennt Restthemen konkret statt als Unabhängig", () => {
+  const basis = {
+    format: "wochenrueckblick",
+    folien: [
+      { art: "titel", titel: "Wochenrückblick" },
+      { art: "text", titel: "Zivilrecht", punkte: ["§ 280 BGB wiederholen"] },
+      { art: "text", titel: "Strafrecht", punkte: ["§ 32 StGB wiederholen"] },
+      { art: "text", titel: "Öffentliches Recht", punkte: ["§ 113 VwGO wiederholen"] },
+      { art: "text", titel: "Unabhängig", punkte: ["Klausurtechnik: Anspruchsgrundlage zuerst", "Kopfsache: Lernstopp am Abend"] },
+      { art: "text", titel: "Selbsttest", punkte: ["Obersatz ohne Unterlagen?"] },
+      { art: "cta", titel: "Wiederholen", punkte: ["Speichern"] },
+    ],
+  };
+  const generisch = pruefeBeitrag(basis);
+  assert.ok(generisch.fehler.some((x) => /darf nicht generisch/.test(x)));
+
+  const konkret = structuredClone(basis);
+  konkret.folien[4].titel = "Klausurtechnik & Kopfsache";
+  const geprueft = pruefeBeitrag(konkret);
+  assert.ok(!geprueft.fehler.some((x) => /Wochenrückblick-Rest/.test(x)), geprueft.fehler.join(" | "));
+});
+
 test("Tagesplan ist deterministisch, ohne Themen-Dopplung, ohne Countdown", () => {
   const pool = themenpool();
   const a = tagesplan("2026-09-14", ledgerLaden(), pool);
