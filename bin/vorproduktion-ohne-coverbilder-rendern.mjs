@@ -122,7 +122,7 @@ try {
         fs.mkdirSync(ziel, { recursive: true });
         const reel = await reelBauen(beitrag, ziel, {
           datum,
-          layout: "klassisch",
+          layout: "erklaer",
           clip: null,
           framesBehalten: false,
         });
