@@ -17,7 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
-import { manuellFinalisiert, tagesinhaltManuellFinalisiert } from "./finalisierung.mjs";
+import { manuellFinalisiert, manuellesCarouselAssetGate, tagesinhaltManuellFinalisiert } from "./finalisierung.mjs";
 import { istKostenKontrollFehler, budgetStoppGrund } from "./kostenfehler.mjs";
 import { mindsetThema } from "./kalender.mjs";
 import { stickerFarbe } from "./stile.mjs";
@@ -1071,12 +1071,24 @@ async function main() {
       const beitrag = await textBesorgen(eintrag);
       if (!rotationsfolgeErlaubt(beitrag, eintrag)) continue;
       const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
-      /* Produktregel: Karussell = bevorzugt fotorealistisches Cover + Icon;
-         innere Slides bleiben bildfrei. Archiv/Pexels/Bild-KI bilden die
-         automatische Rettungskette. Scheitern alle Bildquellen, gewinnt
-         Availability: das bestehende Icon-Cover wird trotzdem veröffentlicht. */
-      if (!(await titelfolieBebildern(beitrag))) {
-        console.warn(`  ! Beitrag ${eintrag.slot}: kein Charakter-Cover verfügbar – Veröffentlichung mit Icon-Cover.`);
+      /* Für manuell finalisierte Feedposts ist das visuell geprüfte End-Cover
+         Teil der Freigabe. Es muss bereits dauerhaft auf instagram-assets
+         liegen, per URL + SHA-256 an den Inhalt gebunden sein und wird exakt
+         wiederverwendet. Fehlt dieser Vertrag, bleibt der Slot geplant:
+         kein neuer Bildkauf, kein Icon-Fallback, keine Ersatzveröffentlichung.
+         Nur autonome/nicht manuell finalisierte Beiträge behalten die bisherige
+         Availability-Rettungskette. */
+      const assetGate = manuellesCarouselAssetGate(beitrag);
+      if (assetGate.manuell && !assetGate.frei) {
+        eintrag.fehler = `${new Date().toISOString()} Visuelles Publish-Gate: ${assetGate.grund}`;
+        planSpeichern(hosting, plan);
+        log(`  ⛔ Beitrag ${eintrag.slot}: ${assetGate.grund} – bleibt geplant, kein Fallback.`);
+        continue;
+      }
+      if (!assetGate.manuell && !(await titelfolieBebildern(beitrag))) {
+        console.warn(`  ! Beitrag ${eintrag.slot}: kein Charakter-Cover verfügbar – autonome Veröffentlichung mit Icon-Cover.`);
+      } else if (assetGate.manuell) {
+        log(`  ✓ Beitrag ${eintrag.slot}: persistiertes, visuell freigegebenes Cover wird exakt wiederverwendet.`);
       }
       const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
       const urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
