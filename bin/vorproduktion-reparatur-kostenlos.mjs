@@ -5,7 +5,10 @@ import os from "node:os";
 import path from "node:path";
 
 import { Hosting } from "../src/hosting.mjs";
-import { storyRendern, coverRendern, browserBeenden } from "../src/render.mjs";
+import { chromium } from "playwright";
+import { storyHtml, coverHtml, MASSE } from "../src/vorlagen.mjs";
+import { stil as stilLaden } from "../src/stile.mjs";
+import { CONFIG } from "../src/config.mjs";
 
 for (const key of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "ELEVENLABS_API_KEY"]) {
   if (process.env[key]) throw new Error(`Kostenlose Reparatur verweigert Provider-Secret: ${key}`);
@@ -36,6 +39,77 @@ function coverDatenLokal(reel) {
   };
 }
 
+let browser = null;
+async function browserStarten() {
+  if (!browser) browser = await chromium.launch({ args: ["--font-render-hinting=none"] });
+  return browser;
+}
+function ctxFuer(x = {}) {
+  return {
+    stil: stilLaden("bunt"),
+    farbeJeKlausur: CONFIG.marke.farbeJeKlausur,
+    handle: CONFIG.marke.handle,
+    fach: x.fach || null,
+    fachLabel: x.fachLabel || "Examenswissen",
+    klausur: x.klausur ?? 3,
+  };
+}
+function lokalEinpassen() {
+  const wurzel = document.querySelector(".story");
+  if (!wurzel) return;
+  const px = (el) => parseFloat(getComputedStyle(el).fontSize);
+  const setze = (el, f) => { el.style.fontSize = `${Math.max(el.tagName === "H1" ? 64 : 28, px(el) * f)}px`; };
+  const innenRechts = wurzel.getBoundingClientRect().right - parseFloat(getComputedStyle(wurzel).paddingRight || 0);
+  const elemente = [...wurzel.querySelectorAll("h1,h2,h3,.text,.norm,.karte,.karte .t,.karte .u,.ueberzeile")];
+  for (const el of elemente) {
+    let n = 0;
+    while ((el.scrollWidth > el.clientWidth + 1 || el.getBoundingClientRect().right > innenRechts + 1) && n++ < 16) setze(el, 0.94);
+  }
+}
+function coverTitelEinpassenLokal() {
+  const wurzel = document.querySelector(".story.cover");
+  const titel = wurzel?.querySelector("h1.titel-stack");
+  if (!wurzel || !titel) return;
+  const root = wurzel.getBoundingClientRect();
+  const cs = getComputedStyle(wurzel);
+  const rechts = root.right - Math.max(24, parseFloat(cs.paddingRight || 0));
+  const links = root.left + Math.max(24, parseFloat(cs.paddingLeft || 0));
+  const passt = () => [...titel.querySelectorAll(".titel-zeile")].every((z) => {
+    const b = z.getBoundingClientRect();
+    return z.scrollWidth <= z.clientWidth + 1 && b.left >= links - 1 && b.right <= rechts + 1;
+  });
+  let groesse = parseFloat(getComputedStyle(titel).fontSize);
+  let n = 0;
+  while (!passt() && groesse > 84.5 && n++ < 16) {
+    groesse = Math.max(84, groesse * 0.94);
+    titel.style.fontSize = `${groesse}px`;
+  }
+  if (!passt()) throw new Error("Reel-Cover-Titel passt auch nach lokalem Auto-Fit nicht.");
+}
+async function htmlZuJpegLokal(html, ziel) {
+  const b = await browserStarten();
+  const page = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  const tmpHtml = path.join(temp, `seite-${Math.random().toString(36).slice(2)}.html`);
+  fs.writeFileSync(tmpHtml, html);
+  try {
+    await page.goto(`file://${tmpHtml}`, { waitUntil: "load" });
+    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(lokalEinpassen);
+    await page.evaluate(coverTitelEinpassenLokal);
+    fs.mkdirSync(path.dirname(ziel), { recursive: true });
+    await page.screenshot({ path: ziel, type: "jpeg", quality: 92, fullPage: false });
+  } finally {
+    await page.close();
+    fs.rmSync(tmpHtml, { force: true });
+  }
+}
+async function storyRendernLokal(story, ziel) {
+  return htmlZuJpegLokal(storyHtml(story, ctxFuer(story)), ziel);
+}
+async function coverRendernLokal(daten, ziel) {
+  return htmlZuJpegLokal(coverHtml(daten, ctxFuer(daten)), ziel);
+}
+
 const manifest = {
   stand: new Date().toISOString(),
   modus: "lokal-ohne-provider",
@@ -54,7 +128,7 @@ try {
       const story = structuredClone(tag.inhalte?.[slot]);
       if (!story) throw new Error(`${datum} ${slot}: Story fehlt`);
       const ziel = path.join(hosting.dir, "vorproduktion", datum, "fertig", "stories", `${slot}-${story.art}.jpg`);
-      await storyRendern(story, ziel, { variante: 0 });
+      await storyRendernLokal(story, ziel);
       m.stories.push(path.relative(hosting.dir, ziel));
     }
 
@@ -82,7 +156,7 @@ try {
       daten.bildHoehe = 1020;
       daten.coverHinweisPlan = null;
 
-      await coverRendern(daten, alt, { variante: 0 });
+      await coverRendernLokal(daten, alt);
       m.reelCovers.push(path.relative(hosting.dir, alt));
     }
 
@@ -108,7 +182,7 @@ try {
   hosting.commit("Repariere Vorproduktions-Render lokal ohne Provider");
   await hosting.push();
 } finally {
-  await browserBeenden().catch(() => {});
+  if (browser) await browser.close().catch(() => {});
   fs.rmSync(temp, { recursive: true, force: true });
 }
 
