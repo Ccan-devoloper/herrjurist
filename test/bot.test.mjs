@@ -1752,6 +1752,9 @@ test("Erklärvideo: Stichworte, Zeitpunkte und Bühne", async () => {
   assert.match(html, /\[data-seite="rechts"\] \.figur\{right:70px\}/);
   assert.match(html, /\[data-seite="links"\]\s+\.figur\{left:70px\}/);
   assert.match(html, /\.figur img\{[^}]*width:100%[^}]*height:100%[^}]*object-fit:contain/);
+  assert.ok(html.includes("transform-origin:center bottom"), "Motiv-Zoom braucht einen stabilen unteren Anker");
+  assert.ok(html.includes("1 + 0.025 * z"), "leichter 2,5%-Szenen-Zoom fehlt");
+  assert.ok(html.includes("zoomVon = s.figur + 0.55"), "Zoom darf erst nach dem Einflug beginnen");
   assert.ok(!html.includes("bottom:-150px"));
   assert.ok(!html.includes("right:-60px"));
   assert.ok(!html.includes("left:-60px"));
