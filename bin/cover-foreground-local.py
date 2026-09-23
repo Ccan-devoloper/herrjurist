@@ -13,8 +13,6 @@ def rgb(hexwert):
 ap = argparse.ArgumentParser()
 ap.add_argument("--input", required=True)
 ap.add_argument("--output", required=True)
-ap.add_argument("--background", required=True)
-ap.add_argument("--dark", required=True)
 ap.add_argument("--crop-y", type=int, default=900)
 args = ap.parse_args()
 
@@ -23,8 +21,12 @@ h, w = img.shape[:2]
 y0 = max(0, min(h - 1, args.crop_y))
 crop = img[y0:h].copy()
 
-bg = rgb(args.background)
-dark = rgb(args.dark)
+# Farben direkt aus dem bestehenden Cover ableiten:
+# oben links liegt das dunkle Fachband, im freien Mittelbereich die Grundfarbe.
+bg_probe = img[min(h - 1, 900):min(h, 1100), 0:min(w, 120)]
+bg = np.median(bg_probe.reshape(-1, 3), axis=0).astype(np.float32)
+dark_probe = img[8:min(h, 50), 8:min(w, 150)]
+dark = np.median(dark_probe.reshape(-1, 3), axis=0).astype(np.float32)
 
 # Alte Fusszeile lokal entfernen. Es werden nur kleine, texttypische dunkle
 # Komponenten im bekannten Fussbereich maskiert; grosse Figuren-/Portalformen
