@@ -1,4 +1,4 @@
-name: Chat finalize 2026-09-23 · free b3 cover reuse v3
+name: Chat finalize 2026-09-23 · free b3 cover reuse v4
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
@@ -37,6 +37,8 @@ jobs:
           out=Image.new("RGB",(W,H),bg)
           out.paste(src.crop((0,800,W,H)),(0,800))
           d=ImageDraw.Draw(out)
+          # Remove the last baked-in fragment from the old cover before the scene begins.
+          d.rectangle((0,800,420,1000), fill=bg)
 
           inter=ImageFont.truetype("fonts/Inter.ttf", 26)
           title_font=ImageFont.truetype("fonts/Inter.ttf", 92)
@@ -74,16 +76,16 @@ jobs:
           nw=nb[2]-nb[0]
           d.multiline_text((510-nw/2,635),note,font=caveat,fill=dark,spacing=-4,align="center")
 
-          out.save("/tmp/2026-09-23-b3-cover-final-free-v3.jpg",quality=94,subsampling=0)
+          out.save("/tmp/2026-09-23-b3-cover-final-free-v4.jpg",quality=94,subsampling=0)
           PY
       - name: Store corrected cover preview in asset branch
         run: |
           git worktree add -B chat-assets /tmp/assets origin/instagram-assets
           mkdir -p /tmp/assets/vorschau/2026-09-23
-          cp /tmp/2026-09-23-b3-cover-final-free-v3.jpg /tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free-v3.jpg
+          cp /tmp/2026-09-23-b3-cover-final-free-v4.jpg /tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free-v4.jpg
           cd /tmp/assets
           git config user.name instagram-bot
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free-v3.jpg
-          git commit -m "Vorschau b3 final kostenlos v3 2026-09-23"
+          git add vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free-v4.jpg
+          git commit -m "Vorschau b3 final kostenlos v4 2026-09-23"
           git push origin HEAD:instagram-assets
