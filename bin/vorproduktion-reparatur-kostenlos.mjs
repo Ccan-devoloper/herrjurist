@@ -6,11 +6,11 @@ import path from "node:path";
 
 import { Hosting } from "../src/hosting.mjs";
 import { chromium } from "playwright";
-import { storyHtml, coverHtml, MASSE } from "../src/vorlagen.mjs";
+import { storyHtml, coverHtml, folieHtml, MASSE } from "../src/vorlagen.mjs";
 import { stil as stilLaden } from "../src/stile.mjs";
 import { CONFIG } from "../src/config.mjs";
 
-for (const key of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "ELEVENLABS_API_KEY"]) {
+for (const key of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "ELEVENLABS_API_KEY", "PEXELS_API_KEY"]) {
   if (process.env[key]) throw new Error(`Kostenlose Reparatur verweigert Provider-Secret: ${key}`);
 }
 
@@ -127,9 +127,9 @@ function coverTitelEinpassenLokal() {
   }
   if (!passt()) throw new Error("Reel-Cover-Titel passt auch nach lokalem Auto-Fit nicht.");
 }
-async function htmlZuJpegLokal(html, ziel) {
+async function htmlZuJpegLokal(html, ziel, masse = MASSE.story) {
   const b = await browserStarten();
-  const page = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  const page = await b.newPage({ viewport: { width: masse.breite, height: masse.hoehe } });
   const tmpHtml = path.join(temp, `seite-${Math.random().toString(36).slice(2)}.html`);
   fs.writeFileSync(tmpHtml, html);
   try {
@@ -146,10 +146,35 @@ async function htmlZuJpegLokal(html, ziel) {
   }
 }
 async function storyRendernLokal(story, ziel) {
-  return htmlZuJpegLokal(storyHtml(story, ctxFuer(story)), ziel);
+  return htmlZuJpegLokal(storyHtml(story, ctxFuer(story)), ziel, MASSE.story);
 }
 async function coverRendernLokal(daten, ziel) {
-  return htmlZuJpegLokal(coverHtml(daten, ctxFuer(daten)), ziel);
+  return htmlZuJpegLokal(coverHtml(daten, ctxFuer(daten)), ziel, MASSE.story);
+}
+async function folieRendernLokal(beitrag, index, ziel) {
+  const folie = beitrag.folien?.[index - 1];
+  if (!folie) throw new Error(`${beitrag.slug || "Beitrag"}: Folie ${index} fehlt`);
+  const ctx = ctxFuer(beitrag);
+  return htmlZuJpegLokal(folieHtml(folie, ctx, index, beitrag.folien.length), ziel, MASSE.beitrag);
+}
+function teaserFuer(slot, beitrag, beitragSlot) {
+  return {
+    slot,
+    art: "teaser",
+    fach: beitrag.fach,
+    klausur: beitrag.klausur,
+    fachLabel: beitrag.fachLabel || "Examenswissen",
+    titel: beitrag.kurztitel || beitrag.folien?.[0]?.titel || beitrag.szenen?.[0]?.titel || "Neuer Beitrag",
+    text: "Der vollständige Beitrag ist jetzt im Feed.",
+    pille: "Jetzt im Feed",
+    beitragSlot,
+    abgeleitet: true,
+    freigabeBetreiber: false,
+    vorproduktionStatus: "review",
+    textProviderKostenUsd: 0,
+    faktencheckProviderKostenUsd: 0,
+    bildStatus: "bereits-vorhandenes-feed-asset-keine-neugenerierung",
+  };
 }
 
 const manifest = {
@@ -164,7 +189,34 @@ try {
   for (const [datum, eintrag] of Object.entries(spec.tage || {})) {
     const tagPfad = path.join(hosting.dir, "vorproduktion", `${datum}.json`);
     const tag = JSON.parse(fs.readFileSync(tagPfad, "utf8"));
-    const m = { stories: [], reelCovers: [] };
+    const m = { stories: [], teasers: [], carouselSlides: [], reelCovers: [] };
+
+    for (const slot of eintrag.teasers || []) {
+      const plan = (tag.plan?.stories || []).find((x) => x.slot === slot);
+      if (!plan?.beitragSlot) throw new Error(`${datum} ${slot}: Teaser-Plan oder beitragSlot fehlt`);
+      const beitrag = tag.inhalte?.[plan.beitragSlot];
+      if (!beitrag) throw new Error(`${datum} ${slot}: Feed-Bezug ${plan.beitragSlot} fehlt`);
+      const story = teaserFuer(slot, beitrag, plan.beitragSlot);
+      tag.inhalte[slot] = story;
+      const ziel = path.join(hosting.dir, "vorproduktion", datum, "fertig", "stories", `${slot}-teaser.jpg`);
+      await storyRendernLokal(story, ziel);
+      m.teasers.push(path.relative(hosting.dir, ziel));
+    }
+
+    for (const [slot, seiten] of Object.entries(eintrag.carouselSlides || {})) {
+      const beitrag = structuredClone(tag.inhalte?.[slot]);
+      if (!Array.isArray(beitrag?.folien)) throw new Error(`${datum} ${slot}: Karussell fehlt`);
+      for (const seite of seiten || []) {
+        const index = Number(seite);
+        if (!Number.isInteger(index) || index < 1 || index > beitrag.folien.length) {
+          throw new Error(`${datum} ${slot}: ungueltige Foliennummer ${seite}`);
+        }
+        const slug = beitrag.slug || `${datum}-${slot}`;
+        const ziel = path.join(hosting.dir, "vorproduktion", datum, "fertig", slot, `${slug}-${String(index).padStart(2, "0")}.jpg`);
+        await folieRendernLokal(beitrag, index, ziel);
+        m.carouselSlides.push(path.relative(hosting.dir, ziel));
+      }
+    }
 
     for (const slot of eintrag.stories || []) {
       const story = structuredClone(tag.inhalte?.[slot]);
@@ -237,6 +289,8 @@ try {
       letzteKostenloseReparatur: {
         stand: new Date().toISOString(),
         stories: eintrag.stories || [],
+        teasers: eintrag.teasers || [],
+        carouselSlides: eintrag.carouselSlides || {},
         reelCovers: eintrag.reelCovers || [],
         providerKostenUsd: 0,
         bildgenerierungKostenUsd: 0,
