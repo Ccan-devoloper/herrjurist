@@ -50,6 +50,27 @@ jobs:
           delete reel.reelFinalDauer;
           delete reel.reelFinalLayout;
           delete reel.reelFinalStimmeAnbieter;
+
+          // Persisted final-state scene assets are raw GitHub URLs. The renderer
+          // intentionally embeds local files/data URLs, so materialize those
+          // already-paid assets locally before rendering. No provider calls.
+          const motiveDir="/tmp/b3-v2-motive";
+          fs.mkdirSync(motiveDir,{recursive:true});
+          const materialize=async (value,name)=>{
+            if(!/^https:\/\//.test(String(value||""))) return value;
+            const u=new URL(value);
+            if(u.protocol!=="https:" || u.hostname!=="raw.githubusercontent.com") throw new Error("unexpected motive host");
+            const r=await fetch(u);
+            if(!r.ok) throw new Error(`motive download HTTP ${r.status}`);
+            const ext=/\.jpe?g(?:\?|$)/i.test(u.pathname)?".jpg":".png";
+            const p=path.join(motiveDir,name+ext);
+            fs.writeFileSync(p,Buffer.from(await r.arrayBuffer()));
+            return p;
+          };
+          for(let i=0;i<(reel.szenen||[]).length;i++){
+            reel.szenen[i].bild=await materialize(reel.szenen[i].bild,`scene-${i}`);
+            reel.szenen[i].medaillon=await materialize(reel.szenen[i].medaillon,`med-${i}`);
+          }
           const out="/tmp/b3-v2";
           fs.mkdirSync(out,{recursive:true});
           const r=await reelBauen(reel,out,{
