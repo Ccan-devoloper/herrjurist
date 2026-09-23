@@ -45,3 +45,16 @@ jobs:
 
       - name: Providerfreie Reparatur aus bestehenden Assets
         run: node bin/vorproduktion-reparatur-kostenlos.mjs vorproduktion/reparatur.trigger
+
+      - name: Reparierte Dateien zur Sichtpruefung sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vorproduktion-repariert-${{ github.run_id }}
+          path: |
+            .instagram-assets/vorproduktion/2026-09-24/fertig/b3/2026-09-24-b3-cover.jpg
+            .instagram-assets/vorproduktion/2026-09-24/fertig/stories/s6-norm.jpg
+            .instagram-assets/vorproduktion/2026-09-25/fertig/b3/2026-09-25-b3-cover.jpg
+            .instagram-assets/vorproduktion/2026-09-25/fertig/stories/s9-fehler.jpg
+          if-no-files-found: error
+          retention-days: 7
