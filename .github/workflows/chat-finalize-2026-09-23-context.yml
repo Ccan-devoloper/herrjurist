@@ -1,4 +1,4 @@
-name: Chat finalize 2026-09-23 · b3 reel motives
+name: Chat finalize 2026-09-23 · b3 stable QA frames
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
@@ -6,164 +6,30 @@ on:
 permissions:
   contents: write
 jobs:
-  render:
+  qa:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Chromium
+      - name: Extract stable frames from already-rendered reel
         run: |
-          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list || true
-          npx playwright install --with-deps chromium || npx playwright install chromium
-      - name: Image and voice dependencies
-        run: |
-          pip install --quiet "rembg[cli]" onnxruntime piper-tts
           sudo apt-get update -qq >/dev/null
           sudo apt-get install -y -qq ffmpeg >/dev/null
-          if [ ! -f ~/.cache/piper-voices/de_DE-thorsten-high.onnx ]; then
-            mkdir -p ~/.cache/piper-voices
-            python3 -m piper.download_voices --data-dir ~/.cache/piper-voices de_DE-thorsten-high
-          fi
-      - name: Generate four new motives, reuse the paid cover scene as fifth, render full reel
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
-          IG_BILD_KI: "true"
-          IG_BILDER: "true"
-          IG_BILDER_FREISTELLEN: "true"
-          IG_CHARAKTERE: "true"
-          IG_CHARAKTER_QA: "true"
-          IG_STIMME: "piper"
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
           git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
           git worktree add -B chat-assets /tmp/assets origin/instagram-assets
-          cat > .chat-b3-reel-finalize.mjs <<'NODE'
-          import fs from "node:fs";
-          import path from "node:path";
-          import { execFileSync } from "node:child_process";
-          import { charakterMotivZeichnen } from "./src/charakterbild.mjs";
-          import { budgetStarten } from "./src/budget.mjs";
-          import { telemetrieStarten } from "./src/telemetrie.mjs";
-          import { kontextSetzen } from "./src/anbieter.mjs";
-          import { motiveVerteilen } from "./src/erklaervideo.mjs";
-          import { reelBauen } from "./src/reel.mjs";
-          import { browserBeenden } from "./src/render.mjs";
-
-          const datum="2026-09-23";
-          const assets="/tmp/assets";
-          const inhaltPfad=path.join(assets,"state/inhalte/2026-09-23-b3.json");
-          const reel=JSON.parse(fs.readFileSync(inhaltPfad,"utf8"));
-          const outDir="/tmp/b3-final";
-          const sceneDir=path.join(assets,"vorschau/2026-09-23/b3-scenes-final-v1");
-          const qaDir=path.join(assets,"vorschau/2026-09-23/b3-qa-final-v1");
-          fs.mkdirSync(sceneDir,{recursive:true});
-          fs.mkdirSync(qaDir,{recursive:true});
-          fs.mkdirSync(outDir,{recursive:true});
-
-          const telemetry=telemetrieStarten({datum,kanal:"herrjurist",dir:"/tmp/b3-telemetry",breakGlass:true});
-          const budget=budgetStarten({
-            deckel:{core:1.20,engagement:0,research:0},
-            breakGlass:true,
-            protokoll:()=>{}
-          });
-          kontextSetzen({budget,telemetrie:telemetry,kanal:"herrjurist",datum});
-
-          const generated=[0,1,2,4];
-          const manifest={datum,slot:"b3",uniqueMotives:5,newProviderMotives:4,reusedProviderMotives:1,reuse:{5:2,6:0},scenes:[]};
-
-          for (const idx of generated) {
-            const scene=reel.szenen[idx];
-            const mot=await charakterMotivZeichnen(scene,{
-              randFarbe:null,
-              zweck:"erklaerbild",
-              slot:`2026-09-23-b3-s${idx}`,
-              debugDir:path.join("/tmp/b3-debug",String(idx))
-            });
-            if(!mot) throw new Error(`Szene ${idx}: Charaktermotiv nicht freigegeben`);
-            const src=mot.ohneRand || mot.pfad;
-            const dest=path.join(sceneDir,`scene-${String(idx).padStart(2,"0")}.png`);
-            fs.copyFileSync(src,dest);
-            scene.bild=dest;
-            scene.bildTyp="charakter";
-            scene.bildCharaktere=mot.charaktere || [];
-            scene.bildKostenUsd=mot.kostenUsd ?? null;
-            manifest.scenes.push({index:idx,title:scene.titel,file:path.basename(dest),characters:mot.charaktere||[],imageCostUsd:mot.kostenUsd??null,source:"new"});
-            for(const p of new Set([mot.pfad,mot.ohneRand].filter(Boolean))) fs.rmSync(p,{force:true});
-          }
-
-          // Fifth unique motif: reuse the already-paid Mara/Zylla cover scene, locally isolate it.
-          const cover=path.join(assets,"vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free-v4.jpg");
-          if(!fs.existsSync(cover)) throw new Error("Freigegebenes b3-Cover fehlt");
-          const crop="/tmp/b3-cover-scene-crop.png";
-          execFileSync("ffmpeg",["-y","-hide_banner","-loglevel","error","-i",cover,"-vf","crop=1080:1120:0:800",crop]);
-          const reused=path.join(sceneDir,"scene-03.png");
-          execFileSync("rembg",["i",crop,reused],{stdio:["ignore","pipe","pipe"]});
-          reel.szenen[3].bild=reused;
-          reel.szenen[3].bildTyp="charakter-reuse";
-          reel.szenen[3].bildCharaktere=["Mara Sternpfad","Zylla Glitch"];
-          reel.szenen[3].bildKostenUsd=0;
-          manifest.scenes.push({index:3,title:reel.szenen[3].titel,file:path.basename(reused),characters:["Mara Sternpfad","Zylla Glitch"],imageCostUsd:0,source:"reused-cover"});
-
-          // Seven scenes, five unique motifs: deliberate editorial reuse for recap/conclusion.
-          reel.szenen[5].bild=reel.szenen[2].bild;
-          reel.szenen[5].bildTyp="charakter-reuse";
-          reel.szenen[5].bildCharaktere=reel.szenen[2].bildCharaktere;
-          reel.szenen[6].bild=reel.szenen[0].bild;
-          reel.szenen[6].bildTyp="charakter-reuse";
-          reel.szenen[6].bildCharaktere=reel.szenen[0].bildCharaktere;
-          motiveVerteilen(reel.szenen);
-
-          const built=await reelBauen(reel,outDir,{datum,layout:"erklaer",framesBehalten:true});
-          const videoDest=path.join(assets,"vorschau/2026-09-23/b3-2026-09-23-b3-final-reel-v1.mp4");
-          const coverDest=path.join(assets,"vorschau/2026-09-23/b3-2026-09-23-b3-final-cover-v1.jpg");
-          fs.copyFileSync(built.video,videoDest);
-          fs.copyFileSync(built.cover,coverDest);
-
-          // Seven actual video frames, spread across the complete reel for visual QA.
-          const fps=30;
-          for(let i=0;i<7;i++){
-            const t=built.dauer*((i+0.5)/7);
-            const frame=Math.max(0,Math.min(Math.floor(built.dauer*fps)-1,Math.round(t*fps)));
-            const src=path.join(outDir,"frames",`f${String(frame).padStart(5,"0")}.jpg`);
-            const dest=path.join(qaDir,`qa-${String(i+1).padStart(2,"0")}.jpg`);
-            if(fs.existsSync(src)) fs.copyFileSync(src,dest);
-          }
-
-          const rows=telemetry.zeilen();
-          const byPurpose={};
-          let actual=0;
-          for(const row of rows){
-            const usd=Number(row.actualUsd ?? row.usd ?? 0)||0;
-            actual+=usd;
-            const k=row.purpose||"unknown";
-            byPurpose[k]=Number(((byPurpose[k]||0)+usd).toFixed(6));
-          }
-          manifest.costs={actualUsd:Number(actual.toFixed(6)),byPurpose,providerCalls:rows.length};
-          manifest.video={file:path.basename(videoDest),duration:built.dauer,voice:built.anbieter,layout:built.layout};
-          manifest.reuse[5]=2;
-          manifest.reuse[6]=0;
-          fs.writeFileSync(path.join(assets,"vorschau/2026-09-23/b3-scenes-final-v1/manifest.json"),JSON.stringify(manifest,null,2)+"\n");
-          fs.writeFileSync(path.join(assets,"vorschau/2026-09-23/b3-scenes-final-v1/telemetry.ndjson"),rows.map(x=>JSON.stringify(x)).join("\n")+"\n");
-          await browserBeenden();
-          console.log("B3_FINAL_MANIFEST "+JSON.stringify(manifest));
-          NODE
-          node .chat-b3-reel-finalize.mjs
-          rm .chat-b3-reel-finalize.mjs
-      - name: Commit generated motives, QA frames and final reel preview
-        run: |
+          video=/tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-final-reel-v1.mp4
+          out=/tmp/assets/vorschau/2026-09-23/b3-stable-qa-v1
+          mkdir -p "$out"
+          for t in 58 62 66 70 74 78; do
+            ffmpeg -y -hide_banner -loglevel error -ss "$t" -i "$video" -frames:v 1 -q:v 2 "$out/frame-${t}s.jpg"
+          done
           cd /tmp/assets
           git config user.name instagram-bot
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add vorschau/2026-09-23/b3-scenes-final-v1                   vorschau/2026-09-23/b3-qa-final-v1                   vorschau/2026-09-23/b3-2026-09-23-b3-final-reel-v1.mp4                   vorschau/2026-09-23/b3-2026-09-23-b3-final-cover-v1.jpg
-          git commit -m "Erzeuge und rendere finale b3-Reelmotive 2026-09-23"
+          git add vorschau/2026-09-23/b3-stable-qa-v1
+          git commit -m "Extrahiere stabile QA-Frames fuer b3-Reel"
           git pull --rebase origin instagram-assets
           git push origin HEAD:instagram-assets
