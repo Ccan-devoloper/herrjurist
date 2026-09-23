@@ -433,10 +433,9 @@ em{color:${p.akzent2}}
 .story.cover h1.titel-stack.winzig{font-size:101px}
 .story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;background:${p.dunkel};color:#fff;padding:14px 34px 16px;border-radius:38px;white-space:nowrap}
 .story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
-/* Handschrift mit Pfeil, genau wie auf der Titelfolie. */
-.story.cover .dauer{font-family:"Caveat";font-size:56px;font-weight:700;color:${p.dunkel};opacity:1;white-space:nowrap;
-  margin-top:44px;margin-left:300px;padding-left:170px;position:relative;transform:rotate(-4deg);width:fit-content}
-.story.cover .dauer::before{content:"";position:absolute;left:0;top:-30px;width:150px;height:110px;background:${pfeil} no-repeat center/contain}
+/* Cover-v2 no-arrow: keine automatisch erzeugte Dauer-Handschrift. */
+.story.cover .dauer{display:none}
+.story.cover .dauer::before{display:none}
 .story.cover .buehne::before{background:rgba(255,255,255,.75);opacity:1}
 .story.cover .buehne .icon{color:${p.dunkel}}
 /* Reels */
@@ -932,13 +931,15 @@ export function storyHtml(story, ctx) {
  * @param {{titel, ueberzeile?, dauerText?, icon?}} daten
  */
 export function coverHtml(daten, ctx) {
+  const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
+  const badge = String(daten.coverBadge || "").trim();
   const inhalt = `
     ${kopf(ctx, "")}
     <span class="reelmarke">Reel</span>
     ${titelBlock(daten.titel, daten.titelZeilen, ctx)}
-    <div class="unter">${esc(daten.ueberzeile || "Reel")}</div>
-    ${daten.dauerText ? `<div class="dauer">${esc(daten.dauerText)}</div>` : ""}
+    ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
     ${daten.bild ? fotoBuehne(daten, BUEHNE_STORY) : `<div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>`}
+    ${bunt && daten.bild ? coverHinweisHtml(daten) : ""}
     ${fuss(ctx)}`;
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>${css(ctx.stil, "story")}${klausurCss(ctx)}${buntCss(ctx)}</style></head>
 <body class="stil-${ctx.stil.id} familie-${ctx.stil.familie || ctx.stil.id}"><div class="story cover">${inhalt}</div></body></html>`;
