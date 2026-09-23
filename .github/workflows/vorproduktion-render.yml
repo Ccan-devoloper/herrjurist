@@ -20,6 +20,7 @@ jobs:
     timeout-minutes: 60
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
       GITHUB_TOKEN: ${{ github.token }}
       IG_STIL: "bunt"
       IG_BILDER: "true"
