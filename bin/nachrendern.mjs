@@ -29,12 +29,46 @@ import { stimmeStandVerbinden } from "../src/stimme.mjs";
 import { ledgerLaden } from "../src/planer.mjs";
 import { heuteIso } from "../src/zeit.mjs";
 import { CONFIG } from "../src/config.mjs";
+import { budgetStarten } from "../src/budget.mjs";
+import { telemetrieStarten } from "../src/telemetrie.mjs";
+import { kontextSetzen } from "../src/anbieter.mjs";
 
 const datum = process.argv[2] || heuteIso();
 const ziel = process.argv[3] || path.resolve("out", `nach-${datum}`);
 
 const ablegen = process.env.IG_ABLEGEN === "1";
+
+/* Ein Nachrender-Lauf darf Charakterbilder nur mit explizitem Preview-Budget
+   erzeugen. Ohne IG_PREVIEW_BUDGET_USD bleibt das alte fail-closed-Verhalten. */
+const previewBudgetUsd = Number(process.env.IG_PREVIEW_BUDGET_USD || 0);
+if (previewBudgetUsd > 0) {
+  const telemetrie = telemetrieStarten({
+    datum, kanal: "herrjurist", dir: path.resolve("out", `nach-${datum}`, "telemetrie"),
+    breakGlass: true,
+  });
+  const budget = budgetStarten({
+    deckel: { core: previewBudgetUsd, engagement: 0, research: 0 },
+    breakGlass: true,
+  });
+  kontextSetzen({ budget, telemetrie, kanal: "herrjurist", datum });
+  console.log(`Preview-Budgetkontext: ${previewBudgetUsd.toFixed(2)} $ Core`);
+}
+
 const hosting = new Hosting({ pushen: ablegen }).vorbereiten();
+
+const motivUebernehmen = (ziel, treffer) => {
+  if (!ziel || !treffer) return;
+  ziel.bild = treffer.bild;
+  ziel.bildQuelle = treffer.quelle;
+  ziel.bildFrei = treffer.frei !== false;
+  ziel.bildBreite = treffer.breite || null;
+  ziel.bildHoehe = treffer.hoehe || null;
+  ziel.bildTyp = treffer.typ || null;
+  ziel.bildCharaktere = treffer.charaktere || null;
+  ziel.coverHinweisPlan = treffer.coverHinweisPlan || null;
+  ziel.bildPrompt = treffer.prompt || null;
+  ziel.bildKostenUsd = treffer.kostenUsd ?? null;
+};
 /* Ohne Stimmenauswahl faellt das Nachrendern auf die Offline-Stimme zurueck -
    und klingt dann anders als das veroeffentlichte Reel. Fuer einen Vergleich
    ist das wertlos, also waehlt es dieselbe Stimme wie der Tageslauf. */
@@ -60,8 +94,8 @@ for (const datei of dateien) {
     if (inhalt.folien) {
       const titelfolie = inhalt.folien.find((f) => f.art === "titel");
       if (titelfolie) {
-        const treffer = await titelbild(inhalt, null, { randFarbe: stickerFarbe(inhalt.klausur, CONFIG.marke.stil), archivDir: path.join(hosting.stateDir, "motive"), datum });
-        if (treffer) { titelfolie.bild = treffer.bild; titelfolie.bildQuelle = treffer.quelle; titelfolie.bildFrei = treffer.frei !== false; }
+        const treffer = await titelbild(inhalt, null, { randFarbe: stickerFarbe(inhalt.klausur, CONFIG.marke.stil), archivDir: path.join(hosting.stateDir, "motive"), datum, slot });
+        if (treffer) motivUebernehmen(titelfolie, treffer);
       }
       const pfade = await beitragRendern(inhalt, path.join(ziel, slot), { variante: 0 });
       n += pfade.length;
@@ -71,9 +105,14 @@ for (const datei of dateien) {
       n++;
       console.log(`  ${slot}: Story ${inhalt.art}`);
     } else if (inhalt.szenen) {
-      /* Das Reel kostet auch hier keinen Claude-Aufruf – der Text steht ja
-         schon. Die Stimme wird allerdings neu gesprochen; das geht auf das
-         Kontingent von ElevenLabs (oder auf Piper, wenn es erschöpft ist). */
+      /* Reel-Cover wie ein normales Feed-Cover bebildern. */
+      const treffer = await titelbild(inhalt, null, {
+        randFarbe: stickerFarbe(inhalt.klausur, CONFIG.marke.stil),
+        archivDir: path.join(hosting.stateDir, "motive"), datum, slot,
+      });
+      if (treffer) motivUebernehmen(inhalt, treffer);
+      /* Der Text steht schon. Die Stimme wird allerdings neu gesprochen; das
+         geht auf das Kontingent von ElevenLabs (oder auf Piper). */
       const r = await reelBauen(inhalt, path.join(ziel, slot), { datum, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
       n += 2;
       console.log(`  ${slot}: Reel ${r.dauer.toFixed(1)} s${r.echt ? "" : " (Ersatzstimme)"} → ${path.basename(r.video)}`);
