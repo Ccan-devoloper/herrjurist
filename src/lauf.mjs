@@ -960,8 +960,18 @@ async function main() {
       }
       if (eintrag.format === "wochenrueckblick") {
         const grenze = new Date(new Date(`${datum}T12:00:00Z`).getTime() - 7 * 86400000).toISOString().slice(0, 10);
-        wochenThemen = (ledger.veroeffentlicht || []).filter((e) => e.art === "beitrag" && e.datum >= grenze).map((e) => e.titel);
-        if (!wochenThemen.length) wochenThemen = pool.filter((t) => t.prioritaet === "hoch").slice(0, 5).map((t) => t.titel);
+        /* Der Wochenrueckblick braucht nicht nur den Titel, sondern auch die
+           thematische Familie. Sonst bleibt fuer alles ausser ZR/SR/OeR nur
+           ein generisches "Unabhaengig". Mit fach/klausur kann der Autor und
+           die deterministische Nachbereitung z. B. "Klausurtechnik &
+           Kopfsache" bilden. */
+        wochenThemen = (ledger.veroeffentlicht || [])
+          .filter((e) => e.art === "beitrag" && e.datum >= grenze)
+          .map((e) => ({ titel: e.titel, fach: e.fach || null, klausur: e.klausur ?? null, fachLabel: e.fachLabel || null }));
+        if (!wochenThemen.length) {
+          wochenThemen = pool.filter((t) => t.prioritaet === "hoch").slice(0, 5)
+            .map((t) => ({ titel: t.titel, fach: t.fach || null, klausur: t.klausur ?? null, fachLabel: FAECHER[t.fach]?.label || null }));
+        }
       }
       text = await beitragSchreiben({ format: eintrag.format, thema, datum, recherche, wochenThemen, anlass: eintrag.format === "anlass" ? plan.anlass : eintrag.format === "loesungsskizze" ? plan.abendAnlass : null, strategie });
     }
