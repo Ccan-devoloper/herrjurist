@@ -1,39 +1,43 @@
-name: Chat finalize 2026-09-23 · decrypt planned context
+name: Chat finalize 2026-09-23 · visual preview
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
     paths: [.github/workflows/chat-finalize-2026-09-23-context.yml]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  context:
+  preview:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Export only today's preplanned normalized topic records
-        env:
-          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+          cache: npm
+      - run: npm ci
+      - name: Chromium
         run: |
-          mkdir -p out/chat-context
-          node --input-type=module <<'NODE'
-          import fs from "node:fs";
-          import { themenpool } from "./src/inhalte.mjs";
-          const pool = themenpool();
-          const ids = ["assessoroer-837","assessorz-582","strafat-724","staat-088","sachen-509","zpo-278","assessorz-576"];
-          const picked = ids.map(id => pool.find(t => t.id === id)).filter(Boolean);
-          fs.writeFileSync("out/chat-context/topics.json", JSON.stringify({
-            ids, picked, missing: ids.filter(id => !picked.some(t => t.id === id))
-          }, null, 2));
-          if (picked.length !== ids.length) process.exitCode = 2;
-          NODE
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: chat-finalize-2026-09-23-context
-          path: out/chat-context
-          if-no-files-found: error
-          retention-days: 1
+          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list || true
+          npx playwright install --with-deps chromium || npx playwright install chromium
+      - name: Image dependencies
+        run: |
+          pip install --quiet "rembg[cli]" onnxruntime
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Render today's stored finalization candidates
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          IG_BILD_KI: "true"
+          IG_BILDER: "true"
+          IG_BILDER_FREISTELLEN: "true"
+          IG_DRY_RUN: "true"
+          IG_ABLEGEN: "1"
+          GIT_AUTHOR_NAME: instagram-bot
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: node bin/nachrendern.mjs 2026-09-23
