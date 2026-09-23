@@ -139,10 +139,39 @@ try {
       const alt = path.join(hosting.dir, "vorproduktion", datum, "fertig", slot, `${slug}-cover.jpg`);
       if (!fs.existsSync(alt)) throw new Error(`${datum} ${slot}: bestehendes Cover fehlt`);
 
+      /* Reparaturen duerfen niemals auf bereits reparierten JPEGs stapeln:
+         Dadurch wuerden alte Badge-/Footer-Artefakte von Lauf zu Lauf
+         mitgeschleppt. Wenn der Trigger den urspruenglichen Git-Blob nennt,
+         holen wir exakt dieses bereits bezahlte Ausgangscover aus der
+         Asset-Historie. Das ist rein lokales Git, ohne Providerkontakt. */
+      let quelle = alt;
+      const quellBlob = String(eintrag.sourceCoverBlobs?.[slot] || "").trim();
+      if (quellBlob) {
+        if (!/^[a-f0-9]{40}$/i.test(quellBlob)) {
+          throw new Error(`${datum} ${slot}: ungueltiger sourceCoverBlob`);
+        }
+        const original = path.join(temp, `${datum}-${slot}-original.jpg`);
+        let bytes;
+        try {
+          bytes = execFileSync("git", ["cat-file", "blob", quellBlob], {
+            cwd: hosting.dir,
+            encoding: null,
+            maxBuffer: 8 * 1024 * 1024,
+          });
+        } catch (e) {
+          throw new Error(`${datum} ${slot}: Original-Blob ${quellBlob} nicht lokal verfuegbar: ${e.message}`);
+        }
+        if (!bytes?.length || bytes[0] !== 0xff || bytes[1] !== 0xd8) {
+          throw new Error(`${datum} ${slot}: Original-Blob ist kein plausibles JPEG`);
+        }
+        fs.writeFileSync(original, bytes);
+        quelle = original;
+      }
+
       const freigestellt = path.join(temp, `${datum}-${slot}-foreground.png`);
       const lokalArgs = [
         path.resolve("bin/cover-foreground-local.py"),
-        "--input", alt,
+        "--input", quelle,
         "--output", freigestellt,
         "--crop-y", "980",
       ];
