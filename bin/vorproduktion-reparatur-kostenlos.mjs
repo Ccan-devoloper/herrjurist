@@ -140,12 +140,14 @@ try {
       if (!fs.existsSync(alt)) throw new Error(`${datum} ${slot}: bestehendes Cover fehlt`);
 
       const freigestellt = path.join(temp, `${datum}-${slot}-foreground.png`);
-      execFileSync("python3", [
+      const lokalArgs = [
         path.resolve("bin/cover-foreground-local.py"),
         "--input", alt,
         "--output", freigestellt,
-        "--crop-y", "900",
-      ], { stdio: "inherit" });
+        "--crop-y", "980",
+      ];
+      if (Number(reel.klausur) === 2) lokalArgs.push("--aggressive-footer");
+      execFileSync("python3", lokalArgs, { stdio: "inherit" });
 
       const puffer = fs.readFileSync(freigestellt);
       const daten = coverDatenLokal(reel);
@@ -153,7 +155,7 @@ try {
       daten.bildFrei = true;
       daten.bildTyp = "charakter";
       daten.bildBreite = 1080;
-      daten.bildHoehe = 1020;
+      daten.bildHoehe = 940;
       daten.coverHinweisPlan = null;
 
       await coverRendernLokal(daten, alt);
