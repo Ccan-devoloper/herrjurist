@@ -35,6 +35,7 @@ jobs:
       - name: Generate four new motives, reuse the paid cover scene as fifth, render full reel
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
           IG_BILD_KI: "true"
           IG_BILDER: "true"
           IG_BILDER_FREISTELLEN: "true"
