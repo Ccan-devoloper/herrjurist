@@ -14,28 +14,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Export metadata around today's preplanned topic records
+      - name: Export only today's preplanned normalized topic records
         env:
           IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
         run: |
           mkdir -p out/chat-context
           node --input-type=module <<'NODE'
           import fs from "node:fs";
-          import { THEMEN } from "./daten/themen.mjs";
+          import { themenpool } from "./src/inhalte.mjs";
+          const pool = themenpool();
           const ids = ["assessoroer-837","assessorz-582","strafat-724","staat-088","sachen-509","zpo-278","assessorz-576"];
-          const prefixes = [...new Set(ids.map(x => x.split("-")[0]))];
-          const exact = ids.map(id => THEMEN.find(t => String(t.id) === id)).filter(Boolean);
-          const byPrefix = Object.fromEntries(prefixes.map(p => [p, THEMEN.filter(t => String(t.id||"").startsWith(p+"-")).slice(-25)]));
+          const picked = ids.map(id => pool.find(t => t.id === id)).filter(Boolean);
           fs.writeFileSync("out/chat-context/topics.json", JSON.stringify({
-            count: THEMEN.length,
-            sample: THEMEN.slice(0,5),
-            ids,
-            exact,
-            missing: ids.filter(id => !exact.some(t => String(t.id) === id)),
-            byPrefix
+            ids, picked, missing: ids.filter(id => !picked.some(t => t.id === id))
           }, null, 2));
+          if (picked.length !== ids.length) process.exitCode = 2;
           NODE
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: chat-finalize-2026-09-23-context
           path: out/chat-context
