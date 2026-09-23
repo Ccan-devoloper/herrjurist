@@ -131,7 +131,7 @@ function fehlendesGebiet(plan) {
 }
 
 async function motivBesorgen(ziel, was = "Motiv", opt = {}) {
-  if (!ziel || ziel.bild || !ziel.bildSzene) return;
+  if (!ziel || ziel.bild || ziel.coverFinalUrl || !ziel.bildSzene) return;
   try {
     const treffer = await titelbild(ziel, null, { randFarbe: stickerFarbe(ziel.klausur, CONFIG.marke.stil), archivDir: motivArchivDir, datum, ...opt });
     if (treffer) {
