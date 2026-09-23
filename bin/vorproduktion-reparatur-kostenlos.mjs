@@ -107,6 +107,34 @@ function lokalEinpassen() {
     while ((el.scrollWidth > el.clientWidth + 1 || el.getBoundingClientRect().right > innenRechts + 1) && n++ < 16) setze(el, 0.94);
   }
 }
+function coverHinweisEinpassenLokal() {
+  const wurzel = document.querySelector(".folie.art-titel, .story.cover");
+  const hinweis = wurzel?.querySelector(".cover-hinweis");
+  if (!wurzel || !hinweis) return;
+
+  const bild = wurzel.querySelector(".frei.charakter img, .frei img");
+  if (bild?.complete && bild.naturalWidth && bild.naturalHeight) return;
+
+  const root = wurzel.getBoundingClientRect();
+  const titel = wurzel.querySelector("h1.titel-stack, h1");
+  const badge = wurzel.querySelector(".cover-badge");
+  const fuss = wurzel.querySelector(".fuss");
+  const minTop = Math.max(
+    titel?.getBoundingClientRect().bottom || root.top,
+    badge?.getBoundingClientRect().bottom || root.top,
+  ) + 48;
+  const maxBottom = (fuss?.getBoundingClientRect().top || root.bottom - 36) - 30;
+
+  hinweis.style.left = "24%";
+  hinweis.style.top = "72%";
+  hinweis.style.transform = "translate(-50%,-50%) rotate(-4deg)";
+  const hr = hinweis.getBoundingClientRect();
+  const y = Math.max(minTop + hr.height / 2, Math.min(maxBottom - hr.height / 2, root.top + root.height * 0.72));
+  const x = Math.max(root.left + 52 + hr.width / 2, Math.min(root.right - 52 - hr.width / 2, root.left + root.width * 0.24));
+  hinweis.style.left = `${x - root.left}px`;
+  hinweis.style.top = `${y - root.top}px`;
+}
+
 function coverTitelEinpassenLokal() {
   const wurzel = document.querySelector(".story.cover");
   const titel = wurzel?.querySelector("h1.titel-stack");
@@ -138,6 +166,7 @@ async function htmlZuJpegLokal(html, ziel, masse = MASSE.story) {
     await page.evaluate(storyTitelEinpassenLokal);
     await page.evaluate(lokalEinpassen);
     await page.evaluate(coverTitelEinpassenLokal);
+    await page.evaluate(coverHinweisEinpassenLokal);
     fs.mkdirSync(path.dirname(ziel), { recursive: true });
     await page.screenshot({ path: ziel, type: "jpeg", quality: 92, fullPage: false });
   } finally {
