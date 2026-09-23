@@ -14,7 +14,6 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--input", required=True)
 ap.add_argument("--output", required=True)
 ap.add_argument("--crop-y", type=int, default=980)
-ap.add_argument("--aggressive-footer", action="store_true")
 args = ap.parse_args()
 
 img = np.array(Image.open(args.input).convert("RGB"))
@@ -37,7 +36,7 @@ xx1, xx2 = 700, min(w, 1075)
 roi = crop[yy1:yy2, xx1:xx2]
 if roi.size:
     dist_dark = np.linalg.norm(roi.astype(np.float32) - dark, axis=2)
-    kandidat = (dist_dark < 42).astype(np.uint8)
+    kandidat = (dist_dark < 35).astype(np.uint8)
     n, labels, stats, _ = cv2.connectedComponentsWithStats(kandidat, 8)
     maske_roi = np.zeros_like(kandidat)
     for i in range(1, n):
@@ -46,23 +45,11 @@ if roi.size:
         # Schrift der Fusszeile: kompakte Komponenten nahe der Baseline.
         if gy >= 1748 and 4 <= ch <= 58 and 2 <= cw <= 300 and 8 <= area <= 2200:
             maske_roi[labels == i] = 255
-    maske_roi = cv2.dilate(maske_roi, np.ones((3,3), np.uint8), iterations=1)
+    maske_roi = cv2.dilate(maske_roi, np.ones((7,7), np.uint8), iterations=1)
     maske = np.zeros(crop.shape[:2], dtype=np.uint8)
     maske[yy1:yy2, xx1:xx2] = maske_roi
     if np.any(maske):
         crop = cv2.inpaint(crop, maske, 3, cv2.INPAINT_TELEA)
-
-# Beim Strafrecht-Cover lag die alte Fusszeile teilweise direkt auf dem
-# Maschinenmotiv und hing dadurch an einer grossen dunklen Komponente.
-# In diesem bekannten Altfall wird nur der kleine Schriftstreifen lokal
-# inpainted; kein generatives Modell und kein externer Dienst.
-if args.aggressive_footer:
-    fy1, fy2 = max(0, 1748 - y0), min(crop.shape[0], 1810 - y0)
-    fx1, fx2 = 830, min(w, 1045)
-    if fy2 > fy1 and fx2 > fx1:
-        extra = np.zeros(crop.shape[:2], dtype=np.uint8)
-        extra[fy1:fy2, fx1:fx2] = 255
-        crop = cv2.inpaint(crop, extra, 3, cv2.INPAINT_TELEA)
 
 # Einfarbigen Marken-Hintergrund lokal freistellen. Keine generative KI,
 # kein externer Dienst: nur Farbdistanz und weiche Alpha-Kante.
