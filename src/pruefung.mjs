@@ -776,6 +776,23 @@ export function pruefeBeitrag(beitrag, opt = {}) {
 
   /* 4. Formales */
   if (beitrag.folien) {
+    if (beitrag.format === "wochenrueckblick") {
+      const titel = beitrag.folien.map((f) => String(f.titel || "").trim().toLowerCase());
+      const pflicht = ["zivilrecht", "strafrecht", "öffentliches recht", "unabhängig"];
+      for (const name of pflicht) {
+        if (!titel.includes(name)) fehler.push(`Wochenrückblick braucht eine eigene Folie „${name[0].toUpperCase() + name.slice(1)}“.`);
+      }
+      const fachTitel = new Set(pflicht);
+      for (const f of beitrag.folien) {
+        const t = String(f.titel || "").trim().toLowerCase();
+        if (!fachTitel.has(t)) continue;
+        const inhalt = [f.text || "", ...(f.punkte || [])].join(" ");
+        if (/\b(?:Zivilrecht|Strafrecht|Öffentliches Recht)\b/iu.test(inhalt)) {
+          const fremde = [...fachTitel].filter((x) => x !== t && inhalt.toLowerCase().includes(x));
+          if (fremde.length) fehler.push(`Wochenrückblick-Folie „${f.titel}“ mischt Rechtsgebiete: ${fremde.join(", ")}.`);
+        }
+      }
+    }
     if (beitrag.folien.length < GRENZEN.folienMin || beitrag.folien.length > GRENZEN.folienMax) fehler.push(`Folienzahl ${beitrag.folien.length} außerhalb ${GRENZEN.folienMin}–${GRENZEN.folienMax}`);
     beitrag.folien.forEach((f, i) => {
       if ((f.titel || "").length > GRENZEN.titelZeichen) fehler.push(`Folie ${i + 1}: Titel zu lang (${f.titel.length} > ${GRENZEN.titelZeichen})`);
@@ -798,6 +815,10 @@ export function pruefeBeitrag(beitrag, opt = {}) {
       else {
         if (zahl.length > 8) fehler.push(`Story „Zahl des Tages“: Zahl zu lang (${zahl.length} > 8 Zeichen)`);
         if (!/\d/.test(zahl)) fehler.push(`Story „Zahl des Tages“: „${zahl}“ ist keine konkrete Zahl. Erlaubt sind z. B. „0 %“, „14 Tage“ oder „3 Jahre“.`);
+        const n = Number.parseInt(zahl, 10);
+        if (Number.isInteger(n) && n >= 2 && n <= 6 && (!Array.isArray(s.punkte) || s.punkte.length !== n)) {
+          fehler.push(`Story „Zahl des Tages“ mit ${n} braucht genau ${n} sichtbar getrennte Punkte; Fließtext allein reicht nicht.`);
+        }
       }
     }
   }
