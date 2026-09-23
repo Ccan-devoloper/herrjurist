@@ -43,7 +43,7 @@ test("Norm-Story haelt einzelne Gesetzeszitate beim Umbruch zusammen", () => {
   }, ctx);
   assert.match(html, /norm-liste/);
   assert.equal((html.match(/class="norm-einheit"/g) || []).length, 3);
-  assert.match(html, /§\\s*108 BGB/u);
+  assert.match(html, /§\s*108 BGB/u);
 });
 
 test("Charakter-Reel-Cover blendet die redundante Fusszeile aus", () => {
