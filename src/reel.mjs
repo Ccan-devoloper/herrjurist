@@ -491,6 +491,21 @@ export function coverDaten(reel, plan) {
   };
 }
 
+async function freigegebenesCoverLaden(url, ziel) {
+  const u = new URL(String(url || ""));
+  if (u.protocol !== "https:" || u.hostname !== "raw.githubusercontent.com") {
+    throw new Error("Freigegebenes Cover muss von raw.githubusercontent.com stammen.");
+  }
+  const r = await fetch(u);
+  if (!r.ok) throw new Error(`Freigegebenes Cover nicht ladbar: HTTP ${r.status}`);
+  const typ = String(r.headers.get("content-type") || "");
+  if (typ && !typ.startsWith("image/")) throw new Error(`Freigegebenes Cover ist kein Bild (${typ}).`);
+  const daten = Buffer.from(await r.arrayBuffer());
+  if (daten.length < 10_000) throw new Error("Freigegebenes Cover ist unerwartet klein.");
+  fs.writeFileSync(ziel, daten);
+  return ziel;
+}
+
 /**
  * Baut das Reel. Rückgabe: { video, cover, dauer, echt }
  */
@@ -546,7 +561,12 @@ export async function reelBauen(reel, ausgabeDir, opt = {}) {
      aus dem Video zeigt sonst nur den Hintergrundclip. Klappt das Rendern
      nicht, bleibt der bisherige Weg über ein Videobild. */
   try {
-    await coverRendern(coverDaten(reel, plan), cover);
+    if (reel.coverFinalUrl) {
+      await freigegebenesCoverLaden(reel.coverFinalUrl, cover);
+      console.log("  → vorab visuell freigegebenes Reel-Cover wiederverwendet (0 $ Bild-API).");
+    } else {
+      await coverRendern(coverDaten(reel, plan), cover);
+    }
   } catch (e) {
     console.warn(`  ! Cover nicht gerendert (${e.message}) – nehme ein Bild aus dem Video.`);
     const coverFrame = Math.min(n - 1, Math.round(0.9 * fps));
