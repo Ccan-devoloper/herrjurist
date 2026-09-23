@@ -473,8 +473,12 @@ export function coverDaten(reel, plan) {
        darf deshalb vom ersten gesprochenen Satz abweichen. Der Aufhaenger
        stellt eine Frage, das Cover soll das Thema benennen. */
     titel: reel.kurztitel || reel.szenen?.[0]?.titel || "Reel",
-    ueberzeile: sekunden ? `Reel · ${sekunden} Sekunden` : "Reel",
-    dauerText: sekunden ? `In ${sekunden} Sekunden erklärt` : "",
+    titelZeilen: reel.titelZeilen || null,
+    coverBadge: reel.coverBadge || (sekunden ? `Reel · ${sekunden} Sekunden` : "Reel"),
+    /* Cover-v2 no-arrow: der redaktionelle Aha-Hinweis ersetzt die alte
+       automatisch erzeugte Dauer-Handschrift samt Pfeil. */
+    coverText: reel.coverText || null,
+    coverHinweisPlan: reel.coverHinweisPlan || null,
     icon: reel.szenen?.find((s) => s.icon)?.icon || "paragraf",
     /* Freigestelltes Motiv (bilder.mjs) statt Icon-Bühne, wenn eines da ist. */
     bild: reel.bild || null, bildFrei: reel.bildFrei !== false, bildQuelle: reel.bildQuelle || null,
