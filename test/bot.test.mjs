@@ -1745,6 +1745,16 @@ test("Erklärvideo: Stichworte, Zeitpunkte und Bühne", async () => {
   assert.ok(/Antwort <b>/.test(html), "das Leerzeichen vor dem hervorgehobenen Wort fehlt");
   assert.ok(html.includes("kreuz"), "das rote Kreuz fehlt");
   assert.ok(!/aevalsrc|klangbett/i.test(html), "im Erklärvideo darf kein Klang stecken");
+  /* Motive dürfen nie mehr wie früher über den Bildrand geschoben werden:
+     vollständige Figuren, Hände, Füße und zentrale Requisiten müssen innerhalb
+     der 9:16-Szene bleiben. */
+  assert.match(html, /\.figur\{[^}]*bottom:96px[^}]*height:820px[^}]*width:900px/);
+  assert.match(html, /\[data-seite="rechts"\] \.figur\{right:70px\}/);
+  assert.match(html, /\[data-seite="links"\]\s+\.figur\{left:70px\}/);
+  assert.match(html, /\.figur img\{[^}]*width:100%[^}]*height:100%[^}]*object-fit:contain/);
+  assert.ok(!html.includes("bottom:-150px"));
+  assert.ok(!html.includes("right:-60px"));
+  assert.ok(!html.includes("left:-60px"));
 
   /* Das Erklärlayout bleibt dauerhaft aktiv, bis ausdrücklich klassisch
      konfiguriert wird. Ein Datumswechsel darf es nicht mehr zurückdrehen. */
