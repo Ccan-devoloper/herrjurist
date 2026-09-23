@@ -13,7 +13,8 @@ def rgb(hexwert):
 ap = argparse.ArgumentParser()
 ap.add_argument("--input", required=True)
 ap.add_argument("--output", required=True)
-ap.add_argument("--crop-y", type=int, default=900)
+ap.add_argument("--crop-y", type=int, default=980)
+ap.add_argument("--aggressive-footer", action="store_true")
 args = ap.parse_args()
 
 img = np.array(Image.open(args.input).convert("RGB"))
@@ -50,6 +51,18 @@ if roi.size:
     maske[yy1:yy2, xx1:xx2] = maske_roi
     if np.any(maske):
         crop = cv2.inpaint(crop, maske, 3, cv2.INPAINT_TELEA)
+
+# Beim Strafrecht-Cover lag die alte Fusszeile teilweise direkt auf dem
+# Maschinenmotiv und hing dadurch an einer grossen dunklen Komponente.
+# In diesem bekannten Altfall wird nur der kleine Schriftstreifen lokal
+# inpainted; kein generatives Modell und kein externer Dienst.
+if args.aggressive_footer:
+    fy1, fy2 = max(0, 1748 - y0), min(crop.shape[0], 1810 - y0)
+    fx1, fx2 = 830, min(w, 1045)
+    if fy2 > fy1 and fx2 > fx1:
+        extra = np.zeros(crop.shape[:2], dtype=np.uint8)
+        extra[fy1:fy2, fx1:fx2] = 255
+        crop = cv2.inpaint(crop, extra, 3, cv2.INPAINT_TELEA)
 
 # Einfarbigen Marken-Hintergrund lokal freistellen. Keine generative KI,
 # kein externer Dienst: nur Farbdistanz und weiche Alpha-Kante.
