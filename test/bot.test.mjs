@@ -645,24 +645,31 @@ test("Wachstum: Hashtag-Lernschleife gewichtet Tags nach Followern, Auswahl mit 
   assert.equal(new Set(tags).size, tags.length);
 });
 
-test("Reel-Cover zeigt Thema, Fach und Dauer", async () => {
+test("Reel-Cover zeigt Thema, Badge und redaktionellen Aha-Hinweis", async () => {
   const { coverDaten } = await import("../src/reel.mjs");
-  const reel = { fach: "ust", klausur: 1, kurztitel: "Organschaft: Wer schuldet die Umsatzsteuer?", szenen: [{ titel: "Organschaft" }, { titel: "Schritt 1", icon: "kreislauf" }] };
+  const reel = {
+    fach: "ust", klausur: 1,
+    kurztitel: "Organschaft: Wer schuldet die Umsatzsteuer?",
+    titelZeilen: ["Organschaft:", "Wer schuldet die", "Umsatzsteuer?"],
+    coverBadge: "Examensklassiker",
+    coverText: "Prüfpunkt zuerst",
+    szenen: [{ titel: "Organschaft" }, { titel: "Schritt 1", icon: "kreislauf" }],
+  };
   const daten = coverDaten(reel, { gesamt: 44.6 });
-  /* Der Kurztitel fasst das ganze Reel zusammen und darf vom ersten
-     gesprochenen Satz abweichen - er steht auf dem Cover. */
   assert.equal(daten.titel, reel.kurztitel);
-  assert.equal(daten.ueberzeile, "Reel · 45 Sekunden");
+  assert.deepEqual(daten.titelZeilen, reel.titelZeilen);
+  assert.equal(daten.coverBadge, "Examensklassiker");
+  assert.equal(daten.coverText, "Prüfpunkt zuerst");
   assert.equal(daten.icon, "kreislauf");
   const html = coverHtml(daten, kontext({ fach: "ust", klausur: 1 }));
   assert.ok(html.includes("Umsatzsteuer?"), "Thema fehlt");
   assert.ok(html.includes("reelmarke"), "Reel-Kennzeichnung fehlt");
-  assert.ok(html.includes("45 Sekunden"), "Dauer fehlt");
-  assert.ok(html.includes("class=\"story cover\""), "Cover-Klasse fehlt");
-  /* Ohne Szenen-Icon greift ein Standardsymbol, ohne Dauer entfällt die Zeile. */
+  assert.ok(html.includes("Examensklassiker"), "Cover-Badge fehlt");
+  assert.ok(!html.includes("45 Sekunden"), "alte Dauer-Handschrift darf nicht zurückkehren");
+  assert.ok(html.includes('class="story cover"'), "Cover-Klasse fehlt");
   const ohne = coverDaten({ fach: "ao", szenen: [{ titel: "X" }] }, { gesamt: 0 });
   assert.equal(ohne.icon, "paragraf");
-  assert.equal(ohne.dauerText, "");
+  assert.equal(ohne.coverBadge, "Reel");
 });
 
 test("Reel täglich, Budget dafür zurückgelegt", async () => {
