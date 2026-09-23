@@ -1030,7 +1030,7 @@ async function main() {
            auf das klassische Layout zurueck. Deshalb erst die Motive, dann
            bauen. */
         const layout = layoutFuer(datum);
-        if (layout === "erklaer") {
+        if (layout === "erklaer" && !reel.reelFinalUrl) {
           /* Ein Text, der vor der Bildregie geschrieben wurde (Nachtlauf vor
              dem 17.09.), bekommt sie hier nachgeholt - einmal, dann steht es
              im gespeicherten Text. */
@@ -1040,6 +1040,8 @@ async function main() {
              der Szenenzahl liegt, desto oefter musste eine Szene die Figur der
              vorherigen uebernehmen - das faellt beim Zusehen auf. */
           log(`  Erklärvideo: ${m.eigene} verschiedene Motive auf ${m.mit} von ${reel.szenen.length} Szenen.`);
+        } else if (reel.reelFinalUrl) {
+          log("  Erklärvideo: bereits visuell final geprüft – keine neue Bild-/Voice-Generierung.");
         }
         const r = await reelBauen(reel, path.join(AUSGABE, "reels", eintrag.slot), { variante: varianteReel, datum, layout, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
         log(`  Reel gebaut: ${r.dauer.toFixed(1)} s · Layout ${r.layout} · Stimme ${r.anbieter}${r.stimmeName ? ` „${r.stimmeName}“` : ""} · Animation ${r.animation}`);
