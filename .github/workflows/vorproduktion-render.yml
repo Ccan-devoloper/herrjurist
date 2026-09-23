@@ -10,8 +10,10 @@ on:
 permissions:
   contents: write
 
+# Derselbe Schreib-Lock wie beim Live-Instagram-Job: Budget-Journal,
+# Kostenledger und Previewdateien liegen gemeinsam auf instagram-assets.
 concurrency:
-  group: herrjurist-vorproduktion-render
+  group: instagram-bot
   cancel-in-progress: false
 
 jobs:
