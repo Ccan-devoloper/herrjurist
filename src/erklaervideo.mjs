@@ -240,11 +240,16 @@ h1 span{display:inline-block;font-size:74px;font-weight:800;color:${kopfFarbe};l
 [data-seite="links"]  .medaillon{right:70px}
 .medaillon img{width:84%;height:84%;object-fit:contain}
 
-/* Figur: gross, unten angeschnitten, an einer Seite verankert. */
-.figur{position:absolute;bottom:-150px;height:1400px;width:720px;display:flex;align-items:flex-end;justify-content:center;opacity:0}
-[data-seite="rechts"] .figur{right:-60px}
-[data-seite="links"]  .figur{left:-60px}
-.figur img{max-width:100%;max-height:100%;object-fit:contain;object-position:bottom}
+/* Figur/Motiv: vollständig im 9:16-Bild sichtbar.
+   Frühere Reels setzten die Bühne absichtlich über den unteren und seitlichen
+   Rand hinaus. Das schnitt bei breiten Zwei-Figuren-Motiven Hände, Füße oder
+   Requisiten ab. Jetzt liegt die komplette Motivbox innerhalb einer sicheren
+   Innenfläche; object-fit:contain garantiert, dass das ganze freigestellte
+   Motiv sichtbar bleibt. */
+.figur{position:absolute;bottom:96px;height:820px;width:900px;display:flex;align-items:flex-end;justify-content:center;opacity:0}
+[data-seite="rechts"] .figur{right:70px}
+[data-seite="links"]  .figur{left:70px}
+.figur img{width:100%;height:100%;object-fit:contain;object-position:center bottom}
 
 .fuss{position:absolute;left:60px;right:60px;bottom:46px;display:flex;justify-content:space-between;
       font-size:30px;font-weight:600;color:${kopfFarbe}b0}
@@ -276,7 +281,7 @@ window.setzeZeit = function (t) {
     if (fig) {
       const q = aus((t - s.figur) / 0.55);
       fig.style.opacity = q > 0 ? "1" : "0";
-      fig.style.transform = "translateY(" + ((1 - q) * 1420).toFixed(1) + "px)";
+      fig.style.transform = "translateY(" + ((1 - q) * 980).toFixed(1) + "px)";
     }
     el.querySelectorAll(".plakette").forEach((pl, k) => {
       const q = aus((t - s.plaketten[k]) / 0.45);
