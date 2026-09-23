@@ -7148,7 +7148,7 @@ test("Manuell finalisierte Carousel-Posts brauchen ein persistiertes visuelles E
 
 test("Manuelle Carousel-Freigabe wird im Live-Lauf fail-closed und per SHA wiederverwendet", () => {
   const lauf = ohneKommentare(fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8"));
-  const render = ohneKommentare(fs.readFileSync(new URL("../src/render.mjs", import.meta.url), "utf8");
+  const render = ohneKommentare(fs.readFileSync(new URL("../src/render.mjs", import.meta.url), "utf8"));
 
   const gate = lauf.indexOf("manuellesCarouselAssetGate(beitrag)");
   const bild = lauf.indexOf("titelfolieBebildern(beitrag)", gate);
