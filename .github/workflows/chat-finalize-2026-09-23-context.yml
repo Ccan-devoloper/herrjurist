@@ -1,0 +1,37 @@
+name: Chat finalize 2026-09-23 · decrypt planned context
+on:
+  push:
+    branches: [chat-finalize-2026-09-23-context]
+    paths: [.github/workflows/chat-finalize-2026-09-23-context.yml]
+permissions:
+  contents: read
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Export only today's preplanned topic records
+        env:
+          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+        run: |
+          mkdir -p out/chat-context
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          import { THEMEN } from "./daten/themen.mjs";
+          const ids = ["assessoroer-837","assessorz-582","strafat-724","staat-088","sachen-509","zpo-278","assessorz-576"];
+          const picked = ids.map(id => THEMEN.find(t => t.id === id)).filter(Boolean);
+          const missing = ids.filter(id => !picked.some(t => t.id === id));
+          fs.writeFileSync("out/chat-context/topics.json", JSON.stringify({ids,picked,missing}, null, 2));
+          if (missing.length) process.exitCode = 2;
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chat-finalize-2026-09-23-context
+          path: out/chat-context
+          if-no-files-found: error
+          retention-days: 1
