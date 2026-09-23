@@ -1,0 +1,633 @@
+{
+  "datum": "2026-09-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "kostenPolicy": {
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "11:30",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-031",
+        "themaTitel": "Wann ist ein gutgläubiger Erwerb ausgeschlossen?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "16:30",
+        "format": "schema",
+        "themaId": "strafat-298",
+        "themaTitel": "Wie prüft man das Fahrlässigkeitsdelikt?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "21:00",
+        "format": "reel",
+        "themaId": "vwgo-104",
+        "themaTitel": "Wann ist die Fortsetzungsfeststellungsklage statthaft?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "arbeit-042"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "arbeit-042"
+      },
+      {
+        "slot": "s1",
+        "zeit": "11:30",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:45",
+        "art": "norm",
+        "themaId": "strafat-064"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:45",
+        "art": "tipp",
+        "themaId": "bgbat-006"
+      },
+      {
+        "slot": "s2",
+        "zeit": "16:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "18:15",
+        "art": "zahl",
+        "themaId": "staat-079"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:45",
+        "art": "streitstand",
+        "themaId": "strafbt-068"
+      },
+      {
+        "slot": "s3",
+        "zeit": "21:00",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      }
+    ]
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-031",
+      "slug": "2026-09-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gestohlen und gutgläubig gekauft – wird der Käufer Eigentümer?",
+          "unter": "§§ 932, 935 BGB: Guter Glaube ersetzt nicht jeden Besitzverlust",
+          "icon": "schloss",
+          "titelZeilen": [
+            "Gestohlen +",
+            "gutgläubig gekauft –",
+            "Eigentum erworben?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 935 blockiert den Erwerb",
+          "coverBildAuslassen": true,
+          "pille": "Swipen →",
+          "hinweis": "Sachenrecht"
+        },
+        {
+          "art": "text",
+          "titel": "Ausgangspunkt: § 932 BGB",
+          "text": "Bei einer Übereignung nach § 929 BGB kann der Erwerber trotz fehlender Eigentümerstellung des Veräußerers Eigentum erwerben, wenn die gesetzlichen Gutglaubensvoraussetzungen vorliegen.",
+          "icon": "hand"
+        },
+        {
+          "art": "text",
+          "titel": "Die Sperre: § 935 Abs. 1 BGB",
+          "text": "Ist die Sache dem Eigentümer gestohlen worden, verloren gegangen oder sonst abhandengekommen, scheidet der gutgläubige Erwerb grundsätzlich aus. Entscheidend ist der unfreiwillige Verlust des unmittelbaren Besitzes.",
+          "icon": "sperre"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Freiwillig oder unfreiwillig?",
+          "links": {
+            "titel": "Besitz freiwillig übertragen",
+            "punkte": [
+              "§ 935 greift grundsätzlich nicht",
+              "Gutgläubiger Erwerb kann möglich sein",
+              "Beispiel: Leihe an einen Nichtberechtigten"
+            ]
+          },
+          "rechts": {
+            "titel": "Besitz unfreiwillig verloren",
+            "punkte": [
+              "Abhandenkommen",
+              "§ 935 Abs. 1 sperrt grundsätzlich",
+              "Beispiel: Diebstahl oder Verlieren"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Ausnahme in § 935 Abs. 2 BGB",
+          "text": "Die Abhandenkommenssperre gilt nicht für Geld, Inhaberpapiere und Sachen, die im Wege öffentlicher Versteigerung veräußert werden. Diese Ausnahme ausdrücklich mitprüfen.",
+          "icon": "ausnahme"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beim gutgläubigen Erwerb immer fragen: War der Besitzverlust freiwillig? Guter Glaube heilt kein Abhandenkommen."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Prüfstationen",
+          "punkte": [
+            "§ 929 BGB: Verfügungstatbestand",
+            "§ 932 BGB: guter Glaube",
+            "§ 935 BGB: Abhandenkommen/Ausnahme"
+          ],
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Gestohlen und gutgläubig weiterverkauft? Der gute Glaube allein genügt nicht. § 935 Abs. 1 BGB sperrt den gutgläubigen Erwerb grundsätzlich, wenn die Sache dem Eigentümer gestohlen wurde, verloren ging oder sonst abhandenkam. Der Schlüssel ist der unfreiwillige Besitzverlust. § 935 Abs. 2 BGB enthält die wichtigen Ausnahmen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#gutgläubigererwerb",
+        "#935bgb",
+        "#932bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gutgläubiger Erwerb und § 935",
+      "coverText": "§ 935 blockiert den Erwerb",
+      "coverBadge": "Prüfungsfrage",
+      "quellen": [
+        "§ 929 BGB",
+        "§ 932 BGB",
+        "§ 935 BGB",
+        "Themenpool: sachen-031"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "fallfrage",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-298",
+      "slug": "2026-09-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fahrlässigkeitsdelikt: Pflichtverletzung und Schuld sauber trennen",
+          "unter": "Das Grundschema für §§ 222, 229 StGB",
+          "icon": "warnung",
+          "titelZeilen": [
+            "Fahrlässigkeitsdelikt:",
+            "Pflichtverletzung und",
+            "Schuld trennen"
+          ],
+          "coverBadge": "Klausurschema",
+          "coverText": "Objektiv zuerst, subjektiv später",
+          "coverBildAuslassen": true,
+          "pille": "Swipen →",
+          "hinweis": "Strafrecht AT"
+        },
+        {
+          "art": "schritte",
+          "titel": "I. Tatbestand – der äußere Erfolg",
+          "schritte": [
+            {
+              "titel": "1. Taterfolg und Handlung",
+              "text": "Tatbestandsspezifischen Erfolg und relevantes Verhalten feststellen."
+            },
+            {
+              "titel": "2. Kausalität",
+              "text": "Die Handlung darf nicht hinweg gedacht werden können, ohne dass der Erfolg entfiele."
+            },
+            {
+              "titel": "3. Objektive Sorgfaltspflichtverletzung",
+              "text": "Abweichung von der im Verkehr erforderlichen Sorgfalt aus Sicht eines besonnenen Menschen in der konkreten Lage."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Objektive Vorhersehbarkeit und Vermeidbarkeit",
+          "text": "Der Erfolg und der wesentliche Kausalverlauf müssen objektiv vorhersehbar sein. Bei pflichtgemäßem Verhalten müsste der Erfolg vermeidbar gewesen sein; sonst fehlt es regelmäßig an der Erfolgszurechnung.",
+          "icon": "auge"
+        },
+        {
+          "art": "text",
+          "titel": "Pflichtwidrigkeitszusammenhang",
+          "text": "Gerade die verletzte Sorgfaltspflicht muss sich im Erfolg realisiert haben. Frage also: Wäre der Erfolg bei pflichtgemäßem Alternativverhalten ausgeblieben?",
+          "icon": "verbindung"
+        },
+        {
+          "art": "text",
+          "titel": "II. Rechtswidrigkeit",
+          "text": "Wie beim Vorsatzdelikt wird die Rechtswidrigkeit grundsätzlich durch die Tatbestandsverwirklichung indiziert. Rechtfertigungsgründe bleiben gesondert zu prüfen.",
+          "icon": "waage"
+        },
+        {
+          "art": "text",
+          "titel": "III. Schuld – jetzt wird es individuell",
+          "text": "Hier geht es um die persönlichen Fähigkeiten und Kenntnisse des Täters: subjektive Sorgfaltspflichtverletzung sowie subjektive Vorhersehbarkeit und Vermeidbarkeit. Außerdem allgemeine Entschuldigungsgründe prüfen.",
+          "icon": "person"
+        },
+        {
+          "art": "cta",
+          "titel": "Die Trennung bringt die Punkte",
+          "punkte": [
+            "Objektive Pflichtverletzung im Tatbestand",
+            "Pflichtwidrigkeitszusammenhang sichtbar machen",
+            "Individuelle Fähigkeiten erst in der Schuld"
+          ],
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Beim Fahrlässigkeitsdelikt liegt ein häufiger Aufbaufehler darin, objektive Sorgfaltspflicht und individuelle Vorwerfbarkeit zu vermischen. Im Tatbestand prüfst du den objektiven Sorgfaltsmaßstab, Vorhersehbarkeit, Vermeidbarkeit und den Pflichtwidrigkeitszusammenhang. Die persönlichen Fähigkeiten des Täters gehören in die Schuld.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtat",
+        "#fahrlässigkeit",
+        "#229stgb",
+        "#222stgb",
+        "#klausurschema",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fahrlässigkeitsdelikt Schema",
+      "coverText": "Objektiv zuerst, subjektiv später",
+      "coverBadge": "Klausurschema",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "Themenpool: strafat-298"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "aufbau",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "b3": {
+      "format": "reel",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-104",
+      "slug": "2026-09-28-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "nummer": null,
+          "titel": "Der Verwaltungsakt ist erledigt – ist die Klage damit vorbei?",
+          "unter": "Fortsetzungsfeststellungsklage statt automatischem Prozessende",
+          "text": "Der Erledigungszeitpunkt entscheidet über die Statthaftigkeit.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "icon": "gericht",
+          "sprecher": "Der Verwaltungsakt ist erledigt. Ist damit auch die Klage erledigt? Nicht automatisch. Jetzt musst du zuerst fragen, wann die Erledigung eingetreten ist – denn davon hängt der Weg zur Fortsetzungsfeststellungsklage ab.",
+          "marken": [
+            "Erledigungszeitpunkt",
+            "Fortsetzungsfeststellung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Nach Klageerhebung erledigt",
+          "text": "§ 113 Abs. 1 Satz 4 VwGO ist der gesetzliche Ausgangsfall.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "sprecher": "Erledigt sich ein angefochtener Verwaltungsakt nach Klageerhebung, eröffnet § 113 Absatz 1 Satz 4 VwGO ausdrücklich die Fortsetzungsfeststellungsklage."
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vor Klageerhebung erledigt",
+          "text": "Die Fortsetzungsfeststellungsklage wird entsprechend § 113 Abs. 1 S. 4 VwGO herangezogen.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO analog",
+          "sprecher": "War der Verwaltungsakt schon vor Klageerhebung erledigt, wird § 113 Absatz 1 Satz 4 entsprechend angewandt. Dann musst du die Zulässigkeitsfragen an diese Konstellation anpassen."
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Fortsetzungsfeststellungsinteresse",
+          "text": "Die Feststellung muss dem Kläger noch einen rechtlich anerkannten Nutzen bringen.",
+          "sprecher": "Mit der Erledigung fällt der ursprüngliche Aufhebungszweck weg. Deshalb braucht der Kläger ein besonderes Fortsetzungsfeststellungsinteresse."
+        },
+        {
+          "art": "punkt",
+          "nummer": null,
+          "titel": "Typische Fallgruppen",
+          "text": "Wiederholungsgefahr, Rehabilitationsinteresse und gewichtige Grundrechtseingriffe gehören zu den klassischen Konstellationen.",
+          "sprecher": "Klassische Interessen sind Wiederholungsgefahr und Rehabilitationsinteresse. Auch bei gewichtigen Grundrechtseingriffen kann ein anerkennenswertes Interesse an nachträglicher gerichtlicher Klärung bestehen."
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Dann zur Begründetheit",
+          "text": "Entscheidend ist, ob der erledigte Verwaltungsakt rechtswidrig war und den Kläger in seinen Rechten verletzte.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "sprecher": "In der Begründetheit prüfst du, ob der erledigte Verwaltungsakt rechtswidrig war und den Kläger in seinen Rechten verletzt hat. Der Streitgegenstand ist also nicht verschwunden – er hat sich verändert."
+        },
+        {
+          "art": "merke",
+          "nummer": null,
+          "titel": "Zeitpunkt zuerst",
+          "text": "Nach Klageerhebung: § 113 I 4 direkt. Vorher: entsprechende Anwendung.",
+          "sprecher": "Merke dir zuerst den Zeitpunkt der Erledigung. Er entscheidet über direkt oder analog. Danach kommt das Fortsetzungsfeststellungsinteresse."
+        },
+        {
+          "art": "cta",
+          "nummer": null,
+          "titel": "Nicht bei „erledigt“ aufhören",
+          "text": "Erledigung → Zeitpunkt → Interesse → Rechtmäßigkeit des erledigten VA.",
+          "sprecher": "Wenn im Sachverhalt steht, der Verwaltungsakt habe sich erledigt, ist das kein Schlusspunkt. Es ist dein Signal für den Wechsel der Klageart."
+        }
+      ],
+      "caption": "Erledigt sich ein Verwaltungsakt, endet die verwaltungsgerichtliche Prüfung nicht automatisch. Bei Erledigung nach Klageerhebung ist § 113 Abs. 1 S. 4 VwGO der gesetzliche Ausgangspunkt; bei Erledigung schon vor Klageerhebung wird die Norm entsprechend herangezogen. Danach braucht es ein Fortsetzungsfeststellungsinteresse.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwgo",
+        "#fortsetzungsfeststellungsklage",
+        "#113vwgo",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fortsetzungsfeststellungsklage",
+      "titelZeilen": [
+        "VA erledigt –",
+        "Klage erledigt?",
+        "Nicht automatisch."
+      ],
+      "coverText": "Erledigungszeitpunkt zuerst",
+      "coverBadge": "Klausurtechnik",
+      "coverBildAuslassen": true,
+      "quellen": [
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "Themenpool: vwgo-104"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "kontrast",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-042",
+      "ueberzeile": "Prüfungsfrage Arbeitsrecht",
+      "titel": "Welche zwei Prüfblöcke stehen im Zentrum des § 626 BGB?",
+      "optionen": [
+        "Wichtiger Grund an sich und Interessenabwägung im Einzelfall",
+        "Nur ein Verschulden des Arbeitnehmers",
+        "Nur die Einhaltung einer Kündigungsfrist"
+      ],
+      "richtig": 0,
+      "fachLabel": "Arbeitsrecht",
+      "quellen": [
+        "§ 626 BGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-042",
+      "ueberzeile": "Auflösung",
+      "titel": "Zweistufig prüfen",
+      "text": "Bei § 626 Abs. 1 BGB wird zunächst gefragt, ob der Sachverhalt ohne seine besonderen Umstände grundsätzlich als wichtiger Grund geeignet ist. Danach folgt die umfassende Interessenabwägung des konkreten Einzelfalls. Zusätzlich ist die Zweiwochenfrist des § 626 Abs. 2 BGB zu beachten.",
+      "norm": "§ 626 Abs. 1, 2 BGB",
+      "fachLabel": "Arbeitsrecht",
+      "quellen": [
+        "§ 626 BGB"
+      ],
+      "optionen": [
+        "Wichtiger Grund an sich und Interessenabwägung im Einzelfall",
+        "Nur ein Verschulden des Arbeitnehmers",
+        "Nur die Einhaltung einer Kündigungsfrist"
+      ],
+      "richtig": 0,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-064",
+      "ueberzeile": "Abgrenzung des Tages",
+      "titel": "Täterschaft und Teilnahme",
+      "text": "Täterschaft wird über § 25 StGB erfasst, Anstiftung über § 26 und Beihilfe über § 27 StGB. In der Klausur zuerst die Rolle der Beteiligten sauber bestimmen; erst danach die besonderen Voraussetzungen der jeweiligen Beteiligungsform prüfen.",
+      "norm": "§§ 25–27 StGB",
+      "fachLabel": "Strafrecht AT",
+      "quellen": [
+        "§ 25 StGB",
+        "§ 26 StGB",
+        "§ 27 StGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-006",
+      "ueberzeile": "Klausurtipp Stellvertretung",
+      "titel": "Ohne Vertretungsmacht nicht sofort § 179 BGB prüfen",
+      "text": "Zuerst klären, ob der Vertretene den Vertrag nach § 177 BGB genehmigt. Solange die Genehmigung aussteht, ist der Vertrag schwebend unwirksam. Erst wenn die Genehmigung verweigert wird oder ausbleibt, wird die Haftung des Vertreters nach § 179 BGB relevant.",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "quellen": [
+        "§ 177 BGB",
+        "§ 179 BGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-079",
+      "ueberzeile": "4 Rechtsstaats-Bausteine",
+      "zahl": "4",
+      "titel": "Vier Punkte, die du mit Art. 20 Abs. 3 GG verbinden solltest",
+      "text": "Gesetzesbindung staatlicher Gewalt, effektiver Rechtsschutz, Verhältnismäßigkeit sowie Rechtssicherheit und Vertrauensschutz sind zentrale Ausprägungen des Rechtsstaatsprinzips. Die Liste ist kein abschließender Katalog, aber ein guter Klausuranker.",
+      "fachLabel": "Staatsrecht",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 19 Abs. 4 GG",
+        "Themenpool: staat-079"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-068",
+      "ueberzeile": "Klassischer Streit",
+      "titel": "§ 211 zu § 212 StGB: eigener Tatbestand oder Qualifikation?",
+      "norm": "§§ 211, 212, 28 StGB",
+      "optionen": [
+        "Rechtsprechung: § 211 StGB ist ein eigenständiger Tatbestand",
+        "Literatur: § 211 StGB ist Qualifikation zu § 212 StGB"
+      ],
+      "text": "Der Streit wird vor allem bei Beteiligung mehrerer Personen relevant, weil die Einordnung Auswirkungen auf die Behandlung täterbezogener Mordmerkmale und § 28 StGB haben kann. In der Klausur nur ausführen, wenn die Ansichten tatsächlich zu unterschiedlichen Ergebnissen führen.",
+      "fachLabel": "Strafrecht BT",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 28 StGB",
+        "Themenpool: strafbt-068"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:40:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    }
+  },
+  "hookOptimierung": {
+    "stand": "2026-09-23",
+    "grundlage": "Montagsrotation Zivilrecht → Strafrecht → Öffentliches Recht; Hooks formulieren die konkrete Klausurfrage ohne Übertreibung.",
+    "textProviderKostenUsd": 0
+  }
+}
