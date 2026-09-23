@@ -16,8 +16,8 @@ import path from "node:path";
 
 import { Hosting } from "../src/hosting.mjs";
 import { titelbild } from "../src/bilder.mjs";
-import { beitragRendern, storyRendern, browserBeenden } from "../src/render.mjs";
-import { reelBauen } from "../src/reel.mjs";
+import { beitragRendern, storyRendern, coverRendern, browserBeenden } from "../src/render.mjs";
+import { reelBauen, coverDaten } from "../src/reel.mjs";
 import { stickerFarbe } from "../src/stile.mjs";
 import { budgetStarten, ZWECK_TOPF } from "../src/budget.mjs";
 import { journalStarten } from "../src/journal.mjs";
@@ -52,6 +52,36 @@ const telemetrie = telemetrieStarten({
   dir: path.join(temp, "telemetrie"),
   breakGlass: true,
 });
+
+
+/* Alle harten Layout-Gates laufen VOR der ersten Provider-Reservierung.
+   Damit kann eine zu breite Hook-Zeile nie wieder erst nach einem bezahlten
+   Charakterbild auffallen. Der Preflight rendert nur lokal mit Icon/Typografie. */
+async function layoutPreflight() {
+  const basis = path.join(temp, "preflight");
+  for (const datum of tage) {
+    const quelle = path.join(hosting.dir, "vorproduktion", `${datum}.json`);
+    if (!fs.existsSync(quelle)) throw new Error(`Vorproduktion fehlt: ${quelle}`);
+    const tag = JSON.parse(fs.readFileSync(quelle, "utf8"));
+
+    for (const slot of ["b1", "b2"]) {
+      const inhalt = structuredClone(tag.inhalte?.[slot]);
+      if (!inhalt?.folien) throw new Error(`${datum} ${slot}: Karussell fehlt im Layout-Preflight`);
+      const ziel = path.join(basis, datum, slot);
+      fs.mkdirSync(ziel, { recursive: true });
+      await beitragRendern(inhalt, ziel, { variante: 0 });
+    }
+
+    const reel = structuredClone(tag.inhalte?.b3);
+    if (!reel?.szenen) throw new Error(`${datum} b3: Reel fehlt im Layout-Preflight`);
+    const cover = path.join(basis, datum, "b3-cover.jpg");
+    fs.mkdirSync(path.dirname(cover), { recursive: true });
+    await coverRendern(coverDaten(reel, { gesamt: 60 }), cover, { variante: 0 });
+  }
+}
+
+await layoutPreflight();
+console.log(`Layout-Preflight: ${tage.join(", ")} ✓ – 0 Provideraufrufe`);
 
 const kostenStart = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} });
 const heute = kostenStart.tage?.[kostenDatum] || {};
@@ -264,21 +294,57 @@ manifest.bildKostenUsd = Number(laufKosten.usd.toFixed(6));
 manifest.providerAufrufe = laufKosten.aufrufe;
 manifest.erzeugtAm = new Date().toISOString();
 
-/* Wochenaggregat um genau die in diesem Lauf tatsaechlich verbuchten
-   Bildkosten erweitern. Die Einzelposten stehen bereits durable im Journal. */
+/* Kostenaggregate werden aus der dauerhaften Einzelkostenhistorie neu
+   abgeleitet. So gehen auch Bildkosten eines vorher abgebrochenen Preview-
+   Laufs nicht verloren und werden zugleich niemals doppelt addiert. */
+await journal.abschluss();
 {
   const k = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} });
+  k.tage ||= {};
   k.wochen ||= {};
-  const key = kw(kostenDatum);
-  const alt = k.wochen[key] || { usd: 0, aufrufe: 0, cacheSumme: 0, cacheAnteil: 0 };
-  const aufrufe = Number(alt.aufrufe || 0) + Number(laufKosten.aufrufe || 0);
-  const cacheSumme = Number(alt.cacheSumme || 0);
-  k.wochen[key] = {
-    ...alt,
-    usd: Number(alt.usd || 0) + Number(laufKosten.usd || 0),
+
+  const liste = (k.einzelkosten?.[kostenDatum] || [])
+    .filter((e) => e?.kostenBekannt && Number.isFinite(Number(e.kostenUsd)));
+  const zwecke = {};
+  const messungen = { ...(k.tage[kostenDatum]?.messungen || {}) };
+  let usd = 0;
+  let aufrufe = 0;
+
+  for (const e of liste) {
+    const betrag = Number(e.kostenUsd || 0);
+    usd += betrag;
+    if (betrag > 0) aufrufe += 1;
+    if (e.zweck) {
+      zwecke[e.zweck] = Number(((zwecke[e.zweck] || 0) + betrag).toFixed(6));
+      if (betrag > 0) messungen[e.zweck] = Number(Math.max(Number(messungen[e.zweck] || 0), betrag).toFixed(6));
+    }
+  }
+
+  const antworten = Number(((zwecke.kommentare || 0) + (zwecke.nachrichten || 0)).toFixed(6));
+  k.tage[kostenDatum] = {
+    ...(k.tage[kostenDatum] || {}),
+    usd: Number(usd.toFixed(6)),
+    antworten,
     aufrufe,
+    zwecke,
+    messungen,
+    stand: new Date().toISOString(),
+  };
+
+  const key = kw(kostenDatum);
+  const wochenTage = Object.entries(k.tage).filter(([datum]) => {
+    try { return kw(datum) === key; } catch { return false; }
+  });
+  const wochenUsd = wochenTage.reduce((s, [, tag]) => s + Number(tag?.usd || 0), 0);
+  const wochenAufrufe = wochenTage.reduce((s, [, tag]) => s + Number(tag?.aufrufe || 0), 0);
+  const altWoche = k.wochen[key] || {};
+  const cacheSumme = Number(altWoche.cacheSumme || 0);
+  k.wochen[key] = {
+    ...altWoche,
+    usd: Number(wochenUsd.toFixed(6)),
+    aufrufe: wochenAufrufe,
     cacheSumme,
-    cacheAnteil: aufrufe ? cacheSumme / aufrufe : 0,
+    cacheAnteil: wochenAufrufe ? cacheSumme / wochenAufrufe : 0,
   };
   hosting.jsonSchreiben("kosten.json", k);
 }
