@@ -168,6 +168,9 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story h1.klein{font-size:96px}
 .story .text{font-size:48px;line-height:1.4;margin-top:44px}
 .story .norm{margin-top:60px;font-family:var(--mono);font-size:64px;line-height:1.2;color:var(--akzent);text-wrap:balance}
+.story .norm.norm-liste{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;text-wrap:initial}
+.story .norm .norm-einheit{display:inline-block;white-space:nowrap}
+.story .norm .norm-einheit:not(:last-child)::after{content:" ·"}
 .stil-klausurbogen .story .norm{color:var(--rot)}
 .story .optionen{margin-top:60px;display:flex;flex-direction:column;gap:24px}
 .story .optionen div{padding:30px 36px;border:3px solid var(--linie);border-radius:var(--ecken);font-size:42px;line-height:1.3;background:var(--flaeche);display:flex;gap:24px}
@@ -431,13 +434,16 @@ em{color:${p.akzent2}}
 .story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:fit-content;max-width:100%;font-size:123px;line-height:1.02;letter-spacing:-.018em}
 .story.cover h1.titel-stack.klein{font-size:112px}
 .story.cover h1.titel-stack.winzig{font-size:101px}
-.story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;background:${p.dunkel};color:#fff;padding:14px 34px 16px;border-radius:38px;white-space:nowrap}
+.story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;box-sizing:border-box;background:${p.dunkel};color:#fff;padding:14px 34px 16px;border-radius:38px;white-space:nowrap}
 .story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
 /* Cover-v2 no-arrow: keine automatisch erzeugte Dauer-Handschrift. */
 .story.cover .dauer{display:none}
 .story.cover .dauer::before{display:none}
 .story.cover .buehne::before{background:rgba(255,255,255,.75);opacity:1}
 .story.cover .buehne .icon{color:${p.dunkel}}
+/* Auf Charakter-Reel-Covern ist das Rechtsgebiet bereits oben links genannt.
+   Die zweite Fusszeile lag bisher mit z-index 3 direkt auf Figuren/Portal. */
+.story.cover:has(.frei.charakter) .fuss{display:none}
 /* Reels */
 .reel .fortschritt{background:rgba(255,255,255,.4)}
 .reel .fortschritt i{background:${p.dunkel}}
@@ -814,6 +820,27 @@ function storyZahlGroesse(wert) {
   return 180;
 }
 
+function normListeHtml(wert, extraKlasse = "") {
+  const teile = String(wert || "").split(/\s*·\s*/).map((x) => x.trim()).filter(Boolean);
+  const klasse = `norm${extraKlasse ? ` ${extraKlasse}` : ""}`;
+  if (teile.length <= 1) return `<div class="${klasse}">${esc(wert)}</div>`;
+  return `<div class="${klasse} norm-liste">${teile.map((teil) => `<span class="norm-einheit">${esc(teil)}</span>`).join("")}</div>`;
+}
+
+function storySemantikPruefen(story = {}) {
+  if (story.art === "fehler") {
+    if (!String(story.falsch || story.titel || "").trim()) {
+      throw new Error("Fehler-Story braucht eine falsche Aussage in falsch oder titel.");
+    }
+    if (!String(story.richtigText || story.text || "").trim()) {
+      throw new Error("Fehler-Story braucht eine richtige Aufloesung in richtigText oder text.");
+    }
+  }
+  if (story.art === "norm" && !String(story.norm || "").trim()) {
+    throw new Error("Norm-Story braucht mindestens eine Norm.");
+  }
+}
+
 const STORIES = {
   teaser: (s, ctx) => `
     ${sk(ctx)}
@@ -848,7 +875,7 @@ const STORIES = {
   norm: (s, ctx) => `
     ${sk(ctx)}
     ${ueberzeile("norm", s.ueberzeile || "Norm des Tages")}
-    <div class="norm">${esc(s.norm)}</div>
+    ${normListeHtml(s.norm)}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
     <div class="geist">§</div>
@@ -909,16 +936,21 @@ const STORIES = {
     <div class="text">${markieren(s.text)}</div>
     ${bildOderIllu(ctx, s)}
     ${fuss(ctx)}`,
-  fehler: (s, ctx) => `
+  fehler: (s, ctx) => {
+    const falsch = String(s.falsch || s.titel || "").trim();
+    const richtig = String(s.richtigText || s.text || "").trim();
+    return `
     ${sk(ctx)}
     ${ueberzeile("fehler", s.ueberzeile || "Typischer Fehler")}
-    <h1 class="klein">${markierenTitel(s.titel)}</h1>
-    <div class="karte"><div class="t" style="color:var(--rot)">Falsch</div><div class="u">${markieren(s.falsch)}</div></div>
-    <div class="karte"><div class="t" style="color:var(--ok)">Richtig</div><div class="u">${markieren(s.richtigText || s.text)}</div></div>
-    ${fuss(ctx)}`,
+    ${s.falsch && s.titel ? `<h1 class="klein">${markierenTitel(s.titel)}</h1>` : ""}
+    <div class="karte"><div class="t" style="color:var(--rot)">Falsch</div><div class="u">${markieren(falsch)}</div></div>
+    <div class="karte"><div class="t" style="color:var(--ok)">Richtig</div><div class="u">${markieren(richtig)}</div></div>
+    ${fuss(ctx)}`;
+  },
 };
 
 export function storyHtml(story, ctx) {
+  storySemantikPruefen(story);
   const render = STORIES[story.art] || STORIES.tipp;
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>${css(ctx.stil, "story")}${klausurCss(ctx)}${buntCss(ctx)}</style></head>
 <body class="stil-${ctx.stil.id} familie-${ctx.stil.familie || ctx.stil.id}"><div class="story">${render(story, ctx)}</div></body></html>`;
