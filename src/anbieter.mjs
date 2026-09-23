@@ -62,6 +62,16 @@ export class OhneKontext extends KostenKontrollFehler {
   }
 }
 
+export class OhneKostenjournal extends KostenKontrollFehler {
+  constructor(zweck) {
+    super(`Bezahlter Aufruf „${zweck}“ ohne durables Kostenjournal. `
+      + `Der Provider wird nicht angesprochen: Jede Ausgabe muss vor dem Senden reserviert `
+      + `und danach mit Zweck, Anbieter und Betrag nachvollziehbar gespeichert werden.`);
+    this.name = "OhneKostenjournal";
+    this.zweck = zweck;
+  }
+}
+
 /* maxRetries: 0 ist Absicht. Das SDK wiederholt sonst bei 429 und 5xx von
    sich aus - das sind weitere Anbieteraufrufe, von denen keine Zulassung
    etwas wuesste. Wiederholungen sind Sache des Aufrufers, mit eigener
@@ -114,6 +124,7 @@ function profilVon({ zweck, provider, modell, params, promptVersion, effort, den
  */
 async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, optional, pflichtName, effort, denkmodus, promptVersion, senden, preis, admissionInputTokens = null }) {
   if (!kontext?.budget) throw new OhneKontext(zweck);
+  if (!kontext?.journal) throw new OhneKostenjournal(zweck);
   const { budget, telemetrie, journal } = kontext;
   const { profil, familie, maxTokens } = profilVon({ zweck, provider, modell, params, promptVersion, effort, denkmodus });
   /* Die Ausgabeseite ist gedeckelt (das Ceiling erzwingt der Anbieter). Die
@@ -158,7 +169,10 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
   let reservierung = null;
   if (journal) {
     try {
-      reservierung = await journal.reservieren({ bucket: griff.topf, purpose: zweck, attempt, reservedUsd: griff.reservedUsd, slot });
+      reservierung = await journal.reservieren({
+        bucket: griff.topf, purpose: zweck, attempt, reservedUsd: griff.reservedUsd, slot,
+        provider, model: modell, promptVersion,
+      });
     } catch (e) {
       griff.freigeben();
       telemetrie?.aufruf({ ...roh, sent: false, actualUsd: 0, releasedUsd: griff.reservedUsd, outcome: "abgelehnt", errorType: e.name, approved: false });
@@ -179,7 +193,16 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
     griff.kosten(usd);
     const usage = antwort?.usage || {};
     griff.buchen(usd);
-    journal?.abrechnen(reservierung, usd);
+    const usageLedger = {
+      inputTokens: usage.input_tokens ?? usage.input_tokens_details?.total ?? null,
+      outputTokens: usage.output_tokens ?? null,
+      cacheReadTokens: usage.cache_read_input_tokens ?? null,
+      cacheWriteTokens: usage.cache_creation_input_tokens ?? null,
+      serverToolUsage: usage.server_tool_use ?? null,
+    };
+    await journal.abrechnen(reservierung, usd, {
+      provider, model: modell, promptVersion, outcome: "ok", usage: usageLedger,
+    });
     telemetrie?.aufruf({
       ...roh, sent: true, actualUsd: usd, usd,
       releasedUsd: Math.max(0, Math.round((griff.reservedUsd - usd) * 1e6) / 1e6),
@@ -198,7 +221,9 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
        als „Kosten unbekannt“ zu protokollieren wuerde die eine Zeile
        unbrauchbar machen, die hinterher erklaert, was schiefging. */
     if (e instanceof InvarianteVerletzt) {
-      journal?.abrechnen(reservierung, e.tatsaechlich);
+      await journal.abrechnen(reservierung, e.tatsaechlich, {
+        provider, model: modell, promptVersion, outcome: "invariant_violation", errorType: e.name,
+      });
       telemetrie?.aufruf({
         ...roh, sent: true, spendUnknown: false,
         actualUsd: e.tatsaechlich, usd: e.tatsaechlich, releasedUsd: 0,
@@ -216,7 +241,9 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
     if (Number(e?.status) === 400) {
       griff.kosten(0);
       griff.buchen(0);
-      journal?.abrechnen(reservierung, 0);
+      await journal.abrechnen(reservierung, 0, {
+        provider, model: modell, promptVersion, outcome: "provider_rejected_400", errorType: e?.name || "HTTP400",
+      });
       telemetrie?.aufruf({
         ...roh, sent: true, spendUnknown: false, actualUsd: 0, usd: 0,
         releasedUsd: griff.reservedUsd, outcome: "provider_rejected_400",
@@ -225,8 +252,15 @@ async function durchDieTuer({ zweck, provider, modell, params, attempt, slot, op
       throw e;
     }
     const gesendet = griff.istGesendet();
-    if (!gesendet) { griff.freigeben(); journal?.verfallen(reservierung, e?.name || "vor dem Senden abgebrochen"); }
-    else { griff.ungeklaert(e?.name || "Fehler nach dem Senden"); journal?.ungeklaert(reservierung, e?.name || "Fehler nach dem Senden"); }
+    if (!gesendet) {
+      griff.freigeben();
+      await journal.verfallen(reservierung, e?.name || "vor dem Senden abgebrochen");
+    } else {
+      griff.ungeklaert(e?.name || "Fehler nach dem Senden");
+      await journal.ungeklaert(reservierung, e?.name || "Fehler nach dem Senden", {
+        outcome: "ungeklaert", errorType: e?.name || String(e?.message || e).slice(0, 80),
+      });
+    }
     telemetrie?.aufruf({
       ...roh, sent: gesendet, spendUnknown: gesendet, actualUsd: gesendet ? null : 0,
       releasedUsd: gesendet ? 0 : griff.reservedUsd,
@@ -332,6 +366,7 @@ export async function openaiBildEditSenden({ form, key, zeitlimitMs = 120000, fe
  */
 export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null, preisUsd = null, slot = null, optional = true, modell = "gpt-image-1-mini", zeitlimitMs = 120000, url = "https://api.openai.com/v1/images/generations", fetchFn = fetch, kostenAusAntwort = null }) {
   if (!kontext?.budget) throw new OhneKontext(zweck);
+  if (!kontext?.journal) throw new OhneKostenjournal(zweck);
   const { budget, telemetrie, journal } = kontext;
   const stueck = preisUsd ?? CONFIG.bilder?.ki?.preisUsd ?? 0.01;
   const roh = { purpose: zweck, provider: "openai", model: modell, attempt: 1, slot, maxTokens: null, profileId: `${zweck}:stueck`, calibrationFamily: `${zweck} / ${modell} / - / stueck` };
@@ -347,7 +382,10 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
   let reservierung = null;
   if (journal) {
     try {
-      reservierung = await journal.reservieren({ bucket: griff.topf, purpose: zweck, attempt: 1, reservedUsd: griff.reservedUsd, slot });
+      reservierung = await journal.reservieren({
+        bucket: griff.topf, purpose: zweck, attempt: 1, reservedUsd: griff.reservedUsd, slot,
+        provider: "openai", model: modell, promptVersion: "image",
+      });
     } catch (e) {
       griff.freigeben();
       telemetrie?.aufruf({ ...roh, sent: false, actualUsd: 0, releasedUsd: griff.reservedUsd, outcome: "abgelehnt", errorType: e.name, approved: false });
@@ -389,11 +427,21 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     const tatsaechlich = Number.isFinite(gemessen) && gemessen >= 0 ? gemessen : stueck;
     griff.kosten(tatsaechlich);
     griff.buchen(tatsaechlich);
-    journal?.abrechnen(reservierung, tatsaechlich);
-    erfassenStueck(tatsaechlich, zweck);
     const usage = ergebnis?.usage || {};
     const inDetails = usage.input_tokens_details || {};
     const outDetails = usage.output_tokens_details || {};
+    await journal.abrechnen(reservierung, tatsaechlich, {
+      provider: "openai", model: modell, promptVersion: "image", outcome: "ok",
+      usage: {
+        inputTokens: usage.input_tokens ?? null,
+        outputTokens: usage.output_tokens ?? null,
+        imageInputTokens: inDetails.image_tokens ?? null,
+        textInputTokens: inDetails.text_tokens ?? null,
+        imageOutputTokens: outDetails.image_tokens ?? null,
+        textOutputTokens: outDetails.text_tokens ?? null,
+      },
+    });
+    erfassenStueck(tatsaechlich, zweck);
     telemetrie?.aufruf({
       ...roh, sent: true, actualUsd: tatsaechlich, usd: tatsaechlich,
       releasedUsd: Math.max(0, stueck - tatsaechlich), outcome: "ok", approved: true,
@@ -407,7 +455,9 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     return ergebnis;
   } catch (e) {
     if (e instanceof InvarianteVerletzt) {
-      journal?.abrechnen(reservierung, e.tatsaechlich);
+      await journal.abrechnen(reservierung, e.tatsaechlich, {
+        provider: "openai", model: modell, promptVersion: "image", outcome: "invariant_violation", errorType: e.name,
+      });
       telemetrie?.aufruf({ ...roh, sent: true, spendUnknown: false, actualUsd: e.tatsaechlich, usd: e.tatsaechlich, releasedUsd: 0, outcome: "invariant_violation", errorType: e.name, approved: false });
       throw e;
     }
@@ -418,13 +468,22 @@ export async function bildAufruf({ zweck = "bild", auftrag = null, senden = null
     if (Number(e?.status) === 400) {
       griff.kosten(0);
       griff.buchen(0);
-      journal?.abrechnen(reservierung, 0);
+      await journal.abrechnen(reservierung, 0, {
+        provider: "openai", model: modell, promptVersion: "image", outcome: "provider_rejected", errorType: e.name || "HTTP400",
+      });
       telemetrie?.aufruf({ ...roh, sent: true, spendUnknown: false, actualUsd: 0, usd: 0, releasedUsd: stueck, outcome: "provider_rejected", errorType: e.name || "HTTP400", approved: false });
       throw e;
     }
     const gesendet = griff.istGesendet();
-    if (!gesendet) { griff.freigeben(); journal?.verfallen(reservierung, e?.name || "vor dem Senden abgebrochen"); }
-    else { griff.ungeklaert(e?.name || "Fehler nach dem Senden"); journal?.ungeklaert(reservierung, e?.name || "Fehler nach dem Senden"); }
+    if (!gesendet) {
+      griff.freigeben();
+      await journal.verfallen(reservierung, e?.name || "vor dem Senden abgebrochen");
+    } else {
+      griff.ungeklaert(e?.name || "Fehler nach dem Senden");
+      await journal.ungeklaert(reservierung, e?.name || "Fehler nach dem Senden", {
+        outcome: "ungeklaert", errorType: e?.name || "Fehler",
+      });
+    }
     telemetrie?.aufruf({ ...roh, sent: gesendet, spendUnknown: gesendet, actualUsd: gesendet ? null : 0, releasedUsd: gesendet ? 0 : stueck, outcome: gesendet ? "ungeklaert" : "nicht-gesendet", errorType: e?.name || "Fehler", approved: false });
     throw e;
   }
