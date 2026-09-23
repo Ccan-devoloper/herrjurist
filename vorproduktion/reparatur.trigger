@@ -1,13 +1,15 @@
 {
-  "stand": "2026-09-23T21:17:30Z",
+  "stand": "2026-09-23T23:56:00+02:00",
   "modus": "lokal-ohne-provider",
-  "grund": "Finale CTA-Icon-Korrektur 2026-09-25 b2",
+  "grund": "Wochenrueckblick-Restgruppe konkret benennen",
   "tage": {
-    "2026-09-25": {
+    "2026-09-27": {
       "stories": [],
       "teasers": [],
       "carouselSlides": {
-        "b2": [
+        "b1": [
+          1,
+          5,
           7
         ]
       },
