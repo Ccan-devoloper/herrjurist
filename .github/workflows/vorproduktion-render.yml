@@ -69,6 +69,17 @@ jobs:
       - name: Zwei Tage vollständig als Review-Vorschau rendern
         run: node bin/vorproduktion-rendern.mjs 2026-09-24 2026-09-25
 
+      - name: Rohbilder als Notfallkopie sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vorproduktion-rohbilder-${{ github.run_id }}
+          path: |
+            .instagram-assets/vorproduktion/*/rohbilder/*.png
+            .instagram-assets/vorproduktion/*/rohbilder/*.json
+          if-no-files-found: ignore
+          retention-days: 30
+
       - name: Telemetrie sichern
         if: always()
         uses: actions/upload-artifact@v4
