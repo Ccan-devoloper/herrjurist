@@ -313,7 +313,7 @@ h1 em{color:${p.akzent2}}
 .merke-icon{width:96px;height:96px;border-radius:26px;background:rgba(255,255,255,.85);margin-bottom:24px;display:flex;align-items:center;justify-content:center}
 .folie:not(.art-titel) > .merke-icon + h2{margin-top:0}
 .folie:not(.art-titel) > .cta{margin-top:0;margin-bottom:0}
-.art-titel:has(.foto)::after,.art-titel:has(.frei)::after{display:none}
+.art-titel:has(.foto)::after,.art-titel:has(.frei)::after,.art-titel.cover-ohne-bild::after{display:none}
 /* Freigestelltes Motiv: unten rechts, laeuft ueber den Rand hinaus. Der
    Schatten setzt es von der Flaeche ab, ohne einen Rahmen zu zeichnen. */
 /* Die Buehne endet unterhalb des Kopfblocks: Seit die Motive zugeschnitten
@@ -353,8 +353,8 @@ h1 em{color:${p.akzent2}}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
-.art-titel:has(.frei) .fuss{position:absolute;left:52px;right:28px;bottom:24px;margin-top:0;z-index:3}
-.art-titel:has(.frei) .fuss .klausur{background:var(--hell);color:${p.dunkel};padding:7px 20px;border-radius:30px}
+.art-titel:has(.frei) .fuss,.art-titel.cover-ohne-bild .fuss{position:absolute;left:52px;right:28px;bottom:24px;margin-top:0;z-index:3}
+.art-titel:has(.frei) .fuss .klausur,.art-titel.cover-ohne-bild .fuss .klausur{background:var(--hell);color:${p.dunkel};padding:7px 20px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1;background:rgba(255,255,255,.14);padding:18px;box-sizing:border-box}
 .foto img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:28px}
 .illu{right:auto;left:330px;bottom:70px;width:420px;height:420px;color:${p.dunkel};opacity:1;z-index:1}
@@ -413,6 +413,10 @@ em{color:${p.akzent2}}
 .story .optionen div.richtig{box-shadow:inset 0 0 0 5px ${p.dunkel}}
 .story .zahl{color:#fff;text-shadow:0 12px 40px rgba(0,0,0,.18)}
 .story .zahl-unter{color:${p.dunkel}}
+.story .zahl-punkte{margin-top:34px;display:flex;flex-direction:column;gap:16px}
+.story .zahl-punkte .zp{display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;background:var(--flaeche);border-radius:26px;padding:20px 26px;color:${p.dunkel};font-size:34px;line-height:1.28}
+.story .zahl-punkte .zp b{font-family:var(--titel);font-size:36px;line-height:1.15}
+
 .story .merke{font-size:78px}
 .story .karte{background:var(--flaeche);border:0;border-radius:30px;color:#1c1c22}
 .story .karte .t{color:${p.dunkel}}
@@ -740,6 +744,18 @@ function titelBlock(titel, zeilen, ctx) {
   return `<h1 class="${klasse}"><span class="z">${markierenTitel(titel)}</span></h1>`;
 }
 
+function ctaIconAusText(text, index = 0) {
+  const t = String(text || "").toLowerCase();
+  if (/zustell|brief|post|mitteil|bescheid/.test(t)) return "umschlag";
+  if (/titel|urteil|anspruch|norm|schema/.test(t)) return "dokument";
+  if (/klausel|ausnahme|prüf|kontroll|sichtbar/.test(t)) return "lupe";
+  if (/vollstreck|gericht|entscheidung/.test(t)) return "hammer";
+  if (/speicher|wiederhol|lernen/.test(t)) return "buch";
+  if (/lerngruppe|teilen|schick|person/.test(t)) return "personen";
+  if (/frage|kommentar|unklar/.test(t)) return "sprechblase";
+  return ["haken", "buch", "personen"][index % 3];
+}
+
 const FOLIEN = {
   titel: (f, ctx, i, n) => {
     const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
@@ -800,7 +816,7 @@ const FOLIEN = {
     <div class="cta">
       <h2>${markieren(f.titel || "Folgen für mehr.")}</h2>
       <div class="liste">
-        ${(f.punkte || ["Folgen für tägliche Prüfungsfragen", "Speichern für die Wiederholung", "Fragen? Ab in die Kommentare"]).map((p, k) => `<div>${iconSvg(["haken", "buch", "personen"][k % 3], 56)}<span>${markieren(p)}</span></div>`).join("")}
+        ${(f.punkte || ["Folgen für tägliche Prüfungsfragen", "Speichern für die Wiederholung", "Fragen? Ab in die Kommentare"]).map((p, k) => `<div>${iconSvg(f.icons?.[k] || ctaIconAusText(p, k), 56)}<span>${markieren(p)}</span></div>`).join("")}
       </div>
     </div>
     ${fuss(ctx)}`,
@@ -809,7 +825,7 @@ const FOLIEN = {
 export function folieHtml(folie, ctx, index, anzahl) {
   const render = FOLIEN[folie.art] || FOLIEN.text;
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>${css(ctx.stil, "beitrag")}${klausurCss(ctx)}${buntCss(ctx)}</style></head>
-<body class="stil-${ctx.stil.id} familie-${ctx.stil.familie || ctx.stil.id}"><div class="folie art-${esc(folie.art || "text")}">${render(folie, ctx, index, anzahl)}</div></body></html>`;
+<body class="stil-${ctx.stil.id} familie-${ctx.stil.familie || ctx.stil.id}"><div class="folie art-${esc(folie.art || "text")}${folie.art === "titel" && folie.coverBildAuslassen ? " cover-ohne-bild" : ""}">${render(folie, ctx, index, anzahl)}</div></body></html>`;
 }
 
 const sk = (ctx) => kopf(ctx, "");
@@ -850,6 +866,14 @@ function storySemantikPruefen(story = {}) {
   }
   if (story.art === "norm" && !String(story.norm || "").trim()) {
     throw new Error("Norm-Story braucht mindestens eine Norm.");
+  }
+  if (story.art === "zahl") {
+    const n = Number.parseInt(String(story.zahl || ""), 10);
+    if (Number.isInteger(n) && n >= 2 && n <= 6) {
+      if (!Array.isArray(story.punkte) || story.punkte.length !== n) {
+        throw new Error(`Zahl-Story mit ${n} braucht genau ${n} sichtbar getrennte punkte.`);
+      }
+    }
   }
 }
 
@@ -896,6 +920,7 @@ const STORIES = {
      unterscheidet. Zwei Ansichten nebeneinander, darunter der Streitentscheid:
      genau die Reihenfolge, in der er in der Klausur geschrieben wird. */
   streitstand: (s, ctx) => `
+    ${sk(ctx)}
     ${ueberzeile("streitstand", s.ueberzeile || "Streitstand")}
     <h1 class="klein">${markierenTitel(s.titel)}</h1>
     ${s.norm ? `<div class="norm klein">${esc(s.norm)}</div>` : ""}
@@ -939,7 +964,7 @@ const STORIES = {
     ${ueberzeile("zahl", s.ueberzeile || "Zahl des Tages")}
     <div class="zahl" style="font-size:${storyZahlGroesse(s.zahl)}px;white-space:nowrap;max-width:100%">${esc(s.zahl)}</div>
     <div class="zahl-unter">${markierenTitel(s.titel)}</div>
-    ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
+    ${s.punkte?.length ? `<div class="zahl-punkte">${s.punkte.map((p, i) => `<div class="zp"><b>${i + 1}</b><span>${markieren(p)}</span></div>`).join("")}</div>` : (s.text ? `<div class="text">${markieren(s.text)}</div>` : "")}
     ${fuss(ctx)}`,
   tipp: (s, ctx) => `
     ${sk(ctx)}
