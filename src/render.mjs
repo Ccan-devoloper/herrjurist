@@ -53,6 +53,7 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     await page.goto(`file://${tmp}`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(einpassen);
+    await page.evaluate(coverTitelEinpassen);
     await page.evaluate(coverTitelGeometriePruefen);
     await page.evaluate(coverHinweisAusPlanPlatzieren);
     await page.waitForTimeout(60);
@@ -68,24 +69,60 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
   return messen ? { pfad: zielPfad, kasten } : zielPfad;
 }
 
-/* Titelpillen sind feste Marken-Geometrie. Anders als normale Folientexte
-   werden sie nicht nachträglich kleingerechnet. Falls eine semantische Zeile
-   trotz der vorherigen Zeilen-Normalisierung noch aus der Pille läuft, ist das
-   ein redaktioneller Fehler und kein Anlass für stilles CSS-Schrumpfen. */
+/* Cover-Titel haben wenige klar definierte Markengrößen. Für Reel-Cover
+   reichte die Zeichenanzahl allein nicht: breite Buchstabenfolgen liefen trotz
+   plausibler Zeilenlänge rechts aus dem 1080er Canvas. Deshalb messen wir die
+   reale Browser-Geometrie und reduzieren nur den gesamten Titelblock in kleinen
+   Schritten. Unterhalb der Lesbarkeitsgrenze wird hart abgebrochen. */
+function coverTitelEinpassen() {
+  const wurzel = document.querySelector(".folie.art-titel, .story.cover");
+  const titel = wurzel?.querySelector("h1.titel-stack");
+  if (!wurzel || !titel) return;
+
+  const root = wurzel.getBoundingClientRect();
+  const cs = getComputedStyle(wurzel);
+  const rechts = root.right - Math.max(24, parseFloat(cs.paddingRight || 0));
+  const links = root.left + Math.max(24, parseFloat(cs.paddingLeft || 0));
+  const mindest = wurzel.matches(".story.cover") ? 84 : 78;
+
+  const passt = () => [...titel.querySelectorAll(".titel-zeile")].every((zeile) => {
+    const box = zeile.getBoundingClientRect();
+    return zeile.scrollWidth <= zeile.clientWidth + 1
+      && box.left >= links - 1
+      && box.right <= rechts + 1;
+  });
+
+  let groesse = parseFloat(getComputedStyle(titel).fontSize);
+  let n = 0;
+  while (!passt() && groesse > mindest + 0.5 && n++ < 16) {
+    groesse = Math.max(mindest, groesse * 0.94);
+    titel.style.fontSize = `${groesse}px`;
+  }
+  titel.dataset.autoFitPx = String(Math.round(groesse * 10) / 10);
+}
+
+/* Harte Endkontrolle für BEIDE Covertypen. Früher wurde nur
+   .folie.art-titel geprüft; .story.cover (Reels) konnte deshalb unbemerkt
+   abgeschnitten exportiert werden und bestand sogar den Layout-Preflight. */
 function coverTitelGeometriePruefen() {
-  const wurzel = document.querySelector(".folie.art-titel");
+  const wurzel = document.querySelector(".folie.art-titel, .story.cover");
   const titel = wurzel?.querySelector("h1.titel-stack");
   if (!wurzel || !titel) return;
   const root = wurzel.getBoundingClientRect();
-  const rechts = root.right - 52;
+  const cs = getComputedStyle(wurzel);
+  const rechts = root.right - Math.max(24, parseFloat(cs.paddingRight || 0));
+  const links = root.left + Math.max(24, parseFloat(cs.paddingLeft || 0));
   const fehler = [];
   for (const zeile of titel.querySelectorAll(".titel-zeile")) {
     const box = zeile.getBoundingClientRect();
-    if (zeile.scrollWidth > zeile.clientWidth + 1 || box.right > rechts + 1) {
+    if (zeile.scrollWidth > zeile.clientWidth + 1 || box.left < links - 1 || box.right > rechts + 1) {
       fehler.push(String(zeile.textContent || "").trim());
     }
   }
-  if (fehler.length) throw new Error(`Cover-Titelzeile passt nicht in die feste Markenpille: ${fehler.join(" | ")}`);
+  if (fehler.length) {
+    const art = wurzel.matches(".story.cover") ? "Reel-Cover" : "Beitrags-Cover";
+    throw new Error(`${art}-Titel passt nicht in die feste Markenpille: ${fehler.join(" | ")}`);
+  }
 }
 
 /* Setzt den handschriftlichen Hinweis nach dem von der visuellen KI-QA
