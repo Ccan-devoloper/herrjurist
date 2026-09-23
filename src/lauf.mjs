@@ -44,6 +44,7 @@ import { zustandsSicherung } from "./zustand.mjs";
 import { budgetStarten, ZWECK_TOPF, AdmissionAbgelehnt, TopfGesperrt } from "./budget.mjs";
 import { telemetrieStarten } from "./telemetrie.mjs";
 import { journalStarten } from "./journal.mjs";
+import { einzelkostenSynchronisieren } from "./kostenledger.mjs";
 import { gemeinschaftsBudget } from "./gemeinschaftsbudget.mjs";
 import { bestandLaden, bestandInhalt, reserveAufraeumen, reserveEntnehmen, reserveAuffuellen, ersatzZulaessig, BESTAND_DATEI } from "./reservelauf.mjs";
 import { themaTauglich, ZIEL_BESTAND, RESERVE_FORMATE, DUBLETTEN_TAGE } from "./reserve.mjs";
@@ -316,7 +317,12 @@ async function main() {
     lesen: () => hosting.jsonLesen("budget-journal.json", null),
     schreiben: async (inhalt) => {
       hosting.jsonSchreiben("budget-journal.json", inhalt);
-      hosting.commit(`Budget-Journal ${datum}`);
+      /* Derselbe durable Schreibvorgang aktualisiert die langfristige
+         Einzelkosten-Historie. Damit existiert kein separates Hilfsledger,
+         das bei Preview-/Reserve-/Fehlerläufen vergessen werden könnte. */
+      const kosten = hosting.jsonLesen("kosten.json", { wochen: {}, tage: {} });
+      hosting.jsonSchreiben("kosten.json", einzelkostenSynchronisieren(kosten, inhalt));
+      hosting.commit(`Budget-Journal + Einzelkosten ${datum}`);
       const gepusht = await hosting.push();
       /* Ohne Remote (IG_NO_PUSH) ist die lokale Datei die Durability, die es
          gibt - dann wird sie auch nicht mehr verlangt. */
