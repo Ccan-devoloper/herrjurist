@@ -353,8 +353,10 @@ h1 em{color:${p.akzent2}}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
-.art-titel:has(.frei) .fuss,.art-titel.cover-ohne-bild .fuss{position:absolute;left:52px;right:28px;bottom:24px;margin-top:0;z-index:3}
-.art-titel:has(.frei) .fuss .klausur,.art-titel.cover-ohne-bild .fuss .klausur{background:var(--hell);color:${p.dunkel};padding:7px 20px;border-radius:30px}
+.art-titel:has(.frei) .fuss{position:absolute;left:52px;right:28px;bottom:24px;margin-top:0;z-index:3}
+.art-titel.cover-ohne-bild .fuss{position:absolute;left:52px;right:28px;bottom:24px;margin-top:0;z-index:3}
+.art-titel:has(.frei) .fuss .klausur{background:var(--hell);color:${p.dunkel};padding:7px 20px;border-radius:30px}
+.art-titel.cover-ohne-bild .fuss .klausur{background:var(--hell);color:${p.dunkel};padding:7px 20px;border-radius:30px}
 .foto{position:absolute;left:60px;right:60px;bottom:118px;height:520px;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:1;background:rgba(255,255,255,.14);padding:18px;box-sizing:border-box}
 .foto img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:28px}
 .illu{right:auto;left:330px;bottom:70px;width:420px;height:420px;color:${p.dunkel};opacity:1;z-index:1}
