@@ -717,6 +717,57 @@
       "textProviderKostenUsd": 0,
       "faktencheckProviderKostenUsd": 0,
       "bildStatus": "ausstehend"
+    },
+    "s1": {
+      "slot": "s1",
+      "art": "teaser",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "titel": "VA mit Drittwirkung",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b1",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bereits-vorhandenes-feed-asset-keine-neugenerierung"
+    },
+    "s2": {
+      "slot": "s2",
+      "art": "teaser",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "titel": "Vormerkung: Sicherung statt Eigentum",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b2",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bereits-vorhandenes-feed-asset-keine-neugenerierung"
+    },
+    "s3": {
+      "slot": "s3",
+      "art": "teaser",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "titel": "Zusammengesetzte Urkunde",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b3",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bereits-vorhandenes-feed-asset-keine-neugenerierung"
     }
   },
   "hookOptimierung": {
@@ -734,11 +785,26 @@
     "bildKostenUsd": 0.219972,
     "freigabeBetreiber": false,
     "letzteKostenloseReparatur": {
-      "stand": "2026-09-23T19:14:12.167Z",
+      "stand": "2026-09-23T21:14:34.022Z",
       "stories": [
-        "s6"
+        "s7"
       ],
-      "reelCovers": [],
+      "teasers": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "carouselSlides": {
+        "b1": [
+          7
+        ],
+        "b2": [
+          7
+        ]
+      },
+      "reelCovers": [
+        "b3"
+      ],
       "providerKostenUsd": 0,
       "bildgenerierungKostenUsd": 0
     },
