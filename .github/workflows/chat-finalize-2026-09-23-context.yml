@@ -1,4 +1,4 @@
-name: Chat finalize 2026-09-23 · visual preview v2
+name: Chat finalize 2026-09-23 · free b3 cover reuse
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
@@ -6,9 +6,9 @@ on:
 permissions:
   contents: write
 jobs:
-  preview:
+  cover:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,30 +20,71 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Prepare existing approved character scene
         run: |
-          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list || true
-          npx playwright install --with-deps chromium || npx playwright install chromium
-      - name: Image dependencies
+          git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
+          git show origin/instagram-assets:vorschau/2026-09-23/b3-2026-09-23-b3-cover-mudqqa82.jpg > /tmp/b3-source.jpg
+          ffmpeg -y -hide_banner -loglevel error -i /tmp/b3-source.jpg -vf "crop=1080:1200:0:720" /tmp/b3-scene.jpg
+      - name: Render corrected cover without paid providers
         run: |
-          pip install --quiet "rembg[cli]" onnxruntime
-          sudo apt-get update -qq >/dev/null
-          sudo apt-get install -y -qq ffmpeg >/dev/null
-      - name: Render today's Herr-Jurist previews with character QA
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          IG_BILD_KI: "true"
-          IG_BILDER: "true"
-          IG_CHARAKTERE: "true"
-          IG_CHARAKTER_QA: "true"
-          IG_BILDER_FREISTELLEN: "true"
-          IG_ABLEGEN: "1"
-          IG_PREVIEW_BUDGET_USD: "1.50"
-          IG_ASSET_BRANCH: "instagram-assets"
-          GIT_AUTHOR_NAME: instagram-bot
-          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        run: node bin/nachrendern.mjs 2026-09-23
+          cat > .chat-b3-cover.mjs <<'NODE'
+          import fs from "node:fs";
+          import path from "node:path";
+          import { chromium } from "playwright";
+          import { coverHtml } from "./src/vorlagen.mjs";
+          import { kontext } from "./src/render.mjs";
+
+          const scene = `data:image/jpeg;base64,${fs.readFileSync("/tmp/b3-scene.jpg").toString("base64")}`;
+          const ctx = kontext({
+            fach: "assessorz",
+            klausur: 1,
+            fachLabel: "Zivilrechtliche Assessorklausur",
+            variante: 0,
+          });
+          const daten = {
+            titel: "Klageerwiderung mit Verteidigungsstrategie",
+            titelZeilen: ["Klageerwiderung", "Verteidigung", "mit Strategie"],
+            coverBadge: "Anwaltsklausur",
+            fach: "assessorz",
+            klausur: 1,
+            fachLabel: "Zivilrechtliche Assessorklausur",
+            icon: "dokument",
+          };
+          let html = coverHtml(daten, ctx);
+          html = html.replace("</style>", `
+            .story.cover .buehne{display:none!important}
+            .story.cover .fuss{display:none!important}
+            .story.cover h1.titel-stack{font-size:103px!important;line-height:1.01!important;gap:9px!important;margin-top:112px!important;position:relative;z-index:6}
+            .story.cover h1.titel-stack .titel-zeile{max-width:900px!important;padding:13px 31px 15px!important}
+            .story.cover .cover-badge{position:relative;z-index:6;margin-top:18px!important}
+            .story.cover .kopf,.story.cover .reelmarke{z-index:8}
+            .scene-reuse{position:absolute;left:0;top:720px;width:1080px;height:1200px;object-fit:cover;z-index:1}
+            .reuse-note{position:absolute;left:430px;top:735px;width:390px;z-index:7;font-family:"Caveat";font-size:58px;line-height:1.01;font-weight:700;color:var(--text);text-align:center;transform:rotate(-4deg);transform-origin:center center}
+          </style>`);
+          html = html.replace('<div class="story cover">', '<div class="story cover"><img class="scene-reuse" src="'+scene+'" alt="">');
+          html = html.replace("</div></body></html>", '<div class="reuse-note">Angriffspunkt zuerst</div></div></body></html>');
+
+          const browser = await chromium.launch({args:["--font-render-hinting=none"]});
+          const page = await browser.newPage({viewport:{width:1080,height:1920},deviceScaleFactor:1});
+          const tmp="/tmp/b3-final.html";
+          fs.writeFileSync(tmp,html);
+          await page.goto("file://"+tmp,{waitUntil:"load"});
+          await page.evaluate(()=>document.fonts.ready);
+          await page.screenshot({path:"/tmp/2026-09-23-b3-cover-final-free.jpg",type:"jpeg",quality:92,fullPage:false});
+          await page.close();
+          await browser.close();
+          NODE
+          node .chat-b3-cover.mjs
+          rm .chat-b3-cover.mjs
+      - name: Store preview in asset branch
+        run: |
+          git worktree add -B chat-assets /tmp/assets origin/instagram-assets
+          mkdir -p /tmp/assets/vorschau/2026-09-23
+          cp /tmp/2026-09-23-b3-cover-final-free.jpg /tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free.jpg
+          cd /tmp/assets
+          git config user.name instagram-bot
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free.jpg
+          git commit -m "Vorschau b3 final kostenlos 2026-09-23"
+          git push origin HEAD:instagram-assets
