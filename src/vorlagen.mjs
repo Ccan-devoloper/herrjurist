@@ -743,9 +743,9 @@ const FOLIEN = {
     ${f.untertitel ? `<p class="unter">${markieren(f.untertitel)}</p>` : ""}
     ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
     ${!bunt && f.pille ? `<div><span class="pille">${esc(f.pille)}</span></div>` : ""}
-    ${f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f)}
-    ${bunt && f.bild ? coverHinweisHtml(f) : ""}
-    ${!f.bild && bunt ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
+    ${f.coverBildAuslassen ? "" : (f.bild ? fotoBuehne(f) : bildOderIllu(ctx, f))}
+    ${!f.coverBildAuslassen && bunt && f.bild ? coverHinweisHtml(f) : ""}
+    ${!f.coverBildAuslassen && !f.bild && bunt ? `<div class="karte2">${iconSvg(zweitIcon(f.icon), 120)}</div><span class="stern" style="left:150px;top:790px">✦</span><span class="stern" style="left:900px;top:750px;font-size:40px">✦</span><span class="stern" style="left:860px;top:1040px">✦</span>` : ""}
     ${fuss(ctx)}`;
   },
   text: (f, ctx, i, n) => `
@@ -975,8 +975,8 @@ export function coverHtml(daten, ctx) {
     <span class="reelmarke">Reel</span>
     ${titelBlock(daten.titel, daten.titelZeilen, ctx)}
     ${badge ? `<div class="cover-badge">${esc(badge)}</div>` : ""}
-    ${daten.bild ? fotoBuehne(daten, BUEHNE_STORY) : `<div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>`}
-    ${bunt && daten.bild ? coverHinweisHtml(daten) : ""}
+    ${daten.coverBildAuslassen ? "" : (daten.bild ? fotoBuehne(daten, BUEHNE_STORY) : `<div class="buehne">${iconSvg(ICONS[daten.icon] ? daten.icon : "paragraf")}</div>`)}
+    ${!daten.coverBildAuslassen && bunt && daten.bild ? coverHinweisHtml(daten) : ""}
     ${fuss(ctx)}`;
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>${css(ctx.stil, "story")}${klausurCss(ctx)}${buntCss(ctx)}</style></head>
 <body class="stil-${ctx.stil.id} familie-${ctx.stil.familie || ctx.stil.id}"><div class="story cover">${inhalt}</div></body></html>`;
