@@ -165,6 +165,11 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story .ueberzeile{margin-top:70px;font-size:34px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-weich);font-weight:700}
 .story .etikett{font-size:30px}
 .story h1{font-size:120px;margin-top:34px}
+/* Normale Story-Titel duerfen nicht mit text-wrap:balance + fit-content
+   intrinsisch zusammenschrumpfen. Das erzeugte bei kurzen Titeln wie
+   "Nichtig oder schwebend unwirksam?" drei Zeilen, obwohl zwei passen.
+   Cover haben ihre eigene explizite Zeilenlogik weiter unten. */
+.story:not(.cover) h1{text-wrap:wrap;max-width:100%}
 .story h1.klein{font-size:96px}
 .story .text{font-size:48px;line-height:1.4;margin-top:44px}
 .story .norm{margin-top:60px;font-family:var(--mono);font-size:64px;line-height:1.2;color:var(--akzent);text-wrap:balance}
