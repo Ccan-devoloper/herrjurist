@@ -52,6 +52,7 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
   try {
     await page.goto(`file://${tmp}`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(storyTitelEinpassen);
     await page.evaluate(einpassen);
     await page.evaluate(coverTitelEinpassen);
     await page.evaluate(coverTitelGeometriePruefen);
@@ -67,6 +68,47 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     fs.rmSync(tmp, { force: true });
   }
   return messen ? { pfad: zielPfad, kasten } : zielPfad;
+}
+
+/* Kurze Story-Ueberschriften sollen die verfuegbare Breite nutzen, bevor
+   eine dritte Zeile entsteht. CSS allein reicht bei fit-/max-content und
+   deutschen Komposita nicht verlaesslich: Chromium kann bei 74px trotz voller
+   912px Innenbreite drei Zeilen setzen. Fuer kurze Titel wird deshalb nur so
+   weit verkleinert, bis hoechstens zwei Zeilen erreicht sind. */
+export function storyTitelEinpassen() {
+  const wurzel = document.querySelector(".story:not(.cover)");
+  const titel = wurzel?.querySelector("h1");
+  if (!wurzel || !titel) return;
+
+  const text = String(titel.textContent || "").trim().replace(/\s+/g, " ");
+  if (!text || text.length > 44) return;
+
+  titel.style.width = "max-content";
+  titel.style.maxWidth = "100%";
+  titel.style.textWrap = "wrap";
+
+  const zeilen = () => {
+    const cs = getComputedStyle(titel);
+    const lh = parseFloat(cs.lineHeight);
+    const innen = titel.clientHeight
+      - parseFloat(cs.paddingTop || 0)
+      - parseFloat(cs.paddingBottom || 0);
+    return lh > 0 ? Math.max(1, Math.round(innen / lh)) : 1;
+  };
+
+  let groesse = parseFloat(getComputedStyle(titel).fontSize);
+  const mindest = 62;
+  let n = 0;
+  while (zeilen() > 2 && groesse > mindest + 0.5 && n++ < 18) {
+    groesse = Math.max(mindest, groesse * 0.96);
+    titel.style.fontSize = `${groesse}px`;
+  }
+  titel.dataset.storyAutoFitPx = String(Math.round(groesse * 10) / 10);
+  titel.dataset.storyZeilen = String(zeilen());
+
+  if (zeilen() > 2) {
+    throw new Error(`Kurzer Story-Titel braucht trotz Auto-Fit mehr als zwei Zeilen: ${text}`);
+  }
 }
 
 /* Cover-Titel haben wenige klar definierte Markengrößen. Für Reel-Cover
