@@ -74,16 +74,24 @@ function storyTitelEinpassenLokal() {
       - parseFloat(cs.paddingBottom || 0);
     return lh > 0 ? Math.max(1, Math.round(innen / lh)) : 1;
   };
+  const horizontalPasst = () => {
+    const root = wurzel.getBoundingClientRect();
+    const rs = getComputedStyle(wurzel);
+    const links = root.left + parseFloat(rs.paddingLeft || 0);
+    const rechts = root.right - parseFloat(rs.paddingRight || 0);
+    const b = titel.getBoundingClientRect();
+    return titel.scrollWidth <= titel.clientWidth + 1 && b.left >= links - 1 && b.right <= rechts + 1;
+  };
 
   let groesse = parseFloat(getComputedStyle(titel).fontSize);
-  const mindest = 62;
+  const mindest = 50;
   let n = 0;
-  while (zeilen() > 2 && groesse > mindest + 0.5 && n++ < 18) {
+  while ((zeilen() > 2 || !horizontalPasst()) && groesse > mindest + 0.5 && n++ < 24) {
     groesse = Math.max(mindest, groesse * 0.96);
     titel.style.fontSize = `${groesse}px`;
   }
-  if (zeilen() > 2) {
-    throw new Error(`Kurzer Story-Titel braucht trotz Auto-Fit mehr als zwei Zeilen: ${text}`);
+  if (zeilen() > 2 || !horizontalPasst()) {
+    throw new Error(`Kurzer Story-Titel passt trotz Auto-Fit nicht in die Markenpille: ${text}`);
   }
 }
 
