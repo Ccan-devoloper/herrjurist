@@ -15,6 +15,7 @@ jobs:
       - name: Add current renderer code
         run: |
           mkdir -p export/final export/scenes export/qa export/state export/code
+          git fetch origin main:refs/remotes/origin/main
           git show origin/main:src/erklaervideo.mjs > export/code/erklaervideo.mjs
           git show origin/main:test/bot.test.mjs > export/code/bot.test.mjs
       - name: Build ZIP payload
