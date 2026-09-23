@@ -5005,29 +5005,28 @@ test("1a+: Ein Absturz nach dem Senden vergisst das Geld nicht", async () => {
   assert.equal(u2.blockiert.length, 1);
   assert.equal(u2.blockiert[0].state, JZUSTAND.UNGEKLAERT);
 
-  /* C) Absturz nach bekannter Usage, vor dem Tagesabschluss: Die Abrechnung
-        stand nur im Speicher. Konservativ bleibt die Reservierung stehen -
-        sie ist größer als die tatsächlichen Kosten, nie kleiner. */
+  /* C) Absturz nach bekannter Usage, vor dem Tagesabschluss: Seit der
+        Einzelkosten-Historie wird auch die Abrechnung sofort durable.
+        Der Folgelauf kennt deshalb den echten Betrag statt nur der Reserve. */
   platte = null;
   const lauf3 = neuerLauf();
   const id3 = await lauf3.reservieren({ bucket: "core", purpose: "reel", reservedUsd: 0.08, slot: "b3" });
   await lauf3.senden(id3);
-  lauf3.abrechnen(id3, 0.021);        // bekannt, aber noch nicht geschrieben
+  await lauf3.abrechnen(id3, 0.021);
   /* … Runner tot, kein abschluss(). */
   const u3 = neuerLauf().uebernahme();
-  assert.equal(u3.vorbelastung.core, 0.08, "der Betrag ist im Folgelauf nicht mehr sichtbar");
-  assert.ok(u3.vorbelastung.core >= 0.021, "der konservative Wert liegt unter den echten Kosten");
+  assert.equal(u3.vorbelastung.core, 0.021, "die durable Abrechnung ist im Folgelauf nicht sichtbar");
 
   /* D) Zwei Stundenläufe desselben Tages: Lauf 2 beginnt mit allem, was
         Lauf 1 abgerechnet ODER offen gelassen hat. */
   platte = null;
   const lauf4 = neuerLauf();
   const a = await lauf4.reservieren({ bucket: "core", purpose: "autor", reservedUsd: 0.06 });
-  await lauf4.senden(a); lauf4.abrechnen(a, 0.019);
+  await lauf4.senden(a); await lauf4.abrechnen(a, 0.019);
   const b = await lauf4.reservieren({ bucket: "core", purpose: "faktencheck", reservedUsd: 0.04 });
-  await lauf4.senden(b); lauf4.ungeklaert(b, "Verbindung abgebrochen");
+  await lauf4.senden(b); await lauf4.ungeklaert(b, "Verbindung abgebrochen");
   const c = await lauf4.reservieren({ bucket: "engagement", purpose: "kommentare", reservedUsd: 0.03 });
-  await lauf4.senden(c); lauf4.abrechnen(c, 0.008);
+  await lauf4.senden(c); await lauf4.abrechnen(c, 0.008);
   await lauf4.abschluss();
 
   const u4 = neuerLauf().uebernahme();
