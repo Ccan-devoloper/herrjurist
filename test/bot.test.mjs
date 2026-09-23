@@ -4719,8 +4719,17 @@ test("1a: Jeder Anbieteraufruf geht durch die Admission – auch Fallback und Re
 test("1a: Kein bezahlter Anbieteraufruf außerhalb der einen Tür", async () => {
   /* Der eigentliche Beweis: nicht die sechs bekannten Stellen abhaken,
      sondern zeigen, dass es keine siebte geben kann. */
-  const quellen = fs.readdirSync(new URL("../src/", import.meta.url))
-    .filter((f) => f.endsWith(".mjs") && f !== "anbieter.mjs");
+  /* Nicht nur src/: Die frühere Bildprobe in bin/ hatte ihren eigenen
+     OpenAI-fetch und konnte dadurch kosten, ohne dass Budget-Journal oder
+     kosten.json davon wussten. Darum umfasst die Invariante auch Hilfsskripte. */
+  const quellen = [
+    ...fs.readdirSync(new URL("../src/", import.meta.url))
+      .filter((f) => f.endsWith(".mjs") && f !== "anbieter.mjs")
+      .map((f) => `src/${f}`),
+    ...fs.readdirSync(new URL("../bin/", import.meta.url))
+      .filter((f) => f.endsWith(".mjs"))
+      .map((f) => `bin/${f}`),
+  ];
 
   const einstiegspunkte = [
     { muster: /\.messages\.create\s*\(/, was: "Anthropic messages.create" },
@@ -4731,7 +4740,7 @@ test("1a: Kein bezahlter Anbieteraufruf außerhalb der einen Tür", async () => 
 
   const funde = [];
   for (const datei of quellen) {
-    const text = fs.readFileSync(new URL(`../src/${datei}`, import.meta.url), "utf8");
+    const text = fs.readFileSync(new URL(`../${datei}`, import.meta.url), "utf8");
     /* Kommentare zählen nicht – sie rufen niemanden. */
     const code = text.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
     for (const e of einstiegspunkte) if (e.muster.test(code)) funde.push(`${datei}: ${e.was}`);
