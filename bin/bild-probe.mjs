@@ -25,6 +25,7 @@ const szene = process.argv[2] || "wooden desk calendar with circled date";
 const ziel = process.argv[3] || "proben";
 const { CONFIG } = await import("../src/config.mjs");
 const { bildAuftrag } = await import("../src/bildki.mjs");
+const { bildAufruf } = await import("../src/anbieter.mjs");
 const { freistellen, alphaProfil, masse } = await import("../src/freistellen.mjs");
 
 const ki = CONFIG.bilder.ki;
@@ -45,13 +46,24 @@ for (const weg of wege) {
     ...(weg.transparent ? { background: "transparent" } : {}),
   };
   const t = Date.now();
-  const antwort = await fetch("https://api.openai.com/v1/images/generations", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${ki.key}`, "Content-Type": "application/json" },
-    body: JSON.stringify(koerper),
-  });
-  if (!antwort.ok) { console.log(`  ${weg.name}: HTTP ${antwort.status} ${(await antwort.text()).slice(0, 200)}`); continue; }
-  const daten = await antwort.json();
+  /* Keine Sondertür für Proben mehr: Auch dieser manuelle Bildvergleich muss
+     durch anbieter.mjs. Ohne zuvor gesetzten durablen Kostenkontext bricht
+     bildAufruf fail-closed ab, bevor OpenAI angesprochen wird. So kann ein
+     Hilfs-/Previewlauf nie wieder still außerhalb des Kostenledgers bezahlen. */
+  let daten;
+  try {
+    daten = await bildAufruf({
+      zweck: "bild",
+      modell: ki.modell,
+      optional: true,
+      preisUsd: ki.preisUsd,
+      slot: `probe:${weg.name}`,
+      auftrag: { key: ki.key, koerper },
+    });
+  } catch (e) {
+    console.error(`  ${weg.name}: ${e.name}: ${e.message}`);
+    throw e;
+  }
   const b64 = daten?.data?.[0]?.b64_json;
   if (!b64) { console.log(`  ${weg.name}: keine Bilddaten`); continue; }
   const roh = path.join(ziel, `${weg.name}-roh.png`);
