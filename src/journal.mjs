@@ -176,11 +176,15 @@ export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNo
   const finden = (id) => eintraege.find((e) => e.reservationId === id) || null;
 
   /** Schritt 1: durable, bevor irgendetwas gesendet wird. */
-  const reservieren = async ({ bucket, purpose, attempt = 1, reservedUsd, slot = null }) => {
+  const reservieren = async ({
+    bucket, purpose, attempt = 1, reservedUsd, slot = null,
+    provider = null, model = null, promptVersion = null, reason = null,
+  }) => {
     const jetzt = new Date().toISOString();
     const reservationId = `${datum}-${String(laufendeNummer + 1).padStart(4, "0")}-${purpose}`;
     const neuerEintrag = {
-      reservationId, date: datum, bucket, purpose, attempt, slot,
+      reservationId, date: datum, channel: kanal, bucket, purpose, attempt, slot,
+      provider, model, promptVersion, reason,
       reservedUsd: runden(reservedUsd), actualUsd: null,
       state: JZUSTAND.RESERVIERT, createdAt: jetzt, updatedAt: jetzt,
     };
@@ -223,8 +227,11 @@ export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNo
     return true;
   };
 
-  /* Ab hier nur noch im Speicher: Diese Übergänge dürfen verlorengehen, ohne
-     dass die Zusage bricht - der nächste Lauf rechnet dann konservativer. */
+  /* Nach dem Provideraufruf ist die Ausgabe bereits entstanden. Deshalb wird
+     der Abschluss jetzt ebenfalls durable versucht. Scheitert genau dieser
+     Push, bleibt der präzise Stand wenigstens im Speicher und wird beim
+     Tagesabschluss erneut geschrieben; remote steht weiterhin mindestens
+     "sent" und blockiert konservativ die Reserve. */
   const aendern = (id, felder, nurWenn = null) => {
     const e = finden(id); if (!e) return false;
     if (nurWenn && !nurWenn(e)) return false;
@@ -232,10 +239,47 @@ export function journalStarten({ lesen, schreiben, datum, kanal = null, remoteNo
       ? { ...x, ...felder, updatedAt: new Date().toISOString() } : x));
     return true;
   };
-  const abrechnen = (id, actualUsd) => aendern(id, { state: JZUSTAND.ABGERECHNET, actualUsd: runden(actualUsd) });
-  const ungeklaert = (id, grund = "Kosten nach dem Senden unbekannt") => aendern(id, { state: JZUSTAND.UNGEKLAERT, grund });
-  const verfallen = (id, grund = "vor dem Senden abgebrochen") =>
-    aendern(id, { state: JZUSTAND.VERFALLEN, grund }, (e) => e.state === JZUSTAND.RESERVIERT);
+
+  const aendernDurable = async (id, felder, phase, nurWenn = null) => {
+    const e = finden(id); if (!e) return false;
+    if (nurWenn && !nurWenn(e)) return false;
+    const naechster = eintraege.map((x) => (x.reservationId === id
+      ? { ...x, ...felder, updatedAt: new Date().toISOString() } : x));
+    /* Anders als beim Sendevermerk darf hier der lokale Stand nicht
+       zurückgerollt werden: Der Provider kann bereits berechnet haben. */
+    eintraege = naechster;
+    try {
+      await sichern(naechster, e.purpose, phase);
+      return true;
+    } catch (fehler) {
+      schreibFehler = fehler;
+      return false;
+    }
+  };
+
+  const abrechnen = async (id, actualUsd, details = {}) =>
+    aendernDurable(id, {
+      state: JZUSTAND.ABGERECHNET,
+      actualUsd: runden(actualUsd),
+      provider: details.provider ?? finden(id)?.provider ?? null,
+      model: details.model ?? finden(id)?.model ?? null,
+      promptVersion: details.promptVersion ?? finden(id)?.promptVersion ?? null,
+      outcome: details.outcome ?? "ok",
+      errorType: details.errorType ?? null,
+      usage: details.usage ?? null,
+    }, "abrechnung");
+
+  const ungeklaert = async (id, grund = "Kosten nach dem Senden unbekannt", details = {}) =>
+    aendernDurable(id, {
+      state: JZUSTAND.UNGEKLAERT, grund,
+      outcome: details.outcome ?? "ungeklaert",
+      errorType: details.errorType ?? null,
+      usage: details.usage ?? null,
+    }, "ungeklaert");
+
+  const verfallen = async (id, grund = "vor dem Senden abgebrochen") =>
+    aendernDurable(id, { state: JZUSTAND.VERFALLEN, grund, outcome: "nicht-gesendet" },
+      "verfallen", (e) => e.state === JZUSTAND.RESERVIERT);
 
   /** Am Ende des Laufs: die offenen Übergänge festschreiben. */
   const abschluss = async () => {
