@@ -5,7 +5,7 @@ import os from "node:os";
 import path from "node:path";
 
 import { storyHtml, buntCss } from "../src/vorlagen.mjs";
-import { kontext, coverRendern, browserBeenden } from "../src/render.mjs";
+import { kontext, coverRendern, browserStarten, browserBeenden } from "../src/render.mjs";
 
 test.after(async () => { await browserBeenden().catch(() => {}); });
 
@@ -44,6 +44,45 @@ test("Norm-Story haelt einzelne Gesetzeszitate beim Umbruch zusammen", () => {
   assert.match(html, /norm-liste/);
   assert.equal((html.match(/class="norm-einheit"/g) || []).length, 3);
   assert.match(html, /§\s*108 BGB/u);
+});
+
+test("Kurzer Norm-Story-Titel nutzt die Breite und bleibt bei hoechstens zwei Zeilen", async () => {
+  const ctx = kontext({ fach: "bgbat", klausur: 1, fachLabel: "BGB Allgemeiner Teil" });
+  const html = storyHtml({
+    art: "norm",
+    norm: "§ 134 BGB · § 108 BGB · § 177 BGB",
+    titel: "Nichtig oder schwebend unwirksam?",
+    text: "Unterschied sauber prüfen.",
+  }, ctx);
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "hj-story-title-"));
+  const datei = path.join(dir, "s6.html");
+  fs.writeFileSync(datei, html);
+  try {
+    const browser = await browserStarten();
+    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+    try {
+      await page.goto(`file://${datei}`, { waitUntil: "load" });
+      await page.evaluate(() => document.fonts.ready);
+      const messung = await page.locator(".story h1").evaluate((el) => {
+        const cs = getComputedStyle(el);
+        const lineHeight = parseFloat(cs.lineHeight);
+        const innen = el.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+        return {
+          zeilen: Math.round(innen / lineHeight),
+          breite: el.getBoundingClientRect().width,
+          maxBreite: el.parentElement.getBoundingClientRect().width
+            - parseFloat(getComputedStyle(el.parentElement).paddingLeft)
+            - parseFloat(getComputedStyle(el.parentElement).paddingRight),
+        };
+      });
+      assert.ok(messung.zeilen <= 2, `Titel belegt ${messung.zeilen} Zeilen`);
+      assert.ok(messung.breite > 700, `Titelkarte ist unnoetig schmal: ${messung.breite}px`);
+    } finally {
+      await page.close();
+    }
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test("Charakter-Reel-Cover blendet die redundante Fusszeile aus", () => {
