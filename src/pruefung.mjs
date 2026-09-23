@@ -778,10 +778,33 @@ export function pruefeBeitrag(beitrag, opt = {}) {
   if (beitrag.folien) {
     if (beitrag.format === "wochenrueckblick") {
       const titel = beitrag.folien.map((f) => String(f.titel || "").trim().toLowerCase());
-      const pflicht = ["zivilrecht", "strafrecht", "öffentliches recht", "unabhängig"];
+      const pflicht = ["zivilrecht", "strafrecht", "öffentliches recht"];
       for (const name of pflicht) {
         if (!titel.includes(name)) fehler.push(`Wochenrückblick braucht eine eigene Folie „${name[0].toUpperCase() + name.slice(1)}“.`);
       }
+
+      /* Folie 5 ist die Sammelfolie fuer Themen ausserhalb der drei
+         Rechtsgebiete. Ihr Titel muss die tatsaechlich enthaltenen
+         Kategorien benennen; generische Restebegriffe sagen dem Leser nichts. */
+      const rest = beitrag.folien[4];
+      const restTitel = String(rest?.titel || "").trim();
+      if (!restTitel) {
+        fehler.push("Wochenrückblick braucht für die Restthemen eine konkrete Kategorien-Überschrift.");
+      } else if (/^(?:unabhängig|sonstiges|weitere(?:\s+themen)?|diverses)$/iu.test(restTitel)) {
+        fehler.push(`Wochenrückblick-Restfolie darf nicht generisch „${restTitel}“ heißen; Kategorien konkret benennen (z. B. „Klausurtechnik & Kopfsache“).`);
+      } else {
+        const kategorien = [...new Set((rest?.punkte || [])
+          .map((p) => String(p).match(/^([^:]{2,40}):/)?.[1]?.trim())
+          .filter(Boolean))];
+        if (kategorien.length) {
+          for (const kategorie of kategorien) {
+            if (!restTitel.toLocaleLowerCase("de-DE").includes(kategorie.toLocaleLowerCase("de-DE"))) {
+              fehler.push(`Wochenrückblick-Resttitel „${restTitel}“ bildet die enthaltene Kategorie „${kategorie}“ nicht ab.`);
+            }
+          }
+        }
+      }
+
       const fachTitel = new Set(pflicht);
       for (const f of beitrag.folien) {
         const t = String(f.titel || "").trim().toLowerCase();
