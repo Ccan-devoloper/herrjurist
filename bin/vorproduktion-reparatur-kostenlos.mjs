@@ -6,7 +6,6 @@ import path from "node:path";
 
 import { Hosting } from "../src/hosting.mjs";
 import { storyRendern, coverRendern, browserBeenden } from "../src/render.mjs";
-import { lernPalette } from "../src/stile.mjs";
 
 for (const key of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "ELEVENLABS_API_KEY"]) {
   if (process.env[key]) throw new Error(`Kostenlose Reparatur verweigert Provider-Secret: ${key}`);
@@ -66,15 +65,11 @@ try {
       const alt = path.join(hosting.dir, "vorproduktion", datum, "fertig", slot, `${slug}-cover.jpg`);
       if (!fs.existsSync(alt)) throw new Error(`${datum} ${slot}: bestehendes Cover fehlt`);
 
-      const palette = lernPalette(reel.fach);
-      if (!palette?.grund || !palette?.dunkel) throw new Error(`${datum} ${slot}: Lernpalette fehlt`);
       const freigestellt = path.join(temp, `${datum}-${slot}-foreground.png`);
       execFileSync("python3", [
         path.resolve("bin/cover-foreground-local.py"),
         "--input", alt,
         "--output", freigestellt,
-        "--background", palette.grund,
-        "--dark", palette.dunkel,
         "--crop-y", "900",
       ], { stdio: "inherit" });
 
