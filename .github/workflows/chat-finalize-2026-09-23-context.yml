@@ -1,4 +1,4 @@
-name: Chat finalize 2026-09-23 · free b3 cover reuse
+name: Chat finalize 2026-09-23 · free b3 cover reuse v2
 on:
   push:
     branches: [chat-finalize-2026-09-23-context]
@@ -8,83 +8,88 @@ permissions:
 jobs:
   cover:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Chromium
-        run: npx playwright install --with-deps chromium
-      - name: Prepare existing approved character scene
+          python-version: "3.12"
+      - run: pip install --quiet pillow
+      - name: Reuse existing approved Mara-Zylla scene and redraw only cover text
         run: |
           git fetch origin instagram-assets:refs/remotes/origin/instagram-assets
-          git show origin/instagram-assets:vorschau/2026-09-23/b3-2026-09-23-b3-cover-mudqqa82.jpg > /tmp/b3-source.jpg
-          ffmpeg -y -hide_banner -loglevel error -i /tmp/b3-source.jpg -vf "crop=1080:1200:0:720" /tmp/b3-scene.jpg
-      - name: Render corrected cover without paid providers
-        run: |
-          cat > .chat-b3-cover.mjs <<'NODE'
-          import fs from "node:fs";
-          import path from "node:path";
-          import { chromium } from "playwright";
-          import { coverHtml } from "./src/vorlagen.mjs";
-          import { kontext } from "./src/render.mjs";
+          git show origin/instagram-assets:vorschau/2026-09-23/b3-2026-09-23-b3-cover-mudqqa82.jpg > /tmp/source.jpg
+          python - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
 
-          const scene = `data:image/jpeg;base64,${fs.readFileSync("/tmp/b3-scene.jpg").toString("base64")}`;
-          const ctx = kontext({
-            fach: "assessorz",
-            klausur: 1,
-            fachLabel: "Zivilrechtliche Assessorklausur",
-            variante: 0,
-          });
-          const daten = {
-            titel: "Klageerwiderung mit Verteidigungsstrategie",
-            titelZeilen: ["Klageerwiderung", "Verteidigung", "mit Strategie"],
-            coverBadge: "Anwaltsklausur",
-            fach: "assessorz",
-            klausur: 1,
-            fachLabel: "Zivilrechtliche Assessorklausur",
-            icon: "dokument",
-          };
-          let html = coverHtml(daten, ctx);
-          html = html.replace("</style>", `
-            .story.cover .buehne{display:none!important}
-            .story.cover .fuss{display:none!important}
-            .story.cover h1.titel-stack{font-size:103px!important;line-height:1.01!important;gap:9px!important;margin-top:112px!important;position:relative;z-index:6}
-            .story.cover h1.titel-stack .titel-zeile{max-width:900px!important;padding:13px 31px 15px!important}
-            .story.cover .cover-badge{position:relative;z-index:6;margin-top:18px!important}
-            .story.cover .kopf,.story.cover .reelmarke{z-index:8}
-            .scene-reuse{position:absolute;left:0;top:720px;width:1080px;height:1200px;object-fit:cover;z-index:1}
-            .reuse-note{position:absolute;left:430px;top:735px;width:390px;z-index:7;font-family:"Caveat";font-size:58px;line-height:1.01;font-weight:700;color:var(--text);text-align:center;transform:rotate(-4deg);transform-origin:center center}
-          </style>`);
-          html = html.replace('<div class="story cover">', '<div class="story cover"><img class="scene-reuse" src="'+scene+'" alt="">');
-          html = html.replace("</div></body></html>", '<div class="reuse-note">Angriffspunkt zuerst</div></div></body></html>');
+          src=Image.open("/tmp/source.jpg").convert("RGB")
+          W,H=src.size
+          bg=src.getpixel((20,700))
+          dark=(8,31,70)
+          white=(255,255,255)
+          cream=(255,240,214)
 
-          const browser = await chromium.launch({args:["--font-render-hinting=none"]});
-          const page = await browser.newPage({viewport:{width:1080,height:1920},deviceScaleFactor:1});
-          const tmp="/tmp/b3-final.html";
-          fs.writeFileSync(tmp,html);
-          await page.goto("file://"+tmp,{waitUntil:"load"});
-          await page.evaluate(()=>document.fonts.ready);
-          await page.screenshot({path:"/tmp/2026-09-23-b3-cover-final-free.jpg",type:"jpeg",quality:92,fullPage:false});
-          await page.close();
-          await browser.close();
-          NODE
-          node .chat-b3-cover.mjs
-          rm .chat-b3-cover.mjs
-      - name: Store preview in asset branch
+          out=src.copy()
+          d=ImageDraw.Draw(out)
+          # Upper area is redrawn; lower 720px+ keeps the exact paid Mara/Zylla scene.
+          d.rectangle((0,0,W,719), fill=bg)
+
+          inter=ImageFont.truetype("fonts/Inter.ttf", 26)
+          inter_bold=ImageFont.truetype("fonts/Inter.ttf", 27)
+          title_font=ImageFont.truetype("fonts/Inter.ttf", 92)
+          badge_font=ImageFont.truetype("fonts/Inter.ttf", 27)
+          caveat=ImageFont.truetype("fonts/Caveat.ttf", 62)
+
+          # Fachband
+          band=[(0,0),(455,0),(421,63),(0,63)]
+          d.polygon(band, fill=dark)
+          d.text((34,16),"Zivilrechtliche Assessorklausur",font=inter_bold,fill=white)
+
+          # Reel badge
+          d.rounded_rectangle((738,34,856,86), radius=26, fill=dark)
+          reel_font=ImageFont.truetype("fonts/Inter.ttf", 25)
+          rb=d.textbbox((0,0),"REEL",font=reel_font)
+          d.text((797-(rb[2]-rb[0])/2,60-(rb[3]-rb[1])/2-4),"REEL",font=reel_font,fill=white)
+
+          # Three safe title pills
+          lines=[("Klageerwiderung",170),("Verteidigung",292),("mit Strategie",414)]
+          for txt,y in lines:
+              box=d.textbbox((0,0),txt,font=title_font)
+              tw=box[2]-box[0]; th=box[3]-box[1]
+              x=72
+              pad_x=30; pad_y=16
+              right=min(W-72,x+tw+2*pad_x)
+              d.rounded_rectangle((x,y,right,y+th+2*pad_y),radius=34,fill=dark)
+              d.text((x+pad_x,y+pad_y-7),txt,font=title_font,fill=white)
+
+          # Badge
+          bx,by=82,562
+          btxt="Anwaltsklausur"
+          bb=d.textbbox((0,0),btxt,font=badge_font)
+          bw=bb[2]-bb[0]; bh=bb[3]-bb[1]
+          d.rounded_rectangle((bx,by,bx+bw+42,by+bh+24),radius=26,fill=cream)
+          d.text((bx+21,by+9),btxt,font=badge_font,fill=dark)
+
+          # Editorial cover text: no arrow, placed in real free space above the scene.
+          note="Angriffspunkt zuerst"
+          nb=d.multiline_textbbox((0,0),"Angriffspunkt\nzuerst",font=caveat,spacing=0,align="center")
+          nw=nb[2]-nb[0]
+          nx=470-nw/2
+          d.multiline_text((nx,655),"Angriffspunkt\nzuerst",font=caveat,fill=dark,spacing=0,align="center")
+
+          out.save("/tmp/2026-09-23-b3-cover-final-free-v2.jpg",quality=94,subsampling=0)
+          PY
+      - name: Store corrected cover preview in asset branch
         run: |
           git worktree add -B chat-assets /tmp/assets origin/instagram-assets
           mkdir -p /tmp/assets/vorschau/2026-09-23
-          cp /tmp/2026-09-23-b3-cover-final-free.jpg /tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free.jpg
+          cp /tmp/2026-09-23-b3-cover-final-free-v2.jpg /tmp/assets/vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free-v2.jpg
           cd /tmp/assets
           git config user.name instagram-bot
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free.jpg
-          git commit -m "Vorschau b3 final kostenlos 2026-09-23"
+          git add vorschau/2026-09-23/b3-2026-09-23-b3-cover-final-free-v2.jpg
+          git commit -m "Vorschau b3 final kostenlos v2 2026-09-23"
           git push origin HEAD:instagram-assets
