@@ -7113,11 +7113,58 @@ test("Charakter-Stickerrand ist standardmaessig ausgeschaltet", () => {
   assert.match(ch, /cfg\.randAktiv \? randFarbe : null/);
 });
 
-test("Charakterbildausfall darf keinen Carousel-Slot blockieren", () => {
-  const q = fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8");
-  assert.match(q, /kein Charakter-Cover – Veröffentlichung mit Icon-Cover/);
-  assert.ok(!/kein Charakter-Cover[^\n]*\n\s*continue;/.test(q), "Cover-Ausfall blockiert wieder einen Pflichtslot");
-  assert.ok(!/kein Charakter-Cover[^\n]*\n\s*return null;/.test(q), "Cover-Ausfall verwirft wieder einen Reservebeitrag");
+test("Manuell finalisierte Carousel-Posts brauchen ein persistiertes visuelles End-Asset", async () => {
+  const { manuellesCarouselAssetGate } = await import("../src/finalisierung.mjs");
+
+  const basis = {
+    manuellGeprueft: true,
+    finalisiertVon: "chat",
+    finalisiertAm: "2026-09-23T06:00:00.000Z",
+  };
+  assert.equal(manuellesCarouselAssetGate(basis).frei, false, "ohne visuelle Freigabe darf kein manueller Feedpost erscheinen");
+  assert.match(manuellesCarouselAssetGate({ ...basis, visuellGeprueft: true }).grund, /coverFinalUrl/);
+  assert.match(manuellesCarouselAssetGate({
+    ...basis,
+    visuellGeprueft: true,
+    coverFinalUrl: "https://raw.githubusercontent.com/Ccan-devoloper/herrjurist/instagram-assets/vorschau/x.jpg",
+  }).grund, /coverFinalSha256/);
+
+  const fertig = manuellesCarouselAssetGate({
+    ...basis,
+    visuellGeprueft: true,
+    coverFinalUrl: "https://raw.githubusercontent.com/Ccan-devoloper/herrjurist/instagram-assets/vorschau/x.jpg",
+    coverFinalSha256: "a".repeat(64),
+  });
+  assert.equal(fertig.frei, true);
+  assert.equal(fertig.manuell, true);
+
+  /* Autonome, nicht manuell finalisierte Beiträge behalten den bisherigen
+     Availability-Fallback; der neue harte Gate gilt nur für morgens manuell
+     freigegebene Feedposts. */
+  assert.deepEqual(manuellesCarouselAssetGate({ manuellGeprueft: false }), {
+    frei: true, manuell: false, grund: null,
+  });
+});
+
+test("Manuelle Carousel-Freigabe wird im Live-Lauf fail-closed und per SHA wiederverwendet", () => {
+  const lauf = ohneKommentare(fs.readFileSync(new URL("../src/lauf.mjs", import.meta.url), "utf8"));
+  const render = ohneKommentare(fs.readFileSync(new URL("../src/render.mjs", import.meta.url), "utf8");
+
+  const gate = lauf.indexOf("manuellesCarouselAssetGate(beitrag)");
+  const bild = lauf.indexOf("titelfolieBebildern(beitrag)", gate);
+  const post = lauf.indexOf("ig.beitragPosten", gate);
+  assert.ok(gate >= 0 && bild > gate && post > bild, "visuelles Gate muss vor Bildbeschaffung und Veröffentlichung liegen");
+  assert.match(lauf, /assetGate\.manuell && !assetGate\.frei[\s\S]*continue;/,
+    "fehlendes persistiertes Asset muss den Slot blockieren");
+  assert.match(lauf, /!assetGate\.manuell && !\(await titelfolieBebildern\(beitrag\)\)/,
+    "nur autonome Beiträge dürfen die automatische Bildbeschaffung nutzen");
+  assert.match(lauf, /autonome Veröffentlichung mit Icon-Cover/,
+    "Icon-Fallback bleibt ausschließlich für autonome Beiträge erhalten");
+
+  assert.match(render, /coverFinalSha256/);
+  assert.match(render, /createHash\("sha256"\)/);
+  assert.match(render, /i === 0 && beitrag\.coverFinalUrl/);
+  assert.match(render, /falschen SHA-256/);
 });
 
 test("Zeitlernen startet an den Kanalankern und lernt danach weiter", async () => {
