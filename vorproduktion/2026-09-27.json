@@ -1,0 +1,647 @@
+{
+  "datum": "2026-09-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "kostenPolicy": {
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:30",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick: sieben Kernpunkte der Woche",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "15:00",
+        "format": "schema",
+        "themaId": "zpo-053",
+        "themaTitel": "Was sind die allgemeinen Voraussetzungen der Zwangsvollstreckung?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "20:30",
+        "format": "reel",
+        "themaId": "strafbt-074",
+        "themaTitel": "Was ist eine gefährliche Körperverletzung nach § 224 StGB?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "verwalt-097"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "verwalt-097"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:30",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "schuld-012"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:00",
+        "art": "fehler",
+        "themaId": "strafat-059"
+      },
+      {
+        "slot": "s2",
+        "zeit": "15:00",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:45",
+        "art": "tipp",
+        "themaId": "grundr-091"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:00",
+        "art": "zahl",
+        "themaId": "europa-108"
+      },
+      {
+        "slot": "s3",
+        "zeit": "20:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      }
+    ]
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-09-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "7 Themen der Woche, die jetzt sitzen sollten",
+          "unter": "Von § 280 BGB bis Verhältnismäßigkeit – kompakt wiederholen",
+          "icon": "buch",
+          "titelZeilen": [
+            "7 Themen der Woche,",
+            "die jetzt sitzen",
+            "sollten"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "7 Themen · 7 Minuten",
+          "coverBildAuslassen": true,
+          "pille": "Swipen →",
+          "hinweis": "Wiederholung"
+        },
+        {
+          "art": "karte",
+          "titel": "1–2: Schuldrecht und Notwehr",
+          "schritte": [
+            {
+              "titel": "§ 280 Abs. 1 BGB",
+              "text": "Schuldverhältnis, Pflichtverletzung, Vertretenmüssen, Schaden – und immer prüfen, welche Pflicht verletzt wurde."
+            },
+            {
+              "titel": "§ 32 StGB",
+              "text": "Notwehrlage, Notwehrhandlung, Verteidigungswille. Erforderlichkeit und Gebotenheit getrennt halten."
+            }
+          ]
+        },
+        {
+          "art": "karte",
+          "titel": "3–4: Verkehrsdelikt und Verpflichtungsklage",
+          "schritte": [
+            {
+              "titel": "§ 315d StGB",
+              "text": "Beim verbotenen Kraftfahrzeugrennen kommt es auf die konkrete Tatbestandsvariante an – Alleinfahrt und Rennen mit anderen nicht vermischen."
+            },
+            {
+              "titel": "§ 113 Abs. 5 VwGO",
+              "text": "Vornahmeurteil nur bei Spruchreife; sonst Bescheidungsurteil unter Beachtung der Rechtsauffassung des Gerichts."
+            }
+          ]
+        },
+        {
+          "art": "karte",
+          "titel": "5: Verwaltungsakt mit Drittwirkung",
+          "schritte": [
+            {
+              "titel": "Ein VA, zwei Wirkungen",
+              "text": "Erst die eigene geschützte Rechtsposition des Dritten bestimmen; dann den passenden Hauptsache- und Eilrechtsschutz wählen."
+            }
+          ]
+        },
+        {
+          "art": "karte",
+          "titel": "6: Vormerkung",
+          "schritte": [
+            {
+              "titel": "Sicherung statt Eigentum",
+              "text": "§ 883 BGB schützt den gesicherten Anspruch und reserviert den Rang. Eigentum entsteht dadurch noch nicht."
+            }
+          ]
+        },
+        {
+          "art": "karte",
+          "titel": "7: Verhältnismäßigkeit",
+          "schritte": [
+            {
+              "titel": "Vier getrennte Fragen",
+              "text": "Legitimer Zweck, Geeignetheit, Erforderlichkeit und Angemessenheit – besonders Erforderlichkeit und Abwägung nicht vermischen."
+            }
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Einmal ohne Unterlagen abfragen",
+          "punkte": [
+            "Kannst du zu jedem Punkt den Obersatz sagen?",
+            "Kannst du die zentrale Abgrenzung erklären?",
+            "Was stockt, kommt auf die Wiederholungsliste."
+          ],
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Wochenrückblick statt neuer Baustelle: Sieben Punkte aus den letzten Tagen, die sich gegenseitig ergänzen – Anspruchsaufbau, Notwehr, Verkehrsdelikt, Verpflichtungsklage, Drittwirkung, Vormerkung und Verhältnismäßigkeit. Geh jeden Punkt einmal ohne Unterlagen durch. Wo der Obersatz fehlt, liegt die nächste Wiederholung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#examensvorbereitung",
+        "#wochenrückblick",
+        "#lernenmitsystem",
+        "#klausurtechnik",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht"
+      ],
+      "kurztitel": "7 Themen der Woche",
+      "coverText": "7 Themen · 7 Minuten",
+      "coverBadge": "Wochenrückblick",
+      "quellen": [
+        "Beiträge 21.–26.09.2026"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "wiederholung",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-053",
+      "slug": "2026-09-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zwangsvollstreckung: Erst Titel, Klausel, Zustellung",
+          "unter": "Die drei allgemeinen Voraussetzungen vor jeder Vollstreckungsmaßnahme",
+          "icon": "hammer",
+          "titelZeilen": [
+            "Zwangsvollstreckung:",
+            "Erst Titel, Klausel,",
+            "Zustellung"
+          ],
+          "coverBadge": "Klausurschema",
+          "coverText": "TKZ vor der Maßnahme",
+          "coverBildAuslassen": true,
+          "pille": "Swipen →",
+          "hinweis": "ZPO"
+        },
+        {
+          "art": "text",
+          "titel": "0. Erst den Vollstreckungstitel bestimmen",
+          "text": "Vollstreckt wird nicht aus dem materiellen Anspruch selbst, sondern aus einem Vollstreckungstitel. Das kann etwa ein rechtskräftiges oder vorläufig vollstreckbares Endurteil (§ 704 ZPO) oder ein Titel aus § 794 ZPO sein.",
+          "icon": "dokument"
+        },
+        {
+          "art": "text",
+          "titel": "1. Titel",
+          "text": "Der Titel muss den durchzusetzenden Anspruch hinreichend bestimmt ausweisen und überhaupt vollstreckbar sein. Bei Urteilen gehört dazu regelmäßig Rechtskraft oder vorläufige Vollstreckbarkeit.",
+          "icon": "akte"
+        },
+        {
+          "art": "text",
+          "titel": "2. Klausel",
+          "text": "Grundsätzlich braucht der Gläubiger eine vollstreckbare Ausfertigung. § 724 ZPO ist der Ausgangspunkt; bei bestimmten Titeln oder Vollstreckungsarten gelten gesetzliche Besonderheiten und Ausnahmen.",
+          "icon": "stempel"
+        },
+        {
+          "art": "text",
+          "titel": "3. Zustellung",
+          "text": "Nach § 750 Abs. 1 ZPO darf die Zwangsvollstreckung grundsätzlich erst beginnen, wenn der Titel dem Schuldner bereits zugestellt ist oder gleichzeitig zugestellt wird.",
+          "icon": "brief"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Erst danach: besondere Voraussetzungen",
+          "links": {
+            "titel": "Allgemein",
+            "punkte": [
+              "Titel",
+              "Klausel",
+              "Zustellung"
+            ]
+          },
+          "rechts": {
+            "titel": "Dann speziell",
+            "punkte": [
+              "Zuständiges Vollstreckungsorgan",
+              "Voraussetzungen der konkreten Maßnahme",
+              "Vollstreckungshindernisse und Rechtsbehelfe"
+            ]
+          }
+        },
+        {
+          "art": "cta",
+          "titel": "TKZ als Startblock",
+          "punkte": [
+            "Titel benennen",
+            "Klausel/Ausnahme prüfen",
+            "Zustellung prüfen",
+            "Erst dann in die konkrete Vollstreckung"
+          ],
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Titel, Klausel, Zustellung: Diese drei Punkte gehören vor die konkrete Vollstreckungsmaßnahme. In der Klausur erst den Vollstreckungstitel bestimmen, dann die vollstreckbare Ausfertigung und die Zustellung prüfen – und erst anschließend zu Pfändung, Räumung oder anderem Vollstreckungszugriff gehen. Gesetzliche Ausnahmen bleiben natürlich mitzudenken.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#zweitesexamen",
+        "#assessorexamen",
+        "#klausurschema",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Titel Klausel Zustellung",
+      "coverText": "TKZ vor der Maßnahme",
+      "coverBadge": "Klausurschema",
+      "quellen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 794 ZPO",
+        "Themenpool: zpo-053"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "schema",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "b3": {
+      "format": "reel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-074",
+      "slug": "2026-09-27-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "nummer": null,
+          "titel": "§ 224 StGB: Nicht jede gefährliche Verletzung ist eine gefährliche Körperverletzung",
+          "unter": "Entscheidend ist die gesetzliche Begehungsweise",
+          "text": "§ 224 Abs. 1 nennt fünf Qualifikationswege.",
+          "norm": "§ 224 Abs. 1 StGB",
+          "icon": "warnung",
+          "sprecher": "Bei § 224 StGB reicht es nicht zu sagen: Die Verletzung war gefährlich. Du brauchst eine der fünf gesetzlich beschriebenen Begehungsweisen. Genau die musst du sauber zuordnen.",
+          "marken": [
+            "fünf Varianten",
+            "Begehungsweise"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gift oder anderer gesundheitsschädlicher Stoff",
+          "text": "Beibringen eines Stoffes, der die Gesundheit erheblich beeinträchtigen kann.",
+          "norm": "§ 224 Abs. 1 Nr. 1 StGB",
+          "sprecher": "Nummer eins betrifft Gift und andere gesundheitsschädliche Stoffe. Entscheidend ist, dass der Stoff dem Körper so zugeführt wird, dass er seine schädliche Wirkung entfalten kann."
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Waffe oder gefährliches Werkzeug",
+          "text": "Werkzeug: nach Art und konkreter Benutzung geeignet, erhebliche Verletzungen zu verursachen.",
+          "norm": "§ 224 Abs. 1 Nr. 2 StGB",
+          "sprecher": "Nummer zwei ist der Klassiker. Beim gefährlichen Werkzeug zählt nicht nur der Gegenstand, sondern auch die konkrete Verwendung. Er muss nach Art und Einsatz erhebliche Verletzungen hervorrufen können."
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Hinterlistiger Überfall",
+          "text": "Planmäßiges Verbergen der wahren Absicht, um die Abwehr zu erschweren.",
+          "norm": "§ 224 Abs. 1 Nr. 3 StGB",
+          "sprecher": "Beim hinterlistigen Überfall genügt Überraschung allein nicht. Hinterlist verlangt ein planmäßiges Verbergen der wahren Absicht, gerade um die Verteidigung des Opfers zu erschweren."
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Gemeinschaftlich",
+          "text": "Mindestens zwei Beteiligte wirken am Tatort zusammen und verstärken die Gefährlichkeit.",
+          "norm": "§ 224 Abs. 1 Nr. 4 StGB",
+          "sprecher": "Nummer vier verlangt gemeinschaftliches Handeln mit einem anderen Beteiligten. Typisch ist das Zusammenwirken am Tatort, durch das sich die Lage des Opfers deutlich verschärft."
+        },
+        {
+          "art": "schritt",
+          "nummer": 5,
+          "titel": "Lebensgefährdende Behandlung",
+          "text": "Die Art der Behandlung muss objektiv geeignet sein, das Leben zu gefährden.",
+          "norm": "§ 224 Abs. 1 Nr. 5 StGB",
+          "sprecher": "Nummer fünf fragt nach der Art der Behandlung. Sie muss objektiv geeignet sein, das Leben zu gefährden. Eine tatsächlich eingetretene konkrete Lebensgefahr ist dafür nicht zwingend erforderlich."
+        },
+        {
+          "art": "merke",
+          "nummer": null,
+          "titel": "Nicht pauschal qualifizieren",
+          "text": "Erst § 223, dann die passende Nummer des § 224 Abs. 1 konkret begründen.",
+          "norm": "§§ 223, 224 StGB",
+          "sprecher": "In der Klausur deshalb: erst die Körperverletzung nach § 223, dann jede ernsthaft passende Qualifikation aus § 224 einzeln und fallbezogen prüfen."
+        },
+        {
+          "art": "cta",
+          "nummer": null,
+          "titel": "Fünf Nummern, fünf eigene Merkmale",
+          "text": "Die konkrete Begehungsweise bringt die Punkte.",
+          "sprecher": "Merke: gefährlich klingt nicht automatisch nach § 224. Die Punkte liegen in der genauen gesetzlichen Variante und in ihrer Subsumtion."
+        }
+      ],
+      "caption": "§ 224 StGB qualifiziert nicht einfach jede besonders gefährliche Verletzung. Entscheidend ist, ob eine der fünf Begehungsweisen des § 224 Abs. 1 erfüllt ist: Stoff, Waffe/Werkzeug, hinterlistiger Überfall, gemeinschaftliche Begehung oder lebensgefährdende Behandlung. In der Klausur jede ernsthaft passende Nummer konkret subsumieren.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#körperverletzung",
+        "#224stgb",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 224 StGB in fünf Varianten",
+      "titelZeilen": [
+        "§ 224 StGB:",
+        "Gefährlich reicht",
+        "nicht als Begründung"
+      ],
+      "coverText": "Fünf Varianten prüfen",
+      "coverBadge": "Examensklassiker",
+      "coverBildAuslassen": true,
+      "quellen": [
+        "§ 223 StGB",
+        "§ 224 StGB",
+        "Themenpool: strafbt-074"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "praezisierung",
+      "bildregie": false,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-097",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Ist jeder rechtswidrige Verwaltungsakt automatisch nichtig?",
+      "optionen": [
+        "Nein, grundsätzlich bleibt er wirksam, solange er nicht aufgehoben oder anderweitig erledigt ist",
+        "Ja, Rechtswidrigkeit und Nichtigkeit sind dasselbe",
+        "Nur belastende Verwaltungsakte bleiben wirksam"
+      ],
+      "richtig": 0,
+      "fachLabel": "Verwaltungsrecht AT",
+      "quellen": [
+        "§ 43 Abs. 2 VwVfG",
+        "§ 44 VwVfG"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-097",
+      "ueberzeile": "Auflösung",
+      "titel": "Rechtswidrig ist nicht automatisch nichtig",
+      "text": "Ein rechtswidriger Verwaltungsakt kann wirksam sein. Nichtigkeit setzt die besonderen Voraussetzungen des § 44 VwVfG voraus. § 43 Abs. 2 VwVfG beschreibt, wann die Wirksamkeit endet.",
+      "norm": "§ 43 Abs. 2 · § 44 VwVfG",
+      "fachLabel": "Verwaltungsrecht AT",
+      "quellen": [
+        "§ 43 Abs. 2 VwVfG",
+        "§ 44 VwVfG"
+      ],
+      "optionen": [
+        "Nein, grundsätzlich bleibt er wirksam, solange er nicht aufgehoben oder anderweitig erledigt ist",
+        "Ja, Rechtswidrigkeit und Nichtigkeit sind dasselbe",
+        "Nur belastende Verwaltungsakte bleiben wirksam"
+      ],
+      "richtig": 0,
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-012",
+      "ueberzeile": "Abgrenzung des Tages",
+      "titel": "Schuldnerverzug vs. Annahmeverzug",
+      "text": "Schuldnerverzug betrifft die verspätete Leistung des Schuldners (§ 286 BGB). Annahmeverzug betrifft die fehlende Mitwirkung des Gläubigers bei ordnungsgemäß angebotener Leistung (§§ 293 ff. BGB). Beide haben unterschiedliche Voraussetzungen und Rechtsfolgen.",
+      "norm": "§ 286 BGB · §§ 293 ff. BGB",
+      "fachLabel": "Schuldrecht AT",
+      "quellen": [
+        "§ 286 BGB",
+        "§§ 293 ff. BGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-059",
+      "ueberzeile": "Fehlerfalle Versuch",
+      "titel": "„Untauglicher Versuch = Wahndelikt“",
+      "text": "Beim untauglichen Versuch will der Täter einen existierenden Straftatbestand verwirklichen, scheitert aber an Tatsachen oder Mittel. Beim Wahndelikt hält er ein rechtlich erlaubtes Verhalten irrtümlich für strafbar. Nur der untaugliche Versuch kann nach Maßgabe der Versuchsvorschriften strafbar sein.",
+      "norm": "§§ 22, 23 StGB",
+      "fachLabel": "Strafrecht AT",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-091",
+      "ueberzeile": "Klausurtipp Grundrechte",
+      "titel": "Bei Privatrecht nicht einfach Art. 5 GG gegen Art. 2 GG prüfen",
+      "text": "Grundrechte binden Private grundsätzlich nicht wie den Staat. In Privatrechtsfällen wirken ihre Wertentscheidungen über auslegungsfähige Normen und Generalklauseln in das Zivilrecht hinein. Zeige deshalb die zivilrechtliche Norm und die grundrechtlich geprägte Auslegung.",
+      "fachLabel": "Grundrechte",
+      "quellen": [
+        "Art. 1 Abs. 3 GG",
+        "Themenpool: grundr-091"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-108",
+      "ueberzeile": "3 Punkte Europarecht",
+      "zahl": "3",
+      "titel": "Wann kann sich ein Einzelner auf eine Richtlinie berufen?",
+      "text": "Klausurklassiker: Umsetzungsfrist abgelaufen bzw. fehlerhafte Umsetzung, die maßgebliche Bestimmung ist hinreichend klar und unbedingt, und die Berufung erfolgt grundsätzlich gegenüber dem Staat – eine unmittelbare horizontale Wirkung zwischen Privaten besteht grundsätzlich nicht.",
+      "fachLabel": "Europarecht",
+      "quellen": [
+        "Art. 288 AEUV",
+        "Themenpool: europa-108"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "redaktionell-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T19:35:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    }
+  },
+  "hookOptimierung": {
+    "stand": "2026-09-23",
+    "grundlage": "Wochenendformate gemäß Redaktionsplan; Hooks benennen die konkrete Prüfungsleistung und übertreiben den Inhalt nicht.",
+    "textProviderKostenUsd": 0
+  }
+}
