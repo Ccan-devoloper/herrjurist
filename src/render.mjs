@@ -170,12 +170,41 @@ function coverTitelGeometriePruefen() {
 /* Setzt den handschriftlichen Hinweis nach dem von der visuellen KI-QA
    gelieferten Plan. Cover-v2 zeichnet bewusst keinen Pfeil mehr. */
 function coverHinweisAusPlanPlatzieren() {
-  const wurzel = document.querySelector(".folie.art-titel");
+  const wurzel = document.querySelector(".folie.art-titel, .story.cover");
   const hinweis = wurzel?.querySelector(".cover-hinweis");
   const img = wurzel?.querySelector(".frei.charakter img, .frei img");
-  if (!wurzel || !hinweis || !img?.complete || !img.naturalWidth || !img.naturalHeight) return;
+  if (!wurzel || !hinweis) return;
 
   const root = wurzel.getBoundingClientRect();
+  const n = (k, f) => Number.isFinite(Number(hinweis.dataset[k])) ? Number(hinweis.dataset[k]) : f;
+
+  /* Bildlose Review-Cover haben bewusst keinen Motivanker. Die Notiz wird
+     deshalb direkt in der Safe Area des Covers platziert – weiterhin mit
+     derselben Typografie, nur ohne Charakter-/Bildlayer. */
+  if (!img?.complete || !img.naturalWidth || !img.naturalHeight) {
+    const titel = wurzel.querySelector("h1.titel-stack, h1");
+    const badge = wurzel.querySelector(".cover-badge");
+    const fuss = wurzel.querySelector(".fuss");
+    const rotation = Math.max(-12, Math.min(12, n("rotation", -4)));
+    const minTop = Math.max(titel?.getBoundingClientRect().bottom || root.top, badge?.getBoundingClientRect().bottom || root.top) + 30;
+    const maxBottom = (fuss?.getBoundingClientRect().top || root.bottom - 40) - 24;
+    const minLeft = root.left + 48;
+    const maxRight = root.right - 48;
+    const geplantX = root.left + n("noteX", 0.18) * root.width;
+    const geplantY = root.top + n("noteY", 0.72) * root.height;
+
+    hinweis.style.left = `${geplantX - root.left}px`;
+    hinweis.style.top = `${geplantY - root.top}px`;
+    hinweis.style.transform = `translate(-50%,-50%) rotate(${rotation}deg)`;
+    const hr = hinweis.getBoundingClientRect();
+    const x = Math.max(minLeft + hr.width / 2, Math.min(maxRight - hr.width / 2, geplantX));
+    const y = Math.max(minTop + hr.height / 2, Math.min(maxBottom - hr.height / 2, geplantY));
+    hinweis.style.left = `${x - root.left}px`;
+    hinweis.style.top = `${y - root.top}px`;
+    hinweis.dataset.freeScore = "0";
+    return;
+  }
+
   const ir = img.getBoundingClientRect();
   const scale = Math.min(ir.width / img.naturalWidth, ir.height / img.naturalHeight);
   const dw = img.naturalWidth * scale;
@@ -193,7 +222,6 @@ function coverHinweisAusPlanPlatzieren() {
   const ox = ir.left + (ir.width - dw) * faktor(pos[0] || "50%", ir.width);
   const oy = ir.top + (ir.height - dh) * faktor(pos[1] || pos[0] || "50%", ir.height);
 
-  const n = (k, f) => Number.isFinite(Number(hinweis.dataset[k])) ? Number(hinweis.dataset[k]) : f;
   const geplantX = ox + n("noteX", 0.25) * dw;
   const geplantY = oy + n("noteY", 0.28) * dh;
   const tx = ox + n("targetX", 0.5) * dw;
