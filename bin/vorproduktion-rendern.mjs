@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import crypto from "node:crypto";
 
 import { Hosting } from "../src/hosting.mjs";
 import { titelbild } from "../src/bilder.mjs";
@@ -24,6 +25,7 @@ import { journalStarten } from "../src/journal.mjs";
 import { einzelkostenSynchronisieren } from "../src/kostenledger.mjs";
 import { telemetrieStarten } from "../src/telemetrie.mjs";
 import { kontextSetzen, kontextLoeschen } from "../src/anbieter.mjs";
+import { rohbildLaden, rohbildSpeichern } from "../src/vorproduktionsbild.mjs";
 import {
   budgetSetzen,
   abschluss as kostenAbschluss,
@@ -157,6 +159,68 @@ const budget = budgetStarten({
 });
 kontextSetzen({ budget, telemetrie, journal, kanal, datum: kostenDatum });
 
+const bildModell = process.env.IG_CHARAKTER_MODELL || "gpt-image-2.5-sunburst-2026-09-08";
+const bildGuete = process.env.IG_CHARAKTER_GUETE || "high";
+const schlafen = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function remoteShaPruefen(url, erwartet, versuche = 8) {
+  if (!url) throw new Error("Persistiertes Rohbild hat keine Remote-Referenz.");
+  let letzter = "";
+  for (let i = 0; i < versuche; i++) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (res.ok) {
+        const puffer = Buffer.from(await res.arrayBuffer());
+        const ist = crypto.createHash("sha256").update(puffer).digest("hex");
+        if (ist === erwartet) return true;
+        letzter = `SHA ${ist.slice(0, 12)} statt ${erwartet.slice(0, 12)}`;
+      } else letzter = `HTTP ${res.status}`;
+    } catch (e) {
+      letzter = String(e?.message || e);
+    }
+    await schlafen(1500 * (i + 1));
+  }
+  throw new Error(`Persistiertes Rohbild ist remote nicht SHA-identisch: ${letzter}`);
+}
+
+async function charakterTreffer(datum, slot, inhalt) {
+  const vorhanden = rohbildLaden({
+    basisDir: hosting.dir, datum, slot, inhalt, modell: bildModell, guete: bildGuete,
+  });
+  if (vorhanden) {
+    await remoteShaPruefen(vorhanden.rohbild.rawUrl, vorhanden.rohbild.sha256);
+    console.log(`  → Rohbild wiederverwendet: ${datum} ${slot} · ${vorhanden.rohbild.sha256.slice(0, 12)} · 0 $ neuer Provideraufwand`);
+    return vorhanden;
+  }
+
+  const treffer = await titelbild(inhalt, null, {
+    randFarbe: stickerFarbe(inhalt.klausur, process.env.IG_STIL || "bunt"),
+    zweck: "bild",
+    slot: `vorproduktion:${datum}:${slot}`,
+    charaktere: true,
+  });
+  if (!treffer) throw new Error(`${datum} ${slot}: kein Charakter-Cover erzeugt`);
+
+  const gespeichert = rohbildSpeichern({
+    basisDir: hosting.dir,
+    basisUrl: hosting.basisUrl,
+    datum, slot, inhalt, treffer,
+    modell: bildModell,
+    guete: bildGuete,
+  });
+  hosting.commit(`Persistiere Rohbild ${datum} ${slot} ${gespeichert.meta.sha256.slice(0, 12)}`);
+  await hosting.push();
+  await remoteShaPruefen(gespeichert.meta.rawUrl, gespeichert.meta.sha256);
+  console.log(`  → Rohbild dauerhaft: ${gespeichert.meta.gitPfad} · SHA-256 ${gespeichert.meta.sha256}`);
+
+  return {
+    ...treffer,
+    wiederverwendet: false,
+    urspruenglicheKostenUsd: Number(treffer.kostenUsd || 0),
+    rohbild: gespeichert.meta,
+  };
+}
+
 function motivUebernehmen(ziel, treffer) {
   ziel.bild = treffer.bild;
   ziel.bildQuelle = treffer.quelle;
@@ -211,13 +275,7 @@ try {
         inhalt.coverRegie = structuredClone(inhalt.szenen[0].coverRegie);
       }
 
-      const treffer = await titelbild(inhalt, null, {
-        randFarbe: stickerFarbe(inhalt.klausur, process.env.IG_STIL || "bunt"),
-        zweck: "bild",
-        slot: `vorproduktion:${datum}:${slot}`,
-        charaktere: true,
-      });
-      if (!treffer) throw new Error(`${datum} ${slot}: kein Charakter-Cover erzeugt`);
+      const treffer = await charakterTreffer(datum, slot, inhalt);
 
       const slotTemp = path.join(tagTemp, slot);
       fs.mkdirSync(slotTemp, { recursive: true });
@@ -232,6 +290,11 @@ try {
           hook: titel?.titel || null,
           charaktere: treffer.charaktere || [],
           bildKostenUsd: treffer.kostenUsd ?? null,
+          urspruenglicheBildKostenUsd: treffer.urspruenglicheKostenUsd ?? treffer.kostenUsd ?? null,
+          rohbildWiederverwendet: Boolean(treffer.wiederverwendet),
+          rohbildSha256: treffer.rohbild?.sha256 || null,
+          rohbildPfad: treffer.rohbild?.gitPfad || null,
+          rohbildUrl: treffer.rohbild?.rawUrl || null,
           dateien: pfade.map((p) => path.basename(p)),
         });
       } else if (Array.isArray(inhalt.szenen)) {
@@ -247,6 +310,11 @@ try {
           hook: inhalt.szenen?.[0]?.titel || null,
           charaktere: treffer.charaktere || [],
           bildKostenUsd: treffer.kostenUsd ?? null,
+          urspruenglicheBildKostenUsd: treffer.urspruenglicheKostenUsd ?? treffer.kostenUsd ?? null,
+          rohbildWiederverwendet: Boolean(treffer.wiederverwendet),
+          rohbildSha256: treffer.rohbild?.sha256 || null,
+          rohbildPfad: treffer.rohbild?.gitPfad || null,
+          rohbildUrl: treffer.rohbild?.rawUrl || null,
           dateien: [path.basename(r.cover), path.basename(r.video)],
           reel: {
             dauer: r.dauer,
@@ -349,9 +417,10 @@ await journal.abschluss();
   hosting.jsonSchreiben("kosten.json", k);
 }
 
-/* Erst NACH allen Provideraufrufen kommen die grossen Previewdateien in den
-   Asset-Clone. So committen die durablen Journal-Schreibvorgaenge niemals
-   halbfertige Bilder oder Videos. */
+/* Fertige Cover/Videos kommen weiterhin erst nach komplett erfolgreichem
+   Rendering in den Review-Ordner. Die kostenpflichtigen Rohbilder wurden
+   dagegen bereits einzeln direkt nach ihrer Erzeugung committed, gepusht
+   und per SHA-256 remote verifiziert. */
 for (const datum of tage) {
   const ziel = path.join(hosting.dir, "vorproduktion", datum, "fertig");
   fs.rmSync(ziel, { recursive: true, force: true });
