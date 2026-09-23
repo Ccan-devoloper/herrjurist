@@ -10,9 +10,14 @@ import { MANUELLER_COVER_FALLNAMEN_HINWEIS } from "./charaktere.mjs";
    - keine nachträgliche Bildregie per LLM.
 
    Lokale, kostenlose Struktur-/Quizprüfungen dürfen weiterhin blockieren,
-   wenn die gespeicherte Datei technisch widersprüchlich ist. Rendering,
-   Pexels/Bild-KI, TTS und die zeitgesteuerte Veröffentlichung bleiben davon
-   unberührt.
+   wenn die gespeicherte Datei technisch widersprüchlich ist.
+
+   Für manuell finalisierte Herr-Jurist-Feedposts gilt zusätzlich ein harter
+   visueller Publish-Gate: Die Veröffentlichung darf nur das bereits
+   freigegebene, dauerhaft auf instagram-assets gespeicherte End-Cover
+   verwenden. Fehlt dieser persistierte Asset-Vertrag, bleibt der Slot zu.
+   Für nicht manuell finalisierte autonome Beiträge bleibt die normale
+   Bildbeschaffung einschließlich Availability-Fallback unverändert.
    ========================================================================== */
 
 /* WICHTIG FUER MANUELLE PRUEFUNG/ERSTELLUNG IM CHAT ODER DURCH EINE KI:
@@ -33,6 +38,28 @@ export const MANUELLE_FINALISIERUNG_REGELN = Object.freeze({
 
 export function manuellFinalisiert(inhalt) {
   return inhalt?.manuellGeprueft === true;
+}
+
+/* Harte Freigabe für manuell finalisierte Karussell-/Feedposts.
+   Das End-Cover ist selbst Teil der Freigabe, nicht nur ein Preview-Artefakt.
+   Der SHA bindet die redaktionelle Sichtprüfung an exakt die später
+   veröffentlichte Datei. Nicht manuell finalisierte Beiträge fallen bewusst
+   nicht unter diesen Gate; deren autonome Produktionslogik bleibt erhalten. */
+export function manuellesCarouselAssetGate(inhalt) {
+  if (!manuellFinalisiert(inhalt)) return { frei: true, manuell: false, grund: null };
+  if (inhalt?.visuellGeprueft !== true) {
+    return { frei: false, manuell: true, grund: "manuell finalisiert, aber visuellGeprueft fehlt" };
+  }
+  if (!String(inhalt?.coverFinalUrl || "").trim()) {
+    return { frei: false, manuell: true, grund: "manuell finalisiert, aber coverFinalUrl fehlt" };
+  }
+  if (!/^[a-f0-9]{64}$/i.test(String(inhalt?.coverFinalSha256 || ""))) {
+    return { frei: false, manuell: true, grund: "manuell finalisiert, aber coverFinalSha256 fehlt oder ist ungueltig" };
+  }
+  if (!String(inhalt?.finalisiertVon || "").trim() || !String(inhalt?.finalisiertAm || "").trim()) {
+    return { frei: false, manuell: true, grund: "manuell finalisiert, aber Finalisierungsmetadaten fehlen" };
+  }
+  return { frei: true, manuell: true, grund: null };
 }
 
 export function finalisierungsInfo(inhalt) {
