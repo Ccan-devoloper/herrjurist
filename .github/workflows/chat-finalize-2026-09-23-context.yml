@@ -75,7 +75,7 @@ jobs:
             breakGlass:true,
             protokoll:()=>{}
           });
-          kontextSetzen({budget,telemetrie,kanal:"herrjurist",datum});
+          kontextSetzen({budget,telemetrie:telemetry,kanal:"herrjurist",datum});
 
           const generated=[0,1,2,4];
           const manifest={datum,slot:"b3",uniqueMotives:5,newProviderMotives:4,reusedProviderMotives:1,reuse:{5:2,6:0},scenes:[]};
