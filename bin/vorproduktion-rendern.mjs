@@ -32,8 +32,17 @@ import {
   vortagsSchaetzung,
 } from "../src/kosten.mjs";
 
-const daten = process.argv.slice(2).filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x));
+const args = process.argv.slice(2);
+const daten = args.filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x));
 const tage = daten.length ? daten : ["2026-09-24", "2026-09-25"];
+const flagWert = (name) => {
+  const treffer = args.find((x) => x.startsWith(`--${name}=`));
+  return treffer ? treffer.slice(name.length + 3) : "";
+};
+const feedSlots = (flagWert("slots") || "b1,b2,b3").split(",").map((x) => x.trim()).filter(Boolean);
+const storySlots = (flagWert("stories") || "").split(",").map((x) => x.trim()).filter(Boolean);
+const nurCover = args.includes("--cover-only");
+const patchModus = args.includes("--patch");
 const kostenDatum = new Date().toISOString().slice(0, 10);
 const kanal = "herrjurist-vorproduktion";
 const budgetDeckel = Number(process.env.IG_VORPRODUKTION_BILD_BUDGET_USD || 2.0);
@@ -66,19 +75,21 @@ async function layoutPreflight() {
     if (!fs.existsSync(quelle)) throw new Error(`Vorproduktion fehlt: ${quelle}`);
     const tag = JSON.parse(fs.readFileSync(quelle, "utf8"));
 
-    for (const slot of ["b1", "b2"]) {
+    for (const slot of feedSlots) {
       const inhalt = structuredClone(tag.inhalte?.[slot]);
-      if (!inhalt?.folien) throw new Error(`${datum} ${slot}: Karussell fehlt im Layout-Preflight`);
-      const ziel = path.join(basis, datum, slot);
-      fs.mkdirSync(ziel, { recursive: true });
-      await beitragRendern(inhalt, ziel, { variante: 0 });
+      if (!inhalt) throw new Error(`${datum} ${slot}: Inhalt fehlt im Layout-Preflight`);
+      if (Array.isArray(inhalt.folien)) {
+        const ziel = path.join(basis, datum, slot);
+        fs.mkdirSync(ziel, { recursive: true });
+        await beitragRendern(inhalt, ziel, { variante: 0 });
+      } else if (Array.isArray(inhalt.szenen)) {
+        const cover = path.join(basis, datum, `${slot}-cover.jpg`);
+        fs.mkdirSync(path.dirname(cover), { recursive: true });
+        await coverRendern(coverDaten(inhalt, { gesamt: 60 }), cover, { variante: 0 });
+      } else {
+        throw new Error(`${datum} ${slot}: unbekanntes Format im Layout-Preflight`);
+      }
     }
-
-    const reel = structuredClone(tag.inhalte?.b3);
-    if (!reel?.szenen) throw new Error(`${datum} b3: Reel fehlt im Layout-Preflight`);
-    const cover = path.join(basis, datum, "b3-cover.jpg");
-    fs.mkdirSync(path.dirname(cover), { recursive: true });
-    await coverRendern(coverDaten(reel, { gesamt: 60 }), cover, { variante: 0 });
   }
 }
 
@@ -265,7 +276,7 @@ try {
     fs.mkdirSync(tagTemp, { recursive: true });
     const mTag = { datum, feed: [], stories: [] };
 
-    for (const slot of ["b1", "b2", "b3"]) {
+    for (const slot of feedSlots) {
       const inhalt = structuredClone(tag.inhalte?.[slot]);
       if (!inhalt) throw new Error(`${datum} ${slot}: Inhalt fehlt`);
 
@@ -299,29 +310,48 @@ try {
         });
       } else if (Array.isArray(inhalt.szenen)) {
         motivUebernehmen(inhalt, treffer);
-        const r = await reelBauen(inhalt, slotTemp, {
-          datum,
-          layout: "erklaer",
-          framesBehalten: false,
-        });
-        mTag.feed.push({
-          slot,
-          format: "reel",
-          hook: inhalt.szenen?.[0]?.titel || null,
-          charaktere: treffer.charaktere || [],
-          bildKostenUsd: treffer.kostenUsd ?? null,
-          urspruenglicheBildKostenUsd: treffer.urspruenglicheKostenUsd ?? treffer.kostenUsd ?? null,
-          rohbildWiederverwendet: Boolean(treffer.wiederverwendet),
-          rohbildSha256: treffer.rohbild?.sha256 || null,
-          rohbildPfad: treffer.rohbild?.gitPfad || null,
-          rohbildUrl: treffer.rohbild?.rawUrl || null,
-          dateien: [path.basename(r.cover), path.basename(r.video)],
-          reel: {
-            dauer: r.dauer,
-            stimme: r.anbieter,
-            layout: r.layout,
-          },
-        });
+        if (nurCover) {
+          const cover = path.join(slotTemp, `${inhalt.slug || "reel"}-cover.jpg`);
+          await coverRendern(coverDaten(inhalt, { gesamt: 60 }), cover, { variante: 0 });
+          mTag.feed.push({
+            slot,
+            format: "reel-cover",
+            hook: inhalt.szenen?.[0]?.titel || null,
+            charaktere: treffer.charaktere || [],
+            bildKostenUsd: treffer.kostenUsd ?? null,
+            urspruenglicheBildKostenUsd: treffer.urspruenglicheKostenUsd ?? treffer.kostenUsd ?? null,
+            rohbildWiederverwendet: Boolean(treffer.wiederverwendet),
+            rohbildSha256: treffer.rohbild?.sha256 || null,
+            rohbildPfad: treffer.rohbild?.gitPfad || null,
+            rohbildUrl: treffer.rohbild?.rawUrl || null,
+            dateien: [path.basename(cover)],
+            reel: null,
+          });
+        } else {
+          const r = await reelBauen(inhalt, slotTemp, {
+            datum,
+            layout: "erklaer",
+            framesBehalten: false,
+          });
+          mTag.feed.push({
+            slot,
+            format: "reel",
+            hook: inhalt.szenen?.[0]?.titel || null,
+            charaktere: treffer.charaktere || [],
+            bildKostenUsd: treffer.kostenUsd ?? null,
+            urspruenglicheBildKostenUsd: treffer.urspruenglicheKostenUsd ?? treffer.kostenUsd ?? null,
+            rohbildWiederverwendet: Boolean(treffer.wiederverwendet),
+            rohbildSha256: treffer.rohbild?.sha256 || null,
+            rohbildPfad: treffer.rohbild?.gitPfad || null,
+            rohbildUrl: treffer.rohbild?.rawUrl || null,
+            dateien: [path.basename(r.cover), path.basename(r.video)],
+            reel: {
+              dauer: r.dauer,
+              stimme: r.anbieter,
+              layout: r.layout,
+            },
+          });
+        }
       } else {
         throw new Error(`${datum} ${slot}: unbekanntes Inhaltsformat`);
       }
@@ -333,22 +363,40 @@ try {
     const storyDir = path.join(tagTemp, "stories");
     fs.mkdirSync(storyDir, { recursive: true });
     for (const [slot, story] of Object.entries(tag.inhalte || {})
-      .filter(([s, x]) => /^s\d+$/.test(s) && x?.art)) {
+      .filter(([s, x]) => /^s\d+$/.test(s) && x?.art && (!storySlots.length || storySlots.includes(s)))) {
       const ziel = path.join(storyDir, `${slot}-${story.art}.jpg`);
       await storyRendern(structuredClone(story), ziel, { variante: 0 });
       mTag.stories.push({ slot, art: story.art, datei: path.basename(ziel) });
     }
 
-    tag.renderVorschau = {
-      status: "fertig",
-      erzeugtAm: new Date().toISOString(),
-      pfad: `vorproduktion/${datum}/fertig`,
-      textProviderKostenUsd: 0,
-      faktencheckProviderKostenUsd: 0,
-      bildQaProviderKostenUsd: 0,
-      bildKostenUsd: Number(mTag.feed.reduce((s, x) => s + Number(x.bildKostenUsd || 0), 0).toFixed(6)),
-      freigabeBetreiber: false,
-    };
+    const aktuelleBildKosten = Number(mTag.feed.reduce((summe, x) => summe + Number(x.bildKostenUsd || 0), 0).toFixed(6));
+    if (patchModus) {
+      tag.renderVorschau = {
+        ...(tag.renderVorschau || {}),
+        letzteReparatur: {
+          erzeugtAm: new Date().toISOString(),
+          feedSlots,
+          storySlots,
+          nurCover,
+          bildKostenUsd: aktuelleBildKosten,
+          textProviderKostenUsd: 0,
+          faktencheckProviderKostenUsd: 0,
+          bildQaProviderKostenUsd: 0,
+        },
+        freigabeBetreiber: false,
+      };
+    } else {
+      tag.renderVorschau = {
+        status: "fertig",
+        erzeugtAm: new Date().toISOString(),
+        pfad: `vorproduktion/${datum}/fertig`,
+        textProviderKostenUsd: 0,
+        faktencheckProviderKostenUsd: 0,
+        bildQaProviderKostenUsd: 0,
+        bildKostenUsd: aktuelleBildKosten,
+        freigabeBetreiber: false,
+      };
+    }
     tagesUpdates.set(datum, tag);
     manifest.tage.push(mTag);
   }
@@ -423,16 +471,32 @@ await journal.abschluss();
    und per SHA-256 remote verifiziert. */
 for (const datum of tage) {
   const ziel = path.join(hosting.dir, "vorproduktion", datum, "fertig");
-  fs.rmSync(ziel, { recursive: true, force: true });
-  fs.mkdirSync(path.dirname(ziel), { recursive: true });
-  fs.cpSync(path.join(temp, datum), ziel, { recursive: true });
+  const quelle = path.join(temp, datum);
+  if (patchModus) {
+    fs.mkdirSync(ziel, { recursive: true });
+    for (const slot of feedSlots) {
+      const q = path.join(quelle, slot);
+      if (fs.existsSync(q)) fs.cpSync(q, path.join(ziel, slot), { recursive: true });
+    }
+    const qStories = path.join(quelle, "stories");
+    if (fs.existsSync(qStories)) {
+      fs.mkdirSync(path.join(ziel, "stories"), { recursive: true });
+      for (const datei of fs.readdirSync(qStories)) {
+        fs.copyFileSync(path.join(qStories, datei), path.join(ziel, "stories", datei));
+      }
+    }
+  } else {
+    fs.rmSync(ziel, { recursive: true, force: true });
+    fs.mkdirSync(path.dirname(ziel), { recursive: true });
+    fs.cpSync(quelle, ziel, { recursive: true });
+  }
   fs.writeFileSync(
     path.join(hosting.dir, "vorproduktion", `${datum}.json`),
     JSON.stringify(tagesUpdates.get(datum), null, 2) + "\n",
   );
 }
 fs.writeFileSync(
-  path.join(hosting.dir, "vorproduktion", "render-manifest.json"),
+  path.join(hosting.dir, "vorproduktion", patchModus ? "render-reparatur-manifest.json" : "render-manifest.json"),
   JSON.stringify(manifest, null, 2) + "\n",
 );
 
@@ -448,5 +512,9 @@ console.log(JSON.stringify({
   textProviderKostenUsd: 0,
   faktencheckProviderKostenUsd: 0,
   bildQaProviderKostenUsd: 0,
+  patchModus,
+  feedSlots,
+  storySlots,
+  nurCover,
   ziel: tage.map((d) => `vorproduktion/${d}/fertig`),
 }, null, 2));
