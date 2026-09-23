@@ -80,8 +80,8 @@ export const FORMATE = {
   },
   wochenrueckblick: {
     label: "Wochenrückblick",
-    anleitung: "Folie 1: Wochenrückblick als klare Zusammenfassung. Danach strikt nach Lernfamilien trennen: genau eine eigene Folie Zivilrecht, eine eigene Folie Strafrecht, eine eigene Folie Öffentliches Recht und eine eigene Folie für unabhängige Themen wie Klausurtechnik/Mindset. Niemals Rechtsgebiete auf derselben Rückblickfolie mischen. Jede Fachfolie enthält nur die Themen dieser Familie in knappen Punkten mit Norm, soweit einschlägig. Vorletzte Folie: kurzer Selbsttest/Lernplan für die nächste Wiederholung. Letzte Folie: CTA.",
-    folien: ["titel", "text (Zivilrecht)", "text (Strafrecht)", "text (Öffentliches Recht)", "text (Unabhängig)", "text|merke", "cta"],
+    anleitung: "Folie 1: Wochenrückblick als klare Zusammenfassung. Danach strikt nach Lernfamilien trennen: genau eine eigene Folie Zivilrecht, eine eigene Folie Strafrecht und eine eigene Folie Öffentliches Recht. Themen außerhalb dieser drei Rechtsgebiete bekommen ebenfalls eine gemeinsame eigene Folie, ABER deren Überschrift muss aus den tatsächlich enthaltenen Kategorien gebildet werden, z. B. „Klausurtechnik“, „Kopfsache“ oder „Klausurtechnik & Kopfsache“. Die generischen Überschriften „Unabhängig“, „Sonstiges“ oder „Weitere Themen“ sind verboten. Auf dieser Restfolie soll außerdem jeder Punkt seine Kategorie erkennen lassen (z. B. „Klausurtechnik: …“, „Kopfsache: …“). Niemals Rechtsgebiete auf derselben Rückblickfolie mischen. Jede Fachfolie enthält nur die Themen dieser Familie in knappen Punkten mit Norm, soweit einschlägig. Vorletzte Folie: kurzer Selbsttest/Lernplan für die nächste Wiederholung. Letzte Folie: CTA.",
+    folien: ["titel", "text (Zivilrecht)", "text (Strafrecht)", "text (Öffentliches Recht)", "text (konkrete Restkategorien, z. B. Klausurtechnik & Kopfsache)", "text|merke", "cta"],
   },
   spickzettel: {
     label: "Spickzettel",
@@ -666,7 +666,57 @@ function coverTextKurz(text) {
   return woerter.join(" ") || null;
 }
 
-function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
+function wochenThemaZeile(t) {
+  if (typeof t === "string") return `- ${t}`;
+  const fach = t?.fach && FAECHER[t.fach];
+  const klausur = Number(t?.klausur ?? fach?.klausur);
+  const familie = klausur === 1 ? "Zivilrecht"
+    : klausur === 2 ? "Strafrecht"
+      : klausur === 3 ? "Öffentliches Recht"
+        : (fach?.kurz || t?.fachLabel || t?.fach || "Weitere Kategorie");
+  return `- [${familie}] ${t?.titel || ""}`;
+}
+
+function wochenRestLabels(wochenThemen = []) {
+  const labels = [];
+  for (const t of wochenThemen || []) {
+    if (!t || typeof t === "string") continue;
+    const fach = t.fach && FAECHER[t.fach];
+    const klausur = Number(t.klausur ?? fach?.klausur);
+    if (klausur !== 0) continue;
+    const label = String(fach?.kurz || t.fachLabel || t.fach || "").trim();
+    if (label && !labels.includes(label)) labels.push(label);
+  }
+  return labels;
+}
+
+function wochenRestTitel(wochenThemen = []) {
+  const labels = wochenRestLabels(wochenThemen);
+  if (!labels.length) return null;
+  if (labels.length === 1) return labels[0];
+  if (labels.length === 2) return `${labels[0]} & ${labels[1]}`;
+  return `${labels.slice(0, -1).join(", ")} & ${labels.at(-1)}`;
+}
+
+function wochenrueckblickResttitelSetzen(folien, wochenThemen) {
+  const restTitel = wochenRestTitel(wochenThemen);
+  if (!restTitel || !Array.isArray(folien) || folien.length < 5) return;
+  /* Die Formatfolge ist absichtlich stabil: Cover, ZR, SR, OeR, Rest.
+     Der Titel wird deterministisch aus den tatsaechlichen Gebiet-0-Faechern
+     gebildet; damit kann aus "Klausurtechnik + Mindset" nie wieder pauschal
+     "Unabhaengig" werden. */
+  folien[4].titel = restTitel;
+  if (folien[0]) {
+    const unter = `Zivilrecht · Strafrecht · Öffentliches Recht · ${restTitel}`;
+    if ("unter" in folien[0]) folien[0].unter = unter;
+    else folien[0].untertitel = unter;
+    if (/rechtsgebieten/i.test(String(folien[0].coverText || ""))) {
+      folien[0].coverText = "Nach Lernbereichen sortiert";
+    }
+  }
+}
+
+function nachbereiten(daten, { format, thema, fach, klausur, strategie, wochenThemen }) {
   const hook = hookWaehlen(daten, strategie, thema);
   if (hook && daten.folien?.[0]) {
     daten.folien[0].titel = hook.titel;
@@ -689,6 +739,7 @@ function nachbereiten(daten, { format, thema, fach, klausur, strategie }) {
     if (f.art === "titel") f.art = "text";
     if (f.art === "cta" ? folien.slice(i + 1).some((x) => x.art === "cta") : folieLeer(f)) folien.splice(i, 1);
   }
+  if (format === "wochenrueckblick") wochenrueckblickResttitelSetzen(folien, wochenThemen);
   if (folien[0]) {
     folien[0].art = "titel";
     folien[0].pille = "Swipen →";
@@ -752,7 +803,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
       `Empfohlene Folienfolge: ${spec.folien.join(" → ")} (bei „a|b“ wähle die passendere Art).`,
       thema ? `\n## Themen-Skelett\n${themaText(thema)}` : "",
       recherche ? `\n## Rechercheergebnis (Web, ${datumLesbar(datum)})\n${recherche.notizen}\n\nQuellen: ${recherche.quellen.join(" · ")}` : "",
-      wochenThemen?.length ? `\n## Themen dieser Woche\n${wochenThemen.map((t) => `- ${t}`).join("\n")}` : "",
+      wochenThemen?.length ? `\n## Themen dieser Woche\n${wochenThemen.map(wochenThemaZeile).join("\n")}` : "",
       anlass ? `\n## Anlass\n${anlass.titel}: ${anlass.kontext}` : "",
       `\nPhase im Prüfungsjahr: ${phase(datum)}.`,
       "",
@@ -761,7 +812,7 @@ export async function beitragSchreiben({ format, thema, datum, recherche, wochen
       `\nErstelle jetzt den Beitrag als JSON.`,
     ].filter(Boolean).join("\n");
     const { daten, schluessel } = await strukturiert({ system: SYSTEM, user, schema: BEITRAG_SCHEMA, effort: CONFIG.ki.effortBeitrag });
-    const beitrag = nachbereiten(daten, { format, thema, fach, klausur, strategie });
+    const beitrag = nachbereiten(daten, { format, thema, fach, klausur, strategie, wochenThemen });
     const ergebnis = pruefeBeitrag(beitrag);
     if (ergebnis.ok) {
       const fakten = await faktenSicher(beitrag, "faktencheck", { hinweis: pruefHinweis(thema) });
