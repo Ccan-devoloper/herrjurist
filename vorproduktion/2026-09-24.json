@@ -1,0 +1,695 @@
+{
+  "datum": "2026-09-24",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "kostenPolicy": {
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": true,
+    "bildkostenUsd": 0,
+    "bilderStatus": "nicht-ausgeloest"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "12:00",
+        "format": "spickzettel",
+        "themaId": "verwalt-388",
+        "themaTitel": "Was ist ein Verwaltungsakt mit Drittwirkung?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "17:30",
+        "format": "vergleich",
+        "themaId": "sachen-235",
+        "themaTitel": "Was bewirkt eine Vormerkung?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "21:30",
+        "format": "reel",
+        "themaId": "strafbt-335",
+        "themaTitel": "Wann ist eine Urkunde zusammengesetzt?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "revision-875"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "revision-875"
+      },
+      {
+        "slot": "s1",
+        "zeit": "12:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "bgbat-157"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "streitstand",
+        "themaId": "grundr-627"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "merksatz",
+        "themaId": "zpo-548"
+      },
+      {
+        "slot": "s2",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "begriff",
+        "themaId": "zpo-550"
+      },
+      {
+        "slot": "s3",
+        "zeit": "21:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      }
+    ]
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-388",
+      "slug": "2026-09-24-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verwaltungsakt mit Drittwirkung: Wer darf sich wehren?",
+          "unter": "Ein Verwaltungsakt kann zugleich begünstigen und belasten",
+          "icon": "wegweiser",
+          "titelZeilen": [
+            "VA mit Drittwirkung:",
+            "Wer wird",
+            "wie betroffen?"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Ein VA, zwei Seiten",
+          "pille": "Swipen →",
+          "hinweis": "Rechtsschutz"
+        },
+        {
+          "art": "text",
+          "titel": "Drittwirkung ist eine Wirkungsfrage",
+          "text": "Ausgangspunkt bleibt § 35 VwVfG. Dritt- oder Doppelwirkung bedeutet: Derselbe Verwaltungsakt wirkt für verschiedene Personen unterschiedlich – typischerweise begünstigt er den Adressaten und kann zugleich Rechte eines Dritten beeinträchtigen.",
+          "icon": "verbindung"
+        },
+        {
+          "art": "schritte",
+          "titel": "So gehst du in der Klausur vor",
+          "schritte": [
+            {
+              "titel": "1. Verwaltungsakt bestimmen",
+              "text": "Wer ist Adressat, was wird geregelt und welche Rechtswirkung setzt die Behörde?"
+            },
+            {
+              "titel": "2. Eigene Rechtsposition des Dritten",
+              "text": "Der Dritte braucht eine Norm, die zumindest auch seine individuellen Interessen schützt; bloße tatsächliche Nachteile genügen nicht."
+            },
+            {
+              "titel": "3. Rechtsschutz passend wählen",
+              "text": "In der Hauptsache regelmäßig Widerspruch und Anfechtungsklage; im Eilrechtsschutz ist bei Doppelwirkung § 80a VwGO zusammen mit § 80 Abs. 5 VwGO zentral."
+            }
+          ],
+          "icon": "checkliste"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Klassische Doppelwirkung",
+          "links": {
+            "titel": "Begünstigter",
+            "punkte": [
+              "Erhält durch den Verwaltungsakt eine günstige Rechtsposition.",
+              "Beispiel: Bauherr erhält eine Baugenehmigung."
+            ]
+          },
+          "rechts": {
+            "titel": "Drittbetroffener",
+            "punkte": [
+              "Greift den an einen anderen gerichteten Verwaltungsakt an.",
+              "Muss eine mögliche Verletzung eigener drittschützender Rechte geltend machen."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "§ 80a VwGO denkt beide Richtungen mit",
+          "text": "§ 80a Abs. 1 VwGO betrifft den Rechtsbehelf eines Dritten gegen einen begünstigenden Verwaltungsakt. Abs. 2 erfasst umgekehrt den belastenden Verwaltungsakt, der zugleich einen Dritten begünstigt. Das Gericht kann nach Abs. 3 eingreifen.",
+          "icon": "gericht"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht die Bezeichnung „Drittwirkung“ entscheidet, sondern die konkrete Rechtswirkung: Wer wird begünstigt, wer belastet – und welches eigene Recht schützt den Dritten?"
+        },
+        {
+          "art": "cta",
+          "titel": "Erst Rechtsposition, dann Rechtsbehelf",
+          "text": "Speichern für Baurechts-, Gewerberechts- und Polizeirechtsklausuren.",
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Ein Verwaltungsakt mit Dritt- oder Doppelwirkung ist kein eigener Verwaltungsaktstyp. Ausgangspunkt bleibt § 35 VwVfG. Klausurrelevant ist, dass dieselbe Regelung verschiedene Personen unterschiedlich trifft: etwa die Baugenehmigung, die den Bauherrn begünstigt und zugleich nachbarschützende Rechte berühren kann. Deshalb zuerst die eigene Rechtsposition des Dritten bestimmen und erst danach den passenden Rechtsbehelf wählen. Im vorläufigen Rechtsschutz ist § 80a VwGO in Verbindung mit § 80 Abs. 5 VwGO die zentrale Schaltstelle.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwgo",
+        "#verwaltungsakt",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VA mit Drittwirkung",
+      "coverText": "Ein VA, zwei Seiten",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ein einziger Verwaltungsakt kann einer Person eine günstige Position eröffnen und gleichzeitig die geschützte Rechtsposition eines Dritten beeinträchtigen.",
+        "handlung": "{A} activates one central administrative gate that opens a bright passage for one traveler while the same mechanism narrows a neighboring protected route; {B} inspects the constricted route and the shared control hub. Keep one gate mechanism as the unmistakable common cause.",
+        "hinweisRegie": "Use the natural open space near the shared control hub between the opened passage and the narrowed route. Place the handwritten note compactly there with a slight tilt, visually tying it to the single mechanism that creates two opposite effects.",
+        "alternative": "{A} stamps one blank permit token into a two-sided docking device: one side releases a green access bridge while the other raises a protective barrier in front of {B}. Keep the cause-and-two-effects relationship immediate and text-free."
+      },
+      "bildSzene": "one administrative gate with two effects",
+      "bildSzeneAlt": "permit token activates opposing access barriers",
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 42 Abs. 2 VwGO",
+        "§ 80 Abs. 1, 5 VwGO",
+        "§ 80a VwGO"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "abgrenzung",
+      "bildregie": true,
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-235",
+      "slug": "2026-09-24-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vormerkung: Was sichert sie wirklich?",
+          "unter": "§§ 883, 888 BGB – Sicherung statt Eigentum",
+          "icon": "anker",
+          "titelZeilen": [
+            "Vormerkung:",
+            "Sicherung statt",
+            "Eigentum"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Rang wird reserviert",
+          "pille": "Swipen →",
+          "hinweis": "Sachenrecht"
+        },
+        {
+          "art": "text",
+          "titel": "Der Ausgangspunkt: § 883 Abs. 1 BGB",
+          "text": "Die Vormerkung sichert einen Anspruch auf Einräumung, Aufhebung oder Änderung eines Rechts an einem Grundstück oder eines grundstücksbezogenen Rechts. Auch künftige oder bedingte Ansprüche können gesichert werden.",
+          "icon": "grundbuch"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Vormerkung ist nicht Eigentum",
+          "links": {
+            "titel": "Vormerkung",
+            "punkte": [
+              "Sichert einen schuldrechtlichen Anspruch dinglich ab.",
+              "Schützt gegen spätere beeinträchtigende Verfügungen.",
+              "Reserviert den Rang des später einzutragenden Rechts."
+            ]
+          },
+          "rechts": {
+            "titel": "Eigentum",
+            "punkte": [
+              "Ist das dingliche Vollrecht am Grundstück.",
+              "Vermittelt die Eigentümerstellung bereits jetzt.",
+              "Entsteht nicht allein durch die Vormerkung."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die starke Wirkung: § 883 Abs. 2 BGB",
+          "text": "Eine spätere Verfügung ist nicht schlechthin nichtig. Sie ist dem Vormerkungsberechtigten gegenüber insoweit unwirksam, wie sie die Verwirklichung des gesicherten Anspruchs vereiteln oder beeinträchtigen würde.",
+          "icon": "schild"
+        },
+        {
+          "art": "text",
+          "titel": "Rang und Durchsetzung",
+          "punkte": [
+            "§ 883 Abs. 3 BGB: Der Rang des späteren Rechts richtet sich nach der Eintragung der Vormerkung.",
+            "§ 888 BGB: Gegen den vormerkungswidrigen Erwerber kann ein Anspruch auf die für die Verwirklichung nötige Zustimmung bestehen."
+          ],
+          "icon": "rang"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Vormerkung überträgt das Recht noch nicht – sie hält dem gesicherten Anspruch den Platz im Grundbuch frei."
+        },
+        {
+          "art": "cta",
+          "titel": "Relative Unwirksamkeit merken",
+          "text": "Nicht „Verfügung verboten“, sondern: gegenüber dem Vormerkungsberechtigten unwirksam, soweit sein Anspruch beeinträchtigt wird.",
+          "icon": "lesezeichen"
+        }
+      ],
+      "caption": "Die Vormerkung ist eines der stärksten Sicherungsmittel des Sachenrechts, aber sie macht den Berechtigten noch nicht zum Eigentümer. § 883 BGB sichert den Anspruch, schützt ihn durch relative Unwirksamkeit späterer beeinträchtigender Verfügungen und reserviert den Rang des späteren Rechts. Muss ein nachfolgender Erwerber bei der Verwirklichung mitwirken, ist § 888 BGB die zentrale Anspruchsgrundlage. In der Klausur deshalb sauber trennen: gesicherter Anspruch, Vormerkung und späterer Rechtserwerb.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#vormerkung",
+        "#grundbuch",
+        "#bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vormerkung: Sicherung statt Eigentum",
+      "coverText": "Rang wird reserviert",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Vormerkung hält dem gesicherten Anspruch einen festen Rangplatz frei, ohne das Eigentum schon zu übertragen.",
+        "handlung": "{A} locks a glowing reservation clamp onto one empty docking slot in a property-ring mechanism while {B} watches a later crystal module try to occupy the same route but get diverted around the reserved slot. Make the reserved position, not ownership, the visual focus.",
+        "hinweisRegie": "Use the negative space directly beside the locked empty docking slot. Place the handwritten note close to the reservation clamp with a small upward tilt, so it clearly refers to the protected rank position rather than to either character.",
+        "alternative": "{A} places a luminous claim marker into a queue rail that fixes its future position while {B} slides a later property token along the rail; the later token can move, but it cannot displace the marked position."
+      },
+      "bildSzene": "reserved rank slot in property mechanism",
+      "bildSzeneAlt": "claim marker fixes future queue position",
+      "quellen": [
+        "§ 883 BGB",
+        "§ 888 BGB"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "kontrast",
+      "bildregie": true,
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "b3": {
+      "format": "reel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-335",
+      "slug": "2026-09-24-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "nummer": null,
+          "titel": "Urkunde ohne Papier?",
+          "unter": "Zusammengesetzte Urkunde bei § 267 StGB",
+          "text": "Beweiszeichen plus Bezugsobjekt können gemeinsam eine Urkunde bilden.",
+          "norm": "§ 267 StGB",
+          "icon": "verbindung",
+          "sprecher": "Eine Urkunde muss nicht als einzelnes Blatt vor dir liegen. Ein Beweiszeichen kann zusammen mit einem körperlichen Bezugsobjekt eine zusammengesetzte Urkunde bilden – wenn gerade ihre Verbindung den einheitlichen Beweisinhalt trägt.",
+          "marken": [
+            "Beweiszeichen + Objekt",
+            "eine *Beweiseinheit*"
+          ],
+          "bildSzene": "proof marker locked to physical object",
+          "kreuz": false,
+          "coverRegie": {
+            "charaktere": [
+              "rex",
+              "form7"
+            ],
+            "kernidee": "Erst die feste, beweisbezogene Verbindung von Beweiszeichen und Bezugsobjekt erzeugt die zusammengesetzte Urkunde.",
+            "handlung": "{A} aligns a small identity marker with one large vehicle-like machine while {B} closes a durable mechanical coupling that makes marker and machine read as one evidentiary unit. Keep all surfaces blank and free of readable text.",
+            "hinweisRegie": "Use the open space immediately beside the coupling between marker and machine. Place the handwritten note compactly near that joint with a slight diagonal tilt, because the legally decisive point is the connection itself.",
+            "alternative": "{A} holds a blank proof seal while {B} locks it into a dedicated socket on a large object; only after the lock closes do two separate indicator lights merge into one signal."
+          }
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Zwei Teile, ein Beweisinhalt",
+          "unter": "Nicht jede Verbindung reicht",
+          "text": "Das Zeichen muss eine Erklärung verkörpern; das Objekt konkretisiert ihren Bezug.",
+          "norm": null,
+          "icon": null,
+          "sprecher": "Du brauchst zunächst ein verkörpertes Beweiszeichen oder eine Erklärung. Das verbundene Objekt ist nicht bloße Dekoration. Es muss den Aussagegehalt des Zeichens konkretisieren, sodass beide Teile zusammen eine rechtlich erhebliche Tatsache beweisen.",
+          "marken": [
+            "Verbindung mit *Beweisbezug*"
+          ],
+          "bildSzene": "two evidence parts forming one signal",
+          "kreuz": false
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Verbindung muss auf Dauer angelegt sein",
+          "unter": null,
+          "text": "Nur das erkennbare Zusammengehören macht aus zwei Gegenständen eine Einheit.",
+          "norm": null,
+          "icon": null,
+          "sprecher": "Entscheidend ist eine hinreichend feste Verbindung. Das Zeichen und sein Bezugsobjekt müssen im Rechtsverkehr als zusammengehörige Beweiseinheit erscheinen. Eine bloß zufällige räumliche Nähe genügt dafür nicht.",
+          "marken": [
+            "fest verbunden",
+            "nicht nur nebeneinander"
+          ],
+          "bildSzene": "durable coupling versus loose proximity",
+          "kreuz": false
+        },
+        {
+          "art": "punkt",
+          "nummer": null,
+          "titel": "Klausurbeispiel: Fahrzeugidentifikationsnummer",
+          "unter": "BGH 3 StR 521/18",
+          "text": "FIN und Fahrzeug können eine zusammengesetzte Urkunde bilden.",
+          "norm": "§ 267 StGB",
+          "icon": null,
+          "sprecher": "Ein klares Beispiel liefert der Bundesgerichtshof: Die vom Hersteller angebrachte Fahrzeugidentifikationsnummer ist ein Beweiszeichen. Mit dem Fahrzeug als Bezugsobjekt bildet sie eine zusammengesetzte Urkunde.",
+          "marken": [
+            "FIN + Fahrzeug",
+            "zusammengesetzte *Urkunde*"
+          ],
+          "bildSzene": "identity marker fixed to vehicle chassis",
+          "kreuz": false
+        },
+        {
+          "art": "punkt",
+          "nummer": null,
+          "titel": "Was passiert beim Manipulieren?",
+          "unter": null,
+          "text": "Die bestehende Beweiseinheit kann verfälscht werden.",
+          "norm": "§ 267 Abs. 1 StGB",
+          "icon": null,
+          "sprecher": "Wird eine fest am Fahrzeug angebrachte Identifikationsnummer verändert, kann dadurch eine echte zusammengesetzte Urkunde verfälscht werden. Dann prüfst du die Tathandlung des § 267 Absatz 1 StGB und zusätzlich den erforderlichen Täuschungsvorsatz.",
+          "marken": [
+            "Verbindung verändert",
+            "§ 267 Abs. 1 *StGB*"
+          ],
+          "bildSzene": "tampered identity joint on vehicle",
+          "kreuz": true
+        },
+        {
+          "art": "merke",
+          "nummer": null,
+          "titel": "Drei Fragen reichen",
+          "unter": null,
+          "text": "Zeichen? feste Verbindung? gemeinsamer Beweisinhalt?",
+          "norm": null,
+          "icon": null,
+          "sprecher": "Für die Klausur reichen drei Fragen: Gibt es ein beweisgeeignetes Zeichen? Ist es fest mit einem Bezugsobjekt verbunden? Und entsteht gerade aus dieser Verbindung ein gemeinsamer Beweisinhalt? Wenn ja, denk an die zusammengesetzte Urkunde.",
+          "marken": [
+            "Zeichen",
+            "Verbindung",
+            "*Beweisinhalt*"
+          ],
+          "bildSzene": "three-stage evidence coupling check",
+          "kreuz": false
+        },
+        {
+          "art": "cta",
+          "nummer": null,
+          "titel": "Nicht am Papierbegriff hängen bleiben",
+          "unter": null,
+          "text": "Bei § 267 StGB immer nach der Beweiseinheit fragen.",
+          "norm": "§ 267 StGB",
+          "icon": null,
+          "sprecher": "Merke dir nicht nur das Autobeispiel. Entscheidend ist die Struktur: Beweiszeichen und Bezugsobjekt werden durch ihre Verbindung zu einer einheitlichen Urkunde. Genau diese Struktur musst du im Sachverhalt erkennen.",
+          "marken": [
+            "Beweiseinheit erkennen"
+          ],
+          "bildSzene": "single evidence unit assembled from two parts",
+          "kreuz": false
+        }
+      ],
+      "caption": "Zusammengesetzte Urkunde bei § 267 StGB: Ein Beweiszeichen kann mit einem körperlichen Bezugsobjekt zu einer einheitlichen Urkunde verbunden sein. Entscheidend sind die beweisbezogene Erklärung, eine hinreichend feste Verbindung und ein gemeinsamer Beweisinhalt. Der BGH behandelt etwa die Fahrzeugidentifikationsnummer zusammen mit dem Fahrzeug als zusammengesetzte Urkunde; die Manipulation der fest angebrachten FIN kann deshalb eine echte Urkunde verfälschen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#urkundenfälschung",
+        "#267stgb",
+        "#examenswissen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zusammengesetzte Urkunde",
+      "titelZeilen": [
+        "Zusammengesetzte",
+        "Urkunde:",
+        "Wann liegt sie vor?"
+      ],
+      "coverCharaktere": [
+        "rex",
+        "form7"
+      ],
+      "coverText": "Die Verbindung beweist",
+      "coverBadge": "Examensklassiker",
+      "quellen": [
+        "§ 267 StGB",
+        "BGH, Urt. v. 17.10.2019 – 3 StR 521/18",
+        "BGHSt 9, 235"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "ueberraschung",
+      "bildregie": true,
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-875",
+      "ueberzeile": "Prüfungsfrage Revision",
+      "titel": "Was beweist das Hauptverhandlungsprotokoll nach § 274 StPO?",
+      "optionen": [
+        "Die vorgeschriebenen Förmlichkeiten der Hauptverhandlung",
+        "Den gesamten Tatablauf",
+        "Jede Zeugenaussage wortgetreu"
+      ],
+      "fachLabel": "Revision im Strafverfahren",
+      "quellen": [
+        "§ 274 StPO"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-875",
+      "ueberzeile": "Auflösung",
+      "titel": "Richtig: die vorgeschriebenen Förmlichkeiten",
+      "text": "§ 274 StPO gibt dem Protokoll ausschließliche Beweiskraft für die für die Hauptverhandlung vorgeschriebenen Förmlichkeiten. Gegen diesen Protokollinhalt ist grundsätzlich nur der Fälschungsnachweis zulässig.",
+      "norm": "§ 274 StPO",
+      "fachLabel": "Revision im Strafverfahren",
+      "quellen": [
+        "§ 274 StPO"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-157",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Nichtig oder schwebend unwirksam?",
+      "text": "Nichtigkeit heißt: Das Rechtsgeschäft entfaltet grundsätzlich von Anfang an keine Wirkung, etwa nach § 134 BGB. Bei schwebender Unwirksamkeit hängt die Wirksamkeit noch von einer Genehmigung ab, z. B. nach §§ 108, 177 BGB.",
+      "norm": "§ 134 BGB · § 108 BGB · § 177 BGB",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "quellen": [
+        "§ 134 BGB",
+        "§ 108 BGB",
+        "§ 177 BGB"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-627",
+      "ueberzeile": "Grundrechte im Privatrecht",
+      "titel": "Mittelbare Drittwirkung: Grundrechte zwischen Privaten?",
+      "text": "Private sind grundsätzlich nicht unmittelbar wie der Staat an Grundrechte gebunden. Grundrechte strahlen aber in das Privatrecht aus: Fachgerichte müssen sie bei Auslegung und Anwendung des Zivilrechts zur Geltung bringen und kollidierende Freiheitspositionen ausgleichen.",
+      "fachLabel": "Grundrechte",
+      "quellen": [
+        "BVerfG, Beschl. v. 11.12.2024 – 1 BvR 1109/21",
+        "BVerfGE 7, 198 – Lüth"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-548",
+      "titel": "Streitgegenstand: Antrag plus Lebenssachverhalt",
+      "text": "Der Streitgegenstand wird im Zivilprozess durch den Antrag und den zugrunde liegenden Lebenssachverhalt bestimmt. § 253 Abs. 2 Nr. 2 ZPO verlangt Gegenstand, Grund und bestimmten Antrag; § 308 ZPO bindet das Gericht an die Parteianträge.",
+      "norm": "§ 253 Abs. 2 Nr. 2 ZPO · § 308 ZPO",
+      "fachLabel": "Zivilprozessrecht",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 308 ZPO"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-550",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Klageänderung",
+      "text": "Eine Klageänderung verändert nach Rechtshängigkeit den Streitgegenstand. Sie ist nach § 263 ZPO zulässig, wenn der Beklagte einwilligt oder das Gericht sie für sachdienlich hält. § 264 ZPO nennt Änderungen, die rechtlich gerade nicht als Klageänderung gelten.",
+      "norm": "§§ 263, 264 ZPO",
+      "fachLabel": "Zivilprozessrecht",
+      "quellen": [
+        "§ 263 ZPO",
+        "§ 264 ZPO"
+      ],
+      "befundeTypisiert": true,
+      "fachStand": "manuell-inhalt-2026-09-23",
+      "faktenHinweise": [],
+      "manuellGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-23T15:50:00.000Z",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "ausstehend"
+    }
+  }
+}
