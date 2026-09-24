@@ -1,12 +1,12 @@
 name: Instagram-Bot · Herr Jurist
 
-# Läuft stündlich (UTC 05:35–20:35 = 07:35–22:35 Sommerzeit bzw. 06:35–21:35 Winterzeit)
+# Läuft stündlich (UTC 05:30–20:30 = 07:30–22:30 Sommerzeit bzw. 06:30–21:30 Winterzeit)
 # und veröffentlicht alle Beiträge/Stories, deren Uhrzeit im Tagesplan erreicht ist.
 # Hinweis: GitHub registriert den Zeitplan erst, wenn diese Datei auf dem
 # Standardzweig geändert wurde; ein Lauf ist idempotent (nur fällige Einträge).
 on:
   schedule:
-    - cron: "35 5-20 * * *"
+    - cron: "30 5-20 * * *"
   workflow_dispatch:
     inputs:
       modus:
@@ -290,7 +290,7 @@ jobs:
 
   # Weckkette: GitHub löst „schedule“ nicht zuverlässig aus (Läufe fehlen oder
   # kommen Stunden später). Deshalb wartet nach jedem planmäßigen Lauf ein
-  # kleiner Job bis kurz nach dem nächsten Slot (Minute 35, 05–20 UTC) und
+  # kleiner Job bis kurz nach dem nächsten Slot (Minute 30, 05–20 UTC) und
   # startet den Lauf selbst, falls GitHub ihn nicht gestartet hat. Kommt der
   # Zeitplan doch, übernimmt dessen Lauf die Kette – es lebt immer genau eine.
   weckruf:
@@ -319,13 +319,13 @@ jobs:
           }
           if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
           jetzt=$(date -u +%s)
-          # Nächster Slot: heute Minute 35 der nächsten vollen Stunde zwischen 05 und 20 UTC, sonst morgen 05:35.
+          # Nächster Slot: heute Minute 30 der nächsten vollen Stunde zwischen 05 und 20 UTC, sonst morgen 05:30.
           h=$((10#$(date -u +%H))); m=$((10#$(date -u +%M)))
           tag=$(date -u +%F)
-          if [ $m -lt 35 ]; then zielh=$h; else zielh=$((h+1)); fi
+          if [ $m -lt 30 ]; then zielh=$h; else zielh=$((h+1)); fi
           if [ $zielh -lt 5 ]; then zielh=5; fi
           if [ $zielh -gt 20 ]; then zielh=5; tag=$(date -u -d "$tag +1 day" +%F); fi
-          slot=$(date -u -d "$tag $(printf %02d $zielh):35:00" +%s)
+          slot=$(date -u -d "$tag $(printf %02d $zielh):30:00" +%s)
           warten=$((slot + 420 - jetzt))
           echo "Nächster Slot: $(date -u -d @$slot +%FT%TZ) – warte $warten s"
           if [ $warten -gt 19800 ]; then
