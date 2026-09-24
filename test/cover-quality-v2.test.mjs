@@ -152,7 +152,8 @@ test("cover-quality-v2: Produktionsparameter und 4:5-Format entsprechen dem Refe
   assert.equal(CONFIG.bilder.charaktere.retryGuete, "xhigh");
   assert.equal(CONFIG.bilder.charaktere.reelGuete, "medium");
   assert.equal(CONFIG.bilder.charaktere.reelRetryGuete, "high");
-  assert.equal(CONFIG.bilder.charaktere.qaAktiv, true);
+  const qaErwartet = String(process.env.IG_CHARAKTER_QA || "true") === "true";
+  assert.equal(CONFIG.bilder.charaktere.qaAktiv, qaErwartet);
 });
 
 test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesichert", () => {
