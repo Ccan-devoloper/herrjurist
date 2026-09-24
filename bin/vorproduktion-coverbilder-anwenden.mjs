@@ -31,7 +31,7 @@ const ZUORDNUNG = new Map([
   ["gestohlen und gutgläubig gekauft.png", ["2026-09-28", "b1"]],
   ["fahrlässigkeitsdelik.png", ["2026-09-28", "b2"]],
   ["va erledigt.png", ["2026-09-28", "b3"]],
-]);
+].map(([name, ziel]) => [name.toLowerCase(), ziel]));
 
 function normalisieren(s) {
   return String(s || "")
