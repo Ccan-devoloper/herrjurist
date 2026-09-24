@@ -537,13 +537,14 @@ async function main() {
     return;
   }
 
+  const exakterVorproduktionslauf = vorproduktionAktiv && !trocken && !alles && process.env.IG_EXAKT_WARTEN === "true";
+
   /* Hybridbetrieb: Der Tagesplan liegt bereits vor, aber vor 07:00 Uhr
-     Ortszeit bekommt die manuelle Chat-Finalisierung Vorrang. Ein früher
-     Winter-Lauf (06:35) soll nicht ausgerechnet wenige Minuten vor der
-     menschlichen Freigabe kostenpflichtig alle Texte erzeugen. Ab 07:00
-     bleibt die bisherige API-Pipeline als Ausfallsicherung vollständig aktiv.
-     Die Postingzeiten selbst werden NICHT verändert. */
-  if (!trocken && !alles && lokaleMinuten() < 7 * 60) {
+     Ortszeit bekommt die manuelle Chat-Finalisierung Vorrang. Der exakte
+     Vorproduktionslauf ist davon ausgenommen: Er darf im Winter schon vor
+     07:00 starten, erledigt nur kostenlose Vorarbeit und wartet danach auf
+     die echte Planzeit. */
+  if (!trocken && !alles && lokaleMinuten() < 7 * 60 && !exakterVorproduktionslauf) {
     log("Chat-Finalisierungsfenster bis 07:00 – Plan steht, kostenpflichtige Inhaltserzeugung wartet.");
     return;
   }
@@ -731,7 +732,7 @@ async function main() {
      Der Runner startet frueher, erledigt Token-/Insight-/Lernschleifenarbeit
      und wartet erst unmittelbar vor dem Feed-Posting bis zur geplanten Minute.
      Ein bereits faelliger Slot und ein manueller Sofortlauf warten nie. */
-  if (vorproduktionAktiv && !trocken && !alles && process.env.IG_EXAKT_WARTEN === "true") {
+  if (exakterVorproduktionslauf) {
     const d = new Date();
     const jetztSekunden = lokaleMinuten(d) * 60 + d.getSeconds();
     const wartenMs = feedWartezeitMs(plan, jetztSekunden);
