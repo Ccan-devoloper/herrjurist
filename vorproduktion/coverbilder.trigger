@@ -24,3 +24,7 @@ reason=reel-cover-profile-durchreichen
 run=repair-character-cover-layout-strong
 slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
 reason=vorige-aenderung-zu-dezent
+2026-09-24T19:18:00+02:00
+run=repair-character-cover-edge-to-edge
+slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
+reason=freisteller-kante-zu-kante-mit-bleed
