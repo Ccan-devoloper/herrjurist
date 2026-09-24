@@ -1,4 +1,4 @@
-name: Temporary single-comment inspection
+name: Temporary single-comment reply
 
 on:
   push:
@@ -7,45 +7,56 @@ on:
       - ".github/workflows/one-comment-temp.yml"
 
 jobs:
-  inspect:
+  reply:
     runs-on: ubuntu-latest
     steps:
-      - name: Read target Instagram comment
+      - name: Reply to exactly one Instagram comment
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
           IG_GRAPH_VERSION: ${{ vars.IG_GRAPH_VERSION }}
         run: |
           node <<'NODE'
-          const mediaId = "18086952467258750";
+          const commentId = "18119278927934336";
+          const message = "Genau – wichtiger Examenspunkt. Nur die Präzisierung: Intendiertes Ermessen ersetzt nicht die Spruchreife. Vornahmeurteil nur, wenn konkret nur eine rechtmäßige Entscheidung verbleibt; sonst Bescheidungsurteil nach § 113 Abs. 5 S. 2 VwGO.";
           const host = process.env.IG_GRAPH_HOST || "instagram";
           const version = process.env.IG_GRAPH_VERSION || "v23.0";
           const base = host === "facebook"
             ? `https://graph.facebook.com/${version}`
             : `https://graph.instagram.com/${version}`;
-          const params = new URLSearchParams({
-            fields: "id,text,username,from{id,username},timestamp,replies.limit(50){id,text,username,from{id,username},timestamp}",
-            limit: "50",
-            access_token: process.env.IG_ACCESS_TOKEN,
+          const token = process.env.IG_ACCESS_TOKEN;
+
+          const meUrl = new URL(`${base}/me`);
+          meUrl.search = new URLSearchParams({ fields: "username", access_token: token });
+          const meRes = await fetch(meUrl);
+          const me = await meRes.json();
+          if (!meRes.ok) throw new Error("Could not read own username: " + JSON.stringify(me));
+
+          const readUrl = new URL(`${base}/${commentId}`);
+          readUrl.search = new URLSearchParams({
+            fields: "id,text,replies.limit(50){id,text,username,from{id,username},timestamp}",
+            access_token: token,
           });
-          const res = await fetch(`${base}/${mediaId}/comments?${params}`);
-          const body = await res.text();
-          if (!res.ok) {
-            console.error("IG_ERROR", res.status, body);
-            process.exit(1);
+          const readRes = await fetch(readUrl);
+          const current = await readRes.json();
+          if (!readRes.ok) throw new Error("Could not read target comment: " + JSON.stringify(current));
+
+          const ownReply = (current.replies?.data || []).find(r =>
+            (r.username || r.from?.username || "").toLowerCase() === String(me.username || "").toLowerCase()
+          );
+          if (ownReply) {
+            console.log("ALREADY_REPLIED=" + ownReply.id);
+            process.exit(0);
           }
-          const json = JSON.parse(body);
-          const rows = (json.data || []).map(c => ({
-            id: c.id,
-            text: c.text,
-            username: c.username || c.from?.username || "",
-            timestamp: c.timestamp,
-            replies: (c.replies?.data || []).map(r => ({
-              id: r.id,
-              text: r.text,
-              username: r.username || r.from?.username || "",
-              timestamp: r.timestamp,
-            })),
-          }));
-          console.log("TARGET_COMMENTS=" + JSON.stringify(rows));
+
+          const body = new URLSearchParams({ message, access_token: token });
+          const postRes = await fetch(`${base}/${commentId}/replies`, {
+            method: "POST",
+            headers: { "content-type": "application/x-www-form-urlencoded" },
+            body,
+          });
+          const posted = await postRes.json();
+          if (!postRes.ok) throw new Error("Reply failed: " + JSON.stringify(posted));
+          console.log("REPLY_POSTED=" + posted.id);
+          console.log("REPLY_TEXT=" + message);
           NODE
