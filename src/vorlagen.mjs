@@ -1049,7 +1049,11 @@ export function storyHtml(story, ctx) {
  */
 export function coverHtml(daten, ctx) {
   const bunt = (ctx.stil.familie || ctx.stil.id) === "bunt";
-  const badge = String(daten.coverBadge || "").trim();
+  const badgeRaw = String(daten.coverBadge || "").trim();
+  /* "Reel" steht bereits als feste Marke oben rechts. Ein zweites "Reel"
+     unter dem Titel wirkt wie ein verrutschtes Label und wird deshalb nicht
+     noch einmal als Cover-Badge gesetzt. Inhaltliche Badges bleiben erhalten. */
+  const badge = /^reel$/i.test(badgeRaw) ? "" : badgeRaw;
   const inhalt = `
     ${kopf(ctx, "")}
     <span class="reelmarke">Reel</span>
