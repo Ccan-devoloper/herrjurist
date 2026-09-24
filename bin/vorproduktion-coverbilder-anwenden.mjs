@@ -15,7 +15,8 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 
 import { Hosting } from "../src/hosting.mjs";
-import { beitragRendern, browserBeenden, coverRendern } from "../src/render.mjs";
+import { browserBeenden, coverRendern, htmlZuJpeg, kontext } from "../src/render.mjs";
+import { folieHtml, MASSE } from "../src/vorlagen.mjs";
 import { coverDaten } from "../src/reel.mjs";
 
 const ZUORDNUNG = new Map([
@@ -316,9 +317,19 @@ try {
         delete inhalt.coverFinalSha256;
         const titel = inhalt.folien.find((x) => x.art === "titel") || inhalt.folien[0];
         motivSetzen(titel, dataUrl, crop, profil);
-        const dir = path.join(temp, datum, slot);
-        const gerendert = await beitragRendern(inhalt, dir);
-        fs.copyFileSync(gerendert[0], target);
+        /* Fuer einen Cover-Patch wird nur die Titelfolie gerendert. Das darf
+           nicht an einer spaeteren CTA-Folie oder deren Icons scheitern. */
+        const ctx = kontext({
+          fach: inhalt.fach,
+          klausur: inhalt.klausur,
+          fachLabel: inhalt.fachLabel,
+          variante: inhalt.variante,
+        });
+        await htmlZuJpeg(
+          folieHtml(titel, ctx, 1, inhalt.folien.length),
+          MASSE.beitrag,
+          target,
+        );
         renderMeta = { mode: "freisteller-covervorlage", profil, ...crop };
       } else if (Array.isArray(inhalt.szenen)) {
         delete inhalt.coverFinalUrl;
