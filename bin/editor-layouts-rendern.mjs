@@ -68,12 +68,14 @@ let uebersprungen = 0;
 let gefehlt = 0;
 const protokoll = [];
 
-/* Frisch rendern, vergleichen, Karte neben die gespeicherte Datei legen. */
-async function karteFuer(html, masse, gespeichert, kennung) {
+/* Frisch rendern, vergleichen, Karte neben die gespeicherte Datei legen.
+   htmlBauen ist eine Funktion: auch Template-Fehler (z.B. striktere Regeln
+   als zum urspruenglichen Renderzeitpunkt) duerfen nur DIESE Datei kosten. */
+async function karteFuer(htmlBauen, masse, gespeichert, kennung) {
   if (!fs.existsSync(gespeichert)) { gefehlt++; return; }
   const ziel = path.join(temp, `${crypto.randomBytes(6).toString("hex")}.jpg`);
   try {
-    await htmlZuJpeg(html, masse, ziel);
+    await htmlZuJpeg(htmlBauen(), masse, ziel);
   } catch (e) {
     uebersprungen++;
     protokoll.push(`${kennung}: Render-Fehler (${String(e?.message || e).slice(0, 120)})`);
@@ -111,8 +113,9 @@ try {
         const n = inhalt.folien.length;
         for (let i = 0; i < n; i++) {
           const name = `${inhalt.slug || "beitrag"}-${String(i + 1).padStart(2, "0")}.jpg`;
+          const folie = inhalt.folien[i];
           await karteFuer(
-            folieHtml(inhalt.folien[i], ctx, i + 1, n),
+            () => folieHtml(folie, ctx, i + 1, n),
             MASSE.beitrag,
             path.join(fertig, slot, name),
             `${datum}/${slot}/${name}`,
@@ -122,7 +125,7 @@ try {
         const story = structuredClone(roh);
         const ctx = kontext({ fach: story.fach, klausur: story.klausur, fachLabel: story.fachLabel, variante: 0 });
         const name = `${slot}-${story.art}.jpg`;
-        await karteFuer(storyHtml(story, ctx), MASSE.story, path.join(fertig, "stories", name), `${datum}/stories/${name}`);
+        await karteFuer(() => storyHtml(story, ctx), MASSE.story, path.join(fertig, "stories", name), `${datum}/stories/${name}`);
       }
     }
   }
