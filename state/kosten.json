@@ -1133,16 +1133,23 @@
         "provider": "openai",
         "modell": "gpt-image-2.5-sunburst-2026-09-08",
         "promptVersion": "image",
-        "status": "sent",
+        "status": "settled",
         "reserviertUsd": 0.12,
-        "kostenUsd": null,
-        "konservativGebundenUsd": 0.12,
-        "kostenBekannt": false,
-        "outcome": null,
+        "kostenUsd": 0.073989,
+        "konservativGebundenUsd": 0,
+        "kostenBekannt": true,
+        "outcome": "ok",
         "fehler": null,
-        "usage": null,
+        "usage": {
+          "inputTokens": 3033,
+          "outputTokens": 1756,
+          "imageInputTokens": 2048,
+          "textInputTokens": 985,
+          "imageOutputTokens": 1756,
+          "textOutputTokens": 0
+        },
         "erstelltAm": "2026-09-24T00:36:06.473Z",
-        "aktualisiertAm": "2026-09-24T00:36:09.475Z"
+        "aktualisiertAm": "2026-09-24T00:36:49.512Z"
       }
     ]
   },
@@ -1156,12 +1163,12 @@
       "stand": "2026-09-23T17:07:49.991Z"
     },
     "2026-09-24": {
-      "bekannteKostenUsd": 0,
-      "bekannteKostenposten": 0,
-      "ungeklaerteMaxBelastungUsd": 0.12,
-      "ungeklaertePosten": 1,
+      "bekannteKostenUsd": 0.073989,
+      "bekannteKostenposten": 1,
+      "ungeklaerteMaxBelastungUsd": 0,
+      "ungeklaertePosten": 0,
       "eintraegeGesamt": 1,
-      "stand": "2026-09-24T00:36:09.476Z"
+      "stand": "2026-09-24T00:36:49.513Z"
     }
   },
   "einzelkostenMeta": {
