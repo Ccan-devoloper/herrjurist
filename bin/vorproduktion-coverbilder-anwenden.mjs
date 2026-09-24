@@ -47,7 +47,7 @@ const RENDER_PROFIL = new Map([
      bleibt auch das Gerichtsgebaeude oben rechts vollständig erhalten. */
   ["2026-09-25/b3", { edge: true, top: 690, bottom: 0, bleed: 12, x: 0.50, y: 1.00, fit: "contain" }],
   ["2026-09-26/b3", { edge: true, top: 620, bottom: 0, bleed: 12, x: 0.50, y: 0.58, fit: "cover" }],
-  ["2026-09-28/b3", { edge: true, top: 620, bottom: 0, bleed: 12, x: 0.52, y: 0.60, fit: "cover" }],
+  ["2026-09-28/b3", { edge: true, top: 340, bottom: 0, bleed: 12, x: 0.50, y: 1.00, fit: "contain" }],
 ]);
 
 function triggerSlots() {
