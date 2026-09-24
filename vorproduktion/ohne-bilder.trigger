@@ -1,10 +1,17 @@
 {
-  "stand": "2026-09-23T20:47:30Z",
+  "stand": "2026-09-24T10:15:00Z",
   "modus": "lokal-ohne-provider-und-ohne-coverbilder",
   "tage": [
-    "2026-09-26",
-    "2026-09-27",
-    "2026-09-28"
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08"
   ],
-  "grund": "Review-Korrekturen A-G: Cover-v2 ohne Bild, Story-Header/Zahl/Teaser, aktuelles Reel-Format, CTA-Icons, Wochenrueckblick"
+  "grund": "Zehn weitere Review-Tage providerfrei: Themenpool/Ledger/Strategie, Cover-v2 ohne Charakterlayer, Piper-Reels, 9 Stories"
 }
