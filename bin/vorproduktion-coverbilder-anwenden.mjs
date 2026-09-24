@@ -235,7 +235,10 @@ const pngs = fs.readdirSync(coverDir)
   })
   .sort((a, b) => a.localeCompare(b, "de"));
 
-if (!pngs.length) throw new Error("Keine passenden PNG-Coverbilder gefunden.");
+const rohbild26b1Ausgewaehlt = !slotsFilter?.size || slotsFilter.has("2026-09-26/b1");
+if (!pngs.length && !rohbild26b1Ausgewaehlt) {
+  throw new Error("Keine passenden PNG-Coverbilder gefunden.");
+}
 if (slotsFilter?.size) console.log(`Gezielter Coverlauf: ${[...slotsFilter].join(", ")}`);
 
 const tage = new Map();
