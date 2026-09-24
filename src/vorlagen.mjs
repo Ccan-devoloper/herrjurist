@@ -224,11 +224,12 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story .karte.entscheid .t{font-size:34px;letter-spacing:.06em;text-transform:uppercase;color:var(--ok)}
 .story .pfeil{margin-top:auto;text-align:center;font-size:34px;color:var(--text-weich);letter-spacing:.12em;text-transform:uppercase}
 .story .umfrageplatz{margin-top:auto;height:300px;flex:none}
-/* Reel-Cover: Instagram zeigt das 9:16-Cover im Feed und im Profilraster
-   zentriert als 4:5-Ausschnitt (y 285–1635). Deshalb liegt der komplette
-   sichtbare Aufbau innerhalb genau dieser 1080×1350-Safe-Area. */
-.story.cover{padding-top:285px;padding-bottom:285px}
-.story.cover .reelmarke{position:absolute;right:84px;top:300px;font-family:var(--text);font-weight:700;font-size:28px;letter-spacing:.16em;text-transform:uppercase;background:var(--pille);color:var(--pille-text);padding:12px 26px;border-radius:40px}
+/* Reel-Cover bleibt eine echte 9:16-Komposition. Die 4:5-Feed-Safe-Area
+   schützt nur kritischen Text; Fachband, Reelmarke und Motiv duerfen die
+   echten Aussenkanten des Covers nutzen. Das entspricht der funktionierenden
+   Urkunde-ohne-Papier-Referenz. */
+.story.cover{padding-top:150px;padding-bottom:130px}
+.story.cover .reelmarke{position:absolute;right:84px;top:40px;font-family:var(--text);font-weight:700;font-size:28px;letter-spacing:.16em;text-transform:uppercase;background:var(--pille);color:var(--pille-text);padding:12px 26px;border-radius:40px}
 .story.cover .dauer{margin-top:30px;font-size:36px;color:var(--text-weich)}
 .story.cover .buehne{margin:auto auto 0;width:460px;height:460px;display:flex;align-items:center;justify-content:center;position:relative}
 .story.cover .buehne::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--flaeche);opacity:.6}
@@ -349,7 +350,7 @@ h1 em{color:${p.akzent2}}
    rechts aufgespannt. Die exakte Breite kommt inline aus dem Renderprofil;
    overflow bleibt bewusst sichtbar, damit keine "Sticker"-Innenkante entsteht. */
 .frei.charakter.edge-to-edge{max-width:none;overflow:hidden}
-.frei.charakter.edge-to-edge img{object-fit:cover;object-position:var(--edge-x,50%) var(--edge-y,50%)}
+.frei.charakter.edge-to-edge img{object-fit:var(--edge-fit,cover);object-position:var(--edge-x,50%) var(--edge-y,50%)}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
 /* Die KI bestimmt die bevorzugte Position des handschriftlichen Hinweises.
@@ -458,7 +459,7 @@ em{color:${p.akzent2}}
    wie eine Karussell-Titelfolie (1080×1350). Deshalb werden Titel und Pillen
    hier NICHT auf 1920px hochskaliert; genau diese frühere 4/3-Skalierung
    schob die erste Zeile aus der Feed-Safe-Area. */
-.story.cover .kopf{top:285px}
+.story.cover .kopf{top:0}
 .story.cover h1{background:none;padding:0;width:auto;font-size:112px;line-height:1.2;margin-top:70px}
 .story.cover h1.klein{font-size:96px}
 .story.cover h1.winzig{font-size:84px}
@@ -468,10 +469,10 @@ em{color:${p.akzent2}}
 .story.cover h1.titel-stack.winzig{font-size:84px}
 .story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;box-sizing:border-box;background:${p.dunkel};color:#fff;padding:12px 27px 14px;border-radius:30px;white-space:nowrap}
 .story.cover .unter{margin-top:22px;margin-left:24px;font-size:34px}
-/* Charakter-Motive bleiben vollständig innerhalb der 4:5-Safe-Area. Die
-   eigentliche Größe kommt weiter aus coverBildScale; hier wird nur die
-   Unterkante zuverlässig auf y=1635 gelegt. */
-.story.cover .frei.charakter{bottom:285px;right:36px}
+/* Das Motiv darf bis an die echte Unterkante des 9:16-Covers laufen.
+   Geschuetzt wird nur der Textblock; die Illustration ist selbst Teil der
+   Komposition und soll nicht 285 px ueber dem unteren Rand schweben. */
+.story.cover .frei.charakter{bottom:0;right:36px}
 .story.cover h1,.story.cover .unter{position:relative;z-index:3}
 .story.cover .kopf{z-index:3}
 .story.cover .cover-badge{margin-top:12px}
@@ -586,6 +587,8 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.05, Math.min(0.95, xRaw)) : null;
   const yRaw = Number(folie.coverBildY);
   const y = istCharakter && Number.isFinite(yRaw) ? Math.max(0.05, Math.min(0.95, yRaw)) : 0.5;
+  const fitRaw = String(folie.coverBildFit || "").toLowerCase();
+  const fit = fitRaw === "contain" ? "contain" : "cover";
   const topRaw = Number(folie.coverBildTop);
   const bottomRaw = Number(folie.coverBildBottom);
   const bleedRaw = Number(folie.coverBildBleed);
@@ -606,6 +609,7 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
     style.push("transform:none");
     style.push(`--edge-x:${Math.round((x ?? 0.5) * 10000) / 100}%`);
     style.push(`--edge-y:${Math.round(y * 10000) / 100}%`);
+    style.push(`--edge-fit:${fit}`);
   } else {
     if (festeBreite && folie.bildBreite && folie.bildHoehe) {
       const ratio = folie.bildHoehe / folie.bildBreite;
