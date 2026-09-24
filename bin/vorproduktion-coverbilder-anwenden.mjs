@@ -37,14 +37,14 @@ const ZUORDNUNG = new Map([
 /* Gezielte Layoutkorrekturen für manuell gelieferte Charakter-Szenen. Die
    Werte steuern nur lokale Geometrie; kein Provider wird aufgerufen. */
 const RENDER_PROFIL = new Map([
-  /* Problemcover bekommen keine Sticker-Skalierung mehr, sondern eine
-     explizite Edge-to-Edge-Breite mit leichtem Beschnitt ("bleed"). So
-     spannt das freigestellte Motiv die untere Coverbuehne wirklich von
-     Kante zu Kante auf. */
-  ["2026-09-25/b2", { width: 1160, x: 0.50, edge: true }],
-  ["2026-09-25/b3", { width: 1160, x: 0.50, edge: true }],
-  ["2026-09-26/b3", { width: 1120, x: 0.50, edge: true }],
-  ["2026-09-28/b3", { width: 1140, x: 0.51, edge: true }],
+  /* Edge-to-Edge bedeutet hier: eine feste untere Buehne von linker bis
+     rechter Coverkante. Das Motiv wird innerhalb dieser Buehne wie ein
+     Editorial-Crop gesetzt, statt als riesiger Sticker ueber den Titel zu
+     wachsen. Die Reel-Werte enden exakt an der 4:5-Safe-Area (y=1635). */
+  ["2026-09-25/b2", { edge: true, top: 350, bottom: -4, bleed: 12, x: 0.50, y: 0.56 }],
+  ["2026-09-25/b3", { edge: true, top: 620, bottom: 285, bleed: 12, x: 0.50, y: 0.58 }],
+  ["2026-09-26/b3", { edge: true, top: 520, bottom: 285, bleed: 12, x: 0.50, y: 0.56 }],
+  ["2026-09-28/b3", { edge: true, top: 560, bottom: 285, bleed: 12, x: 0.52, y: 0.58 }],
 ]);
 
 function triggerSlots() {
@@ -208,6 +208,10 @@ function motivSetzen(obj, dataUrl, meta, profil = null) {
   if (profil?.scale != null) obj.coverBildScale = profil.scale;
   if (profil?.width != null) obj.coverBildBreite = profil.width;
   if (profil?.x != null) obj.coverBildX = profil.x;
+  if (profil?.y != null) obj.coverBildY = profil.y;
+  if (profil?.top != null) obj.coverBildTop = profil.top;
+  if (profil?.bottom != null) obj.coverBildBottom = profil.bottom;
+  if (profil?.bleed != null) obj.coverBildBleed = profil.bleed;
   if (profil?.edge === true) obj.coverBildEdgeToEdge = true;
   delete obj.coverHinweisPlan;
 }
