@@ -143,9 +143,25 @@ export function layoutErfassen() {
     let text = String(el.innerText || "").trim();
     if (!text) continue;
     if (cs.textTransform === "uppercase") text = text.toUpperCase();
+    /* Inhaltsbox ohne Padding/Rahmen: Listenpunkte (z.B. der "–"-Strich vor
+       .spalte-Zeilen) liegen im Padding. Der Editor deckt mit "innen" nur die
+       echte Textflaeche ab und laesst solche Marker unangetastet stehen. */
+    const padL = parseFloat(cs.paddingLeft) || 0, padR = parseFloat(cs.paddingRight) || 0;
+    const padT = parseFloat(cs.paddingTop) || 0, padB = parseFloat(cs.paddingBottom) || 0;
+    const brdL = parseFloat(cs.borderLeftWidth) || 0, brdR = parseFloat(cs.borderRightWidth) || 0;
+    const brdT = parseFloat(cs.borderTopWidth) || 0, brdB = parseFloat(cs.borderBottomWidth) || 0;
+    const innen = padL + padR + padT + padB + brdL + brdR + brdT + brdB >= 1
+      ? rel({
+        left: b.left + padL + brdL,
+        top: b.top + padT + brdT,
+        width: Math.max(0, b.width - padL - padR - brdL - brdR),
+        height: Math.max(0, b.height - padT - padB - brdT - brdB),
+      })
+      : null;
     texte.push({
       text,
       box: rel(b),
+      ...(innen ? { innen } : {}),
       schrift: String(cs.fontFamily || "").split(",")[0].replace(/["']/g, "").trim(),
       groesse: Math.round(parseFloat(cs.fontSize) * 10) / 10,
       gewicht: cs.fontWeight,
