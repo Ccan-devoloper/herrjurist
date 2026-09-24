@@ -345,6 +345,11 @@ h1 em{color:${p.akzent2}}
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
 .frei.charakter{right:-12px;bottom:-6px;width:1050px;height:980px}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
+/* Problematische Action-Freisteller werden mit leichtem Bleed von links nach
+   rechts aufgespannt. Die exakte Breite kommt inline aus dem Renderprofil;
+   overflow bleibt bewusst sichtbar, damit keine "Sticker"-Innenkante entsteht. */
+.frei.charakter.edge-to-edge{max-width:none;overflow:visible}
+.frei.charakter.edge-to-edge img{object-fit:contain;object-position:center bottom}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
 /* Die KI bestimmt die bevorzugte Position des handschriftlichen Hinweises.
@@ -562,7 +567,8 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   /* Freigestellt: Das Motiv laeuft unten rechts aus der Kachel, ohne Rahmen.
      Nicht freigestellt (Notfall): als abgerundete Karte. */
   const istCharakter = folie.bildTyp === "charakter";
-  const klasse = folie.bildFrei === false ? "foto" : `frei${istCharakter ? " charakter" : ""}`;
+  const edgeToEdge = istCharakter && folie.coverBildEdgeToEdge === true;
+  const klasse = folie.bildFrei === false ? "foto" : `frei${istCharakter ? " charakter" : ""}${edgeToEdge ? " edge-to-edge" : ""}`;
   /* Charakter-Szenen sind selbst das Markenzeichen. Neben zwei handelnden
      Figuren noch ein grosses Themen-Icon zu setzen wuerde die Cover wieder
      ueberladen; Stock-/Fallbackmotive behalten das Icon wie bisher. */
@@ -571,11 +577,17 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   const charakterZiel = istCharakter ? BUEHNE_CHARAKTER : ziel;
   const box = folie.bildFrei !== false ? motivBuehne(folie.bildBreite, folie.bildHoehe, charakterZiel) : null;
   const scaleRaw = Number(folie.coverBildScale);
-  const scale = istCharakter && Number.isFinite(scaleRaw) ? Math.max(0.65, Math.min(1.05, scaleRaw)) : 1;
+  const scale = istCharakter && Number.isFinite(scaleRaw) ? Math.max(0.65, Math.min(1.35, scaleRaw)) : 1;
+  const breiteRaw = Number(folie.coverBildBreite);
+  const festeBreite = istCharakter && Number.isFinite(breiteRaw) ? Math.max(720, Math.min(1500, breiteRaw)) : null;
   const xRaw = Number(folie.coverBildX);
-  const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.15, Math.min(0.85, xRaw)) : null;
+  const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.05, Math.min(0.95, xRaw)) : null;
   const style = [];
-  if (box) {
+  if (festeBreite && folie.bildBreite && folie.bildHoehe) {
+    const ratio = folie.bildHoehe / folie.bildBreite;
+    style.push(`width:${Math.round(festeBreite)}px`);
+    style.push(`height:${Math.round(festeBreite * ratio)}px`);
+  } else if (box) {
     style.push(`width:${Math.round(box.breite * scale)}px`);
     style.push(`height:${Math.round(box.hoehe * scale)}px`);
   }
