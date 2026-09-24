@@ -32,6 +32,7 @@ import { beitragRendern, storyRendern, storyRendernInteraktiv, browserBeenden } 
 import { interaktivGeplant, interaktivPosten, umfrageBauen, sperreAktiv } from "./interaktiv.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
+import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets as vorproduktionFeedAssets, storyAsset as vorproduktionStoryAsset } from "./vorproduktion-live.mjs";
 import { kommentareBeantworten } from "./interaktion.mjs";
 import { nachrichtenBeantworten } from "./postfach.mjs";
 import { lernschleife, storyInsightsAktualisieren, medienSnapshotsAktualisieren, kontoSnapshotAktualisieren } from "./insights.mjs";
@@ -209,6 +210,9 @@ async function main() {
      gegen eine Kopie des Zustands. Ein Trockenlauf am 13.09. hatte sonst
      Beispieltexte für den Folgetag in den echten Zweig geschoben. */
   const hosting = new Hosting({ pushen: (vorplanen || !nurPlanen) && process.env.IG_NO_PUSH !== "true" }).vorbereiten();
+  const vorproduktion = vorproduktionLaden(hosting, datum);
+  const vorproduktionAktiv = Boolean(vorproduktion);
+  if (vorproduktionAktiv) log(`Vorproduktion ${datum}: verbindlicher kostenfreier Live-Vorrang aus ${vorproduktion.rel}.`);
   motivArchivDir = path.join(hosting.stateDir, "motive");
   /* Bezahlte Entwürfe überleben den Lauf, in dem sie entstanden sind - siehe
      autor.mjs. Aufgeräumt wird gleich zu Beginn, damit der Zweig nicht wächst. */
@@ -422,7 +426,7 @@ async function main() {
      kostenloses Abo bekommt auch morgen keine deutsche Bibliotheksstimme.
      Einmal die Woche nachsehen genuegt - falls der Tarif wechselt. */
   const sucheFaellig = !stimmenListe?.gesucht || (Date.now() - Date.parse(stimmenListe.gesucht)) > 7 * 86400000;
-  if (CONFIG.reel.elevenlabsKey && CONFIG.reel.stimmeLernen && !stimmenListe?.kandidaten?.length && sucheFaellig && !stimmeStand().erschoepft) {
+  if (!vorproduktionAktiv && CONFIG.reel.elevenlabsKey && CONFIG.reel.stimmeLernen && !stimmenListe?.kandidaten?.length && sucheFaellig && !stimmeStand().erschoepft) {
     try {
       const roh = await kandidatenSuchen({ anzahl: CONFIG.reel.stimmeAnzahl, abo: stimmeStand().abo });
       const bezahlt = String(stimmeStand().abo || "") !== "free";
@@ -448,6 +452,12 @@ async function main() {
 
   /* Plan des Tages – nur einmal erzeugen, danach fortschreiben. */
   let plan = hosting.jsonLesen(`plaene/${datum}.json`, null);
+  if (vorproduktionAktiv) {
+    plan = planAusVorproduktion(vorproduktion, plan);
+    const uebernommen = inhalteUebernehmen(hosting, vorproduktion, plan);
+    planSpeichern(hosting, plan);
+    log(`Vorproduktion uebernommen: ${plan.beitraege.length} Beitraege, ${plan.stories.length} Stories, ${uebernommen} Inhaltsdateien. Autonome Inhaltserzeugung bleibt fuer diesen Tag aus.`);
+  }
   /* Altbestand in Ordnung bringen, ohne den Tag wegzuwerfen.
 
      Früher wurde ein Plan mit Trockenlauf-Spuren komplett verworfen und neu
@@ -638,7 +648,7 @@ async function main() {
     if (await ig.tokenAuffrischen()) log("Zugriffstoken verlängert und im Tresor gespeichert.");
 
     /* Interaktion: neue Kommentare beantworten – bei jedem Lauf, unabhängig vom Plan. */
-    if (CONFIG.interaktion.aktiv) {
+    if (!vorproduktionAktiv && CONFIG.interaktion.aktiv) {
       try {
         const r = await kommentareBeantworten(ig, ledger, { log });
         if (r.beantwortet) { ledgerSpeichern(ledgerPfad, ledger); hosting.commit(`Kommentare beantwortet ${datum}`); await hosting.push(); }
@@ -651,7 +661,7 @@ async function main() {
        Instagram nimmt eine Antwort nur binnen 24 Stunden an, stündlich reicht
        dafür bequem. Fehlt die Berechtigung am Token, kommt der Endpunkt leer
        zurück; das wird gemeldet und der Lauf geht weiter. */
-    if (CONFIG.postfach.aktiv) {
+    if (!vorproduktionAktiv && CONFIG.postfach.aktiv) {
       try {
         const r = await nachrichtenBeantworten(ig, ledger, { log, stateDir: hosting.stateDir });
         if (r.beantwortet) { ledgerSpeichern(ledgerPfad, ledger); hosting.commit(`Nachrichten beantwortet ${datum}`); await hosting.push(); }
@@ -748,7 +758,7 @@ async function main() {
     const vorhandenSlots = new Set(vorhanden.filter(([, v]) => Boolean(v)).map(([slot]) => slot));
     const offen = vorhanden.filter(([, v]) => !v).map(([slot]) => eigenstaendig.find((s) => s.slot === slot));
     for (const [slot, v] of vorhanden) if (v) geschrieben.set(slot, v);
-    if (offen.length) {
+    if (offen.length && !vorproduktionAktiv) {
       try {
         const auftrag = (liste) => liste.map((s) => ({ slot: s.slot, art: s.art, thema: themaFuer(s.themaId), tageBisExamen: s.tageBisExamen }));
         const neu = await storiesSchreiben(auftrag(offen), datum);
@@ -797,7 +807,7 @@ async function main() {
        übersprungen. Vorhandene beanstandete Entwürfe bekommen deshalb in
        jedem späteren Lauf genau einen neuen Reparaturversuch. */
     const erneutStrittig = persistierteStoryBeanstandungen(geschrieben, vorhandenSlots);
-    if (erneutStrittig.length) {
+    if (erneutStrittig.length && !vorproduktionAktiv) {
       try {
         const auftrag = (liste) => liste.map((s) => ({
           slot: s.slot, art: s.art, thema: themaFuer(s.themaId), tageBisExamen: s.tageBisExamen,
@@ -1362,7 +1372,9 @@ async function main() {
     plan,
     (slot) => hosting.jsonLesen(`inhalte/${datum}-${slot}.json`, null),
   );
-  if (chatTagFinalisiert) {
+  if (vorproduktionAktiv) {
+    log("  Vorrat: kein bezahlter Nachschub – Vorproduktionstag ist kostenfrei gesperrt.");
+  } else if (chatTagFinalisiert) {
     log("  Vorrat: kein bezahlter Nachschub – Tagesinhalt wurde im Chat vollständig finalisiert.");
   } else if (!trocken && !nurPlanen) {
     ruecklageAktualisieren();
