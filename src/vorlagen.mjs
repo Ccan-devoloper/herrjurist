@@ -224,12 +224,13 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
 .story .karte.entscheid .t{font-size:34px;letter-spacing:.06em;text-transform:uppercase;color:var(--ok)}
 .story .pfeil{margin-top:auto;text-align:center;font-size:34px;color:var(--text-weich);letter-spacing:.12em;text-transform:uppercase}
 .story .umfrageplatz{margin-top:auto;height:300px;flex:none}
-/* Reel-Cover: das Standbild, das im Feed und im Profilraster für das Reel steht.
-   Alles Wichtige liegt im mittleren 4:5-Bereich (y 285–1635), den Instagram
-   dort zeigt. */
-.story.cover .reelmarke{position:absolute;right:84px;top:40px;font-family:var(--text);font-weight:700;font-size:28px;letter-spacing:.16em;text-transform:uppercase;background:var(--pille);color:var(--pille-text);padding:12px 26px;border-radius:40px}
+/* Reel-Cover: Instagram zeigt das 9:16-Cover im Feed und im Profilraster
+   zentriert als 4:5-Ausschnitt (y 285–1635). Deshalb liegt der komplette
+   sichtbare Aufbau innerhalb genau dieser 1080×1350-Safe-Area. */
+.story.cover{padding-top:285px;padding-bottom:285px}
+.story.cover .reelmarke{position:absolute;right:84px;top:300px;font-family:var(--text);font-weight:700;font-size:28px;letter-spacing:.16em;text-transform:uppercase;background:var(--pille);color:var(--pille-text);padding:12px 26px;border-radius:40px}
 .story.cover .dauer{margin-top:30px;font-size:36px;color:var(--text-weich)}
-.story.cover .buehne{margin:auto auto 150px;width:460px;height:460px;display:flex;align-items:center;justify-content:center;position:relative}
+.story.cover .buehne{margin:auto auto 0;width:460px;height:460px;display:flex;align-items:center;justify-content:center;position:relative}
 .story.cover .buehne::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--flaeche);opacity:.6}
 .story.cover .buehne .icon{position:relative;width:250px;height:250px;color:var(--akzent)}
 `;
@@ -434,19 +435,25 @@ em{color:${p.akzent2}}
    zum 13.09. war das Cover der einzige Ort mit dem Kasten - im Profilraster
    standen beide Formate nebeneinander und sahen aus wie zwei Kanaele.
    Die Story-Regel (ein Grund um das ganze h1) wird dafuer zurueckgenommen. */
-/* Das Cover ist 1920 hoch, die Karussellkachel 1440. Dieselbe Schriftgroesse
-   wirkt darauf deshalb ein Viertel kleiner - im Profilraster stehen beide
-   nebeneinander. Die Titel-Stacks werden mit 1920/1440 = 4/3 skaliert, damit
-   die optische Wirkung beider Feed-Formate gleich bleibt. */
-.story.cover h1{background:none;padding:0;width:auto;font-size:142px;line-height:1.35;margin-top:102px}
-.story.cover h1.klein{font-size:122px}
-.story.cover h1.winzig{font-size:105px}
-.story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:40px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:fit-content;max-width:100%;font-size:123px;line-height:1.02;letter-spacing:-.018em}
-.story.cover h1.titel-stack.klein{font-size:112px}
-.story.cover h1.titel-stack.winzig{font-size:101px}
-.story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;box-sizing:border-box;background:${p.dunkel};color:#fff;padding:14px 34px 16px;border-radius:38px;white-space:nowrap}
-.story.cover .unter{margin-top:26px;margin-left:24px;font-size:34px}
+/* Im sichtbaren 4:5-Ausschnitt hat das Reel-Cover dieselbe Pixelgeometrie
+   wie eine Karussell-Titelfolie (1080×1350). Deshalb werden Titel und Pillen
+   hier NICHT auf 1920px hochskaliert; genau diese frühere 4/3-Skalierung
+   schob die erste Zeile aus der Feed-Safe-Area. */
+.story.cover .kopf{top:285px}
+.story.cover h1{background:none;padding:0;width:auto;font-size:112px;line-height:1.2;margin-top:70px}
+.story.cover h1.klein{font-size:96px}
+.story.cover h1.winzig{font-size:84px}
+.story.cover h1 .z{background:${p.dunkel};color:#fff;padding:.12em .42em;border-radius:34px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.story.cover h1.titel-stack{display:flex;flex-direction:column;align-items:flex-start;gap:5px;width:fit-content;max-width:100%;font-size:104px;line-height:.99;letter-spacing:-.025em}
+.story.cover h1.titel-stack.klein{font-size:94px}
+.story.cover h1.titel-stack.winzig{font-size:84px}
+.story.cover h1.titel-stack .titel-zeile{display:block;width:fit-content;max-width:912px;box-sizing:border-box;background:${p.dunkel};color:#fff;padding:12px 27px 14px;border-radius:30px;white-space:nowrap}
+.story.cover .unter{margin-top:22px;margin-left:24px;font-size:34px}
+/* Charakter-Motive bleiben vollständig innerhalb der 4:5-Safe-Area. Die
+   eigentliche Größe kommt weiter aus coverBildScale; hier wird nur die
+   Unterkante zuverlässig auf y=1635 gelegt. */
+.story.cover .frei.charakter{bottom:285px;right:36px}
+.story.cover .cover-badge{margin-top:12px}
 /* Cover-v2 no-arrow: keine automatisch erzeugte Dauer-Handschrift. */
 .story.cover .dauer{display:none}
 .story.cover .dauer::before{display:none}
