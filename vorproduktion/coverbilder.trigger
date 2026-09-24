@@ -5,3 +5,5 @@ retry=2
 reason=lokale-wissensbasis
 retry=3
 reason=visuelle-zuordnung-artefakt
+retry=4
+reason=visuell-gepruefte-urkunden-zuordnung
