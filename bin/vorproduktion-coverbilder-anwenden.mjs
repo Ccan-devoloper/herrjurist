@@ -42,9 +42,12 @@ const RENDER_PROFIL = new Map([
      Editorial-Crop gesetzt, statt als riesiger Sticker ueber den Titel zu
      wachsen. Die Reel-Werte enden exakt an der 4:5-Safe-Area (y=1635). */
   ["2026-09-25/b2", { edge: true, top: 400, bottom: -4, bleed: 12, x: 0.50, y: 0.58 }],
-  ["2026-09-25/b3", { edge: true, top: 750, bottom: 285, bleed: 12, x: 0.50, y: 0.60 }],
-  ["2026-09-26/b3", { edge: true, top: 700, bottom: 285, bleed: 12, x: 0.50, y: 0.58 }],
-  ["2026-09-28/b3", { edge: true, top: 720, bottom: 285, bleed: 12, x: 0.52, y: 0.60 }],
+  /* Reel-Cover nutzen die echten 9:16-Kanten. Beim morgigen Staatsrecht-Cover
+     passt das nahezu quadratische Motiv vollbreit ohne Beschnitt; dadurch
+     bleibt auch das Gerichtsgebaeude oben rechts vollständig erhalten. */
+  ["2026-09-25/b3", { edge: true, top: 690, bottom: 0, bleed: 12, x: 0.50, y: 1.00, fit: "contain" }],
+  ["2026-09-26/b3", { edge: true, top: 620, bottom: 0, bleed: 12, x: 0.50, y: 0.58, fit: "cover" }],
+  ["2026-09-28/b3", { edge: true, top: 620, bottom: 0, bleed: 12, x: 0.52, y: 0.60, fit: "cover" }],
 ]);
 
 function triggerSlots() {
@@ -209,6 +212,7 @@ function motivSetzen(obj, dataUrl, meta, profil = null) {
   if (profil?.width != null) obj.coverBildBreite = profil.width;
   if (profil?.x != null) obj.coverBildX = profil.x;
   if (profil?.y != null) obj.coverBildY = profil.y;
+  if (profil?.fit != null) obj.coverBildFit = profil.fit;
   if (profil?.top != null) obj.coverBildTop = profil.top;
   if (profil?.bottom != null) obj.coverBildBottom = profil.bottom;
   if (profil?.bleed != null) obj.coverBildBleed = profil.bleed;
