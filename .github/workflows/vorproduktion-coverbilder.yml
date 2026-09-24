@@ -1,0 +1,55 @@
+name: Vorproduktion · hochgeladene Cover anwenden
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "vorproduktion/coverbilder.trigger"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-bot
+  cancel-in-progress: false
+
+jobs:
+  cover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      GIT_AUTHOR_NAME: instagram-bot
+      GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+      # Harte Nullstellung: Dieser Lauf darf keinen externen Inhalts-/Bildprovider
+      # verwenden. Das Skript importiert auch keinen Providerpfad.
+      OPENAI_API_KEY: ""
+      ANTHROPIC_API_KEY: ""
+      ELEVENLABS_API_KEY: ""
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Abhängigkeiten
+        run: npm ci
+
+      - name: Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Lokale Bildwerkzeuge
+        run: |
+          pip install --quiet Pillow
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-deu >/dev/null
+
+      - name: Hochgeladene Cover providerfrei anwenden
+        run: node bin/vorproduktion-coverbilder-anwenden.mjs
