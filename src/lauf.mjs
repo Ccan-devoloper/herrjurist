@@ -735,7 +735,7 @@ async function main() {
   /* Auffüllen läuft erst, wenn die regulären Beiträge des Tages durch sind –
      sonst frisst es morgens das Tagesbudget, und Reel und Stories fallen aus. */
   const tagesplanFertig = plan.beitraege.every((b) => b.status === "veroeffentlicht" || b.fehler);
-  const auffuellOffen = !trocken && !nurPlanen && tagesplanFertig && (() => { const a = hosting.jsonLesen("auffuellen.json", null); return a && a.fertig < a.ziel; })();
+  const auffuellOffen = !vorproduktionAktiv && !trocken && !nurPlanen && tagesplanFertig && (() => { const a = hosting.jsonLesen("auffuellen.json", null); return a && a.fertig < a.ziel; })();
   /* Pflicht-Texte nach Fälligkeit absichern -----------------------------
      Die eigenständigen Stories haben morgens die ersten Slots des Tages und
      entstehen als ein günstiger Batch. Sie müssen deshalb VOR dem
@@ -1050,35 +1050,38 @@ async function main() {
         const reel = await textBesorgen(eintrag);
         if (!rotationsfolgeErlaubt(reel, eintrag)) continue;
         const varianteReel = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
-        const gewaehlteStimme = stimmeWaehlen({ kandidaten: stimmenListe?.kandidaten || [], ledger, datum, fest: stimmenListe?.fest || null });
-        await motivBesorgen(reel, "Reel-Cover");
-        /* Das Erklaervideo lebt von den Figuren - ohne sie faellt reelBauen()
-           auf das klassische Layout zurueck. Deshalb erst die Motive, dann
-           bauen. */
-        const layout = layoutFuer(datum);
-        if (layout === "erklaer" && !reel.reelFinalUrl) {
-          /* Ein Text, der vor der Bildregie geschrieben wurde (Nachtlauf vor
-             dem 17.09.), bekommt sie hier nachgeholt - einmal, dann steht es
-             im gespeicherten Text. */
-          if (await bildregieSicher(reel)) hosting.jsonSchreiben(textDatei(eintrag), reel);
-          const m = await erklaerMotive(reel);
-          /* „eigene" zaehlt die verschiedenen Bilder: Je weiter die Zahl unter
-             der Szenenzahl liegt, desto oefter musste eine Szene die Figur der
-             vorherigen uebernehmen - das faellt beim Zusehen auf. */
-          log(`  Erklärvideo: ${m.eigene} verschiedene Motive auf ${m.mit} von ${reel.szenen.length} Szenen.`);
-        } else if (reel.reelFinalUrl) {
-          log("  Erklärvideo: bereits visuell final geprüft – keine neue Bild-/Voice-Generierung.");
+        let r, videoUrl, coverUrl;
+        if (vorproduktionAktiv) {
+          const asset = vorproduktionFeedAssets(vorproduktion, eintrag);
+          r = {
+            video: asset.videoPfad, cover: asset.coverPfad, dauer: Number(reel.dauer || reel.reelDauer || 0),
+            layout: "vorproduktion", anbieter: "vorproduktion", stimmeId: null, stimmeName: null, animation: "vorproduziert",
+          };
+          videoUrl = asset.videoUrl;
+          coverUrl = asset.coverUrl;
+          log(`  Vorproduktion: fertiges Reel ${eintrag.slot} wird ohne Bild-, Voice- oder Render-Aufruf verwendet.`);
+        } else {
+          const gewaehlteStimme = stimmeWaehlen({ kandidaten: stimmenListe?.kandidaten || [], ledger, datum, fest: stimmenListe?.fest || null });
+          await motivBesorgen(reel, "Reel-Cover");
+          /* Das Erklaervideo lebt von den Figuren - ohne sie faellt reelBauen()
+             auf das klassische Layout zurueck. Deshalb erst die Motive, dann bauen. */
+          const layout = layoutFuer(datum);
+          if (layout === "erklaer" && !reel.reelFinalUrl) {
+            if (await bildregieSicher(reel)) hosting.jsonSchreiben(textDatei(eintrag), reel);
+            const m = await erklaerMotive(reel);
+            log(`  Erklärvideo: ${m.eigene} verschiedene Motive auf ${m.mit} von ${reel.szenen.length} Szenen.`);
+          } else if (reel.reelFinalUrl) {
+            log("  Erklärvideo: bereits visuell final geprüft – keine neue Bild-/Voice-Generierung.");
+          }
+          r = await reelBauen(reel, path.join(AUSGABE, "reels", eintrag.slot), { variante: varianteReel, datum, layout, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
+          log(`  Reel gebaut: ${r.dauer.toFixed(1)} s · Layout ${r.layout} · Stimme ${r.anbieter}${r.stimmeName ? ` „${r.stimmeName}“` : ""} · Animation ${r.animation}`);
+          if (gewaehlteStimme && stimmeIstGesperrt(gewaehlteStimme.id) && stimmenListe?.kandidaten) {
+            stimmenListe = { ...stimmenListe, kandidaten: stimmenListe.kandidaten.filter((k) => k.id !== gewaehlteStimme.id) };
+            hosting.jsonSchreiben("stimmen.json", stimmenListe);
+            log(`  Stimme „${gewaehlteStimme.name}“ entfernt (Tarif erlaubt sie nicht).`);
+          }
+          [videoUrl, coverUrl] = await hosting.veroeffentlichen([r.video, r.cover], datum, `Reel ${datum} ${eintrag.slot}`);
         }
-        const r = await reelBauen(reel, path.join(AUSGABE, "reels", eintrag.slot), { variante: varianteReel, datum, layout, hintergrundDir: path.join(hosting.stateDir, "hintergrund"), stimmeId: gewaehlteStimme?.id || null, stimmeName: gewaehlteStimme?.name || null });
-        log(`  Reel gebaut: ${r.dauer.toFixed(1)} s · Layout ${r.layout} · Stimme ${r.anbieter}${r.stimmeName ? ` „${r.stimmeName}“` : ""} · Animation ${r.animation}`);
-        /* Stimme vom Tarif gesperrt: aus der Liste werfen, beim nächsten Lauf
-           wird neu gesucht – sonst bliebe ElevenLabs dauerhaft ungenutzt. */
-        if (gewaehlteStimme && stimmeIstGesperrt(gewaehlteStimme.id) && stimmenListe?.kandidaten) {
-          stimmenListe = { ...stimmenListe, kandidaten: stimmenListe.kandidaten.filter((k) => k.id !== gewaehlteStimme.id) };
-          hosting.jsonSchreiben("stimmen.json", stimmenListe);
-          log(`  Stimme „${gewaehlteStimme.name}“ entfernt (Tarif erlaubt sie nicht).`);
-        }
-        const [videoUrl, coverUrl] = await hosting.veroeffentlichen([r.video, r.cover], datum, `Reel ${datum} ${eintrag.slot}`);
         const caption = `${reel.caption}${reel.bildQuelle ? `\n\n${reel.bildQuelle}` : ""}\n\n${reel.hashtags.join(" ")}`;
         const medienId = await ig.reelPosten({ videoUrl, coverUrl, caption });
         kontingent.genutzt += 1;
@@ -1097,27 +1100,31 @@ async function main() {
       const beitrag = await textBesorgen(eintrag);
       if (!rotationsfolgeErlaubt(beitrag, eintrag)) continue;
       const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
-      /* Für manuell finalisierte Feedposts ist das visuell geprüfte End-Cover
-         Teil der Freigabe. Es muss bereits dauerhaft auf instagram-assets
-         liegen, per URL + SHA-256 an den Inhalt gebunden sein und wird exakt
-         wiederverwendet. Fehlt dieser Vertrag, bleibt der Slot geplant:
-         kein neuer Bildkauf, kein Icon-Fallback, keine Ersatzveröffentlichung.
-         Nur autonome/nicht manuell finalisierte Beiträge behalten die bisherige
-         Availability-Rettungskette. */
-      const assetGate = manuellesCarouselAssetGate(beitrag);
-      if (assetGate.manuell && !assetGate.frei) {
-        eintrag.fehler = `${new Date().toISOString()} Visuelles Publish-Gate: ${assetGate.grund}`;
-        planSpeichern(hosting, plan);
-        log(`  ⛔ Beitrag ${eintrag.slot}: ${assetGate.grund} – bleibt geplant, kein Fallback.`);
-        continue;
+      let bilder, urls;
+      if (vorproduktionAktiv) {
+        const asset = vorproduktionFeedAssets(vorproduktion, eintrag);
+        bilder = asset.bildPfade;
+        urls = asset.bildUrls;
+        log(`  Vorproduktion: ${urls.length} fertige Karussellbilder für ${eintrag.slot} werden unverändert verwendet.`);
+      } else {
+        /* Für manuell finalisierte Feedposts ist das visuell geprüfte End-Cover
+           Teil der Freigabe. Der Vorproduktionsweg liegt davor und verwendet
+           bereits die fertig geprüften Tagesassets. */
+        const assetGate = manuellesCarouselAssetGate(beitrag);
+        if (assetGate.manuell && !assetGate.frei) {
+          eintrag.fehler = `${new Date().toISOString()} Visuelles Publish-Gate: ${assetGate.grund}`;
+          planSpeichern(hosting, plan);
+          log(`  ⛔ Beitrag ${eintrag.slot}: ${assetGate.grund} – bleibt geplant, kein Fallback.`);
+          continue;
+        }
+        if (!assetGate.manuell && !(await titelfolieBebildern(beitrag))) {
+          console.warn(`  ! Beitrag ${eintrag.slot}: kein Charakter-Cover verfügbar – autonome Veröffentlichung mit Icon-Cover.`);
+        } else if (assetGate.manuell) {
+          log(`  ✓ Beitrag ${eintrag.slot}: persistiertes, visuell freigegebenes Cover wird exakt wiederverwendet.`);
+        }
+        bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
+        urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
       }
-      if (!assetGate.manuell && !(await titelfolieBebildern(beitrag))) {
-        console.warn(`  ! Beitrag ${eintrag.slot}: kein Charakter-Cover verfügbar – autonome Veröffentlichung mit Icon-Cover.`);
-      } else if (assetGate.manuell) {
-        log(`  ✓ Beitrag ${eintrag.slot}: persistiertes, visuell freigegebenes Cover wird exakt wiederverwendet.`);
-      }
-      const bilder = await beitragRendern(beitrag, path.join(AUSGABE, "beitraege"), { variante });
-      const urls = await hosting.veroeffentlichen(bilder, datum, `Beitrag ${datum} ${eintrag.slot}`);
       const caption = `${beitrag.caption}${bildnachweis(beitrag)}\n\n${beitrag.hashtags.join(" ")}`;
       const schonDa = await ig.bereitsVeroeffentlicht(caption);
       if (schonDa) log(`  Beitrag steht bereits auf Instagram (${schonDa}) – wird nur vermerkt.`);
@@ -1246,37 +1253,35 @@ async function main() {
         }
       }
 
-      /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
-         Tipp); der Teaser bringt das Bild des Beitrags schon mit. */
-      await motivBesorgen(story, "Story-Motiv", { ki: false });
-      const zielBild = path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`);
-      const stilOpt = { variante: varianteStory(eintrag.slot) };
-
-      /* Interaktive Story (native Umfrage) über die private Schnittstelle.
-         Sie bekommt ein eigenes Bild, das unten Platz für den Sticker lässt.
-         Geht der Weg nicht - Challenge, Bremse, geänderter Endpunkt -, wird
-         ganz normal gerendert und über die Graph API veröffentlicht: Eine
-         Story fällt nie aus, nur weil der Zusatzweg klemmt. */
       let medienId = null;
-      if (!trocken && interaktivGeplant(story) && !sperreAktiv(ledger)) {
-        try {
-          const { pfad, platz } = await storyRendernInteraktiv(story, zielBild, stilOpt);
-          medienId = await interaktivPosten({ bildPfad: pfad, umfrage: umfrageBauen(story, platz), stateDir: hosting.stateDir, ledger, log });
-          eintrag.interaktiv = true;
-          /* Das Bild geht trotzdem in den Asset-Zweig - instagrapi lädt die
-             lokale Datei hoch, aber das Archiv soll lückenlos bleiben. */
-          await hosting.veroeffentlichen([pfad], datum, `Story ${datum} ${eintrag.slot} (interaktiv)`);
-        } catch (e) {
-          console.warn(`  ! Umfrage für Story ${eintrag.slot} nicht gesetzt (${e.art || "fehler"}: ${e.message}) – normale Story folgt.`);
-        }
-      }
-
-      if (!medienId) {
-        const bild = await storyRendern(story, zielBild, stilOpt);
-        const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
-        medienId = await ig.storyPosten({ bildUrl: url });
-        /* Nur der offizielle Weg zählt auf das Tageskontingent der Graph-API. */
+      if (vorproduktionAktiv) {
+        const asset = vorproduktionStoryAsset(vorproduktion, eintrag.slot);
+        medienId = await ig.storyPosten({ bildUrl: asset.bildUrl });
         kontingent.genutzt += 1;
+        log(`  Vorproduktion: fertige Story ${eintrag.slot} wird unverändert verwendet.`);
+      } else {
+        /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
+           Tipp); der Teaser bringt das Bild des Beitrags schon mit. */
+        await motivBesorgen(story, "Story-Motiv", { ki: false });
+        const zielBild = path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`);
+        const stilOpt = { variante: varianteStory(eintrag.slot) };
+
+        if (!trocken && interaktivGeplant(story) && !sperreAktiv(ledger)) {
+          try {
+            const { pfad, platz } = await storyRendernInteraktiv(story, zielBild, stilOpt);
+            medienId = await interaktivPosten({ bildPfad: pfad, umfrage: umfrageBauen(story, platz), stateDir: hosting.stateDir, ledger, log });
+            eintrag.interaktiv = true;
+            await hosting.veroeffentlichen([pfad], datum, `Story ${datum} ${eintrag.slot} (interaktiv)`);
+          } catch (e) {
+            console.warn(`  ! Umfrage für Story ${eintrag.slot} nicht gesetzt (${e.art || "fehler"}: ${e.message}) – normale Story folgt.`);
+          }
+        }
+        if (!medienId) {
+          const bild = await storyRendern(story, zielBild, stilOpt);
+          const [url] = await hosting.veroeffentlichen([bild], datum, `Story ${datum} ${eintrag.slot}`);
+          medienId = await ig.storyPosten({ bildUrl: url });
+          kontingent.genutzt += 1;
+        }
       }
       const echt = veroeffentlichungEintragen(eintrag, medienId);
       if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "story", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Story ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
@@ -1302,7 +1307,7 @@ async function main() {
   /* Erst wenn Beiträge UND Stories des Tages durch sind (auch übersprungene),
      bekommt das Auffüllen den Rest des Budgets – nie vor den Stories. */
   const planJetztFertig = plan.beitraege.every((b) => b.status === "veroeffentlicht" || b.fehler) && plan.stories.every((s) => s.status !== "geplant");
-  if (!trocken && !nurPlanen && planJetztFertig && auffuellStand && auffuellStand.fertig < auffuellStand.ziel) {
+  if (!vorproduktionAktiv && !trocken && !nurPlanen && planJetztFertig && auffuellStand && auffuellStand.fertig < auffuellStand.ziel) {
     log(`Auffüllen fortsetzen: ${auffuellStand.fertig}/${auffuellStand.ziel}`);
     try { await auffuellenLauf(auffuellStand.ziel, { hosting, ledger, ledgerPfad, pool, poolIndex, strategie, maxJeLauf: 4 }); }
     catch (e) { fehler++; console.error(`  ✗ Auffüllen: ${e.message}`); }
