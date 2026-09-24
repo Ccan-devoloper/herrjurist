@@ -7,3 +7,5 @@ retry=3
 reason=visuelle-zuordnung-artefakt
 retry=4
 reason=visuell-gepruefte-urkunden-zuordnung
+2026-09-24T02:44:00Z
+run=apply-uploaded-coverbilder
