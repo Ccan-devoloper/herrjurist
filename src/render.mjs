@@ -136,7 +136,11 @@ function coverTitelEinpassen() {
   const cs = getComputedStyle(wurzel);
   const rechts = root.right - Math.max(24, parseFloat(cs.paddingRight || 0));
   const links = root.left + Math.max(24, parseFloat(cs.paddingLeft || 0));
-  const mindest = wurzel.matches(".story.cover") ? 84 : 78;
+  /* Ein einzelnes langes juristisches Kompositum darf das Reel-Cover nicht
+     sprengen. 24.–28.09. zeigen die Zieltypografie: lieber den gesamten
+     Titelblock moderat verkleinern als einen Videoframe/Fallback zu nehmen.
+     Unter 72 px brechen wir weiterhin hart ab. */
+  const mindest = wurzel.matches(".story.cover") ? 72 : 78;
 
   const passt = () => [...titel.querySelectorAll(".titel-zeile")].every((zeile) => {
     const box = zeile.getBoundingClientRect();
