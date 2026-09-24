@@ -37,10 +37,10 @@ const ZUORDNUNG = new Map([
 /* Gezielte Layoutkorrekturen für manuell gelieferte Charakter-Szenen. Die
    Werte steuern nur lokale Geometrie; kein Provider wird aufgerufen. */
 const RENDER_PROFIL = new Map([
-  ["2026-09-25/b2", { scale: 0.78, x: 0.50 }],
-  ["2026-09-25/b3", { scale: 0.72, x: 0.58 }],
-  ["2026-09-26/b3", { scale: 0.75, x: 0.63 }],
-  ["2026-09-28/b3", { scale: 0.75, x: 0.62 }],
+  ["2026-09-25/b2", { scale: 0.82, x: 0.50 }],
+  ["2026-09-25/b3", { scale: 0.84, x: 0.55 }],
+  ["2026-09-26/b3", { scale: 0.90, x: 0.55 }],
+  ["2026-09-28/b3", { scale: 0.90, x: 0.55 }],
 ]);
 
 function triggerSlots() {
