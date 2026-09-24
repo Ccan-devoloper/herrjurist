@@ -27,6 +27,21 @@ if (String(process.env.IG_CHARAKTERE || "").toLowerCase() !== "false") {
   throw new Error("Kostenfreier Vorproduktionslauf verlangt IG_CHARAKTERE=false.");
 }
 
+/* Derselbe Workflow kann fuer einen gezielten Reel-Patch genutzt werden.
+   Die Triggerdatei entscheidet, bevor die normale Mehrtages-Review startet. */
+const overlayTriggerPfad = new URL("../vorproduktion/review-render-only.trigger", import.meta.url);
+if (fs.existsSync(overlayTriggerPfad)) {
+  const trigger = JSON.parse(fs.readFileSync(overlayTriggerPfad, "utf8"));
+  if (trigger.modus === "reel-overlay-patch") {
+    const { reelOverlayPatchen } = await import("./vorproduktion-reel-overlay-patch.mjs");
+    const tage = Array.isArray(trigger.tage) ? trigger.tage : [];
+    const slots = Array.isArray(trigger.slots) && trigger.slots.length ? trigger.slots : ["b3"];
+    const manifest = await reelOverlayPatchen({ tage, slots });
+    console.log(JSON.stringify({ ok: true, ...manifest }, null, 2));
+    process.exit(0);
+  }
+}
+
 const { Hosting } = await import("../src/hosting.mjs");
 const { beitragRendern, storyRendern, browserBeenden } = await import("../src/render.mjs");
 const { reelBauen } = await import("../src/reel.mjs");
