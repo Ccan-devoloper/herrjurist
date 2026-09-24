@@ -41,10 +41,10 @@ const RENDER_PROFIL = new Map([
      rechter Coverkante. Das Motiv wird innerhalb dieser Buehne wie ein
      Editorial-Crop gesetzt, statt als riesiger Sticker ueber den Titel zu
      wachsen. Die Reel-Werte enden exakt an der 4:5-Safe-Area (y=1635). */
-  ["2026-09-25/b2", { edge: true, top: 350, bottom: -4, bleed: 12, x: 0.50, y: 0.56 }],
-  ["2026-09-25/b3", { edge: true, top: 620, bottom: 285, bleed: 12, x: 0.50, y: 0.58 }],
-  ["2026-09-26/b3", { edge: true, top: 520, bottom: 285, bleed: 12, x: 0.50, y: 0.56 }],
-  ["2026-09-28/b3", { edge: true, top: 560, bottom: 285, bleed: 12, x: 0.52, y: 0.58 }],
+  ["2026-09-25/b2", { edge: true, top: 400, bottom: -4, bleed: 12, x: 0.50, y: 0.58 }],
+  ["2026-09-25/b3", { edge: true, top: 750, bottom: 285, bleed: 12, x: 0.50, y: 0.60 }],
+  ["2026-09-26/b3", { edge: true, top: 700, bottom: 285, bleed: 12, x: 0.50, y: 0.58 }],
+  ["2026-09-28/b3", { edge: true, top: 720, bottom: 285, bleed: 12, x: 0.52, y: 0.60 }],
 ]);
 
 function triggerSlots() {
