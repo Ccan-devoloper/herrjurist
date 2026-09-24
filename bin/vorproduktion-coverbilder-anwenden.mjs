@@ -379,6 +379,71 @@ try {
       },
     };
   }
+
+  /* Der 26.09-b1-Freisteller stammt aus dem persistenten Rohbild-Cache und
+     liegt nicht im manuellen coverbilder/-Ordner. Er bekommt denselben lokalen
+     Cover-Patch, damit auch dieses Cover nach dem globalen Abschalten der
+     Handschrift wirklich neu als JPG vorliegt. */
+  if (!slotsFilter?.size || slotsFilter.has("2026-09-26/b1")) {
+    const datum = "2026-09-26";
+    const slot = "b1";
+    const tag = tage.get(datum);
+    const inhalt = structuredClone(tag.inhalte?.[slot]);
+    const quelleRel = "vorproduktion/2026-09-26/rohbilder/b1-d76530ccfa1e3020.png";
+    const quelle = path.join(hosting.dir, quelleRel);
+    if (!inhalt || !fs.existsSync(quelle)) throw new Error(`${datum} ${slot}: Rohbild fehlt`);
+
+    const meta = bildMeta(quelle);
+    const zugeschnitten = path.join(temp, `${datum}-${slot}-roh-motiv.png`);
+    const crop = freistellerZuschneiden(quelle, zugeschnitten, false);
+    const dataUrl = `data:image/png;base64,${fs.readFileSync(zugeschnitten).toString("base64")}`;
+    const target = zielPfad(hosting.dir, datum, slot, inhalt);
+    fs.mkdirSync(path.dirname(target), { recursive: true });
+
+    delete inhalt.coverFinalUrl;
+    delete inhalt.coverFinalSha256;
+    const titel = inhalt.folien.find((x) => x.art === "titel") || inhalt.folien[0];
+    motivSetzen(titel, dataUrl, crop, null);
+    const ctx = kontext({
+      fach: inhalt.fach,
+      klausur: inhalt.klausur,
+      fachLabel: inhalt.fachLabel,
+      variante: inhalt.variante,
+    });
+    await htmlZuJpeg(
+      folieHtml(titel, ctx, 1, inhalt.folien.length),
+      MASSE.beitrag,
+      target,
+    );
+
+    const entry = {
+      quelle: quelleRel,
+      quelleSha256: sha256(quelle),
+      datum,
+      slot,
+      titel: titelFuer(tag, slot),
+      freigestellt: true,
+      quelleMeta: meta,
+      render: { mode: "freisteller-covervorlage-rohbild", profil: null, ...crop },
+      ziel: path.relative(hosting.dir, target).split(path.sep).join("/"),
+      zielSha256: sha256(target),
+      providerKostenUsd: 0,
+    };
+    const alt = manifest.eintraege.findIndex((x) => x.datum === datum && x.slot === slot);
+    if (alt >= 0) manifest.eintraege.splice(alt, 1, entry);
+    else manifest.eintraege.push(entry);
+    manifest.eintraege.sort((a, b) => `${a.datum}/${a.slot}`.localeCompare(`${b.datum}/${b.slot}`));
+    tag.renderVorschau = {
+      ...(tag.renderVorschau || {}),
+      coverbilderAngewandt: {
+        ...(tag.renderVorschau?.coverbilderAngewandt || {}),
+        stand: manifest.angewandtAm,
+        providerKostenUsd: 0,
+        slots: [...new Set([...(tag.renderVorschau?.coverbilderAngewandt?.slots || []), slot])].sort(),
+      },
+    };
+    console.log(`✓ Rohbild-Cache -> ${datum} ${slot} · Cover ohne Handschrift neu gerendert`);
+  }
 } finally {
   await browserBeenden().catch(() => {});
 }
