@@ -6,7 +6,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { iconSvg, ICONS, lernPalette } from "./stile.mjs";
-import { farbIcon } from "./icons.mjs";
+import { farbIcon, ZUORDNUNG } from "./icons.mjs";
 import { normKurz } from "./normen.mjs";
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
@@ -767,16 +767,27 @@ function titelBlock(titel, zeilen, ctx) {
   return `<h1 class="${klasse}"><span class="z">${markierenTitel(titel)}</span></h1>`;
 }
 
-function ctaIconAusText(text, index = 0) {
+function ctaIconAusText(text) {
   const t = String(text || "").toLowerCase();
   if (/zustell|brief|post|mitteil|bescheid/.test(t)) return "umschlag";
-  if (/titel|urteil|anspruch|norm|schema/.test(t)) return "dokument";
-  if (/klausel|ausnahme|prüf|kontroll|sichtbar/.test(t)) return "lupe";
-  if (/vollstreck|gericht|entscheidung/.test(t)) return "hammer";
-  if (/speicher|wiederhol|lernen/.test(t)) return "buch";
-  if (/lerngruppe|teilen|schick|person/.test(t)) return "personen";
-  if (/frage|kommentar|unklar/.test(t)) return "sprechblase";
-  return ["haken", "buch", "personen"][index % 3];
+  if (/vollstreck|gericht|entscheidung|urteil|tenor/.test(t)) return "hammer";
+  if (/titel|anspruch|norm|gesetz|paragraph|schema|obersatz|dokument|antrag|akte|sachverhalt|fall/.test(t)) return "dokument";
+  if (/klausel|ausnahme|prüf|kontroll|subsum|merkmal|abgrenz|voraussetz|aufbau|schritt|reihenfolg/.test(t)) return "lupe";
+  if (/abwäg|verhältnis|angemessen|interessen|gewicht|würdig|vergleich|unterscheid/.test(t)) return "waage";
+  if (/speicher|wiederhol|lern|merk|festig/.test(t)) return "buch";
+  if (/lerngruppe|teilen|schick|person|beteilig|partei/.test(t)) return "personen";
+  if (/frage|kommentar|unklar|erklär/.test(t)) return "frage";
+  if (/frist|zeitpunkt|dauer|uhr/.test(t)) return "uhr";
+  if (/fehler|falsch|warn|vermeid/.test(t)) return "warnung";
+  if (/ergebnis|rechtsfolge|fertig|abschließ/.test(t)) return "haken";
+  return null;
+}
+
+function ctaIconSchluessel(folie, text, index) {
+  const key = folie.icons?.[index] || ctaIconAusText(text);
+  if (!key) throw new Error(`CTA-Punkt braucht einen semantischen Icon-Key: ${String(text || "").trim()}`);
+  if (!(key in ICONS) && !(key in ZUORDNUNG)) throw new Error(`Unbekannter CTA-Icon-Key: ${key}`);
+  return key;
 }
 
 const FOLIEN = {
@@ -839,7 +850,7 @@ const FOLIEN = {
     <div class="cta">
       <h2>${markieren(f.titel || "Folgen für mehr.")}</h2>
       <div class="liste">
-        ${(f.punkte || ["Folgen für tägliche Prüfungsfragen", "Speichern für die Wiederholung", "Fragen? Ab in die Kommentare"]).map((p, k) => `<div>${iconSvg(f.icons?.[k] || ctaIconAusText(p, k), 56)}<span>${markieren(p)}</span></div>`).join("")}
+        ${(f.punkte || ["Folgen für tägliche Prüfungsfragen", "Speichern für die Wiederholung", "Fragen? Ab in die Kommentare"]).map((p, k) => `<div>${iconSvg(ctaIconSchluessel(f, p, k), 56)}<span>${markieren(p)}</span></div>`).join("")}
       </div>
     </div>
     ${fuss(ctx)}`,
