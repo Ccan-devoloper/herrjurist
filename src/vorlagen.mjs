@@ -353,24 +353,6 @@ h1 em{color:${p.akzent2}}
 .frei.charakter.edge-to-edge img{object-fit:var(--edge-fit,cover);object-position:var(--edge-x,50%) var(--edge-y,50%)}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
-/* Die KI bestimmt die bevorzugte Position des handschriftlichen Hinweises.
-   Der Renderer zeichnet ausschließlich den Text. Cover-v2 ergänzt bewusst
-   keinen Pfeil mehr. */
-.cover-hinweis{position:absolute;left:0;top:0;z-index:7;max-width:360px;width:max-content;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-align:center;text-wrap:balance;pointer-events:none;transform-origin:center center}
-/* Ohne Charakter-/Bildlayer muss der redaktionelle Aha-Hinweis selbst als
-   zweite visuelle Ebene tragen. Deshalb wird er groesser, breiter und auf
-   einer leichten Papierflaeche gesetzt statt als kleine Randnotiz zu wirken. */
-.art-titel.cover-ohne-bild .cover-hinweis,
-.story.cover:not(:has(.frei)):not(:has(.foto)) .cover-hinweis{
-  max-width:560px;
-  font-size:72px;
-  line-height:1.02;
-  text-align:left;
-  background:rgba(255,240,214,.78);
-  padding:18px 28px 20px;
-  border-radius:28px;
-  box-shadow:0 16px 34px rgba(0,0,0,.10);
-}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -785,33 +767,10 @@ function titelKlasse(t, zeilen = null) {
   return "";
 }
 
-function coverHinweisPlan(f = {}) {
-  const text = String(f.coverText || "").replace(/\s+/g, " ").trim().slice(0, 48);
-  if (!text) return null;
-  const p = f.coverHinweisPlan;
-  /* Review-Cover ohne Motiv behalten trotzdem den redaktionellen Aha-Hinweis.
-     Ohne Bild-QA existiert naturgemaess kein Motiv-Anker; deshalb liegt die
-     Notiz in einer festen, freien unteren Zone. */
-  if (f.coverBildAuslassen === true && (!p || typeof p !== "object" || Array.isArray(p))) {
-    return { text, noteX: 0.30, noteY: 0.64, targetX: 0.5, targetY: 0.72, rotationDeg: -3, bend: 0 };
-  }
-  if (!p || typeof p !== "object" || Array.isArray(p)) return null;
-  const zahl = (x, fallback = 0) => Number.isFinite(Number(x)) ? Number(x) : fallback;
-  return {
-    text,
-    noteX: Math.max(-0.18, Math.min(1.18, zahl(p.noteX, 0.25))),
-    noteY: Math.max(-0.18, Math.min(1.18, zahl(p.noteY, 0.28))),
-    targetX: Math.max(0, Math.min(1, zahl(p.targetX, 0.5))),
-    targetY: Math.max(0, Math.min(1, zahl(p.targetY, 0.55))),
-    rotationDeg: Math.max(-12, Math.min(12, zahl(p.rotationDeg, -4))),
-    bend: Math.max(-1, Math.min(1, zahl(p.bend, 0.35))),
-  };
-}
-
-function coverHinweisHtml(f = {}) {
-  const p = coverHinweisPlan(f);
-  if (!p) return "";
-  return `<div class="cover-hinweis" data-note-x="${p.noteX}" data-note-y="${p.noteY}" data-target-x="${p.targetX}" data-target-y="${p.targetY}" data-rotation="${p.rotationDeg}">${esc(p.text)}</div>`;
+/* Handschriftliche Cover-Zusätze sind deaktiviert. Cover und Reel-Cover
+   tragen nur die feste Marken-Hierarchie aus Fachband, Titel, Badge und Motiv. */
+function coverHinweisHtml() {
+  return "";
 }
 
 function titelBlock(titel, zeilen, ctx) {
