@@ -32,3 +32,7 @@ reason=freisteller-kante-zu-kante-mit-bleed
 run=repair-character-cover-edge-stage
 slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
 reason=edge-to-edge-als-feste-buehne-statt-ueberlagernder-sticker
+2026-09-24T20:14:00+02:00
+run=repair-character-cover-edge-stage-final
+slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
+reason=edge-to-edge-buehne-unter-titelblock
