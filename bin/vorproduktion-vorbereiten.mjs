@@ -6,7 +6,7 @@ import { Hosting } from "../src/hosting.mjs";
 import { tagesplan, FORMAT_QUELLEN } from "../src/planer.mjs";
 import { themenpool, FAECHER, FEED_KATEGORIEN } from "../src/inhalte.mjs";
 
-const dates=process.argv.slice(2).sort();
+const dates=process.argv.slice(2).sort();\nconst targetSet=new Set(dates);
 if(!dates.length||dates.some(d=>!/^\d{4}-\d{2}-\d{2}$/.test(d))) throw new Error("Datumsargumente fehlen/ungueltig");
 for(const k of ["OPENAI_API_KEY","ANTHROPIC_API_KEY","ELEVENLABS_API_KEY","PEXELS_API_KEY"]) if(String(process.env[k]||"").trim()) throw new Error(`${k} muss leer sein`);
 if(process.env.IG_BILD_KI==="true"||process.env.IG_CHARAKTERE==="true") throw new Error("Bild-KI/Charaktere muessen deaktiviert sein");
@@ -16,7 +16,7 @@ const pool=themenpool(), byId=new Map(pool.map(t=>[t.id,t])), strategy=read(path
 const ledger=read(path.join(host.stateDir,"ledger.json"),{veroeffentlicht:[],fachZaehler:{}}); ledger.veroeffentlicht||=[]; ledger.fachZaehler||={};
 const days=new Map(); for(const n of fs.readdirSync(vp).filter(n=>/^\d{4}-\d{2}-\d{2}\.json$/.test(n))) {const j=read(path.join(vp,n)); if(j?.datum) days.set(j.datum,j);}
 const seen=new Set(ledger.veroeffentlicht.map(e=>[e.datum,e.art,e.slot,e.thema].join("|")));
-for(const [d,j] of days){for(const b of j.plan?.beitraege||[]) if(b.themaId&&!seen.has([d,"beitrag",b.slot,b.themaId].join("|"))){ledger.veroeffentlicht.push({datum:d,art:"beitrag",slot:b.slot,format:b.format,thema:b.themaId,fach:b.fach,klausur:b.klausur}); ledger.fachZaehler[b.fach]=(ledger.fachZaehler[b.fach]||0)+1;} for(const s of j.plan?.stories||[]) if(s.themaId&&!seen.has([d,"story",s.slot,s.themaId].join("|"))) ledger.veroeffentlicht.push({datum:d,art:"story",slot:s.slot,storyArt:s.art,thema:s.themaId});}
+for(const [d,j] of days){if(targetSet.has(d))continue;for(const b of j.plan?.beitraege||[]) if(b.themaId&&!seen.has([d,"beitrag",b.slot,b.themaId].join("|"))){ledger.veroeffentlicht.push({datum:d,art:"beitrag",slot:b.slot,format:b.format,thema:b.themaId,fach:b.fach,klausur:b.klausur}); ledger.fachZaehler[b.fach]=(ledger.fachZaehler[b.fach]||0)+1;} for(const s of j.plan?.stories||[]) if(s.themaId&&!seen.has([d,"story",s.slot,s.themaId].join("|"))) ledger.veroeffentlicht.push({datum:d,art:"story",slot:s.slot,storyArt:s.art,thema:s.themaId});}
 const clean=x=>String(x||"").replace(/\s+/g," ").trim(), cut=(x,n=90)=>{const s=clean(x);return s.length<=n?s:`${s.slice(0,n-1).replace(/\s+\S*$/,"")}…`;};
 const K=t=>{const k=t?.kern||{};return{l:[...(k.lernziele||[]),...(k.einordnung||[])].map(clean).filter(Boolean),s:(k.pruefschritte||[]).map(clean).filter(Boolean),f:(k.fehler||[]).map(clean).filter(Boolean),m:clean(k.merksatz)}};
 const label=t=>FAECHER[t?.fach]?.label||(t?.fach==="mindset"?"Kopfsache":"Examenswissen");
