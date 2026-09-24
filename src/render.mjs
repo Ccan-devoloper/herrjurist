@@ -43,7 +43,7 @@ export function kontext(opt = {}) {
   };
 }
 
-async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_RENDER_SKALA || 1), messen = null) {
+export async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_RENDER_SKALA || 1), messen = null) {
   const b = await browserStarten();
   const page = await b.newPage({ viewport: { width: masse.breite, height: masse.hoehe }, deviceScaleFactor: skala });
   const tmp = path.join(os.tmpdir(), `ig-${process.pid}-${Math.random().toString(36).slice(2)}.html`);
@@ -63,11 +63,117 @@ async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.env.IG_R
     if (messen) kasten = await page.locator(messen).first().boundingBox().catch(() => null);
     fs.mkdirSync(path.dirname(zielPfad), { recursive: true });
     await page.screenshot({ path: zielPfad, type: "jpeg", quality: skala < 1 ? 80 : 92, fullPage: false });
+    /* Layout-Karte fuer den Dashboard-Editor: Positionen und Stile aller
+       Text- und Bildelemente, damit Folientexte dort direkt anklickbar sind.
+       Ein Fehler hier darf das Rendern niemals scheitern lassen. */
+    try {
+      const layout = await page.evaluate(layoutErfassen);
+      if (layout && (layout.texte.length || layout.bilder.length)) {
+        layout.quellSha256 = crypto.createHash("sha256").update(fs.readFileSync(zielPfad)).digest("hex");
+        fs.writeFileSync(`${zielPfad}.layout.json`, JSON.stringify(layout) + "\n");
+      }
+    } catch { /* Layout ist optional */ }
   } finally {
     await page.close();
     fs.rmSync(tmp, { force: true });
   }
   return messen ? { pfad: zielPfad, kasten } : zielPfad;
+}
+
+/* Laeuft im Browser: sammelt nach dem Einpassen die endgueltigen Boxen und
+   Stile aller sichtbaren Text- und Bildelemente relativ zur Kachel. Der
+   Dashboard-Editor macht damit gebackene Texte direkt anklickbar (Abdecken +
+   identisches Textfeld) und Motive direkt greifbar. */
+export function layoutErfassen() {
+  const wurzel = document.querySelector(".folie, .story");
+  if (!wurzel) return null;
+  const root = wurzel.getBoundingClientRect();
+  const rel = (b) => ({
+    x: Math.round((b.left - root.left) * 10) / 10,
+    y: Math.round((b.top - root.top) * 10) / 10,
+    w: Math.round(b.width * 10) / 10,
+    h: Math.round(b.height * 10) / 10,
+  });
+  const transparent = (c) => !c || c === "transparent" || /^rgba\(.*,\s*0\)$/.test(c);
+  /* Erste deckende Hintergrundfarbe aufwaerts – die Farbe, mit der der Editor
+     eine Stelle abdecken kann. Bei Verlaeufen (background-image) null. */
+  const dahinter = (start) => {
+    for (let e = start; e && e !== document.documentElement; e = e.parentElement) {
+      const cs = getComputedStyle(e);
+      if (!transparent(cs.backgroundColor)) return cs.backgroundColor;
+      if (cs.backgroundImage && cs.backgroundImage !== "none") return null;
+    }
+    return null;
+  };
+  const winkel = (cs) => {
+    const m = String(cs.transform || "").match(/matrix\(([-\d.e]+),\s*([-\d.e]+)/);
+    if (!m) return 0;
+    return Math.round(Math.atan2(parseFloat(m[2]), parseFloat(m[1])) * 180 / Math.PI);
+  };
+  const texte = [];
+  for (const el of wurzel.querySelectorAll("h1,h2,h3,h4,p,li,div,span,em,strong,b,i")) {
+    if (texte.length >= 80) break;
+    if (el.closest("svg")) continue;
+    /* Nur Elemente mit eigenem, direktem Text – Container werden ueber ihre
+       Blaetter erfasst, nie doppelt. */
+    if (![...el.childNodes].some((n) => n.nodeType === 3 && n.nodeValue.trim().length > 0)) continue;
+    const b = el.getBoundingClientRect();
+    if (b.width < 8 || b.height < 8) continue;
+    if (b.right < root.left + 2 || b.left > root.right - 2 || b.bottom < root.top + 2 || b.top > root.bottom - 2) continue;
+    const cs = getComputedStyle(el);
+    if (cs.visibility === "hidden" || cs.display === "none" || Number(cs.opacity) === 0) continue;
+    /* Pille: das Element selbst oder der naechste Vorfahr mit Hintergrund. */
+    let pillEl = transparent(cs.backgroundColor) ? null : el;
+    if (!pillEl) {
+      for (let a = el.parentElement; a && a !== wurzel; a = a.parentElement) {
+        const ac = getComputedStyle(a);
+        if (!transparent(ac.backgroundColor)) { pillEl = a; break; }
+        if (ac.backgroundImage && ac.backgroundImage !== "none") break;
+      }
+    }
+    let pille = null;
+    if (pillEl) {
+      const pcs = getComputedStyle(pillEl);
+      pille = {
+        box: rel(pillEl.getBoundingClientRect()),
+        farbe: pcs.backgroundColor,
+        radius: Math.round(parseFloat(pcs.borderTopLeftRadius) || 0),
+      };
+    }
+    let text = String(el.innerText || "").trim();
+    if (!text) continue;
+    if (cs.textTransform === "uppercase") text = text.toUpperCase();
+    texte.push({
+      text,
+      box: rel(b),
+      schrift: String(cs.fontFamily || "").split(",")[0].replace(/["']/g, "").trim(),
+      groesse: Math.round(parseFloat(cs.fontSize) * 10) / 10,
+      gewicht: cs.fontWeight,
+      farbe: cs.color,
+      ausrichtung: cs.textAlign,
+      zeilenhoehe: Math.round((parseFloat(cs.lineHeight) || 0) * 10) / 10 || null,
+      lsp: Math.round((parseFloat(cs.letterSpacing) || 0) * 10) / 10,
+      rotation: winkel(cs),
+      pille,
+      hinter: dahinter((pillEl || el).parentElement),
+    });
+  }
+  const bilder = [];
+  for (const img of wurzel.querySelectorAll("img")) {
+    const b = img.getBoundingClientRect();
+    if (b.width < 24 || b.height < 24) continue;
+    const cs = getComputedStyle(img);
+    if (cs.visibility === "hidden" || cs.display === "none" || Number(cs.opacity) === 0) continue;
+    const src = String(img.currentSrc || img.src || "");
+    bilder.push({
+      box: rel(b),
+      quelle: src.startsWith("data:") || src.startsWith("file:") ? "eingebettet" : src,
+      natBreite: img.naturalWidth || null,
+      natHoehe: img.naturalHeight || null,
+      hinter: dahinter(img.parentElement || wurzel),
+    });
+  }
+  return { version: 1, breite: Math.round(root.width), hoehe: Math.round(root.height), texte, bilder };
 }
 
 /* Kurze Story-Ueberschriften sollen die verfuegbare Breite nutzen, bevor
