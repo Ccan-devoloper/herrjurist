@@ -19,6 +19,7 @@ import { beitragRendern, browserBeenden, coverRendern } from "../src/render.mjs"
 import { coverDaten } from "../src/reel.mjs";
 
 const ZUORDNUNG = new Map([
+  ["chatgpt image 24. sept. 2026, 03_59_53.png", ["2026-09-24", "b3"]],
   ["drittwirkung-action-cover.png", ["2026-09-24", "b1"]],
   ["vormerkung-action-cover.png", ["2026-09-24", "b2"]],
   ["lebensgefährlich und tötungsvorsatz.png", ["2026-09-25", "b2"]],
