@@ -484,6 +484,17 @@ export function coverDaten(reel, plan) {
     bild: reel.bild || null, bildFrei: reel.bildFrei !== false, bildQuelle: reel.bildQuelle || null,
     bildBreite: reel.bildBreite || null, bildHoehe: reel.bildHoehe || null,
     bildTyp: reel.bildTyp || null,
+    /* Manuelle Cover-Renderprofile muessen bis in die Covervorlage
+       durchgereicht werden. Sonst stehen scale/x zwar im Manifest, aendern
+       das Reel-Cover aber nicht. */
+    coverBildScale: reel.coverBildScale ?? null,
+    coverBildBreite: reel.coverBildBreite ?? null,
+    coverBildX: reel.coverBildX ?? null,
+    coverBildY: reel.coverBildY ?? null,
+    coverBildTop: reel.coverBildTop ?? null,
+    coverBildBottom: reel.coverBildBottom ?? null,
+    coverBildBleed: reel.coverBildBleed ?? null,
+    coverBildEdgeToEdge: reel.coverBildEdgeToEdge === true,
     coverBildAuslassen: reel.coverBildAuslassen === true,
     coverText: reel.coverText || null,
     fach: reel.fach,

@@ -345,12 +345,31 @@ h1 em{color:${p.akzent2}}
 .frei img{width:100%;height:100%;object-fit:contain;object-position:right bottom;display:block;filter:drop-shadow(0 26px 40px rgba(0,0,0,.28))}
 .frei.charakter{right:-12px;bottom:-6px;width:1050px;height:980px}
 .frei.charakter img{object-position:center bottom;filter:drop-shadow(0 18px 28px rgba(0,0,0,.20))}
+/* Problematische Action-Freisteller werden mit leichtem Bleed von links nach
+   rechts aufgespannt. Die exakte Breite kommt inline aus dem Renderprofil;
+   overflow bleibt bewusst sichtbar, damit keine "Sticker"-Innenkante entsteht. */
+.frei.charakter.edge-to-edge{max-width:none;overflow:hidden}
+.frei.charakter.edge-to-edge img{object-fit:cover;object-position:var(--edge-x,50%) var(--edge-y,50%)}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
 /* Die KI bestimmt die bevorzugte Position des handschriftlichen Hinweises.
    Der Renderer zeichnet ausschließlich den Text. Cover-v2 ergänzt bewusst
    keinen Pfeil mehr. */
 .cover-hinweis{position:absolute;left:0;top:0;z-index:7;max-width:360px;width:max-content;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-align:center;text-wrap:balance;pointer-events:none;transform-origin:center center}
+/* Ohne Charakter-/Bildlayer muss der redaktionelle Aha-Hinweis selbst als
+   zweite visuelle Ebene tragen. Deshalb wird er groesser, breiter und auf
+   einer leichten Papierflaeche gesetzt statt als kleine Randnotiz zu wirken. */
+.art-titel.cover-ohne-bild .cover-hinweis,
+.story.cover:not(:has(.frei)):not(:has(.foto)) .cover-hinweis{
+  max-width:560px;
+  font-size:72px;
+  line-height:1.02;
+  text-align:left;
+  background:rgba(255,240,214,.78);
+  padding:18px 28px 20px;
+  border-radius:28px;
+  box-shadow:0 16px 34px rgba(0,0,0,.10);
+}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -453,6 +472,8 @@ em{color:${p.akzent2}}
    eigentliche Größe kommt weiter aus coverBildScale; hier wird nur die
    Unterkante zuverlässig auf y=1635 gelegt. */
 .story.cover .frei.charakter{bottom:285px;right:36px}
+.story.cover h1,.story.cover .unter{position:relative;z-index:3}
+.story.cover .kopf{z-index:3}
 .story.cover .cover-badge{margin-top:12px}
 /* Cover-v2 no-arrow: keine automatisch erzeugte Dauer-Handschrift. */
 .story.cover .dauer{display:none}
@@ -548,7 +569,8 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   /* Freigestellt: Das Motiv laeuft unten rechts aus der Kachel, ohne Rahmen.
      Nicht freigestellt (Notfall): als abgerundete Karte. */
   const istCharakter = folie.bildTyp === "charakter";
-  const klasse = folie.bildFrei === false ? "foto" : `frei${istCharakter ? " charakter" : ""}`;
+  const edgeToEdge = istCharakter && folie.coverBildEdgeToEdge === true;
+  const klasse = folie.bildFrei === false ? "foto" : `frei${istCharakter ? " charakter" : ""}${edgeToEdge ? " edge-to-edge" : ""}`;
   /* Charakter-Szenen sind selbst das Markenzeichen. Neben zwei handelnden
      Figuren noch ein grosses Themen-Icon zu setzen wuerde die Cover wieder
      ueberladen; Stock-/Fallbackmotive behalten das Icon wie bisher. */
@@ -557,18 +579,47 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   const charakterZiel = istCharakter ? BUEHNE_CHARAKTER : ziel;
   const box = folie.bildFrei !== false ? motivBuehne(folie.bildBreite, folie.bildHoehe, charakterZiel) : null;
   const scaleRaw = Number(folie.coverBildScale);
-  const scale = istCharakter && Number.isFinite(scaleRaw) ? Math.max(0.65, Math.min(1.05, scaleRaw)) : 1;
+  const scale = istCharakter && Number.isFinite(scaleRaw) ? Math.max(0.65, Math.min(1.35, scaleRaw)) : 1;
+  const breiteRaw = Number(folie.coverBildBreite);
+  const festeBreite = istCharakter && Number.isFinite(breiteRaw) ? Math.max(720, Math.min(1500, breiteRaw)) : null;
   const xRaw = Number(folie.coverBildX);
-  const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.15, Math.min(0.85, xRaw)) : null;
+  const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.05, Math.min(0.95, xRaw)) : null;
+  const yRaw = Number(folie.coverBildY);
+  const y = istCharakter && Number.isFinite(yRaw) ? Math.max(0.05, Math.min(0.95, yRaw)) : 0.5;
+  const topRaw = Number(folie.coverBildTop);
+  const bottomRaw = Number(folie.coverBildBottom);
+  const bleedRaw = Number(folie.coverBildBleed);
   const style = [];
-  if (box) {
-    style.push(`width:${Math.round(box.breite * scale)}px`);
-    style.push(`height:${Math.round(box.hoehe * scale)}px`);
-  }
-  if (x != null) {
-    style.push(`left:${Math.round(x * 10000) / 100}%`);
-    style.push("right:auto");
-    style.push("transform:translateX(-50%)");
+
+  if (edgeToEdge) {
+    /* Eine echte Buehne: links/rechts leicht ueber den Rand, oben/unten fest
+       definiert. Das Bild selbst fuellt diese Flaeche per object-fit:cover.
+       Damit gibt es keine Sticker-Luft mehr und trotzdem keinen Wildwuchs
+       ueber den Titelblock. */
+    const bleed = Number.isFinite(bleedRaw) ? Math.max(0, Math.min(80, bleedRaw)) : 0;
+    style.push(`left:-${Math.round(bleed)}px`);
+    style.push(`right:-${Math.round(bleed)}px`);
+    style.push(Number.isFinite(topRaw) ? `top:${Math.round(topRaw)}px` : "top:auto");
+    style.push(Number.isFinite(bottomRaw) ? `bottom:${Math.round(bottomRaw)}px` : "bottom:0");
+    style.push("width:auto");
+    style.push("height:auto");
+    style.push("transform:none");
+    style.push(`--edge-x:${Math.round((x ?? 0.5) * 10000) / 100}%`);
+    style.push(`--edge-y:${Math.round(y * 10000) / 100}%`);
+  } else {
+    if (festeBreite && folie.bildBreite && folie.bildHoehe) {
+      const ratio = folie.bildHoehe / folie.bildBreite;
+      style.push(`width:${Math.round(festeBreite)}px`);
+      style.push(`height:${Math.round(festeBreite * ratio)}px`);
+    } else if (box) {
+      style.push(`width:${Math.round(box.breite * scale)}px`);
+      style.push(`height:${Math.round(box.hoehe * scale)}px`);
+    }
+    if (x != null) {
+      style.push(`left:${Math.round(x * 10000) / 100}%`);
+      style.push("right:auto");
+      style.push("transform:translateX(-50%)");
+    }
   }
   const stil = style.length ? ` style="${style.join(";")}"` : "";
   return `<div class="${klasse}"${stil}><img src="${esc(folie.bild)}" alt=""></div>${zeichen ? `<div class="frei-zeichen">${zeichen}</div>` : ""}`;
@@ -738,7 +789,7 @@ function coverHinweisPlan(f = {}) {
      Ohne Bild-QA existiert naturgemaess kein Motiv-Anker; deshalb liegt die
      Notiz in einer festen, freien unteren Zone. */
   if (f.coverBildAuslassen === true && (!p || typeof p !== "object" || Array.isArray(p))) {
-    return { text, noteX: 0.12, noteY: 0.72, targetX: 0.5, targetY: 0.76, rotationDeg: -4, bend: 0 };
+    return { text, noteX: 0.30, noteY: 0.64, targetX: 0.5, targetY: 0.72, rotationDeg: -3, bend: 0 };
   }
   if (!p || typeof p !== "object" || Array.isArray(p)) return null;
   const zahl = (x, fallback = 0) => Number.isFinite(Number(x)) ? Number(x) : fallback;

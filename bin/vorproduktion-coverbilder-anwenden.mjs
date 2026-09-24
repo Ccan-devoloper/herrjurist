@@ -37,10 +37,14 @@ const ZUORDNUNG = new Map([
 /* Gezielte Layoutkorrekturen für manuell gelieferte Charakter-Szenen. Die
    Werte steuern nur lokale Geometrie; kein Provider wird aufgerufen. */
 const RENDER_PROFIL = new Map([
-  ["2026-09-25/b2", { scale: 0.78, x: 0.50 }],
-  ["2026-09-25/b3", { scale: 0.72, x: 0.58 }],
-  ["2026-09-26/b3", { scale: 0.75, x: 0.63 }],
-  ["2026-09-28/b3", { scale: 0.75, x: 0.62 }],
+  /* Edge-to-Edge bedeutet hier: eine feste untere Buehne von linker bis
+     rechter Coverkante. Das Motiv wird innerhalb dieser Buehne wie ein
+     Editorial-Crop gesetzt, statt als riesiger Sticker ueber den Titel zu
+     wachsen. Die Reel-Werte enden exakt an der 4:5-Safe-Area (y=1635). */
+  ["2026-09-25/b2", { edge: true, top: 400, bottom: -4, bleed: 12, x: 0.50, y: 0.58 }],
+  ["2026-09-25/b3", { edge: true, top: 750, bottom: 285, bleed: 12, x: 0.50, y: 0.60 }],
+  ["2026-09-26/b3", { edge: true, top: 700, bottom: 285, bleed: 12, x: 0.50, y: 0.58 }],
+  ["2026-09-28/b3", { edge: true, top: 720, bottom: 285, bleed: 12, x: 0.52, y: 0.60 }],
 ]);
 
 function triggerSlots() {
@@ -107,24 +111,28 @@ print(json.dumps({
   );
 }
 
-function freistellerZuschneiden(quelle, ziel) {
+function freistellerZuschneiden(quelle, ziel, edge = false) {
   return pythonJson(
     `from PIL import Image
 import json,sys,os
 src,dst=sys.argv[1],sys.argv[2]
+edge=sys.argv[3]=="1"
 im=Image.open(src).convert("RGBA")
 a=im.getchannel("A")
 bbox=a.getbbox()
 if not bbox:
     raise SystemExit("Freisteller ist vollständig transparent")
 l,t,r,b=bbox
-pad=max(8, round(max(r-l,b-t)*0.025))
+# Normale Freisteller behalten etwas Luft. Edge-to-Edge-Motive werden dagegen
+# exakt auf ihre Alpha-Grenzen zugeschnitten; sonst erzeugt der Renderer
+# erneut einen unsichtbaren Rand um das Motiv.
+pad=0 if edge else max(8, round(max(r-l,b-t)*0.025))
 l=max(0,l-pad); t=max(0,t-pad); r=min(im.width,r+pad); b=min(im.height,b+pad)
 out=im.crop((l,t,r,b))
 os.makedirs(os.path.dirname(dst),exist_ok=True)
 out.save(dst,"PNG",optimize=True)
-print(json.dumps({"width":out.width,"height":out.height,"crop":[l,t,r,b]}))`,
-    [quelle, ziel],
+print(json.dumps({"width":out.width,"height":out.height,"crop":[l,t,r,b],"edgeCrop":edge}))`,
+    [quelle, ziel, edge ? "1" : "0"],
   );
 }
 
@@ -198,7 +206,13 @@ function motivSetzen(obj, dataUrl, meta, profil = null) {
   obj.bildTyp = "charakter";
   obj.coverBildAuslassen = false;
   if (profil?.scale != null) obj.coverBildScale = profil.scale;
+  if (profil?.width != null) obj.coverBildBreite = profil.width;
   if (profil?.x != null) obj.coverBildX = profil.x;
+  if (profil?.y != null) obj.coverBildY = profil.y;
+  if (profil?.top != null) obj.coverBildTop = profil.top;
+  if (profil?.bottom != null) obj.coverBildBottom = profil.bottom;
+  if (profil?.bleed != null) obj.coverBildBleed = profil.bleed;
+  if (profil?.edge === true) obj.coverBildEdgeToEdge = true;
   delete obj.coverHinweisPlan;
 }
 
@@ -290,7 +304,7 @@ try {
     let renderMeta;
     if (freigestellt) {
       const zugeschnitten = path.join(temp, `${datum}-${slot}-motiv.png`);
-      const crop = freistellerZuschneiden(quelle, zugeschnitten);
+      const crop = freistellerZuschneiden(quelle, zugeschnitten, profil?.edge === true);
       const dataUrl = `data:image/png;base64,${fs.readFileSync(zugeschnitten).toString("base64")}`;
 
       if (Array.isArray(inhalt.folien)) {

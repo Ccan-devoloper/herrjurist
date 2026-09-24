@@ -126,6 +126,7 @@ export function eintritte(szene, marken) {
 const dunklerTon = (grund, dunkel) => `color-mix(in srgb, ${grund} 74%, ${dunkel})`;
 
 const KREUZ = '<svg viewBox="0 0 100 100" width="132" height="132"><path d="M14 16 L86 84 M86 16 L14 84" stroke="#ff3b30" stroke-width="13" stroke-linecap="round" fill="none"/></svg>';
+const HAKEN = '<svg viewBox="0 0 100 100" width="132" height="132"><circle cx="50" cy="50" r="41" fill="#22c55e"/><path d="M27 51 L43 67 L74 33" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
 
 /* Motive kommen aus bilder.mjs bereits als Daten-URL; ein Dateipfad geht
    genauso, damit sich das Layout auch einzeln bauen laesst. */
@@ -167,12 +168,21 @@ export function erklaerHtml(reel, plan, ctx) {
     const seite = i % 2 === 0 ? "rechts" : "links";
     const figur = bildDaten(inhalt.bild);
     const med = bildDaten(inhalt.medaillon);
-    daten.push({ von: s.start, bis: s.start + s.dauer, seite, ...zeiten, kreuz: marken.map((_, k) => Boolean(inhalt.kreuz) && k === marken.length - 1) });
+    const overlay = bildDaten(inhalt.overlay);
+    const markierungFuer = (k) => {
+      if (k !== marken.length - 1) return null;
+      if (inhalt.haken) return "haken";
+      if (inhalt.kreuz) return "kreuz";
+      return null;
+    };
+    daten.push({ von: s.start, bis: s.start + s.dauer, seite, ...zeiten, markierung: marken.map((_, k) => markierungFuer(k)) });
     const plaketten = marken.map((m, k) => {
-      const mitKreuz = Boolean(inhalt.kreuz) && k === marken.length - 1;
-      return `<div class="plakette${mitKreuz ? " mit-kreuz" : ""}">${plakettenText(m)}${mitKreuz ? `<i class="kreuz">${KREUZ}</i>` : ""}</div>`;
+      const markierung = markierungFuer(k);
+      const symbol = markierung === "haken" ? HAKEN : markierung === "kreuz" ? KREUZ : "";
+      return `<div class="plakette${markierung ? " mit-markierung" : ""}">${plakettenText(m)}${markierung ? `<i class="markierung ${markierung}">${symbol}</i>` : ""}</div>`;
     }).join("");
     return `<section class="szene" data-seite="${seite}" style="--buehne:${i % 2 === 0 ? p.grund : dunklerTon(p.grund, p.dunkel)}">
+      ${overlay ? `<img class="szene-overlay" src="${overlay}" alt="">` : ""}
       <h1>${zeilen(inhalt.titel).map((z) => `<span>${esc(z)}</span>`).join("")}</h1>
       ${fortschritt(inhalt)}
       <div class="plaketten">${plaketten}</div>
@@ -187,6 +197,8 @@ ${schriftCss()}
 html,body{width:${B}px;height:${H}px;overflow:hidden;background:#000;font-family:"Inter",system-ui,sans-serif}
 .reel{position:relative;width:${B}px;height:${H}px;overflow:hidden}
 .szene{position:absolute;inset:0;background:var(--buehne);overflow:hidden;display:none}
+.szene-overlay{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0;pointer-events:none}
+.szene h1,.szene .fortschritt,.szene .plaketten,.szene .medaillon,.szene .figur{z-index:1}
 
 /* Ueberschrift: weisser Text mit feinem Unterstrich je Zeile. Im Vorbild
    traegt die Ueberschrift nie einen Kasten. */
@@ -226,12 +238,12 @@ h1 span{display:inline-block;font-size:74px;font-weight:800;color:${kopfFarbe};l
 .plakette.umbruch{white-space:normal}
 [data-seite="rechts"] .plakette{padding-left:${UEBERSTAND + SICHER}px}
 [data-seite="links"]  .plakette{padding-right:${UEBERSTAND + SICHER}px}
-/* Wo ein Kreuz sitzt, bekommt die Plakette an dieser Seite Luft. */
-[data-seite="rechts"] .plakette.mit-kreuz{padding-right:170px}
-[data-seite="links"]  .plakette.mit-kreuz{padding-left:170px}
+/* Wo eine Korrekturmarkierung sitzt, bekommt die Plakette an dieser Seite Luft. */
+[data-seite="rechts"] .plakette.mit-markierung{padding-right:170px}
+[data-seite="links"]  .plakette.mit-markierung{padding-left:170px}
 .plakette b{font-weight:800;color:${akzent}}
-.kreuz{position:absolute;top:50%;right:14px;transform:translateY(-50%) scale(0);display:block;line-height:0}
-[data-seite="links"] .kreuz{right:auto;left:14px}
+.markierung{position:absolute;top:50%;right:14px;transform:translateY(-50%) scale(0);display:block;line-height:0}
+[data-seite="links"] .markierung{right:auto;left:14px}
 
 /* Zweitbild: getoente Kreisscheibe in derselben Farbfamilie, ohne Rand. */
 .medaillon{position:absolute;top:1120px;width:370px;height:370px;border-radius:50%;background:rgba(0,0,0,.22);
@@ -300,10 +312,11 @@ window.setzeZeit = function (t) {
       const weg = s.seite === "rechts" ? -1 : 1;
       pl.style.opacity = q > 0 ? "1" : "0";
       pl.style.transform = "translateX(" + (weg * (1 - q) * (pl.offsetWidth + 90)).toFixed(1) + "px)";
-      const kr = pl.querySelector(".kreuz");
-      if (kr) {
+      const marker = pl.querySelector(".markierung");
+      if (marker) {
         const r = knapp((t - (s.plaketten[k] + 0.75)) / 0.32);
-        kr.style.transform = "translateY(-50%) scale(" + r.toFixed(3) + ") rotate(" + (-10 * r).toFixed(1) + "deg)";
+        const winkel = marker.classList.contains("kreuz") ? -10 * r : 0;
+        marker.style.transform = "translateY(-50%) scale(" + r.toFixed(3) + ") rotate(" + winkel.toFixed(1) + "deg)";
       }
     });
     const med = el.querySelector(".medaillon");
