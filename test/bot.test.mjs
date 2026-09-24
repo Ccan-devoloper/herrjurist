@@ -2261,30 +2261,26 @@ test("Das Reel wählt zuerst und rotiert über die Rechtsgebiete", async () => {
   for (const g of [1, 2, 3]) assert.ok(je[g] > 0, `Gebiet ${g} kam in ${gebiete.length} Reels nie vor`);
 });
 
-test("Die früheste geplante Uhrzeit ist von der Weckkette auch erreichbar", async () => {
+test("Die früheste geplante Uhrzeit wird von der Weckkette rechtzeitig vorbereitet", async () => {
   const { CONFIG } = await import("../src/config.mjs");
   const { kandidatenStunden } = await import("../src/zeiten.mjs");
-  /* Am 14.09. stand auf dem Steuerkanal ein Beitrag mit Slot 06:30 erst um
-     07:35 im Feed - 65 Minuten zu spät. Nicht weil etwas kaputt war, sondern
-     weil der erste Lauf des Tages später liegt als der Slot. Die beiden Werte
-     stehen in verschiedenen Dateien und wussten nichts voneinander. */
+  /* Die Planzeit ist jetzt die tatsächliche Publikationszeit. Der Workflow
+     muss deshalb VOR dem frühesten Slot starten; der Vorproduktionslauf wartet
+     anschließend selbst bis zur Planminute. */
   const yml = await fs.promises.readFile(new URL("../.github/workflows/instagram.yml", import.meta.url), "utf8");
   const cron = yml.match(/cron:\s*"(\d+)\s+(\d+)-(\d+)/);
   assert.ok(cron, "Cron im Workflow nicht gefunden");
   const [, minute, ersteStundeUtc] = cron;
-  /* Sommerzeit, der ungünstigere Fall: Europe/Berlin ist dann UTC+2, der
-     erste Lauf liegt also zwei Stunden später am Tag als in der Cron-Zeile. */
   const ersterLaufLokal = Number(ersteStundeUtc) + 2;
   const frueheste = kandidatenStunden(CONFIG.plan.zeitFenster)[0];
-  /* Beiträge werden zur halben Stunde geplant; der Lauf muss danach liegen. */
   const slotMinuten = frueheste * 60 + 30;
   const laufMinuten = ersterLaufLokal * 60 + Number(minute);
-  assert.ok(laufMinuten >= slotMinuten,
-    `Frühester Slot ${frueheste}:30, erster Lauf aber erst ${ersterLaufLokal}:${minute} – der Beitrag käme ${slotMinuten - laufMinuten} min zu spät`);
-  /* Und nicht unnötig eng: Wäre die Untergrenze eine Stunde tiefer, ginge eine
-     brauchbare Sendezeit verloren. Genau das wäre mit "8-22" passiert. */
-  assert.ok(laufMinuten < slotMinuten + 60,
-    `Untergrenze ${frueheste} ist zu hoch – die Stunde davor wäre um ${ersterLaufLokal}:${minute} erreichbar gewesen`);
+  assert.ok(laufMinuten <= slotMinuten,
+    `Frühester Slot ${frueheste}:30, Vorbereitung aber erst ${ersterLaufLokal}:${minute}`);
+  assert.ok(slotMinuten - laufMinuten <= 90,
+    `Vorbereitung startet unnötig früh: ${slotMinuten - laufMinuten} Minuten vor dem Slot`);
+  assert.match(yml, /IG_EXAKT_WARTEN:/,
+    "Workflow muss dem Tageslauf den exakten Warte-/Publikationsmodus mitgeben");
 });
 
 
