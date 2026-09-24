@@ -34,6 +34,28 @@ const ZUORDNUNG = new Map([
   ["va erledigt.png", ["2026-09-28", "b3"]],
 ].map(([name, ziel]) => [name.toLowerCase(), ziel]));
 
+/* Gezielte Layoutkorrekturen für manuell gelieferte Charakter-Szenen. Die
+   Werte steuern nur lokale Geometrie; kein Provider wird aufgerufen. */
+const RENDER_PROFIL = new Map([
+  ["2026-09-25/b2", { scale: 0.78, x: 0.50 }],
+  ["2026-09-25/b3", { scale: 0.72, x: 0.58 }],
+  ["2026-09-26/b3", { scale: 0.75, x: 0.63 }],
+  ["2026-09-28/b3", { scale: 0.75, x: 0.62 }],
+]);
+
+function triggerSlots() {
+  const env = String(process.env.IG_COVER_SLOTS || "").trim();
+  if (env) return new Set(env.split(",").map((x) => x.trim()).filter(Boolean));
+  try {
+    const trigger = fs.readFileSync(path.resolve("vorproduktion/coverbilder.trigger"), "utf8");
+    const zeilen = trigger.split(/\r?\n/).filter((x) => /^slots=/.test(x.trim()));
+    if (!zeilen.length) return null;
+    return new Set(zeilen.at(-1).replace(/^slots=/, "").split(",").map((x) => x.trim()).filter(Boolean));
+  } catch {
+    return null;
+  }
+}
+
 function normalisieren(s) {
   return String(s || "")
     .normalize("NFD")
@@ -167,7 +189,7 @@ function zielPfad(basis, datum, slot, inhalt) {
   return path.join(dir, `${datum}-${slot}-01.jpg`);
 }
 
-function motivSetzen(obj, dataUrl, meta) {
+function motivSetzen(obj, dataUrl, meta, profil = null) {
   obj.bild = dataUrl;
   obj.bildQuelle = null;
   obj.bildFrei = true;
@@ -175,6 +197,8 @@ function motivSetzen(obj, dataUrl, meta) {
   obj.bildHoehe = meta.height;
   obj.bildTyp = "charakter";
   obj.coverBildAuslassen = false;
+  if (profil?.scale != null) obj.coverBildScale = profil.scale;
+  if (profil?.x != null) obj.coverBildX = profil.x;
   delete obj.coverHinweisPlan;
 }
 
@@ -182,11 +206,18 @@ const hosting = new Hosting({ pushen: true }).vorbereiten();
 const coverDir = path.join(hosting.dir, "vorproduktion", "coverbilder");
 if (!fs.existsSync(coverDir)) throw new Error(`Coverbilder-Ordner fehlt: ${coverDir}`);
 
+const slotsFilter = triggerSlots();
 const pngs = fs.readdirSync(coverDir)
   .filter((x) => /\.png$/i.test(x))
+  .filter((name) => {
+    if (!slotsFilter?.size) return true;
+    const ziel = ZUORDNUNG.get(name.toLowerCase());
+    return ziel ? slotsFilter.has(`${ziel[0]}/${ziel[1]}`) : false;
+  })
   .sort((a, b) => a.localeCompare(b, "de"));
 
-if (!pngs.length) throw new Error("Keine PNG-Coverbilder gefunden.");
+if (!pngs.length) throw new Error("Keine passenden PNG-Coverbilder gefunden.");
+if (slotsFilter?.size) console.log(`Gezielter Coverlauf: ${[...slotsFilter].join(", ")}`);
 
 const tage = new Map();
 for (const datum of ["2026-09-24", "2026-09-25", "2026-09-26", "2026-09-27", "2026-09-28"]) {
@@ -225,13 +256,18 @@ for (const name of pngs) {
 }
 
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), "herrjurist-coverbilder-"));
+let bisher = null;
+try {
+  bisher = JSON.parse(fs.readFileSync(path.join(hosting.dir, "vorproduktion", "coverbilder-anwendung.json"), "utf8"));
+} catch { /* erster Lauf */ }
+
 const manifest = {
-  version: 1,
+  version: 2,
   angewandtAm: new Date().toISOString(),
   modus: "providerfrei-hochgeladene-coverbilder",
   providerAufrufe: 0,
   providerKostenUsd: 0,
-  eintraege: [],
+  eintraege: Array.isArray(bisher?.eintraege) ? structuredClone(bisher.eintraege) : [],
 };
 
 try {
@@ -240,6 +276,7 @@ try {
     const ziel = zuordnung.get(key);
     if (!ziel) throw new Error(`Keine Zuordnung für ${name}`);
     const [datum, slot] = ziel;
+    const profil = RENDER_PROFIL.get(`${datum}/${slot}`) || null;
     const tag = tage.get(datum);
     const inhalt = structuredClone(tag.inhalte?.[slot]);
     if (!inhalt) throw new Error(`${datum} ${slot}: Inhalt fehlt`);
@@ -260,17 +297,17 @@ try {
         delete inhalt.coverFinalUrl;
         delete inhalt.coverFinalSha256;
         const titel = inhalt.folien.find((x) => x.art === "titel") || inhalt.folien[0];
-        motivSetzen(titel, dataUrl, crop);
+        motivSetzen(titel, dataUrl, crop, profil);
         const dir = path.join(temp, datum, slot);
         const gerendert = await beitragRendern(inhalt, dir);
         fs.copyFileSync(gerendert[0], target);
-        renderMeta = { mode: "freisteller-covervorlage", ...crop };
+        renderMeta = { mode: "freisteller-covervorlage", profil, ...crop };
       } else if (Array.isArray(inhalt.szenen)) {
         delete inhalt.coverFinalUrl;
-        motivSetzen(inhalt, dataUrl, crop);
+        motivSetzen(inhalt, dataUrl, crop, profil);
         const daten = coverDaten(inhalt, { gesamt: 60 });
         await coverRendern(daten, target);
-        renderMeta = { mode: "freisteller-reel-covervorlage", ...crop };
+        renderMeta = { mode: "freisteller-reel-covervorlage", profil, safeArea: { top: 285, bottom: 1635 }, ...crop };
       } else {
         throw new Error(`${datum} ${slot}: unbekanntes Inhaltsformat`);
       }
@@ -292,7 +329,10 @@ try {
       zielSha256: sha256(target),
       providerKostenUsd: 0,
     };
-    manifest.eintraege.push(entry);
+    const alt = manifest.eintraege.findIndex((x) => x.datum === datum && x.slot === slot);
+    if (alt >= 0) manifest.eintraege.splice(alt, 1, entry);
+    else manifest.eintraege.push(entry);
+    manifest.eintraege.sort((a, b) => `${a.datum}/${a.slot}`.localeCompare(`${b.datum}/${b.slot}`));
     console.log(`✓ ${name} -> ${datum} ${slot} · ${freigestellt ? "Freisteller neu gerendert" : "Vollcover lokal angepasst"}`);
 
     tag.renderVorschau = {
