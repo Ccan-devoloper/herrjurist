@@ -133,20 +133,26 @@ test("Bildloses Karussell-Cover nutzt Cover-v2 ohne Ersatzmotiv", () => {
   assert.doesNotMatch(html, /class="illu"/);
 });
 
-test("CTA kann inhaltsspezifische Icons statt zyklischer Deko vorgeben", () => {
+test("CTA verlangt semantische und existierende Icon-Keys", () => {
   const ctx = kontext({ fach: "zpo", klausur: 1, fachLabel: "Zivilprozessrecht" });
   const spezifisch = folieHtml({
     art: "cta",
     titel: "TKZ als Startblock",
-    punkte: ["A", "B", "C", "D"],
+    punkte: ["Titel benennen", "Klausel prüfen", "Zustellung prüfen", "Vollstreckung starten"],
     icons: ["dokument", "lupe", "umschlag", "hammer"],
   }, ctx, 7, 7);
-  const fallback = folieHtml({
+  assert.match(spezifisch, /class="cta"/);
+  assert.throws(() => folieHtml({
     art: "cta",
-    titel: "TKZ als Startblock",
-    punkte: ["A", "B", "C", "D"],
-  }, ctx, 7, 7);
-  assert.notEqual(spezifisch, fallback);
+    titel: "Ohne Bedeutung",
+    punkte: ["A", "B", "C"],
+  }, ctx, 7, 7), /semantischen Icon-Key/);
+  assert.throws(() => folieHtml({
+    art: "cta",
+    titel: "Tippfehler im Key",
+    punkte: ["Titel benennen"],
+    icons: ["dokumet"],
+  }, ctx, 7, 7), /Unbekannter CTA-Icon-Key/);
 });
 
 test("Langes einzelnes Wort bleibt innerhalb der Story-Titelpille", async () => {
@@ -175,6 +181,46 @@ test("Langes einzelnes Wort bleibt innerhalb der Story-Titelpille", async () => 
         return el.scrollWidth <= el.clientWidth + 1 && b.right <= rechts + 1;
       });
       assert.equal(ok, true);
+    } finally {
+      await page.close();
+    }
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("Langer Story-Titel wird nach realer Breite und Safe-Area eingepasst", async () => {
+  const ctx = kontext({ fach: "vwgo", klausur: 3, fachLabel: "Verwaltungsprozessrecht" });
+  const html = storyHtml({
+    art: "teaser",
+    titel: "Fortsetzungsfeststellungsklage nach Erledigung: Welches Interesse brauchst du?",
+    text: "Der vollständige Beitrag ist jetzt im Feed.",
+    pille: "Jetzt im Feed",
+  }, ctx);
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "hj-long-story-title-"));
+  const datei = path.join(dir, "teaser.html");
+  fs.writeFileSync(datei, html);
+  try {
+    const browser = await browserStarten();
+    const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+    try {
+      await page.goto(`file://${datei}`, { waitUntil: "load" });
+      await page.evaluate(() => document.fonts.ready);
+      await page.evaluate(storyTitelEinpassen);
+      const m = await page.locator(".story h1").evaluate((el) => {
+        const root = el.closest(".story");
+        const box = el.getBoundingClientRect();
+        const rb = root.getBoundingClientRect();
+        const rs = getComputedStyle(root);
+        return {
+          scrollOk: el.scrollWidth <= el.clientWidth + 1,
+          linksOk: box.left >= rb.left + parseFloat(rs.paddingLeft || 0) - 1,
+          rechtsOk: box.right <= rb.right - parseFloat(rs.paddingRight || 0) + 1,
+          zeilen: Number(el.dataset.storyZeilen || 99),
+        };
+      });
+      assert.equal(m.scrollOk && m.linksOk && m.rechtsOk, true);
+      assert.ok(m.zeilen <= 3, `Titel belegt ${m.zeilen} Zeilen`);
     } finally {
       await page.close();
     }
