@@ -1,5 +1,5 @@
 {
-  "stand": "2026-09-24T10:55:00Z",
+  "stand": "2026-09-24T11:23:00Z",
   "modus": "review-render-only",
   "tage": [
     "2026-09-29",
@@ -13,7 +13,9 @@
     "2026-10-07",
     "2026-10-08"
   ],
-  "assetAusgang": "6ae2c80ef31c1e0ab535730f9c6f75c7de5816f5",
+  "assetAusgang": "c66f0884c27e64c9d6220e50774ef210246bc116",
   "bildgenerierung": false,
-  "providerKostenUsd": 0
+  "providerKostenUsd": 0,
+  "versuch": 2,
+  "grund": "Review-Render nach CTA-Icon-Korrektur und fail-fast Icon-Preflight"
 }
