@@ -1,0 +1,58 @@
+name: Wissen einpflegen
+
+# Übernimmt neue Wissensbände aus daten/wissen-neu/ (verschlüsselt mit dem
+# Secret WISSEN_TRANSFER_KEY) in den Tresor daten/wissen/ (verschlüsselt mit
+# IG_WISSEN_KEY) und richtet die Themen-Zeiger. So kommt neues Material ins
+# öffentliche Repository, ohne dass irgendwo Klartext liegt – auch nicht in
+# der Historie und nicht in diesem Log. Nach erfolgreichem Lauf kann das
+# Secret WISSEN_TRANSFER_KEY wieder gelöscht werden.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wissen-einpflegen
+  cancel-in-progress: false
+
+jobs:
+  einpflegen:
+    runs-on: ubuntu-latest
+    env:
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      WISSEN_TRANSFER_KEY: ${{ secrets.WISSEN_TRANSFER_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Schlüssel prüfen
+        run: |
+          test -n "$IG_WISSEN_KEY" || { echo "IG_WISSEN_KEY fehlt"; exit 1; }
+          test -n "$WISSEN_TRANSFER_KEY" || { echo "WISSEN_TRANSFER_KEY fehlt (Secret anlegen, Wert kam mit dem Staging)"; exit 1; }
+
+      - name: Staging prüfen
+        run: node bin/wissen-einpflegen.mjs pruefen
+
+      - name: Übernehmen
+        run: node bin/wissen-einpflegen.mjs uebernehmen
+
+      - name: Tresor gegenlesen
+        run: node bin/wissen-tresor.mjs pruefen | sed -E 's/–.*$//'
+        # Der Kapitelüberblick nennt Bandtitel; im öffentlichen Log bleiben
+        # nur die Zahlen davor stehen.
+
+      - name: Ergebnis committen
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A daten
+          git commit -m "Wissensbasis aus dem Vollrepetitorium übernehmen" || exit 0
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"

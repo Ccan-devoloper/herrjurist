@@ -195,9 +195,12 @@ Zeitplan (stündlich, Cron in `.github/workflows/instagram.yml`) von selbst.
 
 Der Themenpool (`daten/themen.mjs`) ist ein Gerüst – Titel, Normen, zwei Stichworte. Das reicht, damit
 ein Beitrag entsteht, aber nicht immer, damit die Fristen, Reihenfolgen und Tenorformeln darin stimmen.
-Deshalb liegt in `daten/wissen` der Volltext des Jura-Gesamtwissens (9 Bände, 384 Kapitel, 1,1 MB):
-Vor dem Schreiben sucht `src/wissen.mjs` das Kapitel zum Thema heraus, der Autor bekommt es als Quelle
-mit, und der Faktencheck prüft **gegen dieselbe Stelle**.
+Deshalb liegt in `daten/wissen` der Volltext des Jura-Gesamtwissens – seit dem Vollrepetitorium
+(kumulativer Gesamtstand UPDATE30) **73 Bände mit 1 235 Kapiteln, gut 10 MB Klartext**; komprimiert
+und verschlüsselt bleiben davon keine 2 MB im Repo. Vor dem Schreiben sucht `src/wissen.mjs` das
+Kapitel zum Thema heraus, der Autor bekommt es als Quelle mit, und der Faktencheck prüft **gegen
+dieselbe Stelle**. Die Register- und Seitenlisten-Bände (7 und 42–45) werden nie von allein als
+Belegstelle gewählt; ein fest eingetragener Zeiger darf weiter hinein zeigen.
 
 **Verschlüsselt, weil dieses Repo öffentlich ist.** Die Bände liegen als `*.txt.enc` im Tresor –
 AES-256-GCM, Schlüssel aus dem Secret `IG_WISSEN_KEY`, gleiche Bauart wie der Token-Tresor. Wer das
@@ -218,8 +221,9 @@ Drei Dinge, die bewusst so sind:
 - **Lieber keine Quelle als die falsche.** Ein Kapitel wird nur genommen, wenn es sein Rechtsgebiet
   teilt und den Zweitplatzierten deutlich schlägt. „Wie grenzt man Diebstahl und Betrug ab?“ bekommt
   deshalb gar keine Stelle: Beide Kapitel passen halb, und halb passend ist schlechter als nichts.
-  Aktuell haben 308 der 904 Themen eine Belegstelle, 96 davon über einen fest eingetragenen Zeiger
-  (`wissen: "4/2"` = Band 4, Kapitel 2).
+  Vor dem Vollrepetitorium hatten 308 der 904 Themen eine Belegstelle, 96 davon über einen fest
+  eingetragenen Zeiger (`wissen: "4/2"` = Band 4, Kapitel 2); mit 1 235 statt 384 Kapiteln treffen
+  entsprechend mehr Themen.
 - **Was übernommen werden darf, steht im Auftrag ans Modell** – und zwar dreigeteilt, nicht pauschal:
   *Prüfungsschemata, Aufbau und Definitionen* dürfen der Belegstelle folgen, denn ein anerkanntes
   Schema ist Allgemeingut und soll in der Klausur wiedererkannt werden. *Fälle* dürfen übernommen
@@ -228,6 +232,22 @@ Drei Dinge, die bewusst so sind:
   den anderen Beiträgen wie ein Fremdkörper klingt.
 
 Kosten: rund 1200 Token je Beitrag, also ~0,004 $ – bei drei Beiträgen am Tag etwa 0,012 $ von 0,27 $.
+
+### Neues Material einpflegen – ohne dass je Klartext im Repo liegt
+
+1. `node bin/vollrepetitorium-konvertieren.mjs <gesamtwissen.html> <ordner>` macht aus der
+   kumulativen HTML-Arbeitsansicht Band-Textdateien im Tresor-Format (lokal, Klartext bleibt draußen).
+2. Wer `IG_WISSEN_KEY` zur Hand hat: `node bin/wissen-tresor.mjs packen <ordner>` – fertig.
+3. Wer ihn nicht hat (etwa eine Claude-Session, der Schlüssel liegt nur in den GitHub-Secrets):
+   die Bände mit einem frei gewählten **Transferschlüssel** verschlüsseln und als
+   `daten/wissen-neu/*.txt.enc` committen. Dann den Transferschlüssel als Secret
+   `WISSEN_TRANSFER_KEY` anlegen und den Workflow **„Wissen einpflegen“** auf dem passenden Zweig
+   starten: Er schlüsselt auf `IG_WISSEN_KEY` um, gleicht jeden Themen-Zeiger (`wissen: "4/2"`)
+   gegen die neuen Kapitel ab (behalten, umschreiben oder streichen – nie still auf ein falsches
+   Kapitel zeigen lassen), legt einen verschlüsselten Bericht ab
+   (`node bin/wissen-einpflegen.mjs bericht` zeigt ihn lokal) und räumt das Staging weg.
+   Danach das Secret `WISSEN_TRANSFER_KEY` wieder löschen. Das Actions-Log nennt dabei nur
+   Zahlen und Schlüssel-Fingerabdrücke, nie Titel oder Text.
 
 ## Pausieren und Modus
 
