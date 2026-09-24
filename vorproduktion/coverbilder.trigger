@@ -9,3 +9,6 @@ retry=4
 reason=visuell-gepruefte-urkunden-zuordnung
 2026-09-24T02:44:00Z
 run=apply-uploaded-coverbilder
+2026-09-24T03:03:30Z
+run=repair-cover-safe-area
+slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
