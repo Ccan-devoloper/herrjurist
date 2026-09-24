@@ -1,0 +1,51 @@
+name: Temporary single-comment inspection
+
+on:
+  push:
+    branches: [chatgpt/one-comment-20260924]
+    paths:
+      - ".github/workflows/one-comment-temp.yml"
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read target Instagram comment
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
+          IG_GRAPH_VERSION: ${{ vars.IG_GRAPH_VERSION }}
+        run: |
+          node <<'NODE'
+          const mediaId = "18086952467258750";
+          const host = process.env.IG_GRAPH_HOST || "instagram";
+          const version = process.env.IG_GRAPH_VERSION || "v23.0";
+          const base = host === "facebook"
+            ? `https://graph.facebook.com/${version}`
+            : `https://graph.instagram.com/${version}`;
+          const params = new URLSearchParams({
+            fields: "id,text,username,from{id,username},timestamp,replies.limit(50){id,text,username,from{id,username},timestamp}",
+            limit: "50",
+            access_token: process.env.IG_ACCESS_TOKEN,
+          });
+          const res = await fetch(`${base}/${mediaId}/comments?${params}`);
+          const body = await res.text();
+          if (!res.ok) {
+            console.error("IG_ERROR", res.status, body);
+            process.exit(1);
+          }
+          const json = JSON.parse(body);
+          const rows = (json.data || []).map(c => ({
+            id: c.id,
+            text: c.text,
+            username: c.username || c.from?.username || "",
+            timestamp: c.timestamp,
+            replies: (c.replies?.data || []).map(r => ({
+              id: r.id,
+              text: r.text,
+              username: r.username || r.from?.username || "",
+              timestamp: r.timestamp,
+            })),
+          }));
+          console.log("TARGET_COMMENTS=" + JSON.stringify(rows));
+          NODE
