@@ -9,7 +9,13 @@
     "bildgenerierungUsd": 0,
     "providerKostenUsd": 0,
     "piperOffline": true,
-    "coverbilder": false
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
   },
   "plan": {
     "beitraege": [
@@ -622,6 +628,57 @@
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
       "fachStand": "redaktionell-2026-09-24"
+    },
+    "s1": {
+      "slot": "s1",
+      "art": "teaser",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "titel": "Nebenbestimmung: isoliert anfechten?",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b1",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s2": {
+      "slot": "s2",
+      "art": "teaser",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "titel": "§ 166 BGB: Wessen Wissen zählt?",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b2",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
+    },
+    "s3": {
+      "slot": "s3",
+      "art": "teaser",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "titel": "Diebstahl: Wegnahme sauber prüfen",
+      "text": "Der vollständige Beitrag ist jetzt im Feed.",
+      "pille": "Jetzt im Feed",
+      "beitragSlot": "b3",
+      "abgeleitet": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen"
     }
   },
   "hookOptimierung": {
@@ -636,12 +693,16 @@
     "regel": "Fehler nur bei echtem Pool-Fehler; Frage nur bei beantworteter Frage; Zahl nur bei realer 2–6-Punkte-Struktur; kein Clickbait."
   },
   "renderVorschau": {
-    "status": "ausstehend",
+    "status": "fertig",
+    "erzeugtAm": "2026-09-24T11:46:06.527Z",
+    "pfad": "vorproduktion/2026-10-06/fertig",
+    "providerKostenUsd": 0,
+    "textProviderKostenUsd": 0,
+    "faktencheckProviderKostenUsd": 0,
+    "bildgenerierungKostenUsd": 0,
     "coverbilder": false,
-    "charakterLayer": "bewusst-ausgelassen",
-    "reelLayout": "erklaer",
-    "audio": "piper-offline",
-    "providerKostenUsd": 0
+    "reelStimme": "piper-offline",
+    "freigabeBetreiber": false
   },
   "liveRegel": {
     "veroeffentlichen": false,
