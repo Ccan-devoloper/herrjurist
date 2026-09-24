@@ -175,9 +175,7 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
   assert.match(cssText, /\.art-titel h1\.titel-stack \.titel-zeile\{[^}]*max-width:976px[^}]*padding:12px 27px 14px[^}]*border-radius:30px/);
   assert.match(cssText, /\.cover-badge\{[^}]*margin-top:15px[^}]*padding:10px 26px 11px[^}]*font-size:30px/);
   assert.match(cssText, /\.frei\.charakter\{right:-12px;bottom:-6px;width:1050px;height:980px\}/);
-  assert.match(cssText, /\.cover-hinweis\{[^}]*font-family:"Caveat"[^}]*font-size:52px/);
-  assert.doesNotMatch(cssText, /\.cover-hinweis-kurve,\.cover-hinweis-spitze/);
-  assert.doesNotMatch(cssText, /\.cover-hinweis-pfeil/);
+  assert.doesNotMatch(cssText, /\.cover-hinweis/);
   assert.match(cssText, /\.art-titel:has\(\.frei\) \.fuss\{[^}]*bottom:24px/);
 
   const html = folieHtml({
@@ -205,12 +203,8 @@ test("cover-quality-v2: Golden-Reference-Layout bleibt als Markenvertrag abgesic
     text: "Inhalt",
   }, ctx, 2, 6);
   assert.match(inner, />2\/6</);
-  assert.match(html, /class="cover-hinweis"[^>]*data-note-x="0.24"/);
-  assert.match(html, />Reihenfolge merken<\/div>/);
-  assert.doesNotMatch(html, /class="cover-hinweis-pfeil"/);
-  assert.doesNotMatch(html, /class="cover-hinweis-kurve"/);
-  assert.doesNotMatch(html, /class="cover-hinweis-spitze"/);
-  assert.doesNotMatch(html, /marker-end=/);
+  assert.doesNotMatch(html, /class="cover-hinweis"/);
+  assert.doesNotMatch(html, />Reihenfolge merken<\/div>/);
 });
 
 test("cover-quality-v2: Merksatz-Anfuehrungszeichen haben je Lernfamilie eine eigene Kontrastfarbe", () => {
