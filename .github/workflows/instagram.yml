@@ -329,7 +329,7 @@ jobs:
           if [ $zielh -lt 5 ]; then zielh=5; fi
           if [ $zielh -gt 20 ]; then zielh=5; tag=$(date -u -d "$tag +1 day" +%F); fi
           slot=$(date -u -d "$tag $(printf %02d $zielh):00:00" +%s)
-          warten=$((slot + 420 - jetzt))
+          warten=$((slot + 120 - jetzt))
           echo "Nächster Slot: $(date -u -d @$slot +%FT%TZ) – warte $warten s"
           if [ $warten -gt 19800 ]; then
             # Länger als 5,5 h (Nachtpause): zwischendurch einmal nur die Kette weiterreichen.
