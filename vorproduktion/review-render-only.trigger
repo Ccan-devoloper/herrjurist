@@ -1,21 +1,15 @@
 {
-  "stand": "2026-09-24T11:23:00Z",
-  "modus": "review-render-only",
+  "stand": "2026-09-24T14:02:00Z",
+  "modus": "reel-overlay-patch",
   "tage": [
-    "2026-09-29",
-    "2026-09-30",
-    "2026-10-01",
-    "2026-10-02",
-    "2026-10-03",
-    "2026-10-04",
-    "2026-10-05",
-    "2026-10-06",
-    "2026-10-07",
-    "2026-10-08"
+    "2026-09-24"
   ],
-  "assetAusgang": "c66f0884c27e64c9d6220e50774ef210246bc116",
+  "slots": [
+    "b3"
+  ],
+  "assetAusgang": "52a6eee5ce9a77efab89a8e3bf485fd9a3f817af",
   "bildgenerierung": false,
   "providerKostenUsd": 0,
-  "versuch": 2,
-  "grund": "Review-Render nach CTA-Icon-Korrektur und fail-fast Icon-Preflight"
+  "versuch": 1,
+  "grund": "Sieben hochgeladene 1080x1920-Szenenoverlays auf 2026-09-24-b3 anwenden; § 267-Markierung von rotem X auf grünen Haken korrigieren"
 }
