@@ -250,6 +250,11 @@ test("Reel-Cover mit den beiden beanstandeten Hooks bleibt innerhalb des 1080er 
         titelZeilen: ["Verfassungs-", "beschwerde:", "Grundrecht verletzt?", "Das reicht nicht"],
         coverBadge: "Fehlerfalle",
       },
+      {
+        fach: "staat", klausur: 3, fachLabel: "Staatsrecht",
+        titel: "Rechtswegerschöpfung und Subsidiarität",
+        coverBadge: "Reel",
+      },
     ];
     for (let i = 0; i < faelle.length; i++) {
       const ziel = path.join(dir, `cover-${i}.jpg`);
