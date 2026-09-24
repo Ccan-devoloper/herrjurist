@@ -81,7 +81,8 @@ export function storyTitelEinpassen() {
   if (!wurzel || !titel) return;
 
   const text = String(titel.textContent || "").trim().replace(/\s+/g, " ");
-  if (!text || text.length > 44) return;
+  if (!text) return;
+  const maxZeilen = text.length <= 44 ? 2 : text.length <= 80 ? 3 : 4;
 
   titel.style.width = "max-content";
   titel.style.maxWidth = "100%";
