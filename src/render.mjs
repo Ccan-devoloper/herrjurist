@@ -109,15 +109,15 @@ export function storyTitelEinpassen() {
   let groesse = parseFloat(getComputedStyle(titel).fontSize);
   const mindest = 50;
   let n = 0;
-  while ((zeilen() > 2 || !horizontalPasst()) && groesse > mindest + 0.5 && n++ < 24) {
+  while ((zeilen() > maxZeilen || !horizontalPasst()) && groesse > mindest + 0.5 && n++ < 24) {
     groesse = Math.max(mindest, groesse * 0.96);
     titel.style.fontSize = `${groesse}px`;
   }
   titel.dataset.storyAutoFitPx = String(Math.round(groesse * 10) / 10);
   titel.dataset.storyZeilen = String(zeilen());
 
-  if (zeilen() > 2 || !horizontalPasst()) {
-    throw new Error(`Kurzer Story-Titel passt trotz Auto-Fit nicht in die Markenpille: ${text}`);
+  if (zeilen() > maxZeilen || !horizontalPasst()) {
+    throw new Error(`Story-Titel passt trotz Auto-Fit nicht in die Markenpille/Safe-Area: ${text}`);
   }
 }
 
