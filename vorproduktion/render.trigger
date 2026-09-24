@@ -12,3 +12,5 @@ rerender=2026-09-26-b1-note-only
 rerender=2026-09-26-b1-note-meta
 2026-09-24T00:49:00Z
 rerender=2026-09-26-b1-layout-fix
+2026-09-24T00:53:00Z
+rerender=2026-09-26-b1-badge
