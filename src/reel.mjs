@@ -491,6 +491,7 @@ export function coverDaten(reel, plan) {
     coverBildBreite: reel.coverBildBreite ?? null,
     coverBildX: reel.coverBildX ?? null,
     coverBildY: reel.coverBildY ?? null,
+    coverBildFit: reel.coverBildFit ?? null,
     coverBildTop: reel.coverBildTop ?? null,
     coverBildBottom: reel.coverBildBottom ?? null,
     coverBildBleed: reel.coverBildBleed ?? null,
