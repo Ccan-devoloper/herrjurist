@@ -51,6 +51,17 @@ const RENDER_PROFIL = new Map([
   ["2026-09-28/b3", { edge: true, top: 340, bottom: 0, bleed: 12, x: 0.50, y: 1.00, fit: "contain" }],
 ]);
 
+/* Bereits redaktionell freigegebene Cover duerfen von Sammel-Neurendern nicht
+   erneut mit spaeter geaenderten Default-Layouts verschoben werden. Fuer
+   2026-09-27/b3 ist die visuell freigegebene Referenz der Renderstand aus
+   instagram-assets Commit 249fd31b3f039d829f41b0bc0aaef2063ac391e4. */
+const COVER_LOCKS = new Map([
+  ["2026-09-27/b3", {
+    ref: "249fd31b3f039d829f41b0bc0aaef2063ac391e4",
+    reason: "Freisteller-Position war bereits freigegeben; globale Reel-Layoutaenderungen duerfen diesen Slot nicht ueberschreiben.",
+  }],
+]);
+
 function triggerSlots() {
   const env = String(process.env.IG_COVER_SLOTS || "").trim();
   if (env) return new Set(env.split(",").map((x) => x.trim()).filter(Boolean));
@@ -229,8 +240,12 @@ const slotsFilter = triggerSlots();
 const pngs = fs.readdirSync(coverDir)
   .filter((x) => /\.png$/i.test(x))
   .filter((name) => {
-    if (!slotsFilter?.size) return true;
     const ziel = ZUORDNUNG.get(name.toLowerCase());
+    if (ziel && COVER_LOCKS.has(`${ziel[0]}/${ziel[1]}`)) {
+      console.log(`↷ ${ziel[0]} ${ziel[1]} gesperrt: ${COVER_LOCKS.get(`${ziel[0]}/${ziel[1]}`).reason}`);
+      return false;
+    }
+    if (!slotsFilter?.size) return true;
     return ziel ? slotsFilter.has(`${ziel[0]}/${ziel[1]}`) : false;
   })
   .sort((a, b) => a.localeCompare(b, "de"));
