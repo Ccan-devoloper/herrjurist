@@ -30,6 +30,8 @@ if (String(process.env.IG_CHARAKTERE || "").toLowerCase() !== "false") {
 const { Hosting } = await import("../src/hosting.mjs");
 const { beitragRendern, storyRendern, browserBeenden } = await import("../src/render.mjs");
 const { reelBauen } = await import("../src/reel.mjs");
+const { ICONS } = await import("../src/stile.mjs");
+const { ZUORDNUNG } = await import("../src/icons.mjs");
 
 const tage = process.argv.slice(2).filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x));
 if (!tage.length) throw new Error("Mindestens ein Datum YYYY-MM-DD ist erforderlich.");
@@ -83,6 +85,39 @@ function teaserFuer(slot, beitrag, beitragSlot) {
 
 function dateiRelativ(pfad) {
   return path.relative(hosting.dir, pfad).split(path.sep).join("/");
+}
+
+function expliziteIconKeysPruefen(wert, pfad = "inhalte") {
+  if (!wert || typeof wert !== "object") return;
+  if (typeof wert.icon === "string" && wert.icon.trim()) {
+    const key = wert.icon.trim();
+    if (!(key in ICONS) && !(key in ZUORDNUNG)) {
+      throw new Error(`Unbekannter Icon-Key vor Renderstart: ${key} (${pfad}.icon)`);
+    }
+  }
+  if (Array.isArray(wert.icons)) {
+    if (Array.isArray(wert.punkte) && wert.icons.length !== wert.punkte.length) {
+      throw new Error(`CTA-Icon-Anzahl passt nicht zu CTA-Punkten (${pfad})`);
+    }
+    for (const keyRaw of wert.icons) {
+      const key = String(keyRaw || "").trim();
+      if (!key || (!(key in ICONS) && !(key in ZUORDNUNG))) {
+        throw new Error(`Unbekannter CTA-Icon-Key vor Renderstart: ${key || "<leer>"} (${pfad}.icons)`);
+      }
+    }
+  }
+  for (const [key, kind] of Object.entries(wert)) {
+    if (key === "icon" || key === "icons") continue;
+    if (Array.isArray(kind)) kind.forEach((x, i) => expliziteIconKeysPruefen(x, `${pfad}.${key}[${i}]`));
+    else if (kind && typeof kind === "object") expliziteIconKeysPruefen(kind, `${pfad}.${key}`);
+  }
+}
+
+for (const datum of tage) {
+  const tagPfad = path.join(hosting.dir, "vorproduktion", `${datum}.json`);
+  if (!fs.existsSync(tagPfad)) throw new Error(`Vorproduktion fehlt: ${datum}`);
+  const tag = JSON.parse(fs.readFileSync(tagPfad, "utf8"));
+  expliziteIconKeysPruefen(tag.inhalte, `${datum}.inhalte`);
 }
 
 try {
