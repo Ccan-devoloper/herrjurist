@@ -1,8 +1,8 @@
 {
   "datum": "2026-09-28",
   "status": "vorproduziert",
-  "freigabeBetreiber": false,
-  "liveVerknuepft": false,
+  "freigabeBetreiber": true,
+  "liveVerknuepft": true,
   "kostenPolicy": {
     "autorUsd": 0,
     "faktencheckUsd": 0,
@@ -699,5 +699,11 @@
     "coverbilder": false,
     "reelStimme": "piper-offline",
     "freigabeBetreiber": false
+  },
+  "liveRegel": {
+    "aktivSeit": "2026-09-24",
+    "modus": "vorproduktion-hat-vorrang",
+    "fallback": "nur-wenn-datum-nicht-belegt",
+    "providerKostenZielUsd": 0
   }
 }
