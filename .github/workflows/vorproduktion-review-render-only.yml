@@ -10,7 +10,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: instagram-bot
+  # Der gezielte Reel-Overlay-Patch schreibt nur dessen MP4/Audio + Manifest
+  # und darf deshalb neben einem wartenden Publikationslauf rendern.
+  group: ${{ contains(github.event.head_commit.message, 'Overlay-Patch') && 'instagram-bot-overlay-patch' || 'instagram-bot' }}
   cancel-in-progress: false
 
 jobs:
