@@ -488,7 +488,9 @@ export function coverDaten(reel, plan) {
        durchgereicht werden. Sonst stehen scale/x zwar im Manifest, aendern
        das Reel-Cover aber nicht. */
     coverBildScale: reel.coverBildScale ?? null,
+    coverBildBreite: reel.coverBildBreite ?? null,
     coverBildX: reel.coverBildX ?? null,
+    coverBildEdgeToEdge: reel.coverBildEdgeToEdge === true,
     coverBildAuslassen: reel.coverBildAuslassen === true,
     coverText: reel.coverText || null,
     fach: reel.fach,
