@@ -40,6 +40,14 @@ if (fs.existsSync(overlayTriggerPfad)) {
     console.log(JSON.stringify({ ok: true, ...manifest }, null, 2));
     process.exit(0);
   }
+  if (trigger.modus === "cover-only-patch") {
+    const { coverOnlyPatchen } = await import("./vorproduktion-cover-only-patch.mjs");
+    const tage = Array.isArray(trigger.tage) ? trigger.tage : [];
+    const slots = Array.isArray(trigger.slots) && trigger.slots.length ? trigger.slots : ["b1", "b2", "b3"];
+    const manifest = await coverOnlyPatchen({ tage, slots });
+    console.log(JSON.stringify({ ok: true, ...manifest }, null, 2));
+    process.exit(0);
+  }
 }
 
 const { Hosting } = await import("../src/hosting.mjs");
