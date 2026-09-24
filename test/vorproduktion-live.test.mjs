@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets, storyAsset } from "../src/vorproduktion-live.mjs";
+import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets, storyAsset, feedWartezeitMs } from "../src/vorproduktion-live.mjs";
 
 function fixture() {
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),"vp-live-"));
@@ -86,4 +86,18 @@ test("belegter aber unvollstaendiger Tag faellt hart aus statt kostenpflichtig z
   tagAnlegen(dir);
   fs.unlinkSync(path.join(dir,"vorproduktion","2026-09-24","fertig","b3","2026-09-24-b3.mp4"));
   assert.throws(()=>vorproduktionLaden(hosting,"2026-09-24"),/kein kostenpflichtiger Fallback/);
+});
+
+test("Feed-Wartezeit zielt auf die echte Veröffentlichungsminute",()=>{
+  const plan={beitraege:[
+    {slot:"b1",zeit:"07:30",status:"geplant"},
+    {slot:"b2",zeit:"17:30",status:"geplant"}
+  ]};
+  assert.equal(feedWartezeitMs(plan,7*3600+5*60),25*60*1000);
+  assert.equal(feedWartezeitMs(plan,6*3600),90*60*1000);
+});
+
+test("Kein Warten wenn ein Feed-Slot bereits fällig ist oder zu weit entfernt liegt",()=>{
+  assert.equal(feedWartezeitMs({beitraege:[{zeit:"07:30",status:"geplant"}]},7*3600+31*60),0);
+  assert.equal(feedWartezeitMs({beitraege:[{zeit:"12:00",status:"geplant"}]},9*3600),0);
 });
