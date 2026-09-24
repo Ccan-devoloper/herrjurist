@@ -1,4 +1,4 @@
-name: Vorproduktion · 3 Tage ohne Coverbilder
+name: Vorproduktion · 10 Tage ohne Coverbilder
 
 on:
   push:
@@ -17,7 +17,7 @@ concurrency:
 jobs:
   rendern:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     env:
       GITHUB_TOKEN: ${{ github.token }}
       IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
@@ -25,6 +25,7 @@ jobs:
       IG_BILDER: "false"
       IG_BILD_KI: "false"
       IG_CHARAKTERE: "false"
+      IG_CHARAKTER_QA: "false"
       IG_STIMME: "piper"
       OPENAI_API_KEY: ""
       ANTHROPIC_API_KEY: ""
@@ -50,6 +51,9 @@ jobs:
       - name: Abhängigkeiten
         run: npm ci
 
+      - name: Linter
+        run: npm run lint
+
       - name: Chromium
         run: npx playwright install --with-deps chromium
 
@@ -63,8 +67,22 @@ jobs:
             python3 -m piper.download_voices --data-dir ~/.cache/piper-voices de_DE-thorsten-high
           fi
 
-      - name: Drei Review-Tage lokal rendern
-        run: node bin/vorproduktion-ohne-coverbilder-rendern.mjs 2026-09-26 2026-09-27 2026-09-28
+      - name: Tests
+        run: npm test
+
+      - name: Zehn Review-Tage providerfrei vorbereiten
+        run: >
+          node bin/vorproduktion-vorbereiten.mjs
+          2026-09-29 2026-09-30
+          2026-10-01 2026-10-02 2026-10-03 2026-10-04
+          2026-10-05 2026-10-06 2026-10-07 2026-10-08
+
+      - name: Zehn Review-Tage lokal rendern
+        run: >
+          node bin/vorproduktion-ohne-coverbilder-rendern.mjs
+          2026-09-29 2026-09-30
+          2026-10-01 2026-10-02 2026-10-03 2026-10-04
+          2026-10-05 2026-10-06 2026-10-07 2026-10-08
 
       - name: Statische Review-Dateien sichern
         if: always()
@@ -72,8 +90,15 @@ jobs:
         with:
           name: vorproduktion-ohne-coverbilder-${{ github.run_id }}
           path: |
-            .instagram-assets/vorproduktion/2026-09-26/fertig/**/*.jpg
-            .instagram-assets/vorproduktion/2026-09-27/fertig/**/*.jpg
-            .instagram-assets/vorproduktion/2026-09-28/fertig/**/*.jpg
+            .instagram-assets/vorproduktion/2026-09-29/fertig/**/*
+            .instagram-assets/vorproduktion/2026-09-30/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-01/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-02/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-03/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-04/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-05/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-06/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-07/fertig/**/*
+            .instagram-assets/vorproduktion/2026-10-08/fertig/**/*
           if-no-files-found: ignore
           retention-days: 7
