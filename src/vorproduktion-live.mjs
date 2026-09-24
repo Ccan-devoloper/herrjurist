@@ -75,6 +75,19 @@ export function feedAssets(vp, e) {
   return { bildPfade, bildUrls: bildPfade.map((p) => url(vp, p)) };
 }
 
+
+export function feedWartezeitMs(plan, jetztSekunden, maxMinuten = 100) {
+  const offen = (plan?.beitraege || []).filter((e) => e.status !== "veroeffentlicht" && /^\d{1,2}:\d{2}$/.test(String(e.zeit || "")));
+  if (!offen.length) return 0;
+  const sekunden = offen.map((e) => {
+    const [h, m] = e.zeit.split(":").map(Number);
+    return h * 3600 + m * 60;
+  }).sort((a, b) => a - b);
+  if (sekunden.some((s) => s <= jetztSekunden)) return 0;
+  const diff = sekunden[0] - jetztSekunden;
+  return diff <= maxMinuten * 60 ? diff * 1000 : 0;
+}
+
 export function storyAsset(vp, slot) {
   const p = files(path.join(vp.fertigDir, "stories"), new RegExp(`^${slot}-.*\\.jpe?g$`, "i"))[0];
   return { bildPfad: p, bildUrl: url(vp, p) };
