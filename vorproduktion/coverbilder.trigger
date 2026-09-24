@@ -3,3 +3,5 @@ source=instagram-assets/vorproduktion/coverbilder
 mode=providerfrei
 retry=2
 reason=lokale-wissensbasis
+retry=3
+reason=visuelle-zuordnung-artefakt
