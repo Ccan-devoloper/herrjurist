@@ -348,8 +348,8 @@ h1 em{color:${p.akzent2}}
 /* Problematische Action-Freisteller werden mit leichtem Bleed von links nach
    rechts aufgespannt. Die exakte Breite kommt inline aus dem Renderprofil;
    overflow bleibt bewusst sichtbar, damit keine "Sticker"-Innenkante entsteht. */
-.frei.charakter.edge-to-edge{max-width:none;overflow:visible}
-.frei.charakter.edge-to-edge img{object-fit:contain;object-position:center bottom}
+.frei.charakter.edge-to-edge{max-width:none;overflow:hidden}
+.frei.charakter.edge-to-edge img{object-fit:cover;object-position:var(--edge-x,50%) var(--edge-y,50%)}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
 /* Die KI bestimmt die bevorzugte Position des handschriftlichen Hinweises.
@@ -472,6 +472,8 @@ em{color:${p.akzent2}}
    eigentliche Größe kommt weiter aus coverBildScale; hier wird nur die
    Unterkante zuverlässig auf y=1635 gelegt. */
 .story.cover .frei.charakter{bottom:285px;right:36px}
+.story.cover h1,.story.cover .unter{position:relative;z-index:3}
+.story.cover .kopf{z-index:3}
 .story.cover .cover-badge{margin-top:12px}
 /* Cover-v2 no-arrow: keine automatisch erzeugte Dauer-Handschrift. */
 .story.cover .dauer{display:none}
@@ -582,19 +584,42 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   const festeBreite = istCharakter && Number.isFinite(breiteRaw) ? Math.max(720, Math.min(1500, breiteRaw)) : null;
   const xRaw = Number(folie.coverBildX);
   const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.05, Math.min(0.95, xRaw)) : null;
+  const yRaw = Number(folie.coverBildY);
+  const y = istCharakter && Number.isFinite(yRaw) ? Math.max(0.05, Math.min(0.95, yRaw)) : 0.5;
+  const topRaw = Number(folie.coverBildTop);
+  const bottomRaw = Number(folie.coverBildBottom);
+  const bleedRaw = Number(folie.coverBildBleed);
   const style = [];
-  if (festeBreite && folie.bildBreite && folie.bildHoehe) {
-    const ratio = folie.bildHoehe / folie.bildBreite;
-    style.push(`width:${Math.round(festeBreite)}px`);
-    style.push(`height:${Math.round(festeBreite * ratio)}px`);
-  } else if (box) {
-    style.push(`width:${Math.round(box.breite * scale)}px`);
-    style.push(`height:${Math.round(box.hoehe * scale)}px`);
-  }
-  if (x != null) {
-    style.push(`left:${Math.round(x * 10000) / 100}%`);
-    style.push("right:auto");
-    style.push("transform:translateX(-50%)");
+
+  if (edgeToEdge) {
+    /* Eine echte Buehne: links/rechts leicht ueber den Rand, oben/unten fest
+       definiert. Das Bild selbst fuellt diese Flaeche per object-fit:cover.
+       Damit gibt es keine Sticker-Luft mehr und trotzdem keinen Wildwuchs
+       ueber den Titelblock. */
+    const bleed = Number.isFinite(bleedRaw) ? Math.max(0, Math.min(80, bleedRaw)) : 0;
+    style.push(`left:-${Math.round(bleed)}px`);
+    style.push(`right:-${Math.round(bleed)}px`);
+    style.push(Number.isFinite(topRaw) ? `top:${Math.round(topRaw)}px` : "top:auto");
+    style.push(Number.isFinite(bottomRaw) ? `bottom:${Math.round(bottomRaw)}px` : "bottom:0");
+    style.push("width:auto");
+    style.push("height:auto");
+    style.push("transform:none");
+    style.push(`--edge-x:${Math.round((x ?? 0.5) * 10000) / 100}%`);
+    style.push(`--edge-y:${Math.round(y * 10000) / 100}%`);
+  } else {
+    if (festeBreite && folie.bildBreite && folie.bildHoehe) {
+      const ratio = folie.bildHoehe / folie.bildBreite;
+      style.push(`width:${Math.round(festeBreite)}px`);
+      style.push(`height:${Math.round(festeBreite * ratio)}px`);
+    } else if (box) {
+      style.push(`width:${Math.round(box.breite * scale)}px`);
+      style.push(`height:${Math.round(box.hoehe * scale)}px`);
+    }
+    if (x != null) {
+      style.push(`left:${Math.round(x * 10000) / 100}%`);
+      style.push("right:auto");
+      style.push("transform:translateX(-50%)");
+    }
   }
   const stil = style.length ? ` style="${style.join(";")}"` : "";
   return `<div class="${klasse}"${stil}><img src="${esc(folie.bild)}" alt=""></div>${zeichen ? `<div class="frei-zeichen">${zeichen}</div>` : ""}`;
