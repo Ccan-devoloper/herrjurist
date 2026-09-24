@@ -55,11 +55,14 @@ jobs:
       - name: Hochgeladene Cover providerfrei anwenden
         run: node bin/vorproduktion-coverbilder-anwenden.mjs
 
-      - name: Coverquellen zur visuellen Kontrolle sichern
+      - name: Coverquellen und Render zur visuellen Kontrolle sichern
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: vorproduktion-coverquellen-${{ github.run_id }}
-          path: .instagram-assets/vorproduktion/coverbilder/*.png
+          name: vorproduktion-coverkontrolle-${{ github.run_id }}
+          path: |
+            .instagram-assets/vorproduktion/coverbilder/*.png
+            .instagram-assets/vorproduktion/*/fertig/b*/**/*-01.jpg
+            .instagram-assets/vorproduktion/*/fertig/b*/**/*-cover.jpg
           if-no-files-found: error
           retention-days: 2

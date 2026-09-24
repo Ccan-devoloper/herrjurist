@@ -1881,14 +1881,16 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
      zusätzlichen Hintergrund um den ganzen h1 legen würde. */
   assert.ok(/\.story\.cover h1\{[^}]*background:none/.test(cover), "Cover: der Kasten um das ganze h1 ist nicht zurückgenommen");
 
-  /* Gleiche optische Wirkung: Reel-Cover 1920 hoch, Feed-Cover 1440 hoch.
-     Die Stack-Schriftgrößen werden deshalb mit ca. 4/3 skaliert. */
+  /* Instagram zeigt das 1080×1920-Reel-Cover im Feed mittig als
+     1080×1350-Ausschnitt. Innerhalb dieses Ausschnitts muss die Titeltypografie
+     deshalb dieselbe Pixelgröße wie die Karussell-Titelfolie haben; eine
+     4/3-Hochskalierung würde die erste Zeile aus der Safe Area schieben. */
   const buntGroesse = Number(folie.match(/\.art-titel h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
   const coverGroesse = Number(cover.match(/\.story\.cover h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
   assert.ok(buntGroesse, "Titelfolie: Stack-Schriftgröße nicht gefunden");
   assert.ok(coverGroesse, "Cover: Stack-Schriftgröße nicht gefunden");
-  assert.ok(coverGroesse > buntGroesse,
-    `Reel-Cover muss visuell größer bleiben als die Feed-Titelfolie: ${coverGroesse}px zu ${buntGroesse}px`);
+  assert.equal(coverGroesse, buntGroesse,
+    `Reel-Cover und Feed-Titelfolie müssen im 4:5-Crop gleich groß sein: ${coverGroesse}px zu ${buntGroesse}px`);
 
   const buntKlein = Number(folie.match(/\.art-titel h1\.titel-stack\.klein\{font-size:(\d+)px/)?.[1]);
   const buntWinzig = Number(folie.match(/\.art-titel h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
@@ -1896,8 +1898,15 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
   const coverWinzig = Number(cover.match(/\.story\.cover h1\.titel-stack\.winzig\{font-size:(\d+)px/)?.[1]);
   for (const [name, feed, reel] of [["klein", buntKlein, coverKlein], ["winzig", buntWinzig, coverWinzig]]) {
     assert.ok(feed && reel, `Stufe ${name} nicht gefunden`);
-    assert.ok(reel > feed, `Reel-Cover-Stufe ${name} muss größer als Feed bleiben: ${reel}px zu ${feed}px`);
+    assert.equal(reel, feed, `Reel-Cover-Stufe ${name} muss im 4:5-Crop der Feed-Stufe entsprechen: ${reel}px zu ${feed}px`);
   }
+
+  assert.ok(/\.story\.cover\{padding-top:285px;padding-bottom:285px\}/.test(cover),
+    "Reel-Cover: mittlere 4:5-Safe-Area fehlt");
+  assert.ok(/\.story\.cover \.kopf\{top:285px\}/.test(cover),
+    "Reel-Cover: Fachkopf liegt nicht am oberen Rand der 4:5-Safe-Area");
+  assert.ok(/\.story\.cover \.frei\.charakter\{bottom:285px;right:36px\}/.test(cover),
+    "Reel-Cover: Charakterbühne endet nicht am unteren Rand der 4:5-Safe-Area");
 });
 
 test("Instagram: „Datei nicht ladbar“ wird nachgefasst, nicht aufgegeben", async () => {
