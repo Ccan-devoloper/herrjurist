@@ -44,3 +44,7 @@ reason=fachband-und-motiv-an-aussenkante-titel-hoch-gebaeude-erhalten
 run=rerender-all-covers-without-handwriting
 slots=2026-09-24/b1,2026-09-24/b2,2026-09-24/b3,2026-09-25/b2,2026-09-25/b3,2026-09-26/b2,2026-09-26/b3,2026-09-27/b1,2026-09-27/b2,2026-09-27/b3,2026-09-28/b1,2026-09-28/b2,2026-09-28/b3
 reason=alle-cover-ohne-handschrift-plus-28-09-b3-layout
+2026-09-24T23:36:00+02:00
+run=rerender-28-09-b3-final
+slots=2026-09-28/b3
+reason=portrait-motiv-vollstaendig-kante-zu-kante-ohne-handschrift
