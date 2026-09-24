@@ -52,3 +52,7 @@ reason=portrait-motiv-vollstaendig-kante-zu-kante-ohne-handschrift
 run=rerender-all-existing-covers-final
 slots=2026-09-24/b1,2026-09-24/b2,2026-09-24/b3,2026-09-25/b2,2026-09-25/b3,2026-09-26/b2,2026-09-26/b3,2026-09-27/b1,2026-09-27/b2,2026-09-27/b3,2026-09-28/b1,2026-09-28/b2,2026-09-28/b3
 reason=handschrift-global-entfernt-und-28-09-b3-final-ohne-beschnitt
+2026-09-24T21:44:00Z
+run=rerender-26-09-b1-ohne-handschrift
+slots=2026-09-26/b1
+reason=persistentes-rohbild-ohne-handschrift-neu-rendern
