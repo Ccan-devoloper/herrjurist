@@ -1881,10 +1881,10 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
      zusätzlichen Hintergrund um den ganzen h1 legen würde. */
   assert.ok(/\.story\.cover h1\{[^}]*background:none/.test(cover), "Cover: der Kasten um das ganze h1 ist nicht zurückgenommen");
 
-  /* Instagram zeigt das 1080×1920-Reel-Cover im Feed mittig als
-     1080×1350-Ausschnitt. Innerhalb dieses Ausschnitts muss die Titeltypografie
-     deshalb dieselbe Pixelgröße wie die Karussell-Titelfolie haben; eine
-     4/3-Hochskalierung würde die erste Zeile aus der Safe Area schieben. */
+  /* Die Titeltypografie bleibt im Feed in derselben Pixelgroesse wie die
+     Karussell-Titelfolie. Anders als die fruehere Safe-Area-Implementierung
+     wird aber nicht mehr die komplette 9:16-Komposition um 285 px eingerueckt:
+     Fachband, Reelmarke und Motiv duerfen bis an die echten Aussenkanten. */
   const buntGroesse = Number(folie.match(/\.art-titel h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
   const coverGroesse = Number(cover.match(/\.story\.cover h1\.titel-stack\{[^}]*font-size:(\d+)px/)?.[1]);
   assert.ok(buntGroesse, "Titelfolie: Stack-Schriftgröße nicht gefunden");
@@ -1901,12 +1901,14 @@ test("Reel-Cover und Karussell-Titelfolie tragen dieselbe Überschriften-Optik",
     assert.equal(reel, feed, `Reel-Cover-Stufe ${name} muss im 4:5-Crop der Feed-Stufe entsprechen: ${reel}px zu ${feed}px`);
   }
 
-  assert.ok(/\.story\.cover\{padding-top:285px;padding-bottom:285px\}/.test(cover),
-    "Reel-Cover: mittlere 4:5-Safe-Area fehlt");
-  assert.ok(/\.story\.cover \.kopf\{top:285px\}/.test(cover),
-    "Reel-Cover: Fachkopf liegt nicht am oberen Rand der 4:5-Safe-Area");
-  assert.ok(/\.story\.cover \.frei\.charakter\{bottom:285px;right:36px\}/.test(cover),
-    "Reel-Cover: Charakterbühne endet nicht am unteren Rand der 4:5-Safe-Area");
+  assert.ok(/\.story\.cover\{padding-top:150px;padding-bottom:130px\}/.test(cover),
+    "Reel-Cover: normale 9:16-Innenabstaende fehlen");
+  assert.ok(/\.story\.cover \.kopf\{top:0\}/.test(cover),
+    "Reel-Cover: Fachkopf sitzt nicht an der oberen Bildkante");
+  assert.ok(/\.story\.cover \.reelmarke\{[^}]*top:40px/.test(cover),
+    "Reel-Cover: Reelmarke sitzt nicht oben im 9:16-Cover");
+  assert.ok(/\.story\.cover \.frei\.charakter\{bottom:0;right:36px\}/.test(cover),
+    "Reel-Cover: Charakterbühne sitzt nicht an der unteren Bildkante");
 });
 
 test("Instagram: „Datei nicht ladbar“ wird nachgefasst, nicht aufgegeben", async () => {
