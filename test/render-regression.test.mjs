@@ -128,7 +128,8 @@ test("Bildloses Karussell-Cover nutzt Cover-v2 ohne Ersatzmotiv", () => {
     coverBildAuslassen: true,
   }, ctx, 1, 7);
   assert.match(html, /art-titel cover-ohne-bild/);
-  assert.match(html, /cover-hinweis/);
+  assert.doesNotMatch(html, /cover-hinweis/);
+  assert.doesNotMatch(html, /Wer will was von wem woraus\?/);
   assert.doesNotMatch(html, /class="karte2"/);
   assert.doesNotMatch(html, /class="illu"/);
 });
