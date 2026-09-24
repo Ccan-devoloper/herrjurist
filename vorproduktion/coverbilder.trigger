@@ -28,3 +28,7 @@ reason=vorige-aenderung-zu-dezent
 run=repair-character-cover-edge-to-edge
 slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
 reason=freisteller-kante-zu-kante-mit-bleed
+2026-09-24T20:08:00+02:00
+run=repair-character-cover-edge-stage
+slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
+reason=edge-to-edge-als-feste-buehne-statt-ueberlagernder-sticker
