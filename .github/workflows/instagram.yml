@@ -1,12 +1,12 @@
 name: Instagram-Bot · Herr Jurist
 
-# Läuft stündlich (UTC 05:30–20:30 = 07:30–22:30 Sommerzeit bzw. 06:30–21:30 Winterzeit)
+# Läuft stündlich ab UTC 05:00. Der Runner startet vor der Publikationsminute; bei Vorproduktion wartet der Tageslauf selbst bis zur Planzeit (Europe/Berlin).
 # und veröffentlicht alle Beiträge/Stories, deren Uhrzeit im Tagesplan erreicht ist.
 # Hinweis: GitHub registriert den Zeitplan erst, wenn diese Datei auf dem
 # Standardzweig geändert wurde; ein Lauf ist idempotent (nur fällige Einträge).
 on:
   schedule:
-    - cron: "30 5-20 * * *"
+    - cron: "0 5-20 * * *"
   workflow_dispatch:
     inputs:
       modus:
@@ -230,6 +230,9 @@ jobs:
           IG_EXAMEN_ENDE: ${{ vars.IG_EXAMEN_ENDE }}
           # Manuell: nur „live“ veröffentlicht. Zeitplan: live, außer die Variable IG_PAUSE ist auf true.
           IG_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.modus != 'live') || vars.IG_PAUSE == 'true' }}
+          # Bei Zeitplan/Weckkette bedeutet die Planzeit die tatsächliche
+          # Publikationsminute. Manuelle Live-Läufe bleiben Sofortläufe.
+          IG_EXAKT_WARTEN: ${{ github.event_name == 'schedule' || github.event.inputs.wecker == 'true' }}
           # Nur fuer die Startklar-Pruefung: Ein manueller Lauf ist immer
           # trocken, an IG_DRY_RUN laesst sich also nicht ablesen, ob der
           # Zeitplan veroeffentlichen wuerde. Die Variable selbst sagt es.
@@ -290,7 +293,7 @@ jobs:
 
   # Weckkette: GitHub löst „schedule“ nicht zuverlässig aus (Läufe fehlen oder
   # kommen Stunden später). Deshalb wartet nach jedem planmäßigen Lauf ein
-  # kleiner Job bis kurz nach dem nächsten Slot (Minute 30, 05–20 UTC) und
+  # kleiner Job bis kurz nach dem nächsten Vorbereitungsstart (volle Stunde, 05–20 UTC) und
   # startet den Lauf selbst, falls GitHub ihn nicht gestartet hat. Kommt der
   # Zeitplan doch, übernimmt dessen Lauf die Kette – es lebt immer genau eine.
   weckruf:
@@ -319,14 +322,14 @@ jobs:
           }
           if [ "$(juengere_kette)" != "0" ]; then echo "Jüngere Kette aktiv – dieser Weckruf endet."; exit 0; fi
           jetzt=$(date -u +%s)
-          # Nächster Slot: heute Minute 30 der nächsten vollen Stunde zwischen 05 und 20 UTC, sonst morgen 05:30.
+          # Nächster Vorbereitungsstart: nächste volle Stunde zwischen 05 und 20 UTC, sonst morgen 05:00.
           h=$((10#$(date -u +%H))); m=$((10#$(date -u +%M)))
           tag=$(date -u +%F)
-          if [ $m -lt 30 ]; then zielh=$h; else zielh=$((h+1)); fi
+          zielh=$((h+1))
           if [ $zielh -lt 5 ]; then zielh=5; fi
           if [ $zielh -gt 20 ]; then zielh=5; tag=$(date -u -d "$tag +1 day" +%F); fi
-          slot=$(date -u -d "$tag $(printf %02d $zielh):30:00" +%s)
-          warten=$((slot + 420 - jetzt))
+          slot=$(date -u -d "$tag $(printf %02d $zielh):00:00" +%s)
+          warten=$((slot + 120 - jetzt))
           echo "Nächster Slot: $(date -u -d @$slot +%FT%TZ) – warte $warten s"
           if [ $warten -gt 19800 ]; then
             # Länger als 5,5 h (Nachtpause): zwischendurch einmal nur die Kette weiterreichen.
