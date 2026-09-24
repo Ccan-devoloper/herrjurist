@@ -351,6 +351,20 @@ h1 em{color:${p.akzent2}}
    Der Renderer zeichnet ausschließlich den Text. Cover-v2 ergänzt bewusst
    keinen Pfeil mehr. */
 .cover-hinweis{position:absolute;left:0;top:0;z-index:7;max-width:360px;width:max-content;font-family:"Caveat";font-size:52px;line-height:1.01;font-weight:700;color:${p.dunkel};text-align:center;text-wrap:balance;pointer-events:none;transform-origin:center center}
+/* Ohne Charakter-/Bildlayer muss der redaktionelle Aha-Hinweis selbst als
+   zweite visuelle Ebene tragen. Deshalb wird er groesser, breiter und auf
+   einer leichten Papierflaeche gesetzt statt als kleine Randnotiz zu wirken. */
+.art-titel.cover-ohne-bild .cover-hinweis,
+.story.cover:not(:has(.frei)):not(:has(.foto)) .cover-hinweis{
+  max-width:560px;
+  font-size:72px;
+  line-height:1.02;
+  text-align:left;
+  background:rgba(255,240,214,.78);
+  padding:18px 28px 20px;
+  border-radius:28px;
+  box-shadow:0 16px 34px rgba(0,0,0,.10);
+}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
 /* Steht ein Motiv auf der Kachel, rueckt der Pfeil samt "So geht's!" nach
    links: der Kasten des Motivs reicht rechts bis in diese Hoehe hinauf. */
@@ -738,7 +752,7 @@ function coverHinweisPlan(f = {}) {
      Ohne Bild-QA existiert naturgemaess kein Motiv-Anker; deshalb liegt die
      Notiz in einer festen, freien unteren Zone. */
   if (f.coverBildAuslassen === true && (!p || typeof p !== "object" || Array.isArray(p))) {
-    return { text, noteX: 0.12, noteY: 0.72, targetX: 0.5, targetY: 0.76, rotationDeg: -4, bend: 0 };
+    return { text, noteX: 0.30, noteY: 0.64, targetX: 0.5, targetY: 0.72, rotationDeg: -3, bend: 0 };
   }
   if (!p || typeof p !== "object" || Array.isArray(p)) return null;
   const zahl = (x, fallback = 0) => Number.isFinite(Number(x)) ? Number(x) : fallback;
