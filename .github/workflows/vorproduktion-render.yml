@@ -66,8 +66,8 @@ jobs:
             python3 -m piper.download_voices --data-dir ~/.cache/piper-voices de_DE-thorsten-high
           fi
 
-      - name: Zwei Tage vollständig als Review-Vorschau rendern
-        run: node bin/vorproduktion-rendern.mjs 2026-09-24 2026-09-25
+      - name: Nur Covermotiv 2026-09-26 b1 erzeugen und patchen
+        run: node bin/vorproduktion-rendern.mjs 2026-09-26 --slots=b1 --stories=none --patch
 
       - name: Rohbilder als Notfallkopie sichern
         if: always()
