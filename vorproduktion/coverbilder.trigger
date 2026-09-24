@@ -16,3 +16,7 @@ slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
 run=repair-character-cover-layout
 slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
 reason=groessere-charakterbuehne-und-zentrierung
+2026-09-24T16:18:00Z
+run=repair-character-cover-layout-retry
+slots=2026-09-25/b2,2026-09-25/b3,2026-09-26/b3,2026-09-28/b3
+reason=reel-cover-profile-durchreichen
