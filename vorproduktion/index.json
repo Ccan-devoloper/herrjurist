@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "stand": "2026-09-23",
-  "status": "review",
+  "stand": "2026-09-24",
+  "status": "live-vorrang",
   "zweck": "Kostenfreie redaktionelle Vorproduktion. Im Live-Lauf sollen keine Autor-, Faktencheck- oder sonstigen Text-KI-Kosten entstehen.",
   "kostenPolicy": {
     "textUndFaktencheckUsd": 0,
     "bildgenerierungInNeuenReviewTagen": false,
     "providerKostenNeueReviewTageUsd": 0
   },
-  "liveVerknuepft": false,
+  "liveVerknuepft": true,
   "tage": [
     {
       "datum": "2026-09-24",
@@ -16,8 +16,10 @@
       "feed": 3,
       "storiesEigenstaendig": 6,
       "teaserAbgeleitet": 3,
-      "freigabeBetreiber": false,
-      "bilderStatus": "ausstehend"
+      "freigabeBetreiber": true,
+      "bilderStatus": "ausstehend",
+      "liveVerknuepft": true,
+      "ersterBeitrag": "07:30"
     },
     {
       "datum": "2026-09-25",
@@ -25,8 +27,9 @@
       "feed": 3,
       "storiesEigenstaendig": 6,
       "teaserAbgeleitet": 3,
-      "freigabeBetreiber": false,
-      "bilderStatus": "ausstehend"
+      "freigabeBetreiber": true,
+      "bilderStatus": "ausstehend",
+      "liveVerknuepft": true
     },
     {
       "datum": "2026-09-26",
@@ -34,8 +37,9 @@
       "feed": 3,
       "storiesEigenstaendig": 6,
       "teaserAbgeleitet": 3,
-      "freigabeBetreiber": false,
-      "bilderStatus": "bewusst-ausgelassen"
+      "freigabeBetreiber": true,
+      "bilderStatus": "bewusst-ausgelassen",
+      "liveVerknuepft": true
     },
     {
       "datum": "2026-09-27",
@@ -43,8 +47,9 @@
       "feed": 3,
       "storiesEigenstaendig": 6,
       "teaserAbgeleitet": 3,
-      "freigabeBetreiber": false,
-      "bilderStatus": "bewusst-ausgelassen"
+      "freigabeBetreiber": true,
+      "bilderStatus": "bewusst-ausgelassen",
+      "liveVerknuepft": true
     },
     {
       "datum": "2026-09-28",
@@ -52,8 +57,16 @@
       "feed": 3,
       "storiesEigenstaendig": 6,
       "teaserAbgeleitet": 3,
-      "freigabeBetreiber": false,
-      "bilderStatus": "bewusst-ausgelassen"
+      "freigabeBetreiber": true,
+      "bilderStatus": "bewusst-ausgelassen",
+      "liveVerknuepft": true
     }
-  ]
+  ],
+  "liveRegel": {
+    "aktivSeit": "2026-09-24",
+    "modus": "Vorproduktion des jeweiligen Datums hat im Veröffentlichungslauf Vorrang.",
+    "fallback": "Nur wenn für ein Datum keine Vorproduktion existiert, gilt der bisherige autonome Ablauf.",
+    "providerKostenZielUsd": 0,
+    "lernschleife": "bleibt aktiv"
+  }
 }
