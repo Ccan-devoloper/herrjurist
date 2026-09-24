@@ -1,5 +1,5 @@
 {
-  "stand": "2026-09-24T10:17:00Z",
+  "stand": "2026-09-24T10:24:00Z",
   "modus": "lokal-ohne-provider-und-ohne-coverbilder",
   "tage": [
     "2026-09-29",
@@ -13,6 +13,6 @@
     "2026-10-07",
     "2026-10-08"
   ],
-  "grund": "Zehn weitere Review-Tage providerfrei: Themenpool/Ledger/Strategie, Cover-v2 ohne Charakterlayer, Piper-Reels, 9 Stories",
-  "versuch": 2
+  "grund": "Zehn weitere Review-Tage providerfrei nach Reel-Cover-Autofit-Fix erneut rendern",
+  "versuch": 3
 }
