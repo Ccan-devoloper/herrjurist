@@ -32,7 +32,7 @@ import { beitragRendern, storyRendern, storyRendernInteraktiv, browserBeenden } 
 import { interaktivGeplant, interaktivPosten, umfrageBauen, sperreAktiv } from "./interaktiv.mjs";
 import { Instagram } from "./instagram.mjs";
 import { Hosting } from "./hosting.mjs";
-import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets as vorproduktionFeedAssets, storyAsset as vorproduktionStoryAsset } from "./vorproduktion-live.mjs";
+import { vorproduktionLaden, planAusVorproduktion, inhalteUebernehmen, feedAssets as vorproduktionFeedAssets, storyAsset as vorproduktionStoryAsset, feedWartezeitMs } from "./vorproduktion-live.mjs";
 import { kommentareBeantworten } from "./interaktion.mjs";
 import { nachrichtenBeantworten } from "./postfach.mjs";
 import { lernschleife, storyInsightsAktualisieren, medienSnapshotsAktualisieren, kontoSnapshotAktualisieren } from "./insights.mjs";
@@ -632,11 +632,6 @@ async function main() {
   });
   if (wc.dailyPlanNotAdmissibleAtCap) log(`  ! dailyPlanNotAdmissibleAtCap: ${wc.hinweis}`);
 
-  const jetzt = lokaleMinuten();
-  const faellig = (e) => e.status !== "veroeffentlicht" && (alles || minutenVon(e.zeit) <= jetzt);
-  const beitraegeFaellig = plan.beitraege.filter(faellig);
-  const storiesFaellig = plan.stories.filter(faellig);
-
   /* Instagram-Verbindung und Kontingent. */
   const ig = new Instagram({ trockenlauf: trocken, tresorDatei: path.join(hosting.stateDir, "token.enc") });
   let kontingent = { genutzt: 0, maximum: 100 };
@@ -732,6 +727,28 @@ async function main() {
       } catch (e) { console.error(`  ✗ Wochenbericht: ${e.message}`); }
     }
   }
+  /* Bei vorproduzierten Tagen ist die Planzeit die echte Publikationszeit.
+     Der Runner startet frueher, erledigt Token-/Insight-/Lernschleifenarbeit
+     und wartet erst unmittelbar vor dem Feed-Posting bis zur geplanten Minute.
+     Ein bereits faelliger Slot und ein manueller Sofortlauf warten nie. */
+  if (vorproduktionAktiv && !trocken && !alles && process.env.IG_EXAKT_WARTEN === "true") {
+    const d = new Date();
+    const jetztSekunden = lokaleMinuten(d) * 60 + d.getSeconds();
+    const wartenMs = feedWartezeitMs(plan, jetztSekunden);
+    if (wartenMs > 0) {
+      const naechster = plan.beitraege
+        .filter((e) => e.status !== "veroeffentlicht" && minutenVon(e.zeit) * 60 > jetztSekunden)
+        .sort((a, b) => minutenVon(a.zeit) - minutenVon(b.zeit))[0];
+      log(`Exakte Publikation: Vorarbeiten fertig; warte bis ${naechster?.zeit || "Feed-Slot"} Europe/Berlin.`);
+      await new Promise((resolve) => setTimeout(resolve, wartenMs));
+    }
+  }
+
+  const jetzt = lokaleMinuten();
+  const faellig = (e) => e.status !== "veroeffentlicht" && (alles || minutenVon(e.zeit) <= jetzt);
+  const beitraegeFaellig = plan.beitraege.filter(faellig);
+  const storiesFaellig = plan.stories.filter(faellig);
+
   /* Auffüllen läuft erst, wenn die regulären Beiträge des Tages durch sind –
      sonst frisst es morgens das Tagesbudget, und Reel und Stories fallen aus. */
   const tagesplanFertig = plan.beitraege.every((b) => b.status === "veroeffentlicht" || b.fehler);
@@ -1049,7 +1066,7 @@ async function main() {
       if (eintrag.format === "reel") {
         const reel = await textBesorgen(eintrag);
         if (!rotationsfolgeErlaubt(reel, eintrag)) continue;
-        const varianteReel = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
+        const varianteReel = vorproduktionAktiv ? null : (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
         let r, videoUrl, coverUrl;
         if (vorproduktionAktiv) {
           const asset = vorproduktionFeedAssets(vorproduktion, eintrag);
@@ -1099,7 +1116,7 @@ async function main() {
       }
       const beitrag = await textBesorgen(eintrag);
       if (!rotationsfolgeErlaubt(beitrag, eintrag)) continue;
-      const variante = (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
+      const variante = vorproduktionAktiv ? null : (CONFIG.marke.farbeJeKlausur ? 0 : await varianteErmitteln({ ig, ledger, trocken, log }));
       let bilder, urls;
       if (vorproduktionAktiv) {
         const asset = vorproduktionFeedAssets(vorproduktion, eintrag);
