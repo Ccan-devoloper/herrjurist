@@ -549,7 +549,21 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   const zeichen = istCharakter ? "" : farbIcon(icon, klasse.startsWith("frei") ? 240 : 180);
   const charakterZiel = istCharakter ? BUEHNE_CHARAKTER : ziel;
   const box = folie.bildFrei !== false ? motivBuehne(folie.bildBreite, folie.bildHoehe, charakterZiel) : null;
-  const stil = box ? ` style="width:${box.breite}px;height:${box.hoehe}px"` : "";
+  const scaleRaw = Number(folie.coverBildScale);
+  const scale = istCharakter && Number.isFinite(scaleRaw) ? Math.max(0.65, Math.min(1.05, scaleRaw)) : 1;
+  const xRaw = Number(folie.coverBildX);
+  const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.15, Math.min(0.85, xRaw)) : null;
+  const style = [];
+  if (box) {
+    style.push(`width:${Math.round(box.breite * scale)}px`);
+    style.push(`height:${Math.round(box.hoehe * scale)}px`);
+  }
+  if (x != null) {
+    style.push(`left:${Math.round(x * 10000) / 100}%`);
+    style.push("right:auto");
+    style.push("transform:translateX(-50%)");
+  }
+  const stil = style.length ? ` style="${style.join(";")}"` : "";
   return `<div class="${klasse}"${stil}><img src="${esc(folie.bild)}" alt=""></div>${zeichen ? `<div class="frei-zeichen">${zeichen}</div>` : ""}`;
 }
 
