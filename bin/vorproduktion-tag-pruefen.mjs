@@ -59,6 +59,12 @@ export function tagPruefen(tag, datei = tag?.datum || "?") {
         if (fo.art === "text" && leer(fo.text) && !(fo.punkte?.length)) w(`Folie ${i + 1}: text/punkte fehlen`);
         if (fo.art === "schritte" && !(fo.schritte?.length >= 2 && fo.schritte.every((x) => !leer(x.titel) && !leer(x.text)))) w(`Folie ${i + 1}: schritte unvollständig`);
         if (fo.art === "vergleich" && !(fo.links?.punkte?.length && fo.rechts?.punkte?.length && fo.links.titel && fo.rechts.titel)) w(`Folie ${i + 1}: vergleich unvollständig`);
+        if (fo.art === "vergleich") {
+          /* Schmale Spalten: der Renderer bricht überlange Wörter mitten im Wort um. */
+          const lang = [fo.links?.titel, fo.rechts?.titel, ...(fo.links?.punkte || []), ...(fo.rechts?.punkte || [])]
+            .join(" ").split(/[\s/]+/).filter((x) => x.replace(/[^\p{L}]/gu, "").length > 22 && !x.includes("-"));
+          if (lang.length) w(`Folie ${i + 1}: überlange Wörter in Vergleichsspalte (${lang.join(", ")}) – trennen („Interessen-abwägung“) oder umformulieren`);
+        }
         if (fo.art === "merke" && leer(fo.text)) w(`Folie ${i + 1}: merke ohne text`);
         if (fo.art === "cta") {
           if (!(fo.punkte?.length >= 2 && fo.punkte.length <= 4)) w("cta: 2–4 punkte");
