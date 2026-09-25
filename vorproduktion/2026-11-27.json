@@ -1,0 +1,845 @@
+{
+  "datum": "2026-11-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "schuldbt-462",
+        "themaTitel": "Gefahrübergang als Schaltstelle der Mängelrechte",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "revision-887",
+        "themaTitel": "Wie entscheidet das Revisionsgericht?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-636",
+        "themaTitel": "Einstweilige Anordnung des BVerfG",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "staat-601"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "staat-601"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:57",
+        "art": "norm",
+        "themaId": "verwalt-648"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "merksatz",
+        "themaId": "sachen-504"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "begriff",
+        "themaId": "zpo-558"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "fehler",
+        "themaId": "revision-875"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "schuldbt-462",
+      "poolTitel": "Gefahrübergang als Schaltstelle der Mängelrechte",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 446, 447 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "revision-887",
+      "poolTitel": "Wie entscheidet das Revisionsgericht?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 349 StPO",
+        "§ 353 StPO",
+        "§ 354 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-636",
+      "poolTitel": "Einstweilige Anordnung des BVerfG",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 32 BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-21"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-601",
+      "poolTitel": "Bundesregierung und Richtlinienkompetenz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 65 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-601",
+      "poolTitel": "Bundesregierung und Richtlinienkompetenz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 65 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-648",
+      "poolTitel": "Ermessensfehlerlehre",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG; § 114 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "sachen-504",
+      "poolTitel": "Recht zum Besitz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 986 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "zpo-558",
+      "poolTitel": "Beweislast und Beweismaß",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 286, 287 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "revision-875",
+      "poolTitel": "Welche Fristen und Formen gelten für Einlegung und Begründung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 32d StPO",
+        "§ 341 StPO",
+        "§ 344 StPO",
+        "§ 345 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24",
+        "2026-09-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-462",
+      "slug": "2026-11-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Paket unterwegs zerstört: Die Norm, die viele übersehen",
+          "titelZeilen": [
+            "Paket unterwegs",
+            "zerstört: Die Norm,",
+            "die viele übersehen"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "§ 475 Abs. 2 BGB statt § 447",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Online-Händler V verkauft der Verbraucherin K einen restaurierten Sessel, ein Einzelstück. Er verschickt ihn mit einem Paketdienst, den er selbst ausgesucht hat. Unterwegs wird der Sessel zufällig zerstört. Viele greifen jetzt zu § 447 BGB – und übersehen § 475 Abs. 2 BGB."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Leistungspflicht erloschen",
+              "text": "Der Sessel ist ein Einzelstück: V wird nach § 275 Abs. 1 BGB frei."
+            },
+            {
+              "titel": "Kaufpreis entfällt grundsätzlich",
+              "text": "§ 326 Abs. 1 S. 1 BGB – es sei denn, die Preisgefahr ist schon auf K übergegangen."
+            },
+            {
+              "titel": "Übergabe nach § 446 S. 1 BGB?",
+              "text": "Nein – den Sessel hat K nie erhalten."
+            },
+            {
+              "titel": "Versendungskauf nach § 447 BGB?",
+              "text": "Beim Verbrauchsgüterkauf nur, wenn K den Transporteur beauftragt und V ihn nicht zuvor benannt hat (§ 475 Abs. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Warum der Gefahrübergang doppelt zählt",
+          "punkte": [
+            "Preisgefahr: Wer trägt den zufälligen Untergang? (§§ 446, 447 BGB)",
+            "Mangel: Maßgeblich ist der Zustand bei Gefahrübergang (§ 434 Abs. 1 BGB).",
+            "Verbrauchsgüterkauf: Die Vermutung des § 477 BGB rechnet ab Gefahrübergang."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "V wird frei (§ 275 Abs. 1 BGB) und verliert den Kaufpreisanspruch (§ 326 Abs. 1 S. 1 BGB). Die Gefahr ist weder nach § 446 BGB übergegangen noch nach § 447 BGB: V hat den Paketdienst selbst ausgewählt, § 475 Abs. 2 BGB greift. K muss nicht zahlen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verbrauchsgüterkauf mit Versand: Die Preisgefahr bleibt in der Regel beim Unternehmer, bis die Ware übergeben ist (§ 475 Abs. 2 BGB)."
+        },
+        {
+          "art": "cta",
+          "titel": "Preisgefahr in drei Zügen",
+          "punkte": [
+            "Unmöglichkeit und § 326 BGB",
+            "Übergabe nach § 446 BGB?",
+            "Versendung: § 447 mit § 475 Abs. 2 BGB"
+          ],
+          "icons": [
+            "paket",
+            "haus",
+            "lkw"
+          ]
+        }
+      ],
+      "caption": "Paket unterwegs zerstört – muss die Käuferin trotzdem zahlen? Viele prüfen hier § 447 BGB und bejahen den Gefahrübergang beim Versand. Beim Verbrauchsgüterkauf schränkt § 475 Abs. 2 BGB das aber stark ein: Die Gefahr geht nur über, wenn der Käufer den Transporteur selbst beauftragt hat und der Unternehmer ihn nicht vorher benannt hat. Sonst bleibt es bei § 446 BGB – Gefahrübergang erst mit Übergabe. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#447bgb",
+        "#verbrauchsgüterkauf",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versendungskauf: § 447 und § 475 Abs. 2 BGB",
+      "coverText": "§ 475 Abs. 2 BGB statt § 447",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Geht die Ware beim Versand an eine Verbraucherin kaputt, trägt in der Regel der Händler den Schaden.",
+        "handlung": "{A} stares in horror at a delivery van with a crushed armchair box in the back, while {B} stands calmly at her front door with her wallet still firmly closed.",
+        "hinweisRegie": "Place the note in the free space between the van and the front door, slightly tilted toward the closed wallet, so it links the lost parcel to the unpaid price without covering faces.",
+        "alternative": "{B} watches a parcel fall from a conveyor belt that still belongs to {A}'s shop, while {A} scrambles to catch it before it reaches her doorstep."
+      },
+      "bildSzene": "crushed armchair box, closed wallet",
+      "bildSzeneAlt": "parcel falls from seller's conveyor belt",
+      "quellen": [
+        "§ 275 Abs. 1 BGB",
+        "§ 326 Abs. 1 BGB",
+        "§ 446 BGB",
+        "§ 447 BGB",
+        "§ 474 BGB",
+        "§ 475 Abs. 2 BGB",
+        "§ 434 BGB",
+        "§ 477 BGB",
+        "Themenpool: schuldbt-462"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-887",
+      "slug": "2026-11-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vier Wege, wie eine Revision endet",
+          "titelZeilen": [
+            "Vier Wege, wie",
+            "eine Revision endet"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Aufheben nur, soweit der Fehler reicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Das LG verurteilt A wegen schweren Raubes. A rügt mit der Sachrüge; der Schuldspruch hält, die Strafzumessung stützt sich aber auf eine rechtsfehlerhafte Erwägung. Wie entscheidet das Revisionsgericht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die vier Ausgänge",
+          "schritte": [
+            {
+              "titel": "Unzulässig",
+              "text": "Verwerfung durch Beschluss (§ 349 Abs. 1 StPO), etwa bei Frist- oder Formmangel."
+            },
+            {
+              "titel": "Offensichtlich unbegründet",
+              "text": "Verwerfung durch einstimmigen Beschluss auf begründeten Antrag der StA (§ 349 Abs. 2 StPO)."
+            },
+            {
+              "titel": "Aufheben und selbst entscheiden",
+              "text": "§ 354 Abs. 1 StPO, etwa Freispruch oder Einstellung; bei Fehlern nur in der Rechtsfolge ggf. § 354 Abs. 1a StPO."
+            },
+            {
+              "titel": "Aufheben und zurückverweisen",
+              "text": "An eine andere Abteilung oder Kammer des Ausgangsgerichts (§ 354 Abs. 2 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wie weit wird aufgehoben?",
+          "text": "Nur so weit, wie der Fehler reicht (§ 353 Abs. 1 StPO), mit den betroffenen Feststellungen (Abs. 2). Fehlerfreie Teile wie der Schuldspruch bleiben bestehen. Zugunsten des Angeklagten kann auch durch einstimmigen Beschluss aufgehoben werden (§ 349 Abs. 4 StPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Beim Erfolg reflexhaft das ganze Urteil aufheben und zurückverweisen. Erst fragen: Reicht der Fehler nur in den Strafausspruch? Kann das Gericht selbst entscheiden – oder nach § 354 Abs. 1a StPO von der Aufhebung absehen, weil die Strafe angemessen ist?"
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Die Revision hat nur im Strafausspruch Erfolg. Das Revisionsgericht hebt insoweit mit den zugehörigen Feststellungen auf und verweist an eine andere Strafkammer zurück (§§ 353, 354 Abs. 2 StPO) – oder sieht nach § 354 Abs. 1a StPO ab. Im Übrigen wird die Revision verworfen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verwerfen, selbst entscheiden oder zurückverweisen – und aufheben nur so weit, wie der Fehler reicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Revisionsentscheidung in drei Zügen",
+          "punkte": [
+            "Zulässigkeit: § 349 Abs. 1 StPO",
+            "Umfang der Aufhebung: § 353 StPO",
+            "Selbst entscheiden oder zurückverweisen"
+          ],
+          "icons": [
+            "klemmbrett",
+            "lupe",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Vier Wege, wie eine Revision endet: Verwerfung als unzulässig (§ 349 Abs. 1 StPO), Verwerfung als offensichtlich unbegründet (§ 349 Abs. 2 StPO), Aufhebung mit eigener Sachentscheidung (§ 354 Abs. 1, 1a StPO) oder Aufhebung und Zurückverweisung (§ 354 Abs. 2 StPO). Aufgehoben wird nur, soweit der Fehler reicht (§ 353 StPO) – ein fehlerfreier Schuldspruch bleibt. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#354stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision: Wie entscheidet das Gericht?",
+      "coverText": "Aufheben nur, soweit der Fehler reicht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Das Revisionsgericht hat vier Ausgänge – und hebt nur den Teil des Urteils auf, den der Fehler betrifft.",
+        "handlung": "{A} hovers over a sorting table with four small exit chutes, while {B} carefully lifts just one cracked tile out of an otherwise intact mosaic and places it into a chute.",
+        "hinweisRegie": "Place the note in the free space next to the gap left by the lifted tile, slightly tilted toward it, so it marks the partial repeal without covering {B}'s pointer or the chutes.",
+        "alternative": "{B} stands at a crossroads with four signposts showing only simple arrows, while {A} sorts files onto the matching paths."
+      },
+      "bildSzene": "one cracked tile lifted from mosaic",
+      "bildSzeneAlt": "crossroads with four plain signposts",
+      "quellen": [
+        "§ 349 StPO",
+        "§ 353 StPO",
+        "§ 354 StPO",
+        "Themenpool: revision-887"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-ausgaenge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.843Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-636",
+      "slug": "2026-11-27-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "BVerfG-Eilantrag: Erfolgsaussicht bleibt außen vor",
+          "unter": "Einstweilige Anordnung · § 32 BVerfGG",
+          "text": "Entscheidend ist die Folgenabwägung, nicht die Prognose zur Hauptsache.",
+          "norm": "§ 32 Abs. 1 BVerfGG",
+          "icon": "waage",
+          "sprecher": "Beim BVerfG entscheidet im Eilverfahren nicht die Erfolgsaussicht. Anders als im Verwaltungsprozess wägt das Gericht vor allem die Folgen ab. So läuft die Prüfung.",
+          "marken": [
+            "keine Prognose",
+            "Folgenabwägung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Zulässigkeit",
+          "text": "Antrag, auch vor der Hauptsache; grundsätzlich keine Vorwegnahme der Hauptsache.",
+          "norm": "§ 32 BVerfGG",
+          "sprecher": "Schritt eins: die Zulässigkeit. Es braucht einen Antrag, der auch schon vor dem Hauptsacheverfahren gestellt werden kann. Und die Anordnung darf die Hauptsache grundsätzlich nicht vorwegnehmen.",
+          "marken": [
+            "Antrag",
+            "keine Vorwegnahme"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Hauptsache nicht offensichtlich aussichtslos",
+          "text": "Offensichtlich unzulässig oder unbegründet? Dann scheitert der Antrag.",
+          "norm": null,
+          "sprecher": "Schritt zwei: ein grober Blick auf die Hauptsache. Ist sie offensichtlich unzulässig oder offensichtlich unbegründet, scheitert der Eilantrag. Sonst bleiben die Erfolgsaussichten außer Betracht.",
+          "marken": [
+            "nur grob"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Doppelhypothese",
+          "text": "Anordnung unterbleibt, Hauptsache hat Erfolg – oder umgekehrt?",
+          "norm": null,
+          "sprecher": "Schritt drei: die Folgenabwägung als Doppelhypothese. Was passiert, wenn die Anordnung nicht ergeht, die Hauptsache aber Erfolg hat? Und was, wenn sie ergeht, die Hauptsache aber scheitert?",
+          "marken": [
+            "zwei Szenarien"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Strenger Maßstab",
+          "text": "Dringend geboten zur Abwehr schwerer Nachteile – bei Gesetzen besonders streng.",
+          "norm": "§ 32 Abs. 1 BVerfGG",
+          "sprecher": "Schritt vier: der strenge Maßstab. Die Anordnung muss etwa zur Abwehr schwerer Nachteile dringend geboten sein. Soll ein Gesetz ausgesetzt werden, ist das Gericht besonders zurückhaltend.",
+          "marken": [
+            "dringend geboten"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Nicht offensichtlich aussichtslos? Dann entscheiden die Folgen.",
+          "norm": "§ 32 BVerfGG",
+          "sprecher": "Merke: Erst prüfen, ob die Hauptsache offensichtlich aussichtslos ist. Wenn nicht, entscheidet die Folgenabwägung.",
+          "marken": [
+            "Folgen entscheiden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nicht das VwGO-Schema übertragen",
+          "text": "Speichern für die nächste Verfassungsprozessklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Verfassungsprozessrecht. Und übertrag nicht einfach das Schema aus dem Verwaltungsprozess. Dort stehen die Erfolgsaussichten im Vordergrund, hier die Folgen.",
+          "marken": [
+            "eigenes Schema"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Beim BVerfG entscheidet im Eilverfahren nicht die Erfolgsaussicht. Nach § 32 BVerfGG prüft das Gericht nur grob, ob die Hauptsache offensichtlich unzulässig oder unbegründet ist. Sonst wägt es die Folgen ab: Was geschieht, wenn die Anordnung unterbleibt und die Hauptsache Erfolg hat – und umgekehrt? Der Maßstab ist streng, bei der Aussetzung von Gesetzen besonders. Speichern für die nächste Verfassungsprozessklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bverfg",
+        "#32bverfgg",
+        "#verfassungsprozessrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Einstweilige Anordnung nach § 32 BVerfGG",
+      "titelZeilen": [
+        "BVerfG-Eilantrag:",
+        "Erfolgsaussicht",
+        "bleibt außen vor"
+      ],
+      "coverText": "Folgenabwägung statt Prognose",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Im Eilverfahren vor dem BVerfG zählt vor allem, welche Folgen schwerer wiegen – nicht, wer am Ende gewinnt.",
+        "handlung": "{A} holds a large balance scale steady, while {B} carefully places a heavy rock on one pan and a smaller crystal on the other, both looking only at the scale, not at a closed door behind them.",
+        "hinweisRegie": "Place the note in the open space right beside the tilting balance, slightly angled toward the heavier pan, so it marks the weighing of consequences without covering the rock or hands.",
+        "alternative": "{B} peers down two short paths, each ending at a different small consequence, while {A} holds a lantern over both."
+      },
+      "bildSzene": "weighing rock and crystal on scale",
+      "bildSzeneAlt": "lantern over two short consequence paths",
+      "quellen": [
+        "§ 32 BVerfGG",
+        "Themenpool: staat-636"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "abgrenzung-zum-vwgo-schema",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.845Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-601",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Wer bestimmt die Richtlinien der Politik – und was bleibt den Ministern?",
+      "optionen": [
+        "Der Kanzler – die Minister leiten ihr Ressort darin selbständig",
+        "Die Bundesregierung als Kollegium mit Mehrheit",
+        "Der Bundespräsident auf Vorschlag des Kanzlers"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 65 GG",
+        "Themenpool: staat-601"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.845Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-601",
+      "ueberzeile": "Auflösung",
+      "titel": "Kanzler-, Ressort- und Kollegialprinzip",
+      "text": "Der Bundeskanzler bestimmt die Richtlinien der Politik und trägt dafür die Verantwortung (Art. 65 S. 1 GG). Innerhalb dieser Richtlinien leitet jeder Bundesminister seinen Geschäftsbereich selbständig und unter eigener Verantwortung (S. 2). Meinungsverschiedenheiten zwischen den Ministern entscheidet die Bundesregierung (S. 3).",
+      "norm": "Art. 65 GG",
+      "quellen": [
+        "Art. 65 GG",
+        "Themenpool: staat-601"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.845Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Der Kanzler – die Minister leiten ihr Ressort darin selbständig",
+        "Die Bundesregierung als Kollegium mit Mehrheit",
+        "Der Bundespräsident auf Vorschlag des Kanzlers"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-648",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 114 S. 1 VwGO: Das Gericht prüft Ermessensfehler, nicht die Zweckmäßigkeit",
+      "text": "Die Behörde muss ihr Ermessen entsprechend dem Zweck der Ermächtigung ausüben und dessen Grenzen einhalten (§ 40 VwVfG). Das Gericht prüft nur Fehler: Ermessensausfall (nicht ausgeübt), Ermessensdefizit (Belange übersehen), Fehlgebrauch (sachfremde Erwägungen) und Überschreitung (Rechtsfolge außerhalb des Rahmens, etwa unverhältnismäßig). Die Begriffe variieren.",
+      "norm": "§ 40 VwVfG · § 114 S. 1 VwGO",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-648"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.845Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-504",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Recht zum Besitz: eine Einwendung",
+      "text": "§ 986 BGB wirkt nach h.M. als Einwendung – das Gericht beachtet es von Amts wegen. Es genügt auch ein abgeleitetes Besitzrecht über den mittelbaren Besitzer.",
+      "norm": "§ 986 Abs. 1 BGB",
+      "quellen": [
+        "§ 985 BGB",
+        "§ 986 BGB",
+        "Themenpool: sachen-504"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.845Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-558",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Beweismaß und Beweislast: Wie sicher – und wer verliert bei Zweifeln?",
+      "text": "Beweismaß nach § 286 ZPO: volle richterliche Überzeugung – ein für das praktische Leben brauchbarer Grad an Gewissheit, der Zweifeln Schweigen gebietet. § 287 ZPO senkt es etwa für die Schadenshöhe. Die Beweislast entscheidet erst beim non liquet: Grundsätzlich trägt jede Partei sie für die Voraussetzungen der ihr günstigen Norm.",
+      "norm": "§§ 286, 287 ZPO",
+      "quellen": [
+        "§ 286 ZPO",
+        "§ 287 ZPO",
+        "Themenpool: zpo-558"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.845Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-875",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Revision: Wann laufen die Fristen – und in welcher Form?",
+      "falsch": "Einlegung und Begründung: beides eine Woche, gerechnet ab Zustellung des Urteils.",
+      "richtigText": "Einlegung binnen einer Woche nach Verkündung (§ 341 Abs. 1 StPO; Sonderfall Abwesenheit: Abs. 2). Begründung binnen eines Monats nach Ablauf der Einlegungsfrist – oder ab Zustellung, wenn das Urteil dann noch nicht zugestellt war (§ 345 Abs. 1 StPO). Verteidiger müssen beides elektronisch einreichen (§ 32d S. 2 StPO).",
+      "quellen": [
+        "§ 32d StPO",
+        "§ 341 StPO",
+        "§ 344 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-875"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:24.845Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

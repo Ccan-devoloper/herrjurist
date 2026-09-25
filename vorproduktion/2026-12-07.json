@@ -1,0 +1,859 @@
+{
+  "datum": "2026-12-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-740",
+        "themaTitel": "Tötung auf Verlangen und Suizidhilfe",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "assessoroer-855",
+        "themaTitel": "Wo steht im zweiten Examen noch Gutachtenstil?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-445",
+        "themaTitel": "Schadensersatz wegen Verzögerung der Leistung",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "staat-354"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "staat-354"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "schuldbt-470"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "tipp",
+        "themaId": "verwbt-676"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:43",
+        "art": "zahl",
+        "themaId": "assessorz-810"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "streitstand",
+        "themaId": "gesetzs-205"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-740",
+      "poolTitel": "Tötung auf Verlangen und Suizidhilfe",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 216 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "assessoroer-855",
+      "poolTitel": "Wo steht im zweiten Examen noch Gutachtenstil?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-445",
+      "poolTitel": "Schadensersatz wegen Verzögerung der Leistung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, II, 286 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-354",
+      "poolTitel": "Wann ist eine konkrete Normenkontrolle zulässig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-354",
+      "poolTitel": "Wann ist eine konkrete Normenkontrolle zulässig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-470",
+      "poolTitel": "Verbrauchsgüterkauf: Beweislastumkehr",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 477 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "verwbt-676",
+      "poolTitel": "Abschleppfälle und Kosten",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Landespolizei-/Vollstreckungsrecht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-810",
+      "poolTitel": "Wie entscheidet das Gericht nach übereinstimmender Erledigungserklärung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2026-10-08",
+        "2026-11-13"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "gesetzs-205",
+      "poolTitel": "Was ist eine auch-fremde Geschäftsführung und ist sie GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 677 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2026-11-25"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-740",
+      "slug": "2026-12-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Giftbecher gereicht – und trotzdem kein § 216 StGB",
+          "titelZeilen": [
+            "Giftbecher gereicht",
+            "– und trotzdem",
+            "kein § 216 StGB"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Der letzte Akt entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Der schwer kranke O bittet seinen Freund A ausdrücklich und ernstlich, ihm beim Sterben zu helfen. A mischt ein tödliches Mittel und reicht O das Glas. O trinkt selbst und stirbt. Hat sich A nach § 216 StGB strafbar gemacht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Fremdtötung oder Suizid?",
+              "text": "§ 216 StGB verlangt, dass der Täter einen anderen tötet. Die Mitwirkung an einer freiverantwortlichen Selbsttötung ist tatbestandslos."
+            },
+            {
+              "titel": "Wer beherrscht den letzten Akt?",
+              "text": "Nach h.M. entscheidet die Herrschaft über den unmittelbar lebensbeendenden Akt. Hier trinkt O selbst."
+            },
+            {
+              "titel": "Freiverantwortlich?",
+              "text": "O muss frei und ernstlich entschieden haben. Fehlt das, kommt eine Tötung in mittelbarer Täterschaft in Betracht."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "A hat O nicht getötet, sondern bei der Selbsttötung geholfen. § 216 StGB scheidet aus, die Suizidhilfe ist straflos."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„A hat das Gift gemischt und gereicht, also hat er getötet.“ Das vermengt Vorbereitung und Tat: Wer das Glas nur reicht, gibt die Herrschaft über das Geschehen aus der Hand. Anders, wenn A das Mittel selbst injiziert – dann kommt bei ernstlichem Verlangen § 216 StGB in Betracht."
+        },
+        {
+          "art": "text",
+          "titel": "Noch drei Klausurpunkte",
+          "punkte": [
+            "Verlangen heißt ausdrücklich und ernstlich – bloßes Einverständnis genügt nicht.",
+            "Das Verlangen muss den Täter zur Tötung bestimmt haben.",
+            "§ 217 StGB (geschäftsmäßige Förderung) hat das BVerfG 2020 für nichtig erklärt."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 216 StGB setzt eine Fremdtötung voraus. Wer beim freiverantwortlichen Suizid nur hilft, bleibt straflos – entscheidend ist, wer den letzten Akt beherrscht."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 216 StGB in drei Fragen",
+          "punkte": [
+            "Wer beherrscht den letzten Akt?",
+            "War der Entschluss freiverantwortlich?",
+            "Ausdrückliches, ernstliches Verlangen?"
+          ],
+          "icons": [
+            "zielscheibe",
+            "person",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Giftbecher gereicht – und trotzdem kein § 216 StGB. Die Tötung auf Verlangen setzt voraus, dass der Täter einen anderen tötet. Trinkt das Opfer selbst, beherrscht es den letzten, unmittelbar lebensbeendenden Akt: Das ist Hilfe zur freiverantwortlichen Selbsttötung und straflos. Prüfe deshalb zuerst die Tatherrschaft über den letzten Akt, dann die Freiverantwortlichkeit. Speichern für die nächste Klausur zu den Tötungsdelikten.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#216stgb",
+        "#sterbehilfe",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 216 StGB oder straflose Suizidhilfe?",
+      "coverText": "Der letzte Akt entscheidet",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer beim Suizid nur hilft, tötet nicht – entscheidend ist, wer den letzten Schritt selbst ausführt.",
+        "handlung": "{A} places a small cup on a table and deliberately steps back with open hands, while {B} uses his pointer to highlight the gap between her hands and the cup.",
+        "hinweisRegie": "Place the note in the free space directly above the cup and the gap to {A}'s hands, slightly tilted, so it marks who performs the last step without covering faces.",
+        "alternative": "{B} draws a finish line on the floor while {A} stops one step before it, leaving the final step to an unseen figure."
+      },
+      "bildSzene": "cup placed down, helper steps back",
+      "bildSzeneAlt": "helper stops before finish line",
+      "quellen": [
+        "§ 216 StGB",
+        "§ 217 StGB (BVerfG 2020: nichtig)",
+        "Themenpool: strafbt-740"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.810Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-855",
+      "slug": "2026-12-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gutachtenstil im 2. Examen: vier Textsorten im Check",
+          "titelZeilen": [
+            "Gutachtenstil im",
+            "2. Examen: vier",
+            "Textsorten im Check"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Urteilsstil: Ergebnis zuerst",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Nach Jahren im Gutachtenstil schreiben viele auch im 2. Examen „Die Klage könnte zulässig sein“ – mitten im Urteil. Welcher Stil gilt, hängt von der Textsorte ab, die der Bearbeitervermerk verlangt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Welcher Stil wo?",
+          "schritte": [
+            {
+              "titel": "Urteil und Beschluss",
+              "text": "Entscheidungsgründe im Urteilsstil: Ergebnis zuerst, dann die Begründung („denn …“)."
+            },
+            {
+              "titel": "Bescheid",
+              "text": "Ausgangs- oder Widerspruchsbescheid: Begründung ebenfalls im Urteilsstil, verständlich für den Adressaten."
+            },
+            {
+              "titel": "Anwaltliches Gutachten",
+              "text": "Die Prüfung der Erfolgsaussichten folgt dem Gutachtenstil: Obersatz, Definition, Subsumtion, Ergebnis."
+            },
+            {
+              "titel": "Schriftsatz",
+              "text": "Klage oder Antrag: behauptend und überzeugend – also Ergebnis vorn, wie im Urteilsstil."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Und das Hilfsgutachten?",
+          "text": "Scheitert die Klage etwa schon an der Zulässigkeit, verlangt der Bearbeitervermerk oft ein Hilfsgutachten zu den übrigen Fragen. Es folgt dem Gutachtenstil. Was genau erwartet wird, bestimmen Bearbeitervermerk und Landespraxis – also zuerst lesen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Derselbe Punkt, zwei Stile",
+          "links": {
+            "titel": "Gutachtenstil",
+            "punkte": [
+              "„Die Klage könnte zulässig sein. Dazu müsste …“",
+              "Das Ergebnis steht am Ende."
+            ]
+          },
+          "rechts": {
+            "titel": "Urteilsstil",
+            "punkte": [
+              "„Die Klage ist zulässig. Insbesondere ist …“",
+              "Das Ergebnis steht am Anfang."
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Urteil, Bescheid, Schriftsatz: Ergebnis zuerst. Gutachten und Hilfsgutachten: Ergebnis zuletzt."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem ersten Satz klären",
+          "punkte": [
+            "Welche Textsorte verlangt der Vermerk?",
+            "Ist ein Hilfsgutachten gefragt?",
+            "Stil je Abschnitt festlegen"
+          ],
+          "icons": [
+            "klemmbrett",
+            "lupe",
+            "fueller"
+          ]
+        }
+      ],
+      "caption": "Gutachtenstil im 2. Examen? Vier Textsorten im Check – im 2. Examen entscheidet die Textsorte über den Stil. Urteil, Bescheid und Schriftsatz schreibst du im Urteilsstil: Ergebnis zuerst, dann die Begründung. Das anwaltliche Gutachten und ein Hilfsgutachten folgen dem Gutachtenstil. Was genau gefragt ist, sagt dir der Bearbeitervermerk – lies ihn, bevor du den ersten Satz schreibst.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#urteilsstil",
+        "#gutachtenstil",
+        "#referendariat",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "2. Examen ÖR: Gutachten- oder Urteilsstil?",
+      "coverText": "Urteilsstil: Ergebnis zuerst",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Welcher Schreibstil gilt, hängt davon ab, welche Art von Text man abgeben soll.",
+        "handlung": "{A} sorts four differently shaped envelopes into two slots, one marked with a sun at the top and one with a sun at the bottom, while {B} curiously holds up the fourth envelope, unsure where it belongs.",
+        "hinweisRegie": "Place the note in the free space between the two slots, slightly tilted toward the envelope {B} is holding, so it links the text type to the correct slot without covering hands.",
+        "alternative": "{B} flips a large hourglass so the sand runs the other way, while {A} points to a finished stack of papers beside it."
+      },
+      "bildSzene": "droid sorts envelopes into two slots",
+      "bildSzeneAlt": "hourglass flipped beside finished papers",
+      "quellen": [
+        "§ 117 VwGO",
+        "§§ 68 ff. VwGO",
+        "Themenpool: assessoroer-855"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-textsorten",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.811Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-445",
+      "slug": "2026-12-07-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ohne Mahnung meist kein Verzögerungsschaden",
+          "unter": "Verzug · §§ 280, 286 BGB",
+          "text": "Verspätung allein reicht nicht – erst der Verzug öffnet § 280 Abs. 2 BGB.",
+          "norm": "§ 280 Abs. 2 BGB",
+          "icon": "uhr",
+          "sprecher": "Verspätung allein bringt dir keinen Schadensersatz. Für den Verzögerungsschaden verlangt Paragraf 280 Absatz 2 BGB zusätzlich den Verzug nach Paragraf 286. Und der beginnt meistens erst mit einer Mahnung.",
+          "marken": [
+            "Verspätung reicht nicht",
+            "Verzug nötig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schuldverhältnis und Pflichtverletzung",
+          "text": "Der Schuldner leistet trotz Fälligkeit nicht.",
+          "norm": "§ 280 Abs. 1 BGB",
+          "sprecher": "Schritt eins: ein Schuldverhältnis und eine Pflichtverletzung. Der Schuldner leistet nicht, obwohl die Leistung fällig ist.",
+          "marken": [
+            "fällig, nicht geleistet"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verzug: fällig, durchsetzbar, gemahnt",
+          "text": "Mahnung nach Fälligkeit – oder entbehrlich nach § 286 Abs. 2, 3 BGB.",
+          "norm": "§ 286 BGB",
+          "sprecher": "Schritt zwei: der Verzug. Der Anspruch muss fällig und durchsetzbar sein, es darf also keine Einrede entgegenstehen. Dazu kommt die Mahnung nach Fälligkeit. Entbehrlich ist sie etwa bei einem kalendermäßig bestimmten Termin oder bei ernsthafter und endgültiger Verweigerung.",
+          "marken": [
+            "Mahnung?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vertretenmüssen",
+          "text": "Wird vermutet – der Schuldner muss sich entlasten.",
+          "norm": "§ 286 Abs. 4 BGB",
+          "sprecher": "Schritt drei: das Vertretenmüssen. Ohne Verschulden kein Verzug, so steht es in Paragraf 286 Absatz 4. Vermutet wird es aber trotzdem, der Schuldner muss sich entlasten.",
+          "marken": [
+            "vermutet"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Schaden gerade durch die Verzögerung",
+          "text": "Ersatz neben der Leistung, etwa die Miete für ein Ersatzgerät.",
+          "norm": "§ 280 Abs. 2 BGB",
+          "sprecher": "Schritt vier: der Schaden. Ersetzt wird, was gerade durch die Verzögerung entsteht, und zwar neben der weiter geschuldeten Leistung. Zum Beispiel die Miete für ein Ersatzgerät, bis die bestellte Maschine endlich kommt.",
+          "marken": [
+            "neben der Leistung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: die erste Mahnung",
+          "text": "Kosten der Mahnung, die den Verzug erst begründet, sind kein Verzugsschaden.",
+          "norm": null,
+          "sprecher": "Der Klausurklassiker: Die Anwaltskosten für die erste Mahnung bekommst du nicht über den Verzug ersetzt. Denn genau diese Mahnung begründet den Verzug ja erst.",
+          "marken": [
+            "erste Mahnung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Pflichtverletzung, Verzug, Vertretenmüssen, Schaden durch die Verzögerung.",
+          "norm": "§§ 280 Abs. 1, 2, 286 BGB",
+          "sprecher": "Merke: Pflichtverletzung, Verzug, Vertretenmüssen und ein Schaden gerade durch die Verzögerung. Willst du statt der Leistung Ersatz, führt der Weg dagegen über Paragraf 281.",
+          "marken": [
+            "ohne Verzug nichts"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst die Mahnung suchen",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur. Und such im Sachverhalt zuerst nach der Mahnung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Ohne Mahnung meist kein Verzögerungsschaden. § 280 Abs. 2 BGB verlangt für den Ersatz des Verzögerungsschadens zusätzlich den Verzug nach § 286 BGB: fälliger, durchsetzbarer Anspruch, Mahnung oder deren Entbehrlichkeit und Vertretenmüssen. Die Kosten der ersten, verzugsbegründenden Mahnung sind kein Verzugsschaden. Und wer statt der Leistung Ersatz will, braucht § 281 BGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#verzug",
+        "#286bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verzögerungsschaden: ohne Verzug nichts",
+      "titelZeilen": [
+        "Ohne Mahnung meist",
+        "kein Verzögerungs-",
+        "schaden"
+      ],
+      "coverText": "Erst Verzug, dann Ersatz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer zu spät liefert, schuldet Ersatz für den Verspätungsschaden erst, wenn er in Verzug geraten ist.",
+        "handlung": "{B} waits beside an empty loading bay holding a delivery slip, while {A} nervously rings a small bell toward a distant, slow cart that has not yet arrived.",
+        "hinweisRegie": "Place the note in the free space above the ringing bell, slightly tilted toward the distant cart, so it marks the reminder as the starting point without covering hands or the slip.",
+        "alternative": "{A} flips a stopwatch the moment {B} knocks on a closed warehouse door."
+      },
+      "bildSzene": "bell rung toward late delivery cart",
+      "bildSzeneAlt": "stopwatch started at warehouse knock",
+      "quellen": [
+        "§ 280 Abs. 1, 2 BGB",
+        "§ 286 BGB",
+        "§ 281 BGB",
+        "Themenpool: schuld-445"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-354",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Konkrete Normenkontrolle: Welche Normen muss ein Fachgericht dem BVerfG vorlegen?",
+      "optionen": [
+        "Alle Normen, auch Rechtsverordnungen und Satzungen",
+        "Nur Bundesgesetze, niemals Landesgesetze",
+        "Nur formelle, nachkonstitutionelle Gesetze"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§§ 80 ff. BVerfGG",
+        "Themenpool: staat-354"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-354",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur formelle, nachkonstitutionelle Gesetze",
+      "text": "Das Verwerfungsmonopol des BVerfG schützt den parlamentarischen Gesetzgeber. Rechtsverordnungen, Satzungen und vorkonstitutionelles Recht prüft und verwirft das Fachgericht selbst. Zulässig ist die Vorlage zudem nur, wenn das Gericht von der Verfassungswidrigkeit überzeugt ist – bloße Zweifel genügen nicht – und es für seine Entscheidung auf die Gültigkeit ankommt.",
+      "norm": "Art. 100 Abs. 1 GG · § 80 BVerfGG",
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§§ 80 ff. BVerfGG",
+        "Themenpool: staat-354"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.813Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Alle Normen, auch Rechtsverordnungen und Satzungen",
+        "Nur Bundesgesetze, niemals Landesgesetze",
+        "Nur formelle, nachkonstitutionelle Gesetze"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-470",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 477 BGB: Ein Jahr Vermutung – nicht mehr sechs Monate",
+      "text": "Zeigt sich beim Verbrauchsgüterkauf innerhalb eines Jahres seit Gefahrübergang ein vertragswidriger Zustand, wird vermutet, dass die Ware schon bei Gefahrübergang mangelhaft war. Das gilt für Verträge seit 2022; bei lebenden Tieren sind es sechs Monate. Die Vermutung scheidet aus, wenn sie mit der Art der Ware oder des Mangels unvereinbar ist.",
+      "norm": "§ 477 Abs. 1 BGB",
+      "quellen": [
+        "§ 477 BGB",
+        "Themenpool: schuldbt-470"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-676",
+      "ueberzeile": "Klausurtipp Polizeirecht",
+      "titel": "Abschleppkosten: Erst das Abschleppen prüfen, dann den Kostenbescheid",
+      "text": "Der Kostenbescheid ist nur rechtmäßig, wenn das Abschleppen selbst rechtmäßig war. Ordne die Maßnahme nach deinem Landesrecht ein – etwa Ersatzvornahme im Sofortvollzug oder unmittelbare Ausführung. Steht ein Halteverbotsschild, ist es eine Allgemeinverfügung mit Wegfahrgebot, sofort vollziehbar analog § 80 Abs. 2 S. 1 Nr. 2 VwGO.",
+      "quellen": [
+        "Polizei- und Vollstreckungsgesetze der Länder",
+        "§ 80 Abs. 2 S. 1 Nr. 2 VwGO",
+        "§ 35 S. 2 VwVfG",
+        "Themenpool: verwbt-676"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-810",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Nur ein Teil ist übereinstimmend erledigt: Wie tenorierst du?",
+      "text": "Erklären beide Parteien nur einen Teil der Hauptsache für erledigt, entscheidet das Gericht über den Rest durch Urteil – und über die Kosten in einem Zug.",
+      "punkte": [
+        "Hauptsachetenor nur zum streitigen Rest",
+        "Kosten einheitlich im Urteil (Kostenmischentscheidung)",
+        "Erledigter Teil: Kosten nach § 91a ZPO – billiges Ermessen",
+        "Streitiger Rest: Kosten nach §§ 91, 92 ZPO"
+      ],
+      "quellen": [
+        "§ 91a ZPO",
+        "§§ 91, 92 ZPO",
+        "Themenpool: assessorz-810"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-205",
+      "ueberzeile": "Streitstand GoA",
+      "titel": "Vertraglich verpflichtet – und zugleich Geschäftsführer für einen Dritten?",
+      "norm": "§ 677 BGB",
+      "optionen": [
+        "Rechtsprechung: GoA auch dann möglich, wenn der Handelnde einem anderen vertraglich verpflichtet ist – außer der Vertrag regelt Rechte und Vergütung abschließend.",
+        "Große Teile der Literatur: keine GoA – der Ausgleich gehört in die Vertragsbeziehung, sonst droht ein Durchgriff am Vertrag vorbei."
+      ],
+      "text": "Klausurbeispiel: Unternehmer U repariert im Auftrag des Mieters auch Bausubstanz des Vermieters und verlangt vom Vermieter Aufwendungsersatz. Prüfe zuerst den Vertrag mit dem Mieter: Regelt er die Vergütung umfassend, scheitert die GoA gegenüber dem Dritten auch nach der Rechtsprechung.",
+      "quellen": [
+        "§ 677 BGB",
+        "§§ 683, 670 BGB",
+        "Themenpool: gesetzs-205"
+      ],
+      "fachLabel": "GoA/EBV",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

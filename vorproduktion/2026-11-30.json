@@ -1,0 +1,881 @@
+{
+  "datum": "2026-11-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-549",
+        "themaTitel": "Prozessführungsbefugnis und Prozessstandschaft",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafbt-322",
+        "themaTitel": "Wie prüft man die Erpressung?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-618",
+        "themaTitel": "Vereinigungsfreiheit",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "assessorz-587"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "assessorz-587"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "methodik-909"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "tipp",
+        "themaId": "staat-364"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "zahl",
+        "themaId": "zpo-052"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "streitstand",
+        "themaId": "verwbt-113"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-549",
+      "poolTitel": "Prozessführungsbefugnis und Prozessstandschaft",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "ZPO, materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-322",
+      "poolTitel": "Wie prüft man die Erpressung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 253 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-618",
+      "poolTitel": "Vereinigungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 9 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-587",
+      "poolTitel": "Arbeitsrechtliche Urteilsklausur",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ArbGG; ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-587",
+      "poolTitel": "Arbeitsrechtliche Urteilsklausur",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ArbGG; ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "methodik-909",
+      "poolTitel": "Wiederholen nach dem 7-30-90-Tage-Prinzip",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "staat-364",
+      "poolTitel": "Was ist die Ewigkeitsgarantie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 79 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zpo-052",
+      "poolTitel": "Worauf kommt es für den rechtzeitigen Eingang eines per Telefax übermittelten Schriftsatzes bei Gericht an?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 130 ZPO",
+        "§ 130a ZPO",
+        "§ 130d ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-29"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "verwbt-113",
+      "poolTitel": "Wer ist Störer im Polizei- und Ordnungsrecht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-09-29",
+        "2026-10-17"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-549",
+      "slug": "2026-11-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Prozessführungsbefugnis heißt nicht Aktivlegitimation",
+          "titelZeilen": [
+            "Prozessführungs-",
+            "befugnis heißt",
+            "nicht Aktiv-",
+            "legitimation"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Zulässigkeit vs. Begründetheit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Z hat seine Kaufpreisforderung gegen S still zur Sicherheit an die Bank B abgetreten. B hat Z ermächtigt, die Forderung weiter einzuziehen. Z verklagt S im eigenen Namen auf Zahlung. Ist die Klage zulässig?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Fragen, zwei Prüfungsorte",
+          "links": {
+            "titel": "Prozessführungs-befugnis",
+            "punkte": [
+              "Darf der Kläger das Recht im eigenen Namen einklagen?",
+              "Zulässigkeit, von Amts wegen zu prüfen.",
+              "Fehlt sie: Klage unzulässig."
+            ]
+          },
+          "rechts": {
+            "titel": "Aktivlegitimation",
+            "punkte": [
+              "Steht dem Kläger das Recht materiell zu?",
+              "Begründetheit.",
+              "Fehlt sie: Klage unbegründet."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Gewillkürte Prozessstandschaft",
+          "schritte": [
+            {
+              "titel": "Fremdes Recht",
+              "text": "Z macht eine Forderung geltend, die nach der Abtretung B zusteht (§ 398 BGB)."
+            },
+            {
+              "titel": "Ermächtigung",
+              "text": "Der Rechtsinhaber B ermächtigt Z, das Recht im eigenen Namen gerichtlich geltend zu machen."
+            },
+            {
+              "titel": "Eigenes schutzwürdiges Interesse",
+              "text": "Z ist wirtschaftlich betroffen: Die Forderung sichert seine eigene Schuld bei B."
+            },
+            {
+              "titel": "Offenlegung",
+              "text": "Die Prozessstandschaft muss grundsätzlich im Prozess offengelegt werden oder offensichtlich sein."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Z ist nicht mehr Inhaber – also ist die Klage unzulässig.“ Das vermischt zwei Ebenen. Wem das Recht zusteht, ist eine Frage der Aktivlegitimation und damit der Begründetheit. In der Zulässigkeit fragst du nur, ob Z das fremde Recht im eigenen Namen einklagen darf."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Ermächtigung, eigenes Interesse und Offenlegung liegen vor: Z ist prozessführungsbefugt, die Klage ist zulässig. In der Begründetheit geht es um die Forderung des Rechtsinhabers B. Ob Z Zahlung an sich oder an B verlangen kann, richtet sich nach dem Inhalt der Ermächtigung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer darf klagen? Zulässigkeit. Wem steht das Recht zu? Begründetheit. Fremdes Recht einklagen: Ermächtigung plus eigenes Interesse."
+        },
+        {
+          "art": "cta",
+          "titel": "Prozessstandschaft in drei Fragen",
+          "punkte": [
+            "Eigenes oder fremdes Recht?",
+            "Gesetzliche Befugnis oder Ermächtigung?",
+            "Eigenes schutzwürdiges Interesse?"
+          ],
+          "icons": [
+            "lupe",
+            "vertrag",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Prozessführungsbefugnis heißt nicht Aktivlegitimation. Die eine fragt in der Zulässigkeit, ob der Kläger ein Recht im eigenen Namen einklagen darf; die andere in der Begründetheit, ob ihm das Recht zusteht. Wer ein fremdes Recht einklagt, braucht eine gesetzliche Befugnis (etwa § 265 Abs. 2 ZPO) oder eine Ermächtigung plus eigenes schutzwürdiges Interesse – die gewillkürte Prozessstandschaft. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilprozessrecht",
+        "#prozessstandschaft",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Prozessstandschaft: fremdes Recht einklagen",
+      "coverText": "Zulässigkeit vs. Begründetheit",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Wer ein fremdes Recht vor Gericht bringt, braucht eine eigene Befugnis dazu – wem das Recht gehört, klärt sich erst danach.",
+        "handlung": "{A} carries a glowing parcel clearly labelled with someone else's symbol toward a gate, while {B} hovers at the gate and inspects the small permission token {A} holds up.",
+        "hinweisRegie": "Place the note in the open space between the permission token and the gate, slightly tilted toward the token, so it reads as the first check at the entrance without covering {A}'s hand or {B}'s scanner light.",
+        "alternative": "{B} guards two doors in a row, a narrow entrance door and a treasure door behind it, while {A} tries to open the treasure door first."
+      },
+      "bildSzene": "alien shows permission token at gate",
+      "bildSzeneAlt": "entrance door before treasure door",
+      "quellen": [
+        "§ 265 Abs. 2 ZPO",
+        "§ 398 BGB",
+        "Themenpool: zpo-549"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.937Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-322",
+      "slug": "2026-11-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erpressung in sechs Schritten – der letzte steht in Abs. 2",
+          "titelZeilen": [
+            "Erpressung in",
+            "sechs Schritten –",
+            "der letzte steht",
+            "in Abs. 2"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Verwerflichkeit nicht vergessen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 253 StGB: Der Täter nötigt mit Gewalt oder durch Drohung mit einem empfindlichen Übel zu einer Handlung, Duldung oder Unterlassung und fügt dadurch dem Vermögen des Opfers oder eines anderen einen Nachteil zu – um sich oder einen Dritten zu Unrecht zu bereichern."
+        },
+        {
+          "art": "schritte",
+          "titel": "Objektiver Tatbestand",
+          "schritte": [
+            {
+              "titel": "1. Nötigungsmittel",
+              "text": "Gewalt oder Drohung mit einem empfindlichen Übel. Gewalt gegen eine Person oder Drohung mit Gefahr für Leib oder Leben: § 255 StGB."
+            },
+            {
+              "titel": "2. Nötigungserfolg",
+              "text": "Das Opfer handelt, duldet oder unterlässt – und zwar gerade wegen der Nötigung."
+            },
+            {
+              "titel": "3. Vermögensnachteil",
+              "text": "Das abgenötigte Verhalten schädigt das Vermögen. Genötigter und Geschädigter können verschiedene Personen sein."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Subjektiver Tatbestand und Rechtswidrigkeit",
+          "schritte": [
+            {
+              "titel": "4. Vorsatz",
+              "text": "Bezogen auf alle objektiven Merkmale."
+            },
+            {
+              "titel": "5. Bereicherungsabsicht",
+              "text": "Absicht, sich oder einen Dritten zu bereichern. Die Bereicherung muss rechtswidrig und stoffgleich mit dem Nachteil sein."
+            },
+            {
+              "titel": "6. Rechtswidrigkeit, § 253 Abs. 2 StGB",
+              "text": "Neben den allgemeinen Rechtfertigungsgründen: Ist die Verbindung von Mittel und Zweck verwerflich?"
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Vermögensverfügung?",
+          "text": "Die Rspr. lässt jedes abgenötigte Verhalten genügen, auch das Dulden einer Wegnahme – § 255 StGB ist dann Grundtatbestand zum Raub. Die h.L. verlangt eine Vermögensverfügung und grenzt so vom Raub ab. In Wegnahmefällen hier Stellung nehmen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nötigungsmittel, Nötigungserfolg, Nachteil – dann Vorsatz, Bereicherungsabsicht und die Verwerflichkeit nach § 253 Abs. 2 StGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Erpressung sauber prüfen",
+          "punkte": [
+            "Mittel und Erfolg der Nötigung",
+            "Vermögensnachteil – Verfügung nötig?",
+            "Bereicherung: rechtswidrig, stoffgleich",
+            "Verwerflichkeit nach Abs. 2"
+          ],
+          "icons": [
+            "warnung",
+            "geldbeutel",
+            "muenzen",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Erpressung in sechs Schritten: Nötigungsmittel, Nötigungserfolg, Vermögensnachteil, Vorsatz, Bereicherungsabsicht – und am Ende die Rechtswidrigkeit mit der Verwerflichkeitsklausel des § 253 Abs. 2 StGB. Dazu der Streit um die Vermögensverfügung: Die Rspr. verzichtet darauf, die h.L. grenzt mit ihr zum Raub ab. Speichern für die nächste Vermögensdelikte-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#erpressung",
+        "#253stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 253 StGB: Erpressung in sechs Schritten",
+      "coverText": "Verwerflichkeit nicht vergessen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Die Erpressung ist erst vollständig geprüft, wenn nach dem Tatbestand auch die Verwerflichkeit von Mittel und Zweck feststeht.",
+        "handlung": "{A} nervously holds a heavy crystal hostage above a ledge, while {B} reluctantly hands over a small bag of ore, weighing it in his hand before letting go.",
+        "hinweisRegie": "Place the note in the free space between the handed-over ore bag and {A}'s raised arm, slightly tilted toward the bag, so it links threat and payment without covering either face.",
+        "alternative": "{B} balances a threatening lever on one side of a scale and a pile of coins on the other, while {A} checks whether the scale tips toward unfair."
+      },
+      "bildSzene": "crystal held hostage, ore bag handed over",
+      "bildSzeneAlt": "scale weighs threat lever against coins",
+      "quellen": [
+        "§ 253 StGB",
+        "§ 255 StGB",
+        "§ 249 StGB",
+        "Themenpool: strafbt-322"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "sechs-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.937Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-618",
+      "slug": "2026-11-30-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Pflichtmitglied in der Kammer? Art. 9 GG hilft nicht",
+          "unter": "Vereinigungsfreiheit · Art. 9 Abs. 1 GG",
+          "text": "Öffentlich-rechtliche Zwangsverbände misst das BVerfG an Art. 2 Abs. 1 GG.",
+          "norm": "Art. 9 Abs. 1 GG",
+          "icon": "gebaeude",
+          "sprecher": "Pflichtmitglied in der Kammer? Art. 9 GG hilft dir nicht. Das überrascht, denn Art. 9 schützt doch auch das Fernbleiben. Stimmt – aber nur bei privaten Vereinigungen.",
+          "marken": [
+            "Kammer ≠ Verein",
+            "Art. 2 Abs. 1 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Was ist eine Vereinigung?",
+          "text": "Freiwilliger Zusammenschluss für längere Zeit, gemeinsamer Zweck, organisierte Willensbildung.",
+          "norm": "Art. 9 Abs. 1 GG",
+          "sprecher": "Schritt eins: der Begriff. Vereinigung ist jeder freiwillige Zusammenschluss mehrerer Personen für längere Zeit zu einem gemeinsamen Zweck, mit organisierter Willensbildung. Ob eingetragener Verein oder lose Gruppe, spielt keine Rolle.",
+          "marken": [
+            "freiwillig",
+            "organisiert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wer ist geschützt?",
+          "text": "Deutschen-Grundrecht – für die Einzelnen und für die Vereinigung selbst.",
+          "norm": "Art. 9 Abs. 1 GG",
+          "sprecher": "Schritt zwei: der Träger. Art. 9 Absatz 1 ist ein Deutschen-Grundrecht. Geschützt sind die Einzelnen beim Gründen, Beitreten und Mitmachen – und die Vereinigung selbst in ihrem Bestand und ihrer Organisation.",
+          "marken": [
+            "Doppelgrundrecht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die negative Vereinigungsfreiheit",
+          "text": "Fernbleiben und Austritt – aber nur bei privatrechtlichen Vereinigungen.",
+          "norm": "Art. 9 Abs. 1 GG · Art. 2 Abs. 1 GG",
+          "sprecher": "Schritt drei: die negative Seite. Art. 9 schützt auch, fernzubleiben oder auszutreten. Für öffentlich-rechtliche Zwangsverbände wie die Industrie- und Handelskammer greift nach dem Bundesverfassungsgericht aber Art. 2 Absatz 1 GG. In der Literatur ist das umstritten.",
+          "marken": [
+            "privat: Art. 9",
+            "Kammer: Art. 2"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Schranke: Art. 9 Abs. 2 GG",
+          "text": "Verboten sind Vereinigungen gegen Strafgesetze, verfassungsmäßige Ordnung oder Völkerverständigung.",
+          "norm": "Art. 9 Abs. 2 GG",
+          "sprecher": "Schritt vier: die Schranke. Verboten sind Vereinigungen, deren Zwecke oder Tätigkeit den Strafgesetzen zuwiderlaufen oder die sich gegen die verfassungsmäßige Ordnung oder die Völkerverständigung richten. Umgesetzt wird das durch eine Verbotsverfügung nach dem Vereinsgesetz.",
+          "marken": [
+            "Verbotsverfügung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Abgrenzen: Art. 9 Abs. 3 GG",
+          "text": "Gewerkschaften und Arbeitgeberverbände: Jedermann-Grundrecht mit Wirkung unter Privaten.",
+          "norm": "Art. 9 Abs. 3 GG",
+          "sprecher": "Und abgrenzen: Für Gewerkschaften und Arbeitgeberverbände gilt Absatz 3. Die Koalitionsfreiheit steht jedermann zu und wirkt nach Satz 2 sogar unmittelbar zwischen Privaten.",
+          "marken": [
+            "jedermann"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Privater Verein: Art. 9 Abs. 1 GG. Pflichtmitgliedschaft in der Kammer: Art. 2 Abs. 1 GG.",
+          "norm": "Art. 9 Abs. 1 GG · Art. 2 Abs. 1 GG",
+          "sprecher": "Merke: privater Zusammenschluss – Art. 9 Absatz 1. Pflichtmitgliedschaft in einer öffentlich-rechtlichen Körperschaft – nach dem Bundesverfassungsgericht Art. 2 Absatz 1.",
+          "marken": [
+            "privat oder öffentlich?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst klären: privat oder öffentlich-rechtlich?",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und kläre immer zuerst: privater Zusammenschluss oder öffentlich-rechtliche Körperschaft?",
+          "marken": [
+            "erst die Einordnung"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Pflichtmitglied in der Kammer? Art. 9 GG hilft dir nicht. Die Vereinigungsfreiheit schützt Gründung, Beitritt, Betätigung und auch das Fernbleiben – aber bei privaten Vereinigungen. Pflichtmitgliedschaften in öffentlich-rechtlichen Körperschaften wie der IHK misst das BVerfG an Art. 2 Abs. 1 GG; in der Literatur ist das umstritten. Dazu: Schranke aus Art. 9 Abs. 2 GG und die Abgrenzung zur Koalitionsfreiheit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#vereinigungsfreiheit",
+        "#art9gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 9 GG: Kammer ist kein Verein",
+      "titelZeilen": [
+        "Pflichtmitglied",
+        "in der Kammer?",
+        "Art. 9 GG",
+        "hilft nicht"
+      ],
+      "coverText": "Kammer: Art. 2 Abs. 1 GG",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Wer freiwillig einem Verein fernbleibt, beruft sich auf Art. 9 GG – wer in eine öffentlich-rechtliche Kammer muss, auf Art. 2 Abs. 1 GG.",
+        "handlung": "{A} points his pointer at two doors, a colourful clubhouse door that {B} freely walks past, and a heavy official door she is being waved into.",
+        "hinweisRegie": "Place the note in the free space beside the heavy official door, slightly tilted toward it, so the switch of the relevant right is tied to that door without covering {B}'s face.",
+        "alternative": "{B} unclips herself from a friendly rope team of climbers, while {A} shows her a fixed official chain she cannot unclip from."
+      },
+      "bildSzene": "clubhouse door versus heavy official door",
+      "bildSzeneAlt": "free rope team versus fixed chain",
+      "quellen": [
+        "Art. 9 Abs. 1, 2, 3 GG",
+        "Art. 2 Abs. 1 GG",
+        "VereinsG",
+        "Themenpool: grundr-618"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.939Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-587",
+      "ueberzeile": "Prüfungsfrage Arbeitsrecht",
+      "titel": "Kündigungsschutzklage hat Erfolg: Wie lautet der Hauptsachetenor?",
+      "optionen": [
+        "Die Kündigung der Beklagten vom … wird aufgehoben.",
+        "Festgestellt: Arbeitsverhältnis durch Kündigung vom … nicht aufgelöst",
+        "Die Beklagte wird verurteilt, die Kündigung zurückzunehmen."
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 4 S. 1 KSchG",
+        "§ 12a Abs. 1 ArbGG",
+        "§ 62 Abs. 1 ArbGG",
+        "Themenpool: assessorz-587"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.939Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-587",
+      "ueberzeile": "Auflösung",
+      "titel": "Feststellung: Das Arbeitsverhältnis wurde nicht aufgelöst",
+      "text": "Die Klage nach § 4 S. 1 KSchG ist eine Feststellungsklage, so lautet auch der Tenor. Kosten nach §§ 91 ff. ZPO – in erster Instanz ohne Erstattung der Anwaltskosten (§ 12a Abs. 1 ArbGG). Kein Ausspruch zur vorläufigen Vollstreckbarkeit: Urteile der Arbeitsgerichte sind kraft Gesetzes vorläufig vollstreckbar (§ 62 Abs. 1 S. 1 ArbGG).",
+      "norm": "§ 4 S. 1 KSchG · § 62 Abs. 1 ArbGG",
+      "quellen": [
+        "§ 4 S. 1 KSchG",
+        "§ 12a Abs. 1 ArbGG",
+        "§ 62 Abs. 1 ArbGG",
+        "Themenpool: assessorz-587"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.939Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Kündigung der Beklagten vom … wird aufgehoben.",
+        "Festgestellt: Arbeitsverhältnis durch Kündigung vom … nicht aufgelöst",
+        "Die Beklagte wird verurteilt, die Kündigung zurückzunehmen."
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-909",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 823 Abs. 1 BGB nach 7, 30 und 90 Tagen wiederholen",
+      "text": "So bleibt eine Norm hängen: Nach 7 Tagen schreibst du die Voraussetzungen frei auf, nach 30 Tagen wendest du sie an einem Mini-Fall an, nach 90 Tagen ergänzt du die Streitpunkte. Erst abrufen, dann nachschlagen – das aktive Erinnern ist die eigentliche Wiederholung. Was nicht sitzt, beginnt wieder bei Tag 7.",
+      "norm": "§ 823 Abs. 1 BGB (Beispiel)",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: methodik-909"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.939Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-364",
+      "ueberzeile": "Klausurtipp Staatsrecht",
+      "titel": "Art. 79 Abs. 3 GG prüfst du nur bei Verfassungsänderungen",
+      "text": "Die Ewigkeitsgarantie ist Maßstab für verfassungsändernde Gesetze: unzulässig, wenn die Gliederung des Bundes in Länder, die grundsätzliche Mitwirkung der Länder bei der Gesetzgebung oder die Grundsätze der Art. 1 und 20 GG berührt werden. Geschützt sind die Grundsätze, nicht jede Einzelausprägung. Einfache Gesetze misst du direkt an Art. 1 und 20 GG.",
+      "quellen": [
+        "Art. 79 Abs. 3 GG",
+        "Themenpool: staat-364"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.939Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-052",
+      "ueberzeile": "4 Punkte ZPO",
+      "titel": "Fristsache per Fax: Was zählt für den rechtzeitigen Eingang?",
+      "text": "Seit 2022 kommt es zuerst darauf an, wer einreicht.",
+      "punkte": [
+        "Anwälte und Behörden müssen elektronisch einreichen (§ 130d S. 1 ZPO) – ein Fax genügt nicht.",
+        "Technische Störung: Ersatzeinreichung zulässig, Grund glaubhaft machen (§ 130d S. 2, 3 ZPO).",
+        "Wo das Fax zulässig ist: vollständiger Empfang der Signale vor Fristablauf – nicht der Ausdruck.",
+        "Elektronisches Dokument: eingegangen mit Speicherung beim Gericht (§ 130a Abs. 5 ZPO)."
+      ],
+      "quellen": [
+        "§ 130 ZPO",
+        "§ 130a ZPO",
+        "§ 130d ZPO",
+        "Themenpool: zpo-052"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.939Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-113",
+      "ueberzeile": "Streitstand Polizeirecht",
+      "titel": "Schaufensterwerbung lockt eine Menge auf die Straße: Ist der Ladeninhaber Störer?",
+      "norm": "Polizeigesetze der Länder",
+      "optionen": [
+        "Zweckveranlasser (verbreitet): Wer die Störung durch Dritte bezweckt oder typischerweise auslöst, ist Störer.",
+        "Kritische Ansicht: Die Figur weicht die Unmittelbarkeit auf; dann bleibt nur der Notstand."
+      ],
+      "text": "Ausgangspunkt: Störer ist, wer selbst die Gefahrenschwelle überschreitet – hier die Passanten. Der Zweckveranlasser ist die Ausnahme; streitig ist, ob seine Absicht oder die typische Folge zählt. Zurückhaltung bei Grundrechtsausübung, etwa Versammlungen.",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: verwbt-113"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:15.939Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

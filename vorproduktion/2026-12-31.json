@@ -1,0 +1,853 @@
+{
+  "datum": "2026-12-31",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "anlass",
+        "themaId": "stpo-782",
+        "themaTitel": "Zwischenverfahren",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "staat-088",
+        "themaTitel": "Wann hat der Bund die Gesetzgebungskompetenz?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessorz-801",
+        "themaTitel": "Was verlangt die Relationstechnik in drei Stationen?",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "bgbat-004"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "bgbat-004"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:57",
+        "art": "norm",
+        "themaId": "anklage-861"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "streitstand",
+        "themaId": "schuldbt-913"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:40",
+        "art": "merksatz",
+        "themaId": "zpo-283"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "begriff",
+        "themaId": "bgbat-422"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "anlass",
+      "themaId": "stpo-782",
+      "poolTitel": "Zwischenverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 199 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01",
+        "2026-11-01"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "staat-088",
+      "poolTitel": "Wann hat der Bund die Gesetzgebungskompetenz?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 70 GG",
+        "Art. 72 GG",
+        "Art. 74 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23",
+        "2026-12-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-801",
+      "poolTitel": "Was verlangt die Relationstechnik in drei Stationen?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-004",
+      "poolTitel": "Welche Formvorschriften gibt es und was ist die Folge eines Formverstoßes?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 125 BGB",
+        "§ 126 BGB",
+        "§ 126a BGB",
+        "§ 126b BGB",
+        "§ 128 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-004",
+      "poolTitel": "Welche Formvorschriften gibt es und was ist die Folge eines Formverstoßes?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 125 BGB",
+        "§ 126 BGB",
+        "§ 126a BGB",
+        "§ 126b BGB",
+        "§ 128 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "anklage-861",
+      "poolTitel": "Wozu dient das wesentliche Ergebnis der Ermittlungen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "schuldbt-913",
+      "poolTitel": "Fehlüberweisung und nicht autorisierte Zahlung: Wie wirkt § 675u BGB im Bereicherungsausgleich?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 675u BGB",
+        "§ 675j BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-31"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zpo-283",
+      "poolTitel": "Was ist ein Anscheinsbeweis?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "bgbat-422",
+      "poolTitel": "Formmangel und Heilung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 125 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "anlass",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-782",
+      "slug": "2026-12-31-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nach der Anklage folgt nicht die Hauptverhandlung",
+          "titelZeilen": [
+            "Nach der Anklage",
+            "folgt nicht die",
+            "Hauptverhandlung"
+          ],
+          "coverBadge": "Lernplan-Check",
+          "coverText": "Erst der Eröffnungsbeschluss",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Zum Jahresende ein Stadium, das man beim Lernen leicht überspringt: Die StA hat Anklage erhoben. Beginnt jetzt die Hauptverhandlung? Nein – zuerst entscheidet das Gericht im Zwischenverfahren, ob es das Hauptverfahren überhaupt eröffnet (§§ 199 ff. StPO)."
+        },
+        {
+          "art": "schritte",
+          "titel": "So läuft das Zwischenverfahren",
+          "schritte": [
+            {
+              "titel": "Mitteilung der Anklage",
+              "text": "Der Angeschuldigte erhält die Anklageschrift und eine Frist für Einwendungen und Beweisanträge (§ 201 StPO)."
+            },
+            {
+              "titel": "Prüfung des Gerichts",
+              "text": "Hinreichender Tatverdacht: Eine Verurteilung ist wahrscheinlich (§ 203 StPO). Einzelne Beweiserhebungen sind möglich (§ 202 StPO)."
+            },
+            {
+              "titel": "Entscheidung",
+              "text": "Eröffnungsbeschluss (§ 207 StPO) oder Ablehnung (§ 204 StPO) – ggf. Eröffnung vor einem Gericht niederer Ordnung (§ 209 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Folgen",
+          "punkte": [
+            "Mit der Eröffnung wird der Angeschuldigte zum Angeklagten (§ 157 StPO).",
+            "Der Angeklagte kann den Eröffnungsbeschluss nicht anfechten (§ 210 Abs. 1 StPO).",
+            "Gegen die Ablehnung hat die StA die sofortige Beschwerde (§ 210 Abs. 2 StPO).",
+            "Fehlt der Eröffnungsbeschluss, besteht ein Verfahrenshindernis."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Lücke in der Klausur",
+          "text": "Wer vom Ermittlungsverfahren direkt in die Hauptverhandlung springt, übersieht den Eröffnungsbeschluss. In der Revisionsklausur gehört er zu den Verfahrensvoraussetzungen, die von Amts wegen geprüft werden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Anklage allein reicht nicht: Erst der Eröffnungsbeschluss macht den Weg in die Hauptverhandlung frei."
+        },
+        {
+          "art": "cta",
+          "titel": "Für den Lernplan im neuen Jahr",
+          "punkte": [
+            "§ 201: Anklage mitteilen",
+            "§ 203: hinreichender Tatverdacht",
+            "§ 207: Eröffnungsbeschluss"
+          ],
+          "icons": [
+            "umschlag",
+            "lupe",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Nach der Anklage folgt nicht sofort die Hauptverhandlung. Dazwischen liegt das Zwischenverfahren: Das Gericht teilt die Anklage mit (§ 201 StPO), prüft den hinreichenden Tatverdacht (§ 203 StPO) und eröffnet das Hauptverfahren (§ 207 StPO) oder lehnt ab (§ 204 StPO). Ohne Eröffnungsbeschluss besteht ein Verfahrenshindernis. Ein guter Kandidat für den Lernplan im neuen Jahr – speichern.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#zwischenverfahren",
+        "#eröffnungsbeschluss",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zwischenverfahren: vor der Hauptverhandlung",
+      "coverText": "Erst der Eröffnungsbeschluss",
+      "coverBadge": "Lernplan-Check",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Zwischen Anklage und Hauptverhandlung steht ein Tor, das erst das Gericht öffnet.",
+        "handlung": "{B} eagerly hurries toward a large hall, but {A} hovers in front of a closed middle gate and holds up a single unlocking key that has not yet been turned.",
+        "hinweisRegie": "Place the note in the free space just above the closed middle gate, slightly tilted toward the unturned key, so the missing step is clear without covering {B}'s eager face.",
+        "alternative": "{A} lays out three stepping stones across a stream, the middle one still missing, while {B} stops with one foot in the air."
+      },
+      "bildSzene": "droid holds key at closed middle gate",
+      "bildSzeneAlt": "middle stepping stone still missing",
+      "quellen": [
+        "§§ 157, 199–210 StPO",
+        "Themenpool: stpo-782"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-088",
+      "slug": "2026-12-31-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Art. 72 Abs. 2 GG gilt nur für zehn Nummern",
+          "titelZeilen": [
+            "Art. 72 Abs. 2 GG",
+            "gilt nur für",
+            "zehn Nummern"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Kern-, Bedarfs-, Abweichungskompetenz",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Ausgangspunkt",
+          "text": "Grundsätzlich haben die Länder das Recht der Gesetzgebung (Art. 70 Abs. 1 GG). Der Bund braucht einen Kompetenztitel: ausschließlich (Art. 71, 73 GG) oder konkurrierend (Art. 72, 74 GG). Daneben gibt es ungeschriebene Kompetenzen, etwa kraft Sachzusammenhangs."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Ausschließlich oder konkurrierend?",
+          "links": {
+            "titel": "Ausschließlich",
+            "punkte": [
+              "Katalog v. a. Art. 73 GG, z. B. auswärtige Angelegenheiten.",
+              "Länder nur mit ausdrücklicher Ermächtigung (Art. 71 GG)."
+            ]
+          },
+          "rechts": {
+            "titel": "Konkurrierend",
+            "punkte": [
+              "Katalog Art. 74 GG, z. B. bürgerliches Recht, Strafrecht.",
+              "Länder, solange und soweit der Bund nicht regelt (Art. 72 I GG)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Drei Spielarten der konkurrierenden Kompetenz",
+          "punkte": [
+            "Kernkompetenz: Der Bund regelt ohne weitere Voraussetzung, die Länder sind gesperrt (Art. 72 Abs. 1 GG).",
+            "Bedarfskompetenz: nur in den zehn Nummern des Art. 72 Abs. 2 GG – mit Erforderlichkeitsprüfung.",
+            "Abweichungskompetenz: Die Länder dürfen abweichen (Art. 72 Abs. 3 GG), etwa beim Jagdwesen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die zehn Nummern",
+          "text": "Art. 74 Abs. 1 Nr. 4, 7, 11, 13, 15, 19a, 20, 22, 25 und 26 GG. Nur hier prüfst du, ob gleichwertige Lebensverhältnisse oder die Rechts- oder Wirtschaftseinheit eine Bundesregelung erforderlich machen – das BVerfG kontrolliert das. Bürgerliches Recht und Strafrecht (Nr. 1) gehören nicht dazu."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst den Kompetenztitel finden, dann einordnen: Nur bei den zehn Nummern des Art. 72 Abs. 2 GG prüfst du die Erforderlichkeit."
+        },
+        {
+          "art": "cta",
+          "titel": "Kompetenz in vier Schritten",
+          "punkte": [
+            "Titel in Art. 73 oder 74 GG?",
+            "Ausschließlich oder konkurrierend?",
+            "Nummer in Art. 72 Abs. 2 GG?",
+            "Abweichung nach Art. 72 Abs. 3 GG?"
+          ],
+          "icons": [
+            "paragraf",
+            "waage",
+            "lupe",
+            "haeuser"
+          ]
+        }
+      ],
+      "caption": "Konkurrierende Gesetzgebung ist nicht gleich konkurrierende Gesetzgebung. Kernkompetenz: Der Bund darf ohne Weiteres regeln, die Länder sind gesperrt (Art. 72 Abs. 1 GG). Bedarfskompetenz: nur in den zehn Nummern, die Art. 72 Abs. 2 GG aufzählt – mit Erforderlichkeitsprüfung. Abweichungskompetenz: Die Länder dürfen abweichen (Art. 72 Abs. 3 GG). Speichern für die nächste Kompetenzprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#gesetzgebungskompetenz",
+        "#art72gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Konkurrierende Kompetenz: drei Spielarten",
+      "coverText": "Kern-, Bedarfs-, Abweichungskompetenz",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Nicht jede konkurrierende Kompetenz verlangt eine Erforderlichkeitsprüfung – nur ein fester Teil des Katalogs.",
+        "handlung": "{A} sorts crystals from a long shelf into three different bins, while {B} taps only one small group of crystals with his pointer, marking them for an extra inspection.",
+        "hinweisRegie": "Place the note in the free space next to the small marked group of crystals, slightly tilted toward it, so the special subset stands out without covering {A}'s sorting hands.",
+        "alternative": "{B} holds a sieve over a row of stones, and only a few specific stones must pass through it, while {A} watches the others roll past."
+      },
+      "bildSzene": "miner sorts crystals, professor marks few",
+      "bildSzeneAlt": "only some stones must pass sieve",
+      "quellen": [
+        "Art. 70–74 GG",
+        "Themenpool: staat-088"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zehn-nummern",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.813Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-801",
+      "slug": "2026-12-31-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Drei Stationen – bewiesen wird erst in der letzten",
+          "unter": "Relationstechnik · §§ 138, 286 ZPO",
+          "text": "Beweis nur über streitige Tatsachen, auf die es ankommt.",
+          "norm": "§ 138 ZPO · § 286 ZPO",
+          "icon": "waage",
+          "sprecher": "Nicht alles Streitige wird bewiesen. Erst wenn Kläger- und Beklagtenstation zeigen, dass es auf eine Tatsache ankommt, geht es in die Beweisstation.",
+          "marken": [
+            "erst erheblich",
+            "dann Beweis"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Klägerstation: schlüssig?",
+          "text": "Trägt der Klägervortrag – als wahr unterstellt – den Antrag?",
+          "norm": null,
+          "sprecher": "Station eins: die Klägerstation. Du unterstellst den Vortrag des Klägers als wahr und fragst: Ergibt sich daraus der geltend gemachte Anspruch? Wenn nicht, ist die Klage schon unschlüssig.",
+          "marken": [
+            "Schlüssigkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beklagtenstation: erheblich?",
+          "text": "Bringt der Beklagtenvortrag – als wahr unterstellt – den Anspruch zu Fall?",
+          "norm": "§ 138 Abs. 3 ZPO",
+          "sprecher": "Station zwei: die Beklagtenstation. Jetzt unterstellst du den Vortrag des Beklagten als wahr. Bringt er den Anspruch zu Fall? Nicht bestrittene Tatsachen gelten als zugestanden, Paragraf 138 Absatz 3 ZPO.",
+          "marken": [
+            "Erheblichkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beweisstation",
+          "text": "Nur streitige, erhebliche Tatsachen – Beweislast, dann freie Würdigung.",
+          "norm": "§ 286 ZPO",
+          "sprecher": "Station drei: die Beweisstation. Hier landen nur Tatsachen, die streitig und erheblich sind. Du klärst die Beweislast und würdigst die Beweise frei nach Paragraf 286 ZPO.",
+          "marken": [
+            "streitig + erheblich"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Replik nicht vergessen",
+          "text": "Ist die Verteidigung erheblich, prüfst du den Gegenvortrag des Klägers.",
+          "norm": null,
+          "sprecher": "Ein Zwischenschritt, den man leicht vergisst: Ist die Verteidigung des Beklagten erheblich, prüfst du, ob der Kläger darauf erheblich erwidert. Das ist die Replik.",
+          "marken": [
+            "Replik"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Schlüssig, erheblich, beweisbedürftig – in dieser Reihenfolge.",
+          "norm": null,
+          "sprecher": "Merke: erst schlüssig, dann erheblich, dann beweisbedürftig. Wer vorher Beweise würdigt, arbeitet oft umsonst.",
+          "marken": [
+            "Reihenfolge zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Beweiswürdigung: Kommt es darauf an?",
+          "text": "Speichern für die nächste Relationsklausur.",
+          "sprecher": "Speicher dir das für die nächste Urteilsklausur. Und frag vor jeder Beweiswürdigung: Kommt es auf diese Tatsache überhaupt an?",
+          "marken": [
+            "kommt es darauf an?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Drei Stationen – bewiesen wird erst in der letzten. Klägerstation: Ist der Vortrag des Klägers schlüssig? Beklagtenstation: Ist die Verteidigung erheblich – und was ist nach § 138 Abs. 3 ZPO zugestanden? Beweisstation: nur streitige, entscheidungserhebliche Tatsachen, Beweislast und freie Würdigung nach § 286 ZPO. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#relationstechnik",
+        "#zivilurteil",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Relationstechnik: die drei Stationen",
+      "titelZeilen": [
+        "Drei Stationen –",
+        "bewiesen wird erst",
+        "in der letzten"
+      ],
+      "coverText": "Schlüssig, erheblich, streitig",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Beweis wird erst erhoben, wenn Schlüssigkeit und Erheblichkeit feststehen.",
+        "handlung": "{A} guides a small cart through two checkpoints marked by lanterns, while {B} nervously waits at the third checkpoint with a magnifying glass, not allowed to start until the cart arrives.",
+        "hinweisRegie": "Place the note in the free space above the third checkpoint where {B} waits, slightly tilted toward the magnifying glass, without covering the first two lanterns or the cart.",
+        "alternative": "{B} sorts stones through two sieves before only the last few reach {A}, who weighs them carefully on a small scale."
+      },
+      "bildSzene": "cart passes two checkpoints, third waits",
+      "bildSzeneAlt": "two sieves before final weighing",
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: assessorz-801"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-stationen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-004",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Privatmann B sagt per E-Mail zu, für die Schulden seines Bruders zu bürgen. Ist die Bürgschaft wirksam?",
+      "optionen": [
+        "Ja – Textform genügt, die E-Mail reicht",
+        "Nein – Schriftform nötig, elektronische Form ausgeschlossen",
+        "Ja, jedenfalls mit qualifizierter elektronischer Signatur"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 125 BGB",
+        "§ 126 BGB",
+        "§ 126a BGB",
+        "§ 126b BGB",
+        "§ 766 BGB",
+        "§ 350 HGB",
+        "Themenpool: bgbat-004"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-004",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein: Die Bürgschaft braucht die Schriftform – elektronisch geht nicht",
+      "text": "Die Bürgschaftserklärung muss schriftlich erteilt werden (§ 766 S. 1 BGB), also eigenhändig unterschrieben (§ 126 Abs. 1 BGB). Die elektronische Form ist ausdrücklich ausgeschlossen (§ 766 S. 2 BGB). Folge: Nichtigkeit nach § 125 S. 1 BGB. Anders für Kaufleute, wenn die Bürgschaft für sie ein Handelsgeschäft ist (§ 350 HGB).",
+      "norm": "§ 766 BGB · §§ 125, 126 BGB",
+      "quellen": [
+        "§ 125 BGB",
+        "§ 126 BGB",
+        "§ 126a BGB",
+        "§ 126b BGB",
+        "§ 766 BGB",
+        "§ 350 HGB",
+        "Themenpool: bgbat-004"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.814Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Textform genügt, die E-Mail reicht",
+        "Nein – Schriftform nötig, elektronische Form ausgeschlossen",
+        "Ja, jedenfalls mit qualifizierter elektronischer Signatur"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-861",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 200 Abs. 2 StPO: Hier steht die Beweiswürdigung der Anklage",
+      "text": "Neben dem Anklagesatz enthält die Anklageschrift das wesentliche Ergebnis der Ermittlungen (§ 200 Abs. 2 S. 1 StPO). Es fasst die Beweislage zusammen und zeigt, warum hinreichender Tatverdacht besteht – für das Gericht und für den Angeschuldigten. Bei Anklage zum Strafrichter kann es entfallen (§ 200 Abs. 2 S. 2 StPO).",
+      "norm": "§ 200 Abs. 2 StPO",
+      "quellen": [
+        "§ 200 Abs. 2 StPO",
+        "Themenpool: anklage-861"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-913",
+      "ueberzeile": "Streitstand Schuldrecht BT",
+      "titel": "Bank überweist ohne Autorisierung: Kondiziert sie direkt beim Empfänger?",
+      "norm": "§ 675u BGB · § 812 Abs. 1 S. 1 Alt. 2 BGB",
+      "optionen": [
+        "BGH: Ja – Nichtleistungskondiktion gegen den Empfänger, auch wenn er gutgläubig war.",
+        "Teile der Lit.: Empfängerschutz – bei zurechenbar gesetztem Rechtsschein Ausgleich über den Zahler."
+      ],
+      "text": "Klausur: Erst § 675u BGB – die Bank hat gegen den Kunden keinen Aufwendungsersatz und muss sein Konto wiederherstellen. Die Zahlung ist dem Kunden nicht als Leistung zuzurechnen. Deshalb greift der BGH direkt auf den Empfänger zu; einen Vertrauensschutz über Rechtsscheingrundsätze lehnt er insoweit ab.",
+      "quellen": [
+        "§ 675j BGB",
+        "§ 675u BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "Themenpool: schuldbt-913"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-283",
+      "ueberzeile": "Merksatz ZPO",
+      "titel": "Anscheinsbeweis erschüttern heißt nicht: Gegenteil beweisen",
+      "text": "Typischer Ablauf, etwa beim Auffahrunfall: Schluss auf das Verschulden. Der Gegner muss nur einen atypischen Verlauf ernsthaft möglich machen – dann braucht es wieder vollen Beweis.",
+      "norm": "§ 286 ZPO",
+      "quellen": [
+        "§ 286 ZPO",
+        "Themenpool: zpo-283"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-422",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Heilung: Vollzug macht den formnichtigen Vertrag wirksam – nur wo das Gesetz es anordnet",
+      "text": "Heilung heißt: Ein wegen Formmangels nichtiger Vertrag wird durch Erfüllung wirksam. Das gilt nur, wo das Gesetz es vorsieht – etwa beim Grundstückskauf durch Auflassung und Eintragung (§ 311b Abs. 1 S. 2 BGB), beim Schenkungsversprechen durch Bewirkung der Leistung (§ 518 Abs. 2 BGB) oder bei der Bürgschaft, soweit der Bürge zahlt (§ 766 S. 3 BGB).",
+      "norm": "§§ 311b Abs. 1 S. 2, 518 Abs. 2, 766 S. 3 BGB",
+      "quellen": [
+        "§ 125 BGB",
+        "§ 311b Abs. 1 BGB",
+        "§ 518 Abs. 2 BGB",
+        "§ 766 BGB",
+        "Themenpool: bgbat-422"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:50.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,873 @@
+{
+  "datum": "2026-11-29",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "bgbat-154",
+        "themaTitel": "Was ist ein lediglich rechtlicher Vorteil i.S.d. § 107 BGB?",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-716",
+        "themaTitel": "Kausalität nach der conditio-sine-qua-non-Formel",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "verwalt-100"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "verwalt-100"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "bereich-217"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "fehler",
+        "themaId": "zwangsv-827"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "tipp",
+        "themaId": "zwangsv-588"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "zahl",
+        "themaId": "zpo-051"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "bgbat-154",
+      "poolTitel": "Was ist ein lediglich rechtlicher Vorteil i.S.d. § 107 BGB?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 107 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-716",
+      "poolTitel": "Kausalität nach der conditio-sine-qua-non-Formel",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-100",
+      "poolTitel": "Welche Arten von Gemeindehoheiten gibt es?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-100",
+      "poolTitel": "Welche Arten von Gemeindehoheiten gibt es?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bereich-217",
+      "poolTitel": "Was ist die verschärfte Haftung nach § 819 BGB?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 818 Abs. 4 BGB",
+        "§ 819 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "zwangsv-827",
+      "poolTitel": "Was präkludiert § 767 Abs. 2 ZPO?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 Abs. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-09-30"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "zwangsv-588",
+      "poolTitel": "Zwangsvollstreckungsklausur: richtige Klage/Rechtsbehelf wählen",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 766, 767, 771 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-11-29-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Themen der Woche – wie viele sitzen?",
+          "titelZeilen": [
+            "18 Themen",
+            "der Woche –",
+            "wie viele sitzen?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Entreicherung: Wer Alltagsausgaben bezahlt, hat erspart und bleibt bereichert (§ 818 Abs. 3 BGB).",
+            "Berufung: Unstreitige Verjährungseinrede ist nach dem BGH trotz § 531 Abs. 2 ZPO zuzulassen.",
+            "GoA: Auch ein auch-fremdes Geschäft genügt; der Fremdgeschäftsführungswille wird vermutet.",
+            "AGB: Die zu weite Klausel fällt ganz weg – keine geltungserhaltende Reduktion (§ 306 BGB).",
+            "Versendungskauf: Beim Verbrauchsgüterkauf schränkt § 475 Abs. 2 BGB den § 447 BGB stark ein."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Zueignungsabsicht: Enteignung auf Dauer (Vorsatz), Aneignung vorübergehend (Absicht).",
+            "Totschlag: Bedingter Vorsatz genügt – ein Tötungswunsch ist nicht nötig.",
+            "§ 265a StGB: Nach dem BGH genügt der Anschein ordnungsgemäßer Nutzung.",
+            "Plädoyer: Urteilsstil, Ergebnis zuerst, am Ende ein konkreter Antrag.",
+            "Revision: Aufgehoben wird nur, soweit der Fehler reicht (§ 353 StPO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Anfechtungsklage: Rechtswidrigkeit plus Rechtsverletzung (§ 113 Abs. 1 S. 1 VwGO).",
+            "§ 48 Abs. 2 VwVfG: Vertrauensschutz nur bei Geld- und teilbaren Sachleistungen.",
+            "Fehlende Begründung ist heilbar (§ 45 VwVfG) – fehlende Bestimmtheit nicht.",
+            "Verwaltungsakt: sechs Merkmale – Versetzung ja, Umsetzung nein.",
+            "BVerfG-Eilantrag: Folgenabwägung statt Erfolgsprognose (§ 32 BVerfGG).",
+            "Beigeladener trägt Kosten nur nach eigenem Antrag (§ 154 Abs. 3 VwGO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Schwerpunkte: Signale im Sachverhalt, Zeitmarken, Eindeutiges in einem Satz.",
+            "Probeklausur: Fehler sortieren, je Kategorie eine Maßnahme."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Online-Kauf, Paket unterwegs zerstört: Muss die Verbraucherin zahlen?",
+            "Nachbar rügt nur eine Norm zum Schutz der Allgemeinheit: Klage begründet?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Rechtsfolgen sauber trennen",
+            "Strafrecht: Vorsatz und Aufbau",
+            "Öffentliches Recht: Heilung und Rechtsschutz",
+            "Klausurtechnik: Zeit bewusst verteilen"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "18 Themen aus vier Bereichen – von der Entreicherung über den Tötungsvorsatz bis zur einstweiligen Anordnung des BVerfG. Jede Folie bündelt einen Lernbereich in Kernsätzen. Geh sie ohne Unterlagen durch, beantworte den Selbsttest und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Selbsttest",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Am Ende der Woche zeigt ein kurzer Selbsttest, welche Themen schon sitzen und welche noch einmal dran sind.",
+        "handlung": "{A} holds up simple flash cards one after another, while {B} sorts them into two baskets – one glowing softly, one still dim.",
+        "hinweisRegie": "Place the note in the free space above the dim basket, slightly tilted toward it, so it points to the topics still to repeat without covering the cards or hands.",
+        "alternative": "{B} climbs four short steps of a staircase, testing each with a foot, while {A} marks the one step that still creaks."
+      },
+      "bildSzene": "flash cards sorted into two baskets",
+      "bildSzeneAlt": "testing four steps, one creaks",
+      "quellen": [
+        "§ 818 BGB",
+        "§ 531 ZPO",
+        "§ 677 BGB",
+        "§ 306 BGB",
+        "§§ 447, 475 BGB",
+        "§ 242 StGB",
+        "§ 212 StGB",
+        "§ 265a StGB",
+        "§ 258 StPO",
+        "§§ 353, 354 StPO",
+        "§ 113 VwGO",
+        "§ 48 VwVfG",
+        "§§ 37, 39, 45 VwVfG",
+        "§ 35 VwVfG",
+        "§ 32 BVerfGG",
+        "§§ 154, 162 VwGO",
+        "Themenpool: methodik-902",
+        "Themenpool: mindset-2"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.940Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-154",
+      "slug": "2026-11-29-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Lediglich vorteilhaft? Drei Prüffragen zu § 107 BGB",
+          "titelZeilen": [
+            "Lediglich",
+            "vorteilhaft? Drei",
+            "Prüffragen zu",
+            "§ 107 BGB"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Rechtlich, nicht wirtschaftlich",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Der beschränkt Geschäftsfähige braucht keine Einwilligung seines gesetzlichen Vertreters, wenn er durch die Willenserklärung lediglich einen rechtlichen Vorteil erlangt (§ 107 BGB). Es zählt allein die rechtliche Wirkung – nicht, ob sich das Geschäft wirtschaftlich lohnt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die drei Prüffragen",
+          "schritte": [
+            {
+              "titel": "1. Persönliche Pflicht?",
+              "text": "Verpflichtet ihn das Geschäft? Dann nachteilig – der Kaufvertrag wegen der Kaufpreispflicht immer."
+            },
+            {
+              "titel": "2. Rechtsverlust?",
+              "text": "Verliert er ein Recht? Die Übereignung an ihn ist vorteilhaft, die Übereignung seiner Sache nachteilig."
+            },
+            {
+              "titel": "3. Belastende Folgepflichten?",
+              "text": "Vor allem beim Grundstück: Eine Grundschuld schadet nicht, eine laufende Vermietung schon (§ 566 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Grundstücksschenkung",
+          "punkte": [
+            "Grundschuld oder Hypothek: kein Nachteil – er haftet nicht persönlich, nur mit dem Grundstück.",
+            "Vermietetes Grundstück: Nachteil, weil er in die Pflichten aus dem Mietvertrag eintritt.",
+            "Laufende öffentliche Lasten wie die Grundsteuer: nach dem BGH regelmäßig kein Nachteil."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Sonderfall: neutrale Geschäfte",
+          "text": "Verfügt der Minderjährige als Nichtberechtigter über eine fremde Sache, verliert er selbst nichts. Nach h.M. ist die Verfügung deshalb ohne Einwilligung wirksam – ob der Erwerber Eigentum erlangt, richtet sich nach den Regeln über den gutgläubigen Erwerb."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 107 BGB fragt rechtlich, nicht wirtschaftlich: keine Pflicht, kein Rechtsverlust, keine belastenden Folgepflichten."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 107 BGB in drei Fragen",
+          "punkte": [
+            "Persönliche Pflicht?",
+            "Rechtsverlust?",
+            "Belastende Folgepflichten?"
+          ],
+          "icons": [
+            "vertrag",
+            "schluessel",
+            "haus"
+          ]
+        }
+      ],
+      "caption": "Lediglich rechtlich vorteilhaft? § 107 BGB fragt nicht, ob sich ein Geschäft lohnt, sondern ob es den Minderjährigen rechtlich belastet. Drei Prüffragen: Entsteht eine persönliche Pflicht? Verliert er ein Recht? Folgen belastende Pflichten aus dem Erwerb – etwa der Eintritt in einen Mietvertrag? Eine Grundschuld schadet dagegen nicht. Speichern für die nächste Minderjährigenklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#107bgb",
+        "#minderjährige",
+        "#geschäftsfähigkeit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 107 BGB: lediglich rechtlicher Vorteil",
+      "coverText": "Rechtlich, nicht wirtschaftlich",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Ein Geschenk ist nur dann lediglich vorteilhaft, wenn es keine rechtlichen Pflichten mit sich bringt.",
+        "handlung": "{B} hands a small house model to {A}, who notices a thin chain on its back door leading to a tenant figure waiting inside.",
+        "hinweisRegie": "Place the note in the free space next to the thin chain and the tenant figure, slightly tilted toward them, so it marks the hidden obligation without covering the hands or the house model.",
+        "alternative": "{A} weighs a shiny gift box on one hand while {B} points to a small hook on the box that attaches a heavy backpack."
+      },
+      "bildSzene": "gift house with chained tenant inside",
+      "bildSzeneAlt": "gift box hooked to heavy backpack",
+      "quellen": [
+        "§ 106 BGB",
+        "§ 107 BGB",
+        "§ 566 BGB",
+        "Themenpool: bgbat-154"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-pruefragen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.940Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-716",
+      "slug": "2026-11-29-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Wäre er sowieso gestorben – und du trotzdem kausal?",
+          "unter": "Kausalität · Strafrecht AT",
+          "text": "Hypothetische Ersatzursachen bleiben außer Betracht.",
+          "norm": null,
+          "icon": "lupe",
+          "sprecher": "Er wäre sowieso gestorben. Trotzdem bist du kausal. Denn es zählt der Erfolg in seiner konkreten Gestalt. Gehen wir die Formel und ihre Klassiker durch.",
+          "marken": [
+            "sowieso gestorben?",
+            "konkrete Gestalt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Formel",
+          "text": "Nicht hinwegzudenken, ohne dass der konkrete Erfolg entfiele.",
+          "norm": null,
+          "sprecher": "Schritt eins: die Formel. Eine Handlung ist kausal, wenn sie nicht hinweggedacht werden kann, ohne dass der Erfolg in seiner konkreten Gestalt entfiele. Jede Bedingung ist gleichwertig.",
+          "marken": [
+            "conditio sine qua non"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Nichts hinzudenken",
+          "text": "Reserveursachen bleiben außer Betracht.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Du denkst nur weg, nichts hinzu. Dass das Opfer kurz darauf ohnehin gestorben wäre, ändert nichts. Der Tod in dieser konkreten Form geht auf den Täter zurück.",
+          "marken": [
+            "nichts hinzudenken"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Alternative Kausalität",
+          "text": "Zwei unabhängig tödliche Dosen: beide kausal.",
+          "norm": null,
+          "sprecher": "Schritt drei: alternative Kausalität. A und B geben unabhängig voneinander je eine tödliche Dosis. Die Formel versagt. Deshalb gilt: Von mehreren Bedingungen, die alternativ, aber nicht kumulativ hinweggedacht werden können, ist jede kausal.",
+          "marken": [
+            "jede kausal"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kumulative Kausalität",
+          "text": "Erst beide Dosen zusammen töten: jede ist kausal.",
+          "norm": null,
+          "sprecher": "Schritt vier: kumulative Kausalität. Erst beide Dosen zusammen sind tödlich. Auch dann ist jede kausal. Ob der Erfolg zurechenbar ist, prüfst du danach gesondert.",
+          "marken": [
+            "zusammen tödlich"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Überholende Kausalität",
+          "text": "Der Zweite kommt dem Ersten zuvor: Der Erste ist nicht kausal.",
+          "norm": null,
+          "sprecher": "Und der Klassiker: A vergiftet das Opfer. Bevor das Gift wirkt, erschießt es B. Die Kette von A bricht ab. A ist nicht kausal, es bleibt beim Versuch.",
+          "marken": [
+            "Kette bricht ab"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Wegdenken, nichts hinzudenken – der konkrete Erfolg zählt.",
+          "norm": null,
+          "sprecher": "Merke: wegdenken, aber nichts hinzudenken. Maßgeblich ist der Erfolg in seiner konkreten Gestalt.",
+          "marken": [
+            "konkreter Erfolg"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nach der Kausalität: Zurechnung prüfen",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur. Und denk dran: Kausalität ist erst der Anfang. Danach kommt die objektive Zurechnung.",
+          "marken": [
+            "dann Zurechnung"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Er wäre sowieso gestorben – bist du trotzdem kausal? Ja. Nach der conditio-sine-qua-non-Formel denkst du die Handlung weg, aber nichts hinzu: Reserveursachen bleiben außer Betracht, es zählt der Erfolg in seiner konkreten Gestalt. Dazu die Klassiker: alternative und kumulative Kausalität – jeweils ist jede Bedingung kausal – und die überholende Kausalität, bei der der Erste beim Versuch bleibt. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#kausalität",
+        "#conditiosinequanon",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kausalität: die csqn-Formel und ihre Klassiker",
+      "titelZeilen": [
+        "Wäre er sowieso",
+        "gestorben – und du",
+        "trotzdem kausal?"
+      ],
+      "coverText": "Wegdenken, nichts hinzudenken",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Was ohnehin passiert wäre, spielt für die Kausalität keine Rolle – es zählt der tatsächliche Ablauf.",
+        "handlung": "{A} lifts one domino out of a falling row to show the chain stops, while {B} nervously holds a second, never-used domino ready beside the row, which {A} waves away.",
+        "hinweisRegie": "Place the note in the open space next to {B}'s unused spare domino, slightly tilted toward it, so it marks the ignored reserve cause without covering the falling row or hands.",
+        "alternative": "{B} pours two small cups into one glass that only overflows with both, while {A} points at each cup in turn."
+      },
+      "bildSzene": "domino lifted, spare domino waved away",
+      "bildSzeneAlt": "two cups overflow one glass together",
+      "quellen": [
+        "StGB AT (Kausalität)",
+        "Themenpool: strafat-716"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.942Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-100",
+      "ueberzeile": "Prüfungsfrage Kommunalrecht",
+      "titel": "Die Gemeinde stellt ihre Bebauungspläne selbst auf. Welche Gemeindehoheit ist betroffen?",
+      "optionen": [
+        "Die Finanzhoheit",
+        "Die Personalhoheit",
+        "Die Planungshoheit"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "§ 2 Abs. 1 BauGB",
+        "Themenpool: verwalt-100"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.942Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-100",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Planungshoheit",
+      "text": "Aus Art. 28 Abs. 2 GG werden klassisch die Gemeindehoheiten abgeleitet: Gebiets-, Organisations-, Personal-, Finanz-, Planungs- und Satzungshoheit. Die Planungshoheit umfasst die eigenverantwortliche Bauleitplanung (§ 2 Abs. 1 BauGB). Deshalb kann sich eine Gemeinde gegen fremde Planungen wehren, die ihre eigene Planung nachhaltig stören.",
+      "norm": "Art. 28 Abs. 2 GG · § 2 Abs. 1 BauGB",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "§ 2 Abs. 1 BauGB",
+        "Themenpool: verwalt-100"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.942Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Finanzhoheit",
+        "Die Personalhoheit",
+        "Die Planungshoheit"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-217",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 819 BGB: Wer den Mangel kennt, haftet verschärft – aber wessen Kenntnis zählt?",
+      "text": "Kennt der Empfänger den fehlenden Rechtsgrund beim Empfang oder erfährt er ihn später, haftet er ab dann wie nach Rechtshängigkeit (§§ 819 Abs. 1, 818 Abs. 4 BGB) – ohne Entreicherungseinwand. Bei Minderjährigen wird differenziert: bei der Leistungskondiktion Kenntnis des Vertreters, bei der Eingriffskondiktion nach verbreiteter Ansicht analog § 828 BGB.",
+      "norm": "§§ 818 Abs. 4, 819 Abs. 1 BGB",
+      "quellen": [
+        "§ 818 BGB",
+        "§ 819 BGB",
+        "§ 828 BGB",
+        "Themenpool: bereich-217"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.942Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-827",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Aufrechnung erst nach dem Urteil erklärt: Ist § 767 Abs. 2 ZPO damit überwunden?",
+      "falsch": "Der Schuldner hat die Aufrechnung erst nach der letzten mündlichen Verhandlung erklärt – also ist der Einwand nicht präkludiert.",
+      "richtigText": "Nach der Rspr. kommt es bei Gestaltungsrechten darauf an, wann sie objektiv ausgeübt werden konnten – bei der Aufrechnung also auf die Aufrechnungslage. Bestand sie schon vor Schluss der mündlichen Verhandlung, ist der Einwand nach § 767 Abs. 2 ZPO ausgeschlossen. Große Teile der Literatur stellen dagegen auf die Erklärung ab.",
+      "quellen": [
+        "§ 767 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "Themenpool: zwangsv-827"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.942Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-588",
+      "ueberzeile": "Klausurtipp ZV-Recht",
+      "titel": "Zwangsvollstreckung: erst fragen, was genau angegriffen wird",
+      "text": "Rügt der Schuldner die Art und Weise der Vollstreckung, also Verfahrensfehler: Erinnerung (§ 766 ZPO). Wendet er sich materiell gegen den titulierten Anspruch: Vollstreckungsabwehrklage (§ 767 ZPO). Beruft sich ein Dritter auf ein Recht am Gegenstand: Drittwiderspruchsklage (§ 771 ZPO). Gegen Entscheidungen im Vollstreckungsverfahren: sofortige Beschwerde (§ 793 ZPO).",
+      "quellen": [
+        "§ 766 ZPO",
+        "§ 767 ZPO",
+        "§ 771 ZPO",
+        "§ 793 ZPO",
+        "Themenpool: zwangsv-588"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.942Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-051",
+      "ueberzeile": "4 Punkte Zivilprozess",
+      "titel": "Eingereicht ist noch nicht rechtshängig",
+      "text": "Zwei Zeitpunkte, die du in jeder Klausur auseinanderhalten musst.",
+      "punkte": [
+        "Anhängig: mit Eingang der Klage bei Gericht",
+        "Rechtshängig: erst mit Zustellung (§§ 253 Abs. 1, 261 Abs. 1 ZPO)",
+        "Frist und Verjährung: Zustellung „demnächst“ wirkt auf den Eingang zurück (§ 167 ZPO)",
+        "Folgen: Sperre einer zweiten Klage, Prozesszinsen (§ 261 Abs. 3 ZPO, § 291 BGB)"
+      ],
+      "quellen": [
+        "§ 253 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO",
+        "§ 291 BGB",
+        "Themenpool: zpo-051"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:44.942Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

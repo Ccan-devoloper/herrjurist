@@ -1,0 +1,858 @@
+{
+  "datum": "2026-10-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-551",
+        "themaTitel": "Streitgegenstand im Zivilprozess",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-318",
+        "themaTitel": "Wie prüft man die Körperverletzung mit Todesfolge?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-404",
+        "themaTitel": "Was ist die Schutznormtheorie?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "strafbt-319"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "strafbt-319"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "verwalt-098"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:39",
+        "art": "streitstand",
+        "themaId": "strafat-057"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:55",
+        "art": "merksatz",
+        "themaId": "staat-593"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:13",
+        "art": "begriff",
+        "themaId": "ipr-891"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-551",
+      "poolTitel": "Streitgegenstand im Zivilprozess",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 253, 308 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-318",
+      "poolTitel": "Wie prüft man die Körperverletzung mit Todesfolge?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 227 StGB",
+        "§ 18 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-404",
+      "poolTitel": "Was ist die Schutznormtheorie?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 2 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-319",
+      "poolTitel": "Wann ist eine Einwilligung in die Körperverletzung sittenwidrig?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 228 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-319",
+      "poolTitel": "Wann ist eine Einwilligung in die Körperverletzung sittenwidrig?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 228 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-098",
+      "poolTitel": "Wann darf ein rechtswidriger begünstigender Verwaltungsakt zurückgenommen werden?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafat-057",
+      "poolTitel": "Was ist der Unterschied zwischen Eventualvorsatz und bewusster Fahrlässigkeit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB",
+        "§ 16 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "staat-593",
+      "poolTitel": "Bundesstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "ipr-891",
+      "poolTitel": "Welches Recht gilt für eine unerlaubte Handlung im Ausland?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 Rom II-VO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-551",
+      "slug": "2026-10-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gleiche Summe, neuer Grund: Ist das eine Klageänderung?",
+          "titelZeilen": [
+            "Gleiche Summe,",
+            "neuer Grund: Ist",
+            "das eine Klage-",
+            "änderung?"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Lebenssachverhalt entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verklagt B auf 5.000 € Kaufpreis für ein geliefertes Motorrad. Später trägt K vor: Falls der Vertrag nichtig sei, schulde B denselben Betrag als Wertersatz nach §§ 812, 818 Abs. 2 BGB. Hilfsweise verlangt er 5.000 € aus einem ganz anderen Darlehen. Klageänderung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Streitgegenstand bestimmen",
+              "text": "Zweigliedriger Begriff der Rspr.: Antrag plus Lebenssachverhalt, aus dem K die Rechtsfolge herleitet."
+            },
+            {
+              "titel": "Variante 1: § 812 BGB",
+              "text": "Gleicher Antrag, gleicher Lebenssachverhalt – die Lieferung des Motorrads. Nur eine neue rechtliche Begründung: keine Klageänderung."
+            },
+            {
+              "titel": "Variante 2: Darlehen",
+              "text": "Gleicher Betrag, aber ein anderer Lebenssachverhalt: neuer Streitgegenstand. Nachträgliche Klagehäufung, behandelt wie eine Klageänderung."
+            },
+            {
+              "titel": "Zulässigkeit",
+              "text": "Einwilligung des Beklagten oder Sachdienlichkeit (§ 263 ZPO); rügeloses Einlassen gilt als Einwilligung (§ 267 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Jede neue Anspruchsgrundlage wird als Klageänderung geprüft. Doch das Gericht prüft ohnehin alle Anspruchsgrundlagen, die der vorgetragene Lebenssachverhalt trägt. Den Streitgegenstand ändert erst ein neuer Antrag oder ein neuer Lebenssachverhalt."
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Streitgegenstand zählt",
+          "punkte": [
+            "Rechtshängigkeitssperre (§ 261 Abs. 3 Nr. 1 ZPO)",
+            "Umfang der Rechtskraft (§ 322 Abs. 1 ZPO)",
+            "Klagehäufung und Klageänderung (§§ 260, 263 ZPO)",
+            "Bindung an den Antrag: nicht mehr und nichts anderes (§ 308 Abs. 1 ZPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Neue Anspruchsgrundlage: gleicher Streitgegenstand. Neuer Antrag oder neuer Lebenssachverhalt: neuer Streitgegenstand."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Klageänderung fragen",
+          "punkte": [
+            "Hat sich der Antrag geändert?",
+            "Ist der Lebenssachverhalt neu?",
+            "Greift eine Ausnahme nach § 264 ZPO?"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Gleiche Summe, neuer Grund – ist das eine Klageänderung? Es kommt darauf an, was neu ist. Nach dem zweigliedrigen Streitgegenstandsbegriff zählen Antrag und Lebenssachverhalt. Eine neue Anspruchsgrundlage für denselben Sachverhalt ändert nichts; ein anderer Lebenssachverhalt schon – dann gelten §§ 263 ff. ZPO. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#streitgegenstand",
+        "#klageänderung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Streitgegenstand: Wann ändert sich die Klage?",
+      "coverText": "Lebenssachverhalt entscheidet",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Den Streitgegenstand bilden Antrag und Lebenssachverhalt – eine neue Anspruchsgrundlage ändert ihn nicht.",
+        "handlung": "{B} hovers and ties a new coloured ribbon onto the same wrapped parcel, while {A} taps his pointer on a second, clearly different parcel that has just been pushed onto the table.",
+        "hinweisRegie": "Place the note in the free space between the re-ribboned parcel and the new parcel, slightly tilted toward the new one, without covering the ribbons or {A}'s pointer.",
+        "alternative": "{A} points at a single tree decorated with several ribbons, while {B} plants a second, separate sapling right next to it."
+      },
+      "bildSzene": "same parcel re-ribboned, new parcel arrives",
+      "bildSzeneAlt": "one ribboned tree, second sapling planted",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 261 Abs. 3 ZPO",
+        "§§ 260, 263, 264, 267 ZPO",
+        "§ 308 ZPO",
+        "§ 322 ZPO",
+        "Themenpool: zpo-551"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "entscheidungsfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.083Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-318",
+      "slug": "2026-10-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 227 StGB in fünf Schritten – der vierte entscheidet",
+          "titelZeilen": [
+            "§ 227 StGB in fünf",
+            "Schritten – der",
+            "vierte entscheidet"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Gefahrzusammenhang ist der Kern",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A schlägt O mit der Faust nieder. O stürzt, schlägt mit dem Kopf auf die Bordsteinkante und stirbt. Hat sich A nach § 227 StGB strafbar gemacht – und in welcher Reihenfolge prüfst du?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Grunddelikt",
+              "text": "Vorsätzliche Körperverletzung, hier § 223 StGB durch den Faustschlag."
+            },
+            {
+              "titel": "Tod des Opfers",
+              "text": "Die schwere Folge ist eingetreten: O ist gestorben."
+            },
+            {
+              "titel": "Kausalität",
+              "text": "Ohne den Schlag kein Sturz und kein Tod."
+            },
+            {
+              "titel": "Spezifischer Gefahrzusammenhang",
+              "text": "Im Tod verwirklicht sich gerade die Gefahr der Körperverletzung – ein Sturz nach dem Faustschlag ist typisch."
+            },
+            {
+              "titel": "Wenigstens Fahrlässigkeit (§ 18 StGB)",
+              "text": "Pflichtwidrig ist schon die Körperverletzung; der Tod muss vorhersehbar sein – subjektiv in der Schuld."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo es streitig wird",
+          "punkte": [
+            "Muss der Tod aus dem Verletzungserfolg folgen? Die Rspr. lässt die gefährliche Handlung genügen.",
+            "Fluchtfälle sind umstritten; die Rspr. hat den Zusammenhang bei panischer Flucht vor massiver Gewalt bejaht.",
+            "Bleibt die Körperverletzung im Versuch, hält die Rspr. einen erfolgsqualifizierten Versuch für möglich."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nach der Kausalität direkt zur Fahrlässigkeit springen. Der Gefahrzusammenhang ist der Filter des § 227 StGB: Nur wenn sich im Tod gerade die Gefahr der Körperverletzung verwirklicht, ist die hohe Mindeststrafe gerechtfertigt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Grunddelikt, Tod, Kausalität, spezifischer Gefahrzusammenhang, wenigstens Fahrlässigkeit (§ 18 StGB) – Schritt vier trägt die Klausur."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 227 StGB auf einen Blick",
+          "punkte": [
+            "Grunddelikt und Tod",
+            "Kausalität",
+            "Spezifischer Gefahrzusammenhang",
+            "Fahrlässigkeit nach § 18 StGB"
+          ],
+          "icons": [
+            "person",
+            "kreislauf",
+            "warnung",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "§ 227 StGB in fünf Schritten: Grunddelikt, Tod, Kausalität, spezifischer Gefahrzusammenhang, wenigstens Fahrlässigkeit nach § 18 StGB. Der vierte Schritt entscheidet – im Tod muss sich gerade die Gefahr der Körperverletzung verwirklichen. Die Rspr. lässt dafür auch die gefährliche Handlung genügen; Fluchtfälle bleiben umstritten. Speichern für die nächste Klausur im Strafrecht BT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#227stgb",
+        "#erfolgsqualifikation",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 227 StGB: Körperverletzung mit Todesfolge",
+      "coverText": "Gefahrzusammenhang ist der Kern",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Bei § 227 StGB reicht es nicht, dass der Tod irgendwie folgt – es muss sich gerade die Gefahr der Körperverletzung verwirklichen.",
+        "handlung": "{A} holds a taut rope that runs from a small falling rock straight to a toppled tower, while {B} nervously checks along the rope that it has no detours or knots.",
+        "hinweisRegie": "Place the note in the free space along the middle of the rope, slightly tilted, so it marks the specific connection without covering the falling rock, the tower or {B}'s checking hands.",
+        "alternative": "{B} follows a line of fallen dominoes and stops at a gap where a stray ball knocked one over from outside, while {A} points calmly at the gap."
+      },
+      "bildSzene": "rope links falling rock to toppled tower",
+      "bildSzeneAlt": "domino line with gap from stray ball",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 227 StGB",
+        "§ 18 StGB",
+        "Themenpool: strafbt-318"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-schritte-kernschritt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.083Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-404",
+      "slug": "2026-10-28-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Betroffen sein reicht für die Klagebefugnis nicht",
+          "unter": "Klagebefugnis · § 42 Abs. 2 VwGO",
+          "text": "Der Dritte braucht eine Norm, die gerade ihn schützen soll.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "icon": "schild",
+          "sprecher": "Betroffen sein reicht für die Klagebefugnis nicht. Wer nicht Adressat ist, braucht eine Norm, die gerade ihn schützen soll. Das ist die Schutznormtheorie.",
+          "marken": [
+            "betroffen ≠ befugt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Adressat oder Dritter?",
+          "text": "Adressat eines belastenden VA: jedenfalls Art. 2 Abs. 1 GG möglich verletzt.",
+          "norm": "Art. 2 Abs. 1 GG",
+          "sprecher": "Schritt eins: Ist der Kläger Adressat eines belastenden Verwaltungsakts? Dann ist er nach der Adressatentheorie jedenfalls möglicherweise in seiner allgemeinen Handlungsfreiheit verletzt. Die Schutznormtheorie brauchst du vor allem für Dritte.",
+          "marken": [
+            "Adressatentheorie"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Schutznorm suchen",
+          "text": "Die Norm muss zumindest auch Individualinteressen schützen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Such die Norm, auf die sich der Dritte beruft. Sie darf nicht nur der Allgemeinheit dienen, sondern muss zumindest auch seine individuellen Interessen schützen.",
+          "marken": [
+            "zumindest auch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Abgrenzbarer Personenkreis",
+          "text": "Der geschützte Kreis hebt sich von der Allgemeinheit ab – und der Kläger gehört dazu.",
+          "norm": null,
+          "sprecher": "Schritt drei: Der geschützte Personenkreis muss sich hinreichend von der Allgemeinheit abgrenzen lassen. Und der Kläger muss zu diesem Kreis gehören.",
+          "marken": [
+            "abgrenzbarer Kreis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Möglichkeit genügt",
+          "text": "Die Verletzung darf nur nicht offensichtlich und eindeutig ausgeschlossen sein.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "sprecher": "Schritt vier: Für die Klagebefugnis genügt, dass eine Verletzung dieses Rechts möglich ist. Sie darf nur nicht offensichtlich und eindeutig ausgeschlossen sein.",
+          "marken": [
+            "Möglichkeitstheorie"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Nachbar gegen Baugenehmigung",
+          "text": "Drittschützend: in der Regel Abstandsflächen, Rücksichtnahmegebot. Nicht: bloße Wertminderung.",
+          "norm": null,
+          "sprecher": "Klassiker: Der Nachbar klagt gegen eine Baugenehmigung. Drittschützend sind etwa in der Regel die Abstandsflächen der Landesbauordnungen und das Gebot der Rücksichtnahme. Eine bloße Wertminderung seines Grundstücks reicht nicht.",
+          "marken": [
+            "Wertverlust reicht nicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Schutzrichtung statt Betroffenheit",
+          "text": "Dritte brauchen eine Norm, die zumindest auch ihren Schutz bezweckt.",
+          "norm": null,
+          "sprecher": "Merke: Nicht die Betroffenheit zählt, sondern die Schutzrichtung der Norm. Dritte brauchen eine Norm, die zumindest auch sie schützen soll.",
+          "marken": [
+            "Schutzrichtung zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Norm, Kreis, Möglichkeit",
+          "text": "Speichern für die nächste Drittanfechtung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Drittanfechtung im Öffentlichen Recht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Betroffen sein reicht für die Klagebefugnis nicht. Wer nicht Adressat ist, braucht nach der Schutznormtheorie eine Norm, die zumindest auch seine Individualinteressen schützt und einen abgrenzbaren Personenkreis erfasst, zu dem er gehört (§ 42 Abs. 2 VwGO). Beim Nachbarn heißt das: Abstandsflächen oder Rücksichtnahmegebot ja, bloße Wertminderung nein. Speichern für die nächste Drittanfechtung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klagebefugnis",
+        "#schutznormtheorie",
+        "#baurecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schutznormtheorie: Wer darf klagen?",
+      "titelZeilen": [
+        "Betroffen sein",
+        "reicht für die",
+        "Klagebefugnis nicht"
+      ],
+      "coverText": "Nur Schutznormen öffnen die Tür",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Klagen darf ein Dritter nur, wenn eine Norm gerade seine Interessen schützen soll.",
+        "handlung": "{A} peeks over a fence at a tall tower rising next door, while {B} hands her a small shield cut exactly to the outline of her own plot.",
+        "hinweisRegie": "Place the note in the free space right next to the fitted shield, slightly tilted toward it, so the individual protection is clear without covering the fence or {A}'s curious face.",
+        "alternative": "{B} hands umbrellas only to the people standing directly under a dripping roof, while {A} watches a passer-by further away walk on without one."
+      },
+      "bildSzene": "fitted shield handed over neighbour fence",
+      "bildSzeneAlt": "umbrellas only under dripping roof",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "Art. 2 Abs. 1 GG",
+        "Landesbauordnungen (Abstandsflächen)",
+        "Themenpool: vwgo-404"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "schlagwort-reicht-nicht",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-319",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "Einwilligung in die Körperverletzung: Worauf stellt der BGH bei der Sittenwidrigkeit vor allem ab?",
+      "optionen": [
+        "Auf Art und Gewicht der Verletzung und die Lebensgefahr",
+        "Auf den verwerflichen Zweck, den die Beteiligten verfolgen",
+        "Auf das Moralempfinden der Bevölkerung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 228 StGB",
+        "Themenpool: strafbt-319"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-319",
+      "ueberzeile": "Auflösung",
+      "titel": "Auf das Gewicht der Verletzung – nicht auf den Zweck",
+      "text": "Nach § 228 StGB bleibt die Tat trotz Einwilligung rechtswidrig, wenn sie gegen die guten Sitten verstößt. Der BGH stellt vorrangig auf Art und Gewicht des Körperverletzungserfolgs und den Grad der Gefahr ab. Bringt die Tat das Opfer in konkrete Todesgefahr, ist sie regelmäßig sittenwidrig. Der verfolgte Zweck tritt grundsätzlich zurück.",
+      "norm": "§ 228 StGB",
+      "quellen": [
+        "§ 228 StGB",
+        "Themenpool: strafbt-319"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.086Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Auf Art und Gewicht der Verletzung und die Lebensgefahr",
+        "Auf den verwerflichen Zweck, den die Beteiligten verfolgen",
+        "Auf das Moralempfinden der Bevölkerung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-098",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 48 VwVfG: Bei Geldleistungen kann Vertrauen die Rücknahme sperren",
+      "text": "Rücknahme eines rechtswidrigen begünstigenden VA: nur nach Abs. 2–4. Bei Geld- und Sachleistungen scheidet die Rücknahme aus, soweit das Vertrauen schutzwürdig ist, etwa bei Verbrauch – nicht bei Täuschung, Drohung, Bestechung, falschen Angaben, Kenntnis oder grob fahrlässiger Unkenntnis. Sonst: Rücknahme mit Ausgleich (Abs. 3). Frist: ein Jahr ab Kenntnis (Abs. 4).",
+      "norm": "§ 48 Abs. 1–4 VwVfG",
+      "quellen": [
+        "§ 48 VwVfG",
+        "VwVfG der Länder",
+        "Themenpool: verwalt-098"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-057",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Bedingter Vorsatz oder bewusste Fahrlässigkeit: Was trennt beide?",
+      "norm": "§ 15 StGB",
+      "optionen": [
+        "Rspr.: Täter hält den Erfolg für möglich und billigt ihn oder findet sich damit ab.",
+        "Teile der Lit.: Wissen um die konkrete Gefahr genügt – ein Willenselement braucht es nicht."
+      ],
+      "text": "Klausur: Bei äußerst gefährlichen Gewalthandlungen liegt bedingter Tötungsvorsatz nahe; die Rspr. verlangt aber eine Gesamtschau aller Umstände. Bewusst fahrlässig handelt, wer ernsthaft und nicht nur vage darauf vertraut, dass der Erfolg ausbleibt.",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "Themenpool: strafat-057"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-593",
+      "ueberzeile": "Merksatz Staatsorganisation",
+      "titel": "Bundesstaat: Die Länder sind die Regel",
+      "text": "Staatliche Aufgaben sind Ländersache, soweit das Grundgesetz nichts anderes bestimmt (Art. 30 GG) – für Gesetzgebung und Verwaltung konkretisiert in Art. 70 und 83 GG.",
+      "norm": "Art. 20 Abs. 1, 30, 70, 83 GG",
+      "quellen": [
+        "Art. 20 Abs. 1 GG",
+        "Art. 30 GG",
+        "Art. 70 GG",
+        "Art. 83 GG",
+        "Themenpool: staat-593"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-891",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Erfolgsort: Maßgeblich ist, wo der Schaden eintritt",
+      "text": "Für unerlaubte Handlungen gilt nach Art. 4 Abs. 1 Rom II-VO grundsätzlich das Recht des Staates, in dem der Schaden eintritt – unabhängig davon, wo gehandelt wurde und wo indirekte Folgen eintreten. Vorrang hat ein gemeinsamer gewöhnlicher Aufenthalt (Abs. 2); bei offensichtlich engerer Verbindung greift die Ausweichklausel (Abs. 3).",
+      "norm": "Art. 4 Rom II-VO",
+      "quellen": [
+        "Art. 4 Rom II-VO",
+        "Themenpool: ipr-891"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:45.086Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

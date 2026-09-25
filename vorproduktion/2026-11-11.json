@@ -1,0 +1,840 @@
+{
+  "datum": "2026-11-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "europa-416",
+        "themaTitel": "Was ist die richtlinienkonforme Auslegung und wo endet sie?",
+        "fach": "europa",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-567",
+        "themaTitel": "Zustellung als Vollstreckungsvoraussetzung",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-135",
+        "themaTitel": "Wann liegt eine Urkundenfälschung vor?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "zpo-554"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "zpo-554"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "schuld-186"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "streitstand",
+        "themaId": "verwalt-931"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:40",
+        "art": "merksatz",
+        "themaId": "assessoroer-713"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "begriff",
+        "themaId": "assessoroer-852"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "europa-416",
+      "poolTitel": "Was ist die richtlinienkonforme Auslegung und wo endet sie?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-567",
+      "poolTitel": "Zustellung als Vollstreckungsvoraussetzung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 750 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-135",
+      "poolTitel": "Wann liegt eine Urkundenfälschung vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 267 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-554",
+      "poolTitel": "Klagerücknahme",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 269 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-554",
+      "poolTitel": "Klagerücknahme",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 269 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-186",
+      "poolTitel": "Wie wirkt sich ein Rücktritt auf bereits erbrachte Leistungen aus?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 346 BGB",
+        "§ 347 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "verwalt-931",
+      "poolTitel": "Besorgnis der Befangenheit im Verwaltungsverfahren: §§ 20, 21 VwVfG",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "assessoroer-713",
+      "poolTitel": "Aktenvortrag Öffentliches Recht",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO; materielles Recht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "assessoroer-852",
+      "poolTitel": "Welche Fristen entscheiden über die Klausur im Öffentlichen Recht?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "§ 58 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "europa",
+      "klausur": 3,
+      "fachLabel": "Europarecht",
+      "themaId": "europa-416",
+      "slug": "2026-11-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Richtlinienkonform geht über den Wortlaut hinaus – bis zu einer Grenze",
+          "titelZeilen": [
+            "Richtlinienkonform",
+            "geht über den",
+            "Wortlaut hinaus –",
+            "bis zu einer Grenze"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Grenze: Wille des Gesetzgebers",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Eine deutsche Norm lässt nach ihrem Wortlaut ein Ergebnis zu, das eine Verbraucherrichtlinie verbietet. Die Umsetzungsfrist ist abgelaufen; es streiten Verbraucher K und Unternehmer U. Kann K sich direkt auf die Richtlinie berufen – und wie weit muss das Gericht das deutsche Recht anpassen?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wer steht auf der anderen Seite?",
+          "links": {
+            "titel": "Bürger gegen Staat",
+            "punkte": [
+              "Unmittelbare Wirkung der Richtlinie möglich",
+              "Frist abgelaufen, Regelung unbedingt und hinreichend genau"
+            ]
+          },
+          "rechts": {
+            "titel": "Privat gegen Privat",
+            "punkte": [
+              "Keine unmittelbare Wirkung zulasten Privater",
+              "Weg: richtlinienkonforme Auslegung des nationalen Rechts"
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Adressat der Richtlinie",
+              "text": "Richtlinien verpflichten die Mitgliedstaaten (Art. 288 Abs. 3 AEUV). K kann sich gegenüber U nicht unmittelbar auf sie berufen."
+            },
+            {
+              "titel": "Pflicht zur konformen Auslegung",
+              "text": "Die Gerichte legen das nationale Recht so weit wie möglich im Licht von Wortlaut und Zweck der Richtlinie aus."
+            },
+            {
+              "titel": "Alle anerkannten Methoden",
+              "text": "Nach dem BGH auch Rechtsfortbildung, etwa eine teleologische Reduktion bei planwidriger Regelungslücke."
+            },
+            {
+              "titel": "Grenze: contra legem",
+              "text": "Keine Auslegung gegen den erkennbaren Willen des Gesetzgebers. Dann bleiben Gesetzesänderung und Staatshaftung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Entweder die Richtlinie direkt zwischen Privaten anwenden – oder beim Wortlaut stehen bleiben. Beides greift zu kurz. Die Richtlinie wirkt über das nationale Gesetz, und die Grenze ist nicht der bloße Wortlaut, sondern der erkennbare Regelungswille des Gesetzgebers."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zwischen Privaten wirkt die Richtlinie über das deutsche Gesetz: auslegen und fortbilden, soweit der Gesetzgeber nicht erkennbar anderes wollte."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Fragen zur Richtlinie",
+          "punkte": [
+            "Umsetzungsfrist abgelaufen?",
+            "Staat oder Private als Gegner?",
+            "Spielraum im deutschen Recht?",
+            "Grenze: contra legem"
+          ],
+          "icons": [
+            "kalender",
+            "personen",
+            "lupe",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Richtlinienkonforme Auslegung geht über den Wortlaut hinaus – aber nicht grenzenlos. Zwischen Privaten wirkt eine Richtlinie nicht unmittelbar (Art. 288 Abs. 3 AEUV); das Gericht muss das deutsche Recht so weit wie möglich richtlinienkonform auslegen, nach dem BGH notfalls auch durch Rechtsfortbildung. Die Grenze ist der erkennbare Wille des Gesetzgebers: Gegen ihn gibt es keine Auslegung contra legem. Speichern für die nächste Europarechtsfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#europarecht",
+        "#richtlinie",
+        "#288aeuv",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Richtlinienkonforme Auslegung und ihre Grenze",
+      "coverText": "Grenze: Wille des Gesetzgebers",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Das deutsche Gesetz wird an die Richtlinie angepasst, so weit es geht – aber nicht gegen den Willen des Gesetzgebers.",
+        "handlung": "{A} gently bends a flexible metal rail to follow a curved guideline on the ground, while {B} places his pointer at the spot where the rail would have to break to follow further.",
+        "hinweisRegie": "Place the note in the free space next to {B}'s pointer at the critical spot of the rail, slightly tilted toward it, without covering {A}'s bending hands or the guideline.",
+        "alternative": "{A} adjusts a telescope to match a star map while {B} marks the stop at which the telescope cannot turn any further."
+      },
+      "bildSzene": "bending rail along guideline, pointer marks limit",
+      "bildSzeneAlt": "telescope turned to its stop",
+      "quellen": [
+        "Art. 288 Abs. 3 AEUV",
+        "Art. 4 Abs. 3 EUV",
+        "Themenpool: europa-416"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "grenze-verschoben",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.267Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-567",
+      "slug": "2026-11-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Pfänden, bevor das Urteil zugestellt ist?",
+          "titelZeilen": [
+            "Pfänden, bevor",
+            "das Urteil",
+            "zugestellt ist?"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Gleichzeitig zustellen genügt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "G hat gegen S ein vorläufig vollstreckbares Urteil mit Vollstreckungsklausel. Zugestellt ist es noch nicht. G beauftragt den Gerichtsvollzieher, bei S zu pfänden. Darf der Gerichtsvollzieher sofort loslegen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Zustellung als Voraussetzung",
+              "text": "Die Vollstreckung darf nur beginnen, wenn das Urteil zugestellt ist (§ 750 Abs. 1 S. 1 ZPO)."
+            },
+            {
+              "titel": "Gleichzeitig genügt",
+              "text": "Zugestellt sein muss spätestens bei Beginn der Vollstreckung. Die Zustellung durch den Gläubiger genügt (§ 750 Abs. 1 S. 2 ZPO)."
+            },
+            {
+              "titel": "Namentliche Bezeichnung",
+              "text": "Gläubiger und Schuldner müssen im Urteil oder in der Klausel namentlich bezeichnet sein (§ 750 Abs. 1 S. 1 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo es strenger wird",
+          "punkte": [
+            "Qualifizierte Klausel, etwa bei Rechtsnachfolge: auch Klausel und Urkunden zustellen (§ 750 Abs. 2 ZPO).",
+            "Sicherungsvollstreckung: Urteil und Klausel zwei Wochen vorher zugestellt (§ 750 Abs. 3 ZPO).",
+            "Bestimmte Titel, etwa notarielle Urkunden: Wartefrist von zwei Wochen (§ 798 ZPO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Annehmen, das Urteil müsse schon einige Zeit vorher zugestellt sein. Der Gerichtsvollzieher kann das Urteil im Auftrag des G zustellen und im selben Termin pfänden. Fehlt die Zustellung ganz, kann S Erinnerung einlegen (§ 766 ZPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zustellung spätestens mit Beginn der Vollstreckung. Zwei Wochen Wartefrist nur, wo das Gesetz sie anordnet: § 750 Abs. 3 und § 798 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Zustellung in drei Checks",
+          "punkte": [
+            "Zugestellt oder zugleich zugestellt?",
+            "Parteien namentlich bezeichnet?",
+            "Wartefrist nach § 750 III oder § 798?"
+          ],
+          "icons": [
+            "umschlag",
+            "person",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Pfänden, bevor das Urteil zugestellt ist? Ja – wenn die Zustellung spätestens mit Beginn der Vollstreckung erfolgt. § 750 Abs. 1 ZPO verlangt, dass der Titel „bereits zugestellt ist oder gleichzeitig zugestellt wird“; der Gerichtsvollzieher kann im Auftrag des Gläubigers zustellen und sofort pfänden. Strenger wird es bei qualifizierter Klausel, bei der Sicherungsvollstreckung und bei den Titeln des § 798 ZPO. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#750zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 750 ZPO: Zustellung vor der Vollstreckung",
+      "coverText": "Gleichzeitig zustellen genügt",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Zustellung darf auch im selben Moment passieren, in dem die Vollstreckung beginnt.",
+        "handlung": "{A} hovers at a doorway and hands a sealed envelope to an unseen resident's outstretched hand, while {B}, right behind, already lifts a small crate to carry it out.",
+        "hinweisRegie": "Place the note in the free space between the handed-over envelope and {B}'s lifted crate, slightly tilted toward the envelope, without covering either hand.",
+        "alternative": "{B} waits at a closed hatch holding a crate while {A} slides a letter through the hatch and gives a quick go signal."
+      },
+      "bildSzene": "droid hands envelope, mechanic lifts crate",
+      "bildSzeneAlt": "letter through hatch, then go signal",
+      "quellen": [
+        "§ 750 ZPO",
+        "§ 798 ZPO",
+        "§ 766 ZPO",
+        "Themenpool: zpo-567"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "ueberraschende-antwort",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.275Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-135",
+      "slug": "2026-11-11-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Das übersehen viele: Die Kopie ist keine Urkunde",
+          "unter": "Urkundenfälschung · § 267 StGB",
+          "text": "Einfache Kopie: keine Urkunde – außer sie tritt als Original auf.",
+          "norm": "§ 267 Abs. 1 StGB",
+          "icon": "dokument",
+          "sprecher": "Eine einfache Fotokopie ist keine Urkunde. Das übersehen viele: Sie prüfen die manipulierte Kopie sofort als Fälschung. Dabei scheitert es schon am Tatobjekt. Hier die drei Merkmale.",
+          "marken": [
+            "Kopie ≠ Urkunde",
+            "erst das Tatobjekt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Perpetuierungsfunktion",
+          "text": "Verkörperte menschliche Gedankenerklärung.",
+          "norm": "§ 267 Abs. 1 StGB",
+          "sprecher": "Merkmal eins: die Perpetuierungsfunktion. Eine Urkunde ist eine verkörperte menschliche Gedankenerklärung, die mit einer Sache fest verbunden ist.",
+          "marken": [
+            "verkörpert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beweisfunktion",
+          "text": "Geeignet und bestimmt, im Rechtsverkehr Beweis zu erbringen.",
+          "norm": null,
+          "sprecher": "Merkmal zwei: die Beweisfunktion. Die Erklärung ist geeignet und bestimmt, im Rechtsverkehr Beweis zu erbringen. Die Bestimmung kann auch später getroffen werden, dann spricht man von Zufallsurkunden.",
+          "marken": [
+            "Beweis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Garantiefunktion",
+          "text": "Der Aussteller ist erkennbar.",
+          "norm": null,
+          "sprecher": "Merkmal drei: die Garantiefunktion. Die Urkunde lässt ihren Aussteller erkennen, also den, der geistig hinter der Erklärung steht und für sie einsteht.",
+          "marken": [
+            "Aussteller"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Warum die Kopie scheitert",
+          "text": "Nur ein Abbild – anders, wenn sie den Anschein eines Originals erweckt.",
+          "norm": null,
+          "sprecher": "Und die Kopie? Nach der Rechtsprechung gibt sie nur ein Abbild wieder und verkörpert keine eigene Erklärung ihres Ausstellers. Das gilt auch für eine zusammengeklebte Vorlage. Urkunde wird eine Kopie erst, wenn sie den Anschein eines Originals erweckt.",
+          "marken": [
+            "nur ein Abbild"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Erst das Tatobjekt, dann die Tathandlung",
+          "text": "Einfache Kopie: keine Urkunde, solange sie nicht als Original auftritt.",
+          "norm": "§ 267 StGB",
+          "sprecher": "Merke: erst das Tatobjekt, dann die Tathandlung. Die einfache Kopie ist keine Urkunde, solange sie nicht wie ein Original wirkt. Dann denk an andere Delikte, etwa Betrug.",
+          "marken": [
+            "Tatobjekt zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jeder Kopie zuerst fragen",
+          "text": "Speichern für die nächste Urkundenklausur.",
+          "sprecher": "Speicher dir das für die nächste Klausur zu den Urkundendelikten. Und frag bei jeder Kopie zuerst, ob überhaupt eine Urkunde vorliegt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Eine einfache Fotokopie ist keine Urkunde – das übersehen viele und prüfen die manipulierte Kopie sofort als Fälschung. Eine Urkunde braucht eine verkörperte Gedankenerklärung, Beweiseignung und -bestimmung und einen erkennbaren Aussteller. Die Kopie gibt nach der Rspr. nur ein Abbild wieder; Urkunde wird sie erst, wenn sie den Anschein eines Originals erweckt. Also: erst das Tatobjekt, dann die Tathandlung. Speichern für die nächste Urkundenklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#urkundenfälschung",
+        "#267stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 267 StGB: Warum die Kopie keine Urkunde ist",
+      "titelZeilen": [
+        "Das übersehen viele:",
+        "Die Kopie ist",
+        "keine Urkunde"
+      ],
+      "coverText": "Abbild statt Erklärung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Eine einfache Kopie gibt nur ein Abbild wieder und ist deshalb keine Urkunde.",
+        "handlung": "{A} holds a thin translucent copy of a sealed certificate up against the light, while {B} nervously points at the original certificate with its raised seal lying on the workbench.",
+        "hinweisRegie": "Place the note in the free space between the translucent copy and the sealed original, slightly tilted toward the copy, without covering the seal or {A}'s hands.",
+        "alternative": "{B} looks at a shadow of a signed tablet on the wall while {A} taps the real tablet standing in the light."
+      },
+      "bildSzene": "translucent copy held against sealed original",
+      "bildSzeneAlt": "shadow of tablet versus real tablet",
+      "quellen": [
+        "§ 267 StGB",
+        "Themenpool: strafbt-135"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.280Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-554",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Der Beklagte hat schon zur Hauptsache verhandelt. Kann der Kläger die Klage jetzt noch allein zurücknehmen?",
+      "optionen": [
+        "Nein – er braucht die Einwilligung des Beklagten",
+        "Ja – bis zur Rechtskraft jederzeit",
+        "Nur mit Zustimmung des Gerichts"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 269 ZPO",
+        "Themenpool: zpo-554"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.280Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-554",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – jetzt braucht er die Einwilligung des Beklagten",
+      "text": "Ab Beginn der mündlichen Verhandlung des Beklagten zur Hauptsache ist die Rücknahme nur mit seiner Einwilligung möglich (§ 269 Abs. 1 ZPO). Widerspricht er nicht binnen einer Notfrist von zwei Wochen ab Zustellung, gilt sie als erteilt, wenn er belehrt wurde (§ 269 Abs. 2 S. 4). Folge: Der Rechtsstreit gilt als nicht anhängig geworden; die Kosten trägt grundsätzlich der Kläger.",
+      "norm": "§ 269 Abs. 1–3 ZPO",
+      "quellen": [
+        "§ 269 ZPO",
+        "Themenpool: zpo-554"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.280Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – er braucht die Einwilligung des Beklagten",
+        "Ja – bis zur Rechtskraft jederzeit",
+        "Nur mit Zustimmung des Gerichts"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-186",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 346 BGB: Der Rücktritt wandelt den Vertrag um",
+      "text": "Nach dem Rücktritt sind die empfangenen Leistungen zurückzugewähren und gezogene Nutzungen herauszugeben (§ 346 Abs. 1 BGB). Geht das nicht, schuldet der Rückgewährschuldner Wertersatz (Abs. 2), der unter den Voraussetzungen des Abs. 3 entfällt. Nicht gezogene Nutzungen und Verwendungen regelt § 347 BGB. Der Vertrag bleibt als Rückgewährschuldverhältnis bestehen.",
+      "norm": "§ 346 BGB · § 347 BGB",
+      "quellen": [
+        "§ 346 BGB",
+        "§ 347 BGB",
+        "Themenpool: schuld-186"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.280Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-931",
+      "ueberzeile": "Streitstand Verwaltungsrecht",
+      "titel": "Ausgeschlossener Amtsträger hat mitgewirkt: Rettet § 46 VwVfG den Bescheid?",
+      "norm": "§§ 20, 21, 46 VwVfG",
+      "optionen": [
+        "Eine Ansicht: § 46 VwVfG gilt – Aufhebung nur, wenn der Fehler die Entscheidung beeinflusst haben kann.",
+        "Andere Ansicht: Der Ausschluss nach § 20 ist so grundlegend, dass § 46 VwVfG nicht greifen soll."
+      ],
+      "text": "Für § 46 spricht sein Wortlaut, der Verfahrensfehler allgemein erfasst. Bei Ermessensentscheidungen lässt sich ein Einfluss aber kaum je offensichtlich ausschließen. Klausur: § 20 (gesetzlicher Ausschluss) und § 21 (Befangenheit) trennen.",
+      "quellen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-931"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.280Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-713",
+      "ueberzeile": "Merksatz Aktenvortrag",
+      "titel": "Aktenvortrag ÖR: Der Vorschlag kommt vor der Begründung",
+      "text": "In der Regel: Einleitungssatz, knapper Sachbericht, dann dein Entscheidungsvorschlag – erst danach die rechtliche Würdigung. Details regeln die Länder unterschiedlich.",
+      "norm": "Prüfungsordnungen der Länder",
+      "quellen": [
+        "Juristenausbildungs- und Prüfungsordnungen der Länder",
+        "Themenpool: assessoroer-713"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.280Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-852",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Jahresfrist nach § 58 Abs. 2 VwGO",
+      "text": "Fehlt die Rechtsbehelfsbelehrung oder ist sie unrichtig, läuft statt der Monatsfrist (§ 70 Abs. 1, § 74 Abs. 1 VwGO) grundsätzlich eine Jahresfrist ab Zustellung, Eröffnung oder Verkündung (§ 58 Abs. 2 VwGO). Funktion: Die Norm schützt den Bürger vor den Folgen einer fehlerhaften Belehrung – in der Assessorklausur oft der Schlüssel zur Zulässigkeit.",
+      "norm": "§ 58 Abs. 2 VwGO",
+      "quellen": [
+        "§ 58 VwGO",
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "Themenpool: assessoroer-852"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:31.280Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

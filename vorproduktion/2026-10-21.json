@@ -1,0 +1,834 @@
+{
+  "datum": "2026-10-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-356",
+        "themaTitel": "Wie kommt ein Bundesgesetz zustande?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-276",
+        "themaTitel": "Wann ist das Gericht örtlich zuständig?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-133",
+        "themaTitel": "Wann ist der Versuch beendet und wann unbeendet?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "verwalt-390"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "verwalt-390"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "staat-636"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "streitstand",
+        "themaId": "assessorz-816"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:41",
+        "art": "merksatz",
+        "themaId": "staat-602"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:13",
+        "art": "begriff",
+        "themaId": "vwgo-405"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-356",
+      "poolTitel": "Wie kommt ein Bundesgesetz zustande?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 76 GG",
+        "Art. 77 GG",
+        "Art. 78 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-276",
+      "poolTitel": "Wann ist das Gericht örtlich zuständig?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 12 ZPO",
+        "§ 13 ZPO",
+        "§ 29 ZPO",
+        "§ 32 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-133",
+      "poolTitel": "Wann ist der Versuch beendet und wann unbeendet?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-390",
+      "poolTitel": "Wann ist ein öffentlich-rechtlicher Vertrag nichtig?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 59 VwVfG",
+        "§ 56 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-390",
+      "poolTitel": "Wann ist ein öffentlich-rechtlicher Vertrag nichtig?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 59 VwVfG",
+        "§ 56 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-636",
+      "poolTitel": "Einstweilige Anordnung des BVerfG",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 32 BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-816",
+      "poolTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "staat-602",
+      "poolTitel": "Konstruktives Misstrauensvotum und Vertrauensfrage",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 67, 68 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "vwgo-405",
+      "poolTitel": "Wann ist ein Vorverfahren erforderlich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 68 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-356",
+      "slug": "2026-10-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Bundesrat legt Einspruch ein: Ist das Gesetz gescheitert?",
+          "titelZeilen": [
+            "Bundesrat legt",
+            "Einspruch ein: Ist",
+            "das Gesetz",
+            "gescheitert?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Einspruch ist überstimmbar",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Der Bundestag beschließt ein Gesetz, das keiner Zustimmung des Bundesrats bedarf. Der Vermittlungsausschuss schlägt keine Änderung vor. Der Bundesrat legt mit der Mehrheit seiner Stimmen Einspruch ein. Ist das Gesetz damit gescheitert?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Weg durchs Verfahren",
+          "schritte": [
+            {
+              "titel": "Einleitung (Art. 76 GG)",
+              "text": "Gesetzesvorlagen bringen die Bundesregierung, die Mitte des Bundestags oder der Bundesrat ein."
+            },
+            {
+              "titel": "Beschluss (Art. 77 Abs. 1 GG)",
+              "text": "Der Bundestag beschließt das Gesetz; es wird dem Bundesrat zugeleitet."
+            },
+            {
+              "titel": "Vermittlungsausschuss (Art. 77 Abs. 2 GG)",
+              "text": "Beim Einspruchsgesetz muss der Bundesrat ihn anrufen, bevor er Einspruch einlegen kann."
+            },
+            {
+              "titel": "Einspruch und Zurückweisung",
+              "text": "Der Bundestag kann den Einspruch zurückweisen (Art. 77 Abs. 4 GG) – hier mit der Mehrheit seiner Mitglieder."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Einspruchs- und Zustimmungsgesetz verwechseln. Nur beim Zustimmungsgesetz scheitert das Gesetz, wenn der Bundesrat die Zustimmung verweigert. Zustimmungsbedürftig ist ein Gesetz nur, wenn das Grundgesetz es ausdrücklich anordnet – sonst ist es ein Einspruchsgesetz."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nicht gescheitert: Weist der Bundestag den Einspruch mit der Mehrheit seiner Mitglieder zurück, kommt das Gesetz zustande (Art. 78 GG). Hätte der Bundesrat mit zwei Dritteln widersprochen, bräuchte der Bundestag ebenfalls zwei Drittel. Danach: Ausfertigung und Verkündung (Art. 82 GG)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zustimmungsgesetz: ohne Ja des Bundesrats kein Gesetz. Einspruchsgesetz: Einspruch erst nach Vermittlungsverfahren – und der Bundestag kann ihn überstimmen."
+        },
+        {
+          "art": "cta",
+          "titel": "Gesetzgebung in vier Fragen",
+          "punkte": [
+            "Zustimmungsbedürftig laut GG?",
+            "Vermittlungsausschuss angerufen?",
+            "Einspruch zurückgewiesen?",
+            "Ausgefertigt und verkündet?"
+          ],
+          "icons": [
+            "paragraf",
+            "handschlag",
+            "wahlurne",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Bundesrat legt Einspruch ein – ist das Gesetz gescheitert? Beim Einspruchsgesetz nicht zwingend: Der Bundestag kann den Einspruch nach Art. 77 Abs. 4 GG zurückweisen, dann kommt das Gesetz nach Art. 78 GG zustande. Scheitern lassen kann der Bundesrat nur ein Zustimmungsgesetz – und zustimmungsbedürftig ist ein Gesetz nur, wenn das Grundgesetz es ausdrücklich anordnet. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#gesetzgebung",
+        "#bundesrat",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Einspruch des Bundesrats: Gesetz gescheitert?",
+      "coverText": "Einspruch ist überstimmbar",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ein Einspruch des Bundesrats bremst das Gesetz nur – der Bundestag kann ihn überstimmen.",
+        "handlung": "{A} hovers in front of a large gate and lowers a red barrier, while {B} curiously pushes a bigger lever on the other side that lifts the barrier again.",
+        "hinweisRegie": "Place the note in the free space above the lifted barrier, slightly tilted toward {B}'s lever, so it shows the override without covering {A} or the gate.",
+        "alternative": "{B} holds up a small stop sign in front of a rolling cart while {A} counts raised hands behind her that push the cart onward."
+      },
+      "bildSzene": "barrier lowered, bigger lever lifts it",
+      "bildSzeneAlt": "stop sign before cart, raised hands",
+      "quellen": [
+        "Art. 76 GG",
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Art. 82 GG",
+        "Themenpool: staat-356"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.541Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-276",
+      "slug": "2026-10-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kaufpreisklage am Erfüllungsort? Der liegt meist beim Käufer",
+          "titelZeilen": [
+            "Kaufpreisklage am",
+            "Erfüllungsort? Der",
+            "liegt meist beim",
+            "Käufer"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "§ 270 Abs. 4 BGB beachten",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V aus Köln verkauft K aus München eine Maschine. K zahlt nicht. V will in Köln klagen und beruft sich auf den Gerichtsstand des Erfüllungsorts (§ 29 ZPO). Eine Gerichtsstandsvereinbarung gibt es nicht. Ist das Gericht in Köln örtlich zuständig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Allgemeiner Gerichtsstand",
+              "text": "Klagen kann V stets am Wohnsitz des Beklagten (§§ 12, 13 ZPO) – hier München."
+            },
+            {
+              "titel": "Besonderer Gerichtsstand, § 29 ZPO",
+              "text": "Zuständig ist auch das Gericht des Orts, an dem die streitige Verpflichtung zu erfüllen ist."
+            },
+            {
+              "titel": "Welche Verpflichtung?",
+              "text": "Maßgeblich ist die eingeklagte Pflicht – hier die Zahlung des Kaufpreises, nicht die Lieferung."
+            },
+            {
+              "titel": "Leistungsort der Geldschuld",
+              "text": "Nach §§ 269, 270 Abs. 4 BGB grundsätzlich der Wohnsitz des Schuldners: München."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Geld muss zum Gläubiger – also liegt der Erfüllungsort bei V.“ § 270 Abs. 1 BGB regelt nur, dass der Schuldner Geld auf seine Gefahr und Kosten übermitteln muss. Den Leistungsort ändert das nicht (§ 270 Abs. 4 BGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Köln ist nicht zuständig: Auch § 29 ZPO führt hier nach München. Einen gemeinsamen Erfüllungsort für beide Vertragspflichten nimmt die Rspr. nur ausnahmsweise an, etwa beim Bauvertrag am Ort des Bauwerks. Und § 32 ZPO, der Gerichtsstand des Tatorts, gilt nur für unerlaubte Handlungen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 29 ZPO knüpft an die streitige Pflicht an. Bei Geldschulden liegt der Leistungsort grundsätzlich beim Schuldner – oft landest du wieder bei §§ 12, 13 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Örtliche Zuständigkeit in vier Zügen",
+          "punkte": [
+            "Wohnsitz des Beklagten, §§ 12, 13",
+            "Streitige Pflicht bestimmen",
+            "Leistungsort: §§ 269, 270 BGB",
+            "Delikt? Dann auch § 32 ZPO"
+          ],
+          "icons": [
+            "haus",
+            "lupe",
+            "muenzen",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Kaufpreisklage am Erfüllungsort? Der liegt meist beim Käufer. § 29 ZPO knüpft an die streitige Verpflichtung an – bei der Kaufpreisklage also an die Zahlungspflicht. Deren Leistungsort ist nach §§ 269, 270 Abs. 4 BGB grundsätzlich der Wohnsitz des Schuldners. § 270 Abs. 1 BGB regelt nur Gefahr und Kosten der Übermittlung. Speichern für die nächste ZPO-Zulässigkeit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilprozessrecht",
+        "#29zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Örtliche Zuständigkeit: § 29 ZPO",
+      "coverText": "§ 270 Abs. 4 BGB beachten",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wer den Kaufpreis einklagt, landet auch über den Erfüllungsort meist beim Wohnort des Käufers.",
+        "handlung": "{A} tries to plant a small courthouse flag in her own home town on a map, while {B} gently lifts the flag and carries it with a heavy coin pouch to the buyer's town.",
+        "hinweisRegie": "Place the note in the free space near the buyer's town where {B} sets down the flag, slightly tilted toward the coin pouch, without covering {A}'s surprised face.",
+        "alternative": "{B} sends a coin pouch down a long chute that starts at the buyer's house, while {A} waits at the far end looking puzzled."
+      },
+      "bildSzene": "courthouse flag moved to buyer's town",
+      "bildSzeneAlt": "coin pouch chute starting at buyer",
+      "quellen": [
+        "§§ 12, 13 ZPO",
+        "§ 29 ZPO",
+        "§ 32 ZPO",
+        "§§ 269, 270 BGB",
+        "Themenpool: zpo-276"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.541Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-133",
+      "slug": "2026-10-21-b3",
+      "titelZeilen": [
+        "Beendet oder nicht?",
+        "Es zählt, was der",
+        "Täter denkt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Beendet oder nicht? Es zählt, was der Täter denkt",
+          "unter": "Rücktritt · § 24 Abs. 1 StGB",
+          "text": "Maßgeblich ist die Vorstellung nach der letzten Ausführungshandlung.",
+          "norm": "§ 24 Abs. 1 StGB",
+          "icon": "stopp",
+          "sprecher": "Ob der Versuch beendet ist, entscheidet nicht die Wunde. Entscheidend ist, was der Täter nach seiner letzten Handlung glaubt. Davon hängt ab, was er für einen Rücktritt nach § 24 StGB tun muss.",
+          "marken": [
+            "Täterkopf zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Unbeendeter Versuch",
+          "text": "Täter glaubt, noch nicht alles Nötige getan zu haben: Aufgeben genügt.",
+          "norm": "§ 24 Abs. 1 S. 1 Alt. 1 StGB",
+          "sprecher": "Schritt eins: der unbeendete Versuch. Der Täter glaubt, noch nicht alles getan zu haben, was zum Erfolg nötig ist. Dann genügt es, dass er die weitere Ausführung freiwillig aufgibt.",
+          "marken": [
+            "aufgeben"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beendeter Versuch",
+          "text": "Täter hält den Erfolg für möglich: Er muss ihn verhindern.",
+          "norm": "§ 24 Abs. 1 S. 1 Alt. 2 StGB",
+          "sprecher": "Schritt zwei: der beendete Versuch. Der Täter hält den Erfolgseintritt für möglich. Aufhören reicht jetzt nicht mehr. Er muss die Vollendung freiwillig verhindern, also aktiv gegensteuern.",
+          "marken": [
+            "verhindern"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rücktrittshorizont",
+          "text": "Vorstellung nach der letzten Ausführungshandlung; sofortige Korrektur zählt.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Zeitpunkt. Nach der Rechtsprechung kommt es auf die Vorstellung nach der letzten Ausführungshandlung an. Korrigiert der Täter sie unmittelbar danach, zählt die korrigierte Sicht.",
+          "marken": [
+            "letzte Handlung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Vorher: fehlgeschlagen?",
+          "text": "Hält der Täter den Erfolg für nicht mehr erreichbar, scheidet ein Rücktritt aus.",
+          "norm": null,
+          "sprecher": "Vorher aber prüfen: Ist der Versuch fehlgeschlagen? Glaubt der Täter, den Erfolg nicht mehr erreichen zu können, scheidet ein Rücktritt ganz aus.",
+          "marken": [
+            "erst Fehlschlag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Unbeendet: aufgeben. Beendet: verhindern. Maßstab: der Rücktrittshorizont.",
+          "norm": "§ 24 Abs. 1 StGB",
+          "sprecher": "Merke: unbeendet heißt aufgeben, beendet heißt verhindern. Und maßgeblich ist der Rücktrittshorizont des Täters.",
+          "marken": [
+            "aufgeben vs. verhindern"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Fehlgeschlagen, beendet, unbeendet",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur. Und prüf immer zuerst: fehlgeschlagen, dann beendet oder unbeendet.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ob der Versuch beendet ist, entscheidet nicht die Wunde, sondern die Vorstellung des Täters nach der letzten Ausführungshandlung. Unbeendet: Er glaubt, noch nicht alles Nötige getan zu haben – freiwilliges Aufgeben genügt. Beendet: Er hält den Erfolg für möglich – dann muss er ihn verhindern (§ 24 Abs. 1 S. 1 StGB). Vorher prüfen: Ist der Versuch fehlgeschlagen?",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#rücktritt",
+        "#24stgb",
+        "#versuch",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beendeter oder unbeendeter Versuch?",
+      "coverText": "Rücktrittshorizont entscheidet",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Ob Aufhören für den Rücktritt reicht, hängt davon ab, was der Täter nach seiner letzten Handlung für möglich hält.",
+        "handlung": "{A} has just released a rolling boulder down a slope and looks back nervously, while {B} watches from the side, ready to see whether he runs to stop it or simply walks away.",
+        "hinweisRegie": "Place the note in the free space between {A} and the rolling boulder, slightly tilted toward the boulder, so it marks the decisive moment after the last act without covering either figure.",
+        "alternative": "{B} stands before a half-lit fuse and must decide between stepping back or stamping it out, while {A} holds a stopwatch."
+      },
+      "bildSzene": "boulder released, mechanic looks back",
+      "bildSzeneAlt": "half-lit fuse: step back or stamp",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-133"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "massstab-verwechslung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.542Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-390",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Vertrag: B erhält eine Genehmigung, auf die er Anspruch hat, nur gegen eine „Spende“ an einen Verein. Folge?",
+      "optionen": [
+        "Vertrag nichtig nach § 59 Abs. 2 Nr. 4 VwVfG",
+        "Wirksam, aber anfechtbar wie ein Verwaltungsakt",
+        "Nur rechtswidrig – der Vertrag bleibt bestehen"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 56 VwVfG",
+        "§ 59 VwVfG",
+        "Themenpool: verwalt-390"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.542Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-390",
+      "ueberzeile": "Auflösung",
+      "titel": "Nichtig – die Gegenleistung ist nach § 56 VwVfG unzulässig",
+      "text": "Ein subordinationsrechtlicher Vertrag ist nichtig, wenn sich die Behörde eine nach § 56 VwVfG unzulässige Gegenleistung versprechen lässt (§ 59 Abs. 2 Nr. 4 VwVfG). Hier fehlt der sachliche Zusammenhang; bei einem Anspruch ist nur eine Gegenleistung zulässig, die Nebenbestimmung sein könnte (§ 56 Abs. 2). Anders als ein VA ist der Vertrag nicht anfechtbar: wirksam oder nichtig.",
+      "norm": "§ 59 Abs. 2 Nr. 4 VwVfG · § 56 VwVfG",
+      "quellen": [
+        "§ 56 VwVfG",
+        "§ 59 VwVfG",
+        "Themenpool: verwalt-390"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.542Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Vertrag nichtig nach § 59 Abs. 2 Nr. 4 VwVfG",
+        "Wirksam, aber anfechtbar wie ein Verwaltungsakt",
+        "Nur rechtswidrig – der Vertrag bleibt bestehen"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-636",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 32 BVerfGG: Folgenabwägung statt vorweggenommener Hauptsache",
+      "text": "Das BVerfG kann einen Zustand vorläufig regeln, wenn das zur Abwehr schwerer Nachteile, zur Verhinderung drohender Gewalt oder aus einem anderen wichtigen Grund zum gemeinen Wohl dringend geboten ist. Die Erfolgsaussichten bleiben außer Betracht, außer die Hauptsache ist unzulässig oder offensichtlich unbegründet. Sonst wägt es die Folgen ab (Doppelhypothese).",
+      "norm": "§ 32 Abs. 1 BVerfGG",
+      "quellen": [
+        "§ 32 BVerfGG",
+        "Themenpool: staat-636"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.542Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-816",
+      "ueberzeile": "Streitstand ZPO",
+      "titel": "Verspätetes Vorbringen: Wann verzögert es den Rechtsstreit?",
+      "norm": "§ 296 ZPO · § 296a ZPO",
+      "optionen": [
+        "BGH: absolut – Dauer bei Zulassung vs. bei Zurückweisung.",
+        "Teile der Lit.: relativ – Vergleich mit rechtzeitigem Vortrag."
+      ],
+      "text": "Klausur: mit dem BGH absolut. Grenze nach dem BVerfG: keine Zurückweisung, wenn dieselbe Verzögerung offenkundig auch bei rechtzeitigem Vortrag eingetreten wäre. Dazu Verschulden und Belehrung prüfen.",
+      "quellen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO",
+        "Themenpool: assessorz-816"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.542Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-602",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "Misstrauen nur mit Nachfolger",
+      "text": "Abwahl nur durch Wahl eines Nachfolgers mit Mitgliedermehrheit (Art. 67 GG). Scheitert die Vertrauensfrage, darf der Bundespräsident auf Vorschlag des Kanzlers binnen 21 Tagen auflösen – muss aber nicht (Art. 68 GG).",
+      "norm": "Art. 67 GG · Art. 68 GG",
+      "quellen": [
+        "Art. 67 GG",
+        "Art. 68 GG",
+        "Themenpool: staat-602"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.542Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-405",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Vorverfahren (Widerspruchsverfahren)",
+      "text": "Das Vorverfahren nach §§ 68 ff. VwGO geht der Anfechtungs- und Verpflichtungsklage voraus: Die Verwaltung prüft Recht- und Zweckmäßigkeit selbst; das schützt den Bürger und entlastet die Gerichte. Entbehrlich ist es, wenn ein Gesetz es ausschließt – je nach Landesrecht weitgehend – oder nach § 68 Abs. 1 S. 2 VwGO, etwa bei VA einer obersten Bundes- oder Landesbehörde.",
+      "norm": "§ 68 VwGO",
+      "quellen": [
+        "§ 68 VwGO",
+        "Themenpool: vwgo-405"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:27.542Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

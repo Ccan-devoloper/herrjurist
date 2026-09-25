@@ -1,0 +1,857 @@
+{
+  "datum": "2027-01-15",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "anklage-790",
+        "themaTitel": "Einstellung nach § 170 II StPO",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-374",
+        "themaTitel": "Was schützt Art. 14 GG und wann liegt eine Enteignung vor?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-282",
+        "themaTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:18",
+        "art": "frage",
+        "themaId": "schuld-446"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:18",
+        "art": "antwort",
+        "themaId": "schuld-446"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "grundr-611"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "merksatz",
+        "themaId": "verwalt-384"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "begriff",
+        "themaId": "strafbt-749"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "fehler",
+        "themaId": "verwbt-932"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "anklage-790",
+      "poolTitel": "Einstellung nach § 170 II StPO",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 170 II StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-374",
+      "poolTitel": "Was schützt Art. 14 GG und wann liegt eine Enteignung vor?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-282",
+      "poolTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-03"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-446",
+      "poolTitel": "Schadensersatz statt der Leistung bei Unmöglichkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, III, 283 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-446",
+      "poolTitel": "Schadensersatz statt der Leistung bei Unmöglichkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, III, 283 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "grundr-611",
+      "poolTitel": "Menschenwürde und Objektformel",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "verwalt-384",
+      "poolTitel": "Was ist eine Ermessensreduzierung auf null?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-749",
+      "poolTitel": "Unterschlagung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 246 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "verwbt-932",
+      "poolTitel": "Mittel der Kommunalaufsicht und der Rechtsschutz der Gemeinde",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-790",
+      "slug": "2027-01-15-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vor jeder Teileinstellung steht § 264 StPO",
+          "titelZeilen": [
+            "Vor jeder",
+            "Teileinstellung",
+            "steht § 264 StPO"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Erst die prozessuale Tat bestimmen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Gegen B liegen zwei Anzeigen vor: Am 3. Mai soll er im Supermarkt eine Flasche Whisky eingesteckt haben – das Video zeigt es klar, bei einer zweiten Flasche ist es unklar. Am 10. Mai soll er das Fahrrad des N gestohlen haben; dafür gibt es nur eine vage Vermutung."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Für jeden nicht beweisbaren Vorwurf eine Teileinstellung nach § 170 Abs. 2 StPO verfügen – auch für die zweite Flasche. Eingestellt wird aber nur eine Tat im prozessualen Sinn (§ 264 StPO). Innerhalb derselben Tat gibt es keine Teileinstellung."
+        },
+        {
+          "art": "schritte",
+          "titel": "So gehst du vor",
+          "schritte": [
+            {
+              "titel": "Prozessuale Taten bilden",
+              "text": "Einheitlicher Lebensvorgang nach natürlicher Auffassung: Supermarkt am 3. Mai und Fahrrad am 10. Mai sind zwei Taten."
+            },
+            {
+              "titel": "Tatverdacht je Tat prüfen",
+              "text": "Hinreichender Tatverdacht: Ist eine Verurteilung wahrscheinlich? Wenn nicht: Einstellung nach § 170 Abs. 2 S. 1 StPO."
+            },
+            {
+              "titel": "Bescheid an den Anzeigeerstatter",
+              "text": "Mit Gründen (§ 171 S. 1 StPO); ist er zugleich Verletzter, mit Belehrung über die Beschwerde (§ 171 S. 2 StPO)."
+            },
+            {
+              "titel": "Nachricht an den Beschuldigten",
+              "text": "Nach § 170 Abs. 2 S. 2 StPO, etwa wenn er als Beschuldigter vernommen wurde."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Fahrrad am 10. Mai: eigene Tat, kein hinreichender Tatverdacht – Teileinstellung nach § 170 Abs. 2 S. 1 StPO, Bescheid mit Belehrung an N. Supermarkt am 3. Mai: eine Tat. Angeklagt wird, was sich beweisen lässt – die eine Flasche. Für die zweite Flasche wird nichts eingestellt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eingestellt wird nur eine ganze prozessuale Tat. Innerhalb einer Tat bleibt Unbeweisbares schlicht aus dem Anklagesatz heraus."
+        },
+        {
+          "art": "cta",
+          "titel": "Einstellung in drei Zügen",
+          "punkte": [
+            "Prozessuale Taten bilden",
+            "Tatverdacht je Tat prüfen",
+            "Bescheid und Belehrung verfügen"
+          ],
+          "icons": [
+            "ordner",
+            "waage",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Vor jeder Teileinstellung steht § 264 StPO. Eingestellt wird nach § 170 Abs. 2 StPO nur eine Tat im prozessualen Sinn – nicht ein einzelner Vorwurf innerhalb derselben Tat. Deshalb bildest du zuerst die Taten, prüfst dann je Tat den hinreichenden Tatverdacht und denkst bei der Einstellung an Bescheid und Belehrung (§ 171 StPO) sowie an die Nachricht für den Beschuldigten. Speichern für die nächste Staatsanwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#170stpo",
+        "#staatsanwaltschaft",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 170 II StPO: Teileinstellung nur je Tat",
+      "coverText": "Erst die prozessuale Tat bestimmen",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Bevor ein Vorwurf eingestellt wird, muss feststehen, welche Tat überhaupt eine eigene Einheit ist.",
+        "handlung": "{A} hovers over two separate folders on a desk and closes only the thin one, while {B} uses his pointer to keep a loose page firmly inside the thicker folder.",
+        "hinweisRegie": "Place the note in the free space between the two folders, slightly tilted toward the closed thin one, without covering {B}'s pointer or the loose page.",
+        "alternative": "{B} draws two separate circles in the sand around two events while {A} smooths away only one of the circles entirely."
+      },
+      "bildSzene": "droid closes thin folder, page stays",
+      "bildSzeneAlt": "two sand circles, one smoothed away",
+      "quellen": [
+        "§ 170 Abs. 2 StPO",
+        "§ 171 StPO",
+        "§ 264 StPO",
+        "Themenpool: anklage-790"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "vorfrage-tatbegriff",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-374",
+      "slug": "2027-01-15-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Abriss verboten, Villa wertlos – Enteignung?",
+          "titelZeilen": [
+            "Abriss verboten,",
+            "Villa wertlos –",
+            "Enteignung?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Formaler Enteignungsbegriff",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "E gehört eine denkmalgeschützte Villa. Die Behörde versagt die Genehmigung zum Abriss. Eine wirtschaftlich sinnvolle Nutzung ist kaum möglich, der Verkehrswert bricht ein. E meint, er sei enteignet, und verlangt Entschädigung nach Art. 14 Abs. 3 GG."
+        },
+        {
+          "art": "text",
+          "titel": "Schutzbereich",
+          "punkte": [
+            "Eigentum: vermögenswerte Rechte, die die Rechtsordnung dem Einzelnen privatnützig zuweist.",
+            "Hier: das Grundeigentum und seine Nutzung – eröffnet.",
+            "Das Vermögen als solches schützt Art. 14 GG nach h.M. nicht."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Enteignung oder Inhaltsbestimmung?",
+          "links": {
+            "titel": "Enteignung – Abs. 3",
+            "punkte": [
+              "Entzug konkreter Eigentumspositionen.",
+              "Zur Erfüllung öffentlicher Aufgaben, Güterbeschaffung.",
+              "Junktimklausel: Entschädigung im Gesetz."
+            ]
+          },
+          "rechts": {
+            "titel": "Inhalt und Schranken – Abs. 1 S. 2",
+            "punkte": [
+              "Generell-abstrakte Festlegung von Rechten und Pflichten.",
+              "Auch eine intensive Belastung bleibt Inhaltsbestimmung.",
+              "Unzumutbar? Dann ausgleichspflichtig."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Das Abrissverbot entzieht E nichts, es bestimmt Inhalt und Schranken seines Eigentums. Der Enteignungsbegriff ist formal – die Schwere macht daraus keine Enteignung. Ist die Belastung unzumutbar, muss das Denkmalschutzgesetz einen Ausgleich vorsehen: vorrangig Ausnahmen, sonst Geld."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nach der Intensität abgrenzen: „So schwer belastet – das muss eine Enteignung sein.“ Seit dem Nassauskiesungsbeschluss grenzt das BVerfG formal ab. Eine unverhältnismäßige Inhaltsbestimmung wird nicht in eine Enteignung umgedeutet; sie ist verfassungswidrig oder ausgleichspflichtig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Enteignung heißt Entzug zur Güterbeschaffung – nicht besonders schwere Belastung. Zu harte Inhaltsbestimmung: ausgleichspflichtig."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 14 GG in drei Fragen",
+          "punkte": [
+            "Eigentumsposition betroffen?",
+            "Entzug oder Inhaltsbestimmung?",
+            "Zumutbar oder ausgleichspflichtig?"
+          ],
+          "icons": [
+            "haus",
+            "waage",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Abriss verboten, Villa kaum noch nutzbar – ist das eine Enteignung? Nein. Das BVerfG grenzt formal ab: Enteignung ist der Entzug konkreter Eigentumspositionen zur Erfüllung öffentlicher Aufgaben (Art. 14 Abs. 3 GG). Das Denkmalschutzrecht bestimmt dagegen Inhalt und Schranken des Eigentums (Abs. 1 S. 2) – auch wenn es hart trifft. Ist die Belastung unzumutbar, braucht es einen Ausgleich. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#eigentum",
+        "#art14gg",
+        "#enteignung",
+        "#verfassungsrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 14 GG: Enteignung oder Inhaltsbestimmung?",
+      "coverText": "Formaler Enteignungsbegriff",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Eine schwere Belastung des Eigentums ist noch keine Enteignung – entscheidend ist, ob etwas entzogen wird.",
+        "handlung": "{A} stands protectively in front of his old stone house, which is wrapped in a thick protective chain, while {B} points out with his pointer that the house still stands on {A}'s ground and nothing is carried away.",
+        "hinweisRegie": "Place the note in the free space above the chained old house, slightly tilted toward the chain, so it relates to the restriction without covering {A}'s face or {B}'s pointer.",
+        "alternative": "{B} contrasts a crane lifting a house away for a new road with a second house that merely has a heavy padlock on its door, while {A} looks from one to the other."
+      },
+      "bildSzene": "miner guards chained old house",
+      "bildSzeneAlt": "crane lifts house vs padlocked house",
+      "quellen": [
+        "Art. 14 Abs. 1, 3 GG",
+        "BVerfGE 58, 300 (Nassauskiesung)",
+        "BVerfGE 100, 226 (Denkmalschutz)",
+        "Themenpool: grundr-374"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.876Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-282",
+      "slug": "2027-01-15-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Der Kläger muss nicht alles beweisen",
+          "unter": "Beweislast · §§ 138, 286 ZPO",
+          "text": "Jede Partei beweist die Voraussetzungen der für sie günstigen Norm.",
+          "norm": "§ 286 ZPO",
+          "icon": "waage",
+          "sprecher": "Der Kläger muss nicht alles beweisen. Grundregel: Jede Partei trägt die Beweislast für die Voraussetzungen der Norm, die ihr günstig ist. Und wer beweisen muss, muss zuerst vortragen.",
+          "marken": [
+            "günstige Norm",
+            "erst vortragen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Anspruchsteller",
+          "text": "Rechtsbegründende Tatsachen – etwa Vertragsschluss, Pflichtverletzung, Schaden.",
+          "norm": null,
+          "sprecher": "Schritt eins: Der Anspruchsteller trägt die rechtsbegründenden Tatsachen. Etwa Vertragsschluss, Pflichtverletzung und Schaden.",
+          "marken": [
+            "rechtsbegründend"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anspruchsgegner",
+          "text": "Rechtshindernde, rechtsvernichtende, rechtshemmende Tatsachen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Der Gegner trägt die rechtshindernden, rechtsvernichtenden und rechtshemmenden Tatsachen. Etwa Geschäftsunfähigkeit, Erfüllung oder die Tatsachen der Verjährung.",
+          "marken": [
+            "Einwendungen, Einreden"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Nur Streitiges wird bewiesen",
+          "text": "Nicht bestrittene Tatsachen gelten als zugestanden; Nichtwissen nur zu Fremdem.",
+          "norm": "§ 138 Abs. 3, 4 ZPO",
+          "sprecher": "Schritt drei: Beweis braucht es nur für streitige Tatsachen. Was nicht bestritten wird, gilt als zugestanden. Mit Nichtwissen bestreiten darf man nur, was weder eigene Handlung noch eigene Wahrnehmung war.",
+          "marken": [
+            "§ 138 ZPO"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Sekundäre Darlegungslast",
+          "text": "Kennt nur der Gegner die Details, muss er näher vortragen – keine Beweislastumkehr.",
+          "norm": null,
+          "sprecher": "Schritt vier: die sekundäre Darlegungslast. Steht die beweisbelastete Partei außerhalb des Geschehens und kennt der Gegner die Einzelheiten, muss er substantiiert vortragen. Die Beweislast kehrt sich dadurch nicht um.",
+          "marken": [
+            "keine Umkehr"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: § 280 Abs. 1 S. 2 BGB",
+          "text": "Die Pflichtverletzung beweist der Gläubiger, das fehlende Vertretenmüssen der Schuldner.",
+          "norm": "§ 280 Abs. 1 S. 2 BGB",
+          "sprecher": "Der Klassiker ist § 280 Absatz 1 Satz 2 BGB. Die Pflichtverletzung muss der Gläubiger beweisen. Dass er sie nicht zu vertreten hat, muss der Schuldner beweisen.",
+          "marken": [
+            "Vertretenmüssen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Wer sich auf eine Norm beruft, beweist ihre Voraussetzungen – aber nur, was streitig ist.",
+          "norm": "§ 286 ZPO",
+          "sprecher": "Merke: Wer sich auf eine Norm beruft, beweist ihre Voraussetzungen. Aber nur, was wirksam bestritten ist.",
+          "marken": [
+            "nur Streitiges"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jeder Tatsache zuerst: Ist sie streitig?",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur. Und frag bei jeder Tatsache zuerst: Ist sie überhaupt streitig?",
+          "marken": [
+            "streitig?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Der Kläger muss nicht alles beweisen. Nach der Grundregel trägt jede Partei die Beweislast für die Voraussetzungen der ihr günstigen Norm: der Anspruchsteller die rechtsbegründenden, der Gegner die rechtshindernden, -vernichtenden und -hemmenden Tatsachen. Bewiesen wird nur, was streitig ist (§ 138 Abs. 3 ZPO). Die sekundäre Darlegungslast verschärft den Vortrag des Gegners, kehrt die Beweislast aber nicht um. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#beweislast",
+        "#zivilprozessrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beweislast: Wer muss was beweisen?",
+      "titelZeilen": [
+        "Der Kläger muss",
+        "nicht alles",
+        "beweisen"
+      ],
+      "coverText": "Jeder beweist seine günstige Norm",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Die Last, etwas zu beweisen, verteilt sich auf beide Seiten – je nachdem, wem eine Norm nützt.",
+        "handlung": "{A} places one weight on each pan of a large balance, while {B} curiously lifts a third small weight and looks around to see which side it belongs to.",
+        "hinweisRegie": "Place the note in the free space above the balance's centre, slightly tilted toward {B}'s raised weight, so it frames the question of allocation without covering the pans or hands.",
+        "alternative": "{B} hands a lantern to the one figure who can see into a dark room, while {A} still holds the heavy key to its door."
+      },
+      "bildSzene": "weights placed on both balance pans",
+      "bildSzeneAlt": "lantern handed to insider, key held",
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO",
+        "§ 280 Abs. 1 S. 2 BGB",
+        "Themenpool: zpo-282"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verbreitete-annahme",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.878Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-446",
+      "ueberzeile": "Prüfungsfrage Schuldrecht AT",
+      "titel": "Die verkaufte Sache verbrennt nach Vertragsschluss durch Verschulden des V. Anspruchsgrundlage für K?",
+      "optionen": [
+        "§ 311a Abs. 2 BGB",
+        "§§ 280 Abs. 1, 3, 283 BGB",
+        "§§ 280 Abs. 1, 3, 281 BGB – nach Fristsetzung"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§§ 280 Abs. 1, 3, 283 BGB",
+        "§ 275 Abs. 1 BGB",
+        "§ 311a Abs. 2 BGB",
+        "Themenpool: schuld-446"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.878Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-446",
+      "ueberzeile": "Auflösung",
+      "titel": "§§ 280 Abs. 1, 3, 283 BGB – nachträgliche Unmöglichkeit",
+      "text": "Die Leistung wird nach Vertragsschluss unmöglich; V wird nach § 275 Abs. 1 BGB frei. K verlangt Schadensersatz statt der Leistung aus §§ 280 Abs. 1, 3, 283 BGB – eine Fristsetzung wäre sinnlos. Das Vertretenmüssen wird vermutet (§ 280 Abs. 1 S. 2 BGB). Bestand das Hindernis schon bei Vertragsschluss, gilt § 311a Abs. 2 BGB.",
+      "norm": "§§ 280 Abs. 1, 3, 283 BGB",
+      "quellen": [
+        "§§ 280 Abs. 1, 3, 283 BGB",
+        "§ 275 Abs. 1 BGB",
+        "§ 311a Abs. 2 BGB",
+        "Themenpool: schuld-446"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.878Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "§ 311a Abs. 2 BGB",
+        "§§ 280 Abs. 1, 3, 283 BGB",
+        "§§ 280 Abs. 1, 3, 281 BGB – nach Fristsetzung"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-611",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 1 Abs. 1 GG: Die Würde wird nicht abgewogen",
+      "text": "Nach der Objektformel ist die Würde verletzt, wenn der Mensch zum bloßen Objekt staatlichen Handelns gemacht und seine Subjektqualität grundsätzlich in Frage gestellt wird. Weil Art. 1 Abs. 1 GG nach h.M. keiner Abwägung zugänglich ist, wird der Schutzbereich eng und fallbezogen bestimmt. Klassiker: die Abschussermächtigung im Luftsicherheitsgesetz.",
+      "norm": "Art. 1 Abs. 1 GG",
+      "quellen": [
+        "Art. 1 Abs. 1 GG",
+        "BVerfGE 115, 118 (Luftsicherheitsgesetz)",
+        "Themenpool: grundr-611"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.878Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-384",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Ermessen auf null: Nur eine Entscheidung ist richtig",
+      "text": "Ist jede andere Entscheidung ermessensfehlerhaft, schrumpft das Ermessen auf null – etwa bei erheblicher Gefahr für hochrangige Rechtsgüter. Folge: Anspruch auf genau diese Entscheidung.",
+      "norm": "§ 40 VwVfG · § 113 Abs. 5 S. 1 VwGO",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: verwalt-384"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.878Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-749",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Anvertraut: Wann die Unterschlagung schwerer wiegt",
+      "text": "Anvertraut ist eine Sache, die der Täter mit der Pflicht erhalten hat, sie zurückzugeben oder nur zu einem bestimmten Zweck zu verwenden – etwa der Mietwagen oder Kommissionsware. Dann droht § 246 Abs. 2 StGB Freiheitsstrafe bis zu fünf Jahren. Das Anvertrautsein ist nach h.M. ein besonderes persönliches Merkmal (§ 28 Abs. 2 StGB).",
+      "norm": "§ 246 Abs. 2 StGB",
+      "quellen": [
+        "§ 246 StGB",
+        "§ 28 Abs. 2 StGB",
+        "Themenpool: strafbt-749"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.878Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-932",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Kommunalaufsicht: Kann die Gemeinde gegen eine Beanstandung klagen?",
+      "falsch": "Aufsichtsmaßnahmen sind verwaltungsinterne Vorgänge – die Gemeinde kann dagegen nicht klagen.",
+      "richtigText": "Maßnahmen der Rechtsaufsicht wie Beanstandung, Anordnung oder Ersatzvornahme treffen die Gemeinde in ihrem Selbstverwaltungsrecht (Art. 28 Abs. 2 GG) und sind ihr gegenüber Verwaltungsakte. Statthaft ist die Anfechtungsklage; ob ein Vorverfahren stattfindet, richtet sich nach Landesrecht. Fachaufsichtliche Weisungen sind dagegen meist kein Verwaltungsakt.",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder",
+        "§ 42 Abs. 1 VwGO",
+        "Themenpool: verwbt-932"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:19.878Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

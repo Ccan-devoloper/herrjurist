@@ -1,0 +1,847 @@
+{
+  "datum": "2026-12-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-275",
+        "themaTitel": "Wie prüft man die Zulässigkeit einer Klage?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "revision-797",
+        "themaTitel": "Revisionsgutachten: Zulässigkeit",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-354",
+        "themaTitel": "Wann ist eine konkrete Normenkontrolle zulässig?",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "vwgo-405"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "vwgo-405"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "arbeit-043"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "streitstand",
+        "themaId": "assessoroer-845"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "merksatz",
+        "themaId": "stpo-137"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "assessoroer-845"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-275",
+      "poolTitel": "Wie prüft man die Zulässigkeit einer Klage?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 12 ZPO",
+        "§ 23 GVG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "revision-797",
+      "poolTitel": "Revisionsgutachten: Zulässigkeit",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 333 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-354",
+      "poolTitel": "Wann ist eine konkrete Normenkontrolle zulässig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2026-12-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-405",
+      "poolTitel": "Wann ist ein Vorverfahren erforderlich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 68 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-12-09"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-405",
+      "poolTitel": "Wann ist ein Vorverfahren erforderlich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 68 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-12-09"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "arbeit-043",
+      "poolTitel": "Wie grenzt man Arbeitnehmer und freien Mitarbeiter ab?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 611a BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-26"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "stpo-137",
+      "poolTitel": "Wie ist der Ablauf einer Hauptverhandlung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 243 StPO",
+        "§ 244 StPO",
+        "§ 258 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-26"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-275",
+      "slug": "2026-12-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kaufpreisklage: Der Verkäufer muss meist zum Käufer",
+          "titelZeilen": [
+            "Kaufpreisklage:",
+            "Der Verkäufer muss",
+            "meist zum Käufer"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "§ 29 ZPO mit § 269 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V aus Hamburg verkauft K aus München eine Maschine für 25.000 €. K zahlt nicht. V verklagt ihn vor dem Landgericht Hamburg auf Zahlung. Ist die Klage zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Zulässigkeit in drei Ebenen",
+          "schritte": [
+            {
+              "titel": "Gericht",
+              "text": "Rechtsweg (§ 13 GVG), sachliche Zuständigkeit (§§ 23, 71 GVG), örtliche Zuständigkeit (§§ 12 ff. ZPO)."
+            },
+            {
+              "titel": "Parteien",
+              "text": "Parteifähigkeit (§ 50 ZPO), Prozessfähigkeit (§§ 51, 52 ZPO), Prozessführungsbefugnis."
+            },
+            {
+              "titel": "Streitgegenstand",
+              "text": "Ordnungsgemäße Klageerhebung (§ 253 ZPO), keine anderweitige Rechtshängigkeit, keine Rechtskraft, Rechtsschutzbedürfnis."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Falle: der Erfüllungsort",
+          "text": "Naheliegend: „Der Kaufpreis wird beim Verkäufer geschuldet.“ Doch Geldschulden erfüllt der Schuldner grundsätzlich an seinem Wohnsitz (§§ 269 Abs. 1, 270 Abs. 4 BGB). § 29 ZPO führt deshalb nach München – ebenso wie der allgemeine Gerichtsstand (§§ 12, 13 ZPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Sachlich ist bei 25.000 € das Landgericht zuständig, örtlich aber nicht Hamburg. Die Klage ist unzulässig – es sei denn, K verhandelt rügelos zur Hauptsache (§ 39 ZPO). Sonst verweist das Gericht auf Antrag des V an das zuständige Landgericht in München (§ 281 ZPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Geldschulden: Leistungsort beim Schuldner (§§ 269, 270 Abs. 4 BGB). § 29 ZPO führt deshalb meist an seinen Wohnsitz."
+        },
+        {
+          "art": "cta",
+          "titel": "Örtliche Zuständigkeit in drei Fragen",
+          "punkte": [
+            "Wo wohnt der Beklagte?",
+            "Besonderer Gerichtsstand, etwa § 29 ZPO?",
+            "Ausschließlicher Gerichtsstand?"
+          ],
+          "icons": [
+            "haus",
+            "globus",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Der Verkäufer will den Kaufpreis an seinem eigenen Sitz einklagen – meist vergeblich. Allgemeiner Gerichtsstand ist der Wohnsitz des Beklagten (§§ 12, 13 ZPO). Und auch § 29 ZPO führt nicht zum Verkäufer: Geldschulden sind nach §§ 269 Abs. 1, 270 Abs. 4 BGB grundsätzlich am Wohnsitz des Schuldners zu erfüllen. Hilft nur rügelose Einlassung (§ 39 ZPO) – sonst Verweisung nach § 281 ZPO. Speichern für die nächste Zulässigkeitsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zuständigkeit",
+        "#29zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kaufpreisklage: Welches Gericht ist zuständig?",
+      "coverText": "§ 29 ZPO mit § 269 BGB",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer Geld einklagt, muss meist dorthin, wo der Schuldner wohnt – auch der Erfüllungsort liegt dort.",
+        "handlung": "{A} hauls a heavy crystal cart toward his own mine gate, while {B} curiously points down the road to a distant hut where the unpaid buyer actually lives.",
+        "hinweisRegie": "Place the note in the open space along the road near the distant hut, slightly tilted toward it, so the correct place is highlighted without covering {A}'s cart or {B}'s pointing hand.",
+        "alternative": "{B} holds a compass whose needle swings away from the seller's workshop and points firmly at the buyer's house, while {A} scratches his head."
+      },
+      "bildSzene": "alien points cart toward buyer's distant hut",
+      "bildSzeneAlt": "compass needle points to buyer's house",
+      "quellen": [
+        "§§ 12, 13, 29, 39, 253, 281 ZPO",
+        "§§ 13, 23, 71 GVG",
+        "§§ 269, 270 Abs. 4 BGB",
+        "Themenpool: zpo-275"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-797",
+      "slug": "2026-12-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Freispruch mit belastenden Gründen: keine Revision",
+          "titelZeilen": [
+            "Freispruch mit",
+            "belastenden",
+            "Gründen: keine",
+            "Revision"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Beschwer nur aus dem Tenor",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Das Landgericht spricht A frei. In den Gründen heißt es, A habe die Tat begangen, seine Schuldunfähigkeit sei aber nicht auszuschließen. Eine Maßregel ordnet das Gericht nicht an. A will sich gegen die Gründe wehren und Revision einlegen. Zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Zulässigkeit im Revisionsgutachten",
+          "schritte": [
+            {
+              "titel": "Statthaftigkeit",
+              "text": "Revision gegen Urteile der Strafkammern (§ 333 StPO), gegen Urteile des AG als Sprungrevision (§ 335 StPO)."
+            },
+            {
+              "titel": "Berechtigung und Beschwer",
+              "text": "Der Angeklagte darf Rechtsmittel einlegen (§ 296 StPO) – aber nur, wenn ihn die Entscheidung selbst belastet."
+            },
+            {
+              "titel": "Frist und Form",
+              "text": "Einlegung binnen einer Woche beim Ausgangsgericht (§ 341 StPO), Begründung nach §§ 344, 345 StPO."
+            },
+            {
+              "titel": "Kein Verzicht, keine Rücknahme",
+              "text": "Ein wirksamer Verzicht oder eine Rücknahme (§ 302 StPO) macht das Rechtsmittel unzulässig."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Falle",
+          "text": "„Die Gründe belasten mich, also bin ich beschwert.“ Die Beschwer muss sich aus dem Tenor ergeben, nicht aus den Gründen. Ein Freispruch belastet den Angeklagten nicht – auch wenn die Begründung für ihn unangenehm ist. Anders, wenn zugleich eine Maßregel angeordnet wird, etwa nach § 63 StGB."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Die Revision ist statthaft, A ist rechtsmittelberechtigt. Es fehlt aber die Beschwer: Der Tenor lautet auf Freispruch, eine Maßregel gibt es nicht. Die Revision ist unzulässig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beschwert ist nur, wen der Tenor belastet. Unangenehme Urteilsgründe allein reichen nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Zulässigkeit in vier Fragen",
+          "punkte": [
+            "Statthaft?",
+            "Berechtigt und beschwert?",
+            "Frist und Form gewahrt?",
+            "Kein Verzicht, keine Rücknahme?"
+          ],
+          "icons": [
+            "gericht",
+            "person",
+            "uhr",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Freigesprochen, aber die Gründe belasten? Für die Revision reicht das nicht. Die Beschwer muss sich aus dem Tenor ergeben – ein Freispruch belastet den Angeklagten nicht, auch wenn die Begründung unangenehm ist. Anders, wenn zugleich eine Maßregel angeordnet wird. Im Revisionsgutachten prüfst du: Statthaftigkeit, Berechtigung und Beschwer, Frist und Form, kein Verzicht. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#strafprozessrecht",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision: Beschwer nur aus dem Tenor",
+      "coverText": "Beschwer nur aus dem Tenor",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Wer freigesprochen wurde, kann nicht Revision einlegen, nur weil ihm die Begründung missfällt.",
+        "handlung": "{A} stands already outside an open gate, free to go, and frowns at a long scroll of commentary trailing behind her, while {B} hovers beside the gate and shows that it cannot be closed again.",
+        "hinweisRegie": "Place the note in the free space above the open gate, slightly tilted toward the trailing scroll, so the contrast between outcome and reasons is clear without covering {A}'s face.",
+        "alternative": "{B} holds up a large green light that is already on, while {A} points angrily at a small grey footnote under it."
+      },
+      "bildSzene": "freed explorer frowns at trailing scroll",
+      "bildSzeneAlt": "green light on, anger at footnote",
+      "quellen": [
+        "§§ 296, 302, 333, 335, 341, 344, 345 StPO",
+        "§ 63 StGB",
+        "Themenpool: revision-797"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.038Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-354",
+      "slug": "2026-12-30-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Bloße Zweifel reichen für die Vorlage nicht",
+          "unter": "Konkrete Normenkontrolle · Art. 100 GG",
+          "text": "Das Gericht muss von der Verfassungswidrigkeit überzeugt sein.",
+          "norm": "Art. 100 Abs. 1 GG",
+          "icon": "gericht",
+          "sprecher": "Bloße Zweifel reichen für eine Vorlage nicht. Das Gericht muss überzeugt sein, dass das Gesetz verfassungswidrig ist. Hier sind die vier Zulässigkeitspunkte der konkreten Normenkontrolle.",
+          "marken": [
+            "Überzeugung nötig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vorlageberechtigt: jedes Gericht",
+          "text": "Staatliche Gerichte jeder Instanz – nicht Behörden.",
+          "norm": "Art. 100 Abs. 1 GG",
+          "sprecher": "Punkt eins: Vorlegen darf jedes Gericht, egal welcher Instanz. Behörden dürfen es nicht, auch wenn sie ein Gesetz für verfassungswidrig halten.",
+          "marken": [
+            "nur Gerichte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gegenstand: formelles, nachkonstitutionelles Gesetz",
+          "text": "Verordnungen, Satzungen und vorkonstitutionelles Recht prüft das Fachgericht selbst.",
+          "norm": null,
+          "sprecher": "Punkt zwei: der Gegenstand. Vorgelegt werden nur formelle, nachkonstitutionelle Gesetze. Verordnungen, Satzungen und vorkonstitutionelles Recht prüft das Gericht selbst und wendet sie bei einem Verstoß nicht an.",
+          "marken": [
+            "Parlamentsgesetz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Überzeugung von der Verfassungswidrigkeit",
+          "text": "Zweifel genügen nicht – vorher verfassungskonforme Auslegung versuchen.",
+          "norm": null,
+          "sprecher": "Punkt drei: die Überzeugung. Das Gericht muss von der Verfassungswidrigkeit überzeugt sein. Lässt sich die Norm verfassungskonform auslegen, ist eine Vorlage unzulässig.",
+          "marken": [
+            "erst auslegen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Entscheidungserheblichkeit",
+          "text": "Bei Ungültigkeit müsste das Gericht anders entscheiden als bei Gültigkeit.",
+          "norm": "§ 80 Abs. 2 BVerfGG",
+          "sprecher": "Punkt vier: Entscheidungserheblichkeit. Bei Ungültigkeit der Norm müsste das Gericht anders entscheiden als bei ihrer Gültigkeit. Das muss der Vorlagebeschluss begründen, Paragraf 80 Absatz 2 BVerfGG.",
+          "marken": [
+            "anders entscheiden"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Warum das Monopol?",
+          "text": "Das Verwerfungsmonopol schützt den parlamentarischen Gesetzgeber.",
+          "norm": null,
+          "sprecher": "Warum der Aufwand? Das Bundesverfassungsgericht hat das Verwerfungsmonopol für Parlamentsgesetze. Kein Fachgericht soll sich einfach über den Willen des Gesetzgebers hinwegsetzen.",
+          "marken": [
+            "Verwerfungsmonopol"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Gericht, formelles nachkonstitutionelles Gesetz, Überzeugung, Entscheidungserheblichkeit.",
+          "norm": "Art. 100 Abs. 1 GG",
+          "sprecher": "Merke: Gericht, nachkonstitutionelles Parlamentsgesetz, Überzeugung und Entscheidungserheblichkeit. Zweifel allein lösen keine Vorlage aus.",
+          "marken": [
+            "vier Punkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst verfassungskonform auslegen, dann vorlegen",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Staatsrechtsklausur. Und prüf vor jeder Vorlage, ob eine verfassungskonforme Auslegung möglich ist.",
+          "marken": [
+            "erst auslegen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Bloße Zweifel reichen für eine Richtervorlage nicht. Die konkrete Normenkontrolle nach Art. 100 Abs. 1 GG ist zulässig, wenn ein Gericht ein formelles, nachkonstitutionelles Gesetz für verfassungswidrig hält – überzeugt, nicht nur unsicher – und es auf die Gültigkeit für seine Entscheidung ankommt. Vorher: verfassungskonforme Auslegung versuchen. Verordnungen und Satzungen prüft das Fachgericht selbst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#normenkontrolle",
+        "#art100gg",
+        "#verfassungsprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Konkrete Normenkontrolle: die Zulässigkeit",
+      "titelZeilen": [
+        "Bloße Zweifel",
+        "reichen für die",
+        "Vorlage nicht"
+      ],
+      "coverText": "Überzeugung statt Zweifel",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Ein Gericht darf ein Gesetz nur vorlegen, wenn es von dessen Verfassungswidrigkeit überzeugt ist.",
+        "handlung": "{B} nervously holds a wobbly, half-inflated balloon up to a tall gate, while {A} gently pushes it back with his pointer and gestures toward a solid, fully inflated one.",
+        "hinweisRegie": "Place the note in the open space between the wobbly balloon and the tall gate, slightly tilted toward the gate, so it links doubt to the refused passage without covering {A}'s pointer.",
+        "alternative": "{A} taps a scale that only tips fully when a heavy stone is added, while {B} tries in vain with a feather."
+      },
+      "bildSzene": "half-inflated balloon pushed back from gate",
+      "bildSzeneAlt": "feather fails to tip heavy scale",
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§ 80 BVerfGG",
+        "Themenpool: staat-354"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.038Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-405",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Belastender Bescheid eines Bundesministeriums: Ist vor der Anfechtungsklage ein Widerspruch nötig?",
+      "optionen": [
+        "Ja – ohne Vorverfahren ist jede Anfechtungsklage unzulässig",
+        "Nur, wenn die Rechtsbehelfsbelehrung es verlangt",
+        "Nein – bei obersten Bundesbehörden entfällt es grundsätzlich"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 68 VwGO",
+        "Themenpool: vwgo-405"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.039Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-405",
+      "ueberzeile": "Auflösung",
+      "titel": "Kein Vorverfahren bei obersten Bundesbehörden",
+      "text": "Hat eine oberste Bundes- oder Landesbehörde den VA erlassen, entfällt das Vorverfahren – außer ein Gesetz schreibt es vor (§ 68 Abs. 1 S. 2 Nr. 1 VwGO). Weitere Ausnahmen: erstmalige Beschwer durch Abhilfe- oder Widerspruchsbescheid (Nr. 2) und gesetzlicher Ausschluss. Viele Länder haben das Vorverfahren je nach Landesrecht weitgehend abgeschafft.",
+      "norm": "§ 68 Abs. 1 S. 2 VwGO",
+      "quellen": [
+        "§ 68 VwGO",
+        "Themenpool: vwgo-405"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.039Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – ohne Vorverfahren ist jede Anfechtungsklage unzulässig",
+        "Nur, wenn die Rechtsbehelfsbelehrung es verlangt",
+        "Nein – bei obersten Bundesbehörden entfällt es grundsätzlich"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-043",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 611a BGB: Die gelebte Praxis schlägt den Vertragsnamen",
+      "text": "Arbeitnehmer ist, wer im Dienst eines anderen weisungsgebunden, fremdbestimmte Arbeit in persönlicher Abhängigkeit leistet. Weisungen betreffen Inhalt, Durchführung, Zeit und Ort. Entscheidend ist eine Gesamtbetrachtung. Zeigt die tatsächliche Durchführung ein Arbeitsverhältnis, kommt es auf die Bezeichnung im Vertrag nicht an.",
+      "norm": "§ 611a Abs. 1 BGB",
+      "quellen": [
+        "§ 611a BGB",
+        "Themenpool: arbeit-043"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.039Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-845",
+      "ueberzeile": "Streitstand 2. Examen ÖR",
+      "titel": "Bauherr klagt auf die Baugenehmigung: Muss der Nachbar notwendig beigeladen werden?",
+      "norm": "§ 65 Abs. 2 VwGO",
+      "optionen": [
+        "Eine Ansicht (verbreitet in der Rspr.): nein – einfache Beiladung genügt; der Nachbar kann die Genehmigung anfechten.",
+        "Andere Ansicht: ja – das Verpflichtungsurteil greift zwangsläufig in die Rechte des Nachbarn ein."
+      ],
+      "text": "Klausur: Beide Wege sind begründbar. Praktisch wird der Nachbar jedenfalls einfach beigeladen (§ 65 Abs. 1 VwGO) – dann bindet ihn das Urteil (§ 121 VwGO). Unstreitig notwendig ist umgekehrt die Beiladung des Bauherrn, wenn der Nachbar die Genehmigung anficht.",
+      "quellen": [
+        "§ 65 VwGO",
+        "§ 121 VwGO",
+        "Themenpool: assessoroer-845"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.039Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-137",
+      "ueberzeile": "Merksatz StPO",
+      "titel": "Hauptverhandlung: Das letzte Wort hat der Angeklagte",
+      "text": "Aufruf, Präsenz, Zeugen raus, Person, Anklagesatz, Mitteilung zu Verständigungen, Belehrung, Einlassung (§ 243 StPO). Dann Beweisaufnahme (§ 244), Schlussvorträge und letztes Wort (§ 258 StPO).",
+      "norm": "§§ 243, 244, 258 StPO",
+      "quellen": [
+        "§ 243 StPO",
+        "§ 244 StPO",
+        "§ 258 StPO",
+        "Themenpool: stpo-137"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.039Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-845",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Notwendige Beiladung: wenn das Urteil den Dritten zwangsläufig trifft",
+      "text": "Notwendig beizuladen ist, wer so am streitigen Rechtsverhältnis beteiligt ist, dass die Entscheidung auch ihm gegenüber nur einheitlich ergehen kann (§ 65 Abs. 2 VwGO), weil sie unmittelbar in seine Rechte eingreift. Klassiker: Der Nachbar ficht die Baugenehmigung an, der Bauherr ist beizuladen. Unterbleibt sie, ist sie noch in der Revision nachholbar (§ 142 Abs. 1 S. 2 VwGO).",
+      "norm": "§ 65 Abs. 2 VwGO",
+      "quellen": [
+        "§ 65 Abs. 2 VwGO",
+        "§ 142 Abs. 1 S. 2 VwGO",
+        "Themenpool: assessoroer-845"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:06.039Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

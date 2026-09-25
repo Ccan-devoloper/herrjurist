@@ -1,0 +1,881 @@
+{
+  "datum": "2026-12-17",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "assessoroer-848",
+        "themaTitel": "Wie ist der Widerspruchsbescheid aufgebaut?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "schuld-180",
+        "themaTitel": "Wie wirkt die Gesamtschuld im Innen- und im Außenverhältnis?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "revision-877",
+        "themaTitel": "Wie baut man eine Verfahrensrüge auf?",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "anklage-781"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "anklage-781"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "strafat-924"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "streitstand",
+        "themaId": "europa-934"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:40",
+        "art": "merksatz",
+        "themaId": "vwgo-666"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "begriff",
+        "themaId": "schuld-457"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "assessoroer-848",
+      "poolTitel": "Wie ist der Widerspruchsbescheid aufgebaut?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 73 VwGO",
+        "§ 79 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "schuld-180",
+      "poolTitel": "Wie wirkt die Gesamtschuld im Innen- und im Außenverhältnis?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 421 BGB",
+        "§ 426 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-877",
+      "poolTitel": "Wie baut man eine Verfahrensrüge auf?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 344 StPO",
+        "§ 274 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-23"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-781",
+      "poolTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 151, 200 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-781",
+      "poolTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 151, 200 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-924",
+      "poolTitel": "Echte Wahlfeststellung, Postpendenz und in dubio pro reo: Was gilt wann?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "Art. 103 Abs. 2 GG",
+        "§ 261 StPO",
+        "§ 1 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "europa-934",
+      "poolTitel": "Rückforderung unionsrechtswidriger Beihilfen: § 48 VwVfG unter dem Effektivitätsgebot",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-18"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "vwgo-666",
+      "poolTitel": "Anordnung der sofortigen Vollziehung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 II Nr. 4, III VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-457",
+      "poolTitel": "Kündigung von Dauerschuldverhältnissen aus wichtigem Grund",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 314 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-848",
+      "slug": "2026-12-17-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Widerspruchsbescheid in vier Bausteinen",
+          "titelZeilen": [
+            "Widerspruchs-",
+            "bescheid in vier",
+            "Bausteinen"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Kosten gehören in den Tenor",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Vorab: Wer entscheidet?",
+          "punkte": [
+            "Erst prüft die Ausgangsbehörde, ob sie abhilft (§ 72 VwGO).",
+            "Sonst grundsätzlich die nächsthöhere Behörde (§ 73 Abs. 1 S. 2 Nr. 1 VwGO).",
+            "In Selbstverwaltungsangelegenheiten die Selbstverwaltungsbehörde, soweit nichts anderes geregelt ist (Nr. 3).",
+            "Abweichungen je nach Landesrecht prüfen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Baustein 1 und 2: Kopf und Tenor",
+          "punkte": [
+            "Kopf: Behörde, Datum, Aktenzeichen, Widerspruchsführer, Zustellungsart.",
+            "Tenor 1: Hauptsache – zurückgewiesen oder Bescheid (teilweise) aufgehoben.",
+            "Tenor 2: Kosten – der Bescheid bestimmt, wer sie trägt (§ 73 Abs. 3 S. 3 VwGO).",
+            "Tenor 3: bei Erfolg und Antrag – Hinzuziehung eines Bevollmächtigten notwendig?"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Baustein 3: Gründe",
+          "punkte": [
+            "Sachverhalt knapp, dann rechtliche Würdigung im Urteilsstil.",
+            "Zulässigkeit nur vertiefen, soweit sie problematisch ist.",
+            "Recht- und Zweckmäßigkeit prüfen (§ 68 Abs. 1 S. 1 VwGO) – in Selbstverwaltungssachen ggf. eingeschränkt.",
+            "Kosten kurz begründen (§ 80 VwVfG bzw. Landesrecht)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Baustein 4: Belehrung und Zustellung",
+          "text": "Der Widerspruchsbescheid ist zu begründen, mit einer Rechtsbehelfsbelehrung zu versehen und zuzustellen (§ 73 Abs. 3 S. 1 VwGO). Mit der Zustellung beginnt die Klagefrist (§ 74 Abs. 1 S. 1 VwGO). Fehlt die Belehrung oder ist sie unrichtig, gilt die Jahresfrist (§ 58 Abs. 2 VwGO)."
+        },
+        {
+          "art": "text",
+          "titel": "Warum das zählt: § 79 VwGO",
+          "text": "Geklagt wird gegen den Ausgangsbescheid in der Gestalt, die er durch den Widerspruchsbescheid gefunden hat (§ 79 Abs. 1 Nr. 1 VwGO). Allein gegen den Widerspruchsbescheid nur bei erstmaliger oder zusätzlicher selbständiger Beschwer (§ 79 Abs. 1 Nr. 2, Abs. 2 VwGO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kopf, Tenor mit Hauptsache und Kosten, Gründe im Urteilsstil, Rechtsbehelfsbelehrung – und am Ende zustellen."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bausteine abhaken",
+          "punkte": [
+            "Kopf und zuständige Behörde",
+            "Tenor: Hauptsache und Kosten",
+            "Gründe im Urteilsstil",
+            "Belehrung und Zustellung"
+          ],
+          "icons": [
+            "gebaeude",
+            "hammer",
+            "dokument",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Der Widerspruchsbescheid in vier Bausteinen: Kopf, Tenor, Gründe, Rechtsbehelfsbelehrung. In den Tenor gehört neben der Hauptsache auch die Kostenentscheidung (§ 73 Abs. 3 S. 3 VwGO), bei Erfolg auf Antrag die Hinzuziehung eines Bevollmächtigten. Begründen, belehren, zustellen: § 73 Abs. 3 S. 1 VwGO. Und für die spätere Klage gilt § 79 VwGO. Speichern für die nächste Assessorklausur im Verwaltungsrecht.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#widerspruchsbescheid",
+        "#verwaltungsrecht",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerspruchsbescheid: vier Bausteine",
+      "coverText": "Kosten gehören in den Tenor",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Ein Widerspruchsbescheid entsteht aus vier festen Bausteinen – vom Kopf bis zur Zustellung.",
+        "handlung": "{A} hovers and slots four stone blocks into a small arch, while {B} taps the second block with his pointer to show it carries two inscriptions side by side.",
+        "hinweisRegie": "Place the note in the free space beside the second block of the arch, slightly tilted toward it, so the two-part tenor is linked to the note without covering {B}'s pointer.",
+        "alternative": "{B} folds a letter into four panels while {A} seals the finished envelope and hands it to a waiting courier."
+      },
+      "bildSzene": "four blocks slotted into small arch",
+      "bildSzeneAlt": "letter folded into four panels, sealed",
+      "quellen": [
+        "§ 68 VwGO",
+        "§ 72 VwGO",
+        "§ 73 VwGO",
+        "§ 74 VwGO",
+        "§ 58 Abs. 2 VwGO",
+        "§ 79 VwGO",
+        "§ 80 VwVfG",
+        "Themenpool: assessoroer-848"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-bausteine",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.879Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-180",
+      "slug": "2026-12-17-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Alles gezahlt, nur anteilig zurück: § 426 BGB",
+          "titelZeilen": [
+            "Alles gezahlt,",
+            "nur anteilig",
+            "zurück"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Innen im Zweifel gleiche Anteile",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Bei der Gesamtschuld schuldet jeder die ganze Leistung, der Gläubiger darf sie aber nur einmal fordern (§ 421 BGB). Trenne zwei Ebenen: das Außenverhältnis zum Gläubiger und das Innenverhältnis unter den Schuldnern."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Außen gegen innen",
+          "links": {
+            "titel": "Außenverhältnis",
+            "punkte": [
+              "Gläubiger wählt frei, von wem er wie viel fordert (§ 421 S. 1).",
+              "Erfüllung durch einen wirkt für alle (§ 422 I).",
+              "Andere Tatsachen wirken grds. nur einzeln (§ 425)."
+            ]
+          },
+          "rechts": {
+            "titel": "Innenverhältnis",
+            "punkte": [
+              "Im Zweifel gleiche Anteile (§ 426 I 1).",
+              "Abweichung aus Vertrag, Gesetz oder Natur der Sache.",
+              "Fällt einer aus, tragen die anderen seinen Anteil mit (§ 426 I 2)."
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Wege zum Regress",
+          "links": {
+            "titel": "§ 426 Abs. 1 BGB",
+            "punkte": [
+              "Eigener Ausgleichsanspruch.",
+              "Entsteht schon mit der Gesamtschuld, verjährt eigenständig."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 426 Abs. 2 BGB",
+            "punkte": [
+              "Forderung des Gläubigers geht über (cessio legis).",
+              "Sicherheiten gehen mit (§§ 412, 401), Einwendungen auch (§ 404)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Rechenbeispiel",
+          "text": "A und B schulden G als Gesamtschuldner 10.000 Euro, im Innenverhältnis je zur Hälfte. G verlangt alles von A. A zahlt – und kann von B nur 5.000 Euro verlangen. Dafür stehen ihm beide Wege offen: der Anspruch aus § 426 Abs. 1 und die übergegangene Forderung nach Abs. 2 – aber nur einmal."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Außen wählt der Gläubiger, jeder schuldet alles. Innen gibt es Ausgleich nur in Höhe der Anteile – über § 426 Abs. 1 und Abs. 2 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Gesamtschuld prüfen",
+          "punkte": [
+            "Liegt eine Gesamtschuld vor (§ 421)?",
+            "Wirkt die Tatsache für alle (§§ 422 ff.)?",
+            "Wie sind die Anteile innen verteilt?",
+            "Abs. 1, Abs. 2 – oder beide?"
+          ],
+          "icons": [
+            "personen",
+            "kreislauf",
+            "waage",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Alles gezahlt, aber nur anteilig zurück: Wer als Gesamtschuldner den Gläubiger voll befriedigt, kann von den anderen nur deren Anteil verlangen – im Zweifel zu gleichen Teilen (§ 426 Abs. 1 S. 1 BGB). Außen darf der Gläubiger wählen, von wem er fordert (§ 421 BGB). Für den Regress gibt es zwei Wege: den eigenen Ausgleichsanspruch und die übergegangene Forderung nach § 426 Abs. 2 BGB. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#gesamtschuld",
+        "#426bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gesamtschuld: außen alles, innen anteilig",
+      "coverText": "Innen im Zweifel gleiche Anteile",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer als Gesamtschuldner alles zahlt, holt sich von den anderen nur deren Anteil zurück.",
+        "handlung": "{A} hands a full sack of crystals to a waiting creditor figure, then turns to {B}, who curiously splits an equal half from her own pile to pass back to him.",
+        "hinweisRegie": "Place the note in the free space between {A} and {B} next to the half pile being passed back, slightly tilted toward it, without covering the full sack.",
+        "alternative": "{B} and {A} are tied to the same rope pulled by one figure; afterwards they untie it and measure the rope into two equal halves."
+      },
+      "bildSzene": "full sack paid, half passed back",
+      "bildSzeneAlt": "shared rope measured into two halves",
+      "quellen": [
+        "§ 421 BGB",
+        "§ 422 BGB",
+        "§ 425 BGB",
+        "§ 426 BGB",
+        "§§ 401, 404, 412 BGB",
+        "Themenpool: schuld-180"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-regress",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.879Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-877",
+      "slug": "2026-12-17-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Verfahrensrüge: ohne Tatsachen schon unzulässig",
+          "unter": "Revision · § 344 Abs. 2 StPO",
+          "text": "Fehlt der vollständige Tatsachenvortrag, prüft das Revisionsgericht gar nicht weiter.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "icon": "lupe",
+          "sprecher": "Eine Verfahrensrüge ohne Tatsachen ist unzulässig. Nicht unbegründet, unzulässig. So baust du sie in vier Schritten auf.",
+          "marken": [
+            "unzulässig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Angriffsrichtung",
+          "text": "Welcher Verfahrensvorgang, welche Norm?",
+          "norm": null,
+          "sprecher": "Schritt eins: die Angriffsrichtung. Benenne, welcher Vorgang in der Hauptverhandlung fehlerhaft war und gegen welche Verfahrensnorm er verstößt. Zum Beispiel die Ablehnung eines Beweisantrags.",
+          "marken": [
+            "was genau?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Tatsachen vollständig vortragen",
+          "text": "Das Revisionsgericht muss allein aus der Begründung prüfen können.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "sprecher": "Schritt zwei, der Kern: Paragraf 344 Absatz 2 Satz 2 StPO. Du trägst alle Tatsachen vor, die den Mangel enthalten. So vollständig, dass das Revisionsgericht allein aus deiner Begründung prüfen kann. Also etwa Antrag und Ablehnungsbeschluss im Wortlaut. Verweise auf die Akte genügen nicht.",
+          "marken": [
+            "vollständig",
+            "kein Aktenverweis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Der Beweis",
+          "text": "Wesentliche Förmlichkeiten beweist nur das Protokoll.",
+          "norm": "§ 274 StPO",
+          "sprecher": "Schritt drei: der Beweis. Ob eine wesentliche Förmlichkeit beachtet wurde, beweist nur das Hauptverhandlungsprotokoll, Paragraf 274. Andere Verfahrenstatsachen klärt das Revisionsgericht im Freibeweis.",
+          "marken": [
+            "Protokoll"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Das Beruhen",
+          "text": "Es genügt, dass ein anderes Urteil nicht auszuschließen ist.",
+          "norm": "§ 337 StPO · § 338 StPO",
+          "sprecher": "Schritt vier: das Beruhen, Paragraf 337. Es genügt, dass nicht auszuschließen ist, dass das Urteil ohne den Fehler anders ausgefallen wäre. Bei den absoluten Revisionsgründen des Paragraf 338 wird das Beruhen unwiderleglich vermutet.",
+          "marken": [
+            "nicht ausschließbar"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zum Vergleich: die Sachrüge",
+          "text": "Dort genügt die allgemeine Rüge der Verletzung materiellen Rechts.",
+          "norm": "§ 344 Abs. 2 S. 1 StPO",
+          "sprecher": "Zum Vergleich: Für die allgemeine Sachrüge genügt der Satz, dass die Verletzung materiellen Rechts gerügt wird. Die Verfahrensrüge dagegen steht und fällt mit dem Tatsachenvortrag.",
+          "marken": [
+            "Sachrüge: ein Satz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Richtung, Tatsachen, Beweis, Beruhen",
+          "text": "Fehlen Tatsachen, ist die Rüge unzulässig – egal wie gut das Argument ist.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "sprecher": "Merke: Angriffsrichtung, vollständige Tatsachen, Beweis, Beruhen. Fehlen die Tatsachen, ist die Rüge unzulässig.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Lies deine Rüge wie ein Fremder",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "sprecher": "Speicher dir die vier Schritte für deine nächste Revisionsklausur. Und lies deine Rüge am Ende so, als hättest du die Akte nie gesehen.",
+          "marken": [
+            "gegenlesen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Eine Verfahrensrüge ohne vollständigen Tatsachenvortrag ist unzulässig (§ 344 Abs. 2 S. 2 StPO). Das Revisionsgericht muss allein anhand der Begründung prüfen können, ob ein Verfahrensfehler vorliegt. Der Aufbau: Angriffsrichtung, Tatsachen, Beweis (für wesentliche Förmlichkeiten das Protokoll, § 274 StPO), Beruhen (§ 337 StPO, bei § 338 StPO vermutet). Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#344stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfahrensrüge: der Aufbau in vier Schritten",
+      "titelZeilen": [
+        "Verfahrensrüge:",
+        "ohne Tatsachen",
+        "schon unzulässig"
+      ],
+      "coverText": "Allein aus der Begründung prüfbar",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Eine Verfahrensrüge muss alle Tatsachen selbst enthalten, sonst wird sie gar nicht erst geprüft.",
+        "handlung": "{A} nervously hands a thin folder through a narrow slot, while {B} on the other side opens it, finds only one page and pushes it straight back.",
+        "hinweisRegie": "Place the note in the free space beside the returned thin folder, slightly tilted toward it, so the missing facts are the focus without covering {B}'s hand at the slot.",
+        "alternative": "{B} tries to assemble a puzzle from a box {A} sent; half the pieces are missing and she sets the box aside unopened."
+      },
+      "bildSzene": "thin folder pushed back through slot",
+      "bildSzeneAlt": "puzzle box with missing pieces",
+      "quellen": [
+        "§ 274 StPO",
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-877"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-unzulaessig",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-781",
+      "ueberzeile": "Prüfungsfrage Anklage",
+      "titel": "In der Hauptverhandlung zeigt sich eine weitere, nicht angeklagte Tat. Darf das Gericht dafür verurteilen?",
+      "optionen": [
+        "Ja, wenn es vorher einen rechtlichen Hinweis erteilt",
+        "Ja, weil es die Wahrheit umfassend aufklären muss",
+        "Nur nach Nachtragsanklage und mit Zustimmung des Angeklagten"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 151 StPO",
+        "§ 264 StPO",
+        "§ 265 StPO",
+        "§ 266 StPO",
+        "Themenpool: anklage-781"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-781",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur nach Nachtragsanklage – mit Zustimmung des Angeklagten",
+      "text": "Anklagegrundsatz: Ohne Anklage keine gerichtliche Untersuchung (§ 151 StPO). Die Anklage umgrenzt, welche Tat im prozessualen Sinn Gegenstand des Urteils ist (§ 264 StPO). Eine andere Tat kann das Gericht nur einbeziehen, wenn die Staatsanwaltschaft Nachtragsanklage erhebt und der Angeklagte zustimmt (§ 266 Abs. 1 StPO). Ein Hinweis nach § 265 StPO betrifft nur dieselbe Tat.",
+      "norm": "§ 151 StPO · § 264 StPO · § 266 StPO",
+      "quellen": [
+        "§ 151 StPO",
+        "§ 264 StPO",
+        "§ 265 StPO",
+        "§ 266 StPO",
+        "Themenpool: anklage-781"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.882Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, wenn es vorher einen rechtlichen Hinweis erteilt",
+        "Ja, weil es die Wahrheit umfassend aufklären muss",
+        "Nur nach Nachtragsanklage und mit Zustimmung des Angeklagten"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-924",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Sachverhalt offen: erst in dubio pro reo, dann Postpendenz, zuletzt Wahlfeststellung",
+      "text": "Bleibt offen, was geschah: Stehen die Möglichkeiten im Stufenverhältnis (etwa Versuch und Vollendung), wird nach in dubio pro reo aus dem milderen Gesetz verurteilt. Steht die spätere Tat sicher fest, ist nur die frühere offen: Postpendenz, eindeutige Verurteilung. Erst sonst echte Wahlfeststellung – nach Rspr. nur bei vergleichbaren Taten wie Diebstahl oder Hehlerei.",
+      "norm": "§ 261 StPO · Art. 103 Abs. 2 GG",
+      "quellen": [
+        "§ 261 StPO",
+        "Art. 103 Abs. 2 GG",
+        "§ 1 StGB",
+        "Themenpool: strafat-924"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-934",
+      "ueberzeile": "Streitstand Europarecht",
+      "titel": "Unionsrechtswidrige Beihilfe: Sperrt die Jahresfrist die Rücknahme?",
+      "norm": "§ 48 Abs. 4 VwVfG",
+      "optionen": [
+        "EuGH/BVerwG: Nein – die Frist weicht dem Effektivitätsgebot.",
+        "Kritik in der Lit.: Rechtssicherheit spricht für die Frist."
+      ],
+      "text": "Klausur: § 48 VwVfG mit der Rspr. unionsrechtskonform anwenden – die Jahresfrist steht der Rücknahme nicht entgegen. Das BVerfG hat das gebilligt.",
+      "quellen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG",
+        "Themenpool: europa-934"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-666",
+      "ueberzeile": "Merksatz VwGO",
+      "titel": "Sofortvollzug braucht ein eigenes Vollzugsinteresse",
+      "text": "Das Interesse am Erlass des VA genügt nicht. Die Behörde muss das besondere Interesse an der sofortigen Vollziehung schriftlich und einzelfallbezogen begründen (§ 80 Abs. 3 S. 1 VwGO).",
+      "norm": "§ 80 Abs. 2 S. 1 Nr. 4, Abs. 3 VwGO",
+      "quellen": [
+        "§ 80 VwGO",
+        "Themenpool: vwgo-666"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-457",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Wichtiger Grund (§ 314 BGB): Die Fortsetzung ist unzumutbar",
+      "text": "Ein wichtiger Grund liegt vor, wenn dem Kündigenden nach Abwägung aller Umstände und der beiderseitigen Interessen nicht zugemutet werden kann, das Dauerschuldverhältnis bis zum vereinbarten Ende oder zum Ablauf einer Kündigungsfrist fortzusetzen. Bei Pflichtverletzungen grundsätzlich erst Abhilfefrist oder Abmahnung (Abs. 2). Spezialregeln wie §§ 543, 626 BGB gehen vor.",
+      "norm": "§ 314 BGB",
+      "quellen": [
+        "§ 314 BGB",
+        "§ 543 BGB",
+        "§ 626 BGB",
+        "Themenpool: schuld-457"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:32.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

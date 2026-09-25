@@ -1,0 +1,846 @@
+{
+  "datum": "2026-11-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "schuld-020",
+        "themaTitel": "Was ist ein Vertrag mit Schutzwirkung zugunsten Dritter?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-337",
+        "themaTitel": "Was ist Hehlerei und wann liegt sie vor?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-590",
+        "themaTitel": "Demokratieprinzip und Legitimationskette",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "revision-786"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "revision-786"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "schuld-171"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "merksatz",
+        "themaId": "ipr-890"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "begriff",
+        "themaId": "strafbt-743"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "fehler",
+        "themaId": "verwalt-930"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "schuld-020",
+      "poolTitel": "Was ist ein Vertrag mit Schutzwirkung zugunsten Dritter?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 157, 242 BGB",
+        "richterrechtliches Institut"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-337",
+      "poolTitel": "Was ist Hehlerei und wann liegt sie vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 259 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-590",
+      "poolTitel": "Demokratieprinzip und Legitimationskette",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 II GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "revision-786",
+      "poolTitel": "Revisionsgründe: absolute",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "revision-786",
+      "poolTitel": "Revisionsgründe: absolute",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-171",
+      "poolTitel": "Wer trägt die Gegenleistungsgefahr bei Unmöglichkeit?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 326 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "ipr-890",
+      "poolTitel": "Welches Recht gilt für einen Vertrag ohne Rechtswahl?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-743",
+      "poolTitel": "Schwere Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 226 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "verwalt-930",
+      "poolTitel": "Wann beginnt die Jahresfrist des § 48 Abs. 4 VwVfG?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 Abs. 4 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-020",
+      "slug": "2026-11-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Für den Elektriker haftet der Vermieter – auch gegenüber dem Kind",
+          "titelZeilen": [
+            "Für den Elektriker",
+            "haftet der Vermieter",
+            "– auch gegenüber",
+            "dem Kind"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 278 statt § 831 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "V vermietet M eine Wohnung. Für eine Reparatur beauftragt V den sorgfältig ausgewählten und überwachten Elektriker E. E arbeitet fahrlässig, Ms achtjährige Tochter T erleidet einen Stromschlag. Hat T einen Schadensersatzanspruch gegen V?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung, Teil 1: Delikt",
+          "schritte": [
+            {
+              "titel": "§ 823 Abs. 1 BGB",
+              "text": "Ein eigenes Verschulden des V fehlt – Auswahl und Überwachung waren sorgfältig."
+            },
+            {
+              "titel": "§ 831 Abs. 1 BGB",
+              "text": "Ein selbständiger Handwerker ist regelmäßig kein weisungsgebundener Verrichtungsgehilfe; jedenfalls könnte V sich entlasten."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung, Teil 2: Vertrag mit Schutzwirkung",
+          "schritte": [
+            {
+              "titel": "Leistungsnähe",
+              "text": "T kommt als Bewohnerin bestimmungsgemäß mit der Mietsache in Berührung."
+            },
+            {
+              "titel": "Gläubigernähe",
+              "text": "M hat ein berechtigtes Interesse daran, dass seine Tochter geschützt ist."
+            },
+            {
+              "titel": "Erkennbarkeit",
+              "text": "Für V war erkennbar, dass Angehörige des Mieters in der Wohnung leben."
+            },
+            {
+              "titel": "Schutzbedürftigkeit",
+              "text": "T hat keinen eigenen, inhaltsgleichen vertraglichen Anspruch."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "T ist in den Schutzbereich des Mietvertrags einbezogen. Für das Verschulden des E haftet V nach § 278 BGB – ohne Entlastungsmöglichkeit. T hat einen Anspruch aus § 280 Abs. 1 BGB (bzw. § 536a Abs. 1 BGB) nach den Grundsätzen des Vertrags mit Schutzwirkung, Schmerzensgeld über § 253 Abs. 2 BGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Vertrag mit Schutzwirkung öffnet Dritten den Weg zu § 278 BGB: Der Schuldner haftet für Gehilfen ohne Entlastung nach § 831 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Schutzwirkung in vier Prüfpunkten",
+          "punkte": [
+            "Leistungsnähe",
+            "Gläubigernähe",
+            "Erkennbarkeit",
+            "Schutzbedürftigkeit"
+          ],
+          "icons": [
+            "haus",
+            "familie",
+            "lupe",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Für den Elektriker haftet der Vermieter – auch gegenüber dem Kind des Mieters. Deliktisch kommt die Tochter nicht weit: Eigenes Verschulden fehlt, § 831 BGB passt nicht oder erlaubt die Entlastung. Über den Vertrag mit Schutzwirkung zugunsten Dritter wird sie aber in den Mietvertrag einbezogen – und V haftet nach § 278 BGB für seinen Erfüllungsgehilfen. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#vertragmitschutzwirkung",
+        "#278bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vertrag mit Schutzwirkung: der Mieter-Fall",
+      "coverText": "§ 278 statt § 831 BGB",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Über den Vertrag mit Schutzwirkung haftet der Vermieter auch dem Kind des Mieters für die Fehler seines Handwerkers.",
+        "handlung": "{A} nervously fixes a sparking wire in a doorway, while {B} holds a sturdy umbrella that shields a small child's backpack on the floor from the sparks.",
+        "hinweisRegie": "Place the note in the free space under the umbrella next to the backpack, slightly tilted toward it, so the protected third party is linked to the note without covering the sparking wire.",
+        "alternative": "{B} stretches a protective net across a doorway and catches a spark before it reaches a pair of small shoes left by the door, while {A} winces at his tools."
+      },
+      "bildSzene": "umbrella shields child's backpack from sparks",
+      "bildSzeneAlt": "protective net catches spark at doorway",
+      "quellen": [
+        "§§ 157, 242 BGB",
+        "§ 278 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 536a Abs. 1 BGB",
+        "§ 831 BGB",
+        "§ 253 Abs. 2 BGB",
+        "Themenpool: schuld-020"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.336Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-337",
+      "slug": "2026-11-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Hehlerei: Diesen Satz liest man oft – er stimmt nicht mehr",
+          "titelZeilen": [
+            "Hehlerei: Diesen",
+            "Satz liest man oft –",
+            "er stimmt nicht mehr"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Absetzen braucht einen Absatzerfolg",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Satz – und die Frage",
+          "text": "„Für das Absetzen genügt jedes auf den Absatz gerichtete Tätigwerden.“ So stand es lange in vielen Darstellungen. Fall: Dieb D gibt H ein gestohlenes Notebook, H soll es gegen Provision für D verkaufen. H inseriert es, findet keinen Käufer, dann stellt die Polizei es sicher. Strafbarkeit des H?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Vortat",
+              "text": "Ein anderer – D – hat das Notebook gestohlen. Es ist durch die Vortat erlangt."
+            },
+            {
+              "titel": "Tathandlung",
+              "text": "H verkauft selbständig im Interesse und mit Einverständnis des D: Absetzen (§ 259 Abs. 1 StGB)."
+            },
+            {
+              "titel": "Absatzerfolg",
+              "text": "Nach der Rspr. des BGH seit 2013 ist die Tat erst mit gelungenem Absatz vollendet. Hier fand sich kein Käufer."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Versuchte Hehlerei (§§ 259 Abs. 1, 3, 22 StGB). Die Bereicherungsabsicht liegt in der erhofften Provision."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Warum sich der Satz hält",
+          "text": "Früher verstand der BGH das Absetzen als bloße Tätigkeit: Schon das Bemühen um den Verkauf genügte. 2013 hat er diese Rechtsprechung aufgegeben – vor allem mit Blick auf den Wortlaut „absetzen“, der einen Erfolg beschreibt. Ältere Materialien geben oft noch den früheren Stand wieder."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Absetzen und Absatzhilfe sind erst mit dem Absatzerfolg vollendet. Bleibt er aus, prüfst du den Versuch nach § 259 Abs. 3 StGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Hehlerei in drei Zügen",
+          "punkte": [
+            "Vortat eines anderen?",
+            "Tathandlung mit Erfolg?",
+            "Sonst: Versuch, § 259 Abs. 3 StGB"
+          ],
+          "icons": [
+            "detektiv",
+            "paket",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Diesen Satz liest man oft: Für das Absetzen genüge jedes Bemühen um den Verkauf. Das stimmt nicht mehr. Seit 2013 verlangt der BGH für die vollendete Hehlerei durch Absetzen oder Absatzhilfe einen Absatzerfolg. Findet sich kein Käufer, bleibt es beim Versuch nach § 259 Abs. 3 StGB. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#hehlerei",
+        "#259stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Hehlerei: Absetzen nur mit Absatzerfolg",
+      "coverText": "Absetzen braucht einen Absatzerfolg",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer Diebesgut für den Dieb verkaufen soll, hat die Hehlerei erst vollendet, wenn der Verkauf gelingt.",
+        "handlung": "{A} stands at a market stall holding out a wrapped parcel toward an empty street, while {B} points his pointer at the empty spot where a buyer should be standing.",
+        "hinweisRegie": "Place the note in the open space of the empty street where a buyer would stand, slightly tilted toward the parcel, so the missing sale is linked to the note without covering {A}'s outstretched arms.",
+        "alternative": "{B} watches a parcel ride along a short conveyor that stops just before a pair of open hands, while {A} waits at the end with folded arms."
+      },
+      "bildSzene": "parcel offered at stall, no buyer",
+      "bildSzeneAlt": "conveyor stops before buyer's hands",
+      "quellen": [
+        "§ 259 StGB",
+        "§ 22 StGB",
+        "Themenpool: strafbt-337"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.337Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-590",
+      "slug": "2026-11-06-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Demokratie endet nicht an der Wahlurne",
+          "unter": "Demokratieprinzip · Art. 20 Abs. 2 GG",
+          "text": "Jede Ausübung von Staatsgewalt muss sich auf das Volk zurückführen lassen.",
+          "norm": "Art. 20 Abs. 2 GG",
+          "icon": "wahlurne",
+          "sprecher": "Demokratie heißt mehr, als alle vier Jahre zu wählen. Nach Artikel 20 Absatz 2 geht alle Staatsgewalt vom Volke aus, auch die der Beamtin im Landratsamt. Die Frage ist: Wie kommt die Legitimation bei ihr an?",
+          "marken": [
+            "mehr als wählen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Personelle Legitimation",
+          "text": "Eine ununterbrochene Kette vom Volk bis zum Amtswalter.",
+          "norm": "Art. 20 Abs. 2 GG",
+          "sprecher": "Erstens: die personelle Legitimation. Vom Volk über das Parlament zur Regierung und von dort über Ernennungen bis zum einzelnen Amtswalter muss eine ununterbrochene Legitimationskette reichen.",
+          "marken": [
+            "Kette ohne Lücke"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sachlich-inhaltliche Legitimation",
+          "text": "Bindung an Gesetze, Weisungen und parlamentarische Verantwortung.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Zweitens: die sachlich-inhaltliche Legitimation. Die Verwaltung ist an die Gesetze des Parlaments und an Weisungen gebunden, und die Regierung ist dem Parlament verantwortlich.",
+          "marken": [
+            "Gesetz + Weisung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Institutionelle Legitimation",
+          "text": "Das Grundgesetz selbst richtet die Gewalten ein.",
+          "norm": null,
+          "sprecher": "Drittens: die institutionell-funktionelle Legitimation. Das Grundgesetz selbst schafft Gesetzgebung, vollziehende Gewalt und Rechtsprechung als eigene Funktionen.",
+          "marken": [
+            "vom Grundgesetz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Das Legitimationsniveau",
+          "text": "Die Formen wirken zusammen – das Gesamtniveau muss reichen.",
+          "norm": null,
+          "sprecher": "Viertens, der Maßstab des Bundesverfassungsgerichts: Die Formen wirken zusammen. Entscheidend ist nicht jede einzelne, sondern ein hinreichendes Legitimationsniveau insgesamt.",
+          "marken": [
+            "Niveau zählt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Typisches Klausurproblem",
+          "text": "Weisungsfreie Gremien oder Mitbestimmung: Reicht das Niveau noch?",
+          "norm": null,
+          "sprecher": "Typisch für die Klausur sind weisungsfreie Gremien oder die Mitbestimmung von Beschäftigten bei Entscheidungen der Verwaltung. Dann fragst du, ob die Lücke in einem Strang durch die anderen ausgeglichen wird.",
+          "marken": [
+            "Lücke ausgeglichen?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Personell, sachlich, institutionell – zusammen ein ausreichendes Niveau.",
+          "norm": "Art. 20 Abs. 2 GG",
+          "sprecher": "Merke: personell, sachlich-inhaltlich, institutionell. Zusammen müssen sie ein ausreichendes Legitimationsniveau ergeben.",
+          "marken": [
+            "drei Stränge"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wo ist die Kette zum Volk?",
+          "text": "Speichern für die nächste Staatsorganisationsklausur.",
+          "sprecher": "Speicher dir das für die nächste Klausur im Staatsorganisationsrecht. Und frag bei jeder Stelle, die entscheidet: Wo ist die Kette zum Volk?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Demokratie endet nicht an der Wahlurne: Nach Art. 20 Abs. 2 GG muss jede Ausübung von Staatsgewalt auf das Volk zurückführbar sein – bis zur einzelnen Amtswalterin. Das leisten personelle, sachlich-inhaltliche und institutionelle Legitimation, die zusammen ein ausreichendes Legitimationsniveau ergeben müssen. Klausurklassiker: weisungsfreie Gremien und Mitbestimmung. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#demokratieprinzip",
+        "#staatsorganisationsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Demokratieprinzip: die Legitimationskette",
+      "titelZeilen": [
+        "Demokratie endet",
+        "nicht an der",
+        "Wahlurne"
+      ],
+      "coverText": "Die Kette reicht bis zur Behörde",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Jede Entscheidung der Verwaltung muss über eine Kette auf das Volk zurückgehen.",
+        "handlung": "{A} follows a glowing chain from a ballot box across the room to {B}, who hovers at a desk holding the chain's last link while stamping a document.",
+        "hinweisRegie": "Place the note in the open space along the middle of the glowing chain, slightly tilted toward {B}'s end, so the link to the deciding official is connected to the note without covering the ballot box.",
+        "alternative": "{B} checks a row of lanterns, each lit from the one before, starting at a ballot box, while {A} searches for the single lantern that has gone dark."
+      },
+      "bildSzene": "glowing chain from ballot box to desk",
+      "bildSzeneAlt": "lanterns lit in a row from ballot box",
+      "quellen": [
+        "Art. 20 Abs. 2 GG",
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-590"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.338Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-786",
+      "ueberzeile": "Prüfungsfrage Revision",
+      "titel": "Das Gericht schließt die Öffentlichkeit ohne gesetzlichen Grund aus. Muss die Revision das Beruhen darlegen?",
+      "optionen": [
+        "Ja – wie bei jedem Verfahrensfehler nach § 337 StPO",
+        "Nur, wenn der Angeklagte in der Verhandlung widersprochen hat",
+        "Nein – bei § 338 StPO wird das Beruhen gesetzlich angenommen"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-786"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.338Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-786",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – bei absoluten Revisionsgründen wird das Beruhen gesetzlich angenommen",
+      "text": "§ 338 StPO: Das Urteil ist „stets als auf einer Verletzung des Gesetzes beruhend anzusehen“, etwa bei verletzten Vorschriften über die Öffentlichkeit (Nr. 6). Die Beruhensprüfung entfällt – Ausnahmen lässt die Rspr. nur zu, wenn ein Beruhen denkgesetzlich ausgeschlossen ist. Den Fehler selbst trägst du vollständig vor (§ 344 Abs. 2 S. 2 StPO).",
+      "norm": "§ 338 StPO · § 344 Abs. 2 S. 2 StPO",
+      "quellen": [
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-786"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.338Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – wie bei jedem Verfahrensfehler nach § 337 StPO",
+        "Nur, wenn der Angeklagte in der Verhandlung widersprochen hat",
+        "Nein – bei § 338 StPO wird das Beruhen gesetzlich angenommen"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-171",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 326 BGB: Ohne Leistung keine Gegenleistung – außer Abs. 2 greift",
+      "text": "Wird der Schuldner nach § 275 BGB frei, entfällt der Anspruch auf die Gegenleistung ohne Rücktritt (§ 326 Abs. 1 S. 1 BGB). Anders nach Abs. 2: Ist der Gläubiger allein oder weit überwiegend verantwortlich oder im Annahmeverzug, behält der Schuldner den Anspruch, muss sich aber Ersparnisse anrechnen lassen. Schon Gezahltes: Rückforderung nach Abs. 4, §§ 346 ff. BGB.",
+      "norm": "§ 326 BGB",
+      "quellen": [
+        "§ 326 BGB",
+        "§ 275 BGB",
+        "§§ 346 ff. BGB",
+        "Themenpool: schuld-171"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.338Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-890",
+      "ueberzeile": "Merksatz IPR",
+      "titel": "Ohne Rechtswahl: Die charakteristische Leistung bringt ihr Recht mit",
+      "text": "Erst der Katalog des Art. 4 Abs. 1 Rom I-VO, sonst das Recht am gewöhnlichen Aufenthalt dessen, der die charakteristische Leistung erbringt (Abs. 2).",
+      "norm": "Art. 4 Rom I-VO",
+      "quellen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO",
+        "Themenpool: ipr-890"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.338Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-743",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Schwere Körperverletzung: Für die schwere Folge genügt Fahrlässigkeit",
+      "text": "§ 226 StGB ist eine Erfolgsqualifikation zu § 223 StGB. Schwere Folgen sind etwa der Verlust des Sehvermögens, der Verlust oder die dauernde Gebrauchsunfähigkeit eines wichtigen Glieds oder eine dauernde erhebliche Entstellung. Für die Folge genügt Fahrlässigkeit (§ 18 StGB), dazu ein spezifischer Gefahrzusammenhang. Absichtlich oder wissentlich verursacht: Abs. 2.",
+      "norm": "§ 226 StGB · § 18 StGB",
+      "quellen": [
+        "§ 226 StGB",
+        "§ 18 StGB",
+        "§ 223 StGB",
+        "Themenpool: strafbt-743"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.338Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-930",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "§ 48 Abs. 4 VwVfG: Wann beginnt die Jahresfrist für die Rücknahme?",
+      "falsch": "Die Jahresfrist läuft ab Erlass des rechtswidrigen Verwaltungsakts – spätestens, sobald die Behörde erste Zweifel hat.",
+      "richtigText": "Nach dem BVerwG ist § 48 Abs. 4 VwVfG eine Entscheidungsfrist: Sie beginnt erst, wenn die Behörde die Rechtswidrigkeit erkannt hat und ihr alle für die Rücknahme erheblichen Tatsachen vollständig bekannt sind – regelmäßig nach der Anhörung. Das gilt auch bei Rechtsanwendungsfehlern. Bei Täuschung, Drohung oder Bestechung gilt die Frist nicht (§ 48 Abs. 4 S. 2 VwVfG).",
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "Themenpool: verwalt-930"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:16.338Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,850 @@
+{
+  "datum": "2026-11-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "vwgo-662",
+        "themaTitel": "Beteiligten- und Prozessfähigkeit",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "bgbat-426",
+        "themaTitel": "Anfechtung wegen Inhalts- und Erklärungsirrtums",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-718",
+        "themaTitel": "Dazwischentreten Dritter und atypische Kausalverläufe",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "zpo-546"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "zpo-546"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "verwalt-381"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:15",
+        "art": "merksatz",
+        "themaId": "vwgo-409"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "begriff",
+        "themaId": "vwgo-655"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "fehler",
+        "themaId": "verwalt-929"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "vwgo-662",
+      "poolTitel": "Beteiligten- und Prozessfähigkeit",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 61, 62 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "bgbat-426",
+      "poolTitel": "Anfechtung wegen Inhalts- und Erklärungsirrtums",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 119, 121, 142 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-718",
+      "poolTitel": "Dazwischentreten Dritter und atypische Kausalverläufe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-546",
+      "poolTitel": "Zulässigkeitsprüfung der Zivilklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 12 ff., 253 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-546",
+      "poolTitel": "Zulässigkeitsprüfung der Zivilklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 12 ff., 253 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-381",
+      "poolTitel": "Wann muss angehört werden?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 28 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2026-09-16"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "vwgo-409",
+      "poolTitel": "Was gilt beim Rechtsschutz des Dritten gegen eine Baugenehmigung?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80a VwGO",
+        "§ 212a BauGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "vwgo-655",
+      "poolTitel": "Allgemeine Leistungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "verwalt-929",
+      "poolTitel": "Wiederaufgreifen des Verfahrens: Wie verhält sich § 51 VwVfG zu Rücknahme und Widerruf?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 51 VwVfG",
+        "§§ 48, 49 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-662",
+      "slug": "2026-11-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fraktion verklagt Bürgermeister: Wer ist beteiligtenfähig?",
+          "titelZeilen": [
+            "Fraktion verklagt",
+            "Bürgermeister: Wer",
+            "ist beteiligtenfähig?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 61 Nr. 2 VwGO trägt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Die Fraktion F im Gemeinderat beantragt, einen Punkt auf die Tagesordnung der nächsten Sitzung zu setzen. Bürgermeister B lehnt ab. F sieht ihr Antragsrecht aus der Gemeindeordnung verletzt und klagt vor dem Verwaltungsgericht. Sind F und B beteiligtenfähig?"
+        },
+        {
+          "art": "text",
+          "titel": "Der Stolperstein",
+          "text": "§ 61 Nr. 1 VwGO hilft nicht: F ist keine juristische Person, und B wird nicht als Privatperson verklagt. Wer hier abbricht, übersieht den Kommunalverfassungsstreit: Organe und Organteile streiten um ihre Rechte aus der Gemeindeordnung."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "Beteiligtenfähigkeit der Fraktion",
+              "text": "§ 61 Nr. 2 VwGO, nach h.M. jedenfalls entsprechend: Vereinigungen, soweit ihnen ein Recht zustehen kann – hier ein Organrecht."
+            },
+            {
+              "titel": "Beteiligtenfähigkeit des Bürgermeisters",
+              "text": "Ebenso als Organ über § 61 Nr. 2 VwGO. Klagegegner ist nach h.M. das Organ, dessen Verhalten beanstandet wird – nicht die Gemeinde."
+            },
+            {
+              "titel": "Prozessfähigkeit",
+              "text": "Für Vereinigungen handeln ihre gesetzlichen Vertreter und Vorstände (§ 62 Abs. 3 VwGO) – für F etwa der Fraktionsvorsitzende."
+            },
+            {
+              "titel": "Klagebefugnis",
+              "text": "Analog § 42 Abs. 2 VwGO: Möglich verletzt sein muss ein eigenes Organrecht aus der jeweiligen Gemeindeordnung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "F und B sind nach § 61 Nr. 2 VwGO – jedenfalls analog – beteiligtenfähig; F handelt durch ihren Vorsitzenden. Ob F ein Recht auf Aufnahme in die Tagesordnung hat, richtet sich nach der Gemeindeordnung des jeweiligen Landes. Das ist eine Frage der Klagebefugnis und der Begründetheit."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Im Kommunalverfassungsstreit trägt § 61 Nr. 2 VwGO: Organe und Organteile sind beteiligtenfähig, soweit ihnen ein Organrecht zustehen kann."
+        },
+        {
+          "art": "cta",
+          "titel": "Organstreit vor dem VG",
+          "punkte": [
+            "Organ oder Organteil?",
+            "§ 61 Nr. 2 VwGO – jedenfalls analog",
+            "Vertreter nach § 62 Abs. 3 VwGO",
+            "Organrecht aus der Gemeindeordnung"
+          ],
+          "icons": [
+            "personen",
+            "paragraf",
+            "person",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "Fraktion verklagt Bürgermeister – wer ist hier beteiligtenfähig? § 61 Nr. 1 VwGO passt nicht, denn die Fraktion ist keine juristische Person. Im Kommunalverfassungsstreit hilft § 61 Nr. 2 VwGO, nach h.M. jedenfalls entsprechend: Organe und Organteile sind beteiligtenfähig, soweit ihnen ein Organrecht zustehen kann. Welche Rechte das sind, regelt die Gemeindeordnung des jeweiligen Landes. Speichern für die nächste Kommunalrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#kommunalrecht",
+        "#kommunalverfassungsstreit",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kommunalverfassungsstreit: § 61 Nr. 2 VwGO",
+      "coverText": "§ 61 Nr. 2 VwGO trägt",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Auch wer keine juristische Person ist, kann vor Gericht streiten, wenn ihm ein eigenes Organrecht zustehen kann.",
+        "handlung": "{A} hovers at a courtroom entrance and hands a visitor badge to a small group holding one shared banner, while {B} leads them past a sign reserved for individual persons.",
+        "hinweisRegie": "Place the note in the free space next to the visitor badge, slightly tilted toward the group with the banner, so their admission is highlighted without covering {A}'s badge or the banner.",
+        "alternative": "{B} opens a side gate for a team carrying one shared flag, while {A} checks a small list of team rights."
+      },
+      "bildSzene": "badge handed to group with banner",
+      "bildSzeneAlt": "side gate opened for flag team",
+      "quellen": [
+        "§ 61 VwGO",
+        "§ 62 Abs. 3 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: vwgo-662"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.159Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-426",
+      "slug": "2026-11-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anfechtung in vier Schritten – der letzte kostet Geld",
+          "titelZeilen": [
+            "Anfechtung in vier",
+            "Schritten – der",
+            "letzte kostet Geld"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "§ 122 BGB nicht vergessen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V will seine Uhr für 1.500 € anbieten, vertippt sich aber und schreibt 150 €. K nimmt sofort an. Am nächsten Morgen bemerkt V den Tippfehler. Kann er sich vom Vertrag lösen – und was kostet ihn das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Anfechtungsgrund",
+              "text": "Erklärungsirrtum (§ 119 Abs. 1 Alt. 2 BGB): V wollte „150“ gar nicht erklären – bei verständiger Würdigung hätte er es nicht getan."
+            },
+            {
+              "titel": "2. Anfechtungserklärung",
+              "text": "Gegenüber K (§ 143 BGB). Das Wort „anfechten“ ist nicht nötig; erkennbar muss sein, dass V den Vertrag nicht gelten lassen will."
+            },
+            {
+              "titel": "3. Frist",
+              "text": "Unverzüglich, also ohne schuldhaftes Zögern nach Kenntnis (§ 121 Abs. 1 BGB). Handelt V gleich am Morgen, ist das gewahrt."
+            },
+            {
+              "titel": "4. Rechtsfolgen",
+              "text": "Der Vertrag ist von Anfang an nichtig (§ 142 Abs. 1 BGB). Aber V schuldet K den Vertrauensschaden (§ 122 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Erklärungs- oder Inhaltsirrtum?",
+          "links": {
+            "titel": "Erklärungsirrtum",
+            "punkte": [
+              "V erklärt etwas, das er so gar nicht erklären will.",
+              "Vertippen, Verschreiben, Versprechen"
+            ]
+          },
+          "rechts": {
+            "titel": "Inhaltsirrtum",
+            "punkte": [
+              "V erklärt, was er will, irrt aber über dessen Bedeutung.",
+              "Bestellt „ein Gros“, ohne zu wissen: 144 Stück"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "§ 122 BGB vergessen. K kann den Vertrauensschaden verlangen – etwa vergebliche Aufwendungen –, begrenzt auf das Erfüllungsinteresse. Die Ersatzpflicht entfällt nur, wenn K den Irrtum kannte oder kennen musste (§ 122 Abs. 2 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Grund, Erklärung, Frist, Folge – und die Folge hat einen Preis: den Vertrauensschaden nach § 122 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Anfechtung in vier Zügen",
+          "punkte": [
+            "Grund nach § 119 BGB",
+            "Erklärung nach § 143 BGB",
+            "Unverzüglich (§ 121 BGB)",
+            "Nichtig – aber § 122 BGB"
+          ],
+          "icons": [
+            "lupe",
+            "umschlag",
+            "uhr",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Anfechtung in vier Schritten – und der letzte kostet Geld. Anfechtungsgrund (hier ein Erklärungsirrtum nach § 119 Abs. 1 Alt. 2 BGB), Anfechtungserklärung (§ 143 BGB), Frist (§ 121 BGB), Rechtsfolge: Der Vertrag ist von Anfang an nichtig (§ 142 Abs. 1 BGB). Aber der Anfechtende ersetzt den Vertrauensschaden nach § 122 BGB – begrenzt auf das Erfüllungsinteresse. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#anfechtung",
+        "#119bgb",
+        "#erstesstaatsexamen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anfechtung wegen Erklärungsirrtums: vier Schritte",
+      "coverText": "§ 122 BGB nicht vergessen",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Wer wegen eines Irrtums anficht, kommt aus dem Vertrag heraus – muss aber das enttäuschte Vertrauen des anderen bezahlen.",
+        "handlung": "{A} tears a signed contract in half with relief, while {B} calmly holds out a small open coin pouch toward him with his pointer.",
+        "hinweisRegie": "Place the note in the free space next to the open coin pouch, slightly tilted toward it, so the price of avoidance is highlighted without covering the torn contract or {A}'s face.",
+        "alternative": "{B} walks {A} through four stepping stones across a stream, where the last stone carries a small toll box."
+      },
+      "bildSzene": "contract torn, coin pouch held out",
+      "bildSzeneAlt": "four stepping stones, toll on last",
+      "quellen": [
+        "§ 119 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§ 142 BGB",
+        "§ 143 BGB",
+        "Themenpool: bgbat-426"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-schritte-mit-haken",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.159Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-718",
+      "slug": "2026-11-20-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Kausal für den Tod – und trotzdem nicht verantwortlich",
+          "unter": "Objektive Zurechnung · StGB AT",
+          "text": "Die Bedingungstheorie ist weit – die Zurechnung filtert.",
+          "norm": null,
+          "icon": "warnung",
+          "sprecher": "Ursächlich heißt noch nicht verantwortlich. A schlägt O nieder, O kommt mit dem Krankenwagen ins Krankenhaus. Unterwegs verunglückt der Wagen, O stirbt. Ohne den Schlag säße O nicht im Wagen. Für den Tod muss A trotzdem nicht einstehen.",
+          "marken": [
+            "kausal",
+            "nicht zurechenbar"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Kausalität",
+          "text": "Bedingung, die nicht hinweggedacht werden kann, ohne dass der Erfolg entfiele.",
+          "norm": null,
+          "sprecher": "Schritt eins: die Kausalität nach der Äquivalenztheorie. Der Schlag kann nicht hinweggedacht werden, ohne dass der Tod entfiele. Er ist also kausal. Dass andere dazwischentreten, ändert daran nichts, solange die erste Bedingung fortwirkt.",
+          "marken": [
+            "conditio sine qua non"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rechtlich missbilligte Gefahr",
+          "text": "A hat eine unerlaubte Gefahr für O geschaffen.",
+          "norm": null,
+          "sprecher": "Schritt zwei, nach der Lehre von der objektiven Zurechnung: Hat A eine rechtlich missbilligte Gefahr geschaffen? Mit dem Schlag ja.",
+          "marken": [
+            "Gefahr geschaffen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gefahr im Erfolg verwirklicht?",
+          "text": "Nicht bei atypischem Verlauf oder allgemeinem Lebensrisiko.",
+          "norm": null,
+          "sprecher": "Schritt drei: Hat sich genau diese Gefahr im Erfolg verwirklicht? Hier nicht. Der Unfall realisiert das allgemeine Risiko des Straßenverkehrs, nicht die Gefahr des Schlags. Der Verlauf ist atypisch.",
+          "marken": [
+            "atypisch"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Dazwischentreten Dritter",
+          "text": "Freiverantwortliches, vorsätzliches Handeln eines Dritten kann die Zurechnung unterbrechen.",
+          "norm": null,
+          "sprecher": "Ähnlich, wenn ein Dritter vorsätzlich und frei verantwortlich eingreift und O etwa im Krankenhaus gezielt tötet. Dann entfällt die Zurechnung zu A in der Regel. Anders kann es sein, wenn A gerade die Gefahr eines solchen Eingriffs geschaffen hat.",
+          "marken": [
+            "Verantwortungsbereich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Erst Kausalität, dann Zurechnung",
+          "text": "Kausal ist fast alles – zurechenbar nur, was die geschaffene Gefahr verwirklicht.",
+          "norm": null,
+          "sprecher": "Merke: Kausal ist fast alles. Zurechenbar ist nur, was die geschaffene Gefahr verwirklicht. Die Rechtsprechung kommt oft über Vorsatz oder Vorhersehbarkeit zu ähnlichen Ergebnissen.",
+          "marken": [
+            "Kausalität ≠ Zurechnung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wenn ein Dritter dazwischenkommt",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur, in der ein Dritter oder der Zufall dazwischenkommt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Kausal für den Tod – und trotzdem nicht verantwortlich. Die Äquivalenztheorie ist weit: Der Schlag bleibt ursächlich, auch wenn O erst beim Unfall des Krankenwagens stirbt. Die Lehre von der objektiven Zurechnung filtert: Es hat sich nicht die Gefahr des Schlags verwirklicht, sondern das allgemeine Lebensrisiko. Die Rechtsprechung kommt oft über Vorsatz oder Vorhersehbarkeit zu ähnlichen Ergebnissen. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#objektivezurechnung",
+        "#kausalität",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Atypischer Kausalverlauf und Dritte",
+      "titelZeilen": [
+        "Kausal für den Tod –",
+        "und trotzdem nicht",
+        "verantwortlich"
+      ],
+      "coverText": "Erst Kausalität, dann Zurechnung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Eine Ursache zu setzen heißt noch nicht, für jeden späteren Zufall einstehen zu müssen.",
+        "handlung": "{A} watches a row of dominoes he tipped over, while {B} points to the point where a falling rock from outside knocked the last domino in a different direction.",
+        "hinweisRegie": "Place the note in the free space next to the falling rock and the last domino, slightly tilted toward the rock, so the break in the chain is marked without covering {A}'s startled face.",
+        "alternative": "{B} follows a thread from {A}'s hand that gets cut by a sudden gust of wind before reaching its end."
+      },
+      "bildSzene": "domino chain broken by falling rock",
+      "bildSzeneAlt": "thread cut by sudden gust",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 222 StGB",
+        "StGB AT (objektive Zurechnung)",
+        "Themenpool: strafat-718"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.161Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-546",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Klage beim örtlich unzuständigen Gericht: Was bewirkt es, wenn B rügelos zur Hauptsache verhandelt?",
+      "optionen": [
+        "Die Klage bleibt unzulässig",
+        "Das Gericht wird zuständig (§ 39 ZPO)",
+        "Das Gericht muss von Amts wegen verweisen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 39 ZPO",
+        "§ 40 ZPO",
+        "§ 504 ZPO",
+        "Themenpool: zpo-546"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.161Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-546",
+      "ueberzeile": "Auflösung",
+      "titel": "Das Gericht wird durch rügelose Einlassung zuständig",
+      "text": "§ 39 S. 1 ZPO: Verhandelt der Beklagte mündlich zur Hauptsache, ohne die Unzuständigkeit zu rügen, wird das Gericht zuständig. Das gilt nicht bei ausschließlichem Gerichtsstand (§ 40 Abs. 2 ZPO). Vor dem Amtsgericht wirkt die Einlassung nur nach Belehrung (§§ 39 S. 2, 504 ZPO).",
+      "norm": "§§ 39, 40 Abs. 2, 504 ZPO",
+      "quellen": [
+        "§ 39 ZPO",
+        "§ 40 ZPO",
+        "§ 504 ZPO",
+        "Themenpool: zpo-546"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.161Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Klage bleibt unzulässig",
+        "Das Gericht wird zuständig (§ 39 ZPO)",
+        "Das Gericht muss von Amts wegen verweisen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-381",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 28 VwVfG: Anhörung vor dem belastenden Verwaltungsakt",
+      "text": "Bevor ein Verwaltungsakt erlassen wird, der in Rechte eines Beteiligten eingreift, ist ihm Gelegenheit zur Äußerung zu geben (§ 28 Abs. 1 VwVfG). Abs. 2 nennt Fälle, in denen davon abgesehen werden kann, etwa bei Gefahr im Verzug. Fehlt die Anhörung, kann sie bis zum Abschluss der letzten Tatsacheninstanz nachgeholt werden (§ 45 Abs. 1 Nr. 3, Abs. 2 VwVfG).",
+      "norm": "§ 28 VwVfG · § 45 VwVfG",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 45 VwVfG",
+        "Themenpool: verwalt-381"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.161Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-409",
+      "ueberzeile": "Merksatz VwGO",
+      "titel": "Nachbar gegen Baugenehmigung: kein Aufschub",
+      "text": "Widerspruch und Anfechtungsklage des Nachbarn gegen die Baugenehmigung haben keine aufschiebende Wirkung (§ 212a Abs. 1 BauGB). Eilrechtsschutz läuft über §§ 80a, 80 Abs. 5 VwGO.",
+      "norm": "§ 212a Abs. 1 BauGB · § 80a VwGO",
+      "quellen": [
+        "§ 212a BauGB",
+        "§ 80a VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "Themenpool: vwgo-409"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.161Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-655",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Allgemeine Leistungsklage: für alles, was kein Verwaltungsakt ist",
+      "text": "Die VwGO regelt sie nicht ausdrücklich, setzt sie aber voraus (etwa §§ 43 Abs. 2, 111, 113 Abs. 4 VwGO). Mit ihr verlangt der Kläger ein Handeln, Dulden oder Unterlassen, das kein Verwaltungsakt ist – etwa eine Auskunft, den Widerruf einer Äußerung oder eine Zahlung. Klagebefugnis analog § 42 Abs. 2 VwGO; ein Vorverfahren ist grundsätzlich nicht nötig.",
+      "norm": "§§ 43 Abs. 2, 111, 113 Abs. 4 VwGO",
+      "quellen": [
+        "§ 43 VwGO",
+        "§ 111 VwGO",
+        "§ 113 Abs. 4 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "Themenpool: vwgo-655"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.161Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-929",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Wiederaufgreifen abgelehnt – ist der bestandskräftige Bescheid dann unantastbar?",
+      "falsch": "Liegen die Voraussetzungen des § 51 VwVfG nicht vor, ist der Fall erledigt: Die Behörde darf über den bestandskräftigen Bescheid nicht mehr neu entscheiden.",
+      "richtigText": "§ 51 VwVfG gibt einen Anspruch auf Wiederaufgreifen, etwa bei nachträglich geänderter Sach- oder Rechtslage oder neuen Beweismitteln. Daneben bleiben Rücknahme und Widerruf nach §§ 48, 49 VwVfG möglich (§ 51 Abs. 5 VwVfG). Die Behörde kann also im Ermessen neu entscheiden; der Betroffene hat einen Anspruch auf fehlerfreie Ermessensausübung.",
+      "quellen": [
+        "§ 51 VwVfG",
+        "§ 48 VwVfG",
+        "§ 49 VwVfG",
+        "Themenpool: verwalt-929"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:50:02.161Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

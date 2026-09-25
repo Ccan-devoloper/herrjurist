@@ -1,0 +1,869 @@
+{
+  "datum": "2026-11-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "verwalt-637",
+        "themaTitel": "Verwaltungsakt: Merkmale",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "bgbat-431",
+        "themaTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-796",
+        "themaTitel": "Plädoyer der Staatsanwaltschaft",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "verwbt-688"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "verwbt-688"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "strafbt-737"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "streitstand",
+        "themaId": "strafbt-068"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "merksatz",
+        "themaId": "verwbt-671"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "begriff",
+        "themaId": "schuld-449"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "verwalt-637",
+      "poolTitel": "Verwaltungsakt: Merkmale",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2026-11-12"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-796",
+      "poolTitel": "Plädoyer der Staatsanwaltschaft",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwbt-688",
+      "poolTitel": "Kommunale Selbstverwaltung",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 II GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwbt-688",
+      "poolTitel": "Kommunale Selbstverwaltung",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 II GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-737",
+      "poolTitel": "Totschlag und Tötungsvorsatz",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 212 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafbt-068",
+      "poolTitel": "Wie ist das Verhältnis zwischen § 211 StGB und § 212 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 28 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "verwbt-671",
+      "poolTitel": "Konkrete Gefahr und Gefahrprognose",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Landespolizeirecht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-449",
+      "poolTitel": "Rücktritt trotz Pflichtverletzung vor Fälligkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 323 IV BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-637",
+      "slug": "2026-11-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sechs VA-Merkmale und ihre Grenzfälle",
+          "titelZeilen": [
+            "Sechs VA-Merkmale",
+            "und ihre",
+            "Grenzfälle"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Umsetzung nein, Versetzung ja",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Definition",
+          "text": "Verwaltungsakt ist jede Verfügung, Entscheidung oder andere hoheitliche Maßnahme, die eine Behörde zur Regelung eines Einzelfalls auf dem Gebiet des öffentlichen Rechts trifft und die auf unmittelbare Rechtswirkung nach außen gerichtet ist (§ 35 S. 1 VwVfG)."
+        },
+        {
+          "art": "text",
+          "titel": "Merkmale 1 bis 3",
+          "punkte": [
+            "Hoheitliche Maßnahme: einseitiges Handeln mit Erklärungsgehalt – nicht der Vertrag.",
+            "Behörde: jede Stelle, die Aufgaben der öffentlichen Verwaltung wahrnimmt (§ 1 Abs. 4 VwVfG), auch Beliehene.",
+            "Öffentliches Recht: Grenzfälle sind etwa das Hausverbot oder die Vergabe von Leistungen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Merkmale 4 bis 6",
+          "punkte": [
+            "Regelung: auf eine Rechtsfolge gerichtet – nicht die bloße Auskunft oder der Realakt.",
+            "Einzelfall: auch die Allgemeinverfügung zählt (§ 35 S. 2 VwVfG), etwa das Verkehrszeichen.",
+            "Außenwirkung: fehlt bei rein behördeninternen Weisungen."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "VA oder nicht?",
+          "links": {
+            "titel": "VA",
+            "punkte": [
+              "Verkehrszeichen (Allgemeinverfügung)",
+              "Versetzung eines Beamten",
+              "Zweitbescheid nach erneuter Sachprüfung"
+            ]
+          },
+          "rechts": {
+            "titel": "Kein VA",
+            "punkte": [
+              "Umsetzung innerhalb der Behörde",
+              "Bloßer Hinweis auf die Rechtslage",
+              "Wiederholende Verfügung ohne neue Prüfung"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Warum das zählt",
+          "text": "Am VA hängen Anfechtungs- und Verpflichtungsklage, das Vorverfahren, die aufschiebende Wirkung nach § 80 Abs. 1 VwGO und die Bestandskraft. Wer das Merkmal falsch einordnet, wählt oft schon die falsche Klageart."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Hoheitlich, Behörde, öffentliches Recht, Regelung, Einzelfall, Außenwirkung – fehlt eins, ist es kein VA."
+        },
+        {
+          "art": "cta",
+          "titel": "VA-Check in vier Zügen",
+          "punkte": [
+            "Wer handelt – eine Behörde?",
+            "Regelt die Maßnahme etwas?",
+            "Einzelfall oder Allgemeinverfügung?",
+            "Wirkt sie nach außen?"
+          ],
+          "icons": [
+            "gebaeude",
+            "dokument",
+            "person",
+            "tuer"
+          ]
+        }
+      ],
+      "caption": "Sechs Merkmale machen den Verwaltungsakt: hoheitliche Maßnahme, Behörde, öffentliches Recht, Regelung, Einzelfall, Außenwirkung (§ 35 VwVfG). Spannend sind die Grenzfälle: Verkehrszeichen und Versetzung sind VA, Umsetzung und wiederholende Verfügung nicht. Und weil am VA Klageart, Vorverfahren und aufschiebende Wirkung hängen, lohnt sich der saubere Check. Speichern für die nächste Zulässigkeitsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#verwaltungsakt",
+        "#35vwvfg",
+        "#vwvfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verwaltungsakt: sechs Merkmale, Grenzfälle",
+      "coverText": "Umsetzung nein, Versetzung ja",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ob eine Maßnahme ein Verwaltungsakt ist, entscheidet sich an sechs Merkmalen – die Grenzfälle liegen an der Außenwirkung und der Regelung.",
+        "handlung": "{A} hovers at an office door and hands a sealed decision outward to a waiting citizen, while {B} curiously watches a second note being passed only between two desks inside.",
+        "hinweisRegie": "Place the note in the free space at the open door between inside and outside, slightly tilted toward the citizen, so it marks the external effect without covering the sealed decision.",
+        "alternative": "{B} sorts six small puzzle pieces into a frame while {A} holds back one piece that does not fit."
+      },
+      "bildSzene": "droid hands decision out through door",
+      "bildSzeneAlt": "six puzzle pieces, one does not fit",
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 1 Abs. 4 VwVfG",
+        "§ 80 Abs. 1 VwGO",
+        "Themenpool: verwalt-637"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "sechs-echte-merkmale",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.701Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-431",
+      "slug": "2026-11-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zu weite AGB-Klausel: Sie fällt ganz weg",
+          "titelZeilen": [
+            "Zu weite",
+            "AGB-Klausel: Sie",
+            "fällt ganz weg"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Streichen ja, zurückschneiden nein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Prüfreihenfolge",
+          "text": "Einbeziehung (§§ 305 ff. BGB), dann Inhaltskontrolle: zuerst die Klauselverbote ohne Wertungsmöglichkeit (§ 309), dann die mit Wertungsmöglichkeit (§ 308), zuletzt die Generalklausel (§ 307). Gegenüber Unternehmern gelten §§ 308, 309 nicht direkt (§ 310 Abs. 1 BGB)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Folge der Unwirksamkeit",
+          "links": {
+            "titel": "§ 139 BGB",
+            "punkte": [
+              "Individualvertrag: Teilnichtigkeit kann den ganzen Vertrag erfassen.",
+              "Maßgeblich ist der mutmaßliche Parteiwille."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 306 BGB",
+            "punkte": [
+              "AGB: Der Vertrag bleibt im Übrigen wirksam.",
+              "An die Stelle der Klausel tritt das Gesetz."
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Reduktion oder Streichung?",
+          "links": {
+            "titel": "Geltungserhaltende Reduktion",
+            "punkte": [
+              "Klausel auf das gerade noch Zulässige kürzen.",
+              "Unzulässig: Das Risiko der zu weiten Klausel trägt der Verwender."
+            ]
+          },
+          "rechts": {
+            "titel": "Blue-pencil-Test",
+            "punkte": [
+              "Streichung eines sprachlich und inhaltlich abtrennbaren Teils.",
+              "Zulässig: Der Rest bleibt verständlich und wirksam."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Beispiel aus dem Mietrecht",
+          "text": "Ein Formularmietvertrag verpflichtet den Mieter zu Schönheitsreparaturen nach starren Fristen. Der BGH sieht darin eine unangemessene Benachteiligung (§ 307 BGB). Die Klausel wird nicht auf „angemessene Fristen“ zurückgeschnitten – die Abwälzung entfällt, es bleibt bei § 535 Abs. 1 S. 2 BGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "AGB-Klausel zu weit: kein Zurückschneiden auf das Zulässige. Sie fällt, der Vertrag bleibt, das Gesetz füllt die Lücke (§ 306 BGB)."
+        },
+        {
+          "art": "cta",
+          "titel": "AGB-Kontrolle in drei Zügen",
+          "punkte": [
+            "Einbeziehung prüfen",
+            "§ 309, dann § 308, dann § 307 BGB",
+            "Rechtsfolge nach § 306 BGB"
+          ],
+          "icons": [
+            "vertrag",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Eine zu weite AGB-Klausel wird nicht auf das gerade noch Zulässige zurückgeschnitten – sie fällt ganz weg. Das Verbot der geltungserhaltenden Reduktion schützt den Kunden: Das Risiko der zu weiten Klausel trägt der Verwender. Erlaubt ist nur der Blue-pencil-Test, wenn sich ein Teil sprachlich und inhaltlich abtrennen lässt. Der Vertrag bleibt im Übrigen wirksam, an die Stelle tritt das Gesetz (§ 306 BGB). Speichern für die nächste AGB-Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#agb",
+        "#306bgb",
+        "#307bgb",
+        "#schuldrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "AGB: geltungserhaltende Reduktion",
+      "coverText": "Streichen ja, zurückschneiden nein",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Eine zu weit geratene Klausel wird nicht passend gestutzt, sondern fällt komplett weg – der übrige Vertrag bleibt stehen.",
+        "handlung": "{A} tries to trim an oversized puzzle piece with scissors to make it fit, while {B} firmly takes the whole piece out and slots in a plain standard piece instead.",
+        "hinweisRegie": "Place the note in the open space next to the plain standard piece, slightly tilted toward it, so it reads as the statutory replacement without covering the scissors or {B}'s hand.",
+        "alternative": "{B} removes one clearly separate brick from a wall while {A} watches the rest of the wall stay perfectly intact."
+      },
+      "bildSzene": "oversized puzzle piece replaced, not trimmed",
+      "bildSzeneAlt": "one separate brick removed, wall stands",
+      "quellen": [
+        "§ 305 BGB",
+        "§ 306 BGB",
+        "§§ 307–309 BGB",
+        "§ 310 Abs. 1 BGB",
+        "§ 139 BGB",
+        "§ 535 Abs. 1 S. 2 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.702Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-796",
+      "slug": "2026-11-26-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Das Plädoyer ist kein Gutachten mit Anrede",
+          "unter": "Schlussvortrag · § 258 StPO",
+          "text": "Ergebnis zuerst, dann die Begründung – und am Ende ein konkreter Antrag.",
+          "norm": "§ 258 Abs. 1 StPO",
+          "icon": "gericht",
+          "sprecher": "Das Plädoyer ist kein Gutachten mit Anrede. Die Staatsanwaltschaft trägt nach dem Schluss der Beweisaufnahme vor, und zwar mit einem klaren Ergebnis. So baust du es auf.",
+          "marken": [
+            "kein Gutachten",
+            "Ergebnis zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der festgestellte Sachverhalt",
+          "text": "Was hat die Hauptverhandlung ergeben?",
+          "norm": null,
+          "sprecher": "Schritt eins: der Sachverhalt, wie er sich nach der Beweisaufnahme darstellt. Nicht die Anklage vorlesen, sondern schildern, was jetzt feststeht.",
+          "marken": [
+            "was feststeht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Beweiswürdigung",
+          "text": "Warum steht das fest? Einlassung und Beweismittel würdigen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Beweiswürdigung. Erklär, warum du von diesem Sachverhalt überzeugt bist. Setz dich mit der Einlassung des Angeklagten und mit widersprüchlichen Aussagen auseinander.",
+          "marken": [
+            "warum überzeugt?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rechtliche Würdigung im Urteilsstil",
+          "text": "Delikte und Konkurrenzen – knapp, Probleme nur, wo sie bestehen.",
+          "norm": null,
+          "sprecher": "Schritt drei: die rechtliche Würdigung. Im Urteilsstil, also Ergebnis vor Begründung. Ausführlich nur dort, wo es wirklich ein Problem gibt. Konkurrenzen nicht vergessen.",
+          "marken": [
+            "Urteilsstil"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Strafzumessung",
+          "text": "Strafrahmen bestimmen, dann Umstände für und gegen den Angeklagten.",
+          "norm": "§ 46 StGB",
+          "sprecher": "Schritt vier: die Strafzumessung. Erst den Strafrahmen bestimmen, dann die Umstände nach Paragraf 46 StGB abwägen, die für und gegen den Angeklagten sprechen.",
+          "marken": [
+            "Rahmen, dann Abwägung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Antrag – und Objektivität",
+          "text": "Konkrete Strafe, Nebenfolgen, Kosten. Notfalls auch Freispruch.",
+          "norm": "§ 160 Abs. 2 StPO",
+          "sprecher": "Zum Schluss der konkrete Antrag: Strafe, Nebenfolgen, Kosten. Und denk dran: Die Staatsanwaltschaft ist zur Objektivität verpflichtet. Trägt die Beweisaufnahme die Anklage nicht, beantragt sie Freispruch.",
+          "marken": [
+            "konkreter Antrag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Sachverhalt, Beweise, Recht, Strafe, Antrag – im Urteilsstil.",
+          "norm": "§ 258 StPO",
+          "sprecher": "Merke: Sachverhalt, Beweiswürdigung, rechtliche Würdigung, Strafzumessung, Antrag. Und das Ganze im Urteilsstil.",
+          "marken": [
+            "fünf Teile"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Der Antrag muss tenorierbar sein",
+          "text": "Speichern für den nächsten Schlussvortrag.",
+          "norm": null,
+          "sprecher": "Speicher dir das für den nächsten Schlussvortrag. Und formulier den Antrag so, dass das Gericht ihn direkt übernehmen könnte.",
+          "marken": [
+            "tenorierbar"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Das Plädoyer ist kein Gutachten mit Anrede. Nach dem Schluss der Beweisaufnahme erhält die Staatsanwaltschaft das Wort (§ 258 Abs. 1 StPO) – und trägt im Urteilsstil vor: festgestellter Sachverhalt, Beweiswürdigung, rechtliche Würdigung, Strafzumessung nach § 46 StGB, konkreter Antrag. Die Einzelheiten der Form können je nach Ausbildungsland variieren. Wichtig bleibt: Die Staatsanwaltschaft ist objektiv – trägt die Beweisaufnahme die Anklage nicht, beantragt sie Freispruch.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#plädoyer",
+        "#258stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Plädoyer der Staatsanwaltschaft: Aufbau",
+      "titelZeilen": [
+        "Das Plädoyer ist",
+        "kein Gutachten",
+        "mit Anrede"
+      ],
+      "coverText": "Urteilsstil, konkreter Antrag",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Im Plädoyer steht das Ergebnis vorn, und es endet mit einem Antrag, den das Gericht übernehmen kann.",
+        "handlung": "{A} stands at a lectern and confidently places a single finished answer card on top of a neat stack, while {B} quietly sweeps away a long, winding scroll of drafts beside her.",
+        "hinweisRegie": "Place the note in the free space just above the finished answer card, slightly tilted toward it, so it marks the result-first structure without covering {A}'s hand or face.",
+        "alternative": "{B} flips a pyramid of blocks upside down so the biggest block, the result, sits on top, while {A} nods approvingly."
+      },
+      "bildSzene": "finished answer card on top of stack",
+      "bildSzeneAlt": "pyramid flipped, result block on top",
+      "quellen": [
+        "§ 258 StPO",
+        "§ 160 Abs. 2 StPO",
+        "§ 46 StGB",
+        "Themenpool: anklage-796"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-688",
+      "ueberzeile": "Prüfungsfrage Kommunalrecht",
+      "titel": "Was garantiert Art. 28 Abs. 2 S. 1 GG den Gemeinden?",
+      "optionen": [
+        "Einen festen Katalog unentziehbarer Einzelaufgaben",
+        "Den Fortbestand jeder einzelnen Gemeinde",
+        "Allzuständigkeit und Eigenverantwortung – im Rahmen der Gesetze"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "Themenpool: verwbt-688"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-688",
+      "ueberzeile": "Auflösung",
+      "titel": "Allzuständigkeit und Eigenverantwortung – im Rahmen der Gesetze",
+      "text": "Die Gemeinden dürfen alle Angelegenheiten der örtlichen Gemeinschaft in eigener Verantwortung regeln (Art. 28 Abs. 2 S. 1 GG). Geschützt ist die Institution, nicht jede einzelne Gemeinde – Gebietsreformen sind nach Anhörung aus Gründen des Gemeinwohls möglich. Der Gesetzgeber darf die Garantie ausgestalten, den Kernbereich aber nicht aushöhlen.",
+      "norm": "Art. 28 Abs. 2 S. 1 GG",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "Themenpool: verwbt-688"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.703Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Einen festen Katalog unentziehbarer Einzelaufgaben",
+        "Den Fortbestand jeder einzelnen Gemeinde",
+        "Allzuständigkeit und Eigenverantwortung – im Rahmen der Gesetze"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-737",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 212 StGB: Auch Totschlag kann lebenslang bedeuten",
+      "text": "Totschlag wird mit Freiheitsstrafe nicht unter fünf Jahren bestraft (§ 212 Abs. 1 StGB). In besonders schweren Fällen ist auf lebenslange Freiheitsstrafe zu erkennen (Abs. 2) – nach der Rspr. nur, wenn die Schuld ähnlich schwer wiegt wie bei einem Mord. Den Gegenpol bildet der minder schwere Fall des § 213 StGB, etwa nach einer Provokation durch das Opfer.",
+      "norm": "§§ 212, 213 StGB",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 213 StGB",
+        "Themenpool: strafbt-737"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-068",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Gekreuzte Mordmerkmale: Täter handelt aus Habgier, Anstifter zur Verdeckung",
+      "norm": "§§ 211, 26, 28 StGB",
+      "optionen": [
+        "Rspr.: Anstiftung zum Mord; keine Milderung nach § 28 Abs. 1, da eigenes gleichartiges Merkmal.",
+        "h.L.: Anstiftung zum Mord über § 28 Abs. 2 StGB – der Anstifter haftet für sein eigenes Merkmal."
+      ],
+      "text": "Beide Wege führen hier zum selben Ergebnis. Dann reicht es, beide Ansichten kurz darzustellen und den Streit offenzulassen – ausführlich wird er nur, wenn das Ergebnis davon abhängt.",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 26 StGB",
+        "§ 28 StGB",
+        "Themenpool: strafbt-068"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-671",
+      "ueberzeile": "Merksatz Polizeirecht",
+      "titel": "Gefahr ist eine Prognose – ex ante",
+      "text": "Konkrete Gefahr: hinreichende Schadenswahrscheinlichkeit im Einzelfall – aus Sicht eines verständigen Amtswalters beim Handeln. Je größer der Schaden, desto geringer die Anforderung.",
+      "norm": "Polizeigesetze der Länder",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: verwbt-671"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-449",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Rücktritt vor Fälligkeit: wenn der Leistungsausfall offensichtlich ist",
+      "text": "Der Gläubiger kann schon vor Fälligkeit zurücktreten, wenn offensichtlich ist, dass die Voraussetzungen des Rücktritts eintreten werden (§ 323 Abs. 4 BGB). Klassiker: Der Schuldner verweigert die Leistung vorab ernsthaft und endgültig, oder die rechtzeitige Leistung ist erkennbar nicht mehr zu schaffen. „Offensichtlich“ verlangt eine an Sicherheit grenzende Wahrscheinlichkeit.",
+      "norm": "§ 323 Abs. 4 BGB",
+      "quellen": [
+        "§ 323 Abs. 4 BGB",
+        "Themenpool: schuld-449"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:52.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,862 @@
+{
+  "datum": "2026-11-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-745",
+        "themaTitel": "Freiheitsberaubung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "grundr-378",
+        "themaTitel": "Was ist die Schutzpflichtdimension der Grundrechte?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessorz-586",
+        "themaTitel": "Aktenvortrag Zivilrecht: Aufbau in 10 Minuten",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "strafbt-742"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "strafbt-742"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:12",
+        "art": "norm",
+        "themaId": "stpo-779"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "tipp",
+        "themaId": "famerb-261"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:40",
+        "art": "zahl",
+        "themaId": "zwangsv-826"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "streitstand",
+        "themaId": "ipr-935"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-745",
+      "poolTitel": "Freiheitsberaubung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-378",
+      "poolTitel": "Was ist die Schutzpflichtdimension der Grundrechte?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 Abs. 1 S. 2 GG",
+        "Art. 2 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-586",
+      "poolTitel": "Aktenvortrag Zivilrecht: Aufbau in 10 Minuten",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-742",
+      "poolTitel": "Gefährliche Körperverletzung: gemeinschaftliche Begehung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 224 I Nr. 4 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-01"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-742",
+      "poolTitel": "Gefährliche Körperverletzung: gemeinschaftliche Begehung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 224 I Nr. 4 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-01"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "stpo-779",
+      "poolTitel": "Rechtswidrige Durchsuchung und Beweisverwertung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "famerb-261",
+      "poolTitel": "Wann kann man die Erbschaft ausschlagen?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1942 BGB",
+        "§ 1944 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zwangsv-826",
+      "poolTitel": "Wie prüft man die Vollstreckungsabwehrklage?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "ipr-935",
+      "poolTitel": "Wie knüpft man die Vorfrage im IPR an – selbständig oder unselbständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 EGBGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-745",
+      "slug": "2026-11-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Opfer schläft und merkt nichts – trotzdem § 239 StGB?",
+          "titelZeilen": [
+            "Opfer schläft und",
+            "merkt nichts –",
+            "trotzdem § 239 StGB?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Potenzielle oder aktuelle Freiheit?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A schließt O, der in seiner Wohnung schläft, für zwei Stunden ein. Bevor O aufwacht, schließt A wieder auf. O bemerkt von alldem nichts. Hat sich A wegen Freiheitsberaubung nach § 239 Abs. 1 StGB strafbar gemacht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Schutzgut",
+              "text": "§ 239 StGB schützt die persönliche Fortbewegungsfreiheit: die Möglichkeit, den Aufenthaltsort zu verlassen."
+            },
+            {
+              "titel": "Tathandlung",
+              "text": "Einsperren heißt: in einem umschlossenen Raum durch äußere Vorrichtungen festhalten. Daneben: „auf andere Weise“ der Freiheit berauben."
+            },
+            {
+              "titel": "Nicht nur ganz kurz",
+              "text": "Eine völlig unerhebliche Beeinträchtigung genügt nicht. Zwei Stunden sind ohne Weiteres erheblich."
+            },
+            {
+              "titel": "Die Streitfrage",
+              "text": "Genügt die potenzielle Fortbewegungsfreiheit – oder braucht das Opfer einen aktuellen Willen, sich fortzubewegen?"
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Ansichten",
+          "links": {
+            "titel": "Potenzielle Freiheit",
+            "punkte": [
+              "Geschützt ist schon die Möglichkeit, sich fortzubewegen.",
+              "Auch Schlafende sind geschützt: § 239 I vollendet."
+            ]
+          },
+          "rechts": {
+            "titel": "Aktueller Wille",
+            "punkte": [
+              "Geschützt ist nur ein tatsächlicher Fortbewegungswille.",
+              "Schlafende: keine vollendete Freiheitsberaubung."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nach der verbreiteten, wohl überwiegenden Ansicht, die schon die potenzielle Fortbewegungsfreiheit schützt, ist § 239 Abs. 1 StGB vollendet: O hätte beim Aufwachen nicht gehen können. Wer einen aktuellen Willen verlangt, verneint die Vollendung. Beides ist vertretbar – es zählt die Begründung."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "§ 239 StGB mit dem Satz „O hat es ja nicht bemerkt“ abhaken. Das Bewusstsein des Opfers ist kein geschriebenes Merkmal. Wer die Tat verneint, muss begründen, warum nur der aktuelle Fortbewegungswille geschützt sein soll."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einsperren oder anders der Freiheit berauben, nicht nur ganz kurz. Ahnungsloses Opfer: den Streit ansprechen, nicht mit „nicht bemerkt“ verneinen."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei § 239 StGB",
+          "punkte": [
+            "Einsperren oder andere Weise?",
+            "Mehr als nur unerheblich?",
+            "Opfer ahnungslos: Streit ansprechen"
+          ],
+          "icons": [
+            "schloss",
+            "uhr",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Opfer schläft und merkt nichts – ist das trotzdem Freiheitsberaubung? § 239 Abs. 1 StGB schützt die persönliche Fortbewegungsfreiheit. Ob schon die potenzielle Freiheit geschützt ist oder nur ein aktueller Fortbewegungswille, ist umstritten; nach verbreiteter Ansicht ist die Tat auch am Schlafenden vollendet. In der Klausur: den Streit ansprechen, nicht mit „nicht bemerkt“ abkürzen. Speichern für die nächste Strafrecht-BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#239stgb",
+        "#freiheitsberaubung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Freiheitsberaubung am Schlafenden?",
+      "coverText": "Potenzielle oder aktuelle Freiheit?",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Auch wer schläft, kann eingesperrt sein – ob das schon strafbar ist, hängt davon ab, was § 239 StGB schützt.",
+        "handlung": "{A} quietly slides a heavy wooden bolt across a small cave door, while {B} peeks through a gap and sees a figure sleeping peacefully inside, unaware of the lock.",
+        "hinweisRegie": "Place the note in the free space between the bolted door and the sleeping figure, slightly tilted toward the bolt, so the lock and the unaware sleeper are linked without covering {A}'s hands or {B}'s face.",
+        "alternative": "{B} watches a tiny hourglass on top of a locked crate with a snoring creature inside, while {A} holds the key and waits."
+      },
+      "bildSzene": "bolt slid across door, sleeper inside",
+      "bildSzeneAlt": "hourglass on locked crate, snoring inside",
+      "quellen": [
+        "§ 239 StGB",
+        "Themenpool: strafbt-745"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.490Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-378",
+      "slug": "2026-11-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schutzpflicht verletzt? Nicht wie einen Eingriff prüfen",
+          "titelZeilen": [
+            "Schutzpflicht",
+            "verletzt? Nicht wie",
+            "einen Eingriff prüfen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Untermaß statt Übermaß",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Grundrechte wehren nicht nur staatliche Eingriffe ab. Sie verpflichten den Staat auch, sich schützend vor die Grundrechtsgüter zu stellen – etwa gegen Gefahren durch Private. Ausdrücklich: Art. 1 Abs. 1 S. 2 GG („zu schützen“); für Leben und Gesundheit aus Art. 2 Abs. 2 S. 1 GG."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Schutzgut betroffen",
+              "text": "Ein grundrechtlich geschütztes Gut ist gefährdet, etwa Leben oder körperliche Unversehrtheit (Art. 2 Abs. 2 S. 1 GG)."
+            },
+            {
+              "titel": "2. Gefahr nicht vom Staat",
+              "text": "Die Gefahr geht von Dritten oder anderen Quellen aus. Greift der Staat selbst ein, bleibt es bei der Abwehrprüfung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Schutzpflicht ausgelöst",
+              "text": "Das BVerfG leitet Schutzpflichten aus der objektiven Dimension der Grundrechte ab – besonders deutlich bei Leben und Gesundheit."
+            },
+            {
+              "titel": "4. Untermaßverbot",
+              "text": "Verletzt erst, wenn der Staat gar nichts tut oder seine Vorkehrungen offensichtlich ungeeignet oder völlig unzulänglich sind."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Warum nicht wie ein Eingriff?",
+          "text": "Beim Eingriff fragst du, ob der Staat zu viel tut (Übermaßverbot). Bei der Schutzpflicht fragst du, ob er zu wenig tut. Wie er schützt, entscheidet vor allem der Gesetzgeber – mit weitem Einschätzungs-, Wertungs- und Gestaltungsspielraum. Deshalb keine volle Verhältnismäßigkeitsprüfung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eingriff: Tut der Staat zu viel? Schutzpflicht: Tut er zu wenig? Maßstab ist das Untermaßverbot – mit weitem Spielraum des Gesetzgebers."
+        },
+        {
+          "art": "cta",
+          "titel": "Schutzpflicht in vier Zügen",
+          "punkte": [
+            "Schutzgut betroffen",
+            "Gefahr durch Dritte oder Umstände",
+            "Schutzpflicht ausgelöst",
+            "Untermaß: nichts oder völlig unzulänglich"
+          ],
+          "icons": [
+            "person",
+            "warnung",
+            "schild",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Schutzpflicht verletzt? Dann nicht wie einen Eingriff prüfen. Aus Art. 1 Abs. 1 S. 2 GG und Art. 2 Abs. 2 S. 1 GG folgt die Pflicht des Staates, sich schützend vor Leben und Gesundheit zu stellen. Maßstab ist aber das Untermaßverbot: Verletzt ist die Pflicht erst, wenn der Staat gar nichts tut oder seine Vorkehrungen offensichtlich ungeeignet oder völlig unzulänglich sind. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#schutzpflicht",
+        "#untermaßverbot",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Grundrechtliche Schutzpflicht: das Schema",
+      "coverText": "Untermaß statt Übermaß",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Bei der Schutzpflicht fragt man nicht, ob der Staat zu viel tut, sondern ob er zu wenig tut.",
+        "handlung": "{A} stands at the edge of a cliff path and checks a low but sturdy railing that someone has put up, while {B} measures with his pointer whether the railing is at least there at all.",
+        "hinweisRegie": "Place the note in the open space next to the low railing, slightly tilted toward it, so it points to the minimum level of protection without covering {A}'s hand on the railing or {B}'s pointer.",
+        "alternative": "{B} lowers a simple safety net under a narrow bridge while {A} checks that it is not full of holes."
+      },
+      "bildSzene": "checking low railing on cliff path",
+      "bildSzeneAlt": "safety net lowered under narrow bridge",
+      "quellen": [
+        "Art. 1 Abs. 1 S. 2 GG",
+        "Art. 2 Abs. 2 S. 1 GG",
+        "Themenpool: grundr-378"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "falsche-schablone",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.490Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-586",
+      "slug": "2026-11-16-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vier Bausteine im Aktenvortrag – Nr. 3 ist das Ergebnis",
+          "unter": "Aktenvortrag · 2. Examen Zivilrecht",
+          "text": "Üblich: Das Ergebnis kommt vor die Begründung.",
+          "norm": null,
+          "icon": "aktentasche",
+          "sprecher": "Im Aktenvortrag kommt dein Ergebnis vor der Begründung. Der Prüfer hört nur zu, er liest nicht mit. Deshalb braucht er früh Orientierung. Hier sind die vier Bausteine.",
+          "marken": [
+            "Ergebnis zuerst",
+            "vier Bausteine"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einleitungssatz",
+          "text": "Wer will was von wem, in welchem Verfahrensstadium?",
+          "norm": null,
+          "sprecher": "Baustein eins: der Einleitungssatz. Wer will was von wem, in welchem Stadium ist das Verfahren, und in welcher Rolle trägst du vor, etwa als Richter oder als Anwalt.",
+          "marken": [
+            "wer, was, wo"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sachbericht",
+          "text": "Kurz und geordnet – nur, was die Lösung trägt.",
+          "norm": null,
+          "sprecher": "Baustein zwei: der Sachbericht. Unstreitiges, streitiges Vorbringen, Anträge und Prozessgeschichte. Aber knapp und nur, was die Lösung trägt. Der Prüfer soll den Fall verstehen, nicht die Akte nacherleben.",
+          "marken": [
+            "knapp"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Entscheidungsvorschlag",
+          "text": "Ein Satz: Wie soll entschieden werden?",
+          "norm": null,
+          "sprecher": "Baustein drei: der Entscheidungsvorschlag. Ein Satz, zum Beispiel: Ich schlage vor, der Klage überwiegend stattzugeben. Jetzt weiß der Prüfer, wohin deine Begründung führt.",
+          "marken": [
+            "ein Satz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtliche Würdigung und Tenor",
+          "text": "Zulässigkeit knapp, Schwerpunkt Begründetheit, am Ende der Tenor.",
+          "norm": null,
+          "sprecher": "Baustein vier: die rechtliche Würdigung. Zulässigkeit nur, soweit sie problematisch ist, dann die Begründetheit mit dem Schwerpunkt auf dem Streit. Am Ende wiederholst du den Vorschlag mit vollständigem Tenor, einschließlich Kosten und vorläufiger Vollstreckbarkeit.",
+          "marken": [
+            "Schwerpunkt",
+            "Tenor"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Frei sprechen",
+          "text": "Stichpunkte statt Manuskript, Zeitvorgabe des Landes einhalten.",
+          "norm": null,
+          "sprecher": "Und die Form: Sprich frei nach Stichpunkten und halte Blickkontakt. Die genaue Zeitvorgabe und Details des Aufbaus richten sich nach deinem Land.",
+          "marken": [
+            "frei sprechen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Einleitung, Sachbericht, Vorschlag, Würdigung",
+          "text": "Erst Orientierung, dann Begründung – der Tenor schließt den Vortrag.",
+          "norm": null,
+          "sprecher": "Merke: Einleitung, Sachbericht, Vorschlag, Würdigung. Erst gibst du Orientierung, dann die Begründung, und der vollständige Tenor schließt den Vortrag.",
+          "marken": [
+            "Orientierung zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Probevortrag testen",
+          "text": "Speichern für die Vorbereitung auf die mündliche Prüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir die vier Bausteine für deinen nächsten Probevortrag. Und stopp dabei einmal die Zeit.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Vier Bausteine im Aktenvortrag – und der dritte ist dein Ergebnis. Einleitungssatz, Sachbericht, Entscheidungsvorschlag, rechtliche Würdigung mit vollständigem Tenor: Weil der Prüfer nur zuhört, braucht er früh Orientierung. Sprich frei, halte den Sachbericht knapp und setze den Schwerpunkt auf den Streit. Details und Zeitvorgaben richten sich nach deinem Land.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#aktenvortrag",
+        "#mündlicheprüfung",
+        "#zpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aktenvortrag Zivilrecht: vier Bausteine",
+      "titelZeilen": [
+        "Vier Bausteine im",
+        "Aktenvortrag –",
+        "Nr. 3: das Ergebnis"
+      ],
+      "coverText": "Vorschlag vor Würdigung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Wer im Aktenvortrag das Ergebnis früh nennt, gibt dem Zuhörer eine Landkarte für die Begründung.",
+        "handlung": "{A} hovers in front of a small audience stone and places four building blocks in a row, while {B} nervously holds up the third block, which carries a bright flag.",
+        "hinweisRegie": "Place the note in the free space above the third block with the flag, slightly tilted toward it, so the early result is marked without covering {B}'s hands or the other blocks.",
+        "alternative": "{B} unrolls a short map before a walk while {A} points at the destination marked on it before the path begins."
+      },
+      "bildSzene": "four blocks in a row, third flagged",
+      "bildSzeneAlt": "map with destination shown before walk",
+      "quellen": [
+        "ZPO",
+        "Themenpool: assessorz-586"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-bausteine",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-742",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "A verprügelt O. B hat den Plan mit ausgeheckt, bleibt aber zu Hause. § 224 I Nr. 4 StGB?",
+      "optionen": [
+        "Ja – der gemeinsame Tatplan genügt",
+        "Nein – ein weiterer Beteiligter muss am Tatort mitwirken",
+        "Ja – als Mittäter ist B stets Beteiligter im Sinne der Nr. 4"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 224 Abs. 1 Nr. 4 StGB",
+        "Themenpool: strafbt-742"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-742",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ohne Mitwirkung am Tatort keine gemeinschaftliche Begehung",
+      "text": "Nr. 4 erfasst die erhöhte Gefährlichkeit, wenn das Opfer mehreren Beteiligten gegenübersteht. Deshalb müssen mindestens zwei Beteiligte am Tatort bewusst zusammenwirken. Ein Plan aus der Ferne reicht nicht. Am Tatort kann aber auch ein Gehilfe genügen, der die Lage des Opfers verschlechtert – selbst zuschlagen muss er nicht.",
+      "norm": "§ 224 Abs. 1 Nr. 4 StGB",
+      "quellen": [
+        "§ 224 Abs. 1 Nr. 4 StGB",
+        "Themenpool: strafbt-742"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.492Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – der gemeinsame Tatplan genügt",
+        "Nein – ein weiterer Beteiligter muss am Tatort mitwirken",
+        "Ja – als Mittäter ist B stets Beteiligter im Sinne der Nr. 4"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-779",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 105 StPO: Durchsuchung ohne Richter – und was aus den Funden wird",
+      "text": "Durchsuchungen ordnet grundsätzlich der Richter an, bei Gefahr im Verzug auch die Staatsanwaltschaft und ihre Ermittlungspersonen (§ 105 Abs. 1 StPO). Ein Verstoß führt nicht automatisch zum Verwertungsverbot: Die Rspr. wägt im Einzelfall ab. Wird der Richtervorbehalt aber bewusst oder willkürlich umgangen, nimmt sie ein Verwertungsverbot an.",
+      "norm": "§ 105 Abs. 1 StPO",
+      "quellen": [
+        "§ 105 StPO",
+        "Themenpool: stpo-779"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-261",
+      "ueberzeile": "Klausurtipp Erbrecht",
+      "titel": "Ausschlagung: erst § 1943, dann Frist und Form",
+      "text": "Frag zuerst, ob der Erbe schon angenommen hat – dann kann er nicht mehr ausschlagen (§ 1943 BGB); mit Ablauf der Frist gilt die Erbschaft als angenommen. Die Frist beträgt sechs Wochen ab Kenntnis von Anfall und Berufungsgrund (§ 1944 BGB), in bestimmten Auslandsfällen sechs Monate. Erklärt wird gegenüber dem Nachlassgericht in der Form des § 1945 BGB.",
+      "quellen": [
+        "§ 1942 BGB",
+        "§ 1943 BGB",
+        "§ 1944 BGB",
+        "§ 1945 BGB",
+        "Themenpool: famerb-261"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-826",
+      "ueberzeile": "4 Punkte Zwangsvollstreckung",
+      "titel": "Vollstreckungsabwehrklage: die vier Prüfpunkte",
+      "text": "Mit § 767 ZPO macht der Schuldner materielle Einwendungen gegen den titulierten Anspruch geltend. Ziel: Die Vollstreckbarkeit des Titels soll entfallen.",
+      "punkte": [
+        "Statthaft: materielle Einwendung gegen den titulierten Anspruch",
+        "Zuständig: Prozessgericht des ersten Rechtszugs, ausschließlich (§ 802 ZPO)",
+        "Begründet: Die Einwendung besteht, etwa Erfüllung",
+        "Keine Präklusion: Grund nach Schluss der mündlichen Verhandlung entstanden (§ 767 II)"
+      ],
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 802 ZPO",
+        "Themenpool: zwangsv-826"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-935",
+      "ueberzeile": "Streitstand IPR",
+      "titel": "Vorfrage im IPR: Nach wessen Kollisionsrecht knüpfst du an?",
+      "norm": "Art. 3 EGBGB",
+      "optionen": [
+        "Selbständige Anknüpfung (h.M.): Die Vorfrage folgt dem IPR des Forums, also dem deutschen.",
+        "Unselbständige Anknüpfung: Die Vorfrage folgt dem IPR des Staates, dessen Recht die Hauptfrage beherrscht."
+      ],
+      "text": "Beispiel: Erbstatut ist ausländisches Recht, fraglich ist, ob die Ehe mit dem Erblasser wirksam ist. Die h.M. knüpft grundsätzlich selbständig an – das sichert den inneren Entscheidungseinklang. Die Gegenansicht betont den internationalen Entscheidungseinklang. Den Streit ansprechen, wenn beide Wege zu verschiedenen Rechten führen.",
+      "quellen": [
+        "Art. 3 EGBGB",
+        "Themenpool: ipr-935"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:45.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

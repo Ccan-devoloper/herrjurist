@@ -1,0 +1,879 @@
+{
+  "datum": "2027-01-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "schuld-011",
+        "themaTitel": "Was sind die Rechtsfolgen des Annahmeverzugs?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafbt-316",
+        "themaTitel": "Was sind niedrige Beweggründe?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-594",
+        "themaTitel": "Gesetzgebungskompetenzen: Art. 70 ff. GG",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "vwgo-104"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "vwgo-104"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "ipr-890"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:29",
+        "art": "zahl",
+        "themaId": "anklage-864"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "streitstand",
+        "themaId": "anklage-870"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:17",
+        "art": "merksatz",
+        "themaId": "strafat-059"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "schuld-011",
+      "poolTitel": "Was sind die Rechtsfolgen des Annahmeverzugs?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 300 BGB",
+        "§ 301 BGB",
+        "§ 302 BGB",
+        "§ 304 BGB",
+        "§ 326 Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-11",
+        "2026-10-11"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafbt-316",
+      "poolTitel": "Was sind niedrige Beweggründe?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-594",
+      "poolTitel": "Gesetzgebungskompetenzen: Art. 70 ff. GG",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 70 ff. GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-104",
+      "poolTitel": "Wann ist die Fortsetzungsfeststellungsklage statthaft?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 1 S. 4 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-104",
+      "poolTitel": "Wann ist die Fortsetzungsfeststellungsklage statthaft?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 1 S. 4 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "ipr-890",
+      "poolTitel": "Welches Recht gilt für einen Vertrag ohne Rechtswahl?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "anklage-864",
+      "poolTitel": "Welches Gericht ist sachlich zuständig?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 24 GVG",
+        "§ 25 GVG",
+        "§ 74 GVG",
+        "§ 209 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-20"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "anklage-870",
+      "poolTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 74 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-18"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "strafat-059",
+      "poolTitel": "Was ist ein untauglicher Versuch, was ein Wahndelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-011",
+      "slug": "2027-01-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Rad nicht abgeholt, dann beschädigt: Hilft § 823 BGB?",
+          "titelZeilen": [
+            "Rad nicht abgeholt,",
+            "dann beschädigt:",
+            "Hilft § 823 BGB?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Privileg auch im Deliktsrecht?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "K bringt sein Rad zur Reparatur zu W. Zum vereinbarten Abholtermin steht das fertige Rad bereit, K kommt nicht. Tage später stößt W beim Umräumen leicht fahrlässig dagegen, der Rahmen verzieht sich. Kann K Schadensersatz verlangen?"
+        },
+        {
+          "art": "text",
+          "titel": "Vertraglich ist die Sache klar",
+          "text": "K ist im Annahmeverzug: Der Abholtermin war vereinbart, ein Angebot war nach § 296 BGB entbehrlich. Während des Verzugs hat W nur Vorsatz und grobe Fahrlässigkeit zu vertreten (§ 300 Abs. 1 BGB). Ein Anspruch aus § 280 Abs. 1 BGB scheitert daher."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Und das Deliktsrecht?",
+          "links": {
+            "titel": "Überwiegende Ansicht",
+            "punkte": [
+              "§ 300 I gilt auch für § 823 BGB, soweit es um den Leistungsgegenstand geht.",
+              "Sonst liefe das Privileg über das Deliktsrecht leer."
+            ]
+          },
+          "rechts": {
+            "titel": "Andere Ansicht",
+            "punkte": [
+              "Deliktsrecht folgt eigenen Regeln: Haftung für jede Fahrlässigkeit.",
+              "§ 300 I mildert nur die vertragliche Haftung."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme und Grenze",
+          "text": "Für die überwiegende Ansicht spricht der Zweck: Wer den Schuldner warten lässt, soll die Milderung nicht über § 823 BGB umgehen können. Die Grenze: Privilegiert ist nur der Umgang mit dem Leistungsgegenstand. Beschädigt W andere Sachen des K, haftet er wie sonst auch."
+        },
+        {
+          "art": "text",
+          "titel": "Die weiteren Folgen des Annahmeverzugs",
+          "punkte": [
+            "Gattungsschuld: Die Leistungsgefahr geht über (§ 300 Abs. 2 BGB).",
+            "Gegenleistung bleibt geschuldet, wenn die Leistung im Verzug unverschuldet unmöglich wird (§ 326 II 1).",
+            "Keine Zinsen auf Geldschulden (§ 301), nur gezogene Nutzungen (§ 302 BGB).",
+            "Ersatz von Mehraufwendungen, etwa für die Aufbewahrung (§ 304 BGB)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Im Annahmeverzug haftet der Schuldner für den Leistungsgegenstand nur für Vorsatz und grobe Fahrlässigkeit – nach überwiegender Ansicht auch deliktisch."
+        },
+        {
+          "art": "cta",
+          "titel": "Der Streit in drei Schritten",
+          "punkte": [
+            "Annahmeverzug nach §§ 293 ff. BGB prüfen",
+            "§ 300 Abs. 1 auf den Vertrag anwenden",
+            "Erstreckung auf § 823 BGB diskutieren"
+          ],
+          "icons": [
+            "kalender",
+            "waage",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Rad nicht abgeholt, dann beschädigt – und jetzt? Im Annahmeverzug hat der Schuldner nur Vorsatz und grobe Fahrlässigkeit zu vertreten (§ 300 Abs. 1 BGB). Vertraglich scheitert der Anspruch bei leichter Fahrlässigkeit also. Ob die Milderung auch für § 823 BGB gilt, ist umstritten; überwiegend wird das für den Leistungsgegenstand bejaht, weil das Privileg sonst leerliefe. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#annahmeverzug",
+        "#300bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Annahmeverzug: Reicht § 300 BGB ins Deliktsrecht?",
+      "coverText": "Privileg auch im Deliktsrecht?",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Wer seine Sache nicht rechtzeitig abholt, trägt ein Stück des Risikos, wenn sie beim Schuldner leicht beschädigt wird.",
+        "handlung": "{A} waits beside a repaired bicycle next to an empty pickup spot, while {B} accidentally bumps into it while moving a crate and freezes in shock.",
+        "hinweisRegie": "Place the note in the free space between the bumped bicycle and the empty pickup spot, slightly tilted toward the bicycle, so it links the waiting time to the damage without covering {B}'s startled face.",
+        "alternative": "{B} guards a parcel on a shelf long after the pickup hour on a wall clock, while {A} gently lowers a protective shield over it."
+      },
+      "bildSzene": "repaired bicycle bumped at empty pickup spot",
+      "bildSzeneAlt": "parcel guarded long after pickup hour",
+      "quellen": [
+        "§§ 293–304 BGB",
+        "§ 300 Abs. 1, 2 BGB",
+        "§ 326 Abs. 2 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: schuld-011"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "mini-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.004Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-316",
+      "slug": "2027-01-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eifersucht allein macht noch keinen Mord",
+          "titelZeilen": [
+            "Eifersucht allein",
+            "macht noch",
+            "keinen Mord"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Gesamtwürdigung entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A erfährt, dass seine Ehefrau F sich trennen und mit einem anderen Mann leben will. Er erschießt sie, weil sie „keinem anderen gehören“ soll. Hat A aus niedrigen Beweggründen getötet (§ 211 Abs. 2 StGB)?"
+        },
+        {
+          "art": "text",
+          "titel": "Die Definition",
+          "text": "Niedrig sind Beweggründe, die nach allgemeiner sittlicher Wertung auf tiefster Stufe stehen und deshalb besonders verachtenswert sind. Ob das so ist, entscheidet eine Gesamtwürdigung von Tat, Lebensverhältnissen und Persönlichkeit des Täters."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "Motiv ermitteln",
+              "text": "Welcher Beweggrund hat die Tat beherrscht? Bei einem Motivbündel zählt das Hauptmotiv, das der Tat ihr Gepräge gibt."
+            },
+            {
+              "titel": "Gefühl einordnen",
+              "text": "Eifersucht, Wut oder Verzweiflung sind nicht per se niedrig – wohl aber, wenn sie ihrerseits auf niedriger Gesinnung beruhen."
+            },
+            {
+              "titel": "Gesamtwürdigung",
+              "text": "Gegen Niedrigkeit kann etwa sprechen, dass der Täter aus Verzweiflung oder innerer Ausweglosigkeit handelt."
+            },
+            {
+              "titel": "Subjektive Seite",
+              "text": "A muss die Umstände kennen, die sein Motiv niedrig machen, und seine Regungen gedanklich beherrschen können."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "A spricht F das Recht ab, über ihr eigenes Leben zu entscheiden – er behandelt sie wie seinen Besitz. Ein solches Besitzdenken hat die Rspr. wiederholt als niedrig bewertet. Sprechen keine Umstände wie echte Verzweiflung dagegen und beherrschte A seine Regungen, ist § 211 StGB zu bejahen."
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Abkürzung",
+          "text": "„Eifersucht, also niedrig“ – oder umgekehrt „Trennung, also kein Mord“. Beides ersetzt die Gesamtwürdigung. Entscheidend ist, worauf die Eifersucht beruht: hier auf dem Anspruch, über die Partnerin zu verfügen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht das Gefühl entscheidet, sondern sein Grund: Niedrig ist, was nach einer Gesamtwürdigung auf tiefster Stufe steht."
+        },
+        {
+          "art": "cta",
+          "titel": "Niedrige Beweggründe in drei Zügen",
+          "punkte": [
+            "Hauptmotiv ermitteln",
+            "Gesamtwürdigung: Worauf beruht das Gefühl?",
+            "Kenntnis und gedankliche Beherrschung"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Eifersucht allein macht noch keinen Mord. Niedrige Beweggründe verlangen ein Motiv, das nach allgemeiner sittlicher Wertung auf tiefster Stufe steht – festgestellt durch eine Gesamtwürdigung. Gefühlsregungen wie Eifersucht oder Wut sind nur dann niedrig, wenn sie ihrerseits auf niedriger Gesinnung beruhen, etwa auf Besitzdenken gegenüber der Partnerin. Verzweiflung kann dagegen sprechen. Speichern für die nächste Mordprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#mord",
+        "#211stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Niedrige Beweggründe: der Mini-Fall",
+      "coverText": "Gesamtwürdigung entscheidet",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Nicht jedes starke Gefühl macht eine Tötung zum Mord – entscheidend ist, woraus es entspringt.",
+        "handlung": "{A} gently lifts a glowing, tangled knot from one pan of a scale to look at its roots, while {B} holds the scale steady and waits before letting it tip.",
+        "hinweisRegie": "Place the note in the free space next to the dangling roots of the lifted knot, slightly tilted toward them, so it points to the underlying motive without covering {A}'s hands or the scale.",
+        "alternative": "{B} shines a lantern into a small cave to reveal what feeds a flickering red flame, while {A} kneels at the entrance to look inside."
+      },
+      "bildSzene": "examining roots of tangled glowing knot",
+      "bildSzeneAlt": "lantern reveals what feeds red flame",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-316"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.005Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-594",
+      "slug": "2027-01-05-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Im Zweifel regeln die Länder – nicht der Bund",
+          "unter": "Gesetzgebung · Art. 70 ff. GG",
+          "text": "Der Bund braucht einen Kompetenztitel, die Länder nicht.",
+          "norm": "Art. 70 Abs. 1 GG",
+          "icon": "gebaeude",
+          "sprecher": "Im Zweifel sind die Länder zuständig, nicht der Bund. So steht es in Artikel 70 Grundgesetz. Der Bund braucht deshalb immer einen Kompetenztitel. So findest du ihn.",
+          "marken": [
+            "Regel: Länder",
+            "Bund braucht Titel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Ausschließliche Gesetzgebung",
+          "text": "Nur der Bund; die Länder nur mit ausdrücklicher Ermächtigung.",
+          "norm": "Art. 71, 73 GG",
+          "sprecher": "Schritt eins: ausschließliche Gesetzgebung, Artikel 73, etwa auswärtige Angelegenheiten oder Verteidigung. Hier regelt allein der Bund. Die Länder nur, wenn ein Bundesgesetz sie ausdrücklich ermächtigt.",
+          "marken": [
+            "nur der Bund"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Konkurrierende Gesetzgebung",
+          "text": "Länder nur, solange und soweit der Bund nicht abschließend regelt.",
+          "norm": "Art. 72 Abs. 1, 74 GG",
+          "sprecher": "Schritt zwei: konkurrierende Gesetzgebung, Artikel 74, zum Beispiel bürgerliches Recht und Strafrecht. Die Länder dürfen nur, solange und soweit der Bund nicht abschließend geregelt hat.",
+          "marken": [
+            "solange und soweit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Erforderlichkeit und Abweichung",
+          "text": "Art. 72 Abs. 2 nur für bestimmte Titel; Abweichungsrecht nach Abs. 3.",
+          "norm": "Art. 72 Abs. 2, 3 GG",
+          "sprecher": "Schritt drei: Für einige Titel verlangt Artikel 72 Absatz 2 zusätzlich, dass eine bundesgesetzliche Regelung erforderlich ist. Und in den Bereichen des Absatzes 3 dürfen die Länder abweichen.",
+          "marken": [
+            "erforderlich?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ungeschriebene Kompetenzen",
+          "text": "Sachzusammenhang, Annex, Natur der Sache – eng auszulegen.",
+          "norm": null,
+          "sprecher": "Schritt vier: Findest du keinen geschriebenen Titel, bleiben ungeschriebene Kompetenzen: Sachzusammenhang, Annex und Natur der Sache. Die werden eng verstanden.",
+          "marken": [
+            "eng auslegen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Wo das in die Klausur gehört",
+          "text": "Formelle Verfassungsmäßigkeit: Zuständigkeit, Verfahren, Form.",
+          "norm": null,
+          "sprecher": "In der Klausur gehört das in die formelle Verfassungsmäßigkeit: erst Zuständigkeit, dann Verfahren, dann Form.",
+          "marken": [
+            "formell zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Länder als Regel – der Bund nur mit Titel, meist aus Art. 73 oder 74 GG.",
+          "norm": "Art. 70 GG",
+          "sprecher": "Merke: Die Länder sind die Regel. Der Bund braucht einen Titel, meist aus Artikel 73 oder 74.",
+          "marken": [
+            "Titel suchen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst den Kompetenztitel, dann der Rest",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Staatsrechtsklausur. Und nenn beim Bundesgesetz immer zuerst den Kompetenztitel.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Im Zweifel sind die Länder zuständig, nicht der Bund (Art. 70 Abs. 1 GG). Der Bund braucht deshalb einen Kompetenztitel: ausschließlich nach Art. 73 GG oder konkurrierend nach Art. 74 GG – dort mit der Sperrwirkung „solange und soweit“, teils mit Erforderlichkeitsklausel (Art. 72 Abs. 2 GG) und Abweichungsrecht der Länder (Art. 72 Abs. 3 GG). Ungeschriebene Kompetenzen bleiben die eng verstandene Ausnahme.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#grundgesetz",
+        "#gesetzgebungskompetenz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gesetzgebungskompetenzen: Art. 70 ff. GG",
+      "titelZeilen": [
+        "Im Zweifel regeln",
+        "die Länder –",
+        "nicht der Bund"
+      ],
+      "coverText": "Der Bund braucht einen Titel",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Der Bund darf nur Gesetze machen, wenn er einen passenden Kompetenztitel vorweisen kann.",
+        "handlung": "{A} hovers at a small gate holding out an empty tray for a ticket, while {B} nervously searches through two open drawers for the right one to hand over.",
+        "hinweisRegie": "Place the note in the free space above the two open drawers, slightly tilted toward the drawer {B} is searching, without covering {A}'s outstretched tray or {B}'s face.",
+        "alternative": "{B} carries a toolbox to a locked workshop door while {A} tests which of several keys actually fits the lock."
+      },
+      "bildSzene": "droid asks for ticket, mechanic searches",
+      "bildSzeneAlt": "testing which key fits workshop door",
+      "quellen": [
+        "Art. 70–74 GG",
+        "Themenpool: staat-594"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "regel-ausnahme-umkehr",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.006Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-104",
+      "ueberzeile": "Prüfungsfrage Verwaltungsprozess",
+      "titel": "Der angefochtene Bescheid erledigt sich während des Prozesses. A will trotzdem ein Urteil. Welche Klage?",
+      "optionen": [
+        "Allgemeine Leistungsklage auf Aufhebung des Bescheids",
+        "Neue Anfechtungsklage gegen den erledigten Bescheid",
+        "Fortsetzungsfeststellungsklage, § 113 Abs. 1 S. 4 VwGO"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "Themenpool: vwgo-104"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.006Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-104",
+      "ueberzeile": "Auflösung",
+      "titel": "Umstellen auf die Fortsetzungsfeststellungsklage",
+      "text": "Erledigt sich der Verwaltungsakt nach Klageerhebung, ist die Fortsetzungsfeststellungsklage direkt nach § 113 Abs. 1 S. 4 VwGO statthaft; die Umstellung ist keine Klageänderung (§ 173 VwGO i. V. m. § 264 Nr. 2 ZPO). Dazu braucht A ein berechtigtes Feststellungsinteresse – etwa Wiederholungsgefahr, Rehabilitation oder die Vorbereitung eines Amtshaftungsprozesses.",
+      "norm": "§ 113 Abs. 1 S. 4 VwGO",
+      "quellen": [
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 173 VwGO",
+        "§ 264 Nr. 2 ZPO",
+        "Themenpool: vwgo-104"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.006Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Allgemeine Leistungsklage auf Aufhebung des Bescheids",
+        "Neue Anfechtungsklage gegen den erledigten Bescheid",
+        "Fortsetzungsfeststellungsklage, § 113 Abs. 1 S. 4 VwGO"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-890",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 4 Rom I-VO: Ohne Rechtswahl entscheidet zuerst der Vertragstyp",
+      "text": "Haben die Parteien kein Recht gewählt (Art. 3), gilt zuerst der Katalog des Art. 4 Abs. 1: beim Kauf beweglicher Sachen das Recht am gewöhnlichen Aufenthalt des Verkäufers, beim Dienstleistungsvertrag das des Dienstleisters. Passt kein Typ, zählt die charakteristische Leistung (Abs. 2). Offensichtlich engere Verbindung: Abs. 3. Vorrang haben die Art. 5 bis 8.",
+      "norm": "Art. 3, 4 Rom I-VO",
+      "quellen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO",
+        "Themenpool: ipr-890"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.006Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-864",
+      "ueberzeile": "4 Punkte Anklage",
+      "titel": "Wo klagst du an? Die sachliche Zuständigkeit in vier Stufen",
+      "text": "Maßgeblich ist die Straferwartung der Staatsanwaltschaft. Ein Gericht höherer Ordnung kann das Hauptverfahren vor einem niedrigeren eröffnen (§ 209 Abs. 1 StPO).",
+      "punkte": [
+        "Strafrichter: Vergehen, Straferwartung bis zwei Jahre (§ 25 Nr. 2 GVG)",
+        "Schöffengericht: Straferwartung bis vier Jahre (§§ 24, 28 GVG)",
+        "Große Strafkammer: über vier Jahre, Unterbringung oder besondere Bedeutung (§ 74 I GVG)",
+        "Schwurgericht: Katalogtaten wie Mord und Totschlag (§ 74 Abs. 2 GVG)"
+      ],
+      "quellen": [
+        "§§ 24, 25, 28 GVG",
+        "§ 74 GVG",
+        "§ 209 StPO",
+        "Themenpool: anklage-864"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.006Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-870",
+      "ueberzeile": "Streitstand Anklage",
+      "titel": "Einziehung von Taterträgen: Strafe oder Maßnahme eigener Art?",
+      "norm": "§§ 73 ff. StGB",
+      "optionen": [
+        "BVerfG und BGH: keine Strafe, sondern kondiktionsähnliche Maßnahme – das Schuldprinzip gilt nicht.",
+        "Teile der Literatur: Wegen des Bruttoprinzips wirkt sie strafähnlich; Schuldprinzip und Rückwirkungsverbot greifen."
+      ],
+      "text": "Für die Klausur: Beim Tatertrag ist die Einziehung zwingend und gehört mit Norm und Betrag in die Anklage – ist der Gegenstand nicht mehr vorhanden, als Wertersatz nach § 73c StGB. Unverhältnismäßigen Härten begegnet erst das Vollstreckungsverfahren (§ 459g Abs. 5 StPO).",
+      "quellen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 459g Abs. 5 StPO",
+        "Themenpool: anklage-870"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.006Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-059",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Untauglicher Versuch oder Wahndelikt? Tatsache oder Recht",
+      "text": "Irrt A über Tatsachen – er hält etwa die eigene Uhr für fremd –, liegt ein strafbarer untauglicher Versuch vor (§§ 22, 23 Abs. 3 StGB). Hält A ein erlaubtes Verhalten irrig für verboten, ist das ein strafloses Wahndelikt: Er stellt sich einen Straftatbestand vor, den es nicht gibt.",
+      "norm": "§ 22 StGB · § 23 Abs. 3 StGB",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB",
+        "Themenpool: strafat-059"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:07.006Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

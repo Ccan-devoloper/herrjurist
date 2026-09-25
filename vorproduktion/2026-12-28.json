@@ -1,0 +1,861 @@
+{
+  "datum": "2026-12-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-751",
+        "themaTitel": "Schwerer Raub",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "grundr-140",
+        "themaTitel": "Wie prüft man den allgemeinen Gleichheitssatz?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-434",
+        "themaTitel": "Insichgeschäft und Mehrvertretung",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "zpo-129"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "zpo-129"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "assessorz-813"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "tipp",
+        "themaId": "zpo-547"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "zahl",
+        "themaId": "bgbat-160"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "streitstand",
+        "themaId": "strafat-057"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-751",
+      "poolTitel": "Schwerer Raub",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-140",
+      "poolTitel": "Wie prüft man den allgemeinen Gleichheitssatz?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 3 Abs. 1 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-434",
+      "poolTitel": "Insichgeschäft und Mehrvertretung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 181 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-26"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-129",
+      "poolTitel": "Wann ist eine Klageänderung zulässig?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 263 ZPO",
+        "§ 264 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-129",
+      "poolTitel": "Wann ist eine Klageänderung zulässig?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 263 ZPO",
+        "§ 264 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessorz-813",
+      "poolTitel": "Worin unterscheiden sich Teil-, Grund- und Schlussurteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 301 ZPO",
+        "§ 304 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "zpo-547",
+      "poolTitel": "Sachliche und örtliche Zuständigkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "GVG; §§ 12 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-09"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "bgbat-160",
+      "poolTitel": "Wie prüft man die Duldungs- und die Anscheinsvollmacht?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 167 BGB",
+        "§ 172 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "strafat-057",
+      "poolTitel": "Was ist der Unterschied zwischen Eventualvorsatz und bewusster Fahrlässigkeit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB",
+        "§ 16 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-751",
+      "slug": "2026-12-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Spielzeugpistole – und trotzdem schwerer Raub",
+          "titelZeilen": [
+            "Spielzeugpistole –",
+            "und trotzdem",
+            "schwerer Raub"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Nr. 1b statt Nr. 1a",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A bedroht die Kassiererin K mit einer täuschend echt aussehenden Spielzeugpistole und nimmt 800 € aus der Kasse. K hält die Waffe für echt. Raub nach § 249 StGB liegt vor – aber auch schwerer Raub nach § 250 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Abs. 1 Nr. 1a: Waffe oder gefährliches Werkzeug?",
+              "text": "Nein. Die Spielzeugpistole ist objektiv ungefährlich – weder Waffe noch gefährliches Werkzeug."
+            },
+            {
+              "titel": "Abs. 1 Nr. 1b: sonst ein Werkzeug oder Mittel?",
+              "text": "Ja. Erfasst sind auch Scheinwaffen, die der Täter bei sich führt, um Widerstand durch Drohung mit Gewalt zu überwinden."
+            },
+            {
+              "titel": "Grenze nach der Rspr.",
+              "text": "Nicht, wenn die Drohwirkung allein auf Täuschung beruht und das Objekt offensichtlich harmlos ist – etwa ein Stift im Rücken."
+            },
+            {
+              "titel": "Abs. 2 Nr. 1: verwendet?",
+              "text": "Nein. Hier braucht es eine echte Waffe oder ein gefährliches Werkzeug – die Scheinwaffe reicht nicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nr. 1a verneinen und die Prüfung beenden. Gerade Nr. 1b fängt Gegenstände auf, die objektiv ungefährlich sind, aber als Drohmittel dienen sollen. Teile der Literatur wollen Scheinwaffen mangels objektiver Gefährlichkeit herausnehmen – die Rspr. bezieht sie ein."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "A führt die Spielzeugpistole bei sich, um den Widerstand der K durch Drohung mit Gewalt zu überwinden; sie wirkt äußerlich wie eine echte Waffe. § 250 Abs. 1 Nr. 1b StGB ist erfüllt – Freiheitsstrafe nicht unter drei Jahren. Abs. 2 Nr. 1 scheidet aus."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ungefährlich, aber bedrohlich: Scheinwaffen fallen unter § 250 Abs. 1 Nr. 1b StGB – nicht unter Nr. 1a und nicht unter Abs. 2 Nr. 1."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 250 StGB in drei Blicken",
+          "punkte": [
+            "Objektiv gefährlich? Dann Nr. 1a",
+            "Nur Drohmittel? Dann Nr. 1b",
+            "Verwendet? Abs. 2 Nr. 1 nur bei echter Gefahr"
+          ],
+          "icons": [
+            "messer",
+            "warnung",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Spielzeugpistole, echte Angst: Ist das schwerer Raub? Ja – über § 250 Abs. 1 Nr. 1b StGB. Die Scheinwaffe ist weder Waffe noch gefährliches Werkzeug (Nr. 1a), aber ein Mittel, um Widerstand durch Drohung mit Gewalt zu überwinden. Grenze nach der Rspr.: Die Drohwirkung beruht allein auf Täuschung, etwa beim Stift im Rücken. Für Abs. 2 Nr. 1 reicht die Scheinwaffe nicht. Speichern für die nächste Raubprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#raub",
+        "#250stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schwerer Raub mit Spielzeugpistole",
+      "coverText": "Nr. 1b statt Nr. 1a",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Auch eine harmlose Attrappe kann den Raub qualifizieren, wenn sie als Drohmittel dient.",
+        "handlung": "{A} nervously holds up a toy blaster with a bright plastic tip toward an unseen shopkeeper, while {B} leans in close and taps the tip, discovering it is only plastic.",
+        "hinweisRegie": "Place the note in the open space beside the plastic tip of the toy blaster, slightly tilted toward it, so the harmless object is linked to the note without covering {B}'s curious face.",
+        "alternative": "{B} holds a realistic toy blaster in one hand and a small stick in the other, weighing them, while {A} shrugs between the two objects."
+      },
+      "bildSzene": "alien taps plastic tip of toy blaster",
+      "bildSzeneAlt": "toy blaster versus small stick compared",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 250 Abs. 1 Nr. 1, Abs. 2 Nr. 1 StGB",
+        "Themenpool: strafbt-751"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.093Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-140",
+      "slug": "2026-12-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Art. 3 Abs. 1 GG: zwei Stufen, kein Schutzbereich",
+          "titelZeilen": [
+            "Art. 3 Abs. 1 GG:",
+            "zwei Stufen,",
+            "kein Schutzbereich"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Vergleichspaar statt Eingriff",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Art. 3 Abs. 1 GG ist kein Freiheitsrecht. Es gibt keinen Schutzbereich, in den eingegriffen wird. Geprüft wird, ob der Staat wesentlich Gleiches ungleich (oder wesentlich Ungleiches gleich) behandelt – und ob das gerechtfertigt ist."
+        },
+        {
+          "art": "schritte",
+          "titel": "Stufe 1: Ungleichbehandlung",
+          "schritte": [
+            {
+              "titel": "Vergleichspaar bilden",
+              "text": "Zwei Personen, Gruppen oder Sachverhalte unter einem gemeinsamen Oberbegriff – etwa Ladengeschäfte und Onlinehändler."
+            },
+            {
+              "titel": "Durch denselben Hoheitsträger",
+              "text": "Die Ungleichbehandlung muss von derselben Stelle ausgehen. Unterschiedliches Recht verschiedener Länder verletzt Art. 3 Abs. 1 GG nicht."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Stufe 2: Rechtfertigung",
+          "schritte": [
+            {
+              "titel": "Maßstab bestimmen",
+              "text": "Stufenlos nach dem BVerfG: vom bloßen Willkürverbot bis zur strengen Prüfung der Verhältnismäßigkeit."
+            },
+            {
+              "titel": "Strenger wird es, wenn …",
+              "text": "… Personenmerkmale zählen, die Art. 3 Abs. 3 GG ähneln, Freiheitsrechte berührt sind oder das Merkmal kaum beeinflussbar ist."
+            },
+            {
+              "titel": "Rechtfertigung prüfen",
+              "text": "Sachlicher Grund – bzw. bei strengem Maßstab: legitimer Zweck, geeignet, erforderlich, angemessen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: das Vergleichspaar",
+          "text": "Ein typischer Aufbaufehler ist das Freiheitsrechte-Schema mit „Schutzbereich – Eingriff – Schranken“. Beim Gleichheitssatz entscheidet das Vergleichspaar: Wähle es so, dass sich die Gruppen genau in dem Merkmal unterscheiden, an das die Regelung anknüpft."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vergleichspaar, Ungleichbehandlung, Rechtfertigung nach gleitendem Maßstab – ein Schutzbereich wird nicht geprüft."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 3 Abs. 1 GG in drei Zügen",
+          "punkte": [
+            "Vergleichspaar mit Oberbegriff",
+            "Ungleichbehandlung durch denselben Träger",
+            "Maßstab wählen, dann rechtfertigen"
+          ],
+          "icons": [
+            "personen",
+            "waage",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Art. 3 Abs. 1 GG prüfst du nicht wie ein Freiheitsrecht: Es gibt keinen Schutzbereich und keinen Eingriff. Stufe 1: Vergleichspaar mit gemeinsamem Oberbegriff und Ungleichbehandlung durch denselben Hoheitsträger. Stufe 2: Rechtfertigung nach dem stufenlosen Maßstab des BVerfG – vom Willkürverbot bis zur strengen Verhältnismäßigkeitsprüfung. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#gleichheitssatz",
+        "#art3gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 3 Abs. 1 GG: das Prüfschema",
+      "coverText": "Vergleichspaar statt Eingriff",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Beim Gleichheitssatz wird kein Schutzbereich betreten, sondern ein Paar verglichen.",
+        "handlung": "{A} places two nearly identical crates side by side on a long balance beam and taps the one that carries an extra heavy weight, while {B} hovers above and checks that both crates came through the same gate.",
+        "hinweisRegie": "Place the note in the free space between the two crates, slightly tilted toward the extra weight, so the unequal treatment is clear without covering {A}'s pointer or the balance beam.",
+        "alternative": "{B} holds two identical keys, one opening a gate and one refused by it, while {A} turns to the gatekeeper and asks for the reason."
+      },
+      "bildSzene": "two identical crates, one extra weighted",
+      "bildSzeneAlt": "two identical keys, one gate refused",
+      "quellen": [
+        "Art. 3 Abs. 1, Abs. 3 GG",
+        "Themenpool: grundr-140"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-echte-stufen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.093Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-434",
+      "slug": "2026-12-28-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "§ 181 BGB sperrt nicht, was nur Vorteile bringt",
+          "unter": "Insichgeschäft · § 181 BGB",
+          "text": "Lediglich rechtlich vorteilhafte Geschäfte fallen nach h.M. aus § 181 BGB heraus.",
+          "norm": "§ 181 BGB",
+          "icon": "handschlag",
+          "sprecher": "Eltern schenken ihrem Kind Geld und nehmen selbst an. Klingt nach verbotenem Insichgeschäft. Ist es aber nicht, wenn das Kind dadurch nur rechtliche Vorteile bekommt.",
+          "marken": [
+            "Insichgeschäft?",
+            "nur Vorteile"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Zwei Formen",
+          "text": "Selbstkontrahieren: mit sich selbst. Mehrvertretung: für beide Seiten.",
+          "norm": "§ 181 BGB",
+          "sprecher": "Schritt eins: die zwei Formen. Beim Selbstkontrahieren schließt der Vertreter das Geschäft im Namen des Vertretenen mit sich selbst. Bei der Mehrvertretung vertritt er beide Seiten.",
+          "marken": [
+            "beide Seiten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ausnahmen im Wortlaut",
+          "text": "Gestattet oder ausschließlich Erfüllung einer Verbindlichkeit.",
+          "norm": "§ 181 BGB",
+          "sprecher": "Schritt zwei: die Ausnahmen im Gesetz. Erlaubt ist das Insichgeschäft, wenn es gestattet ist oder ausschließlich eine Verbindlichkeit erfüllt.",
+          "marken": [
+            "gestattet",
+            "nur Erfüllung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Teleologische Reduktion",
+          "text": "Kein Interessenkonflikt, wenn der Vertretene nur rechtliche Vorteile erlangt.",
+          "norm": "§ 181 BGB",
+          "sprecher": "Schritt drei: die ungeschriebene Ausnahme. Paragraf 181 soll Interessenkonflikte verhindern. Bringt das Geschäft dem Vertretenen lediglich einen rechtlichen Vorteil, gibt es keinen Konflikt. Die herrschende Meinung reduziert die Norm deshalb teleologisch.",
+          "marken": [
+            "kein Konflikt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtsfolge",
+          "text": "Nicht nichtig, sondern schwebend unwirksam – genehmigungsfähig entsprechend § 177 BGB.",
+          "norm": "§ 177 BGB",
+          "sprecher": "Schritt vier: die Rechtsfolge. Ein verbotenes Insichgeschäft ist nicht nichtig, sondern schwebend unwirksam. Der Vertretene kann es entsprechend Paragraf 177 genehmigen.",
+          "marken": [
+            "schwebend unwirksam"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Vorteil prüfst du wie bei § 107 BGB",
+          "text": "Rein rechtlich, nicht wirtschaftlich betrachtet.",
+          "norm": "§ 107 BGB",
+          "sprecher": "Den rechtlichen Vorteil prüfst du wie bei Paragraf 107: rein rechtlich, nicht wirtschaftlich. Ein geschenktes vermietetes Grundstück etwa ist nicht lediglich vorteilhaft, weil der Beschenkte in die Mietverträge eintritt.",
+          "marken": [
+            "rechtlich zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Insichgeschäft verboten – außer gestattet, reine Erfüllung oder nur rechtlich vorteilhaft.",
+          "norm": "§ 181 BGB",
+          "sprecher": "Merke: Insichgeschäfte sind verboten, außer sie sind gestattet, erfüllen nur eine Verbindlichkeit oder bringen dem Vertretenen lediglich rechtliche Vorteile.",
+          "marken": [
+            "drei Auswege"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wer steht auf beiden Seiten?",
+          "text": "Speichern für die nächste Stellvertretungsklausur.",
+          "sprecher": "Speicher dir das für die nächste Klausur zur Stellvertretung. Und frag bei jedem Vertreter zuerst: Steht er auf beiden Seiten?",
+          "marken": [
+            "beide Seiten?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "§ 181 BGB verbietet Insichgeschäfte – aber nicht alle. Ausnahmen stehen im Wortlaut: Gestattung und reine Erfüllung einer Verbindlichkeit. Dazu kommt die teleologische Reduktion: Bringt das Geschäft dem Vertretenen lediglich einen rechtlichen Vorteil, fehlt der Interessenkonflikt. Verbotene Insichgeschäfte sind schwebend unwirksam und entsprechend § 177 BGB genehmigungsfähig.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#stellvertretung",
+        "#181bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 181 BGB: Insichgeschäft und Ausnahmen",
+      "titelZeilen": [
+        "§ 181 BGB sperrt",
+        "nicht, was nur",
+        "Vorteile bringt"
+      ],
+      "coverText": "Kein Konflikt, kein Verbot",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Wer auf beiden Seiten eines Geschäfts steht, darf es nur ausnahmsweise abschließen – etwa wenn der Vertretene nur gewinnt.",
+        "handlung": "{A} reaches across a small trading table and places a shiny crystal on the empty side reserved for a young apprentice, while {B} checks that nothing moves back to {A}'s own side.",
+        "hinweisRegie": "Place the note in the free space above the apprentice's side of the table, slightly tilted toward the crystal, so the pure advantage is highlighted without covering {A}'s hand or {B}'s watchful eyes.",
+        "alternative": "{B} holds two identical seals, one in each hand, about to press both halves of the same deal, while {A} raises a hand to stop her."
+      },
+      "bildSzene": "miner gives crystal across trading table",
+      "bildSzeneAlt": "one figure sealing both deal halves",
+      "quellen": [
+        "§ 181 BGB",
+        "§ 107 BGB",
+        "§ 177 BGB",
+        "§ 566 BGB",
+        "Themenpool: bgbat-434"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.094Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-129",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Wagen nach Rechtshängigkeit verbrannt, K verlangt statt Herausgabe Schadensersatz. Braucht er Bs Zustimmung?",
+      "optionen": [
+        "Ja – jede Änderung der Klage braucht die Einwilligung",
+        "Nein – nach § 264 Nr. 3 ZPO keine Klageänderung",
+        "Nein – er muss ohnehin eine neue Klage erheben"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 263 ZPO",
+        "§ 264 Nr. 3 ZPO",
+        "§ 267 ZPO",
+        "Themenpool: zpo-129"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.094Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-129",
+      "ueberzeile": "Auflösung",
+      "titel": "Keine Klageänderung: § 264 Nr. 3 ZPO greift",
+      "text": "Verlangt der Kläger wegen einer später eingetretenen Veränderung statt des ursprünglichen Gegenstands das Interesse, ist das keine Klageänderung (§ 264 Nr. 3 ZPO). Einwilligung oder Sachdienlichkeit braucht es dann nicht. Echte Klageänderungen sind nur mit Einwilligung oder bei Sachdienlichkeit zulässig (§ 263 ZPO); rügeloses Verhandeln gilt als Einwilligung (§ 267 ZPO).",
+      "norm": "§ 264 Nr. 3 ZPO · §§ 263, 267 ZPO",
+      "quellen": [
+        "§ 263 ZPO",
+        "§ 264 Nr. 3 ZPO",
+        "§ 267 ZPO",
+        "Themenpool: zpo-129"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.094Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – jede Änderung der Klage braucht die Einwilligung",
+        "Nein – nach § 264 Nr. 3 ZPO keine Klageänderung",
+        "Nein – er muss ohnehin eine neue Klage erheben"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-813",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 304 ZPO: Erst der Grund, dann die Höhe",
+      "text": "Streiten die Parteien über Grund und Betrag, kann das Gericht vorab über den Grund entscheiden (§ 304 Abs. 1 ZPO) – wenn alle Fragen zum Grund erledigt sind und der Anspruch mit hoher Wahrscheinlichkeit in irgendeiner Höhe besteht. Die Höhe klärt später das Schlussurteil. Anders das Teilurteil (§ 301 ZPO): Es erledigt einen abtrennbaren Teil des Streits endgültig.",
+      "norm": "§ 304 Abs. 1 ZPO · § 301 ZPO",
+      "quellen": [
+        "§ 301 ZPO",
+        "§ 304 ZPO",
+        "Themenpool: assessorz-813"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.094Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-547",
+      "ueberzeile": "Klausurtipp ZPO",
+      "titel": "Wohnraummiete: immer Amtsgericht – egal wie hoch der Streitwert",
+      "text": "Sachlich entscheidet meist der Streitwert zwischen AG und LG (§§ 23 Nr. 1, 71 GVG). Streit aus Wohnraummiete gehört aber ausschließlich vor das Amtsgericht (§ 23 Nr. 2a GVG), örtlich ausschließlich dorthin, wo die Wohnung liegt (§ 29a ZPO). Ausschließliche Zuständigkeiten lassen sich weder vereinbaren noch durch rügeloses Verhandeln begründen (§ 40 Abs. 2 ZPO).",
+      "quellen": [
+        "§§ 23, 71 GVG",
+        "§ 29a ZPO",
+        "§ 40 Abs. 2 ZPO",
+        "Themenpool: zpo-547"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.094Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-160",
+      "ueberzeile": "4 Punkte BGB AT",
+      "titel": "Anscheinsvollmacht: Wann ist der Vertretene gebunden, obwohl er nichts wusste?",
+      "text": "Anders als bei der Duldungsvollmacht kennt der Vertretene das Auftreten nicht. Die Rspr. bejaht trotzdem eine Bindung; Teile der Lehre geben nur den Vertrauensschaden.",
+      "punkte": [
+        "Rechtsschein: wiederholtes Auftreten als Vertreter, von gewisser Dauer",
+        "Zurechenbar: Der Vertretene hätte es erkennen und verhindern können",
+        "Gutgläubig: Der Dritte kennt den Mangel nicht und muss ihn nicht kennen",
+        "Kausal: Der Dritte schließt im Vertrauen auf den Schein ab"
+      ],
+      "quellen": [
+        "§ 167 BGB",
+        "§ 172 BGB",
+        "Themenpool: bgbat-160"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.094Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-057",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "„Wird schon gutgehen“: Eventualvorsatz oder bewusste Fahrlässigkeit?",
+      "norm": "§ 15 StGB",
+      "optionen": [
+        "Rspr. (Billigung): Vorsatz, wenn der Täter den Erfolg für möglich hält und ihn billigend in Kauf nimmt.",
+        "Kognitive Theorien (Teile der Lit.): Entscheidend ist allein das Wissen um die konkrete Gefahr."
+      ],
+      "text": "Klausur: Wissens- und Wollenselement getrennt prüfen und alle Umstände würdigen – Gefährlichkeit der Handlung, Motiv, Verhalten danach. Wer ernsthaft darauf vertraut, dass nichts passiert, handelt nur bewusst fahrlässig; eine vage Hoffnung genügt dafür nicht.",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "Themenpool: strafat-057"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:14.094Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

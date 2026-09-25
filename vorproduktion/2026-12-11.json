@@ -1,0 +1,830 @@
+{
+  "datum": "2026-12-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "grundr-619",
+        "themaTitel": "Koalitionsfreiheit",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "ipr-893",
+        "themaTitel": "Wann ist ein deutsches Gericht international zuständig?",
+        "fach": "ipr",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-723",
+        "themaTitel": "Erlaubnistatbestandsirrtum",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "verwalt-141"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "verwalt-141"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "staat-088"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "merksatz",
+        "themaId": "bgbat-429"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:41",
+        "art": "begriff",
+        "themaId": "bereich-215"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "fehler",
+        "themaId": "zpo-916"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "grundr-619",
+      "poolTitel": "Koalitionsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 9 III GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "ipr-893",
+      "poolTitel": "Wann ist ein deutsches Gericht international zuständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 EuGVVO",
+        "Art. 7 EuGVVO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-723",
+      "poolTitel": "Erlaubnistatbestandsirrtum",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 16, 17 StGB analog/streitig"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-141",
+      "poolTitel": "Wann liegt ein Verwaltungsakt vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-141",
+      "poolTitel": "Wann liegt ein Verwaltungsakt vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-088",
+      "poolTitel": "Wann hat der Bund die Gesetzgebungskompetenz?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 70 GG",
+        "Art. 72 GG",
+        "Art. 74 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "bgbat-429",
+      "poolTitel": "Gesetzliches Verbot und Nichtigkeit",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 134 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "bereich-215",
+      "poolTitel": "Wann ist die Kondiktion nach § 817 S. 2 BGB gesperrt?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 817 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "zpo-916",
+      "poolTitel": "Einfache oder notwendige Streitgenossenschaft: Wann greift § 62 ZPO?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 59-61 ZPO",
+        "§ 62 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-619",
+      "slug": "2026-12-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Art. 9 III GG bindet auch den Arbeitgeber",
+          "titelZeilen": [
+            "Art. 9 III GG",
+            "bindet auch den",
+            "Arbeitgeber"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Drittwirkung direkt aus dem GG",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Unternehmer U will B einstellen – aber nur, wenn B schriftlich zusagt, aus der Gewerkschaft auszutreten und ihr nicht wieder beizutreten. B unterschreibt den Arbeitsvertrag mit dieser Klausel. Ist die Abrede wirksam?"
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Grundrechte binden nur den Staat – U ist Privater, also wirkt Art. 9 Abs. 3 GG allenfalls mittelbar über § 138 BGB.“ Übersehen wird Art. 9 Abs. 3 S. 2 GG: Abreden, die die Koalitionsfreiheit einschränken oder zu behindern suchen, sind nichtig."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "Schutzbereich",
+              "text": "Recht, zur Wahrung der Arbeits- und Wirtschaftsbedingungen Vereinigungen zu bilden, ihnen beizutreten und in ihnen zu bleiben."
+            },
+            {
+              "titel": "Einschränkende Abrede",
+              "text": "Die Klausel soll B von der Mitgliedschaft abhalten – sie beschränkt seine individuelle Koalitionsfreiheit."
+            },
+            {
+              "titel": "Rechtsfolge",
+              "text": "Art. 9 Abs. 3 S. 2 GG ordnet die Nichtigkeit selbst an – unmittelbare Drittwirkung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Die Austrittsklausel ist nach Art. 9 Abs. 3 S. 2 GG nichtig. Der Arbeitsvertrag im Übrigen bleibt wirksam – sonst würde sich der Schutz gegen den Arbeitnehmer wenden. B darf Gewerkschaftsmitglied bleiben und behält seinen Arbeitsplatz."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 9 Abs. 3 S. 2 GG wirkt ausdrücklich unmittelbar unter Privaten: Koalitionsfeindliche Abreden sind nichtig – auch im Arbeitsvertrag."
+        },
+        {
+          "art": "cta",
+          "titel": "Koalitionsfreiheit in drei Zügen",
+          "punkte": [
+            "Individuell oder kollektiv betroffen?",
+            "Abrede oder Maßnahme unter Privaten?",
+            "Nichtigkeit direkt aus Satz 2"
+          ],
+          "icons": [
+            "personen",
+            "vertrag",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Art. 9 Abs. 3 GG bindet auch den Arbeitgeber. Grundrechte richten sich grundsätzlich gegen den Staat – doch Satz 2 ordnet ausdrücklich an: Abreden, die die Koalitionsfreiheit einschränken oder zu behindern suchen, sind nichtig. Eine Klausel, die den Gewerkschaftsaustritt zur Einstellungsbedingung macht, ist deshalb unwirksam; der Arbeitsvertrag im Übrigen bleibt bestehen. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#koalitionsfreiheit",
+        "#art9gg",
+        "#arbeitsrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Koalitionsfreiheit: Drittwirkung im Vertrag",
+      "coverText": "Drittwirkung direkt aus dem GG",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Die Koalitionsfreiheit schützt Arbeitnehmer ausdrücklich auch gegenüber privaten Arbeitgebern.",
+        "handlung": "{A} tears a single clause strip off a contract that a worker has just signed, while {B} hovers above and stamps the remaining contract as still valid.",
+        "hinweisRegie": "Place the note in the free space beside the torn-off clause strip, slightly tilted toward it, so it marks the void clause without covering the stamp or {A}'s hands.",
+        "alternative": "{B} holds open a union meeting room door that a manager tries to lock, while {A} removes the lock."
+      },
+      "bildSzene": "clause torn off signed contract",
+      "bildSzeneAlt": "lock removed from meeting door",
+      "quellen": [
+        "Art. 9 Abs. 3 GG",
+        "§ 138 BGB",
+        "Themenpool: grundr-619"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.675Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "ipr",
+      "klausur": 1,
+      "fachLabel": "Internationales Privatrecht",
+      "themaId": "ipr-893",
+      "slug": "2026-12-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verkäufer in Lyon, Ware in Köln: Wo wird geklagt?",
+          "titelZeilen": [
+            "Verkäufer in Lyon,",
+            "Ware in Köln:",
+            "Wo wird geklagt?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Lieferort ist Gerichtsstand",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V mit Sitz in Lyon verkauft K in Köln eine Maschine; laut Vertrag wird sie in Köln geliefert. Die Maschine ist mangelhaft. K will Schadensersatz verlangen – vor einem deutschen Gericht. Geht das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "EuGVVO anwendbar?",
+              "text": "Zivil- und Handelssache (Art. 1), Beklagter mit Sitz in einem Mitgliedstaat (Art. 4, 63), Verfahren ab dem 10.01.2015."
+            },
+            {
+              "titel": "Allgemeiner Gerichtsstand",
+              "text": "Nach Art. 4 Abs. 1 EuGVVO wird V grundsätzlich in Frankreich verklagt."
+            },
+            {
+              "titel": "Besonderer Gerichtsstand",
+              "text": "Art. 7 Nr. 1 lit. b EuGVVO: Beim Warenkauf ist Erfüllungsort der vertragliche Lieferort – für alle Ansprüche aus dem Vertrag."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Lieferort Köln: Deutsche Gerichte sind international zuständig. Art. 7 Nr. 1 regelt zugleich die örtliche Zuständigkeit."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Gleich mit §§ 12 ff., 29 ZPO prüfen. Die ZPO-Gerichtsstände zeigen die internationale Zuständigkeit nur an, wenn die EuGVVO nicht greift. Und: Bei Art. 7 Nr. 1 lit. b zählt der einheitliche Lieferort – nicht der Erfüllungsort der gerade streitigen Pflicht."
+        },
+        {
+          "art": "text",
+          "titel": "Vorher noch prüfen",
+          "punkte": [
+            "Ausschließliche Zuständigkeit (Art. 24 EuGVVO), etwa bei dinglichen Rechten an Grundstücken",
+            "Gerichtsstandsvereinbarung (Art. 25 EuGVVO)",
+            "Rügelose Einlassung (Art. 26 EuGVVO)",
+            "Verbrauchersachen: Sonderregeln der Art. 17 ff. EuGVVO"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beim grenzüberschreitenden Warenkauf kann der Käufer am vertraglichen Lieferort klagen – Art. 7 Nr. 1 lit. b EuGVVO gilt für alle Vertragsansprüche."
+        },
+        {
+          "art": "cta",
+          "titel": "Internationale Zuständigkeit in drei Zügen",
+          "punkte": [
+            "EuGVVO anwendbar?",
+            "Art. 4 oder Art. 7?",
+            "Lieferort bestimmen"
+          ],
+          "icons": [
+            "globus",
+            "waage",
+            "lkw"
+          ]
+        }
+      ],
+      "caption": "Verkäufer in Lyon, Ware in Köln – wo wird geklagt? Ist die EuGVVO anwendbar, kann der Käufer neben dem Sitzstaat des Beklagten (Art. 4) auch am vertraglichen Lieferort klagen: Art. 7 Nr. 1 lit. b EuGVVO bestimmt ihn beim Warenkauf einheitlich für alle Ansprüche aus dem Vertrag und regelt zugleich die örtliche Zuständigkeit. Die ZPO-Gerichtsstände kommen erst zum Zug, wenn die Verordnung nicht greift.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#ipr",
+        "#eugvvo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Internationale Zuständigkeit: Lieferort zählt",
+      "coverText": "Lieferort ist Gerichtsstand",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Beim grenzüberschreitenden Kauf kann dort geklagt werden, wo die Ware vertragsgemäß ankommen sollte.",
+        "handlung": "{B} sets a heavy machine crate down at a delivery dock, while {A} curiously plants a small flag right on the dock instead of pointing to the far-away factory on the horizon.",
+        "hinweisRegie": "Place the note in the free space above the flag on the delivery dock, slightly tilted, so it marks the place of delivery as the forum without covering the crate or hands.",
+        "alternative": "{A} draws a line on a globe from a factory to a dock and circles the dock end, while {B} rests on the crate."
+      },
+      "bildSzene": "flag planted at delivery dock",
+      "bildSzeneAlt": "globe line circled at dock",
+      "quellen": [
+        "Art. 1, 4, 7 Nr. 1 lit. b EuGVVO",
+        "Art. 24–26 EuGVVO",
+        "Art. 63 EuGVVO",
+        "Art. 66 EuGVVO",
+        "§§ 12, 29 ZPO",
+        "Themenpool: ipr-893"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.675Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-723",
+      "slug": "2026-12-11-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eingebildeter Angriff: Vorsatz ja, Vorsatzstrafe nein",
+          "unter": "Erlaubnistatbestandsirrtum · §§ 16, 17 StGB",
+          "text": "A hält den Griff des B in die Jacke für den Griff zur Waffe – und schlägt zu.",
+          "norm": "§ 16 Abs. 1 StGB analog",
+          "icon": "blitz",
+          "sprecher": "Er dachte, er wird angegriffen. Er irrte sich. A sieht, wie B in die Jacke greift, hält das für den Griff zur Waffe und schlägt zu. Doch B wollte nur sein Handy holen.",
+          "marken": [
+            "Angriff nur gedacht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Tatbestand und Rechtswidrigkeit",
+          "text": "Vorsätzliche Körperverletzung; Notwehr scheidet aus – es gab keinen Angriff.",
+          "norm": "§§ 223, 32 StGB",
+          "sprecher": "Schritt eins: A verwirklicht eine vorsätzliche Körperverletzung. Notwehr scheidet aus, denn objektiv gab es keinen Angriff. Die Tat ist rechtswidrig.",
+          "marken": [
+            "rechtswidrig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Irrtum über Tatsachen",
+          "text": "Läge der vorgestellte Sachverhalt vor, wäre A gerechtfertigt.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Einordnung. A irrt über Tatsachen, nicht über das Recht. Wäre seine Vorstellung richtig, wäre er durch Notwehr gerechtfertigt. Irrt jemand dagegen über die Grenzen eines Rechtfertigungsgrundes, ist das ein Erlaubnisirrtum nach Paragraf 17.",
+          "marken": [
+            "Tatsachen, nicht Recht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Der Theorienstreit",
+          "text": "Strenge Schuldtheorie: § 17. H.M.: wie ein Tatbestandsirrtum – § 16 analog.",
+          "norm": "§§ 16, 17 StGB",
+          "sprecher": "Schritt drei: der Streit. Die strenge Schuldtheorie wendet Paragraf 17 an. Die herrschende Meinung und die Rechtsprechung behandeln den Irrtum im Ergebnis wie einen Tatbestandsirrtum. Viele in der Lehre lassen nur die Vorsatzschuld entfallen, dann bleibt eine teilnahmefähige Haupttat.",
+          "marken": [
+            "§ 16 analog"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Fahrlässigkeit prüfen",
+          "text": "Keine Vorsatzstrafe – aber § 229 StGB, wenn der Irrtum vermeidbar war.",
+          "norm": "§ 229 StGB",
+          "sprecher": "Schritt vier: die Fahrlässigkeit. Auch wenn die Vorsatzstrafe entfällt, bleibt die fahrlässige Körperverletzung nach Paragraf 229. Voraussetzung: A hätte bei gebotener Sorgfalt erkennen können, dass kein Angriff drohte.",
+          "marken": [
+            "§ 229 prüfen"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Irrtum über rechtfertigende Tatsachen: keine Vorsatzstrafe, Fahrlässigkeit prüfen.",
+          "norm": "§ 16 Abs. 1 StGB analog",
+          "sprecher": "Merke: Beim Erlaubnistatbestandsirrtum entfällt die Strafe wegen Vorsatzes. Die Fahrlässigkeit musst du trotzdem prüfen.",
+          "marken": [
+            "Vorsatzstrafe entfällt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Rechtfertigung, dann der Irrtum",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur. Und prüf den Irrtum erst, nachdem du die Rechtfertigung verneint hast.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Eingebildeter Angriff: Vorsatz ja, Vorsatzstrafe nein. Wer irrig Tatsachen annimmt, bei deren Vorliegen er gerechtfertigt wäre, befindet sich im Erlaubnistatbestandsirrtum. Die h.M. und die Rechtsprechung behandeln ihn im Ergebnis wie einen Tatbestandsirrtum (§ 16 StGB analog), die strenge Schuldtheorie wendet § 17 StGB an. Danach unbedingt die Fahrlässigkeit prüfen, etwa § 229 StGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#erlaubnistatbestandsirrtum",
+        "#notwehr",
+        "#16stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Putativnotwehr: Was wird aus dem Vorsatz?",
+      "titelZeilen": [
+        "Eingebildeter",
+        "Angriff: Vorsatz ja,",
+        "Vorsatzstrafe nein"
+      ],
+      "coverText": "Tatsachen, nicht Recht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Wer sich irrtümlich angegriffen glaubt und sich wehrt, wird nicht wegen Vorsatzes bestraft – aber möglicherweise wegen Fahrlässigkeit.",
+        "handlung": "{A} flinches and raises a wrench defensively as a stranger reaches into a jacket, while {B} calmly lifts the jacket flap with his pointer to reveal a harmless phone.",
+        "hinweisRegie": "Place the note in the free space next to the revealed phone, slightly tilted toward it, so it contrasts imagined threat and reality without covering {A}'s face or the wrench.",
+        "alternative": "{B} shines a lamp on a shadow that looks like a weapon, revealing it is only an umbrella, while {A} lowers his raised arm."
+      },
+      "bildSzene": "jacket flap reveals harmless phone",
+      "bildSzeneAlt": "lamp reveals shadow is umbrella",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 17 StGB",
+        "§ 32 StGB",
+        "§§ 223, 229 StGB",
+        "Themenpool: strafat-723"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontrast",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.677Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-141",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "„Wir beabsichtigen, Ihre Erlaubnis zu widerrufen“ – ist dieses Anhörungsschreiben ein Verwaltungsakt?",
+      "optionen": [
+        "Nein – es fehlt an einer Regelung",
+        "Ja – jedes Behördenschreiben an Bürger ist ein VA",
+        "Ja – es entfaltet unmittelbare Außenwirkung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 28 VwVfG",
+        "Themenpool: verwalt-141"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.677Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-141",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ohne Regelung kein Verwaltungsakt",
+      "text": "Ein VA ist nach § 35 S. 1 VwVfG eine hoheitliche Maßnahme einer Behörde zur Regelung eines Einzelfalls auf dem Gebiet des öffentlichen Rechts mit unmittelbarer Außenwirkung. Das Anhörungsschreiben (§ 28 VwVfG) kündigt eine Entscheidung nur an und gibt Gelegenheit zur Stellungnahme. Es setzt keine Rechtsfolge – das tut erst der spätere Widerruf.",
+      "norm": "§ 35 S. 1 VwVfG",
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 28 VwVfG",
+        "Themenpool: verwalt-141"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.677Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – es fehlt an einer Regelung",
+        "Ja – jedes Behördenschreiben an Bürger ist ein VA",
+        "Ja – es entfaltet unmittelbare Außenwirkung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-088",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 70 GG: Zuerst sind die Länder zuständig",
+      "text": "Die Länder haben das Recht der Gesetzgebung, soweit das GG nicht dem Bund Befugnisse verleiht (Art. 70 Abs. 1 GG). Der Bund braucht also einen Kompetenztitel – ausschließlich (Art. 71, 73 GG) oder konkurrierend (Art. 72, 74 GG). Für einen Teil der konkurrierenden Materien muss zusätzlich die Erforderlichkeit nach Art. 72 Abs. 2 GG vorliegen.",
+      "norm": "Art. 70 Abs. 1 GG · Art. 72, 74 GG",
+      "quellen": [
+        "Art. 70 GG",
+        "Art. 71–74 GG",
+        "Themenpool: staat-088"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.677Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-429",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "§ 134 BGB: Nicht jedes Verbot macht nichtig",
+      "text": "Ob ein Verstoß nichtig macht, entscheidet der Zweck des Verbots. Trifft es beide Parteien und den Inhalt des Geschäfts, liegt Nichtigkeit nahe. Betrifft es nur eine Seite oder bloß Ort und Zeit – etwa den Ladenschluss –, bleibt das Geschäft meist wirksam.",
+      "norm": "§ 134 BGB",
+      "quellen": [
+        "§ 134 BGB",
+        "Themenpool: bgbat-429"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.677Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-215",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Kondiktionssperre: Wer selbst verstößt, bekommt nichts zurück",
+      "text": "Nach § 817 S. 2 BGB ist die Rückforderung ausgeschlossen, wenn dem Leistenden selbst ein Gesetzes- oder Sittenverstoß zur Last fällt. Die h.M. wendet die Sperre auf alle Leistungskondiktionen an. Grenzen: Beim wucherischen Darlehen ist nur die Kapitalnutzung für die vereinbarte Zeit gesperrt. Bei Schwarzarbeit versagt der BGH auch jeden Wertersatz.",
+      "norm": "§ 817 S. 2 BGB",
+      "quellen": [
+        "§ 817 BGB",
+        "§ 812 BGB",
+        "Themenpool: bereich-215"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.677Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-916",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Ein notwendiger Streitgenosse bleibt aus: Versäumnisurteil gegen ihn?",
+      "falsch": "Einer von zwei notwendigen Streitgenossen ist im Termin säumig – also ergeht gegen ihn ein Teil-Versäumnisurteil.",
+      "richtigText": "Bei notwendiger Streitgenossenschaft gilt der Säumige als durch die erschienenen Streitgenossen vertreten (§ 62 Abs. 1 ZPO). Ein Versäumnisurteil gegen ihn scheidet aus; entschieden wird einheitlich. Anders bei einfacher Streitgenossenschaft: Jeder handelt für sich (§ 61 ZPO), ein Versäumnisurteil gegen den Säumigen ist grundsätzlich möglich.",
+      "quellen": [
+        "§ 61 ZPO",
+        "§ 62 ZPO",
+        "Themenpool: zpo-916"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:48.677Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

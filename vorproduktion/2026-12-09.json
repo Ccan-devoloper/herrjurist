@@ -1,0 +1,870 @@
+{
+  "datum": "2026-12-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-547",
+        "themaTitel": "Sachliche und örtliche Zuständigkeit",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-921",
+        "themaTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-405",
+        "themaTitel": "Wann ist ein Vorverfahren erforderlich?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:18",
+        "art": "frage",
+        "themaId": "grundr-612"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:18",
+        "art": "antwort",
+        "themaId": "grundr-612"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "handelsg-264"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "streitstand",
+        "themaId": "strafbt-068"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "merksatz",
+        "themaId": "verwalt-640"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "begriff",
+        "themaId": "strafat-312"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-547",
+      "poolTitel": "Sachliche und örtliche Zuständigkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "GVG; §§ 12 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-921",
+      "poolTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-405",
+      "poolTitel": "Wann ist ein Vorverfahren erforderlich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 68 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-21"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-612",
+      "poolTitel": "Besondere Gleichheitssätze",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 3 II, III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-612",
+      "poolTitel": "Besondere Gleichheitssätze",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 3 II, III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "handelsg-264",
+      "poolTitel": "Wer ist Kaufmann und welche Arten gibt es?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1 HGB",
+        "§ 2 HGB",
+        "§ 5 HGB",
+        "§ 6 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafbt-068",
+      "poolTitel": "Wie ist das Verhältnis zwischen § 211 StGB und § 212 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 28 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-25",
+        "2026-11-26",
+        "2026-12-08"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "verwalt-640",
+      "poolTitel": "Bekanntgabe des Verwaltungsakts",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 41 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2026-10-10"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-312",
+      "poolTitel": "Wie unterscheidet man Tateinheit und Tatmehrheit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StGB",
+        "§ 53 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-547",
+      "slug": "2026-12-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Die Wohnung schlägt den Streitwert: 12.000 € beim Amtsgericht",
+          "titelZeilen": [
+            "Die Wohnung schlägt",
+            "den Streitwert:",
+            "12.000 € beim",
+            "Amtsgericht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Wohnraummiete: AG ausschließlich",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V vermietet M eine Wohnung in München. M zieht nach Köln und hinterlässt 12.000 € Mietrückstand. V will klagen. Welches Gericht ist sachlich und örtlich zuständig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Ausschließliche Zuständigkeit zuerst",
+              "text": "Sie verdrängt alle anderen Gerichtsstände; eine Gerichtsstandsvereinbarung ist dann unzulässig (§ 40 Abs. 2 ZPO)."
+            },
+            {
+              "titel": "Sachlich: Amtsgericht",
+              "text": "Für Ansprüche aus einem Mietverhältnis über Wohnraum ist das AG ohne Rücksicht auf den Streitwert zuständig (§ 23 Nr. 2 lit. a GVG)."
+            },
+            {
+              "titel": "Örtlich: Lage der Wohnung",
+              "text": "Ausschließlich zuständig ist das Gericht, in dessen Bezirk sich die Räume befinden (§ 29a Abs. 1 ZPO)."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Zuständig ist das AG München – nicht das LG und nicht Köln."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Hoher Streitwert, also LG (§ 23 Nr. 1, § 71 Abs. 1 GVG); der Beklagte wohnt in Köln (§§ 12, 13 ZPO).“ Beides übersieht die Sonderregeln der Wohnraummiete. Streitwertgrenze und Wohnsitz spielen erst eine Rolle, wenn keine ausschließliche Zuständigkeit greift."
+        },
+        {
+          "art": "text",
+          "titel": "Die Prüfungsreihenfolge",
+          "punkte": [
+            "Ausschließliche Gerichtsstände, etwa §§ 24, 29a ZPO",
+            "Gerichtsstandsvereinbarung oder rügelose Einlassung (§§ 38, 39 ZPO)",
+            "Sonst wählt der Kläger (§ 35 ZPO): allgemeiner (§§ 12 ff. ZPO) oder besonderer Gerichtsstand (§§ 29, 32 ZPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bei Wohnraummiete entscheidet die Wohnung: sachlich das AG, örtlich der Ort der Räume – beides ausschließlich."
+        },
+        {
+          "art": "cta",
+          "titel": "Zuständigkeit in drei Fragen",
+          "punkte": [
+            "Ausschließlich zuständig?",
+            "Sachlich: GVG prüfen",
+            "Örtlich: §§ 12 ff. ZPO"
+          ],
+          "icons": [
+            "schloss",
+            "gericht",
+            "haus"
+          ]
+        }
+      ],
+      "caption": "Die Wohnung schlägt den Streitwert: Auch bei 12.000 € Mietrückstand ist das Amtsgericht zuständig. Für Streitigkeiten aus Wohnraummiete ist das AG streitwertunabhängig und ausschließlich zuständig (§ 23 Nr. 2 lit. a GVG), örtlich ausschließlich das Gericht am Ort der Wohnung (§ 29a Abs. 1 ZPO). Streitwert und Wohnsitz des Beklagten kommen erst ins Spiel, wenn keine ausschließliche Zuständigkeit greift. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zuständigkeit",
+        "#mietrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mietklage: Amtsgericht trotz 12.000 €",
+      "coverText": "Wohnraummiete: AG ausschließlich",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Bei Streit um eine Mietwohnung entscheidet nicht die Höhe der Forderung, sondern die Wohnung, welches Gericht zuständig ist.",
+        "handlung": "{A} drags a heavy sack of coins toward a large courthouse, while {B} gently turns him around and points to a small local courthouse right next to a single apartment building.",
+        "hinweisRegie": "Place the note in the free space above the small courthouse next to the apartment building, slightly tilted, so it points to the correct court without covering the coin sack.",
+        "alternative": "{B} pins a small house-shaped key onto a map, and every road from a far-away city bends toward it while {A} watches with his coin sack."
+      },
+      "bildSzene": "coin sack redirected to local court",
+      "bildSzeneAlt": "roads on map bend to house",
+      "quellen": [
+        "§ 23 Nr. 1, Nr. 2 lit. a GVG",
+        "§ 71 GVG",
+        "§ 29a ZPO",
+        "§§ 12, 13, 35, 38, 39, 40 ZPO",
+        "Themenpool: zpo-547"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "vorrangregel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.290Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-921",
+      "slug": "2026-12-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ertrinken geplant, am Brückenpfeiler gestorben – vollendet?",
+          "titelZeilen": [
+            "Ertrinken geplant,",
+            "am Brückenpfeiler",
+            "gestorben –",
+            "vollendet?"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Vorhersehbar heißt unwesentlich",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A stößt B mit Tötungsvorsatz von einer hohen Brücke; B soll im Fluss ertrinken. Im Fall schlägt B aber auf einen Brückenpfeiler und stirbt sofort. Vollendeter Totschlag – oder nur Versuch?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Objektiver Tatbestand",
+              "text": "A hat den Tod verursacht; er ist ihm objektiv zurechenbar, denn der Aufprall verwirklicht die Gefahr des Sturzes."
+            },
+            {
+              "titel": "Vorsatz und Kausalverlauf",
+              "text": "Der Vorsatz muss den Kausalverlauf nur in seinen wesentlichen Zügen umfassen, nicht in jedem Detail."
+            },
+            {
+              "titel": "Wesentlich oder unwesentlich?",
+              "text": "Unwesentlich ist eine Abweichung im Rahmen der allgemeinen Lebenserfahrung, die keine andere Bewertung der Tat rechtfertigt."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Der Aufprall ist bei einem Sturz von der Brücke vorhersehbar. A ist wegen vollendeten Totschlags strafbar (§ 212 StGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„B starb anders als geplant – also fehlt der Vorsatz, es bleibt beim Versuch.“ § 16 Abs. 1 StGB schließt den Vorsatz aber nur bei einer wesentlichen Abweichung aus. Dass das Opfer auf anderem Weg stirbt als vorgestellt, genügt dafür allein nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Abgrenzen",
+          "punkte": [
+            "Ganz außerhalb der Lebenserfahrung: Dann kann schon die objektive Zurechnung entfallen.",
+            "Zweiaktiges Geschehen – Täter hält das Opfer irrig für tot: eigene, umstrittene Fallgruppe.",
+            "Aufbau: Die Abweichung prüfst du im subjektiven Tatbestand."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wesentlich ist eine Abweichung nur, wenn sie die Lebenserfahrung verlässt oder die Tat anders bewerten lässt. Der Brückenpfeiler tut das nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Kausalverlauf in drei Zügen",
+          "punkte": [
+            "Objektiv zurechenbar?",
+            "Vorgestellter und wirklicher Verlauf",
+            "Wesentlich abgewichen?"
+          ],
+          "icons": [
+            "kreislauf",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Ertrinken geplant, am Brückenpfeiler gestorben – ist die Tat vollendet? Ja. Der Vorsatz muss den Kausalverlauf nur in seinen wesentlichen Zügen erfassen. Eine Abweichung ist unwesentlich, wenn sie sich im Rahmen der allgemeinen Lebenserfahrung hält und keine andere Bewertung der Tat rechtfertigt. Der Aufprall am Pfeiler ist beim Sturz von der Brücke vorhersehbar: vollendeter Totschlag. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#vorsatz",
+        "#16stgb",
+        "#kausalverlauf",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abweichender Kausalverlauf: vollendet?",
+      "coverText": "Vorhersehbar heißt unwesentlich",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Wenn das Geschehen anders abläuft als geplant, aber im Rahmen des Vorhersehbaren bleibt, bleibt der Vorsatz bestehen.",
+        "handlung": "{A} traces two paths with his pointer on a simple bridge model – a dotted line into the water and a solid line ending at a pillar – while {B} calmly holds both lines together at the top.",
+        "hinweisRegie": "Place the note in the free space between the dotted and the solid line near the pillar, slightly tilted, so it compares planned and real course without covering the bridge model.",
+        "alternative": "{B} watches a ball roll down a ramp and bounce off a peg into the same target basket {A} had aimed at."
+      },
+      "bildSzene": "planned and real path on bridge model",
+      "bildSzeneAlt": "ball bounces off peg into basket",
+      "quellen": [
+        "§ 16 Abs. 1 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-921"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "klassiker-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.291Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-405",
+      "slug": "2026-12-09-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht jede Anfechtungsklage braucht einen Widerspruch",
+          "unter": "Vorverfahren · § 68 VwGO",
+          "text": "§ 68 VwGO ist die Regel – viele Länder haben Ausnahmen geschaffen.",
+          "norm": "§ 68 Abs. 1 VwGO",
+          "icon": "dokument",
+          "sprecher": "Nicht jede Anfechtungsklage braucht einen Widerspruch. Die VwGO stellt die Regel auf, erlaubt aber Ausnahmen durch Gesetz. Und viele Länder haben das Vorverfahren weitgehend abgeschafft.",
+          "marken": [
+            "Regel mit Ausnahmen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Welche Klageart?",
+          "text": "Vorverfahren vor Anfechtungs- und Verpflichtungsklage – nicht vor Leistungs- oder Feststellungsklage.",
+          "norm": "§ 68 Abs. 1, 2 VwGO",
+          "sprecher": "Schritt eins: die Klageart. Ein Vorverfahren verlangt Paragraf 68 VwGO nur vor der Anfechtungsklage und vor der Verpflichtungsklage nach Ablehnung eines Antrags. Vor Leistungs- und Feststellungsklagen grundsätzlich nicht.",
+          "marken": [
+            "nur Anfechtung/Verpfl."
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ausschluss durch Gesetz",
+          "text": "Ein Bundes- oder Landesgesetz kann das Vorverfahren ausschließen.",
+          "norm": "§ 68 Abs. 1 S. 2 VwGO",
+          "sprecher": "Schritt zwei: der gesetzliche Ausschluss. Ein Gesetz kann das Vorverfahren ausschließen. Genau das haben viele Länder in ihren Ausführungsgesetzen getan, oft mit Rückausnahmen. Also immer im Landesrecht nachsehen.",
+          "marken": [
+            "Landesrecht prüfen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Ausnahmen in § 68 VwGO",
+          "text": "Oberste Bundes- oder Landesbehörde; erstmalige Beschwer durch Abhilfe- oder Widerspruchsbescheid.",
+          "norm": "§ 68 Abs. 1 S. 2 Nr. 1, 2 VwGO",
+          "sprecher": "Schritt drei: die Ausnahmen in der VwGO selbst. Kein Vorverfahren, wenn eine oberste Bundes- oder Landesbehörde entschieden hat, außer ein Gesetz schreibt es vor. Und keins, wenn erst der Abhilfe- oder Widerspruchsbescheid jemanden erstmals beschwert.",
+          "marken": [
+            "Nr. 1 und Nr. 2"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die untätige Behörde",
+          "text": "Keine Entscheidung in angemessener Frist: Klage auch ohne Widerspruchsbescheid.",
+          "norm": "§ 75 VwGO",
+          "sprecher": "Schritt vier: die untätige Behörde. Entscheidet sie ohne zureichenden Grund nicht in angemessener Frist, kannst du nach Paragraf 75 auch ohne Widerspruchsbescheid klagen, in der Regel nicht vor Ablauf von drei Monaten.",
+          "marken": [
+            "Untätigkeitsklage"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Beamtenrecht",
+          "text": "Vorverfahren vor allen Klagen des Beamten – soweit das Landesrecht nichts anderes bestimmt.",
+          "norm": "§ 54 Abs. 2 BeamtStG · § 126 Abs. 2 BBG",
+          "sprecher": "Der Klassiker: Im Beamtenrecht ist das Vorverfahren grundsätzlich vor allen Klagen vorgesehen, auch vor Leistungs- und Feststellungsklagen. Aber auch hier kann ein Landesgesetz es ausschließen.",
+          "marken": [
+            "vor allen Klagen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Anfechtung und Verpflichtung: Vorverfahren – soweit kein Gesetz es ausschließt.",
+          "norm": "§ 68 VwGO",
+          "sprecher": "Merke: Vor Anfechtungs- und Verpflichtungsklage kommt das Vorverfahren, soweit kein Gesetz es ausschließt. Und dieses Gesetz ist oft Landesrecht.",
+          "marken": [
+            "Regel + Landesrecht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Klageart, dann das Landesrecht",
+          "text": "Speichern für die nächste VwGO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Verwaltungsprozessrecht. Und schau immer ins Ausführungsgesetz deines Landes.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Nicht jede Anfechtungsklage braucht einen Widerspruch. § 68 VwGO verlangt ein Vorverfahren vor Anfechtungs- und Verpflichtungsklage, lässt aber Ausnahmen durch Gesetz zu – und viele Länder haben es weitgehend abgeschafft. Dazu kommen die Ausnahmen in § 68 Abs. 1 S. 2 VwGO und die Untätigkeitsklage nach § 75 VwGO. Klassiker: Im Beamtenrecht gilt das Vorverfahren grundsätzlich vor allen Klagen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#widerspruchsverfahren",
+        "#vorverfahren",
+        "#verwaltungsrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorverfahren: Wann ist es nötig?",
+      "titelZeilen": [
+        "Nicht jede",
+        "Anfechtungsklage",
+        "braucht einen",
+        "Widerspruch"
+      ],
+      "coverText": "§ 68 VwGO plus Landesrecht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ob vor der Klage ein Widerspruch nötig ist, hängt von der Klageart und vom jeweiligen Landesrecht ab.",
+        "handlung": "{B} stands before a gate to a courthouse path, while {A} hovers beside a small side gate that is open in some lanes and closed in others, checking a regional map.",
+        "hinweisRegie": "Place the note in the free space above the small side gate, slightly tilted toward the regional map, so it links the preliminary step to the local rules without covering {B}.",
+        "alternative": "{A} flips switches on a wall panel of different regions, opening or closing a small waiting room in front of the court for {B}."
+      },
+      "bildSzene": "side gate open or closed by region",
+      "bildSzeneAlt": "regional switches open waiting room",
+      "quellen": [
+        "§ 68 VwGO",
+        "§ 75 VwGO",
+        "§ 54 Abs. 2 BeamtStG",
+        "§ 126 Abs. 2 BBG",
+        "Ausführungsgesetze der Länder zur VwGO",
+        "Themenpool: vwgo-405"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.292Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-612",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Welches Merkmal in Art. 3 Abs. 3 GG verbietet nur die Benachteiligung, nicht die Bevorzugung?",
+      "optionen": [
+        "Das Geschlecht",
+        "Die Behinderung",
+        "Der Glaube"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 3 Abs. 2, 3 GG",
+        "Themenpool: grundr-612"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.292Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-612",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Behinderung – bevorzugen verbietet Satz 2 nicht",
+      "text": "Art. 3 Abs. 3 S. 1 GG verbietet Benachteiligung und Bevorzugung, etwa wegen des Geschlechts oder des Glaubens. S. 2 sagt nur: Niemand darf wegen seiner Behinderung benachteiligt werden. Fördernde Regelungen für Menschen mit Behinderung verbietet er deshalb nicht. Für die Gleichberechtigung von Frauen und Männern enthält Art. 3 Abs. 2 S. 2 GG einen eigenen Förderauftrag.",
+      "norm": "Art. 3 Abs. 3 S. 2 GG",
+      "quellen": [
+        "Art. 3 Abs. 2, 3 GG",
+        "Themenpool: grundr-612"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.292Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Das Geschlecht",
+        "Die Behinderung",
+        "Der Glaube"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-264",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1 HGB: Kaufmann auch ohne Eintragung",
+      "text": "Kaufmann ist, wer ein Handelsgewerbe betreibt – jeder Gewerbebetrieb, es sei denn, er erfordert nach Art und Umfang keinen kaufmännischen Geschäftsbetrieb. Die Eintragung wirkt hier nur deklaratorisch. Konstitutiv ist sie beim Kannkaufmann (§ 2 HGB); § 5 HGB macht den Eingetragenen zum Kaufmann kraft Eintragung, § 6 HGB erfasst Formkaufleute wie GmbH und AG.",
+      "norm": "§ 1 HGB · §§ 2, 5, 6 HGB",
+      "quellen": [
+        "§ 1 HGB",
+        "§ 2 HGB",
+        "§ 5 HGB",
+        "§ 6 HGB",
+        "Themenpool: handelsg-264"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.292Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-068",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Anstifter handelt aus Habgier, der Täter nicht: Anstiftung zum Mord?",
+      "norm": "§§ 211, 212, 26, 28 StGB",
+      "optionen": [
+        "Rspr.: Maßgeblich ist die Haupttat – nur Anstiftung zum Totschlag; § 28 Abs. 2 StGB passt nicht.",
+        "H.L.: § 28 Abs. 2 StGB – Anstiftung zum Mord, weil der Anstifter selbst habgierig handelt."
+      ],
+      "text": "Hier wirkt der Grundstreit spiegelbildlich: Die h.L. sieht in § 211 StGB eine Qualifikation und verschiebt über § 28 Abs. 2 StGB den Tatbestand nach oben. Die Rspr. hält § 211 StGB für eigenständig und bleibt bei der Haupttat. Das Ergebnis kippt – also Streit ausführen und entscheiden.",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 26 StGB",
+        "§ 28 StGB",
+        "Themenpool: strafbt-068"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.292Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-640",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Wirksam erst mit Bekanntgabe – für jeden einzeln",
+      "text": "Ein VA wird gegenüber jedem Betroffenen erst mit Bekanntgabe an ihn wirksam (§ 43 Abs. 1 S. 1 VwVfG) – die Frist läuft für jeden gesondert. Öffentlich bekannt gemacht gilt er zwei Wochen danach als bekannt gegeben (§ 41 Abs. 4 S. 3 VwVfG).",
+      "norm": "§ 43 Abs. 1 VwVfG · § 41 VwVfG",
+      "quellen": [
+        "§ 41 VwVfG",
+        "§ 43 VwVfG",
+        "Themenpool: verwalt-640"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.292Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-312",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Tateinheit: dieselbe Handlung – nicht bloß derselbe Abend",
+      "text": "Tateinheit (§ 52 StGB) liegt vor, wenn dieselbe Handlung mehrere Strafgesetze oder dasselbe Gesetz mehrmals verletzt; es genügt, dass sich die Ausführungshandlungen teilweise decken. Folge: eine Strafe nach dem schwersten Gesetz. Mehrere selbständige Handlungen sind Tatmehrheit (§ 53 StGB) – dann wird eine Gesamtstrafe gebildet (§ 54 StGB).",
+      "norm": "§§ 52, 53, 54 StGB",
+      "quellen": [
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "Themenpool: strafat-312"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:08.292Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

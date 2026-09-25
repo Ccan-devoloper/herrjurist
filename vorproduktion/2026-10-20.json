@@ -1,0 +1,855 @@
+{
+  "datum": "2026-10-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "strafat-730",
+        "themaTitel": "Täterschaft und Teilnahme: Abgrenzung",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "vwgo-102",
+        "themaTitel": "Wann wendet man § 123 VwGO und wann § 80 Abs. 5 VwGO im einstweiligen Rechtsschutz an?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-168",
+        "themaTitel": "Wie prüft man einen Schadensersatzanspruch statt der Leistung?",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "strafat-735"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "strafat-735"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:09",
+        "art": "norm",
+        "themaId": "anklage-793"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "zahl",
+        "themaId": "anklage-864"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "streitstand",
+        "themaId": "revision-873"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "merksatz",
+        "themaId": "grundr-367"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "strafat-730",
+      "poolTitel": "Täterschaft und Teilnahme: Abgrenzung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 25 ff. StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "vwgo-102",
+      "poolTitel": "Wann wendet man § 123 VwGO und wann § 80 Abs. 5 VwGO im einstweiligen Rechtsschutz an?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 Abs. 5 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "§ 80a VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-168",
+      "poolTitel": "Wie prüft man einen Schadensersatzanspruch statt der Leistung?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 280 Abs. 1 BGB",
+        "§ 280 Abs. 3 BGB",
+        "§ 281 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-735",
+      "poolTitel": "Unterlassen: Quasi-Kausalität und Entsprechungsklausel",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-735",
+      "poolTitel": "Unterlassen: Quasi-Kausalität und Entsprechungsklausel",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "anklage-793",
+      "poolTitel": "Strafbefehlsantrag",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 407 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "anklage-864",
+      "poolTitel": "Welches Gericht ist sachlich zuständig?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 24 GVG",
+        "§ 25 GVG",
+        "§ 74 GVG",
+        "§ 209 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "revision-873",
+      "poolTitel": "Wann ist die Revision statthaft?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 333 StPO",
+        "§ 335 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "grundr-367",
+      "poolTitel": "Was schützt das allgemeine Persönlichkeitsrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 1 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-730",
+      "slug": "2026-10-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Täterwille allein? So grenzt der BGH nicht ab",
+          "titelZeilen": [
+            "Täterwille allein?",
+            "So grenzt der BGH",
+            "nicht ab"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Wertende Gesamtbetrachtung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Wer an einer Tat mitwirkt, ist Täter (§ 25 StGB) oder Teilnehmer (§§ 26, 27 StGB). Wo die Grenze liegt, sagt das Gesetz nicht. Relevant wird das vor allem zwischen Mittäterschaft und Beihilfe – die Strafe des Gehilfen ist zwingend zu mildern (§ 27 Abs. 2 S. 2 StGB)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Rspr. oder Tatherrschaftslehre?",
+          "links": {
+            "titel": "Rspr. (BGH)",
+            "punkte": [
+              "Wertende Gesamtbetrachtung auf subjektiver Grundlage",
+              "Kriterien: eigenes Interesse am Erfolg, Umfang der Beteiligung",
+              "Tatherrschaft oder Wille dazu als wichtiges Indiz"
+            ]
+          },
+          "rechts": {
+            "titel": "h.L.: Tatherrschaft",
+            "punkte": [
+              "Täter ist die Zentralgestalt des Geschehens",
+              "Mittäter: funktionelle Tatherrschaft durch wesentlichen Beitrag",
+              "Umstritten: Reicht ein Beitrag nur im Vorbereitungsstadium?"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Wo es sich auswirkt",
+          "text": "Oft kommen beide Ansichten zum selben Ergebnis – dann genügt ein Satz. Anders, wenn jemand nur im Vorfeld plant und am Tatort fehlt: Die Rspr. kann über Interesse und Tatherrschaftswillen zur Mittäterschaft kommen. Wer einen Beitrag im Ausführungsstadium verlangt, kommt nur zur Teilnahme."
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "Erst prüfen, ob die Ansichten im Fall zu verschiedenen Ergebnissen führen.",
+            "Nur dann den Streit darstellen und mit einem Argument entscheiden.",
+            "Wer alle Merkmale selbst und voll verantwortlich verwirklicht, ist regelmäßig Täter – auch nach der Rspr."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rspr.: wertende Gesamtbetrachtung, Tatherrschaft als Kriterium. h.L.: Tatherrschaft als Maßstab. Entscheiden nur, wenn die Ergebnisse auseinandergehen."
+        },
+        {
+          "art": "cta",
+          "titel": "Abgrenzung in drei Zügen",
+          "punkte": [
+            "Beitrag und Tatphase feststellen",
+            "Beide Ansichten anwenden",
+            "Nur bei Divergenz entscheiden"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Täterwille allein? So grenzt der BGH heute nicht mehr ab. Die Rspr. nimmt eine wertende Gesamtbetrachtung vor: eigenes Interesse am Erfolg, Umfang der Beteiligung, Tatherrschaft oder wenigstens der Wille dazu. Die h.L. stellt auf die Tatherrschaft ab. Den Streit entscheidest du nur, wenn die Ansichten im Fall auseinanderlaufen – typisch beim Beitrag im Vorbereitungsstadium. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#täterschaft",
+        "#mittäterschaft",
+        "#25stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Täterschaft oder Teilnahme: der Streit",
+      "coverText": "Wertende Gesamtbetrachtung",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Ob jemand Täter oder nur Gehilfe ist, entscheidet sich nicht am bloßen Willen, sondern an seiner Rolle im Geschehen.",
+        "handlung": "{A} stands at the centre of a small expedition map table, steering the route with one hand, while {B} taps with his pointer at a second figure who only hands her a lantern from the side.",
+        "hinweisRegie": "Place the note in the free space between {A}'s steering hand and the lantern being handed over, slightly tilted toward the lantern, without covering the map or faces.",
+        "alternative": "{B} weighs two small figurines on a balance, one holding a steering wheel and one holding a torch, while {A} watches which side sinks."
+      },
+      "bildSzene": "one steers map, other hands lantern",
+      "bildSzeneAlt": "balance weighs steering and torch figurines",
+      "quellen": [
+        "§ 25 StGB",
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "Themenpool: strafat-730"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.478Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-102",
+      "slug": "2026-10-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erlaubnis weg, Tische abgelehnt: welcher Eilantrag?",
+          "titelZeilen": [
+            "Erlaubnis weg,",
+            "Tische abgelehnt:",
+            "welcher Eilantrag?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 123 Abs. 5 VwGO als Weiche",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Die Stadt widerruft die Gaststättenerlaubnis des G und ordnet die sofortige Vollziehung an. Zugleich lehnt sie seinen Antrag auf eine Sondernutzungserlaubnis für Tische auf dem Gehweg ab. G legt, soweit statthaft, Widerspruch ein und will schnellen Rechtsschutz. Welche Anträge stellt er?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Weiche: § 123 Abs. 5 VwGO",
+          "schritte": [
+            {
+              "titel": "Hauptsache bestimmen",
+              "text": "Welche Klage wäre in der Hauptsache statthaft – Anfechtungs- oder Verpflichtungsklage?"
+            },
+            {
+              "titel": "Anfechtung: §§ 80, 80a VwGO",
+              "text": "Wehrt sich G gegen einen belastenden VA, richtet sich der Eilrechtsschutz nach § 80 Abs. 5 VwGO, bei Drittwirkung i.V.m. § 80a VwGO."
+            },
+            {
+              "titel": "Sonst: § 123 VwGO",
+              "text": "Für alle übrigen Fälle, vor allem Verpflichtungsbegehren, gilt die einstweilige Anordnung (§ 123 Abs. 5 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Prüfung",
+          "punkte": [
+            "Widerruf: belastender VA – in der Hauptsache Anfechtungsklage.",
+            "Sofortvollzug angeordnet: keine aufschiebende Wirkung (§ 80 Abs. 2 S. 1 Nr. 4 VwGO).",
+            "Außentische: Die Aufhebung der Ablehnung brächte keine Erlaubnis – Hauptsache ist die Verpflichtungsklage."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Zwei Anträge: Gegen den Widerruf beantragt G, die aufschiebende Wirkung wiederherzustellen (§ 80 Abs. 5 S. 1 VwGO). Für die Tische bleibt die einstweilige Anordnung nach § 123 Abs. 1 VwGO – mit Anordnungsanspruch, Anordnungsgrund und Blick auf das Verbot, die Hauptsache vorwegzunehmen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Hauptsache bestimmen: Anfechtung führt zu §§ 80, 80a VwGO, alles andere zu § 123 VwGO (§ 123 Abs. 5 VwGO)."
+        },
+        {
+          "art": "cta",
+          "titel": "Eilantrag in drei Fragen",
+          "punkte": [
+            "Welche Klage in der Hauptsache?",
+            "Anfechtung: § 80 V, ggf. § 80a VwGO",
+            "Sonst: § 123 VwGO"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Erlaubnis widerrufen, Außentische abgelehnt – welcher Eilantrag passt? Die Weiche stellt § 123 Abs. 5 VwGO: Wäre in der Hauptsache die Anfechtungsklage statthaft, gilt § 80 Abs. 5 VwGO (ggf. mit § 80a VwGO). Für Verpflichtungsbegehren und alles Übrige bleibt die einstweilige Anordnung nach § 123 VwGO. Im Mini-Fall braucht G deshalb zwei verschiedene Anträge. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#eilrechtsschutz",
+        "#123vwgo",
+        "#80vwgo",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 123 oder § 80 Abs. 5 VwGO? Der Mini-Fall",
+      "coverText": "§ 123 Abs. 5 VwGO als Weiche",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Welcher Eilantrag passt, hängt davon ab, welche Klage in der Hauptsache statthaft wäre.",
+        "handlung": "{A} nervously stands at a track switch with two rails, one leading to a stop sign being removed and one leading to a closed gate, while {B} hovers above and flips the switch lever.",
+        "hinweisRegie": "Place the note in the free space right next to the switch lever, slightly tilted toward the fork, so it marks the decision point without covering {A}'s hands or the two rails.",
+        "alternative": "{B} sorts two stamped documents into two different slots, one labelled with a pause icon and one with a key icon, while {A} watches."
+      },
+      "bildSzene": "track switch with two rails",
+      "bildSzeneAlt": "two documents sorted into two slots",
+      "quellen": [
+        "§ 80 Abs. 2, 5 VwGO",
+        "§ 80a VwGO",
+        "§ 123 VwGO",
+        "Themenpool: vwgo-102"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.479Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-168",
+      "slug": "2026-10-20-b3",
+      "titelZeilen": [
+        "Frist abgelaufen –",
+        "Erfüllung kannst du",
+        "noch verlangen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Frist abgelaufen – Erfüllung kannst du noch verlangen",
+          "unter": "Schadensersatz statt der Leistung · § 281 BGB",
+          "text": "Der Leistungsanspruch erlischt erst, wenn du Schadensersatz verlangst.",
+          "norm": "§ 281 Abs. 4 BGB",
+          "icon": "uhr",
+          "sprecher": "Frist abgelaufen – und du kannst trotzdem noch Erfüllung verlangen. Erst wenn du Schadensersatz statt der Leistung verlangst, ist der Leistungsanspruch weg. So steht es in § 281 Absatz 4 BGB. Hier ist das ganze Schema.",
+          "marken": [
+            "Wahlrecht bleibt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schuldverhältnis",
+          "text": "Meist ein Vertrag. Anspruchsgrundlage: §§ 280 Abs. 1, 3, 281 BGB.",
+          "norm": "§§ 280 Abs. 1, 3, 281 BGB",
+          "sprecher": "Schritt eins: ein Schuldverhältnis, meist ein Vertrag. Anspruchsgrundlage sind die Paragrafen 280 Absatz 1 und 3 und 281 BGB.",
+          "marken": [
+            "§§ 280, 281"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Pflichtverletzung",
+          "text": "Fällige, durchsetzbare Leistung nicht oder nicht wie geschuldet erbracht.",
+          "norm": "§ 281 Abs. 1 S. 1 BGB",
+          "sprecher": "Schritt zwei: die Pflichtverletzung. Der Schuldner erbringt eine fällige und durchsetzbare Leistung nicht oder nicht wie geschuldet. Durchsetzbar heißt: Ihm steht keine Einrede zu.",
+          "marken": [
+            "fällig + durchsetzbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Erfolglose Fristsetzung",
+          "text": "Angemessene Frist, erfolglos abgelaufen – oder entbehrlich nach Abs. 2.",
+          "norm": "§ 281 Abs. 1, 2 BGB",
+          "sprecher": "Schritt drei: Du setzt eine angemessene Frist zur Leistung oder Nacherfüllung, und sie läuft erfolglos ab. Entbehrlich ist sie etwa bei ernsthafter und endgültiger Verweigerung, § 281 Absatz 2.",
+          "marken": [
+            "Frist oder Abs. 2"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vertretenmüssen",
+          "text": "Wird vermutet – der Schuldner muss sich entlasten.",
+          "norm": "§ 280 Abs. 1 S. 2 BGB",
+          "sprecher": "Schritt vier: Vertretenmüssen. Das wird vermutet, § 280 Absatz 1 Satz 2. Der Schuldner muss sich entlasten.",
+          "marken": [
+            "vermutet"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Rechtsfolge",
+          "text": "Positives Interesse; statt der ganzen Leistung nur nach § 281 Abs. 1 S. 2, 3 BGB.",
+          "norm": "§ 281 Abs. 1 S. 2, 3 BGB",
+          "sprecher": "Dann die Rechtsfolge: Du wirst so gestellt, als wäre ordnungsgemäß erfüllt worden. Schadensersatz statt der ganzen Leistung gibt es bei Teil- oder Schlechtleistung nur unter den Voraussetzungen von § 281 Absatz 1 Satz 2 und 3.",
+          "marken": [
+            "positives Interesse"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Schuldverhältnis, Pflichtverletzung, Frist, Vertretenmüssen – Erfüllung erlischt erst mit dem Verlangen.",
+          "norm": "§ 281 Abs. 4 BGB",
+          "sprecher": "Merke: Schuldverhältnis, Pflichtverletzung, Frist, Vertretenmüssen. Und der Erfüllungsanspruch erlischt erst mit dem Verlangen.",
+          "marken": [
+            "erst mit Verlangen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Hat der Gläubiger schon Schadensersatz verlangt?",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "sprecher": "Speicher dir das Schema für die nächste Schuldrechtsklausur. Und prüf immer, ob der Gläubiger schon Schadensersatz verlangt hat.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Frist abgelaufen – und trotzdem kann der Gläubiger noch Erfüllung verlangen. Der Leistungsanspruch ist erst ausgeschlossen, wenn er Schadensersatz statt der Leistung verlangt (§ 281 Abs. 4 BGB). Das Schema: Schuldverhältnis, Pflichtverletzung, erfolglose Fristsetzung oder Entbehrlichkeit, vermutetes Vertretenmüssen. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#281bgb",
+        "#schadensersatz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schadensersatz statt der Leistung: Schema",
+      "coverText": "§ 281 Abs. 4 BGB",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Nach Fristablauf hat der Gläubiger die Wahl – erst sein Verlangen nach Schadensersatz schließt die Erfüllung aus.",
+        "handlung": "{A} stands next to an hourglass that has just run out, while {B} still holds out an open hand toward a crate he could deliver and a money pouch lies on the other side.",
+        "hinweisRegie": "Place the note in the free space between the empty hourglass and {B}'s open hand, slightly tilted toward the hand, so it shows the choice is still open without covering the crate or the pouch.",
+        "alternative": "{B} stands at a fork after a finished countdown, one path leading to a delivered crate and one to a coin pouch, while {A} waits for her to choose."
+      },
+      "bildSzene": "empty hourglass, crate or money pouch",
+      "bildSzeneAlt": "fork after countdown: crate or coins",
+      "quellen": [
+        "§ 280 Abs. 1, 3 BGB",
+        "§ 281 BGB",
+        "Themenpool: schuld-168"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.480Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-735",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "V lässt sein Kind ertrinken, obwohl er es gefahrlos retten könnte. Wann ist das Unterlassen kausal?",
+      "optionen": [
+        "Wenn Rettung die Überlebenschance möglicherweise erhöht hätte",
+        "Immer – als Garant ist er ohnehin zum Handeln verpflichtet",
+        "Wenn Rettung den Tod sicher oder fast sicher verhindert hätte"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 13 StGB",
+        "Themenpool: strafat-735"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.480Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-735",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur wenn Rettung den Tod fast sicher verhindert hätte",
+      "text": "Beim Unterlassen fragt man nach der Quasi-Kausalität: Die gebotene Handlung wird hinzugedacht. Kausal ist das Unterlassen, wenn der Erfolg dann mit an Sicherheit grenzender Wahrscheinlichkeit entfallen wäre (Rspr.). Eine bloße Chancenerhöhung reicht danach nicht. Die Garantenstellung ist eine eigene Voraussetzung (§ 13 Abs. 1 StGB), ebenso die Entsprechungsklausel.",
+      "norm": "§ 13 Abs. 1 StGB",
+      "quellen": [
+        "§ 13 StGB",
+        "Themenpool: strafat-735"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.480Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Wenn Rettung die Überlebenschance möglicherweise erhöht hätte",
+        "Immer – als Garant ist er ohnehin zum Handeln verpflichtet",
+        "Wenn Rettung den Tod sicher oder fast sicher verhindert hätte"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-793",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 407 StPO: Strafbefehl nur bei Vergehen – und nur mit bestimmten Rechtsfolgen",
+      "text": "Hält die StA eine Hauptverhandlung nicht für nötig, kann sie bei Vergehen schriftlich einen Strafbefehl beantragen (Strafrichter oder Schöffengericht). Festsetzbar sind u. a. Geldstrafe, Fahrverbot und Entziehung der Fahrerlaubnis mit Sperre bis zu zwei Jahren; mit Verteidiger auch Freiheitsstrafe bis zu einem Jahr zur Bewährung. Einspruch: binnen zwei Wochen (§ 410 StPO).",
+      "norm": "§ 407 StPO · § 410 StPO",
+      "quellen": [
+        "§ 407 StPO",
+        "§ 410 StPO",
+        "Themenpool: anklage-793"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.480Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-864",
+      "ueberzeile": "4 Punkte Anklage",
+      "titel": "Welches Gericht ist sachlich zuständig? Die Straferwartung entscheidet",
+      "text": "Maßgeblich ist die im Einzelfall zu erwartende Strafe, nicht der abstrakte Strafrahmen.",
+      "punkte": [
+        "Strafrichter: Vergehen, Straferwartung bis zwei Jahre (§ 25 GVG)",
+        "Schöffengericht: bis vier Jahre, auch Verbrechen (§§ 24, 28 GVG)",
+        "Landgericht: darüber, Schwurgericht, besondere Bedeutung (§§ 24, 74 GVG)",
+        "Eröffnung: Das Gericht kann nach § 209 StPO niedriger eröffnen oder vorlegen"
+      ],
+      "quellen": [
+        "§ 24 GVG",
+        "§ 25 GVG",
+        "§ 28 GVG",
+        "§ 74 GVG",
+        "§ 209 StPO",
+        "Themenpool: anklage-864"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.480Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-873",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Sprungrevision, obwohl die Berufung annahmebedürftig wäre: statthaft?",
+      "norm": "§ 335 StPO · § 313 StPO",
+      "optionen": [
+        "BGH: Ja – § 335 StPO setzt keine Annahme nach § 313 StPO voraus.",
+        "Andere Ansicht: Nur, wenn die Berufung angenommen werden müsste."
+      ],
+      "text": "Klausur: Mit dem BGH ist die Sprungrevision auch gegen Urteile statthaft, bei denen die Berufung nach § 313 StPO der Annahme bedürfte – der Wortlaut des § 335 Abs. 1 StPO kennt diese Einschränkung nicht. Danach prüfst du Frist und Form wie bei jeder Revision.",
+      "quellen": [
+        "§ 333 StPO",
+        "§ 335 StPO",
+        "§ 313 StPO",
+        "Themenpool: revision-873"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.480Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-367",
+      "ueberzeile": "Merksatz Grundrechte",
+      "titel": "Das allgemeine Persönlichkeitsrecht schützt mehr als die Privatsphäre",
+      "text": "Das APR (Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG) sichert die engere persönliche Lebenssphäre und ihre Grundbedingungen. Ausprägungen u. a.: Privat- und Intimsphäre, Recht am eigenen Bild und Wort, informationelle Selbstbestimmung, Vertraulichkeit und Integrität informationstechnischer Systeme. Je näher ein Eingriff der Intimsphäre kommt, desto strenger die Rechtfertigung.",
+      "norm": "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 1 Abs. 1 GG",
+        "Themenpool: grundr-367"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:40:12.480Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

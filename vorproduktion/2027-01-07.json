@@ -1,0 +1,863 @@
+{
+  "datum": "2027-01-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "staat-603",
+        "themaTitel": "Parteienrecht und Chancengleichheit",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "sachen-500",
+        "themaTitel": "Eigentumsvorbehalt und Anwartschaftsrecht",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-291",
+        "themaTitel": "Wie prüft man die objektive Zurechnung?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "vwgo-656"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "vwgo-656"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:57",
+        "art": "norm",
+        "themaId": "zpo-055"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "streitstand",
+        "themaId": "bgbat-911"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "merksatz",
+        "themaId": "strafbt-327"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:06",
+        "art": "begriff",
+        "themaId": "schuldbt-467"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "staat-603",
+      "poolTitel": "Parteienrecht und Chancengleichheit",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 21 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "sachen-500",
+      "poolTitel": "Eigentumsvorbehalt und Anwartschaftsrecht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 449, 929, 158 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-02"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-291",
+      "poolTitel": "Wie prüft man die objektive Zurechnung?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT; richterrechtliche Zurechnungslehre"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-656",
+      "poolTitel": "Feststellungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 43 VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-04"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-656",
+      "poolTitel": "Feststellungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 43 VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-04"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-055",
+      "poolTitel": "Wie ist der Instanzenzug im Zivilprozess?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 511 ZPO",
+        "§ 542 ZPO",
+        "§ 23 GVG",
+        "§ 71 GVG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-01"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "bgbat-911",
+      "poolTitel": "Bindet eine abhandengekommene Willenserklärung, die ohne Willen in den Verkehr gelangt?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB",
+        "§ 122 BGB analog",
+        "§ 172 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-05"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-327",
+      "poolTitel": "Was ist ein gefährliches Werkzeug im Sinne des § 244 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 1 Nr. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuldbt-467",
+      "poolTitel": "Minderung im Kaufrecht",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 2, 441 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-603",
+      "slug": "2027-01-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Chancengleichheit der Parteien: drei Felder, drei Maßstäbe",
+          "titelZeilen": [
+            "Chancengleichheit",
+            "der Parteien: drei",
+            "Felder, drei",
+            "Maßstäbe"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Wahl · Leistung · Äußerung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Grundlagen",
+          "punkte": [
+            "Partei: will dauerhaft auf Bundes- oder Landesebene mitwirken – reine Rathausgruppen nicht (§ 2 PartG).",
+            "Art. 21 Abs. 1 GG: Gründungsfreiheit, Chancengleichheit, innere Ordnung nach demokratischen Grundsätzen.",
+            "Chancengleichheit folgt aus Art. 21 Abs. 1 GG, bei Wahlen i. V. m. Art. 38 Abs. 1 GG."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Feld 1: Wahlen und Wahlkampf",
+          "text": "Hier gilt strikte, formale Gleichheit. Jede Ungleichbehandlung – etwa durch eine Sperrklausel – braucht einen besonderen, zwingenden Grund von verfassungsrechtlichem Gewicht. Die Maßstäbe kennst du aus der Wahlrechtsgleichheit."
+        },
+        {
+          "art": "text",
+          "titel": "Feld 2: Staatliche Leistungen",
+          "text": "Stadthalle, Sendezeiten, Plakatflächen: Nach § 5 Abs. 1 PartG darf nach der Bedeutung der Partei abgestuft werden – aber nur bis zu einem Mindestmaß, das den Zweck noch erfüllt. Ihre Ziele darf die Behörde einer nicht verbotenen Partei dabei nicht entgegenhalten."
+        },
+        {
+          "art": "text",
+          "titel": "Feld 3: Äußerungen der Regierung",
+          "text": "Im Amt sind Regierungsmitglieder zur Neutralität verpflichtet: keine parteiergreifenden Äußerungen mit Amtsautorität oder Amtsressourcen. Als Parteipolitiker dürfen sie am Meinungskampf teilnehmen. Entscheidend: In welcher Rolle, wo und mit welchen Mitteln wurde gesprochen?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Verbot und Finanzierungsausschluss",
+          "links": {
+            "titel": "Verbot (Art. 21 II)",
+            "punkte": [
+              "Partei geht auf Beeinträchtigung oder Beseitigung der fdGO aus.",
+              "Zusätzlich Potentialität: konkrete Anhaltspunkte für möglichen Erfolg."
+            ]
+          },
+          "rechts": {
+            "titel": "Ausschluss (Art. 21 III)",
+            "punkte": [
+              "Ausrichtung auf dieselben Ziele genügt, Potentialität nicht nötig.",
+              "Folge: keine staatliche Finanzierung, keine Steuervorteile."
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wahlen: strikt gleich. Leistungen: abgestuft nach § 5 PartG. Regierung: neutral im Amt. Verbot und Ausschluss: nur durch das BVerfG."
+        },
+        {
+          "art": "cta",
+          "titel": "Parteienfall in drei Fragen",
+          "punkte": [
+            "Welches Feld: Wahl, Leistung, Äußerung?",
+            "Welcher Maßstab gilt dort?",
+            "Rechtsbehelf: Organstreit, VB oder VwGO?"
+          ],
+          "icons": [
+            "wahlurne",
+            "waage",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Chancengleichheit der Parteien ist nicht überall gleich streng. Bei Wahlen gilt strikte formale Gleichheit, bei staatlichen Leistungen erlaubt § 5 Abs. 1 PartG eine Abstufung nach Bedeutung, und Regierungsmitglieder müssen im Amt neutral bleiben – als Parteipolitiker dürfen sie mitstreiten. Verbot und Finanzierungsausschluss nach Art. 21 Abs. 2 bis 4 GG entscheidet allein das BVerfG. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#parteienrecht",
+        "#art21gg",
+        "#chancengleichheit",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Parteien: Chancengleichheit auf einen Blick",
+      "coverText": "Wahl · Leistung · Äußerung",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Parteien werden je nach Lage unterschiedlich streng gleich behandelt: bei Wahlen strikt, bei Leistungen abgestuft.",
+        "handlung": "{A} carefully levels three starting blocks on a race line, while {B} curiously compares them with a set of steps of different heights standing beside the track.",
+        "hinweisRegie": "Place the note in the free space between the levelled starting blocks and the stepped blocks, slightly tilted, so it contrasts strict and graded equality without covering {A}'s hands or {B}'s face.",
+        "alternative": "{B} hands out microphones of equal size to three speakers, while {A} keeps a larger official megaphone locked in a case."
+      },
+      "bildSzene": "levelled starting blocks next to steps",
+      "bildSzeneAlt": "equal microphones, official megaphone locked",
+      "quellen": [
+        "Art. 21 GG",
+        "Art. 38 Abs. 1 GG",
+        "§§ 2, 5 PartG",
+        "Themenpool: staat-603"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-felder",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.957Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-500",
+      "slug": "2027-01-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Letzte Rate bezahlt – Eigentümer wird ein anderer",
+          "titelZeilen": [
+            "Letzte Rate",
+            "bezahlt – Eigentümer",
+            "wird ein anderer"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Direkterwerb ohne Durchgang",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "V verkauft K ein E-Bike unter Eigentumsvorbehalt. K überträgt sein Anwartschaftsrecht sicherungshalber an D und fährt das Rad weiter. Dann zahlt K die letzte Rate an V. Wer wird Eigentümer?"
+        },
+        {
+          "art": "text",
+          "titel": "Der Eigentumsvorbehalt",
+          "text": "Schuldrechtlich: Kaufvertrag mit Vorbehaltsabrede (§ 449 Abs. 1 BGB). Dinglich: Übereignung nach § 929 S. 1 BGB unter der aufschiebenden Bedingung vollständiger Zahlung (§ 158 Abs. 1 BGB). Bis dahin bleibt V Eigentümer."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Vorbehalt oder Anwartschaft?",
+          "links": {
+            "titel": "Eigentumsvorbehalt",
+            "punkte": [
+              "Abrede zwischen V und K (§ 449 BGB).",
+              "Sichert V: Er bleibt Eigentümer bis zur Zahlung.",
+              "Herausgabe erst nach Rücktritt (§ 449 II BGB)."
+            ]
+          },
+          "rechts": {
+            "titel": "Anwartschaftsrecht",
+            "punkte": [
+              "Position des K: wesensgleiches Minus zum Eigentum.",
+              "Übertragbar wie Eigentum: §§ 929 ff. BGB analog.",
+              "Geschützt über § 161 I und § 823 I BGB."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung: Direkterwerb",
+          "text": "Mit der letzten Rate tritt die Bedingung ein. Eigentümer wird unmittelbar D als Inhaber des Anwartschaftsrechts – nicht erst K für eine juristische Sekunde. Folge: Gläubiger des K können nicht über einen Durchgangserwerb auf das Rad zugreifen."
+        },
+        {
+          "art": "text",
+          "titel": "Die verbreitete Annahme",
+          "text": "„Wer die letzte Rate zahlt, wird Eigentümer.“ Das stimmt nur, solange K sein Anwartschaftsrecht behält. Hat er es übertragen, erwirbt der neue Inhaber – ohne Umweg über K."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Vorbehalt sichert den Verkäufer, die Anwartschaft stärkt den Käufer – und wer sie erwirbt, wird mit der letzten Rate direkt Eigentümer."
+        },
+        {
+          "art": "cta",
+          "titel": "Abgrenzung in drei Fragen",
+          "punkte": [
+            "Unter Vorbehalt übereignet?",
+            "Wer hält das Anwartschaftsrecht?",
+            "Bedingung eingetreten: Direkterwerb"
+          ],
+          "icons": [
+            "vertrag",
+            "schluessel",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Letzte Rate bezahlt – und Eigentümer wird ein anderer. Beim Eigentumsvorbehalt übereignet V aufschiebend bedingt (§§ 929 S. 1, 158 Abs. 1 BGB), der Käufer erwirbt ein Anwartschaftsrecht. Das ist übertragbar wie Eigentum. Hat K es an D übertragen, wird mit Bedingungseintritt unmittelbar D Eigentümer – ohne Durchgangserwerb bei K. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#eigentumsvorbehalt",
+        "#anwartschaftsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Eigentumsvorbehalt vs. Anwartschaftsrecht",
+      "coverText": "Direkterwerb ohne Durchgang",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer das Anwartschaftsrecht hält, wird mit der letzten Rate Eigentümer – ohne Umweg über den Käufer.",
+        "handlung": "{A} drops the final coin into a pay slot, while the padlock on an e-bike clicks open right in the hands of {B}, who is already holding the handlebar.",
+        "hinweisRegie": "Place the note in the free space between the pay slot and the opened padlock in {B}'s hands, slightly tilted toward {B}, so it shows the direct path of ownership without covering the coin or the lock.",
+        "alternative": "{A} completes the last step of a short staircase, and the door at the top swings open on the side where {B} is already waiting."
+      },
+      "bildSzene": "last coin paid, lock opens for other",
+      "bildSzeneAlt": "last stair step opens door for holder",
+      "quellen": [
+        "§ 449 BGB",
+        "§ 929 S. 1 BGB",
+        "§ 158 Abs. 1 BGB",
+        "§ 161 Abs. 1 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: sachen-500"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-direkterwerb",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.958Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-291",
+      "slug": "2027-01-07-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zurechnung: zwei Fragen nach der Kausalität",
+          "unter": "Objektive Zurechnung · StGB AT",
+          "text": "Gefahr geschaffen – und genau diese Gefahr im Erfolg verwirklicht?",
+          "norm": null,
+          "icon": "kreislauf",
+          "sprecher": "Kausal heißt noch lange nicht zurechenbar. Nach der Kausalität stellst du zwei Fragen: Hat der Täter eine rechtlich missbilligte Gefahr geschaffen? Und hat sich genau diese Gefahr im Erfolg verwirklicht?",
+          "marken": [
+            "kausal ≠ zurechenbar",
+            "zwei Fragen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erst die Kausalität",
+          "text": "Jede Bedingung, die nicht hinweggedacht werden kann.",
+          "norm": null,
+          "sprecher": "Schritt eins: Kausalität nach der Äquivalenztheorie. Ursächlich ist jede Bedingung, die nicht hinweggedacht werden kann, ohne dass der Erfolg in seiner konkreten Gestalt entfiele. Das ist sehr weit.",
+          "marken": [
+            "conditio sine qua non"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rechtlich missbilligte Gefahr",
+          "text": "Nicht bei erlaubtem Risiko oder Risikoverringerung.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Hat der Täter eine rechtlich missbilligte Gefahr geschaffen? Daran fehlt es beim erlaubten Risiko, etwa im regelgerechten Straßenverkehr, und bei der Risikoverringerung: Wer einen Schlag abschwächt, schafft keine neue Gefahr.",
+          "marken": [
+            "erlaubtes Risiko?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gefahr im Erfolg verwirklicht",
+          "text": "Nicht bei atypischem Verlauf oder außerhalb des Schutzzwecks der Norm.",
+          "norm": null,
+          "sprecher": "Schritt drei: Hat sich genau diese Gefahr im Erfolg verwirklicht? Nicht bei völlig atypischen Kausalverläufen und nicht, wenn der Erfolg außerhalb des Schutzzwecks der verletzten Norm liegt.",
+          "marken": [
+            "atypisch?",
+            "Schutzzweck?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Eigenverantwortliche Selbstgefährdung",
+          "text": "Wer sich frei und bewusst selbst gefährdet, trägt das Risiko in der Regel selbst.",
+          "norm": null,
+          "sprecher": "Wichtige Fallgruppe: Das Opfer gefährdet sich frei verantwortlich selbst, etwa beim gemeinsamen Drogenkonsum. Dann ist der Erfolg dem Mitwirkenden in der Regel nicht zuzurechnen.",
+          "marken": [
+            "freiverantwortlich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Und die Rechtsprechung?",
+          "text": "Sie greift auf die Lehre nur zurückhaltend zurück und löst vieles beim Vorsatz.",
+          "norm": null,
+          "sprecher": "Übrigens: Die Rechtsprechung greift auf diese Lehre nur zurückhaltend zurück und löst viele Fälle über den Vorsatz. Im Gutachten prüfst du die Zurechnung trotzdem im objektiven Tatbestand.",
+          "marken": [
+            "Rspr. zurückhaltend"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Kausal? Missbilligte Gefahr? Genau diese Gefahr verwirklicht?",
+          "norm": null,
+          "sprecher": "Merke: erst kausal, dann missbilligte Gefahr geschaffen, dann genau diese Gefahr im Erfolg verwirklicht.",
+          "marken": [
+            "schaffen · verwirklichen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nach der Kausalität weiterprüfen",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Kausal heißt noch lange nicht zurechenbar. Nach der Äquivalenztheorie stellst du zwei Fragen: Hat der Täter eine rechtlich missbilligte Gefahr geschaffen? Und hat sich genau diese Gefahr im tatbestandlichen Erfolg verwirklicht? Daran scheitert die Zurechnung etwa beim erlaubten Risiko, bei atypischen Kausalverläufen, außerhalb des Schutzzwecks der Norm und bei eigenverantwortlicher Selbstgefährdung. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#objektivezurechnung",
+        "#kausalität",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Objektive Zurechnung: das Prüfschema",
+      "titelZeilen": [
+        "Zurechnung: zwei",
+        "Fragen nach der",
+        "Kausalität"
+      ],
+      "coverText": "Gefahr schaffen, Gefahr verwirklichen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Nicht jede Ursache macht verantwortlich – die geschaffene Gefahr muss sich im Erfolg wiederfinden.",
+        "handlung": "{A} traces a line of toppling dominoes to the last one with his pointer, while {B} nervously lifts a single domino that fell sideways onto a separate track by pure chance.",
+        "hinweisRegie": "Place the note in the free space between the main domino line and the sideways piece, slightly tilted toward the sideways piece, without covering {A}'s pointer or {B}'s lifting hand.",
+        "alternative": "{B} opens a valve that sprays water toward a bucket, while {A} points out that a sudden gust, not the valve, carried the water somewhere else."
+      },
+      "bildSzene": "domino chain, one piece off track",
+      "bildSzeneAlt": "gust carries water away from valve",
+      "quellen": [
+        "StGB AT; richterrechtliche Zurechnungslehre",
+        "Themenpool: strafat-291"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-echte-pruefpunkte",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.960Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-656",
+      "ueberzeile": "Prüfungsfrage Verwaltungsprozess",
+      "titel": "Feststellungsklage gegen eine Behörde, obwohl auch eine Leistungsklage möglich wäre: Sperrt § 43 Abs. 2 VwGO?",
+      "optionen": [
+        "Ja, die Feststellungsklage ist ausnahmslos subsidiär",
+        "Nach BVerwG meist nicht, wenn Frist und Vorverfahren nicht umgangen werden",
+        "Nein, § 43 Abs. 2 VwGO gilt nur im Zivilprozess"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 43 VwGO",
+        "Themenpool: vwgo-656"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.960Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-656",
+      "ueberzeile": "Auflösung",
+      "titel": "Nach dem BVerwG meist nicht – wenn nichts umgangen wird",
+      "text": "§ 43 Abs. 2 VwGO soll verhindern, dass die besonderen Voraussetzungen von Anfechtungs- und Verpflichtungsklage – Vorverfahren und Klagefrist – unterlaufen werden. Droht das nicht, etwa neben einer allgemeinen Leistungsklage gegen den Staat, wendet das BVerwG die Subsidiarität einschränkend an: Behörden beachten auch Feststellungsurteile. Die Literatur sieht das teils kritisch.",
+      "norm": "§ 43 Abs. 2 VwGO",
+      "quellen": [
+        "§ 43 VwGO",
+        "Themenpool: vwgo-656"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.960Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, die Feststellungsklage ist ausnahmslos subsidiär",
+        "Nach BVerwG meist nicht, wenn Frist und Vorverfahren nicht umgangen werden",
+        "Nein, § 43 Abs. 2 VwGO gilt nur im Zivilprozess"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-055",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Berufung gegen ein AG-Urteil geht ans Landgericht, nicht ans OLG",
+      "text": "Erste Instanz: AG oder LG, je nach Streitwert und Sonderzuweisung (§§ 23, 71 GVG). Berufung (§ 511 ZPO) gegen AG-Urteile zum LG (§ 72 GVG), gegen LG-Urteile zum OLG (§ 119 GVG) – Familiensachen laufen gesondert. Revision (§ 542 ZPO) zum BGH, nur wenn sie zugelassen ist (§ 543 ZPO).",
+      "norm": "§§ 511, 542 ZPO · §§ 72, 119 GVG",
+      "quellen": [
+        "§ 511 ZPO",
+        "§§ 542, 543 ZPO",
+        "§§ 23, 71, 72, 119 GVG",
+        "Themenpool: zpo-055"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.960Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-911",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Brief ohne Willen des Absenders versandt: wirksame Erklärung?",
+      "norm": "§ 130 BGB · § 122 BGB analog",
+      "optionen": [
+        "Überwiegende Ansicht: Keine Abgabe, keine Willenserklärung – aber ggf. Ersatz des Vertrauensschadens.",
+        "Andere Ansicht: Wer das Absenden zurechenbar veranlasst, ist gebunden – Ausweg nur über Anfechtung."
+      ],
+      "text": "Den Streit bei der Abgabe verorten. Beide Wege enden oft beim Vertrauensschaden (analog § 122 BGB) – nach der zweiten Ansicht aber nur, wenn der Absender aktiv anficht.",
+      "quellen": [
+        "§ 130 BGB",
+        "§ 122 BGB analog",
+        "§ 119 BGB",
+        "Themenpool: bgbat-911"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.960Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-327",
+      "ueberzeile": "Merksatz Strafrecht BT",
+      "titel": "Taschenmesser beim Diebstahl dabei: § 244 StGB",
+      "text": "Ein Taschenmesser ist nach dem BGH schon objektiv ein gefährliches Werkzeug. Es genügt, dass der Täter es bei der Tat griffbereit bei sich führt und das weiß – eine Verwendungsabsicht verlangt lit. a nicht.",
+      "norm": "§ 244 Abs. 1 Nr. 1 lit. a StGB",
+      "quellen": [
+        "§ 244 Abs. 1 Nr. 1 StGB",
+        "Themenpool: strafbt-327"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.960Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-467",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Minderung: herabsetzen statt zurücktreten – auch beim kleinen Mangel",
+      "text": "Minderung (§§ 437 Nr. 2, 441 BGB) ist ein Gestaltungsrecht: Der Käufer setzt den Preis durch Erklärung gegenüber dem Verkäufer herab. Sie tritt „statt“ des Rücktritts ein, braucht also dessen Voraussetzungen, meist eine erfolglose Frist zur Nacherfüllung – gilt aber auch bei unerheblichen Mängeln (§ 441 Abs. 1 S. 2 BGB). Berechnung: § 441 Abs. 3 BGB.",
+      "norm": "§§ 437 Nr. 2, 441 BGB",
+      "quellen": [
+        "§ 437 Nr. 2 BGB",
+        "§ 441 BGB",
+        "§ 323 BGB",
+        "Themenpool: schuldbt-467"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:49:21.960Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

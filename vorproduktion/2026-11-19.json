@@ -1,0 +1,864 @@
+{
+  "datum": "2026-11-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "strafbt-748",
+        "themaTitel": "Diebstahl mit Waffen/Bandendiebstahl",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "vwgo-410",
+        "themaTitel": "Welcher Zeitpunkt ist für die Beurteilung der Sach- und Rechtslage maßgeblich?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "sachen-505",
+        "themaTitel": "EBV: Nutzungsersatz",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "bgbat-008"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "streitstand",
+        "themaId": "strafbt-068"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "merksatz",
+        "themaId": "schuldbt-198"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "begriff",
+        "themaId": "strafbt-324"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "strafbt-748",
+      "poolTitel": "Diebstahl mit Waffen/Bandendiebstahl",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "vwgo-410",
+      "poolTitel": "Welcher Zeitpunkt ist für die Beurteilung der Sach- und Rechtslage maßgeblich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "materielles Fachrecht",
+        "§ 113 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-505",
+      "poolTitel": "EBV: Nutzungsersatz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 987 ff. BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-008",
+      "poolTitel": "Worin unterscheiden sich Anfechtung und Wegfall der Geschäftsgrundlage?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 2 BGB",
+        "§ 313 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafbt-068",
+      "poolTitel": "Wie ist das Verhältnis zwischen § 211 StGB und § 212 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 28 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-09-28",
+        "2026-11-17",
+        "2026-11-18"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuldbt-198",
+      "poolTitel": "Wie sind Schönheitsreparaturklauseln im Mietrecht zu beurteilen?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 535 BGB",
+        "§ 307 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-324",
+      "poolTitel": "Wann liegt ein Gewahrsamsbruch trotz Einverständnis vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-748",
+      "slug": "2026-11-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Büro oder Wohnung? Regelbeispiel oder Qualifikation",
+          "titelZeilen": [
+            "Büro oder Wohnung?",
+            "Regelbeispiel oder",
+            "Qualifikation"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Wohnung: Tatbestand, nicht Strafmaß",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "§ 244 StGB im Überblick",
+          "punkte": [
+            "Abs. 1 Nr. 1a: Waffe oder anderes gefährliches Werkzeug bei sich führen",
+            "Abs. 1 Nr. 1b: sonst ein Werkzeug oder Mittel, um Widerstand durch Gewalt oder Gewaltdrohung zu überwinden",
+            "Abs. 1 Nr. 2: Bandendiebstahl unter Mitwirkung eines anderen Bandenmitglieds",
+            "Abs. 1 Nr. 3: Wohnungseinbruchdiebstahl",
+            "Abs. 4: dauerhaft genutzte Privatwohnung – Mindeststrafe ein Jahr, also Verbrechen"
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Einbruch ist nicht gleich Einbruch",
+          "links": {
+            "titel": "Büro, Geschäft",
+            "punkte": [
+              "§ 243 I 2 Nr. 1 StGB: Regelbeispiel",
+              "Strafzumessung – Prüfung nach der Schuld"
+            ]
+          },
+          "rechts": {
+            "titel": "Wohnung",
+            "punkte": [
+              "§ 244 I Nr. 3 StGB: Qualifikation",
+              "Tatbestand – Prüfung direkt nach § 242",
+              "Privatwohnung dauerhaft genutzt: § 244 IV"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Waffe und gefährliches Werkzeug",
+          "text": "„Bei sich führen“ heißt: Das Tatmittel ist während der Tat griffbereit – eingesetzt werden muss es nicht. Wann ein Gegenstand ohne Verwendungsabsicht ein gefährliches Werkzeug ist, ist umstritten (Taschenmesser-Fälle). In der Klausur: Streit kurz darstellen, am konkreten Gegenstand entscheiden."
+        },
+        {
+          "art": "text",
+          "titel": "Bandendiebstahl",
+          "punkte": [
+            "Bande: mindestens drei Personen",
+            "Verbunden zur fortgesetzten Begehung von Raub oder Diebstahl",
+            "Mitwirkung eines anderen Mitglieds – nach BGH nicht zwingend am Tatort",
+            "Bande plus § 243 I 2 oder § 244 I Nr. 1, 3: schwerer Bandendiebstahl (§ 244a)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wohnungseinbruch ist Qualifikation (§ 244 I Nr. 3), Einbruch ins Büro nur Regelbeispiel (§ 243). Die Einordnung bestimmt, wo du prüfst."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 244 StGB auf einen Blick",
+          "punkte": [
+            "Waffe, Werkzeug oder Mittel?",
+            "Bande aus mindestens drei?",
+            "Wohnung oder Geschäftsraum?",
+            "Dauerhaft genutzte Privatwohnung?"
+          ],
+          "icons": [
+            "messer",
+            "personen",
+            "haus",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Büro oder Wohnung? Davon hängt ab, ob du ein Regelbeispiel oder eine Qualifikation prüfst. Der Einbruch in Geschäftsräume ist Regelbeispiel nach § 243 Abs. 1 S. 2 Nr. 1 StGB, der Wohnungseinbruch Qualifikation nach § 244 Abs. 1 Nr. 3 StGB – bei dauerhaft genutzter Privatwohnung sogar ein Verbrechen (§ 244 Abs. 4). Dazu der Spickzettel zu Waffe, Werkzeug und Bande. Speichern für die nächste Strafrecht-BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#244stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 244 StGB: Spickzettel zu Waffe, Bande, Wohnung",
+      "coverText": "Wohnung: Tatbestand, nicht Strafmaß",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Ob ein Einbruch Qualifikation oder nur Regelbeispiel ist, hängt davon ab, ob es eine Wohnung oder ein Büro ist.",
+        "handlung": "{A} holds a crowbar between two doors, one leading into a cosy living room and one into a plain office, while {B} curiously sorts two different labels onto the two doors.",
+        "hinweisRegie": "Place the note in the free space between the two doors, slightly tilted toward the living room door, so the difference between home and office is marked without covering the crowbar or the labels.",
+        "alternative": "{B} places a small house and a small shop on two different shelves of a scale while {A} watches the house side sink lower."
+      },
+      "bildSzene": "crowbar between home and office doors",
+      "bildSzeneAlt": "house and shop on scale shelves",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 243 StGB",
+        "§ 244 StGB",
+        "§ 244a StGB",
+        "Themenpool: strafbt-748"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslungspaar",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.720Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-410",
+      "slug": "2026-11-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Antrag gestellt, Gesetz verschärft: Welcher Tag zählt?",
+          "titelZeilen": [
+            "Antrag gestellt,",
+            "Gesetz verschärft:",
+            "Welcher Tag zählt?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Materielles Recht entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausgangsfrage",
+          "text": "Zwischen Antrag, Bescheid und Urteil ändern sich oft Tatsachen oder Gesetze. Auf welchen Zeitpunkt das Gericht abstellt, sagt die VwGO nicht ausdrücklich. Nach dem BVerwG richtet er sich nach dem materiellen Recht – für den Normalfall gibt es aber Faustregeln je Klageart."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die Faustregeln",
+          "links": {
+            "titel": "Anfechtungsklage",
+            "punkte": [
+              "Grundsatz: Stand der letzten Entscheidung der Behörde, meist des Widerspruchs.",
+              "Frage: War der Verwaltungsakt damals rechtswidrig?"
+            ]
+          },
+          "rechts": {
+            "titel": "Verpflichtungsklage",
+            "punkte": [
+              "Grundsatz: letzte mündliche Verhandlung.",
+              "Frage: Besteht der Anspruch jetzt?"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wichtige Abweichungen",
+          "links": {
+            "titel": "Anfechtung",
+            "punkte": [
+              "Dauerverwaltungsakt, etwa Verkehrszeichen: letzte mündliche Verhandlung",
+              "Nachbarklage: Stand bei Erteilung; spätere Änderungen zugunsten des Bauherrn zählen"
+            ]
+          },
+          "rechts": {
+            "titel": "Verpflichtung",
+            "punkte": [
+              "Das Fachrecht kann einen anderen Zeitpunkt vorgeben",
+              "Übergangsrecht kann ältere Anträge schützen"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Bei der Verpflichtungsklage prüfst du den Anspruch nach heutiger Sach- und Rechtslage. Ist das Gesetz nach dem Antrag verschärft worden, hilft der Antragszeitpunkt nicht weiter – es sei denn, Übergangsvorschriften sagen etwas anderes. Also immer nach Übergangsregeln suchen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anfechtung: Blick zurück auf die Behördenentscheidung. Verpflichtung: Blick auf heute. Das letzte Wort hat das materielle Recht."
+        },
+        {
+          "art": "cta",
+          "titel": "Zeitpunkt in drei Fragen",
+          "punkte": [
+            "Welche Klageart?",
+            "Dauerverwaltungsakt oder Drittschutz?",
+            "Stichtag oder Übergangsrecht im Fachgesetz?"
+          ],
+          "icons": [
+            "kalender",
+            "kreislauf",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Antrag gestellt, dann Gesetz verschärft – welcher Tag zählt? Bei der Verpflichtungsklage grundsätzlich die letzte mündliche Verhandlung: Der Anspruch muss jetzt bestehen. Bei der Anfechtungsklage grundsätzlich die letzte Behördenentscheidung, mit Ausnahmen etwa für Dauerverwaltungsakte. Maßgeblich ist am Ende das materielle Recht, auch sein Übergangsrecht. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#verpflichtungsklage",
+        "#anfechtungsklage",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Maßgeblicher Zeitpunkt der Sach- und Rechtslage",
+      "coverText": "Materielles Recht entscheidet",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Ob das Gericht zurück oder auf heute blickt, hängt von der Klageart und dem materiellen Recht ab.",
+        "handlung": "{A} points his pointer at two calendars on a wall, one showing an old date and one showing today, while {B} holds a lantern up to the calendar with today's date.",
+        "hinweisRegie": "Place the note in the free space between the two calendars, slightly tilted toward today's calendar, so the relevant point in time is highlighted without covering the lantern or the pointer.",
+        "alternative": "{B} looks through a telescope that can point backwards or forwards, while {A} turns the dial to the present."
+      },
+      "bildSzene": "old calendar versus today's calendar",
+      "bildSzeneAlt": "telescope turned to the present",
+      "quellen": [
+        "§ 113 VwGO",
+        "materielles Fachrecht",
+        "Themenpool: vwgo-410"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.721Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-505",
+      "slug": "2026-11-19-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Redlich besessen – die Nutzungen bleiben meist bei ihm",
+          "unter": "EBV · §§ 987 ff. BGB",
+          "text": "Der redliche, unverklagte Besitzer muss Nutzungen grundsätzlich nicht herausgeben.",
+          "norm": "§ 993 Abs. 1 BGB",
+          "icon": "haus",
+          "sprecher": "Der redliche Besitzer muss Nutzungen meist nicht herausgeben. Das überrascht, denn die Sache selbst muss er zurückgeben. Die Paragrafen 987 folgende BGB staffeln nach Redlichkeit und Rechtshängigkeit.",
+          "marken": [
+            "Sache ja",
+            "Nutzungen meist nein"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vindikationslage",
+          "text": "Eigentümer gegen Besitzer ohne Recht zum Besitz.",
+          "norm": "§§ 985, 986 BGB",
+          "sprecher": "Schritt eins: die Vindikationslage. Der Anspruchsteller ist Eigentümer, der andere besitzt ohne Recht zum Besitz. Und zwar schon zu der Zeit, als die Nutzungen gezogen wurden.",
+          "marken": [
+            "zur Zeit der Nutzung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verklagt oder bösgläubig",
+          "text": "Gezogene und schuldhaft nicht gezogene Nutzungen.",
+          "norm": "§§ 987, 990 BGB",
+          "sprecher": "Schritt zwei: Ist der Besitzer verklagt oder bösgläubig, haftet er nach den Paragrafen 987 und 990 für die gezogenen Nutzungen und für die, die er schuldhaft nicht gezogen hat.",
+          "marken": [
+            "volle Haftung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Redlich, aber unentgeltlich",
+          "text": "Herausgabe nach Bereicherungsrecht.",
+          "norm": "§ 988 BGB",
+          "sprecher": "Schritt drei: Hat der redliche Besitzer den Besitz unentgeltlich erlangt, gibt er die Nutzungen nach Bereicherungsrecht heraus, Paragraf 988.",
+          "marken": [
+            "unentgeltlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Redlich und entgeltlich",
+          "text": "Nur Übermaßfrüchte – im Übrigen Sperrwirkung.",
+          "norm": "§ 993 Abs. 1 BGB",
+          "sprecher": "Schritt vier: Der redliche, unverklagte und entgeltliche Besitzer gibt nur Übermaßfrüchte heraus. Im Übrigen schuldet er nach Paragraf 993 weder Nutzungen noch Schadensersatz.",
+          "marken": [
+            "Sperrwirkung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Rechtsgrundlos erworben",
+          "text": "Rspr.: § 988 BGB analog. Teile der Lit.: Leistungskondiktion.",
+          "norm": "§ 988 BGB",
+          "sprecher": "Streitig ist der Besitzer, der aufgrund eines unwirksamen Vertrags besitzt. Die Rechtsprechung stellt den rechtsgrundlosen dem unentgeltlichen Erwerb gleich und wendet Paragraf 988 analog an. Teile der Literatur lösen über die Leistungskondiktion.",
+          "marken": [
+            "§ 988 analog?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Verklagt oder bösgläubig haftet, redlich behält",
+          "text": "§§ 987, 990 – § 988 – sonst nur Übermaßfrüchte (§ 993 I).",
+          "norm": "§§ 987–993 BGB",
+          "sprecher": "Merke: Verklagt oder bösgläubig heißt volle Haftung. Unentgeltlich heißt Bereicherungsrecht. Sonst bleiben die Nutzungen beim redlichen Besitzer.",
+          "marken": [
+            "Staffel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Vindikationslage",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir die Staffel für die nächste Sachenrechtsklausur. Und prüf immer zuerst die Vindikationslage.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Redlich besessen – die Nutzungen bleiben meist bei ihm. Das EBV staffelt: Verklagte und bösgläubige Besitzer haften nach §§ 987, 990 BGB, der unentgeltliche redliche Besitzer nach § 988 BGB. Der redliche, unverklagte und entgeltliche Besitzer gibt nur Übermaßfrüchte heraus – im Übrigen sperrt § 993 Abs. 1 BGB. Streitig bleibt der rechtsgrundlose Erwerb. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#ebv",
+        "#987bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "EBV: Wann der Besitzer Nutzungen herausgibt",
+      "titelZeilen": [
+        "Redlich besessen –",
+        "Nutzungen bleiben",
+        "meist bei ihm"
+      ],
+      "coverText": "Sperrwirkung des § 993 BGB",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Wer eine fremde Sache redlich besitzt, muss sie zurückgeben – die Früchte darf er oft behalten.",
+        "handlung": "{A} hands back a fruit tree in a pot to its owner but keeps a small basket of picked apples in his other arm, while {B} points calmly at the basket with his pointer.",
+        "hinweisRegie": "Place the note in the free space beside the basket of apples, slightly tilted toward it, so the fruits that stay with the possessor are marked without covering the tree or {A}'s face.",
+        "alternative": "{B} returns a borrowed cart but keeps the coins it earned in a small pouch, while {A} nods at the pouch."
+      },
+      "bildSzene": "tree returned, apple basket kept",
+      "bildSzeneAlt": "cart returned, earned coins kept",
+      "quellen": [
+        "§§ 985, 986 BGB",
+        "§§ 987–993 BGB",
+        "Themenpool: sachen-505"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "K erklärt den Rechtsstreit für erledigt, B widerspricht. Was liegt prozessual vor?",
+      "optionen": [
+        "Eine Klagerücknahme nach § 269 ZPO",
+        "Ein Fall für einen Kostenbeschluss nach § 91a ZPO",
+        "Eine Klageänderung in einen Feststellungsantrag"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Auflösung",
+      "titel": "Eine Klageänderung: K will jetzt die Erledigung festgestellt haben",
+      "text": "Einseitig erklärt, stellt K den Antrag um: Festzustellen ist, dass die Klage zulässig und begründet war und durch ein Ereignis nach Rechtshängigkeit unzulässig oder unbegründet wurde. Die Umstellung ist nach § 264 Nr. 2 ZPO zulässig. § 91a ZPO gilt nur bei übereinstimmender Erklärung – die kann fingiert werden, wenn B nach Hinweis nicht binnen zwei Wochen widerspricht.",
+      "norm": "§ 264 Nr. 2 ZPO · § 91a Abs. 1 ZPO",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.722Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Eine Klagerücknahme nach § 269 ZPO",
+        "Ein Fall für einen Kostenbeschluss nach § 91a ZPO",
+        "Eine Klageänderung in einen Feststellungsantrag"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-008",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 313 BGB: Erst anpassen, dann auflösen",
+      "text": "Ist die Geschäftsgrundlage gestört, führt § 313 BGB zuerst zur Vertragsanpassung. Rücktritt oder Kündigung kommen nur in Betracht, wenn Anpassung nicht möglich oder einem Teil nicht zumutbar ist (§ 313 Abs. 3). Abgrenzung: Irrt nur eine Seite über eine verkehrswesentliche Eigenschaft, gilt § 119 Abs. 2 BGB; bei gemeinsamem Irrtum wenden viele § 313 Abs. 2 BGB an.",
+      "norm": "§ 313 BGB · § 119 Abs. 2 BGB",
+      "quellen": [
+        "§ 313 BGB",
+        "§ 119 Abs. 2 BGB",
+        "Themenpool: bgbat-008"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-068",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Täter tötet ohne Mordmerkmal, Anstifter S aus Habgier: Anstiftung zum Mord?",
+      "norm": "§§ 211, 212, 26, 28 StGB",
+      "optionen": [
+        "Rspr.: Nein – Anstiftung zum Totschlag; der Haupttat fehlt das Mordmerkmal.",
+        "Lit.: Ja – über § 28 II StGB wird S nach seinem eigenen Merkmal bestraft."
+      ],
+      "text": "Hier kehrt sich das Bild um: Die Literatur kommt zur schärferen Strafe. Die Rspr. wendet § 28 Abs. 2 nicht an, weil Mordmerkmale für sie strafbegründend sind. Klausur: erst den Täter, dann den Anstifter prüfen und den Streit nur entscheiden, wenn die Ergebnisse auseinanderfallen.",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 26 StGB",
+        "§ 28 StGB",
+        "Themenpool: strafbt-068"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-198",
+      "ueberzeile": "Merksatz Mietrecht",
+      "titel": "Unrenoviert übergeben: Klausel unwirksam",
+      "text": "Wohnung unrenoviert übergeben, kein angemessener Ausgleich: Dann ist die formularmäßige Abwälzung der Schönheitsreparaturen nach dem BGH unwirksam (§ 307 BGB). Die Pflicht bleibt beim Vermieter.",
+      "norm": "§ 307 BGB · § 535 Abs. 1 S. 2 BGB",
+      "quellen": [
+        "§ 307 BGB",
+        "§ 535 BGB",
+        "Themenpool: schuldbt-198"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-324",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Bedingtes Einverständnis: Gewahrsamsbruch trotz Zustimmung",
+      "text": "Das Einverständnis des Gewahrsamsinhabers schließt den Bruch aus. Es kann aber an Bedingungen geknüpft sein: Der Automatenbetreiber ist nur mit dem Gewahrsamswechsel bei ordnungsgemäßer Bedienung einverstanden. Wer Falschgeld einwirft, bricht fremden Gewahrsam. Anders bei der Diebesfalle: Dort liegt ein Einverständnis vor – es bleibt beim Versuch.",
+      "norm": "§ 242 Abs. 1 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "Themenpool: strafbt-324"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:48:40.722Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

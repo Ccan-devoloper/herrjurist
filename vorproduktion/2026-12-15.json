@@ -1,0 +1,852 @@
+{
+  "datum": "2026-12-15",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "delikt-241",
+        "themaTitel": "Was ist ein Schutzgesetz im Sinne des § 823 Abs. 2 BGB?",
+        "fach": "delikt",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafbt-744",
+        "themaTitel": "Fahrlässige Tötung und Körperverletzung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-601",
+        "themaTitel": "Bundesregierung und Richtlinienkompetenz",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "stpo-777"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "stpo-777"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "assessoroer-855"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "zahl",
+        "themaId": "revision-876"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:53",
+        "art": "streitstand",
+        "themaId": "assessorz-812"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "merksatz",
+        "themaId": "bgbat-121"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "delikt-241",
+      "poolTitel": "Was ist ein Schutzgesetz im Sinne des § 823 Abs. 2 BGB?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafbt-744",
+      "poolTitel": "Fahrlässige Tötung und Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 222, 229 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-601",
+      "poolTitel": "Bundesregierung und Richtlinienkompetenz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 65 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2026-11-27"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-777",
+      "poolTitel": "Untersuchungshaft: Haftgründe",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 112 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-777",
+      "poolTitel": "Untersuchungshaft: Haftgründe",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 112 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessoroer-855",
+      "poolTitel": "Wo steht im zweiten Examen noch Gutachtenstil?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-07"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "revision-876",
+      "poolTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 344 Abs. 2 Satz 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessorz-812",
+      "poolTitel": "Wie baut man die Hilfsaufrechnung im Urteil auf?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-15"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "bgbat-121",
+      "poolTitel": "Was gilt beim Handeln unter fremdem Namen?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 164 BGB",
+        "§ 177 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "delikt",
+      "klausur": 1,
+      "fachLabel": "Deliktsrecht",
+      "themaId": "delikt-241",
+      "slug": "2026-12-15-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schutzgesetz heißt nicht: irgendeine verletzte Norm",
+          "titelZeilen": [
+            "Schutzgesetz",
+            "heißt nicht: irgend-",
+            "eine verletzte Norm"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Individualschutz entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "§ 823 Abs. 2 BGB verweist auf ein Gesetz, das den Schutz eines anderen bezweckt. Gesetz ist jede Rechtsnorm (Art. 2 EGBGB) – auch Strafnormen, Verordnungen oder Satzungen. Aber nicht jede verletzte Norm begründet einen Schadensersatzanspruch."
+        },
+        {
+          "art": "text",
+          "titel": "Was unstreitig gilt",
+          "punkte": [
+            "Die Norm muss zumindest auch den Einzelnen schützen – nicht nur die Allgemeinheit.",
+            "Der Geschädigte gehört zum geschützten Personenkreis.",
+            "Der Schaden liegt im geschützten Interesse und beruht auf der Gefahr, vor der die Norm schützt.",
+            "Anerkannte Beispiele: § 263 StGB, § 858 BGB."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Reicht der Schutzzweck allein?",
+          "links": {
+            "titel": "Rspr. (BGH)",
+            "punkte": [
+              "Individualschutz ist nötig, aber nicht allein entscheidend.",
+              "Der Anspruch muss im Haftungssystem insgesamt tragbar erscheinen."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Das Zusatzkriterium sei unbestimmt.",
+              "Maßgeblich sei die Auslegung des Normzwecks selbst."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Meist laufen beide Wege zusammen: Wer den Normzweck sauber auslegt, fragt ohnehin, ob ein Einzelanspruch ins System passt – vor allem bei reinen Vermögensschäden, die § 823 Abs. 1 BGB nicht schützt. Danach Verstoß und Verschulden: Nach § 823 Abs. 2 S. 2 BGB ist Verschulden immer nötig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schutzgesetz ist eine Norm, die zumindest auch den Einzelnen schützen soll. Dann: geschützter Personenkreis, geschütztes Interesse, Verschulden."
+        },
+        {
+          "art": "cta",
+          "titel": "Schutzgesetz in vier Fragen",
+          "punkte": [
+            "Schützt die Norm auch Einzelne?",
+            "Gehört der Geschädigte dazu?",
+            "Passt der Schaden zum Schutzzweck?",
+            "Verschulden nach § 823 Abs. 2 S. 2?"
+          ],
+          "icons": [
+            "paragraf",
+            "person",
+            "zielscheibe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Schutzgesetz heißt nicht: irgendeine verletzte Norm. § 823 Abs. 2 BGB greift nur bei Normen, die zumindest auch den Einzelnen schützen sollen – und nur, wenn Geschädigter und Schaden in ihren Schutzbereich fallen. Der BGH fragt zusätzlich, ob ein individueller Anspruch im haftungsrechtlichen Gesamtsystem tragbar erscheint; Teile der Literatur halten das für unbestimmt. Speichern für die nächste Deliktsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#deliktsrecht",
+        "#823bgb",
+        "#schutzgesetz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 823 Abs. 2 BGB: Was ist ein Schutzgesetz?",
+      "coverText": "Individualschutz entscheidet",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Nur Normen, die gerade auch den Einzelnen schützen sollen, tragen einen Schadensersatzanspruch nach § 823 Abs. 2 BGB.",
+        "handlung": "{A} nervously holds a broken fence panel in front of a crowd of rules, while {B} uses his pointer to single out the one small fence that was built to protect a specific garden.",
+        "hinweisRegie": "Place the note in the free space next to the small protective fence around the garden, slightly tilted toward it, without covering {B}'s pointer or {A}'s broken panel.",
+        "alternative": "{B} sorts several umbrellas; only one is shaped to cover a single person, and {A} checks whether he was standing under it."
+      },
+      "bildSzene": "pointer singles out protective garden fence",
+      "bildSzeneAlt": "one umbrella shaped for one person",
+      "quellen": [
+        "§ 823 Abs. 2 BGB",
+        "Art. 2 EGBGB",
+        "§ 263 StGB",
+        "§ 858 BGB",
+        "Themenpool: delikt-241"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:31.999Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-744",
+      "slug": "2026-12-15-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zu knapp überholt, Radfahrer tot – und mit Abstand?",
+          "titelZeilen": [
+            "Zu knapp überholt,",
+            "Radfahrer tot –",
+            "und mit Abstand?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Pflichtwidrigkeitszusammenhang",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A überholt den stark betrunkenen Radfahrer R mit viel zu geringem Seitenabstand. R stürzt, wird überrollt und stirbt. Laut Gutachten ist nicht auszuschließen, dass R wegen seiner Trunkenheit auch bei ausreichendem Abstand gestürzt und tödlich verletzt worden wäre. Strafbarkeit des A nach § 222 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Erfolg und Kausalität",
+              "text": "R ist tot. Ohne das Überholen wäre er nicht so gestorben – Kausalität nach der Äquivalenztheorie liegt vor."
+            },
+            {
+              "titel": "Objektive Sorgfaltspflichtverletzung",
+              "text": "Der zu geringe Seitenabstand verletzt die im Verkehr erforderliche Sorgfalt; die Verkehrsregeln konkretisieren sie."
+            },
+            {
+              "titel": "Objektive Vorhersehbarkeit",
+              "text": "Dass ein knapp überholter Radfahrer stürzt und überrollt wird, liegt nicht außerhalb aller Lebenserfahrung."
+            },
+            {
+              "titel": "Pflichtwidrigkeitszusammenhang",
+              "text": "Wäre der Tod auch bei pflichtgemäßem Überholen eingetreten? Das lässt sich hier nicht ausschließen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Nach der Rspr. fehlt die Zurechnung, wenn nicht feststeht, dass der Erfolg bei pflichtgemäßem Verhalten vermieden worden wäre – in dubio pro reo. A ist nicht nach § 222 StGB strafbar. Die Risikoerhöhungslehre (Teile der Lit.) rechnet zu, weil A das Todesrisiko gesteigert hat."
+        },
+        {
+          "art": "text",
+          "titel": "Und § 229 StGB?",
+          "punkte": [
+            "Gleiches Schema – der Erfolg ist eine Körperverletzung.",
+            "Verfolgung nur auf Antrag oder bei besonderem öffentlichem Interesse (§ 230 StGB).",
+            "Subjektiv: individuelle Sorgfaltspflichtverletzung und Vorhersehbarkeit in der Schuld."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Fahrlässigkeit: Pflichtverletzung, Vorhersehbarkeit, Pflichtwidrigkeitszusammenhang. Wäre es auch pflichtgemäß passiert, rechnet die Rspr. nicht zu."
+        },
+        {
+          "art": "cta",
+          "titel": "Fahrlässigkeit in vier Zügen",
+          "punkte": [
+            "Erfolg und Kausalität",
+            "Sorgfaltspflicht verletzt?",
+            "Erfolg vorhersehbar?",
+            "Auch pflichtgemäß eingetreten?"
+          ],
+          "icons": [
+            "kreuz",
+            "auto",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Zu knapp überholt, der Radfahrer ist tot – aber wäre er auch bei ausreichendem Abstand gestorben? Genau hier entscheidet der Pflichtwidrigkeitszusammenhang über § 222 StGB. Nach der Rspr. wird der Tod nicht zugerechnet, wenn nicht feststeht, dass pflichtgemäßes Verhalten ihn verhindert hätte. Die Risikoerhöhungslehre sieht das anders. Speichern für die nächste Fahrlässigkeitsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#fahrlässigkeit",
+        "#222stgb",
+        "#strafrechtbt",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 222 StGB: Pflichtwidrigkeitszusammenhang",
+      "coverText": "Pflichtwidrigkeitszusammenhang",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Auch bei einer Pflichtverletzung wird der Erfolg nicht zugerechnet, wenn er bei korrektem Verhalten womöglich genauso eingetreten wäre.",
+        "handlung": "{B} measures the gap between a passing cart and a wobbling cyclist-like creature with outstretched arms, while {A} curiously holds up a second, wider gap marker and looks doubtful.",
+        "hinweisRegie": "Place the note in the open space between the two gap markers, slightly tilted toward the wider one, so the comparison with correct behaviour stands out without covering the wobbling figure.",
+        "alternative": "{A} replays a fall twice on a small stage, once with a narrow and once with a wide path, while {B} compares both outcomes."
+      },
+      "bildSzene": "measuring passing gap beside wobbling rider",
+      "bildSzeneAlt": "fall replayed with narrow and wide path",
+      "quellen": [
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "§ 230 StGB",
+        "Themenpool: strafbt-744"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.000Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-601",
+      "slug": "2026-12-15-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ministerstreit? Das Kabinett entscheidet",
+          "unter": "Bundesregierung · Art. 65 GG",
+          "text": "Art. 65 GG verteilt die Macht in der Regierung auf drei Prinzipien.",
+          "norm": "Art. 65 S. 3 GG",
+          "icon": "gebaeude",
+          "sprecher": "Zwei Minister streiten? Dann entscheidet nicht der Kanzler allein. Artikel 65 Grundgesetz verteilt die Macht in der Bundesregierung auf drei Prinzipien.",
+          "marken": [
+            "nicht der Kanzler allein"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Kanzlerprinzip",
+          "text": "Der Kanzler bestimmt die Richtlinien der Politik und trägt dafür die Verantwortung.",
+          "norm": "Art. 65 S. 1 GG",
+          "sprecher": "Prinzip eins: das Kanzlerprinzip. Der Bundeskanzler bestimmt die Richtlinien der Politik und trägt dafür die Verantwortung. Richtlinien sind politische Leitentscheidungen, in der Regel keine Detailsteuerung eines Ressorts.",
+          "marken": [
+            "Richtlinien"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ressortprinzip",
+          "text": "Jeder Minister leitet seinen Geschäftsbereich selbständig und eigenverantwortlich.",
+          "norm": "Art. 65 S. 2 GG",
+          "sprecher": "Prinzip zwei: das Ressortprinzip. Innerhalb dieser Richtlinien leitet jeder Minister seinen Geschäftsbereich selbständig und unter eigener Verantwortung. In die laufende Arbeit des Ressorts regiert der Kanzler nicht einfach hinein.",
+          "marken": [
+            "eigenes Ressort"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kollegialprinzip",
+          "text": "Bei Meinungsverschiedenheiten zwischen Ministern entscheidet die Bundesregierung.",
+          "norm": "Art. 65 S. 3 GG",
+          "sprecher": "Prinzip drei: das Kollegialprinzip. Über Meinungsverschiedenheiten zwischen den Bundesministern entscheidet die Bundesregierung, also das Kabinett als Kollegium.",
+          "marken": [
+            "Kabinett entscheidet"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Hebel des Kanzlers",
+          "text": "Er kann dem Bundespräsidenten die Entlassung eines Ministers vorschlagen.",
+          "norm": "Art. 64 Abs. 1 GG",
+          "sprecher": "Ganz machtlos ist der Kanzler trotzdem nicht. Er kann dem Bundespräsidenten vorschlagen, einen Minister zu entlassen, Artikel 64 Absatz 1. Und er kann eine Streitfrage durch eine Richtlinie grundsätzlich vorprägen.",
+          "marken": [
+            "Entlassungsvorschlag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Richtung, Ressort, Kollegium",
+          "text": "Kanzler gibt die Richtung vor, Minister führen ihr Ressort, Streit klärt das Kabinett.",
+          "norm": "Art. 65 GG",
+          "sprecher": "Merke: Der Kanzler gibt die Richtung vor, die Minister führen ihr Ressort, und Streit zwischen ihnen klärt das Kabinett.",
+          "marken": [
+            "drei Prinzipien"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Welcher Satz von Art. 65 GG ist betroffen?",
+          "text": "Speichern für die nächste Staatsorganisationsklausur.",
+          "sprecher": "Speicher dir die drei Prinzipien für die nächste Klausur im Staatsorganisationsrecht. Und frag immer zuerst: Welcher Satz von Artikel 65 ist gerade betroffen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Zwei Minister streiten – dann entscheidet nicht der Kanzler allein, sondern die Bundesregierung als Kollegium (Art. 65 S. 3 GG). Art. 65 GG kennt drei Prinzipien: Kanzlerprinzip (Richtlinienkompetenz), Ressortprinzip (eigenverantwortliche Leitung des Geschäftsbereichs) und Kollegialprinzip. Der Kanzler hat trotzdem Hebel: Richtlinien und den Vorschlag zur Entlassung nach Art. 64 Abs. 1 GG. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#65gg",
+        "#bundesregierung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 65 GG: Kanzler, Ressort, Kollegium",
+      "titelZeilen": [
+        "Ministerstreit?",
+        "Das Kabinett",
+        "entscheidet"
+      ],
+      "coverText": "Drei Prinzipien in Art. 65 GG",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Den Streit zwischen zwei Ministern entscheidet das Kabinett, nicht der Kanzler allein.",
+        "handlung": "{B} steps between two figures tugging at the same map, while {A} gestures toward a round table where several empty chairs wait for a joint decision.",
+        "hinweisRegie": "Place the note in the free space above the round table, slightly tilted toward it, so the collective decision is linked to the note without covering the tugged map.",
+        "alternative": "{A} holds a compass that sets the general direction while {B} watches several small boats steer their own routes within that heading."
+      },
+      "bildSzene": "two tugging a map, round table waits",
+      "bildSzeneAlt": "compass sets heading for several boats",
+      "quellen": [
+        "Art. 64 Abs. 1 GG",
+        "Art. 65 GG",
+        "Themenpool: staat-601"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "frage-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.001Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-777",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Dringender Tatverdacht wegen Totschlags, Fluchtgefahr nicht feststellbar: Ist U-Haft möglich?",
+      "optionen": [
+        "Nein – ohne Haftgrund nach § 112 Abs. 2 StPO nie",
+        "Ja – bei jedem Verbrechen genügt der dringende Tatverdacht",
+        "Ja – nach § 112 Abs. 3 StPO, aber verfassungskonform eng"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 112 StPO",
+        "Themenpool: stpo-777"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.001Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-777",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – § 112 Abs. 3 StPO, aber nur verfassungskonform eng",
+      "text": "Grundsätzlich braucht U-Haft dringenden Tatverdacht, einen Haftgrund und Verhältnismäßigkeit (§ 112 Abs. 1, 2 StPO). Bei den Katalogtaten des § 112 Abs. 3 StPO, etwa Mord und Totschlag, darf sie auch ohne Haftgrund nach Abs. 2 angeordnet werden. Nach dem BVerfG aber nur, wenn Umstände die Gefahr begründen, dass sonst Aufklärung oder Ahndung der Tat gefährdet wären.",
+      "norm": "§ 112 Abs. 3 StPO",
+      "quellen": [
+        "§ 112 StPO",
+        "Themenpool: stpo-777"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.001Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – ohne Haftgrund nach § 112 Abs. 2 StPO nie",
+        "Ja – bei jedem Verbrechen genügt der dringende Tatverdacht",
+        "Ja – nach § 112 Abs. 3 StPO, aber verfassungskonform eng"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-855",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 117 Abs. 2 Nr. 5 VwGO: Entscheidungsgründe im Urteilsstil – das Hilfsgutachten nicht",
+      "text": "Im Urteil begründest du im Urteilsstil: erst das Ergebnis, dann die Gründe. Gutachtenstil bleibt dort, wo du noch prüfst statt entscheidest – im Hilfsgutachten zu offen gebliebenen Fragen und im Gutachten- oder Vermerkteil von Anwalts- und Behördenklausuren. Was der Bearbeitervermerk verlangt, geht immer vor.",
+      "norm": "§ 117 Abs. 2 Nr. 5 VwGO",
+      "quellen": [
+        "§ 117 VwGO",
+        "Themenpool: assessoroer-855"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.001Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-876",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Verfahrensrüge nach § 344 Abs. 2 S. 2 StPO: Was muss drinstehen?",
+      "text": "Maßstab: Das Revisionsgericht muss allein anhand der Begründung prüfen können, ob ein Verfahrensfehler vorliegt, wenn die behaupteten Tatsachen zutreffen.",
+      "punkte": [
+        "Die den Mangel enthaltenden Tatsachen – bestimmt behauptet",
+        "Anträge und Beschlüsse im Wortlaut",
+        "Keine bloßen Verweise auf Akte oder Protokoll",
+        "Auch Umstände, die den Fehler ausräumen könnten"
+      ],
+      "quellen": [
+        "§ 344 Abs. 2 S. 2 StPO",
+        "Themenpool: revision-876"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.001Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-812",
+      "ueberzeile": "Streitstand ZPO",
+      "titel": "Hilfsweise aufgerechnet und mit derselben Forderung parallel geklagt: Ist die zweite Klage unzulässig?",
+      "norm": "§ 261 Abs. 3 Nr. 1 ZPO · § 322 Abs. 2 ZPO",
+      "optionen": [
+        "BGH/h.M.: Nein – die Prozessaufrechnung macht die Gegenforderung nicht rechtshängig.",
+        "Andere Ansicht: Ja – analog § 261 Abs. 3 Nr. 1 ZPO, weil sonst widersprechende Entscheidungen drohen."
+      ],
+      "text": "Folge der h.M.: Die zweite Klage ist zulässig; das Gericht kann aber nach § 148 ZPO aussetzen. Im Urteil beachten: Über die Gegenforderung wird bis zur Höhe des Aufrechnungsbetrags rechtskräftig entschieden (§ 322 Abs. 2 ZPO).",
+      "quellen": [
+        "§ 148 ZPO",
+        "§ 261 ZPO",
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "Themenpool: assessorz-812"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.001Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-121",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Identität getäuscht: Vertretungsrecht analog",
+      "text": "Ist dem Partner der Name gleich (Barkauf), handelt der Täuschende im eigenen Namen. Will er gerade mit dem Namensträger abschließen, gelten §§ 164 ff. BGB analog – mit §§ 177, 179 BGB.",
+      "norm": "§§ 164, 177, 179 BGB analog",
+      "quellen": [
+        "§ 164 BGB",
+        "§ 177 BGB",
+        "§ 179 BGB",
+        "Themenpool: bgbat-121"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:32.001Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

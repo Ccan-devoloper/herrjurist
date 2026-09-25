@@ -1,0 +1,847 @@
+{
+  "datum": "2026-10-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "anklage-866",
+        "themaTitel": "Welche Verfahrenshindernisse prüft man von Amts wegen?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-091",
+        "themaTitel": "Wie wirken Grundrechte zwischen Privaten?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "ipr-891",
+        "themaTitel": "Welches Recht gilt für eine unerlaubte Handlung im Ausland?",
+        "fach": "ipr",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:04",
+        "art": "frage",
+        "themaId": "verwalt-385"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:04",
+        "art": "antwort",
+        "themaId": "verwalt-385"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "famerb-259"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "merksatz",
+        "themaId": "schuldbt-478"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "begriff",
+        "themaId": "delikt-247"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:13",
+        "art": "fehler",
+        "themaId": "assessoroer-850"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "anklage-866",
+      "poolTitel": "Welche Verfahrenshindernisse prüft man von Amts wegen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 206a StPO",
+        "§ 260 Abs. 3 StPO",
+        "§ 78 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-091",
+      "poolTitel": "Wie wirken Grundrechte zwischen Privaten?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 Abs. 3 GG",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "ipr-891",
+      "poolTitel": "Welches Recht gilt für eine unerlaubte Handlung im Ausland?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 Rom II-VO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-385",
+      "poolTitel": "Wann liegt ein unbestimmter Rechtsbegriff mit Beurteilungsspielraum vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Fachrecht; Rechtsprechung"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-385",
+      "poolTitel": "Wann liegt ein unbestimmter Rechtsbegriff mit Beurteilungsspielraum vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Fachrecht; Rechtsprechung"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-259",
+      "poolTitel": "Was gilt für ein gemeinschaftliches Testament?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 2265 BGB",
+        "§ 2270 BGB",
+        "§ 2271 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "schuldbt-478",
+      "poolTitel": "Kündigungsbutton und Online-Verträge",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 312k BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "delikt-247",
+      "poolTitel": "Wann ist ein Unfall ein unabwendbares Ereignis?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 17 Abs. 3 StVG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessoroer-850",
+      "poolTitel": "Wie läuft die Verwaltungsvollstreckung in der Behördenklausur?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwVG; Landesrecht"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-866",
+      "slug": "2026-10-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kein Strafantrag – Körperverletzung trotzdem anklagbar",
+          "titelZeilen": [
+            "Kein Strafantrag –",
+            "Körperverletzung",
+            "trotzdem anklagbar"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 230 StGB: öffentliches Interesse",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A dringt gegen den Willen des B in dessen umzäunten Garten ein und schlägt ihm dort mit der Faust ins Gesicht. B hat eine blutende Lippe, stellt aber keinen Strafantrag. Die Akte liegt bei dir. Was darf die Staatsanwaltschaft anklagen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung: Hindernisse von Amts wegen",
+          "schritte": [
+            {
+              "titel": "Strafantrag",
+              "text": "Absolut (§ 123 Abs. 2 StGB): ohne Antrag keine Verfolgung. Relativ (§ 230 Abs. 1 StGB): besonderes öffentliches Interesse genügt."
+            },
+            {
+              "titel": "Antragsfrist",
+              "text": "Drei Monate ab Kenntnis von Tat und Täter (§ 77b StGB)."
+            },
+            {
+              "titel": "Verjährung",
+              "text": "Frist nach dem Höchstmaß der Strafe (§ 78 Abs. 3 StGB): bei § 223 StGB fünf Jahre, bei § 123 StGB drei Jahre."
+            },
+            {
+              "titel": "Weitere Hindernisse",
+              "text": "Etwa Strafklageverbrauch, anderweitige Rechtshängigkeit oder Tod des Beschuldigten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "punkte": [
+            "§ 123 StGB: absolutes Antragsdelikt, kein Antrag – nicht verfolgbar.",
+            "§ 223 StGB: relatives Antragsdelikt – die StA kann das besondere öffentliche Interesse bejahen.",
+            "Dann Anklage wegen § 223 StGB; das besondere öffentliche Interesse in der Anklage ausdrücklich erklären."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo das Hindernis wirkt",
+          "punkte": [
+            "Im Ermittlungsverfahren: Einstellung nach § 170 Abs. 2 StPO.",
+            "Nach Anklage, außerhalb der Hauptverhandlung: Einstellung durch Beschluss (§ 206a StPO).",
+            "In der Hauptverhandlung: Einstellungsurteil (§ 260 Abs. 3 StPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verfahrenshindernisse prüfst du von Amts wegen und vor der Sache. Beim relativen Antragsdelikt kann das besondere öffentliche Interesse den Antrag ersetzen."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Anklage prüfen",
+          "punkte": [
+            "Antrag nötig – absolut oder relativ?",
+            "Antragsfrist nach § 77b StGB",
+            "Verjährung nach § 78 StGB",
+            "Richtige Einstellungsform"
+          ],
+          "icons": [
+            "klemmbrett",
+            "kalender",
+            "uhr",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Kein Strafantrag – und trotzdem kann die Körperverletzung angeklagt werden. § 223 StGB ist ein relatives Antragsdelikt: Bejaht die StA das besondere öffentliche Interesse, wird von Amts wegen verfolgt (§ 230 Abs. 1 StGB). Beim Hausfriedensbruch geht das nicht, § 123 Abs. 2 StGB ist absolut. Je nach Verfahrensstadium stellst du nach § 170 Abs. 2, § 206a oder § 260 Abs. 3 StPO ein. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#strafantrag",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfahrenshindernisse: der Mini-Fall",
+      "coverText": "§ 230 StGB: öffentliches Interesse",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Fehlt der Strafantrag, ist nicht jede Tat gesperrt – beim relativen Antragsdelikt öffnet das öffentliche Interesse die Tür.",
+        "handlung": "{A} stands in front of two locked doors and nervously checks an empty request slot, while {B} hovers beside him and opens only one of the doors with a special official key.",
+        "hinweisRegie": "Place the note in the free space next to the opened door and the official key, slightly tilted toward the key, without covering the second locked door or {A}'s face.",
+        "alternative": "{B} sorts two case folders at a checkpoint, stamping one through with a special seal while the other stays behind a closed barrier, and {A} watches."
+      },
+      "bildSzene": "two locked doors, one opened by key",
+      "bildSzeneAlt": "two folders, one stamped through checkpoint",
+      "quellen": [
+        "§ 77b StGB",
+        "§ 78 StGB",
+        "§ 123 StGB",
+        "§ 223 StGB",
+        "§ 230 StGB",
+        "§ 170 Abs. 2 StPO",
+        "§ 206a StPO",
+        "§ 260 Abs. 3 StPO",
+        "Themenpool: anklage-866"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-kennen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.389Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-091",
+      "slug": "2026-10-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Stadionverbot vom Verein: Bindet ihn Art. 3 GG?",
+          "titelZeilen": [
+            "Stadionverbot vom",
+            "Verein: Bindet ihn",
+            "Art. 3 GG?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Mittelbar über das Zivilrecht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Fußballverein V verhängt gegen Fan F ein bundesweites Stadionverbot, weil gegen F wegen einer Schlägerei ermittelt wurde. Das Verfahren wurde eingestellt. F meint, das verletze seinen Anspruch auf Gleichbehandlung. Gilt Art. 3 Abs. 1 GG gegenüber einem privaten Verein?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Keine unmittelbare Bindung",
+              "text": "Grundrechte binden nach Art. 1 Abs. 3 GG die staatliche Gewalt, nicht Private."
+            },
+            {
+              "titel": "Mittelbare Drittwirkung",
+              "text": "Sie wirken als objektive Wertentscheidungen über das Zivilrecht, vor allem über Generalklauseln und unbestimmte Begriffe."
+            },
+            {
+              "titel": "Abwägung im Einzelfall",
+              "text": "Hier: Hausrecht des Vereins (§§ 903, 1004 BGB, Art. 14 GG) gegen den Gleichheitssatz zugunsten des F."
+            },
+            {
+              "titel": "Besondere Konstellation",
+              "text": "Bei großen, für die Teilhabe am gesellschaftlichen Leben wichtigen Veranstaltungen verlangt das BVerfG einen sachlichen Grund und Anhörung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Der Verein ist privat – Grundrechte spielen keine Rolle.“ Oder umgekehrt: Art. 3 GG prüfen, als wäre der Verein der Staat. Beides trifft nicht. Grundrechte wirken zwischen Privaten mittelbar. Ausnahme mit unmittelbarer Wirkung: Art. 9 Abs. 3 S. 2 GG."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Art. 3 Abs. 1 GG bindet V nicht unmittelbar, wirkt aber über das zivilrechtliche Hausrecht. Das bundesweite Stadionverbot braucht einen sachlichen Grund – etwa auf Tatsachen gestützte Besorgnis künftiger Störungen –, und F ist vorher anzuhören. Eine Verurteilung verlangt das BVerfG dafür nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Private sind nicht grundrechtsgebunden – aber Zivilgerichte legen das Zivilrecht im Licht der Grundrechte aus. So wirken sie mittelbar."
+        },
+        {
+          "art": "cta",
+          "titel": "Drittwirkung in vier Zügen",
+          "punkte": [
+            "Wer ist nach Art. 1 III GG gebunden?",
+            "Welche zivilrechtliche Norm?",
+            "Grundrechte beider Seiten abwägen",
+            "Ausnahme: Art. 9 III 2 GG"
+          ],
+          "icons": [
+            "gebaeude",
+            "paragraf",
+            "waage",
+            "handschlag"
+          ]
+        }
+      ],
+      "caption": "Stadionverbot vom Verein – bindet ihn Art. 3 GG? Nicht unmittelbar: Grundrechte binden nach Art. 1 Abs. 3 GG die staatliche Gewalt. Sie wirken aber mittelbar über das Zivilrecht, hier über das Hausrecht. Für große, gesellschaftlich wichtige Veranstaltungen verlangt das BVerfG deshalb einen sachlichen Grund und eine Anhörung vor dem Ausschluss. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#drittwirkung",
+        "#art3gg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Drittwirkung: das Stadionverbot",
+      "coverText": "Mittelbar über das Zivilrecht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Grundrechte binden Private nicht direkt, wirken aber über das Zivilrecht auch zwischen ihnen.",
+        "handlung": "{A} stands at a large arena gate that has just been closed in front of her, while {B} holds up a lens through which the gate's plain rulebook suddenly shows a glowing fairness seal.",
+        "hinweisRegie": "Place the note in the free space between the lens and the closed gate, slightly tilted toward the glowing seal, without covering {A}'s face or the gate handle.",
+        "alternative": "{B} pours light from a lantern into a pipe that ends at a private club door, while {A} waits in front of that door."
+      },
+      "bildSzene": "arena gate closed, lens shows seal",
+      "bildSzeneAlt": "light flows through pipe to club door",
+      "quellen": [
+        "Art. 1 Abs. 3 GG",
+        "Art. 3 Abs. 1 GG",
+        "Art. 9 Abs. 3 S. 2 GG",
+        "§§ 903, 1004 BGB",
+        "BVerfG (Stadionverbot)",
+        "Themenpool: grundr-091"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.389Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "ipr",
+      "klausur": 1,
+      "fachLabel": "Internationales Privatrecht",
+      "themaId": "ipr-891",
+      "slug": "2026-10-23-b3",
+      "titelZeilen": [
+        "Beide aus München,",
+        "Unfall in Tirol:",
+        "deutsches Recht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Beide aus München, Unfall in Tirol: deutsches Recht",
+          "unter": "Unerlaubte Handlung · Art. 4 Rom II-VO",
+          "text": "Gemeinsamer gewöhnlicher Aufenthalt geht dem Unfallort vor.",
+          "norm": "Art. 4 Abs. 2 Rom II-VO",
+          "icon": "globus",
+          "sprecher": "Unfall in Tirol – und trotzdem gilt deutsches Recht. Zwei Skifahrer aus München stoßen auf der Piste zusammen. Welches Recht gilt für den Schadensersatz? Die Antwort steht in Artikel 4 der Rom-II-Verordnung.",
+          "marken": [
+            "nicht der Unfallort"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grundregel: Erfolgsort",
+          "text": "Recht des Staates, in dem der Schaden eintritt.",
+          "norm": "Art. 4 Abs. 1 Rom II-VO",
+          "sprecher": "Schritt eins, die Grundregel in Absatz 1: Anzuwenden ist das Recht des Staates, in dem der Schaden eintritt. Wo gehandelt wurde oder wo später Folgeschäden entstehen, spielt dafür keine Rolle.",
+          "marken": [
+            "Schadensort"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vorrang: gemeinsamer Aufenthalt",
+          "text": "Beide im selben Staat gewöhnlich aufhältig? Dann dessen Recht.",
+          "norm": "Art. 4 Abs. 2 Rom II-VO",
+          "sprecher": "Schritt zwei, Absatz 2 geht vor: Haben Schädiger und Geschädigter ihren gewöhnlichen Aufenthalt im selben Staat, gilt dessen Recht. Entscheidend ist der Aufenthalt, nicht die Staatsangehörigkeit.",
+          "marken": [
+            "Aufenthalt, nicht Pass"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausweichklausel",
+          "text": "Offensichtlich engere Verbindung, etwa über einen Vertrag.",
+          "norm": "Art. 4 Abs. 3 Rom II-VO",
+          "sprecher": "Schritt drei, Absatz 3: Ist die Tat offensichtlich enger mit einem anderen Staat verbunden, etwa über einen Vertrag zwischen den Beteiligten, gilt dessen Recht.",
+          "marken": [
+            "engere Verbindung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Vorher: Rechtswahl",
+          "text": "Art. 14 Rom II-VO; Verhaltensregeln des Unfallorts über Art. 17.",
+          "norm": "Art. 14, 17 Rom II-VO",
+          "sprecher": "Vorher prüfst du noch Artikel 14: Die Parteien können das Recht wählen, grundsätzlich nach dem schädigenden Ereignis. Und die Verhaltensregeln am Unfallort werden nach Artikel 17 berücksichtigt.",
+          "marken": [
+            "Rechtswahl zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Reihenfolge",
+          "text": "Rechtswahl, gemeinsamer Aufenthalt, Erfolgsort, Ausweichklausel.",
+          "norm": "Art. 4 Rom II-VO",
+          "sprecher": "Merke: Rechtswahl, gemeinsamer Aufenthalt, sonst Erfolgsort, dann die Ausweichklausel.",
+          "marken": [
+            "14 → 4 II → 4 I → 4 III"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wo leben die Beteiligten?",
+          "text": "Speichern für die nächste IPR-Klausur.",
+          "sprecher": "Speicher dir die Reihenfolge für die nächste IPR-Klausur. Und frag im Sachverhalt immer zuerst: Wo leben die Beteiligten gewöhnlich?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Unfall in Tirol, beide Beteiligten leben in München – dann gilt deutsches Recht. Nach Art. 4 Abs. 2 Rom II-VO geht der gemeinsame gewöhnliche Aufenthalt der Grundregel des Erfolgsorts (Abs. 1) vor; Abs. 3 enthält eine Ausweichklausel. Noch davor steht eine mögliche Rechtswahl nach Art. 14. Entscheidend ist der Aufenthalt, nicht die Staatsangehörigkeit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#ipr",
+        "#romii",
+        "#deliktsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "IPR: Recht der unerlaubten Handlung",
+      "coverText": "Aufenthalt schlägt Unfallort",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Leben Schädiger und Geschädigter im selben Staat, gilt dessen Recht – auch wenn es anderswo passiert.",
+        "handlung": "{B} and a second figure sit tangled in the snow after a collision on a foreign slope, while {A} points his pointer past the mountain toward the small home town both came from.",
+        "hinweisRegie": "Place the note in the free space between the slope and the distant home town, slightly tilted toward the town, without covering the tangled skiers or {A}'s pointer.",
+        "alternative": "{A} holds two identical house keys from the same town next to a crashed sled in foreign snow, while {B} nods."
+      },
+      "bildSzene": "ski collision, pointer to home town",
+      "bildSzeneAlt": "two identical house keys by sled",
+      "quellen": [
+        "Art. 4 Rom II-VO",
+        "Art. 14 Rom II-VO",
+        "Art. 17 Rom II-VO",
+        "Themenpool: ipr-891"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.391Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-385",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Bei welcher Entscheidung erkennt die Rspr. typischerweise einen Beurteilungsspielraum an?",
+      "optionen": [
+        "Bei der Auslegung von „Zuverlässigkeit“ im Gewerberecht",
+        "Bei jeder Ermessensentscheidung nach § 40 VwVfG",
+        "Bei prüfungsspezifischen Wertungen, etwa einer Klausurnote"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 19 Abs. 4 GG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-385"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.391Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-385",
+      "ueberzeile": "Auflösung",
+      "titel": "Bei prüfungsspezifischen Wertungen",
+      "text": "Unbestimmte Rechtsbegriffe sind grundsätzlich voll gerichtlich überprüfbar (Art. 19 Abs. 4 GG). Einen Beurteilungsspielraum erkennt die Rspr. nur in Fallgruppen an: prüfungsspezifische Wertungen, dienstliche Beurteilungen, weisungsfreie Gremien, bestimmte Prognoseentscheidungen. Die Zuverlässigkeit ist voll überprüfbar; Ermessen betrifft die Rechtsfolge.",
+      "norm": "Art. 19 Abs. 4 GG · § 114 VwGO",
+      "quellen": [
+        "Art. 19 Abs. 4 GG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-385"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.391Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Bei der Auslegung von „Zuverlässigkeit“ im Gewerberecht",
+        "Bei jeder Ermessensentscheidung nach § 40 VwVfG",
+        "Bei prüfungsspezifischen Wertungen, etwa einer Klausurnote"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-259",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 2270 BGB: Wechselbezügliche Verfügungen stehen und fallen zusammen",
+      "text": "Ein gemeinschaftliches Testament können nur Ehegatten errichten (§ 2265 BGB). Wechselbezügliche Verfügungen hängen voneinander ab: Ist eine nichtig oder widerrufen, ist die andere unwirksam (§ 2270 Abs. 1 BGB). Zu Lebzeiten: notarieller Widerruf gegenüber dem anderen (§§ 2271 Abs. 1, 2296 BGB); nach dem ersten Todesfall erlischt das Widerrufsrecht grundsätzlich (§ 2271 Abs. 2).",
+      "norm": "§§ 2265, 2270, 2271 BGB",
+      "quellen": [
+        "§ 2265 BGB",
+        "§ 2270 BGB",
+        "§ 2271 BGB",
+        "§ 2296 BGB",
+        "Themenpool: famerb-259"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.391Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-478",
+      "ueberzeile": "Merksatz Verbraucherrecht",
+      "titel": "Online abgeschlossen? Dann auch online kündbar",
+      "text": "§ 312k BGB: Wer Verbrauchern den Abschluss von Abo-Verträgen über eine Webseite ermöglicht, muss einen Kündigungsbutton samt Bestätigungsseite anbieten. Fehlt er, kann jederzeit fristlos gekündigt werden.",
+      "norm": "§ 312k BGB",
+      "quellen": [
+        "§ 312k BGB",
+        "Themenpool: schuldbt-478"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.391Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-247",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Unabwendbares Ereignis (§ 17 Abs. 3 StVG)",
+      "text": "Unabwendbar ist ein Ereignis, das auch ein „Idealfahrer“ mit äußerster möglicher Sorgfalt nicht hätte vermeiden können (Rspr.). Funktion: Es schließt nach § 17 Abs. 3 StVG die Ausgleichspflicht zwischen den beteiligten Haltern aus. Gegenüber anderen Geschädigten, etwa Fußgängern, entlastet den Halter nur höhere Gewalt (§ 7 Abs. 2 StVG).",
+      "norm": "§ 17 Abs. 3 StVG · § 7 Abs. 2 StVG",
+      "quellen": [
+        "§ 7 StVG",
+        "§ 17 StVG",
+        "Themenpool: delikt-247"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.391Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-850",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Vollstreckung: Muss die Grundverfügung rechtmäßig sein?",
+      "falsch": "Vor dem Zwangsgeld prüfe ich ausführlich, ob die Grundverfügung rechtmäßig ist – sonst darf nicht vollstreckt werden.",
+      "richtigText": "Im gestreckten Verfahren braucht es einen wirksamen und vollziehbaren Grund-VA: unanfechtbar oder sofort vollziehbar (vgl. § 6 Abs. 1 VwVG). Seine Rechtmäßigkeit ist nach h.M. grundsätzlich keine Voraussetzung – Einwände gehören in den Rechtsbehelf gegen den Grund-VA. Details je nach Landesrecht.",
+      "quellen": [
+        "§ 6 VwVG",
+        "Landesverwaltungsvollstreckungsgesetze",
+        "Themenpool: assessoroer-850"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:31.391Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

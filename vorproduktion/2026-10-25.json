@@ -1,0 +1,884 @@
+{
+  "datum": "2026-10-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "revision-873",
+        "themaTitel": "Wann ist die Revision statthaft?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "staat-087",
+        "themaTitel": "Wie prüft man die Verfassungsbeschwerde?",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "zpo-564"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "zpo-564"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:50",
+        "art": "norm",
+        "themaId": "strafat-305"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "fehler",
+        "themaId": "schuldbt-914"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "tipp",
+        "themaId": "grundr-615"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "zahl",
+        "themaId": "revision-887"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "revision-873",
+      "poolTitel": "Wann ist die Revision statthaft?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 333 StPO",
+        "§ 335 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-087",
+      "poolTitel": "Wie prüft man die Verfassungsbeschwerde?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 Abs. 1 Nr. 4a GG",
+        "§ 90 BVerfGG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-564",
+      "poolTitel": "Berufung: Zulässigkeit und Prüfungsumfang",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 511 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-564",
+      "poolTitel": "Berufung: Zulässigkeit und Prüfungsumfang",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 511 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-305",
+      "poolTitel": "Was ist ein fehlgeschlagener Versuch?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "schuldbt-914",
+      "poolTitel": "Wann gibt es Entschädigung für nutzlos aufgewendete Urlaubszeit?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 651n Abs. 2 BGB",
+        "§ 651i Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "grundr-615",
+      "poolTitel": "Presse- und Rundfunkfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-887",
+      "poolTitel": "Wie entscheidet das Revisionsgericht?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 349 StPO",
+        "§ 353 StPO",
+        "§ 354 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-10-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen aus vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen aus",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Erklärungsbewusstsein: Fehlt es, entscheidet die Zurechnung – dann Anfechtung analog § 119 I BGB.",
+            "§ 281 BGB: Nach Fristablauf bleibt die Erfüllung wählbar, bis Schadensersatz verlangt wird.",
+            "§ 29 ZPO: Leistungsort der Kaufpreisschuld ist grundsätzlich der Wohnsitz des Käufers.",
+            "Verjährung: drei Jahre ab Jahresende, wenn Entstehung und Kenntnis vorliegen.",
+            "Rom II: gemeinsamer gewöhnlicher Aufenthalt geht dem Schadensort vor.",
+            "Online-Verträge: ohne Bestellbutton kein Vertrag, ohne Kündigungsbutton fristlos raus."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "TKÜ: Katalogtat, Schwere im Einzelfall, Subsidiarität, richtiger Adressat.",
+            "Täterschaft: Rspr. wertend gesamt, h.L. Tatherrschaft – entscheiden nur bei Divergenz.",
+            "Rücktritt: unbeendet aufgeben, beendet verhindern – maßgeblich ist der Täterhorizont.",
+            "Betrug: bloßes Schweigen täuscht nur mit Aufklärungspflicht.",
+            "Kein Strafantrag: § 223 StGB bleibt über das besondere öffentliche Interesse verfolgbar."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Bebauungsplan: Normenkontrolle nach § 47 VwGO, keine Anfechtungsklage.",
+            "Eilrechtsschutz: Anfechtung führt zu § 80 V VwGO, alles andere zu § 123 VwGO.",
+            "Einspruchsgesetz: Der Bundestag kann den Einspruch des Bundesrats überstimmen.",
+            "Anwaltsklausur: Begehren, Gutachten, Zweckmäßigkeit, praktischer Teil.",
+            "Drittwirkung: Grundrechte wirken zwischen Privaten mittelbar über das Zivilrecht."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "„Hat die Klage Erfolg?“ – erst Zulässigkeit, dann Anspruch.",
+            "Lerngruppe: Erklären zeigt die Lücken, die beim Lesen verborgen bleiben."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Sofortvollzug angeordnet, Außentische abgelehnt: Welche zwei Eilanträge?",
+            "Wann ist ein Versuch beendet – und was muss der Täter dann tun?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Zurechnung",
+            "Strafrecht über Merkmale und Aufbau",
+            "Öffentliches Recht als Prüfungskette",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – vom fehlenden Erklärungsbewusstsein über den Rücktritt vom Versuch bis zur Normenkontrolle gegen den Bebauungsplan. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir den Punkt, der am meisten wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Am Ende der Woche wird sortiert, was sitzt und was noch einmal auf den Stapel muss.",
+        "handlung": "{A} sorts a pile of glowing crystals into four crates, while {B} taps one crystal with his pointer that flickers and sets it aside on a small review stack.",
+        "hinweisRegie": "Place the note in the free space next to the small review stack, slightly tilted toward the flickering crystal, without covering the four crates or {A}'s hands.",
+        "alternative": "{B} checks four lanterns along a corridor and marks the one that burns dimmest, while {A} carries fresh oil toward it."
+      },
+      "bildSzene": "crystals sorted into four crates",
+      "bildSzeneAlt": "four lanterns, dimmest one marked",
+      "quellen": [
+        "§§ 119, 122, 133, 157 BGB",
+        "§ 281 BGB",
+        "§ 29 ZPO",
+        "§§ 269, 270 BGB",
+        "§§ 195, 199 BGB",
+        "Art. 4 Rom II-VO",
+        "§§ 312j, 312k BGB",
+        "§ 100a StPO",
+        "§§ 25, 27 StGB",
+        "§ 24 StGB",
+        "§ 263 StGB",
+        "§ 230 StGB",
+        "§ 47 VwGO",
+        "§§ 80, 123 VwGO",
+        "Art. 77, 78 GG",
+        "Art. 1 Abs. 3 GG",
+        "§ 339 ZPO",
+        "Themenpool: methodik-905",
+        "Themenpool: mindset-5"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.679Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-873",
+      "slug": "2026-10-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Revision heißt nicht immer BGH",
+          "titelZeilen": [
+            "Revision heißt",
+            "nicht immer BGH"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Oft entscheidet das OLG",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Revision ist statthaft gegen Urteile der Strafkammern und Schwurgerichte sowie gegen erstinstanzliche Urteile der Oberlandesgerichte (§ 333 StPO). Gegen Urteile des Amtsgerichts gibt es statt der Berufung die Sprungrevision (§ 335 StPO). Wer darüber entscheidet, regelt das GVG."
+        },
+        {
+          "art": "schritte",
+          "titel": "Statthaftigkeit und Revisionsgericht",
+          "schritte": [
+            {
+              "titel": "Urteil des Amtsgerichts",
+              "text": "Sprungrevision (§ 335 StPO) – entscheiden wird das OLG (§ 335 Abs. 2 StPO, § 121 GVG)."
+            },
+            {
+              "titel": "Berufungsurteil des Landgerichts",
+              "text": "Revision nach § 333 StPO – zum OLG (§ 121 Abs. 1 Nr. 1 GVG)."
+            },
+            {
+              "titel": "Erstinstanzliches LG-Urteil",
+              "text": "Revision nach § 333 StPO – zum BGH (§ 135 Abs. 1 GVG), außer sie stützt sich nur auf Landesrecht."
+            },
+            {
+              "titel": "Erstinstanzliches OLG-Urteil",
+              "text": "Revision nach § 333 StPO – zum BGH (§ 135 Abs. 1 GVG)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Weitere Zulässigkeitspunkte",
+          "schritte": [
+            {
+              "titel": "Beschwer",
+              "text": "Beschwert sein muss man durch den Tenor – nicht bloß durch die Gründe."
+            },
+            {
+              "titel": "Einlegung",
+              "text": "Binnen einer Woche nach Verkündung beim Gericht, dessen Urteil angefochten wird (§ 341 Abs. 1 StPO)."
+            },
+            {
+              "titel": "Begründung",
+              "text": "Grundsätzlich binnen eines Monats (§ 345 Abs. 1 StPO), durch Verteidiger/Rechtsanwalt oder zu Protokoll (§ 345 Abs. 2 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: unbestimmtes Rechtsmittel",
+          "text": "Gegen ein AG-Urteil kann zunächst unbestimmt „Rechtsmittel“ eingelegt werden. Nach der Rspr. ist die Wahl zwischen Berufung und Revision bis zum Ablauf der Revisionsbegründungsfrist möglich. Wird nicht gewählt, gilt das Rechtsmittel als Berufung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "AG-Urteil: Sprungrevision, Berufungsurteil: Revision – beides zum OLG. Zum BGH geht grundsätzlich die Revision gegen erstinstanzliche LG- und OLG-Urteile."
+        },
+        {
+          "art": "cta",
+          "titel": "Revision in vier Zügen",
+          "punkte": [
+            "Welches Urteil wird angegriffen?",
+            "Welches Revisionsgericht?",
+            "Eine Woche für die Einlegung",
+            "Ein Monat für die Begründung"
+          ],
+          "icons": [
+            "dokument",
+            "gericht",
+            "kalender",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Revision heißt nicht immer BGH. Gegen Urteile des Amtsgerichts gibt es die Sprungrevision (§ 335 StPO), gegen Berufungsurteile des Landgerichts die Revision nach § 333 StPO – über beide entscheidet das OLG. Zum BGH geht grundsätzlich nur die Revision gegen erstinstanzliche Urteile von LG und OLG (§ 135 GVG). Dazu: Einlegung binnen einer Woche, Begründung grundsätzlich binnen eines Monats. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#333stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Statthaftigkeit der Revision: das Schema",
+      "coverText": "Oft entscheidet das OLG",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Welches Gericht über die Revision entscheidet, hängt davon ab, welches Urteil angegriffen wird.",
+        "handlung": "{B} stands at a crossroads holding a sealed judgment, while {A} hovers above and turns a signpost so that the arrow points to a nearer building instead of the distant tallest tower.",
+        "hinweisRegie": "Place the note in the free space next to the turned signpost, slightly tilted toward the nearer building, without covering {B}'s sealed judgment or the distant tower.",
+        "alternative": "{A} sorts three sealed judgments into two different mail chutes, one short and one leading far away, while {B} checks the labels."
+      },
+      "bildSzene": "signpost turned to nearer building",
+      "bildSzeneAlt": "judgments sorted into two chutes",
+      "quellen": [
+        "§ 333 StPO",
+        "§ 335 StPO",
+        "§ 341 StPO",
+        "§ 345 StPO",
+        "§ 121 GVG",
+        "§ 135 GVG",
+        "Themenpool: revision-873"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.679Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-087",
+      "slug": "2026-10-25-b3",
+      "titelZeilen": [
+        "Das übersehen",
+        "viele: Karlsruhe ist",
+        "keine Superrevision"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Das übersehen viele: Karlsruhe ist keine Superrevision",
+          "unter": "Verfassungsbeschwerde · Art. 93 Abs. 1 Nr. 4a GG",
+          "text": "Bei Urteilen prüft das BVerfG nur spezifisches Verfassungsrecht.",
+          "norm": "Art. 93 Abs. 1 Nr. 4a GG",
+          "icon": "gericht",
+          "sprecher": "Karlsruhe ist keine weitere Revisionsinstanz. Viele prüfen in der Urteilsverfassungsbeschwerde trotzdem das ganze einfache Recht durch. Das Bundesverfassungsgericht prüft aber nur spezifisches Verfassungsrecht. Vorher muss die Beschwerde zulässig sein. Hier ist das Schema.",
+          "marken": [
+            "spezifisches VerfR"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Beschwerdefähigkeit und Gegenstand",
+          "text": "Jedermann, der grundrechtsfähig ist; Akt öffentlicher Gewalt.",
+          "norm": "§ 90 Abs. 1 BVerfGG",
+          "sprecher": "Schritt eins: Jeder, der Träger von Grundrechten sein kann, kann Beschwerde erheben. Angegriffen wird ein Akt öffentlicher Gewalt: ein Gesetz, ein Verwaltungsakt oder ein Urteil.",
+          "marken": [
+            "jedermann"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beschwerdebefugnis",
+          "text": "Mögliche Grundrechtsverletzung; selbst, gegenwärtig, unmittelbar.",
+          "norm": "§ 90 Abs. 1 BVerfGG",
+          "sprecher": "Schritt zwei: Beschwerdebefugnis. Eine Grundrechtsverletzung muss möglich sein. Und du musst selbst, gegenwärtig und unmittelbar betroffen sein. Das wird vor allem bei Gesetzen zum Problem.",
+          "marken": [
+            "selbst, jetzt, direkt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rechtsweg und Subsidiarität",
+          "text": "Erst alle Instanzen und alle anderen Abhilfemöglichkeiten.",
+          "norm": "§ 90 Abs. 2 BVerfGG",
+          "sprecher": "Schritt drei: Rechtswegerschöpfung und Subsidiarität, § 90 Absatz 2 BVerfGG. Erst alle Instanzen durchlaufen und auch sonst jede Möglichkeit nutzen, die Verletzung zu beseitigen.",
+          "marken": [
+            "erst Fachgerichte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Form und Frist",
+          "text": "Schriftlich, begründet; Urteil: ein Monat, Gesetz: ein Jahr.",
+          "norm": "§§ 23, 92, 93 BVerfGG",
+          "sprecher": "Schritt vier: Form und Frist. Schriftlich und mit Begründung. Gegen Urteile ein Monat, § 93 Absatz 1. Gegen Gesetze ein Jahr ab Inkrafttreten, Absatz 3.",
+          "marken": [
+            "1 Monat / 1 Jahr"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Begründetheit bei Urteilen",
+          "text": "Nur: grundlegende Verkennung von Bedeutung und Tragweite eines Grundrechts.",
+          "norm": null,
+          "sprecher": "Dann die Begründetheit. Bei Gesetzen prüfst du Eingriff und Rechtfertigung vollständig. Bei Urteilen nur, ob das Gericht Bedeutung und Tragweite eines Grundrechts grundlegend verkannt hat. Einfaches Recht unrichtig angewendet reicht dafür nicht.",
+          "marken": [
+            "kein Superrevisor"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Fähigkeit, Gegenstand, Befugnis, Rechtsweg, Form, Frist – dann spezifisches Verfassungsrecht.",
+          "norm": "Art. 93 Abs. 1 Nr. 4a GG",
+          "sprecher": "Merke: Fähigkeit, Gegenstand, Befugnis, Rechtsweg, Form und Frist. Und bei Urteilen nur spezifisches Verfassungsrecht.",
+          "marken": [
+            "Prüfungsmaßstab"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Prüfungsmaßstab ausdrücklich hinschreiben",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "sprecher": "Speicher dir das Schema für die nächste Staatsrechtsklausur. Und schreib bei der Urteilsverfassungsbeschwerde den Prüfungsmaßstab ausdrücklich hin.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Das übersehen viele: Das BVerfG ist keine Superrevisionsinstanz. Bei der Urteilsverfassungsbeschwerde prüft es nur spezifisches Verfassungsrecht – ob das Fachgericht Bedeutung und Tragweite eines Grundrechts grundlegend verkannt hat. Vorher: Beschwerdefähigkeit, Beschwerdegegenstand, Beschwerdebefugnis, Rechtswegerschöpfung und Subsidiarität (§ 90 Abs. 2 BVerfGG), Form und Frist (§§ 23, 92, 93 BVerfGG).",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsbeschwerde",
+        "#bverfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfassungsbeschwerde: das Prüfschema",
+      "coverText": "Nur spezifisches Verfassungsrecht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Das Verfassungsgericht korrigiert nicht jedes falsche Urteil, sondern nur die grundlegende Verkennung von Grundrechten.",
+        "handlung": "{B} nervously hands a thick stack of papers full of small marked errors to {A}, who calmly pulls out only one single glowing sheet and sets the rest aside.",
+        "hinweisRegie": "Place the note in the free space next to the single glowing sheet in {A}'s hand, slightly tilted toward it, without covering the set-aside stack or {B}'s face.",
+        "alternative": "{A} uses a fine sieve over a pile of pebbles so that only one large crystal remains, while {B} watches the pebbles fall through."
+      },
+      "bildSzene": "only one glowing sheet taken",
+      "bildSzeneAlt": "sieve keeps one large crystal",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 90 BVerfGG",
+        "§ 23 BVerfGG",
+        "§ 92 BVerfGG",
+        "§ 93 BVerfGG",
+        "Themenpool: staat-087"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.682Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-564",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Erst in der Berufung trägt B vor, er habe gezahlt – bestritten, früher möglich gewesen. Berücksichtigt?",
+      "optionen": [
+        "Ja – die Berufung ist eine volle zweite Tatsacheninstanz",
+        "Grundsätzlich nein – kein Zulassungsgrund nach § 531 II ZPO",
+        "Ja, wenn der Kläger der Berücksichtigung zustimmt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 529 ZPO",
+        "§ 531 ZPO",
+        "Themenpool: zpo-564"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.683Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-564",
+      "ueberzeile": "Auflösung",
+      "titel": "Grundsätzlich nicht – die Berufung ist vor allem Fehlerkontrolle",
+      "text": "Das Berufungsgericht ist grundsätzlich an die erstinstanzlichen Feststellungen gebunden (§ 529 ZPO). Neue Angriffs- und Verteidigungsmittel lässt es nur aus den Gründen des § 531 Abs. 2 ZPO zu, etwa wenn sie ohne Nachlässigkeit nicht früher vorgebracht wurden (Nr. 3). Das trifft auf B nicht zu. Unstreitiges neues Vorbringen berücksichtigt der BGH dagegen.",
+      "norm": "§ 529 ZPO · § 531 Abs. 2 ZPO",
+      "quellen": [
+        "§ 529 ZPO",
+        "§ 531 ZPO",
+        "Themenpool: zpo-564"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.683Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – die Berufung ist eine volle zweite Tatsacheninstanz",
+        "Grundsätzlich nein – kein Zulassungsgrund nach § 531 II ZPO",
+        "Ja, wenn der Kläger der Berücksichtigung zustimmt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-305",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 24 StGB: Beim fehlgeschlagenen Versuch gibt es keinen Rücktritt",
+      "text": "Fehlgeschlagen ist der Versuch, wenn der Täter erkennt oder annimmt, den Erfolg mit den ihm zur Verfügung stehenden Mitteln nicht mehr ohne zeitliche Zäsur herbeiführen zu können. Dann kann er die Tat nicht mehr „aufgeben“ – ein Rücktritt scheidet aus. Maßgeblich ist seine Vorstellung, nicht die objektive Lage.",
+      "norm": "§ 24 Abs. 1 StGB",
+      "quellen": [
+        "§ 24 StGB",
+        "Themenpool: strafat-305"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.683Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-914",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Urlaub verdorben: Gibt es Geld nur für Berufstätige?",
+      "falsch": "Nutzlos aufgewendete Urlaubszeit ist kein Vermögensschaden – ersetzt wird sie höchstens bei Berufstätigen.",
+      "richtigText": "§ 651n Abs. 2 BGB gewährt bei vereitelter oder erheblich beeinträchtigter Pauschalreise eine angemessene Entschädigung in Geld – ausdrücklich gesetzlich vorgesehen, § 253 Abs. 1 BGB steht nicht entgegen. Auf ein Erwerbseinkommen kommt es nach der Rspr. nicht an. Voraussetzung: ein Reisemangel, und der Veranstalter kann sich nicht nach § 651n Abs. 1 BGB entlasten.",
+      "quellen": [
+        "§ 651i BGB",
+        "§ 651n Abs. 2 BGB",
+        "§ 253 Abs. 1 BGB",
+        "Themenpool: schuldbt-914"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.683Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-615",
+      "ueberzeile": "Klausurtipp Grundrechte",
+      "titel": "Zeitungsartikel angegriffen? Erst an Art. 5 Abs. 1 S. 1 GG denken",
+      "text": "Geht es um den Inhalt einer Äußerung – auch in der Presse –, ist nach dem BVerfG die Meinungsfreiheit einschlägig. Die Pressefreiheit (Art. 5 Abs. 1 S. 2 GG) schützt die Voraussetzungen der Pressearbeit: Recherche, Redaktionsgeheimnis, Informantenschutz, Vertrieb. Schranken für beide: Art. 5 Abs. 2 GG.",
+      "quellen": [
+        "Art. 5 Abs. 1, 2 GG",
+        "Themenpool: grundr-615"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.683Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-887",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Beschluss oder Urteil: So entscheidet das Revisionsgericht",
+      "text": "Vier Wege – der erste Blick gilt immer der Zulässigkeit.",
+      "punkte": [
+        "Unzulässig: Verwerfung durch Beschluss (§ 349 Abs. 1 StPO)",
+        "Offensichtlich unbegründet: Beschluss auf StA-Antrag, einstimmig (§ 349 Abs. 2)",
+        "Zugunsten des Angeklagten begründet: Aufhebung durch Beschluss, einstimmig (§ 349 Abs. 4)",
+        "Sonst Urteil nach Hauptverhandlung; bei Erfolg Aufhebung (§ 353) und meist Zurückverweisung (§ 354 Abs. 2)"
+      ],
+      "quellen": [
+        "§ 349 StPO",
+        "§ 353 StPO",
+        "§ 354 StPO",
+        "Themenpool: revision-887"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:16.683Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

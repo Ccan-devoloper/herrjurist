@@ -1,0 +1,869 @@
+{
+  "datum": "2026-10-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "bgbat-436",
+        "themaTitel": "Verjährungsbeginn und kenntnisabhängige Regelverjährung",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafbt-754",
+        "themaTitel": "Betrug: Täuschung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessoroer-710",
+        "themaTitel": "Anwaltsklausur: verwaltungsrechtliches Gutachten und Mandantenschreiben",
+        "fach": "assessoroer",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:17",
+        "art": "frage",
+        "themaId": "stpo-768"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:17",
+        "art": "antwort",
+        "themaId": "stpo-768"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "handelsg-049"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "streitstand",
+        "themaId": "revision-883"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "merksatz",
+        "themaId": "grundr-374"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:05",
+        "art": "begriff",
+        "themaId": "verwalt-094"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "bgbat-436",
+      "poolTitel": "Verjährungsbeginn und kenntnisabhängige Regelverjährung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 195, 199 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafbt-754",
+      "poolTitel": "Betrug: Täuschung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessoroer-710",
+      "poolTitel": "Anwaltsklausur: verwaltungsrechtliches Gutachten und Mandantenschreiben",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-768",
+      "poolTitel": "Vernehmung und verbotene Methoden",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-768",
+      "poolTitel": "Vernehmung und verbotene Methoden",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "handelsg-049",
+      "poolTitel": "Wie haftet der Gesellschafter einer GbR nach der Reform?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 721 BGB",
+        "§ 126 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "revision-883",
+      "poolTitel": "Wie weit prüft die Revision die Beweiswürdigung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "grundr-374",
+      "poolTitel": "Was schützt Art. 14 GG und wann liegt eine Enteignung vor?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-094",
+      "poolTitel": "Was ist der Unterschied zwischen Entschließungs- und Auswahlermessen?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-436",
+      "slug": "2026-10-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 199 BGB: zwei Bedingungen, dann Jahresende",
+          "titelZeilen": [
+            "§ 199 BGB:",
+            "zwei Bedingungen,",
+            "dann Jahresende"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Jahresende + Höchstfristen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Regelverjährung",
+          "text": "Die regelmäßige Verjährungsfrist beträgt drei Jahre (§ 195 BGB). Sie beginnt nicht mit dem Anspruch, sondern mit dem Schluss des Jahres, in dem zwei Bedingungen erfüllt sind (§ 199 Abs. 1 BGB)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die zwei Bedingungen",
+          "links": {
+            "titel": "1. Entstehung",
+            "punkte": [
+              "Anspruch ist fällig und kann eingeklagt werden",
+              "Schadensersatz: schon mit dem ersten Schaden (Schadenseinheit)"
+            ]
+          },
+          "rechts": {
+            "titel": "2. Kenntnis",
+            "punkte": [
+              "Von den anspruchsbegründenden Umständen und der Person des Schuldners",
+              "Grob fahrlässige Unkenntnis steht der Kenntnis gleich"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Beispiel",
+          "text": "Der Anspruch des K entsteht im März 2026, im selben Monat erfährt K alles Nötige. Die Frist beginnt mit Ablauf des 31.12.2026 und endet mit Ablauf des 31.12.2029. Erfährt K erst im Januar 2027 davon, verschiebt sich alles um ein Jahr."
+        },
+        {
+          "art": "text",
+          "titel": "Höchstfristen – ohne Kenntnis",
+          "punkte": [
+            "Schadensersatz wegen Leben, Körper, Gesundheit, Freiheit: 30 Jahre ab dem Ereignis (§ 199 Abs. 2).",
+            "Andere Schadensersatzansprüche: 10 Jahre ab Entstehung, spätestens 30 Jahre ab Ereignis (§ 199 Abs. 3).",
+            "Sonstige Ansprüche: 10 Jahre ab Entstehung (§ 199 Abs. 4)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Nicht verwechseln",
+          "punkte": [
+            "Kaufrechtliche Mängelansprüche: § 438 BGB, Beginn mit Ablieferung bzw. Übergabe.",
+            "Rechte an Grundstücken: zehn Jahre (§ 196 BGB).",
+            "Rechtskräftig festgestellte Ansprüche: 30 Jahre (§ 197 Abs. 1 Nr. 3 BGB).",
+            "Verjährung ist eine Einrede – sie muss erhoben werden (§ 214 Abs. 1 BGB)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Drei Jahre ab Schluss des Jahres, in dem Entstehung und Kenntnis zusammenkommen. Die Höchstfristen laufen auch ohne Kenntnis."
+        },
+        {
+          "art": "cta",
+          "titel": "Verjährung in vier Zügen",
+          "punkte": [
+            "Anspruch entstanden?",
+            "Kenntnis oder grob fahrlässige Unkenntnis?",
+            "Jahresende plus drei Jahre",
+            "Höchstfrist nach § 199 Abs. 2–4?"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "kalender",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Die Regelverjährung beträgt drei Jahre (§ 195 BGB) – aber sie startet erst mit dem Schluss des Jahres, in dem der Anspruch entstanden ist und der Gläubiger Umstände und Schuldner kennt oder grob fahrlässig nicht kennt (§ 199 Abs. 1 BGB). Unabhängig von der Kenntnis laufen die Höchstfristen des § 199 Abs. 2–4 BGB. Und: Sonderregeln wie § 438 BGB gehen vor. Speichern für die nächste Einrede-Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#verjährung",
+        "#199bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verjährungsbeginn: §§ 195, 199 BGB",
+      "coverText": "Jahresende + Höchstfristen",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Die Verjährung läuft erst, wenn Entstehung und Kenntnis zusammenkommen – und dann ab Jahresende.",
+        "handlung": "{A} points his pointer at two small lanterns that must both be lit, while {B} hovers beside a year-end calendar page and only starts a large hourglass once both lanterns glow.",
+        "hinweisRegie": "Place the note in the free space next to the hourglass and calendar page, slightly tilted toward the hourglass, so it marks the start of the period without covering the lanterns.",
+        "alternative": "{B} waits at a door with two locks and only turns the key of a big clock once both locks click open, while {A} watches."
+      },
+      "bildSzene": "two lit lanterns start hourglass",
+      "bildSzeneAlt": "two locks open, big clock starts",
+      "quellen": [
+        "§ 195 BGB",
+        "§ 196 BGB",
+        "§ 197 BGB",
+        "§ 199 BGB",
+        "§ 214 BGB",
+        "§ 438 BGB",
+        "Themenpool: bgbat-436"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-bedingungen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.691Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-754",
+      "slug": "2026-10-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Bloßes Schweigen täuscht nur mit Aufklärungspflicht",
+          "titelZeilen": [
+            "Bloßes Schweigen",
+            "täuscht nur mit",
+            "Aufklärungspflicht"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Konkludent oder Unterlassen?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Täuschung ist jede Einwirkung auf die Vorstellung eines anderen, die eine Fehlvorstellung über Tatsachen hervorrufen kann. Sie geschieht ausdrücklich, konkludent oder durch Unterlassen – und gerade die letzten beiden werden oft vermengt."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Konkludent oder durch Unterlassen?",
+          "links": {
+            "titel": "Konkludente Täuschung",
+            "punkte": [
+              "Aktives Tun: Das Verhalten erklärt etwas mit",
+              "Maßstab: Verkehrsanschauung",
+              "Bsp.: Wer bestellt, erklärt Zahlungswillen"
+            ]
+          },
+          "rechts": {
+            "titel": "Täuschung durch Unterlassen",
+            "punkte": [
+              "Bloßes Schweigen trotz erkannter Fehlvorstellung",
+              "Nur mit Garantenstellung (§ 13 StGB)",
+              "Pflicht aus Gesetz, Vertrag oder besonderem Vertrauen"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Klassiker",
+          "links": {
+            "titel": "Zechprellerei",
+            "punkte": [
+              "Gast bestellt, obwohl er nicht zahlen will",
+              "Konkludente Täuschung bei der Bestellung"
+            ]
+          },
+          "rechts": {
+            "titel": "Zu viel Wechselgeld",
+            "punkte": [
+              "Kunde bemerkt es und schweigt",
+              "Kein Tun; Aufklärungspflicht fehlt regelmäßig"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Prüfungsreihenfolge",
+          "punkte": [
+            "1. Ausdrückliche Erklärung? Dann Täuschung durch Tun.",
+            "2. Sonst: Erklärt das Verhalten nach der Verkehrsanschauung etwas mit? Dann konkludent.",
+            "3. Nur wenn nichts erklärt wird: Unterlassen – mit Garantenstellung und § 13 StGB."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst nach einer konkludenten Erklärung suchen. Bloßes Schweigen ist nur dann Täuschung, wenn eine Aufklärungspflicht besteht (§ 13 StGB)."
+        },
+        {
+          "art": "cta",
+          "titel": "Täuschung in drei Fragen",
+          "punkte": [
+            "Ausdrücklich erklärt?",
+            "Konkludent nach Verkehrsanschauung?",
+            "Schweigen: Aufklärungspflicht?"
+          ],
+          "icons": [
+            "umschlag",
+            "lupe",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Bloßes Schweigen ist beim Betrug nur dann eine Täuschung, wenn den Schweigenden eine Aufklärungspflicht trifft (§ 13 StGB). Davor steht die konkludente Täuschung: aktives Tun, bei dem das Verhalten nach der Verkehrsanschauung etwas miterklärt – wie beim Gast, der ohne Zahlungswillen bestellt. Wer zu viel Wechselgeld bekommt und schweigt, täuscht dagegen regelmäßig nicht. Speichern für die nächste Betrugsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#betrug",
+        "#263stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Betrug: konkludent oder durch Unterlassen?",
+      "coverText": "Konkludent oder Unterlassen?",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer nur schweigt, täuscht nicht durch Tun – strafbar wird das Schweigen erst mit einer Pflicht zum Reden.",
+        "handlung": "{A} receives a handful of extra coins at a market stall and silently pockets them, while {B} watches from behind the stall, weighing whether anyone was obliged to speak up.",
+        "hinweisRegie": "Place the note in the free space above the extra coins, slightly tilted toward {A}'s closed mouth, so it links silence and duty without covering the coins or {B}.",
+        "alternative": "{B} orders a lavish meal at a counter with an empty purse hidden behind her back, while {A} serves the plate trustingly."
+      },
+      "bildSzene": "extra coins pocketed in silence",
+      "bildSzeneAlt": "lavish order with hidden empty purse",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 13 StGB",
+        "Themenpool: strafbt-754"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "grenzziehung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.691Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-710",
+      "slug": "2026-10-22-b3",
+      "titelZeilen": [
+        "Anwaltsklausur:",
+        "Das Gutachten ist",
+        "nur Stufe zwei",
+        "von vier"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Anwaltsklausur: Das Gutachten ist nur Stufe zwei von vier",
+          "unter": "Anwaltsklausur · Öffentliches Recht",
+          "text": "Nach dem Gutachten kommen Zweckmäßigkeit und praktischer Teil.",
+          "norm": null,
+          "icon": "aktentasche",
+          "sprecher": "Dein Gutachten ist fertig – die Anwaltsklausur noch nicht. Im öffentlichen Recht hat sie vier Stufen, und das Gutachten ist nur die zweite.",
+          "marken": [
+            "4 Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Mandantenbegehren",
+          "text": "Was will der Mandant wirklich? Das bestimmt den Prüfungsumfang.",
+          "norm": "§ 88 VwGO",
+          "sprecher": "Stufe eins: Was will der Mandant wirklich? Einen Bescheid loswerden, eine Genehmigung bekommen, schnell Ruhe haben? Das Begehren bestimmt, was du prüfst.",
+          "marken": [
+            "Begehren"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gutachten",
+          "text": "Zulässigkeit und Begründetheit des passenden Rechtsbehelfs – mit Erfolgsprognose.",
+          "norm": null,
+          "sprecher": "Stufe zwei: das Gutachten. Du prüfst Zulässigkeit und Begründetheit der in Betracht kommenden Rechtsbehelfe, aus Sicht des Mandanten und mit Blick auf die Erfolgsaussichten.",
+          "marken": [
+            "Erfolgsaussichten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zweckmäßigkeit",
+          "text": "Welcher Rechtsbehelf, welcher Antrag, Eilrechtsschutz, Fristen, Kosten?",
+          "norm": "§§ 80, 123 VwGO",
+          "sprecher": "Stufe drei: Zweckmäßigkeit. Welcher Rechtsbehelf, welcher Antrag? Braucht es Eilrechtsschutz? Welche Fristen laufen, welche Kostenrisiken bestehen? Hier unterscheidet sich die Anwalts- von der Richterklausur.",
+          "marken": [
+            "Was ist klug?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Praktischer Teil",
+          "text": "Schriftsatz ans Gericht oder Mandantenschreiben – je nach Bearbeitervermerk.",
+          "norm": null,
+          "sprecher": "Stufe vier: der praktische Teil. Je nach Bearbeitervermerk ein Schriftsatz an das Gericht oder ein Mandantenschreiben. Das Schreiben ist verständlich, ohne Gutachtenstil, mit einer klaren Empfehlung.",
+          "marken": [
+            "klare Empfehlung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Unsicheres Ergebnis?",
+          "text": "Risiko ehrlich benennen – eine Empfehlung braucht der Mandant trotzdem.",
+          "norm": null,
+          "sprecher": "Und wenn die Erfolgsaussichten offen sind? Dann sagst du das dem Mandanten ehrlich und schätzt das Risiko ein. Eine Empfehlung braucht er trotzdem.",
+          "marken": [
+            "Risiko benennen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Begehren, Gutachten, Zweckmäßigkeit, Umsetzung.",
+          "norm": null,
+          "sprecher": "Merke: Begehren, Gutachten, Zweckmäßigkeit, Umsetzung. Das Gutachten ist das Fundament, nicht das Ziel.",
+          "marken": [
+            "Fundament, nicht Ziel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bearbeitervermerk zuerst lesen",
+          "text": "Speichern für die nächste Anwaltsklausur.",
+          "sprecher": "Speicher dir das für deine nächste Anwaltsklausur im öffentlichen Recht. Und lies den Bearbeitervermerk, bevor du die erste Zeile schreibst.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "In der öffentlich-rechtlichen Anwaltsklausur ist das Gutachten nur Stufe zwei von vier. Davor steht das Begehren des Mandanten, danach die Zweckmäßigkeit – Rechtsbehelf, Antrag, Eilrechtsschutz, Fristen, Kosten – und der praktische Teil: Schriftsatz oder Mandantenschreiben mit klarer Empfehlung. Was genau verlangt ist, sagt der Bearbeitervermerk.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#anwaltsklausur",
+        "#vwgo",
+        "#referendariat",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "ÖR-Anwaltsklausur: die vier Stufen",
+      "coverText": "Zweckmäßigkeit nicht vergessen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "In der Anwaltsklausur ist das Gutachten nur das Fundament – danach kommen die kluge Wahl und die Umsetzung.",
+        "handlung": "{A} stands on the second of four stone steps leading up to a client's door, while {B} nervously tries to sit down on that step, as if the climb were already finished.",
+        "hinweisRegie": "Place the note in the free space above the two remaining upper steps, slightly tilted toward the door, so it shows the way still ahead without covering {B} or the lower steps.",
+        "alternative": "{B} holds a finished foundation stone and looks around, while {A} already carries a roof and a door toward the building site."
+      },
+      "bildSzene": "four steps, one sits on second",
+      "bildSzeneAlt": "foundation stone, roof still to come",
+      "quellen": [
+        "§ 88 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO",
+        "Themenpool: assessoroer-710"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-stufen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.693Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-768",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Unzulässige Drohung mit U-Haft, B gesteht. Später stimmt B der Verwertung zu. Ist das Geständnis verwertbar?",
+      "optionen": [
+        "Ja – die Zustimmung heilt den Verstoß",
+        "Nein – § 136a Abs. 3 S. 2 StPO gilt auch bei Zustimmung",
+        "Nur, wenn B das Geständnis in der Hauptverhandlung wiederholt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 136a StPO",
+        "Themenpool: stpo-768"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.693Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-768",
+      "ueberzeile": "Auflösung",
+      "titel": "Unverwertbar – auch mit Zustimmung",
+      "text": "Die Drohung mit einer verfahrensrechtlich unzulässigen Maßnahme ist verboten (§ 136a Abs. 1 S. 3 StPO). Das Verbot gilt ohne Rücksicht auf die Einwilligung des Beschuldigten, die Aussage darf auch mit seiner Zustimmung nicht verwertet werden (§ 136a Abs. 3 StPO) – ohne Abwägung. Eine Fernwirkung auf Folgebeweise lehnt die Rspr. überwiegend ab.",
+      "norm": "§ 136a Abs. 1, 3 StPO",
+      "quellen": [
+        "§ 136a StPO",
+        "Themenpool: stpo-768"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.693Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – die Zustimmung heilt den Verstoß",
+        "Nein – § 136a Abs. 3 S. 2 StPO gilt auch bei Zustimmung",
+        "Nur, wenn B das Geständnis in der Hauptverhandlung wiederholt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-049",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 721 BGB: Gesellschafter der GbR haften persönlich – seit 2024 im Gesetz",
+      "text": "Seit dem MoPeG (1.1.2024) steht die rechtsfähige GbR im Gesetz (§ 705 Abs. 2 BGB). Nach § 721 BGB haften die Gesellschafter für ihre Verbindlichkeiten persönlich als Gesamtschuldner; Abweichendes wirkt Dritten gegenüber nicht. Einwendungen der Gesellschaft kann der Gesellschafter nach § 721a BGB erheben. Früher kam die Rspr. über § 128 HGB a.F. analog dorthin.",
+      "norm": "§ 721 BGB · § 126 HGB",
+      "quellen": [
+        "§ 705 BGB",
+        "§ 721 BGB",
+        "§ 721a BGB",
+        "§ 126 HGB",
+        "Themenpool: handelsg-049"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.693Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-883",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Wie weit darf das Revisionsgericht die Beweiswürdigung kontrollieren?",
+      "norm": "§ 261 StPO · § 337 StPO",
+      "optionen": [
+        "Rspr.: auf Rechtsfehler – lückenhaft, widersprüchlich, Denkgesetze, Erfahrungssätze.",
+        "Kritiker: Die erweiterte Kontrolle nähert die Revision einer Tatsacheninstanz an."
+      ],
+      "text": "Klausur: Auf die Sachrüge prüft das Revisionsgericht die Beweiswürdigung nur anhand der Urteilsgründe. Was in der Hauptverhandlung geschah, rekonstruiert es nicht; dafür braucht es eine Verfahrensrüge.",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-883"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.693Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-374",
+      "ueberzeile": "Merksatz Grundrechte",
+      "titel": "Enteignung heißt gezielter Entzug",
+      "text": "Gezielter Entzug konkreter Eigentumspositionen, um Güter für öffentliche Aufgaben zu beschaffen – nur mit gesetzlicher Entschädigungsregel (Art. 14 Abs. 3 GG). Sonst: Inhalts- und Schrankenbestimmung.",
+      "norm": "Art. 14 Abs. 1 S. 2, Abs. 3 GG",
+      "quellen": [
+        "Art. 14 GG",
+        "Themenpool: grundr-374"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.693Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-094",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Entschließungs- und Auswahlermessen",
+      "text": "Entschließungsermessen: ob die Behörde überhaupt tätig wird. Auswahlermessen: wie – mit welchem Mittel, gegen wen. Beides übt sie nach dem Zweck der Ermächtigung und in deren Grenzen aus (§ 40 VwVfG); das Gericht prüft nur Ermessensfehler (§ 114 S. 1 VwGO). Bei Ermessensreduzierung auf null bleibt nur eine Entscheidung.",
+      "norm": "§ 40 VwVfG · § 114 S. 1 VwGO",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-094"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:45:43.693Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

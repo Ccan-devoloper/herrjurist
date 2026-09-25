@@ -1,0 +1,844 @@
+{
+  "datum": "2026-12-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-593",
+        "themaTitel": "Bundesstaatsprinzip",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-511",
+        "themaTitel": "Gutgläubiger Grundstückserwerb",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "stpo-346",
+        "themaTitel": "Welche Rechte hat der Beschuldigte bei der Vernehmung?",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "sachen-502"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "sachen-502"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "zpo-056"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:25",
+        "art": "streitstand",
+        "themaId": "grundr-089"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "merksatz",
+        "themaId": "bereich-216"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "begriff",
+        "themaId": "revision-874"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-593",
+      "poolTitel": "Bundesstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-28"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "sachen-511",
+      "poolTitel": "Gutgläubiger Grundstückserwerb",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 892, 893 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-346",
+      "poolTitel": "Welche Rechte hat der Beschuldigte bei der Vernehmung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136 StPO",
+        "§ 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-502",
+      "poolTitel": "Besitzschutz und verbotene Eigenmacht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 858 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-502",
+      "poolTitel": "Besitzschutz und verbotene Eigenmacht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 858 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-056",
+      "poolTitel": "Wie unterscheiden sich Leistungs-, Feststellungs- und Gestaltungsklage?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 256 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "grundr-089",
+      "poolTitel": "Wie prüft man einen Eingriff in Art. 12 GG?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 Abs. 1 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-03"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bereich-216",
+      "poolTitel": "Wann kann sich der Bereicherungsschuldner auf Entreicherung berufen?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 818 Abs. 3 BGB",
+        "§ 819 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2026-11-23"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "revision-874",
+      "poolTitel": "Wer ist revisionsberechtigt und wann ist er beschwert?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 296 StPO",
+        "§ 297 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-593",
+      "slug": "2026-12-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Bundestreue allein trägt keinen Anspruch",
+          "titelZeilen": [
+            "Bundestreue",
+            "allein trägt",
+            "keinen Anspruch"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Nur in bestehenden Rechtsverhältnissen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Land L fühlt sich vom Bund bei einer Entscheidung übergangen. Eine Norm, die L ein Mitspracherecht gibt, gibt es nicht. L beruft sich allein auf den Grundsatz bundesfreundlichen Verhaltens. Trägt das?"
+        },
+        {
+          "art": "text",
+          "titel": "Das Bundesstaatsprinzip im Überblick",
+          "punkte": [
+            "Staatsqualität von Bund und Ländern (Art. 20 Abs. 1 GG)",
+            "Kompetenzverteilung, Grundsatz Länder: Art. 30, 70, 83 GG",
+            "Homogenität (Art. 28 Abs. 1 GG), Vorrang des Bundesrechts (Art. 31 GG)",
+            "Ungeschrieben: Pflicht zu bundesfreundlichem Verhalten"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wie die Bundestreue wirkt",
+          "text": "Sie verpflichtet Bund und Länder zu gegenseitiger Rücksichtnahme. Nach dem BVerfG ist sie akzessorisch: Sie begrenzt und ergänzt Rechte und Pflichten innerhalb eines bestehenden Rechtsverhältnisses, begründet aber für sich allein kein neues."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Bundestreue als eigene Anspruchsgrundlage prüfen. Richtig: Erst das Rechtsverhältnis suchen – etwa eine Kompetenz, die der Bund ausübt. Dann fragen, ob er sie rücksichtslos oder missbräuchlich ausübt."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Ohne bestehendes Rechtsverhältnis kann L aus der Bundestreue allein nichts herleiten. Übt der Bund aber eine eigene Kompetenz aus, ist die Bundestreue Maßstab für die Art der Ausübung. Prozessual: Bund-Länder-Streit nach Art. 93 Abs. 1 Nr. 3 GG."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bundestreue ist akzessorisch: Sie wirkt nur innerhalb eines bestehenden Rechtsverhältnisses zwischen Bund und Ländern."
+        },
+        {
+          "art": "cta",
+          "titel": "Bundestreue in drei Schritten",
+          "punkte": [
+            "Rechtsverhältnis identifizieren",
+            "Kompetenz oder Pflicht benennen",
+            "Ausübung rücksichtslos?"
+          ],
+          "icons": [
+            "handschlag",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Bundestreue allein trägt keinen Anspruch. Der ungeschriebene Grundsatz bundesfreundlichen Verhaltens folgt aus dem Bundesstaatsprinzip (Art. 20 Abs. 1 GG), ist nach dem BVerfG aber akzessorisch: Er begrenzt und ergänzt Rechte und Pflichten in einem bestehenden Rechtsverhältnis zwischen Bund und Ländern. In der Klausur daher erst das Rechtsverhältnis, dann die Art der Kompetenzausübung prüfen. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bundesstaat",
+        "#art20gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Bundestreue: akzessorisch, nicht eigenständig",
+      "coverText": "Nur in bestehenden Rechtsverhältnissen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Die Bundestreue kann nur eine Verbindung prägen, die schon besteht – sie schafft keine eigene.",
+        "handlung": "{B} tries to tie a friendly ribbon between two islands that have no bridge, while {A} calmly points to a nearby existing rope bridge where the ribbon would actually hold.",
+        "hinweisRegie": "Place the note in the free space next to the existing rope bridge, slightly tilted toward it, so it marks where the duty of loyalty applies without covering {B}'s ribbon or faces.",
+        "alternative": "{A} tries to hang a lantern in empty air, while {B} shows her the beam of an existing house where it can be fixed."
+      },
+      "bildSzene": "ribbon only holds on existing bridge",
+      "bildSzeneAlt": "lantern needs an existing beam",
+      "quellen": [
+        "Art. 20 Abs. 1 GG",
+        "Art. 28 Abs. 1 GG",
+        "Art. 30, 31, 70, 83 GG",
+        "Art. 93 Abs. 1 Nr. 3 GG",
+        "Themenpool: staat-593"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "grenze-der-figur",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.217Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-511",
+      "slug": "2026-12-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Das übersehen viele: grobe Fahrlässigkeit beim Grundstück",
+          "titelZeilen": [
+            "Das übersehen",
+            "viele: grobe",
+            "Fahrlässigkeit",
+            "beim Grundstück"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "§ 892 statt § 932 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "B steht als Eigentümer im Grundbuch, obwohl die Auflassung an ihn nichtig war; Eigentümerin ist E. B verkauft und übereignet das Grundstück an K. K hätte die Unrichtigkeit durch eine einfache Nachfrage erkennen können. Wird K Eigentümer?"
+        },
+        {
+          "art": "text",
+          "titel": "Der Klassiker",
+          "text": "Viele übertragen den Maßstab des § 932 Abs. 2 BGB: „K war grob fahrlässig, also nicht gutgläubig.“ Beim Grundstück gilt das nicht. Nach § 892 Abs. 1 S. 1 BGB schadet nur positive Kenntnis der Unrichtigkeit – oder ein eingetragener Widerspruch."
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Einigung und Eintragung",
+              "text": "Auflassung und Eintragung des K (§§ 873, 925 BGB)."
+            },
+            {
+              "titel": "B ist Nichtberechtigter",
+              "text": "Die Auflassung an B war nichtig, das Grundbuch ist unrichtig."
+            },
+            {
+              "titel": "Verkehrsgeschäft",
+              "text": "K erwirbt durch Rechtsgeschäft und ist mit B nicht wirtschaftlich identisch."
+            },
+            {
+              "titel": "Grundbuch legitimiert B",
+              "text": "B ist eingetragen, ein Widerspruch ist nicht eingetragen."
+            },
+            {
+              "titel": "Keine Kenntnis des K",
+              "text": "Maßgeblich ist grundsätzlich die Stellung des Eintragungsantrags (§ 892 Abs. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "K kannte die Unrichtigkeit nicht; bloßes Kennenmüssen schadet nicht. K wird nach §§ 873, 925, 892 BGB Eigentümer. E bleibt ein Anspruch gegen B, etwa aus § 816 Abs. 1 S. 1 BGB auf den Erlös."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beim Grundstück zerstören nur Kenntnis oder ein eingetragener Widerspruch den guten Glauben – grobe Fahrlässigkeit nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 892 BGB in drei Fragen",
+          "punkte": [
+            "Verkehrsgeschäft?",
+            "Widerspruch eingetragen?",
+            "Kenntnis bei Antragstellung?"
+          ],
+          "icons": [
+            "haus",
+            "dokument",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Grobe Fahrlässigkeit beim Grundstückserwerb – das übersehen viele: Sie schadet nicht. Anders als bei beweglichen Sachen (§ 932 Abs. 2 BGB) zerstört beim Grundstück nach § 892 Abs. 1 S. 1 BGB nur positive Kenntnis der Unrichtigkeit oder ein eingetragener Widerspruch den Gutglaubenserwerb. Maßgeblich ist grundsätzlich der Zeitpunkt des Eintragungsantrags (§ 892 Abs. 2 BGB). Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#892bgb",
+        "#grundbuch",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 892 BGB: Nur Kenntnis schadet",
+      "coverText": "§ 892 statt § 932 BGB",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Beim Grundstück darf man dem Grundbuch vertrauen – nur wer die Unrichtigkeit kennt, wird nicht geschützt.",
+        "handlung": "{A} confidently steps onto a solid stone plot whose sign is held up by {B}, who hovers beside the official register ledger that shows the plot's name.",
+        "hinweisRegie": "Place the note in the open space between the register ledger and the stepping foot, slightly tilted toward the ledger, so trust in the register is the focus without covering {A}'s face.",
+        "alternative": "{B} projects an official map onto the ground and {A} walks along it without looking elsewhere, while a hidden crack stays unnoticed at the edge."
+      },
+      "bildSzene": "miner steps onto plot trusting register",
+      "bildSzeneAlt": "walking along projected official map",
+      "quellen": [
+        "§ 892 BGB",
+        "§§ 873, 925 BGB",
+        "§ 932 Abs. 2 BGB",
+        "§ 816 Abs. 1 S. 1 BGB",
+        "Themenpool: sachen-511"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.217Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-346",
+      "slug": "2026-12-02-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Schweigen darf er – aber nicht zu seinem Namen",
+          "unter": "Beschuldigtenvernehmung · § 136 StPO",
+          "text": "Die Aussagefreiheit betrifft die Sache. Die Personalien muss er angeben.",
+          "norm": "§ 136 Abs. 1 StPO",
+          "icon": "polizei",
+          "sprecher": "Schweigen darf er – aber nicht zu seinem Namen. Das Schweigerecht des Beschuldigten betrifft den Tatvorwurf. Seine Personalien muss er nach herrschender Meinung angeben, sonst droht ein Bußgeld nach § 111 OWiG.",
+          "marken": [
+            "Sache: schweigen",
+            "Name: angeben"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Tatvorwurf eröffnen",
+          "text": "Welche Tat wird vorgeworfen, welche Strafvorschriften kommen in Betracht?",
+          "norm": "§ 136 Abs. 1 StPO",
+          "sprecher": "Schritt eins: Bei Beginn der ersten Vernehmung wird dem Beschuldigten eröffnet, welche Tat ihm zur Last gelegt wird und welche Strafvorschriften in Betracht kommen.",
+          "marken": [
+            "Was wird vorgeworfen?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Aussagefreiheit",
+          "text": "Es steht ihm frei, sich zu äußern oder nicht zur Sache auszusagen.",
+          "norm": "§ 136 Abs. 1 StPO",
+          "sprecher": "Schritt zwei: die Aussagefreiheit. Er wird darauf hingewiesen, dass es ihm freisteht, sich zu äußern oder nicht zur Sache auszusagen. Aus vollständigem Schweigen darf später nichts Nachteiliges geschlossen werden.",
+          "marken": [
+            "nemo tenetur"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Verteidiger befragen",
+          "text": "Jederzeit, auch schon vor der Vernehmung.",
+          "norm": "§ 136 Abs. 1 StPO",
+          "sprecher": "Schritt drei: der Verteidiger. Er darf jederzeit, auch schon vor der Vernehmung, einen Verteidiger befragen. Will er das, muss man ihm die Kontaktaufnahme erleichtern, etwa mit einem Hinweis auf anwaltliche Notdienste.",
+          "marken": [
+            "Anwalt vorab"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Beweisanträge, Pflichtverteidiger",
+          "text": "Entlastende Beweiserhebungen beantragen; unter Voraussetzungen Pflichtverteidigung.",
+          "norm": "§ 136 Abs. 1 StPO · § 140 StPO",
+          "sprecher": "Schritt vier: Er wird belehrt, dass er zu seiner Entlastung einzelne Beweiserhebungen beantragen kann und unter den Voraussetzungen des § 140 StPO die Bestellung eines Pflichtverteidigers.",
+          "marken": [
+            "Entlastung",
+            "§ 140 StPO"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Auch bei Polizei und Staatsanwaltschaft",
+          "text": "§ 163a StPO überträgt die Belehrungspflichten ins Ermittlungsverfahren.",
+          "norm": "§ 163a StPO",
+          "sprecher": "Das gilt nicht nur beim Richter. Über § 163a StPO greifen die Belehrungen auch bei Vernehmungen durch Staatsanwaltschaft und Polizei.",
+          "marken": [
+            "auch die Polizei"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vorwurf, Schweigerecht, Verteidiger, Beweisanträge – vor der ersten Frage zur Sache.",
+          "norm": "§ 136 Abs. 1 StPO",
+          "sprecher": "Merke: Vorwurf eröffnen, auf das Schweigerecht hinweisen, den Verteidiger ermöglichen, auf Beweisanträge hinweisen. Und zwar bevor die erste Frage zur Sache fällt.",
+          "marken": [
+            "vor der ersten Frage"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Morgen: Was folgt, wenn die Belehrung fehlt?",
+          "text": "Speichern für die nächste StPO-Zusatzfrage.",
+          "sprecher": "Speicher dir das für die nächste StPO-Zusatzfrage. Was passiert, wenn die Belehrung fehlt, schauen wir uns morgen an.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Schweigen darf der Beschuldigte – aber nicht zu seinem Namen. Die Aussagefreiheit nach § 136 Abs. 1 StPO betrifft den Tatvorwurf; zur Angabe der Personalien ist er nach h.M. verpflichtet (§ 111 OWiG). Vor der ersten Vernehmung wird er belehrt: Tatvorwurf, Aussagefreiheit, Verteidigerbefragung, Beweisanträge und Pflichtverteidigung. Über § 163a StPO gilt das auch bei Polizei und Staatsanwaltschaft.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#136stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 136 StPO: Rechte bei der Vernehmung",
+      "titelZeilen": [
+        "Schweigen darf er –",
+        "aber nicht zu",
+        "seinem Namen"
+      ],
+      "coverText": "Personalien sind Pflicht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Zum Vorwurf darf der Beschuldigte schweigen, seinen Namen muss er trotzdem nennen.",
+        "handlung": "{A} sits at a small table holding a finger to his lips about a closed box of evidence, while he slides a simple name card across the table to {B}.",
+        "hinweisRegie": "Place the note in the free space between the sliding name card and the closed evidence box, slightly tilted toward the card, so the difference is visible without covering {A}'s face.",
+        "alternative": "{B} holds two doors, one locked tight with a padlock and one small open hatch through which {A} passes only a name tag."
+      },
+      "bildSzene": "silent about box, slides name card",
+      "bildSzeneAlt": "locked door, open hatch for name tag",
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 163a StPO",
+        "§ 140 StPO",
+        "§ 111 OWiG",
+        "Themenpool: stpo-346"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "grenze-des-rechts",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-502",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "V holt sein verliehenes Rad vor Ablauf der Leihe heimlich bei E ab. Kann E Rückgabe nach § 861 BGB verlangen?",
+      "optionen": [
+        "Ja – auf sein Eigentum kann V sich nicht berufen (§ 863 BGB)",
+        "Nein – V ist Eigentümer und darf sein Rad nehmen",
+        "Nein – E hat nur einen Schadensersatzanspruch"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§§ 858, 861, 863, 864 BGB",
+        "Themenpool: sachen-502"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-502",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – verbotene Eigenmacht, das Eigentum hilft V nicht",
+      "text": "V hat E den Besitz ohne dessen Willen entzogen: verbotene Eigenmacht (§ 858 Abs. 1 BGB). E kann Wiedereinräumung verlangen (§ 861 Abs. 1 BGB). Auf sein Recht zum Besitz kann V sich nicht berufen (§ 863 BGB) – der Besitzschutz sichert den Rechtsfrieden, nicht die Rechtslage. Der Anspruch erlischt nach einem Jahr (§ 864 Abs. 1 BGB).",
+      "norm": "§§ 858, 861, 863 BGB",
+      "quellen": [
+        "§§ 858, 861, 863, 864 BGB",
+        "Themenpool: sachen-502"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.219Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – auf sein Eigentum kann V sich nicht berufen (§ 863 BGB)",
+        "Nein – V ist Eigentümer und darf sein Rad nehmen",
+        "Nein – E hat nur einen Schadensersatzanspruch"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-056",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 256 ZPO: Feststellen nur mit rechtlichem Interesse",
+      "text": "Die Feststellungsklage braucht ein rechtliches Interesse an alsbaldiger Feststellung (§ 256 Abs. 1 ZPO). Kann der Kläger schon auf Leistung klagen, fehlt es grundsätzlich – die Leistungsklage hat Vorrang. Zum Vergleich: Die Leistungsklage zielt auf ein Tun oder Unterlassen, die Gestaltungsklage ändert die Rechtslage durch das Urteil selbst.",
+      "norm": "§ 256 Abs. 1 ZPO",
+      "quellen": [
+        "§ 253 ZPO",
+        "§ 256 ZPO",
+        "Themenpool: zpo-056"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-089",
+      "ueberzeile": "Streitstand Grundrechte",
+      "titel": "Eine neue Abgabe macht den Kiosk unrentabel: Greift das in die Berufsfreiheit ein?",
+      "norm": "Art. 12 Abs. 1 GG",
+      "optionen": [
+        "BVerfG: Bei Regelungen ohne direkten Berufsbezug nur mit objektiv berufsregelnder Tendenz.",
+        "Teile der Literatur: Jede zurechenbare, nicht unerhebliche Beeinträchtigung genügt."
+      ],
+      "text": "Nach dem BVerfG muss die Regelung in engem Zusammenhang mit der Berufsausübung stehen und eine berufsregelnde Tendenz deutlich erkennen lassen. In der Klausur: Kriterium nennen, am Sachverhalt entscheiden – danach die Rechtfertigung mit der Drei-Stufen-Lehre.",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Themenpool: grundr-089"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-216",
+      "ueberzeile": "Merksatz Bereicherungsrecht",
+      "titel": "Ab Kenntnis kein Entreicherungseinwand mehr",
+      "text": "Wer den fehlenden Rechtsgrund kennt, haftet ab diesem Zeitpunkt verschärft – § 818 Abs. 3 BGB hilft ihm nicht mehr (§§ 819 Abs. 1, 818 Abs. 4 BGB).",
+      "norm": "§ 818 Abs. 3, 4 BGB · § 819 Abs. 1 BGB",
+      "quellen": [
+        "§ 818 BGB",
+        "§ 819 BGB",
+        "Themenpool: bereich-216"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-874",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Beschwer: Es zählt der Tenor, nicht die Begründung",
+      "text": "Beschwert ist, wen der Entscheidungsausspruch unmittelbar in seinen Rechten oder schutzwürdigen Interessen beeinträchtigt. Ein freigesprochener Angeklagter ist deshalb grundsätzlich nicht beschwert, auch wenn ihn die Gründe belasten. Die Staatsanwaltschaft kann auch zugunsten des Beschuldigten Rechtsmittel einlegen (§ 296 Abs. 2 StPO).",
+      "norm": "§§ 296, 297 StPO",
+      "quellen": [
+        "§ 296 StPO",
+        "§ 297 StPO",
+        "Themenpool: revision-874"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:44:33.219Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

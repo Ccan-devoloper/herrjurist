@@ -1,0 +1,846 @@
+{
+  "datum": "2027-01-13",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-392",
+        "themaTitel": "Wie prüft man den Amtshaftungsanspruch?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuld-454",
+        "themaTitel": "Gesamtschuld und Innenausgleich",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "revision-881",
+        "themaTitel": "Wie begründet man die Aufklärungsrüge?",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "sachen-506"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "sachen-506"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "schuldbt-465"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "streitstand",
+        "themaId": "strafat-923"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "merksatz",
+        "themaId": "schuld-123"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "begriff",
+        "themaId": "schuldbt-491"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-392",
+      "poolTitel": "Wie prüft man den Amtshaftungsanspruch?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 839 BGB",
+        "Art. 34 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuld-454",
+      "poolTitel": "Gesamtschuld und Innenausgleich",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 421 ff., 426 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-881",
+      "poolTitel": "Wie begründet man die Aufklärungsrüge?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 2 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-22"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-506",
+      "poolTitel": "EBV: Schadensersatz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 989, 990 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-506",
+      "poolTitel": "EBV: Schadensersatz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 989, 990 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-465",
+      "poolTitel": "Unverhältnismäßigkeit der Nacherfüllung",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 IV BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafat-923",
+      "poolTitel": "Außertatbestandliche Zielerreichung: Rücktritt trotz erteilten Denkzettels?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-09"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuld-123",
+      "poolTitel": "Was ist die Drittschadensliquidation und wann greift sie?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 249 BGB",
+        "§ 447 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuldbt-491",
+      "poolTitel": "Kündigung des Werkvertrags",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 648, 648a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-392",
+      "slug": "2027-01-13-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Amtshaftung: Verklagt wird nicht der Beamte",
+          "titelZeilen": [
+            "Amtshaftung:",
+            "Verklagt wird nicht",
+            "der Beamte"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Die Haftung geht auf den Staat über",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Polizeibeamter P beschädigt bei einer rechtswidrigen Durchsuchung fahrlässig die Wohnungstür des E. E will Schadensersatz. Von wem, woraus und vor welchem Gericht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg, Teil 1",
+          "schritte": [
+            {
+              "titel": "Anspruchsgrundlage",
+              "text": "§ 839 Abs. 1 BGB i. V. m. Art. 34 S. 1 GG: Die persönliche Haftung des Amtsträgers wird auf den Staat übergeleitet."
+            },
+            {
+              "titel": "In Ausübung eines öffentlichen Amtes",
+              "text": "Hoheitliches Handeln im haftungsrechtlichen Sinn – nicht bloß bei Gelegenheit der Amtsausübung."
+            },
+            {
+              "titel": "Drittbezogene Amtspflicht verletzt",
+              "text": "Die Pflicht muss gerade den Geschädigten schützen. Die Pflicht zu rechtmäßigem Handeln hat P verletzt."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg, Teil 2",
+          "schritte": [
+            {
+              "titel": "Verschulden, Schaden, Kausalität",
+              "text": "Vorsatz oder Fahrlässigkeit des Amtsträgers. Ersetzt wird der Schaden in Geld."
+            },
+            {
+              "titel": "Kein Ausschluss",
+              "text": "Verweisungsprivileg bei Fahrlässigkeit (§ 839 Abs. 1 S. 2 BGB), Spruchrichterprivileg (Abs. 2), versäumtes Rechtsmittel (Abs. 3)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den Beamten P verklagen oder vor das Verwaltungsgericht ziehen. Anspruchsgegner ist die Körperschaft, die P das Amt anvertraut hat – regelmäßig seine Anstellungskörperschaft. Rechtsweg: ordentliche Gerichte (Art. 34 S. 3 GG), sachlich das Landgericht (§ 71 Abs. 2 Nr. 2 GVG)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anspruch gegen den Staat, nicht gegen den Beamten: § 839 BGB i. V. m. Art. 34 GG – vor dem Landgericht."
+        },
+        {
+          "art": "cta",
+          "titel": "Amtshaftung in drei Fragen",
+          "punkte": [
+            "Wer hat das Amt anvertraut?",
+            "Drittbezogene Amtspflicht verletzt?",
+            "Ausschluss nach § 839 Abs. 1 S. 2, Abs. 3 BGB?"
+          ],
+          "icons": [
+            "gebaeude",
+            "paragraf",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Amtshaftung: Verklagt wird nicht der Beamte. § 839 BGB begründet seine persönliche Haftung, Art. 34 S. 1 GG leitet sie auf den Staat über – Anspruchsgegner ist die Körperschaft, die ihm das Amt anvertraut hat. Zu prüfen sind hoheitliches Handeln, eine drittbezogene Amtspflicht, Verschulden, Schaden und die Ausschlüsse des § 839 BGB. Rechtsweg: ordentliche Gerichte, sachlich das Landgericht. Speichern für die nächste Staatshaftungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatshaftung",
+        "#amtshaftung",
+        "#839bgb",
+        "#verwaltungsrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Amtshaftung: Anspruch gegen den Staat",
+      "coverText": "Die Haftung geht auf den Staat über",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Für den Fehler des Amtsträgers steht der Staat ein – der Geschädigte wendet sich an ihn, nicht an den Beamten.",
+        "handlung": "{A} nervously holds a broken door handle next to a damaged front door, while {B} hovers in and takes the heavy repair bill from {A}'s hand to carry it toward a large public building.",
+        "hinweisRegie": "Place the note in the open space between {B} and the public building, slightly tilted toward the building, so it shows where the claim goes without covering the bill or the damaged door.",
+        "alternative": "{A} guides a claimant past a nervous uniformed figure toward a big official counter, where {B} stamps a compensation voucher."
+      },
+      "bildSzene": "droid carries repair bill to public building",
+      "bildSzeneAlt": "claimant guided past officer to counter",
+      "quellen": [
+        "§ 839 BGB",
+        "Art. 34 GG",
+        "§ 71 Abs. 2 Nr. 2 GVG",
+        "Themenpool: verwalt-392"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "adressat-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.460Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-454",
+      "slug": "2027-01-13-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gesamtschuldner zahlt: zwei Wege zum Regress",
+          "titelZeilen": [
+            "Gesamtschuldner",
+            "zahlt: zwei Wege",
+            "zum Regress"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 426 Abs. 1 und Abs. 2 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A und B beschädigen gemeinsam das Auto des K, Schaden 10.000 Euro. Beide haften K als Gesamtschuldner (§§ 823 Abs. 1, 840 Abs. 1 BGB). K verlangt alles von A, A zahlt. Was kann A von B verlangen – und woraus?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Anspruchsgrundlagen",
+          "links": {
+            "titel": "§ 426 Abs. 1 BGB",
+            "punkte": [
+              "Eigener Ausgleichsanspruch, entsteht schon mit der Gesamtschuld.",
+              "Vor der Zahlung: Mitwirkung und Befreiung verlangen."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 426 Abs. 2 BGB",
+            "punkte": [
+              "Die Forderung des K geht auf A über, soweit er Ausgleich verlangen kann.",
+              "Sicherheiten gehen mit über (§§ 412, 401 BGB)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Wie viel?",
+          "text": "Im Innenverhältnis haften Gesamtschuldner zu gleichen Anteilen, soweit nicht ein anderes bestimmt ist (§ 426 Abs. 1 S. 1 BGB). Anderes kann aus Vertrag, Gesetz oder der Natur der Sache folgen, bei gemeinsamer Schädigung aus § 254 BGB analog. Ohne Besonderheiten: A verlangt 5.000 Euro."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nur einen der beiden Ansprüche prüfen oder beide vermengen. Sie stehen selbständig nebeneinander. Das zeigt sich bei der Verjährung: Der Anspruch aus Abs. 1 verjährt eigenständig, die übergegangene Forderung aus Abs. 2 so, wie sie beim Gläubiger lief."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 426 BGB gibt zwei Ansprüche: den eigenen Ausgleichsanspruch aus Abs. 1 und die übergegangene Gläubigerforderung aus Abs. 2."
+        },
+        {
+          "art": "cta",
+          "titel": "Regress in drei Zügen",
+          "punkte": [
+            "Gesamtschuld feststellen (§ 421 BGB)",
+            "Anteil im Innenverhältnis bestimmen",
+            "Abs. 1 und Abs. 2 getrennt prüfen"
+          ],
+          "icons": [
+            "personen",
+            "waage",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Ein Gesamtschuldner zahlt alles – dann hat er zwei Wege zum Regress. § 426 Abs. 1 BGB gibt ihm einen eigenen Ausgleichsanspruch, der schon mit der Gesamtschuld entsteht. Nach § 426 Abs. 2 BGB geht zusätzlich die Forderung des Gläubigers auf ihn über, samt Sicherheiten. Maßstab: im Zweifel gleiche Anteile, bei gemeinsamer Schädigung die Verursachungsbeiträge nach § 254 BGB analog. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#gesamtschuld",
+        "#426bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gesamtschuld: Regress nach § 426 BGB",
+      "coverText": "§ 426 Abs. 1 und Abs. 2 BGB",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wer als Gesamtschuldner alles zahlt, kann sich den Anteil des anderen auf zwei Wegen zurückholen.",
+        "handlung": "{B} has just handed a full sack of crystals to a merchant and turns to {A}, who curiously holds up two different keys toward a shared strongbox standing between them.",
+        "hinweisRegie": "Place the note in the free space above the two keys, slightly tilted toward the strongbox, so it reads as the two routes to recourse without covering hands or the empty sack.",
+        "alternative": "{A} and {B} carry a long heavy beam together, while a small balance on the ground shows how the weight should be shared between them."
+      },
+      "bildSzene": "two keys held toward shared strongbox",
+      "bildSzeneAlt": "heavy beam carried by two, balance",
+      "quellen": [
+        "§ 421 BGB",
+        "§ 426 BGB",
+        "§ 840 Abs. 1 BGB",
+        "§§ 412, 401 BGB",
+        "§ 254 BGB",
+        "Themenpool: schuld-454"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-anspruchsgrundlagen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.461Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-881",
+      "slug": "2027-01-13-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Aufklärungsrüge: Der dritte Baustein ist der Kern",
+          "unter": "Revision · § 244 Abs. 2 StPO",
+          "text": "Vier Bausteine – im Zentrum steht: Warum musste sich die Beweiserhebung aufdrängen?",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "icon": "lupe",
+          "sprecher": "Vier Bausteine, und der dritte trägt die Aufklärungsrüge. Als Verfahrensrüge muss sie nach § 344 Absatz 2 Satz 2 StPO alle Tatsachen selbst enthalten. Ihr Kern ist die Frage, warum sich dem Gericht die Beweiserhebung aufdrängen musste.",
+          "marken": [
+            "4 Bausteine",
+            "Kern: aufdrängen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Bestimmte Beweistatsache",
+          "text": "Welche konkrete Tatsache hätte das Gericht aufklären müssen?",
+          "norm": "§ 244 Abs. 2 StPO",
+          "sprecher": "Baustein eins: die bestimmte Beweistatsache. Welche konkrete Tatsache hätte das Gericht noch aufklären müssen? Eine bloße Richtung oder Vermutung reicht nicht.",
+          "marken": [
+            "konkrete Tatsache"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Bestimmtes Beweismittel",
+          "text": "Welcher Zeuge, welche Urkunde, welches Gutachten?",
+          "norm": null,
+          "sprecher": "Baustein zwei: das bestimmte Beweismittel. Welcher Zeuge, welche Urkunde oder welches Gutachten hätte die Tatsache belegt?",
+          "marken": [
+            "welches Mittel?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Der Kern: Warum musste es sich aufdrängen?",
+          "text": "Konkrete Umstände aus Akte oder Hauptverhandlung – nicht bloß: Man hätte mehr ermitteln können.",
+          "norm": null,
+          "sprecher": "Baustein drei, der Kern: die Umstände, aus denen sich das Gericht zu dieser Beweiserhebung gedrängt sehen musste. Etwa ein Hinweis in den Akten oder eine Aussage in der Hauptverhandlung. Dass man mehr hätte ermitteln können, reicht nicht.",
+          "marken": [
+            "gedrängt?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Erwartetes Ergebnis",
+          "text": "Was hätte die Beweiserhebung ergeben – und warum kann das Urteil darauf beruhen?",
+          "norm": "§ 337 StPO",
+          "sprecher": "Baustein vier: das zu erwartende Ergebnis. Was hätte die Beweiserhebung ergeben? Daran knüpft das Beruhen nach § 337 StPO an: Es ist nicht auszuschließen, dass das Urteil anders ausgefallen wäre.",
+          "marken": [
+            "Ergebnis + Beruhen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Abgrenzung zum Beweisantrag",
+          "text": "Wurde ein Beweisantrag abgelehnt, liegt die Rüge der fehlerhaften Ablehnung näher.",
+          "norm": "§ 244 Abs. 3–6 StPO",
+          "sprecher": "Und die Abgrenzung: Wurde ein Beweisantrag gestellt und abgelehnt, rügst du in erster Linie die fehlerhafte Ablehnung. Die Aufklärungsrüge greift, wenn das Gericht von sich aus hätte aufklären müssen.",
+          "marken": [
+            "Antrag abgelehnt?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Tatsache, Beweismittel, Drängen, Ergebnis – alles in die Begründung.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "sprecher": "Merke: Tatsache, Beweismittel, Drängen, Ergebnis. Fehlt ein Baustein, ist die Rüge unzulässig. Und am Drängen entscheidet sich, ob sie trägt.",
+          "marken": [
+            "alles in die Begründung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim Entwurf zuerst das Drängen begründen",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "sprecher": "Speicher dir das für die nächste Revisionsklausur. Und begründe beim Entwurf zuerst, warum sich die Beweiserhebung aufdrängen musste.",
+          "marken": [
+            "Drängen zuerst"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Aufklärungsrüge hat vier Bausteine – und der dritte ist ihr Kern: die Umstände, aus denen sich das Gericht zur Beweiserhebung gedrängt sehen musste. Daneben verlangt § 344 Abs. 2 S. 2 StPO die bestimmte Beweistatsache, das bestimmte Beweismittel und das zu erwartende Ergebnis. Daran knüpft das Beruhen an (§ 337 StPO). Wurde ein Beweisantrag abgelehnt, steht dessen fehlerhafte Ablehnung im Vordergrund.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#aufklärungsrüge",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aufklärungsrüge: vier Bausteine, ein Kern",
+      "titelZeilen": [
+        "Aufklärungsrüge:",
+        "Der dritte Baustein",
+        "ist der Kern"
+      ],
+      "coverText": "Warum musste es sich aufdrängen?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Von vier Bausteinen trägt einer das Gewicht: der Grund, warum sich die Beweiserhebung aufdrängen musste.",
+        "handlung": "{A} taps with his pointer on the keystone of a small stone arch built from four blocks, while {B} nervously holds that third block in place with both hands.",
+        "hinweisRegie": "Place the note in the free space just above the keystone, slightly tilted toward it, so it marks the load-bearing element without covering {B}'s hands, the other blocks or the pointer.",
+        "alternative": "{B} assembles a small four-legged stool while {A} shows that it topples as soon as one leg is missing."
+      },
+      "bildSzene": "professor taps keystone of four-block arch",
+      "bildSzeneAlt": "four-legged stool topples without a leg",
+      "quellen": [
+        "§ 244 Abs. 2 StPO",
+        "§ 344 Abs. 2 S. 2 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-881"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "dritter-baustein-kern",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-506",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Redlicher, unverklagter Besitzer B beschädigt die Sache des E leicht fahrlässig. Haftet B?",
+      "optionen": [
+        "Nein – als redlicher, unverklagter Besitzer ist B privilegiert",
+        "Ja, nach § 989 BGB, weil B fahrlässig handelte",
+        "Ja, jedenfalls unbeschränkt nach § 823 Abs. 1 BGB"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§§ 989, 990 BGB",
+        "§ 993 Abs. 1 BGB",
+        "Themenpool: sachen-506"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-506",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ohne Rechtshängigkeit oder Bösgläubigkeit keine Haftung",
+      "text": "§ 989 BGB greift erst ab Rechtshängigkeit, § 990 Abs. 1 BGB nur bei Bösgläubigkeit: beim Besitzerwerb Kenntnis oder grob fahrlässige Unkenntnis, später positive Kenntnis. Für den redlichen, unverklagten Besitzer sperrt § 993 Abs. 1 Hs. 2 BGB weitere Ansprüche, auch aus § 823 BGB. Ausnahme nach h.M.: der Fremdbesitzerexzess.",
+      "norm": "§§ 989, 990, 993 Abs. 1 BGB",
+      "quellen": [
+        "§§ 989, 990 BGB",
+        "§ 993 Abs. 1 BGB",
+        "Themenpool: sachen-506"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.462Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – als redlicher, unverklagter Besitzer ist B privilegiert",
+        "Ja, nach § 989 BGB, weil B fahrlässig handelte",
+        "Ja, jedenfalls unbeschränkt nach § 823 Abs. 1 BGB"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-465",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 439 Abs. 4 BGB: relative und absolute Unverhältnismäßigkeit",
+      "text": "Relativ: Die gewählte Art ist im Vergleich zur anderen unverhältnismäßig teuer – der Anspruch beschränkt sich auf die andere Art. Absolut: Auch diese kann der Verkäufer verweigern, wenn sie für sich unverhältnismäßige Kosten verursacht (§ 439 Abs. 4 S. 3 BGB). Es ist eine Einrede. Beim Verbrauchsgüterkauf die §§ 475 ff. BGB gesondert prüfen.",
+      "norm": "§ 439 Abs. 4 BGB",
+      "quellen": [
+        "§ 439 Abs. 4 BGB",
+        "§ 475 BGB",
+        "Themenpool: schuldbt-465"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-923",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "A schlägt mit bedingtem Tötungsvorsatz auf N ein, bis N verspricht wegzuziehen. A hört auf. Rücktritt?",
+      "norm": "§ 24 Abs. 1 StGB",
+      "optionen": [
+        "BGH (Großer Senat): Ja – er gibt die Tatbestandsverwirklichung auf; das Motiv zählt nicht.",
+        "Teile der Lit.: Nein – wer sein Ziel erreicht hat, verzichtet auf nichts."
+      ],
+      "text": "Knackpunkt ist das Wort „Tat“: Der BGH liest es tatbestandlich. Für ihn spricht der Opferschutz – auch der Täter am Ziel soll einen Anreiz haben aufzuhören.",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "BGH, Großer Senat für Strafsachen (außertatbestandliche Zielerreichung)",
+        "Themenpool: strafat-923"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-123",
+      "ueberzeile": "Merksatz Schuldrecht AT",
+      "titel": "DSL oder Schutzwirkung: Wer holt den Schaden?",
+      "text": "Vertrag mit Schutzwirkung: Der Dritte erhält einen eigenen Anspruch. DSL: Der Gläubiger macht den Schaden des Dritten geltend. Hat der Dritte schon einen eigenen Anspruch, fehlt die zufällige Schadensverlagerung.",
+      "norm": "§ 249 BGB",
+      "quellen": [
+        "§ 249 BGB",
+        "Vertrag mit Schutzwirkung für Dritte (Rspr.)",
+        "Themenpool: schuld-123"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-491",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Freie Kündigung: Der Besteller zahlt trotzdem",
+      "text": "Der Besteller kann bis zur Vollendung des Werks jederzeit kündigen (§ 648 S. 1 BGB). Der Unternehmer behält die Vergütung, muss sich aber Ersparnisse und anderweitigen Erwerb anrechnen lassen; vermutet werden 5 % für den nicht erbrachten Teil. Anders § 648a BGB: Kündigung aus wichtigem Grund, Vergütung nur für das Erbrachte.",
+      "norm": "§§ 648, 648a BGB",
+      "quellen": [
+        "§ 648 BGB",
+        "§ 648a BGB",
+        "Themenpool: schuldbt-491"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:51:53.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
