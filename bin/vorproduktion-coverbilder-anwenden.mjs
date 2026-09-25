@@ -267,18 +267,27 @@ function zielPfad(basis, datum, slot, inhalt) {
   return path.join(dir, `${datum}-${slot}-01.jpg`);
 }
 
-async function teaserAktualisieren(tag, datum, beitragSlot, beitrag, coverPfad) {
+async function teaserAktualisieren(tag, datum, beitragSlot, beitrag) {
   const ziele = (tag.plan?.stories || []).filter((s) => s.art === "teaser" && s.beitragSlot === beitragSlot && s.slot);
   if (!ziele.length) return;
-  const titel = beitrag.kurztitel || beitrag.folien?.[0]?.titel || beitrag.szenen?.[0]?.titel || "Neuer Beitrag";
-  const coverBild = `data:image/jpeg;base64,${fs.readFileSync(coverPfad).toString("base64")}`;
+  const titelFolie = beitrag.folien?.[0] || beitrag.szenen?.[0] || {};
+  const motiv = beitrag.bild ? beitrag : titelFolie;
+  const titel = beitrag.kurztitel || titelFolie.titel || "Neuer Beitrag";
   const storyDir = path.join(hosting.dir, "vorproduktion", datum, "fertig", "stories");
   fs.mkdirSync(storyDir, { recursive: true });
   for (const p of ziele) {
     const story = {
       slot: p.slot, art: "teaser", beitragSlot,
       fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel,
-      ueberzeile: "Neuer Beitrag", titel, pille: "Jetzt im Feed", coverBild,
+      ueberzeile: "Neuer Beitrag", titel, pille: "Jetzt im Feed",
+      /* Wichtig: nur der transparente Freisteller, nie das gerenderte Cover. */
+      bild: motiv.bild || null,
+      bildFrei: motiv.bildFrei !== false,
+      bildQuelle: motiv.bildQuelle || null,
+      bildBreite: motiv.bildBreite || null,
+      bildHoehe: motiv.bildHoehe || null,
+      bildTyp: motiv.bildTyp || null,
+      bildCharaktere: motiv.bildCharaktere || null,
     };
     await storyRendern(story, path.join(storyDir, `${p.slot}-teaser.jpg`), { variante: 0 });
   }
@@ -442,7 +451,7 @@ try {
       renderMeta = vollcoverZuJpeg(quelle, target, 1080, reel ? 1920 : 1350);
     }
 
-    await teaserAktualisieren(tag, datum, slot, inhalt, target);
+    await teaserAktualisieren(tag, datum, slot, inhalt);
 
     const entry = {
       quelle: `vorproduktion/coverbilder/${name}`,
@@ -541,7 +550,7 @@ try {
         slots: [...new Set([...(tag.renderVorschau?.coverbilderAngewandt?.slots || []), slot])].sort(),
       },
     };
-    await teaserAktualisieren(tag, datum, slot, inhalt, target);
+    await teaserAktualisieren(tag, datum, slot, inhalt);
     console.log(`✓ Rohbild-Cache -> ${datum} ${slot} · Cover ohne Handschrift neu gerendert`);
   }
 } finally {

@@ -1230,12 +1230,7 @@ async function main() {
            Medien-ID nicht gibt. Der Planstatus allein reicht nicht: Am 18.09.
            stand er auf „veröffentlicht“, während die ID „trocken“ lautete. */
         if (!beitrag || !veroeffentlichtBestaetigt(b)) { log(`Story ${eintrag.slot}: Beitrag ${eintrag.beitragSlot} noch nicht veröffentlicht – später.`); continue; }
-        let coverBild = b?.coverUrl || beitrag.teaserCoverUrl || beitrag.coverFinalUrl || null;
-        if (vorproduktionAktiv && b) {
-          const asset = vorproduktionFeedAssets(vorproduktion, b);
-          coverBild = b.format === "reel" ? asset.coverUrl : asset.bildUrls?.[0];
-        }
-        story = teaserAusBeitrag(beitrag, eintrag.slot, coverBild);
+        story = teaserAusBeitrag(beitrag, eintrag.slot);
       } else {
         story = geschrieben.get(eintrag.slot);
         /* Eine Stelle entscheidet, ob diese Story erscheinen darf: ungeprüft
@@ -1279,19 +1274,14 @@ async function main() {
       }
 
       let medienId = null;
-      if (vorproduktionAktiv && eintrag.art !== "teaser") {
+      if (vorproduktionAktiv) {
         const asset = vorproduktionStoryAsset(vorproduktion, eintrag.slot);
         medienId = await ig.storyPosten({ bildUrl: asset.bildUrl });
         kontingent.genutzt += 1;
         log(`  Vorproduktion: fertige Story ${eintrag.slot} wird unverändert verwendet.`);
       } else {
-        /* Teaser werden immer frisch aus dem finalen Cover des verknuepften
-           Beitrags gerendert. So kann kein veralteter Teaser aus einem frueheren
-           Vorproduktionsschritt live gehen. Andere Stories behalten ihren
-           bisherigen Motivweg. */
-        if (vorproduktionAktiv && eintrag.art === "teaser") {
-          log(`  Vorproduktion: Teaser ${eintrag.slot} wird aus dem finalen Cover von ${eintrag.beitragSlot} neu gerendert.`);
-        }
+        /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
+           Tipp); der Teaser bringt den Freisteller des Beitrags schon mit. */
         await motivBesorgen(story, "Story-Motiv", { ki: false });
         const zielBild = path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`);
         const stilOpt = { variante: varianteStory(eintrag.slot) };

@@ -189,12 +189,6 @@ code{font-family:var(--mono);font-size:.92em;white-space:nowrap}
    Text darueber bleibt frei, die Fusszeile liegt ueber dem Motiv. */
 .story .frei{width:720px;height:820px;right:40px;bottom:44px}
 .story .foto{left:84px;right:84px;bottom:150px;height:600px}
-/* Story-Teaser zeigen das echte Feed-Cover als Ganzes. Kein Crop, keine
-   erneute Typografie: Der Nutzer soll genau den Beitrag wiedererkennen, den
-   er im Feed oeffnet. */
-.story .teaser-cover{position:absolute;left:150px;right:150px;bottom:250px;height:880px;display:flex;align-items:center;justify-content:center;z-index:2}
-.story .teaser-cover img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:32px;box-shadow:0 30px 70px rgba(0,0,0,.24)}
-.story:has(.teaser-cover) .fuss{z-index:3}
 .story:has(.frei) .fuss,.story:has(.foto) .fuss{z-index:3}
 .story .bildquelle{position:absolute;left:84px;bottom:96px;font-size:22px;color:var(--text-weich);opacity:.85;z-index:3}
 /* Steht ein Motiv auf der Story, ruecken ALLE Inhaltsbloecke auf dieselbe
@@ -959,11 +953,10 @@ const STORIES = {
     ${sk(ctx)}
     ${ueberzeile("teilen", s.ueberzeile || "Neuer Beitrag")}
     <h1 class="${titelKlasse(s.titel)}">${markierenTitel(s.titel)}</h1>
-    ${s.coverBild ? "" : (s.text ? `<div class="text">${markieren(s.text)}</div>` : "")}
+    ${s.text ? `<div class="text">${markieren(s.text)}</div>` : ""}
     <div><span class="pille">${esc(s.pille || "Jetzt im Feed")}</span></div>
-    ${s.coverBild
-      ? `<div class="teaser-cover"><img src="${esc(s.coverBild)}" alt=""></div>`
-      : `<div class="hinweis">Oben auf den Namen tippen – der Beitrag ist der neueste im Profil.</div>${bildOderIllu(ctx, s)}`}
+    <div class="hinweis">Oben auf den Namen tippen – der Beitrag ist der neueste im Profil.</div>
+    ${bildOderIllu(ctx, s)}
     ${fuss(ctx)}`,
   frage: (s, ctx) => `
     ${sk(ctx)}

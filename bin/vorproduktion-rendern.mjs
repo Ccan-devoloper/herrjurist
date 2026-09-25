@@ -51,12 +51,20 @@ function teaserTitel(beitrag = {}) {
   return beitrag.kurztitel || beitrag.folien?.[0]?.titel || beitrag.szenen?.[0]?.titel || "Neuer Beitrag";
 }
 
-function teaserFuer(slot, beitrag, beitragSlot, coverPfad) {
+function teaserFuer(slot, beitrag, beitragSlot) {
+  const titelFolie = beitrag.folien?.[0] || beitrag.szenen?.[0] || {};
+  const motiv = beitrag.bild ? beitrag : titelFolie;
   return {
     slot, art: "teaser", beitragSlot,
     fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel,
     ueberzeile: "Neuer Beitrag", titel: teaserTitel(beitrag), pille: "Jetzt im Feed",
-    coverBild: `data:image/jpeg;base64,${fs.readFileSync(coverPfad).toString("base64")}`,
+    bild: motiv.bild || null,
+    bildFrei: motiv.bildFrei !== false,
+    bildQuelle: motiv.bildQuelle || null,
+    bildBreite: motiv.bildBreite || null,
+    bildHoehe: motiv.bildHoehe || null,
+    bildTyp: motiv.bildTyp || null,
+    bildCharaktere: motiv.bildCharaktere || null,
   };
 }
 
@@ -288,7 +296,7 @@ try {
     const tagTemp = path.join(temp, datum);
     fs.mkdirSync(tagTemp, { recursive: true });
     const mTag = { datum, feed: [], stories: [] };
-    const coverPfade = new Map();
+    const teaserBeitraege = new Map();
 
     for (const slot of feedSlots) {
       const inhalt = structuredClone(tag.inhalte?.[slot]);
@@ -309,7 +317,6 @@ try {
         const titel = inhalt.folien.find((x) => x.art === "titel") || inhalt.folien[0];
         motivUebernehmen(titel, treffer);
         const pfade = await beitragRendern(inhalt, slotTemp, { variante: 0 });
-        coverPfade.set(slot, pfade[0]);
         mTag.feed.push({
           slot,
           format: inhalt.format,
@@ -328,7 +335,6 @@ try {
         if (nurCover) {
           const cover = path.join(slotTemp, `${inhalt.slug || "reel"}-cover.jpg`);
           await coverRendern(coverDaten(inhalt, { gesamt: 60 }), cover, { variante: 0 });
-          coverPfade.set(slot, cover);
           mTag.feed.push({
             slot,
             format: "reel-cover",
@@ -349,7 +355,6 @@ try {
             layout: "erklaer",
             framesBehalten: false,
           });
-          coverPfade.set(slot, r.cover);
           mTag.feed.push({
             slot,
             format: "reel",
@@ -372,20 +377,19 @@ try {
       } else {
         throw new Error(`${datum} ${slot}: unbekanntes Inhaltsformat`);
       }
+      teaserBeitraege.set(slot, structuredClone(inhalt));
     }
 
-    /* Teaser s1-s3 werden aus dem EXAKTEN, gerade gerenderten Feed-Cover
-       abgeleitet. Damit ist die Review-Story visuell identisch mit dem Beitrag.
+    /* Teaser s1-s3 uebernehmen nur den Freisteller, der beim Feed-Cover
+       verwendet wurde. Das fertig gerenderte Cover selbst wird nie eingebettet.
        Eigenstaendige Stories bleiben unveraendert providerfrei. */
     const storyDir = path.join(tagTemp, "stories");
     fs.mkdirSync(storyDir, { recursive: true });
     for (const p of tag.plan?.stories || []) {
       if (p.art !== "teaser" || !p.beitragSlot || !p.slot || (storySlots.length && !storySlots.includes(p.slot))) continue;
-      const coverPfad = coverPfade.get(p.beitragSlot);
-      if (!coverPfad) continue;
-      const beitrag = tag.inhalte?.[p.beitragSlot];
-      if (!beitrag) throw new Error(`${datum} ${p.slot}: Feed-Bezug ${p.beitragSlot} fehlt`);
-      const story = teaserFuer(p.slot, beitrag, p.beitragSlot, coverPfad);
+      const beitrag = teaserBeitraege.get(p.beitragSlot);
+      if (!beitrag) continue;
+      const story = teaserFuer(p.slot, beitrag, p.beitragSlot);
       const ziel = path.join(storyDir, `${p.slot}-teaser.jpg`);
       await storyRendern(story, ziel, { variante: 0 });
       mTag.stories.push({ slot: p.slot, art: "teaser", datei: path.basename(ziel) });
