@@ -1,0 +1,850 @@
+{
+  "datum": "2026-11-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "schuldbt-195",
+        "themaTitel": "Welche Bedeutung hat die Abnahme beim Werkvertrag?",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "stpo-784",
+        "themaTitel": "Inbegriff der Hauptverhandlung und freie Beweiswürdigung",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-668",
+        "themaTitel": "Einstweilige Anordnung",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:09",
+        "art": "frage",
+        "themaId": "bgbat-428"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:09",
+        "art": "antwort",
+        "themaId": "bgbat-428"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "famerb-047"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:39",
+        "art": "tipp",
+        "themaId": "zpo-277"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "zahl",
+        "themaId": "anklage-857"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "streitstand",
+        "themaId": "strafat-923"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "schuldbt-195",
+      "poolTitel": "Welche Bedeutung hat die Abnahme beim Werkvertrag?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 640 BGB",
+        "§ 644 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "stpo-784",
+      "poolTitel": "Inbegriff der Hauptverhandlung und freie Beweiswürdigung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-668",
+      "poolTitel": "Einstweilige Anordnung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-428",
+      "poolTitel": "Anfechtung durch Vertreter: Wissenszurechnung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 123, 166 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-428",
+      "poolTitel": "Anfechtung durch Vertreter: Wissenszurechnung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 123, 166 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-047",
+      "poolTitel": "Worin unterscheiden sich Vor- und Nacherbe von Erbe und Vermächtnisnehmer?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 2100 BGB",
+        "§ 1939 BGB",
+        "§ 2174 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "zpo-277",
+      "poolTitel": "Was ist der Streitgegenstand und warum entscheidet er über die Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-10"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "anklage-857",
+      "poolTitel": "Was steht im abstrakten Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "strafat-923",
+      "poolTitel": "Außertatbestandliche Zielerreichung: Rücktritt trotz erteilten Denkzettels?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-195",
+      "slug": "2026-11-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ohne Abnahme kein fälliger Werklohn – auch wenn alles fertig ist",
+          "titelZeilen": [
+            "Ohne Abnahme",
+            "kein fälliger",
+            "Werklohn"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Fertig ist nicht abgenommen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "U renoviert das Bad des B, meldet die Fertigstellung und verlangt sofort Zahlung. B hat das Bad noch nicht angesehen. Bevor er es tut, zerstört ein Wasserrohrbruch, den keiner zu vertreten hat, die neuen Fliesen. Kann U schon Werklohn verlangen – und wer trägt den Schaden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Was die Abnahme auslöst",
+          "schritte": [
+            {
+              "titel": "Fälligkeit",
+              "text": "Die Vergütung ist bei der Abnahme zu entrichten (§ 641 Abs. 1 BGB). Fertigstellung allein genügt nicht."
+            },
+            {
+              "titel": "Gefahrübergang",
+              "text": "Bis zur Abnahme trägt der Unternehmer die Gefahr (§ 644 Abs. 1 S. 1 BGB): Geht das Werk unter, gibt es dafür kein Geld."
+            },
+            {
+              "titel": "Beweislast",
+              "text": "Vor der Abnahme muss der Unternehmer die Mangelfreiheit beweisen, danach der Besteller den Mangel."
+            },
+            {
+              "titel": "Verjährung",
+              "text": "Bei Sachen und Bauwerken beginnt die Verjährung der Mängelansprüche mit der Abnahme (§ 634a Abs. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Abnahme ohne ausdrückliche Erklärung",
+          "punkte": [
+            "Abnahme: körperliche Entgegennahme und Billigung als im Wesentlichen vertragsgemäß.",
+            "Wegen unwesentlicher Mängel darf der Besteller sie nicht verweigern (§ 640 Abs. 1 S. 2 BGB).",
+            "Fiktion (§ 640 Abs. 2 BGB): Frist gesetzt, keine Verweigerung unter Angabe eines Mangels.",
+            "Beim Verbraucher nur nach Hinweis auf diese Folge in Textform."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Fertigstellung mit Abnahme gleichsetzen. Die Abnahme ist ein Akt des Bestellers. Hier fehlt sie, und eine Fiktion scheidet aus, weil U keine Frist gesetzt hat. Also: kein fälliger Werklohn. Die zerstörten Fliesen muss U grundsätzlich neu verlegen, ohne dafür zusätzlich Vergütung zu bekommen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Abnahme macht den Werklohn fällig, verlagert Gefahr und Beweislast und startet die Verjährung. Fertig ist nicht abgenommen."
+        },
+        {
+          "art": "cta",
+          "titel": "Abnahme in vier Folgen",
+          "punkte": [
+            "Werklohn wird fällig (§ 641 BGB)",
+            "Gefahr geht über (§ 644 BGB)",
+            "Besteller beweist den Mangel",
+            "Verjährung beginnt (§ 634a Abs. 2 BGB)"
+          ],
+          "icons": [
+            "muenzen",
+            "warnung",
+            "lupe",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Ohne Abnahme kein fälliger Werklohn – auch wenn das Werk fertig ist. Die Abnahme ist die körperliche Entgegennahme und Billigung des Werks als im Wesentlichen vertragsgemäß. Sie macht die Vergütung fällig (§ 641 Abs. 1 BGB), lässt die Gefahr übergehen (§ 644 BGB), dreht die Beweislast für Mängel und startet die Verjährung (§ 634a Abs. 2 BGB). Schweigt der Besteller, hilft nur die Fiktion des § 640 Abs. 2 BGB. Speichern für die nächste Werkvertragsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#werkvertrag",
+        "#640bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Werkvertrag: was die Abnahme auslöst",
+      "coverText": "Fertig ist nicht abgenommen",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Erst wenn der Besteller das Werk billigt, wird der Werklohn fällig und die Gefahr geht über.",
+        "handlung": "{A} proudly presents a freshly repaired portal frame and holds out an open hand for payment, while {B} has not yet stepped close enough to inspect it and hesitates a few steps away.",
+        "hinweisRegie": "Place the note in the free space between {A}'s outstretched hand and the hesitating {B}, slightly tilted toward {B}, so the missing approval is the focus without covering the repaired frame.",
+        "alternative": "{B} walks around a finished machine with a checklist while {A} waits beside a still-closed cash box that only opens after her nod."
+      },
+      "bildSzene": "mechanic waits for payment, inspector hesitates",
+      "bildSzeneAlt": "closed cash box waits for approval",
+      "quellen": [
+        "§ 640 BGB",
+        "§ 641 BGB",
+        "§ 644 BGB",
+        "§ 634a BGB",
+        "Themenpool: schuldbt-195"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.808Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-784",
+      "slug": "2026-11-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 261 StPO kennt keine Beweisregeln – aber vier Grenzen",
+          "titelZeilen": [
+            "§ 261 StPO kennt",
+            "keine Beweisregeln –",
+            "aber vier Grenzen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Frei, aber nicht beliebig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Über das Ergebnis der Beweisaufnahme entscheidet das Gericht nach seiner freien, aus dem Inbegriff der Verhandlung geschöpften Überzeugung (§ 261 StPO). Frei heißt: keine festen Beweisregeln. Maßgeblich ist die persönliche Gewissheit des Tatrichters – vernünftige Zweifel dürfen nicht bleiben."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Grenzen, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Inbegriff der Hauptverhandlung",
+              "text": "Verwertbar ist nur, was prozessordnungsgemäß in die Hauptverhandlung eingeführt wurde – nicht der bloße Akteninhalt."
+            },
+            {
+              "titel": "2. Denkgesetze und Erfahrungssätze",
+              "text": "Die Würdigung darf nicht gegen Logik oder gesicherte wissenschaftliche Erkenntnisse verstoßen."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Grenzen, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Lückenlose Gesamtwürdigung",
+              "text": "Alle wesentlichen Umstände werden erörtert, Indizien auch in ihrer Gesamtschau. Keine Widersprüche, keine Lücken."
+            },
+            {
+              "titel": "4. Zweifel zugunsten des Angeklagten",
+              "text": "Bleiben nach der Würdigung Zweifel, gilt in dubio pro reo – eine Entscheidungsregel, keine Beweisregel."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Welche Rüge?",
+          "text": "Stützt sich das Urteil auf etwas, das nicht in der Hauptverhandlung war, ist das ein Verfahrensfehler: Verfahrensrüge mit vollständigem Tatsachenvortrag (§ 344 Abs. 2 S. 2 StPO). Lücken, Widersprüche und Verstöße gegen Denkgesetze prüft das Revisionsgericht dagegen auf die Sachrüge."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Frei heißt ohne Beweisregeln – nicht ohne Inbegriff, Denkgesetze, Gesamtwürdigung und in dubio pro reo."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 261 StPO in vier Prüfsteinen",
+          "punkte": [
+            "Nur Inbegriff der Hauptverhandlung",
+            "Denkgesetze und Erfahrungssätze",
+            "Lückenlose Gesamtwürdigung",
+            "Zweifel: in dubio pro reo"
+          ],
+          "icons": [
+            "gericht",
+            "lupe",
+            "klemmbrett",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "§ 261 StPO kennt keine Beweisregeln – aber die freie Beweiswürdigung hat vier Grenzen: Verwertet wird nur der Inbegriff der Hauptverhandlung, Denkgesetze und Erfahrungssätze sind zu beachten, die Würdigung muss lückenlos und widerspruchsfrei sein, und bleiben Zweifel, gilt in dubio pro reo. Für die Revision zählt die Unterscheidung: Inbegriffsfehler über die Verfahrensrüge, Darstellungsmängel über die Sachrüge. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#261stpo",
+        "#beweiswürdigung",
+        "#revision",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 261 StPO: die vier Grenzen",
+      "coverText": "Frei, aber nicht beliebig",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Das Gericht würdigt Beweise frei, bleibt dabei aber an feste Grenzen gebunden.",
+        "handlung": "{A} freely arranges glowing evidence stones on a round table with his pointer, while {B} hovers above and gently pushes back one stone that was brought in from outside the table's rim.",
+        "hinweisRegie": "Place the note in the open space beside the table rim where {B} pushes the stone back, slightly tilted toward the rim, without covering {A}'s pointer or the arranged stones.",
+        "alternative": "{A} builds a small tower of evidence blocks while {B} checks with a spirit level that the tower is straight and has no missing block."
+      },
+      "bildSzene": "professor arranges evidence stones, droid guards rim",
+      "bildSzeneAlt": "evidence tower checked with spirit level",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: stpo-784"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-grenzen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.808Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-668",
+      "slug": "2026-11-09-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gegen den Bescheid hilft § 123 VwGO nicht",
+          "unter": "Eilrechtsschutz · § 123 VwGO",
+          "text": "§ 123 Abs. 5 VwGO: Vorrang von §§ 80, 80a VwGO.",
+          "norm": "§ 123 Abs. 5 VwGO",
+          "icon": "stopp",
+          "sprecher": "Gegen einen belastenden Bescheid hilft § 123 VwGO nicht. Da gilt § 80 Absatz 5. Die einstweilige Anordnung ist der Eilweg für alles andere. So prüfst du sie.",
+          "marken": [
+            "Bescheid? § 80 V",
+            "sonst § 123"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaftigkeit",
+          "text": "Kein Fall der §§ 80, 80a – typisch: Verpflichtungs- oder Leistungsbegehren.",
+          "norm": "§ 123 Abs. 5 VwGO",
+          "sprecher": "Schritt eins: Statthaftigkeit. Nach Absatz fünf tritt § 123 hinter die Paragrafen 80 und 80a zurück. Er passt, wenn in der Hauptsache eine Verpflichtungs-, Leistungs- oder Feststellungsklage richtig wäre, etwa weil du vorläufig eine Erlaubnis oder Zulassung brauchst.",
+          "marken": [
+            "Abgrenzung zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sicherung oder Regelung",
+          "text": "Bestehenden Zustand sichern oder vorläufig regeln.",
+          "norm": "§ 123 Abs. 1 VwGO",
+          "sprecher": "Schritt zwei: welche Anordnung? Die Sicherungsanordnung schützt einen bestehenden Zustand, Satz eins. Die Regelungsanordnung schafft eine vorläufige Regelung, Satz zwei. Weil die Voraussetzungen gleich sind, lassen viele Gerichte die Abgrenzung offen.",
+          "marken": [
+            "S. 1 oder S. 2"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Anordnungsanspruch und Anordnungsgrund",
+          "text": "Recht in der Sache plus Eilbedürftigkeit – beides glaubhaft machen.",
+          "norm": "§ 123 Abs. 3 VwGO · § 920 Abs. 2 ZPO",
+          "sprecher": "Schritt drei: die Begründetheit. Du brauchst einen Anordnungsanspruch, also das materielle Recht, und einen Anordnungsgrund, also die Eilbedürftigkeit. Beides muss glaubhaft gemacht werden, über Absatz drei mit § 920 ZPO.",
+          "marken": [
+            "Anspruch + Grund"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Keine Vorwegnahme der Hauptsache",
+          "text": "Grundsätzlich unzulässig – Ausnahme bei schweren, unzumutbaren Nachteilen.",
+          "norm": "Art. 19 Abs. 4 GG",
+          "sprecher": "Klassiker: das Verbot der Vorwegnahme der Hauptsache. Das Gericht regelt grundsätzlich nur vorläufig. Ausnahmsweise darf es mehr, wenn sonst schwere und unzumutbare Nachteile drohen und die Hauptsache sehr wahrscheinlich Erfolg hätte.",
+          "marken": [
+            "nur vorläufig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Loswerden oder bekommen?",
+          "text": "Bescheid loswerden: § 80 Abs. 5. Etwas bekommen: § 123 VwGO.",
+          "norm": "§§ 80, 123 VwGO",
+          "sprecher": "Merke: Willst du einen Bescheid loswerden, gehst du über § 80 Absatz 5. Willst du etwas bekommen, über § 123, mit Anordnungsanspruch und Anordnungsgrund.",
+          "marken": [
+            "loswerden vs. bekommen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst Absatz 5, dann Begründetheit",
+          "text": "Speichern für den nächsten Eilantrag.",
+          "sprecher": "Speicher dir das für den nächsten Eilantrag. Und prüf immer zuerst Absatz fünf, bevor du in die Begründetheit gehst.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Gegen einen belastenden Bescheid hilft § 123 VwGO nicht: Nach § 123 Abs. 5 VwGO gehen §§ 80, 80a VwGO vor. Die einstweilige Anordnung ist der Eilweg, wenn du etwas bekommen willst – in der Hauptsache also Verpflichtungs-, Leistungs- oder Feststellungsklage. Begründet ist der Antrag bei glaubhaft gemachtem Anordnungsanspruch und Anordnungsgrund; die Hauptsache darf grundsätzlich nicht vorweggenommen werden. Speichern für den nächsten Eilantrag.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#123vwgo",
+        "#eilrechtsschutz",
+        "#verwaltungsprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 123 VwGO: einstweilige Anordnung prüfen",
+      "titelZeilen": [
+        "Gegen den Bescheid",
+        "hilft § 123 VwGO",
+        "nicht"
+      ],
+      "coverText": "Vorrang von § 80 V VwGO",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Wer einen belastenden Bescheid loswerden will, nimmt einen anderen Eilweg als der, der etwas bekommen will.",
+        "handlung": "{A} stands at a fork in a mine tunnel and blocks the left passage with her arm, directing {B}, who carries an empty crate, into the right passage toward a supply depot.",
+        "hinweisRegie": "Place the note in the free space above the right tunnel entrance, slightly tilted toward the supply depot, so it marks the correct path without covering {A}'s blocking arm or {B}'s crate.",
+        "alternative": "{B} tries to push a heavy boulder away with a lever while {A} points him to a different tool made for lifting things up instead."
+      },
+      "bildSzene": "tunnel fork, explorer redirects miner",
+      "bildSzeneAlt": "wrong lever for the boulder",
+      "quellen": [
+        "§ 123 VwGO",
+        "§§ 80, 80a VwGO",
+        "§ 920 Abs. 2 ZPO",
+        "Art. 19 Abs. 4 GG",
+        "Themenpool: vwgo-668"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-abgrenzung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.809Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-428",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Vertreter X täuscht Käufer K arglistig, Verkäuferin V ahnt nichts. Kann K den Kaufvertrag anfechten?",
+      "optionen": [
+        "Nein – V selbst wusste nichts von der Täuschung",
+        "Ja – X ist als Vertreter der V kein Dritter (§ 123 II)",
+        "Nur wenn V die Täuschung kennen musste"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 123 BGB",
+        "§ 166 BGB",
+        "Themenpool: bgbat-428"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.809Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-428",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – der Vertreter ist kein Dritter",
+      "text": "Dritter im Sinne des § 123 Abs. 2 BGB ist nicht, wer auf der Seite des Erklärungsempfängers steht. Der Vertreter, der für V abschließt, gehört in ihr Lager; seine Täuschung muss V sich zurechnen lassen. K kann nach § 123 Abs. 1 BGB anfechten – auf Kenntnis der V kommt es nicht an. Spiegelbild: Wird der Vertreter getäuscht, zählt nach § 166 Abs. 1 BGB seine Person.",
+      "norm": "§ 123 BGB · § 166 Abs. 1 BGB",
+      "quellen": [
+        "§ 123 BGB",
+        "§ 166 BGB",
+        "Themenpool: bgbat-428"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.810Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – V selbst wusste nichts von der Täuschung",
+        "Ja – X ist als Vertreter der V kein Dritter (§ 123 II)",
+        "Nur wenn V die Täuschung kennen musste"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-047",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 2100 BGB: Der Nacherbe ist Erbe – nur später",
+      "text": "Mit der Nacherbfolge setzt der Erblasser Erben nacheinander ein: Zuerst erbt der Vorerbe, mit dem Nacherbfall – etwa dessen Tod – der Nacherbe (§ 2100 BGB). Beide erben vom Erblasser. Der Vermächtnisnehmer wird dagegen nie Erbe: Er erhält nur einen schuldrechtlichen Anspruch gegen den Beschwerten (§§ 1939, 2174 BGB).",
+      "norm": "§ 2100 BGB · §§ 1939, 2174 BGB",
+      "quellen": [
+        "§ 2100 BGB",
+        "§ 1939 BGB",
+        "§ 2174 BGB",
+        "Themenpool: famerb-047"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.810Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-277",
+      "ueberzeile": "Klausurtipp ZPO",
+      "titel": "Rechtskraft? Erst den Streitgegenstand bestimmen",
+      "text": "Nach dem zweigliedrigen Streitgegenstandsbegriff der Rspr. bestimmen Antrag und Lebenssachverhalt den Streitgegenstand (§ 253 Abs. 2 Nr. 2 ZPO). Rechtskräftig wird nur, worüber insoweit entschieden ist (§ 322 Abs. 1 ZPO) – nicht die einzelnen Tatsachenfeststellungen oder Vorfragen. Prüfe also: gleicher Antrag, gleicher Lebenssachverhalt?",
+      "quellen": [
+        "§ 253 ZPO",
+        "§ 322 ZPO",
+        "Themenpool: zpo-277"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.810Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-857",
+      "ueberzeile": "4 Punkte Anklage",
+      "titel": "Der abstrakte Anklagesatz: Was hineingehört",
+      "text": "Er fasst die Tat in Gesetzesworten zusammen – ohne Sachverhalt. Danach folgen der konkrete Anklagesatz und die anzuwendenden Vorschriften. Formulierungsdetails unterscheiden sich je nach Land.",
+      "punkte": [
+        "Gesetzliche Merkmale in der Sprache des Gesetzes",
+        "Schuldform, wenn auch Fahrlässigkeit strafbar ist",
+        "Beteiligungsform, etwa gemeinschaftlich",
+        "Konkurrenzen: tateinheitlich oder tatmehrheitlich"
+      ],
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "Themenpool: anklage-857"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.810Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-923",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Denkzettel verpasst, Tötung nicht mehr nötig: Kann der Täter noch zurücktreten?",
+      "norm": "§ 24 Abs. 1 S. 1 StGB",
+      "optionen": [
+        "BGH (Großer Senat): Ja – beim unbeendeten Versuch genügt das Aufhören, auch wenn das Ziel erreicht ist.",
+        "Teile der Literatur: Nein – wer sein außertatbestandliches Ziel erreicht hat, gibt nichts mehr auf."
+      ],
+      "text": "Der BGH stellt auf die Tat im Sinne des § 24 StGB ab, also auf die Verwirklichung des Tatbestands – Motive außerhalb davon bleiben außer Betracht. Klausur: Erst die Versuchsart nach dem Rücktrittshorizont bestimmen, dann den Streit entscheiden.",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-923"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:11.810Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
