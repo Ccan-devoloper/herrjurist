@@ -1,0 +1,870 @@
+{
+  "datum": "2027-01-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "strafat-063",
+        "themaTitel": "Wann ist ein Rücktritt vom Versuch strafbefreiend?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "grundr-369",
+        "themaTitel": "Wann ist eine Versammlung friedlich?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-016",
+        "themaTitel": "Wann haftet man für das Verschulden eines Erfüllungsgehilfen?",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "schuldbt-477"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "schuldbt-477"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "europa-414"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "zahl",
+        "themaId": "anklage-857"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "streitstand",
+        "themaId": "assessorz-822"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:17",
+        "art": "merksatz",
+        "themaId": "bgbat-421"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "strafat-063",
+      "poolTitel": "Wann ist ein Rücktritt vom Versuch strafbefreiend?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "grundr-369",
+      "poolTitel": "Wann ist eine Versammlung friedlich?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 8 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-12"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-016",
+      "poolTitel": "Wann haftet man für das Verschulden eines Erfüllungsgehilfen?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 278 BGB",
+        "§ 831 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-477",
+      "poolTitel": "Widerrufsrecht bei Fernabsatzverträgen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 312g, 355 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-25"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-477",
+      "poolTitel": "Widerrufsrecht bei Fernabsatzverträgen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 312g, 355 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-25"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "europa-414",
+      "poolTitel": "Wann haftet ein Mitgliedstaat für die Verletzung von Unionsrecht?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 Abs. 3 EUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "anklage-857",
+      "poolTitel": "Was steht im abstrakten Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-09"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessorz-822",
+      "poolTitel": "Wie entstehen Anwaltsgebühren im Zivilprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "RVG",
+        "§ 91 ZPO"
+      ],
+      "typ": "formel",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-02"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "bgbat-421",
+      "poolTitel": "Auslegung empfangsbedürftiger Willenserklärungen",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 133, 157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-063",
+      "slug": "2027-01-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Rücktritt: Der Klassiker, an dem Klausuren kippen",
+          "titelZeilen": [
+            "Rücktritt: Der",
+            "Klassiker, an dem",
+            "Klausuren kippen"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Fehlschlag vor Freiwilligkeit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Klassiker",
+          "text": "Der Standardfehler: sofort „beendet oder unbeendet?“ fragen und den fehlgeschlagenen Versuch übersehen. Beispiel: A schießt mit Tötungsvorsatz auf O und verfehlt ihn. Er hat noch Patronen, geht aber weg. Ob A zurücktreten kann, hängt zuerst daran, ob der Versuch fehlgeschlagen ist."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wann ist der Versuch fehlgeschlagen?",
+          "links": {
+            "titel": "Einzelaktstheorie (Teile der Lit.)",
+            "punkte": [
+              "Jeder Akt, den der Täter für erfolgstauglich hielt, ist ein eigener Versuch.",
+              "Misslingt er, ist dieser Versuch fehlgeschlagen – kein Rücktritt."
+            ]
+          },
+          "rechts": {
+            "titel": "Gesamtbetrachtung (BGH)",
+            "punkte": [
+              "Maßgeblich ist der Rücktrittshorizont nach der letzten Ausführungshandlung.",
+              "Hält A weitere Schüsse für möglich: unbeendet, Aufhören genügt."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Aufbau in der Klausur",
+          "schritte": [
+            {
+              "titel": "1. Kein Fehlschlag",
+              "text": "Kann der Täter den Erfolg aus seiner Sicht mit den vorhandenen Mitteln ohne zeitliche Zäsur noch herbeiführen?"
+            },
+            {
+              "titel": "2. Beendet oder unbeendet?",
+              "text": "Hält er nach der letzten Handlung den Erfolg für möglich, ist der Versuch beendet; sonst unbeendet."
+            },
+            {
+              "titel": "3. Rücktrittshandlung",
+              "text": "Unbeendet: weitere Ausführung aufgeben. Beendet: Vollendung verhindern (§ 24 Abs. 1 S. 1 StGB)."
+            },
+            {
+              "titel": "4. Freiwilligkeit",
+              "text": "Autonome Motive – der Täter bleibt Herr seiner Entschlüsse."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme",
+          "text": "Für die Gesamtbetrachtung spricht der Opferschutz: Der Täter behält einen Anreiz, von weiteren Angriffen abzulassen. Die Gegenansicht hält dagegen, er dürfe sonst folgenlos weiterprobieren. Im Fall nach BGH: unbeendeter Versuch – A tritt durch Weggehen zurück, wenn er freiwillig handelt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst Fehlschlag, dann beendet oder unbeendet, dann Rücktrittshandlung und Freiwilligkeit – in dieser Reihenfolge."
+        },
+        {
+          "art": "cta",
+          "titel": "Rücktritt in vier Zügen",
+          "punkte": [
+            "Fehlschlag ausschließen",
+            "Rücktrittshorizont bestimmen",
+            "Aufgeben oder verhindern",
+            "Freiwilligkeit prüfen"
+          ],
+          "icons": [
+            "stopp",
+            "lupe",
+            "haken",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Der Klassiker, an dem Rücktrittsprüfungen kippen: der fehlgeschlagene Versuch. Bevor du nach beendet oder unbeendet fragst, klärst du, ob der Täter den Erfolg aus seiner Sicht überhaupt noch herbeiführen kann. Nach der Einzelaktstheorie ist jeder misslungene Akt ein eigener, fehlgeschlagener Versuch; der BGH stellt auf den Rücktrittshorizont nach der letzten Ausführungshandlung ab. Speichern für die nächste Versuchsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#rücktritt",
+        "#24stgb",
+        "#versuch",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücktritt: den Fehlschlag zuerst prüfen",
+      "coverText": "Fehlschlag vor Freiwilligkeit",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Bevor gefragt wird, ob der Täter freiwillig aufhört, muss feststehen, ob er überhaupt noch weitermachen könnte.",
+        "handlung": "{A} stops {B} at a fork where one trail ends at a collapsed bridge and the other continues intact, while {B} nervously turns back, still holding his unused tools.",
+        "hinweisRegie": "Place the note in the open space above the collapsed bridge, slightly tilted toward it, so it marks the first question to ask without covering {B}'s tools or either face.",
+        "alternative": "{B} stares at a jammed slot with a last coin still in hand while {A} points calmly to a second, working slot right beside it."
+      },
+      "bildSzene": "fork: collapsed bridge versus intact trail",
+      "bildSzeneAlt": "last coin beside a second working slot",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "§ 22 StGB",
+        "BGH (Gesamtbetrachtungslehre)",
+        "Themenpool: strafat-063"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-369",
+      "slug": "2027-01-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Drei werfen Flaschen – die Demo bleibt geschützt",
+          "titelZeilen": [
+            "Drei werfen",
+            "Flaschen – die Demo",
+            "bleibt geschützt"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Friedlich ist die Gesamtversammlung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A leitet eine Demonstration mit 500 Teilnehmern. Drei Teilnehmer werfen Flaschen auf Polizeibeamte, alle anderen bleiben ruhig. Die Polizei löst daraufhin die gesamte Versammlung auf. Kann sich A auf Art. 8 Abs. 1 GG berufen?"
+        },
+        {
+          "art": "text",
+          "titel": "Was „friedlich“ bedeutet",
+          "text": "Unfriedlich ist eine Versammlung erst bei gewalttätigem oder aufrührerischem Verlauf – bei Handlungen von einiger Gefährlichkeit wie aggressiven Ausschreitungen gegen Personen oder Sachen. Bloße Behinderungen oder Provokationen genügen nicht."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "Versammlung",
+              "text": "Mehrere Personen, die gemeinsam einen Zweck verfolgen – nach dem BVerfG die Teilhabe an der öffentlichen Meinungsbildung."
+            },
+            {
+              "titel": "Friedlich und ohne Waffen",
+              "text": "Die Unfriedlichkeit Einzelner nimmt den übrigen nicht den Schutz, solange die Versammlung nicht insgesamt unfriedlich wird."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Die Auflösung beendet die Versammlung für alle Teilnehmer."
+            },
+            {
+              "titel": "Rechtfertigung",
+              "text": "Grundlage: Versammlungsgesetz des Bundes oder des Landes (Art. 8 Abs. 2 GG). Zuerst gegen die Störer vorgehen, Auflösung als letztes Mittel."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Drei Störer machen 500 Teilnehmer nicht unfriedlich. A bleibt geschützt, die Werfer selbst nicht. Die Auflösung ist nur verhältnismäßig, wenn gezielte Maßnahmen gegen die Werfer nicht ausreichen – der Sachverhalt spricht dagegen. Die Auflösung verletzt A in Art. 8 Abs. 1 GG."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Friedlichkeit ist eine Frage der Versammlung, nicht jedes Einzelnen. Gegen Störer wird zuerst gezielt vorgegangen."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 8 GG in drei Fragen",
+          "punkte": [
+            "Versammlung im Sinne von Art. 8 GG?",
+            "Insgesamt friedlich und ohne Waffen?",
+            "Mildere Mittel gegen die Störer?"
+          ],
+          "icons": [
+            "personen",
+            "warnung",
+            "polizei"
+          ]
+        }
+      ],
+      "caption": "Drei werfen Flaschen – ist die ganze Demonstration damit unfriedlich? Nein. Unfriedlich ist eine Versammlung erst bei gewalttätigem oder aufrührerischem Verlauf. Die Unfriedlichkeit einzelner Teilnehmer nimmt den übrigen nicht den Schutz des Art. 8 Abs. 1 GG. Deshalb richten sich Maßnahmen zuerst gegen die Störer; die Auflösung bleibt letztes Mittel. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#versammlungsfreiheit",
+        "#art8gg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versammlung: Wann ist sie friedlich?",
+      "coverText": "Friedlich ist die Gesamtversammlung",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Einige Störer machen eine große, ruhige Versammlung nicht insgesamt unfriedlich.",
+        "handlung": "{A} curiously watches a large calm crowd holding blank banners, while {B} hovers above and gently lifts out just two small figures who are about to throw bottles.",
+        "hinweisRegie": "Place the note in the free space above the large calm crowd, slightly tilted toward it, so it reads as the protected majority without covering the two lifted figures or {B}.",
+        "alternative": "{B} carefully picks three dark pebbles out of a big bowl of bright marbles while {A} holds the bowl steady so it is not tipped over."
+      },
+      "bildSzene": "droid lifts two troublemakers from calm crowd",
+      "bildSzeneAlt": "picking dark pebbles from marble bowl",
+      "quellen": [
+        "Art. 8 Abs. 1, 2 GG",
+        "Versammlungsgesetze des Bundes und der Länder",
+        "BVerfGE 69, 315 (Brokdorf)",
+        "Themenpool: grundr-369"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-mehrheit",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.882Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-016",
+      "slug": "2027-01-12-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gehilfe patzt: Entlasten hilft nur im Delikt",
+          "unter": "Gehilfenhaftung · §§ 278, 831 BGB",
+          "text": "§ 278: fremdes Verschulden wird zugerechnet. § 831: eigenes vermutetes Verschulden.",
+          "norm": "§ 278 BGB · § 831 BGB",
+          "icon": "werkzeug",
+          "sprecher": "Im Vertrag hilft dir keine Entlastung. Nach § 278 BGB haftet der Schuldner für seinen Gehilfen wie für sich selbst. Entlasten kann sich nur der Geschäftsherr im Delikt, nach § 831.",
+          "marken": [
+            "§ 278: keine Entlastung",
+            "§ 831: Entlastung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schuldverhältnis vorhanden?",
+          "text": "§ 278 braucht ein bestehendes Schuldverhältnis – auch ein vorvertragliches.",
+          "norm": "§ 278 BGB · § 311 Abs. 2 BGB",
+          "sprecher": "Schritt eins: Gibt es schon ein Schuldverhältnis? § 278 ist keine Anspruchsgrundlage, sondern eine Zurechnungsnorm. Sie braucht einen Vertrag oder ein anderes Schuldverhältnis, auch ein vorvertragliches.",
+          "marken": [
+            "Zurechnungsnorm"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Erfüllungsgehilfe",
+          "text": "Wird mit Wissen und Wollen des Schuldners bei der Erfüllung seiner Pflicht tätig.",
+          "norm": "§ 278 BGB",
+          "sprecher": "Schritt zwei: der Erfüllungsgehilfe. Das ist, wer mit Wissen und Wollen des Schuldners bei der Erfüllung von dessen Verbindlichkeit tätig wird. Weisungsgebunden muss er nicht sein.",
+          "marken": [
+            "weisungsfrei möglich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Verrichtungsgehilfe",
+          "text": "Weisungsabhängig; begeht in Ausführung der Verrichtung eine rechtswidrige unerlaubte Handlung.",
+          "norm": "§ 831 Abs. 1 S. 1 BGB",
+          "sprecher": "Schritt drei: § 831. Hier haftet der Geschäftsherr für eigenes, vermutetes Verschulden bei Auswahl und Überwachung. Der Gehilfe ist weisungsabhängig und begeht in Ausführung der Verrichtung eine rechtswidrige unerlaubte Handlung.",
+          "marken": [
+            "weisungsabhängig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Entlastungsbeweis",
+          "text": "Sorgfältig ausgewählt und überwacht? Dann keine Haftung nach § 831.",
+          "norm": "§ 831 Abs. 1 S. 2 BGB",
+          "sprecher": "Schritt vier: die Entlastung. Beweist der Geschäftsherr, dass er den Gehilfen sorgfältig ausgewählt und überwacht hat, haftet er nach § 831 nicht. Bei § 278 gibt es diesen Ausweg nicht.",
+          "marken": [
+            "Exkulpation"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Klausurklassiker",
+          "text": "Scheitert § 831 an der Entlastung, such ein Schuldverhältnis – dort greift § 278.",
+          "norm": "§ 280 Abs. 1 BGB · § 278 BGB",
+          "sprecher": "Deshalb der Klassiker: Scheitert der Anspruch aus § 831 an der Entlastung, suchst du ein Schuldverhältnis. Über § 280 Absatz 1 und § 278 wird das Verschulden des Gehilfen dann ohne Entlastung zugerechnet.",
+          "marken": [
+            "Schuldverhältnis suchen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "§ 278: fremdes Verschulden, keine Entlastung. § 831: eigenes vermutetes Verschulden, Entlastung möglich.",
+          "norm": "§§ 278, 831 BGB",
+          "sprecher": "Merke: § 278 rechnet fremdes Verschulden zu, ohne Entlastung. § 831 ist eigene Haftung für vermutetes Verschulden, mit Entlastungsmöglichkeit.",
+          "marken": [
+            "zurechnen vs. haften"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst fragen: Gibt es ein Schuldverhältnis?",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur. Und frag beim Gehilfen immer zuerst: Gibt es schon ein Schuldverhältnis?",
+          "marken": [
+            "Schuldverhältnis?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Im Vertrag hilft keine Entlastung: Nach § 278 BGB haftet der Schuldner für das Verschulden seines Erfüllungsgehilfen wie für eigenes. Entlasten kann sich nur der Geschäftsherr im Delikt – § 831 BGB ist Haftung für eigenes, vermutetes Auswahl- und Überwachungsverschulden (§ 831 Abs. 1 S. 2 BGB). Deshalb suchst du in Gehilfenfällen zuerst ein Schuldverhältnis, auch ein vorvertragliches nach § 311 Abs. 2 BGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#278bgb",
+        "#831bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 278 oder § 831 BGB: Wer kann sich entlasten?",
+      "titelZeilen": [
+        "Gehilfe patzt:",
+        "Entlasten hilft",
+        "nur im Delikt"
+      ],
+      "coverText": "Zurechnung vs. eigene Haftung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Im Vertrag trägt der Schuldner das Verschulden seines Helfers mit – im Delikt kann er sich entlasten.",
+        "handlung": "{A} shoulders a heavy crate that his helper just dropped, while {B} curiously holds up a small release key that only fits a separate padlock hanging nearby.",
+        "hinweisRegie": "Place the note in the free space between the heavy crate and the separate padlock, slightly tilted, so it contrasts the two situations without covering {A}'s shoulders or {B}'s key.",
+        "alternative": "{B} watches a clumsy helper spill crystals while {A} is tied to the helper by a sturdy rope on one side and only a loose ribbon on the other."
+      },
+      "bildSzene": "miner carries crate his helper dropped",
+      "bildSzeneAlt": "helper tied by rope versus ribbon",
+      "quellen": [
+        "§ 278 BGB",
+        "§ 831 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 311 Abs. 2 BGB",
+        "Themenpool: schuld-016"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-kontrast",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.883Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-477",
+      "ueberzeile": "Prüfungsfrage Schuldrecht",
+      "titel": "Verbraucher V bestellt online eine Jacke und wird ordnungsgemäß belehrt. Wann beginnt die Widerrufsfrist?",
+      "optionen": [
+        "Mit Vertragsschluss",
+        "Mit Erhalt der Ware durch V",
+        "Mit Absendung der Ware durch den Händler"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 312g BGB",
+        "§ 355 BGB",
+        "§ 356 BGB",
+        "Themenpool: schuldbt-477"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.884Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-477",
+      "ueberzeile": "Auflösung",
+      "titel": "Mit Erhalt der Ware – nicht schon mit Vertragsschluss",
+      "text": "Grundsätzlich beginnt die 14-tägige Frist mit Vertragsschluss (§ 355 Abs. 2 S. 2 BGB). Beim Verbrauchsgüterkauf beginnt sie aber nicht, bevor der Verbraucher die Ware erhalten hat (§ 356 Abs. 2 Nr. 1 lit. a BGB), und nicht vor ordnungsgemäßer Belehrung (§ 356 Abs. 3 BGB). Fehlt diese, erlischt das Recht spätestens nach zwölf Monaten und 14 Tagen.",
+      "norm": "§ 355 Abs. 2 BGB · § 356 Abs. 2, 3 BGB",
+      "quellen": [
+        "§ 312g BGB",
+        "§ 355 BGB",
+        "§ 356 BGB",
+        "Themenpool: schuldbt-477"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.884Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit Vertragsschluss",
+        "Mit Erhalt der Ware durch V",
+        "Mit Absendung der Ware durch den Händler"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-414",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Unionsrechtliche Staatshaftung: Der Staat haftet auch für Untätigkeit",
+      "text": "Der EuGH leitet einen Staatshaftungsanspruch aus dem Unionsrecht selbst ab, gestützt auch auf die Unionstreue. Voraussetzungen: Die verletzte Norm soll dem Einzelnen Rechte verleihen, der Verstoß ist hinreichend qualifiziert, und zwischen Verstoß und Schaden besteht ein unmittelbarer Kausalzusammenhang. Klassiker: die nicht fristgerecht umgesetzte Richtlinie.",
+      "norm": "Art. 4 Abs. 3 EUV",
+      "quellen": [
+        "Art. 4 Abs. 3 EUV",
+        "EuGH, Francovich; Brasserie du pêcheur",
+        "Themenpool: europa-414"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.884Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-857",
+      "ueberzeile": "4 Punkte Anklageschrift",
+      "titel": "Abstrakter Anklagesatz: Was gehört hinein?",
+      "text": "Der abstrakte Anklagesatz nennt die gesetzlichen Merkmale der Tat, der konkrete füllt sie mit Tatsachen (§ 200 Abs. 1 S. 1 StPO). Die Formulierungspraxis unterscheidet sich je nach Land im Detail.",
+      "punkte": [
+        "Gesetzliche Merkmale im Wortlaut des Gesetzes",
+        "Beteiligungsform, etwa „gemeinschaftlich“",
+        "Versuch kenntlich machen",
+        "Konkurrenzen, etwa „durch dieselbe Handlung“"
+      ],
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "Themenpool: anklage-857"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.884Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-822",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Anwalt am Wohnort der Partei, Gericht weit entfernt: Sind seine Reisekosten erstattungsfähig?",
+      "norm": "§ 91 Abs. 2 S. 1 ZPO",
+      "optionen": [
+        "BGH: Regelmäßig ja – ein Anwalt am Wohn- oder Geschäftsort der Partei gilt als notwendig.",
+        "Früher verbreitete Gegenansicht: Notwendig sind grundsätzlich nur Kosten eines Anwalts am Gerichtsort."
+      ],
+      "text": "Klausur: Im Urteil steht nur die Kostengrundentscheidung (§ 91 Abs. 1 ZPO). Welche RVG-Gebühren und Auslagen konkret erstattet werden, klärt das Kostenfestsetzungsverfahren. Vom BGH-Grundsatz gibt es Ausnahmen, etwa bei Unternehmen mit eigener Rechtsabteilung.",
+      "quellen": [
+        "§ 91 ZPO",
+        "RVG",
+        "§§ 103, 104 ZPO",
+        "Themenpool: assessorz-822"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.884Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-421",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Es zählt der Empfängerhorizont",
+      "text": "Maßgeblich ist, wie ein verständiger Empfänger die Erklärung nach Treu und Glauben und Verkehrssitte verstehen durfte. Meinen beide übereinstimmend dasselbe, gilt das Gemeinte: falsa demonstratio non nocet.",
+      "norm": "§§ 133, 157 BGB",
+      "quellen": [
+        "§ 133 BGB",
+        "§ 157 BGB",
+        "Themenpool: bgbat-421"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:37:49.884Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

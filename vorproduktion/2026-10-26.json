@@ -1,0 +1,884 @@
+{
+  "datum": "2026-10-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-772",
+        "themaTitel": "Durchsuchung bei Dritten",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "assessoroer-838",
+        "themaTitel": "Wie tenoriert man im vorläufigen Rechtsschutz?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuldbt-190",
+        "themaTitel": "Wer trägt die Beweislast für einen Mangel und wann kehrt sie sich um?",
+        "fach": "schuldbt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:18",
+        "art": "frage",
+        "themaId": "schuld-181"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:18",
+        "art": "antwort",
+        "themaId": "schuld-181"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:13",
+        "art": "norm",
+        "themaId": "famerb-518"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "tipp",
+        "themaId": "strafat-297"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "zahl",
+        "themaId": "revision-888"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "streitstand",
+        "themaId": "assessoroer-845"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-772",
+      "poolTitel": "Durchsuchung bei Dritten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 103 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "assessoroer-838",
+      "poolTitel": "Wie tenoriert man im vorläufigen Rechtsschutz?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-24"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuldbt-190",
+      "poolTitel": "Wer trägt die Beweislast für einen Mangel und wann kehrt sie sich um?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 477 BGB",
+        "§ 363 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-181",
+      "poolTitel": "Wann ist eine AGB-Klausel überraschend?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 305c BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-181",
+      "poolTitel": "Wann ist eine AGB-Klausel überraschend?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 305c BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-518",
+      "poolTitel": "Trennungs- und nachehelicher Unterhalt im Überblick",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1361, 1569 ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafat-297",
+      "poolTitel": "Was ist ein Verbotsirrtum und wann ist er vermeidbar?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 17 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "revision-888",
+      "poolTitel": "Sach- oder Verfahrensrüge: Wie entscheidet man das schnell?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 344 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-772",
+      "slug": "2026-10-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beim Unverdächtigen durchsuchen: Vermutung reicht nicht",
+          "titelZeilen": [
+            "Beim Unverdächtigen",
+            "durchsuchen:",
+            "Vermutung",
+            "reicht nicht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 103 StPO verlangt Tatsachen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Gegen B wird wegen Diebstahls ermittelt. Die Polizei vermutet, dass die Beute in der Garage seiner Freundin F liegt. F selbst ist nicht verdächtig. Darf die Garage unter denselben Voraussetzungen durchsucht werden wie Bs Wohnung?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Normen, zwei Maßstäbe",
+          "links": {
+            "titel": "§ 102 StPO: Verdächtiger",
+            "punkte": [
+              "Verdacht als Täter, Teilnehmer oder wegen Begünstigung, Strafvereitelung, Hehlerei.",
+              "Es genügt die Vermutung, dass Beweismittel gefunden werden."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 103 StPO: andere Personen",
+            "punkte": [
+              "Nur zur Ergreifung, Spurenverfolgung oder Beschlagnahme bestimmter Gegenstände.",
+              "Tatsachen müssen den Schluss tragen, dass das Gesuchte gerade dort ist."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Status der F klären",
+              "text": "Ist F selbst verdächtig, etwa der Hehlerei oder Begünstigung? Dann gilt § 102 StPO. Sonst § 103 StPO."
+            },
+            {
+              "titel": "Zweck und Gegenstand",
+              "text": "Hier Beschlagnahme: Die Beute muss so konkret bezeichnet sein, dass sie erkennbar ist."
+            },
+            {
+              "titel": "Tatsachen für den Fundort",
+              "text": "Konkrete Anhaltspunkte, dass die Beute gerade in Fs Garage liegt – etwa eine Beobachtung. Die Beziehung zu B allein trägt das kaum."
+            },
+            {
+              "titel": "Anordnung, Verhältnismäßigkeit",
+              "text": "Richtervorbehalt, bei Gefahr im Verzug auch StA und Ermittlungspersonen (§ 105 StPO). Gegenüber Unverdächtigen streng abwägen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Garage wird wie Bs Wohnung behandelt – mit der Begründung, dort könnten Beweismittel sein. Das ist der Maßstab des § 102 StPO. Beim Unverdächtigen verlangt § 103 StPO mehr: bestimmte Gegenstände und Tatsachen, die gerade auf diesen Ort hindeuten."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verdächtiger: § 102 StPO, Vermutung genügt. Unverdächtiger: § 103 StPO, bestimmte Gegenstände und Tatsachen für den Fundort."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Durchsuchung fragen",
+          "punkte": [
+            "Ist der Betroffene selbst verdächtig?",
+            "Wonach genau wird gesucht?",
+            "Welche Tatsachen zeigen auf den Ort?",
+            "Wer hat angeordnet?"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "tuer",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Beim Unverdächtigen reicht eine Vermutung nicht. Beim Verdächtigen genügt nach § 102 StPO, dass die Durchsuchung vermutlich Beweismittel zutage fördert. Bei anderen Personen verlangt § 103 StPO mehr: bestimmte Gegenstände und Tatsachen, aus denen folgt, dass sie sich gerade dort befinden. Deshalb zuerst klären: Ist der Betroffene selbst verdächtig? Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#durchsuchung",
+        "#103stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Durchsuchung bei Dritten: § 103 StPO",
+      "coverText": "§ 103 StPO verlangt Tatsachen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Beim Unverdächtigen reicht eine Vermutung nicht – es braucht Tatsachen, die gerade auf diesen Ort zeigen.",
+        "handlung": "{A} eagerly reaches for the handle of a stranger's garage door, while {B} gently holds his wrist and points at a single fresh footprint leading toward the door.",
+        "hinweisRegie": "Place the note in the open space between the garage door and the single footprint, slightly tilted toward the footprint, without covering {A}'s reaching hand or {B}'s pointing finger.",
+        "alternative": "{B} holds a lantern between two doors, one of a suspect and one of an uninvolved neighbour, while {A} hesitates in front of the neighbour's door with empty hands."
+      },
+      "bildSzene": "hand on garage door, single footprint",
+      "bildSzeneAlt": "lantern between suspect's and neighbour's doors",
+      "quellen": [
+        "§ 102 StPO",
+        "§ 103 StPO",
+        "§ 105 StPO",
+        "Art. 13 GG",
+        "Themenpool: stpo-772"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslungsgefahr",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-838",
+      "slug": "2026-10-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Im Eilbeschluss wird kein Bescheid aufgehoben",
+          "titelZeilen": [
+            "Im Eilbeschluss",
+            "wird kein Bescheid",
+            "aufgehoben"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Wirkung regeln, nicht aufheben",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Im vorläufigen Rechtsschutz entscheidet das Gericht durch Beschluss über die Vollziehbarkeit oder über eine vorläufige Regelung – nicht endgültig über die Rechtmäßigkeit des Bescheids. Genau das muss der Tenor abbilden."
+        },
+        {
+          "art": "schritte",
+          "titel": "Tenor, Teil 1: die Sachentscheidung",
+          "schritte": [
+            {
+              "titel": "§ 80 Abs. 5 VwGO bei Nr. 4",
+              "text": "„Die aufschiebende Wirkung des Widerspruchs vom … gegen den Bescheid vom … wird wiederhergestellt.“"
+            },
+            {
+              "titel": "§ 80 Abs. 5 VwGO bei Nr. 1–3",
+              "text": "„… wird angeordnet.“ Ist schon Klage erhoben, heißt es „der Klage“ statt „des Widerspruchs“."
+            },
+            {
+              "titel": "§ 123 VwGO",
+              "text": "„Der Antragsgegner wird im Wege der einstweiligen Anordnung verpflichtet, dem Antragsteller vorläufig … zu …“"
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Tenor, Teil 2: Nebenentscheidungen",
+          "schritte": [
+            {
+              "titel": "Teilerfolg oder Ablehnung",
+              "text": "„… im Übrigen wird der Antrag abgelehnt.“ Ohne Erfolg: „Der Antrag wird abgelehnt.“"
+            },
+            {
+              "titel": "Kosten",
+              "text": "Nach §§ 154 ff. VwGO, etwa: „Der Antragsgegner trägt die Kosten des Verfahrens.“ Bei Teilerfolg § 155 Abs. 1 VwGO."
+            },
+            {
+              "titel": "Streitwert",
+              "text": "„Der Streitwert wird auf … € festgesetzt.“ Grundlage sind §§ 52, 53 Abs. 2 GKG."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweise",
+          "punkte": [
+            "Kein Ausspruch zur vorläufigen Vollstreckbarkeit – anders als beim Urteil.",
+            "Schon vollzogen? Auf Antrag die Aufhebung der Vollziehung anordnen (§ 80 Abs. 5 S. 3 VwGO).",
+            "§ 123 VwGO: „vorläufig“ gehört in den Tenor – die Hauptsache wird grundsätzlich nicht vorweggenommen."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wirkung anordnen oder wiederherstellen bzw. vorläufig verpflichten, dann Kosten und Streitwert. Der Bescheid selbst bleibt im Eilbeschluss unangetastet."
+        },
+        {
+          "art": "cta",
+          "titel": "Tenor-Check im Eilverfahren",
+          "punkte": [
+            "§ 80 Abs. 5 oder § 123 VwGO?",
+            "Anordnen oder wiederherstellen?",
+            "Kosten nach §§ 154 ff. VwGO",
+            "Streitwert festsetzen"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "muenzen",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Im Eilbeschluss wird kein Bescheid aufgehoben. Nach § 80 Abs. 5 VwGO ordnet das Gericht die aufschiebende Wirkung an oder stellt sie wieder her; nach § 123 VwGO verpflichtet es den Antragsgegner vorläufig. Danach folgen Kosten und Streitwert – ein Ausspruch zur vorläufigen Vollstreckbarkeit entfällt. Speichern für die nächste Assessorklausur im Öffentlichen Recht.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#eilrechtsschutz",
+        "#tenor",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Eilrechtsschutz: der Tenor im Beschluss",
+      "coverText": "Wirkung regeln, nicht aufheben",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Im Eilverfahren regelt das Gericht nur, ob der Bescheid vorerst wirkt – den Bescheid selbst lässt es stehen.",
+        "handlung": "{A} hovers beside a large sealed notice on a post and clips a small pause clamp onto its corner, while {B} firmly stops a hand that tries to tear the notice down.",
+        "hinweisRegie": "Place the note in the free space right beside the pause clamp, slightly tilted toward it, so it marks the temporary effect without covering the notice or {B}'s stopping hand.",
+        "alternative": "{B} sets a large hourglass on top of an intact sealed decree, while {A} guards the unbroken seal from a curious onlooker."
+      },
+      "bildSzene": "pause clamp on sealed notice",
+      "bildSzeneAlt": "hourglass on intact sealed decree",
+      "quellen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO",
+        "§§ 154, 155 VwGO",
+        "§§ 52, 53 Abs. 2 GKG",
+        "Themenpool: assessoroer-838"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.243Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-190",
+      "slug": "2026-10-26-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Sechs Monate Beweislastumkehr? Längst veraltet",
+          "unter": "Kaufrecht · § 477 BGB",
+          "text": "Seit 2022 gilt ein Jahr ab Gefahrübergang – bei lebenden Tieren sechs Monate.",
+          "norm": "§ 477 Abs. 1 BGB",
+          "icon": "kalender",
+          "sprecher": "Sechs Monate Beweislastumkehr? Das hört man noch oft, es ist aber veraltet. Seit 2022 gilt beim Verbrauchsgüterkauf ein Jahr.",
+          "marken": [
+            "1 Jahr statt 6 Monate"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grundsatz: Der Käufer beweist",
+          "text": "Nach Annahme als Erfüllung muss der Käufer den Mangel bei Gefahrübergang beweisen.",
+          "norm": "§ 363 BGB",
+          "sprecher": "Schritt eins, der Grundsatz: Hat der Käufer die Sache als Erfüllung angenommen, muss er beweisen, dass sie schon bei Gefahrübergang mangelhaft war.",
+          "marken": [
+            "Käufer beweist"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Nur beim Verbrauchsgüterkauf",
+          "text": "Ein Verbraucher kauft eine Ware von einem Unternehmer.",
+          "norm": "§ 474 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: Die Hilfe gibt es nur beim Verbrauchsgüterkauf, also wenn ein Verbraucher von einem Unternehmer eine Ware kauft. Privat an privat bleibt es beim Grundsatz.",
+          "marken": [
+            "nur Verbraucher-Kauf"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Vermutung",
+          "text": "Zeigt sich binnen eines Jahres ein vertragswidriger Zustand, gilt er als schon bei Übergabe vorhanden.",
+          "norm": "§ 477 Abs. 1 BGB",
+          "sprecher": "Schritt drei, die Vermutung: Zeigt sich innerhalb eines Jahres seit Gefahrübergang ein vertragswidriger Zustand, wird vermutet, dass die Ware schon bei Gefahrübergang mangelhaft war. Bei lebenden Tieren gilt ein halbes Jahr.",
+          "marken": [
+            "binnen 1 Jahr"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Grenze",
+          "text": "Keine Vermutung, wenn sie mit der Art der Ware oder des Zustands unvereinbar ist.",
+          "norm": "§ 477 Abs. 1 BGB",
+          "sprecher": "Schritt vier, die Grenze: Die Vermutung entfällt, wenn sie mit der Art der Ware oder des mangelhaften Zustands unvereinbar ist. Das bleibt die Ausnahme.",
+          "marken": [
+            "Ausnahme: unvereinbar"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel: Getriebe nach zehn Monaten defekt",
+          "text": "Der Käufer zeigt den Defekt – die Ursache muss er nicht beweisen.",
+          "norm": null,
+          "sprecher": "Beispiel: Beim Gebrauchtwagen vom Händler fällt nach zehn Monaten das Getriebe aus. Der Käufer muss nur den Defekt beweisen, nicht die Ursache. Der Händler muss dann beweisen, dass der Wagen bei Übergabe in Ordnung war.",
+          "marken": [
+            "Defekt genügt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Grundsätzlich beweist der Käufer; beim Verbrauchsgüterkauf ein Jahr Vermutung, bei Tieren sechs Monate.",
+          "norm": "§ 477 Abs. 1 BGB",
+          "sprecher": "Merke: Grundsätzlich beweist der Käufer. Beim Verbrauchsgüterkauf hilft ihm § 477 BGB ein Jahr lang, bei Tieren sechs Monate.",
+          "marken": [
+            "1 Jahr · Tiere 6 Monate"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Frist ab Gefahrübergang rechnen",
+          "text": "Speichern für die nächste Kaufrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Kaufrechtsklausur. Und rechne die Frist immer ab Gefahrübergang, nicht ab Vertragsschluss.",
+          "marken": [
+            "ab Gefahrübergang"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Sechs Monate Beweislastumkehr? Veraltet. Seit 2022 vermutet § 477 Abs. 1 BGB beim Verbrauchsgüterkauf ein Jahr lang, dass ein vertragswidriger Zustand schon bei Gefahrübergang vorlag – bei lebenden Tieren sechs Monate. Der Käufer muss nur den Defekt zeigen, nicht dessen Ursache. Außerhalb des Verbrauchsgüterkaufs bleibt es beim Grundsatz: Nach Annahme beweist der Käufer (§ 363 BGB).",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#477bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beweislastumkehr beim Kauf: ein Jahr",
+      "titelZeilen": [
+        "Sechs Monate",
+        "Beweislastumkehr?",
+        "Längst veraltet"
+      ],
+      "coverText": "Seit 2022: ein Jahr",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Beim Verbrauchsgüterkauf wird ein Jahr lang vermutet, dass der Mangel schon bei Übergabe da war.",
+        "handlung": "{A} sets a heavy cracked crystal crate onto a large balance scale, and {B} uses his pointer to push the scale's heavy weight over to the seller's side of the counter.",
+        "hinweisRegie": "Place the note in the free space above the seller's side of the tilted scale, slightly tilted toward it, so the shifted burden is clear without covering the cracked crate or {B}'s pointer.",
+        "alternative": "{B} holds up a large hourglass beside a returned machine, while {A} waits for the seller to open the machine and show it was fine at handover."
+      },
+      "bildSzene": "burden scale pushed to seller's side",
+      "bildSzeneAlt": "hourglass beside returned machine",
+      "quellen": [
+        "§ 363 BGB",
+        "§ 474 BGB",
+        "§ 477 BGB",
+        "Themenpool: schuldbt-190"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.244Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-181",
+      "ueberzeile": "Prüfungsfrage Schuldrecht AT",
+      "titel": "Formularbürgschaft für einen Kredit, im Kleingedruckten erweitert auf alle künftigen Schulden. Was gilt?",
+      "optionen": [
+        "Die Bürgschaft ist insgesamt unwirksam",
+        "Erweiterung gilt nicht – für den Anlasskredit wird weiter gehaftet",
+        "Alles gilt – das Formular wurde unterschrieben"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 305c Abs. 1 BGB",
+        "§ 306 BGB",
+        "§ 765 BGB",
+        "Themenpool: schuld-181"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.244Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-181",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Erweiterung wird nicht Vertragsbestandteil",
+      "text": "Überraschend ist eine Klausel, die objektiv ungewöhnlich ist und mit der der Vertragspartner nicht rechnen muss (§ 305c Abs. 1 BGB). Die Rspr. nimmt das regelmäßig an, wenn eine Bürgschaft aus konkretem Anlass formularmäßig auf alle künftigen Forderungen erweitert wird. Folge: Die Klausel wird nicht einbezogen, der Rest bleibt wirksam (§ 306 Abs. 1 BGB).",
+      "norm": "§ 305c Abs. 1 BGB · § 306 Abs. 1 BGB",
+      "quellen": [
+        "§ 305c Abs. 1 BGB",
+        "§ 306 BGB",
+        "§ 765 BGB",
+        "Themenpool: schuld-181"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.244Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Bürgschaft ist insgesamt unwirksam",
+        "Erweiterung gilt nicht – für den Anlasskredit wird weiter gehaftet",
+        "Alles gilt – das Formular wurde unterschrieben"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-518",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1569 BGB: Nach der Scheidung gilt zuerst Eigenverantwortung",
+      "text": "Nach der Scheidung muss grundsätzlich jeder Ehegatte selbst für seinen Unterhalt sorgen. Nachehelichen Unterhalt gibt es nur aus den gesetzlichen Tatbeständen, etwa wegen Kindesbetreuung, Alter oder Krankheit (§§ 1570 ff. BGB). Anders in der Trennungszeit: § 1361 BGB gewährt den nach den Lebensverhältnissen angemessenen Unterhalt. Beide Ansprüche sind nicht identisch.",
+      "norm": "§ 1569 BGB · § 1361 BGB",
+      "quellen": [
+        "§ 1361 BGB",
+        "§ 1569 BGB",
+        "§§ 1570 ff. BGB",
+        "Themenpool: famerb-518"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.244Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-297",
+      "ueberzeile": "Klausurtipp Strafrecht",
+      "titel": "Verbotsirrtum: in der Schuld prüfen – und die Vermeidbarkeit begründen",
+      "text": "§ 17 StGB betrifft das Unrechtsbewusstsein, also die Schuld – nicht den Vorsatz. Kannte der Täter schon die Tatumstände nicht, gilt § 16 StGB. Sonst fragst du: Hätte er das Unrecht bei Anspannung seines Gewissens oder nach Erkundigung bei einer verlässlichen Stelle erkennen können? Dann ist der Irrtum vermeidbar, die Strafe kann nach § 49 Abs. 1 StGB gemildert werden.",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 17 StGB",
+        "§ 49 Abs. 1 StGB",
+        "Themenpool: strafat-297"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.244Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-888",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Sach- oder Verfahrensrüge? Vier Punkte zur schnellen Zuordnung",
+      "text": "Die Zuordnung entscheidet über die Form: Die Verfahrensrüge ist streng, die Sachrüge nicht.",
+      "punkte": [
+        "Verfahrensrüge: Fehler auf dem Weg zum Urteil – wie verhandelt wurde",
+        "Sachrüge: materielles Recht falsch auf die Feststellungen angewandt",
+        "Verfahrensrüge: alle Tatsachen des Mangels angeben (§ 344 Abs. 2 S. 2 StPO)",
+        "Sachrüge: „Gerügt wird die Verletzung materiellen Rechts“ genügt"
+      ],
+      "quellen": [
+        "§ 337 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-888"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.244Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-845",
+      "ueberzeile": "Streitstand 2. Examen ÖR",
+      "titel": "Notwendige Beiladung unterblieben: Ist das Urteil trotzdem wirksam?",
+      "norm": "§ 65 Abs. 2 VwGO · § 121 VwGO",
+      "optionen": [
+        "Überwiegend: nicht nichtig, bindet den übergangenen Dritten aber nicht (§ 121 VwGO).",
+        "Andere Ansicht: Weil nur einheitlich entschieden werden kann, ist es insgesamt wirkungslos."
+      ],
+      "text": "Klausur: Notwendig ist die Beiladung, wenn die Entscheidung auch dem Dritten gegenüber nur einheitlich ergehen kann (§ 65 Abs. 2 VwGO) – etwa der Bauherr bei der Nachbarklage. Unterbleibt sie, ist das ein Verfahrensmangel; im Revisionsverfahren kann sie nachgeholt werden (§ 142 Abs. 1 S. 2 VwGO).",
+      "quellen": [
+        "§ 65 Abs. 2 VwGO",
+        "§ 121 VwGO",
+        "§ 142 Abs. 1 VwGO",
+        "Themenpool: assessoroer-845"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:08.244Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

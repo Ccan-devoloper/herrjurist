@@ -1,0 +1,870 @@
+{
+  "datum": "2026-11-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "vwgo-661",
+        "themaTitel": "Klagefrist und Wiedereinsetzung",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "handelsg-269",
+        "themaTitel": "Wie haftet der Kommanditist?",
+        "fach": "handelsg",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "stpo-767",
+        "themaTitel": "Schweigerecht und nemo tenetur",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:04",
+        "art": "frage",
+        "themaId": "vwgo-669"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:04",
+        "art": "antwort",
+        "themaId": "vwgo-669"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "schuld-451"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "tipp",
+        "themaId": "strafbt-744"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "zahl",
+        "themaId": "methodik-907"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "streitstand",
+        "themaId": "assessorz-822"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "vwgo-661",
+      "poolTitel": "Klagefrist und Wiedereinsetzung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 74, 60 VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "handelsg-269",
+      "poolTitel": "Wie haftet der Kommanditist?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 171 HGB",
+        "§ 172 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-767",
+      "poolTitel": "Schweigerecht und nemo tenetur",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO; Art. 6 EMRK"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-669",
+      "poolTitel": "Beschwerde/Berufung im Überblick",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 124 ff., 146 ff. VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-669",
+      "poolTitel": "Beschwerde/Berufung im Überblick",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 124 ff., 146 ff. VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-451",
+      "poolTitel": "Aufrechnung: Voraussetzungen und Aufrechnungslage",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 387 ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafbt-744",
+      "poolTitel": "Fahrlässige Tötung und Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 222, 229 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-907",
+      "poolTitel": "Fehleranalyse nach der Probeklausur",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-822",
+      "poolTitel": "Wie entstehen Anwaltsgebühren im Zivilprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "RVG",
+        "§ 91 ZPO"
+      ],
+      "typ": "formel",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-661",
+      "slug": "2026-11-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Klagefrist im Krankenhaus verpasst: Was jetzt binnen zwei Wochen?",
+          "titelZeilen": [
+            "Klagefrist im",
+            "Krankenhaus verpasst:",
+            "Was jetzt binnen",
+            "zwei Wochen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Klage selbst nachholen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K wird am 3. März ein Widerspruchsbescheid mit ordnungsgemäßer Rechtsbehelfsbelehrung zugestellt. Am nächsten Tag kommt K nach einem Unfall auf die Intensivstation und ist bis zum 10. April nicht ansprechbar. Die Klage geht am 17. April beim VG ein. Ist sie noch zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg, Teil 1",
+          "schritte": [
+            {
+              "titel": "Klagefrist",
+              "text": "Ein Monat ab Zustellung des Widerspruchsbescheids (§ 74 Abs. 1 S. 1 VwGO). Berechnung: § 57 Abs. 2 VwGO, § 222 ZPO, §§ 187 f. BGB."
+            },
+            {
+              "titel": "Belehrung",
+              "text": "Fehlt sie oder ist sie unrichtig, gilt die Jahresfrist (§ 58 Abs. 2 VwGO). Hier ordnungsgemäß belehrt – die Monatsfrist ist versäumt."
+            },
+            {
+              "titel": "Ohne Verschulden verhindert?",
+              "text": "Wer nicht ansprechbar auf der Intensivstation liegt, kann weder klagen noch einen Anwalt beauftragen (§ 60 Abs. 1 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg, Teil 2: § 60 Abs. 2 VwGO",
+          "schritte": [
+            {
+              "titel": "Zwei Wochen",
+              "text": "Der Antrag ist binnen zwei Wochen nach Wegfall des Hindernisses zu stellen – hier ab dem 10. April."
+            },
+            {
+              "titel": "Glaubhaft machen",
+              "text": "Die Tatsachen, die die Wiedereinsetzung tragen, sind glaubhaft zu machen, etwa durch ein ärztliches Attest."
+            },
+            {
+              "titel": "Klage nachholen",
+              "text": "Die versäumte Klage muss innerhalb der Antragsfrist eingehen. Ergebnis: Mit Antrag und Attest ist K die Wiedereinsetzung zu gewähren."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Falle",
+          "text": "Nur den Antrag stellen und die Klage „bald“ nachreichen. § 60 Abs. 2 S. 3 VwGO verlangt, die Klage selbst in den zwei Wochen nachzuholen. Ist sie da, kann Wiedereinsetzung sogar ohne Antrag gewährt werden. Anwaltsverschulden wird zugerechnet (§ 173 VwGO, § 85 Abs. 2 ZPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zwei Wochen ab Wegfall des Hindernisses: Antrag stellen, Gründe glaubhaft machen – und die Klage selbst nachholen. Nach einem Jahr ist grundsätzlich Schluss."
+        },
+        {
+          "art": "cta",
+          "titel": "Frist versäumt? Drei Prüfpunkte",
+          "punkte": [
+            "Ohne Verschulden verhindert?",
+            "Zwei Wochen ab Wegfall gewahrt?",
+            "Klage innerhalb der Frist nachgeholt?"
+          ],
+          "icons": [
+            "person",
+            "kalender",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Klagefrist verpasst, weil man im Krankenhaus lag? Dann hilft § 60 VwGO – aber nur mit Tempo. Binnen zwei Wochen nach Wegfall des Hindernisses: Antrag stellen, die Gründe glaubhaft machen und vor allem die Klage selbst nachholen. Wer nur den Antrag schickt, verschenkt die Wiedereinsetzung. Speichern für die nächste Zulässigkeitsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#verwaltungsprozessrecht",
+        "#klagefrist",
+        "#wiedereinsetzung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klagefrist verpasst: Wiedereinsetzung, § 60 VwGO",
+      "coverText": "Klage selbst nachholen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer die Klagefrist unverschuldet verpasst, hat zwei Wochen, um den Antrag zu stellen und die Klage nachzuholen.",
+        "handlung": "{A} sprints toward a closing portal gate clutching a sealed envelope, while {B} calmly flips a small hourglass that starts a short second countdown.",
+        "hinweisRegie": "Place the note in the free space between the hourglass and the closing gate, slightly tilted toward the hourglass, so the short second deadline is linked to the note without covering {A}'s envelope.",
+        "alternative": "{B} opens a narrow side door next to a locked main gate, while {A} checks a tiny timer above the side door before slipping through with a letter."
+      },
+      "bildSzene": "mechanic races closing gate, hourglass flipped",
+      "bildSzeneAlt": "side door opens beside locked gate",
+      "quellen": [
+        "§ 74 Abs. 1 VwGO",
+        "§ 58 Abs. 2 VwGO",
+        "§ 60 VwGO",
+        "§ 57 Abs. 2 VwGO",
+        "§ 173 VwGO i. V. m. § 85 Abs. 2 ZPO",
+        "Themenpool: vwgo-661"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.505Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "handelsg",
+      "klausur": 1,
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "themaId": "handelsg-269",
+      "slug": "2026-11-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kommanditist: vier Schritte – im letzten lebt die Haftung wieder auf",
+          "titelZeilen": [
+            "Kommanditist:",
+            "vier Schritte – im",
+            "letzten lebt die",
+            "Haftung wieder auf"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Rückzahlung weckt die Haftung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Der Kommanditist haftet den Gläubigern der KG unmittelbar, aber nur bis zur Höhe seiner Einlage (§ 171 Abs. 1 HGB). Im Außenverhältnis zählt die im Handelsregister eingetragene Haftsumme (§ 172 Abs. 1 HGB) – nicht die intern vereinbarte Pflichteinlage."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Verbindlichkeit der KG",
+              "text": "Der Gläubiger hat eine Forderung gegen die Gesellschaft. Einwendungen der KG kann der Kommanditist grundsätzlich auch selbst erheben."
+            },
+            {
+              "titel": "2. Kommanditist mit Haftsumme",
+              "text": "Er ist Kommanditist; der Umfang seiner Außenhaftung richtet sich nach der eingetragenen Haftsumme (§ 172 Abs. 1 HGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Einlage geleistet?",
+              "text": "Soweit die Einlage geleistet ist, ist die Haftung ausgeschlossen (§ 171 Abs. 1 Hs. 2 HGB). Ihr Wert muss der KG real zugeflossen sein."
+            },
+            {
+              "titel": "4. Kein Wiederaufleben",
+              "text": "Wird die Einlage zurückgezahlt, gilt sie den Gläubigern gegenüber als nicht geleistet (§ 172 Abs. 4 S. 1 HGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweise",
+          "punkte": [
+            "Rückzahlung ist weit zu verstehen: jede Leistung aus dem Gesellschaftsvermögen ohne gleichwertigen Gegenwert.",
+            "Gewinnentnahmen schaden, wenn der Kapitalanteil unter die geleistete Einlage sinkt (§ 172 Abs. 4 S. 2 HGB).",
+            "Vor der Eintragung: Haftung wie ein Komplementär, wenn er dem Geschäftsbeginn zugestimmt hat (§ 176 HGB)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Haftsumme laut Register, Einlage geleistet – Haftung ausgeschlossen. Fließt die Einlage zurück, lebt die Haftung bis zur Haftsumme wieder auf."
+        },
+        {
+          "art": "cta",
+          "titel": "Kommanditistenhaftung in vier Zügen",
+          "punkte": [
+            "Schuld der KG",
+            "Eingetragene Haftsumme",
+            "Einlage wertmäßig geleistet?",
+            "Rückzahlung oder Entnahme?"
+          ],
+          "icons": [
+            "vertrag",
+            "dokument",
+            "muenzen",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Kommanditistenhaftung in vier Schritten: Schuld der KG, eingetragene Haftsumme, geleistete Einlage – und kein Wiederaufleben. Der vierte Schritt wird gern vergessen: Wird die Einlage zurückgezahlt, gilt sie den Gläubigern gegenüber als nicht geleistet (§ 172 Abs. 4 HGB). Dann haftet der Kommanditist wieder unmittelbar bis zur Haftsumme. Speichern für die nächste Gesellschaftsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#handelsrecht",
+        "#gesellschaftsrecht",
+        "#kommanditgesellschaft",
+        "#171hgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kommanditist: Haftung nach §§ 171, 172 HGB",
+      "coverText": "Rückzahlung weckt die Haftung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Der Kommanditist ist nach Zahlung seiner Einlage frei – bis Geld aus der Gesellschaft an ihn zurückfließt.",
+        "handlung": "{A} has just dropped a heavy crystal into a shared vault and a chain falls from his ankle, while {B} points his pointer at a small crystal sliding back out of the vault toward {A}.",
+        "hinweisRegie": "Place the note in the open space beside the crystal sliding back toward {A}, slightly tilted toward it, so the returning payment is linked to the note without covering the vault opening or the fallen chain.",
+        "alternative": "{B} watches a balance where {A}'s deposited crystal outweighs a chain, while a small crane quietly lifts the crystal back off and the chain sinks again."
+      },
+      "bildSzene": "miner pays crystal, chain drops, crystal returns",
+      "bildSzeneAlt": "crane lifts crystal off balance, chain sinks",
+      "quellen": [
+        "§ 171 Abs. 1 HGB",
+        "§ 172 Abs. 1, 4 HGB",
+        "§ 176 HGB",
+        "§ 161 Abs. 2 HGB",
+        "Themenpool: handelsg-269"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-schritte-letzter-kippt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.505Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-767",
+      "slug": "2026-11-02-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Er schweigt – das Gericht darf nichts daraus schließen",
+          "unter": "Schweigerecht · nemo tenetur",
+          "text": "Wer ganz schweigt, liefert kein Indiz gegen sich.",
+          "norm": "§ 136 Abs. 1 S. 2 StPO",
+          "icon": "schloss",
+          "sprecher": "Schweigen ist kein Indiz für Schuld. Niemand muss sich selbst belasten, das ist der Grundsatz nemo tenetur. Und aus dem Schweigen darf das Gericht keine Schlüsse zum Nachteil des Angeklagten ziehen.",
+          "marken": [
+            "kein Indiz",
+            "nemo tenetur"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Grundlage",
+          "text": "Selbstbelastungsfreiheit: Verfassung und faires Verfahren.",
+          "norm": "Art. 6 Abs. 1 EMRK",
+          "sprecher": "Erstens: die Grundlage. Die Selbstbelastungsfreiheit folgt aus dem Rechtsstaatsprinzip und dem Persönlichkeitsrecht und gehört zum fairen Verfahren nach Artikel 6 der Menschenrechtskonvention. Die StPO sichert sie über die Belehrungspflichten ab.",
+          "marken": [
+            "Rechtsstaat + EMRK"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vollständiges Schweigen",
+          "text": "Kein Beweisanzeichen – auch nicht das Schweigen im Ermittlungsverfahren.",
+          "norm": "§ 261 StPO",
+          "sprecher": "Zweitens: vollständiges Schweigen. Schweigt der Beschuldigte ganz, darf das nicht gegen ihn gewertet werden. Das gilt auch, wenn er im Ermittlungsverfahren geschwiegen hat und sich erst in der Hauptverhandlung einlässt.",
+          "marken": [
+            "kein Nachteil"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Teilschweigen",
+          "text": "Wer sich zur Tat einlässt und nur Einzelnes verweigert, kann gewürdigt werden.",
+          "norm": "§ 261 StPO",
+          "sprecher": "Drittens, der Klausurpunkt: das Teilschweigen. Lässt sich der Angeklagte zur Tat ein, verweigert aber Antworten zu einzelnen Punkten, darf das Gericht das nach der Rechtsprechung grundsätzlich würdigen.",
+          "marken": [
+            "Teilschweigen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Dulden ja, mitwirken nein",
+          "text": "Eine Blutprobe muss er dulden – aktiv mitwirken muss er nicht.",
+          "norm": "§ 81a StPO",
+          "sprecher": "Viertens: die Grenze. Nemo tenetur schützt vor aktiver Mitwirkung, nicht vor jedem Zugriff. Eine Blutprobe nach § 81a StPO muss der Beschuldigte dulden. Einen Atemalkoholtest oder eine Sprechprobe darf er verweigern.",
+          "marken": [
+            "dulden, nicht mitwirken"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und die Lüge?",
+          "text": "Keine Wahrheitspflicht – aber wer andere wissentlich belastet, riskiert § 164 StGB.",
+          "norm": "§ 164 StGB",
+          "sprecher": "Und die Lüge? Der Beschuldigte hat keine Wahrheitspflicht. Belastet er aber wider besseres Wissen einen anderen, kann das eine falsche Verdächtigung sein.",
+          "marken": [
+            "keine Wahrheitspflicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ganz schweigen: neutral. Teilweise schweigen: würdigbar. Dulden: ja.",
+          "sprecher": "Merke: Ganz schweigen ist neutral. Teilweise schweigen kann gewürdigt werden. Und dulden ist keine Mitwirkung.",
+          "marken": [
+            "neutral · würdigbar"
+          ],
+          "nummer": null,
+          "norm": null
+        },
+        {
+          "art": "cta",
+          "titel": "Schweigen richtig einordnen",
+          "text": "Speichern für die nächste StPO-Zusatzfrage.",
+          "sprecher": "Speicher dir das für die nächste StPO-Zusatzfrage. Und prüf im Urteil immer, ob das Gericht aus dem Schweigen etwas gemacht hat.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Schweigen ist kein Indiz für Schuld: Wer als Beschuldigter vollständig schweigt, darf dafür nicht mit Nachteilen in der Beweiswürdigung bezahlen – auch nicht für ein Schweigen im Ermittlungsverfahren. Anders beim Teilschweigen: Wer sich zur Tat einlässt und nur zu Einzelnem schweigt, dessen Aussageverhalten darf das Gericht grundsätzlich würdigen. Und nemo tenetur schützt vor aktiver Mitwirkung, nicht vor der Blutprobe.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#schweigerecht",
+        "#nemotenetur",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schweigerecht: was das Gericht würdigen darf",
+      "titelZeilen": [
+        "Er schweigt – das",
+        "Gericht darf nichts",
+        "daraus schließen"
+      ],
+      "coverText": "Teilschweigen ist würdigbar",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Wer ganz schweigt, gibt dem Gericht nichts in die Hand – wer nur teilweise schweigt, schon.",
+        "handlung": "{A} sits calmly with her mouth covered by a small glowing seal, while {B} hovers in front of her holding out an evidence tray that stays completely empty.",
+        "hinweisRegie": "Place the note in the open space beside the empty evidence tray, slightly tilted toward it, so the missing evidence is linked to the note without covering {A}'s sealed mouth or {B}'s grip.",
+        "alternative": "{B} sets a closed silent box on a scale whose needle stays at zero, while {A} watches with folded arms."
+      },
+      "bildSzene": "sealed mouth, droid holds empty tray",
+      "bildSzeneAlt": "closed box on scale, needle at zero",
+      "quellen": [
+        "§ 136 Abs. 1 S. 2 StPO",
+        "§ 261 StPO",
+        "§ 81a StPO",
+        "§ 164 StGB",
+        "Art. 6 Abs. 1 EMRK",
+        "Themenpool: stpo-767"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-669",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Das VG weist die Klage ab und lässt die Berufung nicht zu. Was muss der Kläger jetzt tun?",
+      "optionen": [
+        "Nichtzulassungsbeschwerde zum OVG erheben",
+        "Binnen eines Monats beim VG die Zulassung der Berufung beantragen",
+        "Sofort Berufung beim OVG einlegen und begründen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 124 Abs. 2 VwGO",
+        "§ 124a Abs. 4 VwGO",
+        "§ 133 VwGO",
+        "§ 146 VwGO",
+        "Themenpool: vwgo-669"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-669",
+      "ueberzeile": "Auflösung",
+      "titel": "Zulassung beantragen – beim VG, binnen eines Monats",
+      "text": "Lässt das VG die Berufung nicht zu, entscheidet das OVG auf Antrag (§ 124a Abs. 4 VwGO): Antrag beim VG binnen eines Monats nach Zustellung des vollständigen Urteils, Begründung binnen zwei Monaten. Zugelassen wird nur aus den Gründen des § 124 Abs. 2 VwGO. Die Nichtzulassungsbeschwerde gehört zur Revision (§ 133 VwGO), gegen Beschlüsse gibt es die Beschwerde (§ 146 VwGO).",
+      "norm": "§ 124a Abs. 4 VwGO · § 124 Abs. 2 VwGO",
+      "quellen": [
+        "§ 124 Abs. 2 VwGO",
+        "§ 124a Abs. 4 VwGO",
+        "§ 133 VwGO",
+        "§ 146 VwGO",
+        "Themenpool: vwgo-669"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.507Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nichtzulassungsbeschwerde zum OVG erheben",
+        "Binnen eines Monats beim VG die Zulassung der Berufung beantragen",
+        "Sofort Berufung beim OVG einlegen und begründen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-451",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 387 BGB: Die eigene Forderung muss durchsetzbar sein, die fremde nur erfüllbar",
+      "text": "Aufrechnungslage: Gegenseitigkeit, Gleichartigkeit (meist Geld), eine durchsetzbare Gegenforderung – fällig und einredefrei (§ 390 BGB) – und eine erfüllbare Hauptforderung. Dann Erklärung (§ 388 BGB) und kein Ausschluss, etwa nach § 393 BGB. Wirkung: Beide Forderungen erlöschen, soweit sie sich decken, rückwirkend auf die Aufrechnungslage (§ 389 BGB).",
+      "norm": "§§ 387–390 BGB",
+      "quellen": [
+        "§§ 387–390 BGB",
+        "§ 393 BGB",
+        "Themenpool: schuld-451"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-744",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Fahrlässigkeit: Sorgfalt objektiv im Tatbestand, subjektiv in der Schuld",
+      "text": "Bei §§ 222, 229 StGB statt Vorsatz: Erfolg, Kausalität, objektive Sorgfaltspflichtverletzung bei objektiver Vorhersehbarkeit, Pflichtwidrigkeitszusammenhang und Schutzzweck der Norm. In der Schuld die individuelle Sicht: Konnte gerade der Täter die Sorgfalt erkennen und erfüllen? Bei § 229 StGB an den Strafantrag denken (§ 230 StGB).",
+      "quellen": [
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "§ 230 StGB",
+        "Themenpool: strafbt-744"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-907",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Probeklausur zurück? Sortier jede Randbemerkung in eine von vier Kisten",
+      "text": "Nicht die Note ist die wichtigste Information, sondern das Muster in den Randbemerkungen.",
+      "punkte": [
+        "Wissen: Norm, Definition oder Streit nicht gekannt",
+        "Aufbau: Reihenfolge oder Anspruchsgrundlage verfehlt",
+        "Schwerpunkt: Unproblematisches breit, Problem knapp",
+        "Zeit und Form: nicht fertig, Subsumtion zu dünn"
+      ],
+      "quellen": [
+        "Themenpool: methodik-907"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-822",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Geschäftsgebühr wird angerechnet: Sinkt die erstattungsfähige Verfahrensgebühr?",
+      "norm": "Vorbem. 3 Abs. 4 VV RVG · § 15a RVG",
+      "optionen": [
+        "Frühere BGH-Rspr.: Ja – die Verfahrensgebühr entsteht von vornherein nur gekürzt.",
+        "§ 15a RVG heute: Grundsätzlich nein – der Gegner kann sich nur in den Fällen des Abs. 2 darauf berufen."
+      ],
+      "text": "Die vorgerichtliche Geschäftsgebühr wird zur Hälfte, höchstens mit 0,75, auf die Verfahrensgebühr (1,3) angerechnet. Nach § 15a Abs. 2 RVG wirkt das gegen den Gegner nur, wenn er eine der Gebühren bezahlt hat, dafür ein Titel besteht oder beide im selben Verfahren geltend gemacht werden.",
+      "quellen": [
+        "§ 15a RVG",
+        "Vorbem. 3 Abs. 4 VV RVG",
+        "§ 91 ZPO",
+        "Themenpool: assessorz-822"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:35:39.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
