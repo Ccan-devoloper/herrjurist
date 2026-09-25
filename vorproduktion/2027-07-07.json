@@ -1,0 +1,857 @@
+{
+  "datum": "2027-07-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-277",
+        "themaTitel": "Was ist der Streitgegenstand und warum entscheidet er über die Rechtskraft?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-735",
+        "themaTitel": "Unterlassen: Quasi-Kausalität und Entsprechungsklausel",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-600",
+        "themaTitel": "Bundespräsident: Ausfertigungsprüfungsrecht",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "stpo-766"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "stpo-766"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:11",
+        "art": "norm",
+        "themaId": "zpo-570"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:16",
+        "art": "streitstand",
+        "themaId": "assessoroer-845"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "merksatz",
+        "themaId": "verwalt-388"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "begriff",
+        "themaId": "stpo-776"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-277",
+      "poolTitel": "Was ist der Streitgegenstand und warum entscheidet er über die Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-22",
+        "2027-04-24",
+        "2027-07-05"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-735",
+      "poolTitel": "Unterlassen: Quasi-Kausalität und Entsprechungsklausel",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2026-11-03",
+        "2026-12-19"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-600",
+      "poolTitel": "Bundespräsident: Ausfertigungsprüfungsrecht",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 82 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-10",
+        "2026-12-04",
+        "2027-01-01"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-766",
+      "poolTitel": "Beschuldigtenbegriff und Belehrung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 136, 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-05-08",
+        "2027-05-08"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-766",
+      "poolTitel": "Beschuldigtenbegriff und Belehrung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 136, 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-05-08",
+        "2027-05-08"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-570",
+      "poolTitel": "Klage auf vorzugsweise Befriedigung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 805 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2027-02-27",
+        "2027-04-25"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-03",
+        "2027-03-25",
+        "2027-05-02"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "verwalt-388",
+      "poolTitel": "Was ist ein Verwaltungsakt mit Drittwirkung?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG",
+        "§ 80a VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24",
+        "2027-03-17",
+        "2027-04-26"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "stpo-776",
+      "poolTitel": "Vorläufige Festnahme",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 127 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-25",
+        "2027-05-05",
+        "2027-05-05"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-277",
+      "slug": "2027-07-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Aus Darlehen verloren? Dann ist auch § 812 BGB verbraucht",
+          "titelZeilen": [
+            "Aus Darlehen",
+            "verloren? Dann ist",
+            "auch § 812 BGB",
+            "verbraucht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Die Norm gehört nicht dazu",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verlangt von B die Rückzahlung von 5.000 € aus Darlehen (§ 488 Abs. 1 S. 2 BGB). Die Klage wird rechtskräftig abgewiesen, weil der Darlehensvertrag unwirksam sei. Jetzt klagt K dieselben 5.000 € erneut ein – gestützt auf § 812 Abs. 1 S. 1 Alt. 1 BGB. Ist die Klage zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Streitgegenstand bestimmen",
+              "text": "Antrag: Zahlung von 5.000 €. Lebenssachverhalt: die Hingabe des Geldes an B. Beides ist in beiden Klagen identisch."
+            },
+            {
+              "titel": "2. Die Norm ist kein Element",
+              "text": "Das Gericht muss den Sachverhalt unter allen Anspruchsgrundlagen prüfen – auch unter § 812 BGB, selbst wenn K ihn nicht nennt."
+            },
+            {
+              "titel": "3. Rechtskraft, § 322 Abs. 1 ZPO",
+              "text": "Identischer Streitgegenstand: Die neue Klage ist unzulässig. Die Rechtskraft ist von Amts wegen zu beachten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die zweite Klage zulassen, weil im ersten Prozess „nur § 488 BGB“ geprüft wurde. Die Rechtskraft hängt nicht daran, welche Normen das Gericht tatsächlich geprüft hat – auch ein falsches Urteil wird rechtskräftig. Anders nur bei einem neuen Lebenssachverhalt, etwa Tatsachen nach der letzten mündlichen Verhandlung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Streitgegenstand: Antrag plus Lebenssachverhalt. Die Rechtskraft erfasst ihn unter allen Anspruchsgrundlagen – geprüft oder nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der zweiten Klage prüfen",
+          "punkte": [
+            "Gleicher Antrag?",
+            "Gleicher Lebenssachverhalt?",
+            "Dann: Rechtskraft, § 322 ZPO"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Aus Darlehen verloren? Dann ist auch § 812 BGB verbraucht. Der Streitgegenstand besteht aus Antrag und Lebenssachverhalt – die Anspruchsgrundlage gehört nicht dazu. Das Gericht muss den Sachverhalt unter allen Normen prüfen. Deshalb erfasst die Rechtskraft nach § 322 Abs. 1 ZPO auch die Bereicherungsklage über dieselben 5.000 €. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilprozessrecht",
+        "#rechtskraft",
+        "#322zpo",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Streitgegenstand und Rechtskraft",
+      "coverText": "Die Norm gehört nicht dazu",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Wer mit demselben Antrag aus demselben Geschehen erneut klagt, scheitert an der Rechtskraft – egal, welche Norm er jetzt nennt.",
+        "handlung": "{A} tries to hand in the same parcel again with a new label stuck on top, while {B} hovers at the counter and points to a stamp showing it was already delivered.",
+        "hinweisRegie": "Place the note in the free space next to the stamp on the counter, slightly tilted toward the relabelled parcel, so the identical content is linked to the old stamp without covering {A}'s hands.",
+        "alternative": "{B} holds the same key in two differently coloured sleeves, while {A} shows that both fit only one lock that is already sealed."
+      },
+      "bildSzene": "relabelled parcel at stamped counter",
+      "bildSzeneAlt": "same key in two sleeves",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 322 Abs. 1 ZPO",
+        "§ 488 Abs. 1 BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+        "Themenpool: zpo-277"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.235Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-735",
+      "slug": "2027-07-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Hätte wahrscheinlich überlebt – reicht nicht für § 13 StGB",
+          "titelZeilen": [
+            "Hätte wahrschein-",
+            "lich überlebt –",
+            "reicht nicht für",
+            "§ 13 StGB"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Sicherheit statt Wahrscheinlichkeit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Bademeister B sieht, wie Badegast O untergeht, und bleibt sitzen; Os Tod nimmt er in Kauf. O ertrinkt. Laut Gutachten hätte O bei sofortiger Rettung wahrscheinlich, aber nicht sicher überlebt. Ist B wegen Totschlags durch Unterlassen strafbar (§§ 212, 13 StGB)?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Garantenstellung",
+              "text": "B hat die Aufsicht über die Badegäste übernommen – Beschützergarant."
+            },
+            {
+              "titel": "2. Quasi-Kausalität",
+              "text": "Rettung hinzudenken: Entfiele der Tod mit an Sicherheit grenzender Wahrscheinlichkeit? Hier nur wahrscheinlich – in dubio pro reo nicht erwiesen."
+            },
+            {
+              "titel": "3. Entsprechungsklausel",
+              "text": "§ 13 Abs. 1 Hs. 2 StGB: Bei reinen Erfolgsdelikten wie § 212 StGB ohne eigenes Gewicht, wichtig bei verhaltensgebundenen Delikten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Rettung wahrscheinlich, also kausal.“ Die Rspr. und h.M. verlangen eine an Sicherheit grenzende Wahrscheinlichkeit. Die Risikoverringerungslehre (Teile der Lit.) lässt eine deutliche Minderung des Risikos genügen – dagegen spricht, dass sie Zweifel zulasten des Täters auflöst."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Vollendeter Totschlag durch Unterlassen scheidet aus. B hielt die Rettung aber für möglich und nahm den Tod in Kauf: versuchter Totschlag durch Unterlassen (§§ 212, 13, 22, 23 Abs. 1 StGB). § 323c StGB tritt zurück."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Unterlassen ist nur kausal, wenn die Rettung den Erfolg mit an Sicherheit grenzender Wahrscheinlichkeit verhindert hätte. Sonst bleibt der Versuch."
+        },
+        {
+          "art": "cta",
+          "titel": "Unterlassen in drei Fragen",
+          "punkte": [
+            "Garant?",
+            "Rettung sicher erfolgreich?",
+            "Sonst: Versuch prüfen"
+          ],
+          "icons": [
+            "schild",
+            "lupe",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Hätte wahrscheinlich überlebt – das reicht für ein vollendetes Unterlassungsdelikt nicht. Nach Rspr. und h.M. muss die gebotene Handlung den Erfolg mit an Sicherheit grenzender Wahrscheinlichkeit verhindert haben. Bleiben Zweifel, gilt in dubio pro reo – und es bleibt beim Versuch, wenn der Garant die Rettung für möglich hielt. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#13stgb",
+        "#unterlassen",
+        "#kausalität",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Quasi-Kausalität beim Unterlassen",
+      "coverText": "Sicherheit statt Wahrscheinlichkeit",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Ein Unterlassen ist nur dann ursächlich, wenn die Rettung den Tod praktisch sicher verhindert hätte.",
+        "handlung": "{B} sits motionless on a tall lifeguard chair holding an unused rescue ring, while {A} measures the distance to the water with a long stick and frowns.",
+        "hinweisRegie": "Place the note in the free space between the unused rescue ring and the water, slightly tilted toward the ring, so the question of whether rescue would surely have worked sits there without covering {B}'s face.",
+        "alternative": "{A} holds a nearly full hourglass next to a closed door, while {B} hesitates with the key in his hand."
+      },
+      "bildSzene": "lifeguard holds unused rescue ring",
+      "bildSzeneAlt": "hourglass beside closed door",
+      "quellen": [
+        "§ 13 StGB",
+        "§ 212 StGB",
+        "§§ 22, 23 StGB",
+        "§ 323c StGB",
+        "Themenpool: strafat-735"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "wahrscheinlich-reicht-nicht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.236Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-600",
+      "slug": "2027-07-07-b3",
+      "titelZeilen": [
+        "Ausfertigen heißt",
+        "nicht blind",
+        "unterschreiben"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ausfertigen heißt nicht blind unterschreiben",
+          "unter": "Bundespräsident · Art. 82 GG",
+          "text": "Formell prüft er unstreitig, materiell begrenzt, politisch gar nicht.",
+          "norm": "Art. 82 Abs. 1 S. 1 GG",
+          "icon": "gebaeude",
+          "sprecher": "Ausfertigen heißt nicht blind unterschreiben. Der Bundespräsident prüft ein Gesetz, bevor er es ausfertigt. Die Frage ist nur: wie weit darf er gehen?",
+          "marken": [
+            "Prüfungsrecht",
+            "wie weit?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Formelles Prüfungsrecht",
+          "text": "Zuständigkeit, Verfahren, Form – unstreitig.",
+          "norm": "Art. 82 Abs. 1 S. 1 GG",
+          "sprecher": "Stufe eins: das formelle Prüfungsrecht. Artikel 82 spricht von Gesetzen, die nach den Vorschriften des Grundgesetzes zustande gekommen sind. Zuständigkeit, Verfahren und Form darf er deshalb unstreitig prüfen.",
+          "marken": [
+            "unstreitig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Materielles Prüfungsrecht",
+          "text": "H.M.: ja – Bindung an das Grundgesetz und Amtseid.",
+          "norm": "Art. 20 Abs. 3 GG · Art. 56 GG",
+          "sprecher": "Stufe zwei: das materielle Prüfungsrecht, also etwa die Grundrechte. Die herrschende Meinung bejaht es. Argumente sind die Bindung an Recht und Gesetz aus Artikel 20 Absatz 3 und der Amtseid aus Artikel 56.",
+          "marken": [
+            "h.M.: ja"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Grenze: Evidenz",
+          "text": "Verwerfungsmonopol beim BVerfG – verbreitet: nur offenkundige Verstöße.",
+          "norm": "Art. 100 Abs. 1 GG",
+          "sprecher": "Stufe drei: die Grenze. Über die Verfassungswidrigkeit von Gesetzen entscheidet letztlich das Bundesverfassungsgericht. Nach verbreiteter Ansicht darf der Bundespräsident deshalb nur bei offenkundigen Verstößen die Ausfertigung verweigern.",
+          "marken": [
+            "nur evident"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Politische Bedenken zählen nicht",
+          "text": "Unzweckmäßig ist kein Grund. Streit: Organstreit, Art. 93 Abs. 1 Nr. 1 GG.",
+          "norm": "Art. 93 Abs. 1 Nr. 1 GG",
+          "sprecher": "Was nie reicht: politische Bedenken. Hält er ein Gesetz nur für unzweckmäßig, muss er es ausfertigen. Verweigert er zu Unrecht, kommt ein Organstreit in Betracht.",
+          "marken": [
+            "kein Veto"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Formell ja. Materiell jedenfalls bei Evidenz. Politisch nie.",
+          "norm": null,
+          "sprecher": "Merke: formell ja, materiell jedenfalls bei evidenten Verstößen, politisch nie.",
+          "marken": [
+            "drei Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 82 GG in drei Stufen",
+          "text": "Speichern für die nächste Staatsorganisationsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur zum Staatsorganisationsrecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Ausfertigen heißt nicht blind unterschreiben. Formell prüft der Bundespräsident nach Art. 82 Abs. 1 S. 1 GG unstreitig. Ein materielles Prüfungsrecht bejaht die h.M. – nach verbreiteter Ansicht aber nur bei offenkundigen Verfassungsverstößen, weil das Verwerfungsmonopol beim BVerfG liegt. Politische Bedenken reichen nie. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bundespräsident",
+        "#art82gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Prüfungsrecht des Bundespräsidenten",
+      "coverText": "Politisch: kein Veto",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Der Bundespräsident prüft vor der Unterschrift, ob das Gesetz ordnungsgemäß zustande kam – politisch mitreden darf er nicht.",
+        "handlung": "{B} hovers and holds out a document for signing, while {A} stops the pen mid-air and inspects the document's seams with a magnifying lens.",
+        "hinweisRegie": "Place the note in the free space next to the magnifying lens and the document's seams, slightly tilted toward the lens, so the check before signing is clear without covering the paused pen.",
+        "alternative": "{A} checks three small locks on a gate one after another, while {B} waits with the key to open it afterwards."
+      },
+      "bildSzene": "pen paused, lens on document seams",
+      "bildSzeneAlt": "three locks checked on gate",
+      "quellen": [
+        "Art. 82 Abs. 1 GG",
+        "Art. 20 Abs. 3 GG",
+        "Art. 56 GG",
+        "Art. 93 Abs. 1 Nr. 1 GG",
+        "Art. 100 Abs. 1 GG",
+        "Themenpool: staat-600"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-766",
+      "ueberzeile": "Prüfungsfrage Strafprozessrecht",
+      "titel": "Starker Verdacht gegen Z, doch die Polizei vernimmt ihn als Zeugen, nur mit § 55 StPO. Z gesteht. Verwertbar?",
+      "optionen": [
+        "Verwertbar – er war formal noch Zeuge",
+        "Verwertbar – die Belehrung nach § 55 StPO genügt",
+        "Grundsätzlich nicht – er war als Beschuldigter zu belehren"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 163a Abs. 4 StPO",
+        "§ 55 StPO",
+        "Themenpool: stpo-766"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-766",
+      "ueberzeile": "Auflösung",
+      "titel": "Grundsätzlich unverwertbar – der Verdacht verlangte die Beschuldigtenbelehrung",
+      "text": "Beschuldigter wird man durch einen Willensakt der Strafverfolgungsbehörde, sie hat einen Beurteilungsspielraum. Ist der Verdacht aber so stark, dass sie Z nicht mehr als Zeugen behandeln darf, muss sie nach §§ 163a Abs. 4, 136 Abs. 1 StPO belehren. § 55 StPO ersetzt das nicht. Nach dem BGH muss der verteidigte Angeklagte der Verwertung widersprechen.",
+      "norm": "§ 136 Abs. 1 StPO · § 163a Abs. 4 StPO",
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 163a Abs. 4 StPO",
+        "§ 55 StPO",
+        "Themenpool: stpo-766"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.237Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Verwertbar – er war formal noch Zeuge",
+        "Verwertbar – die Belehrung nach § 55 StPO genügt",
+        "Grundsätzlich nicht – er war als Beschuldigter zu belehren"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-570",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 805 ZPO: Vorzugsweise Befriedigung – auch wenn die Forderung noch nicht fällig ist",
+      "text": "Der Dritte ohne Besitz, etwa mit gesetzlichem Pfandrecht, kann der Pfändung nicht widersprechen. Er klagt aber auf vorzugsweise Befriedigung aus dem Erlös – ausdrücklich ohne Rücksicht darauf, ob seine Forderung fällig ist (§ 805 Abs. 1 ZPO). Macht er den Anspruch glaubhaft, ordnet das Gericht die Hinterlegung des Erlöses an (§ 805 Abs. 4 ZPO).",
+      "norm": "§ 805 Abs. 1, 4 ZPO",
+      "quellen": [
+        "§ 805 ZPO",
+        "Themenpool: zpo-570"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-845",
+      "ueberzeile": "Streitstand 2. Examen ÖR",
+      "titel": "Anhörung vergessen: Heilt das Widerspruchsverfahren den Fehler von selbst?",
+      "norm": "§ 45 Abs. 1 Nr. 3, Abs. 2 VwVfG · § 28 VwVfG",
+      "optionen": [
+        "BVerwG: grds. ja – wenn der Betroffene im Widerspruchsverfahren alles vortragen konnte und die Behörde es würdigt.",
+        "Teile der Lit.: nein – die Anhörung muss gezielt nachgeholt werden, der Widerspruch ersetzt sie nicht."
+      ],
+      "text": "Klausur: Mit dem BVerwG lässt sich die Heilung meist bejahen, wenn die Widerspruchsbehörde volle Prüfungskompetenz hat und das Vorbringen erkennbar erwogen hat. Nachholen ist bis zum Abschluss der letzten Tatsacheninstanz möglich (§ 45 Abs. 2 VwVfG).",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: assessoroer-845"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-388",
+      "ueberzeile": "Merksatz Verwaltungsrecht AT",
+      "titel": "Nachbar hat Widerspruch eingelegt: Der Bauherr verliert den Vertrauensschutz",
+      "text": "Hebt die Behörde einen begünstigenden VA auf, den ein Dritter angefochten hat, gelten die Vertrauensschutzregeln der §§ 48, 49 VwVfG weitgehend nicht – soweit dem Rechtsbehelf damit abgeholfen wird (§ 50 VwVfG). Wer weiß, dass der Nachbar sich wehrt, darf nicht auf den Bestand vertrauen.",
+      "norm": "§ 50 VwVfG",
+      "quellen": [
+        "§ 50 VwVfG",
+        "§§ 48, 49 VwVfG",
+        "§ 80a VwGO",
+        "Themenpool: verwalt-388"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-776",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Auf frischer Tat betroffen oder verfolgt",
+      "text": "Betroffen ist, wer bei der Tat oder unmittelbar danach am Tatort oder in dessen Nähe angetroffen wird. Verfolgt ist, wem nach Entdeckung der Tat sofort nachgesetzt wird. Umstritten ist, ob die Tat wirklich begangen sein muss oder dringender Tatverdacht genügt. Dazu kommt ein Festnahmegrund: Fluchtverdacht oder Identität nicht sofort feststellbar.",
+      "norm": "§ 127 Abs. 1 S. 1 StPO",
+      "quellen": [
+        "§ 127 Abs. 1 StPO",
+        "Themenpool: stpo-776"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:45.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
