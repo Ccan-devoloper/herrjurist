@@ -1,0 +1,55 @@
+name: Themen einpflegen
+
+# Übernimmt neue Themen-Kandidaten aus daten/themen-neu.json.enc (Secret
+# WISSEN_TRANSFER_KEY) in den verschlüsselten Themenpool (IG_WISSEN_KEY).
+# Jeder Kandidat wird geprüft (Fach, Titel, Normen, Wissens-Zeiger) und gegen
+# den Bestand auf Dubletten abgeglichen; das Log nennt nur Zahlen. Nach
+# erfolgreichem Lauf kann das Secret WISSEN_TRANSFER_KEY gelöscht werden.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: themen-einpflegen
+  cancel-in-progress: false
+
+jobs:
+  einpflegen:
+    runs-on: ubuntu-latest
+    env:
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      WISSEN_TRANSFER_KEY: ${{ secrets.WISSEN_TRANSFER_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Schlüssel prüfen
+        run: |
+          test -n "$IG_WISSEN_KEY" || { echo "IG_WISSEN_KEY fehlt"; exit 1; }
+          test -n "$WISSEN_TRANSFER_KEY" || { echo "WISSEN_TRANSFER_KEY fehlt (Secret anlegen, Wert kam mit dem Staging)"; exit 1; }
+
+      - name: Staging prüfen
+        run: node bin/themen-einpflegen.mjs pruefen
+
+      - name: Übernehmen
+        run: node bin/themen-einpflegen.mjs uebernehmen
+
+      - name: Pool gegenlesen
+        run: node bin/themen-tresor.mjs pruefen
+
+      - name: Ergebnis committen
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A daten
+          git commit -m "Themenpool um Vollrepetitoriums-Themen ergänzen" || exit 0
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"

@@ -249,6 +249,13 @@ Kosten: rund 1200 Token je Beitrag, also ~0,004 $ – bei drei Beiträgen am Tag
    Danach das Secret `WISSEN_TRANSFER_KEY` wieder löschen. Das Actions-Log nennt dabei nur
    Zahlen und Schlüssel-Fingerabdrücke, nie Titel oder Text.
 
+Für **neue Themen** gilt derselbe Weg: Kandidaten als `daten/themen-neu.json.enc` (mit
+Transferschlüssel) committen und den Workflow **„Themen einpflegen“** starten. Er prüft jeden
+Kandidaten (Fach, Titel, Normen, Wissens-Zeiger), gleicht Titel gegen den Bestand ab – Dubletten
+fliegen raus, Grenzfälle werden im verschlüsselten Bericht zum Nachsehen markiert
+(`node bin/themen-einpflegen.mjs bericht`) – und hängt die übrigen ans Ende des Pools an, damit
+die positionsabhängigen Themen-IDs des Ledgers stabil bleiben.
+
 ## Pausieren und Modus
 
 - **Manueller Start** (Actions → Instagram-Bot → Run workflow): Vorgabe ist **trocken** – es wird alles
