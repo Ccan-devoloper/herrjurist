@@ -1,0 +1,875 @@
+{
+  "datum": "2027-02-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "schuldbt-471",
+        "themaTitel": "Verbrauchsgüterkauf: Abweichende Vereinbarungen",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafat-311",
+        "themaTitel": "Wie wirkt die Akzessorietät bei besonderen persönlichen Merkmalen?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-098",
+        "themaTitel": "Wann darf ein rechtswidriger begünstigender Verwaltungsakt zurückgenommen werden?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:17",
+        "art": "frage",
+        "themaId": "grundr-626"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:17",
+        "art": "antwort",
+        "themaId": "grundr-626"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "strafbt-330"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "tipp",
+        "themaId": "bgbat-003"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:53",
+        "art": "zahl",
+        "themaId": "zpo-052"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "streitstand",
+        "themaId": "verwbt-113"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "schuldbt-471",
+      "poolTitel": "Verbrauchsgüterkauf: Abweichende Vereinbarungen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 474 ff. BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-311",
+      "poolTitel": "Wie wirkt die Akzessorietät bei besonderen persönlichen Merkmalen?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 28 StGB",
+        "§ 29 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-098",
+      "poolTitel": "Wann darf ein rechtswidriger begünstigender Verwaltungsakt zurückgenommen werden?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-28",
+        "2026-12-29"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-626",
+      "poolTitel": "Asylgrundrecht und unionsrechtliche Überlagerung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 16a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28",
+        "2026-11-28",
+        "2026-12-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-626",
+      "poolTitel": "Asylgrundrecht und unionsrechtliche Überlagerung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 16a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28",
+        "2026-11-28",
+        "2026-12-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-330",
+      "poolTitel": "Wann liegt eine Vermögensverfügung vor und wie grenzt man sie vom Diebstahl ab?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB",
+        "§ 242 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "bgbat-003",
+      "poolTitel": "Inwieweit werden sich widersprechende AGB Vertragsbestandteil?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 154 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-01",
+        "2026-12-01"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zpo-052",
+      "poolTitel": "Worauf kommt es für den rechtzeitigen Eingang eines per Telefax übermittelten Schriftsatzes bei Gericht an?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 130 ZPO",
+        "§ 130a ZPO",
+        "§ 130d ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-29",
+        "2026-11-30"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "verwbt-113",
+      "poolTitel": "Wer ist Störer im Polizei- und Ordnungsrecht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-09-29",
+        "2026-10-17",
+        "2026-11-30"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-471",
+      "slug": "2027-02-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Alle Mängelrechte ausgeschlossen – und trotzdem da",
+          "titelZeilen": [
+            "Alle Mängelrechte",
+            "ausgeschlossen –",
+            "und trotzdem da"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 476 BGB sperrt den Ausschluss",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Händler V verkauft Verbraucher K einen gebrauchten E-Scooter. Im Vertrag steht: „Verkauf unter Ausschluss jeder Sachmängelhaftung.“ Nach drei Monaten fällt der Akku aus – der Defekt war schon bei Übergabe angelegt. Kann K Nacherfüllung verlangen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Verbrauchsgüterkauf",
+              "text": "Ein Verbraucher kauft von einem Unternehmer eine Ware (§ 474 Abs. 1 BGB). Gebrauchte Sachen sind erfasst."
+            },
+            {
+              "titel": "2. Abweichende Vereinbarung",
+              "text": "Vor Mitteilung des Mangels getroffen und zum Nachteil des K: V kann sich nicht darauf berufen (§ 476 Abs. 1 S. 1 BGB)."
+            },
+            {
+              "titel": "3. Mängelrechte",
+              "text": "Mangel bei Gefahrübergang, §§ 434, 437 Nr. 1, 439 BGB. Zeigt er sich binnen eines Jahres, hilft die Vermutung des § 477 BGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Was trotzdem geht",
+          "punkte": [
+            "Negative Beschaffenheit: K vorher eigens informiert, ausdrücklich und gesondert vereinbart (§ 476 I 2).",
+            "Verjährung bei Gebrauchtware: auf ein Jahr verkürzbar – unter denselben Hürden (§ 476 Abs. 2 BGB).",
+            "Schadensersatz: Ausschluss oder Begrenzung möglich, aber nur im Rahmen der §§ 307–309 BGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Falle",
+          "text": "„Bei Gebrauchtware darf man ausschließen“ – gegenüber Verbrauchern nicht. Und ein pauschaler Hinweis wie „Gebrauchtware, Mängel möglich“ ist keine negative Beschaffenheitsvereinbarung: Sie muss sich auf ein bestimmtes Merkmal beziehen. Ergebnis: K kann Nacherfüllung verlangen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gegenüber Verbrauchern hält kein pauschaler Ausschluss. Abweichen geht nur für ein bestimmtes Merkmal – eigens mitgeteilt, ausdrücklich, gesondert vereinbart."
+        },
+        {
+          "art": "cta",
+          "titel": "Verbrauchsgüterkauf in drei Fragen",
+          "punkte": [
+            "Verbraucher kauft Ware vom Unternehmer?",
+            "Vereinbarung vor Mitteilung des Mangels?",
+            "Ausnahme nach § 476 Abs. 1 S. 2, Abs. 2, 3 BGB?"
+          ],
+          "icons": [
+            "person",
+            "vertrag",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Alle Mängelrechte ausgeschlossen – und trotzdem kann der Käufer sie geltend machen. Beim Verbrauchsgüterkauf kann sich der Unternehmer auf eine Vereinbarung, die vor Mitteilung des Mangels zum Nachteil des Verbrauchers abweicht, nicht berufen (§ 476 Abs. 1 S. 1 BGB). Auch bei Gebrauchtware. Ausnahmen gibt es nur eng: negative Beschaffenheitsvereinbarung für ein bestimmtes Merkmal, verkürzte Verjährung, Schadensersatz im Rahmen der AGB-Kontrolle. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#476bgb",
+        "#verbrauchsgüterkauf",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verbrauchsgüterkauf: kein pauschaler Ausschluss",
+      "coverText": "§ 476 BGB sperrt den Ausschluss",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Ein pauschaler Ausschluss der Mängelrechte läuft gegenüber Verbrauchern ins Leere.",
+        "handlung": "{A} curiously holds up a scooter battery that sparks faintly, while {B} nervously tries to hide a large blank torn-off paper banner behind his back.",
+        "hinweisRegie": "Place the note in the free space between the sparking battery and the hidden banner, slightly tilted toward the battery, without covering {A}'s hands or {B}'s face.",
+        "alternative": "{B} tries to press a heavy lid onto a crate of worn parts, while {A} calmly lifts the lid again from the other side."
+      },
+      "bildSzene": "alien holds sparking scooter battery",
+      "bildSzeneAlt": "heavy lid lifted from crate of parts",
+      "quellen": [
+        "§ 474 BGB",
+        "§ 476 BGB",
+        "§§ 434, 437, 439 BGB",
+        "§ 477 BGB",
+        "§§ 307–309 BGB",
+        "Themenpool: schuldbt-471"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.040Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-311",
+      "slug": "2027-02-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 28 StGB: Vier Weichen, bevor du milderst",
+          "titelZeilen": [
+            "§ 28 StGB:",
+            "vier Weichen, bevor",
+            "du milderst"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Tatbezogen? Dann kein § 28",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Teilnahme ist akzessorisch: Anstifter und Gehilfe haften für die Haupttat. § 28 StGB lockert das bei besonderen persönlichen Merkmalen – Umständen, die in der Person des Täters liegen, nicht in der Tat. Welche Folge greift, entscheidet sich in vier Schritten."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Haupttat und Teilnahme",
+              "text": "Vorsätzliche, rechtswidrige Haupttat; Anstiftung oder Beihilfe (§§ 26, 27 StGB) wie gewohnt prüfen."
+            },
+            {
+              "titel": "2. Besonderes persönliches Merkmal?",
+              "text": "Täterbezogen: etwa Amtsträgerstellung, Habgier, Verdeckungsabsicht. Tatbezogen, etwa Heimtücke: kein § 28, es zählt der Vorsatz."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Begründend oder modifizierend?",
+              "text": "Begründet das Merkmal die Strafbarkeit (Abs. 1) – oder schärft, mildert oder schließt es sie aus (Abs. 2)?"
+            },
+            {
+              "titel": "4. Rechtsfolge",
+              "text": "Abs. 1: Fehlt es beim Teilnehmer, Milderung nach § 49 Abs. 1 StGB. Abs. 2: Das Merkmal wirkt nur für den, bei dem es vorliegt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Mord und Totschlag",
+          "text": "Die Rspr. sieht § 211 StGB als eigenständiges Delikt: Täterbezogene Mordmerkmale begründen die Strafbarkeit – § 28 Abs. 1. Die h.L. sieht eine Qualifikation des § 212 – § 28 Abs. 2, der Teilnehmer ohne Merkmal haftet nur aus § 212. Entscheiden nur, wenn die Ergebnisse auseinanderlaufen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst täter- oder tatbezogen, dann begründend oder modifizierend. Und die Schuld prüfst du für jeden Beteiligten gesondert (§ 29 StGB)."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Weichen bei § 28 StGB",
+          "punkte": [
+            "Haupttat und Teilnahme",
+            "Täter- oder tatbezogen?",
+            "Begründend oder modifizierend?",
+            "Milderung oder Verschiebung"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "waage",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "§ 28 StGB: vier Weichen, bevor du milderst. Erst Haupttat und Teilnahme, dann die Frage, ob das Merkmal an der Person des Täters hängt oder an der Tat – Heimtücke etwa ist tatbezogen, dort gilt § 28 nicht. Dann: begründet das Merkmal die Strafbarkeit (Abs. 1) oder modifiziert es sie (Abs. 2)? Beim Mord streiten Rspr. und h.L. genau darüber. Speichern für die nächste Beteiligungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#28stgb",
+        "#teilnahme",
+        "#mordmerkmale",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 28 StGB: das Schema in vier Schritten",
+      "coverText": "Tatbezogen? Dann kein § 28",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Ob ein Merkmal auf den Teilnehmer übergeht, hängt davon ab, ob es an der Person oder an der Tat hängt.",
+        "handlung": "{A} points his pointer at a glowing crystal fixed to {B}'s own helmet, while {B} hands only a plain unlit rock to a waiting helper.",
+        "hinweisRegie": "Place the note in the free space between the glowing helmet crystal and the plain rock, slightly tilted toward the crystal, without covering {B}'s face or the helper's hands.",
+        "alternative": "{B} carries one pack strapped tightly to his body and pushes a second pack on a cart that others may also push, while {A} points at the strapped one."
+      },
+      "bildSzene": "crystal stays on helmet, rock passed on",
+      "bildSzeneAlt": "strapped pack versus shared cart",
+      "quellen": [
+        "§ 28 StGB",
+        "§ 29 StGB",
+        "§§ 26, 27 StGB",
+        "§ 49 Abs. 1 StGB",
+        "§§ 211, 212 StGB",
+        "Themenpool: strafat-311"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.040Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-098",
+      "slug": "2027-02-01-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "§ 48 Abs. 4 VwVfG: Die Uhr tickt erst ab voller Kenntnis",
+          "unter": "Rücknahme · § 48 VwVfG",
+          "text": "Die Jahresfrist beginnt erst, wenn die Behörde alle Rücknahmetatsachen kennt.",
+          "norm": "§ 48 Abs. 4 VwVfG",
+          "icon": "uhr",
+          "sprecher": "Die Jahresfrist läuft nicht ab dem Bescheid. Bei der Rücknahme eines rechtswidrigen begünstigenden Verwaltungsakts beginnt sie erst, wenn die Behörde alles kennt, was sie für die Rücknahme braucht.",
+          "marken": [
+            "ab Kenntnis",
+            "nicht ab Bescheid"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Rechtswidrig und begünstigend",
+          "text": "Rücknahme nach § 48 VwVfG – auch wenn der Bescheid schon unanfechtbar ist.",
+          "norm": "§ 48 Abs. 1 VwVfG",
+          "sprecher": "Schritt eins: Der Verwaltungsakt ist rechtswidrig und begünstigt den Adressaten. Dann ist Paragraf 48 die Grundlage, und zwar auch nach Eintritt der Bestandskraft.",
+          "marken": [
+            "auch nach Bestandskraft"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vertrauensschutz richtig einordnen",
+          "text": "Geld- oder teilbare Sachleistung: Abs. 2 kann sperren. Sonst gibt Abs. 3 nur Ausgleich.",
+          "norm": "§ 48 Abs. 2, 3 VwVfG",
+          "sprecher": "Schritt zwei: der Vertrauensschutz. Bei Geld- oder teilbaren Sachleistungen scheidet die Rücknahme aus, soweit das Vertrauen schutzwürdig ist. Andere Verwaltungsakte werden zurückgenommen, der Vermögensnachteil wird aber auf Antrag ausgeglichen.",
+          "marken": [
+            "Abs. 2 oder Abs. 3"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Jahresfrist ab Kenntnis",
+          "text": "Nach dem BVerwG eine Entscheidungsfrist: Sie beginnt erst bei vollständiger Kenntnis.",
+          "norm": "§ 48 Abs. 4 S. 1 VwVfG",
+          "sprecher": "Schritt drei: die Frist. Zurücknehmen darf die Behörde nur innerhalb eines Jahres ab Kenntnis der Tatsachen. Das Bundesverwaltungsgericht versteht das als Entscheidungsfrist. Sie beginnt erst, wenn die Behörde die Rechtswidrigkeit erkannt hat und alle erheblichen Tatsachen vollständig kennt, häufig also erst nach der Anhörung.",
+          "marken": [
+            "Entscheidungsfrist"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ermessen",
+          "text": "„Kann“: öffentliches Interesse gegen Vertrauen abwägen.",
+          "norm": "§ 48 Abs. 1 S. 1 VwVfG",
+          "sprecher": "Schritt vier: das Ermessen. Das Gesetz sagt „kann“. Die Behörde wägt das öffentliche Interesse an der Rücknahme gegen das Vertrauen des Begünstigten ab und begründet ihre Entscheidung.",
+          "marken": [
+            "kann"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Täuschung: keine Frist",
+          "text": "Bei Arglist, Drohung oder Bestechung gilt die Jahresfrist nicht.",
+          "norm": "§ 48 Abs. 4 S. 2 VwVfG",
+          "sprecher": "Der Klassiker: Hat der Begünstigte den Bescheid durch arglistige Täuschung, Drohung oder Bestechung erwirkt, gilt die Jahresfrist gar nicht. Dann bleibt die Rücknahme auch nach Jahren möglich.",
+          "marken": [
+            "keine Frist"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Rechtswidrig, begünstigend, Vertrauen, Frist ab voller Kenntnis, Ermessen.",
+          "norm": "§ 48 VwVfG",
+          "sprecher": "Merke: Die Jahresfrist beginnt nicht mit dem Bescheid, sondern mit der vollständigen Kenntnis der Behörde. Und bei Täuschung läuft gar keine Frist.",
+          "marken": [
+            "Kenntnis zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst den Kenntniszeitpunkt bestimmen",
+          "text": "Speichern für die nächste Klausur im Verwaltungsrecht AT.",
+          "sprecher": "Speicher dir das für die nächste Rücknahmeklausur. Und bestimm zuerst, wann die Behörde wirklich alles wusste.",
+          "marken": [
+            "wann wusste sie es?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Jahresfrist für die Rücknahme läuft nicht ab dem Bescheid. Nach dem BVerwG ist § 48 Abs. 4 VwVfG eine Entscheidungsfrist: Sie beginnt erst, wenn die Behörde die Rechtswidrigkeit erkannt hat und alle für die Rücknahme erheblichen Tatsachen vollständig kennt. Bei Täuschung, Drohung oder Bestechung gilt sie gar nicht. Davor stehen Rechtswidrigkeit, Begünstigung und der Vertrauensschutz nach Abs. 2 oder 3.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#48vwvfg",
+        "#rücknahme",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücknahme: Jahresfrist ab voller Kenntnis",
+      "titelZeilen": [
+        "§ 48 Abs. 4 VwVfG:",
+        "Die Uhr tickt erst",
+        "ab voller Kenntnis"
+      ],
+      "coverText": "Entscheidungsfrist statt Bescheiddatum",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Die Uhr für die Rücknahme startet erst, wenn die Behörde alles weiß.",
+        "handlung": "{A} hovers beside a stopped hourglass and only turns it over once {B} places the last missing puzzle piece onto a small table next to it.",
+        "hinweisRegie": "Place the note in the free space just above the hourglass, slightly tilted toward the last puzzle piece, so the start of the time links to complete knowledge, without covering {B}'s hand.",
+        "alternative": "{B} holds a starting flag lowered while {A} still collects the last scattered cards from the ground before the race may begin."
+      },
+      "bildSzene": "hourglass turned after last puzzle piece",
+      "bildSzeneAlt": "starting flag held until cards collected",
+      "quellen": [
+        "§ 48 VwVfG",
+        "Themenpool: verwalt-098"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.042Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-626",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Allein eine Miliz verfolgt O, sein Staat kann ihn nicht schützen. Hat O Asylrecht nach Art. 16a GG?",
+      "optionen": [
+        "Ja – Art. 16a GG schützt vor jeder Verfolgung",
+        "Nein – aber Flüchtlingsschutz nach dem AsylG ist möglich",
+        "Nein – private Verfolgung begründet nie irgendeinen Schutz"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 16a GG",
+        "§§ 3, 3c AsylG",
+        "Themenpool: grundr-626"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.042Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-626",
+      "ueberzeile": "Auflösung",
+      "titel": "Kein Asylgrundrecht – aber Flüchtlingsschutz bleibt möglich",
+      "text": "Art. 16a Abs. 1 GG setzt nach dem BVerfG grundsätzlich staatliche oder quasistaatliche Verfolgung voraus; Übergriffe Privater zählen nur, wenn sie dem Staat zuzurechnen sind. Das unionsrechtlich geprägte Flüchtlingsrecht ist weiter: Nichtstaatliche Akteure genügen, wenn der Staat keinen Schutz bieten kann oder will (§ 3c Nr. 3 AsylG).",
+      "norm": "Art. 16a Abs. 1 GG · § 3c AsylG",
+      "quellen": [
+        "Art. 16a GG",
+        "§§ 3, 3c AsylG",
+        "Themenpool: grundr-626"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.042Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Art. 16a GG schützt vor jeder Verfolgung",
+        "Nein – aber Flüchtlingsschutz nach dem AsylG ist möglich",
+        "Nein – private Verfolgung begründet nie irgendeinen Schutz"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-330",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB: Die Vermögensverfügung steht nicht im Gesetz",
+      "text": "Sie ist das ungeschriebene Bindeglied zwischen Irrtum und Schaden: jedes Handeln, Dulden oder Unterlassen des Getäuschten, das sein Vermögen oder das eines Dritten unmittelbar mindert. Beim Sachbetrug verlangt die h.M. zusätzlich Verfügungsbewusstsein – daran scheidet er sich vom Diebstahl, bei dem der Täter den Gewahrsam selbst bricht.",
+      "norm": "§ 263 Abs. 1 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-330"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.042Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-003",
+      "ueberzeile": "Klausurtipp BGB AT",
+      "titel": "Kollidierende AGB: erst den Vertrag retten, dann die Klauseln sortieren",
+      "text": "1. Führen die Parteien den Vertrag trotz der Kollision durch, zeigt das: Er soll gelten – der Dissens lässt ihn nicht scheitern. 2. Übereinstimmende Klauseln gelten, widersprechende nicht. 3. Die Lücke füllt das dispositive Recht (§ 306 Abs. 2 BGB). Sonderfall einfacher Eigentumsvorbehalt: Er kann sachenrechtlich trotzdem wirken.",
+      "quellen": [
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 154 BGB",
+        "Themenpool: bgbat-003"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.042Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-052",
+      "ueberzeile": "4 Punkte Zivilprozessrecht",
+      "titel": "Partei ohne Anwalt faxt kurz vor Mitternacht: Was entscheidet über die Frist?",
+      "text": "Für Anwälte und Behörden ist das Fax seit 2022 kein zulässiger Weg mehr (§ 130d ZPO). Für alle anderen gilt:",
+      "punkte": [
+        "Die Unterschrift muss auf der Kopie wiedergegeben sein (§ 130 Nr. 6 ZPO)",
+        "Maßgeblich: vollständiger Empfang der Daten im Gerichtsfax vor Fristende",
+        "Nicht entscheidend: wann das Gericht ausdruckt",
+        "Gerichtsgerät gestört? Wiedereinsetzung prüfen (§ 233 ZPO)"
+      ],
+      "quellen": [
+        "§ 130 ZPO",
+        "§ 130d ZPO",
+        "§ 233 ZPO",
+        "Themenpool: zpo-052"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.042Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-113",
+      "ueberzeile": "Streitstand Polizeirecht",
+      "titel": "Fremder Tanklaster verunglückt auf dem Grundstück des E: Haftet E unbegrenzt als Zustandsstörer?",
+      "norm": "Polizeigesetze der Länder",
+      "optionen": [
+        "Eine Ansicht: E haftet schon wegen seiner Sachherrschaft – auch in der Opferrolle.",
+        "Andere Ansicht: In der Opferrolle haftet E nur begrenzt, jedenfalls bei den Kosten."
+      ],
+      "text": "Das BVerfG begrenzt bei Altlasten die Kostenlast des Zustandsstörers über Art. 14 GG – Orientierung: der Verkehrswert nach Sanierung. Klausur: Inanspruchnahme meist zulässig, die Grenze bei Verhältnismäßigkeit und Kosten prüfen.",
+      "quellen": [
+        "Polizeigesetze der Länder",
+        "Art. 14 GG",
+        "Themenpool: verwbt-113"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:26.042Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,904 @@
+{
+  "datum": "2027-03-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-345",
+        "themaTitel": "Wie ist der Gang des Ermittlungsverfahrens?",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "vwgo-653",
+        "themaTitel": "Anfechtungsklage",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "delikt-240",
+        "themaTitel": "Wie prüft man § 823 Abs. 1 BGB?",
+        "fach": "delikt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:18",
+        "art": "frage",
+        "themaId": "assessoroer-715"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:18",
+        "art": "antwort",
+        "themaId": "assessoroer-715"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "famerb-258"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "tipp",
+        "themaId": "handelsg-146"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "zahl",
+        "themaId": "methodik-906"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "streitstand",
+        "themaId": "ipr-935"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-345",
+      "poolTitel": "Wie ist der Gang des Ermittlungsverfahrens?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 152 StPO",
+        "§ 160 StPO",
+        "§ 170 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "vwgo-653",
+      "poolTitel": "Anfechtungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 I Alt. 1 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "delikt-240",
+      "poolTitel": "Wie prüft man § 823 Abs. 1 BGB?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-715",
+      "poolTitel": "Straßenverkehrsrecht und Verkehrszeichen als VA",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "StVO; VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2026-11-03"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-715",
+      "poolTitel": "Straßenverkehrsrecht und Verkehrszeichen als VA",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "StVO; VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2026-11-03"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-258",
+      "poolTitel": "Wie ist die gesetzliche Erbfolge aufgebaut?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1924 BGB",
+        "§ 1925 BGB",
+        "§ 1931 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2027-01-16"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "handelsg-146",
+      "poolTitel": "Wie haftet der eintretende Gesellschafter für Altschulden?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 721a BGB",
+        "§ 127 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-906",
+      "poolTitel": "Sachverhaltssignale für Standardprobleme lesen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2026-12-04",
+        "2027-02-06"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "ipr-935",
+      "poolTitel": "Wie knüpft man die Vorfrage im IPR an – selbständig oder unselbständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 EGBGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-16",
+        "2027-01-19"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-345",
+      "slug": "2027-03-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anfangsverdacht reicht zum Ermitteln – nicht zum Anklagen",
+          "titelZeilen": [
+            "Anfangsverdacht",
+            "reicht zum",
+            "Ermitteln – nicht",
+            "zum Anklagen"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Zwei Verdachtsstufen trennen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Bei der Polizei geht eine Anzeige ein: A soll Waren aus dem Lager seines Arbeitgebers unterschlagen haben. Was passiert jetzt – und welcher Verdacht muss am Ende vorliegen, damit die Staatsanwaltschaft Anklage erhebt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Gang des Ermittlungsverfahrens",
+          "schritte": [
+            {
+              "titel": "Anfangsverdacht",
+              "text": "Zureichende tatsächliche Anhaltspunkte für eine verfolgbare Straftat verpflichten zum Einschreiten (§ 152 Abs. 2 StPO – Legalitätsprinzip)."
+            },
+            {
+              "titel": "Ermittlungen",
+              "text": "Die StA erforscht den Sachverhalt – belastende und entlastende Umstände (§ 160 Abs. 1, 2 StPO). Die Polizei ermittelt mit (§ 163 StPO)."
+            },
+            {
+              "titel": "Abschlussverfügung",
+              "text": "Bieten die Ermittlungen genügenden Anlass, erhebt die StA Anklage (§ 170 Abs. 1 StPO). Sonst stellt sie ein (§ 170 Abs. 2 StPO)."
+            },
+            {
+              "titel": "Andere Wege",
+              "text": "Einstellung aus Opportunitätsgründen (§§ 153 ff. StPO) oder Antrag auf Erlass eines Strafbefehls (§ 407 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Verdachtsstufen",
+          "links": {
+            "titel": "Anfangsverdacht",
+            "punkte": [
+              "Zureichende tatsächliche Anhaltspunkte (§ 152 II StPO).",
+              "Genügt, um Ermittlungen aufzunehmen."
+            ]
+          },
+          "rechts": {
+            "titel": "Hinreichender Tatverdacht",
+            "punkte": [
+              "Verurteilung wahrscheinlicher als Freispruch.",
+              "Nötig für Anklage (§ 170 I) und Eröffnung (§ 203 StPO)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Stufen vermischen: Für Ermittlungen genügt der Anfangsverdacht, für die Anklage nicht. Und § 170 Abs. 2 StPO ist keine Opportunitätseinstellung – er greift, wenn der hinreichende Tatverdacht fehlt. § 153 StPO setzt dagegen gerade einen Verdacht bei geringer Schuld voraus."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anfangsverdacht öffnet das Ermittlungsverfahren, hinreichender Tatverdacht die Anklage (§ 170 Abs. 1 StPO). Fehlt er: Einstellung nach § 170 Abs. 2 StPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Ermittlungsverfahren in drei Fragen",
+          "punkte": [
+            "Anfangsverdacht nach § 152 II StPO?",
+            "Belastend und entlastend ermittelt?",
+            "Hinreichender Tatverdacht?"
+          ],
+          "icons": [
+            "lupe",
+            "detektiv",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Anfangsverdacht reicht zum Ermitteln – nicht zum Anklagen. Das Ermittlungsverfahren beginnt, sobald zureichende tatsächliche Anhaltspunkte vorliegen (§ 152 Abs. 2 StPO). Die StA ermittelt belastend und entlastend (§ 160 StPO) und entscheidet dann: Anklage bei hinreichendem Tatverdacht (§ 170 Abs. 1 StPO), sonst Einstellung nach § 170 Abs. 2 StPO. Speichern für die nächste Abschlussverfügung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#ermittlungsverfahren",
+        "#170stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ermittlungsverfahren: vom Verdacht zur Anklage",
+      "coverText": "Zwei Verdachtsstufen trennen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Ein kleiner Anhaltspunkt öffnet die Ermittlungen, erst ein starker Verdacht öffnet das Tor zur Anklage.",
+        "handlung": "{A} nervously pushes open a small first gate with a single faint footprint in front of it, while {B} points his pointer at a much heavier second gate that stays closed until a pile of evidence is stacked high enough.",
+        "hinweisRegie": "Place the note in the open space between the two gates, slightly tilted toward the heavy second gate, so the difference between the thresholds is clear without covering the evidence pile or {B}'s pointer.",
+        "alternative": "{B} holds a thermometer against a small evidence heap that only reads warm, while {A} waits with a key for the door marked by a higher reading."
+      },
+      "bildSzene": "small gate open, heavy gate still closed",
+      "bildSzeneAlt": "thermometer against evidence heap, key waiting",
+      "quellen": [
+        "§ 152 Abs. 2 StPO",
+        "§ 160 StPO",
+        "§ 163 StPO",
+        "§ 170 StPO",
+        "§ 153 StPO",
+        "§ 203 StPO",
+        "§ 407 StPO",
+        "Themenpool: stpo-345"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verdachtsstufen-verwechslung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.064Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-653",
+      "slug": "2027-03-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 113 Abs. 1 VwGO: zwei Fragen, nicht eine",
+          "titelZeilen": [
+            "§ 113 Abs. 1 VwGO:",
+            "zwei Fragen,",
+            "nicht eine"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Rechtswidrig plus Rechtsverletzung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Mit der Anfechtungsklage begehrt der Kläger die Aufhebung eines Verwaltungsakts (§ 42 Abs. 1 Alt. 1 VwGO). Das Gericht hebt ihn auf, soweit er rechtswidrig und der Kläger dadurch in seinen Rechten verletzt ist (§ 113 Abs. 1 S. 1 VwGO)."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema: Zulässigkeit",
+          "schritte": [
+            {
+              "titel": "Verwaltungsrechtsweg",
+              "text": "§ 40 Abs. 1 S. 1 VwGO oder eine aufdrängende Sonderzuweisung."
+            },
+            {
+              "titel": "Statthaftigkeit",
+              "text": "Begehrt wird die Aufhebung eines noch nicht erledigten Verwaltungsakts (§ 35 VwVfG)."
+            },
+            {
+              "titel": "Klagebefugnis",
+              "text": "Möglichkeit einer Verletzung eigener Rechte (§ 42 Abs. 2 VwGO); beim Adressaten eines belastenden VA regelmäßig gegeben."
+            },
+            {
+              "titel": "Vorverfahren und Frist",
+              "text": "Widerspruch (§§ 68 ff. VwGO), soweit das Landesrecht ihn nicht ausschließt; Klagefrist ein Monat (§ 74 Abs. 1 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema: Begründetheit",
+          "schritte": [
+            {
+              "titel": "Klagegegner (§ 78 VwGO)",
+              "text": "Rechtsträger der Behörde (Abs. 1 Nr. 1); je nach Landesrecht die Behörde selbst (Nr. 2). Verortung je nach Aufbau."
+            },
+            {
+              "titel": "Frage 1: Rechtswidrigkeit",
+              "text": "Ermächtigungsgrundlage, formelle und materielle Rechtmäßigkeit des Verwaltungsakts."
+            },
+            {
+              "titel": "Frage 2: Rechtsverletzung",
+              "text": "Verletzt der Fehler gerade den Kläger in eigenen Rechten? Beim Adressaten regelmäßig ja."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: der Dritte",
+          "text": "Klagt ein Dritter, etwa der Nachbar gegen eine Baugenehmigung, reicht ein objektiver Rechtsverstoß nicht. Die verletzte Norm muss gerade ihn schützen. Dann prüfst du die Rechtsverletzung ausdrücklich – nicht in einem Halbsatz."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Aufgehoben wird nur, was rechtswidrig ist und den Kläger in eigenen Rechten verletzt (§ 113 Abs. 1 S. 1 VwGO)."
+        },
+        {
+          "art": "cta",
+          "titel": "Anfechtungsklage in vier Zügen",
+          "punkte": [
+            "Statthaft: Aufhebung eines VA",
+            "Klagebefugnis nach § 42 II VwGO",
+            "Vorverfahren und Monatsfrist",
+            "Rechtswidrig und Rechtsverletzung"
+          ],
+          "icons": [
+            "dokument",
+            "person",
+            "kalender",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "§ 113 Abs. 1 S. 1 VwGO stellt zwei Fragen: Ist der Verwaltungsakt rechtswidrig – und verletzt er den Kläger in seinen Rechten? Beim Adressaten ist die zweite Frage meist schnell beantwortet, beim Dritten entscheidet sie den Fall: Die verletzte Norm muss gerade ihn schützen. Davor die Zulässigkeit mit Statthaftigkeit, Klagebefugnis, Vorverfahren und Frist. Speichern für die nächste Anfechtungsklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#anfechtungsklage",
+        "#113vwgo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anfechtungsklage: das Prüfschema",
+      "coverText": "Rechtswidrig plus Rechtsverletzung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ein Verwaltungsakt fällt erst, wenn er rechtswidrig ist und gerade den Kläger in seinen Rechten trifft.",
+        "handlung": "{A} hovers in front of a two-lock box and has already opened the first lock, while {B} curiously tries a second key that only fits if it carries {B}'s own mark.",
+        "hinweisRegie": "Place the note in the free area next to the second lock, slightly tilted toward {B}'s key, so the second condition is visibly linked to the note without covering the first opened lock.",
+        "alternative": "{B} holds up a cracked tile from a wall while {A} checks whether the crack actually runs into {B}'s own room behind it."
+      },
+      "bildSzene": "droid opens first of two locks",
+      "bildSzeneAlt": "cracked wall tile, crack reaching own room",
+      "quellen": [
+        "§ 42 Abs. 1, 2 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 40 Abs. 1 VwGO",
+        "§§ 68 ff. VwGO",
+        "§ 74 Abs. 1 VwGO",
+        "§ 78 VwGO",
+        "§ 35 VwVfG",
+        "Themenpool: vwgo-653"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.064Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "delikt",
+      "klausur": 1,
+      "fachLabel": "Deliktsrecht",
+      "themaId": "delikt-240",
+      "slug": "2027-03-22-b3",
+      "titelZeilen": [
+        "„Vermögen ist ein",
+        "sonstiges Recht“ –",
+        "oft gelesen,",
+        "nie wahr"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Vermögen ist ein sonstiges Recht“ – oft gelesen, nie wahr",
+          "unter": "Deliktsrecht · § 823 Abs. 1 BGB",
+          "text": "Sonstige Rechte sind absolute Rechte – das Vermögen als solches gehört nicht dazu.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "icon": "geldbeutel",
+          "sprecher": "Das Vermögen ist kein sonstiges Recht. Trotzdem liest man diesen Satz in vielen Klausuren. Sonstige Rechte sind nur absolute Rechte wie das Eigentum. So prüfst du § 823 Absatz 1.",
+          "marken": [
+            "kein sonstiges Recht",
+            "absolute Rechte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Rechtsgutsverletzung",
+          "text": "Leben, Körper, Gesundheit, Freiheit, Eigentum oder ein sonstiges absolutes Recht.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Schritt eins: die Rechtsgutsverletzung. Geschützt sind Leben, Körper, Gesundheit, Freiheit, Eigentum und sonstige Rechte. Sonstig heißt: eigentumsähnlich, gegenüber jedermann geschützt, etwa der berechtigte Besitz.",
+          "marken": [
+            "gegen jedermann"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verletzungshandlung",
+          "text": "Tun oder Unterlassen trotz Pflicht zum Handeln.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Verletzungshandlung. Ein Tun, oder ein Unterlassen, wenn eine Pflicht zum Handeln bestand, etwa eine Verkehrssicherungspflicht.",
+          "marken": [
+            "Tun / Unterlassen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Haftungsbegründende Kausalität",
+          "text": "Handlung verursacht die Verletzung – und sie ist zurechenbar.",
+          "norm": null,
+          "sprecher": "Schritt drei: die haftungsbegründende Kausalität. Die Handlung muss die Rechtsgutsverletzung verursacht haben, und die Verletzung muss ihr zurechenbar sein.",
+          "marken": [
+            "zurechenbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtswidrigkeit und Verschulden",
+          "text": "Bei unmittelbarer Verletzung indiziert; Vorsatz oder Fahrlässigkeit (§ 276 BGB).",
+          "norm": "§ 276 BGB",
+          "sprecher": "Schritt vier: Rechtswidrigkeit und Verschulden. Bei unmittelbaren Verletzungen indiziert der Tatbestand die Rechtswidrigkeit. Beim Persönlichkeitsrecht musst du abwägen. Verschulden heißt Vorsatz oder Fahrlässigkeit.",
+          "marken": [
+            "indiziert?",
+            "§ 276 BGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Dann der Schaden – und das Vermögen?",
+          "text": "Schaden und haftungsausfüllende Kausalität; reines Vermögen über § 823 Abs. 2 oder § 826 BGB.",
+          "norm": "§§ 249 ff. BGB · § 823 Abs. 2 BGB · § 826 BGB",
+          "sprecher": "Erst danach kommen Schaden und haftungsausfüllende Kausalität. Und der reine Vermögensschaden? Den holst du über § 823 Absatz 2 mit einem Schutzgesetz oder über § 826.",
+          "marken": [
+            "§ 823 II · § 826"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "§ 823 Abs. 1 BGB schützt Rechtsgüter und absolute Rechte – nicht das Vermögen als solches.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Merke: § 823 Absatz 1 schützt Rechtsgüter und absolute Rechte. Wer nur Geld verliert, braucht eine andere Anspruchsgrundlage.",
+          "marken": [
+            "Rechtsgut statt Vermögen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst das Rechtsgut benennen",
+          "text": "Speichern für die nächste Deliktsklausur.",
+          "sprecher": "Speicher dir das Schema für die nächste Deliktsklausur. Und frag bei jedem Schaden zuerst: Welches Rechtsgut ist verletzt?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "„Das Vermögen ist ein sonstiges Recht“ – dieser Satz stimmt nicht. Sonstige Rechte im Sinne des § 823 Abs. 1 BGB sind absolute, eigentumsähnliche Rechte wie der berechtigte Besitz. Das Schema: Rechtsgutsverletzung, Verletzungshandlung, haftungsbegründende Kausalität, Rechtswidrigkeit, Verschulden, dann Schaden. Reine Vermögensschäden laufen über § 823 Abs. 2 BGB mit Schutzgesetz oder über § 826 BGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#deliktsrecht",
+        "#823bgb",
+        "#schuldrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 823 Abs. 1 BGB: das Prüfschema",
+      "coverText": "Nur absolute Rechte geschützt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "§ 823 Abs. 1 BGB schützt Rechtsgüter wie das Eigentum, nicht das Vermögen als bloße Summe.",
+        "handlung": "{A} guards a solid crystal block with both arms, while {B} decisively waves away a loose pile of coins that tries to slip behind the same protective barrier.",
+        "hinweisRegie": "Place the note in the open space between the crystal block and the coin pile, slightly tilted toward the coins being waved away, so the exclusion is clear without covering {A}'s protective arms.",
+        "alternative": "{B} checks a fence around a field that keeps out intruders, while {A} watches a stream of coins flowing freely past the fence posts."
+      },
+      "bildSzene": "crystal guarded, coin pile waved away",
+      "bildSzeneAlt": "fence protects field, coins flow past",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 823 Abs. 2 BGB",
+        "§ 826 BGB",
+        "§ 276 BGB",
+        "§§ 249 ff. BGB",
+        "Themenpool: delikt-240"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.090Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-715",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "A legt Widerspruch gegen ein neu aufgestelltes Halteverbotsschild ein. Darf er dort jetzt parken?",
+      "optionen": [
+        "Ja – der Widerspruch hat aufschiebende Wirkung (§ 80 I VwGO)",
+        "Nein – § 80 Abs. 2 S. 1 Nr. 2 VwGO gilt entsprechend",
+        "Ja – Verkehrszeichen sind bloße Hinweise, keine VA"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 35 S. 2 VwVfG",
+        "§ 80 Abs. 1, 2, 5 VwGO",
+        "StVO",
+        "Themenpool: assessoroer-715"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.090Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-715",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – das Schild wirkt sofort, wie die Anordnung eines Polizisten",
+      "text": "Verkehrszeichen sind Verwaltungsakte in Form der Allgemeinverfügung (§ 35 S. 2 VwVfG). Nach der Rspr. entfällt die aufschiebende Wirkung von Widerspruch und Klage entsprechend § 80 Abs. 2 S. 1 Nr. 2 VwGO: Sie ersetzen die unaufschiebbare Anordnung eines Polizeivollzugsbeamten. Eilrechtsschutz: Antrag auf Anordnung der aufschiebenden Wirkung (§ 80 Abs. 5 VwGO).",
+      "norm": "§ 35 S. 2 VwVfG · § 80 Abs. 2 S. 1 Nr. 2 VwGO analog",
+      "quellen": [
+        "§ 35 S. 2 VwVfG",
+        "§ 80 Abs. 1, 2, 5 VwGO",
+        "StVO",
+        "Themenpool: assessoroer-715"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.090Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – der Widerspruch hat aufschiebende Wirkung (§ 80 I VwGO)",
+        "Nein – § 80 Abs. 2 S. 1 Nr. 2 VwGO gilt entsprechend",
+        "Ja – Verkehrszeichen sind bloße Hinweise, keine VA"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-258",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1924 BGB: Das Enkelkind erbt nur an Stelle seines Elternteils",
+      "text": "Erben erster Ordnung sind die Abkömmlinge (§ 1924 Abs. 1 BGB). Ein beim Erbfall lebender Abkömmling schließt die durch ihn verwandten Abkömmlinge aus (Abs. 2). Fällt er weg, treten seine Abkömmlinge an seine Stelle (Abs. 3). Kinder erben zu gleichen Teilen (Abs. 4). Und: Solange ein Verwandter einer vorhergehenden Ordnung lebt, erben entferntere Ordnungen nicht (§ 1930 BGB).",
+      "norm": "§ 1924 BGB · § 1930 BGB",
+      "quellen": [
+        "§ 1924 BGB",
+        "§ 1930 BGB",
+        "Themenpool: famerb-258"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.090Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-146",
+      "ueberzeile": "Klausurtipp Gesellschaftsrecht",
+      "titel": "Eintritt in eine OHG oder in ein Einzelgeschäft? Erst die richtige Norm wählen",
+      "text": "Eintritt in eine OHG oder rechtsfähige GbR: Haftung für Altschulden nach § 127 HGB bzw. § 721a BGB. Eintritt in das Geschäft eines Einzelkaufmanns, sodass eine OHG oder KG entsteht: Die Gesellschaft haftet für die alten Geschäftsschulden nach § 28 HGB, der Eintretende dann über § 126 HGB. Abweichende Abreden wirken nur bei Eintragung oder Mitteilung (§ 28 Abs. 2 HGB).",
+      "quellen": [
+        "§ 721a BGB",
+        "§ 127 HGB",
+        "§ 28 HGB",
+        "§ 126 HGB",
+        "Themenpool: handelsg-146"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.090Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-906",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Vier Sätze im Strafrechtssachverhalt – und das Problem, das sie melden",
+      "text": "Klausursachverhalte sind verdichtet: Ein auffälliger Satz steht selten zufällig dort. Markiere ihn und frag, welches Standardproblem er auslöst.",
+      "punkte": [
+        "„A hielt B für einen Angreifer“ → Erlaubnistatbestandsirrtum",
+        "„O schlief tief und fest“ → Heimtücke: Arglosigkeit im Schlaf",
+        "„Der Detektiv sah alles“ → Wegnahme trotz Beobachtung vollendet?",
+        "„A ließ von O ab“ → erst Fehlschlag, dann Rücktritt"
+      ],
+      "quellen": [
+        "Themenpool: methodik-906"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.090Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-935",
+      "ueberzeile": "Streitstand IPR",
+      "titel": "Ausländisches Erbstatut, aber stammt K vom Erblasser ab? Wie knüpfst du die Vorfrage an?",
+      "norm": "Art. 21 EuErbVO · Art. 19 EGBGB",
+      "optionen": [
+        "H.M.: selbständig – nach dem IPR des Forums, also dem deutschen Kollisionsrecht.",
+        "Gegenansicht: unselbständig – nach dem IPR des Staates, dessen Erbrecht gilt."
+      ],
+      "text": "Für die h.M. spricht der innere Entscheidungseinklang: Die Abstammung wird im Inland stets gleich beurteilt. Den Streit nur vertiefen, wenn beide Wege zu verschiedenen Ergebnissen führen.",
+      "fachLabel": "IPR",
+      "quellen": [
+        "Art. 21 EuErbVO",
+        "Art. 19 EGBGB",
+        "Art. 3 EGBGB",
+        "Themenpool: ipr-935"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:41.090Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

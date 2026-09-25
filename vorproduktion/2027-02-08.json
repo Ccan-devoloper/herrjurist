@@ -1,0 +1,864 @@
+{
+  "datum": "2027-02-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "anklage-781",
+        "themaTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "grundr-624",
+        "themaTitel": "Eigentumsgarantie: Inhaltsbestimmung vs. Enteignung",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "sachen-513",
+        "themaTitel": "Hypothek: Entstehung, Übertragung, Einreden",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:25",
+        "art": "frage",
+        "themaId": "strafbt-071"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:25",
+        "art": "antwort",
+        "themaId": "strafbt-071"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "zpo-289"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "tipp",
+        "themaId": "schuldbt-203"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "zahl",
+        "themaId": "assessorz-802"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "streitstand",
+        "themaId": "strafbt-925"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "anklage-781",
+      "poolTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 151, 200 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2026-12-17"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-624",
+      "poolTitel": "Eigentumsgarantie: Inhaltsbestimmung vs. Enteignung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-513",
+      "poolTitel": "Hypothek: Entstehung, Übertragung, Einreden",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1113 ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-071",
+      "poolTitel": "Wann liegt eine Zueignungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB",
+        "§ 246 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2026-11-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-071",
+      "poolTitel": "Wann liegt eine Zueignungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB",
+        "§ 246 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2026-11-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-289",
+      "poolTitel": "Wie läuft das Mahnverfahren?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 688 ZPO",
+        "§ 700 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "schuldbt-203",
+      "poolTitel": "Wie haftet der Schenker?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 521 BGB",
+        "§ 523 BGB",
+        "§ 524 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-802",
+      "poolTitel": "Worin unterscheiden sich Schlüssigkeit und Erheblichkeit?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 Abs. 3 ZPO",
+        "§ 138 Abs. 4 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-12-04"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "strafbt-925",
+      "poolTitel": "§§ 239a, 239b StGB im Zwei-Personen-Verhältnis: Wann trägt die Bemächtigungslage?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239a StGB",
+        "§ 239b StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-11",
+        "2026-12-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-781",
+      "slug": "2027-02-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Tatzeit verrutscht – und trotzdem dieselbe Tat",
+          "titelZeilen": [
+            "Tatzeit verrutscht –",
+            "und trotzdem",
+            "dieselbe Tat"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Maßstab: Tat im prozessualen Sinn",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Angeklagt ist A, am 3. März im Drogeriemarkt D ein Parfum eingesteckt und den Laden ohne Bezahlung verlassen zu haben. In der Hauptverhandlung zeigt das Video: Es war der 4. März – gleicher Laden, gleiches Parfum. Darf das Gericht A verurteilen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Anklagegrundsatz",
+              "text": "Das Gericht entscheidet nur über die angeklagte Tat (§§ 151, 155 Abs. 1 StPO). Maßstab ist die Tat im prozessualen Sinn (§ 264 StPO)."
+            },
+            {
+              "titel": "Tat im prozessualen Sinn",
+              "text": "Der einheitliche geschichtliche Vorgang, wie er sich nach der Verhandlung darstellt – nicht jedes Detail des Anklagesatzes."
+            },
+            {
+              "titel": "Identität prüfen",
+              "text": "Bleibt das Geschehen unverwechselbar – Tatort, Tatobjekt, Tatbild –, ändert eine abweichende Tatzeit die Identität nicht."
+            },
+            {
+              "titel": "Hinweis erteilen",
+              "text": "Braucht A zur Verteidigung einen Hinweis auf die neue Sachlage, etwa wegen eines Alibis, gibt ihn das Gericht (§ 265 Abs. 2 Nr. 3 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung im Fall",
+          "text": "Das Geschehen im Laden D mit dem Parfum bleibt unverwechselbar – es ist dieselbe Tat. Das Gericht kann A verurteilen, eine Nachtragsanklage ist nicht nötig; gegebenenfalls nach einem Hinweis nach § 265 StPO."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Jede Abweichung vom Anklagesatz als neue Tat behandeln. Umgekehrt gilt: Beschreibt schon die Anklage die Tat so vage, dass unklar bleibt, welches Geschehen gemeint ist, verfehlt sie ihre Umgrenzungsfunktion – sie ist unwirksam, es fehlt eine Prozessvoraussetzung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Anklage legt den Lebensvorgang fest, nicht jedes Detail. Entscheidend ist, ob die Tat unverwechselbar bleibt."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei Abweichungen",
+          "punkte": [
+            "Welcher Lebensvorgang ist angeklagt?",
+            "Bleibt er trotz Abweichung unverwechselbar?",
+            "Braucht es einen Hinweis nach § 265 StPO?"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "glocke"
+          ]
+        }
+      ],
+      "caption": "Tatzeit verrutscht – und trotzdem dieselbe Tat. Nach dem Anklagegrundsatz ist das Gericht an die angeklagte Tat gebunden (§§ 151, 155 StPO). Gemeint ist aber der geschichtliche Vorgang im prozessualen Sinn (§ 264 StPO), nicht jedes Detail des Anklagesatzes: Bleibt das Geschehen unverwechselbar, ändert ein anderes Datum nichts, bei Bedarf gibt das Gericht einen Hinweis nach § 265 Abs. 2 Nr. 3 StPO. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#264stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anklagegrundsatz: andere Tatzeit, dieselbe Tat",
+      "coverText": "Maßstab: Tat im prozessualen Sinn",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Auch wenn sich ein Detail wie die Tatzeit verschiebt, bleibt das angeklagte Geschehen dasselbe.",
+        "handlung": "{A} holds up a wall calendar whose marked square has slipped by one day, while {B} nervously compares it with a single perfume bottle that clearly stays the same on its shelf.",
+        "hinweisRegie": "Place the note in the free space between the shifted calendar square and the perfume bottle, slightly tilted toward the bottle, so the unchanged event is highlighted without covering {A}'s hands or the calendar.",
+        "alternative": "{B} traces one footprint trail across two slightly different maps while {A} points out that the trail itself never changes."
+      },
+      "bildSzene": "calendar day slipped, perfume bottle unchanged",
+      "bildSzeneAlt": "one footprint trail on two maps",
+      "quellen": [
+        "§§ 151, 155 StPO",
+        "§ 200 Abs. 1 StPO",
+        "§ 264 StPO",
+        "§ 265 Abs. 2 Nr. 3 StPO",
+        "Themenpool: anklage-781"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-tatidentitaet",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.653Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-624",
+      "slug": "2027-02-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Art. 14 GG: Die Weiche kommt vor der Abwägung",
+          "titelZeilen": [
+            "Art. 14 GG: Die",
+            "Weiche kommt vor",
+            "der Abwägung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Formal abgrenzen, dann abwägen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Belastet ein Gesetz das Eigentum, gibt es zwei Wege: Inhalts- und Schrankenbestimmung (Art. 14 Abs. 1 S. 2 GG) oder Enteignung (Art. 14 Abs. 3 GG). Welcher Weg gilt, entscheidet über den Rechtfertigungsmaßstab – deshalb wird die Weiche vor der Abwägung gestellt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich",
+              "text": "Eigentum ist jedes vermögenswerte Recht, das die Rechtsordnung dem Einzelnen zur privaten Nutzung zuordnet – nicht das Vermögen als solches."
+            },
+            {
+              "titel": "2. Eingriff: die Weiche",
+              "text": "Enteignung: Entzug konkreter Positionen zur Erfüllung öffentlicher Aufgaben. Alles andere: Inhalts- und Schrankenbestimmung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3a. Rechtfertigung der Enteignung",
+              "text": "Nur zum Wohl der Allgemeinheit, durch oder aufgrund Gesetzes mit Regelung zu Art und Ausmaß der Entschädigung (Junktim), verhältnismäßig."
+            },
+            {
+              "titel": "3b. Rechtfertigung der Inhaltsbestimmung",
+              "text": "Verhältnismäßiger Ausgleich von Privatnützigkeit und Sozialbindung (Art. 14 Abs. 2 GG); Härten per Übergangs- oder Ausgleichsregel abfedern."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: keine Umdeutung",
+          "text": "Eine zu weit gehende Inhalts- und Schrankenbestimmung wird nicht zur Enteignung – sie ist schlicht verfassungswidrig. Abgegrenzt wird formal, nicht nach der Schwere der Belastung. Das BVerfG verlangt für die Enteignung zudem grundsätzlich einen Güterbeschaffungsvorgang."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst formal abgrenzen, dann den passenden Maßstab anlegen. Wer zu hart belastet, enteignet nicht – er verletzt Art. 14 GG."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 14 GG in drei Zügen",
+          "punkte": [
+            "Eigentumsposition bestimmen",
+            "Weiche: Entzug oder Inhaltsbestimmung?",
+            "Passenden Rechtfertigungsmaßstab anlegen"
+          ],
+          "icons": [
+            "haus",
+            "kreislauf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Bei Art. 14 GG kommt die Weiche vor der Abwägung: Enteignung (Abs. 3) oder Inhalts- und Schrankenbestimmung (Abs. 1 S. 2)? Die Abgrenzung ist formal – Enteignung ist der Entzug konkreter Eigentumspositionen zur Erfüllung öffentlicher Aufgaben, nicht die besonders schwere Belastung. Danach richtet sich der Maßstab: Gemeinwohl und Junktimklausel hier, Verhältnismäßigkeit und Sozialbindung dort. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#art14gg",
+        "#eigentum",
+        "#enteignung",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 14 GG: Enteignung oder Inhaltsbestimmung",
+      "coverText": "Formal abgrenzen, dann abwägen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Bevor abgewogen wird, muss feststehen, ob Eigentum entzogen oder nur in seinem Inhalt ausgestaltet wird.",
+        "handlung": "{A} waits with a heavy cart full of crystals in front of a rail switch, while {B} points his pointer at the switch lever before the cart may roll onto one of two tracks.",
+        "hinweisRegie": "Place the note in the open space right next to the switch lever, slightly tilted toward it, so the decision point is marked without covering {A}'s cart or {B}'s pointer.",
+        "alternative": "{B} compares two crystals on a table, one being lifted away by a crane hook and one merely fenced in, while {A} watches with his cart."
+      },
+      "bildSzene": "miner's cart waits at rail switch",
+      "bildSzeneAlt": "crystal lifted away versus crystal fenced",
+      "quellen": [
+        "Art. 14 Abs. 1–3 GG",
+        "Themenpool: grundr-624"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge-weiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.654Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-513",
+      "slug": "2027-02-08-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Hypothek übertragen? Nur über die Forderung",
+          "unter": "Hypothek · §§ 1113 ff. BGB",
+          "text": "Die Hypothek folgt der Forderung – einzeln übertragen lässt sie sich nicht.",
+          "norm": "§ 1153 BGB",
+          "icon": "schluessel",
+          "sprecher": "Eine Hypothek kannst du nicht einzeln übertragen. Du trittst die Forderung ab, und die Hypothek geht automatisch mit. So steht es in § 1153 BGB. Was folgt daraus?",
+          "marken": [
+            "nicht einzeln",
+            "Forderung zieht mit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Entstehung: Einigung, Eintragung, Forderung",
+          "text": "Bei der Briefhypothek kommt die Übergabe des Briefs hinzu.",
+          "norm": "§§ 873, 1113, 1117 BGB",
+          "sprecher": "Schritt eins, die Entstehung: Einigung und Eintragung ins Grundbuch, dazu eine Forderung, die gesichert wird. Bei der Briefhypothek kommt die Übergabe des Briefs hinzu.",
+          "marken": [
+            "Einigung + Eintragung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Übertragung: die Forderung abtreten",
+          "text": "Schriftliche Abtretungserklärung plus Briefübergabe – beim Buchrecht Eintragung.",
+          "norm": "§§ 1153, 1154 BGB",
+          "sprecher": "Schritt zwei, die Übertragung: Abgetreten wird die Forderung. Bei der Briefhypothek braucht es eine schriftliche Abtretungserklärung und die Übergabe des Briefs, bei der Buchhypothek die Eintragung.",
+          "marken": [
+            "Abtretung + Brief"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Einreden: doppelt möglich",
+          "text": "Einreden gegen die Forderung (§ 1137) und gegen die Hypothek (§ 1157).",
+          "norm": "§§ 1137, 1157 BGB",
+          "sprecher": "Schritt drei, die Einreden: Der Eigentümer kann die Einreden des Schuldners gegen die Forderung erheben, etwa eine Stundung. Dazu kommen Einreden, die ihm selbst gegen die Hypothek zustehen.",
+          "marken": [
+            "§ 1137 · § 1157"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Gutgläubiger Erwerb",
+          "text": "Für die Hypothek gilt die Forderung als bestehend – § 1138 mit § 892 BGB.",
+          "norm": "§§ 1138, 892 BGB",
+          "sprecher": "Schritt vier, der gute Glaube: Für die Hypothek wird die Forderung zugunsten eines redlichen Erwerbers fingiert, § 1138 mit § 892 BGB. Er erwirbt dann die Hypothek, die Forderung selbst aber nicht.",
+          "marken": [
+            "Forderung fingiert"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Verjährt heißt nicht verloren",
+          "text": "Ist die Forderung verjährt, bleibt die Befriedigung aus dem Grundstück möglich.",
+          "norm": "§ 216 Abs. 1 BGB",
+          "sprecher": "Und ein Klassiker: Ist die Forderung verjährt, darf sich der Gläubiger trotzdem aus dem Grundstück befriedigen. Das regelt § 216 BGB.",
+          "marken": [
+            "§ 216 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Die Hypothek hängt an der Forderung – bei Entstehung, Übertragung und Einreden.",
+          "norm": "§ 1153 BGB",
+          "sprecher": "Merke: Die Hypothek hängt an der Forderung. Wer sie übertragen will, tritt die Forderung ab.",
+          "marken": [
+            "akzessorisch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Immer bei der Forderung anfangen",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Sachenrechtsklausur. Und fang bei der Hypothek immer mit der Forderung an.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Eine Hypothek kannst du nicht einzeln übertragen: Mit der Abtretung der Forderung geht sie automatisch über (§ 1153 BGB), bei der Briefhypothek mit schriftlicher Abtretungserklärung und Briefübergabe (§ 1154 BGB). Der Eigentümer kann Einreden gegen die Forderung (§ 1137 BGB) und gegen die Hypothek (§ 1157 BGB) erheben. Der redliche Erwerber wird über § 1138 mit § 892 BGB geschützt. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#hypothek",
+        "#1153bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Hypothek: Übertragung nur mit der Forderung",
+      "titelZeilen": [
+        "Hypothek übertragen?",
+        "Nur über die",
+        "Forderung"
+      ],
+      "coverText": "Die Hypothek folgt der Forderung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wer die Forderung weitergibt, gibt die Hypothek automatisch mit.",
+        "handlung": "{A} hands a glowing token to a newcomer, and a small anchor chained to the token slides along with it, while {B} still holds the far end of the chain fixed to a plot of land.",
+        "hinweisRegie": "Place the note in the free space above the chain between the token and the plot of land, slightly tilted toward the chain, without covering {A}'s handing gesture or {B}'s grip.",
+        "alternative": "{B} tries to lift the anchor alone, but it will not move until {A} passes on the token it is chained to."
+      },
+      "bildSzene": "token handed over, chained anchor follows",
+      "bildSzeneAlt": "anchor stays until token moves",
+      "quellen": [
+        "§§ 873, 1113, 1117 BGB",
+        "§§ 1137, 1138, 1153, 1154, 1157 BGB",
+        "§ 892 BGB",
+        "§ 216 Abs. 1 BGB",
+        "Themenpool: sachen-513"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.655Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-071",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "A nimmt das Sparbuch seiner Mitbewohnerin, hebt 500 € ab und legt es zurück. Zueignungsabsicht am Sparbuch?",
+      "optionen": [
+        "Nein – er gibt das Sparbuch ja vollständig zurück",
+        "Ja – er will sich den im Sparbuch verkörperten Wert aneignen",
+        "Nein – bloße Gebrauchsanmaßung, also straflos"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 242 StGB",
+        "Themenpool: strafbt-071"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.655Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-071",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – er eignet sich den Sachwert des Sparbuchs an",
+      "text": "Nach der Vereinigungsformel kann sich die Zueignung auf die Sache selbst oder den in ihr verkörperten Sachwert beziehen. Mit der Abhebung verliert das Sparbuch einen Teil seines spezifischen Funktionswerts – die Mitbewohnerin bekommt es entwertet zurück. Insoweit dauerhafte Enteignung, zumindest vorübergehende Aneignung: Diebstahl am Sparbuch (§ 242 StGB).",
+      "norm": "§ 242 Abs. 1 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "Themenpool: strafbt-071"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.655Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – er gibt das Sparbuch ja vollständig zurück",
+        "Ja – er will sich den im Sparbuch verkörperten Wert aneignen",
+        "Nein – bloße Gebrauchsanmaßung, also straflos"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-289",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 700 ZPO: Der Vollstreckungsbescheid wirkt wie ein Versäumnisurteil",
+      "text": "Das Mahnverfahren gibt es nur für Zahlungsansprüche in Euro (§ 688 Abs. 1 ZPO); eine Schlüssigkeitsprüfung gibt es nicht. Widerspricht der Schuldner nicht, ergeht auf Antrag der Vollstreckungsbescheid (§ 699 ZPO). Er steht einem für vorläufig vollstreckbar erklärten Versäumnisurteil gleich (§ 700 Abs. 1 ZPO) – Rechtsbehelf ist der Einspruch binnen zwei Wochen ab Zustellung.",
+      "norm": "§§ 688, 699, 700 ZPO",
+      "quellen": [
+        "§ 688 ZPO",
+        "§ 699 ZPO",
+        "§ 700 ZPO",
+        "§ 339 ZPO",
+        "Themenpool: zpo-289"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.655Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-203",
+      "ueberzeile": "Klausurtipp Schenkung",
+      "titel": "Mangel der geschenkten Sache: erst an § 524 BGB denken, nicht an § 521",
+      "text": "§ 521 BGB beschränkt die Haftung des Schenkers auf Vorsatz und grobe Fahrlässigkeit. Für Sach- und Rechtsmängel gehen §§ 523, 524 BGB vor: Der Schenker haftet nur, wenn er den Mangel arglistig verschwiegen hat. Ob das auch für Folgeschäden an anderen Rechtsgütern des Beschenkten gilt oder dort § 521 BGB greift, ist umstritten – in der Klausur benennen.",
+      "quellen": [
+        "§ 521 BGB",
+        "§ 523 BGB",
+        "§ 524 BGB",
+        "Themenpool: schuldbt-203"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.655Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-802",
+      "ueberzeile": "3 Punkte Relation",
+      "titel": "Klage schlüssig – so wird die Erwiderung des Beklagten erheblich",
+      "text": "Erheblich ist der Beklagtenvortrag, wenn er – als wahr unterstellt – dem schlüssigen Klagevortrag entgegensteht. Was nicht bestritten wird, gilt als zugestanden (§ 138 Abs. 3 ZPO).",
+      "punkte": [
+        "Anspruchsbegründende Tatsachen bestreiten – bei eigenem Wissen substantiiert",
+        "Rechtshindernde oder -vernichtende Tatsachen vortragen, etwa Erfüllung",
+        "Eine Einrede erheben, etwa die Verjährung"
+      ],
+      "quellen": [
+        "§ 138 Abs. 3 ZPO",
+        "Themenpool: assessorz-802"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.655Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-925",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Opfer in der eigenen Wohnung gefesselt, erst Stunden später den Tresorcode verraten: § 239a StGB?",
+      "norm": "§§ 239a, 239b StGB",
+      "optionen": [
+        "Rspr. (BGH): Ja, wenn die Bemächtigung eine stabile Zwischenlage schafft, die der Täter für die Erpressung ausnutzen will.",
+        "Teile der Literatur: Im Zwei-Personen-Verhältnis enger oder gar nicht anwenden – die Norm ziele auf die Drittnötigung."
+      ],
+      "text": "Hintergrund: die hohen Mindeststrafen. Klausur: Mit dem BGH die Zwischenlage herausarbeiten – wird das Opfer gefesselt und erst danach länger unter Druck gesetzt, spricht viel für eine stabile Lage.",
+      "quellen": [
+        "§ 239a StGB",
+        "§ 239b StGB",
+        "§§ 249, 255 StGB",
+        "Themenpool: strafbt-925"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:04.655Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

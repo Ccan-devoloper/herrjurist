@@ -1,0 +1,911 @@
+{
+  "datum": "2027-02-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "zpo-548",
+        "themaTitel": "Partei- und Prozessfähigkeit",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "stpo-352",
+        "themaTitel": "Was ist der Unterschied zwischen Berufung und Revision?",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-646",
+        "themaTitel": "Zusage und Zusicherung",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:25",
+        "art": "frage",
+        "themaId": "verwalt-642"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:25",
+        "art": "antwort",
+        "themaId": "verwalt-642"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "zpo-056"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "streitstand",
+        "themaId": "revision-883"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:40",
+        "art": "merksatz",
+        "themaId": "strafbt-765"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:06",
+        "art": "begriff",
+        "themaId": "verwbt-678"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "zpo-548",
+      "poolTitel": "Partei- und Prozessfähigkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 50 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "stpo-352",
+      "poolTitel": "Was ist der Unterschied zwischen Berufung und Revision?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 312 StPO",
+        "§ 333 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10",
+        "2026-12-10"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-646",
+      "poolTitel": "Zusage und Zusicherung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 38 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-08",
+        "2027-01-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-642",
+      "poolTitel": "Unbeachtlichkeit von Verfahrensfehlern",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2026-10-13",
+        "2026-12-25"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-642",
+      "poolTitel": "Unbeachtlichkeit von Verfahrensfehlern",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2026-10-13",
+        "2026-12-25"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-056",
+      "poolTitel": "Wie unterscheiden sich Leistungs-, Feststellungs- und Gestaltungsklage?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 256 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "revision-883",
+      "poolTitel": "Wie weit prüft die Revision die Beweiswürdigung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-12-24",
+        "2027-01-17"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-765",
+      "poolTitel": "Verbotene Kraftfahrzeugrennen",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 315d StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-10-29"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwbt-678",
+      "poolTitel": "Auflagen, Beschränkungen und Verbot einer Versammlung",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "VersG/LandesVersG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-548",
+      "slug": "2027-02-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kann ein Baby klagen? Ja – nur nicht selbst",
+          "titelZeilen": [
+            "Kann ein Baby",
+            "klagen? Ja – nur",
+            "nicht selbst"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Rechtsfähig ≠ geschäftsfähig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Parteifähigkeit (§ 50 ZPO)",
+          "punkte": [
+            "Parteifähig ist, wer rechtsfähig ist – jeder Mensch ab Geburt, jede juristische Person.",
+            "Auch rechtsfähige Personengesellschaften: GbR (§ 705 Abs. 2 BGB), OHG, KG.",
+            "Nicht rechtsfähiger Verein: kann klagen und verklagt werden (§ 50 Abs. 2 ZPO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Prozessfähigkeit (§§ 51, 52 ZPO)",
+          "punkte": [
+            "Prozessfähig ist, wer sich selbständig durch Verträge verpflichten kann (§ 52 ZPO).",
+            "Minderjährige grundsätzlich nicht – für sie handelt der gesetzliche Vertreter.",
+            "Ausnahme im Umfang der §§ 112, 113 BGB, etwa beim erlaubten Arbeitsverhältnis.",
+            "Juristische Personen handeln durch ihre Organe, etwa den Geschäftsführer."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Partei- oder Prozessfähigkeit?",
+          "links": {
+            "titel": "Parteifähigkeit",
+            "punkte": [
+              "Frage: Kann ich Partei sein?",
+              "Folgt der Rechtsfähigkeit",
+              "Baby, GmbH, GbR: ja"
+            ]
+          },
+          "rechts": {
+            "titel": "Prozessfähigkeit",
+            "punkte": [
+              "Frage: Kann ich selbst wirksam handeln?",
+              "Folgt der Geschäftsfähigkeit",
+              "Baby: nein – die Eltern handeln"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Nicht verwechseln",
+          "punkte": [
+            "Postulationsfähigkeit: vor dem Landgericht und darüber nur durch Anwalt (§ 78 ZPO).",
+            "Prozessführungsbefugnis: eigenes Recht im eigenen Namen – sonst Prozessstandschaft.",
+            "Partei- und Prozessfähigkeit prüft das Gericht von Amts wegen (§ 56 Abs. 1 ZPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Parteifähigkeit folgt der Rechtsfähigkeit, Prozessfähigkeit der Geschäftsfähigkeit. Das Baby ist Partei – den Prozess führen die Eltern."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Fähigkeiten im Rubrum",
+          "punkte": [
+            "Parteifähig: rechtsfähig?",
+            "Prozessfähig: geschäftsfähig?",
+            "Postulationsfähig: Anwalt nötig?",
+            "Prozessführungsbefugt: eigenes Recht?"
+          ],
+          "icons": [
+            "person",
+            "vertrag",
+            "aktentasche",
+            "schluessel"
+          ]
+        }
+      ],
+      "caption": "Kann ein Baby klagen? Ja – parteifähig ist jeder Mensch ab Geburt (§ 50 ZPO). Prozessfähig ist das Baby aber nicht, denn es kann sich nicht selbst durch Verträge verpflichten (§ 52 ZPO). Den Prozess führen die Eltern als gesetzliche Vertreter. Dazu kommen Postulationsfähigkeit und Prozessführungsbefugnis – vier Begriffe, die du sauber trennen solltest. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilprozessrecht",
+        "#parteifähigkeit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Partei- und Prozessfähigkeit auf einen Blick",
+      "coverText": "Rechtsfähig ≠ geschäftsfähig",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Auch ein Baby kann Partei eines Prozesses sein, aber für es handeln die Eltern.",
+        "handlung": "{A} gently places a tiny name badge on a baby figure sitting in a large chair, while {B} hands a speaking trumpet to a parent figure standing right behind the chair.",
+        "hinweisRegie": "Place the note in the free space between the name badge and the speaking trumpet, slightly tilted toward the parent figure, so the split between being a party and acting is visible without covering the baby.",
+        "alternative": "{B} points at two separate keys hanging on a hook, one labelled by shape as a crown and one as a hand, while {A} gives only the hand key to an adult."
+      },
+      "bildSzene": "baby gets badge, parent gets trumpet",
+      "bildSzeneAlt": "two keys, only hand key handed over",
+      "quellen": [
+        "§ 50 ZPO",
+        "§ 51 ZPO",
+        "§ 52 ZPO",
+        "§ 56 ZPO",
+        "§ 78 ZPO",
+        "§ 705 Abs. 2 BGB",
+        "§§ 112, 113 BGB",
+        "Themenpool: zpo-548"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.895Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-352",
+      "slug": "2027-02-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Berufung ohne Begründung geht – Revision nicht",
+          "titelZeilen": [
+            "Berufung ohne",
+            "Begründung geht –",
+            "Revision nicht"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "§ 317 kann, § 344 muss",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Beide Rechtsmittel legst du grundsätzlich binnen einer Woche nach Verkündung ein (§§ 314, 341 StPO). Danach trennen sich die Wege: Die Berufung ist eine zweite Tatsacheninstanz, die Revision eine reine Rechtskontrolle. Das prägt Begründung, Form und Prüfungsumfang."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die Begründung",
+          "links": {
+            "titel": "Berufung",
+            "punkte": [
+              "Begründung möglich, aber keine Pflicht (§ 317 StPO)",
+              "Frist dafür: eine weitere Woche",
+              "Ohne Begründung gilt das ganze Urteil als angefochten (§ 318 S. 2)"
+            ]
+          },
+          "rechts": {
+            "titel": "Revision",
+            "punkte": [
+              "Anträge und Begründung sind Pflicht (§ 344 StPO)",
+              "Frist: grundsätzlich ein Monat (§ 345 Abs. 1)",
+              "Form: Anwalt oder Protokoll der Geschäftsstelle (§ 345 Abs. 2)",
+              "Sonst Verwerfung als unzulässig (§ 346 Abs. 1)"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Was wird geprüft?",
+          "links": {
+            "titel": "Berufung",
+            "punkte": [
+              "Neue Hauptverhandlung über Tat- und Rechtsfragen",
+              "Neue Tatsachen und Beweise zulässig",
+              "Beweisaufnahme findet erneut statt"
+            ]
+          },
+          "rechts": {
+            "titel": "Revision",
+            "punkte": [
+              "Nur Rechtsfehler (§ 337 StPO)",
+              "Verfahrensrüge: Tatsachen vollständig vortragen (§ 344 Abs. 2 S. 2)",
+              "Sachrüge: allgemein erhoben genügt"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wogegen, wohin?",
+          "links": {
+            "titel": "Berufung",
+            "punkte": [
+              "Gegen Urteile des Strafrichters und des Schöffengerichts (§ 312)",
+              "Zur kleinen Strafkammer des Landgerichts",
+              "Bei geringen Geldstrafen: Annahme nötig (§ 313)"
+            ]
+          },
+          "rechts": {
+            "titel": "Revision",
+            "punkte": [
+              "Gegen Urteile des Landgerichts und erstinstanzliche OLG-Urteile (§ 333)",
+              "Zum OLG oder BGH (§§ 121, 135 GVG)",
+              "Gegen AG-Urteile als Sprungrevision (§ 335)"
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Berufung: neue Tatsacheninstanz, Begründung freiwillig. Revision: nur Rechtsfehler, Begründung Pflicht – binnen eines Monats, in der Form des § 345 Abs. 2."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtsmittel in drei Fragen",
+          "punkte": [
+            "Wogegen richtet es sich?",
+            "Tatsachen oder nur Recht?",
+            "Begründung nötig – Frist und Form?"
+          ],
+          "icons": [
+            "gericht",
+            "lupe",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Berufung ohne Begründung geht – Revision nicht. Beide legst du binnen einer Woche nach Verkündung ein. Die Berufung kannst du begründen (§ 317 StPO), musst es aber nicht; dann gilt das ganze Urteil als angefochten. Die Revision braucht Anträge und Begründung, grundsätzlich binnen eines Monats und in der Form des § 345 Abs. 2 StPO – sonst ist sie unzulässig. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#berufung",
+        "#strafprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Berufung und Revision: Begründung, Form, Umfang",
+      "coverText": "§ 317 kann, § 344 muss",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Die Berufung öffnet die Tatsachen neu, die Revision prüft nur das Recht und verlangt deshalb eine Begründung.",
+        "handlung": "{A} walks through an open wide gate into a fresh field, while {B} hovers at a narrow turnstile next to it that only turns once a folded written note is inserted.",
+        "hinweisRegie": "Place the note in the free space above the narrow turnstile, slightly tilted toward the slot for the written note, so the mandatory reasoning is emphasized without covering the open gate.",
+        "alternative": "{B} holds a magnifier over a single page, while {A} opens a whole new box of evidence on a table beside it."
+      },
+      "bildSzene": "wide gate open, narrow turnstile needs note",
+      "bildSzeneAlt": "magnifier on page, new evidence box",
+      "quellen": [
+        "§ 312 StPO",
+        "§ 313 StPO",
+        "§§ 314, 317, 318 StPO",
+        "§ 333 StPO",
+        "§ 335 StPO",
+        "§ 337 StPO",
+        "§§ 341, 344, 345, 346 StPO",
+        "§§ 121, 135 GVG",
+        "Themenpool: stpo-352"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontrast",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.895Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-646",
+      "slug": "2027-02-25-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Auskunft, Zusage, Zusicherung: drei Stufen der Bindung",
+          "unter": "Verwaltungsrecht AT · § 38 VwVfG",
+          "text": "Wie stark die Behörde gebunden ist, hängt davon ab, was sie erklärt hat.",
+          "norm": "§ 38 VwVfG",
+          "icon": "handschlag",
+          "sprecher": "Nicht jedes Versprechen der Behörde bindet sie. Es gibt drei Stufen. Und nur für die stärkste schreibt das Gesetz eine bestimmte Form vor.",
+          "marken": [
+            "drei Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Auskunft",
+          "text": "Wissenserklärung über die Sach- oder Rechtslage – ohne Bindungswillen.",
+          "norm": null,
+          "sprecher": "Stufe eins: die Auskunft. Die Behörde teilt mit, wie sie die Sach- oder Rechtslage sieht. Sie will sich damit nicht binden. Einen Anspruch gibt die Auskunft nicht. Ist sie falsch, kommt aber Amtshaftung in Betracht.",
+          "marken": [
+            "kein Anspruch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zusage",
+          "text": "Selbstverpflichtung mit Bindungswillen, künftig etwas zu tun oder zu unterlassen.",
+          "norm": null,
+          "sprecher": "Stufe zwei: die Zusage. Jetzt will sich die Behörde verpflichten, künftig etwas zu tun oder zu unterlassen, zum Beispiel eine Straße zu reinigen. Die Zusage ist der Oberbegriff. Sie ist im VwVfG nicht allgemein geregelt. Ob die Schriftform entsprechend gilt, ist umstritten.",
+          "marken": [
+            "Bindungswille"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zusicherung",
+          "text": "Zusage, einen bestimmten Verwaltungsakt zu erlassen oder zu unterlassen – nur schriftlich.",
+          "norm": "§ 38 Abs. 1 VwVfG",
+          "sprecher": "Stufe drei: die Zusicherung. Sie ist die Zusage, einen bestimmten Verwaltungsakt zu erlassen oder zu unterlassen. Wirksam ist sie nur schriftlich und von der zuständigen Behörde. Ist eine Anhörung nötig, muss sie vorher stattfinden.",
+          "marken": [
+            "nur schriftlich"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Rechtsnatur und Grenzen",
+          "text": "Nach h.M. selbst ein Verwaltungsakt; §§ 44, 48, 49 VwVfG gelten entsprechend.",
+          "norm": "§ 38 Abs. 2, 3 VwVfG",
+          "sprecher": "Die Zusicherung ist nach herrschender Meinung selbst ein Verwaltungsakt. Für Nichtigkeit, Rücknahme und Widerruf gelten die Regeln entsprechend. Und ändert sich die Sach- oder Rechtslage, kann die Bindung von selbst entfallen.",
+          "marken": [
+            "§ 38 Abs. 3"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Auskunft informiert, Zusage verpflichtet, Zusicherung verpflichtet zu einem VA – schriftlich.",
+          "norm": "§ 38 VwVfG",
+          "sprecher": "Merke: Die Auskunft informiert. Die Zusage verpflichtet. Die Zusicherung verpflichtet zu einem Verwaltungsakt und braucht die Schriftform.",
+          "marken": [
+            "informiert ≠ bindet"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst einordnen, dann prüfen",
+          "text": "Speichern für die nächste Verwaltungsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur. Und frag bei jeder Behördenerklärung zuerst: Wollte sie sich binden – und wozu?",
+          "marken": [
+            "wozu?"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Auskunft, Zusage, Zusicherung – drei Stufen der Bindung. Die Auskunft ist eine Wissenserklärung ohne Bindungswillen. Die Zusage verpflichtet die Behörde, künftig etwas zu tun oder zu unterlassen. Die Zusicherung ist die Zusage, einen bestimmten Verwaltungsakt zu erlassen oder zu unterlassen – wirksam nur schriftlich (§ 38 Abs. 1 VwVfG). Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#38vwvfg",
+        "#zusicherung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Auskunft, Zusage, Zusicherung",
+      "titelZeilen": [
+        "Auskunft, Zusage,",
+        "Zusicherung: drei",
+        "Stufen der Bindung"
+      ],
+      "coverText": "Nur die Zusicherung braucht Schrift",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Je nachdem, ob die Behörde nur informiert oder sich verpflichtet, ist sie unterschiedlich stark gebunden.",
+        "handlung": "{A} hovers beside three rising stone steps, placing a light feather on the lowest, a rope on the middle and a firmly sealed envelope on the top step, while {B} tests the top step with his full weight.",
+        "hinweisRegie": "Place the note in the free space beside the top step with the sealed envelope, slightly tilted toward it, so the strongest binding stands out without covering {B}'s boots or the lower steps.",
+        "alternative": "{B} tugs on three strings of different thickness tied to a gate, and only the thickest, sealed one holds the gate shut."
+      },
+      "bildSzene": "three steps: feather, rope, sealed envelope",
+      "bildSzeneAlt": "three strings, only thickest holds",
+      "quellen": [
+        "§ 38 VwVfG",
+        "§§ 44, 48, 49 VwVfG",
+        "§ 839 BGB i. V. m. Art. 34 GG",
+        "Themenpool: verwalt-646"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-bindungsstufen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.897Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-642",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Die Behörde vergisst die Anhörung vor einer Ermessensentscheidung. Rettet § 46 VwVfG den Bescheid?",
+      "optionen": [
+        "Ja – Verfahrensfehler sind nach § 46 VwVfG immer unbeachtlich",
+        "Regelmäßig nicht – bei Ermessen ist ein Einfluss kaum auszuschließen",
+        "Nein – ein Anhörungsmangel macht den Bescheid nichtig"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 45 Abs. 1 Nr. 3, Abs. 2 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-642"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.897Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-642",
+      "ueberzeile": "Auflösung",
+      "titel": "Regelmäßig nicht – bei Ermessen lässt sich ein Einfluss kaum ausschließen",
+      "text": "§ 46 VwVfG greift nur, wenn offensichtlich ist, dass der Fehler die Entscheidung nicht beeinflusst hat. Hatte die Behörde Ermessen, hätte die Anhörung ihre Abwägung verändern können – anders nur bei einer Ermessensreduzierung auf Null. Vorher prüfen: Wurde die Anhörung nach § 45 Abs. 1 Nr. 3, Abs. 2 VwVfG nachgeholt?",
+      "norm": "§ 46 VwVfG · § 45 VwVfG",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 45 Abs. 1 Nr. 3, Abs. 2 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-642"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.897Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Verfahrensfehler sind nach § 46 VwVfG immer unbeachtlich",
+        "Regelmäßig nicht – bei Ermessen ist ein Einfluss kaum auszuschließen",
+        "Nein – ein Anhörungsmangel macht den Bescheid nichtig"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-056",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Gestaltungsklage: nur, wo das Gesetz sie vorsieht",
+      "text": "Die Leistungsklage führt zu einem vollstreckbaren Titel, die Feststellungsklage klärt ein Rechtsverhältnis (§ 256 ZPO). Die Gestaltungsklage ändert die Rechtslage unmittelbar mit Rechtskraft des Urteils – ohne Vollstreckung. Zulässig ist sie nur, wo das Gesetz es anordnet, etwa §§ 767, 771 ZPO oder die Erbunwürdigkeitsklage (§ 2342 BGB).",
+      "norm": "§ 253 ZPO · § 256 ZPO",
+      "quellen": [
+        "§ 253 ZPO",
+        "§ 256 ZPO",
+        "§ 767 ZPO",
+        "§ 771 ZPO",
+        "§ 2342 BGB",
+        "Themenpool: zpo-056"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.897Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-883",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Unklar, ob belehrt wurde: Gilt in dubio pro reo für den Verfahrensfehler?",
+      "norm": "§ 337 StPO",
+      "optionen": [
+        "Rspr.: Nein – der Verfahrensverstoß muss erwiesen sein, Zweifel gehen zulasten der Rüge.",
+        "Teile der Lit.: Zweifel gehen zulasten des Staates, wenn er die Dokumentation versäumt hat."
+      ],
+      "text": "Klausur: Zuerst § 274 StPO – für wesentliche Förmlichkeiten der Hauptverhandlung beweist das Protokoll. Sonst klärt das Revisionsgericht Verfahrenstatsachen im Freibeweis. Bleibt es unklar, scheitert die Rüge nach der Rspr.",
+      "quellen": [
+        "§ 274 StPO",
+        "§ 337 StPO",
+        "§ 344 Abs. 2 S. 2 StPO",
+        "Themenpool: revision-883"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.897Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-765",
+      "ueberzeile": "Merksatz Verkehrsstrafrecht",
+      "titel": "Tödliches Rennen: Nach § 315d Abs. 5 StGB kommt der Vorsatz",
+      "text": "Stirbt ein anderer durch das Rennen, greift bei Fahrlässigkeit § 315d Abs. 5 StGB (§ 18 StGB). Nimmt der Fahrer den Tod billigend in Kauf, kommt Mord in Betracht – die Rspr. hat das in Raserfällen bejaht.",
+      "norm": "§ 315d Abs. 2, 5 StGB",
+      "quellen": [
+        "§ 315d StGB",
+        "§ 18 StGB",
+        "§ 211 StGB",
+        "Themenpool: strafbt-765"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.897Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-678",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Versammlungs-„Auflage“: in Wahrheit eine selbständige Verfügung",
+      "text": "Versammlungen sind erlaubnisfrei (Art. 8 Abs. 1 GG). Es gibt also keinen Hauptverwaltungsakt, dem eine Nebenbestimmung nach § 36 VwVfG beigefügt werden könnte. Die „Auflage“ nach § 15 Abs. 1 VersG ist eine selbständige beschränkende Verfügung; mehrere Landesgesetze sprechen deshalb von „Beschränkungen“. Das Verbot bleibt letztes Mittel.",
+      "norm": "§ 15 Abs. 1 VersG · Landesrecht",
+      "quellen": [
+        "Art. 8 GG",
+        "§ 15 VersG",
+        "Versammlungsgesetze der Länder",
+        "§ 36 VwVfG",
+        "Themenpool: verwbt-678"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:38.897Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

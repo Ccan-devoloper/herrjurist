@@ -1,0 +1,846 @@
+{
+  "datum": "2027-02-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "strafat-731",
+        "themaTitel": "Anstiftung",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "staat-606",
+        "themaTitel": "Verordnungsermächtigung",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-550",
+        "themaTitel": "Bestimmtheit des Klageantrags",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "assessorz-815"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "assessorz-815"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:09",
+        "art": "norm",
+        "themaId": "zpo-547"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "merksatz",
+        "themaId": "schuldbt-478"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "begriff",
+        "themaId": "vwgo-660"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "fehler",
+        "themaId": "assessoroer-850"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "strafat-731",
+      "poolTitel": "Anstiftung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 26 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-606",
+      "poolTitel": "Verordnungsermächtigung",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 80 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-550",
+      "poolTitel": "Bestimmtheit des Klageantrags",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 II Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-24"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-815",
+      "poolTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-815",
+      "poolTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-547",
+      "poolTitel": "Sachliche und örtliche Zuständigkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "GVG; §§ 12 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-09",
+        "2026-12-28"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "schuldbt-478",
+      "poolTitel": "Kündigungsbutton und Online-Verträge",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 312k BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-10-24"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "vwgo-660",
+      "poolTitel": "Vorverfahren",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 68 ff. VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessoroer-850",
+      "poolTitel": "Wie läuft die Verwaltungsvollstreckung in der Behördenklausur?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwVG; Landesrecht"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-12-26"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-731",
+      "slug": "2027-02-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anstiften lässt sich nur, wer noch nicht entschlossen ist",
+          "titelZeilen": [
+            "Anstiften lässt sich",
+            "nur, wer noch nicht",
+            "entschlossen ist"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Omnimodo facturus: § 27 StGB prüfen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "T hat fest beschlossen, im Laden des L eine teure Uhr zu stehlen, und erzählt das seinem Freund A. A ist begeistert: „Mach das, du schaffst das!“ Am nächsten Tag stiehlt T die Uhr wie geplant. Hat A sich wegen Anstiftung zum Diebstahl strafbar gemacht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du § 26 StGB",
+          "schritte": [
+            {
+              "titel": "1. Vorsätzliche rechtswidrige Haupttat",
+              "text": "T hat einen Diebstahl nach § 242 StGB begangen – unproblematisch."
+            },
+            {
+              "titel": "2. Bestimmen",
+              "text": "Hervorrufen des Tatentschlusses. Überwiegend wird dafür ein geistiger Kontakt zwischen Anstifter und Täter verlangt."
+            },
+            {
+              "titel": "3. Doppelter Vorsatz",
+              "text": "Vorsatz bezüglich der Haupttat und bezüglich des eigenen Bestimmens."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem: omnimodo facturus",
+          "text": "T war schon fest zur Tat entschlossen. Wer ohnehin handeln will, kann nicht mehr bestimmt werden – A hat keinen Tatentschluss hervorgerufen. Auch versuchte Anstiftung scheidet aus: § 30 Abs. 1 StGB gilt nur für Verbrechen, § 242 StGB ist ein Vergehen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "punkte": [
+            "Keine Anstiftung: T war bereits fest entschlossen.",
+            "In Betracht kommt psychische Beihilfe (§ 27 StGB), wenn A den Entschluss des T tatsächlich bestärkt hat.",
+            "Dann Strafmilderung nach § 27 Abs. 2 S. 2 i. V. m. § 49 Abs. 1 StGB."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer schon fest entschlossen ist, kann nicht mehr angestiftet werden. Zureden bleibt dann allenfalls psychische Beihilfe."
+        },
+        {
+          "art": "cta",
+          "titel": "Anstiftung in drei Fragen",
+          "punkte": [
+            "Vorsätzliche rechtswidrige Haupttat?",
+            "Tatentschluss erst hervorgerufen?",
+            "Sonst: psychische Beihilfe prüfen"
+          ],
+          "icons": [
+            "person",
+            "blitz",
+            "personen"
+          ]
+        }
+      ],
+      "caption": "Anstiften lässt sich nur, wer noch nicht entschlossen ist. Bestimmen heißt, den Tatentschluss hervorzurufen. War der Täter schon fest entschlossen (omnimodo facturus), scheidet § 26 StGB aus. Versuchte Anstiftung ist nur bei Verbrechen strafbar (§ 30 Abs. 1 StGB). Wer den Entschluss aber bestärkt, kann psychische Beihilfe leisten (§ 27 StGB). Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#26stgb",
+        "#anstiftung",
+        "#teilnahme",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anstiftung: nicht beim fest Entschlossenen",
+      "coverText": "Omnimodo facturus: § 27 StGB prüfen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer schon fest zur Tat entschlossen ist, kann nicht mehr angestiftet, allenfalls bestärkt werden.",
+        "handlung": "{B} is already striding purposefully toward a glittering display case, while {A} runs after her waving both arms in excitement, clearly arriving after her decision was made.",
+        "hinweisRegie": "Place the note in the free space between {B}'s determined stride and {A}'s waving arms, slightly tilted toward {B}, so the already-made decision is visible without covering the display case.",
+        "alternative": "{A} tries to push a boulder that is already rolling downhill on its own, while {B} watches from the slope."
+      },
+      "bildSzene": "cheering helper runs after decided walker",
+      "bildSzeneAlt": "pushing boulder already rolling downhill",
+      "quellen": [
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "§ 30 Abs. 1 StGB",
+        "§ 49 Abs. 1 StGB",
+        "§ 242 StGB",
+        "§ 12 StGB",
+        "Themenpool: strafat-731"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.122Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-606",
+      "slug": "2027-02-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Präzise Verordnung, vages Gesetz: Was hält?",
+          "titelZeilen": [
+            "Präzise Verordnung,",
+            "vages Gesetz:",
+            "Was hält?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Bestimmtheit misst man am Gesetz",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Ein Bundesgesetz ermächtigt das zuständige Bundesministerium, „das Nähere zum Schutz der Verbraucher“ durch Rechtsverordnung zu regeln. Weitere Vorgaben enthält es dazu nicht. Die Verordnung selbst ist detailliert und klar formuliert. Ist sie wirksam?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du die Rechtsverordnung",
+          "schritte": [
+            {
+              "titel": "1. Wirksame Ermächtigung",
+              "text": "Formelles Gesetz, selbst verfassungsgemäß – insbesondere nach Art. 80 Abs. 1 S. 1, 2 GG."
+            },
+            {
+              "titel": "2. Art. 80 Abs. 1 GG",
+              "text": "Richtiger Adressat (Bundesregierung, Bundesminister, Landesregierungen); Inhalt, Zweck und Ausmaß im Gesetz bestimmt."
+            },
+            {
+              "titel": "3. Formelle Rechtmäßigkeit der Verordnung",
+              "text": "Zuständigkeit, ggf. Zustimmung des Bundesrates (Art. 80 Abs. 2 GG), Zitiergebot (Art. 80 Abs. 1 S. 3 GG), Ausfertigung und Verkündung."
+            },
+            {
+              "titel": "4. Materielle Rechtmäßigkeit",
+              "text": "Im Rahmen der Ermächtigung und vereinbar mit höherrangigem Recht, vor allem den Grundrechten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Antwort",
+          "text": "Im Ergebnis hält beides nicht. Art. 80 Abs. 1 S. 2 GG verlangt, dass das Gesetz selbst Inhalt, Zweck und Ausmaß der Ermächtigung bestimmt. „Das Nähere zum Verbraucherschutz“ ohne weitere Anhaltspunkte leistet das kaum. Ohne wirksame Grundlage ist auch die präzise Verordnung nichtig."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Bestimmtheit an der Verordnung messen. Maßstab ist allein das Gesetz. Nach dem BVerfG muss aber nicht jede Einzelheit im Ermächtigungssatz stehen: Es genügt, wenn sich Inhalt, Zweck und Ausmaß durch Auslegung des ganzen Gesetzes ermitteln lassen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 80 GG prüft das Gesetz, nicht die Verordnung: Inhalt, Zweck und Ausmaß müssen sich aus dem Gesetz ergeben. Das Zitiergebot nicht vergessen."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtsverordnung in drei Schritten",
+          "punkte": [
+            "Ermächtigung bestimmt genug?",
+            "Verordnung formell korrekt, Zitiergebot?",
+            "Im Rahmen der Ermächtigung geblieben?"
+          ],
+          "icons": [
+            "paragraf",
+            "dokument",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Präzise Verordnung, vages Gesetz – was hält? Nichts. Art. 80 Abs. 1 S. 2 GG verlangt, dass das Gesetz selbst Inhalt, Zweck und Ausmaß der Ermächtigung bestimmt. Die Bestimmtheit misst du also am Gesetz, nicht an der Verordnung. Fehlt eine wirksame Ermächtigung, ist auch die sauberste Verordnung nichtig. Danach: Zitiergebot, Verfahren, Rahmen der Ermächtigung. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#80gg",
+        "#rechtsverordnung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 80 GG: Bestimmtheit misst man am Gesetz",
+      "coverText": "Bestimmtheit misst man am Gesetz",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Eine noch so genaue Verordnung fällt, wenn das ermächtigende Gesetz zu vage ist.",
+        "handlung": "{B} admires a finely built crystal tower, while {A} taps his pointer against the crumbling foundation stone underneath it, on which the whole tower rests.",
+        "hinweisRegie": "Place the note in the free space next to the crumbling foundation stone, slightly tilted toward it, so the weak basis is emphasized without covering the tower or {B}'s face.",
+        "alternative": "{A} holds up a detailed map, but {B} notices that the compass it was drawn from has no needle."
+      },
+      "bildSzene": "fine tower on crumbling foundation",
+      "bildSzeneAlt": "detailed map from needleless compass",
+      "quellen": [
+        "Art. 80 GG",
+        "Art. 82 Abs. 1 GG",
+        "Themenpool: staat-606"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "entscheidungsfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.123Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-550",
+      "slug": "2027-02-26-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Schmerzensgeld ohne Betrag im Antrag – zulässig",
+          "unter": "Klageantrag · § 253 Abs. 2 Nr. 2 ZPO",
+          "text": "Der Antrag muss bestimmt sein – beim Schmerzensgeld aber nicht unbedingt beziffert.",
+          "norm": "§ 253 Abs. 2 Nr. 2 ZPO",
+          "icon": "banknote",
+          "sprecher": "Schmerzensgeld ohne Betrag im Antrag? Das ist zulässig. Obwohl die ZPO einen bestimmten Antrag verlangt. Warum das kein Widerspruch ist, zeigen drei Schritte.",
+          "marken": [
+            "unbeziffert"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der Grundsatz: bestimmt",
+          "text": "Der Antrag legt Streitgegenstand und Rechtskraft fest und muss vollstreckbar sein.",
+          "norm": "§ 253 Abs. 2 Nr. 2 ZPO",
+          "sprecher": "Schritt eins: der Grundsatz. Die Klageschrift braucht einen bestimmten Antrag. Er legt fest, worüber entschieden wird, wie weit die Rechtskraft reicht, und er muss vollstreckbar sein. Geldforderungen bezifferst du deshalb.",
+          "marken": [
+            "beziffern"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Ausnahme: Ermessen des Gerichts",
+          "text": "Schätzt das Gericht die Höhe, genügt ein unbezifferter Antrag mit Größenordnung.",
+          "norm": "§ 287 ZPO · § 253 Abs. 2 BGB",
+          "sprecher": "Schritt zwei: die Ausnahme. Hängt die Höhe vom Ermessen des Gerichts ab, wie beim Schmerzensgeld, darf der Antrag unbeziffert bleiben. Du musst aber die Grundlagen für die Schätzung vortragen und eine Größenordnung angeben, etwa einen Mindestbetrag.",
+          "marken": [
+            "Größenordnung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Unterlassung und Herausgabe",
+          "text": "Nicht bloß das Gesetz wiederholen – die konkrete Verletzungsform beschreiben.",
+          "norm": null,
+          "sprecher": "Schritt drei: Unterlassung und Herausgabe. Ein Antrag, der nur den Gesetzeswortlaut wiederholt, ist in der Regel zu unbestimmt. Beschreibe die konkrete Verletzungsform. Und die herauszugebende Sache so genau, dass der Gerichtsvollzieher sie findet.",
+          "marken": [
+            "konkret"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Folge",
+          "text": "Unbestimmter Antrag: Klage unzulässig – aber erst auslegen und Hinweis nach § 139 ZPO.",
+          "norm": "§ 139 ZPO",
+          "sprecher": "Die Folge eines unbestimmten Antrags: Die Klage ist unzulässig. Vorher legt das Gericht den Antrag aber aus, und es muss nach Paragraf 139 ZPO auf seine Bedenken hinweisen.",
+          "marken": [
+            "unzulässig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Beziffern ist die Regel. Unbeziffert nur, wo das Gericht die Höhe schätzt – mit Größenordnung.",
+          "norm": "§ 253 Abs. 2 Nr. 2 ZPO",
+          "sprecher": "Merke: Beziffern ist die Regel. Unbeziffert nur, wo das Gericht die Höhe schätzt, und dann mit Größenordnung.",
+          "marken": [
+            "Regel und Ausnahme"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Antrag vor dem Abgeben prüfen",
+          "text": "Speichern für die nächste Klageschrift.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klageschrift. Und lies deinen Antrag einmal so, als wärst du der Gerichtsvollzieher.",
+          "marken": [
+            "vollstreckbar?"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Schmerzensgeld ohne Betrag im Antrag? Zulässig. Grundsätzlich muss der Klageantrag bestimmt sein (§ 253 Abs. 2 Nr. 2 ZPO): Er legt Streitgegenstand und Rechtskraft fest und muss vollstreckbar sein. Hängt die Höhe aber vom Ermessen des Gerichts ab, genügt ein unbezifferter Antrag – mit Schätzungsgrundlagen und Größenordnung. Unterlassungsanträge brauchen die konkrete Verletzungsform. Speichern für die nächste Klageschrift.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#klageantrag",
+        "#253zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klageantrag: bestimmt, aber nicht immer beziffert",
+      "titelZeilen": [
+        "Schmerzensgeld",
+        "ohne Betrag im",
+        "Antrag – zulässig"
+      ],
+      "coverText": "Größenordnung angeben",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wo das Gericht die Höhe schätzt, darf der Antrag offen bleiben – aber nicht ohne Größenordnung.",
+        "handlung": "{B} hands over an empty crystal bowl with only a single chalk mark near its rim, while {A} nods and gets ready to fill it up to at least that mark.",
+        "hinweisRegie": "Place the note in the free space beside the chalk mark on the bowl, slightly tilted toward it, so the minimum amount is emphasized without covering {A}'s hands or the bowl's opening.",
+        "alternative": "{A} points to a blank price tag hanging on a scale, while {B} places a small weight marking the lowest acceptable value."
+      },
+      "bildSzene": "empty bowl with single chalk mark",
+      "bildSzeneAlt": "blank price tag, minimum weight placed",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 287 ZPO",
+        "§ 139 ZPO",
+        "§ 253 Abs. 2 BGB",
+        "Themenpool: zpo-550"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-mit-bedingung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.124Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-815",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "Versäumnisurteil über 5.000 €, zulässiger Einspruch. K steht nur ein Anspruch auf 3.000 € zu. Tenor?",
+      "optionen": [
+        "VU aufheben; B verurteilen, 3.000 € zu zahlen",
+        "VU aufrechterhalten; Klage im Übrigen abweisen",
+        "VU aufrechterhalten, soweit 3.000 €; im Übrigen aufheben, Klage abweisen"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO",
+        "§ 92 ZPO",
+        "§ 709 S. 3 ZPO",
+        "Themenpool: assessorz-815"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.124Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-815",
+      "ueberzeile": "Auflösung",
+      "titel": "Aufrechterhalten, soweit es stimmt – im Übrigen aufheben und abweisen",
+      "text": "Soweit die neue Entscheidung mit dem VU übereinstimmt, wird es aufrechterhalten; im Übrigen aufgehoben (§ 343 ZPO). So bleibt der Rang schon erfolgter Vollstreckungsmaßnahmen erhalten. Die Kosten der Säumnis trägt B, wenn das VU in gesetzlicher Weise ergangen ist (§ 344 ZPO), sonst § 92 ZPO. Bei § 709 ZPO an S. 3 denken.",
+      "norm": "§§ 343, 344 ZPO",
+      "quellen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO",
+        "§ 92 ZPO",
+        "§ 709 S. 3 ZPO",
+        "Themenpool: assessorz-815"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.124Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "VU aufheben; B verurteilen, 3.000 € zu zahlen",
+        "VU aufrechterhalten; Klage im Übrigen abweisen",
+        "VU aufrechterhalten, soweit 3.000 €; im Übrigen aufheben, Klage abweisen"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-547",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 39 ZPO: Wer rügelos verhandelt, macht das Gericht zuständig",
+      "text": "Verhandelt der Beklagte zur Hauptsache, ohne die Unzuständigkeit zu rügen, wird das Gericht zuständig (§ 39 S. 1 ZPO). Vor dem Amtsgericht gilt das nur nach Belehrung über die Unzuständigkeit und ihre Folgen (§§ 39 S. 2, 504 ZPO). Bei einem ausschließlichen Gerichtsstand hilft auch rügeloses Verhandeln nicht (§ 40 Abs. 2 ZPO).",
+      "norm": "§ 39 ZPO · § 40 Abs. 2 ZPO",
+      "quellen": [
+        "§ 39 ZPO",
+        "§ 40 Abs. 2 ZPO",
+        "§ 504 ZPO",
+        "Themenpool: zpo-547"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.124Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-478",
+      "ueberzeile": "Merksatz Verbraucherrecht",
+      "titel": "Kündigungsbutton gedrückt: Der Zugang wird vermutet",
+      "text": "Wer über die Bestätigungsschaltfläche kündigt, muss den Zugang nicht beweisen: Es wird vermutet, dass die Kündigung unmittelbar nach Abgabe zugegangen ist. Der Unternehmer muss sie sofort elektronisch in Textform bestätigen.",
+      "norm": "§ 312k BGB",
+      "quellen": [
+        "§ 312k BGB",
+        "§ 130 BGB",
+        "Themenpool: schuldbt-478"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.124Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-660",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Vorverfahren: Die Behörde prüft Recht- und Zweckmäßigkeit",
+      "text": "Vor Anfechtungs- und Verpflichtungsklage ist grundsätzlich ein Widerspruchsverfahren durchzuführen (§ 68 VwGO). Anders als das Gericht prüft die Behörde dort auch die Zweckmäßigkeit. Frist: ein Monat nach Bekanntgabe (§ 70 VwGO). Ob es stattfindet, hängt oft vom Landesrecht ab – viele Länder haben es weitgehend abgeschafft (§ 68 Abs. 1 S. 2 VwGO).",
+      "norm": "§§ 68, 70 VwGO",
+      "quellen": [
+        "§ 68 VwGO",
+        "§ 70 VwGO",
+        "§ 73 VwGO",
+        "Themenpool: vwgo-660"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.124Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-850",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Zwangsgeld: Strafe für den Ungehorsam?",
+      "falsch": "Das Zwangsgeld bestraft den Pflichtigen dafür, dass er die Anordnung missachtet hat.",
+      "richtigText": "Das Zwangsgeld ist ein Beugemittel: Es soll ein künftiges Verhalten erzwingen, nicht Vergangenes ahnden. Deshalb darf es wiederholt und neben einer Geldbuße angedroht werden. Ist der Zweck erreicht, ist der Vollzug einzustellen (etwa § 15 Abs. 3 VwVG; Landesrecht meist ähnlich).",
+      "quellen": [
+        "§ 11 VwVG",
+        "§ 13 Abs. 6 VwVG",
+        "§ 15 Abs. 3 VwVG",
+        "Verwaltungsvollstreckungsgesetze der Länder",
+        "Themenpool: assessoroer-850"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:14.124Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

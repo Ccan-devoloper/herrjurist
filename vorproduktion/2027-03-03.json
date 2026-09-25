@@ -1,0 +1,861 @@
+{
+  "datum": "2027-03-03",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-553",
+        "themaTitel": "Klageänderung",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-783",
+        "themaTitel": "Hauptverhandlung: Unmittelbarkeitsgrundsatz",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-634",
+        "themaTitel": "Urteilsverfassungsbeschwerde und spezifisches Verfassungsrecht",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "zpo-565"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "zpo-565"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "schuld-444"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "streitstand",
+        "themaId": "assessoroer-845"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "merksatz",
+        "themaId": "schuld-176"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "begriff",
+        "themaId": "grundr-366"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-553",
+      "poolTitel": "Klageänderung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 263 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-12",
+        "2027-02-12"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-783",
+      "poolTitel": "Hauptverhandlung: Unmittelbarkeitsgrundsatz",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-24",
+        "2027-02-24"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-634",
+      "poolTitel": "Urteilsverfassungsbeschwerde und spezifisches Verfassungsrecht",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 I Nr. 4a GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-565",
+      "poolTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 704 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-565",
+      "poolTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 704 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-444",
+      "poolTitel": "Schadensersatz neben der Leistung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 280 I BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2027-01-27"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-26",
+        "2026-12-30",
+        "2026-12-30"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuld-176",
+      "poolTitel": "Was ersetzt § 251 BGB und wann greift er statt § 249 BGB?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 249 BGB",
+        "§ 251 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "grundr-366",
+      "poolTitel": "Wann ist die Menschenwürde verletzt?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-07",
+        "2027-01-08"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-553",
+      "slug": "2027-03-03-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "8.000 € eingeklagt, 12.000 € verlangt: Braucht es Sachdienlichkeit?",
+          "titelZeilen": [
+            "8.000 € eingeklagt,",
+            "12.000 € verlangt:",
+            "Braucht es",
+            "Sachdienlichkeit?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 264 Nr. 2 ZPO zuerst",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verlangt von B nach einem Verkehrsunfall 8.000 € Schadensersatz. Nach Eingang eines Gutachtens erhöht er im Termin auf 12.000 € – gleicher Unfall, höherer Schaden. B widerspricht der „Klageänderung“. Muss das Gericht nach § 263 ZPO die Sachdienlichkeit prüfen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Ändert sich der Streitgegenstand?",
+              "text": "Streitgegenstand: Antrag plus Lebenssachverhalt. Hier ändert sich nur der Antrag, der Unfall bleibt derselbe."
+            },
+            {
+              "titel": "2. Fall des § 264 ZPO?",
+              "text": "Nr. 2: Erweiterung des Klageantrags in der Hauptsache ohne Änderung des Klagegrundes – gilt nicht als Klageänderung."
+            },
+            {
+              "titel": "3. Folge",
+              "text": "§ 263 ZPO greift nicht: Weder Einwilligung noch Sachdienlichkeit nötig, der Widerspruch des B ist unerheblich."
+            },
+            {
+              "titel": "4. Erhöhter Antrag zulässig?",
+              "text": "Die Sachurteilsvoraussetzungen gelten auch für den Mehrbetrag – etwa die sachliche Zuständigkeit (beim AG: § 506 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Jede Änderung des Antrags sofort an § 263 ZPO messen. Zuerst kommt § 264 ZPO: Ergänzung tatsächlicher Angaben (Nr. 1), Erweiterung oder Beschränkung des Antrags (Nr. 2), anderer Gegenstand wegen später eingetretener Veränderung (Nr. 3). Dann ist die Änderung ohne Weiteres zulässig."
+        },
+        {
+          "art": "text",
+          "titel": "Und wenn es doch eine Klageänderung ist?",
+          "punkte": [
+            "Zulässig mit Einwilligung des Beklagten oder bei Sachdienlichkeit (§ 263 ZPO).",
+            "Die Einwilligung wird bei rügeloser Einlassung vermutet (§ 267 ZPO).",
+            "Keine Anfechtung, wenn das Gericht die Änderung verneint oder zulässt (§ 268 ZPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst § 264, dann § 263 ZPO: Mehr Geld aus demselben Lebenssachverhalt ist keine Klageänderung."
+        },
+        {
+          "art": "cta",
+          "titel": "Antrag geändert? Drei Fragen",
+          "punkte": [
+            "Streitgegenstand geändert?",
+            "Fall des § 264 Nr. 1–3 ZPO?",
+            "Sonst: Einwilligung oder sachdienlich?"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "8.000 € eingeklagt, im Termin 12.000 € verlangt – braucht es jetzt Einwilligung oder Sachdienlichkeit? Nein. Erhöht K nur den Antrag aus demselben Lebenssachverhalt, ist das nach § 264 Nr. 2 ZPO keine Klageänderung. § 263 ZPO greift erst, wenn keiner der Fälle des § 264 ZPO vorliegt. Prüf aber die Zulässigkeit des erhöhten Antrags, etwa die sachliche Zuständigkeit. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#klageänderung",
+        "#264zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klage erhöht: § 264 Nr. 2 ZPO vor § 263 ZPO",
+      "coverText": "§ 264 Nr. 2 ZPO zuerst",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Mehr zu verlangen aus demselben Geschehen ist keine Klageänderung.",
+        "handlung": "{A} curiously stacks two more crystal coins onto an existing pile on the same small table, while {B} hovers alongside and waves away a heavy approval stamp that is no longer needed.",
+        "hinweisRegie": "Place the note in the free space right above the growing coin pile, slightly tilted toward it, so the same pile reads as the same case, without covering {A}'s hands or the waved-away stamp.",
+        "alternative": "{B} unrolls a measuring tape along one and the same road while {A} simply pulls it a bit further."
+      },
+      "bildSzene": "alien adds coins to the same pile",
+      "bildSzeneAlt": "measuring tape extended on same road",
+      "quellen": [
+        "§§ 263, 264, 267, 268 ZPO",
+        "§ 506 ZPO",
+        "Themenpool: zpo-553"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.494Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-783",
+      "slug": "2027-03-03-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zeuge vom Hörensagen: § 250 StPO lässt ihn zu",
+          "titelZeilen": [
+            "Zeuge vom",
+            "Hörensagen:",
+            "§ 250 StPO",
+            "lässt ihn zu"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Nur Papier statt Zeuge ist gesperrt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Opfer O schildert ihrer Freundin F die Tat und reist danach ins Ausland; sie ist unerreichbar. In der Hauptverhandlung wird F über Os Schilderung vernommen. Verstößt das gegen den Unmittelbarkeitsgrundsatz des § 250 StPO?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Was § 250 StPO verbietet",
+              "text": "Die Vernehmung der Person, auf deren Wahrnehmung der Beweis beruht, durch Verlesung eines Protokolls oder einer Erklärung zu ersetzen."
+            },
+            {
+              "titel": "2. Was er nicht verbietet",
+              "text": "Nach Rspr. und h.M. ist der Zeuge vom Hörensagen zulässig: § 250 StPO regelt den Vorrang vor dem Urkundenbeweis."
+            },
+            {
+              "titel": "3. Die Grenze: Beweiswürdigung",
+              "text": "Der Beweiswert ist gering. Die Rspr. verlangt besonders vorsichtige Würdigung und regelmäßig weitere Beweisanzeichen."
+            },
+            {
+              "titel": "4. Im Fall",
+              "text": "F darf vernommen werden. Ob ihre Aussage eine Verurteilung trägt, entscheidet die Würdigung nach § 261 StPO."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Aus § 250 StPO ein Verbot jedes mittelbaren Beweismittels ableiten. Die Norm schützt die Vernehmung vor dem Ersatz durch Papier; Ausnahmen regeln die §§ 251 ff. StPO. Wer den Zeugen vom Hörensagen ausschließt, übersieht das eigentliche Problem: den Beweiswert."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 250 StPO: Zeuge vor Urkunde. Der Zeuge vom Hörensagen ist zulässig – die Frage ist sein Beweiswert."
+        },
+        {
+          "art": "cta",
+          "titel": "Unmittelbarkeit in drei Fragen",
+          "punkte": [
+            "Wird eine Vernehmung durch Verlesung ersetzt?",
+            "Ausnahme nach §§ 251 ff. StPO?",
+            "Mittelbarer Zeuge: Beweiswert würdigen"
+          ],
+          "icons": [
+            "dokument",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Der Zeuge vom Hörensagen verstößt nicht gegen § 250 StPO. Die Norm verbietet, die Vernehmung einer Person durch die Verlesung eines Protokolls oder einer Erklärung zu ersetzen – sie regelt den Vorrang des Personalbeweises vor dem Urkundenbeweis. Die Grenze liegt in der Beweiswürdigung: Mittelbare Angaben würdigt die Rspr. besonders vorsichtig und verlangt regelmäßig weitere Anhaltspunkte. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#250stpo",
+        "#hauptverhandlung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 250 StPO und der Zeuge vom Hörensagen",
+      "coverText": "Nur Papier statt Zeuge ist gesperrt",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Der Unmittelbarkeitsgrundsatz verdrängt Papier durch Menschen – nicht den Zeugen, der Gehörtes wiedergibt.",
+        "handlung": "{B} nervously tries to slide a sealed envelope onto an empty witness chair, while {A} lifts it away with his pointer and waves a waiting person to sit down instead.",
+        "hinweisRegie": "Place the note in the free space between the lifted envelope and the empty witness chair, slightly tilted toward the chair, so the person-before-paper rule is clear without covering the pointer or faces.",
+        "alternative": "{A} holds a seashell to his ear to catch a faint echo while {B} kneels beside him and carefully measures how weak the echo is."
+      },
+      "bildSzene": "pointer lifts envelope from witness chair",
+      "bildSzeneAlt": "listening to faint echo in seashell",
+      "quellen": [
+        "§ 250 StPO",
+        "§§ 251 ff. StPO",
+        "§ 261 StPO",
+        "Themenpool: stpo-783"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.495Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-634",
+      "slug": "2027-03-03-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Urteil angegriffen: der Klassiker, an dem Klausuren kippen",
+          "unter": "Urteilsverfassungsbeschwerde · Art. 93 GG",
+          "text": "Das BVerfG ist keine Superrevisionsinstanz – es prüft nur spezifisches Verfassungsrecht.",
+          "norm": "Art. 93 Abs. 1 Nr. 4a GG",
+          "icon": "gericht",
+          "sprecher": "Viele prüfen das angegriffene Urteil wie ein Berufungsgericht. Genau daran kippt die Urteilsverfassungsbeschwerde. Das Bundesverfassungsgericht ist keine Superrevisionsinstanz.",
+          "marken": [
+            "keine Superrevision",
+            "Art. 93 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einfaches Recht bleibt bei den Fachgerichten",
+          "text": "Auslegung und Anwendung des einfachen Rechts prüft das BVerfG grundsätzlich nicht nach.",
+          "norm": null,
+          "sprecher": "Schritt eins: Auslegung und Anwendung des einfachen Rechts sind Sache der Fachgerichte. Dass ein Urteil einfachrechtlich falsch ist, macht es noch nicht verfassungswidrig.",
+          "marken": [
+            "Fachgerichte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Grundrecht übersehen oder verkannt?",
+          "text": "Grundrecht übersehen oder Bedeutung und Tragweite grundsätzlich verkannt?",
+          "norm": null,
+          "sprecher": "Schritt zwei: Geprüft wird, ob das Gericht übersehen hat, dass ein Grundrecht betroffen ist, oder ob es dessen Bedeutung und Tragweite grundsätzlich verkannt hat. Das ist die Hecksche Formel.",
+          "marken": [
+            "Hecksche Formel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Willkür",
+          "text": "Unter keinem denkbaren Gesichtspunkt mehr vertretbar?",
+          "norm": "Art. 3 Abs. 1 GG",
+          "sprecher": "Schritt drei: Willkür. Eine Entscheidung, die unter keinem denkbaren Gesichtspunkt mehr rechtlich vertretbar ist, verletzt Artikel drei Absatz eins GG.",
+          "marken": [
+            "Willkürverbot"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Je intensiver der Eingriff, desto genauer",
+          "text": "Die Prüfungsdichte steigt mit der Schwere des Grundrechtseingriffs.",
+          "norm": null,
+          "sprecher": "Schritt vier: Die Prüfungsdichte ist nicht starr. Je intensiver das Urteil in Grundrechte eingreift, desto genauer schaut das Bundesverfassungsgericht hin.",
+          "marken": [
+            "je – desto"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "In der Klausur",
+          "text": "Erst den Maßstab benennen, dann an ihm prüfen – nicht das Urteil nachrechnen.",
+          "norm": null,
+          "sprecher": "In der Klausur heißt das: Stell diesen Maßstab an den Anfang der Begründetheit. Dann prüfst du, ob das Fachgericht spezifisches Verfassungsrecht verletzt hat, etwa bei der Abwägung mit der Meinungsfreiheit.",
+          "marken": [
+            "Maßstab zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Nicht: Ist das Urteil richtig? Sondern: Verletzt es spezifisches Verfassungsrecht?",
+          "norm": null,
+          "sprecher": "Merke: Frag nicht, ob das Urteil richtig ist. Frag, ob es spezifisches Verfassungsrecht verletzt.",
+          "marken": [
+            "spezifisch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Maßstab an den Anfang",
+          "text": "Speichern für die nächste Verfassungsbeschwerde.",
+          "sprecher": "Speicher dir das für die nächste Verfassungsbeschwerde gegen ein Urteil. Und bevor du subsumierst, frag dich bei jedem Punkt: Ist das einfaches Recht oder Verfassungsrecht?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Der Klassiker, an dem die Urteilsverfassungsbeschwerde kippt: Das angegriffene Urteil wird geprüft wie von einem Berufungsgericht. Das BVerfG ist aber keine Superrevisionsinstanz. Es prüft nur die Verletzung spezifischen Verfassungsrechts – ob das Fachgericht ein Grundrecht übersehen oder in seiner Bedeutung grundsätzlich verkannt hat (Hecksche Formel) oder willkürlich entschieden hat. Je intensiver der Eingriff, desto genauer die Kontrolle. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsbeschwerde",
+        "#verfassungsrecht",
+        "#bverfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Urteils-VB: nur spezifisches Verfassungsrecht",
+      "titelZeilen": [
+        "Urteil angegriffen:",
+        "der Klassiker, an",
+        "dem Klausuren kippen"
+      ],
+      "coverText": "Keine Superrevisionsinstanz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Das BVerfG prüft ein Urteil nicht auf jeden Fehler, sondern nur auf Verstöße gegen spezifisches Verfassungsrecht.",
+        "handlung": "{A} stops a long queue of blank rolled scrolls at a high gate with one raised hand, while {B} uses his pointer to let through only a single scroll that glows faintly.",
+        "hinweisRegie": "Place the note in the free space just beside the glowing scroll passing the gate, slightly tilted toward it, so the narrow standard of review stands out without covering the raised hand or the pointer.",
+        "alternative": "{B} holds a sieve over a table of pebbles so that only one glowing pebble stays in it, while {A} watches the rest fall through."
+      },
+      "bildSzene": "gate lets through one glowing scroll",
+      "bildSzeneAlt": "sieve keeps one glowing pebble",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 90 BVerfGG",
+        "Art. 3 Abs. 1 GG",
+        "Themenpool: staat-634"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.496Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-565",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "G hat ein Urteil gegen S und braucht die einfache Vollstreckungsklausel. Wer erteilt sie?",
+      "optionen": [
+        "Der Gerichtsvollzieher bei Vollstreckungsbeginn",
+        "Der Rechtspfleger des Vollstreckungsgerichts",
+        "Der Urkundsbeamte der Geschäftsstelle (§ 724 II ZPO)"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 724 ZPO",
+        "§ 727 ZPO",
+        "§ 20 RPflG",
+        "Themenpool: zpo-565"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.496Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-565",
+      "ueberzeile": "Auflösung",
+      "titel": "Der Urkundsbeamte der Geschäftsstelle",
+      "text": "Die einfache Klausel erteilt der Urkundsbeamte der Geschäftsstelle des Gerichts des ersten Rechtszuges – ist der Rechtsstreit bei einem höheren Gericht anhängig, der dieses Gerichts (§ 724 Abs. 2 ZPO). Qualifizierte Klauseln, etwa für den Rechtsnachfolger (§ 727 ZPO), erteilt der Rechtspfleger (§ 20 RPflG). Der Gerichtsvollzieher prüft nur, ob die Klausel vorliegt.",
+      "norm": "§ 724 Abs. 2 ZPO · § 20 RPflG",
+      "quellen": [
+        "§ 724 ZPO",
+        "§ 727 ZPO",
+        "§ 20 RPflG",
+        "Themenpool: zpo-565"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.496Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Der Gerichtsvollzieher bei Vollstreckungsbeginn",
+        "Der Rechtspfleger des Vollstreckungsgerichts",
+        "Der Urkundsbeamte der Geschäftsstelle (§ 724 II ZPO)"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-444",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 280 Abs. 1 BGB: Schaden neben der Leistung – ohne Fristsetzung",
+      "text": "Allein nach § 280 Abs. 1 BGB ersetzt wird der Schaden, der neben die Leistung tritt – etwa Mangelfolgeschäden an anderen Rechtsgütern. Wäre der Schaden durch eine Nacherfüllung im letztmöglichen Zeitpunkt entfallen, ist es Schadensersatz statt der Leistung (§§ 281–283 BGB). Verzögerungsschaden gibt es nur unter § 286 BGB (§ 280 Abs. 2 BGB).",
+      "norm": "§ 280 Abs. 1 BGB",
+      "quellen": [
+        "§ 280 BGB",
+        "§§ 281–283 BGB",
+        "§ 286 BGB",
+        "Themenpool: schuld-444"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.496Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-845",
+      "ueberzeile": "Streitstand Widerspruchsverfahren",
+      "titel": "Widerspruch eingelegt, Bescheid verschärft: Darf die Behörde verbösern?",
+      "norm": "§§ 68 ff., 71 VwGO",
+      "optionen": [
+        "BVerwG/h.M.: zulässig, wenn die Widerspruchsbehörde zuständig ist und das materielle Recht es erlaubt.",
+        "Teile der Lit.: unzulässig – das Vorverfahren dient dem Rechtsschutz des Widerspruchsführers."
+      ],
+      "text": "Klausur: Für die Zulässigkeit spricht § 71 VwGO, der eine erstmalige Beschwer im Widerspruchsverfahren voraussetzt. Dann Zuständigkeit und Vertrauensschutz prüfen (Maßstab §§ 48 ff. VwVfG).",
+      "quellen": [
+        "§§ 68, 71, 73 VwGO",
+        "§ 79 Abs. 2 VwGO",
+        "§§ 48, 49 VwVfG",
+        "Themenpool: assessoroer-845"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.496Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-176",
+      "ueberzeile": "Merksatz Schadensrecht",
+      "titel": "§ 251 BGB: Geld für den Wert erst, wenn Herstellung nicht passt",
+      "text": "Vorrang hat die Herstellung (§ 249 BGB). Wertersatz, wenn sie unmöglich oder ungenügend ist (§ 251 I) oder unverhältnismäßig teuer wäre (§ 251 II). Kfz: Reparatur bis 130 % des Wiederbeschaffungswerts.",
+      "norm": "§ 249 BGB · § 251 BGB",
+      "quellen": [
+        "§ 249 BGB",
+        "§ 251 BGB",
+        "Themenpool: schuld-176"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.496Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-366",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Postmortaler Würdeschutz: Die Menschenwürde endet nicht mit dem Tod",
+      "text": "Art. 1 Abs. 1 GG verpflichtet den Staat, Verstorbene vor groben Herabwürdigungen und Erniedrigungen zu schützen. Das allgemeine Persönlichkeitsrecht endet dagegen nach dem BVerfG mit dem Tod. Der Schutz des Andenkens schwächt sich ab, je länger der Tod zurückliegt. Klassiker: die Mephisto-Entscheidung.",
+      "norm": "Art. 1 Abs. 1 GG",
+      "quellen": [
+        "Art. 1 Abs. 1 GG",
+        "Art. 2 Abs. 1 GG",
+        "BVerfGE 30, 173 (Mephisto)",
+        "Themenpool: grundr-366"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:19:46.496Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

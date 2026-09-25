@@ -1,0 +1,893 @@
+{
+  "datum": "2027-02-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "strafat-307",
+        "themaTitel": "Was ist mittelbare Täterschaft und wann liegt ein Täter hinter dem Täter vor?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "assessoroer-854",
+        "themaTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-122",
+        "themaTitel": "Wie prüft man den Rücktritt nach § 323 BGB?",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "vwgo-402"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "vwgo-402"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "strafbt-070"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "zahl",
+        "themaId": "anklage-868"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "streitstand",
+        "themaId": "zwangsv-833"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "merksatz",
+        "themaId": "zwangsv-830"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "strafat-307",
+      "poolTitel": "Was ist mittelbare Täterschaft und wann liegt ein Täter hinter dem Täter vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 1 Alt. 2 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-122",
+      "poolTitel": "Wie prüft man den Rücktritt nach § 323 BGB?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 323 BGB",
+        "§ 346 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-402",
+      "poolTitel": "Wann ist der Verwaltungsrechtsweg eröffnet?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-402",
+      "poolTitel": "Wann ist der Verwaltungsrechtsweg eröffnet?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-070",
+      "poolTitel": "Wie grenzt man Diebstahl und Betrug ab?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB",
+        "§ 263 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "anklage-868",
+      "poolTitel": "Wie bildet man eine Gesamtstrafe?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "§ 55 StGB"
+      ],
+      "typ": "formel",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "zwangsv-833",
+      "poolTitel": "Welche Rechtsbehelfe richten sich gegen die Vollstreckungsklausel?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 732 ZPO",
+        "§ 768 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-10-04",
+        "2026-12-03"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "zwangsv-830",
+      "poolTitel": "Wie vollstreckt man Herausgabeansprüche?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 883 ZPO",
+        "§ 885 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-307",
+      "slug": "2027-02-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Er gibt den Befehl, ein anderer schießt: Wer ist Täter?",
+          "titelZeilen": [
+            "Er gibt den Befehl,",
+            "ein anderer schießt:",
+            "Wer ist Täter?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Tatherrschaft trotz freiem Vordermann?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Mittelbarer Täter ist, wer die Tat „durch einen anderen“ begeht (§ 25 Abs. 1 Alt. 2 StGB) – meist, weil der Vordermann ohne Vorsatz oder schuldlos handelt. Was aber, wenn der Vordermann selbst voll verantwortlich ist? Nach dem Verantwortungsprinzip wäre der Hintermann dann nur Anstifter."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Täter hinter dem Täter?",
+          "links": {
+            "titel": "Rspr. (BGH)",
+            "punkte": [
+              "Möglich bei Tatherrschaft kraft organisatorischer Machtapparate.",
+              "Der Hintermann nutzt regelhafte Abläufe, die Ausführung ist ihm sicher.",
+              "Auch beim vermeidbaren Verbotsirrtum des Vordermanns möglich."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Wer voll verantwortlich handelt, ist kein Werkzeug.",
+              "Der Hintermann ist Anstifter (§ 26 StGB) oder Mittäter.",
+              "Sonst verschwimmt die Grenze zwischen Täter und Teilnehmer."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Fallgruppen",
+          "punkte": [
+            "Machtapparat: Befehlsgeber in staatlichen Hierarchien, deren Befehle regelhaft ausgeführt werden.",
+            "Verbotsirrtum: Der Hintermann ruft einen vermeidbaren Verbotsirrtum hervor und steuert damit das Geschehen.",
+            "Die Übertragung auf Wirtschaftsunternehmen, die der BGH angedeutet hat, ist besonders umstritten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme und Klausurhinweis",
+          "text": "Für den BGH spricht: Wer einen Apparat steuert, beherrscht das Geschehen stärker als ein bloßer Anstifter. Dagegen: Das Gesetz knüpft Täterschaft an eigene Tatherrschaft. In der Klausur erst die klassischen Defekte des Vordermanns prüfen – den Streit nur, wenn keiner vorliegt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Voll verantwortlicher Vordermann? Nach dem BGH kann der Hintermann trotzdem Täter sein – kraft Machtapparat oder gesteuertem Verbotsirrtum."
+        },
+        {
+          "art": "cta",
+          "titel": "Mittelbare Täterschaft in drei Fragen",
+          "punkte": [
+            "Welcher Defekt beim Vordermann?",
+            "Kein Defekt: Machtapparat oder Verbotsirrtum?",
+            "Sonst: Anstiftung oder Mittäterschaft"
+          ],
+          "icons": [
+            "lupe",
+            "gebaeude",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Er gibt den Befehl, ein anderer schießt – wer ist Täter? Handelt der Vordermann voll verantwortlich, wäre der Hintermann nach dem Verantwortungsprinzip nur Anstifter. Der BGH sieht das anders: Täter hinter dem Täter kann sein, wer einen organisatorischen Machtapparat steuert oder einen vermeidbaren Verbotsirrtum des Vordermanns ausnutzt. Teile der Literatur widersprechen. Speichern für die nächste Täterschaftsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#25stgb",
+        "#täterschaft",
+        "#mittelbaretäterschaft",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Täter hinter dem Täter: BGH gegen Literatur",
+      "coverText": "Tatherrschaft trotz freiem Vordermann?",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer einen Apparat steuert, kann Täter sein, obwohl ein voll verantwortlicher Mensch die Tat ausführt.",
+        "handlung": "{A} stands at the top of a long chain of identical levers and pulls the first one, while {B} at the far end nervously watches a distant gate swing shut by itself.",
+        "hinweisRegie": "Place the note in the free space beside the first lever {A} pulls, slightly tilted toward the chain of levers, without covering {B} or the distant gate.",
+        "alternative": "{A} releases a single marble at the top of a long winding track while {B} watches it trigger a small mechanism at the bottom that he operates himself."
+      },
+      "bildSzene": "pulling first lever of a long chain",
+      "bildSzeneAlt": "marble released at top of long track",
+      "quellen": [
+        "§ 25 Abs. 1 Alt. 2 StGB",
+        "§ 26 StGB",
+        "§ 17 StGB",
+        "Themenpool: strafat-307"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.922Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-854",
+      "slug": "2027-02-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eilantrag: Nicht „aufheben“, sondern wiederherstellen",
+          "titelZeilen": [
+            "Eilantrag: Nicht",
+            "„aufheben“, sondern",
+            "wiederherstellen"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Antrag folgt dem Weg der Vollziehung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Die Bauaufsicht untersagt M die Nutzung seiner Halle und ordnet die sofortige Vollziehung an. M hat fristgerecht Widerspruch eingelegt. Als seine Anwältin sollst du noch heute den Eilantrag an das Verwaltungsgericht schreiben. Was gehört hinein?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Erst der richtige Weg",
+          "links": {
+            "titel": "§ 80 Abs. 5 VwGO",
+            "punkte": [
+              "Hauptsache: Anfechtung eines belastenden VA",
+              "Antrag: aufschiebende Wirkung anordnen oder wiederherstellen"
+            ]
+          },
+          "rechts": {
+            "titel": "§ 123 VwGO",
+            "punkte": [
+              "Alle übrigen Fälle (§ 123 Abs. 5 VwGO)",
+              "Antrag: einstweilige Anordnung mit konkretem Inhalt",
+              "Anordnungsanspruch und -grund glaubhaft machen"
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Aufbau der Antragsschrift",
+          "schritte": [
+            {
+              "titel": "Rubrum",
+              "text": "Antragsteller gegen Antragsgegner – Rechtsträger oder Behörde, je nach Landesrecht (§ 78 VwGO entsprechend)."
+            },
+            {
+              "titel": "Antrag",
+              "text": "„… die aufschiebende Wirkung des Widerspruchs vom … gegen den Bescheid vom … wiederherzustellen.“"
+            },
+            {
+              "titel": "Begründung",
+              "text": "Sachverhalt, Zulässigkeit, dann Begründetheit: Begründung der Vollziehungsanordnung, danach die Interessenabwägung."
+            },
+            {
+              "titel": "Anlagen",
+              "text": "Bescheid und Widerspruch beifügen, streitige Tatsachen belegen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "punkte": [
+            "„Den Bescheid aufzuheben“ – das ist Sache der Hauptsache, nicht des Eilverfahrens.",
+            "„Anzuordnen“ passt nur, wenn die Wirkung kraft Gesetzes entfällt (§ 80 Abs. 2 S. 1 Nr. 1–3a VwGO).",
+            "„Kläger“ und „Beklagter“ – im Eilverfahren heißen sie Antragsteller und Antragsgegner."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Die Behörde hat die sofortige Vollziehung angeordnet (§ 80 Abs. 2 S. 1 Nr. 4 VwGO). M beantragt deshalb, die aufschiebende Wirkung seines Widerspruchs wiederherzustellen (§ 80 Abs. 5 S. 1 Alt. 2 VwGO). Sieht das Land kein Vorverfahren vor, tritt die Anfechtungsklage an die Stelle des Widerspruchs."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nr. 4: wiederherstellen, Nr. 1–3a: anordnen – und im Rubrum Antragsteller gegen Antragsgegner."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Absenden prüfen",
+          "punkte": [
+            "§ 80 Abs. 5 oder § 123 VwGO?",
+            "Anordnen oder wiederherstellen?",
+            "Rubrum mit Antragsteller und Antragsgegner"
+          ],
+          "icons": [
+            "zielscheibe",
+            "schluessel",
+            "klemmbrett"
+          ]
+        }
+      ],
+      "caption": "Eilantrag gegen einen sofort vollziehbaren Bescheid: nicht „aufheben“, sondern wiederherstellen. Hat die Behörde die sofortige Vollziehung angeordnet (§ 80 Abs. 2 S. 1 Nr. 4 VwGO), beantragst du, die aufschiebende Wirkung des Widerspruchs wiederherzustellen. Anordnen passt nur, wenn sie kraft Gesetzes entfällt. Und im Rubrum stehen Antragsteller und Antragsgegner. Speichern für die nächste Anwaltsklausur im Öffentlichen Recht.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#eilrechtsschutz",
+        "#80vwgo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Antragsschrift im Eilverfahren: der Antrag",
+      "coverText": "Antrag folgt dem Weg der Vollziehung",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Im Eilantrag verlangst du nicht die Aufhebung, sondern dass die Bremse wieder greift, die die Behörde gelöst hat.",
+        "handlung": "{A} hovers beside a large brake lever that an official stamp has pushed into the released position, while {B} curiously pulls the lever back into the engaged position.",
+        "hinweisRegie": "Place the note in the free space next to the brake lever, slightly tilted toward the stamp that released it, so the note links to the restored brake without covering {B}'s hands.",
+        "alternative": "{B} carefully refills a drained water basin from a jug, while {A} points to the small stamped valve that emptied it."
+      },
+      "bildSzene": "brake lever pulled back into place",
+      "bildSzeneAlt": "refilling drained basin, stamped valve",
+      "quellen": [
+        "§ 80 Abs. 2, 5 VwGO",
+        "§ 123 VwGO",
+        "§ 78 VwGO",
+        "Themenpool: assessoroer-854"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.923Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-122",
+      "slug": "2027-02-02-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Rücktritt: Viele prüfen Verschulden – zu Unrecht",
+          "unter": "Rücktritt · § 323 BGB",
+          "text": "Der Rücktritt setzt kein Vertretenmüssen voraus – anders als der Schadensersatz.",
+          "norm": "§ 323 BGB",
+          "icon": "vertrag",
+          "sprecher": "Für den Rücktritt brauchst du kein Verschulden. Trotzdem steht das Vertretenmüssen in vielen Rücktrittsprüfungen. Es gehört zum Schadensersatz statt der Leistung, nicht zu Paragraf 323.",
+          "marken": [
+            "kein Verschulden",
+            "≠ Schadensersatz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gegenseitiger Vertrag, fällige Leistung",
+          "text": "Die Leistung muss fällig und durchsetzbar sein – eine Einrede sperrt.",
+          "norm": "§ 323 Abs. 1 BGB",
+          "sprecher": "Schritt eins: ein gegenseitiger Vertrag und eine fällige, durchsetzbare Leistung. Hat der Schuldner eine Einrede, scheidet der Rücktritt grundsätzlich aus.",
+          "marken": [
+            "fällig + durchsetzbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Nicht oder nicht vertragsgemäß geleistet",
+          "text": "Verspätung oder Schlechtleistung – beim Sachmangel über § 437 Nr. 2 BGB.",
+          "norm": "§ 437 Nr. 2 BGB",
+          "sprecher": "Schritt zwei: Der Schuldner hat nicht oder nicht vertragsgemäß geleistet. Bei einem Sachmangel im Kaufrecht führt dich Paragraf 437 Nummer 2 hierher.",
+          "marken": [
+            "nicht oder schlecht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Frist erfolglos oder entbehrlich",
+          "text": "Angemessene Frist gesetzt und verstrichen – oder entbehrlich nach § 323 Abs. 2.",
+          "norm": "§ 323 Abs. 2 BGB",
+          "sprecher": "Schritt drei: Du hast eine angemessene Frist gesetzt, und sie ist erfolglos abgelaufen. Entbehrlich ist sie etwa bei ernsthafter und endgültiger Verweigerung. Im Kaufrecht kommt Paragraf 440 hinzu.",
+          "marken": [
+            "Frist"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kein Ausschluss",
+          "text": "Unerhebliche Pflichtverletzung (Abs. 5 S. 2) oder Verantwortung des Gläubigers (Abs. 6).",
+          "norm": "§ 323 Abs. 5, 6 BGB",
+          "sprecher": "Schritt vier: kein Ausschluss. Bei Schlechtleistung sperrt eine unerhebliche Pflichtverletzung. Und wer für den Rücktrittsgrund allein oder weit überwiegend selbst verantwortlich ist, kann nicht zurücktreten.",
+          "marken": [
+            "unerheblich?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Erklärung und Rechtsfolge",
+          "text": "Rücktritt erklären (§ 349 BGB), dann Rückgewähr nach §§ 346 ff. BGB.",
+          "norm": "§§ 346, 349 BGB",
+          "sprecher": "Dann die Erklärung nach Paragraf 349. Die Folge steht in Paragraf 346: Empfangene Leistungen werden zurückgewährt, gezogene Nutzungen herausgegeben. Geht das nicht, schuldest du Wertersatz.",
+          "marken": [
+            "Rückgewähr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vertrag, Pflichtverletzung, Frist, kein Ausschluss, Erklärung – Verschulden nie.",
+          "norm": "§ 323 BGB",
+          "sprecher": "Merke: Vertrag, Pflichtverletzung, Frist, kein Ausschluss, Erklärung. Ob der Schuldner die Pflichtverletzung zu vertreten hat, spielt für den Rücktritt keine Rolle.",
+          "marken": [
+            "ohne Verschulden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Das Vertretenmüssen aus dem Schema streichen",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur. Und prüf dein Rücktrittsschema: Steht dort Vertretenmüssen, streich es.",
+          "marken": [
+            "streichen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Für den Rücktritt brauchst du kein Verschulden – trotzdem taucht das Vertretenmüssen in vielen Rücktrittsprüfungen auf. Es gehört zum Schadensersatz statt der Leistung. § 323 BGB verlangt: gegenseitiger Vertrag, fällige und durchsetzbare Leistung, Nicht- oder Schlechtleistung, erfolglose oder entbehrliche Frist, kein Ausschluss nach Abs. 5 oder 6 – und die Erklärung nach § 349 BGB. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#rücktritt",
+        "#323bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücktritt nach § 323 BGB: ohne Verschulden",
+      "titelZeilen": [
+        "Rücktritt: Viele",
+        "prüfen Verschulden –",
+        "zu Unrecht"
+      ],
+      "coverText": "§ 323 BGB kennt kein Vertretenmüssen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Wer zurücktritt, muss dem anderen keine Schuld nachweisen – die ausgebliebene Leistung und die abgelaufene Frist genügen.",
+        "handlung": "{A} calmly pushes back a heavy cart of crystals across a line on the ground, while {B} lowers his pointer from a list he no longer needs.",
+        "hinweisRegie": "Place the note in the free space beside the line on the ground, slightly tilted toward the returning cart, without covering {A}'s hands or {B}'s lowered pointer.",
+        "alternative": "{B} checks an empty delivery bay and an expired hourglass, while {A} simply picks up his own payment pouch again."
+      },
+      "bildSzene": "cart of crystals pushed back over line",
+      "bildSzeneAlt": "empty delivery bay, expired hourglass",
+      "quellen": [
+        "§ 323 BGB",
+        "§ 346 BGB",
+        "§ 349 BGB",
+        "§ 437 Nr. 2 BGB",
+        "§ 440 BGB",
+        "Themenpool: schuld-122"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.926Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-402",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Die Stadthalle betreibt eine städtische GmbH. A verklagt die Gemeinde auf Zulassung. Welcher Rechtsweg?",
+      "optionen": [
+        "Zivilrechtsweg – die GmbH ist privatrechtlich organisiert",
+        "Zivilrechtsweg – es geht um einen Mietvertrag über die Halle",
+        "Verwaltungsrechtsweg – A will, dass die Gemeinde einwirkt"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 40 Abs. 1 VwGO",
+        "Kommunalordnungen der Länder",
+        "Themenpool: vwgo-402"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.926Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-402",
+      "ueberzeile": "Auflösung",
+      "titel": "Verwaltungsrechtsweg – es geht um das „Ob“ der Zulassung",
+      "text": "Der Anspruch auf Zulassung zur öffentlichen Einrichtung folgt aus dem Kommunalrecht des Landes und ist öffentlich-rechtlich. Betreibt eine Gesellschaft die Halle, richtet er sich gegen die Gemeinde auf Einwirkung: Sie soll ihre Gesellschafterrechte nutzen. Das ist eine öffentlich-rechtliche Streitigkeit (§ 40 Abs. 1 S. 1 VwGO). Klagt A direkt gegen die GmbH: Zivilgericht.",
+      "norm": "§ 40 Abs. 1 S. 1 VwGO",
+      "quellen": [
+        "§ 40 Abs. 1 VwGO",
+        "Kommunalordnungen der Länder",
+        "Themenpool: vwgo-402"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.926Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Zivilrechtsweg – die GmbH ist privatrechtlich organisiert",
+        "Zivilrechtsweg – es geht um einen Mietvertrag über die Halle",
+        "Verwaltungsrechtsweg – A will, dass die Gemeinde einwirkt"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-070",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB: Wer verfügt, muss nicht der Geschädigte sein",
+      "text": "Beim Dreiecksbetrug verfügt der Getäuschte über fremdes Vermögen. Betrug liegt vor, wenn er dem Vermögen des Geschädigten nahesteht – nach der Rspr. genügt ein tatsächliches Näheverhältnis, Teile der Lit. verlangen eine rechtliche Befugnis. Fehlt die Nähe, ist der Getäuschte nur Werkzeug: Diebstahl in mittelbarer Täterschaft (§§ 242, 25 Abs. 1 Alt. 2 StGB).",
+      "norm": "§ 263 Abs. 1 StGB · § 242 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 242 StGB",
+        "§ 25 Abs. 1 StGB",
+        "Themenpool: strafbt-070"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.926Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-868",
+      "ueberzeile": "5 Punkte Strafzumessung",
+      "titel": "Drei Taten, drei Einzelstrafen: So bildest du die Gesamtstrafe",
+      "text": "Die Gesamtstrafe setzt Tatmehrheit voraus (§ 53 StGB). Sie ist keine Summe, sondern eine Erhöhung.",
+      "punkte": [
+        "Für jede Tat eine Einzelstrafe festsetzen",
+        "Einsatzstrafe: die höchste Einzelstrafe (§ 54 Abs. 1 S. 2 StGB)",
+        "Einsatzstrafe erhöhen – Person und Taten zusammenfassend würdigen",
+        "Obergrenze: unter der Summe, höchstens 15 Jahre bzw. 720 Tagessätze",
+        "Noch nicht erledigte Vorverurteilung? Nachträglich einbeziehen (§ 55)"
+      ],
+      "quellen": [
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "§ 55 StGB",
+        "Themenpool: anklage-868"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "5",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.926Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-833",
+      "ueberzeile": "Streitstand Zwangsvollstreckung",
+      "titel": "Aufrechnungslage vor dem Urteil, Aufrechnung erst danach: Hilft noch § 767 ZPO?",
+      "norm": "§ 767 Abs. 2 ZPO",
+      "optionen": [
+        "Rspr. (BGH): Präkludiert – maßgeblich ist, wann die Aufrechnungslage objektiv bestand.",
+        "Große Teile der Lit.: Nicht präkludiert – maßgeblich ist erst die Aufrechnungserklärung."
+      ],
+      "text": "Für den BGH spricht die Rechtskraft: Wer schon im Prozess aufrechnen konnte, soll nicht später nachlegen. Die Lit. betont, dass das Gestaltungsrecht erst mit der Erklärung wirkt. Beachte: Bei vollstreckbaren Urkunden gilt die Sperre nicht (§ 797 Abs. 4 ZPO), beim Prozessvergleich nach h.M. ebenfalls nicht.",
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 797 Abs. 4 ZPO",
+        "§§ 387, 389 BGB",
+        "Themenpool: zwangsv-833"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.926Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-830",
+      "ueberzeile": "Merksatz Zwangsvollstreckung",
+      "titel": "Herausgabe vollstrecken: wegnehmen, nicht pfänden",
+      "text": "Bewegliche Sachen: Wegnahme durch den Gerichtsvollzieher (§ 883 ZPO) – findet er sie nicht, versichert der Schuldner den Verbleib an Eides statt. Grundstücke und Wohnungen: Räumung (§ 885 ZPO). Sache beim Dritten: Herausgabeanspruch überweisen lassen (§ 886 ZPO).",
+      "norm": "§§ 883, 885, 886 ZPO",
+      "quellen": [
+        "§ 883 ZPO",
+        "§ 885 ZPO",
+        "§ 886 ZPO",
+        "Themenpool: zwangsv-830"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:00.926Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
