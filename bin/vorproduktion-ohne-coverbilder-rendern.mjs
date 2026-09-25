@@ -55,6 +55,7 @@ const { beitragRendern, storyRendern, browserBeenden } = await import("../src/re
 const { reelBauen } = await import("../src/reel.mjs");
 const { ICONS } = await import("../src/stile.mjs");
 const { ZUORDNUNG } = await import("../src/icons.mjs");
+const { quizPruefen } = await import("./vorproduktion-quiz-regel.mjs");
 
 const tage = process.argv.slice(2).filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x));
 if (!tage.length) throw new Error("Mindestens ein Datum YYYY-MM-DD ist erforderlich.");
@@ -141,6 +142,7 @@ for (const datum of tage) {
   if (!fs.existsSync(tagPfad)) throw new Error(`Vorproduktion fehlt: ${datum}`);
   const tag = JSON.parse(fs.readFileSync(tagPfad, "utf8"));
   expliziteIconKeysPruefen(tag.inhalte, `${datum}.inhalte`);
+  quizPruefen(tag, datum);
 }
 
 try {

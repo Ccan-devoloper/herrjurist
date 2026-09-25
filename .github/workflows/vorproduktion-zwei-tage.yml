@@ -5,6 +5,8 @@ name: Vorproduktion · weitere Tage providerfrei
 #                       landet nur im Log, der Asset-Zweig bleibt unberührt.
 #   modus=rendern     → die redaktionell finalisierten vorproduktion/<datum>.json
 #                       aus dem Repository werden übernommen und gerendert.
+#   modus=quiz-patch  → Quiz-Optionen aus vorproduktion/quiz-optionen.json in die
+#                       Frage-/Antwort-Stories eintragen und nur diese neu rendern.
 on:
   push:
     branches: [main, "claude/vorproduktion-**"]
@@ -75,7 +77,7 @@ jobs:
           done
 
       - name: Chromium
-        if: steps.trigger.outputs.modus == 'rendern'
+        if: steps.trigger.outputs.modus == 'rendern' || steps.trigger.outputs.modus == 'quiz-patch'
         run: npx playwright install --with-deps chromium
 
       - name: ffmpeg und Piper offline
@@ -100,3 +102,7 @@ jobs:
           # soll immer der vollständige Tagesrender laufen.
           rm -f vorproduktion/review-render-only.trigger
           node bin/vorproduktion-ohne-coverbilder-rendern.mjs ${{ steps.trigger.outputs.tage }}
+
+      - name: Quiz-Optionen eintragen und Frage-/Antwort-Stories neu rendern
+        if: steps.trigger.outputs.modus == 'quiz-patch'
+        run: node bin/vorproduktion-quiz-patch.mjs

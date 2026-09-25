@@ -9,6 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { Hosting } from "../src/hosting.mjs";
+import { quizPruefen } from "./vorproduktion-quiz-regel.mjs";
 
 for (const k of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "ELEVENLABS_API_KEY", "PEXELS_API_KEY"]) {
   if (String(process.env[k] || "").trim()) throw new Error(`${k} muss leer sein`);
@@ -28,6 +29,7 @@ function pruefen(tag, datum) {
     if (!inhalt) throw new Error(`${datum}: Inhalt ${x.slot} fehlt`);
     if (inhalt.manuellGeprueft !== true) throw new Error(`${datum}: ${x.slot} ist nicht redaktionell geprüft`);
   }
+  quizPruefen(tag, datum);
   for (const x of b) {
     const inhalt = tag.inhalte[x.slot];
     if (inhalt.format !== x.format) throw new Error(`${datum}: ${x.slot} Format weicht vom Plan ab`);
