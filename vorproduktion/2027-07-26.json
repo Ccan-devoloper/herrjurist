@@ -1,0 +1,884 @@
+{
+  "datum": "2027-07-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-332",
+        "themaTitel": "Wie prüft man den Eingehungs- und den Erfüllungsbetrug?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "verwalt-645",
+        "themaTitel": "Erstattung nach Rücknahme/Widerruf",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-447",
+        "themaTitel": "Schadensersatz statt der Leistung wegen Schutzpflichtverletzung",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "strafbt-747"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "strafbt-747"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:12",
+        "art": "norm",
+        "themaId": "handelsg-050"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "tipp",
+        "themaId": "methodik-904"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "zahl",
+        "themaId": "revision-882"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "streitstand",
+        "themaId": "ipr-935"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-332",
+      "poolTitel": "Wie prüft man den Eingehungs- und den Erfüllungsbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-04"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwalt-645",
+      "poolTitel": "Erstattung nach Rücknahme/Widerruf",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 49a VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-21"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-447",
+      "poolTitel": "Schadensersatz statt der Leistung wegen Schutzpflichtverletzung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, III, 282 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-747",
+      "poolTitel": "Gewahrsamsbruch und Gewahrsamsenklave",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-19",
+        "2027-05-19",
+        "2027-07-12"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-747",
+      "poolTitel": "Gewahrsamsbruch und Gewahrsamsenklave",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-19",
+        "2027-05-19",
+        "2027-07-12"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "handelsg-050",
+      "poolTitel": "Was ist die Rechtsscheinhaftung im Handelsrecht?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 5 HGB",
+        "§ 15 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-09"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "methodik-904",
+      "poolTitel": "Normenketten bilden statt Einzelnormen lernen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-08",
+        "2027-03-27",
+        "2027-07-24"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "revision-882",
+      "poolTitel": "Was ist ein Darstellungsmangel?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 267 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-06",
+        "2027-03-18",
+        "2027-05-02"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "ipr-935",
+      "poolTitel": "Wie knüpft man die Vorfrage im IPR an – selbständig oder unselbständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 EGBGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-19",
+        "2027-03-22",
+        "2027-05-25"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-332",
+      "slug": "2027-07-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fairer Vertrag, faule Lieferung: Betrug erst bei der Erfüllung",
+          "titelZeilen": [
+            "Fairer Vertrag,",
+            "faule Lieferung:",
+            "Betrug erst bei",
+            "der Erfüllung"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Geschuldet gegen erhalten",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K kauft von V einen ausdrücklich als unfallfrei vereinbarten Wagen für 10.000 € – so viel ist er auch wert. Bei der Übergabe gibt V ihm bewusst ein anderes Exemplar mit reparierten Unfallschäden (Wert 7.000 €) und erklärt, das sei „der unfallfreie Wagen“. K zahlt. Betrug – und wann?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Zeitpunkt der Täuschung",
+              "text": "Beim Vertragsschluss war alles korrekt. Getäuscht wird erst bei der Übergabe – also Erfüllungsbetrug, kein Eingehungsbetrug."
+            },
+            {
+              "titel": "Irrtum und Verfügung",
+              "text": "K hält den Wagen für den vereinbarten, nimmt ihn als Erfüllung an und zahlt den Kaufpreis."
+            },
+            {
+              "titel": "Schaden",
+              "text": "Maßstab ist, was K nach dem Vertrag beanspruchen konnte: einen unfallfreien Wagen für 10.000 €. Er erhält 7.000 € Wert – Schaden 3.000 €."
+            },
+            {
+              "titel": "Subjektiver Tatbestand",
+              "text": "Vorsatz und Absicht rechtswidriger, stoffgleicher Bereicherung: V will den vollen Preis für den weniger wertvollen Wagen."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Eingehung oder Erfüllung?",
+          "links": {
+            "titel": "Eingehungsbetrug",
+            "punkte": [
+              "Täuschung beim Vertragsschluss",
+              "Vergleich: Anspruch gegen Verpflichtung",
+              "Schaden schon mit der Bindung"
+            ]
+          },
+          "rechts": {
+            "titel": "Erfüllungsbetrug",
+            "punkte": [
+              "Täuschung erst bei der Leistung",
+              "Vergleich: geschuldet gegen erhalten",
+              "Schaden mit der Annahme als Erfüllung"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den Schaden über den Vertrag verneinen: „Preis und Wert waren ausgeglichen.“ Das stimmt nur für den Vertragsschluss. Beim Erfüllungsbetrug zählt, was K bekommt, gemessen an dem, was ihm zusteht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst den Zeitpunkt der Täuschung bestimmen. Täuschung bei der Leistung: Vergleiche das Geschuldete mit dem Erhaltenen."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zum Schaden",
+          "punkte": [
+            "Wann wurde getäuscht?",
+            "Womit wird verglichen?",
+            "Stoffgleich bereichert?"
+          ],
+          "icons": [
+            "uhr",
+            "waage",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Fairer Vertrag, faule Lieferung: Hier liegt der Betrug erst in der Erfüllung. Wer beim Vertragsschluss nichts falsch macht und erst bei der Übergabe täuscht, begeht einen Erfüllungsbetrug. Den Schaden misst du dann nicht am Vertrag, sondern am Vergleich: Was konnte K verlangen, was hat er bekommen? Speichern für die nächste Betrugsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#263stgb",
+        "#betrug",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Erfüllungsbetrug: Schaden bei der Leistung",
+      "coverText": "Geschuldet gegen erhalten",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Der Vertrag war fair – getäuscht wird erst in dem Moment, in dem die falsche Sache übergeben wird.",
+        "handlung": "{A} nervously pushes a dented hover-cart toward {B}, who is curiously comparing it with a small, spotless model of the cart held in her other hand.",
+        "hinweisRegie": "Place the note in the free space between the dented cart and the spotless model, slightly tilted toward the dent, so the comparison stays visible and neither hand is covered.",
+        "alternative": "{B} opens a delivery crate and finds a scratched part, while {A} holds the clean catalogue sample next to it."
+      },
+      "bildSzene": "dented cart compared with spotless model",
+      "bildSzeneAlt": "scratched part in crate beside sample",
+      "quellen": [
+        "§ 263 StGB",
+        "Themenpool: strafbt-332"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-zeitpunkt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-645",
+      "slug": "2027-07-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 49a VwVfG: vier Schritte bis zur Rückforderung",
+          "titelZeilen": [
+            "§ 49a VwVfG:",
+            "vier Schritte bis",
+            "zur Rückforderung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erst aufheben, dann zurückfordern",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Behörde hat eine Subvention bewilligt und ausgezahlt, später hebt sie den Bescheid auf. Das Geld holt sie über § 49a VwVfG zurück (in den Ländern über die inhaltsgleichen VwVfG). Die Aufhebung ist dafür Voraussetzung, nicht schon die Rückforderung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Rückwirkender Wegfall des VA",
+              "text": "Rücknahme oder Widerruf mit Wirkung für die Vergangenheit – oder Unwirksamkeit durch Eintritt einer auflösenden Bedingung."
+            },
+            {
+              "titel": "2. Leistung bereits erbracht",
+              "text": "Erstattet werden Leistungen, die aufgrund des VA schon erbracht wurden."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Umfang",
+              "text": "Bereicherungsrecht entsprechend (§ 49a Abs. 2 S. 1). Keine Entreicherung bei Kenntnis oder grob fahrlässiger Unkenntnis der Umstände."
+            },
+            {
+              "titel": "4. Festsetzung durch VA",
+              "text": "Die Erstattung wird durch schriftlichen Verwaltungsakt festgesetzt (§ 49a Abs. 1 S. 2) – oft im selben Bescheid wie die Aufhebung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Zinsen und Rechtsschutz",
+          "text": "Der Betrag ist grundsätzlich ab Unwirksamkeit des VA zu verzinsen (§ 49a Abs. 3). Im Prozess greift der Kläger Aufhebung und Rückforderung an. Fällt die Aufhebung, fällt auch die Rückforderung – prüfe deshalb §§ 48, 49 VwVfG inzident gründlich."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst muss der Bewilligungsbescheid rückwirkend weg sein – dann Erstattung nach § 49a VwVfG, Umfang nach Bereicherungsrecht, festgesetzt durch VA."
+        },
+        {
+          "art": "cta",
+          "titel": "Rückforderung in vier Zügen",
+          "punkte": [
+            "VA rückwirkend beseitigt?",
+            "Leistung schon erbracht?",
+            "Umfang, Entreicherung?",
+            "Schriftlich festgesetzt?"
+          ],
+          "icons": [
+            "dokument",
+            "banknote",
+            "waage",
+            "fueller"
+          ]
+        }
+      ],
+      "caption": "§ 49a VwVfG in vier Schritten: rückwirkender Wegfall des Verwaltungsakts, bereits erbrachte Leistung, Umfang nach Bereicherungsrecht, Festsetzung durch schriftlichen VA. Wer den ersten Schritt überspringt, prüft ins Leere – ohne wirksame Rücknahme oder Widerruf gibt es keine Erstattung. Speichern für die nächste Subventionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#subventionsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 49a VwVfG: das Erstattungsschema",
+      "coverText": "Erst aufheben, dann zurückfordern",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Das Geld kommt erst zurück, wenn der Bescheid, auf dem es beruht, rückwirkend beseitigt ist.",
+        "handlung": "{A} hovers over a cart of crystals and first removes a large seal from the cart, while {B} waits with open hands to lift the crystals back into the vault.",
+        "hinweisRegie": "Place the note in the free space just above the removed seal, slightly tilted toward the cart, so the order of seal first and crystals second stays readable without covering {B}'s hands.",
+        "alternative": "{B} tries to pull a crystal out of a locked display case while {A} holds the key that has to turn first."
+      },
+      "bildSzene": "seal removed before crystals returned",
+      "bildSzeneAlt": "key must turn before display opens",
+      "quellen": [
+        "§ 49a VwVfG",
+        "§§ 48, 49 VwVfG",
+        "§§ 818 ff. BGB",
+        "Themenpool: verwalt-645"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.703Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-447",
+      "slug": "2027-07-26-b3",
+      "titelZeilen": [
+        "Arbeit perfekt –",
+        "und trotzdem",
+        "Schadensersatz"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Arbeit perfekt – und trotzdem Schadensersatz",
+          "unter": "Schuldrecht AT · § 282 BGB",
+          "text": "Nicht die Leistung ist mangelhaft, sondern das Verhalten dabei.",
+          "norm": "§§ 280 Abs. 1, 3, 282 BGB",
+          "icon": "werkzeug",
+          "sprecher": "Tadellos gearbeitet, trotzdem Schadensersatz statt der Leistung. Das regelt Paragraf 282 BGB: Schadensersatz statt der Leistung wegen verletzter Rücksichtnahmepflichten.",
+          "marken": [
+            "Leistung okay",
+            "Verhalten nicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schuldverhältnis und Pflichtverletzung",
+          "text": "Verletzt ist eine Pflicht aus § 241 Abs. 2 BGB – nicht die Leistungspflicht.",
+          "norm": "§ 241 Abs. 2 BGB",
+          "sprecher": "Schritt eins: Es gibt ein Schuldverhältnis, und der Schuldner verletzt eine Rücksichtnahmepflicht nach Paragraf 241 Absatz 2. Er beschädigt etwa Sachen des Gläubigers oder beleidigt ihn. Die Leistung selbst ist in Ordnung.",
+          "marken": [
+            "§ 241 II"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Leistung durch den Schuldner unzumutbar",
+          "text": "Abwägung: Schwere, Wiederholung, vergebliche Abmahnung.",
+          "norm": "§ 282 BGB",
+          "sprecher": "Schritt zwei, der Kern: Dem Gläubiger ist die Leistung durch diesen Schuldner nicht mehr zuzumuten. Das verlangt eine Abwägung. Meist braucht es wiederholte oder schwere Verstöße, oft nach vergeblicher Abmahnung.",
+          "marken": [
+            "Unzumutbarkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vertretenmüssen",
+          "text": "Wird vermutet – der Schuldner muss sich entlasten.",
+          "norm": "§ 280 Abs. 1 S. 2 BGB",
+          "sprecher": "Schritt drei: Vertretenmüssen. Es wird nach Paragraf 280 Absatz 1 Satz 2 vermutet. Der Schuldner muss beweisen, dass er die Pflichtverletzung nicht zu vertreten hat.",
+          "marken": [
+            "vermutet"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtsfolge",
+          "text": "Schadensersatz statt der Leistung, etwa Mehrkosten eines anderen Unternehmers.",
+          "norm": "§§ 280 Abs. 3, 282 BGB",
+          "sprecher": "Schritt vier: Der Gläubiger kann Schadensersatz statt der Leistung verlangen, zum Beispiel die Mehrkosten, wenn ein anderer Handwerker die Arbeit fertigstellt.",
+          "marken": [
+            "Mehrkosten"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel",
+          "text": "Maler M streicht sauber, beschädigt aber trotz Abmahnung immer wieder Möbel.",
+          "norm": null,
+          "sprecher": "Beispiel: Maler M streicht sauber, beschädigt aber trotz Abmahnung immer wieder die Möbel des Kunden. Der Kunde muss ihn nicht weiterarbeiten lassen. Daneben kann er nach Paragraf 324 zurücktreten.",
+          "marken": [
+            "Rücktritt: § 324"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "§ 282 BGB: gute Leistung, unzumutbares Verhalten.",
+          "norm": "§ 282 BGB",
+          "sprecher": "Merke: Paragraf 282 ist die Norm für die gute Leistung mit unzumutbarem Verhalten. Keine Frist, aber eine echte Abwägung.",
+          "marken": [
+            "keine Frist"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Schuldrechtsklausur",
+          "text": "Speichern und bei § 241 Abs. 2 BGB mitdenken.",
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Arbeit perfekt – und trotzdem Schadensersatz statt der Leistung? Ja, nach §§ 280 Abs. 1, 3, 282 BGB. Der Schuldner leistet ordentlich, verletzt aber Rücksichtnahmepflichten aus § 241 Abs. 2 BGB so, dass dem Gläubiger die Leistung durch ihn nicht mehr zuzumuten ist. Eine Fristsetzung braucht es nicht, wohl aber eine echte Abwägung. Daneben: Rücktritt nach § 324 BGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#282bgb",
+        "#schadensersatz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 282 BGB: Schadensersatz trotz guter Leistung",
+      "coverText": "Unzumutbar ist das Verhalten",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Die Arbeit ist gut, aber das Verhalten des Handwerkers macht die weitere Zusammenarbeit unzumutbar.",
+        "handlung": "{B} proudly presents a perfectly polished portal frame while accidentally knocking over a shelf behind him, and {A} firmly raises a hand to stop the work.",
+        "hinweisRegie": "Place the note in the free space between the polished frame and the toppling shelf, slightly tilted toward the shelf, so the contrast between good work and damage is clear without covering {A}'s raised hand.",
+        "alternative": "{A} hands back a toolbox to {B}, who stands next to a flawless machine and a trail of scuffed furniture."
+      },
+      "bildSzene": "polished frame, toppling shelf behind",
+      "bildSzeneAlt": "toolbox handed back beside scuffed furniture",
+      "quellen": [
+        "§ 280 Abs. 1, 3 BGB",
+        "§ 282 BGB",
+        "§ 241 Abs. 2 BGB",
+        "§ 324 BGB",
+        "Themenpool: schuld-447"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-747",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "A schiebt im Baumarkt einen Rasenmäher Richtung Ausgang, ohne zahlen zu wollen. Noch vor der Kasse: vollendet?",
+      "optionen": [
+        "Ja – mit dem Wegschieben hat A schon eigenen Gewahrsam",
+        "Nein – der Markt hat noch Gewahrsam, kein vollendeter Diebstahl",
+        "Nein – A begeht Betrug gegenüber der Kassiererin"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 242 StGB",
+        "§ 22 StGB",
+        "Themenpool: strafbt-747"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-747",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ein Rasenmäher passt in keine Gewahrsamsenklave",
+      "text": "Kleine Sachen in der Kleidung ordnet die Verkehrsanschauung schon im Laden dem Täter zu. Bei sperrigen Sachen gilt das nicht: Solange A sie in den Räumen des Markts bewegt, bleibt der Gewahrsam des Inhabers bestehen. Es fehlt am neuen Gewahrsam. Zu prüfen bleibt ein Versuch – je nachdem, ob A schon unmittelbar angesetzt hat (§ 22 StGB).",
+      "norm": "§ 242 StGB · § 22 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 22 StGB",
+        "Themenpool: strafbt-747"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.704Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – mit dem Wegschieben hat A schon eigenen Gewahrsam",
+        "Nein – der Markt hat noch Gewahrsam, kein vollendeter Diebstahl",
+        "Nein – A begeht Betrug gegenüber der Kassiererin"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-050",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 5 HGB: Eingetragen ist eingetragen – der Einwand „kein Handelsgewerbe“ ist abgeschnitten",
+      "text": "Ist eine Firma im Handelsregister eingetragen, kann gegenüber dem, der sich auf die Eintragung beruft, nicht geltend gemacht werden, das Gewerbe sei kein Handelsgewerbe. Auf die Kenntnis des Dritten kommt es nicht an. Voraussetzung ist aber, dass überhaupt ein Gewerbe betrieben wird. Wer ohne Eintragung als Kaufmann auftritt, haftet nur nach allgemeinen Rechtsscheingrundsätzen.",
+      "norm": "§ 5 HGB",
+      "quellen": [
+        "§ 5 HGB",
+        "§ 15 HGB",
+        "Themenpool: handelsg-050"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-904",
+      "ueberzeile": "Klausurtipp Strafrecht",
+      "titel": "Normenkette Versuch: §§ 212, 22, 23 Abs. 1 StGB – jedes Glied hat eine Aufgabe",
+      "text": "Lerne den Versuch nicht als § 22 StGB allein. § 212 liefert das Delikt, § 22 die Definition des Versuchs (Tatentschluss, unmittelbares Ansetzen), § 23 Abs. 1 die Strafbarkeit – bei Verbrechen immer, bei Vergehen nur, wenn das Gesetz es bestimmt. Wer die Kette im Obersatz nennt, prüft automatisch vorab: Ist der Versuch überhaupt strafbar (§ 12 StGB)?",
+      "quellen": [
+        "§ 12 StGB",
+        "§ 22 StGB",
+        "§ 23 StGB",
+        "§ 212 StGB",
+        "Themenpool: methodik-904"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-882",
+      "ueberzeile": "3 Punkte Revision",
+      "titel": "Darstellungsmangel: drei Urteilsteile, die du mit der Sachrüge durchleuchtest",
+      "text": "Die allgemeine Sachrüge öffnet die Urteilsgründe für die Prüfung. Such dort gezielt nach Lücken, Widersprüchen und Unklarheiten.",
+      "punkte": [
+        "Feststellungen: Trägt jede Tatsache ein Merkmal – auch den Vorsatz?",
+        "Beweiswürdigung: lückenhaft, widersprüchlich, gegen Denkgesetze?",
+        "Strafzumessung: bestimmende Umstände genannt (§ 267 Abs. 3 StPO)?"
+      ],
+      "quellen": [
+        "§ 267 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-882"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-935",
+      "ueberzeile": "Streitstand IPR",
+      "titel": "Erbstatut ausländisch – aber war W überhaupt wirksam verheiratet? Welches IPR entscheidet?",
+      "norm": "Art. 13 EGBGB",
+      "optionen": [
+        "H.M.: selbständig – deutsches IPR entscheidet (Art. 13 EGBGB).",
+        "A.A.: unselbständig – IPR des Staates, dessen Recht die Hauptfrage beherrscht."
+      ],
+      "text": "Klausur: grundsätzlich selbständig anknüpfen – so wird die Ehe im Inland einheitlich beurteilt, egal wo sie als Vorfrage auftaucht. Die Gegenansicht betont den Einklang mit dem Staat des Erbstatuts. Ausnahmen werden vor allem bei Staatsverträgen diskutiert.",
+      "quellen": [
+        "Art. 3 EGBGB",
+        "Art. 13 EGBGB",
+        "Themenpool: ipr-935"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:26:47.704Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

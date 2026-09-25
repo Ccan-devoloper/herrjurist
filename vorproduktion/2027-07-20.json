@@ -1,0 +1,873 @@
+{
+  "datum": "2027-07-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "stpo-782",
+        "themaTitel": "Zwischenverfahren",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "staat-631",
+        "themaTitel": "Verfassungsbeschwerde: Zulässigkeit",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "sachen-032",
+        "themaTitel": "Wie funktioniert das Anwartschaftsrecht beim Eigentumsvorbehalt?",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "schuld-439"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "schuld-439"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "zpo-282"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "zahl",
+        "themaId": "zwangsv-826"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "streitstand",
+        "themaId": "assessorz-817"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "merksatz",
+        "themaId": "staat-593"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "stpo-782",
+      "poolTitel": "Zwischenverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 199 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-31",
+        "2027-06-21",
+        "2027-06-21"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "staat-631",
+      "poolTitel": "Verfassungsbeschwerde: Zulässigkeit",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 I Nr. 4a GG; §§ 90 ff. BVerfGG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-23",
+        "2027-05-20",
+        "2027-05-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-032",
+      "poolTitel": "Wie funktioniert das Anwartschaftsrecht beim Eigentumsvorbehalt?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 449 BGB",
+        "§ 929 BGB",
+        "§ 158 Abs. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-439",
+      "poolTitel": "Treu und Glauben als Korrektiv",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 242 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-08"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-439",
+      "poolTitel": "Treu und Glauben als Korrektiv",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 242 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-08"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-282",
+      "poolTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-15",
+        "2027-01-21",
+        "2027-04-14"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "zwangsv-826",
+      "poolTitel": "Wie prüft man die Vollstreckungsabwehrklage?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-22",
+        "2027-05-03",
+        "2027-05-17"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessorz-817",
+      "poolTitel": "Wann ist eine Drittwiderklage zulässig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-11",
+        "2027-03-15",
+        "2027-05-17"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "staat-593",
+      "poolTitel": "Bundesstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02",
+        "2027-02-20",
+        "2027-06-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-782",
+      "slug": "2027-07-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Aussage gegen Aussage: Wird das Hauptverfahren eröffnet?",
+          "titelZeilen": [
+            "Aussage gegen",
+            "Aussage: Wird",
+            "eröffnet?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Prognose statt Beweiswürdigung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Die StA klagt A wegen Körperverletzung an. Einzige Zeugin ist die Geschädigte G, A bestreitet die Tat. Weitere Beweismittel enthält die Akte nicht. Eine Anfechtung der Eröffnung wäre A verwehrt (§ 210 Abs. 1 StPO). Das Gericht zweifelt: Muss es die Eröffnung des Hauptverfahrens ablehnen?"
+        },
+        {
+          "art": "text",
+          "titel": "Der Maßstab",
+          "text": "Eröffnet wird, wenn der Angeschuldigte nach den Ergebnissen des vorbereitenden Verfahrens einer Straftat hinreichend verdächtig erscheint (§ 203 StPO). Das verlangt eine Prognose: Ist eine Verurteilung in der Hauptverhandlung wahrscheinlich?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Gilt schon hier „in dubio pro reo“?",
+          "links": {
+            "titel": "H.M.",
+            "punkte": [
+              "Zweifelssatz ist Entscheidungsregel für das Urteil",
+              "Hier nur Prognose: Verurteilung wahrscheinlich?",
+              "Beweiswürdigung bleibt der Hauptverhandlung"
+            ]
+          },
+          "rechts": {
+            "titel": "Gegenansicht",
+            "punkte": [
+              "Zweifelssatz schon im Zwischenverfahren anwenden",
+              "Schutz vor einer belastenden Hauptverhandlung",
+              "Gleichwertige Deutungen: nicht eröffnen"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Folge der h.M., aber sauber: In die Prognose gehört, dass in der Hauptverhandlung der Zweifelssatz gilt. Aussage gegen Aussage schließt die Eröffnung nicht aus. Entscheidend ist, ob Gs Angaben nach Aktenlage eine Verurteilung wahrscheinlich machen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Hinreichender Tatverdacht heißt: Verurteilung wahrscheinlich. Den Zweifelssatz wendest du hier nicht direkt an – du berücksichtigst ihn in der Prognose."
+        },
+        {
+          "art": "cta",
+          "titel": "Eröffnung in drei Fragen",
+          "punkte": [
+            "Welche Beweise liegen nach Aktenlage vor?",
+            "Ist eine Verurteilung wahrscheinlich?",
+            "Zweifelssatz in der Prognose mitdenken"
+          ],
+          "icons": [
+            "ordner",
+            "waage",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Aussage gegen Aussage – wird das Hauptverfahren trotzdem eröffnet? Maßstab ist der hinreichende Tatverdacht (§ 203 StPO): Ist eine Verurteilung wahrscheinlich? Nach h.M. gilt der Zweifelssatz im Zwischenverfahren nicht als Entscheidungsregel, fließt aber in die Prognose ein. Die Gegenansicht will ihn schon hier anwenden. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#zwischenverfahren",
+        "#203stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zwischenverfahren: gilt in dubio pro reo?",
+      "coverText": "Prognose statt Beweiswürdigung",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Im Zwischenverfahren wird nicht über die Schuld entschieden, sondern prognostiziert, ob eine Verurteilung wahrscheinlich ist.",
+        "handlung": "{A} stands at a gate and looks through a spyglass toward a distant hall, while {B} holds up two crystals of nearly equal size on an open palm.",
+        "hinweisRegie": "Place the note in the free space between the spyglass and the two crystals, slightly tilted toward the distant hall, so the forward-looking forecast is the focus without covering {A}'s face.",
+        "alternative": "{B} weighs two stones on a rough scale at a trail fork while {A} decides whether to open the path ahead."
+      },
+      "bildSzene": "spyglass at gate, two crystals",
+      "bildSzeneAlt": "scale at trail fork, path gate",
+      "quellen": [
+        "§ 199 StPO",
+        "§ 203 StPO",
+        "§ 210 Abs. 1 StPO",
+        "§ 261 StPO",
+        "Themenpool: stpo-782"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.819Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-631",
+      "slug": "2027-07-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Keine Berufung – und trotzdem nicht direkt nach Karlsruhe",
+          "titelZeilen": [
+            "Keine Berufung –",
+            "und trotzdem nicht",
+            "direkt nach",
+            "Karlsruhe"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Anhörungsrüge gehört zum Rechtsweg",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A klagt vor dem Amtsgericht auf 450 € und verliert. Einen rechtzeitigen Schriftsatz von A hat das Gericht übergangen. Die Berufung ist nicht zugelassen und wegen des geringen Werts unzulässig (§ 511 Abs. 2 ZPO). A will sofort Verfassungsbeschwerde wegen Art. 103 Abs. 1 GG erheben."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Beschwerdegegenstand",
+              "text": "Das Urteil ist ein Akt öffentlicher Gewalt (Art. 93 Abs. 1 Nr. 4a GG, § 90 Abs. 1 BVerfGG)."
+            },
+            {
+              "titel": "Beschwerdebefugnis",
+              "text": "Eine Verletzung von Art. 103 Abs. 1 GG ist möglich – als grundrechtsgleiches Recht ausdrücklich rügefähig."
+            },
+            {
+              "titel": "Rechtswegerschöpfung",
+              "text": "§ 90 Abs. 2 S. 1 BVerfGG. Gibt es kein Rechtsmittel, gehört die Anhörungsrüge nach § 321a ZPO zum Rechtsweg."
+            },
+            {
+              "titel": "Frist",
+              "text": "Ein Monat (§ 93 Abs. 1 BVerfGG). Nach einer statthaften Anhörungsrüge läuft sie ab der Entscheidung über die Rüge."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Die sofortige Verfassungsbeschwerde ist unzulässig: Der Rechtsweg ist nicht erschöpft. A muss zuerst binnen zwei Wochen ab Kenntnis der Gehörsverletzung Anhörungsrüge beim Amtsgericht erheben (§ 321a Abs. 2 S. 1 ZPO). Hilft das Gericht nicht ab, bleibt der Weg nach Karlsruhe offen."
+        },
+        {
+          "art": "text",
+          "titel": "Dahinter steht Subsidiarität",
+          "text": "Die Verfassungsbeschwerde ist kein zusätzliches Rechtsmittel. Wer vor dem BVerfG rügt, muss vorher alle zumutbaren Möglichkeiten genutzt haben, die Verletzung bei den Fachgerichten zu beseitigen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kein Rechtsmittel heißt nicht: kein Rechtsweg. Bei Gehörsverletzungen gehört die Anhörungsrüge dazu – erst sie, dann die Verfassungsbeschwerde."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor Karlsruhe prüfen",
+          "punkte": [
+            "Rechtsmittel gegeben?",
+            "Sonst: Anhörungsrüge nach § 321a ZPO",
+            "Monatsfrist nach § 93 BVerfGG"
+          ],
+          "icons": [
+            "gericht",
+            "umschlag",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Keine Berufung – und trotzdem nicht direkt nach Karlsruhe. Wer eine Gehörsverletzung rügen will, muss den Rechtsweg erschöpfen (§ 90 Abs. 2 S. 1 BVerfGG). Gibt es kein Rechtsmittel mehr, gehört die Anhörungsrüge nach § 321a ZPO dazu. Erst danach läuft die Monatsfrist für die Verfassungsbeschwerde. Speichern für die nächste Verfassungsprozessklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsbeschwerde",
+        "#bverfgg",
+        "#321azpo",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfassungsbeschwerde: erst die Anhörungsrüge",
+      "coverText": "Anhörungsrüge gehört zum Rechtsweg",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Vor der Verfassungsbeschwerde muss jeder fachgerichtliche Weg genutzt werden – auch die unscheinbare Anhörungsrüge.",
+        "handlung": "{A} runs toward a big distant portal, while {B} nervously points at a small side door right next to her that she has not opened yet.",
+        "hinweisRegie": "Place the note in the free space beside the small side door, slightly tilted toward it, so the overlooked first step stands out without covering {A} or the distant portal.",
+        "alternative": "{B} blocks a ladder's upper rungs with a small rope until {A} rings a little bell at the bottom."
+      },
+      "bildSzene": "small side door before big portal",
+      "bildSzeneAlt": "ladder rope, bell at bottom",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "Art. 103 Abs. 1 GG",
+        "§ 90 BVerfGG",
+        "§ 93 Abs. 1 BVerfGG",
+        "§ 321a ZPO",
+        "§ 511 Abs. 2 ZPO",
+        "Themenpool: staat-631"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.819Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-032",
+      "slug": "2027-07-20-b3",
+      "titelZeilen": [
+        "Anwartschaft:",
+        "drei Dinge, die der",
+        "Käufer schon kann"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Anwartschaft: drei Dinge, die der Käufer schon kann",
+          "unter": "Eigentumsvorbehalt · § 449 BGB",
+          "text": "K zahlt in Raten. Eigentümer ist er noch nicht – aber schon mehr als ein bloßer Käufer.",
+          "norm": "§ 449 BGB",
+          "icon": "schluessel",
+          "sprecher": "Der Käufer ist noch nicht Eigentümer. Trotzdem kann er schon eine Menge. Beim Kauf unter Eigentumsvorbehalt hat er ein Anwartschaftsrecht. Drei Dinge folgen daraus.",
+          "marken": [
+            "Anwartschaftsrecht",
+            "§ 449 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Grundlage",
+          "text": "Bedingte Übereignung: Eigentum geht mit der letzten Rate über.",
+          "norm": "§ 158 Abs. 1 BGB",
+          "sprecher": "Zuerst die Grundlage. Im Zweifel wird unter der aufschiebenden Bedingung vollständiger Zahlung übereignet. Mit der letzten Rate geht das Eigentum automatisch über. Diese Position kann der Verkäufer nicht mehr einseitig zerstören.",
+          "marken": [
+            "aufschiebend bedingt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Eins: übertragen",
+          "text": "Übertragung wie Eigentum, analog § 929 S. 1 BGB – ohne Zustimmung des V.",
+          "norm": "§ 929 S. 1 BGB",
+          "sprecher": "Erstens: K kann sein Anwartschaftsrecht übertragen, und zwar wie Eigentum, entsprechend Paragraf 929 BGB. Der Verkäufer muss nicht zustimmen. Zahlt später jemand die letzte Rate, erwirbt der Zweiterwerber das Eigentum nach dem BGH direkt, ohne Umweg über K.",
+          "marken": [
+            "Direkterwerb"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zwei: geschützt vor Zwischenverfügungen",
+          "text": "Verfügt V vorher anders, wird das mit Bedingungseintritt insoweit unwirksam.",
+          "norm": "§ 161 Abs. 1 BGB",
+          "sprecher": "Zweitens: Schutz vor Zwischenverfügungen. Übereignet der Verkäufer die Sache vorher an einen Dritten, wird das mit Bedingungseintritt unwirksam, soweit es Ks Erwerb vereiteln würde. Guter Glaube des Dritten kann das nur nach Paragraf 161 Absatz 3 überwinden.",
+          "marken": [
+            "§ 161 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Drei: Schadensersatz verlangen",
+          "text": "Das Anwartschaftsrecht ist ein sonstiges Recht im Sinne von § 823 Abs. 1 BGB.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Drittens: Deliktsschutz. Beschädigt ein Dritter die Sache, kann K nach Paragraf 823 Absatz 1 BGB selbst Ersatz verlangen. Das Anwartschaftsrecht ist ein sonstiges Recht.",
+          "marken": [
+            "sonstiges Recht"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Anwartschaft: übertragbar wie Eigentum, geschützt durch § 161 BGB, sonstiges Recht nach § 823 BGB.",
+          "norm": null,
+          "sprecher": "Merke: Das Anwartschaftsrecht ist ein wesensgleiches Minus zum Eigentum. Übertragbar wie Eigentum, geschützt durch Paragraf 161 und ein sonstiges Recht im Deliktsrecht.",
+          "marken": [
+            "wesensgleiches Minus"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Sachenrechtsklausur",
+          "text": "Speichern für die nächste Klausur zum Eigentumsvorbehalt.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Sachenrechtsklausur. Und frag beim Eigentumsvorbehalt immer: Was kann der Käufer schon jetzt?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Beim Eigentumsvorbehalt ist der Käufer noch nicht Eigentümer – aber er hat schon ein Anwartschaftsrecht. Er kann es wie Eigentum übertragen, § 161 BGB schützt ihn vor Zwischenverfügungen des Verkäufers, und als sonstiges Recht genießt es Schutz nach § 823 Abs. 1 BGB. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#eigentumsvorbehalt",
+        "#anwartschaftsrecht",
+        "#449bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anwartschaftsrecht: was der Käufer schon kann",
+      "coverText": "Wesensgleiches Minus zum Eigentum",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Wer unter Eigentumsvorbehalt kauft, hält schon vor der letzten Rate eine übertragbare, geschützte Rechtsposition.",
+        "handlung": "{A} hands a half-filled crystal key to another miner, while {B} points at the last missing segment of the key that will complete it.",
+        "hinweisRegie": "Place the note in the free space beside the missing key segment, slightly tilted toward it, so the not-yet-complete but already transferable position is clear without covering hands or faces.",
+        "alternative": "{B} fills the last slot of a coin tube while {A} already carries the tube's locked box on his back."
+      },
+      "bildSzene": "half-filled crystal key handed over",
+      "bildSzeneAlt": "last coin slot, box carried",
+      "quellen": [
+        "§ 449 Abs. 1 BGB",
+        "§ 929 S. 1 BGB",
+        "§ 158 Abs. 1 BGB",
+        "§ 161 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: sachen-032"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-befugnisse",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-439",
+      "ueberzeile": "Prüfungsfrage Schuldrecht",
+      "titel": "V verkauft K formlos ein Grundstück, K zahlt. Später beruft V sich auf die Formnichtigkeit. Darf er das?",
+      "optionen": [
+        "Nein – wer das Geld annimmt, handelt immer treuwidrig",
+        "Nein – die Zahlung heilt den Formmangel nach § 311b Abs. 1 S. 2 BGB",
+        "Grundsätzlich ja – § 242 BGB hilft nur bei schlechthin untragbarem Ergebnis"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 311b Abs. 1 BGB",
+        "§ 125 BGB",
+        "§ 242 BGB",
+        "Themenpool: schuld-439"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-439",
+      "ueberzeile": "Auflösung",
+      "titel": "Grundsätzlich ja – die Formvorschrift geht vor",
+      "text": "Der Vertrag ist nichtig (§§ 311b Abs. 1 S. 1, 125 S. 1 BGB). Geheilt wird er erst durch Auflassung und Eintragung, nicht durch Zahlung (§ 311b Abs. 1 S. 2 BGB). Über § 242 BGB setzt sich der Formzweck nur ausnahmsweise nicht durch: wenn die Nichtigkeit für K nicht bloß hart, sondern schlechthin untragbar wäre – etwa bei Existenzgefährdung. Sonst: Rückforderung über § 812 BGB.",
+      "norm": "§ 242 BGB",
+      "quellen": [
+        "§ 311b Abs. 1 BGB",
+        "§ 125 BGB",
+        "§ 242 BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+        "Themenpool: schuld-439"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.820Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – wer das Geld annimmt, handelt immer treuwidrig",
+        "Nein – die Zahlung heilt den Formmangel nach § 311b Abs. 1 S. 2 BGB",
+        "Grundsätzlich ja – § 242 BGB hilft nur bei schlechthin untragbarem Ergebnis"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-282",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 138 Abs. 4 ZPO: Eigenes Handeln bestreitest du nicht mit Nichtwissen",
+      "text": "Mit Nichtwissen darf eine Partei nur Tatsachen bestreiten, die weder eigene Handlungen noch Gegenstand ihrer eigenen Wahrnehmung waren. Sonst ist das Bestreiten unzulässig – die Tatsache gilt als zugestanden (§ 138 Abs. 3 ZPO). Nach der Rspr. muss sich eine Partei zudem grundsätzlich bei Personen erkundigen, die in ihrem Verantwortungsbereich tätig waren.",
+      "norm": "§ 138 Abs. 4 ZPO",
+      "quellen": [
+        "§ 138 Abs. 3 ZPO",
+        "§ 138 Abs. 4 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: zpo-282"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-826",
+      "ueberzeile": "3 Punkte Zwangsvollstreckung",
+      "titel": "§ 767 ZPO begründet? Drei Punkte – der dritte wird gern übersehen",
+      "text": "Nach der Zulässigkeit prüfst du in der Begründetheit der Vollstreckungsabwehrklage:",
+      "punkte": [
+        "Materielle Einwendung gegen den titulierten Anspruch, z. B. Erfüllung, Erlass, Aufrechnung",
+        "Keine Präklusion nach § 767 Abs. 2 ZPO (gilt nicht für notarielle Urkunden, § 797 Abs. 4 ZPO)",
+        "Kein Verlust nach § 767 Abs. 3 ZPO: Alle damals möglichen Einwendungen müssen in eine Klage"
+      ],
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 797 Abs. 4 ZPO",
+        "Themenpool: zwangsv-826"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-817",
+      "ueberzeile": "Streitstand 2. Examen Zivilrecht",
+      "titel": "Drittwiderklage erst in der Berufungsinstanz: Muss der Dritte zustimmen?",
+      "norm": "§ 533 ZPO",
+      "optionen": [
+        "Rspr.: Grundsätzlich ja – der Dritte verliert sonst eine Tatsacheninstanz; ohne Zustimmung nur bei rechtsmissbräuchlicher Weigerung.",
+        "Teile der Lit.: Nein – es genügt, dass die Einbeziehung sachdienlich ist."
+      ],
+      "text": "Klausur: Im Berufungsurteil prüfst du zusätzlich § 533 ZPO. Mit der Rspr. scheitert die Drittwiderklage in zweiter Instanz schon an der fehlenden Zustimmung des Dritten, wenn kein Missbrauch vorliegt. Erhebe sie deshalb als Anwalt möglichst schon in erster Instanz.",
+      "quellen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO",
+        "§ 533 ZPO",
+        "Themenpool: assessorz-817"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-593",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "Länder zuständig – der Bund braucht einen Titel",
+      "text": "Staatliche Aufgaben sind Sache der Länder, soweit das GG nichts anderes bestimmt (Art. 30, 70 Abs. 1 GG). Beim Bundesgesetz suchst du daher zuerst den Titel in Art. 73 oder 74 GG. Ungeschriebene Kompetenzen sind die enge Ausnahme.",
+      "norm": "Art. 30 GG",
+      "quellen": [
+        "Art. 20 Abs. 1 GG",
+        "Art. 30 GG",
+        "Art. 70 GG",
+        "Art. 73 GG",
+        "Art. 74 GG",
+        "Themenpool: staat-593"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:24:45.820Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

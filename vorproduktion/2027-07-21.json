@@ -1,0 +1,889 @@
+{
+  "datum": "2027-07-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-601",
+        "themaTitel": "Bundesregierung und Richtlinienkompetenz",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuld-453",
+        "themaTitel": "Schuldübernahme und Vertragsübernahme",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-741",
+        "themaTitel": "Körperverletzung",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "zpo-572"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "zpo-572"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "strafbt-070"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:29",
+        "art": "streitstand",
+        "themaId": "assessorz-824"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "merksatz",
+        "themaId": "strafbt-329"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:17",
+        "art": "begriff",
+        "themaId": "vwgo-402"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-601",
+      "poolTitel": "Bundesregierung und Richtlinienkompetenz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 65 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2026-11-27",
+        "2026-12-15"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuld-453",
+      "poolTitel": "Schuldübernahme und Vertragsübernahme",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 414 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17",
+        "2027-05-28"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-741",
+      "poolTitel": "Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-27",
+        "2027-03-18",
+        "2027-05-17"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-572",
+      "poolTitel": "Forderungspfändung und Pfändungs-/Überweisungsbeschluss",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 829 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-14",
+        "2027-05-15",
+        "2027-05-15"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-572",
+      "poolTitel": "Forderungspfändung und Pfändungs-/Überweisungsbeschluss",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 829 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-14",
+        "2027-05-15",
+        "2027-05-15"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-070",
+      "poolTitel": "Wie grenzt man Diebstahl und Betrug ab?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB",
+        "§ 263 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02",
+        "2027-04-06",
+        "2027-04-29"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-824",
+      "poolTitel": "Wie läuft die Kostenfestsetzung nach dem Urteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 103 ZPO",
+        "§ 104 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-14",
+        "2027-03-18",
+        "2027-05-20"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-329",
+      "poolTitel": "Was ist eine Täuschung durch konkludentes Verhalten beim Betrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-17",
+        "2027-05-11",
+        "2027-07-18"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "vwgo-402",
+      "poolTitel": "Wann ist der Verwaltungsrechtsweg eröffnet?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02",
+        "2027-02-02",
+        "2027-05-04"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-601",
+      "slug": "2027-07-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Richtlinienkompetenz: Darf der Kanzler auch den Einzelfall entscheiden?",
+          "titelZeilen": [
+            "Richtlinien-",
+            "kompetenz: Auch",
+            "im Einzelfall?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Kein allgemeines Weisungsrecht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Bundesministerin M will eine Genehmigung für ein Rüstungsprojekt mit einem Drittstaat erteilen. Der Bundeskanzler K untersagt ihr das: Die Entscheidung sei außenpolitisch zu heikel. M meint, das sei allein Sache ihres Ressorts. Wer hat recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Kanzlerprinzip",
+              "text": "Der Bundeskanzler bestimmt die Richtlinien der Politik und trägt dafür die Verantwortung (Art. 65 S. 1 GG)."
+            },
+            {
+              "titel": "Ressortprinzip",
+              "text": "Innerhalb dieser Richtlinien leitet jede Ministerin ihren Geschäftsbereich selbständig und unter eigener Verantwortung (Art. 65 S. 2 GG)."
+            },
+            {
+              "titel": "Reichweite der Richtlinien",
+              "text": "Grundsätzlich allgemeine Leitlinien. Nach verbreiteter Ansicht auch Einzelfragen von grundlegender politischer Bedeutung."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Die außenpolitisch bedeutsame Genehmigung darf K an sich ziehen. Bei Routinefragen bliebe es beim Ressortprinzip."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Kurzschluss",
+          "text": "„Der Kanzler hat die Richtlinienkompetenz, also ein allgemeines Weisungsrecht.“ Das trägt nicht: Ein umfassendes Weisungsrecht gegenüber den Ministern kennt das GG nicht. Die Grenze zieht die politische Bedeutung der Frage – nicht die bloße Uneinigkeit."
+        },
+        {
+          "art": "text",
+          "titel": "Was dem Kanzler sonst bleibt",
+          "punkte": [
+            "Meinungsverschiedenheiten zwischen Ministern entscheidet die Bundesregierung (Art. 65 S. 3 GG)",
+            "Letztes Mittel: Er kann dem Bundespräsidenten die Entlassung vorschlagen (Art. 64 Abs. 1 GG)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Richtlinien sind kein allgemeines Weisungsrecht. Einzelfragen erfassen sie, wenn diese grundlegende politische Bedeutung haben."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 65 GG in drei Fragen",
+          "punkte": [
+            "Grundlegende politische Frage?",
+            "Sonst: Ressortprinzip",
+            "Ministerstreit: Kabinett entscheidet"
+          ],
+          "icons": [
+            "zielscheibe",
+            "aktentasche",
+            "personen"
+          ]
+        }
+      ],
+      "caption": "Richtlinienkompetenz: Darf der Kanzler auch den Einzelfall entscheiden? Ein allgemeines Weisungsrecht gibt Art. 65 GG ihm nicht – innerhalb der Richtlinien leiten die Minister ihre Ressorts selbständig. Einzelfragen von grundlegender politischer Bedeutung kann er nach verbreiteter Ansicht aber an sich ziehen. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#art65gg",
+        "#bundesregierung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Richtlinienkompetenz auch im Einzelfall?",
+      "coverText": "Kein allgemeines Weisungsrecht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Der Kanzler setzt die großen Linien, die Minister steuern ihre Ressorts selbst – bei grundlegenden Fragen darf er eingreifen.",
+        "handlung": "{A} draws one bold route line on a large map table, while {B} hovers over a small side section of the map and waits with a pen above it.",
+        "hinweisRegie": "Place the note in the free space between the bold route line and {B}'s small section, slightly tilted toward the section, so the boundary between main line and own area is clear without covering either character.",
+        "alternative": "{A} steers a ship's main wheel while {B} operates a small side rudder that only moves within a marked range."
+      },
+      "bildSzene": "bold route line, droid waits",
+      "bildSzeneAlt": "main wheel and small side rudder",
+      "quellen": [
+        "Art. 64 Abs. 1 GG",
+        "Art. 65 GG",
+        "Themenpool: staat-601"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-453",
+      "slug": "2027-07-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schuld übernommen – und trotzdem haftet der Alte",
+          "titelZeilen": [
+            "Schuld übernommen",
+            "– und trotzdem",
+            "haftet der Alte"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Der Gläubiger muss genehmigen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "S schuldet G 5.000 €. S und sein Geschäftsfreund Ü vereinbaren, dass Ü die Schuld übernimmt und S frei wird. G erfährt davon nichts. Als nicht gezahlt wird, verklagt G den S. S wendet ein, Schuldner sei jetzt Ü. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Zwei Wege",
+              "text": "Befreiende Schuldübernahme durch Vertrag Gläubiger–Übernehmer (§ 414 BGB) oder Schuldner–Übernehmer (§ 415 BGB)."
+            },
+            {
+              "titel": "§ 415 BGB",
+              "text": "Der Vertrag zwischen S und Ü wirkt gegenüber G nur, wenn G genehmigt. Das setzt voraus, dass ihm die Übernahme mitgeteilt wird."
+            },
+            {
+              "titel": "Keine Genehmigung",
+              "text": "G weiß nichts, genehmigt also nicht. S bleibt Schuldner – G kann ihn in Anspruch nehmen."
+            },
+            {
+              "titel": "Innenverhältnis",
+              "text": "Im Zweifel ist Ü gegenüber S verpflichtet, G rechtzeitig zu befriedigen (§ 415 Abs. 3 BGB): Erfüllungsübernahme."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Kurzschluss",
+          "text": "„Schuldner und Übernehmer haben sich geeinigt, also ist der Schuldner frei.“ Das übergeht den Gläubiger: Niemand muss sich einen neuen Schuldner aufdrängen lassen, dessen Zahlungsfähigkeit er nicht kennt. Deshalb braucht § 415 BGB seine Genehmigung."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Abgrenzung",
+          "links": {
+            "titel": "Schuldübernahme",
+            "punkte": [
+              "Neuer Schuldner statt altem",
+              "Alter Schuldner wird frei",
+              "§§ 414, 415 BGB"
+            ]
+          },
+          "rechts": {
+            "titel": "Schuldbeitritt",
+            "punkte": [
+              "Neuer Schuldner neben altem",
+              "Gesamtschuld (§ 421 BGB)",
+              "Im Gesetz nicht geregelt, § 311 Abs. 1 BGB"
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schuldübernahme nach § 415 BGB braucht die Genehmigung des Gläubigers. Bis dahin bleibt der alte Schuldner in der Pflicht; der Übernehmer stellt ihn nur frei."
+        },
+        {
+          "art": "cta",
+          "titel": "Schuldübernahme prüfen",
+          "punkte": [
+            "Vertrag mit G oder mit S?",
+            "Bei § 415 BGB: Genehmigung von G?",
+            "Sonst: Erfüllungsübernahme innen"
+          ],
+          "icons": [
+            "vertrag",
+            "handschlag",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Schuld übernommen – und trotzdem haftet der Alte. Vereinbaren Schuldner und Übernehmer die Übernahme, wirkt das gegenüber dem Gläubiger erst mit seiner Genehmigung (§ 415 BGB). Ohne sie bleibt der alte Schuldner in der Pflicht; der Übernehmer muss ihn im Zweifel nur intern freistellen. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#schuldübernahme",
+        "#415bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schuldübernahme: ohne Genehmigung kein Wechsel",
+      "coverText": "Der Gläubiger muss genehmigen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Ein neuer Schuldner kann den alten nicht ohne Zustimmung des Gläubigers ablösen.",
+        "handlung": "{A} tries to hand a heavy crate over to {B}, but a chain still links the crate to {A}'s belt, while {B} nervously looks around for someone to unlock it.",
+        "hinweisRegie": "Place the note in the free space next to the chain between the crate and {A}'s belt, slightly tilted toward the lock, so the missing release is visible without covering either character's face.",
+        "alternative": "{B} stands at a toll gate that only opens with a third person's key while {A} waits behind with a cart."
+      },
+      "bildSzene": "crate handed over, chain remains",
+      "bildSzeneAlt": "toll gate needs third key",
+      "quellen": [
+        "§ 414 BGB",
+        "§ 415 BGB",
+        "§ 421 BGB",
+        "§ 311 Abs. 1 BGB",
+        "Themenpool: schuld-453"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-741",
+      "slug": "2027-07-21-b3",
+      "titelZeilen": [
+        "OP gelungen –",
+        "und doch Körper-",
+        "verletzung"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "OP gelungen – und doch Körperverletzung",
+          "unter": "Körperverletzung · § 223 StGB",
+          "text": "Arzt A operiert kunstgerecht und erfolgreich. Tatbestand des § 223 StGB?",
+          "norm": "§ 223 StGB",
+          "icon": "arzt",
+          "sprecher": "Auch die gelungene Operation ist eine Körperverletzung. Jedenfalls nach der Rechtsprechung. Warum, und wo der Arzt dann doch sicher ist, zeigen dir vier Schritte.",
+          "marken": [
+            "Heileingriff",
+            "§ 223 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der Tatbestand",
+          "text": "Körperliche Misshandlung oder Gesundheitsschädigung.",
+          "norm": "§ 223 Abs. 1 StGB",
+          "sprecher": "Schritt eins: der Tatbestand. Paragraf 223 StGB verlangt eine körperliche Misshandlung oder eine Gesundheitsschädigung. Ein Schnitt mit dem Skalpell ist zunächst ein Eingriff in die körperliche Unversehrtheit.",
+          "marken": [
+            "zwei Varianten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rspr.: Jeder Eingriff zählt",
+          "text": "Auch der kunstgerechte, erfolgreiche Heileingriff erfüllt den Tatbestand.",
+          "norm": "§ 223 StGB",
+          "sprecher": "Schritt zwei: Die Rechtsprechung sieht in jedem ärztlichen Eingriff in die körperliche Integrität eine tatbestandliche Körperverletzung. Das gilt auch, wenn er kunstgerecht durchgeführt wird und gelingt.",
+          "marken": [
+            "Rspr."
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Teile der Lit.: Gesamtbetrachtung",
+          "text": "Wer lege artis heilt, misshandelt nicht – der Tatbestand entfällt.",
+          "norm": null,
+          "sprecher": "Schritt drei: Teile der Literatur widersprechen. Wer kunstgerecht und erfolgreich heilt, verschlechtere den Zustand gerade nicht. Nach dieser Gesamtbetrachtung entfällt schon der Tatbestand.",
+          "marken": [
+            "Gesamtbetrachtung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Entscheidend: die Einwilligung",
+          "text": "Wirksam nur nach ordnungsgemäßer Aufklärung.",
+          "norm": null,
+          "sprecher": "Schritt vier: Nach der Rechtsprechung rettet den Arzt erst die Rechtfertigung, also die Einwilligung. Wirksam ist sie nur nach ordnungsgemäßer Aufklärung über Risiken und Alternativen.",
+          "marken": [
+            "Aufklärung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Aufklärung fehlt?",
+          "text": "Rspr.: hypothetische Einwilligung – in der Lit. umstritten.",
+          "norm": null,
+          "sprecher": "Und wenn die Aufklärung fehlt? Die Rechtsprechung fragt dann, ob der Patient auch bei richtiger Aufklärung eingewilligt hätte. Diese hypothetische Einwilligung ist in der Literatur umstritten.",
+          "marken": [
+            "hypothetisch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Rspr.: Heileingriff ist tatbestandliche KV, Schutz über die Einwilligung.",
+          "norm": null,
+          "sprecher": "Merke: Für die Rechtsprechung ist der Heileingriff eine tatbestandliche Körperverletzung. Der Schwerpunkt liegt deshalb bei Einwilligung und Aufklärung.",
+          "marken": [
+            "Schwerpunkt Einwilligung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Strafrechtsklausur",
+          "text": "Speichern für den nächsten Arztfall.",
+          "norm": null,
+          "sprecher": "Speicher dir das für den nächsten Arztfall und prüf die Aufklärung immer genau.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Operation gelungen – und doch Körperverletzung. Nach der Rspr. erfüllt jeder ärztliche Eingriff in die körperliche Unversehrtheit den Tatbestand des § 223 StGB, auch wenn er kunstgerecht und erfolgreich ist. Teile der Literatur verneinen schon den Tatbestand. In der Klausur liegt der Schwerpunkt deshalb bei Einwilligung und Aufklärung. Speichern für den nächsten Arztfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#223stgb",
+        "#körperverletzung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Heileingriff: Körperverletzung nach der Rspr.",
+      "coverText": "Die Einwilligung trägt die Last",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Auch der gelungene Heileingriff ist nach der Rspr. eine Körperverletzung – gerechtfertigt erst durch die informierte Einwilligung.",
+        "handlung": "{A} holds out a small signed consent card toward {B}, who pauses with a glowing healing tool right before touching a patient's arm.",
+        "hinweisRegie": "Place the note in the free space between the consent card and the healing tool, slightly tilted toward the card, so the decisive role of consent is clear without covering the patient or faces.",
+        "alternative": "{B} opens a gate with a tool, while {A} checks that the gatekeeper has handed over the key first."
+      },
+      "bildSzene": "consent card before healing tool",
+      "bildSzeneAlt": "gate opened only with handed key",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 228 StGB",
+        "Themenpool: strafbt-741"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.992Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-572",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "G erwirkt einen Pfändungsbeschluss über die Forderung des S gegen D. Ab wann ist sie gepfändet?",
+      "optionen": [
+        "Mit Zustellung an den Drittschuldner D",
+        "Mit Erlass des Beschlusses durch das Vollstreckungsgericht",
+        "Erst mit Zustellung an den Schuldner S"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 829 ZPO",
+        "Themenpool: zpo-572"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.992Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-572",
+      "ueberzeile": "Auflösung",
+      "titel": "Mit Zustellung an den Drittschuldner – vorher kann D noch an S zahlen",
+      "text": "Der Beschluss verbietet D, an S zu zahlen, und S, über die Forderung zu verfügen (§ 829 Abs. 1 ZPO). Bewirkt ist die Pfändung aber erst mit der Zustellung an D (§ 829 Abs. 3 ZPO). Zahlt D vorher an S, wird er frei. Dem Schuldner wird der Beschluss danach ebenfalls zugestellt (§ 829 Abs. 2 ZPO). Einziehen darf G erst nach der Überweisung (§ 835 ZPO).",
+      "norm": "§ 829 Abs. 3 ZPO",
+      "quellen": [
+        "§ 829 ZPO",
+        "§ 835 ZPO",
+        "Themenpool: zpo-572"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.992Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit Zustellung an den Drittschuldner D",
+        "Mit Erlass des Beschlusses durch das Vollstreckungsgericht",
+        "Erst mit Zustellung an den Schuldner S"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-070",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB: Unbegleitete Probefahrt – der Händler gibt den Wagen selbst weg",
+      "text": "A gibt sich mit falschen Papieren als Kaufinteressent aus und kehrt von der Probefahrt nicht zurück. Überlässt der Händler ihm den Wagen allein, verfügt er nach der Rspr. über den Gewahrsam: Betrug, kein Diebstahl. Fährt ein Mitarbeiter mit, ist der Gewahrsam nur gelockert – A bricht ihn dann erst durch die Flucht: Diebstahl.",
+      "norm": "§ 263 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 263 StGB",
+        "Themenpool: strafbt-070"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.992Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-824",
+      "ueberzeile": "Streitstand 2. Examen Zivilrecht",
+      "titel": "B hat die festzusetzenden Kosten unstreitig schon bezahlt. Berücksichtigt das der Rechtspfleger?",
+      "norm": "§ 104 ZPO",
+      "optionen": [
+        "BGH: Materielle Einwendungen grundsätzlich nicht – anders, wenn die Tatsachen unstreitig feststehen.",
+        "Gegenansicht: Nie – das formalisierte Verfahren bleibt frei davon, B muss nach § 767 ZPO vorgehen."
+      ],
+      "text": "Klausur: Grundsatz ist, dass das Kostenfestsetzungsverfahren nur Entstehung und Erstattungsfähigkeit prüft. Mit dem BGH lässt du eine unstreitige Zahlung ausnahmsweise durchgreifen – das spart B die Vollstreckungsabwehrklage. Ist die Zahlung streitig, bleibt es beim Verweis auf § 767 ZPO.",
+      "quellen": [
+        "§ 103 ZPO",
+        "§ 104 ZPO",
+        "§ 767 ZPO",
+        "Themenpool: assessorz-824"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.992Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-329",
+      "ueberzeile": "Merksatz Betrug",
+      "titel": "Tanken ohne Zahlungswillen: Betrug nur, wenn jemand zusieht",
+      "text": "Wer an der Selbstbedienungstankstelle tankt, erklärt nach dem BGH konkludent, bezahlen zu wollen. Nimmt das Personal den Vorgang wahr und lässt ihn gewähren, liegen Täuschung und Irrtum vor: Betrug. Bleibt der Tankvorgang unbemerkt, fehlt ein Irrtum – nach dem BGH bleibt es dann beim versuchten Betrug.",
+      "norm": "§ 263 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 22 StGB",
+        "Themenpool: strafbt-329"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.992Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-402",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Abdrängende Sonderzuweisung: öffentlich-rechtlich, aber nicht vor das VG",
+      "text": "Eine Norm, die eine öffentlich-rechtliche Streitigkeit einem anderen Gericht zuweist, etwa Amtshaftung zu den Zivilgerichten (Art. 34 S. 3 GG, § 40 Abs. 2 S. 1 VwGO) oder Justizverwaltungsakte zum OLG (§ 23 EGGVG). Funktion: Nach Bejahung der öffentlich-rechtlichen Streitigkeit prüfst du sie als letzten Punkt des § 40 Abs. 1 VwGO.",
+      "norm": "§ 40 Abs. 1 VwGO",
+      "quellen": [
+        "§ 40 VwGO",
+        "Art. 34 S. 3 GG",
+        "§ 23 EGGVG",
+        "Themenpool: vwgo-402"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:27:39.992Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
