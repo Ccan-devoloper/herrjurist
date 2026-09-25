@@ -1,0 +1,879 @@
+{
+  "datum": "2027-06-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "sachen-224",
+        "themaTitel": "Wann ist eine Sache abhandengekommen?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafat-724",
+        "themaTitel": "Notwehr: Erforderlichkeit und Gebotenheit",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessoroer-842",
+        "themaTitel": "Wie ist der Tatbestand des Verwaltungsurteils aufgebaut?",
+        "fach": "assessoroer",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:00",
+        "art": "frage",
+        "themaId": "assessoroer-854"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:00",
+        "art": "antwort",
+        "themaId": "assessoroer-854"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "staat-359"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "zahl",
+        "themaId": "bgbat-001"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "streitstand",
+        "themaId": "streit-28"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "merksatz",
+        "themaId": "handelsg-271"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "sachen-224",
+      "poolTitel": "Wann ist eine Sache abhandengekommen?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 935 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafat-724",
+      "poolTitel": "Notwehr: Erforderlichkeit und Gebotenheit",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23",
+        "2026-09-23",
+        "2026-10-15"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessoroer-842",
+      "poolTitel": "Wie ist der Tatbestand des Verwaltungsurteils aufgebaut?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 117 Abs. 3 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-05"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02",
+        "2027-02-11",
+        "2027-02-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02",
+        "2027-02-11",
+        "2027-02-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-359",
+      "poolTitel": "Was ist die Wesentlichkeitstheorie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18",
+        "2027-02-14"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "bgbat-001",
+      "poolTitel": "Was sind die Voraussetzungen und Rechtsfolgen einer wirksamen Anfechtung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 BGB",
+        "§ 123 BGB",
+        "§ 121 BGB",
+        "§ 124 BGB",
+        "§ 142 Abs. 1 BGB",
+        "§ 143 BGB",
+        "§ 144 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2026-12-01",
+        "2027-03-30"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "streit-28",
+      "poolTitel": "Widerspruchslösung bei Beweisverwertungsverboten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 257 StPO"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "handelsg-271",
+      "poolTitel": "Wann haftet der Gesellschafter einer GmbH persönlich?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 13 Abs. 2 GmbHG",
+        "§ 826 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-03-16",
+        "2027-05-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-224",
+      "slug": "2027-06-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Mit 15 das Rad verschenkt – ist es abhandengekommen?",
+          "titelZeilen": [
+            "Mit 15 das Rad",
+            "verschenkt – ist es",
+            "abhanden-",
+            "gekommen?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Natürlicher Wille zählt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Der 15-jährige S schenkt und übergibt sein teures Rad seinem Freund F. Die Übereignung ist ohne Zustimmung der Eltern unwirksam (§§ 107, 108 BGB). F verkauft das Rad an den gutgläubigen D. Scheitert Ds Erwerb nach § 932 BGB an § 935 Abs. 1 BGB?"
+        },
+        {
+          "art": "text",
+          "titel": "Der Maßstab",
+          "text": "Abhandengekommen ist eine Sache, wenn der Besitzer den unmittelbaren Besitz ohne seinen Willen verliert. Die Besitzaufgabe ist Realakt: Es zählt der natürliche Wille, nicht die Geschäftsfähigkeit. Täuschung macht sie nicht unfreiwillig. Offen ist, wie weit der Minderjährigenschutz reicht."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Weggabe durch Minderjährige",
+          "links": {
+            "titel": "Eine Ansicht",
+            "punkte": [
+              "Natürlicher Wille genügt, wenn der Minderjährige die Tragweite einsehen kann.",
+              "Dann freiwillig weggegeben – nicht abhandengekommen, D erwirbt."
+            ]
+          },
+          "rechts": {
+            "titel": "Andere Ansicht",
+            "punkte": [
+              "Wertung der §§ 104 ff. BGB: Minderjährigenschutz geht dem Verkehrsschutz vor.",
+              "Weggabe ist unfreiwillig – abhandengekommen, kein Erwerb."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "Bei Geschäftsunfähigen wird Abhandenkommen weitgehend bejaht – dort fehlt der beachtliche Wille.",
+            "Bei 15-Jährigen: Einsichtsfähigkeit am Sachverhalt festmachen (Wert der Sache, Alter, Umstände).",
+            "Entscheide mit Argument: Schutz des Minderjährigen gegen Schutz des redlichen Verkehrs."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 935 BGB fragt nach dem natürlichen Willen. Ob die Weggabe durch Minderjährige genügt, ist umstritten – Einsichtsfähigkeit oder Minderjährigenschutz?"
+        },
+        {
+          "art": "cta",
+          "titel": "§ 935 BGB in drei Fragen",
+          "punkte": [
+            "Unmittelbarer Besitz verloren?",
+            "Ohne natürlichen Willen?",
+            "Minderjährig? Streit entscheiden"
+          ],
+          "icons": [
+            "schluessel",
+            "person",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Mit 15 das Rad verschenkt – ist es abhandengekommen? § 935 Abs. 1 BGB stellt auf den unfreiwilligen Besitzverlust ab. Maßgeblich ist der natürliche Wille, nicht die Geschäftsfähigkeit. Eine Ansicht lässt deshalb den Willen eines einsichtsfähigen Minderjährigen genügen, eine andere schützt Minderjährige über die Wertung der §§ 104 ff. BGB. In der Klausur zählt die saubere Begründung. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#935bgb",
+        "#gutglaubenserwerb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abhandenkommen bei Weggabe durch Minderjährige",
+      "coverText": "Natürlicher Wille zählt",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Ob eine von einem Minderjährigen weggegebene Sache abhandengekommen ist, hängt am Maßstab für seinen Willen.",
+        "handlung": "{B} as a small young alien happily hands a shiny crystal bicycle wheel to a passer-by, while {A} stops mid-step with a heavy load and looks back with concern.",
+        "hinweisRegie": "Place the note in the free space between the young hands and the wheel, slightly tilted toward the handover, so the question of a valid will is linked to that moment without covering faces.",
+        "alternative": "{A} weighs a small hand-drawn gift tag against a heavy rulebook-shaped stone on a crystal scale while {B} waits holding the gift."
+      },
+      "bildSzene": "young alien hands over crystal wheel",
+      "bildSzeneAlt": "gift tag weighed against heavy stone",
+      "quellen": [
+        "§ 935 Abs. 1 BGB",
+        "§ 932 BGB",
+        "§§ 104 ff. BGB",
+        "§§ 107, 108 BGB",
+        "Themenpool: sachen-224"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.145Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-724",
+      "slug": "2027-06-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Notwehr: Wer provoziert, muss erst ausweichen",
+          "titelZeilen": [
+            "Notwehr: Wer",
+            "provoziert, muss",
+            "erst ausweichen"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Erforderlich ist nicht geboten",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A beleidigt B in einer Kneipe lautstark und grob. B stürzt sich mit den Fäusten auf A. A könnte ohne Weiteres durch die offene Tür hinausgehen. Stattdessen schlägt er B mit einer Bierflasche auf den Kopf. Ist A nach § 32 StGB gerechtfertigt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Notwehrlage und Erforderlichkeit",
+          "schritte": [
+            {
+              "titel": "Angriff gegenwärtig, rechtswidrig",
+              "text": "Bs Faustschläge sind ein gegenwärtiger, rechtswidriger Angriff auf As Körper. Die Beleidigung rechtfertigt sie nicht."
+            },
+            {
+              "titel": "Erforderlich",
+              "text": "Geeignet und das mildeste gleich wirksame Mittel. Ausweichen ist keine Verteidigung – die Erforderlichkeit lässt sich hier vertreten."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Gebotenheit",
+          "schritte": [
+            {
+              "titel": "Vorwerfbare Provokation",
+              "text": "A hat den Angriff durch rechtswidriges Vorverhalten (§ 185 StGB) in engem zeitlichem Zusammenhang herausgefordert."
+            },
+            {
+              "titel": "Abgestufte Pflichten",
+              "text": "Nach der Rspr.: erst ausweichen, dann Schutzwehr, erst zuletzt Trutzwehr mit gefährlichen Mitteln."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Das Notwehrrecht ist eingeschränkt: A hätte gefahrlos ausweichen können und müssen. Der Flaschenschlag ist nicht geboten, § 32 StGB greift nicht. A macht sich nach §§ 223, 224 Abs. 1 Nr. 2 StGB strafbar. Hätte A den Angriff absichtlich provoziert, wäre Notwehr nach h.M. sogar ganz ausgeschlossen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erforderlich heißt nicht geboten. Wer den Angriff vorwerfbar provoziert, muss erst ausweichen, dann sich schützen – und darf erst zuletzt zurückschlagen."
+        },
+        {
+          "art": "cta",
+          "titel": "Notwehr in vier Zügen",
+          "punkte": [
+            "Angriff: gegenwärtig und rechtswidrig?",
+            "Verteidigung erforderlich?",
+            "Geboten – oder Provokation?",
+            "Verteidigungswille"
+          ],
+          "icons": [
+            "blitz",
+            "waage",
+            "stopp",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Notwehr: Wer provoziert, muss erst ausweichen. Auch eine erforderliche Verteidigung ist nicht immer geboten. Hat der Verteidiger den Angriff durch rechtswidriges Vorverhalten herausgefordert, verlangt die Rechtsprechung ein abgestuftes Vorgehen: ausweichen, Schutzwehr, erst zuletzt Trutzwehr. Bei der Absichtsprovokation entfällt Notwehr nach h.M. ganz. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#notwehr",
+        "#32stgb",
+        "#strafrechtat",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Notwehr nach Provokation: erst ausweichen",
+      "coverText": "Erforderlich ist nicht geboten",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer den Angriff selbst herausgefordert hat, muss zuerst ausweichen, bevor er zurückschlagen darf.",
+        "handlung": "{A} raises a bottle in panic while {B} calmly holds open a door right beside him, pointing to the easy way out.",
+        "hinweisRegie": "Place the note in the open doorway area, slightly tilted toward the exit, so the duty to step away is clear without covering {A}'s raised bottle or {B}'s gesture.",
+        "alternative": "{B} draws three steps on the ground – step back, shield, strike – and blocks {A} from jumping straight to the last one."
+      },
+      "bildSzene": "open door beside raised bottle",
+      "bildSzeneAlt": "three steps drawn on ground",
+      "quellen": [
+        "§ 32 StGB",
+        "§ 185 StGB",
+        "§§ 223, 224 Abs. 1 Nr. 2 StGB",
+        "Themenpool: strafat-724"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.145Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-842",
+      "slug": "2027-06-01-b3",
+      "titelZeilen": [
+        "„Rechtswidrig“ im",
+        "Tatbestand? Nur",
+        "als Parteiansicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Rechtswidrig“ im Tatbestand? Nur als Parteiansicht",
+          "unter": "VG-Urteil · § 117 VwGO",
+          "text": "Der Tatbestand berichtet – er bewertet nicht.",
+          "norm": "§ 117 Abs. 2 Nr. 4, Abs. 3 VwGO",
+          "icon": "dokument",
+          "sprecher": "Dein Ergebnis hat im Tatbestand nichts verloren. Der Tatbestand berichtet, er bewertet nicht. So baust du ihn im Verwaltungsurteil auf.",
+          "marken": [
+            "berichten",
+            "nicht bewerten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einleitungssatz",
+          "text": "Worum streiten die Beteiligten? Ein Satz, ohne Wertung.",
+          "norm": null,
+          "sprecher": "Schritt eins: der Einleitungssatz. Ein Satz sagt, worum die Beteiligten streiten. Zum Beispiel: Der Kläger wendet sich gegen eine Gewerbeuntersagung.",
+          "marken": [
+            "worum geht's"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Geschehen und Verwaltungsverfahren",
+          "text": "Chronologisch, im Imperfekt: Sachverhalt, Bescheid, Widerspruch, Widerspruchsbescheid.",
+          "norm": null,
+          "sprecher": "Schritt zwei: das Geschehen und das Verwaltungsverfahren. Chronologisch und im Imperfekt. Also Sachverhalt, Bescheid mit Begründung, Widerspruch, Widerspruchsbescheid und Zustellung.",
+          "marken": [
+            "Imperfekt",
+            "chronologisch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vortrag des Klägers, dann Anträge",
+          "text": "Rechtsansichten nur als Vortrag: „Der Kläger ist der Ansicht …“ – in indirekter Rede.",
+          "norm": "§ 117 Abs. 3 VwGO",
+          "sprecher": "Schritt drei: die Klageerhebung, der Vortrag des Klägers und seine Anträge. Hier darf rechtswidrig stehen. Aber nur als seine Ansicht, in indirekter Rede: Der Kläger ist der Ansicht, der Bescheid sei rechtswidrig.",
+          "marken": [
+            "indirekte Rede"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Beklagter, dann Prozessgeschichte",
+          "text": "Antrag und Vortrag des Beklagten, Beweisaufnahme, Verweis auf die Akten.",
+          "norm": "§ 117 Abs. 3 S. 2 VwGO",
+          "sprecher": "Schritt vier: Antrag und Vortrag des Beklagten, danach die Prozessgeschichte. Zum Schluss verweist du wegen der Einzelheiten auf die Gerichts- und Behördenakten.",
+          "marken": [
+            "Prozessgeschichte"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Gedrängt, nicht vollständig",
+          "text": "Nur der wesentliche Inhalt – unter Hervorhebung der Anträge.",
+          "norm": "§ 117 Abs. 3 S. 1 VwGO",
+          "sprecher": "Wichtig: Nach § 117 Absatz 3 stellst du den Sach- und Streitstand nur seinem wesentlichen Inhalt nach gedrängt dar. Die Anträge hebst du hervor, üblich ist das Einrücken.",
+          "marken": [
+            "gedrängt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Berichten statt bewerten. Wertungen nur als Ansicht der Beteiligten.",
+          "norm": null,
+          "sprecher": "Merke: Im Tatbestand berichtest du. Wertungen erscheinen nur als Ansicht eines Beteiligten, in indirekter Rede.",
+          "marken": [
+            "berichten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Tatbestand ohne Mini-Gutachten",
+          "text": "Speichern für die nächste Urteilsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Urteilsklausur im öffentlichen Recht. Und lies deinen Tatbestand einmal nur auf Wertungen gegen.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "„Rechtswidrig“ im Tatbestand? Nur als Ansicht eines Beteiligten. Der Tatbestand des Verwaltungsurteils berichtet: Einleitungssatz, Geschehen und Verwaltungsverfahren im Imperfekt, Vortrag und Anträge des Klägers, Antrag und Vortrag des Beklagten, Prozessgeschichte. Nach § 117 Abs. 3 VwGO gedrängt und nur mit dem wesentlichen Inhalt. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#urteilsklausur",
+        "#tatbestand",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tatbestand im VG-Urteil: berichten, nicht bewerten",
+      "coverText": "Wertungen nur in indirekter Rede",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Der Tatbestand gibt nur wieder, was geschehen ist und was die Beteiligten meinen – er wertet nicht.",
+        "handlung": "{A} neatly files a stack of plain event cards in chronological order, while {B} gently removes one card stamped with a big red verdict and sets it aside.",
+        "hinweisRegie": "Place the note in the free space next to the removed verdict card, slightly tilted toward the neat stack, so the separation of report and judgment is visible without covering the cards.",
+        "alternative": "{B} holds up two speech bubbles from two opposing figures while {A} keeps his own opinion bubble firmly closed."
+      },
+      "bildSzene": "verdict card removed from stack",
+      "bildSzeneAlt": "two speech bubbles, closed opinion",
+      "quellen": [
+        "§ 117 Abs. 2 Nr. 4 VwGO",
+        "§ 117 Abs. 3 VwGO",
+        "Themenpool: assessoroer-842"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.146Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-854",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "Wer entscheidet über den Antrag nach § 80 Abs. 5 VwGO?",
+      "optionen": [
+        "Die Widerspruchsbehörde, weil sie mit der Sache befasst ist",
+        "Stets das Oberverwaltungsgericht als Eilgericht",
+        "Das Gericht der Hauptsache, in dringenden Fällen der Vorsitzende"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 80 Abs. 5, 8 VwGO",
+        "Themenpool: assessoroer-854"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.146Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-854",
+      "ueberzeile": "Auflösung",
+      "titel": "Das Gericht der Hauptsache – bei Dringlichkeit auch der Vorsitzende",
+      "text": "Zuständig ist das Gericht der Hauptsache (§ 80 Abs. 5 S. 1 VwGO) – in der Regel das VG, bei dem die Anfechtungsklage zu erheben ist oder schon läuft. In dringenden Fällen kann der Vorsitzende allein entscheiden (§ 80 Abs. 8 VwGO). In die Antragsschrift gehört deshalb das richtige Gericht wie bei der Klage.",
+      "norm": "§ 80 Abs. 5, 8 VwGO",
+      "quellen": [
+        "§ 80 Abs. 5, 8 VwGO",
+        "Themenpool: assessoroer-854"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.146Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Widerspruchsbehörde, weil sie mit der Sache befasst ist",
+        "Stets das Oberverwaltungsgericht als Eilgericht",
+        "Das Gericht der Hauptsache, in dringenden Fällen der Vorsitzende"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-359",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 80 Abs. 1 S. 2 GG: Die Verordnung darf nur ausfüllen, was das Gesetz vorgibt",
+      "text": "Inhalt, Zweck und Ausmaß einer Verordnungsermächtigung müssen im Gesetz bestimmt sein. Dahinter steht der Gedanke der Wesentlichkeitstheorie: Die grundlegenden, vor allem grundrechtsrelevanten Entscheidungen trifft das Parlament selbst. Je intensiver der Grundrechtseingriff, desto genauer muss das Gesetz sein.",
+      "norm": "Art. 80 Abs. 1 S. 2 GG · Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 80 Abs. 1 GG",
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-359"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.147Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-001",
+      "ueberzeile": "3 Punkte BGB AT",
+      "titel": "Wirksam angefochten – und dann? Drei Folgen, die du nennen musst",
+      "text": "Die Anfechtung beendet die Prüfung nicht. Diese Folgen gehören dazu:",
+      "punkte": [
+        "Nichtig von Anfang an (§ 142 Abs. 1 BGB)",
+        "Bei §§ 119, 120 BGB: Vertrauensschaden nach § 122 BGB, begrenzt auf das Erfüllungsinteresse",
+        "Schon Geleistetes: Rückabwicklung über § 812 Abs. 1 S. 1 Alt. 1 BGB"
+      ],
+      "quellen": [
+        "§ 142 Abs. 1 BGB",
+        "§ 122 BGB",
+        "§ 812 BGB",
+        "Themenpool: bgbat-001"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.147Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "streit-28",
+      "ueberzeile": "Streitstand StPO",
+      "titel": "Anwalt verweigert, trotzdem vernommen: Braucht das Verwertungsverbot einen Widerspruch?",
+      "norm": "§ 257 StPO · § 136 StPO",
+      "optionen": [
+        "BGH: ja – der verteidigte Angeklagte muss bis zum Zeitpunkt des § 257 StPO widersprechen.",
+        "Große Teile der Lit.: nein – das Gericht muss Verwertungsverbote von Amts wegen beachten."
+      ],
+      "text": "Klausur: Mit dem BGH ist der Widerspruch Voraussetzung. Die Lit. kritisiert, dass so die Last auf die Verteidigung verlagert wird. In der Revision den rechtzeitigen Widerspruch mitteilen.",
+      "quellen": [
+        "§ 257 StPO",
+        "§ 136 StPO",
+        "§ 137 StPO"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.147Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-271",
+      "ueberzeile": "Merksatz Gesellschaftsrecht",
+      "titel": "Vermögen vermischt: Dann haftet der Gesellschafter selbst",
+      "text": "Sonst haftet nur das GmbH-Vermögen (§ 13 Abs. 2 GmbHG). Sind Gesellschafts- und Privatvermögen nicht mehr zu trennen, haftet nach der Rspr. der verantwortliche Gesellschafter persönlich.",
+      "norm": "§ 13 Abs. 2 GmbHG",
+      "quellen": [
+        "§ 13 Abs. 2 GmbHG",
+        "Themenpool: handelsg-271"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:56:45.147Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,893 @@
+{
+  "datum": "2027-05-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "stpo-769",
+        "themaTitel": "Zeugnisverweigerungsrechte",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "vwgo-656",
+        "themaTitel": "Feststellungsklage",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:09",
+        "art": "frage",
+        "themaId": "assessorz-815"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:09",
+        "art": "antwort",
+        "themaId": "assessorz-815"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "zpo-556"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "fehler",
+        "themaId": "methodik-939"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "tipp",
+        "themaId": "strafbt-752"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "zahl",
+        "themaId": "methodik-906"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "stpo-769",
+      "poolTitel": "Zeugnisverweigerungsrechte",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 52 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-03-05",
+        "2027-05-05"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-656",
+      "poolTitel": "Feststellungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 43 VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-11-04",
+        "2027-01-07",
+        "2027-01-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-815",
+      "poolTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-02-26",
+        "2027-02-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-815",
+      "poolTitel": "Wie lautet der Tenor nach zulässigem Einspruch?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-02-26",
+        "2027-02-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-556",
+      "poolTitel": "Widerklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 33, 263 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2026-12-03"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "methodik-939",
+      "poolTitel": "Hausarbeit: Phasen, Gliederung und Zitierweise im Griff",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-02",
+        "2027-01-31"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafbt-752",
+      "poolTitel": "Räuberischer Diebstahl",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 252 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18",
+        "2027-03-09",
+        "2027-05-04"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "methodik-906",
+      "poolTitel": "Sachverhaltssignale für Standardprobleme lesen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-02-06",
+        "2027-03-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-05-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen – wo sitzt die Lücke?",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen –",
+            "wo sitzt",
+            "die Lücke?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 767 ZPO: Für die Präklusion zählt nach dem BGH die Aufrechnungslage, nicht die Erklärung.",
+            "§ 323 Abs. 4 BGB: Rücktritt schon vor Fälligkeit, wenn das Scheitern offensichtlich ist.",
+            "EBV: erst die Vindikationslage im maßgeblichen Zeitpunkt, dann Nutzungen und Verwendungen.",
+            "DSL: Anspruch beim Gläubiger, Schaden beim Dritten, zufällig verlagert.",
+            "Eigentumsvorbehalt: Kaufvertrag unbedingt, nur die Übereignung ist bedingt.",
+            "§ 477 BGB: Vermutet wird der Mangel bei Gefahrübergang – den Zustand beweist der Käufer."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Beruhen: bei § 338 StPO vermutet, sonst genügt, dass ein anderes Urteil möglich ist.",
+            "Untreue: Auch der Missbrauch braucht nach h.M. eine Vermögensbetreuungspflicht.",
+            "§ 227 StGB: Auch der Tod auf der Flucht kann die typische Gefahr verwirklichen.",
+            "Inhalt der Kommunikation: § 100a StPO. Wer, wann, wie lange: § 100g StPO.",
+            "Schmiere stehen: je nach Tatplan und Beuteanteil Mittäterschaft."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Eilrechtsschutz: Anfechtung § 80 Abs. 5, Drittwirkung § 80a, sonst § 123 VwGO.",
+            "Unrichtige Rechtsbehelfsbelehrung: Jahresfrist nach § 58 Abs. 2 VwGO.",
+            "Urteils-VB: Betroffenheit kurz, Rechtsweg und Monatsfrist genau.",
+            "Verpflichtungsklage: Anspruch prüfen – die Spruchreife entscheidet über Satz 1 oder 2.",
+            "Änderungsgesetz: zustimmungsbedürftig nur mit eigenem Tatbestand oder neuer Tragweite."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Drei Darstellungsstufen: ein Satz, drei Sätze oder ausführlich – festgelegt in der Skizze.",
+            "Schlechte Probeklausur: Ursache, Muster, eine Änderung, nächster Termin."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Aufrechnungslage schon vor dem Urteil: Hilft § 767 ZPO noch?",
+            "Welche Frist gilt bei unrichtiger Rechtsbehelfsbelehrung?",
+            "Was vermutet § 477 BGB – und was nicht?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Zeitpunkt",
+            "Strafrecht über Abgrenzungen",
+            "Öffentliches Recht über Rechtsbehelfe",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – von der Präklusion bei § 767 ZPO über Untreue und § 227 StGB bis zum Eilrechtsschutz nach §§ 80, 123 VwGO. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch, mach den Selbsttest und markier dir den Bereich, der am meisten wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Am Ende der Woche zeigt ein kurzer Selbsttest, welcher Bereich noch nicht sitzt.",
+        "handlung": "{A} taps four stacked crystal blocks one after another with his pointer, while {B} leans an ear close and notices that one block sounds hollow.",
+        "hinweisRegie": "Place the note in the free space beside the hollow-sounding block, slightly tilted toward it, so the weak spot is highlighted without covering {A}'s pointer or {B}'s listening face.",
+        "alternative": "{B} tests four rope bridges with a heavy sack, while {A} marks the one that sags the most."
+      },
+      "bildSzene": "tapping four crystal blocks, one hollow",
+      "bildSzeneAlt": "four rope bridges, one sags",
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 323 Abs. 4 BGB",
+        "§§ 987 ff. BGB",
+        "§ 449 BGB",
+        "§ 477 BGB",
+        "§§ 337, 338 StPO",
+        "§ 266 StGB",
+        "§ 227 StGB",
+        "§§ 100a, 100g StPO",
+        "§ 25 StGB",
+        "§§ 80, 123 VwGO",
+        "§ 58 VwGO",
+        "§ 93 BVerfGG",
+        "§ 113 Abs. 5 VwGO",
+        "Art. 77 GG",
+        "Themenpool: methodik-902",
+        "Themenpool: mindset-3"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.109Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-769",
+      "slug": "2027-05-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ehefrau schweigt vor Gericht – ihre Polizeiaussage ist dann tabu",
+          "titelZeilen": [
+            "Ehefrau schweigt",
+            "vor Gericht – ihre",
+            "Polizeiaussage",
+            "ist dann tabu"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "§ 252 StPO sperrt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 52 StPO gibt Angehörigen das Recht, das Zeugnis zu verweigern: Verlobten, Ehegatten und Lebenspartnern – auch nach dem Ende der Ehe –, nahen Verwandten und Verschwägerten. § 53 StPO schützt Berufsgeheimnisträger, § 53a StPO ihre Gehilfen. Für die Verwertung prüfst du vier Schritte."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Zeugnisverweigerungsrecht?",
+              "text": "Gehört der Zeuge zum Kreis der §§ 52, 53, 53a StPO – im Verhältnis zu diesem Beschuldigten?"
+            },
+            {
+              "titel": "2. Belehrung",
+              "text": "Angehörige sind vor jeder Vernehmung zu belehren (§ 52 Abs. 3 S. 1 StPO). Fehlt sie, ist die Aussage grundsätzlich unverwertbar."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Verweigerung in der Hauptverhandlung",
+              "text": "§ 252 StPO: kein Verlesen der früheren Aussage – nach der Rspr. auch keine Vernehmung der Polizeibeamten dazu."
+            },
+            {
+              "titel": "4. Ausnahmen",
+              "text": "Vernehmung des Richters, der den Zeugen nach Belehrung vernommen hat. Oder der Zeuge gestattet nach qualifizierter Belehrung die Verwertung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: spontane Äußerungen",
+          "text": "§ 252 StPO erfasst nach der Rspr. nur Aussagen aus einer Vernehmung. Was die Zeugin außerhalb einer Vernehmung von sich aus sagt, etwa spontan beim Eintreffen der Polizei, kann verwertbar bleiben. Prüfe deshalb genau, in welcher Situation die Äußerung fiel."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verweigert der Angehörige in der Hauptverhandlung, ist seine polizeiliche Aussage gesperrt. Der Ermittlungsrichter darf nach Belehrung berichten."
+        },
+        {
+          "art": "cta",
+          "titel": "Zeugnisverweigerung in vier Zügen",
+          "punkte": [
+            "Recht nach §§ 52 ff. StPO?",
+            "Ordnungsgemäß belehrt?",
+            "In der Hauptverhandlung verweigert?",
+            "Richter oder Gestattung?"
+          ],
+          "icons": [
+            "familie",
+            "dokument",
+            "stopp",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Die Ehefrau schweigt in der Hauptverhandlung – dann ist ihre Aussage bei der Polizei gesperrt. § 252 StPO verbietet das Verlesen, nach der Rspr. dürfen auch die Vernehmungsbeamten nicht berichten. Ausnahmen: der Richter, der sie nach Belehrung vernommen hat, und die Gestattung der Verwertung nach qualifizierter Belehrung. Spontane Äußerungen außerhalb einer Vernehmung erfasst § 252 StPO nicht. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#zeugnisverweigerungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zeugnisverweigerung: Was bleibt verwertbar?",
+      "coverText": "§ 252 StPO sperrt",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Verweigert eine Angehörige vor Gericht das Zeugnis, darf ihre frühere Aussage bei der Polizei nicht eingeführt werden.",
+        "handlung": "{A} closes a heavy door on an old recorded message box, while {B} points with his pointer at a single side window that remains open.",
+        "hinweisRegie": "Place the note in the free space between the closed door and the open side window, slightly tilted toward the window, so the rule and its exception are both visible without covering {A}'s hand on the door.",
+        "alternative": "{B} seals a stack of old letters with wax, while {A} lifts out one single letter carrying a special stamp."
+      },
+      "bildSzene": "door closed on message box",
+      "bildSzeneAlt": "sealed letters, one lifted out",
+      "quellen": [
+        "§ 52 StPO",
+        "§ 53 StPO",
+        "§ 53a StPO",
+        "§ 252 StPO",
+        "Themenpool: stpo-769"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.109Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-656",
+      "slug": "2027-05-23-b3",
+      "titelZeilen": [
+        "Wirtschaftliches",
+        "Interesse – reicht",
+        "das für § 43 VwGO?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Reicht ein wirtschaftliches Interesse für § 43 VwGO?",
+          "unter": "Feststellungsklage · § 43 VwGO",
+          "text": "Berechtigtes Interesse ist weiter als rechtliches Interesse.",
+          "norm": "§ 43 Abs. 1 VwGO",
+          "icon": "lupe",
+          "sprecher": "Reicht ein wirtschaftliches Interesse für die Feststellungsklage? Ja. § 43 VwGO verlangt ein berechtigtes Interesse, und das ist weiter als das rechtliche Interesse der ZPO. Die Zulässigkeit prüfst du in vier Schritten.",
+          "marken": [
+            "berechtigt > rechtlich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Feststellungsfähiges Rechtsverhältnis",
+          "text": "Konkrete Rechtsbeziehung aus einem Sachverhalt – keine abstrakte Rechtsfrage.",
+          "norm": "§ 43 Abs. 1 VwGO",
+          "sprecher": "Schritt eins: ein feststellungsfähiges Rechtsverhältnis. Gemeint ist eine konkrete rechtliche Beziehung, die sich aus einem bestimmten Sachverhalt aufgrund einer öffentlich-rechtlichen Norm ergibt. Eine abstrakte Rechtsfrage genügt nicht.",
+          "marken": [
+            "konkret"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Berechtigtes Interesse",
+          "text": "Rechtlich, wirtschaftlich oder ideell – schutzwürdig muss es sein.",
+          "norm": "§ 43 Abs. 1 VwGO",
+          "sprecher": "Schritt zwei: das berechtigte Interesse an baldiger Feststellung. Es kann rechtlicher, wirtschaftlicher oder ideeller Art sein. Wer zum Beispiel investieren will und wissen muss, ob sein Betrieb erlaubnisfrei ist, hat es.",
+          "marken": [
+            "auch wirtschaftlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Subsidiarität",
+          "text": "Gestaltungs- oder Leistungsklage möglich? Dann grundsätzlich nicht.",
+          "norm": "§ 43 Abs. 2 S. 1 VwGO",
+          "sprecher": "Schritt drei: die Subsidiarität. Kann der Kläger seine Rechte durch Gestaltungs- oder Leistungsklage verfolgen, ist die Feststellungsklage grundsätzlich unzulässig. Das BVerwG legt das aber eng aus, wenn keine Umgehung von Frist und Vorverfahren droht.",
+          "marken": [
+            "§ 43 Abs. 2"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Klagebefugnis analog",
+          "text": "Das BVerwG verlangt sie analog § 42 Abs. 2 VwGO – umstritten.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "sprecher": "Schritt vier: die Klagebefugnis. Das BVerwG verlangt sie analog Paragraf 42 Absatz 2, um Popularklagen auszuschließen. Teile der Literatur halten das für überflüssig, weil schon das berechtigte Interesse filtert.",
+          "marken": [
+            "analog § 42 II"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Sonderfall Nichtigkeit",
+          "text": "Nichtigkeitsfeststellung: keine Subsidiarität.",
+          "norm": "§ 43 Abs. 2 S. 2 VwGO",
+          "sprecher": "Ein Sonderfall: Will der Kläger die Nichtigkeit eines Verwaltungsakts feststellen lassen, gilt die Subsidiarität nicht. Das steht ausdrücklich in § 43 Absatz 2 Satz 2.",
+          "marken": [
+            "Nichtigkeit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Rechtsverhältnis, berechtigtes Interesse, Subsidiarität, Klagebefugnis.",
+          "norm": "§ 43 VwGO",
+          "sprecher": "Merke: konkretes Rechtsverhältnis, berechtigtes Interesse, keine vorrangige Klageart und Klagebefugnis analog Paragraf 42. Und berechtigt heißt: auch wirtschaftlich oder ideell.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Erlaubnisfall abrufen",
+          "text": "Speichern für die nächste Verwaltungsprozessklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Verwaltungsprozessrecht. Und schreib beim Interesse immer dazu, welcher Art es ist.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Reicht ein wirtschaftliches Interesse für die Feststellungsklage? Ja: § 43 Abs. 1 VwGO verlangt ein berechtigtes Interesse – rechtlich, wirtschaftlich oder ideell. Dazu kommen ein konkretes Rechtsverhältnis, die Subsidiarität nach § 43 Abs. 2 S. 1 VwGO, die bei der Nichtigkeitsfeststellung nicht gilt, und nach dem BVerwG die Klagebefugnis analog § 42 Abs. 2 VwGO. Speichern für die nächste Verwaltungsprozessklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#feststellungsklage",
+        "#verwaltungsprozessrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Feststellungsklage: Welches Interesse genügt?",
+      "coverText": "Auch wirtschaftlich oder ideell",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Für die verwaltungsgerichtliche Feststellungsklage genügt auch ein wirtschaftliches oder ideelles Interesse.",
+        "handlung": "{A} curiously holds up a small bag of coins at a gate labelled only with a symbol, while {B} nervously checks whether the gate will open for it.",
+        "hinweisRegie": "Place the note in the free space above the gate, slightly tilted toward the coin bag, so the question of which interest opens the way is visible without covering {B}'s hand on the latch.",
+        "alternative": "{B} shows a blueprint for a new workshop to a closed door, while {A} waits to see whether it swings open."
+      },
+      "bildSzene": "coin bag held up at gate",
+      "bildSzeneAlt": "workshop blueprint at closed door",
+      "quellen": [
+        "§ 43 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "Themenpool: vwgo-656"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.110Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-815",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "VU gegen B, zulässiger Einspruch, die Klage erweist sich als unbegründet. Wer trägt die Säumniskosten?",
+      "optionen": [
+        "K trägt alle Kosten – er hat verloren",
+        "B trägt die Kosten seiner Säumnis, K die übrigen",
+        "B trägt alle Kosten – er hat das VU verursacht"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO",
+        "§ 91 ZPO",
+        "Themenpool: assessorz-815"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.110Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-815",
+      "ueberzeile": "Auflösung",
+      "titel": "B zahlt die Säumniskosten – obwohl er gewinnt",
+      "text": "Tenor: Das VU wird aufgehoben, die Klage abgewiesen. Die Kosten trägt grundsätzlich K (§ 91 ZPO). Die durch die Säumnis veranlassten Kosten trägt aber B, soweit das VU in gesetzlicher Weise ergangen ist (§ 344 ZPO). Etwa: „Der Kläger trägt die Kosten des Rechtsstreits mit Ausnahme der durch die Säumnis des Beklagten veranlassten Kosten; diese trägt der Beklagte.“",
+      "norm": "§ 343 ZPO · § 344 ZPO",
+      "quellen": [
+        "§ 343 ZPO",
+        "§ 344 ZPO",
+        "§ 91 ZPO",
+        "Themenpool: assessorz-815"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.110Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "K trägt alle Kosten – er hat verloren",
+        "B trägt die Kosten seiner Säumnis, K die übrigen",
+        "B trägt alle Kosten – er hat das VU verursacht"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-556",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 33 ZPO: Der Zusammenhang – Gerichtsstand oder Voraussetzung jeder Widerklage?",
+      "text": "Dem Wortlaut nach begründet § 33 Abs. 1 ZPO nur einen Gerichtsstand für die Widerklage, wenn der Gegenanspruch mit der Klage zusammenhängt. Die Rspr. verlangt den Zusammenhang zudem als besondere Zulässigkeitsvoraussetzung; die Literatur sieht darin überwiegend nur eine Zuständigkeitsregel. Grenze: ausschließliche Zuständigkeit (§ 33 Abs. 2 ZPO).",
+      "norm": "§ 33 ZPO",
+      "quellen": [
+        "§ 33 ZPO",
+        "§ 40 Abs. 2 ZPO",
+        "Themenpool: zpo-556"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.110Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-939",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Hausarbeit: Darf ich Urteile aus dem Kommentar zitieren, ohne sie gelesen zu haben?",
+      "falsch": "Der Kommentar nennt die BGH-Entscheidung – also übernehme ich die Fundstelle direkt in meine Fußnote.",
+      "richtigText": "Zitiere nur, was du selbst überprüft hast. Übernommene, ungelesene Nachweise sind Blindzitate: Falsche Seitenzahlen oder verkürzte Aussagen fallen bei der Korrektur auf. Lies die Entscheidung nach – oder mach offen kenntlich, woher du den Nachweis hast.",
+      "quellen": [
+        "Themenpool: methodik-939"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.110Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-752",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Gewalt vor oder nach der Wegnahme? Erst die Vollendung klären",
+      "text": "Entscheidend ist der Zeitpunkt der Gewalt: Setzt der Täter sie ein, um die Wegnahme erst zu ermöglichen, prüfst du § 249 StGB. Ist der Diebstahl schon vollendet, aber noch nicht beendet, und will er die Beute sichern, ist § 252 StGB einschlägig. Stell deshalb zuerst fest, wann der Gewahrsam gebrochen war – bei der Gewahrsamsenklave oft früher als gedacht.",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 249 StGB",
+        "§ 252 StGB",
+        "Themenpool: strafbt-752"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.110Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-906",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Vier Sätze im ÖR-Sachverhalt – und was sie ankündigen",
+      "text": "Ein auffälliger Satz steht selten zufällig da. Markiere ihn und ordne ihn einem Prüfungspunkt zu.",
+      "punkte": [
+        "„Sofortige Vollziehung angeordnet“: § 80 Abs. 5 VwGO, Begründung nach § 80 Abs. 3",
+        "„Ohne vorher angehört zu werden“: § 28 VwVfG und Heilung nach § 45",
+        "„Der Nachbar erfährt erst später davon“: Drittanfechtung und Frist",
+        "„Die Stadt verweigert die Stadthalle“: Zulassungsanspruch nach Gemeindeordnung"
+      ],
+      "quellen": [
+        "§ 80 VwGO",
+        "§ 28 VwVfG",
+        "§ 45 VwVfG",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: methodik-906"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:57:21.110Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
