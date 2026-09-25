@@ -15,6 +15,12 @@ const HOOKS = new Set(["fehler", "zahl", "frage", "aussage"]);
 const BRUCH = /(?:§|§§|Art\.|Abs\.|Satz|S\.|Nr\.|Alt\.|lit\.)$/;
 const VERBOTEN = /link in (der )?bio|www\.|https?:\/\/|@herrjurist|instagram\.com/i;
 const leer = (x) => !String(x ?? "").trim();
+/* Fehler-Hooks ja, das Etikett „Fehler/falsch“ aber sparsam: Der Irrtum soll im
+   Kopf des Lesers entstehen. Höchstens ein Cover je Tag trägt das Etikett. */
+export const ETIKETT = /fehler|falsch|irrtum|sagt nein|\s=\s|^=|=\s*\S+\?/i;
+export function coverTitel(c) {
+  return [c?.folien?.[0]?.titel, ...(c?.folien?.[0]?.titelZeilen || []), c?.szenen?.[0]?.titel, ...(c?.titelZeilen || [])].filter(Boolean).join(" ");
+}
 
 export function tagPruefen(tag, datei = tag?.datum || "?") {
   const f = [];
@@ -76,6 +82,9 @@ export function tagPruefen(tag, datei = tag?.datum || "?") {
       }
     } else w("weder folien noch szenen");
   }
+
+  const etikettiert = b.filter((p) => ETIKETT.test(coverTitel(tag.inhalte?.[p.slot])));
+  if (etikettiert.length > 1) fehler(`Fehler-Etikett („Fehler/falsch/=…?“) auf ${etikettiert.length} Covern (${etikettiert.map((p) => p.slot).join(", ")}) – höchstens 1 je Tag, Irrtum ohne Etikett formulieren`);
 
   for (const p of s.filter((x) => !x.beitragSlot)) {
     const x = tag.inhalte?.[p.slot];

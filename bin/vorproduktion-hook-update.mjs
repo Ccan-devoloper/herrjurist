@@ -17,7 +17,8 @@ if (String(process.env.IG_STIMME || "").toLowerCase() !== "piper") throw new Err
 
 const { Hosting } = await import("../src/hosting.mjs");
 const { reelBauen } = await import("../src/reel.mjs");
-const { browserBeenden } = await import("../src/render.mjs");
+const { browserBeenden, htmlZuJpeg, kontext } = await import("../src/render.mjs");
+const { folieHtml, MASSE } = await import("../src/vorlagen.mjs");
 
 const update = JSON.parse(fs.readFileSync(new URL("../vorproduktion/hook-update.json", import.meta.url), "utf8"));
 const host = new Hosting({ pushen: true }).vorbereiten();
@@ -37,6 +38,12 @@ for (const [key, u] of Object.entries(update.beitraege)) {
   const tag = lesen(datum);
   const b = tag.inhalte?.[slot];
   if (!b) throw new Error(`${key}: Beitrag fehlt`);
+  const alterTitel = b.folien ? (b.folien.find((f) => f.art === "titel") || b.folien[0]).titel : b.szenen?.[0]?.titel;
+  /* Die Hook-Zeile eines früheren Durchgangs steht als erster Absatz in der
+     Caption – ersetzen statt eine zweite davorzusetzen. */
+  if (b.hookUpdate && typeof b.caption === "string" && alterTitel && b.caption.startsWith(`${alterTitel}\n\n`)) {
+    b.caption = b.caption.slice(alterTitel.length + 2);
+  }
   if (Array.isArray(b.folien)) {
     const t = b.folien.find((f) => f.art === "titel") || b.folien[0];
     t.titel = u.titel;
@@ -65,6 +72,24 @@ try {
     fs.rmSync(ziel, { recursive: true, force: true });
     const reel = await reelBauen(beitrag, ziel, { datum, layout: "erklaer", clip: null, framesBehalten: false });
     console.log(`${datum} ${slot}: Reel neu gebaut (${Math.round(reel.dauer)} s, ${reel.anbieter})`);
+  }
+  /* Slots ohne hochgeladenes Motiv bekommen ihr Cover hier; alle anderen
+     rendert danach vorproduktion-coverbilder-anwenden mit dem Freisteller. */
+  let angewandt = new Set();
+  try {
+    const a = JSON.parse(fs.readFileSync(path.join(host.dir, "vorproduktion", "coverbilder-anwendung.json"), "utf8"));
+    angewandt = new Set((a.eintraege || []).map((e) => `${e.datum}/${e.slot}`));
+  } catch { /* noch keine Cover angewandt */ }
+  for (const key of Object.keys(update.beitraege)) {
+    if (angewandt.has(key)) continue;
+    const [datum, slot] = key.split("/");
+    const tag = lesen(datum);
+    const b = tag.inhalte[slot];
+    if (!Array.isArray(b.folien)) continue;
+    const t = { ...(b.folien.find((f) => f.art === "titel") || b.folien[0]), coverBildAuslassen: true, bild: null };
+    const ziel = path.join(host.dir, tag.renderVorschau?.pfad || `vorproduktion/${datum}/fertig`, slot, `${datum}-${slot}-01.jpg`);
+    await htmlZuJpeg(folieHtml(t, kontext({ fach: b.fach, klausur: b.klausur, fachLabel: b.fachLabel }), 1, b.folien.length), MASSE.beitrag, ziel);
+    console.log(`${key}: Cover ohne Motiv neu gerendert`);
   }
 } finally {
   await browserBeenden().catch(() => {});
