@@ -49,6 +49,23 @@ jobs:
       GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
       PIPER_VOICES_DIR: /home/runner/.cache/piper-voices
     steps:
+      - name: Kostensperre (keine bezahlten APIs)
+        run: |
+          # Dieser Workflow darf nie API-Kosten erzeugen: keine Schlüssel, nur Piper offline,
+          # und die Hosts bezahlter Anbieter sind im Runner gesperrt.
+          for v in OPENAI_API_KEY ANTHROPIC_API_KEY ELEVENLABS_API_KEY PEXELS_API_KEY ELEVENLABS_VOICE_ID; do
+            if [ -n "${!v}" ]; then echo "::error::$v ist gesetzt – Abbruch"; exit 1; fi
+          done
+          if env | grep -E '^[A-Z0-9_]*(API_KEY|API_TOKEN|_SECRET)=' | grep -vE '=$' ; then
+            echo "::error::Unerwarteter API-Schlüssel in der Umgebung – Abbruch"; exit 1
+          fi
+          [ "$IG_STIMME" = "piper" ] && [ "$IG_BILD_KI" = "false" ] && [ "$IG_BILDER" = "false" ] && [ "$IG_CHARAKTERE" = "false" ] \
+            || { echo "::error::Nur providerfreier Modus erlaubt"; exit 1; }
+          for h in api.openai.com api.anthropic.com api.elevenlabs.io api.pexels.com generativelanguage.googleapis.com api.replicate.com fal.run queue.fal.run; do
+            echo "0.0.0.0 $h" | sudo tee -a /etc/hosts >/dev/null
+          done
+          echo "Kostensperre aktiv."
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
