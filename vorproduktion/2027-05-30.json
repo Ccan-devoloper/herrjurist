@@ -1,0 +1,884 @@
+{
+  "datum": "2027-05-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "verwbt-117",
+        "themaTitel": "Wann hat ein Gemeinderatsmitglied ein Mitwirkungsverbot?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "assessorz-577",
+        "themaTitel": "Beweisstation im Urteil",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:18",
+        "art": "frage",
+        "themaId": "strafbt-757"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:18",
+        "art": "antwort",
+        "themaId": "strafbt-757"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:02",
+        "art": "norm",
+        "themaId": "schuldbt-478"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "fehler",
+        "themaId": "assessorz-919"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "tipp",
+        "themaId": "stpo-774"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "zahl",
+        "themaId": "ipr-894"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwbt-117",
+      "poolTitel": "Wann hat ein Gemeinderatsmitglied ein Mitwirkungsverbot?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2027-01-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-577",
+      "poolTitel": "Beweisstation im Urteil",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 286 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-757",
+      "poolTitel": "Erschleichen von Leistungen",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 265a StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-25",
+        "2027-03-24"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-757",
+      "poolTitel": "Erschleichen von Leistungen",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 265a StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-25",
+        "2027-03-24"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-478",
+      "poolTitel": "Kündigungsbutton und Online-Verträge",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 312k BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-24",
+        "2027-02-26",
+        "2027-05-28"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessorz-919",
+      "poolTitel": "Kautelarklausur: Wie entwirft man einen interessengerechten Vertrag?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 305-310 BGB",
+        "§ 311b Abs. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-02-13"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "stpo-774",
+      "poolTitel": "Telefon-/Telekommunikationsüberwachung im Überblick",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 100a ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-19",
+        "2026-11-05",
+        "2027-05-20"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "ipr-894",
+      "poolTitel": "Wie schützt das IPR Verbraucher und Arbeitnehmer?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 6 Rom I-VO",
+        "Art. 8 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-04",
+        "2027-01-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-05-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen – wo hakt es noch?",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen – wo",
+            "hakt es noch?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Dienst oder Werk: Ist ein Erfolg geschuldet? Die Abrechnung nach Stunden entscheidet nichts.",
+            "Arbeitsgericht: Urteil kraft Gesetzes vorläufig vollstreckbar (§ 62 ArbGG), Streitwert im Urteil.",
+            "Örtliche Zuständigkeit: Beklagtenwohnsitz oder Tatort (§§ 13, 32 ZPO) – nicht der Klägerwohnsitz.",
+            "Anscheinsvollmacht: erst §§ 170–172 BGB, dann Auftreten von gewisser Dauer.",
+            "Kündigungsbutton: zusätzlicher Weg – die Kündigung per E-Mail bleibt wirksam."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "TKÜ-Zufallsfund: als Beweis nur für eine Katalogtat (§ 479 Abs. 2, § 161 Abs. 3 StPO).",
+            "§ 228 StGB: Sittenwidrig ist die Tat – maßgeblich ist das Gewicht der Verletzung.",
+            "Strafklageverbrauch: gesperrt ist die ganze prozessuale Tat (§ 264 StPO).",
+            "Amtsträger: auch ohne Beamtenstatus (§ 11 Abs. 1 Nr. 2 StGB).",
+            "Untreue: ohne Vermögensbetreuungspflicht kein § 266 StGB – dann §§ 242, 246 StGB.",
+            "§ 261 StPO: Schweigen ist kein Indiz, Teilschweigen schon."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Drittwirkung: In der Urteilsverfassungsbeschwerde ist das Zivilurteil der Eingriff.",
+            "Doppelfunktionale Maßnahme: Der Schwerpunkt bestimmt den Rechtsweg.",
+            "Erledigter Platzverweis: Fortsetzungsfeststellungsklage analog § 113 Abs. 1 S. 4 VwGO.",
+            "Klagebefugnis: Adressatentheorie oder Schutznorm, die auch den Dritten schützt.",
+            "Unrichtige Belehrung: Jahresfrist nach § 58 Abs. 2 VwGO – vor jeder Wiedereinsetzung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "7-30-90: Was beim Abruf hakt, startet wieder bei Tag 7.",
+            "Rückstand im Lernplan: neu priorisieren statt alles nachholen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Welcher Gerichtsstand steht dem Kläger nie zur Verfügung?",
+            "Was prüfst du vor § 266 StGB zuerst?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Vertragstyp und Zuständigkeit",
+            "Strafrecht über Tatbegriff und Pflichten",
+            "Öffentliches Recht über Klageart und Frist",
+            "Lernplan mit Rücksprungregel"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – vom Stundenlohn im Werkvertrag über den Griff in die Kasse bis zur Jahresfrist nach § 58 Abs. 2 VwGO. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, was noch hakt. Das kommt nächste Woche auf die Wiederholungsliste. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Am Ende der Woche zeigt sich, welcher Teil des Stoffs schon trägt und welcher noch nachgeschärft werden muss.",
+        "handlung": "{A} runs his pointer along four stacked crystal layers in a mine wall, while {B} taps each layer with a small hammer and stops at the one that sounds hollow.",
+        "hinweisRegie": "Place the note in the free space beside the hollow-sounding crystal layer, slightly tilted toward it, so the weak area stands out without covering {B}'s hammer or {A}'s pointer.",
+        "alternative": "{B} tests four rope bridges one after another with his foot, and {A} ties a marker ribbon to the one that sags."
+      },
+      "bildSzene": "tapping four crystal layers, one hollow",
+      "bildSzeneAlt": "testing four rope bridges",
+      "quellen": [
+        "§§ 611, 631 BGB",
+        "§ 62 ArbGG",
+        "§§ 13, 32 ZPO",
+        "§§ 170–172 BGB",
+        "§ 312k BGB",
+        "§ 100a StPO",
+        "§ 228 StGB",
+        "§ 264 StPO",
+        "§ 11 StGB",
+        "§ 266 StGB",
+        "§ 261 StPO",
+        "Art. 1 Abs. 3 GG",
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "§ 58 Abs. 2 VwGO",
+        "Themenpool: methodik-909",
+        "Themenpool: mindset-4"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.393Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-117",
+      "slug": "2027-05-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Befangen im Rat: vier Punkte – die Meinung zählt nicht",
+          "titelZeilen": [
+            "Befangen im Rat:",
+            "vier Punkte – die",
+            "Meinung zählt nicht"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Sonderinteresse statt Meinung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Ratsmitglieder dürfen nicht über Angelegenheiten mitentscheiden, die ihnen selbst unmittelbar nützen oder schaden. Die Einzelheiten regeln die Gemeindeordnungen der Länder unterschiedlich. Gemeinsam ist ihnen: Es geht um ein individuelles Sonderinteresse – nicht um politische Überzeugungen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Betroffene Person",
+              "text": "Das Ratsmitglied selbst, nahe Angehörige oder Personen, die es vertritt – der Kreis ergibt sich aus der jeweiligen Gemeindeordnung."
+            },
+            {
+              "titel": "2. Unmittelbarer Vorteil oder Nachteil",
+              "text": "Die Entscheidung muss die Person individuell berühren, ohne dass weitere Zwischenschritte nötig sind."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Keine Ausnahme",
+              "text": "Nicht befangen ist, wer nur als Teil einer Berufs- oder Bevölkerungsgruppe betroffen ist. Je nach Land weitere Ausnahmen."
+            },
+            {
+              "titel": "4. Rechtsfolge",
+              "text": "Weder beraten noch entscheiden. Wirkt ein Befangener mit, ist der Beschluss grundsätzlich rechtswidrig – Heilung je nach Landesrecht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Bebauungsplan",
+          "text": "Besitzt das Ratsmitglied ein Grundstück im Plangebiet, liegt ein unmittelbarer Vorteil oder Nachteil häufig nahe. Bei Satzungen prüfst du zudem, ob der Verfahrensfehler nach der Gemeindeordnung unbeachtlich geworden ist, etwa durch Fristablauf ohne Rüge."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Mitwirkungsverbot: persönliches Sonderinteresse, unmittelbar, keine Gruppenausnahme. Politische Meinung allein macht nicht befangen."
+        },
+        {
+          "art": "cta",
+          "titel": "Befangenheit im Rat in drei Fragen",
+          "punkte": [
+            "Wer ist betroffen?",
+            "Unmittelbar und individuell?",
+            "Greift eine Ausnahme?"
+          ],
+          "icons": [
+            "wahlurne",
+            "person",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Befangen im Gemeinderat ist nicht, wer eine feste Meinung hat. Die Gemeindeordnungen knüpfen an ein individuelles Sonderinteresse an: Die Entscheidung muss dem Ratsmitglied, Angehörigen oder vertretenen Personen unmittelbar nützen oder schaden. Wer nur als Teil einer Berufs- oder Bevölkerungsgruppe betroffen ist, darf mitwirken. Die Einzelheiten regelt dein Landesrecht. Speichern für die nächste Kommunalrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#kommunalrecht",
+        "#gemeinderat",
+        "#verwaltungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mitwirkungsverbot im Gemeinderat: vier Punkte",
+      "coverText": "Sonderinteresse statt Meinung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Wer an einer Entscheidung persönlich gewinnt oder verliert, muss den Raum verlassen – wer nur eine Meinung hat, nicht.",
+        "handlung": "{A} holds open the door of a council room for a member who carries a small deed to a plot on the map, while {B} hovers beside the table where the other members keep debating loudly.",
+        "hinweisRegie": "Place the note in the free space next to the small deed in the leaving member's hand, slightly tilted toward it, so the personal interest stands out without covering the debating table or {A}'s face.",
+        "alternative": "{B} checks each voter at a ballot table and gently sets aside only the one whose own house appears on the proposal map."
+      },
+      "bildSzene": "member with deed leaves council",
+      "bildSzeneAlt": "one voter set aside at table",
+      "quellen": [
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-117"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-punkte-abgrenzung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.394Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-577",
+      "slug": "2027-05-30-b3",
+      "titelZeilen": [
+        "Beweis erhoben",
+        "heißt nicht:",
+        "Aussagen nacherzählen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Beweis erhoben heißt nicht: Aussagen nacherzählen",
+          "unter": "Beweisstation · § 286 ZPO",
+          "text": "Im Urteil würdigst du Beweise – du protokollierst sie nicht.",
+          "norm": "§ 286 ZPO",
+          "icon": "richter",
+          "sprecher": "Im Urteil erzählst du Zeugenaussagen nicht nach. Du würdigst sie. Und das in einer festen Reihenfolge, die Korrektoren sofort erkennen.",
+          "marken": [
+            "würdigen",
+            "nicht nacherzählen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Nur, was streitig und erheblich ist",
+          "text": "Beweis braucht nur die streitige, entscheidungserhebliche Tatsache.",
+          "norm": "§ 138 Abs. 3 ZPO",
+          "sprecher": "Schritt eins: Welche Tatsache ist überhaupt beweisbedürftig? Nur was streitig und für die Entscheidung erheblich ist. Unbestrittenes gilt als zugestanden, darüber wird kein Beweis erhoben.",
+          "marken": [
+            "streitig",
+            "erheblich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wer trägt die Beweislast?",
+          "text": "Jede Partei für die Voraussetzungen der ihr günstigen Norm.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Beweislast. Grundsätzlich beweist jede Partei die Voraussetzungen der Norm, die ihr günstig ist. Das musst du vor der Würdigung wissen, denn es entscheidet, wer bei Zweifeln verliert.",
+          "marken": [
+            "Beweislast"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Das Ergebnis zuerst",
+          "text": "„Das Gericht ist davon überzeugt, dass …“ – dann die Begründung.",
+          "norm": "§ 286 Abs. 1 ZPO",
+          "sprecher": "Schritt drei: Stell das Ergebnis an den Anfang. Das Gericht ist nach der Beweisaufnahme davon überzeugt, dass der Kläger bei Rot gefahren ist. Erst danach folgt die Begründung.",
+          "marken": [
+            "Ergebnis vorne"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Aussage und Person trennen",
+          "text": "Glaubhaftigkeit der Aussage, dann Glaubwürdigkeit des Zeugen.",
+          "norm": null,
+          "sprecher": "Schritt vier: die Würdigung. Prüf zuerst die Aussage: Ist sie detailreich, stimmig und konstant? Dann die Person: Hat der Zeuge ein Interesse am Ausgang? Verwandtschaft allein macht eine Aussage nicht unglaubhaft.",
+          "marken": [
+            "Aussage",
+            "Person"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und wenn Zweifel bleiben?",
+          "text": "Non liquet: Es entscheidet die Beweislast.",
+          "norm": null,
+          "sprecher": "Und wenn Zweifel bleiben? Volle Gewissheit ist nicht nötig, aber ein Grad an Gewissheit, der vernünftigen Zweifeln Schweigen gebietet. Reicht es dafür nicht, verliert, wer die Beweislast trägt. Bei der Schadenshöhe hilft die Schätzung nach Paragraf 287 ZPO.",
+          "marken": [
+            "non liquet",
+            "§ 287 ZPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Beweisbedürftig? Beweislast? Ergebnis vorne, dann Aussage und Person würdigen.",
+          "norm": null,
+          "sprecher": "Merke: beweisbedürftige Tatsache, Beweislast, Ergebnis vorne, dann Aussage und Person würdigen.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Urteilsklausur speichern",
+          "text": "Speichern für die nächste Beweisstation.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Urteilsklausur im zweiten Examen, in der ein Zeuge alles gesehen haben will.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Beweis erhoben heißt nicht: Aussagen nacherzählen. In der Beweisstation des Urteils klärst du zuerst, welche Tatsache streitig und erheblich ist und wer die Beweislast trägt. Dann stellst du das Ergebnis voran und würdigst Aussage und Person getrennt. Bleiben Zweifel, entscheidet die Beweislast; bei der Schadenshöhe hilft § 287 ZPO. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#beweiswürdigung",
+        "#urteilsklausur",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beweisstation: würdigen statt nacherzählen",
+      "coverText": "Ergebnis vorne, dann würdigen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Im Urteil werden Beweise bewertet und nicht bloß wiedergegeben.",
+        "handlung": "{B} reads aloud from an endless paper scroll, while {A} gently rolls it up and instead holds a single clear crystal up to the light to inspect it.",
+        "hinweisRegie": "Place the note in the free space next to the crystal held up to the light, slightly tilted toward it, so the act of examining stands out without covering the rolled scroll or {B}'s face.",
+        "alternative": "{A} sorts a pile of witness notes onto a scale instead of reading them one after another aloud."
+      },
+      "bildSzene": "scroll rolled up, crystal inspected",
+      "bildSzeneAlt": "witness notes sorted onto scale",
+      "quellen": [
+        "§ 286 ZPO",
+        "§ 287 ZPO",
+        "§ 138 Abs. 3 ZPO",
+        "§ 313 ZPO",
+        "Themenpool: assessorz-577"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.395Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-757",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "A klettert über den Zaun eines Festivals, um ohne Ticket die Konzerte zu hören. Strafbar nach § 265a StGB?",
+      "optionen": [
+        "Nein – § 265a StGB erfasst nur Automaten und Verkehrsmittel",
+        "Ja – er erschleicht den Zutritt zu einer Veranstaltung",
+        "Nein – ohne Täuschung eines Menschen kommt nur § 263 StGB in Betracht"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 265a StGB",
+        "§ 123 StGB",
+        "Themenpool: strafbt-757"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.395Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-757",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – § 265a StGB erfasst auch den erschlichenen Zutritt zu einer Veranstaltung",
+      "text": "Die vierte Variante des § 265a Abs. 1 StGB schützt den Zutritt zu Veranstaltungen und Einrichtungen. Wer Kontrollen umgeht, um nicht zu zahlen, erschleicht ihn – das Überklettern ist der klassische Fall. Ein Betrug scheidet mangels Täuschung aus. Daneben kann Hausfriedensbruch (§ 123 StGB) vorliegen. § 265a StGB ist subsidiär gegenüber schwereren Delikten.",
+      "norm": "§ 265a Abs. 1 StGB",
+      "quellen": [
+        "§ 265a StGB",
+        "§ 123 StGB",
+        "Themenpool: strafbt-757"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.395Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – § 265a StGB erfasst nur Automaten und Verkehrsmittel",
+        "Ja – er erschleicht den Zutritt zu einer Veranstaltung",
+        "Nein – ohne Täuschung eines Menschen kommt nur § 263 StGB in Betracht"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-478",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 312k Abs. 1 BGB: Kein Kündigungsbutton, wo das Gesetz eine strengere Form verlangt",
+      "text": "Die Pflicht zum Kündigungsbutton gilt nicht für Verträge, deren Kündigung gesetzlich ausschließlich einer anderen Form als der Textform bedarf – etwa der Schriftform. Ausgenommen sind außerdem Verträge über Finanzdienstleistungen. Prüf also vor dem Button zuerst, ob § 312k BGB überhaupt anwendbar ist.",
+      "norm": "§ 312k Abs. 1 BGB",
+      "quellen": [
+        "§ 312k BGB",
+        "§ 126b BGB",
+        "Themenpool: schuldbt-478"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.395Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-919",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Kautelarklausur Grundstückskauf: Schützt der vollständige Haftungsausschluss den Verkäufer?",
+      "falsch": "Im Entwurf wird jede Haftung für Sachmängel ausgeschlossen – damit ist der Verkäufer auch für Mängel sicher, die er kannte und verschwiegen hat.",
+      "richtigText": "Nein. Auf den Ausschluss kann sich der Verkäufer nicht berufen, soweit er einen Mangel arglistig verschwiegen oder eine Garantie übernommen hat (§ 444 BGB). Ist der Vertrag vorformuliert, gelten zusätzlich die AGB-Grenzen (§ 309 Nr. 7 BGB). Interessengerecht: bekannte Mängel offenlegen und Arglist sowie Garantie ausdrücklich ausnehmen.",
+      "quellen": [
+        "§ 444 BGB",
+        "§ 309 Nr. 7 BGB",
+        "§ 311b Abs. 1 BGB",
+        "Themenpool: assessorz-919"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.395Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-774",
+      "ueberzeile": "Klausurtipp StPO",
+      "titel": "TKÜ-Klausur: Den Kernbereich privater Lebensgestaltung nicht vergessen",
+      "text": "§ 100d StPO setzt jeder Überwachung eine Grenze. Unzulässig ist sie, wenn tatsächliche Anhaltspunkte dafür bestehen, dass allein Erkenntnisse aus dem Kernbereich privater Lebensgestaltung erlangt würden. Solche Erkenntnisse dürfen nicht verwertet werden; Aufzeichnungen sind unverzüglich zu löschen, und das ist zu dokumentieren. Prüf den Kernbereich also nach der Katalogtat.",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100d StPO",
+        "Themenpool: stpo-774"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.395Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-894",
+      "ueberzeile": "3 Punkte IPR",
+      "titel": "Arbeitsvertrag ohne Rechtswahl: Welches Recht gilt nach Art. 8 Rom I-VO?",
+      "text": "Fehlt eine Rechtswahl, knüpft Art. 8 Rom I-VO in drei Stufen an. Eine Rechtswahl darf dem Arbeitnehmer den zwingenden Schutz dieses Rechts nicht entziehen.",
+      "punkte": [
+        "Recht des gewöhnlichen Arbeitsorts – oder des Orts, von dem aus gearbeitet wird",
+        "Sonst: Recht der einstellenden Niederlassung",
+        "Engere Verbindung zu einem anderen Staat geht vor"
+      ],
+      "quellen": [
+        "Art. 8 Rom I-VO",
+        "Themenpool: ipr-894"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:55.395Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

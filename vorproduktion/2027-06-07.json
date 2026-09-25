@@ -1,0 +1,877 @@
+{
+  "datum": "2027-06-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "bereich-212",
+        "themaTitel": "Was ist der Vorrang der Leistungsbeziehung?",
+        "fach": "bereich",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafbt-745",
+        "themaTitel": "Freiheitsberaubung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "europa-413",
+        "themaTitel": "Wie prüft man einen Verstoß gegen die Arbeitnehmerfreizügigkeit?",
+        "fach": "europa",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "anklage-791"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "anklage-791"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "famerb-518"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "tipp",
+        "themaId": "gesetzs-205"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "zahl",
+        "themaId": "zpo-052"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:17",
+        "art": "streitstand",
+        "themaId": "verwbt-113"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "bereich-212",
+      "poolTitel": "Was ist der Vorrang der Leistungsbeziehung?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2027-01-18",
+        "2027-04-11"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-745",
+      "poolTitel": "Freiheitsberaubung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-16"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "europa-413",
+      "poolTitel": "Wie prüft man einen Verstoß gegen die Arbeitnehmerfreizügigkeit?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 45 AEUV"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-01"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-791",
+      "poolTitel": "Einstellung aus Opportunitätsgründen",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 153 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2026-09-20",
+        "2027-02-09"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-791",
+      "poolTitel": "Einstellung aus Opportunitätsgründen",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 153 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2026-09-20",
+        "2027-02-09"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-518",
+      "poolTitel": "Trennungs- und nachehelicher Unterhalt im Überblick",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1361, 1569 ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-26",
+        "2027-02-10"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "gesetzs-205",
+      "poolTitel": "Was ist eine auch-fremde Geschäftsführung und ist sie GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 677 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2027-02-07",
+        "2027-04-08"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zpo-052",
+      "poolTitel": "Worauf kommt es für den rechtzeitigen Eingang eines per Telefax übermittelten Schriftsatzes bei Gericht an?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 130 ZPO",
+        "§ 130a ZPO",
+        "§ 130d ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30",
+        "2027-02-01",
+        "2027-04-05"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "verwbt-113",
+      "poolTitel": "Wer ist Störer im Polizei- und Ordnungsrecht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-01",
+        "2027-04-06",
+        "2027-05-06"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-212",
+      "slug": "2027-06-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Direkt an C geliefert – und doch kein Anspruch gegen C",
+          "titelZeilen": [
+            "Direkt an C",
+            "geliefert – und",
+            "doch kein Anspruch",
+            "gegen C"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Kondiktion bleibt beim Vertragspartner",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V verkauft eine Maschine an Z, Z verkauft sie weiter an C. Auf Weisung des Z liefert V direkt an C. Später stellt sich heraus: Der Kaufvertrag V–Z ist nichtig. V verlangt die Maschine von C zurück. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "§ 985 BGB scheidet aus",
+              "text": "Die Übereignungen V→Z und Z→C sind wirksam, C ist Eigentümer. Die Nichtigkeit des Kaufvertrags berührt sie nicht (Abstraktionsprinzip)."
+            },
+            {
+              "titel": "Wer hat an wen geleistet?",
+              "text": "Leistung ist die bewusste und zweckgerichtete Mehrung fremden Vermögens. V wollte seine Pflicht gegenüber Z erfüllen, Z seine gegenüber C."
+            },
+            {
+              "titel": "Kein Durchgriff auf C",
+              "text": "C hat die Maschine durch Leistung des Z erlangt. Eine Nichtleistungskondiktion des V gegen C ist deshalb ausgeschlossen."
+            },
+            {
+              "titel": "V hält sich an Z",
+              "text": "Leistungskondiktion V gegen Z (§ 812 Abs. 1 S. 1 Alt. 1 BGB). Z kann die Maschine nicht mehr herausgeben: Wertersatz nach § 818 Abs. 2 BGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkfehler",
+          "text": "Die Maschine steht bei C, also soll C sie herausgeben. So wird der Vorrang der Leistungsbeziehung übergangen. Rückabgewickelt wird dort, wo der Mangel liegt: im Verhältnis V–Z. Der Vertrag Z–C ist wirksam, C darf behalten."
+        },
+        {
+          "art": "text",
+          "titel": "Warum das sinnvoll ist",
+          "punkte": [
+            "Jeder behält die Einwendungen gegen seinen eigenen Vertragspartner.",
+            "Jeder trägt nur das Insolvenzrisiko seines eigenen Partners.",
+            "C muss sich nicht mit Mängeln eines fremden Vertrags befassen."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kondiziert wird innerhalb der Leistungsbeziehung. Wer durch Leistung eines anderen erlangt hat, ist vor der Nichtleistungskondiktion Dritter grundsätzlich geschützt."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen im Dreieck",
+          "punkte": [
+            "Wer wollte an wen leisten?",
+            "Wo liegt der Mangel?",
+            "Dort kondizieren – nicht beim Endempfänger"
+          ],
+          "icons": [
+            "personen",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Die Maschine steht bei C – trotzdem kann V sie dort nicht zurückholen. Liefert V auf Weisung seines Käufers Z direkt an C, hat V an Z geleistet und Z an C. Ist der Vertrag V–Z nichtig, wird auch nur dort rückabgewickelt: V kondiziert bei Z (§ 812 Abs. 1 S. 1 Alt. 1 BGB) und bekommt Wertersatz (§ 818 Abs. 2 BGB). Das ist der Vorrang der Leistungsbeziehung. Speichern für die nächste Dreiecksklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#schuldrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Lieferkette: Kondiktion nur beim Vertragspartner",
+      "coverText": "Kondiktion bleibt beim Vertragspartner",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Wer eine Sache über eine Kette bekommen hat, muss sie nicht an das erste Glied der Kette zurückgeben.",
+        "handlung": "{B} reaches past {A} toward a machine standing at the end of a short line of three delivery crates, but {A} calmly points him back to the middle crate where a torn contract lies.",
+        "hinweisRegie": "Place the note in the open space above the middle crate with the torn contract, slightly tilted toward it, so it marks where the unwinding happens without covering {B}'s reaching arm.",
+        "alternative": "{A} and {B} hold opposite ends of a chain of three links; only the first link is cracked, and {B} inspects exactly that link with a lamp."
+      },
+      "bildSzene": "reaching past to machine at chain end",
+      "bildSzeneAlt": "three-link chain, first link cracked",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 BGB",
+        "§ 818 Abs. 2 BGB",
+        "§ 985 BGB",
+        "§ 929 BGB",
+        "Themenpool: bereich-212"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-lieferkette",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-745",
+      "slug": "2027-06-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 239 StGB: vier Schritte – das offene Fenster rettet nicht",
+          "titelZeilen": [
+            "§ 239 StGB:",
+            "vier Schritte –",
+            "das offene Fenster",
+            "rettet nicht"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Nur ein zumutbarer Ausweg zählt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 239 StGB schützt die persönliche Fortbewegungsfreiheit: die Möglichkeit, einen Ort zu verlassen. Der Versuch ist strafbar (§ 239 Abs. 2 StGB). Die Abs. 3 und 4 enthalten Qualifikationen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Tatobjekt: ein anderer Mensch",
+              "text": "Geschützt ist, wer sich fortbewegen kann. Ob das Opfer die Einsperrung bemerken muss, ist umstritten – bei Schlafenden kurz ansprechen."
+            },
+            {
+              "titel": "2. Tathandlung",
+              "text": "Einsperren (äußere Vorrichtungen) oder „auf andere Weise“: etwa Gewalt, Drohung, List oder das Wegnehmen eines nötigen Hilfsmittels."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Erfolg: Freiheit aufgehoben",
+              "text": "Das Opfer kann den Ort nicht verlassen. Nur ganz kurzfristige Beeinträchtigungen reichen nach verbreiteter Ansicht nicht."
+            },
+            {
+              "titel": "4. Vorsatz, Rechtswidrigkeit, Schuld",
+              "text": "Ein wirksames Einverständnis des Opfers lässt schon den Tatbestand entfallen. Danach Abs. 3 (mehr als eine Woche, schwere Gesundheitsschädigung) und Abs. 4 (Tod)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: der Ausweg",
+          "text": "Gibt es einen Ausgang, den das Opfer nur unter erheblicher Gefahr oder unzumutbar nutzen könnte – etwa ein Fenster im dritten Stock –, bleibt es eingesperrt. Nur ein zumutbarer, gefahrloser Ausweg lässt die Freiheitsberaubung entfallen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Entscheidend ist, ob das Opfer zumutbar gehen könnte – nicht, ob irgendwo eine Öffnung ist."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 239 StGB in vier Zügen",
+          "punkte": [
+            "Tatobjekt und Streit ums Bewusstsein",
+            "Einsperren oder andere Weise",
+            "Zumutbarer Ausweg? Sonst Erfolg",
+            "Einverständnis, dann Abs. 3 und 4"
+          ],
+          "icons": [
+            "person",
+            "schloss",
+            "tuer",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "§ 239 StGB in vier Schritten: Tatobjekt, Tathandlung, Erfolg, Vorsatz – danach die Qualifikationen der Abs. 3 und 4. Der Knackpunkt steckt oft im Erfolg: Ein offenes Fenster im dritten Stock ist kein Ausweg. Nur ein zumutbarer, gefahrloser Ausgang lässt die Freiheitsberaubung entfallen. Speichern für die nächste Klausur im Strafrecht BT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#freiheitsberaubung",
+        "#239stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Freiheitsberaubung: das Prüfschema",
+      "coverText": "Nur ein zumutbarer Ausweg zählt",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Eine Öffnung, die man nur unter Gefahr nutzen kann, ist kein echter Ausweg.",
+        "handlung": "{B} stands in a locked room and looks down through an open window at a dizzying drop, while {A}, outside on the ledge level, shakes her head and holds up her hand in a clear 'not this way' gesture.",
+        "hinweisRegie": "Place the note in the free space beside the open window, slightly tilted toward the drop, so it reads as the question of a reasonable way out without covering {B}'s face.",
+        "alternative": "{A} blocks a door with a heavy crate while {B} measures a tiny ventilation hatch with a doubtful look."
+      },
+      "bildSzene": "open window high above ground",
+      "bildSzeneAlt": "blocked door, tiny hatch measured",
+      "quellen": [
+        "§ 239 StGB",
+        "Themenpool: strafbt-745"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-schritte-mit-knackpunkt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "europa",
+      "klausur": 3,
+      "fachLabel": "Europarecht",
+      "themaId": "europa-413",
+      "slug": "2027-06-07-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "nummer": null,
+          "titel": "Gleich behandelt – und trotzdem gegen Art. 45 AEUV",
+          "unter": "Arbeitnehmerfreizügigkeit · Art. 45 AEUV",
+          "text": "Art. 45 AEUV verbietet nicht nur Diskriminierungen, sondern auch Beschränkungen.",
+          "norm": "Art. 45 AEUV",
+          "icon": "globus",
+          "sprecher": "Gleich behandelt, und trotzdem gegen Art. 45 AEUV. Denn die Arbeitnehmerfreizügigkeit verbietet nicht nur Diskriminierungen. Sie erfasst auch unterschiedslose Regeln, die den Wechsel in einen anderen Mitgliedstaat behindern.",
+          "marken": [
+            "gleich ≠ erlaubt",
+            "Beschränkung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schutzbereich",
+          "text": "Arbeitnehmer: weisungsgebunden, gegen Entgelt, echte Tätigkeit – plus grenzüberschreitender Bezug.",
+          "norm": "Art. 45 Abs. 1 AEUV",
+          "sprecher": "Schritt eins: Schutzbereich. Arbeitnehmer ist, wer für einen anderen nach dessen Weisung eine tatsächliche und echte Tätigkeit gegen Vergütung ausübt. Dazu braucht es einen grenzüberschreitenden Bezug.",
+          "marken": [
+            "Weisung + Entgelt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beeinträchtigung",
+          "text": "Offene oder versteckte Diskriminierung – oder eine unterschiedslose Beschränkung.",
+          "norm": "Art. 45 Abs. 2 AEUV",
+          "sprecher": "Schritt zwei: Beeinträchtigung. Offen diskriminiert eine Regel, die an die Staatsangehörigkeit anknüpft. Versteckt, wenn sie etwa auf Wohnsitz oder Sprache abstellt. Und dann gibt es Beschränkungen, die für alle gleich gelten, aber vom Wechsel abhalten.",
+          "marken": [
+            "offen · versteckt · Beschränkung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rechtfertigung",
+          "text": "Art. 45 Abs. 3 AEUV oder zwingende Gründe des Allgemeininteresses.",
+          "norm": "Art. 45 Abs. 3 AEUV",
+          "sprecher": "Schritt drei: Rechtfertigung. Ausdrücklich nennt Art. 45 Abs. 3 AEUV öffentliche Ordnung, Sicherheit und Gesundheit. Für nicht offen diskriminierende Regeln kommen zwingende Gründe des Allgemeininteresses hinzu.",
+          "marken": [
+            "Abs. 3 + Allgemeininteresse"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verhältnismäßigkeit",
+          "text": "Geeignet und erforderlich – das mildere Mittel prüfen.",
+          "norm": null,
+          "sprecher": "Schritt vier: Verhältnismäßigkeit. Die Maßnahme muss geeignet sein und darf nicht über das Erforderliche hinausgehen. Hier fällt die Entscheidung in den meisten Fällen.",
+          "marken": [
+            "mildestes Mittel"
+          ]
+        },
+        {
+          "art": "punkt",
+          "nummer": null,
+          "titel": "Der Klassiker: Transferregeln",
+          "text": "Auch Regeln privater Verbände können Art. 45 AEUV verletzen.",
+          "norm": null,
+          "sprecher": "Der Klassiker ist das Bosman-Urteil: Transferregeln eines Sportverbands galten für alle gleich und verstießen trotzdem gegen Art. 45 AEUV. Und nebenbei: Auch kollektive Regeln privater Verbände sind daran gebunden.",
+          "marken": [
+            "Bosman"
+          ]
+        },
+        {
+          "art": "merke",
+          "nummer": null,
+          "titel": "Die Kurzform",
+          "text": "Schutzbereich, Beeinträchtigung, Rechtfertigung, Verhältnismäßigkeit.",
+          "norm": "Art. 45 AEUV",
+          "sprecher": "Merke: Schutzbereich, Beeinträchtigung, Rechtfertigung, Verhältnismäßigkeit. Und bei der Beeinträchtigung nie bei der Diskriminierung aufhören.",
+          "marken": [
+            "vier Stufen"
+          ]
+        },
+        {
+          "art": "cta",
+          "nummer": null,
+          "titel": "Für die nächste Europarechtsklausur",
+          "text": "Speichern und vor der Klausur einmal laut durchgehen.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Europarechtsklausur. Und frag bei jeder Regel: Hält sie jemanden vom Wechsel ab?",
+          "marken": [
+            "hält sie ab?"
+          ]
+        }
+      ],
+      "caption": "Gleich behandelt – und trotzdem gegen Art. 45 AEUV. Die Arbeitnehmerfreizügigkeit erfasst offene und versteckte Diskriminierungen, aber auch unterschiedslose Beschränkungen, die vom Wechsel in einen anderen Mitgliedstaat abhalten. Prüfe in vier Stufen: Schutzbereich, Beeinträchtigung, Rechtfertigung (Art. 45 Abs. 3 AEUV oder zwingende Gründe des Allgemeininteresses), Verhältnismäßigkeit. Speichern für die nächste Europarechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#europarecht",
+        "#grundfreiheiten",
+        "#45aeuv",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 45 AEUV: auch ohne Diskriminierung verletzt",
+      "titelZeilen": [
+        "Gleich behandelt –",
+        "und trotzdem gegen",
+        "Art. 45 AEUV"
+      ],
+      "coverText": "Beschränkung reicht schon",
+      "coverBadge": "Reel",
+      "coverBildAuslassen": true,
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Eine Regel, die für alle gleich gilt, kann trotzdem den Weg über die Grenze versperren.",
+        "handlung": "{A} points his pointer at a low barrier that stands equally in front of two different doors, while {B} with a small suitcase tries to step over it toward the neighbouring door.",
+        "hinweisRegie": "Place the note in the open area just above the barrier in front of the neighbouring door, slightly tilted, so it links to the obstacle for crossing without covering the suitcase.",
+        "alternative": "{B} holds two identical rule sheets side by side while {A} shows that only one of them has a hidden hurdle on the path to a border gate."
+      },
+      "bildSzene": "equal barrier blocks door to neighbour",
+      "bildSzeneAlt": "identical rules, hidden hurdle at border",
+      "quellen": [
+        "Art. 45 AEUV",
+        "EuGH, Bosman (1995)",
+        "Themenpool: europa-413"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-grundfreiheit",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-791",
+      "ueberzeile": "Prüfungsfrage Anklage",
+      "titel": "Die StA will ein Vergehen nach § 153 Abs. 1 StPO einstellen. Braucht sie die Zustimmung des Gerichts?",
+      "optionen": [
+        "Nie – über die Einstellung entscheidet allein die Staatsanwaltschaft",
+        "Ja – und stets zusätzlich die Zustimmung des Beschuldigten",
+        "Grundsätzlich ja – außer bei geringen Folgen ohne erhöhte Mindeststrafe"
+      ],
+      "richtig": 2,
+      "fachLabel": "Anklage & Strafakte",
+      "quellen": [
+        "§ 153 StPO",
+        "Themenpool: anklage-791"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-791",
+      "ueberzeile": "Auflösung",
+      "titel": "Grundsätzlich ja – bei geringen Folgen ohne erhöhte Mindeststrafe nicht",
+      "text": "Nach § 153 Abs. 1 S. 1 StPO braucht die StA die Zustimmung des zuständigen Gerichts. Sie entfällt nach S. 2 bei einem Vergehen, das nicht mit einer im Mindestmaß erhöhten Strafe bedroht ist und dessen Folgen gering sind. Eine Zustimmung des Beschuldigten verlangt § 153 Abs. 1 StPO nicht – anders als § 153a StPO.",
+      "norm": "§ 153 Abs. 1 StPO",
+      "optionen": [
+        "Nie – über die Einstellung entscheidet allein die Staatsanwaltschaft",
+        "Ja – und stets zusätzlich die Zustimmung des Beschuldigten",
+        "Grundsätzlich ja – außer bei geringen Folgen ohne erhöhte Mindeststrafe"
+      ],
+      "richtig": 2,
+      "fachLabel": "Anklage & Strafakte",
+      "quellen": [
+        "§ 153 StPO",
+        "§ 153a StPO",
+        "Themenpool: anklage-791"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-518",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1361 Abs. 2 BGB: Getrennt heißt nicht sofort arbeiten müssen",
+      "text": "Während des Getrenntlebens darf der bisher nicht erwerbstätige Ehegatte nur dann auf eigene Erwerbstätigkeit verwiesen werden, wenn das von ihm nach seinen persönlichen Verhältnissen, der Dauer der Ehe und den wirtschaftlichen Verhältnissen beider erwartet werden kann. Strenger ist es erst nach der Scheidung (§ 1569 BGB).",
+      "norm": "§ 1361 Abs. 2 BGB",
+      "fachLabel": "Familien-/Erbrecht",
+      "quellen": [
+        "§ 1361 BGB",
+        "§ 1569 BGB",
+        "Themenpool: famerb-518"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-205",
+      "ueberzeile": "Klausurtipp GoA",
+      "titel": "Auch-fremdes Geschäft: Den Fremdgeschäftsführungswillen nicht lang herleiten",
+      "text": "Besorgt jemand ein Geschäft, das zugleich eigenes und fremdes ist, vermutet die Rechtsprechung den Fremdgeschäftsführungswillen. Stell diese Vermutung kurz fest. Ausführlich wird es erst, wenn der Geschäftsführer eine eigene Pflicht erfüllt – dort kritisiert die Literatur die weite GoA und der Streit gehört in die Klausur.",
+      "fachLabel": "GoA/EBV",
+      "quellen": [
+        "§ 677 BGB",
+        "§ 683 BGB",
+        "Themenpool: gesetzs-205"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-052",
+      "ueberzeile": "3 Punkte Zivilprozess",
+      "zahl": "3",
+      "titel": "Anwalt faxt die Berufungsschrift: Warum die Uhrzeit nicht die erste Frage ist",
+      "text": "Seit 2022 gilt für Anwälte die aktive Nutzungspflicht. Erst wenn die Form stimmt, kommt es auf den rechtzeitigen Eingang an.",
+      "punkte": [
+        "Anwälte müssen Schriftsätze elektronisch einreichen – ein Fax wahrt die Form grundsätzlich nicht (§ 130d ZPO).",
+        "Ausnahme: vorübergehende technische Unmöglichkeit, glaubhaft gemacht (§ 130d S. 2, 3 ZPO).",
+        "Wo das Fax zulässig ist, zählt der vollständige Empfang der Signale beim Gericht – nicht der Ausdruck."
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "quellen": [
+        "§ 130 ZPO",
+        "§ 130a ZPO",
+        "§ 130d ZPO",
+        "Themenpool: zpo-052"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-113",
+      "ueberzeile": "Streitstand Polizeirecht",
+      "titel": "Werbeaktion im Schaufenster lockt eine Menge auf die Straße: Ist der Ladeninhaber Zweckveranlasser?",
+      "norm": "Polizeigesetze der Länder",
+      "optionen": [
+        "Subjektiv: Zweckveranlasser ist, wer die Störung durch Dritte bezweckt.",
+        "Objektiv: Es genügt, dass die Störung typische Folge seines Verhaltens ist."
+      ],
+      "text": "Teile der Lehre lehnen die Figur ganz ab. In der Klausur: Unmittelbarkeit als Regel nennen, Zweckveranlassung als Ausnahme prüfen – oft werden beide Kriterien kombiniert.",
+      "fachLabel": "Verwaltungsrecht BT",
+      "quellen": [
+        "Polizeigesetze der Länder",
+        "Themenpool: verwbt-113"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:37.772Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

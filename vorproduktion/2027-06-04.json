@@ -1,0 +1,864 @@
+{
+  "datum": "2027-06-04",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "zwangsv-568",
+        "themaTitel": "Vollstreckungserinnerung",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-135",
+        "themaTitel": "Wann liegt eine Urkundenfälschung vor?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-378",
+        "themaTitel": "Was ist die Schutzpflichtdimension der Grundrechte?",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "zpo-546"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "zpo-546"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "staat-602"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "merksatz",
+        "themaId": "revision-876"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "begriff",
+        "themaId": "strafbt-763"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "fehler",
+        "themaId": "anklage-858"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "zwangsv-568",
+      "poolTitel": "Vollstreckungserinnerung",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 766 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-20"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-135",
+      "poolTitel": "Wann liegt eine Urkundenfälschung vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 267 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2026-12-25",
+        "2027-05-14"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-378",
+      "poolTitel": "Was ist die Schutzpflichtdimension der Grundrechte?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 Abs. 1 S. 2 GG",
+        "Art. 2 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-16"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-546",
+      "poolTitel": "Zulässigkeitsprüfung der Zivilklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 12 ff., 253 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-21",
+        "2027-01-21",
+        "2027-03-15"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-546",
+      "poolTitel": "Zulässigkeitsprüfung der Zivilklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 12 ff., 253 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-21",
+        "2027-01-21",
+        "2027-03-15"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-602",
+      "poolTitel": "Konstruktives Misstrauensvotum und Vertrauensfrage",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 67, 68 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2027-01-18",
+        "2027-03-09"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "revision-876",
+      "poolTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 344 Abs. 2 Satz 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-15",
+        "2027-01-20",
+        "2027-03-09"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-763",
+      "poolTitel": "Widerstand/Vollstreckungsdelikte im Überblick",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 113 ff. StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2027-03-13",
+        "2027-03-13"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "anklage-858",
+      "poolTitel": "Was leistet der konkrete Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-29",
+        "2027-04-02",
+        "2027-05-06"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-568",
+      "slug": "2027-06-04-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fremde Sache gepfändet: der Klassiker, an dem Klausuren kippen",
+          "titelZeilen": [
+            "Fremde Sache",
+            "gepfändet: der",
+            "Klassiker, an dem",
+            "Klausuren kippen"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Der GV prüft nur den Gewahrsam",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "F hat ihrem Bekannten S ihren Fernseher geliehen. Er steht in Ss Wohnung; S lebt allein. Gerichtsvollzieher G pfändet ihn wegen einer Geldforderung des Gläubigers X gegen S. F legt Erinnerung ein. Der Klassiker: F rügt ihr Eigentum mit § 766 ZPO – aber G hat verfahrensfehlerfrei gepfändet."
+        },
+        {
+          "art": "schritte",
+          "titel": "Zulässigkeit der Erinnerung",
+          "schritte": [
+            {
+              "titel": "Statthaftigkeit",
+              "text": "§ 766 ZPO richtet sich gegen Art und Weise der Vollstreckung, also gegen Verfahrensfehler des Gerichtsvollziehers."
+            },
+            {
+              "titel": "Erinnerungsbefugnis",
+              "text": "Auch ein Dritter – wenn er geltend macht, durch einen Verfahrensverstoß in eigenen Rechten verletzt zu sein."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Begründetheit",
+          "schritte": [
+            {
+              "titel": "Prüfungsmaßstab des G",
+              "text": "Bei beweglichen Sachen prüft G nur den Gewahrsam des Schuldners (§ 808 Abs. 1 ZPO), nicht das Eigentum."
+            },
+            {
+              "titel": "Hier",
+              "text": "Der Fernseher war im Alleingewahrsam des S. Die Pfändung war verfahrensrechtlich korrekt – die Erinnerung ist unbegründet."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "F muss ihr Eigentum mit der Drittwiderspruchsklage geltend machen: Eigentum ist ein die Veräußerung hinderndes Recht (§ 771 ZPO). Anders läge es, wenn F den Fernseher selbst in Gewahrsam gehabt und nicht zur Herausgabe bereit gewesen wäre (§ 809 ZPO) – dann wäre § 766 ZPO der richtige Weg."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verfahrensfehler: § 766 ZPO. Materielles Recht eines Dritten an der Sache: § 771 ZPO. Der Gerichtsvollzieher prüft nur den Gewahrsam."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 766 oder § 771 ZPO?",
+          "punkte": [
+            "Wer hatte Gewahrsam?",
+            "Verfahrensfehler des GV?",
+            "Sonst Eigentum: § 771 ZPO"
+          ],
+          "icons": [
+            "haus",
+            "lupe",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Fremde Sache gepfändet – der Klassiker, an dem Klausuren kippen. Der Gerichtsvollzieher prüft bei beweglichen Sachen nur den Gewahrsam des Schuldners (§ 808 ZPO). Pfändet er eine schuldnerfremde Sache aus dessen Alleingewahrsam, handelt er verfahrensfehlerfrei – § 766 ZPO hilft dem Eigentümer nicht. Er muss Drittwiderspruchsklage nach § 771 ZPO erheben. Anders bei Gewahrsam eines nicht herausgabebereiten Dritten (§ 809 ZPO). Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#766zpo",
+        "#771zpo",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schuldnerfremde Sache gepfändet: § 766 oder § 771?",
+      "coverText": "Der GV prüft nur den Gewahrsam",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Der Gerichtsvollzieher schaut nur, wer die Sache hat – wem sie gehört, klärt erst die Drittwiderspruchsklage.",
+        "handlung": "{A} sticks a seal on a heavy screen standing in a small room, while {B} arrives at the door holding up a large ownership crystal that {A} does not even look at.",
+        "hinweisRegie": "Place the note in the free space between the sealed screen and {B}'s raised crystal, slightly tilted toward the seal, so the mismatch between possession and ownership is clear without covering either figure.",
+        "alternative": "{B} knocks on the wrong door with an ownership crystal while {A} points to a different door marked only by a courthouse shape."
+      },
+      "bildSzene": "seal on screen, owner ignored",
+      "bildSzeneAlt": "owner knocks at wrong door",
+      "quellen": [
+        "§ 766 ZPO",
+        "§ 771 ZPO",
+        "§ 808 ZPO",
+        "§ 809 ZPO",
+        "Themenpool: zwangsv-568"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-135",
+      "slug": "2027-06-04-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eigene Unterschrift, gelogener Inhalt: § 267 StGB greift nicht",
+          "titelZeilen": [
+            "Eigene Unterschrift,",
+            "gelogener Inhalt:",
+            "§ 267 StGB greift",
+            "nicht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Echtheit, nicht Wahrheit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Kassierer A stellt unter seinem eigenen Namen eine Quittung aus, nach der Kunde K 500 € bar bezahlt habe. Tatsächlich hat K nichts gezahlt; A will die Quittung seinem Arbeitgeber vorlegen, um Fehlbeträge zu verschleiern. Urkundenfälschung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Urkunde",
+              "text": "Verkörperte Gedankenerklärung, zum Beweis geeignet und bestimmt, Aussteller erkennbar. Die Quittung erfüllt das."
+            },
+            {
+              "titel": "Unecht?",
+              "text": "Unecht ist die Urkunde nur, wenn sie nicht von dem stammt, der als Aussteller erscheint – Täuschung über die Identität."
+            },
+            {
+              "titel": "Hier",
+              "text": "A erscheint als Aussteller und ist es auch. Die Urkunde ist echt, nur ihr Inhalt ist unwahr."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkfehler",
+          "text": "„Die Quittung lügt – also ist sie gefälscht.“ § 267 StGB schützt die Echtheit, nicht die Wahrheit. Die schriftliche Lüge ist nach § 267 StGB straflos. Bestraft wird inhaltliche Unwahrheit nur in besonderen Tatbeständen, etwa bei Amtsträgern (§ 348 StGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Was bleibt für A?",
+          "punkte": [
+            "§ 267 StGB (-): echte Urkunde.",
+            "Zu prüfen bleiben Vermögensdelikte, etwa Betrug oder Untreue – je nach Sachverhalt.",
+            "Merke die Faustformel: Wer? – § 267. Was? – grundsätzlich straflos."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Unecht heißt: falscher Aussteller, nicht falscher Inhalt. Wer unter eigenem Namen lügt, fälscht keine Urkunde."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 267 StGB in drei Fragen",
+          "punkte": [
+            "Urkunde?",
+            "Stammt sie vom scheinbaren Aussteller?",
+            "Echtheit – nicht Wahrheit prüfen"
+          ],
+          "icons": [
+            "dokument",
+            "person",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Eigene Unterschrift, gelogener Inhalt – § 267 StGB greift nicht. Unecht ist eine Urkunde nur, wenn sie nicht von dem stammt, der aus ihr als Aussteller hervorgeht. Die Norm schützt die Echtheit, nicht die inhaltliche Wahrheit. Die schriftliche Lüge unter eigenem Namen ist deshalb keine Urkundenfälschung; zu prüfen bleiben andere Delikte. Speichern für die nächste Klausur zu den Urkundsdelikten.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#urkundenfälschung",
+        "#267stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schriftliche Lüge: keine Urkundenfälschung",
+      "coverText": "Echtheit, nicht Wahrheit",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Eine Urkunde ist nur unecht, wenn sie über den Aussteller täuscht – nicht, wenn ihr Inhalt gelogen ist.",
+        "handlung": "{A} holds up a receipt with a portrait of its real signer next to her face, while {B} compares the portrait and nods, although the numbers on the receipt are obviously crossed out and blurred.",
+        "hinweisRegie": "Place the note in the free space beside the matching portrait, slightly tilted toward it, so the focus is on the true issuer rather than the content, without covering {B}'s comparing gaze.",
+        "alternative": "{B} checks a sealed envelope's sender badge, which matches, while {A} pulls out a paper with a clearly exaggerated drawing inside."
+      },
+      "bildSzene": "receipt portrait matches its signer",
+      "bildSzeneAlt": "matching sender badge, exaggerated drawing",
+      "quellen": [
+        "§ 267 StGB",
+        "§ 348 StGB",
+        "Themenpool: strafbt-135"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.462Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-378",
+      "slug": "2027-06-04-b3",
+      "titelZeilen": [
+        "Schutzpflicht heißt",
+        "nicht: bestmöglicher",
+        "Schutz"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Schutzpflicht heißt nicht: bestmöglicher Schutz",
+          "unter": "Schutzpflichten · Art. 2 Abs. 2 GG",
+          "text": "Der Staat muss schützen – aber er hat einen weiten Spielraum.",
+          "norm": "Art. 2 Abs. 2 S. 1 GG",
+          "icon": "schild",
+          "sprecher": "Der Staat muss dich schützen, aber nicht bestmöglich. Verletzt ist die Schutzpflicht erst, wenn er das Untermaß unterschreitet. So prüfst du das.",
+          "marken": [
+            "Schutz ja",
+            "optimal nein"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schutzpflicht begründen",
+          "text": "Objektive Dimension der Grundrechte, bei Leben und Gesundheit zusätzlich Art. 1 Abs. 1 S. 2 GG.",
+          "norm": "Art. 1 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt eins: Begründe die Schutzpflicht. Die Grundrechte enthalten eine objektive Wertordnung. Bei Leben und Gesundheit kommt Art. 1 Absatz 1 Satz 2 dazu: Der Staat muss die Würde schützen.",
+          "marken": [
+            "objektive Dimension"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gefahr für das Schutzgut",
+          "text": "Meist durch Private oder natürliche Risiken – nicht durch den Staat selbst.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Welche Gefahr droht? Typisch sind Gefahren durch Private, durch Technik oder durch natürliche Risiken. Handelt der Staat selbst, ist es ein Eingriff, keine Schutzpflichtfrage.",
+          "marken": [
+            "Gefahr durch Dritte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Spielraum des Gesetzgebers",
+          "text": "Wie er schützt, entscheidet grundsätzlich er selbst.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Spielraum. Wie der Staat schützt, entscheidet in erster Linie der Gesetzgeber. Er hat einen weiten Einschätzungs-, Wertungs- und Gestaltungsspielraum.",
+          "marken": [
+            "weiter Spielraum"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Untermaßverbot",
+          "text": "Verletzt, wenn Schutz fehlt oder offensichtlich völlig unzulänglich ist.",
+          "norm": null,
+          "sprecher": "Schritt vier: das Untermaßverbot. Verletzt ist die Pflicht erst, wenn gar keine Schutzvorkehrungen bestehen oder die getroffenen offensichtlich völlig ungeeignet oder unzulänglich sind.",
+          "marken": [
+            "Untermaß"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Folge für die Klausur",
+          "text": "Die Kontrolle ist zurückhaltend – die Hürde für einen Verstoß ist hoch.",
+          "norm": null,
+          "sprecher": "Für die Klausur heißt das: Das Verfassungsgericht kontrolliert zurückhaltend. Dass mehr Schutz möglich wäre, reicht nicht. Du musst begründen, warum das Minimum unterschritten ist.",
+          "marken": [
+            "hohe Hürde"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Schutzpflicht, Gefahr, Spielraum, Untermaß – nicht Verhältnismäßigkeit wie beim Eingriff.",
+          "norm": null,
+          "sprecher": "Merke: Schutzpflicht, Gefahr, Spielraum, Untermaß. Nicht wie einen Eingriff prüfen, sondern fragen, ob das Minimum erreicht ist.",
+          "marken": [
+            "Minimum"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Schutzpflicht sauber prüfen",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und frag immer zuerst: Handelt hier ein Privater oder der Staat?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Schutzpflicht heißt nicht: bestmöglicher Schutz. Aus der objektiven Dimension der Grundrechte folgt die Pflicht des Staates, etwa Leben und Gesundheit (Art. 2 Abs. 2 S. 1 GG) vor Gefahren durch Private zu schützen. Wie er das tut, entscheidet vor allem der Gesetzgeber. Verletzt ist die Pflicht erst, wenn er das Untermaß unterschreitet. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#schutzpflicht",
+        "#untermaßverbot",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schutzpflicht: das Untermaßverbot",
+      "coverText": "Maßstab: Untermaßverbot",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Der Staat muss einen Mindestschutz sichern, hat beim Wie aber viel Spielraum.",
+        "handlung": "{A} calmly sets up a simple fence at the edge of a cliff, while {B} nervously wants to add ten more barriers and she stops him with a raised hand.",
+        "hinweisRegie": "Place the note in the free space between the simple fence and the cliff edge, slightly tilted toward the fence, so the idea of a sufficient minimum is visible without covering {B}'s arm full of barriers.",
+        "alternative": "{B} measures a safety net with a tape and checks only that it reaches the minimum mark, while {A} waves off an oversized second net."
+      },
+      "bildSzene": "simple fence at cliff edge",
+      "bildSzeneAlt": "safety net measured to minimum",
+      "quellen": [
+        "Art. 2 Abs. 2 S. 1 GG",
+        "Art. 1 Abs. 1 S. 2 GG",
+        "Themenpool: grundr-378"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.463Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-546",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Klage beim sachlich unzuständigen Amtsgericht, B verhandelt rügelos zur Hauptsache. Wird es zuständig?",
+      "optionen": [
+        "Ja, stets – die rügelose Einlassung heilt (§ 39 ZPO)",
+        "Nur wenn das Gericht vorher nach § 504 ZPO belehrt hat",
+        "Nein – sachliche Zuständigkeit ist nie rügelos begründbar"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 39 ZPO",
+        "§ 504 ZPO",
+        "§ 40 Abs. 2 ZPO",
+        "Themenpool: zpo-546"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.463Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-546",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur nach Belehrung – vor dem Amtsgericht schützt § 504 ZPO den Beklagten",
+      "text": "Grundsätzlich begründet rügeloses Verhandeln zur Hauptsache die Zuständigkeit (§ 39 S. 1 ZPO). Vor dem Amtsgericht gilt das nur, wenn es den Beklagten auf die Unzuständigkeit und die Folgen hingewiesen hat (§§ 39 S. 2, 504 ZPO). Nie heilbar: ausschließliche Zuständigkeiten (§ 40 Abs. 2 ZPO).",
+      "norm": "§§ 39, 504 ZPO",
+      "quellen": [
+        "§ 39 ZPO",
+        "§ 504 ZPO",
+        "§ 40 Abs. 2 ZPO",
+        "Themenpool: zpo-546"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.463Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, stets – die rügelose Einlassung heilt (§ 39 ZPO)",
+        "Nur wenn das Gericht vorher nach § 504 ZPO belehrt hat",
+        "Nein – sachliche Zuständigkeit ist nie rügelos begründbar"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-602",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 68 GG: 21 Tage, in denen der Bundestag die Auflösung noch abwenden kann",
+      "text": "Findet die Vertrauensfrage keine Mehrheit der Mitglieder, kann der Bundespräsident auf Vorschlag des Kanzlers binnen 21 Tagen den Bundestag auflösen. Das Recht erlischt, sobald der Bundestag mit Mehrheit einen anderen Kanzler wählt.",
+      "norm": "Art. 68 Abs. 1 GG",
+      "quellen": [
+        "Art. 68 GG",
+        "Themenpool: staat-602"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.463Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-876",
+      "ueberzeile": "Merksatz Revision",
+      "titel": "Verfahrensrüge: Auch was gegen dich sprechen könnte, gehört hinein",
+      "text": "Nach der Rspr. müssen auch Tatsachen mitgeteilt werden, die der Rüge den Boden entziehen könnten – etwa ob ein Fehler geheilt oder ein nötiger Widerspruch erhoben wurde (§ 344 Abs. 2 S. 2 StPO).",
+      "norm": "§ 344 Abs. 2 S. 2 StPO",
+      "quellen": [
+        "§ 344 Abs. 2 S. 2 StPO",
+        "Themenpool: revision-876"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.463Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-763",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Vollstreckungshandlung (§ 113 StGB)",
+      "text": "Tätigkeit eines Amtsträgers, die darauf gerichtet ist, den bereits konkretisierten Staatswillen im Einzelfall durchzusetzen – etwa Festnahme oder Pfändung. Bloße Streife oder allgemeine Überwachung genügt nicht; dann kommt § 114 StGB in Betracht.",
+      "norm": "§ 113 Abs. 1 StGB",
+      "quellen": [
+        "§ 113 StGB",
+        "§ 114 StGB",
+        "Themenpool: strafbt-763"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.463Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-858",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Konkreter Anklagesatz im Konjunktiv?",
+      "falsch": "Der Angeschuldigte ist nicht verurteilt – also schreibe ich im konkreten Anklagesatz „soll … entwendet haben“.",
+      "richtigText": "Der konkrete Anklagesatz schildert die Tat im Indikativ als tatsächliches Geschehen – Zeit, Ort und Tatumstände so genau, dass die Tat unverwechselbar ist (§ 200 Abs. 1 StPO). Die Unschuldsvermutung wahrt der Einleitungssatz: „wird angeklagt, … zu haben“.",
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "Themenpool: anklage-858"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:01:41.463Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
