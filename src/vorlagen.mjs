@@ -349,14 +349,13 @@ h1 em{color:${p.akzent2}}
 /* Problematische Action-Freisteller werden mit leichtem Bleed von links nach
    rechts aufgespannt. Die exakte Breite kommt inline aus dem Renderprofil;
    overflow bleibt bewusst sichtbar, damit keine "Sticker"-Innenkante entsteht. */
-.frei.charakter.edge-to-edge{max-width:none;overflow:hidden}
-.frei.charakter.edge-to-edge img{object-fit:var(--edge-fit,cover);object-position:var(--edge-x,50%) var(--edge-y,50%)}
-/* Reel-Freisteller brauchen keinen Crop, sondern eine echte vollbreite Bühne:
-   Das zugeschnittene Motiv wird auf Canvasbreite skaliert und unten verankert.
-   So berührt die Komposition links/rechts die Coverkante, ohne Figuren durch
-   object-fit:cover abzuschneiden. */
-.frei.charakter.edge-to-edge.fit-width{overflow:visible}
-.frei.charakter.edge-to-edge.fit-width img{position:absolute;left:0;bottom:0;width:100%;height:auto;object-fit:contain;object-position:center bottom}
+.frei.edge-to-edge{max-width:none;overflow:hidden}
+.frei.edge-to-edge img{object-fit:var(--edge-fit,cover);object-position:var(--edge-x,50%) var(--edge-y,50%)}
+/* Kante-an-Kante-Freisteller – bei Reel-Covern und bei ALLEN Story-Teasern:
+   transparente Quelle auf volle Canvasbreite, unten verankert. Der Freisteller
+   selbst bleibt unverzerrt und wird nicht durch object-fit:cover beschnitten. */
+.frei.edge-to-edge.fit-width{overflow:visible}
+.frei.edge-to-edge.fit-width img{position:absolute;left:0;bottom:0;width:100%;height:auto;object-fit:contain;object-position:center bottom}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
@@ -558,7 +557,11 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   /* Freigestellt: Das Motiv laeuft unten rechts aus der Kachel, ohne Rahmen.
      Nicht freigestellt (Notfall): als abgerundete Karte. */
   const istCharakter = folie.bildTyp === "charakter";
-  const edgeToEdge = istCharakter && folie.coverBildEdgeToEdge === true;
+  /* Story-Teaser sind eine feste Ausnahme von der normalen Sticker-Buehne:
+     Der Freisteller muss links, rechts und unten bis an die Storykante reichen.
+     Das gilt unabhaengig vom einzelnen Cover-/Renderprofil. */
+  const teaserKanteAnKante = folie.art === "teaser" && folie.bildFrei !== false;
+  const edgeToEdge = teaserKanteAnKante || (istCharakter && folie.coverBildEdgeToEdge === true);
   /* Number(null) === 0 war hier ein versteckter Layoutfehler: fehlende
      Profilwerte wurden dadurch als scale=.65 und x=.05 interpretiert. Genau
      deshalb klebten neue Reel-Motive klein und links angeschnitten am Rand.
@@ -576,7 +579,12 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   const bottomRaw = zahlOderNull(folie.coverBildBottom);
   const bleedRaw = zahlOderNull(folie.coverBildBleed);
   const fitRaw = String(folie.coverBildFit || "").toLowerCase();
-  const fit = fitRaw === "contain" ? "contain" : fitRaw === "width" ? "width" : "cover";
+  /* Teaser behalten den ganzen Freisteller und skalieren ihn auf volle
+     Storybreite. So beruehrt das Motiv beide Seitenkanten, ohne Figuren durch
+     object-fit:cover horizontal abzuschneiden. */
+  const fit = teaserKanteAnKante
+    ? "width"
+    : fitRaw === "contain" ? "contain" : fitRaw === "width" ? "width" : "cover";
   const hatProfil = edgeToEdge
     || [scaleRaw, breiteRaw, xRaw, yRaw, topRaw, bottomRaw, bleedRaw].some((x) => x !== null)
     || ["contain", "cover", "width"].includes(fitRaw);
@@ -604,9 +612,10 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
        definiert. Das Bild selbst fuellt diese Flaeche per object-fit:cover.
        Damit gibt es keine Sticker-Luft mehr und trotzdem keinen Wildwuchs
        ueber den Titelblock. */
-    const bleed = bleedRaw !== null ? Math.max(0, Math.min(80, bleedRaw)) : 0;
-    style.push(`left:-${Math.round(bleed)}px`);
-    style.push(`right:-${Math.round(bleed)}px`);
+    const bleed = teaserKanteAnKante ? 0 : (bleedRaw !== null ? Math.max(0, Math.min(80, bleedRaw)) : 0);
+    const rand = bleed > 0 ? `-${Math.round(bleed)}px` : "0";
+    style.push(`left:${rand}`);
+    style.push(`right:${rand}`);
     style.push(topRaw !== null ? `top:${Math.round(topRaw)}px` : "top:auto");
     style.push(bottomRaw !== null ? `bottom:${Math.round(bottomRaw)}px` : "bottom:0");
     style.push("width:auto");

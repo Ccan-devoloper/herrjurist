@@ -22,7 +22,9 @@ test("Story-Teaser zeigt nur den Freisteller, nie das fertige Beitragscover", ()
   assert.equal("coverBild" in teaser, false);
 
   const html = storyHtml(teaser, kontext({ fach: "schuld", klausur: 1 }));
-  assert.match(html, /class="frei"/);
+  assert.match(html, /class="frei charakter edge-to-edge fit-width"/);
+  assert.match(html, /left:0;right:0/);
+  assert.match(html, /bottom:0/);
   assert.ok(html.includes(motiv));
   assert.ok(!html.includes(cover));
   assert.ok(!html.includes("teaser-cover"));
