@@ -1,0 +1,871 @@
+{
+  "datum": "2027-04-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-907",
+        "themaTitel": "Fehleranalyse nach der Probeklausur",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "assessorz-816",
+        "themaTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-5",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "strafbt-754"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "strafbt-754"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "stpo-137"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "begriff",
+        "themaId": "vwgo-105"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "fehler",
+        "themaId": "assessorz-802"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "tipp",
+        "themaId": "zwangsv-566"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-907",
+      "poolTitel": "Fehleranalyse nach der Probeklausur",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2026-11-02",
+        "2027-02-07"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "assessorz-816",
+      "poolTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-12-20",
+        "2027-02-18"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-5",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-24",
+        "2026-12-19",
+        "2027-02-13"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-754",
+      "poolTitel": "Betrug: Täuschung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-04",
+        "2027-02-09",
+        "2027-02-09"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-754",
+      "poolTitel": "Betrug: Täuschung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-04",
+        "2027-02-09",
+        "2027-02-09"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "stpo-137",
+      "poolTitel": "Wie ist der Ablauf einer Hauptverhandlung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 243 StPO",
+        "§ 244 StPO",
+        "§ 258 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30"
+      ]
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "vwgo-105",
+      "poolTitel": "Wie grenzt man Verpflichtungs- und allgemeine Leistungsklage ab?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 1 Alt. 2 VwGO",
+        "§ 43 Abs. 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-12-08",
+        "2027-01-10"
+      ]
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "assessorz-802",
+      "poolTitel": "Worin unterscheiden sich Schlüssigkeit und Erheblichkeit?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 Abs. 3 ZPO",
+        "§ 138 Abs. 4 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-12-04",
+        "2027-02-08"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "zwangsv-566",
+      "poolTitel": "Vollstreckungsklausel und Klauselrechtsbehelfe",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 724 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-27",
+        "2027-01-25"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-907",
+      "slug": "2027-04-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Lösung gelesen, alles verstanden – und wieder derselbe Punktabzug",
+          "titelZeilen": [
+            "Lösung gelesen,",
+            "alles verstanden –",
+            "und wieder derselbe",
+            "Punktabzug"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Zweimal „Warum?“ fragen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Beim Lesen der Lösungsskizze nickst du jede Zeile ab. Das ist Wiedererkennen, nicht Abrufen. Die Randbemerkung beschreibt nur das Symptom („Problem übersehen“) – die Ursache liegt eine Ebene tiefer. Wer nur das Symptom notiert, trifft es in der nächsten Klausur wieder."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Ursachenprotokoll in vier Schritten",
+          "schritte": [
+            {
+              "titel": "Symptom notieren",
+              "text": "Die Randbemerkung wörtlich übernehmen, noch ohne Lösungsskizze."
+            },
+            {
+              "titel": "Zweimal „Warum?“ fragen",
+              "text": "Bis du bei etwas landest, das du beim nächsten Mal anders machen kannst."
+            },
+            {
+              "titel": "Gegenmaßnahme als Handlung",
+              "text": "Kein Vorsatz wie „genauer lesen“, sondern ein Handgriff, den du in der Klausur ausführst."
+            },
+            {
+              "titel": "Wiedervorlage",
+              "text": "Vor der nächsten Probeklausur die Liste lesen, danach abhaken: wieder aufgetreten oder nicht?"
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Ein Beispiel",
+          "punkte": [
+            "Symptom: „Problem übersehen“.",
+            "Warum? Die Angabe „am nächsten Tag“ im Sachverhalt habe ich nicht verwertet.",
+            "Warum? Ich habe den Sachverhalt nur einmal gelesen und nichts markiert.",
+            "Gegenmaßnahme: zweiter Lesedurchgang mit der Frage „Wozu steht dieses Detail da?“"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Woran du ein gutes Protokoll erkennst",
+          "text": "Es ist kurz: drei bis fünf Einträge pro Klausur genügen. Jede Ursache steht nur einmal darin – taucht sie wieder auf, bekommt sie einen Strich statt eines neuen Eintrags. So siehst du nach einigen Klausuren, welche Ursache dich am meisten kostet."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht die Randbemerkung reparieren, sondern ihre Ursache – mit einem Handgriff, den du in der nächsten Klausur wirklich ausführst."
+        },
+        {
+          "art": "cta",
+          "titel": "Nach jeder Probeklausur",
+          "punkte": [
+            "Symptom notieren",
+            "Zweimal „Warum?“",
+            "Handgriff festlegen",
+            "Beim nächsten Mal abhaken"
+          ],
+          "icons": [
+            "klemmbrett",
+            "lupe",
+            "werkzeug",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Lösung gelesen, alles verstanden – und in der nächsten Klausur wieder derselbe Punktabzug? Beim Lesen der Lösungsskizze erkennst du wieder, du rufst nicht ab. Das Ursachenprotokoll hilft: Symptom notieren, zweimal „Warum?“ fragen, eine Gegenmaßnahme als konkreten Handgriff festlegen und vor der nächsten Klausur abhaken. Speichern und nach der nächsten Probeklausur ausprobieren.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#erstesstaatsexamen",
+        "#klausurtechnik",
+        "#probeklausur",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Probeklausur auswerten: Ursache statt Symptom",
+      "coverText": "Zweimal „Warum?“ fragen",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Ein Fehler verschwindet erst, wenn man seine Ursache findet, nicht wenn man das Symptom abwischt.",
+        "handlung": "{A} keeps wiping a drip from a leaking portal pipe, while {B} kneels and follows the pipe back to a loose valve and points at it.",
+        "hinweisRegie": "Place the note in the free space next to the loose valve, slightly tilted toward {B}'s pointing hand, without covering the drip or {A}'s cloth.",
+        "alternative": "{B} pins a short list to a wall and strikes a mark next to one item that has appeared again, while {A} looks at the growing row of marks."
+      },
+      "bildSzene": "wiping drip versus finding loose valve",
+      "bildSzeneAlt": "tally marks on a short list",
+      "quellen": [
+        "Themenpool: methodik-907"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.794Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-816",
+      "slug": "2027-04-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zwei Absätze, zwei Hürden: Zurückweisung nach § 296 ZPO",
+          "titelZeilen": [
+            "Zwei Absätze,",
+            "zwei Hürden:",
+            "Zurückweisung",
+            "nach § 296 ZPO"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Frist oder Förderungspflicht?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "vergleich",
+          "titel": "Abs. 1 oder Abs. 2?",
+          "links": {
+            "titel": "§ 296 Abs. 1 ZPO",
+            "punkte": [
+              "Richterlich gesetzte Frist versäumt (etwa §§ 273, 275–277 ZPO).",
+              "Zurückweisung zwingend – kein Ermessen.",
+              "Außer: keine Verzögerung oder genügend entschuldigt."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 296 Abs. 2 ZPO",
+            "punkte": [
+              "Allgemeine Förderungspflicht verletzt (§ 282 ZPO).",
+              "Zurückweisung nach Ermessen.",
+              "Nur bei Verzögerung und grober Nachlässigkeit."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Voraussetzungen bei Abs. 1",
+          "punkte": [
+            "Frist wirksam gesetzt: richterliche Verfügung, ordnungsgemäß zugestellt.",
+            "Belehrung über die Folgen, wo das Gesetz sie verlangt (§ 276 Abs. 2, § 277 Abs. 2 ZPO).",
+            "Verzögerung des Rechtsstreits durch die Zulassung.",
+            "Keine genügende Entschuldigung – auf Verlangen glaubhaft machen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Grenzen",
+          "punkte": [
+            "Unstreitiges Vorbringen verzögert nicht – es ist zu berücksichtigen.",
+            "Die Verzögerung darf nicht auf einem Versäumnis des Gerichts beruhen, etwa unterlassener Vorbereitung nach § 273 ZPO.",
+            "Verzögerung: BGH absoluter Begriff; das BVerfG setzt Grenzen, wenn sie offenkundig auch sonst eingetreten wäre."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Nach Schluss der Verhandlung",
+          "text": "§ 296a ZPO: Neue Angriffs- und Verteidigungsmittel sind dann ausgeschlossen. Ausnahmen: nachgelassener Schriftsatz (§§ 139 Abs. 5, 283 ZPO) oder Wiedereröffnung der Verhandlung (§ 156 ZPO). Im Urteil begründest du jede Zurückweisung in den Entscheidungsgründen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Abs. 1: Frist versäumt, Zurückweisung zwingend. Abs. 2: Förderungspflicht verletzt, Ermessen und grobe Nachlässigkeit. Unstreitiges ist nie verspätet."
+        },
+        {
+          "art": "cta",
+          "titel": "Verspätung in drei Fragen",
+          "punkte": [
+            "Welche Frist oder Pflicht?",
+            "Verzögert gerade die Zulassung?",
+            "Entschuldigt – oder grob nachlässig?"
+          ],
+          "icons": [
+            "uhr",
+            "stoppuhr",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "§ 296 ZPO hat zwei Absätze mit zwei unterschiedlichen Hürden. Wer eine richterlich gesetzte Frist versäumt, wird nach Abs. 1 zwingend ausgeschlossen – außer, es gibt keine Verzögerung oder eine genügende Entschuldigung. Wer nur die allgemeine Prozessförderungspflicht verletzt, kann nach Abs. 2 ausgeschlossen werden, aber nur bei Verzögerung und grober Nachlässigkeit. Unstreitiges verzögert nie. Speichern als Spickzettel fürs Zivilurteil.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#296zpo",
+        "#assessorexamen",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verspätetes Vorbringen: § 296 ZPO kompakt",
+      "coverText": "Frist oder Förderungspflicht?",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Wer eine gesetzte Frist verpasst, fliegt schneller raus als jemand, der nur allgemein zu langsam war.",
+        "handlung": "{A} hovers at a closing gate with a small hourglass that just ran out, stopping a late parcel, while {B} arrives at a second, still half-open gate with another parcel and looks unsure.",
+        "hinweisRegie": "Place the note in the free space between the two gates, slightly tilted toward the empty hourglass, without covering the parcels or {B}'s face.",
+        "alternative": "{B} places two differently sized hurdles on a track, one tall and firm, one low and wobbly, while {A} measures them with a floating ruler."
+      },
+      "bildSzene": "two gates, one hourglass, late parcels",
+      "bildSzeneAlt": "tall hurdle beside low hurdle",
+      "quellen": [
+        "§ 296 Abs. 1, 2 ZPO",
+        "§ 296a ZPO",
+        "§§ 273, 275, 276, 277 ZPO",
+        "§ 282 ZPO",
+        "§ 283 ZPO",
+        "§ 156 ZPO",
+        "Themenpool: assessorz-816"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-absaetze-zwei-huerden",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.794Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-5",
+      "slug": "2027-04-10-b3",
+      "titelZeilen": [
+        "Zwei Stunden",
+        "Lerngruppe –",
+        "kein Fall gelöst"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zwei Stunden Lerngruppe – kein Fall gelöst",
+          "unter": "Kopfsache · Lerngruppe",
+          "text": "Gemeinsam Skripte besprechen fühlt sich produktiv an. Trainiert wird dabei wenig.",
+          "norm": null,
+          "icon": "personen",
+          "sprecher": "Zwei Stunden Lerngruppe, und kein einziger Fall gelöst. Kennst du das? Zusammen Skripte durchgehen fühlt sich produktiv an. Aber in der Prüfung fragt dich niemand nach dem Skript. Vier Regeln für eine Sitzung, die wirklich trainiert.",
+          "marken": [
+            "kein Fall gelöst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Mit einem Fall starten",
+          "text": "Nicht mit dem Kapitel, sondern mit einem kurzen Sachverhalt.",
+          "norm": null,
+          "sprecher": "Regel eins: Startet mit einem Fall, nicht mit einem Kapitel. Ein kurzer Sachverhalt reicht, vier, fünf Sätze. Das Wissen kommt dann, wenn ihr es braucht.",
+          "marken": [
+            "Fall zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rollen verteilen",
+          "text": "Einer prüft, einer antwortet, einer protokolliert – jede Runde wechseln.",
+          "norm": null,
+          "sprecher": "Regel zwei: Verteilt Rollen. Einer stellt die Fragen, einer antwortet, einer schreibt mit, wo es gehakt hat. Nach jedem Fall wird gewechselt.",
+          "marken": [
+            "prüfen · antworten · notieren"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Laut und ohne Unterlagen",
+          "text": "Zehn Minuten pro Fall, Lösung mündlich, Skripte bleiben zu.",
+          "norm": null,
+          "sprecher": "Regel drei: laut und ohne Unterlagen. Zehn Minuten pro Fall, die Skripte bleiben zu. Genau hier merkst du, was du wirklich abrufen kannst.",
+          "marken": [
+            "zehn Minuten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Entscheiden statt ausdiskutieren",
+          "text": "Nach drei Minuten Streit: eine Ansicht wählen, begründen, weiter.",
+          "norm": null,
+          "sprecher": "Regel vier: entscheiden statt ausdiskutieren. Wenn ihr euch an einem Streitstand festbeißt, wählt nach drei Minuten eine Ansicht, begründet sie in einem Satz und macht weiter. Genau so läuft es auch in der Klausur.",
+          "marken": [
+            "drei Minuten"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Nebenbei: Training für die mündliche Prüfung",
+          "text": "Wer regelmäßig laut gefragt wird, geht ruhiger in die Mündliche.",
+          "norm": null,
+          "sprecher": "Der Nebeneffekt: Ihr trainiert die mündliche Prüfung gleich mit. Wer jede Woche laut gefragt wird, geht deutlich ruhiger hinein.",
+          "marken": [
+            "Mündliche gleich mit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Fall statt Skript",
+          "text": "Eine Lerngruppe ist gut, wenn am Ende jeder laut gelöst hat.",
+          "norm": null,
+          "sprecher": "Merke: Eine Sitzung war gut, wenn am Ende jeder mindestens einen Fall laut gelöst hat.",
+          "marken": [
+            "jeder löst laut"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Sitzung: ein Fall, drei Rollen",
+          "text": "Speichern und an die Lerngruppe schicken.",
+          "norm": null,
+          "sprecher": "Speicher dir das und schick es deiner Lerngruppe. Nächste Sitzung: ein Fall, drei Rollen, zehn Minuten.",
+          "marken": [
+            "an die Gruppe"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Zwei Stunden Lerngruppe – und kein einziger Fall gelöst? Gemeinsam Skripte besprechen fühlt sich produktiv an, trainiert aber wenig. Vier Regeln: mit einem Fall starten, Rollen verteilen, laut und ohne Unterlagen lösen, bei Streitständen nach drei Minuten entscheiden. Nebeneffekt: Ihr trainiert die mündliche Prüfung gleich mit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#lerngruppe",
+        "#klausurtraining",
+        "#jurastudent",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Lerngruppe: Fall statt Skript",
+      "coverText": "Ein Fall, drei Rollen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Eine Lerngruppe trainiert erst, wenn jemand laut einen Fall lösen muss.",
+        "handlung": "{A} holds up a single rough crystal as a puzzle to be cracked, while {B} rolls up his sleeves at a small table and the stack of thick books beside them stays closed.",
+        "hinweisRegie": "Place the note in the free space above the closed book stack, slightly tilted toward the crystal, without covering {B}'s hands or {A}'s pointer.",
+        "alternative": "{B} passes a small speaking stone to the next creature in a circle, while {A} turns a tiny hourglass on the table."
+      },
+      "bildSzene": "crystal puzzle, closed books stay aside",
+      "bildSzeneAlt": "speaking stone passed around circle",
+      "quellen": [
+        "Themenpool: mindset-5"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-alltag",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.795Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-754",
+      "ueberzeile": "Prüfungsfrage Strafrecht",
+      "titel": "Die Kassiererin gibt A 20 € zu viel Wechselgeld. A merkt es sofort, schweigt und geht. Betrug?",
+      "optionen": [
+        "Nein – A nutzt nur einen fremden Irrtum aus",
+        "Ja – Betrug durch Unterlassen, A musste aufklären",
+        "Ja – konkludente Täuschung durch das Annehmen"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 263 Abs. 1 StGB",
+        "§ 13 StGB",
+        "Themenpool: strafbt-754"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.795Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-754",
+      "ueberzeile": "Auflösung",
+      "titel": "Kein Betrug – wer nur schweigt, täuscht nicht",
+      "text": "Der Irrtum der Kassiererin entsteht ohne Zutun des A. Aktiv täuscht A nicht: Wer Geld annimmt, erklärt nicht schlüssig, es stehe ihm zu. Für ein Unterlassen fehlt eine Aufklärungspflicht aus Garantenstellung (§ 13 StGB) – ein gewöhnliches Bargeschäft begründet keine. Anders, wenn A den Irrtum selbst herbeiführt, etwa durch einen Wechseltrick.",
+      "norm": "§ 263 Abs. 1 StGB · § 13 StGB",
+      "quellen": [
+        "§ 263 Abs. 1 StGB",
+        "§ 13 StGB",
+        "Themenpool: strafbt-754"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.795Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – A nutzt nur einen fremden Irrtum aus",
+        "Ja – Betrug durch Unterlassen, A musste aufklären",
+        "Ja – konkludente Täuschung durch das Annehmen"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-137",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 244 Abs. 2 StPO: Das Gericht klärt von Amts wegen auf",
+      "text": "Das Gericht muss die Beweisaufnahme auf alle Tatsachen und Beweismittel erstrecken, die für die Entscheidung von Bedeutung sind – auch ohne Beweisantrag. Der Strafprozess ist kein Parteiprozess. Drängte sich eine weitere Beweiserhebung auf und unterblieb sie, rügt die Revision das mit der Aufklärungsrüge als Verfahrensrüge (§ 344 Abs. 2 S. 2 StPO).",
+      "norm": "§ 244 Abs. 2 StPO",
+      "quellen": [
+        "§ 244 Abs. 2 StPO",
+        "§ 344 Abs. 2 S. 2 StPO",
+        "Themenpool: stpo-137"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.795Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-105",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Realakt: Behördenhandeln ohne Regelung",
+      "text": "Ein Realakt ist schlichtes Verwaltungshandeln, das auf einen tatsächlichen Erfolg gerichtet ist und nichts verbindlich regelt – etwa eine behördliche Warnung, eine Auskunft oder das Aufstellen einer Laterne. Weil kein Verwaltungsakt vorliegt, klagst du auf Vornahme oder Unterlassen nicht mit der Verpflichtungs-, sondern mit der allgemeinen Leistungsklage.",
+      "norm": "§ 35 S. 1 VwVfG · § 43 Abs. 2 VwGO",
+      "quellen": [
+        "§ 35 S. 1 VwVfG",
+        "§ 42 Abs. 1 VwGO",
+        "§ 43 Abs. 2 VwGO",
+        "Themenpool: vwgo-105"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.795Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-802",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Bestreiten mit Nichtwissen: nicht bei eigenen Handlungen",
+      "falsch": "K behauptet, B habe den Auftrag selbst unterschrieben. B bestreitet das mit Nichtwissen. Damit ist die Behauptung bestritten – Beweisaufnahme.",
+      "richtigText": "Mit Nichtwissen bestreiten darf man nur Tatsachen, die weder eigene Handlungen noch Gegenstand eigener Wahrnehmung sind (§ 138 Abs. 4 ZPO). Die eigene Unterschrift gehört dazu nicht. Das Bestreiten ist unzulässig, also unerheblich: Die Behauptung gilt als zugestanden (§ 138 Abs. 3 ZPO) – keine Beweisaufnahme.",
+      "quellen": [
+        "§ 138 Abs. 3, 4 ZPO",
+        "Themenpool: assessorz-802"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.795Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-566",
+      "ueberzeile": "Klausurtipp Zwangsvollstreckung",
+      "titel": "Rechtsnachfolge nicht urkundlich belegbar? Dann Klage nach § 731 ZPO",
+      "text": "Für den Rechtsnachfolger gibt es eine titelübertragende Klausel (§ 727 ZPO), wenn die Nachfolge offenkundig ist oder durch öffentliche oder öffentlich beglaubigte Urkunden nachgewiesen wird. Hat der Gläubiger nur eine privatschriftliche Abtretung, bleibt die Klage auf Erteilung der Vollstreckungsklausel beim Prozessgericht des ersten Rechtszugs (§ 731 ZPO).",
+      "quellen": [
+        "§ 727 ZPO",
+        "§ 731 ZPO",
+        "Themenpool: zwangsv-566"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:41.795Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
