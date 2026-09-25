@@ -1,0 +1,863 @@
+{
+  "datum": "2027-01-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-279",
+        "themaTitel": "Wann ist ein Feststellungsinteresse gegeben?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "revision-876",
+        "themaTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-622",
+        "themaTitel": "Berufsfreiheit und Drei-Stufen-Theorie",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:09",
+        "art": "frage",
+        "themaId": "strafat-717"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:09",
+        "art": "antwort",
+        "themaId": "strafat-717"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "staat-086"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "streitstand",
+        "themaId": "streit-10"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:43",
+        "art": "merksatz",
+        "themaId": "verwalt-391"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "begriff",
+        "themaId": "zpo-564"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-279",
+      "poolTitel": "Wann ist ein Feststellungsinteresse gegeben?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 256 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "revision-876",
+      "poolTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 344 Abs. 2 Satz 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-15"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-622",
+      "poolTitel": "Berufsfreiheit und Drei-Stufen-Theorie",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-717",
+      "poolTitel": "Objektive Zurechnung: rechtlich missbilligte Gefahr",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-717",
+      "poolTitel": "Objektive Zurechnung: rechtlich missbilligte Gefahr",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-086",
+      "poolTitel": "Wann gelten Vorrang und Vorbehalt des Gesetzes?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2026-11-18"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-10",
+      "poolTitel": "Aberratio ictus: Konkretisierungs- oder Gleichwertigkeitstheorie?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 15, 16 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "verwalt-391",
+      "poolTitel": "Was ist der Folgenbeseitigungsanspruch?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "zpo-564",
+      "poolTitel": "Berufung: Zulässigkeit und Prüfungsumfang",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 511 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25",
+        "2026-10-25",
+        "2026-11-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-279",
+      "slug": "2027-01-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Behandlung läuft noch: Feststellen statt beziffern",
+          "titelZeilen": [
+            "Behandlung läuft",
+            "noch: Feststellen",
+            "statt beziffern"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Vorrang der Leistungsklage? Nicht hier",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Radfahrerin K wird von Autofahrer B angefahren. Ihre Behandlung läuft noch, Spätfolgen sind möglich. B bestreitet seine Haftung, die Verjährung rückt näher. Muss K auf Zahlung klagen – oder genügt eine Feststellungsklage?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Rechtsverhältnis",
+              "text": "Die Schadensersatzpflicht des B aus dem Unfall ist ein feststellungsfähiges Rechtsverhältnis (§ 256 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "2. Feststellungsinteresse",
+              "text": "Gegenwärtige Gefahr der Unsicherheit: B bestreitet seine Haftung, und die Verjährung droht."
+            },
+            {
+              "titel": "3. Kein Vorrang der Leistungsklage",
+              "text": "Ist der Schaden noch in der Entwicklung, muss K ihn nicht in einen bezifferbaren und einen offenen Teil aufspalten."
+            },
+            {
+              "titel": "4. Zukunftsschäden",
+              "text": "Bei Verletzung eines absoluten Rechtsguts wie der Gesundheit genügt nach BGH die Möglichkeit künftiger Schäden."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Leistungsklage möglich – also Feststellungsklage unzulässig.“ Der Vorrang der Leistungsklage gilt nicht schematisch. Und: Wird der Schaden erst während des Prozesses bezifferbar, muss K nach BGH nicht auf die Leistungsklage umstellen."
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtipp",
+          "text": "Das Feststellungsinteresse ist nach BGH nur für ein stattgebendes Urteil echte Prozessvoraussetzung. Ist die Klage ohnehin unbegründet, darf das Gericht es offenlassen und in der Sache abweisen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schaden noch in Entwicklung: Feststellungsklage zulässig. Der Vorrang der Leistungsklage ist kein Automatismus."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Prüfsteine für § 256 ZPO",
+          "punkte": [
+            "Feststellungsfähiges Rechtsverhältnis?",
+            "Gegenwärtige Unsicherheit?",
+            "Leistungsklage zumutbar?",
+            "Künftige Schäden möglich?"
+          ],
+          "icons": [
+            "vertrag",
+            "warnung",
+            "rechner",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Die Behandlung läuft noch – muss die Verletzte trotzdem auf Zahlung klagen? Nein. Solange sich der Schaden noch entwickelt, ist die Feststellungsklage nach § 256 Abs. 1 ZPO zulässig; der Vorrang der Leistungsklage gilt nicht schematisch. Bei Verletzung der Gesundheit genügt für Zukunftsschäden die Möglichkeit ihres Eintritts. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#feststellungsklage",
+        "#256zpo",
+        "#zivilprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Feststellungsklage statt Zahlungsklage?",
+      "coverText": "Vorrang der Leistungsklage? Nicht hier",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Solange ein Schaden noch wächst, muss niemand eine endgültige Summe nennen – es genügt festzustellen, wer haftet.",
+        "handlung": "{A} calmly plants a marker flag next to a small sapling that is still growing, while {B} nervously tries to measure its final height with a short ruler.",
+        "hinweisRegie": "Place the note in the free space above the growing sapling next to the flag, slightly tilted toward the flag, so it marks the decision to fix liability first without covering {B}'s ruler.",
+        "alternative": "{B} holds an unfinished bill with blank lines while {A} stamps a single line at the top that names who has to pay."
+      },
+      "bildSzene": "flag planted beside growing sapling",
+      "bildSzeneAlt": "unfinished bill stamped with payer's line",
+      "quellen": [
+        "§ 256 Abs. 1 ZPO",
+        "§ 253 ZPO",
+        "Themenpool: zpo-279"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.505Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-876",
+      "slug": "2027-01-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ein Satz reicht für die Sachrüge – nie für die Verfahrensrüge",
+          "titelZeilen": [
+            "Ein Satz reicht",
+            "für die Sachrüge –",
+            "nie für die",
+            "Verfahrensrüge"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Tatsachen statt Normzitat",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Das Landgericht lehnt einen Beweisantrag der Verteidigung ab. Die Revisionsbegründung sagt nur: „Gerügt wird die Verletzung des § 244 Abs. 3 StPO durch die Ablehnung des Beweisantrags.“ Ist die Rüge zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Art der Rüge",
+              "text": "Verfahrensrüge – für sie gilt § 344 Abs. 2 S. 2 StPO: Die den Mangel enthaltenden Tatsachen sind anzugeben."
+            },
+            {
+              "titel": "2. Maßstab",
+              "text": "Das Revisionsgericht muss allein anhand der Begründung prüfen können, ob ein Fehler vorliegt, wenn die Tatsachen zutreffen."
+            },
+            {
+              "titel": "3. Was fehlt",
+              "text": "Beweisantrag und Ablehnungsbeschluss im Wortlaut sowie alle weiteren Tatsachen, die zur Prüfung nötig sind."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Unzulässig. Verweise auf Akten oder Protokoll ersetzen den eigenen Vortrag nicht."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Sachrüge oder Verfahrensrüge?",
+          "links": {
+            "titel": "Sachrüge",
+            "punkte": [
+              "„Gerügt wird die Verletzung materiellen Rechts“ genügt.",
+              "Geprüft wird das Urteil auf Rechtsfehler."
+            ]
+          },
+          "rechts": {
+            "titel": "Verfahrensrüge",
+            "punkte": [
+              "Alle Verfahrenstatsachen vollständig und bestimmt vortragen.",
+              "Keine Bezugnahme auf Akten oder Protokoll."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Norm nennen, Ergebnis behaupten, fertig. Das Revisionsgericht sucht sich die Tatsachen nicht selbst zusammen. Bestimmt heißt auch: behaupten, dass etwas geschehen ist – nicht, dass es „möglicherweise“ so war."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Sachrüge trägt ein Satz. Die Verfahrensrüge trägt nur ein Tatsachenvortrag, der ohne Blick in die Akten verständlich ist."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Abschicken",
+          "punkte": [
+            "Rüge richtig eingeordnet?",
+            "Antrag und Beschluss im Wortlaut?",
+            "Ohne Blick in die Akte verständlich?"
+          ],
+          "icons": [
+            "lupe",
+            "dokument",
+            "ordner"
+          ]
+        }
+      ],
+      "caption": "Für die Sachrüge genügt ein Satz – für die Verfahrensrüge nie. § 344 Abs. 2 S. 2 StPO verlangt, die den Mangel enthaltenden Tatsachen anzugeben: so vollständig, dass das Revisionsgericht allein anhand der Begründungsschrift prüfen kann, ob ein Fehler vorliegt. Beim abgelehnten Beweisantrag heißt das: Antrag und Beschluss im Wortlaut, keine Verweise auf die Akte. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#344stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 344 Abs. 2 S. 2 StPO: Was die Rüge braucht",
+      "coverText": "Tatsachen statt Normzitat",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Eine Verfahrensrüge muss alle Tatsachen selbst mitbringen – das Gericht sucht sie nicht in den Akten.",
+        "handlung": "{A} hovers over a sealed case and refuses to open a tall filing cabinet behind it, while {B} curiously packs every missing document piece by piece into the case.",
+        "hinweisRegie": "Place the note in the free space between the sealed case and the closed cabinet, slightly tilted toward the case, so it shows that everything must be inside without covering {B}'s hands.",
+        "alternative": "{B} tries to hand over a single slip of paper while {A} points to a complete, neatly stacked bundle as the only thing it will accept."
+      },
+      "bildSzene": "packing all documents into sealed case",
+      "bildSzeneAlt": "single slip versus complete bundle",
+      "quellen": [
+        "§ 344 Abs. 2 StPO",
+        "§ 244 Abs. 3 StPO",
+        "Themenpool: revision-876"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontrast-ruegen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.505Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-622",
+      "slug": "2027-01-20-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Art. 12 GG: Drei Stufen – die Wirkung entscheidet",
+          "unter": "Berufsfreiheit · Art. 12 Abs. 1 GG",
+          "text": "Je tiefer der Eingriff in die Berufswahl, desto gewichtiger muss der Grund sein.",
+          "norm": "Art. 12 Abs. 1 GG",
+          "icon": "werkzeug",
+          "sprecher": "Meisterpflicht und Taxikontingent stehen nicht auf derselben Stufe. Die Drei-Stufen-Theorie des Bundesverfassungsgerichts fragt: Wie tief greift der Staat in die Berufsfreiheit ein? Je tiefer, desto gewichtiger muss der Grund sein.",
+          "marken": [
+            "drei Stufen",
+            "Wirkung zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Berufsausübung",
+          "text": "Wie wird der Beruf ausgeübt? Vernünftige Gründe des Gemeinwohls genügen.",
+          "norm": "Art. 12 Abs. 1 S. 2 GG",
+          "sprecher": "Stufe eins: Regeln zur Berufsausübung, etwa Öffnungszeiten. Hier genügen vernünftige Erwägungen des Gemeinwohls.",
+          "marken": [
+            "das Wie"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Subjektive Zulassung",
+          "text": "Persönliche Voraussetzungen wie Prüfungen – zum Schutz wichtiger Gemeinschaftsgüter.",
+          "norm": null,
+          "sprecher": "Stufe zwei: subjektive Zulassungsvoraussetzungen. Sie knüpfen an Eigenschaften und Fähigkeiten an, die man erwerben kann, etwa die Meisterprüfung. Sie müssen dem Schutz wichtiger Gemeinschaftsgüter dienen.",
+          "marken": [
+            "erwerbbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Objektive Zulassung",
+          "text": "Vom Einzelnen nicht beeinflussbar – nur gegen schwere Gefahren für überragende Güter.",
+          "norm": null,
+          "sprecher": "Stufe drei: objektive Zulassungsvoraussetzungen. Auf sie hat der Einzelne keinen Einfluss, etwa eine zahlenmäßige Begrenzung von Taxikonzessionen. Sie sind nur erlaubt zur Abwehr nachweisbarer oder höchstwahrscheinlicher schwerer Gefahren für ein überragend wichtiges Gemeinschaftsgut.",
+          "marken": [
+            "nicht beeinflussbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Stufen strukturieren die Abwägung",
+          "text": "Höhere Stufe nur, wenn die niedrigere nicht ausreicht.",
+          "norm": null,
+          "sprecher": "Schritt vier: Die Stufen ersetzen die Verhältnismäßigkeitsprüfung nicht, sie strukturieren sie. Eine höhere Stufe ist nur zulässig, wenn sich die Gefahr mit Mitteln der niedrigeren nicht abwehren lässt.",
+          "marken": [
+            "unterste Stufe zuerst"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Klassiker: Wirkung vor Etikett",
+          "text": "Eine Ausübungsregel, die faktisch den Zugang versperrt, wird wie eine Zulassungsschranke gemessen.",
+          "norm": null,
+          "sprecher": "Und der Klausurklassiker: Es zählt die Wirkung, nicht das Etikett. Wiegt eine Ausübungsregel so schwer, dass sie den Zugang zum Beruf faktisch versperrt, misst das Bundesverfassungsgericht sie wie eine Zulassungsschranke.",
+          "marken": [
+            "faktische Sperre"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ausübung: vernünftige Gründe. Subjektiv: wichtige Güter. Objektiv: schwere Gefahren.",
+          "norm": "Art. 12 Abs. 1 GG",
+          "sprecher": "Merke: Ausübung braucht vernünftige Gründe, subjektive Zulassung wichtige Gemeinschaftsgüter, objektive Zulassung die Abwehr schwerer Gefahren.",
+          "marken": [
+            "drei Maßstäbe"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Stufe, dann die Abwägung",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und bestimm die Stufe immer nach der Wirkung des Eingriffs.",
+          "marken": [
+            "Stufe bestimmen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Meisterpflicht und Taxikontingent stehen nicht auf derselben Stufe. Die Drei-Stufen-Theorie zu Art. 12 Abs. 1 GG unterscheidet Berufsausübungsregeln, subjektive und objektive Zulassungsvoraussetzungen – mit steigenden Anforderungen an den Rechtfertigungsgrund. Maßgeblich ist die Wirkung: Eine Ausübungsregel, die den Zugang faktisch versperrt, wird wie eine Zulassungsschranke gemessen. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#berufsfreiheit",
+        "#art12gg",
+        "#dreistufentheorie",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Drei-Stufen-Theorie: die Wirkung entscheidet",
+      "titelZeilen": [
+        "Art. 12 GG:",
+        "Drei Stufen – die",
+        "Wirkung entscheidet"
+      ],
+      "coverText": "Ausübung, subjektiv, objektiv",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Je tiefer ein Gesetz in den Zugang zum Beruf eingreift, desto schwerer muss der Grund dafür wiegen.",
+        "handlung": "{A} points his pointer at three steps of increasing height leading to a workshop door, while {B} places heavier and heavier crystal weights on each step as a counterweight.",
+        "hinweisRegie": "Place the note in the free space above the highest step next to the heaviest weight, slightly tilted toward it, so the rising burden is visible without covering {B}'s hands or the door.",
+        "alternative": "{B} faces three gates of increasing strength in a row while {A} holds up keys of increasing size for each gate."
+      },
+      "bildSzene": "three rising steps with heavier weights",
+      "bildSzeneAlt": "three gates, keys of rising size",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "BVerfGE 7, 377 (Apotheken-Urteil)",
+        "Themenpool: grundr-622"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-stufen-drei-massstaebe",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.506Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-717",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "N überredet seinen Erbonkel zu einem Flug und hofft auf einen Absturz. Die Maschine stürzt ab. Totschlag?",
+      "optionen": [
+        "Ja – N war kausal und wollte den Tod",
+        "Nein – N hat keine rechtlich missbilligte Gefahr geschaffen",
+        "Nur Versuch – der Absturz war bloßer Zufall"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 212 StGB",
+        "§ 15 StGB",
+        "Themenpool: strafat-717"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.506Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-717",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ein normales Lebensrisiko ist keine missbilligte Gefahr",
+      "text": "Kausal ist N: Ohne sein Zureden wäre der Onkel nicht geflogen. Zurechnen lässt sich der Tod aber nur, wenn N eine rechtlich missbilligte Gefahr geschaffen hat. Einen Linienflug anzuregen bleibt im erlaubten Risiko. Nach anderer Begründung fehlt schon der Vorsatz: Bloßes Hoffen ist kein Wollen.",
+      "norm": "§ 212 StGB · objektive Zurechnung",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 15 StGB",
+        "Themenpool: strafat-717"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.506Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – N war kausal und wollte den Tod",
+        "Nein – N hat keine rechtlich missbilligte Gefahr geschaffen",
+        "Nur Versuch – der Absturz war bloßer Zufall"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-086",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 20 Abs. 3 GG: Wesentliches regelt das Parlament selbst",
+      "text": "Vorrang des Gesetzes: Die Verwaltung darf nicht gegen geltendes Recht handeln. Vorbehalt des Gesetzes: Für Eingriffe braucht sie eine gesetzliche Grundlage. Die Wesentlichkeitslehre des BVerfG verschärft das: Wesentliche, vor allem grundrechtsrelevante Entscheidungen muss der parlamentarische Gesetzgeber selbst treffen – er darf sie nicht der Verwaltung überlassen.",
+      "norm": "Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-086"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "streit-10",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "A schießt auf B, trifft aber den danebenstehenden C tödlich. Vollendeter Totschlag an C?",
+      "norm": "§§ 15, 16 StGB",
+      "optionen": [
+        "Konkretisierungstheorie (Rspr., h.L.): Vorsatz auf B konkretisiert – versuchter Totschlag an B, fahrlässige Tötung an C.",
+        "Gleichwertigkeitstheorie (Teile der Lit.): Tatbestandlich gleichwertige Objekte – vollendeter Totschlag an C."
+      ],
+      "text": "Abgrenzung: Beim error in persona trifft A, wen er anvisiert, und irrt nur über die Identität – unbeachtlich. Bei der aberratio ictus geht der Angriff fehl. Für die h.M. spricht: Der Vorsatz richtet sich auf das konkret anvisierte Opfer. Sind die Objekte ungleichwertig (Mensch statt Hund), kommen beide Ansichten zum selben Ergebnis.",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "§ 212 StGB",
+        "§ 222 StGB",
+        "§§ 22, 23 StGB"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-391",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Folgenbeseitigung heißt Zustand zurück – nicht Geld",
+      "text": "Hoheitlicher Eingriff in ein subjektives Recht, rechtswidriger Zustand, der andauert: Dann wird der frühere Zustand wiederhergestellt, soweit möglich und zumutbar. Geld gibt es darüber nicht.",
+      "norm": "Art. 20 Abs. 3 GG · Grundrechte",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "§ 839 BGB i.V.m. Art. 34 GG",
+        "Themenpool: verwalt-391"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-564",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Beschwer: beim Kläger formell, beim Beklagten materiell",
+      "text": "Jedes Rechtsmittel setzt eine Beschwer voraus. Der Kläger ist beschwert, wenn das Urteil hinter seinem Antrag zurückbleibt (formelle Beschwer). Beim Beklagten genügt, dass ihn das Urteil in der Sache belastet (materielle Beschwer). Davon zu trennen: der Wert des Beschwerdegegenstands oder die Zulassung der Berufung (§ 511 Abs. 2 ZPO).",
+      "norm": "§ 511 Abs. 2 ZPO",
+      "quellen": [
+        "§ 511 ZPO",
+        "Themenpool: zpo-564"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:08:52.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

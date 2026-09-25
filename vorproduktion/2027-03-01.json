@@ -1,0 +1,883 @@
+{
+  "datum": "2027-03-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "anlass",
+        "themaId": "revision-885",
+        "themaTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "assessoroer-846",
+        "themaTitel": "Wie endet der Verwaltungsprozess durch Erledigung?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-424",
+        "themaTitel": "Beschränkte Geschäftsfähigkeit: lediglich rechtlicher Vorteil",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "sachen-510"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "sachen-510"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "staat-607"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "tipp",
+        "themaId": "verwbt-118"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "zahl",
+        "themaId": "zwangsv-825"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "streitstand",
+        "themaId": "vwgo-102"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "anlass",
+      "themaId": "revision-885",
+      "poolTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2027-02-23"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "assessoroer-846",
+      "poolTitel": "Wie endet der Verwaltungsprozess durch Erledigung?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 161 Abs. 2 VwGO",
+        "§ 173 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-424",
+      "poolTitel": "Beschränkte Geschäftsfähigkeit: lediglich rechtlicher Vorteil",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 106, 107 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-510",
+      "poolTitel": "Grundstücksübereignung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 873, 925 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2026-10-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-510",
+      "poolTitel": "Grundstücksübereignung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 873, 925 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2026-10-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-607",
+      "poolTitel": "Bundeszwang, Bundesaufsicht und Verwaltungszuständigkeiten",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 83 ff. GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2026-11-13"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "verwbt-118",
+      "poolTitel": "Was ist eine öffentliche Einrichtung und wer hat Zugang zu ihr?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zwangsv-825",
+      "poolTitel": "Welche Voraussetzungen trägt die Zwangsvollstreckung im Grundfall?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 796 Abs. 1 ZPO",
+        "§ 929 Abs. 1 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2026-12-29"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "vwgo-102",
+      "poolTitel": "Wann wendet man § 123 VwGO und wann § 80 Abs. 5 VwGO im einstweiligen Rechtsschutz an?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 Abs. 5 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "§ 80a VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2026-10-27",
+        "2026-12-29"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "anlass",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-885",
+      "slug": "2027-03-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beruhen heißt nicht: Das Urteil wäre anders ausgefallen",
+          "titelZeilen": [
+            "Beruhen heißt nicht:",
+            "Das Urteil wäre",
+            "anders ausgefallen"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Möglichkeit genügt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Anlass",
+          "text": "Ein Verfahrensfehler allein trägt die Revision nicht: Das Urteil muss auf ihm beruhen (§ 337 Abs. 1 StPO). Gerade vor den Klausuren im zweiten Examen lohnt es sich, diesen letzten Prüfungsschritt der Verfahrensrüge sicher zu beherrschen."
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "In der Hauptverhandlung wird die Schwester des Angeklagten als Zeugin vernommen, ohne über ihr Zeugnisverweigerungsrecht belehrt zu werden (§ 52 Abs. 3 StPO). Sie belastet ihn, das Urteil stützt sich auf ihre Aussage. Beruht das Urteil auf dem Fehler?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du das Beruhen",
+          "schritte": [
+            {
+              "titel": "1. Absoluter oder relativer Grund?",
+              "text": "Bei § 338 StPO wird das Beruhen unwiderleglich vermutet. Ausnahme Nr. 8: Die Rspr. verlangt einen konkreten Zusammenhang."
+            },
+            {
+              "titel": "2. Maßstab des § 337 StPO",
+              "text": "Das Urteil beruht auf dem Fehler, wenn nicht auszuschließen ist, dass es ohne ihn anders ausgefallen wäre."
+            },
+            {
+              "titel": "3. Ausschluss im Einzelfall",
+              "text": "Etwa: Das fehlerhaft erlangte Beweismittel wird im Urteil nicht verwertet, oder der Fehler wurde in der Verhandlung geheilt."
+            },
+            {
+              "titel": "4. Im Fall",
+              "text": "Die Aussage trägt das Urteil mit. Ein Beruhen ist nicht auszuschließen – außer die Zeugin kannte ihr Recht und hätte ohnehin ausgesagt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Das Beruhen mit „Das Gericht hätte sicher anders entschieden“ begründen – oder es ganz weglassen. Verlangt ist weniger: Ein anderes Ergebnis darf nicht auszuschließen sein. Bei § 337 StPO begründest du das knapp am Urteil, bei § 338 StPO (außer Nr. 8) genügt der Hinweis auf die Vermutung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beruhen heißt: Ein anderes Urteil ist nicht auszuschließen. Bei § 338 StPO wird es vermutet – bei § 337 StPO begründest du es."
+        },
+        {
+          "art": "cta",
+          "titel": "Beruhen in drei Fragen",
+          "punkte": [
+            "Absoluter Grund nach § 338 StPO?",
+            "Ohne den Fehler anderes Urteil möglich?",
+            "Ausschluss: nicht verwertet oder geheilt?"
+          ],
+          "icons": [
+            "paragraf",
+            "waage",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Beruhen heißt nicht, dass das Urteil ohne den Verfahrensfehler sicher anders ausgefallen wäre. Nach § 337 Abs. 1 StPO genügt, dass ein anderes Ergebnis nicht auszuschließen ist. Bei den absoluten Revisionsgründen des § 338 StPO wird das Beruhen sogar unwiderleglich vermutet. Ausgeschlossen ist es etwa, wenn das Urteil das fehlerhaft erlangte Beweismittel gar nicht verwertet. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#337stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision: Wann beruht das Urteil auf dem Fehler?",
+      "coverText": "Möglichkeit genügt",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Für das Beruhen genügt, dass ohne den Fehler ein anderes Urteil möglich gewesen wäre.",
+        "handlung": "{A} holds a balance scale steady while {B} nervously lifts a single loose cog out of one pan, and the scale visibly starts to tremble.",
+        "hinweisRegie": "Place the note in the open space right beside the trembling scale pan, slightly tilted toward the lifted cog, so it links the missing part to a possibly different outcome without covering hands or faces.",
+        "alternative": "{B} removes one domino from a long row while {A} watches closely whether the rest could still fall the same way."
+      },
+      "bildSzene": "mechanic lifts cog from trembling scale",
+      "bildSzeneAlt": "one domino removed from long row",
+      "quellen": [
+        "§ 337 Abs. 1 StPO",
+        "§ 338 StPO",
+        "§ 52 Abs. 3 StPO",
+        "Themenpool: revision-885"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.781Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-846",
+      "slug": "2027-03-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erledigt im VG-Prozess: drei Wege zum Tenor",
+          "titelZeilen": [
+            "Erledigt im",
+            "VG-Prozess:",
+            "drei Wege zum Tenor"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Wer erklärt, bestimmt den Weg",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Erledigung heißt: Ein Ereignis nach Rechtshängigkeit macht die Klage unzulässig oder unbegründet – etwa weil sich der angefochtene Verwaltungsakt erledigt (§ 43 Abs. 2 VwVfG). Wie das Verfahren endet, hängt davon ab, wer was erklärt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Beide erklären für erledigt",
+              "text": "Einstellung durch Beschluss (§ 92 III 1 VwGO analog). Kosten nach billigem Ermessen, bisheriger Sach- und Streitstand (§ 161 II VwGO)."
+            },
+            {
+              "titel": "2. Nur der Kläger erklärt",
+              "text": "Sein Antrag wird zum Antrag festzustellen, dass der Rechtsstreit in der Hauptsache erledigt ist. Entschieden wird durch Urteil."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "Prüfung bei einseitiger Erklärung",
+              "text": "Nach dem BVerwG grundsätzlich nur: Ist Erledigung eingetreten? Die ursprüngliche Klage nur bei schutzwürdigem Interesse des Beklagten."
+            },
+            {
+              "titel": "3. Kläger will die Rechtswidrigkeit",
+              "text": "Dann keine Erledigungserklärung, sondern Fortsetzungsfeststellungsklage (§ 113 Abs. 1 S. 4 VwGO) – mit besonderem Feststellungsinteresse."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: der Tenor",
+          "punkte": [
+            "Beide erklären: Beschluss – „Das Verfahren wird eingestellt.“",
+            "Ein ergangenes, nicht rechtskräftiges Urteil wird wirkungslos (§ 173 VwGO, § 269 III ZPO analog).",
+            "Nur Kläger, erledigt: „Es wird festgestellt, dass der Rechtsstreit in der Hauptsache erledigt ist.“",
+            "Nur Kläger, nicht erledigt: Die Klage wird abgewiesen."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beide erklären: Einstellung, Kosten nach § 161 Abs. 2 VwGO. Nur der Kläger: Feststellungsurteil. Rechtswidrigkeit klären: FFK."
+        },
+        {
+          "art": "cta",
+          "titel": "Erledigung in drei Fragen",
+          "punkte": [
+            "Wer hat für erledigt erklärt?",
+            "Ist tatsächlich Erledigung eingetreten?",
+            "Will der Kläger mehr: FFK?"
+          ],
+          "icons": [
+            "personen",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Erledigung im Verwaltungsprozess: drei Wege, drei verschiedene Tenöre. Erklären beide Beteiligte für erledigt, stellt das Gericht das Verfahren durch Beschluss ein und entscheidet über die Kosten nach § 161 Abs. 2 VwGO. Erklärt nur der Kläger, wird daraus ein Feststellungsantrag – nach dem BVerwG prüft das Gericht grundsätzlich nur, ob Erledigung eingetreten ist. Wer die Rechtswidrigkeit geklärt haben will, braucht die Fortsetzungsfeststellungsklage. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#erledigung",
+        "#161vwgo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Erledigung im VG-Prozess: drei Wege",
+      "coverText": "Wer erklärt, bestimmt den Weg",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Wer die Erledigung erklärt, bestimmt, wie der Verwaltungsprozess endet.",
+        "handlung": "{A} hovers at a fork with three small doors and holds out a stamp, while {B} taps with his pointer on the one door in which two matching keys are already inserted.",
+        "hinweisRegie": "Place the note in the free space above the three small doors, slightly tilted toward the door with two keys, so it reads as the route overview without covering the pointer or the stamp.",
+        "alternative": "{B} counts two raised hands against a single raised hand while {A} sorts matching folders into two different trays."
+      },
+      "bildSzene": "droid at fork with three doors",
+      "bildSzeneAlt": "two raised hands versus one hand",
+      "quellen": [
+        "§ 161 Abs. 2 VwGO",
+        "§ 92 Abs. 3 VwGO",
+        "§ 173 VwGO",
+        "§ 269 Abs. 3 ZPO",
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 43 Abs. 2 VwVfG",
+        "Themenpool: assessoroer-846"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-wege",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-424",
+      "slug": "2027-03-01-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Für 1 Euro gekauft: kein lediglich rechtlicher Vorteil",
+          "unter": "Minderjährige · § 107 BGB",
+          "text": "Auch das beste Schnäppchen verpflichtet zur Zahlung – ein rechtlicher Nachteil.",
+          "norm": "§ 107 BGB",
+          "icon": "geldbeutel",
+          "sprecher": "Ein Euro für ein Fahrrad ist kein lediglich rechtlicher Vorteil. Der sechzehnjährige K macht ein Schnäppchen, aber er schuldet den Kaufpreis.",
+          "marken": [
+            "Schnäppchen?",
+            "§ 107 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Ohne Einwilligung schwebend unwirksam",
+          "text": "Nicht lediglich vorteilhaft: Einwilligung des gesetzlichen Vertreters nötig.",
+          "norm": "§§ 106–108 BGB",
+          "sprecher": "Schritt eins: Wer sieben, aber noch nicht achtzehn ist, ist beschränkt geschäftsfähig. Bringt ihm ein Geschäft nicht lediglich einen rechtlichen Vorteil, braucht er die Einwilligung seiner Eltern. Sonst ist der Vertrag schwebend unwirksam.",
+          "marken": [
+            "Einwilligung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rechtlich, nicht wirtschaftlich",
+          "text": "Es zählen die Rechtsfolgen – nicht, ob sich das Geschäft rechnet.",
+          "norm": "§ 107 BGB",
+          "sprecher": "Schritt zwei: Maßstab sind allein die rechtlichen Folgen. Ob sich das Geschäft lohnt, spielt keine Rolle. Ein Kaufvertrag verpflichtet immer zur Zahlung.",
+          "marken": [
+            "Pflicht ist Nachteil"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Schenkung und Übereignung",
+          "text": "Das Schenkungsversprechen und der Eigentumserwerb sind grundsätzlich lediglich vorteilhaft.",
+          "norm": null,
+          "sprecher": "Schritt drei: Anders die Schenkung. Das Versprechen verpflichtet nur den Schenker, und auch der Eigentumserwerb ist grundsätzlich lediglich vorteilhaft. Verpflichtung und Verfügung prüfst du getrennt.",
+          "marken": [
+            "getrennt prüfen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Neutrale Geschäfte",
+          "text": "Weder Vorteil noch Nachteil: nach h.M. analog § 107 BGB ohne Einwilligung wirksam.",
+          "norm": "§ 107 BGB analog",
+          "sprecher": "Schritt vier: Neutrale Geschäfte. Verfügt der Minderjährige als Nichtberechtigter über eine fremde Sache, verliert er selbst nichts. Nach herrschender Meinung ist das ohne Einwilligung wirksam.",
+          "marken": [
+            "neutral",
+            "analog § 107"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: das vermietete Haus",
+          "text": "Mit dem Eigentum tritt der Beschenkte in die Mietverträge ein – rechtlicher Nachteil.",
+          "norm": "§ 566 BGB",
+          "sprecher": "Der Klassiker: Die Großmutter schenkt dem Enkel ein vermietetes Haus. Mit dem Eigentum tritt er in die Mietverträge ein und hat Vermieterpflichten, § 566 BGB. Das ist nicht lediglich vorteilhaft.",
+          "marken": [
+            "Vermieterpflichten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Entsteht irgendeine rechtliche Pflicht, ist es kein lediglich rechtlicher Vorteil.",
+          "norm": "§ 107 BGB",
+          "sprecher": "Merke: Frag nicht, ob es sich lohnt. Frag, ob den Minderjährigen irgendeine rechtliche Pflicht trifft.",
+          "marken": [
+            "Pflicht?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Minderjährigen-Fall",
+          "text": "Speichern für die nächste BGB-AT-Klausur.",
+          "sprecher": "Speicher dir das für den nächsten Minderjährigen-Fall. Und prüf Verpflichtung und Verfügung immer getrennt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Für einen Euro gekauft – und trotzdem kein lediglich rechtlicher Vorteil. § 107 BGB fragt nicht, ob sich ein Geschäft wirtschaftlich lohnt, sondern ob den Minderjährigen eine rechtliche Pflicht trifft. Der Kaufvertrag verpflichtet zur Zahlung, die Schenkung dagegen nur den Schenker. Klassiker: Wer ein vermietetes Haus geschenkt bekommt, tritt in die Mietverträge ein (§ 566 BGB). Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#107bgb",
+        "#minderjährigenrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 107 BGB: rechtlich, nicht wirtschaftlich",
+      "titelZeilen": [
+        "Für 1 Euro gekauft:",
+        "kein lediglich",
+        "rechtlicher Vorteil"
+      ],
+      "coverText": "Pflicht schlägt Schnäppchen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Ob ein Geschäft lediglich rechtlich vorteilhaft ist, bestimmen die Pflichten – nicht der Preis.",
+        "handlung": "{A} happily reaches for a shiny bicycle offered for a single tiny coin, while {B} gently lays a heavy chain with a small payment tag across {A}'s outstretched arm.",
+        "hinweisRegie": "Place the note in the free space next to the chain with the payment tag, slightly tilted toward it, so the duty stands out as the decisive element without covering the tiny coin or {A}'s face.",
+        "alternative": "{B} hands a gift crystal to {A}, but a small house full of tenants is tied to the crystal with a rope."
+      },
+      "bildSzene": "alien reaches for bike, chain on arm",
+      "bildSzeneAlt": "gift crystal tied to house with tenants",
+      "quellen": [
+        "§§ 106–108 BGB",
+        "§ 566 BGB",
+        "Themenpool: bgbat-424"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "wirtschaftlich-vs-rechtlich",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-510",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "V und K erklären die Auflassung „unter der Bedingung, dass K den Kaufpreis zahlt“. Was gilt?",
+      "optionen": [
+        "Wirksam – K wird Eigentümer, sobald er zahlt",
+        "Unwirksam – die Auflassung verträgt keine Bedingung",
+        "Wirksam – die Bedingung gilt einfach als gestrichen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 925 BGB",
+        "§ 873 BGB",
+        "§ 883 BGB",
+        "Themenpool: sachen-510"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-510",
+      "ueberzeile": "Auflösung",
+      "titel": "Unwirksam – die Auflassung ist bedingungsfeindlich",
+      "text": "Eine Auflassung unter einer Bedingung oder Zeitbestimmung ist unwirksam (§ 925 Abs. 2 BGB) – das Grundbuch soll klare Verhältnisse zeigen. Die Praxis sichert anders: Der Kaufvertrag darf Bedingungen enthalten, die Umschreibung wird erst nach Zahlung beantragt, und den Käufer schützt eine Vormerkung (§ 883 BGB).",
+      "norm": "§ 925 Abs. 2 BGB · § 873 Abs. 1 BGB",
+      "quellen": [
+        "§ 925 BGB",
+        "§ 873 BGB",
+        "§ 883 BGB",
+        "Themenpool: sachen-510"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.783Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Wirksam – K wird Eigentümer, sobald er zahlt",
+        "Unwirksam – die Auflassung verträgt keine Bedingung",
+        "Wirksam – die Bedingung gilt einfach als gestrichen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-607",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 83 GG: Bundesgesetze führen im Regelfall die Länder aus",
+      "text": "Die Länder führen Bundesgesetze als eigene Angelegenheit aus, soweit das Grundgesetz nichts anderes bestimmt oder zulässt (Art. 83 GG). Regelfall ist die Landeseigenverwaltung (Art. 84 GG). Bundesauftragsverwaltung (Art. 85 GG) und bundeseigene Verwaltung (Art. 86 ff. GG) brauchen eine Grundlage im GG – etwa Art. 87 Abs. 1 GG für den Auswärtigen Dienst.",
+      "norm": "Art. 83 GG · Art. 30 GG",
+      "quellen": [
+        "Art. 30 GG",
+        "Art. 83–87 GG",
+        "Themenpool: staat-607"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-118",
+      "ueberzeile": "Klausurtipp Kommunalrecht",
+      "titel": "Stadthalle von einer GmbH betrieben? Der Zugangsanspruch richtet sich weiter gegen die Gemeinde",
+      "text": "Betreibt eine gemeindeeigene GmbH die Einrichtung, bleibt das „Ob“ der Zulassung öffentlich-rechtlich (Zweistufentheorie). Der Einwohner kann von der Gemeinde verlangen, auf ihre Gesellschaft einzuwirken und ihm Zugang zu verschaffen – Rechtsweg zum VG (§ 40 Abs. 1 VwGO). Das „Wie“, etwa der Mietvertrag, ist privatrechtlich. Grundlage: die Gemeindeordnung des Landes.",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "§ 40 Abs. 1 VwGO",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-118"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-825",
+      "ueberzeile": "3 Punkte Zwangsvollstreckung",
+      "titel": "Titel, Klausel, Zustellung liegen vor – und die Vollstreckung stoppt doch",
+      "text": "Die allgemeinen Voraussetzungen öffnen die Tür, Vollstreckungshindernisse schließen sie wieder. Im Grundfall prüfst du sie zuletzt.",
+      "punkte": [
+        "Einstellung oder Unzulässigkeit durch Entscheidung belegt (§ 775 Nr. 1, 2 ZPO)",
+        "Befriedigung oder Stundung nachgewiesen (§ 775 Nr. 4, 5 ZPO)",
+        "Insolvenzverfahren eröffnet: Einzelvollstreckung gesperrt (§ 89 Abs. 1 InsO)"
+      ],
+      "quellen": [
+        "§§ 704, 724, 750 ZPO",
+        "§ 775 ZPO",
+        "§ 89 InsO",
+        "Themenpool: zwangsv-825"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-102",
+      "ueberzeile": "Streitstand VwGO",
+      "titel": "Nachbar will die Baugenehmigung stoppen: Muss er vor dem Eilantrag erst zur Behörde?",
+      "norm": "§ 80a Abs. 3 S. 2 VwGO · § 80 Abs. 6 VwGO",
+      "optionen": [
+        "Überwiegende Ansicht: nein – § 80a Abs. 3 S. 2 verweist auf § 80 Abs. 6 nur für Abgaben und Kosten (Rechtsgrundverweisung).",
+        "Gegenansicht: ja – Rechtsfolgenverweisung; ein vorheriger Antrag bei der Behörde ist stets Zulässigkeitsvoraussetzung."
+      ],
+      "text": "Klausur: Statthaft ist der Antrag nach §§ 80a Abs. 3, 80 Abs. 5 VwGO, weil der Nachbarwiderspruch gegen die Baugenehmigung keine aufschiebende Wirkung hat (§ 212a Abs. 1 BauGB). § 123 VwGO scheidet nach dessen Abs. 5 aus. Den Streit um § 80 Abs. 6 VwGO kurz darstellen und begründet entscheiden.",
+      "quellen": [
+        "§ 80 Abs. 5, 6 VwGO",
+        "§ 80a Abs. 3 VwGO",
+        "§ 123 Abs. 5 VwGO",
+        "§ 212a Abs. 1 BauGB",
+        "Themenpool: vwgo-102"
+      ],
+      "fachLabel": "Verwaltungsprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:08.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,886 @@
+{
+  "datum": "2027-03-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-604",
+        "themaTitel": "Verfassungsänderung und Ewigkeitsklausel",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "sachen-495",
+        "themaTitel": "Trennungs- und Abstraktionsprinzip",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-736",
+        "themaTitel": "Fahrlässigkeit: Sorgfaltspflicht und Pflichtwidrigkeitszusammenhang",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "schuld-011"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "schuld-011"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "staat-088"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "tipp",
+        "themaId": "bereich-214"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "zahl",
+        "themaId": "methodik-904"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "streitstand",
+        "themaId": "anklage-870"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-604",
+      "poolTitel": "Verfassungsänderung und Ewigkeitsklausel",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 79 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-495",
+      "poolTitel": "Trennungs- und Abstraktionsprinzip",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 433, 929 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-736",
+      "poolTitel": "Fahrlässigkeit: Sorgfaltspflicht und Pflichtwidrigkeitszusammenhang",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 15, 222, 229 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-011",
+      "poolTitel": "Was sind die Rechtsfolgen des Annahmeverzugs?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 300 BGB",
+        "§ 301 BGB",
+        "§ 302 BGB",
+        "§ 304 BGB",
+        "§ 326 Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-11",
+        "2026-10-11",
+        "2027-01-05"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-011",
+      "poolTitel": "Was sind die Rechtsfolgen des Annahmeverzugs?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 300 BGB",
+        "§ 301 BGB",
+        "§ 302 BGB",
+        "§ 304 BGB",
+        "§ 326 Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-11",
+        "2026-10-11",
+        "2027-01-05"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-088",
+      "poolTitel": "Wann hat der Bund die Gesetzgebungskompetenz?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 70 GG",
+        "Art. 72 GG",
+        "Art. 74 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23",
+        "2026-12-11",
+        "2026-12-31"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "bereich-214",
+      "poolTitel": "Was ist die Zweckverfehlungskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 2 Alt. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-904",
+      "poolTitel": "Normenketten bilden statt Einzelnormen lernen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2026-12-22",
+        "2026-12-26"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "anklage-870",
+      "poolTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 74 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2027-01-05"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-604",
+      "slug": "2027-03-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ewigkeitsklausel: Das verwechseln viele – geschützt sind Grundsätze, nicht Artikel",
+          "titelZeilen": [
+            "Ewigkeitsklausel:",
+            "Das verwechseln",
+            "viele – Grundsätze,",
+            "nicht Artikel"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Menschenwürdekern bleibt tabu",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Verbreitete Annahme: Art. 1 bis 20 GG sind unabänderlich. Stimmt nicht. Fall: Bundestag und Bundesrat wollen mit Zweidrittelmehrheit die Unverletzlichkeit der Wohnung (Art. 13 GG) weiter einschränken. Sperrt Art. 79 Abs. 3 GG die Änderung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Textänderung",
+              "text": "Das GG kann nur durch ein Gesetz geändert werden, das seinen Wortlaut ausdrücklich ändert oder ergänzt (Art. 79 Abs. 1 S. 1 GG)."
+            },
+            {
+              "titel": "2. Mehrheiten",
+              "text": "Zwei Drittel der Mitglieder des Bundestags und zwei Drittel der Stimmen des Bundesrats (Art. 79 Abs. 2 GG)."
+            },
+            {
+              "titel": "3. Ewigkeitsklausel",
+              "text": "Unzulässig ist nur, was die Gliederung in Länder, ihre grundsätzliche Mitwirkung oder die Grundsätze der Art. 1 und 20 GG berührt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Auflösung",
+          "text": "Art. 13 GG ist nicht als Ganzes geschützt, sondern nur, was die Menschenwürde (Art. 1 GG) und die Staatsprinzipien (Art. 20 GG) ausmacht. Das BVerfG legt „berührt“ eng aus: Die Grundsätze dürfen nicht prinzipiell preisgegeben werden. So waren etwa Änderungen der Art. 10, 13 und 16a GG möglich."
+        },
+        {
+          "art": "text",
+          "titel": "Worauf die Prüfung hinausläuft",
+          "punkte": [
+            "Welcher Grundsatz aus Art. 1 oder Art. 20 GG ist betroffen?",
+            "Wird er nur modifiziert oder im Kern aufgegeben?",
+            "Grundrechte schützt Art. 79 Abs. 3 GG nur in ihrem Menschenwürdegehalt."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 79 Abs. 3 GG schützt Grundsätze, keine Artikelnummern. Grundrechte sind änderbar – ihr Menschenwürdekern nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Verfassungsänderung in drei Schritten",
+          "punkte": [
+            "Wortlaut ausdrücklich geändert?",
+            "Zwei Drittel in Bundestag und Bundesrat?",
+            "Grundsätze aus Art. 1, 20 GG gewahrt?"
+          ],
+          "icons": [
+            "dokument",
+            "wahlurne",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Art. 1 bis 20 GG sind unabänderlich? Das verwechseln viele. Art. 79 Abs. 3 GG schützt die Gliederung des Bundes in Länder, die grundsätzliche Mitwirkung der Länder an der Gesetzgebung und die in Art. 1 und 20 GG niedergelegten Grundsätze – nicht jede Norm dazwischen. Grundrechte wie Art. 13 GG sind änderbar, solange ihr Menschenwürdegehalt bleibt. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#grundgesetz",
+        "#79gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 79 Abs. 3 GG: Grundsätze, nicht Artikel",
+      "coverText": "Menschenwürdekern bleibt tabu",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Die Verfassung darf umgebaut werden – nur ihr tragendes Fundament bleibt unberührbar.",
+        "handlung": "{B} hovers beside a stone building and calmly swaps out one wall panel, while {A} taps with his pointer on the glowing foundation stones below that stay untouched.",
+        "hinweisRegie": "Place the note in the free space next to the glowing foundation stones, slightly tilted toward them, so it marks what may not be changed without covering the swapped panel or {A}'s pointer.",
+        "alternative": "{A} rearranges furniture inside a house while {B} guards two load-bearing pillars that nobody may move."
+      },
+      "bildSzene": "wall panel swapped, foundation stays untouched",
+      "bildSzeneAlt": "guarding two load-bearing pillars",
+      "quellen": [
+        "Art. 79 Abs. 1–3 GG",
+        "Art. 1 GG",
+        "Art. 20 GG",
+        "Art. 13 GG",
+        "Themenpool: staat-604"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.508Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-495",
+      "slug": "2027-03-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kaufvertrag nichtig – Eigentum trotzdem übergegangen",
+          "titelZeilen": [
+            "Kaufvertrag nichtig –",
+            "Eigentum trotzdem",
+            "übergegangen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Verfügung prüfst du extra",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Wer kauft und übereignet, schließt mindestens zwei Rechtsgeschäfte: den Kaufvertrag (§ 433 BGB) und die Übereignung (§ 929 S. 1 BGB). Trennungsprinzip: Beide sind getrennt zu prüfen. Abstraktionsprinzip: Die Wirksamkeit des einen hängt grundsätzlich nicht vom anderen ab."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Verpflichtung",
+              "text": "Kaufvertrag nach § 433 BGB: Angebot, Annahme, keine Nichtigkeitsgründe. Er verpflichtet nur – das Eigentum bleibt, wo es ist."
+            },
+            {
+              "titel": "2. Verfügung",
+              "text": "Übereignung nach § 929 S. 1 BGB: Einigung, Übergabe, Einigsein bei Übergabe, Berechtigung. Eigene Wirksamkeitsprüfung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Fehleridentität?",
+              "text": "Trifft derselbe Mangel auch die Einigung – etwa Geschäftsunfähigkeit oder arglistige Täuschung –, ist auch die Übereignung unwirksam."
+            },
+            {
+              "titel": "4. Rückabwicklung",
+              "text": "Ist nur der Kaufvertrag nichtig, ist der Käufer Eigentümer. Der Verkäufer hat dann nicht § 985 BGB, sondern § 812 Abs. 1 S. 1 Alt. 1 BGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Wer bei nichtigem Kaufvertrag sofort § 985 BGB bejaht, überspringt Schritt 2. Erst die Einigung eigenständig prüfen – dann entscheiden, ob Vindikation oder Kondiktion."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kauf und Übereignung getrennt prüfen. Fällt nur der Kauf weg, bleibt der Käufer Eigentümer – zurück geht es über § 812 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Abstraktion in vier Zügen",
+          "punkte": [
+            "Kaufvertrag nach § 433 BGB",
+            "Übereignung nach § 929 S. 1 BGB",
+            "Fehleridentität prüfen",
+            "§ 985 oder § 812 BGB?"
+          ],
+          "icons": [
+            "vertrag",
+            "schluessel",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Kaufvertrag nichtig – und trotzdem ist der Käufer Eigentümer geworden. Das ist das Abstraktionsprinzip: Die Übereignung nach § 929 S. 1 BGB ist ein eigenes Rechtsgeschäft und hängt grundsätzlich nicht vom Kaufvertrag ab. Ausnahme ist die Fehleridentität, etwa bei Geschäftsunfähigkeit oder arglistiger Täuschung. Ist nur der Kauf nichtig, geht es über § 812 BGB zurück, nicht über § 985 BGB. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#abstraktionsprinzip",
+        "#929bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Trennungs- und Abstraktionsprinzip: das Schema",
+      "coverText": "Verfügung prüfst du extra",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Auch wenn die Abmachung platzt, kann die Sache schon den Besitzer gewechselt haben.",
+        "handlung": "{B} holds a torn agreement in one hand while {A} already carries a heavy crystal away to his own cart, both pausing to look at each other.",
+        "hinweisRegie": "Place the note in the free space between the torn agreement and the crystal on the cart, slightly tilted, so both separate steps stay visible without covering hands or faces.",
+        "alternative": "{A} and {B} stand on two separate bridges: one bridge collapses while the crystal already sits safely on the other side."
+      },
+      "bildSzene": "torn agreement, crystal already carried away",
+      "bildSzeneAlt": "one bridge collapses, crystal already across",
+      "quellen": [
+        "§ 433 BGB",
+        "§ 929 S. 1 BGB",
+        "§ 985 BGB",
+        "§ 812 Abs. 1 S. 1 BGB",
+        "§§ 105, 123 BGB",
+        "Themenpool: sachen-495"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.509Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-736",
+      "slug": "2027-03-08-b3",
+      "titelZeilen": [
+        "Sorgfaltswidrig,",
+        "kausal – und doch",
+        "nicht zurechenbar"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Sorgfaltswidrig und kausal – und doch nicht zurechenbar",
+          "unter": "Fahrlässigkeit · §§ 222, 229 StGB",
+          "text": "Wäre der Erfolg auch bei sorgfältigem Verhalten eingetreten, fehlt die Zurechnung.",
+          "norm": "§§ 15, 222, 229 StGB",
+          "icon": "auto",
+          "sprecher": "Sorgfaltswidrig und kausal – und trotzdem nicht strafbar. Der Grund steckt in der Zurechnung, genauer im Pflichtwidrigkeitszusammenhang.",
+          "marken": [
+            "Pflichtwidrigkeits-",
+            "zusammenhang"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erfolg, Handlung, Kausalität",
+          "text": "Wie beim Vorsatzdelikt: Erfolg und kausale Handlung.",
+          "norm": "§§ 222, 229 StGB",
+          "sprecher": "Schritt eins: Erfolg, Handlung und Kausalität, genau wie beim Vorsatzdelikt. Bei der fahrlässigen Tötung ist das der Tod eines Menschen.",
+          "marken": [
+            "wie beim Vorsatz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Objektive Sorgfaltspflichtverletzung",
+          "text": "Maßstab ist ein besonnener Mensch in der Lage des Täters; der Erfolg war vorhersehbar.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die objektive Sorgfaltspflichtverletzung. Was hätte ein besonnener und gewissenhafter Mensch in der Lage des Täters getan? Und war der Erfolg objektiv vorhersehbar?",
+          "marken": [
+            "besonnener Mensch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Pflichtwidrigkeitszusammenhang",
+          "text": "Wäre der Erfolg auch bei pflichtgemäßem Verhalten eingetreten?",
+          "norm": null,
+          "sprecher": "Schritt drei, und hier entscheiden sich viele Fälle: der Pflichtwidrigkeitszusammenhang. Denk dir das sorgfaltsgemäße Verhalten hinzu. Wäre der Erfolg dann ebenso eingetreten, ist er dem Täter nicht zuzurechnen.",
+          "marken": [
+            "sorgfältig hinzudenken"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Schutzzweck der Norm",
+          "text": "Hat sich genau das Risiko verwirklicht, vor dem die Pflicht schützen soll?",
+          "norm": null,
+          "sprecher": "Schritt vier: der Schutzzweck der Norm. Es muss sich genau das Risiko verwirklicht haben, vor dem die verletzte Sorgfaltspflicht schützen will.",
+          "marken": [
+            "richtiges Risiko?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Streit: sicher oder nur möglich?",
+          "text": "Rspr.: Zurechnung entfällt, wenn der Erfolg auch sonst nicht sicher vermeidbar war. Lehre teils: Risikoerhöhung genügt.",
+          "norm": null,
+          "sprecher": "Umstritten ist, wie sicher das sein muss. Die Rechtsprechung verneint die Zurechnung schon, wenn nicht feststeht, dass der Erfolg vermieden worden wäre. Die Risikoerhöhungslehre lässt genügen, dass das Risiko gesteigert wurde.",
+          "marken": [
+            "Vermeidbarkeit",
+            "Risikoerhöhung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Sorgfaltsverstoß allein reicht nicht – der Erfolg muss gerade auf ihm beruhen.",
+          "norm": "§§ 222, 229 StGB",
+          "sprecher": "Merke: Der Sorgfaltsverstoß allein reicht nicht. Der Erfolg muss gerade auf ihm beruhen. Subjektive Vorhersehbarkeit prüfst du erst in der Schuld.",
+          "marken": [
+            "beruht darauf?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Fahrlässigkeitsfall hinzudenken",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Klausur mit fahrlässiger Tötung oder Körperverletzung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Sorgfaltswidrig und kausal – und trotzdem nicht strafbar. Beim Fahrlässigkeitsdelikt prüfst du nach Erfolg, Handlung und Kausalität die objektive Sorgfaltspflichtverletzung und dann die Zurechnung: Wäre der Erfolg auch bei pflichtgemäßem Verhalten eingetreten, fehlt der Pflichtwidrigkeitszusammenhang. Wie sicher das feststehen muss, ist umstritten – Vermeidbarkeitstheorie der Rspr. gegen Risikoerhöhungslehre. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#fahrlässigkeit",
+        "#222stgb",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fahrlässigkeit: Pflichtwidrigkeitszusammenhang",
+      "coverText": "Sorgfältig hinzudenken",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Nicht jeder Sorgfaltsverstoß erklärt den Schaden – er muss gerade darauf beruhen.",
+        "handlung": "{A} replays a small cart crash on a test track with a careful driver this time, while {B} watches the cart crash again at exactly the same spot.",
+        "hinweisRegie": "Place the note in the free space above the repeated crash spot, slightly tilted toward it, so it marks the comparison between careless and careful run without covering the cart or {B}'s face.",
+        "alternative": "{B} holds up two identical broken vases side by side, one knocked by a careless push and one by a careful hand, while {A} scratches his head."
+      },
+      "bildSzene": "test track replay, same crash again",
+      "bildSzeneAlt": "two identical broken vases side by side",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "Themenpool: strafat-736"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-zurechnung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.510Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-011",
+      "ueberzeile": "Prüfungsfrage Schuldrecht",
+      "titel": "V bietet K das gekaufte Bild ordnungsgemäß an, K nimmt es nicht ab. Dann zerstört es ein Blitz. Muss K zahlen?",
+      "optionen": [
+        "Nein – nach § 326 Abs. 1 BGB entfällt der Kaufpreis immer",
+        "Ja – K war im Annahmeverzug, § 326 Abs. 2 S. 1 BGB",
+        "Nein – V muss nach § 300 Abs. 2 BGB ein anderes Bild liefern"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 275 Abs. 1 BGB",
+        "§ 293 BGB",
+        "§ 300 BGB",
+        "§ 326 Abs. 1, 2 BGB",
+        "Themenpool: schuld-011"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.510Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-011",
+      "ueberzeile": "Auflösung",
+      "titel": "K muss zahlen – die Gegenleistungsgefahr liegt beim Gläubiger im Verzug",
+      "text": "V wird nach § 275 Abs. 1 BGB frei; der Kaufpreis entfiele an sich (§ 326 Abs. 1 S. 1 BGB). Tritt der Umstand aber ein, während K im Annahmeverzug ist, und hat V ihn nicht zu vertreten, behält V den Anspruch (§ 326 Abs. 2 S. 1 Alt. 2 BGB). § 300 Abs. 2 BGB betrifft nur Gattungsschulden.",
+      "norm": "§ 326 Abs. 2 BGB · § 300 BGB",
+      "quellen": [
+        "§ 275 Abs. 1 BGB",
+        "§ 293 BGB",
+        "§ 300 BGB",
+        "§ 326 Abs. 1, 2 BGB",
+        "Themenpool: schuld-011"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.510Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – nach § 326 Abs. 1 BGB entfällt der Kaufpreis immer",
+        "Ja – K war im Annahmeverzug, § 326 Abs. 2 S. 1 BGB",
+        "Nein – V muss nach § 300 Abs. 2 BGB ein anderes Bild liefern"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-088",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 72 Abs. 1 GG: Die Länder sind gesperrt – „solange und soweit“ der Bund regelt",
+      "text": "Im Bereich der konkurrierenden Gesetzgebung dürfen die Länder Gesetze erlassen, solange und soweit der Bund von seiner Kompetenz keinen Gebrauch gemacht hat. Die Sperre reicht so weit, wie der Bund abschließend geregelt hat. Ein Landesgesetz im gesperrten Bereich ist schon mangels Kompetenz nichtig – Art. 31 GG brauchst du dafür nicht.",
+      "norm": "Art. 72 Abs. 1 GG",
+      "quellen": [
+        "Art. 70 GG",
+        "Art. 72 Abs. 1 GG",
+        "Art. 74 GG",
+        "Art. 31 GG",
+        "Themenpool: staat-088"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.510Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-214",
+      "ueberzeile": "Klausurtipp Bereicherungsrecht",
+      "titel": "Zweckverfehlungskondiktion: Erst prüfen, ob der Zweck nicht schon Vertragsinhalt ist",
+      "text": "§ 812 Abs. 1 S. 2 Alt. 2 BGB greift, wenn der mit der Leistung nach dem Inhalt des Rechtsgeschäfts bezweckte Erfolg ausbleibt. Nötig ist eine Einigung über einen Zweck, der über die bloße Erfüllung einer Schuld hinausgeht – etwa Arbeit am Haus in Erwartung späterer Erbeinsetzung. Ist der Zweck vertraglich geschuldet, gehen Vertragsrecht und § 313 BGB vor. Ausschluss: § 815 BGB.",
+      "quellen": [
+        "§ 812 Abs. 1 S. 2 Alt. 2 BGB",
+        "§ 815 BGB",
+        "§ 313 BGB",
+        "Themenpool: bereich-214"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.510Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-904",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Normenkette bauen: Verzugsschaden",
+      "text": "Im Obersatz steht die ganze Kette: §§ 280 Abs. 1, 2, 286 BGB. Jedes Glied liefert eigene Voraussetzungen.",
+      "punkte": [
+        "§ 280 Abs. 1 BGB: Schuldverhältnis, Pflichtverletzung, Vertretenmüssen",
+        "§ 280 Abs. 2 BGB: Verzögerungsschaden nur unter § 286 BGB",
+        "§ 286 BGB: fällig, Mahnung oder entbehrlich, nicht geleistet",
+        "§§ 249 ff. BGB: Umfang des Schadens"
+      ],
+      "quellen": [
+        "§ 280 Abs. 1, 2 BGB",
+        "§ 286 BGB",
+        "§§ 249 ff. BGB",
+        "Themenpool: methodik-904"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.510Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-870",
+      "ueberzeile": "Streitstand Einziehung",
+      "titel": "Betrunken Auto gefahren: Ist das Fahrzeug ein Tatmittel nach § 74 Abs. 1 StGB?",
+      "norm": "§ 74 StGB · § 316 StGB",
+      "optionen": [
+        "Überwiegende Ansicht: Das Auto ist Tatobjekt (Beziehungsgegenstand) – Einziehung nur, wo ein Gesetz sie zulässt.",
+        "Andere Ansicht: Das Auto dient der Tat als Werkzeug – Einziehung als Tatmittel nach § 74 Abs. 1 StGB."
+      ],
+      "text": "Klausur: Bei § 316 StGB besteht die Tat gerade im Führen des Fahrzeugs. Für die überwiegende Ansicht spricht, dass der Gesetzgeber die Einziehung bei Tatobjekten eigens anordnet – etwa in § 21 Abs. 3 StVG oder § 315f StGB. In der Anklageschrift die Einziehung deshalb nur mit tragfähiger Norm aufführen.",
+      "quellen": [
+        "§ 74 StGB",
+        "§ 316 StGB",
+        "§ 21 Abs. 3 StVG",
+        "§ 315f StGB",
+        "Themenpool: anklage-870"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:09:12.510Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
