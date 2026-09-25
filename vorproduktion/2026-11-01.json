@@ -1,0 +1,865 @@
+{
+  "datum": "2026-11-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "europa-413",
+        "themaTitel": "Wie prüft man einen Verstoß gegen die Arbeitnehmerfreizügigkeit?",
+        "fach": "europa",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "arbeit-250",
+        "themaTitel": "Wie prüft man die betriebsbedingte Kündigung?",
+        "fach": "arbeit",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "stpo-782"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "stpo-782"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:09",
+        "art": "norm",
+        "themaId": "sachen-233"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:29",
+        "art": "fehler",
+        "themaId": "methodik-936"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:53",
+        "art": "tipp",
+        "themaId": "methodik-902"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "zahl",
+        "themaId": "assessorz-820"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "europa-413",
+      "poolTitel": "Wie prüft man einen Verstoß gegen die Arbeitnehmerfreizügigkeit?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 45 AEUV"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "arbeit-250",
+      "poolTitel": "Wie prüft man die betriebsbedingte Kündigung?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1 Abs. 2 KSchG",
+        "§ 1 Abs. 3 KSchG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-782",
+      "poolTitel": "Zwischenverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 199 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-782",
+      "poolTitel": "Zwischenverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 199 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-233",
+      "poolTitel": "Was ist die Sicherungsgrundschuld und welche Einreden hat der Eigentümer?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1191 BGB",
+        "§ 1192 Abs. 1a BGB",
+        "§ 1157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "methodik-936",
+      "poolTitel": "Die vier Auslegungsmethoden sicher anwenden",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "methodik-902",
+      "poolTitel": "Schwerpunkte setzen, wenn die Zeit knapp wird",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-820",
+      "poolTitel": "Wie wirkt der Anscheinsbeweis und wie erschüttert man ihn?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-11-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sechs Tage, 18 Themen: Wo wackelt es noch?",
+          "titelZeilen": [
+            "Sechs Tage,",
+            "18 Themen: Wo",
+            "wackelt es noch?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Vier Bereiche im Schnelltest",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 477 BGB: beim Verbrauchsgüterkauf ein Jahr Vermutung, bei Tieren sechs Monate.",
+            "§ 935 BGB: Weggabe durch den Besitzdiener – nach h.M. abhandengekommen.",
+            "Streitgegenstand: Eine neue Anspruchsgrundlage ändert ihn nicht.",
+            "§ 280 BGB: statt der Leistung nur mit §§ 281–283 BGB.",
+            "Widerklage: Für die Zuständigkeit wird nicht addiert (§ 5 Hs. 2 ZPO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 103 StPO: beim Unverdächtigen Tatsachen, keine bloße Vermutung.",
+            "Rechtswidrig erhoben heißt nicht automatisch unverwertbar.",
+            "§ 227 StGB: Der Gefahrzusammenhang trägt die Prüfung.",
+            "Beruhen: Möglichkeit genügt, bei § 338 StPO vermutet.",
+            "Heimtücke: Schlafende arglos, Bewusstlose nicht.",
+            "§ 266 StGB: Betreuungspflicht auch beim Missbrauch."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Nachbareilantrag: Wirkung anordnen, nicht wiederherstellen (§ 212a BauGB).",
+            "Verpflichtungsklage: Es zählt der Anspruch, nicht die Begründung der Ablehnung.",
+            "Klagebefugnis Dritter: nur mit Schutznorm – Betroffenheit reicht nicht.",
+            "Einheitstheorie: eine zustimmungsbedürftige Vorschrift, ganzes Gesetz zustimmungsbedürftig.",
+            "Klageschrift: Kläger, Beklagter, Gegenstand müssen – der Antrag soll (§ 82 VwGO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Sachverhaltssignale: Daten, Personen, wörtliche Rede, innere Tatsachen, Rechtsansichten.",
+            "Wiederholen: erst abrufen, dann gezielt nachlesen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Nachbar gegen Baugenehmigung: anordnen oder wiederherstellen?",
+            "Welche Norm tritt beim Verzögerungsschaden neben § 280 BGB?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Anspruch und Prozess",
+            "Strafrecht: Merkmal und Verfahren",
+            "Öffentliches Recht: Klage und Tenor",
+            "Methodik: abrufen statt lesen"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Sechs Tage, 18 Themen: vom Beweislastjahr des § 477 BGB über Heimtücke und Untreue bis zum Tenor im Nachbareilantrag. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch, beantworte den Selbsttest und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Schnelltest",
+      "coverText": "Vier Bereiche im Schnelltest",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Am Ende der Woche zeigt ein kurzer Test, welcher Teil des Lernstoffs noch nicht trägt.",
+        "handlung": "{B} climbs a rope ladder with four sections and tugs firmly on each, while {A} nervously holds the bottom and watches the one section that sways.",
+        "hinweisRegie": "Place the note in the free space next to the swaying ladder section, slightly tilted toward it, without covering {B}'s tugging hands or {A}'s worried face.",
+        "alternative": "{A} knocks on four stacked wooden barrels with a small mallet, while {B} leans in and marks the one that sounds hollow."
+      },
+      "bildSzene": "testing four ladder sections, one sways",
+      "bildSzeneAlt": "knocking barrels to find hollow one",
+      "quellen": [
+        "§ 477 BGB",
+        "§ 935 BGB",
+        "§§ 253, 263 ZPO",
+        "§§ 280–283 BGB",
+        "§§ 5, 33, 506 ZPO",
+        "§ 103 StPO",
+        "§ 100d StPO",
+        "§ 227 StGB",
+        "§§ 337, 338 StPO",
+        "§ 211 StGB",
+        "§ 266 StGB",
+        "§ 80 Abs. 5 VwGO",
+        "§ 212a BauGB",
+        "§ 113 Abs. 5 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "Art. 77, 78 GG",
+        "§ 82 VwGO",
+        "Themenpool: methodik-906",
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "wochen-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.240Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "europa",
+      "klausur": 3,
+      "fachLabel": "Europarecht",
+      "themaId": "europa-413",
+      "slug": "2026-11-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Lehrerin aus Lyon: Greift die Ausnahme für die Verwaltung?",
+          "titelZeilen": [
+            "Lehrerin aus Lyon:",
+            "Greift die Ausnahme",
+            "für die Verwaltung?"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Art. 45 Abs. 4 AEUV: eng",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die französische Lehrerin L bewirbt sich an einer staatlichen Schule in Deutschland. Das Land lehnt ab: Stellen im öffentlichen Dienst seien eigenen Staatsangehörigen vorbehalten, Art. 45 Abs. 4 AEUV. Zu Recht? Die Antwort liefert das Schema."
+        },
+        {
+          "art": "schritte",
+          "titel": "Schema, Teil 1: Schutzbereich",
+          "schritte": [
+            {
+              "titel": "Arbeitnehmer",
+              "text": "Unionsbürger mit weisungsgebundener Tätigkeit gegen Entgelt – tatsächlich und echt, nicht völlig untergeordnet."
+            },
+            {
+              "titel": "Grenzüberschreitender Bezug",
+              "text": "Rein innerstaatliche Sachverhalte erfasst Art. 45 AEUV nicht."
+            },
+            {
+              "titel": "Bereichsausnahme (Art. 45 Abs. 4 AEUV)",
+              "text": "Nur Stellen mit Teilnahme an hoheitlichen Befugnissen und Wahrung allgemeiner Staatsbelange – funktional und eng."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Schema, Teil 2: Eingriff und Rechtfertigung",
+          "schritte": [
+            {
+              "titel": "Beeinträchtigung",
+              "text": "Offene oder versteckte Diskriminierung nach der Staatsangehörigkeit, aber auch unterschiedslose Zugangshindernisse."
+            },
+            {
+              "titel": "Rechtfertigung",
+              "text": "Öffentliche Ordnung, Sicherheit, Gesundheit (Art. 45 Abs. 3 AEUV); bei nicht offener Diskriminierung auch zwingende Allgemeininteressen."
+            },
+            {
+              "titel": "Verhältnismäßigkeit",
+              "text": "Geeignet und erforderlich – Ausnahmen und Schranken sind eng auszulegen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Lehrkräfte an staatlichen Schulen fallen nach der Rspr. des EuGH grundsätzlich nicht unter Art. 45 Abs. 4 AEUV: Sie üben typischerweise keine hoheitlichen Befugnisse im Sinne der Ausnahme aus. Die Ablehnung allein wegen der Staatsangehörigkeit ist eine offene Diskriminierung – nicht gerechtfertigt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 45 Abs. 4 AEUV ist funktional und eng: Ausgenommen sind nur Stellen mit echter Hoheitsausübung, nicht der öffentliche Dienst als Ganzes."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 45 AEUV in vier Zügen",
+          "punkte": [
+            "Arbeitnehmer mit Unionsbezug?",
+            "Bereichsausnahme eng prüfen",
+            "Diskriminierung oder Beschränkung?",
+            "Rechtfertigung und Verhältnismäßigkeit"
+          ],
+          "icons": [
+            "person",
+            "gebaeude",
+            "waage",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Lehrerin aus Lyon – greift die Ausnahme für die öffentliche Verwaltung? Grundsätzlich nicht. Der EuGH versteht Art. 45 Abs. 4 AEUV funktional und eng: Ausgenommen sind nur Stellen mit Teilnahme an hoheitlichen Befugnissen. Das Schema: Schutzbereich, Bereichsausnahme, Beeinträchtigung, Rechtfertigung nach Abs. 3 oder aus zwingenden Gründen, Verhältnismäßigkeit. Speichern für die nächste Europarechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#europarecht",
+        "#grundfreiheiten",
+        "#arbeitnehmerfreizügigkeit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Arbeitnehmerfreizügigkeit: das Schema",
+      "coverText": "Art. 45 Abs. 4 AEUV: eng",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Die Ausnahme für die öffentliche Verwaltung erfasst nur Stellen mit echter Hoheitsgewalt – nicht jede Stelle beim Staat.",
+        "handlung": "{A}, carrying a satchel of books, curiously approaches a school gate, while {B} lifts a barrier there that was only meant for a distant guarded tower.",
+        "hinweisRegie": "Place the note in the free space between the lifted barrier and the school gate, slightly tilted toward the gate, without covering {A}'s satchel or {B}'s lifting arm.",
+        "alternative": "{B} sorts keys on a board and keeps only one heavy fortress key aside, while {A} takes an ordinary classroom key from the rest."
+      },
+      "bildSzene": "barrier lifted at school gate",
+      "bildSzeneAlt": "fortress key kept, classroom key taken",
+      "quellen": [
+        "Art. 45 AEUV",
+        "Themenpool: europa-413"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.240Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "arbeit",
+      "klausur": 1,
+      "fachLabel": "Arbeitsrecht",
+      "themaId": "arbeit-250",
+      "slug": "2026-11-01-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vier Stufen – die Sozialauswahl kommt zuletzt",
+          "unter": "Kündigungsschutz · § 1 KSchG",
+          "text": "Erst Anwendbarkeit und Grund, dann Weiterbeschäftigung, zuletzt die Sozialauswahl.",
+          "norm": "§ 1 Abs. 2, 3 KSchG",
+          "icon": "fabrik",
+          "sprecher": "Die Sozialauswahl kommt zuletzt, nicht zuerst. Wer sofort über Alter und Betriebszugehörigkeit schreibt, überspringt bei der betriebsbedingten Kündigung drei Stufen.",
+          "marken": [
+            "Auswahl zuletzt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "KSchG anwendbar?",
+          "text": "Mehr als sechs Monate beschäftigt, Betrieb über dem Schwellenwert, Klage binnen drei Wochen.",
+          "norm": "§§ 1 Abs. 1, 4, 23 KSchG",
+          "sprecher": "Stufe eins: Gilt das Kündigungsschutzgesetz? Das Arbeitsverhältnis muss länger als sechs Monate bestehen, und der Betrieb muss über dem Schwellenwert des § 23 liegen, in der Regel mehr als zehn Arbeitnehmer. Und die Klage muss binnen drei Wochen erhoben sein, § 4.",
+          "marken": [
+            "6 Monate · § 23"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Dringendes betriebliches Erfordernis",
+          "text": "Unternehmerische Entscheidung, durch die der Beschäftigungsbedarf dauerhaft entfällt.",
+          "norm": "§ 1 Abs. 2 S. 1 KSchG",
+          "sprecher": "Stufe zwei: dringende betriebliche Erfordernisse. Der Arbeitgeber trifft eine unternehmerische Entscheidung, etwa eine Abteilung zu schließen. Die Gerichte prüfen sie nur auf offenbare Unsachlichkeit oder Willkür. Entscheidend ist, dass der Beschäftigungsbedarf dauerhaft entfällt.",
+          "marken": [
+            "Bedarf entfällt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Keine Weiterbeschäftigung möglich",
+          "text": "Kein freier, geeigneter Arbeitsplatz – auch nicht nach zumutbarer Umschulung.",
+          "norm": "§ 1 Abs. 2 S. 2, 3 KSchG",
+          "sprecher": "Stufe drei: Gibt es im Betrieb oder Unternehmen einen freien Arbeitsplatz, auf dem der Arbeitnehmer weiterarbeiten kann, auch nach zumutbarer Umschulung? Dann ist die Kündigung sozial ungerechtfertigt. Und denk an den Vorrang der Änderungskündigung.",
+          "marken": [
+            "freier Platz?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Sozialauswahl",
+          "text": "Unter Vergleichbaren: Betriebszugehörigkeit, Alter, Unterhaltspflichten, Schwerbehinderung.",
+          "norm": "§ 1 Abs. 3 S. 1 KSchG",
+          "sprecher": "Stufe vier, erst jetzt: die Sozialauswahl. Unter den vergleichbaren Arbeitnehmern muss der Arbeitgeber Betriebszugehörigkeit, Lebensalter, Unterhaltspflichten und eine Schwerbehinderung ausreichend berücksichtigen.",
+          "marken": [
+            "vier Kriterien"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Ausnahme: berechtigtes betriebliches Interesse",
+          "text": "Wegen Kenntnissen, Leistungen oder ausgewogener Personalstruktur.",
+          "norm": "§ 1 Abs. 3 S. 2 KSchG",
+          "sprecher": "Dazu gehört: Arbeitnehmer, deren Weiterbeschäftigung wegen ihrer Kenntnisse, Fähigkeiten und Leistungen oder für eine ausgewogene Personalstruktur im berechtigten betrieblichen Interesse liegt, bleiben außen vor.",
+          "marken": [
+            "Leistungsträger"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Reihenfolge",
+          "text": "Anwendbarkeit, betriebliches Erfordernis, keine Weiterbeschäftigung, Sozialauswahl.",
+          "norm": "§ 1 KSchG",
+          "sprecher": "Merke die Reihenfolge: Anwendbarkeit, dringendes betriebliches Erfordernis, keine Weiterbeschäftigung, dann erst die Sozialauswahl.",
+          "marken": [
+            "Sozialauswahl zuletzt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Stufen abhaken",
+          "text": "Speichern für die nächste Arbeitsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir die vier Stufen für die nächste Arbeitsrechtsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Die Sozialauswahl kommt zuletzt. Die betriebsbedingte Kündigung prüfst du in vier Stufen: Anwendbarkeit des KSchG (sechs Monate, Schwellenwert, Klage binnen drei Wochen), dringendes betriebliches Erfordernis, keine Weiterbeschäftigungsmöglichkeit, Sozialauswahl nach § 1 Abs. 3 KSchG. Leistungsträger können nach § 1 Abs. 3 S. 2 KSchG herausgenommen werden. Speichern für die nächste Arbeitsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#arbeitsrecht",
+        "#kschg",
+        "#kündigungsschutz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Betriebsbedingte Kündigung: vier Stufen",
+      "titelZeilen": [
+        "Vier Stufen –",
+        "die Sozialauswahl",
+        "kommt zuletzt"
+      ],
+      "coverText": "Erst Grund, dann Auswahl",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Die Sozialauswahl kommt erst, wenn der Arbeitsplatz wirklich weggefallen ist und es keinen anderen gibt.",
+        "handlung": "{B} carries a heavy crate down a staircase with four landings, while {A} waits on the lowest landing and taps his pointer on the sorting table that stands only there.",
+        "hinweisRegie": "Place the note in the free space beside the sorting table on the lowest landing, slightly tilted toward it, without covering {B}'s crate or {A}'s pointer.",
+        "alternative": "{A} closes one workshop door and checks a row of empty workbenches, while {B} waits at a sorting table at the far end of the hall."
+      },
+      "bildSzene": "crate carried down four landings",
+      "bildSzeneAlt": "closed workshop, empty workbenches checked",
+      "quellen": [
+        "§ 1 KSchG",
+        "§ 4 KSchG",
+        "§ 23 KSchG",
+        "Themenpool: arbeit-250"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-stufen-reihenfolge",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-782",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Die Staatsanwaltschaft hat Anklage erhoben. Wer entscheidet, ob das Hauptverfahren eröffnet wird?",
+      "optionen": [
+        "Die Staatsanwaltschaft selbst mit der Anklage",
+        "Das für die Hauptverhandlung zuständige Gericht",
+        "Der Ermittlungsrichter am Amtsgericht"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 199 StPO",
+        "§ 201 StPO",
+        "§ 203 StPO",
+        "Themenpool: stpo-782"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-782",
+      "ueberzeile": "Auflösung",
+      "titel": "Das Gericht, das für die Hauptverhandlung zuständig ist",
+      "text": "Im Zwischenverfahren entscheidet das für die Hauptverhandlung zuständige Gericht über die Eröffnung (§ 199 Abs. 1 StPO). Es teilt dem Angeschuldigten die Anklage mit und gibt ihm Gelegenheit zu Einwendungen (§ 201 StPO). Eröffnet wird bei hinreichendem Tatverdacht (§ 203 StPO): Eine Verurteilung muss wahrscheinlicher sein als ein Freispruch.",
+      "norm": "§§ 199, 201, 203 StPO",
+      "quellen": [
+        "§ 199 StPO",
+        "§ 201 StPO",
+        "§ 203 StPO",
+        "Themenpool: stpo-782"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.242Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Staatsanwaltschaft selbst mit der Anklage",
+        "Das für die Hauptverhandlung zuständige Gericht",
+        "Der Ermittlungsrichter am Amtsgericht"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-233",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1192 Abs. 1a BGB: Einreden aus der Sicherungsabrede überstehen den Erwerb",
+      "text": "Bei der Sicherungsgrundschuld kann der Eigentümer Einreden aus dem Sicherungsvertrag auch jedem Erwerber der Grundschuld entgegensetzen. Ein einredefreier gutgläubiger Erwerb nach § 1157 S. 2 BGB ist insoweit ausgeschlossen. Die Regel wurde 2008 eingefügt, um Eigentümer beim Verkauf von Grundschulden zu schützen.",
+      "norm": "§ 1192 Abs. 1a BGB",
+      "quellen": [
+        "§ 1191 BGB",
+        "§ 1192 Abs. 1a BGB",
+        "§ 1157 BGB",
+        "Themenpool: sachen-233"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-936",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Auslegung: Gibt es eine feste Rangfolge der Methoden?",
+      "falsch": "Wortlaut, Systematik, Historie, Telos – in dieser Reihenfolge, und die erste Methode mit Ergebnis entscheidet.",
+      "richtigText": "Eine feste Rangfolge gibt es nicht. Der Wortlaut ist Ausgangspunkt und markiert im Strafrecht wegen Art. 103 Abs. 2 GG die Grenze. Den Ausschlag gibt oft Sinn und Zweck. In der Klausur: Argumente aus mehreren Methoden sammeln, gewichten und begründet entscheiden.",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-936"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-902",
+      "ueberzeile": "Klausurtipp Zeitmanagement",
+      "titel": "Zeit wird knapp: Probleme ausführlich, den Rest im Urteilsstil",
+      "text": "Plane vorab Zeit pro Fallfrage und prüf zur Halbzeit, wo du stehst. Wird es knapp: Unproblematisches im Urteilsstil in einem Satz, den Gutachtenstil nur für die echten Probleme. Die Schwerpunkte erkennst du oft am Sachverhalt – dort, wo er besonders ausführlich wird.",
+      "quellen": [
+        "Themenpool: methodik-902"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-820",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Anscheinsbeweis: So wirkt er – und so wird er erschüttert",
+      "text": "Klassiker ist der Auffahrunfall: Der erste Anschein spricht für ein Verschulden des Auffahrenden.",
+      "punkte": [
+        "Typischer Geschehensablauf: Die Lebenserfahrung erlaubt den Schluss auf Ursache oder Verschulden",
+        "Die Grundtatsachen muss der Beweisführer voll beweisen",
+        "Erschüttert: bewiesene Tatsachen, die einen atypischen Ablauf ernsthaft möglich machen",
+        "Dann gilt wieder die normale Beweislast – keine Beweislastumkehr"
+      ],
+      "quellen": [
+        "§ 286 ZPO",
+        "Themenpool: assessorz-820"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:35.243Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
