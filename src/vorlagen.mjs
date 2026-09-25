@@ -351,6 +351,12 @@ h1 em{color:${p.akzent2}}
    overflow bleibt bewusst sichtbar, damit keine "Sticker"-Innenkante entsteht. */
 .frei.charakter.edge-to-edge{max-width:none;overflow:hidden}
 .frei.charakter.edge-to-edge img{object-fit:var(--edge-fit,cover);object-position:var(--edge-x,50%) var(--edge-y,50%)}
+/* Reel-Freisteller brauchen keinen Crop, sondern eine echte vollbreite Bühne:
+   Das zugeschnittene Motiv wird auf Canvasbreite skaliert und unten verankert.
+   So berührt die Komposition links/rechts die Coverkante, ohne Figuren durch
+   object-fit:cover abzuschneiden. */
+.frei.charakter.edge-to-edge.fit-width{overflow:visible}
+.frei.charakter.edge-to-edge.fit-width img{position:absolute;left:0;bottom:0;width:100%;height:auto;object-fit:contain;object-position:center bottom}
 .art-titel h1,.art-titel .prio{position:relative;z-index:3}
 .art-titel .kopf{z-index:3}
 /* Fusszeile traegt das Rechtsgebiet - sie bleibt ueber dem Motiv lesbar. */
@@ -553,7 +559,33 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
      Nicht freigestellt (Notfall): als abgerundete Karte. */
   const istCharakter = folie.bildTyp === "charakter";
   const edgeToEdge = istCharakter && folie.coverBildEdgeToEdge === true;
-  const klasse = folie.bildFrei === false ? "foto" : `frei${istCharakter ? " charakter" : ""}${edgeToEdge ? " edge-to-edge" : ""}`;
+  /* Number(null) === 0 war hier ein versteckter Layoutfehler: fehlende
+     Profilwerte wurden dadurch als scale=.65 und x=.05 interpretiert. Genau
+     deshalb klebten neue Reel-Motive klein und links angeschnitten am Rand.
+     Nur wirklich gesetzte Werte dürfen als Profil gelten. */
+  const zahlOderNull = (wert) => {
+    if (wert === null || wert === undefined || wert === "") return null;
+    const n = Number(wert);
+    return Number.isFinite(n) ? n : null;
+  };
+  const scaleRaw = zahlOderNull(folie.coverBildScale);
+  const breiteRaw = zahlOderNull(folie.coverBildBreite);
+  const xRaw = zahlOderNull(folie.coverBildX);
+  const yRaw = zahlOderNull(folie.coverBildY);
+  const topRaw = zahlOderNull(folie.coverBildTop);
+  const bottomRaw = zahlOderNull(folie.coverBildBottom);
+  const bleedRaw = zahlOderNull(folie.coverBildBleed);
+  const fitRaw = String(folie.coverBildFit || "").toLowerCase();
+  const fit = fitRaw === "contain" ? "contain" : fitRaw === "width" ? "width" : "cover";
+  const hatProfil = edgeToEdge
+    || [scaleRaw, breiteRaw, xRaw, yRaw, topRaw, bottomRaw, bleedRaw].some((x) => x !== null)
+    || ["contain", "cover", "width"].includes(fitRaw);
+  /* Ohne manuelles Profil entscheidet bei Karussells die Browser-QA nach dem
+     finalen Titelumbruch über Größe und Position des Motivs. */
+  const autoLayout = istCharakter && !hatProfil;
+  const klasse = folie.bildFrei === false
+    ? "foto"
+    : `frei${istCharakter ? " charakter" : ""}${edgeToEdge ? " edge-to-edge" : ""}${edgeToEdge && fit === "width" ? " fit-width" : ""}${autoLayout ? " auto-layout" : ""}`;
   /* Charakter-Szenen sind selbst das Markenzeichen. Neben zwei handelnden
      Figuren noch ein grosses Themen-Icon zu setzen wuerde die Cover wieder
      ueberladen; Stock-/Fallbackmotive behalten das Icon wie bisher. */
@@ -561,19 +593,10 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
   const zeichen = istCharakter ? "" : farbIcon(icon, klasse.startsWith("frei") ? 240 : 180);
   const charakterZiel = istCharakter ? BUEHNE_CHARAKTER : ziel;
   const box = folie.bildFrei !== false ? motivBuehne(folie.bildBreite, folie.bildHoehe, charakterZiel) : null;
-  const scaleRaw = Number(folie.coverBildScale);
-  const scale = istCharakter && Number.isFinite(scaleRaw) ? Math.max(0.65, Math.min(1.35, scaleRaw)) : 1;
-  const breiteRaw = Number(folie.coverBildBreite);
-  const festeBreite = istCharakter && Number.isFinite(breiteRaw) ? Math.max(720, Math.min(1500, breiteRaw)) : null;
-  const xRaw = Number(folie.coverBildX);
-  const x = istCharakter && Number.isFinite(xRaw) ? Math.max(0.05, Math.min(0.95, xRaw)) : null;
-  const yRaw = Number(folie.coverBildY);
-  const y = istCharakter && Number.isFinite(yRaw) ? Math.max(0.05, Math.min(0.95, yRaw)) : 0.5;
-  const fitRaw = String(folie.coverBildFit || "").toLowerCase();
-  const fit = fitRaw === "contain" ? "contain" : "cover";
-  const topRaw = Number(folie.coverBildTop);
-  const bottomRaw = Number(folie.coverBildBottom);
-  const bleedRaw = Number(folie.coverBildBleed);
+  const scale = istCharakter && scaleRaw !== null ? Math.max(0.65, Math.min(1.35, scaleRaw)) : 1;
+  const festeBreite = istCharakter && breiteRaw !== null ? Math.max(720, Math.min(1500, breiteRaw)) : null;
+  const x = istCharakter && xRaw !== null ? Math.max(0.05, Math.min(0.95, xRaw)) : null;
+  const y = istCharakter && yRaw !== null ? Math.max(0.05, Math.min(0.95, yRaw)) : 0.5;
   const style = [];
 
   if (edgeToEdge) {
@@ -581,11 +604,11 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
        definiert. Das Bild selbst fuellt diese Flaeche per object-fit:cover.
        Damit gibt es keine Sticker-Luft mehr und trotzdem keinen Wildwuchs
        ueber den Titelblock. */
-    const bleed = Number.isFinite(bleedRaw) ? Math.max(0, Math.min(80, bleedRaw)) : 0;
+    const bleed = bleedRaw !== null ? Math.max(0, Math.min(80, bleedRaw)) : 0;
     style.push(`left:-${Math.round(bleed)}px`);
     style.push(`right:-${Math.round(bleed)}px`);
-    style.push(Number.isFinite(topRaw) ? `top:${Math.round(topRaw)}px` : "top:auto");
-    style.push(Number.isFinite(bottomRaw) ? `bottom:${Math.round(bottomRaw)}px` : "bottom:0");
+    style.push(topRaw !== null ? `top:${Math.round(topRaw)}px` : "top:auto");
+    style.push(bottomRaw !== null ? `bottom:${Math.round(bottomRaw)}px` : "bottom:0");
     style.push("width:auto");
     style.push("height:auto");
     style.push("transform:none");
