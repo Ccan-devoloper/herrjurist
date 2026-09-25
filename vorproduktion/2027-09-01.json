@@ -1,0 +1,880 @@
+{
+  "datum": "2027-09-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-381",
+        "themaTitel": "Wann muss angehört werden?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "bgbat-154",
+        "themaTitel": "Was ist ein lediglich rechtlicher Vorteil i.S.d. § 107 BGB?",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-756",
+        "themaTitel": "Prozessbetrug",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "schuld-010"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "schuld-010"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "stpo-137"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "streitstand",
+        "themaId": "revision-873"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "merksatz",
+        "themaId": "sachen-233"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "begriff",
+        "themaId": "schuld-177"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-381",
+      "poolTitel": "Wann muss angehört werden?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 28 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-09",
+        "2027-05-28",
+        "2027-08-05"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "bgbat-154",
+      "poolTitel": "Was ist ein lediglich rechtlicher Vorteil i.S.d. § 107 BGB?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 107 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-08",
+        "2027-03-26",
+        "2027-07-08"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-756",
+      "poolTitel": "Prozessbetrug",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-11"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-010",
+      "poolTitel": "Wann liegt Annahmeverzug vor?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 293 BGB",
+        "§ 294 BGB",
+        "§ 295 BGB",
+        "§ 296 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-09",
+        "2027-03-09",
+        "2027-03-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-010",
+      "poolTitel": "Wann liegt Annahmeverzug vor?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 293 BGB",
+        "§ 294 BGB",
+        "§ 295 BGB",
+        "§ 296 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-09",
+        "2027-03-09",
+        "2027-03-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "stpo-137",
+      "poolTitel": "Wie ist der Ablauf einer Hauptverhandlung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 243 StPO",
+        "§ 244 StPO",
+        "§ 258 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30",
+        "2027-04-10"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "revision-873",
+      "poolTitel": "Wann ist die Revision statthaft?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 333 StPO",
+        "§ 335 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-27",
+        "2027-05-13",
+        "2027-06-29"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "sachen-233",
+      "poolTitel": "Was ist die Sicherungsgrundschuld und welche Einreden hat der Eigentümer?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1191 BGB",
+        "§ 1192 Abs. 1a BGB",
+        "§ 1157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2027-04-29",
+        "2027-07-03"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-177",
+      "poolTitel": "Wann ist ein Mitverschulden zu berücksichtigen?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 254 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-09"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-381",
+      "slug": "2027-09-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nie angehört – und der Bescheid hält trotzdem",
+          "titelZeilen": [
+            "Nie angehört –",
+            "und der Bescheid",
+            "hält trotzdem"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Heilung vor Unbeachtlichkeit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde widerruft eine Erlaubnis des A, ohne ihn anzuhören. A legt Widerspruch ein und trägt dort ausführlich vor. Die Widerspruchsbehörde setzt sich mit allen Argumenten auseinander und weist den Widerspruch zurück. Ist der Widerruf wegen der fehlenden Anhörung formell rechtswidrig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Anhörungspflicht",
+              "text": "Der Widerruf greift in Rechte des A ein. Er war nach § 28 Abs. 1 VwVfG anzuhören; eine Ausnahme nach Abs. 2 greift nicht."
+            },
+            {
+              "titel": "2. Verfahrensfehler",
+              "text": "Die Anhörung fehlt. Der Widerruf war damit zunächst verfahrensfehlerhaft ergangen."
+            },
+            {
+              "titel": "3. Heilung",
+              "text": "Wird die Anhörung nachgeholt, ist der Fehler geheilt (§ 45 Abs. 1 Nr. 3 VwVfG) – möglich bis zum Ende der letzten Tatsacheninstanz (Abs. 2)."
+            },
+            {
+              "titel": "4. Nachholung im Widerspruchsverfahren",
+              "text": "A konnte sich äußern, sein Vorbringen wurde ernsthaft gewürdigt. Das heilt den Fehler nach § 45 VwVfG – formell rechtmäßig."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Sofort mit § 46 VwVfG argumentieren, die Entscheidung wäre ohnehin gleich ausgefallen. Die Heilung nach § 45 VwVfG geht vor und beseitigt den Fehler. § 46 VwVfG schließt nur den Aufhebungsanspruch aus – und bei Ermessen ist „offensichtlich ohne Einfluss“ selten."
+        },
+        {
+          "art": "text",
+          "titel": "Worauf du achtest",
+          "punkte": [
+            "Findet ein Widerspruchsverfahren statt? Das regelt je nach Land das Ausführungsrecht",
+            "Nachholen heißt: Äußerung ermöglichen und ernsthaft würdigen",
+            "Eine bloße Stellungnahme im Prozess reicht nach verbreiteter Ansicht nicht ohne Weiteres"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst § 28 VwVfG, dann § 45 VwVfG, zuletzt § 46 VwVfG. Eine nachgeholte, ernsthaft gewürdigte Anhörung heilt den Fehler."
+        },
+        {
+          "art": "cta",
+          "titel": "Anhörung in drei Stufen",
+          "punkte": [
+            "Pflicht nach § 28 VwVfG?",
+            "Heilung nach § 45 VwVfG?",
+            "Erst dann § 46 VwVfG"
+          ],
+          "icons": [
+            "person",
+            "werkzeug",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Nie angehört – und der Bescheid hält trotzdem? Eine unterbliebene Anhörung macht den Verwaltungsakt verfahrensfehlerhaft. Nach § 45 Abs. 1 Nr. 3 VwVfG kann sie aber bis zum Abschluss der letzten Tatsacheninstanz nachgeholt werden, etwa im Widerspruchsverfahren, wenn die Behörde das Vorbringen ernsthaft würdigt. Erst danach kommt § 46 VwVfG. Speichern für die nächste formelle Rechtmäßigkeit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#anhörung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anhörung vergessen: Heilung nach § 45 VwVfG",
+      "coverText": "Heilung vor Unbeachtlichkeit",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ein Verfahrensfehler kann repariert werden, wenn die versäumte Anhörung ernsthaft nachgeholt wird.",
+        "handlung": "{A} hovers and belatedly hands a speaking trumpet to {B}, who is already standing outside a closed office door and starts to speak into it.",
+        "hinweisRegie": "Place the note in the free space between the speaking trumpet and the closed door, slightly tilted toward the trumpet, so the belated hearing is highlighted without covering the characters.",
+        "alternative": "{B} patches a small crack in a glass pane with a transparent strip, while {A} holds the pane steady."
+      },
+      "bildSzene": "speaking trumpet handed at door",
+      "bildSzeneAlt": "crack in glass pane patched",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-381"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.238Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-154",
+      "slug": "2027-09-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schnäppchen mit 15: Der Punkt, den viele bei § 107 BGB falsch machen",
+          "titelZeilen": [
+            "Schnäppchen mit 15:",
+            "Der Punkt, den viele",
+            "bei § 107 BGB",
+            "falsch machen"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Günstig ist nicht vorteilhaft",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Der 15-jährige M kauft von V ein gebrauchtes Rennrad für 50 €. Es ist mindestens 300 € wert. Die Eltern wissen nichts. V übergibt und übereignet das Rad sofort, M will später zahlen. Ist der Kaufvertrag wirksam – und wem gehört das Rad?"
+        },
+        {
+          "art": "text",
+          "titel": "Der Fehler – benannt",
+          "text": "„Das Geschäft ist für M nur vorteilhaft, er macht ein Schnäppchen.“ Genau hier kippen viele Lösungen. § 107 BGB fragt nicht nach dem wirtschaftlichen, sondern nach dem rechtlichen Vorteil. Maßgeblich ist, ob M durch das Geschäft rechtlich verpflichtet wird oder ein Recht verliert."
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Kaufvertrag",
+              "text": "M wird zur Zahlung von 50 € verpflichtet (§ 433 Abs. 2 BGB). Das ist rechtlich nachteilig – trotz des günstigen Preises."
+            },
+            {
+              "titel": "Folge",
+              "text": "Ohne Einwilligung schwebend unwirksam, Genehmigung der Eltern nötig (§ 108 Abs. 1 BGB). § 110 BGB hilft nicht: M hat nicht gezahlt."
+            },
+            {
+              "titel": "Übereignung",
+              "text": "Die Einigung nach § 929 S. 1 BGB verschafft M nur Eigentum. Das ist lediglich rechtlich vorteilhaft – M wird Eigentümer."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Kaufvertrag schwebend unwirksam, Übereignung wirksam (Trennungsprinzip). Verweigern die Eltern die Genehmigung, kann V das Rad nach § 812 Abs. 1 S. 1 Alt. 1 BGB zurückverlangen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 107 BGB: rechtlich, nicht wirtschaftlich. Jede eigene Verpflichtung ist nachteilig – auch beim Schnäppchen. Verpflichtung und Verfügung getrennt prüfen."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 107 BGB in drei Schritten",
+          "punkte": [
+            "Rechtliche Folgen, nicht der Preis",
+            "Verpflichtung und Verfügung trennen",
+            "§§ 108, 110 BGB mitdenken"
+          ],
+          "icons": [
+            "paragraf",
+            "vertrag",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Schnäppchen mit 15 – und trotzdem kein wirksamer Kaufvertrag. Der Punkt, den viele bei § 107 BGB falsch machen: Es zählt der rechtliche, nicht der wirtschaftliche Vorteil. Die Pflicht zur Kaufpreiszahlung ist rechtlich nachteilig, also ist der Vertrag ohne Einwilligung schwebend unwirksam. Die Übereignung an M bringt ihm dagegen nur Eigentum und ist wirksam. Speichern für die nächste Minderjährigenklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#107bgb",
+        "#minderjährige",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 107 BGB: rechtlich, nicht wirtschaftlich",
+      "coverText": "Günstig ist nicht vorteilhaft",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Ein günstiger Preis ändert nichts daran, dass der Minderjährige sich zur Zahlung verpflichtet.",
+        "handlung": "{A} eagerly grabs the handlebar of a shiny bicycle, while {B} holds out a small but heavy chain with a payment tag attached to {A}'s wrist.",
+        "hinweisRegie": "Place the note in the free space between the bicycle handlebar and the payment tag on the chain, slightly tilted toward the tag, so the hidden obligation is highlighted without covering the bicycle.",
+        "alternative": "{B} places a tiny price tag on a large crystal, while {A} notices a thread from the tag leading to his own pocket."
+      },
+      "bildSzene": "bicycle with payment chain on wrist",
+      "bildSzeneAlt": "price tag thread to pocket",
+      "quellen": [
+        "§ 107 BGB",
+        "§ 108 BGB",
+        "§ 110 BGB",
+        "§ 433 BGB",
+        "§ 929 S. 1 BGB",
+        "Themenpool: bgbat-154"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.238Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-756",
+      "slug": "2027-09-01-b3",
+      "titelZeilen": [
+        "Versäumnisurteil:",
+        "Der Richter prüft",
+        "nur, ob es passt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Versäumnisurteil: Der Richter prüft nur, ob es passt",
+          "unter": "Prozessbetrug · § 263 StGB",
+          "text": "Beim Versäumnisurteil prüft der Richter nur die Schlüssigkeit.",
+          "norm": "§ 263 StGB",
+          "icon": "richter",
+          "sprecher": "Gericht belogen, Urteil bekommen – Betrug? Nicht unbedingt. Beim Versäumnisurteil fehlt es womöglich am Irrtum.",
+          "marken": [
+            "Irrtum?",
+            "Versäumnisurteil"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Täuschung des Gerichts",
+          "text": "Wahrheitswidriger Vortrag im Prozess ist eine Täuschung über Tatsachen.",
+          "norm": "§ 263 Abs. 1 StGB",
+          "sprecher": "Schritt eins: die Täuschung. K klagt eine Forderung ein, die es nicht gibt. Sein wahrheitswidriger Vortrag ist eine Täuschung über Tatsachen.",
+          "marken": [
+            "Täuschung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Irrtum des Richters",
+          "text": "Im streitigen Verfahren hält der Richter den Vortrag nach Würdigung für wahr.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Irrtum. Im streitigen Verfahren würdigt der Richter die Beweise und hält den falschen Vortrag für wahr. Dann liegt ein Irrtum vor.",
+          "marken": [
+            "Beweiswürdigung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Das Problem beim Versäumnisurteil",
+          "text": "Der Vortrag gilt als zugestanden – der Richter prüft nur Schlüssigkeit.",
+          "norm": "§ 331 Abs. 1 ZPO",
+          "sprecher": "Schritt drei: Erscheint der Beklagte nicht, gilt der Vortrag des Klägers als zugestanden. Der Richter prüft nur, ob die Klage schlüssig ist. Nach verbreiteter Ansicht macht er sich keine Vorstellung über die Wahrheit – ein Irrtum fehlt dann.",
+          "marken": [
+            "nur Schlüssigkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verfügung und Schaden",
+          "text": "Das Urteil ist die Verfügung über das Vermögen des Beklagten.",
+          "norm": null,
+          "sprecher": "Schritt vier: Wo ein Irrtum vorliegt, ist das Urteil die Verfügung. Der Richter verfügt über fremdes Vermögen – ein Dreiecksbetrug. Spätestens mit Zahlung oder Vollstreckung tritt der Schaden ein.",
+          "marken": [
+            "Dreiecksbetrug"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Was bleibt",
+          "text": "Ohne Irrtum kein vollendeter Betrug – der Versuch bleibt zu prüfen.",
+          "norm": "§ 263 Abs. 2 StGB",
+          "sprecher": "Verneinst du den Irrtum, ist der Betrug nicht vollendet. Prüfe dann den Versuch, denn K wollte das Gericht täuschen.",
+          "marken": [
+            "Versuch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Streitig: Irrtum möglich. Säumnis: Irrtum fraglich.",
+          "norm": null,
+          "sprecher": "Merke: Im streitigen Verfahren ist ein Irrtum des Richters möglich. Beim Versäumnisurteil ist er fraglich – das musst du ansprechen.",
+          "marken": [
+            "Irrtum ansprechen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Verfahrensart klären",
+          "text": "Speichern für den nächsten Prozessbetrug.",
+          "norm": null,
+          "sprecher": "Speicher dir das für den nächsten Prozessbetrug.",
+          "marken": [
+            "Verfahrensart"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Versäumnisurteil erschlichen – der Richter prüft nur, ob der Vortrag passt. Beim Prozessbetrug ist der getäuschte Richter der Verfügende, das Urteil die Verfügung. Im streitigen Verfahren hält er den falschen Vortrag nach Beweiswürdigung für wahr. Beim Versäumnisurteil gilt der Vortrag aber als zugestanden, der Richter prüft nur die Schlüssigkeit – nach verbreiteter Ansicht fehlt dann der Irrtum. Speichern für den nächsten Prozessbetrug.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#263stgb",
+        "#prozessbetrug",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Prozessbetrug: Irrtum beim Versäumnisurteil?",
+      "coverText": "Schlüssig heißt nicht geglaubt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer nur prüft, ob eine Geschichte in sich stimmig ist, glaubt sie noch nicht.",
+        "handlung": "{A} checks whether puzzle pieces of a story fit together on a table, while {B} stands behind her and points at the empty chair of the absent opponent.",
+        "hinweisRegie": "Place the note in the free space above the empty chair, slightly tilted toward the puzzle on the table, so the missing opponent and the pure consistency check are connected without covering the characters.",
+        "alternative": "{B} holds a magnifying glass over a document without reading it, only checking whether its pages are complete, while {A} waits for a verdict."
+      },
+      "bildSzene": "puzzle checked, opponent chair empty",
+      "bildSzeneAlt": "checking pages only for completeness",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 331 Abs. 1 ZPO",
+        "Themenpool: strafbt-756"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.239Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-010",
+      "ueberzeile": "Prüfungsfrage Schuldrecht AT",
+      "titel": "Abholung ist für den 3. Mai vereinbart. K erscheint nicht, V hatte vorher nichts angeboten. Annahmeverzug?",
+      "optionen": [
+        "Ja – bei kalendermäßig bestimmter Mitwirkung ist kein Angebot nötig",
+        "Nein – V hätte zumindest wörtlich anbieten müssen",
+        "Nein – K trifft kein Verschulden am Ausbleiben"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 293 BGB",
+        "§ 296 BGB",
+        "§ 297 BGB",
+        "Themenpool: schuld-010"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.239Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-010",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – § 296 BGB macht das Angebot entbehrlich",
+      "text": "Ist für die Mitwirkungshandlung des Gläubigers eine Zeit nach dem Kalender bestimmt, bedarf es eines Angebots nur, wenn der Gläubiger die Handlung rechtzeitig vornimmt (§ 296 S. 1 BGB). Verschulden des Gläubigers ist beim Annahmeverzug nie Voraussetzung. V muss aber leistungsbereit und leistungsfähig sein (§ 297 BGB).",
+      "norm": "§ 296 S. 1 BGB",
+      "quellen": [
+        "§ 293 BGB",
+        "§ 296 BGB",
+        "§ 297 BGB",
+        "Themenpool: schuld-010"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.239Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – bei kalendermäßig bestimmter Mitwirkung ist kein Angebot nötig",
+        "Nein – V hätte zumindest wörtlich anbieten müssen",
+        "Nein – K trifft kein Verschulden am Ausbleiben"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-137",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 243 Abs. 5 S. 1 StPO: Erst die Anklage, dann der Hinweis aufs Schweigerecht",
+      "text": "Nach dem Verlesen des Anklagesatzes und der Mitteilung zu Verständigungsgesprächen wird der Angeklagte darauf hingewiesen, dass es ihm freisteht, sich zur Anklage zu äußern oder nicht auszusagen. Erst dann folgt seine Vernehmung zur Sache. Die Reihenfolge ist kein Formalismus: Er soll wissen, was ihm vorgeworfen wird, bevor er entscheidet.",
+      "norm": "§ 243 Abs. 5 S. 1 StPO",
+      "quellen": [
+        "§ 243 StPO",
+        "Themenpool: stpo-137"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.239Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-873",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Unverwertbare Aussage genutzt, der Verteidiger schwieg: Ist die Rüge verloren?",
+      "norm": "§ 257 StPO",
+      "optionen": [
+        "Rspr. (Widerspruchslösung): Der verteidigte Angeklagte muss der Verwertung bis zum Zeitpunkt des § 257 StPO widersprechen, sonst ist die Rüge verloren.",
+        "Weite Teile der Literatur: Verwertungsverbote sind von Amts wegen zu beachten; eine Widerspruchspflicht hat keine gesetzliche Grundlage."
+      ],
+      "text": "Klausur: mit der Rspr. Prüfe im Protokoll, ob rechtzeitig widersprochen wurde. Fehlt der Widerspruch, ist die Verfahrensrüge in der Praxis aussichtslos. Die Kritik der Literatur kannst du kurz nennen.",
+      "quellen": [
+        "§ 257 StPO",
+        "§ 136 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-873"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.239Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-233",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Sicherungsgrundschuld abgetreten: Die Einreden wandern mit",
+      "text": "Einreden aus dem Sicherungsvertrag kann der Eigentümer jedem Erwerber der Grundschuld entgegenhalten (§ 1192 Abs. 1a S. 1 BGB). Ein gutgläubig einredefreier Erwerb nach § 1157 S. 2 BGB ist insoweit ausgeschlossen. Für andere Einreden bleibt er möglich.",
+      "norm": "§ 1192 Abs. 1a BGB",
+      "quellen": [
+        "§ 1191 BGB",
+        "§ 1192 Abs. 1a BGB",
+        "§ 1157 BGB",
+        "Themenpool: sachen-233"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.239Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-177",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Mitverschulden: Verschulden gegen sich selbst",
+      "text": "Mitverschulden ist das Außerachtlassen jener Sorgfalt, die ein ordentlicher und verständiger Mensch aufwendet, um sich vor Schaden zu bewahren. Es ist keine Pflichtverletzung gegenüber anderen. Folge: Der Ersatzanspruch wird nach dem Gewicht der Verursachungs- und Verschuldensbeiträge gekürzt – bis hin zum Wegfall. Dazu gehört auch die Pflicht, den Schaden gering zu halten.",
+      "norm": "§ 254 BGB",
+      "quellen": [
+        "§ 254 BGB",
+        "Themenpool: schuld-177"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:50:34.240Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
