@@ -1,0 +1,852 @@
+{
+  "datum": "2027-08-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "zpo-282",
+        "themaTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafat-063",
+        "themaTitel": "Wann ist ein Rücktritt vom Versuch strafbefreiend?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessoroer-836",
+        "themaTitel": "Wie tenoriert man die Anfechtungsklage?",
+        "fach": "assessoroer",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:25",
+        "art": "frage",
+        "themaId": "famerb-521"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:25",
+        "art": "antwort",
+        "themaId": "famerb-521"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "schuldbt-470"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "streitstand",
+        "themaId": "bgbat-912"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "merksatz",
+        "themaId": "bgbat-153"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "begriff",
+        "themaId": "assessorz-577"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "zpo-282",
+      "poolTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-21",
+        "2027-04-14",
+        "2027-07-20"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafat-063",
+      "poolTitel": "Wann ist ein Rücktritt vom Versuch strafbefreiend?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-12",
+        "2027-07-22",
+        "2027-07-22"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessoroer-836",
+      "poolTitel": "Wie tenoriert man die Anfechtungsklage?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 1 Satz 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-05-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "famerb-521",
+      "poolTitel": "Testament: Errichtung, Auslegung, Widerruf",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 2064 ff., 2247 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-01-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "famerb-521",
+      "poolTitel": "Testament: Errichtung, Auslegung, Widerruf",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 2064 ff., 2247 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-01-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-470",
+      "poolTitel": "Verbrauchsgüterkauf: Beweislastumkehr",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 477 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2027-04-01"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "bgbat-912",
+      "poolTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 133 BGB",
+        "§ 157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-13",
+        "2027-06-13",
+        "2027-08-08"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bgbat-153",
+      "poolTitel": "Wie wirkt sich beschränkte Geschäftsfähigkeit auf einen Vertrag aus?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 107 BGB",
+        "§ 108 BGB",
+        "§ 110 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-13"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "assessorz-577",
+      "poolTitel": "Beweisstation im Urteil",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 286 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-30",
+        "2027-06-03",
+        "2027-06-03"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-282",
+      "slug": "2027-08-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beweislast: vier Werkzeuge, die du trennen musst",
+          "titelZeilen": [
+            "Beweislast: vier",
+            "Werkzeuge, die du",
+            "trennen musst"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Anschein ist keine Umkehr",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Grundregel",
+          "text": "Jede Partei trägt die Beweislast für die Voraussetzungen der ihr günstigen Norm: der Anspruchsteller für die anspruchsbegründenden, der Gegner für rechtshindernde, -vernichtende und -hemmende Tatsachen. Sie entscheidet erst, wenn das Gericht nach § 286 ZPO nicht überzeugt ist."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Werkzeug 1 und 2",
+          "links": {
+            "titel": "Beweislastumkehr",
+            "punkte": [
+              "Das Gesetz verteilt anders, etwa § 280 I 2 BGB, § 477 BGB.",
+              "Der Gegner muss das Gegenteil voll beweisen."
+            ]
+          },
+          "rechts": {
+            "titel": "Anscheinsbeweis",
+            "punkte": [
+              "Typischer Geschehensablauf nach der Lebenserfahrung.",
+              "Keine Umkehr: Der Gegner muss den Anschein nur erschüttern."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Werkzeug 3: sekundäre Darlegungslast",
+          "text": "Kennt nur der Gegner die Umstände, muss er sich dazu näher erklären. Schweigt er, gilt der Vortrag als zugestanden. Die Beweislast bleibt aber, wo sie war – der Gegner muss nichts beweisen, nur vortragen."
+        },
+        {
+          "art": "text",
+          "titel": "Werkzeug 4: das Beweismaß",
+          "text": "§ 286 ZPO verlangt volle Überzeugung: eine Gewissheit, die Zweifeln Schweigen gebietet, ohne sie völlig auszuschließen. Für Entstehung und Höhe des Schadens senkt § 287 ZPO das Maß – das Gericht darf schätzen. Die haftungsbegründende Kausalität bleibt bei § 286 ZPO."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Umkehr verschiebt die Last. Anschein erleichtert den Beweis. Sekundäre Darlegungslast betrifft nur den Vortrag. § 287 ZPO senkt das Maß."
+        },
+        {
+          "art": "cta",
+          "titel": "Beweisfragen sauber sortieren",
+          "punkte": [
+            "Wer trägt die Beweislast?",
+            "Hilft ein Anschein oder eine Umkehr?",
+            "Welches Beweismaß gilt?"
+          ],
+          "icons": [
+            "waage",
+            "lupe",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Beweislast, Anscheinsbeweis, sekundäre Darlegungslast und Beweismaß – vier Werkzeuge, die in Klausuren gern vermischt werden. Eine gesetzliche Umkehr verschiebt die Beweislast, der Anschein muss nur erschüttert werden, die sekundäre Darlegungslast verlangt bloß Vortrag. Und § 287 ZPO senkt für den Schaden das Beweismaß, nicht die Beweislast. Speichern für die nächste Beweisstation.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#beweislast",
+        "#286zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beweislast: vier Werkzeuge im Überblick",
+      "coverText": "Anschein ist keine Umkehr",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Wer eine Beweisfrage lösen will, muss das richtige Werkzeug aus dem Kasten nehmen.",
+        "handlung": "{B} opens a sturdy toolbox with four clearly different tools, while {A} uses his pointer to tap the one tool that only loosens a bolt instead of turning it around.",
+        "hinweisRegie": "Place the note in the free space above the toolbox next to the tapped tool, slightly tilted toward it, so the distinction between the tools is readable without covering hands or faces.",
+        "alternative": "{A} balances a scale while {B} adds only a small feather to one side, showing a lighter burden rather than a flipped one."
+      },
+      "bildSzene": "toolbox with four distinct tools",
+      "bildSzeneAlt": "feather eases scale, does not flip it",
+      "quellen": [
+        "§ 286 ZPO",
+        "§ 287 ZPO",
+        "§ 138 ZPO",
+        "§ 280 Abs. 1 S. 2 BGB",
+        "§ 477 BGB",
+        "Themenpool: zpo-282"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-werkzeuge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.027Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-063",
+      "slug": "2027-08-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zu zweit versucht: Aufhören allein reicht nicht",
+          "titelZeilen": [
+            "Zu zweit versucht:",
+            "Aufhören allein",
+            "reicht nicht"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Mehrere müssen verhindern",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A und B setzen nachts gemeinsam das Brecheisen an der Tür eines Kiosks an, um Waren zu stehlen. A bekommt Angst und geht. B macht allein weiter, wird aber von einer Streife gestellt, bevor er die Tür aufbekommt. Ist A strafbefreiend zurückgetreten?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Allein oder zu mehreren",
+          "links": {
+            "titel": "Alleintäter (Abs. 1)",
+            "punkte": [
+              "Unbeendet: freiwillig aufgeben genügt.",
+              "Beendet: Vollendung verhindern oder sich ernsthaft bemühen."
+            ]
+          },
+          "rechts": {
+            "titel": "Mehrere (Abs. 2)",
+            "punkte": [
+              "Aufgeben genügt nicht: Er muss die Vollendung verhindern.",
+              "Bemühen reicht, wenn die Tat ohne sein Zutun unterbleibt."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Warum strenger?",
+          "text": "Wer gemeinsam handelt, schafft eine Gefahr, die er durch Weggehen nicht beseitigt: Die anderen können weitermachen. § 24 Abs. 2 StGB verlangt deshalb eine aktive Leistung. Nach der Rspr. genügt beim unbeendeten Versuch aber, dass alle Beteiligten einvernehmlich aufgeben."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "A hat nur aufgehört. Die Tat blieb unvollendet, aber ohne sein Zutun – wegen der Streife. Entlasten würde ihn dann nur ein freiwilliges, ernsthaftes Bemühen um Verhinderung (§ 24 Abs. 2 S. 2 StGB), etwa die Polizei zu rufen. Weggehen genügt nicht: A bleibt wegen versuchten Diebstahls strafbar."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Allein: Aufgeben kann reichen. Zu mehreren: verhindern – oder sich ernsthaft bemühen, wenn die Tat ohnehin scheitert."
+        },
+        {
+          "art": "cta",
+          "titel": "Rücktritt bei mehreren Beteiligten",
+          "punkte": [
+            "Mehrere Beteiligte? Dann Abs. 2",
+            "Vollendung verhindert?",
+            "Sonst: ernsthaftes Bemühen?"
+          ],
+          "icons": [
+            "personen",
+            "stopp",
+            "telefon"
+          ]
+        }
+      ],
+      "caption": "Allein reicht beim unbeendeten Versuch das freiwillige Aufgeben. Zu zweit nicht: Nach § 24 Abs. 2 StGB muss der Beteiligte die Vollendung verhindern. Unterbleibt die Tat ohne sein Zutun, genügt ein freiwilliges und ernsthaftes Bemühen – bloßes Weggehen ist das nicht. Die Rspr. lässt beim unbeendeten Versuch aber das einvernehmliche Aufgeben aller genügen. Speichern für die nächste Versuchsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#rücktritt",
+        "#24stgb",
+        "#versuch",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücktritt: allein oder mit Beteiligten",
+      "coverText": "Mehrere müssen verhindern",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer gemeinsam etwas ins Rollen bringt, muss es aufhalten – einfach weggehen genügt nicht.",
+        "handlung": "{B} walks away from a heavy cart that {A} and he pushed together onto a slope, while {A} keeps pushing it further downhill; the cart keeps rolling behind {B}'s back.",
+        "hinweisRegie": "Place the note in the free space between the walking-away figure and the rolling cart, slightly tilted toward the cart, so the unresolved danger is visible without covering either face.",
+        "alternative": "{A} blocks the wheel of a shared cart with a wooden wedge while {B} still leans on the handle."
+      },
+      "bildSzene": "one walks away, shared cart rolls on",
+      "bildSzeneAlt": "wedge placed under shared cart wheel",
+      "quellen": [
+        "§ 24 StGB",
+        "§ 22 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafat-063"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.028Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-836",
+      "slug": "2027-08-12-b3",
+      "titelZeilen": [
+        "„Der Klage wird",
+        "stattgegeben“ –",
+        "als Tenor zu wenig"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Der Klage wird stattgegeben“ – als Tenor zu wenig",
+          "unter": "Anfechtungsklage · § 113 Abs. 1 S. 1 VwGO",
+          "text": "Das Gericht hebt den Verwaltungsakt selbst auf – das muss der Tenor sagen.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "icon": "richter",
+          "sprecher": "„Der Klage wird stattgegeben“ – als Tenor zu wenig. Bei der Anfechtungsklage gestaltet das Gericht selbst: Es hebt den Verwaltungsakt auf. Das muss im Tenor stehen.",
+          "marken": [
+            "aufheben!"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Den Bescheid genau bezeichnen",
+          "text": "Behörde, Datum, Aktenzeichen – und den Widerspruchsbescheid mit erfassen.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "sprecher": "Schritt eins: Bezeichne den Bescheid so genau, dass jeder weiß, welcher gemeint ist – Behörde, Datum, gegebenenfalls Aktenzeichen. Und erfass den Widerspruchsbescheid mit, ob als ‚in der Gestalt‘ oder ausdrücklich daneben.",
+          "marken": [
+            "Behörde · Datum"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Teilerfolg: „soweit“",
+          "text": "Nur der rechtswidrige, abtrennbare Teil wird aufgehoben, im Übrigen abgewiesen.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "sprecher": "Schritt zwei: Aufgehoben wird nur, soweit der Verwaltungsakt rechtswidrig ist und den Kläger in seinen Rechten verletzt. Ist nur ein abtrennbarer Teil fehlerhaft, hebst du ihn auf und weist die Klage im Übrigen ab.",
+          "marken": [
+            "soweit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Kosten",
+          "text": "Unterliegt die Behörde, trägt sie die Kosten; bei Teilerfolg wird geteilt.",
+          "norm": "§ 154 Abs. 1 VwGO · § 155 Abs. 1 VwGO",
+          "sprecher": "Schritt drei: die Kosten. Wer unterliegt, trägt sie nach Paragraf 154 Absatz 1 VwGO. Bei einem Teilerfolg werden sie nach Paragraf 155 Absatz 1 verhältnismäßig geteilt oder gegeneinander aufgehoben.",
+          "marken": [
+            "§§ 154, 155 VwGO"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Kein „rechtswidrig“ im Tenor",
+          "text": "Die Rechtswidrigkeit ist Begründung, nicht Ausspruch.",
+          "norm": null,
+          "sprecher": "Und schreib nicht in den Tenor, der Bescheid sei rechtswidrig. Das ist die Begründung und gehört in die Entscheidungsgründe. Die Anfechtungsklage kassiert nur – sie stellt nichts fest und verpflichtet niemanden.",
+          "marken": [
+            "nur kassieren"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Konkret aufheben, bei Teilerfolg „soweit“, dann Kosten.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "sprecher": "Merke: den konkreten Bescheid aufheben, bei Teilerfolg ‚soweit‘ und im Übrigen abweisen, dann die Kosten.",
+          "marken": [
+            "aufheben · soweit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Urteilsklausur",
+          "text": "Speichern und den Tenor zuletzt noch einmal gegenlesen.",
+          "sprecher": "Speicher dir das für die nächste Urteilsklausur im Öffentlichen Recht. Und lies deinen Tenor am Ende einmal so, als müsste ihn die Behörde ohne Gründe verstehen.",
+          "marken": [
+            "gegenlesen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "„Der Klage wird stattgegeben“ – das reicht im Tenor einer Anfechtungsklage nicht. Das Gericht gestaltet selbst: Es hebt den konkret bezeichneten Bescheid und den Widerspruchsbescheid auf (§ 113 Abs. 1 S. 1 VwGO), bei Teilerfolg nur „soweit“ und weist im Übrigen ab. Dann folgt die Kostenentscheidung nach §§ 154, 155 VwGO. Die Rechtswidrigkeit gehört in die Gründe, nicht in den Tenor. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#tenor",
+        "#anfechtungsklage",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anfechtungsklage: der Tenor im Detail",
+      "coverText": "Aufheben, nicht nur stattgeben",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Das Gericht sagt nicht nur ja, es entfernt selbst den angegriffenen Bescheid.",
+        "handlung": "{A} hovers over a pinboard and precisely removes one specific pinned notice, while {B} curiously points at a vague thumbs-up card that was about to be pinned instead.",
+        "hinweisRegie": "Place the note in the free space next to the removed notice, slightly tilted toward it, so the concrete removal reads as the key action without covering the thumbs-up card or faces.",
+        "alternative": "{B} cuts out exactly one defective piece from a strip of fabric while {A} labels the remaining strip as kept."
+      },
+      "bildSzene": "droid removes one pinned notice",
+      "bildSzeneAlt": "one defective piece cut from strip",
+      "quellen": [
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 154 VwGO",
+        "§ 155 VwGO",
+        "Themenpool: assessoroer-836"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.029Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-521",
+      "ueberzeile": "Prüfungsfrage Erbrecht",
+      "titel": "E schreibt ein zweites Testament, das dem ersten nur teilweise widerspricht. Welches gilt?",
+      "optionen": [
+        "Nur das neue – das alte ist vollständig aufgehoben",
+        "Keines – widersprüchliche Testamente sind beide unwirksam",
+        "Beide, soweit sie sich nicht widersprechen"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 2254 BGB",
+        "§ 2258 BGB",
+        "Themenpool: famerb-521"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.029Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-521",
+      "ueberzeile": "Auflösung",
+      "titel": "Beide – das neue Testament verdrängt das alte nur, soweit es widerspricht",
+      "text": "Nach § 2258 Abs. 1 BGB hebt ein späteres Testament das frühere nur insoweit auf, als es mit ihm in Widerspruch steht. Im Übrigen gelten beide nebeneinander. Anders, wenn E das alte ausdrücklich widerruft (§ 2254 BGB) oder die Auslegung ergibt, dass er seine Erbfolge insgesamt neu regeln wollte.",
+      "norm": "§ 2258 Abs. 1 BGB",
+      "quellen": [
+        "§ 2254 BGB",
+        "§ 2258 BGB",
+        "Themenpool: famerb-521"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.029Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur das neue – das alte ist vollständig aufgehoben",
+        "Keines – widersprüchliche Testamente sind beide unwirksam",
+        "Beide, soweit sie sich nicht widersprechen"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-470",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 477 BGB: Die Vermutung hilft nur dem Verbraucher gegen den Unternehmer",
+      "text": "Die Beweislastumkehr setzt einen Verbrauchsgüterkauf voraus (§ 474 Abs. 1 BGB): Ein Unternehmer verkauft einem Verbraucher eine Ware – auch eine gebrauchte. Unter Privatleuten oder zwischen Unternehmern gilt § 477 BGB nicht; dort beweist der Käufer den Mangel bei Gefahrübergang selbst. Frist: ein Jahr, bei lebenden Tieren sechs Monate.",
+      "norm": "§ 477 Abs. 1 BGB · § 474 Abs. 1 BGB",
+      "quellen": [
+        "§ 474 BGB",
+        "§ 477 BGB",
+        "Themenpool: schuldbt-470"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.029Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-912",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "G hält eine Ausflugsbuchungsliste fürs Gästebuch und trägt sich ein: Muss er anfechten?",
+      "norm": "§ 119 Abs. 1 BGB analog",
+      "optionen": [
+        "H.M.: Ja – die Erklärung ist ihm zurechenbar; Anfechtung analog § 119 I BGB, Haftung nach § 122 BGB.",
+        "Andere Ansicht: Nein – ohne Erklärungsbewusstsein keine Willenserklärung; nur Vertrauensschaden."
+      ],
+      "text": "Klausur: Nach h.M. muss G unverzüglich nach Kenntnis anfechten (§ 121 Abs. 1 BGB) – das kann auch Wochen später sein.",
+      "quellen": [
+        "§ 119 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§§ 133, 157 BGB",
+        "Themenpool: bgbat-912"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.029Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-153",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Schnäppchen: nicht lediglich rechtlich vorteilhaft",
+      "text": "§ 107 BGB zählt nur rechtliche Folgen. Der Kaufvertrag verpflichtet zur Zahlung – auch bei 90 % Rabatt. Die Übereignung an den Minderjährigen ist dagegen lediglich rechtlich vorteilhaft.",
+      "norm": "§ 107 BGB",
+      "quellen": [
+        "§ 107 BGB",
+        "§ 108 BGB",
+        "Themenpool: bgbat-153"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.029Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-577",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Glaubhaftigkeit",
+      "text": "Glaubhaftigkeit betrifft die Aussage: Ist sie in sich stimmig, detailreich, konstant und mit den übrigen Beweisen vereinbar? Glaubwürdigkeit betrifft die Person. Im Urteil würdigst du vor allem die Aussage. Nähe zu einer Partei macht einen Zeugen nicht von vornherein unglaubwürdig. Maßstab ist die Überzeugung des Gerichts (§ 286 Abs. 1 ZPO).",
+      "norm": "§ 286 Abs. 1 ZPO",
+      "quellen": [
+        "§ 286 ZPO",
+        "Themenpool: assessorz-577"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:46.029Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

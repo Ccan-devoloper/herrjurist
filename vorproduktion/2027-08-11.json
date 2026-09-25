@@ -1,0 +1,854 @@
+{
+  "datum": "2027-08-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-643",
+        "themaTitel": "Rücknahme rechtswidriger Verwaltungsakte",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuld-442",
+        "themaTitel": "Schuldnerverzug: Voraussetzungen und Rechtsfolgen",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "revision-876",
+        "themaTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "assessoroer-852"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "assessoroer-852"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:11",
+        "art": "norm",
+        "themaId": "famerb-263"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "streitstand",
+        "themaId": "streit-40"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "merksatz",
+        "themaId": "strafbt-765"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "begriff",
+        "themaId": "strafbt-743"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-643",
+      "poolTitel": "Rücknahme rechtswidriger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-04",
+        "2027-06-27",
+        "2027-06-27"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuld-442",
+      "poolTitel": "Schuldnerverzug: Voraussetzungen und Rechtsfolgen",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, II, 286 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-876",
+      "poolTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 344 Abs. 2 Satz 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-03-09",
+        "2027-06-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-852",
+      "poolTitel": "Welche Fristen entscheiden über die Klausur im Öffentlichen Recht?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "§ 58 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-06",
+        "2027-02-16",
+        "2027-02-16"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-852",
+      "poolTitel": "Welche Fristen entscheiden über die Klausur im Öffentlichen Recht?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "§ 58 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-06",
+        "2027-02-16",
+        "2027-02-16"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-263",
+      "poolTitel": "Was ist ein Vermächtnis und wie wird es geltend gemacht?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 2147 BGB",
+        "§ 2174 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-03"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-40",
+      "poolTitel": "Rechtskreistheorie oder Abwägungslehre bei Verwertungsverboten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-765",
+      "poolTitel": "Verbotene Kraftfahrzeugrennen",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 315d StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29",
+        "2027-02-25",
+        "2027-04-15"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-743",
+      "poolTitel": "Schwere Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 226 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2026-11-12",
+        "2027-06-09"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-643",
+      "slug": "2027-08-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Geld investiert – und trotzdem kein Vertrauensschutz",
+          "titelZeilen": [
+            "Geld investiert –",
+            "und trotzdem kein",
+            "Vertrauensschutz"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Verschulden spielt keine Rolle",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde bewilligt U eine Subvention von 20.000 €. U hat im Antrag die Zahl seiner Beschäftigten zu hoch angegeben – ohne es zu merken. Mit richtigen Zahlen hätte er nichts bekommen. Das Geld hat er längst investiert. Darf die Behörde den Bescheid zurücknehmen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Rechtswidrig, begünstigend",
+              "text": "Die Voraussetzungen der Förderung lagen nicht vor. Der Bescheid gewährt eine Geldleistung – Maßstab ist § 48 Abs. 2 VwVfG."
+            },
+            {
+              "titel": "Grundsatz: Vertrauen",
+              "text": "Vertrauen ist in der Regel schutzwürdig, wenn U die Leistung verbraucht oder unumkehrbar über sein Vermögen disponiert hat."
+            },
+            {
+              "titel": "Ausnahme: unrichtige Angaben",
+              "text": "Kein Schutz, wenn der VA durch Angaben erwirkt wurde, die in wesentlicher Beziehung unrichtig waren (§ 48 Abs. 2 S. 3 Nr. 2 VwVfG)."
+            },
+            {
+              "titel": "Ermessen, Frist, Folgen",
+              "text": "Rücknahme meist für die Vergangenheit (Abs. 2 S. 4), Jahresfrist ab Kenntnis (Abs. 4), Erstattung nach § 49a VwVfG."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Vertrauensschutz bejahen, weil U gutgläubig war. Für die unrichtigen Angaben nach § 48 Abs. 2 S. 3 Nr. 2 VwVfG kommt es auf ein Verschulden nicht an – sie fallen in die Sphäre des Antragstellers. Auf Kenntnis oder grobe Fahrlässigkeit stellt erst Nr. 3 ab."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "U kann sich nicht auf Vertrauen berufen, obwohl er das Geld investiert hat. Die Behörde darf den Bescheid – ermessensfehlerfrei und innerhalb der Jahresfrist – mit Wirkung für die Vergangenheit zurücknehmen und die 20.000 € zurückfordern. Bei Landesbehörden gilt das inhaltsgleiche Landes-VwVfG."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verbrauch schützt – aber nicht den, der den Bescheid mit falschen Angaben erwirkt hat, auch wenn er es nicht wusste."
+        },
+        {
+          "art": "cta",
+          "titel": "Rücknahme in drei Schritten",
+          "punkte": [
+            "Geldleistungs-VA? Dann § 48 Abs. 2 VwVfG",
+            "Ausschlussgründe in S. 3 prüfen",
+            "Frist, Ermessen, Erstattung"
+          ],
+          "icons": [
+            "muenzen",
+            "warnung",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Das Geld ist ausgegeben – ist U damit geschützt? Nicht, wenn er den Bescheid durch Angaben erwirkt hat, die in wesentlicher Beziehung unrichtig waren (§ 48 Abs. 2 S. 3 Nr. 2 VwVfG). Auf Verschulden kommt es dabei nicht an. Die Behörde kann dann auch für die Vergangenheit zurücknehmen und nach § 49a VwVfG erstatten lassen – innerhalb der Jahresfrist und mit fehlerfreiem Ermessen. Speichern für die nächste Rücknahmeklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#48vwvfg",
+        "#subvention",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Subvention: kein Vertrauen bei falschen Angaben",
+      "coverText": "Verschulden spielt keine Rolle",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Wer eine Leistung mit unrichtigen Angaben bekommen hat, kann sich nicht darauf berufen, dass er sie schon ausgegeben hat.",
+        "handlung": "{A} proudly stands in front of a freshly built small machine made from coins, while {B} hovers over the original application sheet and gently lifts it to reveal one wrong number underneath.",
+        "hinweisRegie": "Place the note in the free space near the revealed wrong number on the sheet, slightly tilted toward it, so the cause is visible without covering the coin machine or {A}'s face.",
+        "alternative": "{B} traces a thin crack in a foundation stone that {A} unknowingly laid, while the finished building stands on top."
+      },
+      "bildSzene": "coin machine built on wrong number",
+      "bildSzeneAlt": "crack in foundation stone revealed",
+      "quellen": [
+        "§ 48 VwVfG",
+        "§ 49a VwVfG",
+        "Themenpool: verwalt-643"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.032Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-442",
+      "slug": "2027-08-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Rechnung 40 Tage offen – Verbraucher im Verzug?",
+          "titelZeilen": [
+            "Rechnung 40 Tage",
+            "offen – Verbraucher",
+            "im Verzug?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Ohne Hinweis kein Verzug nach 30 Tagen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Unternehmer V schickt Verbraucher K am 1. März eine Rechnung über 900 €, sofort fällig, ohne Hinweis auf Verzugsfolgen. K zahlt nicht. Am 10. April mahnt ein Anwalt für V, am 20. April zahlt K. V verlangt Anwaltskosten und Zinsen. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Anspruchsgrundlage",
+              "text": "Verzögerungsschaden: §§ 280 Abs. 1, 2, 286 BGB. Voraussetzung: fällige, durchsetzbare Forderung und Verzug."
+            },
+            {
+              "titel": "Mahnung?",
+              "text": "Vor dem 10. April gab es keine Mahnung (§ 286 Abs. 1 BGB)."
+            },
+            {
+              "titel": "Entbehrlich nach Abs. 2?",
+              "text": "Keine Leistungszeit nach dem Kalender, keine ernsthafte Verweigerung – nein."
+            },
+            {
+              "titel": "30 Tage nach Abs. 3?",
+              "text": "Gegenüber Verbrauchern nur, wenn die Rechnung auf diese Folge besonders hinweist. Der Hinweis fehlt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die 30-Tage-Regel automatisch anwenden und Verzug ab Anfang April annehmen. Und: die Kosten der Anwaltsmahnung als Verzugsschaden ersetzen. Die Mahnung, die den Verzug erst begründet, ist nach h.M. nicht ersatzfähig – vor ihr war K nicht im Verzug."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "K kommt erst mit Zugang der Anwaltsmahnung in Verzug. Deren Kosten muss er nicht tragen. Verzugszinsen (§ 288 Abs. 1 BGB: fünf Prozentpunkte über dem Basiszinssatz) schuldet er nur für die Tage bis zur Zahlung am 20. April."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verbraucher gerät nach 30 Tagen nur mit Hinweis in der Rechnung in Verzug. Die verzugsbegründende Mahnung zahlt der Gläubiger selbst."
+        },
+        {
+          "art": "cta",
+          "titel": "Verzug in drei Prüfschritten",
+          "punkte": [
+            "Mahnung – wann zugegangen?",
+            "Entbehrlich nach § 286 Abs. 2 BGB?",
+            "30 Tage: Verbraucher-Hinweis da?"
+          ],
+          "icons": [
+            "umschlag",
+            "kalender",
+            "quittung"
+          ]
+        }
+      ],
+      "caption": "Die Rechnung ist seit 40 Tagen offen – ist der Verbraucher jetzt im Verzug? Nach § 286 Abs. 3 BGB nur, wenn die Rechnung auf diese Folge besonders hingewiesen hat. Fehlt der Hinweis, braucht es eine Mahnung. Und deren Kosten sind nach h.M. kein Verzugsschaden, wenn erst sie den Verzug begründet. Zinsen nach § 288 Abs. 1 BGB laufen erst ab Verzugseintritt. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#verzug",
+        "#286bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "30-Tage-Regel: Verbraucher braucht Hinweis",
+      "coverText": "Ohne Hinweis kein Verzug nach 30 Tagen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Eine Frist von 30 Tagen hilft gegenüber Verbrauchern nur, wenn die Rechnung davor gewarnt hat.",
+        "handlung": "{B} impatiently rings a large alarm bell next to a calendar showing many crossed-off days, while {A} calmly turns over the invoice and shows its empty back where a warning should have been.",
+        "hinweisRegie": "Place the note in the free space next to the empty back of the invoice, slightly tilted toward it, so the missing warning is the focus without covering the bell or the calendar.",
+        "alternative": "{A} holds a timer that never started because the start button was never labelled, while {B} waits impatiently beside it."
+      },
+      "bildSzene": "alarm bell, invoice without warning",
+      "bildSzeneAlt": "timer never started, unlabelled button",
+      "quellen": [
+        "§ 280 BGB",
+        "§ 286 BGB",
+        "§ 288 BGB",
+        "Themenpool: schuld-442"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.032Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-876",
+      "slug": "2027-08-11-b3",
+      "titelZeilen": [
+        "Verfahrensrüge:",
+        "drei Regeln für",
+        "die Begründung"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Verfahrensrüge: drei Regeln für die Begründung",
+          "unter": "Revision · § 344 Abs. 2 S. 2 StPO",
+          "text": "Das Revisionsgericht liest nur deine Begründung – keine Akte, kein Protokoll.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "icon": "dokument",
+          "sprecher": "Verweis auf die Akte? Dann ist die Rüge unzulässig. Das Revisionsgericht liest keine Akte, es liest nur deine Begründung. Bei der Verfahrensrüge gelten deshalb drei Regeln, und jede entscheidet über die Zulässigkeit.",
+          "marken": [
+            "kein Aktenverweis",
+            "drei Regeln"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Tatsachen vollständig angeben",
+          "text": "Alle Tatsachen, die den Verfahrensfehler ergeben.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "sprecher": "Regel eins: Die den Mangel enthaltenden Tatsachen müssen angegeben werden. Nicht die rechtliche Bewertung zählt, sondern der Vorgang: was beantragt, was beschlossen, was unterlassen wurde.",
+          "marken": [
+            "Tatsachen, nicht Wertung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Aus sich heraus verständlich",
+          "text": "Beweisantrag und Beschluss im Wortlaut oder vollständig inhaltlich wiedergeben.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "sprecher": "Regel zwei: Die Begründung muss aus sich heraus verständlich sein. Bezugnahmen auf Akten, Protokoll oder Schriftsätze genügen nicht. Den Beweisantrag und den Ablehnungsbeschluss schreibst du also selbst in die Begründung.",
+          "marken": [
+            "wörtlich einrücken"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Innerhalb der Frist",
+          "text": "Was nach Fristablauf nachgeschoben wird, macht die Rüge nicht mehr zulässig.",
+          "norm": "§ 345 Abs. 1 StPO",
+          "sprecher": "Regel drei: Alles muss innerhalb der Begründungsfrist vorliegen. Tatsachen, die erst danach nachgereicht werden, retten eine unvollständige Verfahrensrüge nicht mehr. Also lieber einmal zu viel mitteilen als einmal zu wenig.",
+          "marken": [
+            "Frist"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Sachrüge ist anders",
+          "text": "Hier genügt der Satz: Gerügt wird die Verletzung materiellen Rechts.",
+          "norm": "§ 344 Abs. 2 S. 1 StPO",
+          "sprecher": "Zum Vergleich: Die allgemeine Sachrüge braucht keine Tatsachen. Ein Satz genügt, und das Revisionsgericht prüft das Urteil selbst auf Rechtsfehler.",
+          "marken": [
+            "ein Satz genügt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vollständig, aus sich heraus verständlich, fristgerecht.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "sprecher": "Merke: vollständig, aus sich heraus verständlich, fristgerecht. Stell dir vor, der Senat hätte nur deine Begründung vor sich.",
+          "marken": [
+            "nur die Begründung zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für das nächste Revisionsgutachten",
+          "text": "Speichern und jede Verfahrensrüge daran messen.",
+          "sprecher": "Speicher dir das für das nächste Revisionsgutachten und prüf jede Verfahrensrüge gegen diese drei Regeln.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Verfahrensrüge mit „siehe Protokoll, Blatt 57“? Dann ist sie unzulässig. § 344 Abs. 2 S. 2 StPO verlangt, dass die den Mangel enthaltenden Tatsachen angegeben werden – so vollständig, dass das Revisionsgericht allein anhand der Begründung prüfen kann. Bezugnahmen auf Akten oder Protokoll genügen nicht, und nachgeschoben wird nach Fristablauf nichts. Die allgemeine Sachrüge dagegen braucht nur einen Satz.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#344stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfahrensrüge: drei Begründungsregeln",
+      "coverText": "Keine Bezugnahme auf die Akte",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Das Revisionsgericht sieht nur, was in der Begründung selbst steht.",
+        "handlung": "{A} holds up a single sheet in front of a closed cabinet, while {B} hovers beside and firmly locks the cabinet so only the sheet can be read.",
+        "hinweisRegie": "Place the note in the free space just above the single sheet, slightly tilted toward it, so the idea that only this sheet counts is clear without covering the lock or {A}'s pointer.",
+        "alternative": "{B} reads a letter through a small window while {A} tries to point at boxes stacked outside the window's view."
+      },
+      "bildSzene": "one sheet read, cabinet locked",
+      "bildSzeneAlt": "reader sees only what window shows",
+      "quellen": [
+        "§ 344 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-876"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-regeln",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.033Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-852",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "Der Bescheid gegen A enthält gar keine Rechtsbehelfsbelehrung. Bis wann kann A Widerspruch einlegen?",
+      "optionen": [
+        "Innerhalb eines Jahres seit Bekanntgabe",
+        "Innerhalb eines Monats – die Belehrung ist nur ein Service",
+        "Unbefristet, bis das Recht verwirkt ist"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 58 VwGO",
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "Themenpool: assessoroer-852"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.033Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-852",
+      "ueberzeile": "Auflösung",
+      "titel": "Ein Jahr – ohne Belehrung läuft keine Monatsfrist",
+      "text": "Die Monatsfrist beginnt nur, wenn ordnungsgemäß belehrt wurde (§ 58 Abs. 1 VwGO). Fehlt die Belehrung oder ist sie unrichtig, ist der Rechtsbehelf innerhalb eines Jahres seit Bekanntgabe zulässig (§ 58 Abs. 2 VwGO) – für den Widerspruch über § 70 Abs. 2 VwGO ebenso wie für die Klage. Ausnahme: höhere Gewalt oder die schriftliche Belehrung, ein Rechtsbehelf sei nicht gegeben.",
+      "norm": "§ 58 Abs. 2 VwGO · § 70 Abs. 2 VwGO",
+      "quellen": [
+        "§ 58 VwGO",
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "Themenpool: assessoroer-852"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.033Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Innerhalb eines Jahres seit Bekanntgabe",
+        "Innerhalb eines Monats – die Belehrung ist nur ein Service",
+        "Unbefristet, bis das Recht verwirkt ist"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-263",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 2147 BGB: Beschwert ist im Zweifel der Erbe – es kann aber auch ein Vermächtnisnehmer sein",
+      "text": "Beschwert werden kann der Erbe oder ein Vermächtnisnehmer (Untervermächtnis); im Zweifel ist es der Erbe. Bei mehreren Erben trifft es im Zweifel alle nach dem Verhältnis ihrer Erbteile (§ 2148 BGB). Auch ein Erbe kann bedacht sein: Das Vorausvermächtnis (§ 2150 BGB) erhält er zusätzlich zum Erbteil – anders als bei der bloßen Teilungsanordnung (§ 2048 BGB).",
+      "norm": "§ 2147 BGB",
+      "quellen": [
+        "§ 2147 BGB",
+        "§ 2148 BGB",
+        "§ 2150 BGB",
+        "§ 2048 BGB",
+        "Themenpool: famerb-263"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.033Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "streit-40",
+      "ueberzeile": "Streitstand StPO",
+      "titel": "Zeuge Z wird nicht nach § 55 StPO belehrt und belastet den Angeklagten A: Kann A das mit der Revision rügen?",
+      "norm": "§ 337 StPO · § 55 StPO",
+      "optionen": [
+        "Rspr. (Rechtskreistheorie): Nein – § 55 StPO schützt nur den Zeugen, nicht den Rechtskreis des Angeklagten.",
+        "Teile der Lit.: Rechtskreistheorie zu eng – auch A hat Anspruch auf ein faires, fehlerfreies Verfahren."
+      ],
+      "text": "Klausur: Bei anderen Verstößen prüft der BGH ein Verwertungsverbot per Abwägung zwischen Aufklärungsinteresse und Gewicht des Fehlers. Oft verlangt er zusätzlich einen rechtzeitigen Widerspruch in der Hauptverhandlung.",
+      "quellen": [
+        "§ 337 StPO",
+        "§ 55 StPO"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.034Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-765",
+      "ueberzeile": "Merksatz Strafrecht BT",
+      "titel": "§ 315d StGB: Abs. 2 braucht eine konkrete Gefahr",
+      "text": "Für Abs. 1 genügt das Rennen selbst. Abs. 2 verlangt, dass dadurch Leib oder Leben eines anderen oder fremde Sachen von bedeutendem Wert konkret gefährdet werden.",
+      "norm": "§ 315d Abs. 1, 2 StGB",
+      "quellen": [
+        "§ 315d StGB",
+        "Themenpool: strafbt-765"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.034Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-743",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Dauernde Entstellung in erheblicher Weise",
+      "text": "§ 226 Abs. 1 Nr. 3 StGB: Die äußere Gesamterscheinung ist so verändert, dass das Opfer im Umgang mit anderen psychische Nachteile erleidet. Dauernd heißt: für unabsehbare Zeit. Erheblich: vergleichbar mit den anderen schweren Folgen der Norm. Ob eine mögliche kosmetische Korrektur das „dauernd“ entfallen lässt, ist umstritten; verbreitet zählt ihre Zumutbarkeit.",
+      "norm": "§ 226 Abs. 1 Nr. 3 StGB",
+      "quellen": [
+        "§ 226 StGB",
+        "Themenpool: strafbt-743"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:37:24.034Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

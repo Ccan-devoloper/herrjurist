@@ -1,0 +1,868 @@
+{
+  "datum": "2027-08-13",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "anklage-800",
+        "themaTitel": "Aktenvortrag Strafrecht",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-613",
+        "themaTitel": "Glaubens- und Gewissensfreiheit",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-564",
+        "themaTitel": "Berufung: Zulässigkeit und Prüfungsumfang",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "assessorz-809"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "assessorz-809"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "strafbt-337"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "merksatz",
+        "themaId": "verwbt-114"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:49",
+        "art": "begriff",
+        "themaId": "delikt-247"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "fehler",
+        "themaId": "assessorz-802"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "anklage-800",
+      "poolTitel": "Aktenvortrag Strafrecht",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StGB; StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-17",
+        "2027-06-20",
+        "2027-06-20"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-613",
+      "poolTitel": "Glaubens- und Gewissensfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-14",
+        "2027-04-25",
+        "2027-04-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-564",
+      "poolTitel": "Berufung: Zulässigkeit und Prüfungsumfang",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 511 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2027-01-20",
+        "2027-04-09"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-809",
+      "poolTitel": "Wann trägt der Kläger trotz Obsiegens die Kosten?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 93 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-04-02",
+        "2027-06-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-809",
+      "poolTitel": "Wann trägt der Kläger trotz Obsiegens die Kosten?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 93 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-04-02",
+        "2027-06-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-337",
+      "poolTitel": "Was ist Hehlerei und wann liegt sie vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 259 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-12",
+        "2027-05-18",
+        "2027-06-02"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "verwbt-114",
+      "poolTitel": "Wann darf die Polizei einen Nichtstörer in Anspruch nehmen?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-07",
+        "2027-01-21",
+        "2027-03-21"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "delikt-247",
+      "poolTitel": "Wann ist ein Unfall ein unabwendbares Ereignis?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 17 Abs. 3 StVG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2027-01-09"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessorz-802",
+      "poolTitel": "Worin unterscheiden sich Schlüssigkeit und Erheblichkeit?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 Abs. 3 ZPO",
+        "§ 138 Abs. 4 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-08",
+        "2027-04-10",
+        "2027-06-12"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-800",
+      "slug": "2027-08-13-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Aktenvortrag: Dein Vorschlag kommt nicht erst am Schluss",
+          "titelZeilen": [
+            "Aktenvortrag:",
+            "Dein Vorschlag",
+            "kommt nicht erst",
+            "am Schluss"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Ergebnis vor Begründung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A steckt im Supermarkt ein Parfum für 120 € in die Innentasche seiner Jacke und passiert die Kasse, ohne es vorzulegen. Der Detektiv hat alles beobachtet und spricht ihn an. A: „Ich hätte gezahlt, ich habe es vergessen.“ A ist nicht vorbestraft. Du trägst als Staatsanwalt vor."
+        },
+        {
+          "art": "schritte",
+          "titel": "Der übliche Aufbau",
+          "schritte": [
+            {
+              "titel": "Sachbericht",
+              "text": "Neutral und vollständig, inklusive der Einlassung von A – ohne Wertung."
+            },
+            {
+              "titel": "Entscheidungsvorschlag",
+              "text": "Direkt danach, in einem Satz: Was schlägst du vor? Die Zuhörer sollen wissen, worauf du hinauswillst."
+            },
+            {
+              "titel": "Würdigung",
+              "text": "Materielles Recht, Beweislage, Prozessvoraussetzungen – knapp und in der Reihenfolge, die dein Vorschlag braucht."
+            },
+            {
+              "titel": "Antrag",
+              "text": "Abschließend der konkrete Vorschlag zur Abschlussverfügung. Details regeln die Länder teils unterschiedlich."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Würdigung in Kürze",
+          "text": "§ 242 StGB: Mit dem Einstecken begründet A eigenen Gewahrsam; die Beobachtung durch den Detektiv hindert die Vollendung nach der Rspr. nicht. Die Einlassung ist widerlegbar: Wer gezielt verbirgt und die Kasse passiert, will nicht zahlen. Hinreichender Tatverdacht liegt vor (§ 170 Abs. 1 StPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Nach dem Sachbericht: „Ich schlage vor, beim Amtsgericht den Erlass eines Strafbefehls wegen Diebstahls zu beantragen.“ Erst dann begründest du. Der Strafbefehl passt: ein Vergehen, eine klare Beweislage, eine Hauptverhandlung erscheint nicht erforderlich (§ 407 Abs. 1 StPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Sachbericht neutral – dann sofort der Vorschlag. Die Würdigung begründet, was die Zuhörer schon kennen."
+        },
+        {
+          "art": "cta",
+          "titel": "Aktenvortrag in vier Takten",
+          "punkte": [
+            "Sachbericht ohne Wertung",
+            "Vorschlag in einem Satz",
+            "Würdigung zielgerichtet",
+            "Konkreter Antrag"
+          ],
+          "icons": [
+            "dokument",
+            "zielscheibe",
+            "waage",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Im strafrechtlichen Aktenvortrag heben sich viele das Ergebnis bis zum Schluss auf. Üblich ist ein anderer Aufbau: erst der neutrale Sachbericht, dann in einem Satz der Entscheidungsvorschlag, danach die Würdigung. So wissen die Zuhörer, worauf du hinauswillst. Im Mini-Fall: Diebstahl vollendet, Einlassung widerlegbar, Strafbefehl nach § 407 StPO. Die Details regeln die Länder teils unterschiedlich. Speichern für den nächsten Aktenvortrag.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#aktenvortrag",
+        "#staatsanwaltschaft",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aktenvortrag: Vorschlag direkt nach dem Sachbericht",
+      "coverText": "Ergebnis vor Begründung",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer vorträgt, zeigt früh das Ziel – dann können die Zuhörer der Begründung folgen.",
+        "handlung": "{A} plants a small flag at the far end of a path right at the start, while {B} with his pointer then walks the audience step by step toward it.",
+        "hinweisRegie": "Place the note in the free space next to the early-planted flag, slightly tilted toward it, so the idea of showing the goal first is clear without covering the pointer or faces.",
+        "alternative": "{B} unfolds a map with the destination already circled before {A} starts explaining the route."
+      },
+      "bildSzene": "flag planted first, path explained after",
+      "bildSzeneAlt": "map with destination circled first",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 170 Abs. 1 StPO",
+        "§ 407 StPO",
+        "Themenpool: anklage-800"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-613",
+      "slug": "2027-08-13-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schwimmunterricht: Befreiung aus Glaubensgründen?",
+          "titelZeilen": [
+            "Schwimmunterricht:",
+            "Befreiung aus",
+            "Glaubensgründen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Burkini als Ausgleich",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Schülerin S, elf Jahre, muslimischen Glaubens, und ihre Eltern beantragen die Befreiung vom gemeinsamen Schwimmunterricht mit Jungen. Die Schule lehnt ab und verweist auf die Möglichkeit, einen Burkini zu tragen. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Schutzbereich",
+              "text": "Art. 4 Abs. 1, 2 GG schützt auch, das Leben nach religiösen Geboten auszurichten. Die Gebote müssen plausibel dargelegt werden."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Die Pflicht zur Teilnahme verlangt ein Verhalten, das S als Glaubensverstoß empfindet."
+            },
+            {
+              "titel": "Schranke",
+              "text": "Vorbehaltlos – Grenze ist kollidierendes Verfassungsrecht: der Erziehungsauftrag (Art. 7 Abs. 1 GG), umgesetzt im Schulgesetz."
+            },
+            {
+              "titel": "Praktische Konkordanz",
+              "text": "Beide Positionen möglichst schonend ausgleichen: Kann ein Burkini den Konflikt entschärfen?"
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Religionsfreiheit an einem einfachen Gesetzesvorbehalt messen. Das BVerfG behandelt Art. 4 GG als vorbehaltlos – der Vorbehalt aus Art. 140 GG i.V.m. Art. 136 Abs. 1 WRV greift danach nicht. Wer das anders sieht, muss es begründen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nach dem BVerwG ist die Teilnahme im Burkini grundsätzlich zumutbar. Der Erziehungsauftrag umfasst auch, Schüler an gemeinsame Unterrichtsformen heranzuführen. Eine Befreiung kommt nur ausnahmsweise bei besonders gravierender Beeinträchtigung in Betracht. S muss teilnehmen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vorbehaltlos heißt nicht schrankenlos: Art. 4 GG gegen Art. 7 Abs. 1 GG – Ausgleich über praktische Konkordanz."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 4 GG in der Schule",
+          "punkte": [
+            "Glaubensgebot plausibel dargelegt?",
+            "Kollidierendes Verfassungsrecht benennen",
+            "Milderer Ausgleich möglich?"
+          ],
+          "icons": [
+            "buch",
+            "schule",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Muss eine muslimische Schülerin am gemeinsamen Schwimmunterricht teilnehmen? Nach dem BVerwG grundsätzlich ja – der Burkini macht die Teilnahme in der Regel zumutbar. Art. 4 Abs. 1, 2 GG ist zwar vorbehaltlos, aber nicht schrankenlos: Der staatliche Erziehungsauftrag aus Art. 7 Abs. 1 GG ist kollidierendes Verfassungsrecht. Der Ausgleich erfolgt über praktische Konkordanz. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#religionsfreiheit",
+        "#art4gg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schwimmunterricht und Religionsfreiheit",
+      "coverText": "Burkini als Ausgleich",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Glaubensfreiheit und Schulpflicht werden nicht gegeneinander ausgespielt, sondern schonend ausgeglichen.",
+        "handlung": "{A} stands hesitantly at the edge of a pool, while {B} calmly hands her a full-body swimsuit on a hanger, bridging the gap between the poolside and the water.",
+        "hinweisRegie": "Place the note in the free space above the handed-over swimsuit, slightly tilted toward it, so the idea of a balancing solution is clear without covering faces or the water.",
+        "alternative": "{B} builds a small bridge between two islands while {A} tests whether it holds."
+      },
+      "bildSzene": "full-body swimsuit handed over at pool",
+      "bildSzeneAlt": "small bridge between two islands",
+      "quellen": [
+        "Art. 4 Abs. 1, 2 GG",
+        "Art. 7 Abs. 1 GG",
+        "Art. 6 Abs. 2 GG",
+        "Art. 140 GG i.V.m. Art. 136 WRV",
+        "Themenpool: grundr-613"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-564",
+      "slug": "2027-08-13-b3",
+      "titelZeilen": [
+        "Berufung: zwei",
+        "Fristen, beide ab",
+        "Zustellung"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Berufung: zwei Fristen, beide ab Zustellung",
+          "unter": "Berufung · §§ 517, 520 ZPO",
+          "text": "Einlegen: ein Monat. Begründen: zwei Monate. Beide ab Zustellung des vollständigen Urteils.",
+          "norm": "§§ 517, 520 Abs. 2 ZPO",
+          "icon": "kalender",
+          "sprecher": "Die Begründungsfrist läuft nicht ab Einlegung. Das ist der Klassiker bei der Berufung: zwei Fristen, beide ab Zustellung des vollständigen Urteils.",
+          "marken": [
+            "nicht ab Einlegung",
+            "zwei Fristen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaft und beschwert",
+          "text": "Endurteil erster Instanz, Beschwerdegegenstand über 600 € oder Zulassung.",
+          "norm": "§ 511 ZPO",
+          "sprecher": "Schritt eins: Die Berufung findet gegen Endurteile der ersten Instanz statt. Der Wert des Beschwerdegegenstands muss sechshundert Euro übersteigen, oder das Gericht hat die Berufung zugelassen.",
+          "marken": [
+            "> 600 € oder Zulassung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Einlegen: ein Monat",
+          "text": "Beim Berufungsgericht, ab Zustellung, spätestens fünf Monate nach Verkündung.",
+          "norm": "§ 517 ZPO · § 519 ZPO",
+          "sprecher": "Schritt zwei: Eingelegt wird binnen eines Monats beim Berufungsgericht. Die Frist beginnt mit der Zustellung des vollständigen Urteils, spätestens mit Ablauf von fünf Monaten nach der Verkündung.",
+          "marken": [
+            "1 Monat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Begründen: zwei Monate",
+          "text": "Ebenfalls ab Zustellung des vollständigen Urteils – nicht ab Einlegung.",
+          "norm": "§ 520 Abs. 2 S. 1 ZPO",
+          "sprecher": "Schritt drei: Die Begründungsfrist beträgt zwei Monate. Auch sie beginnt mit der Zustellung des vollständigen Urteils, nicht mit der Einlegung. Wer spät einlegt, verschenkt also keine Begründungszeit.",
+          "marken": [
+            "2 Monate"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verlängern – nur die Begründungsfrist",
+          "text": "Mit Einwilligung des Gegners; ohne sie um bis zu einen Monat.",
+          "norm": "§ 520 Abs. 2 S. 2, 3 ZPO",
+          "sprecher": "Schritt vier: Verlängern lässt sich nur die Begründungsfrist, und nur auf Antrag. Willigt der Gegner ein, ist mehr möglich. Ohne Einwilligung höchstens um einen Monat, wenn nichts verzögert wird oder erhebliche Gründe dargelegt sind.",
+          "marken": [
+            "nur auf Antrag"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Rechenbeispiel",
+          "text": "Zustellung am 3. März: einlegen bis 3. April, begründen bis 3. Mai.",
+          "norm": "§ 222 ZPO",
+          "sprecher": "Ein Beispiel: Zugestellt am dritten März. Einlegen bis zum dritten April, begründen bis zum dritten Mai. Fällt das Ende auf ein Wochenende oder einen Feiertag, endet die Frist am nächsten Werktag.",
+          "marken": [
+            "3.4. / 3.5."
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ein Monat einlegen, zwei Monate begründen – beides ab Zustellung.",
+          "norm": "§§ 517, 520 ZPO",
+          "sprecher": "Merke: ein Monat zum Einlegen, zwei Monate zum Begründen, beides ab Zustellung.",
+          "marken": [
+            "1 + 2 ab Zustellung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Anwaltsklausur",
+          "text": "Speichern und beide Fristen immer getrennt notieren.",
+          "sprecher": "Speicher dir das für die nächste Anwaltsklausur und notier beide Fristen immer getrennt.",
+          "marken": [
+            "getrennt notieren"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Berufungsbegründungsfrist läuft nicht ab Einlegung. Beide Fristen beginnen mit der Zustellung des vollständigen Urteils: ein Monat zum Einlegen beim Berufungsgericht (§§ 517, 519 ZPO), zwei Monate zum Begründen (§ 520 Abs. 2 S. 1 ZPO) – jeweils spätestens fünf Monate nach Verkündung. Verlängerbar ist nur die Begründungsfrist, auf Antrag. Dazu die Zulässigkeit: Endurteil, Beschwer über 600 € oder Zulassung (§ 511 ZPO).",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#berufung",
+        "#520zpo",
+        "#fristen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Berufung: Einlegungs- und Begründungsfrist",
+      "coverText": "Beide Fristen ab Zustellung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Zwei Fristen starten gleichzeitig am selben Tag – nicht nacheinander.",
+        "handlung": "{B} fires a single starting pistol while {A} nervously watches two runners on parallel tracks of different length leave the same starting line at the same moment.",
+        "hinweisRegie": "Place the note in the free space at the shared starting line, slightly tilted toward the two tracks, so the common start is clear without covering the runners or the pistol.",
+        "alternative": "{A} flips two hourglasses of different sizes at the same instant, while {B} stamps the date on a delivered envelope."
+      },
+      "bildSzene": "two runners, one start, different tracks",
+      "bildSzeneAlt": "two hourglasses flipped at once",
+      "quellen": [
+        "§ 511 ZPO",
+        "§ 517 ZPO",
+        "§ 519 ZPO",
+        "§ 520 ZPO",
+        "§ 222 ZPO",
+        "Themenpool: zpo-564"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-fristen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-809",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "B zahlte trotz Fälligkeit und Mahnung nicht. Im Prozess erkennt er sofort an. Wer trägt die Kosten?",
+      "optionen": [
+        "B – wer trotz Mahnung nicht zahlt, gibt Anlass zur Klage",
+        "K – bei sofortigem Anerkenntnis immer der Kläger",
+        "Beide je zur Hälfte"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 93 ZPO",
+        "Themenpool: assessorz-809"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-809",
+      "ueberzeile": "Auflösung",
+      "titel": "B trägt die Kosten – er hat Veranlassung zur Klage gegeben",
+      "text": "§ 93 ZPO verlangt zweierlei: ein sofortiges Anerkenntnis und dass der Beklagte keine Veranlassung zur Klage gegeben hat. Veranlassung gibt, wer sich so verhält, dass der Kläger annehmen muss, ohne Klage nicht zu seinem Recht zu kommen – typischerweise der Schuldner, der trotz Fälligkeit und Mahnung nicht zahlt. Dann bleibt es bei § 91 ZPO.",
+      "norm": "§ 93 ZPO · § 91 ZPO",
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 93 ZPO",
+        "Themenpool: assessorz-809"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.258Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "B – wer trotz Mahnung nicht zahlt, gibt Anlass zur Klage",
+        "K – bei sofortigem Anerkenntnis immer der Kläger",
+        "Beide je zur Hälfte"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-337",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 259 StGB: Ohne Bereicherungsabsicht keine Hehlerei",
+      "text": "Neben der Tathandlung verlangt § 259 Abs. 1 StGB die Absicht, sich oder einen Dritten zu bereichern. Wer gestohlene Ware nur übernimmt, um sie dem Eigentümer zurückzubringen, handelt ohne sie. Und: Will der Hehler nur den Vortäter bereichern, genügt das nach h.M. nicht – er ist kein „Dritter“ im Sinne der Norm. Eintreten muss die Bereicherung nicht.",
+      "norm": "§ 259 Abs. 1 StGB",
+      "quellen": [
+        "§ 259 StGB",
+        "Themenpool: strafbt-337"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-114",
+      "ueberzeile": "Merksatz Polizeirecht",
+      "titel": "Nichtstörer: nur solange es nicht anders geht",
+      "text": "Den Nichtverantwortlichen darf die Behörde nur in Anspruch nehmen, soweit und solange die Gefahr nicht anders abgewehrt werden kann. Sie muss parallel nach anderen Lösungen suchen – und die Maßnahme befristen.",
+      "norm": "Polizei- und Ordnungsgesetze der Länder",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: verwbt-114"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-247",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Idealfahrer",
+      "text": "Maßstab des unabwendbaren Ereignisses (§ 17 Abs. 3 StVG): ein Fahrer, der über den Durchschnitt hinaus aufmerksam, umsichtig und geschickt fährt und mögliche Fehler anderer einkalkuliert. Es reicht nicht, die StVO einzuhalten. Halter und Fahrer müssen jede gebotene Sorgfalt beachtet haben. Beweisen muss das, wer sich darauf beruft.",
+      "norm": "§ 17 Abs. 3 StVG",
+      "quellen": [
+        "§ 17 StVG",
+        "Themenpool: delikt-247"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-802",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Pauschal bestritten – ist der Vortrag des Klägers damit streitig?",
+      "falsch": "K schildert genau, wann, wo und wie er den Vertrag mit B geschlossen hat. B schreibt nur: „Das wird bestritten.“ Damit ist der Vertragsschluss streitig und Beweis zu erheben.",
+      "richtigText": "Nicht zwingend. B muss sich zu den Tatsachen erklären (§ 138 Abs. 2 ZPO). Je genauer K vorträgt und je mehr B aus eigener Wahrnehmung weiß, desto konkreter muss B bestreiten. Pauschales Bestreiten ist dann unbeachtlich – der Vortrag gilt als zugestanden (§ 138 Abs. 3 ZPO).",
+      "quellen": [
+        "§ 138 ZPO",
+        "Themenpool: assessorz-802"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:41:48.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

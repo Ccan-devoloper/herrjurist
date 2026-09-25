@@ -1,0 +1,877 @@
+{
+  "datum": "2027-08-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "assessoroer-713",
+        "themaTitel": "Aktenvortrag Öffentliches Recht",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-126",
+        "themaTitel": "Wie prüft man die Sicherungsübereignung?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-758",
+        "themaTitel": "Untreue",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:25",
+        "art": "frage",
+        "themaId": "verwalt-097"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:25",
+        "art": "antwort",
+        "themaId": "verwalt-097"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "zpo-547"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "merksatz",
+        "themaId": "strafat-303"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "begriff",
+        "themaId": "strafbt-326"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "fehler",
+        "themaId": "assessorz-806"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "assessoroer-713",
+      "poolTitel": "Aktenvortrag Öffentliches Recht",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO; materielles Recht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2027-01-19",
+        "2027-05-13"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "sachen-126",
+      "poolTitel": "Wie prüft man die Sicherungsübereignung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 868 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-26"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-758",
+      "poolTitel": "Untreue",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-27",
+        "2027-02-15",
+        "2027-02-15"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-097",
+      "poolTitel": "Wann ist ein Verwaltungsakt nichtig?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 44 VwVfG",
+        "§ 43 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19",
+        "2027-02-19",
+        "2027-04-15"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-097",
+      "poolTitel": "Wann ist ein Verwaltungsakt nichtig?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 44 VwVfG",
+        "§ 43 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19",
+        "2027-02-19",
+        "2027-04-15"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-547",
+      "poolTitel": "Sachliche und örtliche Zuständigkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "GVG; §§ 12 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-26",
+        "2027-05-08",
+        "2027-07-08"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "strafat-303",
+      "poolTitel": "Wann beginnt das unmittelbare Ansetzen zum Versuch?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-14",
+        "2027-03-04",
+        "2027-04-08"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-326",
+      "poolTitel": "Wann ist ein Wohnungseinbruchdiebstahl gegeben?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 1 Nr. 3 StGB",
+        "§ 244 Abs. 4 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-10",
+        "2027-05-04",
+        "2027-05-04"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessorz-806",
+      "poolTitel": "Wie tenoriert man ein Zivilurteil vollständig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 1 ZPO",
+        "§§ 91 ff. ZPO",
+        "§§ 708 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-29",
+        "2027-04-11",
+        "2027-06-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-713",
+      "slug": "2027-08-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schulden später bezahlt – die Gewerbeuntersagung bleibt",
+          "titelZeilen": [
+            "Schulden später",
+            "bezahlt – die",
+            "Untersagung bleibt"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Maßgeblich: Widerspruchsbescheid",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Aktenvortrag: Die Behörde untersagt K den Betrieb seines Kiosks nach § 35 Abs. 1 GewO, weil er über Jahre erhebliche Steuerrückstände aufgebaut hat. Sein Widerspruch bleibt erfolglos, K klagt. Im Termin belegt er: Nach dem Widerspruchsbescheid hat er alle Rückstände beglichen. Dein Vorschlag?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So baust du den Vortrag auf",
+          "schritte": [
+            {
+              "titel": "Einleitung",
+              "text": "Ein Satz: Wer wendet sich mit welcher Klage wogegen? „K begehrt mit seiner Anfechtungsklage die Aufhebung einer Gewerbeuntersagung.“"
+            },
+            {
+              "titel": "Knapper Sachbericht",
+              "text": "Nur, was die Zuhörer für die Lösung brauchen: Rückstände, Bescheid, Widerspruch, Klage, Zahlung danach, Anträge."
+            },
+            {
+              "titel": "Entscheidungsvorschlag",
+              "text": "Vor der Begründung – ob das so verlangt ist, regelt die Praxis im jeweiligen Land. Hier: „Die Klage ist zulässig, aber unbegründet.“"
+            },
+            {
+              "titel": "Begründung mit Schwerpunkt",
+              "text": "Zulässigkeit in wenigen Sätzen. Die Zeit gehört dem Problem: dem maßgeblichen Zeitpunkt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Kern: der maßgebliche Zeitpunkt",
+          "text": "Bei der Gewerbeuntersagung kommt es nach der Rechtsprechung des BVerwG auf die Sach- und Rechtslage bei Abschluss des Verwaltungsverfahrens an – regelmäßig den Widerspruchsbescheid. Spätere Besserung berücksichtigt das Gesetz in einem eigenen Verfahren: der Wiedergestattung nach § 35 Abs. 6 GewO."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Bei Erlass des Widerspruchsbescheids war K wegen der erheblichen Rückstände unzuverlässig; die Untersagung war erforderlich. Die spätere Zahlung ändert daran nichts. Vorschlag: Klage abweisen, Kosten K (§ 154 Abs. 1 VwGO). K kann einen Antrag auf Wiedergestattung stellen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gewerbeuntersagung: Es zählt der Abschluss des Verwaltungsverfahrens. Spätere Besserung gehört in die Wiedergestattung nach § 35 Abs. 6 GewO."
+        },
+        {
+          "art": "cta",
+          "titel": "Aktenvortrag in drei Zügen",
+          "punkte": [
+            "Ein Satz Einleitung, knapper Sachbericht",
+            "Vorschlag klar formulieren",
+            "Zeit auf das eine Problem legen"
+          ],
+          "icons": [
+            "person",
+            "dokument",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Schulden nach dem Widerspruchsbescheid bezahlt – kippt das die Gewerbeuntersagung? Nein. Nach der Rechtsprechung des BVerwG ist bei § 35 Abs. 1 GewO die Sach- und Rechtslage bei Abschluss des Verwaltungsverfahrens maßgeblich. Spätere Besserung gehört in die Wiedergestattung nach § 35 Abs. 6 GewO. Für den Aktenvortrag heißt das: kurze Einleitung, knapper Sachbericht, klarer Vorschlag – und die Zeit auf das eine Problem legen. Speichern für die nächste mündliche Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#aktenvortrag",
+        "#gewerberecht",
+        "#35gewo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gewerbeuntersagung: Zeitpunkt entscheidet",
+      "coverText": "Maßgeblich: Widerspruchsbescheid",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Was nach dem Abschluss des Verwaltungsverfahrens passiert, ändert die Untersagung nicht – dafür gibt es einen eigenen Antrag.",
+        "handlung": "{B} proudly drops a heavy bag of coins onto a counter, but {A} points calmly at a closed gate behind him and then to a separate small side door marked only with an open hand.",
+        "hinweisRegie": "Place the note in the free space near the small side door, slightly tilted toward it, so it reads as the separate route to reopening without covering the coin bag or faces.",
+        "alternative": "{A} freezes a large wall clock at one moment, while {B} arrives later with a paid receipt and is guided to a different counter."
+      },
+      "bildSzene": "coins too late, side door open",
+      "bildSzeneAlt": "frozen clock, late receipt redirected",
+      "quellen": [
+        "§ 35 Abs. 1 GewO",
+        "§ 35 Abs. 6 GewO",
+        "§ 113 Abs. 1 VwGO",
+        "§ 154 Abs. 1 VwGO",
+        "Themenpool: assessoroer-713"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.927Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-126",
+      "slug": "2027-08-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vorbehaltsware zur Sicherheit übereignet: Was bekommt die Bank?",
+          "titelZeilen": [
+            "Vorbehaltsware",
+            "zur Sicherheit",
+            "übereignet: Was",
+            "bekommt die Bank?"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Anwartschaft statt Eigentum",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K kauft von L eine Maschine unter Eigentumsvorbehalt. Bevor er den Kaufpreis bezahlt hat, übereignet er sie zur Sicherheit an seine Bank B; die Maschine bleibt in seinem Betrieb. Was erwirbt B – und was passiert, wenn K später an L zahlt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Einigung und Besitzkonstitut",
+              "text": "§§ 929 S. 1, 930 BGB: K bleibt Besitzer. Die Sicherungsabrede ist ein Besitzmittlungsverhältnis nach § 868 BGB."
+            },
+            {
+              "titel": "K ist Nichtberechtigter",
+              "text": "Eigentümer bleibt L, bis der Kaufpreis gezahlt ist (§§ 449, 158 Abs. 1 BGB)."
+            },
+            {
+              "titel": "Kein gutgläubiger Erwerb",
+              "text": "Bei § 930 BGB hilft nur § 933 BGB – und der verlangt eine Übergabe an B. Die fehlt."
+            },
+            {
+              "titel": "Aber: das Anwartschaftsrecht",
+              "text": "Die Einigung lässt sich als Übertragung des Anwartschaftsrechts verstehen. Darüber verfügt K als Berechtigter."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Gutgläubigen Erwerb nach § 932 BGB prüfen. Bei der Sicherungsübereignung fehlt die Übergabe – einschlägig ist § 933 BGB. Wer dort aufhört, übersieht das Anwartschaftsrecht und kommt zu „B erwirbt nichts“."
+        },
+        {
+          "art": "text",
+          "titel": "Die Auflösung",
+          "text": "Zahlt K den Kaufpreis an L, tritt die Bedingung ein. B wird nach der Rechtsprechung unmittelbar Eigentümer – ohne Durchgangserwerb bei K. Das Eigentum fällt also nicht erst in das Vermögen des K."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vorbehaltsware übereignet: B erwirbt das Anwartschaftsrecht. Mit Zahlung an L wird B direkt Eigentümer."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei Vorbehaltsware",
+          "punkte": [
+            "Wer ist noch Eigentümer?",
+            "Übergabe erfolgt? Sonst kein § 933 BGB",
+            "Anwartschaftsrecht übertragen?"
+          ],
+          "icons": [
+            "schloss",
+            "paket",
+            "schluessel"
+          ]
+        }
+      ],
+      "caption": "Vorbehaltsware zur Sicherheit übereignet – was bekommt die Bank? Eigentum nicht: K ist Nichtberechtigter, und bei der Übereignung nach § 930 BGB schützt der gute Glaube nur mit Übergabe (§ 933 BGB). Die Einigung wird aber als Übertragung des Anwartschaftsrechts verstanden. Zahlt K später an L, wird B nach der Rechtsprechung direkt Eigentümer – ohne Durchgangserwerb. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#sicherungsübereignung",
+        "#930bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorbehaltsware: Die Bank erwirbt die Anwartschaft",
+      "coverText": "Anwartschaft statt Eigentum",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Bank bekommt zunächst nur die Anwartschaft – das volle Eigentum erst, wenn der Kaufpreis bezahlt ist.",
+        "handlung": "{A} keeps working at a heavy machine in his workshop, while {B} holds a key that fits only halfway into a padlock on the machine, waiting for the last turn.",
+        "hinweisRegie": "Place the note in the free space next to the half-inserted key and the padlock, slightly tilted toward the lock, without covering the machine or {A}'s working hands.",
+        "alternative": "{B} holds a sealed ticket that will turn into a full pass once a small coin drops into a slot operated by {A}."
+      },
+      "bildSzene": "key halfway in padlock on machine",
+      "bildSzeneAlt": "ticket turns into pass after coin",
+      "quellen": [
+        "§ 929 BGB",
+        "§ 930 BGB",
+        "§ 933 BGB",
+        "§ 868 BGB",
+        "§ 449 BGB",
+        "§ 158 Abs. 1 BGB",
+        "Themenpool: sachen-126"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.927Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-758",
+      "slug": "2027-08-20-b3",
+      "titelZeilen": [
+        "Schwarze Kasse",
+        "für die Firma –",
+        "trotzdem Untreue"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Schwarze Kasse für die Firma – trotzdem Untreue",
+          "unter": "Untreue · § 266 StGB",
+          "text": "Auch wer das Geld im Interesse des Unternehmens einsetzen will, verursacht einen Nachteil.",
+          "norm": "§ 266 StGB",
+          "icon": "geldbeutel",
+          "sprecher": "Nur für die Firma gedacht? Trotzdem Untreue. Manager M zweigt Millionen auf ein verdecktes Konto ab. Er will das Geld später nur zum Wohl des Unternehmens einsetzen.",
+          "marken": [
+            "verdecktes Konto",
+            "§ 266 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vermögensbetreuungspflicht",
+          "text": "Eine Hauptpflicht, fremde Vermögensinteressen mit gewisser Selbstständigkeit wahrzunehmen.",
+          "norm": "§ 266 Abs. 1 StGB",
+          "sprecher": "Schritt eins: die Vermögensbetreuungspflicht. M muss als Führungskraft fremdes Vermögen mit eigener Entscheidungsmacht betreuen. Das ist bei ihm unproblematisch.",
+          "marken": [
+            "Hauptpflicht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Pflichtverletzung",
+          "text": "Er entzieht Gelder der Kontrolle des Unternehmens.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Pflichtverletzung. M entzieht die Gelder der Buchführung und der Kontrolle des Unternehmens. Das widerspricht seinen Pflichten.",
+          "marken": [
+            "ohne Kontrolle"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Nachteil schon mit der Kasse",
+          "text": "Nach dem BGH ist das Vermögen bereits durch den Entzug der Verfügungsmacht gemindert.",
+          "norm": null,
+          "sprecher": "Schritt drei, der Kern: der Nachteil. Nach dem BGH liegt er schon im Entzug. Das Unternehmen kann über das Geld nicht mehr verfügen. Dass M es später für die Firma verwenden will, ändert daran nichts.",
+          "marken": [
+            "Entzug = Nachteil"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vorsatz",
+          "text": "M weiß, dass er Gelder der Kontrolle entzieht.",
+          "norm": null,
+          "sprecher": "Schritt vier: Vorsatz. M weiß, dass er das Geld dem Zugriff seines Unternehmens entzieht. Seine guten Absichten sind nur ein Motiv.",
+          "marken": [
+            "Motiv egal"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Grenze aus Karlsruhe",
+          "text": "Der Nachteil muss eigenständig festgestellt werden – nicht einfach aus der Pflichtverletzung folgern.",
+          "norm": "Art. 103 Abs. 2 GG",
+          "sprecher": "Wichtig: Das BVerfG verlangt, dass du den Nachteil eigenständig feststellst. Aus der Pflichtverletzung allein darfst du ihn nicht ableiten.",
+          "marken": [
+            "kein Verschleifen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Pflicht, Verletzung, eigenständig festgestellter Nachteil, Vorsatz.",
+          "norm": "§ 266 StGB",
+          "sprecher": "Merke: Pflicht, Verletzung, Nachteil, Vorsatz. Und bei der schwarzen Kasse liegt der Nachteil schon im Entzug.",
+          "marken": [
+            "Nachteil = Entzug"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Den Nachteil immer eigens begründen",
+          "text": "Speichern für die nächste Untreueprüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Untreueprüfung.",
+          "marken": [
+            "Nachteil eigens prüfen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Schwarze Kasse für die Firma – trotzdem Untreue. Nach dem BGH liegt der Vermögensnachteil schon darin, dass die Gelder dem Unternehmen entzogen und in einer verdeckten Kasse geführt werden. Die Absicht, das Geld später im Interesse der Firma einzusetzen, ist nur ein Motiv. Aber: Das BVerfG verlangt, den Nachteil eigenständig festzustellen – er darf nicht einfach in der Pflichtverletzung aufgehen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#untreue",
+        "#266stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schwarze Kasse: Nachteil schon im Entzug",
+      "coverText": "Entzug der Verfügungsmacht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer Firmengeld in eine geheime Kasse schiebt, schadet der Firma schon damit – egal, wofür er es später ausgeben will.",
+        "handlung": "{A} nervously slides a metal cash box into a hidden wall niche behind a curtain, while {B} stands at the company's main vault and finds one shelf suddenly empty.",
+        "hinweisRegie": "Place the note in the free space near the empty vault shelf, slightly tilted toward it, so the loss is linked to the hidden box without covering either character.",
+        "alternative": "{B} pulls a rope from a company safe that leads through a crack in the wall into a secret room where {A} guards a small box."
+      },
+      "bildSzene": "cash box hidden, vault shelf empty",
+      "bildSzeneAlt": "rope from safe to secret room",
+      "quellen": [
+        "§ 266 StGB",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: strafbt-758"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.928Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-097",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht AT",
+      "titel": "Eine örtlich unzuständige Behörde erlässt einen Gebührenbescheid. Ist er nichtig?",
+      "optionen": [
+        "Ja – jede Unzuständigkeit ist ein offenkundiger schwerer Fehler",
+        "Ja – immer nach § 44 Abs. 2 Nr. 3 VwVfG",
+        "Nein – § 44 Abs. 3 Nr. 1 VwVfG: nur rechtswidrig"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 44 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-097"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.928Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-097",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – örtliche Unzuständigkeit allein macht nicht nichtig",
+      "text": "§ 44 Abs. 3 Nr. 1 VwVfG stellt klar: Ein Verwaltungsakt ist nicht schon deshalb nichtig, weil Vorschriften über die örtliche Zuständigkeit nicht eingehalten sind. Ausnahme: § 44 Abs. 2 Nr. 3 VwVfG bei Verwaltungsakten mit Bezug zu unbeweglichem Vermögen oder ortsgebundenen Rechten. Der Bescheid ist rechtswidrig; prüfe dann § 46 VwVfG.",
+      "norm": "§ 44 Abs. 3 Nr. 1 VwVfG",
+      "quellen": [
+        "§ 44 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-097"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.928Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – jede Unzuständigkeit ist ein offenkundiger schwerer Fehler",
+        "Ja – immer nach § 44 Abs. 2 Nr. 3 VwVfG",
+        "Nein – § 44 Abs. 3 Nr. 1 VwVfG: nur rechtswidrig"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-547",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 29 ZPO: Den Kaufpreis am eigenen Sitz einklagen? Meist nicht",
+      "text": "Der Gerichtsstand des Erfüllungsorts richtet sich nach materiellem Recht. Für Geldschulden bleibt Leistungsort grundsätzlich der Wohnsitz oder die Niederlassung des Schuldners (§ 269 Abs. 1, § 270 Abs. 4 BGB). Der Verkäufer klagt den Kaufpreis deshalb meist am Sitz des Käufers ein. Erfüllungsortvereinbarungen wirken prozessual nur unter Kaufleuten (§ 29 Abs. 2 ZPO).",
+      "norm": "§ 29 ZPO",
+      "quellen": [
+        "§ 29 ZPO",
+        "§ 269 BGB",
+        "§ 270 BGB",
+        "Themenpool: zpo-547"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.928Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-303",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Hintermann: Versuch ab dem Aus-der-Hand-Geben",
+      "text": "Nach der Rechtsprechung setzt der Hintermann an, wenn er seine Einwirkung auf den Tatmittler abgeschlossen hat und das Geschehen aus der Hand gibt. Teile der Lehre warten, bis der Tatmittler ansetzt.",
+      "norm": "§ 22 StGB · § 25 Abs. 1 Alt. 2 StGB",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 25 StGB",
+        "Themenpool: strafat-303"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.928Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-326",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Dauerhaft genutzte Privatwohnung: Hier wird der Einbruch zum Verbrechen",
+      "text": "§ 244 Abs. 4 StGB qualifiziert den Wohnungseinbruchdiebstahl, wenn die Wohnung dauerhaft privat genutzt wird: Freiheitsstrafe von einem bis zu zehn Jahren – ein Verbrechen. Gemeint ist der Rückzugsort, an dem jemand tatsächlich lebt. Ein minder schwerer Fall ist für Abs. 4 nicht vorgesehen. Der Versuch ist schon wegen des Verbrechenscharakters strafbar (§ 23 Abs. 1 StGB).",
+      "norm": "§ 244 Abs. 4 StGB",
+      "quellen": [
+        "§ 244 StGB",
+        "§ 23 Abs. 1 StGB",
+        "§ 12 StGB",
+        "Themenpool: strafbt-326"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.928Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-806",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Verurteilung zu 15.000 €: „Das Urteil ist vorläufig vollstreckbar.“",
+      "falsch": "Tenor bei einer Verurteilung zur Zahlung von 15.000 €: „Das Urteil ist vorläufig vollstreckbar.“",
+      "richtigText": "Ohne Sicherheitsleistung geht das nur in den Fällen des § 708 ZPO – bei Nr. 11 etwa bis 1.250 € in der Hauptsache, dann mit Abwendungsbefugnis nach § 711 ZPO. Darüber gilt § 709 ZPO: „Das Urteil ist gegen Sicherheitsleistung in Höhe von 110 % des jeweils zu vollstreckenden Betrags vorläufig vollstreckbar.“",
+      "quellen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "Themenpool: assessorz-806"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:39:43.928Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
