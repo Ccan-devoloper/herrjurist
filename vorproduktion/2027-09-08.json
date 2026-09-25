@@ -1,0 +1,873 @@
+{
+  "datum": "2027-09-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-560",
+        "themaTitel": "Sachverständigenbeweis",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-727",
+        "themaTitel": "Unmittelbares Ansetzen",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwbt-119",
+        "themaTitel": "Wie ist der Verwaltungszwang aufgebaut?",
+        "fach": "verwbt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "assessoroer-836"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "assessoroer-836"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "delikt-035"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "streitstand",
+        "themaId": "vwgo-102"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "merksatz",
+        "themaId": "stpo-779"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "begriff",
+        "themaId": "zpo-286"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-05-03",
+        "2027-08-16",
+        "2027-08-16"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-727",
+      "poolTitel": "Unmittelbares Ansetzen",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-07",
+        "2027-05-18"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwbt-119",
+      "poolTitel": "Wie ist der Verwaltungszwang aufgebaut?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Bundes-/Landes-VwVG",
+        "beim Bund insbesondere §§ 6, 13 VwVG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-03",
+        "2027-02-15",
+        "2027-07-31"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-836",
+      "poolTitel": "Wie tenoriert man die Anfechtungsklage?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 1 Satz 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-05-07",
+        "2027-08-12"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-836",
+      "poolTitel": "Wie tenoriert man die Anfechtungsklage?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 1 Satz 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-05-07",
+        "2027-08-12"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "delikt-035",
+      "poolTitel": "Wann haftet der Geschäftsherr nach § 831 BGB und wann kann er sich entlasten?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 831 BGB",
+        "§ 278 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-02",
+        "2027-07-01",
+        "2027-07-24"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "vwgo-102",
+      "poolTitel": "Wann wendet man § 123 VwGO und wann § 80 Abs. 5 VwGO im einstweiligen Rechtsschutz an?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 Abs. 5 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "§ 80a VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-05-04",
+        "2027-05-17",
+        "2027-07-06"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "stpo-779",
+      "poolTitel": "Rechtswidrige Durchsuchung und Beweisverwertung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-06",
+        "2027-07-09",
+        "2027-08-08"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "zpo-286",
+      "poolTitel": "Was ist der Unterschied zwischen Arrest und einstweiliger Verfügung?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 916 ZPO",
+        "§ 935 ZPO",
+        "§ 940 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-21",
+        "2027-01-21",
+        "2027-05-05"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-560",
+      "slug": "2027-09-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Privatgutachten vorgelegt – und noch kein Beweis erhoben",
+          "titelZeilen": [
+            "Privatgutachten",
+            "vorgelegt – und",
+            "noch kein Beweis",
+            "erhoben"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Qualifizierter Parteivortrag",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verlangt von Fliesenleger B Schadensersatz und legt ein Privatgutachten vor, das Verlegemängel bestätigt. B bestreitet die Mängel substantiiert. Das Gericht will sein Urteil allein auf das Privatgutachten stützen. Darf es das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Einordnen",
+              "text": "Das Privatgutachten ist kein Sachverständigenbeweis nach §§ 402 ff. ZPO, sondern qualifizierter, urkundlich belegter Parteivortrag."
+            },
+            {
+              "titel": "Beweisbedürftigkeit",
+              "text": "B bestreitet substantiiert. Also ist Beweis zu erheben – grundsätzlich durch einen Sachverständigen, den das Gericht auswählt (§ 404 ZPO)."
+            },
+            {
+              "titel": "Widersprüche aufklären",
+              "text": "Weicht ein Privatgutachten vom gerichtlichen ab, muss das Gericht dem nachgehen, etwa durch Ergänzung oder Anhörung (§ 411 Abs. 3 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Es liegt ein Gutachten vor, also ist der Mangel bewiesen.“ Ohne Einverständnis der Parteien ersetzt das Privatgutachten den gerichtlichen Sachverständigenbeweis nicht. Das Gericht muss sich aber inhaltlich mit ihm auseinandersetzen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nein. Das Privatgutachten macht den Vortrag des K substantiiert, beweist ihn aber nicht. Auf den Beweisantritt des K holt das Gericht ein Sachverständigengutachten ein (§ 403 ZPO) und würdigt beide Gutachten."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Privatgutachten = Parteivortrag. Beweis bringt erst der vom Gericht bestellte Sachverständige."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Schritte für die Klausur",
+          "punkte": [
+            "Privatgutachten als Parteivortrag einordnen",
+            "Bestritten? Dann Sachverständigenbeweis",
+            "Widersprüche ausdrücklich klären"
+          ],
+          "icons": [
+            "dokument",
+            "richter",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Ein Privatgutachten liegt vor – bewiesen ist damit noch nichts. Es ist kein Sachverständigenbeweis nach §§ 402 ff. ZPO, sondern qualifizierter Parteivortrag. Bestreitet der Gegner substantiiert, holt das Gericht grundsätzlich ein eigenes Gutachten ein und muss Widersprüche zum Privatgutachten aufklären, etwa über § 411 Abs. 3 ZPO. Speichern für die nächste Beweisaufnahme.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#sachverständiger",
+        "#beweisrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Privatgutachten ist kein Beweis",
+      "coverText": "Qualifizierter Parteivortrag",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Ein mitgebrachtes Gutachten macht den Vortrag stärker, ersetzt aber nicht den Sachverständigen des Gerichts.",
+        "handlung": "{A} proudly holds up his own thick report at a cracked tiled floor, while {B} gently sets it aside on a side table and gestures toward an empty expert's chair waiting in the centre.",
+        "hinweisRegie": "Place the note in the open space near the empty expert's chair, slightly tilted, so it reads as the missing court expert without covering the report, the cracked tiles or faces.",
+        "alternative": "{B} places two reports on a scale while {A} waits beside a door marked only by a small chair icon for the appointed expert."
+      },
+      "bildSzene": "own report set aside, expert chair",
+      "bildSzeneAlt": "two reports weighed on a scale",
+      "quellen": [
+        "§ 402 ZPO",
+        "§ 403 ZPO",
+        "§ 404 ZPO",
+        "§ 411 Abs. 3 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-parteivortrag",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.874Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-727",
+      "slug": "2027-09-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Versuch erst ab dem ersten Tatbestandsmerkmal? Das glauben viele",
+          "titelZeilen": [
+            "Versuch erst ab dem",
+            "ersten Tatbestands-",
+            "merkmal? Das",
+            "glauben viele"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Unmittelbar ansetzen genügt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A hebelt nachts das Kellerfenster eines bewohnten Einfamilienhauses auf, um drinnen sofort Schmuck zu suchen und mitzunehmen. Der Eigentümer wird wach, A flieht ohne Beute. Hat A schon zum Diebstahl angesetzt?"
+        },
+        {
+          "art": "text",
+          "titel": "Der verbreitete Fehler",
+          "text": "Viele verneinen den Versuch, weil A noch nichts weggenommen hat. Doch § 22 StGB verlangt kein bereits verwirklichtes Tatbestandsmerkmal. Es genügt das unmittelbare Ansetzen – und das kann vor der Wegnahme liegen."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du den Versuchsbeginn",
+          "schritte": [
+            {
+              "titel": "Tatentschluss",
+              "text": "Vorsatz bezüglich aller objektiven Merkmale plus Zueignungsabsicht – hier unproblematisch."
+            },
+            {
+              "titel": "Grundlage: Vorstellung des Täters",
+              "text": "Maßgeblich ist der Tatplan des A: Nach dem Aufhebeln will er ohne weitere Zwischenschritte hinein und wegnehmen."
+            },
+            {
+              "titel": "Unmittelbarkeit",
+              "text": "Rspr.: „Jetzt geht es los“; keine wesentlichen Zwischenakte mehr, das Rechtsgut ist aus Tätersicht konkret gefährdet."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Mit dem Einwirken auf die Sicherung setzt der Täter beim Einbruch regelmäßig unmittelbar an, wenn er danach ohne Zäsur wegnehmen will. A: versuchter Wohnungseinbruchdiebstahl (§§ 242, 244 Abs. 1 Nr. 3, Abs. 4, 22, 23 Abs. 1 StGB), dazu §§ 123, 303 StGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Versuch beginnt mit dem unmittelbaren Ansetzen – nicht erst mit dem ersten Tatbestandsmerkmal."
+        },
+        {
+          "art": "cta",
+          "titel": "Versuchsbeginn in drei Fragen",
+          "punkte": [
+            "Was plant der Täter als Nächstes?",
+            "Fehlen noch wesentliche Zwischenschritte?",
+            "Ist das Rechtsgut schon konkret gefährdet?"
+          ],
+          "icons": [
+            "detektiv",
+            "schluessel",
+            "haus"
+          ]
+        }
+      ],
+      "caption": "Versuch erst ab dem ersten Tatbestandsmerkmal? Das glauben viele – und verneinen deshalb den Versuch, solange noch nichts weggenommen ist. § 22 StGB stellt aber auf das unmittelbare Ansetzen nach der Vorstellung des Täters ab. Wer beim Einbruch die Sicherung aufhebelt und danach ohne Zäsur wegnehmen will, setzt regelmäßig schon an. Speichern für die nächste Versuchsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#versuch",
+        "#22stgb",
+        "#einbruchdiebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versuchsbeginn vor der Wegnahme",
+      "coverText": "Unmittelbar ansetzen genügt",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Der Versuch beginnt schon, wenn nach dem Plan kein wesentlicher Schritt mehr fehlt – nicht erst mit der Wegnahme.",
+        "handlung": "{B} has just pried open a cellar window with a crowbar, one foot already lifting toward the opening, while {A} watches from a distance and raises a hand signalling the line has been crossed.",
+        "hinweisRegie": "Place the note in the free space just beside the opened window frame, slightly tilted toward {B}'s lifted foot, so it marks the start of the attempt without covering the crowbar or faces.",
+        "alternative": "{A} stands at a starting line where {B} has already launched off the blocks, although the finish flag is still far away."
+      },
+      "bildSzene": "crowbar opens window, foot lifting",
+      "bildSzeneAlt": "runner already off the blocks",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 23 StGB",
+        "§ 242 StGB",
+        "§ 244 StGB",
+        "Themenpool: strafat-727"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.874Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-119",
+      "slug": "2027-09-08-b3",
+      "titelZeilen": [
+        "Zwangsgeld gezahlt –",
+        "die Pflicht bleibt",
+        "trotzdem"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zwangsgeld gezahlt – die Pflicht bleibt trotzdem",
+          "unter": "Verwaltungszwang · VwVG",
+          "text": "Das Zwangsgeld ist ein Beugemittel, keine Strafe.",
+          "norm": "§ 11 VwVG",
+          "icon": "muenzen",
+          "sprecher": "Wer das Zwangsgeld zahlt, hat sich nicht freigekauft. Das Zwangsgeld ist keine Strafe. Es soll den Pflichtigen dazu bringen, endlich zu handeln.",
+          "marken": [
+            "kein Freikauf"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Beugemittel, nicht Sanktion",
+          "text": "Ziel ist die Erfüllung der Grundverfügung – nicht die Sühne für den Verstoß.",
+          "norm": "§ 11 VwVG",
+          "sprecher": "Erstens: Das Zwangsgeld ist ein Beugemittel. Es blickt nach vorn. Ziel ist, dass die Grundverfügung erfüllt wird, also eine Handlung, eine Duldung oder eine Unterlassung.",
+          "marken": [
+            "blickt nach vorn"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wiederholung möglich",
+          "text": "Bleibt der Pflichtige untätig, kann erneut angedroht und festgesetzt werden.",
+          "norm": "§ 13 VwVG",
+          "sprecher": "Zweitens: Zahlt der Pflichtige und handelt trotzdem nicht, kann die Behörde erneut androhen und festsetzen. So lange, bis die Pflicht erfüllt ist.",
+          "marken": [
+            "erneut androhen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kein Verschulden, auch neben Bußgeld",
+          "text": "Kein Schuldvorwurf nötig; ein Bußgeld für denselben Verstoß schließt es nicht aus.",
+          "norm": "§ 13 VwVG",
+          "sprecher": "Drittens: Weil es keine Strafe ist, braucht es kein Verschulden. Und ein Bußgeld wegen desselben Verhaltens schließt das Zwangsgeld nicht aus. Beide verfolgen verschiedene Zwecke.",
+          "marken": [
+            "kein Verschulden"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Zweck erreicht, Vollzug endet",
+          "text": "Ist die Pflicht erfüllt, wird der Vollzug eingestellt.",
+          "norm": "§ 15 Abs. 3 VwVG",
+          "sprecher": "Viertens: Erfüllt der Pflichtige, ist der Zweck erreicht. Nach dem Verwaltungsvollstreckungsgesetz des Bundes ist der Vollzug dann einzustellen.",
+          "marken": [
+            "Zweck erreicht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Landesrecht mitdenken",
+          "text": "Die Länder haben eigene Vollstreckungsgesetze – Grundsätze gleich, Details prüfen.",
+          "norm": null,
+          "sprecher": "Achtung: Handelt eine Landesbehörde, gilt das Landesvollstreckungsrecht. Die Grundsätze sind vergleichbar, die Einzelheiten je nach Landesrecht.",
+          "marken": [
+            "je nach Landesrecht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Beugen, nicht strafen: wiederholbar, verschuldensunabhängig, endet mit Erfüllung.",
+          "norm": "VwVG",
+          "sprecher": "Merke: Das Zwangsgeld beugt, es straft nicht. Es ist wiederholbar, braucht kein Verschulden und endet, sobald die Pflicht erfüllt ist.",
+          "marken": [
+            "beugen, nicht strafen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Immer die Grundverfügung im Blick",
+          "text": "Speichern für die nächste Vollstreckungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Vollstreckungsklausur. Und frag immer: Welche Pflicht soll hier eigentlich durchgesetzt werden?",
+          "marken": [
+            "Grundverfügung"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Zwangsgeld gezahlt – die Pflicht bleibt trotzdem. Das Zwangsgeld ist ein Beugemittel, keine Strafe: Es soll die Erfüllung der Grundverfügung erzwingen. Deshalb kann es wiederholt werden, setzt kein Verschulden voraus und schließt ein Bußgeld nicht aus. Ist die Pflicht erfüllt, endet der Vollzug. Für Landesbehörden gilt das jeweilige Landesvollstreckungsrecht. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#verwaltungsvollstreckung",
+        "#zwangsgeld",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zwangsgeld: Beugemittel statt Strafe",
+      "coverText": "Beugen, nicht strafen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Wer nur zahlt, aber nicht handelt, bleibt in der Pflicht – das Zwangsgeld kann erneut kommen.",
+        "handlung": "{B} drops a coin into a slot and turns to leave, while {A} hovers in front of her and points back at an untouched pile of rubble she was ordered to clear.",
+        "hinweisRegie": "Place the note in the free space above the untouched rubble pile, slightly tilted toward {A}'s pointing arm, so it reads as the remaining duty without covering the coin slot or faces.",
+        "alternative": "{A} holds a second, identical coin slot ready while {B} looks at a still-closed gate she was supposed to open."
+      },
+      "bildSzene": "coin paid, rubble still uncleared",
+      "bildSzeneAlt": "second coin slot waits by gate",
+      "quellen": [
+        "§ 9 VwVG",
+        "§ 11 VwVG",
+        "§ 13 VwVG",
+        "§ 15 VwVG",
+        "Landesvollstreckungsgesetze",
+        "Themenpool: verwbt-119"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-beugemittel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-836",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "Der Gebührenbescheid ist nur in Höhe von 200 € rechtswidrig, im Übrigen rechtmäßig. Wie tenorierst du?",
+      "optionen": [
+        "Der Bescheid wird insgesamt aufgehoben",
+        "Aufheben, soweit er 200 € zu viel festsetzt; im Übrigen abweisen",
+        "Die Klage wird abgewiesen, weil der Bescheid überwiegend rechtmäßig ist"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 155 Abs. 1 VwGO",
+        "Themenpool: assessoroer-836"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-836",
+      "ueberzeile": "Auflösung",
+      "titel": "Aufheben, soweit rechtswidrig – im Übrigen abweisen",
+      "text": "Das Gericht hebt den VA auf, „soweit“ er rechtswidrig ist und den Kläger in seinen Rechten verletzt. Bei teilbaren Verwaltungsakten – typisch sind Geldbescheide – folgt daraus die Teilaufhebung; im Übrigen wird die Klage abgewiesen. Die Kosten werden dann nach § 155 Abs. 1 VwGO verteilt.",
+      "norm": "§ 113 Abs. 1 S. 1 VwGO",
+      "quellen": [
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 155 Abs. 1 VwGO",
+        "Themenpool: assessoroer-836"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.875Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Der Bescheid wird insgesamt aufgehoben",
+        "Aufheben, soweit er 200 € zu viel festsetzt; im Übrigen abweisen",
+        "Die Klage wird abgewiesen, weil der Bescheid überwiegend rechtmäßig ist"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-035",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 831 BGB: Der Geschäftsherr haftet für eigenes vermutetes Verschulden",
+      "text": "§ 831 BGB rechnet kein fremdes Verschulden zu. Vermutet werden ein Auswahl- oder Überwachungsverschulden des Geschäftsherrn und dessen Ursächlichkeit; er kann sich entlasten (Abs. 1 S. 2). In Großbetrieben lässt die Rspr. den dezentralisierten Entlastungsbeweis zu – aufgefangen durch eigene Organisationspflichten nach § 823 Abs. 1 BGB.",
+      "norm": "§ 831 Abs. 1 S. 2 BGB",
+      "quellen": [
+        "§ 831 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: delikt-035"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-102",
+      "ueberzeile": "Streitstand VwGO",
+      "titel": "Widerspruch verfristet: Hat er trotzdem aufschiebende Wirkung?",
+      "norm": "§ 80 Abs. 1 VwGO",
+      "optionen": [
+        "Überwiegend (Rspr.): nein, jedenfalls bei offensichtlicher Unzulässigkeit wie der Verfristung.",
+        "Andere Ansicht: ja – jeder eingelegte Rechtsbehelf wirkt aufschiebend, auch der unzulässige."
+      ],
+      "text": "Klausur: Relevant, wenn die Behörde trotz Widerspruchs vollzieht und der Bürger nach § 80 Abs. 5 VwGO vorgeht. Ist die Frist offensichtlich versäumt, verneint die überwiegende Ansicht die aufschiebende Wirkung. Ist die Zulässigkeit nur zweifelhaft, tritt sie ein.",
+      "quellen": [
+        "§ 80 Abs. 1 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "§ 70 VwGO",
+        "Themenpool: vwgo-102"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-779",
+      "ueberzeile": "Merksatz Revision",
+      "titel": "Durchsuchungsfund unverwertbar? In der Revision nur mit Verfahrensrüge",
+      "text": "Wer die Verwertung eines rechtswidrig erlangten Beweises angreift, rügt einen Verfahrensfehler. Das verlangt eine Verfahrensrüge, die alle Tatsachen vollständig angibt (§ 344 Abs. 2 S. 2 StPO). Die allgemeine Sachrüge trägt diesen Angriff nicht.",
+      "norm": "§ 344 Abs. 2 S. 2 StPO",
+      "quellen": [
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: stpo-779"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-286",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Arrestgrund",
+      "text": "Die Eilbedürftigkeit beim Arrest: die Besorgnis, dass ohne Arrest die Vollstreckung des späteren Urteils vereitelt oder wesentlich erschwert würde (§ 917 Abs. 1 ZPO), etwa weil der Schuldner Vermögen beiseiteschafft. Eine bloß schlechte Vermögenslage oder der Wettlauf mit anderen Gläubigern genügt nach h.M. nicht. Gegenstück bei der einstweiligen Verfügung: der Verfügungsgrund.",
+      "norm": "§ 917 Abs. 1 ZPO",
+      "quellen": [
+        "§ 916 ZPO",
+        "§ 917 ZPO",
+        "§ 935 ZPO",
+        "Themenpool: zpo-286"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:20.875Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

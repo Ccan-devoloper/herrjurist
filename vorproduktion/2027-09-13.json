@@ -1,0 +1,896 @@
+{
+  "datum": "2027-09-13",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-646",
+        "themaTitel": "Zusage und Zusicherung",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "zwangsv-571",
+        "themaTitel": "Pfändung beweglicher Sachen",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-781",
+        "themaTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "strafat-717"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "strafat-717"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:09",
+        "art": "norm",
+        "themaId": "arbeit-253"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "tipp",
+        "themaId": "europa-705"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "zahl",
+        "themaId": "assessorz-803"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "streitstand",
+        "themaId": "schuldbt-913"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-646",
+      "poolTitel": "Zusage und Zusicherung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 38 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-08",
+        "2027-02-25",
+        "2027-08-26"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "zwangsv-571",
+      "poolTitel": "Pfändung beweglicher Sachen",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 808 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-781",
+      "poolTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 151, 200 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-21",
+        "2027-07-18",
+        "2027-07-18"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-717",
+      "poolTitel": "Objektive Zurechnung: rechtlich missbilligte Gefahr",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-16",
+        "2027-05-25",
+        "2027-05-25"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-717",
+      "poolTitel": "Objektive Zurechnung: rechtlich missbilligte Gefahr",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-16",
+        "2027-05-25",
+        "2027-05-25"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "arbeit-253",
+      "poolTitel": "Was ist die Kündigungsschutzklage und welche Frist gilt?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 4 KSchG",
+        "§ 7 KSchG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-30",
+        "2027-04-18",
+        "2027-06-26"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "europa-705",
+      "poolTitel": "Rechtfertigung: geschriebene/ungeschriebene Gründe",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "AEUV; EuGH-Rechtsprechung"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-06-23"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-803",
+      "poolTitel": "Was steht im Bearbeitervermerk und warum liest man ihn zuerst?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-19",
+        "2027-01-19",
+        "2027-04-12"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "schuldbt-913",
+      "poolTitel": "Fehlüberweisung und nicht autorisierte Zahlung: Wie wirkt § 675u BGB im Bereicherungsausgleich?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 675u BGB",
+        "§ 675j BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-12",
+        "2027-05-15",
+        "2027-07-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-646",
+      "slug": "2027-09-13-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Rechtswidrig zugesichert – und die Behörde bleibt trotzdem gebunden",
+          "titelZeilen": [
+            "Rechtswidrig",
+            "zugesichert – und",
+            "trotzdem gebunden"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Erst zurücknehmen, dann ablehnen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die zuständige Behörde sichert A schriftlich zu, ihm eine Sondernutzungserlaubnis für Tische vor seinem Café zu erteilen. Später merkt sie, dass die Voraussetzungen von Anfang an fehlten, und lehnt den Antrag einfach ab. Kann A auf Erteilung klagen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Wirksame Zusicherung",
+              "text": "Zuständige Behörde, schriftlich, bestimmter VA (§ 38 Abs. 1 S. 1 VwVfG). Nach h.M. ist die Zusicherung selbst ein VA."
+            },
+            {
+              "titel": "2. Rechtswidrig heißt nicht unwirksam",
+              "text": "Nichtig nur bei besonders schwerem, offenkundigem Mangel (§ 38 Abs. 2 i. V. m. § 44 VwVfG). Sonst bleibt sie wirksam."
+            },
+            {
+              "titel": "3. Lösen nur durch Rücknahme",
+              "text": "Rücknahme nach § 38 Abs. 2 i. V. m. § 48 VwVfG – mit Ermessen, Vertrauensschutz und Jahresfrist (§ 48 Abs. 4 VwVfG)."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Solange nicht wirksam zurückgenommen ist, hat A aus der Zusicherung einen Anspruch. Verpflichtungsklage auf Erteilung der Erlaubnis."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkweg, der nicht trägt",
+          "text": "„Die Erlaubnis wäre rechtswidrig, also muss die Behörde sie nicht erteilen.“ Damit überspringst du die Bindungswirkung. Maßgeblich ist zuerst die Zusicherung selbst. Eine bloße Ablehnung ersetzt keine Rücknahmeentscheidung mit Ermessensabwägung nach § 48 VwVfG."
+        },
+        {
+          "art": "text",
+          "titel": "Abgrenzung im Blick behalten",
+          "punkte": [
+            "Sach- oder Rechtslage ändert sich später: Bindung entfällt ohne Weiteres (§ 38 Abs. 3 VwVfG)",
+            "Fehler von Anfang an: Bindung bleibt bis zur Rücknahme",
+            "Mündlich zugesagt: keine wirksame Zusicherung, allenfalls Vertrauensschutz"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eine rechtswidrige, aber wirksame Zusicherung bindet. Die Behörde muss sie zurücknehmen – ablehnen allein reicht nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Zusicherung in drei Fragen",
+          "punkte": [
+            "Schriftlich und von der zuständigen Behörde?",
+            "Nichtig oder nur rechtswidrig?",
+            "Schon wirksam zurückgenommen?"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "kreislauf"
+          ]
+        }
+      ],
+      "caption": "Rechtswidrig zugesichert – und die Behörde bleibt trotzdem gebunden. Eine schriftliche Zusicherung ist wirksam, solange sie nicht nichtig ist. Die Behörde kann sich von ihr nur durch Rücknahme nach § 38 Abs. 2 i. V. m. § 48 VwVfG lösen, mit Ermessen und Vertrauensschutz. Bis dahin hat der Bürger einen Anspruch auf den zugesicherten Verwaltungsakt. Speichern für die nächste Verpflichtungsklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#zusicherung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rechtswidrige Zusicherung bindet bis zur Rücknahme",
+      "coverText": "Erst zurücknehmen, dann ablehnen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ein gegebenes schriftliches Versprechen der Behörde gilt weiter, bis sie es förmlich zurückholt.",
+        "handlung": "{A} tries to simply turn away from a sealed promise card that {B} is holding up, while the card stays firmly attached to {A} by a thin glowing thread.",
+        "hinweisRegie": "Place the note in the free space along the glowing thread between the card and {A}, slightly tilted, so the lasting binding is visible without covering either character.",
+        "alternative": "{B} waits in front of a closed hatch holding a stamped ticket, while {A} has to fetch a large retrieval hook before the ticket can be taken back."
+      },
+      "bildSzene": "promise card tied by glowing thread",
+      "bildSzeneAlt": "retrieval hook for stamped ticket",
+      "quellen": [
+        "§ 38 VwVfG",
+        "§ 44 VwVfG",
+        "§ 48 VwVfG",
+        "§ 42 Abs. 1 VwGO",
+        "Themenpool: verwalt-646"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-571",
+      "slug": "2027-09-13-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sachpfändung in fünf Schritten – beim Dritten stoppt der Vollzieher",
+          "titelZeilen": [
+            "Sachpfändung in",
+            "fünf Schritten –",
+            "beim Dritten stoppt"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Gewahrsam statt Eigentum",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Bewegliche Sachen pfändet der Gerichtsvollzieher, indem er sie in Besitz nimmt (§ 808 Abs. 1 ZPO). Die Pfändung bewirkt Verstrickung und begründet ein Pfändungspfandrecht (§ 804 ZPO). Ob die Sache dem Schuldner gehört, prüft er dabei nicht."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Allgemeine Voraussetzungen",
+              "text": "Antrag des Gläubigers, Titel, Klausel, Zustellung (§ 750 ZPO). Zuständig ist der Gerichtsvollzieher."
+            },
+            {
+              "titel": "2. Gewahrsam des Schuldners",
+              "text": "Maßgeblich ist allein der Gewahrsam (§ 808 Abs. 1 ZPO). Bei Ehegatten hilft § 739 ZPO i. V. m. § 1362 BGB."
+            },
+            {
+              "titel": "3. Sache bei einem Dritten",
+              "text": "Nur wenn der Dritte zur Herausgabe bereit ist (§ 809 ZPO). Weigert er sich, bleibt die Pfändung des Herausgabeanspruchs."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Keine Pfändungsschranke",
+              "text": "Unpfändbare Sachen (§ 811 ZPO), keine Überpfändung und keine zwecklose Pfändung (§ 803 ZPO)."
+            },
+            {
+              "titel": "5. Vollzug",
+              "text": "Geld, Kostbarkeiten, Wertpapiere nimmt er mit. Anderes kann bleiben, wenn die Pfändung erkennbar ist, etwa per Siegel (§ 808 Abs. 2 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Wer wehrt sich wie?",
+          "punkte": [
+            "Schuldner oder Dritter rügen Art und Weise, etwa § 809 missachtet: Erinnerung, § 766 ZPO",
+            "Dritter ist Eigentümer: Drittwiderspruchsklage, § 771 ZPO",
+            "Besseres Pfandrecht ohne Besitz: vorzugsweise Befriedigung, § 805 ZPO"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Gerichtsvollzieher fragt nach dem Gewahrsam, nicht nach dem Eigentum. Beim nicht herausgabebereiten Dritten ist Schluss."
+        },
+        {
+          "art": "cta",
+          "titel": "Sachpfändung im Überblick",
+          "punkte": [
+            "Titel, Klausel, Zustellung",
+            "Gewahrsam – oder bereiter Dritter",
+            "Schranken der §§ 803, 811 ZPO",
+            "Rechtsbehelf nach dem Angriffsziel"
+          ],
+          "icons": [
+            "dokument",
+            "haus",
+            "stopp",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Sachpfändung in fünf Schritten – und beim Dritten stoppt der Gerichtsvollzieher. Er pfändet, was im Gewahrsam des Schuldners ist, ohne das Eigentum zu prüfen. Hat ein Dritter die Sache, geht es nur mit dessen Herausgabebereitschaft (§ 809 ZPO). Danach kommen die Pfändungsschranken und der Vollzug. Wer sich wehrt, braucht den richtigen Rechtsbehelf: § 766 oder § 771 ZPO. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#pfändung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachpfändung: fünf Schritte, Stopp beim Dritten",
+      "coverText": "Gewahrsam statt Eigentum",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Gepfändet wird, was der Schuldner in Händen hält – bei einem unwilligen Dritten endet der Zugriff.",
+        "handlung": "{A} holds a crystal cart close to his chest and refuses to hand it over, while {B} nervously lowers a seal stamp he was about to press onto it.",
+        "hinweisRegie": "Place the note in the free space between the lowered seal stamp and the guarded cart, slightly tilted, so the stop at the third party is clear without covering faces or the cart.",
+        "alternative": "{B} places small seals on crystals inside a tent, while {A} stands outside the neighbouring tent with arms crossed."
+      },
+      "bildSzene": "seal stamp lowered before guarded cart",
+      "bildSzeneAlt": "seals inside tent, neighbour refuses",
+      "quellen": [
+        "§ 808 ZPO",
+        "§ 809 ZPO",
+        "§ 803 ZPO",
+        "§ 804 ZPO",
+        "§ 811 ZPO",
+        "§ 739 ZPO",
+        "§ 766 ZPO",
+        "§ 771 ZPO",
+        "§ 805 ZPO",
+        "Themenpool: zwangsv-571"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-schritte-ein-stopp",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.784Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-781",
+      "slug": "2027-09-13-b3",
+      "titelZeilen": [
+        "Als Diebstahl",
+        "angeklagt, wegen",
+        "Unterschlagung",
+        "verurteilt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Als Diebstahl angeklagt, wegen Unterschlagung verurteilt",
+          "unter": "Anklagegrundsatz · § 264 StPO",
+          "text": "Das Gericht urteilt über die angeklagte Tat – nicht über die Paragrafen der Anklage.",
+          "norm": "§ 264 StPO",
+          "icon": "gericht",
+          "sprecher": "Angeklagt als Diebstahl, verurteilt wegen Unterschlagung. Das ist zulässig. Denn die Anklage legt die Tat fest, nicht ihre rechtliche Würdigung.",
+          "marken": [
+            "Tat statt Paragraf",
+            "§ 264 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Ohne Anklage kein Urteil",
+          "text": "Das Gericht wird nur auf Anklage tätig.",
+          "norm": "§ 151 StPO",
+          "sprecher": "Schritt eins: der Anklagegrundsatz. Ein Gericht darf eine Untersuchung nur eröffnen, wenn Anklage erhoben ist. Es sucht sich seinen Fall nicht selbst.",
+          "marken": [
+            "§ 151 StPO"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Anklage umgrenzt die Tat",
+          "text": "Zeit, Ort, Geschehen – unterscheidbar von anderen Taten.",
+          "norm": "§ 200 Abs. 1 StPO",
+          "sprecher": "Schritt zwei: Die Anklage beschreibt ein Geschehen so, dass es sich von anderen Taten unterscheiden lässt. Das ist ihre Umgrenzungsfunktion. Genau dieses Geschehen landet beim Gericht.",
+          "marken": [
+            "Umgrenzung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Tat heißt Lebensvorgang",
+          "text": "Der ganze geschichtliche Vorgang, nicht nur der angeklagte Tatbestand.",
+          "norm": "§ 264 Abs. 1 StPO",
+          "sprecher": "Schritt drei: Die Tat im prozessualen Sinn ist der einheitliche geschichtliche Vorgang. Das Gericht muss ihn vollständig aufklären und nach allen Seiten würdigen, auch wenn die Anklage nur einen Teil davon rechtlich erfasst.",
+          "marken": [
+            "ganzer Vorgang"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtlich frei, aber mit Hinweis",
+          "text": "Andere Norm möglich – vorher muss der Angeklagte gewarnt werden.",
+          "norm": "§ 265 Abs. 1 StPO",
+          "sprecher": "Schritt vier: An die rechtliche Beurteilung der Anklage ist das Gericht nicht gebunden. Will es aber nach einem anderen Strafgesetz verurteilen, muss es den Angeklagten vorher darauf hinweisen und ihm Gelegenheit zur Verteidigung geben.",
+          "marken": [
+            "§ 265 StPO",
+            "Hinweis"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Andere Tat? Dann Nachtragsanklage",
+          "text": "Ein neuer Lebensvorgang braucht eigene Anklage oder Einbeziehung mit Zustimmung.",
+          "norm": "§ 266 StPO",
+          "sprecher": "Die Grenze: Taucht in der Hauptverhandlung eine ganz andere Tat auf, darf das Gericht sie nicht einfach mitverurteilen. Dann braucht es eine Nachtragsanklage, und die Einbeziehung setzt die Zustimmung des Angeklagten voraus.",
+          "marken": [
+            "§ 266 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Tat fest, Würdigung frei",
+          "text": "Die Anklage bestimmt, worüber entschieden wird – nicht, wie.",
+          "norm": "§ 264 StPO",
+          "sprecher": "Merke: Die Anklage bestimmt, worüber das Gericht entscheidet. Wie es den Vorgang rechtlich einordnet, entscheidet das Gericht selbst.",
+          "marken": [
+            "worüber, nicht wie"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Tat, dann die Norm",
+          "text": "Speichern für die nächste Strafprozessklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für deine nächste Klausur zum Strafprozess.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Als Diebstahl angeklagt, wegen Unterschlagung verurteilt – das ist zulässig. Die Anklage umgrenzt die Tat im prozessualen Sinn, also den geschichtlichen Vorgang (§§ 200, 264 StPO). An die rechtliche Würdigung ist das Gericht nicht gebunden, muss aber nach § 265 StPO vorher einen Hinweis geben. Kommt eine andere Tat hinzu, geht das nur über die Nachtragsanklage nach § 266 StPO.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#264stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anklage legt die Tat fest, nicht den Paragrafen",
+      "coverText": "Tat gebunden, Würdigung frei",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Die Anklage steckt den Vorgang ab; welches Etikett das Gericht ihm gibt, entscheidet es selbst.",
+        "handlung": "{A} draws a rope circle around one scene of events on the ground, while {B} swaps a small sign inside the circle for a different one without stepping outside the rope.",
+        "hinweisRegie": "Place the note in the free space just inside the rope circle next to the swapped sign, slightly tilted, so the fixed boundary and the free label are both visible without covering the characters.",
+        "alternative": "{B} examines one crystal from several angles under a lamp, while {A} holds the case it came in firmly closed around it."
+      },
+      "bildSzene": "rope circle, sign swapped inside",
+      "bildSzeneAlt": "crystal examined inside closed case",
+      "quellen": [
+        "§ 151 StPO",
+        "§ 200 StPO",
+        "§ 264 StPO",
+        "§ 265 StPO",
+        "§ 266 StPO",
+        "Themenpool: anklage-781"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-717",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "A fährt korrekt bei Grün. O rast bei Rot in die Kreuzung, prallt auf A und stirbt. Fahrlässige Tötung?",
+      "optionen": [
+        "Ja – A hat den Tod kausal mitverursacht",
+        "Nein – A hat kein rechtlich missbilligtes Risiko geschaffen",
+        "Nein – A handelt aber erst ohne Schuld"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "StGB AT",
+        "Themenpool: strafat-717"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-717",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – wer sich verkehrsgerecht verhält, bewegt sich im erlaubten Risiko",
+      "text": "Kausal ist As Fahrt: Ohne sie kein Zusammenstoß. Objektiv zurechenbar ist der Tod aber nur, wenn A eine rechtlich missbilligte Gefahr geschaffen hat. Wer sich an die Verkehrsregeln hält, schafft nur ein erlaubtes Risiko und darf auf regelgerechtes Verhalten anderer vertrauen. § 222 StGB scheitert schon am Tatbestand.",
+      "norm": "§ 222 StGB",
+      "quellen": [
+        "§ 222 StGB",
+        "Themenpool: strafat-717"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.785Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – A hat den Tod kausal mitverursacht",
+        "Nein – A hat kein rechtlich missbilligtes Risiko geschaffen",
+        "Nein – A handelt aber erst ohne Schuld"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-253",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 7 KSchG: Drei Wochen verpasst – die Kündigung gilt als wirksam",
+      "text": "Wird die Unwirksamkeit einer schriftlichen Kündigung nicht rechtzeitig nach § 4 S. 1 KSchG geltend gemacht, gilt sie als von Anfang an rechtswirksam (§ 7 KSchG). Das erfasst grundsätzlich alle Unwirksamkeitsgründe, nicht nur die Sozialwidrigkeit. Rettungsweg: die nachträgliche Zulassung nach § 5 KSchG, wenn den Arbeitnehmer an der Verspätung kein Verschulden trifft.",
+      "norm": "§ 7 KSchG",
+      "quellen": [
+        "§ 4 KSchG",
+        "§ 5 KSchG",
+        "§ 7 KSchG",
+        "Themenpool: arbeit-253"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-705",
+      "ueberzeile": "Klausurtipp Europarecht",
+      "titel": "Warenverkehr: Erst klären, ob die Maßnahme diskriminiert – dann die Rechtfertigung wählen",
+      "text": "Art. 36 AEUV steht jeder Maßnahme offen. Die ungeschriebenen zwingenden Erfordernisse des Allgemeininteresses (Cassis-Rechtsprechung) passen nach klassischer Lesart nur für unterschiedslos anwendbare Maßnahmen. Der EuGH hat diese Grenze etwa beim Umweltschutz aufgeweicht. In der Klausur: Einordnung offenlegen, dann Verhältnismäßigkeit sauber prüfen.",
+      "quellen": [
+        "Art. 34 AEUV",
+        "Art. 36 AEUV",
+        "Themenpool: europa-705"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-803",
+      "ueberzeile": "4 Punkte Bearbeitervermerk",
+      "titel": "Bearbeitervermerk: vier Dinge, die du markierst, bevor du die Akte aufschlägst",
+      "text": "Der Vermerk entscheidet, welches Produkt du ablieferst und was du weglassen darfst. Markier ihn zuerst – dann liest du die Akte mit dem richtigen Blick.",
+      "punkte": [
+        "Was entwerfen: Urteil, Beschluss, Schriftsatz?",
+        "Was ist erlassen, etwa Tatbestand oder Streitwert?",
+        "Wird ein Hilfsgutachten verlangt?",
+        "Welche Unterstellungen und welches Datum gelten?"
+      ],
+      "quellen": [
+        "Themenpool: assessorz-803"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-913",
+      "ueberzeile": "Streitstand Schuldrecht BT",
+      "titel": "Mangelhafte Maschine steht still: Braucht der Käufer Verzug für den Betriebsausfall?",
+      "norm": "§ 280 Abs. 1 BGB",
+      "optionen": [
+        "BGH: Nein – der mangelbedingte Betriebsausfall ist über §§ 437 Nr. 3, 280 Abs. 1 BGB zu ersetzen, ohne Verzug.",
+        "Teile der Lit.: Ja – Verzögerungsschäden nur unter den Voraussetzungen der §§ 280 Abs. 2, 286 BGB."
+      ],
+      "text": "Klausur: Mit dem BGH lässt sich argumentieren, dass der Schaden aus der mangelhaften Lieferung selbst folgt, nicht aus der verspäteten Nacherfüllung. Die Gegenansicht betont die Wertung des § 280 Abs. 2 BGB. Entscheidend wird der Streit nur, wenn keine Mahnung vorliegt.",
+      "quellen": [
+        "§ 437 Nr. 3 BGB",
+        "§ 280 BGB",
+        "§ 286 BGB",
+        "Themenpool: schuldbt-913"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:57:28.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
