@@ -6,9 +6,9 @@ function validDraft() {
   return {
     version: 1, status: 'draft',
     issue: {
-      number: 2, date: '2026-09-27', subject: 'Ein Irrtum, zwei Rechtsfolgen – der Wochenbrief',
+      number: 2, date: '2026-09-27', subject: 'Ein Kaufpreis, zwei Prüfungsstationen – der Wochenbrief',
       preheader: 'Drei Fälle aus dem Wochenrückblick mit Lösungen für deine Klausur.',
-      hook: 'Der falsche Preis. Die richtige Anspruchsgrundlage.',
+      hook: 'Ware geliefert. Kaufpreis offen – was prüfst du?',
       deck: 'Diese Woche übst du am Fall, welche Prüfung in der Klausur zuerst kommt.',
       weekly_post_url: 'https://www.instagram.com/p/WOCHENRUECKBLICK/',
       topic_count: 1,
@@ -17,19 +17,19 @@ function validDraft() {
     sections: [{
       area: 'zivilrecht', title: 'Zivilrecht', subtitle: 'Rechtsfolge und Gegenanspruch sauber prüfen',
       cases: [{
-        id: '01', field: 'BGB AT', headline: 'Wer zahlt die vergebliche Fahrt des Käufers?', exams: [1, 2],
-        intro: 'Ein Erklärungsirrtum beseitigt nach wirksamer Anfechtung den Vertrag. Der Vertrauensschaden kann bleiben.',
-        relevance: 'Die Wirksamkeit der Anfechtung verlangt einen tauglichen Grund, eine Erklärung gegenüber dem richtigen Gegner und eine fristgerechte Geltendmachung. Der Vertrag fällt dann ex tunc weg; erst gesondert folgt die Prüfung eines begrenzten Vertrauensschadens nach § 122 BGB.',
-        fact: 'V verschreibt sich beim Kaufpreis. K fährt für dreißig Euro zur Abholung. V ficht den Vertrag sofort an. Kann K Ersatz für die Fahrt verlangen?',
+        id: '01', field: 'SCHULDRECHT', headline: 'Kann V den Kaufpreis für das Buch verlangen?', exams: [1, 2],
+        intro: 'Eine fällige Kaufpreisforderung muss zunächst entstehen. Anschließend wird eine mögliche Erfüllung geprüft.',
+        relevance: 'Bei einem Kaufpreisverlangen ist zunächst ein wirksamer Kaufvertrag nach § 433 Abs. 2 BGB zu prüfen. Anschließend folgen Fälligkeit und Einwendungen. Hat der Käufer bereits gezahlt, kann der Anspruch durch Erfüllung nach § 362 Abs. 1 BGB untergegangen sein. Entstehung und Erlöschen bleiben im Gutachten getrennte Prüfungsschritte.',
+        fact: 'V verkauft K ein Buch für zwanzig Euro und liefert es am vereinbarten Tag. K bezahlt trotz Fälligkeit nicht. Kann V von K den Kaufpreis verlangen?',
         solution: [
-          { marker: 'A.', text: 'Wirksame Anfechtung durch V prüfen' },
-          { marker: 'I.', text: 'Erklärungsirrtum beim Preis; Anfechtungsgrund bejahen' },
-          { marker: 'II.', text: 'Erklärung gegenüber K und Frist; ex tunc nichtiger Vertrag' },
-          { marker: 'B.', text: 'Anspruch des K auf Vertrauensschaden prüfen' },
+          { marker: 'A.', text: 'Anspruch des V aus § 433 Abs. 2 BGB entstanden' },
+          { marker: 'I.', text: 'Wirksamer Kaufvertrag über das Buch für zwanzig Euro' },
+          { marker: 'II.', text: 'Kaufpreisforderung fällig nach der Abrede der Parteien' },
+          { marker: 'B.', text: 'Anspruch nicht durch Zahlung nach § 362 BGB erloschen' },
         ],
-        trap: 'Der Vertrauensschaden fällt nicht allein deshalb weg, weil der Vertrag nichtig ist.',
+        trap: 'Die Übergabe des Buchs erfüllt nicht zugleich die Kaufpreisschuld des Käufers.',
         instagram_post_url: 'https://www.instagram.com/p/THEMENBEITRAG/',
-        sources: [{ label: '§ 122 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__122.html' }],
+        sources: [{ label: '§ 433 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__433.html' }],
       }],
     }],
   };
@@ -62,7 +62,7 @@ test('ein Thema ohne Herkunftsbeitrag oder Rechtsquelle scheitert und HTML wird 
   assert.match(pruefeWochenbrief(draft).join(' '), /instagram_post_url.*sources/);
   assert.throws(() => rendereWochenbrief(draft));
   draft.sections[0].cases[0].instagram_post_url = 'https://www.instagram.com/p/THEMENBEITRAG/';
-  draft.sections[0].cases[0].sources = [{ label: '§ 122 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__122.html' }];
+  draft.sections[0].cases[0].sources = [{ label: '§ 433 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__433.html' }];
   draft.sections[0].cases[0].headline = 'Erhält K <script>alert(1)</script> seine Fahrtkosten?';
   assert.ok(!rendereWochenbrief(draft).includes('<script>'));
 });
