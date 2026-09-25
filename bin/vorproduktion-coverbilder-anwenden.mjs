@@ -15,7 +15,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 
 import { Hosting } from "../src/hosting.mjs";
-import { browserBeenden, coverRendern, htmlZuJpeg, kontext } from "../src/render.mjs";
+import { browserBeenden, coverRendern, htmlZuJpeg, kontext, storyRendern } from "../src/render.mjs";
 import { folieHtml, MASSE } from "../src/vorlagen.mjs";
 import { coverDaten } from "../src/reel.mjs";
 
@@ -267,6 +267,23 @@ function zielPfad(basis, datum, slot, inhalt) {
   return path.join(dir, `${datum}-${slot}-01.jpg`);
 }
 
+async function teaserAktualisieren(tag, datum, beitragSlot, beitrag, coverPfad) {
+  const ziele = (tag.plan?.stories || []).filter((s) => s.art === "teaser" && s.beitragSlot === beitragSlot && s.slot);
+  if (!ziele.length) return;
+  const titel = beitrag.kurztitel || beitrag.folien?.[0]?.titel || beitrag.szenen?.[0]?.titel || "Neuer Beitrag";
+  const coverBild = `data:image/jpeg;base64,${fs.readFileSync(coverPfad).toString("base64")}`;
+  const storyDir = path.join(hosting.dir, "vorproduktion", datum, "fertig", "stories");
+  fs.mkdirSync(storyDir, { recursive: true });
+  for (const p of ziele) {
+    const story = {
+      slot: p.slot, art: "teaser", beitragSlot,
+      fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel,
+      ueberzeile: "Neuer Beitrag", titel, pille: "Jetzt im Feed", coverBild,
+    };
+    await storyRendern(story, path.join(storyDir, `${p.slot}-teaser.jpg`), { variante: 0 });
+  }
+}
+
 function motivSetzen(obj, dataUrl, meta, profil = null) {
   obj.bild = dataUrl;
   obj.bildQuelle = null;
@@ -425,6 +442,8 @@ try {
       renderMeta = vollcoverZuJpeg(quelle, target, 1080, reel ? 1920 : 1350);
     }
 
+    await teaserAktualisieren(tag, datum, slot, inhalt, target);
+
     const entry = {
       quelle: `vorproduktion/coverbilder/${name}`,
       quelleSha256: sha256(quelle),
@@ -522,6 +541,7 @@ try {
         slots: [...new Set([...(tag.renderVorschau?.coverbilderAngewandt?.slots || []), slot])].sort(),
       },
     };
+    await teaserAktualisieren(tag, datum, slot, inhalt, target);
     console.log(`✓ Rohbild-Cache -> ${datum} ${slot} · Cover ohne Handschrift neu gerendert`);
   }
 } finally {

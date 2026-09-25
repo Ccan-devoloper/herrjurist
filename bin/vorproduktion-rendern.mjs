@@ -47,6 +47,19 @@ const kostenDatum = new Date().toISOString().slice(0, 10);
 const kanal = "herrjurist-vorproduktion";
 const budgetDeckel = Number(process.env.IG_VORPRODUKTION_BILD_BUDGET_USD || 2.0);
 
+function teaserTitel(beitrag = {}) {
+  return beitrag.kurztitel || beitrag.folien?.[0]?.titel || beitrag.szenen?.[0]?.titel || "Neuer Beitrag";
+}
+
+function teaserFuer(slot, beitrag, beitragSlot, coverPfad) {
+  return {
+    slot, art: "teaser", beitragSlot,
+    fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel,
+    ueberzeile: "Neuer Beitrag", titel: teaserTitel(beitrag), pille: "Jetzt im Feed",
+    coverBild: `data:image/jpeg;base64,${fs.readFileSync(coverPfad).toString("base64")}`,
+  };
+}
+
 if (String(process.env.IG_CHARAKTER_QA || "").toLowerCase() !== "false") {
   throw new Error("Vorproduktions-Render darf keine bezahlte Bild-QA starten: IG_CHARAKTER_QA=false ist Pflicht.");
 }
@@ -275,6 +288,7 @@ try {
     const tagTemp = path.join(temp, datum);
     fs.mkdirSync(tagTemp, { recursive: true });
     const mTag = { datum, feed: [], stories: [] };
+    const coverPfade = new Map();
 
     for (const slot of feedSlots) {
       const inhalt = structuredClone(tag.inhalte?.[slot]);
@@ -295,6 +309,7 @@ try {
         const titel = inhalt.folien.find((x) => x.art === "titel") || inhalt.folien[0];
         motivUebernehmen(titel, treffer);
         const pfade = await beitragRendern(inhalt, slotTemp, { variante: 0 });
+        coverPfade.set(slot, pfade[0]);
         mTag.feed.push({
           slot,
           format: inhalt.format,
@@ -313,6 +328,7 @@ try {
         if (nurCover) {
           const cover = path.join(slotTemp, `${inhalt.slug || "reel"}-cover.jpg`);
           await coverRendern(coverDaten(inhalt, { gesamt: 60 }), cover, { variante: 0 });
+          coverPfade.set(slot, cover);
           mTag.feed.push({
             slot,
             format: "reel-cover",
@@ -333,6 +349,7 @@ try {
             layout: "erklaer",
             framesBehalten: false,
           });
+          coverPfade.set(slot, r.cover);
           mTag.feed.push({
             slot,
             format: "reel",
@@ -357,13 +374,24 @@ try {
       }
     }
 
-    /* Eigenstaendige Story-Vorschauen kosten nichts und helfen bei der
-       Gesamtpruefung des Tages. Teaser s1-s3 werden spaeter aus den Feedposts
-       abgeleitet und sind deshalb hier nicht doppelt gespeichert. */
+    /* Teaser s1-s3 werden aus dem EXAKTEN, gerade gerenderten Feed-Cover
+       abgeleitet. Damit ist die Review-Story visuell identisch mit dem Beitrag.
+       Eigenstaendige Stories bleiben unveraendert providerfrei. */
     const storyDir = path.join(tagTemp, "stories");
     fs.mkdirSync(storyDir, { recursive: true });
+    for (const p of tag.plan?.stories || []) {
+      if (p.art !== "teaser" || !p.beitragSlot || !p.slot || (storySlots.length && !storySlots.includes(p.slot))) continue;
+      const coverPfad = coverPfade.get(p.beitragSlot);
+      if (!coverPfad) continue;
+      const beitrag = tag.inhalte?.[p.beitragSlot];
+      if (!beitrag) throw new Error(`${datum} ${p.slot}: Feed-Bezug ${p.beitragSlot} fehlt`);
+      const story = teaserFuer(p.slot, beitrag, p.beitragSlot, coverPfad);
+      const ziel = path.join(storyDir, `${p.slot}-teaser.jpg`);
+      await storyRendern(story, ziel, { variante: 0 });
+      mTag.stories.push({ slot: p.slot, art: "teaser", datei: path.basename(ziel) });
+    }
     for (const [slot, story] of Object.entries(tag.inhalte || {})
-      .filter(([s, x]) => /^s\d+$/.test(s) && x?.art && (!storySlots.length || storySlots.includes(s)))) {
+      .filter(([s, x]) => /^s\d+$/.test(s) && x?.art && x.art !== "teaser" && (!storySlots.length || storySlots.includes(s)))) {
       const ziel = path.join(storyDir, `${slot}-${story.art}.jpg`);
       await storyRendern(structuredClone(story), ziel, { variante: 0 });
       mTag.stories.push({ slot, art: story.art, datei: path.basename(ziel) });

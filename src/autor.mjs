@@ -1408,18 +1408,22 @@ export async function bildregieSicher(reel) {
   }
 }
 
-export function teaserAusBeitrag(beitrag, slot) {
+export function teaserAusBeitrag(beitrag, slot, coverBild = null) {
+  const titelFolie = beitrag.folien?.[0] || beitrag.szenen?.[0] || {};
+  const teaserTitel = beitrag.kurztitel || titelFolie.titel || "Neuer Beitrag";
   return {
     slot, art: "teaser", fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel,
     ueberzeile: "Neuer Beitrag",
-    titel: beitrag.kurztitel || beitrag.folien[0].titel,
-    text: beitrag.folien[0].titel !== beitrag.kurztitel ? beitrag.folien[0].titel : "",
-    icon: beitrag.folien[0].icon || "paragraf",
-    /* Das Motiv der Titelfolie wandert mit - so kündigt die Story den Beitrag
-       mit demselben Bild an. */
-    bild: beitrag.folien[0].bild || null, bildFrei: beitrag.folien[0].bildFrei !== false, bildQuelle: beitrag.folien[0].bildQuelle || null,
-    bildBreite: beitrag.folien[0].bildBreite || null, bildHoehe: beitrag.folien[0].bildHoehe || null,
-    bildTyp: beitrag.folien[0].bildTyp || null, bildCharaktere: beitrag.folien[0].bildCharaktere || null,
+    titel: teaserTitel,
+    text: titelFolie.titel && titelFolie.titel !== teaserTitel ? titelFolie.titel : "",
+    icon: titelFolie.icon || "paragraf",
+    /* Primaer zeigt der Teaser das fertig gerenderte Cover des tatsaechlich
+       veroeffentlichten Beitrags. Das Motiv bleibt nur als Rueckfall fuer
+       Altbestand erhalten, bei dem noch keine Cover-URL persistiert ist. */
+    coverBild: coverBild || beitrag.teaserCoverUrl || beitrag.coverFinalUrl || null,
+    bild: titelFolie.bild || null, bildFrei: titelFolie.bildFrei !== false, bildQuelle: titelFolie.bildQuelle || null,
+    bildBreite: titelFolie.bildBreite || null, bildHoehe: titelFolie.bildHoehe || null,
+    bildTyp: titelFolie.bildTyp || null, bildCharaktere: titelFolie.bildCharaktere || null,
     pille: "Jetzt im Feed",
   };
 }

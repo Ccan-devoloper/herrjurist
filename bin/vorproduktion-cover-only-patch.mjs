@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Rendert ausschliesslich die sichtbaren Cover bereits vorhandener
- * Vorproduktion neu. Keine Videos, Stories, Sprach- oder Bildprovider.
+ * Rendert die sichtbaren Cover bereits vorhandener Vorproduktion neu.
+ * Verknuepfte Story-Teaser werden aus dem fertigen Cover mitgezogen; keine
+ * Videos, Sprach- oder Bildprovider.
  *
  * Gedacht fuer reine Layout-Aenderungen: Fachband/Titel/Badge/Freisteller
  * koennen damit in Sekunden statt ueber einen kompletten Mehrtages-Render
@@ -11,7 +12,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { Hosting } from "../src/hosting.mjs";
-import { browserBeenden, coverRendern, htmlZuJpeg, kontext } from "../src/render.mjs";
+import { browserBeenden, coverRendern, htmlZuJpeg, kontext, storyRendern } from "../src/render.mjs";
 import { coverDaten } from "../src/reel.mjs";
 import { folieHtml, MASSE } from "../src/vorlagen.mjs";
 
@@ -19,6 +20,22 @@ function coverPfad(hosting, datum, slot, reel) {
   const dir = path.join(hosting.dir, "vorproduktion", datum, "fertig", slot);
   fs.mkdirSync(dir, { recursive: true });
   return path.join(dir, reel ? `${datum}-${slot}-cover.jpg` : `${datum}-${slot}-01.jpg`);
+}
+
+async function teaserAktualisieren(hosting, tag, datum, beitragSlot, beitrag, coverPfad) {
+  const ziele = (tag.plan?.stories || []).filter((s) => s.art === "teaser" && s.beitragSlot === beitragSlot && s.slot);
+  if (!ziele.length) return;
+  const titel = beitrag.kurztitel || beitrag.folien?.[0]?.titel || beitrag.szenen?.[0]?.titel || "Neuer Beitrag";
+  const coverBild = `data:image/jpeg;base64,${fs.readFileSync(coverPfad).toString("base64")}`;
+  const storyDir = path.join(hosting.dir, "vorproduktion", datum, "fertig", "stories");
+  fs.mkdirSync(storyDir, { recursive: true });
+  for (const p of ziele) {
+    await storyRendern({
+      slot: p.slot, art: "teaser", beitragSlot,
+      fach: beitrag.fach, klausur: beitrag.klausur, fachLabel: beitrag.fachLabel,
+      ueberzeile: "Neuer Beitrag", titel, pille: "Jetzt im Feed", coverBild,
+    }, path.join(storyDir, `${p.slot}-teaser.jpg`), { variante: 0 });
+  }
 }
 
 function ohneBild(obj) {
@@ -60,6 +77,7 @@ export async function coverOnlyPatchen({ tage = [], slots = ["b1", "b2", "b3"] }
           });
           const ziel = coverPfad(hosting, datum, slot, false);
           await htmlZuJpeg(folieHtml(titel, ctx, 1, beitrag.folien.length), MASSE.beitrag, ziel);
+          await teaserAktualisieren(hosting, tag, datum, slot, beitrag, ziel);
           mTag.cover.push({ slot, format: beitrag.format || "carousel", datei: path.basename(ziel) });
           continue;
         }
@@ -68,6 +86,7 @@ export async function coverOnlyPatchen({ tage = [], slots = ["b1", "b2", "b3"] }
           ohneBild(beitrag);
           const ziel = coverPfad(hosting, datum, slot, true);
           await coverRendern(coverDaten(beitrag, { gesamt: 60 }), ziel);
+          await teaserAktualisieren(hosting, tag, datum, slot, beitrag, ziel);
           mTag.cover.push({ slot, format: "reel", datei: path.basename(ziel) });
           continue;
         }

@@ -30,8 +30,13 @@ export function vorproduktionLaden(hosting, datum) {
   }
   const sd = path.join(fertigDir, "stories");
   for (const s of tag.plan.stories) {
+    if (s.art === "teaser") {
+      const beitrag = tag.plan.beitraege.find((b) => b.slot === s.beitragSlot);
+      if (!beitrag) throw new Error(`Vorproduktion ${datum}: Teaser ${s.slot} ohne Feed-Bezug; kein kostenpflichtiger Fallback.`);
+      continue;
+    }
     if (!fs.existsSync(sd) || !files(sd, new RegExp(`^${s.slot}-.*\\.jpe?g$`, "i")).length) throw new Error(`Vorproduktion ${datum}: Story ${s.slot} fehlt; kein kostenpflichtiger Fallback.`);
-    if (s.art !== "teaser" && !tag.inhalte[s.slot]) throw new Error(`Vorproduktion ${datum}: Story-Inhalt ${s.slot} fehlt; kein kostenpflichtiger Fallback.`);
+    if (!tag.inhalte[s.slot]) throw new Error(`Vorproduktion ${datum}: Story-Inhalt ${s.slot} fehlt; kein kostenpflichtiger Fallback.`);
   }
   return vp;
 }

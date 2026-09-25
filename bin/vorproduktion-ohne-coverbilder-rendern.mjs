@@ -151,6 +151,7 @@ try {
     const out = path.join(temp, datum);
     fs.mkdirSync(out, { recursive: true });
     const mTag = { datum, feed: [], stories: [] };
+    const coverPfade = new Map();
 
     for (const slot of ["b1", "b2", "b3"]) {
       const beitrag = structuredClone(tag.inhalte?.[slot]);
@@ -168,6 +169,7 @@ try {
         const ziel = path.join(out, slot);
         fs.mkdirSync(ziel, { recursive: true });
         const dateien = await beitragRendern(beitrag, ziel, { variante: 0 });
+        coverPfade.set(slot, dateien[0]);
         mTag.feed.push({
           slot,
           format: beitrag.format,
@@ -184,6 +186,7 @@ try {
           clip: null,
           framesBehalten: false,
         });
+        coverPfade.set(slot, reel.cover);
         mTag.feed.push({
           slot,
           format: "reel",
@@ -218,6 +221,11 @@ try {
       if (!p.slot) continue;
       const story = structuredClone(tag.inhalte?.[p.slot]);
       if (!story) throw new Error(`${datum} ${p.slot}: Story-Inhalt fehlt`);
+      if (story.art === "teaser") {
+        const coverPfad = coverPfade.get(p.beitragSlot || story.beitragSlot);
+        if (!coverPfad || !fs.existsSync(coverPfad)) throw new Error(`${datum} ${p.slot}: Cover fuer Teaser fehlt`);
+        story.coverBild = `data:image/jpeg;base64,${fs.readFileSync(coverPfad).toString("base64")}`;
+      }
       story.bild = null;
       story.bildQuelle = null;
       const ziel = path.join(storyDir, `${p.slot}-${story.art}.jpg`);

@@ -1105,9 +1105,10 @@ async function main() {
         kontingent.genutzt += 1;
         const echt = veroeffentlichungEintragen(eintrag, medienId);
         if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "reel", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Reel ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
-        if (echt.bestaetigt) vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: "reel", thema: reel.themaId, fach: reel.fach, klausur: reel.klausur, titel: reel.szenen[0]?.titel || reel.kurztitel, hookTyp: reel.hookTyp, hookMuster: reel.hookMuster, medienId, variante: varianteReel, hashtags: reel.hashtags, stimmeId: r.stimmeId || null, stimmeName: r.stimmeName || null, layout: r.layout || null, dauer: Math.round(r.dauer * 10) / 10, veroeffentlicht: new Date().toISOString() });
+        if (echt.bestaetigt) eintrag.coverUrl = coverUrl || null;
+        if (echt.bestaetigt) vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: "reel", thema: reel.themaId, fach: reel.fach, klausur: reel.klausur, titel: reel.szenen[0]?.titel || reel.kurztitel, hookTyp: reel.hookTyp, hookMuster: reel.hookMuster, medienId, variante: varianteReel, hashtags: reel.hashtags, stimmeId: r.stimmeId || null, stimmeName: r.stimmeName || null, layout: r.layout || null, dauer: Math.round(r.dauer * 10) / 10, coverUrl: coverUrl || null, veroeffentlicht: new Date().toISOString() });
         if (echt.bestaetigt) eintrag.kanaele = await verteilen({ art: "reel", videoUrl, videoPfad: r.video, bildUrls: [coverUrl], titel: reel.kurztitel || reel.szenen[0]?.titel, text: caption, hashtags: reel.hashtags }, { log, trockenlauf: trocken, stateDir: hosting.stateDir });
-        fertigeBeitraege.set(eintrag.slot, { ...reel, folien: [{ art: "titel", titel: reel.szenen[0]?.titel, icon: reel.szenen[0]?.icon }], kurztitel: reel.kurztitel });
+        fertigeBeitraege.set(eintrag.slot, { ...reel, folien: [{ art: "titel", titel: reel.szenen[0]?.titel, icon: reel.szenen[0]?.icon }], kurztitel: reel.kurztitel, teaserCoverUrl: coverUrl || null });
         ledgerSpeichern(ledgerPfad, ledger); planSpeichern(hosting, plan);
         ruecklageAktualisieren();
         hosting.commit(`Veröffentlicht: Reel ${datum} ${eintrag.slot}`); await hosting.push();
@@ -1150,9 +1151,10 @@ async function main() {
       kontingent.genutzt += 1;
       const echt = veroeffentlichungEintragen(eintrag, medienId);
       if (!echt.bestaetigt) { probelaeufe.push({ slot: eintrag.slot, art: "beitrag", kennung: echt.kennung, zeit: new Date().toISOString() }); log(`  ○ Probelauf: Beitrag ${eintrag.slot} ${echt.grund} – der Plan bleibt unverändert.`); }
+      if (echt.bestaetigt) eintrag.coverUrl = urls[0] || null;
       const karteIndex = beitrag.folien.findIndex((f) => f.art === "karte");
-      if (echt.bestaetigt) vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: eintrag.format, thema: beitrag.themaId, fach: beitrag.fach, klausur: beitrag.klausur, titel: beitrag.folien[0].titel, hookTyp: beitrag.hookTyp, medienId, variante, hashtags: beitrag.hashtags, veroeffentlicht: new Date().toISOString(), karteUrl: karteIndex >= 0 ? urls[karteIndex] : null });
-      fertigeBeitraege.set(eintrag.slot, beitrag);
+      if (echt.bestaetigt) vermerken(ledger, { datum, art: "beitrag", slot: eintrag.slot, zeit: eintrag.zeit, stunde: Math.floor(lokaleMinuten() / 60), format: eintrag.format, thema: beitrag.themaId, fach: beitrag.fach, klausur: beitrag.klausur, titel: beitrag.folien[0].titel, hookTyp: beitrag.hookTyp, medienId, variante, hashtags: beitrag.hashtags, coverUrl: urls[0] || null, veroeffentlicht: new Date().toISOString(), karteUrl: karteIndex >= 0 ? urls[karteIndex] : null });
+      fertigeBeitraege.set(eintrag.slot, { ...beitrag, teaserCoverUrl: urls[0] || beitrag.coverFinalUrl || null });
       /* Auf weitere Kanäle verteilen (Threads, Facebook, LinkedIn …). */
       if (echt.bestaetigt) eintrag.kanaele = await verteilen({ art: "beitrag", bildUrls: urls, bildPfade: bilder, titel: beitrag.folien[0].titel, text: caption, hashtags: beitrag.hashtags }, { log, trockenlauf: trocken, stateDir: hosting.stateDir });
       ledgerSpeichern(ledgerPfad, ledger);
@@ -1228,7 +1230,12 @@ async function main() {
            Medien-ID nicht gibt. Der Planstatus allein reicht nicht: Am 18.09.
            stand er auf „veröffentlicht“, während die ID „trocken“ lautete. */
         if (!beitrag || !veroeffentlichtBestaetigt(b)) { log(`Story ${eintrag.slot}: Beitrag ${eintrag.beitragSlot} noch nicht veröffentlicht – später.`); continue; }
-        story = teaserAusBeitrag(beitrag, eintrag.slot);
+        let coverBild = b?.coverUrl || beitrag.teaserCoverUrl || beitrag.coverFinalUrl || null;
+        if (vorproduktionAktiv && b) {
+          const asset = vorproduktionFeedAssets(vorproduktion, b);
+          coverBild = b.format === "reel" ? asset.coverUrl : asset.bildUrls?.[0];
+        }
+        story = teaserAusBeitrag(beitrag, eintrag.slot, coverBild);
       } else {
         story = geschrieben.get(eintrag.slot);
         /* Eine Stelle entscheidet, ob diese Story erscheinen darf: ungeprüft
@@ -1272,14 +1279,19 @@ async function main() {
       }
 
       let medienId = null;
-      if (vorproduktionAktiv) {
+      if (vorproduktionAktiv && eintrag.art !== "teaser") {
         const asset = vorproduktionStoryAsset(vorproduktion, eintrag.slot);
         medienId = await ig.storyPosten({ bildUrl: asset.bildUrl });
         kontingent.genutzt += 1;
         log(`  Vorproduktion: fertige Story ${eintrag.slot} wird unverändert verwendet.`);
       } else {
-        /* Bild in der Story: nur, wo der Autor eine Szene genannt hat (Begriff,
-           Tipp); der Teaser bringt das Bild des Beitrags schon mit. */
+        /* Teaser werden immer frisch aus dem finalen Cover des verknuepften
+           Beitrags gerendert. So kann kein veralteter Teaser aus einem frueheren
+           Vorproduktionsschritt live gehen. Andere Stories behalten ihren
+           bisherigen Motivweg. */
+        if (vorproduktionAktiv && eintrag.art === "teaser") {
+          log(`  Vorproduktion: Teaser ${eintrag.slot} wird aus dem finalen Cover von ${eintrag.beitragSlot} neu gerendert.`);
+        }
         await motivBesorgen(story, "Story-Motiv", { ki: false });
         const zielBild = path.join(AUSGABE, "stories", `${datum}-${eintrag.slot}-${story.art}.jpg`);
         const stilOpt = { variante: varianteStory(eintrag.slot) };
