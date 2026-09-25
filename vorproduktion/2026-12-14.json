@@ -1,0 +1,864 @@
+{
+  "datum": "2026-12-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-626",
+        "themaTitel": "Asylgrundrecht und unionsrechtliche Überlagerung",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "schuld-185",
+        "themaTitel": "Wann führt eine Störung der Geschäftsgrundlage zur Anpassung, wann zur Auflösung?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-856",
+        "themaTitel": "Wie ist die Anklageschrift aufgebaut?",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:04",
+        "art": "frage",
+        "themaId": "stpo-773"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:04",
+        "art": "antwort",
+        "themaId": "stpo-773"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "bgbat-148"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "tipp",
+        "themaId": "strafbt-741"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "zahl",
+        "themaId": "zwangsv-828"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "streitstand",
+        "themaId": "revision-878"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-626",
+      "poolTitel": "Asylgrundrecht und unionsrechtliche Überlagerung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 16a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28",
+        "2026-11-28"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuld-185",
+      "poolTitel": "Wann führt eine Störung der Geschäftsgrundlage zur Anpassung, wann zur Auflösung?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 313 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-10"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-856",
+      "poolTitel": "Wie ist die Anklageschrift aufgebaut?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-14"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-773",
+      "poolTitel": "Beschlagnahme und Sicherstellung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 94 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-773",
+      "poolTitel": "Beschlagnahme und Sicherstellung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 94 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-148",
+      "poolTitel": "Wann geht eine Willenserklärung unter Abwesenden zu?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2026-11-04"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafbt-741",
+      "poolTitel": "Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-12"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zwangsv-828",
+      "poolTitel": "Wann klagt der Dritte, wann erinnert der Schuldner?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 766 ZPO",
+        "§ 767 ZPO",
+        "§ 771 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "revision-878",
+      "poolTitel": "Was beweist das Hauptverhandlungsprotokoll?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 274 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2026-11-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-626",
+      "slug": "2026-12-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Über Land eingereist: Art. 16a GG greift nicht",
+          "titelZeilen": [
+            "Über Land",
+            "eingereist:",
+            "Art. 16a GG",
+            "greift nicht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Abs. 2 sperrt schon den Schutzbereich",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A wird in seinem Heimatstaat wegen seiner politischen Überzeugung verfolgt. Er reist über Österreich auf dem Landweg nach Deutschland ein und beruft sich auf das Asylgrundrecht aus Art. 16a Abs. 1 GG. Kann er sich darauf stützen – und ist er ohne das Grundrecht schutzlos?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Politisch Verfolgter",
+              "text": "Art. 16a Abs. 1 GG schützt vor gezielter Verfolgung wegen asylerheblicher Merkmale, etwa der politischen Überzeugung."
+            },
+            {
+              "titel": "Einreise über einen EU-Staat",
+              "text": "Art. 16a Abs. 2 S. 1 GG: Wer aus einem EU-Mitgliedstaat oder sicheren Drittstaat einreist, kann sich nicht auf Abs. 1 berufen."
+            },
+            {
+              "titel": "Folge",
+              "text": "Schon der persönliche Geltungsbereich ist verschlossen – eine Abwägung findet nicht statt. A hat kein Asylgrundrecht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Aus Art. 16a Abs. 2 GG zu schließen, A sei schutzlos. Flüchtlingsschutz und subsidiärer Schutz beruhen auf Unionsrecht (Art. 78 AEUV) und hängen nicht vom Reiseweg ab. Welcher Staat das Verfahren führt, bestimmen unionsrechtliche Zuständigkeitsregeln."
+        },
+        {
+          "art": "text",
+          "titel": "Art. 16a GG im Überblick",
+          "punkte": [
+            "Abs. 1: Asylrecht politisch Verfolgter.",
+            "Abs. 2: Einreise aus EU-Staat oder sicherem Drittstaat schließt die Berufung aus.",
+            "Abs. 3: Sichere Herkunftsstaaten – widerlegbare Vermutung der Nichtverfolgung.",
+            "Abs. 4: Eilrechtsschutz nur bei ernstlichen Zweifeln an der Maßnahme.",
+            "Abs. 5: Raum für Zuständigkeitsabkommen zwischen den Staaten."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 16a GG zuerst an Abs. 2 messen: Landweg über einen EU-Staat heißt kein Asylgrundrecht – der unionsrechtliche Schutz bleibt davon unberührt."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei Art. 16a GG",
+          "punkte": [
+            "Politische Verfolgung?",
+            "Einreise über EU- oder sicheren Drittstaat?",
+            "Unionsrechtlicher Schutz trotzdem möglich?"
+          ],
+          "icons": [
+            "person",
+            "globus",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Über Land eingereist – dann greift Art. 16a Abs. 1 GG nicht. Wer aus einem EU-Mitgliedstaat oder einem sicheren Drittstaat einreist, kann sich nach Art. 16a Abs. 2 GG nicht auf das Asylgrundrecht berufen. Schutzlos ist er deshalb nicht: Flüchtlingsschutz und subsidiärer Schutz sind unionsrechtlich geregelt und hängen nicht vom Reiseweg ab. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#asylrecht",
+        "#16agg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 16a GG: kein Asylgrundrecht nach Landweg",
+      "coverText": "Abs. 2 sperrt schon den Schutzbereich",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Wer über einen sicheren Nachbarstaat einreist, kann sich nicht auf das Asylgrundrecht berufen – geschützt werden kann er trotzdem.",
+        "handlung": "{A} stops at a closed side door marked only by its frame while {B} curiously points her toward a second, wider open gate a few steps further along the same wall.",
+        "hinweisRegie": "Place the note in the free space between the closed side door and the open gate, slightly tilted toward the closed door, so the barred route is linked to the note without covering {B}'s pointing hand.",
+        "alternative": "{B} holds two keys up to a lock; one is turned away by the lock, while {A} calmly takes the second key toward another door."
+      },
+      "bildSzene": "closed side door, wider gate open nearby",
+      "bildSzeneAlt": "one key refused, second key used",
+      "quellen": [
+        "Art. 16a GG",
+        "Art. 78 AEUV",
+        "Themenpool: grundr-626"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-schutzbereich",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.272Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-185",
+      "slug": "2026-12-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Geschäftsgrundlage gestört: 3 Elemente, 2 Rechtsfolgen",
+          "titelZeilen": [
+            "Geschäftsgrundlage",
+            "gestört: 3 Elemente,",
+            "2 Rechtsfolgen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Rücktritt nur nachrangig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 313 BGB hilft, wenn sich Umstände, die Grundlage des Vertrags geworden sind, schwerwiegend ändern (Abs. 1) oder wesentliche gemeinsame Vorstellungen sich als falsch erweisen (Abs. 2). Vorrang haben Auslegung, Gewährleistungsrecht und § 275 BGB."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1: Tatbestand",
+          "schritte": [
+            {
+              "titel": "1. Reales Element",
+              "text": "Umstände der Geschäftsgrundlage haben sich nach Vertragsschluss schwerwiegend verändert – oder waren von Anfang an falsch vorgestellt."
+            },
+            {
+              "titel": "2. Hypothetisches Element",
+              "text": "Die Parteien hätten den Vertrag bei Kenntnis nicht oder mit anderem Inhalt geschlossen."
+            },
+            {
+              "titel": "3. Normatives Element",
+              "text": "Das Festhalten am unveränderten Vertrag ist unzumutbar – vor allem nach der vertraglichen oder gesetzlichen Risikoverteilung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2: Rechtsfolge",
+          "schritte": [
+            {
+              "titel": "Vorrang: Anpassung",
+              "text": "§ 313 Abs. 1 BGB: Anspruch auf Anpassung des Vertrags; nach h.M. kann direkt auf die angepasste Leistung geklagt werden."
+            },
+            {
+              "titel": "Nachrangig: Lösung",
+              "text": "§ 313 Abs. 3 BGB: Erst wenn Anpassung unmöglich oder unzumutbar ist, Rücktritt – bei Dauerschuldverhältnissen Kündigung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: das Risiko",
+          "text": "Hat eine Partei das Risiko der Veränderung vertraglich oder nach dem Gesetz übernommen, scheidet § 313 BGB regelmäßig aus. Deshalb die Risikoverteilung ausdrücklich prüfen – erst danach die Frage, ob angepasst oder aufgelöst wird."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Reales, hypothetisches, normatives Element – dann zuerst anpassen. Rücktritt oder Kündigung erst, wenn Anpassung nicht möglich oder unzumutbar ist."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 313 BGB in vier Zügen",
+          "punkte": [
+            "Vorrangige Regeln ausschließen",
+            "Drei Elemente prüfen",
+            "Risikoverteilung klären",
+            "Erst Anpassung, dann Lösung"
+          ],
+          "icons": [
+            "paragraf",
+            "lupe",
+            "waage",
+            "vertrag"
+          ]
+        }
+      ],
+      "caption": "Störung der Geschäftsgrundlage in drei Elementen und zwei Rechtsfolgen: reales, hypothetisches und normatives Element – und dann zuerst die Anpassung nach § 313 Abs. 1 BGB. Rücktritt oder Kündigung kommen nach § 313 Abs. 3 BGB erst, wenn eine Anpassung nicht möglich oder unzumutbar ist. Entscheidend ist oft die Risikoverteilung. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#313bgb",
+        "#geschäftsgrundlage",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 313 BGB: erst anpassen, dann lösen",
+      "coverText": "Rücktritt nur nachrangig",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Ändert sich die Grundlage eines Vertrags, wird er zuerst angepasst und nur ausnahmsweise aufgelöst.",
+        "handlung": "{B} carries a crystal beam across a bridge whose support has shifted, while {A} calmly slides a new wedge under the tilted support instead of tearing the bridge down.",
+        "hinweisRegie": "Place the note in the free space beside the new wedge under the support, slightly tilted toward it, so the adjustment is the focus, without covering {B}'s load or {A}'s pointer.",
+        "alternative": "{A} adjusts the length of a rope bridge with a small crank while {B} waits with a saw he only uses if the rope cannot be adjusted."
+      },
+      "bildSzene": "wedge slid under shifted bridge support",
+      "bildSzeneAlt": "crank adjusts rope bridge, saw waits",
+      "quellen": [
+        "§ 313 BGB",
+        "§ 275 BGB",
+        "§ 314 BGB",
+        "Themenpool: schuld-185"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-elemente-zwei-folgen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.273Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-856",
+      "slug": "2026-12-14-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Anklageschrift: Ein Teil darf beim Strafrichter fehlen",
+          "unter": "Anklageschrift · § 200 StPO",
+          "text": "Das wesentliche Ergebnis der Ermittlungen ist beim Strafrichter entbehrlich.",
+          "norm": "§ 200 Abs. 2 StPO",
+          "icon": "dokument",
+          "sprecher": "Ein Teil der Anklageschrift darf manchmal ganz fehlen. Welcher, siehst du am Aufbau. § 200 StPO sagt dir, was hineingehört.",
+          "marken": [
+            "ein Teil entbehrlich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Kopf und Angeschuldigter",
+          "text": "Staatsanwaltschaft, Aktenzeichen, Personalien, ggf. Verteidiger.",
+          "norm": "§ 200 Abs. 1 StPO",
+          "sprecher": "Schritt eins: der Kopf mit Staatsanwaltschaft und Aktenzeichen, bei Haft mit Haftvermerk. Dann der Angeschuldigte mit seinen Personalien und, falls vorhanden, sein Verteidiger.",
+          "marken": [
+            "wer?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Anklagesatz",
+          "text": "Tat, Zeit, Ort, gesetzliche Merkmale, anzuwendende Strafvorschriften.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "sprecher": "Schritt zwei, das Herzstück: der Anklagesatz. Die Tat mit Zeit und Ort, ihre gesetzlichen Merkmale und die anzuwendenden Strafvorschriften. Die genaue Form unterscheidet sich je nach Landespraxis.",
+          "marken": [
+            "Tat · Zeit · Ort"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beweismittel und Gericht",
+          "text": "Zeugen, Sachverständige, Urkunden – und das zuständige Gericht.",
+          "norm": "§ 200 Abs. 1 S. 2 StPO",
+          "sprecher": "Schritt drei: die Beweismittel, also etwa Zeugen, Sachverständige und Urkunden. Dazu das Gericht, vor dem die Hauptverhandlung stattfinden soll.",
+          "marken": [
+            "womit? wo?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wesentliches Ergebnis der Ermittlungen",
+          "text": "Hier wird der Tatvorwurf beweismäßig erläutert.",
+          "norm": "§ 200 Abs. 2 StPO",
+          "sprecher": "Schritt vier: das wesentliche Ergebnis der Ermittlungen. Hier, und nur hier, erläuterst du den Vorwurf anhand der Beweise. Und genau dieser Teil darf fehlen, wenn du beim Strafrichter anklagst.",
+          "marken": [
+            "beim Strafrichter optional"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Am Ende: die Anträge",
+          "text": "Hauptverfahren eröffnen, Anklage zulassen – bei Haft auch Haftfortdauer.",
+          "norm": "§ 199 Abs. 2 StPO",
+          "sprecher": "Zum Schluss die Anträge: das Hauptverfahren zu eröffnen und die Anklage zur Hauptverhandlung zuzulassen. Sitzt der Angeschuldigte in Untersuchungshaft, kommt der Antrag auf Haftfortdauer dazu.",
+          "marken": [
+            "Eröffnung beantragen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Reihenfolge",
+          "text": "Kopf, Angeschuldigter, Anklagesatz, Beweismittel, wesentliches Ergebnis, Anträge.",
+          "norm": "§ 200 StPO",
+          "sprecher": "Merke: Kopf, Angeschuldigter, Anklagesatz, Beweismittel, wesentliches Ergebnis, Anträge. Beim Strafrichter darf das wesentliche Ergebnis wegfallen.",
+          "marken": [
+            "sechs Bausteine"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Schreiben: Welches Gericht?",
+          "text": "Speichern für die nächste Anklageklausur.",
+          "sprecher": "Speicher dir den Aufbau für deine nächste Anklageklausur. Und schau im Bearbeitervermerk nach, ob das wesentliche Ergebnis trotzdem verlangt ist.",
+          "marken": [
+            "Bearbeitervermerk"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ein Teil der Anklageschrift darf fehlen: Wird beim Strafrichter angeklagt, kann die Staatsanwaltschaft vom wesentlichen Ergebnis der Ermittlungen absehen (§ 200 Abs. 2 S. 2 StPO). Der Aufbau im Überblick: Kopf, Angeschuldigter, Anklagesatz, Beweismittel und Gericht, wesentliches Ergebnis, Anträge. In der Klausur entscheidet der Bearbeitervermerk, was du schreiben musst. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#200stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anklageschrift: der Aufbau in sechs Teilen",
+      "titelZeilen": [
+        "Anklageschrift:",
+        "Ein Teil darf beim",
+        "Strafrichter fehlen"
+      ],
+      "coverText": "Wesentliches Ergebnis: nicht immer",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Anklageschrift folgt einer festen Reihenfolge, aber ein Baustein ist beim Strafrichter verzichtbar.",
+        "handlung": "{A} stacks six labelled crates into a neat tower, while {B} nervously holds the fifth crate and hesitates because {A} signals that this one may stay aside for a smaller cart.",
+        "hinweisRegie": "Place the note in the free space next to the fifth crate held by {B}, slightly tilted toward it, so the optional building block is highlighted without covering the tower.",
+        "alternative": "{B} assembles a machine from six parts, while {A} hovers over a smaller version of the machine that runs without one of them."
+      },
+      "bildSzene": "six crates stacked, one set aside",
+      "bildSzeneAlt": "machine runs with one part missing",
+      "quellen": [
+        "§ 199 Abs. 2 StPO",
+        "§ 200 StPO",
+        "Themenpool: anklage-856"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.274Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-773",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Der Beschuldigte übergibt der Polizei freiwillig sein Handy. Braucht es eine Beschlagnahme?",
+      "optionen": [
+        "Ja – Beweismittel darf nur ein Richter sicherstellen",
+        "Nein – bei freiwilliger Herausgabe genügt die Sicherstellung",
+        "Nein – beschlagnahmt werden nur Tatwerkzeuge"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 94 StPO",
+        "§ 98 StPO",
+        "Themenpool: stpo-773"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.274Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-773",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – freiwillig herausgegeben heißt formlos sichergestellt",
+      "text": "Mögliche Beweismittel werden in Verwahrung genommen oder sonst sichergestellt (§ 94 Abs. 1 StPO). Die Beschlagnahme braucht es erst, wenn der Gewahrsamsinhaber sie nicht freiwillig herausgibt (§ 94 Abs. 2 StPO). Anordnen darf sie grundsätzlich das Gericht, bei Gefahr im Verzug auch die Staatsanwaltschaft und ihre Ermittlungspersonen (§ 98 Abs. 1 StPO).",
+      "norm": "§ 94 StPO · § 98 Abs. 1 StPO",
+      "quellen": [
+        "§ 94 StPO",
+        "§ 98 StPO",
+        "Themenpool: stpo-773"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.274Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Beweismittel darf nur ein Richter sicherstellen",
+        "Nein – bei freiwilliger Herausgabe genügt die Sicherstellung",
+        "Nein – beschlagnahmt werden nur Tatwerkzeuge"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-148",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 130 BGB: Zugang heißt Machtbereich plus Möglichkeit der Kenntnisnahme",
+      "text": "Eine Willenserklärung unter Abwesenden wird wirksam, wenn sie zugeht (§ 130 Abs. 1 S. 1 BGB): wenn sie so in den Machtbereich des Empfängers gelangt, dass er unter gewöhnlichen Umständen Kenntnis nehmen kann. Brief spätabends im Briefkasten: Zugang regelmäßig erst am nächsten Tag. Ein Widerruf wirkt nur, wenn er vorher oder gleichzeitig zugeht (§ 130 Abs. 1 S. 2 BGB).",
+      "norm": "§ 130 Abs. 1 BGB",
+      "quellen": [
+        "§ 130 BGB",
+        "Themenpool: bgbat-148"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.274Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-741",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Ärztlicher Eingriff: § 223 StGB mit der Rspr. bejahen, dann die Einwilligung",
+      "text": "Nach ständiger Rspr. erfüllt auch der gelungene, fachgerechte Heileingriff den Tatbestand des § 223 StGB. Die Musik spielt bei der Rechtfertigung: wirksame Einwilligung nach ordnungsgemäßer Aufklärung, fehlt sie, ggf. hypothetische Einwilligung. Die Gegenansicht in der Literatur verneint schon den Tatbestand – kurz nennen, dann mit dem Aufbau der Rspr. weiterprüfen.",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 228 StGB",
+        "Themenpool: strafbt-741"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.274Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-828",
+      "ueberzeile": "3 Punkte Zwangsvollstreckung",
+      "titel": "Erinnerung, Vollstreckungsabwehr, Drittwiderspruch: Wer rügt was?",
+      "text": "Frag zuerst: Wer wehrt sich – und wogegen? Gegen das Verfahren, gegen den titulierten Anspruch oder mit einem Recht an der Sache?",
+      "punkte": [
+        "§ 766 ZPO: Art und Weise der Vollstreckung – Verfahrensfehler",
+        "§ 767 ZPO: Schuldner wendet sich gegen den titulierten Anspruch",
+        "§ 771 ZPO: Dritter hat ein die Veräußerung hinderndes Recht"
+      ],
+      "quellen": [
+        "§ 766 ZPO",
+        "§ 767 ZPO",
+        "§ 771 ZPO",
+        "Themenpool: zwangsv-828"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.274Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-878",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Protokoll unrichtig, der Verteidiger weiß es: Darf er die Verfahrensrüge darauf stützen?",
+      "norm": "§ 274 StPO",
+      "optionen": [
+        "Eine Ansicht: Ja – § 274 StPO ist eine formale Beweisregel, auf die sich die Revision berufen darf.",
+        "Andere Ansicht: Nein – eine bewusst unwahre Verfahrensrüge ist rechtsmissbräuchlich."
+      ],
+      "text": "Praktisch entschärft: Nach dem Großen Senat für Strafsachen darf das Protokoll auch nach Erhebung der Rüge in einem geregelten Verfahren berichtigt werden. Klausur: erst die Beweiskraft nach § 274 StPO, dann eine mögliche Berichtigung prüfen.",
+      "quellen": [
+        "§ 274 StPO",
+        "§ 344 Abs. 2 S. 2 StPO",
+        "Themenpool: revision-878"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:10.274Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
