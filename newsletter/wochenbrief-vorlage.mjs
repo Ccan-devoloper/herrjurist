@@ -14,8 +14,6 @@ const LEVELS = [
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const text = (value, min = 1, max = 5000) => typeof value === 'string' && value.trim().length >= min && value.trim().length <= max;
 const url = value => { try { return new URL(value).protocol === 'https:'; } catch { return false; } };
-const postUrl = value => url(value) && /(^|\.)instagram\.com$/.test(new URL(value).hostname);
-const sourceSlug = value => /^\d{4}-\d{2}-\d{2}-b[123]$/.test(value ?? '');
 
 export function pruefeGliederung(solution) {
   const errors = [];
@@ -57,7 +55,6 @@ export function pruefeWochenbrief(draft) {
   requireText(issue.preheader, 'issue.preheader', 25, 180);
   requireText(issue.hook, 'issue.hook', 15, 130);
   requireText(issue.deck, 'issue.deck', 30, 220);
-  if (!postUrl(issue.weekly_post_url) && !sourceSlug(issue.weekly_source_slug)) errors.push('issue: Instagram-Link oder Vorproduktions-Slug zum Wochenrückblick erforderlich.');
   if (!Number.isInteger(issue.topic_count) || issue.topic_count < 1) errors.push('issue.topic_count muss der Zahl der Themen entsprechen.');
   if (!Array.isArray(issue.quick_check) || issue.quick_check.length !== 3 || issue.quick_check.some(q => !text(q, 12, 180))) errors.push('issue.quick_check benötigt drei konkrete Wiederholungsfragen.');
   const sections = draft?.sections;
@@ -82,7 +79,6 @@ export function pruefeWochenbrief(draft) {
       requireText(item?.fact, `${where}.fact`, 60, 1100);
       requireText(item?.trap, `${where}.trap`, 30, 550);
       if (!Array.isArray(item?.exams) || item.exams.length < 1 || item.exams.length > 2 || new Set(item.exams).size !== item.exams.length || item.exams.some(n => n !== 1 && n !== 2)) errors.push(`${where}.exams: [1], [2] oder [1,2] erforderlich.`);
-      if (!postUrl(item?.instagram_post_url) && !sourceSlug(item?.instagram_source_slug)) errors.push(`${where}: Instagram-Link oder Vorproduktions-Slug des Herkunftsbeitrags erforderlich.`);
       if (!Array.isArray(item?.sources) || item.sources.length < 1 || item.sources.some(ref => !text(ref?.label, 3, 100) || !url(ref?.url))) errors.push(`${where}.sources: mindestens eine überprüfbare Norm/Entscheidung mit HTTPS-Link.`);
       pruefeGliederung(item?.solution).forEach(error => errors.push(`${where}.solution: ${error}`));
     });
@@ -102,7 +98,6 @@ function outline(solution) {
 function article(item, color) {
   const badges = item.exams.map(n => `<span style="display:inline-block;padding:5px 9px;margin:0 5px 4px 0;background:#F0F3F8;color:#101827;border-radius:5px;font-family:${FONT};font-size:11px;font-weight:800">${n}. Staatsexamen</span>`).join('');
   const references = item.sources.map(ref => `<a href="${escapeHtml(ref.url)}" style="color:#163b74;text-decoration:underline">${escapeHtml(ref.label)}</a>`).join(' · ');
-  const origin = postUrl(item.instagram_post_url) ? `<a href="${escapeHtml(item.instagram_post_url)}" style="color:#163b74">Beitrag zum Thema</a>` : `Vorproduktion ${escapeHtml(item.instagram_source_slug)}`;
   return `<tr><td style="padding:0 24px;background:#FFFFFF;font-family:${FONT}"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding:28px 0 31px;border-bottom:1px solid #DCE2EA">
     <div style="display:inline-block;background:${color};color:${color === COLORS.zivilrecht ? '#FFFFFF' : '#101827'};border-radius:8px;padding:6px 11px;font-size:11px;font-weight:900;letter-spacing:.6px">${escapeHtml(item.id)} / ${escapeHtml(item.field)}</div>
     <div style="margin:10px 0 0">${badges}</div>
@@ -114,7 +109,7 @@ function article(item, color) {
     <div style="font-size:11px;letter-spacing:1.1px;font-weight:900;color:#101827;margin:22px 0 8px">LÖSUNGSSKIZZE</div>
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border:1px solid #DCE2EA;border-radius:9px;background:#FFFFFF"><tr><td style="padding:11px 13px">${outline(item.solution)}</td></tr></table>
     <div style="font-size:13px;line-height:1.5;color:#40516A;padding-top:14px"><strong style="color:#101827">FALLE:</strong> ${escapeHtml(item.trap)}</div>
-    <div style="font-size:12px;line-height:1.6;color:#40516A;padding-top:10px">Quelle: ${origin} · ${references}</div>
+    <div style="font-size:12px;line-height:1.6;color:#40516A;padding-top:10px">Rechtsgrundlagen: ${references}</div>
   </td></tr></table></td></tr>`;
 }
 
@@ -129,13 +124,12 @@ export function rendereWochenbrief(draft) {
   const issue = draft.issue;
   const date = new Intl.DateTimeFormat('de-DE', { timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${issue.date}T00:00:00Z`));
   const questions = issue.quick_check.map((q, i) => `${i + 1}. ${escapeHtml(q)}`).join('<br>');
-  const weekly = postUrl(issue.weekly_post_url) ? `<a href="${escapeHtml(issue.weekly_post_url)}" style="color:#F4E500">Zum Wochenrückblick</a>` : `Wochenrückblick in Vorproduktion: ${escapeHtml(issue.weekly_source_slug)}`;
   return `<style type="text/css">@font-face{font-family:'Inter Herrjurist';src:url('https://raw.githubusercontent.com/Ccan-devoloper/herrjurist/main/fonts/Inter.ttf') format('truetype');font-style:normal;font-weight:100 900}</style>
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;background:#F5F7FA;margin:0;padding:0"><tr><td align="center" style="padding:18px 8px"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:600px;width:100%;background:#FFFFFF;border-collapse:collapse">
 <tr><td align="left" style="background:#FFFFFF;padding:9px 24px 1px;font-family:${FONT}"><img src="${LOGO}" width="300" alt="LexVerse – Portalmonogramm" style="display:block;border:0;width:100%;max-width:300px;height:auto"><div style="text-align:left"><span style="display:inline-block;background:#F4E500;color:#101827;border-radius:20px;padding:8px 11px;font-size:11px;font-weight:900">by herrjurist</span></div></td></tr>
 <tr><td style="background:#FFFFFF;padding:16px 24px 21px;font-family:${FONT}"><div style="font-size:11px;font-weight:800;letter-spacing:.9px;color:#536174;margin-bottom:9px">WOCHENBRIEF ${String(issue.number).padStart(2, '0')} · ${escapeHtml(date.toUpperCase())}</div><h1 style="font-family:${FONT};font-size:35px;line-height:1.11;letter-spacing:-1.2px;font-weight:900;margin:0;color:#101827">${escapeHtml(issue.hook)}</h1><p style="font-size:16px;line-height:1.45;color:#293950;margin:13px 0 0">${escapeHtml(issue.deck)}</p></td></tr>
 <tr><td style="padding:0;background:#101418"><img src="${HERO}" width="600" height="300" alt="Mara, Rex, FORM-7, Flux, Zylla und Brakk im intergalaktischen LexVerse" style="display:block;border:0;width:100%;max-width:600px;height:auto"></td></tr>
-<tr><td style="background:#101418;padding:18px 24px 21px;font-family:${FONT}"><div style="font-size:20px;color:#FFFFFF;font-weight:900">Erst du. Dann die Skizze.</div><p style="font-size:14px;line-height:1.55;color:#E5EAF0;margin:7px 0 0">Lies den Minifall, halte kurz inne und vergleiche deine Lösung. Jeder Fall zeigt dir, warum das Thema in der Klausur zählt. ${weekly}</p></td></tr>
+<tr><td style="background:#101418;padding:18px 24px 21px;font-family:${FONT}"><div style="font-size:20px;color:#FFFFFF;font-weight:900">Erst du. Dann die Skizze.</div><p style="font-size:14px;line-height:1.55;color:#E5EAF0;margin:7px 0 0">Lies den Minifall, halte kurz inne und vergleiche deine Lösung. Jeder Fall zeigt dir, warum das Thema in der Klausur zählt.</p></td></tr>
 ${draft.sections.map(sectionHtml).join('')}
 <tr><td style="background:#101418;padding:25px 24px;font-family:${FONT}"><div style="display:inline-block;background:#F4E500;border-radius:8px;padding:6px 10px;color:#101827;font-size:11px;font-weight:900">DEIN 60-SEKUNDEN-CHECK</div><p style="color:#FFFFFF;font-size:15px;line-height:1.75;margin:14px 0 0">${questions}</p></td></tr>
 <tr><td style="background:#FFFFFF;padding:23px 24px 28px;font-family:${FONT}"><p style="font-size:15px;line-height:1.55;color:#101827;margin:0 0 12px"><strong>Bei welchem Fall musstest du stoppen?</strong> Antworte einfach mit der Nummer. Bis zur nächsten Ausgabe!</p><p style="font-size:15px;font-weight:900;color:#101827;margin:0">Herr Jurist</p><p style="font-size:12px;line-height:1.5;color:#536174;margin:17px 0 0">Lernmaterial zur Examensvorbereitung, keine Rechtsberatung. Die verlinkten Normen und Entscheidungen dienen der eigenen Nachprüfung.</p></td></tr>
