@@ -1,0 +1,895 @@
+{
+  "datum": "2027-03-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "grundr-089",
+        "themaTitel": "Wie prüft man einen Eingriff in Art. 12 GG?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "bgbat-910",
+        "themaTitel": "Wann gilt eine Willenserklärung trotz Zugangshindernis als zugegangen?",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "famerb-516"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "famerb-516"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "revision-798"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:39",
+        "art": "fehler",
+        "themaId": "stpo-927"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:43",
+        "art": "tipp",
+        "themaId": "strafat-308"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "zahl",
+        "themaId": "anklage-857"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-089",
+      "poolTitel": "Wie prüft man einen Eingriff in Art. 12 GG?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 Abs. 1 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2026-12-02",
+        "2027-02-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-910",
+      "poolTitel": "Wann gilt eine Willenserklärung trotz Zugangshindernis als zugegangen?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 132 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-10-11",
+        "2026-12-13",
+        "2027-02-11"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "famerb-516",
+      "poolTitel": "Verfügung über das Vermögen im Ganzen",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1365 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "famerb-516",
+      "poolTitel": "Verfügung über das Vermögen im Ganzen",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1365 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "revision-798",
+      "poolTitel": "Revisionsgutachten: Verfahrensrüge",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 337 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-10"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "stpo-927",
+      "poolTitel": "Wie erzwingt der Verletzte die Anklage? Beschwerde und Klageerzwingungsverfahren",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 171 StPO",
+        "§ 172 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-21",
+        "2027-01-24"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafat-308",
+      "poolTitel": "Wie wirkt der Exzess eines Mittäters?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 2 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-12",
+        "2026-12-25"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "anklage-857",
+      "poolTitel": "Was steht im abstrakten Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2027-01-12",
+        "2027-01-19"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-03-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen aus vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen aus",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 823 Abs. 1 BGB: Rechtsgüter und absolute Rechte – nicht das Vermögen als solches.",
+            "§ 767 Abs. 2 ZPO: Einwand vor Schluss der mündlichen Verhandlung entstanden? Präkludiert.",
+            "Rechtshängigkeit: Die Leistungsklage setzt sich gegen die negative Feststellungsklage durch.",
+            "EBV-Sperre nur bei Vindikationslage – Ausnahmen: § 992 BGB und Fremdbesitzerexzess.",
+            "Stellvertretung: Auch ein Minderjähriger kann Vertreter sein (§ 165 BGB)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Anfangsverdacht zum Ermitteln, hinreichender Tatverdacht zum Anklagen (§ 170 StPO).",
+            "§ 153 StGB: Maßstab ist die Wirklichkeit – was der Zeuge glaubt, betrifft den Vorsatz.",
+            "§ 315b StGB: Inneneingriff nur mit mindestens bedingtem Schädigungsvorsatz.",
+            "Einziehung: Tatertrag brutto – was für die Tat eingesetzt wurde, wird nicht abgezogen.",
+            "Notwehr: Einschränkungen über die Gebotenheit – vier Fallgruppen.",
+            "§§ 257, 258 StGB: Angehörigenprivileg nur bei der Strafvereitelung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Anfechtungsklage: rechtswidrig und in eigenen Rechten verletzt (§ 113 Abs. 1 S. 1 VwGO).",
+            "Belastende Nebenbestimmung: nach dem BVerwG grundsätzlich Anfechtungsklage.",
+            "Konkurrierende Gesetzgebung: Hat der Bund abschließend geregelt?",
+            "Notwendige Beiladung nur, wenn einheitlich entschieden werden muss (§ 65 Abs. 2 VwGO).",
+            "Abschleppen ohne Verkehrszeichen: kein VA – sofortiger Vollzug oder unmittelbare Ausführung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Normenkette: § 839 Abs. 1 S. 1 BGB i. V. m. Art. 34 S. 1 GG.",
+            "Pause: vorher planen, sauber abschließen, wirklich freinehmen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Zahlung nach dem Urteil: Greift § 767 Abs. 2 ZPO?",
+            "Polizei für den Bruder belogen, Beute versteckt: Was ist straflos?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Einwand",
+            "Strafrecht über Merkmale und Privilegien",
+            "Öffentliches Recht über Klageart und Ermächtigung",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – von § 823 Abs. 1 BGB über die Strafvereitelung bis zum Abschleppen ohne Verkehrszeichen. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie in Ruhe ohne Unterlagen durch, gern an einem ruhigen Ostersonntag, und markier dir, was noch wackelt. Speichern für die Wiederholung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Am Ende der Woche zeigt ein kurzer Test, welcher Bereich schon sitzt und welcher noch nicht.",
+        "handlung": "{A} taps four stacked stone tablets one after another with his pointer, while {B} nervously holds one tablet that shows a small crack.",
+        "hinweisRegie": "Place the note in the free space above the cracked tablet, slightly tilted toward it, so the weak area is highlighted without covering {A}'s pointer or {B}'s hands.",
+        "alternative": "{B} checks four glowing lamps on a panel with a small tester, while {A} points to the one lamp that flickers."
+      },
+      "bildSzene": "tapping four tablets, one cracked",
+      "bildSzeneAlt": "testing four lamps, one flickers",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 767 Abs. 2 ZPO",
+        "§ 261 ZPO",
+        "§§ 987 ff. BGB",
+        "§ 165 BGB",
+        "§ 170 StPO",
+        "§ 153 StGB",
+        "§ 315b StGB",
+        "§ 73 StGB",
+        "§ 32 StGB",
+        "§§ 257, 258 StGB",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "Art. 72 GG",
+        "§ 65 VwGO",
+        "Polizei- und Vollstreckungsgesetze der Länder",
+        "§ 839 BGB",
+        "Art. 34 GG",
+        "Themenpool: methodik-904",
+        "Themenpool: mindset-3"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.315Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-089",
+      "slug": "2027-03-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Art. 12 GG: Drei Stufen, drei verschiedene Maßstäbe",
+          "titelZeilen": [
+            "Art. 12 GG:",
+            "Drei Stufen,",
+            "drei Maßstäbe"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erst die Stufe, dann der Maßstab",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "schritte",
+          "titel": "Schutzbereich und Eingriff",
+          "schritte": [
+            {
+              "titel": "Persönlich",
+              "text": "Deutschengrundrecht. Ob und wie EU-Bürger geschützt sind (Art. 18 AEUV), ist umstritten."
+            },
+            {
+              "titel": "Sachlich",
+              "text": "Beruf: auf Dauer angelegte Tätigkeit zur Schaffung und Erhaltung einer Lebensgrundlage. Wahl und Ausübung: ein einheitliches Grundrecht."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Unmittelbar berufsregelnd – oder mittelbar, wenn die Maßnahme eine objektiv berufsregelnde Tendenz hat."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Rechtfertigung",
+          "schritte": [
+            {
+              "titel": "Schranke",
+              "text": "Regelungsvorbehalt des Art. 12 Abs. 1 S. 2 GG – nach dem BVerfG für Wahl und Ausübung."
+            },
+            {
+              "titel": "Stufe bestimmen",
+              "text": "Ausübung (das Wie), subjektive Zulassung (persönliche Voraussetzungen), objektive Zulassung (vom Bewerber nicht beeinflussbar)."
+            },
+            {
+              "titel": "Verhältnismäßigkeit",
+              "text": "Je höher die Stufe, desto gewichtiger der Gemeinwohlbelang. Eingegriffen wird auf der niedrigsten Stufe, die genügt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die drei Maßstäbe",
+          "punkte": [
+            "Ausübung, z. B. Ladenöffnungszeiten: vernünftige Erwägungen des Gemeinwohls.",
+            "Subjektive Zulassung, z. B. Prüfungen: Schutz wichtiger Gemeinschaftsgüter.",
+            "Objektive Zulassung, z. B. Bedarfsprüfung: schwere Gefahren für überragend wichtige Güter."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Die Stufen sind keine starren Schubladen. Wirkt eine Ausübungsregel faktisch wie eine Zulassungsschranke, misst das BVerfG sie strenger. Die Drei-Stufen-Theorie gilt heute als Konkretisierung der Verhältnismäßigkeit. In der Klausur: Stufe begründen, dann abwägen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Stufe, dann der Maßstab: Ausübung – vernünftige Gründe, subjektiv – wichtige Güter, objektiv – schwere Gefahren für überragende Güter."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 12 GG in drei Fragen",
+          "punkte": [
+            "Beruf und Deutscher?",
+            "Eingriff mit berufsregelnder Tendenz?",
+            "Welche Stufe, welcher Maßstab?"
+          ],
+          "icons": [
+            "aktentasche",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Art. 12 GG: drei Stufen, drei verschiedene Maßstäbe. Schutzbereich und Eingriff sind schnell geprüft – entscheidend ist die Rechtfertigung. Regelt der Staat nur das Wie der Berufsausübung, reichen vernünftige Gemeinwohlerwägungen. Subjektive Zulassungsschranken brauchen wichtige Gemeinschaftsgüter, objektive die Abwehr schwerer Gefahren für überragend wichtige Güter. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#berufsfreiheit",
+        "#art12gg",
+        "#dreistufentheorie",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Berufsfreiheit: Schema und drei Stufen",
+      "coverText": "Erst die Stufe, dann der Maßstab",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Je tiefer die Regelung in den Zugang zum Beruf eingreift, desto stärker muss der Grund dafür sein.",
+        "handlung": "{A} lowers a small gate at the lowest of three steps leading to a workshop door, while {B} weighs a heavy stone in her hand at the highest step.",
+        "hinweisRegie": "Place the note in the free space beside the three steps, slightly tilted toward the highest step with the heavy stone, so the rising standard is visible without covering the workshop door.",
+        "alternative": "{B} tests three differently heavy locks on three doors, while {A} hovers beside them and sorts matching keys by size."
+      },
+      "bildSzene": "three steps to workshop door",
+      "bildSzeneAlt": "three locks, keys sorted by size",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Art. 18 AEUV",
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: grundr-089"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-stufen-drei-massstaebe",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.315Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-910",
+      "slug": "2027-03-28-b3",
+      "titelZeilen": [
+        "Brief im Kasten,",
+        "Empfänger im",
+        "Urlaub: zugegangen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Brief im Kasten, Empfänger im Urlaub: zugegangen",
+          "unter": "Zugang · § 130 BGB",
+          "text": "Abwesenheit liegt in der Sphäre des Empfängers.",
+          "norm": "§ 130 Abs. 1 S. 1 BGB",
+          "icon": "umschlag",
+          "sprecher": "Verreist sein schützt nicht vor dem Zugang. Die Kündigung liegt im Briefkasten, der Empfänger ist im Urlaub – und sie ist trotzdem zugegangen. Warum, zeigt § 130 BGB.",
+          "marken": [
+            "Urlaub",
+            "trotzdem zugegangen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Machtbereich",
+          "text": "Die Erklärung gelangt in den Machtbereich des Empfängers – der Briefkasten gehört dazu.",
+          "norm": "§ 130 Abs. 1 S. 1 BGB",
+          "sprecher": "Schritt eins: Eine Erklärung unter Abwesenden geht zu, wenn sie in den Machtbereich des Empfängers gelangt. Der eigene Briefkasten gehört dazu.",
+          "marken": [
+            "Machtbereich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gewöhnliche Umstände",
+          "text": "Entscheidend ist, wann mit Kenntnisnahme zu rechnen ist – nicht, wann er liest.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Dazu muss unter gewöhnlichen Umständen mit der Kenntnisnahme zu rechnen sein. Ob und wann der Empfänger tatsächlich liest, ist egal. Wird spät abends eingeworfen, geht der Brief in der Regel erst am nächsten Tag zu.",
+          "marken": [
+            "Kenntnis möglich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Urlaub, Krankheit, Haft",
+          "text": "Persönliche Verhinderung trägt der Empfänger – der Zugang tritt trotzdem ein.",
+          "norm": null,
+          "sprecher": "Schritt drei: Urlaub, Krankheit oder Haft sind persönliche Hindernisse. Sie gehen zulasten des Empfängers, der Zugang tritt trotzdem ein. Nach dem Bundesarbeitsgericht gilt das grundsätzlich selbst dann, wenn der Absender vom Urlaub weiß.",
+          "marken": [
+            "Sphäre des Empfängers"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Echte Zugangshindernisse",
+          "text": "Annahme grundlos verweigert: zugegangen. Einschreiben nicht abgeholt: neu zustellen.",
+          "norm": "§ 242 BGB",
+          "sprecher": "Schritt vier: Anders bei echten Hindernissen. Verweigert jemand die Annahme grundlos, muss er sich so behandeln lassen, als sei der Brief zugegangen. Holt er ein Einschreiben nicht ab, fehlt der Zugang. Der Absender muss dann unverzüglich erneut zustellen, sonst hilft ihm Treu und Glauben nicht.",
+          "marken": [
+            "§ 242 BGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der sichere Weg: § 132 BGB",
+          "text": "Zustellung durch den Gerichtsvollzieher – dann gilt die Erklärung als zugegangen.",
+          "norm": "§ 132 Abs. 1 BGB",
+          "sprecher": "Wer ganz sicher gehen will, lässt über den Gerichtsvollzieher zustellen. Nach § 132 BGB gilt die Erklärung dann als zugegangen.",
+          "marken": [
+            "Gerichtsvollzieher"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Machtbereich plus mögliche Kenntnis – Abwesenheit ist Risiko des Empfängers.",
+          "norm": "§ 130 Abs. 1 S. 1 BGB",
+          "sprecher": "Merke: Zugang heißt Machtbereich plus Möglichkeit der Kenntnisnahme. Wer verreist, trägt dieses Risiko selbst.",
+          "marken": [
+            "Risiko Empfänger"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jeder Kündigung: erst den Zugang",
+          "text": "Speichern für die nächste BGB-AT-Klausur.",
+          "sprecher": "Speicher dir das für die nächste BGB-AT-Klausur. Und prüf bei jeder Kündigung zuerst: Wann genau ist sie zugegangen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Brief im Kasten, Empfänger im Urlaub: zugegangen. Nach § 130 Abs. 1 S. 1 BGB kommt es darauf an, ob die Erklärung in den Machtbereich gelangt und unter gewöhnlichen Umständen mit Kenntnisnahme zu rechnen ist. Urlaub, Krankheit oder Haft gehen zulasten des Empfängers. Anders bei echten Zugangshindernissen wie dem nicht abgeholten Einschreiben – dort muss der Absender unverzüglich neu zustellen. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#130bgb",
+        "#willenserklärung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zugang trotz Urlaub des Empfängers",
+      "coverText": "Abwesenheit ist sein Risiko",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Der Brief liegt im Machtbereich des Empfängers – dass er verreist ist, ändert daran nichts.",
+        "handlung": "{A} drops a sealed envelope into a mailbox in front of a closed hut, while {B} relaxes far away on a sunny rock with a travel bag beside him.",
+        "hinweisRegie": "Place the note in the free space above the mailbox, slightly tilted toward the envelope sliding in, so the moment of arrival is linked to the note without covering {B} in the distance.",
+        "alternative": "{B} carries a parcel to a locked door and sets it down on the doorstep, while {A} watches the owner's footprints lead away toward the mountains."
+      },
+      "bildSzene": "envelope into mailbox, owner far away",
+      "bildSzeneAlt": "parcel on doorstep, footprints leading away",
+      "quellen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 132 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-910"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "situation-ergebnis",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.317Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-516",
+      "ueberzeile": "Prüfungsfrage Familienrecht",
+      "titel": "Ehemann M verkauft sein Grundstück, fast sein ganzes Vermögen. K weiß das, Ehefrau F stimmt nicht zu. Wirksam?",
+      "optionen": [
+        "Ja – M verfügt nur über sein eigenes Vermögen",
+        "Ja – F hat nur einen Ausgleichsanspruch beim Zugewinn",
+        "Nein – ohne Zustimmung der F schwebend unwirksam"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 1365 BGB",
+        "§ 1366 BGB",
+        "Themenpool: famerb-516"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.317Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-516",
+      "ueberzeile": "Auflösung",
+      "titel": "Ohne Zustimmung der F: schwebend unwirksam",
+      "text": "Im gesetzlichen Güterstand braucht ein Ehegatte die Einwilligung des anderen, um sich zur Verfügung über sein Vermögen im Ganzen zu verpflichten und zu verfügen (§ 1365 Abs. 1 BGB). Das gilt auch für einen Einzelgegenstand, der nahezu das ganze Vermögen ausmacht – nach dem BGH aber nur, wenn der Vertragspartner das weiß. F kann noch genehmigen (§ 1366 BGB).",
+      "norm": "§§ 1365, 1366 BGB",
+      "quellen": [
+        "§ 1365 BGB",
+        "§ 1366 BGB",
+        "Themenpool: famerb-516"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.317Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – M verfügt nur über sein eigenes Vermögen",
+        "Ja – F hat nur einen Ausgleichsanspruch beim Zugewinn",
+        "Nein – ohne Zustimmung der F schwebend unwirksam"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-798",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 344 Abs. 2 S. 2 StPO: Die Verfahrensrüge steht und fällt mit den Tatsachen",
+      "text": "Bei der Verfahrensrüge müssen die den Mangel enthaltenden Tatsachen angegeben werden. Der Vortrag muss so vollständig sein, dass das Revisionsgericht allein anhand der Begründung prüfen kann, ob ein Fehler vorliegt, wenn die Tatsachen zutreffen. Anders die Sachrüge: Dort genügt die allgemeine Rüge der Verletzung materiellen Rechts.",
+      "norm": "§ 344 Abs. 2 StPO",
+      "quellen": [
+        "§ 344 Abs. 2 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-798"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.317Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-927",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Verfahren eingestellt: sofort zum OLG?",
+      "falsch": "Die Staatsanwaltschaft stellt nach § 170 Abs. 2 StPO ein. Der Verletzte beantragt direkt beim OLG die gerichtliche Entscheidung.",
+      "richtigText": "Zuerst die Vorschaltbeschwerde: binnen zwei Wochen nach Bekanntmachung an den vorgesetzten Beamten der Staatsanwaltschaft (§ 172 Abs. 1 StPO). Erst gegen dessen ablehnenden Bescheid folgt binnen eines Monats der Antrag auf gerichtliche Entscheidung beim OLG (§ 172 Abs. 2 StPO) – von einem Rechtsanwalt unterzeichnet, mit Tatsachen und Beweismitteln (§ 172 Abs. 3 StPO).",
+      "quellen": [
+        "§ 170 Abs. 2 StPO",
+        "§ 171 StPO",
+        "§ 172 StPO",
+        "Themenpool: stpo-927"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.317Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-308",
+      "ueberzeile": "Klausurtipp Strafrecht AT",
+      "titel": "Exzess? Erst den Tatplan auslegen – nicht jede Abweichung ist einer",
+      "text": "Bevor du einen Mittäterexzess annimmst, prüf, wie weit der gemeinsame Tatplan reicht. Nach der Rspr. werden auch Handlungen zugerechnet, mit denen nach den Umständen zu rechnen war, und Abweichungen, die dem anderen gleichgültig waren. Erst was darüber hinausgeht, trifft nur den Handelnden.",
+      "quellen": [
+        "§ 25 Abs. 2 StGB",
+        "Themenpool: strafat-308"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-857",
+      "ueberzeile": "4 Punkte Anklageschrift",
+      "titel": "Diese Formulierungen im abstrakten Anklagesatz zeigen Beteiligung und Konkurrenzen",
+      "text": "Der abstrakte Anklagesatz gibt nicht nur die Tatbestandsmerkmale wieder. Er zeigt auch, wie beteiligt wurde und wie die Taten zueinander stehen (§ 200 Abs. 1 S. 1 StPO). Formulierungen im Detail je nach Landespraxis.",
+      "punkte": [
+        "Mittäterschaft: „gemeinschaftlich handelnd“",
+        "Versuch: ausdrücklich „versucht“",
+        "Tateinheit: „durch dieselbe Handlung“",
+        "Tatmehrheit: „durch … selbständige Handlungen“"
+      ],
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 25 Abs. 2 StGB",
+        "§§ 52, 53 StGB",
+        "Themenpool: anklage-857"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:51.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
