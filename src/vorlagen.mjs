@@ -616,8 +616,11 @@ function fotoBuehne(folie, ziel = BUEHNE_BEITRAG) {
     const rand = bleed > 0 ? `-${Math.round(bleed)}px` : "0";
     style.push(`left:${rand}`);
     style.push(`right:${rand}`);
-    style.push(topRaw !== null ? `top:${Math.round(topRaw)}px` : "top:auto");
-    style.push(bottomRaw !== null ? `bottom:${Math.round(bottomRaw)}px` : "bottom:0");
+    /* Teaser sind dauerhaft datumslos kante-an-kante. Selbst falls ein
+       künftiges Cover Positionswerte mitliefert, dürfen die den Story-Teaser
+       nicht von der Außenkante wegschieben. */
+    style.push(teaserKanteAnKante ? "top:auto" : (topRaw !== null ? `top:${Math.round(topRaw)}px` : "top:auto"));
+    style.push(teaserKanteAnKante ? "bottom:0" : (bottomRaw !== null ? `bottom:${Math.round(bottomRaw)}px` : "bottom:0"));
     style.push("width:auto");
     style.push("height:auto");
     style.push("transform:none");

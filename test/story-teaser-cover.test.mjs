@@ -38,3 +38,26 @@ test("Reel-Teaser übernimmt den Freisteller vom Reel-Objekt", () => {
   }, "s3");
   assert.equal(teaser.bild, motiv);
 });
+
+test("Kante-an-Kante ist feste Teaser-Regel und ignoriert künftige Cover-Offsets", () => {
+  const motiv = "data:image/png;base64,zukunft";
+  const html = storyHtml({
+    slot: "s99",
+    art: "teaser",
+    fach: "zpo",
+    klausur: 1,
+    titel: "Zukünftiger Beitrag",
+    bild: motiv,
+    bildFrei: true,
+    bildTyp: "charakter",
+    coverBildTop: 700,
+    coverBildBottom: 180,
+    coverBildX: 0.2,
+    pille: "Jetzt im Feed",
+  }, kontext({ fach: "zpo", klausur: 1 }));
+
+  assert.match(html, /class="frei charakter edge-to-edge fit-width"/);
+  assert.match(html, /left:0;right:0;top:auto;bottom:0/);
+  assert.ok(!html.includes("bottom:180px"));
+  assert.ok(!html.includes("top:700px"));
+});
