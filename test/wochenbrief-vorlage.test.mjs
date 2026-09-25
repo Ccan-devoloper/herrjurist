@@ -59,7 +59,7 @@ test('ein Thema ohne Herkunftsbeitrag oder Rechtsquelle scheitert und HTML wird 
   const draft = validDraft();
   draft.sections[0].cases[0].instagram_post_url = '';
   draft.sections[0].cases[0].sources = [];
-  assert.match(pruefeWochenbrief(draft).join(' '), /instagram_post_url.*sources/);
+  assert.match(pruefeWochenbrief(draft).join(' '), /Herkunftsbeitrags.*sources/);
   assert.throws(() => rendereWochenbrief(draft));
   draft.sections[0].cases[0].instagram_post_url = 'https://www.instagram.com/p/THEMENBEITRAG/';
   draft.sections[0].cases[0].sources = [{ label: '§ 433 BGB', url: 'https://www.gesetze-im-internet.de/bgb/__433.html' }];
@@ -72,4 +72,16 @@ test('Themenzahl und Entwurfsstatus sind verbindlich', () => {
   draft.issue.topic_count = 8;
   draft.status = 'publish';
   assert.match(pruefeWochenbrief(draft).join(' '), /status muss draft.*8 Themen angekündigt/);
+});
+
+test('vorproduzierte Beiträge ohne öffentliche Permalinks bleiben referenzierbar', () => {
+  const draft = validDraft();
+  delete draft.issue.weekly_post_url;
+  draft.issue.weekly_source_slug = '2026-09-27-b1';
+  delete draft.sections[0].cases[0].instagram_post_url;
+  draft.sections[0].cases[0].instagram_source_slug = '2026-09-24-b2';
+  assert.deepEqual(pruefeWochenbrief(draft), []);
+  const html = rendereWochenbrief(draft);
+  assert.match(html, /Vorproduktion 2026-09-24-b2/);
+  assert.match(html, /Wochenrückblick in Vorproduktion: 2026-09-27-b1/);
 });
