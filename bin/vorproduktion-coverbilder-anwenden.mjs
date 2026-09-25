@@ -35,6 +35,61 @@ const ZUORDNUNG = new Map([
   ["va erledigt.png", ["2026-09-28", "b3"]],
 ].map(([name, ziel]) => [name.toLowerCase(), ziel]));
 
+function zuordnungFuerDatei(name) {
+  const alt = ZUORDNUNG.get(String(name || "").toLowerCase());
+  if (alt) return alt;
+  const m = String(name || "").match(/^(\d{4}-\d{2}-\d{2})-(b[123])(?:-|_)/i);
+  return m ? [m[1], m[2].toLowerCase()] : null;
+}
+
+function triggerZipUrls() {
+  try {
+    const trigger = fs.readFileSync(path.resolve("vorproduktion/coverbilder.trigger"), "utf8");
+    return trigger
+      .split(/\r?\n/)
+      .map((x) => x.trim())
+      .filter((x) => /^zipUrl=/i.test(x))
+      .map((x) => x.replace(/^zipUrl=/i, "").trim())
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
+async function triggerZipsImportieren(coverDir) {
+  const urls = triggerZipUrls();
+  if (!urls.length) return 0;
+  const temp = fs.mkdtempSync(path.join(os.tmpdir(), "herrjurist-cover-zips-"));
+  let anzahl = 0;
+  for (let i = 0; i < urls.length; i++) {
+    const url = new URL(urls[i]);
+    if (url.protocol !== "https:") throw new Error(`Unsichere Cover-ZIP-URL: ${urls[i]}`);
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Cover-ZIP konnte nicht geladen werden: ${res.status} ${url.host}`);
+    const zip = path.join(temp, `cover-${i + 1}.zip`);
+    fs.writeFileSync(zip, Buffer.from(await res.arrayBuffer()));
+    const out = execFileSync("python3", ["-c", `
+import json,os,shutil,sys,zipfile
+src,dst=sys.argv[1],sys.argv[2]
+n=0
+with zipfile.ZipFile(src) as z:
+    for info in z.infolist():
+        name=os.path.basename(info.filename)
+        if not name.lower().endswith(".png"):
+            continue
+        target=os.path.join(dst,name)
+        with z.open(info) as s, open(target,"wb") as d:
+            shutil.copyfileobj(s,d)
+        n+=1
+print(json.dumps({"count":n}))
+`, zip, coverDir], { encoding: "utf8" });
+    const meta = JSON.parse(out);
+    anzahl += meta.count || 0;
+  }
+  console.log(`✓ ${anzahl} Cover-PNGs aus ${urls.length} Trigger-ZIP(s) importiert`);
+  return anzahl;
+}
+
 /* Gezielte Layoutkorrekturen für manuell gelieferte Charakter-Szenen. Die
    Werte steuern nur lokale Geometrie; kein Provider wird aufgerufen. */
 const RENDER_PROFIL = new Map([
@@ -235,12 +290,13 @@ function motivSetzen(obj, dataUrl, meta, profil = null) {
 const hosting = new Hosting({ pushen: true }).vorbereiten();
 const coverDir = path.join(hosting.dir, "vorproduktion", "coverbilder");
 if (!fs.existsSync(coverDir)) throw new Error(`Coverbilder-Ordner fehlt: ${coverDir}`);
+await triggerZipsImportieren(coverDir);
 
 const slotsFilter = triggerSlots();
 const pngs = fs.readdirSync(coverDir)
   .filter((x) => /\.png$/i.test(x))
   .filter((name) => {
-    const ziel = ZUORDNUNG.get(name.toLowerCase());
+    const ziel = zuordnungFuerDatei(name);
     if (ziel && COVER_LOCKS.has(`${ziel[0]}/${ziel[1]}`)) {
       console.log(`↷ ${ziel[0]} ${ziel[1]} gesperrt: ${COVER_LOCKS.get(`${ziel[0]}/${ziel[1]}`).reason}`);
       return false;
@@ -257,12 +313,18 @@ if (!pngs.length && !rohbild26b1Ausgewaehlt) {
 if (slotsFilter?.size) console.log(`Gezielter Coverlauf: ${[...slotsFilter].join(", ")}`);
 
 const tage = new Map();
-for (const datum of ["2026-09-24", "2026-09-25", "2026-09-26", "2026-09-27", "2026-09-28"]) {
-  const p = path.join(hosting.dir, "vorproduktion", `${datum}.json`);
-  tage.set(datum, JSON.parse(fs.readFileSync(p, "utf8")));
+const vorproduktionDir = path.join(hosting.dir, "vorproduktion");
+for (const name of fs.readdirSync(vorproduktionDir).sort()) {
+  const m = name.match(/^(\d{4}-\d{2}-\d{2})\.json$/);
+  if (!m) continue;
+  tage.set(m[1], JSON.parse(fs.readFileSync(path.join(vorproduktionDir, name), "utf8")));
 }
 
-const belegt = new Set([...ZUORDNUNG.values()].map(([d, s]) => `${d}/${s}`));
+for (const name of pngs) {
+  const ziel = zuordnungFuerDatei(name);
+  if (ziel) zuordnung.set(name.toLowerCase(), ziel);
+}
+const belegt = new Set([...zuordnung.values()].map(([d, s]) => `${d}/${s}`));
 const kandidaten = [];
 for (const [datum, tag] of tage) {
   for (const slot of ["b1", "b2", "b3"]) {
