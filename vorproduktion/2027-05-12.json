@@ -1,0 +1,865 @@
+{
+  "datum": "2027-05-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-754",
+        "themaTitel": "Betrug: Täuschung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-614",
+        "themaTitel": "Meinungsfreiheit",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bgbat-159",
+        "themaTitel": "Was ist eine geltungserhaltende Reduktion und warum ist sie bei AGB unzulässig?",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "arbeit-145"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "arbeit-145"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "grundr-611"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "streitstand",
+        "themaId": "methodik-937"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "merksatz",
+        "themaId": "bereich-217"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "begriff",
+        "themaId": "staat-079"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-754",
+      "poolTitel": "Betrug: Täuschung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-09",
+        "2027-04-10",
+        "2027-04-10"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-614",
+      "poolTitel": "Meinungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 I 1 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2027-04-23",
+        "2027-04-23"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-159",
+      "poolTitel": "Was ist eine geltungserhaltende Reduktion und warum ist sie bei AGB unzulässig?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 306 BGB",
+        "§ 307 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-02"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "arbeit-145",
+      "poolTitel": "Wann ist ein Betriebsübergang nach § 613a BGB gegeben?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 613a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "arbeit-145",
+      "poolTitel": "Wann ist ein Betriebsübergang nach § 613a BGB gegeben?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 613a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "grundr-611",
+      "poolTitel": "Menschenwürde und Objektformel",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-15",
+        "2027-02-16"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "methodik-937",
+      "poolTitel": "Analogie und teleologische Reduktion: Voraussetzungen und saubere Formulierung",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [
+        "Art. 103 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-10",
+        "2027-03-11",
+        "2027-04-03"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bereich-217",
+      "poolTitel": "Was ist die verschärfte Haftung nach § 819 BGB?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 818 Abs. 4 BGB",
+        "§ 819 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-29"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "staat-079",
+      "poolTitel": "Was sind die wichtigsten Ausprägungen des Rechtsstaatsprinzips?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 19 Abs. 4 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-01",
+        "2027-02-22",
+        "2027-02-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-754",
+      "slug": "2027-05-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Unbemerkt vollgetankt, nie gezahlt – und doch nur Versuch",
+          "titelZeilen": [
+            "Unbemerkt",
+            "vollgetankt, nie",
+            "gezahlt – und doch",
+            "nur Versuch"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Ohne Wahrnehmung kein Irrtum",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A fährt an eine Selbstbedienungstankstelle, tankt für 80 € und fährt davon. Zahlen wollte er von Anfang an nicht. Das Personal im Kassenhaus hat ihn beim Tanken gar nicht bemerkt. Hat A einen vollendeten Betrug begangen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Täuschung braucht einen Adressaten",
+              "text": "Wer tankt, erklärt konkludent, zahlen zu wollen. Getäuscht wird aber nur, wer diese Erklärung auch wahrnimmt – ein Mensch, kein Automat."
+            },
+            {
+              "titel": "Kein Irrtum, keine Verfügung",
+              "text": "Das Personal hat nichts bemerkt, also auch keine Fehlvorstellung und keine Verfügung durch Freigabe der Zapfsäule."
+            },
+            {
+              "titel": "Tatentschluss und Ansetzen",
+              "text": "A wollte das Personal über seine Zahlungsbereitschaft täuschen und hat dazu unmittelbar angesetzt – versuchter Betrug."
+            },
+            {
+              "titel": "Wurde er bemerkt?",
+              "text": "Hätte das Personal A beim Tanken gesehen und die Säule freigegeben, läge nach dem BGH ein vollendeter Betrug vor."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die konkludente Täuschung über den Zahlungswillen richtig erkennen – und dann die Vollendung einfach annehmen. Täuschung, Irrtum und Verfügung hängen an einem Menschen, der etwas wahrnimmt. Bleibt der Täter unbemerkt, fehlt schon der Irrtum."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Mangels Irrtum und Verfügung ist der Betrug nicht vollendet. A hat sich nach der Rspr. wegen versuchten Betrugs strafbar gemacht (§§ 263 Abs. 1, 2, 22, 23 StGB). Fasst jemand den Entschluss, nicht zu zahlen, erst nach dem Tanken, fehlt es schon an einer Täuschung beim Tanken."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer unbemerkt tankt und nicht zahlt, begeht nach dem BGH regelmäßig nur versuchten Betrug – ohne Wahrnehmung kein Irrtum."
+        },
+        {
+          "art": "cta",
+          "titel": "An der Zapfsäule drei Fragen",
+          "punkte": [
+            "Zahlungswille schon beim Tanken?",
+            "Hat das Personal etwas bemerkt?",
+            "Vollendet oder nur versucht?"
+          ],
+          "icons": [
+            "auto",
+            "person",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Vollgetankt, nicht gezahlt, niemand hat es gesehen – vollendeter Betrug? Nein. Die konkludente Erklärung, zahlen zu wollen, muss ein Mensch wahrnehmen. Bemerkt das Personal den Täter nicht, fehlen Irrtum und Verfügung: Nach dem BGH bleibt es regelmäßig beim versuchten Betrug. Und wer den Entschluss erst nach dem Tanken fasst, täuscht beim Tanken gar nicht. Speichern für den nächsten Tankstellenfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#betrug",
+        "#263stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tankstellenfall: unbemerkt getankt",
+      "coverText": "Ohne Wahrnehmung kein Irrtum",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wo niemand etwas bemerkt, kann auch niemand irren – der Betrug bleibt im Versuch stecken.",
+        "handlung": "{A} hurriedly hangs a fuel nozzle back at a lonely pump at night, while {B} inside a small kiosk window looks the other way, absorbed in sorting items on a shelf.",
+        "hinweisRegie": "Place the note in the free space between the pump and the kiosk window, slightly tilted toward {B}'s turned head, so the missing perception is the focus without covering {A}'s face.",
+        "alternative": "{B} holds up a blank observation notebook in an empty booth, while {A} drives off in the background past an unlit pump."
+      },
+      "bildSzene": "nozzle hung back, cashier looks away",
+      "bildSzeneAlt": "blank observation notebook in booth",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 22 StGB",
+        "§ 23 StGB",
+        "Themenpool: strafbt-754"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.132Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-614",
+      "slug": "2027-05-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 130 Abs. 4 StGB: kein allgemeines Gesetz – und doch verfassungsgemäß",
+          "titelZeilen": [
+            "§ 130 Abs. 4 StGB:",
+            "kein allgemeines",
+            "Gesetz – und doch",
+            "verfassungsgemäß"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Die Ausnahme steckt in Art. 5 GG",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A wird verurteilt, weil er öffentlich die nationalsozialistische Gewalt- und Willkürherrschaft gebilligt und dadurch den öffentlichen Frieden gestört hat (§ 130 Abs. 4 StGB). Er rügt Art. 5 Abs. 1 S. 1 GG. Ist die Norm ein „allgemeines Gesetz“ im Sinne des Art. 5 Abs. 2 GG?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Schutzbereich",
+              "text": "Die Billigung ist ein Werturteil, also eine Meinung. Geschützt ist sie unabhängig davon, ob sie wertvoll oder verwerflich ist."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Die Strafdrohung und die Verurteilung knüpfen an die Äußerung an."
+            },
+            {
+              "titel": "Allgemeines Gesetz?",
+              "text": "Allgemein ist ein Gesetz, das sich nicht gegen eine bestimmte Meinung richtet, sondern ein Rechtsgut schlechthin schützt."
+            },
+            {
+              "titel": "Hier: nein",
+              "text": "§ 130 Abs. 4 StGB erfasst nur Äußerungen mit einer bestimmten inhaltlichen Richtung – Sonderrecht gegen eine Meinung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Wendung",
+          "text": "Nach dem BVerfG ist § 130 Abs. 4 StGB trotzdem mit Art. 5 GG vereinbar. Wegen des einzigartigen Unrechts der NS-Herrschaft ist Art. 5 Abs. 1 und 2 GG eine Ausnahme für Normen immanent, die ihre propagandistische Gutheißung begrenzen. Die Norm muss aber verhältnismäßig sein und eng ausgelegt werden."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Entweder wird § 130 Abs. 4 StGB vorschnell als allgemeines Gesetz eingeordnet – oder aus dem fehlenden „allgemein“ direkt die Verfassungswidrigkeit gefolgert. Beides greift zu kurz. Die Ausnahme gilt nur für diesen besonderen Fall und nicht für andere Meinungsverbote."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 130 Abs. 4 StGB ist Sonderrecht gegen eine Meinung – nach dem BVerfG aber als Ausnahme zulässig, die Art. 5 GG selbst enthält."
+        },
+        {
+          "art": "cta",
+          "titel": "Schranke in drei Fragen",
+          "punkte": [
+            "Richtet sich die Norm gegen eine Meinung?",
+            "Greift die NS-Ausnahme?",
+            "Ist der Eingriff verhältnismäßig?"
+          ],
+          "icons": [
+            "waage",
+            "verbot",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "§ 130 Abs. 4 StGB richtet sich gegen eine bestimmte Meinung – ein allgemeines Gesetz im Sinne des Art. 5 Abs. 2 GG ist er deshalb nicht. Verfassungswidrig ist er trotzdem nicht: Nach dem BVerfG ist Art. 5 GG wegen des einzigartigen Unrechts der NS-Herrschaft eine Ausnahme für solche Normen immanent. Die Norm muss verhältnismäßig sein und eng ausgelegt werden. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#meinungsfreiheit",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 130 Abs. 4 StGB und die Meinungsfreiheit",
+      "coverText": "Die Ausnahme steckt in Art. 5 GG",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Eine Norm gegen eine bestimmte Meinung ist kein allgemeines Gesetz – und kann trotzdem ausnahmsweise zulässig sein.",
+        "handlung": "{A} points at a single narrow gate set into an otherwise open fence line, while {B} stands next to it and holds it firmly closed with one hand.",
+        "hinweisRegie": "Place the note in the free space above the single narrow gate, slightly tilted toward it, so the one exception stands out without covering {B}'s hand or the open fence line.",
+        "alternative": "{B} draws one small, clearly bordered square inside a large open field while {A} explains it with his pointer."
+      },
+      "bildSzene": "single closed gate in open fence",
+      "bildSzeneAlt": "bordered square in open field",
+      "quellen": [
+        "Art. 5 Abs. 1 S. 1 GG",
+        "Art. 5 Abs. 2 GG",
+        "§ 130 Abs. 4 StGB",
+        "Themenpool: grundr-614"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.133Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-159",
+      "slug": "2027-05-12-b3",
+      "titelZeilen": [
+        "Zu weite Klausel?",
+        "Das Gericht kürzt",
+        "sie nicht zurecht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zu weite Klausel? Das Gericht kürzt sie nicht zurecht",
+          "unter": "AGB · § 306 BGB",
+          "text": "Keine geltungserhaltende Reduktion.",
+          "norm": "§ 306 BGB",
+          "icon": "dokument",
+          "sprecher": "Das Gericht kürzt eine zu weite AGB-Klausel nicht. Sie fällt ganz weg – und das ist Absicht.",
+          "marken": [
+            "ganz oder gar nicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "AGB feststellen",
+          "text": "Vorformuliert, für viele Verträge, vom Verwender gestellt.",
+          "norm": "§ 305 Abs. 1 BGB",
+          "sprecher": "Schritt eins: Liegen AGB vor? Vorformulierte Vertragsbedingungen für eine Vielzahl von Verträgen, die der Verwender stellt.",
+          "marken": [
+            "§ 305 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Inhaltskontrolle",
+          "text": "§§ 309, 308, dann § 307 BGB.",
+          "norm": "§§ 307–309 BGB",
+          "sprecher": "Schritt zwei: die Inhaltskontrolle. Erst die Klauselverbote ohne Wertung, dann die mit Wertung, zuletzt die Generalklausel des Paragraf 307. Ist die Klausel zu weit, ist sie unwirksam.",
+          "marken": [
+            "309 · 308 · 307"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Keine Reduktion",
+          "text": "Die Klausel wird nicht auf das gerade noch Zulässige gekürzt.",
+          "norm": null,
+          "sprecher": "Schritt drei: Das Gericht kürzt die Klausel nicht auf das gerade noch Zulässige. Sonst könnte der Verwender risikolos überziehen. Im schlimmsten Fall bekäme er ja immer noch das Erlaubte.",
+          "marken": [
+            "kein Risiko-Rabatt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vertrag bleibt, Gesetz gilt",
+          "text": "Die Lücke füllt das dispositive Recht.",
+          "norm": "§ 306 Abs. 1, 2 BGB",
+          "sprecher": "Schritt vier: die Rechtsfolge. Der Vertrag bleibt im Übrigen wirksam, an die Stelle der Klausel tritt das Gesetz. So steht es in Paragraf 306.",
+          "marken": [
+            "§ 306 BGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Aber: teilbare Klauseln",
+          "text": "Blue-pencil-Test: Streichen, was unwirksam ist – bleibt der Rest sinnvoll?",
+          "norm": null,
+          "sprecher": "Eine Ausnahme: teilbare Klauseln. Lässt sich der unwirksame Teil einfach streichen und bleibt der Rest verständlich und sinnvoll, gilt der Rest. Man nennt das den Blue-pencil-Test.",
+          "marken": [
+            "Blue-pencil-Test"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Zu weit heißt ganz unwirksam – außer bei teilbaren Klauseln.",
+          "norm": "§ 306 BGB",
+          "sprecher": "Merke: Zu weit heißt ganz unwirksam. Der Vertrag bleibt, das Gesetz füllt die Lücke. Nur teilbare Klauseln bleiben zum Teil bestehen.",
+          "marken": [
+            "ganz unwirksam"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst streichen, dann ersetzen",
+          "text": "Speichern für die nächste AGB-Prüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste AGB-Prüfung. Und frag immer: Was gilt stattdessen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Eine AGB-Klausel geht zu weit – kürzt das Gericht sie auf das gerade noch Zulässige? Nein. Eine geltungserhaltende Reduktion gibt es nicht, sonst könnte der Verwender risikolos überziehen. Die Klausel ist ganz unwirksam, der Vertrag bleibt, und an ihre Stelle tritt das Gesetz (§ 306 BGB). Ausnahme: teilbare Klauseln, bei denen nach dem Streichen ein sinnvoller Rest bleibt. Speichern für die nächste AGB-Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#agb",
+        "#306bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "AGB: keine geltungserhaltende Reduktion",
+      "coverText": "Ganz unwirksam, Gesetz gilt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Eine zu weit gefasste Klausel wird nicht passend gestutzt, sondern fällt ganz weg und das Gesetz springt ein.",
+        "handlung": "{A} lifts an oversized, overreaching panel out of a frame and discards it, while {B} slides a plain standard-sized panel into the empty slot.",
+        "hinweisRegie": "Place the note in the free space beside the frame where the standard panel slides in, slightly tilted toward it, without covering {A}'s hands or the discarded oversized panel.",
+        "alternative": "{B} tries to trim an oversized coat with scissors, while {A} simply swaps it for a plain coat from a standard rack."
+      },
+      "bildSzene": "oversized panel swapped for standard",
+      "bildSzeneAlt": "oversized coat swapped from rack",
+      "quellen": [
+        "§ 305 BGB",
+        "§ 306 BGB",
+        "§ 307 BGB",
+        "§ 308 BGB",
+        "§ 309 BGB",
+        "Themenpool: bgbat-159"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-145",
+      "ueberzeile": "Prüfungsfrage Arbeitsrecht",
+      "titel": "Der Betrieb geht auf E über. Arbeitnehmer A will nicht zu E wechseln. Kann er das verhindern?",
+      "optionen": [
+        "Nein – das Arbeitsverhältnis geht zwingend über",
+        "Nur, wenn der Erwerber E zustimmt",
+        "Ja – durch schriftlichen Widerspruch binnen eines Monats"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 613a BGB",
+        "Themenpool: arbeit-145"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-145",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – A kann dem Übergang widersprechen",
+      "text": "Der Erwerber tritt in die Arbeitsverhältnisse ein (§ 613a Abs. 1 S. 1 BGB). Der Arbeitnehmer kann aber binnen eines Monats nach Zugang der Unterrichtung schriftlich widersprechen (§ 613a Abs. 6 BGB). Dann bleibt er beim Veräußerer – mit dem Risiko einer betriebsbedingten Kündigung, wenn es dort keinen Platz mehr gibt. Ist die Unterrichtung fehlerhaft, läuft die Frist nicht an.",
+      "norm": "§ 613a Abs. 5, 6 BGB",
+      "quellen": [
+        "§ 613a BGB",
+        "Themenpool: arbeit-145"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.134Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – das Arbeitsverhältnis geht zwingend über",
+        "Nur, wenn der Erwerber E zustimmt",
+        "Ja – durch schriftlichen Widerspruch binnen eines Monats"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-611",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 1 Abs. 1 GG: Leben gegen Leben verrechnen darf der Staat nicht",
+      "text": "Der Staat muss die Würde achten und schützen. Nach dem BVerfG darf er deshalb kein entführtes Flugzeug mit unbeteiligten Passagieren abschießen, um andere Menschen am Boden zu retten: Die Passagiere würden zum bloßen Mittel der Rettung anderer. Die entsprechende Ermächtigung im Luftsicherheitsgesetz war mit Art. 2 Abs. 2 S. 1 i.V.m. Art. 1 Abs. 1 GG unvereinbar.",
+      "norm": "Art. 1 Abs. 1 GG",
+      "quellen": [
+        "Art. 1 Abs. 1 GG",
+        "Art. 2 Abs. 2 S. 1 GG",
+        "Themenpool: grundr-611"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-937",
+      "ueberzeile": "Streitstand Methodik",
+      "titel": "Unfall nicht bemerkt, weggefahren, später davon erfahren: „berechtigt oder entschuldigt“?",
+      "norm": "Art. 103 Abs. 2 GG",
+      "optionen": [
+        "Frühere Rspr. der Strafgerichte: Ja – auch das unvorsätzliche Entfernen fällt darunter.",
+        "BVerfG: Nein – das geht über den möglichen Wortsinn hinaus und verstößt gegen Art. 103 Abs. 2 GG."
+      ],
+      "text": "Klassiker zur Wortlautgrenze: Auslegung endet beim möglichen Wortsinn, danach beginnt die verbotene Analogie zulasten des Täters. „Unvorsätzlich“ ist nicht „berechtigt oder entschuldigt“. Klausur: Folge dem BVerfG – wer den Unfall nicht bemerkt hat, ist nicht aus § 142 Abs. 2 StGB strafbar.",
+      "quellen": [
+        "§ 142 StGB",
+        "Art. 103 Abs. 2 GG",
+        "§ 1 StGB",
+        "Themenpool: methodik-937"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-217",
+      "ueberzeile": "Merksatz Bereicherungsrecht",
+      "titel": "Wer weiß, dass er nichts behalten darf, kann sich nicht auf Entreicherung berufen",
+      "text": "Ab Kenntnis des fehlenden Rechtsgrundes haftet der Empfänger nach den allgemeinen Vorschriften (§§ 819 Abs. 1, 818 Abs. 4 BGB). Den Einwand des § 818 Abs. 3 BGB verliert er für spätere Vermögenseinbußen.",
+      "norm": "§ 819 Abs. 1 BGB · § 818 Abs. 4 BGB",
+      "quellen": [
+        "§ 818 BGB",
+        "§ 819 BGB",
+        "Themenpool: bereich-217"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-079",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Vorrang des Gesetzes: kein Handeln gegen das Gesetz – auch ohne Eingriff",
+      "text": "Die Verwaltung ist an Gesetz und Recht gebunden (Art. 20 Abs. 3 GG). Sie darf deshalb nie gegen geltende Gesetze handeln – das gilt für jedes Verwaltungshandeln, auch für Leistungen. Davon zu trennen ist der Vorbehalt des Gesetzes: Er fragt, ob die Verwaltung überhaupt eine gesetzliche Grundlage braucht, vor allem für Eingriffe.",
+      "norm": "Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-079"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:45:23.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
