@@ -144,3 +144,7 @@ Free-Tarif enthalten.
   noch nicht. Erst kommt die Frage, ob sich jemand einträgt.
 - **Kein Aufruf in den Beiträgen.** Der Bot verweist noch nirgends auf die
   Seite. Das ist eine Entscheidung für danach, nicht für den Aufbau.
+
+## LexVerse-Wochenbrief als Entwurf
+
+Der Wochenrückblick-Brief mit Minifällen ist ein eigenständiges redaktionelles Format. Aufbau, formale Prüfregeln, lokaler HTML-Renderer und Schritte zur verschlüsselten Vorschau stehen in [WOCHENBRIEF-REDAKTION.md](WOCHENBRIEF-REDAKTION.md). Das hier beschriebene Anmeldeexperiment verschickt keine solchen Wochenbriefe.
