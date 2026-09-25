@@ -1,0 +1,894 @@
+{
+  "datum": "2027-06-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "arbeit-254",
+        "themaTitel": "Wie haftet der Arbeitnehmer bei betrieblich veranlasster Tätigkeit?",
+        "fach": "arbeit",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "revision-878",
+        "themaTitel": "Was beweist das Hauptverhandlungsprotokoll?",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "schuldbt-197"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "schuldbt-197"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "schuldbt-124"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "fehler",
+        "themaId": "zpo-917"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "tipp",
+        "themaId": "gesetzs-209"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:13",
+        "art": "zahl",
+        "themaId": "zpo-051"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "arbeit-254",
+      "poolTitel": "Wie haftet der Arbeitnehmer bei betrieblich veranlasster Tätigkeit?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 619a BGB",
+        "§ 254 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-03-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-878",
+      "poolTitel": "Was beweist das Hauptverhandlungsprotokoll?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 274 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": true,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2027-02-17",
+        "2027-04-22"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-197",
+      "poolTitel": "Wann ist eine Eigenbedarfskündigung wirksam?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 573 Abs. 2 Nr. 2 BGB",
+        "§ 573c BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-23",
+        "2027-02-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-197",
+      "poolTitel": "Wann ist eine Eigenbedarfskündigung wirksam?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 573 Abs. 2 Nr. 2 BGB",
+        "§ 573c BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-23",
+        "2027-02-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-124",
+      "poolTitel": "Wie grenzt man Miete und Leihe ab?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 535 BGB",
+        "§ 598 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "zpo-917",
+      "poolTitel": "Gewillkürter Parteiwechsel: Nach welchen Regeln kommt die neue Partei in den Prozess?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 263 ZPO",
+        "§ 269 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-08",
+        "2027-02-06",
+        "2027-04-07"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "gesetzs-209",
+      "poolTitel": "Was ist der Fremdbesitzerexzess?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 991 Abs. 2 BGB",
+        "§ 993 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-18",
+        "2026-11-03",
+        "2026-12-24"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-31",
+        "2027-03-05",
+        "2027-04-04"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-06-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Beiträge, vier Lernbereiche",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Beiträge,",
+            "vier Lernbereiche"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Rom I-VO: Art. 5–8, Rechtswahl, Katalog, charakteristische Leistung – in dieser Reihenfolge.",
+            "§ 935 BGB: Weggabe durch Minderjährige – natürlicher Wille oder Minderjährigenschutz?",
+            "Widerklage: Einmal erhoben, überlebt sie die Rücknahme der Klage.",
+            "Klagearten: Titel, Klärung oder neue Rechtslage – das Ziel entscheidet.",
+            "Fremde Sache gepfändet: Eigentum über § 771 ZPO, nicht § 766 ZPO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Verdeckungsmord: Nach der Rspr. auch durch Unterlassen möglich.",
+            "Notwehr nach Provokation: erst ausweichen, dann Schutzwehr, zuletzt Trutzwehr.",
+            "Hehlerei: Sich verschaffen nur im Einvernehmen mit dem Vortäter.",
+            "§ 97 StPO: Kein Schutz bei Beteiligungsverdacht oder Verstrickung.",
+            "§ 267 StGB: Geschützt ist die Echtheit, nicht die Wahrheit."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Klageschrift: Antrag ist nur Soll-Inhalt (§ 82 VwGO).",
+            "VG-Tatbestand: berichten, nicht bewerten.",
+            "Art. 20 II GG: bei Gremien doppelte Mehrheit.",
+            "Bundesaufsicht: Art. 37 GG kommt zuletzt.",
+            "Schutzpflicht: Maßstab ist das Untermaß.",
+            "§ 51 VwVfG verpasst? §§ 48, 49 bleiben."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Streit nur entscheiden, wenn die Ansichten verschieden ausgehen.",
+            "Kopfsache: Frei sprechen in der Lerngruppe eigens trainieren."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Warum hilft § 766 ZPO dem Eigentümer einer gepfändeten Sache meist nicht?",
+            "Wann ist eine Urkunde unecht?",
+            "Was gehört mindestens in eine verwaltungsgerichtliche Klage?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht über Ziel und Rechtsfolge",
+            "Strafrecht über Abgrenzungen",
+            "Öffentliches Recht als Prüfungsketten",
+            "Technik und Kopf als Routine"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Beiträge in vier Lernbereichen. Im Zivilrecht ging es von der Rom I-VO bis zur Pfändung fremder Sachen, im Strafrecht vom Verdeckungsmord durch Unterlassen bis zur schriftlichen Lüge, im Öffentlichen Recht von der Klageschrift bis zum Wiederaufgreifen. Dazu Streitstände in der Klausur und freies Sprechen in der Lerngruppe. Mach den Selbsttest und wiederhole gezielt, was stockt.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [],
+        "kernidee": "Vier getrennte Lernstationen: Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache.",
+        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: vier getrennte Lernstationen für Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache.",
+        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
+        "alternative": null
+      },
+      "quellen": [
+        "Art. 3, 4 Rom I-VO",
+        "§ 935 BGB",
+        "§ 33 ZPO",
+        "§ 256 ZPO",
+        "§§ 766, 771 ZPO",
+        "§§ 211, 13 StGB",
+        "§ 32 StGB",
+        "§ 259 StGB",
+        "§ 97 StPO",
+        "§ 267 StGB",
+        "§ 82 VwGO",
+        "§ 117 VwGO",
+        "Art. 20 Abs. 2 GG",
+        "Art. 37, 84, 85 GG",
+        "Art. 2 Abs. 2 GG",
+        "§ 51 VwVfG",
+        "Themenpool: methodik-900",
+        "Themenpool: mindset-5"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.479Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "arbeit",
+      "klausur": 1,
+      "fachLabel": "Arbeitsrecht",
+      "themaId": "arbeit-254",
+      "slug": "2027-06-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schaden beim Kunden: vier Schritte bis zur Freistellung",
+          "titelZeilen": [
+            "Schaden beim",
+            "Kunden: vier",
+            "Schritte bis zur",
+            "Freistellung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Außen voll, innen gestuft",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Arbeitnehmer A beschädigt bei einem Kundenauftrag fahrlässig das Eigentum des Kunden K. Die Haftungsprivilegierung des innerbetrieblichen Schadensausgleichs gilt nur im Verhältnis zum Arbeitgeber – nicht gegenüber K. Geschützt wird A trotzdem: über das Innenverhältnis."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Außenhaftung gegenüber K",
+              "text": "Etwa § 823 Abs. 1 BGB. A haftet K für jede Fahrlässigkeit – die Privilegierung wirkt nicht gegenüber Dritten."
+            },
+            {
+              "titel": "2. Betrieblich veranlasst?",
+              "text": "Tätigkeit, die A für den Betrieb und aufgrund des Arbeitsverhältnisses ausführt."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Verschuldensgrad",
+              "text": "Leichteste Fahrlässigkeit: AG trägt alles. Mittlere: Quote. Grobe und Vorsatz: in der Regel A allein."
+            },
+            {
+              "titel": "4. Freistellungsanspruch",
+              "text": "Soweit A intern nicht haften müsste, kann er vom Arbeitgeber Freistellung von der Forderung des K verlangen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Kollegen",
+          "text": "Verletzt A bei der Arbeit einen Kollegen, gilt Sonderrecht: Für Personenschäden unter Arbeitskollegen schließt § 105 SGB VII die Haftung grundsätzlich aus – außer bei Vorsatz oder auf versicherten Wegen. Die gesetzliche Unfallversicherung tritt an die Stelle."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Außen haftet der Arbeitnehmer voll, innen nach Verschuldensgrad. Die Differenz holt er sich über den Freistellungsanspruch zurück."
+        },
+        {
+          "art": "cta",
+          "titel": "Drittschaden in vier Zügen",
+          "punkte": [
+            "Anspruch des Dritten gegen A",
+            "Betrieblich veranlasst?",
+            "Verschuldensgrad bestimmen",
+            "Freistellung vom Arbeitgeber"
+          ],
+          "icons": [
+            "person",
+            "fabrik",
+            "waage",
+            "handschlag"
+          ]
+        }
+      ],
+      "caption": "Schaden beim Kunden: vier Schritte bis zur Freistellung. Gegenüber Dritten haftet der Arbeitnehmer nach allgemeinen Regeln – die Privilegierung des innerbetrieblichen Schadensausgleichs gilt nur im Innenverhältnis. Soweit er dort nach seinem Verschuldensgrad nicht haften müsste, kann er vom Arbeitgeber Freistellung verlangen. Bei Personenschäden unter Kollegen greift § 105 SGB VII. Speichern für die nächste Arbeitsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#arbeitsrecht",
+        "#arbeitnehmerhaftung",
+        "#freistellung",
+        "#schuldrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Arbeitnehmerhaftung: Schaden bei Dritten",
+      "coverText": "Außen voll, innen gestuft",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Dem Kunden haftet der Arbeitnehmer voll, vom Arbeitgeber kann er aber verlangen, intern freigestellt zu werden.",
+        "handlung": "{A} carries a heavy bill-shaped crystal slab toward a customer's door, while {B} points his pointer at a company cart waiting beside him to take most of the load.",
+        "hinweisRegie": "Place the note in the free space between {A}'s heavy slab and the company cart, slightly tilted toward the cart, so the shifting of the burden is clear without covering {A}'s strained face.",
+        "alternative": "{B} draws two circles – outside and inside – and moves a heavy stone from the inner worker figure to a larger company figure."
+      },
+      "bildSzene": "heavy slab shifted to company cart",
+      "bildSzeneAlt": "stone moved from worker to company",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 619a BGB",
+        "§ 254 BGB",
+        "§ 105 SGB VII",
+        "Themenpool: arbeit-254"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-schritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.480Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-878",
+      "slug": "2027-06-06-b3",
+      "titelZeilen": [
+        "Protokoll:",
+        "vier Regeln, die",
+        "die Revision",
+        "entscheiden"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Protokoll: vier Regeln, die die Revision entscheiden",
+          "unter": "Beweiskraft · § 274 StPO",
+          "text": "Was nicht im Protokoll steht, gilt als nicht geschehen.",
+          "norm": "§ 274 StPO",
+          "icon": "klemmbrett",
+          "sprecher": "Was nicht im Protokoll steht, ist nicht passiert. Jedenfalls für das Revisionsgericht, wenn es um Förmlichkeiten geht. Vier Regeln zur Beweiskraft des Hauptverhandlungsprotokolls.",
+          "marken": [
+            "nicht protokolliert",
+            "nicht passiert"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Nur wesentliche Förmlichkeiten",
+          "text": "Anwesenheit, Belehrungen, Verlesungen, Anträge, letztes Wort.",
+          "norm": "§ 273 Abs. 1 StPO",
+          "sprecher": "Regel eins: Die Beweiskraft erfasst nur die wesentlichen Förmlichkeiten. Also etwa, wer anwesend war, ob belehrt wurde, was verlesen wurde, welche Anträge gestellt wurden und ob der Angeklagte das letzte Wort hatte. Den Inhalt von Aussagen beweist das Protokoll nicht.",
+          "marken": [
+            "Förmlichkeiten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Positive und negative Beweiskraft",
+          "text": "Protokolliert: geschehen. Nicht protokolliert: nicht geschehen.",
+          "norm": "§ 274 S. 1 StPO",
+          "sprecher": "Regel zwei: Die Beweiskraft wirkt in beide Richtungen. Was protokolliert ist, gilt als geschehen. Und was als wesentliche Förmlichkeit fehlt, gilt als nicht geschehen. Das Schweigen des Protokolls beweist also auch etwas.",
+          "marken": [
+            "beide Richtungen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gegenbeweis nur: Fälschung",
+          "text": "Andere Beweismittel sind ausgeschlossen – außer beim Nachweis der Fälschung.",
+          "norm": "§ 274 S. 2 StPO",
+          "sprecher": "Regel drei: Gegen den Inhalt des Protokolls ist nur der Nachweis der Fälschung zulässig. Dienstliche Erklärungen oder Zeugen, die sich anders erinnern, helfen grundsätzlich nicht.",
+          "marken": [
+            "nur Fälschung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Grenze: Lücken und Widersprüche",
+          "text": "Ist das Protokoll offensichtlich lückenhaft oder widersprüchlich, entfällt die Beweiskraft insoweit.",
+          "norm": null,
+          "sprecher": "Regel vier: Die Beweiskraft hat Grenzen. Ist das Protokoll offensichtlich lückenhaft oder widersprüchlich, entfällt sie insoweit. Dann klärt das Revisionsgericht die Frage im Freibeweis.",
+          "marken": [
+            "Freibeweis"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Berichtigung nach Rügeerhebung",
+          "text": "Nach dem Großen Senat für Strafsachen auch nach Erhebung der Rüge in einem geregelten Verfahren möglich.",
+          "norm": null,
+          "sprecher": "Und noch ein Punkt: Das Protokoll darf nach der Rechtsprechung des Großen Senats auch nach Erhebung einer Verfahrensrüge berichtigt werden, in einem geregelten Verfahren mit Anhörung. Dann kann der Rüge der Boden entzogen werden.",
+          "marken": [
+            "Berichtigung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Förmlichkeiten, zwei Richtungen, nur Fälschung, Grenze bei offensichtlichen Lücken.",
+          "norm": null,
+          "sprecher": "Merke: Wesentliche Förmlichkeiten, Beweiskraft in beide Richtungen, Gegenbeweis nur durch Fälschung, und eine Grenze bei offensichtlichen Lücken.",
+          "marken": [
+            "vier Regeln"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst das Protokoll lesen",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Revisionsklausur. Und lies bei jeder Verfahrensrüge zuerst, was im Protokoll steht und was nicht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Protokoll: vier Regeln, die die Revision entscheiden. Die Beweiskraft des § 274 StPO erfasst nur wesentliche Förmlichkeiten (§ 273 Abs. 1 StPO), wirkt positiv und negativ, lässt als Gegenbeweis nur die Fälschung zu und entfällt bei offensichtlichen Lücken oder Widersprüchen. Nach dem Großen Senat darf das Protokoll auch nach Rügeerhebung in einem geregelten Verfahren berichtigt werden. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#274stpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beweiskraft des Protokolls: vier Regeln",
+      "coverText": "Schweigen des Protokolls beweist",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Was als wesentliche Förmlichkeit nicht im Protokoll steht, gilt für das Revisionsgericht als nicht geschehen.",
+        "handlung": "{A} holds up a long scroll with one clearly empty section, while {B} curiously searches the empty section and finds nothing there.",
+        "hinweisRegie": "Place the note in the free space right next to the empty section of the scroll, slightly tilted toward it, so the meaning of the gap is clear without covering {B}'s searching eyes.",
+        "alternative": "{B} compares a memory bubble with a stamped record while {A} lets only the stamped record count."
+      },
+      "bildSzene": "scroll with empty section",
+      "bildSzeneAlt": "memory bubble versus stamped record",
+      "quellen": [
+        "§ 273 StPO",
+        "§ 274 StPO",
+        "Themenpool: revision-878"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-regeln",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.481Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-197",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "V hat die Wohnung seit neun Jahren an M vermietet und kündigt wegen Eigenbedarfs. Welche Frist gilt?",
+      "optionen": [
+        "Drei Monate – wie für den Mieter",
+        "Sechs Monate",
+        "Neun Monate"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 573c Abs. 1 BGB",
+        "§ 573 Abs. 2 Nr. 2 BGB",
+        "Themenpool: schuldbt-197"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.481Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-197",
+      "ueberzeile": "Auflösung",
+      "titel": "Neun Monate – die Frist wächst mit der Mietdauer",
+      "text": "Gekündigt werden kann spätestens am dritten Werktag eines Monats zum Ablauf des übernächsten Monats. Für den Vermieter verlängert sich die Frist nach fünf und nach acht Jahren seit Überlassung um je drei Monate (§ 573c Abs. 1 BGB). Der Mieter kündigt stets mit der Grundfrist.",
+      "norm": "§ 573c Abs. 1 BGB",
+      "quellen": [
+        "§ 573c Abs. 1 BGB",
+        "§ 573 Abs. 2 Nr. 2 BGB",
+        "Themenpool: schuldbt-197"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.481Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Drei Monate – wie für den Mieter",
+        "Sechs Monate",
+        "Neun Monate"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-124",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 598 BGB: Ohne Entgelt keine Miete",
+      "text": "Bei der Leihe überlässt der Verleiher die Sache unentgeltlich (§ 598 BGB), bei der Miete gegen Miete (§ 535 BGB). Die Folge zeigt sich in der Haftung: Der Verleiher haftet nur für Vorsatz und grobe Fahrlässigkeit (§ 599 BGB).",
+      "norm": "§ 598 BGB · § 535 BGB",
+      "quellen": [
+        "§ 598 BGB",
+        "§ 535 BGB",
+        "§ 599 BGB",
+        "Themenpool: schuldbt-124"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.481Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-917",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Beklagtenwechsel nach Verhandlungsbeginn: Reicht Sachdienlichkeit?",
+      "falsch": "Der Parteiwechsel ist eine Klageänderung – das Gericht hält ihn für sachdienlich, also braucht es die Zustimmung des alten Beklagten nicht.",
+      "richtigText": "Nach der Rspr. muss der alte Beklagte zustimmen, sobald er zur Hauptsache verhandelt hat (§ 269 Abs. 1 ZPO analog). Sachdienlichkeit ersetzt diese Zustimmung nicht. Scheidet er aus, trägt der Kläger insoweit regelmäßig die Kosten (§ 269 Abs. 3 S. 2 ZPO analog).",
+      "quellen": [
+        "§ 263 ZPO",
+        "§ 269 ZPO",
+        "Themenpool: zpo-917"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.481Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-209",
+      "ueberzeile": "Klausurtipp EBV",
+      "titel": "Fremdbesitzerexzess: Frag, wie er bei wirksamem Vertrag gehaftet hätte",
+      "text": "Der redliche, unverklagte Besitzer haftet grundsätzlich nicht auf Schadensersatz (§ 993 Abs. 1 Hs. 2 BGB). Überschreitet ein Fremdbesitzer aber das Besitzrecht, das er zu haben glaubt, soll er nicht besser stehen als ein berechtigter Besitzer. Nach h.M. ist dann § 823 BGB neben dem EBV anwendbar.",
+      "quellen": [
+        "§ 993 Abs. 1 BGB",
+        "§ 991 Abs. 2 BGB",
+        "§ 823 BGB",
+        "Themenpool: gesetzs-209"
+      ],
+      "fachLabel": "GoA/EBV",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.481Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-051",
+      "ueberzeile": "3 Punkte ZPO",
+      "titel": "Eingereicht, aber noch nicht zugestellt: drei Folgen",
+      "text": "Anhängig ist die Klage mit Eingang bei Gericht, rechtshängig erst mit Zustellung (§§ 253 Abs. 1, 261 Abs. 1 ZPO). Dazwischen gilt:",
+      "punkte": [
+        "Fristen und Verjährungshemmung wirken auf den Eingang zurück, wenn demnächst zugestellt wird (§ 167 ZPO)",
+        "Entfällt der Anlass vor Zustellung: Rücknahme, Kosten nach billigem Ermessen (§ 269 Abs. 3 S. 3 ZPO)",
+        "Eine Erledigung im Rechtssinne setzt nach h.M. Rechtshängigkeit voraus"
+      ],
+      "quellen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO",
+        "§ 269 Abs. 3 ZPO",
+        "Themenpool: zpo-051"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:04:42.481Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

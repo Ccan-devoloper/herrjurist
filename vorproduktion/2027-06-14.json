@@ -1,0 +1,883 @@
+{
+  "datum": "2027-06-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-718",
+        "themaTitel": "Dazwischentreten Dritter und atypische Kausalverläufe",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "verwbt-672",
+        "themaTitel": "Verhaltens- und Zustandsstörer",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-450",
+        "themaTitel": "Rücktritt und Schadensersatz nebeneinander",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "zpo-558"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "zpo-558"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "schuld-123"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "tipp",
+        "themaId": "vwgo-407"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "zahl",
+        "themaId": "assessorz-809"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "streitstand",
+        "themaId": "grundr-089"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-718",
+      "poolTitel": "Dazwischentreten Dritter und atypische Kausalverläufe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-20"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwbt-672",
+      "poolTitel": "Verhaltens- und Zustandsstörer",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Landespolizeirecht"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-450",
+      "poolTitel": "Rücktritt und Schadensersatz nebeneinander",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 325 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-558",
+      "poolTitel": "Beweislast und Beweismaß",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 286, 287 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2027-01-18"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-558",
+      "poolTitel": "Beweislast und Beweismaß",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 286, 287 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2027-01-18"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-123",
+      "poolTitel": "Was ist die Drittschadensliquidation und wann greift sie?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 249 BGB",
+        "§ 447 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2027-01-13",
+        "2027-05-20"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "vwgo-407",
+      "poolTitel": "Wann entfällt die aufschiebende Wirkung?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 2 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13",
+        "2027-02-07",
+        "2027-04-05"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-809",
+      "poolTitel": "Wann trägt der Kläger trotz Obsiegens die Kosten?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 93 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-04-02"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "grundr-089",
+      "poolTitel": "Wie prüft man einen Eingriff in Art. 12 GG?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 Abs. 1 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-03",
+        "2027-03-28",
+        "2027-04-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-718",
+      "slug": "2027-06-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "„Kausalkette unterbrochen“? Den Satz schreiben viele zu Unrecht",
+          "titelZeilen": [
+            "„Kausalkette",
+            "unterbrochen“? Den",
+            "Satz schreiben viele",
+            "zu Unrecht"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Nicht Kausalität – Zurechnung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A sticht O in den Bauch, O wird lebensgefährlich verletzt. Auf dem Weg ins Krankenhaus rammt der betrunkene D den Rettungswagen, O stirbt an den Unfallverletzungen. Ist A der Tod des O zuzurechnen?"
+        },
+        {
+          "art": "text",
+          "titel": "Der verbreitete Satz",
+          "text": "„Durch das Eingreifen des D ist die Kausalkette unterbrochen.“ Das trägt nicht: Ohne den Stich säße O nicht im Rettungswagen. Nach der Äquivalenztheorie bleibt A kausal – ein Dritter „unterbricht“ nichts, solange die Erstursache fortwirkt. Die Frage gehört in die objektive Zurechnung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Kausalität",
+              "text": "Conditio sine qua non: Denkt man den Stich weg, entfällt der Tod in seiner konkreten Gestalt. A ist kausal."
+            },
+            {
+              "titel": "2. Gefahr geschaffen",
+              "text": "Der Stich schafft eine rechtlich missbilligte Gefahr für das Leben des O."
+            },
+            {
+              "titel": "3. Gefahr verwirklicht?",
+              "text": "Hier nicht: O stirbt am Unfall, nicht an der Stichwunde. Es realisiert sich ein allgemeines Verkehrsrisiko."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Tod nicht zurechenbar. Je nach Vorsatz bleibt versuchter Totschlag oder gefährliche Körperverletzung (§ 224 StGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Abstufungen beim Eingreifen Dritter",
+          "punkte": [
+            "Leichter Behandlungsfehler im Krankenhaus: Zurechnung bleibt regelmäßig bestehen.",
+            "Völlig ungewöhnliches Fehlverhalten Dritter: Zurechnung kann entfallen.",
+            "Vorsätzliche, freiverantwortliche Tat eines Dritten: Zurechnung entfällt nach verbreiteter Ansicht."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Dritte unterbrechen keine Kausalität. Sie können nur die Zurechnung ausschließen – wenn sich nicht mehr die Gefahr des Täters verwirklicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Eingreifen Dritter in drei Fragen",
+          "punkte": [
+            "Kausal nach der Conditio-Formel?",
+            "Missbilligte Gefahr geschaffen?",
+            "Genau diese Gefahr verwirklicht?"
+          ],
+          "icons": [
+            "kreislauf",
+            "warnung",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "„Die Kausalkette ist unterbrochen“ – diesen Satz schreiben viele, wenn ein Dritter eingreift. Er stimmt fast nie: Solange die Erstursache fortwirkt, bleibt der Täter nach der Äquivalenztheorie kausal. Entscheidend ist die objektive Zurechnung: Verwirklicht sich im Erfolg noch die Gefahr, die der Täter geschaffen hat? Beim Unfall des Rettungswagens nicht. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#kausalität",
+        "#objektivezurechnung",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Dritter greift ein: Kausalität bleibt",
+      "coverText": "Nicht Kausalität – Zurechnung",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Ein Dritter reißt die Ursachenkette nicht ab – er kann nur die Zurechnung des Erfolgs verhindern.",
+        "handlung": "{A} anxiously holds a long unbroken chain whose first link he forged, while {B} points his pointer at a separate falling rock that hits the cart at the chain's far end.",
+        "hinweisRegie": "Place the note in the free space between the intact chain and the falling rock, slightly tilted toward the rock, so the difference between cause and attribution is clear without covering {A}'s hands.",
+        "alternative": "{B} traces a domino line with his pointer while {A} watches an unrelated gust of wind topple the very last domino from the side."
+      },
+      "bildSzene": "unbroken chain, separate falling rock",
+      "bildSzeneAlt": "domino line toppled by side gust",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 222 StGB",
+        "§ 224 StGB",
+        "§§ 22, 23 StGB",
+        "Themenpool: strafat-718"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.933Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-672",
+      "slug": "2027-06-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Drei Wege, Störer zu werden – Verschulden ist keiner",
+          "titelZeilen": [
+            "Drei Wege, Störer",
+            "zu werden –",
+            "Verschulden ist",
+            "keiner"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Unmittelbarkeit statt Schuld",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Hat die Behörde eine Gefahr festgestellt, fragt die Klausur: gegen wen? Die Polizei- und Ordnungsgesetze der Länder kennen dafür eigene Verantwortlichkeiten. Verschulden, Geschäftsfähigkeit oder Strafbarkeit spielen keine Rolle – es geht allein um effektive Gefahrenabwehr."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Verhaltensverantwortlichkeit",
+              "text": "Wer die Gefahr durch Tun oder Unterlassen verursacht. Nach h.M. zählt nur, wer die Gefahrenschwelle unmittelbar überschreitet."
+            },
+            {
+              "titel": "2. Zweckveranlasser",
+              "text": "Sonderfall: Wer selbst nur mittelbar verursacht, aber die Gefahr durch Dritte bezweckt oder sie typischerweise auslöst."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Zusatzverantwortlichkeit",
+              "text": "Aufsichtspflichtige für Minderjährige und Betreute, Geschäftsherren für Verrichtungsgehilfen – je nach Landesrecht."
+            },
+            {
+              "titel": "4. Zustandsverantwortlichkeit",
+              "text": "Eigentümer und Inhaber der tatsächlichen Gewalt, wenn die Gefahr von einer Sache oder einem Tier ausgeht."
+            },
+            {
+              "titel": "5. Auswahl",
+              "text": "Mehrere Verantwortliche: Ermessen, geleitet vor allem von der schnellen und wirksamen Gefahrenabwehr."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Grenze der Zustandshaftung",
+          "text": "Der Eigentümer haftet für seine Sache auch ohne eigenes Zutun, etwa bei Altlasten. Das BVerfG begrenzt diese Last über Art. 14 GG: Die Kosten dürfen nicht unverhältnismäßig sein; als Orientierung dient der Verkehrswert des sanierten Grundstücks."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Störer ist, wer die Gefahr unmittelbar verursacht oder für die gefährliche Sache einsteht. Schuld fragt das Polizeirecht nicht ab."
+        },
+        {
+          "art": "cta",
+          "titel": "Störer in drei Zügen",
+          "punkte": [
+            "Verhalten: unmittelbar verursacht?",
+            "Zustand: Eigentum oder Sachherrschaft?",
+            "Auswahl: effektivste Abwehr"
+          ],
+          "icons": [
+            "person",
+            "haus",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Drei Wege, Störer zu werden – und Verschulden ist keiner davon. Verhaltensverantwortlich ist, wer die Gefahr unmittelbar verursacht, zusatzverantwortlich etwa der Aufsichtspflichtige, zustandsverantwortlich der Eigentümer oder Inhaber der tatsächlichen Gewalt. Die Einzelheiten regelt das jeweilige Landesrecht. Speichern für die nächste Polizeirechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#störer",
+        "#gefahrenabwehr",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verhaltens- und Zustandsstörer: das Schema",
+      "coverText": "Unmittelbarkeit statt Schuld",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Für die Gefahrenabwehr haftet, wer die Gefahr verursacht oder die gefährliche Sache beherrscht – ohne Rücksicht auf Schuld.",
+        "handlung": "{A} hovers over a cracked mine cart leaking glowing dust and points a scanning beam at {B}, the cart's owner, who looks up from his pickaxe in surprise.",
+        "hinweisRegie": "Place the note in the free space above the leaking cart, slightly tilted toward {B}, so the link between the dangerous object and its owner is clear without covering the beam.",
+        "alternative": "{B} holds a rope tied to a runaway boulder while {A} sorts two labelled tags, one for the person who pushed it and one for the rope holder."
+      },
+      "bildSzene": "drone scans owner of leaking cart",
+      "bildSzeneAlt": "runaway boulder on owner's rope",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Art. 14 GG",
+        "Themenpool: verwbt-672"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-wege",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.933Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-450",
+      "slug": "2027-06-14-b3",
+      "titelZeilen": [
+        "Zurückgetreten –",
+        "und trotzdem",
+        "Schadensersatz"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zurückgetreten – und trotzdem Schadensersatz",
+          "unter": "Rücktritt · § 325 BGB",
+          "text": "Rücktritt und Schadensersatz schließen sich nicht aus.",
+          "norm": "§ 325 BGB",
+          "icon": "vertrag",
+          "sprecher": "Rücktritt erklärt, und Schadensersatz gibt es trotzdem. Das ordnet das Gesetz ausdrücklich an. Paragraf 325 BGB: Der Rücktritt schließt Schadensersatz nicht aus.",
+          "marken": [
+            "§ 325 BGB",
+            "beides"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Rücktritt wirksam",
+          "text": "Rücktrittsgrund, etwa §§ 323, 437 Nr. 2 BGB, und Erklärung nach § 349 BGB.",
+          "norm": "§§ 323, 349 BGB",
+          "sprecher": "Schritt eins: der Rücktritt. Du brauchst einen Rücktrittsgrund, etwa Nichtleistung trotz Frist oder einen Mangel, und eine Erklärung gegenüber dem anderen Teil. Verschulden ist dafür nicht nötig.",
+          "marken": [
+            "kein Verschulden"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rückabwicklung",
+          "text": "Empfangene Leistungen werden zurückgewährt, § 346 BGB.",
+          "norm": "§ 346 BGB",
+          "sprecher": "Schritt zwei: die Rückabwicklung. Beide Seiten geben zurück, was sie bekommen haben. Der Käufer bekommt den Kaufpreis, der Verkäufer die Sache.",
+          "marken": [
+            "Rückgewähr"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Schadensersatz daneben",
+          "text": "§§ 280, 281 BGB: Vertretenmüssen wird vermutet, § 280 Abs. 1 S. 2 BGB.",
+          "norm": "§§ 280, 281 BGB",
+          "sprecher": "Schritt drei: Schadensersatz daneben. Hier brauchst du die Pflichtverletzung und das Vertretenmüssen. Das wird vermutet, der Schuldner muss sich entlasten.",
+          "marken": [
+            "Vertretenmüssen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Was ersetzt wird",
+          "text": "Etwa Mehrkosten eines Deckungskaufs; nach dem BGH auch Nutzungsausfall.",
+          "norm": "§ 325 BGB",
+          "sprecher": "Schritt vier: der Umfang. Nach dem Rücktritt rechnest du praktisch nur noch die Differenz. Typisch sind Mehrkosten eines Deckungskaufs. Nach dem BGH kann auch Nutzungsausfall ersetzt verlangt werden.",
+          "marken": [
+            "Deckungskauf"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel: der Gebrauchtwagen",
+          "text": "Mangel nicht behebbar, K tritt zurück und kauft teurer ein.",
+          "norm": null,
+          "sprecher": "Ein Beispiel: K kauft einen Gebrauchtwagen, der Motorschaden lässt sich nicht beheben. K tritt zurück und kauft ein vergleichbares Auto für tausend Euro mehr. Den Kaufpreis bekommt er über den Rücktritt, die tausend Euro als Schadensersatz, wenn der Verkäufer den Mangel zu vertreten hat.",
+          "marken": [
+            "Rücktritt plus Schaden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Rücktritt holt die Leistung zurück, Schadensersatz gleicht den Rest aus.",
+          "norm": null,
+          "sprecher": "Merke: Der Rücktritt holt zurück, was geleistet wurde. Der Schadensersatz gleicht aus, was darüber hinaus verloren ist.",
+          "marken": [
+            "zwei Ebenen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nie nur eins prüfen",
+          "text": "Speichern für die nächste Klausur zum Leistungsstörungsrecht.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur zum Leistungsstörungsrecht. Wer nur den Rücktritt prüft, lässt Punkte liegen.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Zurückgetreten – und trotzdem Schadensersatz: § 325 BGB stellt klar, dass der Rücktritt den Schadensersatz nicht ausschließt. Der Rücktritt holt die ausgetauschten Leistungen zurück, der Schadensersatz nach §§ 280, 281 BGB gleicht den Rest aus, etwa die Mehrkosten eines Deckungskaufs. Anders als der Rücktritt setzt er Vertretenmüssen voraus. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#rücktritt",
+        "#325bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücktritt und Schadensersatz nebeneinander",
+      "coverText": "§ 325 BGB erlaubt beides",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer vom Vertrag zurücktritt, bekommt seine Leistung zurück und kann den übrigen Schaden trotzdem ersetzt verlangen.",
+        "handlung": "{A} curiously receives her returned coin pouch back across a counter from {B}, who also slides a second, smaller pouch toward her.",
+        "hinweisRegie": "Place the note in the free space above the second, smaller pouch, slightly tilted toward it, so the extra compensation is the focus without covering the returned pouch or the hands.",
+        "alternative": "{B} hands back a broken vehicle key while {A} holds the receipt for a more expensive replacement vehicle waiting behind her."
+      },
+      "bildSzene": "returned pouch plus second pouch",
+      "bildSzeneAlt": "broken key, pricier replacement receipt",
+      "quellen": [
+        "§ 325 BGB",
+        "§ 323 BGB",
+        "§ 346 BGB",
+        "§ 349 BGB",
+        "§ 280 BGB",
+        "§ 281 BGB",
+        "§ 437 BGB",
+        "Themenpool: schuld-450"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.934Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-558",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Der Unfall ist bewiesen, streitig ist nur noch die Höhe des Schadens. Welches Beweismaß gilt dafür?",
+      "optionen": [
+        "Volle Überzeugung nach § 286 ZPO wie beim Haftungsgrund",
+        "Freie Schätzung nach § 287 ZPO mit abgesenktem Beweismaß",
+        "Glaubhaftmachung nach § 294 ZPO genügt stets"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 286 ZPO",
+        "§ 287 ZPO",
+        "Themenpool: zpo-558"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.935Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-558",
+      "ueberzeile": "Auflösung",
+      "titel": "§ 287 ZPO – für die Höhe darf das Gericht schätzen",
+      "text": "Ob ein Schaden entstanden ist und wie hoch er ist, entscheidet das Gericht unter Würdigung aller Umstände nach freier Überzeugung (§ 287 Abs. 1 ZPO). Es genügt eine überwiegende Wahrscheinlichkeit, Beweisanträge muss es nicht vollständig abarbeiten. Das gilt auch für die haftungsausfüllende Kausalität. Der Haftungsgrund selbst bleibt beim strengen Maß des § 286 ZPO.",
+      "norm": "§ 287 Abs. 1 ZPO · § 286 ZPO",
+      "quellen": [
+        "§ 286 ZPO",
+        "§ 287 ZPO",
+        "Themenpool: zpo-558"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.935Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Volle Überzeugung nach § 286 ZPO wie beim Haftungsgrund",
+        "Freie Schätzung nach § 287 ZPO mit abgesenktem Beweismaß",
+        "Glaubhaftmachung nach § 294 ZPO genügt stets"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-123",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 447 BGB: Die Preisgefahr wandert – und mit ihr der Schaden",
+      "text": "Beim Versendungskauf trägt der Käufer ab Übergabe an die Transportperson die Preisgefahr: Er zahlt, auch wenn die Ware beschädigt ankommt. Der Verkäufer hat den Vertrag mit dem Transporteur, aber keinen Schaden; der Käufer hat den Schaden, aber keinen Vertrag. Fall der Drittschadensliquidation; der Käufer verlangt Abtretung (§ 285 BGB). Beim Frachtvertrag hilft oft § 421 HGB.",
+      "norm": "§ 447 BGB · § 285 BGB",
+      "quellen": [
+        "§ 447 BGB",
+        "§ 285 BGB",
+        "§ 249 BGB",
+        "§ 421 HGB",
+        "Themenpool: schuld-123"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.935Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-407",
+      "ueberzeile": "Klausurtipp VwGO",
+      "titel": "Sofortvollzug angeordnet: Die Begründung prüfst du formal – nicht auf Richtigkeit",
+      "text": "§ 80 Abs. 3 S. 1 VwGO verlangt, das besondere Interesse an der sofortigen Vollziehung schriftlich zu begründen. Formell genügt eine auf den Einzelfall bezogene Begründung; floskelhafte Wiederholungen des Gesetzes reichen nicht. Ob die Gründe inhaltlich tragen, gehört erst in die Interessenabwägung. Eine eigene Anhörung vor der Anordnung verlangt die h.M. nicht.",
+      "quellen": [
+        "§ 80 Abs. 2 S. 1 Nr. 4 VwGO",
+        "§ 80 Abs. 3 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "Themenpool: vwgo-407"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.935Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-809",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Gewonnen – und trotzdem Kosten: vier Normen, die den Kläger belasten können",
+      "text": "Grundsatz ist § 91 ZPO: Wer verliert, zahlt. Diese Ausnahmen musst du im Tenor erkennen.",
+      "punkte": [
+        "§ 93 ZPO: sofortiges Anerkenntnis ohne Klageveranlassung",
+        "§ 281 Abs. 3 S. 2 ZPO: Mehrkosten der Anrufung des unzuständigen Gerichts",
+        "§ 344 ZPO: Kosten der eigenen Säumnis",
+        "§ 96 ZPO: Kosten eines erfolglosen Angriffsmittels"
+      ],
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 93 ZPO",
+        "§ 96 ZPO",
+        "§ 281 ZPO",
+        "§ 344 ZPO",
+        "Themenpool: assessorz-809"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.935Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-089",
+      "ueberzeile": "Streitstand Grundrechte",
+      "titel": "Ein allgemeines Gesetz trifft nebenbei auch deinen Beruf: Ist das ein Eingriff in Art. 12 GG?",
+      "norm": "Art. 12 Abs. 1 GG",
+      "optionen": [
+        "BVerfG: Nur bei objektiv berufsregelnder Tendenz – enger Bezug zur Berufstätigkeit nötig.",
+        "Teile der Lit.: Moderner Eingriffsbegriff genügt – die Tendenz-Formel verkürzt den Schutz."
+      ],
+      "text": "Klausur: Unproblematisch sind Regeln, die gerade die Berufstätigkeit steuern. Bei mittelbaren Folgen allgemeiner Gesetze nennst du die Tendenz-Formel des BVerfG und prüfst, wie gezielt und wie schwer der Beruf betroffen ist. Verneinst du den Eingriff, bleibt Art. 2 Abs. 1 GG.",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Art. 2 Abs. 1 GG"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:03:07.935Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
