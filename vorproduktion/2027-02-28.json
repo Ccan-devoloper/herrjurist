@@ -1,0 +1,909 @@
+{
+  "datum": "2027-02-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "anklage-864",
+        "themaTitel": "Welches Gericht ist sachlich zuständig?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "vwgo-658",
+        "themaTitel": "Normenkontrolle",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "stpo-076"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "stpo-076"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "handelsg-266"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "fehler",
+        "themaId": "schuldbt-914"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:05",
+        "art": "tipp",
+        "themaId": "schuldbt-189"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "zahl",
+        "themaId": "bgbat-160"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "anklage-864",
+      "poolTitel": "Welches Gericht ist sachlich zuständig?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 24 GVG",
+        "§ 25 GVG",
+        "§ 74 GVG",
+        "§ 209 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2027-01-05"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-658",
+      "poolTitel": "Normenkontrolle",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 47 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-076",
+      "poolTitel": "Welche Beweisverwertungsverbote gibt es und wie prüft man sie?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO",
+        "§ 100a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-076",
+      "poolTitel": "Welche Beweisverwertungsverbote gibt es und wie prüft man sie?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO",
+        "§ 100a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "handelsg-266",
+      "poolTitel": "Was ist die kaufmännische Rügeobliegenheit?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 377 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "schuldbt-914",
+      "poolTitel": "Wann gibt es Entschädigung für nutzlos aufgewendete Urlaubszeit?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 651n Abs. 2 BGB",
+        "§ 651i Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25",
+        "2026-12-25"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "schuldbt-189",
+      "poolTitel": "Was hat sich mit dem subjektiven und objektiven Mangelbegriff geändert?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 434 Abs. 2 BGB",
+        "§ 434 Abs. 3 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "bgbat-160",
+      "poolTitel": "Wie prüft man die Duldungs- und die Anscheinsvollmacht?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 167 BGB",
+        "§ 172 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-12-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-02-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Themen, vier Bereiche: dein Wochenrückblick",
+          "titelZeilen": [
+            "18 Themen,",
+            "vier Bereiche:",
+            "dein Wochenrückblick"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Rausch: nicht geschäftsunfähig, aber die Erklärung ist nichtig (§ 105 Abs. 2 BGB).",
+            "§ 254 BGB: Elternverschulden zählt über § 278 BGB nur bei bestehender Sonderverbindung.",
+            "Vor Vertragsschluss unmöglich: § 311a Abs. 2 BGB, nicht § 283 BGB.",
+            "Parteifähig folgt der Rechtsfähigkeit, prozessfähig der Geschäftsfähigkeit.",
+            "Schmerzensgeld: unbezifferter Antrag zulässig – mit Größenordnung.",
+            "Besitzloses Pfandrecht: § 805 ZPO statt § 771 ZPO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 81a StPO: Blutprobe dulden, aber nicht mitwirken.",
+            "§ 252 StGB: Nach dem BGH ist auch betroffen, wer dem Entdecktwerden zuvorkommt.",
+            "Haftbefehl: Tatverdacht, Haftgrund, Verhältnismäßigkeit – dann § 116 StPO.",
+            "Berufung: Begründung freiwillig. Revision: Pflicht, grundsätzlich binnen eines Monats.",
+            "Fest Entschlossener: keine Anstiftung, allenfalls psychische Beihilfe."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Vorverfahren: Anwaltskosten nur, wenn die Zuziehung für notwendig erklärt ist.",
+            "Verfassungsbeschwerde gegen ein Gesetz: unmittelbar betroffen ohne Vollzugsakt.",
+            "„Kann“ überlesen: Ermessensausfall macht den Bescheid rechtswidrig.",
+            "Auskunft informiert, Zusage verpflichtet, Zusicherung braucht die Schriftform.",
+            "Art. 80 GG: Bestimmtheit misst man am Gesetz, nicht an der Verordnung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Anspruchsgrundlagen: Vertrag, vertragsähnlich und GoA, dinglich, Delikt, Bereicherung.",
+            "Lernplan: anpassen statt nachholen – mit festem Puffertag."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Warum ist der Volltrunkene nicht geschäftsunfähig – und was folgt daraus?",
+            "Welche Norm prüfst du, wenn die Kaufsache schon vor Vertragsschluss zerstört war?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Prozess",
+            "Strafrecht über Aufbau und Verfahren",
+            "Öffentliches Recht als Prüfungskette",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "waage",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – vom Rausch nach § 105 Abs. 2 BGB über den Haftbefehl bis zur Rechtsverordnung nach Art. 80 GG. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Eine Woche Examenswissen, sortiert in vier Bereiche und in Kernsätzen wiederholt.",
+        "handlung": "{B} carries a heavy crate of glowing tiles to a table, while {A} points his pointer at four trays in which the tiles are being sorted by colour.",
+        "hinweisRegie": "Place the note in the free space above the four sorting trays, slightly tilted toward them, so the four areas are emphasized without covering the crate or {B}'s hands.",
+        "alternative": "{A} flips through a small stack of quiz cards while {B} raises a coloured flag for each one he can answer."
+      },
+      "bildSzene": "sorting glowing tiles into four trays",
+      "bildSzeneAlt": "quiz cards answered with coloured flags",
+      "quellen": [
+        "§ 105 Abs. 2 BGB",
+        "§§ 254, 278 BGB",
+        "§ 311a BGB",
+        "§§ 50, 52 ZPO",
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 805 ZPO",
+        "§ 81a StPO",
+        "§ 252 StGB",
+        "§§ 112, 116 StPO",
+        "§§ 317, 344, 345 StPO",
+        "§§ 26, 27 StGB",
+        "§ 162 Abs. 2 VwGO",
+        "§ 90 BVerfGG",
+        "§ 40 VwVfG",
+        "§ 38 VwVfG",
+        "Art. 80 GG",
+        "Themenpool: methodik-897",
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.351Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-864",
+      "slug": "2027-02-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verbrechen vor dem Schöffengericht – ganz regulär",
+          "titelZeilen": [
+            "Verbrechen vor dem",
+            "Schöffengericht –",
+            "ganz regulär"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Strafrichter nur bei Vergehen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die StA wählt das Gericht, bei dem sie anklagt. Entscheidend ist nicht allein die Deliktsart, sondern vor allem die im Einzelfall zu erwartende Strafe. Deshalb kann auch ein Verbrechen wie der Raub vor dem Schöffengericht landen. Du prüfst von oben nach unten."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Oberlandesgericht",
+              "text": "Erstinstanzlich vor allem in Staatsschutzsachen (§ 120 GVG)."
+            },
+            {
+              "titel": "2. Schwurgericht",
+              "text": "Katalogtaten des § 74 Abs. 2 GVG, etwa Mord, Totschlag und Raub mit Todesfolge."
+            },
+            {
+              "titel": "3. Große Strafkammer",
+              "text": "Was nicht zum Amtsgericht gehört (§ 74 Abs. 1 GVG), etwa bei Straferwartung über vier Jahre (§ 24 Abs. 1 Nr. 2 GVG)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "Oder: Anklage beim Landgericht",
+              "text": "Wegen besonderer Schutzbedürftigkeit von Verletzten, besonderen Umfangs oder besonderer Bedeutung (§ 24 Abs. 1 Nr. 3 GVG)."
+            },
+            {
+              "titel": "4. Schöffengericht",
+              "text": "Straferwartung bis vier Jahre – bei Vergehen und Verbrechen (§§ 24, 28 GVG)."
+            },
+            {
+              "titel": "5. Strafrichter",
+              "text": "Nur Vergehen, wenn keine höhere Strafe als zwei Jahre Freiheitsstrafe zu erwarten ist (§ 25 GVG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "punkte": [
+            "Die Strafgewalt des Amtsgerichts endet bei vier Jahren Freiheitsstrafe (§ 24 Abs. 2 GVG).",
+            "Das Gericht kann vor einem Gericht niedrigerer Ordnung eröffnen (§ 209 Abs. 1 StPO).",
+            "Hält es ein höheres Gericht für zuständig, legt es die Akten vor (§ 209 Abs. 2 StPO).",
+            "Spezialspruchkörper nicht vergessen, etwa Wirtschaftsstrafkammer (§ 74c GVG) und Jugendgerichte."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Von oben nach unten prüfen: OLG, Schwurgericht, große Strafkammer, Schöffengericht, Strafrichter. Der Strafrichter bekommt nur Vergehen."
+        },
+        {
+          "art": "cta",
+          "titel": "Zuständigkeit in drei Fragen",
+          "punkte": [
+            "Staatsschutz oder Schwurgerichtskatalog?",
+            "Straferwartung über vier Jahre oder § 24 I Nr. 3 GVG?",
+            "Vergehen bis zwei Jahre: Strafrichter?"
+          ],
+          "icons": [
+            "gericht",
+            "waage",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Ein Verbrechen vor dem Schöffengericht? Ganz regulär. Für die sachliche Zuständigkeit zählt vor allem die im Einzelfall zu erwartende Strafe. Prüfe von oben nach unten: OLG, Schwurgericht, große Strafkammer, Schöffengericht (bis vier Jahre), Strafrichter (nur Vergehen, bis zwei Jahre). Die StA kann wegen besonderer Bedeutung auch beim Landgericht anklagen (§ 24 Abs. 1 Nr. 3 GVG). Speichern für die nächste Anklageschrift.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#gvg",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachliche Zuständigkeit: von oben nach unten",
+      "coverText": "Strafrichter nur bei Vergehen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Welches Gericht zuständig ist, entscheidet vor allem die im Einzelfall erwartete Strafe, nicht allein die Deliktsart.",
+        "handlung": "{A} slides a heavy crate labelled only by its weight down a sorting chute with five exits, while {B} hovers at the fourth exit and catches it there, although it looks big enough for a higher one.",
+        "hinweisRegie": "Place the note in the free space beside the fourth exit of the chute, slightly tilted toward it, so the unexpected destination is emphasized without covering the crate or {B}'s arms.",
+        "alternative": "{B} weighs a large but hollow crate on a scale, and {A} directs it to a smaller door than its size suggests."
+      },
+      "bildSzene": "big crate caught at fourth exit",
+      "bildSzeneAlt": "hollow crate weighed, small door chosen",
+      "quellen": [
+        "§ 24 GVG",
+        "§ 25 GVG",
+        "§ 28 GVG",
+        "§ 74 GVG",
+        "§ 74c GVG",
+        "§ 120 GVG",
+        "§ 209 StPO",
+        "§ 63 StGB",
+        "Themenpool: anklage-864"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.351Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-658",
+      "slug": "2027-02-28-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Bundesverordnung? Dafür ist § 47 VwGO nicht gemacht",
+          "unter": "Normenkontrolle · § 47 VwGO",
+          "text": "§ 47 VwGO erfasst BauGB-Satzungen und – je nach Land – Vorschriften unter dem Landesgesetz.",
+          "norm": "§ 47 Abs. 1 VwGO",
+          "icon": "paragraf",
+          "sprecher": "Gegen eine Bundesverordnung hilft dir § 47 VwGO nicht. Die Normenkontrolle ist schmaler, als viele denken. Vier Hürden.",
+          "marken": [
+            "nicht für Bundesrecht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaftigkeit",
+          "text": "Nr. 1: Satzungen nach dem BauGB. Nr. 2: Vorschriften unter dem Landesgesetz, wenn das Land es bestimmt.",
+          "norm": "§ 47 Abs. 1 VwGO",
+          "sprecher": "Hürde eins: die Statthaftigkeit. Immer angreifbar sind Satzungen nach dem Baugesetzbuch, vor allem der Bebauungsplan. Andere Vorschriften im Rang unter dem Landesgesetz nur, wenn das Landesrecht das vorsieht. Bundesverordnungen und Gesetze fallen nie darunter.",
+          "marken": [
+            "je nach Land"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Antragsbefugnis",
+          "text": "Mögliche Rechtsverletzung durch die Norm oder ihre Anwendung – jetzt oder in absehbarer Zeit.",
+          "norm": "§ 47 Abs. 2 S. 1 VwGO",
+          "sprecher": "Hürde zwei: die Antragsbefugnis. Du musst geltend machen, durch die Vorschrift oder ihre Anwendung in deinen Rechten verletzt zu sein oder in absehbarer Zeit verletzt zu werden. Beim Bebauungsplan reicht oft das Recht auf gerechte Abwägung deiner Belange.",
+          "marken": [
+            "§ 1 Abs. 7 BauGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Frist und Antragsgegner",
+          "text": "Ein Jahr nach Bekanntmachung; Antrag gegen die Körperschaft, die die Norm erlassen hat.",
+          "norm": "§ 47 Abs. 2 VwGO",
+          "sprecher": "Hürde drei: Frist und Gegner. Der Antrag ist binnen eines Jahres nach Bekanntmachung zu stellen, gegen die Körperschaft, die die Vorschrift erlassen hat.",
+          "marken": [
+            "ein Jahr"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Begründetheit",
+          "text": "Norm mit höherrangigem Recht unvereinbar – beim B-Plan die Planerhaltung beachten.",
+          "norm": "§§ 214, 215 BauGB",
+          "sprecher": "Hürde vier: die Begründetheit. Die Vorschrift muss mit höherrangigem Recht unvereinbar sein. Beim Bebauungsplan prüfst du zusätzlich die Planerhaltung: Nicht jeder Fehler ist beachtlich.",
+          "marken": [
+            "Planerhaltung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Rechtsfolge",
+          "text": "Das OVG erklärt die Norm für unwirksam – allgemeinverbindlich. Eilrechtsschutz: § 47 Abs. 6.",
+          "norm": "§ 47 Abs. 5, 6 VwGO",
+          "sprecher": "Hast du Erfolg, erklärt das Oberverwaltungsgericht die Vorschrift für unwirksam, und zwar allgemeinverbindlich. Für die Eile gibt es die einstweilige Anordnung nach Absatz 6.",
+          "marken": [
+            "allgemeinverbindlich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Und gegen die Bundesverordnung?",
+          "text": "Inzidentkontrolle in einem anderen Verfahren, etwa über eine Feststellungsklage, oder die Verfassungsbeschwerde.",
+          "norm": null,
+          "sprecher": "Und gegen die Bundesverordnung? Dann prüft das Gericht sie inzident in einem anderen Verfahren, etwa bei einer Feststellungsklage. Oder es bleibt die Verfassungsbeschwerde.",
+          "marken": [
+            "inzident"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Statthaft, befugt, fristgerecht, begründet – und nur für Satzungen und Landesrecht unter dem Gesetz.",
+          "norm": "§ 47 VwGO",
+          "sprecher": "Merke: statthaft, befugt, fristgerecht, begründet. Und § 47 VwGO nur für Satzungen und Landesrecht unter dem Gesetz.",
+          "marken": [
+            "vier Hürden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Normenkontrolle: erst die Norm einordnen",
+          "text": "Speichern für die nächste Baurechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Baurechtsklausur. Und frag zuerst: Welchen Rang hat die Norm?",
+          "marken": [
+            "Rang prüfen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Gegen eine Bundesverordnung hilft § 47 VwGO nicht. Die Normenkontrolle erfasst Satzungen nach dem BauGB und – nur wenn das Landesrecht es bestimmt – andere Vorschriften unter dem Landesgesetz. Dann vier Hürden: Statthaftigkeit, Antragsbefugnis, Jahresfrist gegen den richtigen Antragsgegner, Begründetheit mit Planerhaltung. Erfolg: allgemeinverbindliche Unwirksamkeit. Speichern für die nächste Baurechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#normenkontrolle",
+        "#47vwgo",
+        "#baurecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Normenkontrolle nach § 47 VwGO: vier Hürden",
+      "titelZeilen": [
+        "Bundesverordnung?",
+        "Dafür ist § 47 VwGO",
+        "nicht gemacht"
+      ],
+      "coverText": "Nur Satzungen und Landesrecht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Die Normenkontrolle vor dem Oberverwaltungsgericht ist nur für bestimmte Normen unterhalb des Landesgesetzes geöffnet.",
+        "handlung": "{B} tries to push a large, heavy scroll through a gate, while {A} calmly shows that the gate opening is only sized for small local scrolls stacked beside it.",
+        "hinweisRegie": "Place the note in the free space above the narrow gate opening, slightly tilted toward the small local scrolls, so the limited scope is emphasized without covering {B}'s pushing arms.",
+        "alternative": "{A} sorts scrolls on a ladder by rank and lets only those from the lower rungs pass through a small hatch."
+      },
+      "bildSzene": "large scroll too big for gate",
+      "bildSzeneAlt": "scrolls sorted on ladder by rank",
+      "quellen": [
+        "§ 47 VwGO",
+        "§ 1 Abs. 7 BauGB",
+        "§§ 214, 215 BauGB",
+        "§ 43 VwGO",
+        "Themenpool: vwgo-658"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "anwendungsbereich",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.353Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-076",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Ein nach § 136a StPO erpresstes Geständnis führt die Polizei zur Tatwaffe. Ist die Waffe verwertbar?",
+      "optionen": [
+        "Nein – alles, was aus dem Geständnis folgt, ist unverwertbar",
+        "Nur wenn der Angeklagte der Verwertung zustimmt",
+        "Nach der Rspr. grundsätzlich ja – keine Fernwirkung"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 136a Abs. 3 StPO",
+        "Themenpool: stpo-076"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.353Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-076",
+      "ueberzeile": "Auflösung",
+      "titel": "Nach der Rspr. grundsätzlich verwertbar – das Verbot wirkt nicht fort",
+      "text": "Das Geständnis selbst ist unverwertbar, auch mit Zustimmung des Beschuldigten (§ 136a Abs. 3 S. 2 StPO). Eine Fernwirkung auf mittelbar gewonnene Beweise lehnt die Rspr. aber grundsätzlich ab: Ein Verfahrensfehler soll nicht das ganze Verfahren lahmlegen. Teile der Lit. bejahen sie jedenfalls bei § 136a StPO. Also: Streit kennen und entscheiden.",
+      "norm": "§ 136a Abs. 3 StPO",
+      "quellen": [
+        "§ 136a Abs. 3 StPO",
+        "Themenpool: stpo-076"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.353Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – alles, was aus dem Geständnis folgt, ist unverwertbar",
+        "Nur wenn der Angeklagte der Verwertung zustimmt",
+        "Nach der Rspr. grundsätzlich ja – keine Fernwirkung"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-266",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 377 HGB: Wer nicht rechtzeitig rügt, genehmigt die Ware",
+      "text": "Ist der Kauf für beide Seiten ein Handelsgeschäft, muss der Käufer die Ware unverzüglich nach Ablieferung untersuchen, soweit das im ordnungsgemäßen Geschäftsgang tunlich ist, und Mängel unverzüglich anzeigen. Sonst gilt die Ware als genehmigt (Abs. 2). Versteckte Mängel: Anzeige unverzüglich nach Entdeckung (Abs. 3). Rechtzeitige Absendung genügt (Abs. 4).",
+      "norm": "§ 377 HGB",
+      "quellen": [
+        "§ 377 HGB",
+        "§ 343 HGB",
+        "Themenpool: handelsg-266"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.353Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-914",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Reise gar nicht angetreten: keine Entschädigung für die Urlaubszeit?",
+      "falsch": "Entschädigung für nutzlos aufgewendete Urlaubszeit gibt es nur, wenn man die Reise angetreten hat und sie dann mangelhaft war.",
+      "richtigText": "§ 651n Abs. 2 BGB erfasst auch die vereitelte Pauschalreise – etwa wenn der Veranstalter wegen Überbuchung gar nicht leistet. Voraussetzung ist, dass die Reise vereitelt oder erheblich beeinträchtigt wird. Ausgeschlossen ist der Anspruch in den Fällen des § 651n Abs. 1 Nr. 1–3 BGB, etwa bei unvermeidbaren, außergewöhnlichen Umständen.",
+      "quellen": [
+        "§ 651i BGB",
+        "§ 651n BGB",
+        "Themenpool: schuldbt-914"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.353Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-189",
+      "ueberzeile": "Klausurtipp Kaufrecht",
+      "titel": "Mangel seit 2022: Die Vereinbarung allein schützt den Verkäufer nicht mehr",
+      "text": "Die Sache muss den subjektiven Anforderungen (§ 434 Abs. 2 BGB), den objektiven (Abs. 3) und ggf. den Montageanforderungen (Abs. 4) zugleich genügen. Prüfe also auch dann Abs. 3, wenn die Vereinbarung eingehalten ist. Soll die Sache beim Verbrauchsgüterkauf negativ abweichen, gilt § 476 Abs. 1 S. 2 BGB: gesondert informieren, ausdrücklich und gesondert vereinbaren.",
+      "quellen": [
+        "§ 434 BGB",
+        "§ 476 Abs. 1 BGB",
+        "Themenpool: schuldbt-189"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.353Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-160",
+      "ueberzeile": "4 Punkte BGB AT",
+      "titel": "Duldungsvollmacht: Er wusste es und ließ es geschehen",
+      "text": "Anders als bei der Anscheinsvollmacht kennt der Vertretene das Auftreten. Es geht um Rechtsschein – wollte er die Vertretung, liegt schon eine konkludente Vollmacht vor.",
+      "punkte": [
+        "Jemand tritt ohne Vollmacht im Namen des Vertretenen auf",
+        "Der Vertretene weiß das und schreitet nicht ein, obwohl er könnte",
+        "Der Gegner darf das Dulden nach Treu und Glauben als Bevollmächtigung verstehen",
+        "Der Gegner vertraut bei Vertragsschluss gutgläubig auf den Schein"
+      ],
+      "quellen": [
+        "§ 164 BGB",
+        "§ 167 BGB",
+        "§ 172 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-160"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:24.353Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
