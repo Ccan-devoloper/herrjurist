@@ -11,7 +11,7 @@ const targetSet=new Set(dates);
 if(!dates.length||dates.some(d=>!/^\d{4}-\d{2}-\d{2}$/.test(d))) throw new Error("Datumsargumente fehlen/ungueltig");
 for(const k of ["OPENAI_API_KEY","ANTHROPIC_API_KEY","ELEVENLABS_API_KEY","PEXELS_API_KEY"]) if(String(process.env[k]||"").trim()) throw new Error(`${k} muss leer sein`);
 if(process.env.IG_BILD_KI==="true"||process.env.IG_CHARAKTERE==="true") throw new Error("Bild-KI/Charaktere muessen deaktiviert sein");
-const host=new Hosting({pushen:true}); host.vorbereiten();
+const host=new Hosting({pushen:process.env.IG_NO_PUSH!=="true"}); host.vorbereiten();
 const vp=path.join(host.dir,"vorproduktion"), read=(p,f=null)=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,"utf8")):f;
 const pool=themenpool(), byId=new Map(pool.map(t=>[t.id,t])), strategy=read(path.join(host.stateDir,"strategie.json"),{});
 const ledger=read(path.join(host.stateDir,"ledger.json"),{veroeffentlicht:[],fachZaehler:{}}); ledger.veroeffentlicht||=[]; ledger.fachZaehler||={};
