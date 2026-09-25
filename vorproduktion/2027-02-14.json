@@ -1,0 +1,888 @@
+{
+  "datum": "2027-02-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "staat-359",
+        "themaTitel": "Was ist die Wesentlichkeitstheorie?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "sachen-496",
+        "themaTitel": "Übereignung beweglicher Sachen",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "verwalt-647"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "verwalt-647"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:11",
+        "art": "norm",
+        "themaId": "strafbt-744"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "fehler",
+        "themaId": "zpo-916"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "tipp",
+        "themaId": "bgbat-425"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "zahl",
+        "themaId": "assessorz-801"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "staat-359",
+      "poolTitel": "Was ist die Wesentlichkeitstheorie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-496",
+      "poolTitel": "Übereignung beweglicher Sachen",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 929 S. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-647",
+      "poolTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-03"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-647",
+      "poolTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-03"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-744",
+      "poolTitel": "Fahrlässige Tötung und Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 222, 229 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-12-15"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "zpo-916",
+      "poolTitel": "Einfache oder notwendige Streitgenossenschaft: Wann greift § 62 ZPO?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 59-61 ZPO",
+        "§ 62 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10",
+        "2026-12-11",
+        "2027-02-09"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "bgbat-425",
+      "poolTitel": "Minderjährigenrecht: Einwilligung, Genehmigung, Taschengeld",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 107, 108, 110 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-801",
+      "poolTitel": "Was verlangt die Relationstechnik in drei Stationen?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08",
+        "2026-12-31"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-02-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Kernsätze aus vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Kernsätze aus",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Hypothek: Übertragen wird die Forderung – die Hypothek folgt ihr (§ 1153 BGB).",
+            "Versendungskauf: Verbraucher trägt Transportrisiko nur bei selbst beauftragtem Transporteur (§ 475 II BGB).",
+            "Zahlung vor Zustellung: zurücknehmen statt erledigen – Kosten nach § 269 Abs. 3 S. 3 ZPO.",
+            "Vollstreckung: Titel, Klausel, Zustellung – erst dann darf vollstreckt werden.",
+            "Annahmeverzug: Leichte Fahrlässigkeit schadet dem Verkäufer nicht (§ 300 Abs. 1 BGB)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Anklage: Andere Tatzeit, dieselbe Tat – wenn das Geschehen unverwechselbar bleibt.",
+            "§ 153a StPO: Nach Erfüllung nur als Vergehen verbraucht, als Verbrechen weiter verfolgbar.",
+            "Unterlassen: Garantenstellung erst nach Erfolg, Möglichkeit und Quasi-Kausalität.",
+            "Prozessbetrug: Getäuscht wird der Richter, geschädigt der Gegner.",
+            "Strafurteil: Tenor mit gesetzlicher Überschrift, Paragrafen erst in der Liste.",
+            "Sachrüge: Ein Satz genügt, Prüfgrundlage ist allein das Urteil."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Art. 14 GG: Erst Enteignung oder Inhaltsbestimmung, dann der passende Maßstab.",
+            "Art. 5 GG: Bewusst unwahre Tatsachen sind nach dem BVerfG nicht geschützt.",
+            "Leistungsklage: keine Frist, kein Vorverfahren – aber Klagebefugnis analog.",
+            "Allgemeines Gesetz: meinungsneutral und zum Schutz eines eigenständigen Rechtsguts.",
+            "Kennzeichenkontrolle: Eingriff auch beim Nichttreffer."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Einen Streit entscheidest du nur, wenn die Ansichten zu verschiedenen Ergebnissen führen.",
+            "Kopfsache: In der Lerngruppe Klausuren tauschen – mit vier Randbemerkungen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann trägt beim Verbrauchsgüterkauf der Käufer das Transportrisiko?",
+            "Welche drei Hürden entfallen bei der Leistungsklage – und welche bleibt?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Verfahren",
+            "Strafrecht über Aufbau und Tenor",
+            "Öffentliches Recht als Prüfungskette",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "dokument",
+            "richter",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Kernsätze aus vier Bereichen – von der Hypothek über den Prozessbetrug bis zur Kennzeichenkontrolle. Zivilrecht, Strafrecht und Öffentliches Recht stehen jeweils auf einer eigenen Folie, dazu Klausurtechnik und Kopfsache. Geh jeden Punkt durch und markiere, was du noch nicht ohne Unterlagen erklären kannst. Genau das kommt auf die Wiederholungsliste.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Kernsätze",
+      "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Eine Woche Stoff wird in vier Bereiche sortiert und kurz abgefragt.",
+        "handlung": "{A} curiously sorts eighteen small glowing stones into four differently coloured bowls, while {B} taps one stone that still flickers with his pointer.",
+        "hinweisRegie": "Place the note in the free space above the four coloured bowls, slightly tilted toward the flickering stone, without covering {A}'s hands or {B}'s pointer.",
+        "alternative": "{B} holds up a small blank quiz card while {A} answers by lifting one of four coloured flags."
+      },
+      "bildSzene": "eighteen glowing stones sorted into bowls",
+      "bildSzeneAlt": "quiz card, four coloured flags",
+      "quellen": [
+        "§ 1153 BGB",
+        "§ 475 Abs. 2 BGB",
+        "§ 269 Abs. 3 S. 3 ZPO",
+        "§§ 704, 724, 750 ZPO",
+        "§§ 300, 326 BGB",
+        "§ 264 StPO",
+        "§ 153a StPO",
+        "§ 13 StGB",
+        "§ 263 StGB",
+        "§ 260 StPO",
+        "§ 344 StPO",
+        "Art. 14 GG",
+        "Art. 5 GG",
+        "§ 42 Abs. 2 VwGO",
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.418Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-359",
+      "slug": "2027-02-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wesentlichkeit: zwei Fragen, nicht eine",
+          "titelZeilen": [
+            "Wesentlichkeit:",
+            "zwei Fragen,",
+            "nicht eine"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Ob und wie genau regeln",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Aus Rechtsstaats- und Demokratieprinzip (Art. 20 GG) folgt: Der Gesetzgeber muss wesentliche Entscheidungen selbst treffen. Die Wesentlichkeitstheorie beantwortet dabei zwei Fragen – ob überhaupt ein Parlamentsgesetz nötig ist und wie genau es sein muss."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Ist die Frage wesentlich?",
+              "text": "Maßgeblich ist vor allem die Grundrechtsrelevanz: Intensität des Eingriffs, Kreis der Betroffenen, Bedeutung für die Allgemeinheit."
+            },
+            {
+              "titel": "2. Folge: Parlamentsvorbehalt",
+              "text": "Wesentliches regelt der Gesetzgeber selbst. Eine Verwaltungsvorschrift oder eine bloße Generalklausel genügt dann nicht."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Regelungsdichte",
+              "text": "Je intensiver der Eingriff, desto bestimmter muss das Gesetz sein. Delegation an den Verordnungsgeber nur nach Art. 80 Abs. 1 S. 2 GG."
+            },
+            {
+              "titel": "4. Anwendung im Fall",
+              "text": "Prüfen, ob die konkrete Grundlage die wesentlichen Fragen selbst beantwortet – oder sie der Verwaltung überlässt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Wo es auftaucht",
+          "text": "Klassisch im Schulrecht – etwa beim Schulausschluss –, bei grundrechtsrelevanten Subventionen und bei Satzungen berufsständischer Kammern, die den Status eines Berufs regeln. Geprüft wird die Wesentlichkeit meist beim Vorbehalt des Gesetzes in der Rechtfertigung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erste Frage: Braucht es ein Parlamentsgesetz? Zweite Frage: Ist es bestimmt genug? Beides folgt aus der Wesentlichkeit."
+        },
+        {
+          "art": "cta",
+          "titel": "Wesentlichkeit in drei Zügen",
+          "punkte": [
+            "Grundrechtsrelevanz bestimmen",
+            "Parlamentsgesetz vorhanden?",
+            "Bestimmtheit nach Eingriffsintensität"
+          ],
+          "icons": [
+            "waage",
+            "gebaeude",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Die Wesentlichkeitstheorie stellt zwei Fragen, nicht eine: Braucht es überhaupt ein Parlamentsgesetz – und wie bestimmt muss es sein? Maßstab ist vor allem die Grundrechtsrelevanz. Je intensiver der Eingriff, desto mehr muss der Gesetzgeber selbst regeln; Delegation an den Verordnungsgeber nur unter den Voraussetzungen des Art. 80 Abs. 1 S. 2 GG. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#wesentlichkeitstheorie",
+        "#vorbehaltdesgesetzes",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wesentlichkeitstheorie: das Prüfschema",
+      "coverText": "Ob und wie genau regeln",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Die wichtigsten Entscheidungen trifft das Parlament selbst – und so genau, wie der Eingriff es verlangt.",
+        "handlung": "{A} firmly keeps a heavy, glowing core stone in her own hands, while {B} hovers beside her holding only a small pebble it was allowed to carry.",
+        "hinweisRegie": "Place the note in the free space between the heavy core stone and the small pebble, slightly tilted toward the core stone, without covering {A}'s grip or {B}'s claw.",
+        "alternative": "{B} fine-tunes a dial whose precision rises as the weight on a scale beside it grows, while {A} adds more weight."
+      },
+      "bildSzene": "leader keeps core stone, droid holds pebble",
+      "bildSzeneAlt": "precision dial rises with weight",
+      "quellen": [
+        "Art. 20 Abs. 1–3 GG",
+        "Art. 80 Abs. 1 S. 2 GG",
+        "Themenpool: staat-359"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-fragen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.419Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-496",
+      "slug": "2027-02-14-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "§ 929 BGB fragt nicht nach dem Kaufvertrag",
+          "unter": "Übereignung · § 929 S. 1 BGB",
+          "text": "Abstraktionsprinzip: Die Übereignung ist vom Kaufvertrag unabhängig.",
+          "norm": "§ 929 S. 1 BGB",
+          "icon": "handschlag",
+          "sprecher": "Kaufvertrag nichtig – und das Eigentum ist trotzdem weg. Denn § 929 BGB fragt nicht nach dem Kaufvertrag. Die Übereignung hat vier eigene Voraussetzungen.",
+          "marken": [
+            "abstrakt",
+            "vier Voraussetzungen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Dingliche Einigung",
+          "text": "Einig, dass das Eigentum übergehen soll – ein eigener Vertrag.",
+          "norm": "§ 929 S. 1 BGB",
+          "sprecher": "Eins: die Einigung. Veräußerer und Erwerber sind sich einig, dass das Eigentum übergehen soll. Das ist ein eigener, dinglicher Vertrag, für den die allgemeinen Regeln über Willenserklärungen gelten.",
+          "marken": [
+            "dinglicher Vertrag"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Übergabe",
+          "text": "Erwerber erlangt Besitz, Veräußerer behält keinen – auf dessen Veranlassung.",
+          "norm": "§ 929 S. 1 BGB",
+          "sprecher": "Zwei: die Übergabe. Der Erwerber erlangt Besitz, der Veräußerer gibt jeden Besitz auf, und das geschieht auf seine Veranlassung. Besitzdiener oder Geheißpersonen können dazwischengeschaltet sein.",
+          "marken": [
+            "Besitzwechsel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Einigsein bei Übergabe",
+          "text": "Die Einigung muss im Moment der Übergabe noch bestehen.",
+          "norm": null,
+          "sprecher": "Drei: Die Einigung muss bei der Übergabe noch bestehen. Bis dahin kann sie nach herrschender Meinung widerrufen werden – der Widerruf muss aber nach außen erkennbar sein.",
+          "marken": [
+            "noch einig?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Berechtigung",
+          "text": "Eigentümer oder verfügungsbefugt – sonst nur §§ 932 ff. BGB.",
+          "norm": "§§ 932 ff. BGB",
+          "sprecher": "Vier: Der Veräußerer muss berechtigt sein, also Eigentümer oder verfügungsbefugt. Fehlt das, bleibt nur der gutgläubige Erwerb nach §§ 932 ff. BGB.",
+          "marken": [
+            "Berechtigung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Kaufvertrag ist nur der Rechtsgrund",
+          "text": "Nichtiger Kaufvertrag: Eigentum geht über, Rückforderung über § 812 BGB.",
+          "norm": "§ 812 Abs. 1 S. 1 BGB",
+          "sprecher": "Und der Kaufvertrag? Er ist nur der Rechtsgrund. Ist er nichtig, geht das Eigentum trotzdem über. Der Veräußerer muss es über das Bereicherungsrecht zurückfordern, nach § 812 BGB.",
+          "marken": [
+            "Trennung · Abstraktion"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Ausnahme: Fehleridentität",
+          "text": "Trifft derselbe Mangel auch die Einigung, ist auch sie unwirksam.",
+          "norm": null,
+          "sprecher": "Aber Vorsicht: Trifft derselbe Mangel auch die Einigung, etwa die Geschäftsunfähigkeit oder eine arglistige Täuschung, ist auch die Übereignung unwirksam. Das nennt man Fehleridentität.",
+          "marken": [
+            "Fehleridentität"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Einigung, Übergabe, Einigsein, Berechtigung – der Kaufvertrag steht nicht im Schema.",
+          "norm": "§ 929 S. 1 BGB",
+          "sprecher": "Merke: Einigung, Übergabe, Einigsein bei Übergabe, Berechtigung. Der Kaufvertrag steht nicht im Schema.",
+          "marken": [
+            "vier Punkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Kaufvertrag und Übereignung getrennt prüfen",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Sachenrechtsklausur. Und prüf Kaufvertrag und Übereignung immer getrennt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Kaufvertrag nichtig – und das Eigentum ist trotzdem weg. Nach dem Abstraktionsprinzip hat die Übereignung nach § 929 S. 1 BGB eigene Voraussetzungen: Einigung, Übergabe, Einigsein bei Übergabe und Berechtigung. Der nichtige Kaufvertrag wird über § 812 BGB rückabgewickelt – außer bei Fehleridentität, wenn derselbe Mangel auch die Einigung erfasst. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#929bgb",
+        "#abstraktionsprinzip",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Übereignung nach § 929 S. 1 BGB: vier Punkte",
+      "titelZeilen": [
+        "§ 929 BGB fragt",
+        "nicht nach dem",
+        "Kaufvertrag"
+      ],
+      "coverText": "Abstraktionsprinzip in Aktion",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Das Eigentum wandert mit Einigung und Übergabe, auch wenn der Kaufvertrag dahinter reißt.",
+        "handlung": "{A} hands a heavy crystal to {B}, while a thin ribbon tied between their wrists snaps in two behind them, and the crystal still lands safely in {B}'s arms.",
+        "hinweisRegie": "Place the note in the free space between the snapped ribbon and the crystal in {B}'s arms, slightly tilted toward the crystal, without covering either character's hands.",
+        "alternative": "{B} holds a crystal while a paper bridge behind her collapses, and {A} calmly points out that she is already across."
+      },
+      "bildSzene": "crystal handed over, ribbon snaps",
+      "bildSzeneAlt": "paper bridge collapses after crossing",
+      "quellen": [
+        "§ 929 S. 1 BGB",
+        "§§ 932 ff. BGB",
+        "§ 812 Abs. 1 S. 1 BGB",
+        "Themenpool: sachen-496"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "abstraktion-kontraintuitiv",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.420Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-647",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Handlungs- oder Zustandsstörer – welche Ermessensstufe betrifft die Frage, gegen wen die Behörde vorgeht?",
+      "optionen": [
+        "Das Entschließungsermessen",
+        "Das Auswahlermessen",
+        "Ein Beurteilungsspielraum auf Tatbestandsseite"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 40 VwVfG",
+        "Themenpool: verwalt-647"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.420Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-647",
+      "ueberzeile": "Auflösung",
+      "titel": "Das Auswahlermessen – es umfasst die Störerauswahl",
+      "text": "Entschließungsermessen betrifft das Ob, Auswahlermessen das Wie: welches Mittel und gegen wen. Leitlinie der Störerauswahl ist die effektive Gefahrenabwehr; eine feste Rangfolge zwischen Handlungs- und Zustandsstörer gibt es grundsätzlich nicht – je nach Landesrecht. Ein Beurteilungsspielraum betrifft dagegen unbestimmte Rechtsbegriffe im Tatbestand.",
+      "norm": "§ 40 VwVfG",
+      "quellen": [
+        "§ 40 VwVfG",
+        "Themenpool: verwalt-647"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.420Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Das Entschließungsermessen",
+        "Das Auswahlermessen",
+        "Ein Beurteilungsspielraum auf Tatbestandsseite"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-744",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 230 StGB: Fahrlässige Körperverletzung braucht einen Strafantrag",
+      "text": "§ 229 StGB wird nur auf Antrag verfolgt, es sei denn, die Strafverfolgungsbehörde hält wegen des besonderen öffentlichen Interesses ein Einschreiten von Amts wegen für geboten (§ 230 Abs. 1 StGB). Die fahrlässige Tötung (§ 222 StGB) ist dagegen kein Antragsdelikt. In der Anklageklausur deshalb bei § 229 StGB immer den Strafantrag prüfen.",
+      "norm": "§§ 222, 229, 230 StGB",
+      "quellen": [
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "§ 230 StGB",
+        "Themenpool: strafbt-744"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.420Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-916",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Beklagte in Hamburg und München: zwei getrennte Prozesse?",
+      "falsch": "Die Streitgenossen haben verschiedene allgemeine Gerichtsstände – also muss K jeden an seinem Wohnsitz verklagen.",
+      "richtigText": "Fehlt ein gemeinschaftlicher besonderer Gerichtsstand, kann K das im Rechtszug zunächst höhere Gericht ein zuständiges Gericht bestimmen lassen (§ 36 Abs. 1 Nr. 3 ZPO). Vorher prüfen: Gibt es doch einen gemeinsamen besonderen Gerichtsstand, etwa den der unerlaubten Handlung (§ 32 ZPO)?",
+      "quellen": [
+        "§ 36 Abs. 1 Nr. 3 ZPO",
+        "§ 32 ZPO",
+        "§§ 59, 60 ZPO",
+        "Themenpool: zpo-916"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.420Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-425",
+      "ueberzeile": "Klausurtipp BGB AT",
+      "titel": "Taschengeld auf Raten: § 110 BGB greift erst mit der letzten Rate",
+      "text": "Ein Vertrag des Minderjährigen gilt nach § 110 BGB als von Anfang an wirksam, wenn er die Leistung mit Mitteln bewirkt, die ihm dazu oder zur freien Verfügung überlassen wurden. Beim Ratenkauf erst mit der letzten Rate – bis dahin schwebend unwirksam (§ 108 BGB). Und was er mit dem Erlangten erwirbt, etwa mit einem Lottogewinn, deckt § 110 BGB nicht automatisch.",
+      "quellen": [
+        "§ 107 BGB",
+        "§ 108 BGB",
+        "§ 110 BGB",
+        "Themenpool: bgbat-425"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.420Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-801",
+      "ueberzeile": "4 Punkte Relation",
+      "titel": "Nicht beweisbedürftig: Was du vor der Beweisstation aussortierst",
+      "text": "Beweis erhebst du nur über streitige Tatsachen. Bevor du Beweislast und Beweiswürdigung prüfst, streichst du alles, was gar keines Beweises bedarf.",
+      "punkte": [
+        "Nicht bestritten: gilt als zugestanden (§ 138 Abs. 3 ZPO)",
+        "Gerichtliches Geständnis (§ 288 ZPO)",
+        "Offenkundige Tatsachen (§ 291 ZPO)",
+        "Unzulässiges Bestreiten mit Nichtwissen (§ 138 Abs. 4 ZPO)"
+      ],
+      "quellen": [
+        "§ 138 Abs. 3, 4 ZPO",
+        "§ 288 ZPO",
+        "§ 291 ZPO",
+        "Themenpool: assessorz-801"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:58.420Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
