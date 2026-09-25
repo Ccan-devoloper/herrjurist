@@ -1,0 +1,864 @@
+{
+  "datum": "2027-05-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "sachen-235",
+        "themaTitel": "Was bewirkt eine Vormerkung?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-298",
+        "themaTitel": "Wie prüft man das Fahrlässigkeitsdelikt?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-143",
+        "themaTitel": "Wann ist die Feststellungsklage subsidiär?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "bgbat-420"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "bgbat-420"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:57",
+        "art": "norm",
+        "themaId": "schuld-184"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "merksatz",
+        "themaId": "verwbt-118"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "begriff",
+        "themaId": "strafbt-135"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "fehler",
+        "themaId": "verwalt-930"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "sachen-235",
+      "poolTitel": "Was bewirkt eine Vormerkung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 883 BGB",
+        "§ 888 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-18",
+        "2026-09-24",
+        "2027-01-25"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-298",
+      "poolTitel": "Wie prüft man das Fahrlässigkeitsdelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB",
+        "§ 222 StGB",
+        "§ 229 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-143",
+      "poolTitel": "Wann ist die Feststellungsklage subsidiär?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 43 Abs. 2 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-420",
+      "poolTitel": "Zugang elektronischer Erklärungen und Messenger",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-420",
+      "poolTitel": "Zugang elektronischer Erklärungen und Messenger",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-184",
+      "poolTitel": "Was ist die Einrede des nicht erfüllten Vertrages?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 320 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-22",
+        "2027-03-14"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "verwbt-118",
+      "poolTitel": "Was ist eine öffentliche Einrichtung und wer hat Zugang zu ihr?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2027-03-01"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-135",
+      "poolTitel": "Wann liegt eine Urkundenfälschung vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 267 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2026-12-25"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "verwalt-930",
+      "poolTitel": "Wann beginnt die Jahresfrist des § 48 Abs. 4 VwVfG?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 Abs. 4 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2027-01-08",
+        "2027-03-14"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-235",
+      "slug": "2027-05-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Grundschuld nach der Vormerkung: Muss K sie dulden?",
+          "titelZeilen": [
+            "Grundschuld nach",
+            "der Vormerkung:",
+            "Muss K sie dulden?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Relativ unwirksam, § 888 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "V verkauft K ein Grundstück. Für K wird eine Auflassungsvormerkung eingetragen. Danach bestellt V der Bank B eine Grundschuld über 100.000 €, die ebenfalls eingetragen wird. Wochen später wird K als Eigentümer eingetragen. B droht mit der Zwangsvollstreckung. Muss K die Grundschuld hinnehmen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Vormerkung entstanden",
+              "text": "Gesicherter Anspruch auf Übereignung (§ 433 Abs. 1 S. 1 BGB), Bewilligung des V, Eintragung (§§ 883 Abs. 1, 885 BGB)."
+            },
+            {
+              "titel": "Spätere Verfügung",
+              "text": "Die Bestellung der Grundschuld ist eine Verfügung über das Grundstück – nach Eintragung der Vormerkung."
+            },
+            {
+              "titel": "Beeinträchtigung",
+              "text": "Die Belastung beeinträchtigt Ks Anspruch auf lastenfreie Übereignung. Sie ist ihm gegenüber unwirksam (§ 883 Abs. 2 S. 1 BGB)."
+            },
+            {
+              "titel": "Durchsetzung",
+              "text": "K kann von B die Zustimmung zur Löschung der Grundschuld verlangen (§ 888 Abs. 1 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Relativ, nicht absolut",
+          "text": "Die Grundschuld ist nicht nichtig. Sie ist wirksam entstanden – nur gegenüber K unwirksam. Gegenüber jedem anderen besteht sie fort. Deshalb braucht K einen eigenen Anspruch gegen B, um sie aus dem Grundbuch zu bekommen: § 888 Abs. 1 BGB."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Die Vormerkung schützt K auch vor Belastungen, die V nach ihrer Eintragung bestellt. Die Grundschuld ist K gegenüber relativ unwirksam. K muss sie nicht dulden und kann von B die Zustimmung zur Löschung verlangen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nach der Vormerkung eingetragene Rechte sind dem Berechtigten gegenüber unwirksam – durchgesetzt wird das mit § 888 Abs. 1 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Vormerkung in drei Schritten",
+          "punkte": [
+            "Vormerkung wirksam entstanden?",
+            "Spätere Verfügung beeinträchtigt den Anspruch?",
+            "Zustimmung nach § 888 BGB verlangen"
+          ],
+          "icons": [
+            "dokument",
+            "schloss",
+            "handschlag"
+          ]
+        }
+      ],
+      "caption": "Nach der Vormerkung lässt V noch schnell eine Grundschuld eintragen – muss der Käufer sie übernehmen? Nein. Die Belastung beeinträchtigt seinen Anspruch und ist ihm gegenüber unwirksam (§ 883 Abs. 2 S. 1 BGB). Weil sie nur relativ unwirksam ist, braucht er einen eigenen Anspruch gegen die Bank: Zustimmung zur Löschung nach § 888 Abs. 1 BGB. Speichern für den nächsten Grundstücksfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#vormerkung",
+        "#883bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vormerkung schützt vor späterer Grundschuld",
+      "coverText": "Relativ unwirksam, § 888 BGB",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Die Vormerkung sichert den Käufer auch gegen Lasten, die der Verkäufer danach noch auf das Grundstück legt.",
+        "handlung": "{A} lifts a heavy stone that someone placed on a small marked plot and sets it aside, while {B} hovers over a glowing marker post that was planted there first.",
+        "hinweisRegie": "Place the note in the free space beside the glowing marker post, slightly tilted toward the stone being removed, without covering {A}'s hands or the post.",
+        "alternative": "{B} holds a reservation token over a plot, while {A} pushes a later-placed crate off its edge."
+      },
+      "bildSzene": "stone lifted off reserved plot",
+      "bildSzeneAlt": "later crate pushed off reserved plot",
+      "quellen": [
+        "§ 883 BGB",
+        "§ 885 BGB",
+        "§ 888 BGB",
+        "§ 1191 BGB",
+        "Themenpool: sachen-235"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.879Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-298",
+      "slug": "2027-05-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fahrlässigkeit: die Voraussetzung, die viele vergessen",
+          "titelZeilen": [
+            "Fahrlässigkeit:",
+            "die Voraussetzung,",
+            "die viele vergessen"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Kausal ist nicht gleich zurechenbar",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall – und der vergessene Punkt",
+          "text": "Lkw-Fahrer A überholt den stark betrunkenen Radfahrer R viel zu knapp. R schwenkt nach links, gerät unter die Räder und stirbt. Er wäre möglicherweise auch bei ausreichendem Abstand gestürzt. Viele prüfen Pflichtverletzung und Kausalität – und übersehen den Pflichtwidrigkeitszusammenhang."
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Aufbau des § 222 StGB",
+          "schritte": [
+            {
+              "titel": "Erfolg und Kausalität",
+              "text": "R ist tot; ohne das Überholen wäre er nicht in dieser Weise gestorben."
+            },
+            {
+              "titel": "Objektive Pflichtverletzung",
+              "text": "A hielt keinen ausreichenden Seitenabstand ein (§ 5 Abs. 4 StVO); der Erfolg war objektiv vorhersehbar."
+            },
+            {
+              "titel": "Pflichtwidrigkeitszusammenhang",
+              "text": "Wäre der Tod auch bei pflichtgemäßem Überholen eingetreten? Dann realisiert sich nicht gerade die Pflichtverletzung."
+            },
+            {
+              "titel": "Schutzzweck, dann Schuld",
+              "text": "Schutzzweck der verletzten Norm; in der Schuld die individuelle Pflichtverletzung und Vorhersehbarkeit."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Der Streit beim Zusammenhang",
+          "links": {
+            "titel": "Rspr., h.M.",
+            "punkte": [
+              "Zurechnung nur, wenn der Erfolg bei pflichtgemäßem Verhalten sicher vermieden worden wäre",
+              "Zweifel: in dubio pro reo"
+            ]
+          },
+          "rechts": {
+            "titel": "Risikoerhöhungslehre",
+            "punkte": [
+              "Es genügt, dass die Pflichtverletzung das Risiko deutlich erhöht hat",
+              "Kritik: macht Verletzungs- zu Gefährdungsdelikten"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nach der Rspr. ist nicht sicher, dass R bei ausreichendem Abstand überlebt hätte. Der Erfolg ist A deshalb nicht zuzurechnen – keine Strafbarkeit aus § 222 StGB. Nach der Risikoerhöhungslehre wäre anders zu entscheiden. Hinweis: Einen Vorsatz prüfst du beim Fahrlässigkeitsdelikt nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Pflichtverletzung plus Kausalität reicht nicht: Der Erfolg muss gerade auf der Pflichtwidrigkeit beruhen."
+        },
+        {
+          "art": "cta",
+          "titel": "Fahrlässigkeit in drei Fragen",
+          "punkte": [
+            "Welche Sorgfaltspflicht wurde verletzt?",
+            "Wäre es mit Sorgfalt anders gekommen?",
+            "Individuell vorwerfbar?"
+          ],
+          "icons": [
+            "warnung",
+            "lupe",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Beim Fahrlässigkeitsdelikt vergessen viele einen Prüfungspunkt: den Pflichtwidrigkeitszusammenhang. Pflichtverletzung und Kausalität reichen nicht – der Erfolg muss gerade auf der Pflichtwidrigkeit beruhen. Nach der Rspr. fehlt die Zurechnung, wenn nicht sicher ist, dass der Erfolg bei pflichtgemäßem Verhalten ausgeblieben wäre. Die Risikoerhöhungslehre sieht das anders. Speichern für die nächste Klausur zu § 222 oder § 229 StGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#fahrlässigkeit",
+        "#222stgb",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fahrlässigkeit: Pflichtwidrigkeitszusammenhang",
+      "coverText": "Kausal ist nicht gleich zurechenbar",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Auch bei einem klaren Pflichtverstoß fehlt die Zurechnung, wenn der Erfolg mit Sorgfalt womöglich genauso eingetreten wäre.",
+        "handlung": "{A} stands beside a large cart that passed far too close to a toppled bicycle, while {B} holds a measuring cord between the cart's wheel and the bicycle to test the safe distance.",
+        "hinweisRegie": "Place the note in the free space above the measuring cord, slightly tilted toward the bicycle, so the question of the safe distance stands out without covering {A}'s face or the bicycle.",
+        "alternative": "{B} replays the same scene on two small side-by-side stages, one with the cart far away, while {A} compares the two outcomes."
+      },
+      "bildSzene": "measuring cord between cart and bicycle",
+      "bildSzeneAlt": "two stages compare same scene",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "§ 5 Abs. 4 StVO",
+        "Themenpool: strafat-298"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.880Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-143",
+      "slug": "2027-05-14-b3",
+      "titelZeilen": [
+        "Feststellungsklage",
+        "nachrangig? Gegen",
+        "Behörden oft nicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Feststellungsklage nachrangig? Gegen Behörden oft nicht",
+          "unter": "Subsidiarität · § 43 Abs. 2 VwGO",
+          "text": "Die Subsidiarität hat nach dem BVerwG Grenzen.",
+          "norm": "§ 43 Abs. 2 VwGO",
+          "icon": "gericht",
+          "sprecher": "Die Feststellungsklage ist nachrangig – aber nicht immer. Gerade gegen den Staat sieht das BVerwG die Sperre großzügig.",
+          "marken": [
+            "nicht immer"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der Grundsatz",
+          "text": "Keine Feststellung, wenn Gestaltungs- oder Leistungsklage möglich ist.",
+          "norm": "§ 43 Abs. 2 S. 1 VwGO",
+          "sprecher": "Schritt eins: der Grundsatz. Feststellung kann nicht verlangt werden, soweit der Kläger seine Rechte durch Gestaltungs- oder Leistungsklage verfolgen kann oder hätte verfolgen können.",
+          "marken": [
+            "Gestaltung · Leistung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Zweck",
+          "text": "Frist und Vorverfahren sollen nicht umgangen werden.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Zweck. Wer eine Anfechtungs- oder Verpflichtungsklage versäumt hat, soll Frist und Vorverfahren nicht über die Feststellungsklage umgehen. Und das speziellere Urteil soll Vorrang haben.",
+          "marken": [
+            "keine Umgehung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Gesetzliche Ausnahme",
+          "text": "Nichtigkeitsfeststellung ist nicht subsidiär.",
+          "norm": "§ 43 Abs. 2 S. 2 VwGO",
+          "sprecher": "Schritt drei: Die Nichtigkeitsfeststellungsklage ist ausdrücklich ausgenommen. Wer die Nichtigkeit eines Verwaltungsakts festgestellt haben will, muss nicht vorrangig anfechten.",
+          "marken": [
+            "Nichtigkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Einschränkung des BVerwG",
+          "text": "Gegen die öffentliche Hand: kein Vorrang der Leistungsklage.",
+          "norm": null,
+          "sprecher": "Schritt vier: Nach dem BVerwG greift die Subsidiarität nicht, wenn keine Umgehung der Regeln für Anfechtungs- und Verpflichtungsklage droht. Gegenüber der allgemeinen Leistungsklage gegen den Staat ist das meist so. Behörden halten sich auch an Feststellungsurteile.",
+          "marken": [
+            "kein Umgehungsrisiko"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Kritik",
+          "text": "Teile der Lehre: Der Wortlaut kennt diese Ausnahme nicht.",
+          "norm": null,
+          "sprecher": "Teile der Literatur kritisieren das: Der Wortlaut des Paragrafen 43 Absatz 2 kennt diese Ausnahme nicht. In der Klausur kannst du dem BVerwG folgen, solltest den Wortlaut aber ansprechen.",
+          "marken": [
+            "Wortlaut"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Subsidiär, wenn Frist und Vorverfahren umgangen würden.",
+          "norm": "§ 43 Abs. 2 VwGO",
+          "sprecher": "Merke: Die Feststellungsklage ist nachrangig, wo Frist und Vorverfahren umgangen würden. Wo das nicht droht, lässt das BVerwG sie auch gegen den Staat zu.",
+          "marken": [
+            "Umgehung prüfen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst den Zweck prüfen, dann sperren",
+          "text": "Speichern für die nächste VwGO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste VwGO-Klausur. Und frag bei der Subsidiarität immer: Was würde umgangen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Die Feststellungsklage ist subsidiär (§ 43 Abs. 2 S. 1 VwGO) – aber nicht schematisch. Zweck der Sperre ist, dass Frist und Vorverfahren von Anfechtungs- und Verpflichtungsklage nicht umgangen werden. Droht das nicht, lässt das BVerwG die Feststellungsklage auch gegen die öffentliche Hand zu, statt auf die Leistungsklage zu verweisen. Teile der Literatur halten das mit dem Wortlaut für unvereinbar. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwgo",
+        "#feststellungsklage",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 43 Abs. 2 VwGO: Grenzen der Subsidiarität",
+      "coverText": "Maßstab: droht eine Umgehung?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Die Sperre für die Feststellungsklage greift nur, wo sonst Fristen und Vorverfahren umgangen würden.",
+        "handlung": "{A} curiously tries a narrow side gate beside a main gate with a ticking timer, while {B} points his pointer at the timer to show the side gate only opens when the main route is not being dodged.",
+        "hinweisRegie": "Place the note in the free space between the side gate and the timer, slightly tilted toward the side gate, without covering {A}'s face or the timer.",
+        "alternative": "{B} holds a checklist of two questions in front of a small door, while {A} waits with a key to see whether it may be used."
+      },
+      "bildSzene": "side gate beside timed main gate",
+      "bildSzeneAlt": "door opens after two questions",
+      "quellen": [
+        "§ 43 VwGO",
+        "§ 42 VwGO",
+        "§ 68 VwGO",
+        "§ 74 VwGO",
+        "Themenpool: vwgo-143"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-420",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "A schickt der Privatperson B um 23:45 Uhr per Messenger eine Erklärung. Wann geht sie zu?",
+      "optionen": [
+        "Wenn mit Kenntnisnahme zu rechnen ist – regelmäßig am Morgen",
+        "Schon mit dem Absenden durch A",
+        "Erst mit der Lesebestätigung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 130 BGB",
+        "Themenpool: bgbat-420"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-420",
+      "ueberzeile": "Auflösung",
+      "titel": "Regelmäßig am nächsten Morgen – wenn mit Kenntnisnahme zu rechnen ist",
+      "text": "Zugegangen ist eine Erklärung, wenn sie in den Machtbereich des Empfängers gelangt und unter gewöhnlichen Umständen mit Kenntnisnahme zu rechnen ist. Im Machtbereich ist die Nachricht sofort, mit Lesen um Mitternacht rechnet man aber nicht. Das Absenden ist nur die Abgabe, und auf das tatsächliche Lesen kommt es nicht an. Bei Messengern ist manches noch offen.",
+      "norm": "§ 130 Abs. 1 S. 1 BGB",
+      "quellen": [
+        "§ 130 BGB",
+        "Themenpool: bgbat-420"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.881Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Wenn mit Kenntnisnahme zu rechnen ist – regelmäßig am Morgen",
+        "Schon mit dem Absenden durch A",
+        "Erst mit der Lesebestätigung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-184",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 322 BGB: Wer § 320 BGB erhebt, verliert den Prozess nicht – er zahlt Zug um Zug",
+      "text": "Die Einrede des nicht erfüllten Vertrags hindert nur die einseitige Durchsetzung. Erhebt der Beklagte sie im Prozess, wird die Klage nicht abgewiesen: Er wird zur Leistung Zug um Zug gegen Empfang der Gegenleistung verurteilt (§ 322 Abs. 1 BGB). Das gilt nur für Pflichten im Gegenseitigkeitsverhältnis. Tenoriere den Vorbehalt deshalb ausdrücklich.",
+      "norm": "§ 320 BGB · § 322 Abs. 1 BGB",
+      "quellen": [
+        "§ 320 BGB",
+        "§ 322 BGB",
+        "Themenpool: schuld-184"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-118",
+      "ueberzeile": "Merksatz Kommunalrecht",
+      "titel": "Zugang nur im Rahmen von Widmung und Kapazität",
+      "text": "Der Zulassungsanspruch nach der Gemeindeordnung reicht nur so weit wie die Widmung. Reicht die Kapazität nicht, bleibt ein Anspruch auf fehlerfreie Auswahl. Wer berechtigt ist, regelt das Landesrecht.",
+      "norm": "Gemeindeordnung",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-118"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-135",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Unechte Urkunde: Getäuscht wird über den Aussteller – nicht über den Inhalt",
+      "text": "Unecht ist eine Urkunde, wenn sie nicht von dem stammt, der aus ihr als Aussteller hervorgeht. Maßgeblich ist, wem die Erklärung geistig zuzurechnen ist. Die inhaltlich falsche, aber vom richtigen Aussteller stammende Urkunde – die „schriftliche Lüge“ – erfasst § 267 StGB nicht.",
+      "norm": "§ 267 Abs. 1 StGB",
+      "quellen": [
+        "§ 267 StGB",
+        "Themenpool: strafbt-135"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-930",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "§ 48 Abs. 4 VwVfG: Wessen Kenntnis setzt die Jahresfrist in Gang?",
+      "falsch": "Sobald irgendein Mitarbeiter der Behörde von den Rücknahmegründen erfährt, läuft die Jahresfrist.",
+      "richtigText": "Nach dem BVerwG kommt es auf die Kenntnis des Amtswalters an, der nach der Geschäftsverteilung für die Rücknahme zuständig ist. Er muss alle für die Rücknahme erheblichen Tatsachen vollständig kennen. Die Frist ist eine Entscheidungs-, keine Bearbeitungsfrist.",
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "Themenpool: verwalt-930"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:49:45.881Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

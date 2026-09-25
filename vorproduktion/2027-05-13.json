@@ -1,0 +1,905 @@
+{
+  "datum": "2027-05-13",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "staat-356",
+        "themaTitel": "Wie kommt ein Bundesgesetz zustande?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "sachen-031",
+        "themaTitel": "Wann ist ein gutgläubiger Erwerb ausgeschlossen?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "revision-873",
+        "themaTitel": "Wann ist die Revision statthaft?",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "stpo-783"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "stpo-783"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:57",
+        "art": "norm",
+        "themaId": "verwalt-383"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "streitstand",
+        "themaId": "anklage-870"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "merksatz",
+        "themaId": "assessoroer-713"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "begriff",
+        "themaId": "strafat-725"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "staat-356",
+      "poolTitel": "Wie kommt ein Bundesgesetz zustande?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 76 GG",
+        "Art. 77 GG",
+        "Art. 78 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-12-25",
+        "2027-04-01"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "sachen-031",
+      "poolTitel": "Wann ist ein gutgläubiger Erwerb ausgeschlossen?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 932 BGB",
+        "§ 935 BGB",
+        "§ 936 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28",
+        "2026-10-24"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-873",
+      "poolTitel": "Wann ist die Revision statthaft?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 333 StPO",
+        "§ 335 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-22",
+        "2027-02-22",
+        "2027-04-27"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-783",
+      "poolTitel": "Hauptverhandlung: Unmittelbarkeitsgrundsatz",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-24",
+        "2027-02-24",
+        "2027-03-03"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-783",
+      "poolTitel": "Hauptverhandlung: Unmittelbarkeitsgrundsatz",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-24",
+        "2027-02-24",
+        "2027-03-03"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-383",
+      "poolTitel": "Wie unterscheidet man gebundene Entscheidung und Ermessen?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-03"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "anklage-870",
+      "poolTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 74 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-05",
+        "2027-03-08",
+        "2027-03-25"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "assessoroer-713",
+      "poolTitel": "Aktenvortrag Öffentliches Recht",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO; materielles Recht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2027-01-19"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-725",
+      "poolTitel": "Einwilligung und mutmaßliche Einwilligung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-356",
+      "slug": "2027-05-13-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fünf Stationen bis zum Bundesgesetz – und wo der Bundesrat mitredet",
+          "titelZeilen": [
+            "Fünf Stationen",
+            "bis zum Bundes-",
+            "gesetz"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Zustimmung nur, wo das GG sie will",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die fünf Stationen",
+          "punkte": [
+            "Einleitung: Bundesregierung, Bundesrat oder Mitte des Bundestages (Art. 76 Abs. 1 GG)",
+            "Beschluss des Bundestages (Art. 77 Abs. 1 S. 1 GG)",
+            "Mitwirkung des Bundesrates (Art. 77 Abs. 2 bis 4, Art. 78 GG)",
+            "Gegenzeichnung und Ausfertigung (Art. 58, 82 Abs. 1 GG)",
+            "Verkündung im Bundesgesetzblatt (Art. 82 Abs. 1 GG)"
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Station 3: Einspruch oder Zustimmung?",
+          "links": {
+            "titel": "Einspruchsgesetz",
+            "punkte": [
+              "Regelfall",
+              "BR kann Vermittlungs-ausschuss anrufen und Einspruch einlegen",
+              "BT kann den Einspruch zurückweisen (Art. 77 Abs. 4 GG)"
+            ]
+          },
+          "rechts": {
+            "titel": "Zustimmungsgesetz",
+            "punkte": [
+              "Nur, wo das GG es ausdrücklich verlangt",
+              "Ohne Zustimmung des BR scheitert das Gesetz",
+              "Auch BT und Bundes-regierung können den VA anrufen"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Wann ist die Zustimmung nötig?",
+          "text": "Nur wo das GG es ausdrücklich anordnet – etwa Art. 84 Abs. 1 S. 6 GG (Verwaltungsverfahren ohne Abweichungsmöglichkeit der Länder), Art. 104a Abs. 4 GG oder Art. 105 Abs. 3 GG. Nach dem BVerfG ist das Gesetz als Einheit zustimmungsbedürftig, wenn es auch nur eine solche Vorschrift enthält."
+        },
+        {
+          "art": "text",
+          "titel": "Station 4: Prüfungsrecht des Bundespräsidenten",
+          "text": "Er fertigt Gesetze aus, die „nach den Vorschriften dieses Grundgesetzes zustande gekommen“ sind (Art. 82 Abs. 1 S. 1 GG). Das formelle Prüfungsrecht ist anerkannt. Ob und wie weit er auch materiell prüfen darf, ist umstritten; nach verbreiteter Ansicht jedenfalls bei offenkundigen Verstößen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einspruchsgesetz ist die Regel. Zustimmungsbedürftig ist ein Gesetz nur, wenn das GG es ausdrücklich anordnet."
+        },
+        {
+          "art": "cta",
+          "titel": "Gesetzgebung in drei Fragen",
+          "punkte": [
+            "Wer hat eingebracht?",
+            "Einspruch oder Zustimmung?",
+            "Formell ordnungsgemäß ausgefertigt?"
+          ],
+          "icons": [
+            "dokument",
+            "gebaeude",
+            "fueller"
+          ]
+        }
+      ],
+      "caption": "Vom Entwurf bis zum Bundesgesetzblatt: fünf Stationen. Einleitung nach Art. 76 GG, Beschluss des Bundestages, Mitwirkung des Bundesrates, Gegenzeichnung und Ausfertigung, Verkündung. Beim Bundesrat die wichtigste Weiche: Einspruchsgesetz ist die Regel, zustimmungsbedürftig ist ein Gesetz nur, wo das GG es ausdrücklich anordnet. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#gesetzgebung",
+        "#bundesrat",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gesetzgebung: fünf Stationen im Überblick",
+      "coverText": "Zustimmung nur, wo das GG sie will",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ein Gesetz durchläuft feste Stationen, und nur an einer davon kann der Bundesrat es endgültig stoppen.",
+        "handlung": "{A} carries a sealed scroll along a path with five small stations, while {B} curiously stops at the third station, where a gate can either swing open or lock.",
+        "hinweisRegie": "Place the note in the free space above the third station's gate, slightly tilted toward it, so the decisive switch stands out without covering the scroll or {B}'s face.",
+        "alternative": "{B} stamps a scroll at the last of five desks lined up in a row, while {A} looks back at the third desk with a raised barrier."
+      },
+      "bildSzene": "scroll carried past five stations",
+      "bildSzeneAlt": "scroll stamped at fifth desk",
+      "quellen": [
+        "Art. 76 GG",
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Art. 82 GG",
+        "Art. 84 Abs. 1 GG",
+        "Art. 104a Abs. 4 GG",
+        "Art. 105 Abs. 3 GG",
+        "Themenpool: staat-356"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-stationen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-031",
+      "slug": "2027-05-13-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gestohlenes Geld weitergegeben – der Empfänger wird trotzdem Eigentümer",
+          "titelZeilen": [
+            "Gestohlenes Geld",
+            "weitergegeben –",
+            "Empfänger wird",
+            "trotzdem Eigentümer"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Geld ist von § 935 BGB ausgenommen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Gutgläubiger Erwerb beweglicher Sachen scheitert aus zwei ganz verschiedenen Gründen: am Erwerber, der nicht gutgläubig ist (§ 932 Abs. 2 BGB), oder an der Sache, die dem Eigentümer abhandengekommen ist (§ 935 Abs. 1 BGB). Und § 935 Abs. 2 BGB macht von der zweiten Sperre wieder Ausnahmen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Sperren",
+          "links": {
+            "titel": "§ 932 Abs. 2 BGB",
+            "punkte": [
+              "Knüpft an den Erwerber an",
+              "Kenntnis oder grob fahrlässige Unkenntnis vom fehlenden Eigentum",
+              "Beweislast: Wer den Erwerb bestreitet, muss Bösgläubigkeit beweisen"
+            ]
+          },
+          "rechts": {
+            "titel": "§ 935 Abs. 1 BGB",
+            "punkte": [
+              "Knüpft an die Sache an",
+              "Unfreiwilliger Verlust des unmittelbaren Besitzes: gestohlen, verloren",
+              "Gutgläubigkeit des Erwerbers hilft nicht"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Regel und Ausnahme in § 935 BGB",
+          "links": {
+            "titel": "Abs. 1: Sperre",
+            "punkte": [
+              "Abhandengekommene Sachen",
+              "Auch beim mittelbaren Besitzer: Besitzmittler verliert den Besitz unfreiwillig"
+            ]
+          },
+          "rechts": {
+            "titel": "Abs. 2: keine Sperre",
+            "punkte": [
+              "Geld und Inhaberpapiere",
+              "Veräußerung in öffentlicher Versteigerung (und nach § 979 Abs. 1a BGB)"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Besitzdiener",
+          "text": "Gibt ein Besitzdiener (§ 855 BGB) – etwa ein Angestellter – die Sache eigenmächtig weg, verliert der Besitzherr den Besitz ohne seinen Willen. Nach h.M. ist die Sache dann abhandengekommen. Beim Besitzmittler (§ 868 BGB), der die Sache selbst weggibt, liegt dagegen kein Abhandenkommen vor."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 932 Abs. 2 fragt nach dem Erwerber, § 935 nach der Sache. Bei Geld, Inhaberpapieren und öffentlicher Versteigerung sperrt § 935 nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem gutgläubigen Erwerb",
+          "punkte": [
+            "War der Erwerber gutgläubig?",
+            "Ist die Sache abhandengekommen?",
+            "Geld, Inhaberpapier, Versteigerung?"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "banknote"
+          ]
+        }
+      ],
+      "caption": "Gestohlenes Bargeld wird weitergegeben – und der gutgläubige Empfänger wird Eigentümer. Denn § 935 Abs. 2 BGB nimmt Geld, Inhaberpapiere und Sachen aus öffentlicher Versteigerung von der Abhandenkommens-Sperre aus. Trenne die zwei Sperren: § 932 Abs. 2 BGB fragt nach dem guten Glauben des Erwerbers, § 935 Abs. 1 BGB nach dem unfreiwilligen Besitzverlust. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#gutgläubigererwerb",
+        "#935bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gutgläubiger Erwerb: § 932 Abs. 2 und § 935 BGB",
+      "coverText": "Geld ist von § 935 BGB ausgenommen",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Die Sperre für gestohlene Sachen gilt nicht für Geld – der gutgläubige Empfänger wird Eigentümer.",
+        "handlung": "{A} holds a locked crystal crate that bounces back from a barrier, while {B} nervously passes a small coin pouch straight through a gap in the same barrier.",
+        "hinweisRegie": "Place the note in the free space beside the gap where the coin pouch passes through, slightly tilted toward it, without covering {B}'s hands or the blocked crate.",
+        "alternative": "{B} watches a stolen lantern being stopped at a gate while a handful of coins slides through a slot beside it."
+      },
+      "bildSzene": "coin pouch passes where crate is blocked",
+      "bildSzeneAlt": "coins slide through slot beside gate",
+      "quellen": [
+        "§ 932 BGB",
+        "§ 935 BGB",
+        "§ 855 BGB",
+        "§ 868 BGB",
+        "§ 979 BGB",
+        "Themenpool: sachen-031"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-von-der-sperre",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-873",
+      "slug": "2027-05-13-b3",
+      "titelZeilen": [
+        "Amtsgericht",
+        "verurteilt – Revision",
+        "geht trotzdem"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Amtsgericht verurteilt – Revision geht trotzdem",
+          "unter": "Revision · §§ 333, 335 StPO",
+          "text": "Gegen AG-Urteile gibt es die Sprungrevision.",
+          "norm": "§ 335 StPO",
+          "icon": "gericht",
+          "sprecher": "Revision gegen ein Urteil des Amtsgerichts? Das geht. Paragraf 333 StPO nennt es zwar nicht – aber Paragraf 335 öffnet den Weg.",
+          "marken": [
+            "Sprungrevision"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Urteil, nicht Beschluss",
+          "text": "Revision gibt es nur gegen Urteile.",
+          "norm": "§ 333 StPO",
+          "sprecher": "Schritt eins: Angefochten wird ein Urteil. Gegen Beschlüsse gibt es die Beschwerde, keine Revision.",
+          "marken": [
+            "nur Urteile"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Landgericht oder OLG",
+          "text": "Strafkammer, Schwurgericht, OLG im ersten Rechtszug.",
+          "norm": "§ 333 StPO",
+          "sprecher": "Schritt zwei: Urteile der Strafkammern und Schwurgerichte sowie erstinstanzliche Urteile der Oberlandesgerichte sind mit der Revision anfechtbar. Das regelt Paragraf 333.",
+          "marken": [
+            "§ 333 StPO"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Amtsgericht: Sprungrevision",
+          "text": "Statt Berufung direkt Revision.",
+          "norm": "§ 335 Abs. 1 StPO",
+          "sprecher": "Schritt drei: Gegen Urteile des Amtsgerichts ist die Berufung zulässig. Statt ihrer kann man nach Paragraf 335 direkt Revision einlegen. Die überspringt die zweite Tatsacheninstanz.",
+          "marken": [
+            "§ 335 StPO"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wahl offenhalten",
+          "text": "Unbestimmt anfechten, bis zum Ende der Begründungsfrist wählen.",
+          "norm": null,
+          "sprecher": "Schritt vier: Man kann das Urteil zunächst unbestimmt anfechten. Nach der Rechtsprechung darf man bis zum Ablauf der Revisionsbegründungsfrist wählen. Wer nicht wählt, hat Berufung eingelegt.",
+          "marken": [
+            "Wahlrecht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Annahmeberufung?",
+          "text": "Nach dem BGH trotzdem Sprungrevision ohne Annahme.",
+          "norm": "§ 313 StPO",
+          "sprecher": "Früher umstritten: Was gilt, wenn die Berufung nach Paragraf 313 erst angenommen werden müsste? Nach dem BGH ist die Sprungrevision trotzdem statthaft, eine Annahme braucht es nicht.",
+          "marken": [
+            "BGH: statthaft"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Gegner legt Berufung ein",
+          "text": "Dann wird die Revision als Berufung behandelt.",
+          "norm": "§ 335 Abs. 3 StPO",
+          "sprecher": "Und Achtung: Legt ein anderer Beteiligter Berufung ein, wird die Sprungrevision als Berufung behandelt, solange dessen Berufung nicht zurückgenommen oder als unzulässig verworfen ist.",
+          "marken": [
+            "§ 335 Abs. 3"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "LG und OLG: § 333. AG: § 335 als Sprungrevision.",
+          "norm": "§§ 333, 335 StPO",
+          "sprecher": "Merke: Urteile von Landgericht und Oberlandesgericht über Paragraf 333, Urteile des Amtsgerichts über die Sprungrevision nach Paragraf 335.",
+          "marken": [
+            "333 · 335"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst das Ausgangsgericht bestimmen",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Revisionsklausur. Und schau zuerst, welches Gericht entschieden hat.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Das Amtsgericht hat verurteilt – ist die Revision damit ausgeschlossen? Nein. § 333 StPO erfasst Urteile der Strafkammern, Schwurgerichte und erstinstanzliche OLG-Urteile. Gegen Urteile des Amtsgerichts öffnet § 335 StPO die Sprungrevision statt der Berufung. Die Wahl darf man nach der Rspr. bis zum Ende der Revisionsbegründungsfrist offenhalten. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#strafprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision gegen Urteile des Amtsgerichts",
+      "coverText": "§ 335 StPO: Sprungrevision",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Auch gegen ein Urteil des Amtsgerichts führt ein Weg direkt zur Revision – über die zweite Tatsacheninstanz hinweg.",
+        "handlung": "{A} leaps from a low first platform directly onto a high third platform, skipping the middle one, while {B} hovers beside the skipped platform and marks it with a small light.",
+        "hinweisRegie": "Place the note in the free space above the skipped middle platform, slightly tilted toward {A}'s landing spot, so the jump stands out without covering {A} or {B}.",
+        "alternative": "{B} holds open two doors side by side, while {A} deliberately walks past the first and through the second door."
+      },
+      "bildSzene": "leap over middle platform",
+      "bildSzeneAlt": "walking past first door to second",
+      "quellen": [
+        "§ 333 StPO",
+        "§ 335 StPO",
+        "§ 313 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-873"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-783",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Zeuge Z weiß in der Hauptverhandlung Details nicht mehr. Darf ihm der Richter sein Polizeiprotokoll vorhalten?",
+      "optionen": [
+        "Nein – § 250 StPO verbietet jede Nutzung des Protokolls",
+        "Ja – als Vorhalt; Beweismittel bleibt Zs Antwort",
+        "Ja – das Protokoll ersetzt dann seine Aussage"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 250 StPO",
+        "§ 253 StPO",
+        "Themenpool: stpo-783"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-783",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – der Vorhalt ist erlaubt, verwertet wird nur die Antwort",
+      "text": "§ 250 S. 2 StPO verbietet, die Vernehmung durch das Protokoll zu ersetzen – nicht, es als Gedächtnisstütze zu nutzen. Der Vorhalt ist ein Vernehmungsbehelf: Beweis ist nur, was Z daraufhin bekundet. Erinnert er sich trotzdem nicht, kann der betreffende Teil des Protokolls zur Unterstützung seines Gedächtnisses verlesen werden (§ 253 Abs. 1 StPO).",
+      "norm": "§ 250 S. 2 StPO · § 253 Abs. 1 StPO",
+      "quellen": [
+        "§ 250 StPO",
+        "§ 253 StPO",
+        "Themenpool: stpo-783"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.318Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – § 250 StPO verbietet jede Nutzung des Protokolls",
+        "Ja – als Vorhalt; Beweismittel bleibt Zs Antwort",
+        "Ja – das Protokoll ersetzt dann seine Aussage"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-383",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 114 S. 1 VwGO: Das Gericht prüft Ermessensfehler – nicht, ob es selbst anders entschieden hätte",
+      "text": "Bei Ermessensentscheidungen kontrolliert das Gericht nur, ob die gesetzlichen Grenzen überschritten sind oder das Ermessen nicht dem Zweck der Ermächtigung entsprechend ausgeübt wurde. Typisch: Ermessensausfall, -überschreitung, -fehlgebrauch. Eine bloß unzweckmäßige Entscheidung bleibt rechtmäßig. Ergänzen darf die Behörde ihre Erwägungen nur nach § 114 S. 2 VwGO.",
+      "norm": "§ 114 VwGO · § 40 VwVfG",
+      "quellen": [
+        "§ 114 VwGO",
+        "§ 40 VwVfG",
+        "Themenpool: verwalt-383"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-870",
+      "ueberzeile": "Streitstand Anklage",
+      "titel": "Tat verjährt: Darf der Tatertrag trotzdem eingezogen werden – auch für Altfälle?",
+      "norm": "§ 76a Abs. 2 StGB",
+      "optionen": [
+        "BVerfG: Ja – Einziehung ist keine Strafe, die Rückwirkung ist ausnahmsweise gerechtfertigt.",
+        "Teile der Lit.: Nein für Altfälle – strafähnliche Wirkung, Vertrauensschutz steht entgegen."
+      ],
+      "text": "Klausur: Taterträge können trotz Verjährung selbständig eingezogen werden (§ 76a Abs. 2 S. 1 StGB). Stellt die StA wegen Verjährung ein, prüft sie einen Antrag nach § 435 StPO – mit dem BVerfG auch für Taten vor der Reform 2017.",
+      "quellen": [
+        "§ 73 StGB",
+        "§ 76a StGB",
+        "§ 435 StPO",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: anklage-870"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-713",
+      "ueberzeile": "Merksatz Aktenvortrag",
+      "titel": "Aktenvortrag ÖR: Unproblematisches in einem Satz, Probleme ausführlich",
+      "text": "Die Prüfer hören zu, statt zu lesen. Nenne unstreitige Zulässigkeitsvoraussetzungen knapp und vertiefe nur, was der Fall wirklich aufwirft – etwa Klagebefugnis oder Frist. Die Einzelheiten des Aufbaus richten sich nach den Vorgaben im jeweiligen Land.",
+      "norm": "VwGO",
+      "quellen": [
+        "VwGO",
+        "Themenpool: assessoroer-713"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-725",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Einwilligungsfähigkeit: Es zählt die Einsicht, nicht das Alter",
+      "text": "Wirksam einwilligen kann, wer nach seiner geistigen und sittlichen Reife Bedeutung und Tragweite des Eingriffs erkennen und danach entscheiden kann. Auf die Geschäftsfähigkeit kommt es nach h.M. nicht an. Auch ein Minderjähriger kann deshalb einwilligungsfähig sein. Die Einwilligung setzt zudem ein disponibles Rechtsgut voraus.",
+      "norm": "StGB AT · § 228 StGB",
+      "quellen": [
+        "§ 228 StGB",
+        "§ 216 StGB",
+        "Themenpool: strafat-725"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:47:23.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

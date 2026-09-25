@@ -1,0 +1,876 @@
+{
+  "datum": "2027-05-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "schuld-123",
+        "themaTitel": "Was ist die Drittschadensliquidation und wann greift sie?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "stpo-774",
+        "themaTitel": "Telefon-/Telekommunikationsüberwachung im Überblick",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-665",
+        "themaTitel": "Begründetheit der Verpflichtungsklage",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "staat-631"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "staat-631"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "sachen-235"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "streitstand",
+        "themaId": "assessorz-824"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "merksatz",
+        "themaId": "strafbt-331"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "begriff",
+        "themaId": "sachen-502"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "schuld-123",
+      "poolTitel": "Was ist die Drittschadensliquidation und wann greift sie?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 249 BGB",
+        "§ 447 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2027-01-13"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "stpo-774",
+      "poolTitel": "Telefon-/Telekommunikationsüberwachung im Überblick",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 100a ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-19",
+        "2026-11-05"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-665",
+      "poolTitel": "Begründetheit der Verpflichtungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 V 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-27",
+        "2027-03-04",
+        "2027-03-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-631",
+      "poolTitel": "Verfassungsbeschwerde: Zulässigkeit",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 I Nr. 4a GG; §§ 90 ff. BVerfGG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-631",
+      "poolTitel": "Verfassungsbeschwerde: Zulässigkeit",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 I Nr. 4a GG; §§ 90 ff. BVerfGG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-235",
+      "poolTitel": "Was bewirkt eine Vormerkung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 883 BGB",
+        "§ 888 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24",
+        "2027-01-25",
+        "2027-05-14"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-824",
+      "poolTitel": "Wie läuft die Kostenfestsetzung nach dem Urteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 103 ZPO",
+        "§ 104 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2027-01-14",
+        "2027-03-18"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-331",
+      "poolTitel": "Was ist ein Dreiecksbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-03-12",
+        "2027-03-31"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "sachen-502",
+      "poolTitel": "Besitzschutz und verbotene Eigenmacht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 858 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02",
+        "2026-12-02",
+        "2027-03-04"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-123",
+      "slug": "2027-05-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Drittschadensliquidation: drei Fallgruppen, eine Grundidee",
+          "titelZeilen": [
+            "Drittschadens-",
+            "liquidation: drei",
+            "Fallgruppen, eine",
+            "Grundidee"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Anspruch hier, Schaden dort",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Grundidee",
+          "text": "Grundsatz: Ersatz gibt es nur für den eigenen Schaden. Manchmal fallen Anspruch und Schaden aber zufällig auseinander – der Gläubiger hat den Anspruch, aber keinen Schaden, der Dritte den Schaden, aber keinen Anspruch. Der Schädiger soll davon nicht profitieren."
+        },
+        {
+          "art": "text",
+          "titel": "Drei Voraussetzungen",
+          "punkte": [
+            "Der Gläubiger hat einen Anspruch gegen den Schädiger, meist aus Vertrag.",
+            "Der Schaden ist nicht bei ihm, sondern bei einem Dritten eingetreten.",
+            "Die Schadensverlagerung ist aus Sicht des Schädigers zufällig."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die drei klassischen Fallgruppen",
+          "punkte": [
+            "Mittelbare Stellvertretung: Der Kommissionär handelt im eigenen Namen für fremde Rechnung.",
+            "Obligatorische Gefahrentlastung: etwa beim Versendungskauf (§ 447 BGB).",
+            "Obhutsfälle: Der Gläubiger hat eine fremde Sache in Obhut gegeben."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Rechtsfolge",
+          "text": "Der Gläubiger macht den Schaden des Dritten geltend – er liquidiert ihn. Der Dritte kann regelmäßig verlangen, dass der Gläubiger ihm den Anspruch abtritt, beim Versendungskauf etwa nach § 285 BGB."
+        },
+        {
+          "art": "vergleich",
+          "titel": "DSL oder Schutzwirkung?",
+          "links": {
+            "titel": "DSL",
+            "punkte": [
+              "Schaden wird verlagert, nicht vermehrt.",
+              "Der Gläubiger macht ihn geltend."
+            ]
+          },
+          "rechts": {
+            "titel": "Vertrag mit Schutzwirkung",
+            "punkte": [
+              "Das Haftungsrisiko wird erweitert.",
+              "Der Dritte hat einen eigenen Anspruch."
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "DSL: Anspruch beim Gläubiger, Schaden beim Dritten, Verlagerung zufällig – der Gläubiger liquidiert den fremden Schaden."
+        },
+        {
+          "art": "cta",
+          "titel": "DSL in drei Zügen",
+          "punkte": [
+            "Wer hat den Anspruch?",
+            "Wer hat den Schaden?",
+            "Zufällig verlagert?"
+          ],
+          "icons": [
+            "vertrag",
+            "person",
+            "kreislauf"
+          ]
+        }
+      ],
+      "caption": "Drittschadensliquidation: drei Fallgruppen, eine Grundidee. Wenn Anspruch und Schaden zufällig auseinanderfallen, darf der Gläubiger den Schaden des Dritten geltend machen – sonst würde der Schädiger zufällig entlastet. Klassisch: mittelbare Stellvertretung, obligatorische Gefahrentlastung wie beim Versendungskauf (§ 447 BGB) und Obhutsfälle. Abgrenzen musst du vom Vertrag mit Schutzwirkung für Dritte. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#drittschadensliquidation",
+        "#schadensrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Drittschadensliquidation auf einen Blick",
+      "coverText": "Anspruch hier, Schaden dort",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wenn Anspruch und Schaden zufällig bei verschiedenen Personen liegen, darf der Gläubiger den fremden Schaden geltend machen.",
+        "handlung": "{A} holds a claim ticket for a crate, while {B} stands next to the actually broken crate that belongs to him and looks at the ticket in {A}'s hand.",
+        "hinweisRegie": "Place the note in the free space between the claim ticket and the broken crate, slightly tilted toward the crate, so the split between claim and damage is visible without covering either character's hands.",
+        "alternative": "{B} carries a cracked crystal delivered to him, while {A} holds the delivery receipt and walks with him toward the carrier."
+      },
+      "bildSzene": "claim ticket, broken crate nearby",
+      "bildSzeneAlt": "cracked crystal, receipt, carrier",
+      "quellen": [
+        "§ 249 BGB",
+        "§ 447 BGB",
+        "§ 285 BGB",
+        "Themenpool: schuld-123"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-fallgruppen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.014Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-774",
+      "slug": "2027-05-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wer mit wem telefoniert hat: Braucht es dafür eine TKÜ?",
+          "titelZeilen": [
+            "Wer mit wem",
+            "telefoniert hat:",
+            "Braucht es dafür",
+            "eine TKÜ?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Inhalt oder Umstände",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Ermittler wollen wissen, mit wem der Beschuldigte B in der Tatnacht telefoniert hat, wann und wie lange. Was gesprochen wurde, interessiert sie nicht. Ist das eine Überwachung der Telekommunikation nach § 100a StPO?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Inhalt oder Umstände?",
+          "links": {
+            "titel": "TKÜ, § 100a StPO",
+            "punkte": [
+              "Erfasst den Inhalt der Kommunikation.",
+              "Katalogtat (§ 100a II), auch im Einzelfall schwer.",
+              "Andere Wege aussichtslos oder wesentlich erschwert."
+            ]
+          },
+          "rechts": {
+            "titel": "Verkehrsdaten, § 100g",
+            "punkte": [
+              "Erfasst die Umstände: wer, wann, wie lange.",
+              "Tat von auch im Einzelfall erheblicher Bedeutung.",
+              "Oder eine mittels Telekommunikation begangene Tat."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Gemeinsam: der Richtervorbehalt",
+          "text": "Beide Maßnahmen ordnet grundsätzlich das Gericht auf Antrag der Staatsanwaltschaft an (§ 100e Abs. 1 StPO, für Verkehrsdaten über § 101a Abs. 1 StPO). Bei Gefahr im Verzug kann die Staatsanwaltschaft handeln; ihre Anordnung muss das Gericht binnen drei Werktagen bestätigen."
+        },
+        {
+          "art": "text",
+          "titel": "Die Kernbereichsgrenze",
+          "text": "Bei der TKÜ kommt § 100d StPO hinzu: Sind allein Erkenntnisse aus dem Kernbereich privater Lebensgestaltung zu erwarten, ist sie unzulässig. Trotzdem erlangte Kernbereichserkenntnisse dürfen nicht verwertet werden, Aufzeichnungen sind zu löschen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Inhalt: § 100a StPO mit Katalogtat. Umstände: § 100g StPO mit erheblicher Tat. Erst diese Frage klären, dann die Voraussetzungen prüfen."
+        },
+        {
+          "art": "cta",
+          "titel": "Telekommunikation in drei Zügen",
+          "punkte": [
+            "Inhalt oder Umstände?",
+            "Katalogtat oder erhebliche Tat?",
+            "Richter angeordnet oder bestätigt?"
+          ],
+          "icons": [
+            "telefon",
+            "paragraf",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Wer mit wem telefoniert hat, ist keine Frage der TKÜ. § 100a StPO erfasst den Inhalt der Kommunikation und verlangt eine Katalogtat, § 100g StPO erfasst die Verkehrsdaten – wer, wann, wie lange – und setzt eine Tat von auch im Einzelfall erheblicher Bedeutung oder eine mittels Telekommunikation begangene Tat voraus. Beides braucht grundsätzlich einen richterlichen Beschluss. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#100astpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "TKÜ oder Verkehrsdaten? §§ 100a, 100g StPO",
+      "coverText": "Inhalt oder Umstände",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Ob es um den Inhalt eines Gesprächs oder nur um seine Umstände geht, entscheidet über die Rechtsgrundlage.",
+        "handlung": "{A} holds up a sealed envelope without opening it and reads only the address and time stamp, while {B} nervously reaches for the letter opener.",
+        "hinweisRegie": "Place the note in the free space above the sealed envelope, slightly tilted toward the address side, so the difference between outside and inside is clear without covering {B}'s hand on the opener.",
+        "alternative": "{B} lists who knocked on a door and when, while {A} presses an ear against the closed door."
+      },
+      "bildSzene": "sealed envelope, only address read",
+      "bildSzeneAlt": "log of knocks, ear at door",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100d StPO",
+        "§ 100e StPO",
+        "§ 100g StPO",
+        "§ 101a StPO",
+        "Themenpool: stpo-774"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.014Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-665",
+      "slug": "2027-05-20-b3",
+      "titelZeilen": [
+        "Verpflichtungsklage:",
+        "Erst der Anspruch,",
+        "nicht der Bescheid"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Verpflichtungsklage: erst der Anspruch, nicht der Bescheid",
+          "unter": "Begründetheit · § 113 Abs. 5 VwGO",
+          "text": "Im Mittelpunkt steht der Anspruch auf den begehrten VA.",
+          "norm": "§ 113 Abs. 5 VwGO",
+          "icon": "paragraf",
+          "sprecher": "Bei der Verpflichtungsklage prüfst du nicht zuerst den Ablehnungsbescheid. Du prüfst, ob der Kläger einen Anspruch auf den Verwaltungsakt hat. Der verbreitete Aufbau geht in vier Schritten.",
+          "marken": [
+            "Anspruchsaufbau"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Anspruchsgrundlage",
+          "text": "Welche Norm gibt den begehrten Verwaltungsakt her?",
+          "norm": null,
+          "sprecher": "Schritt eins: die Anspruchsgrundlage. Welche Norm gewährt, was der Kläger will? Bei der Baugenehmigung etwa die Bauordnung des jeweiligen Landes.",
+          "marken": [
+            "welche Norm?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Formelle Voraussetzungen",
+          "text": "Vor allem: Antrag bei der zuständigen Behörde.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die formellen Voraussetzungen des Anspruchs. Vor allem ein Antrag bei der zuständigen Behörde. Ob die Behörde bei der Ablehnung Verfahrensfehler gemacht hat, ist hier nicht der Kern.",
+          "marken": [
+            "Antrag gestellt?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Materielle Voraussetzungen",
+          "text": "Grundsätzlich maßgeblich: Sach- und Rechtslage bei der letzten mündlichen Verhandlung.",
+          "norm": null,
+          "sprecher": "Schritt drei: die materiellen Voraussetzungen. Maßgeblich ist grundsätzlich die Sach- und Rechtslage im Zeitpunkt der letzten mündlichen Verhandlung. Eine Rechtsänderung nach der Ablehnung zählt also mit.",
+          "marken": [
+            "letzte Verhandlung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtsfolge und Spruchreife",
+          "text": "Gebunden: Verpflichtung. Ermessen: meist nur Bescheidung.",
+          "norm": "§ 113 Abs. 5 VwGO",
+          "sprecher": "Schritt vier: die Rechtsfolge. Ist die Entscheidung gebunden, verpflichtet das Gericht die Behörde nach Satz 1. Bei Ermessen fehlt meist die Spruchreife, dann gibt es nur ein Bescheidungsurteil nach Satz 2.",
+          "marken": [
+            "Satz 1 oder 2"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und der fehlerhafte Bescheid?",
+          "text": "Bei gebundenen Entscheidungen führt das Gericht die Sache selbst zur Spruchreife.",
+          "norm": null,
+          "sprecher": "Und der Formfehler im Ablehnungsbescheid? Bei einer gebundenen Entscheidung führt das Gericht die Sache selbst zur Spruchreife. Hat der Kläger keinen Anspruch, gewinnt er allein wegen des Fehlers nicht.",
+          "marken": [
+            "Spruchreife"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Grundlage, formell, materiell, Rechtsfolge.",
+          "norm": null,
+          "sprecher": "Merke: Anspruchsgrundlage, formelle und materielle Voraussetzungen, Rechtsfolge. Der Bescheid ist nur der Anlass für die Klage.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Anspruch zuerst",
+          "text": "Speichern für die nächste Verwaltungsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Verwaltungsrechtsklausur. Und formulier den Obersatz gleich als Anspruch.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Bei der Verpflichtungsklage prüfst du nicht zuerst den Ablehnungsbescheid, sondern den Anspruch des Klägers. Anspruchsgrundlage, formelle und materielle Voraussetzungen, dann die Rechtsfolge: Bei gebundener Entscheidung verpflichtet das Gericht (§ 113 Abs. 5 S. 1 VwGO), bei fehlender Spruchreife gibt es ein Bescheidungsurteil (S. 2). Maßgeblich ist grundsätzlich die Lage bei der letzten mündlichen Verhandlung. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#verpflichtungsklage",
+        "#verwaltungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verpflichtungsklage: Anspruch statt Bescheid",
+      "coverText": "Spruchreife entscheidet",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Bei der Verpflichtungsklage kommt es darauf an, ob der Kläger einen Anspruch hat, nicht nur auf den Fehler im Ablehnungsbescheid.",
+        "handlung": "{A} pushes aside a crumpled rejection slip with his pointer and points to a solid foundation stone underneath, while {B} checks whether the stone carries weight.",
+        "hinweisRegie": "Place the note in the free space above the foundation stone, slightly tilted toward it, so the claim as the real basis is visible without covering the crumpled slip or {B}'s testing hand.",
+        "alternative": "{B} ignores a torn map and instead measures the actual path to a gate, while {A} explains which key the gate needs."
+      },
+      "bildSzene": "rejection slip pushed aside, foundation stone",
+      "bildSzeneAlt": "torn map ignored, path measured",
+      "quellen": [
+        "§ 113 Abs. 5 VwGO",
+        "§ 42 Abs. 1 VwGO",
+        "Themenpool: vwgo-665"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.015Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-631",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Ein Bundesgesetz trifft B seit 14 Monaten unmittelbar. Noch Verfassungsbeschwerde direkt dagegen?",
+      "optionen": [
+        "Ja – gegen Gesetze gibt es keine Frist",
+        "Nein – die Jahresfrist des § 93 Abs. 3 BVerfGG ist abgelaufen",
+        "Ja – die Monatsfrist beginnt erst mit Kenntnis vom Gesetz"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 93 BVerfGG",
+        "Themenpool: staat-631"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.015Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-631",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – direkt gegen das Gesetz nur binnen eines Jahres",
+      "text": "Gegen ein Gesetz ist die Verfassungsbeschwerde nur binnen eines Jahres seit Inkrafttreten zulässig (§ 93 Abs. 3 BVerfGG). Danach bleibt B der Weg über einen Vollzugsakt: Er wehrt sich gegen die Anwendung des Gesetzes vor den Fachgerichten und kann gegen die letzte Entscheidung binnen eines Monats Verfassungsbeschwerde erheben (§ 93 Abs. 1 BVerfGG).",
+      "norm": "§ 93 Abs. 1, 3 BVerfGG",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 93 BVerfGG",
+        "Themenpool: staat-631"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.015Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – gegen Gesetze gibt es keine Frist",
+        "Nein – die Jahresfrist des § 93 Abs. 3 BVerfGG ist abgelaufen",
+        "Ja – die Monatsfrist beginnt erst mit Kenntnis vom Gesetz"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-235",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 888 BGB: Der Dritterwerber muss der Eintragung zustimmen",
+      "text": "Übereignet V das Grundstück trotz Vormerkung für K an D, ist das gegenüber K unwirksam (§ 883 Abs. 2 BGB) – D steht aber im Grundbuch. K verlangt deshalb von V die Auflassung und von D die Zustimmung zu seiner Eintragung (§ 888 Abs. 1 BGB). Erst mit beidem kann K eingetragen werden.",
+      "norm": "§ 888 Abs. 1 BGB · § 883 Abs. 2 BGB",
+      "quellen": [
+        "§ 883 BGB",
+        "§ 888 BGB",
+        "Themenpool: sachen-235"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.015Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-824",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "B1 und B2 hatten denselben Anwalt, nur B1 gewinnt. Wie viel Anwaltskosten setzt B1 gegen K fest?",
+      "norm": "§§ 91, 100, 104 ZPO",
+      "optionen": [
+        "BGH: grundsätzlich nur seinen Anteil am Gesamthonorar – im Zweifel nach Kopfteilen.",
+        "Andere Ansicht: alles, was er seinem Anwalt allein schuldet (§ 7 Abs. 2 RVG)."
+      ],
+      "text": "Klausur/Praxis: Nach dem BGH kann B1 mehr verlangen, wenn er darlegt, dass er im Innenverhältnis mehr tragen muss, etwa weil B2 nicht zahlen kann. Die Gegenansicht stellt auf die Haftung gegenüber dem Anwalt ab. Im Kostenfestsetzungsantrag daher das Innenverhältnis vortragen.",
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 100 ZPO",
+        "§ 104 ZPO",
+        "§ 7 RVG",
+        "Themenpool: assessorz-824"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.015Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-331",
+      "ueberzeile": "Merksatz Strafrecht BT",
+      "titel": "Prozessbetrug: Der Richter verfügt über fremdes Vermögen",
+      "text": "Täuscht eine Partei das Gericht, ist das Urteil die Verfügung: Der getäuschte Richter verfügt über das Vermögen des Gegners. Die Zurechnung folgt aus seiner hoheitlichen Befugnis.",
+      "norm": "§ 263 Abs. 1 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "Themenpool: strafbt-331"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.015Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-502",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Verbotene Eigenmacht: Es zählt der Wille des Besitzers, nicht das Recht",
+      "text": "Verbotene Eigenmacht begeht, wer dem Besitzer ohne dessen Willen den Besitz entzieht oder ihn im Besitz stört, sofern das Gesetz es nicht gestattet (§ 858 Abs. 1 BGB). Auf das Recht zum Besitz kommt es nicht an. Funktion: Sie löst Selbsthilfe (§ 859 BGB) und die Besitzschutzansprüche aus (§§ 861, 862 BGB) und macht den so erlangten Besitz fehlerhaft (§ 858 Abs. 2 BGB).",
+      "norm": "§ 858 BGB",
+      "quellen": [
+        "§§ 858–862 BGB",
+        "Themenpool: sachen-502"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:36.015Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

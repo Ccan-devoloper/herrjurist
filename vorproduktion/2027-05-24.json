@@ -1,0 +1,888 @@
+{
+  "datum": "2027-05-24",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-076",
+        "themaTitel": "Welche Beweisverwertungsverbote gibt es und wie prüft man sie?",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "grundr-091",
+        "themaTitel": "Wie wirken Grundrechte zwischen Privaten?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuldbt-023",
+        "themaTitel": "Wie werden Dienst- und Werkvertrag voneinander abgegrenzt?",
+        "fach": "schuldbt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "vwgo-665"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "vwgo-665"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "schuld-187"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "tipp",
+        "themaId": "bgbat-006"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "zahl",
+        "themaId": "revision-885"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "streitstand",
+        "themaId": "verwalt-931"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-076",
+      "poolTitel": "Welche Beweisverwertungsverbote gibt es und wie prüft man sie?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO",
+        "§ 100a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-28",
+        "2027-05-21",
+        "2027-05-21"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-091",
+      "poolTitel": "Wie wirken Grundrechte zwischen Privaten?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 Abs. 3 GG",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2026-10-23",
+        "2027-03-15"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuldbt-023",
+      "poolTitel": "Wie werden Dienst- und Werkvertrag voneinander abgegrenzt?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 611 BGB",
+        "§ 631 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-12",
+        "2027-01-11"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-665",
+      "poolTitel": "Begründetheit der Verpflichtungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 V 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-04",
+        "2027-03-04",
+        "2027-05-20"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-665",
+      "poolTitel": "Begründetheit der Verpflichtungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 V 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-04",
+        "2027-03-04",
+        "2027-05-20"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-187",
+      "poolTitel": "Wann muss der Rücktrittsgegner Wertersatz leisten?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 346 Abs. 2 BGB",
+        "§ 346 Abs. 3 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-10"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "bgbat-006",
+      "poolTitel": "Wie wirkt die Stellvertretung ohne Vertretungsmacht?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 177 BGB",
+        "§ 179 BGB",
+        "§ 164 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28",
+        "2027-04-30"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "revision-885",
+      "poolTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2027-02-23",
+        "2027-03-01"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "verwalt-931",
+      "poolTitel": "Besorgnis der Befangenheit im Verwaltungsverfahren: §§ 20, 21 VwVfG",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2027-01-18",
+        "2027-03-23"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-076",
+      "slug": "2027-05-24-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Diebstahl am Telefon gestanden – die TKÜ-Aufnahme zählt nicht",
+          "titelZeilen": [
+            "Diebstahl am",
+            "Telefon gestanden –",
+            "die TKÜ-Aufnahme",
+            "zählt nicht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Die Maßnahme muss auch hier passen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Gegen A läuft wegen bandenmäßigen Drogenhandels eine rechtmäßig angeordnete TKÜ. In einem abgehörten Gespräch erzählt A, er habe letzte Woche im Supermarkt eine Flasche Whisky eingesteckt. Darf das Gespräch im Verfahren wegen dieses Diebstahls als Beweis verwertet werden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Erhebung prüfen",
+              "text": "Die TKÜ selbst war rechtmäßig: Katalogtat nach § 100a Abs. 2 StPO, richterliche Anordnung. Ein Verwertungsverbot folgt daraus nicht."
+            },
+            {
+              "titel": "2. Zufallsfund erkennen",
+              "text": "Der Diebstahl ist eine andere Tat als die, wegen der abgehört wurde. Seine Verwendung als Beweis ist gesondert geregelt."
+            },
+            {
+              "titel": "3. Hypothetischer Ersatzeingriff",
+              "text": "Als Beweis nur, wenn wegen dieser Tat selbst eine TKÜ hätte angeordnet werden dürfen (§ 479 Abs. 2 i.V.m. § 161 Abs. 3 StPO)."
+            },
+            {
+              "titel": "4. Katalog prüfen",
+              "text": "Einfacher Diebstahl nach § 242 StGB steht nicht im Katalog des § 100a Abs. 2 StPO. Also: kein Beweismittel."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Die TKÜ war rechtmäßig, also ist alles verwertbar, was sie zutage fördert.“ Die Rechtmäßigkeit der Erhebung beantwortet nur die erste Frage. Für eine andere Tat kommt es darauf an, ob die Maßnahme auch für sie zulässig gewesen wäre."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Das Gespräch darf im Diebstahlsverfahren nicht als Beweis verwertet werden. Wäre A dagegen eine weitere Katalogtat herausgerutscht, etwa ein Bandendiebstahl, sähe es anders aus. Ob der Hinweis als Spurenansatz für weitere Ermittlungen dienen darf, ist eine eigene Frage."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zufallsfund aus der TKÜ: Beweis nur für Taten, für die selbst eine TKÜ hätte angeordnet werden dürfen."
+        },
+        {
+          "art": "cta",
+          "titel": "Zufallsfund in drei Fragen",
+          "punkte": [
+            "War die Erhebung rechtmäßig?",
+            "Geht es um eine andere Tat?",
+            "Wäre für sie eine TKÜ zulässig gewesen?"
+          ],
+          "icons": [
+            "telefon",
+            "lupe",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "A gesteht am abgehörten Telefon einen Ladendiebstahl – und trotzdem darf das Gespräch im Diebstahlsverfahren nicht als Beweis dienen. Die TKÜ war zwar rechtmäßig, der Diebstahl ist aber ein Zufallsfund: Verwertbar ist er nur, wenn wegen dieser Tat selbst eine TKÜ hätte angeordnet werden dürfen. Einfacher Diebstahl steht nicht im Katalog des § 100a StPO. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#100astpo",
+        "#beweisverwertungsverbot",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "TKÜ-Zufallsfund: nur bei Katalogtat verwertbar",
+      "coverText": "Die Maßnahme muss auch hier passen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Was eine rechtmäßige Abhörmaßnahme nebenbei über eine andere Tat verrät, ist nicht automatisch Beweis.",
+        "handlung": "{A} listens through a large brass ear trumpet and catches a small extra sound bubble, while {B} holds up a sieve in front of the bubble that lets it fall through.",
+        "hinweisRegie": "Place the note in the free space beside the sieve and the falling sound bubble, slightly tilted toward it, so the filtered side find stands out without covering the ear trumpet or {A}'s face.",
+        "alternative": "{B} sorts overheard notes into two baskets, one open and one locked, and drops the stray note into the locked one."
+      },
+      "bildSzene": "sound bubble falling through sieve",
+      "bildSzeneAlt": "stray note dropped in locked basket",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 161 Abs. 3 StPO",
+        "§ 479 Abs. 2 StPO",
+        "§ 242 StGB",
+        "Themenpool: stpo-076"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.346Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-091",
+      "slug": "2027-05-24-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Private streiten: vier Schritte – geprüft wird das Urteil",
+          "titelZeilen": [
+            "Private streiten:",
+            "vier Schritte –",
+            "geprüft wird",
+            "das Urteil"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Der Eingriff kommt vom Gericht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Vermieter gegen Mieter, Arbeitgeber gegen Arbeitnehmer: Private sind nicht Adressaten der Grundrechte (Art. 1 Abs. 3 GG). Verliert jemand vor dem Zivilgericht und rügt eine Grundrechtsverletzung, greift er in Karlsruhe deshalb nicht den Gegner an, sondern das Urteil."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Beschwerdegegenstand",
+              "text": "Das letztinstanzliche Zivilurteil – ein Akt öffentlicher Gewalt (Art. 93 Abs. 1 Nr. 4a GG). Nicht: das Verhalten des privaten Gegners."
+            },
+            {
+              "titel": "2. Schutzbereich",
+              "text": "Welches Grundrecht betrifft der Streit? Etwa Meinungsfreiheit bei einer Unterlassungsklage oder Eigentum beim Mietstreit."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Eingriff durch das Gericht",
+              "text": "Das Urteil verbietet, verurteilt oder versagt Schutz – damit greift der Staat selbst in das Grundrecht ein."
+            },
+            {
+              "titel": "4. Rechtfertigung",
+              "text": "Zivilnorm als Schranke. Generalklauseln wie §§ 138, 242, 826 BGB im Licht der Grundrechte auslegen; beide Grundrechtspositionen abwägen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Prüfungsdichte",
+          "text": "Das BVerfG prüft nur, ob das Gericht die Bedeutung des Grundrechts grundsätzlich verkannt hat – nicht die richtige Anwendung des einfachen Rechts. Eine Ausnahme mit unmittelbarer Wirkung zwischen Privaten ordnet das Grundgesetz selbst an: Art. 9 Abs. 3 S. 2 GG."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Grundrechte wirken zwischen Privaten mittelbar – über das Gericht, das die Zivilnormen im Licht der Grundrechte auslegen muss."
+        },
+        {
+          "art": "cta",
+          "titel": "Drittwirkung in drei Fragen",
+          "punkte": [
+            "Welcher Hoheitsakt ist angegriffen?",
+            "Welche Generalklausel öffnet das Tor?",
+            "Wie sind beide Grundrechte abgewogen?"
+          ],
+          "icons": [
+            "gericht",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Zwei Private streiten, einer beruft sich auf ein Grundrecht – geprüft wird trotzdem nicht der Gegner, sondern das Urteil. Grundrechte binden nach Art. 1 Abs. 3 GG den Staat. Zwischen Privaten wirken sie mittelbar: Das Zivilgericht muss Generalklauseln wie § 242 BGB in ihrem Licht auslegen und beide Positionen abwägen. Speichern für die nächste Urteilsverfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#drittwirkung",
+        "#verfassungsbeschwerde",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Drittwirkung: vier Schritte zur Urteils-VB",
+      "coverText": "Der Eingriff kommt vom Gericht",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Im Streit unter Privaten wirkt das Grundrecht über das Gericht, das den Streit entscheidet.",
+        "handlung": "{A} and a second figure pull on opposite ends of a rope, while {B} stands on a raised platform between them and holds the knot in the middle with his pointer.",
+        "hinweisRegie": "Place the note in the free space just above the knot held by {B}'s pointer, slightly tilted toward it, so the deciding middle position stands out without covering the rope or {A}'s hands.",
+        "alternative": "{B} adjusts a lens on a lamp so that its light falls on the rulebook both parties are pointing at."
+      },
+      "bildSzene": "rope tug, knot held in middle",
+      "bildSzeneAlt": "lamp lens lighting shared rulebook",
+      "quellen": [
+        "Art. 1 Abs. 3 GG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "Art. 9 Abs. 3 S. 2 GG",
+        "§ 242 BGB",
+        "§ 138 BGB",
+        "§ 826 BGB",
+        "Themenpool: grundr-091"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-schritte-angriffsgegenstand",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.346Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-023",
+      "slug": "2027-05-24-b3",
+      "titelZeilen": [
+        "Stundenlohn",
+        "vereinbart – und",
+        "trotzdem Werkvertrag"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Stundenlohn vereinbart – und trotzdem Werkvertrag",
+          "unter": "Dienst oder Werk · §§ 611, 631 BGB",
+          "text": "Die Art der Vergütung entscheidet nicht über den Vertragstyp.",
+          "norm": "§ 631 BGB",
+          "icon": "werkzeug",
+          "sprecher": "Nach Stunden bezahlt heißt nicht Dienstvertrag. Auch ein Werkvertrag kann nach Aufwand abgerechnet werden. Entscheidend ist etwas anderes.",
+          "marken": [
+            "Stundenlohn",
+            "Werkvertrag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Was ist geschuldet?",
+          "text": "Erfolg oder bloße Tätigkeit – das ergibt die Auslegung des Vertrags.",
+          "norm": "§§ 133, 157 BGB",
+          "sprecher": "Schritt eins: Frag, was geschuldet ist. Ein Erfolg, also ein fertiges Ergebnis? Oder nur ein Tätigwerden? Das klärst du durch Auslegung des Vertrags.",
+          "marken": [
+            "Auslegung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wer trägt das Erfolgsrisiko?",
+          "text": "Beim Werkvertrag der Unternehmer, beim Dienstvertrag der Auftraggeber.",
+          "norm": "§ 631 Abs. 2 BGB",
+          "sprecher": "Schritt zwei: das Risiko. Beim Werkvertrag trägt der Unternehmer das Risiko, dass das Werk gelingt. Beim Dienstvertrag bekommt der Dienstleister sein Geld auch ohne Erfolg.",
+          "marken": [
+            "Erfolgsrisiko"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beherrschbar oder nicht?",
+          "text": "Hängt der Erfolg von Umständen ab, die niemand steuern kann, spricht das für Dienste.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Beherrschbarkeit. Die Autoreparatur kann der Unternehmer steuern, also Werkvertrag. Die Heilung eines Patienten kann niemand versprechen. Die ärztliche Behandlung folgt deshalb dem Dienstvertragsrecht.",
+          "marken": [
+            "§ 630b BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Folgen",
+          "text": "Nur der Werkvertrag kennt Abnahme und Mängelrechte.",
+          "norm": "§§ 634, 640 BGB",
+          "sprecher": "Schritt vier: die Folgen. Nur beim Werkvertrag gibt es Abnahme und Mängelrechte nach Paragraf 634. Beim Dienstvertrag gibt es kein Nacherfüllungsrecht, bei Schlechtleistung hilft nur Schadensersatz.",
+          "marken": [
+            "Abnahme",
+            "Mängelrechte"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Nachhilfe",
+          "text": "Geschuldet ist Unterricht, nicht die Versetzung – also Dienstvertrag.",
+          "norm": "§ 611 BGB",
+          "sprecher": "Ein Klassiker: Nachhilfeunterricht. Geschuldet ist der Unterricht, nicht die bestandene Klassenarbeit. Das ist ein Dienstvertrag, auch wenn die Eltern auf eine bessere Note hoffen.",
+          "marken": [
+            "Nachhilfe"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Erfolg geschuldet: Werk. Tätigkeit geschuldet: Dienst. Die Abrechnung sagt nichts.",
+          "norm": null,
+          "sprecher": "Merke: Wird ein Erfolg geschuldet, ist es ein Werkvertrag. Wird nur die Tätigkeit geschuldet, ein Dienstvertrag. Wie abgerechnet wird, spielt keine Rolle.",
+          "marken": [
+            "Erfolg vs. Tätigkeit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für die nächste Abgrenzung",
+          "text": "Speichern für die nächste Vertragstyp-Frage.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur, in der jemand etwas repariert, baut oder unterrichtet.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Stundenlohn vereinbart – und trotzdem ein Werkvertrag. Ob Dienst- oder Werkvertrag vorliegt, entscheidet nicht die Abrechnung, sondern was geschuldet ist: ein Erfolg oder nur die Tätigkeit. Hilfreich sind die Fragen nach dem Erfolgsrisiko und der Beherrschbarkeit des Ergebnisses. Die Folgen sind erheblich, denn nur der Werkvertrag kennt Abnahme und Mängelrechte. Speichern für die nächste Abgrenzung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#werkvertrag",
+        "#dienstvertrag",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Dienst oder Werk: Die Abrechnung entscheidet nicht",
+      "coverText": "Erfolg oder bloßes Tätigwerden?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Maßgeblich ist, ob ein Erfolg versprochen wird – nicht, wie die Arbeit bezahlt wird.",
+        "handlung": "{A} proudly hands over a repaired portal gear to {B}, who spins it once to check that it actually runs, while a small hourglass stands forgotten on the workbench.",
+        "hinweisRegie": "Place the note in the free space next to the spinning gear, slightly tilted toward it, so the delivered result stands out without covering the hourglass or {B}'s hands.",
+        "alternative": "{B} ignores a stopwatch {A} holds up and instead knocks on a finished wall to test whether it stands."
+      },
+      "bildSzene": "repaired gear tested by spinning",
+      "bildSzeneAlt": "knocking on finished wall",
+      "quellen": [
+        "§ 611 BGB",
+        "§ 631 BGB",
+        "§ 630b BGB",
+        "§ 634 BGB",
+        "§ 640 BGB",
+        "Themenpool: schuldbt-023"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.347Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-665",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Bei der Ablehnung fehlte eine Voraussetzung, in der mündlichen Verhandlung liegt sie vor. Klage begründet?",
+      "optionen": [
+        "Nein – es zählt die Lage bei der Behördenentscheidung",
+        "Ja – grundsätzlich zählt die letzte mündliche Verhandlung",
+        "Nur nach neuem Antrag und neuem Widerspruchsverfahren"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 113 Abs. 5 S. 1 VwGO",
+        "Themenpool: vwgo-665"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.347Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-665",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – bei der Verpflichtungsklage zählt grundsätzlich die Lage in der letzten mündlichen Verhandlung",
+      "text": "Das Gericht fragt nach § 113 Abs. 5 S. 1 VwGO, ob der Kläger jetzt einen Anspruch hat. Maßgeblich ist daher grundsätzlich die Sach- und Rechtslage im Zeitpunkt der letzten mündlichen Verhandlung – vorbehaltlich abweichender Vorgaben des materiellen Rechts. Eine anfangs rechtmäßige Ablehnung hindert den Erfolg der Klage dann nicht.",
+      "norm": "§ 113 Abs. 5 S. 1 VwGO",
+      "quellen": [
+        "§ 113 Abs. 5 S. 1 VwGO",
+        "Themenpool: vwgo-665"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.347Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – es zählt die Lage bei der Behördenentscheidung",
+        "Ja – grundsätzlich zählt die letzte mündliche Verhandlung",
+        "Nur nach neuem Antrag und neuem Widerspruchsverfahren"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-187",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 346 Abs. 2 S. 1 Nr. 3 BGB: Die erste Fahrt mit dem Neuwagen kostet keinen Wertersatz",
+      "text": "Wertersatz ist zu leisten, soweit sich der empfangene Gegenstand verschlechtert hat. Die Verschlechterung durch bestimmungsgemäße Ingebrauchnahme bleibt aber außer Betracht. Der Wertverlust durch die Zulassung ist also nicht zu ersetzen. Getrennt davon: Für die gefahrenen Kilometer schuldet er Nutzungsersatz (§ 346 Abs. 1, Abs. 2 S. 1 Nr. 1 BGB).",
+      "norm": "§ 346 Abs. 2 S. 1 Nr. 3 BGB",
+      "quellen": [
+        "§ 346 Abs. 1 BGB",
+        "§ 346 Abs. 2 BGB",
+        "Themenpool: schuld-187"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.347Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-006",
+      "ueberzeile": "Klausurtipp BGB AT",
+      "titel": "Vertreter ohne Vertretungsmacht: Erst § 177 BGB, dann § 179 BGB – nie umgekehrt",
+      "text": "Erst die Genehmigung prüfen. Nach Aufforderung durch den Dritten gilt Schweigen binnen zwei Wochen als Verweigerung (§ 177 Abs. 2 BGB). Erst dann haftet der Vertreter: auf Erfüllung oder Schadensersatz, bei Unkenntnis des Mangels nur auf das Vertrauensinteresse. Kannte der Dritte den Mangel oder musste er ihn kennen: keine Haftung (§ 179 Abs. 3 BGB).",
+      "quellen": [
+        "§ 164 BGB",
+        "§ 177 BGB",
+        "§ 179 BGB",
+        "Themenpool: bgbat-006"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.347Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-885",
+      "ueberzeile": "3 Punkte Revision",
+      "titel": "Relativer Revisionsgrund: So lässt sich das Beruhen ausschließen",
+      "text": "Für das Beruhen (§ 337 StPO) genügt, dass ein anderes Urteil ohne den Fehler möglich erscheint. Ausschließen lässt es sich nur mit konkreten Gründen:",
+      "punkte": [
+        "Der Fehler wurde in der Hauptverhandlung wirksam geheilt",
+        "Das Urteil stützt sich nicht auf das fehlerhaft gewonnene Beweismittel",
+        "Trotz fehlenden Hinweises (§ 265 StPO) hätte er sich nicht anders verteidigen können"
+      ],
+      "quellen": [
+        "§ 337 StPO",
+        "§ 265 StPO",
+        "Themenpool: revision-885"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.347Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-931",
+      "ueberzeile": "Streitstand Verwaltungsrecht",
+      "titel": "Rücknahme nach § 48 VwVfG: Wann beginnt die Jahresfrist des Abs. 4?",
+      "norm": "§ 48 Abs. 4 VwVfG",
+      "optionen": [
+        "BVerwG: Entscheidungsfrist – sie läuft erst, wenn die Behörde alle für die Rücknahme erheblichen Tatsachen kennt, auch bei Rechtsanwendungsfehlern.",
+        "Teile der Literatur: Bearbeitungsfrist – Rechtsfehler sind keine „Tatsachen“; die Frist beginnt früher, sobald die Umstände bekannt sind."
+      ],
+      "text": "Klausur: mit dem BVerwG. Die Frist beginnt dann oft erst nach der Anhörung, weil die Behörde erst so alle Umstände kennt. Den Streit nur ausführen, wenn die Frist nach der Gegenansicht abgelaufen wäre.",
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "§ 28 VwVfG",
+        "Themenpool: verwalt-931"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:50:33.347Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

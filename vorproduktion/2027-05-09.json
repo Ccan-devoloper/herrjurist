@@ -1,0 +1,886 @@
+{
+  "datum": "2027-05-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "vwgo-652",
+        "themaTitel": "Statthafte Klageart nach dem Begehren",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "zpo-287",
+        "themaTitel": "Wie funktioniert die Vollstreckungsabwehrklage?",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "bgbat-424"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "bgbat-424"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "schuldbt-460"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "fehler",
+        "themaId": "methodik-938"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "tipp",
+        "themaId": "methodik-901"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "zahl",
+        "themaId": "anklage-872"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "vwgo-652",
+      "poolTitel": "Statthafte Klageart nach dem Begehren",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 88 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-15",
+        "2027-01-22"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-287",
+      "poolTitel": "Wie funktioniert die Vollstreckungsabwehrklage?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 767 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-424",
+      "poolTitel": "Beschränkte Geschäftsfähigkeit: lediglich rechtlicher Vorteil",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 106, 107 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-01"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-424",
+      "poolTitel": "Beschränkte Geschäftsfähigkeit: lediglich rechtlicher Vorteil",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 106, 107 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-01"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-460",
+      "poolTitel": "Sachmangelbegriff und vereinbarte Beschaffenheit",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 434 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-12",
+        "2027-02-05",
+        "2027-05-04"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "methodik-938",
+      "poolTitel": "Meinungsstreit darstellen: Ansichten, Argumente, Streitentscheid",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-09",
+        "2027-03-10",
+        "2027-03-13"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "methodik-901",
+      "poolTitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-07",
+        "2027-01-11",
+        "2027-04-17"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "anklage-872",
+      "poolTitel": "Wie begründet man einen Haftbefehl in der Klausur?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 112 StPO",
+        "§ 116 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-05-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vier Bereiche, 18 Themen: der Wochen-Check",
+          "titelZeilen": [
+            "Vier Bereiche,",
+            "18 Themen:",
+            "der Wochen-Check"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 439 Abs. 4 BGB: Unverhältnismäßigkeit ist eine Einrede – erst erheben, dann abwägen.",
+            "Sachmangel: Beim Verbraucher senkt ein AGB-Hinweis die objektiven Anforderungen nicht (§ 476 BGB).",
+            "Zweites Versäumnisurteil: Einspruch verworfen, nur noch Berufung nach § 514 Abs. 2 ZPO.",
+            "Selbstvornahme ohne Chance zur Nacherfüllung: kein Kostenersatz.",
+            "GmbH: Unterkapitalisierung allein begründet keine persönliche Haftung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 242 StGB: Auch die Sache im Miteigentum ist für den Täter fremd.",
+            "§ 252 StGB: Gewalt nach vollendeter Wegnahme, um die Beute zu halten.",
+            "Verdeckungsmord: Eine Ordnungswidrigkeit ist keine andere Straftat.",
+            "Konkreter Anklagesatz: sechs Bausteine, Tatsachen statt Gesetzesworte.",
+            "§ 17 StGB: Der Vorsatz bleibt, geprüft wird die Schuld.",
+            "§ 224 Abs. 1 Nr. 3 StGB: Überraschung ist noch keine Hinterlist."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Art. 4 GG: vorbehaltlos – Schranken nur aus kollidierendem Verfassungsrecht.",
+            "Hausverbot im Rathaus: Nach h.M. zählt der Zweck des Verbots – Verwaltungsrechtsweg.",
+            "§ 80 Abs. 3 VwGO: Die Begründung wird formal geprüft, abgewogen wird danach.",
+            "Störer: Verhalten hier, Zustand der Sache dort – Auswahl nach Effektivität.",
+            "Abschleppfall: Das Verkehrszeichen ist die sofort vollziehbare Grundverfügung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Daten, Anträge, Dritte und Bearbeitervermerk verraten das Prozessrecht.",
+            "Examen heißt nicht, jedes Problem zu kennen: Gerüst und Methode tragen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann ist eine Sache für den Diebstahl „fremd“?",
+            "Was bleibt dem Beklagten nach einem zweiten Versäumnisurteil?",
+            "Wer ist Zustandsstörer – und worauf kommt es dabei nicht an?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Kaufrecht und ZPO festigen",
+            "Strafrecht: Abgrenzungen abrufen",
+            "Öffentliches Recht: Rechtsweg und Eilrecht",
+            "Methode und Kopf trainieren"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen. Zivilrecht vom Sachmangel bis zur GmbH-Haftung, Strafrecht vom Miteigentum beim Diebstahl bis zur Hinterlist in § 224 StGB, Öffentliches Recht von der Glaubensfreiheit bis zum Abschleppfall – dazu Prozessrecht im Sachverhalt erkennen und ein Blick auf den Umgang mit Wissenslücken. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Am Ende der Woche wird geprüft, welche Etappen sicher sitzen.",
+        "handlung": "{A} looks back over a winding trail with four marked camps, while {B} hovers beside her and lights up the camps one after another.",
+        "hinweisRegie": "Place the note in the free open sky above the four marked camps, slightly tilted toward the camp that {B} is lighting up, without covering {A}'s silhouette.",
+        "alternative": "{B} stamps four small cards as checked while {A} holds back one card to review it again."
+      },
+      "bildSzene": "trail with four lit camps",
+      "bildSzeneAlt": "four cards stamped, one held back",
+      "quellen": [
+        "§§ 439, 440 BGB",
+        "§§ 434, 476 BGB",
+        "§§ 342, 345, 514 ZPO",
+        "§ 13 Abs. 2 GmbHG",
+        "§§ 242, 252 StGB",
+        "§ 211 StGB",
+        "§ 200 StPO",
+        "§§ 16, 17 StGB",
+        "§ 224 StGB",
+        "Art. 4 GG",
+        "§ 40 VwGO",
+        "§ 80 Abs. 3, 5 VwGO",
+        "Polizeigesetze der Länder",
+        "Verwaltungsvollstreckungsgesetze",
+        "Themenpool: methodik-905",
+        "Themenpool: mindset-1"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.340Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-652",
+      "slug": "2027-05-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Geld vom Staat: mal Leistungs-, mal Verpflichtungsklage",
+          "titelZeilen": [
+            "Geld vom Staat:",
+            "mal Leistungs-,",
+            "mal Verpflichtungs-",
+            "klage"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erst der Bescheid, dann das Geld",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die statthafte Klageart folgt dem Begehren des Klägers (§ 88 VwGO). Wer Geld will, fragt deshalb nicht „Geld oder kein Geld?“, sondern: Braucht es dafür erst noch einen Verwaltungsakt? Beispiel: U will eine Subvention."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Begehren ermitteln",
+              "text": "Anträge auslegen, am wirklichen Ziel orientiert (§ 88 VwGO)."
+            },
+            {
+              "titel": "2. Aufhebung eines VA?",
+              "text": "Anfechtungsklage (§ 42 Abs. 1 Alt. 1 VwGO)."
+            },
+            {
+              "titel": "3. Erlass eines VA?",
+              "text": "Verpflichtungsklage (§ 42 Abs. 1 Alt. 2 VwGO) – etwa auf Bewilligung der Subvention."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Sonstiges Handeln?",
+              "text": "Allgemeine Leistungsklage – etwa Auszahlung einer bereits bewilligten Subvention."
+            },
+            {
+              "titel": "5. Rechtsverhältnis klären?",
+              "text": "Feststellungsklage (§ 43 VwGO), subsidiär; nach Erledigung eines VA: Fortsetzungsfeststellungsklage."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: zweistufige Subvention",
+          "text": "Nach der Zweistufentheorie ergeht das „Ob“ durch Verwaltungsakt: Verpflichtungsklage auf Bewilligung. Das „Wie“ kann privatrechtlich gestaltet sein, etwa als Darlehensvertrag – dann ist für die Abwicklung der Zivilrechtsweg eröffnet. Ist schon bewilligt, genügt für die Zahlung die Leistungsklage."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht das Geld bestimmt die Klageart, sondern der Weg dorthin: Fehlt noch der Bewilligungsbescheid, ist es die Verpflichtungsklage."
+        },
+        {
+          "art": "cta",
+          "titel": "Klageart in drei Fragen",
+          "punkte": [
+            "Was will der Kläger wirklich?",
+            "Ist dafür ein VA nötig?",
+            "Ist der VA schon da?"
+          ],
+          "icons": [
+            "zielscheibe",
+            "dokument",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Geld vom Staat – mal Leistungsklage, mal Verpflichtungsklage. Entscheidend ist, ob für die Zahlung erst noch ein Verwaltungsakt ergehen muss. Fehlt die Bewilligung, klagst du auf ihren Erlass (§ 42 Abs. 1 Alt. 2 VwGO). Ist sie schon da und wird nur nicht gezahlt, genügt die allgemeine Leistungsklage. Das Begehren ermittelst du nach § 88 VwGO. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klageart",
+        "#verwaltungsprozessrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klageart bei Geldleistungen richtig wählen",
+      "coverText": "Erst der Bescheid, dann das Geld",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Ob eine Zahlung per Leistungs- oder Verpflichtungsklage verfolgt wird, hängt davon ab, ob schon ein Bescheid vorliegt.",
+        "handlung": "{A} stands at a two-step counter and holds up an empty approval slip at the first window, while {B} waits at the second window next to a sack of coins.",
+        "hinweisRegie": "Place the note in the free space between the two windows, slightly tilted toward the first window with the empty slip, so the order of steps is visible without covering the coin sack.",
+        "alternative": "{B} tries to open a coin chest whose lock only accepts a stamped slip that {A} is still waiting for."
+      },
+      "bildSzene": "two-window counter, empty slip, coin sack",
+      "bildSzeneAlt": "coin chest locked, slip awaited",
+      "quellen": [
+        "§ 88 VwGO",
+        "§ 42 Abs. 1 VwGO",
+        "§ 43 VwGO",
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 40 Abs. 1 VwGO",
+        "Themenpool: vwgo-652"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslung-ohne-etikett",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.341Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-287",
+      "slug": "2027-05-09-b3",
+      "titelZeilen": [
+        "Nach dem Urteil",
+        "aufgerechnet –",
+        "und doch zu spät"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nach dem Urteil aufgerechnet – und doch zu spät",
+          "unter": "Vollstreckungsabwehrklage · § 767 ZPO",
+          "text": "Nach dem BGH zählt bei § 767 Abs. 2 ZPO die Aufrechnungslage, nicht die Erklärung.",
+          "norm": "§ 767 Abs. 2 ZPO",
+          "icon": "waage",
+          "sprecher": "Nach dem Urteil aufgerechnet, und doch zu spät. Bei der Vollstreckungsabwehrklage fragt der BGH nicht, wann du die Aufrechnung erklärt hast. Er fragt, wann du hättest aufrechnen können.",
+          "marken": [
+            "Aufrechnungslage",
+            "nicht Erklärung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaftigkeit",
+          "text": "Materielle Einwendung gegen den titulierten Anspruch – etwa Erfüllung, Erlass, Aufrechnung.",
+          "norm": "§ 767 Abs. 1 ZPO",
+          "sprecher": "Schritt eins: die Statthaftigkeit. Mit Paragraf 767 ZPO macht der Schuldner Einwendungen gegen den titulierten Anspruch selbst geltend, zum Beispiel Erfüllung, Erlass oder Aufrechnung. Fehler im Vollstreckungsverfahren gehören dagegen zur Erinnerung nach Paragraf 766.",
+          "marken": [
+            "materielle Einwendung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zuständigkeit und Rechtsschutzbedürfnis",
+          "text": "Prozessgericht des ersten Rechtszugs, ausschließlich. Ab Titel bis zu seiner Herausgabe.",
+          "norm": "§§ 767 Abs. 1, 802 ZPO",
+          "sprecher": "Schritt zwei: Zuständig ist ausschließlich das Prozessgericht des ersten Rechtszugs. Das Rechtsschutzbedürfnis besteht, sobald ein Titel vorliegt, und solange der Gläubiger ihn nicht herausgegeben hat.",
+          "marken": [
+            "Prozessgericht",
+            "ausschließlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Begründetheit: Einwendung besteht",
+          "text": "Die Einwendung muss den titulierten Anspruch tatsächlich vernichten oder hemmen.",
+          "norm": "§ 767 Abs. 1 ZPO",
+          "sprecher": "Schritt drei, in der Begründetheit: Die Einwendung muss tatsächlich bestehen und den titulierten Anspruch erlöschen lassen oder seine Durchsetzung hemmen.",
+          "marken": [
+            "Einwendung besteht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Keine Präklusion",
+          "text": "Die Gründe müssen nach Schluss der letzten mündlichen Tatsachenverhandlung entstanden sein.",
+          "norm": "§ 767 Abs. 2 ZPO",
+          "sprecher": "Schritt vier: keine Präklusion. Die Gründe müssen nach dem Schluss der letzten mündlichen Verhandlung entstanden sein, in der sie spätestens hätten geltend gemacht werden müssen.",
+          "marken": [
+            "§ 767 II ZPO"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Streit: Gestaltungsrechte",
+          "text": "BGH: objektive Aufrechnungslage. Teile der Lit.: Zeitpunkt der Erklärung.",
+          "norm": "§ 767 Abs. 2 ZPO",
+          "sprecher": "Streitig ist das bei Gestaltungsrechten. Für den BGH ist bei der Aufrechnung entscheidend, wann sie objektiv ausgeübt werden konnten. Teile der Literatur stellen auf die Erklärung ab, weil erst sie die Forderung erlöschen lässt. Folgst du dem BGH, ist eine Aufrechnungslage aus der Zeit vor der Verhandlung präkludiert.",
+          "marken": [
+            "BGH: objektiv",
+            "Lit.: Erklärung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Statthaft, zuständig, Rechtsschutzbedürfnis – dann Einwendung und keine Präklusion.",
+          "norm": "§ 767 ZPO",
+          "sprecher": "Merke: Zulässigkeit mit Statthaftigkeit, Zuständigkeit und Rechtsschutzbedürfnis. Begründet ist die Klage, wenn die Einwendung besteht und nicht nach Absatz 2 präkludiert ist.",
+          "marken": [
+            "erst zulässig",
+            "dann präkludiert?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jeder Aufrechnung: Wann bestand die Lage?",
+          "text": "Speichern für die nächste Vollstreckungsklausur.",
+          "sprecher": "Speicher dir das für die nächste Vollstreckungsklausur. Und rechne bei jeder Aufrechnung nach, wann sich die Forderungen erstmals gegenüberstanden.",
+          "marken": [
+            "Zeitpunkt prüfen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Nach dem Urteil aufgerechnet – und doch zu spät. Bei der Vollstreckungsabwehrklage (§ 767 ZPO) sind Einwendungen präkludiert, deren Gründe schon vor dem Schluss der letzten mündlichen Verhandlung entstanden sind (§ 767 Abs. 2 ZPO). Bei Gestaltungsrechten wie der Aufrechnung stellt der BGH auf die objektive Aufrechnungslage ab, Teile der Literatur auf die Erklärung. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#767zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 767 ZPO: Aufrechnung und Präklusion",
+      "coverText": "Die Lage zählt, nicht die Erklärung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Bei der Präklusion zählt, wann aufgerechnet werden konnte – nicht, wann es erklärt wurde.",
+        "handlung": "{B} holds up a late ticket at a closed gate, while {A} points his stick at an old timetable showing that the ticket was valid long before the gate closed.",
+        "hinweisRegie": "Place the note in the free space between the late ticket and the old timetable, slightly tilted toward the timetable, so the earlier point in time is linked without covering {B}'s hand.",
+        "alternative": "{A} shows {B} two scales that were already balanced long ago, while {B} only now tries to lay a weight on one side."
+      },
+      "bildSzene": "late ticket at closed gate",
+      "bildSzeneAlt": "scales balanced long ago",
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 766 ZPO",
+        "§ 802 ZPO",
+        "§§ 387, 389 BGB",
+        "Themenpool: zpo-287"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.342Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-424",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Die Tante schenkt dem 16-jährigen M ein vermietetes Haus. Ist der Erwerb lediglich rechtlich vorteilhaft?",
+      "optionen": [
+        "Ja – eine Schenkung ist immer vorteilhaft",
+        "Nein – M tritt in die Mietverträge ein",
+        "Ja, solange keine Grundschuld eingetragen ist"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§§ 106, 107 BGB",
+        "§ 566 BGB",
+        "Themenpool: bgbat-424"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.342Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-424",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – mit dem Haus übernimmt M die Vermieterpflichten",
+      "text": "Mit dem Eigentumserwerb tritt M kraft Gesetzes in die Mietverhältnisse ein (§ 566 BGB) und haftet persönlich für die Vermieterpflichten. Das ist ein rechtlicher Nachteil. Deshalb braucht M für den Erwerb die Einwilligung seiner gesetzlichen Vertreter (§ 107 BGB).",
+      "norm": "§§ 107, 566 BGB",
+      "quellen": [
+        "§§ 106, 107 BGB",
+        "§ 566 BGB",
+        "Themenpool: bgbat-424"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.342Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – eine Schenkung ist immer vorteilhaft",
+        "Nein – M tritt in die Mietverträge ein",
+        "Ja, solange keine Grundschuld eingetragen ist"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-460",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 434 Abs. 5 BGB: Die falsche Sache steht einem Mangel gleich",
+      "text": "Liefert der Verkäufer eine andere als die geschuldete Sache, steht das einem Sachmangel gleich. Der Käufer hat dann die Rechte aus § 437 BGB – vorrangig Nacherfüllung durch Lieferung der richtigen Sache. Klausur: Nicht in die Nichterfüllung ausweichen, sondern ins Gewährleistungsrecht.",
+      "norm": "§ 434 Abs. 5 BGB",
+      "quellen": [
+        "§ 434 Abs. 5 BGB",
+        "§ 437 BGB",
+        "Themenpool: schuldbt-460"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.342Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-938",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Meinungsstreit entscheiden: Ist „herrschende Meinung“ ein Argument?",
+      "falsch": "Ich folge der herrschenden Meinung, weil sie herrschend ist und der BGH sie vertritt.",
+      "richtigText": "Mehrheit und Autorität ersetzen kein Sachargument. Entscheide mit Wortlaut, Systematik, Zweck oder einem Wertungswiderspruch der Gegenansicht. Die h.M. darfst du nennen – begründen musst du selbst.",
+      "quellen": [
+        "Themenpool: methodik-938"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.342Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-901",
+      "ueberzeile": "Klausurtipp Klausurtechnik",
+      "titel": "Gutachtenstil: Konjunktiv nur im Obersatz",
+      "text": "„A könnte … weggenommen haben“ – der Obersatz stellt die Hypothese auf. Definition und Subsumtion stehen im Indikativ. Das Ergebnis beantwortet den Obersatz ausdrücklich. Wer durchgehend im Konjunktiv schreibt, wirkt unsicher und verschleiert, wo subsumiert wird.",
+      "quellen": [
+        "Themenpool: methodik-901"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.342Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-872",
+      "ueberzeile": "5 Punkte Strafakte",
+      "titel": "Haftbefehl: die Haftgründe, die du konkret begründen musst",
+      "text": "Neben dringendem Tatverdacht und Verhältnismäßigkeit braucht der Haftbefehl einen Haftgrund:",
+      "punkte": [
+        "Flucht oder Verborgenhalten (§ 112 II Nr. 1)",
+        "Fluchtgefahr – aus Tatsachen, nicht nur aus der Straferwartung",
+        "Verdunkelungsgefahr (§ 112 II Nr. 3)",
+        "Schwere Tat (§ 112 III) – nach BVerfG eng auszulegen",
+        "Wiederholungsgefahr (§ 112a) – subsidiär"
+      ],
+      "quellen": [
+        "§ 112 StPO",
+        "§ 112a StPO",
+        "§ 116 StPO",
+        "Themenpool: anklage-872"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "5",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:51:35.342Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
