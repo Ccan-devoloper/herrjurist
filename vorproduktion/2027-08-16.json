@@ -1,0 +1,900 @@
+{
+  "datum": "2027-08-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-320",
+        "themaTitel": "Wie prüft man die Nötigung und was ist Verwerflichkeit?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "verwbt-110",
+        "themaTitel": "Wie prüft man die Rechtmäßigkeit einer Baugenehmigung?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "delikt-037",
+        "themaTitel": "Wie prüft man die Verkehrssicherungspflicht?",
+        "fach": "delikt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:00",
+        "art": "frage",
+        "themaId": "zpo-560"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:00",
+        "art": "antwort",
+        "themaId": "zpo-560"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "staat-081"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "tipp",
+        "themaId": "strafat-065"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "zahl",
+        "themaId": "revision-887"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "streitstand",
+        "themaId": "zwangsv-833"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-320",
+      "poolTitel": "Wie prüft man die Nötigung und was ist Verwerflichkeit?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 240 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-21"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwbt-110",
+      "poolTitel": "Wie prüft man die Rechtmäßigkeit einer Baugenehmigung?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 29 BauGB",
+        "§ 30 BauGB",
+        "§ 34 BauGB",
+        "§ 35 BauGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-28",
+        "2027-03-02",
+        "2027-05-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "delikt-037",
+      "poolTitel": "Wie prüft man die Verkehrssicherungspflicht?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-05-03",
+        "2027-05-03"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-22",
+        "2027-05-03",
+        "2027-05-03"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-081",
+      "poolTitel": "Wie lauten die Wahlgrundsätze und welche Bedeutung haben sie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 38 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafat-065",
+      "poolTitel": "Was ist der Erlaubnistatbestandsirrtum und wie wird er behandelt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB",
+        "§ 17 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-04-20",
+        "2027-07-31"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "revision-887",
+      "poolTitel": "Wie entscheidet das Revisionsgericht?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 349 StPO",
+        "§ 353 StPO",
+        "§ 354 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-06",
+        "2027-06-13",
+        "2027-06-17"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "zwangsv-833",
+      "poolTitel": "Welche Rechtsbehelfe richten sich gegen die Vollstreckungsklausel?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 732 ZPO",
+        "§ 768 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-02",
+        "2027-04-14",
+        "2027-06-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-320",
+      "slug": "2027-08-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sitzblockade: Wer wird eigentlich mit Gewalt genötigt?",
+          "titelZeilen": [
+            "Sitzblockade:",
+            "Wer wird eigentlich",
+            "mit Gewalt",
+            "genötigt?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Die erste Reihe zählt anders",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Demonstranten setzen sich auf eine Straße. Autofahrer F1 hält vor ihnen an. Hinter ihm müssen F2 und F3 stoppen – sie kommen an F1 nicht vorbei. Wen haben die Demonstranten mit Gewalt im Sinne des § 240 Abs. 1 StGB genötigt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Gewalt gegenüber F1?",
+              "text": "Die bloße Anwesenheit wirkt auf F1 nur psychisch: Er hält an, um niemanden zu verletzen. Nach dem BVerfG ist das keine Gewalt."
+            },
+            {
+              "titel": "Gewalt gegenüber F2 und F3",
+              "text": "Für sie ist das Auto von F1 ein physisches Hindernis. Nach der Zweite-Reihe-Rechtsprechung des BGH ist das Gewalt der Blockierer."
+            },
+            {
+              "titel": "Nötigungserfolg",
+              "text": "F2 und F3 müssen anhalten und warten – ein abgenötigtes Verhalten. Vorsatz der Blockierer liegt regelmäßig vor."
+            },
+            {
+              "titel": "Verwerflichkeit, § 240 Abs. 2 StGB",
+              "text": "Rechtswidrigkeit positiv feststellen: Ist die Mittel-Zweck-Relation sozial unerträglich? Bei Versammlungen zählt Art. 8 GG mit."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Gewalt schon gegenüber F1 bejahen, weil er „nicht weiterfahren konnte“. Die bloße Sitzblockade wirkt auf die erste Reihe nur psychisch. Anders kann es liegen, wenn sich die Blockierer anketten oder ein echtes körperliches Hindernis errichten."
+        },
+        {
+          "art": "text",
+          "titel": "Was in die Abwägung gehört",
+          "punkte": [
+            "Dauer und Intensität der Blockade",
+            "Vorherige Ankündigung und Ausweichmöglichkeiten",
+            "Zahl der Betroffenen und Dringlichkeit ihrer Fahrt",
+            "Sachbezug zwischen Betroffenen und Protestanliegen"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erste Reihe: nur psychischer Zwang. Ab der zweiten Reihe: Gewalt durch das stehende Fahrzeug. Die Verwerflichkeit prüfst du immer gesondert."
+        },
+        {
+          "art": "cta",
+          "titel": "Sitzblockade in drei Zügen",
+          "punkte": [
+            "Reihe für Reihe nach Gewalt fragen",
+            "Nötigungserfolg je Betroffenem",
+            "Verwerflichkeit mit Art. 8 GG abwägen"
+          ],
+          "icons": [
+            "auto",
+            "person",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Sitzblockade auf der Straße – wer wird hier eigentlich mit Gewalt genötigt? Gegenüber dem ersten Fahrer wirkt die bloße Anwesenheit nur psychisch; Gewalt liegt nach dem BVerfG nicht vor. Für die Fahrer dahinter bildet sein Auto aber ein physisches Hindernis – nach der Zweite-Reihe-Rechtsprechung des BGH Gewalt. Danach kommt die Verwerflichkeit nach § 240 Abs. 2 StGB, bei Versammlungen mit Blick auf Art. 8 GG. Speichern für die nächste Nötigungsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#nötigung",
+        "#240stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sitzblockade: Gewalt erst ab der zweiten Reihe",
+      "coverText": "Die erste Reihe zählt anders",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Die sitzenden Blockierer halten das erste Auto nur psychisch auf – für alle dahinter wird dieses Auto selbst zur Mauer.",
+        "handlung": "{A} calmly sits cross-legged on a road in front of a small hover-car, while {B}, stuck in a second vehicle right behind it, nervously pushes against the rear bumper of the first car that blocks his way.",
+        "hinweisRegie": "Place the note in the open space above the gap between the first and second vehicle, slightly tilted toward the rear bumper, so it links the blocking car to the second driver without covering either face.",
+        "alternative": "{B} lines up three toy cars in a row behind a seated figure, while {A} marks only the second and third car with a small glowing stone."
+      },
+      "bildSzene": "second car blocked by first car",
+      "bildSzeneAlt": "three toy cars behind seated figure",
+      "quellen": [
+        "§ 240 StGB",
+        "Art. 8 GG",
+        "Themenpool: strafbt-320"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.899Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-110",
+      "slug": "2027-08-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Baugenehmigung: Fünf Schritte – und § 34 BauGB ist erst der vierte",
+          "titelZeilen": [
+            "Baugenehmigung:",
+            "Fünf Schritte –",
+            "§ 34 BauGB ist",
+            "erst der vierte"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erst Verfahren, dann Gebiet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Wer eine Baugenehmigung will, hat einen Anspruch, wenn dem Vorhaben keine öffentlich-rechtlichen Vorschriften entgegenstehen, die im Genehmigungsverfahren zu prüfen sind. Die Anspruchsnorm steht in der Landesbauordnung. Der Klassiker: sofort in § 34 BauGB springen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Genehmigungspflicht",
+              "text": "Ist das Vorhaben nach der Landesbauordnung genehmigungspflichtig oder verfahrensfrei? Welches Verfahren, welches Prüfprogramm?"
+            },
+            {
+              "titel": "2. Formelle Voraussetzungen",
+              "text": "Zuständige Bauaufsichtsbehörde, schriftlicher Antrag mit Bauvorlagen, Beteiligung der Gemeinde (§ 36 BauGB) – je nach Landesrecht."
+            },
+            {
+              "titel": "3. Vorhaben, § 29 Abs. 1 BauGB",
+              "text": "Errichtung, Änderung oder Nutzungsänderung einer baulichen Anlage mit bodenrechtlicher Relevanz. Nur dann gelten die §§ 30 bis 37 BauGB."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Planungsrechtlicher Maßstab",
+              "text": "Bebauungsplan (§ 30 BauGB), unbeplanter Innenbereich (§ 34 BauGB) oder Außenbereich (§ 35 BauGB) – plus gesicherte Erschließung."
+            },
+            {
+              "titel": "5. Bauordnungsrecht und Weiteres",
+              "text": "Abstandsflächen, Stellplätze, Brandschutz und sonstiges öffentliches Recht – soweit das Prüfprogramm des Verfahrens sie erfasst."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Verfahrensfrei heißt nicht rechtsfrei",
+          "text": "Auch wenn ein Vorhaben keine Genehmigung braucht, gelten die §§ 30 bis 37 BauGB, sobald es ein Vorhaben nach § 29 BauGB ist. Die Behörde kann dann bauaufsichtlich einschreiten. Und: Verweigert die Gemeinde ihr Einvernehmen rechtswidrig, kann es ersetzt werden (§ 36 Abs. 2 S. 3 BauGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst Verfahren und Prüfprogramm, dann § 29 BauGB, dann der Gebietsmaßstab. § 34 BauGB ist ein Baustein – nicht der Anfang."
+        },
+        {
+          "art": "cta",
+          "titel": "Baugenehmigung in drei Fragen",
+          "punkte": [
+            "Welches Verfahren, welches Prüfprogramm?",
+            "Vorhaben nach § 29 BauGB?",
+            "Innenbereich, Außenbereich oder Plan?"
+          ],
+          "icons": [
+            "ordner",
+            "baustelle",
+            "haeuser"
+          ]
+        }
+      ],
+      "caption": "Baugenehmigung: fünf Schritte – und § 34 BauGB ist erst der vierte. Der Anspruch folgt aus der Landesbauordnung. Vorher klärst du Genehmigungspflicht, Verfahren und Prüfprogramm, danach die formellen Voraussetzungen. Die §§ 30 bis 37 BauGB gelten nur für Vorhaben im Sinne des § 29 Abs. 1 BauGB. Erst dann entscheidest du, ob Plan, Innenbereich oder Außenbereich den Maßstab liefert. Speichern für die nächste Baurechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#baurecht",
+        "#baugb",
+        "#baugenehmigung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Baugenehmigung: fünf Schritte in fester Folge",
+      "coverText": "Erst Verfahren, dann Gebiet",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Bevor es um das Baugebiet geht, muss feststehen, welches Verfahren gilt und ob überhaupt ein Vorhaben vorliegt.",
+        "handlung": "{B} carries a heavy crystal building block toward a construction site, but {A} hovers in front of a row of five stepping stones and gently points him back to the first stone.",
+        "hinweisRegie": "Place the note in the free space above the first of the five stepping stones, slightly tilted, so it reads as the starting point of the check without covering {B}'s block or {A}'s pointing hand.",
+        "alternative": "{A} sorts building plans into three trays labeled only by simple house, village and forest pictograms, while {B} waits with a stamp until the sorting is done."
+      },
+      "bildSzene": "droid sends miner back to step one",
+      "bildSzeneAlt": "plans sorted into three trays",
+      "quellen": [
+        "§ 29 BauGB",
+        "§ 30 BauGB",
+        "§ 34 BauGB",
+        "§ 35 BauGB",
+        "§ 36 BauGB",
+        "Landesbauordnungen",
+        "Themenpool: verwbt-110"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-schritte-reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.899Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "delikt",
+      "klausur": 1,
+      "fachLabel": "Deliktsrecht",
+      "themaId": "delikt-037",
+      "slug": "2027-08-16-b3",
+      "titelZeilen": [
+        "Gestürzt auf dem",
+        "Grundstück – nicht",
+        "automatisch haftbar"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gestürzt auf dem Grundstück – nicht automatisch haftbar",
+          "unter": "Verkehrspflicht · § 823 Abs. 1 BGB",
+          "text": "Verkehrssicherung heißt nicht: Schutz vor jeder denkbaren Gefahr.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "icon": "warnung",
+          "sprecher": "Gestürzt auf fremdem Grund? Der Eigentümer haftet nicht automatisch. Er muss nicht jede denkbare Gefahr beseitigen. Entscheidend ist, was er vernünftigerweise tun musste.",
+          "marken": [
+            "keine Vollkasko",
+            "§ 823 Abs. 1 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Rechtsgut verletzt",
+          "text": "Körper, Gesundheit oder Eigentum des Geschädigten ist verletzt.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Schritt eins: eine Rechtsgutsverletzung. Der Besucher bricht sich beim Sturz das Handgelenk. Körper und Gesundheit sind verletzt.",
+          "marken": [
+            "Rechtsgut"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Unterlassen plus Verkehrspflicht",
+          "text": "Wer eine Gefahrenquelle schafft oder beherrscht, muss andere schützen.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: Meist geht es um ein Unterlassen. Haftbar ist es nur, wenn eine Verkehrspflicht bestand. Die trifft, wer eine Gefahrenquelle schafft oder beherrscht, etwa weil er einen Weg für Besucher öffnet.",
+          "marken": [
+            "Gefahrenquelle"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Umfang: das Zumutbare",
+          "text": "Maßstab: was ein umsichtiger, verständiger Mensch für nötig und ausreichend hält.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Schritt drei, der Kern: Wie weit reicht die Pflicht? Nötig sind die Maßnahmen, die ein umsichtiger und verständiger Mensch für ausreichend hält, um andere vor Schäden zu bewahren. Und sie müssen zumutbar sein.",
+          "marken": [
+            "zumutbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verschulden",
+          "text": "Die Pflichtverletzung muss vorsätzlich oder fahrlässig sein.",
+          "norm": "§ 276 BGB",
+          "sprecher": "Schritt vier: Verschulden. Wer die Gefahr kannte oder bei gebotener Sorgfalt hätte erkennen müssen, handelt fahrlässig.",
+          "marken": [
+            "§ 276 BGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Offensichtliche Gefahren",
+          "text": "Wer eine erkennbare Gefahr sieht, muss sich selbst schützen.",
+          "norm": null,
+          "sprecher": "Wichtig: Vor Gefahren, die jeder sofort erkennt und auf die er sich einstellen kann, muss meist nicht gewarnt werden. Hier kann auch ein Mitverschulden nach § 254 BGB greifen.",
+          "marken": [
+            "erkennbar",
+            "§ 254 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Übertragen, aber nicht erledigt",
+          "text": "Die Pflicht kann delegiert werden – eine Überwachungspflicht bleibt.",
+          "norm": null,
+          "sprecher": "Und der Klassiker: Der Eigentümer überträgt den Winterdienst auf eine Firma. Dann haftet primär diese. Er selbst muss aber noch kontrollieren und überwachen.",
+          "marken": [
+            "Überwachung bleibt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Gefahrenquelle, zumutbare Sicherung, Verschulden.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Merke: Gefahrenquelle, zumutbare Sicherung, Verschulden. Absolute Sicherheit schuldet niemand.",
+          "marken": [
+            "zumutbar statt absolut"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Gefahrenquelle benennen",
+          "text": "Speichern für die nächste Deliktsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Deliktsklausur.",
+          "marken": [
+            "Gefahrenquelle zuerst"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Gestürzt auf fremdem Grund – der Eigentümer haftet nicht automatisch. Die Verkehrspflicht trifft, wer eine Gefahrenquelle schafft oder beherrscht. Sie verlangt aber nur die Maßnahmen, die ein umsichtiger und verständiger Mensch für ausreichend hält und die zumutbar sind. Vor offensichtlichen Gefahren muss meist nicht gewarnt werden. Wird die Pflicht übertragen, bleibt eine Überwachungspflicht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#deliktsrecht",
+        "#823bgb",
+        "#verkehrssicherungspflicht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verkehrspflicht: zumutbar statt absolut",
+      "coverText": "Zumutbare Sicherung genügt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Wer einen Weg für Besucher öffnet, muss ihn zumutbar sichern – nicht gegen jede denkbare Gefahr.",
+        "handlung": "{A} curiously steps onto a garden path where {B} has just placed one sensible handrail beside a few slippery stones, ignoring a huge pile of unnecessary warning cones.",
+        "hinweisRegie": "Place the note in the free space between the handrail and the slippery stones, slightly tilted toward the rail, so the idea of reasonable safety is tied to it without covering the characters.",
+        "alternative": "{B} hands a snow shovel to a small hired helper while {A} keeps watching from a window with a lantern."
+      },
+      "bildSzene": "one handrail beside slippery path",
+      "bildSzeneAlt": "snow shovel handed to helper",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 276 BGB",
+        "§ 254 BGB",
+        "Themenpool: delikt-037"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.901Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-560",
+      "ueberzeile": "Prüfungsfrage Zivilprozessrecht",
+      "titel": "Der gerichtliche Sachverständige hat früher ein Privatgutachten für B erstellt. Was kann K tun?",
+      "optionen": [
+        "Ihn wegen Besorgnis der Befangenheit ablehnen, § 406 ZPO",
+        "Nichts – Sachverständige können nicht abgelehnt werden",
+        "Erst mit der Berufung gegen das Urteil vorgehen"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 406 ZPO",
+        "§ 42 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.901Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-560",
+      "ueberzeile": "Auflösung",
+      "titel": "Ablehnen – aus denselben Gründen wie einen Richter",
+      "text": "Nach § 406 Abs. 1 ZPO kann ein Sachverständiger aus denselben Gründen abgelehnt werden, die zur Ablehnung eines Richters berechtigen. Ein früheres Privatgutachten für eine Partei begründet regelmäßig die Besorgnis der Befangenheit. Achte auf die Frist: grundsätzlich binnen zwei Wochen nach Verkündung oder Zustellung des Ernennungsbeschlusses (§ 406 Abs. 2 ZPO).",
+      "norm": "§ 406 ZPO",
+      "quellen": [
+        "§ 406 ZPO",
+        "§ 42 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.901Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ihn wegen Besorgnis der Befangenheit ablehnen, § 406 ZPO",
+        "Nichts – Sachverständige können nicht abgelehnt werden",
+        "Erst mit der Berufung gegen das Urteil vorgehen"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-081",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 38 Abs. 1 GG: Gleich heißt Zählwert und Erfolgswert",
+      "text": "Wahlgleichheit verlangt mehr als eine Stimme pro Kopf. Jede Stimme muss den gleichen Zählwert haben und bei der Verhältniswahl grundsätzlich auch den gleichen Erfolgswert. Sperrklauseln greifen deshalb in die Erfolgswertgleichheit ein. Sie brauchen einen zwingenden Grund – etwa die Funktionsfähigkeit des Parlaments.",
+      "norm": "Art. 38 Abs. 1 S. 1 GG",
+      "quellen": [
+        "Art. 38 Abs. 1 GG",
+        "Themenpool: staat-081"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.901Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-065",
+      "ueberzeile": "Klausurtipp Strafrecht AT",
+      "titel": "Erlaubnistatbestandsirrtum: Erst die vorgestellte Lage voll durchprüfen",
+      "text": "Bevor du den Streit um die Rechtsfolge ausbreitest, prüfe hypothetisch: Wäre der Täter gerechtfertigt, wenn die Lage so wäre, wie er sie sich vorstellt – einschließlich Erforderlichkeit und Gebotenheit? Nur dann liegt ein Erlaubnistatbestandsirrtum vor. Hätte er auch in der vorgestellten Lage überreagiert, bleibt es beim Verbotsirrtum nach § 17 StGB.",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 17 StGB",
+        "§ 32 StGB",
+        "Themenpool: strafat-065"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.901Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-887",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Wann entscheidet das Revisionsgericht selbst in der Sache?",
+      "text": "Voraussetzung nach § 354 Abs. 1 StPO: Das Urteil wird nur wegen eines Rechtsfehlers bei der Anwendung des Gesetzes auf die Feststellungen aufgehoben, und weitere tatsächliche Erörterungen sind nicht nötig.",
+      "punkte": [
+        "Freisprechung",
+        "Einstellung des Verfahrens",
+        "Absolut bestimmte Strafe",
+        "Niedrigste Strafe oder Absehen von Strafe – nur auf Antrag der StA"
+      ],
+      "quellen": [
+        "§ 354 Abs. 1 StPO",
+        "Themenpool: revision-887"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.901Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-833",
+      "ueberzeile": "Streitstand Zwangsvollstreckung",
+      "titel": "Rechtsnachfolge in der Klausel bestritten: Reicht die Klauselerinnerung?",
+      "norm": "§§ 732, 768 ZPO",
+      "optionen": [
+        "Eine Ansicht: § 732 ZPO prüft nur die formell ordnungsgemäße Erteilung; materielles Bestreiten gehört in die Klage.",
+        "Andere Ansicht: § 768 ZPO lässt § 732 ZPO „unbeschadet“ – auch mit der Erinnerung darf der Eintritt bestritten werden."
+      ],
+      "text": "Klausur: Beide Rechtsbehelfe nennen. Fehlt der Nachweis durch öffentliche Urkunden, passt die Erinnerung. Braucht der Schuldner eine Beweisaufnahme zur Rechtsnachfolge, ist die Klage der sichere Weg.",
+      "quellen": [
+        "§ 732 ZPO",
+        "§ 768 ZPO",
+        "§ 727 ZPO",
+        "Themenpool: zwangsv-833"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:18.901Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

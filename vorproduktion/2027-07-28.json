@@ -1,0 +1,884 @@
+{
+  "datum": "2027-07-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-574",
+        "themaTitel": "Einstweilige Einstellung der Zwangsvollstreckung",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "revision-875",
+        "themaTitel": "Welche Fristen und Formen gelten für Einlegung und Begründung?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwbt-112",
+        "themaTitel": "Was ist das Gebot der Rücksichtnahme?",
+        "fach": "verwbt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "verwalt-141"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "verwalt-141"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "staat-086"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "streitstand",
+        "themaId": "streit-35"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "merksatz",
+        "themaId": "bgbat-148"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "begriff",
+        "themaId": "revision-880"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-574",
+      "poolTitel": "Einstweilige Einstellung der Zwangsvollstreckung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 707, 719, 769 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-06",
+        "2027-04-15",
+        "2027-04-15"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "revision-875",
+      "poolTitel": "Welche Fristen und Formen gelten für Einlegung und Begründung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 32d StPO",
+        "§ 341 StPO",
+        "§ 344 StPO",
+        "§ 345 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-03-27",
+        "2027-05-28"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwbt-112",
+      "poolTitel": "Was ist das Gebot der Rücksichtnahme?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 15 BauNVO",
+        "§ 34 Abs. 1 BauGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-09",
+        "2027-03-29",
+        "2027-05-29"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-141",
+      "poolTitel": "Wann liegt ein Verwaltungsakt vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11",
+        "2026-12-18",
+        "2027-04-29"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-141",
+      "poolTitel": "Wann liegt ein Verwaltungsakt vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11",
+        "2026-12-18",
+        "2027-04-29"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-086",
+      "poolTitel": "Wann gelten Vorrang und Vorbehalt des Gesetzes?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-04-17",
+        "2027-06-09"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-35",
+      "poolTitel": "Actio libera in causa: Ausnahme- oder Tatbestandsmodell?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 20 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bgbat-148",
+      "poolTitel": "Wann geht eine Willenserklärung unter Abwesenden zu?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2027-02-22",
+        "2027-07-03"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "revision-880",
+      "poolTitel": "Wann verletzt eine Hauptverhandlung die Öffentlichkeit?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 338 Nr. 6 StPO",
+        "§ 169 GVG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-30"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-574",
+      "slug": "2027-07-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vollstreckungsabwehrklage erhoben – die Pfändung läuft weiter",
+          "titelZeilen": [
+            "Vollstreckungs-",
+            "abwehrklage erhoben",
+            "– die Pfändung",
+            "läuft weiter"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Ohne Antrag keine Einstellung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "S ist rechtskräftig zur Zahlung von 8.000 € an G verurteilt. Nach dem Urteil zahlt er alles. G vollstreckt trotzdem, der Gerichtsvollzieher kündigt die Pfändung an. S erhebt Vollstreckungsabwehrklage. Ist die Vollstreckung damit gestoppt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Der richtige Rechtsbehelf",
+              "text": "Erfüllung nach Schluss der mündlichen Verhandlung ist eine materielle Einwendung: Vollstreckungsabwehrklage (§ 767 Abs. 1, 2 ZPO)."
+            },
+            {
+              "titel": "Keine Sperrwirkung",
+              "text": "Die Klage allein hemmt die Vollstreckung nicht. Der Titel bleibt vollstreckbar, bis das Gericht etwas anderes anordnet."
+            },
+            {
+              "titel": "Antrag nach § 769 ZPO",
+              "text": "Das Prozessgericht kann die Vollstreckung einstweilen einstellen, mit oder ohne Sicherheit. Die Tatsachen sind glaubhaft zu machen."
+            },
+            {
+              "titel": "Eilfall",
+              "text": "In dringenden Fällen entscheidet das Vollstreckungsgericht und setzt eine Frist für die Entscheidung des Prozessgerichts (§ 769 Abs. 2 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Drei Normen, drei Lagen",
+          "links": {
+            "titel": "§§ 707, 719 ZPO",
+            "punkte": [
+              "Angriff auf den Titel selbst",
+              "Wiedereinsetzung, Wiederaufnahme, Einspruch, Berufung"
+            ]
+          },
+          "rechts": {
+            "titel": "§ 769 ZPO",
+            "punkte": [
+              "Titel bleibt, Einwendung gegen den Anspruch",
+              "Vollstreckungsabwehr- und Drittwiderspruchsklage (§ 771 Abs. 3)"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der Praxistipp",
+          "text": "Hat S eine Quittung von G über die Zahlung nach Erlass des Urteils, geht es oft schneller: Legt er sie dem Gerichtsvollzieher vor, stellt dieser die Vollstreckung einstweilen ein (§ 775 Nr. 4 ZPO). Bereits getroffene Maßregeln bleiben aber einstweilen bestehen (§ 776 S. 2 ZPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Klage stoppt nichts. Einstweilige Einstellung gibt es nur auf Antrag – bei § 767 ZPO über § 769 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen, wenn trotz Zahlung vollstreckt wird",
+          "punkte": [
+            "Einwendung nach Schluss der Verhandlung?",
+            "Antrag nach § 769 ZPO gestellt?",
+            "Quittung für § 775 Nr. 4 ZPO?"
+          ],
+          "icons": [
+            "kalender",
+            "stopp",
+            "quittung"
+          ]
+        }
+      ],
+      "caption": "Vollstreckungsabwehrklage erhoben – und die Pfändung läuft weiter. Denn die Klage nach § 767 ZPO hat keine aufschiebende Wirkung. Wer die Vollstreckung bis zum Urteil stoppen will, braucht einen Antrag auf einstweilige Einstellung nach § 769 ZPO. Mit einer Quittung des Gläubigers hilft oft schon § 775 Nr. 4 ZPO. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#767zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 769 ZPO: Klage allein stoppt nichts",
+      "coverText": "Ohne Antrag keine Einstellung",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Die Klage gegen die Vollstreckung hält die Vollstreckung nicht an – dafür braucht es einen eigenen Stoppknopf.",
+        "handlung": "{A} keeps hauling crystals out of a mine cart while {B} has filed a big complaint sheet on the wall and nervously searches for a separate red stop lever beside the rails.",
+        "hinweisRegie": "Place the note in the free space next to the red stop lever, slightly tilted toward the moving cart, so the missing stop is linked to the ongoing hauling without covering {B}'s reaching hand.",
+        "alternative": "{B} shouts at a running conveyor belt while {A} points to an unpulled emergency cord hanging next to it."
+      },
+      "bildSzene": "cart keeps moving, stop lever unpulled",
+      "bildSzeneAlt": "conveyor running, emergency cord hanging",
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 769 ZPO",
+        "§§ 707, 719 ZPO",
+        "§ 771 ZPO",
+        "§§ 775, 776 ZPO",
+        "Themenpool: zpo-574"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.562Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-875",
+      "slug": "2027-07-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fristgerecht per Fax – und trotzdem unzulässig",
+          "titelZeilen": [
+            "Fristgerecht",
+            "per Fax – und",
+            "trotzdem unzulässig"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Verteidiger: nur elektronisch",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A wird am Montag in seiner Anwesenheit verurteilt. Sein Verteidiger V legt am Freitag derselben Woche per Fax Revision beim Landgericht ein. Das Fax ist lesbar und von V unterschrieben. Ist die Revision wirksam eingelegt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Frist",
+              "text": "Eine Woche nach Verkündung (§ 341 Abs. 1 StPO). Freitag derselben Woche: gewahrt."
+            },
+            {
+              "titel": "Adressat",
+              "text": "Beim Gericht, dessen Urteil angefochten wird – hier das Landgericht. Passt."
+            },
+            {
+              "titel": "Form für Verteidiger",
+              "text": "Verteidiger und Anwälte müssen Revision und Begründung als elektronisches Dokument übermitteln (§ 32d S. 2 StPO). Ein Fax genügt nicht."
+            },
+            {
+              "titel": "Ausnahme",
+              "text": "Nur bei vorübergehender technischer Unmöglichkeit, unverzüglich glaubhaft gemacht (§ 32d S. 3, 4 StPO). Dafür fehlt hier jeder Anhalt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Ergebnis und Ausweg",
+          "text": "Die Revision ist nicht formwirksam eingelegt und damit unzulässig. Zu prüfen ist Wiedereinsetzung in den vorigen Stand (§§ 44, 45 StPO): Ein Verschulden des Verteidigers wird dem Angeklagten im Strafverfahren grundsätzlich nicht zugerechnet."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nur die Frist prüfen und die Form übergehen. Für den Angeklagten selbst genügt weiter die Schriftform oder die Erklärung zu Protokoll der Geschäftsstelle – die elektronische Pflicht trifft die Profis."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Frist, Adressat, Form – und für Verteidiger heißt Form: elektronisches Dokument nach § 32d S. 2 StPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zur Einlegung",
+          "punkte": [
+            "Binnen einer Woche?",
+            "Beim richtigen Gericht?",
+            "Wer legt ein – und in welcher Form?"
+          ],
+          "icons": [
+            "kalender",
+            "gericht",
+            "laptop"
+          ]
+        }
+      ],
+      "caption": "Fristgerecht per Fax – und trotzdem unzulässig. Verteidiger und Rechtsanwälte müssen die Revision seit 2022 als elektronisches Dokument einlegen und begründen (§ 32d S. 2 StPO). Ein Fax wahrt die Form nicht, auch wenn die Wochenfrist des § 341 StPO eingehalten ist. Rettung kann die Wiedereinsetzung bringen. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#32dstpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision per Fax: Formfehler beim Verteidiger",
+      "coverText": "Verteidiger: nur elektronisch",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Die Frist ist gewahrt, aber der Weg der Einreichung ist für den Verteidiger der falsche.",
+        "handlung": "{A} hovers in front of a slot marked with a glowing data symbol and politely refuses a paper sheet that {B} is pushing toward it just in time.",
+        "hinweisRegie": "Place the note in the free space beside the glowing slot, slightly tilted toward the refused paper sheet, so the wrong channel is obvious without covering {B}'s face or the sheet.",
+        "alternative": "{B} arrives on time at a closed door while {A} points to an open digital hatch right next to it."
+      },
+      "bildSzene": "paper sheet refused at data slot",
+      "bildSzeneAlt": "closed door beside open digital hatch",
+      "quellen": [
+        "§ 341 StPO",
+        "§ 32d StPO",
+        "§§ 44, 45 StPO",
+        "Themenpool: revision-875"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.562Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-112",
+      "slug": "2027-07-28-b3",
+      "titelZeilen": [
+        "Neubau nimmt Licht:",
+        "Kann der Nachbar",
+        "klagen?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Neubau nimmt Licht: Kann der Nachbar klagen?",
+          "unter": "Baurecht · Gebot der Rücksichtnahme",
+          "text": "Weniger Licht allein macht ein Vorhaben nicht rücksichtslos.",
+          "norm": "§ 34 Abs. 1 BauGB · § 15 Abs. 1 BauNVO",
+          "icon": "haeuser",
+          "sprecher": "Weniger Sonne im Garten reicht meistens nicht. Das Gebot der Rücksichtnahme ist kein Anspruch auf freie Aussicht.",
+          "marken": [
+            "weniger Licht",
+            "nicht rücksichtslos"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Wo das Gebot steckt",
+          "text": "Kein eigener Paragraf: im Einfügen, in § 15 Abs. 1 BauNVO, in § 35 Abs. 3 BauGB.",
+          "norm": "§ 34 Abs. 1 BauGB · § 15 BauNVO",
+          "sprecher": "Schritt eins: Das Gebot hat keinen eigenen Paragrafen. Du findest es im Innenbereich im Merkmal des Einfügens nach Paragraf 34, im Plangebiet in Paragraf 15 Baunutzungsverordnung und im Außenbereich bei den öffentlichen Belangen.",
+          "marken": [
+            "kein eigener §"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Drittschutz nur bei qualifizierter Betroffenheit",
+          "text": "Der Nachbar muss individualisiert und erkennbar betroffen sein.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Drittschützend ist das Gebot nur für den, der in besonderer Weise betroffen ist, also nicht für die Allgemeinheit, sondern für den unmittelbaren Nachbarn.",
+          "marken": [
+            "qualifiziert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Abwägung der Zumutbarkeit",
+          "text": "Je schutzwürdiger der Nachbar, desto mehr Rücksicht – und umgekehrt.",
+          "norm": null,
+          "sprecher": "Schritt drei: Es wird abgewogen. Je empfindlicher und schutzwürdiger die Stellung des Nachbarn, desto mehr Rücksicht. Je gewichtiger die Interessen des Bauherrn, desto weniger muss er zurückstecken.",
+          "marken": [
+            "Zumutbarkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Abstandsflächen eingehalten?",
+          "text": "Dann ist die Rücksichtnahme bei Licht, Luft und Sonne regelmäßig gewahrt.",
+          "norm": "Landesbauordnungen",
+          "sprecher": "Schritt vier: Hält der Neubau die Abstandsflächen des Landesrechts ein, ist das Gebot hinsichtlich Belichtung, Belüftung und Besonnung nach der Rechtsprechung in der Regel nicht verletzt.",
+          "marken": [
+            "in der Regel"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Ausnahme",
+          "text": "Erdrückende oder abriegelnde Wirkung eines übermächtigen Baukörpers.",
+          "norm": null,
+          "sprecher": "Die Ausnahme: Ein Baukörper wirkt wegen seiner Höhe und Masse erdrückend oder abriegelnd, etwa ein langer, hoher Riegel direkt neben einem kleinen Wohnhaus. Dann kann das Gebot trotzdem verletzt sein.",
+          "marken": [
+            "erdrückend"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Rücksichtnahme ist Abwägung, kein Recht auf Sonne.",
+          "norm": null,
+          "sprecher": "Merke: Rücksichtnahme ist eine Abwägung, kein Recht auf Sonne und Aussicht.",
+          "marken": [
+            "Abwägung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Baurechtsklausur",
+          "text": "Speichern und bei der Nachbarklage prüfen.",
+          "sprecher": "Speicher dir das für die nächste Nachbarklage.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Neubau nimmt Licht – kann der Nachbar klagen? Meist nicht mit Erfolg. Das Gebot der Rücksichtnahme ist drittschützend, verlangt aber eine Abwägung der Zumutbarkeit. Sind die Abstandsflächen eingehalten, ist es bei Licht, Luft und Sonne in der Regel gewahrt. Ausnahme: eine erdrückende oder abriegelnde Wirkung. Speichern für die nächste Baurechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#baurecht",
+        "#rücksichtnahme",
+        "#nachbarklage",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücksichtnahme: kein Recht auf Sonne",
+      "coverText": "Abstand gewahrt – meist kein Verstoß",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Ein Neubau darf Schatten werfen – rücksichtslos wird er erst, wenn er erdrückt.",
+        "handlung": "{A} curiously holds a small sun lamp over her tiny hut while {B} stacks crystal blocks next door, measuring the gap between the two with a rope.",
+        "hinweisRegie": "Place the note in the free space between the hut and the crystal blocks, slightly tilted toward the measuring rope, so the distance is the visual focus without covering either character.",
+        "alternative": "{B} builds a tall wall next to {A}'s window while a stretched rope on the ground marks the required distance."
+      },
+      "bildSzene": "measuring rope between hut and blocks",
+      "bildSzeneAlt": "tall wall beside window, rope on ground",
+      "quellen": [
+        "§ 34 Abs. 1 BauGB",
+        "§ 15 Abs. 1 BauNVO",
+        "§ 35 Abs. 3 BauGB",
+        "Themenpool: verwbt-112"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.563Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-141",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Auf Antrag stellt die Behörde per Bescheid fest: Das Gewerbe des A ist erlaubnisfrei. Verwaltungsakt?",
+      "optionen": [
+        "Ja – ein feststellender VA, die Feststellung ist die Regelung",
+        "Nein – nur eine Auskunft über die Rechtslage",
+        "Nein – ohne Gebot oder Verbot keine Regelung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 35 VwVfG",
+        "Themenpool: verwalt-141"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.563Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-141",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – verbindlich festgestellt ist auch geregelt",
+      "text": "Regelung heißt: eine verbindliche Rechtsfolge setzen. Das kann ein Gebot oder Verbot sein, aber auch die verbindliche Feststellung eines Rechts oder einer Eigenschaft (feststellender VA). Abgrenzung zur bloßen Auskunft: Auslegung aus Sicht des Empfängers – will die Behörde sich binden? Ein Bescheid auf Antrag spricht dafür.",
+      "norm": "§ 35 S. 1 VwVfG",
+      "quellen": [
+        "§ 35 VwVfG",
+        "Themenpool: verwalt-141"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.563Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – ein feststellender VA, die Feststellung ist die Regelung",
+        "Nein – nur eine Auskunft über die Rechtslage",
+        "Nein – ohne Gebot oder Verbot keine Regelung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-086",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 80 Abs. 1 S. 2 GG: Keine Verordnung ohne Gesetz mit Inhalt, Zweck und Ausmaß",
+      "text": "Die Exekutive darf Rechtsverordnungen nur aufgrund eines Gesetzes erlassen, das Inhalt, Zweck und Ausmaß der Ermächtigung bestimmt. So bleibt das Wesentliche beim Parlament – der Vorbehalt des Gesetzes aus Art. 20 Abs. 3 GG wird konkret. Und die Verordnung muss sich im Rahmen der Ermächtigung halten (Vorrang des Gesetzes).",
+      "norm": "Art. 80 Abs. 1 GG · Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 80 Abs. 1 GG",
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-086"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.563Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "streit-35",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Erst getrunken, dann zugeschlagen: Wie begründet man die actio libera in causa?",
+      "norm": "§ 20 StGB",
+      "optionen": [
+        "Ausnahmemodell: Die Schuld wird auf das Sich-Berauschen vorverlagert.",
+        "Tatbestandsmodell: Schon das Sich-Berauschen ist die tatbestandliche Handlung."
+      ],
+      "text": "Kritik am Ausnahmemodell: § 20 verlangt Schuld „bei Begehung der Tat“ (Art. 103 Abs. 2 GG). Das Tatbestandsmodell passt nicht zu eigenhändigen Delikten. Der BGH lehnt die alic bei §§ 315c, 316 StGB ab. Auffangnorm: § 323a StGB.",
+      "quellen": [
+        "§ 20 StGB",
+        "§ 323a StGB",
+        "§§ 315c, 316 StGB",
+        "Art. 103 Abs. 2 GG"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.563Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-148",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Empfangsvertreter oder Empfangsbote: Wann ist die Erklärung angekommen?",
+      "text": "Beim Empfangsvertreter wirkt der Zugang sofort für den Vertretenen (§ 164 Abs. 3 BGB). Beim Empfangsboten erst, wenn die Weitergabe gewöhnlich zu erwarten ist.",
+      "norm": "§ 164 Abs. 3 BGB",
+      "quellen": [
+        "§ 164 Abs. 3 BGB",
+        "Themenpool: bgbat-148"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.563Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-880",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Öffentlichkeit: Jedermann darf rein – nicht nur, wer zufällig im Saal sitzt",
+      "text": "Öffentlich ist eine Verhandlung, wenn beliebige Zuhörer ohne Ansehen der Person im Rahmen der tatsächlichen Gegebenheiten Zutritt haben (§ 169 GVG) – auch bei Ortsterminen, wo erkennbar sein muss, wo verhandelt wird. Funktion: Kontrolle der Justiz. Eine unzulässige Beschränkung ist absoluter Revisionsgrund (§ 338 Nr. 6 StPO); eine zu Unrecht öffentliche Verhandlung nicht.",
+      "norm": "§ 169 GVG · § 338 Nr. 6 StPO",
+      "quellen": [
+        "§ 169 GVG",
+        "§ 338 Nr. 6 StPO",
+        "Themenpool: revision-880"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:56.563Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

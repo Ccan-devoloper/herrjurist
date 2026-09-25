@@ -1,0 +1,875 @@
+{
+  "datum": "2027-07-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "schuld-017",
+        "themaTitel": "Wie prüft man einen Anspruch aus culpa in contrahendo?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "revision-786",
+        "themaTitel": "Revisionsgründe: absolute",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "europa-412",
+        "themaTitel": "Was ist der Anwendungsvorrang des Unionsrechts?",
+        "fach": "europa",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:07",
+        "art": "frage",
+        "themaId": "strafat-063"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:07",
+        "art": "antwort",
+        "themaId": "strafat-063"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "europa-416"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "streitstand",
+        "themaId": "strafat-923"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "merksatz",
+        "themaId": "schuldbt-465"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "begriff",
+        "themaId": "strafat-061"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "schuld-017",
+      "poolTitel": "Wie prüft man einen Anspruch aus culpa in contrahendo?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 311 Abs. 2 BGB",
+        "§ 241 Abs. 2 BGB",
+        "§ 280 Abs. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "revision-786",
+      "poolTitel": "Revisionsgründe: absolute",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2026-12-08",
+        "2027-06-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "europa-412",
+      "poolTitel": "Was ist der Anwendungsvorrang des Unionsrechts?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 Abs. 3 EUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-03",
+        "2027-06-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-063",
+      "poolTitel": "Wann ist ein Rücktritt vom Versuch strafbefreiend?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-12",
+        "2027-02-12"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-063",
+      "poolTitel": "Wann ist ein Rücktritt vom Versuch strafbefreiend?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-12",
+        "2027-02-12"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "europa-416",
+      "poolTitel": "Was ist die richtlinienkonforme Auslegung und wo endet sie?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-05",
+        "2027-04-07",
+        "2027-06-25"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafat-923",
+      "poolTitel": "Außertatbestandliche Zielerreichung: Rücktritt trotz erteilten Denkzettels?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-13",
+        "2027-03-16",
+        "2027-05-19"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuldbt-465",
+      "poolTitel": "Unverhältnismäßigkeit der Nacherfüllung",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 IV BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-13",
+        "2027-05-03",
+        "2027-05-21"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-061",
+      "poolTitel": "Worin unterscheiden sich Einverständnis und Einwilligung?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 228 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2027-03-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-017",
+      "slug": "2027-07-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "c.i.c. in vier Schritten – vom ersten Kontakt zum Ersatz",
+          "titelZeilen": [
+            "c.i.c. in vier",
+            "Schritten – vom",
+            "Kontakt zum Ersatz"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Schuldverhältnis ohne Vertrag",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Anspruchsgrundlage",
+          "text": "Ansprüche aus Verschulden bei Vertragsverhandlungen prüfst du als Normenkette: §§ 280 Abs. 1, 311 Abs. 2, 241 Abs. 2 BGB. Einen Vertrag braucht es nicht – das Schuldverhältnis entsteht schon vorher. Vier Punkte trägst du ab."
+        },
+        {
+          "art": "text",
+          "titel": "1. Vorvertragliches Schuldverhältnis",
+          "punkte": [
+            "Aufnahme von Vertragsverhandlungen (§ 311 Abs. 2 Nr. 1 BGB)",
+            "Anbahnung eines Vertrags mit Einwirkungsmöglichkeit auf Rechtsgüter (Nr. 2)",
+            "Ähnliche geschäftliche Kontakte (Nr. 3)",
+            "Dritte, etwa bei besonderem Vertrauen (§ 311 Abs. 3 BGB)"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "2. Pflichtverletzung: Fallgruppen",
+          "punkte": [
+            "Schutzpflichten: der Kunde, der im Laden stürzt",
+            "Aufklärungspflichten über Umstände, die für den anderen erkennbar wesentlich sind",
+            "Grundloser Abbruch nach geschaffenem Vertrauen – bei formbedürftigen Verträgen nur eng",
+            "Vertrag mit ungewolltem Inhalt durch Pflichtverletzung"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "3. und 4. Vertretenmüssen, Schaden",
+          "punkte": [
+            "Vertretenmüssen wird vermutet (§ 280 Abs. 1 S. 2 BGB)",
+            "Gehilfen über § 278 BGB – ohne Entlastung wie bei § 831 BGB",
+            "Rechtsfolge: Schadensersatz nach §§ 249 ff. BGB, in der Regel das negative Interesse"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Konkurrenz zum Kaufrecht",
+          "text": "Betrifft die Aufklärung eine Beschaffenheit der Kaufsache, gehen nach Gefahrübergang die §§ 434 ff. BGB grundsätzlich vor. Ausnahme nach der Rspr.: Der Verkäufer handelt vorsätzlich oder arglistig – dann bleibt die c.i.c. daneben anwendbar."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schuldverhältnis, Pflichtverletzung, vermutetes Vertretenmüssen, Schaden – und beim Kauf an den Vorrang des Mängelrechts denken."
+        },
+        {
+          "art": "cta",
+          "titel": "c.i.c. auf einen Blick",
+          "punkte": [
+            "Kette: §§ 280 I, 311 II, 241 II BGB",
+            "Fallgruppe der Pflichtverletzung benennen",
+            "§ 278 BGB statt § 831 BGB",
+            "Kaufrecht: Vorrang prüfen"
+          ],
+          "icons": [
+            "kreislauf",
+            "lupe",
+            "personen",
+            "laden"
+          ]
+        }
+      ],
+      "caption": "Culpa in contrahendo in vier Schritten: vorvertragliches Schuldverhältnis nach § 311 Abs. 2 BGB, Pflichtverletzung nach § 241 Abs. 2 BGB, vermutetes Vertretenmüssen und Schaden. Gehilfen werden über § 278 BGB zugerechnet – ohne Entlastungsmöglichkeit. Und beim Kauf: Nach Gefahrübergang geht das Mängelrecht grundsätzlich vor. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#cic",
+        "#311bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "c.i.c.: das Schema auf einen Blick",
+      "coverText": "Schuldverhältnis ohne Vertrag",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Schon beim ersten geschäftlichen Kontakt entstehen Rücksichtspflichten – noch bevor ein Vertrag geschlossen ist.",
+        "handlung": "{A} curiously steps into a shop tent to look at goods, while {B} nervously wipes a slippery spot on the floor right in front of her.",
+        "hinweisRegie": "Place the note in the free space next to the slippery spot on the floor, slightly tilted toward it, so the duty of care before any purchase is visible without covering either character.",
+        "alternative": "{B} and {A} shake hands over an empty table on which no contract lies yet, while a small warning sign stands beside them."
+      },
+      "bildSzene": "shop tent, slippery floor wiped",
+      "bildSzeneAlt": "handshake over empty table",
+      "quellen": [
+        "§ 280 Abs. 1 BGB",
+        "§ 311 Abs. 2 BGB",
+        "§ 311 Abs. 3 BGB",
+        "§ 241 Abs. 2 BGB",
+        "§ 278 BGB",
+        "§ 831 BGB",
+        "§§ 434 ff. BGB",
+        "Themenpool: schuld-017"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-786",
+      "slug": "2027-07-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vorschriftswidrig besetzt – und die Rüge ist trotzdem weg",
+          "titelZeilen": [
+            "Vorschriftswidrig",
+            "besetzt – und die",
+            "Rüge ist weg"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Einwand vorab nach § 222b StPO",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Das Gesetz nennt Verfahrensfehler, bei denen das Beruhen des Urteils unwiderleglich vermutet wird. Absolut heißt aber nicht: immer erfolgreich. Der Vergleich mit den relativen Gründen zeigt, was bleibt – und wo das Gesetz die Rüge selbst begrenzt."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Absolut oder relativ?",
+          "links": {
+            "titel": "Absolut",
+            "punkte": [
+              "Abschließender Katalog",
+              "Beruhen wird unwiderleglich vermutet",
+              "Verfahrensrüge mit vollem Tatsachenvortrag"
+            ]
+          },
+          "rechts": {
+            "titel": "Relativ",
+            "punkte": [
+              "Jede Gesetzesverletzung",
+              "Beruhen ist zu prüfen",
+              "Bei Verfahrensfehlern ebenso Rüge nötig"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Nr. 1: Die Besetzungsrüge braucht Vorlauf",
+          "text": "Wo die Besetzung vorab mitzuteilen ist (§ 222a StPO), muss der Einwand rechtzeitig im Vorabverfahren nach § 222b StPO erhoben werden. Wer den Einwand nach § 222b StPO versäumt, kann die Revision auf die Besetzung grundsätzlich nicht mehr stützen."
+        },
+        {
+          "art": "text",
+          "titel": "Weitere Grenzen",
+          "punkte": [
+            "Öffentlichkeit (Nr. 6): nach der Rspr. nur, wenn der Verstoß dem Gericht zuzurechnen ist",
+            "Jede Verfahrensrüge muss die Tatsachen vollständig vortragen",
+            "Nr. 8: nur bei Beschränkung in einem für die Entscheidung wesentlichen Punkt"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Absolut ersetzt nur die Beruhensprüfung. Rügevoraussetzungen, Form und – bei der Besetzung – der rechtzeitige Einwand bleiben Pflicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Absolute Gründe prüfen",
+          "punkte": [
+            "Katalogfall der absoluten Gründe?",
+            "Besetzung: Einwand nach § 222b StPO?",
+            "Tatsachen vollständig vorgetragen?"
+          ],
+          "icons": [
+            "paragraf",
+            "uhr",
+            "klemmbrett"
+          ]
+        }
+      ],
+      "caption": "Vorschriftswidrig besetzt – und die Rüge ist trotzdem weg. Absolute Revisionsgründe ersparen nur die Beruhensprüfung. Muss die Besetzung mitgeteilt werden, ist der Einwand vorab nach § 222b StPO zu erheben; sonst ist die Besetzungsrüge grundsätzlich ausgeschlossen. Und jede Verfahrensrüge braucht vollständigen Tatsachenvortrag. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#338stpo",
+        "#strafprozess",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 338 StPO: absolut, aber nicht bedingungslos",
+      "coverText": "Einwand vorab nach § 222b StPO",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Auch ein absoluter Revisionsgrund hilft nur, wenn die Rüge rechtzeitig und vollständig erhoben wurde.",
+        "handlung": "{B} arrives at a gate with a strong key, while {A} hovers beside a sand timer that has already run out and keeps the gate latched.",
+        "hinweisRegie": "Place the note in the free space between the empty sand timer and the latched gate, slightly tilted toward the timer, so the missed deadline is the focus without covering {B}'s key or face.",
+        "alternative": "{A} holds a stamped form that is missing one page, while {B} points at the empty slot where it belongs."
+      },
+      "bildSzene": "strong key, empty sand timer",
+      "bildSzeneAlt": "form with missing page",
+      "quellen": [
+        "§ 222a StPO",
+        "§ 222b StPO",
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "§ 344 Abs. 2 StPO",
+        "Themenpool: revision-786"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.490Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "europa",
+      "klausur": 3,
+      "fachLabel": "Europarecht",
+      "themaId": "europa-412",
+      "slug": "2027-07-22-b3",
+      "titelZeilen": [
+        "Unionsrecht geht",
+        "vor – aber nicht",
+        "ohne Vorbehalt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Unionsrecht geht vor – aber nicht ohne Vorbehalt",
+          "unter": "Anwendungsvorrang · Art. 23 GG",
+          "text": "Der EuGH sagt: Vorrang auch vor der Verfassung. Das BVerfG sieht Grenzen.",
+          "norm": "Art. 23 Abs. 1 GG",
+          "icon": "globus",
+          "sprecher": "Der Vorrang des Unionsrechts ist nicht grenzenlos. So sieht es jedenfalls das Bundesverfassungsgericht. Vier Schritte, wie Luxemburg und Karlsruhe das Verhältnis bestimmen.",
+          "marken": [
+            "Vorrang mit Grenzen",
+            "EuGH und BVerfG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Sicht des EuGH",
+          "text": "Unionsrecht hat Vorrang vor jedem nationalen Recht, auch vor Verfassungsrecht.",
+          "norm": null,
+          "sprecher": "Schritt eins: die Sicht des EuGH. Seit Costa gegen ENEL gilt: Unionsrecht geht dem nationalen Recht vor, und zwar jedem, auch dem Verfassungsrecht. Kollidierendes nationales Recht bleibt unangewendet.",
+          "marken": [
+            "Costa/ENEL"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Sicht des BVerfG",
+          "text": "Grundlage des Vorrangs ist der Rechtsanwendungsbefehl im Zustimmungsgesetz.",
+          "norm": "Art. 23 Abs. 1 GG",
+          "sprecher": "Schritt zwei: Das Bundesverfassungsgericht stimmt im Ergebnis meist zu, begründet aber anders. Der Vorrang gilt, weil das deutsche Zustimmungsgesetz ihn anordnet. Und was das Grundgesetz nicht erlaubt, kann auch das Zustimmungsgesetz nicht übertragen.",
+          "marken": [
+            "Zustimmungsgesetz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Grundrechte: Solange",
+          "text": "Keine Kontrolle, solange die EU gleichwertigen Grundrechtsschutz generell sichert.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Grundrechte. Nach Solange zwei prüft Karlsruhe Unionsrecht nicht am Maßstab der deutschen Grundrechte, solange die Union einen im Wesentlichen gleichwertigen Schutz generell gewährleistet.",
+          "marken": [
+            "Solange II"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ultra vires und Identität",
+          "text": "Offensichtliche Kompetenzüberschreitungen und Eingriffe in Art. 79 Abs. 3 GG prüft Karlsruhe selbst.",
+          "norm": "Art. 79 Abs. 3 GG",
+          "sprecher": "Schritt vier: die Reservekontrollen. Überschreitet ein Unionsorgan seine Kompetenzen offensichtlich und strukturell bedeutsam, greift die Ultra-vires-Kontrolle. Und die Verfassungsidentität nach Artikel 79 Absatz 3 bleibt ohnehin unantastbar.",
+          "marken": [
+            "Reservekontrolle"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Kein Papiertiger",
+          "text": "Im PSPP-Urteil 2020 stellte das BVerfG erstmals einen Ultra-vires-Akt fest.",
+          "norm": null,
+          "sprecher": "Dass das kein Papiertiger ist, zeigt das PSPP-Urteil von 2020. Dort hat Karlsruhe erstmals ein Handeln der Unionsorgane als ultra vires eingeordnet.",
+          "marken": [
+            "PSPP 2020"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Vorrang ja – aber aus Karlsruher Sicht mit Grundrechts-, Ultra-vires- und Identitätsvorbehalt.",
+          "norm": null,
+          "sprecher": "Merke: Anwendungsvorrang ja. Aus Karlsruher Sicht aber mit drei Vorbehalten: Grundrechte, Ultra-vires und Verfassungsidentität.",
+          "marken": [
+            "drei Vorbehalte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Europarechtsklausur",
+          "text": "Speichern für die nächste Klausur mit Unionsrechtsbezug.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur mit Unionsrecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Unionsrecht geht vor – aber nicht ohne Vorbehalt. Für den EuGH gilt der Vorrang auch gegenüber nationalem Verfassungsrecht. Das BVerfG leitet ihn aus dem Zustimmungsgesetz ab und behält sich Grundrechts-, Ultra-vires- und Identitätskontrolle vor – im PSPP-Urteil 2020 erstmals mit Folgen. Speichern für die nächste Klausur mit Unionsrecht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#europarecht",
+        "#anwendungsvorrang",
+        "#bverfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anwendungsvorrang: Karlsruher Vorbehalte",
+      "coverText": "Solange, ultra vires, Identität",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Das Unionsrecht hat Vorrang, doch das BVerfG hält sich eng begrenzte Reservekontrollen offen.",
+        "handlung": "{B} lets a large crystal cart roll ahead on the main track, while {A} keeps one hand on a small emergency brake lever beside the rail.",
+        "hinweisRegie": "Place the note in the free space above the emergency brake lever, slightly tilted toward it, so the reserved control is visible while the cart still clearly has right of way; do not cover {A}'s pointer.",
+        "alternative": "{A} hands over a big key to a vault, but keeps a tiny second key on a chain around his neck."
+      },
+      "bildSzene": "cart rolls, hand on emergency brake",
+      "bildSzeneAlt": "big key given, small key kept",
+      "quellen": [
+        "Art. 23 Abs. 1 GG",
+        "Art. 79 Abs. 3 GG",
+        "Art. 4 Abs. 3 EUV",
+        "Themenpool: europa-412"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-063",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "A hat O vergiftet, bereut und ruft den Notarzt. O hat aber schon selbst Hilfe geholt. Rücktritt?",
+      "optionen": [
+        "Nein – A hat die Vollendung nicht selbst verhindert",
+        "Ja – freiwilliges und ernsthaftes Bemühen genügt",
+        "Nein – vom beendeten Versuch gibt es keinen Rücktritt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-063"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-063",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – wird die Tat ohne sein Zutun nicht vollendet, genügt ernsthaftes Bemühen",
+      "text": "A hält den Erfolg für möglich: beendeter Versuch. Normalerweise müsste er die Vollendung verhindern (§ 24 Abs. 1 S. 1 Alt. 2 StGB). Hier wird O aber ohne sein Zutun gerettet. Dann reicht es, dass A sich freiwillig und ernsthaft bemüht, die Vollendung zu verhindern (§ 24 Abs. 1 S. 2 StGB). Das Rufen des Notarztes genügt.",
+      "norm": "§ 24 Abs. 1 S. 2 StGB",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-063"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.492Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – A hat die Vollendung nicht selbst verhindert",
+        "Ja – freiwilliges und ernsthaftes Bemühen genügt",
+        "Nein – vom beendeten Versuch gibt es keinen Rücktritt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-416",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Auslegung am Ende? Dann bleibt die Staatshaftung",
+      "text": "Lässt sich nationales Recht nicht richtlinienkonform auslegen und wirkt die Richtlinie nicht zwischen Privaten, hilft dem Einzelnen der unionsrechtliche Staatshaftungsanspruch. Voraussetzungen nach dem EuGH: Die Norm soll ihm Rechte verleihen, der Verstoß ist hinreichend qualifiziert – bei fehlender Umsetzung in der Frist regelmäßig –, und er ist kausal für den Schaden.",
+      "norm": "Art. 4 Abs. 3 EUV",
+      "quellen": [
+        "Art. 4 Abs. 3 EUV",
+        "Art. 288 Abs. 3 AEUV",
+        "Themenpool: europa-416"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-923",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "A schlägt mit Tötungsvorsatz auf B ein, bis B sein Handy herausgibt, und lässt dann ab. Rücktritt?",
+      "norm": "§ 24 Abs. 1 StGB",
+      "optionen": [
+        "BGH: Ja – maßgeblich ist die Tat im Sinne des Tatbestands; wer weiterhandeln könnte und aufhört, tritt zurück.",
+        "Teile der Lit.: Nein – wer sein Ziel erreicht hat, gibt nichts mehr auf; das verdient keine Straffreiheit."
+      ],
+      "text": "Klausur: Fehlgeschlagen? Nein – A hält weitere Schläge für möglich. Mit dem BGH entfällt nur der versuchte Totschlag; Raub bzw. räuberische Erpressung und Körperverletzung bleiben.",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "§ 212 StGB",
+        "§ 22 StGB",
+        "Themenpool: strafat-923"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-465",
+      "ueberzeile": "Merksatz Kaufrecht",
+      "titel": "Nacherfüllung zu teuer? Drei Kriterien entscheiden",
+      "text": "Wert der mangelfreien Sache, Bedeutung des Mangels, zumutbares Ausweichen auf die andere Art (§ 439 Abs. 4 S. 2 BGB). Folge: Anspruch nur noch auf die andere Art. Verweigert der Verkäufer beide, ist keine Frist nötig (§ 440 S. 1 BGB).",
+      "norm": "§ 439 Abs. 4 BGB",
+      "quellen": [
+        "§ 439 Abs. 4 BGB",
+        "§ 440 S. 1 BGB",
+        "Themenpool: schuldbt-465"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-061",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Einverständnis: Der natürliche Wille schließt schon den Tatbestand aus",
+      "text": "Setzt ein Tatbestand ein Handeln gegen den Willen voraus – etwa die Wegnahme bei § 242 StGB –, fehlt er schon, wenn der Berechtigte einverstanden ist. Es zählt der tatsächliche Wille; Einsichtsfähigkeit wie bei der Einwilligung ist nicht nötig, und bei der Wegnahme sind Willensmängel grundsätzlich unbeachtlich. Funktion: Abgrenzung zur rechtfertigenden Einwilligung.",
+      "norm": "§ 242 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 228 StGB",
+        "Themenpool: strafat-061"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:31:08.492Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

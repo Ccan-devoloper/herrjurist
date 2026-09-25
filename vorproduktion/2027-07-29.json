@@ -1,0 +1,876 @@
+{
+  "datum": "2027-07-29",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "strafbt-316",
+        "themaTitel": "Was sind niedrige Beweggründe?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "staat-354",
+        "themaTitel": "Wann ist eine konkrete Normenkontrolle zulässig?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-562",
+        "themaTitel": "Materielle Rechtskraft",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "sachen-512"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "sachen-512"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "verwalt-394"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "streitstand",
+        "themaId": "streit-36"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "merksatz",
+        "themaId": "verwalt-391"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "begriff",
+        "themaId": "grundr-627"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "strafbt-316",
+      "poolTitel": "Was sind niedrige Beweggründe?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-05",
+        "2027-02-23",
+        "2027-06-08"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "staat-354",
+      "poolTitel": "Wann ist eine konkrete Normenkontrolle zulässig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2026-12-07",
+        "2026-12-30"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-562",
+      "poolTitel": "Materielle Rechtskraft",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 322 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-20"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-512",
+      "poolTitel": "Vormerkung: Entstehung und Wirkung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 883 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13",
+        "2027-05-26",
+        "2027-05-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-512",
+      "poolTitel": "Vormerkung: Entstehung und Wirkung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 883 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13",
+        "2027-05-26",
+        "2027-05-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-394",
+      "poolTitel": "Was ist ein enteignender Eingriff und wie grenzt er sich vom enteignungsgleichen ab?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-11"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-36",
+      "poolTitel": "Gutgläubiger Zweiterwerb des Anwartschaftsrechts",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 929, 932 BGB analog"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "verwalt-391",
+      "poolTitel": "Was ist der Folgenbeseitigungsanspruch?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-01-27",
+        "2027-05-16"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "grundr-627",
+      "poolTitel": "Petitionsrecht",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 17 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-24",
+        "2027-04-24",
+        "2027-06-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-316",
+      "slug": "2027-07-29-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ein niedriges Motiv unter mehreren reicht nicht",
+          "titelZeilen": [
+            "Ein niedriges",
+            "Motiv unter",
+            "mehreren reicht",
+            "nicht"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Das Hauptmotiv entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Definition",
+          "text": "Niedrige Beweggründe (§ 211 Abs. 2 Gr. 1 StGB) sind Motive, die nach allgemeiner sittlicher Wertung auf tiefster Stufe stehen und deshalb besonders verachtenswert sind. Die Bewertung erfolgt in einer Gesamtwürdigung von Tat, Vorgeschichte, Lebensverhältnissen und Persönlichkeit des Täters."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Fallgruppen",
+          "links": {
+            "titel": "Regelmäßig niedrig",
+            "punkte": [
+              "Rassenhass, Menschenverachtung wegen Herkunft",
+              "Tötung aus nichtigem Anlass",
+              "Opfer als Besitz: „Wenn nicht mir, dann keinem“"
+            ]
+          },
+          "rechts": {
+            "titel": "Nur im Einzelfall",
+            "punkte": [
+              "Wut, Eifersucht, Hass, Rache",
+              "Niedrig nur, wenn selbst niedrig begründet",
+              "Nicht bei nachvollziehbarem Anlass"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Das Motivbündel",
+          "text": "Handelt der Täter aus mehreren Motiven, genügt ein niedriges Motiv nicht automatisch. Nach der Rspr. muss das Hauptmotiv – das bewusstseinsdominante – niedrig sein, oder die Tat muss insgesamt nach der Motivlage als besonders verachtenswert erscheinen."
+        },
+        {
+          "art": "text",
+          "titel": "Die subjektive Seite",
+          "text": "Der Täter muss die Umstände kennen, die sein Motiv niedrig machen, und seine Regungen gedanklich beherrschen und steuern können. Daran kann es bei affektiven, spontanen Taten fehlen – dann scheidet das Mordmerkmal aus."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gesamtwürdigung, Hauptmotiv, Steuerbarkeit: Erst wenn alle drei tragen, ist das Motiv niedrig im Sinne des § 211 StGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zum Motiv",
+          "punkte": [
+            "Welches Motiv dominiert?",
+            "Nach Gesamtwürdigung verachtenswert?",
+            "Kannte und steuerte der Täter es?"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Ein niedriges Motiv unter mehreren reicht nicht. Bei einem Motivbündel kommt es nach der Rspr. auf das Hauptmotiv an – oder darauf, ob die Tat insgesamt besonders verachtenswert erscheint. Dazu: Fallgruppen, die Gesamtwürdigung und die subjektive Seite mit Kenntnis und Steuerbarkeit. Speichern für die nächste Mordklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#211stgb",
+        "#mord",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Motivbündel bei § 211: Hauptmotiv entscheidet",
+      "coverText": "Das Hauptmotiv entscheidet",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Aus mehreren Beweggründen zählt der, der die Tat beherrscht hat.",
+        "handlung": "{B} points his staff at the largest of several tangled ropes pulling a heavy weight, while {A} firmly holds that one rope and lets the thinner ones hang loose.",
+        "hinweisRegie": "Place the note in the free space beside the largest rope, slightly tilted toward the heavy weight, so the dominant pulling force is highlighted without covering {A}'s grip.",
+        "alternative": "{A} sorts several glowing orbs by size while {B} lifts the biggest one onto a scale."
+      },
+      "bildSzene": "largest rope among many pulls weight",
+      "bildSzeneAlt": "biggest glowing orb lifted onto scale",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-316"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "motivbuendel-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.780Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-354",
+      "slug": "2027-07-29-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Regierung zweifelt, Richter ist überzeugt: Wer geht nach Karlsruhe?",
+          "titelZeilen": [
+            "Regierung zweifelt,",
+            "Richter überzeugt:",
+            "Wer geht nach",
+            "Karlsruhe?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Zweifel gegen Überzeugung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausgangslage",
+          "text": "Ein Landesgesetz ist umstritten. Die Bundesregierung hält es für verfassungswidrig. Ein Amtsrichter, der es im Prozess anwenden müsste, ist überzeugt, dass es gegen das GG verstößt. Beide wollen das BVerfG anrufen – aber auf ganz unterschiedlichen Wegen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Abstrakt oder konkret?",
+          "links": {
+            "titel": "Abstrakte NK",
+            "punkte": [
+              "Art. 93 Abs. 1 Nr. 2 GG",
+              "Bundes-, Landesregierung, ein Viertel des Bundestages",
+              "Ohne konkreten Rechtsstreit",
+              "Jede Norm des Bundes- oder Landesrechts"
+            ]
+          },
+          "rechts": {
+            "titel": "Konkrete NK",
+            "punkte": [
+              "Art. 100 Abs. 1 GG",
+              "Jedes Gericht",
+              "Nur wenn die Norm entscheidungs-erheblich ist",
+              "Nur formelle, nachkonstitutionelle Gesetze"
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Der Maßstab für den Zweifel",
+          "links": {
+            "titel": "Abstrakte NK",
+            "punkte": [
+              "GG: „Meinungs-verschiedenheiten oder Zweifel“",
+              "§ 76 BVerfGG: Antragsteller hält die Norm für nichtig",
+              "Verhältnis beider ist umstritten"
+            ]
+          },
+          "rechts": {
+            "titel": "Konkrete NK",
+            "punkte": [
+              "Gericht muss überzeugt sein",
+              "Bloße Zweifel reichen nicht",
+              "Sonst: selbst anwenden"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Die Bundesregierung stellt einen Antrag auf abstrakte Normenkontrolle. Der Amtsrichter setzt das Verfahren aus und legt das Gesetz dem BVerfG vor (Art. 100 Abs. 1 GG) – er darf es nicht selbst verwerfen, weil es ein formelles, nachkonstitutionelles Gesetz ist."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Abstrakt: politische Organe, ohne Streitfall. Konkret: Gericht, entscheidungserheblich, überzeugt – und nur für Parlamentsgesetze."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zur Normenkontrolle",
+          "punkte": [
+            "Wer ist Antragsteller oder Vorlegender?",
+            "Welche Norm ist Gegenstand?",
+            "Zweifel oder Überzeugung?"
+          ],
+          "icons": [
+            "person",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Die Regierung zweifelt, der Richter ist überzeugt – wer geht nach Karlsruhe? Beide, aber auf verschiedenen Wegen. Die abstrakte Normenkontrolle steht nur politischen Organen offen und braucht keinen Rechtsstreit. Die konkrete verlangt ein Gericht, Entscheidungserheblichkeit und die Überzeugung von der Verfassungswidrigkeit – und erfasst nur formelle, nachkonstitutionelle Gesetze. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bverfg",
+        "#normenkontrolle",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Normenkontrolle: abstrakt oder konkret?",
+      "coverText": "Zweifel gegen Überzeugung",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Zwei Wege führen zum Verfassungsgericht – der eine für politische Organe, der andere für Gerichte mitten im Prozess.",
+        "handlung": "{A} points his staff at a fork in a path with two different doors at the end, while {B} curiously compares two different entry tokens in her hands.",
+        "hinweisRegie": "Place the note in the free space at the fork of the path, slightly tilted toward the two doors, so the choice between the routes is visible without covering {B}'s tokens.",
+        "alternative": "{B} holds a glowing question mark while {A} holds a solid stone block, both walking toward the same tall building."
+      },
+      "bildSzene": "fork in path, two different doors",
+      "bildSzeneAlt": "question mark versus solid stone block",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 2 GG",
+        "Art. 100 Abs. 1 GG",
+        "§ 76 BVerfGG",
+        "Themenpool: staat-354"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "gegenueberstellung-frage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.780Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-562",
+      "slug": "2027-07-29-b3",
+      "titelZeilen": [
+        "Urteil rechtskräftig:",
+        "drei Sperren für",
+        "den Folgeprozess"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Urteil rechtskräftig: drei Sperren für den Folgeprozess",
+          "unter": "Zivilprozessrecht · § 322 ZPO",
+          "text": "Identität, Präjudizialität, kontradiktorisches Gegenteil.",
+          "norm": "§ 322 Abs. 1 ZPO",
+          "icon": "gericht",
+          "sprecher": "Rechtskraft sperrt nicht nur dieselbe Klage. Die materielle Rechtskraft nach Paragraf 322 ZPO wirkt auf drei Arten.",
+          "marken": [
+            "drei Wirkungen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Was rechtskräftig wird",
+          "text": "Die Entscheidung über den Streitgegenstand – nicht die Gründe, nicht die Vorfragen.",
+          "norm": "§ 322 Abs. 1 ZPO",
+          "sprecher": "Vorweg: Rechtskräftig wird nur die Entscheidung über den erhobenen Anspruch, also über den Streitgegenstand aus Antrag und Lebenssachverhalt. Gründe und Vorfragen werden es nicht. Wer das will, erhebt eine Zwischenfeststellungsklage nach Paragraf 256 Absatz 2.",
+          "marken": [
+            "nur der Tenor"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Identität",
+          "text": "Gleicher Streitgegenstand: neue Klage unzulässig.",
+          "norm": null,
+          "sprecher": "Wirkung eins: Identität. Klagt jemand denselben Streitgegenstand noch einmal ein, ist die neue Klage nach herrschender Meinung unzulässig. Ne bis in idem.",
+          "marken": [
+            "ne bis in idem"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Präjudizialität",
+          "text": "Die rechtskräftige Entscheidung ist Vorfrage im zweiten Prozess: Bindung.",
+          "norm": null,
+          "sprecher": "Wirkung zwei: Präjudizialität. Ist das rechtskräftig Entschiedene nur Vorfrage im neuen Prozess, bleibt die Klage zulässig. Das zweite Gericht muss die Entscheidung aber zugrunde legen.",
+          "marken": [
+            "Bindung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kontradiktorisches Gegenteil",
+          "text": "Wer das Gegenteil des Entschiedenen begehrt, scheitert an der Rechtskraft.",
+          "norm": null,
+          "sprecher": "Wirkung drei: das kontradiktorische Gegenteil. Ist rechtskräftig festgestellt, dass K Eigentümer ist, kann B nicht mit Erfolg feststellen lassen, dass er es ist.",
+          "marken": [
+            "Gegenteil"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Grenzen",
+          "text": "Zeitlich: Schluss der mündlichen Verhandlung. Persönlich: Parteien und Rechtsnachfolger.",
+          "norm": "§ 325 ZPO",
+          "sprecher": "Und die Grenzen: Zeitlich gilt die Rechtskraft für den Stand am Schluss der letzten mündlichen Verhandlung. Persönlich wirkt sie grundsätzlich nur zwischen den Parteien und ihren Rechtsnachfolgern, Paragraf 325.",
+          "marken": [
+            "§ 325"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Gleich: unzulässig. Vorfrage: Bindung. Gegenteil: ausgeschlossen.",
+          "norm": null,
+          "sprecher": "Merke: Gleicher Streitgegenstand ist unzulässig, als Vorfrage bindet die Entscheidung, das Gegenteil ist ausgeschlossen.",
+          "marken": [
+            "drei Wirkungen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die ZPO-Klausur",
+          "text": "Speichern und im Zweitprozess durchgehen.",
+          "sprecher": "Speicher dir das für den nächsten Zweitprozess in der Klausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Urteil rechtskräftig: drei Sperren für den Folgeprozess. Identität: Derselbe Streitgegenstand noch einmal ist unzulässig. Präjudizialität: Ist das Entschiedene Vorfrage, bindet es das zweite Gericht. Kontradiktorisches Gegenteil: Das Gegenteil kann nicht mehr mit Erfolg verlangt werden. Rechtskräftig wird aber nur der Tenor, nicht die Begründung. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#rechtskraft",
+        "#322zpo",
+        "#zivilprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 322 ZPO: drei Sperren im Folgeprozess",
+      "coverText": "Gleich, Vorfrage, Gegenteil",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Ein rechtskräftiges Urteil blockiert die Wiederholung, bindet als Vorfrage und schließt das Gegenteil aus.",
+        "handlung": "{B} places a heavy sealed stone on a pedestal, while {A} nervously tries three different paths around it and finds each one blocked in a different way.",
+        "hinweisRegie": "Place the note in the free space above the sealed stone, slightly tilted toward the three blocked paths, so the three effects radiate from one decision without covering {A}.",
+        "alternative": "{A} tries to rewind a clock that {B} has locked with a seal, while two smaller clocks nearby are chained to it."
+      },
+      "bildSzene": "sealed stone blocks three paths",
+      "bildSzeneAlt": "sealed clock chained to smaller clocks",
+      "quellen": [
+        "§ 322 Abs. 1 ZPO",
+        "§ 256 Abs. 2 ZPO",
+        "§ 325 ZPO",
+        "Themenpool: zpo-562"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-wirkungen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.781Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-512",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Im Grundbuch steht fälschlich E als Eigentümer. E bewilligt dem gutgläubigen K eine Vormerkung. Erwirbt K sie?",
+      "optionen": [
+        "Nein – nur der wahre Eigentümer kann eine Vormerkung bewilligen",
+        "Ja – gutgläubiger Ersterwerb entsprechend §§ 892, 893 BGB",
+        "Ja – aber nur, wenn K auch bei der Umschreibung noch gutgläubig ist"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 883 BGB",
+        "§§ 892, 893 BGB",
+        "Themenpool: sachen-512"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-512",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – die Vormerkung kann gutgläubig vom Buchberechtigten erworben werden",
+      "text": "Nach h.M. gilt der öffentliche Glaube des Grundbuchs auch für den Ersterwerb der Vormerkung (entsprechend §§ 892, 893 BGB). Vorausgesetzt ist ein bestehender Anspruch – der Kaufvertrag mit E ist wirksam, auch wenn E nicht Eigentümer ist. Späteres Wissen schadet K nicht: Maßgeblich ist der gute Glaube beim Erwerb der Vormerkung.",
+      "norm": "§ 883 BGB · §§ 892, 893 BGB",
+      "quellen": [
+        "§ 883 BGB",
+        "§§ 892, 893 BGB",
+        "Themenpool: sachen-512"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.782Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – nur der wahre Eigentümer kann eine Vormerkung bewilligen",
+        "Ja – gutgläubiger Ersterwerb entsprechend §§ 892, 893 BGB",
+        "Ja – aber nur, wenn K auch bei der Umschreibung noch gutgläubig ist"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-394",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Enteignender Eingriff: Die Grundlage ist der Aufopferungsgedanke, nicht Art. 14 Abs. 3 GG",
+      "text": "Art. 14 Abs. 3 GG erfasst nur die Enteignung im engen Sinn – mit Junktimklausel. Den enteignenden Eingriff leitet die Rspr. gewohnheitsrechtlich aus dem Aufopferungsgedanken der §§ 74, 75 Einl. ALR her: rechtmäßiges hoheitliches Handeln mit atypischen, unvorhergesehenen Nebenfolgen, die dem Eigentümer ein Sonderopfer auferlegen – etwa eine lange Straßenbaustelle vor dem Laden.",
+      "norm": "Art. 14 GG · §§ 74, 75 Einl. ALR",
+      "quellen": [
+        "Art. 14 GG",
+        "§§ 74, 75 Einl. ALR",
+        "Themenpool: verwalt-394"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "streit-36",
+      "ueberzeile": "Streitstand Sachenrecht",
+      "titel": "D verkauft K ein angebliches Anwartschaftsrecht an einer nur gemieteten Maschine. Gutgläubiger Erwerb?",
+      "norm": "§§ 929, 932 BGB analog",
+      "optionen": [
+        "H.M.: Nein – ein Anwartschaftsrecht, das nicht besteht, kann nicht erworben werden.",
+        "A.A.: Ja – der Besitz des D trägt den Rechtsschein, §§ 929, 932 BGB analog."
+      ],
+      "text": "Klausur: Unterscheide. Besteht das Anwartschaftsrecht, steht aber einem anderen zu, wird ein gutgläubiger Zweiterwerb überwiegend bejaht. Besteht es gar nicht, lehnt die h.M. ab: Der Besitz beweist keinen Kaufvertrag unter Eigentumsvorbehalt.",
+      "quellen": [
+        "§§ 929, 932 BGB",
+        "§ 158 Abs. 1 BGB",
+        "§ 449 BGB"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-391",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Folgenbeseitigung endet, wo die Wiederherstellung unmöglich oder unzumutbar ist",
+      "text": "Der FBA geht auf Wiederherstellung des früheren Zustands – nicht, wenn sie unmöglich oder unzumutbar ist. Mitverschulden zählt entsprechend § 254 BGB.",
+      "norm": "Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "§ 254 BGB",
+        "Themenpool: verwalt-391"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-627",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Petition: Anspruch auf Prüfung und Bescheid – nicht auf Erfolg",
+      "text": "Petitionen sind schriftliche Bitten oder Beschwerden an zuständige Stellen und die Volksvertretung (Art. 17 GG). Der Staat muss sie entgegennehmen, sachlich prüfen und mitteilen, wie er sie erledigt hat. Im Bundestag ist der Petitionsausschuss zuständig (Art. 45c GG). Für Soldaten kann das Recht auf Sammelpetitionen eingeschränkt werden (Art. 17a Abs. 1 GG).",
+      "norm": "Art. 17 GG · Art. 45c GG",
+      "quellen": [
+        "Art. 17 GG",
+        "Art. 17a GG",
+        "Art. 45c GG",
+        "Themenpool: grundr-627"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:15.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

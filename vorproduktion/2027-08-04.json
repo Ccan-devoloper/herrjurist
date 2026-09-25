@@ -1,0 +1,870 @@
+{
+  "datum": "2027-08-04",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-327",
+        "themaTitel": "Was ist ein gefährliches Werkzeug im Sinne des § 244 StGB?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-620",
+        "themaTitel": "Brief-, Post- und Fernmeldegeheimnis",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessorz-585",
+        "themaTitel": "Mahnverfahren und Vollstreckungsbescheid",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "schuldbt-468"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "schuldbt-468"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:02",
+        "art": "norm",
+        "themaId": "strafat-722"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "streitstand",
+        "themaId": "bgbat-003"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "merksatz",
+        "themaId": "handelsg-270"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "begriff",
+        "themaId": "bgbat-423"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-327",
+      "poolTitel": "Was ist ein gefährliches Werkzeug im Sinne des § 244 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 1 Nr. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-07",
+        "2027-01-11",
+        "2027-03-26"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-620",
+      "poolTitel": "Brief-, Post- und Fernmeldegeheimnis",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 10 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-585",
+      "poolTitel": "Mahnverfahren und Vollstreckungsbescheid",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 688 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-11",
+        "2027-03-11",
+        "2027-06-02"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-468",
+      "poolTitel": "Schadensersatz wegen Sachmangels",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 3, 280 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-20",
+        "2027-04-22"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-468",
+      "poolTitel": "Schadensersatz wegen Sachmangels",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 3, 280 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-20",
+        "2027-04-22"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-722",
+      "poolTitel": "Verbotsirrtum",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 17 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-18",
+        "2027-04-27",
+        "2027-05-07"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "bgbat-003",
+      "poolTitel": "Inwieweit werden sich widersprechende AGB Vertragsbestandteil?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 154 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-05",
+        "2027-06-05",
+        "2027-08-02"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "handelsg-270",
+      "poolTitel": "Wie entsteht die GmbH und was ist die Vor-GmbH?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 11 GmbHG",
+        "§ 13 GmbHG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-24",
+        "2027-02-16",
+        "2027-04-27"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "bgbat-423",
+      "poolTitel": "Geschäftsunfähigkeit und Nichtigkeit",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 104, 105 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2027-02-22",
+        "2027-02-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-327",
+      "slug": "2027-08-04-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erst am Tatort gegriffen – und trotzdem „bei sich geführt“",
+          "titelZeilen": [
+            "Erst am Tatort",
+            "gegriffen – und",
+            "trotzdem „bei sich",
+            "geführt“"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Mitbringen ist nicht nötig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A steigt ohne Werkzeug in ein Gartenhaus ein. Dort findet er ein Beil, steckt es in seinen Rucksack – „man weiß ja nie“ – und packt danach Werkzeug im Wert von 800 € ein. Eingesetzt wird das Beil nicht. Diebstahl mit Waffen nach § 244 Abs. 1 Nr. 1 lit. a StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Gefährliches Werkzeug",
+              "text": "Nach der Rspr. objektiv zu bestimmen: Ein Beil kann schon seiner Beschaffenheit nach erhebliche Verletzungen verursachen."
+            },
+            {
+              "titel": "2. Beisichführen",
+              "text": "Der Gegenstand muss dem Täter während der Tat griffbereit zur Verfügung stehen. Ein Einsatz ist nicht nötig."
+            },
+            {
+              "titel": "3. Zeitpunkt",
+              "text": "Es genügt, wenn A das Werkzeug erst am Tatort an sich nimmt – er muss es nicht mitgebracht haben."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "A führt das Beil bei sich, als er die Beute wegnimmt. § 244 Abs. 1 Nr. 1 lit. a StGB ist erfüllt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkweg, der nicht trägt",
+          "text": "„A hat das Beil nicht mitgebracht, also hat er es nicht bei sich geführt.“ Das Gesetz fragt nur, ob der Täter das Werkzeug bei der Tat griffbereit hat. Wie lange das Beisichführen noch nach der Vollendung reicht, ist umstritten – hier kommt es darauf nicht an."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beisichführen heißt griffbereit während der Tat – egal, ob der Täter das Werkzeug mitbringt oder erst am Tatort ergreift."
+        },
+        {
+          "art": "cta",
+          "titel": "Beisichführen in drei Fragen",
+          "punkte": [
+            "Objektiv gefährliches Werkzeug?",
+            "Griffbereit während der Tat?",
+            "Wann ergriffen – vor der Wegnahme?"
+          ],
+          "icons": [
+            "werkzeug",
+            "uhr",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Erst am Tatort gegriffen – und trotzdem bei sich geführt. Für § 244 Abs. 1 Nr. 1 lit. a StGB muss der Täter das gefährliche Werkzeug nicht mitbringen. Es genügt, dass er es während der Tat griffbereit hat, auch wenn er es erst vor Ort an sich nimmt. Einsetzen muss er es nicht. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#244stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 244 StGB: am Tatort gegriffen genügt",
+      "coverText": "Mitbringen ist nicht nötig",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Ein gefährlicher Gegenstand wird auch dann mitgeführt, wenn man ihn erst vor Ort aufhebt.",
+        "handlung": "{A} picks up a small hatchet from a workbench inside a shed and slips it into {B}'s backpack, while {B} is busy packing tools.",
+        "hinweisRegie": "Place the note in the free space right beside the backpack where the hatchet handle sticks out, slightly tilted toward it, without covering {A}'s hand or {B}'s face.",
+        "alternative": "{B} lifts a heavy tool from a wall hook inside a shed and hangs it on her own belt while {A} watches."
+      },
+      "bildSzene": "hatchet slipped into backpack",
+      "bildSzeneAlt": "tool from wall hook to belt",
+      "quellen": [
+        "§ 244 Abs. 1 Nr. 1 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-327"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.109Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-620",
+      "slug": "2027-08-04-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ein Postbote öffnet fremde Briefe – ist Art. 10 GG verletzt?",
+          "titelZeilen": [
+            "Ein Postbote",
+            "öffnet fremde",
+            "Briefe – ist",
+            "Art. 10 GG verletzt?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Erst fragen: Wer ist gebunden?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "B arbeitet als Zusteller bei einem privaten Postunternehmen. Aus Neugier öffnet er die Briefe seiner Nachbarin N und liest sie. N meint, ihr Grundrecht aus Art. 10 Abs. 1 GG sei verletzt. Hat sie recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich",
+              "text": "Das Briefgeheimnis schützt schriftliche Mitteilungen vor Kenntnisnahme, das Postgeheimnis den Postverkehr während der Beförderung."
+            },
+            {
+              "titel": "2. Wer ist gebunden?",
+              "text": "Grundrechte binden Gesetzgebung, vollziehende Gewalt und Rechtsprechung (Art. 1 Abs. 3 GG) – nicht private Unternehmen und ihre Mitarbeiter."
+            },
+            {
+              "titel": "3. Ergebnis",
+              "text": "B handelt als Privater für ein privates Unternehmen. Einen Eingriff in Art. 10 Abs. 1 GG gibt es nicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Was trotzdem schützt",
+          "text": "Aus Art. 10 GG folgt ein Schutzauftrag: Der Staat muss das Postgeheimnis auch gegenüber Privaten sichern. Das hat er einfachgesetzlich getan, etwa im Postgesetz und strafrechtlich (§ 202 StGB, für Postmitarbeiter § 206 StGB). Anders läge es bei einem staatlich beherrschten Unternehmen."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkweg, der nicht trägt",
+          "text": "„Postgeheimnis verletzt, also Art. 10 GG verletzt“ überspringt Art. 1 Abs. 3 GG. Prüfe immer zuerst, ob der Handelnde überhaupt grundrechtsgebunden ist – vor allem seit der Privatisierung der Post."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 10 GG richtet sich gegen den Staat. Gegen private Postdienste schützen einfaches Recht und Strafrecht – auf Grundlage des Schutzauftrags."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 10 GG in drei Fragen",
+          "punkte": [
+            "Brief-, Post- oder Fernmeldegeheimnis?",
+            "Handelt ein Grundrechtsverpflichteter?",
+            "Sonst: Schutzpflicht und einfaches Recht"
+          ],
+          "icons": [
+            "umschlag",
+            "gebaeude",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Ein Postbote öffnet fremde Briefe – ist Art. 10 GG verletzt? Nicht, wenn er für ein privates Unternehmen arbeitet: Grundrechte binden nach Art. 1 Abs. 3 GG den Staat, nicht Private. Geschützt ist das Postgeheimnis trotzdem – über den Schutzauftrag, das Postgesetz und die §§ 202, 206 StGB. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#grundrechte",
+        "#art10gg",
+        "#postgeheimnis",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 10 GG gegen private Postdienste?",
+      "coverText": "Erst fragen: Wer ist gebunden?",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Nicht jeder, der ein Geheimnis verletzt, ist an Grundrechte gebunden.",
+        "handlung": "{A} peeks into an opened envelope, while {B} hovers nearby and holds up a small shield toward the envelope rather than toward {A}.",
+        "hinweisRegie": "Place the note in the free space between the opened envelope and {B}'s small shield, slightly tilted toward the envelope, without covering {A}'s face.",
+        "alternative": "{B} seals a stack of envelopes with a stamp while {A} tries to lift one corner."
+      },
+      "bildSzene": "peeking into an opened envelope",
+      "bildSzeneAlt": "sealing a stack of envelopes",
+      "quellen": [
+        "Art. 10 Abs. 1 GG",
+        "Art. 1 Abs. 3 GG",
+        "§ 202 StGB",
+        "§ 206 StGB",
+        "Postgesetz",
+        "Themenpool: grundr-620"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.110Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-585",
+      "slug": "2027-08-04-b3",
+      "titelZeilen": [
+        "Vollstreckungs-",
+        "bescheid: Hier hilft",
+        "nur der Einspruch"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vollstreckungsbescheid: Hier hilft nur der Einspruch",
+          "unter": "Mahnverfahren · §§ 688 ff. ZPO",
+          "text": "Gegen den Mahnbescheid: Widerspruch. Gegen den Vollstreckungsbescheid: Einspruch.",
+          "norm": "§ 694 ZPO · § 700 ZPO",
+          "icon": "dokument",
+          "sprecher": "Widerspruch gegen den Vollstreckungsbescheid? Gibt es nicht. Im Mahnverfahren hat jede Stufe ihren eigenen Rechtsbehelf. Wer sie vertauscht, verschenkt Zeit oder die Frist.",
+          "marken": [
+            "Widerspruch?",
+            "Einspruch!"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Mahnbescheid",
+          "text": "Widerspruch: zwei Wochen, danach bis zur Verfügung des VB.",
+          "norm": "§ 692 ZPO · § 694 Abs. 1 ZPO",
+          "sprecher": "Stufe eins: der Mahnbescheid. Dagegen legt der Schuldner Widerspruch ein. Die Frist beträgt zwei Wochen, aber der Widerspruch ist auch danach noch möglich, solange der Vollstreckungsbescheid nicht verfügt ist.",
+          "marken": [
+            "Widerspruch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Nach dem Widerspruch",
+          "text": "Auf Antrag: Abgabe an das Streitgericht.",
+          "norm": "§ 696 ZPO",
+          "sprecher": "Stufe zwei: Nach dem Widerspruch gibt das Mahngericht die Sache auf Antrag an das Gericht ab, das im Mahnantrag bezeichnet ist. Dort geht es wie im normalen Klageverfahren weiter.",
+          "marken": [
+            "Abgabe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vollstreckungsbescheid",
+          "text": "Kein Widerspruch: VB auf Antrag – er steht einem VU gleich.",
+          "norm": "§ 699 ZPO · § 700 Abs. 1 ZPO",
+          "sprecher": "Stufe drei: Kommt kein Widerspruch, erlässt das Gericht auf Antrag den Vollstreckungsbescheid. Er steht einem für vorläufig vollstreckbar erklärten Versäumnisurteil gleich.",
+          "marken": [
+            "wie ein VU"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Einspruch",
+          "text": "Zwei Wochen Notfrist ab Zustellung des VB.",
+          "norm": "§ 700 Abs. 1 ZPO · § 339 ZPO",
+          "sprecher": "Stufe vier: Gegen den Vollstreckungsbescheid hilft nur der Einspruch, binnen einer Notfrist von zwei Wochen ab Zustellung. Ein verspäteter Widerspruch wird als Einspruch behandelt.",
+          "marken": [
+            "Notfrist"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Danach: Abgabe von Amts wegen",
+          "text": "Nach dem Einspruch gibt das Mahngericht von Amts wegen ab.",
+          "norm": "§ 700 Abs. 3 ZPO",
+          "sprecher": "Und nach dem Einspruch? Dann gibt das Mahngericht die Sache von Amts wegen an das Streitgericht ab. Der Gläubiger muss seinen Anspruch begründen, und es geht weiter wie nach einem Einspruch gegen ein Versäumnisurteil.",
+          "marken": [
+            "von Amts wegen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Mahnbescheid: Widerspruch. Vollstreckungsbescheid: Einspruch, zwei Wochen.",
+          "norm": null,
+          "sprecher": "Merke: Gegen den Mahnbescheid Widerspruch, gegen den Vollstreckungsbescheid Einspruch – und der hat eine Notfrist.",
+          "marken": [
+            "W vor E"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für die Anwaltsklausur",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Anwaltsklausur mit Mahnverfahren.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Vollstreckungsbescheid: Hier hilft nur der Einspruch. Gegen den Mahnbescheid legt der Schuldner Widerspruch ein, gegen den Vollstreckungsbescheid Einspruch binnen zwei Wochen ab Zustellung. Der VB steht einem Versäumnisurteil gleich; nach dem Einspruch gibt das Mahngericht von Amts wegen an das Streitgericht ab. Speichern für die nächste Anwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#mahnverfahren",
+        "#assessorexamen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mahnbescheid vs. VB: Widerspruch oder Einspruch",
+      "coverText": "Jede Stufe, eigener Rechtsbehelf",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Im Mahnverfahren passt zu jeder Stufe nur ein Rechtsbehelf.",
+        "handlung": "{A} holds out two differently shaped keys, and {B} tries the second key in a heavier second lock after the first lock has already clicked shut.",
+        "hinweisRegie": "Place the note in the free space beside the second, heavier lock and the key {B} holds, slightly tilted toward it, without covering {A}'s hovering body or {B}'s face.",
+        "alternative": "{B} climbs a two-step ladder, and {A} hands her a different tool on each step."
+      },
+      "bildSzene": "second key for heavier lock",
+      "bildSzeneAlt": "different tool on each step",
+      "quellen": [
+        "§ 692 ZPO",
+        "§ 694 ZPO",
+        "§ 696 ZPO",
+        "§ 699 ZPO",
+        "§ 700 ZPO",
+        "§ 339 ZPO",
+        "Themenpool: assessorz-585"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslung-rechtsbehelf",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.111Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-468",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "K kauft ein mangelhaftes Rad und lässt es sofort reparieren, ohne V eine Frist zu setzen. Kosten ersetzt?",
+      "optionen": [
+        "Ja, über §§ 437 Nr. 3, 280, 281 BGB",
+        "Nein – auch nicht in Höhe der Kosten, die V erspart hat",
+        "Ja, aber nur zur Hälfte"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 437 BGB",
+        "§ 439 BGB",
+        "§ 281 BGB",
+        "§ 326 Abs. 2 S. 2 BGB",
+        "Themenpool: schuldbt-468"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.111Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-468",
+      "ueberzeile": "Auflösung",
+      "titel": "Keine Frist, kein Ersatz – auch nicht der ersparten Kosten",
+      "text": "Schadensersatz statt der Leistung verlangt grundsätzlich eine erfolglose Frist zur Nacherfüllung (§ 281 Abs. 1 BGB). Sie sichert dem Verkäufer sein Recht zur zweiten Andienung. Der BGH lehnt es auch ab, die Kosten, die V durch die Selbstvornahme erspart hat, entsprechend § 326 Abs. 2 S. 2 BGB zu ersetzen.",
+      "norm": "§ 281 Abs. 1 BGB",
+      "quellen": [
+        "§ 437 BGB",
+        "§ 439 BGB",
+        "§ 281 BGB",
+        "§ 326 Abs. 2 S. 2 BGB",
+        "Themenpool: schuldbt-468"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.111Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja, über §§ 437 Nr. 3, 280, 281 BGB",
+        "Nein – auch nicht in Höhe der Kosten, die V erspart hat",
+        "Ja, aber nur zur Hälfte"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-722",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 17 S. 2 StGB: Beim vermeidbaren Verbotsirrtum „kann“ gemildert werden – muss aber nicht",
+      "text": "Fehlt dem Täter die Einsicht, Unrecht zu tun, handelt er ohne Schuld, wenn er den Irrtum nicht vermeiden konnte. War der Irrtum vermeidbar, bleibt die Schuld bestehen. Die Strafe kann dann nach § 49 Abs. 1 StGB gemildert werden – eine Ermessensentscheidung, keine Pflicht.",
+      "norm": "§ 17 StGB",
+      "quellen": [
+        "§ 17 StGB",
+        "§ 49 Abs. 1 StGB",
+        "Themenpool: strafat-722"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.111Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-003",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Beide verweisen auf ihre AGB, der Käufer zuletzt: Gelten nach § 150 Abs. 2 BGB allein seine?",
+      "norm": "§ 150 Abs. 2 BGB",
+      "optionen": [
+        "Theorie des letzten Wortes (ältere Rspr.): Jede Gegenbestätigung ist ein neues Angebot nach § 150 II BGB – es gelten die zuletzt übersandten AGB.",
+        "Heute h.M.: Kongruenzgeltung – Übereinstimmendes gilt, im Übrigen das dispositive Recht; § 150 II BGB passt nicht, wenn beide den Vertrag durchführen."
+      ],
+      "text": "Klausur: Mit der h.M. auf den Willen zur Durchführung abstellen. Enthält eine Seite eine Abwehrklausel, trägt das letzte Wort ohnehin nicht.",
+      "quellen": [
+        "§ 150 Abs. 2 BGB",
+        "§ 306 Abs. 2 BGB",
+        "Themenpool: bgbat-003"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.111Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-270",
+      "ueberzeile": "Merksatz Gesellschaftsrecht",
+      "titel": "Eingetragen – aber das Kapital ist schon angegriffen",
+      "text": "Ab Eintragung haftet nur noch die GmbH (§ 13 Abs. 2 GmbHG). Hat die Vor-GmbH das Stammkapital aber schon verbraucht, müssen die Gründer die Lücke anteilig ausgleichen: Unterbilanzhaftung.",
+      "norm": "§ 13 Abs. 2 GmbHG",
+      "quellen": [
+        "§ 11 GmbHG",
+        "§ 13 GmbHG",
+        "Themenpool: handelsg-270"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.111Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-423",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "§ 105a BGB: Geschäfte des täglichen Lebens",
+      "text": "Tätigt ein volljähriger Geschäftsunfähiger ein Geschäft des täglichen Lebens, das mit geringwertigen Mitteln bewirkt werden kann, gilt der Vertrag in Ansehung von Leistung und Gegenleistung als wirksam, sobald beide bewirkt sind. Die Norm stärkt die Teilhabe im Alltag. Sie greift nicht bei erheblicher Gefahr für Person oder Vermögen.",
+      "norm": "§ 105a BGB",
+      "quellen": [
+        "§ 104 BGB",
+        "§ 105 BGB",
+        "§ 105a BGB",
+        "Themenpool: bgbat-423"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:34:43.111Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
