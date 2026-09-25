@@ -1,0 +1,908 @@
+{
+  "datum": "2027-04-04",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "assessorz-812",
+        "themaTitel": "Wie baut man die Hilfsaufrechnung im Urteil auf?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "anklage-867",
+        "themaTitel": "Was ändert sich im Jugendstrafverfahren?",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "strafbt-749"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "strafbt-749"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "grundr-624"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:16",
+        "art": "fehler",
+        "themaId": "stpo-928"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "tipp",
+        "themaId": "sachen-226"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "zahl",
+        "themaId": "zpo-051"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "assessorz-812",
+      "poolTitel": "Wie baut man die Hilfsaufrechnung im Urteil auf?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-15",
+        "2026-12-15",
+        "2027-02-15"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-867",
+      "poolTitel": "Was ändert sich im Jugendstrafverfahren?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 1 JGG",
+        "§ 3 JGG",
+        "§ 105 JGG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-749",
+      "poolTitel": "Unterschlagung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 246 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2027-01-15"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-749",
+      "poolTitel": "Unterschlagung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 246 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2027-01-15"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "grundr-624",
+      "poolTitel": "Eigentumsgarantie: Inhaltsbestimmung vs. Enteignung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2027-02-08"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "stpo-928",
+      "poolTitel": "Adhäsionsverfahren: Zivilansprüche im Strafprozess durchsetzen",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 403 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15",
+        "2027-01-23"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "sachen-226",
+      "poolTitel": "Wie entsteht Eigentum durch Verbindung, Vermischung und Verarbeitung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 946 BGB",
+        "§ 947 BGB",
+        "§ 950 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2026-12-22"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-29",
+        "2027-01-31",
+        "2027-03-05"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-04-04-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Beiträge, vier Bereiche: Was diese Woche sitzen sollte",
+          "titelZeilen": [
+            "18 Beiträge,",
+            "vier Bereiche: Was",
+            "diese Woche sitzen",
+            "sollte"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Teilerfolg: Das Urteil ist für beide Parteien vollstreckbar – der Tenor braucht beide Seiten.",
+            "Kündigungsschutz: Nach dem BAG deckt die Klage nur die angegriffene Kündigung (§ 4 KSchG).",
+            "§ 930 BGB: Eigentum übertragen, Sache behalten – über ein Besitzmittlungsverhältnis.",
+            "§ 477 BGB: Mangel binnen eines Jahres – vermutet wird, dass er schon bei Gefahrübergang vorlag.",
+            "§ 93 ZPO: Kein Anlass zur Klage und sofort anerkannt – der Kläger trägt die Kosten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 13 StGB: Garant ist nur, wer rechtlich verpflichtet ist, den Erfolg abzuwenden.",
+            "§ 338 Nr. 6 StPO: Die beschränkte Öffentlichkeit muss dem Gericht zuzurechnen sein.",
+            "Dreiecksbetrug: Stand der Getäuschte schon vor der Tat im Lager des Opfers?",
+            "§ 69 StGB: Entziehung der Fahrerlaubnis ist Maßregel, das Fahrverbot Nebenstrafe.",
+            "U-Haft: Tatverdacht, Haftgrund, Verhältnismäßigkeit – dann § 116 StPO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Vollstreckung trotz Widerspruch: nur bei unanfechtbarem oder sofort vollziehbarem VA.",
+            "Abstrakte Normenkontrolle: keine eigene Rechtsverletzung, keine Frist.",
+            "Stattgebender Widerspruchsbescheid: Sache, Kosten, Hinzuziehung des Bevollmächtigten.",
+            "Nachbarklage: Es zählen nur drittschützende Normen.",
+            "Vorverfahren: Regel nach § 68 VwGO – Ausnahmen im Landesrecht prüfen.",
+            "Drittwirkung: Grundrechte wirken über Generalklauseln ins Privatrecht."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Teleologische Reduktion: Der Wortlaut erfasst den Fall, der Zweck der Norm nicht.",
+            "Kopfsache: Nach einer schwachen Klausur abhaken, erholen, vorbereiten – und neu anfangen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann trägt der Kläger trotz Anerkenntnisurteil die Kosten?",
+            "Welche drei Voraussetzungen hat die Untersuchungshaft?",
+            "Worin unterscheidet sich die Reduktion von der Analogie?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Tenor und Kosten festigen",
+            "Strafrecht: Voraussetzungen abrufen",
+            "Öffentliches Recht: Zulässigkeit sichern",
+            "Methodik und Kopf trainieren"
+          ],
+          "icons": [
+            "dokument",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Beiträge aus vier Bereichen. Zivilrecht mit Teilerfolg, § 930 BGB und § 93 ZPO, Strafrecht von der Garantenstellung bis zur Untersuchungshaft, Öffentliches Recht vom Vorverfahren bis zur Drittwirkung – dazu teleologische Reduktion und der Umgang mit einer schwachen Klausur. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Am Ende der Woche wird sortiert, was sicher sitzt und was noch einmal auf den Stapel muss.",
+        "handlung": "{B} sorts collected crystals into four small crates, while {A} curiously lifts one crystal against the light to check whether it is flawless.",
+        "hinweisRegie": "Place the note in the free space above the four crates, slightly tilted toward the crystal {A} is examining, so the self-check is linked to the note without covering the crates.",
+        "alternative": "{A} flips through a small stack of cards and hands the unclear ones back to {B}, who places them on a separate pile."
+      },
+      "bildSzene": "crystals sorted into four crates",
+      "bildSzeneAlt": "cards sorted into two piles",
+      "quellen": [
+        "§§ 708 ff. ZPO",
+        "§ 4 KSchG",
+        "§ 930 BGB",
+        "§ 477 BGB",
+        "§ 93 ZPO",
+        "§ 13 StGB",
+        "§ 338 Nr. 6 StPO",
+        "§ 263 StGB",
+        "§§ 44, 69 StGB",
+        "§§ 112, 116 StPO",
+        "Art. 93 Abs. 1 Nr. 2 GG",
+        "§ 68 VwGO",
+        "§ 73 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "Art. 1 Abs. 3 GG",
+        "§ 181 BGB",
+        "Themenpool: methodik-937",
+        "Themenpool: mindset-4"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-beitragszahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.421Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-812",
+      "slug": "2027-04-04-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Hilfsaufrechnung greift – die Kostenfolge, die viele übersehen",
+          "titelZeilen": [
+            "Hilfsaufrechnung",
+            "greift – die Kosten-",
+            "folge, die viele",
+            "übersehen"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Der Streitwert steigt mit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Punkt",
+          "text": "K klagt 10.000 € ein, die Forderung besteht. B rechnet hilfsweise mit einer bestrittenen Gegenforderung über 10.000 € auf – mit Erfolg. Die Klage wird abgewiesen. Wer K jetzt nach § 91 ZPO alle Kosten auferlegt, übersieht: Der Streitwert steigt, und auch B verliert – seine Gegenforderung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Aufbau der Begründetheit",
+          "schritte": [
+            {
+              "titel": "1. Klageforderung",
+              "text": "Zuerst vollständig prüfen, notfalls mit Beweisaufnahme. Besteht sie nicht, wird die Klage ohne die Aufrechnung abgewiesen."
+            },
+            {
+              "titel": "2. Aufrechnungserklärung",
+              "text": "§ 388 BGB. Die Eventualaufrechnung steht unter einer innerprozessualen Bedingung – das ist zulässig."
+            },
+            {
+              "titel": "3. Aufrechnungslage",
+              "text": "§ 387 BGB: Gegenseitigkeit, Gleichartigkeit, Gegenforderung wirksam und fällig, Hauptforderung erfüllbar."
+            },
+            {
+              "titel": "4. Kein Ausschluss",
+              "text": "Keine Aufrechnungsverbote (§§ 390 ff. BGB, Vertrag). Dann erlöschen beide Forderungen, soweit sie sich decken (§ 389 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Nebenentscheidungen",
+          "schritte": [
+            {
+              "titel": "Streitwert",
+              "text": "Er erhöht sich um die bestrittene Gegenforderung, soweit über sie rechtskraftfähig entschieden wird (§ 45 Abs. 3 GKG)."
+            },
+            {
+              "titel": "Kosten",
+              "text": "Quote nach dem erhöhten Streitwert: Obsiegen und Unterliegen je Forderung gegenüberstellen (§ 92 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "Rechtskraft",
+              "text": "Die Gegenforderung ist bis zur Höhe des Aufrechnungsbetrags rechtskräftig aberkannt (§ 322 Abs. 2 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Das Beispiel durchgerechnet",
+          "text": "Streitwert: 10.000 € + 10.000 € = 20.000 €. K gewinnt beim Bestehen der Klageforderung, verliert bei der Aufrechnung – je 10.000 €. Die Kosten werden also geteilt. Bestand die Klageforderung gar nicht, wird über die Aufrechnung nicht entschieden: kein erhöhter Streitwert, K trägt alles."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Greift die Hilfsaufrechnung, lautet der Tenor „Die Klage wird abgewiesen“ – die Kosten folgen aber dem erhöhten Streitwert."
+        },
+        {
+          "art": "cta",
+          "titel": "Hilfsaufrechnung im Urteil",
+          "punkte": [
+            "Klageforderung zuerst prüfen",
+            "Aufrechnung nach §§ 387 ff. BGB",
+            "Streitwert nach § 45 Abs. 3 GKG"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Die Hilfsaufrechnung greift, die Klage wird abgewiesen – und trotzdem trägt der Kläger regelmäßig nicht alle Kosten. Über eine bestrittene Gegenforderung wird rechtskräftig entschieden, also erhöht sich der Streitwert (§ 45 Abs. 3 GKG). Die Kostenquote richtet sich nach diesem erhöhten Wert (§ 92 ZPO). Im Aufbau gilt: erst die Klageforderung, dann die Aufrechnung. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#aufrechnung",
+        "#kostenentscheidung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Hilfsaufrechnung: Aufbau und Kosten",
+      "coverText": "Der Streitwert steigt mit",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Wenn die Hilfsaufrechnung durchgreift, verlieren am Ende beide Seiten etwas.",
+        "handlung": "{B} holds two equal crystal weights and sets one on each side of a balance, while {A} hovers beside it and splits a bill neatly into two halves.",
+        "hinweisRegie": "Place the note in the free space above the balanced scale, slightly tilted toward the split bill in {A}'s grip, so the shared cost burden is visible without covering the weights.",
+        "alternative": "{B} and {A} each hand over one crystal of equal size at a counter, and both leave with lighter bags."
+      },
+      "bildSzene": "balanced scale, bill split in two",
+      "bildSzeneAlt": "both hand over equal crystals",
+      "quellen": [
+        "§§ 387–389 BGB",
+        "§§ 390 ff. BGB",
+        "§ 322 Abs. 2 ZPO",
+        "§§ 91, 92 ZPO",
+        "§ 45 Abs. 3 GKG",
+        "Themenpool: assessorz-812"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.422Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-867",
+      "slug": "2027-04-04-b3",
+      "titelZeilen": [
+        "Tat mit 17, Prozess",
+        "mit 19: Jugend-",
+        "strafrecht bleibt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Tat mit 17, Prozess mit 19: Jugendstrafrecht bleibt",
+          "unter": "Jugendstrafverfahren · JGG",
+          "text": "Maßgeblich ist das Alter zur Tatzeit, nicht das beim Urteil.",
+          "norm": "§ 1 Abs. 2 JGG",
+          "icon": "kalender",
+          "sprecher": "Bei der Tat siebzehn, im Prozess neunzehn. Trotzdem gilt Jugendstrafrecht. Denn das Jugendgerichtsgesetz fragt nach dem Alter zur Zeit der Tat. So prüfst du das in der Anklageklausur.",
+          "marken": [
+            "Tatzeit zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Alter zur Tatzeit",
+          "text": "Jugendlicher: 14 bis 17. Heranwachsender: 18 bis 20. Unter 14: schuldunfähig.",
+          "norm": "§ 1 Abs. 2 JGG · § 19 StGB",
+          "sprecher": "Schritt eins: das Alter zur Tatzeit. Jugendlicher ist, wer vierzehn, aber noch nicht achtzehn ist. Heranwachsender, wer achtzehn, aber noch nicht einundzwanzig ist. Wer bei der Tat jünger als vierzehn war, ist schuldunfähig.",
+          "marken": [
+            "14 · 18 · 21"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Jugendlicher: Reife feststellen",
+          "text": "Verantwortlich nur, wer reif genug ist, das Unrecht einzusehen und danach zu handeln.",
+          "norm": "§ 3 S. 1 JGG",
+          "sprecher": "Schritt zwei: Beim Jugendlichen prüfst du die Verantwortlichkeit nach Paragraf 3. Er muss nach seiner sittlichen und geistigen Entwicklung reif genug sein, das Unrecht der Tat einzusehen und danach zu handeln. Das wird nicht vermutet, sondern festgestellt.",
+          "marken": [
+            "Reife prüfen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Heranwachsender: § 105 JGG",
+          "text": "Jugendstrafrecht bei Reifeverzögerung oder Jugendverfehlung – sonst allgemeines Strafrecht.",
+          "norm": "§ 105 Abs. 1 JGG",
+          "sprecher": "Schritt drei: Beim Heranwachsenden gilt Jugendstrafrecht nur nach Paragraf 105. Entweder stand er nach einer Gesamtwürdigung seiner Persönlichkeit noch einem Jugendlichen gleich, oder die Tat ist eine typische Jugendverfehlung. Sonst gilt allgemeines Strafrecht.",
+          "marken": [
+            "Reife oder Verfehlung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Zum Jugendgericht anklagen",
+          "text": "Jugendrichter, Jugendschöffengericht oder Jugendkammer – auch bei Heranwachsenden.",
+          "norm": "§§ 33, 108 JGG",
+          "sprecher": "Schritt vier: Angeklagt wird beim Jugendgericht, also beim Jugendrichter, beim Jugendschöffengericht oder bei der Jugendkammer. Das gilt auch für Heranwachsende, selbst wenn am Ende allgemeines Strafrecht angewendet wird.",
+          "marken": [
+            "Jugendgericht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Andere Rechtsfolgen",
+          "text": "Erziehungsmaßregeln, Zuchtmittel, Jugendstrafe – ohne die Strafrahmen des StGB.",
+          "norm": "§§ 5, 18 JGG",
+          "sprecher": "Und die Rechtsfolgen? Das Jugendstrafrecht kennt Erziehungsmaßregeln, Zuchtmittel und Jugendstrafe. Die Strafrahmen des allgemeinen Strafrechts gelten dort nicht. Leitlinie ist der Erziehungsgedanke aus Paragraf 2.",
+          "marken": [
+            "Erziehung zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Alter zur Tatzeit, dann § 3 oder § 105 JGG, dann das Jugendgericht.",
+          "norm": "§§ 1, 3, 105 JGG",
+          "sprecher": "Merke: erst das Alter zur Tatzeit, dann Paragraf 3 oder Paragraf 105, dann das richtige Jugendgericht.",
+          "marken": [
+            "Tatzeit zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Anklageklausur",
+          "text": "Speichern und beim nächsten jungen Beschuldigten abrufen.",
+          "sprecher": "Speicher dir das für die nächste Anklageklausur mit einem jungen Beschuldigten.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Tat mit 17, Prozess mit 19 – es bleibt beim Jugendstrafrecht. Maßgeblich ist das Alter zur Tatzeit (§ 1 Abs. 2 JGG). Beim Jugendlichen stellst du die Verantwortlichkeit nach § 3 JGG fest, beim Heranwachsenden entscheidet § 105 JGG. Angeklagt wird beim Jugendgericht, und die Rechtsfolgen folgen dem Erziehungsgedanken statt den Strafrahmen des StGB. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#jgg",
+        "#jugendstrafrecht",
+        "#anklageschrift",
+        "#stpo",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Jugendstrafverfahren: Tatzeit entscheidet",
+      "coverText": "Das Alter bei der Tat zählt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Welches Strafrecht gilt, bestimmt das Alter im Moment der Tat, nicht beim Urteil.",
+        "handlung": "{A} nervously holds an old snapshot of his younger self up next to his current face, while {B} taps the snapshot with his pointer to show it is the one that counts.",
+        "hinweisRegie": "Place the note in the free space beside the old snapshot, slightly tilted toward it, so the focus on the earlier moment is clear without covering {A}'s face or {B}'s pointer.",
+        "alternative": "{B} stops a large clock and points at the frozen hands, while {A} steps away from it, visibly older."
+      },
+      "bildSzene": "old snapshot held next to face",
+      "bildSzeneAlt": "stopped clock hands, figure older",
+      "quellen": [
+        "§ 1 JGG",
+        "§ 2 JGG",
+        "§ 3 JGG",
+        "§ 5 JGG",
+        "§ 18 JGG",
+        "§§ 33, 108 JGG",
+        "§ 105 JGG",
+        "§ 19 StGB",
+        "Themenpool: anklage-867"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung-tatzeit",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.423Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-749",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "Subsidiaritätsklausel in § 246 Abs. 1 StGB: Hinter welche Delikte tritt die Unterschlagung laut BGH zurück?",
+      "optionen": [
+        "Hinter jedes tateinheitliche Delikt mit schwererer Strafdrohung",
+        "Nur hinter Diebstahl und Raub",
+        "Hinter keines – § 246 StGB steht immer in Tateinheit"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 246 Abs. 1 StGB",
+        "Themenpool: strafbt-749"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.423Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-749",
+      "ueberzeile": "Auflösung",
+      "titel": "Hinter jedes schwerer bedrohte Delikt – nicht nur hinter Eigentumsdelikte",
+      "text": "§ 246 Abs. 1 StGB gilt nur, „wenn die Tat nicht in anderen Vorschriften mit schwererer Strafe bedroht ist“. Nach dem BGH erfasst das jedes tateinheitlich verwirklichte Delikt mit höherer Strafdrohung, auch wenn es andere Rechtsgüter schützt. Teile der Lit. beschränken die Klausel auf Delikte mit ähnlicher Schutzrichtung.",
+      "norm": "§ 246 Abs. 1 StGB",
+      "quellen": [
+        "§ 246 Abs. 1 StGB",
+        "Themenpool: strafbt-749"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.423Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Hinter jedes tateinheitliche Delikt mit schwererer Strafdrohung",
+        "Nur hinter Diebstahl und Raub",
+        "Hinter keines – § 246 StGB steht immer in Tateinheit"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-624",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 14 Abs. 3 S. 2 GG: Ohne Entschädigungsregel keine Enteignung",
+      "text": "Das enteignende Gesetz muss Art und Ausmaß der Entschädigung selbst regeln (Junktimklausel). Fehlt die Regelung, ist das Gesetz verfassungswidrig. Einen Entschädigungsanspruch direkt aus Art. 14 GG gibt es dann nicht: Der Betroffene muss den Eingriff selbst abwehren, statt ihn hinzunehmen und Geld zu verlangen (Nassauskiesung).",
+      "norm": "Art. 14 Abs. 3 S. 2 GG",
+      "quellen": [
+        "Art. 14 Abs. 3 GG",
+        "Themenpool: grundr-624"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.423Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-928",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Adhäsionsentscheidung zugesprochen: Braucht der Verletzte noch ein Zivilurteil?",
+      "falsch": "Das Strafgericht spricht dem Verletzten Schmerzensgeld zu. Vollstrecken kann er aber erst, wenn ein Zivilgericht den Anspruch noch einmal tituliert.",
+      "richtigText": "Die Entscheidung über den Adhäsionsantrag steht einem im Zivilprozess ergangenen Urteil gleich (§ 406 Abs. 3 StPO). Das Gericht erklärt sie für vorläufig vollstreckbar, vollstreckt wird nach der ZPO (§ 406b StPO). Ein zweiter Prozess ist nicht nötig.",
+      "quellen": [
+        "§ 406 Abs. 3 StPO",
+        "§ 406b StPO",
+        "Themenpool: stpo-928"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.423Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-226",
+      "ueberzeile": "Klausurtipp Sachenrecht",
+      "titel": "Eigentum durch Verbindung verloren? Weiter geht es mit § 951 BGB",
+      "text": "Wer nach §§ 946–950 BGB sein Eigentum verliert, kann nicht die Trennung verlangen, sondern nur eine Vergütung in Geld (§ 951 Abs. 1 BGB). Nach h.M. ist das eine Rechtsgrundverweisung ins Bereicherungsrecht: Prüfe die Voraussetzungen des § 812 BGB – regelmäßig die Eingriffskondiktion – und achte auf den Vorrang einer Leistungsbeziehung.",
+      "quellen": [
+        "§§ 946–950 BGB",
+        "§ 951 BGB",
+        "§ 812 BGB",
+        "Themenpool: sachen-226"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.423Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-051",
+      "ueberzeile": "3 Punkte",
+      "titel": "Rechtshängig ohne Zustellung der Klageschrift: drei Sonderfälle",
+      "text": "Rechtshängigkeit tritt grundsätzlich mit Zustellung der Klageschrift ein (§§ 253 Abs. 1, 261 Abs. 1 ZPO). Diese drei Wege weichen davon ab:",
+      "punkte": [
+        "Neuer Anspruch im Prozess: Geltendmachung in der mündlichen Verhandlung genügt (§ 261 Abs. 2 ZPO).",
+        "Mahnverfahren mit Widerspruch: rückwirkend ab Zustellung des Mahnbescheids bei alsbaldiger Abgabe (§ 696 Abs. 3 ZPO).",
+        "Einspruch gegen Vollstreckungsbescheid: rechtshängig ab Zustellung des Mahnbescheids (§ 700 Abs. 2 ZPO)."
+      ],
+      "quellen": [
+        "§ 261 ZPO",
+        "§ 696 Abs. 3 ZPO",
+        "§ 700 Abs. 2 ZPO",
+        "Themenpool: zpo-051"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:41.423Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

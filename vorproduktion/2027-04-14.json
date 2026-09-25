@@ -1,0 +1,886 @@
+{
+  "datum": "2027-04-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-572",
+        "themaTitel": "Forderungspfändung und Pfändungs-/Überweisungsbeschluss",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-313",
+        "themaTitel": "Was ist eine mitbestrafte Nachtat?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-628",
+        "themaTitel": "Grundrechtsverwirkung und Parteiverbot als Sonderfragen",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "bgbat-431"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "bgbat-431"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "schuldbt-203"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "streitstand",
+        "themaId": "zwangsv-833"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "merksatz",
+        "themaId": "zpo-282"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:30",
+        "art": "begriff",
+        "themaId": "verwalt-390"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-572",
+      "poolTitel": "Forderungspfändung und Pfändungs-/Überweisungsbeschluss",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 829 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2027-02-17",
+        "2027-02-17"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-313",
+      "poolTitel": "Was ist eine mitbestrafte Nachtat?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "Konkurrenzlehre; Gesetzeskonkurrenz"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2027-03-23"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-628",
+      "poolTitel": "Grundrechtsverwirkung und Parteiverbot als Sonderfragen",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 18, 21 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-03-30",
+        "2027-03-30"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2026-11-12",
+        "2026-11-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2026-11-12",
+        "2026-11-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-203",
+      "poolTitel": "Wie haftet der Schenker?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 521 BGB",
+        "§ 523 BGB",
+        "§ 524 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-08"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "zwangsv-833",
+      "poolTitel": "Welche Rechtsbehelfe richten sich gegen die Vollstreckungsklausel?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 732 ZPO",
+        "§ 768 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-12-03",
+        "2027-02-02"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zpo-282",
+      "poolTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2027-01-15",
+        "2027-01-21"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-390",
+      "poolTitel": "Wann ist ein öffentlich-rechtlicher Vertrag nichtig?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 59 VwVfG",
+        "§ 56 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-10-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-572",
+      "slug": "2027-04-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gepfändet heißt noch nicht: einziehen dürfen",
+          "titelZeilen": [
+            "Gepfändet heißt",
+            "noch nicht:",
+            "einziehen dürfen"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Erst § 835 ZPO erlaubt das Einziehen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "G hat einen Titel gegen S. S hat eine Werklohnforderung gegen D. Das Vollstreckungsgericht erlässt auf Antrag des G nur einen Pfändungsbeschluss, der D zugestellt wird. G verlangt von D Zahlung an sich. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Pfändung (§ 829 ZPO)",
+              "text": "Mit Zustellung an den Drittschuldner ist die Pfändung bewirkt (§ 829 Abs. 3 ZPO): D darf nicht mehr an S zahlen, S nicht mehr über die Forderung verfügen."
+            },
+            {
+              "titel": "Pfändungspfandrecht (§ 804 ZPO)",
+              "text": "G erwirbt ein Pfandrecht an der Forderung. Es sichert ihn und bestimmt seinen Rang – eine Befugnis zur Einziehung gibt es noch nicht."
+            },
+            {
+              "titel": "Überweisung (§ 835 ZPO)",
+              "text": "Erst die Überweisung zur Einziehung ermächtigt G, die Forderung im eigenen Namen geltend zu machen. Auch sie wird mit Zustellung an D wirksam."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Pfändung und Überweisung in einen Topf werfen. In der Praxis ergehen beide meist zusammen als Pfändungs- und Überweisungsbeschluss – rechtlich sind es aber zwei Schritte: Die Pfändung sichert und verstrickt, erst die Überweisung erlaubt das Einziehen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nein. Ohne Überweisung kann G von D keine Zahlung an sich verlangen. D darf aber auch nicht mehr an S zahlen. G muss die Überweisung zur Einziehung beantragen (§ 835 Abs. 1 ZPO). Zahlt D dann nicht, klagt G gegen ihn und verkündet S den Streit (§ 841 ZPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Pfändung sperrt, Überweisung ermächtigt. Wer von D Zahlung will, braucht beides – und zugestellt an den Drittschuldner."
+        },
+        {
+          "art": "cta",
+          "titel": "Forderungspfändung in drei Fragen",
+          "punkte": [
+            "Pfändungsbeschluss dem D zugestellt?",
+            "Überweisung zur Einziehung erfolgt?",
+            "Einziehungsklage mit Streitverkündung?"
+          ],
+          "icons": [
+            "umschlag",
+            "schluessel",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Gepfändet heißt noch nicht: einziehen dürfen. Der Pfändungsbeschluss verbietet dem Drittschuldner, an den Schuldner zu zahlen, und gibt dem Gläubiger ein Pfandrecht. Die Befugnis, die Forderung selbst geltend zu machen, verschafft erst die Überweisung zur Einziehung nach § 835 ZPO. Speichern für die nächste ZPO-Klausur mit Vollstreckung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#829zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Pfändung sperrt, Überweisung ermächtigt",
+      "coverText": "Erst § 835 ZPO erlaubt das Einziehen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Pfändung sperrt die Forderung, erst die Überweisung erlaubt dem Gläubiger, sie einzuziehen.",
+        "handlung": "{A} hovers beside a locked strongbox and seals it with a stamp, while {B} tugs at the lid in vain because the key is still hanging on {A}'s side.",
+        "hinweisRegie": "Place the note in the free space between the sealed strongbox and the dangling key, slightly tilted toward the key, so the missing second step is linked to the note without covering {B}'s hands.",
+        "alternative": "{B} stands at a barrier that {A} has just lowered in front of a vault door, but the second barrier that would let {B} through is still closed."
+      },
+      "bildSzene": "sealed strongbox, key still withheld",
+      "bildSzeneAlt": "two barriers, only first lowered",
+      "quellen": [
+        "§ 804 ZPO",
+        "§ 829 ZPO",
+        "§ 835 ZPO",
+        "§ 841 ZPO",
+        "Themenpool: zpo-572"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung-zwei-schritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.128Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-313",
+      "slug": "2027-04-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gestohlenes Rad verkauft: Ist der Betrug mitbestraft?",
+          "titelZeilen": [
+            "Gestohlenes Rad",
+            "verkauft: Ist der",
+            "Betrug mitbestraft?"
+          ],
+          "coverBadge": "Konkurrenzen",
+          "coverText": "Neues Opfer sprengt die Abgeltung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "T stiehlt das Fahrrad des E. Eine Woche später verkauft er es an den gutgläubigen K, dem er erzählt, es sei sein eigenes. K zahlt 400 Euro. Tritt der Betrug gegenüber K als mitbestrafte Nachtat hinter den Diebstahl zurück?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Was die mitbestrafte Nachtat ist",
+              "text": "Eine Tat, die nur sichert oder verwertet, was die Vortat eingebracht hat. Ihr Unrecht ist mit der Strafe für die Vortat abgegolten."
+            },
+            {
+              "titel": "Der Prüfstein",
+              "text": "Kein neues Opfer, kein neuer Schaden. Trifft die Nachtat ein anderes Rechtsgut oder eine andere Person, ist sie nicht abgegolten."
+            },
+            {
+              "titel": "Anwendung auf K",
+              "text": "K erwirbt wegen § 935 BGB kein Eigentum und ist dem Herausgabeanspruch des E ausgesetzt. Er zahlt 400 Euro für eine Position, die das nicht wert ist."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Abgegolten oder nicht?",
+          "links": {
+            "titel": "Mitbestraft",
+            "punkte": [
+              "T zerstört das gestohlene Rad (§ 303 StGB)",
+              "Nur E ist betroffen, kein neuer Schaden"
+            ]
+          },
+          "rechts": {
+            "titel": "Selbständig strafbar",
+            "punkte": [
+              "T verkauft das Rad an den gutgläubigen K",
+              "Neues Opfer, neuer Vermögensschaden"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nein. Der Betrug zulasten des K (§ 263 StGB) steht in Tatmehrheit zum Diebstahl (§§ 242, 53 StGB). Die Unterschlagung, die im Verkauf liegen könnte, tritt dagegen zurück – nach der Rspr. schon, weil sich T die Sache nicht erneut zueignen kann."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Mitbestraft ist nur, was die Vortat bloß auswertet. Ein neues Opfer oder ein neuer Schaden sprengt die Abgeltung."
+        },
+        {
+          "art": "cta",
+          "titel": "Nachtat prüfen in drei Fragen",
+          "punkte": [
+            "Sichert oder verwertet sie nur die Beute?",
+            "Wird ein neues Opfer geschädigt?",
+            "Entsteht ein neuer Vermögensschaden?"
+          ],
+          "icons": [
+            "lupe",
+            "person",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Gestohlenes Rad verkauft – tritt der Betrug am Käufer als mitbestrafte Nachtat zurück? Nein: Mitbestraft ist nur, was die Beute der Vortat bloß sichert oder verwertet. Der gutgläubige Käufer ist ein neues Opfer mit neuem Schaden, weil er an der gestohlenen Sache kein Eigentum erwirbt (§ 935 BGB). Speichern für die nächste Konkurrenzprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#konkurrenzen",
+        "#263stgb",
+        "#242stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mitbestrafte Nachtat: neues Opfer, neue Tat",
+      "coverText": "Neues Opfer sprengt die Abgeltung",
+      "coverBadge": "Konkurrenzen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wer die Beute an einen Gutgläubigen verkauft, schafft ein neues Opfer – das ist nicht mehr mitbestraft.",
+        "handlung": "{B} hands a stolen crystal lamp to {A}, who happily counts out coins in return, unaware that the lamp's original owner is already approaching in the background.",
+        "hinweisRegie": "Place the note in the free space between the exchanged coins and the approaching owner, slightly tilted toward {A}'s open hand, so the new victim is linked to the note without covering the lamp.",
+        "alternative": "{A} unknowingly carries a crate marked with someone else's seal away from a market stall, while {B} pockets the payment behind the counter."
+      },
+      "bildSzene": "buyer pays for stolen lamp",
+      "bildSzeneAlt": "unknowing buyer carries sealed crate",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 246 StGB",
+        "§ 263 StGB",
+        "§ 53 StGB",
+        "§ 935 BGB",
+        "Themenpool: strafat-313"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage-verwertung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.129Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-628",
+      "slug": "2027-04-14-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Parteiverbot: Gesinnung allein reicht nicht",
+          "unter": "Parteiverbot · Art. 21 GG",
+          "text": "Verfassungsfeindliche Ziele sind nötig – aber nicht genug für ein Verbot.",
+          "norm": "Art. 21 Abs. 2 GG",
+          "icon": "wahlurne",
+          "sprecher": "Verfassungsfeindliche Ziele allein reichen für ein Parteiverbot nicht. Das Grundgesetz kennt zwei Sonderinstrumente gegen Verfassungsfeinde: das Parteiverbot und die Grundrechtsverwirkung. Beide haben hohe Hürden.",
+          "marken": [
+            "Ziele reichen nicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Darauf ausgehen",
+          "text": "Die Partei muss nach Zielen oder Verhalten ihrer Anhänger darauf ausgehen, die freiheitliche demokratische Grundordnung zu beseitigen oder zu beeinträchtigen.",
+          "norm": "Art. 21 Abs. 2 GG",
+          "sprecher": "Erstens, Artikel 21 Absatz 2: Die Partei muss nach ihren Zielen oder dem Verhalten ihrer Anhänger darauf ausgehen, die freiheitliche demokratische Grundordnung zu beeinträchtigen oder zu beseitigen. Gemeint ist ein planvolles Handeln, nicht bloß eine Gesinnung.",
+          "marken": [
+            "planvolles Handeln"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Potentialität",
+          "text": "Es braucht konkrete Anhaltspunkte von Gewicht, dass ein Erfolg zumindest möglich erscheint.",
+          "norm": "Art. 21 Abs. 2 GG",
+          "sprecher": "Zweitens verlangt das Bundesverfassungsgericht seit 2017 konkrete Anhaltspunkte von Gewicht, dass die Partei ihre Ziele auch erreichen könnte. Eine verfassungsfeindliche, aber bedeutungslose Partei wird deshalb nicht verboten.",
+          "marken": [
+            "Potentialität"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausschluss von der Finanzierung",
+          "text": "Für den Ausschluss von staatlicher Finanzierung verzichtet Art. 21 Abs. 3 GG auf die Potentialität.",
+          "norm": "Art. 21 Abs. 3, 4 GG",
+          "sprecher": "Drittens: Als Antwort darauf gibt es Artikel 21 Absatz 3. Eine Partei, die darauf ausgerichtet ist, kann von staatlicher Finanzierung ausgeschlossen werden – ohne dass sie Erfolg haben könnte. Entscheiden darf auch hier nur Karlsruhe.",
+          "marken": [
+            "ohne Potentialität"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Grundrechtsverwirkung",
+          "text": "Wer bestimmte Grundrechte zum Kampf gegen die Grundordnung missbraucht, verwirkt sie – ausgesprochen nur vom BVerfG.",
+          "norm": "Art. 18 GG",
+          "sprecher": "Viertens, Artikel 18: Wer bestimmte Grundrechte, etwa die Meinungsfreiheit, zum Kampf gegen die freiheitliche demokratische Grundordnung missbraucht, verwirkt sie. Das trifft Einzelne, nicht Parteien, und auch das spricht nur das Bundesverfassungsgericht aus.",
+          "marken": [
+            "nur Karlsruhe"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Das Parteienprivileg",
+          "text": "Bis zur Entscheidung des BVerfG darf keine Behörde eine Partei wie eine verbotene behandeln.",
+          "norm": "Art. 21 Abs. 4 GG",
+          "sprecher": "Und bis Karlsruhe entschieden hat, gilt das Parteienprivileg: Keine Behörde darf eine Partei so behandeln, als wäre sie schon verboten.",
+          "marken": [
+            "Parteienprivileg"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Verbot: Ziele plus Potentialität. Finanzierungsausschluss: Ziele genügen. Entscheiden darf nur das BVerfG.",
+          "norm": "Art. 18, 21 GG",
+          "sprecher": "Merke: Für das Verbot brauchst du verfassungsfeindliche Ziele plus Potentialität. Für den Finanzierungsausschluss genügen die Ziele.",
+          "marken": [
+            "Ziele + Potentialität"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der nächsten Staatsrechtsklausur",
+          "text": "Speichern für die nächste Klausur zu Art. 21 GG.",
+          "sprecher": "Speicher dir das für die nächste Klausur im Staatsorganisationsrecht.",
+          "marken": [
+            "Art. 21 GG"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Verfassungsfeindliche Ziele allein reichen für ein Parteiverbot nicht. Nach Art. 21 Abs. 2 GG muss die Partei darauf ausgehen, die freiheitliche demokratische Grundordnung zu beseitigen – und seit 2017 verlangt das BVerfG konkrete Anhaltspunkte, dass sie damit Erfolg haben könnte. Für den Ausschluss von der staatlichen Finanzierung (Art. 21 Abs. 3 GG) gilt das nicht. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#parteiverbot",
+        "#21gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Parteiverbot: Ziele plus Potentialität",
+      "titelZeilen": [
+        "Parteiverbot:",
+        "Gesinnung allein",
+        "reicht nicht"
+      ],
+      "coverText": "Erst die Potentialität trägt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Für ein Parteiverbot genügen feindliche Ziele nicht – sie müssen auch erreichbar erscheinen.",
+        "handlung": "{B} points his stick at a tiny paper catapult aimed at a massive fortress wall, while {A} calmly measures the distance and shakes her head at its reach.",
+        "hinweisRegie": "Place the note in the open space between the tiny catapult and the fortress wall, slightly tilted toward the catapult, so the question of real reach is linked to the note without covering {A}'s measuring gesture.",
+        "alternative": "{A} weighs a small spark against a huge stone wall on a scale, while {B} explains why only a spark that could really ignite counts."
+      },
+      "bildSzene": "tiny catapult facing massive wall",
+      "bildSzeneAlt": "spark weighed against stone wall",
+      "quellen": [
+        "Art. 18 GG",
+        "Art. 21 Abs. 2–4 GG",
+        "Themenpool: grundr-628"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung-parteiverbot",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-431",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Inhaltskontrolle einer AGB-Klausel: Mit welcher Norm beginnst du?",
+      "optionen": [
+        "§ 309 BGB – die Klauselverbote ohne Wertungsmöglichkeit",
+        "§ 307 BGB – die Generalklausel",
+        "§ 308 BGB – die Klauselverbote mit Wertungsmöglichkeit"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 306 BGB",
+        "§ 307 BGB",
+        "§ 308 BGB",
+        "§ 309 BGB",
+        "§ 310 Abs. 1 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-431",
+      "ueberzeile": "Auflösung",
+      "titel": "Vom Speziellen zum Allgemeinen: erst § 309, dann § 308, zuletzt § 307",
+      "text": "§ 309 BGB verbietet ohne Wertung – greift er, ist die Klausel unwirksam. § 308 BGB verlangt eine Wertung, § 307 BGB ist der Auffangtatbestand. Kontrolliert werden nur abweichende oder ergänzende Regelungen (§ 307 Abs. 3 BGB). Gegenüber Unternehmern gelten §§ 308, 309 BGB nicht unmittelbar (§ 310 Abs. 1 BGB), können aber bei § 307 BGB indiziell wirken.",
+      "norm": "§§ 307–309 BGB",
+      "quellen": [
+        "§ 306 BGB",
+        "§ 307 BGB",
+        "§ 308 BGB",
+        "§ 309 BGB",
+        "§ 310 Abs. 1 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.134Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "§ 309 BGB – die Klauselverbote ohne Wertungsmöglichkeit",
+        "§ 307 BGB – die Generalklausel",
+        "§ 308 BGB – die Klauselverbote mit Wertungsmöglichkeit"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-203",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 521 BGB: Der Schenker haftet nur für Vorsatz und grobe Fahrlässigkeit",
+      "text": "Wer unentgeltlich gibt, soll milder haften. Die Milderung gilt für die Pflichten aus der Schenkung, etwa bei Unmöglichkeit oder Verzug. Für Mängel der Sache gehen §§ 523, 524 BGB vor. Nach h.M. erfasst § 521 BGB auch konkurrierende Ansprüche aus Delikt, soweit der Schaden mit dem Schenkungsgegenstand zusammenhängt – sonst liefe die Milderung leer.",
+      "norm": "§ 521 BGB",
+      "quellen": [
+        "§ 521 BGB",
+        "§ 523 BGB",
+        "§ 524 BGB",
+        "Themenpool: schuldbt-203"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-833",
+      "ueberzeile": "Streitstand Zwangsvollstreckung",
+      "titel": "Sicherungsgut beim Schuldner gepfändet: Kann die Bank Drittwiderspruchsklage erheben?",
+      "norm": "§§ 771, 805 ZPO",
+      "optionen": [
+        "BGH/h.M.: Ja – Sicherungseigentum ist Eigentum und ein die Veräußerung hinderndes Recht (§ 771 ZPO).",
+        "Andere Ansicht: Nur Klage auf vorzugsweise Befriedigung (§ 805 ZPO) – wirtschaftlich ist es ein Pfandrecht."
+      ],
+      "text": "Für die h.M. spricht die formale Rechtslage: Die Bank ist Eigentümerin. Die Gegenansicht betont, dass sie nur Sicherheit will. In der Klausur: Streit kurz darstellen, der h.M. folgen und den Sicherungsvertrag im Blick behalten.",
+      "quellen": [
+        "§ 771 ZPO",
+        "§ 805 ZPO",
+        "§ 930 BGB",
+        "Themenpool: zwangsv-833"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-282",
+      "ueberzeile": "Merksatz Zivilprozessrecht",
+      "titel": "Beweislast entscheidet erst, wenn das Gericht nicht überzeugt ist",
+      "text": "Erst würdigt das Gericht frei alle Beweise (§ 286 ZPO). Unstreitiges wird gar nicht bewiesen (§ 138 Abs. 3 ZPO). Erst wenn eine streitige Tatsache offen bleibt, verliert, wer die Beweislast trägt.",
+      "norm": "§ 286 ZPO",
+      "quellen": [
+        "§ 138 Abs. 3 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: zpo-282"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-390",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Subordinationsrechtlicher Vertrag: Vertrag statt Verwaltungsakt",
+      "text": "Vertrag, den die Behörde mit jemandem schließt, an den sie sonst einen Verwaltungsakt richten würde (§ 54 S. 2 VwVfG). Für ihn gelten zusätzlich die Nichtigkeitsgründe des § 59 Abs. 2 VwVfG. Bloße Rechtswidrigkeit genügt nicht: Über § 59 Abs. 1 VwVfG i.V.m. § 134 BGB führt nach h.M. nur ein qualifizierter Rechtsverstoß zur Nichtigkeit.",
+      "norm": "§§ 54, 59 VwVfG",
+      "quellen": [
+        "§ 54 VwVfG",
+        "§ 56 VwVfG",
+        "§ 59 VwVfG",
+        "§ 134 BGB",
+        "Themenpool: verwalt-390"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:32:21.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
