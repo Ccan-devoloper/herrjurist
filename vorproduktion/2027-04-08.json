@@ -1,0 +1,884 @@
+{
+  "datum": "2027-04-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "sachen-238",
+        "themaTitel": "Was ist der verlängerte Eigentumsvorbehalt?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafat-312",
+        "themaTitel": "Wie unterscheidet man Tateinheit und Tatmehrheit?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-368",
+        "themaTitel": "Wie prüft man die Versammlungsfreiheit?",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "vwgo-410"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "vwgo-410"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "strafat-303"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "streitstand",
+        "themaId": "gesetzs-205"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:41",
+        "art": "merksatz",
+        "themaId": "staat-636"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "begriff",
+        "themaId": "schuld-013"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "sachen-238",
+      "poolTitel": "Was ist der verlängerte Eigentumsvorbehalt?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 449 BGB",
+        "§ 398 BGB",
+        "§ 185 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-01"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafat-312",
+      "poolTitel": "Wie unterscheidet man Tateinheit und Tatmehrheit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StGB",
+        "§ 53 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-12-09",
+        "2027-03-30"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-368",
+      "poolTitel": "Wie prüft man die Versammlungsfreiheit?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 8 GG",
+        "VersG/LandesVersG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-15"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-410",
+      "poolTitel": "Welcher Zeitpunkt ist für die Beurteilung der Sach- und Rechtslage maßgeblich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "materielles Fachrecht",
+        "§ 113 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-410",
+      "poolTitel": "Welcher Zeitpunkt ist für die Beurteilung der Sach- und Rechtslage maßgeblich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "materielles Fachrecht",
+        "§ 113 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-303",
+      "poolTitel": "Wann beginnt das unmittelbare Ansetzen zum Versuch?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-14",
+        "2027-03-04"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "gesetzs-205",
+      "poolTitel": "Was ist eine auch-fremde Geschäftsführung und ist sie GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 677 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-25",
+        "2026-12-07",
+        "2027-02-07"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "staat-636",
+      "poolTitel": "Einstweilige Anordnung des BVerfG",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 32 BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-11-27",
+        "2027-01-27"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-013",
+      "poolTitel": "Wann tritt Konkretisierung bei Hol-, Bring- und Schickschulden ein?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 243 Abs. 2 BGB",
+        "§ 269 BGB",
+        "§ 447 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-238",
+      "slug": "2027-04-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verlängerter EV: zwei Klauseln, eine Kollision mit der Bank",
+          "titelZeilen": [
+            "Verlängerter EV:",
+            "zwei Klauseln,",
+            "eine Kollision",
+            "mit der Bank"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Sicherung über den Weiterverkauf hinaus",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Grundproblem",
+          "text": "Beim einfachen Eigentumsvorbehalt übereignet V aufschiebend bedingt durch die vollständige Zahlung (§§ 449 Abs. 1, 158 Abs. 1 BGB). Verkauft K die Ware mit Zustimmung weiter (§ 185 Abs. 1 BGB) oder verarbeitet er sie (§ 950 BGB), verliert V sein Eigentum. Der verlängerte EV fängt das auf."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die zwei Klauseln",
+          "links": {
+            "titel": "Vorausabtretung",
+            "punkte": [
+              "K tritt die künftige Forderung aus dem Weiterverkauf schon jetzt an V ab (§ 398 BGB).",
+              "Bestimmbarkeit genügt; K darf im ordentlichen Geschäftsgang weiterverkaufen."
+            ]
+          },
+          "rechts": {
+            "titel": "Verarbeitungsklausel",
+            "punkte": [
+              "V soll Hersteller im Sinne des § 950 BGB sein.",
+              "BGH: wirksam; Teile der Lit.: nur antizipierte Übereignung."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Einziehungsermächtigung",
+          "text": "K darf die abgetretenen Forderungen selbst einziehen – sonst könnte er nicht wirtschaften. Die Ermächtigung ist widerruflich, typischerweise bei Zahlungsverzug oder drohender Insolvenz. Bis dahin zahlen die Abnehmer an K."
+        },
+        {
+          "art": "text",
+          "titel": "Die Kollision: Globalzession der Bank",
+          "text": "Hat K vorher alle künftigen Forderungen an seine Bank abgetreten, gilt an sich: Die Bank war zuerst. Nach der Vertragsbruchtheorie des BGH ist die Globalzession aber sittenwidrig (§ 138 Abs. 1 BGB), soweit sie branchenübliche Lieferantenforderungen erfasst – außer bei dinglicher Teilverzichtsklausel."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verlängerter EV heißt: Vorausabtretung und Verarbeitungsklausel. Gegen die frühere Globalzession hilft die Vertragsbruchtheorie."
+        },
+        {
+          "art": "cta",
+          "titel": "Verlängerter EV in drei Zügen",
+          "punkte": [
+            "Welche Klausel wurde vereinbart?",
+            "Einziehungsermächtigung noch wirksam?",
+            "Globalzession vorher? Vertragsbruchtheorie"
+          ],
+          "icons": [
+            "vertrag",
+            "geldbeutel",
+            "bank"
+          ]
+        }
+      ],
+      "caption": "Der verlängerte Eigentumsvorbehalt besteht aus zwei Klauseln – und hat eine klassische Kollision. Die Vorausabtretung sichert V die Forderung aus dem Weiterverkauf (§ 398 BGB), die Verarbeitungsklausel soll ihn zum Hersteller nach § 950 BGB machen. Hat K seine Forderungen schon global an die Bank abgetreten, hilft V die Vertragsbruchtheorie: Ohne dingliche Teilverzichtsklausel ist die Globalzession insoweit sittenwidrig. Speichern für die nächste Kreditsicherungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#eigentumsvorbehalt",
+        "#kreditsicherung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verlängerter Eigentumsvorbehalt kompakt",
+      "coverText": "Sicherung über den Weiterverkauf hinaus",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Der Lieferant sichert sich nicht nur die Ware, sondern auch das, was der Käufer später aus ihr macht oder für sie bekommt.",
+        "handlung": "{A} hands a crate of raw crystals to a trader and keeps hold of a thin rope tied to the coin purse the trader will later receive, while {B} blocks a second rope held by a banker from reaching the same purse.",
+        "hinweisRegie": "Place the note in the free space between the two ropes near the coin purse, slightly tilted toward {B}'s blocking hand, so it marks the collision without covering the purse or faces.",
+        "alternative": "{B} watches {A} attach a small tag to raw crystals that stays on them even after they are cut into a new sculpture."
+      },
+      "bildSzene": "two ropes pull at one coin purse",
+      "bildSzeneAlt": "tag stays on crystal after carving",
+      "quellen": [
+        "§ 449 Abs. 1 BGB",
+        "§ 158 Abs. 1 BGB",
+        "§ 185 BGB",
+        "§ 398 BGB",
+        "§ 950 BGB",
+        "§ 138 Abs. 1 BGB",
+        "Themenpool: sachen-238"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-klauseln-eine-kollision",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.308Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-312",
+      "slug": "2027-04-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ein Schuss, zwei Opfer – und nur eine Strafe",
+          "titelZeilen": [
+            "Ein Schuss, zwei",
+            "Opfer – und nur",
+            "eine Strafe"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Eine Handlung, eine Strafe",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Ausgangspunkt",
+          "text": "A schießt einmal und verletzt B und C. Zwei Opfer, zwei Körperverletzungen – aber nur eine Handlung. Für die Konkurrenzen zählt nicht die Zahl der Opfer oder Delikte, sondern die Zahl der Handlungen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Tateinheit oder Tatmehrheit?",
+          "links": {
+            "titel": "Tateinheit (§ 52)",
+            "punkte": [
+              "Dieselbe Handlung verletzt mehrere Gesetze oder eines mehrmals.",
+              "Eine Strafe aus dem Gesetz mit der schwersten Strafdrohung.",
+              "Mildere Gesetze setzen die Untergrenze (§ 52 II 2)."
+            ]
+          },
+          "rechts": {
+            "titel": "Tatmehrheit (§ 53)",
+            "punkte": [
+              "Mehrere selbständige Handlungen, gemeinsam abgeurteilt.",
+              "Erst Einzelstrafen, dann eine Gesamtstrafe.",
+              "Höchste Einzelstrafe wird erhöht, die Summe nie erreicht (§ 54)."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Wann ist es dieselbe Handlung?",
+          "schritte": [
+            {
+              "titel": "Handlung im natürlichen Sinn",
+              "text": "Eine Willensbetätigung, etwa ein Schuss oder ein Schlag."
+            },
+            {
+              "titel": "Natürliche Handlungseinheit",
+              "text": "Gleichartige Akte aus einem Willensentschluss in engem räumlich-zeitlichem Zusammenhang."
+            },
+            {
+              "titel": "Tatbestandliche Handlungseinheit",
+              "text": "Mehraktige Delikte wie der Raub und Dauerdelikte wie die Freiheitsberaubung fassen mehrere Akte zusammen."
+            },
+            {
+              "titel": "Teilidentität",
+              "text": "Es genügt, dass sich die Ausführungshandlungen teilweise decken."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Im Gutachten",
+          "punkte": [
+            "Erst Gesetzeskonkurrenz ausscheiden: Spezialität, Subsidiarität, Konsumtion.",
+            "Dann §§ 52, 53 StGB – am Ende jedes Tatkomplexes und im Gesamtergebnis.",
+            "Formulierung: „… in Tateinheit mit …“ bzw. „… in Tatmehrheit mit …“."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gezählt werden Handlungen, nicht Opfer. Eine Handlung: Tateinheit, eine Strafe. Mehrere Handlungen: Tatmehrheit, Gesamtstrafe."
+        },
+        {
+          "art": "cta",
+          "titel": "Konkurrenzen in drei Fragen",
+          "punkte": [
+            "Wie viele Handlungen?",
+            "Gesetzeskonkurrenz ausgeschieden?",
+            "§ 52 oder § 53 StGB?"
+          ],
+          "icons": [
+            "zielscheibe",
+            "paragraf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Ein Schuss, zwei Verletzte – zwei Taten? Nein: Für die Konkurrenzen zählt die Handlung, nicht die Zahl der Opfer. Verletzt dieselbe Handlung mehrere Gesetze oder eines mehrmals, liegt Tateinheit vor (§ 52 StGB) – eine Strafe aus dem schwersten Gesetz. Mehrere selbständige Handlungen stehen in Tatmehrheit (§ 53 StGB): Einzelstrafen und eine Gesamtstrafe nach § 54 StGB. Speichern für den Schluss der nächsten Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#konkurrenzen",
+        "#52stgb",
+        "#53stgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tateinheit oder Tatmehrheit?",
+      "coverText": "Eine Handlung, eine Strafe",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Wie viele Strafen es gibt, hängt an der Zahl der Handlungen, nicht an der Zahl der Opfer.",
+        "handlung": "{B} holds up a single pebble he just flicked, which knocked over two small targets, while {A} places one single token on a scoreboard instead of two.",
+        "hinweisRegie": "Place the note in the free space above the two knocked-over targets, slightly tilted toward the single token on the scoreboard, without covering {B}'s raised pebble.",
+        "alternative": "{A} lines up several separate pebble throws on a table and bundles their tokens into one larger combined token while {B} counts along."
+      },
+      "bildSzene": "one pebble, two targets, one token",
+      "bildSzeneAlt": "separate throws bundled into combined token",
+      "quellen": [
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "Themenpool: strafat-312"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.308Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-368",
+      "slug": "2027-04-08-b3",
+      "titelZeilen": [
+        "Nicht angemeldet –",
+        "allein kein Grund",
+        "zur Auflösung"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht angemeldet – allein kein Grund zur Auflösung",
+          "unter": "Versammlungsfreiheit · Art. 8 GG",
+          "text": "Art. 8 Abs. 1 GG: ohne Anmeldung oder Erlaubnis. Die Anmeldepflicht ist nur eine Schranke.",
+          "norm": "Art. 8 GG",
+          "icon": "personen",
+          "sprecher": "Eine fehlende Anmeldung allein rechtfertigt keine Auflösung. Artikel 8 schützt friedliche Versammlungen ohne Anmeldung oder Erlaubnis. So prüfst du das Grundrecht in vier Schritten.",
+          "marken": [
+            "ohne Anmeldung",
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schutzbereich",
+          "text": "Zusammenkunft mehrerer zur gemeinsamen Meinungsbildung – friedlich, ohne Waffen.",
+          "norm": "Art. 8 Abs. 1 GG",
+          "sprecher": "Schritt eins: der Schutzbereich. Eine Versammlung ist eine örtliche Zusammenkunft mehrerer Personen zur gemeinschaftlichen Erörterung oder Kundgebung, gerichtet auf die öffentliche Meinungsbildung. Geschützt ist sie, wenn sie friedlich und ohne Waffen stattfindet. Und: Artikel 8 ist ein Deutschengrundrecht.",
+          "marken": [
+            "friedlich, ohne Waffen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Eingriff",
+          "text": "Verbot, Auflösung, Beschränkungen – auch abschreckende Kontrollen im Vorfeld.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Eingriff. Das sind Verbot und Auflösung, aber auch Beschränkungen zu Ort und Route oder Kontrollen im Vorfeld, die von der Teilnahme abschrecken.",
+          "marken": [
+            "Verbot, Auflösung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Schranke nur unter freiem Himmel",
+          "text": "Gesetzesvorbehalt nach Art. 8 Abs. 2 GG; in geschlossenen Räumen nur kollidierendes Verfassungsrecht.",
+          "norm": "Art. 8 Abs. 2 GG",
+          "sprecher": "Schritt drei: die Schranke. Einen Gesetzesvorbehalt gibt es nur für Versammlungen unter freiem Himmel – geregelt im Versammlungsgesetz des Bundes oder im Landesversammlungsgesetz. In geschlossenen Räumen gelten nur verfassungsimmanente Schranken.",
+          "marken": [
+            "Abs. 2: freier Himmel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verhältnismäßigkeit",
+          "text": "Verbot und Auflösung nur als letztes Mittel bei unmittelbarer Gefahr.",
+          "norm": null,
+          "sprecher": "Schritt vier: die Verhältnismäßigkeit. Verbot und Auflösung kommen nur als letztes Mittel in Betracht, wenn eine unmittelbare Gefahr für die öffentliche Sicherheit droht und mildere Beschränkungen nicht reichen.",
+          "marken": [
+            "letztes Mittel"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Spontan- und Eilversammlung",
+          "text": "Spontan: Anmeldung unmöglich. Eil: anmelden, sobald es geht.",
+          "norm": null,
+          "sprecher": "Der Klassiker: Die Spontanversammlung entsteht aus dem Augenblick, eine Anmeldung ist gar nicht möglich. Bei der Eilversammlung muss angemeldet werden, sobald es geht. Und selbst wenn die Anmeldung fehlt, trägt das allein keine Auflösung.",
+          "marken": [
+            "spontan / eilig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Anmeldung ist Pflicht – aber keine Voraussetzung des Grundrechtsschutzes.",
+          "norm": "Art. 8 GG",
+          "sprecher": "Merke: Die Anmeldung ist eine Pflicht, aber keine Voraussetzung des Grundrechtsschutzes.",
+          "marken": [
+            "Pflicht, kein Tor"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jeder Auflösung: Wo ist die Gefahr?",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und prüf bei jeder Auflösung, ob wirklich eine unmittelbare Gefahr vorlag.",
+          "marken": [
+            "Gefahr prüfen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Demo war nicht angemeldet – darf die Polizei sie deshalb auflösen? Nicht allein aus diesem Grund. Art. 8 Abs. 1 GG schützt friedliche Versammlungen ohne Anmeldung oder Erlaubnis; die Anmeldepflicht der Versammlungsgesetze ist nur eine Schranke für Versammlungen unter freiem Himmel. Verbot und Auflösung bleiben das letzte Mittel bei unmittelbarer Gefahr – und Spontanversammlungen können gar nicht angemeldet werden.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#versammlungsfreiheit",
+        "#art8gg",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versammlungsfreiheit: Anmeldung und Auflösung",
+      "coverText": "Pflicht, aber keine Schutzvoraussetzung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Eine friedliche Versammlung bleibt geschützt, auch wenn das Formular fehlt.",
+        "handlung": "{B} hovers with an empty registration form over a small peaceful crowd holding lanterns, while {A} steps between them and gently lowers {B}'s form.",
+        "hinweisRegie": "Place the note in the free space above the peaceful crowd, slightly tilted toward the lowered empty form, so it links the missing registration to the protected gathering without covering the lanterns.",
+        "alternative": "{A} watches a crowd gather spontaneously around a fallen signpost while {B} searches in vain for a form that could have been filed in advance."
+      },
+      "bildSzene": "empty form lowered above peaceful crowd",
+      "bildSzeneAlt": "spontaneous crowd, droid searching forms",
+      "quellen": [
+        "Art. 8 Abs. 1, 2 GG",
+        "§§ 14, 15 VersG bzw. Landesversammlungsgesetze",
+        "BVerfGE 69, 315 (Brokdorf)",
+        "Themenpool: grundr-368"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "anmeldung-kein-schutzkriterium",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.310Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-410",
+      "ueberzeile": "Prüfungsfrage Verwaltungsprozess",
+      "titel": "Gewerbeuntersagung wegen Unzuverlässigkeit – im Prozess ist G wieder zuverlässig. Welcher Zeitpunkt zählt?",
+      "optionen": [
+        "Stets die letzte mündliche Verhandlung – auch bei der Anfechtung",
+        "Der Zeitpunkt des ersten Verstoßes",
+        "Die letzte Behördenentscheidung – Besserung zählt bei der Wiedergestattung"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 35 Abs. 1, 6 GewO",
+        "Themenpool: vwgo-410"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.310Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-410",
+      "ueberzeile": "Auflösung",
+      "titel": "Die letzte Behördenentscheidung – Besserung hilft über § 35 Abs. 6 GewO",
+      "text": "Welcher Zeitpunkt maßgeblich ist, folgt aus dem materiellen Recht (BVerwG). Faustregel: Anfechtungsklage – letzte Behördenentscheidung, Verpflichtungsklage – letzte mündliche Verhandlung. Bei der Gewerbeuntersagung bleibt es bei der Behördenentscheidung: Spätere Besserung berücksichtigt das Gesetz über die Wiedergestattung nach § 35 Abs. 6 GewO.",
+      "norm": "§ 113 Abs. 1 S. 1 VwGO · § 35 GewO",
+      "quellen": [
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 35 Abs. 1, 6 GewO",
+        "Themenpool: vwgo-410"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.310Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Stets die letzte mündliche Verhandlung – auch bei der Anfechtung",
+        "Der Zeitpunkt des ersten Verstoßes",
+        "Die letzte Behördenentscheidung – Besserung zählt bei der Wiedergestattung"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-303",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 22 StGB bei Mittätern: Setzt einer an, sind alle im Versuch",
+      "text": "Versucht, wer nach seiner Vorstellung von der Tat unmittelbar zur Verwirklichung des Tatbestandes ansetzt. Bei Mittätern gilt nach Rspr. und h.M. die Gesamtlösung: Setzt einer im Rahmen des gemeinsamen Tatplans an, treten alle in das Versuchsstadium ein – auch wer noch gar nicht vor Ort ist. Die Einzellösung prüft dagegen jeden Mittäter gesondert.",
+      "norm": "§ 22 StGB · § 25 Abs. 2 StGB",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 25 Abs. 2 StGB",
+        "Themenpool: strafat-303"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.310Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-205",
+      "ueberzeile": "Streitstand GoA",
+      "titel": "Vertrag nichtig, Leistung erbracht: Aufwendungsersatz über GoA?",
+      "norm": "§§ 677, 683, 670 BGB",
+      "optionen": [
+        "Rspr.: GoA anwendbar – wer auf nichtigen Vertrag leistet, führt auch ein fremdes Geschäft.",
+        "Überwiegende Lit.: Nein – die Rückabwicklung regelt allein das Bereicherungsrecht."
+      ],
+      "text": "Klausur: Auch die Rspr. scheitert oft an § 670 BGB – verbotswidrige Aufwendungen darf man nicht für erforderlich halten (BGH zur Schwarzarbeit). Mit der Lit. vermeidest du, dass § 817 S. 2 BGB unterlaufen wird.",
+      "quellen": [
+        "§§ 677, 683, 670 BGB",
+        "§§ 812, 817 S. 2 BGB",
+        "Themenpool: gesetzs-205"
+      ],
+      "fachLabel": "GoA/EBV",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.310Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-636",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "§ 32 BVerfGG: Eilantrag schon vor der Hauptsache möglich",
+      "text": "Die Hauptsache muss noch nicht anhängig sein. Sie darf aber nicht von vornherein unzulässig oder offensichtlich unbegründet sein. Gesetze setzt das BVerfG nur mit größter Zurückhaltung aus.",
+      "norm": "§ 32 Abs. 1 BVerfGG",
+      "quellen": [
+        "§ 32 BVerfGG",
+        "Themenpool: staat-636"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.310Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-013",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Konkretisierung: Aus der Gattungsschuld wird eine Stückschuld",
+      "text": "Hat der Schuldner das seinerseits Erforderliche getan, beschränkt sich die Gattungsschuld auf die ausgewählte Sache. Was erforderlich ist, folgt aus dem Leistungsort (§ 269 BGB): Holschuld – aussondern, Gläubiger benachrichtigen; Bringschuld – beim Gläubiger anbieten; Schickschuld – an die Transportperson übergeben. Geht sie danach unter, wird er frei (§ 275 Abs. 1 BGB).",
+      "norm": "§ 243 Abs. 2 BGB · § 269 BGB",
+      "quellen": [
+        "§ 243 Abs. 2 BGB",
+        "§ 269 BGB",
+        "§ 275 Abs. 1 BGB",
+        "Themenpool: schuld-013"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:30:29.310Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
