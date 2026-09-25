@@ -56,6 +56,8 @@ export async function htmlZuJpeg(html, masse, zielPfad, skala = Number(process.e
     await page.evaluate(einpassen);
     await page.evaluate(coverTitelEinpassen);
     await page.evaluate(coverTitelGeometriePruefen);
+    await page.evaluate(coverMotivEinpassen);
+    await page.evaluate(coverMotivGeometriePruefen);
     await page.evaluate(coverHinweisAusPlanPlatzieren);
     await page.waitForTimeout(60);
     /* NACH dem Einpassen messen: Der Text wird dort verkleinert, bis alles
@@ -301,6 +303,130 @@ function coverTitelGeometriePruefen() {
   if (fehler.length) {
     const art = wurzel.matches(".story.cover") ? "Reel-Cover" : "Beitrags-Cover";
     throw new Error(`${art}-Titel passt nicht in die feste Markenpille: ${fehler.join(" | ")}`);
+  }
+}
+
+/* Nach dem finalen Titelumbruch wird ein unprofiliertes Karussell-Motiv
+   wirklich an den vorhandenen Platz angepasst. Damit ist "Kante an Kante"
+   keine pauschale Regel mehr: Titel/Badge bestimmen pro Cover die verfügbare
+   Bühne, das Motiv bleibt vollständig sichtbar und wird so groß wie möglich.
+   Reel-Cover mit fit-width werden dagegen bewusst vollbreit verankert. */
+function coverMotivEinpassen() {
+  const wurzel = document.querySelector(".folie.art-titel, .story.cover");
+  const motiv = wurzel?.querySelector(".frei.charakter");
+  const img = motiv?.querySelector("img");
+  if (!wurzel || !motiv || !img?.complete || !img.naturalWidth || !img.naturalHeight) return;
+
+  const root = wurzel.getBoundingClientRect();
+
+  if (wurzel.matches(".story.cover")) {
+    if (!motiv.classList.contains("edge-to-edge") || !motiv.classList.contains("fit-width")) return;
+    motiv.style.left = "0px";
+    motiv.style.right = "0px";
+    motiv.style.bottom = "0px";
+    motiv.style.width = "auto";
+    motiv.style.height = "auto";
+    motiv.style.transform = "none";
+    motiv.style.overflow = "visible";
+    img.style.position = "absolute";
+    img.style.left = "0px";
+    img.style.bottom = "0px";
+    img.style.width = "100%";
+    img.style.height = "auto";
+    img.style.objectFit = "contain";
+    img.style.objectPosition = "center bottom";
+    motiv.dataset.autoLayout = "reel-width";
+    return;
+  }
+
+  if (!motiv.classList.contains("auto-layout")) return;
+
+  const titel = wurzel.querySelector("h1.titel-stack, h1");
+  const badge = wurzel.querySelector(".cover-badge");
+  const pille = wurzel.querySelector(".pille");
+  const fuss = wurzel.querySelector(".fuss");
+  const boxen = [titel, badge, pille].filter(Boolean).map((el) => el.getBoundingClientRect());
+  const textUnten = boxen.length ? Math.max(...boxen.map((b) => b.bottom)) : root.top + 300;
+  const safeTop = Math.min(root.bottom - 300, textUnten + 26);
+  /* Die Fußzeile darf auf dem Hintergrund stehen, aber nicht mitten auf
+     Gesichtern/Figuren. Etwas Luft oberhalb der Fußzeile bleibt deshalb frei. */
+  const fussTop = fuss?.getBoundingClientRect().top || root.bottom - 24;
+  const safeBottom = Math.max(safeTop + 260, Math.min(root.bottom - 8, fussTop + 8));
+  const maxW = Math.max(320, root.width - 24);
+  const maxH = Math.max(260, safeBottom - safeTop);
+  const ratio = img.naturalWidth / img.naturalHeight;
+
+  let breite = Math.min(maxW, maxH * ratio);
+  let hoehe = breite / ratio;
+  if (hoehe > maxH) {
+    hoehe = maxH;
+    breite = hoehe * ratio;
+  }
+
+  /* Sehr kleine Ergebnisse sind visuell keine Bühne. Falls der Titel extrem
+     tief reicht, darf das Motiv bis knapp hinter die Fußzeile wachsen; der
+     Text bleibt dennoch komplett frei. */
+  const minFlaeche = root.width * root.height * 0.22;
+  if (breite * hoehe < minFlaeche) {
+    const extraH = Math.max(maxH, root.bottom - safeTop - 4);
+    breite = Math.min(maxW, extraH * ratio);
+    hoehe = breite / ratio;
+    if (hoehe > extraH) {
+      hoehe = extraH;
+      breite = hoehe * ratio;
+    }
+  }
+
+  motiv.style.left = "50%";
+  motiv.style.right = "auto";
+  motiv.style.top = "auto";
+  motiv.style.bottom = "0px";
+  motiv.style.width = `${Math.round(breite)}px`;
+  motiv.style.height = `${Math.round(hoehe)}px`;
+  motiv.style.transform = "translateX(-50%)";
+  motiv.style.overflow = "visible";
+  img.style.width = "100%";
+  img.style.height = "100%";
+  img.style.objectFit = "contain";
+  img.style.objectPosition = "center bottom";
+  motiv.dataset.autoLayout = "carousel-safe";
+  motiv.dataset.safeTop = String(Math.round(safeTop - root.top));
+}
+
+/* Harte Geometrie-QA: Ein Reel-Freisteller muss nahezu die volle Breite
+   erreichen; ein automatisch gesetztes Karussell-Motiv darf den Titelblock
+   nicht überdecken. Fehler werden vor dem JPEG-Export sichtbar statt erst im
+   Dashboard. */
+function coverMotivGeometriePruefen() {
+  const wurzel = document.querySelector(".folie.art-titel, .story.cover");
+  const motiv = wurzel?.querySelector(".frei.charakter");
+  const img = motiv?.querySelector("img");
+  if (!wurzel || !motiv || !img) return;
+  const root = wurzel.getBoundingClientRect();
+  const bild = img.getBoundingClientRect();
+
+  if (motiv.dataset.autoLayout === "reel-width") {
+    if (bild.width < root.width * 0.96 || bild.left > root.left + 22 || bild.right < root.right - 22) {
+      throw new Error(`Reel-Cover-Motiv ist nicht kante-an-kante: ${Math.round(bild.width)}px von ${Math.round(root.width)}px`);
+    }
+    if (Math.abs(bild.bottom - root.bottom) > 6) {
+      throw new Error("Reel-Cover-Motiv ist nicht an der Unterkante verankert.");
+    }
+    return;
+  }
+
+  if (motiv.dataset.autoLayout === "carousel-safe") {
+    const titel = wurzel.querySelector("h1.titel-stack, h1");
+    const badge = wurzel.querySelector(".cover-badge");
+    const pille = wurzel.querySelector(".pille");
+    const textUnten = Math.max(
+      titel?.getBoundingClientRect().bottom || root.top,
+      badge?.getBoundingClientRect().bottom || root.top,
+      pille?.getBoundingClientRect().bottom || root.top,
+    );
+    if (bild.top < textUnten + 12) {
+      throw new Error(`Karussell-Cover-Motiv überdeckt den Titelbereich um ${Math.round(textUnten + 12 - bild.top)}px`);
+    }
   }
 }
 
