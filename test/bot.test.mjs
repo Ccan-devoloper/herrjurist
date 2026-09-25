@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { themenpool, poolStatistik, FAECHER, feedKategorie, feedFolgeErlaubt } from "../src/inhalte.mjs";
 import { pruefeBeitrag, uebernahmen, uebernahmeLaeufe, gesperrteNamen, korpus, firmenNamen, benutzteFirmen, namenSperren } from "../src/pruefung.mjs";
-import { tagesplan, vermerken, ledgerLaden } from "../src/planer.mjs";
+import { tagesplan, vermerken, ledgerLaden, prioritaetsKaskade } from "../src/planer.mjs";
 import { folieHtml, storyHtml, coverHtml, FOLIEN_ARTEN, STORY_ARTEN } from "../src/vorlagen.mjs";
 import { kontext } from "../src/render.mjs";
 import { STILE } from "../src/stile.mjs";
@@ -1995,6 +1995,35 @@ test("Wissensbasis: ohne Schlüssel bleibt der Tresor zu, mit Schlüssel liest e
   /* Ohne Schlüssel kein Index – und vor allem kein Absturz. */
   wissenLeeren();
   assert.deepEqual(wissenIndex({ geheim: "", ordner, neu: true }), []);
+  wissenLeeren();
+});
+
+test("Planer: Wachstumsmodus nimmt erst die Dauerbrenner", () => {
+  const mach = (prioritaet, n) => Array.from({ length: n }, (_, i) => ({ id: `${prioritaet}-${i}`, prioritaet }));
+  /* Genug 🔴 im Slot: nur 🔴 kommt in die Wahl. */
+  assert.ok(prioritaetsKaskade([...mach("hoch", 4), ...mach("mittel", 5), ...mach("selten", 5)]).every((t) => t.prioritaet === "hoch"));
+  /* 🔴 fast aufgebraucht (in der Sperre): 🟠 rückt nach, 🟢 noch nicht. */
+  const zweite = prioritaetsKaskade([...mach("hoch", 2), ...mach("mittel", 3), ...mach("selten", 5)]);
+  assert.equal(zweite.length, 5);
+  assert.ok(zweite.every((t) => t.prioritaet !== "selten"));
+  /* Alles knapp: die ganze Liste bleibt, damit der Slot nie leer ausgeht. */
+  assert.equal(prioritaetsKaskade([...mach("hoch", 1), ...mach("selten", 2)]).length, 3);
+});
+
+test("Wissensbasis: Länderkapitel sind keine Belegstelle für Bundesthemen", async () => {
+  const { wissenFuer, wissenLeeren } = await import("../src/wissen.mjs");
+  const ordner = await fs.promises.mkdtemp(path.join(os.tmpdir(), "wissen-"));
+  await fs.promises.writeFile(path.join(ordner, "band-73-audit.txt"),
+    "# Band 73 – Vollinhaltsaudit\n\n# 3921. Kommunalaufsicht (Bayern)\nArt. 108 ff. BayGO, Mittel der Rechtsaufsicht, Beanstandung und Ersatzvornahme in Bayern.\n\n# 3999. Mittel der Kommunalaufsicht\nRechtsaufsicht und Fachaufsicht, Beanstandung, Anordnung, Ersatzvornahme, Bestellung eines Beauftragten.\n");
+  /* Ein allgemeines Thema bekommt das allgemeine Kapitel - das Bayern-Kapitel
+     wäre genau die Fixierung auf ein Land, die der Kanal vermeidet. */
+  wissenLeeren();
+  const treffer = wissenFuer({ titel: "Mittel der Kommunalaufsicht und Rechtsschutz der Gemeinde", klausur: 3, normen: [], kern: {} }, { ordner, neu: true });
+  assert.equal(treffer?.nr, "3999");
+  /* Nennt das Thema das Land selbst, darf das Länderkapitel gewinnen. */
+  wissenLeeren();
+  const bayern = wissenFuer({ titel: "Kommunalaufsicht in Bayern", klausur: 3, normen: [], kern: {} }, { ordner, neu: true });
+  assert.equal(bayern?.nr, "3921");
   wissenLeeren();
 });
 

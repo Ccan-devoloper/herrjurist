@@ -87,6 +87,13 @@ export const CONFIG = {
     storyArtTakt: { formel: 21 },
     /* Gewichtung nach Examenspriorität (🔴/🟠/🟢) – wie auf der Webseite. */
     prioritaetGewicht: { hoch: 60, mittel: 25, selten: 15 },
+    /* Wachstum vor Vollständigkeit: Solange ein Slot genug freie 🔴-Themen
+       hat (Dauerbrenner, Klassiker, Schemata – das, was gespeichert und an
+       Lerngruppen weitergeleitet wird), kommen nur sie in die engere Wahl.
+       🟠 rückt nach, wenn 🔴 in der Wiederholsperre steckt oder der Slot zu
+       schmal ist, 🟢 zuletzt. Die 60/25/15-Gewichtung ordnet dann nur noch
+       innerhalb der Stufe. IG_VIRAL_VORRANG=false stellt zurück um. */
+    viralVorrang: env("IG_VIRAL_VORRANG", "true") === "true",
     /* Wöchentlicher Formatplan der Beiträge (0 = Sonntag). Ein Format aus
        autor.mjs → FORMATE. "aktuell" recherchiert im Web. */
     /* Zwei Beiträge je Tag (Tagesbudget 0,25 €); an Reel-Tagen ersetzt das

@@ -76,6 +76,20 @@ export function gebieteDesTages(datum, plaetze) {
   return Array.from({ length: Math.max(0, plaetze) }, (_, i) => ((start + i) % 3) + 1);
 }
 
+/* Wachstumsmodus: erst die Dauerbrenner. Eine Stufe zählt nur, wenn sie
+   genug Auswahl lässt (vier Kandidaten, wie im Endspurt) – sonst rückt die
+   nächste nach. So „gehen die 🔴-Themen aus“ (in die Wiederholsperre),
+   bevor 🟠 drankommt, und 🟢 bleibt der Nachschub für lange Tage. Greift
+   nach allen anderen Filtern, damit die Stufe im tatsächlichen Slot
+   (Format, Gebiet, Sperre) gebildet wird und nicht am ganzen Pool. */
+export function prioritaetsKaskade(kandidaten, mindestens = 4) {
+  if (!CONFIG.plan.viralVorrang) return kandidaten;
+  const hoch = kandidaten.filter((t) => t.prioritaet === "hoch");
+  if (hoch.length >= mindestens) return hoch;
+  const wichtig = kandidaten.filter((t) => t.prioritaet !== "selten");
+  return wichtig.length >= mindestens ? wichtig : kandidaten;
+}
+
 function gewichteteWahl(kandidaten, zufall, ledger, strategie = null) {
   const g = CONFIG.plan.prioritaetGewicht;
   const zaehler = ledger.fachZaehler || {};
@@ -87,6 +101,9 @@ function gewichteteWahl(kandidaten, zufall, ledger, strategie = null) {
        so bleibt das Profil für alle drei Klausuren interessant. */
     const rueckstand = (zaehler[t.fach] || 0) - minFach;
     w *= rueckstand === 0 ? 1.6 : rueckstand === 1 ? 1.2 : 1;
+    /* Streitstände sind die Beiträge, die gespeichert und weitergeleitet
+       werden – leichter Schub, die Stufenwahl darüber bleibt maßgeblich. */
+    if (t.streit) w *= 1.25;
     return w;
   });
   const summe = gewichte.reduce((a, b) => a + b, 0);
@@ -266,7 +283,7 @@ export function tagesplan(datum = heuteIso(), ledger = ledgerLaden(), pool = the
       const notfall = ziel != null
         ? pool.filter((t) => typen.includes(t.typ) && t.klausur === ziel)
         : pool.filter((t) => typen.includes(t.typ));
-      thema = gewichteteWahl(kandidaten.length ? kandidaten : notfall, zufall, ledgerKopie, strategie);
+      thema = gewichteteWahl(prioritaetsKaskade(kandidaten.length ? kandidaten : notfall), zufall, ledgerKopie, strategie);
       /* War das Thema schon einmal dran, reist die Vorgeschichte mit: Format,
          Hook und Titel von damals. Der Autor darf sich davon nicht wiederholen. */
       const alt = vorher.get(thema.id);
@@ -369,7 +386,7 @@ export function auffuellplan(anzahl, ledger = ledgerLaden(), pool = themenpool()
     const format = formate[i % formate.length];
     const typen = FORMAT_QUELLEN[format] || ["modul"];
     const kandidaten = verfuegbar(pool, ledgerKopie, heute, benutzt).filter((t) => typen.includes(t.typ));
-    const thema = gewichteteWahl(kandidaten.length ? kandidaten : pool.filter((t) => typen.includes(t.typ)), zufall, ledgerKopie);
+    const thema = gewichteteWahl(prioritaetsKaskade(kandidaten.length ? kandidaten : pool.filter((t) => typen.includes(t.typ))), zufall, ledgerKopie);
     benutzt.add(thema.id);
     ledgerKopie.fachZaehler[thema.fach] = (ledgerKopie.fachZaehler[thema.fach] || 0) + 1;
     liste.push({ slot: `f${i + 1}`, format, thema });

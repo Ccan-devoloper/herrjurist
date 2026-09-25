@@ -65,8 +65,13 @@ Rechenweg · Mini-Fall (frei erfunden) · Gegenüberstellung · Klausurtechnik �
 **Story-Arten**: Teaser zum Beitrag · Prüfungsfrage + Auflösung (direkt hintereinander) · Norm des Tages · Merksatz ·
 Rechenweg · Begriff · Fehlerfalle · Klausurtipp · Zahl des Tages · Countdown bis zur Prüfung.
 
-Themenwahl: gewichtet nach Examenspriorität der Webseite (🔴 60 % / 🟠 25 % / 🟢 15 %), Rotation über
-alle Fächer, ein Thema frühestens nach 60 Tagen erneut (Ledger im Asset-Zweig).
+Themenwahl: **Wachstum zuerst.** Solange ein Slot genug freie 🔴-Themen hat (Dauerbrenner, Klassiker,
+Aufbauschemata – das, was gespeichert und weitergeleitet wird), kommen nur sie in die engere Wahl;
+🟠 rückt nach, wenn 🔴 in der Wiederholsperre steckt, 🟢 zuletzt (`IG_VIRAL_VORRANG=false` stellt auf
+die reine 60/25/15-Gewichtung zurück). Darunter: Rotation über alle Fächer, leichter Bonus für
+Streitstände, ein Thema frühestens nach 200 Tagen erneut (Ledger im Asset-Zweig). Landesrechtliches
+erscheint bundesweit gedacht: Grundsätze statt Einzel-Land, konkrete Normen im Ländervergleich – und
+ein Kapitel, das nur ein Bundesland behandelt, wird nie von allein zur Belegstelle.
 
 **Optik**: Kanzlei-Stil, Kachel für Kachel im Wechsel Schwarz und Weiß (Schachbrett im Profil;
 `IG_STIL_WECHSEL=false` schaltet das ab). Auf keiner Folie steht ein Name, ein Handle oder eine

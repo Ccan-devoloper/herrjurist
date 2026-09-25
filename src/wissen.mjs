@@ -209,6 +209,14 @@ const TITEL_GEBIET = [
 
 const REGISTER_BAENDE = new Set([7, 42, 43, 44, 45]);
 
+/* Kapitel, die ein einzelnes Bundesland durchdeklinieren („… (Bayern)“):
+   Als Belegstelle für ein allgemeines Thema wären sie genau die Fixierung
+   auf ein Land, die der Kanal vermeidet – der Beitrag soll bundesweit
+   tragen und auf Länderunterschiede nur hinweisen. Von allein wird so ein
+   Kapitel darum nie gewählt; ein Zeiger am Thema darf weiter gezielt
+   hinein zeigen, etwa für einen echten Ländervergleich. */
+const LAND_KAPITEL = /\((Baden-Württemberg|Bayern|Berlin|Brandenburg|Bremen|Hamburg|Hessen|Mecklenburg-Vorpommern|Niedersachsen|Nordrhein-Westfalen|Rheinland-Pfalz|Saarland|Sachsen|Sachsen-Anhalt|Schleswig-Holstein|Thüringen)\)/;
+
 export function kapitelGebiet(kapitel) {
   const fest = BAND_GEBIET[kapitel.band];
   if (fest) return fest;
@@ -263,6 +271,8 @@ export function wissenFuer(thema, opt = {}) {
        Vollständigkeit halber im Tresor; ein Zeiger am Thema darf weiter
        hinein zeigen, von allein gewählt werden sie nicht. */
     if (REGISTER_BAENDE.has(k.band)) continue;
+    const land = LAND_KAPITEL.exec(k.titel);
+    if (land && !thema.titel.includes(land[1])) continue;
     /* Sammelkapitel sind Behälter, keine Fundstellen: "Weitere Vollfälle"
        fasst 380 KB aus allen drei Gebieten zusammen und gewinnt allein durch
        seine Länge jeden Wortabgleich - der Auszug daraus wäre dann der erste
