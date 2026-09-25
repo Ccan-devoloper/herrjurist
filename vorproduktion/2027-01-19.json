@@ -1,0 +1,851 @@
+{
+  "datum": "2027-01-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "assessoroer-713",
+        "themaTitel": "Aktenvortrag Öffentliches Recht",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "assessorz-581",
+        "themaTitel": "Anwaltsklausur: Klageentwurf",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-857",
+        "themaTitel": "Was steht im abstrakten Anklagesatz?",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "assessorz-803"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "assessorz-803"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "bgbat-002"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "zahl",
+        "themaId": "revision-887"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "streitstand",
+        "themaId": "ipr-935"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "merksatz",
+        "themaId": "methodik-905"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "assessoroer-713",
+      "poolTitel": "Aktenvortrag Öffentliches Recht",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO; materielles Recht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "assessorz-581",
+      "poolTitel": "Anwaltsklausur: Klageentwurf",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-857",
+      "poolTitel": "Was steht im abstrakten Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2027-01-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-803",
+      "poolTitel": "Was steht im Bearbeitervermerk und warum liest man ihn zuerst?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-803",
+      "poolTitel": "Was steht im Bearbeitervermerk und warum liest man ihn zuerst?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-002",
+      "poolTitel": "Wie erfolgt die Abgrenzung zwischen Vertrag und Gefälligkeit?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB",
+        "§ 241 Abs. 1 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "revision-887",
+      "poolTitel": "Wie entscheidet das Revisionsgericht?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 349 StPO",
+        "§ 353 StPO",
+        "§ 354 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25",
+        "2026-11-27"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "ipr-935",
+      "poolTitel": "Wie knüpft man die Vorfrage im IPR an – selbständig oder unselbständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 EGBGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-16"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "methodik-905",
+      "poolTitel": "Prozessrecht früh erkennen und einbauen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-24",
+        "2026-11-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-713",
+      "slug": "2027-01-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sofortvollzug angeordnet: Musste die Behörde vorher anhören?",
+          "titelZeilen": [
+            "Sofortvollzug",
+            "angeordnet: Musste",
+            "die Behörde vorher",
+            "anhören?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Nach h.M. zählt nur die Begründung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Aktenvortrag zum Eilantrag nach § 80 Abs. 5 VwGO: Der Antragsteller rügt, die Behörde habe ihn vor der Anordnung der sofortigen Vollziehung nicht angehört. § 80 Abs. 3 VwGO verlangt nur eine schriftliche Begründung. Gilt daneben § 28 VwVfG?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Anhörung vor dem Sofortvollzug?",
+          "links": {
+            "titel": "h.M. (überwiegende Rspr.)",
+            "punkte": [
+              "Nicht erforderlich: Die Anordnung ist kein Verwaltungsakt.",
+              "§ 80 III VwGO regelt die formellen Anforderungen abschließend."
+            ]
+          },
+          "rechts": {
+            "titel": "Andere Ansicht",
+            "punkte": [
+              "§ 28 VwVfG analog: Die Anordnung belastet wie ein eigener Eingriff.",
+              "Der Betroffene soll vor dem Sofortvollzug Gehör finden."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme",
+          "text": "Für die h.M. spricht: Der Gesetzgeber hat in § 80 Abs. 3 VwGO bewusst nur die Begründung verlangt – eine planwidrige Lücke ist nicht erkennbar. Gehör findet der Betroffene zum Grundverwaltungsakt und im gerichtlichen Eilverfahren."
+        },
+        {
+          "art": "text",
+          "titel": "So klingt es im Vortrag",
+          "text": "Zuhörer können nicht zurückblättern. Deshalb: Problem in einem Satz, beide Ansichten in je einem Satz, Entscheidung mit dem tragenden Argument – dann weiter zur Begründung nach § 80 Abs. 3 VwGO. Details des Vortrags regeln die Länder unterschiedlich."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anhörung vor dem Sofortvollzug: nach h.M. nicht nötig. Formell zählt die schriftliche, einzelfallbezogene Begründung (§ 80 Abs. 3 VwGO)."
+        },
+        {
+          "art": "cta",
+          "titel": "Formelle Prüfung der Anordnung",
+          "punkte": [
+            "Zuständige Behörde?",
+            "Anhörung: nach h.M. entbehrlich",
+            "Schriftliche Begründung im Einzelfall?"
+          ],
+          "icons": [
+            "gebaeude",
+            "person",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Sofortvollzug angeordnet, ohne vorher anzuhören – ein formeller Fehler? Nach h.M. nicht: Die Anordnung nach § 80 Abs. 2 S. 1 Nr. 4 VwGO ist kein Verwaltungsakt, und § 80 Abs. 3 VwGO regelt ihre formellen Anforderungen abschließend. Die Gegenansicht wendet § 28 VwVfG analog an. Im Aktenvortrag heißt das: Streit kurz darstellen, entscheiden, weiter zur Begründung. Speichern für den nächsten Aktenvortrag.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#aktenvortrag",
+        "#vwgo",
+        "#80vwgo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aktenvortrag ÖR: Anhörung vor dem Sofortvollzug?",
+      "coverText": "Nach h.M. zählt nur die Begründung",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Vor der Anordnung der sofortigen Vollziehung verlangt das Gesetz eine Begründung – eine eigene Anhörung nach h.M. nicht.",
+        "handlung": "{A} hovers beside a gate and holds out a written note of reasons, while {B} stands in front of the gate and glances at an empty chair where a hearing might have taken place.",
+        "hinweisRegie": "Place the note in the free space between the written reasons and the empty chair, slightly tilted toward the reasons, so the decisive formal requirement is highlighted without covering {B}'s face.",
+        "alternative": "{B} speaks to a small audience with only a single card in hand while {A} hovers behind her and holds up the one card that counts."
+      },
+      "bildSzene": "droid holds reasons, empty chair beside",
+      "bildSzeneAlt": "speaker with one card, small audience",
+      "quellen": [
+        "§ 80 Abs. 2 S. 1 Nr. 4, Abs. 3, Abs. 5 VwGO",
+        "§ 28 VwVfG",
+        "Themenpool: assessoroer-713"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-581",
+      "slug": "2027-01-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "„Meine Möbel zurück“ – so vollstreckt kein Gerichtsvollzieher",
+          "titelZeilen": [
+            "„Meine Möbel",
+            "zurück“ – so",
+            "vollstreckt kein",
+            "Gerichtsvollzieher"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Der Tenor muss vollstreckbar sein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Mandantin M hat ihrem früheren Partner B beim Auszug einen Esstisch, sechs Stühle und ein Regal geliehen – ohne Zeitvorgabe. B gibt sie trotz Aufforderung nicht heraus. M: „Ich will meine Möbel zurück.“ Aufgabe: Entwirf die Klageschrift."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Anspruch",
+              "text": "§ 604 Abs. 3 BGB: Ist die Dauer der Leihe nicht bestimmt, kann M jederzeit zurückfordern. Daneben § 985 BGB."
+            },
+            {
+              "titel": "Zuständigkeit",
+              "text": "Örtlich: Wohnsitz des B (§§ 12, 13 ZPO). Sachlich: nach dem Wert der Möbel (§§ 23 Nr. 1, 71 Abs. 1 GVG)."
+            },
+            {
+              "titel": "Bestimmter Antrag",
+              "text": "§ 253 Abs. 2 Nr. 2 ZPO: Jeder Gegenstand so genau bezeichnet, dass der Gerichtsvollzieher ihn findet (§ 883 ZPO)."
+            },
+            {
+              "titel": "Zweckmäßigkeit",
+              "text": "Den Antrag auf Versäumnisurteil im schriftlichen Vorverfahren gleich in die Klageschrift aufnehmen (§ 331 Abs. 3 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "„Der Beklagte wird verurteilt, an die Klägerin herauszugeben: einen Esstisch aus Eiche, Maße …, sechs Stühle …, ein Regal …“ – jeweils mit Merkmalen, die sie unverwechselbar machen. „Die Möbel der Klägerin“ genügt nicht: Damit ist nicht vollstreckbar, was genau weggenommen werden soll."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bestimmt ist ein Antrag erst, wenn der Gerichtsvollzieher mit dem Tenor allein weiß, was er wegnehmen soll."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Absenden prüfen",
+          "punkte": [
+            "Anspruchsgrundlage gefunden?",
+            "Gericht örtlich und sachlich zuständig?",
+            "Antrag vollstreckungsfähig?",
+            "VU-Antrag gleich mitgestellt?"
+          ],
+          "icons": [
+            "paragraf",
+            "gericht",
+            "lupe",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "„Ich will meine Möbel zurück“ ist ein Mandantenwunsch, kein Klageantrag. In der Anwaltsklausur muss der Antrag nach § 253 Abs. 2 Nr. 2 ZPO so bestimmt sein, dass der Gerichtsvollzieher allein mit dem Tenor weiß, welche Sachen er wegnimmt (§ 883 ZPO). Dazu: Anspruchsgrundlage, Zuständigkeit und – zweckmäßig – der Antrag nach § 331 Abs. 3 ZPO. Speichern für die nächste Anwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#anwaltsklausur",
+        "#klageschrift",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klageentwurf: Wann ist der Antrag bestimmt?",
+      "coverText": "Der Tenor muss vollstreckbar sein",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Ein Herausgabeantrag muss jede Sache so genau bezeichnen, dass sie ohne Rückfrage abgeholt werden kann.",
+        "handlung": "{A} stands in a crowded storage hall with a vague list in hand, while {B} curiously sticks precise tags onto one table, six chairs and one shelf so they can be picked out.",
+        "hinweisRegie": "Place the note in the free space above the tagged furniture, slightly tilted toward the tags, so the precise description is linked to the note without covering {A}'s vague list.",
+        "alternative": "{B} hands {A} a delivery slip that only says 'things' while {A} scratches his head in front of a huge pile of crates."
+      },
+      "bildSzene": "precise tags on furniture in storage",
+      "bildSzeneAlt": "vague delivery slip, huge crate pile",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 883 ZPO",
+        "§ 331 Abs. 3 ZPO",
+        "§§ 12, 13 ZPO",
+        "§§ 23, 71 GVG",
+        "§ 604 Abs. 3 BGB",
+        "§ 985 BGB",
+        "Themenpool: assessorz-581"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-vollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-857",
+      "slug": "2027-01-19-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Das Handy gehört nicht in den abstrakten Anklagesatz",
+          "unter": "Anklageschrift · § 200 Abs. 1 StPO",
+          "text": "Abstrakt heißt: die Tat in den Worten des Gesetzes.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "icon": "dokument",
+          "sprecher": "Das Handy gehört nicht in den abstrakten Anklagesatz. Dort steht die Tat in den Worten des Gesetzes: eine fremde bewegliche Sache, kein Smartphone. Das Handy kommt erst im konkreten Anklagesatz.",
+          "marken": [
+            "Gesetzesworte",
+            "kein Handy"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gesetzesworte statt Geschichte",
+          "text": "„Eine fremde bewegliche Sache weggenommen“ – nicht „das Handy des O“.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "sprecher": "Schritt eins: Du übersetzt die Tat in die Merkmale des Straftatbestands. Was genau weggenommen wurde und wem, erzählst du hier nicht. Hier steht nur, welche gesetzlichen Merkmale verwirklicht sein sollen.",
+          "marken": [
+            "Tatbestand"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zeit und Ort",
+          "text": "Tatzeit und Tatort stehen meist schon hier – die Form variiert je nach Land.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Tatzeit und Tatort. Sie werden in der Praxis meist schon dem abstrakten Anklagesatz vorangestellt. Die genaue Formulierung unterscheidet sich je nach Land.",
+          "marken": [
+            "wann und wo"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Versuch, Beteiligung, Qualifikation",
+          "text": "„gemeinschaftlich handelnd“, „versucht zu haben“, „mit einer Waffe“.",
+          "norm": null,
+          "sprecher": "Schritt drei: Alles, was die rechtliche Bewertung verändert, gehört auch abstrakt hinein. Also gemeinschaftliches Handeln, der Versuch oder ein Qualifikationsmerkmal, jeweils in der Sprache des Gesetzes.",
+          "marken": [
+            "Bewertung sichtbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Mehrere Gesetzesverletzungen",
+          "text": "„durch dieselbe Handlung“ oder „durch zwei selbständige Handlungen“.",
+          "norm": "§§ 52, 53 StGB",
+          "sprecher": "Schritt vier: die Konkurrenzen. Tateinheit drückst du mit „durch dieselbe Handlung“ aus, Tatmehrheit mit „durch zwei selbständige Handlungen“. So sieht das Gericht sofort, wie du die Taten bewertest.",
+          "marken": [
+            "Tateinheit?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und wo steht das Handy?",
+          "text": "Im konkreten Anklagesatz: jedes Merkmal durch Tatsachen belegt.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "sprecher": "Und wo steht jetzt das Handy? Im konkreten Anklagesatz. Dort schilderst du das Geschehen so, dass jedes gesetzliche Merkmal durch eine Tatsache gedeckt ist.",
+          "marken": [
+            "konkret = Tatsachen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Abstrakt: was das Gesetz verlangt. Konkret: was geschehen sein soll.",
+          "norm": null,
+          "sprecher": "Merke: Der abstrakte Anklagesatz sagt, was das Gesetz verlangt. Der konkrete sagt, was der Angeschuldigte getan haben soll.",
+          "marken": [
+            "Gesetz vs. Geschehen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Am Ende gegen den Gesetzestext lesen",
+          "text": "Speichern für die nächste Anklageschrift.",
+          "sprecher": "Speicher dir das für die nächste Anklageschrift. Und lies deinen abstrakten Anklagesatz am Ende einmal Wort für Wort gegen den Gesetzestext.",
+          "marken": [
+            "gegenlesen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Das Handy gehört nicht in den abstrakten Anklagesatz. Dort steht die Tat in den Worten des Gesetzes – „eine fremde bewegliche Sache“ –, dazu Versuch, Beteiligung, Qualifikation und Konkurrenzen, ebenfalls in Gesetzessprache. Das konkrete Geschehen mit Handy, Opfer und Ablauf folgt im konkreten Anklagesatz (§ 200 Abs. 1 S. 1 StPO). Die Formulierungspraxis unterscheidet sich je nach Land im Detail.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#200stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abstrakter Anklagesatz: Gesetz statt Geschichte",
+      "titelZeilen": [
+        "Das Handy gehört",
+        "nicht in den",
+        "abstrakten",
+        "Anklagesatz"
+      ],
+      "coverText": "Abstrakt: Gesetz. Konkret: Geschehen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Im abstrakten Anklagesatz steht die Tat in Gesetzesworten – die konkreten Gegenstände kommen erst danach.",
+        "handlung": "{A} gently takes a small phone out of a neat outline frame and places it on a second tray beside it, while {B} nervously checks that the frame still shows only an empty shape.",
+        "hinweisRegie": "Place the note in the free space between the empty outline frame and the second tray, slightly tilted toward the frame, so it marks the abstract level without covering the phone or {B}'s hands.",
+        "alternative": "{B} sorts building blocks into a plain grey box and a colourful box while {A} points to which one holds the general shapes."
+      },
+      "bildSzene": "phone moved from outline frame to tray",
+      "bildSzeneAlt": "grey box versus colourful box",
+      "quellen": [
+        "§ 200 Abs. 1 S. 1 StPO",
+        "§§ 52, 53 StGB",
+        "Themenpool: anklage-857"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "falscher-ort",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-803",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "Assessorklausur: Warum liest du den Bearbeitervermerk vor dem Aktenauszug?",
+      "optionen": [
+        "Weil dort meist schon die Lösung angedeutet ist",
+        "Weil nur er bewertet wird – der Aktenauszug ist Beiwerk",
+        "Weil er Aufgabe, Perspektive und Unterstellungen festlegt"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 313 ZPO",
+        "Themenpool: assessorz-803"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-803",
+      "ueberzeile": "Auflösung",
+      "titel": "Er legt Aufgabe, Perspektive und Unterstellungen fest",
+      "text": "Der Bearbeitervermerk sagt, was du entwirfst (Urteil, Beschluss, Schriftsatz, Gutachten), aus wessen Sicht, was erlassen ist (etwa der Tatbestand) und was du unterstellen darfst (etwa ordnungsgemäße Zustellungen). Oft verlangt er für Fragen, auf die es nicht ankommt, ein Hilfsgutachten. Wer ihn zuletzt liest, liest die Akte mit der falschen Brille.",
+      "norm": "§ 313 ZPO",
+      "quellen": [
+        "§ 313 ZPO",
+        "Themenpool: assessorz-803"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.188Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Weil dort meist schon die Lösung angedeutet ist",
+        "Weil nur er bewertet wird – der Aktenauszug ist Beiwerk",
+        "Weil er Aufgabe, Perspektive und Unterstellungen festlegt"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-002",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 241 Abs. 1 BGB: Nicht jede Zusage begründet ein Schuldverhältnis",
+      "text": "Ob Vertrag oder bloße Gefälligkeit, entscheidet der Rechtsbindungswille – objektiv aus Sicht des Empfängers (§§ 133, 157 BGB). Indizien: wirtschaftliche Bedeutung, erkennbares Interesse des Begünstigten, Wert anvertrauter Güter, Haftungsrisiko. Beispiel: Wer für die Lottogemeinschaft den Schein abgibt, will nach dem BGH nicht für einen entgangenen Gewinn haften.",
+      "norm": "§ 241 Abs. 1 BGB",
+      "quellen": [
+        "§ 241 Abs. 1 BGB",
+        "§§ 133, 157 BGB",
+        "BGH (Lottogemeinschaft)",
+        "Themenpool: bgbat-002"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-887",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "§ 354 Abs. 1 StPO: Wann das Revisionsgericht selbst in der Sache entscheidet",
+      "text": "Regel: aufheben und zurückverweisen (§ 354 Abs. 2 StPO). Selbst entscheiden darf das Revisionsgericht nur, wenn allein das Recht falsch auf die Feststellungen angewandt wurde und keine weiteren tatsächlichen Erörterungen nötig sind – und nur auf:",
+      "punkte": [
+        "Freisprechung",
+        "Einstellung",
+        "eine absolut bestimmte Strafe",
+        "Mindeststrafe oder Absehen von Strafe – mit StA-Antrag"
+      ],
+      "quellen": [
+        "§ 354 Abs. 1, 2 StPO",
+        "Themenpool: revision-887"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-935",
+      "ueberzeile": "Streitstand IPR",
+      "titel": "Vorfrage im IPR: Welcher Entscheidungseinklang hat Vorrang?",
+      "norm": "Art. 3 EGBGB",
+      "optionen": [
+        "Selbständige Anknüpfung (h.M.): nach dem IPR des Forums – innerer Entscheidungseinklang.",
+        "Unselbständige Anknüpfung: nach dem IPR der lex causae – äußerer Entscheidungseinklang mit dem Ausland."
+      ],
+      "text": "Argument der h.M.: Dieselbe Rechtsfrage, etwa ob eine Ehe wirksam ist, soll vor deutschen Gerichten gleich beantwortet werden – egal, in welchem Zusammenhang sie auftaucht. Klausur: Vorfrage erkennen, grundsätzlich selbständig anknüpfen und den Streit nur vertiefen, wenn die Ergebnisse auseinanderfallen.",
+      "quellen": [
+        "Art. 3 EGBGB",
+        "Themenpool: ipr-935"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-905",
+      "ueberzeile": "Merksatz Klausurtechnik",
+      "titel": "Prozessrecht endet nicht mit der Zulässigkeit",
+      "text": "Auch die Begründetheit kennt Prozessrecht: verspäteter Vortrag (§ 296 ZPO), Geständnisfiktion (§ 138 Abs. 3 ZPO), Beweislast. Prüf es dort, wo es das Ergebnis trägt – nicht im Anhang.",
+      "norm": "§ 138 Abs. 3 ZPO · § 296 ZPO",
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 296 ZPO",
+        "Themenpool: methodik-905"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:58.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,864 @@
+{
+  "datum": "2027-01-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "assessoroer-708",
+        "themaTitel": "Behördenklausur: Ausgangsbescheid strukturieren",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "zwangsv-566",
+        "themaTitel": "Vollstreckungsklausel und Klauselrechtsbehelfe",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-306",
+        "themaTitel": "Wann liegt Mittäterschaft vor?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "bgbat-007"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "bgbat-007"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "sachen-235"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "tipp",
+        "themaId": "assessoroer-710"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "zahl",
+        "themaId": "revision-886"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "streitstand",
+        "themaId": "streit-12"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "assessoroer-708",
+      "poolTitel": "Behördenklausur: Ausgangsbescheid strukturieren",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwVfG; Spezialgesetz"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "zwangsv-566",
+      "poolTitel": "Vollstreckungsklausel und Klauselrechtsbehelfe",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 724 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-27"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-306",
+      "poolTitel": "Wann liegt Mittäterschaft vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-007",
+      "poolTitel": "Wann liegt ein Insichgeschäft vor und wann ist es zulässig?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 181 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-007",
+      "poolTitel": "Wann liegt ein Insichgeschäft vor und wann ist es zulässig?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 181 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-235",
+      "poolTitel": "Was bewirkt eine Vormerkung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 883 BGB",
+        "§ 888 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-18",
+        "2026-09-24"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "assessoroer-710",
+      "poolTitel": "Anwaltsklausur: verwaltungsrechtliches Gutachten und Mandantenschreiben",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-10-27"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "revision-886",
+      "poolTitel": "Was verbietet das Verschlechterungsverbot?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 358 Abs. 2 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "streit-12",
+      "poolTitel": "Jahresfrist des § 48 Abs. 4 VwVfG: Bearbeitungs- oder Entscheidungsfrist?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 Abs. 4 VwVfG"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-708",
+      "slug": "2027-01-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ausgangsbescheid: fünf Bausteine in fester Reihenfolge",
+          "titelZeilen": [
+            "Ausgangsbescheid:",
+            "fünf Bausteine in",
+            "fester Reihenfolge"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Tenor vorn, Urteilsstil danach",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Du entwirfst als Bauaufsichtsbehörde eine Beseitigungsanordnung für eine ohne Genehmigung errichtete Garage. Sie soll sofort vollziehbar sein, dazu kommt eine Zwangsgeldandrohung. Wie baust du den Bescheid auf?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Aufbau, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Kopf",
+              "text": "Behörde, Datum, Aktenzeichen, Adressat mit Zustellungsvermerk, Betreff."
+            },
+            {
+              "titel": "2. Tenor",
+              "text": "Nummerierte Verfügungen: Grundverfügung (hinreichend bestimmt, § 37 Abs. 1 VwVfG), Sofortvollzug, Zwangsmittelandrohung, Kosten."
+            },
+            {
+              "titel": "3. Begründung",
+              "text": "Sachverhalt, dann die rechtlichen Gründe für jede Tenornummer in derselben Reihenfolge (§ 39 Abs. 1 VwVfG)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Aufbau, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Sofortvollzug gesondert",
+              "text": "Eigene Begründung des besonderen Vollzugsinteresses (§ 80 Abs. 3 S. 1 VwGO) – nicht bloß die Gründe der Grundverfügung."
+            },
+            {
+              "titel": "5. Belehrung und Schluss",
+              "text": "Rechtsbehelfsbelehrung (§ 58 VwGO): Widerspruch oder Klage je nach Landesrecht. Dann Unterschrift."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Begründung im Gutachtenstil: „Fraglich ist, ob …“. Ein Bescheid entscheidet und begründet im Urteilsstil: Ergebnis zuerst, dann „denn“. Und bei Ermessen nennst du die Gesichtspunkte, von denen die Behörde ausgegangen ist (§ 39 Abs. 1 S. 3 VwVfG)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tenor vorn, jede Nummer später im Urteilsstil begründet – den Sofortvollzug eigens."
+        },
+        {
+          "art": "cta",
+          "titel": "Der Bescheid in vier Zügen",
+          "punkte": [
+            "Tenor mit nummerierten Verfügungen",
+            "Begründung in Tenor-Reihenfolge",
+            "Sofortvollzug eigens begründen",
+            "Rechtsbehelfsbelehrung nicht vergessen"
+          ],
+          "icons": [
+            "klemmbrett",
+            "dokument",
+            "uhr",
+            "schriftrolle"
+          ]
+        }
+      ],
+      "caption": "Ein Ausgangsbescheid hat fünf Bausteine in fester Reihenfolge: Kopf, Tenor, Begründung, gesonderte Begründung des Sofortvollzugs und Rechtsbehelfsbelehrung. Im Tenor stehen die Verfügungen nummeriert, die Begründung folgt derselben Reihenfolge – im Urteilsstil, nicht als Gutachten. § 80 Abs. 3 S. 1 VwGO verlangt für die sofortige Vollziehung eine eigene Begründung. Speichern für die nächste Behördenklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#bescheid",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ausgangsbescheid: der Aufbau",
+      "coverText": "Tenor vorn, Urteilsstil danach",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Ein Bescheid steht wie ein Bauwerk: erst die Entscheidung, dann ihre Begründung Stein für Stein.",
+        "handlung": "{A} hovers and stacks five labelled-by-shape building blocks into a neat tower in fixed order, while {B} nervously tries to slide the second block underneath the whole tower.",
+        "hinweisRegie": "Place the note in the open space beside the second block of the tower, slightly tilted toward it, so it marks the decisive order without covering {B}'s hands or the top of the tower.",
+        "alternative": "{B} hands over a sealed envelope first and only then unfolds a long explanatory scroll behind it, while {A} checks the order with a small lamp."
+      },
+      "bildSzene": "droid stacks five blocks in order",
+      "bildSzeneAlt": "sealed envelope first, scroll behind",
+      "quellen": [
+        "§ 37 Abs. 1 VwVfG",
+        "§ 39 Abs. 1 VwVfG",
+        "§ 80 Abs. 2 S. 1 Nr. 4, Abs. 3 VwGO",
+        "§ 58 VwGO",
+        "Themenpool: assessoroer-708"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-bausteine",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.154Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-566",
+      "slug": "2027-01-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vollstreckungsklausel: vier Rechtsbehelfe, zwei Seiten",
+          "titelZeilen": [
+            "Vollstreckungs-",
+            "klausel: vier Rechts-",
+            "behelfe, zwei Seiten"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Klausel oder Anspruch angreifen?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Vollstreckt wird aus Titel, Klausel und Zustellung (§ 750 ZPO). Die einfache Klausel erteilt die Geschäftsstelle (§§ 724, 725 ZPO). Hängt die Vollstreckung von einer Bedingung ab oder geht es um einen Rechtsnachfolger, braucht es eine qualifizierte Klausel (§§ 726, 727 ZPO) – vom Rechtspfleger."
+        },
+        {
+          "art": "schritte",
+          "titel": "Gläubiger: Klausel verweigert",
+          "schritte": [
+            {
+              "titel": "1. Erinnerung oder Beschwerde",
+              "text": "Ablehnung durch den Urkundsbeamten: Erinnerung (§ 573 ZPO). Durch den Rechtspfleger: sofortige Beschwerde (§ 11 Abs. 1 RPflG, § 567 ZPO)."
+            },
+            {
+              "titel": "2. Klage auf Klauselerteilung",
+              "text": "Kann der Gläubiger Bedingung oder Nachfolge nicht durch öffentliche Urkunden nachweisen: Klage nach § 731 ZPO."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Schuldner: Klausel erteilt",
+          "schritte": [
+            {
+              "titel": "3. Klauselerinnerung",
+              "text": "Formelle Einwendungen gegen die Erteilung, etwa fehlender Nachweis durch öffentliche Urkunde (§ 732 ZPO)."
+            },
+            {
+              "titel": "4. Klauselgegenklage",
+              "text": "Einwand, Bedingung oder Rechtsnachfolge lägen materiell gar nicht vor (§ 768 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: § 768 oder § 767?",
+          "text": "§ 768 ZPO greift die Klausel an: Der Schuldner bestreitet die besonderen Voraussetzungen der qualifizierten Klausel. § 767 ZPO greift den titulierten Anspruch selbst an, etwa wegen Erfüllung. Frag also zuerst: Richtet sich der Einwand gegen die Klausel oder gegen den Anspruch?"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gläubiger: § 573 ZPO bzw. Beschwerde, dann § 731 ZPO. Schuldner: § 732 ZPO für Formelles, § 768 ZPO für die Klauselvoraussetzungen."
+        },
+        {
+          "art": "cta",
+          "titel": "Klauselrechtsbehelfe auf einen Blick",
+          "punkte": [
+            "Ablehnung: Erinnerung oder Beschwerde",
+            "Kein Urkundsnachweis: § 731 ZPO",
+            "Formfehler: § 732 ZPO",
+            "Materielle Klauselfrage: § 768 ZPO"
+          ],
+          "icons": [
+            "gericht",
+            "dokument",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Rund um die Vollstreckungsklausel gibt es vier Rechtsbehelfe – je zwei für Gläubiger und Schuldner. Wird die Klausel verweigert, hilft dem Gläubiger die Erinnerung bzw. sofortige Beschwerde und, wenn der Urkundsnachweis fehlt, die Klage nach § 731 ZPO. Ist sie erteilt, rügt der Schuldner Formelles mit § 732 ZPO und bestreitet die Klauselvoraussetzungen mit § 768 ZPO. Speichern für die nächste ZV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#vollstreckungsklausel",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klauselrechtsbehelfe: zwei je Seite",
+      "coverText": "Klausel oder Anspruch angreifen?",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Um die Klausel wird von beiden Seiten gekämpft: der Gläubiger will sie haben, der Schuldner will sie loswerden.",
+        "handlung": "{A} tries to pull a heavy crystal seal onto a mining cart from one side, while {B} curiously tugs the same seal back from the other side with a rope.",
+        "hinweisRegie": "Place the note in the free space directly above the crystal seal between both characters, slightly tilted, so it reads as the contested object without covering hands or the rope.",
+        "alternative": "{B} stands at a gate with two doors on each side, peeking through the second door on the debtor's side while {A} knocks at the first door on the other side."
+      },
+      "bildSzene": "tug of war over crystal seal",
+      "bildSzeneAlt": "gate with two doors each side",
+      "quellen": [
+        "§§ 724–727 ZPO",
+        "§ 573 ZPO",
+        "§ 567 ZPO",
+        "§ 11 Abs. 1 RPflG",
+        "§ 731 ZPO",
+        "§ 732 ZPO",
+        "§ 768 ZPO",
+        "§ 767 ZPO",
+        "Themenpool: zwangsv-566"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-rechtsbehelfe",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.155Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-306",
+      "slug": "2027-01-25-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht am Tatort – und trotzdem Mittäter",
+          "unter": "Mittäterschaft · § 25 Abs. 2 StGB",
+          "text": "Mittäterschaft hängt nicht an der Anwesenheit am Tatort.",
+          "norm": "§ 25 Abs. 2 StGB",
+          "icon": "personen",
+          "sprecher": "Mittäter kann auch sein, wer gar nicht am Tatort ist. Entscheidend ist nicht die Anwesenheit, sondern der gemeinsame Plan und das Gewicht des eigenen Beitrags.",
+          "marken": [
+            "Anwesenheit egal",
+            "§ 25 Abs. 2"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gemeinsamer Tatplan",
+          "text": "Bewusstes und gewolltes Zusammenwirken, ausdrücklich oder konkludent.",
+          "norm": "§ 25 Abs. 2 StGB",
+          "sprecher": "Schritt eins: der gemeinsame Tatplan. Die Beteiligten wirken bewusst und gewollt zusammen. Eine ausdrückliche Absprache ist nicht nötig, ein stillschweigendes Einvernehmen genügt.",
+          "marken": [
+            "gemeinsamer Plan"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Eigener, wesentlicher Beitrag",
+          "text": "Ein Beitrag, der die Tat als gemeinsames Werk mitträgt.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Tatbeitrag. Jeder leistet einen eigenen Beitrag, der die Tat als gemeinsames Werk mitträgt. Eine bloße Förderung fremder Tat reicht dafür nicht.",
+          "marken": [
+            "wesentlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Abgrenzung zur Beihilfe",
+          "text": "Rspr.: wertende Gesamtschau. Lit.: funktionelle Tatherrschaft.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Abgrenzung zur Beihilfe. Die Rechtsprechung nimmt eine wertende Gesamtschau vor: Tatinteresse, Umfang der Beteiligung, Tatherrschaft oder der Wille dazu. Die Literatur fragt nach funktioneller Tatherrschaft.",
+          "marken": [
+            "Gesamtschau",
+            "Tatherrschaft"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Folge: gegenseitige Zurechnung",
+          "text": "Jeder haftet für die Beiträge der anderen – aber nicht für deren Exzess.",
+          "norm": "§ 25 Abs. 2 StGB",
+          "sprecher": "Schritt vier: die Folge. Die Beiträge der anderen werden jedem Mittäter wie eigene zugerechnet. Was ein Beteiligter über den gemeinsamen Plan hinaus tut, ist ein Exzess und wird den anderen nicht zugerechnet.",
+          "marken": [
+            "Zurechnung",
+            "kein Exzess"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Streitfall: Beitrag nur vor der Tat",
+          "text": "Rspr. kann Mittäterschaft bejahen; strenge Lit. verlangt Mitwirkung bei der Ausführung.",
+          "norm": null,
+          "sprecher": "Der Streitfall: Der Planer im Hintergrund, der nur vor der Tat mitwirkt. Die Rechtsprechung kann ihn als Mittäter einordnen. Eine strenge Ansicht in der Literatur verlangt eine Mitwirkung im Ausführungsstadium.",
+          "marken": [
+            "Vorbereitung",
+            "Streit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Gemeinsamer Plan plus wesentlicher Beitrag – dann wird zugerechnet.",
+          "norm": "§ 25 Abs. 2 StGB",
+          "sprecher": "Merke: gemeinsamer Plan plus wesentlicher Beitrag. Dann wird zugerechnet, egal wer am Tatort stand.",
+          "marken": [
+            "Plan + Beitrag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst Plan, dann Beitrag prüfen",
+          "text": "Speichern für die nächste Beteiligungsklausur.",
+          "sprecher": "Speicher dir das für die nächste Beteiligungsklausur. Und prüf immer zuerst den Plan, dann den Beitrag.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Nicht am Tatort – und trotzdem Mittäter. § 25 Abs. 2 StGB verlangt einen gemeinsamen Tatplan und einen eigenen, wesentlichen Tatbeitrag, nicht die Anwesenheit. Die Rspr. grenzt zur Beihilfe in einer wertenden Gesamtschau ab, die Lit. über die funktionelle Tatherrschaft. Folge: gegenseitige Zurechnung – aber kein Einstehen für den Exzess eines anderen. Speichern für die nächste Beteiligungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#mittäterschaft",
+        "#25stgb",
+        "#täterschaft",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mittäterschaft ohne Anwesenheit",
+      "titelZeilen": [
+        "Nicht am Tatort –",
+        "und trotzdem",
+        "Mittäter"
+      ],
+      "coverText": "Plan plus wesentlicher Beitrag",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer den gemeinsamen Plan mitträgt und einen wesentlichen Beitrag leistet, ist Mittäter, auch fern vom Ort des Geschehens.",
+        "handlung": "{A} steers a distant expedition by radio from a base camp tent, while {B} points his pointer at the radio line connecting her to the team on the far ridge.",
+        "hinweisRegie": "Place the note in the open space along the radio line between the tent and the far ridge, slightly tilted, so it connects both places without covering {A}'s face or the radio.",
+        "alternative": "{B} fits the last piece into a jigsaw puzzle that {A} started from a separate table across the room."
+      },
+      "bildSzene": "commander steers team by radio",
+      "bildSzeneAlt": "puzzle finished from two tables",
+      "quellen": [
+        "§ 25 Abs. 2 StGB",
+        "§ 27 StGB",
+        "Themenpool: strafat-306"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.157Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-007",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Eltern schenken ihrem 7-jährigen Kind 1.000 Euro und nehmen für das Kind selbst an. Steht § 181 BGB entgegen?",
+      "optionen": [
+        "Ja – § 181 BGB verbietet jedes Insichgeschäft ausnahmslos",
+        "Nein – das Geschäft ist lediglich rechtlich vorteilhaft",
+        "Nur mit vorheriger Zustimmung des Familiengerichts"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 181 BGB",
+        "§ 107 BGB",
+        "Themenpool: bgbat-007"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.157Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-007",
+      "ueberzeile": "Auflösung",
+      "titel": "Kein Hindernis: Bei lediglich rechtlichem Vorteil wird § 181 BGB reduziert",
+      "text": "§ 181 BGB will Interessenkonflikte verhindern. Bringt das Geschäft dem Vertretenen lediglich einen rechtlichen Vorteil, gibt es keinen Konflikt – nach der Rspr. ist § 181 BGB dann teleologisch zu reduzieren. Ausdrücklich erlaubt ist das Insichgeschäft außerdem, wenn es gestattet ist oder ausschließlich in der Erfüllung einer Verbindlichkeit besteht.",
+      "norm": "§ 181 BGB",
+      "quellen": [
+        "§ 181 BGB",
+        "§ 107 BGB",
+        "Themenpool: bgbat-007"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.157Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – § 181 BGB verbietet jedes Insichgeschäft ausnahmslos",
+        "Nein – das Geschäft ist lediglich rechtlich vorteilhaft",
+        "Nur mit vorheriger Zustimmung des Familiengerichts"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-235",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 883 Abs. 2 BGB: Die Verfügung wirkt – nur nicht gegen den Vormerkungsberechtigten",
+      "text": "Verfügt der Eigentümer nach Eintragung der Vormerkung über das Grundstück, ist das nicht absolut nichtig. Unwirksam ist es nur, soweit es den gesicherten Anspruch vereiteln oder beeinträchtigen würde – relative Unwirksamkeit. Der Berechtigte verlangt dann vom Schuldner die Auflassung und vom Dritten nach § 888 BGB die Zustimmung zu seiner Eintragung.",
+      "norm": "§ 883 Abs. 2 BGB · § 888 Abs. 1 BGB",
+      "quellen": [
+        "§ 883 BGB",
+        "§ 888 BGB",
+        "Themenpool: sachen-235"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.157Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-710",
+      "ueberzeile": "Klausurtipp 2. Examen ÖR",
+      "titel": "Anwaltsklausur: Nach dem Gutachten kommt die Zweckmäßigkeit",
+      "text": "Das Gutachten sagt dir, was rechtlich möglich ist. Die Zweckmäßigkeitserwägungen sagen dem Mandanten, was er tun soll: welcher Rechtsbehelf, welcher Antrag, ob Eilrechtsschutz nötig ist, welche Frist läuft und welches Kostenrisiko besteht. Plane dafür einen eigenen Abschnitt ein und begründe die Wahl knapp.",
+      "quellen": [
+        "VwGO",
+        "Themenpool: assessoroer-710"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.157Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-886",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Verschlechterungsverbot: Was die Revision des Angeklagten ihn nicht kosten darf",
+      "text": "§ 358 Abs. 2 StPO schützt davor, dass jemand aus Angst vor einer härteren Strafe auf sein Rechtsmittel verzichtet.",
+      "punkte": [
+        "Gilt, wenn nur der Angeklagte oder zu seinen Gunsten Revision eingelegt wurde",
+        "Verboten: Rechtsfolgen nach Art und Höhe verschärfen",
+        "Erlaubt: den Schuldspruch verschärfen",
+        "Bindet auch den neuen Tatrichter nach Zurückverweisung"
+      ],
+      "quellen": [
+        "§ 358 Abs. 2 StPO",
+        "Themenpool: revision-886"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.157Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "streit-12",
+      "ueberzeile": "Streitstand Verwaltungsrecht",
+      "titel": "Jahresfrist des § 48 Abs. 4 VwVfG: Wann beginnt sie zu laufen?",
+      "norm": "§ 48 Abs. 4 VwVfG",
+      "optionen": [
+        "BVerwG (Großer Senat): Entscheidungsfrist – sie läuft erst, wenn die Behörde die Rechtswidrigkeit erkannt hat und alle für die Rücknahme erheblichen Tatsachen vollständig kennt.",
+        "Teile der Literatur: Bearbeitungsfrist – sie läuft schon, sobald die Behörde die Tatsachen kennt, aus denen sich die Rechtswidrigkeit ergibt."
+      ],
+      "text": "Die Rspr. gilt auch für Rechtsanwendungsfehler; kritisiert wird, dass die Frist so kaum Vertrauensschutz bietet. Klausur: Kenntniszeitpunkt genau bestimmen, Streit nur entscheiden, wenn es darauf ankommt. Bei Täuschung, Drohung oder Bestechung gilt die Frist nicht (§ 48 Abs. 4 S. 2 VwVfG).",
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "§ 48 Abs. 2 S. 3 Nr. 1 VwVfG"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:27.157Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
