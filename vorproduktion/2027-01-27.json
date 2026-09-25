@@ -1,0 +1,871 @@
+{
+  "datum": "2027-01-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-758",
+        "themaTitel": "Untreue",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-391",
+        "themaTitel": "Was ist der Folgenbeseitigungsanspruch?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-444",
+        "themaTitel": "Schadensersatz neben der Leistung",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "schuldbt-201"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "schuldbt-201"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:13",
+        "art": "norm",
+        "themaId": "schuld-016"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "streitstand",
+        "themaId": "streit-14"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "merksatz",
+        "themaId": "staat-636"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "begriff",
+        "themaId": "strafbt-334"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-758",
+      "poolTitel": "Untreue",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-06",
+        "2026-12-06"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-391",
+      "poolTitel": "Was ist der Folgenbeseitigungsanspruch?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07",
+        "2027-01-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-444",
+      "poolTitel": "Schadensersatz neben der Leistung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 280 I BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-22"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-201",
+      "poolTitel": "Welche Rechte hat der Verbraucher beim Widerruf?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 355 BGB",
+        "§ 357 BGB",
+        "§ 312g BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2026-09-11",
+        "2026-12-13"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-201",
+      "poolTitel": "Welche Rechte hat der Verbraucher beim Widerruf?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 355 BGB",
+        "§ 357 BGB",
+        "§ 312g BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2026-09-11",
+        "2026-12-13"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-016",
+      "poolTitel": "Wann haftet man für das Verschulden eines Erfüllungsgehilfen?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 278 BGB",
+        "§ 831 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-12"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-14",
+      "poolTitel": "Drittschadensliquidation oder Vertrag mit Schutzwirkung zugunsten Dritter?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280, 328 BGB analog"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "staat-636",
+      "poolTitel": "Einstweilige Anordnung des BVerfG",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 32 BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-11-27"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-334",
+      "poolTitel": "Wie unterscheidet man Missbrauchs- und Treubruchtatbestand der Untreue?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-758",
+      "slug": "2027-01-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Griff in die Kasse ist meist keine Untreue",
+          "titelZeilen": [
+            "Griff in die Kasse",
+            "ist meist",
+            "keine Untreue"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Ohne Spielraum keine Betreuungspflicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Kassiererin K arbeitet im Supermarkt des S. Am Ende ihrer Schicht nimmt sie 200 Euro aus ihrer Kasse und steckt sie ein. Hat sie sich wegen Untreue nach § 266 StGB strafbar gemacht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du § 266 StGB",
+          "schritte": [
+            {
+              "titel": "1. Variante wählen",
+              "text": "Missbrauch: rechtlich wirksames Handeln nach außen. Treubruch: jede Verletzung der Betreuungspflicht, auch rein tatsächlich."
+            },
+            {
+              "titel": "2. Vermögensbetreuungspflicht",
+              "text": "Nach der Rspr. für beide Varianten nötig: fremdnützige Vermögensfürsorge als Hauptpflicht, mit gewisser Selbstständigkeit."
+            },
+            {
+              "titel": "3. Pflichtverletzung",
+              "text": "Der Täter verletzt gerade diese Pflicht – nicht bloß eine allgemeine Vertragspflicht."
+            },
+            {
+              "titel": "4. Vermögensnachteil",
+              "text": "Gesamtsaldierung: Vermögen vorher und nachher vergleichen. Eine bloße Gefährdung nur zurückhaltend und beziffert."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„K ist eine Vertrauensperson – also betreut sie fremdes Vermögen.“ Jeder Arbeitnehmer hat Treuepflichten. Eine Vermögensbetreuungspflicht hat aber nur, wer fremde Vermögensinteressen mit eigenem Entscheidungsspielraum wahrnimmt. Bloß mechanisches Kassieren nach Vorgaben reicht dafür regelmäßig nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "K fehlt die Vermögensbetreuungspflicht – § 266 StGB scheidet aus. Strafbar ist sie trotzdem: je nach Gewahrsamslage an der Kasse wegen Diebstahls (§ 242 StGB) oder veruntreuender Unterschlagung (§ 246 Abs. 2 StGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Keine Untreue ohne Vermögensbetreuungspflicht – und die hat nur, wer fremdes Vermögen mit eigenem Spielraum betreut."
+        },
+        {
+          "art": "cta",
+          "titel": "Untreue in vier Zügen",
+          "punkte": [
+            "Missbrauch oder Treubruch?",
+            "Vermögensbetreuungspflicht",
+            "Verletzung gerade dieser Pflicht",
+            "Nachteil durch Gesamtsaldierung"
+          ],
+          "icons": [
+            "schluessel",
+            "aktentasche",
+            "warnung",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Der Griff in die Kasse ist meist keine Untreue. § 266 StGB verlangt – nach der Rspr. in beiden Varianten – eine Vermögensbetreuungspflicht: fremdnützige Vermögensfürsorge als Hauptpflicht, mit eigenem Entscheidungsspielraum. Die hat eine Kassiererin, die nach Vorgaben kassiert, regelmäßig nicht. Straflos bleibt sie trotzdem nicht: je nach Gewahrsam § 242 oder § 246 Abs. 2 StGB. Speichern für die nächste Vermögensdelikte-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#untreue",
+        "#266stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Untreue: erst die Betreuungspflicht",
+      "coverText": "Ohne Spielraum keine Betreuungspflicht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Wer nur mechanisch Geld entgegennimmt, betreut kein fremdes Vermögen – Untreue braucht echten Entscheidungsspielraum.",
+        "handlung": "{B} nervously slips a few coins from a simple coin-sorting machine he only operates, while {A} stands beside a large vault whose heavy key hangs on his own belt.",
+        "hinweisRegie": "Place the note in the free space between the coin machine and the vault key on {A}'s belt, slightly tilted, so it contrasts both roles without covering hands or faces.",
+        "alternative": "{A} hands {B} a crate with strict step-by-step instructions only, while a second figure holds a whole ledger with free choices in the background."
+      },
+      "bildSzene": "coin machine operator versus vault key",
+      "bildSzeneAlt": "strict instructions versus open ledger",
+      "quellen": [
+        "§ 266 Abs. 1 StGB",
+        "§ 242 StGB",
+        "§ 246 Abs. 2 StGB",
+        "Themenpool: strafbt-758"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.397Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-391",
+      "slug": "2027-01-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Einweisung vorbei, O bleibt – muss die Gemeinde ran?",
+          "titelZeilen": [
+            "Einweisung vorbei,",
+            "O bleibt – muss",
+            "die Gemeinde ran?"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Zurück zum früheren Zustand",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Gemeinde weist den obdachlosen O für drei Monate in eine leerstehende Wohnung des E ein. Die Frist läuft ab, O zieht nicht aus. E verlangt von der Gemeinde, dass sie O aus der Wohnung holt. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Folgenbeseitigungsanspruch, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Anspruchsgrundlage",
+              "text": "Gewohnheitsrechtlich anerkannt. Hergeleitet aus Art. 20 Abs. 3 GG, den Grundrechten oder §§ 1004, 12 BGB analog – die Herleitung ist umstritten."
+            },
+            {
+              "titel": "2. Hoheitlicher Eingriff",
+              "text": "Die Einweisung ist ein hoheitlicher Eingriff in das Eigentum des E (Art. 14 GG)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Folgenbeseitigungsanspruch, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Rechtswidriger Zustand dauert an",
+              "text": "Nach Fristablauf muss E die Nutzung nicht mehr dulden. Der Verbleib des O geht auf die Einweisung zurück."
+            },
+            {
+              "titel": "4. Wiederherstellung möglich und zumutbar",
+              "text": "Die Gemeinde kann O die Räumung aufgeben und durchsetzen. E kann das verlangen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Über den Folgenbeseitigungsanspruch auch Renovierungskosten oder Mietausfall verlangen. Er stellt nur den früheren Zustand wieder her – er ist kein Schadensersatz. Für die Inanspruchnahme als Nichtstörer gibt es eine Entschädigung, je nach Landesrecht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Folgenbeseitigungsanspruch beseitigt den andauernden rechtswidrigen Zustand – Geld für Schäden gibt er nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Folgenbeseitigung in vier Zügen",
+          "punkte": [
+            "Hoheitlicher Eingriff in ein Recht",
+            "Rechtswidriger Zustand dauert an",
+            "Wiederherstellung möglich, zumutbar",
+            "Nur Rückgängigmachen, kein Geld"
+          ],
+          "icons": [
+            "gebaeude",
+            "uhr",
+            "schluessel",
+            "kreuz"
+          ]
+        }
+      ],
+      "caption": "Die Einweisung ist abgelaufen, der Obdachlose bleibt – muss die Gemeinde ihn herausholen? Nach überwiegender Ansicht ja: Der Folgenbeseitigungsanspruch verlangt einen hoheitlichen Eingriff in ein subjektives Recht, einen andauernden rechtswidrigen Zustand und eine mögliche, zumutbare Wiederherstellung. Er gibt aber nur den früheren Zustand zurück – Schäden laufen über andere Anspruchsgrundlagen. Speichern für die nächste VerwR-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#folgenbeseitigungsanspruch",
+        "#staatshaftung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Folgenbeseitigung nach der Einweisung",
+      "coverText": "Zurück zum früheren Zustand",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Wer hoheitlich einen Zustand geschaffen hat, muss ihn auch wieder beseitigen, sobald er rechtswidrig wird.",
+        "handlung": "{A} hovers at the door of a small house, holding a timer that has run down, while {B} curiously watches a guest still sitting comfortably inside on packed bags.",
+        "hinweisRegie": "Place the note in the free space between the run-down timer and the open door, slightly tilted toward the guest, so it marks the expired period without covering faces.",
+        "alternative": "{B} tries to rewind a large wall clock back to its starting position while {A} pushes a moved piece of furniture back to its original outline on the floor."
+      },
+      "bildSzene": "expired timer at occupied house door",
+      "bildSzeneAlt": "furniture pushed back to outline",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 14 GG",
+        "§ 1004 BGB analog",
+        "Themenpool: verwalt-391"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.398Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-444",
+      "slug": "2027-01-27-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Folgeschaden am Parkett: Ersatz ohne Fristsetzung",
+          "unter": "Schadensersatz · § 280 Abs. 1 BGB",
+          "text": "Schadensersatz neben der Leistung braucht keine Frist.",
+          "norm": "§ 280 Abs. 1 BGB",
+          "icon": "haus",
+          "sprecher": "Für diesen Schaden brauchst du keine Frist. Die neue Waschmaschine ist undicht, das Wasser ruiniert das Parkett. Die Frist aus Paragraf 281 wäre hier sinnlos.",
+          "marken": [
+            "keine Frist",
+            "§ 280 Abs. 1"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Abgrenzungsfrage",
+          "text": "Würde eine Nacherfüllung diesen Schaden noch beseitigen?",
+          "norm": null,
+          "sprecher": "Schritt eins: die Abgrenzung. Frag dich: Würde eine Nacherfüllung diesen Schaden noch beseitigen? Eine reparierte Maschine macht das Parkett nicht wieder heil. Also Schadensersatz neben der Leistung.",
+          "marken": [
+            "neben der Leistung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anspruchsgrundlage",
+          "text": "§ 280 Abs. 1 BGB, beim Kauf über § 437 Nr. 3 BGB.",
+          "norm": "§ 437 Nr. 3 BGB",
+          "sprecher": "Schritt zwei: die Anspruchsgrundlage. Paragraf 280 Absatz 1, beim Kauf über Paragraf 437 Nummer 3. Keine Frist, keine weiteren Voraussetzungen aus 281.",
+          "marken": [
+            "§ 437 Nr. 3"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Pflichtverletzung",
+          "text": "Lieferung einer mangelhaften Sache.",
+          "norm": "§ 433 Abs. 1 S. 2 BGB",
+          "sprecher": "Schritt drei: die Pflichtverletzung. Der Verkäufer schuldet eine mangelfreie Sache. Die undichte Maschine zu liefern, ist die Pflichtverletzung.",
+          "marken": [
+            "mangelhaft geliefert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vertretenmüssen – der Knackpunkt",
+          "text": "Vermutet – aber der Hersteller ist nicht Erfüllungsgehilfe des Händlers.",
+          "norm": "§ 280 Abs. 1 S. 2 BGB",
+          "sprecher": "Schritt vier: das Vertretenmüssen. Es wird vermutet. Aber Vorsicht beim Händler: Der Hersteller ist nicht sein Erfüllungsgehilfe. Kannte er den Mangel nicht und musste ihn nicht erkennen, kann er sich entlasten.",
+          "marken": [
+            "Hersteller ≠ Gehilfe"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Betriebsausfall",
+          "text": "Nach dem BGH ebenfalls § 280 Abs. 1 BGB – ohne Verzug.",
+          "norm": null,
+          "sprecher": "Der Klassiker: Die mangelhafte Maschine legt einen Betrieb still. Den Nutzungsausfall ordnet der Bundesgerichtshof ebenfalls Paragraf 280 Absatz 1 zu, ohne die Verzugsvoraussetzungen.",
+          "marken": [
+            "BGH",
+            "kein Verzug"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Bleibt der Schaden trotz Nacherfüllung, gilt § 280 Abs. 1 BGB – ohne Frist.",
+          "norm": "§ 280 Abs. 1 BGB",
+          "sprecher": "Merke: Bleibt der Schaden trotz Nacherfüllung bestehen, gilt Paragraf 280 Absatz 1 allein. Ohne Frist.",
+          "marken": [
+            "bleibt der Schaden?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Hilft die Nacherfüllung?",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur. Und frag zuerst: Würde die Nacherfüllung den Schaden beseitigen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Folgeschaden am Parkett: Ersatz ohne Fristsetzung. Die entscheidende Frage lautet, ob eine Nacherfüllung den Schaden noch beseitigen würde. Tut sie es nicht, ist es Schadensersatz neben der Leistung – § 280 Abs. 1 BGB, beim Kauf über § 437 Nr. 3 BGB, ohne Frist. Knackpunkt ist oft das Vertretenmüssen: Der Hersteller ist nicht Erfüllungsgehilfe des Händlers. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#280bgb",
+        "#schadensersatz",
+        "#kaufrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schadensersatz neben der Leistung",
+      "titelZeilen": [
+        "Folgeschaden am",
+        "Parkett: Ersatz",
+        "ohne Fristsetzung"
+      ],
+      "coverText": "Hilft Nacherfüllung? Dann Frist",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Manche Schäden kann keine Reparatur der Sache mehr ungeschehen machen – dafür braucht es keine Frist.",
+        "handlung": "{A} frantically fixes a leaking hose on a washing machine while {B} kneels beside him lifting a warped, water-damaged floorboard that no repair of the machine can restore.",
+        "hinweisRegie": "Place the note in the open space right above the warped floorboard in {B}'s hands, slightly tilted toward it, so it marks the lasting damage without covering the hose or faces.",
+        "alternative": "{B} holds a repaired machine in one hand and a ruined carpet in the other, while {A} shrugs at the carpet."
+      },
+      "bildSzene": "fixing hose, warped floorboard lifted",
+      "bildSzeneAlt": "repaired machine, ruined carpet",
+      "quellen": [
+        "§ 280 Abs. 1 BGB",
+        "§ 437 Nr. 3 BGB",
+        "§ 433 Abs. 1 S. 2 BGB",
+        "§ 278 BGB",
+        "Themenpool: schuld-444"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-201",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "Der Verbraucher nutzt die online gekaufte Ware über die bloße Prüfung hinaus und widerruft dann. Was gilt?",
+      "optionen": [
+        "Wertersatz für den Wertverlust – wenn er belehrt wurde",
+        "Das Widerrufsrecht erlischt mit der ersten Nutzung",
+        "Keine Folge – Nutzung ist immer ersatzfrei"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 355 BGB",
+        "§ 357a Abs. 1 BGB",
+        "§ 312g BGB",
+        "Themenpool: schuldbt-201"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-201",
+      "ueberzeile": "Auflösung",
+      "titel": "Widerruf bleibt möglich – aber mit Wertersatz für den Wertverlust",
+      "text": "Durch die Nutzung erlischt das Widerrufsrecht nicht. Der Verbraucher schuldet aber Wertersatz für einen Wertverlust, der auf einen Umgang zurückgeht, der zur Prüfung von Beschaffenheit, Eigenschaften und Funktionsweise nicht nötig war – wenn der Unternehmer ihn über das Widerrufsrecht unterrichtet hat. Prüfen darf er so, wie es im Laden möglich wäre.",
+      "norm": "§ 357a Abs. 1 BGB · § 355 BGB",
+      "quellen": [
+        "§ 355 BGB",
+        "§ 357a Abs. 1 BGB",
+        "§ 312g BGB",
+        "Themenpool: schuldbt-201"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.399Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Wertersatz für den Wertverlust – wenn er belehrt wurde",
+        "Das Widerrufsrecht erlischt mit der ersten Nutzung",
+        "Keine Folge – Nutzung ist immer ersatzfrei"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-016",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 278 BGB: Zugerechnet wird nur, was „in Erfüllung“ geschieht",
+      "text": "§ 278 BGB ist keine Anspruchsgrundlage, sondern eine Zurechnungsnorm. Sie setzt ein bestehendes Schuldverhältnis voraus. Erfüllungsgehilfe ist, wer mit Willen des Schuldners bei der Erfüllung von dessen Verbindlichkeit tätig wird – weisungsgebunden muss er nicht sein. Handelt er nur bei Gelegenheit, fehlt nach h.M. der innere Zusammenhang.",
+      "norm": "§ 278 S. 1 BGB",
+      "quellen": [
+        "§ 278 BGB",
+        "§ 831 BGB",
+        "Themenpool: schuld-016"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "streit-14",
+      "ueberzeile": "Streitstand Schuldrecht",
+      "titel": "Vertrag mit Schutzwirkung für Dritte: Worauf stützt er sich?",
+      "norm": "§§ 133, 157, 328 BGB analog",
+      "optionen": [
+        "Rspr. (BGH): ergänzende Vertragsauslegung – der Dritte wird nach dem hypothetischen Parteiwillen einbezogen.",
+        "Teile der Lit.: richterliche Rechtsfortbildung bzw. Gewohnheitsrecht, teils mit § 311 Abs. 3 BGB verknüpft."
+      ],
+      "text": "Kritik: Der BGH bezieht Dritte sogar bei gegenläufigen Interessen ein (Gutachterfälle). Klausur: Bei der VSD hat der Dritte einen eigenen Anspruch; bei der DSL macht der Gläubiger den Schaden des Dritten geltend.",
+      "quellen": [
+        "§§ 133, 157 BGB",
+        "§ 328 BGB analog",
+        "§ 311 Abs. 3 BGB",
+        "§ 280 Abs. 1 BGB"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-636",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "Eilantrag gegen ein Gesetz: besonders strenger Maßstab",
+      "text": "Bei § 32 BVerfGG wägt das BVerfG die Folgen ab. Soll der Vollzug eines Gesetzes ausgesetzt werden, ist der Maßstab besonders streng – aus Respekt vor dem Gesetzgeber. Die Nachteile ohne Anordnung müssen dann deutlich überwiegen.",
+      "norm": "§ 32 Abs. 1 BVerfGG",
+      "quellen": [
+        "§ 32 BVerfGG",
+        "Themenpool: staat-636"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-334",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Missbrauchstatbestand: Er kann mehr, als er darf",
+      "text": "Missbrauch einer Befugnis, über fremdes Vermögen zu verfügen oder einen anderen zu verpflichten: Der Täter handelt nach außen wirksam (Können), überschreitet aber die Grenzen im Innenverhältnis (Dürfen). Fehlt die Wirksamkeit oder handelt er nur tatsächlich, bleibt der Treubruchstatbestand.",
+      "norm": "§ 266 Abs. 1 Alt. 1 StGB",
+      "quellen": [
+        "§ 266 Abs. 1 StGB",
+        "Themenpool: strafbt-334"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:15.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
