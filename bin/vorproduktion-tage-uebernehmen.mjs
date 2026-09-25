@@ -9,7 +9,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { Hosting } from "../src/hosting.mjs";
+import crypto from "node:crypto";
 import { quizPruefen } from "./vorproduktion-quiz-regel.mjs";
+import { tagPruefen } from "./vorproduktion-tag-pruefen.mjs";
 
 for (const k of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "ELEVENLABS_API_KEY", "PEXELS_API_KEY"]) {
   if (String(process.env[k] || "").trim()) throw new Error(`${k} muss leer sein`);
@@ -30,6 +32,8 @@ function pruefen(tag, datum) {
     if (inhalt.manuellGeprueft !== true) throw new Error(`${datum}: ${x.slot} ist nicht redaktionell geprüft`);
   }
   quizPruefen(tag, datum);
+  const befunde = tagPruefen(tag, datum);
+  if (befunde.length) throw new Error(befunde.join("\n"));
   for (const x of b) {
     const inhalt = tag.inhalte[x.slot];
     if (inhalt.format !== x.format) throw new Error(`${datum}: ${x.slot} Format weicht vom Plan ab`);
@@ -45,8 +49,10 @@ const host = new Hosting({ pushen: true }).vorbereiten();
 const vp = path.join(host.dir, "vorproduktion");
 fs.mkdirSync(vp, { recursive: true });
 for (const d of tage) {
-  const tag = JSON.parse(fs.readFileSync(quelle(d), "utf8"));
+  const roh = fs.readFileSync(quelle(d));
+  const tag = JSON.parse(roh.toString("utf8"));
   pruefen(tag, d);
+  tag.repoQuelle = { pfad: `vorproduktion/${d}.json`, sha256: crypto.createHash("sha256").update(roh).digest("hex"), uebernommenAm: new Date().toISOString() };
   fs.writeFileSync(path.join(vp, `${d}.json`), JSON.stringify(tag, null, 2) + "\n");
   console.log(`${d}: redaktionelle Fassung übernommen`);
 }
