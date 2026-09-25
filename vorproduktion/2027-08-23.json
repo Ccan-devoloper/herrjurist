@@ -1,0 +1,887 @@
+{
+  "datum": "2027-08-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwbt-396",
+        "themaTitel": "Wann ist eine Standardmaßnahme der Polizei zulässig?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "sachen-505",
+        "themaTitel": "EBV: Nutzungsersatz",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "stpo-780",
+        "themaTitel": "Zufallsfunde",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "sachen-499"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "sachen-499"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "schuldbt-196"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:16",
+        "art": "tipp",
+        "themaId": "schuld-016"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "zahl",
+        "themaId": "ipr-893"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "streitstand",
+        "themaId": "assessorz-812"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwbt-396",
+      "poolTitel": "Wann ist eine Standardmaßnahme der Polizei zulässig?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2026-11-05",
+        "2027-01-17"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-505",
+      "poolTitel": "EBV: Nutzungsersatz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 987 ff. BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-780",
+      "poolTitel": "Zufallsfunde",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-18"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-499",
+      "poolTitel": "Abhandenkommen als Erwerbssperre",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 935 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15",
+        "2026-11-15",
+        "2027-04-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-499",
+      "poolTitel": "Abhandenkommen als Erwerbssperre",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 935 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15",
+        "2026-11-15",
+        "2027-04-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-196",
+      "poolTitel": "Wann darf der Mieter die Miete mindern?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 536 BGB",
+        "§ 536b BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-19",
+        "2027-03-14",
+        "2027-05-04"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "schuld-016",
+      "poolTitel": "Wann haftet man für das Verschulden eines Erfüllungsgehilfen?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 278 BGB",
+        "§ 831 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-27",
+        "2027-04-03",
+        "2027-06-13"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "ipr-893",
+      "poolTitel": "Wann ist ein deutsches Gericht international zuständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 EuGVVO",
+        "Art. 7 EuGVVO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2026-12-11",
+        "2027-01-10"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-812",
+      "poolTitel": "Wie baut man die Hilfsaufrechnung im Urteil auf?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-04",
+        "2027-04-20",
+        "2027-06-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-396",
+      "slug": "2027-08-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gewahrsam bis zum Folgetag? Das ist nur die Obergrenze",
+          "titelZeilen": [
+            "Gewahrsam bis zum",
+            "Folgetag? Das ist",
+            "nur die Obergrenze"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Richter: unverzüglich, nicht irgendwann",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A kündigt auf einem Volksfest an, gleich seinen Kontrahenten zu verprügeln. Die Polizei nimmt ihn um 17 Uhr in Gewahrsam und lässt ihn um 23 Uhr frei. Einen Richter fragt sie nicht, obwohl einer erreichbar war – Art. 104 GG erlaube ja „bis zum Ende des nächsten Tages“. Rechtmäßig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Ermächtigungsgrundlage",
+              "text": "Gewahrsam ist eine Standardmaßnahme des Landespolizeirechts. Sie verdrängt die Generalklausel."
+            },
+            {
+              "titel": "Materielle Voraussetzungen",
+              "text": "Typisch: unerlässlich, um die unmittelbar bevorstehende Begehung oder Fortsetzung einer Straftat zu verhindern – je nach Landesrecht."
+            },
+            {
+              "titel": "Verhältnismäßigkeit",
+              "text": "Reicht ein milderes Mittel, etwa ein Platzverweis? Dann scheidet Gewahrsam aus."
+            },
+            {
+              "titel": "Richtervorbehalt",
+              "text": "Art. 104 Abs. 2 GG: Richter unverzüglich einschalten – entbehrlich meist nur, wenn er erst nach Wegfall des Grundes entschiede."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Art. 104 Abs. 2 S. 3 GG als Frist lesen, die die Polizei ausschöpfen darf. Die Tagesgrenze ist nur die äußerste Obergrenze für polizeilichen Gewahrsam ohne Richter. Maßgeblich ist: Ist ein Richter erreichbar, muss er unverzüglich entscheiden."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "punkte": [
+            "Materiell kann der Gewahrsam tragen, wenn ein Platzverweis die angekündigte Tat nicht verhindert hätte.",
+            "Formell fehlt die richterliche Entscheidung, obwohl ein Richter erreichbar war: rechtswidrig."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Freiheitsentziehung durch die Polizei: Richter unverzüglich einschalten. Das Ende des Folgetages ist Höchstgrenze, keine Frist zum Ausschöpfen."
+        },
+        {
+          "art": "cta",
+          "titel": "Gewahrsam in vier Prüfsteinen",
+          "punkte": [
+            "Standardbefugnis nach Landesrecht",
+            "Unerlässlich zur Gefahrenabwehr?",
+            "Milderes Mittel, etwa Platzverweis?",
+            "Richter unverzüglich eingeschaltet?"
+          ],
+          "icons": [
+            "paragraf",
+            "polizei",
+            "waage",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Gewahrsam bis zum Ende des Folgetages? Das ist nur die Obergrenze. Art. 104 Abs. 2 GG verlangt, dass über jede Freiheitsentziehung unverzüglich ein Richter entscheidet. Die Tagesgrenze in Satz 3 bestimmt, wie lange die Polizei jemanden höchstens aus eigener Machtvollkommenheit festhalten darf – nicht, wie lange sie mit dem Richter warten darf. Speichern für die nächste Polizeirechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#gewahrsam",
+        "#art104gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gewahrsam: Richter unverzüglich einschalten",
+      "coverText": "Richter: unverzüglich, nicht irgendwann",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Die Tagesgrenze beim polizeilichen Gewahrsam ist eine Obergrenze – der Richter muss trotzdem sofort gefragt werden.",
+        "handlung": "{A} keeps a door to a small holding room half open while {B} hovers beside her, already holding out a ringing handset toward her with urgency.",
+        "hinweisRegie": "Place the note in the open space between the half-open door and the ringing handset, slightly tilted toward the handset, so it stresses the immediate call without covering faces or hands.",
+        "alternative": "{B} points at a large wall calendar with the next day circled, while {A} ignores it and walks straight toward a nearby judge's bench."
+      },
+      "bildSzene": "holding room door, ringing handset",
+      "bildSzeneAlt": "circled calendar ignored, walking to bench",
+      "quellen": [
+        "Art. 104 Abs. 2 GG",
+        "Polizeigesetze der Länder",
+        "Themenpool: verwbt-396"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nur-obergrenze",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.833Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-505",
+      "slug": "2027-08-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nutzungsersatz im EBV: vier Weichen bis zur Zahlung",
+          "titelZeilen": [
+            "Nutzungsersatz",
+            "im EBV: vier Weichen",
+            "bis zur Zahlung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Der Besitzertyp entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Der Eigentümer verlangt neben der Sache Ersatz für die Nutzungen – etwa den Mietwert einer Wohnung oder die Gebrauchsvorteile eines Autos. Ob und wofür der Besitzer zahlt, regeln die §§ 987 ff. BGB – grundsätzlich abschließend (§ 993 Abs. 1 Hs. 2 BGB)."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Vindikationslage",
+              "text": "Zur Zeit der Nutzung: Eigentümer gegen Besitzer ohne Recht zum Besitz (§§ 985, 986 BGB)."
+            },
+            {
+              "titel": "2. Nutzungen",
+              "text": "Früchte und Gebrauchsvorteile (§ 100 BGB), also etwa ersparte Miete oder gezogene Erträge."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Verklagt oder bösgläubig",
+              "text": "Herausgabe der gezogenen Nutzungen, bei Verschulden auch Ersatz nicht gezogener (§§ 987, 990 BGB)."
+            },
+            {
+              "titel": "4. Redlich und unverklagt",
+              "text": "Grundsätzlich nichts (§ 993 Abs. 1 Hs. 2 BGB) – außer Übermaßfrüchten und bei unentgeltlichem Besitz (§ 988 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: rechtsgrundloser Besitz",
+          "text": "Besitzt der Redliche aufgrund eines unwirksamen Vertrags, stellt der BGH den rechtsgrundlosen dem unentgeltlichen Erwerb gleich (§ 988 BGB analog). Die Literatur greift eher zur Leistungskondiktion (§ 812 BGB). Im Ergebnis gibt er die Nutzungen meist heraus – die Begründung unterscheidet sich."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nutzungsersatz: Vindikationslage, Nutzung, Besitzertyp – und für den Redlichen nur die Ausnahmen der §§ 988, 993 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "EBV-Nutzungen in vier Weichen",
+          "punkte": [
+            "Vindikationslage zur Zeit der Nutzung",
+            "Nutzung im Sinne des § 100 BGB",
+            "Verklagt, bösgläubig oder redlich?",
+            "Ausnahmen: §§ 988, 993 BGB"
+          ],
+          "icons": [
+            "schluessel",
+            "muenzen",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Nutzungsersatz im Eigentümer-Besitzer-Verhältnis läuft über vier Weichen: Vindikationslage zur Zeit der Nutzung, Nutzung im Sinne des § 100 BGB, dann die Frage nach dem Besitzertyp. Der verklagte oder bösgläubige Besitzer haftet nach §§ 987, 990 BGB, der redliche unverklagte grundsätzlich nicht – außer in den Fällen der §§ 988, 993 Abs. 1 Hs. 1 BGB. Speichern für die nächste EBV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#ebv",
+        "#987bgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "EBV: Nutzungsersatz in vier Weichen",
+      "coverText": "Der Besitzertyp entscheidet",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Ob ein Besitzer für die Nutzungen zahlt, entscheidet sich an wenigen Weichen – vor allem an seiner Redlichkeit.",
+        "handlung": "{A} pushes a small mine cart full of glowing crystals toward a track switch, while {B} taps the switch lever with his pointer to send the cart onto one of two tracks.",
+        "hinweisRegie": "Place the note in the free space just above the track switch, slightly tilted toward the lever, so it marks the decisive branching point without covering the cart or the characters' faces.",
+        "alternative": "{B} sorts a handful of harvested fruit into two baskets, one for the owner and one left with {A}, depending on a small badge {A} wears."
+      },
+      "bildSzene": "mine cart at track switch",
+      "bildSzeneAlt": "fruit sorted into two baskets",
+      "quellen": [
+        "§§ 985, 986 BGB",
+        "§§ 987, 988, 990, 993 BGB",
+        "§ 100 BGB",
+        "§ 812 BGB",
+        "Themenpool: sachen-505"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.833Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-780",
+      "slug": "2027-08-23-b3",
+      "titelZeilen": [
+        "Gezielt gesucht",
+        "ist kein",
+        "Zufallsfund"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gezielt gesucht ist kein Zufallsfund",
+          "unter": "Zufallsfunde · § 108 StPO",
+          "text": "§ 108 StPO erlaubt die einstweilige Beschlagnahme – aber nur bei echtem Zufall.",
+          "norm": "§ 108 Abs. 1 StPO",
+          "icon": "lupe",
+          "sprecher": "Wer gezielt nach Zufallsfunden sucht, findet keine. Das klingt paradox, ist aber die Grenze des Paragrafen 108 StPO. So prüfst du ihn.",
+          "marken": [
+            "kein Zufall",
+            "§ 108 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Eine rechtmäßige Durchsuchung",
+          "text": "Ausgangspunkt ist eine Durchsuchung wegen einer bestimmten Tat.",
+          "norm": "§§ 102, 105 StPO",
+          "sprecher": "Schritt eins: Es läuft eine rechtmäßige Durchsuchung, etwa wegen Hehlerei. Nur bei Gelegenheit dieser Durchsuchung kann es überhaupt Zufallsfunde geben.",
+          "marken": [
+            "Anlass-Tat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Fund ohne Bezug zum Verfahren",
+          "text": "Der Gegenstand deutet auf eine andere Straftat hin.",
+          "norm": "§ 108 Abs. 1 S. 1 StPO",
+          "sprecher": "Schritt zwei: Die Beamten finden etwas, das mit dieser Untersuchung nichts zu tun hat, aber auf eine andere Straftat hindeutet. Zum Beispiel Drogen im Kleiderschrank.",
+          "marken": [
+            "andere Tat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Einstweilen beschlagnahmen",
+          "text": "Einstweilige Beschlagnahme, die Staatsanwaltschaft wird informiert.",
+          "norm": "§ 108 Abs. 1 S. 1, 2 StPO",
+          "sprecher": "Schritt drei: Dann dürfen sie den Gegenstand einstweilen beschlagnahmen. Der Staatsanwaltschaft ist davon Kenntnis zu geben, sie entscheidet über das weitere Vorgehen.",
+          "marken": [
+            "einstweilen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Grenze: planmäßige Suche",
+          "text": "Wer gezielt nach anderen Taten sucht, handelt nicht mehr „bei Gelegenheit“.",
+          "norm": null,
+          "sprecher": "Schritt vier, die Grenze: Durchsuchen die Beamten planmäßig nach Beweisen für ganz andere Taten, ist das kein Zufall mehr. Dann umgehen sie den Richtervorbehalt, und die Maßnahme ist rechtswidrig.",
+          "marken": [
+            "keine Suche"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und die Verwertung?",
+          "text": "Rechtswidrig heißt nicht automatisch unverwertbar – die Rspr. wägt ab.",
+          "norm": null,
+          "sprecher": "Und die Verwertung? Auch hier wägt die Rechtsprechung ab. Ein Verwertungsverbot liegt vor allem nahe, wenn der Richtervorbehalt bewusst oder willkürlich umgangen wurde.",
+          "marken": [
+            "Abwägung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Zufall ja, Suche nein: Anlass-Durchsuchung, Fund ohne Bezug, einstweilige Beschlagnahme.",
+          "norm": null,
+          "sprecher": "Merke: Zufall ja, gezielte Suche nein. Rechtmäßige Durchsuchung, Fund ohne Bezug zum Verfahren, einstweilige Beschlagnahme, Staatsanwaltschaft informieren.",
+          "marken": [
+            "Zufall, nicht Plan"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die StPO-Zusatzfrage speichern",
+          "text": "Speichern für die nächste StPO-Zusatzfrage.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Zusatzfrage zum Strafprozessrecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Gezielt gesucht ist kein Zufallsfund. § 108 StPO erlaubt, bei Gelegenheit einer rechtmäßigen Durchsuchung Gegenstände einstweilen zu beschlagnahmen, die auf eine andere Straftat hindeuten – die Staatsanwaltschaft wird informiert. Wer aber planmäßig nach Beweisen für andere Taten sucht, umgeht den Richtervorbehalt. Ob das Gefundene dann verwertbar ist, entscheidet die Rechtsprechung per Abwägung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#zufallsfund",
+        "#durchsuchung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zufallsfunde: § 108 StPO und seine Grenze",
+      "coverText": "Gelegenheit statt Planmäßigkeit",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Ein Zufallsfund entsteht nur bei Gelegenheit einer Durchsuchung – nicht durch eine gezielte Suche nach anderen Taten.",
+        "handlung": "{A} opens a cupboard looking for a specific toolbox and stumbles on a small unexpected package, while {B} in the background is systematically emptying every drawer with a large sack.",
+        "hinweisRegie": "Place the note in the open space next to the unexpected package in the cupboard, slightly tilted toward it, so the lucky find stands apart from the systematic search without covering either figure.",
+        "alternative": "{B} sweeps a metal detector across a marked search area and beeps at a coin just inside the line, while {A} digs far outside the marked area."
+      },
+      "bildSzene": "unexpected package found in cupboard",
+      "bildSzeneAlt": "metal detector inside marked area",
+      "quellen": [
+        "§ 108 Abs. 1 StPO",
+        "§§ 102, 105 StPO",
+        "Themenpool: stpo-780"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.835Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-499",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Verkäuferin A übereignet eigenmächtig eine Uhr aus dem Lager ihres Chefs E an den gutgläubigen K. Eigentümer?",
+      "optionen": [
+        "Ja – A hatte die Uhr ja freiwillig in der Hand",
+        "Nein – für E ist die Uhr abhandengekommen",
+        "Ja – § 935 BGB erfasst nur Diebstahl durch Dritte"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 935 Abs. 1 BGB",
+        "§ 855 BGB",
+        "§ 932 BGB",
+        "Themenpool: sachen-499"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.835Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-499",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die Besitzdienerin gibt nicht für den Besitzer weg",
+      "text": "A ist nur Besitzdienerin (§ 855 BGB), Besitzer ist E. Gibt A die Uhr eigenmächtig weg, verliert E seinen unmittelbaren Besitz ohne seinen Willen – die Uhr ist ihm nach h.M. abhandengekommen (§ 935 Abs. 1 BGB). K erwirbt trotz guten Glaubens kein Eigentum; E kann nach § 985 BGB herausverlangen.",
+      "norm": "§ 935 Abs. 1 BGB · § 855 BGB",
+      "quellen": [
+        "§ 935 Abs. 1 BGB",
+        "§ 855 BGB",
+        "§ 932 BGB",
+        "Themenpool: sachen-499"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.835Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – A hatte die Uhr ja freiwillig in der Hand",
+        "Nein – für E ist die Uhr abhandengekommen",
+        "Ja – § 935 BGB erfasst nur Diebstahl durch Dritte"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-196",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 536c BGB: Mangel nicht angezeigt – Minderung weg, soweit der Vermieter nicht abhelfen konnte",
+      "text": "Zeigt sich ein Mangel, muss der Mieter ihn dem Vermieter unverzüglich anzeigen (§ 536c Abs. 1 BGB). Unterlässt er das und kann der Vermieter deshalb nicht abhelfen, darf der Mieter insoweit nicht mindern (§ 536c Abs. 2 S. 2 Nr. 1 BGB). Zusätzlich schuldet er Ersatz des Schadens, der aus der unterlassenen Anzeige entsteht (Abs. 2 S. 1).",
+      "norm": "§ 536c BGB",
+      "quellen": [
+        "§ 536c BGB",
+        "§ 536 BGB",
+        "Themenpool: schuldbt-196"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.835Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-016",
+      "ueberzeile": "Klausurtipp Schuldrecht",
+      "titel": "Haftungsausschluss: Für Vorsatz des Gehilfen erlaubt § 278 S. 2 BGB ihn sogar",
+      "text": "Für eigenen Vorsatz kann der Schuldner die Haftung nicht im Voraus ausschließen (§ 276 Abs. 3 BGB). Für Vorsatz seines Erfüllungsgehilfen schon – § 278 S. 2 BGB erklärt § 276 Abs. 3 BGB für unanwendbar. Steht der Ausschluss in AGB, prüfst du danach § 309 Nr. 7 BGB: Bei Körperschäden und grobem Verschulden – auch des Gehilfen – ist er dort unwirksam.",
+      "quellen": [
+        "§ 278 BGB",
+        "§ 276 Abs. 3 BGB",
+        "§ 309 Nr. 7 BGB",
+        "Themenpool: schuld-016"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.835Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-893",
+      "ueberzeile": "3 Punkte IPR",
+      "titel": "Kein Gerichtsstand passt – und das deutsche Gericht ist trotzdem zuständig?",
+      "text": "Nach der Brüssel-Ia-VO können die Parteien die internationale Zuständigkeit selbst begründen. Drei Punkte gehören in die Prüfung.",
+      "punkte": [
+        "Gerichtsstandsvereinbarung (Art. 25 EuGVVO) – im Zweifel ausschließlich",
+        "Rügelose Einlassung (Art. 26 EuGVVO) – nicht, wenn nur die Zuständigkeit gerügt wird",
+        "Grenze: ausschließliche Zuständigkeiten (Art. 24 EuGVVO) gehen vor"
+      ],
+      "quellen": [
+        "Art. 24 EuGVVO",
+        "Art. 25 EuGVVO",
+        "Art. 26 EuGVVO",
+        "Themenpool: ipr-893"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.835Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-812",
+      "ueberzeile": "Streitstand ZPO",
+      "titel": "Hilfsaufrechnung als verspätet zurückgewiesen: Ist die Gegenforderung trotzdem erloschen?",
+      "norm": "§ 296 ZPO · § 389 BGB",
+      "optionen": [
+        "H.M. (Doppeltatbestand): Nein – ohne prozessuale Beachtung entfaltet die Aufrechnung keine materielle Wirkung.",
+        "Rein materielle Sicht: Ja – die Aufrechnung wirkt, die Gegenforderung ist verbraucht."
+      ],
+      "text": "Die h.M. verhindert so, dass der Beklagte seine Gegenforderung verliert, ohne dass das Gericht über sie entscheidet. Klausur: Rechtskraft nach § 322 Abs. 2 ZPO tritt nur ein, soweit über die Gegenforderung tatsächlich entschieden wurde.",
+      "quellen": [
+        "§ 296 ZPO",
+        "§ 322 Abs. 2 ZPO",
+        "§§ 387, 389 BGB",
+        "Themenpool: assessorz-812"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:44:09.835Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

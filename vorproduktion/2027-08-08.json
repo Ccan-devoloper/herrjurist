@@ -1,0 +1,905 @@
+{
+  "datum": "2027-08-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "bgbat-912",
+        "themaTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "stpo-779",
+        "themaTitel": "Rechtswidrige Durchsuchung und Beweisverwertung",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "staat-600"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "staat-600"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "zpo-051"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "fehler",
+        "themaId": "anklage-858"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "tipp",
+        "themaId": "verwbt-118"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "zahl",
+        "themaId": "zpo-052"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "bgbat-912",
+      "poolTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 133 BGB",
+        "§ 157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-10",
+        "2027-04-13",
+        "2027-06-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-779",
+      "poolTitel": "Rechtswidrige Durchsuchung und Beweisverwertung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-01-08",
+        "2027-03-06",
+        "2027-07-09"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-600",
+      "poolTitel": "Bundespräsident: Ausfertigungsprüfungsrecht",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 82 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-01-01",
+        "2027-07-07"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-600",
+      "poolTitel": "Bundespräsident: Ausfertigungsprüfungsrecht",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 82 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-01-01",
+        "2027-07-07"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-05",
+        "2027-04-04",
+        "2027-06-06"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "anklage-858",
+      "poolTitel": "Was leistet der konkrete Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-04-02",
+        "2027-05-06",
+        "2027-06-04"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "verwbt-118",
+      "poolTitel": "Was ist eine öffentliche Einrichtung und wer hat Zugang zu ihr?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2027-03-01",
+        "2027-05-14"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zpo-052",
+      "poolTitel": "Worauf kommt es für den rechtzeitigen Eingang eines per Telefax übermittelten Schriftsatzes bei Gericht an?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 130 ZPO",
+        "§ 130a ZPO",
+        "§ 130d ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-01",
+        "2027-04-05",
+        "2027-06-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-08-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sechs Tage, 18 Beiträge: Was davon sitzt?",
+          "titelZeilen": [
+            "Sechs Tage,",
+            "18 Beiträge: Was",
+            "davon sitzt?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · 2. Examen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Kollidierende AGB: Übereinstimmendes gilt, den Rest füllt das dispositive Recht.",
+            "§ 933 vs. § 934 BGB: Abtretung durch den mittelbaren Besitzer wirkt sofort – nach h.M. trotz Widerspruch.",
+            "Rom II: Maßgeblich ist der Ort des unmittelbaren Schadens, nicht der Folgekosten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Rücktritt: Das erreichte Nebenziel hindert ihn nach dem BGH nicht (Denkzettel).",
+            "Gremienbeschluss: Die eigene Stimme ist kein Versteck – BGH über § 25 II StGB.",
+            "§ 244 StGB: Auch am Tatort ergriffen ist „bei sich geführt“.",
+            "Raub: 1, 3, 5, 10 Jahre – bei sich geführt, verwendet, Todesfolge.",
+            "Betrug: Wer zweifelt, aber die Wahrheit für möglich hält, irrt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Art. 8 GG: Blockieren ist nicht unfriedlich – § 240 StGB bleibt draußen.",
+            "Art. 3 I GG: Der Maßstab reicht von Willkür bis Verhältnismäßigkeit.",
+            "Art. 10 GG bindet den Staat – nicht den privaten Postdienst.",
+            "Art. 14 GG schützt konkrete Positionen, nicht das Vermögen.",
+            "Kompetenzen: Kern, Bedarf, Abweichung – plus drei ungeschriebene Wege."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "2. Examen & Kopfsache",
+          "punkte": [
+            "Mahnbescheid: Widerspruch. Vollstreckungsbescheid: Einspruch in zwei Wochen.",
+            "Sekundäre Darlegungslast wirkt beim Vortrag, der Anschein beim Beweis.",
+            "Subsumtion: Merkmal, Tatsache, Brücke – dann „somit“.",
+            "Vergessen ist eingeplant: abends, nach Tagen, nach Wochen abrufen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann ist eine Versammlung unfriedlich?",
+            "Wogegen legt der Schuldner Einspruch ein – und binnen welcher Frist?",
+            "Welche Mindeststrafe droht, wer die Waffe beim Raub verwendet?",
+            "Was nicht sofort kommt, gehört auf die Liste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Gutglaubenserwerb",
+            "Strafrecht über § 244 und § 250 StGB",
+            "Öffentliches Recht über Art. 72 GG",
+            "2. Examen über das Mahnverfahren"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "aktentasche"
+          ]
+        }
+      ],
+      "caption": "Sechs Tage, 18 Beiträge, vier Bereiche: Zivilrecht, Strafrecht, Öffentliches Recht sowie 2. Examen & Kopfsache. Von kollidierenden AGB über den Denkzettel-Rücktritt bis zur Sitzblockade – je ein Kernsatz pro Thema. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst, und mach am Ende den 30-Sekunden-Selbsttest.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge im Check",
+      "coverText": "Zivil · Straf · ÖR · 2. Examen",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Am Wochenende wird geprüft, welches Wissen hält und was noch einmal geholt werden muss.",
+        "handlung": "{A} tips four small baskets out onto a table one after another, while {B} taps one single item that rolled aside with his pointer.",
+        "hinweisRegie": "Place the note in the free space beside the single item that rolled aside, slightly tilted toward it, without covering the four baskets or {A}'s hands.",
+        "alternative": "{B} checks four labelled jars on a shelf and lifts the one that is nearly empty while {A} holds a refill."
+      },
+      "bildSzene": "four baskets, one item aside",
+      "bildSzeneAlt": "one nearly empty jar lifted",
+      "quellen": [
+        "§ 306 Abs. 2 BGB",
+        "§ 933 BGB",
+        "§ 934 BGB",
+        "Art. 4 Rom II-VO",
+        "§ 24 StGB",
+        "§ 25 Abs. 2 StGB",
+        "§ 244 StGB",
+        "§ 250 StGB",
+        "§ 263 StGB",
+        "Art. 8 GG",
+        "Art. 3 Abs. 1 GG",
+        "Art. 10 GG",
+        "Art. 14 GG",
+        "Art. 70 GG",
+        "Art. 72 GG",
+        "§ 700 ZPO",
+        "§ 138 ZPO",
+        "Themenpool: methodik-901",
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.267Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-912",
+      "slug": "2027-08-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Winken bei der Weinversteigerung: vier Schritte bis zur Anfechtung",
+          "titelZeilen": [
+            "Winken bei der",
+            "Weinversteigerung:",
+            "vier Schritte bis",
+            "zur Anfechtung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erkennbar heißt zurechenbar",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "A betritt einen Saal in Trier, in dem gerade Wein versteigert wird. Er hebt die Hand, um einem Bekannten zu winken. Nach den Regeln der Versteigerung ist das ein Gebot – A erhält den Zuschlag. Ist er an den Kauf gebunden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Objektiver Tatbestand",
+              "text": "Aus Sicht eines verständigen Empfängers (§§ 133, 157 BGB) ist das Handheben im Saal ein Gebot."
+            },
+            {
+              "titel": "2. Handlungswille",
+              "text": "A hebt die Hand bewusst. Anders wäre es bei einem Reflex – dann fehlt jede Willenserklärung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Erklärungsbewusstsein fehlt",
+              "text": "BGH/h.M.: Erklärung wird zugerechnet, wenn A hätte erkennen und vermeiden können, dass sein Verhalten als Gebot verstanden wird."
+            },
+            {
+              "titel": "4. Anfechtung",
+              "text": "A kann analog § 119 Abs. 1 BGB unverzüglich anfechten (§ 121 BGB) und schuldet dann den Vertrauensschaden (§ 122 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: die Gegenansicht",
+          "text": "Nach einer Gegenansicht liegt ohne Erklärungsbewusstsein gar keine Willenserklärung vor; der Empfänger erhält nur Ersatz des Vertrauensschadens analog § 122 BGB. Die h.M. ist flexibler: A kann das Geschäft auch gelten lassen, wenn es ihm zusagt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Fehlt das Erklärungsbewusstsein, entscheidet die Erkennbarkeit: zurechenbar erklärt, aber analog § 119 I BGB anfechtbar."
+        },
+        {
+          "art": "cta",
+          "titel": "Erklärungsbewusstsein in vier Zügen",
+          "punkte": [
+            "Objektiv eine Erklärung?",
+            "Handlungswille vorhanden?",
+            "Hätte A die Deutung erkennen können?",
+            "Anfechtung, Frist und § 122 BGB"
+          ],
+          "icons": [
+            "lupe",
+            "person",
+            "warnung",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Winken bei der Weinversteigerung – und plötzlich Käufer? Prüf in vier Schritten: objektiver Erklärungstatbestand, Handlungswille, fehlendes Erklärungsbewusstsein und Anfechtung. Nach BGH und h.M. wird die Erklärung zugerechnet, wenn der Handelnde die Deutung hätte erkennen und vermeiden können. Er kann dann analog § 119 Abs. 1 BGB anfechten. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#willenserklärung",
+        "#119bgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Trierer Weinversteigerung: vier Schritte",
+      "coverText": "Erkennbar heißt zurechenbar",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer eine Geste macht, die erkennbar als Erklärung verstanden wird, muss sie sich zurechnen lassen.",
+        "handlung": "{A} raises one hand to wave at {B} across a room, while a small wooden gavel on a nearby stand is already coming down.",
+        "hinweisRegie": "Place the note in the free space between {A}'s raised hand and the gavel on the stand, slightly tilted toward the hand, without covering either face.",
+        "alternative": "{B} nods at {A} across a market stall, and a vendor already wraps a bottle for her."
+      },
+      "bildSzene": "waving hand, gavel falling",
+      "bildSzeneAlt": "nod answered with wrapped bottle",
+      "quellen": [
+        "§ 133 BGB",
+        "§ 157 BGB",
+        "§ 119 Abs. 1 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§ 156 BGB",
+        "Themenpool: bgbat-912"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-pruefschritte-anfechtung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.267Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-779",
+      "slug": "2027-08-08-b3",
+      "titelZeilen": [
+        "Gefahr im Verzug:",
+        "Erst den Richter",
+        "anrufen"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gefahr im Verzug: Erst den Richter anrufen",
+          "unter": "Durchsuchung · § 105 StPO",
+          "text": "Die Eilkompetenz ist die Ausnahme – der Richtervorbehalt die Regel.",
+          "norm": "§ 105 Abs. 1 StPO",
+          "icon": "polizei",
+          "sprecher": "Gefahr im Verzug heißt nicht: Richter egal. Viele springen bei der Durchsuchung sofort zur Eilkompetenz der Polizei. Das Gesetz denkt andersherum. Durchsuchungen ordnet grundsätzlich der Richter an. Nur bei Gefahr im Verzug dürfen auch Staatsanwaltschaft und Ermittlungspersonen handeln. So prüfst du das in vier Schritten.",
+          "marken": [
+            "Richter zuerst",
+            "§ 105 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Richtervorbehalt",
+          "text": "Grundsätzlich ordnet der Richter die Durchsuchung an.",
+          "norm": "§ 105 Abs. 1 StPO",
+          "sprecher": "Schritt eins: der Richtervorbehalt. Er soll die Wohnung schützen, die Artikel 13 des Grundgesetzes besonders absichert. Deshalb ist die richterliche Anordnung die Regel.",
+          "marken": [
+            "Regel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gefahr im Verzug – eng",
+          "text": "Nur wenn schon das Warten auf den Richter den Erfolg gefährdet.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Gefahr im Verzug ist eng auszulegen. Sie liegt nur vor, wenn die richterliche Anordnung nicht eingeholt werden kann, ohne dass der Zweck der Durchsuchung gefährdet wird. Eine bloße Vermutung oder allgemeine Erfahrung reicht nach dem Bundesverfassungsgericht nicht.",
+          "marken": [
+            "eng"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Erst versuchen, dann handeln",
+          "text": "Die Ermittler müssen regelmäßig versuchen, einen Richter zu erreichen.",
+          "norm": null,
+          "sprecher": "Schritt drei: Die Ermittler müssen in aller Regel zuerst versuchen, einen Richter zu erreichen. Die Gerichte müssen dafür einen Bereitschaftsdienst vorhalten. Die Gründe für die Eilanordnung sind zu dokumentieren.",
+          "marken": [
+            "versuchen",
+            "dokumentieren"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verstoß – und dann?",
+          "text": "Rechtswidrig heißt nicht automatisch unverwertbar: Abwägung.",
+          "norm": null,
+          "sprecher": "Schritt vier: Wurde der Richtervorbehalt verletzt, ist die Durchsuchung rechtswidrig. Ob der Fund verwertbar bleibt, entscheidet eine Abwägung. Ein Verwertungsverbot liegt nahe, wenn der Richtervorbehalt bewusst oder willkürlich umgangen wurde.",
+          "marken": [
+            "Abwägung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Keine Rettung über „hätte angeordnet“",
+          "text": "Bei bewusster Umgehung hilft der hypothetische Ersatzeingriff nicht.",
+          "norm": null,
+          "sprecher": "Und das Argument: Der Richter hätte doch ohnehin zugestimmt? Bei bewusster Umgehung lässt der BGH das nicht gelten. Sonst liefe der Richtervorbehalt leer.",
+          "marken": [
+            "kein Freibrief"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Richter zuerst, Eilkompetenz eng, versuchen und dokumentieren – sonst droht ein Verwertungsverbot.",
+          "norm": null,
+          "sprecher": "Merke: Richter zuerst. Gefahr im Verzug nur eng und dokumentiert. Und wer den Richter bewusst umgeht, riskiert ein Verwertungsverbot.",
+          "marken": [
+            "Richter zuerst"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für die StPO-Klausur",
+          "text": "Speichern für die nächste Durchsuchungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur mit Durchsuchung und Verwertungsverbot.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Gefahr im Verzug heißt nicht: Richter egal. Durchsuchungen ordnet nach § 105 Abs. 1 StPO grundsätzlich der Richter an. Die Eilkompetenz ist eng auszulegen, die Ermittler müssen regelmäßig zuerst versuchen, einen Richter zu erreichen, und die Gründe dokumentieren. Wird der Richtervorbehalt bewusst umgangen, liegt ein Verwertungsverbot nahe. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#durchsuchung",
+        "#105stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Durchsuchung: Richter zuerst, Eilfall eng",
+      "coverText": "Eilkompetenz ist die Ausnahme",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Bevor die Tür ohne Richter geöffnet wird, muss zuerst der Richter gefragt werden.",
+        "handlung": "{B} stands at a closed door holding a crowbar, while {A} hovers beside him and holds out a ringing phone first.",
+        "hinweisRegie": "Place the note in the free space between the ringing phone and the closed door, slightly tilted toward the phone, without covering {B}'s face or the crowbar.",
+        "alternative": "{A} blocks a shortcut path with a small sign while {B} looks toward the longer road with a bench where someone waits."
+      },
+      "bildSzene": "phone held out before door",
+      "bildSzeneAlt": "shortcut blocked by small sign",
+      "quellen": [
+        "§ 105 Abs. 1 StPO",
+        "§ 102 StPO",
+        "Art. 13 Abs. 2 GG",
+        "Themenpool: stpo-779"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge-richtervorbehalt",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-600",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Der Bundespräsident hält ein Gesetz für offensichtlich verfassungswidrig. Darf er die Ausfertigung verweigern?",
+      "optionen": [
+        "Nein – er prüft nur, ob das Verfahren eingehalten wurde",
+        "Ja – schon bei politischen Bedenken",
+        "Ja – nach h.M. jedenfalls bei evidenten Verstößen"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 82 Abs. 1 GG",
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-600"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-600",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – bei evidenten Verfassungsverstößen darf er nach h.M. verweigern",
+      "text": "Art. 82 Abs. 1 GG spricht von Gesetzen, die „nach den Vorschriften dieses Grundgesetzes“ zustande gekommen sind. Das formelle Prüfungsrecht ist unstreitig. Ein materielles Prüfungsrecht bejaht die h.M. jedenfalls bei offensichtlichen Verstößen – gestützt auf die Bindung an Recht und Gesetz und den Amtseid. Politische Bedenken genügen nie.",
+      "norm": "Art. 82 Abs. 1 GG",
+      "quellen": [
+        "Art. 82 Abs. 1 GG",
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-600"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.269Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – er prüft nur, ob das Verfahren eingehalten wurde",
+        "Ja – schon bei politischen Bedenken",
+        "Ja – nach h.M. jedenfalls bei evidenten Verstößen"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-051",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 261 Abs. 3 Nr. 2 ZPO: Zieht der Beklagte um, bleibt das Gericht zuständig",
+      "text": "Mit Eintritt der Rechtshängigkeit wird die Zuständigkeit des Prozessgerichts durch eine Veränderung der sie begründenden Umstände nicht mehr berührt – perpetuatio fori. Zieht der Beklagte nach Zustellung der Klage in einen anderen Gerichtsbezirk, bleibt es beim bisherigen Gericht.",
+      "norm": "§ 261 Abs. 3 Nr. 2 ZPO",
+      "quellen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "Themenpool: zpo-051"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-858",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "„Wie die Videoaufnahme zeigt“ – ein guter Satz für den Anklagesatz?",
+      "falsch": "A entwendete die Uhr, wie die Aufnahme der Überwachungskamera zeigt und die Zeugin Z bestätigt.",
+      "richtigText": "Der konkrete Anklagesatz schildert nur das Tatgeschehen mit allen Merkmalen – ohne Beweismittel und Beweiswürdigung. Die Beweismittel werden gesondert aufgeführt, die Würdigung gehört ins wesentliche Ergebnis der Ermittlungen (§ 200 Abs. 2 StPO).",
+      "quellen": [
+        "§ 200 StPO",
+        "Themenpool: anklage-858"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-118",
+      "ueberzeile": "Klausurtipp Kommunalrecht",
+      "titel": "Auswärtiger Verein will die Stadthalle: Erst klären, wer überhaupt anspruchsberechtigt ist",
+      "text": "Den Zulassungsanspruch aus der Gemeindeordnung haben grundsätzlich die Einwohner; gleichgestellt sind je nach Landesrecht Grundbesitzer und Gewerbetreibende sowie ortsansässige Vereine. Ein auswärtiger Verein hat meist keinen Anspruch aus der Gemeindeordnung – dann bleibt der Anspruch auf ermessensfehlerfreie Entscheidung im Rahmen der Widmung.",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder",
+        "Art. 3 Abs. 1 GG",
+        "Themenpool: verwbt-118"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-052",
+      "ueberzeile": "3 Punkte Zivilprozessrecht",
+      "titel": "Partei ohne Anwalt, Gerichtsfax besetzt, Frist läuft ab: drei Punkte",
+      "text": "Für Anwälte ist der elektronische Weg Pflicht (§ 130d ZPO). Eine Partei ohne Anwalt darf per Fax einreichen. Dann gilt:",
+      "punkte": [
+        "Die Unterschrift muss auf der Kopie wiedergegeben sein (§ 130 Nr. 6 ZPO)",
+        "Fristgerecht ist erst der vollständige Empfang der Signale beim Gericht",
+        "Störung beim Gericht trotz Zeitreserve: Wiedereinsetzung (§ 233 ZPO)"
+      ],
+      "quellen": [
+        "§ 130 ZPO",
+        "§ 130d ZPO",
+        "§ 233 ZPO",
+        "Themenpool: zpo-052"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:52.269Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

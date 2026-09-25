@@ -1,0 +1,926 @@
+{
+  "datum": "2027-08-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "grundr-377",
+        "themaTitel": "Wann sind Grundrechte für Ausländer und juristische Personen anwendbar?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "bgbat-163",
+        "themaTitel": "Wann beginnt die regelmäßige Verjährung und wann endet sie?",
+        "fach": "bgbat",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "sachen-502"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "sachen-502"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "schuldbt-488"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "fehler",
+        "themaId": "assessorz-810"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "tipp",
+        "themaId": "strafat-292"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "zahl",
+        "themaId": "anklage-866"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-377",
+      "poolTitel": "Wann sind Grundrechte für Ausländer und juristische Personen anwendbar?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 19 Abs. 3 GG",
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-21",
+        "2027-03-04",
+        "2027-05-26"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bgbat-163",
+      "poolTitel": "Wann beginnt die regelmäßige Verjährung und wann endet sie?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 195 BGB",
+        "§ 199 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-01-04",
+        "2027-03-31",
+        "2027-07-06"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-502",
+      "poolTitel": "Besitzschutz und verbotene Eigenmacht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 858 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02",
+        "2027-03-04",
+        "2027-05-20"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-502",
+      "poolTitel": "Besitzschutz und verbotene Eigenmacht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 858 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02",
+        "2027-03-04",
+        "2027-05-20"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-488",
+      "poolTitel": "Nacherfüllung und Selbstvornahme im Werkvertrag",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 635, 637 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-15",
+        "2027-06-22"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessorz-810",
+      "poolTitel": "Wie entscheidet das Gericht nach übereinstimmender Erledigungserklärung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-07",
+        "2027-04-18",
+        "2027-06-19"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafat-292",
+      "poolTitel": "Was ist eine eigenverantwortliche Selbstgefährdung?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 222 StGB",
+        "§ 216 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-05-17",
+        "2027-07-06"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "anklage-866",
+      "poolTitel": "Welche Verfahrenshindernisse prüft man von Amts wegen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 206a StPO",
+        "§ 260 Abs. 3 StPO",
+        "§ 78 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-04",
+        "2027-04-25",
+        "2027-05-26"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-08-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen aus vier Bereichen – was sitzt?",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen aus",
+            "vier Bereichen –",
+            "was sitzt?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausurtechnik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Verkehrspflicht: geschuldet ist zumutbare Sicherung, nicht Schutz vor jeder Gefahr.",
+            "Vor-GmbH: Wer vor der Eintragung handelt, haftet nach § 11 Abs. 2 GmbHG selbst.",
+            "Rechtskraft: Nur der Tenor bindet – das Eigentum als Vorfrage nicht (§ 322 ZPO).",
+            "Versäumnisurteil: Auch ohne Beklagten muss die Klage schlüssig sein (§ 331 II ZPO).",
+            "Übersicherung: nachträglich keine Nichtigkeit, sondern ein Anspruch auf Freigabe."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Sitzblockade: Gewalt erst gegenüber der zweiten Reihe; Verwerflichkeit gesondert prüfen.",
+            "Gewahrsam: vergessen, aber Ort bekannt – Gewahrsam nur gelockert.",
+            "Schwarze Kasse: Nachteil schon durch den Entzug der Verfügungsmacht.",
+            "Abschlussverfügung: ohne hinreichenden Tatverdacht § 170 II StPO, nicht § 153 StPO.",
+            "Revision: Beweiswürdigung nur auf Lücken, Widersprüche, Denkfehler; Aufklärungsrüge aus der Akte."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Baugenehmigung: erst Verfahren und § 29 BauGB, dann §§ 30, 34, 35 BauGB.",
+            "Verfristeter Widerspruch: Sachentscheidung heilt nach dem BVerwG – nicht bei Drittwirkung.",
+            "Rückwirkung: echte grundsätzlich verboten, unechte grundsätzlich erlaubt.",
+            "Behördenklausur: Ausgangsbescheid bekannt geben, Widerspruchsbescheid zustellen.",
+            "Gewerbeuntersagung: maßgeblich ist der Abschluss des Verwaltungsverfahrens."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: vier Uhrzeiten auf die Skizze – Skizzenende, Halbzeit, letzter Teil, Schreibstopp.",
+            "Kopfsache: Ergebnisse statt Lernstunden zählen, Vergleiche begrenzen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wem gegenüber übt eine Sitzblockade Gewalt aus – und warum?",
+            "Was hilft dem Sicherungsgeber bei nachträglicher Übersicherung?",
+            "Wann heilt die Sachentscheidung einen verfristeten Widerspruch nicht?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Anspruch und Prozess verbinden",
+            "Strafrecht: Tatbestand und Verfahren trennen",
+            "Öffentliches Recht: Zeitpunkte sauber bestimmen",
+            "Klausurtechnik: Zeitmarken setzen"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen. Im Zivilrecht ging es von der Verkehrspflicht über die Vor-GmbH bis zur Übersicherung, im Strafrecht von der Sitzblockade bis zur Aufklärungsrüge, im Öffentlichen Recht von der Baugenehmigung bis zur Gewerbeuntersagung. Dazu Zeitmarken für die Klausur und ein ehrlicher Blick auf Lernstunden. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Klausurtechnik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Vier getrennte Lernstationen der Woche werden noch einmal abgeschritten und geprüft.",
+        "handlung": "{A} walks along four small, clearly separated workbenches and taps each one with his pointer, while {B} carries a basket and collects one finished crystal from every bench.",
+        "hinweisRegie": "Place the note in the free space above the last of the four workbenches, slightly tilted toward the basket, so it reads as the week's summary without covering faces or crystals.",
+        "alternative": "{B} stacks four differently colored crystal blocks into a small tower, while {A} checks each layer with a lens."
+      },
+      "bildSzene": "four workbenches, crystals collected",
+      "bildSzeneAlt": "four colored blocks stacked",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 11 Abs. 2 GmbHG",
+        "§ 322 ZPO",
+        "§ 331 ZPO",
+        "§§ 929, 930 BGB",
+        "§ 240 StGB",
+        "§ 242 StGB",
+        "§ 266 StGB",
+        "§ 170 Abs. 2 StPO",
+        "§ 261 StPO",
+        "§ 244 Abs. 2 StPO",
+        "§ 29 BauGB",
+        "§ 70 VwGO",
+        "Art. 20 Abs. 3 GG",
+        "§ 73 Abs. 3 VwGO",
+        "§ 35 GewO",
+        "Themenpool: methodik-902",
+        "Themenpool: mindset-8"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "achtzehn-themen-vier-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.537Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-377",
+      "slug": "2027-08-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Firma aus Italien: nicht inländisch – und trotzdem grundrechtsfähig",
+          "titelZeilen": [
+            "Firma aus Italien:",
+            "nicht inländisch –",
+            "und trotzdem",
+            "grundrechtsfähig"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "EU-Sitz plus Inlandsbezug",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Art. 19 Abs. 3 GG erstreckt die Grundrechte auf inländische juristische Personen, soweit sie ihrem Wesen nach auf diese anwendbar sind. Wer nur den Wortlaut liest, lässt Unternehmen aus anderen EU-Staaten durchfallen – das BVerfG sieht das anders."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Juristische Person",
+              "text": "Erfasst sind auch teilrechtsfähige Personenvereinigungen wie OHG, KG oder GbR."
+            },
+            {
+              "titel": "2. Inländisch",
+              "text": "Maßgeblich ist der tatsächliche Sitz, also das Aktionszentrum, in Deutschland."
+            },
+            {
+              "titel": "3. EU-Unternehmen",
+              "text": "Nach dem BVerfG wird Art. 19 Abs. 3 GG auf juristische Personen aus der EU erweitert (Art. 18 AEUV) – bei hinreichendem Inlandsbezug."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Wesensmäßige Anwendbarkeit",
+              "text": "Passt das Grundrecht auch ohne natürliche Person? Ja bei Art. 12, 14, 2 Abs. 1 GG; nein bei Menschenwürde oder Ehe."
+            },
+            {
+              "titel": "5. Juristische Personen des öffentlichen Rechts",
+              "text": "Grundsätzlich nicht berechtigt. Ausnahmen: Universitäten (Art. 5 III), Rundfunkanstalten (Art. 5 I 2), Kirchen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweise",
+          "punkte": [
+            "Mehrheitlich staatlich beherrschte Unternehmen: nach dem BVerfG grundrechtsgebunden, nicht berechtigt.",
+            "Juristische Personen aus Drittstaaten: keine materiellen Grundrechte.",
+            "Die Prozessgrundrechte aus Art. 101 Abs. 1 S. 2 und Art. 103 Abs. 1 GG gelten für alle."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Juristische Person, inländisch – oder aus der EU mit Inlandsbezug –, Grundrecht wesensmäßig anwendbar. Staatlich beherrscht: kein Schutz."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 19 Abs. 3 GG in drei Fragen",
+          "punkte": [
+            "Juristische Person oder Personenvereinigung?",
+            "Sitz im Inland oder in der EU?",
+            "Passt das Grundrecht ihrem Wesen nach?"
+          ],
+          "icons": [
+            "gebaeude",
+            "globus",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Firma aus Italien: nicht inländisch – und trotzdem grundrechtsfähig. Art. 19 Abs. 3 GG spricht von inländischen juristischen Personen. Das BVerfG erweitert den Schutz aber auf juristische Personen aus der EU, wenn sie einen hinreichenden Inlandsbezug haben. Danach fragst du, ob das Grundrecht wesensmäßig passt. Staatlich beherrschte Unternehmen sind dagegen grundrechtsgebunden, nicht berechtigt. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsrecht",
+        "#art19gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 19 III GG: auch EU-Unternehmen geschützt",
+      "coverText": "EU-Sitz plus Inlandsbezug",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Ein Unternehmen aus einem anderen EU-Staat steht nicht draußen, wenn es hier tätig ist – der Schutz wird auf es erweitert.",
+        "handlung": "{A} arrives with a small company crate at a gate, while {B} hovers beside the gate and extends a protective umbrella over the crate as well.",
+        "hinweisRegie": "Place the note in the free space under the extended umbrella near the crate, slightly tilted toward it, so the extension of protection is clear without covering the characters.",
+        "alternative": "{B} sorts company boxes into three lanes marked only by a house, a star circle and a distant globe symbol, while {A} watches curiously."
+      },
+      "bildSzene": "umbrella extended over foreign crate",
+      "bildSzeneAlt": "company boxes sorted into three lanes",
+      "quellen": [
+        "Art. 19 Abs. 3 GG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 12 GG",
+        "Art. 14 GG",
+        "Art. 18 AEUV",
+        "Art. 101 GG",
+        "Art. 103 GG",
+        "Themenpool: grundr-377"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.538Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-163",
+      "slug": "2027-08-22-b3",
+      "titelZeilen": [
+        "Drei Jahre ab",
+        "Entstehung? Hier",
+        "verrechnen sich viele"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Drei Jahre ab Entstehung? Hier verrechnen sich viele",
+          "unter": "Verjährung · §§ 195, 199 BGB",
+          "text": "Die regelmäßige Frist läuft nicht ab dem Tag der Entstehung, sondern ab Jahresende.",
+          "norm": "§ 199 Abs. 1 BGB",
+          "icon": "kalender",
+          "sprecher": "Drei Jahre ab Entstehung? Damit verrechnen sich viele. Die regelmäßige Verjährung beginnt erst mit dem Schluss des Jahres.",
+          "marken": [
+            "nicht taggenau",
+            "Jahresende"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Welche Frist?",
+          "text": "Regelmäßig drei Jahre – Sonderfristen gehen vor.",
+          "norm": "§ 195 BGB",
+          "sprecher": "Schritt eins: die Frist. Die regelmäßige Verjährungsfrist beträgt drei Jahre. Prüf aber vorher Sonderfristen, etwa für Mängelrechte im Kaufrecht nach § 438 BGB. Die gehen vor.",
+          "marken": [
+            "§ 195 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Entstehung und Kenntnis",
+          "text": "Anspruch entstanden plus Kenntnis oder grob fahrlässige Unkenntnis.",
+          "norm": "§ 199 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: zwei Voraussetzungen. Der Anspruch muss entstanden sein, in der Regel also fällig. Und der Gläubiger kennt die anspruchsbegründenden Umstände und den Schuldner oder müsste sie ohne grobe Fahrlässigkeit kennen.",
+          "marken": [
+            "entstanden + Kenntnis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beginn mit Jahresschluss",
+          "text": "Beispiel: fällig und bekannt im März 2024 – Ende mit Ablauf des 31.12.2027.",
+          "norm": "§ 199 Abs. 1 BGB",
+          "sprecher": "Schritt drei, der Kern: Die Frist beginnt mit dem Schluss des Jahres, in dem beides vorliegt. Beispiel: Der Anspruch wird im März 2024 fällig, der Gläubiger weiß alles. Die Frist läuft ab Ende 2024 und endet mit Ablauf des 31. Dezember 2027.",
+          "marken": [
+            "31.12. + 3 Jahre"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Höchstfristen ohne Kenntnis",
+          "text": "Zehn oder dreißig Jahre – taggenau, ohne Jahresende.",
+          "norm": "§ 199 Abs. 2–4 BGB",
+          "sprecher": "Schritt vier: Ohne Kenntnis verjährt der Anspruch trotzdem, nach Höchstfristen. Meist zehn Jahre ab Entstehung, bei Schäden an Leben, Körper, Gesundheit oder Freiheit dreißig Jahre ab der Tat. Diese Fristen laufen taggenau.",
+          "marken": [
+            "10 / 30 Jahre"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Hemmung und Neubeginn",
+          "text": "Klage und Verhandlungen hemmen; ein Anerkenntnis lässt die Frist neu beginnen.",
+          "norm": "§§ 203, 204, 212 BGB",
+          "sprecher": "Dann prüfst du, ob die Frist angehalten wurde. Klageerhebung und Verhandlungen hemmen die Verjährung. Ein Anerkenntnis, etwa eine Abschlagszahlung, lässt sie neu beginnen.",
+          "marken": [
+            "hemmen ≠ neu beginnen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Nur auf Einrede",
+          "text": "Das Gericht beachtet die Verjährung nicht von Amts wegen.",
+          "norm": "§ 214 Abs. 1 BGB",
+          "sprecher": "Und wichtig: Verjährung ist eine Einrede. Der Schuldner muss sich darauf berufen. Von Amts wegen prüft das Gericht sie nicht.",
+          "marken": [
+            "Einrede"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Drei Jahre ab Jahresschluss nach Entstehung und Kenntnis.",
+          "norm": "§§ 195, 199 BGB",
+          "sprecher": "Merke: drei Jahre, beginnend mit dem Schluss des Jahres, in dem der Anspruch entstanden ist und der Gläubiger davon weiß.",
+          "marken": [
+            "Jahresschluss"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst das Jahr, dann die drei Jahre",
+          "text": "Speichern für die nächste Verjährungsprüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Verjährungsprüfung. Erst das Jahr bestimmen, dann drei Jahre dazurechnen.",
+          "marken": [
+            "Jahr + 3"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Drei Jahre ab Entstehung? Damit verrechnen sich viele. Die regelmäßige Verjährungsfrist von drei Jahren (§ 195 BGB) beginnt nach § 199 Abs. 1 BGB erst mit dem Schluss des Jahres, in dem der Anspruch entstanden ist und der Gläubiger Kenntnis hat oder grob fahrlässig nicht hat. Die Höchstfristen des § 199 Abs. 2–4 BGB laufen dagegen taggenau. Danach: Hemmung, Neubeginn – und die Einrede nach § 214 BGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#verjährung",
+        "#199bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verjährung: Frist beginnt erst am Jahresende",
+      "coverText": "Start erst am 31.12.",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Die Uhr der regelmäßigen Verjährung startet nicht am Tag des Anspruchs, sondern erst zum Jahresende.",
+        "handlung": "{A} nervously tries to start a large stopwatch in the middle of a wall calendar, while {B} calmly moves his hand to the very last page of the year before letting the stopwatch run.",
+        "hinweisRegie": "Place the note in the free space beside the last calendar page, slightly tilted toward it, so the year-end start is clear without covering the stopwatch or hands.",
+        "alternative": "{B} counts three large stepping stones that only begin after a small gate marked with a single firework symbol, while {A} waits at the gate."
+      },
+      "bildSzene": "stopwatch starts at year's last page",
+      "bildSzeneAlt": "three stones after firework gate",
+      "quellen": [
+        "§ 195 BGB",
+        "§ 199 BGB",
+        "§ 438 BGB",
+        "§ 203 BGB",
+        "§ 204 BGB",
+        "§ 212 BGB",
+        "§ 214 BGB",
+        "Themenpool: bgbat-163"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.543Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-502",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "D reißt A die Tasche weg und rennt. A holt ihn nach 200 Metern ein und nimmt sie mit Gewalt zurück. Erlaubt?",
+      "optionen": [
+        "Ja – Besitzkehr, § 859 Abs. 2 BGB",
+        "Nein – zurückholen darf nur die Polizei",
+        "Nur nach Klage aus § 861 BGB"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 859 BGB",
+        "§ 858 BGB",
+        "§ 861 BGB",
+        "Themenpool: sachen-502"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.543Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-502",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – auf frischer Tat verfolgt: Besitzkehr",
+      "text": "D hat A den Besitz durch verbotene Eigenmacht entzogen (§ 858 Abs. 1 BGB). Wird der Täter auf frischer Tat betroffen oder verfolgt, darf der Besitzer ihm die Sache mit Gewalt wieder abnehmen (§ 859 Abs. 2 BGB). Die Gewalt muss sich aber im Rahmen des Erforderlichen halten. Später bleibt nur der Anspruch aus § 861 BGB.",
+      "norm": "§ 859 Abs. 2 BGB",
+      "quellen": [
+        "§ 859 BGB",
+        "§ 858 BGB",
+        "§ 861 BGB",
+        "Themenpool: sachen-502"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.543Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Besitzkehr, § 859 Abs. 2 BGB",
+        "Nein – zurückholen darf nur die Polizei",
+        "Nur nach Klage aus § 861 BGB"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-488",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 635 Abs. 3 BGB: Teuer allein reicht nicht zum Verweigern",
+      "text": "Der Unternehmer kann die Nacherfüllung verweigern, wenn sie nur mit unverhältnismäßigen Kosten möglich ist. Maßstab ist nicht der Werklohn, sondern das Verhältnis des Aufwands zum Vorteil, den die Mängelbeseitigung dem Besteller bringt. Hat der Besteller ein objektiv berechtigtes Interesse an ordnungsgemäßer Erfüllung, bleibt es meist bei der Pflicht zur Nacherfüllung.",
+      "norm": "§ 635 Abs. 3 BGB",
+      "quellen": [
+        "§ 635 BGB",
+        "§ 637 BGB",
+        "Themenpool: schuldbt-488"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.543Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-810",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Übereinstimmend erledigt – und jetzt noch Zeugen hören?",
+      "falsch": "Nach übereinstimmender Erledigungserklärung vernimmt das Gericht noch die Zeugen, um sicher zu klären, wer ohne Erledigung gewonnen hätte.",
+      "richtigText": "Das Gericht entscheidet durch Beschluss nur noch über die Kosten, nach billigem Ermessen unter Berücksichtigung des bisherigen Sach- und Streitstands (§ 91a Abs. 1 ZPO). Das ist eine summarische Prüfung: Eine Beweisaufnahme findet grundsätzlich nicht statt. Ist der Ausgang offen, liegt eine Kostenteilung oder -aufhebung nahe.",
+      "quellen": [
+        "§ 91a ZPO",
+        "Themenpool: assessorz-810"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.543Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-292",
+      "ueberzeile": "Klausurtipp Strafrecht AT",
+      "titel": "Wusste der Lieferant mehr als das Opfer? Dann keine freie Selbstgefährdung",
+      "text": "Eigenverantwortlich gefährdet sich nur, wer das Risiko im Wesentlichen so erfasst wie der Beteiligte. Kennt der Veranlasser eine besondere Gefahr, die das Opfer nicht erkennt – etwa eine ungewöhnlich hohe Wirkstoffkonzentration –, hat er überlegenes Wissen. Dann entfällt die Zurechnungssperre, und du prüfst § 222 StGB wie bei jedem anderen Fahrlässigkeitsdelikt weiter.",
+      "quellen": [
+        "§ 222 StGB",
+        "§ 216 StGB",
+        "Themenpool: strafat-292"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.543Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-866",
+      "ueberzeile": "4 Punkte Anklage",
+      "titel": "Antragsdelikt in der Akte: vier Prüfpunkte, bevor du anklagst",
+      "text": "Fehlt ein erforderlicher Strafantrag und bejaht die StA auch kein besonderes öffentliches Interesse, liegt ein Verfahrenshindernis vor – dann Einstellung nach § 170 Abs. 2 StPO statt Anklage.",
+      "punkte": [
+        "Antragsdelikt? Absolut oder relativ",
+        "Antrag vom Berechtigten (§ 77 StGB)",
+        "Frist: drei Monate ab Kenntnis (§ 77b StGB)",
+        "Relativ: besonderes öffentliches Interesse, z. B. § 230 StGB"
+      ],
+      "quellen": [
+        "§ 77 StGB",
+        "§ 77b StGB",
+        "§ 230 StGB",
+        "§ 170 Abs. 2 StPO",
+        "Themenpool: anklage-866"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:45:25.543Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

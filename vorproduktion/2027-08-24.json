@@ -1,0 +1,876 @@
+{
+  "datum": "2027-08-24",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "schuldbt-467",
+        "themaTitel": "Minderung im Kaufrecht",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "anklage-792",
+        "themaTitel": "Anklageschrift: abstrakter und konkreter Anklagesatz",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-391",
+        "themaTitel": "Was ist der Folgenbeseitigungsanspruch?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "verwbt-676"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "zahl",
+        "themaId": "assessorz-801"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "streitstand",
+        "themaId": "assessorz-816"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "merksatz",
+        "themaId": "stpo-774"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "schuldbt-467",
+      "poolTitel": "Minderung im Kaufrecht",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 2, 441 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2027-01-07"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "anklage-792",
+      "poolTitel": "Anklageschrift: abstrakter und konkreter Anklagesatz",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-391",
+      "poolTitel": "Was ist der Folgenbeseitigungsanspruch?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-27",
+        "2027-05-16",
+        "2027-07-29"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-10",
+        "2027-05-27",
+        "2027-05-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-10",
+        "2027-05-27",
+        "2027-05-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-676",
+      "poolTitel": "Abschleppfälle und Kosten",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Landespolizei-/Vollstreckungsrecht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2027-05-01",
+        "2027-05-22"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "assessorz-801",
+      "poolTitel": "Was verlangt die Relationstechnik in drei Stationen?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-31",
+        "2027-02-14",
+        "2027-04-26"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessorz-816",
+      "poolTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-04-10",
+        "2027-04-19",
+        "2027-06-22"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "stpo-774",
+      "poolTitel": "Telefon-/Telekommunikationsüberwachung im Überblick",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 100a ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2027-05-20",
+        "2027-05-30"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-467",
+      "slug": "2027-08-24-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erst gemindert, dann doch zurückgeben? Laut BGH zu spät",
+          "titelZeilen": [
+            "Erst gemindert,",
+            "dann zurückgeben?",
+            "Laut BGH zu spät"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Minderung bindet den Käufer",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "K kauft einen Gebrauchtwagen, der Mangel zeigt sich bald. K erklärt die Minderung (§§ 437 Nr. 2, 441 BGB). Später erweist sich der Mangel als gravierender: Nun will K Schadensersatz statt der ganzen Leistung – Wagen zurück, voller Kaufpreis als Schaden."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wechsel noch möglich?",
+          "links": {
+            "titel": "BGH",
+            "punkte": [
+              "Minderung ist ein Gestaltungsrecht: mit Zugang bindend.",
+              "K hat sich fürs Behalten entschieden – großer Schadensersatz scheidet aus."
+            ]
+          },
+          "rechts": {
+            "titel": "Gegenansicht",
+            "punkte": [
+              "§ 325 BGB: Rücktritt schließt Schadensersatz nicht aus – Minderung erst recht nicht.",
+              "Der Käufer soll nicht schlechter stehen als nach einem Rücktritt."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Was dem Käufer bleibt",
+          "punkte": [
+            "Kleiner Schadensersatz: der Schaden, den die Minderung nicht ausgleicht.",
+            "Schäden an anderen Rechtsgütern: § 280 Abs. 1 BGB neben der Minderung.",
+            "Nicht mehr: Rückgabe des Wagens gegen den vollen Kaufpreis."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme und Klausur",
+          "text": "Für den BGH spricht der Charakter der Minderung: Wer gestaltet, legt sich fest. Die Minderung passt den Vertrag an und hält an ihm fest, der große Schadensersatz würde ihn rückabwickeln. In der Klausur: Minderung wirksam erklärt? Dann beide Ansichten kurz – und entscheiden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nach wirksamer Minderung kein großer Schadensersatz mehr (BGH). Den Restschaden deckt der kleine Schadensersatz."
+        },
+        {
+          "art": "cta",
+          "titel": "Minderung und Schadensersatz",
+          "punkte": [
+            "Minderung wirksam erklärt?",
+            "Großer Schadensersatz: nach BGH gesperrt",
+            "Kleiner Schadensersatz: Restschaden"
+          ],
+          "icons": [
+            "vertrag",
+            "stopp",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Erst gemindert, dann doch zurückgeben? Nach dem BGH ist das zu spät: Die Minderung ist ein Gestaltungsrecht, mit ihr hat sich der Käufer für das Behalten der Sache entschieden. Schadensersatz statt der ganzen Leistung scheidet danach aus – den Schaden, den die Minderung nicht ausgleicht, kann er aber weiter als kleinen Schadensersatz verlangen. Teile der Literatur sehen das mit Blick auf § 325 BGB anders.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#minderung",
+        "#441bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Minderung bindet: kein großer Schadensersatz",
+      "coverText": "Minderung bindet den Käufer",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer die Minderung erklärt, hat sich entschieden, die Sache zu behalten – ein späterer Rückweg ist versperrt.",
+        "handlung": "{A} has already stamped a small price reduction tag onto an old hover-car and now tries to push the car back through a shop gate, while {B} calmly holds the gate shut with one hand.",
+        "hinweisRegie": "Place the note in the free space between the stamped price tag and the closed gate, slightly tilted toward the gate, so it links the made choice to the blocked way back without covering faces.",
+        "alternative": "{B} watches as {A} crosses a small bridge that folds up behind her, leaving only a narrow side path open."
+      },
+      "bildSzene": "car with reduced tag at closed gate",
+      "bildSzeneAlt": "bridge folds up behind walker",
+      "quellen": [
+        "§§ 437 Nr. 2, 441 BGB",
+        "§§ 437 Nr. 3, 280, 281 BGB",
+        "§ 325 BGB",
+        "BGH-Rspr. zur Bindung an die Minderung",
+        "Themenpool: schuldbt-467"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.913Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-792",
+      "slug": "2027-08-24-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Im Anklagesatz hat der Zeuge nichts zu suchen",
+          "titelZeilen": [
+            "Im Anklagesatz",
+            "hat der Zeuge",
+            "nichts zu suchen"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Tat schildern, nicht beweisen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Referendarin R entwirft eine Anklage gegen A. Im konkreten Anklagesatz schreibt sie: „Der Angeschuldigte schlug dem B – wie der Zeuge Z glaubhaft bekundet hat – mit einer Bierflasche auf den Kopf.“ Passt das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So ist der Anklagesatz gebaut",
+          "schritte": [
+            {
+              "titel": "Abstrakter Teil",
+              "text": "Die gesetzlichen Merkmale der Tat in den Worten des Gesetzes (§ 200 Abs. 1 S. 1 StPO)."
+            },
+            {
+              "titel": "Konkreter Teil",
+              "text": "Die Tat als Geschehen: wer, wann, wo, was – so, dass sie von anderen Taten unterscheidbar ist."
+            },
+            {
+              "titel": "Anzuwendende Vorschriften",
+              "text": "Die Strafvorschriften, etwa §§ 223 Abs. 1, 224 Abs. 1 Nr. 2 StGB."
+            },
+            {
+              "titel": "Beweise und Würdigung",
+              "text": "Beweismittel in die Beweismittelliste, die Würdigung ins wesentliche Ergebnis der Ermittlungen (§ 200 Abs. 2 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Beweiserwägungen in den konkreten Anklagesatz packen. Er schildert die Tat so, wie sie der Anklage zugrunde liegt – ohne „wie der Zeuge bekundet“, „glaubhaft“ oder „offenbar“. Ob und warum sie nachweisbar ist, steht an anderer Stelle."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Nein. Besser: „Am 14. März 2027 gegen 23 Uhr schlug der Angeschuldigte vor der Gaststätte X in Y dem B mit einer Bierflasche auf den Kopf. B erlitt eine Platzwunde.“ Z nennst du in der Beweismittelliste, seine Glaubhaftigkeit würdigst du im wesentlichen Ergebnis."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anklagesatz: Tat schildern, nicht beweisen. Zeugen gehören zu den Beweismitteln, die Würdigung ins wesentliche Ergebnis der Ermittlungen."
+        },
+        {
+          "art": "cta",
+          "titel": "Anklageschrift sauber trennen",
+          "punkte": [
+            "Abstrakt: Merkmale in Gesetzesworten",
+            "Konkret: Tat nach Zeit, Ort, Geschehen",
+            "Beweise und Würdigung getrennt"
+          ],
+          "icons": [
+            "paragraf",
+            "kalender",
+            "klemmbrett"
+          ]
+        }
+      ],
+      "caption": "Im Anklagesatz hat der Zeuge nichts zu suchen. Der abstrakte Teil nennt die gesetzlichen Merkmale, der konkrete Teil schildert die Tat nach Zeit, Ort und Geschehen – ohne Beweiserwägungen. Beweismittel stehen in der Beweismittelliste, ihre Würdigung im wesentlichen Ergebnis der Ermittlungen (§ 200 StPO). Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anklagesatz: Tat schildern, nicht beweisen",
+      "coverText": "Tat schildern, nicht beweisen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Der Anklagesatz schildert nur die Tat – Beweise und ihre Würdigung haben dort keinen Platz.",
+        "handlung": "{A} neatly lays out a single clean sheet on a desk, while {B} tries to squeeze a small witness figurine onto it and {A} gently moves the figurine to a separate tray.",
+        "hinweisRegie": "Place the note in the free space beside the separate tray with the figurine, slightly tilted toward the clean sheet, so the separation is clear without covering the characters' hands.",
+        "alternative": "{B} sorts items into two labelled-by-colour folders, one holding a sketch of a scene, the other a small microphone standing for testimony, while {A} checks the order."
+      },
+      "bildSzene": "witness figurine moved to separate tray",
+      "bildSzeneAlt": "scene sketch and microphone in folders",
+      "quellen": [
+        "§ 200 Abs. 1, 2 StPO",
+        "§§ 223, 224 StGB",
+        "Themenpool: anklage-792"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "falscher-ort",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.914Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-391",
+      "slug": "2027-08-24-b3",
+      "titelZeilen": [
+        "Folgenbeseitigung:",
+        "zurück zum alten",
+        "Zustand, nicht Geld"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Folgenbeseitigung: alter Zustand, kein Geld",
+          "unter": "Folgenbeseitigungsanspruch · VerwR AT",
+          "text": "Der FBA stellt den früheren Zustand wieder her. Ersatz für Schäden gibt er nicht.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "icon": "kreislauf",
+          "sprecher": "Der Folgenbeseitigungsanspruch zahlt keinen Schaden. Er macht rückgängig, was die Behörde rechtswidrig angerichtet hat. Dafür brauchst du vier Voraussetzungen.",
+          "marken": [
+            "Wiederherstellung",
+            "kein Geld"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Hoheitlicher Eingriff",
+          "text": "Eingriff in ein subjektives Recht durch hoheitliches Handeln.",
+          "norm": null,
+          "sprecher": "Erstens: ein hoheitlicher Eingriff in ein subjektives Recht. Das kann ein Verwaltungsakt sein oder schlichtes Verwaltungshandeln, etwa eine ehrverletzende Äußerung eines Bürgermeisters in amtlicher Funktion.",
+          "marken": [
+            "Eingriff"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Rechtswidriger Zustand",
+          "text": "Der geschaffene Zustand ist rechtswidrig und dauert an.",
+          "norm": null,
+          "sprecher": "Zweitens: Dadurch ist ein rechtswidriger Zustand entstanden, und er dauert noch an. Entscheidend ist, ob der Betroffene diesen Zustand dulden muss. Ist der Verwaltungsakt etwa aufgehoben, fehlt ihm die rechtliche Grundlage.",
+          "marken": [
+            "dauert an"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Wiederherstellung möglich",
+          "text": "Tatsächlich und rechtlich möglich, der Behörde zumutbar.",
+          "norm": null,
+          "sprecher": "Drittens: Die Wiederherstellung ist tatsächlich und rechtlich möglich und der Behörde zumutbar. Bei einer ehrverletzenden Tatsachenbehauptung heißt das oft: Widerruf.",
+          "marken": [
+            "möglich, zumutbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kein Ausschluss",
+          "text": "Mitverschulden kann den Anspruch begrenzen.",
+          "norm": "§ 254 BGB analog",
+          "sprecher": "Viertens: kein Ausschluss. Ein Mitverschulden des Betroffenen berücksichtigt die Rechtsprechung entsprechend Paragraf 254 BGB.",
+          "marken": [
+            "Mitverschulden"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und der Schaden?",
+          "text": "Geldersatz etwa über die Amtshaftung.",
+          "norm": "§ 839 BGB · Art. 34 GG",
+          "sprecher": "Und der Verdienstausfall oder die Anwaltskosten? Die bekommst du nicht über die Folgenbeseitigung, sondern etwa über die Amtshaftung nach Paragraf 839 BGB in Verbindung mit Artikel 34 GG. Dort brauchst du Verschulden.",
+          "marken": [
+            "Amtshaftung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Folgenbeseitigung dreht den Zustand zurück. Geld für Schäden: andere Anspruchsgrundlage.",
+          "norm": null,
+          "sprecher": "Merke: Der Folgenbeseitigungsanspruch dreht den Zustand zurück. Wer Geld für Schäden will, braucht eine andere Anspruchsgrundlage.",
+          "marken": [
+            "Zustand zurück"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Staatshaftung speichern",
+          "text": "Speichern für die nächste Staatshaftungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Staatshaftungsrecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Der Folgenbeseitigungsanspruch stellt den früheren Zustand wieder her – Schadensersatz in Geld gibt er nicht. Voraussetzungen: hoheitlicher Eingriff in ein subjektives Recht, ein andauernder rechtswidriger Zustand, eine mögliche und zumutbare Wiederherstellung und kein Ausschluss, etwa wegen Mitverschuldens. Wer Verdienstausfall oder Kosten ersetzt haben will, prüft etwa die Amtshaftung nach § 839 BGB i.V.m. Art. 34 GG.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#staatshaftung",
+        "#folgenbeseitigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Folgenbeseitigungsanspruch: vier Voraussetzungen",
+      "coverText": "Schaden? Amtshaftung prüfen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Der Folgenbeseitigungsanspruch dreht einen rechtswidrigen Zustand zurück, statt Geld zu zahlen.",
+        "handlung": "{B} carries a heavy crystal back to the exact empty spot on a shelf where it was taken from, while {A} points with his stick at the matching outline on the shelf.",
+        "hinweisRegie": "Place the note in the free space above the matching outline on the shelf, slightly tilted toward it, so the restored original state is highlighted without covering the crystal or the characters.",
+        "alternative": "{A} rewinds a large hourglass-like device back to its starting mark, while {B} pushes away a small bag of coins that is offered instead."
+      },
+      "bildSzene": "crystal returned to its outline",
+      "bildSzeneAlt": "device rewound, coin bag declined",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "§ 254 BGB analog",
+        "§ 839 BGB i.V.m. Art. 34 GG",
+        "Themenpool: verwalt-391"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zustand-statt-geld",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.915Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Prüfungsfrage Zivilprozessrecht",
+      "titel": "Die Klage ist eingereicht, aber noch nicht zugestellt – da zahlt B. Was sollte K jetzt tun?",
+      "optionen": [
+        "Die Klage zurücknehmen – Kosten nach § 269 Abs. 3 S. 3 ZPO",
+        "Den Rechtsstreit einseitig für erledigt erklären",
+        "Die Klage unverändert weiterverfolgen"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 269 Abs. 3 S. 3 ZPO",
+        "§§ 253 Abs. 1, 261 Abs. 1 ZPO",
+        "§ 91a ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.915Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Auflösung",
+      "titel": "Zurücknehmen – die Kosten verteilt das Gericht nach billigem Ermessen",
+      "text": "Erledigt im Rechtssinne ist nur, was nach Rechtshängigkeit eintritt – und die beginnt erst mit Zustellung (§§ 253 Abs. 1, 261 Abs. 1 ZPO). Eine einseitige Erledigungserklärung liefe ins Leere. § 269 Abs. 3 S. 3 ZPO hilft: K nimmt zurück, das Gericht entscheidet über die Kosten nach billigem Ermessen – oft zulasten des B, wenn Anlass zur Klage bestand.",
+      "norm": "§ 269 Abs. 3 S. 3 ZPO",
+      "quellen": [
+        "§ 269 Abs. 3 S. 3 ZPO",
+        "§§ 253 Abs. 1, 261 Abs. 1 ZPO",
+        "§ 91a ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.915Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Klage zurücknehmen – Kosten nach § 269 Abs. 3 S. 3 ZPO",
+        "Den Rechtsstreit einseitig für erledigt erklären",
+        "Die Klage unverändert weiterverfolgen"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-676",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Abschleppen: Die Polizei muss nicht erst die Handynummer hinter der Scheibe anrufen",
+      "text": "Ob das Abschleppen verhältnismäßig ist, richtet sich nach dem Landesrecht und dem Übermaßverbot. Nach der Rspr. des BVerwG muss die Behörde grundsätzlich nicht versuchen, den Fahrer zu erreichen – auch nicht über eine hinterlegte Handynummer: Ob und wann er kommt, ist ungewiss. Anders kann es liegen, wenn er erkennbar sofort greifbar ist.",
+      "norm": "Art. 20 Abs. 3 GG (Übermaßverbot) · Landesvollstreckungsrecht",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Landespolizei- und Vollstreckungsrecht",
+        "Themenpool: verwbt-676"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.915Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-801",
+      "ueberzeile": "3 Punkte 2. Examen",
+      "titel": "Beklagtenstation: Wann ist die Verteidigung erheblich?",
+      "text": "Nach der schlüssigen Klage prüfst du den Beklagtenvortrag. Nur was ihn erheblich macht, führt in die Beweisstation.",
+      "punkte": [
+        "Wirksam bestritten? § 138 Abs. 2–4 ZPO – Nichtwissen nur bei Tatsachen außerhalb eigener Wahrnehmung",
+        "Eigener Vortrag: trägt er eine Einwendung oder Einrede?",
+        "Erheblich ist, was – als wahr unterstellt – die Klage zu Fall bringt"
+      ],
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: assessorz-801"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.915Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-816",
+      "ueberzeile": "Streitstand ZPO",
+      "titel": "Zweites Versäumnisurteil: Prüft das Gericht, ob das erste hätte ergehen dürfen?",
+      "norm": "§ 345 ZPO · § 700 Abs. 6 ZPO",
+      "optionen": [
+        "BGH: Nein – geprüft wird nur die erneute Säumnis, nicht die Schlüssigkeit der Klage.",
+        "Teile der Lit.: Ja – wie beim Vollstreckungsbescheid (§ 700 Abs. 6 ZPO)."
+      ],
+      "text": "Wer mit der „Flucht in die Säumnis“ verspäteten Vortrag retten will und dann erneut säumig ist, verliert nach dem BGH endgültig. Gegen das zweite VU hilft nur die Berufung mit der Begründung, es habe keine schuldhafte Säumnis vorgelegen (§ 514 Abs. 2 ZPO).",
+      "quellen": [
+        "§ 345 ZPO",
+        "§ 700 Abs. 6 ZPO",
+        "§ 514 Abs. 2 ZPO",
+        "Themenpool: assessorz-816"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.915Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-774",
+      "ueberzeile": "Merksatz Strafprozessrecht",
+      "titel": "TKÜ nach § 100a StPO: drei Hürden vor dem Mithören",
+      "text": "Verdacht einer Katalogtat aufgrund bestimmter Tatsachen, Schwere auch im Einzelfall, andere Ermittlungen aussichtslos oder wesentlich erschwert. Anordnen darf grundsätzlich nur das Gericht (§ 100e Abs. 1 StPO).",
+      "norm": "§ 100a Abs. 1 StPO · § 100e Abs. 1 StPO",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100e Abs. 1 StPO",
+        "Themenpool: stpo-774"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:46:07.915Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
