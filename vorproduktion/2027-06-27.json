@@ -1,0 +1,897 @@
+{
+  "datum": "2027-06-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "schuldbt-025",
+        "themaTitel": "Was gilt beim Verbrauchsgüterkauf anders?",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "stpo-347",
+        "themaTitel": "Was folgt aus einem Verstoß gegen die Belehrungspflicht?",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "verwalt-643"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "verwalt-643"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "delikt-039"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "fehler",
+        "themaId": "stpo-928"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "tipp",
+        "themaId": "revision-798"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "zahl",
+        "themaId": "schuldbt-474"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuldbt-025",
+      "poolTitel": "Was gilt beim Verbrauchsgüterkauf anders?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 474 BGB",
+        "§ 475 BGB",
+        "§ 477 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05",
+        "2027-04-05",
+        "2027-06-09"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-347",
+      "poolTitel": "Was folgt aus einem Verstoß gegen die Belehrungspflicht?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136 StPO",
+        "§ 163a StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-12-03",
+        "2027-02-13",
+        "2027-04-20"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-643",
+      "poolTitel": "Rücknahme rechtswidriger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-23",
+        "2026-12-23",
+        "2027-01-04"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-643",
+      "poolTitel": "Rücknahme rechtswidriger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-23",
+        "2026-12-23",
+        "2027-01-04"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "delikt-039",
+      "poolTitel": "Wann haftet der Tierhalter und wann greift die Entlastung beim Nutztier?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 833 BGB",
+        "§ 834 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "stpo-928",
+      "poolTitel": "Adhäsionsverfahren: Zivilansprüche im Strafprozess durchsetzen",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 403 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15",
+        "2027-01-23",
+        "2027-04-04"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "revision-798",
+      "poolTitel": "Revisionsgutachten: Verfahrensrüge",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 337 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-10",
+        "2027-03-28"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "schuldbt-474",
+      "poolTitel": "Herstellerpflicht zur Reparatur seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 479a-479g BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2027-01-10",
+        "2027-03-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-06-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: Vier Bereiche, 18 Kernsätze zum Wiederholen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "Vier Bereiche,",
+            "18 Kernsätze zum",
+            "Wiederholen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Grundschuld: Die gesicherte Forderung kommt erst über die Einreden ins Spiel.",
+            "Enterbter Ehegatte: Zugewinnausgleich plus kleiner Pflichtteil (BGH).",
+            "Vertreter getäuscht: Irrtum beim Vertreter, Anfechtungsrecht beim Vertretenen.",
+            "Negatives Interesse: gedeckelt nur in §§ 122, 179 Abs. 2 BGB.",
+            "Einspruch gewonnen: Säumniskosten trotzdem nach § 344 ZPO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Erpressung: Fälliger Anspruch auf das Geld – keine rechtswidrige Bereicherung.",
+            "Beweiswürdigung: Ein geplatztes Alibi beweist die Tat nicht.",
+            "§ 244 Abs. 1 Nr. 1a StGB: Beisichführen genügt, auch beim Taschenmesser (BGH).",
+            "§ 213 StGB: Strafzumessung, kein eigener Tatbestand.",
+            "Plädoyer: Einzelstrafen vor der Gesamtstrafe."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Beurteilungsspielraum: nur in anerkannten Fallgruppen.",
+            "Art. 31 GG: erst Kompetenz, dann Kollision.",
+            "Art. 20 GG: in der Verfassungsbeschwerde nur über ein Grundrecht.",
+            "Zensurverbot: verboten ist nur die Vorzensur.",
+            "Richtlinie: Auslegungspflicht grundsätzlich ab Fristablauf.",
+            "§ 32 BVerfGG: Anordnung endet nach sechs Monaten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Definition vergessen? Über Kernwörter und Funktion rekonstruieren.",
+            "Kopfsache: Nach der Klausur abschließen, statt Lösungen zu vergleichen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Warum erpresst nicht, wer mit Drohung fälliges Geld eintreibt?",
+            "Welchen Pflichtteil erhält die enterbte Ehefrau in der Zugewinngemeinschaft?",
+            "Ab wann musst du nationales Recht richtlinienkonform auslegen?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht an Anspruch und Einrede festziehen",
+            "Strafrecht an Tatbestand und Strafzumessung wiederholen",
+            "Öffentliches Recht als Prüfungsreihenfolge abrufen",
+            "Klausurtechnik & Kopfsache als Routine sichern"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: vier Bereiche, 18 Kernsätze. Im Zivilrecht Grundschuld, Ehegattenpflichtteil, Anfechtung beim Vertreter, Vertrauensschaden und Säumniskosten. Im Strafrecht Erpressung, Alibi, § 244 StGB, § 213 StGB und das Plädoyer. Im Öffentlichen Recht vom Beurteilungsspielraum bis zu § 32 BVerfGG – dazu Definitionstechnik und Kopfsache. Speichern und am Wochenende einmal durchgehen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#jurastudent",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Woche wird in vier Bereichen sortiert, damit jeder Kernsatz seinen Platz findet.",
+        "handlung": "{A} carries a heavy sack of mixed crystals to four labelled sorting bins, while {B} curiously picks one crystal and holds it up to check which bin it belongs to.",
+        "hinweisRegie": "Place the note in the free space above the four sorting bins, slightly tilted toward the crystal in {B}'s hand, so sorting is the focus without covering the bins or {A}'s sack.",
+        "alternative": "{B} pins cards from a scattered pile onto four boards on a wall while {A} steadies the ladder."
+      },
+      "bildSzene": "crystals sorted into four bins",
+      "bildSzeneAlt": "cards pinned onto four boards",
+      "quellen": [
+        "§§ 1191, 1192 BGB",
+        "§ 1371 BGB",
+        "§ 166 BGB",
+        "§ 122 BGB",
+        "§ 344 ZPO",
+        "§ 253 StGB",
+        "§ 261 StPO",
+        "§ 244 StGB",
+        "§ 213 StGB",
+        "§ 54 StGB",
+        "Art. 19 Abs. 4 GG",
+        "Art. 31 GG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "Art. 5 Abs. 1 GG",
+        "Art. 288 AEUV",
+        "§ 32 BVerfGG",
+        "Themenpool: methodik-899",
+        "Themenpool: mindset-8"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.558Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-025",
+      "slug": "2027-06-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verbrauchsgüterkauf in vier Schritten – erst § 474 BGB",
+          "titelZeilen": [
+            "Verbrauchsgüterkauf",
+            "in vier Schritten –",
+            "erst § 474 BGB"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Vermutung, Rechtsfolgen, Vereinbarung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Kauft ein Verbraucher von einem Unternehmer eine Ware, gelten die §§ 474 ff. BGB zusätzlich zum allgemeinen Kaufrecht. Sie ändern Mangelnachweis, Rechtsfolgen und Vertragsfreiheit. Geprüft wird weiter über § 437 BGB – die Sonderregeln setzt du an der passenden Stelle ein."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Anwendbarkeit (§ 474 Abs. 1)",
+              "text": "Verbraucher (§ 13 BGB) kauft von Unternehmer (§ 14 BGB) eine Ware – auch mit zusätzlicher Dienstleistung."
+            },
+            {
+              "titel": "2. Mangel bei Gefahrübergang",
+              "text": "Zeigt sich binnen eines Jahres ein Mangel, wird vermutet, dass er schon bei Gefahrübergang bestand (§ 477 Abs. 1 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Rechtsfolgen modifiziert",
+              "text": "Kein Nutzungsersatz bei Ersatzlieferung (§ 475 Abs. 3), Vorschuss für Nacherfüllungskosten (Abs. 6), Sonderregeln in § 475d."
+            },
+            {
+              "titel": "4. Abweichende Vereinbarungen",
+              "text": "Vor Mitteilung eines Mangels zulasten des Verbrauchers grundsätzlich unwirksam (§ 476 Abs. 1 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Versendungskauf: Die Gefahr geht grundsätzlich erst mit Übergabe an den Verbraucher über (§ 475 Abs. 2 BGB) – § 447 BGB hilft dem Händler meist nicht. Und bei gebrauchten Sachen darf die Verjährung auf ein Jahr verkürzt werden, aber nur unter den besonderen Anforderungen des § 476 Abs. 2 BGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst § 474, dann § 437 durchgehen – und an drei Stellen umschalten: Vermutung (§ 477), Rechtsfolgen (§§ 475, 475d), Vereinbarungen (§ 476)."
+        },
+        {
+          "art": "cta",
+          "titel": "Verbrauchsgüterkauf in vier Zügen",
+          "punkte": [
+            "Verbraucher kauft vom Unternehmer?",
+            "Vermutung des § 477 BGB",
+            "Sonderregeln der §§ 475, 475d BGB",
+            "Abweichungen an § 476 BGB messen"
+          ],
+          "icons": [
+            "laden",
+            "uhr",
+            "paragraf",
+            "vertrag"
+          ]
+        }
+      ],
+      "caption": "Verbrauchsgüterkauf in vier Schritten: Erst prüfst du § 474 BGB, dann gehst du wie gewohnt über § 437 BGB – und schaltest an drei Stellen um. Die Vermutung des § 477 BGB hilft beim Mangel, §§ 475, 475d BGB ändern die Rechtsfolgen, § 476 BGB begrenzt abweichende Vereinbarungen. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#474bgb",
+        "#verbrauchsgüterkauf",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verbrauchsgüterkauf: das Schema",
+      "coverText": "Vermutung, Rechtsfolgen, Vereinbarung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Beim Verbrauchsgüterkauf läuft die normale Kaufrechtsprüfung – mit drei Weichen, an denen Sonderregeln greifen.",
+        "handlung": "{A} rides a small cart along a track, while {B} hovers beside it and flips three track switches in a row at the right moments.",
+        "hinweisRegie": "Place the note in the free space beside the second track switch, slightly tilted toward the track, so the idea of switching at fixed points is clear without covering the cart or {B}.",
+        "alternative": "{B} holds a shopping basket while {A} stamps three different seals on its receipt, one after another."
+      },
+      "bildSzene": "cart on track, three switches flipped",
+      "bildSzeneAlt": "receipt stamped with three seals",
+      "quellen": [
+        "§ 474 BGB",
+        "§ 475 BGB",
+        "§ 475d BGB",
+        "§ 476 BGB",
+        "§ 477 BGB",
+        "§ 437 BGB",
+        "§ 447 BGB",
+        "Themenpool: schuldbt-025"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.558Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-347",
+      "slug": "2027-06-27-b3",
+      "titelZeilen": [
+        "Nachbelehrt, neu",
+        "ausgesagt – ist alles",
+        "wieder gut?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nachbelehrt, neu ausgesagt – ist alles wieder gut?",
+          "unter": "Belehrung · § 136 StPO",
+          "text": "Erst ohne Belehrung vernommen, dann belehrt – und A gesteht erneut.",
+          "norm": "§ 136 Abs. 1 S. 2 StPO",
+          "icon": "polizei",
+          "sprecher": "Nachbelehrt, neu ausgesagt – ist dann alles gut? Nicht automatisch. Die Polizei vernimmt A erst ohne Belehrung, dann belehrt sie ihn, und er gesteht noch einmal. Vier Schritte.",
+          "marken": [
+            "Belehrung",
+            "zweite Aussage"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "War A schon Beschuldigter?",
+          "text": "Sobald sich die Ermittlungen erkennbar gegen ihn richten – die Stärke des Verdachts zählt.",
+          "norm": "§ 163a Abs. 4 StPO",
+          "sprecher": "Schritt eins: War A schon Beschuldigter? Das ist er, sobald sich die Ermittlungen erkennbar gegen ihn richten. Ist der Verdacht so stark, dass er ernsthaft als Täter in Betracht kommt, darf die Polizei ihn nicht mehr als Zeugen befragen.",
+          "marken": [
+            "Beschuldigter"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Belehrungspflicht",
+          "text": "Hinweis auf Aussagefreiheit und Verteidigerbefragung – vor der ersten Vernehmung.",
+          "norm": "§ 136 Abs. 1 S. 2 StPO",
+          "sprecher": "Schritt zwei: die Belehrung. Vor der ersten Vernehmung ist A darauf hinzuweisen, dass er nicht aussagen muss und jederzeit einen Verteidiger befragen kann. Für die Polizei gilt das über § 163a Absatz 4.",
+          "marken": [
+            "Schweigerecht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Folge für die erste Aussage",
+          "text": "Grundsätzlich unverwertbar – außer A kannte sein Recht oder widerspricht nicht rechtzeitig.",
+          "norm": "§ 257 StPO",
+          "sprecher": "Schritt drei: Die erste Aussage ist nach der Rechtsprechung grundsätzlich unverwertbar. Ausnahmen: A kannte sein Schweigerecht ohnehin, oder er widerspricht der Verwertung in der Hauptverhandlung nicht rechtzeitig, also bis zu dem in § 257 genannten Zeitpunkt.",
+          "marken": [
+            "Widerspruch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die zweite Aussage",
+          "text": "Nötig ist eine qualifizierte Belehrung: Die erste Aussage darf nicht verwertet werden.",
+          "norm": "§ 136 StPO",
+          "sprecher": "Schritt vier, die zweite Aussage. A glaubt vielleicht, er habe ohnehin schon alles gesagt. Deshalb verlangt der BGH eine qualifizierte Belehrung: A muss auch erfahren, dass seine erste Aussage nicht verwertet werden darf.",
+          "marken": [
+            "qualifiziert"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Qualifizierte Belehrung fehlt",
+          "text": "Kein automatisches Verbot – nach dem BGH entscheidet eine Abwägung im Einzelfall.",
+          "norm": null,
+          "sprecher": "Fehlt diese qualifizierte Belehrung, folgt daraus nach dem BGH aber kein automatisches Verwertungsverbot. Abgewogen werden das Gewicht des Verstoßes und das Interesse an der Aufklärung. Wichtig ist etwa, ob der Fehler bewusst geschah.",
+          "marken": [
+            "Abwägung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Erste Aussage grundsätzlich weg. Zweite: qualifiziert belehren, sonst abwägen.",
+          "norm": null,
+          "sprecher": "Merke: Ohne Belehrung ist die erste Aussage grundsätzlich unverwertbar. Für die zweite braucht es eine qualifizierte Belehrung, sonst wird abgewogen.",
+          "marken": [
+            "zwei Aussagen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Jede Vernehmung einzeln prüfen",
+          "text": "Speichern für die nächste StPO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste StPO-Klausur. Und prüf jede Vernehmung einzeln, nicht nur die erste.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Nachbelehrt, neu ausgesagt – ist dann alles gut? Nicht automatisch. Die unbelehrte erste Aussage ist nach der Rspr. grundsätzlich unverwertbar, sofern der Beschuldigte sein Recht nicht kannte und rechtzeitig widerspricht. Vor der zweiten Vernehmung verlangt der BGH eine qualifizierte Belehrung; fehlt sie, entscheidet eine Abwägung im Einzelfall. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#136stpo",
+        "#beweisverwertungsverbot",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Qualifizierte Belehrung nach § 136 StPO",
+      "coverText": "Qualifiziert belehren, sonst abwägen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Eine späte Belehrung heilt die erste Aussage nicht – der Beschuldigte muss wissen, dass sie nicht zählt.",
+        "handlung": "{A} tears a first recorded tape out of a machine and hands {B} a fresh one, making sure he sees the old tape is cut.",
+        "hinweisRegie": "Place the note in the free space between the cut old tape and the fresh one, slightly tilted toward the cut tape, so the need to invalidate the first statement is clear without covering {B}'s nervous face.",
+        "alternative": "{B} stands at a second microphone while {A} visibly unplugs the first one behind him."
+      },
+      "bildSzene": "old tape cut, fresh tape handed",
+      "bildSzeneAlt": "first microphone visibly unplugged",
+      "quellen": [
+        "§ 136 StPO",
+        "§ 163a Abs. 4 StPO",
+        "§ 257 StPO",
+        "Themenpool: stpo-347"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.559Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-643",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Die Behörde will einen rechtswidrigen VA zurücknehmen. Wann beginnt die Jahresfrist des § 48 Abs. 4 VwVfG?",
+      "optionen": [
+        "Mit Erlass des rechtswidrigen Verwaltungsakts",
+        "Mit Bekanntgabe an den Begünstigten",
+        "Mit Kenntnis aller rücknahmeerheblichen Tatsachen"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "Themenpool: verwalt-643"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.559Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-643",
+      "ueberzeile": "Auflösung",
+      "titel": "Erst mit vollständiger Kenntnis der Rücknahmetatsachen",
+      "text": "Nach dem BVerwG ist § 48 Abs. 4 VwVfG eine Entscheidungsfrist: Sie beginnt erst, wenn die Behörde die Rechtswidrigkeit erkannt hat und ihr alle für die Rücknahme erheblichen Tatsachen vollständig bekannt sind – auch die für Vertrauensschutz und Ermessen. Bei Arglist, Drohung oder Bestechung gilt die Frist nicht (§ 48 Abs. 4 S. 2 VwVfG).",
+      "norm": "§ 48 Abs. 4 VwVfG",
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "§ 48 Abs. 2 VwVfG",
+        "Themenpool: verwalt-643"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.559Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit Erlass des rechtswidrigen Verwaltungsakts",
+        "Mit Bekanntgabe an den Begünstigten",
+        "Mit Kenntnis aller rücknahmeerheblichen Tatsachen"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-039",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 833 S. 2 BGB: Entlasten kann sich nur der Halter eines Nutztiers",
+      "text": "Der Tierhalter haftet grundsätzlich ohne Verschulden, wenn sich die typische Tiergefahr verwirklicht (§ 833 S. 1 BGB). Dient das Tier dem Beruf, der Erwerbstätigkeit oder dem Unterhalt des Halters, kann er sich entlasten: Er hat bei der Beaufsichtigung die erforderliche Sorgfalt beachtet, oder der Schaden wäre auch dann entstanden (S. 2).",
+      "norm": "§ 833 BGB",
+      "quellen": [
+        "§ 833 BGB",
+        "§ 834 BGB",
+        "Themenpool: delikt-039"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.560Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-928",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Adhäsionsantrag: Geht das noch im Schlussvortrag?",
+      "falsch": "„Der Verletzte kann seinen Adhäsionsantrag noch in seinem Schlussvortrag stellen.“",
+      "richtigText": "In der Hauptverhandlung ist der Antrag nur bis zum Beginn der Schlussvorträge möglich (§ 404 Abs. 1 S. 1 StPO), sonst schriftlich oder zu Protokoll. Er muss Gegenstand und Grund des Anspruchs bestimmt bezeichnen. Mit Eingang wirkt er wie eine Klageerhebung (§ 404 Abs. 2 StPO).",
+      "quellen": [
+        "§ 403 StPO",
+        "§ 404 StPO",
+        "Themenpool: stpo-928"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.560Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-798",
+      "ueberzeile": "Klausurtipp Revision",
+      "titel": "Verfahrensrüge: Auch was nicht passiert ist, gehört in die Begründung",
+      "text": "Die Verfahrensrüge muss die den Mangel enthaltenden Tatsachen so vollständig angeben, dass das Revisionsgericht allein daraus prüfen kann (§ 344 Abs. 2 S. 2 StPO). Dazu gehören oft auch Negativtatsachen – etwa, dass der Fehler nicht später geheilt wurde. Fehlt das, ist die Rüge unzulässig. Danach erst: Beruhen (§ 337 StPO) oder absoluter Revisionsgrund (§ 338 StPO).",
+      "quellen": [
+        "§ 344 Abs. 2 StPO",
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "Themenpool: revision-798"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.560Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-474",
+      "ueberzeile": "4 Punkte Kaufrecht",
+      "titel": "Herstellerpflicht zur Reparatur: vier Eckpunkte – und keine Gewährleistung",
+      "text": "Neu seit 31.07.2026 in §§ 479a ff. BGB, zur Umsetzung der EU-Reparaturrichtlinie. Einzelheiten stehen dort:",
+      "punkte": [
+        "Anspruch gegen den Hersteller, nicht gegen den Verkäufer",
+        "Nur für Warengruppen, für die das Unionsrecht Reparierbarkeit vorschreibt",
+        "Auch nach Ablauf der Mängelhaftung – unentgeltlich oder gegen angemessenes Entgelt",
+        "Mängelrechte aus § 437 BGB bleiben daneben bestehen"
+      ],
+      "quellen": [
+        "§§ 479a ff. BGB",
+        "§ 437 BGB",
+        "Themenpool: schuldbt-474"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:19:27.560Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
