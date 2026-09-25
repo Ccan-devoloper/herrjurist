@@ -1,0 +1,898 @@
+{
+  "datum": "2027-04-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-726",
+        "themaTitel": "Versuch: Tatentschluss",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "verwbt-681",
+        "themaTitel": "Eilrechtsschutz im Versammlungsrecht",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "handelsg-049",
+        "themaTitel": "Wie haftet der Gesellschafter einer GbR nach der Reform?",
+        "fach": "handelsg",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "assessoroer-851"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "assessoroer-851"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "strafbt-737"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "tipp",
+        "themaId": "handelsg-264"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "zahl",
+        "themaId": "assessorz-803"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "streitstand",
+        "themaId": "bgbat-910"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-726",
+      "poolTitel": "Versuch: Tatentschluss",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 22, 23 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2027-01-01",
+        "2027-01-01"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "verwbt-681",
+      "poolTitel": "Eilrechtsschutz im Versammlungsrecht",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 80 V, 123 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "handelsg-049",
+      "poolTitel": "Wie haftet der Gesellschafter einer GbR nach der Reform?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 721 BGB",
+        "§ 126 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2027-01-23"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-851",
+      "poolTitel": "Wann wird Wiedereinsetzung in den vorigen Stand gewährt?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 60 VwGO",
+        "§ 32 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-851",
+      "poolTitel": "Wann wird Wiedereinsetzung in den vorigen Stand gewährt?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 60 VwGO",
+        "§ 32 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-737",
+      "poolTitel": "Totschlag und Tötungsvorsatz",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 212 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2026-11-26",
+        "2027-01-29"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "handelsg-264",
+      "poolTitel": "Wer ist Kaufmann und welche Arten gibt es?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1 HGB",
+        "§ 2 HGB",
+        "§ 5 HGB",
+        "§ 6 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-12-09"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-803",
+      "poolTitel": "Was steht im Bearbeitervermerk und warum liest man ihn zuerst?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2027-01-19",
+        "2027-01-19"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "bgbat-910",
+      "poolTitel": "Wann gilt eine Willenserklärung trotz Zugangshindernis als zugegangen?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 132 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-13",
+        "2027-02-11",
+        "2027-03-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-726",
+      "slug": "2027-04-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nur schießen, falls B nicht zahlt: schon Tatentschluss?",
+          "titelZeilen": [
+            "Nur schießen, falls",
+            "B nicht zahlt:",
+            "schon Tatentschluss?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Entschlossen trotz Bedingung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "B schuldet A Geld. A geht mit geladener Pistole zu ihm, fest entschlossen: Zahlt B nicht sofort, erschießt er ihn. Noch bevor A ihn anspricht, wird er festgenommen. Hatte A Tatentschluss zu einem Totschlag?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Vorsatz für alle objektiven Merkmale",
+              "text": "Vorsatz bezüglich aller objektiven Tatbestandsmerkmale. Bedingter Vorsatz genügt, soweit er auch für die Vollendung reichen würde."
+            },
+            {
+              "titel": "Sonstige subjektive Merkmale",
+              "text": "Verlangt der Tatbestand eine Absicht – etwa die Zueignungsabsicht bei § 242 StGB –, gehört sie zum Tatentschluss."
+            },
+            {
+              "titel": "Endgültiger Handlungswille",
+              "text": "Der Täter muss entschlossen sein. Hängt die Ausführung nur noch von einem Umstand ab, den er nicht beeinflusst, genügt das."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Entschlossen oder nur geneigt?",
+          "links": {
+            "titel": "Tatentschluss",
+            "punkte": [
+              "Die Entscheidung ist gefallen, offen ist nur die Lage.",
+              "„Zahlt B nicht, schieße ich.“"
+            ]
+          },
+          "rechts": {
+            "titel": "Tatgeneigtheit",
+            "punkte": [
+              "Der Täter hat sich noch nicht festgelegt.",
+              "„Mal sehen, ob ich dann schieße.“"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Bedingung im Kopf des A als fehlenden Tatentschluss werten. Entscheidend ist, ob A selbst noch schwankt. Offen ist hier nur, ob B zahlt – ein Umstand außerhalb seines Einflusses. Sein Handlungswille steht fest."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "A hatte Tatentschluss zum Totschlag (§ 212 StGB). Ob er schon unmittelbar angesetzt hat (§ 22 StGB), ist eine eigene Prüfungsstufe – daran fehlt es wohl, solange er B noch nicht einmal zur Zahlung aufgefordert hat."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tatentschluss heißt: fest entschlossen. Eine Bedingung, die der Täter nicht in der Hand hat, schadet nicht – bloße Tatgeneigtheit schon."
+        },
+        {
+          "art": "cta",
+          "titel": "Tatentschluss in drei Fragen",
+          "punkte": [
+            "Vorsatz für alle objektiven Merkmale?",
+            "Besondere Absichten erfasst?",
+            "Entschlossen – oder nur geneigt?"
+          ],
+          "icons": [
+            "zielscheibe",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Nur schießen, falls B nicht zahlt – ist A damit schon zur Tat entschlossen? Ja: Tatentschluss liegt auch vor, wenn der Täter die Ausführung nur noch von einem Umstand abhängig macht, den er nicht beeinflussen kann. Anders bei bloßer Tatgeneigtheit, wenn er sich noch gar nicht festgelegt hat. Das unmittelbare Ansetzen prüfst du danach gesondert. Speichern für die nächste Versuchsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#versuch",
+        "#22stgb",
+        "#tatentschluss",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tatentschluss trotz Bedingung",
+      "coverText": "Entschlossen trotz Bedingung",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer nur noch auf einen äußeren Umstand wartet, ist schon zur Tat entschlossen.",
+        "handlung": "{A} stands firmly at a closed door with one hand already on the handle, while {B} nervously watches a small signal lamp beside the door that has not lit up yet.",
+        "hinweisRegie": "Place the note in the open space between the door handle and the unlit signal lamp, slightly tilted toward the lamp, so the outside condition is linked to the note without covering {A}'s hand.",
+        "alternative": "{B} still flips a coin at a fork in the path, while {A} has already chosen her path and only waits for a bridge to be lowered."
+      },
+      "bildSzene": "hand on handle, waiting for signal lamp",
+      "bildSzeneAlt": "chosen path, waiting for lowering bridge",
+      "quellen": [
+        "§§ 22, 23 StGB",
+        "§ 212 StGB",
+        "§ 242 StGB (Beispiel)",
+        "Themenpool: strafat-726"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.228Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-681",
+      "slug": "2027-04-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Demo verboten: fünf Schritte zum Eilbeschluss",
+          "titelZeilen": [
+            "Demo verboten:",
+            "fünf Schritte zum",
+            "Eilbeschluss"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Beschränkung vor Verbot",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausgangslage",
+          "text": "Verbote und Beschränkungen einer Versammlung sind Verwaltungsakte. Weil die Versammlung meist kurz bevorsteht, ordnet die Behörde regelmäßig die sofortige Vollziehung an (§ 80 Abs. 2 S. 1 Nr. 4 VwGO). Rechtsgrundlage: § 15 VersG oder das Versammlungsgesetz des Landes."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Statthafter Antrag",
+              "text": "Wiederherstellung der aufschiebenden Wirkung (§ 80 Abs. 5 S. 1 Alt. 2 VwGO). § 123 VwGO tritt zurück (§ 123 Abs. 5 VwGO)."
+            },
+            {
+              "titel": "2. Antragsbefugnis",
+              "text": "§ 42 Abs. 2 VwGO analog: Der Veranstalter kann eine Verletzung seiner Versammlungsfreiheit (Art. 8 Abs. 1 GG) geltend machen."
+            },
+            {
+              "titel": "3. Begründung der Anordnung",
+              "text": "Formell: schriftlich und auf den Einzelfall bezogen (§ 80 Abs. 3 S. 1 VwGO). Formelhafte Wendungen genügen nicht."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Erfolgsaussichten",
+              "text": "Unmittelbare Gefahr für die öffentliche Sicherheit nach erkennbaren Umständen – also Tatsachen, keine bloßen Vermutungen."
+            },
+            {
+              "titel": "5. Verhältnismäßigkeit und Abwägung",
+              "text": "Beschränkungen gehen dem Verbot vor. Bleibt die Rechtslage offen, wägt das Gericht die Folgen ab – Art. 8 GG hat hohes Gewicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Die Eile entscheidet in der Sache",
+          "text": "Nach dem Termin ist die Sache praktisch erledigt. Deshalb verlangt das BVerfG, die Rechtslage schon im Eilverfahren so weit wie möglich zu prüfen. Droht Gewalt von Gegendemonstranten, geht die Polizei grundsätzlich gegen diese vor – gegen die friedliche Versammlung nur im Notstand."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Begründung nach § 80 Abs. 3 VwGO, dann die Gefahrenprognose auf Tatsachenbasis – und ein Verbot nur, wenn keine Beschränkung genügt."
+        },
+        {
+          "art": "cta",
+          "titel": "Eilantrag gegen ein Versammlungsverbot",
+          "punkte": [
+            "§ 80 Abs. 5 VwGO: wiederherstellen",
+            "Begründung nach § 80 Abs. 3 VwGO",
+            "Gefahr aus Tatsachen, nicht Vermutungen",
+            "Beschränkung vor Verbot"
+          ],
+          "icons": [
+            "uhr",
+            "dokument",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Demo verboten, Sofortvollzug angeordnet, die Versammlung ist in drei Tagen – was prüft das Verwaltungsgericht? Fünf Schritte: statthafter Antrag nach § 80 Abs. 5 VwGO, Antragsbefugnis aus Art. 8 GG, Begründung der Vollziehungsanordnung, Gefahrenprognose auf Tatsachenbasis und Verhältnismäßigkeit. Beschränkungen gehen dem Verbot vor. Speichern für die nächste Eilrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#versammlungsrecht",
+        "#vwgo",
+        "#80vwgo",
+        "#eilrechtsschutz",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Versammlungsverbot im Eilverfahren",
+      "coverText": "Beschränkung vor Verbot",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Bevor eine Versammlung ganz verboten wird, muss geprüft sein, ob nicht eine Beschränkung genügt.",
+        "handlung": "{B} leads a small group of lantern-carrying marchers toward a gate, while {A} hovers beside it and, instead of shutting the gate, narrows it with a sliding panel to a smaller opening.",
+        "hinweisRegie": "Place the note in the free space just above the narrowed gate opening, slightly tilted toward the sliding panel, so the milder measure is linked to the note without covering the marchers or {A}.",
+        "alternative": "{A} offers {B} a choice between a heavy closed barrier and a simple rope marking a side lane, while {B} studies which of the two is really needed."
+      },
+      "bildSzene": "droid narrows gate instead of closing it",
+      "bildSzeneAlt": "heavy barrier versus rope side lane",
+      "quellen": [
+        "§ 80 Abs. 2 S. 1 Nr. 4, Abs. 3, Abs. 5 VwGO",
+        "§ 123 Abs. 5 VwGO",
+        "§ 42 Abs. 2 VwGO analog",
+        "Art. 8 GG",
+        "§ 15 VersG bzw. Versammlungsgesetze der Länder",
+        "Themenpool: verwbt-681"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-pruefschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.228Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "handelsg",
+      "klausur": 1,
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "themaId": "handelsg-049",
+      "slug": "2027-04-12-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Neu in der GbR – und Haftung für alte Schulden",
+          "unter": "GbR-Haftung · §§ 721 ff. BGB",
+          "text": "Seit 2024 regeln §§ 721 bis 721b BGB die Haftung der Gesellschafter ausdrücklich.",
+          "norm": "§ 721a BGB",
+          "icon": "personen",
+          "sprecher": "Neu in der GbR? Du haftest trotzdem für Altschulden. Seit der Reform 2024 steht die Gesellschafterhaftung ausdrücklich im BGB. Vier Normen musst du kennen.",
+          "marken": [
+            "Altschulden",
+            "seit 2024"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Persönlich und als Gesamtschuldner",
+          "text": "Die Gesellschafter haften für Verbindlichkeiten der GbR persönlich; Abweichendes wirkt nicht gegen Dritte.",
+          "norm": "§ 721 BGB",
+          "sprecher": "Erstens, Paragraf 721 BGB: Die Gesellschafter haften für die Verbindlichkeiten der Gesellschaft persönlich, als Gesamtschuldner. Eine Vereinbarung, die das ausschließt, wirkt nicht gegenüber den Gläubigern.",
+          "marken": [
+            "persönlich",
+            "Gesamtschuldner"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Neue haftet für Altschulden",
+          "text": "Wer eintritt, haftet auch für die vor seinem Eintritt begründeten Verbindlichkeiten.",
+          "norm": "§ 721a BGB",
+          "sprecher": "Zweitens, Paragraf 721a: Wer in eine bestehende GbR eintritt, haftet auch für Verbindlichkeiten, die vor seinem Eintritt begründet wurden. Früher hat das der BGH so entschieden, heute steht es im Gesetz.",
+          "marken": [
+            "auch Altschulden"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Einwendungen der Gesellschaft",
+          "text": "Der Gesellschafter kann die Einwendungen der GbR erheben – etwa, dass sie schon erfüllt hat.",
+          "norm": "§ 721b BGB",
+          "sprecher": "Drittens, Paragraf 721b: Der Gesellschafter kann die Einwendungen erheben, die der Gesellschaft zustehen. Hat die Gesellschaft schon erfüllt, muss er nicht noch einmal zahlen.",
+          "marken": [
+            "Akzessorietät"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ausscheiden: fünf Jahre Nachhaftung",
+          "text": "Altschulden: nur, wenn sie binnen fünf Jahren fällig und etwa gerichtlich festgestellt werden.",
+          "norm": "§ 728b BGB",
+          "sprecher": "Viertens, Paragraf 728b: Wer ausscheidet, haftet für die bis dahin begründeten Verbindlichkeiten weiter. Aber nur, wenn sie innerhalb von fünf Jahren fällig werden und gegen ihn etwa gerichtlich festgestellt werden.",
+          "marken": [
+            "fünf Jahre"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und die OHG?",
+          "text": "Dort gilt dasselbe Modell nach §§ 126 ff. HGB.",
+          "norm": "§ 126 HGB",
+          "sprecher": "Und in der OHG? Dort gilt dasselbe Modell, geregelt ab Paragraf 126 HGB. Wer die Haftung in der GbR versteht, hat die OHG gleich mitgelernt.",
+          "marken": [
+            "OHG: §§ 126 ff. HGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Persönlich, auch für Altschulden, mit den Einwendungen der GbR – und fünf Jahre Nachhaftung.",
+          "norm": "§§ 721–721b, 728b BGB",
+          "sprecher": "Merke: Die Gesellschafter haften persönlich, der Neue auch für Altschulden, mit den Einwendungen der Gesellschaft. Und wer geht, haftet fünf Jahre nach.",
+          "marken": [
+            "721 · 721a · 721b"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der nächsten GbR-Klausur",
+          "text": "Speichern für die nächste Gesellschaftsrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Klausur mit GbR. Und frag beim Gesellschafter immer zuerst: Wann ist er eingetreten, wann ist er ausgeschieden?",
+          "marken": [
+            "Eintritt · Austritt"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Neu in der GbR – und trotzdem Haftung für alte Schulden. Seit der Reform 2024 stehen die Regeln im BGB: persönliche Haftung als Gesamtschuldner (§ 721), Haftung des Eintretenden für Altverbindlichkeiten (§ 721a), Einwendungen der Gesellschaft (§ 721b) und fünf Jahre Nachhaftung nach dem Ausscheiden (§ 728b BGB). Für die OHG gilt dasselbe nach §§ 126 ff. HGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#gesellschaftsrecht",
+        "#gbr",
+        "#mopeg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "GbR: Haftung auch für Altschulden",
+      "titelZeilen": [
+        "Neu in der GbR –",
+        "und Haftung für",
+        "alte Schulden"
+      ],
+      "coverText": "§ 721a BGB: auch Altschulden",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Wer in die Gesellschaft eintritt, trägt auch die Last, die schon vorher auf ihr lag.",
+        "handlung": "{A} climbs onto a crew cart that is already loaded with heavy old crystal sacks, while {B} taps his pointer on the old sacks that now rest on {A}'s shoulders as well.",
+        "hinweisRegie": "Place the note in the free space above the old sacks on the cart, slightly tilted toward {A}'s shoulders, so the old load is linked to the newcomer without covering {B}'s pointer.",
+        "alternative": "{A} joins a rope team halfway up a slope and immediately feels the pull of the packs the others were already hauling, while {B} explains the rope."
+      },
+      "bildSzene": "newcomer shoulders old sacks on cart",
+      "bildSzeneAlt": "new rope team member takes old weight",
+      "quellen": [
+        "§ 721 BGB",
+        "§ 721a BGB",
+        "§ 721b BGB",
+        "§ 728b BGB",
+        "§§ 126 ff. HGB",
+        "Themenpool: handelsg-049"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-eintritt",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.230Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-851",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "Klagefrist verpasst: Die sonst zuverlässige Kanzleikraft hat sie unrichtig notiert. Wiedereinsetzung?",
+      "optionen": [
+        "Nein – Kanzleiversehen werden stets zugerechnet",
+        "Ja – wenn den Anwalt selbst kein Organisationsverschulden trifft",
+        "Nein – nach Ablauf der Klagefrist ist sie ausgeschlossen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 60 VwGO",
+        "§ 173 VwGO i.V.m. § 85 Abs. 2 ZPO",
+        "§ 32 VwVfG",
+        "Themenpool: assessoroer-851"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.230Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-851",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – ein Büroversehen ist kein Anwaltsverschulden",
+      "text": "Wiedereinsetzung erhält, wer ohne Verschulden verhindert war, eine gesetzliche Frist einzuhalten (§ 60 Abs. 1 VwGO). Das Verschulden des Bevollmächtigten wird zugerechnet (§ 173 VwGO, § 85 Abs. 2 ZPO), das einer sorgfältig ausgewählten und überwachten Kanzleikraft nicht. Antrag binnen zwei Wochen nach Wegfall des Hindernisses, Klage nachholen (§ 60 Abs. 2 VwGO).",
+      "norm": "§ 60 VwGO · § 32 VwVfG",
+      "quellen": [
+        "§ 60 VwGO",
+        "§ 173 VwGO i.V.m. § 85 Abs. 2 ZPO",
+        "§ 32 VwVfG",
+        "Themenpool: assessoroer-851"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.230Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – Kanzleiversehen werden stets zugerechnet",
+        "Ja – wenn den Anwalt selbst kein Organisationsverschulden trifft",
+        "Nein – nach Ablauf der Klagefrist ist sie ausgeschlossen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-737",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 212 StGB: Gefährliche Gewalt allein beweist noch keinen Tötungsvorsatz",
+      "text": "Bedingter Tötungsvorsatz: Der Täter erkennt den Tod als möglich und nicht ganz fernliegend und billigt ihn oder findet sich damit ab. Eine äußerst gefährliche Gewalthandlung ist ein gewichtiges Indiz – mehr nicht. Nötig ist eine Gesamtschau, etwa von Tatsituation, Motiv und psychischer Verfassung. Eine besondere „Hemmschwelle“ ersetzt diese Würdigung nach neuerer Rspr. nicht.",
+      "norm": "§ 212 Abs. 1 StGB",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 15 StGB",
+        "Themenpool: strafbt-737"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.230Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-264",
+      "ueberzeile": "Klausurtipp Handelsrecht",
+      "titel": "Kaufmann? Erst die Rechtsform, dann das Gewerbe",
+      "text": "Bequeme Reihenfolge: Formkaufmann (§ 6 HGB, etwa die GmbH über § 13 Abs. 3 GmbHG), Istkaufmann (§ 1 HGB: Handelsgewerbe, Eintragung nur deklaratorisch), Kannkaufmann (§ 2 HGB: Kleingewerbe erst mit Eintragung), Kaufmann kraft Eintragung (§ 5 HGB). Freiberufler betreiben kein Gewerbe – bei ihnen hilft allenfalls die Rechtsscheinhaftung.",
+      "quellen": [
+        "§ 1 HGB",
+        "§ 2 HGB",
+        "§ 5 HGB",
+        "§ 6 HGB",
+        "§ 13 Abs. 3 GmbHG",
+        "Themenpool: handelsg-264"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.230Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-803",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Bearbeitervermerk: vier Stellen, an denen er in deiner Lösung wieder auftaucht",
+      "text": "Lies ihn vor der Akte – und am Ende noch einmal gegen deinen Entwurf.",
+      "punkte": [
+        "Form und Perspektive: Urteil, Beschluss oder Anwaltsschriftsatz",
+        "Erlassene Teile weglassen – etwa Tatbestand oder Streitwert",
+        "Unterstellungen nicht problematisieren – etwa die ordnungsgemäße Ladung",
+        "Hilfsgutachten nur, wenn verlangt – für offen gebliebene Fragen"
+      ],
+      "quellen": [
+        "Themenpool: assessorz-803"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.230Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-910",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Einschreiben nicht abgeholt: Ist die Kündigung trotzdem zugegangen?",
+      "norm": "§§ 130 Abs. 1, 242 BGB",
+      "optionen": [
+        "BGH: Kein Zugang. Stellt der Absender unverzüglich erneut zu, gilt der erste Versuch als rechtzeitig (§ 242 BGB).",
+        "Teile der Lit.: Zugang wird fingiert, sobald die Abholung zumutbar war – ein neuer Versuch ist nicht nötig."
+      ],
+      "text": "Der Benachrichtigungszettel bewirkt noch keinen Zugang. Einig ist man im Grundsatz: Wer die Annahme grundlos verweigert, muss sich so behandeln lassen, als sei zugegangen. Sicherer Weg: Bote oder Zustellung durch den Gerichtsvollzieher (§ 132 BGB).",
+      "quellen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 132 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-910"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.230Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

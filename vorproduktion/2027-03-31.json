@@ -1,0 +1,872 @@
+{
+  "datum": "2027-03-31",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-331",
+        "themaTitel": "Was ist ein Dreiecksbetrug?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "assessoroer-709",
+        "themaTitel": "Widerspruchsbescheid: Tenor, Gründe, Kosten",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "sachen-221",
+        "themaTitel": "Wann liegt ein Besitzkonstitut vor?",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "strafbt-740"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "strafbt-740"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:09",
+        "art": "norm",
+        "themaId": "bgbat-163"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "streitstand",
+        "themaId": "streit-22"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "merksatz",
+        "themaId": "bgbat-121"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "schuld-458"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-331",
+      "poolTitel": "Was ist ein Dreiecksbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-12",
+        "2026-11-22",
+        "2027-03-12"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "assessoroer-709",
+      "poolTitel": "Widerspruchsbescheid: Tenor, Gründe, Kosten",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§§ 68 ff. VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-14",
+        "2027-03-14"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-221",
+      "poolTitel": "Wann liegt ein Besitzkonstitut vor?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 868 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2026-10-18"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-740",
+      "poolTitel": "Tötung auf Verlangen und Suizidhilfe",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 216 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2027-01-30",
+        "2027-01-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-740",
+      "poolTitel": "Tötung auf Verlangen und Suizidhilfe",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 216 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2027-01-30",
+        "2027-01-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-163",
+      "poolTitel": "Wann beginnt die regelmäßige Verjährung und wann endet sie?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 195 BGB",
+        "§ 199 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-13",
+        "2026-12-21",
+        "2027-01-04"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-22",
+      "poolTitel": "Rücktritt vom Versuch bei außertatbestandlicher Zielerreichung (Denkzettel)",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bgbat-121",
+      "poolTitel": "Was gilt beim Handeln unter fremdem Namen?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 164 BGB",
+        "§ 177 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-15"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-458",
+      "poolTitel": "Mitverschulden und Schadensminderung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 254 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-23"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-331",
+      "slug": "2027-03-31-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nachbarin gibt den Laptop heraus: Betrug oder Diebstahl?",
+          "titelZeilen": [
+            "Nachbarin gibt den",
+            "Laptop heraus:",
+            "Betrug oder",
+            "Diebstahl?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Das Lager des Opfers entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "E fährt in den Urlaub und gibt seiner Nachbarin N den Wohnungsschlüssel, damit sie nach dem Rechten sieht. A klingelt bei N und behauptet wahrheitswidrig, E schicke ihn, um den Laptop zu holen. N glaubt ihm, schließt auf und gibt ihm den Laptop. Betrug oder Diebstahl?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wegnahme oder Verfügung?",
+          "links": {
+            "titel": "§ 242 StGB, mittelbar",
+            "punkte": [
+              "Der Getäuschte steht dem Opfer nicht näher als ein beliebiger Dritter.",
+              "Er wird nur als Werkzeug des Täters benutzt."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 263 StGB, Dreieck",
+            "punkte": [
+              "Der Getäuschte steht schon vor der Tat im Lager des Opfers.",
+              "Seine Verfügung wird dem Opfer zugerechnet."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "Personen trennen",
+              "text": "Getäuscht ist N und sie verfügt, geschädigt ist E. Verfügender und Geschädigter müssen beim Betrug nicht identisch sein."
+            },
+            {
+              "titel": "Näheverhältnis bestimmen",
+              "text": "Die Rspr. verlangt ein Näheverhältnis zum Vermögen, die h.L. spricht von Lagertheorie. Eine Mindermeinung fordert eine rechtliche Befugnis."
+            },
+            {
+              "titel": "Verfügungsbewusstsein",
+              "text": "N gibt den Laptop bewusst heraus. Beim Sachbetrug ist das nötig – es trennt die Verfügung von der Wegnahme."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "N hatte Schlüssel und Obhut über die Wohnung – sie stand schon vor der Tat im Lager des E. Ihre Herausgabe ist eine E zurechenbare Vermögensverfügung: A ist wegen Betrugs strafbar (§ 263 Abs. 1 StGB). Fehlt jede Obhutsbeziehung, ist der Getäuschte nur Werkzeug – dann Diebstahl in mittelbarer Täterschaft."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Betrug und Diebstahl nebeneinander bejahen. Für dieselbe Gewahrsamsverschiebung schließen sich Wegnahme und Verfügung aus: Entweder der Getäuschte verfügt aus dem Lager des Opfers heraus – oder er ist Werkzeug des Täters."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Steht der Getäuschte im Lager des Geschädigten, verfügt er – Dreiecksbetrug. Sonst ist er Werkzeug – Diebstahl in mittelbarer Täterschaft."
+        },
+        {
+          "art": "cta",
+          "titel": "Das Dreieck in drei Fragen",
+          "punkte": [
+            "Wer ist getäuscht, wer geschädigt?",
+            "Stand der Getäuschte im Lager?",
+            "Bewusst verfügt oder Werkzeug?"
+          ],
+          "icons": [
+            "personen",
+            "haus",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Die Nachbarin gibt den Laptop heraus, geschädigt ist aber E – Betrug oder Diebstahl? Beim Dreiecksbetrug fallen Getäuschter und Geschädigter auseinander. Entscheidend ist, ob der Getäuschte schon vor der Tat im Lager des Opfers stand (Rspr.: Näheverhältnis, h.L.: Lagertheorie). Dann verfügt er und es ist Betrug. Sonst ist er nur Werkzeug – Diebstahl in mittelbarer Täterschaft. Beides zugleich geht nicht. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#betrug",
+        "#263stgb",
+        "#dreiecksbetrug",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Dreiecksbetrug oder Diebstahl?",
+      "coverText": "Das Lager des Opfers entscheidet",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer im Lager des Opfers steht, verfügt über dessen Vermögen – wer nicht, ist nur Werkzeug.",
+        "handlung": "{A} holds a key on a ribbon and hands a glowing box through a doorway to a smiling stranger, while {B} watches from the side with crossed arms and a sceptical look.",
+        "hinweisRegie": "Place the note in the free space next to the key ribbon and the doorway, slightly tilted toward the key, so the guardian role is linked to the note without covering the handed-over box.",
+        "alternative": "{B} draws a chalk circle around a house and the neighbour inside it, while {A} stands just outside the line holding a box."
+      },
+      "bildSzene": "alien with key hands box to stranger",
+      "bildSzeneAlt": "chalk circle around house and neighbour",
+      "quellen": [
+        "§ 263 Abs. 1 StGB",
+        "§ 242 StGB",
+        "§ 25 Abs. 1 Alt. 2 StGB",
+        "Themenpool: strafbt-331"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "abgrenzungsfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.611Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-709",
+      "slug": "2027-03-31-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Stattgebender Widerspruchsbescheid: drei Ziffern im Tenor",
+          "titelZeilen": [
+            "Stattgebender",
+            "Widerspruchs-",
+            "bescheid: drei",
+            "Ziffern im Tenor"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Ziffer 3 regelt den Anwalt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Stadt S setzt gegen W eine Gebühr fest. W legt, vertreten durch Rechtsanwältin R, Widerspruch ein. Die Widerspruchsbehörde hält den Bescheid für rechtswidrig. Wie lautet der Tenor ihres Widerspruchsbescheids?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Tenor in drei Ziffern",
+          "schritte": [
+            {
+              "titel": "1. Sachentscheidung",
+              "text": "„Der Gebührenbescheid der Stadt S vom … wird aufgehoben.“"
+            },
+            {
+              "titel": "2. Kosten",
+              "text": "„Die Kosten des Widerspruchsverfahrens trägt die Stadt S.“ – § 73 Abs. 3 S. 3 VwGO, § 80 Abs. 1 S. 1 VwVfG bzw. Landesrecht."
+            },
+            {
+              "titel": "3. Hinzuziehung",
+              "text": "„Die Hinzuziehung eines Bevollmächtigten im Vorverfahren war notwendig.“ – § 80 Abs. 3 S. 2 VwVfG."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Gründe und Form",
+          "punkte": [
+            "Gründe: Sachverhalt, Zulässigkeit, Begründetheit, Kosten",
+            "Begründung und Rechtsbehelfsbelehrung (§ 73 Abs. 3 S. 1 VwGO)",
+            "Zustellung von Amts wegen (§ 73 Abs. 3 S. 2 VwGO)",
+            "Gebühren für das Widerspruchsverfahren: je nach Landesrecht"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Ziffer 3 fehlt. Anwaltskosten des Vorverfahrens sind nur erstattungsfähig, wenn die Hinzuziehung notwendig war (§ 80 Abs. 2 VwVfG). Darüber entscheidet die Kostenentscheidung selbst (§ 80 Abs. 3 S. 2 VwVfG) – also gehört der Ausspruch in den Tenor."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Stattgeben heißt: aufheben, Kosten dem Rechtsträger der Ausgangsbehörde auferlegen, über die Hinzuziehung entscheiden."
+        },
+        {
+          "art": "cta",
+          "titel": "Tenor-Check Widerspruchsbescheid",
+          "punkte": [
+            "Sachentscheidung klar formuliert?",
+            "Kostenlast bestimmt?",
+            "Hinzuziehung entschieden?"
+          ],
+          "icons": [
+            "dokument",
+            "muenzen",
+            "aktentasche"
+          ]
+        }
+      ],
+      "caption": "Ein stattgebender Widerspruchsbescheid braucht drei Ziffern: die Sachentscheidung, die Kostenentscheidung (§ 73 Abs. 3 S. 3 VwGO) und – wenn ein Anwalt tätig war – den Ausspruch, dass seine Hinzuziehung notwendig war (§ 80 Abs. 3 S. 2 VwVfG). Ohne ihn sind die Anwaltskosten des Vorverfahrens nicht erstattungsfähig (§ 80 Abs. 2 VwVfG). Für Landesbehörden gilt das Landesrecht, meist inhaltsgleich. Speichern für die nächste Behördenklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#widerspruchsbescheid",
+        "#vwgo",
+        "#vwvfg",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerspruchsbescheid: der Tenor",
+      "coverText": "Ziffer 3 regelt den Anwalt",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Der stattgebende Widerspruchsbescheid entscheidet über Sache, Kosten und die Notwendigkeit des Anwalts.",
+        "handlung": "{A} hovers over a desk and places a third small seal next to two seals already set on a document, while {B} taps the empty spot with his pointer.",
+        "hinweisRegie": "Place the note in the free space right beside the third seal, slightly tilted toward {B}'s pointer, so the easily forgotten third element stands out without covering the document.",
+        "alternative": "{B} counts three stacked trays on a filing cart while {A} slides a missing card into the lowest tray."
+      },
+      "bildSzene": "droid adds third seal to document",
+      "bildSzeneAlt": "missing card slid into third tray",
+      "quellen": [
+        "§ 73 Abs. 3 VwGO",
+        "§ 80 Abs. 1–3 VwVfG",
+        "Verwaltungsverfahrens- und Kostenrecht der Länder",
+        "Themenpool: assessoroer-709"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-tenorziffern",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.611Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-221",
+      "slug": "2027-03-31-b3",
+      "titelZeilen": [
+        "Eigentum",
+        "übertragen, Sache",
+        "behalten – so geht's"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eigentum übertragen, Sache behalten – so geht's",
+          "unter": "Sachenrecht · § 930 BGB",
+          "text": "Die Übergabe wird durch ein Besitzmittlungsverhältnis ersetzt.",
+          "norm": "§ 930 BGB",
+          "icon": "schluessel",
+          "sprecher": "Eigentum übertragen und die Sache trotzdem behalten? Das geht. Paragraf 930 BGB ersetzt die Übergabe durch ein Besitzkonstitut. Genau so funktioniert die Sicherungsübereignung an die Bank.",
+          "marken": [
+            "ohne Übergabe",
+            "§ 930 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einigung",
+          "text": "Einigung über den Eigentumsübergang wie bei § 929 S. 1 BGB.",
+          "norm": "§§ 929 S. 1, 930 BGB",
+          "sprecher": "Schritt eins: die Einigung. Veräußerer und Erwerber einigen sich wie bei jeder Übereignung darüber, dass das Eigentum übergehen soll.",
+          "marken": [
+            "Einigung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Besitzkonstitut",
+          "text": "Konkretes Besitzmittlungsverhältnis: Der Veräußerer besitzt künftig für den Erwerber.",
+          "norm": "§ 868 BGB",
+          "sprecher": "Schritt zwei: das Besitzkonstitut. Statt zu übergeben, vereinbaren die Parteien ein Rechtsverhältnis nach Paragraf 868. Der Veräußerer bleibt unmittelbarer Besitzer, der Erwerber wird mittelbarer Besitzer. Bei der Sicherungsübereignung genügt nach herrschender Meinung die Sicherungsabrede.",
+          "marken": [
+            "mittelbarer Besitz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Bestimmtheit",
+          "text": "Für Dritte muss klar sein, welche Sachen übereignet sind.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Bestimmtheit. Wer ein Warenlager übereignet, muss die Sachen so bezeichnen, dass ein Dritter sie ohne Weiteres erkennt, etwa über einen Raumsicherungsvertrag oder eine Markierung. Eine bloße Mengenangabe reicht nicht.",
+          "marken": [
+            "welche Sachen?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Berechtigung",
+          "text": "Nichtberechtigter Veräußerer: gutgläubiger Erwerb erst mit Übergabe.",
+          "norm": "§ 933 BGB",
+          "sprecher": "Schritt vier: die Berechtigung. Ist der Veräußerer nicht Eigentümer, hilft dem Erwerber sein guter Glaube erst, wenn ihm die Sache übergeben wird. Das regelt Paragraf 933, ein Klausurklassiker.",
+          "marken": [
+            "§ 933 BGB"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Einigung plus Besitzkonstitut ersetzt die Übergabe – beim Nichtberechtigten erst die Übergabe.",
+          "norm": "§§ 930, 933 BGB",
+          "sprecher": "Merke: Einigung plus konkretes Besitzmittlungsverhältnis ersetzt die Übergabe. Für den gutgläubigen Erwerb vom Nichtberechtigten reicht das allein nicht.",
+          "marken": [
+            "Konstitut statt Übergabe"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jeder Sicherungsübereignung zuerst: bestimmt genug?",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Sachenrechtsklausur. Und prüf bei jeder Sicherungsübereignung zuerst die Bestimmtheit.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Eigentum übertragen, die Sache aber behalten – das ermöglicht § 930 BGB. Statt der Übergabe vereinbaren die Parteien ein konkretes Besitzmittlungsverhältnis (§ 868 BGB); bei der Sicherungsübereignung genügt nach h.M. die Sicherungsabrede. Dazu müssen die Sachen bestimmt bezeichnet sein. Und Vorsicht beim Nichtberechtigten: Gutgläubig erwirbt der Erwerber erst mit Übergabe (§ 933 BGB). Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#930bgb",
+        "#sicherungsübereignung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Besitzkonstitut: Übereignung ohne Übergabe",
+      "coverText": "Besitzkonstitut ersetzt die Übergabe",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Beim Besitzkonstitut wechselt das Eigentum, während die Sache beim Veräußerer bleibt.",
+        "handlung": "{A} keeps both hands on his mining cart full of crystals, while {B} nervously ties a small ownership tag to the cart without taking it away.",
+        "hinweisRegie": "Place the note in the open space right next to the new tag on the cart, slightly tilted toward it, so the change of ownership without handover is visible while {A}'s grip stays uncovered.",
+        "alternative": "{B} hands a receipt to {A}, who keeps working at his crystal machine that now carries a second owner's mark."
+      },
+      "bildSzene": "miner keeps cart, tag tied on",
+      "bildSzeneAlt": "machine keeps working with new owner mark",
+      "quellen": [
+        "§ 929 S. 1 BGB",
+        "§ 930 BGB",
+        "§ 868 BGB",
+        "§ 933 BGB",
+        "Themenpool: sachen-221"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.613Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-740",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "Was unterscheidet die Tötung auf Verlangen (§ 216 StGB) vom Totschlag?",
+      "optionen": [
+        "Eine bloße Einwilligung des Opfers genügt",
+        "Das Opfer hat ausdrücklich und ernstlich verlangt",
+        "Der Täter handelt aus Mitleid"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 216 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafbt-740"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.613Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-740",
+      "ueberzeile": "Auflösung",
+      "titel": "Ein ausdrückliches und ernstliches Verlangen",
+      "text": "§ 216 StGB privilegiert nur, wer durch das ausdrückliche und ernstliche Verlangen des Getöteten zur Tötung bestimmt worden ist. Verlangen ist mehr als Einwilligung: Der Getötete muss auf die Tat hinwirken. Ernstlich heißt freiverantwortlich und frei von Willensmängeln. Mitleid allein genügt nicht – ohne Verlangen bleibt es bei §§ 212, 211 StGB.",
+      "norm": "§ 216 Abs. 1 StGB",
+      "quellen": [
+        "§ 216 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafbt-740"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.613Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Eine bloße Einwilligung des Opfers genügt",
+        "Das Opfer hat ausdrücklich und ernstlich verlangt",
+        "Der Täter handelt aus Mitleid"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-163",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 195 BGB: Drei Jahre – aber nicht für Mängelrechte",
+      "text": "Die regelmäßige Frist beträgt drei Jahre und beginnt mit dem Schluss des Jahres, in dem der Anspruch entstanden ist und der Gläubiger von den Umständen und dem Schuldner Kenntnis erlangt hat oder ohne grobe Fahrlässigkeit hätte erlangen müssen (§ 199 Abs. 1 BGB). Kauf- und Werkmängel verjähren dagegen grundsätzlich nach §§ 438, 634a BGB – ab Ablieferung bzw. Abnahme.",
+      "norm": "§ 195 BGB · § 199 Abs. 1 BGB",
+      "quellen": [
+        "§ 195 BGB",
+        "§ 199 BGB",
+        "§ 438 BGB",
+        "§ 634a BGB",
+        "Themenpool: bgbat-163"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.613Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "streit-22",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Denkzettel verpasst, Tötung nicht vollendet: Ist ein Rücktritt noch möglich?",
+      "norm": "§ 24 Abs. 1 S. 1 StGB",
+      "optionen": [
+        "BGH (Großer Senat): Ja – „Aufgeben“ bezieht sich nur auf den Tatbestand, nicht auf weitere Ziele.",
+        "Teile der Lit.: Nein – wer sein Ziel erreicht hat, verzichtet auf nichts; keine honorierbare Umkehr."
+      ],
+      "text": "Relevant beim unbeendeten Versuch mit bedingtem Tötungsvorsatz. Klausur: erst Fehlschlag verneinen, dann den Rücktrittshorizont bestimmen, dann den Streit entscheiden.",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "§ 22 StGB"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.613Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-121",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Fremdes Kundenkonto benutzt: Der Inhaber haftet nur nach Vertretungsregeln",
+      "text": "Wer unter fremdem Konto auftritt, handelt unter fremdem Namen – es gelten §§ 164 ff. BGB analog. Der Inhaber ist nur gebunden, wenn er genehmigt (§ 177 BGB) oder eine Duldungs- oder Anscheinsvollmacht vorliegt. Ein nachlässig verwahrtes Passwort allein genügt nach dem BGH nicht. Sonst haftet der Handelnde (§ 179 BGB analog).",
+      "norm": "§§ 164, 177, 179 BGB analog",
+      "quellen": [
+        "§ 164 BGB",
+        "§ 177 BGB",
+        "§ 179 BGB",
+        "Themenpool: bgbat-121"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.613Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-458",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Mitverschulden: Verschulden gegen sich selbst",
+      "text": "§ 254 BGB meint keine Pflichtverletzung gegenüber dem Schädiger, sondern die Außerachtlassung der Sorgfalt, die ein verständiger Mensch zum eigenen Schutz anwendet. Abs. 1 betrifft die Entstehung des Schadens, Abs. 2 seine Abwendung und Minderung. Folge: Abwägung der Beiträge – eine Quote bis hin zum völligen Ausschluss des Anspruchs.",
+      "norm": "§ 254 Abs. 1, 2 BGB",
+      "quellen": [
+        "§ 254 BGB",
+        "Themenpool: schuld-458"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:57.613Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
