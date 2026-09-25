@@ -1,0 +1,860 @@
+{
+  "datum": "2027-01-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "staat-079",
+        "themaTitel": "Was sind die wichtigsten Ausprägungen des Rechtsstaatsprinzips?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "bereich-213",
+        "themaTitel": "Wie löst man den Dreiecksfall der Anweisung bereicherungsrechtlich?",
+        "fach": "bereich",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-800",
+        "themaTitel": "Aktenvortrag Strafrecht",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:07",
+        "art": "frage",
+        "themaId": "strafat-726"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:07",
+        "art": "antwort",
+        "themaId": "strafat-726"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "revision-879"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "merksatz",
+        "themaId": "schuldbt-192"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "begriff",
+        "themaId": "staat-600"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "fehler",
+        "themaId": "strafat-921"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "staat-079",
+      "poolTitel": "Was sind die wichtigsten Ausprägungen des Rechtsstaatsprinzips?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 19 Abs. 4 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "bereich-213",
+      "poolTitel": "Wie löst man den Dreiecksfall der Anweisung bereicherungsrechtlich?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-800",
+      "poolTitel": "Aktenvortrag Strafrecht",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StGB; StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2026-12-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-726",
+      "poolTitel": "Versuch: Tatentschluss",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 22, 23 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-10-05"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-726",
+      "poolTitel": "Versuch: Tatentschluss",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 22, 23 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-10-05"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "revision-879",
+      "poolTitel": "Wann trägt die Besetzungsrüge?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 338 Nr. 1 StPO",
+        "§§ 222a, 222b StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "schuldbt-192",
+      "poolTitel": "Wer trägt die Aus- und Einbaukosten beim Mangel?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 Abs. 3 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-11"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "staat-600",
+      "poolTitel": "Bundespräsident: Ausfertigungsprüfungsrecht",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 82 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-10",
+        "2026-09-10",
+        "2026-12-04"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "strafat-921",
+      "poolTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2026-12-09"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-079",
+      "slug": "2027-01-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Im Juni beschlossen, ab Januar fällig – geht das?",
+          "titelZeilen": [
+            "Im Juni beschlossen,",
+            "ab Januar fällig –",
+            "geht das?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Echte oder unechte Rückwirkung?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Das Land L verkündet im Juni ein Gesetz: Für Genehmigungen, die seit dem 1. Januar erteilt und abgeschlossen wurden, wird nachträglich eine Gebühr fällig. Zugleich steigt für laufende Erlaubnisse die Jahresgebühr ab Juli. Ist das verfassungsgemäß?"
+        },
+        {
+          "art": "text",
+          "titel": "Einordnung",
+          "text": "Das Rechtsstaatsprinzip (Art. 20 Abs. 3 GG) umfasst Gesetzesvorrang und -vorbehalt, Bestimmtheit, Verhältnismäßigkeit, effektiven Rechtsschutz (Art. 19 Abs. 4 GG) – und Vertrauensschutz. Deshalb ist Rückwirkung nicht pauschal verboten. Absolut gilt das Verbot nur im Strafrecht (Art. 103 Abs. 2 GG)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Echte oder unechte Rückwirkung?",
+          "links": {
+            "titel": "Echt",
+            "punkte": [
+              "Rückbewirkung von Rechtsfolgen: Folgen gelten schon vor der Verkündung.",
+              "Grundsätzlich unzulässig."
+            ]
+          },
+          "rechts": {
+            "titel": "Unecht",
+            "punkte": [
+              "Tatbestandliche Rückanknüpfung: Folgen erst ab Verkündung, Sachverhalt begann früher.",
+              "Grundsätzlich zulässig – Abwägung mit dem Vertrauen."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Ausnahmen bei echter Rückwirkung",
+          "punkte": [
+            "Mit der Neuregelung musste man rechnen.",
+            "Die Rechtslage war unklar oder verworren.",
+            "Zwingende Gründe des Gemeinwohls gehen vor.",
+            "Der Schaden ist nur ganz geringfügig."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Gebühr für schon abgeschlossene Genehmigungen seit Januar: echte Rückwirkung, keine Ausnahme ersichtlich – verfassungswidrig. Höhere Gebühr ab Juli für laufende Erlaubnisse: unechte Rückwirkung – zulässig, wenn das Gemeinwohlinteresse das Vertrauen der Inhaber überwiegt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst einordnen, dann werten: echte Rückwirkung grundsätzlich unzulässig, unechte grundsätzlich zulässig – im Strafrecht gar keine."
+        },
+        {
+          "art": "cta",
+          "titel": "Rückwirkung in drei Fragen",
+          "punkte": [
+            "Wann treten die Rechtsfolgen ein?",
+            "Echt oder unecht?",
+            "Ausnahme oder überwiegendes Vertrauen?"
+          ],
+          "icons": [
+            "kalender",
+            "waage",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Im Juni beschlossen, ab Januar fällig – geht das? Es kommt auf die Art der Rückwirkung an. Treten die Rechtsfolgen schon für die Zeit vor der Verkündung ein, ist das echte Rückwirkung und grundsätzlich unzulässig. Knüpft das Gesetz nur für die Zukunft an Sachverhalte an, die früher begonnen haben, ist das unechte Rückwirkung – grundsätzlich zulässig nach Abwägung. Absolut verboten ist Rückwirkung nur im Strafrecht (Art. 103 Abs. 2 GG).",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#rechtsstaatsprinzip",
+        "#rückwirkung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rückwirkung: echt oder unecht?",
+      "coverText": "Echte oder unechte Rückwirkung?",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Ob ein Gesetz zurückwirken darf, hängt davon ab, ob es abgeschlossene Vorgänge nachträglich neu belastet.",
+        "handlung": "{A} tries to attach a new weight to a crate that has already been delivered and sealed behind a finished line, while {B} steps between them and holds up her open hand.",
+        "hinweisRegie": "Place the note in the free space above the sealed crate behind the finished line, slightly tilted toward it, so the closed past is highlighted without covering {B}'s raised hand.",
+        "alternative": "{B} turns back the hands of a large clock while {A} points at a finished stack of parcels that should not be touched."
+      },
+      "bildSzene": "hand stops weight on sealed crate",
+      "bildSzeneAlt": "clock hands turned back, parcels guarded",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 19 Abs. 4 GG",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: staat-079"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.789Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-213",
+      "slug": "2027-01-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anweisungsfall: der Klassiker, an dem Klausuren kippen",
+          "titelZeilen": [
+            "Anweisungsfall:",
+            "der Klassiker, an",
+            "dem Klausuren kippen"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Leistung nur im Einzelverhältnis",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "S weist seine Bank B an, 2.000 € an G zu überweisen – als Kaufpreis. Der Kaufvertrag zwischen S und G ist nichtig. Viele lassen jetzt die Bank direkt bei G kondizieren. Doch wer kann von wem das Geld zurückverlangen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Leistungen bestimmen",
+              "text": "Leistung ist die bewusste, zweckgerichtete Mehrung fremden Vermögens – beurteilt aus Sicht des Empfängers."
+            },
+            {
+              "titel": "Deckungsverhältnis B–S",
+              "text": "Die Bank leistet an S: Sie führt seinen Auftrag aus dem Girovertrag aus. Dieses Verhältnis ist intakt."
+            },
+            {
+              "titel": "Valutaverhältnis S–G",
+              "text": "S leistet über die Bank an G, um den Kaufpreis zu zahlen. Hier liegt der Mangel."
+            },
+            {
+              "titel": "Vorrang der Leistungskondiktion",
+              "text": "G hat durch Leistung des S erlangt. Eine Nichtleistungskondiktion der Bank gegen G scheidet deshalb aus."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Warum kein Durchgriff?",
+          "text": "Jeder soll sich nur mit seinem Vertragspartner auseinandersetzen – mit dessen Einwendungen und dessen Insolvenzrisiko. Ein Durchgriff der Bank auf G würde G die Einwendungen aus dem Verhältnis zu S nehmen. Anders kann es liegen, wenn schon eine zurechenbare Anweisung fehlt."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "S kann die 2.000 € von G nach § 812 Abs. 1 S. 1 Alt. 1 BGB zurückverlangen – Leistungskondiktion im Valutaverhältnis. Die Bank hat keinen Anspruch gegen G; das Konto des S durfte sie belasten."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Mangel im Valutaverhältnis? Dann kondiziert der Anweisende beim Empfänger – die Bank bleibt außen vor."
+        },
+        {
+          "art": "cta",
+          "titel": "Dreiecksfälle in drei Fragen",
+          "punkte": [
+            "Wer hat an wen geleistet?",
+            "In welchem Verhältnis liegt der Mangel?",
+            "Gibt es eine zurechenbare Anweisung?"
+          ],
+          "icons": [
+            "personen",
+            "lupe",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Der Klassiker, an dem Bereicherungsklausuren kippen: Im Anweisungsfall lassen viele die Bank direkt beim Empfänger kondizieren. Die Bank leistet aber an ihren Kunden (Deckungsverhältnis), der Kunde über die Bank an den Empfänger (Valutaverhältnis). Ist nur der Kaufvertrag nichtig, verlangt der Kunde das Geld nach § 812 Abs. 1 S. 1 Alt. 1 BGB zurück – die Bank bleibt außen vor. Anders kann es liegen, wenn eine zurechenbare Anweisung fehlt.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#schuldrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anweisungsfall: Wer kondiziert bei wem?",
+      "coverText": "Leistung nur im Einzelverhältnis",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Im Dreieck wird jeder Fehler in dem Verhältnis rückabgewickelt, in dem er liegt – nicht quer durch.",
+        "handlung": "{B} tries to reach diagonally across a triangle of three connected platforms to grab back a crystal, while {A} taps his pointer on the one edge of the triangle where the crack actually runs.",
+        "hinweisRegie": "Place the note in the free space beside the cracked edge of the triangle, slightly tilted toward the crack, so the correct relationship is marked without covering {B}'s outstretched arm.",
+        "alternative": "{A} untangles three ropes tied in a triangle and pulls only the frayed one, while {B} watches the other two stay taut."
+      },
+      "bildSzene": "triangle platforms, pointer on cracked edge",
+      "bildSzeneAlt": "only frayed rope of triangle pulled",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 BGB",
+        "§ 675f BGB",
+        "Themenpool: bereich-213"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-800",
+      "slug": "2027-01-01-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Aktenvortrag: Der Vorschlag kommt vor die Gründe",
+          "unter": "Aktenvortrag · Strafrecht",
+          "text": "Wer zuhört, will früh wissen, wohin der Vortrag führt.",
+          "norm": null,
+          "icon": "stoppuhr",
+          "sprecher": "Im Aktenvortrag nennst du dein Ergebnis früh. Die Prüfer hören nur zu, sie können nicht zurückblättern. Sag ihnen deshalb vor der rechtlichen Würdigung, wohin die Reise geht.",
+          "marken": [
+            "Ergebnis früh"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einleitung",
+          "text": "Wer, welches Verfahren, welches Stadium, welche Aufgabe.",
+          "norm": null,
+          "sprecher": "Schritt eins: die Einleitung. In ein, zwei Sätzen: um wen es geht, in welchem Verfahrensstadium du stehst und was deine Aufgabe ist, etwa die Abschlussverfügung der Staatsanwaltschaft.",
+          "marken": [
+            "Stadium + Aufgabe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sachverhalt",
+          "text": "Knapp, chronologisch, mit den wichtigsten Beweismitteln.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Sachverhalt. Knapp und chronologisch, mit den Beweismitteln, auf die es später ankommt. Nichts, was du in der Würdigung nicht brauchst.",
+          "marken": [
+            "nur das Nötige"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Entscheidungsvorschlag",
+          "text": "Ein Satz, etwa: Anklage wegen Diebstahls, im Übrigen Einstellung.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Vorschlag. Ein Satz genügt, zum Beispiel: Ich schlage vor, Anklage wegen Diebstahls zu erheben und das Verfahren im Übrigen einzustellen.",
+          "marken": [
+            "ein Satz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rechtliche Würdigung",
+          "text": "Schwerpunkte zuerst: Tatverdacht, Beweislage, Prozessuales.",
+          "norm": "§ 170 StPO",
+          "sprecher": "Schritt vier: die Würdigung. Konzentrier dich auf die Schwerpunkte: Besteht hinreichender Tatverdacht, trägt die Beweislage, gibt es Verfahrenshindernisse? Unproblematisches nur kurz.",
+          "marken": [
+            "Schwerpunkte"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zum Schluss: konkret werden",
+          "text": "Ergebnis wiederholen und die genaue Verfügung oder den Antrag nennen.",
+          "norm": null,
+          "sprecher": "Am Ende wiederholst du das Ergebnis und wirst konkret: welche Verfügung, welcher Antrag, an welches Gericht. So endet der Vortrag, wie er begonnen hat.",
+          "marken": [
+            "Kreis schließen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Einleitung, Sachverhalt, Vorschlag, Würdigung, Ergebnis.",
+          "norm": null,
+          "sprecher": "Merke: Einleitung, Sachverhalt, Vorschlag, Würdigung, Ergebnis. Und frei sprechen statt ablesen.",
+          "marken": [
+            "Vorschlag vor Würdigung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Den Vorschlag vorab in einem Satz",
+          "text": "Speichern für die mündliche Prüfung.",
+          "sprecher": "Speicher dir das für die Vorbereitung auf die mündliche Prüfung. Die genauen Vorgaben zum Aktenvortrag regelt dein Land – den Aufbau kannst du trotzdem schon üben.",
+          "marken": [
+            "Landesvorgaben prüfen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Im Aktenvortrag nennst du den Entscheidungsvorschlag vor der rechtlichen Würdigung – die Prüfer hören nur zu und können nicht zurückblättern. Bewährter Aufbau: Einleitung, Sachverhalt, Vorschlag, Würdigung, Ergebnis mit konkreter Verfügung oder konkretem Antrag. Die Einzelheiten, etwa Vorbereitungs- und Vortragszeit, regelt das jeweilige Land. Speichern für die mündliche Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#aktenvortrag",
+        "#mündlicheprüfung",
+        "#stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aktenvortrag Strafrecht: der Aufbau",
+      "titelZeilen": [
+        "Aktenvortrag: Der",
+        "Vorschlag kommt",
+        "vor die Gründe"
+      ],
+      "coverText": "Einleitung, Sachverhalt, Vorschlag",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Wer vorträgt, zeigt zuerst das Ziel – dann den Weg dorthin.",
+        "handlung": "{B} hovers at the start of a winding path and raises a bright signpost pointing to the destination, while {A} nervously gathers a small bundle of evidence items before setting off.",
+        "hinweisRegie": "Place the note in the free space next to the bright signpost at the start of the path, slightly tilted toward it, so the early result is emphasized without covering {A}'s bundle.",
+        "alternative": "{A} unrolls a map and taps the finish flag first, while {B} lines up the route markers only afterwards."
+      },
+      "bildSzene": "droid raises signpost at path start",
+      "bildSzeneAlt": "finish flag tapped first on map",
+      "quellen": [
+        "§ 170 StPO",
+        "Ausbildungs- und Prüfungsordnungen der Länder",
+        "Themenpool: anklage-800"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "aufbau-reihenfolge",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-726",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "A schießt im Dunkeln auf eine Vogelscheuche, die er für seinen Feind F hält. Versuchter Totschlag?",
+      "optionen": [
+        "Nein – eine Vogelscheuche kann man nicht töten",
+        "Nein, nur Sachbeschädigung nach § 303 StGB",
+        "Ja – untauglicher Versuch, der Tatentschluss zählt"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§§ 22, 23 StGB",
+        "§ 212 StGB",
+        "§ 303 StGB",
+        "Themenpool: strafat-726"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-726",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja: untauglicher Versuch – entscheidend ist die Vorstellung des A",
+      "text": "Beim Versuch prüfst du zuerst den Tatentschluss: Vorsatz bezüglich aller objektiven Merkmale nach der Vorstellung des Täters (§ 22 StGB). A wollte einen Menschen töten und hat angesetzt. Dass das Objekt untauglich war, schließt den Versuch nicht aus; nur bei grobem Unverstand kann das Gericht mildern oder absehen (§ 23 Abs. 3 StGB). § 303 StGB scheitert am Vorsatz.",
+      "norm": "§§ 22, 23 StGB · § 212 StGB",
+      "quellen": [
+        "§§ 22, 23 StGB",
+        "§ 212 StGB",
+        "§ 303 StGB",
+        "Themenpool: strafat-726"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – eine Vogelscheuche kann man nicht töten",
+        "Nein, nur Sachbeschädigung nach § 303 StGB",
+        "Ja – untauglicher Versuch, der Tatentschluss zählt"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-879",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 338 Nr. 1 StPO: Die Besetzungsrüge braucht meist den rechtzeitigen Einwand",
+      "text": "Ein nicht vorschriftsmäßig besetztes Gericht ist ein absoluter Revisionsgrund: Das Beruhen wird unwiderleglich vermutet. Aber: Ist die Besetzung nach § 222a StPO mitzuteilen – im ersten Rechtszug vor LG oder OLG –, muss der Einwand fristgerecht nach § 222b StPO erhoben werden. Sonst ist die Rüge grundsätzlich ausgeschlossen.",
+      "norm": "§ 338 Nr. 1 StPO · §§ 222a, 222b StPO",
+      "quellen": [
+        "§ 338 Nr. 1 StPO",
+        "§ 222a StPO",
+        "§ 222b StPO",
+        "Themenpool: revision-879"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-192",
+      "ueberzeile": "Merksatz Kaufrecht",
+      "titel": "Aus- und Einbaukosten: auch unter Unternehmern Sache des Verkäufers",
+      "text": "§ 439 Abs. 3 BGB gilt für jeden Kaufvertrag: Wurde die mangelhafte Sache ihrer Art gemäß eingebaut, ersetzt der Verkäufer Aus- und Einbaukosten. Nicht, wenn der Käufer den Mangel beim Einbau kannte (§ 439 Abs. 3 S. 2 BGB).",
+      "norm": "§ 439 Abs. 3 BGB",
+      "quellen": [
+        "§ 439 Abs. 3 BGB",
+        "§ 442 Abs. 1 BGB",
+        "Themenpool: schuldbt-192"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-600",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Prüfungsrecht des Bundespräsidenten: formell sicher, materiell umstritten",
+      "text": "Der Bundespräsident fertigt die „nach den Vorschriften dieses Grundgesetzes zustande gekommenen“ Gesetze aus (Art. 82 Abs. 1 S. 1 GG). Daraus folgt unstreitig ein formelles Prüfungsrecht: Kompetenz und Verfahren. Ob er auch den Inhalt prüfen darf, ist umstritten; verbreitet wird das jedenfalls bei offenkundigen Verfassungsverstößen bejaht.",
+      "norm": "Art. 82 Abs. 1 GG",
+      "quellen": [
+        "Art. 82 Abs. 1 GG",
+        "Themenpool: staat-600"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-921",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Anders gestorben als geplant: Der Vorsatz bleibt meist bestehen",
+      "falsch": "Das Opfer ist nicht ertrunken, sondern am Brückenpfeiler gestorben – der Kausalverlauf weicht ab, also entfällt der Vorsatz.",
+      "richtigText": "Der Vorsatz muss den Kausalverlauf nur in seinen wesentlichen Zügen umfassen. Unwesentlich ist eine Abweichung, die sich im Rahmen des nach allgemeiner Lebenserfahrung Vorhersehbaren hält und keine andere Bewertung der Tat rechtfertigt. Wer jemanden von der Brücke stößt, um ihn zu ertränken, bleibt beim vollendeten Delikt, wenn das Opfer am Pfeiler stirbt.",
+      "norm": "§ 16 Abs. 1 StGB",
+      "quellen": [
+        "§ 16 Abs. 1 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-921"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
