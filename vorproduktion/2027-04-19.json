@@ -1,0 +1,891 @@
+{
+  "datum": "2027-04-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-633",
+        "themaTitel": "Rechtswegerschöpfung und Subsidiarität",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "schuldbt-188",
+        "themaTitel": "Wie prüft man den Sachmangel beim Kauf?",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-742",
+        "themaTitel": "Gefährliche Körperverletzung: gemeinschaftliche Begehung",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "bgbat-432"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "bgbat-432"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "strafat-309"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "tipp",
+        "themaId": "verwalt-384"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "zahl",
+        "themaId": "methodik-900"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "streitstand",
+        "themaId": "assessorz-816"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-633",
+      "poolTitel": "Rechtswegerschöpfung und Subsidiarität",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 90 II BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2027-01-02",
+        "2027-03-27"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuldbt-188",
+      "poolTitel": "Wie prüft man den Sachmangel beim Kauf?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 434 BGB",
+        "§ 437 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-742",
+      "poolTitel": "Gefährliche Körperverletzung: gemeinschaftliche Begehung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 224 I Nr. 4 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-16",
+        "2027-02-04",
+        "2027-02-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-432",
+      "poolTitel": "Stellvertretung: eigene Willenserklärung, Offenkundigkeit, Vertretungsmacht",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 164 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-16",
+        "2027-01-16",
+        "2027-03-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-432",
+      "poolTitel": "Stellvertretung: eigene Willenserklärung, Offenkundigkeit, Vertretungsmacht",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 164 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-16",
+        "2027-01-16",
+        "2027-03-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-309",
+      "poolTitel": "Was ist eine notwendige Teilnahme?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 26 StGB",
+        "§ 27 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-18"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "verwalt-384",
+      "poolTitel": "Was ist eine Ermessensreduzierung auf null?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2027-01-15",
+        "2027-01-29"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-900",
+      "poolTitel": "Streitstände nur dort, wo sie entscheidungserheblich sind",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28",
+        "2027-02-13",
+        "2027-02-15"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-816",
+      "poolTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-20",
+        "2027-02-18",
+        "2027-04-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-633",
+      "slug": "2027-04-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eilantrag verloren – Karlsruhe muss trotzdem warten",
+          "titelZeilen": [
+            "Eilantrag verloren",
+            "– Karlsruhe muss",
+            "trotzdem warten"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Hauptsache vor Verfassungsbeschwerde",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde untersagt A mit sofortiger Vollziehung sein Gewerbe. Sein Eilantrag nach § 80 Abs. 5 VwGO scheitert in zwei Instanzen. A erhebt Verfassungsbeschwerde gegen die Eilbeschlüsse und rügt Art. 12 Abs. 1 GG. Das Hauptsacheverfahren läuft noch. Zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Rechtsweg erschöpft?",
+              "text": "Für das Eilverfahren ja: Das OVG hat abschließend entschieden. Das Eilverfahren bildet einen eigenen Rechtsweg (§ 90 Abs. 2 S. 1 BVerfGG)."
+            },
+            {
+              "titel": "Subsidiarität prüfen",
+              "text": "Zusätzlich muss A alle zumutbaren fachgerichtlichen Möglichkeiten nutzen, die Verletzung zu beseitigen – regelmäßig auch die Hauptsache."
+            },
+            {
+              "titel": "Ausnahmen",
+              "text": "Die Rüge betrifft gerade das Eilverfahren selbst, oder die Hauptsache kann die Verletzung nicht mehr rechtzeitig beseitigen."
+            },
+            {
+              "titel": "Vorabentscheidung",
+              "text": "Bei allgemeiner Bedeutung oder schwerem, unabwendbarem Nachteil kann das BVerfG sofort entscheiden (§ 90 Abs. 2 S. 2 BVerfGG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Mit dem letzten Eilbeschluss den Rechtsweg für erschöpft halten – und die Zulässigkeit abhaken. Rechtswegerschöpfung und Subsidiarität sind zwei getrennte Hürden. Die zweite verlangt meist noch den Weg durch die Hauptsache."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Der Rechtsweg im Eilverfahren ist erschöpft. A rügt aber, dass schon das Verbot selbst Art. 12 Abs. 1 GG verletzt – das kann auch die Hauptsache klären. Ohne besondere Umstände ist die Verfassungsbeschwerde deshalb wegen Subsidiarität unzulässig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eilbeschluss letztinstanzlich? Rechtsweg erschöpft – aber die Subsidiarität verlangt meist noch die Hauptsache."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor Karlsruhe drei Fragen",
+          "punkte": [
+            "Rechtsweg im Eilverfahren erschöpft?",
+            "Kann die Hauptsache die Verletzung beseitigen?",
+            "Ausnahme nach § 90 Abs. 2 S. 2 BVerfGG?"
+          ],
+          "icons": [
+            "gericht",
+            "waage",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Eilantrag in zwei Instanzen verloren – jetzt direkt nach Karlsruhe? Meist nicht. Der Rechtsweg im Eilverfahren ist zwar erschöpft (§ 90 Abs. 2 S. 1 BVerfGG). Die Subsidiarität verlangt aber, alle zumutbaren fachgerichtlichen Möglichkeiten zu nutzen – regelmäßig auch das Hauptsacheverfahren. Ausnahmen: Die Rüge betrifft gerade das Eilverfahren, die Hauptsache ist unzumutbar, oder § 90 Abs. 2 S. 2 BVerfGG greift. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsbeschwerde",
+        "#bverfgg",
+        "#subsidiarität",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfassungsbeschwerde nach dem Eilverfahren",
+      "coverText": "Hauptsache vor Verfassungsbeschwerde",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Nach dem verlorenen Eilverfahren wartet vor dem Verfassungsgericht meist noch der Weg durch die Hauptsache.",
+        "handlung": "{A} stands at a closed gate in front of a distant high court building and turns toward a longer side path, while {B} hovers beside her and points to the still unwalked stretch of road lit by a small lantern.",
+        "hinweisRegie": "Place the note in the open space along the unwalked side path near the lantern, slightly tilted toward it, so it reads as the remaining route without covering {A}'s face or the closed gate.",
+        "alternative": "{B} stamps a first finished ticket while {A} holds up a second, still blank ticket in front of a court entrance turnstile."
+      },
+      "bildSzene": "closed gate, side path still to walk",
+      "bildSzeneAlt": "second blank ticket at court turnstile",
+      "quellen": [
+        "§ 90 Abs. 2 BVerfGG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 80 Abs. 5 VwGO",
+        "Art. 12 Abs. 1 GG",
+        "Themenpool: staat-633"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-188",
+      "slug": "2027-04-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 434 BGB: drei Anforderungen – die Vereinbarung ist nur eine",
+          "titelZeilen": [
+            "§ 434 BGB:",
+            "drei Anforderungen",
+            "– die Vereinbarung",
+            "ist nur eine"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Subjektiv, objektiv, Montage",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Seit 2022 ist eine Sache nur mangelfrei, wenn sie bei Gefahrübergang den subjektiven Anforderungen, den objektiven Anforderungen und den Montageanforderungen entspricht (§ 434 Abs. 1 BGB). Die Anforderungen gelten nebeneinander – die Vereinbarung allein entscheidet nicht mehr."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Kaufvertrag",
+              "text": "Wirksamer Kaufvertrag über eine Sache (§ 433 BGB); die Käuferrechte folgen aus § 437 BGB."
+            },
+            {
+              "titel": "2. Subjektive Anforderungen",
+              "text": "Vereinbarte Beschaffenheit (auch Art, Menge, Qualität), vorausgesetzte Verwendung, Zubehör und Anleitungen (§ 434 Abs. 2 BGB)."
+            },
+            {
+              "titel": "3. Objektive Anforderungen",
+              "text": "Eignung zur gewöhnlichen Verwendung, übliche Beschaffenheit – auch nach öffentlichen Äußerungen wie Werbung (§ 434 Abs. 3 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Montage, andere Sache",
+              "text": "Montageanforderungen (§ 434 Abs. 4 BGB). Die Lieferung einer anderen als der geschuldeten Sache steht einem Mangel gleich (Abs. 5)."
+            },
+            {
+              "titel": "5. Bei Gefahrübergang",
+              "text": "Maßgeblich ist der Gefahrübergang (§ 446 BGB). Beim Verbrauchsgüterkauf hilft die Vermutung des § 477 BGB."
+            },
+            {
+              "titel": "6. Kein Ausschluss",
+              "text": "Kenntnis des Käufers (§ 442 BGB), vertraglicher Ausschluss nur in den Grenzen der §§ 444, 476 BGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Abweichung vereinbart?",
+          "text": "Soll die Sache hinter den objektiven Anforderungen zurückbleiben, genügt beim Verbrauchsgüterkauf keine Klausel: Der Verbraucher muss vorher eigens informiert werden, und die Abweichung muss ausdrücklich und gesondert vereinbart sein (§ 476 Abs. 1 S. 2 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Subjektiv, objektiv, Montage – alle drei müssen bei Gefahrübergang stimmen. Erst dann ist die Sache mangelfrei."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 434 BGB in drei Zügen",
+          "punkte": [
+            "Was wurde vereinbart?",
+            "Was ist üblich und zu erwarten?",
+            "Montage und Zubehör in Ordnung?"
+          ],
+          "icons": [
+            "vertrag",
+            "lupe",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "Die vereinbarte Beschaffenheit stimmt – ist die Sache damit mangelfrei? Nicht zwingend. Seit 2022 verlangt § 434 Abs. 1 BGB subjektive Anforderungen, objektive Anforderungen und Montageanforderungen nebeneinander. Wer nur auf die Vereinbarung schaut, übersieht die übliche Beschaffenheit nach § 434 Abs. 3 BGB. Beim Verbrauchsgüterkauf ist eine Abweichung nur unter den strengen Voraussetzungen des § 476 Abs. 1 S. 2 BGB möglich. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#sachmangel",
+        "#434bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachmangel: das Prüfschema nach § 434 BGB",
+      "coverText": "Subjektiv, objektiv, Montage",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Eine Sache ist erst mangelfrei, wenn Vereinbarung, übliche Beschaffenheit und Montage gleichzeitig stimmen.",
+        "handlung": "{A} sets a crystal lantern down at a checkpoint with three small signal lights, only the first glowing green, while {B} curiously leans in to inspect the two lights that are still dark.",
+        "hinweisRegie": "Place the note in the free space above the three small signal lights, slightly tilted toward the two dark ones, so the missing requirements stand out without covering the lantern or {B}'s face.",
+        "alternative": "{B} unpacks a delivered crate and finds the promised item but a missing standard part, while {A} holds up the empty slot in the packaging."
+      },
+      "bildSzene": "lantern at checkpoint with three lights",
+      "bildSzeneAlt": "crate missing a standard part",
+      "quellen": [
+        "§ 434 BGB",
+        "§ 437 BGB",
+        "§ 446 BGB",
+        "§ 442 BGB",
+        "§ 444 BGB",
+        "§ 476 BGB",
+        "§ 477 BGB",
+        "Themenpool: schuldbt-188"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-anforderungen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-742",
+      "slug": "2027-04-19-b3",
+      "titelZeilen": [
+        "Nur ein Gehilfe",
+        "dabei – und doch",
+        "gemeinschaftlich"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nur ein Gehilfe dabei – und doch gemeinschaftlich",
+          "unter": "Gefährliche KV · § 224 StGB",
+          "text": "Nr. 4 verlangt keine zwei Mittäter.",
+          "norm": "§ 224 Abs. 1 Nr. 4 StGB",
+          "icon": "personen",
+          "sprecher": "Zwei Mittäter braucht Nummer vier nicht. Nach dem BGH genügt es, wenn ein Täter und ein Gehilfe am Tatort zusammenwirken.",
+          "marken": [
+            "kein Mittäter nötig",
+            "Gehilfe genügt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Mindestens zwei Beteiligte",
+          "text": "Beteiligte sind Täter und Teilnehmer (§ 28 Abs. 2 StGB).",
+          "norm": "§ 224 Abs. 1 Nr. 4 StGB",
+          "sprecher": "Schritt eins: mindestens zwei Beteiligte. Beteiligte sind Täter und Teilnehmer. Der zweite muss deshalb kein Mittäter sein, auch ein Gehilfe zählt.",
+          "marken": [
+            "Täter + Teilnehmer"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zusammen am Tatort",
+          "text": "Beide wirken vor Ort einverständlich zusammen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: das Zusammenwirken am Tatort. Beide sind bei der Körperverletzung vor Ort und handeln einverständlich zusammen. Ein Plan aus der Ferne reicht nicht.",
+          "marken": [
+            "vor Ort"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Der Grund der Schärfung",
+          "text": "Mehrere Gegner – das Opfer kann sich schlechter wehren.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Grund der Schärfung. Wer mehreren Beteiligten gegenübersteht, ist stärker gefährdet und kann sich schlechter verteidigen. Deshalb muss der Gehilfe nicht selbst zuschlagen.",
+          "marken": [
+            "erhöhte Gefahr"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vorsatz auf das Zusammenwirken",
+          "text": "Der Täter kennt das Zusammenwirken und will es.",
+          "norm": null,
+          "sprecher": "Schritt vier: der Vorsatz. Der Täter muss die Umstände kennen, die das gemeinschaftliche Handeln begründen, und es wollen.",
+          "marken": [
+            "Vorsatz auf Nr. 4"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Streit",
+          "text": "Teile der Lehre verlangen Mittäterschaft – wie in § 25 Abs. 2 StGB.",
+          "norm": "§ 25 Abs. 2 StGB",
+          "sprecher": "Dazu gibt es Streit. Teile der Literatur verlangen zwei Mittäter, weil auch Paragraf 25 Absatz 2 von gemeinschaftlich spricht. Der BGH stellt dagegen auf die erhöhte Gefährlichkeit für das Opfer ab.",
+          "marken": [
+            "BGH vs. Teile der Lehre"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Zwei Beteiligte, gemeinsam vor Ort, mit Vorsatz.",
+          "norm": "§ 224 Abs. 1 Nr. 4 StGB",
+          "sprecher": "Merke: zwei Beteiligte, gemeinsam am Tatort, und der Täter weiß das. Nach dem BGH reicht dafür ein Gehilfe vor Ort.",
+          "marken": [
+            "zwei vor Ort"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Beteiligung, dann Nr. 4",
+          "text": "Speichern für die nächste KV-Prüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste gefährliche Körperverletzung. Und kläre vor Nummer vier immer, wer wie beteiligt ist.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Nur einer schlägt zu, der andere hilft vor Ort – gemeinschaftlich im Sinne von § 224 Abs. 1 Nr. 4 StGB? Nach dem BGH ja: Beteiligte sind Täter und Teilnehmer, ein Gehilfe am Tatort genügt. Entscheidend ist, dass das Opfer mehreren Beteiligten gegenübersteht und sich schlechter wehren kann. Teile der Literatur verlangen dagegen Mittäterschaft. Speichern für die nächste KV-Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#körperverletzung",
+        "#224stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 224 Nr. 4 StGB: Gehilfe vor Ort genügt",
+      "coverText": "Täter plus Gehilfe reicht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Für die gemeinschaftliche Begehung reicht es, wenn ein Helfer am Tatort den Täter unterstützt.",
+        "handlung": "{B} points with his pointer at a lone figure facing two others in a narrow alley, one stepping forward and one standing close behind as support, while {A} nervously counts the two opponents on his fingers.",
+        "hinweisRegie": "Place the note in the free space above the second, supporting figure, slightly tilted toward it, so it marks the helper's presence as decisive without covering the lone figure or {A}'s hands.",
+        "alternative": "{A} tries to hold a heavy door shut on his own while {B} shows that a second figure merely holding the lamp on the other side already shifts the balance."
+      },
+      "bildSzene": "lone figure facing actor and helper",
+      "bildSzeneAlt": "second figure with lamp shifts balance",
+      "quellen": [
+        "§ 224 Abs. 1 Nr. 4 StGB",
+        "§ 28 Abs. 2 StGB",
+        "§ 25 Abs. 2 StGB",
+        "§ 27 StGB",
+        "BGH-Rspr. (Gehilfe am Tatort genügt)",
+        "Themenpool: strafbt-742"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-432",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "B überbringt V die fertige Bestellung des P, darf nichts ändern und tritt auch so auf. Ist B Stellvertreter?",
+      "optionen": [
+        "Ja – wer für einen anderen handelt, ist stets Vertreter",
+        "Ja, wenn P und B intern eine Vollmacht vereinbart haben",
+        "Nein – B übermittelt als Bote nur eine fremde Erklärung"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 164 BGB",
+        "§ 165 BGB",
+        "§§ 133, 157 BGB",
+        "Themenpool: bgbat-432"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-432",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – B ist Bote und gibt keine eigene Erklärung ab",
+      "text": "Der Vertreter gibt eine eigene Willenserklärung ab und hat dabei Entscheidungsspielraum (§ 164 Abs. 1 BGB). Der Bote übermittelt nur eine fremde. Abgegrenzt wird nach dem Auftreten nach außen, aus Sicht des Empfängers (§§ 133, 157 BGB). Folge: Ein Bote kann sogar geschäftsunfähig sein, ein Vertreter muss mindestens beschränkt geschäftsfähig sein (§ 165 BGB).",
+      "norm": "§ 164 Abs. 1 BGB · § 165 BGB",
+      "quellen": [
+        "§ 164 BGB",
+        "§ 165 BGB",
+        "§§ 133, 157 BGB",
+        "Themenpool: bgbat-432"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.639Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – wer für einen anderen handelt, ist stets Vertreter",
+        "Ja, wenn P und B intern eine Vollmacht vereinbart haben",
+        "Nein – B übermittelt als Bote nur eine fremde Erklärung"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-309",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§§ 26, 27 StGB: Wer nur notwendig mitwirkt, ist kein Teilnehmer",
+      "text": "Manche Tatbestände setzen die Mitwirkung einer weiteren Person begriffsnotwendig voraus – etwa der Bewucherte beim Wucher (§ 291 StGB). Beschränkt sich sein Beitrag auf diese notwendige Rolle, ist er nicht als Anstifter oder Gehilfe strafbar, erst recht nicht, wenn die Norm gerade ihn schützt. Wie weit darüber hinausgehende Beiträge strafbar sind, ist umstritten.",
+      "norm": "§§ 26, 27 StGB",
+      "quellen": [
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "§ 291 StGB",
+        "Themenpool: strafat-309"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-384",
+      "ueberzeile": "Klausurtipp Verwaltungsrecht",
+      "titel": "Anspruch auf Einschreiten: erst das subjektive Recht, dann die Reduzierung auf null",
+      "text": "Ein Anspruch auf Einschreiten setzt voraus, dass die Ermächtigungsgrundlage auch dich schützt. Dann hast du zunächst nur einen Anspruch auf fehlerfreie Ermessensausübung (§ 40 VwVfG). Auf null reduziert ist das Ermessen vor allem bei erheblicher Gefahr für hochrangige Rechtsgüter wie Leben und Gesundheit. Nur dann: Verpflichtung statt Bescheidung (§ 113 Abs. 5 VwGO).",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: verwalt-384"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-900",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Streitstand gelernt? Vier Prüffragen, bevor er aufs Papier darf",
+      "text": "Punkte gibt es für den Streit, der den Fall entscheidet – nicht für jeden, den du kennst.",
+      "punkte": [
+        "Stellt der Sachverhalt die Frage wirklich?",
+        "Welche Ansichten sind für diesen Fall relevant?",
+        "Führen sie zu unterschiedlichen Ergebnissen?",
+        "Nur dann: Stellung nehmen, mit Argument"
+      ],
+      "quellen": [
+        "Themenpool: methodik-900"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-816",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Verspätetes Vorbringen: Wann verzögert es den Rechtsstreit?",
+      "norm": "§ 296 Abs. 1 ZPO",
+      "optionen": [
+        "BGH (absoluter Begriff): Verzögerung, wenn der Prozess bei Zulassung länger dauert als bei Zurückweisung.",
+        "Teile der Literatur (relativer Begriff): Entscheidend ist, ob er bei rechtzeitigem Vortrag ebenso lange gedauert hätte."
+      ],
+      "text": "Klausur: Die Praxis folgt dem BGH, das BVerfG setzt Grenzen – keine Zurückweisung, wenn offenkundig ist, dass dieselbe Verzögerung auch bei rechtzeitigem Vortrag eingetreten wäre. Und: Das Gericht muss zumutbare vorbereitende Maßnahmen (§ 273 ZPO) genutzt haben.",
+      "quellen": [
+        "§ 296 ZPO",
+        "§ 273 ZPO",
+        "Art. 103 Abs. 1 GG",
+        "Themenpool: assessorz-816"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:45.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

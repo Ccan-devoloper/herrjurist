@@ -1,0 +1,876 @@
+{
+  "datum": "2027-03-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "ipr-889",
+        "themaTitel": "In welcher Reihenfolge prüft man einen Fall mit Auslandsbezug?",
+        "fach": "ipr",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "revision-882",
+        "themaTitel": "Was ist ein Darstellungsmangel?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-659",
+        "themaTitel": "Klagebefugnis und Adressatentheorie",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "anklage-795"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "anklage-795"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "zpo-551"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:15",
+        "art": "streitstand",
+        "themaId": "assessorz-824"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "merksatz",
+        "themaId": "strafbt-741"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "arbeit-040"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "ipr-889",
+      "poolTitel": "In welcher Reihenfolge prüft man einen Fall mit Auslandsbezug?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "EuGVVO",
+        "Rom I-VO",
+        "EGBGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-27"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "revision-882",
+      "poolTitel": "Was ist ein Darstellungsmangel?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 267 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17",
+        "2027-02-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-659",
+      "poolTitel": "Klagebefugnis und Adressatentheorie",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 II VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2026-11-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2027-01-02",
+        "2027-01-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2027-01-02",
+        "2027-01-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-551",
+      "poolTitel": "Streitgegenstand im Zivilprozess",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 253, 308 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-10-28",
+        "2026-12-26"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-824",
+      "poolTitel": "Wie läuft die Kostenfestsetzung nach dem Urteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 103 ZPO",
+        "§ 104 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-12",
+        "2027-01-14"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-741",
+      "poolTitel": "Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-12",
+        "2026-12-14",
+        "2026-12-27"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "arbeit-040",
+      "poolTitel": "Was sind die wichtigsten Rechtsfolgen einer Schwangerschaft im Arbeitsrecht?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 17 MuSchG",
+        "§ 3 MuSchG",
+        "§ 15 BEEG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "ipr",
+      "klausur": 1,
+      "fachLabel": "Internationales Privatrecht",
+      "themaId": "ipr-889",
+      "slug": "2027-03-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Deutsches Gericht heißt nicht deutsches Recht",
+          "titelZeilen": [
+            "Deutsches Gericht",
+            "heißt nicht",
+            "deutsches Recht"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Erst Zuständigkeit, dann Kollision",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Stufe 1: Internationale Zuständigkeit",
+          "punkte": [
+            "Vorrang der EuGVVO (Brüssel Ia) in Zivil- und Handelssachen.",
+            "Grundregel: Wohnsitz des Beklagten in einem Mitgliedstaat (Art. 4 EuGVVO).",
+            "Besondere Gerichtsstände: Vertrag (Art. 7 Nr. 1), unerlaubte Handlung (Art. 7 Nr. 2).",
+            "Wohnt der Beklagte außerhalb der EU: grundsätzlich die ZPO-Gerichtsstände (doppelfunktional)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Stufe 2: Anwendbares Recht",
+          "punkte": [
+            "Das deutsche Gericht wendet deutsches Kollisionsrecht an – nicht automatisch deutsches Sachrecht.",
+            "EU-Verordnungen und Staatsverträge gehen dem EGBGB vor (Art. 3 EGBGB).",
+            "Verträge: Rom I-VO. Außervertragliche Schuldverhältnisse: Rom II-VO."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Rom I oder Rom II?",
+          "links": {
+            "titel": "Rom I (Vertrag)",
+            "punkte": [
+              "Rechtswahl zuerst (Art. 3).",
+              "Ohne Wahl Art. 4: beim Warenkauf das Recht des Verkäufers.",
+              "Verbraucher: Schutz nach Art. 6."
+            ]
+          },
+          "rechts": {
+            "titel": "Rom II (Delikt)",
+            "punkte": [
+              "Grundregel: Recht des Erfolgsorts (Art. 4 I).",
+              "Gemeinsamer gewöhnlicher Aufenthalt geht vor (Art. 4 II).",
+              "Rechtswahl nach Art. 14."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stufe 3: Sachrecht anwenden",
+          "punkte": [
+            "Rom I und II verweisen direkt ins Sachrecht, ohne Rück- und Weiterverweisung (Art. 20 Rom I, 24 Rom II).",
+            "Das EGBGB verweist grundsätzlich auch auf das fremde IPR (Art. 4 Abs. 1 EGBGB).",
+            "Zum Schluss der ordre public als Notbremse (Art. 21 Rom I, Art. 26 Rom II, Art. 6 EGBGB)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Zuständigkeit, dann das Kollisionsrecht, zuletzt das Sachrecht. Welches Gericht entscheidet, sagt nichts über das anwendbare Recht."
+        },
+        {
+          "art": "cta",
+          "titel": "Auslandsfall in drei Stufen",
+          "punkte": [
+            "Zuständigkeit: EuGVVO vor ZPO",
+            "Kollisionsrecht: Rom I/II vor EGBGB",
+            "Sachrecht anwenden, ordre public prüfen"
+          ],
+          "icons": [
+            "gericht",
+            "globus",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Deutsches Gericht heißt nicht deutsches Recht. Im Fall mit Auslandsbezug trennst du drei Fragen: Ist das deutsche Gericht international zuständig (EuGVVO, sonst ZPO)? Welches Recht ist anwendbar (Rom I, Rom II, sonst EGBGB)? Und erst dann: Was sagt dieses Sachrecht? Die Rom-Verordnungen verweisen direkt ins Sachrecht, das EGBGB grundsätzlich auch auf fremdes IPR. Speichern für den nächsten Auslandsfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#ipr",
+        "#internationalesprivatrecht",
+        "#eugvvo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "IPR-Fall: Zuständigkeit, Kollision, Sachrecht",
+      "coverText": "Erst Zuständigkeit, dann Kollision",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Dass ein deutsches Gericht entscheidet, sagt noch nichts darüber, welches Recht es anwendet.",
+        "handlung": "{A} curiously sits down at a courthouse desk, while {B} hovers beside her and slides over a small globe, pointing to a different country lit up on it.",
+        "hinweisRegie": "Place the note in the free space between the desk and the globe, slightly tilted toward the lit-up country, so it links court and applicable law without covering {A}'s hands or the globe.",
+        "alternative": "{B} lines up three sealed boxes in a fixed order on a counter, while {A} opens only the third one, which holds a small foreign flag."
+      },
+      "bildSzene": "alien at court desk, droid shows globe",
+      "bildSzeneAlt": "three boxes opened in fixed order",
+      "quellen": [
+        "Art. 4, 7 EuGVVO",
+        "Art. 3, 4, 6, 20, 21 Rom I-VO",
+        "Art. 4, 14, 24, 26 Rom II-VO",
+        "Art. 3, 4, 6 EGBGB",
+        "Themenpool: ipr-889"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslungsgefahr",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.699Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-882",
+      "slug": "2027-03-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Lücke in der Beweiswürdigung – kein Fall für die Verfahrensrüge",
+          "titelZeilen": [
+            "Lücke in der",
+            "Beweiswürdigung –",
+            "kein Fall für die",
+            "Verfahrensrüge"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Hier genügt die Sachrüge",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Ausgangspunkt",
+          "text": "Ein Darstellungsmangel liegt vor, wenn die Urteilsgründe lückenhaft, widersprüchlich oder unklar sind oder gegen Denkgesetze oder gesicherte Erfahrungssätze verstoßen. Das Revisionsgericht prüft ihn auf die Sachrüge hin – allein anhand der Urteilsurkunde."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Wege in die Revision",
+          "links": {
+            "titel": "Darstellungsmangel",
+            "punkte": [
+              "Der Fehler steht in den Urteilsgründen.",
+              "Die allgemeine Sachrüge genügt.",
+              "Prüfung nur anhand der Urteilsurkunde."
+            ]
+          },
+          "rechts": {
+            "titel": "Verfahrensfehler",
+            "punkte": [
+              "Fehler auf dem Weg zum Urteil, etwa ein abgelehnter Beweisantrag.",
+              "Tatsachen vollständig vortragen (§ 344 II 2 StPO).",
+              "Beweis über das Protokoll (§ 274 StPO)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Typische Darstellungsmängel",
+          "punkte": [
+            "Lücke: naheliegende Umstände oder Alternativen nicht erörtert.",
+            "Widerspruch: Feststellungen und Würdigung passen nicht zusammen.",
+            "Überspannte Anforderungen an die Überzeugungsbildung.",
+            "Aussage gegen Aussage ohne erkennbare Gesamtwürdigung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis: Beruhen und Abgrenzung",
+          "text": "Auch beim Darstellungsmangel fragst du nach § 337 StPO: Ist nicht auszuschließen, dass das Gericht bei fehlerfreier Würdigung anders entschieden hätte? Stützt sich das Urteil dagegen auf Beweise, die nicht in die Hauptverhandlung eingeführt wurden, brauchst du eine Verfahrensrüge (§ 261 StPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Was im Urteil fehlt oder sich widerspricht, fängt die Sachrüge. Was in der Hauptverhandlung schiefging, braucht die Verfahrensrüge."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Revisionsbegründung",
+          "punkte": [
+            "Wo steckt der Fehler: Urteil oder Verfahren?",
+            "Sachrüge: Lücke, Widerspruch, Denkgesetz",
+            "Verfahrensrüge: Tatsachen voll vortragen",
+            "Beruhen nach § 337 StPO"
+          ],
+          "icons": [
+            "lupe",
+            "dokument",
+            "klemmbrett",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Lücke in der Beweiswürdigung? Dafür brauchst du keine Verfahrensrüge. Ein Darstellungsmangel – lückenhafte, widersprüchliche oder unklare Urteilsgründe, Verstöße gegen Denkgesetze oder Erfahrungssätze – wird auf die allgemeine Sachrüge hin geprüft, allein anhand der Urteilsurkunde. Die Verfahrensrüge ist für Fehler auf dem Weg zum Urteil da und verlangt vollständigen Tatsachenvortrag (§ 344 Abs. 2 S. 2 StPO). Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#337stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Darstellungsmangel: Sachrüge statt Verfahrensrüge",
+      "coverText": "Hier genügt die Sachrüge",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Ob ein Fehler im Urteilstext steckt oder im Verfahren davor, entscheidet über den Weg in die Revision.",
+        "handlung": "{A} holds a long sheet of paper up to the light and finds a clear gap in it, while {B} stands at a separate workbench turning over a broken gear from the machine that produced it.",
+        "hinweisRegie": "Place the note in the free space right next to the gap in the sheet, slightly tilted toward it, so it points to the error in the judgment itself without covering {A}'s hands or the workbench.",
+        "alternative": "{B} loads two crates onto different carts – one with a torn page on top, the other with a broken gear – while {A} points the way for each cart."
+      },
+      "bildSzene": "gap in sheet held against light",
+      "bildSzeneAlt": "torn page and broken gear sorted",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 267 StPO",
+        "§ 337 StPO",
+        "§ 344 Abs. 2 StPO",
+        "§ 274 StPO",
+        "Themenpool: revision-882"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslungsfehler",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.699Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-659",
+      "slug": "2027-03-18-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Klagebefugnis: drei Fälle, nur einer ist einfach",
+          "unter": "Klagebefugnis · § 42 Abs. 2 VwGO",
+          "text": "Adressat, Dritter, Verpflichtung – drei Wege zur möglichen Rechtsverletzung.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "icon": "tuer",
+          "sprecher": "Die Adressatentheorie hilft nur einem von dreien. § 42 Absatz zwei VwGO verlangt die Möglichkeit, in eigenen Rechten verletzt zu sein. Wie du sie begründest, hängt von der Konstellation ab.",
+          "marken": [
+            "drei Fälle"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Adressat eines belastenden Verwaltungsakts",
+          "text": "Möglich verletzt ist zumindest Art. 2 Abs. 1 GG.",
+          "norm": "Art. 2 Abs. 1 GG",
+          "sprecher": "Fall eins: Du bist Adressat eines belastenden Verwaltungsakts. Dann ist zumindest deine allgemeine Handlungsfreiheit aus Artikel zwei Absatz eins Grundgesetz möglicherweise verletzt. Ein Satz genügt.",
+          "marken": [
+            "Adressatentheorie"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Dritter: Schutznormtheorie",
+          "text": "Die Norm muss zumindest auch dem Schutz des Klägers dienen.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "sprecher": "Fall zwei: Du bist Dritter, etwa der Nachbar einer Baugenehmigung. Die Adressatentheorie hilft dir nicht. Du brauchst eine Norm, die zumindest auch deinem Schutz dient – nicht nur der Allgemeinheit.",
+          "marken": [
+            "Schutznorm"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Verpflichtungsklage",
+          "text": "Ein Anspruch auf den begehrten Verwaltungsakt muss möglich sein.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "sprecher": "Fall drei: Du willst einen Verwaltungsakt erreichen. Dann muss ein Anspruch darauf möglich sein, zumindest auf ermessensfehlerfreie Entscheidung. Auch das folgt aus einer Norm, die dich schützt.",
+          "marken": [
+            "Anspruch möglich?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel Nachbar",
+          "text": "Drittschützend etwa: Rücksichtnahmegebot, Abstandsflächen. Nicht jede Baurechtsnorm.",
+          "norm": "§ 15 Abs. 1 BauNVO",
+          "sprecher": "Das Beispiel: Der Nachbar kann sich auf das Gebot der Rücksichtnahme berufen oder, je nach Land, auf die Abstandsflächen. Normen, die nur die städtebauliche Ordnung sichern, geben ihm nichts.",
+          "marken": [
+            "drittschützend?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Adressat: Art. 2 Abs. 1 GG. Dritter: Schutznorm. Verpflichtung: möglicher Anspruch.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "sprecher": "Merke: Adressat, dann reicht Artikel zwei Absatz eins. Dritter, dann brauchst du eine Schutznorm. Verpflichtung, dann einen möglichen Anspruch.",
+          "marken": [
+            "drei Wege"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst: In welcher Rolle klagt er?",
+          "text": "Speichern für die nächste VwGO-Klausur.",
+          "sprecher": "Speicher dir das für die nächste Verwaltungsrechtsklausur. Und frag zuerst: In welcher Rolle steht der Kläger zum Verwaltungsakt?",
+          "marken": [
+            "Rolle klären"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Adressatentheorie hilft nur in einem von drei Fällen. § 42 Abs. 2 VwGO verlangt die Möglichkeit einer eigenen Rechtsverletzung. Adressat eines belastenden Verwaltungsakts? Dann genügt Art. 2 Abs. 1 GG. Dritter wie der Nachbar? Dann brauchst du eine Norm, die zumindest auch dich schützt. Verpflichtungsklage? Dann muss ein Anspruch möglich sein. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsprozessrecht",
+        "#vwgo",
+        "#klagebefugnis",
+        "#baurecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klagebefugnis: Adressat, Dritter, Verpflichtung",
+      "titelZeilen": [
+        "Klagebefugnis:",
+        "drei Fälle, nur",
+        "einer ist einfach"
+      ],
+      "coverText": "Adressat, Dritter, Verpflichtung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Wie man die Klagebefugnis begründet, hängt davon ab, ob man Adressat, Nachbar oder Antragsteller ist.",
+        "handlung": "{A} stands before three doors of different sizes holding a single key, while {B} uses his pointer to show that only the first, plainly built door opens with that key.",
+        "hinweisRegie": "Place the note in the free space between the first open door and the two closed ones, slightly tilted toward the closed doors, without covering the key or {B}'s pointer.",
+        "alternative": "{B} hands three different tickets to three figures waiting at a gate, one of them a neighbour peeking over a fence."
+      },
+      "bildSzene": "one key, three doors, only first opens",
+      "bildSzeneAlt": "three tickets for three gate visitors",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "Art. 2 Abs. 1 GG",
+        "§ 15 Abs. 1 BauNVO",
+        "Themenpool: vwgo-659"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-konstellationen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.701Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-795",
+      "ueberzeile": "Prüfungsfrage Strafurteil",
+      "titel": "Einzige Belastungszeugin, der Angeklagte bestreitet: Was verlangt die Rspr. von der Beweiswürdigung?",
+      "optionen": [
+        "Freispruch zwingend – Aussage gegen Aussage genügt nie",
+        "Die Zeugin muss vereidigt werden, sonst ist sie unverwertbar",
+        "Besonders sorgfältige Gesamtwürdigung, im Urteil nachvollziehbar"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 261 StPO",
+        "§ 267 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.701Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-795",
+      "ueberzeile": "Auflösung",
+      "titel": "Verurteilung möglich – aber nur mit sorgfältiger Gesamtwürdigung",
+      "text": "Auch eine einzige Aussage kann die Überzeugung des Gerichts tragen (§ 261 StPO). Steht Aussage gegen Aussage, müssen die Urteilsgründe aber zeigen, dass das Gericht alle Umstände gesehen und gewürdigt hat, die die Entscheidung beeinflussen können – etwa Entstehung, Konstanz und Motive der Aussage. Sonst droht die Aufhebung wegen eines Darstellungsmangels.",
+      "norm": "§ 261 StPO · § 267 StPO",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 267 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.701Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Freispruch zwingend – Aussage gegen Aussage genügt nie",
+        "Die Zeugin muss vereidigt werden, sonst ist sie unverwertbar",
+        "Besonders sorgfältige Gesamtwürdigung, im Urteil nachvollziehbar"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-551",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 253 Abs. 2 Nr. 2 ZPO: Antrag plus Lebenssachverhalt – nicht die Anspruchsgrundlage",
+      "text": "Nach dem zweigliedrigen Streitgegenstandsbegriff der Rspr. bestimmen Klageantrag und zugrunde liegender Lebenssachverhalt den Streitgegenstand. Die Anspruchsgrundlage gehört nicht dazu – das Gericht prüft alle passenden. Der Streitgegenstand entscheidet über Rechtshängigkeit (§ 261 ZPO), Klageänderung (§ 263 ZPO) und Rechtskraft (§ 322 ZPO).",
+      "norm": "§ 253 Abs. 2 Nr. 2 ZPO",
+      "quellen": [
+        "§ 253 ZPO",
+        "§ 261 ZPO",
+        "§ 263 ZPO",
+        "§ 322 ZPO",
+        "Themenpool: zpo-551"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.701Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-824",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Verteidigungsanzeige ohne Abweisungsantrag, Anerkenntnis in der Erwiderungsfrist: noch „sofort“?",
+      "norm": "§ 93 ZPO · § 276 ZPO",
+      "optionen": [
+        "BGH: Ja – ohne angekündigten Abweisungsantrag reicht die Klageerwiderungsfrist.",
+        "Andere Ansicht: Nein – sofort heißt schon mit der Verteidigungsanzeige."
+      ],
+      "text": "Klausur: § 93 ZPO verlangt zweierlei – keine Veranlassung zur Klage und ein sofortiges Anerkenntnis. Dann trägt der Kläger trotz Anerkenntnisurteil die Kosten.",
+      "quellen": [
+        "§ 93 ZPO",
+        "§ 276 ZPO",
+        "§ 307 ZPO",
+        "Themenpool: assessorz-824"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.701Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-741",
+      "ueberzeile": "Merksatz Strafrecht BT",
+      "titel": "Angst allein ist keine Gesundheitsschädigung",
+      "text": "Rein psychische Einwirkungen wie Schreck, Angst oder Ekel erfüllen § 223 StGB nicht. Nach der Rspr. braucht es einen krankhaften Zustand, der sich körperlich objektivieren lässt.",
+      "norm": "§ 223 Abs. 1 StGB",
+      "quellen": [
+        "§ 223 StGB",
+        "Themenpool: strafbt-741"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.701Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-040",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Kündigungsverbot nach § 17 MuSchG",
+      "text": "Während der Schwangerschaft und mindestens bis vier Monate nach der Entbindung ist die Kündigung unzulässig – wenn der Arbeitgeber die Schwangerschaft kannte oder sie ihm binnen zwei Wochen nach Zugang mitgeteilt wird. Ausnahme: Die zuständige Behörde erklärt die Kündigung in besonderen Fällen für zulässig (§ 17 Abs. 2 MuSchG).",
+      "norm": "§ 17 MuSchG",
+      "quellen": [
+        "§ 17 MuSchG",
+        "Themenpool: arbeit-040"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:06.701Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,857 @@
+{
+  "datum": "2027-02-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "strafbt-756",
+        "themaTitel": "Prozessbetrug",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "grundr-371",
+        "themaTitel": "Was ist ein allgemeines Gesetz im Sinne des Art. 5 Abs. 2 GG?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-565",
+        "themaTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "assessoroer-854"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "assessoroer-854"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "verwalt-393"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "streitstand",
+        "themaId": "bgbat-910"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "merksatz",
+        "themaId": "bgbat-151"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "begriff",
+        "themaId": "verwalt-094"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "strafbt-756",
+      "poolTitel": "Prozessbetrug",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "grundr-371",
+      "poolTitel": "Was ist ein allgemeines Gesetz im Sinne des Art. 5 Abs. 2 GG?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-565",
+      "poolTitel": "Allgemeine Vollstreckungsvoraussetzungen",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 704 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-854",
+      "poolTitel": "Was gehört in die Antragsschrift im Eilverfahren?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-393",
+      "poolTitel": "Was ist ein enteignungsgleicher Eingriff?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "bgbat-910",
+      "poolTitel": "Wann gilt eine Willenserklärung trotz Zugangshindernis als zugegangen?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 132 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-11",
+        "2026-12-13"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bgbat-151",
+      "poolTitel": "Wie kommt ein Vertrag bei einer Internetauktion zustande?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB",
+        "§ 156 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-094",
+      "poolTitel": "Was ist der Unterschied zwischen Entschließungs- und Auswahlermessen?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-11-17"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-756",
+      "slug": "2027-02-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Prozessbetrug: Der Richter irrt, der Gegner zahlt",
+          "titelZeilen": [
+            "Prozessbetrug:",
+            "Der Richter irrt,",
+            "der Gegner zahlt"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Das Urteil ist die Verfügung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Konstellation",
+          "text": "K verklagt B auf Zahlung und legt einen gefälschten Schuldschein vor, um einen Anspruch zu belegen, den es nie gab. Das Gericht glaubt ihm und verurteilt B. Getäuscht wird der Richter – geschädigt ist B. Ein klassischer Dreiecksbetrug."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wer ist wer?",
+          "links": {
+            "titel": "Getäuscht und verfügend",
+            "punkte": [
+              "Der Richter: Er irrt über die Tatsachen.",
+              "Sein Urteil ist die Vermögensverfügung."
+            ]
+          },
+          "rechts": {
+            "titel": "Geschädigt",
+            "punkte": [
+              "Der Prozessgegner B.",
+              "Das Gericht darf kraft Amtes über sein Vermögen entscheiden."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Knackpunkte",
+          "punkte": [
+            "Täuschung: bewusst falscher Tatsachenvortrag oder gefälschte Beweismittel",
+            "Irrtum: Beim Versäumnisurteil prüft das Gericht nur die Schlüssigkeit (§ 331 ZPO) – ob es irrt, ist umstritten",
+            "Schaden und Vollendung: im Einzelnen umstritten – spätestens mit vollstreckbarem Urteil diskutieren",
+            "Bereicherungsabsicht: Der Vorteil muss stoffgleich aus dem Vermögen des Gegners stammen"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Konkurrenzen",
+          "punkte": [
+            "Gefälschter Schuldschein: Urkundenfälschung (§ 267 StGB), auch durch Gebrauch im Prozess",
+            "Falsche uneidliche Aussage als Partei: nicht nach § 153 StGB – der erfasst Zeugen und Sachverständige",
+            "Beeidigte Parteiaussage: Meineid (§ 154 StGB) möglich",
+            "Zeuge zur Falschaussage bestimmt: Anstiftung (§§ 153, 26 StGB)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beim Prozessbetrug täuscht der Täter den Richter und schädigt den Gegner – das Urteil ist die Verfügung."
+        },
+        {
+          "art": "cta",
+          "titel": "Prozessbetrug in drei Zügen",
+          "punkte": [
+            "Getäuschten und Geschädigten trennen",
+            "Urteil als Verfügung zurechnen",
+            "Konkurrenzen mit §§ 153 ff., 267 StGB"
+          ],
+          "icons": [
+            "richter",
+            "personen",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Beim Prozessbetrug irrt der Richter – und der Gegner zahlt. Es ist ein Dreiecksbetrug: Getäuscht wird das Gericht, die Vermögensverfügung ist sein Urteil, geschädigt ist die andere Partei. Knackpunkte sind das Versäumnisurteil, bei dem das Gericht nur die Schlüssigkeit prüft, und der Zeitpunkt des Schadens. Dazu kommen die Konkurrenzen mit § 267 StGB und den Aussagedelikten. Speichern für die nächste Betrugsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#betrug",
+        "#263stgb",
+        "#prozessbetrug",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Prozessbetrug: der Spickzettel",
+      "coverText": "Das Urteil ist die Verfügung",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Der Täter täuscht das Gericht, und das Urteil trifft das Vermögen der anderen Partei.",
+        "handlung": "{A} sits as a calm arbiter on a raised rock and, after accepting a shiny fake token from {B}, directs a coin pouch away from an empty seat toward {B} with her staff.",
+        "hinweisRegie": "Place the note in the free space between the fake token and the coin pouch, slightly tilted toward the pouch, so the path from deception to loss is clear without covering {A}'s staff.",
+        "alternative": "{B} shows a painted fake gem to {A}, who unknowingly opens a stranger's treasure box with her key."
+      },
+      "bildSzene": "arbiter misled, directs pouch away",
+      "bildSzeneAlt": "fake gem opens stranger's box",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 267 StGB",
+        "§§ 153, 154, 26 StGB",
+        "§§ 138, 331 ZPO",
+        "Themenpool: strafbt-756"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "dreieck-aufloesen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.506Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-371",
+      "slug": "2027-02-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Allgemeines Gesetz: Zwei Lehren, das BVerfG nimmt beide",
+          "titelZeilen": [
+            "Allgemeines Gesetz:",
+            "Zwei Lehren, das",
+            "BVerfG nimmt beide"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Meinungsneutral plus Rechtsgut",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Meinungsfreiheit findet ihre Schranken in den allgemeinen Gesetzen (Art. 5 Abs. 2 GG). Aber was macht ein Gesetz „allgemein“? Nicht, dass es für jedermann gilt – das tun fast alle Gesetze. Zwei klassische Lehren antworten unterschiedlich."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Sonderrecht oder Abwägung?",
+          "links": {
+            "titel": "Sonderrechtslehre",
+            "punkte": [
+              "Allgemein ist, was sich nicht gegen eine bestimmte Meinung richtet.",
+              "Blick auf die Meinungsneutralität des Gesetzes.",
+              "Sagt nichts über das Gewicht des geschützten Guts."
+            ]
+          },
+          "rechts": {
+            "titel": "Abwägungslehre",
+            "punkte": [
+              "Allgemein ist, was ein Rechtsgut schützt, das der Meinungsfreiheit vorgeht.",
+              "Blick auf den Rang des geschützten Rechtsguts.",
+              "Verlagert die Abwägung schon in die Schranke."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Kombination des BVerfG",
+          "text": "Allgemeine Gesetze richten sich nicht gegen eine Meinung als solche, sondern schützen ein Rechtsgut, das schlechthin – ohne Rücksicht auf eine bestimmte Meinung – zu schützen ist. Also: meinungsneutral und zum Schutz eines eigenständigen Rechtsguts."
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausnahme: Wunsiedel",
+          "text": "§ 130 Abs. 4 StGB richtet sich gegen bestimmte Meinungen und ist deshalb kein allgemeines Gesetz. Das BVerfG hält ihn trotzdem für zulässig – als Ausnahme für die Billigung der nationalsozialistischen Gewalt- und Willkürherrschaft, die Art. 5 GG immanent sei."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Allgemein heißt: meinungsneutral und zum Schutz eines eigenständigen Rechtsguts. Danach das Gesetz im Licht des Art. 5 GG auslegen."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zur Schranke",
+          "punkte": [
+            "Richtet sich das Gesetz gegen eine Meinung?",
+            "Schützt es ein eigenständiges Rechtsgut?",
+            "Wechselwirkung in der Anwendung beachtet?"
+          ],
+          "icons": [
+            "lupe",
+            "schild",
+            "kreislauf"
+          ]
+        }
+      ],
+      "caption": "Allgemeines Gesetz heißt nicht: gilt für jeden. Die Sonderrechtslehre fragt, ob sich das Gesetz gegen eine bestimmte Meinung richtet, die Abwägungslehre, ob es ein vorrangiges Rechtsgut schützt. Das BVerfG kombiniert beides: meinungsneutral und zum Schutz eines schlechthin zu schützenden Rechtsguts. Die Ausnahme ist § 130 Abs. 4 StGB (Wunsiedel). Speichern für die nächste Grundrechtsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#meinungsfreiheit",
+        "#art5gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Allgemeines Gesetz: Sonderrecht und Abwägung",
+      "coverText": "Meinungsneutral plus Rechtsgut",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Ein allgemeines Gesetz ist blind für die Meinung und schützt ein eigenes Gut.",
+        "handlung": "{A} hovers with a visor over its lens and lets every passing voice bubble through the same even filter, while {B} guards a single heavy crystal right behind the filter.",
+        "hinweisRegie": "Place the note in the free space between the even filter and the heavy crystal, slightly tilted toward the crystal, without covering {A}'s visor or {B}'s guarding arms.",
+        "alternative": "{B} holds up two sieves, one with a hole cut for a single shape and one with even holes, while {A} picks the even one."
+      },
+      "bildSzene": "visored droid filters voices, crystal guarded",
+      "bildSzeneAlt": "two sieves: shaped hole versus even",
+      "quellen": [
+        "Art. 5 Abs. 1, 2 GG",
+        "§ 130 Abs. 4 StGB",
+        "Themenpool: grundr-371"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-lehren",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.507Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-565",
+      "slug": "2027-02-11-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Urteil in der Hand – vollstrecken darfst du noch nicht",
+          "unter": "Zwangsvollstreckung · §§ 704 ff. ZPO",
+          "text": "Titel, Klausel, Zustellung – erst alle drei, dann wird vollstreckt.",
+          "norm": "§§ 704, 724, 750 ZPO",
+          "icon": "schluessel",
+          "sprecher": "Ein Urteil allein reicht zum Vollstrecken nicht. Du brauchst drei Dinge: Titel, Klausel und Zustellung. Das sind die allgemeinen Vollstreckungsvoraussetzungen.",
+          "marken": [
+            "Urteil reicht nicht",
+            "drei Voraussetzungen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Titel",
+          "text": "Endurteil, rechtskräftig oder vorläufig vollstreckbar – oder ein Titel aus § 794 ZPO.",
+          "norm": "§§ 704, 794 ZPO",
+          "sprecher": "Erstens, der Titel. Das ist vor allem das rechtskräftige oder für vorläufig vollstreckbar erklärte Endurteil. Daneben gibt es weitere Titel, etwa den Prozessvergleich oder die notarielle Urkunde mit Unterwerfungserklärung.",
+          "marken": [
+            "§§ 704, 794"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Klausel",
+          "text": "Die vollstreckbare Ausfertigung – beim Vollstreckungsbescheid grundsätzlich entbehrlich.",
+          "norm": "§§ 724, 725, 796 ZPO",
+          "sprecher": "Zweitens, die Klausel. Sie steht auf der vollstreckbaren Ausfertigung und bestätigt: Dieser Titel ist vollstreckbar. Beim Vollstreckungsbescheid brauchst du sie grundsätzlich nicht.",
+          "marken": [
+            "Ausfertigung + Klausel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zustellung",
+          "text": "Vorher oder spätestens mit Beginn der Vollstreckung.",
+          "norm": "§ 750 Abs. 1 ZPO",
+          "sprecher": "Drittens, die Zustellung. Der Titel muss dem Schuldner vorher oder spätestens gleichzeitig mit Beginn der Vollstreckung zugestellt werden. Und Titel oder Klausel müssen die Parteien namentlich bezeichnen.",
+          "marken": [
+            "vorher oder zugleich"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Dazu die besonderen Voraussetzungen",
+          "text": "Etwa Sicherheitsleistung, Kalendertag oder Zug-um-Zug-Leistung.",
+          "norm": "§§ 751, 756, 765 ZPO",
+          "sprecher": "Je nach Titel kommen besondere Voraussetzungen hinzu. Etwa die Sicherheitsleistung bei vorläufiger Vollstreckbarkeit, ein Kalendertag oder das Angebot der Gegenleistung bei einer Zug-um-Zug-Verurteilung.",
+          "marken": [
+            "je nach Titel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Wo prüfst du das?",
+          "text": "Typisch in der Erinnerung nach § 766 ZPO.",
+          "norm": "§ 766 ZPO",
+          "sprecher": "In der Klausur tauchen die Voraussetzungen typischerweise in der Erinnerung nach § 766 ZPO auf: Hat der Gerichtsvollzieher ohne Titel, Klausel oder Zustellung vollstreckt?",
+          "marken": [
+            "§ 766 ZPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Titel, Klausel, Zustellung – dann erst vollstrecken.",
+          "norm": null,
+          "sprecher": "Merke: Titel, Klausel, Zustellung. Fehlt auch nur eines davon, darf der Gerichtsvollzieher nicht vollstrecken.",
+          "marken": [
+            "alle drei"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Pfändung abhaken",
+          "text": "Speichern für die nächste Vollstreckungsklausur.",
+          "sprecher": "Speicher dir das für die nächste Vollstreckungsklausur. Und hak vor jeder Pfändung zuerst diese drei Punkte ab, erst danach die besonderen Voraussetzungen.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Urteil in der Hand – vollstrecken darfst du damit allein noch nicht. Die Zwangsvollstreckung setzt Titel, Klausel und Zustellung voraus (§§ 704, 724, 750 ZPO). Beim Vollstreckungsbescheid ist die Klausel grundsätzlich entbehrlich (§ 796 Abs. 1 ZPO). Je nach Titel kommen besondere Voraussetzungen hinzu, etwa Sicherheitsleistung oder Zug-um-Zug-Angebot. In der Klausur prüfst du das oft in der Erinnerung nach § 766 ZPO.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#vollstreckungsklausel",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vollstreckung: Titel, Klausel, Zustellung",
+      "titelZeilen": [
+        "Urteil in der Hand –",
+        "vollstrecken darfst",
+        "du noch nicht"
+      ],
+      "coverText": "Titel, Klausel, Zustellung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Mit dem Urteil allein öffnet sich die Tür zur Vollstreckung nicht – drei Schlüssel sind nötig.",
+        "handlung": "{A} holds a single big key in front of a vault door with three locks, while {B} rummages in his toolbox for the other two keys.",
+        "hinweisRegie": "Place the note in the free space next to the three locks, slightly tilted toward the two empty keyholes, without covering {A}'s key or {B}'s toolbox.",
+        "alternative": "{B} tries to push a heavy cart through a gate that opens only when three levers are pulled, while {A} has pulled just one."
+      },
+      "bildSzene": "one key, vault door with three locks",
+      "bildSzeneAlt": "gate needs three levers pulled",
+      "quellen": [
+        "§§ 704, 794 ZPO",
+        "§§ 724, 725, 796 ZPO",
+        "§ 750 ZPO",
+        "§§ 751, 756, 765, 766 ZPO",
+        "Themenpool: zpo-565"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-urteil-reicht-nicht",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.508Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-854",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "Eilantrag nach § 123 VwGO: Was muss der Antragsteller glaubhaft machen?",
+      "optionen": [
+        "Nur, dass die Hauptsache wahrscheinlich Erfolg hat",
+        "Anordnungsanspruch und Anordnungsgrund",
+        "Dass ein Vollzugsinteresse der Behörde fehlt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 123 VwGO",
+        "§§ 920, 294 ZPO",
+        "Themenpool: assessoroer-854"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.508Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-854",
+      "ueberzeile": "Auflösung",
+      "titel": "Anordnungsanspruch und Anordnungsgrund",
+      "text": "In die Antragsschrift gehören beide: der zu sichernde oder vorläufig zu regelnde Anspruch und die Eilbedürftigkeit. Glaubhaft zu machen nach § 123 Abs. 3 VwGO i.V.m. §§ 920 Abs. 2, 294 ZPO – etwa durch eidesstattliche Versicherung. Die Hauptsache vorwegnehmen darf das Gericht grundsätzlich nicht, außer sonst drohen unzumutbare Nachteile bei hohen Erfolgsaussichten.",
+      "norm": "§ 123 Abs. 1, 3 VwGO",
+      "quellen": [
+        "§ 123 VwGO",
+        "§§ 920, 294 ZPO",
+        "Themenpool: assessoroer-854"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.508Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur, dass die Hauptsache wahrscheinlich Erfolg hat",
+        "Anordnungsanspruch und Anordnungsgrund",
+        "Dass ein Vollzugsinteresse der Behörde fehlt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-393",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Enteignungsgleicher Eingriff: Die Grundlage ist nicht Art. 14 Abs. 3 GG",
+      "text": "Seit dem Nassauskiesungsbeschluss stützt der BGH den Anspruch auf den gewohnheitsrechtlich anerkannten Aufopferungsgedanken (§§ 74, 75 Einl. ALR). Voraussetzungen: rechtswidriger hoheitlicher Eingriff unmittelbar in eine Eigentumsposition und dadurch ein Sonderopfer. Versäumter Primärrechtsschutz mindert den Anspruch (§ 254 BGB analog). Legislatives Unrecht ist nicht erfasst.",
+      "norm": "Art. 14 GG · §§ 74, 75 Einl. ALR",
+      "quellen": [
+        "Art. 14 GG",
+        "§§ 74, 75 Einl. ALR",
+        "§ 254 BGB analog",
+        "Themenpool: verwalt-393"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.508Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-910",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Namensschild vom Briefkasten entfernt, Kündigung kommt zurück: zugegangen?",
+      "norm": "§ 130 Abs. 1 BGB · § 242 BGB",
+      "optionen": [
+        "Rspr. (BGH): Absender muss unverzüglich neu zustellen – dann gilt der erste Versuch als rechtzeitig.",
+        "Andere Ansicht: Zugang schon mit dem ersten Versuch fingiert – ein neuer Versuch ist entbehrlich."
+      ],
+      "text": "Einig ist man: Wer den Zugang treuwidrig verhindert, kann sich nicht auf die Verspätung berufen. Bei arglistiger Vereitelung hält auch der BGH einen neuen Versuch für entbehrlich.",
+      "quellen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 242 BGB",
+        "§ 132 Abs. 1 BGB",
+        "Themenpool: bgbat-910"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.508Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-151",
+      "ueberzeile": "Merksatz BGB AT",
+      "titel": "Online-Auktion: Der Vertrag entsteht ohne Zuschlag",
+      "text": "Kein Zuschlag nach § 156 BGB: Der Vertrag kommt durch Angebot und Annahme zustande (§§ 145 ff. BGB) – mit dem Höchstbietenden bei Ablauf der Auktion.",
+      "norm": "§§ 145 ff., 156 BGB",
+      "quellen": [
+        "§ 145 BGB",
+        "§ 156 BGB",
+        "Themenpool: bgbat-151"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.508Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-094",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Ermessensreduzierung auf null: Nur noch eine Entscheidung ist fehlerfrei",
+      "text": "Ermessen ist auf null reduziert, wenn im Einzelfall nur eine einzige Entscheidung ermessensfehlerfrei ist. Das kann das Entschließungsermessen betreffen (die Behörde muss einschreiten) oder das Auswahlermessen (nur ein Mittel bleibt). Typische Gründe: Gefahr für hochrangige Rechtsgüter wie Leben und Gesundheit oder Selbstbindung der Verwaltung über Art. 3 Abs. 1 GG.",
+      "norm": "§ 40 VwVfG · § 114 VwGO",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "Art. 3 Abs. 1 GG",
+        "Themenpool: verwalt-094"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:44.508Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

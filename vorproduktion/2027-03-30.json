@@ -1,0 +1,866 @@
+{
+  "datum": "2027-03-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "arbeit-253",
+        "themaTitel": "Was ist die Kündigungsschutzklage und welche Frist gilt?",
+        "fach": "arbeit",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "revision-880",
+        "themaTitel": "Wann verletzt eine Hauptverhandlung die Öffentlichkeit?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-353",
+        "themaTitel": "Wie prüft man die abstrakte Normenkontrolle?",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "grundr-628"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "grundr-628"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "strafat-312"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "zahl",
+        "themaId": "bgbat-001"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:41",
+        "art": "streitstand",
+        "themaId": "streit-21"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "merksatz",
+        "themaId": "bereich-216"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "arbeit-253",
+      "poolTitel": "Was ist die Kündigungsschutzklage und welche Frist gilt?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 4 KSchG",
+        "§ 7 KSchG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2027-01-17"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "revision-880",
+      "poolTitel": "Wann verletzt eine Hauptverhandlung die Öffentlichkeit?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 338 Nr. 6 StPO",
+        "§ 169 GVG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-353",
+      "poolTitel": "Wie prüft man die abstrakte Normenkontrolle?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 Abs. 1 Nr. 2 GG",
+        "§ 76 BVerfGG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-628",
+      "poolTitel": "Grundrechtsverwirkung und Parteiverbot als Sonderfragen",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 18, 21 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-628",
+      "poolTitel": "Grundrechtsverwirkung und Parteiverbot als Sonderfragen",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 18, 21 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-312",
+      "poolTitel": "Wie unterscheidet man Tateinheit und Tatmehrheit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StGB",
+        "§ 53 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-12-09"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "bgbat-001",
+      "poolTitel": "Was sind die Voraussetzungen und Rechtsfolgen einer wirksamen Anfechtung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 BGB",
+        "§ 123 BGB",
+        "§ 121 BGB",
+        "§ 124 BGB",
+        "§ 142 Abs. 1 BGB",
+        "§ 143 BGB",
+        "§ 144 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2026-12-01"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "streit-21",
+      "poolTitel": "Anwendungsvorrang oder Geltungsvorrang des Unionsrechts",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 Abs. 3 EUV"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "bereich-216",
+      "poolTitel": "Wann kann sich der Bereicherungsschuldner auf Entreicherung berufen?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 818 Abs. 3 BGB",
+        "§ 819 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2026-11-23",
+        "2026-12-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "arbeit",
+      "klausur": 1,
+      "fachLabel": "Arbeitsrecht",
+      "themaId": "arbeit-253",
+      "slug": "2027-03-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zweite Kündigung im Prozess – die erste Klage deckt sie nicht ab",
+          "titelZeilen": [
+            "Zweite Kündigung",
+            "im Prozess – die",
+            "erste Klage deckt",
+            "sie nicht ab"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Jede Kündigung ist eigener Gegenstand",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Wer die Unwirksamkeit einer schriftlichen Kündigung geltend machen will, muss binnen drei Wochen nach Zugang klagen (§ 4 S. 1 KSchG) – sonst gilt sie als wirksam (§ 7 KSchG). Kündigt der Arbeitgeber während des Prozesses erneut: Erfasst die erste Klage auch die neue Kündigung?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Was ist Streitgegenstand?",
+          "links": {
+            "titel": "BAG: punktuell",
+            "punkte": [
+              "Ob gerade diese Kündigung das Arbeitsverhältnis zum Termin auflöst.",
+              "Jede weitere Kündigung braucht einen eigenen Angriff binnen drei Wochen."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Der Fortbestand des Arbeitsvertrags insgesamt.",
+              "Folgekündigungen wären vom ersten Antrag miterfasst."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "Praxis und Klausur folgen dem BAG: Jede Kündigung wird gesondert nach § 4 KSchG angegriffen.",
+            "Absicherung: allgemeiner Feststellungsantrag (§ 256 ZPO) zusätzlich – Feststellungsinteresse darlegen.",
+            "Dann lassen sich Folgekündigungen nach dem BAG bis zum Ende der I. Instanz einbeziehen (§ 6 KSchG analog).",
+            "Die Dreiwochenfrist gilt für alle Unwirksamkeitsgründe, nicht nur für die fehlende soziale Rechtfertigung."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Jede Kündigung ist ein eigener Streitgegenstand. Wer sich absichern will, verbindet den Antrag nach § 4 KSchG mit einem allgemeinen Feststellungsantrag."
+        },
+        {
+          "art": "cta",
+          "titel": "Kündigungsschutz in drei Zügen",
+          "punkte": [
+            "Zugang und Dreiwochenfrist prüfen",
+            "Jede Kündigung gesondert angreifen",
+            "Feststellungsantrag als Absicherung"
+          ],
+          "icons": [
+            "kalender",
+            "dokument",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Die zweite Kündigung kommt mitten im Prozess – und die erste Klage hilft nicht. Nach dem BAG ist Streitgegenstand der Kündigungsschutzklage, ob gerade diese Kündigung das Arbeitsverhältnis auflöst (punktuelle Theorie). Teile der Literatur sehen den Fortbestand insgesamt als Gegenstand. Für die Klausur heißt das: jede Kündigung binnen drei Wochen gesondert angreifen (§§ 4, 7 KSchG) und absichern über einen allgemeinen Feststellungsantrag. Speichern für die nächste Arbeitsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#arbeitsrecht",
+        "#kündigungsschutz",
+        "#kschg",
+        "#zpo",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kündigungsschutzklage: jede Kündigung gesondert",
+      "coverText": "Jede Kündigung ist eigener Gegenstand",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Jede Kündigung muss gesondert und rechtzeitig angegriffen werden.",
+        "handlung": "{A} holds a small shield against one incoming paper dart, while {B} curiously points at a second dart already flying in from another side.",
+        "hinweisRegie": "Place the note in the open space next to the second incoming dart, slightly tilted toward it, so the need for a separate defence is visible without covering {A}'s shield.",
+        "alternative": "{B} closes one door against a draft while {A} nervously notices a second door swinging open behind them."
+      },
+      "bildSzene": "shield blocks one dart, second dart incoming",
+      "bildSzeneAlt": "second door swings open behind figures",
+      "quellen": [
+        "§ 4 KSchG",
+        "§ 6 KSchG",
+        "§ 7 KSchG",
+        "§ 256 ZPO",
+        "Themenpool: arbeit-253"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "prozessuale-konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.445Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-880",
+      "slug": "2027-03-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Tür verschlossen: Für § 338 Nr. 6 StPO kommt es auf das Gericht an",
+          "titelZeilen": [
+            "Tür verschlossen:",
+            "Für § 338 Nr. 6 StPO",
+            "kommt es auf das",
+            "Gericht an"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Der Verstoß muss zurechenbar sein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Die Hauptverhandlung gegen A dauert bis 18 Uhr. Um 16 Uhr schließt ein Wachtmeister wie üblich die Eingangstür des Gerichtsgebäudes ab. Die Richter erfahren davon nichts, erkennbar war es für sie nicht. Danach folgen Schlussvorträge und Urteilsverkündung. A rügt die Verletzung der Öffentlichkeit."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du die Rüge",
+          "schritte": [
+            {
+              "titel": "Öffentlichkeit beschränkt?",
+              "text": "§ 169 S. 1 GVG: Jedermann muss ohne besondere Schwierigkeiten Zugang haben. Eine verschlossene Tür hält Zuhörer fern."
+            },
+            {
+              "titel": "Dem Gericht zurechenbar?",
+              "text": "Nach der Rspr. greift § 338 Nr. 6 StPO nur, wenn die Beschränkung auf einem Verschulden des Gerichts beruht, etwa fehlender Aufsicht."
+            },
+            {
+              "titel": "Form der Rüge",
+              "text": "Verfahrensrüge mit vollständigem Tatsachenvortrag (§ 344 Abs. 2 S. 2 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Jede Beschränkung der Öffentlichkeit sofort als absoluten Revisionsgrund behandeln. Nr. 6 erfasst die unzulässige Beschränkung, die dem Gericht zuzurechnen ist – nach h.M. nicht die unzulässige Erweiterung, also eine öffentliche Verhandlung, die nichtöffentlich hätte sein müssen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Ab 16 Uhr war die Öffentlichkeit objektiv beschränkt (§ 169 S. 1 GVG). Das Gericht wusste davon nichts und musste es nicht erkennen; ein Aufsichtsverschulden fehlt. Der Verstoß ist ihm nicht zuzurechnen – ein absoluter Revisionsgrund nach § 338 Nr. 6 StPO liegt nicht vor."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 338 Nr. 6 StPO verlangt eine unzulässige Beschränkung, die dem Gericht zuzurechnen ist. Versehen Dritter ohne Verschulden des Gerichts reichen nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Öffentlichkeitsrüge in drei Fragen",
+          "punkte": [
+            "Zugang tatsächlich beschränkt?",
+            "Dem Gericht zurechenbar?",
+            "Tatsachen vollständig vorgetragen?"
+          ],
+          "icons": [
+            "tuer",
+            "richter",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Die Tür war zu, Zuhörer kamen nicht mehr in den Saal – trotzdem ist das nicht automatisch ein absoluter Revisionsgrund. § 338 Nr. 6 StPO greift nach der Rspr. nur, wenn die Beschränkung der Öffentlichkeit dem Gericht zuzurechnen ist, etwa weil es seine Aufsicht vernachlässigt hat. Und erfasst ist nur die unzulässige Beschränkung, nicht die unzulässige Erweiterung. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#338stpo",
+        "#öffentlichkeit",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 338 Nr. 6 StPO: verschlossene Tür",
+      "coverText": "Der Verstoß muss zurechenbar sein",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ein Öffentlichkeitsverstoß ist nur dann absoluter Revisionsgrund, wenn er dem Gericht zuzurechnen ist.",
+        "handlung": "{A} hovers inside a hall facing the front, while behind its back a small side door clicks shut; {B} stands outside the door and looks at it with raised eyebrows.",
+        "hinweisRegie": "Place the note in the free space between the closed side door and {A}'s turned back, slightly tilted toward the door, so the question of who could notice it is clear without covering {B}.",
+        "alternative": "{B} checks a guard's key ring while {A} hovers far away at a lectern, unaware of the locked gate."
+      },
+      "bildSzene": "side door shuts behind droid's back",
+      "bildSzeneAlt": "guard key ring, droid at distant lectern",
+      "quellen": [
+        "§ 169 S. 1 GVG",
+        "§ 338 Nr. 6 StPO",
+        "§ 344 Abs. 2 S. 2 StPO",
+        "Themenpool: revision-880"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.445Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-353",
+      "slug": "2027-03-30-b3",
+      "titelZeilen": [
+        "Abstrakte",
+        "Normenkontrolle: vier",
+        "Prüfpunkte, keine",
+        "Frist"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Abstrakte Normenkontrolle: vier Prüfpunkte, keine Frist",
+          "unter": "Staatsrecht · Art. 93 Abs. 1 Nr. 2 GG",
+          "text": "Objektives Verfahren: keine eigene Rechtsverletzung, keine Antragsfrist.",
+          "norm": "Art. 93 Abs. 1 Nr. 2 GG",
+          "icon": "gericht",
+          "sprecher": "Hier muss niemand in eigenen Rechten verletzt sein. Die abstrakte Normenkontrolle ist ein objektives Verfahren. Sie hat vier Zulässigkeitspunkte, und eine Frist gehört nicht dazu.",
+          "marken": [
+            "objektiv",
+            "vier Punkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Antragsberechtigung",
+          "text": "Bundesregierung, Landesregierung oder ein Viertel der Mitglieder des Bundestages.",
+          "norm": "Art. 93 Abs. 1 Nr. 2 GG · § 76 BVerfGG",
+          "sprecher": "Punkt eins: die Antragsberechtigung. Den Antrag stellen dürfen nur die Bundesregierung, eine Landesregierung oder ein Viertel der Mitglieder des Bundestages. Eine Fraktion als solche oder ein einzelner Abgeordneter kann es nicht.",
+          "marken": [
+            "abschließender Kreis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Prüfungsgegenstand",
+          "text": "Bundes- oder Landesrecht jeden Rangs – bis zur Rechtsverordnung.",
+          "norm": null,
+          "sprecher": "Punkt zwei: der Prüfungsgegenstand. Das ist jede Norm des Bundes- oder Landesrechts, vom Parlamentsgesetz bis zur Rechtsverordnung. Grundsätzlich muss sie bereits verkündet sein.",
+          "marken": [
+            "jeder Rang"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Antragsgrund",
+          "text": "Art. 93 GG: Zweifel genügen. § 76 BVerfGG: für nichtig halten.",
+          "norm": "§ 76 Abs. 1 BVerfGG",
+          "sprecher": "Punkt drei: der Antragsgrund. Das Grundgesetz lässt Meinungsverschiedenheiten oder Zweifel genügen. Paragraf 76 BVerfGG verlangt, dass der Antragsteller die Norm für nichtig hält. Ob das Gesetz enger sein darf als die Verfassung, ist umstritten.",
+          "marken": [
+            "Zweifel vs. nichtig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Klarstellungsinteresse",
+          "text": "Objektives Interesse an der Klärung – in aller Regel gegeben.",
+          "norm": null,
+          "sprecher": "Punkt vier: das objektive Klarstellungsinteresse. Es liegt in aller Regel vor, wenn ein Antragsberechtigter die Norm für unvereinbar mit höherrangigem Recht hält.",
+          "marken": [
+            "meist unproblematisch"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und die Frist?",
+          "text": "Gibt es nicht – anders als bei Verfassungsbeschwerde und Organstreit.",
+          "norm": null,
+          "sprecher": "Und die Frist? Gibt es nicht. Anders als bei der Verfassungsbeschwerde oder dem Organstreit kann der Antrag jederzeit gestellt werden.",
+          "marken": [
+            "keine Frist"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Berechtigung, Gegenstand, Antragsgrund, Klarstellungsinteresse – ohne Frist.",
+          "norm": "§§ 76, 78 BVerfGG",
+          "sprecher": "Merke: vier Punkte, keine eigene Rechtsverletzung, keine Frist. Ist die Norm verfassungswidrig, erklärt das Gericht sie in der Regel für nichtig, und die Entscheidung hat Gesetzeskraft.",
+          "marken": [
+            "4 Punkte, 0 Fristen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Wer darf den Antrag stellen?",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Staatsrechtsklausur. Und prüf zuerst, wer den Antrag überhaupt stellen darf.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Abstrakte Normenkontrolle in vier Punkten: Antragsberechtigung (Bundesregierung, Landesregierung, ein Viertel der Mitglieder des Bundestages), Prüfungsgegenstand, Antragsgrund und objektives Klarstellungsinteresse. Eine eigene Rechtsverletzung braucht es nicht – und eine Antragsfrist gibt es auch nicht. Umstritten ist, ob § 76 BVerfGG mit „für nichtig hält“ enger sein darf als Art. 93 Abs. 1 Nr. 2 GG. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#normenkontrolle",
+        "#bverfg",
+        "#verfassungsrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abstrakte Normenkontrolle: das Schema",
+      "coverText": "Objektives Verfahren ohne Frist",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Die abstrakte Normenkontrolle prüft eine Norm objektiv – ohne verletzten Antragsteller und ohne Frist.",
+        "handlung": "{A} holds a magnifying lens over a single crystal rule-tablet on a pedestal, while {B} sets down a heavy stopwatch beside it and shrugs because it is not needed.",
+        "hinweisRegie": "Place the note in the open space between the lens and the set-aside stopwatch, slightly tilted toward the tablet, so the objective check and the missing deadline are both visible.",
+        "alternative": "{B} carries a crystal tablet to a testing bench while {A} checks it with a pointer, no complainant in sight."
+      },
+      "bildSzene": "professor inspects crystal tablet, stopwatch aside",
+      "bildSzeneAlt": "miner carries tablet to testing bench",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 2 GG",
+        "§§ 76, 78 BVerfGG",
+        "§ 31 Abs. 2 BVerfGG",
+        "Themenpool: staat-353"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-pruefpunkte-ohne-frist",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.447Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-628",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Wer darf aussprechen, dass jemand ein Grundrecht nach Art. 18 GG verwirkt hat?",
+      "optionen": [
+        "Allein das Bundesverfassungsgericht",
+        "Das Bundesinnenministerium per Verfügung",
+        "Jedes Verwaltungsgericht im Einzelfall"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 18 GG",
+        "Art. 21 Abs. 2–4 GG",
+        "§ 36 BVerfGG",
+        "Themenpool: grundr-628"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.447Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-628",
+      "ueberzeile": "Auflösung",
+      "titel": "Allein das Bundesverfassungsgericht",
+      "text": "Verwirkung und Ausmaß spricht nur das BVerfG aus (Art. 18 S. 2 GG), auf Antrag von Bundestag, Bundesregierung oder einer Landesregierung (§ 36 BVerfGG). Parallel beim Parteiverbot: Über die Verfassungswidrigkeit einer Partei und ihren Ausschluss von staatlicher Finanzierung entscheidet ebenfalls nur das BVerfG (Art. 21 Abs. 4 GG).",
+      "norm": "Art. 18 S. 2 GG · Art. 21 Abs. 4 GG",
+      "quellen": [
+        "Art. 18 GG",
+        "Art. 21 Abs. 2–4 GG",
+        "§ 36 BVerfGG",
+        "Themenpool: grundr-628"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.447Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Allein das Bundesverfassungsgericht",
+        "Das Bundesinnenministerium per Verfügung",
+        "Jedes Verwaltungsgericht im Einzelfall"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-312",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 53 StGB: Mehrere Taten, am Ende eine Gesamtstrafe",
+      "text": "Tatmehrheit liegt vor, wenn jemand mehrere selbständige Straftaten begangen hat, die gleichzeitig abgeurteilt werden. Das Gericht setzt für jede Tat eine Einzelstrafe fest und bildet daraus eine Gesamtstrafe: Die höchste Einzelstrafe wird erhöht, die Summe darf nicht erreicht werden (§ 54 StGB). Anders § 52 StGB: nur eine Strafe aus dem schwersten Gesetz.",
+      "norm": "§ 53 Abs. 1 StGB · § 54 Abs. 1, 2 StGB",
+      "quellen": [
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "§ 54 StGB",
+        "Themenpool: strafat-312"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.447Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-001",
+      "ueberzeile": "4 Punkte BGB AT",
+      "titel": "Anfechtungsfristen: Welche gilt, hängt am Anfechtungsgrund",
+      "text": "Wer zu spät anficht, bleibt an seine Erklärung gebunden. Die Frist gehört deshalb in jede Anfechtungsprüfung:",
+      "punkte": [
+        "Irrtum (§§ 119, 120 BGB): unverzüglich nach Kenntnis (§ 121 Abs. 1)",
+        "Täuschung, Drohung (§ 123 BGB): binnen eines Jahres (§ 124 Abs. 1, 2)",
+        "Höchstgrenze jeweils zehn Jahre (§§ 121 Abs. 2, 124 Abs. 3 BGB)",
+        "Bestätigung schließt die Anfechtung aus (§ 144 BGB)"
+      ],
+      "quellen": [
+        "§ 121 BGB",
+        "§ 124 BGB",
+        "§ 144 BGB",
+        "Themenpool: bgbat-001"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.447Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "streit-21",
+      "ueberzeile": "Streitstand Europarecht",
+      "titel": "Deutsches Gesetz widerspricht Unionsrecht: nichtig oder nur unanwendbar?",
+      "norm": "Art. 4 Abs. 3 EUV",
+      "optionen": [
+        "H.M. mit BVerfG und EuGH: Anwendungsvorrang – die Norm bleibt gültig, wird aber nicht angewandt.",
+        "Mindermeinung: Geltungsvorrang – kollidierendes nationales Recht ist nichtig."
+      ],
+      "text": "Folge der h.M.: Die nationale Norm gilt weiter für Fälle ohne Unionsbezug und greift wieder, wenn das Unionsrecht entfällt. Grenzen des Vorrangs zieht das BVerfG über Ultra-vires- und Identitätskontrolle.",
+      "quellen": [
+        "Art. 4 Abs. 3 EUV",
+        "Art. 288 AEUV",
+        "Art. 23 Abs. 1 GG"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.447Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-216",
+      "ueberzeile": "Merksatz Bereicherungsrecht",
+      "titel": "Minderjähriger und § 819 BGB: Wessen Kenntnis zählt?",
+      "text": "Leistungskondiktion: Kenntnis des gesetzlichen Vertreters. Eingriffskondiktion: nach dem BGH (Flugreisefall) die Einsichtsfähigkeit des Minderjährigen, § 828 Abs. 3 BGB analog. Sonst bleibt § 818 Abs. 3 BGB offen.",
+      "norm": "§ 818 Abs. 3 BGB · § 819 Abs. 1 BGB",
+      "quellen": [
+        "§ 818 Abs. 3 BGB",
+        "§ 819 Abs. 1 BGB",
+        "§ 828 Abs. 3 BGB",
+        "Themenpool: bereich-216"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:40.447Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

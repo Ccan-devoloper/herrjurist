@@ -1,0 +1,864 @@
+{
+  "datum": "2027-03-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "grundr-090",
+        "themaTitel": "Wann ist Art. 2 Abs. 1 GG einschlägig und wann ein spezielleres Grundrecht?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-051",
+        "themaTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "revision-874",
+        "themaTitel": "Wer ist revisionsberechtigt und wann ist er beschwert?",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "staat-632"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "staat-632"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "zwangsv-835"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "merksatz",
+        "themaId": "stpo-769"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "begriff",
+        "themaId": "assessoroer-843"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "fehler",
+        "themaId": "methodik-936"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "grundr-090",
+      "poolTitel": "Wann ist Art. 2 Abs. 1 GG einschlägig und wann ein spezielleres Grundrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08",
+        "2026-11-08"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2026-11-29",
+        "2027-01-31"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-874",
+      "poolTitel": "Wer ist revisionsberechtigt und wann ist er beschwert?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 296 StPO",
+        "§ 297 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-02"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-632",
+      "poolTitel": "Verfassungsbeschwerde: Beschwerdebefugnis",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 90 BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2026-10-09",
+        "2027-02-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-632",
+      "poolTitel": "Verfassungsbeschwerde: Beschwerdebefugnis",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 90 BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2026-10-09",
+        "2027-02-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zwangsv-835",
+      "poolTitel": "Wie läuft das Verteilungsverfahren bei mehreren Gläubigern?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 872 ZPO",
+        "§ 878 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "stpo-769",
+      "poolTitel": "Zeugnisverweigerungsrechte",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 52 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2026-12-29"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "assessoroer-843",
+      "poolTitel": "Womit beginnen die Entscheidungsgründe?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 117 Abs. 2 Nr. 5 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-01"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "methodik-936",
+      "poolTitel": "Die vier Auslegungsmethoden sicher anwenden",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01",
+        "2027-01-02",
+        "2027-01-16"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-090",
+      "slug": "2027-03-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Tauben füttern verboten: Welches Grundrecht prüfst du?",
+          "titelZeilen": [
+            "Tauben füttern",
+            "verboten: Welches",
+            "Grundrecht prüfst du?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Auffanggrundrecht statt Gewissen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Die Stadt S verbietet per Verordnung, in der Innenstadt Tauben zu füttern. Rentnerin R füttert die Tiere seit Jahren und meint, sie hungern zu lassen, könne sie nicht verantworten. Sie sieht sich in ihrer Gewissensfreiheit (Art. 4 Abs. 1 GG) verletzt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Welches Grundrecht?",
+          "schritte": [
+            {
+              "titel": "Gewissensfreiheit, Art. 4 I GG?",
+              "text": "Ernste sittliche Entscheidung, die man als unbedingt verpflichtend erfährt. Die Behauptung allein genügt nicht – R legt das nicht dar."
+            },
+            {
+              "titel": "Anderes Spezialgrundrecht?",
+              "text": "Kein spezielles Freiheitsrecht erfasst das Füttern ersichtlich."
+            },
+            {
+              "titel": "Art. 2 Abs. 1 GG",
+              "text": "Allgemeine Handlungsfreiheit: jedes menschliche Verhalten, ohne Rücksicht auf sein Gewicht. Das Verbot greift ein."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Rechtfertigung",
+          "schritte": [
+            {
+              "titel": "Schranke: verfassungsmäßige Ordnung",
+              "text": "Jede formell und materiell verfassungsgemäße Rechtsnorm – hier die Verordnung auf Grundlage des Ordnungsrechts des Landes."
+            },
+            {
+              "titel": "Verhältnismäßigkeit",
+              "text": "Zwecke: Gesundheitsschutz, Schutz der Gebäude. Das Verbot ist räumlich begrenzt und belastet R nur gering."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Art. 4 Abs. 1 GG scheidet mangels dargelegter Gewissensentscheidung aus; Prüfungsmaßstab ist Art. 2 Abs. 1 GG. Das Verbot ist durch die verfassungsmäßige Ordnung gerechtfertigt – R ist nicht in ihren Grundrechten verletzt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Spezialgrundrechte, dann Art. 2 Abs. 1 GG: Er fängt jedes Verhalten auf, das kein spezielles Freiheitsrecht schützt."
+        },
+        {
+          "art": "cta",
+          "titel": "Auffanggrundrecht in drei Schritten",
+          "punkte": [
+            "Spezielles Freiheitsrecht einschlägig?",
+            "Sonst Art. 2 Abs. 1 GG – weiter Schutzbereich",
+            "Schranke: verfassungsmäßige Ordnung"
+          ],
+          "icons": [
+            "lupe",
+            "person",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Tauben füttern verboten – welches Grundrecht prüfst du? Nicht jede Überzeugung ist eine Gewissensentscheidung im Sinne des Art. 4 Abs. 1 GG. Greift kein spezielles Freiheitsrecht, fängt Art. 2 Abs. 1 GG das Verhalten auf: Die allgemeine Handlungsfreiheit schützt jedes Tun. Ihre Schranke ist die verfassungsmäßige Ordnung, also jede verfassungsgemäße Norm. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#art2gg",
+        "#handlungsfreiheit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 2 Abs. 1 GG: das Auffanggrundrecht",
+      "coverText": "Auffanggrundrecht statt Gewissen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Passt kein spezielles Grundrecht, fängt die allgemeine Handlungsfreiheit das Verhalten auf.",
+        "handlung": "{A} happily scatters seeds for a flock of pigeons, while {B} stretches a wide net beneath her that catches everything slipping past several narrow baskets.",
+        "hinweisRegie": "Place the note in the free space just above the wide net, slightly tilted toward it, so the catch-all idea stands out without covering the pigeons or {A}'s hand.",
+        "alternative": "{B} tries several small keys on a narrow lock without success while {A} simply opens a large door right beside it."
+      },
+      "bildSzene": "pigeons fed above wide safety net",
+      "bildSzeneAlt": "small keys fail, large door opens",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 4 Abs. 1 GG",
+        "Themenpool: grundr-090"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "grundrechtswahl-frage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.783Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-051",
+      "slug": "2027-03-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zugestellt im Januar, gehemmt schon im Dezember",
+          "titelZeilen": [
+            "Zugestellt im",
+            "Januar, gehemmt",
+            "schon im Dezember"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "§ 167 ZPO wirkt zurück",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Ks Kaufpreisanspruch verjährt mit Ablauf des 31.12. K reicht die Klage am 28.12. bei Gericht ein und zahlt den Kostenvorschuss sofort nach Anforderung. Zugestellt wird am 12.01. B erhebt die Einrede der Verjährung. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Anhängig oder rechtshängig?",
+              "text": "Anhängig ist die Klage mit Eingang bei Gericht, rechtshängig erst mit Zustellung an B (§§ 253 Abs. 1, 261 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "2. Hemmung",
+              "text": "Die Erhebung der Klage hemmt die Verjährung (§ 204 Abs. 1 Nr. 1 BGB) – das wäre erst die Zustellung am 12.01."
+            },
+            {
+              "titel": "3. Rückwirkung, § 167 ZPO",
+              "text": "Soll die Zustellung eine Frist wahren oder die Verjährung hemmen, wirkt sie auf den Eingang zurück, wenn sie „demnächst“ erfolgt."
+            },
+            {
+              "titel": "4. Demnächst?",
+              "text": "Verzögerungen im Gerichtsbetrieb schaden K nicht, eigene nur geringfügige. K zahlte sofort: Die Zustellung erfolgte demnächst."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Mit der Zustellung am 12.01. rechnen und die Verjährung bejahen – § 167 ZPO übersehen. Oder umgekehrt schon die Einreichung für die Rechtshängigkeit halten. Die Einreichung macht die Klage nur anhängig; die Rückwirkung ordnet allein § 167 ZPO an. Ergebnis hier: Die Verjährung ist rechtzeitig gehemmt."
+        },
+        {
+          "art": "text",
+          "titel": "Was die Rechtshängigkeit sonst bewirkt",
+          "punkte": [
+            "Keine zweite Klage über denselben Streitgegenstand (§ 261 Abs. 3 Nr. 1 ZPO).",
+            "Die Zuständigkeit bleibt trotz späterer Veränderungen (§ 261 Abs. 3 Nr. 2 ZPO).",
+            "Prozesszinsen ab Rechtshängigkeit (§ 291 BGB)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anhängig mit Eingang, rechtshängig mit Zustellung. Für Fristen und Verjährung zählt nach § 167 ZPO der Eingang – wenn demnächst zugestellt wird."
+        },
+        {
+          "art": "cta",
+          "titel": "Eingang oder Zustellung? Drei Fragen",
+          "punkte": [
+            "Welche Wirkung ist gefragt?",
+            "Frist oder Hemmung: § 167 ZPO?",
+            "Zustellung „demnächst“?"
+          ],
+          "icons": [
+            "kalender",
+            "paragraf",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Zugestellt im Januar, gehemmt schon im Dezember: § 167 ZPO macht es möglich. Die Klage ist mit Eingang anhängig, rechtshängig erst mit Zustellung (§§ 253, 261 ZPO) – und erst die Erhebung hemmt nach § 204 Abs. 1 Nr. 1 BGB die Verjährung. Erfolgt die Zustellung aber „demnächst“, wirkt sie auf den Eingang zurück. Verzögerungen im Gerichtsbetrieb gehen nicht zulasten des Klägers. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#rechtshängigkeit",
+        "#167zpo",
+        "#verjährung",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anhängig, rechtshängig und § 167 ZPO",
+      "coverText": "§ 167 ZPO wirkt zurück",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Zustellung im Januar wirkt auf den Eingang im Dezember zurück, wenn sie demnächst erfolgt.",
+        "handlung": "{B} nervously drops an envelope into a letterbox just before a large wall clock strikes midnight, while {A} hovers beside it and pins a small time tag from that exact moment onto the envelope.",
+        "hinweisRegie": "Place the note in the free space between the wall clock and the letterbox, slightly tilted toward the envelope, so the moment of receipt stands out without covering {B}'s hand or the clock face.",
+        "alternative": "{A} winds the hands of a tall clock back by a few ticks while {B} holds up a freshly delivered envelope."
+      },
+      "bildSzene": "envelope dropped before clock strikes",
+      "bildSzeneAlt": "clock hands wound back, envelope raised",
+      "quellen": [
+        "§§ 253, 261 ZPO",
+        "§ 167 ZPO",
+        "§ 204 Abs. 1 Nr. 1 BGB",
+        "§ 291 BGB",
+        "Themenpool: zpo-051"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "rueckwirkung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.784Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-874",
+      "slug": "2027-03-05-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "StA legt Revision ein – zugunsten des Angeklagten",
+          "unter": "Rechtsmittel · § 296 StPO",
+          "text": "Die Staatsanwaltschaft kann Rechtsmittel auch zugunsten des Beschuldigten einlegen.",
+          "norm": "§ 296 Abs. 2 StPO",
+          "icon": "gericht",
+          "sprecher": "Die Staatsanwaltschaft legt Revision ein – für den Angeklagten. Das erlaubt § 296 Absatz zwei StPO ausdrücklich. Also: Wer darf anfechten, und wann ist er beschwert?",
+          "marken": [
+            "zugunsten",
+            "§ 296 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Berechtigt: StA und Beschuldigter",
+          "text": "Die StA kann auch zugunsten des Beschuldigten anfechten.",
+          "norm": "§ 296 StPO",
+          "sprecher": "Schritt eins: Rechtsmittel einlegen dürfen die Staatsanwaltschaft und der Beschuldigte. Die Staatsanwaltschaft ist zur Objektivität verpflichtet und kann deshalb auch zu seinen Gunsten anfechten.",
+          "marken": [
+            "Objektivität"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Verteidiger",
+          "text": "Er legt für den Beschuldigten ein – nicht gegen dessen ausdrücklichen Willen.",
+          "norm": "§ 297 StPO",
+          "sprecher": "Schritt zwei: Der Verteidiger kann für den Beschuldigten Rechtsmittel einlegen, aber nicht gegen dessen ausdrücklichen Willen. Es bleibt das Rechtsmittel des Beschuldigten.",
+          "marken": [
+            "für, nicht gegen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beschwer des Angeklagten",
+          "text": "Maßgeblich ist der Urteilsausspruch, nicht die Begründung.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Beschwer. Der Angeklagte ist beschwert, wenn ihn der Tenor unmittelbar belastet. Ein Freispruch beschwert ihn grundsätzlich nicht, auch wenn ihn die Gründe stören.",
+          "marken": [
+            "Tenor zählt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die StA braucht keine eigene Beschwer",
+          "text": "Sie kann jede Entscheidung anfechten, die sie für unrichtig hält.",
+          "norm": null,
+          "sprecher": "Schritt vier: Die Staatsanwaltschaft braucht keine eigene Beschwer im engeren Sinn. Sie kann jede Entscheidung angreifen, die sie für unrichtig hält, zulasten wie zugunsten des Angeklagten.",
+          "marken": [
+            "jede Unrichtigkeit"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Nebenwirkung: § 301 StPO",
+          "text": "Auch ein Rechtsmittel der StA zulasten kann zugunsten des Angeklagten wirken.",
+          "norm": "§ 301 StPO",
+          "sprecher": "Und eine Besonderheit: Legt die Staatsanwaltschaft zuungunsten des Angeklagten ein, kann das Urteil trotzdem auch zu seinen Gunsten geändert werden. Das ordnet § 301 StPO an.",
+          "marken": [
+            "wirkt beidseitig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Angeklagter: beschwert durch den Tenor. StA: kann jede unrichtige Entscheidung angreifen.",
+          "norm": "§§ 296, 297, 301 StPO",
+          "sprecher": "Merke: Der Angeklagte braucht eine Beschwer durch den Tenor. Die Staatsanwaltschaft kann jede unrichtige Entscheidung angreifen, auch für ihn.",
+          "marken": [
+            "Tenor vs. Richtigkeit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "In der Zulässigkeit zuerst prüfen",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "sprecher": "Speicher dir das für die nächste Revisionsklausur. Und prüf in der Zulässigkeit zuerst: Wer legt ein, und ist er beschwert?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Staatsanwaltschaft legt Revision ein – zugunsten des Angeklagten. § 296 Abs. 2 StPO erlaubt das ausdrücklich, denn die StA ist zur Objektivität verpflichtet und braucht keine eigene Beschwer im engeren Sinn. Der Angeklagte dagegen ist nur beschwert, wenn ihn der Tenor belastet. Der Verteidiger legt für ihn ein, nicht gegen seinen ausdrücklichen Willen (§ 297 StPO). Und § 301 StPO lässt auch ein Rechtsmittel der StA zu seinen Gunsten wirken.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#296stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision: Wer darf anfechten, wer ist beschwert?",
+      "titelZeilen": [
+        "StA legt Revision",
+        "ein – zugunsten",
+        "des Angeklagten"
+      ],
+      "coverText": "Auch für den Angeklagten",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Die Staatsanwaltschaft ist zur Objektivität verpflichtet – sie kann auch für den Angeklagten Rechtsmittel einlegen.",
+        "handlung": "{A}, standing on one side of a low dividing rope, unexpectedly hands a climbing rope across to a figure on the other side, while {B} hovers above and checks the knot.",
+        "hinweisRegie": "Place the note in the free space above the dividing rope, slightly tilted toward the handed-over climbing rope, so the unexpected help stands out without covering hands or faces.",
+        "alternative": "{B} carries a small lantern from one half of a divided room to the other to light a dark corner for the other side, while {A} nods approvingly."
+      },
+      "bildSzene": "rope handed across dividing line",
+      "bildSzeneAlt": "lantern carried to the other side",
+      "quellen": [
+        "§§ 296, 297, 301 StPO",
+        "Themenpool: revision-874"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "rollenumkehr",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-632",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Ein Gesetz verbietet A direkt ein Verhalten, bußgeldbewehrt, ohne Bescheid. Ist A unmittelbar betroffen?",
+      "optionen": [
+        "Ja – er muss kein Bußgeldverfahren abwarten",
+        "Nein – erst der Bußgeldbescheid betrifft ihn",
+        "Nein – Gesetze prüft nur die Normenkontrolle"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 90 BVerfGG",
+        "Themenpool: staat-632"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-632",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – er muss nicht erst gegen das Verbot verstoßen",
+      "text": "Unmittelbar betroffen ist, wen das Gesetz ohne weiteren Vollzugsakt in seinen Rechten berührt. Ein bußgeldbewehrtes Verbot wirkt direkt; A muss nicht erst verstoßen und das Bußgeldverfahren abwarten. Braucht ein Gesetz dagegen einen Vollzugsakt, etwa einen Bescheid, greift A grundsätzlich diesen an.",
+      "norm": "Art. 93 Abs. 1 Nr. 4a GG · § 90 Abs. 1 BVerfGG",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 90 BVerfGG",
+        "Themenpool: staat-632"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.785Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – er muss kein Bußgeldverfahren abwarten",
+        "Nein – erst der Bußgeldbescheid betrifft ihn",
+        "Nein – Gesetze prüft nur die Normenkontrolle"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-835",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 872 ZPO: Reicht der Erlös nicht, verteilt das Vollstreckungsgericht",
+      "text": "Ist bei der Vollstreckung in bewegliches Vermögen ein Geldbetrag hinterlegt, der für alle beteiligten Gläubiger nicht reicht, stellt das Vollstreckungsgericht einen Teilungsplan auf. Der Rang folgt der Priorität der Pfändung (§ 804 Abs. 3 ZPO). Wer widerspricht, muss binnen eines Monats die Klage nachweisen (§ 878 Abs. 1 ZPO) – sonst wird der Plan ausgeführt.",
+      "norm": "§ 872 ZPO · § 878 ZPO",
+      "quellen": [
+        "§§ 872 ff. ZPO",
+        "§ 804 Abs. 3 ZPO",
+        "Themenpool: zwangsv-835"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-769",
+      "ueberzeile": "Merksatz StPO",
+      "titel": "§ 55 StPO ist kein Zeugnisverweigerungsrecht",
+      "text": "§§ 52, 53 StPO erlauben, das ganze Zeugnis zu verweigern. § 55 StPO erlaubt nur, einzelne Fragen nicht zu beantworten, die den Zeugen oder einen Angehörigen der Verfolgung aussetzen würden.",
+      "norm": "§§ 52, 53, 55 StPO",
+      "quellen": [
+        "§§ 52, 53, 55 StPO",
+        "Themenpool: stpo-769"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-843",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Klagebegehren: Vor der Zulässigkeit steht, was der Kläger will",
+      "text": "Das Gericht ist an die Fassung der Anträge nicht gebunden, wohl aber an das Klagebegehren (§ 88 VwGO). Ist der Antrag unklar oder unpassend, legen die Entscheidungsgründe ihn gleich nach dem Ergebnissatz aus – etwa als Verpflichtungs- statt Anfechtungsklage. Erst dann folgen Zulässigkeit und Begründetheit.",
+      "norm": "§ 88 VwGO · § 117 Abs. 2 Nr. 5 VwGO",
+      "quellen": [
+        "§ 88 VwGO",
+        "§ 117 Abs. 2 Nr. 5 VwGO",
+        "Themenpool: assessoroer-843"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-936",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Vier Methoden heißt nicht: vier Absätze pro Merkmal",
+      "falsch": "Bei jeder Auslegung prüfe ich Wortlaut, Systematik, Entstehungsgeschichte und Zweck – vollständig und in dieser Reihenfolge.",
+      "richtigText": "Eine feste Rangfolge gibt es nach h.M. nicht, eine Pflicht zur Vollständigkeit auch nicht. Der Wortlaut ist Ausgangspunkt; dann bringst du die Argumente, die im Fall wirklich tragen – oft Systematik und Zweck. Eine Methode ohne Ertrag kostet nur Zeit.",
+      "quellen": [
+        "Themenpool: methodik-936"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:07.785Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

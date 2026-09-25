@@ -1,0 +1,850 @@
+{
+  "datum": "2027-03-24",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-552",
+        "themaTitel": "Rechtshängigkeit und anderweitige Rechtshängigkeit",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-764",
+        "themaTitel": "Gefährlicher Eingriff in den Straßenverkehr",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-595",
+        "themaTitel": "Ausschließliche und konkurrierende Gesetzgebung",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "stpo-773"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "stpo-773"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "verwalt-644"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "streitstand",
+        "themaId": "streit-18"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "merksatz",
+        "themaId": "verwalt-696"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "begriff",
+        "themaId": "strafbt-757"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-552",
+      "poolTitel": "Rechtshängigkeit und anderweitige Rechtshängigkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 261 Abs. 3 Nr. 1 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-764",
+      "poolTitel": "Gefährlicher Eingriff in den Straßenverkehr",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 315b StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2026-10-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-595",
+      "poolTitel": "Ausschließliche und konkurrierende Gesetzgebung",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 71-74 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-773",
+      "poolTitel": "Beschlagnahme und Sicherstellung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 94 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2026-12-14",
+        "2027-01-29"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-773",
+      "poolTitel": "Beschlagnahme und Sicherstellung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 94 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2026-12-14",
+        "2027-01-29"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-644",
+      "poolTitel": "Widerruf rechtmäßiger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 49 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2027-03-15"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-18",
+      "poolTitel": "Klagebefugnis Dritter: Schutznormtheorie",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 2 VwGO"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "verwalt-696",
+      "poolTitel": "Öffentlich-rechtlicher Erstattungsanspruch",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Allgemeines Verwaltungsrecht"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-757",
+      "poolTitel": "Erschleichen von Leistungen",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 265a StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-25"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-552",
+      "slug": "2027-03-24-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erst Feststellungsklage, dann Leistung: keine Sperre",
+          "titelZeilen": [
+            "Erst Feststellungs-",
+            "klage, dann Leistung:",
+            "keine Sperre"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Leistungsklage reicht weiter",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "B meint, K nichts zu schulden, und erhebt negative Feststellungsklage. Zwei Wochen später verklagt K ihn auf Zahlung derselben 8.000 €. Ist die Leistungsklage wegen anderweitiger Rechtshängigkeit unzulässig (§ 261 Abs. 3 Nr. 1 ZPO)?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du § 261 Abs. 3 Nr. 1 ZPO",
+          "schritte": [
+            {
+              "titel": "Erste Klage rechtshängig",
+              "text": "Rechtshängigkeit tritt mit Zustellung der Klageschrift ein (§§ 253 Abs. 1, 261 Abs. 1 ZPO) – nicht schon mit Einreichung."
+            },
+            {
+              "titel": "Dieselben Parteien",
+              "text": "Die Parteirollen dürfen vertauscht sein."
+            },
+            {
+              "titel": "Derselbe Streitgegenstand",
+              "text": "Antrag und Lebenssachverhalt. Deckt die erste Klage das Begehren der zweiten ab?"
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Lösung",
+          "text": "Die Leistungsklage ist zulässig: Sie reicht weiter als die negative Feststellung, weil sie zu einem vollstreckbaren Titel führt. Nach der Rspr. entfällt stattdessen das Feststellungsinteresse des B, sobald K die Leistungsklage nicht mehr einseitig zurücknehmen kann (§ 269 Abs. 1 ZPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die spätere Leistungsklage reflexhaft an § 261 Abs. 3 Nr. 1 ZPO scheitern lassen. In die umgekehrte Richtung greift die Sperre: Ist zuerst die Leistungsklage rechtshängig, ist eine spätere negative Feststellungsklage über denselben Anspruch unzulässig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Leistungsklage setzt sich gegen die negative Feststellungsklage durch – egal, welche zuerst kam. Nur der Prüfungsort wechselt."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtshängigkeit in drei Fragen",
+          "punkte": [
+            "Rechtshängig erst ab Zustellung",
+            "Parteien und Streitgegenstand gleich?",
+            "Welche Klage kam zuerst?"
+          ],
+          "icons": [
+            "umschlag",
+            "personen",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Erst die negative Feststellungsklage, dann die Leistungsklage – und trotzdem keine Sperre nach § 261 Abs. 3 Nr. 1 ZPO. Die Leistungsklage geht weiter, weil sie zu einem vollstreckbaren Titel führt. Für die Feststellungsklage entfällt nach der Rspr. das Feststellungsinteresse, sobald die Leistungsklage nicht mehr einseitig zurückgenommen werden kann – der Feststellungskläger sollte dann für erledigt erklären. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#rechtshängigkeit",
+        "#261zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rechtshängigkeit: Feststellung vor Leistung",
+      "coverText": "Leistungsklage reicht weiter",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Die Leistungsklage reicht weiter als die negative Feststellung und wird deshalb nicht gesperrt.",
+        "handlung": "{A} points at two stacked boxes on a desk, a small flat one and a larger one that contains a working tool, while {B} curiously lifts the larger box and finds the small one fits inside it.",
+        "hinweisRegie": "Place the note in the open space beside the larger box, slightly tilted toward the working tool inside, so the idea that it covers more is clear without covering {B}'s hands.",
+        "alternative": "{B} tries to stop a second train on a parallel track, while {A} shows that this train carries extra cargo the first one lacks."
+      },
+      "bildSzene": "small box fits into bigger box",
+      "bildSzeneAlt": "second train with extra cargo",
+      "quellen": [
+        "§ 261 Abs. 1, 3 Nr. 1 ZPO",
+        "§ 253 Abs. 1 ZPO",
+        "§ 256 Abs. 1 ZPO",
+        "§ 269 Abs. 1 ZPO",
+        "Themenpool: zpo-552"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.741Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-764",
+      "slug": "2027-03-24-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Auf den Polizisten zugefahren: Ist das § 315b StGB?",
+          "titelZeilen": [
+            "Auf den Polizisten",
+            "zugefahren:",
+            "Ist das",
+            "§ 315b StGB?"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Schädigungsvorsatz nötig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A fährt bei einer Kontrolle langsam, aber stetig auf Polizist P zu, damit dieser zur Seite geht und A flüchten kann. Verletzen will A ihn nicht – er vertraut darauf, dass P rechtzeitig ausweicht. Strafbar nach § 315b Abs. 1 StGB?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Außen- oder Inneneingriff?",
+          "links": {
+            "titel": "Außeneingriff",
+            "punkte": [
+              "Eingriff von außen, etwa Hindernisse bereiten (§ 315b I Nr. 2).",
+              "Typisch: Gegenstände auf die Fahrbahn."
+            ]
+          },
+          "rechts": {
+            "titel": "Inneneingriff",
+            "punkte": [
+              "Der Täter ist selbst Verkehrsteilnehmer.",
+              "Erfasst nur bei bewusster Zweckentfremdung."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Inneneingriff nach dem BGH",
+          "schritte": [
+            {
+              "titel": "Verkehrsfeindliche Einstellung",
+              "text": "Das Fahrzeug wird bewusst zweckwidrig eingesetzt – als Waffe oder Schadenswerkzeug."
+            },
+            {
+              "titel": "Ähnlicher, ebenso gefährlicher Eingriff",
+              "text": "§ 315b Abs. 1 Nr. 3 StGB, der zu einer konkreten Gefahr für Leib, Leben oder bedeutende Sachwerte führt."
+            },
+            {
+              "titel": "Schädigungsvorsatz",
+              "text": "Mindestens bedingter Vorsatz, Leib oder Leben oder eine fremde Sache von bedeutendem Wert zu schädigen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Jedes gefährliche Fahrmanöver als Inneneingriff werten. A will P nur vertreiben und vertraut auf dessen Ausweichen – ohne Schädigungsvorsatz scheidet § 315b StGB aus. Zu prüfen bleiben etwa §§ 113, 240 StGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Inneneingriff: Auto als Waffe, konkrete Gefahr – und mindestens bedingter Schädigungsvorsatz. Bloßer Gefährdungsvorsatz genügt nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 315b StGB in drei Fragen",
+          "punkte": [
+            "Außen- oder Inneneingriff?",
+            "Fahrzeug bewusst zweckentfremdet?",
+            "Schädigungsvorsatz festgestellt?"
+          ],
+          "icons": [
+            "auto",
+            "warnung",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Auf den Polizisten zugefahren – ist das automatisch ein gefährlicher Eingriff in den Straßenverkehr? Beim Inneneingriff verlangt der BGH mehr: Der Täter muss sein Fahrzeug bewusst zweckwidrig als Waffe oder Schadenswerkzeug einsetzen und mit mindestens bedingtem Schädigungsvorsatz handeln. Wer nur vertreiben will und auf das Ausweichen vertraut, erfüllt § 315b StGB nicht – dann bleiben etwa §§ 113, 240 StGB. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#315bstgb",
+        "#verkehrsstrafrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 315b StGB: der verkehrsfremde Inneneingriff",
+      "coverText": "Schädigungsvorsatz nötig",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Ein gefährliches Fahrmanöver wird erst zum Eingriff nach § 315b StGB, wenn das Auto bewusst als Waffe gegen andere eingesetzt wird.",
+        "handlung": "{A} steers a small rover slowly toward {B}, who stands firmly with a raised hand and calmly steps aside at the last moment.",
+        "hinweisRegie": "Place the note in the free space between the rover's front and {B}'s side step, slightly tilted toward the rover, so the question of intent stays visible without covering {A}'s face.",
+        "alternative": "{B} examines two identical rovers, one decorated with harmless travel gear and one fitted with a ramming bar, while {A} nervously waits beside them."
+      },
+      "bildSzene": "rover rolls toward figure stepping aside",
+      "bildSzeneAlt": "two rovers, one with ramming bar",
+      "quellen": [
+        "§ 315b Abs. 1 StGB",
+        "§ 113 StGB",
+        "§ 240 StGB",
+        "Themenpool: strafbt-764"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.742Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-595",
+      "slug": "2027-03-24-b3",
+      "titelZeilen": [
+        "Vier Schritte zur",
+        "Kompetenz – der",
+        "dritte sperrt",
+        "die Länder"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vier Schritte zur Kompetenz – der dritte sperrt die Länder",
+          "unter": "Gesetzgebung · Art. 70 ff. GG",
+          "text": "Konkurrierend heißt: Die Länder dürfen, solange und soweit der Bund nicht geregelt hat.",
+          "norm": "Art. 72 Abs. 1 GG",
+          "icon": "gebaeude",
+          "sprecher": "Hat der Bund abschließend geregelt, sind die Länder gesperrt. Das ist der Kern der konkurrierenden Gesetzgebung. So prüfst du die Kompetenz in vier Schritten.",
+          "marken": [
+            "abschließend?",
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grundregel: die Länder",
+          "text": "Die Länder sind zuständig, soweit das GG dem Bund keine Befugnis verleiht.",
+          "norm": "Art. 70 Abs. 1 GG",
+          "sprecher": "Schritt eins: die Grundregel. Nach Artikel 70 haben die Länder das Recht der Gesetzgebung, soweit das Grundgesetz nicht dem Bund Befugnisse verleiht. Der Bund braucht also immer einen Kompetenztitel.",
+          "marken": [
+            "Bund braucht Titel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ausschließlich: nur der Bund",
+          "text": "Vor allem Art. 73 GG; die Länder nur mit ausdrücklicher Ermächtigung.",
+          "norm": "Art. 71, 73 GG",
+          "sprecher": "Schritt zwei: die ausschließliche Gesetzgebung. In den Bereichen des Artikels 73, etwa auswärtige Angelegenheiten oder Verteidigung, darf nur der Bund. Die Länder nur, wenn ein Bundesgesetz sie ausdrücklich ermächtigt.",
+          "marken": [
+            "nur der Bund"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Konkurrierend: die Sperre",
+          "text": "Länder dürfen, solange und soweit der Bund nicht durch Gesetz Gebrauch gemacht hat.",
+          "norm": "Art. 72 Abs. 1, Art. 74 GG",
+          "sprecher": "Schritt drei: die konkurrierende Gesetzgebung nach Artikel 74, etwa das bürgerliche Recht oder das Strafrecht. Die Länder dürfen hier nur, solange und soweit der Bund seine Zuständigkeit nicht durch Gesetz genutzt hat.",
+          "marken": [
+            "solange und soweit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Erforderlichkeit und Abweichung",
+          "text": "Art. 72 Abs. 2 nur für bestimmte Materien; Abs. 3: Abweichungsrecht der Länder.",
+          "norm": "Art. 72 Abs. 2, 3 GG",
+          "sprecher": "Schritt vier: die Feinheiten. Für einige Materien darf der Bund nur regeln, wenn es für gleichwertige Lebensverhältnisse oder die Rechts- oder Wirtschaftseinheit erforderlich ist. Und in Bereichen wie dem Jagdwesen dürfen die Länder abweichen.",
+          "marken": [
+            "Abs. 2 · Abs. 3"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Materie zuordnen – bei Art. 74 GG fragen: Hat der Bund abschließend geregelt?",
+          "norm": "Art. 72 Abs. 1 GG",
+          "sprecher": "Merke: Ordne das Gesetz zuerst einer Materie zu. Liegt sie in Artikel 74, fragst du, ob der Bund abschließend geregelt hat. Dann ist das Landesgesetz formell verfassungswidrig.",
+          "marken": [
+            "abschließend = gesperrt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jedem Landesgesetz: erst die Kompetenz",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Staatsrechtsklausur. Und prüf bei jedem Landesgesetz zuerst die Kompetenz.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Vier Schritte zur Gesetzgebungskompetenz: Grundregel Länder (Art. 70 GG), ausschließliche Gesetzgebung des Bundes (Art. 71, 73 GG), konkurrierende Gesetzgebung (Art. 72, 74 GG), dann Erforderlichkeitsklausel und Abweichungsrecht. Entscheidend ist oft Schritt drei: Hat der Bund abschließend geregelt, sind die Länder gesperrt – solange und soweit. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#gesetzgebung",
+        "#art72gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gesetzgebungskompetenz in vier Schritten",
+      "coverText": "Solange und soweit der Bund regelt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "In der konkurrierenden Gesetzgebung dürfen die Länder nur dort bauen, wo der Bund das Feld noch nicht besetzt hat.",
+        "handlung": "{A} hovers over a large field and lays down a heavy slab on one part of it, while {B} with his pickaxe stops right at the slab's edge and starts working on the free ground beside it.",
+        "hinweisRegie": "Place the note in the open strip of free ground next to the slab's edge, slightly tilted toward {B}'s pickaxe, so the blocked and free areas are clear without covering the slab.",
+        "alternative": "{B} checks a shelf where some compartments are already sealed by {A} and only the empty ones can still be filled."
+      },
+      "bildSzene": "slab blocks field, miner works beside",
+      "bildSzeneAlt": "shelf with sealed and empty compartments",
+      "quellen": [
+        "Art. 70 GG",
+        "Art. 71 GG",
+        "Art. 72 GG",
+        "Art. 73 GG",
+        "Art. 74 GG",
+        "Themenpool: staat-595"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-schritte-dritter-entscheidet",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.743Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-773",
+      "ueberzeile": "Prüfungsfrage Strafprozessrecht",
+      "titel": "Bei Gefahr im Verzug beschlagnahmt die Polizei den Laptop des abwesenden B. Was muss danach passieren?",
+      "optionen": [
+        "Binnen drei Tagen soll die gerichtliche Bestätigung beantragt werden",
+        "Nichts – bei Gefahr im Verzug ist die Anordnung endgültig",
+        "Der Laptop muss binnen 24 Stunden zurückgegeben werden"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 94 StPO",
+        "§ 98 StPO",
+        "Themenpool: stpo-773"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.743Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-773",
+      "ueberzeile": "Auflösung",
+      "titel": "Gerichtliche Bestätigung binnen drei Tagen beantragen",
+      "text": "Beschlagnahmen darf grundsätzlich das Gericht, bei Gefahr im Verzug auch die StA und ihre Ermittlungspersonen (§ 98 Abs. 1 S. 1 StPO). War weder der Betroffene noch ein erwachsener Angehöriger anwesend oder widerspricht er ausdrücklich, soll der Beamte binnen drei Tagen die gerichtliche Bestätigung beantragen (§ 98 Abs. 2 S. 1). Der Betroffene kann jederzeit selbst die gerichtliche Entscheidung beantragen.",
+      "norm": "§ 98 Abs. 1, 2 StPO",
+      "quellen": [
+        "§ 94 StPO",
+        "§ 98 StPO",
+        "Themenpool: stpo-773"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.743Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Binnen drei Tagen soll die gerichtliche Bestätigung beantragt werden",
+        "Nichts – bei Gefahr im Verzug ist die Anordnung endgültig",
+        "Der Laptop muss binnen 24 Stunden zurückgegeben werden"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-644",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 49 Abs. 6 VwVfG: Rechtmäßig widerrufen – und trotzdem entschädigen",
+      "text": "Widerruft die Behörde einen rechtmäßigen begünstigenden VA wegen nachträglich eingetretener Tatsachen, geänderter Rechtsvorschriften oder zur Abwehr schwerer Nachteile für das Gemeinwohl (§ 49 Abs. 2 S. 1 Nr. 3–5 VwVfG), entschädigt sie auf Antrag den Vertrauensschaden, soweit das Vertrauen schutzwürdig ist. Kein Ausgleich beim Widerruf nach Nr. 1 und 2: Vorbehalt oder nicht erfüllte Auflage.",
+      "norm": "§ 49 Abs. 2, 6 VwVfG",
+      "quellen": [
+        "§ 49 VwVfG",
+        "Themenpool: verwalt-644"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.743Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "streit-18",
+      "ueberzeile": "Streitstand Verwaltungsprozessrecht",
+      "titel": "Nachbar klagt gegen eine Baugenehmigung: Reicht es, dass er betroffen ist?",
+      "norm": "§ 42 Abs. 2 VwGO",
+      "optionen": [
+        "BVerwG, h.M. (Schutznormtheorie): Die Norm muss zumindest auch den Kläger als Teil eines abgrenzbaren Kreises schützen.",
+        "Teile der Literatur: Auch faktische, schwere Betroffenheit kann über Grundrechte die Klagebefugnis tragen."
+      ],
+      "text": "Klausur: mit der Schutznormtheorie beginnen und die Norm auslegen. Im Baurecht hilft das Gebot der Rücksichtnahme. Unmittelbar auf Grundrechte greifst du nur zurück, wenn es kein einfachgesetzliches Schutzprogramm gibt.",
+      "fachLabel": "VwGO",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "Art. 14 GG"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.743Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-696",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Erst den Bescheid aufheben, dann erstatten: Der VA ist Rechtsgrund",
+      "text": "Ohne Rechtsgrund Verschobenes wird auch im öffentlichen Recht zurückgewährt – gewohnheitsrechtlich anerkannt. Solange der Bewilligungsbescheid wirksam ist, bleibt er Rechtsgrund: Erst aufheben, dann erstatten (§ 49a Abs. 1 VwVfG).",
+      "norm": "§ 49a Abs. 1 VwVfG · Gewohnheitsrecht",
+      "quellen": [
+        "§ 49a VwVfG",
+        "§ 48 VwVfG",
+        "§ 49 VwVfG",
+        "Themenpool: verwalt-696"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.743Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-757",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Leistungsautomat: Wo § 265a StGB endet und § 242 StGB beginnt",
+      "text": "§ 265a StGB erfasst nach h.M. nur Leistungsautomaten, etwa Waschanlage, Schließfach oder Münzfernrohr. Wer einen Warenautomaten mit Metallscheiben leert, nimmt Waren weg: Diebstahl, weil der Aufsteller nur bei ordnungsgemäßer Bedienung mit dem Gewahrsamswechsel einverstanden ist. § 265a ist zudem subsidiär.",
+      "norm": "§ 265a Abs. 1 StGB · § 242 StGB",
+      "quellen": [
+        "§ 265a StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-757"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:26:02.743Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

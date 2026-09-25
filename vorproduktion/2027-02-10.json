@@ -1,0 +1,862 @@
+{
+  "datum": "2027-02-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-555",
+        "themaTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-300",
+        "themaTitel": "Wie prüft man das unechte Unterlassungsdelikt?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-655",
+        "themaTitel": "Allgemeine Leistungsklage",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "revision-797"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "revision-797"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "verwalt-648"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "streitstand",
+        "themaId": "bgbat-912"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "merksatz",
+        "themaId": "famerb-518"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "begriff",
+        "themaId": "verwalt-380"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19",
+        "2026-11-19"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-300",
+      "poolTitel": "Wie prüft man das unechte Unterlassungsdelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-655",
+      "poolTitel": "Allgemeine Leistungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-20"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "revision-797",
+      "poolTitel": "Revisionsgutachten: Zulässigkeit",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 333 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "revision-797",
+      "poolTitel": "Revisionsgutachten: Zulässigkeit",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 333 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-648",
+      "poolTitel": "Ermessensfehlerlehre",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG; § 114 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "bgbat-912",
+      "poolTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 133 BGB",
+        "§ 157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-12",
+        "2026-10-19",
+        "2026-12-12"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "famerb-518",
+      "poolTitel": "Trennungs- und nachehelicher Unterhalt im Überblick",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1361, 1569 ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-26"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-380",
+      "poolTitel": "Wann ist ein Verwaltungsakt formell rechtswidrig und wann heilbar?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 45 VwVfG",
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-555",
+      "slug": "2027-02-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vor Zustellung gezahlt: Die Erledigung läuft ins Leere",
+          "titelZeilen": [
+            "Vor Zustellung",
+            "gezahlt: Die",
+            "Erledigung läuft",
+            "ins Leere"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Rücknahme statt Erledigung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K reicht Zahlungsklage über 3.000 € ein. Noch bevor die Klage B zugestellt wird, zahlt B. K erklärt den Rechtsstreit daraufhin für erledigt, B schließt sich nicht an. Wie entscheidet das Gericht – und was sollte K besser tun?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Einseitige Erklärung",
+              "text": "Sie ist eine privilegierte Klageänderung (§ 264 Nr. 2 ZPO): K beantragt festzustellen, dass sich der Rechtsstreit erledigt hat."
+            },
+            {
+              "titel": "Erledigung erst nach Rechtshängigkeit",
+              "text": "Nach dem BGH muss die Klage bis zum erledigenden Ereignis zulässig und begründet gewesen sein – das setzt Rechtshängigkeit voraus."
+            },
+            {
+              "titel": "Hier: Zahlung davor",
+              "text": "B hat vor der Zustellung gezahlt (§§ 253 Abs. 1, 261 Abs. 1 ZPO). Der Feststellungsantrag ist unbegründet, K trüge die Kosten."
+            },
+            {
+              "titel": "Der bessere Weg",
+              "text": "K nimmt die Klage zurück. Nach § 269 Abs. 3 S. 3 ZPO wird über die Kosten nach billigem Ermessen entschieden – auch ohne Zustellung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die bloße Anhängigkeit genügen lassen. Für die einseitige Erledigung kommt es nach der Rechtsprechung auf die Rechtshängigkeit an, also auf die Zustellung. Für den Wegfall des Klageanlasses davor hat der Gesetzgeber § 269 Abs. 3 S. 3 ZPO geschaffen."
+        },
+        {
+          "art": "text",
+          "titel": "Und wenn B sich anschließt?",
+          "text": "Dann liegt eine übereinstimmende Erledigung vor: Das Gericht entscheidet nur noch durch Beschluss über die Kosten nach billigem Ermessen (§ 91a Abs. 1 ZPO). Schweigt B nach Hinweis zwei Wochen auf den zugestellten Schriftsatz, gilt das als Zustimmung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gezahlt vor Zustellung: nicht für erledigt erklären, sondern zurücknehmen – Kosten nach § 269 Abs. 3 S. 3 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei Zahlung im Prozess",
+          "punkte": [
+            "Wann genau wurde gezahlt?",
+            "Vor oder nach Zustellung der Klage?",
+            "Schließt sich der Beklagte an?"
+          ],
+          "icons": [
+            "uhr",
+            "umschlag",
+            "handschlag"
+          ]
+        }
+      ],
+      "caption": "B zahlt, nachdem die Klage eingereicht, aber bevor sie zugestellt ist. Erklärt K jetzt einseitig für erledigt, läuft das ins Leere: Nach der Rechtsprechung setzt die Erledigung ein Ereignis nach Rechtshängigkeit voraus. Der richtige Weg ist die Klagerücknahme – das Gericht entscheidet dann über die Kosten nach billigem Ermessen (§ 269 Abs. 3 S. 3 ZPO). Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#erledigung",
+        "#91azpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zahlung vor Zustellung: § 269 Abs. 3 S. 3 ZPO",
+      "coverText": "Rücknahme statt Erledigung",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Kommt die Zahlung vor der Zustellung, passt die Erledigungserklärung nicht – der Kläger nimmt zurück.",
+        "handlung": "{A} hurries up with a sealed envelope, but {B} already hovers at the door holding the paid coins, so {A} stops mid-step and looks at his envelope in doubt.",
+        "hinweisRegie": "Place the note in the free space between the sealed envelope and the paid coins, slightly tilted toward the envelope, without covering {A}'s doubtful face or {B}'s coins.",
+        "alternative": "{A} pulls a letter back out of a mailbox slot while {B} holds up the coins that arrived first."
+      },
+      "bildSzene": "courier stops; coins already paid at door",
+      "bildSzeneAlt": "letter pulled back out of mailbox",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "§§ 253, 261 ZPO",
+        "§ 269 Abs. 3 S. 3 ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zeitpunkt-falle",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.318Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-300",
+      "slug": "2027-02-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vater rettet sein Kind nicht: Womit beginnt die Prüfung?",
+          "titelZeilen": [
+            "Vater rettet sein",
+            "Kind nicht: Womit",
+            "beginnt die",
+            "Prüfung?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Garantenstellung kommt später",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V sieht vom Ufer aus, wie sein fünfjähriger Sohn S im flachen Badesee zu ertrinken droht. Er könnte gefahrlos hineinwaten, bleibt aber sitzen. S stirbt. Wie baust du die Prüfung von §§ 212, 13 StGB auf?"
+        },
+        {
+          "art": "text",
+          "titel": "Vorab: Tun oder Unterlassen?",
+          "text": "§ 13 StGB gilt nur, wenn der Schwerpunkt der Vorwerfbarkeit im Unterlassen liegt (Rspr.). V hat den Tod nicht aktiv verursacht, sondern die Rettung unterlassen. Das stellst du kurz vorab fest – dann folgt der Tatbestand."
+        },
+        {
+          "art": "schritte",
+          "titel": "Der objektive Tatbestand",
+          "schritte": [
+            {
+              "titel": "Erfolg und Unterlassen",
+              "text": "Tod des S; V unterlässt die gebotene Rettungshandlung, obwohl sie ihm physisch-real möglich war."
+            },
+            {
+              "titel": "Quasi-Kausalität",
+              "text": "Die Rettung hätte den Tod mit an Sicherheit grenzender Wahrscheinlichkeit verhindert."
+            },
+            {
+              "titel": "Garantenstellung",
+              "text": "V ist als Vater Beschützergarant – aus enger familiärer Verbundenheit."
+            },
+            {
+              "titel": "Entsprechung",
+              "text": "§ 13 Abs. 1 Hs. 2 StGB: Relevant vor allem bei verhaltensgebundenen Delikten; bei § 212 StGB unproblematisch."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Mit der Garantenstellung einsteigen. Sie ist ein Merkmal im objektiven Tatbestand, kein Einstieg. Erst Erfolg, Unterlassen trotz Möglichkeit und Quasi-Kausalität – danach Garantenstellung, Vorsatz auch bezüglich der Garantenlage, Rechtswidrigkeit, Schuld."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tun oder Unterlassen klären. Dann Erfolg, Möglichkeit, Quasi-Kausalität, Garantenstellung – der Vorsatz kommt erst danach."
+        },
+        {
+          "art": "cta",
+          "titel": "Unterlassen in vier Zügen",
+          "punkte": [
+            "Schwerpunkt der Vorwerfbarkeit bestimmen",
+            "Erfolg, Möglichkeit, Quasi-Kausalität",
+            "Garantenstellung begründen",
+            "Vorsatz auch auf die Garantenlage"
+          ],
+          "icons": [
+            "lupe",
+            "kreislauf",
+            "schild",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "V sieht seinen Sohn ertrinken und bleibt sitzen – womit beginnt die Prüfung? Nicht mit der Garantenstellung. Erst klärst du, ob der Schwerpunkt der Vorwerfbarkeit im Unterlassen liegt. Dann folgen Erfolg, Unterlassen der möglichen Rettungshandlung, Quasi-Kausalität, Garantenstellung und bei verhaltensgebundenen Delikten die Entsprechungsklausel (§ 13 Abs. 1 StGB). Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#unterlassungsdelikt",
+        "#13stgb",
+        "#prüfungsschema",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unterlassungsdelikt: die richtige Reihenfolge",
+      "coverText": "Garantenstellung kommt später",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Beim Unterlassen prüft man erst Erfolg, Möglichkeit und Kausalität – die Garantenstellung kommt danach.",
+        "handlung": "{B} stands frozen at the edge of a shallow pond with an unused rope in his hands, while {A} points with his pointer first at the calm water and then at the rope.",
+        "hinweisRegie": "Place the note in the open space above the unused rope, slightly tilted toward {B}'s hands, without covering the water surface or {A}'s pointer.",
+        "alternative": "{A} lays out four stepping stones in a row toward a pond while {B} hesitates on the second one."
+      },
+      "bildSzene": "miner frozen with rope at pond",
+      "bildSzeneAlt": "four stepping stones toward pond",
+      "quellen": [
+        "§ 13 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-300"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.319Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-655",
+      "slug": "2027-02-10-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Leistungsklage: Drei Hürden fallen weg, eine bleibt",
+          "unter": "Allgemeine Leistungsklage · VwGO",
+          "text": "Kein VA, keine Frist, kein Vorverfahren – aber Klagebefugnis analog § 42 Abs. 2 VwGO.",
+          "norm": "§ 42 Abs. 2 VwGO analog",
+          "icon": "gebaeude",
+          "sprecher": "Bei der Leistungsklage fallen drei Hürden weg. Eine bleibt aber stehen: die Klagebefugnis. Schauen wir uns alle vier an.",
+          "marken": [
+            "drei weg, eine bleibt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaft: Begehrt wird kein VA",
+          "text": "Handeln, Dulden oder Unterlassen ohne Regelung – etwa Widerruf einer amtlichen Äußerung.",
+          "norm": "§ 43 Abs. 2 VwGO",
+          "sprecher": "Erstens: Die Leistungsklage ist statthaft, wenn du ein Verhalten willst, das kein Verwaltungsakt ist. Etwa den Widerruf einer amtlichen Äußerung, das Unterlassen von Lärm einer öffentlichen Einrichtung oder eine Zahlung aus öffentlich-rechtlichem Vertrag. Die VwGO setzt diese Klage voraus, etwa in § 43 Abs. 2.",
+          "marken": [
+            "kein VA"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Keine Klagefrist",
+          "text": "§ 74 VwGO gilt nur für Anfechtungs- und Verpflichtungsklage.",
+          "norm": "§ 74 VwGO",
+          "sprecher": "Zweitens: Es gibt keine Klagefrist. § 74 VwGO gilt nur für Anfechtungs- und Verpflichtungsklagen. Grenze ist allenfalls die Verwirkung.",
+          "marken": [
+            "keine Frist"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kein Vorverfahren – außer im Beamtenrecht",
+          "text": "Dort ist es vor allen Klagen vorgesehen, soweit das Landesrecht nichts anderes bestimmt.",
+          "norm": "§ 54 Abs. 2 BeamtStG",
+          "sprecher": "Drittens: Ein Widerspruchsverfahren ist grundsätzlich nicht nötig. Ausnahme ist das Beamtenrecht. Dort gilt es vor allen Klagen aus dem Beamtenverhältnis, soweit das Landesrecht keine Ausnahme macht.",
+          "marken": [
+            "Beamtenrecht!"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Klagebefugnis bleibt",
+          "text": "§ 42 Abs. 2 VwGO analog – sonst droht die Popularklage.",
+          "norm": "§ 42 Abs. 2 VwGO analog",
+          "sprecher": "Viertens, die Hürde, die bleibt: die Klagebefugnis. Nach herrschender Meinung gilt § 42 Abs. 2 VwGO analog. Ein Anspruch auf die Leistung muss also möglich sein – sonst wäre jede Popularklage zulässig.",
+          "marken": [
+            "analog § 42 II"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Abgrenzung zur Verpflichtungsklage",
+          "text": "Muss die Behörde erst durch VA entscheiden, ist die Verpflichtungsklage richtig.",
+          "norm": null,
+          "sprecher": "Wichtig: Muss die Behörde vor der Leistung erst durch Verwaltungsakt entscheiden, etwa über eine Subvention, ist die Verpflichtungsklage richtig und nicht die Leistungsklage.",
+          "marken": [
+            "erst VA? Verpflichtung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Kein VA, keine Frist, kein Vorverfahren – aber Klagebefugnis analog.",
+          "norm": "§ 42 Abs. 2 VwGO analog",
+          "sprecher": "Merke: kein Verwaltungsakt, keine Frist, kein Vorverfahren. Aber die Klagebefugnis prüfst du analog § 42 Abs. 2 VwGO.",
+          "marken": [
+            "Klagebefugnis analog"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim Realakt an die Leistungsklage denken",
+          "text": "Speichern für die nächste Verwaltungsrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Klausur im Verwaltungsprozessrecht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Bei der allgemeinen Leistungsklage fallen drei Hürden weg: Sie richtet sich nicht auf einen Verwaltungsakt, es gibt keine Klagefrist nach § 74 VwGO und grundsätzlich kein Vorverfahren – Ausnahme Beamtenrecht. Eine Hürde bleibt: die Klagebefugnis, nach h.M. analog § 42 Abs. 2 VwGO. Und muss die Behörde vorher durch Verwaltungsakt entscheiden, ist die Verpflichtungsklage richtig. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsprozessrecht",
+        "#vwgo",
+        "#leistungsklage",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Leistungsklage: was wegfällt, was bleibt",
+      "titelZeilen": [
+        "Leistungsklage:",
+        "Drei Hürden fallen",
+        "weg, eine bleibt"
+      ],
+      "coverText": "Klagebefugnis analog § 42 II",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Bei der Leistungsklage fallen mehrere Hürden weg, doch die Klagebefugnis muss man trotzdem nehmen.",
+        "handlung": "{A} leads {B} along a path where three low barriers have been lifted aside, and both pause before a single remaining barrier that {B} curiously tests with one hand.",
+        "hinweisRegie": "Place the note in the free space just above the remaining barrier, slightly tilted toward it, without covering {B}'s testing hand or the three lifted barriers beside the path.",
+        "alternative": "{B} steps over three fallen hurdles and stops in front of one still standing, while {A} nods toward it."
+      },
+      "bildSzene": "three barriers lifted, one remains",
+      "bildSzeneAlt": "three fallen hurdles, one standing",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO analog",
+        "§ 43 Abs. 2 VwGO",
+        "§§ 68, 74 VwGO",
+        "§ 54 Abs. 2 BeamtStG",
+        "Themenpool: vwgo-655"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-weg-eine-bleibt",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.320Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-797",
+      "ueberzeile": "Prüfungsfrage Revision",
+      "titel": "Urteil in Anwesenheit des Angeklagten verkündet: Bis wann muss die Revision eingelegt werden?",
+      "optionen": [
+        "Binnen einer Woche nach Verkündung",
+        "Binnen eines Monats nach Zustellung des Urteils",
+        "Binnen zwei Wochen nach Verkündung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 341 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-797"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-797",
+      "ueberzeile": "Auflösung",
+      "titel": "Binnen einer Woche nach Verkündung",
+      "text": "Eingelegt wird beim Gericht, dessen Urteil angefochten wird – schriftlich oder zu Protokoll der Geschäftsstelle, binnen einer Woche nach Verkündung (§ 341 Abs. 1 StPO). War der Angeklagte nicht anwesend, beginnt die Frist grundsätzlich mit der Zustellung (§ 341 Abs. 2 StPO). Die Monatsfrist betrifft erst die Begründung (§ 345 Abs. 1 StPO).",
+      "norm": "§§ 341, 345 StPO",
+      "quellen": [
+        "§ 341 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-797"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.321Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Binnen einer Woche nach Verkündung",
+        "Binnen eines Monats nach Zustellung des Urteils",
+        "Binnen zwei Wochen nach Verkündung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-648",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 114 S. 2 VwGO: Ermessenserwägungen ergänzen – nicht erstmals anstellen",
+      "text": "Die Behörde kann ihre Ermessenserwägungen noch im Verwaltungsprozess ergänzen (§ 114 S. 2 VwGO). Ergänzen heißt: vorhandene Erwägungen vertiefen oder vervollständigen. Hat sie ihr Ermessen gar nicht ausgeübt, kann sie das im Prozess nicht erstmals nachholen – und die tragenden Gründe darf sie nicht vollständig auswechseln.",
+      "norm": "§ 114 S. 2 VwGO",
+      "quellen": [
+        "§ 114 VwGO",
+        "§ 40 VwVfG",
+        "Themenpool: verwalt-648"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-912",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Bestellschein unterschrieben, Glückwunschkarte gedacht: Ist A gebunden?",
+      "norm": "§§ 119 Abs. 1, 133, 157 BGB",
+      "optionen": [
+        "BGH/h.M.: Erklärung liegt vor, wenn A die Deutung hätte erkennen und vermeiden können – anfechtbar analog § 119 Abs. 1 BGB.",
+        "Andere Ansicht: Ohne Erklärungsbewusstsein keine Willenserklärung – nur Vertrauensschaden analog § 122 BGB."
+      ],
+      "text": "Der Unterschied zeigt sich, wenn A am Vertrag festhalten will: Das kann er nur nach h.M. Will er nicht, muss er unverzüglich anfechten (§ 121 BGB).",
+      "quellen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§§ 133, 157 BGB",
+        "Themenpool: bgbat-912"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-518",
+      "ueberzeile": "Merksatz Familienrecht",
+      "titel": "Trennungsunterhalt endet mit der Scheidung – der Titel auch",
+      "text": "Trennungs- und nachehelicher Unterhalt sind verschiedene Ansprüche. Nach Rechtskraft der Scheidung braucht es einen Tatbestand der §§ 1570 ff. BGB – und einen neuen Titel.",
+      "norm": "§ 1361 BGB · §§ 1569 ff. BGB",
+      "quellen": [
+        "§ 1361 BGB",
+        "§§ 1569–1576 BGB",
+        "Themenpool: famerb-518"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-380",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Heilung: Der Fehler wird behoben – § 46 VwVfG macht ihn nur folgenlos",
+      "text": "Heilung (§ 45 VwVfG): Ein Verfahrens- oder Formfehler wird durch Nachholen der versäumten Handlung beseitigt – nur bei den Fehlern des Abs. 1, etwa fehlender Begründung oder Anhörung, und bis zum Abschluss der letzten Tatsacheninstanz (Abs. 2). § 46 VwVfG heilt nicht: Der Fehler bleibt, die Aufhebung entfällt aber, wenn er die Entscheidung offensichtlich nicht beeinflusst hat.",
+      "norm": "§§ 45, 46 VwVfG",
+      "quellen": [
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-380"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:44.321Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
