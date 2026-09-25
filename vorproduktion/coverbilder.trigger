@@ -1,7 +1,5 @@
 source=instagram-assets/vorproduktion/coverbilder
 mode=providerfrei
-status=completed
-layoutFix=reel-width-plus-carousel-safe
-assetCommit=4bc075ab76c0f0da481affc2d5733d9a1fdda1a9
-completedRun=36079949246
-validated=true
+run=carousel-collision-probe
+slots=2026-10-01/b1,2026-10-01/b2
+reason=maximale-motivgroesse-bis-zur-naechsten-pille
