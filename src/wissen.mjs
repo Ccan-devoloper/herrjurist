@@ -27,6 +27,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import zlib from "node:zlib";
 import { fileURLToPath } from "node:url";
 import { CONFIG } from "./config.mjs";
 
@@ -39,12 +40,15 @@ export function wissenSchluessel(geheim = CONFIG.wissen?.schluessel) {
   return crypto.createHash("sha256").update(String(geheim)).digest();
 }
 
+/* Vor dem Verschlüsseln wird komprimiert, danach nicht mehr: AES-Ausgabe ist
+   Zufall, da holt git kein Byte mehr heraus. Seit dem Vollrepetitorium sind
+   die Bände zehn Megabyte Klartext – ungepackt trüge jeder Clone das voll. */
 export function wissenVerschluesseln(text, geheim) {
   const key = wissenSchluessel(geheim);
   if (!key) throw new Error("IG_WISSEN_KEY fehlt");
   const iv = crypto.randomBytes(12);
   const c = crypto.createCipheriv("aes-256-gcm", key, iv);
-  const enc = Buffer.concat([c.update(text, "utf8"), c.final()]);
+  const enc = Buffer.concat([c.update(zlib.gzipSync(Buffer.from(text, "utf8"), { level: 9 })), c.final()]);
   return Buffer.concat([iv, c.getAuthTag(), enc]);
 }
 
@@ -54,7 +58,11 @@ export function wissenEntschluesseln(buf, geheim) {
   const iv = buf.subarray(0, 12), tag = buf.subarray(12, 28), enc = buf.subarray(28);
   const d = crypto.createDecipheriv("aes-256-gcm", key, iv);
   d.setAuthTag(tag);
-  return Buffer.concat([d.update(enc), d.final()]).toString("utf8");
+  let roh = Buffer.concat([d.update(enc), d.final()]);
+  /* Ältere Tresore liegen ungepackt vor; die gzip-Kennung unterscheidet
+     beide, denn kein Band beginnt mit den Bytes 1f 8b. */
+  if (roh[0] === 0x1f && roh[1] === 0x8b) roh = zlib.gunzipSync(roh);
+  return roh.toString("utf8");
 }
 
 /* --- Index ---------------------------------------------------------------
@@ -179,13 +187,27 @@ const nummerDrin = (text, z) => new RegExp(`(?<!\\d)${z}(?!\\d)`).test(text);
    Sammelband, kein Thema. Der Zeiger am Thema (`wissen`) darf trotzdem
    dorthin zeigen - nur von allein wird so ein Kapitel nicht gewählt. */
 const SAMMELKAPITEL = 16000;
-const BAND_GEBIET = { 1: 1, 4: 1, 3: 2, 6: 2, 2: 3, 5: 3 };
+/* Bände 1-9 wie gehabt; ab Band 10 (Vollrepetitorium) sind nur die Bände
+   eingetragen, deren Titel das Gebiet zweifelsfrei nennt. Die gemischten
+   (2. Examen quer, Sitemap-Blöcke, Band 73 mit Landesrechts-Anhang) bleiben
+   gebietsoffen - dort entscheidet Teil- oder Kapiteltitel. Die Audit-Bände
+   51-64 und 67-73 sind der ZPO-Block des 2. Examens, 69/70 der einstweilige
+   Rechtsschutz nach §§ 916 ff. ZPO - nicht der nach § 80 V VwGO. */
+const BAND_GEBIET = {
+  1: 1, 4: 1, 3: 2, 6: 2, 2: 3, 5: 3,
+  11: 1, 12: 3, 13: 2, 18: 3, 19: 2, 22: 1, 23: 3, 24: 2, 25: 1, 26: 1,
+  28: 1, 29: 3, 30: 2, 40: 3, 47: 1,
+  51: 1, 52: 1, 53: 1, 54: 1, 55: 1, 56: 1, 57: 1, 58: 1, 59: 1, 60: 1,
+  61: 1, 62: 1, 63: 1, 64: 1, 67: 1, 68: 1, 69: 1, 70: 1, 71: 1, 72: 1,
+};
 const TEIL_GEBIET = [[/Zivilrechtliche/i, 1], [/Strafrechtliche/i, 2], [/Öffentlich-rechtliche/i, 3]];
 const TITEL_GEBIET = [
   [/BGB|Schuldrecht|Sachenrecht|Delikts|Bereicherungs|Handels|Gesellschafts|Arbeits|Familien|Erbrecht|Zivil/i, 1],
   [/Strafrecht|Strafprozess|StPO|Revision|Anklage/i, 2],
   [/Verwaltung|Polizei|Baurecht|Staatshaftung|Kommunal|Staatsorganisation|Grundrecht|Europarecht|Öffentlich/i, 3],
 ];
+
+const REGISTER_BAENDE = new Set([7, 42, 43, 44, 45]);
 
 export function kapitelGebiet(kapitel) {
   const fest = BAND_GEBIET[kapitel.band];
@@ -231,14 +253,16 @@ export function wissenFuer(thema, opt = {}) {
     const treffer = index.find((k) => k.id === thema.wissen);
     if (treffer) return zuschneiden(treffer, opt);
   }
-  /* Band 7 ist Register und Lexikon - alphabetische Listen, keine Darstellung.
-     Als Belegstelle taugt das nicht, es steht hier nur der Vollständigkeit
-     halber im Tresor. */
   const gebiet = thema.klausur || 0;
   const zweitesExamen = /2\./.test(thema.examen || "");
   let bestes = null, beste = 0, zweitbeste = 0;
   for (const k of index) {
-    if (k.band === 7) continue;
+    /* Register taugen nicht als Belegstelle: Band 7 (Register und Lexikon)
+       und die Paritätsbände 42-45 (Lexikon- und Seitenlisten je Stichwort)
+       sind Nachschlagelisten, keine Darstellung. Sie liegen der
+       Vollständigkeit halber im Tresor; ein Zeiger am Thema darf weiter
+       hinein zeigen, von allein gewählt werden sie nicht. */
+    if (REGISTER_BAENDE.has(k.band)) continue;
     /* Sammelkapitel sind Behälter, keine Fundstellen: "Weitere Vollfälle"
        fasst 380 KB aus allen drei Gebieten zusammen und gewinnt allein durch
        seine Länge jeden Wortabgleich - der Auszug daraus wäre dann der erste

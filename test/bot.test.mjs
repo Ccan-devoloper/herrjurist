@@ -1998,6 +1998,21 @@ test("Wissensbasis: ohne Schlüssel bleibt der Tresor zu, mit Schlüssel liest e
   wissenLeeren();
 });
 
+test("Wissensbasis: Tresore aus der Zeit vor der Kompression bleiben lesbar", async () => {
+  const { wissenEntschluesseln } = await import("../src/wissen.mjs");
+  const crypto = (await import("node:crypto")).default;
+  const klartext = "# Band 1 - Probe\n\n# 1. Kapitel\nText.\n";
+  /* So schrieb wissenVerschluesseln bis September 2026: utf8 direkt in AES,
+     ohne gzip davor. Solche Dateien liegen weiter im Tresor und müssen ohne
+     Umpacken lesbar bleiben - die gzip-Kennung (1f 8b) unterscheidet. */
+  const key = crypto.createHash("sha256").update("probe-schluessel").digest();
+  const iv = crypto.randomBytes(12);
+  const c = crypto.createCipheriv("aes-256-gcm", key, iv);
+  const enc = Buffer.concat([c.update(klartext, "utf8"), c.final()]);
+  const alt = Buffer.concat([iv, c.getAuthTag(), enc]);
+  assert.equal(wissenEntschluesseln(alt, "probe-schluessel"), klartext);
+});
+
 test("Wissensbasis: lieber keine Belegstelle als die zum Nachbarthema", async () => {
   const { wissenFuer, wissenLeeren } = await import("../src/wissen.mjs");
   const ordner = await fs.promises.mkdtemp(path.join(os.tmpdir(), "wissen-"));

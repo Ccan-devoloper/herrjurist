@@ -7,8 +7,11 @@ assets/
 
 # Wissensbasis: NUR der Tresor gehört ins Repo, nie der Klartext. Das Repo ist
 # öffentlich; ein versehentlich hinzugefügtes daten/wissen/*.txt wäre genau der
-# Unfall, den die Verschlüsselung verhindern soll.
+# Unfall, den die Verschlüsselung verhindern soll. Gleiches gilt für das
+# Staging des Einpflege-Workflows und für die HTML-Quelle des Repetitoriums.
 daten/wissen/*.txt
+daten/wissen-neu/*.txt
+*Gesamtwissen*.html
 
 # Arbeitskopien des Asset-Zweigs gehoeren nie in den Code-Zweig.
 hj-assets/
