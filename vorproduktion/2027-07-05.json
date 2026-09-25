@@ -1,0 +1,882 @@
+{
+  "datum": "2027-07-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-071",
+        "themaTitel": "Wann liegt eine Zueignungsabsicht vor?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "assessoroer-848",
+        "themaTitel": "Wie ist der Widerspruchsbescheid aufgebaut?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "sachen-239",
+        "themaTitel": "Wann kollidieren Sicherungsübereignung und verlängerter Eigentumsvorbehalt?",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "assessoroer-712"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "assessoroer-712"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "zpo-277"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:28",
+        "art": "tipp",
+        "themaId": "verwbt-933"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "zahl",
+        "themaId": "zwangsv-828"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "streitstand",
+        "themaId": "strafat-057"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-071",
+      "poolTitel": "Wann liegt eine Zueignungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB",
+        "§ 246 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-08",
+        "2027-07-04",
+        "2027-07-04"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "assessoroer-848",
+      "poolTitel": "Wie ist der Widerspruchsbescheid aufgebaut?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 73 VwGO",
+        "§ 79 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17",
+        "2026-12-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-239",
+      "poolTitel": "Wann kollidieren Sicherungsübereignung und verlängerter Eigentumsvorbehalt?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 398 BGB",
+        "§ 138 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-05-01"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-712",
+      "poolTitel": "Kostenentscheidung und Zuziehung eines Bevollmächtigten",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 VwVfG; VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2027-02-22"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-712",
+      "poolTitel": "Kostenentscheidung und Zuziehung eines Bevollmächtigten",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 VwVfG; VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2027-02-22"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-277",
+      "poolTitel": "Was ist der Streitgegenstand und warum entscheidet er über die Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2027-02-22",
+        "2027-04-24"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "verwbt-933",
+      "poolTitel": "Was garantiert Art. 28 Abs. 2 GG den Gemeinden – und wo endet die Garantie?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Art. 93 Abs. 1 Nr. 4b GG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-03",
+        "2027-03-04",
+        "2027-05-05"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zwangsv-828",
+      "poolTitel": "Wann klagt der Dritte, wann erinnert der Schuldner?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 766 ZPO",
+        "§ 767 ZPO",
+        "§ 771 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-12-14",
+        "2027-04-18"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "strafat-057",
+      "poolTitel": "Was ist der Unterschied zwischen Eventualvorsatz und bewusster Fahrlässigkeit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB",
+        "§ 16 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-28",
+        "2027-03-02",
+        "2027-05-03"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-071",
+      "slug": "2027-07-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zueignungsabsicht: der Satz, der in vielen Klausuren nur halb stimmt",
+          "titelZeilen": [
+            "Zueignungsabsicht:",
+            "der Satz, der in",
+            "vielen Klausuren",
+            "nur halb stimmt"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Enteignung: bedingter Vorsatz reicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Satz – und das Problem",
+          "text": "„Der Täter muss in der Absicht handeln, den Eigentümer dauerhaft zu enteignen.“ So steht es in vielen Klausuren. Doch Absicht im engen Sinn verlangt nur die Aneignung. Für die Enteignung genügt bedingter Vorsatz."
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A nimmt das unverschlossene Fahrrad des B, um schnell zum Bahnhof zu kommen. Dort lässt er es unabgeschlossen stehen. Ob B sein Rad je wiedersieht, ist A gleichgültig. Handelt A mit Zueignungsabsicht (§ 242 Abs. 1 StGB)?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Zwei Komponenten, zwei Vorsatzformen",
+          "schritte": [
+            {
+              "titel": "Aneignung: Absicht",
+              "text": "A will die Sache zumindest vorübergehend wie ein Eigentümer nutzen. Hier ist dolus directus 1. Grades nötig – vorübergehend genügt."
+            },
+            {
+              "titel": "Enteignung: bedingter Vorsatz",
+              "text": "A nimmt billigend in Kauf, dass B die Sache auf Dauer verliert. Eine Enteignungsabsicht verlangt der Tatbestand nicht."
+            },
+            {
+              "titel": "Abgrenzung: Gebrauchsanmaßung",
+              "text": "Will A das Rad zurückbringen, fehlt der Enteignungsvorsatz. Dann bleibt beim Fahrrad § 248b StGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "A eignet sich das Rad für die Fahrt an – mit Absicht. Er lässt es so stehen, dass die Rückkehr zu B dem Zufall überlassen bleibt, und findet sich damit ab. Das reicht für den Enteignungsvorsatz. Zueignungsabsicht liegt vor, § 242 StGB ist erfüllt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Aneignung: Absicht, vorübergehend genügt. Enteignung: dauerhaft, aber bedingter Vorsatz genügt. Rückführungswille schließt die Enteignung aus."
+        },
+        {
+          "art": "cta",
+          "titel": "Zueignungsabsicht in drei Fragen",
+          "punkte": [
+            "Will er die Sache zumindest kurz nutzen?",
+            "Nimmt er den dauerhaften Verlust in Kauf?",
+            "Oder will er sie zurückbringen?"
+          ],
+          "icons": [
+            "zielscheibe",
+            "schluessel",
+            "kreislauf"
+          ]
+        }
+      ],
+      "caption": "Zueignungsabsicht heißt nicht: zweimal Absicht. Absicht im Sinne von dolus directus 1. Grades braucht es nur für die Aneignung – und die darf vorübergehend sein. Für die dauerhafte Enteignung genügt bedingter Vorsatz. Wer das Rad am Bahnhof dem Zufall überlässt, handelt deshalb mit Zueignungsabsicht. Wer es zurückbringen will, landet bei § 248b StGB. Speichern für die nächste Diebstahlsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#242stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zueignungsabsicht: Absicht nur für die Aneignung",
+      "coverText": "Enteignung: bedingter Vorsatz reicht",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Für die Aneignung braucht es Absicht, für den dauerhaften Verlust des Eigentümers genügt, dass der Täter ihn in Kauf nimmt.",
+        "handlung": "{A} hops off a borrowed bicycle at a busy station and shrugs as he leaves it unlocked among many others, while {B} points his stick at the lonely bike.",
+        "hinweisRegie": "Place the note in the open space next to the abandoned bicycle, slightly tilted toward it, so the idea of accepting the permanent loss is linked to the bike without covering {A}'s shrug.",
+        "alternative": "{B} holds two differently sized weights labelled only by colour, while {A} balances them on a small seesaw that still tips toward acceptance."
+      },
+      "bildSzene": "bicycle abandoned unlocked at station",
+      "bildSzeneAlt": "two different weights on seesaw",
+      "quellen": [
+        "§ 242 Abs. 1 StGB",
+        "§ 246 StGB",
+        "§ 248b StGB",
+        "Themenpool: strafbt-071"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.093Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-848",
+      "slug": "2027-07-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "„Zurückgewiesen“ – und der Tenor ist noch nicht fertig",
+          "titelZeilen": [
+            "„Zurückgewiesen“ –",
+            "und der Tenor ist",
+            "noch nicht fertig"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Kosten gehören in den Tenor",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Hilft die Ausgangsbehörde nicht ab (§ 72 VwGO), erlässt die Widerspruchsbehörde den Widerspruchsbescheid. Er ist zu begründen, mit einer Rechtsbehelfsbelehrung zu versehen und zuzustellen (§ 73 Abs. 3 VwGO). Die Behörde prüft Recht- und Zweckmäßigkeit (§ 68 Abs. 1 S. 1 VwGO)."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Gerüst, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Kopf",
+              "text": "Widerspruchsbehörde, Datum, Adressat (bei Vertretung: der Bevollmächtigte), Betreff mit Ausgangsbescheid."
+            },
+            {
+              "titel": "2. Tenor, Ziffer 1: Hauptsache",
+              "text": "„Der Widerspruch wird zurückgewiesen.“ Oder: Aufhebung bzw. Änderung des Ausgangsbescheids."
+            },
+            {
+              "titel": "3. Tenor, Ziffern 2 und 3",
+              "text": "Kostenlastentscheidung (§ 73 Abs. 3 S. 3 VwGO), ggf. Hinzuziehung eines Bevollmächtigten; Gebühren je nach Landesrecht."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Gerüst, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Gründe: Sachverhalt",
+              "text": "Knapp und chronologisch: Ausgangsbescheid, Widerspruch, Vorbringen des Widerspruchsführers."
+            },
+            {
+              "titel": "5. Gründe: Würdigung",
+              "text": "Zulässigkeit, dann Begründetheit – im Bescheidstil, Ergebnis zuerst. Zweckmäßigkeit nicht vergessen."
+            },
+            {
+              "titel": "6. Kosten und Belehrung",
+              "text": "Begründung der Nebenentscheidungen, dann Rechtsbehelfsbelehrung: Klage binnen eines Monats (§ 74 Abs. 1 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Viele Bescheide enden mit der Zurückweisung. § 73 Abs. 3 S. 3 VwGO verlangt aber eine Kostenentscheidung; die Verteilung folgt aus § 80 VwVfG bzw. Landesrecht. Ob die Zuziehung eines Bevollmächtigten notwendig war (§ 80 Abs. 2, 3 S. 2 VwVfG), zählt, wenn der Widerspruch (teilweise) Erfolg hat."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tenor = Hauptsache, Kosten, ggf. Hinzuziehung. Gründe im Bescheidstil, Recht- und Zweckmäßigkeit. Belehrung und Zustellung schließen ab."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Abgabe prüfen",
+          "punkte": [
+            "Hauptsache tenoriert?",
+            "Kostenlast entschieden?",
+            "Zweckmäßigkeit geprüft?",
+            "Belehrung vollständig?"
+          ],
+          "icons": [
+            "dokument",
+            "muenzen",
+            "waage",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Widerspruchsbescheid: Nach „Der Widerspruch wird zurückgewiesen“ ist der Tenor nicht fertig. § 73 Abs. 3 S. 3 VwGO verlangt eine Kostenentscheidung, bei Erfolg kommt die Hinzuziehung eines Bevollmächtigten hinzu. In den Gründen prüft die Widerspruchsbehörde Recht- und Zweckmäßigkeit, im Bescheidstil. Am Ende stehen Rechtsbehelfsbelehrung und Zustellung. Speichern für die nächste Behördenklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#widerspruchsbescheid",
+        "#73vwgo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerspruchsbescheid: Aufbau und Tenor",
+      "coverText": "Kosten gehören in den Tenor",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ein Widerspruchsbescheid ist erst fertig, wenn neben der Hauptsache auch die Kosten entschieden sind.",
+        "handlung": "{A} hovers over a desk and slides a finished decision sheet into an envelope, while {B} stops the envelope with one hand and taps an empty box at the bottom of the sheet.",
+        "hinweisRegie": "Place the note in the free space beside the empty box at the bottom of the sheet, slightly tilted toward it, so the missing cost decision is linked there without covering {B}'s hand.",
+        "alternative": "{B} builds a small three-step stair from blocks, while {A} notices the third step is missing before trying to climb."
+      },
+      "bildSzene": "envelope stopped, empty box tapped",
+      "bildSzeneAlt": "three-step stair missing third block",
+      "quellen": [
+        "§ 68 Abs. 1 VwGO",
+        "§§ 72, 73 VwGO",
+        "§ 74 Abs. 1 VwGO",
+        "§ 79 VwGO",
+        "§ 80 VwVfG",
+        "Themenpool: assessoroer-848"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "unvollstaendiger-tenor",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.093Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-239",
+      "slug": "2027-07-05-b3",
+      "titelZeilen": [
+        "Die Bank war",
+        "zuerst da – und",
+        "geht leer aus"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Die Bank war zuerst da – und geht trotzdem leer aus",
+          "unter": "Globalzession · § 138 BGB",
+          "text": "Priorität hilft nicht, wenn die Globalzession sittenwidrig ist.",
+          "norm": "§ 398 BGB · § 138 Abs. 1 BGB",
+          "icon": "bank",
+          "sprecher": "Die Bank war zuerst da und geht trotzdem leer aus. So kollidieren Globalzession und verlängerter Eigentumsvorbehalt – und so kommt die Sicherungsübereignung ins Spiel.",
+          "marken": [
+            "zuerst da",
+            "trotzdem leer"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Priorität",
+          "text": "Wer zuerst abgetreten bekommt, erwirbt. Die spätere Abtretung geht ins Leere.",
+          "norm": "§ 398 BGB",
+          "sprecher": "Schritt eins: Priorität. Tritt der Unternehmer seine künftigen Forderungen erst an die Bank und später an seinen Lieferanten ab, erwirbt grundsätzlich die Bank. Die zweite Abtretung geht ins Leere.",
+          "marken": [
+            "Prioritätsprinzip"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vertragsbruchtheorie",
+          "text": "Globalzession auch über Lieferantenforderungen: nach der Rspr. sittenwidrig.",
+          "norm": "§ 138 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: die Vertragsbruchtheorie. Die Lieferanten liefern branchenüblich nur unter verlängertem Eigentumsvorbehalt. Erfasst die Globalzession auch diese Forderungen, zwingt sie den Unternehmer zum Vertragsbruch. Nach der Rechtsprechung ist sie dann sittenwidrig.",
+          "marken": [
+            "§ 138 BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Der Ausweg: dingliche Teilverzichtsklausel",
+          "text": "Forderungen des Vorbehaltslieferanten sind von vornherein ausgenommen.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Ausweg. Die Bank nimmt die Forderungen, die dem Vorbehaltslieferanten zustehen sollen, mit dinglicher Wirkung aus. Eine nur schuldrechtliche Freigabeverpflichtung reicht nach der Rechtsprechung nicht.",
+          "marken": [
+            "dinglich wirkend"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und das Warenlager?",
+          "text": "Vorbehaltsware per Besitzkonstitut übereignet: Die Bank erwirbt nur die Anwartschaft.",
+          "norm": "§ 930 BGB · § 933 BGB",
+          "sprecher": "Und wenn die Bank sich das Warenlager nach Paragraf 930 übereignen lässt? An der Vorbehaltsware ist der Unternehmer noch nicht Eigentümer. Gutgläubig erwirbt die Bank nach Paragraf 933 erst mit Übergabe. Bis dahin bekommt sie nur das Anwartschaftsrecht.",
+          "marken": [
+            "nur Anwartschaft"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Priorität, dann § 138 BGB, dann Verzichtsklausel. Beim Lager: § 933 BGB.",
+          "norm": null,
+          "sprecher": "Merke: erst Priorität, dann Sittenwidrigkeit prüfen, dann nach einer dinglichen Teilverzichtsklausel suchen. Und beim Warenlager an Paragraf 933 denken.",
+          "marken": [
+            "drei Prüfschritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Kreditsicherung ohne Kollision",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur zur Kreditsicherung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Die Bank war zuerst da – und geht trotzdem leer aus. Nach dem Prioritätsprinzip erwirbt, wer zuerst abgetreten bekommt. Erfasst die Globalzession aber auch Forderungen, die branchenüblich den Vorbehaltslieferanten zustehen, ist sie nach der Vertragsbruchtheorie der Rspr. sittenwidrig (§ 138 Abs. 1 BGB) – außer bei einer dinglichen Teilverzichtsklausel. Und am sicherungsübereigneten Warenlager erwirbt die Bank an Vorbehaltsware ohne Übergabe nur die Anwartschaft (§ 933 BGB).",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#kreditsicherung",
+        "#eigentumsvorbehalt",
+        "#138bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Globalzession vs. verlängerter Eigentumsvorbehalt",
+      "coverText": "Vertragsbruchtheorie schlägt Priorität",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer sich alle künftigen Forderungen zuerst sichert, verliert sie, wenn er den Schuldner damit zum Vertragsbruch zwingt.",
+        "handlung": "{A} proudly holds a huge net full of glowing crystals he caught first, while {B} gently lifts a few crystals out of the net that clearly carry a supplier's colour.",
+        "hinweisRegie": "Place the note in the free space between the net and the lifted crystals, slightly tilted toward {B}'s hands, so the exception to the first catch is visible without covering {A}'s face.",
+        "alternative": "{B} and {A} both reach for the same crate at a warehouse door, while a small tag on the crate shows it still belongs to a third party."
+      },
+      "bildSzene": "crystals lifted out of first net",
+      "bildSzeneAlt": "two reach for tagged crate",
+      "quellen": [
+        "§ 398 BGB",
+        "§ 138 Abs. 1 BGB",
+        "§ 930 BGB",
+        "§ 933 BGB",
+        "§ 449 BGB",
+        "Themenpool: sachen-239"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.096Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-712",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "A verliert im Widerspruch, siegt vor dem VG. Wer erklärt die Anwaltszuziehung im Vorverfahren für notwendig?",
+      "optionen": [
+        "Die Widerspruchsbehörde – nachträglich per Änderungsbescheid",
+        "Das Gericht – nach § 162 Abs. 2 S. 2 VwGO",
+        "Niemand – Vorverfahrenskosten sind nie erstattungsfähig"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 162 Abs. 1, 2 VwGO",
+        "§ 80 VwVfG",
+        "Themenpool: assessoroer-712"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.096Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-712",
+      "ueberzeile": "Auflösung",
+      "titel": "Das Gericht – im Urteil oder per Beschluss nach § 162 Abs. 2 S. 2 VwGO",
+      "text": "Folgt dem Widerspruchsverfahren ein Prozess, gehören die Kosten des Vorverfahrens zu den Kosten des Verfahrens (§ 162 Abs. 1 VwGO). Die Anwaltsgebühren für das Vorverfahren sind aber nur erstattungsfähig, wenn das Gericht die Zuziehung für notwendig erklärt (§ 162 Abs. 2 S. 2 VwGO). Endet das Verfahren ohne Prozess, gilt dagegen § 80 VwVfG.",
+      "norm": "§ 162 Abs. 1, 2 S. 2 VwGO",
+      "quellen": [
+        "§ 162 Abs. 1, 2 VwGO",
+        "§ 80 VwVfG",
+        "Themenpool: assessoroer-712"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.096Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Widerspruchsbehörde – nachträglich per Änderungsbescheid",
+        "Das Gericht – nach § 162 Abs. 2 S. 2 VwGO",
+        "Niemand – Vorverfahrenskosten sind nie erstattungsfähig"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-277",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 253 Abs. 2 Nr. 2 ZPO: Antrag und Lebenssachverhalt – nicht die Anspruchsgrundlage",
+      "text": "Die Klageschrift muss Gegenstand und Grund des Anspruchs sowie einen bestimmten Antrag enthalten. Daraus folgt der zweigliedrige Streitgegenstand (Rspr.): Antrag plus Lebenssachverhalt. Die Anspruchsgrundlage muss der Kläger nicht nennen – das Gericht prüft den Sachverhalt unter allen rechtlichen Gesichtspunkten.",
+      "norm": "§ 253 Abs. 2 Nr. 2 ZPO · § 322 Abs. 1 ZPO",
+      "quellen": [
+        "§ 253 Abs. 2 ZPO",
+        "§ 322 Abs. 1 ZPO",
+        "Themenpool: zpo-277"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.096Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-933",
+      "ueberzeile": "Klausurtipp Kommunalrecht",
+      "titel": "Art. 28 Abs. 2 GG: Erst Kernbereich, dann Randbereich prüfen",
+      "text": "Frag zuerst, ob der Kernbereich der Selbstverwaltung betroffen ist – er ist unantastbar. Meist geht es aber um den Randbereich: Entzieht der Gesetzgeber eine Angelegenheit der örtlichen Gemeinschaft, braucht er nach dem BVerfG Gründe des Gemeinwohls. Bloße Verwaltungsvereinfachung oder Kostenersparnis tragen den Entzug grundsätzlich nicht.",
+      "quellen": [
+        "Art. 28 Abs. 2 S. 1 GG",
+        "Art. 93 Abs. 1 Nr. 4b GG",
+        "Themenpool: verwbt-933"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.096Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-828",
+      "ueberzeile": "4 Punkte Zwangsvollstreckung",
+      "titel": "Erinnerung nach § 766 ZPO: vier Punkte zur Zulässigkeit",
+      "text": "Die Erinnerung rügt das Wie der Vollstreckung. Diese Punkte gehören in die Prüfung:",
+      "punkte": [
+        "Gegen Vollstreckungsmaßnahmen – gegen Entscheidungen: § 793 ZPO",
+        "Gerügt wird das Verfahren, nicht der Anspruch (dafür § 767 ZPO)",
+        "Zuständig: Vollstreckungsgericht, §§ 764, 802 ZPO",
+        "Keine Frist – aber Rechtsschutzbedürfnis bis zum Ende der Vollstreckung"
+      ],
+      "quellen": [
+        "§ 766 ZPO",
+        "§ 767 ZPO",
+        "§ 793 ZPO",
+        "§§ 764, 802 ZPO",
+        "Themenpool: zwangsv-828"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.096Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-057",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Täter trifft Vorkehrungen gegen den Erfolg: Schließt der betätigte Vermeidewille den Vorsatz aus?",
+      "norm": "§ 15 StGB",
+      "optionen": [
+        "Vermeidungstheorie (Teile der Lit.): Wer ernsthaft Gegenmaßnahmen ergreift, handelt nicht vorsätzlich.",
+        "Rspr./h.M.: Vermeidebemühungen sind nur ein Indiz – es zählt die Gesamtwürdigung aller Umstände."
+      ],
+      "text": "Klausur: Mit der h.M. die Vorkehrungen in die Gesamtwürdigung einstellen. Gegen einen starren Ausschluss spricht: Auch wer sich absichert, kann den Erfolg bei erkannt hoher Gefahr billigend in Kauf nehmen. Ernsthaftes Vertrauen auf das Ausbleiben führt zur bewussten Fahrlässigkeit.",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "Themenpool: strafat-057"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:16.096Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

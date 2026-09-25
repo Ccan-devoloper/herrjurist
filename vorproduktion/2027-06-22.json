@@ -1,0 +1,889 @@
+{
+  "datum": "2027-06-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "famerb-258",
+        "themaTitel": "Wie ist die gesetzliche Erbfolge aufgebaut?",
+        "fach": "famerb",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "anklage-795",
+        "themaTitel": "Beweiswürdigung im Strafurteil",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-593",
+        "themaTitel": "Bundesstaatsprinzip",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "ipr-896"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "ipr-896"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:11",
+        "art": "norm",
+        "themaId": "methodik-897"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:39",
+        "art": "zahl",
+        "themaId": "assessorz-821"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "streitstand",
+        "themaId": "assessorz-816"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "merksatz",
+        "themaId": "schuldbt-488"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "famerb-258",
+      "poolTitel": "Wie ist die gesetzliche Erbfolge aufgebaut?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1924 BGB",
+        "§ 1925 BGB",
+        "§ 1931 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2027-01-16",
+        "2027-03-22"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-02",
+        "2027-03-18",
+        "2027-03-18"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-593",
+      "poolTitel": "Bundesstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-28",
+        "2026-12-02",
+        "2027-02-20"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "ipr-896",
+      "poolTitel": "Welches Recht entscheidet über einen Erbfall mit Auslandsbezug?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 21 EuErbVO",
+        "Art. 22 EuErbVO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2026-12-29"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "ipr-896",
+      "poolTitel": "Welches Recht entscheidet über einen Erbfall mit Auslandsbezug?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 21 EuErbVO",
+        "Art. 22 EuErbVO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2026-12-29"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "methodik-897",
+      "poolTitel": "Anspruchsgrundlagen finden statt Probleme erraten",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14",
+        "2027-02-27",
+        "2027-03-21"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "assessorz-821",
+      "poolTitel": "Welchen Prüfungsumfang hat die Berufung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 513 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2027-01-03",
+        "2027-01-16"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessorz-816",
+      "poolTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-18",
+        "2027-04-10",
+        "2027-04-19"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "schuldbt-488",
+      "poolTitel": "Nacherfüllung und Selbstvornahme im Werkvertrag",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 635, 637 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "famerb",
+      "klausur": 1,
+      "fachLabel": "Familien- und Erbrecht",
+      "themaId": "famerb-258",
+      "slug": "2027-06-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ehefrau enterbt: großer Pflichtteil oder Zugewinn plus Achtel?",
+          "titelZeilen": [
+            "Ehefrau enterbt:",
+            "großer Pflichtteil",
+            "oder Zugewinn",
+            "plus Achtel?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Einheitstheorie gegen Wahltheorie",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "E stirbt. Er lebte mit F im gesetzlichen Güterstand und setzt per Testament seine zwei Kinder zu alleinigen Erben ein; F erhält nichts. Ihr gesetzlicher Erbteil wäre ½: ¼ nach § 1931 Abs. 1 BGB plus ¼ nach § 1371 Abs. 1 BGB. Welchen Pflichtteil kann F verlangen?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Ansichten",
+          "links": {
+            "titel": "Einheitstheorie (BGH, h.M.)",
+            "punkte": [
+              "Enterbter Ehegatte: nur die güterrechtliche Lösung (§ 1371 II BGB).",
+              "Zugewinnausgleich nach §§ 1373 ff. plus kleiner Pflichtteil: ⅛."
+            ]
+          },
+          "rechts": {
+            "titel": "Wahltheorie (Mindermeinung)",
+            "punkte": [
+              "F darf wählen: großer Pflichtteil aus dem erhöhten Erbteil: ¼.",
+              "Oder güterrechtlich: Zugewinnausgleich plus kleiner Pflichtteil."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme",
+          "text": "Für die h.M. spricht der Wortlaut: Wird der Ehegatte weder Erbe noch Vermächtnisnehmer, kann er Ausgleich des Zugewinns verlangen; der Pflichtteil bestimmt sich dann „nach dem nicht erhöhten gesetzlichen Erbteil“ (§ 1371 Abs. 2 BGB). Ein Wahlrecht sieht das Gesetz nicht vor."
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "Erst den gesetzlichen Erbteil bilden: Ordnungen (§§ 1924 ff.), dann § 1931 und § 1371 Abs. 1 BGB.",
+            "Pflichtteil = Hälfte des gesetzlichen Erbteils (§ 2303 Abs. 1 S. 2 BGB).",
+            "Enterbt: mit dem BGH den konkreten Zugewinnausgleich berechnen, dazu ⅛.",
+            "Schlägt F die Erbschaft aus, gilt Entsprechendes nach § 1371 Abs. 3 BGB."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Enterbt in der Zugewinngemeinschaft: kein Wahlrecht – Zugewinnausgleich plus kleiner Pflichtteil (§ 1371 Abs. 2 BGB)."
+        },
+        {
+          "art": "cta",
+          "titel": "Ehegatte im Erbfall: drei Fragen",
+          "punkte": [
+            "Welcher Güterstand?",
+            "Erbe, Vermächtnisnehmer oder enterbt?",
+            "Großer oder kleiner Pflichtteil?"
+          ],
+          "icons": [
+            "ring",
+            "dokument",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Ehefrau enterbt – großer Pflichtteil oder Zugewinnausgleich plus Achtel? Nach der Einheitstheorie des BGH hat der enterbte Ehegatte in der Zugewinngemeinschaft keine Wahl: Er erhält den konkreten Zugewinnausgleich und den kleinen Pflichtteil aus dem nicht erhöhten Erbteil (§ 1371 Abs. 2 BGB). Die Wahltheorie will ihm auch den großen Pflichtteil eröffnen. Speichern für die nächste Erbrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#erbrecht",
+        "#pflichtteil",
+        "#1371bgb",
+        "#zugewinnausgleich",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Enterbter Ehegatte: welcher Pflichtteil?",
+      "coverText": "Einheitstheorie gegen Wahltheorie",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Der enterbte Ehegatte kann nicht zwischen großem Pflichtteil und güterrechtlicher Lösung wählen.",
+        "handlung": "{A} reaches curiously for the larger of two pies on a table, while {B} firmly slides the smaller slice together with a separate small money pouch toward her.",
+        "hinweisRegie": "Place the note in the free space between the large pie and the small slice with the pouch, slightly tilted toward the pouch, so the fixed combination is clear without covering {A}'s reaching hand.",
+        "alternative": "{B} closes one of two doors in a corridor, leaving {A} only the door marked with a small key and a coin."
+      },
+      "bildSzene": "alien reaches for larger pie",
+      "bildSzeneAlt": "one of two doors closed",
+      "quellen": [
+        "§ 1931 BGB",
+        "§ 1371 BGB",
+        "§§ 1373 ff. BGB",
+        "§ 2303 BGB",
+        "§ 1924 BGB",
+        "Themenpool: famerb-258"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-795",
+      "slug": "2027-06-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Alibi geplatzt – und damit noch nichts bewiesen",
+          "titelZeilen": [
+            "Alibi geplatzt –",
+            "und damit noch",
+            "nichts bewiesen"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Widerlegt heißt nicht bewiesen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A ist wegen eines Einbruchs angeklagt. Er lässt sich ein, er sei am Tatabend bei seiner Freundin F gewesen. F sagt aus, A sei an diesem Abend nicht bei ihr gewesen. Sonst gibt es nur einen Schuhabdruck, der zu As Schuhgröße passt. Das Gericht will verurteilen, weil das Alibi widerlegt sei."
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung",
+          "schritte": [
+            {
+              "titel": "Maßstab (§ 261 StPO)",
+              "text": "Freie Überzeugung aus dem Inbegriff der Hauptverhandlung – tragfähig begründet, ohne Lücken und Widersprüche."
+            },
+            {
+              "titel": "Widerlegte Einlassung",
+              "text": "Dass eine Einlassung widerlegt ist, beweist nicht das Gegenteil. Auch Unschuldige greifen zu falschen Alibis."
+            },
+            {
+              "titel": "Indiz nur mit Vorsicht",
+              "text": "Nach der Rspr. kann nur ein bewusst erlogenes Alibi Indiz sein – und nur, wenn andere Gründe für die Lüge erörtert sind."
+            },
+            {
+              "titel": "Gesamtwürdigung",
+              "text": "Alle Indizien zusammen betrachten: Was trägt der Schuhabdruck, der nur in der Größe passt?"
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "So trägt die Verurteilung nicht. Ein misslungener Alibibeweis ist für sich kein Beweisanzeichen für die Täterschaft. Auch ein bewusst falsches Alibi darf nur verwertet werden, wenn andere Gründe für die Lüge erörtert sind. Mit einem nur größengleichen Schuhabdruck bleibt die Würdigung lückenhaft."
+        },
+        {
+          "art": "text",
+          "titel": "Im Urteil (§ 267 StPO)",
+          "punkte": [
+            "Einlassung des Angeklagten vollständig wiedergeben",
+            "Begründen, warum sie widerlegt ist – und was daraus folgt",
+            "Jedes Indiz einzeln würdigen, dann in der Gesamtschau"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Widerlegt ist nicht bewiesen: Das geplatzte Alibi ersetzt keinen Tatnachweis – allenfalls ist es ein vorsichtig zu wertendes Indiz."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Verurteilung fragen",
+          "punkte": [
+            "Was beweist das Indiz wirklich?",
+            "Andere Erklärung erörtert?",
+            "Trägt die Gesamtschau?"
+          ],
+          "icons": [
+            "lupe",
+            "detektiv",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Alibi geplatzt – und damit ist noch nichts bewiesen. Ein misslungener Alibibeweis ist für sich allein kein Beweisanzeichen für die Täterschaft. Selbst ein bewusst erlogenes Alibi darf das Gericht nach der Rspr. nur vorsichtig als Indiz werten, weil auch Unschuldige aus anderen Gründen lügen. Entscheidend bleibt die Gesamtwürdigung nach § 261 StPO. Speichern für die nächste Strafurteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#beweiswürdigung",
+        "#261stpo",
+        "#strafurteil",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Geplatztes Alibi im Strafurteil",
+      "coverText": "Widerlegt heißt nicht bewiesen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Eine widerlegte Ausrede ist noch kein Beweis für die Tat.",
+        "handlung": "{B} proudly tears apart a paper excuse card, while {A} calmly points his pointer at the still empty evidence scale beside them.",
+        "hinweisRegie": "Place the note in the free space above the empty scale pan, slightly tilted toward it, so the missing proof is the focus without covering the torn card or {B}'s hands.",
+        "alternative": "{A} holds up a single footprint cast that fits many shoes, while {B} tries to force it onto one specific boot."
+      },
+      "bildSzene": "torn excuse card, empty scale",
+      "bildSzeneAlt": "footprint cast fits many shoes",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 267 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.256Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-593",
+      "slug": "2027-06-22-b3",
+      "titelZeilen": [
+        "Bundesrecht bricht",
+        "Landesrecht –",
+        "außer hier"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Bundesrecht bricht Landesrecht – außer hier",
+          "unter": "Bundesstaat · Art. 31 GG",
+          "text": "Art. 31 GG ist nicht die erste Frage – und nicht immer die Antwort.",
+          "norm": "Art. 31 GG",
+          "icon": "gebaeude",
+          "sprecher": "Bundesrecht bricht Landesrecht? Nicht immer. Artikel 31 kommt in der Klausur erst spät, und bei der Abweichungsgesetzgebung gilt sogar etwas anderes. Vier Schritte.",
+          "marken": [
+            "Art. 31 GG",
+            "Kollision"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Wer durfte regeln?",
+          "text": "Erst die Kompetenz nach Art. 70 ff. GG. Fehlt sie, ist das Gesetz schon deshalb verfassungswidrig.",
+          "norm": "Art. 70 GG",
+          "sprecher": "Schritt eins: die Kompetenz. Nach Artikel 70 haben die Länder das Recht der Gesetzgebung, soweit das Grundgesetz nicht dem Bund Befugnisse verleiht. Fehlt die Kompetenz, ist das Gesetz schon formell verfassungswidrig. Artikel 31 brauchst du dafür nicht.",
+          "marken": [
+            "Kompetenz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sperrwirkung",
+          "text": "Konkurrierende Gesetzgebung: Hat der Bund abschließend geregelt, dürfen die Länder nicht mehr.",
+          "norm": "Art. 72 Abs. 1 GG",
+          "sprecher": "Schritt zwei: die Sperrwirkung. Bei der konkurrierenden Gesetzgebung dürfen die Länder nur, solange und soweit der Bund nicht abschließend geregelt hat. Auch das ist noch eine Kompetenzfrage.",
+          "marken": [
+            "Sperrwirkung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Echte Kollision",
+          "text": "Art. 31 GG greift, wenn zwei gültige Normen denselben Sachverhalt widersprüchlich regeln.",
+          "norm": "Art. 31 GG",
+          "sprecher": "Schritt drei: Erst wenn zwei kompetenzgemäß erlassene Normen auf denselben Sachverhalt passen und sich widersprechen, entscheidet Artikel 31. Dann geht Bundesrecht vor. In der Klausur ist das der seltenere Fall.",
+          "marken": [
+            "Vorrang"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Abweichungsgesetzgebung",
+          "text": "In den Fällen des Art. 72 Abs. 3 GG geht das jeweils spätere Gesetz vor – auch Landesrecht.",
+          "norm": "Art. 72 Abs. 3 GG",
+          "sprecher": "Schritt vier, die Ausnahme: In den Bereichen des Artikel 72 Absatz 3, etwa Jagdwesen oder Naturschutz, dürfen die Länder vom Bundesgesetz abweichen. Dann geht das jeweils spätere Gesetz vor. Hier kann Landesrecht Bundesrecht verdrängen.",
+          "marken": [
+            "späteres Gesetz"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Landesgrundrechte",
+          "text": "Art. 142 GG: Sie bleiben in Kraft, soweit sie mit Art. 1 bis 18 GG übereinstimmen.",
+          "norm": "Art. 142 GG",
+          "sprecher": "Noch eine Ausnahme im Kleinen: Nach Artikel 142 bleiben Grundrechte der Landesverfassungen in Kraft, soweit sie mit den Grundrechten des Grundgesetzes übereinstimmen.",
+          "marken": [
+            "Art. 142 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Kompetenz, Sperrwirkung, Kollision – bei Abweichung zählt das spätere Gesetz.",
+          "norm": null,
+          "sprecher": "Merke: Erst Kompetenz und Sperrwirkung, dann Artikel 31. Und bei der Abweichungsgesetzgebung entscheidet nicht der Rang, sondern das spätere Gesetz.",
+          "marken": [
+            "Reihenfolge"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 31 GG nach hinten",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Staatsrechtsklausur. Und schreib Artikel 31 nicht in den ersten Satz.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Bundesrecht bricht Landesrecht – aber nicht immer, und nicht als erster Prüfungspunkt. Zuerst fragst du nach der Kompetenz (Art. 70 ff. GG) und der Sperrwirkung (Art. 72 Abs. 1 GG). Art. 31 GG entscheidet erst echte Kollisionen gültiger Normen. Und bei der Abweichungsgesetzgebung geht das jeweils spätere Gesetz vor (Art. 72 Abs. 3 S. 3 GG). Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bundesstaat",
+        "#31gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 31 GG: Bundesrecht bricht nicht immer",
+      "coverText": "Erst die Kompetenz prüfen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Bevor Bundesrecht Landesrecht bricht, muss geklärt sein, wer überhaupt regeln durfte.",
+        "handlung": "{A} holds up a heavy stone tablet ready to smash a smaller one, while {B} calmly checks a permit card attached to the smaller tablet first.",
+        "hinweisRegie": "Place the note in the free space next to the permit card on the smaller tablet, slightly tilted toward it, so the priority of competence is visible without covering {A}'s raised tablet.",
+        "alternative": "{B} stacks two tablets in the order they were carved, placing the newer one on top despite its smaller size."
+      },
+      "bildSzene": "miner raises stone tablet, droid checks permit",
+      "bildSzeneAlt": "newer smaller tablet stacked on top",
+      "quellen": [
+        "Art. 31 GG",
+        "Art. 70 GG",
+        "Art. 72 GG",
+        "Art. 142 GG",
+        "Themenpool: staat-593"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-896",
+      "ueberzeile": "Prüfungsfrage IPR",
+      "titel": "E (Deutscher) lebt in Spanien, hat ein Ferienhaus in Italien und will italienisches Erbrecht wählen. Geht das?",
+      "optionen": [
+        "Nein – wählbar ist nur das Recht seiner Staatsangehörigkeit",
+        "Ja – jedes Recht mit Bezug zum Nachlass ist wählbar",
+        "Ja – für das Ferienhaus gilt ohnehin das Lageortrecht"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 21 EuErbVO",
+        "Art. 22 EuErbVO",
+        "Themenpool: ipr-896"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-896",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – wählbar ist nur das Heimatrecht",
+      "text": "Art. 22 Abs. 1 EuErbVO erlaubt nur die Wahl des Rechts des Staates, dem E bei der Wahl oder beim Tod angehört – hier deutsches Recht. Ohne wirksame Wahl gilt das Recht des letzten gewöhnlichen Aufenthalts (Art. 21 Abs. 1 EuErbVO): spanisches Recht, grundsätzlich für den gesamten Nachlass, auch für das Haus in Italien.",
+      "norm": "Art. 22 Abs. 1 EuErbVO",
+      "quellen": [
+        "Art. 21 EuErbVO",
+        "Art. 22 EuErbVO",
+        "Themenpool: ipr-896"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.258Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – wählbar ist nur das Recht seiner Staatsangehörigkeit",
+        "Ja – jedes Recht mit Bezug zum Nachlass ist wählbar",
+        "Ja – für das Ferienhaus gilt ohnehin das Lageortrecht"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-897",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 194 Abs. 1 BGB: Anspruchsgrundlage ist nur, was ein Verlangen gibt",
+      "text": "Ein Anspruch ist das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen. Prüfe bei jeder Norm: Ordnet sie an, dass jemand etwas leisten muss („kann verlangen“, „ist verpflichtet“)? § 249 BGB sagt nur, wie Schadensersatz aussieht, § 276 BGB nur, was zu vertreten ist – beides Hilfsnormen, keine Anspruchsgrundlagen.",
+      "norm": "§ 194 Abs. 1 BGB",
+      "quellen": [
+        "§ 194 Abs. 1 BGB",
+        "§ 249 BGB",
+        "§ 276 BGB",
+        "Themenpool: methodik-897"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-821",
+      "ueberzeile": "4 Punkte Berufung",
+      "titel": "Berufungsbegründung: vier Pflichtinhalte, die den Prüfungsumfang abstecken",
+      "text": "Geprüft wird nur im Rahmen der Anträge (§ 528 ZPO); Verfahrensmängel, die nicht von Amts wegen zu beachten sind, nur, wenn sie gerügt wurden (§ 529 Abs. 2 S. 1 ZPO).",
+      "punkte": [
+        "Berufungsanträge: inwieweit angefochten, welche Abänderung (§ 520 III 2 Nr. 1)",
+        "Rechtsverletzung und ihre Erheblichkeit (Nr. 2)",
+        "Konkrete Zweifel an den Tatsachenfeststellungen (Nr. 3)",
+        "Neue Angriffs- und Verteidigungsmittel samt Zulassungsgrund (Nr. 4)"
+      ],
+      "quellen": [
+        "§ 520 Abs. 3 ZPO",
+        "§ 528 ZPO",
+        "§ 529 ZPO",
+        "§ 531 Abs. 2 ZPO",
+        "Themenpool: assessorz-821"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-816",
+      "ueberzeile": "Streitstand ZPO",
+      "titel": "Einseitige Erledigungserklärung: Was ist sie prozessual?",
+      "norm": "§ 91a ZPO · § 264 Nr. 2 ZPO",
+      "optionen": [
+        "BGH, h.M.: Klageänderung auf Feststellung, dass die Klage bis zum Ereignis zulässig und begründet war.",
+        "Teile der Lit.: Institut eigener Art – im Kern nur noch Streit über die Kosten."
+      ],
+      "text": "Klausur: Mit dem BGH prüfen – Klage ursprünglich zulässig und begründet, Erledigung nach Rechtshängigkeit. Tenor: „Es wird festgestellt, dass der Rechtsstreit in der Hauptsache erledigt ist.“ Kosten: § 91 ZPO.",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "§ 91 ZPO",
+        "Themenpool: assessorz-816"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-488",
+      "ueberzeile": "Merksatz Werkvertrag",
+      "titel": "Selbstvornahme: Vorschuss statt Vorleistung",
+      "text": "Nach erfolgloser Frist darf der Besteller den Mangel selbst beseitigen und Aufwendungsersatz verlangen (§ 637 Abs. 1 BGB). Vorfinanzieren muss er nicht: Er kann Vorschuss verlangen (Abs. 3) und rechnet später ab.",
+      "norm": "§ 637 Abs. 1, 3 BGB",
+      "quellen": [
+        "§ 637 BGB",
+        "§ 635 BGB",
+        "Themenpool: schuldbt-488"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:50.258Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,881 @@
+{
+  "datum": "2027-06-24",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "grundr-615",
+        "themaTitel": "Presse- und Rundfunkfreiheit",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "schuld-014",
+        "themaTitel": "Was ist der Unterschied zwischen dem Ersatz des positiven und des negativen Interesses?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-315",
+        "themaTitel": "Wie prüft man den Totschlag?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "assessoroer-837"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "assessoroer-837"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "schuld-012"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "streitstand",
+        "themaId": "europa-934"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "merksatz",
+        "themaId": "strafat-290"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "begriff",
+        "themaId": "strafat-312"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "grundr-615",
+      "poolTitel": "Presse- und Rundfunkfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25",
+        "2026-12-06"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "schuld-014",
+      "poolTitel": "Was ist der Unterschied zwischen dem Ersatz des positiven und des negativen Interesses?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 249 ff. BGB",
+        "§ 122 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2027-01-26"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-315",
+      "poolTitel": "Wie prüft man den Totschlag?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 212 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-21"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-837",
+      "poolTitel": "Wann Vornahme-, wann Bescheidungstenor?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 5 VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05",
+        "2026-12-05",
+        "2027-04-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-837",
+      "poolTitel": "Wann Vornahme-, wann Bescheidungstenor?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 5 VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05",
+        "2026-12-05",
+        "2027-04-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-012",
+      "poolTitel": "Was ist der Unterschied zwischen dem Schuldner- und dem Gläubigerverzug?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 286 BGB",
+        "§ 293 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2027-02-04"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "europa-934",
+      "poolTitel": "Rückforderung unionsrechtswidriger Beihilfen: § 48 VwVfG unter dem Effektivitätsgebot",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2027-02-21",
+        "2027-04-25"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafat-290",
+      "poolTitel": "Wie ist ein vorsätzliches Begehungsdelikt aufgebaut?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-01",
+        "2027-01-08",
+        "2027-03-15"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-312",
+      "poolTitel": "Wie unterscheidet man Tateinheit und Tatmehrheit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StGB",
+        "§ 53 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-09",
+        "2027-03-30",
+        "2027-04-08"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-615",
+      "slug": "2027-06-24-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zensurverbot: Verboten ist nur die Kontrolle vorher",
+          "titelZeilen": [
+            "Zensurverbot:",
+            "Verboten ist nur die",
+            "Kontrolle vorher"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Nachher gilt Art. 5 Abs. 2 GG",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "vergleich",
+          "titel": "Presse oder Rundfunk?",
+          "links": {
+            "titel": "Pressefreiheit",
+            "punkte": [
+              "Alle zur Verbreitung geeigneten und bestimmten Druckerzeugnisse.",
+              "Formaler Begriff: auch Anzeigenteil und Unterhaltung.",
+              "Schutz von der Recherche bis zur Verbreitung."
+            ]
+          },
+          "rechts": {
+            "titel": "Rundfunkfreiheit",
+            "punkte": [
+              "Verbreitung an die Allgemeinheit über elektronische Wege.",
+              "Dienende Freiheit: Der Gesetzgeber sichert die Vielfalt.",
+              "Leitlinie: Staatsferne des Rundfunks."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Meinung oder Presse?",
+          "text": "Geht es um den Inhalt einer Äußerung in der Zeitung, prüft das BVerfG in der Regel die Meinungsfreiheit (Art. 5 Abs. 1 S. 1 GG). Die Pressefreiheit greift bei pressetypischen Fragen: Durchsuchung der Redaktion, Schutz der Informanten, Zugang zu Informationen, Vertrieb."
+        },
+        {
+          "art": "text",
+          "titel": "Zensurverbot (Art. 5 Abs. 1 S. 3 GG)",
+          "punkte": [
+            "Gemeint ist nur die Vorzensur: staatliche Vorprüfung vor der Veröffentlichung.",
+            "Absolute Grenze – keine Rechtfertigung über Art. 5 Abs. 2 GG.",
+            "Spätere Maßnahmen wie Beschlagnahme oder Unterlassungsurteil sind keine Zensur."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Schranken (Art. 5 Abs. 2 GG)",
+          "punkte": [
+            "Allgemeine Gesetze: nicht gegen eine bestimmte Meinung als solche gerichtet",
+            "Jugendschutz und Recht der persönlichen Ehre",
+            "Wechselwirkung: Die Schranke ist im Licht der Freiheit auszulegen"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zensur ist nur die Vorprüfung vor der Veröffentlichung. Alles Spätere misst du an Art. 5 Abs. 2 GG – mit Wechselwirkung."
+        },
+        {
+          "art": "cta",
+          "titel": "Presse und Rundfunk: drei Fragen",
+          "punkte": [
+            "Inhalt oder Pressetätigkeit?",
+            "Vorzensur oder spätere Maßnahme?",
+            "Allgemeines Gesetz mit Wechselwirkung?"
+          ],
+          "icons": [
+            "zeitung",
+            "stopp",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Zensurverbot heißt: keine staatliche Vorprüfung vor der Veröffentlichung. Diese Grenze ist absolut. Nachträgliche Maßnahmen wie eine Beschlagnahme oder ein Unterlassungsurteil sind dagegen keine Zensur – sie misst du an den Schranken des Art. 5 Abs. 2 GG. Dazu die Abgrenzung von Presse, Rundfunk und Meinungsfreiheit auf einen Blick. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#pressefreiheit",
+        "#5gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Presse, Rundfunk und das Zensurverbot",
+      "coverText": "Nachher gilt Art. 5 Abs. 2 GG",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Das Zensurverbot sperrt nur die staatliche Vorprüfung – was später kommt, braucht eine Schranke.",
+        "handlung": "{A} hovers in front of a printing press, stopped by {B} who holds open a door so the fresh pages can leave before anyone inspects them.",
+        "hinweisRegie": "Place the note in the free space above the stream of fresh pages leaving the press, slightly tilted toward the open door, so the idea of 'no inspection before' is clear without covering {A}.",
+        "alternative": "{B} watches a newspaper already delivered to a doorstep while {A} can only attach a small notice afterwards."
+      },
+      "bildSzene": "fresh pages leave press uninspected",
+      "bildSzeneAlt": "delivered newspaper, notice afterwards",
+      "quellen": [
+        "Art. 5 Abs. 1 GG",
+        "Art. 5 Abs. 2 GG",
+        "Themenpool: grundr-615"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-014",
+      "slug": "2027-06-24-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Das übersehen viele: Nicht jedes negative Interesse ist gedeckelt",
+          "titelZeilen": [
+            "Das übersehen viele:",
+            "Nicht jedes negative",
+            "Interesse ist",
+            "gedeckelt"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Deckel nur in §§ 122, 179 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der verbreitete Kurzschluss",
+          "text": "„Das negative Interesse ist immer durch das positive begrenzt.“ Das steht so nur in § 122 Abs. 1 und § 179 Abs. 2 BGB. Für die Haftung aus c.i.c. (§§ 280 Abs. 1, 311 Abs. 2, 241 Abs. 2 BGB) fehlt eine solche Grenze; nach h.M. ist der Vertrauensschaden dort grundsätzlich nicht gedeckelt."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Interessen",
+          "links": {
+            "titel": "Positives Interesse",
+            "punkte": [
+              "Stellung wie bei ordnungsgemäßer Erfüllung",
+              "Mit entgangenem Gewinn (§ 252 BGB)",
+              "Etwa §§ 280 I, III, 281 ff., 311a II BGB"
+            ]
+          },
+          "rechts": {
+            "titel": "Negatives Interesse",
+            "punkte": [
+              "Stellung wie ohne Vertrauen auf die Gültigkeit",
+              "Vertragskosten, ausgeschlagenes anderes Angebot",
+              "Etwa §§ 122, 179 II BGB, c.i.c."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Wo das Gesetz deckelt",
+          "punkte": [
+            "§ 122 Abs. 1 BGB: nach Anfechtung höchstens bis zum Erfüllungsinteresse",
+            "§ 179 Abs. 2 BGB: Vertreter, der den Mangel nicht kannte – ebenso begrenzt",
+            "c.i.c.: keine gesetzliche Grenze, nach h.M. grundsätzlich unbegrenzt"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Rechenbeispiel",
+          "text": "V verkauft K ein Bild für 1.000 €, Wert 1.100 €, und ficht dann wirksam an. K hat im Vertrauen auf den Vertrag 150 € für den Transport ausgegeben. Vertrauensschaden: 150 €. Erfüllungsinteresse: 100 € (Wertvorteil). § 122 Abs. 1 BGB deckelt – K erhält 100 €."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einen Deckel gibt es nur, wo das Gesetz ihn nennt: § 122 Abs. 1 und § 179 Abs. 2 BGB. Bei c.i.c. ist das negative Interesse nach h.M. grundsätzlich offen."
+        },
+        {
+          "art": "cta",
+          "titel": "Schadensersatz: drei Fragen",
+          "punkte": [
+            "Erfüllung oder Vertrauen ersetzen?",
+            "Welche Norm trägt den Anspruch?",
+            "Deckel in § 122 oder § 179 BGB?"
+          ],
+          "icons": [
+            "waage",
+            "paragraf",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Das übersehen viele: Die Deckelung des negativen Interesses durch das positive steht nur in § 122 Abs. 1 und § 179 Abs. 2 BGB. Bei der Haftung aus c.i.c. ist der Vertrauensschaden nach h.M. grundsätzlich nicht begrenzt. Positives Interesse heißt: so stellen, als wäre ordnungsgemäß erfüllt; negatives: als hätte der Gläubiger nie auf die Gültigkeit vertraut. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#schadensersatz",
+        "#122bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Positives und negatives Interesse",
+      "coverText": "Deckel nur in §§ 122, 179 BGB",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Das Vertrauensinteresse ist nur dort durch das Erfüllungsinteresse gedeckelt, wo das Gesetz es ausdrücklich anordnet.",
+        "handlung": "{A} places a lid on one of two jars filled with crystals, while {B} carries the second, open jar that keeps growing above its rim.",
+        "hinweisRegie": "Place the note in the free space between the closed jar and the overflowing open jar, slightly tilted toward the open one, so the missing cap is the focus without covering {A}'s hand on the lid.",
+        "alternative": "{B} measures two ropes, cutting one at a marked line while the other runs on freely past the mark."
+      },
+      "bildSzene": "one jar lidded, other overflowing",
+      "bildSzeneAlt": "two ropes, one cut at mark",
+      "quellen": [
+        "§ 122 BGB",
+        "§ 179 Abs. 2 BGB",
+        "§ 249 BGB",
+        "§ 252 BGB",
+        "§§ 280, 311 Abs. 2, 241 Abs. 2 BGB",
+        "Themenpool: schuld-014"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.011Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-315",
+      "slug": "2027-06-24-b3",
+      "titelZeilen": [
+        "Provoziert getötet:",
+        "§ 213 ist kein",
+        "eigenes Delikt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Provoziert getötet: § 213 ist kein eigenes Delikt",
+          "unter": "Totschlag · § 212 StGB",
+          "text": "O beleidigt A schwer, A tötet O noch auf der Stelle im Zorn.",
+          "norm": "§§ 212, 213 StGB",
+          "icon": "warnung",
+          "sprecher": "Provoziert und getötet? Das bleibt Totschlag. § 213 ist kein eigener Tatbestand, sondern eine Strafzumessungsregel. So prüfst du den Totschlag sauber in vier Schritten.",
+          "marken": [
+            "Provokation",
+            "Totschlag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Objektiver Tatbestand",
+          "text": "Einen anderen Menschen töten – Mensch ist man ab Beginn der Geburt.",
+          "norm": "§ 212 Abs. 1 StGB",
+          "sprecher": "Schritt eins, der objektive Tatbestand: A tötet einen anderen Menschen. Kausalität und objektive Zurechnung prüfst du wie immer. Mensch ist man nach der Rechtsprechung ab Beginn der Geburt.",
+          "marken": [
+            "Tötung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vorsatz",
+          "text": "Bedingter Vorsatz genügt – bei Tötungen sorgfältig aus den Umständen begründen.",
+          "norm": "§ 15 StGB",
+          "sprecher": "Schritt zwei, der Vorsatz. Bedingter Vorsatz reicht. Bei gefährlichen Gewalthandlungen begründest du Wissens- und Willenselement aber sorgfältig aus den Umständen, etwa aus der Art der Verletzungshandlung.",
+          "marken": [
+            "dolus eventualis"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rechtswidrigkeit und Schuld",
+          "text": "Die abgeschlossene Beleidigung ist kein gegenwärtiger Angriff. Zorn allein hebt die Schuld nicht auf.",
+          "norm": "§ 32 StGB",
+          "sprecher": "Schritt drei, Rechtswidrigkeit und Schuld. Die Beleidigung ist abgeschlossen, also kein gegenwärtiger Angriff mehr. Notwehr scheidet aus. Und Zorn allein hebt die Schuld nicht auf.",
+          "marken": [
+            "keine Notwehr"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Strafzumessung: § 213",
+          "text": "Ohne eigene Schuld schwer beleidigt, zum Zorn gereizt, auf der Stelle hingerissen: minder schwerer Fall.",
+          "norm": "§ 213 StGB",
+          "sprecher": "Schritt vier, erst jetzt: § 213. Wurde A ohne eigene Schuld durch eine schwere Beleidigung zum Zorn gereizt und auf der Stelle zur Tat hingerissen, liegt ein minder schwerer Fall vor. Der Strafrahmen sinkt, der Schuldspruch bleibt: Totschlag.",
+          "marken": [
+            "Strafrahmen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Anders: § 216 StGB",
+          "text": "Tötung auf Verlangen ist ein eigener, privilegierender Tatbestand.",
+          "norm": "§ 216 StGB",
+          "sprecher": "Verwechsle das nicht mit § 216. Die Tötung auf ausdrückliches und ernstliches Verlangen ist ein eigener Tatbestand. Den prüfst du vorrangig, und er sperrt den Totschlag.",
+          "marken": [
+            "eigener Tatbestand"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "§ 213: Strafzumessung. § 216: eigener Tatbestand.",
+          "norm": null,
+          "sprecher": "Merke: § 213 gehört in die Strafzumessung, § 216 ist ein eigenes Delikt. Verurteilt wird bei § 213 trotzdem wegen Totschlags.",
+          "marken": [
+            "Einordnung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst Schuldspruch, dann Strafrahmen",
+          "text": "Speichern für die nächste Tötungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Tötungsklausur. Und prüf die Provokation erst, wenn der Totschlag steht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Provoziert und getötet – das bleibt Totschlag. § 213 StGB ist kein eigener Tatbestand, sondern regelt den minder schweren Fall: Er senkt den Strafrahmen, ändert aber nichts am Schuldspruch. Anders § 216 StGB: Die Tötung auf Verlangen ist ein eigenes, privilegierendes Delikt. Speichern für die nächste Tötungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#212stgb",
+        "#totschlag",
+        "#213stgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Totschlag: § 213 StGB richtig einordnen",
+      "coverText": "Strafzumessung, kein Tatbestand",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Die Provokation mildert beim Totschlag nur die Strafe – das Delikt bleibt dasselbe.",
+        "handlung": "{A} turns down a large dial on a sentencing machine by one notch, while {B} nervously notices that the label on the machine's front stays exactly the same.",
+        "hinweisRegie": "Place the note in the free space between the lowered dial and the unchanged front label, slightly tilted toward the dial, so the change of range, not of offence, is visible without covering {B}.",
+        "alternative": "{B} swaps a heavy weight on a scale for a lighter one while {A} keeps the name plate on the scale untouched."
+      },
+      "bildSzene": "dial turned down, label unchanged",
+      "bildSzeneAlt": "lighter weight, same name plate",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 213 StGB",
+        "§ 216 StGB",
+        "§ 32 StGB",
+        "Themenpool: strafbt-315"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.013Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-837",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Verpflichtungsklage voll erfolgreich. Was steht im Tenor zum Ablehnungsbescheid?",
+      "optionen": [
+        "Nur die Aufhebung – die Behörde entscheidet neu",
+        "Aufheben (klarstellend) und zur Vornahme verpflichten",
+        "Nichts – aufheben darf das Gericht ihn nicht"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: assessoroer-837"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.013Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-837",
+      "ueberzeile": "Auflösung",
+      "titel": "Aufheben und verpflichten – die Aufhebung stellt klar",
+      "text": "Bei Spruchreife verpflichtet das Gericht die Behörde zur Vornahme (§ 113 Abs. 5 S. 1 VwGO). Den Ablehnungsbescheid in Gestalt des Widerspruchsbescheids hebt es üblicherweise klarstellend mit auf. Etwa: „Der Bescheid vom … wird aufgehoben. Der Beklagte wird verpflichtet, dem Kläger die beantragte Genehmigung zu erteilen.“",
+      "norm": "§ 113 Abs. 5 S. 1 VwGO",
+      "quellen": [
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: assessoroer-837"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.013Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur die Aufhebung – die Behörde entscheidet neu",
+        "Aufheben (klarstellend) und zur Vornahme verpflichten",
+        "Nichts – aufheben darf das Gericht ihn nicht"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-012",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 286 Abs. 4 BGB: Ohne Vertretenmüssen kein Schuldnerverzug",
+      "text": "Der Schuldner kommt nicht in Verzug, solange die Leistung infolge eines Umstands unterbleibt, den er nicht zu vertreten hat. Das Vertretenmüssen wird vermutet – er muss sich entlasten. Beim Gläubigerverzug fragt § 293 BGB dagegen nicht nach Verschulden.",
+      "norm": "§ 286 Abs. 4 BGB",
+      "quellen": [
+        "§ 286 BGB",
+        "§ 293 BGB",
+        "Themenpool: schuld-012"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.013Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-934",
+      "ueberzeile": "Streitstand Europarecht",
+      "titel": "Beihilfe ohne Notifizierung per Vertrag gewährt: Ist der Vertrag nichtig?",
+      "norm": "Art. 108 Abs. 3 S. 3 AEUV · § 134 BGB",
+      "optionen": [
+        "BGH: Das Durchführungsverbot ist ein Verbotsgesetz – der Vertrag ist nach § 134 BGB nichtig.",
+        "Teile der Lit.: Nichtigkeit nicht zwingend – die Rückforderung samt Zinsen genüge dem Unionsrecht."
+      ],
+      "text": "Klausur: Mit dem BGH § 134 BGB bejahen – so wird die Beihilfe wirksam zurückgeführt, wie es das Unionsrecht verlangt. Bei öffentlich-rechtlichen Verträgen führt der Weg über § 59 Abs. 1 VwVfG i.V.m. § 134 BGB.",
+      "quellen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 134 BGB",
+        "§ 59 Abs. 1 VwVfG",
+        "Themenpool: europa-934"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.013Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-290",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Erst Kausalität, dann Zurechnung",
+      "text": "Handlung, Erfolg, Kausalität – erst dann fragst du, ob sich im Erfolg eine rechtlich missbilligte Gefahr verwirklicht hat.",
+      "norm": "Objektiver Tatbestand, z. B. § 223 StGB",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 223 StGB",
+        "Themenpool: strafat-290"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.013Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-312",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Natürliche Handlungseinheit: mehrere Akte, eine Handlung",
+      "text": "Mehrere gleichartige Betätigungen sind eine Handlung im Sinne des § 52 StGB, wenn sie auf einem einheitlichen Willen beruhen und räumlich-zeitlich so eng zusammenhängen, dass sie für einen Dritten als einheitliches Tun erscheinen. Beispiel: mehrere Faustschläge in einer Auseinandersetzung. Bei höchstpersönlichen Gütern verschiedener Opfer ist die Rspr. zurückhaltend.",
+      "norm": "§ 52 StGB",
+      "quellen": [
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "Themenpool: strafat-312"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:57.013Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

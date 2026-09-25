@@ -1,0 +1,875 @@
+{
+  "datum": "2027-06-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-053",
+        "themaTitel": "Was sind die allgemeinen Voraussetzungen der Zwangsvollstreckung?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-767",
+        "themaTitel": "Schweigerecht und nemo tenetur",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-410",
+        "themaTitel": "Welcher Zeitpunkt ist für die Beurteilung der Sach- und Rechtslage maßgeblich?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "schuld-459"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "schuld-459"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "staat-597"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "streitstand",
+        "themaId": "streit-33"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:43",
+        "art": "merksatz",
+        "themaId": "handelsg-267"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "assessorz-576"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-053",
+      "poolTitel": "Was sind die allgemeinen Voraussetzungen der Zwangsvollstreckung?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 794 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-767",
+      "poolTitel": "Schweigerecht und nemo tenetur",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO; Art. 6 EMRK"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14",
+        "2026-11-14",
+        "2027-01-28"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-410",
+      "poolTitel": "Welcher Zeitpunkt ist für die Beurteilung der Sach- und Rechtslage maßgeblich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "materielles Fachrecht",
+        "§ 113 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-19",
+        "2027-04-08",
+        "2027-04-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-459",
+      "poolTitel": "Naturalrestitution, Differenzhypothese und Vorteilsausgleichung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 249 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-28",
+        "2027-01-28"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-459",
+      "poolTitel": "Naturalrestitution, Differenzhypothese und Vorteilsausgleichung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 249 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-28",
+        "2027-01-28"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "staat-597",
+      "poolTitel": "Bundesrat: Mitwirkung und Stimmabgabe",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 50 ff. GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-11-25",
+        "2027-04-16"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-33",
+      "poolTitel": "Nutzungsersatz bei Ersatzlieferung im Verbrauchsgüterkauf",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 439, 475 BGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "handelsg-267",
+      "poolTitel": "Wie wirkt das kaufmännische Bestätigungsschreiben?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 346 HGB",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-21",
+        "2027-02-17"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "assessorz-576",
+      "poolTitel": "Schlüssigkeit und Erheblichkeit des Parteivortrags",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23",
+        "2027-02-13",
+        "2027-02-13"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-053",
+      "slug": "2027-06-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Urteil noch nicht zugestellt – der Gerichtsvollzieher pfändet",
+          "titelZeilen": [
+            "Urteil noch nicht",
+            "zugestellt – der",
+            "Gerichtsvollzieher",
+            "pfändet"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Gleichzeitige Zustellung genügt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "S wird durch Anerkenntnisurteil verurteilt, an G 4.000 € zu zahlen. G hat bereits eine vollstreckbare Ausfertigung, dem S ist das Urteil aber noch nicht zugestellt. Der Gerichtsvollzieher steht vor der Tür. Darf er heute pfänden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Titel",
+              "text": "Vorläufig vollstreckbares Endurteil (§ 704 ZPO), beim Anerkenntnisurteil ohne Sicherheitsleistung (§ 708 Nr. 1 ZPO)."
+            },
+            {
+              "titel": "2. Klausel",
+              "text": "Vollstreckbare Ausfertigung nach §§ 724, 725 ZPO liegt vor. Entbehrlich wäre sie etwa beim Vollstreckungsbescheid (§ 796 Abs. 1)."
+            },
+            {
+              "titel": "3. Zustellung",
+              "text": "§ 750 Abs. 1 S. 1 ZPO: Das Urteil muss bereits zugestellt sein oder gleichzeitig zugestellt werden."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Der Gerichtsvollzieher stellt zu Beginn zu und pfändet sofort. Zustellung im Parteibetrieb genügt (§ 750 Abs. 1 S. 2)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die verbreitete Annahme",
+          "text": "„Ohne vorherige Zustellung keine Vollstreckung.“ Beim Urteil reicht die gleichzeitige Zustellung. Anders nur, wo das Gesetz eine Wartefrist verlangt – dann muss der Titel vorher zugestellt sein."
+        },
+        {
+          "art": "text",
+          "titel": "Wo die Wartefrist gilt",
+          "punkte": [
+            "Sicherungsvollstreckung nach § 720a ZPO: zwei Wochen (§ 750 Abs. 3 ZPO).",
+            "Notarielle Urkunde und gesonderter Kostenfestsetzungsbeschluss: zwei Wochen (§ 798 ZPO).",
+            "Daneben besondere Voraussetzungen: Kalendertag, Sicherheitsleistung (§ 751 ZPO), Zug um Zug (§ 756 ZPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Titel, Klausel, Zustellung. Beim Urteil darf die Zustellung mit der Vollstreckung zusammenfallen – außer eine Wartefrist greift."
+        },
+        {
+          "art": "cta",
+          "titel": "Vollstrecken in drei Schritten",
+          "punkte": [
+            "Titel nach §§ 704, 794 ZPO",
+            "Klausel nach §§ 724, 725 ZPO",
+            "Zustellung nach § 750 ZPO"
+          ],
+          "icons": [
+            "dokument",
+            "schluessel",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Urteil noch nicht zugestellt – und der Gerichtsvollzieher pfändet trotzdem. Die allgemeinen Voraussetzungen der Zwangsvollstreckung sind Titel, Klausel und Zustellung. Nach § 750 Abs. 1 ZPO genügt es, wenn das Urteil gleichzeitig mit dem Beginn der Vollstreckung zugestellt wird. Anders bei den Wartefristen, etwa für notarielle Urkunden nach § 798 ZPO. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#750zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vollstrecken ohne vorherige Zustellung?",
+      "coverText": "Gleichzeitige Zustellung genügt",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Beim Urteil darf die Zustellung im selben Moment erfolgen, in dem die Vollstreckung beginnt.",
+        "handlung": "{A} hovers at a cave door and hands {B} a sealed envelope with one arm while its other arm already attaches a seal tag to {B}'s crystal cart.",
+        "hinweisRegie": "Place the note in the free space between the envelope and the seal tag, slightly tilted toward the cart, so the simultaneous handover is clear without covering {B}'s face.",
+        "alternative": "{B} receives a letter at the exact moment a second hand places a lock on his tool chest, both movements mirrored."
+      },
+      "bildSzene": "envelope and seal tag at once",
+      "bildSzeneAlt": "letter handed as chest gets locked",
+      "quellen": [
+        "§ 704 ZPO",
+        "§ 708 ZPO",
+        "§ 724 ZPO",
+        "§ 725 ZPO",
+        "§ 750 ZPO",
+        "§ 751 ZPO",
+        "§ 756 ZPO",
+        "§ 796 ZPO",
+        "§ 798 ZPO",
+        "§ 720a ZPO",
+        "Themenpool: zpo-053"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.638Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-767",
+      "slug": "2027-06-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Erst im Prozess seine Version – zählt das gegen ihn?",
+          "titelZeilen": [
+            "Erst im Prozess",
+            "seine Version –",
+            "zählt das gegen",
+            "ihn?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Auch frühes Schweigen ist geschützt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A schweigt im Ermittlungsverfahren gegenüber Polizei und Staatsanwaltschaft. Erst in der Hauptverhandlung lässt er sich ein: Er habe in Notwehr gehandelt. Das Gericht schreibt, die späte Einlassung sei wenig glaubhaft – ein Unschuldiger hätte sich früher erklärt. Zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Schweigerecht",
+              "text": "Der Beschuldigte darf zu jeder Zeit schweigen (§ 136 Abs. 1 S. 2, § 243 Abs. 5 S. 1 StPO) – Ausdruck von nemo tenetur."
+            },
+            {
+              "titel": "2. Schutz des Schweigens",
+              "text": "Wer ganz schweigt, darf deshalb keine Nachteile erleiden. Das gilt auch für ein zeitweiliges Schweigen im Vorverfahren."
+            },
+            {
+              "titel": "3. Folge für die Würdigung",
+              "text": "Aus dem späten Zeitpunkt der Einlassung darf das Gericht nach dem BGH keine nachteiligen Schlüsse ziehen."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Die Begründung ist rechtsfehlerhaft. Das Gericht darf die Einlassung nur an ihrem Inhalt und am Beweisergebnis messen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Abgrenzung: Teilschweigen",
+          "text": "Anders liegt es, wenn A sich zur Sache äußert, aber einzelne Punkte ausspart. Dann ist er Beweismittel geworden, und das Gericht darf das Teilschweigen nach der Rspr. würdigen. Ganz schweigen oder später schweigen ist geschützt – selektiv erzählen nur eingeschränkt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schweigen ist kein Indiz – auch nicht, wenn es erst in der Hauptverhandlung endet. Gewürdigt wird, was gesagt wird, nicht wann."
+        },
+        {
+          "art": "cta",
+          "titel": "Schweigen in drei Stufen",
+          "punkte": [
+            "Ganz geschwiegen: nicht verwertbar",
+            "Spät eingelassen: kein Nachteil",
+            "Teilweise geschwiegen: würdigbar"
+          ],
+          "icons": [
+            "stopp",
+            "uhr",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Erst in der Hauptverhandlung erzählt A seine Version – darf das gegen ihn sprechen? Nein: Das Schweigerecht schützt auch das anfängliche Schweigen im Ermittlungsverfahren. Aus dem späten Zeitpunkt der Einlassung darf das Gericht nach dem BGH keine nachteiligen Schlüsse ziehen. Anders beim Teilschweigen desjenigen, der sich zur Sache einlässt. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#schweigerecht",
+        "#nemotenetur",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Späte Einlassung: darf das schaden?",
+      "coverText": "Auch frühes Schweigen ist geschützt",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer erst spät spricht, darf dafür nicht schlechter behandelt werden als jemand, der gleich geredet hat.",
+        "handlung": "{A} finally opens a long-closed speaking tube and starts talking, while {B} deliberately pushes aside an hourglass that lies on the table between them.",
+        "hinweisRegie": "Place the note in the free space above the pushed-aside hourglass, slightly tilted toward it, so the idea that timing does not count stays in focus without covering {A}'s face.",
+        "alternative": "{B} listens attentively to {A}'s story while turning a large calendar face down on the table."
+      },
+      "bildSzene": "speaking tube opened, hourglass pushed aside",
+      "bildSzeneAlt": "calendar turned face down while listening",
+      "quellen": [
+        "§ 136 Abs. 1 S. 2 StPO",
+        "§ 243 Abs. 5 S. 1 StPO",
+        "§ 261 StPO",
+        "Art. 6 EMRK",
+        "Themenpool: stpo-767"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.638Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-410",
+      "slug": "2027-06-16-b3",
+      "titelZeilen": [
+        "Anfechtungsklage –",
+        "und doch zählt der",
+        "Verhandlungstag"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Anfechtungsklage – und doch zählt der Verhandlungstag",
+          "unter": "Maßgeblicher Zeitpunkt · § 113 VwGO",
+          "text": "Nicht jede Anfechtung schaut auf den Widerspruchsbescheid.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "icon": "kalender",
+          "sprecher": "Anfechtungsklage, und trotzdem zählt der Verhandlungstag. Das passt nicht zur Faustregel, die du gelernt hast. Und genau deshalb lohnt der zweite Blick.",
+          "marken": [
+            "Zeitpunkt?",
+            "Faustregel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Das materielle Recht entscheidet",
+          "text": "Welcher Zeitpunkt zählt, folgt nach dem BVerwG aus dem Fachrecht.",
+          "norm": null,
+          "sprecher": "Schritt eins: Die VwGO selbst regelt den Zeitpunkt nicht. Nach dem Bundesverwaltungsgericht folgt er aus dem materiellen Recht. Die Faustregeln sind nur Ausgangspunkte.",
+          "marken": [
+            "Fachrecht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anfechtung: letzte Behördenentscheidung",
+          "text": "Regelmäßig die Sach- und Rechtslage beim Widerspruchsbescheid.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "sprecher": "Schritt zwei: Bei der Anfechtungsklage schaust du regelmäßig auf die letzte Behördenentscheidung, also meist den Widerspruchsbescheid. Was danach passiert, ändert an der Rechtmäßigkeit grundsätzlich nichts.",
+          "marken": [
+            "Widerspruchsbescheid"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausnahme: Dauerverwaltungsakt",
+          "text": "Wirkt der Bescheid fort, zählt regelmäßig die letzte mündliche Verhandlung.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Ausnahme. Bei Dauerverwaltungsakten, etwa Verkehrszeichen, stellt die Rechtsprechung regelmäßig auf die letzte mündliche Verhandlung ab. Der Bescheid regelt ja jeden Tag aufs Neue.",
+          "marken": [
+            "Verkehrszeichen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verpflichtung: letzte mündliche Verhandlung",
+          "text": "Grundsätzlich zählt, ob der Anspruch jetzt besteht.",
+          "norm": "§ 113 Abs. 5 VwGO",
+          "sprecher": "Schritt vier: Bei der Verpflichtungsklage zählt grundsätzlich die letzte mündliche Verhandlung. Das Gericht fragt, ob der Kläger den Anspruch jetzt hat. Ausnahmen ergeben sich wieder aus dem Fachrecht, etwa bei Stichtagsregelungen.",
+          "marken": [
+            "Anspruch jetzt?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel: das Halteverbot",
+          "text": "Baustelle weg, Schild noch da: Es wird im Prozess rechtswidrig.",
+          "norm": null,
+          "sprecher": "Ein Beispiel: Ein Halteverbot wird wegen einer Baustelle aufgestellt. Während des Prozesses ist die Baustelle längst fertig. Weil das Schild fortwirkt, prüft das Gericht die Lage im Zeitpunkt der Verhandlung.",
+          "marken": [
+            "Baustelle weg"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Erst das Fachrecht, dann die Faustregel, dann die Ausnahme.",
+          "norm": null,
+          "sprecher": "Merke: Zuerst das Fachrecht fragen. Dann die Faustregel anwenden. Und bei Dauerverwaltungsakten an die Ausnahme denken.",
+          "marken": [
+            "drei Fragen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zeitpunkt immer begründen",
+          "text": "Speichern für die nächste VwGO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste VwGO-Klausur. Ein Satz zum maßgeblichen Zeitpunkt gehört in jede Begründetheit.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Anfechtungsklage – und trotzdem zählt der Tag der mündlichen Verhandlung. Welcher Zeitpunkt maßgeblich ist, folgt nach dem BVerwG aus dem materiellen Recht. Faustregel: Anfechtung – letzte Behördenentscheidung, Verpflichtung – letzte mündliche Verhandlung. Bei Dauerverwaltungsakten wie Verkehrszeichen stellt die Rechtsprechung aber regelmäßig auf die Verhandlung ab. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#anfechtungsklage",
+        "#verwaltungsprozessrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Maßgeblicher Zeitpunkt: die Ausnahme",
+      "coverText": "Dauerverwaltungsakt: Verhandlungstag",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Bei einem fortwirkenden Bescheid prüft das Gericht die Lage am Tag der Verhandlung, nicht beim Erlass.",
+        "handlung": "{A} points his pointer at a still-standing no-parking sign next to an empty, finished construction site, while {B} nervously holds an old photo of the busy site.",
+        "hinweisRegie": "Place the note in the free space between the sign and the empty site, slightly tilted toward the sign, so the changed situation is clear without covering {B}'s photo.",
+        "alternative": "{B} flips a large wall calendar forward to today's page while {A} taps a permanent signpost with his pointer."
+      },
+      "bildSzene": "no-parking sign beside finished site",
+      "bildSzeneAlt": "calendar flipped to today, signpost",
+      "quellen": [
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: vwgo-410"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-von-faustregel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-459",
+      "ueberzeile": "Prüfungsfrage Schuldrecht",
+      "titel": "Nach dem Unfall zahlt Gs private Unfallversicherung 10.000 €. Mindert das seinen Anspruch gegen den Schädiger?",
+      "optionen": [
+        "Nein – dieser Vorteil soll den Schädiger nicht entlasten",
+        "Ja – sonst wäre G doppelt entschädigt",
+        "Nur zur Hälfte, über § 254 BGB"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 249 BGB",
+        "§ 86 VVG",
+        "Themenpool: schuld-459"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-459",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die selbst finanzierte Versicherung entlastet den Schädiger nicht",
+      "text": "Vorteile werden nur angerechnet, wenn das dem Zweck des Ersatzanspruchs entspricht, den Geschädigten nicht unzumutbar belastet und den Schädiger nicht unbillig entlastet. G hat die Unfallversicherung mit eigenen Beiträgen für sich abgeschlossen – das soll nicht dem Schädiger zugutekommen. Bei Schadensversicherungen geht der Anspruch auf den Versicherer über (§ 86 VVG).",
+      "norm": "§ 249 BGB · § 86 VVG",
+      "quellen": [
+        "§ 249 BGB",
+        "§ 86 VVG",
+        "Themenpool: schuld-459"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.639Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – dieser Vorteil soll den Schädiger nicht entlasten",
+        "Ja – sonst wäre G doppelt entschädigt",
+        "Nur zur Hälfte, über § 254 BGB"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-597",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 51 Abs. 1 GG: Im Bundesrat sitzen Regierungen, keine Abgeordneten",
+      "text": "Mitglieder sind Mitglieder der Landesregierungen, die diese bestellen und abberufen. Jedes Land hat je nach Einwohnerzahl drei bis sechs Stimmen (Art. 51 Abs. 2 GG), die es nur einheitlich abgeben kann (Abs. 3 S. 2). Folge: Die Mitglieder sind an Weisungen ihrer Regierung gebunden – ein freies Mandat wie im Bundestag gibt es nicht.",
+      "norm": "Art. 51 GG",
+      "quellen": [
+        "Art. 50 GG",
+        "Art. 51 GG",
+        "Themenpool: staat-597"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "streit-33",
+      "ueberzeile": "Streitstand Kaufrecht",
+      "titel": "Ersatzlieferung unter Unternehmern: Zahlt der Käufer für die Nutzung der mangelhaften Sache?",
+      "norm": "§§ 439 V, 475 III BGB",
+      "optionen": [
+        "BGH: Ja – außerhalb des Verbrauchsgüterkaufs gilt § 439 Abs. 5 BGB.",
+        "Teile der Lit.: Nein – kein Vorteil aus der eigenen Schlechtleistung."
+      ],
+      "text": "Beim Verbrauchsgüterkauf schließt § 475 Abs. 3 S. 1 BGB den Nutzungsersatz aus – eine Folge der EuGH-Rechtsprechung. Klausur: Im B2B-Fall mit dem Wortlaut beginnen, dann fragen, ob die Wertung übertragbar ist. Der BGH lehnt das ab.",
+      "quellen": [
+        "§ 439 Abs. 5 BGB",
+        "§ 475 Abs. 3 BGB",
+        "§ 346 BGB"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-267",
+      "ueberzeile": "Merksatz Handelsrecht",
+      "titel": "Bestätigungsschreiben binden auch Nicht-Kaufleute",
+      "text": "Der Empfänger muss Kaufmann sein oder ähnlich einem Kaufmann in größerem Umfang am Geschäftsverkehr teilnehmen; ähnlich beim Absender. Widerspricht der Empfänger nicht unverzüglich, gilt der bestätigte Inhalt.",
+      "norm": "§ 346 HGB",
+      "quellen": [
+        "§ 346 HGB",
+        "§ 242 BGB",
+        "Themenpool: handelsg-267"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-576",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Erheblichkeit: Ändert der Beklagtenvortrag das Ergebnis – als wahr unterstellt?",
+      "text": "Erheblich ist der Vortrag des Beklagten, wenn er – seine Richtigkeit unterstellt – dem schlüssigen Klagevortrag die Grundlage entzieht: durch Bestreiten anspruchsbegründender Tatsachen oder durch Einwendungen und Einreden. Funktion: Nur über streitige und erhebliche Tatsachen wird Beweis erhoben. In der Relation folgt die Erheblichkeitsprüfung auf die Schlüssigkeit.",
+      "norm": "§ 138 ZPO · § 284 ZPO",
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 284 ZPO",
+        "Themenpool: assessorz-576"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:07:19.639Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

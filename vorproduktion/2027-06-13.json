@@ -1,0 +1,902 @@
+{
+  "datum": "2027-06-13",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafbt-737",
+        "themaTitel": "Totschlag und Tötungsvorsatz",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "vwgo-669",
+        "themaTitel": "Beschwerde/Berufung im Überblick",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "grundr-090"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "grundr-090"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "sachen-500"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "fehler",
+        "themaId": "bgbat-912"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "tipp",
+        "themaId": "schuld-016"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "zahl",
+        "themaId": "revision-887"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-737",
+      "poolTitel": "Totschlag und Tötungsvorsatz",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 212 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-29",
+        "2027-04-12",
+        "2027-06-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-669",
+      "poolTitel": "Beschwerde/Berufung im Überblick",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 124 ff., 146 ff. VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-11-02",
+        "2026-11-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-090",
+      "poolTitel": "Wann ist Art. 2 Abs. 1 GG einschlägig und wann ein spezielleres Grundrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08",
+        "2026-11-08",
+        "2027-03-05"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-090",
+      "poolTitel": "Wann ist Art. 2 Abs. 1 GG einschlägig und wann ein spezielleres Grundrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08",
+        "2026-11-08",
+        "2027-03-05"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-500",
+      "poolTitel": "Eigentumsvorbehalt und Anwartschaftsrecht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 449, 929, 158 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-02",
+        "2027-01-07"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "bgbat-912",
+      "poolTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 133 BGB",
+        "§ 157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-12",
+        "2027-02-10",
+        "2027-04-13"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "schuld-016",
+      "poolTitel": "Wann haftet man für das Verschulden eines Erfüllungsgehilfen?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 278 BGB",
+        "§ 831 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-12",
+        "2027-01-27",
+        "2027-04-03"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-887",
+      "poolTitel": "Wie entscheidet das Revisionsgericht?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 349 StPO",
+        "§ 353 StPO",
+        "§ 354 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2027-01-19",
+        "2027-04-06"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-06-13-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen in vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen in",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausurtechnik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Lieferkette: Kondiziert wird beim eigenen Vertragspartner, nicht beim Endempfänger.",
+            "StVG: Halter haftet ohne Verschulden, Fahrer für vermutetes Verschulden.",
+            "Rechtsmangel: Auch ein bloßes Buchrecht zählt.",
+            "Kaufmann: § 1 HGB deklaratorisch, §§ 2, 3 HGB konstitutiv, dazu §§ 5, 6 HGB.",
+            "EBV: Notwendiges fast immer, Nützliches nur für Redliche, Luxus nie.",
+            "Überbau: Entschuldigt heißt dulden gegen Rente."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 239 StGB: Nur ein zumutbarer, gefahrloser Ausweg lässt das Einsperren entfallen.",
+            "Heimtücke: Lehre begrenzt im Tatbestand, BGH über die Rechtsfolgenlösung.",
+            "§ 226 StGB: Innere Organe sind keine Glieder.",
+            "Garanten: Beschützer – ein Gut, alle Gefahren; Überwacher – eine Gefahr, alle Güter.",
+            "Fundfall: Ohne fremden Gewahrsam kein Diebstahl, sondern § 246 StGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Art. 45 AEUV: Auch unterschiedslose Beschränkungen brauchen eine Rechtfertigung.",
+            "Bebauungsplan: Vorabbindung führt zum Abwägungsausfall – dann §§ 214, 215 BauGB.",
+            "Vorbehalt des Gesetzes: Verwaltungsvorschriften ermächtigen nicht zum Eingriff.",
+            "§ 61 VwGO: Behörden nur, wenn das Landesrecht es bestimmt.",
+            "Wesentlichkeit: Ein Schulverweis braucht ein Parlamentsgesetz."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Datum, Alter, wörtliche Rede und Rechtsansichten als Signale markieren.",
+            "Kopfsache: Abrufen statt Wiederlesen – abends zählt, was du erklären kannst."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Kannst du den Vorrang der Leistungsbeziehung an der Lieferkette erklären?",
+            "Kannst du Beschützer- und Überwachergarant in einem Satz abgrenzen?",
+            "Kannst du sagen, wann ein Abwägungsfehler nach § 214 BauGB beachtlich ist?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht an Anspruch und Rechtsfolge festziehen",
+            "Strafrecht an Tatbestand und Abgrenzung wiederholen",
+            "Öffentliches Recht als Prüfungsketten abrufen",
+            "Klausurtechnik & Kopfsache im Alltag testen"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen in vier Bereichen – Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache. Von der Lieferkette im Bereicherungsrecht über die Garantenstellung bis zur Beteiligtenfähigkeit nach § 61 VwGO. Geh pro Bereich nur die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst, und mach den 30-Sekunden-Selbsttest.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Klausurtechnik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [],
+        "kernidee": "Vier strikt getrennte Lernstationen: Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache.",
+        "handlung": "Spätere Charakterebene visualisiert nur diesen Kern: Vier strikt getrennte Lernstationen: Zivilrecht, Strafrecht, Öffentliches Recht sowie Klausurtechnik & Kopfsache.",
+        "hinweisRegie": "Aha-Hinweis in der freien unteren Bühne; kein Ersatzmotiv.",
+        "alternative": null
+      },
+      "quellen": [
+        "§ 812 BGB",
+        "§§ 7, 17, 18 StVG",
+        "§ 435 BGB",
+        "§§ 1–6 HGB",
+        "§§ 994 ff. BGB",
+        "§ 912 BGB",
+        "§ 239 StGB",
+        "§ 211 StGB",
+        "§ 226 StGB",
+        "§ 13 StGB",
+        "§ 246 StGB",
+        "Art. 45 AEUV",
+        "§§ 214, 215 BauGB",
+        "Art. 20 Abs. 3 GG",
+        "§§ 61, 62 VwGO",
+        "Themenpool: methodik-906",
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "achtzehn-themen-vier-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-737",
+      "slug": "2027-06-13-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Die „Hemmschwelle“: ein Klausursatz, der so nicht mehr trägt",
+          "titelZeilen": [
+            "Die „Hemmschwelle“:",
+            "ein Klausursatz,",
+            "der so nicht",
+            "mehr trägt"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Gesamtschau statt Formel",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Satz",
+          "text": "„Wegen der hohen Hemmschwelle vor der Tötung eines Menschen liegt Tötungsvorsatz fern.“ So oder ähnlich steht es in vielen Klausuren. Der BGH hat aber klargestellt: Die Hemmschwelle ist keine eigene Beweisregel. Entscheidend ist eine Gesamtschau aller objektiven und subjektiven Umstände."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Objektiver Tatbestand",
+              "text": "Ein anderer Mensch wird getötet; Kausalität und objektive Zurechnung. Mensch ist man nach der Rspr. ab Beginn der Eröffnungswehen."
+            },
+            {
+              "titel": "2. Vorsatz",
+              "text": "Bedingter Vorsatz genügt: Der Täter erkennt den Tod als möglich und nimmt ihn billigend in Kauf bzw. findet sich damit ab."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Rechtswidrigkeit und Schuld",
+              "text": "Notwehr, Notstand, Schuldausschluss – nach den allgemeinen Regeln."
+            },
+            {
+              "titel": "4. Strafrahmen",
+              "text": "Besonders schwerer Fall nach § 212 Abs. 2 StGB (lebenslang), minder schwerer Fall nach § 213 StGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "So begründest du den Vorsatz",
+          "punkte": [
+            "Die objektive Gefährlichkeit der Handlung ist ein wesentliches Indiz – aber nicht das einzige.",
+            "Dazu: Tatsituation, Motiv, psychische Verfassung, Alkohol, Spontaneität der Tat.",
+            "Abgrenzung zur bewussten Fahrlässigkeit: Vertraut der Täter ernsthaft darauf, dass der Tod ausbleibt?"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht die „Hemmschwelle“ entscheidet, sondern die Gesamtschau aller Umstände – mit der Gefährlichkeit der Handlung als starkem Indiz."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 212 StGB in vier Zügen",
+          "punkte": [
+            "Tatobjekt und Erfolg",
+            "Wissen und Wollen getrennt begründen",
+            "Gesamtschau statt Hemmschwelle",
+            "Strafrahmen: § 212 II, § 213"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "waage",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "„Wegen der Hemmschwelle liegt Tötungsvorsatz fern“ – diesen Satz liest man in vielen Klausuren, und so trägt er nicht mehr. Der BGH hat klargestellt, dass die Hemmschwelle keine eigene Beweisregel ist. Ob der Täter den Tod billigend in Kauf nahm, ergibt eine Gesamtschau aller Umstände; die Gefährlichkeit der Handlung ist dabei ein starkes Indiz. Speichern für die nächste Klausur zu § 212 StGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#totschlag",
+        "#212stgb",
+        "#vorsatz",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Totschlag: Vorsatz ohne Hemmschwellen-Formel",
+      "coverText": "Gesamtschau statt Formel",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Eine pauschale Formel ersetzt nicht den Blick auf alle Umstände der Tat.",
+        "handlung": "{A} lifts a small striped barrier gate with his pointer and reveals a wide table of scattered puzzle pieces behind it, while {B} nervously starts to gather the pieces into a picture.",
+        "hinweisRegie": "Place the note in the free space above the scattered puzzle pieces, slightly tilted toward them, so it reads as the overall view that matters without covering the lifted barrier.",
+        "alternative": "{B} tries to answer with a single rubber stamp while {A} slides a whole folder of photos and notes across the desk."
+      },
+      "bildSzene": "barrier lifted, puzzle pieces revealed",
+      "bildSzeneAlt": "stamp replaced by folder of evidence",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 213 StGB",
+        "§ 15 StGB",
+        "BGH, Urt. v. 22.03.2012 – 4 StR 558/11",
+        "Themenpool: strafbt-737"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-669",
+      "slug": "2027-06-13-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "nummer": null,
+          "titel": "Berufung zugelassen – und jetzt läuft die nächste Frist",
+          "unter": "Rechtsmittel · §§ 124 ff., 146 ff. VwGO",
+          "text": "Nach der Zulassung durch das OVG muss die Berufung noch begründet werden.",
+          "norm": "§ 124a VwGO",
+          "icon": "uhr",
+          "sprecher": "Berufung zugelassen? Dann läuft die nächste Frist. Viele halten den Zulassungsbeschluss für das Ziel. Dabei muss die Berufung danach noch fristgerecht begründet werden.",
+          "marken": [
+            "nächste Frist",
+            "§ 124a VwGO"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Urteil: Berufung nur nach Zulassung",
+          "text": "Das VG lässt nur wegen grundsätzlicher Bedeutung oder Divergenz zu.",
+          "norm": "§ 124a Abs. 1 VwGO",
+          "sprecher": "Schritt eins: Gegen Urteile des Verwaltungsgerichts gibt es die Berufung nur, wenn sie zugelassen wird. Das Verwaltungsgericht selbst lässt nur wegen grundsätzlicher Bedeutung oder Divergenz zu. Dann: Einlegung beim VG binnen eines Monats, Begründung binnen zwei Monaten.",
+          "marken": [
+            "Zulassung nötig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sonst: Antrag auf Zulassung",
+          "text": "Beim VG binnen eines Monats stellen, Gründe binnen zwei Monaten darlegen.",
+          "norm": "§ 124a Abs. 4 VwGO",
+          "sprecher": "Schritt zwei: Lässt das VG nicht zu, stellst du binnen eines Monats beim VG den Antrag auf Zulassung. Die Gründe legst du binnen zwei Monaten dar, beim Oberverwaltungsgericht.",
+          "marken": [
+            "1 + 2 Monate"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die fünf Zulassungsgründe",
+          "text": "Ernstliche Zweifel, Schwierigkeiten, Grundsatz, Divergenz, Verfahrensmangel.",
+          "norm": "§ 124 Abs. 2 VwGO",
+          "sprecher": "Schritt drei: die Zulassungsgründe nach § 124 Abs. 2 VwGO. Ernstliche Zweifel an der Richtigkeit, besondere Schwierigkeiten, grundsätzliche Bedeutung, Divergenz oder ein Verfahrensmangel, auf dem das Urteil beruhen kann.",
+          "marken": [
+            "fünf Gründe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Nach der Zulassung durch das OVG",
+          "text": "Begründung binnen eines Monats nach Zustellung des Zulassungsbeschlusses.",
+          "norm": "§ 124a Abs. 6 VwGO",
+          "sprecher": "Schritt vier: Lässt das OVG zu, läuft das Verfahren als Berufung weiter. Jetzt muss die Berufung binnen eines Monats nach Zustellung des Beschlusses begründet werden. Genau diese Frist wird gern übersehen.",
+          "marken": [
+            "1 Monat"
+          ]
+        },
+        {
+          "art": "punkt",
+          "nummer": null,
+          "titel": "Und gegen Beschlüsse?",
+          "text": "Beschwerde binnen zwei Wochen; im Eilverfahren Begründung binnen eines Monats.",
+          "norm": "§§ 146, 147 VwGO",
+          "sprecher": "Und gegen Beschlüsse, etwa im Eilverfahren? Dort gibt es die Beschwerde, einzulegen binnen zwei Wochen beim VG. Im Eilverfahren ist sie binnen eines Monats zu begründen, und das OVG prüft nur die dargelegten Gründe.",
+          "marken": [
+            "2 Wochen"
+          ]
+        },
+        {
+          "art": "merke",
+          "nummer": null,
+          "titel": "Die Kurzform",
+          "text": "Urteil: Berufung nur mit Zulassung. Beschluss: Beschwerde. Und jede Stufe hat eigene Fristen.",
+          "norm": "§§ 124 ff., 146 ff. VwGO",
+          "sprecher": "Merke: Gegen Urteile Berufung nur mit Zulassung, gegen Beschlüsse Beschwerde. Und jede Stufe hat ihre eigene Frist.",
+          "marken": [
+            "jede Stufe, eine Frist"
+          ]
+        },
+        {
+          "art": "cta",
+          "nummer": null,
+          "titel": "Für die nächste Rechtsmittelfrage",
+          "text": "Speichern für die nächste VwGO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Rechtsmittelfrage. Und notiere dir beim Lesen jeder Entscheidung: Urteil oder Beschluss?",
+          "marken": [
+            "Urteil oder Beschluss?"
+          ]
+        }
+      ],
+      "caption": "Berufung zugelassen – und jetzt läuft die nächste Frist. Gegen Urteile des VG gibt es die Berufung nur mit Zulassung: durch das VG selbst (§ 124a Abs. 1 VwGO) oder auf Antrag durch das OVG (§ 124a Abs. 4 VwGO). Lässt das OVG zu, ist die Berufung binnen eines Monats nach Zustellung zu begründen (§ 124a Abs. 6 VwGO). Gegen Beschlüsse gibt es die Beschwerde (§§ 146 ff. VwGO). Speichern für die nächste Rechtsmittelfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsprozessrecht",
+        "#vwgo",
+        "#berufung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VwGO: Berufung, Zulassung, Beschwerde",
+      "titelZeilen": [
+        "Berufung zugelassen",
+        "– und jetzt läuft",
+        "die nächste Frist"
+      ],
+      "coverText": "Jede Stufe hat ihre Frist",
+      "coverBadge": "Reel",
+      "coverBildAuslassen": true,
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Wer die Zulassung der Berufung erreicht hat, ist noch nicht am Ziel – die Begründungsfrist läuft schon.",
+        "handlung": "{A} steps through an opened gate and immediately sees {B} hovering just beyond it, holding up a running hourglass toward her.",
+        "hinweisRegie": "Place the note in the free space between the open gate and the hourglass, slightly tilted toward the hourglass, so the next deadline is linked to the gate without covering {A}'s face.",
+        "alternative": "{B} stamps a pass for {A}, who then finds a second, smaller door with a ticking clock above it."
+      },
+      "bildSzene": "open gate, hourglass already running",
+      "bildSzeneAlt": "second door with ticking clock",
+      "quellen": [
+        "§ 124 VwGO",
+        "§ 124a VwGO",
+        "§ 146 VwGO",
+        "§ 147 VwGO",
+        "Themenpool: vwgo-669"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung-frist",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-090",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Einer Nicht-EU-Ausländerin wird die Ausübung ihres Berufs untersagt. Welches Grundrecht prüfst du?",
+      "optionen": [
+        "Art. 12 Abs. 1 GG – jeder darf seinen Beruf frei ausüben",
+        "Keines – Ausländer genießen keinen Grundrechtsschutz",
+        "Art. 2 Abs. 1 GG – Art. 12 GG ist ein Deutschengrundrecht"
+      ],
+      "richtig": 2,
+      "fachLabel": "Grundrechte",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 12 Abs. 1 GG",
+        "Themenpool: grundr-090"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-090",
+      "ueberzeile": "Auflösung",
+      "titel": "Art. 2 Abs. 1 GG – die Berufsfreiheit schützt nur Deutsche",
+      "text": "Art. 12 Abs. 1 GG ist ein Deutschengrundrecht. Für Ausländer greift die allgemeine Handlungsfreiheit als Auffanggrundrecht. Für Unionsbürger wird der Schutz wegen des unionsrechtlichen Diskriminierungsverbots nach verbreiteter Ansicht auf das Niveau des Art. 12 GG angehoben.",
+      "norm": "Art. 2 Abs. 1 GG · Art. 12 Abs. 1 GG",
+      "optionen": [
+        "Art. 12 Abs. 1 GG – jeder darf seinen Beruf frei ausüben",
+        "Keines – Ausländer genießen keinen Grundrechtsschutz",
+        "Art. 2 Abs. 1 GG – Art. 12 GG ist ein Deutschengrundrecht"
+      ],
+      "richtig": 2,
+      "fachLabel": "Grundrechte",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 12 Abs. 1 GG",
+        "Art. 18 AEUV",
+        "Themenpool: grundr-090"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-500",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 161 Abs. 1 BGB: Verkauft V die Vorbehaltsware nochmals, bleibt K geschützt",
+      "text": "Übereignet der Vorbehaltsverkäufer die Sache vor Zahlung der letzten Rate an einen Dritten, wird diese Verfügung mit Bedingungseintritt unwirksam, soweit sie den Erwerb des K vereiteln würde. Gutgläubiger Erwerb des Dritten scheitert regelmäßig, weil K besitzt (§ 161 Abs. 3, § 936 Abs. 3 BGB).",
+      "norm": "§ 161 BGB",
+      "fachLabel": "Sachenrecht",
+      "quellen": [
+        "§ 161 BGB",
+        "§ 449 BGB",
+        "§ 158 BGB",
+        "§ 936 BGB",
+        "Themenpool: sachen-500"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-912",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Ohne Erklärungsbewusstsein keine Willenserklärung – Fall erledigt?",
+      "falsch": "A wusste nicht, dass sein Handzeichen als Gebot gilt. Ohne Erklärungsbewusstsein liegt keine Willenserklärung vor, A ist frei.",
+      "richtigText": "Nach BGH liegt trotzdem eine Willenserklärung vor, wenn A bei verkehrsüblicher Sorgfalt hätte erkennen können, dass sein Verhalten so verstanden wird, und der Empfänger es so verstanden hat. A kann dann nach § 119 Abs. 1 BGB analog anfechten – unverzüglich (§ 121 BGB) und mit Ersatz des Vertrauensschadens (§ 122 BGB).",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "quellen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§§ 133, 157 BGB",
+        "Themenpool: bgbat-912"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-016",
+      "ueberzeile": "Klausurtipp Schuldrecht",
+      "titel": "§ 278 BGB: Erst das Schuldverhältnis, dann der Gehilfe",
+      "text": "§ 278 BGB ist keine Anspruchsgrundlage, sondern rechnet fremdes Verschulden zu – und zwar nur innerhalb eines bestehenden Schuldverhältnisses, auch eines vorvertraglichen nach § 311 Abs. 2 BGB. Fehlt diese Sonderverbindung, bleibt nur § 831 BGB mit eigener Pflichtverletzung des Geschäftsherrn und Entlastungsmöglichkeit.",
+      "fachLabel": "Schuldrecht AT",
+      "quellen": [
+        "§ 278 BGB",
+        "§ 311 Abs. 2 BGB",
+        "§ 831 BGB",
+        "Themenpool: schuld-016"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-887",
+      "ueberzeile": "3 Punkte Revision",
+      "zahl": "3",
+      "titel": "Revision ohne Hauptverhandlung: die drei Beschlusswege des § 349 StPO",
+      "text": "In der Praxis enden viele Revisionen durch Beschluss. Für die Klausur solltest du die drei Wege sicher auseinanderhalten.",
+      "punkte": [
+        "Abs. 1: Verwerfung als unzulässig, wenn Einlegung oder Anträge nicht den Vorschriften entsprechen",
+        "Abs. 2: Verwerfung als offensichtlich unbegründet – nur auf begründeten Antrag der StA und einstimmig",
+        "Abs. 4: Aufhebung, wenn die zugunsten des Angeklagten eingelegte Revision einstimmig begründet ist"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "quellen": [
+        "§ 349 StPO",
+        "Themenpool: revision-887"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:28.035Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

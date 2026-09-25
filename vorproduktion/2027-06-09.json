@@ -1,0 +1,887 @@
+{
+  "datum": "2027-06-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-086",
+        "themaTitel": "Wann gelten Vorrang und Vorbehalt des Gesetzes?",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuldbt-461",
+        "themaTitel": "Rechtsmangel",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-743",
+        "themaTitel": "Schwere Körperverletzung",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "strafbt-073"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "strafbt-073"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "schuldbt-025"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "streitstand",
+        "themaId": "streit-31"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:55",
+        "art": "merksatz",
+        "themaId": "schuldbt-473"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "begriff",
+        "themaId": "strafbt-342"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-086",
+      "poolTitel": "Wann gelten Vorrang und Vorbehalt des Gesetzes?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-18",
+        "2027-01-20",
+        "2027-04-17"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuldbt-461",
+      "poolTitel": "Rechtsmangel",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 435 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-743",
+      "poolTitel": "Schwere Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 226 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2026-11-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-073",
+      "poolTitel": "Wann ist Raub vollendet und wie verhält er sich zur räuberischen Erpressung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 253 StGB",
+        "§ 255 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-03-25"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-073",
+      "poolTitel": "Wann ist Raub vollendet und wie verhält er sich zur räuberischen Erpressung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 253 StGB",
+        "§ 255 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26",
+        "2027-03-25"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-025",
+      "poolTitel": "Was gilt beim Verbrauchsgüterkauf anders?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 474 BGB",
+        "§ 475 BGB",
+        "§ 477 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05",
+        "2027-04-05"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-31",
+      "poolTitel": "Selbstbindung der Verwaltung über Verwaltungsvorschriften",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 3 Abs. 1 GG"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuldbt-473",
+      "poolTitel": "Verbrauchsgüterkauf: Nachbesserung und Verjährungsverlängerung seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 475 Abs. 4-6 BGB",
+        "§ 475e Abs. 5 BGB",
+        "Art. 229 § 72 EGBGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05",
+        "2026-12-13",
+        "2027-03-27"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-342",
+      "poolTitel": "Wann ist eine Aussage falsch im Sinne der §§ 153 ff. StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 153 StGB",
+        "§ 154 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-23"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-086",
+      "slug": "2027-06-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eingriff per Verwaltungsvorschrift: Erst das Gesetz suchen",
+          "titelZeilen": [
+            "Eingriff per",
+            "Verwaltungs-",
+            "vorschrift: Erst das",
+            "Gesetz suchen"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Innenrecht ermächtigt nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Das Landesministerium regelt in einer internen Verwaltungsvorschrift, dass Imbissbetreiber ihre Außenflächen um 20 Uhr räumen müssen. Die Behörde gibt A das per Bescheid auf und stützt sich allein auf die Vorschrift. Ist der Bescheid rechtmäßig?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Grundsätze aus Art. 20 III GG",
+          "links": {
+            "titel": "Vorrang",
+            "punkte": [
+              "Kein Handeln gegen das Gesetz.",
+              "Gilt für jedes Verwaltungshandeln."
+            ]
+          },
+          "rechts": {
+            "titel": "Vorbehalt",
+            "punkte": [
+              "Kein Handeln ohne Gesetz.",
+              "Für Eingriffe und alles Wesentliche."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Eingriff?",
+              "text": "Das Räumungsgebot belastet A in seiner Berufsfreiheit (Art. 12 Abs. 1 GG). Der Vorbehalt des Gesetzes greift."
+            },
+            {
+              "titel": "Was trägt als Grundlage?",
+              "text": "Ein formelles Gesetz, eine Rechtsverordnung auf gesetzlicher Grundlage (Art. 80 Abs. 1 GG bzw. Landesrecht) oder eine Satzung."
+            },
+            {
+              "titel": "Die Verwaltungsvorschrift",
+              "text": "Sie ist Innenrecht: Sie bindet die Verwaltung, nicht den Bürger. Als Ermächtigungsgrundlage scheidet sie aus."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Ohne gesetzliche Grundlage ist der Bescheid rechtswidrig – unabhängig davon, wie sinnvoll die Regel wäre."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Verwechslung",
+          "text": "Die Verwaltungsvorschrift wird als „Rechtsgrundlage“ geprüft, weil sie so genau passt. Sie kann aber nur steuern, wie die Behörde ein gesetzlich eingeräumtes Ermessen ausübt. Erst suchst du das Gesetz, dann kommt die Vorschrift ins Spiel."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verwaltungsvorschriften binden nach innen. Für einen Eingriff brauchst du ein Gesetz – die Vorschrift ersetzt es nie."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zur Grundlage",
+          "punkte": [
+            "Liegt ein Eingriff vor?",
+            "Welches Gesetz ermächtigt?",
+            "Vorschrift nur fürs Ermessen"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "ordner"
+          ]
+        }
+      ],
+      "caption": "Die Verwaltungsvorschrift passt genau – und trotzdem fehlt die Grundlage. Belastet eine Maßnahme den Bürger, verlangt der Vorbehalt des Gesetzes (Art. 20 Abs. 3 GG) ein Gesetz, eine Rechtsverordnung oder eine Satzung. Verwaltungsvorschriften sind Innenrecht: Sie steuern das Ermessen, ermächtigen aber nicht zum Eingriff. Der Vorrang des Gesetzes gilt dagegen für jedes Verwaltungshandeln. Speichern für die nächste Klausur im Staatsrecht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verwaltungsrecht",
+        "#vorbehaltdesgesetzes",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorbehalt: Verwaltungsvorschrift reicht nicht",
+      "coverText": "Innenrecht ermächtigt nicht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Eine interne Anweisung kann der Behörde nicht die Befugnis geben, in Rechte der Bürger einzugreifen.",
+        "handlung": "{A} hovers inside an office holding a neatly stamped internal memo toward a door, while {B}, standing outside, nervously points at an empty hook on the wall where a key should hang.",
+        "hinweisRegie": "Place the note in the open space next to the empty key hook, slightly tilted toward it, so it reads as the missing legal basis without covering the memo or the faces.",
+        "alternative": "{B} tries to open a heavy gate with a folded paper memo instead of a key while {A} watches with a clipboard."
+      },
+      "bildSzene": "memo held up, key hook empty",
+      "bildSzeneAlt": "paper memo used as gate key",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 80 Abs. 1 GG",
+        "Art. 12 Abs. 1 GG",
+        "Themenpool: staat-086"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge-grundlage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-461",
+      "slug": "2027-06-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nur noch im Grundbuch: Auch das ist ein Rechtsmangel",
+          "titelZeilen": [
+            "Nur noch im",
+            "Grundbuch: Auch das",
+            "ist ein Rechtsmangel"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Buchrecht steht dem Rechtsmangel gleich",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K kauft von V ein Grundstück. Im Grundbuch steht noch ein Wegerecht für den Nachbarn N, das längst erloschen ist. N beruft sich nicht darauf. K verlangt trotzdem, dass V die Eintragung beseitigt. Hat K einen Anspruch aus Mängelrecht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Rechtsmangel nach § 435 S. 1 BGB",
+              "text": "Dritte können in Bezug auf die Sache Rechte geltend machen, die im Kaufvertrag nicht übernommen wurden – etwa Dienstbarkeit oder Pfandrecht."
+            },
+            {
+              "titel": "Buchrecht nach § 435 S. 2 BGB",
+              "text": "Einem Rechtsmangel steht es gleich, wenn im Grundbuch ein Recht eingetragen ist, das nicht besteht. Das passt hier."
+            },
+            {
+              "titel": "Rechtsfolge",
+              "text": "Mängelrechte nach § 437 BGB wie beim Sachmangel: zuerst Nacherfüllung, hier also Beseitigung der Eintragung."
+            },
+            {
+              "titel": "Kenntnis des K?",
+              "text": "Auch wenn K die Eintragung kannte: Ein im Grundbuch eingetragenes Recht hat V zu beseitigen (§ 442 Abs. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Lücke",
+          "text": "„Das Recht ist erloschen, also stört es niemanden“ – so wird § 435 S. 2 BGB übersehen. Die Eintragung erzeugt einen Rechtsschein, auf den sich ein gutgläubiger Erwerber stützen könnte (§ 892 BGB), und sie belastet Verkauf und Beleihung. Deshalb stellt das Gesetz sie dem echten Rechtsmangel gleich."
+        },
+        {
+          "art": "text",
+          "titel": "Und die Verjährung?",
+          "text": "Für Rechtsmängel an Grundstücken lohnt der Blick in § 438 Abs. 1 Nr. 1 BGB: Besteht der Mangel in einem im Grundbuch eingetragenen Recht, verjähren die Ansprüche in 30 Jahren."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Auch ein nur im Grundbuch stehendes Recht ist ein Rechtsmangel. Eingetragene Rechte muss der Verkäufer trotz Kenntnis des Käufers beseitigen."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtsmangel in drei Zügen",
+          "punkte": [
+            "Echtes Recht eines Dritten? § 435 S. 1",
+            "Nur eingetragen? § 435 S. 2",
+            "Kenntnis: § 442 Abs. 2 BGB beachten"
+          ],
+          "icons": [
+            "haus",
+            "dokument",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Das Recht steht nur noch im Grundbuch – auch das ist ein Rechtsmangel. § 435 S. 2 BGB stellt ein im Grundbuch eingetragenes, aber nicht bestehendes Recht dem echten Rechtsmangel gleich. K kann also über § 437 BGB Nacherfüllung verlangen, hier die Beseitigung der Eintragung. Kannte K sie, hilft das V nicht: Eingetragene Rechte muss der Verkäufer nach § 442 Abs. 2 BGB trotzdem beseitigen. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#rechtsmangel",
+        "#435bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rechtsmangel: auch das bloße Buchrecht",
+      "coverText": "Buchrecht steht dem Rechtsmangel gleich",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Eine alte Eintragung, hinter der kein Recht mehr steht, belastet ein Grundstück trotzdem.",
+        "handlung": "{A} stands on a small plot of land and points at a faded, ghost-like fence post that no longer blocks anything, while {B} curiously pokes it and finds it still casts a shadow across the path.",
+        "hinweisRegie": "Place the note in the free space right next to the ghost-like fence post and its shadow, slightly tilted, so it reads as the registered but non-existing right without covering {B}'s hand.",
+        "alternative": "{B} holds an old ledger page with a faded entry while {A} tries to rub it out with a large eraser."
+      },
+      "bildSzene": "ghost fence post still casts shadow",
+      "bildSzeneAlt": "faded ledger entry being erased",
+      "quellen": [
+        "§ 435 BGB",
+        "§ 437 BGB",
+        "§ 438 Abs. 1 Nr. 1 BGB",
+        "§ 442 Abs. 2 BGB",
+        "§ 892 BGB",
+        "Themenpool: schuldbt-461"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel-buchrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-743",
+      "slug": "2027-06-09-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "nummer": null,
+          "titel": "§ 226 StGB: Die Niere zählt nicht als Glied",
+          "unter": "Schwere Körperverletzung · § 226 StGB",
+          "text": "Glied ist ein nach außen tretender Körperteil – innere Organe zählen nicht.",
+          "norm": "§ 226 Abs. 1 Nr. 2 StGB",
+          "icon": "arzt",
+          "sprecher": "Eine Niere ist kein Glied. Denn Glieder im Sinne von § 226 StGB sind nur äußere Körperteile. Innere Organe fallen nach der Rechtsprechung nicht darunter.",
+          "marken": [
+            "Organ ≠ Glied",
+            "§ 226 StGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grunddelikt",
+          "text": "Vorsätzliche Körperverletzung nach § 223 StGB.",
+          "norm": "§ 223 StGB",
+          "sprecher": "Schritt eins: das Grunddelikt. Du brauchst eine vorsätzliche Körperverletzung nach § 223 StGB. Ohne sie gibt es keine schwere Folge.",
+          "marken": [
+            "§ 223 zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Eine schwere Folge nach Abs. 1",
+          "text": "Sinnesorgane, wichtiges Glied, Entstellung, Siechtum, Lähmung, Krankheit.",
+          "norm": "§ 226 Abs. 1 StGB",
+          "sprecher": "Schritt zwei: eine der schweren Folgen. Etwa das Sehvermögen oder Gehör verloren, ein wichtiges Glied verloren oder dauernd unbrauchbar, eine erhebliche dauernde Entstellung oder Siechtum, Lähmung oder eine geistige Krankheit.",
+          "marken": [
+            "Katalog Abs. 1"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Was ist ein wichtiges Glied?",
+          "text": "Äußerer Körperteil mit eigener Funktion; wichtig nach den Verhältnissen des Opfers.",
+          "norm": "§ 226 Abs. 1 Nr. 2 StGB",
+          "sprecher": "Schritt drei: das wichtige Glied. Gemeint ist ein nach außen in Erscheinung tretender Körperteil mit eigener Funktion, etwa ein Finger. Ob er wichtig ist, beurteilt der BGH auch nach den individuellen Verhältnissen des Opfers.",
+          "marken": [
+            "individuell"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wenigstens Fahrlässigkeit",
+          "text": "Für die Folge genügt Fahrlässigkeit; Abs. 2 verlangt Absicht oder Wissentlichkeit.",
+          "norm": "§ 18 StGB",
+          "sprecher": "Schritt vier: Die schwere Folge muss mindestens fahrlässig verursacht sein, § 18 StGB. Wer sie absichtlich oder wissentlich herbeiführt, fällt unter Abs. 2 mit erhöhter Mindeststrafe.",
+          "marken": [
+            "§ 18 StGB"
+          ]
+        },
+        {
+          "art": "punkt",
+          "nummer": null,
+          "titel": "Und der Gefahrzusammenhang?",
+          "text": "Die Folge muss sich gerade aus der spezifischen Gefahr der Körperverletzung ergeben.",
+          "norm": null,
+          "sprecher": "Nicht vergessen: Zwischen Körperverletzung und Folge braucht es den spezifischen Gefahrzusammenhang. Die schwere Folge muss gerade die typische Gefahr des Grunddelikts verwirklichen.",
+          "marken": [
+            "Gefahrzusammenhang"
+          ]
+        },
+        {
+          "art": "merke",
+          "nummer": null,
+          "titel": "Die Kurzform",
+          "text": "Grunddelikt, Folge aus dem Katalog, Gefahrzusammenhang, wenigstens Fahrlässigkeit.",
+          "norm": "§ 226 StGB",
+          "sprecher": "Merke: Grunddelikt, eine Folge aus dem Katalog, Gefahrzusammenhang und wenigstens Fahrlässigkeit. Und Organe sind keine Glieder.",
+          "marken": [
+            "Organ ≠ Glied"
+          ]
+        },
+        {
+          "art": "cta",
+          "nummer": null,
+          "titel": "Für die nächste Körperverletzungsklausur",
+          "text": "Speichern für die nächste Klausur im Strafrecht BT.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Körperverletzungsklausur. Und lies den Katalog in Abs. 1 einmal komplett durch.",
+          "marken": [
+            "Katalog lesen"
+          ]
+        }
+      ],
+      "caption": "Die Niere zählt nicht als Glied im Sinne des § 226 StGB. Glieder im Sinne des § 226 Abs. 1 Nr. 2 StGB sind nach der Rechtsprechung nur nach außen tretende Körperteile mit eigener Funktion; innere Organe gehören nicht dazu. Ob ein Glied wichtig ist, bestimmt der BGH auch nach den Verhältnissen des Opfers. Für die Folge genügt Fahrlässigkeit (§ 18 StGB), Abs. 2 verlangt Absicht oder Wissentlichkeit. Speichern für die nächste Körperverletzungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#körperverletzung",
+        "#226stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 226 StGB: Organ ist kein Glied",
+      "titelZeilen": [
+        "§ 226 StGB:",
+        "Die Niere zählt",
+        "nicht als Glied"
+      ],
+      "coverText": "Nur äußere Körperteile zählen",
+      "coverBadge": "Reel",
+      "coverBildAuslassen": true,
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Nicht jeder schwere Verlust ist ein Glied im Sinne des Gesetzes – es kommt auf äußere Körperteile an.",
+        "handlung": "{A} uses his pointer to sort simple anatomical cut-out shapes into two baskets, a hand and a finger into one, a bean-shaped organ into the other, while {B} anxiously holds the second basket.",
+        "hinweisRegie": "Place the note in the open space between the two baskets, slightly tilted toward the basket with the bean-shaped organ, so it explains the sorting without covering the pointer.",
+        "alternative": "{B} tries to fit a bean-shaped organ cut-out into a glove-shaped slot on a board while {A} shakes his head."
+      },
+      "bildSzene": "sorting cut-outs: finger versus organ",
+      "bildSzeneAlt": "organ shape does not fit glove slot",
+      "quellen": [
+        "§ 226 StGB",
+        "§ 223 StGB",
+        "§ 18 StGB",
+        "BGHSt 28, 100 (Niere)",
+        "BGHSt 51, 252 (wichtiges Glied)",
+        "Themenpool: strafbt-743"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-073",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "T entreißt O mit Gewalt das Handy, steckt es ein und wird 20 Meter weiter gestellt. Vollendeter Raub?",
+      "optionen": [
+        "Nein – ohne gesicherte Beute ist der Raub nur versucht",
+        "Ja – mit dem Einstecken hat T neuen Gewahrsam begründet",
+        "Nein – vollendet ist der Raub erst mit der Zueignung"
+      ],
+      "richtig": 1,
+      "fachLabel": "Strafrecht BT",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-073"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-073",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – mit dem Einstecken ist der Gewahrsam gebrochen",
+      "text": "Bei kleinen, leicht beweglichen Sachen begründet der Täter neuen Gewahrsam schon, wenn er sie in seine Kleidung steckt – eine Gewahrsamsenklave. Die Wegnahme und damit der Raub sind vollendet. Verfolgung und Festnahme betreffen nur die Beendigung; die Zueignung muss lediglich beabsichtigt sein.",
+      "norm": "§ 249 Abs. 1 StGB",
+      "optionen": [
+        "Nein – ohne gesicherte Beute ist der Raub nur versucht",
+        "Ja – mit dem Einstecken hat T neuen Gewahrsam begründet",
+        "Nein – vollendet ist der Raub erst mit der Zueignung"
+      ],
+      "richtig": 1,
+      "fachLabel": "Strafrecht BT",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-073"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-025",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 474 Abs. 1 BGB: Zuerst prüfen, ob überhaupt ein Verbrauchsgüterkauf vorliegt",
+      "text": "Die Sonderregeln der §§ 474 ff. BGB gelten nur, wenn ein Verbraucher (§ 13 BGB) von einem Unternehmer (§ 14 BGB) eine Ware kauft, also eine bewegliche Sache. Grundstückskauf, Kauf unter Privaten oder Verkauf durch den Verbraucher an einen Händler: keine Anwendung.",
+      "norm": "§ 474 Abs. 1 BGB",
+      "fachLabel": "Schuldrecht BT",
+      "quellen": [
+        "§ 474 BGB",
+        "§ 13 BGB",
+        "§ 14 BGB",
+        "Themenpool: schuldbt-025"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "streit-31",
+      "ueberzeile": "Streitstand Verwaltungsrecht",
+      "titel": "Wie binden Verwaltungsvorschriften nach außen?",
+      "norm": "Art. 3 Abs. 1 GG",
+      "optionen": [
+        "Rspr./h.M.: nur mittelbar – über Art. 3 I GG und die tatsächliche Verwaltungspraxis.",
+        "Teile der Lit.: unmittelbare Außenwirkung als eigene Rechtsquelle der Exekutive."
+      ],
+      "text": "Klausur: Anspruch aus Art. 3 Abs. 1 GG i. V. m. der ständigen Praxis prüfen. Bei neuer Vorschrift ohne Praxis hilft die Figur der antizipierten Verwaltungspraxis. Keine Gleichheit im Unrecht; Änderungen aus sachlichem Grund für die Zukunft bleiben möglich.",
+      "fachLabel": "Verwaltungsrecht AT",
+      "quellen": [
+        "Art. 3 Abs. 1 GG",
+        "§ 40 VwVfG"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-473",
+      "ueberzeile": "Merksatz Kaufrecht",
+      "titel": "Reparatur statt Neuware: Die Wahl des Verbrauchers wirkt auf die Verjährung",
+      "text": "Wählt der Verbraucher die Nachbesserung, verlängert sich die Verjährung (§ 475e Abs. 5 BGB). Darauf muss der Unternehmer vorher hinweisen.",
+      "norm": "§ 475e Abs. 5 BGB · Art. 229 § 72 EGBGB",
+      "fachLabel": "Schuldrecht BT",
+      "quellen": [
+        "§ 475 Abs. 4-6 BGB",
+        "§ 475e Abs. 5 BGB",
+        "Art. 229 § 72 EGBGB",
+        "Themenpool: schuldbt-473"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-342",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Falsche Aussage: Auch Weglassen kann falsch machen",
+      "text": "Falsch ist eine Aussage, wenn ihr Inhalt nicht mit der Wirklichkeit übereinstimmt (objektive Theorie, h.M.). Das gilt auch, wenn der Zeuge Tatsachen verschweigt, die zum Gegenstand seiner Vernehmung gehören: Die Aussage ist dann als Ganzes unvollständig und damit falsch.",
+      "norm": "§§ 153, 154 StGB",
+      "fachLabel": "Strafrecht BT",
+      "quellen": [
+        "§ 153 StGB",
+        "§ 154 StGB",
+        "Themenpool: strafbt-342"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:15:47.502Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

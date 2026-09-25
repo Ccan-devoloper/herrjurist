@@ -1,0 +1,898 @@
+{
+  "datum": "2027-07-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-596",
+        "themaTitel": "Zustimmungsgesetz und Einspruchsgesetz",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "sachen-226",
+        "themaTitel": "Wie entsteht Eigentum durch Verbindung, Vermischung und Verarbeitung?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-747",
+        "themaTitel": "Gewahrsamsbruch und Gewahrsamsenklave",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "grundr-618"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "grundr-618"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "strafbt-136"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "tipp",
+        "themaId": "bgbat-429"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:49",
+        "art": "zahl",
+        "themaId": "methodik-907"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "streitstand",
+        "themaId": "assessoroer-853"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-596",
+      "poolTitel": "Zustimmungsgesetz und Einspruchsgesetz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 77 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-22",
+        "2027-02-07",
+        "2027-02-07"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-226",
+      "poolTitel": "Wie entsteht Eigentum durch Verbindung, Vermischung und Verarbeitung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 946 BGB",
+        "§ 947 BGB",
+        "§ 950 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2026-12-22",
+        "2027-04-04"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-747",
+      "poolTitel": "Gewahrsamsbruch und Gewahrsamsenklave",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-27",
+        "2027-05-19",
+        "2027-05-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-618",
+      "poolTitel": "Vereinigungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 9 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-618",
+      "poolTitel": "Vereinigungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 9 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-136",
+      "poolTitel": "Was ist der Unterschied zwischen Raub und räuberischem Diebstahl?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 252 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16",
+        "2027-02-23",
+        "2027-03-14"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "bgbat-429",
+      "poolTitel": "Gesetzliches Verbot und Nichtigkeit",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 134 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11",
+        "2027-04-06",
+        "2027-06-15"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-907",
+      "poolTitel": "Fehleranalyse nach der Probeklausur",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-07",
+        "2027-04-10",
+        "2027-04-20"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessoroer-853",
+      "poolTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-09",
+        "2027-05-11",
+        "2027-05-31"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-596",
+      "slug": "2027-07-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zustimmungsgesetz geändert: Muss der Bundesrat wieder zustimmen?",
+          "titelZeilen": [
+            "Zustimmungsgesetz",
+            "geändert: Muss der",
+            "Bundesrat wieder",
+            "zustimmen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Enumerationsprinzip statt Automatik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Ein Bundesgesetz regelt auch das Verwaltungsverfahren der Länder – ohne Abweichungsmöglichkeit. Es ist deshalb mit Zustimmung des Bundesrates ergangen (Art. 84 Abs. 1 S. 6 GG). Jahre später ändert der Bundestag nur die Leistungsbeträge. Der Bundesrat meint, er müsse erneut zustimmen. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Enumerationsprinzip",
+              "text": "Zustimmungsbedürftig ist ein Gesetz nur, wo das GG es ausdrücklich anordnet. Sonst ist es ein Einspruchsgesetz (Art. 77 Abs. 3 GG)."
+            },
+            {
+              "titel": "Das alte Gesetz",
+              "text": "Nach dem BVerfG macht schon eine zustimmungsbedürftige Vorschrift das Gesetz als Ganzes zustimmungsbedürftig."
+            },
+            {
+              "titel": "Das Änderungsgesetz",
+              "text": "Es ist nicht automatisch zustimmungsbedürftig. Es kommt darauf an, ob es selbst zustimmungsbedürftige Regeln enthält oder solche ändert."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Geändert werden nur die Beträge, das Verfahrensrecht bleibt unberührt: Einspruchsgesetz. Der Bundesrat kann nur Einspruch einlegen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo das GG Zustimmung verlangt – Beispiele",
+          "punkte": [
+            "Verwaltungsverfahren der Länder ohne Abweichungsrecht (Art. 84 Abs. 1 S. 6 GG)",
+            "Geldleistungspflichten der Länder gegenüber Dritten (Art. 104a Abs. 4 GG)",
+            "Steuern, deren Aufkommen den Ländern ganz oder zum Teil zufließt (Art. 105 Abs. 3 GG)",
+            "Verfassungsänderungen: zwei Drittel der Stimmen des Bundesrates (Art. 79 Abs. 2 GG)"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die offene Flanke",
+          "text": "Das BVerfG hat erwogen, dass auch eine Änderung genügen kann, die den zustimmungsbedürftigen Verfahrensregeln eine wesentlich andere Bedeutung und Tragweite gibt. Wie weit das reicht, ist umstritten. Gibt der Sachverhalt dafür Anhaltspunkte, sprich es an – sonst bleib beim Grundsatz."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zustimmung nur, wo das GG sie anordnet. Ein Änderungsgesetz braucht sie nur, wenn es selbst zustimmungsbedürftige Regeln trifft oder ändert."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zur Zustimmung",
+          "punkte": [
+            "Welcher Artikel des GG verlangt sie?",
+            "Trifft oder ändert das Gesetz solche Regeln?",
+            "Sonst: Einspruchsgesetz, Art. 77 Abs. 3 GG"
+          ],
+          "icons": [
+            "paragraf",
+            "lupe",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "Ein Zustimmungsgesetz wird geändert – muss der Bundesrat dann wieder zustimmen? Nicht automatisch. Nach dem Enumerationsprinzip braucht ein Gesetz die Zustimmung nur dort, wo das GG sie ausdrücklich verlangt. Das Änderungsgesetz ist deshalb nur zustimmungsbedürftig, wenn es selbst zustimmungsbedürftige Regeln trifft oder solche ändert. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bundesrat",
+        "#gesetzgebung",
+        "#art77gg",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Änderungsgesetz: Zustimmung nicht automatisch",
+      "coverText": "Enumerationsprinzip statt Automatik",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Ein geändertes Zustimmungsgesetz braucht nicht automatisch wieder die Zustimmung – es kommt auf den Inhalt der Änderung an.",
+        "handlung": "{A} hovers holding out a big approval stamp, while {B} calmly points with his pointer at one single small gear being swapped in a large machine, leaving the stamp unused.",
+        "hinweisRegie": "Place the note in the free space between the swapped small gear and the unused stamp, slightly tilted toward the gear, so the focus on what actually changed is clear without covering either character.",
+        "alternative": "{B} checks a list of doors marked with symbols, while {A} waits with a key that only fits some of them."
+      },
+      "bildSzene": "droid with stamp, professor points gear",
+      "bildSzeneAlt": "list of marked doors, partial key",
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Art. 84 Abs. 1 GG",
+        "Art. 104a Abs. 4 GG",
+        "Art. 105 Abs. 3 GG",
+        "Art. 79 Abs. 2 GG",
+        "Themenpool: staat-596"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.452Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-226",
+      "slug": "2027-07-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vom Mieter eingebaut – und trotzdem sein Eigentum",
+          "titelZeilen": [
+            "Vom Mieter",
+            "eingebaut – und",
+            "trotzdem sein",
+            "Eigentum"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Vorübergehender Zweck zählt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Eigentum kann ohne Einigung wechseln: durch Verbindung, Vermischung oder Verarbeitung (§§ 946–950 BGB). Auf eine Einigung oder guten Glauben kommt es dabei nicht an. Entscheidend ist die Reihenfolge – und eine Vorfrage, die gern übersprungen wird."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1: Grundstück",
+          "schritte": [
+            {
+              "titel": "1. Scheinbestandteil?",
+              "text": "Nur zu einem vorübergehenden Zweck verbunden? Dann kein Bestandteil des Grundstücks (§ 95 Abs. 1 S. 1 BGB) – das Eigentum bleibt."
+            },
+            {
+              "titel": "2. Wesentlicher Bestandteil",
+              "text": "Fest verbunden oder zur Herstellung des Gebäudes eingefügt (§§ 93, 94 BGB)? Dann erstreckt sich das Grundstückseigentum darauf (§ 946 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2: bewegliche Sachen",
+          "schritte": [
+            {
+              "titel": "3. Neue Sache hergestellt?",
+              "text": "Dann zuerst § 950 BGB: Der Hersteller erwirbt, außer der Verarbeitungswert ist erheblich geringer als der Stoffwert."
+            },
+            {
+              "titel": "4. Verbindung, Vermischung",
+              "text": "Miteigentum nach dem Wertverhältnis; ist eine Sache Hauptsache, wird ihr Eigentümer Alleineigentümer (§§ 947, 948 BGB)."
+            },
+            {
+              "titel": "5. Folgen",
+              "text": "Rechte Dritter an der Sache erlöschen (§ 949 BGB). Wer sein Eigentum verliert, erhält Vergütung in Geld (§ 951 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Einbau durch den Mieter",
+          "text": "Baut ein Mieter etwa eine Sauna oder eine Markise ein, spricht eine Vermutung dafür, dass er nur für die Dauer des Mietverhältnisses verbindet. Folge: Scheinbestandteil nach § 95 BGB. Der Mieter bleibt Eigentümer – § 946 BGB greift gar nicht erst. Zur Wegnahme vgl. § 539 Abs. 2 BGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst § 95 BGB, dann § 946 BGB. Bei beweglichen Sachen erst § 950 BGB, dann §§ 947, 948 BGB – und am Ende § 951 BGB für den Ausgleich."
+        },
+        {
+          "art": "cta",
+          "titel": "Verbindung in vier Zügen",
+          "punkte": [
+            "Scheinbestandteil ausschließen",
+            "Grundstück: § 946 BGB",
+            "Neue Sache? § 950 BGB zuerst",
+            "Ausgleich über § 951 BGB"
+          ],
+          "icons": [
+            "lupe",
+            "haus",
+            "werkzeug",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Vom Mieter eingebaut – und trotzdem sein Eigentum. Bevor du § 946 BGB anwendest, prüfst du § 95 BGB: Wer eine Sache nur zu einem vorübergehenden Zweck mit dem Grundstück verbindet, schafft keinen Bestandteil. Beim Mieter wird dieser Zweck vermutet. Bei beweglichen Sachen geht die Verarbeitung (§ 950 BGB) den §§ 947, 948 BGB vor. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#946bgb",
+        "#950bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verbindung, Vermischung, Verarbeitung: Schema",
+      "coverText": "Vorübergehender Zweck zählt",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer eine Sache nur vorübergehend mit einem Grundstück verbindet, bleibt ihr Eigentümer.",
+        "handlung": "{A} bolts a crystal lamp to the wall of a rented cave, while {B} curiously hangs a small tag with a sand timer on the lamp's base.",
+        "hinweisRegie": "Place the note in the free space next to the lamp base and the small sand-timer tag, slightly tilted toward the tag, so the temporary purpose is linked to the fixture without covering {A}'s hands.",
+        "alternative": "{B} mixes two piles of differently colored crystals into one heap while {A} weighs both original piles on a scale."
+      },
+      "bildSzene": "lamp bolted to cave wall, timer tag",
+      "bildSzeneAlt": "two crystal piles mixed into heap",
+      "quellen": [
+        "§ 93 BGB",
+        "§ 94 BGB",
+        "§ 95 BGB",
+        "§ 946 BGB",
+        "§ 947 BGB",
+        "§ 948 BGB",
+        "§ 949 BGB",
+        "§ 950 BGB",
+        "§ 951 BGB",
+        "§ 539 Abs. 2 BGB",
+        "Themenpool: sachen-226"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.452Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-747",
+      "slug": "2027-07-12-b3",
+      "titelZeilen": [
+        "Nicht gescannt,",
+        "eingepackt: kein",
+        "Betrug – Diebstahl"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht gescannt, eingepackt: kein Betrug – Diebstahl",
+          "unter": "Diebstahl · § 242 StGB",
+          "text": "A zieht an der Selbstbedienungskasse nur die Hälfte der Ware über den Scanner.",
+          "norm": "§ 242 StGB",
+          "icon": "laden",
+          "sprecher": "An der Selbstkasse täuschst du niemanden. A scannt nur die Hälfte seiner Ware und packt alles ein. Das ist kein Betrug, sondern Diebstahl. Warum, zeigen dir vier Schritte.",
+          "marken": [
+            "kein Mensch getäuscht",
+            "§ 242 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Fremde bewegliche Sache",
+          "text": "Die Ware gehört dem Markt, solange sie nicht bezahlt ist.",
+          "norm": "§ 242 StGB",
+          "sprecher": "Schritt eins: fremde bewegliche Sache. Die Ware gehört dem Markt, solange sie nicht bezahlt ist. Das ist schnell bejaht.",
+          "marken": [
+            "Eigentum des Markts"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gewahrsam des Markts",
+          "text": "Der Inhaber beherrscht alle Waren in seinen Räumen – auch ohne Aufsicht.",
+          "norm": "§ 242 StGB",
+          "sprecher": "Schritt zwei: fremder Gewahrsam. Der Marktbetreiber beherrscht alle Waren in seinen Räumen, auch wenn gerade niemand hinschaut. Sein genereller Herrschaftswille genügt.",
+          "marken": [
+            "genereller Wille"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Bruch: Einverständnis nur unter Bedingung",
+          "text": "Einverstanden ist der Markt nur mit der Mitnahme gescannter und bezahlter Ware.",
+          "norm": "§ 242 StGB",
+          "sprecher": "Schritt drei, der Kern: der Bruch. Der Markt ist mit der Mitnahme einverstanden, aber nur für Ware, die ordnungsgemäß gescannt und bezahlt wird. Für die ungescannte Hälfte fehlt das Einverständnis. Der Gewahrsam wird gebrochen.",
+          "marken": [
+            "nur gescannte Ware"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Neuer Gewahrsam – oft schon im Laden",
+          "text": "Kleine Ware in der eigenen Tasche: Gewahrsamsenklave, vollendet vor dem Ausgang.",
+          "norm": "§ 242 StGB",
+          "sprecher": "Schritt vier: neuer Gewahrsam. Steckt A kleine Ware in seine eigene Tasche, bildet sie eine Gewahrsamsenklave. Der Diebstahl ist dann schon im Laden vollendet, nicht erst an der Tür.",
+          "marken": [
+            "Gewahrsamsenklave"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und der Betrug?",
+          "text": "Kein Mensch irrt. Auch § 263a StGB verneint die überwiegende Ansicht.",
+          "norm": "§ 263 StGB",
+          "sprecher": "Und der Betrug? Er scheitert schon am Irrtum. Die Kasse ist kein Mensch, der sich irrt. Einen Computerbetrug verneint die überwiegende Ansicht ebenfalls: A gibt keine falschen Daten ein, er lässt nur Ware weg.",
+          "marken": [
+            "kein Irrtum"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Selbstkasse: kein getäuschter Mensch, Einverständnis nur für den Scan – § 242 StGB.",
+          "norm": null,
+          "sprecher": "Merke: Wo kein Mensch getäuscht wird, bleibt es beim Diebstahl. Das Einverständnis des Markts reicht nur so weit wie der Scan.",
+          "marken": [
+            "so weit wie der Scan"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Einverständnis immer ausmessen",
+          "text": "Speichern für die nächste Vermögensklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Vermögensklausur. Und frag beim Gewahrsamsbruch immer: Wie weit reicht das Einverständnis?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "An der Selbstkasse täuschst du niemanden – wer Ware nicht scannt und einpackt, begeht deshalb keinen Betrug, sondern Diebstahl. Der Markt ist nur mit der Mitnahme ordnungsgemäß gescannter und bezahlter Ware einverstanden; für den Rest wird sein Gewahrsam gebrochen. Kleine Ware in der eigenen Tasche bildet schon im Laden eine Gewahrsamsenklave. Speichern für die nächste Vermögensklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#242stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Selbstkasse: Diebstahl statt Betrug",
+      "coverText": "Einverständnis nur für den Scan",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "An der Selbstkasse wird niemand getäuscht – das Einverständnis des Markts reicht nur so weit wie der Scan.",
+        "handlung": "{A} nervously slides only one of two crystals past a glowing scanner beam, while {B} calmly lifts the second, unscanned crystal out of his bag.",
+        "hinweisRegie": "Place the note in the free space above the scanner beam and the unscanned crystal, slightly tilted toward the crystal in {B}'s hand, so the gap between scanned and taken goods is visible without covering faces.",
+        "alternative": "{B} opens a gate for exactly one cart, while {A} pushes two carts through behind it."
+      },
+      "bildSzene": "one crystal scanned, second in bag",
+      "bildSzeneAlt": "gate opened for one cart only",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 263 StGB",
+        "§ 263a StGB",
+        "Themenpool: strafbt-747"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslung-betrug-diebstahl",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-618",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "B und C verabreden sich einmalig zu einer Demo. Sind sie eine Vereinigung nach Art. 9 Abs. 1 GG?",
+      "optionen": [
+        "Ja – jeder Zusammenschluss zu einem gemeinsamen Zweck genügt",
+        "Nein – es fehlen Dauer und organisierte Willensbildung",
+        "Ja – aber nur, wenn sie sich als Verein eintragen lassen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 9 Abs. 1 GG",
+        "§ 2 Abs. 1 VereinsG",
+        "Art. 8 GG",
+        "Themenpool: grundr-618"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-618",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – eine Vereinigung braucht Dauer und organisierte Willensbildung",
+      "text": "Vereinigung ist ein freiwilliger Zusammenschluss mehrerer Personen für längere Zeit zu einem gemeinsamen Zweck, der sich einer organisierten Willensbildung unterwirft (vgl. § 2 Abs. 1 VereinsG). Eine bestimmte Rechtsform ist nicht nötig. Die einmalige Verabredung zur Demo erfüllt das nicht – geschützt ist sie über Art. 8 GG.",
+      "norm": "Art. 9 Abs. 1 GG",
+      "quellen": [
+        "Art. 9 Abs. 1 GG",
+        "§ 2 Abs. 1 VereinsG",
+        "Art. 8 GG",
+        "Themenpool: grundr-618"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.453Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – jeder Zusammenschluss zu einem gemeinsamen Zweck genügt",
+        "Nein – es fehlen Dauer und organisierte Willensbildung",
+        "Ja – aber nur, wenn sie sich als Verein eintragen lassen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-136",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 252 StGB: Das Zeitfenster liegt zwischen Vollendung und Beendigung des Diebstahls",
+      "text": "§ 252 StGB setzt einen vollendeten Diebstahl voraus. Gewalt vor der Vollendung, um die Wegnahme zu ermöglichen, ist Raub (§ 249 StGB). Ist die Beute schon gesichert, der Diebstahl also beendet, ist das Fenster zu – dann bleiben etwa §§ 223, 240 StGB. Dazwischen braucht es die Absicht, sich im Besitz der Beute zu erhalten.",
+      "norm": "§ 252 StGB",
+      "quellen": [
+        "§ 252 StGB",
+        "§ 249 StGB",
+        "Themenpool: strafbt-136"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-429",
+      "ueberzeile": "Klausurtipp BGB AT",
+      "titel": "Vertrag nach § 134 BGB nichtig? Bei der Rückabwicklung wartet § 817 S. 2 BGB",
+      "text": "Geleistet wurde trotzdem – also Leistungskondiktion (§ 812 Abs. 1 S. 1 Alt. 1 BGB). Fällt auch dem Leistenden der Gesetzesverstoß zur Last, schließt § 817 S. 2 BGB die Rückforderung aus; die Rspr. wendet ihn auf alle Leistungskondiktionen an. Beispiel: Schwarzarbeit – kein Wertersatz für den Unternehmer. Prüfe aber den Normzweck: Er kann die Sperre begrenzen.",
+      "quellen": [
+        "§ 134 BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+        "§ 817 S. 2 BGB",
+        "Themenpool: bgbat-429"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-907",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Randbemerkung gelesen – aber verstanden? Vier Übersetzungen",
+      "text": "Kurze Randbemerkungen zeigen oft keine Wissenslücke, sondern ein Darstellungsproblem. So kannst du sie lesen – im Zweifel nachfragen:",
+      "punkte": [
+        "„Unklar“: Obersatz oder Ergebnis fehlt, der Gedanke ist nicht erkennbar",
+        "„Zu knapp“: Definition ohne Subsumtion unter den Sachverhalt",
+        "„Unproblematisch“: Hier ging Zeit verloren, die woanders fehlt",
+        "„Aufbau?“: Richtiges an falscher Stelle, etwa Einwendungen vor der Entstehung"
+      ],
+      "quellen": [
+        "Themenpool: methodik-907"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-853",
+      "ueberzeile": "Streitstand 2. Examen ÖR",
+      "titel": "Klage ohne Widerspruchsverfahren, die Behörde verteidigt sich in der Sache: Ist die Klage zulässig?",
+      "norm": "§ 68 VwGO",
+      "optionen": [
+        "Rspr. (BVerwG): Ausnahmsweise ja, wenn sich der Beklagte sachlich einlässt und der Zweck des Vorverfahrens erreicht ist.",
+        "Große Teile der Lit.: Nein – § 68 VwGO steht nicht zur Disposition der Beteiligten; die Klage bleibt unzulässig."
+      ],
+      "text": "Als Anwalt: den sicheren Weg gehen – Widerspruch einlegen, soweit das Landesrecht ihn vorsieht, und erst dann klagen. Als Richter: Die Ausnahme der Rspr. ist eng. Sie setzt sachliche Einlassung und Klageabweisungsantrag voraus und wird vor allem erwogen, wenn die Beklagte selbst über den Widerspruch zu entscheiden hätte.",
+      "quellen": [
+        "§ 68 VwGO",
+        "§ 73 VwGO",
+        "Themenpool: assessoroer-853"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:16:07.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

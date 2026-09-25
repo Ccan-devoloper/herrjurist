@@ -1,0 +1,874 @@
+{
+  "datum": "2027-07-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "zwangsv-825",
+        "themaTitel": "Welche Voraussetzungen trägt die Zwangsvollstreckung im Grundfall?",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafbt-068",
+        "themaTitel": "Wie ist das Verhältnis zwischen § 211 StGB und § 212 StGB?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessoroer-843",
+        "themaTitel": "Womit beginnen die Entscheidungsgründe?",
+        "fach": "assessoroer",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "staat-357"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "staat-357"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "verwbt-690"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "streitstand",
+        "themaId": "methodik-903"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "merksatz",
+        "themaId": "delikt-035"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:11",
+        "art": "begriff",
+        "themaId": "anklage-857"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "zwangsv-825",
+      "poolTitel": "Welche Voraussetzungen trägt die Zwangsvollstreckung im Grundfall?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 796 Abs. 1 ZPO",
+        "§ 929 Abs. 1 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2026-12-29",
+        "2027-03-01"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafbt-068",
+      "poolTitel": "Wie ist das Verhältnis zwischen § 211 StGB und § 212 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 28 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-06-10",
+        "2027-06-16",
+        "2027-06-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessoroer-843",
+      "poolTitel": "Womit beginnen die Entscheidungsgründe?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 117 Abs. 2 Nr. 5 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-01",
+        "2027-03-05"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-357",
+      "poolTitel": "Wann ist ein Gesetz zustimmungsbedürftig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 84 GG",
+        "Art. 104a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-20",
+        "2027-02-20",
+        "2027-05-21"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-357",
+      "poolTitel": "Wann ist ein Gesetz zustimmungsbedürftig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 84 GG",
+        "Art. 104a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-20",
+        "2027-02-20",
+        "2027-05-21"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-690",
+      "poolTitel": "Gemeinderat: Beschlussfähigkeit und Mitwirkungsverbote",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Gemeindeordnung des Landes"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "methodik-903",
+      "poolTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-23",
+        "2027-04-28",
+        "2027-06-19"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "delikt-035",
+      "poolTitel": "Wann haftet der Geschäftsherr nach § 831 BGB und wann kann er sich entlasten?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 831 BGB",
+        "§ 278 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-23",
+        "2027-04-02"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "anklage-857",
+      "poolTitel": "Was steht im abstrakten Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-12",
+        "2027-01-19",
+        "2027-03-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-825",
+      "slug": "2027-07-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Das Konto pfändet nicht der Gerichtsvollzieher",
+          "titelZeilen": [
+            "Das Konto pfändet",
+            "nicht der Gerichts-",
+            "vollzieher"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Kontopfändung: Vollstreckungsgericht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Erst die Basis",
+          "text": "Im Grundfall: Antrag, Titel (§ 704 ZPO), Klausel (§ 724 ZPO), Zustellung (§ 750 ZPO). Vollstreckungsbescheid (§ 796 Abs. 1 ZPO) und Arrest (§ 929 Abs. 1 ZPO) brauchen eine Klausel nur bei Rechtsnachfolge. Danach die Frage, die oft untergeht: An wen richtet sich der Antrag?"
+        },
+        {
+          "art": "text",
+          "titel": "Gerichtsvollzieher",
+          "punkte": [
+            "Pfändung beweglicher Sachen (§§ 808 ff. ZPO)",
+            "Herausgabe und Räumung (§§ 883, 885 ZPO)",
+            "Abnahme der Vermögensauskunft (§ 802c ZPO)"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Vollstreckungsgericht",
+          "punkte": [
+            "Amtsgericht, meist der Rechtspfleger (§ 764 ZPO)",
+            "Pfändung von Forderungen, etwa Konto oder Lohn (§§ 828 ff. ZPO)",
+            "Zwangsversteigerung und Zwangsverwaltung von Grundstücken (ZVG)"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Prozessgericht und Grundbuchamt",
+          "punkte": [
+            "Prozessgericht erster Instanz: Handlungen und Unterlassungen (§§ 887, 888, 890 ZPO)",
+            "Grundbuchamt: Eintragung einer Zwangshypothek (§ 867 ZPO)",
+            "Rechtsbehelf gegen Art und Weise der Vollstreckung: Erinnerung (§ 766 ZPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Sachen: Gerichtsvollzieher. Forderungen und Grundstücke: Vollstreckungsgericht. Handlungen: Prozessgericht. Zwangshypothek: Grundbuchamt."
+        },
+        {
+          "art": "cta",
+          "titel": "Vollstreckung in drei Fragen",
+          "punkte": [
+            "Titel, Klausel, Zustellung?",
+            "Worein wird vollstreckt?",
+            "Welches Organ ist zuständig?"
+          ],
+          "icons": [
+            "dokument",
+            "geldbeutel",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Das Konto pfändet nicht der Gerichtsvollzieher. Wer vollstreckt, hängt davon ab, worein vollstreckt wird: bewegliche Sachen der Gerichtsvollzieher, Forderungen und Grundstücke das Vollstreckungsgericht, Handlungen und Unterlassungen das Prozessgericht, die Zwangshypothek das Grundbuchamt. Vorher stehen Antrag, Titel, Klausel und Zustellung. Speichern für die nächste ZV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#vollstreckungsorgane",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vollstreckungsorgane: Wer pfändet was?",
+      "coverText": "Kontopfändung: Vollstreckungsgericht",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Welches Organ vollstreckt, hängt vom Gegenstand der Vollstreckung ab.",
+        "handlung": "{B} tries to carry a heavy vault door to {A}, who calmly points him away from a pile of chairs toward a separate counter with a small bell.",
+        "hinweisRegie": "Place the note in the free space between the pile of chairs and the separate counter, slightly tilted toward the counter, without covering the vault door or {A}'s pointing hand.",
+        "alternative": "{A} sorts four differently shaped keys into four matching slots on a wall panel while {B} holds the last key."
+      },
+      "bildSzene": "sent to the right counter",
+      "bildSzeneAlt": "four keys into matching slots",
+      "quellen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 764 ZPO",
+        "§ 796 Abs. 1 ZPO",
+        "§ 808 ZPO",
+        "§ 828 ZPO",
+        "§ 867 ZPO",
+        "§ 887 ZPO",
+        "§ 929 Abs. 1 ZPO",
+        "Themenpool: zwangsv-825"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslung-organ",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.511Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-068",
+      "slug": "2027-07-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gehilfe ohne Habgier: Beihilfe zum Mord oder zum Totschlag?",
+          "titelZeilen": [
+            "Gehilfe ohne",
+            "Habgier: Beihilfe",
+            "zum Mord oder",
+            "zum Totschlag?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Eigenständig oder Qualifikation?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A tötet seine Tante T, um früher an das Erbe zu kommen. Sein Freund G besorgt ihm dafür das Gift. G weiß um das Motiv, will selbst aber nichts vom Erbe haben. A ist wegen Mordes aus Habgier strafbar. Und G?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wie verhalten sich § 211 und § 212 StGB?",
+          "links": {
+            "titel": "Rspr. (BGH)",
+            "punkte": [
+              "Mord und Totschlag sind eigenständige Tatbestände.",
+              "Täterbezogene Mordmerkmale begründen die Strafbarkeit.",
+              "Also § 28 Abs. 1: Beihilfe zum Mord, Strafe gemildert."
+            ]
+          },
+          "rechts": {
+            "titel": "H.L.",
+            "punkte": [
+              "§ 211 ist Qualifikation des § 212.",
+              "Täterbezogene Mordmerkmale schärfen nur die Strafe.",
+              "Also § 28 Abs. 2: Beihilfe zum Totschlag."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Worauf es ankommt",
+          "text": "Der Streit wirkt nur bei täterbezogenen Merkmalen wie Habgier, niedrigen Beweggründen oder Verdeckungsabsicht. Tatbezogene Merkmale wie Heimtücke oder Grausamkeit fallen nicht unter § 28 – sie werden dem Teilnehmer zugerechnet, wenn er sie kennt."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nach dem BGH: G ist wegen Beihilfe zum Mord strafbar, die Strafe nach § 28 Abs. 1 StGB gemildert. Nach h.L.: Beihilfe zum Totschlag (§§ 212, 27 StGB). Der BGH hat Zweifel an seiner Linie angedeutet, sie aber bislang nicht aufgegeben. In der Klausur: beide Wege darstellen und entscheiden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Täterbezogenes Mordmerkmal fehlt beim Teilnehmer: BGH § 28 Abs. 1 (Mord, gemildert), h.L. § 28 Abs. 2 (Totschlag)."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 28 StGB bei Mord in drei Fragen",
+          "punkte": [
+            "Tat- oder täterbezogenes Merkmal?",
+            "Hat der Teilnehmer es selbst?",
+            "§ 28 Abs. 1 oder Abs. 2?"
+          ],
+          "icons": [
+            "person",
+            "personen",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Gehilfe ohne Habgier: Beihilfe zum Mord oder zum Totschlag? Die Antwort hängt am Verhältnis von § 211 und § 212 StGB. Für den BGH sind es eigenständige Tatbestände, Habgier wirkt strafbegründend – § 28 Abs. 1 StGB. Für die h.L. ist Mord eine Qualifikation, Habgier schärft nur – § 28 Abs. 2 StGB. Speichern für die nächste Beteiligungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#211stgb",
+        "#28stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mord und Totschlag: § 28 I oder § 28 II StGB?",
+      "coverText": "Eigenständig oder Qualifikation?",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Ob ein persönliches Mordmerkmal dem Gehilfen schadet, hängt davon ab, wie Mord und Totschlag zueinander stehen.",
+        "handlung": "{A} points his stick at two stacked blocks, lifting the top block off, while {B} holds a small helper badge and looks back and forth between the two blocks.",
+        "hinweisRegie": "Place the note in the free space between the lifted top block and the lower block, slightly tilted toward the gap, without covering {B}'s badge or {A}'s stick.",
+        "alternative": "{B} holds two separate keys side by side, while {A} tries whether one key is just an extended version of the other."
+      },
+      "bildSzene": "top block lifted from base",
+      "bildSzeneAlt": "comparing two keys side by side",
+      "quellen": [
+        "§ 211 StGB",
+        "§ 212 StGB",
+        "§ 27 StGB",
+        "§ 28 StGB",
+        "Themenpool: strafbt-068"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.512Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-843",
+      "slug": "2027-07-01-b3",
+      "titelZeilen": [
+        "„Die Klage ist",
+        "zulässig.“ Oft",
+        "genügt das"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Die Klage ist zulässig.“ Oft genügt das",
+          "unter": "Entscheidungsgründe · § 117 Abs. 2 Nr. 5 VwGO",
+          "text": "Im Urteil begründest du, was trägt – nicht alles, was man prüfen kann.",
+          "norm": "§ 117 Abs. 2 Nr. 5 VwGO",
+          "icon": "gericht",
+          "sprecher": "Drei Seiten Zulässigkeit im Urteil? Oft reicht ein Satz. Die Entscheidungsgründe sind kein Gutachten.",
+          "marken": [
+            "kein Gutachten",
+            "ein Satz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Ergebnis vorweg",
+          "text": "Der erste Satz nimmt den Tenor auf.",
+          "norm": null,
+          "sprecher": "Schritt eins: Die Entscheidungsgründe beginnen mit dem Ergebnis. Etwa: Die zulässige Klage ist begründet. Damit weiß der Leser sofort, wohin es geht, und jeder weitere Satz dient nur noch der Begründung.",
+          "marken": [
+            "Ergebnis zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Prozessuales kurz",
+          "text": "Einzelrichter, Entscheidung ohne mündliche Verhandlung – nur wenn einschlägig.",
+          "norm": "§ 6 VwGO · § 101 Abs. 2 VwGO",
+          "sprecher": "Schritt zwei: Prozessuale Besonderheiten kommen kurz davor. Etwa, dass der Einzelrichter entscheidet oder ohne mündliche Verhandlung. Aber nur, wenn das im Fall so ist.",
+          "marken": [
+            "nur wenn nötig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zulässigkeit nach Bedarf",
+          "text": "Ausführlich nur, was problematisch ist. Der Rest in einem Satz.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Zulässigkeit. Problematische Punkte begründest du im Urteilsstil, etwa eine streitige Klagebefugnis. Alles Unproblematische fasst du in einem Satz zusammen oder lässt es weg. Der Korrektor sieht an deiner Gewichtung, dass du den Fall verstanden hast.",
+          "marken": [
+            "Schwerpunkt setzen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Begründetheit mit Norm",
+          "text": "Obersatz mit § 113 Abs. 1 S. 1 VwGO, dann Urteilsstil.",
+          "norm": "§ 113 Abs. 1 S. 1 VwGO",
+          "sprecher": "Schritt vier: die Begründetheit. Bei der Anfechtungsklage mit Paragraf 113 Absatz 1 Satz 1 VwGO. Erst das Ergebnis, dann das Denn.",
+          "marken": [
+            "Ergebnis, denn …"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Am Ende: die Nebenentscheidungen",
+          "text": "Kosten und vorläufige Vollstreckbarkeit mit ihren Normen.",
+          "norm": "§ 154 Abs. 1 VwGO · § 167 VwGO",
+          "sprecher": "Zum Schluss die Nebenentscheidungen: Kosten, meist nach Paragraf 154, und die vorläufige Vollstreckbarkeit nach Paragraf 167 VwGO mit den Vorschriften der ZPO.",
+          "marken": [
+            "Kosten",
+            "Vollstreckbarkeit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ergebnis, Prozessuales, Zulässigkeit nach Bedarf, Begründetheit, Nebenentscheidungen.",
+          "norm": null,
+          "sprecher": "Merke: Ergebnis vorweg, Prozessuales kurz, Zulässigkeit nur so weit wie nötig, dann die Begründetheit und zum Schluss die Nebenentscheidungen.",
+          "marken": [
+            "Reihenfolge"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern fürs VG-Urteil",
+          "text": "Speichern für die nächste Urteilsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Urteilsklausur im öffentlichen Recht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "„Die Klage ist zulässig.“ Oft genügt das. Die Entscheidungsgründe nach § 117 Abs. 2 Nr. 5 VwGO beginnen mit dem Ergebnis, nennen prozessuale Besonderheiten kurz und begründen nur, was problematisch ist. Danach Begründetheit im Urteilsstil und die Nebenentscheidungen. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#urteilsstil",
+        "#assessorexamen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VG-Urteil: Entscheidungsgründe ohne Ballast",
+      "coverText": "Urteil ist kein Gutachten",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Im Urteil wird begründet, was die Entscheidung trägt – nicht alles, was man prüfen könnte.",
+        "handlung": "{B} takes a thick stack of pages from {A} and keeps only the single top sheet, placing it firmly on a lectern.",
+        "hinweisRegie": "Place the note in the free space beside the single sheet on the lectern, slightly tilted toward it, so the short result stands out without covering {A}'s surprised face or the discarded stack.",
+        "alternative": "{A} unrolls a very long scroll, and {B} cuts off everything below the first line with a small pair of shears."
+      },
+      "bildSzene": "single sheet kept from stack",
+      "bildSzeneAlt": "scroll cut after first line",
+      "quellen": [
+        "§ 117 Abs. 2 Nr. 5 VwGO",
+        "§ 6 VwGO",
+        "§ 101 Abs. 2 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "§ 154 Abs. 1 VwGO",
+        "§ 167 VwGO",
+        "Themenpool: assessoroer-843"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.513Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-357",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Bundesgesetz verpflichtet die Länder zu Geldleistungen an Bürger, die Länder zahlen. Zustimmung nötig?",
+      "optionen": [
+        "Nein – Einspruchsgesetze sind der Regelfall",
+        "Ja – Art. 104a Abs. 4 GG verlangt die Zustimmung",
+        "Nur, wenn der Bund die Kosten ganz übernimmt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Art. 104a Abs. 4 GG",
+        "Themenpool: staat-357"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.513Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-357",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – Art. 104a Abs. 4 GG macht das Gesetz zustimmungsbedürftig",
+      "text": "Grundsätzlich sind Bundesgesetze Einspruchsgesetze; zustimmungsbedürftig sind sie nur, wo das Grundgesetz es ausdrücklich anordnet. Ein solcher Fall: Begründet ein Bundesgesetz Pflichten der Länder zu Geldleistungen, geldwerten Sachleistungen oder vergleichbaren Dienstleistungen gegenüber Dritten und tragen die Länder die Ausgaben, braucht es die Zustimmung des Bundesrates.",
+      "norm": "Art. 104a Abs. 4 GG",
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Art. 104a Abs. 4 GG",
+        "Themenpool: staat-357"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.514Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – Einspruchsgesetze sind der Regelfall",
+        "Ja – Art. 104a Abs. 4 GG verlangt die Zustimmung",
+        "Nur, wenn der Bund die Kosten ganz übernimmt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-690",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Befangenes Ratsmitglied stimmt mit: Der Beschluss ist fehlerhaft – nicht automatisch nichtig",
+      "text": "Die Gemeindeordnungen verbieten die Mitwirkung, wenn eine Entscheidung dem Ratsmitglied oder nahen Angehörigen einen unmittelbaren Vor- oder Nachteil bringen kann. Verstößt der Rat dagegen, ist der Beschluss rechtswidrig. Die Folgen regelt das Landesrecht unterschiedlich – etwa, ob die Stimme den Ausschlag geben musste oder ob Fehler nach Fristablauf unbeachtlich werden.",
+      "norm": "Gemeindeordnung des Landes (Mitwirkungsverbot)",
+      "quellen": [
+        "Gemeindeordnung des jeweiligen Landes",
+        "Themenpool: verwbt-690"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.514Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-903",
+      "ueberzeile": "Streitstand Klausurtechnik",
+      "titel": "Klage am Tatort (§ 32 ZPO): Prüfst du die unerlaubte Handlung schon bei der Zuständigkeit?",
+      "norm": "§ 32 ZPO",
+      "optionen": [
+        "BGH (doppelrelevante Tatsachen): Für die Zuständigkeit genügt schlüssiger Vortrag; bewiesen wird erst in der Begründetheit.",
+        "Kritische Stimmen: So könne sich der Kläger einen Gerichtsstand durch bloße Behauptung verschaffen."
+      ],
+      "text": "Klausur: mit dem BGH. Scheitert die unerlaubte Handlung in der Beweisaufnahme, ist die Klage unbegründet, nicht unzulässig. Ein Hilfsgutachten zur Zulässigkeit brauchst du dann nicht.",
+      "quellen": [
+        "§ 32 ZPO",
+        "Themenpool: methodik-903"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.514Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-035",
+      "ueberzeile": "Merksatz Deliktsrecht",
+      "titel": "§ 831 BGB: „In Ausführung“, nicht nur „bei Gelegenheit“",
+      "text": "Der Geschäftsherr haftet nur für Schäden, die der Gehilfe in Ausführung der Verrichtung zufügt. Nötig ist ein unmittelbarer innerer Zusammenhang mit der übertragenen Aufgabe. Verstößt der Gehilfe nur gegen Weisungen zur Art der Ausführung – er fährt zu schnell –, bleibt der Zusammenhang bestehen. Handelt er bloß bei Gelegenheit, etwa auf einer privaten Spritztour, fehlt er.",
+      "norm": "§ 831 Abs. 1 S. 1 BGB",
+      "quellen": [
+        "§ 831 BGB",
+        "§ 278 BGB",
+        "Themenpool: delikt-035"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.514Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-857",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Abstrakter Anklagesatz: das Gesetz in Worten, nicht der Fall",
+      "text": "Der abstrakte Anklagesatz gibt die gesetzlichen Merkmale der vorgeworfenen Tat mit den Worten des Gesetzes wieder – ohne Sachverhaltsdetails. Er zeigt, wie die Staatsanwaltschaft die Tat rechtlich bewertet (§ 200 Abs. 1 S. 1 StPO). Den Lebenssachverhalt schildert der konkrete Anklagesatz. Die genaue Gliederung folgt der jeweiligen Landespraxis.",
+      "norm": "§ 200 Abs. 1 S. 1 StPO",
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "Themenpool: anklage-857"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:12:03.514Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,868 @@
+{
+  "datum": "2027-06-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-903",
+        "themaTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "stpo-350",
+        "themaTitel": "Was ist die Verständigung im Strafverfahren?",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-7",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:22",
+        "art": "frage",
+        "themaId": "grundr-622"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:22",
+        "art": "antwort",
+        "themaId": "grundr-622"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "zpo-283"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:25",
+        "art": "begriff",
+        "themaId": "revision-886"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "fehler",
+        "themaId": "assessorz-810"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "tipp",
+        "themaId": "bereich-211"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-903",
+      "poolTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-20",
+        "2027-02-23",
+        "2027-04-28"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "stpo-350",
+      "poolTitel": "Was ist die Verständigung im Strafverfahren?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 257c StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-7",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-02",
+        "2027-02-27",
+        "2027-04-24"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-622",
+      "poolTitel": "Berufsfreiheit und Drei-Stufen-Theorie",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-04-01",
+        "2027-04-01"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-622",
+      "poolTitel": "Berufsfreiheit und Drei-Stufen-Theorie",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-20",
+        "2027-04-01",
+        "2027-04-01"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-283",
+      "poolTitel": "Was ist ein Anscheinsbeweis?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-31",
+        "2027-04-01"
+      ]
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "revision-886",
+      "poolTitel": "Was verbietet das Verschlechterungsverbot?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 358 Abs. 2 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-04",
+        "2027-04-02",
+        "2027-04-02"
+      ]
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "assessorz-810",
+      "poolTitel": "Wie entscheidet das Gericht nach übereinstimmender Erledigungserklärung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-07",
+        "2027-02-07",
+        "2027-04-18"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "bereich-211",
+      "poolTitel": "Wann greift die Nichtleistungskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-16",
+        "2027-01-29",
+        "2027-04-13"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-903",
+      "slug": "2027-06-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Hilfsgutachten: drei Fragen, bevor du eins schreibst",
+          "titelZeilen": [
+            "Hilfsgutachten:",
+            "drei Fragen, bevor",
+            "du eins schreibst"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Ergebnis halten, dann hilfsweise",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Du verneinst früh eine Voraussetzung – und alle weiteren Probleme des Sachverhalts fallen weg. Das Hilfsgutachten kann diese Punkte retten. Ohne Anlass kostet es aber Zeit, die dem Hauptteil fehlt, und lässt dein Ergebnis unsicher wirken."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die drei Fragen",
+          "schritte": [
+            {
+              "titel": "1. Was sagt der Bearbeitervermerk?",
+              "text": "Verlangt er, auf alle aufgeworfenen Fragen einzugehen – im 2. Examen häufig –, ist das Hilfsgutachten Pflicht."
+            },
+            {
+              "titel": "2. Ist die Weiche zwingend?",
+              "text": "Bei offenen Streitfragen oft die gut vertretbare Ansicht wählen, die weiterprüfen lässt. Nie gegen die eigene Überzeugung konstruieren."
+            },
+            {
+              "titel": "3. Hängen Probleme dahinter?",
+              "text": "Enthält der Sachverhalt Angaben, die nur bei Weiterprüfung Sinn ergeben, sind sie ein Signal: Die Punkte sollen bearbeitet werden."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Beispiel und Formulierung",
+          "text": "Die Klage ist verfristet und damit unzulässig, der Sachverhalt enthält aber ausführliche Angaben zur Sache. Dann: Ergebnis klar feststellen, anschließend „Hilfsweise ist die Begründetheit zu prüfen.“ Im Urteilsentwurf steht das Hilfsgutachten als eigener Teil nach dem Urteil."
+        },
+        {
+          "art": "text",
+          "titel": "Wann es schadet",
+          "punkte": [
+            "Ohne Anlass: Nicht jede verneinte Voraussetzung verlangt ein Hilfsgutachten.",
+            "Als Ausweg aus Unsicherheit: Haupt- und Hilfsteil dürfen sich nicht widersprechen.",
+            "Zu lang: Schwerpunkte gehören in den Hauptteil, der Hilfsteil bleibt knapp."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst das Ergebnis halten, dann hilfsweise weiterprüfen – und nur, wenn Vermerk oder Sachverhalt es verlangen."
+        },
+        {
+          "art": "cta",
+          "titel": "Hilfsgutachten gezielt einsetzen",
+          "punkte": [
+            "Bearbeitervermerk prüfen",
+            "Weiche ehrlich begründen",
+            "Hilfsteil knapp halten"
+          ],
+          "icons": [
+            "klemmbrett",
+            "waage",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Hilfsgutachten: drei Fragen, bevor du eins schreibst. Verlangt der Bearbeitervermerk es? Ist die Weiche wirklich zwingend? Enthält der Sachverhalt Angaben, die nur bei Weiterprüfung Sinn ergeben? Wenn ja: Ergebnis halten, dann knapp hilfsweise prüfen. Ohne Anlass kostet das Hilfsgutachten Zeit, die dem Hauptteil fehlt. Speichern für die nächste Probeklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#klausurtechnik",
+        "#hilfsgutachten",
+        "#klausurtraining",
+        "#zweitesstaatsexamen",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Hilfsgutachten: wann es sich lohnt",
+      "coverText": "Ergebnis halten, dann hilfsweise",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Ein Hilfsgutachten lohnt sich nur, wenn Vermerk oder Sachverhalt es verlangen – dann hält man das Ergebnis und prüft knapp weiter.",
+        "handlung": "{A} stops at a closed main path and considers a narrow side trail, while {B} points his pointer at a small signpost with instructions next to the trail.",
+        "hinweisRegie": "Place the note in the free space above the small signpost, slightly tilted toward the side trail, so the decision to take the auxiliary path is clear without covering {A}'s face.",
+        "alternative": "{B} unfolds a map with a clearly marked detour while {A} plants a flag at the end of the main route."
+      },
+      "bildSzene": "closed path, side trail signpost",
+      "bildSzeneAlt": "flag planted, marked detour map",
+      "quellen": [
+        "Themenpool: methodik-903"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-fragen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.825Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-350",
+      "slug": "2027-06-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Deal im Strafprozess: Der Schuldspruch ist nicht verhandelbar",
+          "titelZeilen": [
+            "Deal im",
+            "Strafprozess: Der",
+            "Schuldspruch ist",
+            "nicht verhandelbar"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Strafe ja, Schuld nein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 257c StPO erlaubt dem Gericht, sich mit den Beteiligten über Fortgang und Ergebnis des Verfahrens zu verständigen. Die Pflicht zur Aufklärung des Sachverhalts bleibt unberührt (§ 257c Abs. 1 S. 2, § 244 Abs. 2 StPO). Entscheidend sind die Grenzen und die Transparenz."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Was darf Gegenstand sein?",
+          "links": {
+            "titel": "Verhandelbar",
+            "punkte": [
+              "Rechtsfolgen des Urteils und zugehörige Beschlüsse",
+              "Sonstige verfahrensbezogene Maßnahmen",
+              "Prozessverhalten; ein Geständnis soll dazugehören"
+            ]
+          },
+          "rechts": {
+            "titel": "Nicht verhandelbar",
+            "punkte": [
+              "Der Schuldspruch",
+              "Maßregeln der Besserung und Sicherung",
+              "Eine feste Punktstrafe – nur Ober- und Untergrenze"
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "So kommt sie zustande",
+          "schritte": [
+            {
+              "titel": "Vorschlag des Gerichts",
+              "text": "Es gibt den möglichen Inhalt bekannt, mit Ober- und Untergrenze der Strafe (§ 257c Abs. 3 S. 1, 2 StPO)."
+            },
+            {
+              "titel": "Belehrung",
+              "text": "Vorher über Voraussetzungen und Folgen einer Abweichung (§ 257c Abs. 5 StPO)."
+            },
+            {
+              "titel": "Zustimmung",
+              "text": "Angeklagter und Staatsanwaltschaft stimmen zu (§ 257c Abs. 3 S. 4 StPO)."
+            },
+            {
+              "titel": "Transparenz",
+              "text": "Mitteilung (§ 243 Abs. 4) und Protokoll (§ 273 Abs. 1a StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wenn das Gericht abweicht",
+          "punkte": [
+            "Die Bindung entfällt bei neuen oder übersehenen Umständen oder abweichendem Prozessverhalten (§ 257c Abs. 4).",
+            "Dann darf das Geständnis nicht verwertet werden.",
+            "Ein Rechtsmittelverzicht ist nach Verständigung ausgeschlossen (§ 302 Abs. 1 S. 2 StPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verhandelt wird über die Strafe, nie über die Schuld. Ohne Belehrung, Zustimmung und Protokoll trägt der Deal nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Verständigung in drei Prüfpunkten",
+          "punkte": [
+            "Zulässiger Gegenstand?",
+            "Belehrung vor Zustimmung?",
+            "Mitteilung und Protokoll?"
+          ],
+          "icons": [
+            "handschlag",
+            "glocke",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Deal im Strafprozess – aber der Schuldspruch ist nicht verhandelbar. § 257c StPO erlaubt Verständigungen über Rechtsfolgen, verfahrensbezogene Maßnahmen und Prozessverhalten; Schuldspruch und Maßregeln sind ausgeschlossen. Das Gericht nennt Ober- und Untergrenze, belehrt nach Abs. 5, Angeklagter und Staatsanwaltschaft stimmen zu. Weicht das Gericht ab, ist das Geständnis unverwertbar. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#257cstpo",
+        "#verständigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verständigung nach § 257c StPO",
+      "coverText": "Strafe ja, Schuld nein",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Über die Strafe darf verhandelt werden, über die Schuld nie.",
+        "handlung": "{A} slides a small adjustable dial across a table toward {B}, while a heavy sealed block sits untouched at the table's center.",
+        "hinweisRegie": "Place the note in the free space above the heavy sealed block, slightly tilted toward the dial, so the contrast between negotiable and fixed is clear without covering either character's hands.",
+        "alternative": "{B} records a handshake on a floating scroll while {A} keeps one hand firmly on a locked box that is not part of the deal."
+      },
+      "bildSzene": "adjustable dial, sealed block untouched",
+      "bildSzeneAlt": "handshake recorded, locked box kept",
+      "quellen": [
+        "§ 257c StPO",
+        "§ 243 Abs. 4 StPO",
+        "§ 244 Abs. 2 StPO",
+        "§ 273 Abs. 1a StPO",
+        "§ 302 Abs. 1 S. 2 StPO",
+        "Themenpool: stpo-350"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.825Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-7",
+      "slug": "2027-06-19-b3",
+      "titelZeilen": [
+        "Eine schlechte",
+        "Woche ist kein",
+        "schlechter Plan"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eine schlechte Woche ist kein schlechter Plan",
+          "unter": "Kopfsache · Lernplan",
+          "text": "Nicht alles umwerfen, sondern gezielt nachjustieren.",
+          "norm": null,
+          "icon": "kalender",
+          "sprecher": "Eine schlechte Woche ist kein schlechter Plan. Wer nach ein paar verlorenen Tagen alles umwirft, verliert meist noch mehr Zeit.",
+          "marken": [
+            "nicht umwerfen",
+            "nachjustieren"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Ursache benennen",
+          "text": "Krank, zu wenig Schlaf, zu voller Plan? Ein Satz genügt.",
+          "norm": null,
+          "sprecher": "Schritt eins: die Ursache benennen. Warst du krank, hast du zu wenig geschlafen, war der Plan zu voll, oder war privat viel los? Schreib es in einem Satz auf, ohne Vorwürfe.",
+          "marken": [
+            "ein Satz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Eine Stellschraube ändern",
+          "text": "Nicht fünf Dinge auf einmal – eins.",
+          "norm": null,
+          "sprecher": "Schritt zwei: genau eine Stellschraube ändern. Etwa ein kleineres Tagesziel oder ein fester Lernbeginn. Wer fünf Dinge gleichzeitig ändert, weiß am Ende nicht, was geholfen hat.",
+          "marken": [
+            "nur eins"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Mit Vertrautem starten",
+          "text": "Der erste Tag danach beginnt mit einem Thema, das du kannst.",
+          "norm": null,
+          "sprecher": "Schritt drei: mit etwas Vertrautem neu starten. Wiederhol am ersten Tag ein Schema, das du schon kannst. Das bringt dich schnell wieder in den Arbeitsmodus.",
+          "marken": [
+            "leichter Einstieg"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kurz zurückschauen",
+          "text": "Am Ende der Woche zehn Minuten: Was lief, was nicht?",
+          "norm": null,
+          "sprecher": "Schritt vier: Nimm dir am Ende der nächsten Woche zehn Minuten. Was lief, was nicht? So merkst du früh, ob die Änderung trägt.",
+          "marken": [
+            "zehn Minuten"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Warum kein kompletter Neustart?",
+          "text": "Neue Skripte und Apps fühlen sich produktiv an – und kosten Einarbeitung.",
+          "norm": null,
+          "sprecher": "Und warum kein kompletter Neustart mit neuen Skripten und neuer App? Das fühlt sich produktiv an. Aber die Einarbeitung frisst genau die Zeit, die dir gerade fehlt.",
+          "marken": [
+            "kein Neustart"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ursache, eine Änderung, vertrauter Start, kurzer Rückblick.",
+          "norm": null,
+          "sprecher": "Merke: Ursache benennen, eine Sache ändern, vertraut starten, kurz zurückschauen.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste zähe Woche",
+          "text": "Speichern und an jemanden schicken, der gerade feststeckt.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste zähe Woche. Und schick es jemandem, der gerade das Gefühl hat, alles neu anfangen zu müssen.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Eine schlechte Woche ist kein schlechter Plan. Statt alles umzuwerfen: Ursache in einem Satz benennen, genau eine Stellschraube ändern, mit einem vertrauten Thema neu starten und nach einer Woche kurz zurückschauen. Neue Skripte und Apps fühlen sich produktiv an, kosten aber Einarbeitung. Speichern für die nächste zähe Lernwoche.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#lernplan",
+        "#motivation",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schlechte Lernwoche: nachjustieren",
+      "coverText": "Eine Stellschraube statt Neustart",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Nach einer schlechten Woche wird der Plan nachjustiert, nicht weggeworfen.",
+        "handlung": "{A} nervously holds a crumpled plan and is about to toss it, while {B} calmly stops him and turns a single small screw on a machine beside them.",
+        "hinweisRegie": "Place the note in the free space above the single screw, slightly tilted toward it, so the idea of one small adjustment is clear without covering the crumpled plan or {A}'s face.",
+        "alternative": "{B} smooths out a creased map on a table while {A} redraws just one short line on it."
+      },
+      "bildSzene": "one screw turned, plan not tossed",
+      "bildSzeneAlt": "creased map, one line redrawn",
+      "quellen": [
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "gegen-intuition",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.826Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-622",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Ein Gesetz verlangt von Tätowierern eine bestandene Hygieneprüfung, bevor sie arbeiten dürfen. Welche Stufe?",
+      "optionen": [
+        "Subjektive Berufszulassungsvoraussetzung",
+        "Reine Berufsausübungsregelung",
+        "Objektive Berufszulassungsvoraussetzung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Themenpool: grundr-622"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.826Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-622",
+      "ueberzeile": "Auflösung",
+      "titel": "Subjektive Zulassungsvoraussetzung – der Bewerber kann sie selbst erfüllen",
+      "text": "Die Prüfung entscheidet über den Zugang zum Beruf, nicht nur über das Wie der Tätigkeit. Sie knüpft an persönliche Kenntnisse an, die der Bewerber erwerben kann. Nach der Drei-Stufen-Theorie ist sie zulässig zum Schutz wichtiger Gemeinschaftsgüter – hier der Gesundheit – und muss verhältnismäßig sein. Objektiv wäre eine Hürde, auf die er keinen Einfluss hat.",
+      "norm": "Art. 12 Abs. 1 GG",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Themenpool: grundr-622"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.826Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Subjektive Berufszulassungsvoraussetzung",
+        "Reine Berufsausübungsregelung",
+        "Objektive Berufszulassungsvoraussetzung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-283",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 286 ZPO: Erst die Basis beweisen, dann greift der Anschein",
+      "text": "Der Anscheinsbeweis schließt von einem typischen Geschehen auf Verschulden oder Kausalität. Die Tatsachen, aus denen sich das Typische ergibt, müssen aber feststehen – unstreitig oder voll bewiesen. Beim Auffahrunfall etwa muss zuerst das Auffahren selbst bewiesen sein. Ist die Basis streitig, gibt es keinen Anschein.",
+      "norm": "§ 286 ZPO",
+      "quellen": [
+        "§ 286 ZPO",
+        "Themenpool: zpo-283"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.826Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-886",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Verschlechterungsverbot: Das eigene Rechtsmittel darf nicht schaden",
+      "text": "Haben nur der Angeklagte, zu seinen Gunsten die Staatsanwaltschaft oder sein gesetzlicher Vertreter Revision eingelegt, darf das Urteil in Art und Höhe der Rechtsfolgen nicht zu seinem Nachteil geändert werden (§ 358 Abs. 2 S. 1 StPO; Berufung: § 331). Funktion: Niemand soll aus Angst vor Verschlechterung auf ein Rechtsmittel verzichten.",
+      "norm": "§ 358 Abs. 2 StPO",
+      "quellen": [
+        "§ 358 StPO",
+        "§ 331 StPO",
+        "Themenpool: revision-886"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.827Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-810",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "K erklärt für erledigt, B widerspricht: Kostenentscheidung nach § 91a ZPO?",
+      "falsch": "Das Gericht entscheidet nach § 91a ZPO durch Beschluss nur noch über die Kosten.",
+      "richtigText": "§ 91a ZPO verlangt übereinstimmende Erklärungen; Schweigen zählt nur unter den Voraussetzungen des Abs. 1 S. 2. Einseitig erklärt ist das nach h.M. eine Klageänderung in eine Feststellungsklage. Das Gericht stellt die Erledigung durch Urteil fest, wenn die Klage bis zum erledigenden Ereignis zulässig und begründet war – Kosten nach § 91 ZPO.",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 91 ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "Themenpool: assessorz-810"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.827Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-211",
+      "ueberzeile": "Klausurtipp Bereicherungsrecht",
+      "titel": "Ein Nichtberechtigter hat verkauft? Erst § 816 BGB – und an die Genehmigung denken",
+      "text": "Hat ein Nichtberechtigter wirksam verfügt, etwa über § 932 BGB, geht § 816 Abs. 1 S. 1 BGB der allgemeinen Eingriffskondiktion vor: Der Eigentümer verlangt das Erlangte, nach der Rspr. den Erlös. War die Verfügung unwirksam, kann er sie genehmigen (§ 185 Abs. 2 BGB) und so § 816 eröffnen. Bei unentgeltlicher Verfügung haftet der Erwerber (§ 816 Abs. 1 S. 2).",
+      "quellen": [
+        "§ 816 BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "§ 185 BGB",
+        "§ 932 BGB",
+        "Themenpool: bereich-211"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:13:23.827Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

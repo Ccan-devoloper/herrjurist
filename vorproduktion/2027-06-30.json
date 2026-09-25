@@ -1,0 +1,864 @@
+{
+  "datum": "2027-06-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-637",
+        "themaTitel": "Verwaltungsakt: Merkmale",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "bereich-210",
+        "themaTitel": "Wie prüft man die Leistungskondiktion?",
+        "fach": "bereich",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-740",
+        "themaTitel": "Tötung auf Verlangen und Suizidhilfe",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:07",
+        "art": "frage",
+        "themaId": "revision-797"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:07",
+        "art": "antwort",
+        "themaId": "revision-797"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "famerb-044"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "streitstand",
+        "themaId": "assessorz-807"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "merksatz",
+        "themaId": "strafat-730"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:17",
+        "art": "begriff",
+        "themaId": "gesetzs-208"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-637",
+      "poolTitel": "Verwaltungsakt: Merkmale",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-26"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "bereich-210",
+      "poolTitel": "Wie prüft man die Leistungskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-01"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-740",
+      "poolTitel": "Tötung auf Verlangen und Suizidhilfe",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 216 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-30",
+        "2027-03-31",
+        "2027-03-31"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "revision-797",
+      "poolTitel": "Revisionsgutachten: Zulässigkeit",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 333 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30",
+        "2027-02-10",
+        "2027-02-10"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "revision-797",
+      "poolTitel": "Revisionsgutachten: Zulässigkeit",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 333 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-30",
+        "2027-02-10",
+        "2027-02-10"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-044",
+      "poolTitel": "Was bedeutet „angemessen“ i.S.d. § 1357 BGB?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1357 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-21"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-807",
+      "poolTitel": "Wann ist ohne, wann nur gegen Sicherheitsleistung vorläufig vollstreckbar?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "§ 713 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-23",
+        "2027-02-24",
+        "2027-04-26"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafat-730",
+      "poolTitel": "Täterschaft und Teilnahme: Abgrenzung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 25 ff. StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2027-05-21"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "gesetzs-208",
+      "poolTitel": "Welche Verwendungen sind notwendig und welche nützlich?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 994 BGB",
+        "§ 996 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-06"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-637",
+      "slug": "2027-06-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Halteverbotsschild: Rechtsnorm oder Verwaltungsakt?",
+          "titelZeilen": [
+            "Halteverbots-",
+            "schild: Rechtsnorm",
+            "oder Verwaltungs-",
+            "akt?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Offener Kreis, konkreter Ort",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Straßenverkehrsbehörde stellt vor dem Haus des A ein absolutes Halteverbot auf. A hält das für überflüssig und will sich wehren. Ist das Verkehrszeichen ein Verwaltungsakt – und wenn ja, wie und bis wann kann A es angreifen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Regelung",
+              "text": "Das Zeichen gebietet verbindlich: hier nicht halten. Es setzt eine Rechtsfolge, statt nur zu informieren."
+            },
+            {
+              "titel": "2. Behörde, hoheitlich, Außenwirkung",
+              "text": "Die Straßenverkehrsbehörde handelt auf Grundlage der StVO und verpflichtet jeden Verkehrsteilnehmer unmittelbar."
+            },
+            {
+              "titel": "3. Einzelfall?",
+              "text": "Offener Adressatenkreis, aber konkreter Ort. Rspr. und h.M.: Allgemeinverfügung nach § 35 S. 2 VwVfG – also ein VA."
+            },
+            {
+              "titel": "4. Folgen",
+              "text": "Bekanntgabe durch Aufstellen. Rechtsschutz: Anfechtungsklage. Keine aufschiebende Wirkung (§ 80 Abs. 2 S. 1 Nr. 2 VwGO analog)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Klausurfalle",
+          "text": "„Das Schild gilt für alle – also ist es eine Rechtsnorm.“ Entscheidend ist nicht nur die Zahl der Adressaten, sondern der konkrete Bezug: Das Zeichen regelt diese eine Stelle. Und die Frist: Nach dem BVerwG läuft sie für den Einzelnen erst, wenn er dem Zeichen zum ersten Mal begegnet."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Das Halteverbot ist ein Verwaltungsakt in Form einer Allgemeinverfügung. A kann es mit Widerspruch bzw. Anfechtungsklage angreifen. Da ein Verkehrszeichen keine Rechtsbehelfsbelehrung trägt, gilt regelmäßig die Jahresfrist des § 58 Abs. 2 VwGO – ab der ersten Konfrontation."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verkehrszeichen sind Allgemeinverfügungen: offener Adressatenkreis, aber konkreter Ort. Rechtsschutz über die Anfechtungsklage."
+        },
+        {
+          "art": "cta",
+          "titel": "VA-Prüfung in drei Fragen",
+          "punkte": [
+            "Regelung mit Außenwirkung?",
+            "Einzelfall oder Allgemeinverfügung?",
+            "Ab wann läuft die Frist?"
+          ],
+          "icons": [
+            "schild",
+            "auto",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Halteverbotsschild: Rechtsnorm oder Verwaltungsakt? Es richtet sich an alle – und ist trotzdem ein VA. Nach Rspr. und h.M. ist das Verkehrszeichen eine Allgemeinverfügung nach § 35 S. 2 VwVfG, weil es einen konkreten Ort regelt. Die Anfechtungsfrist läuft für jeden erst, wenn er dem Zeichen zum ersten Mal begegnet. Speichern für die nächste VA-Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#35vwvfg",
+        "#allgemeinverfügung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verkehrszeichen: Allgemeinverfügung, kein Gesetz",
+      "coverText": "Offener Kreis, konkreter Ort",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ein Schild, das alle betrifft, kann trotzdem eine Einzelfallregelung für einen bestimmten Ort sein.",
+        "handlung": "{A} hammers a single sign post into the ground at one precise spot marked by a small cross, while {B} walks up and stops right in front of it for the first time.",
+        "hinweisRegie": "Place the note in the free space beside the sign post, slightly tilted toward the marked spot, so the concrete location stands out without covering {B}'s face or {A}'s hammer.",
+        "alternative": "{A} projects a glowing circle onto one single parking space, and {B} steps back out of it in surprise."
+      },
+      "bildSzene": "sign post hammered at marked spot",
+      "bildSzeneAlt": "glowing circle on single parking space",
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 41 VwVfG",
+        "§ 80 Abs. 2 S. 1 Nr. 2 VwGO",
+        "§ 58 Abs. 2 VwGO",
+        "Themenpool: verwalt-637"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.098Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-210",
+      "slug": "2027-06-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gezahlt trotz Zweifeln – das Geld ist nicht verloren",
+          "titelZeilen": [
+            "Gezahlt trotz",
+            "Zweifeln – das",
+            "Geld ist nicht",
+            "verloren"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Nur positive Kenntnis sperrt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V verlangt von K 3.000 € aus einem angeblichen Werkvertrag. K ist unsicher, ob überhaupt ein Vertrag zustande kam, zahlt aber, um Ärger zu vermeiden. Später steht fest: Es gab keinen Vertrag. V meint, wer zweifelnd zahle, könne nichts zurückverlangen. Stimmt das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Etwas erlangt",
+              "text": "V hat Eigentum und Besitz an dem Geld bzw. eine Gutschrift erlangt."
+            },
+            {
+              "titel": "2. Durch Leistung",
+              "text": "K hat bewusst und zweckgerichtet fremdes Vermögen gemehrt – zur Erfüllung der vermeintlichen Schuld."
+            },
+            {
+              "titel": "3. Ohne Rechtsgrund",
+              "text": "Ein Vertrag bestand nicht. § 812 Abs. 1 S. 1 Alt. 1 BGB ist erfüllt."
+            },
+            {
+              "titel": "4. Kein Ausschluss nach § 814",
+              "text": "Ausgeschlossen ist nur, wer positiv weiß, dass er nicht schuldet. Bloße Zweifel reichen nicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Klausurfalle",
+          "text": "„K hätte ja nicht zahlen müssen – wer freiwillig leistet, bekommt nichts zurück.“ § 814 BGB verlangt Kenntnis der Rechtslage, nicht nur der Tatsachen. Wer zweifelt, weiß nicht. Und wer ausdrücklich unter Vorbehalt zahlt, schließt § 814 ohnehin aus."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "K kann die 3.000 € nach § 812 Abs. 1 S. 1 Alt. 1 BGB zurückverlangen. Der Umfang richtet sich nach § 818 BGB. Auf Entreicherung kann sich V nicht berufen, sobald er den Mangel des Rechtsgrunds kennt (§§ 818 Abs. 4, 819 Abs. 1 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 814 BGB sperrt die Kondiktion nur bei positiver Kenntnis der Nichtschuld. Zweifel oder Zahlung unter Vorbehalt schaden nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Leistungskondiktion in drei Fragen",
+          "punkte": [
+            "Etwas durch Leistung erlangt?",
+            "Ohne Rechtsgrund?",
+            "Ausschluss nach §§ 814, 817 S. 2 BGB?"
+          ],
+          "icons": [
+            "banknote",
+            "vertrag",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Gezahlt trotz Zweifeln – und das Geld ist nicht verloren. § 814 BGB schließt die Leistungskondiktion nur aus, wenn der Leistende positiv wusste, dass er nicht verpflichtet war. Zweifel genügen dafür nicht, eine Zahlung unter Vorbehalt schon gar nicht. Speichern für die nächste Bereicherungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#814bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 814 BGB: Zweifel sind keine Kenntnis",
+      "coverText": "Nur positive Kenntnis sperrt",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer unsicher zahlt, verliert seinen Rückforderungsanspruch nicht.",
+        "handlung": "{A} hesitantly drops a coin pouch into {B}'s open hands while glancing at a half-torn contract, and a thin thread still connects the pouch to {A}'s belt.",
+        "hinweisRegie": "Place the note in the free space beside the thin thread between the pouch and {A}'s belt, slightly tilted toward it, without covering the torn contract or {B}'s hands.",
+        "alternative": "{B} holds a coin up to a lamp and finds a small return tag on it that {A} attached before handing it over."
+      },
+      "bildSzene": "coin pouch still tied by thread",
+      "bildSzeneAlt": "return tag found on coin",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+        "§ 814 BGB",
+        "§ 817 S. 2 BGB",
+        "§ 818 BGB",
+        "§ 819 BGB",
+        "Themenpool: bereich-210"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.098Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-740",
+      "slug": "2027-06-30-b3",
+      "titelZeilen": [
+        "Glas gereicht:",
+        "straflos. Spritze",
+        "gesetzt: § 216 StGB"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Glas gereicht: straflos. Spritze gesetzt: § 216 StGB",
+          "unter": "Tötung auf Verlangen · § 216 StGB",
+          "text": "Entscheidend ist, wer den letzten, unumkehrbaren Schritt beherrscht.",
+          "norm": "§ 216 StGB",
+          "icon": "arzt",
+          "sprecher": "Gleicher Wunsch, gleicher Tod – und trotzdem einmal straflos. Es kommt darauf an, wer zuletzt handelt.",
+          "marken": [
+            "Tatherrschaft",
+            "§ 216 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Suizid ist keine Straftat",
+          "text": "Ohne Haupttat keine strafbare Teilnahme.",
+          "norm": "§§ 26, 27 StGB",
+          "sprecher": "Schritt eins: Die Selbsttötung ist nicht strafbar. Wer dabei hilft, leistet Beihilfe zu einer Tat, die keine Straftat ist. Die Teilnahme bleibt deshalb grundsätzlich straflos.",
+          "marken": [
+            "keine Haupttat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wer hat die Tatherrschaft?",
+          "text": "Maßgeblich ist, wer den letzten, unumkehrbaren Akt beherrscht.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Abgrenzung. Entscheidend ist, wer den letzten, unwiderruflichen Schritt in der Hand hat. Trinkt der Sterbewillige das Glas selbst aus, bleibt das Geschehen seins. Setzt der andere die Spritze, beherrscht er die Tötung.",
+          "marken": [
+            "letzter Akt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Dann: § 216 oder § 212?",
+          "text": "Privilegierung nur bei ausdrücklichem und ernstlichem Verlangen.",
+          "norm": "§ 216 Abs. 1 StGB",
+          "sprecher": "Schritt drei: Tötet der andere selbst, greift Paragraf 216 nur, wenn er durch das ausdrückliche und ernstliche Verlangen des Getöteten zur Tötung bestimmt wurde. Sonst bleibt es beim Totschlag.",
+          "marken": [
+            "ernstlich",
+            "ausdrücklich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Nach dem Suizidversuch",
+          "text": "Nach neuerer BGH-Rspr. keine Rettungspflicht bei freiverantwortlichem Suizid.",
+          "norm": "§ 13 StGB",
+          "sprecher": "Schritt vier: das Danach. Nach neuerer Rechtsprechung des BGH muss auch ein Garant nicht eingreifen, wenn der Suizid freiverantwortlich ist. Freiverantwortlichkeit ist aber genau zu prüfen.",
+          "marken": [
+            "freiverantwortlich"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Letzter Akt beim Sterbewilligen: straflose Hilfe. Beim anderen: § 216 oder § 212.",
+          "norm": "§ 216 StGB",
+          "sprecher": "Merke: Behält der Sterbewillige den letzten Schritt selbst, ist die Hilfe straflos. Führt ihn der andere aus, ist es eine Tötung, auf Verlangen privilegiert nach Paragraf 216.",
+          "marken": [
+            "wer handelt zuletzt?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für Strafrecht BT",
+          "text": "Speichern für die nächste Tötungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur, in der jemand um Hilfe beim Sterben bittet.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Glas gereicht: straflos. Spritze gesetzt: Tötung auf Verlangen. Die Grenze zwischen strafloser Suizidhilfe und § 216 StGB verläuft danach, wer den letzten, unumkehrbaren Akt beherrscht. Tötet der andere selbst, privilegiert § 216 StGB nur bei ausdrücklichem und ernstlichem Verlangen. Speichern für die nächste Tötungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#216stgb",
+        "#tötungsdelikte",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 216 StGB oder straflose Suizidhilfe?",
+      "coverText": "Wer hat den letzten Akt in der Hand?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Die Grenze zwischen strafloser Hilfe und Tötung liegt beim letzten, unumkehrbaren Schritt.",
+        "handlung": "{B} slides a single small cup across a table and pulls his hand back, while {A} alone keeps her hand on a lever at the table's edge.",
+        "hinweisRegie": "Place the note in the free space above {A}'s hand on the lever, slightly tilted toward it, so the final decisive act stands out without covering the cup or {B}'s withdrawn hand.",
+        "alternative": "{B} hands {A} a key to a last door and steps back, so that only {A} can turn it."
+      },
+      "bildSzene": "hand kept on final lever",
+      "bildSzeneAlt": "key handed over, helper steps back",
+      "quellen": [
+        "§ 216 StGB",
+        "§ 212 StGB",
+        "§§ 26, 27 StGB",
+        "§ 13 StGB",
+        "Themenpool: strafbt-740"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "abgrenzung-widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.099Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-797",
+      "ueberzeile": "Prüfungsfrage Revision",
+      "titel": "Urteil erst nach Ablauf der Einlegungsfrist zugestellt: Wann beginnt die Revisionsbegründungsfrist?",
+      "optionen": [
+        "Mit der Zustellung des Urteils",
+        "Mit der Verkündung des Urteils",
+        "Mit Eingang der Revisionsschrift beim Gericht"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 341 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-797"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.099Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-797",
+      "ueberzeile": "Auflösung",
+      "titel": "Mit der Zustellung – ab dann grundsätzlich ein Monat für die Begründung",
+      "text": "Eingelegt wird binnen einer Woche nach Verkündung (§ 341 StPO). Begründet wird binnen eines Monats nach Ablauf der Einlegungsfrist; war das Urteil bis dahin nicht zugestellt, beginnt die Frist mit der Zustellung (§ 345 Abs. 1 StPO). Der Angeklagte begründet durch eine vom Verteidiger oder Anwalt unterzeichnete Schrift oder zu Protokoll der Geschäftsstelle (§ 345 Abs. 2 StPO).",
+      "norm": "§ 345 Abs. 1 StPO",
+      "quellen": [
+        "§ 341 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-797"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.099Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit der Zustellung des Urteils",
+        "Mit der Verkündung des Urteils",
+        "Mit Eingang der Revisionsschrift beim Gericht"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-044",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1357 Abs. 3 BGB: Wer getrennt lebt, verpflichtet den anderen nicht mehr",
+      "text": "Geschäfte zur angemessenen Deckung des Lebensbedarfs berechtigen und verpflichten grundsätzlich beide Ehegatten (§ 1357 Abs. 1 BGB). Das gilt nicht, wenn sich aus den Umständen etwas anderes ergibt – und nach Abs. 3 nicht, wenn die Ehegatten getrennt leben. Beschränkt ein Ehegatte die Befugnis nach Abs. 2, wirkt das gegenüber Dritten nur nach Maßgabe des § 1412 BGB.",
+      "norm": "§ 1357 BGB",
+      "quellen": [
+        "§ 1357 BGB",
+        "§ 1412 BGB",
+        "Themenpool: famerb-044"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.099Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-807",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Stufenklage: Die Auskunft ergibt, dass nichts geschuldet ist. Erledigt sich dadurch die Hauptsache?",
+      "norm": "§ 254 ZPO · § 91a ZPO",
+      "optionen": [
+        "BGH: Nein – der Zahlungsantrag war von Anfang an unbegründet. Der Kläger kann aber einen materiellen Kostenerstattungsanspruch geltend machen.",
+        "Andere Ansicht: Kosten wie bei Erledigung verteilen, da sich die Aussichtslosigkeit erst durch die Auskunft zeigt."
+      ],
+      "text": "Klausur: mit dem BGH keine Erledigung. Der Kläger sollte auf Feststellung umstellen, dass der Beklagte die Kosten als Schaden zu ersetzen hat – etwa weil er mit der Auskunft in Verzug war.",
+      "quellen": [
+        "§ 254 ZPO",
+        "§ 91a ZPO",
+        "§ 286 BGB",
+        "Themenpool: assessorz-807"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.099Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-730",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Mehrere Beteiligte: Beginne beim Tatnächsten",
+      "text": "Prüfe zuerst den, der die Tat unmittelbar ausführt – er ist in der Regel Täter (§ 25 Abs. 1 Alt. 1 StGB). Erst dann die Hintermänner: Mittäterschaft, mittelbare Täterschaft, Anstiftung oder Beihilfe. So steht die Haupttat fest, bevor du Teilnahme prüfst – die §§ 26, 27 StGB setzen eine vorsätzliche, rechtswidrige Haupttat voraus.",
+      "norm": "§§ 25–27 StGB",
+      "quellen": [
+        "§ 25 StGB",
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "Themenpool: strafat-730"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.099Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-208",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Nützliche Verwendung: Ersatz nur für die Wertsteigerung, die noch da ist",
+      "text": "Nützlich ist eine Verwendung, die den Wert der Sache erhöht, ohne zu ihrer Erhaltung nötig zu sein. Ersatz gibt es nach § 996 BGB nur, wenn sie vor Rechtshängigkeit und vor Eintritt der Bösgläubigkeit (§ 990 BGB) gemacht wurde – und nur, soweit der Wert noch erhöht ist, wenn der Eigentümer die Sache zurückerhält.",
+      "norm": "§ 996 BGB",
+      "quellen": [
+        "§ 994 BGB",
+        "§ 996 BGB",
+        "§ 990 BGB",
+        "Themenpool: gesetzs-208"
+      ],
+      "fachLabel": "GoA/EBV",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:10:08.099Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
