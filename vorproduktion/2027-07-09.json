@@ -1,0 +1,864 @@
+{
+  "datum": "2027-07-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "vwgo-405",
+        "themaTitel": "Wann ist ein Vorverfahren erforderlich?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "gesetzs-209",
+        "themaTitel": "Was ist der Fremdbesitzerexzess?",
+        "fach": "gesetzs",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-744",
+        "themaTitel": "Fahrlässige Tötung und Körperverletzung",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "staat-595"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "staat-595"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "bgbat-008"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "merksatz",
+        "themaId": "stpo-779"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "begriff",
+        "themaId": "assessorz-823"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "fehler",
+        "themaId": "strafat-921"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "vwgo-405",
+      "poolTitel": "Wann ist ein Vorverfahren erforderlich?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 68 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-09",
+        "2026-12-30",
+        "2026-12-30"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "gesetzs-209",
+      "poolTitel": "Was ist der Fremdbesitzerexzess?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 991 Abs. 2 BGB",
+        "§ 993 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2026-12-24",
+        "2027-06-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-744",
+      "poolTitel": "Fahrlässige Tötung und Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 222, 229 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-12-15",
+        "2027-02-14"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-595",
+      "poolTitel": "Ausschließliche und konkurrierende Gesetzgebung",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 71-74 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-24",
+        "2027-03-26",
+        "2027-03-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-595",
+      "poolTitel": "Ausschließliche und konkurrierende Gesetzgebung",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 71-74 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-24",
+        "2027-03-26",
+        "2027-03-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-008",
+      "poolTitel": "Worin unterscheiden sich Anfechtung und Wegfall der Geschäftsgrundlage?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 2 BGB",
+        "§ 313 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "stpo-779",
+      "poolTitel": "Rechtswidrige Durchsuchung und Beweisverwertung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-16",
+        "2027-01-08",
+        "2027-03-06"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "assessorz-823",
+      "poolTitel": "Wann wird Prozesskostenhilfe bewilligt?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 114 ZPO",
+        "§ 121 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "strafat-921",
+      "poolTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-01",
+        "2027-03-06",
+        "2027-05-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-405",
+      "slug": "2027-07-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Genehmigung erst im Widerspruchsbescheid kassiert? Direkt klagen",
+          "titelZeilen": [
+            "Genehmigung erst",
+            "im Widerspruchs-",
+            "bescheid kassiert?",
+            "Direkt klagen"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Erstmalige Beschwer: § 68 I 2 Nr. 2",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Die Bauaufsichtsbehörde erteilt B eine Baugenehmigung. Nachbar N legt Widerspruch ein, die Widerspruchsbehörde gibt ihm recht und hebt die Genehmigung auf. B will dagegen klagen. Das Landesrecht sieht in Bausachen ein Vorverfahren vor. Muss B zuerst selbst Widerspruch einlegen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Vorverfahren nötig?",
+          "schritte": [
+            {
+              "titel": "1. Grundsatz",
+              "text": "Vor der Anfechtungsklage sind Recht- und Zweckmäßigkeit in einem Vorverfahren nachzuprüfen (§ 68 Abs. 1 S. 1 VwGO)."
+            },
+            {
+              "titel": "2. Erstmalige Beschwer",
+              "text": "Kein Vorverfahren, wenn der Abhilfe- oder Widerspruchsbescheid erstmalig eine Beschwer enthält (§ 68 Abs. 1 S. 2 Nr. 2 VwGO)."
+            },
+            {
+              "titel": "3. Weitere Ausnahmen",
+              "text": "Gesetzlicher Ausschluss, oft durch Landesrecht (§ 68 Abs. 1 S. 2 Hs. 1 VwGO), oder VA einer obersten Behörde (Nr. 1)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Klage des B",
+          "schritte": [
+            {
+              "titel": "Klagegegenstand",
+              "text": "Der Widerspruchsbescheid selbst, weil er erstmalig beschwert (§ 79 Abs. 1 Nr. 2 VwGO)."
+            },
+            {
+              "titel": "Klagegegner",
+              "text": "Maßgeblich ist die Widerspruchsbehörde (§ 78 Abs. 2 VwGO) – ihr Rechtsträger oder, je nach Landesrecht, sie selbst."
+            },
+            {
+              "titel": "Frist",
+              "text": "Ein Monat ab Zustellung des Widerspruchsbescheids (§ 74 Abs. 1 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "B ist erst durch den Widerspruchsbescheid belastet – die Genehmigung hatte ihn begünstigt. Ein weiteres Vorverfahren ist nach § 68 Abs. 1 S. 2 Nr. 2 VwGO entbehrlich. B erhebt direkt Anfechtungsklage gegen den Widerspruchsbescheid."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer erst durch den Widerspruchsbescheid beschwert wird, klagt direkt: kein zweites Vorverfahren, Gegenstand § 79 Abs. 1 Nr. 2, Gegner nach § 78 Abs. 2 VwGO."
+        },
+        {
+          "art": "cta",
+          "titel": "Vorverfahren in drei Fragen",
+          "punkte": [
+            "Gesetzlich ausgeschlossen?",
+            "Oberste Behörde?",
+            "Erstmalige Beschwer im Bescheid?"
+          ],
+          "icons": [
+            "paragraf",
+            "gebaeude",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Genehmigung erst im Widerspruchsbescheid kassiert? Dann direkt klagen. Enthält der Widerspruchsbescheid erstmalig eine Beschwer, ist ein weiteres Vorverfahren nach § 68 Abs. 1 S. 2 Nr. 2 VwGO entbehrlich. Klagegegenstand ist der Widerspruchsbescheid selbst (§ 79 Abs. 1 Nr. 2 VwGO), maßgeblich für den Klagegegner die Widerspruchsbehörde (§ 78 Abs. 2 VwGO). Ob überhaupt ein Vorverfahren stattfindet, bestimmt oft das Landesrecht. Speichern für die nächste Baurechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#widerspruchsverfahren",
+        "#68vwgo",
+        "#baurecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorverfahren bei erstmaliger Beschwer",
+      "coverText": "Erstmalige Beschwer: § 68 I 2 Nr. 2",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer erst durch den Widerspruchsbescheid belastet wird, muss nicht noch einmal Widerspruch einlegen.",
+        "handlung": "{A} stands in a long waiting line holding a crossed-out permit, while {B} opens a side door right next to her that leads directly into a courtroom-like hall without text.",
+        "hinweisRegie": "Place the note in the free space beside the open side door, slightly tilted toward it, so the direct route is linked to the door without covering {A}'s crossed-out permit.",
+        "alternative": "{B} removes one unnecessary hurdle from a short race track, while {A} is ready to sprint straight to the finish."
+      },
+      "bildSzene": "side door opened beside waiting line",
+      "bildSzeneAlt": "hurdle removed from race track",
+      "quellen": [
+        "§ 68 Abs. 1 VwGO",
+        "§ 74 Abs. 1 VwGO",
+        "§ 78 Abs. 2 VwGO",
+        "§ 79 Abs. 1 Nr. 2 VwGO",
+        "Themenpool: vwgo-405"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "direktklage-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.376Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "themaId": "gesetzs-209",
+      "slug": "2027-07-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Redlich und unverklagt – und trotzdem nach § 823 BGB haftbar",
+          "titelZeilen": [
+            "Redlich und",
+            "unverklagt – und",
+            "trotzdem nach",
+            "§ 823 BGB haftbar"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Nicht besser als der Berechtigte",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "E vermietet M eine Bohrmaschine. Der Mietvertrag ist nichtig, weil E unerkannt geschäftsunfähig ist (§ 105 BGB) – M weiß davon nichts. M benutzt die Maschine fahrlässig entgegen der Anleitung als Rührwerk für Beton, der Motor brennt durch. Kann E von M Schadensersatz verlangen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. EBV",
+              "text": "E ist Eigentümer, M Besitzer ohne Recht zum Besitz – der Mietvertrag ist nichtig. Eine Vindikationslage besteht."
+            },
+            {
+              "titel": "2. §§ 989, 990 BGB",
+              "text": "M ist redlich und unverklagt: keine Haftung aus dem EBV. § 993 Abs. 1 Hs. 2 BGB sperrt grundsätzlich weitere Schadensersatzansprüche."
+            },
+            {
+              "titel": "3. Fremdbesitzerexzess",
+              "text": "M überschreitet die Grenzen seines vermeintlichen Besitzrechts. Auch als wirksamer Mieter hätte er dafür gehaftet."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Redlich und unverklagt – also haftet M nicht.“ Die Sperre des § 993 Abs. 1 Hs. 2 BGB soll den redlichen Besitzer schützen, ihn aber nicht besser stellen als einen berechtigten Besitzer. Wer sein vermeintliches Recht überschreitet, verdient diesen Schutz nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nach h.M. bleibt § 823 Abs. 1 BGB beim Fremdbesitzerexzess anwendbar. M hat das Eigentum des E fahrlässig verletzt und haftet auf Schadensersatz. Eine verwandte Wertung zeigt § 991 Abs. 2 BGB: Der Besitzmittler haftet, soweit er dem mittelbaren Besitzer verantwortlich ist."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der redliche Fremdbesitzer ist vor Haftung geschützt – aber nur im Rahmen seines vermeintlichen Besitzrechts. Überschreitet er es, gilt § 823 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Fremdbesitzerexzess in drei Fragen",
+          "punkte": [
+            "Vindikationslage?",
+            "Redlich und unverklagt?",
+            "Grenzen des vermeintlichen Rechts überschritten?"
+          ],
+          "icons": [
+            "schluessel",
+            "person",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Redlich und unverklagt – und trotzdem nach § 823 BGB haftbar. Grundsätzlich sperrt § 993 Abs. 1 Hs. 2 BGB Schadensersatzansprüche gegen den redlichen, unverklagten Besitzer. Beim Fremdbesitzerexzess überschreitet der Fremdbesitzer aber die Grenzen seines vermeintlichen Besitzrechts. Nach h.M. bleibt dann § 823 Abs. 1 BGB anwendbar – er soll nicht besser stehen als ein berechtigter Besitzer. Speichern für die nächste EBV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#ebv",
+        "#993bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fremdbesitzerexzess: § 823 BGB trotz Sperre",
+      "coverText": "Nicht besser als der Berechtigte",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Wer eine fremde Sache nur besitzen darf, um sie normal zu nutzen, haftet, wenn er diese Grenze überschreitet.",
+        "handlung": "{A} lends a sturdy drill-like crystal tool, while {B} nervously uses it to stir a heavy bucket of wet cement and smoke rises from the tool.",
+        "hinweisRegie": "Place the note in the free space next to the smoking tool and the cement bucket, slightly tilted toward the smoke, so the misuse is linked to the damage without covering {B}'s hands.",
+        "alternative": "{B} walks past a clearly marked boundary line while carrying a borrowed item, and {A} points to the line behind him."
+      },
+      "bildSzene": "borrowed tool smokes in cement",
+      "bildSzeneAlt": "borrowed item carried past boundary",
+      "quellen": [
+        "§§ 985, 986 BGB",
+        "§§ 989, 990 BGB",
+        "§ 991 Abs. 2 BGB",
+        "§ 993 Abs. 1 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: gesetzs-209"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "sperre-durchbrochen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.376Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-744",
+      "slug": "2027-07-09-b3",
+      "titelZeilen": [
+        "Vorfahrt gehabt –",
+        "und doch",
+        "fahrlässig?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vorfahrt gehabt – und doch fahrlässig?",
+          "unter": "Fahrlässigkeit · §§ 222, 229 StGB",
+          "text": "Der Vertrauensgrundsatz hat Grenzen.",
+          "norm": "§ 222 StGB · § 229 StGB",
+          "icon": "auto",
+          "sprecher": "Vorfahrt gehabt und trotzdem fahrlässig? Das geht. Der Vertrauensgrundsatz schützt nur, wer selbst die Regeln einhält und keine Warnzeichen übersieht. So prüfst du die Paragrafen 222 und 229.",
+          "marken": [
+            "Vorfahrt",
+            "trotzdem fahrlässig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erfolg und Kausalität",
+          "text": "Tod oder Körperverletzung, verursacht durch das Verhalten.",
+          "norm": null,
+          "sprecher": "Schritt eins: der Erfolg, also Tod oder Körperverletzung, und die Kausalität. Einen Vorsatz prüfst du nicht – das Fahrlässigkeitsdelikt hat seinen eigenen Aufbau.",
+          "marken": [
+            "kein Vorsatz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Objektive Sorgfaltspflichtverletzung",
+          "text": "Maßstab: besonnener, gewissenhafter Mensch in der Lage des Täters.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die objektive Sorgfaltspflichtverletzung bei objektiver Vorhersehbarkeit. Maßstab ist ein besonnener und gewissenhafter Mensch in der Lage des Täters. Im Straßenverkehr helfen die Regeln der StVO.",
+          "marken": [
+            "Maßstabsfigur"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vertrauensgrundsatz – mit Grenzen",
+          "text": "Kein Vertrauen bei Warnzeichen, bei Kindern oder eigenem Regelverstoß.",
+          "norm": null,
+          "sprecher": "Schritt drei: Wer sich korrekt verhält, darf grundsätzlich darauf vertrauen, dass andere es auch tun. Das gilt aber nicht bei erkennbaren Anzeichen für ein Fehlverhalten, bei Kindern und regelmäßig nicht für den, der selbst gegen Regeln verstößt.",
+          "marken": [
+            "Grenzen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Pflichtwidrigkeitszusammenhang",
+          "text": "Hätte sorgfaltsgemäßes Verhalten den Erfolg sicher vermieden?",
+          "norm": null,
+          "sprecher": "Schritt vier: der Pflichtwidrigkeitszusammenhang. Nach der Rechtsprechung wird der Erfolg nur zugerechnet, wenn sorgfaltsgemäßes Verhalten ihn sicher vermieden hätte. Und er muss im Schutzzweck der verletzten Regel liegen.",
+          "marken": [
+            "Schutzzweck"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Vorfahrt ist kein Freibrief: Vertrauen nur ohne Warnzeichen und ohne eigenen Verstoß.",
+          "norm": null,
+          "sprecher": "Merke: Vorfahrt ist kein Freibrief. Vertrauen darf nur, wer selbst korrekt fährt und keine Warnzeichen sieht. Die persönliche Vorwerfbarkeit prüfst du dann in der Schuld.",
+          "marken": [
+            "kein Freibrief"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Fahrlässigkeit in vier Schritten",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur mit Verkehrsunfall.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Vorfahrt gehabt – und doch fahrlässig? Das geht. Beim Fahrlässigkeitsdelikt prüfst du Erfolg und Kausalität, die objektive Sorgfaltspflichtverletzung und den Pflichtwidrigkeitszusammenhang. Der Vertrauensgrundsatz entlastet nur, wer selbst die Regeln einhält und keine Anzeichen für fremdes Fehlverhalten übersieht – bei Kindern gilt er regelmäßig nicht. Speichern für die nächste Klausur mit Verkehrsunfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#222stgb",
+        "#fahrlässigkeit",
+        "#verkehrsstrafrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fahrlässigkeit und Vertrauensgrundsatz",
+      "coverText": "Vertrauen hat Grenzen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer Vorfahrt hat, darf auf andere vertrauen – aber nicht, wenn er Warnzeichen sieht.",
+        "handlung": "{A} drives a small hover vehicle confidently along the main path, while {B} as a small child-like alien wobbles toward the crossing with a bouncing ball.",
+        "hinweisRegie": "Place the note in the free space above the crossing between the vehicle and the ball, slightly tilted toward the child, so the warning sign is linked to the crossing without covering either character.",
+        "alternative": "{B} holds up a small blinking warning light at a junction, while {A} slows down even though his path is marked as the main road."
+      },
+      "bildSzene": "child with ball near crossing",
+      "bildSzeneAlt": "blinking light at junction, slowing",
+      "quellen": [
+        "§ 222 StGB",
+        "§ 229 StGB",
+        "§ 15 StGB",
+        "Themenpool: strafbt-744"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.377Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-595",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Der Bund regelt eine Materie des Art. 74 GG abschließend. Land L erlässt eine ergänzende Regel. Wirksam?",
+      "optionen": [
+        "Ja – bis Bundesrecht es nach Art. 31 GG bricht",
+        "Nein – Art. 72 Abs. 1 GG sperrt, dem Land fehlt die Kompetenz",
+        "Ja, wenn der Bundesrat zugestimmt hat"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 72 Abs. 1, 3 GG",
+        "Art. 74 GG",
+        "Art. 31 GG",
+        "Themenpool: staat-595"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.377Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-595",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die Sperrwirkung nimmt dem Land schon die Kompetenz",
+      "text": "In der konkurrierenden Gesetzgebung dürfen die Länder nur, solange und soweit der Bund nicht abschließend Gebrauch gemacht hat (Art. 72 Abs. 1 GG). Das Landesgesetz ist kompetenzwidrig und nichtig – auf Art. 31 GG kommt es nicht an. Ausnahme: das Abweichungsrecht in den Materien des Art. 72 Abs. 3 GG.",
+      "norm": "Art. 72 Abs. 1 GG",
+      "quellen": [
+        "Art. 72 Abs. 1, 3 GG",
+        "Art. 74 GG",
+        "Art. 31 GG",
+        "Themenpool: staat-595"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.377Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – bis Bundesrecht es nach Art. 31 GG bricht",
+        "Nein – Art. 72 Abs. 1 GG sperrt, dem Land fehlt die Kompetenz",
+        "Ja, wenn der Bundesrat zugestimmt hat"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-008",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 119 Abs. 2 BGB: Der Marktwert selbst ist keine Eigenschaft",
+      "text": "Eigenschaften sind die wertbildenden Merkmale einer Sache – etwa Material, Alter, Echtheit –, nicht aber ihr Wert oder Preis. Wer sich nur über den Wert irrt, kann nicht nach § 119 Abs. 2 BGB anfechten. Irren beide über einen Umstand, der Geschäftsgrundlage ist, kommt § 313 BGB in Betracht; das Verhältnis zur Anfechtung ist umstritten.",
+      "norm": "§ 119 Abs. 2 BGB · § 313 BGB",
+      "quellen": [
+        "§ 119 Abs. 2 BGB",
+        "§ 313 BGB",
+        "Themenpool: bgbat-008"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.377Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-779",
+      "ueberzeile": "Merksatz Strafprozessrecht",
+      "titel": "Verwertungsverbot heißt nicht Fernwirkung",
+      "text": "Auch wenn der Fund aus einer rechtswidrigen Durchsuchung unverwertbar ist: Beweise, die erst mit seiner Hilfe entdeckt werden, bleiben nach der Rspr. grundsätzlich verwertbar.",
+      "norm": "§ 105 StPO",
+      "quellen": [
+        "§§ 102, 105 StPO",
+        "Themenpool: stpo-779"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.377Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-823",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Prozesskostenhilfe",
+      "text": "Bewilligt, wenn die Partei die Prozesskosten nach ihren persönlichen und wirtschaftlichen Verhältnissen nicht, nur zum Teil oder nur in Raten aufbringen kann und die Rechtsverfolgung hinreichend erfolgversprechend und nicht mutwillig ist (§ 114 ZPO). Die Kosten des Gegners deckt sie beim Unterliegen nicht (§ 123 ZPO).",
+      "norm": "§ 114 ZPO · § 121 ZPO",
+      "quellen": [
+        "§ 114 ZPO",
+        "§ 121 ZPO",
+        "§ 123 ZPO",
+        "Themenpool: assessorz-823"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.377Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-921",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Anderer Weg zum selben Tod: Der Vorsatz bleibt",
+      "falsch": "A stößt O von einer Brücke, damit er ertrinkt. O stirbt schon beim Aufprall auf einen Brückenpfeiler. Weil der Kausalverlauf abweicht, bleibt es beim Versuch.",
+      "richtigText": "Der Vorsatz muss den Kausalverlauf nur in seinen wesentlichen Zügen erfassen. Unwesentlich ist die Abweichung, wenn sie im Rahmen des nach allgemeiner Lebenserfahrung Vorhersehbaren liegt und keine andere Bewertung rechtfertigt. So hier: vollendeter Totschlag.",
+      "quellen": [
+        "§ 16 Abs. 1 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-921"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:15.377Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

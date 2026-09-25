@@ -1,0 +1,893 @@
+{
+  "datum": "2027-07-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "assessorz-578",
+        "themaTitel": "Kostenentscheidung im Urteil",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "anklage-856",
+        "themaTitel": "Wie ist die Anklageschrift aufgebaut?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-639",
+        "themaTitel": "Bestimmtheit und Begründung",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "anklage-796"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "anklage-796"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "strafat-309"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "tipp",
+        "themaId": "zpo-281"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "zahl",
+        "themaId": "methodik-909"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "streitstand",
+        "themaId": "assessorz-822"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "assessorz-578",
+      "poolTitel": "Kostenentscheidung im Urteil",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 91 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "anklage-856",
+      "poolTitel": "Wie ist die Anklageschrift aufgebaut?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-02-16",
+        "2027-04-21",
+        "2027-06-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-639",
+      "poolTitel": "Bestimmtheit und Begründung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§§ 37, 39 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-25",
+        "2027-04-22",
+        "2027-04-22"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-796",
+      "poolTitel": "Plädoyer der Staatsanwaltschaft",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-26",
+        "2027-04-07",
+        "2027-06-25"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-796",
+      "poolTitel": "Plädoyer der Staatsanwaltschaft",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-26",
+        "2027-04-07",
+        "2027-06-25"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-309",
+      "poolTitel": "Was ist eine notwendige Teilnahme?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 26 StGB",
+        "§ 27 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-18",
+        "2027-04-19"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "zpo-281",
+      "poolTitel": "Was ist eine Nebenintervention?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 66 ZPO",
+        "§ 67 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2027-04-11"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-909",
+      "poolTitel": "Wiederholen nach dem 7-30-90-Tage-Prinzip",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-09",
+        "2027-04-18",
+        "2027-05-29"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-822",
+      "poolTitel": "Wie entstehen Anwaltsgebühren im Zivilprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "RVG",
+        "§ 91 ZPO"
+      ],
+      "typ": "formel",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-01-12",
+        "2027-03-17",
+        "2027-05-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-578",
+      "slug": "2027-07-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gegeneinander aufgehoben ist nicht halbe-halbe",
+          "titelZeilen": [
+            "Gegeneinander",
+            "aufgehoben ist",
+            "nicht halbe-halbe"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Anwaltskosten bleiben liegen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verklagt B vor dem Amtsgericht auf 4.000 € und gewinnt zur Hälfte. K ist anwaltlich vertreten, B verteidigt sich selbst. Im Urteilsentwurf steht: „Die Kosten des Rechtsstreits werden gegeneinander aufgehoben.“ Passt dieser Kostentenor?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Grundnorm",
+              "text": "Teils gewonnen, teils verloren: § 92 Abs. 1 S. 1 ZPO. Das Gericht hebt die Kosten gegeneinander auf oder teilt sie verhältnismäßig."
+            },
+            {
+              "titel": "Was Aufhebung bedeutet",
+              "text": "Gerichtskosten fallen jeder Partei zur Hälfte zur Last, ihre außergerichtlichen Kosten trägt jede selbst (§ 92 Abs. 1 S. 2 ZPO)."
+            },
+            {
+              "titel": "Folge im Fall",
+              "text": "K bleibt auf seinen Anwaltskosten allein sitzen, B hat keine. Obwohl K zur Hälfte gewinnt, trägt er wirtschaftlich deutlich mehr."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Quote statt Aufhebung: „Die Kosten des Rechtsstreits tragen K und B je zur Hälfte.“ Dann erstattet B die Hälfte von Ks Anwaltskosten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Kurzschluss liegt",
+          "text": "Aufhebung klingt nach „halbe-halbe“. Wirtschaftlich stimmt das nur, wenn beide Seiten ähnlich hohe außergerichtliche Kosten haben – etwa weil beide anwaltlich vertreten sind. Sonst verschiebt die Aufhebung das Ergebnis zulasten der Partei mit Anwalt."
+        },
+        {
+          "art": "text",
+          "titel": "Drei Nebenregeln für den Tenor",
+          "punkte": [
+            "Die Kostenentscheidung ergeht von Amts wegen, ein Antrag ist nicht nötig (§ 308 Abs. 2 ZPO)",
+            "Geringfügige Zuvielforderung ohne höhere Kosten: Der Gegner kann alle Kosten tragen (§ 92 Abs. 2 Nr. 1 ZPO)",
+            "Vorläufige Vollstreckbarkeit auch wegen der Kosten mitdenken (§§ 708 ff. ZPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Aufhebung: Gerichtskosten teilen, eigene Anwaltskosten selbst tragen. Sind die außergerichtlichen Kosten ungleich, tenorierst du eine Quote."
+        },
+        {
+          "art": "cta",
+          "titel": "Kostentenor in drei Fragen",
+          "punkte": [
+            "Wer gewinnt zu welchem Anteil?",
+            "Haben beide ähnliche Anwaltskosten?",
+            "Wenn nein: Quote statt Aufhebung"
+          ],
+          "icons": [
+            "waage",
+            "muenzen",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Gegeneinander aufgehoben ist nicht dasselbe wie halbe-halbe. Bei der Aufhebung werden nur die Gerichtskosten geteilt – ihre außergerichtlichen Kosten trägt jede Partei selbst (§ 92 Abs. 1 S. 2 ZPO). Hat nur eine Seite einen Anwalt, bleibt sie darauf sitzen. Dann passt eine Quote besser. Speichern für den nächsten Kostentenor.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#92zpo",
+        "#kostenentscheidung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kostenaufhebung ist nicht halbe-halbe",
+      "coverText": "Anwaltskosten bleiben liegen",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Bei der Kostenaufhebung wird nur ein Teil geteilt – die eigenen Anwaltskosten bleiben bei jeder Partei.",
+        "handlung": "{B} splits one small coin pile evenly into two halves, while {A} nervously stares at a much larger sack of coins that stays only on his side of the table.",
+        "hinweisRegie": "Place the note in the free space between the evenly split small pile and the large sack on {A}'s side, slightly tilted toward the sack, so the uneven remainder is the focus without covering either character.",
+        "alternative": "{A} and {B} each carry a backpack of very different size up a hill, while only a small shared crate between them is divided."
+      },
+      "bildSzene": "small pile split, big sack stays",
+      "bildSzeneAlt": "unequal backpacks, shared crate split",
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 92 Abs. 1 ZPO",
+        "§ 92 Abs. 2 Nr. 1 ZPO",
+        "§ 308 Abs. 2 ZPO",
+        "§§ 708 ff. ZPO",
+        "Themenpool: assessorz-578"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.532Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-856",
+      "slug": "2027-07-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "In der Anklage heißt er nicht mehr Beschuldigter",
+          "titelZeilen": [
+            "In der Anklage",
+            "heißt er nicht",
+            "mehr Beschuldigter"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erst Anklage, dann Angeklagter",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Mit der Anklageschrift erhebt die StA die öffentliche Klage (§ 170 Abs. 1 StPO). Ab jetzt heißt der Beschuldigte „Angeschuldigter“, nach Eröffnung des Hauptverfahrens „Angeklagter“ (§ 157 StPO). Der Inhalt folgt aus § 200 StPO, Details der Form aus der Praxis des jeweiligen Landes."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Kopf",
+              "text": "Staatsanwaltschaft, Aktenzeichen, Ort, Datum; adressiert an das Gericht, vor dem verhandelt werden soll."
+            },
+            {
+              "titel": "2. Angeschuldigter",
+              "text": "Personalien, Verteidiger, Angaben zu Untersuchungshaft oder anderen Maßnahmen."
+            },
+            {
+              "titel": "3. Anklagesatz",
+              "text": "Die Tat nach Zeit, Ort und Ablauf, dazu die gesetzlichen Merkmale der Straftat (§ 200 Abs. 1 S. 1 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Anzuwendende Vorschriften",
+              "text": "Alle Strafvorschriften samt Konkurrenzen, etwa „strafbar gemäß §§ 223, 224 Abs. 1 Nr. 2, 52 StGB“."
+            },
+            {
+              "titel": "5. Beweismittel",
+              "text": "Zeugen, Sachverständige, Urkunden, Augenschein (§ 200 Abs. 1 S. 2 StPO)."
+            },
+            {
+              "titel": "6. Wesentliches Ergebnis",
+              "text": "Würdigung der Ermittlungen (§ 200 Abs. 2 S. 1 StPO); entbehrlich bei Anklage zum Strafrichter (§ 200 Abs. 2 S. 2 StPO)."
+            },
+            {
+              "titel": "7. Antrag",
+              "text": "Das Hauptverfahren zu eröffnen (§ 199 Abs. 2 S. 1 StPO), gegebenenfalls Haftfortdauer."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Umgrenzung",
+          "text": "Der Anklagesatz muss die Tat so beschreiben, dass sie von anderen Taten unterscheidbar ist. Fehlt diese Umgrenzung, ist die Anklage nach der Rspr. unwirksam – ein Verfahrenshindernis. Bloße Informationsmängel lassen sich dagegen etwa durch Hinweise in der Hauptverhandlung beheben."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beschuldigter im Ermittlungsverfahren, Angeschuldigter ab Anklage, Angeklagter ab Eröffnung (§ 157 StPO). Der Anklagesatz muss die Tat eindeutig umgrenzen."
+        },
+        {
+          "art": "cta",
+          "titel": "Anklageschrift in vier Kontrollen",
+          "punkte": [
+            "Richtiger Begriff: Angeschuldigter",
+            "Tat nach Zeit, Ort und Ablauf",
+            "Vorschriften samt Konkurrenzen",
+            "Beweismittel und Antrag"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "paragraf",
+            "klemmbrett"
+          ]
+        }
+      ],
+      "caption": "In der Anklageschrift heißt er nicht mehr Beschuldigter: Mit Erhebung der öffentlichen Klage wird er zum Angeschuldigten, erst nach Eröffnung des Hauptverfahrens zum Angeklagten (§ 157 StPO). Das Schema folgt § 200 StPO – vom Anklagesatz über die Beweismittel bis zum Antrag. Entscheidend ist, dass die Tat unverwechselbar umgrenzt ist. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#200stpo",
+        "#staatsanwaltschaft",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anklageschrift: das Schema nach § 200 StPO",
+      "coverText": "Erst Anklage, dann Angeklagter",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Mit jedem Verfahrensabschnitt wechselt die Bezeichnung – in der Anklageschrift ist er Angeschuldigter.",
+        "handlung": "{A} hovers and swaps a name badge on a coat hanging between two doors, while {B} curiously watches the old badge fall into a small tray.",
+        "hinweisRegie": "Place the note in the free space above the new badge on the coat, slightly tilted toward it, so the change of designation is the focus without covering {A} or {B}'s face.",
+        "alternative": "{B} walks through three doors in a row while {A} stamps a different small symbol on her sleeve at each door."
+      },
+      "bildSzene": "droid swaps badge on coat",
+      "bildSzeneAlt": "three doors, new stamp each",
+      "quellen": [
+        "§ 157 StPO",
+        "§ 170 Abs. 1 StPO",
+        "§ 199 Abs. 2 StPO",
+        "§ 200 StPO",
+        "Themenpool: anklage-856"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "begriffsverwechslung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.532Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-639",
+      "slug": "2027-07-19-b3",
+      "titelZeilen": [
+        "Gründe überzeugen",
+        "nicht – formell",
+        "reicht es trotzdem"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gründe überzeugen nicht – formell reicht es trotzdem",
+          "unter": "Begründung · § 39 VwVfG",
+          "text": "Die Behörde nennt Gründe, aber sie tragen nicht. Ein formeller Mangel?",
+          "norm": "§ 39 VwVfG",
+          "icon": "dokument",
+          "sprecher": "Eine schwache Begründung ist formell oft kein Problem. Die Behörde muss ihre Gründe nennen. Ob sie tragen, prüfst du an anderer Stelle. Vier Schritte.",
+          "marken": [
+            "formell vs. materiell",
+            "§ 39 VwVfG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Begründungspflicht",
+          "text": "Schriftlicher oder elektronischer VA: wesentliche tatsächliche und rechtliche Gründe.",
+          "norm": "§ 39 Abs. 1 VwVfG",
+          "sprecher": "Schritt eins: die Pflicht. Ein schriftlicher oder elektronischer Verwaltungsakt ist zu begründen. Mitzuteilen sind die wesentlichen tatsächlichen und rechtlichen Gründe. Bei Ermessen muss erkennbar sein, von welchen Gesichtspunkten die Behörde ausgegangen ist.",
+          "marken": [
+            "wesentliche Gründe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Formell zählt: Sind Gründe da?",
+          "text": "Formell prüfst du nur, ob die tragenden Gründe mitgeteilt sind – nicht, ob sie stimmen.",
+          "norm": "§ 39 Abs. 1 VwVfG",
+          "sprecher": "Schritt zwei: Was die formelle Prüfung erfasst. Hier fragst du nur, ob die Behörde ihre tragenden Gründe mitgeteilt hat. Ob diese Gründe rechtlich überzeugen, ist eine Frage der materiellen Rechtmäßigkeit.",
+          "marken": [
+            "mitgeteilt?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Bestimmtheit ist Inhalt, nicht Begründung",
+          "text": "Der Adressat muss erkennen, was von ihm verlangt wird.",
+          "norm": "§ 37 Abs. 1 VwVfG",
+          "sprecher": "Schritt drei: Auch die Bestimmtheit gehört nicht zur Begründung. Nach Paragraf 37 VwVfG muss der Adressat erkennen können, was von ihm verlangt wird. Das betrifft den Regelungsinhalt und wird überwiegend materiell geprüft.",
+          "marken": [
+            "Regelungsinhalt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Fehlt sie ganz: Heilung",
+          "text": "Nachholen bis zum Abschluss der letzten Tatsacheninstanz.",
+          "norm": "§ 45 VwVfG",
+          "sprecher": "Schritt vier: Fehlt die Begründung wirklich, kann die Behörde sie nachholen. Nach Paragraf 45 VwVfG geht das bis zum Abschluss der letzten Tatsacheninstanz des Verwaltungsprozesses.",
+          "marken": [
+            "§ 45 VwVfG"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Vorsicht beim Ermessen",
+          "text": "§ 114 S. 2 VwGO erlaubt nur, Erwägungen zu ergänzen – nicht, sie erstmals anzustellen.",
+          "norm": "§ 114 S. 2 VwGO",
+          "sprecher": "Vorsicht beim Ermessen: Nach Paragraf 114 VwGO darf die Behörde ihre Erwägungen im Prozess nur ergänzen. Hat sie gar kein Ermessen ausgeübt, lässt sich das nicht nachschieben.",
+          "marken": [
+            "nur ergänzen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "Formell: Gründe genannt? Materiell: Tragen sie? Bestimmtheit betrifft den Inhalt.",
+          "norm": null,
+          "sprecher": "Merke: Formell fragst du, ob Gründe genannt sind. Materiell fragst du, ob sie tragen. Und die Bestimmtheit betrifft den Inhalt der Regelung.",
+          "marken": [
+            "Form vs. Inhalt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Form und Inhalt trennen",
+          "text": "Speichern für die nächste Klausur zum Verwaltungsakt.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur zum Verwaltungsakt und trenn sauber zwischen Form und Inhalt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Die Gründe überzeugen nicht – formell reicht die Begründung trotzdem. § 39 VwVfG verlangt, dass die Behörde ihre wesentlichen Gründe mitteilt. Ob sie tragen, ist eine Frage der materiellen Rechtmäßigkeit; auch die Bestimmtheit nach § 37 VwVfG betrifft den Inhalt. Fehlt die Begründung ganz, hilft § 45 VwVfG. Speichern für die nächste Klausur zum Verwaltungsakt.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#39vwvfg",
+        "#verwaltungsakt",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Begründung: formell genannt, materiell geprüft",
+      "coverText": "Genannt ist nicht getragen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Formell zählt, ob Gründe genannt sind – ob sie tragen, entscheidet die materielle Prüfung.",
+        "handlung": "{A} ticks a box on a crate because a note is attached, while {B} lifts the crate and finds the bottom about to give way.",
+        "hinweisRegie": "Place the note in the free space next to the weak crate bottom, slightly tilted toward it, so the gap between the attached note and the failing load is visible without covering {B}'s hands.",
+        "alternative": "{B} checks that a bridge has a sign, while {A} tests whether the planks actually hold weight."
+      },
+      "bildSzene": "box ticked, crate bottom breaking",
+      "bildSzeneAlt": "sign on bridge, planks tested",
+      "quellen": [
+        "§ 37 Abs. 1 VwVfG",
+        "§ 39 VwVfG",
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "§ 114 S. 2 VwGO",
+        "Themenpool: verwalt-639"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.533Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-796",
+      "ueberzeile": "Prüfungsfrage Anklage",
+      "titel": "Schlussvorträge: StA, dann Verteidiger, dann erwidert die StA noch einmal. Wer hat das letzte Wort?",
+      "optionen": [
+        "Die StA – ihr steht das Recht der Erwiderung zu",
+        "Der Angeklagte selbst – auch wenn sein Verteidiger plädiert hat",
+        "Der Verteidiger – der Angeklagte spricht nur durch ihn"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 258 StPO",
+        "Themenpool: anklage-796"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.533Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-796",
+      "ueberzeile": "Auflösung",
+      "titel": "Der Angeklagte selbst – das letzte Wort gebührt ihm persönlich",
+      "text": "Nach der Beweisaufnahme plädieren StA und Angeklagter bzw. Verteidiger (§ 258 Abs. 1 StPO). Die StA darf erwidern, das letzte Wort aber gebührt dem Angeklagten (§ 258 Abs. 2 StPO). Auch wenn der Verteidiger für ihn gesprochen hat, ist er selbst zu befragen, ob er noch etwas anzuführen hat (§ 258 Abs. 3 StPO). Erwidert die StA erneut, bekommt er das Wort noch einmal.",
+      "norm": "§ 258 StPO",
+      "quellen": [
+        "§ 258 StPO",
+        "Themenpool: anklage-796"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.533Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die StA – ihr steht das Recht der Erwiderung zu",
+        "Der Angeklagte selbst – auch wenn sein Verteidiger plädiert hat",
+        "Der Verteidiger – der Angeklagte spricht nur durch ihn"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-309",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 120 StGB: Wer sich befreien lässt, wird nicht zum Anstifter",
+      "text": "Die Selbstbefreiung ist straflos, § 120 StGB erfasst nur die Befreiung eines anderen. Bittet der Gefangene einen Dritten, ihn zu befreien, ist er nach h.M. auch nicht wegen Anstiftung strafbar: Er ist notwendiger Teilnehmer der Tat, die das Gesetz gerade an ihm begeht. Anders, wenn er die Befreiung eines Mitgefangenen veranlasst – dann gilt § 26 StGB.",
+      "norm": "§ 120 StGB",
+      "quellen": [
+        "§ 120 StGB",
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "Themenpool: strafat-309"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.533Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-281",
+      "ueberzeile": "Klausurtipp ZPO",
+      "titel": "Streithelfer beteiligt? Dann braucht der Kostentenor einen eigenen Satz",
+      "text": "Die Kosten der Nebenintervention regelt § 101 Abs. 1 ZPO gesondert: Sie trägt der Gegner der unterstützten Partei, soweit er die Kosten des Rechtsstreits tragen muss – im Übrigen der Nebenintervenient selbst. Also etwa: „Der Beklagte trägt die Kosten des Rechtsstreits einschließlich der Kosten der Nebenintervention.“ Und im Rubrum: Der Streithelfer ist nicht Partei.",
+      "quellen": [
+        "§ 66 ZPO",
+        "§ 67 ZPO",
+        "§ 101 Abs. 1 ZPO",
+        "Themenpool: zpo-281"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.533Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-909",
+      "ueberzeile": "3 Punkte Lernmethodik",
+      "titel": "7, 30, 90: An jedem Termin eine andere Aufgabe",
+      "text": "Drei Wiederholungen bringen mehr, wenn sie nicht dreimal dasselbe verlangen. Ein möglicher Aufbau:",
+      "punkte": [
+        "Tag 7: Abrufen – Definitionen und Schema ohne Unterlagen aufschreiben",
+        "Tag 30: Anwenden – einen kurzen Fall zum Thema lösen",
+        "Tag 90: Verknüpfen – Abgrenzungen und Streitstände in einer Skizze"
+      ],
+      "quellen": [
+        "Themenpool: methodik-909"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.533Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-822",
+      "ueberzeile": "Streitstand 2. Examen Zivilrecht",
+      "titel": "Einseitige Erledigungserklärung: Nach welchem Streitwert wird ab jetzt abgerechnet?",
+      "norm": "§ 3 ZPO",
+      "optionen": [
+        "BGH: Nur noch das Kosteninteresse – die Summe der bis dahin angefallenen Kosten.",
+        "Andere Ansicht: Der Wert der ursprünglichen Hauptsache bleibt maßgeblich."
+      ],
+      "text": "Klausur: Folge dem BGH. Der Kläger will nur noch feststellen lassen, dass sich die Hauptsache erledigt hat – wirtschaftlich geht es allein um die Kosten. Gebühren, die schon vorher nach dem vollen Wert entstanden sind, bleiben aber bestehen. Der niedrigere Wert betrifft nur Gebühren, die erst danach anfallen.",
+      "quellen": [
+        "§ 3 ZPO",
+        "§ 91 ZPO",
+        "§ 91a ZPO",
+        "RVG",
+        "Themenpool: assessorz-822"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:14.533Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
