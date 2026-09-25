@@ -323,10 +323,6 @@ const pngs = fs.readdirSync(coverDir)
   .filter((x) => /\.png$/i.test(x))
   .filter((name) => {
     const ziel = zuordnungFuerDatei(name);
-    if (ziel && COVER_LOCKS.has(`${ziel[0]}/${ziel[1]}`)) {
-      console.log(`↷ ${ziel[0]} ${ziel[1]} gesperrt: ${COVER_LOCKS.get(`${ziel[0]}/${ziel[1]}`).reason}`);
-      return false;
-    }
     if (!slotsFilter?.size) return true;
     return ziel ? slotsFilter.has(`${ziel[0]}/${ziel[1]}`) : false;
   })
@@ -409,6 +405,30 @@ try {
     const quelle = path.join(coverDir, name);
     const meta = bildMeta(quelle);
     const freigestellt = meta.alphaMin < 250 && meta.transparentFraction > 0.005;
+    const lock = COVER_LOCKS.get(`${datum}/${slot}`) || null;
+
+    /* Ein Cover-Lock schützt nur das redaktionell freigegebene Feed-Cover.
+       Der Story-Teaser darf und muss trotzdem nach der aktuellen, dauerhaften
+       Teaser-Regel neu gerendert werden. Bei vorhandenem Freisteller wird
+       deshalb nur das Motiv in eine transiente Beitragskopie übernommen; das
+       gesperrte Cover-JPG und sein Manifest-Eintrag bleiben unangetastet. */
+    if (lock) {
+      if (freigestellt) {
+        const zugeschnitten = path.join(temp, `${datum}-${slot}-teaser-motiv.png`);
+        const crop = freistellerZuschneiden(quelle, zugeschnitten, false);
+        const dataUrl = `data:image/png;base64,${fs.readFileSync(zugeschnitten).toString("base64")}`;
+        if (Array.isArray(inhalt.folien)) {
+          const titel = inhalt.folien.find((x) => x.art === "titel") || inhalt.folien[0];
+          motivSetzen(titel, dataUrl, crop, null);
+        } else if (Array.isArray(inhalt.szenen)) {
+          motivSetzen(inhalt, dataUrl, crop, null);
+        }
+      }
+      await teaserAktualisieren(tag, datum, slot, inhalt);
+      console.log(`↷ ${datum} ${slot} Cover gesperrt; Story-Teaser nach aktueller Regel neu gerendert`);
+      continue;
+    }
+
     const target = zielPfad(hosting.dir, datum, slot, inhalt);
     fs.mkdirSync(path.dirname(target), { recursive: true });
 
