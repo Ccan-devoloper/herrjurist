@@ -1,0 +1,885 @@
+{
+  "datum": "2027-07-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-072",
+        "themaTitel": "Wie prüft man den Vermögensschaden beim Betrug?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "vwgo-663",
+        "themaTitel": "Richtiger Klagegegner",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-180",
+        "themaTitel": "Wie wirkt die Gesamtschuld im Innen- und im Außenverhältnis?",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "sachen-221"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "sachen-221"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "assessorz-813"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:39",
+        "art": "streitstand",
+        "themaId": "anklage-870"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "merksatz",
+        "themaId": "strafbt-761"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:12",
+        "art": "begriff",
+        "themaId": "handelsg-048"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-072",
+      "poolTitel": "Wie prüft man den Vermögensschaden beim Betrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-23"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "vwgo-663",
+      "poolTitel": "Richtiger Klagegegner",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 78 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-24"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-180",
+      "poolTitel": "Wie wirkt die Gesamtschuld im Innen- und im Außenverhältnis?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 421 BGB",
+        "§ 426 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2027-01-24",
+        "2027-05-15"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-221",
+      "poolTitel": "Wann liegt ein Besitzkonstitut vor?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 868 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2026-10-18",
+        "2027-03-31"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-221",
+      "poolTitel": "Wann liegt ein Besitzkonstitut vor?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 868 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2026-10-18",
+        "2027-03-31"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessorz-813",
+      "poolTitel": "Worin unterscheiden sich Teil-, Grund- und Schlussurteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 301 ZPO",
+        "§ 304 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29",
+        "2026-12-28"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "anklage-870",
+      "poolTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 74 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2027-03-08",
+        "2027-03-25",
+        "2027-05-13"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-761",
+      "poolTitel": "Aussagedelikte: falsche uneidliche Aussage und Meineid",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 153 ff. StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07",
+        "2027-04-05"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "handelsg-048",
+      "poolTitel": "Wann liegt ein Handelsgeschäft vor und was folgt daraus?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 343 HGB",
+        "§ 377 HGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18",
+        "2026-12-18",
+        "2027-02-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-072",
+      "slug": "2027-07-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Betrug: Viele verrechnen den Schaden mit der Anfechtung – zu Unrecht",
+          "titelZeilen": [
+            "Betrug: Viele",
+            "verrechnen den",
+            "Schaden mit der",
+            "Anfechtung"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Täuschungsfolgen gleichen nichts aus",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V verkauft K einen Wagen als „unfallfrei“ zu dem Preis, den unfallfreie Wagen dieses Typs kosten. Tatsächlich ist es ein Unfallwagen, der deutlich weniger wert ist. V meint: K kann doch nach § 123 BGB anfechten oder Mängelrechte geltend machen – also hat K keinen Schaden. Stimmt das?"
+        },
+        {
+          "art": "text",
+          "titel": "Der verbreitete Kurzschluss",
+          "text": "Der Schaden wird verneint, weil der Getäuschte zivilrechtlich geschützt sei. Dann gäbe es aber praktisch nie einen Betrugsschaden – denn Anfechtungsrecht, Mängelrechte und Schadensersatz folgen gerade aus der Täuschung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Gesamtsaldierung",
+              "text": "Vergleich des Vermögens vor und nach der Verfügung – hier Eingehung der Kaufpreispflicht und Zahlung."
+            },
+            {
+              "titel": "Gegenleistung bewerten",
+              "text": "Der Unfallwagen ist weniger wert als der gezahlte Preis. Dieses Minus ist der Schaden."
+            },
+            {
+              "titel": "Was kompensiert?",
+              "text": "Nur ein Vermögenszuwachs, der unmittelbar aus der Verfügung selbst folgt – hier allein der Wagen."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Anfechtungsrecht, Mängelrechte und Schadensersatz bleiben außer Betracht: Schaden (+)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Warum das so ist",
+          "punkte": [
+            "Die Ansprüche entstehen erst durch die Täuschung – sie sind ihre Folge, kein Ausgleich",
+            "Ihre Durchsetzung ist unsicher und mit Aufwand und Prozessrisiko verbunden",
+            "Sonst liefe § 263 StGB bei jedem anfechtbaren Vertrag leer"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ansprüche, die aus der Täuschung folgen, gleichen den Schaden nicht aus. Es zählt nur, was die Verfügung unmittelbar einbringt."
+        },
+        {
+          "art": "cta",
+          "titel": "Schaden in drei Zügen",
+          "punkte": [
+            "Vermögen vor und nach der Verfügung",
+            "Nur unmittelbare Kompensation zählt",
+            "Anfechtung und Mängelrechte ausblenden"
+          ],
+          "icons": [
+            "waage",
+            "rechner",
+            "kreuz"
+          ]
+        }
+      ],
+      "caption": "Viele verrechnen den Betrugsschaden mit dem Anfechtungsrecht des Opfers – zu Unrecht. Beim Vermögensvergleich zählt nur, was die Verfügung unmittelbar einbringt. Anfechtung, Mängelrechte und Schadensersatz entstehen erst durch die Täuschung; sie sind ihre Folge und kein Ausgleich. Sonst liefe § 263 StGB bei jedem anfechtbaren Vertrag leer. Speichern für die nächste Betrugsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#263stgb",
+        "#betrug",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Betrug: Anfechtungsrecht ist kein Ausgleich",
+      "coverText": "Täuschungsfolgen gleichen nichts aus",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Rechte, die erst aus der Täuschung entstehen, gleichen den Vermögensschaden nicht aus.",
+        "handlung": "{B} places a cracked crystal on one side of a scale, while {A} firmly refuses to put a paper voucher on the other side to balance it.",
+        "hinweisRegie": "Place the note in the free space above the empty scale pan and the refused voucher, slightly tilted toward the voucher, so the idea of no compensation is linked to it without covering the crystal or faces.",
+        "alternative": "{A} inspects a dented cart that {B} just paid full price for, while a small repair ticket flutters away unnoticed."
+      },
+      "bildSzene": "scale with cracked crystal, voucher refused",
+      "bildSzeneAlt": "dented cart bought at full price",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 123 BGB",
+        "§ 437 BGB",
+        "Themenpool: strafbt-072"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.154Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-663",
+      "slug": "2027-07-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Genehmigung im Widerspruch kassiert: Wen verklagst du?",
+          "titelZeilen": [
+            "Genehmigung im",
+            "Widerspruch",
+            "kassiert: Wen",
+            "verklagst du?"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Wer beschwert, wird verklagt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Stadt S erteilt B eine Baugenehmigung. Nachbar N legt Widerspruch ein. Die Widerspruchsbehörde – eine Behörde des Landes – hebt die Genehmigung auf. B will seine Genehmigung zurück. Wogegen und gegen wen klagt er?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Klagegegenstand",
+              "text": "Erstmals beschwert wird B durch den Widerspruchsbescheid. Er kann ihn allein angreifen (§ 79 Abs. 1 Nr. 2 VwGO)."
+            },
+            {
+              "titel": "Grundsatz: § 78 Abs. 1 VwGO",
+              "text": "Klagegegner ist der Rechtsträger der Behörde, die den angefochtenen Verwaltungsakt erlassen hat."
+            },
+            {
+              "titel": "Sonderregel: § 78 Abs. 2 VwGO",
+              "text": "Bei erstmaliger Beschwer durch den Widerspruchsbescheid ist Behörde im Sinne des Abs. 1 die Widerspruchsbehörde."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "B klagt gegen das Land als Träger der Widerspruchsbehörde – nicht gegen die Stadt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die naheliegende Verwechslung",
+          "text": "Reflexhaft wird die Stadt verklagt, weil sie die Genehmigung erteilt hat. Aber die Genehmigung belastet B nicht – belastend ist allein ihre Aufhebung. Wer die Beschwer schafft, bestimmt den Klagegegner. N ist notwendig beizuladen (§ 65 Abs. 2 VwGO)."
+        },
+        {
+          "art": "text",
+          "titel": "Landesrecht mitdenken",
+          "text": "§ 78 Abs. 1 Nr. 2 VwGO erlaubt den Ländern, die Klage gegen die Behörde selbst vorzusehen. Prüfe, ob dein Land davon Gebrauch macht. Und: Nach § 78 Abs. 1 Nr. 1 Hs. 2 VwGO genügt zur Bezeichnung des Beklagten die Angabe der Behörde."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erstmalige Beschwer durch den Widerspruchsbescheid: Klage allein gegen ihn – und gegen den Träger der Widerspruchsbehörde (§ 78 Abs. 2 VwGO)."
+        },
+        {
+          "art": "cta",
+          "titel": "Klagegegner in drei Fragen",
+          "punkte": [
+            "Was genau belastet den Kläger?",
+            "Welche Behörde hat es erlassen?",
+            "Rechtsträger oder – je nach Land – Behörde?"
+          ],
+          "icons": [
+            "lupe",
+            "gebaeude",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Die Widerspruchsbehörde hebt die Baugenehmigung auf – wen verklagt der Bauherr? Nicht die Stadt, die die Genehmigung erteilt hat. Erstmals beschwert ist er durch den Widerspruchsbescheid; den greift er allein an (§ 79 Abs. 1 Nr. 2 VwGO). Klagegegner ist dann nach § 78 Abs. 2 VwGO der Träger der Widerspruchsbehörde – je nach Landesrecht die Behörde selbst. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#78vwgo",
+        "#baurecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Erstmalige Beschwer: § 78 Abs. 2 VwGO",
+      "coverText": "Wer beschwert, wird verklagt",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Belastet erst der Widerspruchsbescheid, richtet sich die Klage gegen den Träger der Widerspruchsbehörde.",
+        "handlung": "{B} tears a building permit card in half, while {A} curiously turns away from the original issuer's desk and points directly at {B}.",
+        "hinweisRegie": "Place the note in the free space between {A}'s pointing hand and the torn permit card, slightly tilted toward {B}, so the new target of the claim is clear without covering the torn card.",
+        "alternative": "{A} follows footprints past a first door to a second door where a torn permit lies on the floor."
+      },
+      "bildSzene": "permit torn, alien points at droid",
+      "bildSzeneAlt": "footprints lead past first door",
+      "quellen": [
+        "§ 78 VwGO",
+        "§ 79 Abs. 1 Nr. 2 VwGO",
+        "§ 65 Abs. 2 VwGO",
+        "§ 42 Abs. 1 VwGO",
+        "Themenpool: vwgo-663"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage-beklagter",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.154Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-180",
+      "slug": "2027-07-14-b3",
+      "titelZeilen": [
+        "Nichts gezahlt –",
+        "und schon ein",
+        "Ausgleichsanspruch"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nichts gezahlt – und schon ein Ausgleichsanspruch",
+          "unter": "Gesamtschuld · § 426 BGB",
+          "text": "A und B haften als Gesamtschuldner. A hat noch nichts gezahlt – und schon einen Anspruch gegen B.",
+          "norm": "§ 426 Abs. 1 BGB",
+          "icon": "handschlag",
+          "sprecher": "Noch keinen Cent gezahlt – und schon ein Ausgleichsanspruch. Und es hat eine Folge, die gern übersehen wird: die Verjährung.",
+          "marken": [
+            "vor der Zahlung",
+            "§ 426 I BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Außenverhältnis",
+          "text": "Der Gläubiger kann von jedem die ganze Leistung fordern – aber nur einmal.",
+          "norm": "§ 421 BGB",
+          "sprecher": "Schritt eins: das Außenverhältnis. Der Gläubiger kann nach § 421 von jedem Gesamtschuldner die ganze Leistung verlangen, insgesamt aber nur einmal. Er sucht sich aus, wen er in Anspruch nimmt.",
+          "marken": [
+            "jeder aufs Ganze"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Innenverhältnis",
+          "text": "Zu gleichen Teilen, soweit nichts anderes bestimmt ist.",
+          "norm": "§ 426 Abs. 1 S. 1 BGB",
+          "sprecher": "Schritt zwei: das Innenverhältnis. Untereinander haften die Gesamtschuldner zu gleichen Teilen, soweit nichts anderes bestimmt ist. Anderes kann sich etwa aus einem Vertrag ergeben.",
+          "marken": [
+            "gleiche Teile"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vor der Zahlung: Mitwirkung",
+          "text": "Schon ab Entstehen der Gesamtschuld: Anspruch auf Mitwirkung und Befreiung.",
+          "norm": "§ 426 Abs. 1 BGB",
+          "sprecher": "Schritt drei: vor der Zahlung. Der Ausgleichsanspruch entsteht nach dem BGH schon mit der Gesamtschuld. Zunächst ist er auf Mitwirkung gerichtet: B muss seinen Anteil so beitragen, dass A nicht mehr als seinen Teil zahlen muss.",
+          "marken": [
+            "Befreiung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Nach der Zahlung: zwei Wege",
+          "text": "Zahlungsanspruch aus § 426 Abs. 1 plus übergegangene Forderung nach Abs. 2.",
+          "norm": "§ 426 Abs. 2 BGB",
+          "sprecher": "Schritt vier: nach der Zahlung. Jetzt wird daraus ein Zahlungsanspruch. Daneben geht die Forderung des Gläubigers nach Absatz 2 auf A über, soweit er Ausgleich verlangen kann.",
+          "marken": [
+            "zwei Wege"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Verjährungsfalle",
+          "text": "Nach dem BGH läuft die Verjährung ab Entstehen der Gesamtschuld – bei Kenntnis.",
+          "norm": "§ 199 BGB",
+          "sprecher": "Und jetzt die Falle. Weil der Anspruch aus Absatz 1 schon mit der Gesamtschuld entsteht, kann nach dem BGH auch seine Regelverjährung schon dann beginnen, sobald A die Umstände kennt. Das gilt einheitlich, auch für die spätere Zahlung. Wer erst Jahre später zahlt, kann zu spät dran sein.",
+          "marken": [
+            "Verjährung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Merke",
+          "text": "§ 426 Abs. 1 BGB entsteht mit der Gesamtschuld – nicht erst mit der Zahlung.",
+          "norm": null,
+          "sprecher": "Merke: Der Ausgleichsanspruch entsteht mit der Gesamtschuld, nicht erst mit der Zahlung. Das wirkt sich auch auf die Verjährung aus.",
+          "marken": [
+            "ab Gesamtschuld"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beide Wege prüfen",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur. Und prüf beim Regress immer beide Wege des § 426.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Noch nichts gezahlt – und schon einen Ausgleichsanspruch: Nach dem BGH entsteht der Anspruch aus § 426 Abs. 1 BGB bereits mit der Gesamtschuld, zunächst als Anspruch auf Mitwirkung und Befreiung. Nach der Zahlung wird er zum Zahlungsanspruch; daneben geht die Forderung nach § 426 Abs. 2 BGB über. Achtung bei der Verjährung: Sie kann schon ab Entstehen der Gesamtschuld laufen. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#gesamtschuld",
+        "#426bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gesamtschuld: Ausgleich schon vor der Zahlung",
+      "coverText": "Verjährung läuft ab Gesamtschuld",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Der Ausgleich unter Gesamtschuldnern beginnt nicht erst mit der Zahlung, sondern schon mit der gemeinsamen Schuld.",
+        "handlung": "{B} and {A} are chained to the same heavy cart, and {A} nervously tugs at {B}'s sleeve to make him push before any coin has been paid.",
+        "hinweisRegie": "Place the note in the free space above the shared chain and {A}'s tugging hand, slightly tilted toward the chain, so the early claim is linked to the joint burden without covering faces.",
+        "alternative": "{A} watches a sand timer already running next to an unpaid bill that {B} still holds."
+      },
+      "bildSzene": "two chained to one heavy cart",
+      "bildSzeneAlt": "sand timer beside unpaid bill",
+      "quellen": [
+        "§ 421 BGB",
+        "§ 426 BGB",
+        "§ 195 BGB",
+        "§ 199 BGB",
+        "Themenpool: schuld-180"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zeitpunkt-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.155Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-221",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Sicherungsübereignung nach § 930 BGB: Genügt die Sicherungsabrede als Besitzmittlungsverhältnis?",
+      "optionen": [
+        "Ja – sie ist ein konkretes Besitzmittlungsverhältnis",
+        "Nein – nötig ist zusätzlich ein Miet- oder Leihvertrag",
+        "Nein – bei der Sicherungsübereignung ist § 930 BGB gesperrt"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 930 BGB",
+        "§ 868 BGB",
+        "Themenpool: sachen-221"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.155Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-221",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – die Sicherungsabrede selbst mittelt den Besitz",
+      "text": "§ 868 BGB verlangt ein konkretes Rechtsverhältnis, das den Besitzer auf Zeit zum Besitz berechtigt und zur Herausgabe verpflichtet. Das leistet die Sicherungsabrede: Der Sicherungsgeber darf die Sache nutzen und muss sie im Sicherungsfall herausgeben. Ein bloß abstraktes Besitzkonstitut genügt dagegen nicht.",
+      "norm": "§ 930 BGB · § 868 BGB",
+      "quellen": [
+        "§ 930 BGB",
+        "§ 868 BGB",
+        "Themenpool: sachen-221"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.155Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – sie ist ein konkretes Besitzmittlungsverhältnis",
+        "Nein – nötig ist zusätzlich ein Miet- oder Leihvertrag",
+        "Nein – bei der Sicherungsübereignung ist § 930 BGB gesperrt"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-813",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 301 ZPO: Das Teilurteil enthält regelmäßig keine Kostenentscheidung",
+      "text": "Grundsatz der Kosteneinheit: Über die Kosten wird einheitlich im Schlussurteil entschieden – erst dann steht fest, wer in welchem Umfang unterliegt. Im Teilurteil also: „Die Kostenentscheidung bleibt dem Schlussurteil vorbehalten.“ Die vorläufige Vollstreckbarkeit sprichst du dagegen schon im Teilurteil aus.",
+      "norm": "§ 301 ZPO",
+      "quellen": [
+        "§ 301 ZPO",
+        "§ 91 ZPO",
+        "§ 708 ZPO",
+        "Themenpool: assessorz-813"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.155Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-870",
+      "ueberzeile": "Streitstand Anklage",
+      "titel": "Beute gemeinsam erlangt, aber nur einer behält sie: Wird beim Mittäter der volle Wert eingezogen?",
+      "norm": "§ 73 Abs. 1 StGB · § 73c StGB",
+      "optionen": [
+        "BGH: Faktische Mitverfügungsgewalt über die Beute genügt; mehrere Beteiligte haften als Gesamtschuldner.",
+        "Kritische Stimmen in der Lit.: Maßgeblich ist, was wirtschaftlich beim Beteiligten ankam – sonst droht Übermaß."
+      ],
+      "text": "Klausur: Mit dem BGH prüfen, ob der Beteiligte zumindest faktische Mitverfügungsgewalt hatte – die bloße Tatbeteiligung reicht nicht. Ist die Beute nicht mehr da, Einziehung des Wertes nach § 73c StGB, bei mehreren als Gesamtschuldner.",
+      "quellen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "Themenpool: anklage-870"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.155Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-761",
+      "ueberzeile": "Merksatz Aussagedelikte",
+      "titel": "§ 153 StGB: Versuch straflos – § 154 StGB: auch im Versuch strafbar",
+      "text": "Die falsche uneidliche Aussage ist ein Vergehen ohne Versuchsstrafbarkeit. Der Meineid ist Verbrechen (§ 12 Abs. 1 StGB) – sein Versuch ist strafbar. § 159 StGB erfasst zudem die versuchte Anstiftung zur Falschaussage.",
+      "norm": "§ 153 StGB · § 154 StGB · § 159 StGB",
+      "quellen": [
+        "§ 153 StGB",
+        "§ 154 StGB",
+        "§ 159 StGB",
+        "§ 12 StGB",
+        "§ 23 StGB",
+        "Themenpool: strafbt-761"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.155Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-048",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Beiderseitiges Handelsgeschäft",
+      "text": "Handelsgeschäft ist jedes Geschäft eines Kaufmanns, das zum Betrieb seines Handelsgewerbes gehört (§ 343 HGB); im Zweifel wird das vermutet (§ 344 Abs. 1 HGB). Meist genügt ein einseitiges Handelsgeschäft (§ 345 HGB). Manche Normen verlangen aber ein beiderseitiges – etwa die Rügeobliegenheit (§ 377 HGB).",
+      "norm": "§ 343 HGB · § 345 HGB",
+      "quellen": [
+        "§ 343 HGB",
+        "§ 344 HGB",
+        "§ 345 HGB",
+        "§ 377 HGB",
+        "Themenpool: handelsg-048"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T20:21:52.155Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
