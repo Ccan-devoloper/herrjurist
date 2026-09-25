@@ -341,56 +341,171 @@ function coverMotivEinpassen() {
 
   if (!motiv.classList.contains("auto-layout")) return;
 
-  const titel = wurzel.querySelector("h1.titel-stack, h1");
-  const badge = wurzel.querySelector(".cover-badge");
-  const pille = wurzel.querySelector(".pille");
-  const fuss = wurzel.querySelector(".fuss");
-  const boxen = [titel, badge, pille].filter(Boolean).map((el) => el.getBoundingClientRect());
-  const textUnten = boxen.length ? Math.max(...boxen.map((b) => b.bottom)) : root.top + 300;
-  const safeTop = Math.min(root.bottom - 300, textUnten + 26);
-  /* Die Fußzeile darf auf dem Hintergrund stehen, aber nicht mitten auf
-     Gesichtern/Figuren. Etwas Luft oberhalb der Fußzeile bleibt deshalb frei. */
-  const fussTop = fuss?.getBoundingClientRect().top || root.bottom - 24;
-  const safeBottom = Math.max(safeTop + 260, Math.min(root.bottom - 8, fussTop + 8));
-  const maxW = Math.max(320, root.width - 24);
-  const maxH = Math.max(260, safeBottom - safeTop);
-  const ratio = img.naturalWidth / img.naturalHeight;
+  /* Karussells werden nicht mehr über eine einzige horizontale "safeTop"-
+     Linie klein gehalten. Entscheidend ist die echte zweidimensionale
+     Kollision mit den sichtbaren Pillen. Ein schmales/hochkantiges Motiv darf
+     also seitlich an einer Titelzeile vorbeiwachsen und bis auf 12 px an die
+     nächste Pille heranrücken. Dadurch wird die Illustration maximal groß,
+     ohne Text zu verdecken. */
+  const GAP = 12;
+  const schutzSelektor = [
+    "h1.titel-stack .titel-zeile",
+    "h1:not(.titel-stack)",
+    ".cover-badge",
+    ".pille",
+    ".kopf .etikett",
+    ".fuss .klausur",
+  ].join(",");
+  const schutz = [...wurzel.querySelectorAll(schutzSelektor)]
+    .filter((el) => {
+      const cs = getComputedStyle(el);
+      const b = el.getBoundingClientRect();
+      return cs.display !== "none" && cs.visibility !== "hidden" && Number(cs.opacity) > 0
+        && b.width > 4 && b.height > 4;
+    })
+    .map((el) => {
+      const b = el.getBoundingClientRect();
+      return {
+        left: Math.max(root.left, b.left - GAP),
+        top: Math.max(root.top, b.top - GAP),
+        right: Math.min(root.right, b.right + GAP),
+        bottom: Math.min(root.bottom, b.bottom + GAP),
+      };
+    });
 
-  let breite = Math.min(maxW, maxH * ratio);
-  let hoehe = breite / ratio;
-  if (hoehe > maxH) {
-    hoehe = maxH;
-    breite = hoehe * ratio;
-  }
-
-  /* Sehr kleine Ergebnisse sind visuell keine Bühne. Falls der Titel extrem
-     tief reicht, darf das Motiv bis knapp hinter die Fußzeile wachsen; der
-     Text bleibt dennoch komplett frei. */
-  const minFlaeche = root.width * root.height * 0.22;
-  if (breite * hoehe < minFlaeche) {
-    const extraH = Math.max(maxH, root.bottom - safeTop - 4);
-    breite = Math.min(maxW, extraH * ratio);
-    hoehe = breite / ratio;
-    if (hoehe > extraH) {
-      hoehe = extraH;
-      breite = hoehe * ratio;
+  /* Für die Kollisionsprüfung reicht eine verkleinerte Alpha-Maske. Ein
+     Integralbild beantwortet danach für tausende Größen-/Positionskandidaten
+     in O(1), ob in der geschützten Pille wirklich sichtbare Motivpixel liegen.
+     Transparente Bereiche des Freistellers dürfen sich dagegen überlagern. */
+  const maskMax = 320;
+  const faktor = Math.min(1, maskMax / Math.max(img.naturalWidth, img.naturalHeight));
+  const maskW = Math.max(1, Math.round(img.naturalWidth * faktor));
+  const maskH = Math.max(1, Math.round(img.naturalHeight * faktor));
+  const canvas = document.createElement("canvas");
+  canvas.width = maskW;
+  canvas.height = maskH;
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  ctx.drawImage(img, 0, 0, maskW, maskH);
+  const alpha = ctx.getImageData(0, 0, maskW, maskH).data;
+  const stride = maskW + 1;
+  const integral = new Uint32Array((maskH + 1) * stride);
+  for (let y = 0; y < maskH; y++) {
+    let zeile = 0;
+    for (let x = 0; x < maskW; x++) {
+      if (alpha[(y * maskW + x) * 4 + 3] > 28) zeile++;
+      integral[(y + 1) * stride + x + 1] = integral[y * stride + x + 1] + zeile;
     }
   }
+  const summe = (x0, y0, x1, y1) => {
+    x0 = Math.max(0, Math.min(maskW, Math.floor(x0)));
+    x1 = Math.max(0, Math.min(maskW, Math.ceil(x1)));
+    y0 = Math.max(0, Math.min(maskH, Math.floor(y0)));
+    y1 = Math.max(0, Math.min(maskH, Math.ceil(y1)));
+    if (x1 <= x0 || y1 <= y0) return 0;
+    return integral[y1 * stride + x1]
+      - integral[y0 * stride + x1]
+      - integral[y1 * stride + x0]
+      + integral[y0 * stride + x0];
+  };
+  const kollidiert = (box) => schutz.some((r) => {
+    const l = Math.max(box.left, r.left);
+    const t = Math.max(box.top, r.top);
+    const rr = Math.min(box.right, r.right);
+    const bb = Math.min(box.bottom, r.bottom);
+    if (rr <= l || bb <= t) return false;
+    const sx0 = (l - box.left) / box.width * maskW;
+    const sx1 = (rr - box.left) / box.width * maskW;
+    const sy0 = (t - box.top) / box.height * maskH;
+    const sy1 = (bb - box.top) / box.height * maskH;
+    return summe(sx0, sy0, sx1, sy1) > 0;
+  });
 
-  motiv.style.left = "50%";
+  const rand = 4;
+  const maxScale = Math.min(
+    (root.width - rand * 2) / img.naturalWidth,
+    (root.height - rand) / img.naturalHeight,
+  );
+  const minScale = maxScale * 0.34;
+  let bester = null;
+
+  /* Größte mögliche Darstellung gewinnt. Pro Größe wird zuerst die optische
+     Mitte versucht, dann in kleinen Schritten nach links/rechts ausgewichen.
+     Die Unterkante bleibt am Canvas verankert; dadurch wächst das Motiv nach
+     oben bis direkt an die nächstgelegene Pille. */
+  for (let scale = maxScale, runde = 0; scale >= minScale && runde < 90; scale *= 0.975, runde++) {
+    const breite = img.naturalWidth * scale;
+    const hoehe = img.naturalHeight * scale;
+    const minLeft = root.left + rand;
+    const maxLeft = root.right - rand - breite;
+    if (maxLeft < minLeft) continue;
+
+    const mitte = (minLeft + maxLeft) / 2;
+    const schritt = Math.max(10, Math.min(22, (maxLeft - minLeft) / 16 || 10));
+    const links = [mitte];
+    for (let d = schritt; d <= (maxLeft - minLeft) / 2 + schritt; d += schritt) {
+      links.push(mitte - d, mitte + d);
+    }
+    links.push(minLeft, maxLeft);
+
+    for (const leftRaw of links) {
+      const left = Math.max(minLeft, Math.min(maxLeft, leftRaw));
+      const box = {
+        left,
+        top: root.bottom - hoehe,
+        right: left + breite,
+        bottom: root.bottom,
+        width: breite,
+        height: hoehe,
+      };
+      if (kollidiert(box)) continue;
+      bester = box;
+      break;
+    }
+    if (bester) break;
+  }
+
+  /* Extrem ungewöhnliche Freisteller bekommen weiterhin einen sicheren
+     geometrischen Fallback, statt den Export komplett zu verlieren. */
+  if (!bester) {
+    const titel = wurzel.querySelector("h1.titel-stack, h1");
+    const badge = wurzel.querySelector(".cover-badge");
+    const pille = wurzel.querySelector(".pille");
+    const textUnten = Math.max(
+      titel?.getBoundingClientRect().bottom || root.top,
+      badge?.getBoundingClientRect().bottom || root.top,
+      pille?.getBoundingClientRect().bottom || root.top,
+    );
+    const safeTop = Math.min(root.bottom - 260, textUnten + GAP);
+    const ratio = img.naturalWidth / img.naturalHeight;
+    const maxH = Math.max(260, root.bottom - safeTop);
+    const breite = Math.min(root.width - 24, maxH * ratio);
+    const hoehe = breite / ratio;
+    bester = {
+      left: root.left + (root.width - breite) / 2,
+      top: root.bottom - hoehe,
+      right: root.left + (root.width + breite) / 2,
+      bottom: root.bottom,
+      width: breite,
+      height: hoehe,
+    };
+  }
+
+  motiv.style.left = `${Math.round(bester.left - root.left)}px`;
   motiv.style.right = "auto";
-  motiv.style.top = "auto";
-  motiv.style.bottom = "0px";
-  motiv.style.width = `${Math.round(breite)}px`;
-  motiv.style.height = `${Math.round(hoehe)}px`;
-  motiv.style.transform = "translateX(-50%)";
+  motiv.style.top = `${Math.round(bester.top - root.top)}px`;
+  motiv.style.bottom = "auto";
+  motiv.style.width = `${Math.round(bester.width)}px`;
+  motiv.style.height = `${Math.round(bester.height)}px`;
+  motiv.style.transform = "none";
   motiv.style.overflow = "visible";
   img.style.width = "100%";
   img.style.height = "100%";
   img.style.objectFit = "contain";
   img.style.objectPosition = "center bottom";
-  motiv.dataset.autoLayout = "carousel-safe";
-  motiv.dataset.safeTop = String(Math.round(safeTop - root.top));
+  motiv.dataset.autoLayout = "carousel-collision";
+  motiv.dataset.collisionFree = kollidiert(bester) ? "0" : "1";
+  motiv.dataset.protectedPills = String(schutz.length);
+  motiv.dataset.gap = String(GAP);
 }
 
 /* Harte Geometrie-QA: Ein Reel-Freisteller muss nahezu die volle Breite
@@ -415,17 +530,15 @@ function coverMotivGeometriePruefen() {
     return;
   }
 
-  if (motiv.dataset.autoLayout === "carousel-safe") {
-    const titel = wurzel.querySelector("h1.titel-stack, h1");
-    const badge = wurzel.querySelector(".cover-badge");
-    const pille = wurzel.querySelector(".pille");
-    const textUnten = Math.max(
-      titel?.getBoundingClientRect().bottom || root.top,
-      badge?.getBoundingClientRect().bottom || root.top,
-      pille?.getBoundingClientRect().bottom || root.top,
-    );
-    if (bild.top < textUnten + 12) {
-      throw new Error(`Karussell-Cover-Motiv überdeckt den Titelbereich um ${Math.round(textUnten + 12 - bild.top)}px`);
+  if (motiv.dataset.autoLayout === "carousel-collision") {
+    if (motiv.dataset.collisionFree !== "1") {
+      throw new Error("Karussell-Cover-Motiv kollidiert mit einer geschützten Pille.");
+    }
+    if (bild.left < root.left - 1 || bild.right > root.right + 1 || bild.bottom > root.bottom + 1) {
+      throw new Error("Karussell-Cover-Motiv liegt außerhalb der Coverfläche.");
+    }
+    if (bild.width < root.width * 0.34 && bild.height < root.height * 0.34) {
+      throw new Error("Karussell-Cover-Motiv blieb trotz Kollisionssuche unerwartet klein.");
     }
   }
 }
