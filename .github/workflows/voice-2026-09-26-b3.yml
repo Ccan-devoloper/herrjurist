@@ -1,0 +1,25 @@
+name: One-off voice for 2026-09-26 b3
+on:
+  push:
+    paths:
+      - .github/workflows/voice-2026-09-26-b3.yml
+permissions:
+  contents: read
+jobs:
+  create-voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Create the seven voice scenes within the included credit balance
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node bin/voice-2026-09-26-b3.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: voice-2026-09-26-b3
+          path: voice-output-2026-09-26-b3/
