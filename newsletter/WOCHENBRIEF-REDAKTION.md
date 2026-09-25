@@ -17,9 +17,9 @@ Diese Vorlage ist das **redaktionelle Muster** für eine Ausgabe zum veröffentl
 - **Minifall:** Neuer Sachverhalt mit konkreter Prüfungsfrage und entscheidenden Tatsachen; keine bloße Wiederholung des Beitrags. Der Fall muss mit den danach genannten Tatsachen lösbar sein.
 - **Lösungsskizze:** Juristische Prüfungsreihenfolge: Frage/Anspruch, Zulässigkeit oder Eröffnung, Voraussetzungen, Subsumtion und Ergebnis in der passenden Ebene. Keine zusätzliche Gliederungsebene allein wegen der Optik. Geschwisterpunkte immer mindestens paarweise: kein `A.` ohne `B.`, kein `I.` ohne `II.`, kein `1.` ohne `2.`; das gilt ebenso für `a)`/`b)` und `aa)`/`bb)`. Ebenen werden um je 22 px eingerückt. Ein bloßes Ergebnis ohne Subsumtion gilt redaktionell nicht als fertige Skizze.
 - **Examensbadge:** Kennzeichnung je Fall, ob erstes, zweites oder beide Staatsexamina; fachlich anhand der Tätigkeit und des Prüfungsstoffs gegenlesen.
-- **Quellen:** Link auf den zugehörigen Instagram-Beitrag und mindestens eine zitierfähige Norm oder Entscheidung; die Quelle muss die konkrete Aussage tatsächlich tragen.
+- **Quellen:** Beim unveröffentlichten Beitrag den eindeutigen Vorproduktions-Slug, nach Veröffentlichung den echten Instagram-Link hinterlegen; dazu mindestens eine zitierfähige Norm oder Entscheidung. Die Quelle muss die konkrete Aussage tatsächlich tragen. Niemals einen Instagram-Link erfinden.
 
-Formale Prüfungen erkennen fehlende Bausteine, falsche Anzahl/Nummerierung, unpaarige oder übersprungene Gliederungspunkte, fehlende Quellenlinks, fehlende Examensbadges und grob zu kurze/zu lange Inhalte. **Juristische Richtigkeit, Qualität eines Hooks, aktuelle Rechtslage, Subsumtion und tatsächliche Verknüpfung zum Beitrag müssen vor jeder Verwendung redaktionell geprüft werden.**
+Formale Prüfungen erkennen fehlende Bausteine, falsche Anzahl/Nummerierung, unpaarige oder übersprungene Gliederungspunkte, fehlende Quellenreferenzen, fehlende Examensbadges und grob zu kurze/zu lange Inhalte. **Juristische Richtigkeit, Qualität eines Hooks, aktuelle Rechtslage, Subsumtion und tatsächliche Verknüpfung zum Beitrag müssen vor jeder Verwendung redaktionell geprüft werden.**
 
 ## Lokales JSON-Format und Prüfung
 
@@ -74,3 +74,5 @@ node bin/wochenbrief-entwurf.mjs /pfad/entwurf.json /pfad/wochenbrief.html
 ```
 
 Die zweite Form schreibt nur eine HTML-Datei. **Betreff und Preheader** stehen im JSON für die spätere manuelle Übernahme nach Kit; das HTML ist nur der Mailkörper. Erst nach inhaltlicher Sichtung den HTML-Körper manuell in einen **Kit-Entwurf** übernehmen. Für die Dashboard-Vorschau wie in `PREVIEW-VERSCHLUESSELUNG.md` beschrieben mit dem öffentlichen Schlüssel verschlüsseln und ausschließlich die `.enc.json` im Asset-Zweig ablegen. Kein automatischer Kit-Abgleich, keine Sendefunktion, keine automatische Veröffentlichung.
+
+**Vorproduktion ohne Instagram-Permalink:** Statt `issue.weekly_post_url` ist `issue.weekly_source_slug` zulässig (z. B. `2026-09-27-b1`); statt `instagram_post_url` pro Fall `instagram_source_slug` (z. B. `2026-09-24-b2`). Die Vorschau zeigt den Slug als interne Quellenreferenz und verlinkt keine erfundene Instagram-Adresse. Vor dem Versand die Slugs mit den tatsächlichen Beiträgen abgleichen und die echten Links ergänzen.
