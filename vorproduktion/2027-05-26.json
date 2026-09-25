@@ -1,0 +1,874 @@
+{
+  "datum": "2027-05-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-276",
+        "themaTitel": "Wann ist das Gericht örtlich zuständig?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "anklage-866",
+        "themaTitel": "Welche Verfahrenshindernisse prüft man von Amts wegen?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessoroer-714",
+        "themaTitel": "Polizei-/Ordnungsrechtsklausur im Assessorexamen",
+        "fach": "assessoroer",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:07",
+        "art": "frage",
+        "themaId": "sachen-512"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:07",
+        "art": "antwort",
+        "themaId": "sachen-512"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "grundr-377"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "streitstand",
+        "themaId": "streit-25"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "merksatz",
+        "themaId": "sachen-223"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "assessoroer-715"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-276",
+      "poolTitel": "Wann ist das Gericht örtlich zuständig?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 12 ZPO",
+        "§ 13 ZPO",
+        "§ 29 ZPO",
+        "§ 32 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2027-03-19"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "anklage-866",
+      "poolTitel": "Welche Verfahrenshindernisse prüft man von Amts wegen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 206a StPO",
+        "§ 260 Abs. 3 StPO",
+        "§ 78 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2027-01-04",
+        "2027-04-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessoroer-714",
+      "poolTitel": "Polizei-/Ordnungsrechtsklausur im Assessorexamen",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "Landesrecht; VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-512",
+      "poolTitel": "Vormerkung: Entstehung und Wirkung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 883 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13",
+        "2026-11-13"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-512",
+      "poolTitel": "Vormerkung: Entstehung und Wirkung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 883 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13",
+        "2026-11-13"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "grundr-377",
+      "poolTitel": "Wann sind Grundrechte für Ausländer und juristische Personen anwendbar?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 19 Abs. 3 GG",
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2027-01-21",
+        "2027-03-04"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-25",
+      "poolTitel": "Vermögensbegriff beim Betrug: juristisch-ökonomisch oder wirtschaftlich?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "sachen-223",
+      "poolTitel": "Was ist ein Geheißerwerb?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 929 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "assessoroer-715",
+      "poolTitel": "Straßenverkehrsrecht und Verkehrszeichen als VA",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "StVO; VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-03-22",
+        "2027-03-22",
+        "2027-04-13"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-276",
+      "slug": "2027-05-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Unfall in Köln, Schädiger aus Hamburg: Wo darf B klagen?",
+          "titelZeilen": [
+            "Unfall in Köln,",
+            "Schädiger aus",
+            "Hamburg: Wo darf",
+            "B klagen?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Der Kläger hat die Wahl – fast",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A aus Hamburg fährt in Köln beim Abbiegen auf den Wagen des B aus München auf. B will Schadensersatz einklagen und am liebsten in München, wo er wohnt. Welche Gerichte sind örtlich zuständig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Allgemeiner Gerichtsstand",
+              "text": "Der Beklagte wird an seinem Wohnsitz verklagt (§§ 12, 13 ZPO). Hier: Hamburg."
+            },
+            {
+              "titel": "2. Unerlaubte Handlung",
+              "text": "Zuständig ist auch das Gericht des Begehungsorts (§ 32 ZPO). Er umfasst Handlungs- und Erfolgsort: hier Köln."
+            },
+            {
+              "titel": "3. Unfall im Straßenverkehr",
+              "text": "Für Ansprüche aus dem StVG ist zusätzlich das Gericht des Unfallorts zuständig (§ 20 StVG). Wieder Köln."
+            },
+            {
+              "titel": "4. Wahl des Klägers",
+              "text": "Unter mehreren Gerichtsständen wählt B frei (§ 35 ZPO): Hamburg oder Köln."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den Wohnsitz des Klägers für zuständig halten, weil dort der Schaden „ankommt“. Einen Klägergerichtsstand kennt die ZPO grundsätzlich nicht. Und der Ort, an dem sich ein bloßer Vermögensschaden zeigt, ist nach h.M. kein Erfolgsort im Sinne des § 32 ZPO."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "B kann in Hamburg oder in Köln klagen, nicht in München. Klagt er in Köln, prüft das Gericht nach dem BGH den Anspruch unter allen rechtlichen Gesichtspunkten – im Gerichtsstand der unerlaubten Handlung also auch konkurrierende Anspruchsgrundlagen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wohnsitz des Beklagten oder Tatort – der Kläger wählt. Sein eigener Wohnsitz hilft ihm nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Örtliche Zuständigkeit in drei Fragen",
+          "punkte": [
+            "Wo wohnt der Beklagte?",
+            "Gibt es einen besonderen Gerichtsstand?",
+            "Welchen wählt der Kläger?"
+          ],
+          "icons": [
+            "haus",
+            "auto",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Unfall in Köln, Schädiger aus Hamburg, Geschädigter aus München – wo darf geklagt werden? Am allgemeinen Gerichtsstand des Beklagten (§§ 12, 13 ZPO) oder am Begehungsort (§ 32 ZPO, bei StVG-Ansprüchen auch § 20 StVG). Unter mehreren Gerichtsständen wählt der Kläger (§ 35 ZPO). Seinen eigenen Wohnsitz kann er aber nicht wählen. Speichern für die nächste Zulässigkeitsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zuständigkeit",
+        "#32zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Örtliche Zuständigkeit: Beklagter oder Tatort",
+      "coverText": "Der Kläger hat die Wahl – fast",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Der Kläger darf zwischen mehreren Gerichten wählen, aber nicht einfach sein eigenes.",
+        "handlung": "{A} stands at a signpost with two lit arrows and one dark arrow pointing back toward her own home, while {B} taps the dark arrow with a wrench and shrugs.",
+        "hinweisRegie": "Place the note in the free space next to the dark arrow pointing home, slightly tilted toward it, so the unavailable option stands out without covering the two lit arrows or {A}'s face.",
+        "alternative": "{B} hands {A} two tickets to different cities while a third ticket to her hometown is stamped void."
+      },
+      "bildSzene": "signpost, one arrow dark",
+      "bildSzeneAlt": "two tickets valid, one void",
+      "quellen": [
+        "§ 12 ZPO",
+        "§ 13 ZPO",
+        "§ 32 ZPO",
+        "§ 35 ZPO",
+        "§ 20 StVG",
+        "Themenpool: zpo-276"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.578Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-866",
+      "slug": "2027-05-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ein Strafbefehl, zwei Delikte – die zweite Anklage ist gesperrt",
+          "titelZeilen": [
+            "Ein Strafbefehl,",
+            "zwei Delikte – die",
+            "zweite Anklage",
+            "ist gesperrt"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Prozessuale Tat, nicht Delikt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A beschimpft seinen Nachbarn N vor dessen Garage und tritt dabei zweimal gegen N's Auto. Wegen der Beleidigung ergeht ein Strafbefehl, der rechtskräftig wird. Später bemerkt die Staatsanwaltschaft die Delle im Auto. Kann sie A jetzt wegen Sachbeschädigung anklagen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Verfahrenshindernis erkennen",
+              "text": "Strafklageverbrauch: Niemand darf wegen derselben Tat mehrmals bestraft werden (Art. 103 Abs. 3 GG)."
+            },
+            {
+              "titel": "2. Prozessualer Tatbegriff",
+              "text": "Tat ist der einheitliche geschichtliche Vorgang, wie ihn die Anklage umreißt (§ 264 StPO) – weiter als die materielle Tat."
+            },
+            {
+              "titel": "3. Strafbefehl genügt",
+              "text": "Ein rechtskräftiger Strafbefehl steht einem rechtskräftigen Urteil gleich (§ 410 Abs. 3 StPO)."
+            },
+            {
+              "titel": "4. Ausnahme geprüft",
+              "text": "Wiederaufnahme nach § 373a StPO nur, wenn neue Umstände eine Verurteilung wegen eines Verbrechens begründen. Sachbeschädigung ist keines."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Materiell denken: Beleidigung und Sachbeschädigung stehen vielleicht in Tatmehrheit, also zwei Taten? Nein – für den Strafklageverbrauch zählt der prozessuale Tatbegriff. Ein Geschehen am selben Ort, zur selben Zeit, gegen dasselbe Opfer ist regelmäßig eine Tat."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Die Strafklage ist verbraucht. Die Staatsanwaltschaft stellt das Verfahren nach § 170 Abs. 2 StPO ein. Würde trotzdem angeklagt, müsste das Gericht nach Eröffnung durch Beschluss (§ 206a StPO) oder in der Hauptverhandlung durch Urteil (§ 260 Abs. 3 StPO) einstellen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rechtskraft sperrt die ganze prozessuale Tat – auch die Delikte, an die damals niemand gedacht hat."
+        },
+        {
+          "art": "cta",
+          "titel": "Strafklageverbrauch in drei Fragen",
+          "punkte": [
+            "Rechtskräftiges Urteil oder Strafbefehl?",
+            "Derselbe geschichtliche Vorgang?",
+            "Greift § 373a StPO ausnahmsweise?"
+          ],
+          "icons": [
+            "dokument",
+            "kreislauf",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Ein Strafbefehl wegen Beleidigung ist rechtskräftig – und die Sachbeschädigung aus demselben Streit? Die kann nicht mehr angeklagt werden. Art. 103 Abs. 3 GG sperrt die ganze prozessuale Tat im Sinne des § 264 StPO, und der rechtskräftige Strafbefehl steht einem Urteil gleich. Eine Wiederaufnahme nach § 373a StPO gibt es nur bei einem Verbrechen. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafklageverbrauch",
+        "#anklageschrift",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Strafklageverbrauch: die ganze Tat ist gesperrt",
+      "coverText": "Prozessuale Tat, nicht Delikt",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ein rechtskräftiger Abschluss erfasst das ganze Geschehen – auch Teile, die damals übersehen wurden.",
+        "handlung": "{A} seals a large crate containing a whole small scene with a heavy lid, while {B} tries to pull out a forgotten piece sticking from the edge and finds it locked in.",
+        "hinweisRegie": "Place the note in the free space next to the forgotten piece stuck at the crate's edge, slightly tilted toward it, so the sealed remainder stands out without covering the lid or {B}'s hands.",
+        "alternative": "{A} closes a single large door behind a whole room, and {B} realizes the item she wanted is now also behind it."
+      },
+      "bildSzene": "sealed crate, forgotten piece locked",
+      "bildSzeneAlt": "one door closes whole room",
+      "quellen": [
+        "Art. 103 Abs. 3 GG",
+        "§ 264 StPO",
+        "§ 410 Abs. 3 StPO",
+        "§ 373a StPO",
+        "§ 206a StPO",
+        "§ 260 Abs. 3 StPO",
+        "§ 170 Abs. 2 StPO",
+        "Themenpool: anklage-866"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.579Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-714",
+      "slug": "2027-05-26-b3",
+      "titelZeilen": [
+        "Platzverweis",
+        "vorbei – die Klage",
+        "ist es nicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Platzverweis vorbei – die Klage ist es nicht",
+          "unter": "Polizeiklausur · § 113 Abs. 1 S. 4 VwGO",
+          "text": "Erledigte Polizeimaßnahmen greifst du mit der Fortsetzungsfeststellungsklage an.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "icon": "polizei",
+          "sprecher": "Der Platzverweis ist vorbei – die Klage noch nicht. Polizeimaßnahmen erledigen sich oft binnen Stunden. Im zweiten Examen musst du trotzdem Rechtsschutz liefern.",
+          "marken": [
+            "erledigt",
+            "trotzdem klagen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erledigung erkennen",
+          "text": "Die Maßnahme wirkt nicht mehr – eine Aufhebung ginge ins Leere.",
+          "norm": null,
+          "sprecher": "Schritt eins: Erkenn die Erledigung. Der Betroffene hat den Ort längst verlassen, der Platzverweis belastet ihn nicht mehr. Eine Anfechtungsklage ginge ins Leere.",
+          "marken": [
+            "keine Wirkung mehr"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Statthaft: Fortsetzungsfeststellung",
+          "text": "Bei Erledigung vor Klageerhebung analog § 113 Abs. 1 S. 4 VwGO.",
+          "norm": "§ 113 Abs. 1 S. 4 VwGO",
+          "sprecher": "Schritt zwei: die Klageart. Hat sich die Maßnahme schon vor Klageerhebung erledigt, ist die Fortsetzungsfeststellungsklage analog statthaft. Ein Vorverfahren ist dann nach der Rechtsprechung regelmäßig entbehrlich.",
+          "marken": [
+            "FFK analog"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Das besondere Interesse",
+          "text": "Wiederholungsgefahr, Rehabilitation, tiefgreifender Grundrechtseingriff.",
+          "norm": null,
+          "sprecher": "Schritt drei: das Feststellungsinteresse. Typisch sind Wiederholungsgefahr, ein Rehabilitationsinteresse oder ein tiefgreifender Grundrechtseingriff, der sich typischerweise schnell erledigt.",
+          "marken": [
+            "Wiederholung",
+            "Rehabilitation"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Begründetheit nach Landesrecht",
+          "text": "Ermächtigung aus dem Polizeigesetz, formell und materiell rechtmäßig?",
+          "norm": null,
+          "sprecher": "Schritt vier: die Begründetheit. Die Ermächtigungsgrundlage steht im Polizeigesetz deines Landes. Prüf Zuständigkeit und Verfahren, dann Tatbestand, Störerauswahl und Ermessen. Maßgeblich ist die Lage im Zeitpunkt der Maßnahme.",
+          "marken": [
+            "Landesrecht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Tenor",
+          "text": "„Es wird festgestellt, dass der Platzverweis vom … rechtswidrig war.“",
+          "norm": "§ 154 Abs. 1 VwGO",
+          "sprecher": "Und der Tenor? Es wird festgestellt, dass der Platzverweis rechtswidrig war. Dazu die Kostenentscheidung nach Paragraf 154 und die vorläufige Vollstreckbarkeit nach Paragraf 167 VwGO.",
+          "marken": [
+            "Feststellung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Erledigt? Fortsetzungsfeststellung, Interesse begründen, Landesrecht prüfen.",
+          "norm": null,
+          "sprecher": "Merke: Erledigt heißt nicht erledigt für die Klausur. Fortsetzungsfeststellungsklage, Interesse begründen, dann die Rechtmäßigkeit nach Landesrecht.",
+          "marken": [
+            "drei Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Speichern für die Polizeiklausur",
+          "text": "Speichern für die nächste Assessorklausur im Polizeirecht.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Polizeirechtsklausur im zweiten Examen.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Der Platzverweis ist vorbei – die Klage ist es nicht. Erledigte Polizeimaßnahmen greifst du mit der Fortsetzungsfeststellungsklage an, bei Erledigung vor Klageerhebung analog § 113 Abs. 1 S. 4 VwGO. Das Feststellungsinteresse begründest du über Wiederholungsgefahr, Rehabilitation oder einen tiefgreifenden Grundrechtseingriff. Geprüft wird dann nach dem Polizeigesetz deines Landes. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#vwgo",
+        "#fortsetzungsfeststellungsklage",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Erledigter Platzverweis: so klagst du trotzdem",
+      "coverText": "Erledigt heißt nicht klaglos",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Auch eine längst beendete Maßnahme kann noch gerichtlich überprüft werden.",
+        "handlung": "{A} points at fading footprints leading away from a cordoned-off square, while {B} carefully casts one of the footprints in plaster to keep it.",
+        "hinweisRegie": "Place the note in the free space next to the plaster cast of the footprint, slightly tilted toward it, so the preserved trace stands out without covering {B}'s hands or the cordon.",
+        "alternative": "{B} catches the last echo of a whistle in a small glass jar while {A} nods."
+      },
+      "bildSzene": "footprint preserved in plaster",
+      "bildSzeneAlt": "echo caught in glass jar",
+      "quellen": [
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 154 Abs. 1 VwGO",
+        "§ 167 VwGO",
+        "Polizeigesetze der Länder",
+        "Themenpool: assessoroer-714"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.580Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-512",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Der Grundstückskaufvertrag ist formnichtig, trotzdem wird eine Vormerkung eingetragen. Schützt sie K?",
+      "optionen": [
+        "Nein – ohne wirksamen Anspruch entsteht keine Vormerkung",
+        "Ja – die Eintragung allein trägt die Vormerkung",
+        "Ja, aber nur, wenn K die Formnichtigkeit nicht kannte"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 883 BGB",
+        "§ 311b Abs. 1 BGB",
+        "Themenpool: sachen-512"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.580Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-512",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die Vormerkung steht und fällt mit dem gesicherten Anspruch",
+      "text": "Die Vormerkung sichert einen Anspruch auf dingliche Rechtsänderung (§ 883 Abs. 1 BGB) und ist streng akzessorisch. Ist der Kaufvertrag nach § 311b Abs. 1 S. 1 BGB formnichtig, gibt es keinen Anspruch – die Eintragung geht ins Leere. Guter Glaube hilft nicht: Er ersetzt nur die fehlende Berechtigung des Bewilligenden, nicht den Anspruch.",
+      "norm": "§ 883 Abs. 1 BGB",
+      "quellen": [
+        "§ 883 BGB",
+        "§ 311b Abs. 1 BGB",
+        "Themenpool: sachen-512"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.580Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – ohne wirksamen Anspruch entsteht keine Vormerkung",
+        "Ja – die Eintragung allein trägt die Vormerkung",
+        "Ja, aber nur, wenn K die Formnichtigkeit nicht kannte"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-377",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 19 Abs. 3 GG: Die Gemeinde kann sich nicht auf Art. 14 GG berufen",
+      "text": "Grundrechte gelten für inländische juristische Personen, soweit sie ihrem Wesen nach passen. Juristische Personen des öffentlichen Rechts sind grundsätzlich nicht grundrechtsfähig – sie sind selbst an die Grundrechte gebunden. Ausnahmen: Universitäten, öffentlich-rechtliche Rundfunkanstalten, Kirchen. Prozessgrundrechte wie Art. 103 Abs. 1 GG stehen allen Verfahrensbeteiligten zu.",
+      "norm": "Art. 19 Abs. 3 GG",
+      "quellen": [
+        "Art. 19 Abs. 3 GG",
+        "Art. 14 GG",
+        "Art. 103 Abs. 1 GG",
+        "Themenpool: grundr-377"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.580Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "streit-25",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Vermögen beim Betrug: Zählt auch, was die Rechtsordnung nicht schützt?",
+      "norm": "§ 263 Abs. 1 StGB",
+      "optionen": [
+        "Rspr. (wirtschaftlicher Vermögensbegriff): alle Güter mit Geldwert – nach dem BGH auch der unerlaubte Besitz an Drogen, mit Einschränkungen bei nichtigen Ansprüchen.",
+        "H.L. (juristisch-ökonomischer Begriff): nur Güter mit Geldwert, die unter dem Schutz der Rechtsordnung stehen."
+      ],
+      "text": "Klausur: Der Streit wird relevant beim Betrug unter Ganoven, etwa wenn A dem Dealer D Drogen mit Falschgeld abkauft. Nur wenn die Ansichten zu verschiedenen Ergebnissen führen, entscheiden. Für die Lehre: Einheit der Rechtsordnung.",
+      "quellen": [
+        "§ 263 StGB"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.580Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-223",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Geheißerwerb: Übergabe auch durch Dritte auf Weisung",
+      "text": "Keine Übergabe von Hand zu Hand nötig: Es genügt, dass der Besitz auf Geheiß des Veräußerers zum Erwerber gelangt. Klassiker: V liefert auf Weisung des K direkt an D.",
+      "norm": "§ 929 S. 1 BGB",
+      "quellen": [
+        "§ 929 BGB",
+        "§ 854 BGB",
+        "Themenpool: sachen-223"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.580Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-715",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Sichtbarkeitsgrundsatz: Das Verkehrszeichen gilt, sobald man es mit einem Blick erfassen kann",
+      "text": "Verkehrszeichen werden durch Aufstellen bekanntgegeben. Wirksam sind sie gegenüber jedem, der sie bei gehöriger Sorgfalt mit einem raschen, beiläufigen Blick erfassen kann – auch wenn er sie tatsächlich übersieht. Die Anfechtungsfrist beginnt nach dem BVerwG für jeden erst, wenn er zum ersten Mal auf das Zeichen trifft; mangels Belehrung beträgt sie ein Jahr (§ 58 Abs. 2 VwGO).",
+      "norm": "§ 58 Abs. 2 VwGO",
+      "quellen": [
+        "§ 35 S. 2 VwVfG",
+        "§ 58 Abs. 2 VwGO",
+        "StVO",
+        "Themenpool: assessoroer-715"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:54:35.580Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,897 @@
+{
+  "datum": "2027-05-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafbt-738",
+        "themaTitel": "Mord: Heimtücke",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "grundr-616",
+        "themaTitel": "Kunstfreiheit",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "sachen-030"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "sachen-030"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "assessoroer-845"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "fehler",
+        "themaId": "schuldbt-914"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "tipp",
+        "themaId": "strafbt-323"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "zahl",
+        "themaId": "revision-882"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-738",
+      "poolTitel": "Mord: Heimtücke",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-616",
+      "poolTitel": "Kunstfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 III GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-030",
+      "poolTitel": "Welche Ausnahmen gibt es zur Sperrwirkung des EBV im Deliktsrecht?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 993 Abs. 1 BGB",
+        "§ 992 BGB",
+        "§ 823 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2027-02-05",
+        "2027-03-25"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-030",
+      "poolTitel": "Welche Ausnahmen gibt es zur Sperrwirkung des EBV im Deliktsrecht?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 993 Abs. 1 BGB",
+        "§ 992 BGB",
+        "§ 823 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2027-02-05",
+        "2027-03-25"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-30",
+        "2027-03-03",
+        "2027-03-25"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "schuldbt-914",
+      "poolTitel": "Wann gibt es Entschädigung für nutzlos aufgewendete Urlaubszeit?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 651n Abs. 2 BGB",
+        "§ 651i Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25",
+        "2026-12-25",
+        "2027-02-28"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafbt-323",
+      "poolTitel": "Was ist der Gewahrsamsbegriff beim Diebstahl?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-06",
+        "2027-01-28"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-882",
+      "poolTitel": "Was ist ein Darstellungsmangel?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 267 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17",
+        "2027-02-06",
+        "2027-03-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-05-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Beiträge, vier Bereiche, ein Test",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Beiträge, vier",
+            "Bereiche, ein Test"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Kopfsache",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Klageerwiderung: erst bestreiten, dann hilfsweise aufrechnen.",
+            "§§ 857, 935 BGB: Nimmt ein Nichterbe die Nachlasssache, ist sie abhandengekommen.",
+            "§ 475b Abs. 5 BGB: Update ignoriert – Haftung entfällt nur nach Belehrung über Folgen.",
+            "§ 377 HGB: Die rechtzeitige Absendung der Rüge wahrt die Frist.",
+            "§ 179 BGB: Ohne Kenntnis des Mangels nur Vertrauensschaden.",
+            "§ 119 Abs. 2 BGB: Eigenschaften sind wertbildende Faktoren – der Wert selbst ist keine."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 127 Abs. 1 StPO: frische Tat, Festnahmegrund, angemessenes Mittel, Festnahmewille.",
+            "Beendeter Versuch: Nach dem BGH genügt eine ursächliche Rettung – nicht erst die optimale.",
+            "U-Haft: Die hohe Straferwartung ist nur ein Indiz für Fluchtgefahr, kein eigener Haftgrund.",
+            "Tun oder Unterlassen: Beim Fahrlässigkeitsdelikt liegt der Schwerpunkt meist im Tun.",
+            "Strafbefehl: Freiheitsstrafe bis zu einem Jahr nur zur Bewährung und nur mit Verteidiger."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Drittwirkung: Schutznorm, Frist ab Bekanntgabe, § 50 VwVfG.",
+            "Gebundene Entscheidung: Das Gericht stellt die Spruchreife selbst her.",
+            "Bekanntgabe: Ein versehentlich verschickter Entwurf wird kein VA.",
+            "Nebenbestimmungen: Anfechtung ist der Regelfall, die Teilbarkeit klärt die Begründetheit.",
+            "Briefwahl: Die Allgemeinheit rechtfertigt Einbußen bei der Geheimheit.",
+            "Mobiles Halteverbot: Kosten erst ab dem vierten Tag nach Aufstellen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Kopfsache",
+          "punkte": [
+            "Unbekanntes Problem: verorten, Zeit begrenzen, zwei Deutungen gegenüberstellen, entscheiden."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Kannst du die zwei Bedingungen des § 475b Abs. 5 BGB ohne Gesetz nennen?",
+            "Weißt du, wann der Rücktrittsstreit beim beendeten Versuch überhaupt relevant wird?",
+            "Kannst du den Verpflichtungstenor bei einer gebundenen Entscheidung formulieren?"
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Rechtsfolgen sauber trennen",
+            "Strafrecht: erst abgrenzen, dann prüfen",
+            "Öffentliches Recht: Klageart und Tenor mitdenken",
+            "Kopfsache: Zeitbudget je Problem"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "18 Beiträge, vier Bereiche – was sitzt nach dieser Woche? Im Zivilrecht ging es von der Hilfsaufrechnung bis zu § 119 Abs. 2 BGB, im Strafrecht von der Jedermann-Festnahme bis zum Strafbefehl, im Öffentlichen Recht von der Drittwirkung bis zum mobilen Halteverbot. Dazu ein Kopfsache-Reel zum unbekannten Problem. Geh die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge im Test",
+      "coverText": "Zivil · Straf · ÖR · Kopfsache",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Am Ende der Woche sortiert ein kurzer Selbsttest, welche Themen schon sitzen.",
+        "handlung": "{A} sorts eighteen small glowing stones into four baskets, while {B} lifts one stone that still flickers and holds it up to the light.",
+        "hinweisRegie": "Place the note in the free space above the flickering stone in {B}'s hand, slightly tilted toward it, so the weak topic stands out without covering the four baskets or {A}'s face.",
+        "alternative": "{B} checks four drawers of a small cabinet one by one while {A} marks the drawer that sticks."
+      },
+      "bildSzene": "sorting glowing stones into baskets",
+      "bildSzeneAlt": "checking four cabinet drawers",
+      "quellen": [
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG",
+        "§§ 857, 935 BGB",
+        "§ 475b BGB",
+        "§ 377 HGB",
+        "§ 179 BGB",
+        "§ 119 Abs. 2 BGB",
+        "§ 127 StPO",
+        "§ 24 StGB",
+        "§ 112 StPO",
+        "§ 13 StGB",
+        "§ 407 StPO",
+        "§ 50 VwVfG",
+        "§ 113 Abs. 5 VwGO",
+        "§ 41 VwVfG",
+        "§ 36 VwVfG",
+        "Art. 38 GG",
+        "Themenpool: mindset-8"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-beitragszahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.232Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-738",
+      "slug": "2027-05-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Heimtücke: der Zeitpunkt, an dem viele Klausuren kippen",
+          "titelZeilen": [
+            "Heimtücke:",
+            "der Zeitpunkt, an",
+            "dem viele Klausuren",
+            "kippen"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Erster Angriff zählt, nicht der letzte",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Heimtückisch tötet, wer die Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt (§ 211 Abs. 2 StGB). Viele prüfen die Arglosigkeit im Moment des tödlichen Stichs. Maßgeblich ist aber der Beginn des ersten mit Tötungsvorsatz geführten Angriffs."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Arglosigkeit",
+              "text": "Das Opfer rechnet bei Beginn des ersten mit Tötungsvorsatz geführten Angriffs nicht mit einem erheblichen Angriff auf Leib oder Leben."
+            },
+            {
+              "titel": "2. Wehrlosigkeit",
+              "text": "Gerade infolge der Arglosigkeit ist seine Verteidigungsfähigkeit aufgehoben oder erheblich eingeschränkt."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Bewusstes Ausnutzen",
+              "text": "Der Täter erkennt die Arg- und Wehrlosigkeit und nutzt sie bewusst für die Tat aus."
+            },
+            {
+              "titel": "4. Einschränkung",
+              "text": "Rspr.: feindliche Willensrichtung – fehlt etwa bei Tötung zum vermeintlichen Wohl des Opfers. Teile der Lit.: Vertrauensbruch."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Schlafende nehmen ihre Arglosigkeit mit in den Schlaf, Bewusstlose nach h.M. nicht. Bei Kleinkindern kommt es auf schutzbereite Dritte an. Und: Auch ein offener Angriff kann heimtückisch sein, wenn dem Opfer zwischen Erkennen und Angriff keine Zeit zur Abwehr bleibt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Arglos bei Beginn des ersten mit Tötungsvorsatz geführten Angriffs, dadurch wehrlos, bewusst ausgenutzt – nach der Rspr. in feindlicher Willensrichtung."
+        },
+        {
+          "art": "cta",
+          "titel": "Heimtücke in drei Fragen",
+          "punkte": [
+            "Wann begann der erste Angriff?",
+            "Arglos und dadurch wehrlos?",
+            "Feindliche Willensrichtung?"
+          ],
+          "icons": [
+            "uhr",
+            "person",
+            "messer"
+          ]
+        }
+      ],
+      "caption": "Heimtücke: An diesem Zeitpunkt kippen viele Klausuren. Nicht der tödliche Stich entscheidet, sondern der Beginn des ersten mit Tötungsvorsatz geführten Angriffs – war das Opfer da arglos und deshalb wehrlos? Dazu das bewusste Ausnutzen und nach der Rspr. die feindliche Willensrichtung. Schlafende bleiben arglos, Bewusstlose nach h.M. nicht. Speichern für die nächste Mordprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#mord",
+        "#211stgb",
+        "#heimtücke",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Heimtücke: Der erste Angriff zählt",
+      "coverText": "Erster Angriff zählt, nicht der letzte",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Ob das Opfer arglos war, entscheidet sich im Moment des ersten Angriffs – nicht erst beim letzten Schlag.",
+        "handlung": "{A} stops a film reel projector and rewinds it to the first frame, where a figure still walks calmly, while {B} nervously points at the last frame showing the struggle.",
+        "hinweisRegie": "Place the note in the free space next to the first, calm frame on the rewound reel, slightly tilted toward it, so the decisive moment stands out without covering {B}'s pointing hand or the projector.",
+        "alternative": "{B} marks the first footprint on a long trail with a small flag while {A} insists on looking at the last footprint far ahead."
+      },
+      "bildSzene": "film rewound to first calm frame",
+      "bildSzeneAlt": "flag on first footprint of trail",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafbt-738"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.232Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-616",
+      "slug": "2027-05-02-b3",
+      "titelZeilen": [
+        "Kunstfreiheit: drei",
+        "Schritte – ohne",
+        "Art. 5 II GG"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Kunstfreiheit: drei Schritte – ohne Art. 5 II GG",
+          "unter": "Kunstfreiheit · Art. 5 Abs. 3 GG",
+          "text": "Kein Gesetzesvorbehalt – aber auch nicht schrankenlos.",
+          "norm": "Art. 5 Abs. 3 S. 1 GG",
+          "icon": "schriftrolle",
+          "sprecher": "Kunstfreiheit hat keinen Gesetzesvorbehalt. Die Schranken aus Artikel 5 Absatz 2 gelten für sie nicht. Grenzenlos ist sie trotzdem nicht, und das prüfst du in drei Schritten.",
+          "marken": [
+            "vorbehaltlos",
+            "nicht grenzenlos"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der Kunstbegriff",
+          "text": "Materiell, formell, offen – ohne Niveaukontrolle.",
+          "norm": "Art. 5 Abs. 3 S. 1 GG",
+          "sprecher": "Schritt eins: der Schutzbereich. Das BVerfG arbeitet mit mehreren Kunstbegriffen: freie schöpferische Gestaltung, die Zuordnung zu einem Werktyp wie Roman oder Theater und die Offenheit für immer neue Deutungen. Geschmack oder Niveau prüft der Staat nicht.",
+          "marken": [
+            "weiter Begriff"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Werk- und Wirkbereich",
+          "text": "Geschützt sind Schaffen und Verbreiten.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Geschützt ist nicht nur das Schaffen, der Werkbereich, sondern auch Darbietung und Verbreitung, der Wirkbereich. Deshalb können sich auch Verlage oder Galerien auf die Kunstfreiheit berufen.",
+          "marken": [
+            "auch Verlage"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Nur verfassungsimmanente Schranken",
+          "text": "Grundrechte Dritter und andere Verfassungsgüter – auf gesetzlicher Grundlage.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Rechtfertigung. Weil ein Gesetzesvorbehalt fehlt, kommen nur verfassungsimmanente Schranken in Betracht, also Grundrechte Dritter und andere Güter mit Verfassungsrang. Auch dann braucht der Eingriff eine gesetzliche Grundlage.",
+          "marken": [
+            "Verfassungsgüter"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Praktische Konkordanz",
+          "text": "Kunst und Persönlichkeitsrecht schonend ausgleichen.",
+          "norm": "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+          "sprecher": "Kollidiert die Kunst mit dem Persönlichkeitsrecht, etwa beim Schlüsselroman, bringst du beide so zum Ausgleich, dass jedes möglichst weit wirksam bleibt. Dabei gilt eine kunstspezifische Betrachtung: Ein Roman ist zunächst Fiktion.",
+          "marken": [
+            "Ausgleich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Klassiker in Klausuren",
+          "text": "Art. 5 Abs. 2 GG gilt nur für Absatz 1.",
+          "norm": "Art. 5 Abs. 2 GG",
+          "sprecher": "Und der Klassiker: Artikel 5 Absatz 2 unter die Kunstfreiheit schreiben, etwa über den Ehrschutz. Diese Schranke gilt nur für Absatz 1, also Meinung, Presse, Rundfunk und Film.",
+          "marken": [
+            "nicht Abs. 2"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Weiter Schutzbereich, keine Schranke aus Abs. 2, praktische Konkordanz.",
+          "norm": "Art. 5 Abs. 3 GG",
+          "sprecher": "Merke: weiter Schutzbereich mit Werk- und Wirkbereich, keine Schranke aus Absatz 2, Rechtfertigung nur durch kollidierendes Verfassungsrecht und praktische Konkordanz.",
+          "marken": [
+            "drei Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nie Abs. 2 unter Abs. 3",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur mit Roman, Theater oder Street-Art. Und schreib Absatz 2 nie unter die Kunstfreiheit.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Kunstfreiheit hat keinen Gesetzesvorbehalt – die Schranken aus Art. 5 Abs. 2 GG gelten für sie nicht. Schutzlos gegenüber Konflikten ist die Rechtsordnung trotzdem nicht: Grenzen ziehen nur Grundrechte Dritter und andere Güter mit Verfassungsrang, und zwar auf gesetzlicher Grundlage und im Wege praktischer Konkordanz. Geschützt sind Werk- und Wirkbereich, Niveau und Geschmack spielen keine Rolle. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#kunstfreiheit",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kunstfreiheit: Prüfung in drei Schritten",
+      "coverText": "Nur kollidierendes Verfassungsrecht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Die Kunstfreiheit steht ohne Gesetzesvorbehalt, findet ihre Grenzen aber an anderen Verfassungsgütern.",
+        "handlung": "{B} paints a huge colourful mural on a wall, while {A} gently holds out his pointer where the paint is about to cover a neighbour's small window.",
+        "hinweisRegie": "Place the note in the free space between the mural's edge and the neighbour's window, slightly tilted toward the window, so the colliding right stands out without covering {B}'s brush or the mural.",
+        "alternative": "{A} removes an old, ill-fitting frame labelled only with a small number from a sculpture, while {B} measures the sculpture against a second figure standing next to it."
+      },
+      "bildSzene": "mural edge near neighbour's window",
+      "bildSzeneAlt": "ill-fitting frame removed from sculpture",
+      "quellen": [
+        "Art. 5 Abs. 3 S. 1 GG",
+        "Art. 5 Abs. 2 GG",
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "Themenpool: grundr-616"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-schritte-schranke",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.234Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-030",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "D stiehlt das Rad des E und beschädigt es. Haftet D neben den §§ 987 ff. BGB auch nach § 823 BGB?",
+      "optionen": [
+        "Nein – das EBV sperrt das Deliktsrecht ausnahmslos",
+        "Nur wenn D bei der Beschädigung bösgläubig war",
+        "Ja – bei Besitzerwerb durch Straftat öffnet § 992 BGB den Weg"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 992 BGB",
+        "§ 993 Abs. 1 BGB",
+        "§ 823 BGB",
+        "§ 848 BGB",
+        "Themenpool: sachen-030"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.234Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-030",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – § 992 BGB öffnet den Weg ins Deliktsrecht",
+      "text": "Grundsätzlich regeln die §§ 987 ff. BGB die Haftung des unrechtmäßigen Besitzers abschließend (§ 993 Abs. 1 Hs. 2 BGB). Hat er sich den Besitz aber durch verbotene Eigenmacht oder eine Straftat verschafft, haftet er nach Deliktsrecht (§ 992 BGB) – über § 848 BGB sogar für Zufall.",
+      "norm": "§ 992 BGB · § 993 Abs. 1 BGB",
+      "quellen": [
+        "§ 992 BGB",
+        "§ 993 Abs. 1 BGB",
+        "§ 823 BGB",
+        "§ 848 BGB",
+        "Themenpool: sachen-030"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.234Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – das EBV sperrt das Deliktsrecht ausnahmslos",
+        "Nur wenn D bei der Beschädigung bösgläubig war",
+        "Ja – bei Besitzerwerb durch Straftat öffnet § 992 BGB den Weg"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-845",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 65 Abs. 2 VwGO: Die notwendige Beiladung lässt sich sogar in der Revision nachholen",
+      "text": "Notwendig beizuladen ist, wer so am streitigen Rechtsverhältnis beteiligt ist, dass die Entscheidung auch ihm gegenüber nur einheitlich ergehen kann. Unterbleibt das, ist es ein wesentlicher Verfahrensmangel. Anders als sonst sind solche Beiladungen im Revisionsverfahren zulässig (§ 142 Abs. 1 S. 2 VwGO).",
+      "norm": "§ 65 Abs. 2 VwGO",
+      "quellen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 VwGO",
+        "§ 121 VwGO",
+        "Themenpool: assessoroer-845"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.234Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-914",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Hurrikan vereitelt die Reise: Entschädigung für die Urlaubszeit?",
+      "falsch": "Wird die Reise wegen unvermeidbarer, außergewöhnlicher Umstände vereitelt, gibt es trotzdem Entschädigung für nutzlos aufgewendete Urlaubszeit.",
+      "richtigText": "§ 651n Abs. 2 BGB ist ein Schadensersatzanspruch und setzt voraus, dass sich der Veranstalter nicht nach Abs. 1 entlasten kann – etwa bei unvermeidbaren, außergewöhnlichen Umständen. Minderung und Kündigung bleiben davon unberührt.",
+      "quellen": [
+        "§ 651n BGB",
+        "§ 651m BGB",
+        "§ 651l BGB",
+        "Themenpool: schuldbt-914"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.234Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-323",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Gelockert ist nicht übertragen: Gewahrsam beim Anprobieren",
+      "text": "Gibt der Verkäufer dem Kunden eine Uhr nur zum Ansehen im Laden, lockert er seinen Gewahrsam, überträgt ihn aber nicht. Rennt der Kunde damit weg, bricht er fremden Gewahrsam – Diebstahl, kein Betrug. Frag daher zuerst, ob der Berechtigte die Sachherrschaft nach der Verkehrsauffassung ganz aufgeben wollte.",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 263 StGB",
+        "Themenpool: strafbt-323"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.234Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-882",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Urteilsgründe: vier Bausteine, deren Lücke die Sachrüge trifft",
+      "text": "Fehlt einer dieser Bausteine oder ist er lückenhaft, liegt ein Darstellungsmangel vor – gerügt mit der allgemeinen Sachrüge.",
+      "punkte": [
+        "Erwiesene Tatsachen, die alle gesetzlichen Merkmale ausfüllen",
+        "Eine Beweiswürdigung, die das Ergebnis trägt",
+        "Das angewandte Strafgesetz (§ 267 Abs. 3 S. 1 StPO)",
+        "Die bestimmenden Strafzumessungsgründe"
+      ],
+      "quellen": [
+        "§ 267 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-882"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:53:11.234Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
