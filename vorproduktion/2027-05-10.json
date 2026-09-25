@@ -1,0 +1,883 @@
+{
+  "datum": "2027-05-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwbt-401",
+        "themaTitel": "Wie funktioniert die Normenkontrolle gegen einen Bebauungsplan?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "bgbat-436",
+        "themaTitel": "Verjährungsbeginn und kenntnisabhängige Regelverjährung",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-325",
+        "themaTitel": "Wie prüft man den besonders schweren Fall des Diebstahls?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "strafbt-069"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "strafbt-069"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "europa-108"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "tipp",
+        "themaId": "verwalt-393"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:43",
+        "art": "zahl",
+        "themaId": "methodik-905"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "streitstand",
+        "themaId": "bgbat-911"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwbt-401",
+      "poolTitel": "Wie funktioniert die Normenkontrolle gegen einen Bebauungsplan?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 47 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-19"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "bgbat-436",
+      "poolTitel": "Verjährungsbeginn und kenntnisabhängige Regelverjährung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 195, 199 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-10-31",
+        "2027-04-30"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-325",
+      "poolTitel": "Wie prüft man den besonders schweren Fall des Diebstahls?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 243 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-16"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-069",
+      "poolTitel": "Wann liegt Heimtücke vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-069",
+      "poolTitel": "Wann liegt Heimtücke vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "europa-108",
+      "poolTitel": "Wann wirkt eine Richtlinie unmittelbar?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2026-12-08",
+        "2027-01-30"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "verwalt-393",
+      "poolTitel": "Was ist ein enteignungsgleicher Eingriff?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-11"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-905",
+      "poolTitel": "Prozessrecht früh erkennen und einbauen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-19",
+        "2027-01-30",
+        "2027-05-08"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "bgbat-911",
+      "poolTitel": "Bindet eine abhandengekommene Willenserklärung, die ohne Willen in den Verkehr gelangt?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB",
+        "§ 122 BGB analog",
+        "§ 172 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2027-01-07",
+        "2027-03-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-401",
+      "slug": "2027-05-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Normenkontrolle verfristet – der B-Plan kann trotzdem fallen",
+          "titelZeilen": [
+            "Normenkontrolle",
+            "verfristet – der",
+            "B-Plan kann",
+            "trotzdem fallen"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Inzident bleibt der Plan prüfbar",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Gemeinde G hat vor 14 Monaten einen Bebauungsplan bekannt gemacht, der neben dem Grundstück des N ein Gewerbegebiet festsetzt. N hält die Abwägung für fehlerhaft und will den Plan jetzt beim OVG angreifen. Hat ein Normenkontrollantrag Erfolg – und ist der Plan damit für N erledigt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Statthaftigkeit",
+              "text": "Satzungen nach dem BauGB kontrolliert das OVG auf Antrag (§ 47 Abs. 1 Nr. 1 VwGO) – dazu gehört der Bebauungsplan (§ 10 Abs. 1 BauGB)."
+            },
+            {
+              "titel": "Antragsbefugnis",
+              "text": "Mögliche Verletzung eigener Rechte. Außerhalb des Plangebiets trägt oft das Recht auf gerechte Abwägung eigener Belange."
+            },
+            {
+              "titel": "Antragsfrist",
+              "text": "Ein Jahr ab Bekanntmachung (§ 47 Abs. 2 S. 1 VwGO). Nach 14 Monaten ist sie abgelaufen – der Antrag ist unzulässig."
+            },
+            {
+              "titel": "Inzidentkontrolle",
+              "text": "Ficht N später eine Baugenehmigung an, die auf dem Plan beruht, prüft das Gericht dessen Wirksamkeit inzident."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Denkfehler",
+          "text": "„Frist verpasst, also ist der Plan bestandskräftig.“ Die Jahresfrist sperrt nur die Normenkontrolle; eine Satzung wird nicht bestandskräftig wie ein VA. Aber: Bestimmte Mängel werden unbeachtlich, wenn sie nicht binnen eines Jahres bei der Gemeinde gerügt wurden (§ 215 Abs. 1 BauGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Der Normenkontrollantrag ist verfristet und damit unzulässig. Der Plan ist für N aber nicht unangreifbar: Im Streit um eine Baugenehmigung wird er inzident geprüft. Ob der gerügte Abwägungsfehler dort noch zählt, hängt davon ab, ob er beachtlich ist und fristgerecht gerügt wurde (§§ 214, 215 BauGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Jahresfrist des § 47 Abs. 2 VwGO sperrt nur die Normenkontrolle – inzident bleibt der Plan überprüfbar, soweit § 215 BauGB nicht greift."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem OVG drei Fragen",
+          "punkte": [
+            "Satzung nach dem BauGB?",
+            "Eigene Rechte möglicherweise verletzt?",
+            "Bekanntmachung länger als ein Jahr her?"
+          ],
+          "icons": [
+            "dokument",
+            "person",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Normenkontrolle verfristet – ist der Bebauungsplan jetzt unangreifbar? Nein. Die Jahresfrist des § 47 Abs. 2 S. 1 VwGO sperrt nur den Normenkontrollantrag. Wird später eine Baugenehmigung auf Grundlage des Plans erteilt, prüft das Gericht den Plan inzident. Aufpassen musst du bei § 215 Abs. 1 BauGB: Bestimmte Mängel werden unbeachtlich, wenn sie nicht rechtzeitig gerügt wurden. Speichern für die nächste Baurechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#baurecht",
+        "#normenkontrolle",
+        "#vwgo",
+        "#bebauungsplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Normenkontrolle verfristet: Plan noch angreifbar?",
+      "coverText": "Inzident bleibt der Plan prüfbar",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Ist die Frist für den direkten Angriff abgelaufen, bleibt der Umweg über die spätere Genehmigung offen.",
+        "handlung": "{B} closes a front gate with a large stamped seal, while {A} curiously discovers a small side door in the same wall that still swings open.",
+        "hinweisRegie": "Place the note in the free space next to the small open side door, slightly tilted toward it, so the remaining route stands out without covering {A}'s face or the sealed front gate.",
+        "alternative": "{A} holds an expired ticket at a closed main counter while {B} points to a second counter further down the hall that is still open."
+      },
+      "bildSzene": "sealed gate, open side door",
+      "bildSzeneAlt": "expired ticket, second open counter",
+      "quellen": [
+        "§ 47 Abs. 1 Nr. 1 VwGO",
+        "§ 47 Abs. 2 VwGO",
+        "§ 10 Abs. 1 BauGB",
+        "§ 214 BauGB",
+        "§ 215 Abs. 1 BauGB",
+        "Themenpool: verwbt-401"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.482Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-436",
+      "slug": "2027-05-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nie davon erfahren – und trotzdem verjährt",
+          "titelZeilen": [
+            "Nie davon",
+            "erfahren – und",
+            "trotzdem verjährt"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Höchstfristen laufen ohne Kenntnis",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Regelverjährung von drei Jahren (§ 195 BGB) läuft erst, wenn der Gläubiger Anspruch und Schuldner kennt oder grob fahrlässig nicht kennt. Wer nie etwas erfährt, ist aber nicht ewig geschützt: § 199 Abs. 2 bis 4 BGB setzen kenntnisunabhängige Höchstfristen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Welche Frist?",
+              "text": "Regelverjährung, soweit keine Sonderfrist greift – etwa §§ 438, 634a BGB oder §§ 196, 197 BGB."
+            },
+            {
+              "titel": "2. Anspruch entstanden",
+              "text": "Grundsätzlich mit Fälligkeit. Beim Schadensersatz genügt ein erster Schaden – auch spätere Schäden sind dann erfasst."
+            },
+            {
+              "titel": "3. Kenntnis",
+              "text": "Kenntnis der anspruchsbegründenden Umstände und des Schuldners oder grob fahrlässige Unkenntnis (§ 199 Abs. 1 Nr. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Jahresschluss",
+              "text": "Die Frist beginnt mit dem Schluss des Jahres, in dem 2. und 3. vorliegen (§ 199 Abs. 1 BGB)."
+            },
+            {
+              "titel": "5. Höchstfristen",
+              "text": "Ohne Kenntnis: Leben, Körper, Gesundheit, Freiheit 30 Jahre ab Pflichtverletzung (Abs. 2), sonst meist 10 Jahre (Abs. 3, 4)."
+            },
+            {
+              "titel": "6. Hemmung, Neubeginn",
+              "text": "Verhandlungen, Klage, Anerkenntnis: §§ 203 ff., 212 BGB können den Lauf anhalten oder neu starten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Höchstfrist ohne Jahresende",
+          "text": "Die Höchstfristen laufen ab einem Ereignis – Entstehung oder Pflichtverletzung –, nicht ab Jahresschluss. Bei sonstigen Schadensersatzansprüchen gelten 10 Jahre ab Entstehung und 30 Jahre ab der Pflichtverletzung; maßgeblich ist die früher endende Frist (§ 199 Abs. 3 S. 2 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Drei Jahre ab Kenntnis und Jahresende – aber spätestens nach der Höchstfrist ist Schluss, auch ohne Kenntnis."
+        },
+        {
+          "art": "cta",
+          "titel": "Verjährung in drei Zügen",
+          "punkte": [
+            "Welche Frist gilt?",
+            "Wann entstanden, wann erkannt?",
+            "Höchstfrist schon abgelaufen?"
+          ],
+          "icons": [
+            "kalender",
+            "lupe",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Der Gläubiger hat nie vom Anspruch erfahren – kann der trotzdem verjähren? Ja. Die Regelverjährung beginnt zwar erst mit Kenntnis oder grob fahrlässiger Unkenntnis und dem Jahresschluss (§§ 195, 199 Abs. 1 BGB). Daneben laufen aber kenntnisunabhängige Höchstfristen nach § 199 Abs. 2 bis 4 BGB – ohne Jahresende. Speichern für die Verjährungsprüfung im Gutachten.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#verjährung",
+        "#199bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verjährung: Regelfrist und Höchstfristen",
+      "coverText": "Höchstfristen laufen ohne Kenntnis",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Auch wer von seinem Anspruch nie erfährt, verliert ihn irgendwann an die Höchstfrist.",
+        "handlung": "{A} digs up an old sealed crate from under a thick layer of dust, while {B} calmly points to a burnt-down marker candle beside it that has already gone out.",
+        "hinweisRegie": "Place the note in the free space above the burnt-down candle, slightly tilted toward it, so the expired deadline is linked to the note without covering the crate or {A}'s hands.",
+        "alternative": "{B} turns over a large hourglass that has quietly run empty on a shelf, while {A} only now reaches for the parcel next to it."
+      },
+      "bildSzene": "dusty crate beside burnt-out candle",
+      "bildSzeneAlt": "empty hourglass beside forgotten parcel",
+      "quellen": [
+        "§ 195 BGB",
+        "§ 199 BGB",
+        "§§ 203 ff. BGB",
+        "§ 212 BGB",
+        "§ 438 BGB",
+        "§ 634a BGB",
+        "Themenpool: bgbat-436"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.483Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-325",
+      "slug": "2027-05-10-b3",
+      "titelZeilen": [
+        "Eingebrochen –",
+        "und trotzdem kein",
+        "schwerer Diebstahl"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eingebrochen – und trotzdem kein schwerer Diebstahl",
+          "unter": "Diebstahl · § 243 StGB",
+          "text": "Einbruch, aber nur ein Schokoriegel als Beute.",
+          "norm": "§ 243 Abs. 2 StGB",
+          "icon": "schloss",
+          "sprecher": "Eingebrochen, aber trotzdem kein besonders schwerer Fall. Wie das? T bricht nachts in einen Kiosk ein und nimmt nur einen Schokoriegel mit.",
+          "marken": [
+            "Einbruch",
+            "geringwertig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erst § 242 StGB vollständig",
+          "text": "Tatbestand, Rechtswidrigkeit, Schuld des Grunddelikts.",
+          "norm": "§ 242 StGB",
+          "sprecher": "Schritt eins: Prüf zuerst den Diebstahl nach Paragraf 242 vollständig durch, mit Tatbestand, Rechtswidrigkeit und Schuld. Paragraf 243 ist kein eigener Tatbestand, sondern eine Strafzumessungsregel.",
+          "marken": [
+            "Grunddelikt zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Regelbeispiel objektiv",
+          "text": "Hier Nr. 1: Einbrechen in einen Geschäftsraum.",
+          "norm": "§ 243 Abs. 1 S. 2 Nr. 1 StGB",
+          "sprecher": "Schritt zwei: das Regelbeispiel. T bricht zur Ausführung der Tat in einen Geschäftsraum ein. Das ist Nummer eins.",
+          "marken": [
+            "Nr. 1"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vorsatz auf das Regelbeispiel",
+          "text": "Der Täter muss die Umstände kennen und wollen.",
+          "norm": null,
+          "sprecher": "Schritt drei: Der Vorsatz muss sich auch auf die Umstände des Regelbeispiels beziehen. Man spricht oft von Quasi-Vorsatz, weil es kein Tatbestandsmerkmal ist.",
+          "marken": [
+            "Quasi-Vorsatz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ausschluss nach Abs. 2",
+          "text": "Geringwertige Sache: kein besonders schwerer Fall – außer bei Nr. 7.",
+          "norm": "§ 243 Abs. 2 StGB",
+          "sprecher": "Schritt vier, und hier kippt der Fall: Bezieht sich die Tat auf eine geringwertige Sache, ist ein besonders schwerer Fall nach Absatz zwei ausgeschlossen. Das gilt für die Nummern eins bis sechs. Nach herrschender Meinung zählt dabei auch die Vorstellung des Täters.",
+          "marken": [
+            "Nr. 1–6",
+            "geringwertig"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Privatwohnung? Dann § 244 StGB",
+          "text": "Wohnungseinbruch ist Qualifikation, kein Regelbeispiel.",
+          "norm": "§ 244 Abs. 1 Nr. 3 StGB",
+          "sprecher": "Achtung beim Wohnungseinbruch: Der ist kein Regelbeispiel, sondern eine Qualifikation nach Paragraf 244 Absatz 1 Nummer 3. Die prüfst du im Tatbestand, und die Geringwertigkeit hilft dort nicht.",
+          "marken": [
+            "Qualifikation"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "242 fertig, dann Regelbeispiel, Vorsatz, Abs. 2.",
+          "norm": "§ 243 StGB",
+          "sprecher": "Merke: erst Paragraf 242 fertig prüfen, dann Regelbeispiel, Vorsatz darauf und zum Schluss die Geringwertigkeit nach Absatz zwei.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beute prüfen, nicht nur den Weg hinein",
+          "text": "Speichern für die nächste Diebstahlsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Diebstahlsklausur. Und schau nicht nur, wie der Täter hineinkam, sondern auch, was er mitnahm.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Eingebrochen und trotzdem kein besonders schwerer Fall des Diebstahls? Ja, wenn sich die Tat auf eine geringwertige Sache bezieht: § 243 Abs. 2 StGB schließt die Regelbeispiele Nr. 1 bis 6 dann aus. Der Aufbau: § 242 StGB vollständig, dann Regelbeispiel, Vorsatz darauf, zuletzt Abs. 2. Beim Einbruch in eine Privatwohnung gilt dagegen die Qualifikation des § 244 Abs. 1 Nr. 3 StGB. Speichern für die nächste Diebstahlsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#diebstahl",
+        "#243stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 243 StGB: Einbruch mit geringwertiger Beute",
+      "coverText": "Geringwertig sperrt Nr. 1 bis 6",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Ein Einbruch macht den Diebstahl nicht automatisch schwer, wenn die Beute geringwertig ist.",
+        "handlung": "{A} nervously holds up a pried-open little shop door with one hand and a single tiny candy bar with the other, while {B} taps the candy bar with his pointer.",
+        "hinweisRegie": "Place the note in the free space next to the tiny candy bar, slightly tilted toward it, so the small loot becomes the focus without covering {A}'s face or the forced door.",
+        "alternative": "{B} weighs a crowbar against a single coin on a small balance scale, while {A} watches the coin side barely move."
+      },
+      "bildSzene": "pried door, single candy bar",
+      "bildSzeneAlt": "crowbar and coin on scale",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 243 StGB",
+        "§ 244 Abs. 1 Nr. 3 StGB",
+        "Themenpool: strafbt-325"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.484Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-069",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "O liegt bewusstlos am Boden. T tötet ihn, ohne dass O etwas merken kann. Heimtücke?",
+      "optionen": [
+        "Ja – wie beim Schlafenden ist O arglos",
+        "Nein – wer bewusstlos ist, kann nicht arglos sein",
+        "Ja – dass O sich nicht wehren kann, genügt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-069"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.484Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-069",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – der Bewusstlose ist nicht arglos",
+      "text": "Heimtückisch tötet, wer die Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt. Arglos kann nur sein, wer zu Argwohn fähig ist. Der Schlafende nimmt seine Arglosigkeit mit in den Schlaf, der Bewusstlose nach h.M. nicht. Prüfe dann: Heimtücke gegenüber einem schutzbereiten Dritten, andere Mordmerkmale – sonst § 212 StGB.",
+      "norm": "§ 211 Abs. 2 StGB",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafbt-069"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.484Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – wie beim Schlafenden ist O arglos",
+        "Nein – wer bewusstlos ist, kann nicht arglos sein",
+        "Ja – dass O sich nicht wehren kann, genügt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-108",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 288 Abs. 3 AEUV: Vor Ablauf der Umsetzungsfrist wirkt keine Richtlinie unmittelbar",
+      "text": "Die Richtlinie verpflichtet den Staat, sie bis zum Fristende umzusetzen. Erst wenn die Frist abgelaufen ist und der Staat nicht oder fehlerhaft umgesetzt hat, kann sich der Bürger unmittelbar auf sie berufen – und nur, soweit sie inhaltlich unbedingt und hinreichend genau ist. Vorher darf der Staat das Ziel aber nicht ernsthaft gefährden.",
+      "norm": "Art. 288 Abs. 3 AEUV",
+      "quellen": [
+        "Art. 288 Abs. 3 AEUV",
+        "Art. 4 Abs. 3 EUV",
+        "Themenpool: europa-108"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.484Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-393",
+      "ueberzeile": "Klausurtipp Staatshaftung",
+      "titel": "Enteignungsgleicher Eingriff: Erst fragen, ob sich der Betroffene gewehrt hat",
+      "text": "Wer einen rechtswidrigen Eingriff einfach hinnimmt, kann nicht frei zwischen Abwehr und Entschädigung wählen. Hat der Betroffene zumutbaren Primärrechtsschutz – etwa die Anfechtungsklage – schuldhaft versäumt, mindert oder entfällt der Anspruch (§ 254 BGB analog). Prüfe das nach Eingriff, Unmittelbarkeit und Sonderopfer. Rechtsweg: ordentliche Gerichte (§ 40 Abs. 2 S. 1 VwGO).",
+      "fachLabel": "Verwaltungsrecht AT",
+      "quellen": [
+        "Art. 14 Abs. 1 GG",
+        "§ 254 BGB",
+        "§ 40 Abs. 2 S. 1 VwGO",
+        "Themenpool: verwalt-393"
+      ],
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.484Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-905",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Prozessrecht versteckt sich im Sachverhalt – vier Signale beim ersten Lesen",
+      "text": "Markier diese Signale sofort. Sie entscheiden, womit dein Gutachten beginnt.",
+      "punkte": [
+        "Fallfrage nach Erfolg der Klage oder Entscheidung des Gerichts",
+        "Daten und Fristen: Zustellung, Einspruch, Klageerhebung",
+        "Prozesserklärungen: Rücknahme, Anerkenntnis, Erledigung",
+        "Wechsel oder Mehrheit von Parteien"
+      ],
+      "quellen": [
+        "Themenpool: methodik-905"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.484Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-911",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Abhandengekommene Erklärung: Haftet der Erklärende auch ohne eigenes Verschulden?",
+      "norm": "§ 122 BGB analog",
+      "optionen": [
+        "Eine Ansicht: § 122 BGB analog – Ersatz des Vertrauensschadens auch ohne Verschulden.",
+        "Andere Ansicht: Haftung nur bei Verschulden, über §§ 280 Abs. 1, 311 Abs. 2, 241 Abs. 2 BGB."
+      ],
+      "text": "Ausgangspunkt: Ohne willentliche Entäußerung ist die Erklärung nach h.M. nicht abgegeben. Beide Ansichten gewähren nur das negative Interesse. Der Streit entscheidet, wenn dem Erklärenden nichts vorzuwerfen ist – etwa wenn ein Dritter den Entwurf heimlich abschickt. Hat er den Entwurf nachlässig liegen lassen, kommen beide meist zum Ersatz.",
+      "quellen": [
+        "§ 130 BGB",
+        "§ 122 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 311 Abs. 2 BGB",
+        "Themenpool: bgbat-911"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:41:51.484Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

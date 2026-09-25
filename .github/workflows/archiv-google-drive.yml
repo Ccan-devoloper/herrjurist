@@ -3,7 +3,10 @@ name: Archiv · veröffentlichte Tage nach Google Drive
 # Nach Ablauf eines Tages: Sind alle Beiträge und Stories des Tages veröffentlicht,
 # werden bilder/<datum>/ und vorproduktion/<datum>/ aus dem Asset-Zweig nach
 # Google Drive kopiert, die Kopie wird geprüft, erst danach wird im Repo gelöscht.
-# Ohne das Secret RCLONE_CONFIG passiert nichts (es wird nie ohne Sicherung gelöscht).
+# Zugang rein online über drei Secrets (kein lokales Programm nötig):
+#   GDRIVE_CLIENT_ID, GDRIVE_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN (Scope drive.file)
+# Alternativ eine fertige rclone-Konfiguration im Secret RCLONE_CONFIG.
+# Ohne Zugang passiert nichts (es wird nie ohne Sicherung gelöscht).
 on:
   schedule:
     - cron: "43 0 * * *"
@@ -24,6 +27,9 @@ jobs:
       GITHUB_TOKEN: ${{ github.token }}
       IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
       RCLONE_CONFIG_INHALT: ${{ secrets.RCLONE_CONFIG }}
+      GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+      GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+      GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
       IG_ARCHIV_ZIEL: ${{ vars.IG_ARCHIV_ZIEL || 'gdrive:HerrJurist-Archiv' }}
       GIT_AUTHOR_NAME: instagram-bot
       GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
@@ -31,8 +37,8 @@ jobs:
       - name: Google-Drive-Zugang vorhanden?
         id: zugang
         run: |
-          if [ -z "$RCLONE_CONFIG_INHALT" ]; then
-            echo "::warning::Secret RCLONE_CONFIG fehlt – es wird nichts archiviert und nichts gelöscht."
+          if [ -z "$RCLONE_CONFIG_INHALT" ] && { [ -z "$GDRIVE_CLIENT_ID" ] || [ -z "$GDRIVE_CLIENT_SECRET" ] || [ -z "$GDRIVE_REFRESH_TOKEN" ]; }; then
+            echo "::warning::Google-Drive-Secrets fehlen (GDRIVE_CLIENT_ID/_SECRET/_REFRESH_TOKEN oder RCLONE_CONFIG) – es wird nichts archiviert und nichts gelöscht."
             echo "ok=false" >> "$GITHUB_OUTPUT"
           else
             echo "ok=true" >> "$GITHUB_OUTPUT"
@@ -54,7 +60,22 @@ jobs:
           npm ci
           curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null
           mkdir -p ~/.config/rclone
-          printf '%s\n' "$RCLONE_CONFIG_INHALT" > ~/.config/rclone/rclone.conf
+          if [ -n "$RCLONE_CONFIG_INHALT" ]; then
+            printf '%s\n' "$RCLONE_CONFIG_INHALT" > ~/.config/rclone/rclone.conf
+          else
+            # Abgelaufenes access_token erzwingt sofortigen Refresh über das refresh_token.
+            TOKEN=$(node -e 'console.log(JSON.stringify({access_token:"",token_type:"Bearer",refresh_token:process.env.GDRIVE_REFRESH_TOKEN,expiry:"2000-01-01T00:00:00Z"}))')
+            {
+              echo "[gdrive]"
+              echo "type = drive"
+              echo "scope = drive.file"
+              echo "client_id = $GDRIVE_CLIENT_ID"
+              echo "client_secret = $GDRIVE_CLIENT_SECRET"
+              echo "token = $TOKEN"
+            } > ~/.config/rclone/rclone.conf
+          fi
+          chmod 600 ~/.config/rclone/rclone.conf
+          rclone lsd "${IG_ARCHIV_ZIEL%%:*}:" >/dev/null
 
       - name: Archivierbare Tage bestimmen
         if: steps.zugang.outputs.ok == 'true'

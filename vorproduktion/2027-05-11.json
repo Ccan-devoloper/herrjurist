@@ -1,0 +1,871 @@
+{
+  "datum": "2027-05-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "sachen-510",
+        "themaTitel": "Grundstücksübereignung",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "stpo-768",
+        "themaTitel": "Vernehmung und verbotene Methoden",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-609",
+        "themaTitel": "Allgemeine Handlungsfreiheit",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "staat-590"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "staat-590"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "strafbt-329"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "zahl",
+        "themaId": "verwbt-110"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:49",
+        "art": "streitstand",
+        "themaId": "assessoroer-853"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "merksatz",
+        "themaId": "sachen-237"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "sachen-510",
+      "poolTitel": "Grundstücksübereignung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 873, 925 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2027-03-01",
+        "2027-03-01"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "stpo-768",
+      "poolTitel": "Vernehmung und verbotene Methoden",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-26",
+        "2027-03-25",
+        "2027-03-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-609",
+      "poolTitel": "Allgemeine Handlungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-14"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-590",
+      "poolTitel": "Demokratieprinzip und Legitimationskette",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 II GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-590",
+      "poolTitel": "Demokratieprinzip und Legitimationskette",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 II GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-329",
+      "poolTitel": "Was ist eine Täuschung durch konkludentes Verhalten beim Betrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16",
+        "2026-12-21",
+        "2027-02-17"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "verwbt-110",
+      "poolTitel": "Wie prüft man die Rechtmäßigkeit einer Baugenehmigung?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 29 BauGB",
+        "§ 30 BauGB",
+        "§ 34 BauGB",
+        "§ 35 BauGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-28",
+        "2027-03-02"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessoroer-853",
+      "poolTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2027-01-04",
+        "2027-03-09"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "sachen-237",
+      "poolTitel": "Wann greift der öffentliche Glaube des Grundbuchs?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 892 BGB",
+        "§ 893 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-01",
+        "2027-02-13"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-510",
+      "slug": "2027-05-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Auflassung erklärt – hat K schon ein Anwartschaftsrecht?",
+          "titelZeilen": [
+            "Auflassung erklärt",
+            "– hat K schon ein",
+            "Anwartschaftsrecht?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "BGH: Antrag oder Vormerkung nötig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "V und K erklären vor dem Notar die Auflassung (§ 925 BGB). Bis K im Grundbuch steht, vergehen Wochen. Hat K in dieser Zeit schon eine gesicherte Position, die er übertragen kann und die Gläubiger pfänden können – ein Anwartschaftsrecht? Und ab wann?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die Ansichten",
+          "links": {
+            "titel": "BGH",
+            "punkte": [
+              "Bindende Auflassung (§ 873 Abs. 2 BGB) allein genügt nicht.",
+              "Dazu: Eintragungs-antrag des Erwerbers gestellt – oder Auflassungs-vormerkung eingetragen.",
+              "Erst dann kann V die Position nicht mehr einseitig zerstören."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Einige: schon die bindende Auflassung begründet die Anwartschaft.",
+              "Andere: Die Figur ist entbehrlich, der Käufer ist über die Vormerkung geschützt.",
+              "Kritik am BGH: Der Antrag des Erwerbers sei ein zufälliges Kriterium."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme und Klausurhinweis",
+          "text": "Für den BGH spricht: Eine Anwartschaft setzt voraus, dass der Veräußerer den Erwerb nicht mehr einseitig verhindern kann. Das leisten § 17 GBO (Reihenfolge der Anträge) mit § 878 BGB oder die Vormerkung – nicht die Auflassung allein. Übertragen wird sie nach h.M. in der Form des § 925 BGB."
+        },
+        {
+          "art": "text",
+          "titel": "Wo es in der Klausur auftaucht",
+          "text": "Typisch: K überträgt seine Position vor der Eintragung weiter, oder ein Gläubiger des K will zugreifen. Dann kommt es darauf an, ob K schon ein Anwartschaftsrecht hatte – sonst bleibt nur der schuldrechtliche Anspruch gegen V."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Auflassung plus eigener Eintragungsantrag des Erwerbers oder Vormerkung – erst dann gibt es nach dem BGH ein Anwartschaftsrecht."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Eintragung prüfen",
+          "punkte": [
+            "Ist die Auflassung bindend?",
+            "Hat K selbst den Antrag gestellt?",
+            "Ist eine Vormerkung eingetragen?"
+          ],
+          "icons": [
+            "vertrag",
+            "dokument",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Auflassung erklärt, Eintragung steht aus – hat der Erwerber schon ein Anwartschaftsrecht? Nach dem BGH genügt die bindende Auflassung allein nicht. Hinzukommen muss ein eigener Eintragungsantrag des Erwerbers oder eine Auflassungsvormerkung. Teile der Literatur lassen die Auflassung genügen, andere halten die Figur für entbehrlich. Speichern für den Grundstücksfall mit Zwischenverfügung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#grundstücksrecht",
+        "#anwartschaftsrecht",
+        "#925bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anwartschaftsrecht nach der Auflassung",
+      "coverText": "BGH: Antrag oder Vormerkung nötig",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Auflassung allein reicht nicht – erst ein zweiter Baustein sichert den Erwerber vor der Eintragung.",
+        "handlung": "{A} sets a first heavy stone on a bridge pillar leading to a plot of land, while {B} holds up a second stone that is still missing to make the crossing safe.",
+        "hinweisRegie": "Place the note in the free space above the gap on the pillar where the second stone belongs, slightly tilted toward it, without covering {B}'s face or the first stone.",
+        "alternative": "{B} holds a key to a new house that only turns halfway in the lock, while {A} brings a second small key to complete it."
+      },
+      "bildSzene": "second stone completes bridge pillar",
+      "bildSzeneAlt": "second key completes house lock",
+      "quellen": [
+        "§ 873 BGB",
+        "§ 925 BGB",
+        "§ 878 BGB",
+        "§ 883 BGB",
+        "§ 17 GBO",
+        "Themenpool: sachen-510"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.990Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-768",
+      "slug": "2027-05-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "30 Stunden wach, dann gestanden – unverwertbar ohne jeden Zwang",
+          "titelZeilen": [
+            "30 Stunden wach,",
+            "dann gestanden –",
+            "unverwertbar ohne",
+            "jeden Zwang"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Ermüdung steht im Gesetz",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "B wird nach einer Festnahme am Abend verhört. Er ist seit dem Vormittag des Vortags wach, gähnt und bittet um eine Pause. Die Beamten fragen ohne Unterbrechung weiter, bis B um fünf Uhr morgens gesteht. Gedroht oder getäuscht hat niemand. Darf das Gericht das Geständnis verwerten?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Verbotene Methode?",
+              "text": "§ 136a Abs. 1 S. 1 StPO nennt ausdrücklich die Ermüdung. Gemeint ist ein Zustand, der die Freiheit der Willensentschließung beeinträchtigt."
+            },
+            {
+              "titel": "Herbeigeführt oder ausgenutzt",
+              "text": "Die Beamten müssen die Müdigkeit nicht verursacht haben. Es genügt, dass sie die erkennbare Übermüdung für die Vernehmung ausnutzen."
+            },
+            {
+              "titel": "Einwilligung?",
+              "text": "Unerheblich: Das Verbot gilt ohne Rücksicht auf die Einwilligung des Beschuldigten (§ 136a Abs. 3 S. 1 StPO)."
+            },
+            {
+              "titel": "Verwertungsverbot",
+              "text": "So erlangte Aussagen dürfen nicht verwertet werden – auch nicht mit Zustimmung (§ 136a Abs. 3 S. 2 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "B war erkennbar übermüdet, die Beamten übergingen seine Bitte um eine Pause. Seine Willensfreiheit war beeinträchtigt. Das Geständnis ist nach § 136a Abs. 3 S. 2 StPO unverwertbar. Eine spätere Aussage kann ebenfalls betroffen sein, wenn die Wirkung der verbotenen Methode fortdauert."
+        },
+        {
+          "art": "text",
+          "titel": "Worauf du achten musst",
+          "text": "Nicht jede Müdigkeit genügt – entscheidend ist, dass die Willensfreiheit tatsächlich beeinträchtigt war. Das Verwertungsverbot hängt nicht davon ab, ob der Angeklagte der Verwertung widerspricht. Eine Fernwirkung auf mittelbar gewonnene Beweise lehnt die Rspr. grundsätzlich ab."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ermüdung ist verbotene Methode, wenn die Vernehmer sie ausnutzen – dann ist die Aussage unverwertbar, egal ob der Beschuldigte zustimmt."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 136a StPO in drei Fragen",
+          "punkte": [
+            "Welche Methode aus Abs. 1?",
+            "Willensfreiheit beeinträchtigt?",
+            "Wirkt sie auf spätere Aussagen fort?"
+          ],
+          "icons": [
+            "uhr",
+            "person",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Niemand hat gedroht, niemand gelogen – und das Geständnis ist trotzdem unverwertbar. § 136a Abs. 1 S. 1 StPO nennt die Ermüdung als verbotene Vernehmungsmethode. Die Beamten müssen sie nicht verursacht haben: Es genügt, dass sie eine erkennbare Übermüdung ausnutzen. Folge: Verwertungsverbot nach § 136a Abs. 3 S. 2 StPO, auch mit Zustimmung des Beschuldigten. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#136astpo",
+        "#beweisverwertungsverbot",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 136a StPO: Geständnis nach durchwachter Nacht",
+      "coverText": "Ermüdung steht im Gesetz",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Eine Aussage, die nur aus Erschöpfung kommt, darf nicht gegen den Beschuldigten verwendet werden.",
+        "handlung": "{A} sits slumped and exhausted at a small table under a flickering lamp, while {B} firmly places her hand over a handwritten confession sheet in front of him.",
+        "hinweisRegie": "Place the note in the free space beside the flickering lamp, slightly tilted toward the covered sheet, so the exhaustion and the blocked confession connect without covering {A}'s face.",
+        "alternative": "{B} stops a wall clock whose hands show deep night, while {A} rests his head on his arms next to an unfinished statement."
+      },
+      "bildSzene": "exhausted figure, confession sheet covered",
+      "bildSzeneAlt": "night clock stopped beside tired figure",
+      "quellen": [
+        "§ 136a StPO",
+        "§ 163a Abs. 4 StPO",
+        "Themenpool: stpo-768"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.990Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-609",
+      "slug": "2027-05-11-b3",
+      "titelZeilen": [
+        "Reiten im Wald:",
+        "geschützt – aber",
+        "leicht beschränkbar"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Reiten im Wald: geschützt – aber leicht beschränkbar",
+          "unter": "Handlungsfreiheit · Art. 2 Abs. 1 GG",
+          "text": "Art. 2 Abs. 1 GG schützt jedes Verhalten.",
+          "norm": "Art. 2 Abs. 1 GG",
+          "icon": "baum",
+          "sprecher": "Auch Reiten im Wald ist grundrechtlich geschützt. Klingt übertrieben? Art. 2 Absatz 1 GG schützt jedes menschliche Verhalten, nicht nur das Wichtige.",
+          "marken": [
+            "jedes Verhalten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Erst die speziellen Grundrechte",
+          "text": "Art. 2 Abs. 1 GG ist Auffanggrundrecht.",
+          "norm": null,
+          "sprecher": "Schritt eins: Prüf zuerst, ob ein spezielles Freiheitsrecht greift, etwa Berufsfreiheit oder Versammlungsfreiheit. Nur wenn keins passt, landest du bei der allgemeinen Handlungsfreiheit. Sie ist das Auffanggrundrecht.",
+          "marken": [
+            "subsidiär"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Weiter Schutzbereich",
+          "text": "Jedes Tun und Unterlassen – ohne Wertung.",
+          "norm": "Art. 2 Abs. 1 GG",
+          "sprecher": "Schritt zwei: der Schutzbereich. Das BVerfG versteht ihn weit, geschützt ist jedes Tun und Unterlassen. Ob das Verhalten für die Persönlichkeit wichtig ist, spielt keine Rolle.",
+          "marken": [
+            "weit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Weite Schranke",
+          "text": "Verfassungsmäßige Ordnung: jede verfassungsgemäße Norm.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Schranke. Verfassungsmäßige Ordnung meint hier jede Rechtsnorm, die formell und materiell verfassungsgemäß ist. Also auch eine Verordnung oder Satzung.",
+          "marken": [
+            "jede gültige Norm"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verhältnismäßigkeit",
+          "text": "Hier liegt der Schwerpunkt der Prüfung.",
+          "norm": null,
+          "sprecher": "Schritt vier: Der eigentliche Schwerpunkt ist die Verhältnismäßigkeit. Legitimer Zweck, geeignet, erforderlich, angemessen. Da entscheidet sich der Fall.",
+          "marken": [
+            "Schwerpunkt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Streit",
+          "text": "Persönlichkeitskerntheorie will nur Wichtiges schützen.",
+          "norm": null,
+          "sprecher": "Dazu der Streit: Nach der Persönlichkeitskerntheorie soll nur Verhalten geschützt sein, das für die Entfaltung der Persönlichkeit wesentlich ist. Das BVerfG folgt ihr nicht. So kann sich jeder gegen jede belastende Norm wehren.",
+          "marken": [
+            "BVerfG: weit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Spezielles Grundrecht zuerst, dann weit schützen, weit beschränken.",
+          "norm": "Art. 2 Abs. 1 GG",
+          "sprecher": "Merke: erst die speziellen Grundrechte. Dann gilt: weiter Schutzbereich, weite Schranke, Schwerpunkt Verhältnismäßigkeit.",
+          "marken": [
+            "weit und weit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Auffanggrundrecht zuletzt",
+          "text": "Speichern für die nächste Grundrechtsprüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Verfassungsbeschwerde. Und fang nie mit Art. 2 Absatz 1 an.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Reiten im Wald, Tauben füttern, Motorrad ohne Helm: Art. 2 Abs. 1 GG schützt jedes menschliche Verhalten. Dafür ist die Schranke weit – verfassungsmäßige Ordnung ist jede formell und materiell verfassungsgemäße Norm. Prüf zuerst die speziellen Freiheitsrechte, denn die allgemeine Handlungsfreiheit ist Auffanggrundrecht. Der Schwerpunkt liegt fast immer bei der Verhältnismäßigkeit. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsrecht",
+        "#handlungsfreiheit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 2 Abs. 1 GG: weit geschützt, weit beschränkt",
+      "coverText": "Auffanggrundrecht mit weiter Schranke",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Die allgemeine Handlungsfreiheit schützt jedes Verhalten, lässt sich aber durch jede verfassungsgemäße Norm beschränken.",
+        "handlung": "{A} rides calmly along a forest path, while {B} stands at the path's edge and lifts a light rope barrier that could easily be lowered again.",
+        "hinweisRegie": "Place the note in the free space above the light rope barrier, slightly tilted toward it, so the easily set limit stands out without covering {A} or the horse.",
+        "alternative": "{B} draws a very wide circle around {A} in the sand, then sets a few small marker posts along its edge."
+      },
+      "bildSzene": "forest ride past light rope barrier",
+      "bildSzeneAlt": "wide sand circle with marker posts",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: grundr-609"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-590",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Beamtin B wurde nie vom Volk gewählt. Woher bezieht sie ihre demokratische Legitimation?",
+      "optionen": [
+        "Aus einer ununterbrochenen Kette von Bestellungen bis zum Volk",
+        "Gar nicht – nur gewählte Amtsträger sind legitimiert",
+        "Aus der Zustimmung der Bürger, die ihre Bescheide erhalten"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 20 Abs. 2 GG",
+        "Themenpool: staat-590"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-590",
+      "ueberzeile": "Auflösung",
+      "titel": "Über die Legitimationskette – personell und sachlich",
+      "text": "Alle Staatsgewalt geht vom Volke aus (Art. 20 Abs. 2 GG). Personell: Das Volk wählt den Bundestag, der den Kanzler, dieser die Minister – und die Ministerien ernennen die Beamten. Sachlich-inhaltlich: B ist an Gesetze und Weisungen gebunden, der Minister ist dem Parlament verantwortlich. Entscheidend ist nach dem BVerfG ein hinreichendes Legitimationsniveau.",
+      "norm": "Art. 20 Abs. 2 GG",
+      "quellen": [
+        "Art. 20 Abs. 2 GG",
+        "Art. 63 GG",
+        "Art. 64 GG",
+        "Themenpool: staat-590"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.991Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Aus einer ununterbrochenen Kette von Bestellungen bis zum Volk",
+        "Gar nicht – nur gewählte Amtsträger sind legitimiert",
+        "Aus der Zustimmung der Bürger, die ihre Bescheide erhalten"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-329",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB: Die Schein-Rechnung täuscht – trotz „Angebot“ im Kleingedruckten",
+      "text": "Wer ein Angebotsschreiben so gestaltet, dass es wie eine Rechnung wirkt, täuscht konkludent über eine Zahlungspflicht. Nach dem BGH ändert daran ein versteckter Hinweis auf den Angebotscharakter nichts, wenn der Täter gerade darauf setzt, dass der Empfänger ihn übersieht. Maßgeblich ist der Gesamteindruck, den das Schreiben erweckt.",
+      "norm": "§ 263 Abs. 1 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "Themenpool: strafbt-329"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-110",
+      "ueberzeile": "4 Punkte Baurecht",
+      "titel": "Baugenehmigung formell: vier Punkte, bevor du zu § 34 BauGB kommst",
+      "text": "Die Einzelheiten regelt die jeweilige Landesbauordnung – die Struktur ist überall ähnlich.",
+      "punkte": [
+        "Zuständigkeit: in der Regel die untere Bauaufsichtsbehörde",
+        "Schriftlicher Bauantrag mit Bauvorlagen",
+        "Einvernehmen der Gemeinde (§ 36 BauGB) in den Fällen der §§ 31, 33–35",
+        "Beteiligung der Nachbarn nach Landesrecht"
+      ],
+      "quellen": [
+        "§ 36 BauGB",
+        "§ 34 BauGB",
+        "Landesbauordnungen",
+        "Themenpool: verwbt-110"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-853",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Auflage angreifen: Welcher Antrag gehört in die Klageschrift?",
+      "norm": "§ 36 VwVfG",
+      "optionen": [
+        "BVerwG: Isolierte Anfechtungsklage gegen jede Nebenbestimmung; ob sie abtrennbar ist, klärt die Begründetheit.",
+        "Teile der Lit.: Bei Bedingung und Befristung nur Verpflichtungsklage auf den unbeschränkten VA."
+      ],
+      "text": "Klausur: Mit dem BVerwG formulierst du den Anfechtungsantrag gegen die Nebenbestimmung – es sei denn, die isolierte Aufhebung scheidet offenkundig von vornherein aus. In der Anwaltsklausur federt ein Hilfsantrag auf Verpflichtung das Risiko ab.",
+      "quellen": [
+        "§ 42 Abs. 1 VwGO",
+        "§ 82 VwGO",
+        "§ 36 VwVfG",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "Themenpool: assessoroer-853"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-237",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "§ 892 BGB: Wer nach dem Antrag erst erfährt, bleibt geschützt",
+      "text": "Für die Kenntnis des Erwerbers kommt es auf den Zeitpunkt der Stellung des Eintragungsantrags an, wenn die Einigung schon vorliegt (§ 892 Abs. 2 BGB). Was er danach bis zur Eintragung erfährt, schadet nicht.",
+      "norm": "§ 892 Abs. 2 BGB",
+      "quellen": [
+        "§ 892 BGB",
+        "Themenpool: sachen-237"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:43.991Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
