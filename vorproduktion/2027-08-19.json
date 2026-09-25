@@ -400,7 +400,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.437Z",
+      "finalisiertAm": "2026-09-25T20:46:45.250Z",
       "fachStand": "redaktionell-2026-09-25"
     },
     "b2": {
@@ -541,7 +541,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.437Z",
+      "finalisiertAm": "2026-09-25T20:46:45.251Z",
       "fachStand": "redaktionell-2026-09-25"
     },
     "b3": {
@@ -553,115 +553,104 @@
       "themaId": "zpo-054",
       "slug": "2027-08-19-b3",
       "titelZeilen": [
-        "Beklagter fehlt:",
-        "Gewinnt der Kläger",
-        "automatisch?"
+        "Wieder säumig:",
+        "Kann B noch einmal",
+        "Einspruch einlegen?"
       ],
       "szenen": [
         {
           "art": "hook",
-          "titel": "Beklagter fehlt: Gewinnt der Kläger automatisch?",
-          "unter": "Versäumnisurteil · § 331 ZPO",
-          "text": "Säumnis ersetzt nicht die Schlüssigkeitsprüfung.",
-          "norm": "§ 331 ZPO",
+          "titel": "Wieder säumig: Kann B noch einmal Einspruch einlegen?",
+          "unter": "Zweites Versäumnisurteil · § 345 ZPO",
+          "text": "Nach dem zweiten Versäumnisurteil gibt es keinen Einspruch mehr.",
+          "norm": "§ 345 ZPO",
           "icon": "gericht",
-          "sprecher": "Beklagter nicht da, Kläger gewinnt? Nicht automatisch. Auch beim Versäumnisurteil prüft das Gericht vier Dinge. Und die Klage kann trotzdem abgewiesen werden.",
+          "sprecher": "Zweimal säumig? Dann ist der Einspruch weg. B hat gegen ein Versäumnisurteil Einspruch eingelegt und fehlt im neuen Termin wieder. Was jetzt passiert, zeigen vier Schritte.",
           "marken": [
-            "nicht automatisch",
-            "§ 331 ZPO"
+            "kein zweiter Einspruch",
+            "§ 345 ZPO"
           ],
           "nummer": null
         },
         {
           "art": "schritt",
           "nummer": 1,
-          "titel": "Antrag des Klägers",
-          "text": "Ohne Antrag auf Versäumnisurteil kein Versäumnisurteil.",
-          "norm": "§ 331 Abs. 1 ZPO",
-          "sprecher": "Erstens: ein Antrag. Das Versäumnisurteil ergeht nur, wenn der Kläger es beantragt.",
+          "titel": "Erstes Versäumnisurteil",
+          "text": "Gegen das Versäumnisurteil ist der Einspruch statthaft.",
+          "norm": "§ 338 ZPO",
+          "sprecher": "Schritt eins: Gegen B ergeht ein Versäumnisurteil nach § 331 ZPO. Sein Rechtsbehelf ist der Einspruch, nicht die Berufung.",
           "marken": [
-            "Prozessantrag"
+            "Einspruch"
           ]
         },
         {
           "art": "schritt",
           "nummer": 2,
-          "titel": "Säumnis im Termin",
-          "text": "Nicht erschienen oder nicht verhandelt – trotz ordnungsgemäßer Ladung.",
-          "norm": "§§ 333, 335 ZPO",
-          "sprecher": "Zweitens: Säumnis. Der Beklagte erscheint nicht oder verhandelt nicht, obwohl er ordnungsgemäß und rechtzeitig geladen wurde. Fehlt das, verbietet § 335 ZPO das Versäumnisurteil.",
+          "titel": "Einspruch: zwei Wochen Notfrist",
+          "text": "Zulässiger Einspruch versetzt den Prozess in die Lage vor der Säumnis zurück.",
+          "norm": "§§ 339, 342 ZPO",
+          "sprecher": "Schritt zwei: Der Einspruch muss binnen zwei Wochen ab Zustellung eingehen, das ist eine Notfrist. Ist er zulässig, wird der Prozess in die Lage vor der Säumnis zurückversetzt.",
           "marken": [
-            "ordnungsgemäß geladen"
+            "2 Wochen Notfrist"
           ]
         },
         {
           "art": "schritt",
           "nummer": 3,
-          "titel": "Zulässigkeit der Klage",
-          "text": "Die Sachurteilsvoraussetzungen prüft das Gericht von Amts wegen.",
-          "norm": null,
-          "sprecher": "Drittens: Die Klage muss zulässig sein. Das prüft das Gericht von Amts wegen, Säumnis hin oder her. Ist sie unzulässig, wird sie durch Prozessurteil abgewiesen.",
+          "titel": "Erneut säumig: zweites Versäumnisurteil",
+          "text": "Der Einspruch wird verworfen – ein weiterer Einspruch ist ausgeschlossen.",
+          "norm": "§ 345 ZPO",
+          "sprecher": "Schritt drei: B fehlt im Einspruchstermin erneut. Dann wird sein Einspruch durch ein zweites Versäumnisurteil verworfen. Gegen dieses Urteil hat er keinen Einspruch mehr.",
           "marken": [
-            "von Amts wegen"
+            "Einspruch verworfen"
           ]
         },
         {
           "art": "schritt",
           "nummer": 4,
-          "titel": "Schlüssigkeit",
-          "text": "Der Vortrag des Klägers gilt als zugestanden – er muss den Antrag aber tragen.",
-          "norm": "§ 331 Abs. 2 ZPO",
-          "sprecher": "Viertens, der Kern: Schlüssigkeit. Das tatsächliche Vorbringen des Klägers gilt als zugestanden. Trägt es den Antrag, ergeht das Versäumnisurteil. Trägt es ihn nicht, wird die Klage abgewiesen.",
+          "titel": "Berufung nur eingeschränkt",
+          "text": "Nur mit der Begründung, dass kein Fall der schuldhaften Versäumung vorlag.",
+          "norm": "§ 514 Abs. 2 ZPO",
+          "sprecher": "Schritt vier: Bleibt nur die Berufung. Sie kann aber nur darauf gestützt werden, dass ein Fall der schuldhaften Versäumung nicht vorgelegen hat. Die Berufungssumme gilt dafür nicht.",
           "marken": [
-            "zugestanden ≠ begründet"
+            "§ 514 Abs. 2 ZPO"
           ]
         },
         {
           "art": "punkt",
-          "titel": "Unechtes Versäumnisurteil",
-          "text": "Abweisung trotz Säumnis ist ein streitiges Urteil: Berufung statt Einspruch.",
+          "titel": "Erstes Urteil nicht nachprüfen",
+          "text": "Nach dem BGH wird die Gesetzmäßigkeit des ersten Versäumnisurteils nicht geprüft.",
           "norm": null,
-          "sprecher": "Diese Abweisung heißt unechtes Versäumnisurteil. Es ist ein normales streitiges Urteil. Der Kläger greift es mit der Berufung an, nicht mit dem Einspruch.",
+          "sprecher": "Wichtig: Nach dem BGH prüft das Gericht beim zweiten Versäumnisurteil nicht, ob das erste zu Recht ergangen ist. Anders nach einem Vollstreckungsbescheid: Dort verlangt § 700 Absatz 6 ZPO diese Prüfung.",
           "marken": [
-            "Berufung statt Einspruch"
-          ],
-          "nummer": null
-        },
-        {
-          "art": "punkt",
-          "titel": "Gegen das echte: Einspruch",
-          "text": "Zwei Wochen Notfrist ab Zustellung.",
-          "norm": "§ 339 Abs. 1 ZPO",
-          "sprecher": "Gegen das echte Versäumnisurteil hat der Beklagte den Einspruch. Die Notfrist beträgt zwei Wochen ab Zustellung.",
-          "marken": [
-            "2 Wochen"
+            "Ausnahme: § 700 VI"
           ],
           "nummer": null
         },
         {
           "art": "merke",
           "titel": "Die Kurzform",
-          "text": "Antrag, Säumnis, Zulässigkeit, Schlüssigkeit.",
-          "norm": "§ 331 ZPO",
-          "sprecher": "Merke: Antrag, Säumnis, Zulässigkeit, Schlüssigkeit. Erst dann gewinnt der Kläger.",
+          "text": "Erstes VU: Einspruch. Zweites VU: nur Berufung nach § 514 Abs. 2 ZPO.",
+          "norm": "§ 345 ZPO",
+          "sprecher": "Merke: gegen das erste Versäumnisurteil Einspruch, gegen das zweite nur die eingeschränkte Berufung.",
           "marken": [
-            "4 Prüfpunkte"
+            "Einspruch → Berufung"
           ],
           "nummer": null
         },
         {
           "art": "cta",
-          "titel": "Immer die Schlüssigkeit prüfen",
+          "titel": "Erst zählen: erstes oder zweites Versäumnisurteil?",
           "text": "Speichern für die nächste ZPO-Klausur.",
           "norm": null,
-          "sprecher": "Speicher dir das für die nächste ZPO-Klausur.",
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur. Und zähl immer zuerst: erstes oder zweites Versäumnisurteil?",
           "marken": [
-            "Schlüssigkeit!"
+            "erstes oder zweites?"
           ],
           "nummer": null
         }
       ],
-      "caption": "Beklagter nicht da – gewinnt der Kläger automatisch? Nein. Das Versäumnisurteil setzt einen Antrag, echte Säumnis trotz ordnungsgemäßer Ladung, eine zulässige Klage und Schlüssigkeit voraus (§§ 331, 335 ZPO). Trägt der als zugestanden geltende Vortrag den Antrag nicht, wird die Klage abgewiesen – ein unechtes Versäumnisurteil, anfechtbar mit der Berufung. Gegen das echte Versäumnisurteil: Einspruch binnen zwei Wochen (§ 339 ZPO).",
+      "caption": "Wieder nicht erschienen – kann B noch einmal Einspruch einlegen? Nein. Gegen das erste Versäumnisurteil hat er den Einspruch (§§ 338, 339 ZPO). Fehlt er im Einspruchstermin erneut, wird der Einspruch durch zweites Versäumnisurteil verworfen (§ 345 ZPO). Dann bleibt nur die Berufung, gestützt darauf, dass keine schuldhafte Säumnis vorlag (§ 514 Abs. 2 ZPO). Die Gesetzmäßigkeit des ersten Urteils prüft das Gericht nach dem BGH nicht – anders nach einem Vollstreckungsbescheid.",
       "hashtags": [
         "#jura",
         "#jurastudium",
@@ -669,30 +658,33 @@
         "#zivilrecht",
         "#zpo",
         "#versäumnisurteil",
-        "#331zpo",
+        "#345zpo",
         "#jurastudent",
         "#examensvorbereitung"
       ],
-      "kurztitel": "Versäumnisurteil: Schlüssigkeit bleibt Pflicht",
-      "coverText": "Zugestanden heißt nicht begründet",
+      "kurztitel": "Zweites Versäumnisurteil: kein Einspruch mehr",
+      "coverText": "Nur noch § 514 Abs. 2 ZPO",
       "coverBadge": "Reel",
       "coverRegie": {
         "charaktere": [
           "rex",
           "flux"
         ],
-        "kernidee": "Auch wenn die Gegenseite fehlt, muss der Vortrag des Klägers den Antrag tragen.",
-        "handlung": "{A} eagerly reaches for a trophy on an empty opponent's side of a table, while {B} calmly holds a pointer against a small stack of papers that first has to support the trophy's base.",
-        "hinweisRegie": "Place the note in the free space beside the stack of papers under the trophy, slightly tilted toward it, so the need for a coherent claim is clear without covering {A}'s reaching hand.",
-        "alternative": "{B} tests a bridge with a stick before {A} can cross, even though no one stands on the other side."
+        "kernidee": "Wer nach seinem Einspruch wieder fehlt, verliert den bequemen Rückweg – es bleibt nur eine schmale Tür.",
+        "handlung": "{A} rushes toward a wide door that is just being bricked up, while {B} calmly points his pointer at a very narrow side door next to it.",
+        "hinweisRegie": "Place the note in the free space beside the narrow side door, slightly tilted toward it, so the limited remaining remedy is clear without covering {A}'s face or the bricked-up door.",
+        "alternative": "{B} shows two identical empty chairs at a courtroom table, the second one with a small closed lock on it, while {A} arrives too late."
       },
-      "bildSzene": "empty opponent chair, trophy on papers",
-      "bildSzeneAlt": "bridge tested before crossing",
+      "bildSzene": "wide door bricked, narrow door open",
+      "bildSzeneAlt": "second empty chair with lock",
       "quellen": [
         "§ 331 ZPO",
-        "§ 333 ZPO",
-        "§ 335 ZPO",
+        "§ 338 ZPO",
         "§ 339 ZPO",
+        "§ 342 ZPO",
+        "§ 345 ZPO",
+        "§ 514 Abs. 2 ZPO",
+        "§ 700 Abs. 6 ZPO",
         "Themenpool: zpo-054"
       ],
       "hookTyp": "frage",
@@ -706,7 +698,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.442Z",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
       "fachStand": "redaktionell-2026-09-25"
     },
     "s4": {
@@ -737,7 +729,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.442Z",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
       "fachStand": "redaktionell-2026-09-25"
     },
     "s5": {
@@ -764,7 +756,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.442Z",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
       "fachStand": "redaktionell-2026-09-25",
       "optionen": [
         "Nein – es fehlt die Entscheidungserheblichkeit",
@@ -797,7 +789,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.442Z",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
       "fachStand": "redaktionell-2026-09-25"
     },
     "s7": {
@@ -828,7 +820,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.442Z",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
       "fachStand": "redaktionell-2026-09-25"
     },
     "s8": {
@@ -854,7 +846,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.442Z",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
       "fachStand": "redaktionell-2026-09-25"
     },
     "s9": {
@@ -881,7 +873,7 @@
       "manuellGeprueft": true,
       "regelGeprueft": true,
       "finalisiertVon": "chat-vorproduktion",
-      "finalisiertAm": "2026-09-25T20:45:25.442Z",
+      "finalisiertAm": "2026-09-25T20:46:45.256Z",
       "fachStand": "redaktionell-2026-09-25"
     }
   },
