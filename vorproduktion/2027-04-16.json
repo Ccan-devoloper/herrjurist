@@ -1,0 +1,852 @@
+{
+  "datum": "2027-04-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "staat-597",
+        "themaTitel": "Bundesrat: Mitwirkung und Stimmabgabe",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "assessorz-805",
+        "themaTitel": "Wie schreibt man Entscheidungsgründe im Urteilsstil?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-341",
+        "themaTitel": "Wie prüft man das unerlaubte Entfernen vom Unfallort?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:04",
+        "art": "frage",
+        "themaId": "stpo-787"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:04",
+        "art": "antwort",
+        "themaId": "stpo-787"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "ipr-890"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "merksatz",
+        "themaId": "europa-414"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:53",
+        "art": "begriff",
+        "themaId": "strafbt-317"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "fehler",
+        "themaId": "zpo-916"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "staat-597",
+      "poolTitel": "Bundesrat: Mitwirkung und Stimmabgabe",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 50 ff. GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-15",
+        "2026-09-22",
+        "2026-11-25"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "assessorz-805",
+      "poolTitel": "Wie schreibt man Entscheidungsgründe im Urteilsstil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 3 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-12-06",
+        "2027-03-23"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-341",
+      "poolTitel": "Wie prüft man das unerlaubte Entfernen vom Unfallort?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 142 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-787",
+      "poolTitel": "Revisionsgründe: relative",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-787",
+      "poolTitel": "Revisionsgründe: relative",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-19"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "ipr-890",
+      "poolTitel": "Welches Recht gilt für einen Vertrag ohne Rechtswahl?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2027-01-05"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "europa-414",
+      "poolTitel": "Wann haftet ein Mitgliedstaat für die Verletzung von Unionsrecht?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 Abs. 3 EUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-12"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-317",
+      "poolTitel": "Wann liegt Verdeckungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "zpo-916",
+      "poolTitel": "Einfache oder notwendige Streitgenossenschaft: Wann greift § 62 ZPO?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 59-61 ZPO",
+        "§ 62 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-11",
+        "2027-02-09",
+        "2027-02-14"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-597",
+      "slug": "2027-04-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ja vom Ministerpräsidenten, Nein vom Minister: Was zählt?",
+          "titelZeilen": [
+            "Ja vom Minister-",
+            "präsidenten, Nein",
+            "vom Minister:",
+            "Was zählt?"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Art. 51 III 2 GG: nur im Block",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Im Bundesrat wird über ein zustimmungsbedürftiges Gesetz abgestimmt. Für Land L ruft Minister A „Ja“, Minister B „Nein“. Der Präsident fragt Ministerpräsident M, der „Ja“ sagt. B erklärt: „Sie kennen meine Auffassung.“ Der Präsident wertet die Stimmen des L als Ja. Mit ihnen wäre die Mehrheit erreicht."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Einheitliche Stimmabgabe",
+              "text": "Die Stimmen eines Landes können nur einheitlich abgegeben werden (Art. 51 Abs. 3 S. 2 GG). Uneinheitliche Stimmen sind ungültig."
+            },
+            {
+              "titel": "Stimmführer und Widerspruch",
+              "text": "Üblich gibt ein Stimmführer alle Stimmen ab. Widerspricht ein anderes Mitglied des Landes, trägt dieser Vertrauensgrundsatz nicht mehr."
+            },
+            {
+              "titel": "Kein Weisungsrecht aus Landesrecht",
+              "text": "Ob M nach Landesverfassung die Richtlinien bestimmt, ist für die Abstimmung im Bundesrat unerheblich – dort zählt nur das Bundesrecht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Mehrheit und Folge",
+          "text": "Der Bundesrat entscheidet mit der absoluten Mehrheit seiner Stimmen (Art. 52 Abs. 3 S. 1 GG). Ungültige Stimmen und Enthaltungen wirken deshalb wie ein Nein. Fehlt die Zustimmung, kommt das zustimmungsbedürftige Gesetz nicht zustande (Art. 78 GG)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Das Land hat uneinheitlich abgestimmt, B hat seinen Widerspruch aufrechterhalten. Die Nachfrage beim Ministerpräsidenten ändert daran nichts. So hat es das BVerfG im Fall des Zuwanderungsgesetzes 2002 entschieden. Die Stimmen des L sind ungültig, die Zustimmung fehlt, das Gesetz ist nicht zustande gekommen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ein Land, eine Stimme im Block. Stimmen die Vertreter eines Landes verschieden ab, zählt keine – und fürs Gesetz fehlt dann oft die absolute Mehrheit."
+        },
+        {
+          "art": "cta",
+          "titel": "Bundesratsabstimmung in drei Schritten",
+          "punkte": [
+            "Einheitlich abgestimmt (Art. 51 III 2 GG)?",
+            "Absolute Mehrheit (Art. 52 III 1 GG)?",
+            "Zustimmungsgesetz zustande gekommen?"
+          ],
+          "icons": [
+            "wahlurne",
+            "diagramm",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "Ja vom Ministerpräsidenten, Nein vom Minister – was zählt im Bundesrat? Keine der Stimmen: Ein Land kann nur einheitlich abstimmen (Art. 51 Abs. 3 S. 2 GG), uneinheitliche Stimmen sind ungültig. Weil der Bundesrat mit absoluter Mehrheit entscheidet, wirkt das wie ein Nein. So entschied das BVerfG beim Zuwanderungsgesetz. Speichern für die nächste Klausur zum Gesetzgebungsverfahren.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bundesrat",
+        "#51gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Bundesrat: Uneinheitlich heißt ungültig",
+      "coverText": "Art. 51 III 2 GG: nur im Block",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wenn die Vertreter eines Landes verschieden abstimmen, zählt keine der Stimmen.",
+        "handlung": "{A} and {B} stand side by side at a single voting urn, each trying to push a differently colored token into the same slot at the same moment.",
+        "hinweisRegie": "Place the note in the free space just above the single urn slot where the two tokens collide, slightly tilted toward the slot, so the split vote is linked to the note without covering either character's hand.",
+        "alternative": "{B} holds up a green flag while {A} beside her raises a red one, both representing the same small delegation at a long council table."
+      },
+      "bildSzene": "two tokens collide at urn slot",
+      "bildSzeneAlt": "same delegation, green and red flag",
+      "quellen": [
+        "Art. 51 Abs. 3 S. 2 GG",
+        "Art. 52 Abs. 3 S. 1 GG",
+        "Art. 77, 78 GG",
+        "Themenpool: staat-597"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage-stimmabgabe",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.663Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-805",
+      "slug": "2027-04-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Klage abgewiesen: Eine Anspruchsgrundlage verneinen reicht nicht",
+          "titelZeilen": [
+            "Klage abgewiesen:",
+            "Eine Anspruchs-",
+            "grundlage verneinen",
+            "reicht nicht"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Stattgabe eine, Abweisung alle",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verlangt von B Schadensersatz nach einem Verkehrsunfall. Du hältst § 823 Abs. 1 BGB für nicht erfüllt und willst die Klage abweisen. Wie viel musst du in den Entscheidungsgründen prüfen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Maßstab: § 313 Abs. 3 ZPO",
+              "text": "Die Gründe fassen kurz die Erwägungen zusammen, auf denen die Entscheidung tragend beruht – im Urteilsstil, Ergebnis vorab."
+            },
+            {
+              "titel": "Stattgabe",
+              "text": "Es genügt eine Anspruchsgrundlage, die den Antrag vollständig trägt – einschließlich der Nebenforderungen wie Zinsen."
+            },
+            {
+              "titel": "Abweisung",
+              "text": "Tragend ist sie erst, wenn jede ernsthaft in Betracht kommende Anspruchsgrundlage verneint ist – hier etwa auch § 7 StVG und § 18 StVG."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nur die im Schriftsatz genannte Norm verneinen. Das Gericht prüft den Sachverhalt unter allen rechtlichen Gesichtspunkten. Fehlt eine naheliegende Grundlage, trägt das Urteil die Abweisung nicht – im Examen ist das ein echter inhaltlicher Mangel."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Du verneinst jede ernsthaft in Betracht kommende Anspruchsgrundlage, kurz und im Urteilsstil: „Der Kläger hat gegen den Beklagten keinen Anspruch aus § 7 Abs. 1 StVG. Denn …“. Fernliegende Normen lässt du weg."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Stattgeben: eine tragende Grundlage reicht. Abweisen: alle ernsthaft in Betracht kommenden Grundlagen verneinen – jeweils Ergebnis vorab."
+        },
+        {
+          "art": "cta",
+          "titel": "Entscheidungsgründe prüfen",
+          "punkte": [
+            "Stattgabe: trägt eine Grundlage alles?",
+            "Abweisung: alle Grundlagen verneint?",
+            "Ergebnis vorab, Begründung mit „denn“?"
+          ],
+          "icons": [
+            "haken",
+            "kreuz",
+            "fueller"
+          ]
+        }
+      ],
+      "caption": "Klage abgewiesen – dann reicht es nicht, eine Anspruchsgrundlage zu verneinen. Bei der Stattgabe genügt eine Grundlage, die den Antrag vollständig trägt. Bei der Abweisung musst du jede ernsthaft in Betracht kommende Grundlage verneinen, kurz und im Urteilsstil (§ 313 Abs. 3 ZPO). Speichern für die nächste Zivilurteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilurteil",
+        "#313zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abweisung: alle Grundlagen verneinen",
+      "coverText": "Stattgabe eine, Abweisung alle",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Wer eine Klage abweist, muss jeden ernsthaft möglichen Weg zum Anspruch verschließen, nicht nur einen.",
+        "handlung": "{B} hovers in front of a wall with three doors and closes the last one, while {A} points his stick at the two doors that {B} has already shut.",
+        "hinweisRegie": "Place the note in the free space above the row of three doors, slightly tilted toward the last door being closed, so the need to close every door is linked to the note without covering {A}'s pointer.",
+        "alternative": "{A} checks three possible bridges over a gorge and marks each one as collapsed, while {B} holds the map with all three routes."
+      },
+      "bildSzene": "droid closes last of three doors",
+      "bildSzeneAlt": "three bridges checked on map",
+      "quellen": [
+        "§ 313 Abs. 3 ZPO",
+        "§ 823 Abs. 1 BGB",
+        "§§ 7, 18 StVG",
+        "Themenpool: assessorz-805"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz-abweisung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.663Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-341",
+      "slug": "2027-04-16-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Unfall erst später bemerkt: Viele bejahen hier § 142 II – zu Unrecht",
+          "unter": "Unfallflucht · § 142 StGB",
+          "text": "Wer den Unfall nicht bemerkt, entfernt sich nicht „berechtigt oder entschuldigt“.",
+          "norm": "§ 142 Abs. 2 StGB",
+          "icon": "auto",
+          "sprecher": "Unfall nicht bemerkt, weitergefahren: kein Fall von Absatz 2. Viele prüfen hier trotzdem Paragraf 142 Absatz 2 StGB und bejahen ihn. Seit 2007 ist klar: Das geht nicht.",
+          "marken": [
+            "kein § 142 II"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Unfall und Unfallbeteiligter",
+          "text": "Unfall im Straßenverkehr; beteiligt ist, wessen Verhalten zur Verursachung beigetragen haben kann.",
+          "norm": "§ 142 Abs. 5 StGB",
+          "sprecher": "Erstens: ein Unfall im Straßenverkehr und ein Unfallbeteiligter. Beteiligt ist jeder, dessen Verhalten nach den Umständen zur Verursachung beigetragen haben kann, Absatz 5.",
+          "marken": [
+            "Abs. 5"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Absatz 1: Entfernen am Unfallort",
+          "text": "Sich entfernen, bevor Feststellungen ermöglicht oder angemessen gewartet wurde.",
+          "norm": "§ 142 Abs. 1 StGB",
+          "sprecher": "Zweitens, Absatz 1: Strafbar ist, wer sich vom Unfallort entfernt, bevor er die Feststellungen ermöglicht oder eine angemessene Zeit gewartet hat. Dafür braucht es Vorsatz, also Wissen um den Unfall.",
+          "marken": [
+            "Vorsatz nötig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Absatz 2: nachträglich ermöglichen",
+          "text": "Nach der Wartefrist oder bei berechtigtem oder entschuldigtem Entfernen: Feststellungen unverzüglich nachholen.",
+          "norm": "§ 142 Abs. 2 StGB",
+          "sprecher": "Drittens, Absatz 2: Wer nach Ablauf der Wartefrist oder berechtigt oder entschuldigt gegangen ist, muss die Feststellungen unverzüglich nachträglich ermöglichen.",
+          "marken": [
+            "unverzüglich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Unvorsätzlich ist nicht entschuldigt",
+          "text": "Das BVerfG sah 2007 die Wortlautgrenze überschritten, wenn man unvorsätzliches Entfernen darunter fasst.",
+          "norm": "Art. 103 Abs. 2 GG",
+          "sprecher": "Viertens, der Knackpunkt: Früher hat die Rechtsprechung auch das unbemerkte Wegfahren als entschuldigt behandelt. Das Bundesverfassungsgericht sah darin 2007 eine unzulässige Analogie. Seitdem gilt: Wer nichts bemerkt hat, fällt nicht unter Absatz 2.",
+          "marken": [
+            "Wortlautgrenze"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Merkt er es noch am Unfallort?",
+          "text": "Dann greift Absatz 1: Er muss bleiben oder die Feststellungen ermöglichen.",
+          "norm": "§ 142 Abs. 1 StGB",
+          "sprecher": "Anders, wenn er den Unfall noch am Unfallort bemerkt. Dann bleibt es bei Absatz 1.",
+          "marken": [
+            "noch vor Ort?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Unbemerkt weggefahren und erst später erfahren: kein § 142 StGB.",
+          "norm": "§ 142 StGB",
+          "sprecher": "Merke: Wer den Unfall erst später erfährt, ist nach Paragraf 142 nicht strafbar.",
+          "marken": [
+            "erst später erfahren"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der nächsten Strafrechtsklausur",
+          "text": "Speichern für die nächste Unfallflucht im Sachverhalt.",
+          "sprecher": "Speicher dir das für die nächste Klausur. Und frag immer zuerst: Wann hat der Täter vom Unfall erfahren?",
+          "marken": [
+            "Wann erfahren?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Unfall erst später bemerkt – viele bejahen hier § 142 Abs. 2 StGB. Das trägt nicht: Nach dem BVerfG (2007) ist unvorsätzliches Entfernen nicht „berechtigt oder entschuldigt“, sonst wäre die Wortlautgrenze überschritten (Art. 103 Abs. 2 GG). Wer den Unfall erst nach dem Verlassen des Unfallorts erfährt, ist nach § 142 StGB nicht strafbar. Speichern für die nächste Klausur zur Unfallflucht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#142stgb",
+        "#unfallflucht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 142 II StGB: unbemerkt ist nicht entschuldigt",
+      "titelZeilen": [
+        "Unfall erst später",
+        "bemerkt: Viele",
+        "bejahen § 142 II –",
+        "zu Unrecht"
+      ],
+      "coverText": "Wortlautgrenze, Art. 103 II GG",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer den Unfall gar nicht bemerkt hat, hat sich nicht „entschuldigt“ entfernt – Absatz 2 greift nicht.",
+        "handlung": "{A} drives a small cart away down a road, headphones on and unaware, while behind him {B} stands next to a tipped-over crate at the curb.",
+        "hinweisRegie": "Place the note in the free space between the departing cart and the tipped crate, slightly tilted toward {A}'s headphones, so his unawareness is linked to the note without covering the crate.",
+        "alternative": "{A} only notices a fresh dent on his cart at home in the garage, while {B} shrugs next to him."
+      },
+      "bildSzene": "unaware driver leaves tipped crate",
+      "bildSzeneAlt": "dent discovered later at home",
+      "quellen": [
+        "§ 142 StGB",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: strafbt-341"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.668Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-787",
+      "ueberzeile": "Prüfungsfrage Strafprozessrecht",
+      "titel": "Zeuge Z wird nicht nach § 55 StPO belehrt und belastet A. Kann A seine Revision darauf stützen?",
+      "optionen": [
+        "Ja – jede verletzte Belehrungspflicht führt zur Aufhebung",
+        "Nein – § 55 StPO schützt nur den Zeugen (Rechtskreistheorie)",
+        "Ja – es ist ein absoluter Revisionsgrund nach § 338 StPO"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 55 StPO",
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "Themenpool: stpo-787"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.668Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-787",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – der Verstoß berührt nicht den Rechtskreis des Angeklagten",
+      "text": "Ein relativer Revisionsgrund verlangt eine Gesetzesverletzung, auf der das Urteil beruht (§ 337 StPO). Nach der Rechtskreistheorie der Rspr. kann der Angeklagte aber nur Verstöße gegen Normen rügen, die zumindest auch ihn schützen. § 55 StPO schützt allein den Zeugen vor Selbstbelastung. Die Lit. kritisiert das teils – in der Klausur folgst du meist der Rspr.",
+      "norm": "§ 337 StPO",
+      "quellen": [
+        "§ 55 StPO",
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "Themenpool: stpo-787"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.668Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – jede verletzte Belehrungspflicht führt zur Aufhebung",
+        "Nein – § 55 StPO schützt nur den Zeugen (Rechtskreistheorie)",
+        "Ja – es ist ein absoluter Revisionsgrund nach § 338 StPO"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-890",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 4 Abs. 1 lit. d Rom I-VO: Ferienhaus in Spanien, beide aus Köln – deutsches Recht",
+      "text": "Grundsätzlich gilt für die Miete einer Immobilie das Recht des Lageorts (Art. 4 Abs. 1 lit. c Rom I-VO). Ausnahme für kurze private Mieten bis zu sechs Monaten: Ist der Mieter eine natürliche Person und haben er und der Vermieter ihren gewöhnlichen Aufenthalt im selben Staat, gilt das Recht dieses Staates (lit. d).",
+      "norm": "Art. 4 Abs. 1 lit. c, d Rom I-VO",
+      "quellen": [
+        "Art. 3 Rom I-VO",
+        "Art. 4 Abs. 1 lit. c, d Rom I-VO",
+        "Themenpool: ipr-890"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.668Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-414",
+      "ueberzeile": "Merksatz Europarecht",
+      "titel": "Richtlinie nicht rechtzeitig umgesetzt: Der Verstoß ist schon hinreichend qualifiziert",
+      "text": "Trifft ein Mitgliedstaat bis zum Fristablauf keine Umsetzungsmaßnahme, liegt nach dem EuGH ohne Weiteres ein hinreichend qualifizierter Verstoß vor. Offen bleiben: Verleiht die Richtlinie Rechte, und besteht ein unmittelbarer Kausalzusammenhang zum Schaden?",
+      "norm": "Art. 4 Abs. 3 EUV · Art. 288 Abs. 3 AEUV",
+      "quellen": [
+        "Art. 4 Abs. 3 EUV",
+        "Art. 288 Abs. 3 AEUV",
+        "Themenpool: europa-414"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.668Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-317",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Verdeckungsabsicht: töten, um eine andere Straftat zu verdecken",
+      "text": "Der Täter tötet, um die Aufdeckung einer anderen Straftat oder seiner Täterschaft zu verhindern – oder um sich der Strafverfolgung zu entziehen. Eine Ordnungswidrigkeit genügt nicht. Es reicht, dass er die Vortat nur irrig für eine Straftat hält. Die Verdeckung muss nicht das einzige Motiv sein.",
+      "norm": "§ 211 Abs. 2 Gr. 3 StGB",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-317"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.668Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-916",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "B1 gibt eine Tatsache zu, B2 bestreitet sie: gilt sie für beide als zugestanden?",
+      "falsch": "Die Beklagten B1 und B2 sind Streitgenossen – das Geständnis des B1 macht die Tatsache für den ganzen Prozess unstreitig.",
+      "richtigText": "Einfache Streitgenossen führen jeweils ihren eigenen Prozess: Handlungen des einen wirken nicht für und nicht gegen den anderen (§ 61 ZPO). Gegenüber B2 bleibt die Tatsache streitig und muss bewiesen werden. Anders nur bei notwendiger Streitgenossenschaft (§ 62 ZPO).",
+      "quellen": [
+        "§ 61 ZPO",
+        "§ 62 ZPO",
+        "§ 288 ZPO",
+        "Themenpool: zpo-916"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:36:11.668Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
