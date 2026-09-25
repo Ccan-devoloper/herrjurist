@@ -25,7 +25,7 @@ export function pruefeGliederung(solution) {
     const marker = line?.marker;
     const level = LEVELS.findIndex(labels => labels.includes(marker));
     if (level < 0) { errors.push(`Zeile ${i + 1}: unbekannter Gliederungspunkt ${String(marker)}`); return; }
-    if (!text(line.text, 8)) errors.push(`Zeile ${i + 1}: Obersatz/Ergebnis fehlt.`);
+    if (!text(line?.text, 8)) errors.push(`Zeile ${i + 1}: Obersatz/Ergebnis fehlt.`);
     const parent = level === 0 ? root : stack[level - 1];
     if (!parent) { errors.push(`${marker}: Oberpunkt fehlt.`); return; }
     const expected = LEVELS[level][parent.children.length];
