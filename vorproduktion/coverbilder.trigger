@@ -1,9 +1,6 @@
 source=google-drive-cover-bilder
 mode=providerfrei
-run=apply-missing-coverbilder-2026-09-25-to-2026-10-08
-slots=2026-09-25/b1,2026-09-29/b1,2026-09-29/b2,2026-09-29/b3,2026-09-30/b1,2026-09-30/b2,2026-09-30/b3,2026-10-01/b1,2026-10-01/b2,2026-10-01/b3,2026-10-02/b1,2026-10-02/b2,2026-10-02/b3,2026-10-03/b1,2026-10-03/b2,2026-10-03/b3,2026-10-04/b1,2026-10-04/b2,2026-10-04/b3,2026-10-05/b1,2026-10-05/b2,2026-10-05/b3,2026-10-06/b1,2026-10-06/b2,2026-10-06/b3,2026-10-07/b1,2026-10-07/b2,2026-10-07/b3,2026-10-08/b1,2026-10-08/b2,2026-10-08/b3
-zipUrl=https://sdmntprnortheu.oaiusercontent.com/files/00000000-d9b0-81f4-9cca-c4ec0aee95a9/raw?se=2026-09-25T00%3A24%3A04Z&sp=r&sv=2026-02-06&sr=b&scid=22f17093-664f-5a13-9c05-8192ff8ed691&skoid=6658dbdd-f305-4d30-8f6b-d62218202cb9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T20%3A44%3A55Z&ske=2026-09-25T20%3A44%3A55Z&sks=b&skv=2026-02-06&sig=9/vmdm3cmwGuGR%2B6BZvsyeoghLbjbLoiEWR8d9CLvkI%3D
-zipUrl=https://sdmntprdenmarkeast.oaiusercontent.com/files/00000000-3064-8210-be21-47c122b2d6aa/raw?se=2026-09-25T00%3A24%3A04Z&sp=r&sv=2026-02-06&sr=b&scid=caa3089d-08ab-59d1-bb4b-df84b704169a&skoid=6658dbdd-f305-4d30-8f6b-d62218202cb9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T23%3A52%3A36Z&ske=2026-09-25T23%3A52%3A36Z&sks=b&skv=2026-02-06&sig=e3TtO7f5MKW7sn1awqnR0%2BM4H3y29w74VAidv8cT4ng%3D
-zipUrl=https://sdmntprukwest.oaiusercontent.com/files/00000000-db4c-8243-a7d8-16ec3e1004e5/raw?se=2026-09-25T00%3A24%3A04Z&sp=r&sv=2026-02-06&sr=b&scid=f66129ad-e2b7-5452-9195-7771bdb0ff67&skoid=6658dbdd-f305-4d30-8f6b-d62218202cb9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T20%3A40%3A27Z&ske=2026-09-25T20%3A40%3A27Z&sks=b&skv=2026-02-06&sig=c3bH3Jaw4ManP062nFvYQdsFAIMJjUZpVb5N0mixVlA%3D
-zipUrl=https://sdmntprdenmarkeast.oaiusercontent.com/files/00000000-7f00-8210-822f-bd0db4ab2b4e/raw?se=2026-09-25T00%3A24%3A04Z&sp=r&sv=2026-02-06&sr=b&scid=fddbec15-f089-51d2-90e2-c80008116dbf&skoid=6658dbdd-f305-4d30-8f6b-d62218202cb9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T20%3A31%3A18Z&ske=2026-09-25T20%3A31%3A18Z&sks=b&skv=2026-02-06&sig=MKXJa1fQfcoxzertdl1PJEIFBTlQF3g8HD6GLLRWKSs%3D
-reason=exakte-datei-zuordnung-aus-google-drive
+status=completed
+assetCommit=0ebfde7b6c0c968d2b06542acd05b35bd9ae6317
+slotsApplied=31
+completedRun=36077006192
