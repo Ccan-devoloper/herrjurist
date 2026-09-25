@@ -1,0 +1,30 @@
+name: One-off voices for September 27 through October 10 reels
+on:
+  push:
+    paths:
+      - .github/workflows/voice-reels-27-onward.yml
+permissions:
+  contents: read
+jobs:
+  create-voice:
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [0, 1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Speak each scene with the Creator plan voice
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          REEL_VOICE_BATCH: ${{ matrix.batch }}
+        run: node bin/voice-reels-27-onward.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: voice-reels-batch-${{ matrix.batch }}
+          path: voice-output-27-onward/batch-${{ matrix.batch }}/
