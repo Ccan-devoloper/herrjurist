@@ -1,0 +1,888 @@
+{
+  "datum": "2027-04-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "assessorz-582",
+        "themaTitel": "Anwaltsklausur: Klageerwiderung und Verteidigungsstrategie",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "stpo-351",
+        "themaTitel": "Wann darf vorläufig festgenommen werden?",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-388",
+        "themaTitel": "Was ist ein Verwaltungsakt mit Drittwirkung?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "schuldbt-475"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "schuldbt-475"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:09",
+        "art": "norm",
+        "themaId": "verwalt-640"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "tipp",
+        "themaId": "strafbt-074"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "zahl",
+        "themaId": "assessorz-801"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "streitstand",
+        "themaId": "assessorz-807"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "assessorz-582",
+      "poolTitel": "Anwaltsklausur: Klageerwiderung und Verteidigungsstrategie",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23",
+        "2026-11-07",
+        "2026-11-07"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "stpo-351",
+      "poolTitel": "Wann darf vorläufig festgenommen werden?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 127 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-21"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-388",
+      "poolTitel": "Was ist ein Verwaltungsakt mit Drittwirkung?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG",
+        "§ 80a VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-24",
+        "2027-03-17"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-475",
+      "poolTitel": "Waren mit digitalen Elementen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 475b ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-475",
+      "poolTitel": "Waren mit digitalen Elementen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 475b ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-640",
+      "poolTitel": "Bekanntgabe des Verwaltungsakts",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 41 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-12-09"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafbt-074",
+      "poolTitel": "Was ist eine gefährliche Körperverletzung nach § 224 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB",
+        "§ 224 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2026-10-19",
+        "2027-02-24"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-801",
+      "poolTitel": "Was verlangt die Relationstechnik in drei Stationen?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08",
+        "2026-12-31",
+        "2027-02-14"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-807",
+      "poolTitel": "Wann ist ohne, wann nur gegen Sicherheitsleistung vorläufig vollstreckbar?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "§ 713 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-19",
+        "2026-12-23",
+        "2027-02-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-582",
+      "slug": "2027-04-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gegenforderung? Erst bestreiten, dann hilfsweise aufrechnen",
+          "titelZeilen": [
+            "Gegenforderung?",
+            "Erst bestreiten,",
+            "dann hilfsweise",
+            "aufrechnen"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Die Reihenfolge schützt die Forderung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verklagt deinen Mandanten B auf 6.000 € Kaufpreis für einen Gebrauchtwagen. B meint: Der Wagen war mangelhaft, er ist wirksam zurückgetreten. Außerdem hat er gegen K eine Werklohnforderung über 4.000 €. Wie baust du die Klageerwiderung auf?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Antrag",
+              "text": "„Die Klage wird abgewiesen.“ Mehr braucht der Beklagte im Antrag nicht."
+            },
+            {
+              "titel": "Primär: Einwendungen",
+              "text": "Rücktritt wegen Mangels (§§ 437 Nr. 2, 323, 346 BGB) mit allen Tatsachen vortragen und Beweis anbieten."
+            },
+            {
+              "titel": "Hilfsweise: Aufrechnung",
+              "text": "Nur für den Fall, dass die Klageforderung besteht (§ 387 BGB). Diese innerprozessuale Bedingung ist zulässig."
+            },
+            {
+              "titel": "Widerklage prüfen",
+              "text": "Wenn die Gegenforderung höher ist oder B einen eigenen Titel braucht (§ 33 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Gleich unbedingt aufrechnen. Dann darf das Gericht offenlassen, ob der Kaufpreis überhaupt geschuldet war, und die Klage allein wegen der Aufrechnung abweisen. Die Werklohnforderung ist dann verbraucht – obwohl B vielleicht gar nichts schuldete."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Klageabweisung beantragen, den Rücktritt vorrangig verteidigen und nur hilfsweise aufrechnen. Über die Hilfsaufrechnung entscheidet das Gericht erst, wenn es die Klageforderung bejaht. Kostenblick: Entscheidet es über die Gegenforderung, erhöht sich der Streitwert (§ 45 Abs. 3 GKG)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Klageforderung angreifen, dann hilfsweise aufrechnen. So riskiert der Mandant seine Gegenforderung nur, wenn er wirklich schuldet."
+        },
+        {
+          "art": "cta",
+          "titel": "Klageerwiderung in drei Zügen",
+          "punkte": [
+            "Was spricht gegen die Klageforderung?",
+            "Was hilft nur hilfsweise?",
+            "Braucht der Mandant eine Widerklage?"
+          ],
+          "icons": [
+            "dokument",
+            "waage",
+            "aktentasche"
+          ]
+        }
+      ],
+      "caption": "Gegenforderung in der Hinterhand – sofort aufrechnen? Lieber nicht. Wer unbedingt aufrechnet, lässt das Gericht offen, ob die Klageforderung überhaupt bestand, und opfert womöglich eine Forderung für eine Schuld, die es nie gab. In der Anwaltsklausur heißt die Reihenfolge deshalb: Klageabweisung beantragen, Einwendungen vorrangig vortragen, dann hilfsweise aufrechnen – und an eine Widerklage denken. Speichern für die nächste Anwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#anwaltsklausur",
+        "#aufrechnung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klageerwiderung: erst bestreiten, dann aufrechnen",
+      "coverText": "Die Reihenfolge schützt die Forderung",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Die Gegenforderung wird erst eingesetzt, wenn die Verteidigung gegen die Klageforderung nicht trägt.",
+        "handlung": "{A} holds back {B}, who is about to throw his only spare gear onto a scale, and points first to a crack in the weight already lying on the other side.",
+        "hinweisRegie": "Place the note in the free space next to the cracked weight on the scale, slightly tilted toward it, so the first line of defence stands out without covering {B}'s spare gear or {A}'s hand.",
+        "alternative": "{B} keeps a small backup lantern hidden behind his back while {A} first tests whether the opponent's bridge can hold any weight at all."
+      },
+      "bildSzene": "spare gear held back from scale",
+      "bildSzeneAlt": "backup lantern kept behind back",
+      "quellen": [
+        "§ 387 BGB",
+        "§ 389 BGB",
+        "§§ 437 Nr. 2, 323, 346 BGB",
+        "§ 33 ZPO",
+        "§ 322 Abs. 2 ZPO",
+        "§ 45 Abs. 3 GKG",
+        "Themenpool: assessorz-582"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.235Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-351",
+      "slug": "2027-04-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Jedermann-Festnahme: vier Punkte, einer begrenzt die Mittel",
+          "titelZeilen": [
+            "Jedermann-",
+            "Festnahme:",
+            "vier Punkte, einer",
+            "begrenzt die Mittel"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Festhalten ja, bestrafen nein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 127 Abs. 1 S. 1 StPO erlaubt jedermann, einen auf frischer Tat Betroffenen oder Verfolgten vorläufig festzunehmen. Im Strafrecht ist das ein Rechtfertigungsgrund – typischerweise für Nötigung, Freiheitsberaubung oder eine leichte Körperverletzung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Frische Tat",
+              "text": "Der Täter wird bei der Tat oder unmittelbar danach am Tatort betroffen oder sofort verfolgt."
+            },
+            {
+              "titel": "2. Festnahmegrund",
+              "text": "Er ist der Flucht verdächtig, oder seine Identität kann nicht sofort festgestellt werden."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Angemessenes Mittel",
+              "text": "Festhalten, notfalls mit maßvoller Gewalt. Nicht gedeckt: Mittel, die außer Verhältnis zum Festnahmezweck stehen, etwa lebensgefährliche."
+            },
+            {
+              "titel": "4. Festnahmewille",
+              "text": "Der Festnehmende handelt, um den Täter der Strafverfolgung zuzuführen – nicht, um ihn zu bestrafen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Tat nur vermutet?",
+          "text": "Muss die Tat wirklich begangen sein? Eine Ansicht lässt einen dringenden, auf objektive Umstände gestützten Tatverdacht genügen. Die Gegenansicht verlangt die tatsächliche Tat – wer sich irrt, ist dann auf den Erlaubnistatbestandsirrtum verwiesen. Darstellen, wenn der Sachverhalt Zweifel lässt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Frische Tat, Festnahmegrund, angemessenes Mittel, Festnahmewille. Privatleute dürfen festhalten – nicht strafen."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 127 Abs. 1 StPO in drei Fragen",
+          "punkte": [
+            "Tat frisch und erkannt?",
+            "Flucht oder unklare Identität?",
+            "Mittel noch angemessen?"
+          ],
+          "icons": [
+            "polizei",
+            "person",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Jedermann darf festnehmen – aber nicht mit jedem Mittel. § 127 Abs. 1 S. 1 StPO verlangt eine frische Tat, einen Festnahmegrund (Fluchtverdacht oder unklare Identität), ein angemessenes Mittel und den Willen, den Täter der Strafverfolgung zuzuführen. Heikel ist die Frage, ob die Tat wirklich begangen sein muss. Speichern für die nächste Rechtfertigungsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#127stpo",
+        "#festnahme",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 127 Abs. 1 StPO: das Festnahmeschema",
+      "coverText": "Festhalten ja, bestrafen nein",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Wer einen Täter auf frischer Tat festhält, ist gerechtfertigt – solange das Mittel angemessen bleibt.",
+        "handlung": "{A} firmly holds a fleeing figure by the sleeve at a mine entrance, while {B} hovers beside him and gently lowers {A}'s raised pickaxe back to the ground.",
+        "hinweisRegie": "Place the note in the free space next to the lowered pickaxe, slightly tilted toward it, so the limit on the means stands out without covering the held sleeve or {A}'s face.",
+        "alternative": "{B} closes a gate in front of a running figure while {A} simply stands in the path with open arms instead of swinging a tool."
+      },
+      "bildSzene": "holding sleeve, pickaxe lowered",
+      "bildSzeneAlt": "gate closed, arms spread instead",
+      "quellen": [
+        "§ 127 Abs. 1 StPO",
+        "§ 240 StGB",
+        "§ 239 StGB",
+        "§ 16 StGB",
+        "Themenpool: stpo-351"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-punkte-mittelgrenze",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.235Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-388",
+      "slug": "2027-04-26-b3",
+      "titelZeilen": [
+        "Genehmigung",
+        "erteilt – und",
+        "trotzdem nicht sicher"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Genehmigung erteilt – und trotzdem nicht sicher",
+          "unter": "VA mit Drittwirkung · § 80a VwGO",
+          "text": "Der Nachbar kann den begünstigenden Bescheid angreifen.",
+          "norm": "§ 80a VwGO",
+          "icon": "haeuser",
+          "sprecher": "Genehmigung in der Hand – und trotzdem nicht sicher. Beim Verwaltungsakt mit Drittwirkung hat ein Dritter eigene Rechte gegen deine Begünstigung.",
+          "marken": [
+            "Drittwirkung",
+            "Nachbar klagt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einer gewinnt, einer verliert",
+          "text": "Derselbe VA begünstigt den Adressaten und belastet einen Dritten.",
+          "norm": "§ 80a Abs. 1 VwGO",
+          "sprecher": "Schritt eins: das Merkmal. Derselbe Verwaltungsakt begünstigt den Adressaten und belastet einen Dritten. Klassiker ist die Baugenehmigung: Freude beim Bauherrn, Ärger beim Nachbarn.",
+          "marken": [
+            "Doppelwirkung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Klagebefugnis über Schutznormen",
+          "text": "Die Norm muss zumindest auch den Dritten schützen.",
+          "norm": "§ 42 Abs. 2 VwGO",
+          "sprecher": "Schritt zwei: die Klagebefugnis des Dritten. Er braucht eine Norm, die zumindest auch ihn schützt. Im Baurecht etwa nachbarschützende Vorschriften oder das Gebot der Rücksichtnahme.",
+          "marken": [
+            "Schutznormtheorie"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Frist nur bei Bekanntgabe",
+          "text": "Ohne Bekanntgabe keine Frist – aber Verwirkung ist möglich.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Frist. Wurde der Bescheid dem Nachbarn nicht bekanntgegeben, läuft für ihn keine Widerspruchsfrist. Weiß er aber sicher davon und wartet zu lange, kann er sein Recht nach Treu und Glauben verlieren.",
+          "marken": [
+            "Verwirkung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Schwächerer Vertrauensschutz",
+          "text": "Aufhebung auf den Rechtsbehelf des Dritten: §§ 48, 49 VwVfG nur eingeschränkt.",
+          "norm": "§ 50 VwVfG",
+          "sprecher": "Schritt vier: der Vertrauensschutz. Hebt die Behörde den Bescheid auf den Widerspruch des Dritten hin auf, greifen wichtige Schutzregeln für Rücknahme und Widerruf nicht. Das regelt Paragraf 50 VwVfG.",
+          "marken": [
+            "§ 50 VwVfG"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und im Eilverfahren?",
+          "text": "Grundsätzlich aufschiebende Wirkung – bei der Baugenehmigung nicht.",
+          "norm": "§ 80a VwGO · § 212a BauGB",
+          "sprecher": "Und im Eilrechtsschutz? Grundsätzlich hat der Widerspruch des Dritten aufschiebende Wirkung, die Anträge regelt Paragraf 80a VwGO. Bei der Baugenehmigung entfällt sie aber kraft Gesetzes.",
+          "marken": [
+            "§ 212a BauGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Schutznorm, Bekanntgabe, schwächerer Vertrauensschutz.",
+          "norm": null,
+          "sprecher": "Merke: Der Dritte braucht eine Schutznorm, seine Frist startet erst mit Bekanntgabe, und der Begünstigte kann weniger auf den Bestand vertrauen.",
+          "marken": [
+            "drei Folgen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wer steht auf der anderen Seite?",
+          "text": "Speichern für die nächste Nachbarklage.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Nachbarklage. Und frag bei jedem begünstigenden Bescheid: Wer steht auf der anderen Seite?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Genehmigung erteilt – und trotzdem nicht sicher. Beim Verwaltungsakt mit Drittwirkung kann ein belasteter Dritter vorgehen, wenn eine Norm zumindest auch ihn schützt. Ohne Bekanntgabe läuft für ihn keine Frist, er kann sein Recht aber verwirken. Und wird auf seinen Rechtsbehelf hin aufgehoben, ist der Vertrauensschutz nach § 50 VwVfG eingeschränkt. Speichern für die nächste Nachbarklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwgo",
+        "#baurecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VA mit Drittwirkung: die drei Folgen",
+      "coverText": "Der Nachbar hat eigene Rechte",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Ein begünstigender Bescheid kann einen Dritten belasten, der ihn dann selbst angreifen darf.",
+        "handlung": "{A} happily lifts a freshly stamped permit next to a half-built tower, while {B} points his pointer at a neighbour's small house whose window now lies in the tower's shadow.",
+        "hinweisRegie": "Place the note in the free space above the shaded neighbour's window, slightly tilted toward it, so the affected third party stands out without covering the permit or {A}'s face.",
+        "alternative": "{B} shows {A} that the gift she just received is tied by a string to someone else's door, which starts to open."
+      },
+      "bildSzene": "permit, neighbour's window in shadow",
+      "bildSzeneAlt": "gift tied to neighbour's door",
+      "quellen": [
+        "§ 80a VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "§ 50 VwVfG",
+        "§ 41 VwVfG",
+        "§ 212a BauGB",
+        "Themenpool: verwalt-388"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.236Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-475",
+      "ueberzeile": "Prüfungsfrage Kaufrecht",
+      "titel": "Smartwatch gekauft, nach acht Monaten keine Sicherheitsupdates mehr: Hat K Rechte gegen den Händler?",
+      "optionen": [
+        "Nein – es zählt nur der Zustand bei Gefahrübergang",
+        "Ja – der Händler schuldet Updates für den erwartbaren Zeitraum",
+        "Nur gegen den Hersteller, der die Updates liefert"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 475b BGB",
+        "§ 434 BGB",
+        "§ 437 BGB",
+        "Themenpool: schuldbt-475"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.236Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-475",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – der Händler schuldet die Updates, nicht nur der Hersteller",
+      "text": "Beim Verbrauchsgüterkauf einer Ware mit digitalen Elementen muss der Unternehmer dafür sorgen, dass der Verbraucher die für die Vertragsmäßigkeit erforderlichen Aktualisierungen erhält – auch Sicherheitsupdates –, so lange, wie er es nach Art und Zweck der Ware erwarten kann (§ 475b Abs. 4 Nr. 2 BGB). Bleiben sie aus, ist die Ware mangelhaft; die Rechte folgen aus § 437 BGB.",
+      "norm": "§ 475b Abs. 4 BGB · § 437 BGB",
+      "quellen": [
+        "§ 475b BGB",
+        "§ 434 BGB",
+        "§ 437 BGB",
+        "Themenpool: schuldbt-475"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.237Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – es zählt nur der Zustand bei Gefahrübergang",
+        "Ja – der Händler schuldet Updates für den erwartbaren Zeitraum",
+        "Nur gegen den Hersteller, der die Updates liefert"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-640",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 41 Abs. 1 VwVfG: Ist ein Bevollmächtigter bestellt, darf ihm bekanntgegeben werden",
+      "text": "Bekanntzugeben ist der VA dem, für den er bestimmt ist oder der von ihm betroffen wird (§ 41 Abs. 1 S. 1 VwVfG). Ist ein Bevollmächtigter bestellt, kann die Bekanntgabe ihm gegenüber erfolgen (S. 2). Erst mit der Bekanntgabe wird der VA wirksam (§ 43 Abs. 1 VwVfG) – und erst dann laufen die Rechtsbehelfsfristen.",
+      "norm": "§ 41 Abs. 1 VwVfG",
+      "quellen": [
+        "§ 41 VwVfG",
+        "§ 43 VwVfG",
+        "Themenpool: verwalt-640"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-074",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "§ 224 Abs. 1 Nr. 2 StGB: Beim Tritt auf Schuh und Einsatz schauen",
+      "text": "Körperteile wie Faust oder Knie sind kein Werkzeug. Anders kann es beim beschuhten Fuß sein: Entscheidend sind die Art des Schuhs und die konkrete Verwendung – etwa kräftige Tritte gegen den Kopf. Prüfe also nicht abstrakt, sondern ob der Gegenstand nach seiner Beschaffenheit und der Art seiner Benutzung im Einzelfall geeignet ist, erhebliche Verletzungen herbeizuführen.",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 224 Abs. 1 Nr. 2 StGB",
+        "Themenpool: strafbt-074"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-801",
+      "ueberzeile": "4 Punkte Relationstechnik",
+      "titel": "Klägerstation: Vier Schritte zur Schlüssigkeit",
+      "text": "In der Klägerstation zählt nur der Vortrag des Klägers – als wahr unterstellt. Trägt er den Antrag, ist die Klage schlüssig.",
+      "punkte": [
+        "Klageantrag auslegen: Was genau will der Kläger?",
+        "Anspruchsgrundlage suchen, die den Antrag trägt",
+        "Nur Klägervortrag zugrunde legen, als wahr unterstellt",
+        "Nebenforderungen wie Zinsen gesondert prüfen"
+      ],
+      "quellen": [
+        "§ 253 Abs. 2 ZPO",
+        "§ 331 Abs. 2 ZPO",
+        "Themenpool: assessorz-801"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-807",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Anerkenntnis erst in der Klageerwiderung: Ist es noch „sofortig“ nach § 93 ZPO?",
+      "norm": "§ 93 ZPO · § 708 Nr. 1 ZPO",
+      "optionen": [
+        "BGH: Ja – im schriftlichen Vorverfahren genügt die Erwiderungsfrist, wenn vorher kein Abweisungsantrag angekündigt war.",
+        "Andere Ansicht: Nein – sofort heißt schon mit der Verteidigungsanzeige; danach ist es zu spät."
+      ],
+      "text": "Klausur: mit dem BGH. Zweite Hürde: Der Beklagte darf keine Veranlassung zur Klage gegeben haben. Das Anerkenntnisurteil ist ohne Sicherheitsleistung vorläufig vollstreckbar (§ 708 Nr. 1 ZPO); eine Abwendungsbefugnis nach § 711 ZPO gibt es hier nicht.",
+      "quellen": [
+        "§ 93 ZPO",
+        "§ 276 ZPO",
+        "§ 307 ZPO",
+        "§ 708 ZPO",
+        "§ 711 ZPO",
+        "Themenpool: assessorz-807"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:35.237Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

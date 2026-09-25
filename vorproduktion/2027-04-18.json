@@ -1,0 +1,887 @@
+{
+  "datum": "2027-04-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "vwgo-411",
+        "themaTitel": "Wie funktioniert die Beiladung?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "schuldbt-464",
+        "themaTitel": "Kosten der Nacherfüllung und Aus-/Einbaukosten",
+        "fach": "schuldbt",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "zpo-554"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "zpo-554"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:50",
+        "art": "norm",
+        "themaId": "methodik-909"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "fehler",
+        "themaId": "assessorz-810"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "tipp",
+        "themaId": "arbeit-253"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "zahl",
+        "themaId": "zwangsv-828"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "vwgo-411",
+      "poolTitel": "Wie funktioniert die Beiladung?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuldbt-464",
+      "poolTitel": "Kosten der Nacherfüllung und Aus-/Einbaukosten",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-12-01",
+        "2026-12-01"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-554",
+      "poolTitel": "Klagerücknahme",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 269 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-02-05",
+        "2027-02-05"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-554",
+      "poolTitel": "Klagerücknahme",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 269 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-29",
+        "2027-02-05",
+        "2027-02-05"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "methodik-909",
+      "poolTitel": "Wiederholen nach dem 7-30-90-Tage-Prinzip",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30",
+        "2027-01-09"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessorz-810",
+      "poolTitel": "Wie entscheidet das Gericht nach übereinstimmender Erledigungserklärung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13",
+        "2026-12-07",
+        "2027-02-07"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "arbeit-253",
+      "poolTitel": "Was ist die Kündigungsschutzklage und welche Frist gilt?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 4 KSchG",
+        "§ 7 KSchG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2027-01-17",
+        "2027-03-30"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zwangsv-828",
+      "poolTitel": "Wann klagt der Dritte, wann erinnert der Schuldner?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 766 ZPO",
+        "§ 767 ZPO",
+        "§ 771 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-12-14"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-04-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vier Bereiche, 18 Themen: dein Selbsttest der Woche",
+          "titelZeilen": [
+            "Vier Bereiche,",
+            "18 Themen: dein",
+            "Selbsttest der Woche"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "GbR: Der Eintretende haftet auch für Altschulden (§ 721a BGB), wer ausscheidet, fünf Jahre nach.",
+            "Kaufmangel: subjektiv und objektiv – nach unten abweichen nur gesondert vereinbart (§ 476 BGB).",
+            "Forderungspfändung: Pfändung sperrt, erst die Überweisung erlaubt das Einziehen (§ 835 ZPO).",
+            "Aufrechnung: Verjährt schadet nicht, wenn die Lage einmal unverjährt bestand (§ 215 BGB).",
+            "Urteil: Stattgabe braucht eine Grundlage, Abweisung verneint alle ernsthaft möglichen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Tatentschluss: Eine Bedingung außerhalb der eigenen Hand schadet nicht.",
+            "Beweisantrag: Tatsache, Beweismittel, Konnexität (§ 244 StPO).",
+            "Mitbestrafte Nachtat: nicht bei neuem Opfer – Verkauf an Gutgläubige ist Betrug.",
+            "§ 315d StGB: drei Tatvarianten, dann konkrete Gefahr und schwere Folge.",
+            "§ 142 Abs. 2 StGB: Unbemerkt weggefahren ist nicht „entschuldigt“.",
+            "§ 303 StGB: Auch die Minderung der Brauchbarkeit ist Beschädigen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Versammlungsverbot: § 80 Abs. 5 VwGO, Gefahr aus Tatsachen, Beschränkung vor Verbot.",
+            "Verkehrszeichen: Allgemeinverfügung, Frist ab erster Begegnung.",
+            "Parteiverbot: verfassungsfeindliche Ziele plus Potentialität (Art. 21 Abs. 2 GG).",
+            "Nichtigkeit: § 44 VwVfG in der Reihenfolge Abs. 2, Abs. 3, Abs. 1.",
+            "Bundesrat: Uneinheitliche Stimmen eines Landes sind ungültig."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Obersatz: wer, was, von wem, woraus – im Strafrecht mit „indem …“.",
+            "Probeklausur: Randbemerkungen sortieren, ein Muster gezielt angehen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "G hat nur einen Pfändungsbeschluss: Kann er von D Zahlung an sich verlangen?",
+            "T verkauft das gestohlene Rad an K: Tritt der Betrug zurück?",
+            "Minister A ruft Ja, Minister B Nein: Wie zählen die Stimmen des Landes?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Vollstreckung und Aufrechnung",
+            "Strafrecht über Konkurrenzen und § 142 StGB",
+            "Öffentliches Recht über Art. 21 und 51 GG",
+            "Den Obersatz in jeder Klausur"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "fueller"
+          ]
+        }
+      ],
+      "caption": "Vier Bereiche, 18 Themen – von der Forderungspfändung über die Unfallflucht bis zur Stimmabgabe im Bundesrat. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch, beantworte die drei Fragen im Selbsttest und notier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "18 Themen der Woche im Selbsttest",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Am Ende der Woche wird das Gelernte in vier Bereiche sortiert und kurz abgefragt.",
+        "handlung": "{A} lifts glowing crystals from a heap into four labeled crates, while {B} picks one crystal from each crate and holds it up to the light to test it.",
+        "hinweisRegie": "Place the note in the free space above the row of four crates, slightly tilted toward the crystal {B} holds up, so the weekly test is linked to the note without covering {A}'s hands.",
+        "alternative": "{B} checks off four lanterns on a bridge one after another, while {A} refills the one that flickers."
+      },
+      "bildSzene": "crystals sorted into four crates",
+      "bildSzeneAlt": "four lanterns checked on bridge",
+      "quellen": [
+        "§§ 721, 721a, 728b BGB",
+        "§§ 434, 476 BGB",
+        "§§ 829, 835 ZPO",
+        "§§ 215, 387 ff. BGB",
+        "§ 313 Abs. 3 ZPO",
+        "§§ 22, 23 StGB",
+        "§ 244 StPO",
+        "§§ 242, 263 StGB",
+        "§ 315d StGB",
+        "§ 142 StGB",
+        "§ 303 StGB",
+        "§ 80 Abs. 5 VwGO",
+        "Art. 8 GG",
+        "§ 35 S. 2 VwVfG",
+        "Art. 21 GG",
+        "§§ 43, 44 VwVfG",
+        "Art. 51, 52 GG"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "wochen-selbsttest-vier-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.236Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-411",
+      "slug": "2027-04-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beiladung: vier Fragen, die du klären musst",
+          "titelZeilen": [
+            "Beiladung:",
+            "vier Fragen, die",
+            "du klären musst"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Kann-Beiladung, Muss-Beiladung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Mit der Beiladung wird ein Dritter Beteiligter des Verwaltungsprozesses (§ 63 Nr. 3 VwGO). Klassiker: Der Nachbar klagt gegen die Baugenehmigung – der Bauherr steht nicht als Partei im Rubrum, ist aber unmittelbar betroffen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Verfahren anhängig",
+              "text": "Solange es noch nicht rechtskräftig abgeschlossen oder in höherer Instanz anhängig ist (§ 65 Abs. 1 VwGO)."
+            },
+            {
+              "titel": "2. Einfache Beiladung",
+              "text": "Rechtliche Interessen des Dritten werden durch die Entscheidung berührt. Das Gericht entscheidet nach Ermessen (§ 65 Abs. 1 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Notwendige Beiladung",
+              "text": "Die Entscheidung kann auch dem Dritten gegenüber nur einheitlich ergehen. Dann muss das Gericht beiladen (§ 65 Abs. 2 VwGO)."
+            },
+            {
+              "titel": "4. Rechtsfolgen",
+              "text": "Eigene Angriffs- und Verteidigungsmittel; abweichende Anträge nur bei notwendiger Beiladung (§ 66 VwGO). Das Urteil bindet ihn (§ 121 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Die Nachbarklage ist der Standardfall der notwendigen Beiladung: Hebt das Gericht die Baugenehmigung auf, greift es unmittelbar in die Rechtsstellung des Bauherrn ein. Unterbleibt die notwendige Beiladung, ist das ein Verfahrensmangel – und die Entscheidung bindet den Dritten nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Berührt die Entscheidung rechtliche Interessen: kann-Beiladung. Muss sie einheitlich ergehen: muss-Beiladung. Beides macht den Dritten zum Beteiligten."
+        },
+        {
+          "art": "cta",
+          "titel": "Beiladung in vier Fragen",
+          "punkte": [
+            "Verfahren noch anhängig?",
+            "Rechtliche Interessen berührt?",
+            "Nur einheitliche Entscheidung möglich?",
+            "Welche Rechte hat der Beigeladene?"
+          ],
+          "icons": [
+            "ordner",
+            "person",
+            "waage",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Beiladung in vier Fragen: Ist das Verfahren noch anhängig? Berührt die Entscheidung rechtliche Interessen des Dritten (einfache Beiladung, § 65 Abs. 1 VwGO)? Kann sie nur einheitlich ergehen (notwendige Beiladung, § 65 Abs. 2 VwGO)? Und welche Rechte hat der Beigeladene nach § 66 VwGO? Standardfall: der Bauherr im Nachbarstreit. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#65vwgo",
+        "#baurecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beiladung: einfach oder notwendig",
+      "coverText": "Kann-Beiladung, Muss-Beiladung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Wen die Entscheidung unmittelbar trifft, der muss mit ins Verfahren.",
+        "handlung": "{A} hovers at a small round table where two parties argue over a house model, and pulls up a third chair for the house owner standing aside, while {B} gestures toward the empty chair.",
+        "hinweisRegie": "Place the note in the free space just above the newly added third chair, slightly tilted toward the house model, so the joined third party is linked to the note without covering {B}'s gesture.",
+        "alternative": "{B} unrolls a building plan between two quarreling neighbours, and {A} waves the builder over to hold the third corner of the plan."
+      },
+      "bildSzene": "third chair pulled up to table",
+      "bildSzeneAlt": "builder holds third corner of plan",
+      "quellen": [
+        "§ 63 Nr. 3 VwGO",
+        "§ 65 VwGO",
+        "§ 66 VwGO",
+        "§ 121 VwGO",
+        "Themenpool: vwgo-411"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.236Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-464",
+      "slug": "2027-04-18-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ausbaukosten gibt es nicht nur für Verbraucher",
+          "unter": "Nacherfüllung · § 439 Abs. 3 BGB",
+          "text": "Seit 2018 gilt der Anspruch für alle Kaufverträge – auch zwischen Unternehmern.",
+          "norm": "§ 439 Abs. 3 BGB",
+          "icon": "baustelle",
+          "sprecher": "Aus- und Einbaukosten gibt es nicht nur für Verbraucher. Früher war das so, heute gilt Paragraf 439 Absatz 3 BGB für jeden Kaufvertrag. Auch für den Handwerker, der beim Händler kauft.",
+          "marken": [
+            "jeder Kaufvertrag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Mangel und Nacherfüllung",
+          "text": "Die Kaufsache war bei Gefahrübergang mangelhaft, der Käufer verlangt Nacherfüllung.",
+          "norm": "§§ 434, 437 Nr. 1, 439 BGB",
+          "sprecher": "Erstens: Die Kaufsache war bei Gefahrübergang mangelhaft, und der Käufer verlangt Nacherfüllung nach Paragraf 439.",
+          "marken": [
+            "Mangel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Eingebaut nach Art und Zweck",
+          "text": "Die Sache wurde ihrer Art und ihrem Verwendungszweck gemäß eingebaut oder angebracht.",
+          "norm": "§ 439 Abs. 3 BGB",
+          "sprecher": "Zweitens: Der Käufer hat die Sache gemäß ihrer Art und ihrem Verwendungszweck eingebaut oder angebracht. Fliesen werden verlegt, Leuchten montiert, Parkett verklebt.",
+          "marken": [
+            "Art und Zweck"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Bevor der Mangel offenbar wurde",
+          "text": "Wer trotz offenbarem Mangel einbaut, bekommt keinen Ersatz.",
+          "norm": "§ 439 Abs. 3 BGB",
+          "sprecher": "Drittens: Der Einbau erfolgte, bevor der Mangel offenbar wurde. Wer sichtbar beschädigte Fliesen trotzdem verlegt, bekommt die Kosten nicht ersetzt.",
+          "marken": [
+            "vor Offenbarwerden"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ersatz der erforderlichen Aufwendungen",
+          "text": "Für Ausbau und erneuten Einbau – ohne Verschulden des Verkäufers.",
+          "norm": "§ 439 Abs. 3 BGB",
+          "sprecher": "Viertens, die Rechtsfolge: Der Verkäufer ersetzt die erforderlichen Aufwendungen für den Ausbau der mangelhaften und den Einbau der mangelfreien Sache. Verschulden braucht es nicht, es ist Teil der Nacherfüllung.",
+          "marken": [
+            "verschuldensunabhängig"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und der Händler?",
+          "text": "Er kann beim Lieferanten Rückgriff nehmen.",
+          "norm": "§ 445a Abs. 1 BGB",
+          "sprecher": "Und der Händler, der zahlen musste? Er kann nach Paragraf 445a die Aufwendungen von seinem Lieferanten ersetzt verlangen, wenn der Mangel schon beim Übergang auf ihn vorlag.",
+          "marken": [
+            "Regress § 445a"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Mangel, Einbau nach Art und Zweck, vor Offenbarwerden – dann Aufwendungsersatz, für jeden Käufer.",
+          "norm": "§ 439 Abs. 3 BGB",
+          "sprecher": "Merke: Mangel, Einbau nach Art und Zweck, vor dem Offenbarwerden. Dann ersetzt der Verkäufer Aus- und Einbau, egal ob der Käufer Verbraucher ist.",
+          "marken": [
+            "für jeden Käufer"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der nächsten Kaufrechtsklausur",
+          "text": "Speichern für den nächsten Einbaufall.",
+          "sprecher": "Speicher dir das für die nächste Kaufrechtsklausur. Und prüf beim Unternehmer nicht mehr, ob er Verbraucher ist.",
+          "marken": [
+            "B2B inklusive"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Aus- und Einbaukosten gibt es nicht nur für Verbraucher. Seit 2018 gilt § 439 Abs. 3 BGB für jeden Kaufvertrag: Hat der Käufer die mangelhafte Sache nach Art und Verwendungszweck eingebaut, bevor der Mangel offenbar wurde, ersetzt der Verkäufer die erforderlichen Aufwendungen – ohne Verschulden. Der Händler nimmt dann nach § 445a BGB beim Lieferanten Rückgriff. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#439bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aus- und Einbaukosten: für jeden Käufer",
+      "titelZeilen": [
+        "Ausbaukosten gibt",
+        "es nicht nur für",
+        "Verbraucher"
+      ],
+      "coverText": "Seit 2018 auch zwischen Unternehmern",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Auch ein gewerblicher Käufer bekommt die Kosten für Aus- und Einbau einer mangelhaften Sache ersetzt.",
+        "handlung": "{A} pries a cracked tile out of a freshly laid floor with a small lever, while {B} kneels beside him and hands him an intact replacement tile.",
+        "hinweisRegie": "Place the note in the free space just above the gap in the tiled floor, slightly tilted toward the replacement tile in {B}'s hand, so the swap is linked to the note without covering {A}'s lever.",
+        "alternative": "{B} unscrews a flickering lamp from a workshop ceiling and {A} holds up a working one, ready to mount it."
+      },
+      "bildSzene": "cracked tile swapped for intact",
+      "bildSzeneAlt": "flickering lamp replaced in workshop",
+      "quellen": [
+        "§ 434 BGB",
+        "§ 437 Nr. 1 BGB",
+        "§ 439 Abs. 3 BGB",
+        "§ 445a Abs. 1 BGB",
+        "Themenpool: schuldbt-464"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung-b2b",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.241Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-554",
+      "ueberzeile": "Prüfungsfrage Zivilprozessrecht",
+      "titel": "Beklagter B hat schon zur Hauptsache verhandelt. Kann K die Klage jetzt noch allein zurücknehmen?",
+      "optionen": [
+        "Ja – die Rücknahme ist bis zum Urteil jederzeit frei",
+        "Nein – nötig ist schon ab Zustellung der Klage die Einwilligung",
+        "Nein – ab der Verhandlung zur Hauptsache braucht K die Einwilligung des B"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 269 Abs. 1, 2 ZPO",
+        "Themenpool: zpo-554"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-554",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ab Verhandlung zur Hauptsache nur mit Einwilligung des Beklagten",
+      "text": "Bis zum Beginn der mündlichen Verhandlung des Beklagten zur Hauptsache kann K frei zurücknehmen, danach nur mit Einwilligung (§ 269 Abs. 1 ZPO). B soll ein Sachurteil erreichen können. Schweigt B zwei Wochen nach Zustellung des Rücknahmeschriftsatzes, gilt die Einwilligung als erteilt – wenn er auf diese Folge hingewiesen wurde (§ 269 Abs. 2 S. 4 ZPO).",
+      "norm": "§ 269 Abs. 1, 2 ZPO",
+      "quellen": [
+        "§ 269 Abs. 1, 2 ZPO",
+        "Themenpool: zpo-554"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.242Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – die Rücknahme ist bis zum Urteil jederzeit frei",
+        "Nein – nötig ist schon ab Zustellung der Klage die Einwilligung",
+        "Nein – ab der Verhandlung zur Hauptsache braucht K die Einwilligung des B"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-909",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB im 7-30-90-Rhythmus: vom Schema zur Abgrenzung",
+      "text": "Nach 7 Tagen: die Merkmale ohne Unterlagen aufschreiben – Täuschung, Irrtum, Vermögensverfügung, Schaden, Vorsatz, Bereicherungsabsicht. Nach 30 Tagen: an einem Mini-Fall anwenden. Nach 90 Tagen: Problemfelder ergänzen, etwa Dreiecksbetrug oder die Abgrenzung zum Trickdiebstahl. Erst abrufen, dann nachschlagen.",
+      "norm": "§ 263 StGB",
+      "quellen": [
+        "§ 263 StGB (Beispiel)",
+        "Themenpool: methodik-909"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-810",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Beide Parteien erklären die Hauptsache für erledigt: Entscheidet das Gericht durch Urteil?",
+      "falsch": "Nach übereinstimmender Erledigungserklärung ergeht ein Urteil, das die Erledigung feststellt und über die Kosten entscheidet.",
+      "richtigText": "Die Hauptsache ist nicht mehr rechtshängig. Das Gericht entscheidet nur noch über die Kosten – durch Beschluss, nach billigem Ermessen unter Berücksichtigung des bisherigen Sach- und Streitstands (§ 91a Abs. 1 ZPO). Tenor etwa: „Die Kosten des Rechtsstreits trägt der Beklagte.“ Rechtsmittel: sofortige Beschwerde (§ 91a Abs. 2 ZPO).",
+      "quellen": [
+        "§ 91a ZPO",
+        "Themenpool: assessorz-810"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-253",
+      "ueberzeile": "Klausurtipp Arbeitsrecht",
+      "titel": "Kleinbetrieb oder Wartezeit nicht erfüllt: Die Drei-Wochen-Frist gilt trotzdem",
+      "text": "Der allgemeine Kündigungsschutz greift nur nach sechs Monaten (§ 1 Abs. 1 KSchG) und nicht im Kleinbetrieb (§ 23 Abs. 1 KSchG). Die Klagefrist des § 4 KSchG gilt aber auch dort – für jeden Unwirksamkeitsgrund. Wer sie versäumt, verliert nach § 7 KSchG. Ausnahme: Ohne schriftliche Kündigung (§ 623 BGB) beginnt die Frist nicht.",
+      "quellen": [
+        "§ 1 Abs. 1 KSchG",
+        "§ 4 KSchG",
+        "§ 7 KSchG",
+        "§ 23 Abs. 1 KSchG",
+        "§ 623 BGB",
+        "Themenpool: arbeit-253"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-828",
+      "ueberzeile": "4 Punkte Zwangsvollstreckung",
+      "titel": "Drittwiderspruchsklage: vier Punkte, bevor der Dritte gewinnt",
+      "text": "Mit § 771 ZPO wehrt sich ein Dritter dagegen, dass in einen Gegenstand vollstreckt wird, der ihm zusteht.",
+      "punkte": [
+        "Zuständig: das Gericht, in dessen Bezirk vollstreckt wird (§§ 771 I, 802)",
+        "Rechtsschutzbedürfnis: ab Beginn bis zum Ende der Vollstreckung",
+        "Die Veräußerung hinderndes Recht, etwa Eigentum",
+        "Keine Einwendung des Gläubigers, etwa eigene Haftung des Dritten"
+      ],
+      "quellen": [
+        "§ 771 ZPO",
+        "§ 802 ZPO",
+        "Themenpool: zwangsv-828"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:16.242Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
