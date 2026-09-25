@@ -1,0 +1,907 @@
+{
+  "datum": "2027-04-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "schuld-018",
+        "themaTitel": "Was besagt die Saldotheorie?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "anklage-859",
+        "themaTitel": "Wie bildet man die Normenkette der Anklage?",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "grundr-613"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "grundr-613"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "zpo-570"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "fehler",
+        "themaId": "europa-934"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "tipp",
+        "themaId": "sachen-513"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "zahl",
+        "themaId": "anklage-866"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuld-018",
+      "poolTitel": "Was besagt die Saldotheorie?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB",
+        "§ 818 Abs. 3 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2027-04-02"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-859",
+      "poolTitel": "Wie bildet man die Normenkette der Anklage?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 52 StGB",
+        "§ 53 StGB",
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2027-02-16"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-613",
+      "poolTitel": "Glaubens- und Gewissensfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-613",
+      "poolTitel": "Glaubens- und Gewissensfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-570",
+      "poolTitel": "Klage auf vorzugsweise Befriedigung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 805 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2027-02-27"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "europa-934",
+      "poolTitel": "Rückforderung unionsrechtswidriger Beihilfen: § 48 VwVfG unter dem Effektivitätsgebot",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2026-12-17",
+        "2027-02-21"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "sachen-513",
+      "poolTitel": "Hypothek: Entstehung, Übertragung, Einreden",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1113 ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-08",
+        "2027-02-12"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "anklage-866",
+      "poolTitel": "Welche Verfahrenshindernisse prüft man von Amts wegen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 206a StPO",
+        "§ 260 Abs. 3 StPO",
+        "§ 78 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-10-23",
+        "2027-01-04"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-04-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: vier Bereiche, 18 Themen im Schnelldurchlauf",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "vier Bereiche,",
+            "18 Themen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 434 BGB: subjektive, objektive und Montageanforderungen – alle drei zählen.",
+            "Betriebsausfall wegen Mangels: nach dem BGH §§ 437 Nr. 3, 280 Abs. 1 BGB – ohne Verzug.",
+            "Annahmeverzug: Ware untergegangen, Kaufpreis bleibt (§ 326 Abs. 2 S. 1 BGB).",
+            "Schutzpflicht verletzt: statt der Leistung über § 282, Rücktritt über § 324 BGB.",
+            "Eingebaute Fenster: § 946 BGB bricht den Eigentumsvorbehalt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 224 Abs. 1 Nr. 4 StGB: Nach dem BGH genügt ein Gehilfe am Tatort.",
+            "Alternative Kausalität: Wirkt jede Dosis allein tödlich, sind beide kausal.",
+            "Raub oder räuberische Erpressung: Rspr. äußeres Bild, Literatur Vermögensverfügung.",
+            "Besetzungsrüge: Beruhen vermutet – Einwand und vollständiger Vortrag bleiben nötig.",
+            "Omnimodo facturus: Bestärken ist psychische Beihilfe, keine Anstiftung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Verfassungsbeschwerde: Nach dem Eilverfahren verlangt die Subsidiarität meist die Hauptsache.",
+            "Geeignet heißt: Das Mittel fördert den Zweck – sicher erreichen muss es ihn nicht.",
+            "Erledigung vor Klageerhebung: FFK analog § 113 Abs. 1 S. 4 VwGO.",
+            "Erstattungsanspruch: erst die Spezialnorm; auf Entreicherung beruft sich nur der Bürger.",
+            "Sachliche Unzuständigkeit: weder § 45 noch § 46 VwVfG hilft.",
+            "APR: Intimsphäre unantastbar, Privat- und Sozialsphäre abwägbar."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Obersatz und Ergebnis: Frage und Antwort mit denselben Elementen.",
+            "Blackout: Stift weg, Fallfrage, Handwerk, Zeitplan."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Käufer im Annahmeverzug, Ware zerstört: Muss er zahlen?",
+            "Fenster eingebaut, V unbezahlt: Hat V einen Anspruch gegen den gutgläubigen Bauherrn?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Pflicht und Gefahr",
+            "Strafrecht über Beteiligung und Abgrenzung",
+            "Öffentliches Recht über Klageart und Heilung",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – vom Annahmeverzug über die Abgrenzung von Raub und räuberischer Erpressung bis zu §§ 45, 46 VwVfG. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, was noch wackelt. Speichern für die Wiederholung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Am Ende der Woche wird alles Gelernte noch einmal geordnet und auf Lücken geprüft.",
+        "handlung": "{A} sorts glowing cards into four small crates, while {B} taps one card that flickers dimly with his baton.",
+        "hinweisRegie": "Place the note in the free space above the four crates, slightly tilted toward the dimly flickering card, so the review and the one open gap stay visible without covering {A}'s sorting hands.",
+        "alternative": "{B} unrolls a long scroll of the week, and {A} marks one spot with a small glowing pin."
+      },
+      "bildSzene": "cards sorted into four crates",
+      "bildSzeneAlt": "week scroll, one spot pinned",
+      "quellen": [
+        "§ 434 BGB",
+        "§§ 437 Nr. 3, 280 BGB",
+        "§ 326 Abs. 2 BGB",
+        "§§ 241, 282, 324 BGB",
+        "§ 946 BGB",
+        "§ 224 StGB",
+        "§§ 249, 253, 255 StGB",
+        "§ 338 Nr. 1 StPO",
+        "§§ 26, 27 StGB",
+        "§ 90 Abs. 2 BVerfGG",
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 49a VwVfG",
+        "§§ 45, 46 VwVfG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 1 Abs. 1 GG",
+        "Themenpool: methodik-898",
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.569Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-018",
+      "slug": "2027-04-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Saldotheorie in vier Schritten – mit zwei Ausnahmen",
+          "titelZeilen": [
+            "Saldotheorie in",
+            "vier Schritten – mit",
+            "zwei Ausnahmen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Ein Anspruch auf den Saldo",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausgangslage",
+          "text": "V verkauft K ein Auto für 10.000 €; der Kaufvertrag ist nichtig, die Übereignung wirksam. K hat gezahlt. Ohne sein Verschulden wird das Auto bei einem Unfall zerstört. Kann K die 10.000 € zurückverlangen, obwohl er das Auto nicht mehr herausgeben kann?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema",
+          "schritte": [
+            {
+              "titel": "Leistungskondiktion",
+              "text": "§ 812 Abs. 1 S. 1 Alt. 1 BGB für beide Seiten: Jeder hat durch Leistung ohne Rechtsgrund erlangt."
+            },
+            {
+              "titel": "Inhalt",
+              "text": "Herausgabe des Erlangten; ist sie unmöglich, Wertersatz (§ 818 Abs. 2 BGB)."
+            },
+            {
+              "titel": "Entreicherung",
+              "text": "Isoliert betrachtet könnte sich K für das zerstörte Auto auf § 818 Abs. 3 BGB berufen."
+            },
+            {
+              "titel": "Saldierung",
+              "text": "Nach der Saldotheorie der Rspr. gibt es nur einen Anspruch auf den Saldo: Der Wert des Autos wird abgezogen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Im Fall",
+          "text": "War das Auto 10.000 € wert, bleibt für K nichts. Der Gedanke: Wer aus einem gegenseitigen Vertrag rückabwickelt, soll den Verlust der empfangenen Leistung nicht einseitig auf den anderen abwälzen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die zwei Ausnahmen",
+          "links": {
+            "titel": "Minderjähriger",
+            "punkte": [
+              "Sein Schutz geht vor",
+              "Keine Saldierung zu seinen Lasten"
+            ]
+          },
+          "rechts": {
+            "titel": "Arglistig Getäuschter",
+            "punkte": [
+              "Nach dem BGH keine Saldierung zu seinen Lasten",
+              "Der Täuschende ist nicht schutzwürdig"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Gegenansicht",
+          "text": "Teile der Literatur lehnen die Saldotheorie ab und bleiben bei zwei selbstständigen Ansprüchen (Zweikondiktionentheorie) – korrigiert etwa über die Wertungen des § 346 Abs. 3 S. 1 Nr. 3 BGB. Klausur: Rspr. zugrunde legen, den Streit nennen, wenn das Ergebnis kippt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nichtiger gegenseitiger Vertrag: ein Anspruch auf den Saldo – nicht zu Lasten Minderjähriger und arglistig Getäuschter."
+        },
+        {
+          "art": "cta",
+          "titel": "Rückabwicklung in vier Fragen",
+          "punkte": [
+            "Wer hat was erlangt?",
+            "Herausgabe oder Wertersatz?",
+            "Entreichert?",
+            "Saldo – oder eine Ausnahme?"
+          ],
+          "icons": [
+            "kreislauf",
+            "paket",
+            "geldbeutel",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Saldotheorie in vier Schritten: Leistungskondiktion für beide Seiten, Herausgabe oder Wertersatz, Entreicherung, Saldierung. Bei nichtigen gegenseitigen Verträgen gibt es nach der Rspr. nur einen Anspruch auf den Saldo – der Wert der untergegangenen Leistung wird abgezogen. Ausnahmen: Minderjährige und arglistig Getäuschte. Speichern für die nächste Bereicherungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#saldotheorie",
+        "#818bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Saldotheorie: Schema und Ausnahmen",
+      "coverText": "Ein Anspruch auf den Saldo",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Bei der Rückabwicklung eines nichtigen Tauschs wird verrechnet: Wer seine empfangene Leistung verloren hat, bekommt entsprechend weniger zurück.",
+        "handlung": "{A} places a broken crystal on one side of a balance scale, while {B} removes a matching stack of coins from the other side until the scale levels out.",
+        "hinweisRegie": "Place the note in the free space above the leveled balance beam, slightly tilted toward the broken crystal, so the offsetting stays the focus without covering {B}'s hands.",
+        "alternative": "{B} draws a single line under two columns of chalk tallies on a wall, and {A} points at the small remainder."
+      },
+      "bildSzene": "broken crystal, coins removed, balance",
+      "bildSzeneAlt": "chalk tallies, remainder circled",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+        "§ 818 Abs. 2, 3 BGB",
+        "§ 346 Abs. 3 BGB",
+        "Themenpool: schuld-018"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-schritte-zwei-ausnahmen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.569Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-859",
+      "slug": "2027-04-25-b3",
+      "titelZeilen": [
+        "Versuch, Mittäter,",
+        "zwei Taten: Wie",
+        "lautet die Kette?"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Versuch, Mittäter, zwei Taten: Wie lautet die Kette?",
+          "unter": "Anklagesatz · § 200 StPO",
+          "text": "Die Paragrafenkette nennt alle anzuwendenden Strafvorschriften.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "icon": "dokument",
+          "sprecher": "Versuch, Mittäter, zwei Taten – wie lautet die Kette? So baust du sie Stück für Stück.",
+          "marken": [
+            "Paragrafenkette"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Tatbestände",
+          "text": "Zuerst die verwirklichten Tatbestände: §§ 223 Abs. 1, 242 Abs. 1 StGB.",
+          "norm": "§§ 223, 242 StGB",
+          "sprecher": "Der Fall: A und B wollen gemeinsam Zigaretten aus einem Kiosk stehlen und werden vor der Wegnahme ertappt. Eine Woche später schlägt A allein einen Passanten, der Strafantrag stellt. Schritt eins: die Tatbestände. Du nennst die verwirklichten Strafvorschriften mit Absatz, üblich aufsteigend: 223 Absatz 1 und 242 Absatz 1.",
+          "marken": [
+            "Tatbestände"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Versuch",
+          "text": "Versuchsstrafbarkeit und Versuchsnormen: § 242 Abs. 2, §§ 22, 23 Abs. 1 StGB.",
+          "norm": "§§ 22, 23 StGB",
+          "sprecher": "Schritt zwei: der Versuch. Beim Vergehen gehört die Norm dazu, die den Versuch für strafbar erklärt, hier 242 Absatz 2. Dann folgen die Paragrafen 22 und 23 Absatz 1.",
+          "marken": [
+            "§ 242 II StGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beteiligung",
+          "text": "Gemeinsam gehandelt: § 25 Abs. 2 StGB.",
+          "norm": "§ 25 Abs. 2 StGB",
+          "sprecher": "Schritt drei: die Beteiligungsform. Beim Diebstahlsversuch handeln A und B gemeinsam, also Paragraf 25 Absatz 2. Bei der Körperverletzung handelt A allein – das zeigt die Schilderung der Tat im Anklagesatz.",
+          "marken": [
+            "Mittäterschaft"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Konkurrenzen",
+          "text": "Zwei selbstständige Taten: § 53 StGB ans Ende.",
+          "norm": "§ 53 StGB",
+          "sprecher": "Schritt vier: die Konkurrenzen. Diebstahlsversuch und Körperverletzung sind zwei selbstständige Handlungen, also Tatmehrheit. Paragraf 53 steht am Ende der Kette. Bei Tateinheit wäre es Paragraf 52.",
+          "marken": [
+            "§ 53 ans Ende"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die fertige Kette",
+          "text": "§§ 223 Abs. 1, 242 Abs. 1, 2, 22, 23 Abs. 1, 25 Abs. 2, 53 StGB",
+          "norm": null,
+          "sprecher": "Zusammen: strafbar als versuchter gemeinschaftlicher Diebstahl in Tatmehrheit mit vorsätzlicher Körperverletzung, gemäß 223 Absatz 1, 242 Absatz 1 und 2, 22, 23 Absatz 1, 25 Absatz 2 und 53 StGB. Die genaue Reihenfolge variiert nach Landespraxis.",
+          "marken": [
+            "fertige Kette"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Reihenfolge",
+          "text": "Tatbestände, Versuch, Beteiligung, Konkurrenzen.",
+          "norm": null,
+          "sprecher": "Merke die Reihenfolge: Tatbestände, Versuch, Beteiligung, Konkurrenzen. Rechtsfolgen wie die Entziehung der Fahrerlaubnis kämen noch dazu.",
+          "marken": [
+            "vier Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Anklageschrift",
+          "text": "Speichern und vor dem Anklagesatz ansehen.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Anklageschrift. Und prüf vor der Reinschrift, ob jede Norm der Kette auch im Gutachten geprüft ist.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Versuch, Mittäter, zwei Taten – wie lautet die Paragrafenkette? Üblich ist die Reihenfolge: verwirklichte Tatbestände, Versuchsnormen (einschließlich der Versuchsstrafbarkeit beim Vergehen), Beteiligungsform, Konkurrenzen. Im Beispiel: §§ 223 Abs. 1, 242 Abs. 1, 2, 22, 23 Abs. 1, 25 Abs. 2, 53 StGB. Die genaue Reihenfolge variiert nach Landespraxis. Speichern für die nächste Anklageschrift.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#anklageschrift",
+        "#stpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Paragrafenkette im Anklagesatz bauen",
+      "coverText": "Tatbestand, Versuch, Beteiligung, §",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Paragrafenkette entsteht in einer festen Reihenfolge, Glied für Glied.",
+        "handlung": "{A} hovers and links metal chain rings together one after another, while {B} nervously holds out the next ring from a small tray.",
+        "hinweisRegie": "Place the note in the free space just beyond the last linked ring, slightly tilted toward the tray, so the growing chain stays the focus without covering {B}'s outstretched hand.",
+        "alternative": "{B} stacks four differently shaped blocks into a tower, and {A} checks each one clicks into place."
+      },
+      "bildSzene": "chain rings linked one by one",
+      "bildSzeneAlt": "four blocks stacked into tower",
+      "quellen": [
+        "§ 200 Abs. 1 S. 1 StPO",
+        "§§ 223, 242 StGB",
+        "§§ 22, 23, 25 StGB",
+        "§§ 52, 53 StGB",
+        "Themenpool: anklage-859"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "kettenfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.570Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-613",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Ein Land verbietet allen Lehrerinnen an öffentlichen Schulen pauschal das Kopftuch. Hält das nach dem BVerfG?",
+      "optionen": [
+        "Ja – die staatliche Neutralität verlangt das stets",
+        "Nein – nötig ist eine hinreichend konkrete Gefahr",
+        "Ja, solange das Verbot für alle Religionen gilt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 4 Abs. 1, 2 GG",
+        "Themenpool: grundr-613"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.570Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-613",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – ein pauschales Verbot ist unverhältnismäßig",
+      "text": "Das religiös begründete Kopftuch ist durch Art. 4 Abs. 1, 2 GG geschützt. Ein pauschales Verbot schon wegen einer abstrakten Gefahr für Schulfrieden oder staatliche Neutralität hat das BVerfG als unverhältnismäßig verworfen; nötig ist eine hinreichend konkrete Gefahr. Die Schranke folgt mangels Gesetzesvorbehalt aus kollidierendem Verfassungsrecht.",
+      "norm": "Art. 4 Abs. 1, 2 GG",
+      "quellen": [
+        "Art. 4 Abs. 1, 2 GG",
+        "Art. 7 Abs. 1 GG",
+        "Themenpool: grundr-613"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.570Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – die staatliche Neutralität verlangt das stets",
+        "Nein – nötig ist eine hinreichend konkrete Gefahr",
+        "Ja, solange das Verbot für alle Religionen gilt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-570",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 805 ZPO: Wer verklagt wird, wo – und was mit dem Erlös passiert",
+      "text": "Die Klage auf vorzugsweise Befriedigung richtet sich gegen den pfändenden Gläubiger; wird auch der Schuldner verklagt, sind beide Streitgenossen (Abs. 3). Zuständig ist das Vollstreckungsgericht, bei landgerichtlichem Streitwert das Landgericht seines Bezirks (Abs. 2). Wird der Anspruch glaubhaft gemacht, ordnet das Gericht die Hinterlegung des Erlöses an (Abs. 4).",
+      "norm": "§ 805 ZPO",
+      "quellen": [
+        "§ 805 ZPO",
+        "Themenpool: zpo-570"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.570Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-934",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Unionsrechtswidrige Beihilfe: Kann sich der Empfänger auf Entreicherung berufen?",
+      "falsch": "Die Beihilfe ist längst investiert und verbraucht – also ist der Empfänger nach § 49a Abs. 2 VwVfG i. V. m. § 818 Abs. 3 BGB entreichert.",
+      "richtigText": "Nach der Rspr. ist der Entreicherungseinwand hier regelmäßig ausgeschlossen: Ein sorgfältiger Unternehmer vergewissert sich, dass das Notifizierungsverfahren (Art. 108 Abs. 3 AEUV) eingehalten wurde. Wer das unterlässt, kannte die Umstände grob fahrlässig nicht (§ 49a Abs. 2 S. 2 VwVfG). Das Effektivitätsgebot verlangt die Rückforderung.",
+      "quellen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 49a VwVfG",
+        "Themenpool: europa-934"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.570Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-513",
+      "ueberzeile": "Klausurtipp Sachenrecht",
+      "titel": "Hypothek: Einreden gegen die Forderung prüfst du über § 1137 BGB",
+      "text": "Der Eigentümer kann dem Hypothekengläubiger die Einreden entgegenhalten, die dem persönlichen Schuldner gegen die Forderung zustehen (§ 1137 Abs. 1 BGB) – etwa eine Stundung. Wurde die Hypothek abgetreten, denk an § 1138 BGB: Ein gutgläubiger Erwerber erwirbt sie insoweit frei von diesen Einreden. Die Forderung selbst bleibt einredebehaftet.",
+      "quellen": [
+        "§ 1137 BGB",
+        "§ 1138 BGB",
+        "§ 892 BGB",
+        "Themenpool: sachen-513"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.570Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-866",
+      "ueberzeile": "4 Punkte Anklage",
+      "titel": "Verjährung als Verfahrenshindernis: vier Prüfpunkte",
+      "text": "Ist die Tat verjährt, klagt die StA nicht an, sondern stellt nach § 170 Abs. 2 StPO ein.",
+      "punkte": [
+        "Frist nach der Höchststrafe (§ 78 Abs. 3 StGB)",
+        "Beginn mit Beendigung der Tat (§ 78a StGB)",
+        "Ruhen (§ 78b StGB)",
+        "Unterbrechung (§ 78c StGB) – absolute Grenze"
+      ],
+      "quellen": [
+        "§§ 78–78c StGB",
+        "§ 170 Abs. 2 StPO",
+        "Themenpool: anklage-866"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:50.570Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
