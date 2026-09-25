@@ -687,7 +687,10 @@ const NORM_ZITAT = /(?:§{1,2}|Art\.)\s*\d+[a-z]*(?:\s+(?:(?:Abs\.|Satz|S\.|Nr\.
 
 function haengenderNormbruch(zeilen) {
   return zeilen.slice(0, -1).some((z) =>
-    /(?:§{1,2}|Art\.|Abs\.|Satz|S\.|Nr\.|Alt\.|lit\.)\s*$/i.test(String(z || "").trim())
+    /* Nur echte Normbestandteile am Zeilenende – mit Wortgrenze und
+       Großschreibung, sonst gelten „Schadensersatz“ oder „arglos.“ als
+       hängende Fundstelle und die redaktionellen Zeilen werden verworfen. */
+    /(?:^|[\s(])(?:§{1,2}|Art\.|Abs\.|Satz|S\.|Nr\.|Alt\.|lit\.)\s*$/.test(String(z || "").trim())
   );
 }
 

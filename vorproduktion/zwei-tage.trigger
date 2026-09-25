@@ -1,5 +1,5 @@
 {
   "modus": "hook-update",
-  "tage": ["2026-10-02"],
-  "grund": "Runde 3: belegte Zuspitzung für 02.10. b3 (Reel neu bauen, Cover mit Freisteller)"
+  "tage": ["2026-09-29"],
+  "grund": "Cover 29.09. b1 nach Renderer-Korrektur (hängender Normbruch ohne Wortgrenze) neu rendern"
 }
