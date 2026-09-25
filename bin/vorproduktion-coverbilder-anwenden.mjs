@@ -320,6 +320,7 @@ for (const name of fs.readdirSync(vorproduktionDir).sort()) {
   tage.set(m[1], JSON.parse(fs.readFileSync(path.join(vorproduktionDir, name), "utf8")));
 }
 
+const zuordnung = new Map(ZUORDNUNG);
 for (const name of pngs) {
   const ziel = zuordnungFuerDatei(name);
   if (ziel) zuordnung.set(name.toLowerCase(), ziel);
@@ -334,7 +335,6 @@ for (const [datum, tag] of tage) {
   }
 }
 
-const zuordnung = new Map(ZUORDNUNG);
 for (const name of pngs) {
   if (zuordnung.has(name.toLowerCase())) continue;
   const datei = path.join(coverDir, name);
