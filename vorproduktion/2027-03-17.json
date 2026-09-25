@@ -1,0 +1,874 @@
+{
+  "datum": "2027-03-17",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-635",
+        "themaTitel": "Konkrete Normenkontrolle",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "arbeit-042",
+        "themaTitel": "Wann ist eine außerordentliche Kündigung gerechtfertigt?",
+        "fach": "arbeit",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-719",
+        "themaTitel": "Vorsatzformen: Absicht, direkter Vorsatz, Eventualvorsatz",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "schuldbt-476"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "schuldbt-476"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "verwalt-388"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "streitstand",
+        "themaId": "assessorz-822"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "merksatz",
+        "themaId": "strafat-060"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "begriff",
+        "themaId": "anklage-800"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-635",
+      "poolTitel": "Konkrete Normenkontrolle",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 100 I GG; §§ 80 ff. BVerfGG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "arbeit-042",
+      "poolTitel": "Wann ist eine außerordentliche Kündigung gerechtfertigt?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 626 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28",
+        "2026-09-28"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-719",
+      "poolTitel": "Vorsatzformen: Absicht, direkter Vorsatz, Eventualvorsatz",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-02-13"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-476",
+      "poolTitel": "Verträge über digitale Produkte",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 327 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2027-02-17"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-476",
+      "poolTitel": "Verträge über digitale Produkte",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 327 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2027-02-17"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-388",
+      "poolTitel": "Was ist ein Verwaltungsakt mit Drittwirkung?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG",
+        "§ 80a VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-822",
+      "poolTitel": "Wie entstehen Anwaltsgebühren im Zivilprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "RVG",
+        "§ 91 ZPO"
+      ],
+      "typ": "formel",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2027-01-12"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafat-060",
+      "poolTitel": "Was ist ein intensiver bzw. extensiver Notwehrexzess?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 33 StGB",
+        "§ 32 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28",
+        "2026-12-06"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "anklage-800",
+      "poolTitel": "Aktenvortrag Strafrecht",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StGB; StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-04",
+        "2026-12-04",
+        "2027-01-01"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-635",
+      "slug": "2027-03-17-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Bloße Zweifel reichen nicht für die Richtervorlage",
+          "titelZeilen": [
+            "Bloße Zweifel",
+            "reichen nicht für",
+            "die Richtervorlage"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Vorlage erst bei Überzeugung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Richterin R am Amtsgericht zweifelt, ob ein Bundesgesetz aus dem Jahr 2015, auf das es in ihrem Fall ankommt, mit Art. 3 Abs. 1 GG vereinbar ist. Sicher ist sie sich nicht. Muss sie das Verfahren aussetzen und dem BVerfG vorlegen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Art. 100 Abs. 1 GG in vier Schritten",
+          "schritte": [
+            {
+              "titel": "Vorlageberechtigt",
+              "text": "Jedes Gericht – vom Amtsgericht bis zu den obersten Bundesgerichten."
+            },
+            {
+              "titel": "Vorlagegegenstand",
+              "text": "Formelles, nachkonstitutionelles Gesetz. Rechtsverordnungen und Satzungen verwirft das Fachgericht selbst."
+            },
+            {
+              "titel": "Überzeugung",
+              "text": "Das Gericht muss von der Verfassungswidrigkeit überzeugt sein. Zweifel genügen nicht."
+            },
+            {
+              "titel": "Entscheidungserheblichkeit",
+              "text": "Bei Gültigkeit müsste es anders entscheiden als bei Ungültigkeit; Begründung nach § 80 Abs. 2 BVerfGG."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Lösung",
+          "text": "Nein. Bloße Zweifel lösen keine Vorlagepflicht aus. R prüft selbst und versucht eine verfassungskonforme Auslegung. Gelingt sie oder bleibt es bei Zweifeln, wendet R das Gesetz an. Erst wenn sie von der Verfassungswidrigkeit überzeugt ist, setzt sie aus und legt vor."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "punkte": [
+            "Das Fachgericht verwirft das Parlamentsgesetz selbst – das Verwerfungsmonopol liegt beim BVerfG.",
+            "Schon bei Zweifeln vorlegen – verlangt ist Überzeugung.",
+            "Die verfassungskonforme Auslegung überspringen."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Prüfen darf jedes Gericht, verwerfen nur das BVerfG. Vorgelegt wird erst bei Überzeugung – nicht bei Zweifeln."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 100 GG in vier Zügen",
+          "punkte": [
+            "Formelles, nachkonstitutionelles Gesetz?",
+            "Überzeugt – nicht nur zweifelnd?",
+            "Verfassungskonforme Auslegung versucht?",
+            "Entscheidungserheblich und begründet?"
+          ],
+          "icons": [
+            "paragraf",
+            "waage",
+            "lupe",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Bloße Zweifel an einem Gesetz reichen für eine Richtervorlage nicht. Art. 100 Abs. 1 GG verlangt, dass das Gericht von der Verfassungswidrigkeit eines formellen, nachkonstitutionellen Gesetzes überzeugt ist und es für die Entscheidung auf dessen Gültigkeit ankommt. Vorher versucht es eine verfassungskonforme Auslegung. Verwerfen darf das Parlamentsgesetz nur das BVerfG. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsrecht",
+        "#art100gg",
+        "#normenkontrolle",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Konkrete Normenkontrolle: erst bei Überzeugung",
+      "coverText": "Vorlage erst bei Überzeugung",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Ein Gericht darf ein Gesetz nur dann nach Karlsruhe schicken, wenn es von dessen Verfassungswidrigkeit überzeugt ist – Zweifel reichen nicht.",
+        "handlung": "{A} tries to push a wobbling parcel into a sealed delivery chute, while {B} calmly holds the chute's flap shut and points to a small balance beside it that has not yet tipped fully to one side.",
+        "hinweisRegie": "Place the note in the free space just above the undecided balance, slightly tilted toward it, so it reads as not yet convinced without covering the chute flap or the hands.",
+        "alternative": "{B} waits at a gate that only opens when the lamp above it glows fully bright, while {A} nervously watches the lamp flicker at half strength."
+      },
+      "bildSzene": "parcel held back at sealed chute",
+      "bildSzeneAlt": "gate opens only at full lamp",
+      "quellen": [
+        "Art. 100 Abs. 1 GG",
+        "§ 80 BVerfGG",
+        "Themenpool: staat-635"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verbreiteter-irrtum",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.762Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "arbeit",
+      "klausur": 1,
+      "fachLabel": "Arbeitsrecht",
+      "themaId": "arbeit-042",
+      "slug": "2027-03-17-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kleinigkeit mitgenommen: Fristlos gekündigt – zu Recht?",
+          "titelZeilen": [
+            "Kleinigkeit",
+            "mitgenommen:",
+            "Fristlos gekündigt",
+            "– zu Recht?"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Zwei Stufen plus Abmahnung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A arbeitet seit 20 Jahren beanstandungsfrei im Betrieb. Eines Tages steckt er Waren des Arbeitgebers im Wert von wenigen Euro ein. Der Arbeitgeber erfährt davon und kündigt eine Woche später fristlos. Ist die Kündigung wirksam?"
+        },
+        {
+          "art": "schritte",
+          "titel": "§ 626 BGB, Schritt für Schritt",
+          "schritte": [
+            {
+              "titel": "1. Wichtiger Grund an sich",
+              "text": "Vermögensdelikte zulasten des Arbeitgebers sind nach dem BAG an sich geeignet – auch bei geringem Wert."
+            },
+            {
+              "titel": "2. Interessenabwägung",
+              "text": "Einzelfall: Dauer und Verlauf des Arbeitsverhältnisses, Gewicht des Vertrauensverlusts, Wiederholungsgefahr."
+            },
+            {
+              "titel": "3. Milderes Mittel",
+              "text": "Hätte eine Abmahnung oder eine ordentliche Kündigung genügt? Die fristlose Kündigung ist das letzte Mittel."
+            },
+            {
+              "titel": "4. Zwei-Wochen-Frist",
+              "text": "Ab Kenntnis der maßgebenden Tatsachen (§ 626 Abs. 2 BGB) – hier gewahrt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Lösung",
+          "text": "Ein wichtiger Grund an sich liegt vor. In der Abwägung wiegt die lange, beanstandungsfreie Beschäftigung schwer; bei geringem Schaden und ohne Wiederholungsgefahr kann eine Abmahnung genügen. Dann ist die fristlose Kündigung unverhältnismäßig. Mit guter Begründung ist das Gegenteil vertretbar."
+        },
+        {
+          "art": "text",
+          "titel": "Nicht vergessen",
+          "punkte": [
+            "Schriftform der Kündigung (§ 623 BGB)",
+            "Anhörung des Betriebsrats, sonst unwirksam (§ 102 Abs. 1 BetrVG)",
+            "Klage binnen drei Wochen, sonst gilt die Kündigung als wirksam (§§ 4, 7, 13 Abs. 1 KSchG)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 626 BGB zweistufig: erst der Grund an sich, dann die Abwägung – und immer fragen, ob eine Abmahnung gereicht hätte."
+        },
+        {
+          "art": "cta",
+          "titel": "Fristlose Kündigung prüfen",
+          "punkte": [
+            "Wichtiger Grund an sich?",
+            "Abwägung im Einzelfall",
+            "Abmahnung als milderes Mittel?",
+            "Zwei-Wochen-Frist gewahrt?"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "warnung",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Ein paar Euro mitgenommen – rechtfertigt das die fristlose Kündigung? Nach § 626 BGB prüfst du zweistufig: Ist das Verhalten an sich ein wichtiger Grund? Vermögensdelikte gegen den Arbeitgeber sind das nach dem BAG auch bei geringem Wert. Dann entscheidet die Interessenabwägung im Einzelfall – und die Frage, ob eine Abmahnung gereicht hätte. Dazu kommen Zwei-Wochen-Frist, Schriftform und Betriebsratsanhörung. Speichern für die nächste Arbeitsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#arbeitsrecht",
+        "#kündigung",
+        "#626bgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fristlose Kündigung: zwei Stufen, § 626 BGB",
+      "coverText": "Zwei Stufen plus Abmahnung",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Auch ein kleiner Diebstahl kann ein wichtiger Grund sein – ob die fristlose Kündigung hält, entscheidet erst die Abwägung.",
+        "handlung": "{A} nervously places a tiny coin on one side of a big balance, while {B} curiously stacks a tall pile of worn work badges on the other side and watches which way it tips.",
+        "hinweisRegie": "Place the note in the open space above the balance beam, slightly tilted toward the side with the stack of badges, so it reads as the weighing step without covering the coin or any faces.",
+        "alternative": "{B} holds out a small yellow warning flag between {A} and an exit door, offering it as the milder step before the door is opened."
+      },
+      "bildSzene": "tiny coin weighed against badge stack",
+      "bildSzeneAlt": "warning flag offered before exit door",
+      "quellen": [
+        "§ 626 BGB",
+        "§ 623 BGB",
+        "§ 102 BetrVG",
+        "§§ 4, 7, 13 KSchG",
+        "Themenpool: arbeit-042"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "mini-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.763Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-719",
+      "slug": "2027-03-17-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht gewollt, trotzdem Vorsatz – das übersehen viele",
+          "unter": "Vorsatzformen · § 15 StGB",
+          "text": "Für bedingten Vorsatz muss der Täter den Erfolg nicht wünschen.",
+          "norm": "§ 15 StGB",
+          "icon": "zielscheibe",
+          "sprecher": "Er wollte den Tod nicht – trotzdem Vorsatz. Genau das übersehen viele: Für bedingten Vorsatz muss der Täter den Erfolg nicht wünschen. Es genügt, dass er sich damit abfindet.",
+          "marken": [
+            "nicht gewünscht",
+            "trotzdem Vorsatz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Absicht",
+          "text": "Dem Täter kommt es auf den Erfolg an; für möglich halten genügt.",
+          "norm": "§ 15 StGB",
+          "sprecher": "Stufe eins: Absicht. Dem Täter kommt es gerade auf den Erfolg an. Das Wissen darf schwach sein: Es genügt, dass er ihn für möglich hält.",
+          "marken": [
+            "Wollen zählt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Direkter Vorsatz",
+          "text": "Der Täter weiß sicher, dass der Erfolg eintritt – erwünscht oder nicht.",
+          "norm": "§ 15 StGB",
+          "sprecher": "Stufe zwei: direkter Vorsatz. Der Täter weiß oder sieht als sicher voraus, dass der Erfolg eintritt. Ob er ihn will oder bedauert, spielt keine Rolle.",
+          "marken": [
+            "sicheres Wissen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Bedingter Vorsatz",
+          "text": "Erfolg als möglich und nicht ganz fernliegend erkannt – und gebilligt oder hingenommen.",
+          "norm": "§ 15 StGB",
+          "sprecher": "Stufe drei: bedingter Vorsatz. Der Täter erkennt den Erfolg als möglich und nicht ganz fernliegend – und billigt ihn oder findet sich mit ihm ab, auch wenn er ihn nicht wünscht.",
+          "marken": [
+            "möglich + abfinden"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Grenze: bewusste Fahrlässigkeit",
+          "text": "Wer ernsthaft darauf vertraut, dass alles gut geht, handelt nicht vorsätzlich.",
+          "norm": null,
+          "sprecher": "Die Grenze ist die bewusste Fahrlässigkeit. Der Täter erkennt die Gefahr, vertraut aber ernsthaft und nicht nur vage darauf, dass nichts passiert. Dann fehlt der Vorsatz.",
+          "marken": [
+            "ernsthaft vertraut"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Bei Tötungsdelikten: Gesamtschau",
+          "text": "Eine gefährliche Handlung ist ein starkes Indiz – aber kein Automatismus.",
+          "norm": "§ 212 StGB",
+          "sprecher": "Bei Tötungsdelikten verlangt der BGH eine Gesamtschau aller Umstände. Eine besonders gefährliche Handlung ist ein starkes Indiz für Vorsatz, aber kein Automatismus.",
+          "marken": [
+            "Gesamtschau"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Absicht: Wollen. Direkter Vorsatz: Wissen. Bedingter Vorsatz: für möglich halten und sich abfinden.",
+          "norm": "§ 15 StGB",
+          "sprecher": "Merke: Absicht heißt Wollen, direkter Vorsatz heißt sicheres Wissen, bedingter Vorsatz heißt für möglich halten und sich damit abfinden. Einen Wunsch braucht nur die Absicht.",
+          "marken": [
+            "drei Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst Wissen, dann Wollen prüfen",
+          "text": "Speichern für die nächste Tötungsklausur.",
+          "sprecher": "Speicher dir das für die nächste Klausur zu den Tötungsdelikten. Und schreib nie: Er wollte es nicht, also kein Vorsatz.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Er wollte den Tod nicht – also kein Vorsatz? Das übersehen viele: Für bedingten Vorsatz muss der Täter den Erfolg nicht wünschen. Nach der Rspr. genügt, dass er ihn als möglich und nicht ganz fernliegend erkennt und sich damit abfindet. Die Grenze ist die bewusste Fahrlässigkeit: ernsthaftes Vertrauen darauf, dass nichts passiert. Speichern für die nächste Tötungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#vorsatz",
+        "#15stgb",
+        "#doluseventualis",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Bedingter Vorsatz: abfinden statt wünschen",
+      "titelZeilen": [
+        "Nicht gewollt,",
+        "trotzdem Vorsatz –",
+        "das übersehen viele"
+      ],
+      "coverText": "Abfinden reicht für Vorsatz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Vorsatz setzt keinen Wunsch voraus – wer die Gefahr sieht und sich damit abfindet, handelt vorsätzlich.",
+        "handlung": "{B} shrugs and keeps turning a crank that pushes a heavy boulder toward a fragile vase, while {A} taps his pointer on the boulder's clearly visible path.",
+        "hinweisRegie": "Place the note in the free space along the boulder's path close to the fragile vase, slightly tilted, so it links the visible danger to the note without covering the crank or any faces.",
+        "alternative": "{A} contrasts two figures at a cliff edge: one crossing fingers in real hope, the other shrugging while pushing a cart toward the drop."
+      },
+      "bildSzene": "shrugging mechanic cranks boulder toward vase",
+      "bildSzeneAlt": "hopeful versus shrugging figure at cliff",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-719"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.766Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-476",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "Verbraucher V kauft ein Smartphone mit vorinstallierter Software. Nach welchen Regeln haftet der Verkäufer?",
+      "optionen": [
+        "Nur nach §§ 327 ff. BGB – Software ist ein digitales Produkt",
+        "Kaufrecht, §§ 475b ff. BGB – Ware mit digitalen Elementen",
+        "Mietrecht – die Software wird nur zur Nutzung überlassen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 327a Abs. 3 BGB",
+        "§ 475b BGB",
+        "Themenpool: schuldbt-476"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.766Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-476",
+      "ueberzeile": "Auflösung",
+      "titel": "Kaufrecht: Das Smartphone ist eine Ware mit digitalen Elementen",
+      "text": "Ist die Software so eingebunden, dass die Ware ohne sie ihre Funktionen nicht erfüllen kann, gilt einheitlich Kaufrecht (§ 327a Abs. 3 BGB). Im Zweifel ist die Software vom Kaufvertrag umfasst. Besonderheiten wie die Aktualisierungspflicht regelt § 475b BGB.",
+      "norm": "§ 327a Abs. 3 BGB · § 475b BGB",
+      "quellen": [
+        "§ 327a Abs. 3 BGB",
+        "§ 475b BGB",
+        "Themenpool: schuldbt-476"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.766Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur nach §§ 327 ff. BGB – Software ist ein digitales Produkt",
+        "Kaufrecht, §§ 475b ff. BGB – Ware mit digitalen Elementen",
+        "Mietrecht – die Software wird nur zur Nutzung überlassen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-388",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 80a VwGO: Eilrechtsschutz, wenn ein Bescheid zwei Seiten hat",
+      "text": "Begünstigt ein Verwaltungsakt den einen und belastet den anderen – etwa die Baugenehmigung Bauherrn und Nachbarn –, regelt § 80a VwGO den Eilrechtsschutz. Widerspruch und Klage des Nachbarn haben gegen die Baugenehmigung keine aufschiebende Wirkung (§ 212a Abs. 1 BauGB). Er beantragt deshalb beim Gericht die Anordnung (§§ 80a Abs. 3, 80 Abs. 5 VwGO).",
+      "norm": "§ 80a VwGO · § 212a Abs. 1 BauGB",
+      "quellen": [
+        "§ 80a VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "§ 212a BauGB",
+        "§ 35 VwVfG",
+        "Themenpool: verwalt-388"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.766Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-822",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Kläger erklärt für erledigt, der Beklagte widerspricht: Was ist die einseitige Erledigungserklärung?",
+      "norm": "§§ 91, 91a, 264 Nr. 2 ZPO",
+      "optionen": [
+        "BGH: Klageänderung – Antrag festzustellen, dass sich die Hauptsache erledigt hat.",
+        "Andere Ansicht: Prozesshandlung eigener Art, keine Klageänderung."
+      ],
+      "text": "Klausur: Erledigt ist die Hauptsache, wenn die Klage zulässig und begründet war und durch ein Ereignis nach Rechtshängigkeit unzulässig oder unbegründet wurde. Kosten dann nach § 91 ZPO.",
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 91a ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "Themenpool: assessorz-822"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.766Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-060",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Notwehrexzess entschuldigt nur – die Tat bleibt rechtswidrig",
+      "text": "§ 33 StGB lässt die Schuld entfallen, nicht die Rechtswidrigkeit. Gegen die überschießende Abwehr ist deshalb Notwehr möglich, und ein Teilnehmer bleibt strafbar (§ 29 StGB).",
+      "norm": "§ 33 StGB · § 32 StGB",
+      "quellen": [
+        "§ 32 StGB",
+        "§ 33 StGB",
+        "§ 29 StGB",
+        "Themenpool: strafat-060"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.766Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-800",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Sachbericht: erzählen, nicht würdigen",
+      "text": "Der Sachbericht im strafrechtlichen Aktenvortrag gibt den Akteninhalt so wieder, dass die Zuhörer den Fall ohne Akte verstehen: geordnet, meist chronologisch, mit dem Verfahrensstand. Streitiges kennzeichnest du als Angabe („B gibt an …“). Rechtliche Wertungen gehören nicht hinein. Aufbau und Zeitvorgaben unterscheiden sich je nach Land.",
+      "quellen": [
+        "StPO",
+        "Themenpool: anklage-800"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:45.766Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,907 @@
+{
+  "datum": "2026-10-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "staat-598",
+        "themaTitel": "Bundestag: Wahlrechtsgrundsätze und Status der Abgeordneten",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "gesetzs-204",
+        "themaTitel": "Wie prüft man die berechtigte Geschäftsführung ohne Auftrag?",
+        "fach": "gesetzs",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "schuld-011"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "schuld-011"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:13",
+        "art": "norm",
+        "themaId": "methodik-898"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "fehler",
+        "themaId": "strafbt-925"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "tipp",
+        "themaId": "schuldbt-192"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "zahl",
+        "themaId": "bgbat-910"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "staat-598",
+      "poolTitel": "Bundestag: Wahlrechtsgrundsätze und Status der Abgeordneten",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 38 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "gesetzs-204",
+      "poolTitel": "Wie prüft man die berechtigte Geschäftsführung ohne Auftrag?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 677 BGB",
+        "§ 683 BGB",
+        "§ 670 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-011",
+      "poolTitel": "Was sind die Rechtsfolgen des Annahmeverzugs?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 300 BGB",
+        "§ 301 BGB",
+        "§ 302 BGB",
+        "§ 304 BGB",
+        "§ 326 Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-011",
+      "poolTitel": "Was sind die Rechtsfolgen des Annahmeverzugs?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 300 BGB",
+        "§ 301 BGB",
+        "§ 302 BGB",
+        "§ 304 BGB",
+        "§ 326 Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "methodik-898",
+      "poolTitel": "Obersatztechnik: präzise und subsumtionsfähig formulieren",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "strafbt-925",
+      "poolTitel": "§§ 239a, 239b StGB im Zwei-Personen-Verhältnis: Wann trägt die Bemächtigungslage?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239a StGB",
+        "§ 239b StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "schuldbt-192",
+      "poolTitel": "Wer trägt die Aus- und Einbaukosten beim Mangel?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 Abs. 3 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "bgbat-910",
+      "poolTitel": "Wann gilt eine Willenserklärung trotz Zugangshindernis als zugegangen?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 132 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-10-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen aus vier Bereichen – was sitzt?",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen,",
+            "vier Bereiche –",
+            "was sitzt?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 166 BGB: grundsätzlich Wissen des Vertreters – bei Weisung auch des Vertretenen.",
+            "§ 435 BGB: Recht eines Dritten = Rechtsmangel; technischer Defekt = § 434.",
+            "§ 439 BGB: Der Käufer wählt die Nacherfüllung, der Verkäufer hat nur Abs. 4.",
+            "§ 767 ZPO: Einwendungen gegen den titulierten Anspruch – nicht gegen die Art der Vollstreckung.",
+            "§§ 708, 709 ZPO: erst § 708, dann § 711 – sonst § 709 mit Sicherheitsleistung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Wegnahme: Bruch fremden und Begründung neuen Gewahrsams.",
+            "Heimtücke: arglos, dadurch wehrlos, bewusst ausgenutzt – nicht „von hinten“.",
+            "§ 17 StGB: Nur der unvermeidbare Verbotsirrtum schließt die Schuld aus.",
+            "U-Haft: dringender Tatverdacht, Haftgrund, Verhältnismäßigkeit.",
+            "§§ 52–55 StPO: erst wer der Zeuge ist, dann ganzes Zeugnis oder einzelne Auskunft.",
+            "Strafbefehl: ohne rechtzeitigen Einspruch wie ein rechtskräftiges Urteil."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 41 Abs. 2 VwVfG: Tag 4 nach Aufgabe zur Post – nicht der Tag im Briefkasten.",
+            "Nebenbestimmung: erst von der Inhaltsbestimmung trennen; Teilbarkeit in der Begründetheit.",
+            "Verwaltungsvollstreckung: Grundverfügung, Vollstreckbarkeit, Zwangsmittel, Androhung.",
+            "§ 167 Abs. 2 VwGO: Anfechtungs- und Verpflichtungsurteil nur wegen der Kosten vorläufig vollstreckbar.",
+            "Art. 45 AEUV: Arbeitnehmerfreizügigkeit von Schutzbereich bis Rechtfertigung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Definitionen: Wortlaut plus Funktion – und je ein Grenzfall.",
+            "Zeitdruck: Minutenplan vor dem ersten Satz, Unstreitiges in einem Satz."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Bescheid am Montag zur Post gegeben: An welchem Tag ist er bekannt gegeben?",
+            "Kannst du §§ 766, 767 und 771 ZPO in je einem Satz trennen?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht an Norm und Rechtsfolge festmachen",
+            "Strafrecht über Merkmale und Abgrenzungen",
+            "Öffentliches Recht als Prüfungskette",
+            "Methodik als feste Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – von § 166 BGB über Heimtücke bis zur Bekanntgabefiktion des § 41 Abs. 2 VwVfG. Jede Folie bündelt einen Lernbereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, was du nicht sofort erklären kannst. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Eine Woche Lernstoff wird in vier sortierte Kisten gepackt, bevor die neue Woche beginnt.",
+        "handlung": "{A} carries a heavy stack of mixed crystal blocks while {B} points with his pointer to four open crates on the ground, each already holding a few neatly sorted crystals.",
+        "hinweisRegie": "Place the note in the open space above the four crates, gently tilted toward the crate that is still half empty, without covering {A}'s face or the pointer.",
+        "alternative": "{B} flips through a small stack of index cards at a campfire while {A} sets aside the few cards that still glow unfamiliar."
+      },
+      "bildSzene": "miner sorts crystals into four crates",
+      "bildSzeneAlt": "index cards sorted at campfire",
+      "quellen": [
+        "§ 166 BGB",
+        "§ 434 BGB",
+        "§ 435 BGB",
+        "§ 439 BGB",
+        "§ 767 ZPO",
+        "§§ 708, 709, 711 ZPO",
+        "§ 242 StGB",
+        "§ 211 StGB",
+        "§ 17 StGB",
+        "§§ 112 ff. StPO",
+        "§§ 52–55 StPO",
+        "§ 410 StPO",
+        "§ 41 Abs. 2 VwVfG",
+        "§ 36 VwVfG",
+        "§ 167 VwGO",
+        "Art. 45 AEUV",
+        "Wochenliste 05.–10.10.2026"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-598",
+      "slug": "2026-10-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Art. 38 GG heißt nicht automatisch Verfassungsbeschwerde",
+          "titelZeilen": [
+            "Art. 38 GG heißt",
+            "nicht automatisch",
+            "Verfassungs-",
+            "beschwerde"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Mandat → Organstreit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zwei Gehalte in einem Artikel",
+          "punkte": [
+            "Art. 38 Abs. 1 S. 1 GG: die Wahlrechtsgrundsätze – allgemein, unmittelbar, frei, gleich, geheim.",
+            "Art. 38 Abs. 1 S. 2 GG: freies Mandat – Vertreter des ganzen Volkes, an Weisungen nicht gebunden."
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Schema: Wahlrechtsgrundsatz verletzt?",
+          "schritte": [
+            {
+              "titel": "Grundsatz bestimmen",
+              "text": "Welcher der fünf ist berührt? Wahlgleichheit: gleicher Zählwert, bei der Verhältniswahl grundsätzlich auch gleicher Erfolgswert."
+            },
+            {
+              "titel": "Beeinträchtigung",
+              "text": "Differenziert das Wahlgesetz oder ein Wahlorgan – etwa durch eine Sperrklausel?"
+            },
+            {
+              "titel": "Rechtfertigung",
+              "text": "Wahlgleichheit ist streng formal: Differenzierungen brauchen einen besonderen, legitimen Grund, etwa die Funktionsfähigkeit des Parlaments."
+            },
+            {
+              "titel": "Maß",
+              "text": "Ist die Differenzierung zur Erreichung dieses Ziels geeignet und erforderlich?"
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Schema: Abgeordnetenrecht verletzt?",
+          "schritte": [
+            {
+              "titel": "Statusrecht benennen",
+              "text": "Aus Art. 38 Abs. 1 S. 2 GG: Rede-, Frage-, Informations- und Mitwirkungsrechte, gleiche Teilhabe an der Parlamentsarbeit."
+            },
+            {
+              "titel": "Beeinträchtigung",
+              "text": "Etwa durch eine Geschäftsordnungsregel, eine Ordnungsmaßnahme oder eine verweigerte Antwort der Regierung."
+            },
+            {
+              "titel": "Rechtfertigung",
+              "text": "Nur durch andere Rechtsgüter von Verfassungsrang, vor allem die Funktionsfähigkeit des Bundestags (Art. 40 Abs. 1 S. 2 GG)."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Welches Verfahren?",
+          "links": {
+            "titel": "Wahlrecht",
+            "punkte": [
+              "Bürger rügen Verstöße mit der Verfassungsbeschwerde.",
+              "Gültigkeit der Bundestagswahl: Wahlprüfung (Art. 41 GG)."
+            ]
+          },
+          "rechts": {
+            "titel": "Mandat",
+            "punkte": [
+              "Abgeordnete gehen in den Organstreit (§§ 63 ff. BVerfGG).",
+              "Statusrechte sind Organrechte – keine Verfassungsbeschwerde."
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Satz 1 schützt den Wähler, Satz 2 den Abgeordneten. Der Wähler geht in die Verfassungsbeschwerde, der Abgeordnete in den Organstreit."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 38 GG in drei Fragen",
+          "punkte": [
+            "Satz 1 oder Satz 2 betroffen?",
+            "Beeinträchtigung und Rechtfertigung prüfen",
+            "Passendes Verfahren wählen"
+          ],
+          "icons": [
+            "wahlurne",
+            "waage",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Art. 38 GG heißt nicht automatisch Verfassungsbeschwerde. Absatz 1 Satz 1 enthält die fünf Wahlrechtsgrundsätze – deren Verletzung kann ein Bürger mit der Verfassungsbeschwerde rügen. Satz 2 regelt den Status der Abgeordneten: Diese organschaftlichen Rechte verteidigt der Abgeordnete im Organstreit nach Art. 93 Abs. 1 Nr. 1 GG. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#38gg",
+        "#wahlrecht",
+        "#organstreit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 38 GG: Wahlrecht und freies Mandat",
+      "coverText": "Mandat → Organstreit",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Wahlrecht des Bürgers und Rechte des Abgeordneten führen durch zwei verschiedene Türen.",
+        "handlung": "{A} hovers between two doors and gently steers a voter holding a ballot toward the left door, while {B} guides a figure wearing a simple delegate sash toward the right door.",
+        "hinweisRegie": "Place the note in the free space near the right door where the delegate is heading, slightly tilted, so it reads as the correct path without covering the figures or the ballot.",
+        "alternative": "{B} holds a ballot box in one hand and a speaking microphone in the other, weighing which case goes to which counter, while {A} stamps two separate tickets."
+      },
+      "bildSzene": "voter and delegate guided to two doors",
+      "bildSzeneAlt": "ballot box versus microphone at counters",
+      "quellen": [
+        "Art. 38 Abs. 1 GG",
+        "Art. 40 Abs. 1 GG",
+        "Art. 41 GG",
+        "Art. 93 Abs. 1 Nr. 1, Nr. 4a GG",
+        "§§ 63 ff. BVerfGG",
+        "Themenpool: staat-598"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verfahrensverwechslung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.401Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "themaId": "gesetzs-204",
+      "slug": "2026-10-11-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ungefragt geholfen: Ersatz aus § 683, nicht aus § 677 BGB",
+          "unter": "GoA · §§ 677, 683, 670 BGB",
+          "text": "Der Anspruch folgt aus § 683 S. 1 i.V.m. § 670 BGB.",
+          "norm": "§ 683 S. 1 BGB",
+          "icon": "handschlag",
+          "sprecher": "Ungefragt geholfen und Kosten gehabt? Dann steht dein Anspruch nicht in § 677 BGB. § 677 regelt die Pflichten des Geschäftsführers. Den Ersatz trägt § 683 Satz 1 in Verbindung mit § 670. So prüfst du ihn.",
+          "marken": [
+            "nicht § 677",
+            "§§ 683 S. 1, 670"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Fremdes Geschäft",
+          "text": "Objektiv fremd oder zumindest auch fremd.",
+          "norm": "§ 677 BGB",
+          "sprecher": "Schritt eins: ein fremdes Geschäft. Objektiv fremd ist es, wenn es schon seinem Inhalt nach in einen fremden Rechtskreis gehört. Auch ein Geschäft, das zugleich eigenes und fremdes ist, kann genügen.",
+          "marken": [
+            "auch-fremd reicht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Fremdgeschäftsführungswille",
+          "text": "Beim objektiv fremden Geschäft wird er vermutet.",
+          "norm": "§ 677 BGB",
+          "sprecher": "Schritt zwei: Fremdgeschäftsführungswille. Der Geschäftsführer will das Geschäft für einen anderen besorgen. Beim objektiv fremden Geschäft wird dieser Wille vermutet, nach der Rechtsprechung auch beim auch-fremden.",
+          "marken": [
+            "Wille wird vermutet"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ohne Auftrag oder sonstige Berechtigung",
+          "text": "Kein Vertrag, keine Pflicht gerade gegenüber dem Geschäftsherrn.",
+          "norm": "§ 677 BGB",
+          "sprecher": "Schritt drei: ohne Auftrag oder sonstige Berechtigung. Bestand ein Vertrag oder eine andere Berechtigung gerade gegenüber dem Geschäftsherrn, ist für die GoA kein Raum.",
+          "marken": [
+            "keine Berechtigung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Interesse und Wille des Geschäftsherrn",
+          "text": "Wirklicher oder mutmaßlicher Wille – oder § 679 BGB.",
+          "norm": "§ 683 S. 1 BGB · § 679 BGB",
+          "sprecher": "Schritt vier: die Berechtigung. Die Übernahme muss dem Interesse und dem wirklichen oder mutmaßlichen Willen des Geschäftsherrn entsprechen. Ein entgegenstehender Wille ist nach § 679 unbeachtlich, etwa bei einer Pflicht im öffentlichen Interesse.",
+          "marken": [
+            "Interesse + Wille"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Rechtsfolge: Ersatz wie ein Beauftragter",
+          "text": "Aufwendungen, die er für erforderlich halten durfte – nach der Rspr. auch risikotypische Schäden.",
+          "norm": "§ 670 BGB",
+          "sprecher": "Die Rechtsfolge: Ersatz der Aufwendungen, die der Geschäftsführer für erforderlich halten durfte. Nach der Rechtsprechung gehören dazu auch Schäden, in denen sich das typische Risiko der Hilfe verwirklicht.",
+          "marken": [
+            "auch Begleitschäden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Fremdes Geschäft, Wille, ohne Auftrag, Interesse und Wille – dann §§ 683 S. 1, 670 BGB.",
+          "norm": "§§ 677, 683, 670 BGB",
+          "sprecher": "Merke: fremdes Geschäft, Fremdgeschäftsführungswille, ohne Auftrag, Interesse und Wille des Geschäftsherrn. Dann folgt der Ersatz aus den Paragrafen 683 Satz 1 und 670.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Richtige Norm in den Obersatz",
+          "text": "Speichern für die nächste GoA-Klausur.",
+          "sprecher": "Speicher dir das Schema für die nächste GoA-Klausur. Und nenn im Obersatz gleich die richtige Anspruchsgrundlage.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ungefragt geholfen und Kosten gehabt? Der Ersatzanspruch steht nicht in § 677 BGB – die Norm beschreibt die Pflichten des Geschäftsführers; der Anspruch auf Aufwendungsersatz aus berechtigter GoA folgt aus § 683 S. 1 i.V.m. § 670 BGB. Prüfe: fremdes Geschäft, Fremdgeschäftsführungswille, ohne Auftrag oder sonstige Berechtigung, Interesse und Wille des Geschäftsherrn (oder § 679 BGB). Speichern für die nächste GoA-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#goa",
+        "#683bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Berechtigte GoA: das Prüfschema",
+      "titelZeilen": [
+        "Ungefragt geholfen:",
+        "Ersatz aus § 683,",
+        "nicht aus § 677 BGB"
+      ],
+      "coverText": "Anspruch: §§ 683 S. 1, 670",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer ungefragt für einen anderen hilft, bekommt seine Kosten nur über die richtige Norm ersetzt.",
+        "handlung": "{A} has just fixed a burst pipe at a neighbour's empty house and holds up a small receipt, while {B} curiously reads the address on the door to find out whose business this really was.",
+        "hinweisRegie": "Place the note in the free space next to the raised receipt, slightly tilted toward it, connecting it to the claim for costs without covering {A}'s face or the repaired pipe.",
+        "alternative": "{B} catches a runaway dog for an absent owner while {A} tallies the small costs on a clipboard beside the owner's closed gate."
+      },
+      "bildSzene": "mechanic fixes neighbour's pipe, holds receipt",
+      "bildSzeneAlt": "catching runaway dog for absent owner",
+      "quellen": [
+        "§ 677 BGB",
+        "§ 679 BGB",
+        "§ 683 BGB",
+        "§ 670 BGB",
+        "Themenpool: gesetzs-204"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "normkontrast",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.408Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-011",
+      "ueberzeile": "Prüfungsfrage Schuldrecht",
+      "titel": "Annahmeverzug: Wofür haftet der Schuldner während des Verzugs des Gläubigers noch?",
+      "optionen": [
+        "Weiterhin für jede Fahrlässigkeit",
+        "Gar nicht mehr – seine Leistungspflicht erlischt",
+        "Nur noch für Vorsatz und grobe Fahrlässigkeit"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 300 BGB",
+        "§ 301 BGB",
+        "§ 304 BGB",
+        "§ 326 Abs. 2 BGB",
+        "Themenpool: schuld-011"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.408Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-011",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur noch für Vorsatz und grobe Fahrlässigkeit",
+      "text": "§ 300 Abs. 1 BGB mildert die Haftung. Weitere Folgen: Bei der Gattungsschuld geht die Leistungsgefahr über (§ 300 Abs. 2), Geldschulden sind nicht zu verzinsen (§ 301), Mehraufwendungen sind zu ersetzen (§ 304). Und wird die Leistung im Annahmeverzug unmöglich, ohne dass der Schuldner es zu vertreten hat, behält er den Anspruch auf die Gegenleistung (§ 326 Abs. 2 S. 1).",
+      "norm": "§§ 300–304 BGB · § 326 Abs. 2 BGB",
+      "quellen": [
+        "§ 300 BGB",
+        "§ 301 BGB",
+        "§ 304 BGB",
+        "§ 326 Abs. 2 BGB",
+        "Themenpool: schuld-011"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.408Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Weiterhin für jede Fahrlässigkeit",
+        "Gar nicht mehr – seine Leistungspflicht erlischt",
+        "Nur noch für Vorsatz und grobe Fahrlässigkeit"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-898",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Die Norm gehört in den Obersatz – so genau wie möglich",
+      "text": "Ein subsumtionsfähiger Obersatz nennt: wer, was, von wem, woraus. Beispiel: „V könnte gegen K einen Anspruch auf Zahlung von 500 € aus § 433 Abs. 2 BGB haben.“ Zitiere Absatz und Satz, wenn die Norm sie hat – so weiß der Korrektor sofort, welche Voraussetzungen jetzt folgen.",
+      "norm": "§ 433 Abs. 2 BGB (Beispiel)",
+      "quellen": [
+        "§ 433 Abs. 2 BGB",
+        "Themenpool: methodik-898"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.409Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-925",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "§ 239a StGB bei zwei Personen: Reicht die vorgehaltene Waffe?",
+      "falsch": "Wer das Opfer mit vorgehaltener Waffe zur Herausgabe zwingt, hat sich seiner bemächtigt – also liegt immer auch § 239a StGB vor.",
+      "richtigText": "Im Zwei-Personen-Verhältnis legt der BGH §§ 239a, 239b StGB einschränkend aus: Die Bemächtigungslage muss eine eigenständige, stabilisierte Bedeutung haben, die der Täter für die weitere Nötigung ausnutzen will. Fallen Bemächtigung und Nötigung in einem Akt zusammen, bleibt es regelmäßig bei §§ 249 oder 253, 255 StGB.",
+      "quellen": [
+        "§ 239a StGB",
+        "§ 239b StGB",
+        "§§ 249, 253, 255 StGB",
+        "BGH, Großer Senat für Strafsachen (Zwei-Personen-Verhältnis)",
+        "Themenpool: strafbt-925"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.409Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-192",
+      "ueberzeile": "Klausurtipp Kaufrecht",
+      "titel": "Mangelhafte Fliesen schon verlegt? Aus- und Einbau über § 439 Abs. 3 BGB",
+      "text": "Hat der Käufer die Sache ihrer Art und ihrem Verwendungszweck gemäß eingebaut, bevor der Mangel offenbar wurde, schuldet der Verkäufer im Rahmen der Nacherfüllung Ersatz der erforderlichen Aufwendungen für Ausbau und Einbau (§ 439 Abs. 3 BGB). Das ist Nacherfüllung, kein Schadensersatz – Verschulden spielt keine Rolle.",
+      "quellen": [
+        "§ 439 Abs. 3 BGB",
+        "Themenpool: schuldbt-192"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.409Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-910",
+      "ueberzeile": "4 Punkte BGB AT",
+      "titel": "Einschreiben nicht abgeholt: Wann gilt die Erklärung trotzdem als zugegangen?",
+      "text": "Ausgangspunkt bleibt § 130 Abs. 1 BGB: Zugang, sobald die Erklärung so in den Machtbereich des Empfängers gelangt, dass er unter normalen Umständen Kenntnis nehmen kann.",
+      "punkte": [
+        "Der Benachrichtigungszettel allein bewirkt noch keinen Zugang.",
+        "Grundlose Annahmeverweigerung: Der Empfänger muss sich Zugang entgegenhalten lassen.",
+        "Sonst: Absender muss unverzüglich erneut zustellen – dann gilt der Zugang als rechtzeitig.",
+        "Sicherer Weg: Zustellung durch den Gerichtsvollzieher (§ 132 BGB)."
+      ],
+      "quellen": [
+        "§ 130 Abs. 1 BGB",
+        "§ 132 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-910"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.409Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

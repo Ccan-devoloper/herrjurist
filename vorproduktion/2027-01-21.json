@@ -1,0 +1,888 @@
+{
+  "datum": "2027-01-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "strafbt-320",
+        "themaTitel": "Wie prüft man die Nötigung und was ist Verwerflichkeit?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "grundr-377",
+        "themaTitel": "Wann sind Grundrechte für Ausländer und juristische Personen anwendbar?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "delikt-243",
+        "themaTitel": "Wie prüft man den Anspruch bei Verletzung des Eigentums durch Weiterfresserschaden?",
+        "fach": "delikt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "zpo-546"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "zpo-546"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "verwbt-114"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "streitstand",
+        "themaId": "streit-11"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "merksatz",
+        "themaId": "zpo-282"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "begriff",
+        "themaId": "zpo-286"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "strafbt-320",
+      "poolTitel": "Wie prüft man die Nötigung und was ist Verwerflichkeit?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 240 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "grundr-377",
+      "poolTitel": "Wann sind Grundrechte für Ausländer und juristische Personen anwendbar?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 19 Abs. 3 GG",
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "delikt-243",
+      "poolTitel": "Wie prüft man den Anspruch bei Verletzung des Eigentums durch Weiterfresserschaden?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-546",
+      "poolTitel": "Zulässigkeitsprüfung der Zivilklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 12 ff., 253 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-20",
+        "2026-11-20"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-546",
+      "poolTitel": "Zulässigkeitsprüfung der Zivilklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 12 ff., 253 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-20",
+        "2026-11-20"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-114",
+      "poolTitel": "Wann darf die Polizei einen Nichtstörer in Anspruch nehmen?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-07"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-11",
+      "poolTitel": "Schockschäden Dritter: Wann ist die Gesundheitsverletzung ersatzfähig?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zpo-282",
+      "poolTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2027-01-15"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "zpo-286",
+      "poolTitel": "Was ist der Unterschied zwischen Arrest und einstweiliger Verfügung?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 916 ZPO",
+        "§ 935 ZPO",
+        "§ 940 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-320",
+      "slug": "2027-01-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Diesen Satz liest man in Klausuren – bei § 240 StGB stimmt er nicht",
+          "titelZeilen": [
+            "Diesen Satz liest",
+            "man in Klausuren –",
+            "bei § 240 StGB",
+            "stimmt er nicht"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Verwerflichkeit positiv begründen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Satz",
+          "text": "„Die Tatbestandsmäßigkeit indiziert die Rechtswidrigkeit.“ Bei § 240 StGB trägt er nicht: Gewalt und Drohung sind so weit gefasst, dass sie auch sozialübliches Verhalten erfassen. Die Rechtswidrigkeit muss positiv festgestellt werden – über die Verwerflichkeit nach § 240 Abs. 2 StGB."
+        },
+        {
+          "art": "text",
+          "titel": "Tatbestand auf einen Blick",
+          "punkte": [
+            "Nötigungsmittel: Gewalt oder Drohung mit einem empfindlichen Übel",
+            "Nötigungserfolg: Handlung, Duldung oder Unterlassung des Opfers",
+            "Kausalität zwischen Mittel und Erfolg",
+            "Vorsatz bezüglich aller Merkmale"
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Gewalt: Wo liegt die Grenze?",
+          "links": {
+            "titel": "Reicht nicht",
+            "punkte": [
+              "Rein psychischer Zwang durch bloße Anwesenheit (BVerfG, Sitzblockade).",
+              "Bloße Behinderung ohne körperlich wirkenden Zwang."
+            ]
+          },
+          "rechts": {
+            "titel": "Reicht",
+            "punkte": [
+              "Körperlich wirkender Zwang, auch mit geringem Kraftaufwand.",
+              "Zweite-Reihe-Rspr. (BGH): Die ersten Fahrzeuge werden zur physischen Sperre."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Rechtswidrigkeit richtig prüfen",
+          "schritte": [
+            {
+              "titel": "1. Allgemeine Rechtfertigungsgründe",
+              "text": "Notwehr, Notstand und Co. zuerst. Greift einer, kommt es auf Abs. 2 nicht mehr an."
+            },
+            {
+              "titel": "2. Verwerflichkeit (§ 240 Abs. 2)",
+              "text": "Mittel-Zweck-Relation: Ist die Verknüpfung dieses Mittels mit diesem Zweck sozial unerträglich?"
+            },
+            {
+              "titel": "3. Fernziele",
+              "text": "Nach BGH erst in der Strafzumessung. Bei Versammlungen berücksichtigt das BVerfG den Bezug zum Protestanliegen in der Abwägung."
+            }
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 240 StGB: Tatbestand erfüllt heißt noch nicht rechtswidrig. Erst Rechtfertigungsgründe, dann die Verwerflichkeit positiv begründen."
+        },
+        {
+          "art": "cta",
+          "titel": "Nötigung in drei Zügen",
+          "punkte": [
+            "Gewalt oder Drohung?",
+            "Erfolg kausal erzwungen?",
+            "Verwerflichkeit positiv begründet?"
+          ],
+          "icons": [
+            "blitz",
+            "person",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Diesen Satz liest man in vielen Klausuren: „Die Tatbestandsmäßigkeit indiziert die Rechtswidrigkeit.“ Bei der Nötigung stimmt er nicht. § 240 StGB ist ein offener Tatbestand – die Rechtswidrigkeit musst du nach den allgemeinen Rechtfertigungsgründen positiv über die Verwerflichkeit (§ 240 Abs. 2 StGB) begründen: Mittel und Zweck in ihrer Verknüpfung. Dazu die Grenzen des Gewaltbegriffs im Überblick. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#nötigung",
+        "#240stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nötigung: Rechtswidrigkeit positiv begründen",
+      "coverText": "Verwerflichkeit positiv begründen",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Bei der Nötigung ergibt sich die Rechtswidrigkeit nicht von selbst – sie muss eigens begründet werden.",
+        "handlung": "{A} holds a balance with a heavy lever on one pan and a small goal token on the other, while {B} curiously leans in to check whether the pairing tips too far.",
+        "hinweisRegie": "Place the note in the free space above the balance between the lever and the goal token, slightly tilted toward the pivot, so it marks the weighing without covering {A}'s hands or {B}'s face.",
+        "alternative": "{B} stops at a green light that is only half lit while {A} insists on checking the second half before letting her pass."
+      },
+      "bildSzene": "balance weighing lever against goal token",
+      "bildSzeneAlt": "half-lit green light, second check",
+      "quellen": [
+        "§ 240 StGB",
+        "BVerfG (Sitzblockaden)",
+        "BGH (Zweite-Reihe-Rechtsprechung)",
+        "Themenpool: strafbt-320"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.115Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-377",
+      "slug": "2027-01-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kein Art. 12 GG für Ausländer – schutzlos sind sie nicht",
+          "titelZeilen": [
+            "Kein Art. 12 GG",
+            "für Ausländer –",
+            "schutzlos sind",
+            "sie nicht"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Art. 2 Abs. 1 GG fängt auf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Grundrechte schützen zuerst natürliche Personen. Zwei Fragen tauchen in Klausuren immer wieder auf: Welche Grundrechte haben Ausländer? Und wann kann sich eine juristische Person auf Grundrechte berufen (Art. 19 Abs. 3 GG)?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wer ist geschützt?",
+          "links": {
+            "titel": "Ausländer",
+            "punkte": [
+              "Jedermann-Grundrechte: voll, etwa Art. 2, 4, 5 GG.",
+              "Deutschen-Grundrechte (Art. 8, 9, 11, 12 GG): nicht.",
+              "Auffang: Art. 2 Abs. 1 GG."
+            ]
+          },
+          "rechts": {
+            "titel": "Juristische Personen",
+            "punkte": [
+              "Nur inländische: Sitz in Deutschland (Art. 19 III GG).",
+              "Nur wesensmäßig anwendbare Grundrechte, etwa Art. 12, 14 GG.",
+              "Nicht: Menschenwürde, Leben, Ehe."
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die Sonderfälle",
+          "links": {
+            "titel": "EU-Bürger",
+            "punkte": [
+              "Deutschen-Grundrechte gelten nicht direkt.",
+              "Wegen Art. 18 AEUV verbreitet: Art. 2 I GG mit gleichem Schutzniveau."
+            ]
+          },
+          "rechts": {
+            "titel": "Ausländische jur. Personen",
+            "punkte": [
+              "EU-Gesellschaften: nach BVerfG über Art. 19 III GG geschützt.",
+              "Justizgrundrechte (Art. 101, 103 GG) gelten auch für sie."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Juristische Personen des öffentlichen Rechts",
+          "text": "Grundsätzlich nicht grundrechtsberechtigt – sie sind an Grundrechte gebunden. Ausnahmen, wo sie einem grundrechtlich geschützten Bereich zugeordnet sind: Hochschulen (Art. 5 Abs. 3 GG), Rundfunkanstalten (Art. 5 Abs. 1 S. 2 GG), Kirchen. Die Justizgrundrechte stehen ihnen zu."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ausländer: Jedermann-Grundrechte plus Art. 2 Abs. 1 GG. Juristische Personen: inländisch und wesensmäßig anwendbar (Art. 19 Abs. 3 GG)."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Schutzbereich klären",
+          "punkte": [
+            "Mensch oder Organisation?",
+            "Jedermann- oder Deutschen-Grundrecht?",
+            "Art. 19 III: inländisch und wesensmäßig?"
+          ],
+          "icons": [
+            "person",
+            "globus",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "Kein Art. 12 GG für Ausländer – aber schutzlos sind sie nicht. Deutschen-Grundrechte wie Berufs- oder Versammlungsfreiheit stehen ihnen nicht zu; aufgefangen werden sie über Art. 2 Abs. 1 GG. Juristische Personen sind nach Art. 19 Abs. 3 GG geschützt, wenn sie inländisch sind und das Grundrecht wesensmäßig auf sie passt. Dazu die Sonderfälle EU-Bürger, EU-Gesellschaften und öffentliche Hand. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#art19gg",
+        "#grundrechtsberechtigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Grundrechte für Ausländer und juristische Personen",
+      "coverText": "Art. 2 Abs. 1 GG fängt auf",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Wer ein Grundrecht nicht direkt hat, fällt nicht ins Leere, sondern in ein allgemeines Auffangnetz.",
+        "handlung": "{A} curiously steps off a narrow bridge reserved for others and lands softly in a wide safety net stretched below, while {B} hovers nearby and checks the net's anchors.",
+        "hinweisRegie": "Place the note in the free space just above the safety net next to {A}, slightly tilted toward the net, so the fallback protection is highlighted without covering the bridge or {B}.",
+        "alternative": "{B} sorts visitors at two doors, one marked with a symbol for everyone and one with a symbol for members only, while {A} walks through the open door for everyone."
+      },
+      "bildSzene": "alien lands in wide safety net",
+      "bildSzeneAlt": "two doors: everyone versus members",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 12 Abs. 1 GG",
+        "Art. 19 Abs. 3 GG",
+        "Art. 18 AEUV",
+        "Art. 101, 103 GG",
+        "Themenpool: grundr-377"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-schutz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.115Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "delikt",
+      "klausur": 1,
+      "fachLabel": "Deliktsrecht",
+      "themaId": "delikt-243",
+      "slug": "2027-01-21-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Mangelhaft gekauft – und trotzdem Eigentumsverletzung",
+          "unter": "Weiterfresserschaden · § 823 Abs. 1 BGB",
+          "text": "Nicht stoffgleich? Dann verletzt der Schaden am Rest der Sache das Eigentum.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "icon": "auto",
+          "sprecher": "Mangelhaft gekauft – und trotzdem eine Eigentumsverletzung. Paradox, denn der Käufer hat die Sache mit dem Mangel erworben. Der BGH bejaht sie trotzdem, wenn sich der Mangel in die übrige Sache weiterfrisst.",
+          "marken": [
+            "Weiterfresser",
+            "§ 823 I BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Das Szenario",
+          "text": "Ein fehlerhaftes Teil versagt – und beschädigt die ganze Sache.",
+          "norm": null,
+          "sprecher": "Schritt eins: das Szenario. Ein fehlerhaftes Bauteil versagt und beschädigt die ganze Sache. Klassiker: Ein defekter Gaszug führt zum Unfall.",
+          "marken": [
+            "Teil zerstört Ganzes"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Stoffgleichheit",
+          "text": "Deckt sich der Schaden mit dem Unwert, den der Mangel von Anfang an bedeutete?",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Stoffgleichheit. Deckt sich der Schaden mit dem Unwert, der der Sache wegen des Mangels von Anfang an anhaftete, geht es nur um das Äquivalenzinteresse. Das schützt allein das Vertragsrecht.",
+          "marken": [
+            "stoffgleich?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Kriterien",
+          "text": "Funktional abgrenzbares Teil? Mangel mit vertretbarem Aufwand behebbar?",
+          "norm": null,
+          "sprecher": "Schritt drei: die Kriterien. War der Fehler auf ein funktional abgrenzbares Teil beschränkt und ließ er sich mit wirtschaftlich vertretbarem Aufwand beheben, ist der Schaden an der übrigen Sache nicht stoffgleich. Dann liegt eine Eigentumsverletzung vor.",
+          "marken": [
+            "abgrenzbar",
+            "behebbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Warum das zählt",
+          "text": "Anspruch gegen den Hersteller – und deliktische Verjährung.",
+          "norm": "§§ 195, 199 BGB",
+          "sprecher": "Schritt vier: warum das zählt. Mit dem Hersteller hat der Käufer meist keinen Vertrag, Paragraf 823 Absatz 1 hilft ihm trotzdem. Und die Verjährung richtet sich nach den Paragrafen 195 und 199, nicht nach Paragraf 438.",
+          "marken": [
+            "Hersteller haftet"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Kritik und Grenze",
+          "text": "Teile der Lit. sehen die Grenze Vertrag/Delikt verwischt. Das ProdHaftG hilft hier nicht.",
+          "norm": "§ 1 Abs. 1 S. 2 ProdHaftG",
+          "sprecher": "Teile der Literatur kritisieren, dass so die Grenze zwischen Vertrag und Delikt verschwimmt. Das Produkthaftungsgesetz hilft nicht: Es erfasst Schäden am fehlerhaften Produkt selbst nicht.",
+          "marken": [
+            "umstritten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Nicht stoffgleich – dann Eigentumsverletzung an der übrigen Sache.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Merke: Nicht stoffgleich heißt Eigentumsverletzung an der übrigen Sache.",
+          "marken": [
+            "Stoffgleichheit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim Produktfehler an § 823 I denken",
+          "text": "Speichern für die nächste Deliktsklausur.",
+          "sprecher": "Speicher dir das für die nächste Deliktsklausur. Und prüf beim Produktfehler neben dem Kaufrecht immer auch Paragraf 823 Absatz 1.",
+          "marken": [
+            "nicht nur Kaufrecht"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Mangelhaft gekauft – und trotzdem eine Eigentumsverletzung? Ja, wenn sich der Mangel in die übrige Sache weiterfrisst. Der BGH fragt nach der Stoffgleichheit: War der Fehler auf ein abgrenzbares Teil beschränkt und mit vertretbarem Aufwand behebbar, ist der Schaden am Rest der Sache eine Verletzung des Eigentums nach § 823 Abs. 1 BGB. Das öffnet den Anspruch gegen den Hersteller – mit deliktischer Verjährung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#deliktsrecht",
+        "#823bgb",
+        "#weiterfresserschaden",
+        "#schuldrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Weiterfresserschaden: Wann liegt Delikt vor?",
+      "titelZeilen": [
+        "Mangelhaft gekauft",
+        "– und trotzdem",
+        "Eigentumsverletzung"
+      ],
+      "coverText": "Entscheidend: Stoffgleichheit",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Ein kleiner Fehler in einem Teil kann die ganze übrige Sache zerstören – dann ist mehr als nur der Kaufpreis betroffen.",
+        "handlung": "{A} nervously points at a tiny cracked cog inside an opened machine, while {B} holds up a large intact panel of the same machine that is now dented by the failure.",
+        "hinweisRegie": "Place the note in the free space between the tiny cracked cog and the large dented panel, slightly tilted toward the panel, so the spread of damage is visible without covering {A}'s pointing hand.",
+        "alternative": "{B} watches a single faulty brick crumble and pull down the wall around it while {A} marks the small brick with a ring."
+      },
+      "bildSzene": "cracked cog, dented machine panel",
+      "bildSzeneAlt": "faulty brick pulls down wall",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§§ 195, 199 BGB",
+        "§ 438 BGB",
+        "§ 1 Abs. 1 S. 2 ProdHaftG",
+        "Themenpool: delikt-243"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-paradox",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.117Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-546",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Das Gericht hält die Klage für unzulässig – und zugleich für unbegründet. Wie entscheidet es?",
+      "optionen": [
+        "Abweisung als unzulässig durch Prozessurteil",
+        "Abweisung als unbegründet – die Sachabweisung wirkt stärker",
+        "Nach Wahl des Gerichts, weil beides zur Abweisung führt"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 253 ZPO",
+        "§§ 12 ff. ZPO",
+        "§ 256 ZPO",
+        "Themenpool: zpo-546"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.117Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-546",
+      "ueberzeile": "Auflösung",
+      "titel": "Durch Prozessurteil – die Zulässigkeit hat Vorrang",
+      "text": "Die Sachurteilsvoraussetzungen sind vor der Begründetheit zu prüfen. Fehlt eine, darf das Gericht nicht in der Sache entscheiden – selbst wenn die Klage offensichtlich unbegründet ist. Das Prozessurteil wird nur hinsichtlich des Zulässigkeitsmangels rechtskräftig. Ausnahme nach BGH: Das Feststellungsinteresse darf offenbleiben, wenn die Klage jedenfalls unbegründet ist.",
+      "norm": "§ 253 ZPO · § 256 Abs. 1 ZPO",
+      "quellen": [
+        "§ 253 ZPO",
+        "§§ 12 ff. ZPO",
+        "§ 256 ZPO",
+        "Themenpool: zpo-546"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.117Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Abweisung als unzulässig durch Prozessurteil",
+        "Abweisung als unbegründet – die Sachabweisung wirkt stärker",
+        "Nach Wahl des Gerichts, weil beides zur Abweisung führt"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-114",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Nichtstörer: Die Polizei greift erst auf ihn zu, wenn alles andere versagt",
+      "text": "Den Nichtverantwortlichen darf die Polizei nur im polizeilichen Notstand heranziehen. Typische Voraussetzungen nach den Landesgesetzen: gegenwärtige erhebliche Gefahr; Maßnahmen gegen Störer unmöglich oder erfolglos; eigene Mittel der Polizei reichen nicht; keine erhebliche eigene Gefährdung des Nichtstörers. Klassiker: Einweisung Obdachloser – nur vorübergehend.",
+      "norm": "Polizei- und Ordnungsgesetze der Länder",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: verwbt-114"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.117Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "streit-11",
+      "ueberzeile": "Streitstand Deliktsrecht",
+      "titel": "Mutter erkrankt nach der Todesnachricht an einer Depression: Gesundheitsverletzung?",
+      "norm": "§ 823 Abs. 1 BGB",
+      "optionen": [
+        "Frühere BGH-Linie: nur, wenn die Beeinträchtigung über das hinausgeht, was Angehörige erfahrungsgemäß erleiden.",
+        "BGH seit 2022: Eine medizinisch fassbare psychische Erkrankung genügt – wie bei unmittelbar Verletzten."
+      ],
+      "text": "Klausur: erst Gesundheitsverletzung, dann Zurechnung. Mitverschulden des Getöteten muss sich der Angehörige anrechnen lassen (§§ 254, 242 BGB). Leid ohne Krankheitswert: nur Hinterbliebenengeld (§ 844 Abs. 3 BGB).",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 254 BGB",
+        "§ 844 Abs. 3 BGB"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.117Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-282",
+      "ueberzeile": "Merksatz ZPO",
+      "titel": "Sekundäre Darlegungslast: Der Gegner muss reden, beweisen muss er nicht",
+      "text": "Kennt nur der Gegner die Umstände, muss er substantiiert bestreiten – sonst gilt der Vortrag als zugestanden (§ 138 Abs. 3 ZPO). Die Beweislast wandert nicht.",
+      "norm": "§ 138 ZPO",
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: zpo-282"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.117Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-286",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Arrest: Eilrechtsschutz für Geldforderungen",
+      "text": "Der Arrest sichert die künftige Zwangsvollstreckung wegen einer Geldforderung oder eines Anspruchs, der in eine solche übergehen kann (§ 916 Abs. 1 ZPO). Nötig sind Arrestanspruch und Arrestgrund, etwa die Besorgnis, dass die Vollstreckung sonst vereitelt oder wesentlich erschwert würde (§ 917 Abs. 1 ZPO). Für andere Ansprüche: einstweilige Verfügung (§§ 935, 940 ZPO).",
+      "norm": "§§ 916, 917 ZPO",
+      "quellen": [
+        "§ 916 ZPO",
+        "§ 917 ZPO",
+        "§ 935 ZPO",
+        "§ 940 ZPO",
+        "Themenpool: zpo-286"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:12:06.117Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

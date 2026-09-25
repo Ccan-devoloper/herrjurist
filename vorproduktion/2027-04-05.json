@@ -1,0 +1,883 @@
+{
+  "datum": "2027-04-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-220",
+        "themaTitel": "Wie prüft man die Übereignung nach § 929 S. 1 BGB?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafbt-761",
+        "themaTitel": "Aussagedelikte: falsche uneidliche Aussage und Meineid",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "vwgo-407",
+        "themaTitel": "Wann entfällt die aufschiebende Wirkung?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "strafat-728"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "strafat-728"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "schuldbt-025"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "tipp",
+        "themaId": "delikt-242"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:41",
+        "art": "zahl",
+        "themaId": "zpo-052"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "streitstand",
+        "themaId": "bgbat-003"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "sachen-220",
+      "poolTitel": "Wie prüft man die Übereignung nach § 929 S. 1 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 929 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-761",
+      "poolTitel": "Aussagedelikte: falsche uneidliche Aussage und Meineid",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 153 ff. StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-407",
+      "poolTitel": "Wann entfällt die aufschiebende Wirkung?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 2 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-17",
+        "2026-11-13",
+        "2027-02-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-728",
+      "poolTitel": "Rücktritt vom unbeendeten Versuch",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 I StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-728",
+      "poolTitel": "Rücktritt vom unbeendeten Versuch",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 I StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-025",
+      "poolTitel": "Was gilt beim Verbrauchsgüterkauf anders?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 474 BGB",
+        "§ 475 BGB",
+        "§ 477 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "delikt-242",
+      "poolTitel": "Wann haftet man nach § 826 BGB?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 826 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zpo-052",
+      "poolTitel": "Worauf kommt es für den rechtzeitigen Eingang eines per Telefax übermittelten Schriftsatzes bei Gericht an?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 130 ZPO",
+        "§ 130a ZPO",
+        "§ 130d ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-29",
+        "2026-11-30",
+        "2027-02-01"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "bgbat-003",
+      "poolTitel": "Inwieweit werden sich widersprechende AGB Vertragsbestandteil?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 154 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-01",
+        "2026-12-01",
+        "2027-02-01"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-220",
+      "slug": "2027-04-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kaufpreis gezahlt, Rad beim Verkäufer: K ist nicht Eigentümer",
+          "titelZeilen": [
+            "Kaufpreis gezahlt,",
+            "Rad beim Verkäufer:",
+            "K ist nicht",
+            "Eigentümer"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Kaufvertrag verpflichtet nur",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V verkauft K sein Fahrrad. K zahlt sofort, das Rad soll er am Wochenende abholen. Bis dahin bleibt es in V's Garage. Ist K schon Eigentümer – und wie prüfst du das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg: § 929 S. 1 BGB, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Dingliche Einigung",
+              "text": "Einigung über den Eigentumsübergang an einer bestimmten Sache. Sie ist ein eigener Vertrag – getrennt vom Kaufvertrag."
+            },
+            {
+              "titel": "2. Übergabe",
+              "text": "Erwerber erlangt Besitz, Veräußerer gibt jeden Besitz auf – und zwar auf dessen Veranlassung. Besitzdiener und Geheißpersonen zählen mit."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg: § 929 S. 1 BGB, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Einigsein bei Übergabe",
+              "text": "Die Einigung muss im Moment der Übergabe noch bestehen. Bis dahin ist sie nach h.M. grundsätzlich widerruflich."
+            },
+            {
+              "titel": "4. Berechtigung",
+              "text": "Veräußerer ist Eigentümer und verfügungsbefugt oder nach § 185 BGB ermächtigt. Sonst weiter mit §§ 932 ff. BGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Mit dem Kaufvertrag ist K Eigentümer geworden.“ Der Kaufvertrag verpflichtet nur (§ 433 Abs. 1 BGB). Das Eigentum geht erst mit der Übereignung über – hier fehlt die Übergabe. Ein Übergabesurrogat nach §§ 930, 931 BGB gilt nur, wenn die Parteien es vereinbart haben."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einigung, Übergabe, Einigsein, Berechtigung. Der Kaufvertrag verpflichtet, erst die Übereignung verschafft Eigentum."
+        },
+        {
+          "art": "cta",
+          "titel": "Übereignung in vier Zügen",
+          "punkte": [
+            "Einigung – getrennt vom Kaufvertrag",
+            "Übergabe auf Veranlassung des Veräußerers",
+            "Einigung besteht noch bei Übergabe",
+            "Berechtigt – sonst §§ 932 ff. BGB"
+          ],
+          "icons": [
+            "handschlag",
+            "paket",
+            "uhr",
+            "schluessel"
+          ]
+        }
+      ],
+      "caption": "Kaufpreis gezahlt, das Rad steht noch beim Verkäufer – ist K schon Eigentümer? Nein. Der Kaufvertrag verpflichtet nur; das Eigentum geht nach § 929 S. 1 BGB erst mit Einigung und Übergabe über. Prüfe dazu, ob die Einigung bei der Übergabe noch besteht und ob der Veräußerer berechtigt ist – sonst geht es mit §§ 932 ff. BGB weiter. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#929bgb",
+        "#abstraktionsprinzip",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 929 S. 1 BGB: Bezahlt ist nicht übereignet",
+      "coverText": "Kaufvertrag verpflichtet nur",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer bezahlt hat, ist noch nicht Eigentümer – erst die Übergabe macht die Übereignung komplett.",
+        "handlung": "{B} proudly holds out a paid receipt toward a bicycle, while {A} still keeps one heavy hand firmly on the bicycle's handlebar inside his crystal storage shed.",
+        "hinweisRegie": "Place the note in the open space between the receipt and the handlebar, slightly tilted toward {A}'s hand, so it marks the missing handover without covering the bicycle or the receipt.",
+        "alternative": "{A} and {B} shake hands over a crate, but the crate is still chained to {A}'s side of a small fence."
+      },
+      "bildSzene": "paid receipt, bicycle still held back",
+      "bildSzeneAlt": "handshake over crate chained to fence",
+      "quellen": [
+        "§ 929 S. 1 BGB",
+        "§ 433 Abs. 1 BGB",
+        "§§ 930, 931 BGB",
+        "§ 185 BGB",
+        "§§ 932 ff. BGB",
+        "Themenpool: sachen-220"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.008Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-761",
+      "slug": "2027-04-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 153 StGB in fünf Schritten – Schritt 1 schließt den Angeklagten aus",
+          "titelZeilen": [
+            "§ 153 StGB in",
+            "fünf Schritten –",
+            "Schritt 1 schließt",
+            "den Angeklagten aus"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Nur Zeugen und Sachverständige",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die §§ 153 ff. StGB schützen die staatliche Rechtspflege. Falschaussage (§ 153) und Meineid (§ 154) sind eigenhändige Delikte: Täter ist nur, wer selbst aussagt oder schwört. Mittelbare Täterschaft scheidet aus – die Lücke schließt § 160 StGB."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Tauglicher Täter",
+              "text": "Zeuge oder Sachverständiger. Nicht: der Angeklagte im eigenen Verfahren, nicht die uneidlich vernommene Partei im Zivilprozess."
+            },
+            {
+              "titel": "2. Zuständige Stelle",
+              "text": "Gericht oder andere zur eidlichen Vernehmung zuständige Stelle. Polizei und Staatsanwaltschaft gehören nicht dazu."
+            },
+            {
+              "titel": "3. Falsche Aussage",
+              "text": "Nach h.M. (objektive Theorie) weichen Aussage und Wirklichkeit ab. Auch Verschweigen kann die Aussage falsch machen."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Vollendung",
+              "text": "Mit Abschluss der Vernehmung. Bis dahin kann der Zeuge noch korrigieren; der Versuch des § 153 ist nicht strafbar."
+            },
+            {
+              "titel": "5. Vorsatz, Rechtswidrigkeit, Schuld",
+              "text": "Bedingter Vorsatz bezüglich der Falschheit genügt. Danach Strafzumessung: Aussagenotstand (§ 157) und Berichtigung (§ 158 StGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Meineid und Fahrlässigkeit",
+          "text": "§ 154 StGB ist ein Verbrechen – der Versuch ist strafbar. Schwören kann auch die Partei, wenn sie nach der ZPO beeidigt wird. Wer fahrlässig falsch schwört, fällt unter § 161 StGB; eine fahrlässige uneidliche Falschaussage ist dagegen straflos."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zeuge oder Sachverständiger, zuständige Stelle, falsche Aussage, Vernehmung abgeschlossen, Vorsatz. Der Angeklagte scheidet schon beim ersten Punkt aus."
+        },
+        {
+          "art": "cta",
+          "titel": "Aussagedelikte in drei Fragen",
+          "punkte": [
+            "Wer sagt aus – und in welcher Rolle?",
+            "Vor welcher Stelle?",
+            "Vernehmung schon abgeschlossen?"
+          ],
+          "icons": [
+            "person",
+            "gericht",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Falschaussage in fünf Schritten – und schon der erste siebt aus: Täter des § 153 StGB kann nur ein Zeuge oder Sachverständiger sein, nicht der Angeklagte im eigenen Verfahren. Danach prüfst du die zuständige Stelle, die falsche Aussage, die Vollendung mit Abschluss der Vernehmung und den Vorsatz. Der Meineid nach § 154 StGB ist ein Verbrechen, sein Versuch also strafbar. Speichern für die nächste Strafrecht-BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#153stgb",
+        "#meineid",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Falschaussage und Meineid: das Schema",
+      "coverText": "Nur Zeugen und Sachverständige",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Bei der Falschaussage entscheidet schon die Rolle vor Gericht, ob jemand überhaupt Täter sein kann.",
+        "handlung": "{A} hovers at a small witness stand and gently turns away a figure wearing a defendant's tag, while {B} waves a different figure with a witness badge toward the stand.",
+        "hinweisRegie": "Place the note in the free space beside the witness stand, slightly tilted toward the badge, so it explains who may stand there, without covering the defendant's tag or {B}'s gesture.",
+        "alternative": "{B} checks tickets at a narrow gate marked only by a small microphone, letting witnesses pass while {A} sorts out everyone else."
+      },
+      "bildSzene": "droid turns defendant away from witness stand",
+      "bildSzeneAlt": "ticket check at gate with microphone",
+      "quellen": [
+        "§§ 153, 154 StGB",
+        "§§ 157, 158 StGB",
+        "§ 160 StGB",
+        "§ 161 StGB",
+        "Themenpool: strafbt-761"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.010Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-407",
+      "slug": "2027-04-05-b3",
+      "titelZeilen": [
+        "Schild angefochten –",
+        "parken darfst du",
+        "trotzdem nicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Schild angefochten – parken darfst du trotzdem nicht",
+          "unter": "Aufschiebende Wirkung · § 80 Abs. 2 VwGO",
+          "text": "Grundsatz: aufschiebende Wirkung. Ausnahmen: § 80 Abs. 2 VwGO.",
+          "norm": "§ 80 Abs. 1, 2 VwGO",
+          "icon": "verbot",
+          "sprecher": "Dein Widerspruch stoppt das Halteverbotsschild nicht. Dabei gilt eigentlich: Widerspruch und Anfechtungsklage haben aufschiebende Wirkung. Wann das nicht gilt, steht in Paragraf 80 Absatz 2 VwGO – vier Fallgruppen.",
+          "marken": [
+            "Schild gilt weiter",
+            "vier Fallgruppen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Abgaben und Kosten",
+          "text": "Nr. 1: Anforderung öffentlicher Abgaben und Kosten.",
+          "norm": "§ 80 Abs. 2 S. 1 Nr. 1 VwGO",
+          "sprecher": "Nummer eins: öffentliche Abgaben und Kosten, also etwa Steuern, Gebühren und Beiträge. Der Staat soll seine Finanzierung nicht durch jeden Widerspruch verlieren.",
+          "marken": [
+            "Gebühren, Beiträge"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Polizeivollzugsbeamte – und Verkehrszeichen",
+          "text": "Nr. 2: unaufschiebbare Anordnungen; Verkehrszeichen nach der Rspr. analog.",
+          "norm": "§ 80 Abs. 2 S. 1 Nr. 2 VwGO",
+          "sprecher": "Nummer zwei: unaufschiebbare Anordnungen und Maßnahmen von Polizeivollzugsbeamten. Verkehrszeichen behandelt die Rechtsprechung genauso, denn sie ersetzen den Beamten auf der Straße. Deshalb gilt dein Halteverbot sofort.",
+          "marken": [
+            "Verkehrszeichen analog"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Durch Gesetz angeordnet",
+          "text": "Nr. 3, 3a: Bundes- oder Landesgesetz, etwa § 212a BauGB.",
+          "norm": "§ 80 Abs. 2 S. 1 Nr. 3, 3a VwGO",
+          "sprecher": "Nummer drei: Ein Gesetz ordnet es an. Klassiker ist Paragraf 212a BauGB: Der Widerspruch des Nachbarn gegen eine Baugenehmigung hat keine aufschiebende Wirkung. Die Länder nutzen das etwa für Maßnahmen der Verwaltungsvollstreckung.",
+          "marken": [
+            "§ 212a BauGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Anordnung der sofortigen Vollziehung",
+          "text": "Nr. 4: Behörde ordnet im Einzelfall an – mit schriftlicher Begründung.",
+          "norm": "§ 80 Abs. 2 S. 1 Nr. 4, Abs. 3 VwGO",
+          "sprecher": "Nummer vier: Die Behörde ordnet die sofortige Vollziehung im Einzelfall an. Dafür braucht sie ein besonderes Vollzugsinteresse und eine schriftliche Begründung nach Absatz 3.",
+          "marken": [
+            "Begründung, Abs. 3"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Was du dann beantragst",
+          "text": "Nr. 1–3: anordnen lassen. Nr. 4: wiederherstellen lassen – § 80 Abs. 5 VwGO.",
+          "norm": "§ 80 Abs. 5 VwGO",
+          "sprecher": "Für die Klausur heißt das: Rechtsschutz über Paragraf 80 Absatz 5. Bei Nummer eins bis drei beantragst du, die aufschiebende Wirkung anzuordnen, bei Nummer vier, sie wiederherzustellen.",
+          "marken": [
+            "Nr. 4: wiederherstellen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Aufschiebende Wirkung ist die Regel – Abs. 2 zählt die Ausnahmen abschließend auf.",
+          "norm": "§ 80 Abs. 2 VwGO",
+          "sprecher": "Merke: Aufschiebende Wirkung ist die Regel. Sie entfällt nur in den Fällen des Absatzes 2 – und Verkehrszeichen gehören über die Analogie dazu.",
+          "marken": [
+            "Regel und Ausnahme"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Warum entfällt sie?",
+          "text": "Speichern für den nächsten Eilantrag.",
+          "sprecher": "Speicher dir das für den nächsten Eilantrag. Und frag immer zuerst: Warum entfällt die aufschiebende Wirkung hier?",
+          "marken": [
+            "Warum entfällt sie?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Widerspruch gegen das Halteverbot eingelegt – und trotzdem abgeschleppt? Grundsätzlich haben Widerspruch und Anfechtungsklage aufschiebende Wirkung (§ 80 Abs. 1 VwGO). Sie entfällt aber in den Fällen des § 80 Abs. 2 VwGO: Abgaben und Kosten, unaufschiebbare Anordnungen von Polizeivollzugsbeamten – nach der Rechtsprechung analog auch Verkehrszeichen –, gesetzlich geregelte Fälle wie § 212a BauGB und die behördliche Anordnung der sofortigen Vollziehung. Speichern für den nächsten Eilantrag.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsprozessrecht",
+        "#vwgo",
+        "#80vwgo",
+        "#eilrechtsschutz",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aufschiebende Wirkung: die vier Ausnahmen",
+      "coverText": "Verkehrszeichen wie Polizisten",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Ein angefochtenes Verkehrszeichen gilt sofort weiter – wie die Anordnung eines Polizisten.",
+        "handlung": "{A} holds up an objection letter in front of a no-parking sign, while {B} hovers beside the sign and calmly keeps its small stop light glowing.",
+        "hinweisRegie": "Place the note in the free space between the objection letter and the glowing sign, slightly tilted toward the sign, without covering {A}'s letter or the stop light.",
+        "alternative": "{B} presses a pause button on a machine, but four small switches on its side keep it running while {A} stares in disbelief."
+      },
+      "bildSzene": "objection letter before still-glowing no-parking sign",
+      "bildSzeneAlt": "pause button ignored by four switches",
+      "quellen": [
+        "§ 80 Abs. 1, 2, 3, 5 VwGO",
+        "§ 212a BauGB",
+        "Themenpool: vwgo-407"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.012Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-728",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "A sticht mit Tötungsvorsatz zu, glaubt, O überlebt, und lässt ab, obwohl er weitermachen könnte. Rücktritt?",
+      "optionen": [
+        "Nein – nach einem Stich mit Tötungsvorsatz ist der Versuch immer beendet",
+        "Nein – ist das Opfer verletzt, ist der Rücktritt ausgeschlossen",
+        "Ja – unbeendeter Versuch, das bloße Aufhören genügt"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 24 Abs. 1 S. 1 StGB",
+        "§§ 212, 22 StGB",
+        "Themenpool: strafat-728"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.012Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-728",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – A hält noch nicht alles für getan, also genügt das Aufhören",
+      "text": "Beendet oder unbeendet entscheidet der Rücktrittshorizont: die Vorstellung des Täters nach der letzten Ausführungshandlung. A glaubt, O werde überleben – der Versuch ist unbeendet, freiwilliges Aufgeben genügt (§ 24 Abs. 1 S. 1 Alt. 1 StGB). Vorher prüfen: kein Fehlschlag, denn A könnte weiterhandeln. Die Körperverletzung bleibt strafbar.",
+      "norm": "§ 24 Abs. 1 S. 1 StGB",
+      "quellen": [
+        "§ 24 Abs. 1 S. 1 StGB",
+        "§§ 212, 22 StGB",
+        "Themenpool: strafat-728"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.012Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – nach einem Stich mit Tötungsvorsatz ist der Versuch immer beendet",
+        "Nein – ist das Opfer verletzt, ist der Rücktritt ausgeschlossen",
+        "Ja – unbeendeter Versuch, das bloße Aufhören genügt"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-025",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 475 Abs. 3 BGB: Neue Sache geliefert – für die Nutzung der alten zahlt der Verbraucher nichts",
+      "text": "Liefert der Unternehmer beim Verbrauchsgüterkauf (§ 474 Abs. 1 BGB) zur Nacherfüllung eine neue Sache, muss der Käufer die mangelhafte zurückgeben (§ 439 Abs. 5 BGB). Nutzungen muss er aber nicht herausgeben oder ersetzen (§ 475 Abs. 3 BGB). Hintergrund ist das Unionsrecht. Außerhalb des Verbrauchsgüterkaufs bleibt es bei §§ 439 Abs. 5, 346 ff. BGB – mit Nutzungsersatz.",
+      "norm": "§ 475 Abs. 3 BGB",
+      "quellen": [
+        "§ 474 BGB",
+        "§ 475 Abs. 3 BGB",
+        "§ 439 Abs. 5 BGB",
+        "§ 346 BGB",
+        "Themenpool: schuldbt-025"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.012Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-242",
+      "ueberzeile": "Klausurtipp Deliktsrecht",
+      "titel": "Reiner Vermögensschaden: § 823 Abs. 1 BGB hilft nicht – dann an § 826 BGB denken",
+      "text": "§ 823 Abs. 1 BGB schützt das bloße Vermögen nicht, § 826 BGB schon – aber mit hoher Hürde: Sittenwidrig ist ein Verhalten, das nach Ziel, Mittel oder Gesinnung besonders verwerflich ist. Vorsatz muss die Schädigung umfassen, bedingter genügt. Der Täter muss die Umstände kennen, die die Sittenwidrigkeit begründen – ein Bewusstsein der Sittenwidrigkeit verlangt die Rspr. nicht.",
+      "quellen": [
+        "§ 826 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: delikt-242"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.012Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-052",
+      "ueberzeile": "4 Punkte Zivilprozess",
+      "titel": "23:59 Uhr, Fristablauf: Wann ist der Schriftsatz bei Gericht eingegangen?",
+      "text": "Maßgeblich ist der Eingang beim Gericht, nicht die Absendung. Wie er gelingt, hängt davon ab, wer einreicht.",
+      "punkte": [
+        "Anwälte und Behörden: grundsätzlich nur elektronisch (§ 130d S. 1 ZPO)",
+        "Elektronisch: gespeichert auf der Empfangseinrichtung des Gerichts (§ 130a Abs. 5 ZPO)",
+        "Fax, etwa der Partei selbst: Signale vollständig empfangen – der Ausdruck ist egal",
+        "Technik gestört: Ersatzeinreichung, Unmöglichkeit glaubhaft machen (§ 130d S. 2, 3 ZPO)"
+      ],
+      "quellen": [
+        "§ 130 Nr. 6 ZPO",
+        "§ 130a Abs. 5 ZPO",
+        "§ 130d ZPO",
+        "Themenpool: zpo-052"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.012Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-003",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Verkäufer-AGB mit Eigentumsvorbehalt, Käufer-AGB mit Abwehrklausel: Wessen Bedingungen gelten?",
+      "norm": "§§ 154, 306 BGB",
+      "optionen": [
+        "Früher: Theorie des letzten Wortes – es gelten die zuletzt einbezogenen AGB (§ 150 Abs. 2 BGB).",
+        "Heute BGH/h.L.: Vertrag gilt, Widersprechendes entfällt, es gilt dispositives Recht (§ 306 Abs. 2 BGB)."
+      ],
+      "text": "Klausur: Der einfache Eigentumsvorbehalt entfällt schuldrechtlich, setzt sich nach dem BGH dinglich aber meist durch – V übereignet erkennbar nur bedingt.",
+      "quellen": [
+        "§ 150 Abs. 2 BGB",
+        "§ 154 BGB",
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 449 BGB",
+        "Themenpool: bgbat-003"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:20:30.012Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

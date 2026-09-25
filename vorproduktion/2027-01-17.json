@@ -1,0 +1,900 @@
+{
+  "datum": "2027-01-17",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "revision-883",
+        "themaTitel": "Wie weit prüft die Revision die Beweiswürdigung?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "verwbt-396",
+        "themaTitel": "Wann ist eine Standardmaßnahme der Polizei zulässig?",
+        "fach": "verwbt",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:23",
+        "art": "frage",
+        "themaId": "strafbt-751"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:23",
+        "art": "antwort",
+        "themaId": "strafbt-751"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "arbeit-253"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "fehler",
+        "themaId": "assessorz-920"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "tipp",
+        "themaId": "handelsg-530"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "zahl",
+        "themaId": "assessorz-818"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "revision-883",
+      "poolTitel": "Wie weit prüft die Revision die Beweiswürdigung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-12-24"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwbt-396",
+      "poolTitel": "Wann ist eine Standardmaßnahme der Polizei zulässig?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2026-11-05"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-751",
+      "poolTitel": "Schwerer Raub",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-28"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-751",
+      "poolTitel": "Schwerer Raub",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-28"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "arbeit-253",
+      "poolTitel": "Was ist die Kündigungsschutzklage und welche Frist gilt?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 4 KSchG",
+        "§ 7 KSchG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessorz-920",
+      "poolTitel": "Verteidigung gegen Arrest und einstweilige Verfügung: Widerspruch, Aufhebung, Schadensersatz",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 924 ZPO",
+        "§§ 926, 927 ZPO",
+        "§ 945 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-13"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "handelsg-530",
+      "poolTitel": "Handelskauf und Untersuchungs-/Rügeobliegenheit",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 377 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-818",
+      "poolTitel": "Was bewirkt die Streitverkündung im Folgeprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 72 ff. ZPO",
+        "§ 74 ZPO",
+        "§ 68 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-03"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-01-17-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: Vier Bereiche, 18 Kernsätze",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "Vier Bereiche,",
+            "18 Kernsätze"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Sozialauswahl: erst die Vergleichsgruppe bilden, dann die vier Sozialdaten gewichten.",
+            "§§ 278, 831 BGB: im Vertrag Zurechnung ohne Entlastung, im Delikt Entlastung möglich.",
+            "Gesamtschuld: § 426 Abs. 1 und Abs. 2 BGB – zwei selbständige Wege zum Regress.",
+            "Unterlassungstitel: Ordnungsgeld erst nach Androhung (§ 890 Abs. 2 ZPO).",
+            "Beweislast: Jede Partei beweist die Voraussetzungen der ihr günstigen Norm.",
+            "Berufung: Neues nur durch § 531 Abs. 2 ZPO – Unstreitiges immer."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 244 Abs. 1 Nr. 1 StGB: lit. a gefährlich und griffbereit, lit. b harmloses Mittel plus Absicht.",
+            "Rücktritt: zuerst den fehlgeschlagenen Versuch ausschließen.",
+            "Aufklärungsrüge: Kern ist, warum sich die Beweiserhebung aufdrängen musste.",
+            "Probefahrt: Gewahrsam bewusst übergeben – Betrug; nur gelockert – Diebstahl.",
+            "§ 170 Abs. 2 StPO: Teileinstellung nur für eine ganze prozessuale Tat."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Art. 16 GG: Entziehung nie; Verlust nur per Gesetz, gegen den Willen nie in die Staatenlosigkeit.",
+            "Art. 8 GG: Einzelne Störer machen die Versammlung nicht unfriedlich.",
+            "Amtshaftung: Anspruch gegen den Staat (Art. 34 GG), nicht gegen den Beamten.",
+            "Art. 4 GG: vorbehaltlos – Grenzen nur aus kollidierendem Verfassungsrecht.",
+            "Art. 14 GG: Enteignung ist formaler Entzug, nicht besonders harte Belastung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Auslegung: vier Züge als Argumente, der mögliche Wortsinn als Grenze.",
+            "Kopfsache: Abrufen schlägt Wiederlesen – starte mit dem leeren Blatt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wer kommt in die Sozialauswahl – und wer bleibt draußen?",
+            "Welche drei Türen öffnet § 531 Abs. 2 ZPO für neues Vorbringen?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Beweis",
+            "Strafrecht über Aufbau und Abgrenzung",
+            "Öffentliches Recht als Prüfungskette",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "waage",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – von der Sozialauswahl über den Rücktritt vom Versuch bis zur Enteignung nach Art. 14 GG. Jede Folie bündelt einen Lernbereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: vier Bereiche, 18 Kernsätze",
+      "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Eine Woche Stoff wird in vier Bereiche sortiert und kurz geprüft.",
+        "handlung": "{A} curiously sorts eighteen small glowing tiles into four differently coloured trays, while {B} taps with his pointer on one tile that still flickers.",
+        "hinweisRegie": "Place the note in the free space above the four coloured trays, slightly tilted toward the flickering tile, without covering {A}'s hands or {B}'s pointer.",
+        "alternative": "{B} holds up a small quiz card while {A} answers by lifting one of four coloured flags."
+      },
+      "bildSzene": "sorting glowing tiles into four trays",
+      "bildSzeneAlt": "quiz card answered with coloured flag",
+      "quellen": [
+        "§ 1 Abs. 3 KSchG",
+        "§§ 278, 831 BGB",
+        "§ 426 BGB",
+        "§§ 887, 888, 890 ZPO",
+        "§§ 138, 286 ZPO",
+        "§§ 529, 531 ZPO",
+        "§ 244 StGB",
+        "§ 24 StGB",
+        "§ 244 Abs. 2 StPO",
+        "§§ 242, 263 StGB",
+        "§ 170 Abs. 2 StPO",
+        "Art. 16 GG",
+        "Art. 8 GG",
+        "§ 839 BGB i. V. m. Art. 34 GG",
+        "Art. 4 GG",
+        "Art. 14 GG",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-936",
+        "Themenpool: mindset-1"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.715Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-883",
+      "slug": "2027-01-17-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "In dubio pro reo greift erst, wenn der Richter zweifelt",
+          "titelZeilen": [
+            "In dubio pro reo",
+            "greift erst, wenn",
+            "der Richter zweifelt"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Rechtsfehler statt eigener Würdigung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Beweiswürdigung ist Sache des Tatrichters (§ 261 StPO). Das Revisionsgericht prüft sie auf die Sachrüge nur anhand der Urteilsgründe auf Rechtsfehler (§ 337 StPO) – eine eigene Würdigung setzt es nicht an ihre Stelle."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Prüfschema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Lückenhaft",
+              "text": "Naheliegende Möglichkeiten oder wesentliche Umstände werden nicht erörtert."
+            },
+            {
+              "titel": "2. Widersprüchlich oder unklar",
+              "text": "Die Gründe widersprechen sich oder lassen nicht erkennen, worauf die Überzeugung beruht."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Prüfschema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Denkgesetze und Erfahrungssätze",
+              "text": "Schlüsse, die logisch nicht möglich sind oder gesichertem Erfahrungswissen widersprechen."
+            },
+            {
+              "titel": "4. Überspannte Anforderungen",
+              "text": "Das Gericht verlangt für seine Überzeugung eine absolute Gewissheit, die es nicht geben kann."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Zweifelssatz",
+          "text": "In dubio pro reo ist eine Entscheidungsregel, keine Beweisregel. Verletzt ist er nur, wenn das Urteil zeigt, dass der Richter Zweifel hatte und trotzdem zulasten des Angeklagten entschied. Hätte er zweifeln müssen, liegt allenfalls ein Fehler der Beweiswürdigung vor – etwa eine Lücke."
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Wie weit die Darstellungskontrolle reicht, ist umstritten: Die Rspr. prüft die Urteilsgründe recht intensiv, Kritiker sehen darin eine Annäherung an eine Tatsacheninstanz. Was in der Hauptverhandlung geschah, rekonstruiert das Revisionsgericht nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht die bessere Würdigung zählt, sondern der Rechtsfehler. In dubio pro reo greift erst bei tatsächlichen Zweifeln des Richters."
+        },
+        {
+          "art": "cta",
+          "titel": "Beweiswürdigung in drei Fragen",
+          "punkte": [
+            "Lücke, Widerspruch oder Unklarheit?",
+            "Verstoß gegen Denkgesetze?",
+            "Hatte der Richter selbst Zweifel?"
+          ],
+          "icons": [
+            "lupe",
+            "kreislauf",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "In dubio pro reo greift erst, wenn der Richter tatsächlich zweifelt. Hatte er keine Zweifel, hätte aber welche haben müssen, ist nicht der Zweifelssatz verletzt – dann liegt allenfalls ein Fehler der Beweiswürdigung vor. Die prüft das Revisionsgericht auf die Sachrüge nur anhand der Urteilsgründe: lückenhaft, widersprüchlich, unklar, Verstoß gegen Denkgesetze oder Erfahrungssätze. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#indubioproreo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision: Beweiswürdigung und Zweifelssatz",
+      "coverText": "Rechtsfehler statt eigener Würdigung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Das Revisionsgericht schaut nicht selbst noch einmal hin – es prüft, ob beim Hinschauen Regeln verletzt wurden.",
+        "handlung": "{A} hovers over a finished puzzle and scans it with a thin light beam for a missing piece, while {B} nervously wants to tear it apart and rebuild the whole puzzle from scratch.",
+        "hinweisRegie": "Place the note in the free space next to the gap the light beam finds, slightly tilted toward it, without covering {B}'s hands or the rest of the puzzle.",
+        "alternative": "{B} stands beside a set of scales left perfectly still, while {A} only checks whether the scales are properly calibrated."
+      },
+      "bildSzene": "light beam finds gap in finished puzzle",
+      "bildSzeneAlt": "checking calibration of still scales",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-883"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.715Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-396",
+      "slug": "2027-01-17-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ausweiskontrolle ohne Verdacht: Darf die Polizei das?",
+          "unter": "Polizeirecht · Standardmaßnahmen",
+          "text": "Manche Standardbefugnisse knüpfen an den Ort an, nicht an einen Verdacht.",
+          "norm": "Polizeigesetze der Länder",
+          "icon": "polizeiauto",
+          "sprecher": "Ausweiskontrolle ganz ohne Verdacht? Das kann zulässig sein. Viele Polizeigesetze erlauben die Identitätsfeststellung an bestimmten Orten, ohne dass die Person selbst eine Gefahr verursacht. Entscheidend ist, was die jeweilige Standardbefugnis verlangt.",
+          "marken": [
+            "ohne Verdacht?",
+            "je nach Land"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Standardbefugnis vor Generalklausel",
+          "text": "Die spezielle Befugnis ist die Ermächtigungsgrundlage – die Generalklausel tritt zurück.",
+          "norm": "Polizeigesetze der Länder",
+          "sprecher": "Schritt eins: die Ermächtigungsgrundlage. Identitätsfeststellung, Platzverweis, Gewahrsam und Durchsuchung sind speziell geregelt. In ihrem Anwendungsbereich tritt die Generalklausel zurück.",
+          "marken": [
+            "speziell zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Formelle Rechtmäßigkeit",
+          "text": "Zuständigkeit, Verfahren, Form – beim Gewahrsam zusätzlich der Richtervorbehalt.",
+          "norm": "Art. 104 Abs. 2 GG",
+          "sprecher": "Schritt zwei: formelle Rechtmäßigkeit. Zuständigkeit, Verfahren und Form. Beim Gewahrsam kommt der Richtervorbehalt aus Artikel 104 Absatz 2 GG hinzu, die richterliche Entscheidung ist unverzüglich herbeizuführen.",
+          "marken": [
+            "Richtervorbehalt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Tatbestand der Befugnis",
+          "text": "Gefahr, bestimmter Ort oder Kontrollstelle: Jede Befugnis hat eigene Voraussetzungen.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Tatbestand. Jede Standardbefugnis hat eigene Voraussetzungen. Die Identitätsfeststellung etwa zur Abwehr einer Gefahr, je nach Landesrecht aber auch an kriminalitätsbelasteten Orten oder an Kontrollstellen.",
+          "marken": [
+            "eigene Voraussetzungen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Richtiger Adressat",
+          "text": "Oft regelt die Befugnis den Adressaten selbst – sonst gelten die Störervorschriften.",
+          "norm": null,
+          "sprecher": "Schritt vier: der richtige Adressat. Knüpft die Befugnis an den Ort an, kann sie jede Person dort treffen. Sonst gelten die allgemeinen Regeln über Verhaltensstörer, Zustandsstörer und den Notstand.",
+          "marken": [
+            "Ort oder Störer"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Ermessen und Verhältnismäßigkeit",
+          "text": "Auch die ortsbezogene Kontrolle braucht fehlerfreies Ermessen und darf nicht an verbotene Merkmale anknüpfen.",
+          "norm": "Art. 3 Abs. 3 GG",
+          "sprecher": "Dann Ermessen und Verhältnismäßigkeit. Auch ohne Verdacht darf die Auswahl nicht willkürlich sein. Knüpft die Kontrolle etwa an die Hautfarbe an, droht ein Verstoß gegen Artikel 3 Absatz 3 GG.",
+          "marken": [
+            "Art. 3 III GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: die Folgemaßnahme",
+          "text": "Festhalten oder Durchsuchen zur Identitätsfeststellung sind eigene Eingriffe.",
+          "norm": null,
+          "sprecher": "Und der Klausurklassiker: Lässt sich die Identität nicht klären, folgen oft Festhalten oder Durchsuchung. Das sind eigene Eingriffe, die du gesondert prüfst.",
+          "marken": [
+            "Folgemaßnahme"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Standardbefugnis, Form, Tatbestand, Adressat, Ermessen – in dieser Reihenfolge.",
+          "norm": null,
+          "sprecher": "Merke: Standardbefugnis vor Generalklausel. Dann Form, Tatbestand, Adressat, Ermessen und Verhältnismäßigkeit.",
+          "marken": [
+            "Reihenfolge"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst das Landespolizeigesetz aufschlagen",
+          "text": "Speichern für die nächste Polizeirechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Polizeirechtsklausur. Und schlag zuerst dein Landespolizeigesetz auf: Dort steht, was die Befugnis wirklich verlangt.",
+          "marken": [
+            "Landesrecht zuerst"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ausweiskontrolle ohne Verdacht – darf die Polizei das? Je nach Landesrecht ja: Manche Standardbefugnisse erlauben die Identitätsfeststellung an bestimmten Orten oder Kontrollstellen, ohne dass die Person selbst Störer ist. Prüfe deshalb: Standardbefugnis vor Generalklausel, formelle Rechtmäßigkeit, Tatbestand, richtiger Adressat, Ermessen und Verhältnismäßigkeit – und Folgemaßnahmen gesondert. Speichern für die nächste Polizeirechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#verwaltungsrecht",
+        "#standardmaßnahme",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Standardmaßnahmen: Ort, Adressat, Ermessen",
+      "titelZeilen": [
+        "Ausweiskontrolle",
+        "ohne Verdacht: Darf",
+        "die Polizei das?"
+      ],
+      "coverText": "Ort statt Verdacht – je nach Land",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Manche Kontrollen hängen am Ort, nicht an der Person – was erlaubt ist, sagt die jeweilige Befugnis.",
+        "handlung": "{A} curiously stands inside a softly glowing circle on a town square, while {B}, standing at the circle's edge, politely asks her to show an identity token.",
+        "hinweisRegie": "Place the note in the free space at the glowing circle's edge near {B}, slightly tilted, so it links the check to the place without covering {A}'s token or any faces.",
+        "alternative": "{B} sets up a small checkpoint barrier on a country road while {A} watches every traveller stop, regardless of who they are."
+      },
+      "bildSzene": "identity check inside glowing circle",
+      "bildSzeneAlt": "checkpoint barrier on a country road",
+      "quellen": [
+        "Polizeigesetze der Länder",
+        "Art. 104 Abs. 2 GG",
+        "Art. 3 Abs. 3 GG",
+        "Themenpool: verwbt-396"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage-landesrecht",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.717Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-751",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "A hält der Kassiererin ein Messer vor und nimmt das Geld aus der Kasse. Welche Mindeststrafe droht?",
+      "optionen": [
+        "Ein Jahr – es bleibt beim Raub nach § 249 StGB",
+        "Drei Jahre – Beisichführen, § 250 Abs. 1 Nr. 1 lit. a StGB",
+        "Fünf Jahre – Verwenden, § 250 Abs. 2 Nr. 1 StGB"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 249 StGB",
+        "§ 250 Abs. 1 Nr. 1 lit. a, Abs. 2 Nr. 1 StGB",
+        "Themenpool: strafbt-751"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.717Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-751",
+      "ueberzeile": "Auflösung",
+      "titel": "Fünf Jahre – wer das Messer zur Drohung einsetzt, verwendet es",
+      "text": "Das Messer ist Waffe oder jedenfalls gefährliches Werkzeug. Setzt A es zur Drohung ein, verwendet er es: § 250 Abs. 2 Nr. 1 StGB, Freiheitsstrafe nicht unter fünf Jahren. Das bloße Beisichführen nach Abs. 1 Nr. 1 lit. a tritt dahinter zurück. Voraussetzung nach der Rspr.: Die Kassiererin nimmt die Drohung wahr.",
+      "norm": "§ 250 Abs. 2 Nr. 1 StGB",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 250 Abs. 1 Nr. 1 lit. a, Abs. 2 Nr. 1 StGB",
+        "Themenpool: strafbt-751"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.717Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ein Jahr – es bleibt beim Raub nach § 249 StGB",
+        "Drei Jahre – Beisichführen, § 250 Abs. 1 Nr. 1 lit. a StGB",
+        "Fünf Jahre – Verwenden, § 250 Abs. 2 Nr. 1 StGB"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "arbeit",
+      "klausur": 1,
+      "pairId": "arbeit-253",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 4 KSchG: Drei Wochen – sonst gilt die Kündigung als wirksam",
+      "text": "Wer geltend machen will, dass eine schriftliche Kündigung sozial ungerechtfertigt oder aus anderen Gründen unwirksam ist, muss innerhalb von drei Wochen nach Zugang Klage beim Arbeitsgericht erheben (§ 4 S. 1 KSchG). Sonst gilt die Kündigung als von Anfang an rechtswirksam (§ 7 KSchG). Frist versäumt? Nachträgliche Zulassung nach § 5 KSchG prüfen.",
+      "norm": "§§ 4, 7 KSchG",
+      "quellen": [
+        "§ 4 KSchG",
+        "§ 5 KSchG",
+        "§ 7 KSchG",
+        "Themenpool: arbeit-253"
+      ],
+      "fachLabel": "Arbeitsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.717Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-920",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Widerspruch gegen die einstweilige Verfügung: Stoppt er die Vollziehung?",
+      "falsch": "Nach dem Widerspruch darf der Gläubiger aus der einstweiligen Verfügung nicht mehr vollziehen.",
+      "richtigText": "Der Widerspruch hemmt die Vollziehung nicht (§ 924 Abs. 3 S. 1 ZPO, über § 936 ZPO). Der Schuldner muss eine einstweilige Anordnung nach § 924 Abs. 3 S. 2 i. V. m. § 707 ZPO beantragen. Über den Widerspruch entscheidet das Gericht nach mündlicher Verhandlung durch Endurteil (§ 925 ZPO).",
+      "quellen": [
+        "§ 924 ZPO",
+        "§ 925 ZPO",
+        "§ 936 ZPO",
+        "§ 707 ZPO",
+        "Themenpool: assessorz-920"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.717Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-530",
+      "ueberzeile": "Klausurtipp Handelsrecht",
+      "titel": "§ 377 HGB: Erst prüfen, ob beide Seiten Kaufleute sind",
+      "text": "Die Rügeobliegenheit gilt nur, wenn der Kauf für beide ein Handelsgeschäft ist. Dann: Ware unverzüglich nach Ablieferung untersuchen, Mängel unverzüglich anzeigen; versteckte Mängel unverzüglich nach Entdeckung. Unterbleibt die Rüge, gilt die Ware als genehmigt – außer bei Arglist (§ 377 Abs. 5 HGB). Rechtzeitige Absendung genügt (Abs. 4).",
+      "quellen": [
+        "§ 377 HGB",
+        "§ 343 HGB",
+        "Themenpool: handelsg-530"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.717Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-818",
+      "ueberzeile": "3 Punkte 2. Examen",
+      "titel": "Streitverkündung: Sie hemmt auch die Verjährung des Regressanspruchs",
+      "text": "Bauherr B verklagt Unternehmer U, U verkündet dem Subunternehmer S den Streit. Die Zustellung hemmt die Verjährung von Us Regressanspruch gegen S (§ 204 Abs. 1 Nr. 6 BGB) – wenn die Streitverkündung zulässig ist.",
+      "punkte": [
+        "Anhängiger Rechtsstreit, bis zur rechtskräftigen Entscheidung",
+        "Grund: Regress bei Unterliegen oder Sorge vor dem Anspruch des Dritten (§ 72 Abs. 1 ZPO)",
+        "Schriftsatz mit Grund und Lage des Rechtsstreits, Zustellung an den Dritten (§ 73 ZPO)"
+      ],
+      "quellen": [
+        "§ 72 ZPO",
+        "§ 73 ZPO",
+        "§ 204 Abs. 1 Nr. 6 BGB",
+        "Themenpool: assessorz-818"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.717Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

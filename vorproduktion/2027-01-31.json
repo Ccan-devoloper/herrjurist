@@ -1,0 +1,888 @@
+{
+  "datum": "2027-01-31",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "zpo-557",
+        "themaTitel": "Streitverkündung und Interventionswirkung",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-132",
+        "themaTitel": "Was ist ein error in persona und wie wirkt die aberratio ictus?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "schuld-454"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "schuld-454"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "bereich-213"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "fehler",
+        "themaId": "methodik-939"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "tipp",
+        "themaId": "methodik-899"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "zahl",
+        "themaId": "zpo-051"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "zpo-557",
+      "poolTitel": "Streitverkündung und Interventionswirkung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 72 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-132",
+      "poolTitel": "Was ist ein error in persona und wie wirkt die aberratio ictus?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-454",
+      "poolTitel": "Gesamtschuld und Innenausgleich",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 421 ff., 426 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-13"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-454",
+      "poolTitel": "Gesamtschuld und Innenausgleich",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 421 ff., 426 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-13"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bereich-213",
+      "poolTitel": "Wie löst man den Dreiecksfall der Anweisung bereicherungsrechtlich?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-01-01"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "methodik-939",
+      "poolTitel": "Hausarbeit: Phasen, Gliederung und Zitierweise im Griff",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-02"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "methodik-899",
+      "poolTitel": "Definitionen lernen: Wortlaut plus Funktion",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zpo-051",
+      "poolTitel": "Was bedeuten Anhängigkeit und Rechtshängigkeit?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 167 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2026-11-29"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-01-31-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vier Bereiche, 18 Themen: dein Sonntags-Check",
+          "titelZeilen": [
+            "Vier Bereiche,",
+            "18 Themen: dein",
+            "Sonntags-Check"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Klausel: Gläubiger mit § 573 bzw. § 731 ZPO, Schuldner mit § 732 und § 768 ZPO.",
+            "Wucher: Missverhältnis allein reicht nicht – beim besonders groben vermutet der BGH die Gesinnung.",
+            "Neben der Leistung: Bleibt der Schaden trotz Nacherfüllung, gilt § 280 Abs. 1 BGB ohne Frist.",
+            "Recht zum Besitz: § 986 Abs. 2 BGB schützt den Besitzer bei Übereignung nach § 931 BGB.",
+            "Nichtleistungskondiktion: Der Vorrang der Leistung weicht der Wertung des § 935 BGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Mittäterschaft: gemeinsamer Plan plus wesentlicher Beitrag – Anwesenheit nicht nötig.",
+            "Raub oder Erpressung: Geben oder Nehmen – die h.L. verlangt eine Vermögensverfügung.",
+            "Untreue: ohne Vermögensbetreuungspflicht mit eigenem Spielraum kein § 266 StGB.",
+            "Einwilligung: Wer fragen kann, darf nicht mutmaßen.",
+            "Beschlagnahme: Verteidigungsunterlagen schützt § 148 StPO auch beim Beschuldigten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Bescheid: Tenor vorn, Urteilsstil, Sofortvollzug eigens begründen.",
+            "Sozialstaat: allein ein Auftrag – mit Art. 1 GG Anspruch aufs Existenzminimum.",
+            "Folgenbeseitigung: früherer Zustand zurück, kein Schadensersatz.",
+            "Baurecht: erst das Gebiet, dann § 30, § 34 oder § 35 BauGB.",
+            "Ermessen: Fehler heißt Neubescheidung, Verpflichtung erst bei null.",
+            "Richtlinie: gegen den Staat unmittelbar, sonst Auslegung oder Staatshaftung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Beim Versäumnisurteil beginnt die Lösung mit dem Einspruch (§§ 338 ff. ZPO).",
+            "Kopfsache: erst abrufen, dann nachlesen – Wiedererkennen ist noch kein Können."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Ordnest du die vier Klauselrechtsbehelfe ohne Unterlagen Gläubiger und Schuldner zu?",
+            "Erklärst du in einem Satz, wann Ermessen zu einem Verpflichtungsurteil führt?",
+            "Löst du den Jungbullenfall mit § 935 BGB als Wertung?",
+            "Was stockt, kommt auf ein leeres Blatt – und morgen auf die Wiederholungsliste."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Anspruch und Wertung",
+            "Strafrecht: Abgrenzungen sichern",
+            "Öffentliches Recht: Prüfketten abrufen",
+            "Technik & Kopf: Abruf üben"
+          ],
+          "icons": [
+            "vertrag",
+            "waage",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen. Zivilrecht von der Vollstreckungsklausel bis zum Jungbullenfall, Strafrecht von der Mittäterschaft bis zur Beschlagnahme von Verteidigerpost, Öffentliches Recht vom Ausgangsbescheid bis zur Richtlinie – dazu Prozessrecht als Klausurtechnik und Abrufen statt Wiederlesen. Geh jeden Bereich durch und notier, was du nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtechnik",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: vier Bereiche, 18 Themen",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Eine Woche Stoff, sortiert in vier Stationen, die man einzeln abrufen kann.",
+        "handlung": "{A} points his pointer along four separate stations laid out on a camp table, while {B} checks each station off before moving to the next.",
+        "hinweisRegie": "Place the note in the free space above the four stations on the camp table, slightly tilted, so it spans all four without covering {B}'s hand or the pointer tip.",
+        "alternative": "{B} sorts a week's worth of collected stones into four labelled-by-colour pouches while {A} watches approvingly."
+      },
+      "bildSzene": "four stations checked off on camp table",
+      "bildSzeneAlt": "stones sorted into four pouches",
+      "quellen": [
+        "§§ 731, 732, 768 ZPO",
+        "§ 138 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 986 BGB",
+        "§§ 951, 812, 935 BGB",
+        "§ 25 Abs. 2 StGB",
+        "§§ 249, 253, 255 StGB",
+        "§ 266 StGB",
+        "§§ 97, 148 StPO",
+        "§ 80 Abs. 3 VwGO",
+        "Art. 20 Abs. 1 GG",
+        "§§ 30, 34, 35 BauGB",
+        "§ 113 Abs. 5 VwGO",
+        "Art. 288 AEUV",
+        "§§ 338–343 ZPO",
+        "Themenpool: methodik-905",
+        "Themenpool: mindset-3"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.488Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-557",
+      "slug": "2027-01-31-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Streitverkündung: geprüft wird erst im Folgeprozess",
+          "titelZeilen": [
+            "Streitverkündung:",
+            "geprüft wird erst",
+            "im Folgeprozess"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Bindung an tragende Feststellungen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Wer bei ungünstigem Ausgang Regress gegen einen Dritten nehmen will oder dessen Anspruch fürchtet, verkündet ihm den Streit (§ 72 Abs. 1 ZPO). Ziel: Der Dritte soll die Ergebnisse des Vorprozesses im späteren Prozess gegen sich gelten lassen müssen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1: Zulässigkeit",
+          "schritte": [
+            {
+              "titel": "1. Anhängiger Rechtsstreit",
+              "text": "Verkündet wird in einem laufenden Prozess, bis zu dessen rechtskräftiger Entscheidung."
+            },
+            {
+              "titel": "2. Streitverkündungsgrund",
+              "text": "Die Partei glaubt, bei Unterliegen einen Anspruch auf Gewährleistung oder Schadloshaltung gegen den Dritten zu haben."
+            },
+            {
+              "titel": "3. Form",
+              "text": "Schriftsatz mit Grund und Lage des Rechtsstreits, Zustellung an den Dritten (§ 73 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2: Wirkung",
+          "schritte": [
+            {
+              "titel": "4. Beitritt oder nicht",
+              "text": "Der Dritte kann als Nebenintervenient beitreten. Die Wirkung tritt auch ohne Beitritt ein (§ 74 Abs. 3 ZPO)."
+            },
+            {
+              "titel": "5. Interventionswirkung",
+              "text": "Bindung an die tragenden Feststellungen – weiter als die Rechtskraft, nach h.M. nur zugunsten des Verkünders (§ 68 ZPO)."
+            },
+            {
+              "titel": "6. Einrede",
+              "text": "Mangelhafte Prozessführung – nur soweit der Dritte gehindert war, Angriffs- oder Verteidigungsmittel vorzubringen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis",
+          "text": "Ob die Streitverkündung zulässig war, prüft das Gericht nicht im Vorprozess, sondern erst im Folgeprozess gegen den Dritten – dort, wo es um die Interventionswirkung geht. Nebeneffekt: Die Zustellung der Streitverkündung hemmt die Verjährung des Regressanspruchs (§ 204 Abs. 1 Nr. 6 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verkündet wird im Vorprozess, geprüft im Folgeprozess: Die Interventionswirkung bindet den Dritten an die tragenden Feststellungen."
+        },
+        {
+          "art": "cta",
+          "titel": "Streitverkündung in vier Zügen",
+          "punkte": [
+            "Grund nach § 72 ZPO",
+            "Form und Zustellung, § 73 ZPO",
+            "Wirkung auch ohne Beitritt",
+            "Interventionswirkung, § 68 ZPO"
+          ],
+          "icons": [
+            "dokument",
+            "umschlag",
+            "personen",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Streitverkündung: Ob sie zulässig war, wird erst im Folgeprozess geprüft. Im Vorprozess verkündet die Partei dem Dritten den Streit, wenn sie bei Unterliegen Regress nehmen will (§§ 72, 73 ZPO). Die Wirkung tritt auch ohne Beitritt ein: Der Dritte ist an die tragenden Feststellungen gebunden (§§ 74 Abs. 3, 68 ZPO) – weiter als die Rechtskraft. Und die Verjährung des Regressanspruchs wird gehemmt. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#streitverkündung",
+        "#zivilprozessrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Streitverkündung und Interventionswirkung",
+      "coverText": "Bindung an tragende Feststellungen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Wer rechtzeitig den Streit verkündet, bindet den Dritten an das Ergebnis des ersten Prozesses.",
+        "handlung": "{A} hovers over a first courtroom-like table and ties a thin glowing thread to a sealed result, while {B} carries the other end of the thread to a second table in the next room.",
+        "hinweisRegie": "Place the note in the free space along the glowing thread between the two tables, slightly tilted, so it connects both proceedings without covering {B}'s hands.",
+        "alternative": "{B} stamps a heavy crystal seal onto a result sheet that {A} then carries unchanged into a second, separate room."
+      },
+      "bildSzene": "glowing thread between two tables",
+      "bildSzeneAlt": "sealed result carried into next room",
+      "quellen": [
+        "§§ 72–74 ZPO",
+        "§ 68 ZPO",
+        "§ 204 Abs. 1 Nr. 6 BGB",
+        "Themenpool: zpo-557"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.488Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-132",
+      "slug": "2027-01-31-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Verwechselt, also kein Vorsatz“? Stimmt so nicht",
+          "unter": "Irrtum · § 16 StGB",
+          "text": "Beim error in persona bleibt der Vorsatz – die Verwechslung ist unbeachtlich.",
+          "norm": "§ 16 Abs. 1 StGB",
+          "icon": "zielscheibe",
+          "sprecher": "Verwechselt, also kein Vorsatz? Diesen Satz liest man in vielen Klausuren. Und er stimmt nicht. Beim error in persona bleibt der Vorsatz.",
+          "marken": [
+            "Vorsatz bleibt",
+            "error in persona"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Error in persona: gleichwertige Objekte",
+          "text": "Mensch statt Mensch: unbeachtlicher Motivirrtum.",
+          "norm": "§ 212 StGB",
+          "sprecher": "Schritt eins: der error in persona. A will B erschießen, hält im Dunkeln aber C für B und trifft C. Getötet werden sollte der Mensch, den A vor sich sieht. Die Identität ist nur ein Motiv. Also vollendeter Totschlag an C.",
+          "marken": [
+            "Mensch = Mensch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ungleichwertige Objekte",
+          "text": "Hund statt Mensch: nur Versuch am vorgestellten Menschen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Sind die Objekte ungleichwertig, etwa ein Hund statt eines Menschen, bleibt ein versuchtes Tötungsdelikt. Die fahrlässige Sachbeschädigung am Hund ist straflos.",
+          "marken": [
+            "ungleichwertig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Aberratio ictus: Die Tat geht fehl",
+          "text": "A zielt auf B, trifft aber den daneben stehenden C.",
+          "norm": null,
+          "sprecher": "Schritt drei: die aberratio ictus. A zielt auf B, der Schuss geht fehl und trifft den daneben stehenden C. A irrt nicht über die Identität. Die Kugel trifft schlicht ein anderes Ziel.",
+          "marken": [
+            "fehlgegangen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Lösung der h.M.",
+          "text": "Versuch an B, Fahrlässigkeit an C.",
+          "norm": "§§ 212, 22, 222 StGB",
+          "sprecher": "Schritt vier: Nach herrschender Meinung hat sich der Vorsatz auf B konkretisiert. Also versuchter Totschlag an B und fahrlässige Tötung an C. Die Gleichwertigkeitstheorie nimmt dagegen vollendeten Totschlag an.",
+          "marken": [
+            "Versuch + Fahrlässigkeit"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: der Anstifter und die Verwechslung",
+          "text": "Rspr.: meist unbeachtlich. Teile der Lit.: wie aberratio ictus.",
+          "norm": "§ 26 StGB",
+          "sprecher": "Der Klassiker: Der Täter verwechselt das Opfer, das ihm der Anstifter beschrieben hat. Die Rechtsprechung hält das für den Anstifter meist für unbeachtlich, solange die Verwechslung vorhersehbar war. Teile der Literatur behandeln es für ihn wie eine aberratio ictus.",
+          "marken": [
+            "Anstifter",
+            "Streit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Verwechselt: Vorsatz bleibt. Verfehlt: Versuch plus Fahrlässigkeit.",
+          "norm": null,
+          "sprecher": "Merke: Verwechselt heißt, der Vorsatz bleibt. Verfehlt heißt Versuch plus Fahrlässigkeit.",
+          "marken": [
+            "verwechselt / verfehlt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Immer fragen: verwechselt oder verfehlt?",
+          "text": "Speichern für die nächste Strafrecht-AT-Klausur.",
+          "sprecher": "Speicher dir das für die nächste Strafrecht-AT-Klausur. Und frag immer zuerst: verwechselt oder verfehlt?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "„Verwechselt, also kein Vorsatz“ – diesen Satz liest man in vielen Klausuren, und er stimmt nicht. Beim error in persona sind gleichwertige Objekte vertauscht: ein unbeachtlicher Motivirrtum, der Vorsatz bleibt. Bei der aberratio ictus geht die Tat dagegen fehl – nach h.M. Versuch am anvisierten und Fahrlässigkeit am getroffenen Opfer. Umstritten ist, wie die Verwechslung durch den Täter beim Anstifter wirkt. Speichern für die nächste Strafrecht-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#errorinpersona",
+        "#aberratioictus",
+        "#16stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Error in persona oder aberratio ictus?",
+      "titelZeilen": [
+        "„Verwechselt, also",
+        "kein Vorsatz“?",
+        "Stimmt so nicht"
+      ],
+      "coverText": "Verwechselt ist nicht verfehlt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer das falsche Ziel für das richtige hält, handelt trotzdem vorsätzlich – anders als der, dessen Wurf danebengeht.",
+        "handlung": "{A} nervously throws a soft glowing ball at a figure he mistakes for someone else in the dark, while {B} curiously watches a second ball from another thrower veer off course toward a bystander.",
+        "hinweisRegie": "Place the note in the free space between the two ball paths, slightly tilted, so it contrasts the mistaken target with the deflected throw without covering faces.",
+        "alternative": "{B} holds two identical masks up to {A}, who picks the wrong one, while a stray paper plane drifts past to a third figure."
+      },
+      "bildSzene": "mistaken target versus veering throw",
+      "bildSzeneAlt": "two identical masks, stray plane",
+      "quellen": [
+        "§ 16 Abs. 1 StGB",
+        "§ 212 StGB",
+        "§§ 22, 23 StGB",
+        "§ 222 StGB",
+        "§ 26 StGB",
+        "Themenpool: strafat-132"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.509Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-454",
+      "ueberzeile": "Prüfungsfrage Schuldrecht AT",
+      "titel": "S1 und S2 schulden G als Gesamtschuldner 10.000 Euro. Wie viel kann G von S1 verlangen?",
+      "optionen": [
+        "Nur 5.000 Euro – seinen Anteil",
+        "Die vollen 10.000 Euro",
+        "Nur, wenn S2 nicht zahlen kann"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 421 BGB",
+        "§ 422 BGB",
+        "§ 426 BGB",
+        "Themenpool: schuld-454"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.509Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-454",
+      "ueberzeile": "Auflösung",
+      "titel": "Die vollen 10.000 Euro – aber insgesamt nur einmal",
+      "text": "Jeder Gesamtschuldner schuldet die ganze Leistung; der Gläubiger kann sie nach Belieben von jedem ganz oder teilweise fordern, insgesamt aber nur einmal (§ 421 S. 1 BGB). Zahlt S1, wirkt das auch für S2 (§ 422 Abs. 1 BGB). Ausgeglichen wird im Innenverhältnis, im Zweifel zu gleichen Teilen (§ 426 BGB).",
+      "norm": "§ 421 S. 1 BGB · § 426 BGB",
+      "quellen": [
+        "§ 421 BGB",
+        "§ 422 BGB",
+        "§ 426 BGB",
+        "Themenpool: schuld-454"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.509Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur 5.000 Euro – seinen Anteil",
+        "Die vollen 10.000 Euro",
+        "Nur, wenn S2 nicht zahlen kann"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-213",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Fehlt die Anweisung, kondiziert die Bank beim Empfänger",
+      "text": "Im Anweisungsdreieck wird grundsätzlich in den Leistungsverhältnissen rückabgewickelt. Fehlt eine dem Kontoinhaber zurechenbare Anweisung – etwa bei einer gefälschten Überweisung –, hat die Bank gegen ihn keinen Aufwendungsersatz (§ 675u BGB). Sie kondiziert nach der Rspr. direkt beim Empfänger.",
+      "norm": "§ 812 Abs. 1 S. 1 Alt. 2 BGB · § 675u BGB",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "§ 675u BGB",
+        "Themenpool: bereich-213"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.509Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-939",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Hausarbeit: Fußnoten nur für wörtliche Zitate?",
+      "falsch": "Eine Fußnote braucht es nur, wenn ich einen Text wörtlich übernehme. Fremde Gedanken in eigenen Worten muss ich nicht belegen.",
+      "richtigText": "Jede fremde Ansicht wird belegt – gerade auch sinngemäß übernommene. Zitiert wird nur, was du selbst gelesen hast, mit genauer Fundstelle. Wörtliche Zitate sind in juristischen Arbeiten die Ausnahme: Meist gibst du den Gedanken in eigenen Worten wieder und belegst ihn.",
+      "quellen": [
+        "Themenpool: methodik-939"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.509Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-899",
+      "ueberzeile": "Klausurtipp Lernmethodik",
+      "titel": "Zu jeder Definition gehört ein Grenzfall",
+      "text": "Lern nicht nur den Wortlaut, sondern einen Fall, in dem die Definition gerade noch greift – oder gerade nicht mehr. Beispiel Heimtücke: Der Schlafende ist arglos, weil er seine Arglosigkeit mit in den Schlaf nimmt; der Bewusstlose kann nach der Rspr. nicht arglos sein. So verstehst du, wozu jedes Merkmal da ist.",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: methodik-899"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.509Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-051",
+      "ueberzeile": "5 Punkte ZPO",
+      "titel": "Rechtshängigkeit: fünf Folgen der Zustellung",
+      "text": "Rechtshängig wird die Klage mit Zustellung der Klageschrift (§§ 253 Abs. 1, 261 Abs. 1 ZPO) – mit Folgen im Prozess und im materiellen Recht.",
+      "punkte": [
+        "Keine zweite Klage über denselben Streitgegenstand",
+        "Zuständigkeit bleibt trotz späterer Änderungen",
+        "Veräußerung der Streitsache ändert nichts (§ 265 ZPO)",
+        "Prozesszinsen (§ 291 BGB)",
+        "Verjährungshemmung – mit § 167 ZPO schon ab Eingang"
+      ],
+      "quellen": [
+        "§ 253 Abs. 1 ZPO",
+        "§ 261 ZPO",
+        "§ 265 ZPO",
+        "§ 167 ZPO",
+        "§ 291 BGB",
+        "§ 204 Abs. 1 Nr. 1 BGB",
+        "Themenpool: zpo-051"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "zahl": "5",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:23:45.509Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

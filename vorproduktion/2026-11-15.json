@@ -1,0 +1,865 @@
+{
+  "datum": "2026-11-15",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "stpo-770",
+        "themaTitel": "Beschlagnahmeverbote",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "verwalt-386",
+        "themaTitel": "Wie funktioniert der Widerruf eines rechtmäßigen Verwaltungsakts?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "sachen-499"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "sachen-499"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "bgbat-150"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:35",
+        "art": "fehler",
+        "themaId": "stpo-928"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "tipp",
+        "themaId": "strafbt-333"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "zahl",
+        "themaId": "zwangsv-830"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "stpo-770",
+      "poolTitel": "Beschlagnahmeverbote",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 97 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-386",
+      "poolTitel": "Wie funktioniert der Widerruf eines rechtmäßigen Verwaltungsakts?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 49 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-499",
+      "poolTitel": "Abhandenkommen als Erwerbssperre",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 935 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-499",
+      "poolTitel": "Abhandenkommen als Erwerbssperre",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 935 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-150",
+      "poolTitel": "Wie grenzt man Angebot und invitatio ad offerendum ab?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "stpo-928",
+      "poolTitel": "Adhäsionsverfahren: Zivilansprüche im Strafprozess durchsetzen",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 403 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafbt-333",
+      "poolTitel": "Was ist der Computerbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263a StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "zwangsv-830",
+      "poolTitel": "Wie vollstreckt man Herausgabeansprüche?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 883 ZPO",
+        "§ 885 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-11-15-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Kernsätze aus vier Bereichen – was sitzt schon?",
+          "titelZeilen": [
+            "18 Kernsätze aus",
+            "vier Bereichen –",
+            "was sitzt schon?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "18 Kernsätze zum Selbsttest",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Werkvertrag: ohne Abnahme kein fälliger Werklohn, die Gefahr bleibt beim Unternehmer.",
+            "Minderung: Gestaltungsrecht – das Geld kommt aus § 441 Abs. 4 BGB.",
+            "Abtretung: Leistung an den Altgläubiger befreit bei Unkenntnis (§ 407 BGB).",
+            "§ 750 ZPO: Zustellung spätestens mit Beginn der Vollstreckung.",
+            "§ 91a ZPO: keine Prüfung der Erledigung, Kosten nach voraussichtlichem Ausgang.",
+            "Versäumnisurteil: Antrag, Säumnis, kein Hindernis, zulässig, schlüssig."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 261 StPO: keine Beweisregeln, aber Inbegriff, Denkgesetze, Gesamtwürdigung, in dubio.",
+            "Verdeckungsabsicht: nach der Rspr. auch bei spontanem Entschluss.",
+            "§ 267 StGB: Die einfache Kopie ist keine Urkunde.",
+            "§ 226 StGB: Folge beabsichtigt oder sicher vorausgesehen – dann Abs. 2.",
+            "Raub: Die Gewalt muss der Wegnahme dienen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 123 VwGO: tritt hinter §§ 80, 80a VwGO zurück.",
+            "Beschwerde im Eilverfahren: Das OVG prüft nur die dargelegten Gründe.",
+            "Richtlinienkonforme Auslegung: Grenze ist der Wille des Gesetzgebers.",
+            "Beurteilungsspielraum: nur kraft Gesetzes – und die Grenzen prüft das Gericht immer.",
+            "Art. 84, 85 GG: Weisungen nur nach Art. 84 Abs. 5 oder in der Auftragsverwaltung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Anspruchsgrundlage: vom Begehren über die Rechtsfolge zur Norm.",
+            "Nichtwissen: Wortlaut zerlegen, vertretbar entscheiden, weiterprüfen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "A schlägt aus Wut zu und nimmt danach das Handy mit: Raub?",
+            "Der Beklagte schweigt auf die Erledigungserklärung: Was gilt?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "So nutzt du den Rückblick",
+          "punkte": [
+            "Ohne Unterlagen durchgehen",
+            "Wackelnde Sätze markieren",
+            "Markiertes am Montag wiederholen"
+          ],
+          "icons": [
+            "klemmbrett",
+            "zielscheibe",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "18 Kernsätze aus vier Bereichen: von der Abnahme im Werkvertrag über den Finalzusammenhang beim Raub bis zur Beschwerde im Eilverfahren. Jede Folie bündelt einen Lernbereich dieser Woche. Geh sie ohne Unterlagen durch, beantworte den Selbsttest und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Kernsätze im Check",
+      "coverText": "18 Kernsätze zum Selbsttest",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Am Ende der Woche wird ohne Hilfsmittel geprüft, welche Kernsätze schon tragen.",
+        "handlung": "{A} lifts four stacked crystal crates one by one to test their weight, while {B} marks the one crate that feels lighter than it should with the tip of his pointer.",
+        "hinweisRegie": "Place the note in the free space above the marked crate, slightly tilted toward it, without covering {A}'s lifting hands or {B}'s pointer tip.",
+        "alternative": "{B} holds up four lanterns in a dark tunnel while {A} checks which one flickers."
+      },
+      "bildSzene": "testing four crystal crates, one marked",
+      "bildSzeneAlt": "four lanterns, one flickers",
+      "quellen": [
+        "§§ 640, 641, 644 BGB",
+        "§ 441 BGB",
+        "§ 407 BGB",
+        "§ 750 ZPO",
+        "§ 91a ZPO",
+        "§ 331 ZPO",
+        "§ 261 StPO",
+        "§ 211 StGB",
+        "§ 267 StGB",
+        "§ 226 StGB",
+        "§ 249 StGB",
+        "§ 123 VwGO",
+        "§ 146 VwGO",
+        "Art. 288 AEUV",
+        "Art. 19 Abs. 4 GG",
+        "Art. 83–85 GG",
+        "Themenpool: methodik-897",
+        "Themenpool: mindset-8"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.451Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-770",
+      "slug": "2026-11-15-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Der Arztbrief ist geschützt – solange er beim Arzt liegt",
+          "titelZeilen": [
+            "Der Arztbrief ist",
+            "geschützt – solange",
+            "er beim Arzt liegt"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Gewahrsam entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 97 StPO verlängert Zeugnisverweigerungsrechte: Was ein Angehöriger oder Berufsgeheimnisträger nicht aussagen muss, soll nicht über eine Beschlagnahme ins Verfahren gelangen. Geprüft wird in vier Schritten."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Zeugnisverweigerungsrecht",
+              "text": "Angehörige (§ 52 StPO) oder Berufsgeheimnisträger wie Verteidiger, Rechtsanwälte und Ärzte (§ 53 Abs. 1 StPO)."
+            },
+            {
+              "titel": "2. Geschützter Gegenstand",
+              "text": "Mitteilungen mit dem Beschuldigten, Aufzeichnungen über Anvertrautes, weitere Gegenstände wie Befunde (§ 97 Abs. 1 Nr. 1–3 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Gewahrsam des Berechtigten",
+              "text": "Grundsätzlich nur, wenn der Zeugnisverweigerungsberechtigte den Gegenstand in Gewahrsam hat (§ 97 Abs. 2 S. 1 StPO)."
+            },
+            {
+              "titel": "4. Keine Verstrickung",
+              "text": "Kein Schutz, wenn der Berechtigte etwa der Tatbeteiligung, Begünstigung oder Hehlerei verdächtig ist (§ 97 Abs. 2 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Verteidigerpost",
+          "text": "Verteidigungsunterlagen sind auch beim Beschuldigten beschlagnahmefrei – das folgt aus dem freien Verkehr mit dem Verteidiger (§ 148 StPO). Für andere Berufsgeheimnisträger bleibt es beim Gewahrsamserfordernis: Der Arztbrief in der Wohnung des Beschuldigten ist nach § 97 StPO nicht geschützt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zeugnisverweigerungsrecht, geschützter Gegenstand, Gewahrsam, keine Verstrickung. Verteidigungsunterlagen schützt § 148 StPO auch beim Beschuldigten."
+        },
+        {
+          "art": "cta",
+          "titel": "Beschlagnahmeverbot in vier Fragen",
+          "punkte": [
+            "Wer darf das Zeugnis verweigern?",
+            "Welcher Gegenstand nach Abs. 1?",
+            "Wer hat Gewahrsam?",
+            "Verstrickung ausgeschlossen?"
+          ],
+          "icons": [
+            "person",
+            "dokument",
+            "schloss",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Der Arztbrief ist geschützt – solange er beim Arzt liegt. Findet ihn die Polizei beim Beschuldigten, hilft § 97 StPO in der Regel nicht: Das Beschlagnahmeverbot gilt grundsätzlich nur für Gegenstände im Gewahrsam des Zeugnisverweigerungsberechtigten (§ 97 Abs. 2 S. 1 StPO). Das Schema: Zeugnisverweigerungsrecht, geschützter Gegenstand, Gewahrsam, keine Verstrickung. Ausnahme: Verteidigungsunterlagen sind wegen § 148 StPO auch beim Beschuldigten beschlagnahmefrei. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#beschlagnahme",
+        "#97stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 97 StPO: Beschlagnahmeverbote prüfen",
+      "coverText": "Gewahrsam entscheidet",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Ob ein vertrauliches Schriftstück geschützt ist, hängt davon ab, wer es gerade in Händen hält.",
+        "handlung": "{B} hovers toward two identical sealed letters, one resting inside a doctor's locked cabinet and one lying openly on a table in another room, while {A} holds out her arm to stop {B} only at the cabinet.",
+        "hinweisRegie": "Place the note in the free space between the locked cabinet and the open table, slightly tilted toward the cabinet, without covering either letter or {A}'s outstretched arm.",
+        "alternative": "{A} carries a sealed letter from a protected vault to an open desk, and the protective glow around the letter fades as it leaves the vault."
+      },
+      "bildSzene": "two sealed letters, cabinet versus table",
+      "bildSzeneAlt": "letter loses glow leaving vault",
+      "quellen": [
+        "§ 97 StPO",
+        "§ 52 StPO",
+        "§ 53 StPO",
+        "§ 148 StPO",
+        "Themenpool: stpo-770"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "bedingung-solange",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.451Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-386",
+      "slug": "2026-11-15-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Auch Rechtmäßiges fällt: § 49 VwVfG in 4 Schritten",
+          "unter": "Widerruf · § 49 VwVfG",
+          "text": "Rechtswidrig: Rücknahme nach § 48. Rechtmäßig: Widerruf nach § 49 VwVfG.",
+          "norm": "§ 49 VwVfG",
+          "icon": "kreislauf",
+          "sprecher": "Auch ein rechtmäßiger Verwaltungsakt kann widerrufen werden. Rechtswidrige nimmt die Behörde nach § 48 zurück, rechtmäßige widerruft sie nach § 49 VwVfG. Hier sind die vier Schritte.",
+          "marken": [
+            "§ 48 vs. § 49",
+            "4 Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Rechtmäßiger Verwaltungsakt",
+          "text": "Dann passt § 49 direkt – für Rechtswidrige nach h.M. erst recht.",
+          "norm": "§ 49 VwVfG",
+          "sprecher": "Schritt eins: Ist der Verwaltungsakt rechtmäßig? Dann passt § 49 direkt. Rechtswidrige darf die Behörde nach herrschender Meinung erst recht so widerrufen.",
+          "marken": [
+            "rechtmäßig?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Belastend oder begünstigend?",
+          "text": "Belastend: Abs. 1. Begünstigend: nur mit Grund aus Abs. 2.",
+          "norm": "§ 49 Abs. 1, 2 VwVfG",
+          "sprecher": "Schritt zwei: belastend oder begünstigend? Einen belastenden Verwaltungsakt darf die Behörde grundsätzlich jederzeit für die Zukunft widerrufen, nach Absatz eins. Für einen begünstigenden braucht sie einen Widerrufsgrund aus Absatz zwei.",
+          "marken": [
+            "Abs. 1 oder Abs. 2"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Widerrufsgrund",
+          "text": "Vorbehalt, Auflage, neue Tatsachen, neue Rechtslage, Gemeinwohl.",
+          "norm": "§ 49 Abs. 2 S. 1 Nr. 1–5 VwVfG",
+          "sprecher": "Schritt drei: der Grund. Das Gesetz nennt fünf: Widerrufsvorbehalt, nicht erfüllte Auflage, neue Tatsachen, geänderte Rechtslage und schwere Nachteile für das Gemeinwohl. Bei neuen Tatsachen und neuer Rechtslage muss zusätzlich das öffentliche Interesse gefährdet sein.",
+          "marken": [
+            "fünf Gründe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Frist und Ermessen",
+          "text": "Jahresfrist ab Kenntnis, dann Ermessen.",
+          "norm": "§ 49 Abs. 2 S. 2, § 48 Abs. 4 VwVfG",
+          "sprecher": "Schritt vier: Frist und Ermessen. Über Absatz zwei Satz zwei gilt die Jahresfrist des § 48 Absatz vier, ab Kenntnis der Tatsachen, die den Widerruf rechtfertigen. Und der Widerruf steht im Ermessen der Behörde.",
+          "marken": [
+            "1 Jahr · Ermessen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Sonderfall Subvention",
+          "text": "§ 49 Abs. 3: Widerruf auch für die Vergangenheit, Erstattung nach § 49a.",
+          "norm": "§ 49 Abs. 3 VwVfG · § 49a VwVfG",
+          "sprecher": "Sonderfall Subvention: Wird das Geld zweckwidrig verwendet oder eine Auflage nicht erfüllt, erlaubt Absatz drei den Widerruf sogar für die Vergangenheit. Erstattet wird nach § 49a.",
+          "marken": [
+            "auch rückwirkend"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Grund, Frist, Ermessen",
+          "text": "Begünstigender VA: Grund aus Abs. 2, Jahresfrist, Ermessen – bei Nr. 3 bis 5 Entschädigung.",
+          "norm": "§ 49 Abs. 6 VwVfG",
+          "sprecher": "Merke: Begünstigt der Verwaltungsakt, brauchst du einen Grund aus Absatz zwei, die Jahresfrist und fehlerfreies Ermessen. Und bei den Nummern drei bis fünf denk an die Entschädigung nach Absatz sechs.",
+          "marken": [
+            "Entschädigung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst: rechtmäßig oder rechtswidrig?",
+          "text": "Speichern – am besten gleich neben § 48 VwVfG.",
+          "sprecher": "Speicher dir das gleich neben § 48. Und handelt eine Landesbehörde, schau ins Verwaltungsverfahrensgesetz deines Landes.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Auch ein rechtmäßiger Verwaltungsakt kann fallen – über den Widerruf nach § 49 VwVfG. Vier Schritte: rechtmäßiger VA, belastend oder begünstigend, Widerrufsgrund aus § 49 Abs. 2, Jahresfrist und Ermessen. Bei Subventionen erlaubt § 49 Abs. 3 den Widerruf auch für die Vergangenheit, die Erstattung folgt aus § 49a. Für Landesbehörden gelten die inhaltlich meist entsprechenden Landesgesetze. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#widerruf",
+        "#49vwvfg",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 49 VwVfG: Widerruf in vier Schritten",
+      "titelZeilen": [
+        "Auch Rechtmäßiges",
+        "fällt: § 49 VwVfG",
+        "in 4 Schritten"
+      ],
+      "coverText": "Grund, Frist, Ermessen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Auch eine rechtmäßig erteilte Erlaubnis kann zurückgeholt werden – aber nur mit Grund und innerhalb einer Frist.",
+        "handlung": "{B} hovers beside a working machine with a valid green permit tag, while {A} nervously unhooks the tag after spotting a newly cracked part that was not there before.",
+        "hinweisRegie": "Place the note in the free space next to the newly cracked part, slightly tilted toward it, so the new fact as reason for revocation is the focus without covering the permit tag.",
+        "alternative": "{A} holds an hourglass while {B} carefully retrieves a previously issued key from a lock after a new crack appears in the door."
+      },
+      "bildSzene": "permit tag removed after new crack",
+      "bildSzeneAlt": "key retrieved, hourglass running",
+      "quellen": [
+        "§ 49 VwVfG",
+        "§ 49a VwVfG",
+        "§ 48 Abs. 4 VwVfG",
+        "Verwaltungsverfahrensgesetze der Länder",
+        "Themenpool: verwalt-386"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-schritte-widerruf",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-499",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "E leiht B sein Fahrrad, B verkauft und übereignet es an den gutgläubigen D. Wird D Eigentümer?",
+      "optionen": [
+        "Nein – das Rad ist E abhandengekommen",
+        "Nein – geliehene Sachen sind nie gutgläubig erwerbbar",
+        "Ja – E hat den Besitz freiwillig weggegeben"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 935 BGB",
+        "§§ 929, 932 BGB",
+        "§ 816 Abs. 1 BGB",
+        "Themenpool: sachen-499"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-499",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – freiwillig weggegeben ist nicht abhandengekommen",
+      "text": "Abhandenkommen heißt: unfreiwilliger Verlust des unmittelbaren Besitzes. E hat den Besitz freiwillig auf B übertragen; dass B ihn missbraucht, ändert daran nichts. D erwirbt nach §§ 929 S. 1, 932 BGB. E hält sich an B, etwa aus § 816 Abs. 1 S. 1 BGB. Hätte ein Dieb das Rad genommen, stünde § 935 Abs. 1 BGB dem Erwerb entgegen.",
+      "norm": "§ 935 Abs. 1 BGB · §§ 929, 932 BGB",
+      "quellen": [
+        "§ 935 BGB",
+        "§§ 929, 932 BGB",
+        "§ 816 Abs. 1 BGB",
+        "Themenpool: sachen-499"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.453Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – das Rad ist E abhandengekommen",
+        "Nein – geliehene Sachen sind nie gutgläubig erwerbbar",
+        "Ja – E hat den Besitz freiwillig weggegeben"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-150",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 145 BGB: Schaufenster und Onlineshop binden noch nicht",
+      "text": "Ein Angebot nach § 145 BGB setzt Rechtsbindungswillen voraus. Auslagen, Kataloge und die Präsentation im Onlineshop sind in der Regel nur eine Aufforderung zur Abgabe von Angeboten (invitatio ad offerendum): Der Anbieter will sich nicht gegenüber unbegrenzt vielen binden, etwa wegen begrenzten Vorrats oder unbekannter Bonität. Das Angebot macht dann der Kunde.",
+      "norm": "§ 145 BGB",
+      "quellen": [
+        "§ 145 BGB",
+        "Themenpool: bgbat-150"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-928",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Schmerzensgeld schon im Strafprozess – geht das?",
+      "falsch": "Seine zivilrechtlichen Ansprüche muss der Verletzte immer in einem eigenen Zivilprozess einklagen.",
+      "richtigText": "Im Adhäsionsverfahren kann der Verletzte oder sein Erbe vermögensrechtliche Ansprüche aus der Straftat, etwa Schadensersatz und Schmerzensgeld, im Strafverfahren geltend machen (§ 403 StPO). Der Antrag ist bis zum Beginn der Schlussvorträge möglich (§ 404 Abs. 1 StPO). Ist er unzulässig oder erscheint er unbegründet, sieht das Gericht von einer Entscheidung ab (§ 406 I StPO).",
+      "quellen": [
+        "§ 403 StPO",
+        "§ 404 StPO",
+        "§ 406 StPO",
+        "Themenpool: stpo-928"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-333",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Fremde Karte am Geldautomaten: § 263a statt § 263 StGB",
+      "text": "Einen Automaten kann man nicht täuschen – deshalb scheitert § 263 StGB. § 263a StGB ersetzt Täuschung und Irrtum durch die Beeinflussung eines Datenverarbeitungsvorgangs. Die Rspr. legt die unbefugte Verwendung von Daten betrugsspezifisch aus: Unbefugt ist sie, wenn sie gegenüber einem Menschen eine Täuschung wäre. Danach ist die gestohlene Karte samt PIN erfasst.",
+      "quellen": [
+        "§ 263a StGB",
+        "§ 263 StGB",
+        "Themenpool: strafbt-333"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-830",
+      "ueberzeile": "4 Punkte Zwangsvollstreckung",
+      "titel": "Herausgabetitel vollstrecken: Was der Gerichtsvollzieher tut",
+      "text": "Herausgabe wird nicht über eine Pfändung vollstreckt, sondern durch Wegnahme oder Räumung.",
+      "punkte": [
+        "Bewegliche Sache: Wegnahme und Übergabe an den Gläubiger (§ 883 Abs. 1 ZPO)",
+        "Nicht auffindbar: eidesstattliche Versicherung über den Verbleib (§ 883 Abs. 2 ZPO)",
+        "Grundstück, Wohnung: Schuldner aus dem Besitz setzen, Gläubiger einweisen (§ 885 ZPO)",
+        "Beschränkter Auftrag: nur Besitzverschaffung, bewegliche Sachen bleiben (§ 885a ZPO)"
+      ],
+      "quellen": [
+        "§ 883 ZPO",
+        "§ 885 ZPO",
+        "§ 885a ZPO",
+        "Themenpool: zwangsv-830"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:11.453Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

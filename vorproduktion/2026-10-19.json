@@ -1,0 +1,864 @@
+{
+  "datum": "2026-10-19",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "bgbat-912",
+        "themaTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "stpo-774",
+        "themaTitel": "Telefon-/Telekommunikationsüberwachung im Überblick",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwbt-401",
+        "themaTitel": "Wie funktioniert die Normenkontrolle gegen einen Bebauungsplan?",
+        "fach": "verwbt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:07",
+        "art": "frage",
+        "themaId": "zwangsv-834"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:07",
+        "art": "antwort",
+        "themaId": "zwangsv-834"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "strafbt-074"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "tipp",
+        "themaId": "assessorz-817"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:05",
+        "art": "zahl",
+        "themaId": "methodik-903"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:13",
+        "art": "streitstand",
+        "themaId": "assessorz-807"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "bgbat-912",
+      "poolTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 133 BGB",
+        "§ 157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-12"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "stpo-774",
+      "poolTitel": "Telefon-/Telekommunikationsüberwachung im Überblick",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 100a ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwbt-401",
+      "poolTitel": "Wie funktioniert die Normenkontrolle gegen einen Bebauungsplan?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 47 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zwangsv-834",
+      "poolTitel": "Wie entsteht eine Zwangssicherungshypothek?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 866 ZPO",
+        "§ 867 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zwangsv-834",
+      "poolTitel": "Wie entsteht eine Zwangssicherungshypothek?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 866 ZPO",
+        "§ 867 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-074",
+      "poolTitel": "Was ist eine gefährliche Körperverletzung nach § 224 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB",
+        "§ 224 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "assessorz-817",
+      "poolTitel": "Wann ist eine Drittwiderklage zulässig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-903",
+      "poolTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-807",
+      "poolTitel": "Wann ist ohne, wann nur gegen Sicherheitsleistung vorläufig vollstreckbar?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "§ 713 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-05"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-912",
+      "slug": "2026-10-19-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nichts erklären wollen – und trotzdem gebunden",
+          "titelZeilen": [
+            "Nichts erklären",
+            "wollen – und",
+            "trotzdem gebunden"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Zurechnung statt Bewusstsein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Im Büro geht eine Liste herum. A hält sie für eine Glückwunschkarte an eine Kollegin und unterschreibt, ohne genau hinzusehen. Tatsächlich ist es eine Sammelbestellung beim Weinhändler W, die an W geschickt wird. Muss A zahlen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Objektiver Tatbestand",
+              "text": "Aus Sicht eines verständigen Empfängers (§§ 133, 157 BGB) liegt eine Bestellung vor: Name auf einer Bestellliste."
+            },
+            {
+              "titel": "Subjektiv: was fehlt?",
+              "text": "Handlungswille liegt vor – A hat bewusst unterschrieben. Es fehlt das Erklärungsbewusstsein: Er wollte nichts Rechtserhebliches erklären."
+            },
+            {
+              "titel": "Zurechnung (Rspr., h.L.)",
+              "text": "Die Erklärung gilt, wenn A bei verkehrsüblicher Sorgfalt hätte erkennen und vermeiden können, dass sie als Bestellung verstanden wird."
+            },
+            {
+              "titel": "Ausweg: Anfechtung",
+              "text": "A kann analog § 119 Abs. 1 BGB unverzüglich anfechten (§ 121 BGB) – und schuldet dann den Vertrauensschaden (§ 122 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Ohne Erklärungsbewusstsein sofort „keine Willenserklärung“ schreiben. Nach Rspr. und h.L. ist es kein zwingender Bestandteil – entscheidend ist die Zurechnung. Anders beim fehlenden Handlungswillen, etwa einem Reflex: Dann liegt nie eine Willenserklärung vor."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Wer ungeprüft eine Liste unterschreibt, hätte die Bestellung erkennen können. Die Erklärung wird A zugerechnet, der Vertrag mit W ist geschlossen. Ficht A unverzüglich an, ist er von Anfang an nichtig (§ 142 Abs. 1 BGB); W kann den Vertrauensschaden verlangen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Fehlt nur das Erklärungsbewusstsein, entscheidet die Zurechnung: erkennbar und vermeidbar? Dann Willenserklärung – anfechtbar analog § 119 Abs. 1 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei „nichts gewollt“",
+          "punkte": [
+            "Handlungswille vorhanden?",
+            "Deutung erkennbar und vermeidbar?",
+            "Anfechtung analog § 119 I, dann § 122 BGB"
+          ],
+          "icons": [
+            "person",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Nichts erklären wollen – und trotzdem gebunden sein: Das ist das fehlende Erklärungsbewusstsein. Nach Rspr. und h.L. liegt trotzdem eine Willenserklärung vor, wenn der Handelnde bei verkehrsüblicher Sorgfalt hätte erkennen und vermeiden können, dass sein Verhalten als Erklärung verstanden wird. Er kann analog § 119 Abs. 1 BGB anfechten, haftet dann aber nach § 122 BGB. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#willenserklärung",
+        "#119bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Erklärungsbewusstsein: trotzdem gebunden?",
+      "coverText": "Zurechnung statt Bewusstsein",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Wer unachtsam unterschreibt, kann an eine Erklärung gebunden sein, die er gar nicht abgeben wollte.",
+        "handlung": "{A} happily signs a colourful sheet she believes is a greeting card, while {B} nervously flips the sheet over behind her back and discovers it is an order form.",
+        "hinweisRegie": "Place the note in the free space between the signing hand and the flipped-over back of the sheet, slightly tilted toward the back side, without covering {A}'s signature or {B}'s startled face.",
+        "alternative": "{B} waves to a friend across a busy market hall while {A} watches a trader already wrapping goods for the waving hand."
+      },
+      "bildSzene": "alien signs sheet, back reveals order",
+      "bildSzeneAlt": "waving hand mistaken for market bid",
+      "quellen": [
+        "§§ 133, 157 BGB",
+        "§ 119 Abs. 1 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§ 142 Abs. 1 BGB",
+        "Themenpool: bgbat-912"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.943Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-774",
+      "slug": "2026-10-19-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "TKÜ: vier Hürden – die Katalogtat ist nur die erste",
+          "titelZeilen": [
+            "TKÜ: vier Hürden –",
+            "die Katalogtat ist",
+            "nur die erste"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Einzelfall schwer + subsidiär",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Überwachung der Telekommunikation greift in das Fernmeldegeheimnis (Art. 10 GG) ein. § 100a StPO erlaubt sie nur unter engen Voraussetzungen, § 100e StPO regelt das Verfahren. Wer bei der Katalogtat stehen bleibt, prüft nur ein Viertel."
+        },
+        {
+          "art": "schritte",
+          "titel": "Materielle Voraussetzungen",
+          "schritte": [
+            {
+              "titel": "1. Verdacht einer Katalogtat",
+              "text": "Bestimmte Tatsachen begründen den Verdacht einer in § 100a Abs. 2 StPO genannten schweren Straftat – als Täter oder Teilnehmer."
+            },
+            {
+              "titel": "2. Schwere im Einzelfall",
+              "text": "Die Tat muss auch im konkreten Fall schwer wiegen. Dass sie abstrakt im Katalog steht, genügt nicht."
+            },
+            {
+              "titel": "3. Subsidiarität",
+              "text": "Die Erforschung des Sachverhalts wäre auf andere Weise wesentlich erschwert oder aussichtslos."
+            },
+            {
+              "titel": "4. Richtiger Adressat",
+              "text": "Der Beschuldigte oder ein Nachrichtenmittler, etwa wer Mitteilungen für ihn weitergibt oder dessen Anschluss er nutzt (§ 100a Abs. 3 StPO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Formelle Voraussetzungen",
+          "schritte": [
+            {
+              "titel": "Richtervorbehalt",
+              "text": "Anordnung durch das Gericht auf Antrag der StA (§ 100e Abs. 1 StPO). Bei Gefahr im Verzug ordnet die StA an."
+            },
+            {
+              "titel": "Bestätigung",
+              "text": "Bestätigt das Gericht die Eilanordnung nicht binnen drei Werktagen, tritt sie außer Kraft."
+            },
+            {
+              "titel": "Form und Dauer",
+              "text": "Schriftliche Anordnung, befristet auf höchstens drei Monate; Verlängerung um jeweils bis zu drei Monate."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweise",
+          "punkte": [
+            "Kernbereich privater Lebensgestaltung: Schutz nach § 100d StPO, Erkenntnisse daraus sind unverwertbar.",
+            "Zufallsfunde: zu Beweiszwecken nur für Taten, für die die Maßnahme ebenfalls zulässig wäre (§ 479 StPO).",
+            "Rechtswidrige Anordnung: Ein Verwertungsverbot nimmt die Rspr. nicht automatisch an."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Katalogtat, Schwere im Einzelfall, Subsidiarität, richtiger Adressat – dann Richtervorbehalt und Befristung nach § 100e StPO."
+        },
+        {
+          "art": "cta",
+          "titel": "TKÜ in vier Zügen",
+          "punkte": [
+            "Katalogtat nach § 100a Abs. 2",
+            "Auch im Einzelfall schwer?",
+            "Andere Mittel aussichtslos?",
+            "Anordnung nach § 100e StPO"
+          ],
+          "icons": [
+            "paragraf",
+            "waage",
+            "lupe",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Die Katalogtat ist bei § 100a StPO nur die erste von vier Hürden. Die Tat muss auch im Einzelfall schwer wiegen, andere Ermittlungsmöglichkeiten müssen wesentlich erschwert oder aussichtslos sein, und die Maßnahme muss sich gegen den richtigen Adressaten richten. Formell gilt der Richtervorbehalt nach § 100e StPO mit Befristung auf höchstens drei Monate. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#100astpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "TKÜ nach § 100a StPO: das Schema",
+      "coverText": "Einzelfall schwer + subsidiär",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Bevor mitgehört werden darf, müssen vier Hürden genommen werden – die Katalogtat ist nur die erste.",
+        "handlung": "{A} hovers in front of a sealed signal cable and lowers the first of four barriers, while {B} stands at the second barrier with her arms crossed, waiting to see if the case is heavy enough.",
+        "hinweisRegie": "Place the note in the free space above the second barrier, slightly tilted toward {B}, so the note links to the remaining hurdles without covering the cable or the first lowered barrier.",
+        "alternative": "{B} weighs a small parcel on a scale in front of a locked radio mast, while {A} holds the key but waits for the reading."
+      },
+      "bildSzene": "four barriers before sealed signal cable",
+      "bildSzeneAlt": "parcel weighed before locked radio mast",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100d StPO",
+        "§ 100e StPO",
+        "§ 479 StPO",
+        "Art. 10 GG",
+        "Themenpool: stpo-774"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-huerden",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.943Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-401",
+      "slug": "2026-10-19-b3",
+      "titelZeilen": [
+        "Gegen den B-Plan",
+        "hilft keine",
+        "Anfechtungsklage"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gegen den B-Plan hilft keine Anfechtungsklage",
+          "unter": "Normenkontrolle · § 47 VwGO",
+          "text": "Der Bebauungsplan ist eine Satzung – kein Verwaltungsakt.",
+          "norm": "§ 47 Abs. 1 Nr. 1 VwGO",
+          "icon": "haeuser",
+          "sprecher": "Gegen einen Bebauungsplan hilft dir keine Anfechtungsklage. Der Plan ist eine Satzung, kein Verwaltungsakt. Der richtige Weg ist die Normenkontrolle nach § 47 VwGO, direkt beim Oberverwaltungsgericht.",
+          "marken": [
+            "Satzung, kein VA"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaftigkeit",
+          "text": "OVG bzw. VGH kontrolliert Satzungen nach dem BauGB.",
+          "norm": "§ 47 Abs. 1 Nr. 1 VwGO · § 10 BauGB",
+          "sprecher": "Schritt eins: Statthaftigkeit. Nach § 47 Absatz 1 Nummer 1 VwGO kontrolliert das Oberverwaltungsgericht Satzungen nach dem Baugesetzbuch. Den Bebauungsplan beschließt die Gemeinde nach § 10 BauGB als Satzung.",
+          "marken": [
+            "OVG, erste Instanz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Antragsbefugnis",
+          "text": "Mögliche Verletzung eigener Rechte – im Plangebiet oder als Nachbar.",
+          "norm": "§ 47 Abs. 2 S. 1 VwGO",
+          "sprecher": "Schritt zwei: Antragsbefugnis. Du musst geltend machen, in eigenen Rechten verletzt zu sein. Eigentümer im Plangebiet stützen sich auf Artikel 14 GG. Nachbarn außerhalb auf ihr Recht auf gerechte Abwägung ihrer privaten Belange.",
+          "marken": [
+            "Art. 14 GG",
+            "Abwägungsgebot"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Frist und Antragsgegner",
+          "text": "Ein Jahr ab Bekanntmachung; Gegner ist die Gemeinde.",
+          "norm": "§ 47 Abs. 2 VwGO",
+          "sprecher": "Schritt drei: Frist und Gegner. Der Antrag muss binnen eines Jahres nach Bekanntmachung des Plans gestellt werden. Antragsgegner ist die Gemeinde, die ihn erlassen hat.",
+          "marken": [
+            "ein Jahr"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Dann: objektive Kontrolle",
+          "text": "Verstoß gegen höherrangiges Recht? §§ 214, 215 BauGB filtern die Beachtlichkeit.",
+          "norm": "§ 47 Abs. 5 S. 2 VwGO",
+          "sprecher": "Ist der Antrag zulässig, prüft das Gericht objektiv, ob der Plan gegen höherrangiges Recht verstößt. Welche Mängel beachtlich sind, filtern die Paragrafen 214 und 215 BauGB. Folge: Der Plan wird für unwirksam erklärt, mit Wirkung für alle.",
+          "marken": [
+            "wirkt für alle"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Satzung, Antragsbefugnis, ein Jahr, Gemeinde – dann objektive Kontrolle.",
+          "norm": "§ 47 VwGO",
+          "sprecher": "Merke: Satzung, Antragsbefugnis, ein Jahr, Gemeinde als Gegner. Dann die objektive Kontrolle.",
+          "marken": [
+            "§ 47 VwGO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Plan oder Genehmigung angreifen?",
+          "text": "Speichern für die nächste Baurechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Baurechtsklausur. Und prüf zuerst, ob dein Mandant den Plan selbst oder eine Baugenehmigung angreifen will.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Gegen einen Bebauungsplan hilft keine Anfechtungsklage: Der Plan ist eine Satzung (§ 10 BauGB), kein Verwaltungsakt. Statthaft ist die Normenkontrolle nach § 47 Abs. 1 Nr. 1 VwGO beim OVG bzw. VGH. Antragsbefugt ist, wer eine mögliche Verletzung eigener Rechte geltend macht, die Frist beträgt ein Jahr ab Bekanntmachung. Ist der Antrag zulässig, kontrolliert das Gericht den Plan objektiv.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#baurecht",
+        "#normenkontrolle",
+        "#47vwgo",
+        "#vwgo",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Normenkontrolle gegen den Bebauungsplan",
+      "coverText": "Satzung → § 47 VwGO",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Ein Bebauungsplan ist eine Norm – wer ihn angreifen will, braucht die Normenkontrolle statt der Anfechtungsklage.",
+        "handlung": "{B} tries to pry a large map pinned to a wall off with a crowbar, while {A} calmly points his pointer to a separate door marked only by a small square frame.",
+        "hinweisRegie": "Place the note in the free space next to the separate door, slightly tilted toward {A}'s pointer, so it signals the right route without covering the map or {B}'s crowbar.",
+        "alternative": "{A} holds up a whole grid of little house models under a glass cover, while {B} sets aside a single stamped letter that does not fit."
+      },
+      "bildSzene": "crowbar on pinned map, other door",
+      "bildSzeneAlt": "house grid under glass, single letter",
+      "quellen": [
+        "§ 47 VwGO",
+        "§ 10 BauGB",
+        "§§ 214, 215 BauGB",
+        "Art. 14 GG",
+        "§ 1 Abs. 7 BauGB",
+        "Themenpool: verwbt-401"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "klageart-verwechslung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.945Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-834",
+      "ueberzeile": "Prüfungsfrage Zwangsvollstreckung",
+      "titel": "G vollstreckt aus einem Urteil über 5.000 € gegen S. Wann entsteht die Zwangssicherungshypothek?",
+      "optionen": [
+        "Mit Zustellung eines Pfändungsbeschlusses an S",
+        "Mit der Eintragung im Grundbuch auf Antrag des G",
+        "Schon mit Rechtskraft des Urteils, ohne Eintragung"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 866 ZPO",
+        "§ 867 ZPO",
+        "Themenpool: zwangsv-834"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.945Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-834",
+      "ueberzeile": "Auflösung",
+      "titel": "Erst die Eintragung im Grundbuch lässt sie entstehen",
+      "text": "Die Zwangssicherungshypothek ist eine Form der Immobiliarvollstreckung (§ 866 Abs. 1 ZPO). Das Grundbuchamt trägt sie auf Antrag des Gläubigers ein; mit der Eintragung entsteht sie (§ 867 Abs. 1 ZPO). Es prüft dabei die allgemeinen Vollstreckungsvoraussetzungen – und die Mindestgrenze: Eingetragen wird nur für einen Betrag von mehr als 750 € (§ 866 Abs. 3 ZPO).",
+      "norm": "§ 866 ZPO · § 867 Abs. 1 ZPO",
+      "quellen": [
+        "§ 866 ZPO",
+        "§ 867 ZPO",
+        "Themenpool: zwangsv-834"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.945Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit Zustellung eines Pfändungsbeschlusses an S",
+        "Mit der Eintragung im Grundbuch auf Antrag des G",
+        "Schon mit Rechtskraft des Urteils, ohne Eintragung"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-074",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 224 StGB: fünf Wege zur gefährlichen Körperverletzung",
+      "text": "Qualifikation zu § 223 StGB: Nr. 1 Beibringung von Gift oder anderen gesundheitsschädlichen Stoffen, Nr. 2 Waffe oder anderes gefährliches Werkzeug, Nr. 3 hinterlistiger Überfall, Nr. 4 gemeinschaftlich mit einem anderen Beteiligten, Nr. 5 lebensgefährdende Behandlung. Bei Nr. 5 genügt nach der Rspr., dass die Behandlung generell geeignet ist, das Leben zu gefährden.",
+      "norm": "§ 224 Abs. 1 StGB",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 224 StGB",
+        "Themenpool: strafbt-074"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.945Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-817",
+      "ueberzeile": "Klausurtipp ZPO",
+      "titel": "Drittwiderklage: Prüfe sie auf zwei Ebenen",
+      "text": "Die Drittwiderklage zieht einen bisher Unbeteiligten in den Prozess. Prüfe deshalb getrennt: die Voraussetzungen der Widerklage selbst, etwa den Zusammenhang nach § 33 ZPO, und die Parteierweiterung. Für diese verlangt die Rspr. analog § 263 ZPO die Einwilligung des Dritten oder Sachdienlichkeit. Die Zuständigkeit gegenüber dem Dritten prüfst du gesondert.",
+      "quellen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO",
+        "Themenpool: assessorz-817"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.945Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-903",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Hilfsgutachten: wann es rettet, wann es schadet",
+      "text": "Ein Hilfsgutachten ist die Ausnahme. Prüfe erst den Bearbeitervermerk und ob der Sachverhalt noch ungenutzte Probleme enthält.",
+      "punkte": [
+        "Rettet: Der Bearbeitervermerk verlangt, auf alle Rechtsfragen einzugehen",
+        "Rettet: Nach deinem Ergebnis bleiben viele Angaben im Sachverhalt ungenutzt",
+        "Schadet: als Ausweg, statt ein Problem vertretbar zu entscheiden",
+        "Form: kurz einleiten („Hilfsgutachtlich …“), dann Gutachtenstil"
+      ],
+      "quellen": [
+        "Themenpool: methodik-903"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:38:24.946Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-807",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Prozessvergleich unwirksam: fortsetzen oder neu klagen?",
+      "norm": "§ 794 I Nr. 1 ZPO",
+      "optionen": [
+        "BGH/h.M. (Doppelnatur): Prozesshandlung und Vertrag – ist der Vergleich unwirksam, läuft der alte Prozess weiter.",
+        "Andere Ansicht (Trennungslehre): Die Prozessbeendigung bleibt; gestritten wird in einem neuen Verfahren."
+      ],
+      "text": "Auf Fortsetzungsantrag prüft das Gericht die Wirksamkeit. Ist der Vergleich wirksam, tenoriert es: „Der Rechtsstreit ist durch den Vergleich vom … erledigt.“ Beim späteren Rücktritt bleibt der Prozess nach dem BGH beendet – dann neue Klage.",
+      "quellen": [
+        "§ 794 Abs. 1 Nr. 1 ZPO",
+        "§ 779 BGB",
+        "§ 142 BGB"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:06.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

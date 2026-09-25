@@ -1,0 +1,875 @@
+{
+  "datum": "2026-11-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "staat-589",
+        "themaTitel": "Staatsstrukturprinzipien des Art. 20 GG",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "zpo-560",
+        "themaTitel": "Sachverständigenbeweis",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:04",
+        "art": "frage",
+        "themaId": "zwangsv-569"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:04",
+        "art": "antwort",
+        "themaId": "zwangsv-569"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:11",
+        "art": "norm",
+        "themaId": "europa-416"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "fehler",
+        "themaId": "assessorz-919"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "tipp",
+        "themaId": "strafbt-331"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "zahl",
+        "themaId": "assessorz-809"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "staat-589",
+      "poolTitel": "Staatsstrukturprinzipien des Art. 20 GG",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-11-18",
+        "2026-11-18"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zwangsv-569",
+      "poolTitel": "Drittwiderspruchsklage",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 771 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zwangsv-569",
+      "poolTitel": "Drittwiderspruchsklage",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 771 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "europa-416",
+      "poolTitel": "Was ist die richtlinienkonforme Auslegung und wo endet sie?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessorz-919",
+      "poolTitel": "Kautelarklausur: Wie entwirft man einen interessengerechten Vertrag?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 305-310 BGB",
+        "§ 311b Abs. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafbt-331",
+      "poolTitel": "Was ist ein Dreiecksbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-12"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-809",
+      "poolTitel": "Wann trägt der Kläger trotz Obsiegens die Kosten?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 93 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-11-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: Wo hakt es nach 18 Themen?",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "Wo hakt es nach",
+            "18 Themen?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Aktenvortrag: Einleitung, Sachbericht, Vorschlag, Würdigung – das Ergebnis kommt früh.",
+            "Sicherungsgrundschuld: überlebt die Tilgung; Schutz über die Einrede, § 1192 Abs. 1a BGB.",
+            "Vorläufige Vollstreckbarkeit: über 1.250 € Hauptsache § 709 ZPO, ohne § 711 ZPO.",
+            "EBV: Redlicher, entgeltlicher Besitzer gibt nur Übermaßfrüchte heraus (§ 993 BGB).",
+            "Anfechtung: Grund, Erklärung, Frist, Folge – plus Vertrauensschaden nach § 122 BGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 239 StGB: Ob Schlafende geschützt sind, ist streitig – nicht mit „nicht bemerkt“ abtun.",
+            "Unterschlagung: kein Gewahrsam nötig, die Zueignung muss sich zeigen.",
+            "§ 274 StPO: Das Protokoll beweist Förmlichkeiten, nicht den Inhalt von Aussagen.",
+            "Wohnungseinbruch: Qualifikation (§ 244); Büro-Einbruch: Regelbeispiel (§ 243).",
+            "Zurechnung: kausal ist fast alles – entscheidend ist, ob sich die Gefahr verwirklicht.",
+            "Totschlag: Mensch ab Beginn der Geburt, Vorsatz aus der Gesamtschau."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Schutzpflicht: Untermaßverbot statt Übermaßverbot.",
+            "Ermessen: Einschreiten müssen heißt nicht, dass das Mittel feststeht.",
+            "Vorrang gilt immer, der Vorbehalt vor allem bei Eingriffen und Wesentlichem.",
+            "Verpflichtungsklage: grundsätzlich Sach- und Rechtslage der letzten mündlichen Verhandlung.",
+            "Kommunalverfassungsstreit: Beteiligtenfähigkeit über § 61 Nr. 2 VwGO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Hilfsgutachten: erst Bearbeitervermerk und Weiche prüfen, dann schreiben.",
+            "Vorabend: nichts Neues lernen, nur noch Ruhe organisieren."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Urteil über 8.000 €: Wie lautet der Vollstreckbarkeitsausspruch?",
+            "Darlehen getilgt, Grundschuld abgetreten: Womit wehrt sich der Eigentümer?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Tenor und Einreden",
+            "Strafrecht: Tatbestand vor Strafzumessung",
+            "Öffentliches Recht: Maßstab und Zeitpunkt",
+            "Klausurtechnik: Weichen bewusst stellen"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – von der Sicherungsgrundschuld über den Wohnungseinbruch bis zum Kommunalverfassungsstreit. Jede Folie bündelt einen Lernbereich in Kernsätzen. Geh sie ohne Unterlagen durch, beantworte den Selbsttest und markier dir, wo es noch hakt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Selbsttest",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Am Ende der Woche wird sortiert, was sitzt und was noch einmal auf den Stapel muss.",
+        "handlung": "{A} sorts a pile of glowing crystals into four baskets, while {B} curiously holds one dim crystal up to the light, deciding which basket it belongs in.",
+        "hinweisRegie": "Place the note in the free space above the dim crystal in {B}'s hand, slightly tilted toward it, so the open question is highlighted without covering the four baskets or {A}'s hands.",
+        "alternative": "{B} checks four drawers of a small cabinet one after another, while {A} puts a marker into the drawer that sticks."
+      },
+      "bildSzene": "crystals sorted into four baskets",
+      "bildSzeneAlt": "cabinet drawer that sticks, marked",
+      "quellen": [
+        "§ 239 StGB",
+        "§ 246 StGB",
+        "§ 274 StPO",
+        "§§ 243, 244 StGB",
+        "§ 212 StGB",
+        "Art. 1 Abs. 1 S. 2, Art. 2 Abs. 2 GG",
+        "§ 40 VwVfG",
+        "Art. 20 Abs. 3 GG",
+        "§ 113 VwGO",
+        "§ 61 VwGO",
+        "§ 1192 Abs. 1a BGB",
+        "§§ 708, 709, 711 ZPO",
+        "§§ 987–993 BGB",
+        "§§ 119, 121, 122, 142 BGB",
+        "Themenpool: methodik-903",
+        "Themenpool: mindset-1"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.742Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-589",
+      "slug": "2026-11-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fünf Prinzipien aus Art. 20 GG – der Rechtsstaat steht nicht im Wortlaut",
+          "titelZeilen": [
+            "Fünf Prinzipien aus",
+            "Art. 20 GG – der",
+            "Rechtsstaat steht",
+            "nicht im Wortlaut"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Hergeleitet aus Art. 20 III GG",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Art. 20 GG enthält die Grundentscheidungen der Verfassung: Republik, Demokratie, Sozialstaat, Bundesstaat und Rechtsstaat. Die in Art. 20 niedergelegten Grundsätze sind durch Art. 79 Abs. 3 GG auch gegen Verfassungsänderungen geschützt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Republik",
+              "text": "Aus dem Namen „Bundesrepublik“: kein Monarch, ein Staatsoberhaupt auf Zeit."
+            },
+            {
+              "titel": "2. Demokratie",
+              "text": "Art. 20 Abs. 1, 2 GG: Alle Staatsgewalt geht vom Volke aus – in Wahlen und Abstimmungen und durch besondere Organe."
+            },
+            {
+              "titel": "3. Sozialstaat",
+              "text": "Art. 20 Abs. 1 GG: Gestaltungsauftrag an den Gesetzgeber; kaum konkrete Ansprüche – mit Art. 1 Abs. 1 GG aber das Existenzminimum."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Bundesstaat",
+              "text": "Art. 20 Abs. 1 GG: Staatlichkeit von Bund und Ländern; Kompetenzen nach Art. 30, 70, 83 GG, dazu die Bundestreue."
+            },
+            {
+              "titel": "5. Rechtsstaat",
+              "text": "Hergeleitet v. a. aus Art. 20 Abs. 2 S. 2, Abs. 3 GG, genannt in Art. 28 Abs. 1 S. 1 GG: Gewaltenteilung, Gesetzmäßigkeit, Vertrauensschutz."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Die Prinzipien sind selten selbst Prüfungsgegenstand, aber oft Maßstab: Rückwirkung eines Gesetzes (Vertrauensschutz), Bestimmtheit, Parlamentsvorbehalt. Zitiere dann die konkrete Ausprägung – nicht nur pauschal das „Rechtsstaatsprinzip“."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Republik, Demokratie, Sozialstaat, Bundesstaat, Rechtsstaat. Den Rechtsstaat leitest du her – vor allem aus Art. 20 Abs. 3 GG."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 20 GG in der Klausur",
+          "punkte": [
+            "Vier Prinzipien im Wortlaut oder Namen",
+            "Rechtsstaat: hergeleitet",
+            "Art. 79 Abs. 3 GG schützt die Grundsätze",
+            "Konkrete Ausprägung zitieren"
+          ],
+          "icons": [
+            "paragraf",
+            "waage",
+            "schloss",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Fünf Prinzipien aus Art. 20 GG – und das Wort „Rechtsstaat“ suchst du dort vergeblich. Republik, Demokratie, Sozialstaat und Bundesstaat stehen im Namen oder im Wortlaut; den Rechtsstaat leitest du vor allem aus Art. 20 Abs. 3 GG her, ausdrücklich genannt ist er in Art. 28 Abs. 1 S. 1 GG. Art. 79 Abs. 3 GG schützt die Grundsätze. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#staatsorganisationsrecht",
+        "#art20gg",
+        "#erstesstaatsexamen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Staatsstrukturprinzipien des Art. 20 GG",
+      "coverText": "Hergeleitet aus Art. 20 III GG",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Vier Staatsprinzipien stehen im Text – das fünfte, der Rechtsstaat, wird aus mehreren Bausteinen zusammengesetzt.",
+        "handlung": "{A} points his pointer at four solid pillars holding up a roof, while {B} nervously assembles a fifth pillar from several smaller stones he has gathered.",
+        "hinweisRegie": "Place the note in the free space next to the fifth pillar being assembled, slightly tilted toward it, so the derived principle stands out without covering the four solid pillars or {B}'s hands.",
+        "alternative": "{B} fits the last piece into a five-piece puzzle, where the final piece is built from smaller fragments, while {A} watches."
+      },
+      "bildSzene": "fifth pillar assembled from small stones",
+      "bildSzeneAlt": "last puzzle piece built from fragments",
+      "quellen": [
+        "Art. 20 GG",
+        "Art. 28 Abs. 1 GG",
+        "Art. 79 Abs. 3 GG",
+        "Themenpool: staat-589"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-prinzipien",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.743Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-560",
+      "slug": "2026-11-22-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Privatgutachten ist kein Sachverständigenbeweis",
+          "unter": "Sachverständigenbeweis · §§ 402 ff. ZPO",
+          "text": "Es ist urkundlich belegter Parteivortrag – das Gericht muss sich aber damit befassen.",
+          "norm": "§ 402 ZPO",
+          "icon": "klemmbrett",
+          "sprecher": "Ein Privatgutachten ist kein Sachverständigenbeweis. Es ist urkundlich belegter Parteivortrag. Den Beweis erhebt das Gericht mit einem eigenen Sachverständigen nach den Paragrafen 402 folgende ZPO. So läuft er ab.",
+          "marken": [
+            "Parteivortrag",
+            "kein Beweismittel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Beweisantritt",
+          "text": "Die Partei bezeichnet die zu begutachtenden Punkte.",
+          "norm": "§ 403 ZPO",
+          "sprecher": "Schritt eins: der Beweisantritt. Die Partei beantragt ein Sachverständigengutachten und bezeichnet die Punkte, die begutachtet werden sollen.",
+          "marken": [
+            "Punkte benennen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Auswahl durch das Gericht",
+          "text": "Das Gericht wählt aus; einigen sich die Parteien, folgt es ihnen.",
+          "norm": "§ 404 ZPO",
+          "sprecher": "Schritt zwei: die Auswahl. Den Sachverständigen bestimmt das Gericht, nicht die Partei. Einigen sich die Parteien auf eine Person, muss das Gericht dieser Einigung folgen.",
+          "marken": [
+            "Gericht wählt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ablehnung",
+          "text": "Aus denselben Gründen wie beim Richter, vor allem Befangenheit.",
+          "norm": "§ 406 ZPO",
+          "sprecher": "Schritt drei: die Ablehnung. Die Parteien können den Sachverständigen aus denselben Gründen ablehnen wie einen Richter, vor allem wegen Besorgnis der Befangenheit.",
+          "marken": [
+            "Befangenheit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Gutachten und Anhörung",
+          "text": "Meist schriftlich; die Parteien können die mündliche Erläuterung verlangen.",
+          "norm": "§ 411 ZPO",
+          "sprecher": "Schritt vier: das Gutachten. Meist ordnet das Gericht ein schriftliches Gutachten an. Die Parteien haben dann grundsätzlich das Recht, den Sachverständigen mündlich zu befragen. Einen rechtzeitigen Antrag darf das Gericht regelmäßig nicht einfach übergehen.",
+          "marken": [
+            "Recht auf Befragung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Widerspruch zum Privatgutachten",
+          "text": "Widersprüche muss das Gericht aufklären – nicht einfach dem eigenen Gutachten folgen.",
+          "norm": null,
+          "sprecher": "Und zurück zum Privatgutachten: Widerspricht es dem gerichtlichen Gutachten, darf das Gericht nicht einfach dem eigenen Sachverständigen folgen. Es muss sich mit den Einwänden auseinandersetzen und die Widersprüche aufklären, etwa durch Anhörung oder ein weiteres Gutachten.",
+          "marken": [
+            "Widerspruch aufklären"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Beweis läuft über das Gericht",
+          "text": "Privatgutachten ist Parteivortrag. Beweis: Antritt, Auswahl, Gutachten, Würdigung.",
+          "norm": "§ 286 ZPO",
+          "sprecher": "Merke: Das Privatgutachten ist Parteivortrag, der Beweis läuft über das Gericht. Am Ende würdigt das Gericht das Gutachten frei nach Paragraf 286 ZPO, aber nicht ohne sich mit begründeten Einwänden auseinanderzusetzen.",
+          "marken": [
+            "freie Würdigung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wer hat welches Gutachten vorgelegt?",
+          "text": "Speichern für die nächste Zivilrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur mit Gutachtenstreit. Und markier dir, wer welches Gutachten vorgelegt hat.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Ein Privatgutachten ist kein Sachverständigenbeweis, sondern urkundlich belegter Parteivortrag. Der Beweis läuft über das Gericht: Beweisantritt (§ 403 ZPO), Auswahl durch das Gericht (§ 404 ZPO), Ablehnung wegen Befangenheit (§ 406 ZPO), Gutachten und Anhörung (§ 411 ZPO). Widerspricht das Privatgutachten dem Gerichtsgutachten, muss das Gericht die Widersprüche aufklären. Speichern für die nächste Zivilrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#beweisrecht",
+        "#sachverständiger",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachverständigenbeweis: Ablauf und Privatgutachten",
+      "titelZeilen": [
+        "Privatgutachten",
+        "ist kein Sach-",
+        "verständigenbeweis"
+      ],
+      "coverText": "Parteivortrag, kein Beweismittel",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Das mitgebrachte Gutachten einer Partei ersetzt nicht den Sachverständigen, den das Gericht selbst bestellt.",
+        "handlung": "{B} proudly presents her own rolled-up report at a gate, while {A} hovers beside an official expert seat that is still empty and gestures that it must be filled first.",
+        "hinweisRegie": "Place the note in the free space between the rolled-up report and the empty expert seat, slightly tilted toward the seat, so the difference is visible without covering {B}'s report or {A}'s gesture.",
+        "alternative": "{A} places two measuring devices side by side, one brought by a visitor and one sealed by the gate, while {B} compares their readings."
+      },
+      "bildSzene": "own report versus empty expert seat",
+      "bildSzeneAlt": "two measuring devices compared side by side",
+      "quellen": [
+        "§§ 402 ff. ZPO",
+        "§ 403 ZPO",
+        "§ 404 ZPO",
+        "§ 406 ZPO",
+        "§ 411 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.744Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-569",
+      "ueberzeile": "Prüfungsfrage Zwangsvollstreckung",
+      "titel": "V liefert S einen Laptop unter Eigentumsvorbehalt. Gläubiger G lässt ihn bei S pfänden. Womit wehrt sich V?",
+      "optionen": [
+        "Erinnerung nach § 766 ZPO",
+        "Vollstreckungsabwehrklage nach § 767 ZPO",
+        "Drittwiderspruchsklage nach § 771 ZPO"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 771 ZPO",
+        "§ 808 ZPO",
+        "Themenpool: zwangsv-569"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.744Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-569",
+      "ueberzeile": "Auflösung",
+      "titel": "Mit der Drittwiderspruchsklage nach § 771 ZPO",
+      "text": "V ist noch Eigentümer – ein die Veräußerung hinderndes Recht. Die Erinnerung hilft nicht: Der Gerichtsvollzieher prüft bei beweglichen Sachen nur den Gewahrsam des Schuldners (§ 808 ZPO), und daran fehlt es nicht. § 767 ZPO steht nur dem Schuldner zu. Zuständig ist das Gericht, in dessen Bezirk vollstreckt wird (§ 771 Abs. 1 ZPO).",
+      "norm": "§ 771 Abs. 1 ZPO · § 808 ZPO",
+      "quellen": [
+        "§ 771 ZPO",
+        "§ 808 ZPO",
+        "Themenpool: zwangsv-569"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.744Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Erinnerung nach § 766 ZPO",
+        "Vollstreckungsabwehrklage nach § 767 ZPO",
+        "Drittwiderspruchsklage nach § 771 ZPO"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-416",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 288 Abs. 3 AEUV: Zwischen Privaten wirkt die Richtlinie über die Auslegung",
+      "text": "Richtlinien verpflichten die Mitgliedstaaten; zwischen Privaten wirken sie nicht unmittelbar. Trotzdem legen die Gerichte auch im Streit zwischen Privaten das nationale Recht so weit wie möglich richtlinienkonform aus – nach dem EuGH jedenfalls ab Ablauf der Umsetzungsfrist. Die Grenze bleibt: keine Auslegung contra legem.",
+      "norm": "Art. 288 Abs. 3 AEUV · Art. 4 Abs. 3 EUV",
+      "quellen": [
+        "Art. 288 AEUV",
+        "Art. 4 Abs. 3 EUV",
+        "Themenpool: europa-416"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.744Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-919",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Kautelarklausur Grundstückskauf: Reicht die Beurkundung des Kaufpreises?",
+      "falsch": "Im Entwurf werden nur Kaufgegenstand und Kaufpreis beurkundet; Nebenabreden, etwa zur Übernahme von Möbeln, regeln die Parteien privatschriftlich.",
+      "richtigText": "§ 311b Abs. 1 S. 1 BGB verlangt die notarielle Beurkundung des gesamten Vertrags – samt aller Abreden, die nach dem Willen der Parteien Teil des Geschäfts sein sollen. Sonst droht Nichtigkeit (§ 125 BGB); geheilt wird erst durch Auflassung und Eintragung (§ 311b Abs. 1 S. 2 BGB). Der Entwurf gehört vollständig in die Urkunde.",
+      "quellen": [
+        "§ 311b Abs. 1 BGB",
+        "§ 125 BGB",
+        "Themenpool: assessorz-919"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.744Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-331",
+      "ueberzeile": "Klausurtipp Strafrecht BT",
+      "titel": "Dreiecksbetrug: Die Zurechnung der Verfügung entscheidet",
+      "text": "Sind Getäuschter und Geschädigter verschiedene Personen, prüfst du in der Vermögensverfügung, ob sie dem Geschädigten zuzurechnen ist. Rspr. und h.M. stellen darauf ab, ob der Getäuschte im Lager des Geschädigten steht. Fehlt die Zurechnung, kommt statt Betrug ein Diebstahl in mittelbarer Täterschaft in Betracht.",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 242 StGB",
+        "§ 25 Abs. 1 Alt. 2 StGB",
+        "Themenpool: strafbt-331"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.744Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-809",
+      "ueberzeile": "3 Punkte Kostenrecht",
+      "titel": "§ 93 ZPO: Gewonnen – und trotzdem trägt der Kläger die Kosten",
+      "text": "Der Beklagte erkennt an, der Kläger bekommt ein Anerkenntnisurteil – die Kosten trägt trotzdem er, wenn drei Punkte vorliegen:",
+      "punkte": [
+        "Der Beklagte hat keine Veranlassung zur Klage gegeben",
+        "Er erkennt den Anspruch sofort an, also bei erster prozessualer Gelegenheit",
+        "Das Anerkenntnis ist vollständig und ohne Einschränkung"
+      ],
+      "quellen": [
+        "§ 93 ZPO",
+        "§ 307 ZPO",
+        "Themenpool: assessorz-809"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:45.744Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

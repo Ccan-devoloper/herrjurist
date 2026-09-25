@@ -1,0 +1,856 @@
+{
+  "datum": "2027-01-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-323",
+        "themaTitel": "Was ist der Gewahrsamsbegriff beim Diebstahl?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "assessoroer-852",
+        "themaTitel": "Welche Fristen entscheiden über die Klausur im Öffentlichen Recht?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-574",
+        "themaTitel": "Einstweilige Einstellung der Zwangsvollstreckung",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "famerb-523"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "famerb-523"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "schuldbt-190"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:29",
+        "art": "streitstand",
+        "themaId": "zwangsv-918"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "merksatz",
+        "themaId": "verwbt-117"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "begriff",
+        "themaId": "europa-703"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-323",
+      "poolTitel": "Was ist der Gewahrsamsbegriff beim Diebstahl?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "assessoroer-852",
+      "poolTitel": "Welche Fristen entscheiden über die Klausur im Öffentlichen Recht?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "§ 58 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-574",
+      "poolTitel": "Einstweilige Einstellung der Zwangsvollstreckung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 707, 719, 769 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-17",
+        "2026-11-17"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "famerb-523",
+      "poolTitel": "Ausschlagung und Anfechtung",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1942 ff., 1954 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "famerb-523",
+      "poolTitel": "Ausschlagung und Anfechtung",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1942 ff., 1954 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-190",
+      "poolTitel": "Wer trägt die Beweislast für einen Mangel und wann kehrt sie sich um?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 477 BGB",
+        "§ 363 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-12",
+        "2026-10-26"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "zwangsv-918",
+      "poolTitel": "Vollstreckung für und gegen den Rechtsnachfolger: Wann braucht es die Klausel des § 727 ZPO?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 727 ZPO",
+        "§ 750 ZPO",
+        "§ 325 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-04"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "verwbt-117",
+      "poolTitel": "Wann hat ein Gemeinderatsmitglied ein Mitwirkungsverbot?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "europa-703",
+      "poolTitel": "Kapitalverkehrsfreiheit",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 63 AEUV"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-323",
+      "slug": "2027-01-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vor der Kasse erwischt, Diebstahl schon vollendet",
+          "titelZeilen": [
+            "Vor der Kasse",
+            "erwischt, Diebstahl",
+            "schon vollendet"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Gewahrsamsenklave in der Tasche",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K steckt im Supermarkt eine Packung Rasierklingen in ihre Jackentasche. Ein Ladendetektiv beobachtet das und hält sie noch vor der Kasse fest. Versuch oder vollendeter Diebstahl?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Gewahrsam definieren",
+              "text": "Tatsächliche Sachherrschaft, getragen von einem Herrschaftswillen – beurteilt nach der Verkehrsauffassung."
+            },
+            {
+              "titel": "Fremder Gewahrsam",
+              "text": "Der Marktinhaber hat Gewahrsam an allen Waren im Laden, auch an denen, die er nicht im Blick hat: Ein genereller Herrschaftswille genügt."
+            },
+            {
+              "titel": "Neuer Gewahrsam",
+              "text": "Steckt K kleine, leicht bewegliche Ware in die Kleidung, entsteht eine Gewahrsamsenklave: Nach der Verkehrsauffassung hat jetzt K die Sache."
+            },
+            {
+              "titel": "Beobachtung schadet nicht",
+              "text": "Diebstahl ist kein heimliches Delikt. Dass der Detektiv zusieht und eingreifen könnte, hindert den Gewahrsamswechsel nicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Mit dem Einstecken hat K fremden Gewahrsam gebrochen und neuen begründet – die Wegnahme ist vollendet (§ 242 Abs. 1 StGB). Der Zugriff vor der Kasse betrifft nur die Frage, ob K die Beute sichern kann, also die Beendigung."
+        },
+        {
+          "art": "text",
+          "titel": "Die verbreitete Abkürzung",
+          "text": "Vollendung erst an der Kasse annehmen – oder wegen der Beobachtung nur Versuch. Anders kann es bei sperriger Ware im Einkaufswagen liegen: Dort nimmt die Rspr. neuen Gewahrsam regelmäßig erst nach Passieren der Kasse an."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kleine Ware in der eigenen Kleidung: Gewahrsamsenklave, Wegnahme vollendet – auch unter Beobachtung."
+        },
+        {
+          "art": "cta",
+          "titel": "Wegnahme in drei Fragen",
+          "punkte": [
+            "Wer hatte Gewahrsam?",
+            "Gebrochen – ohne Willen des Inhabers?",
+            "Neuer Gewahrsam nach Verkehrsauffassung?"
+          ],
+          "icons": [
+            "laden",
+            "schloss",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Vor der Kasse erwischt – und trotzdem vollendeter Diebstahl. Steckt jemand kleine Ware in die eigene Kleidung, begründet er nach der Verkehrsauffassung eine Gewahrsamsenklave: Der fremde Gewahrsam ist gebrochen, der neue begründet. Dass ein Detektiv zusieht, ändert daran nichts, denn Diebstahl ist kein heimliches Delikt. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#diebstahl",
+        "#242stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gewahrsam: vollendet schon vor der Kasse",
+      "coverText": "Gewahrsamsenklave in der Tasche",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer kleine Ware in die eigene Tasche steckt, hat sie schon an sich genommen – selbst wenn jemand zusieht.",
+        "handlung": "{A} slips a small glittering crystal into his jacket pocket in a market aisle, while {B} watches from behind a shelf and steps forward with a raised hand.",
+        "hinweisRegie": "Place the note in the free space right beside {A}'s jacket pocket holding the crystal, slightly tilted toward it, so the pocket reads as the decisive place without covering {B}'s raised hand.",
+        "alternative": "{B} draws a small chalk circle around the pocket of a coat hanging in a shop, while {A} points to the checkout far behind it."
+      },
+      "bildSzene": "crystal slipped into pocket, watcher steps in",
+      "bildSzeneAlt": "chalk circle around coat pocket",
+      "quellen": [
+        "§ 242 Abs. 1 StGB",
+        "Themenpool: strafbt-323"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-vollendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.024Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-852",
+      "slug": "2027-01-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sachentscheidung heilt die versäumte Widerspruchsfrist",
+          "titelZeilen": [
+            "Sachentscheidung",
+            "heilt die",
+            "versäumte",
+            "Widerspruchsfrist"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Außer bei Drittbeteiligung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Der Bescheid gegen A wird mit ordnungsgemäßer Belehrung am 01.03. bekannt gegeben. A legt erst am 05.04. Widerspruch ein. Die Behörde weist ihn als unbegründet zurück, ohne die Verspätung zu erwähnen. Ist die Anfechtungsklage zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Fristen der Reihe nach",
+          "schritte": [
+            {
+              "titel": "Widerspruchsfrist",
+              "text": "Ein Monat ab Bekanntgabe (§ 70 Abs. 1 VwGO) – soweit das Landesrecht überhaupt ein Vorverfahren vorsieht. Hier: verspätet."
+            },
+            {
+              "titel": "Belehrung prüfen",
+              "text": "Fehlt sie oder ist sie unrichtig, gilt die Jahresfrist (§ 58 Abs. 2 VwGO). Hier war sie ordnungsgemäß."
+            },
+            {
+              "titel": "Wiedereinsetzung?",
+              "text": "Nur bei unverschuldeter Versäumung, Antrag binnen zwei Wochen (§ 60 VwGO i. V. m. § 70 Abs. 2 VwGO)."
+            },
+            {
+              "titel": "Klagefrist",
+              "text": "Ein Monat ab Zustellung des Widerspruchsbescheids (§ 74 Abs. 1 S. 1 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Knackpunkt",
+          "text": "Die Behörde hat in der Sache entschieden. Nach dem BVerwG ist sie Herrin des Vorverfahrens und darf auch über einen verfristeten Widerspruch sachlich entscheiden. Dann ist die Verspätung geheilt. Die Literatur sieht das teils kritisch."
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausnahme: Drittwirkung",
+          "text": "Hat ein Dritter durch den Fristablauf eine gesicherte Position erlangt – etwa der Bauherr gegenüber dem Nachbarwiderspruch –, darf die Behörde sie ihm nicht durch eine Sachentscheidung nehmen. Dann bleibt der Widerspruch unzulässig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verspäteter Widerspruch plus Sachentscheidung: nach der Rspr. geheilt – außer ein Dritter hat schon eine gesicherte Position."
+        },
+        {
+          "art": "cta",
+          "titel": "Fristencheck in der Akte",
+          "punkte": [
+            "Bekanntgabe und Belehrung prüfen",
+            "Widerspruch rechtzeitig – oder geheilt?",
+            "Klagefrist ab Zustellung berechnen"
+          ],
+          "icons": [
+            "kalender",
+            "dokument",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Widerspruch zu spät – und die Klage ist trotzdem zulässig? Nach dem BVerwG ja, wenn die Widerspruchsbehörde in der Sache entschieden hat: Als Herrin des Vorverfahrens darf sie auch über einen verfristeten Widerspruch sachlich entscheiden und heilt damit die Verspätung. Das gilt nicht bei Verwaltungsakten mit Drittwirkung, wenn der Dritte schon eine gesicherte Position erlangt hat. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#widerspruchsverfahren",
+        "#fristen",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerspruch verspätet: Sachentscheidung heilt",
+      "coverText": "Außer bei Drittbeteiligung",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Entscheidet die Behörde trotz verspätetem Widerspruch in der Sache, ist die Verspätung vom Tisch.",
+        "handlung": "{B} hovers at a closed gate holding a late envelope, then opens the gate and carries it inside, while {A} lowers the hourglass she had raised in warning.",
+        "hinweisRegie": "Place the note in the free space next to the opened gate, slightly tilted toward the envelope passing through, without covering the lowered hourglass or {A}'s face.",
+        "alternative": "{A} steps over a barrier bar that {B} has just lifted aside, carrying a sealed case into a quiet hall."
+      },
+      "bildSzene": "droid opens gate for late envelope",
+      "bildSzeneAlt": "barrier lifted aside for sealed case",
+      "quellen": [
+        "§ 57 VwGO",
+        "§ 58 VwGO",
+        "§ 60 VwGO",
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "Themenpool: assessoroer-852"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.025Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-574",
+      "slug": "2027-01-06-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vollstreckung anhalten: drei Normen, drei Lagen",
+          "unter": "Einstellung · §§ 707, 719, 769 ZPO",
+          "text": "Welche Norm greift, hängt davon ab, wogegen du vorgehst.",
+          "norm": "§§ 707, 719, 769 ZPO",
+          "icon": "stopp",
+          "sprecher": "Drei Normen halten eine Vollstreckung an – je nach Lage. Welche du brauchst, hängt davon ab, wogegen du vorgehst. Hier ist die Sortierung.",
+          "marken": [
+            "drei Normen",
+            "je nach Lage"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "§ 707 ZPO: Wiedereinsetzung und Co.",
+          "text": "Auch Wiederaufnahme, Gehörsrüge und Fortsetzung nach Vorbehaltsurteil.",
+          "norm": "§ 707 Abs. 1 ZPO",
+          "sprecher": "Lage eins: Paragraf 707. Er greift bei Anträgen auf Wiedereinsetzung, bei der Wiederaufnahme, bei der Gehörsrüge und wenn der Prozess nach einem Vorbehaltsurteil fortgesetzt wird.",
+          "marken": [
+            "Wiedereinsetzung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "§ 719 ZPO: Einspruch und Berufung",
+          "text": "Verweis auf § 707 – beim Versäumnisurteil grundsätzlich nur gegen Sicherheit.",
+          "norm": "§ 719 Abs. 1 ZPO",
+          "sprecher": "Lage zwei: Einspruch oder Berufung. Paragraf 719 verweist auf Paragraf 707. Beim Versäumnisurteil wird grundsätzlich nur gegen Sicherheitsleistung eingestellt – außer es ist nicht in gesetzlicher Weise ergangen oder die Säumnis war unverschuldet.",
+          "marken": [
+            "VU: Sicherheit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "§ 769 ZPO: Klagen gegen die Vollstreckung",
+          "text": "Vollstreckungsabwehr- und Drittwiderspruchsklage: Einstellung auf Antrag.",
+          "norm": "§§ 767, 769, 771 Abs. 3 ZPO",
+          "sprecher": "Lage drei: Vollstreckungsabwehrklage oder, über Paragraf 771, Drittwiderspruchsklage. Nach Paragraf 769 kann das Prozessgericht auf Antrag einstweilen einstellen; die Tatsachen sind glaubhaft zu machen.",
+          "marken": [
+            "767 und 771"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Was das Gericht anordnen kann",
+          "text": "Einstellen mit oder ohne Sicherheit, Maßnahmen gegen Sicherheit aufheben.",
+          "norm": "§ 707 Abs. 1 ZPO",
+          "sprecher": "Der Inhalt ist überall ähnlich: Das Gericht kann gegen oder ohne Sicherheitsleistung einstellen oder die Vollstreckung nur gegen Sicherheit zulassen. Getroffene Maßnahmen kann es gegen Sicherheitsleistung aufheben.",
+          "marken": [
+            "mit oder ohne Sicherheit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Anwaltsklausur: Antrag mitstellen",
+          "text": "Rechtsbehelf und Einstellungsantrag gehören zusammen.",
+          "norm": null,
+          "sprecher": "In der Anwaltsklausur heißt das: Rechtsbehelf und Einstellungsantrag gehören zusammen. Sonst vollstreckt der Gläubiger weiter, während du auf die Entscheidung wartest.",
+          "marken": [
+            "Antrag mitstellen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Wiedereinsetzung & Co.: § 707. Einspruch, Rechtsmittel: § 719. Klage gegen Vollstreckung: § 769.",
+          "norm": "§§ 707, 719, 769 ZPO",
+          "sprecher": "Merke: Wiedereinsetzung und Co., Paragraf 707. Einspruch und Rechtsmittel, Paragraf 719. Klage gegen die Vollstreckung, Paragraf 769.",
+          "marken": [
+            "707 · 719 · 769"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Vollstreckungsfall mitdenken",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Drei Normen halten eine Vollstreckung an – je nach Lage: § 707 ZPO bei Wiedereinsetzung, Wiederaufnahme, Gehörsrüge und Vorbehaltsurteil, § 719 ZPO bei Einspruch und Rechtsmitteln – beim Versäumnisurteil grundsätzlich nur gegen Sicherheitsleistung –, § 769 ZPO bei Klagen nach §§ 767, 771 ZPO. In der Anwaltsklausur gehört der Einstellungsantrag immer dazu. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#versäumnisurteil",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Einstweilige Einstellung: §§ 707, 719, 769 ZPO",
+      "titelZeilen": [
+        "Vollstreckung",
+        "anhalten: drei",
+        "Normen, drei Lagen"
+      ],
+      "coverText": "Wiedereinsetzung, Einspruch, Klage",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Je nachdem, wogegen man vorgeht, hält eine andere Norm die Vollstreckung an.",
+        "handlung": "{A} stands at a mine cart track with three differently shaped brake levers, while {B} points his pointer at the one lever that matches the switch the cart is running on.",
+        "hinweisRegie": "Place the note in the free space next to the matching brake lever, slightly tilted toward it, without covering {A}'s hand or {B}'s pointer.",
+        "alternative": "{A} chooses among three stop buttons of different shapes beside a running conveyor, while {B} holds up the one matching key."
+      },
+      "bildSzene": "three brake levers, one matching track",
+      "bildSzeneAlt": "three stop buttons, one matching key",
+      "quellen": [
+        "§ 707 ZPO",
+        "§ 719 ZPO",
+        "§ 769 ZPO",
+        "§§ 767, 771 ZPO",
+        "Themenpool: zpo-574"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-normen-drei-lagen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.026Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-523",
+      "ueberzeile": "Prüfungsfrage Erbrecht",
+      "titel": "Ausschlagungsfrist verpasst, dann tauchen hohe unbekannte Nachlassschulden auf. Kommt Erbe E noch raus?",
+      "optionen": [
+        "Ja: Anfechtung, wenn er über die Überschuldung irrte (§ 119 II BGB)",
+        "Nein: Nach Fristablauf ist die Annahme stets unanfechtbar",
+        "Ja: Er kann bis zur Erbauseinandersetzung frei ausschlagen"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§§ 1943, 1944 BGB",
+        "§§ 1954–1957 BGB",
+        "§ 119 Abs. 2 BGB",
+        "Themenpool: famerb-523"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.026Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-523",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – Anfechtung wegen Irrtums über die Überschuldung",
+      "text": "Mit Fristablauf gilt die Erbschaft als angenommen (§ 1943 BGB); auch die Fristversäumung ist anfechtbar (§ 1956 BGB). Ein Irrtum über die Überschuldung, etwa wegen unbekannter Schulden, kann ein Eigenschaftsirrtum nach § 119 Abs. 2 BGB sein. Frist: sechs Wochen (§ 1954 BGB), Erklärung gegenüber dem Nachlassgericht. Die Anfechtung gilt als Ausschlagung (§ 1957 BGB).",
+      "norm": "§§ 1954, 1956, 1957 BGB · § 119 Abs. 2 BGB",
+      "quellen": [
+        "§§ 1943, 1944 BGB",
+        "§§ 1954–1957 BGB",
+        "§ 119 Abs. 2 BGB",
+        "Themenpool: famerb-523"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.026Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja: Anfechtung, wenn er über die Überschuldung irrte (§ 119 II BGB)",
+        "Nein: Nach Fristablauf ist die Annahme stets unanfechtbar",
+        "Ja: Er kann bis zur Erbauseinandersetzung frei ausschlagen"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-190",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 363 BGB: Bis zur Annahme beweist der Verkäufer, danach der Käufer",
+      "text": "Die Beweislast für einen Mangel wechselt mit der Annahme als Erfüllung. Vorher muss der Verkäufer beweisen, dass er mangelfrei geliefert hat. Hat der Käufer die Sache als Erfüllung angenommen, muss er den Mangel bei Gefahrübergang beweisen (§ 363 BGB). Wer eine erkennbar mangelhafte Sache sofort zurückweist, behält also den Beweisvorteil.",
+      "norm": "§ 363 BGB",
+      "quellen": [
+        "§ 363 BGB",
+        "§ 477 BGB",
+        "Themenpool: schuldbt-190"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.026Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-918",
+      "ueberzeile": "Streitstand Zwangsvollstreckung",
+      "titel": "Forderung während des Prozesses abgetreten: Muss der Kläger auf Leistung an den Erwerber umstellen?",
+      "norm": "§ 265 Abs. 2 ZPO · § 727 ZPO",
+      "optionen": [
+        "Relevanztheorie (BGH, h.M.): Ja – sonst ist die Klage mangels Aktivlegitimation unbegründet.",
+        "Irrelevanztheorie: Nein – die Abtretung bleibt ohne Einfluss, verlangt wird weiter Leistung an den Kläger."
+      ],
+      "text": "Folge für die Vollstreckung: Der Erwerber ist Rechtsnachfolger nach Rechtshängigkeit (§ 325 Abs. 1 ZPO). Lautet der Titel auf den Kläger, braucht er für die eigene Vollstreckung eine Klausel nach § 727 ZPO.",
+      "quellen": [
+        "§ 265 ZPO",
+        "§ 325 ZPO",
+        "§ 727 ZPO",
+        "Themenpool: zwangsv-918"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.026Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-117",
+      "ueberzeile": "Merksatz Kommunalrecht",
+      "titel": "Befangenheit im Gemeinderat – Details je nach Gemeindeordnung",
+      "text": "Ausgeschlossen ist, wem die Entscheidung selbst oder nahen Angehörigen unmittelbar nützt oder schadet – nicht, wer nur zu einer betroffenen Berufs- oder Bevölkerungsgruppe gehört.",
+      "norm": "Gemeindeordnungen der Länder",
+      "quellen": [
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-117"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.026Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-703",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Kapitalverkehrsfreiheit: die Grundfreiheit, die auch gegenüber Drittstaaten gilt",
+      "text": "Art. 63 AEUV schützt den Kapital- und Zahlungsverkehr – als einzige Grundfreiheit auch gegenüber Drittstaaten. Erfasst sind etwa Direktinvestitionen, Immobilienerwerb, Wertpapiere und Kredite. Sichert eine Beteiligung Einfluss auf die Gesellschaft, geht meist die Niederlassungsfreiheit vor. Schranken: Art. 65 AEUV und zwingende Gründe des Allgemeininteresses.",
+      "norm": "Art. 63 AEUV",
+      "quellen": [
+        "Art. 63 AEUV",
+        "Art. 65 AEUV",
+        "Art. 49 AEUV",
+        "Themenpool: europa-703"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:47.026Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

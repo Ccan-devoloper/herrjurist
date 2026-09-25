@@ -1,0 +1,839 @@
+{
+  "datum": "2026-10-31",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-906",
+        "themaTitel": "Sachverhaltssignale für Standardprobleme lesen",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "strafbt-134",
+        "themaTitel": "Wie prüft man die Untreue nach § 266 StGB?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-6",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "grundr-610"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "grundr-610"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "strafbt-334"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "begriff",
+        "themaId": "strafbt-069"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:00",
+        "art": "fehler",
+        "themaId": "schuldbt-913"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "tipp",
+        "themaId": "bgbat-436"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-906",
+      "poolTitel": "Sachverhaltssignale für Standardprobleme lesen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "strafbt-134",
+      "poolTitel": "Wie prüft man die Untreue nach § 266 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-6",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-610",
+      "poolTitel": "Recht auf informationelle Selbstbestimmung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I i.V.m. Art. 1 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-610",
+      "poolTitel": "Recht auf informationelle Selbstbestimmung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I i.V.m. Art. 1 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-334",
+      "poolTitel": "Wie unterscheidet man Missbrauchs- und Treubruchtatbestand der Untreue?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "strafbt-069",
+      "poolTitel": "Wann liegt Heimtücke vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30"
+      ]
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "schuldbt-913",
+      "poolTitel": "Fehlüberweisung und nicht autorisierte Zahlung: Wie wirkt § 675u BGB im Bereicherungsausgleich?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 675u BGB",
+        "§ 675j BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "bgbat-436",
+      "poolTitel": "Verjährungsbeginn und kenntnisabhängige Regelverjährung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 195, 199 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-906",
+      "slug": "2026-10-31-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fünf Signale im Sachverhalt – und das Problem dahinter",
+          "titelZeilen": [
+            "Fünf Signale im",
+            "Sachverhalt – und",
+            "das Problem",
+            "dahinter"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Kaum ein Detail steht zufällig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Technik",
+          "text": "Klausursachverhalte sind konstruiert: Fast jede Angabe hat eine Funktion. Wer beim Lesen typische Signale erkennt und einem Prüfungspunkt zuordnet, findet die Standardprobleme – und lässt keine Information liegen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Fünf Signale, Teil 1",
+          "schritte": [
+            {
+              "titel": "Daten und Uhrzeiten",
+              "text": "Fristen, Zugang, Verzug, Verjährung: Rechne jede Datumsangabe nach – auch die, die harmlos wirkt."
+            },
+            {
+              "titel": "Alter und Beziehungen",
+              "text": "Minderjährige, Ehegatten, Angestellte: Geschäftsfähigkeit, Deliktsfähigkeit, Vertretung, Besitzdienerschaft."
+            },
+            {
+              "titel": "Wörtliche Rede",
+              "text": "Was eine Person genau sagt, ist meist auszulegen: Willenserklärung, Anfechtung, Täuschung, Drohung."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Fünf Signale, Teil 2",
+          "schritte": [
+            {
+              "titel": "Innere Tatsachen",
+              "text": "„Hält es für möglich“, „glaubt irrig“: Hier entscheiden sich Vorsatz, Irrtum oder Rücktritt."
+            },
+            {
+              "titel": "Rechtsansichten der Beteiligten",
+              "text": "Streiten die Beteiligten über eine Rechtsfrage, sollst du sie entscheiden – mit Auseinandersetzung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "So setzt du es um",
+          "punkte": [
+            "Erstes Lesen: Signale markieren, noch nichts lösen.",
+            "Zweites Lesen: jedes Signal einem Prüfungspunkt zuordnen.",
+            "Vor der Abgabe: Ist jede markierte Angabe verwertet?"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kaum eine Angabe im Sachverhalt steht zufällig da. Bleibt ein Signal ungenutzt, fehlt oft ein Problem in deiner Lösung."
+        },
+        {
+          "art": "cta",
+          "titel": "Signal-Check vor dem Schreiben",
+          "punkte": [
+            "Daten nachgerechnet?",
+            "Personen eingeordnet?",
+            "Wörtliche Rede ausgelegt?",
+            "Ansichten der Beteiligten aufgegriffen?"
+          ],
+          "icons": [
+            "kalender",
+            "personen",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Fünf Signale im Sachverhalt und das Problem dahinter: Daten und Uhrzeiten, Alter und Beziehungen, wörtliche Rede, innere Tatsachen und die Rechtsansichten der Beteiligten. Klausursachverhalte sind konstruiert – kaum eine Angabe steht zufällig da. Markier die Signale beim ersten Lesen, ordne sie beim zweiten zu und prüf vor der Abgabe, ob du alle verwertet hast. Speichern für die nächste Probeklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#erstesstaatsexamen",
+        "#klausurtechnik",
+        "#sachverhalt",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachverhaltssignale richtig lesen",
+      "coverText": "Kaum ein Detail steht zufällig",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Fast jede Angabe im Klausursachverhalt ist ein Signal, das auf einen Prüfungspunkt zeigt.",
+        "handlung": "{A} curiously picks up small glowing pebbles along a path, while {B} uses his pointer to show the matching hollow on a board where each pebble fits.",
+        "hinweisRegie": "Place the note in the free space between the glowing pebbles and the board with hollows, slightly tilted toward the board, without covering {A}'s hands or {B}'s pointer.",
+        "alternative": "{B} holds a magnifying lens over a long winding trail, while {A} plants a tiny flag next to each unusual footprint she finds."
+      },
+      "bildSzene": "glowing pebbles matched to board hollows",
+      "bildSzeneAlt": "flags beside unusual footprints on trail",
+      "quellen": [
+        "Themenpool: methodik-906"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-signale",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.427Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-134",
+      "slug": "2026-10-31-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Auch beim Missbrauch braucht § 266 StGB die Betreuungspflicht",
+          "titelZeilen": [
+            "Auch beim Missbrauch",
+            "braucht § 266 StGB",
+            "die Betreuungs-",
+            "pflicht"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Beide Tatbestände, eine Pflicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zwei Tatbestände",
+          "punkte": [
+            "Missbrauch: Befugnis über fremdes Vermögen, nach außen wirksam genutzt, im Innenverhältnis überschritten.",
+            "Treubruch: Verletzung einer Pflicht, fremde Vermögensinteressen wahrzunehmen – auch rein tatsächlich.",
+            "Nach h.M. ist der Missbrauch ein Spezialfall des Treubruchs."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Vermögensbetreuungspflicht",
+          "text": "Nach Rspr. und h.M. gilt sie für beide Tatbestände. Gemeint ist eine Hauptpflicht, fremde Vermögensinteressen zu betreuen – mit einer gewissen Selbständigkeit und von einigem Gewicht. Die bloße Pflicht, einen Vertrag zu erfüllen, genügt nicht."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Betreuungspflicht: ja oder nein?",
+          "links": {
+            "titel": "Typischerweise ja",
+            "punkte": [
+              "Geschäftsführer, Vorstand",
+              "Vermögensverwalter, Treuhänder",
+              "Rechtsanwalt bei Fremdgeld"
+            ]
+          },
+          "rechts": {
+            "titel": "Typischerweise nein",
+            "punkte": [
+              "Käufer oder Mieter als bloßer Vertragspartner",
+              "Schuldner einer einfachen Zahlungspflicht",
+              "Kassierer ohne eigenen Spielraum"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Pflichtverletzung und Nachteil",
+          "punkte": [
+            "Pflichtwidrig: Das Handeln widerspricht den Vorgaben aus dem Innenverhältnis.",
+            "Nachteil: Vermögensvergleich vor und nach der Tat (Gesamtsaldierung).",
+            "Gefährdungsschaden nur, wenn er konkret festgestellt und beziffert ist (BVerfG)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ob Missbrauch oder Treubruch: Ohne Vermögensbetreuungspflicht keine Untreue. Dann Pflichtverletzung, Nachteil, Vorsatz."
+        },
+        {
+          "art": "cta",
+          "titel": "Untreue in vier Zügen",
+          "punkte": [
+            "Welcher Tatbestand?",
+            "Vermögensbetreuungspflicht?",
+            "Pflichtwidrig gehandelt?",
+            "Nachteil beziffert?"
+          ],
+          "icons": [
+            "lupe",
+            "aktentasche",
+            "warnung",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Auch beim Missbrauchstatbestand braucht § 266 StGB die Vermögensbetreuungspflicht – so sehen es Rspr. und h.M. Gemeint ist eine Hauptpflicht, fremde Vermögensinteressen mit einer gewissen Selbständigkeit zu betreuen; die bloße Vertragserfüllung genügt nicht. Danach: Pflichtverletzung, Nachteil nach Gesamtsaldierung, Vorsatz. Speichern als Spickzettel für die nächste Klausur im Strafrecht BT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#untreue",
+        "#266stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Untreue: das Schema auf einen Blick",
+      "coverText": "Beide Tatbestände, eine Pflicht",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Ob Missbrauch oder Treubruch – Untreue setzt immer eine Pflicht voraus, fremdes Vermögen zu betreuen.",
+        "handlung": "{A} carries a heavy chest of someone else's crystals across a narrow bridge, while {B} hovers alongside and fastens a small sealed duty tag to the chest's handle.",
+        "hinweisRegie": "Place the note in the free space next to the sealed duty tag, slightly tilted toward it, so the entrusted duty is clear without covering {A}'s grip on the chest or the bridge edge.",
+        "alternative": "{B} hovers between two workers at a vault, one merely counting coins at a till and one holding the vault keys, while {A} points at the one with the keys."
+      },
+      "bildSzene": "duty tag fastened to entrusted chest",
+      "bildSzeneAlt": "till worker versus vault key holder",
+      "quellen": [
+        "§ 266 StGB",
+        "Themenpool: strafbt-134"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "vergessenes-merkmal",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.428Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-6",
+      "slug": "2026-10-31-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Dreimal gelesen, in der Klausur trotzdem blank",
+          "unter": "Kopfsache · Wiederholen",
+          "text": "Wiedererkennen ist nicht Können – in der Klausur musst du abrufen.",
+          "norm": null,
+          "icon": "buch",
+          "sprecher": "Dreimal gelesen und in der Klausur trotzdem blank? Das liegt oft an der Methode. Wiedererkennen ist nicht Können: In der Klausur liegt kein Skript neben dir. Du musst abrufen.",
+          "marken": [
+            "erkennen ≠ können"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Buch zu, erst abrufen",
+          "text": "Vor dem Lesen: Was weißt du noch? Schreib es auf.",
+          "norm": null,
+          "sprecher": "Schritt eins: Buch zu. Bevor du ein Thema wiederholst, schreib auf, was du noch weißt – Schema, Definitionen, Streitstände. Ohne nachzuschauen.",
+          "marken": [
+            "erst abrufen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Lücken markieren",
+          "text": "Dann vergleichen – und nur nachlesen, was gefehlt hat.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Vergleich deine Notizen mit dem Skript. Markier, was gefehlt hat oder falsch war. Nur das liest du gezielt nach.",
+          "marken": [
+            "gezielt nachlesen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Fragen statt Textblöcke",
+          "text": "Karteikarten als Frage formulieren, nicht als Zusammenfassung.",
+          "norm": null,
+          "sprecher": "Schritt drei: Schreib deine Karteikarten als Fragen. Eine Frage zwingt dich zum Abrufen, ein Textblock lädt nur zum Wiedererkennen ein.",
+          "marken": [
+            "Frage vorn"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Mit wachsendem Abstand",
+          "text": "Morgen, nach einer Woche, nach einem Monat – jedes Mal erst abrufen.",
+          "norm": null,
+          "sprecher": "Schritt vier: Wiederhole mit wachsendem Abstand, etwa am nächsten Tag, nach einer Woche und nach einem Monat. Und jedes Mal gilt: erst abrufen, dann nachschauen.",
+          "marken": [
+            "wachsender Abstand"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Warum es sich schwerer anfühlt",
+          "text": "Abrufen ist mühsamer als Lesen – genau diese Mühe festigt das Wissen.",
+          "norm": null,
+          "sprecher": "Warum sich das schlechter anfühlt: Abrufen ist mühsamer als Lesen. Genau diese Anstrengung hilft aber, das Wissen zu festigen – auch für den Klausurdruck.",
+          "marken": [
+            "Mühe lohnt sich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Abrufen vor Nachlesen",
+          "text": "Wiedererkennen täuscht. Erst abrufen, dann gezielt nachlesen.",
+          "norm": null,
+          "sprecher": "Merke: Wiedererkennen täuscht. Erst abrufen, dann gezielt nachlesen.",
+          "marken": [
+            "abrufen > lesen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Heute: ein Thema mit geschlossenem Buch",
+          "text": "Speichern und heute ausprobieren.",
+          "norm": null,
+          "sprecher": "Probier es heute mit einem Thema aus: Buch zu, zwei Minuten aufschreiben, dann vergleichen. Speicher dir das Reel für deine nächste Wiederholungsrunde.",
+          "marken": [
+            "heute testen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Dreimal gelesen und in der Klausur trotzdem blank? Wiedererkennen ist nicht Können. Besser: Buch zu und erst abrufen, dann Lücken markieren und gezielt nachlesen, Karteikarten als Fragen schreiben und mit wachsendem Abstand wiederholen. Das fühlt sich mühsamer an – genau das festigt das Wissen. Speichern für deine nächste Wiederholungsrunde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#lernmethode",
+        "#karteikarten",
+        "#lernplan",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wiederholen: abrufen statt nochmal lesen",
+      "titelZeilen": [
+        "Dreimal gelesen,",
+        "in der Klausur",
+        "trotzdem blank"
+      ],
+      "coverText": "Wiedererkennen ist nicht Können",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer nur nochmal liest, erkennt wieder – wer abruft, kann es in der Klausur.",
+        "handlung": "{B} happily flips through a thick open notebook for the third time, while {A} gently closes it and hands him a blank card to fill in from memory.",
+        "hinweisRegie": "Place the note in the free space next to the blank card, slightly tilted toward it, so the switch to recalling is clear without covering the closed notebook or {B}'s surprised face.",
+        "alternative": "{A} hides a map behind her back and asks {B} to sketch the path from memory, while he scratches his head and starts drawing."
+      },
+      "bildSzene": "notebook closed, blank card handed over",
+      "bildSzeneAlt": "sketching path from memory, map hidden",
+      "quellen": [
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-lernmethode",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.429Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-610",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Woraus leitet das BVerfG das Recht auf informationelle Selbstbestimmung ab?",
+      "optionen": [
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "Art. 10 Abs. 1 GG – Brief-, Post- und Fernmeldegeheimnis",
+        "Art. 13 Abs. 1 GG – Unverletzlichkeit der Wohnung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 1 Abs. 1 GG",
+        "Themenpool: grundr-610"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.429Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-610",
+      "ueberzeile": "Auflösung",
+      "titel": "Aus Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+      "text": "Seit dem Volkszählungsurteil (1983) schützt es die Befugnis, grundsätzlich selbst über Preisgabe und Verwendung der eigenen persönlichen Daten zu bestimmen. Eingriff: jede staatliche Erhebung, Speicherung, Verwendung oder Weitergabe. Rechtfertigung: Gesetz mit Normenklarheit, Zweckbindung, Verhältnismäßigkeit. Art. 10 und 13 GG gehen als speziellere Grundrechte vor.",
+      "norm": "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 1 Abs. 1 GG",
+        "Themenpool: grundr-610"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.429Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "Art. 10 Abs. 1 GG – Brief-, Post- und Fernmeldegeheimnis",
+        "Art. 13 Abs. 1 GG – Unverletzlichkeit der Wohnung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-334",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 266 Abs. 1 Alt. 1 StGB: Missbrauch heißt wirksam, aber pflichtwidrig",
+      "text": "Der Missbrauchstatbestand setzt eine rechtliche Befugnis voraus, über fremdes Vermögen zu verfügen oder einen anderen zu verpflichten – etwa eine Vollmacht. Der Täter handelt nach außen wirksam, überschreitet aber im Innenverhältnis sein rechtliches Dürfen. Ist das Geschäft schon nach außen unwirksam, bleibt nur der Treubruchstatbestand.",
+      "norm": "§ 266 Abs. 1 StGB",
+      "quellen": [
+        "§ 266 StGB",
+        "Themenpool: strafbt-334"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.429Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-069",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Arglosigkeit: Auch ein offener Angriff kann noch überraschen",
+      "text": "Arglos ist, wer sich bei Beginn des ersten mit Tötungsvorsatz geführten Angriffs keines Angriffs versieht. Nach der Rspr. entfällt das nicht schon, weil der Täter offen feindselig auftritt: Bleibt dem Opfer keine Zeit zur Abwehr, ist es weiter arglos. Auch wer allgemein mit Streit rechnet, bleibt arglos, wenn er im Tatzeitpunkt keinen Angriff erwartet.",
+      "norm": "§ 211 Abs. 2 StGB",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-069"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.429Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-913",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Überweisung ohne Autorisierung: Wer holt das Geld zurück?",
+      "falsch": "Die Bank hat ohne Auftrag an E überwiesen – also hält sie sich an ihren Kunden, und der Kunde kondiziert bei E.",
+      "richtigText": "Ohne Autorisierung hat die Bank keinen Aufwendungsersatzanspruch gegen den Kunden und muss sein Konto wiederherstellen (§ 675u BGB). Die Zahlung ist dem Kunden nicht zuzurechnen. Nach dem BGH kondiziert die Bank deshalb direkt beim Empfänger (§ 812 Abs. 1 S. 1 Alt. 2 BGB) – auch wenn dieser gutgläubig war. In der Literatur ist das teils umstritten.",
+      "quellen": [
+        "§ 675j BGB",
+        "§ 675u BGB",
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "Themenpool: schuldbt-913"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.429Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-436",
+      "ueberzeile": "Klausurtipp BGB AT",
+      "titel": "Schadensersatz: Der erste Schaden startet die Verjährung – auch für spätere",
+      "text": "Ein Schadensersatzanspruch entsteht im Sinne des § 199 Abs. 1 Nr. 1 BGB, sobald ein erster Teilschaden eingetreten ist. Nach dem Grundsatz der Schadenseinheit gilt das auch für Folgeschäden, die schon als möglich vorhersehbar waren. Klausurtipp: Solche künftigen Schäden sichert der Gläubiger mit einer Feststellungsklage, die die Verjährung hemmt (§ 204 Abs. 1 Nr. 1 BGB).",
+      "quellen": [
+        "§ 199 Abs. 1 BGB",
+        "§ 204 Abs. 1 Nr. 1 BGB",
+        "§ 256 ZPO",
+        "Themenpool: bgbat-436"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:57:28.429Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

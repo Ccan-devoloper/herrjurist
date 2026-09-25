@@ -1,0 +1,854 @@
+{
+  "datum": "2027-03-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-899",
+        "themaTitel": "Definitionen lernen: Wortlaut plus Funktion",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "anklage-861",
+        "themaTitel": "Wozu dient das wesentliche Ergebnis der Ermittlungen?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-8",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "anklage-790"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "anklage-790"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "bgbat-150"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:16",
+        "art": "begriff",
+        "themaId": "grundr-617"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "fehler",
+        "themaId": "strafat-921"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "tipp",
+        "themaId": "stpo-779"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-899",
+      "poolTitel": "Definitionen lernen: Wortlaut plus Funktion",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10",
+        "2027-01-31"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "anklage-861",
+      "poolTitel": "Wozu dient das wesentliche Ergebnis der Ermittlungen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-31"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-8",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2026-11-14",
+        "2027-01-09"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-790",
+      "poolTitel": "Einstellung nach § 170 II StPO",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 170 II StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-15"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-790",
+      "poolTitel": "Einstellung nach § 170 II StPO",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 170 II StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-15"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-150",
+      "poolTitel": "Wie grenzt man Angebot und invitatio ad offerendum ab?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 145 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15"
+      ]
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "grundr-617",
+      "poolTitel": "Wissenschaftsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-21"
+      ]
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "strafat-921",
+      "poolTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2026-12-09",
+        "2027-01-01"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "stpo-779",
+      "poolTitel": "Rechtswidrige Durchsuchung und Beweisverwertung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2026-11-16",
+        "2027-01-08"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-899",
+      "slug": "2027-03-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Definitionen in drei Zügen: zerlegen, abgrenzen, testen",
+          "titelZeilen": [
+            "Definitionen in",
+            "drei Zügen: zerlegen,",
+            "abgrenzen, testen"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Jedes Wort hat einen Gegner",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Eine Definition wörtlich zu können, hilft im Fall wenig, wenn unklar bleibt, welches Wort welchen Fall ausschließt. Wer die Aufgabe jedes Bausteins kennt, sieht sofort, wo der Sachverhalt ansetzt."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Technik",
+          "schritte": [
+            {
+              "titel": "1. Zerlegen",
+              "text": "Schreib die Definition als Liste ihrer Bausteine – jedes Merkmal eine Zeile."
+            },
+            {
+              "titel": "2. Abgrenzen",
+              "text": "Notier zu jedem Baustein, welchen Fall er ausschließt oder erfasst: Wozu steht er da?"
+            },
+            {
+              "titel": "3. Testen",
+              "text": "Bilde zu jedem Baustein einen Grenzfall und prüf, ob die Definition ihn richtig sortiert."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Beispiel: Wegnahme, § 242 StGB",
+          "schritte": [
+            {
+              "titel": "„Bruch“",
+              "text": "Ohne oder gegen den Willen des Gewahrsamsinhabers. Grenzt ab zur willentlichen Übergabe, etwa beim Betrug."
+            },
+            {
+              "titel": "„fremden Gewahrsams“",
+              "text": "Hat der Täter schon Alleingewahrsam, scheidet Wegnahme aus – dann kommt eher Unterschlagung (§ 246 StGB) in Betracht."
+            },
+            {
+              "titel": "„neuen, nicht notwendig tätereigenen“",
+              "text": "Auch Gewahrsam eines Dritten genügt – wichtig, wenn der Täter für einen anderen wegnimmt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Test im Beispiel",
+          "text": "Grenzfall: Das Opfer übergibt die Sache aufgrund einer Täuschung selbst. Der Baustein „Bruch“ sortiert den Fall: willentliche Übergabe, also keine Wegnahme – weiter mit § 263 StGB. So lernst du die Definition gleich mit ihrer wichtigsten Abgrenzung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eine Definition sitzt erst, wenn du zu jedem Baustein sagen kannst, welchen Fall er ausschließt."
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Definition in drei Zügen",
+          "punkte": [
+            "Zerlegen: ein Baustein pro Zeile",
+            "Abgrenzen: Wozu steht er da?",
+            "Testen: ein Grenzfall pro Baustein"
+          ],
+          "icons": [
+            "werkzeug",
+            "lupe",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Definitionen in drei Zügen: zerlegen, abgrenzen, testen. Schreib jede Definition als Liste ihrer Bausteine, notier zu jedem, welchen Fall er ausschließt, und prüf das an einem Grenzfall. Beispiel Wegnahme: Der „Bruch“ trennt den Diebstahl von der willentlichen Übergabe beim Betrug, „nicht notwendig tätereigen“ erfasst die Wegnahme für Dritte. Speichern für deine nächste Lernrunde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#klausurtechnik",
+        "#definitionen",
+        "#lernplan",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Definitionen lernen: zerlegen, abgrenzen, testen",
+      "coverText": "Jedes Wort hat einen Gegner",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Eine Definition sitzt erst, wenn jeder Baustein seine Aufgabe hat.",
+        "handlung": "{A} takes apart a small crystal machine into three pieces on a table and points at one of them with his pointer, while {B} holds an oddly shaped stone against that piece to test the fit.",
+        "hinweisRegie": "Place the note in the free space above the three separated pieces, slightly tilted toward the piece being tested, without covering the pointer or {B}'s hands.",
+        "alternative": "{B} sorts three puzzle pieces into three small boxes while {A} holds up a tricky piece that fits only one of them."
+      },
+      "bildSzene": "machine taken apart, one piece tested",
+      "bildSzeneAlt": "puzzle pieces sorted into three boxes",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 246 StGB",
+        "§ 263 StGB",
+        "Themenpool: methodik-899"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-lernschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.630Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-861",
+      "slug": "2027-03-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wesentliches Ergebnis: Beim Strafrichter kann es entfallen",
+          "titelZeilen": [
+            "Wesentliches",
+            "Ergebnis: Beim",
+            "Strafrichter kann",
+            "es entfallen"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Pflicht außer beim Strafrichter",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Wozu es dient",
+          "text": "Das wesentliche Ergebnis der Ermittlungen (§ 200 Abs. 2 S. 1 StPO) zeigt, warum die StA hinreichenden Tatverdacht bejaht. Es informiert Gericht und Angeschuldigten über die Beweislage und bereitet die Entscheidung über die Eröffnung vor (§ 203 StPO)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Anklagesatz oder Ergebnis?",
+          "links": {
+            "titel": "Anklagesatz",
+            "punkte": [
+              "Was wird vorgeworfen?",
+              "Tatsachen zu jedem gesetzlichen Merkmal",
+              "Keine Beweise, keine Würdigung"
+            ]
+          },
+          "rechts": {
+            "titel": "Wesentliches Ergebnis",
+            "punkte": [
+              "Warum ist es beweisbar?",
+              "Beweismittel und ihre Würdigung",
+              "Einlassung des Angeschuldigten auswerten"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Typischer Aufbau",
+          "punkte": [
+            "Einlassung des Angeschuldigten, knapp",
+            "Beweiswürdigung je Tatkomplex: Welches Beweismittel trägt welche Tatsache?",
+            "Rechtliche Ausführungen nur bei echten Problemen",
+            "Details je nach Ausbildungsland und Praxis"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wann es entfallen kann",
+          "text": "Bei Anklage zum Strafrichter kann die Darstellung unterbleiben (§ 200 Abs. 2 S. 2 StPO). In der Klausur prüfst du vorher, ob der Bearbeitervermerk sie dennoch verlangt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anklagesatz: was. Wesentliches Ergebnis: warum beweisbar. Beim Strafrichter kann das Ergebnis entfallen (§ 200 Abs. 2 S. 2 StPO)."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Schreiben prüfen",
+          "punkte": [
+            "Zu welchem Gericht wird angeklagt?",
+            "Einlassung und Beweise sortiert?",
+            "Bearbeitervermerk gelesen?"
+          ],
+          "icons": [
+            "gericht",
+            "ordner",
+            "klemmbrett"
+          ]
+        }
+      ],
+      "caption": "Das wesentliche Ergebnis der Ermittlungen gehört in die Anklageschrift – beim Strafrichter kann es aber entfallen (§ 200 Abs. 2 S. 2 StPO). Seine Aufgabe: zeigen, warum die Tat beweisbar ist. Der Anklagesatz sagt, was vorgeworfen wird, das wesentliche Ergebnis würdigt Einlassung und Beweismittel. In der Klausur entscheidet der Bearbeitervermerk, was du schreiben musst. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#200stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 200 Abs. 2 StPO: das wesentliche Ergebnis",
+      "coverText": "Pflicht außer beim Strafrichter",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Das wesentliche Ergebnis zeigt, warum die Tat beweisbar ist – beim Strafrichter darf es entfallen.",
+        "handlung": "{B} stacks heavy stones into a supporting pillar under a large floating platform, while {A} hovers beside a much smaller platform and shows that it stays level without any pillar.",
+        "hinweisRegie": "Place the note in the free space between the stone pillar and the small platform, slightly tilted toward the pillar, so the contrast stands out without covering {B}'s hands or {A}.",
+        "alternative": "{A} carries a thick bundle of records into a large hall while {B} walks into a small side room with only a single sheet."
+      },
+      "bildSzene": "stones stacked into supporting pillar",
+      "bildSzeneAlt": "thick bundle versus single sheet",
+      "quellen": [
+        "§ 200 Abs. 1, 2 StPO",
+        "§ 203 StPO",
+        "Themenpool: anklage-861"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.631Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-8",
+      "slug": "2027-03-06-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nie gesehenes Problem: Wo stehen die Argumente?",
+          "unter": "Kopfsache · Klausur",
+          "text": "Meistens im Sachverhalt – was Beteiligte sagen, ist selten Zufall.",
+          "norm": null,
+          "icon": "lupe",
+          "sprecher": "Nie gesehenes Problem – wo findest du die Argumente? Meistens im Sachverhalt. Lies ihn jetzt nicht als Geschichte, sondern als Materialsammlung.",
+          "marken": [
+            "Sachverhalt",
+            "Materialsammlung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Unbekannt heißt oft: Schwerpunkt",
+          "text": "Was du nicht kennst, ist häufig die Stelle, an der die Punkte liegen.",
+          "norm": null,
+          "sprecher": "Schritt eins: Das unbekannte Problem ist oft genau der Schwerpunkt. Die Unruhe ist also ein Signal: Hier lohnt sich deine Zeit.",
+          "marken": [
+            "Signal"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Aussagen der Beteiligten auswerten",
+          "text": "Wer eine Rechtsansicht äußert, liefert dir ein Argument.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Achte auf das, was die Beteiligten sagen. Wer im Sachverhalt eine Rechtsansicht äußert, liefert dir ein Argument. Greif jede auf, zustimmend oder ablehnend.",
+          "marken": [
+            "jede Ansicht aufgreifen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Nachbarnorm suchen",
+          "text": "Regelt das Gesetz einen ähnlichen Fall? Passt die Interessenlage?",
+          "norm": null,
+          "sprecher": "Schritt drei: Such die Nachbarnorm. Regelt das Gesetz einen ähnlichen Fall, frag, ob die Interessenlage vergleichbar ist. So entsteht ein tragfähiges Argument, auch ohne Lehrbuch.",
+          "marken": [
+            "ähnlicher Fall?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vom Ergebnis her gegenprüfen",
+          "text": "Welche Lösung passt zum Rest der Klausur?",
+          "norm": null,
+          "sprecher": "Schritt vier: Prüf vom Ergebnis her. Welche Lösung fügt sich in den Rest der Klausur und lässt die weiteren Fragen sinnvoll offen?",
+          "marken": [
+            "passt es?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Keine erfundenen Meinungen",
+          "text": "Offene Argumente statt ausgedachter Streitstände.",
+          "norm": null,
+          "sprecher": "Wichtig: Erfinde keinen Streitstand. Schreib offen, was dafür und was dagegen spricht. Ehrliche Argumente wirken stärker als eine ausgedachte herrschende Meinung.",
+          "marken": [
+            "ehrlich argumentieren"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Sachverhalt, Nachbarnorm, Ergebnis – daraus baust du deine Argumente.",
+          "norm": null,
+          "sprecher": "Merke: Sachverhalt, Nachbarnorm, Ergebnis. Aus diesen drei Quellen baust du Argumente, die du nie auswendig gelernt hast.",
+          "marken": [
+            "drei Quellen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Lesen markieren",
+          "text": "Speichern für die nächste Probeklausur.",
+          "sprecher": "Speicher dir das für die nächste Probeklausur. Und markier beim Lesen jede Rechtsansicht, die ein Beteiligter äußert.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Nie gesehenes Problem – wo stehen die Argumente? Meistens im Sachverhalt. Was die Beteiligten an Rechtsansichten äußern, ist Material für deine Argumentation. Dazu die Nachbarnorm: Regelt das Gesetz einen ähnlichen Fall mit vergleichbarer Interessenlage? Und die Gegenprobe vom Ergebnis her. Erfinde keinen Streitstand – offene Argumente tragen weiter. Speichern für die nächste Probeklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#klausurtechnik",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unbekanntes Problem: Argumente finden",
+      "titelZeilen": [
+        "Nie gesehenes",
+        "Problem: Wo stehen",
+        "die Argumente?"
+      ],
+      "coverText": "Der Sachverhalt liefert Material",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Ein unbekanntes Problem löst man mit dem Material, das der Sachverhalt schon liefert.",
+        "handlung": "{A} nervously stares at an unfamiliar locked device, while {B} calmly points to a row of small tools already lying in a crate right next to it.",
+        "hinweisRegie": "Place the note in the free space next to the tool crate, slightly tilted toward the tools, so the idea that the material is already there stands out without covering {A}'s face or {B}'s hand.",
+        "alternative": "{B} hands {A} a lantern whose light reveals footprints on a path {A} thought was unmarked."
+      },
+      "bildSzene": "tools lying next to locked device",
+      "bildSzeneAlt": "lantern reveals hidden footprints",
+      "quellen": [
+        "Themenpool: mindset-8"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "orientierungsfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.632Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-790",
+      "ueberzeile": "Prüfungsfrage Anklage",
+      "titel": "Die StA stellt nach § 170 Abs. 2 StPO ein. Anzeigeerstatter A ist nicht selbst verletzt. Was gilt für ihn?",
+      "optionen": [
+        "A kann sofort das Klageerzwingungsverfahren betreiben",
+        "A wird überhaupt nicht benachrichtigt",
+        "Bescheid mit Gründen, aber ohne Beschwerdebelehrung"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 170 Abs. 2 StPO",
+        "§§ 171, 172 StPO",
+        "Themenpool: anklage-790"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.632Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-790",
+      "ueberzeile": "Auflösung",
+      "titel": "Bescheid mit Gründen – aber ohne Belehrung über die Beschwerde",
+      "text": "Wer die Erhebung der öffentlichen Klage beantragt hat, etwa mit seiner Anzeige, erhält bei Einstellung einen Bescheid mit Gründen (§ 171 S. 1 StPO). Über Beschwerde und Frist belehrt wird nur, wer zugleich Verletzter ist (§ 171 S. 2 StPO) – denn nur er kann das Klageerzwingungsverfahren betreiben (§ 172 StPO).",
+      "norm": "§ 171 StPO · § 172 StPO",
+      "quellen": [
+        "§ 170 Abs. 2 StPO",
+        "§§ 171, 172 StPO",
+        "Themenpool: anklage-790"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.632Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "A kann sofort das Klageerzwingungsverfahren betreiben",
+        "A wird überhaupt nicht benachrichtigt",
+        "Bescheid mit Gründen, aber ohne Beschwerdebelehrung"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-150",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 145 BGB: Der Warenautomat bietet schon an",
+      "text": "Anders als Schaufenster oder Onlineshop enthält das Aufstellen eines Warenautomaten nach h.M. ein Angebot an jedermann – unter dem Vorbehalt, dass Ware vorrätig ist und der Automat richtig bedient wird. Angenommen wird durch den Geldeinwurf. Maßstab bleibt der Rechtsbindungswille aus Sicht des Empfängers (§§ 133, 157 BGB).",
+      "norm": "§ 145 BGB",
+      "quellen": [
+        "§ 145 BGB",
+        "§§ 133, 157 BGB",
+        "Themenpool: bgbat-150"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.632Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-617",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Wissenschaftsfreiheit als Organisationsgrundrecht",
+      "text": "Art. 5 Abs. 3 GG wehrt nicht nur Eingriffe ab, er verlangt auch eine wissenschaftsadäquate Organisation der Hochschulen. Nach dem BVerfG muss den Hochschullehrern in Fragen der Lehre maßgebender, bei Forschung und Berufungen ausschlaggebender Einfluss zukommen. Träger sind auch Hochschulen und Fakultäten.",
+      "norm": "Art. 5 Abs. 3 GG",
+      "quellen": [
+        "Art. 5 Abs. 3 GG",
+        "BVerfGE 35, 79 (Hochschul-Urteil)",
+        "Themenpool: grundr-617"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.632Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-921",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Für tot gehalten, erst beim Vergraben gestorben: Bleibt es beim Versuch?",
+      "falsch": "Das Opfer stirbt erst durch das Vergraben, das A für eine bloße Leichenbeseitigung hält. Dabei fehlt der Tötungsvorsatz – also zwingend nur Versuch plus fahrlässige Tötung.",
+      "richtigText": "Die Rspr. sieht darin eine Abweichung im Kausalverlauf. Sie ist unwesentlich, wenn sie im Rahmen des nach allgemeiner Lebenserfahrung Voraussehbaren liegt und keine andere Bewertung rechtfertigt – dann vollendete Tötung. Teile der Lit. trennen die Akte: Versuch plus § 222 StGB. Streit darstellen, entscheiden.",
+      "quellen": [
+        "§ 16 Abs. 1 StGB",
+        "§§ 212, 22 StGB",
+        "§ 222 StGB",
+        "Themenpool: strafat-921"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.632Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-779",
+      "ueberzeile": "Klausurtipp StPO",
+      "titel": "Gefahr im Verzug nur behauptet? Prüf, ob der Richtervorbehalt bewusst umgangen wurde",
+      "text": "Die Rspr. wägt ab und fragt oft, ob ein Richter die Durchsuchung angeordnet hätte (hypothetischer Ersatzeingriff) – dann meist kein Verwertungsverbot. Anders bei bewusster oder willkürlicher Umgehung des Richtervorbehalts oder gleichwertig grober Verkennung: Dann ist dieser Gedanke versperrt, ein Verwertungsverbot liegt nahe.",
+      "quellen": [
+        "§ 105 Abs. 1 StPO",
+        "Art. 13 Abs. 2 GG",
+        "Themenpool: stpo-779"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:53.632Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

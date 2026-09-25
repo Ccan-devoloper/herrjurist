@@ -1,0 +1,901 @@
+{
+  "datum": "2027-01-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "schuldbt-474",
+        "themaTitel": "Herstellerpflicht zur Reparatur seit 31.07.2026",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "revision-798",
+        "themaTitel": "Revisionsgutachten: Verfahrensrüge",
+        "fach": "revision",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:09",
+        "art": "frage",
+        "themaId": "bgbat-435"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:09",
+        "art": "antwort",
+        "themaId": "bgbat-435"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:02",
+        "art": "norm",
+        "themaId": "vwgo-105"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "fehler",
+        "themaId": "methodik-937"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "tipp",
+        "themaId": "ipr-894"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "zahl",
+        "themaId": "ipr-893"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuldbt-474",
+      "poolTitel": "Herstellerpflicht zur Reparatur seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 479a-479g BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-14",
+        "2026-11-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "revision-798",
+      "poolTitel": "Revisionsgutachten: Verfahrensrüge",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§§ 337 ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-435",
+      "poolTitel": "Fristenberechnung im BGB",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 186 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-435",
+      "poolTitel": "Fristenberechnung im BGB",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 186 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "vwgo-105",
+      "poolTitel": "Wie grenzt man Verpflichtungs- und allgemeine Leistungsklage ab?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 1 Alt. 2 VwGO",
+        "§ 43 Abs. 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-12-08"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "methodik-937",
+      "poolTitel": "Analogie und teleologische Reduktion: Voraussetzungen und saubere Formulierung",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [
+        "Art. 103 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2026-12-05"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "ipr-894",
+      "poolTitel": "Wie schützt das IPR Verbraucher und Arbeitnehmer?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 6 Rom I-VO",
+        "Art. 8 Rom I-VO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-04"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "ipr-893",
+      "poolTitel": "Wann ist ein deutsches Gericht international zuständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 EuGVVO",
+        "Art. 7 EuGVVO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10",
+        "2026-12-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-01-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Themen, vier Bereiche: dein Wochen-Check",
+          "titelZeilen": [
+            "18 Themen,",
+            "vier Bereiche:",
+            "dein Wochen-Check"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil, Straf, ÖR, Kopfsache",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Werkmangel: Maßstab ist die Abnahme – die Art der Nacherfüllung wählt der Unternehmer (§ 635 BGB).",
+            "Annahmeverzug: Haftung nur für Vorsatz und grobe Fahrlässigkeit (§ 300 I) – überwiegend auch deliktisch.",
+            "Vollstreckung anhalten: §§ 707, 719, 769 ZPO je nach Lage – beim VU meist nur gegen Sicherheit.",
+            "Anwartschaft übertragen: Mit der letzten Rate wird der Erwerber direkt Eigentümer.",
+            "Rechtskraft: nur der Streitgegenstand – Vorfragen wie das Eigentum bleiben offen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Eingehungsbetrug: Schaden schon beim Vertragsschluss – Anspruch gegen Anspruch.",
+            "Niedrige Beweggründe: Nicht das Gefühl entscheidet, sondern sein Grund.",
+            "Ware in der Jackentasche: Gewahrsamsenklave, Diebstahl vollendet – auch unter Beobachtung.",
+            "Zurechnung: missbilligte Gefahr geschaffen und genau diese im Erfolg verwirklicht.",
+            "Durchsuchung rechtswidrig: Abwägung – Verbot bei bewusster Umgehung des Richters."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 48 III VwVfG: Baugenehmigung zurücknehmbar – Vertrauen wird in Geld ausgeglichen.",
+            "Gesetzgebung: Länder als Regel, der Bund braucht einen Titel (Art. 70 ff. GG).",
+            "Verspäteter Widerspruch: Sachentscheidung heilt – nicht bei Drittwirkung.",
+            "Parteien: Wahlen strikt gleich, Leistungen abgestuft, Regierung im Amt neutral.",
+            "Menschenwürde: Objektformel, eng verstanden – keine Abwägung.",
+            "Rücksichtnahme: vier Einfallstore, Drittschutz nur bei Unzumutbarkeit."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Wiederholen nach 7, 30, 90 Tagen – jedes Mal erst ohne Unterlagen abrufen.",
+            "Streitstand vergessen: Problem benennen, zwei Lösungen bauen, begründet entscheiden."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Rad im Annahmeverzug beschädigt: Wofür haftet der Schuldner noch?",
+            "Ware vor der Kasse in der Tasche: Versuch oder Vollendung?",
+            "Widerspruch verspätet, Sachentscheidung: Klage zulässig?",
+            "Was stockt, kommt auf deine Liste für Tag 7."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Deine Wiederholung für Tag 7",
+          "punkte": [
+            "Zivilrecht: Anspruch und Zeitpunkt",
+            "Strafrecht: Merkmal und Zurechnung",
+            "Öffentliches Recht: Maßstab und Grenze",
+            "Methodik: abrufen statt lesen"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "18 Themen aus vier Bereichen – von der Rücknahme nach § 48 VwVfG über den Eingehungsbetrug bis zum Anwartschaftsrecht. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch, beantworte den Selbsttest und setz alles, was stockt, auf deine Liste für Tag 7. Speichern für die Wiederholung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil, Straf, ÖR, Kopfsache",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Am Wochenende wird sortiert, was sitzt und was noch einmal auf den Stapel muss.",
+        "handlung": "{A} sorts glowing cards into two baskets, a full one and a small one, while {B} lifts the small basket onto a shelf for the coming week.",
+        "hinweisRegie": "Place the note in the free space above the small basket, slightly tilted toward it, so it marks the cards to repeat without covering {A}'s sorting hands or {B}'s face.",
+        "alternative": "{B} taps eighteen small crystals on a tray with a tiny hammer, while {A} sets aside the few that sound dull."
+      },
+      "bildSzene": "sorting glowing cards into two baskets",
+      "bildSzeneAlt": "tapping crystals, setting dull ones aside",
+      "quellen": [
+        "§§ 300, 634, 635, 640 BGB",
+        "§§ 158, 449, 929 BGB",
+        "§§ 322, 707, 719, 769 ZPO",
+        "§§ 211, 242, 263 StGB",
+        "§§ 102, 105 StPO",
+        "§ 48 VwVfG",
+        "§§ 70, 74 VwGO",
+        "Art. 1, 21, 70 ff. GG",
+        "§ 15 BauNVO, §§ 31, 34, 35 BauGB",
+        "Themenpool: methodik-909",
+        "Themenpool: mindset-8"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.587Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-474",
+      "slug": "2027-01-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fremd repariert? Für den Hersteller kein Grund zur Ablehnung",
+          "titelZeilen": [
+            "Fremd repariert?",
+            "Für den Hersteller",
+            "kein Grund zur",
+            "Ablehnung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Neu: §§ 479a ff. BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Seit dem 31.07.2026 setzen die §§ 479a ff. BGB die EU-Reparaturrichtlinie um. Verbraucher können bestimmte Waren vom Hersteller reparieren lassen – neben den Mängelrechten gegen den Verkäufer. Entscheidend ist auch, womit sich der Hersteller nicht herausreden kann."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema",
+          "schritte": [
+            {
+              "titel": "1. Verbraucher und erfasste Ware",
+              "text": "Nur Warengruppen mit EU-Vorgaben zur Reparierbarkeit, etwa Waschmaschinen, Kühlgeräte, Smartphones, Tablets. Katalog im Gesetz prüfen."
+            },
+            {
+              "titel": "2. Anspruchsgegner",
+              "text": "Der Hersteller. Sitzt er außerhalb der EU, nacheinander sein Bevollmächtigter, der Importeur, der Händler."
+            },
+            {
+              "titel": "3. Kein Ausschluss",
+              "text": "Die Pflicht entfällt, wenn die Reparatur tatsächlich oder rechtlich unmöglich ist."
+            },
+            {
+              "titel": "4. Rechtsfolge",
+              "text": "Reparatur in angemessener Zeit, unentgeltlich oder gegen einen angemessenen Preis; Reparaturbetriebe darf der Hersteller einschalten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Keine Ausrede",
+          "punkte": [
+            "Eine frühere Reparatur durch Dritte allein rechtfertigt keine Ablehnung.",
+            "Vertragsklauseln, Hard- oder Software, die die Reparatur behindern, sind grundsätzlich unzulässig.",
+            "Gebrauchte oder kompatible Ersatzteile freier Werkstätten darf er nicht ohne Weiteres blockieren."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Verkäufer oder Hersteller?",
+          "links": {
+            "titel": "Nacherfüllung",
+            "punkte": [
+              "Anspruch gegen den Verkäufer (§ 439 BGB).",
+              "Setzt einen Mangel bei Gefahrübergang voraus.",
+              "Kosten trägt der Verkäufer (§ 439 II)."
+            ]
+          },
+          "rechts": {
+            "titel": "Reparaturanspruch",
+            "punkte": [
+              "Anspruch gegen den Hersteller (§§ 479a ff.).",
+              "Kein Mangel bei Übergabe nötig.",
+              "Unentgeltlich oder zu angemessenem Preis."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Prüfe getrennt: erst die Mängelrechte gegen den Verkäufer (§ 437 BGB), dann den Reparaturanspruch gegen den Hersteller. Beide stehen nebeneinander. Weil das Recht neu ist, lohnt vor der Klausur ein Blick in den genauen Wortlaut der §§ 479a ff. BGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erfasste Ware, richtiger Gegner, Reparatur möglich – dann muss der Hersteller ran, auch wenn vorher schon ein Dritter repariert hat."
+        },
+        {
+          "art": "cta",
+          "titel": "Reparaturfall in vier Zügen",
+          "punkte": [
+            "Verbraucher, erfasste Ware?",
+            "Wer ist Anspruchsgegner?",
+            "Reparatur möglich?",
+            "Zeit und Preis angemessen?"
+          ],
+          "icons": [
+            "werkzeug",
+            "fabrik",
+            "lupe",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Fremd repariert – und der Hersteller winkt ab? Das reicht nach neuem Recht nicht. Seit dem 31.07.2026 können Verbraucher bestimmte Waren wie Waschmaschinen, Kühlgeräte oder Smartphones nach den §§ 479a ff. BGB vom Hersteller reparieren lassen, neben den Mängelrechten gegen den Verkäufer. Eine frühere Reparatur durch Dritte allein ist kein Ablehnungsgrund. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#rechtaufreparatur",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Reparaturpflicht des Herstellers: das Schema",
+      "coverText": "Neu: §§ 479a ff. BGB",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Auch wenn schon jemand anderes daran geschraubt hat, muss der Hersteller reparieren.",
+        "handlung": "{A} rolls up his sleeves at a workshop gate to take in a washing machine with a small patch from an earlier outside repair, while {B} points at the patch with a questioning look.",
+        "hinweisRegie": "Place the note in the free space next to the small patch on the machine, slightly tilted toward it, so it marks the earlier outside repair without covering {A}'s hands or {B}'s pointing finger.",
+        "alternative": "{B} hands a phone with a replaced second-hand part to {A}, who accepts it at the service counter without hesitation."
+      },
+      "bildSzene": "patched machine accepted at maker's workshop",
+      "bildSzeneAlt": "phone with used part accepted for repair",
+      "quellen": [
+        "§§ 479a ff. BGB",
+        "RL (EU) 2024/1799",
+        "§ 437 BGB",
+        "§ 439 BGB",
+        "Themenpool: schuldbt-474"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "keine-ausrede",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.588Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-798",
+      "slug": "2027-01-10-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Verfahrensfehler gefunden – gewinnt das die Revision?",
+          "unter": "Revision · §§ 337, 344 StPO",
+          "text": "Nur mit vollständigem Vortrag, Beweis und Beruhen.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "icon": "gericht",
+          "sprecher": "Verfahrensfehler gefunden – gewinnt das schon die Revision? Nicht automatisch. Eine Verfahrensrüge hat eigene Hürden, und an einer davon scheitern viele. So baust du sie im Revisionsgutachten auf.",
+          "marken": [
+            "Fehler reicht nicht",
+            "eigene Hürden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Zulässigkeit zuerst",
+          "text": "Einlegung binnen einer Woche, Begründung grundsätzlich binnen eines Monats.",
+          "norm": "§§ 341, 345 StPO",
+          "sprecher": "Schritt eins: die Zulässigkeit. Eingelegt wird binnen einer Woche nach Verkündung, begründet grundsätzlich binnen eines Monats nach Ablauf der Einlegungsfrist, in der Form des Paragrafen 345.",
+          "marken": [
+            "Woche · Monat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Verfahrensfehler",
+          "text": "Verletzung einer Verfahrensnorm – bewiesen meist durch das Protokoll.",
+          "norm": "§§ 337, 274 StPO",
+          "sprecher": "Schritt zwei: der Verfahrensfehler. Es muss eine Verfahrensnorm verletzt sein. Bewiesen wird das im Regelfall durch das Hauptverhandlungsprotokoll: Für die wesentlichen Förmlichkeiten hat es Beweiskraft nach Paragraf 274.",
+          "marken": [
+            "Protokoll beweist"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kein Rügeverlust",
+          "text": "Etwa bei Sachleitungsanordnungen zuerst das Gericht anrufen.",
+          "norm": "§ 238 Abs. 2 StPO",
+          "sprecher": "Schritt drei: kein Rügeverlust. Nach der Rechtsprechung muss man etwa gegen Anordnungen des Vorsitzenden zunächst das Gericht anrufen und bestimmten Beweisverwertungen rechtzeitig widersprechen.",
+          "marken": [
+            "rechtzeitig rügen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Das Beruhen",
+          "text": "Genügt, wenn es nicht auszuschließen ist – bei § 338 StPO vermutet.",
+          "norm": "§§ 337, 338 StPO",
+          "sprecher": "Schritt vier: das Beruhen. Es genügt, dass nicht auszuschließen ist, dass das Urteil auf dem Fehler beruht. Bei den absoluten Revisionsgründen des Paragrafen 338 wird es unwiderleglich vermutet.",
+          "marken": [
+            "nicht auszuschließen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Hürde: § 344 Abs. 2 S. 2 StPO",
+          "text": "Alle Tatsachen so vortragen, dass das Gericht allein daraus prüfen kann.",
+          "norm": "§ 344 Abs. 2 S. 2 StPO",
+          "sprecher": "Und die Hürde, an der viele Rügen scheitern: Paragraf 344 Absatz 2 Satz 2. Die den Mangel enthaltenden Tatsachen müssen so vollständig vorgetragen sein, dass das Revisionsgericht allein anhand der Begründung prüfen kann, ob ein Fehler vorliegt.",
+          "marken": [
+            "vollständig vortragen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Fehler, Beweis, kein Rügeverlust, Beruhen – alles vollständig vorgetragen.",
+          "norm": null,
+          "sprecher": "Merke: Verfahrensfehler, Beweis, kein Rügeverlust, Beruhen. Und alles so vollständig vorgetragen, dass das Revisionsgericht nicht in die Akten schauen muss.",
+          "marken": [
+            "vollständig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Revisionsgutachten abhaken",
+          "text": "Speichern für die nächste Revisionsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Revisionsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Verfahrensfehler gefunden – gewinnt das schon die Revision? Nicht automatisch. Die Verfahrensrüge braucht einen bewiesenen Verstoß gegen eine Verfahrensnorm (meist über das Protokoll, § 274 StPO), keinen Rügeverlust und das Beruhen nach § 337 StPO – bei § 338 StPO vermutet. Und vor allem: vollständigen Tatsachenvortrag nach § 344 Abs. 2 S. 2 StPO. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#verfahrensrüge",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfahrensrüge: Aufbau im Revisionsgutachten",
+      "titelZeilen": [
+        "Verfahrensfehler",
+        "gefunden – gewinnt",
+        "das die Revision?"
+      ],
+      "coverText": "Tatsachen vollständig vortragen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ein Verfahrensfehler allein genügt nicht – er muss vollständig dargelegt, bewiesen und für das Urteil erheblich sein.",
+        "handlung": "{A} hovers beside a tall gate and checks a thick, complete bundle of pages that {B} hands up, while a thin, torn bundle lies rejected on the ground.",
+        "hinweisRegie": "Place the note in the free space between the complete bundle and the rejected thin one on the ground, slightly tilted toward the complete bundle, without covering {B}'s hands or {A}'s checking arm.",
+        "alternative": "{B} climbs four solid steps to a raised door, while {A} points at a fifth step with a missing plank that would have tripped her."
+      },
+      "bildSzene": "complete bundle accepted, thin one rejected",
+      "bildSzeneAlt": "steps to door, one plank missing",
+      "quellen": [
+        "§§ 337, 338 StPO",
+        "§§ 341, 344, 345 StPO",
+        "§ 274 StPO",
+        "§ 238 Abs. 2 StPO",
+        "Themenpool: revision-798"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "entscheidungsfrage",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.592Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-435",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Eine Zweiwochenfrist beginnt mit Zugang am Donnerstag, 07.01.2027. Wann endet sie?",
+      "optionen": [
+        "Mit Ablauf des 20.01.2027 (Mittwoch)",
+        "Mit Ablauf des 21.01.2027 (Donnerstag)",
+        "Mit Ablauf des 22.01.2027 (Freitag)"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§§ 186 ff. BGB",
+        "§ 187 Abs. 1 BGB",
+        "§ 188 Abs. 2 BGB",
+        "§ 193 BGB",
+        "Themenpool: bgbat-435"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.592Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-435",
+      "ueberzeile": "Auflösung",
+      "titel": "Mit Ablauf des Donnerstags, 21.01.2027",
+      "text": "Der Zugangstag zählt nicht mit (§ 187 Abs. 1 BGB). Die Frist endet mit Ablauf des Tages der letzten Woche, der durch seine Benennung dem Ereignistag entspricht (§ 188 Abs. 2 BGB) – also wieder an einem Donnerstag. Fiele das Ende auf einen Samstag, Sonntag oder Feiertag, liefe eine Frist für Erklärungen oder Leistungen erst am nächsten Werktag ab (§ 193 BGB).",
+      "norm": "§§ 187 Abs. 1, 188 Abs. 2, 193 BGB",
+      "quellen": [
+        "§ 187 Abs. 1 BGB",
+        "§ 188 Abs. 2 BGB",
+        "§ 193 BGB",
+        "Themenpool: bgbat-435"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.592Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit Ablauf des 20.01.2027 (Mittwoch)",
+        "Mit Ablauf des 21.01.2027 (Donnerstag)",
+        "Mit Ablauf des 22.01.2027 (Freitag)"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-105",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Allgemeine Leistungsklage: keine Frist, kein Vorverfahren – aber Klagebefugnis",
+      "text": "Die allgemeine Leistungsklage ist in der VwGO nicht eigens geregelt, aber vorausgesetzt (etwa § 43 Abs. 2 VwGO). Anders als die Verpflichtungsklage (§ 42 Abs. 1 Alt. 2 VwGO) braucht sie grundsätzlich weder Vorverfahren noch Klagefrist – Ausnahme: Klagen aus dem Beamtenverhältnis. Um Popularklagen auszuschließen, verlangt die h.M. die Klagebefugnis analog § 42 Abs. 2 VwGO.",
+      "norm": "§ 42 VwGO · § 43 Abs. 2 VwGO",
+      "quellen": [
+        "§ 42 VwGO",
+        "§ 43 Abs. 2 VwGO",
+        "§ 54 Abs. 2 BeamtStG",
+        "§ 126 Abs. 2 BBG",
+        "Themenpool: vwgo-105"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.592Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-937",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Lücke im Gesetz – also Analogie? Erst den Umkehrschluss prüfen",
+      "falsch": "Das Gesetz regelt den Fall nicht, also wird die nächstliegende Norm analog angewandt.",
+      "richtigText": "Nicht jede Lücke ist planwidrig. Hat der Gesetzgeber den Fall bewusst ausgespart, liegt der Umkehrschluss näher: Die Rechtsfolge gilt dann gerade nicht. Belege die Planwidrigkeit mit Systematik oder Entstehungsgeschichte – erst danach die vergleichbare Interessenlage. Im Strafrecht zulasten des Täters ist die Analogie ohnehin gesperrt (Art. 103 Abs. 2 GG).",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-937"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.592Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-894",
+      "ueberzeile": "Klausurtipp IPR",
+      "titel": "Onlineshop im Ausland: Art. 6 Rom I-VO greift erst, wenn er auf Deutschland ausgerichtet ist",
+      "text": "Art. 6 Rom I-VO setzt voraus, dass der Unternehmer im Aufenthaltsstaat des Verbrauchers tätig ist oder seine Tätigkeit dorthin ausrichtet (Abs. 1 lit. b). Dass die Website abrufbar ist, genügt nicht. Indizien: Lieferung nach Deutschland, Sprache oder Währung abweichend vom Sitzstaat, Telefonnummer mit Ländervorwahl. Danach: Günstigkeitsvergleich (Abs. 2).",
+      "quellen": [
+        "Art. 6 Rom I-VO",
+        "Themenpool: ipr-894"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.592Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-893",
+      "ueberzeile": "4 Punkte IPR",
+      "titel": "Deliktsklage nach Art. 7 Nr. 2 EuGVVO: Wo liegt der Ort des schädigenden Ereignisses?",
+      "text": "Neben dem Wohnsitzgerichtsstand des Beklagten (Art. 4) kann am Ort des schädigenden Ereignisses geklagt werden. Den Begriff legt der EuGH weit aus – mit einer wichtigen Grenze.",
+      "punkte": [
+        "Handlungsort: wo die schädigende Handlung vorgenommen wurde",
+        "Erfolgsort: wo das Rechtsgut verletzt wurde – der Kläger hat die Wahl",
+        "Nicht: Ort bloßer Folgeschäden, etwa wo später das Vermögen sinkt",
+        "Persönlichkeitsrecht online: auch am Mittelpunkt der Interessen des Opfers"
+      ],
+      "quellen": [
+        "Art. 4 EuGVVO",
+        "Art. 7 Nr. 2 EuGVVO",
+        "Themenpool: ipr-893"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:35.592Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

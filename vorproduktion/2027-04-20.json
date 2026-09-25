@@ -1,0 +1,866 @@
+{
+  "datum": "2027-04-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "schuldbt-468",
+        "themaTitel": "Schadensersatz wegen Sachmangels",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafat-058",
+        "themaTitel": "Welche Arten der Kausalität gibt es?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-092",
+        "themaTitel": "Wie prüft man die Verhältnismäßigkeit?",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "schuldbt-477"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "schuldbt-477"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:02",
+        "art": "norm",
+        "themaId": "stpo-347"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:15",
+        "art": "zahl",
+        "themaId": "methodik-907"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "streitstand",
+        "themaId": "assessorz-812"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "merksatz",
+        "themaId": "strafat-065"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "schuldbt-468",
+      "poolTitel": "Schadensersatz wegen Sachmangels",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 3, 280 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafat-058",
+      "poolTitel": "Welche Arten der Kausalität gibt es?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23",
+        "2027-02-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-092",
+      "poolTitel": "Wie prüft man die Verhältnismäßigkeit?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-26"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-477",
+      "poolTitel": "Widerrufsrecht bei Fernabsatzverträgen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 312g, 355 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-25",
+        "2027-01-12",
+        "2027-01-12"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-477",
+      "poolTitel": "Widerrufsrecht bei Fernabsatzverträgen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 312g, 355 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-25",
+        "2027-01-12",
+        "2027-01-12"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "stpo-347",
+      "poolTitel": "Was folgt aus einem Verstoß gegen die Belehrungspflicht?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136 StPO",
+        "§ 163a StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-03",
+        "2027-02-13"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "methodik-907",
+      "poolTitel": "Fehleranalyse nach der Probeklausur",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2027-02-07",
+        "2027-04-10"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessorz-812",
+      "poolTitel": "Wie baut man die Hilfsaufrechnung im Urteil auf?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-15",
+        "2027-02-15",
+        "2027-04-04"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "strafat-065",
+      "poolTitel": "Was ist der Erlaubnistatbestandsirrtum und wie wird er behandelt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB",
+        "§ 17 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-12-29"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-468",
+      "slug": "2027-04-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Maschine mangelhaft, Betrieb steht still – braucht es Verzug?",
+          "titelZeilen": [
+            "Maschine mangelhaft,",
+            "Betrieb steht still",
+            "– braucht es Verzug?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Neben oder statt der Leistung?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Unternehmer K kauft von V eine Maschine. Sie ist schon bei Übergabe mangelhaft; bis zur Reparatur steht die Produktion des K zwei Wochen still. K verlangt den entgangenen Gewinn. Reicht § 280 Abs. 1 BGB – oder braucht es zusätzlich Verzug nach § 286 BGB?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Welche Anspruchsgrundlage?",
+          "links": {
+            "titel": "BGH",
+            "punkte": [
+              "Nach §§ 437 Nr. 3, 280 I BGB: Schadensersatz neben der Leistung.",
+              "Kein Verzug nötig – die Pflichtverletzung ist die mangelhafte Lieferung."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Nach §§ 280 I, II, 286 BGB: Ersatz als Verzögerungsschaden.",
+              "Ersatz erst ab Verzug mit der Nacherfüllung, regelmäßig nach Mahnung."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Die Abgrenzung im Überblick",
+          "punkte": [
+            "Statt der Leistung: Der Schaden entfiele bei Nacherfüllung – §§ 280 I, III, 281 BGB, meist mit Frist.",
+            "Neben der Leistung: Auch die Nacherfüllung beseitigt ihn nicht mehr – etwa Mangelfolgeschäden.",
+            "Das Vertretenmüssen wird vermutet (§ 280 Abs. 1 S. 2 BGB)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Ab Verzug geben beide Ansichten Ersatz. Der Streit entscheidet nur über den Ausfall bis dahin – dann kurz darstellen. Für den BGH: Die Pflichtverletzung liegt schon in der mangelhaften Lieferung. Die Gegenansicht sieht § 280 Abs. 2 BGB umgangen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Betriebsausfall wegen mangelhafter Lieferung: nach dem BGH Schadensersatz neben der Leistung (§§ 437 Nr. 3, 280 Abs. 1 BGB) – ohne Verzug."
+        },
+        {
+          "art": "cta",
+          "titel": "Schadensersatz beim Mangel in drei Zügen",
+          "punkte": [
+            "Welcher Schaden genau?",
+            "Entfiele er durch Nacherfüllung?",
+            "Dann § 281 BGB – sonst § 280 Abs. 1 BGB"
+          ],
+          "icons": [
+            "lupe",
+            "werkzeug",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Maschine mangelhaft, die Produktion steht bis zur Reparatur still – braucht der Käufer für den entgangenen Gewinn Verzug? Nach dem BGH nicht: Der Nutzungsausfall ist Schadensersatz neben der Leistung nach §§ 437 Nr. 3, 280 Abs. 1 BGB, weil die Pflichtverletzung schon in der mangelhaften Lieferung liegt. Teile der Literatur gehen über §§ 280 Abs. 2, 286 BGB und geben Ersatz erst ab Verzug. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#schadensersatz",
+        "#280bgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Betriebsausfall beim Mangel: Verzug nötig?",
+      "coverText": "Neben oder statt der Leistung?",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Steht der Betrieb wegen einer mangelhaften Maschine still, fragt sich, ob der Ausfall sofort oder erst nach einer Mahnung ersetzt wird.",
+        "handlung": "{B} stands beside a stalled machine with a frozen gear and holds out an hourglass whose sand has already run through, while {A} curiously looks at a small, still unrung bell on the workbench.",
+        "hinweisRegie": "Place the note in the free space between the empty hourglass and the unrung bell, slightly tilted toward the bell, so it frames the question of a prior warning without covering the frozen gear or faces.",
+        "alternative": "{A} counts products that never arrive on an idle conveyor belt, while {B} decides whether to hand over a repair ticket or a warning letter first."
+      },
+      "bildSzene": "stalled machine, empty hourglass, bell",
+      "bildSzeneAlt": "idle conveyor belt, missing products",
+      "quellen": [
+        "§ 437 Nr. 3 BGB",
+        "§ 280 BGB",
+        "§ 281 BGB",
+        "§ 286 BGB",
+        "BGH-Rspr. (Betriebsausfallschaden)",
+        "Themenpool: schuldbt-468"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.952Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-058",
+      "slug": "2027-04-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zwei tödliche Dosen: Die Formel streikt – kausal sind beide",
+          "titelZeilen": [
+            "Zwei tödliche Dosen:",
+            "Die Formel streikt",
+            "– kausal sind beide"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Alternative Kausalität",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A und B wollen O unabhängig voneinander töten. Jeder mischt ihm heimlich eine Dosis Gift in den Kaffee, die schon allein tödlich ist. O trinkt und stirbt; beide Dosen wirken zugleich. Haben A und B den Tod verursacht?"
+        },
+        {
+          "art": "text",
+          "titel": "Wo die Formel versagt",
+          "text": "Ursächlich ist jede Bedingung, die nicht hinweggedacht werden kann, ohne dass der Erfolg in seiner konkreten Gestalt entfiele. Denkst du nur das Gift des A weg, stirbt O trotzdem – am Gift des B. Und umgekehrt. Streng angewandt wäre keiner kausal."
+        },
+        {
+          "art": "schritte",
+          "titel": "Drei Formen, die du kennen musst",
+          "schritte": [
+            {
+              "titel": "Alternative Kausalität",
+              "text": "Jede Bedingung reicht allein. Die Formel wird modifiziert: Kausal ist jede, die nur nicht zusammen mit der anderen wegdenkbar ist."
+            },
+            {
+              "titel": "Kumulative Kausalität",
+              "text": "Nur beide Dosen zusammen töten. Die normale Formel hilft: Jede ist kausal. Probleme liegen eher bei Zurechnung und Vorsatz."
+            },
+            {
+              "titel": "Überholende Kausalität",
+              "text": "Ein neues, unabhängiges Ereignis führt den Erfolg allein herbei. Die erste Bedingung ist nicht kausal – es bleibt beim Versuch."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Nach der modifizierten Formel sind die Giftgaben von A und B jeweils ursächlich; der Tod ist beiden auch objektiv zurechenbar. A und B sind als Nebentäter jeweils wegen vollendeten Totschlags strafbar (§ 212 StGB). Mordmerkmale wie die Heimtücke prüfst du gesondert (§ 211 StGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wirkt jede Bedingung allein, sind beide kausal: Sie lassen sich alternativ, aber nicht kumulativ hinwegdenken."
+        },
+        {
+          "art": "cta",
+          "titel": "Kausalität in drei Zügen",
+          "punkte": [
+            "Formel zuerst normal anwenden",
+            "Mehrere Bedingungen? Form bestimmen",
+            "Danach die objektive Zurechnung"
+          ],
+          "icons": [
+            "paragraf",
+            "kreislauf",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Zwei Täter, zwei tödliche Dosen – und nach der Conditio-sine-qua-non-Formel wäre keiner kausal? Das Ergebnis wäre absurd. Bei alternativer Kausalität wird die Formel modifiziert: Von mehreren Bedingungen, die zwar alternativ, aber nicht kumulativ hinweggedacht werden können, ohne dass der Erfolg entfiele, ist jede ursächlich. Anders bei der überholenden Kausalität: Da bleibt es für den Ersten beim Versuch. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#kausalität",
+        "#äquivalenztheorie",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Alternative Kausalität: Beide sind kausal",
+      "coverText": "Alternative Kausalität",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Wirken zwei Ursachen jede für sich, darf die Kausalformel nicht beide Täter entlasten.",
+        "handlung": "{A} rests his pointer between two identical small vials placed side by side in front of a toppled cup, while {B} lifts one vial away and finds the cup still toppled.",
+        "hinweisRegie": "Place the note in the free space above the two vials, slightly tilted toward the one {B} lifts away, so the failed thought experiment is visible without covering the toppled cup or {A}'s pointer.",
+        "alternative": "{B} removes one of two pillars under a collapsed bridge, then the other, while {A} shows that the bridge would have fallen either way."
+      },
+      "bildSzene": "two vials, cup stays toppled",
+      "bildSzeneAlt": "two pillars, bridge collapses anyway",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 211 StGB",
+        "Äquivalenztheorie",
+        "Themenpool: strafat-058"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "formel-grenze",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.953Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-092",
+      "slug": "2027-04-20-b3",
+      "titelZeilen": [
+        "Geeignet heißt",
+        "nicht: Ziel sicher",
+        "erreicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Geeignet heißt nicht: Ziel sicher erreicht",
+          "unter": "Verhältnismäßigkeit · Art. 20 Abs. 3 GG",
+          "text": "Es genügt, dass das Mittel den Zweck fördern kann.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "icon": "zielscheibe",
+          "sprecher": "Geeignet heißt nicht, dass das Ziel sicher erreicht wird. Es reicht, dass das Mittel den Zweck fördern kann. Und das ist nur eine von vier Stufen.",
+          "marken": [
+            "fördern genügt",
+            "vier Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Legitimer Zweck",
+          "text": "Ein Ziel, das die Verfassung nicht ausschließt – konkret benannt.",
+          "norm": null,
+          "sprecher": "Schritt eins: der legitime Zweck. Der Staat muss ein Ziel verfolgen, das die Verfassung nicht ausschließt. Benenne es konkret, denn alle weiteren Stufen messen sich daran.",
+          "marken": [
+            "Zweck benennen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Geeignetheit",
+          "text": "Das Mittel kann den Zweck fördern – Teilerfolg reicht.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Geeignetheit. Das Mittel muss den Zweck fördern können. Vollständige Zielerreichung ist nicht nötig, und der Gesetzgeber hat einen Einschätzungsspielraum.",
+          "marken": [
+            "Förderung genügt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Erforderlichkeit",
+          "text": "Kein milderes Mittel, das gleich wirksam ist.",
+          "norm": null,
+          "sprecher": "Schritt drei: Erforderlichkeit. Gibt es ein milderes Mittel, das den Zweck genauso wirksam erreicht? Dann ist der Eingriff nicht erforderlich. Entscheidend ist gleich wirksam, nicht bloß irgendwie milder.",
+          "marken": [
+            "gleich wirksam?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Angemessenheit",
+          "text": "Eingriff und Nutzen stehen nicht außer Verhältnis.",
+          "norm": null,
+          "sprecher": "Schritt vier: Angemessenheit. Jetzt wägst du ab: Schwere des Eingriffs gegen Gewicht und Dringlichkeit des Zwecks. Hier liegt in der Klausur meist der Schwerpunkt.",
+          "marken": [
+            "Abwägung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Wo die Prüfung steht",
+          "text": "In der Rechtfertigung – als Schranken-Schranke.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Und wo steht das Ganze? In der verfassungsrechtlichen Rechtfertigung, als Schranken-Schranke. Hergeleitet wird es aus dem Rechtsstaatsprinzip und dem Wesen der Grundrechte.",
+          "marken": [
+            "Schranken-Schranke"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Zweck, geeignet, erforderlich, angemessen.",
+          "norm": null,
+          "sprecher": "Merke: legitimer Zweck, geeignet, erforderlich, angemessen. Und geeignet ist schon, was den Zweck fördert.",
+          "marken": [
+            "vier Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Den Zweck zuerst konkret benennen",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und schreib den Zweck so konkret auf, dass du jede Stufe daran messen kannst.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Geeignet heißt nicht, dass das Ziel sicher erreicht wird. In der Verhältnismäßigkeitsprüfung genügt es, dass das Mittel den legitimen Zweck fördern kann. Erforderlich ist es, wenn kein milderes, gleich wirksames Mittel zur Verfügung steht. Den Schwerpunkt setzt du meist in der Angemessenheit. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#verhältnismäßigkeit",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verhältnismäßigkeit in vier Stufen",
+      "coverText": "Fördern genügt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Ein Mittel ist schon geeignet, wenn es dem Ziel näherbringt – es muss nicht garantiert ankommen.",
+        "handlung": "{A} sets one sturdy stepping stone into a wide river toward a far bank, while {B} nervously points out that it does not reach all the way across.",
+        "hinweisRegie": "Place the note in the free space above the single stepping stone, slightly tilted toward the far bank, so it reads as progress toward the goal without covering {A}'s hands or {B}'s pointing arm.",
+        "alternative": "{B} tries to open a stuck door with a huge battering ram, while {A} offers a small key that works just as well."
+      },
+      "bildSzene": "one stepping stone toward far bank",
+      "bildSzeneAlt": "small key instead of battering ram",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: grundr-092"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.954Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-477",
+      "ueberzeile": "Prüfungsfrage Schuldrecht BT",
+      "titel": "V bestellt online Schuhe, zahlt 5 € Standardversand und widerruft fristgerecht. Bekommt er die 5 € zurück?",
+      "optionen": [
+        "Ja – auch die Kosten der Standard-Hinsendung sind zu erstatten",
+        "Nein – Versandkosten werden beim Widerruf nie erstattet",
+        "Nur, wenn die Schuhe mangelhaft waren"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 312g BGB",
+        "§ 355 BGB",
+        "§ 357 BGB",
+        "Themenpool: schuldbt-477"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.954Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-477",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – die Standard-Hinsendekosten gehören dazu",
+      "text": "Nach dem Widerruf muss der Unternehmer die empfangenen Zahlungen zurückgewähren, einschließlich der Kosten der Hinsendung (§ 357 BGB). Mehrkosten einer teureren Versandart als der günstigsten Standardlieferung erstattet er nicht. Die unmittelbaren Kosten der Rücksendung trägt der Verbraucher, wenn er darüber informiert wurde und der Händler sie nicht übernommen hat.",
+      "norm": "§ 355 BGB · § 357 BGB",
+      "quellen": [
+        "§ 312g BGB",
+        "§ 355 BGB",
+        "§ 357 BGB",
+        "Themenpool: schuldbt-477"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.954Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – auch die Kosten der Standard-Hinsendung sind zu erstatten",
+        "Nein – Versandkosten werden beim Widerruf nie erstattet",
+        "Nur, wenn die Schuhe mangelhaft waren"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-347",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 136 StPO: Belehrung vergessen – ohne Widerspruch bleibt die Aussage verwertbar",
+      "text": "Belehrt die Polizei den Beschuldigten nicht über seine Aussagefreiheit (§ 163a Abs. 4, § 136 Abs. 1 S. 2 StPO), ist die Aussage nach dem BGH grundsätzlich unverwertbar. Aber: Der verteidigte Angeklagte muss der Verwertung in der Hauptverhandlung bis zu dem in § 257 StPO genannten Zeitpunkt widersprechen. Diese Widerspruchslösung ist in der Literatur umstritten.",
+      "norm": "§ 136 Abs. 1 S. 2 StPO · § 163a Abs. 4 StPO",
+      "quellen": [
+        "§ 136 StPO",
+        "§ 163a StPO",
+        "§ 257 StPO",
+        "Themenpool: stpo-347"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.954Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-907",
+      "ueberzeile": "3 Punkte Klausurtechnik",
+      "titel": "Probeklausur zurück: Diese drei Dinge schreibst du dir sofort auf",
+      "text": "Nicht die Note hilft dir weiter, sondern die konkrete Stelle, an der Punkte verloren gingen.",
+      "punkte": [
+        "Welcher Satz im Sachverhalt hat auf das verpasste Problem hingewiesen?",
+        "Welche Definition oder welcher Prüfungspunkt fehlte?",
+        "Einen schwachen Absatz neu schreiben – im richtigen Stil"
+      ],
+      "quellen": [
+        "Themenpool: methodik-907"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.954Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-812",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Hilfsaufrechnung: Muss das Gericht erst über die Klageforderung Beweis erheben?",
+      "norm": "§ 322 Abs. 2 ZPO",
+      "optionen": [
+        "Beweiserhebungstheorie (h.M., Rspr.): Ja – erst die Klageforderung klären, dann die Hilfsaufrechnung.",
+        "Klageabweisungstheorie (Mindermeinung): Nein – die Klage kann gleich wegen der Aufrechnung abgewiesen werden."
+      ],
+      "text": "Für die h.M. spricht die Rechtskraft: Über die Gegenforderung entscheidet das Gericht nur rechtskräftig (§ 322 Abs. 2 ZPO), wenn es auf sie ankommt. Im Urteil daher erst die Klageforderung, dann die Aufrechnung. Streitwert: § 45 Abs. 3 GKG, soweit eine der Rechtskraft fähige Entscheidung über die Gegenforderung ergeht.",
+      "quellen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG",
+        "Themenpool: assessorz-812"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.954Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-065",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Erlaubnistatbestandsirrtum: Vorsatzschuld weg, Vorsatztat bleibt",
+      "text": "Nach h.L. entfällt beim Erlaubnistatbestandsirrtum nur die Vorsatzschuld. Die Tat bleibt vorsätzlich und rechtswidrig – Teilnahme bleibt möglich.",
+      "norm": "§ 16 Abs. 1 StGB analog",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 17 StGB",
+        "§§ 26, 27 StGB",
+        "Themenpool: strafat-065"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:29:46.954Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,873 @@
+{
+  "datum": "2026-11-03",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "gesetzs-209",
+        "themaTitel": "Was ist der Fremdbesitzerexzess?",
+        "fach": "gesetzs",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafat-735",
+        "themaTitel": "Unterlassen: Quasi-Kausalität und Entsprechungsklausel",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-605",
+        "themaTitel": "Parlamentsvorbehalt und Wesentlichkeitstheorie",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "assessoroer-715"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "assessoroer-715"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "zpo-282"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:15",
+        "art": "zahl",
+        "themaId": "assessorz-821"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "streitstand",
+        "themaId": "assessoroer-853"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "merksatz",
+        "themaId": "staat-633"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "gesetzs-209",
+      "poolTitel": "Was ist der Fremdbesitzerexzess?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 991 Abs. 2 BGB",
+        "§ 993 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-18"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafat-735",
+      "poolTitel": "Unterlassen: Quasi-Kausalität und Entsprechungsklausel",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2026-10-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-605",
+      "poolTitel": "Parlamentsvorbehalt und Wesentlichkeitstheorie",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-15"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-715",
+      "poolTitel": "Straßenverkehrsrecht und Verkehrszeichen als VA",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "StVO; VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-715",
+      "poolTitel": "Straßenverkehrsrecht und Verkehrszeichen als VA",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "StVO; VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-282",
+      "poolTitel": "Wie verteilt sich die Darlegungs- und Beweislast?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "assessorz-821",
+      "poolTitel": "Welchen Prüfungsumfang hat die Berufung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 513 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessoroer-853",
+      "poolTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-30"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "staat-633",
+      "poolTitel": "Rechtswegerschöpfung und Subsidiarität",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 90 II BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-01"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "themaId": "gesetzs-209",
+      "slug": "2026-11-03-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nichtiger Vertrag, Wagen demoliert: Haftet der redliche Besitzer?",
+          "titelZeilen": [
+            "Nichtiger Vertrag,",
+            "Wagen demoliert:",
+            "Haftet der redliche",
+            "Besitzer?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Der Exzess sprengt das Privileg",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "M mietet von E einen Wagen. Der Vertrag ist unerkannt nichtig, M hält sich redlich für berechtigt. Mit dem Wagen fährt er ein illegales Rennen – das hätte ihm auch kein wirksamer Mietvertrag erlaubt – und beschädigt ihn schuldhaft. Haftet M dem Eigentümer E?"
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausgangslage im EBV",
+          "punkte": [
+            "Vindikationslage: M ist unrechtmäßiger Fremdbesitzer.",
+            "Redlich und unverklagt: keine Haftung nach §§ 989, 990 BGB.",
+            "§ 993 Abs. 1 Hs. 2 BGB: keine weitere Haftung – grundsätzlich auch nicht aus § 823 BGB.",
+            "Aber: Mit wirksamem Vertrag hätte M für das Rennen gehaftet."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Sperrt § 993 BGB auch den Exzess?",
+          "links": {
+            "titel": "h.M.: keine Sperre",
+            "punkte": [
+              "Wer sein vermeintliches Besitzrecht überschreitet, haftet nach §§ 823 ff. BGB.",
+              "Der Redliche soll nicht besser stehen als ein berechtigter Besitzer."
+            ]
+          },
+          "rechts": {
+            "titel": "Andere Ansicht: Sperre",
+            "punkte": [
+              "§ 993 Abs. 1 Hs. 2 BGB privilegiert den Redlichen ohne Ausnahme.",
+              "Das EBV bleibt auch hier abschließend."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme und Klausurhinweis",
+          "text": "Die h.M. überzeugt: Das Privileg schützt das Vertrauen auf ein Besitzrecht – weiter als dieses vermeintliche Recht reicht es nicht. Denselben Gedanken zeigt § 991 Abs. 2 BGB. In der Klausur: EBV und Privileg feststellen, den Exzess begründen, dann § 823 Abs. 1 BGB voll prüfen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Redlichkeit schützt nur, soweit das vermeintliche Besitzrecht reicht. Wer es überschreitet, haftet nach h.M. aus § 823 BGB – trotz § 993 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Fremdbesitzerexzess in drei Zügen",
+          "punkte": [
+            "EBV und Privileg feststellen",
+            "Exzess über das vermeintliche Recht?",
+            "§ 823 Abs. 1 BGB voll prüfen"
+          ],
+          "icons": [
+            "schluessel",
+            "warnung",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Nichtiger Mietvertrag, Wagen beim Rennen demoliert – und der Mieter war redlich. Haftet er? Im EBV schützt § 993 Abs. 1 Hs. 2 BGB den redlichen, unverklagten Besitzer. Überschreitet er aber das Besitzrecht, das er zu haben glaubte, greift nach h.M. das Deliktsrecht: der Fremdbesitzerexzess. Speichern für die nächste EBV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#ebv",
+        "#eigentümerbesitzerverhältnis",
+        "#993bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fremdbesitzerexzess: Sperrt § 993 BGB?",
+      "coverText": "Der Exzess sprengt das Privileg",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Wer eine fremde Sache redlich besitzt, ist geschützt – aber nur so weit, wie er sie nutzen zu dürfen glaubte.",
+        "handlung": "{B} steers a borrowed crystal cart far past a painted boundary line and over a rock so that one wheel cracks, while {A} stands at the line and points at the damage.",
+        "hinweisRegie": "Place the note in the open space just beyond the painted boundary line, slightly tilted toward the cracked wheel, so the overstepped limit is linked to the note without covering either character.",
+        "alternative": "{B} carries a borrowed lantern into a cave passage marked off-limits, while {A} watches from the permitted path as its glass cracks."
+      },
+      "bildSzene": "borrowed cart driven past boundary, wheel cracks",
+      "bildSzeneAlt": "borrowed lantern cracks in forbidden passage",
+      "quellen": [
+        "§ 993 Abs. 1 BGB",
+        "§§ 989, 990 BGB",
+        "§ 991 Abs. 2 BGB",
+        "§ 823 Abs. 1 BGB",
+        "§ 985 BGB",
+        "Themenpool: gesetzs-209"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "haftungsfrage-am-fall",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.015Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-735",
+      "slug": "2026-11-03-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Geländer nicht repariert: verletzt ohne einen Schlag",
+          "titelZeilen": [
+            "Geländer nicht",
+            "repariert: verletzt",
+            "ohne einen Schlag"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Garant, Kausalität, Entsprechung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Verwalter H hat vertraglich die Verkehrssicherung eines Mietshauses übernommen. Das Geländer ist lose; H repariert es nicht, weil er Mieter M loswerden will, und nimmt dessen Sturz in Kauf. M stürzt und bricht sich den Arm – mit festem Geländer wäre das sicher nicht passiert. Strafbarkeit des H?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung: §§ 223, 13 StGB, Teil 1",
+          "schritte": [
+            {
+              "titel": "Tun oder Unterlassen?",
+              "text": "Schwerpunkt der Vorwerfbarkeit: H hat nicht repariert – ein Unterlassen."
+            },
+            {
+              "titel": "Erfolg",
+              "text": "M ist körperlich misshandelt und an der Gesundheit geschädigt (§ 223 Abs. 1 StGB)."
+            },
+            {
+              "titel": "Quasi-Kausalität",
+              "text": "Mit Reparatur wäre der Sturz mit an Sicherheit grenzender Wahrscheinlichkeit ausgeblieben."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung, Teil 2",
+          "schritte": [
+            {
+              "titel": "Garantenstellung",
+              "text": "H hat die Verkehrssicherung vertraglich übernommen: Überwachergarant für die Gefahrenquelle Treppe."
+            },
+            {
+              "titel": "Entsprechungsklausel",
+              "text": "Bei § 223 StGB als reinem Erfolgsdelikt ohne eigenes Gewicht – ein Satz genügt."
+            },
+            {
+              "titel": "Vorsatz, Rechtswidrigkeit, Schuld",
+              "text": "H nahm den Sturz billigend in Kauf; Rechtfertigungs- und Entschuldigungsgründe fehlen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "H ist wegen Körperverletzung durch Unterlassen strafbar (§§ 223 Abs. 1, 13 Abs. 1 StGB); die Strafe kann nach § 13 Abs. 2 StGB gemildert werden. Wirklich Gewicht hat die Entsprechungsklausel bei verhaltensgebundenen Delikten, deren Unrecht in einer bestimmten Art des Handelns liegt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beim Unterlassen zählt die Kette: Garant, Quasi-Kausalität, Entsprechung. Bei reinen Erfolgsdelikten ist die Entsprechung nur ein Satz."
+        },
+        {
+          "art": "cta",
+          "titel": "Unterlassen in drei Kontrollfragen",
+          "punkte": [
+            "Tun oder Unterlassen?",
+            "Garant für die Gefahrenquelle?",
+            "Erfolg fast sicher abwendbar?"
+          ],
+          "icons": [
+            "lupe",
+            "schild",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Geländer nicht repariert – und trotzdem eine Körperverletzung, ganz ohne Schlag. Wer als Garant eine Gefahrenquelle überwachen muss, haftet für den Erfolg, wenn die gebotene Handlung ihn mit an Sicherheit grenzender Wahrscheinlichkeit verhindert hätte (§ 13 StGB). Die Entsprechungsklausel ist bei reinen Erfolgsdelikten wie § 223 StGB nur ein Satz. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#unterlassen",
+        "#13stgb",
+        "#quasikausalität",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unterlassen: Garant, Kausalität, Entsprechung",
+      "coverText": "Garant, Kausalität, Entsprechung",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer eine Gefahrenquelle überwachen muss und nichts tut, kann verletzen, ohne jemanden zu berühren.",
+        "handlung": "{A} nervously looks away from a wobbling stair railing he was supposed to fix, his toolbox closed at his feet, while {B} grabs the railing just as it gives way.",
+        "hinweisRegie": "Place the note in the free space beside the loose railing, slightly tilted toward the closed toolbox, so the omitted repair is linked to the note without covering {B}'s grip.",
+        "alternative": "{B} points at a single loose bolt on a staircase, while {A} holds a wrench but keeps it half hidden in his pocket."
+      },
+      "bildSzene": "closed toolbox beside wobbling stair railing",
+      "bildSzeneAlt": "loose bolt, wrench kept in pocket",
+      "quellen": [
+        "§ 13 StGB",
+        "§ 223 StGB",
+        "Themenpool: strafat-735"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verletzen-ohne-handeln",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.016Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-605",
+      "slug": "2026-11-03-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Auch hinter Gittern braucht der Staat ein Gesetz",
+          "unter": "Wesentlichkeit · Art. 20 Abs. 3 GG",
+          "text": "Kein Sonderstatus ohne Parlamentsgesetz – auch nicht im Strafvollzug.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "icon": "schloss",
+          "sprecher": "Auch im Gefängnis braucht der Staat ein Gesetz. Früher galten Schule und Strafvollzug als besonderes Gewaltverhältnis, geregelt durch bloße Verwaltungsvorschriften. Das Bundesverfassungsgericht hat damit Schluss gemacht.",
+          "marken": [
+            "kein Sonderstatus"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vorbehalt des Gesetzes",
+          "text": "Eingriffe nur durch oder aufgrund eines Gesetzes.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Schritt eins: der Vorbehalt des Gesetzes. Die Verwaltung darf in Grundrechte nur eingreifen, wenn ein Gesetz sie dazu ermächtigt. Das folgt aus Artikel 20 Absatz 3 und den Grundrechten.",
+          "marken": [
+            "Eingriff braucht Gesetz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wesentlichkeitstheorie",
+          "text": "Das Wesentliche, vor allem das Grundrechtsrelevante, regelt der Gesetzgeber.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Wesentlichkeitstheorie. Ob und wie genau der Gesetzgeber handeln muss, hängt davon ab, wie wesentlich eine Frage ist, vor allem für die Grundrechte. Deshalb braucht zum Beispiel auch die Entlassung eines Schülers eine gesetzliche Grundlage.",
+          "marken": [
+            "Wesentliches: Parlament"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Parlamentsvorbehalt",
+          "text": "Das ganz Wesentliche darf nicht an die Verwaltung delegiert werden.",
+          "norm": "Art. 80 Abs. 1 GG",
+          "sprecher": "Schritt drei: der Parlamentsvorbehalt. Das ganz Wesentliche muss im Parlamentsgesetz selbst stehen. Weniger Wesentliches darf der Gesetzgeber per Rechtsverordnung delegieren, aber nur mit Inhalt, Zweck und Ausmaß nach Artikel 80.",
+          "marken": [
+            "nicht delegierbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Leistende Verwaltung",
+          "text": "Bei Subventionen lässt die Rspr. meist den Haushaltsplan genügen.",
+          "norm": null,
+          "sprecher": "Schritt vier: die leistende Verwaltung. Für Subventionen verlangt die Rechtsprechung in der Regel kein eigenes Fachgesetz, der Haushaltsplan kann genügen. Anders kann es liegen, wenn die Förderung Grundrechte Dritter spürbar berührt.",
+          "marken": [
+            "Haushaltsplan genügt oft"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Wo du das prüfst",
+          "text": "Grundrechte: bei der Rechtfertigung. Verwaltungsrecht: bei der Ermächtigungsgrundlage.",
+          "norm": null,
+          "sprecher": "Wo prüfst du das? Im Grundrechtsfall bei der Rechtfertigung, im Verwaltungsrecht bei der Ermächtigungsgrundlage.",
+          "marken": [
+            "Rechtfertigung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Eingriff braucht Gesetz. Wesentliches regelt das Parlament selbst.",
+          "norm": null,
+          "sprecher": "Merke: Jeder Eingriff braucht ein Gesetz, auch hinter Gittern und in der Schule. Und je wesentlicher die Frage, desto mehr muss das Parlament selbst entscheiden.",
+          "marken": [
+            "Parlament entscheidet"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Kein Sonderstatus ohne Gesetz",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und frag bei jedem Eingriff zuerst: Wo steht das im Gesetz?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Auch hinter Gittern braucht der Staat ein Gesetz. Das frühere „besondere Gewaltverhältnis“ in Strafvollzug, Schule oder Beamtenverhältnis ist Geschichte: Grundrechtseingriffe brauchen auch dort eine gesetzliche Grundlage. Die Wesentlichkeitstheorie sagt, wie viel der Gesetzgeber selbst regeln muss – der Parlamentsvorbehalt, was er gar nicht delegieren darf. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#wesentlichkeitstheorie",
+        "#vorbehaltdesgesetzes",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wesentlichkeitstheorie und Parlamentsvorbehalt",
+      "titelZeilen": [
+        "Auch hinter Gittern",
+        "braucht der Staat",
+        "ein Gesetz"
+      ],
+      "coverText": "Kein Sonderstatus ohne Gesetz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Auch in Sonderbeziehungen wie Schule oder Strafvollzug braucht der Staat für Eingriffe ein Parlamentsgesetz.",
+        "handlung": "{B} hovers at a barred door trying to turn a flimsy paper key that bends in the lock, while {A} points his pointer at a sturdy metal key hanging from a small assembly-hall model.",
+        "hinweisRegie": "Place the note in the free space between the bending paper key and the sturdy key, slightly tilted toward the sturdy one, so the need for a parliamentary basis is linked to the note without covering the lock.",
+        "alternative": "{A} blocks a classroom door with his pointer until {B} arrives carrying a stamp from a tiny parliament building."
+      },
+      "bildSzene": "paper key bends in barred door lock",
+      "bildSzeneAlt": "pointer blocks classroom door until stamp",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 80 Abs. 1 GG",
+        "Themenpool: staat-605"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ueberholte-lehre",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.018Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-715",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "Das Halteverbotsschild steht seit Jahren, A sieht es heute erstmals. Wann beginnt seine Anfechtungsfrist?",
+      "optionen": [
+        "Mit dem Aufstellen des Schildes – für alle gleich",
+        "Gar nicht – ein Verkehrszeichen ist kein Verwaltungsakt",
+        "Erst wenn A dem Schild zum ersten Mal begegnet"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 35 S. 2 VwVfG",
+        "§ 58 Abs. 2 VwGO",
+        "§ 80 Abs. 2 S. 1 Nr. 2 VwGO",
+        "StVO",
+        "Themenpool: assessoroer-715"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.018Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-715",
+      "ueberzeile": "Auflösung",
+      "titel": "Erst mit der ersten Begegnung – dann läuft regelmäßig die Jahresfrist",
+      "text": "Verkehrszeichen sind Allgemeinverfügungen (§ 35 S. 2 VwVfG), bekanntgegeben durch Aufstellen. Die Frist beginnt nach dem BVerwG aber für jeden erst, wenn er dem Zeichen erstmals gegenübersteht. Mangels Belehrung gilt regelmäßig die Jahresfrist (§ 58 Abs. 2 VwGO); ob ein Widerspruch nötig ist, regelt das Landesrecht. Sofort vollziehbar: § 80 Abs. 2 S. 1 Nr. 2 VwGO analog.",
+      "norm": "§ 35 S. 2 VwVfG · § 58 Abs. 2 VwGO",
+      "quellen": [
+        "§ 35 S. 2 VwVfG",
+        "§ 58 Abs. 2 VwGO",
+        "§ 80 Abs. 2 S. 1 Nr. 2 VwGO",
+        "StVO",
+        "Themenpool: assessoroer-715"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.018Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit dem Aufstellen des Schildes – für alle gleich",
+        "Gar nicht – ein Verkehrszeichen ist kein Verwaltungsakt",
+        "Erst wenn A dem Schild zum ersten Mal begegnet"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-282",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 138 Abs. 3 ZPO: Was nicht bestritten wird, gilt als zugestanden",
+      "text": "Jede Partei muss sich zum Vortrag des Gegners erklären; Nichtbestrittenes gilt als zugestanden (§ 138 Abs. 2, 3 ZPO). Nichtwissen ist nur zu Tatsachen erlaubt, die weder eigene Handlungen noch eigene Wahrnehmungen betreffen (Abs. 4). Beweis wird nur über streitige, erhebliche Tatsachen erhoben – die Beweislast trägt grundsätzlich, wer sich auf die ihm günstige Norm beruft.",
+      "norm": "§ 138 Abs. 2–4 ZPO · § 286 ZPO",
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: zpo-282"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.018Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-821",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Berufung: Was prüft das Berufungsgericht – und was nicht?",
+      "text": "Die Berufung dient vor allem der Fehlerkontrolle, nicht einer vollständig neuen Tatsacheninstanz.",
+      "punkte": [
+        "Rechtsfehler: volle Prüfung (§§ 513 Abs. 1, 546 ZPO)",
+        "Tatsachen: grundsätzlich die festgestellten (§ 529 Abs. 1 Nr. 1 ZPO)",
+        "Außer: konkrete Zweifel an Richtigkeit oder Vollständigkeit",
+        "Neues Vorbringen nur nach § 531 Abs. 2 ZPO"
+      ],
+      "quellen": [
+        "§ 513 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO",
+        "§ 546 ZPO",
+        "Themenpool: assessorz-821"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.018Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-853",
+      "ueberzeile": "Streitstand VwGO",
+      "titel": "Klage ohne Unterschrift: Ist die Schriftform des § 81 VwGO gewahrt?",
+      "norm": "§ 81 Abs. 1 VwGO",
+      "optionen": [
+        "Rspr. (BVerwG): Ja, wenn Urheber und Einreichungswille sich sonst zweifelsfrei ergeben.",
+        "Andere Ansicht: Nein – die eigenhändige Unterschrift ist grundsätzlich unverzichtbar."
+      ],
+      "text": "Klausurhinweis: Die Schriftform soll Urheber und Ernsthaftigkeit sichern – das kann auch ein unterschriebenes Begleitschreiben leisten. Anwälte und Behörden reichen grundsätzlich elektronisch ein (§ 55d VwGO), dann gilt § 55a VwGO. Fehlen Angaben nach § 82 Abs. 1 VwGO, fordert das Gericht zur Ergänzung auf (§ 82 Abs. 2 VwGO).",
+      "quellen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO",
+        "§§ 55a, 55d VwGO",
+        "Themenpool: assessoroer-853"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.018Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-633",
+      "ueberzeile": "Merksatz Verfassungsprozess",
+      "titel": "Subsidiarität: mehr als den Rechtsweg erschöpfen",
+      "text": "Vor dem BVerfG muss jede zumutbare Möglichkeit genutzt sein, den Grundrechtsverstoß fachgerichtlich zu beseitigen – bei Gehörsrügen samt Anhörungsrüge.",
+      "norm": "§ 90 Abs. 2 BVerfGG",
+      "quellen": [
+        "§ 90 Abs. 2 BVerfGG",
+        "Themenpool: staat-633"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:59:21.018Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

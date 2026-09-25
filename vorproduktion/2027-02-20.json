@@ -1,0 +1,844 @@
+{
+  "datum": "2027-02-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-903",
+        "themaTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "verwalt-641",
+        "themaTitel": "Anhörung und Heilung",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-6",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "staat-357"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "staat-357"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "delikt-244"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "begriff",
+        "themaId": "ipr-891"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "fehler",
+        "themaId": "stpo-926"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:30",
+        "art": "tipp",
+        "themaId": "staat-593"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-903",
+      "poolTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-19",
+        "2026-11-21",
+        "2026-12-21"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "verwalt-641",
+      "poolTitel": "Anhörung und Heilung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§§ 28, 45 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-6",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2026-12-26"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-357",
+      "poolTitel": "Wann ist ein Gesetz zustimmungsbedürftig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 84 GG",
+        "Art. 104a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-357",
+      "poolTitel": "Wann ist ein Gesetz zustimmungsbedürftig?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 84 GG",
+        "Art. 104a GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "delikt-244",
+      "poolTitel": "Was gilt bei der Haftung mehrerer Schädiger?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 830 BGB",
+        "§ 840 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-23"
+      ]
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "ipr-891",
+      "poolTitel": "Welches Recht gilt für eine unerlaubte Handlung im Ausland?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 Rom II-VO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-10-28"
+      ]
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "stpo-926",
+      "poolTitel": "Wann erlauben §§ 100a, 100b StPO Telekommunikationsüberwachung und Online-Durchsuchung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "Art. 10 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17",
+        "2026-12-18"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "staat-593",
+      "poolTitel": "Bundesstaatsprinzip",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-28",
+        "2026-12-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-903",
+      "slug": "2027-02-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Hilfsgutachten: Ergebnis halten, dann weiterprüfen",
+          "titelZeilen": [
+            "Hilfsgutachten:",
+            "Ergebnis halten,",
+            "dann weiterprüfen"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Ab der Weiche, nicht von vorn",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Ausgangslage",
+          "text": "Beispiel aus dem 2. Examen: Du hältst die Klage für unzulässig, weil die Klagefrist versäumt ist. Der Bearbeitervermerk verlangt, alle aufgeworfenen Fragen zu behandeln – notfalls hilfsgutachtlich. Wie kommst du in die Begründetheit, ohne dein eigenes Ergebnis zu beschädigen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So schreibst du den Übergang",
+          "schritte": [
+            {
+              "titel": "1. Hauptergebnis klar abschließen",
+              "text": "„Die Klage ist unzulässig.“ Kein „wohl“, kein Zurückrudern."
+            },
+            {
+              "titel": "2. Überleitung mit Bedingung",
+              "text": "„Für den Fall, dass die Klagefrist als gewahrt angesehen wird, ist hilfsweise die Begründetheit zu prüfen.“"
+            },
+            {
+              "titel": "3. An der Weiche einsteigen",
+              "text": "Nur prüfen, was ab dieser Stelle neu relevant wird – die Zulässigkeit nicht noch einmal."
+            },
+            {
+              "titel": "4. Gleicher Maßstab",
+              "text": "Gutachtenstil, Schwerpunkte und Tiefe wie im Hauptgutachten. Das Hilfsgutachten ist kein Anhang in Stichworten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Woran es kippt",
+          "text": "Wer im Hilfsgutachten schreibt, die Frist sei „vielleicht doch“ gewahrt, widerspricht sich selbst – und schwächt das Hauptgutachten. Die Bedingung gehört in die Überleitung, nicht in eine neue Wertung."
+        },
+        {
+          "art": "text",
+          "titel": "Wann überhaupt?",
+          "punkte": [
+            "Wenn der Bearbeitervermerk es verlangt oder erkennbar weitere Probleme angelegt sind.",
+            "Im 1. Examen oft vermeidbar: die vertretbare Weiche wählen, die die Probleme im Hauptgutachten hält.",
+            "Zeit einplanen: Das Hilfsgutachten kommt ans Ende, nicht mitten in die Hauptprüfung."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Hauptergebnis stehen lassen, Bedingung formulieren, an der Weiche einsteigen – im selben Stil wie vorher."
+        },
+        {
+          "art": "cta",
+          "titel": "Hilfsgutachten in drei Zügen",
+          "punkte": [
+            "Hauptergebnis klar festhalten",
+            "Überleitung mit „für den Fall, dass“",
+            "Ab der Weiche weiterprüfen"
+          ],
+          "icons": [
+            "haken",
+            "fueller",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Hilfsgutachten: erst das eigene Ergebnis halten, dann weiterprüfen. Schließ das Hauptgutachten klar ab, leite mit einer Bedingung über („Für den Fall, dass …“) und steig genau an der Weiche ein – nicht von vorn. Stil und Tiefe bleiben wie im Hauptgutachten. Wer im Hilfsgutachten sein Ergebnis relativiert, schwächt beide Teile. Speichern für die nächste Klausur mit Bearbeitervermerk.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#klausurtechnik",
+        "#hilfsgutachten",
+        "#gutachtenstil",
+        "#klausurtraining",
+        "#zweitesstaatsexamen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Hilfsgutachten: der saubere Übergang",
+      "coverText": "Ab der Weiche, nicht von vorn",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Das Hauptergebnis bleibt stehen – das Hilfsgutachten zweigt erst an der Weiche ab.",
+        "handlung": "{A} plants a firm flag at the end of the main path, while {B} nervously starts down a side path that branches off exactly at a marked fork, not from the beginning.",
+        "hinweisRegie": "Place the note in the free space right at the marked fork where {B} turns off, slightly tilted toward the side path, so the branching point reads as the key without covering the flag or any faces.",
+        "alternative": "{B} builds a small second bridge that starts from the middle pillar of an existing bridge, while {A} leaves the main bridge untouched."
+      },
+      "bildSzene": "flag on main path, side path from fork",
+      "bildSzeneAlt": "second bridge from the middle pillar",
+      "quellen": [
+        "Themenpool: methodik-903"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.184Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-641",
+      "slug": "2027-02-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anhörung vergessen? Drei Rettungswege für den Bescheid",
+          "titelZeilen": [
+            "Anhörung",
+            "vergessen? Drei",
+            "Rettungswege",
+            "für den Bescheid"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Entbehrlich, geheilt, § 46",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Ausgangspunkt",
+          "text": "Vor Erlass eines VA, der in Rechte eines Beteiligten eingreift, muss er sich zu den entscheidungserheblichen Tatsachen äußern können (§ 28 Abs. 1 VwVfG). Ob schon die Ablehnung eines beantragten VA ein Eingriff ist, ist umstritten. Landesbehörden: Landes-VwVfG, meist gleichlautend."
+        },
+        {
+          "art": "text",
+          "titel": "Weg 1: Anhörung war entbehrlich",
+          "punkte": [
+            "§ 28 Abs. 2 VwVfG: im Einzelfall nicht geboten, etwa bei Gefahr im Verzug oder Allgemeinverfügungen.",
+            "Die Aufzählung ist nicht abschließend („insbesondere“); die Behörde entscheidet nach Ermessen.",
+            "§ 28 Abs. 3 VwVfG: keine Anhörung bei entgegenstehendem zwingendem öffentlichem Interesse."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Weg 2: Heilung",
+          "punkte": [
+            "Nachholen der Anhörung heilt den Fehler (§ 45 Abs. 1 Nr. 3 VwVfG).",
+            "Möglich bis zum Abschluss der letzten Tatsacheninstanz (§ 45 Abs. 2 VwVfG).",
+            "Nach verbreiteter Ansicht genügt kein bloßer Schriftsatzwechsel im Prozess – die Behörde muss würdigen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Weg 3: § 46 VwVfG",
+          "punkte": [
+            "Keine Aufhebung allein wegen des Fehlers, wenn er die Entscheidung offensichtlich nicht beeinflusst hat.",
+            "Bei Ermessensentscheidungen lässt sich das nur selten feststellen.",
+            "Achtung: Der VA bleibt rechtswidrig – § 46 schließt nur den Aufhebungsanspruch aus."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst Entbehrlichkeit nach § 28 Abs. 2, 3, dann Heilung nach § 45, zuletzt § 46 VwVfG – in dieser Reihenfolge prüfen."
+        },
+        {
+          "art": "cta",
+          "titel": "Anhörung in drei Zügen",
+          "punkte": [
+            "Anhörung nötig oder entbehrlich?",
+            "Nachgeholt nach § 45 VwVfG?",
+            "Sonst § 46: Einfluss ausgeschlossen?"
+          ],
+          "icons": [
+            "person",
+            "kreislauf",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Anhörung vergessen? Dann gibt es drei Rettungswege für den Bescheid: Die Anhörung war nach § 28 Abs. 2 oder 3 VwVfG entbehrlich, sie wurde nach § 45 Abs. 1 Nr. 3, Abs. 2 VwVfG wirksam nachgeholt – oder der Fehler ist nach § 46 VwVfG unbeachtlich, weil er die Entscheidung offensichtlich nicht beeinflusst hat. Achtung: § 46 macht den VA nicht rechtmäßig. Speichern als Spickzettel für die nächste Anfechtungsklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#anhörung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anhörung und Heilung: drei Rettungswege",
+      "coverText": "Entbehrlich, geheilt, § 46",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Eine vergessene Anhörung lässt sich oft noch auffangen – aber nur auf drei klar geregelten Wegen.",
+        "handlung": "{A} hovers beside a closed office door and opens a small side hatch, so that {B} can finally speak through it before a large stamp comes down on the desk inside.",
+        "hinweisRegie": "Place the note in the free space beside the small side hatch, slightly tilted toward {B}'s face at the opening, so the belated hearing reads as the key without covering the stamp.",
+        "alternative": "{B} tests three small bridge models on a table by placing a weight on each, while {A} watches which of them still holds."
+      },
+      "bildSzene": "droid opens side hatch so alien can speak",
+      "bildSzeneAlt": "three small bridge models tested",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-641"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-rettungswege",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.184Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-6",
+      "slug": "2027-02-20-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Klausurtag: Nicht mit dem Schreiben anfangen",
+          "unter": "Kopfsache · Klausurtag",
+          "text": "Ein fester Ablauf nimmt dir Entscheidungen ab.",
+          "norm": null,
+          "icon": "stoppuhr",
+          "sprecher": "Am Klausurtag fängst du nicht mit dem Schreiben an. Du fängst mit einem Ablauf an, den du vorher festgelegt hast. Denn jede Entscheidung am Morgen kostet Kraft, die dir später fehlt.",
+          "marken": [
+            "erst der Ablauf",
+            "dann das Schreiben"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Am Vorabend packen",
+          "text": "Gesetzestexte, zugelassene Hilfsmittel, Ausweis, Getränk, Uhr – und die Anreise planen.",
+          "norm": null,
+          "sprecher": "Schritt eins: der Vorabend. Pack alles, was du brauchst: Gesetzestexte, zugelassene Hilfsmittel, Ausweis, Getränk, Uhr. Plan die Anreise mit Puffer. Am Morgen musst du dann nichts mehr suchen.",
+          "marken": [
+            "Vorabend: packen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Erst lesen, dann skizzieren",
+          "text": "Fallfrage und Bearbeitervermerk zuerst, dann der Sachverhalt – und eine Lösungsskizze.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Start. Lies zuerst die Fallfrage und den Bearbeitervermerk, dann den Sachverhalt, mindestens zweimal. Erst danach kommt die Lösungsskizze. Wer sofort schreibt, baut leicht auf dem ersten Eindruck auf.",
+          "marken": [
+            "Vermerk zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Zeitplan an den Rand",
+          "text": "Notieren, wann welcher Teil fertig sein soll – und danach steuern.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Zeitplan. Notier dir am Rand, wann du mit welchem Teil fertig sein willst. So merkst du früh, wenn du dich festbeißt, und kannst umsteuern.",
+          "marken": [
+            "Zeitplan am Rand"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Pausen bewusst nehmen",
+          "text": "Kurz trinken, durchatmen, den Blick heben – dann weiter.",
+          "norm": null,
+          "sprecher": "Schritt vier: kurze Pausen. Trinken, durchatmen, den Blick vom Blatt heben. Eine kurze Pause bringt dich oft weiter als stures Durchschreiben mit müdem Kopf.",
+          "marken": [
+            "kurz raus"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Wenn ein Problem hakt",
+          "text": "Markieren, vertretbar entscheiden, weiterschreiben – am Ende zurückkommen.",
+          "norm": null,
+          "sprecher": "Und wenn ein Problem hakt? Markier die Stelle, entscheide dich vertretbar und schreib weiter. Am Ende kommst du zurück, wenn Zeit bleibt. Eine vollständige Bearbeitung trägt mehr als ein perfekter Teil.",
+          "marken": [
+            "weiter statt festbeißen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Routine ist am Klausurtag mehr wert als jede letzte Wiederholung.",
+          "norm": null,
+          "sprecher": "Merke: Routine ist am Klausurtag mehr wert als jede letzte Wiederholung am Morgen.",
+          "marken": [
+            "Routine trägt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Deinen Ablauf vorher festlegen",
+          "text": "Speichern für den nächsten Klausurtag.",
+          "sprecher": "Speicher dir das für den nächsten Klausurtag. Und probier den Ablauf schon bei der nächsten Probeklausur aus.",
+          "marken": [
+            "Probelauf üben"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Am Klausurtag fängst du nicht mit dem Schreiben an, sondern mit einem Ablauf, den du vorher festgelegt hast. Am Vorabend packen und die Anreise planen. Zum Start Fallfrage und Bearbeitervermerk zuerst, dann den Sachverhalt gründlich lesen und skizzieren. Zeitplan an den Rand, Pausen bewusst nehmen – und hakt ein Problem, markieren und weiterschreiben. Speichern für den nächsten Klausurtag.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#klausurtraining",
+        "#lernplan",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klausurtag: der feste Ablauf",
+      "titelZeilen": [
+        "Klausurtag: Nicht",
+        "mit dem Schreiben",
+        "anfangen"
+      ],
+      "coverText": "Vorabend, Start, Zeitplan, Pause",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Ein vorher festgelegter Ablauf nimmt am Klausurtag Entscheidungen ab und spart Kraft für die Lösung.",
+        "handlung": "{A} calmly lays out a packed bag, a water bottle and a watch in a neat row on a bench, while {B}, still nervous, stops rummaging and simply follows her row.",
+        "hinweisRegie": "Place the note in the free space just above the neat row of items on the bench, slightly tilted toward the watch, so the fixed routine reads as the point without covering {B}'s hands or {A}'s face.",
+        "alternative": "{B} walks along a line of stepping stones that {A} laid out in advance, instead of searching for footholds in the river."
+      },
+      "bildSzene": "packed bag, bottle and watch in a row",
+      "bildSzeneAlt": "stepping stones laid out in advance",
+      "quellen": [
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge-klausurtag",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-357",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Ein Bundesgesetz regelt das Verfahren der Landesbehörden. Braucht es die Zustimmung des Bundesrates?",
+      "optionen": [
+        "Nur wenn der Bund die Abweichung der Länder ausschließt",
+        "Immer – Landesverwaltungsverfahren ist stets zustimmungspflichtig",
+        "Nie – das Verfahren der Landesbehörden regeln nur die Länder"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 84 Abs. 1 GG",
+        "Art. 104a Abs. 4 GG",
+        "Themenpool: staat-357"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-357",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur bei Ausschluss der Abweichung – Art. 84 Abs. 1 S. 5, 6 GG",
+      "text": "Bei Landeseigenverwaltung regeln die Länder Behörden und Verfahren grundsätzlich selbst. Regelt der Bund, dürfen die Länder abweichen (Art. 84 Abs. 1 S. 2 GG). Schließt er die Abweichung wegen eines besonderen Bedürfnisses nach Bundeseinheitlichkeit aus, braucht das Gesetz die Zustimmung (S. 5, 6). Andere Fälle wie Art. 104a Abs. 4 GG bleiben möglich.",
+      "norm": "Art. 84 Abs. 1 GG",
+      "quellen": [
+        "Art. 84 Abs. 1 GG",
+        "Art. 104a Abs. 4 GG",
+        "Themenpool: staat-357"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.186Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur wenn der Bund die Abweichung der Länder ausschließt",
+        "Immer – Landesverwaltungsverfahren ist stets zustimmungspflichtig",
+        "Nie – das Verfahren der Landesbehörden regeln nur die Länder"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-244",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 840 BGB: Nach außen haften alle – nach innen nicht immer zu gleichen Teilen",
+      "text": "Sind mehrere für denselben Schaden aus unerlaubter Handlung verantwortlich, haften sie als Gesamtschuldner (§ 840 Abs. 1 BGB). Intern gilt § 426 BGB, verteilt nach Verursachungs- und Verschuldensanteilen. Sonderregel: Neben dem Geschäftsherrn (§ 831) oder Aufsichtspflichtigen (§ 832) trägt der andere Verantwortliche den Schaden intern allein (§ 840 Abs. 2 BGB).",
+      "norm": "§ 840 BGB",
+      "quellen": [
+        "§ 840 BGB",
+        "§ 426 BGB",
+        "§§ 831, 832 BGB",
+        "Themenpool: delikt-244"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-891",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Offensichtlich engere Verbindung",
+      "text": "Ausweichklausel des Art. 4 Abs. 3 Rom II-VO: Hat die unerlaubte Handlung nach der Gesamtheit der Umstände eine offensichtlich engere Verbindung zu einem anderen Staat, gilt dessen Recht – etwa wegen eines bestehenden Vertrags zwischen den Parteien. Funktion: Korrektur von Abs. 1 und 2 im Ausnahmefall. Vorrang hat eine Rechtswahl (Art. 14 Rom II-VO).",
+      "norm": "Art. 4 Abs. 3 Rom II-VO",
+      "quellen": [
+        "Art. 4 Rom II-VO",
+        "Art. 14 Rom II-VO",
+        "Themenpool: ipr-891"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-926",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "TKÜ: Reicht der Verdacht irgendeiner schweren Straftat?",
+      "falsch": "Besteht der Verdacht einer schweren Straftat, darf das Telefon überwacht werden – welche Tat es ist, spielt keine Rolle.",
+      "richtigText": "§ 100a StPO verlangt den auf bestimmte Tatsachen gestützten Verdacht einer Katalogtat aus Abs. 2, die auch im Einzelfall schwer wiegt; die Erforschung muss auf andere Weise wesentlich erschwert oder aussichtslos sein. Anordnen darf grundsätzlich das Gericht, bei Gefahr im Verzug die StA mit Bestätigung binnen drei Werktagen (§ 100e Abs. 1 StPO).",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100e StPO",
+        "Art. 10 GG",
+        "Themenpool: stpo-926"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-593",
+      "ueberzeile": "Klausurtipp Staatsrecht",
+      "titel": "Konkurrierende Gesetzgebung: Die Erforderlichkeit prüfst du nicht bei jeder Nummer",
+      "text": "Hat der Bund nach Art. 74 GG die konkurrierende Kompetenz, prüfst du Art. 72 Abs. 2 GG nur für die dort genannten Materien, etwa das Recht der Wirtschaft (Art. 74 Abs. 1 Nr. 11 GG). Für die übrigen Nummern braucht der Bund keine Erforderlichkeit. Denk außerdem an das Abweichungsrecht der Länder nach Art. 72 Abs. 3 GG.",
+      "quellen": [
+        "Art. 72 GG",
+        "Art. 74 GG",
+        "Art. 20 Abs. 1 GG",
+        "Themenpool: staat-593"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:11.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

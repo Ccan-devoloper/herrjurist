@@ -1,0 +1,51 @@
+name: Vorproduktion · Jahresplan providerfrei
+
+# Lässt den Planer die Themen für einen Zeitraum nach Rotations-, Sperr- und
+# Viral-Vorrang-Regeln wählen und gibt nur den kompakten Plan ins Log aus.
+# Schreibt nichts in den Asset-Zweig; eigene Sperrgruppe, damit kein
+# wartender Live-Lauf verdrängt wird.
+on:
+  push:
+    branches: [main, "claude/**"]
+    paths:
+      - "vorproduktion/jahresplan.trigger"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vorproduktion-jahresplan
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      IG_NO_PUSH: "true"
+      IG_BILD_KI: "false"
+      IG_CHARAKTERE: "false"
+      OPENAI_API_KEY: ""
+      ANTHROPIC_API_KEY: ""
+      ELEVENLABS_API_KEY: ""
+      PEXELS_API_KEY: ""
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Abhängigkeiten
+        run: npm ci
+      - name: Plan erzeugen und ausgeben
+        run: |
+          TAGE=$(node -e '
+            const t=JSON.parse(require("fs").readFileSync("vorproduktion/jahresplan.trigger","utf8"));
+            const out=[];for(let d=new Date(t.von+"T12:00Z");d<=new Date(t.bis+"T12:00Z");d.setUTCDate(d.getUTCDate()+1))out.push(d.toISOString().slice(0,10));
+            console.log(out.join(" "))')
+          node bin/vorproduktion-vorbereiten.mjs $TAGE > /dev/null
+          node bin/vorproduktion-jahresplan.mjs $TAGE

@@ -1,0 +1,849 @@
+{
+  "datum": "2026-12-26",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-904",
+        "themaTitel": "Normenketten bilden statt Einzelnormen lernen",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "sachen-126",
+        "themaTitel": "Wie prüft man die Sicherungsübereignung?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-6",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:18",
+        "art": "frage",
+        "themaId": "stpo-768"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:18",
+        "art": "antwort",
+        "themaId": "stpo-768"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:04",
+        "art": "norm",
+        "themaId": "zpo-551"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "begriff",
+        "themaId": "bgbat-434"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "fehler",
+        "themaId": "assessoroer-850"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "tipp",
+        "themaId": "sachen-229"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-904",
+      "poolTitel": "Normenketten bilden statt Einzelnormen lernen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2026-12-22"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "sachen-126",
+      "poolTitel": "Wie prüft man die Sicherungsübereignung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 868 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-6",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-31"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-768",
+      "poolTitel": "Vernehmung und verbotene Methoden",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-10-22",
+        "2026-10-22"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-768",
+      "poolTitel": "Vernehmung und verbotene Methoden",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-10-22",
+        "2026-10-22"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-551",
+      "poolTitel": "Streitgegenstand im Zivilprozess",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 253, 308 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-10-28"
+      ]
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "bgbat-434",
+      "poolTitel": "Insichgeschäft und Mehrvertretung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 181 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "assessoroer-850",
+      "poolTitel": "Wie läuft die Verwaltungsvollstreckung in der Behördenklausur?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwVG; Landesrecht"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "sachen-229",
+      "poolTitel": "Wer ist Störer im Sinne des § 1004 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1004 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-16"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-904",
+      "slug": "2026-12-26-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wer nur § 212 StGB zitiert, hat den Versuch nicht begründet",
+          "titelZeilen": [
+            "Wer nur § 212 StGB",
+            "zitiert, hat den",
+            "Versuch nicht",
+            "begründet"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "§§ 212, 22, 23 Abs. 1 StGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Im Obersatz steht: „A könnte sich nach § 212 StGB strafbar gemacht haben.“ Doch A hat nur versucht zu töten. § 212 StGB allein trägt das nicht – Versuch und Strafbarkeit ergeben sich erst aus einer Kette von Normen."
+        },
+        {
+          "art": "schritte",
+          "titel": "So baust du die Kette",
+          "schritte": [
+            {
+              "titel": "1. Mit dem Delikt beginnen",
+              "text": "§ 212 Abs. 1 StGB liefert den Tatbestand, den A verwirklichen wollte."
+            },
+            {
+              "titel": "2. Die Erweiterung anhängen",
+              "text": "§ 22 StGB definiert den Versuch: unmittelbares Ansetzen nach der Vorstellung des Täters."
+            },
+            {
+              "titel": "3. Die Strafbarkeit sichern",
+              "text": "§ 23 Abs. 1 StGB: Der Versuch eines Verbrechens ist stets strafbar. Dass § 212 StGB ein Verbrechen ist, folgt aus § 12 Abs. 1 StGB."
+            },
+            {
+              "titel": "4. Die Folgen im Blick",
+              "text": "Milderung nach § 23 Abs. 2, § 49 Abs. 1 StGB möglich – und Rücktritt nach § 24 StGB prüfen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Dieselbe Technik im Öffentlichen Recht",
+          "punkte": [
+            "Klageart: § 42 Abs. 1 Alt. 1 VwGO",
+            "Begründetheit: § 113 Abs. 1 S. 1 VwGO",
+            "Anhörung: § 28 Abs. 1 VwVfG – Heilung: § 45 Abs. 1 Nr. 3 VwVfG"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Zwischen den Jahren",
+          "text": "Die Tage bis Silvester eignen sich gut, um Ketten zu wiederholen: vorne auf die Karteikarte der Fall in einem Satz, hinten die Normen in Zitierreihenfolge. Eine Kette sitzt, wenn du sie ohne Gesetz aufsagen kannst."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Delikt, Erweiterung, Strafbarkeit, Folgen: Im Obersatz steht die ganze Kette – „§§ 212 Abs. 1, 22, 23 Abs. 1 StGB“."
+        },
+        {
+          "art": "cta",
+          "titel": "Normenkette in vier Gliedern",
+          "punkte": [
+            "Tatbestand oder Anspruchsnorm",
+            "Erweiterung oder Verweis",
+            "Strafbarkeit oder Voraussetzung",
+            "Rechtsfolge"
+          ],
+          "icons": [
+            "paragraf",
+            "kreislauf",
+            "haken",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Wer beim Versuch nur § 212 StGB zitiert, hat die Strafbarkeit nicht begründet. Die Kette lautet §§ 212 Abs. 1, 22, 23 Abs. 1 StGB – und dass der Versuch strafbar ist, trägt § 23 Abs. 1 StGB in Verbindung mit § 12 Abs. 1 StGB. Dieselbe Technik hilft im Öffentlichen Recht von der Klageart bis zur Heilung. Zwischen den Jahren: eine Kette pro Tag auf eine Karteikarte. Speichern für die nächste Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#klausurtechnik",
+        "#strafrecht",
+        "#normenkette",
+        "#lernplan",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Normenketten statt Einzelnormen",
+      "coverText": "§§ 212, 22, 23 Abs. 1 StGB",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Eine Norm allein trägt die Lösung oft nicht – erst die verbundene Kette.",
+        "handlung": "{A} links four glowing chain rings together with his pointer, while {B} tries to lift a heavy lantern with just a single loose ring and it slips.",
+        "hinweisRegie": "Place the note in the free space beside the completed four-ring chain, slightly tilted toward it, without covering {B}'s slipping ring or the lantern.",
+        "alternative": "{B} builds a small bridge of four planks across a gap while {A} points to the gap left if one plank were missing."
+      },
+      "bildSzene": "four chain rings linked, single ring slips",
+      "bildSzeneAlt": "four-plank bridge across small gap",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 22 StGB",
+        "§ 23 StGB",
+        "§ 12 StGB",
+        "§ 24 StGB",
+        "§ 49 StGB",
+        "§ 42 VwGO",
+        "§ 113 VwGO",
+        "§§ 28, 45 VwVfG",
+        "Themenpool: methodik-904"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "normenkette-statt-einzelnorm",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.996Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-126",
+      "slug": "2026-12-26-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Warenlager als Sicherheit: vier Prüfpunkte",
+          "titelZeilen": [
+            "Warenlager als",
+            "Sicherheit:",
+            "vier Prüfpunkte"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Raumsicherung statt Wertangabe",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Grundmodell",
+          "text": "Bank B lässt sich das Warenlager ihres Kreditnehmers K übereignen. K soll die Waren behalten und weiterverkaufen dürfen. Das Werkzeug: §§ 929 S. 1, 930 BGB – Einigung plus Besitzkonstitut statt Übergabe."
+        },
+        {
+          "art": "text",
+          "titel": "1. Einigung und Bestimmtheit",
+          "punkte": [
+            "Jede einzelne Sache muss bestimmt sein – ein Dritter muss sie anhand der Abrede erkennen können.",
+            "Beim Lager: Raumsicherung („alle Waren in Halle 3“) oder Markierung.",
+            "Zu unbestimmt: „Waren im Wert von 50.000 Euro“."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "2. Besitzkonstitut",
+          "punkte": [
+            "Ein konkretes Besitzmittlungsverhältnis nach § 868 BGB.",
+            "Die Sicherungsabrede genügt dafür nach h.M.",
+            "K bleibt unmittelbarer, B wird mittelbarer Besitzer."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "3. Berechtigung und 4. Wirksamkeit",
+          "punkte": [
+            "Vorbehaltsware: B erwirbt zunächst nur das Anwartschaftsrecht des K.",
+            "Gutgläubig nach § 933 BGB erst, wenn die Sache übergeben wird.",
+            "Anfängliche krasse Übersicherung: Nichtigkeit nach § 138 BGB möglich.",
+            "Nachträgliche Übersicherung: Freigabeanspruch statt Nichtigkeit (BGH)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bestimmt einigen, konkretes Besitzmittlungsverhältnis, Berechtigung prüfen – und bei § 930 BGB den § 933 BGB mitdenken."
+        },
+        {
+          "art": "cta",
+          "titel": "Sicherungsübereignung in vier Zügen",
+          "punkte": [
+            "Einigung: Sachen bestimmt?",
+            "Besitzkonstitut nach § 868 BGB",
+            "K berechtigt – sonst § 933 BGB",
+            "Übersicherung prüfen"
+          ],
+          "icons": [
+            "vertrag",
+            "schluessel",
+            "person",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Warenlager als Kreditsicherheit: Die Sicherungsübereignung läuft über §§ 929 S. 1, 930 BGB. Vier Prüfpunkte: Einigung über bestimmte Sachen (Raumsicherung oder Markierung), ein konkretes Besitzmittlungsverhältnis nach § 868 BGB, die Berechtigung des Sicherungsgebers – bei Vorbehaltsware zunächst nur das Anwartschaftsrecht – und die Wirksamkeit, etwa bei Übersicherung. Speichern für die nächste Kreditsicherungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#sicherungsübereignung",
+        "#930bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sicherungsübereignung: vier Prüfpunkte",
+      "coverText": "Raumsicherung statt Wertangabe",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Wer ein ganzes Lager als Sicherheit übereignet, muss genau sagen, welche Sachen gemeint sind.",
+        "handlung": "{A} stands inside a storage hall full of crystal crates, while {B} hovers at the entrance and draws a clear glowing line around exactly one section of the hall.",
+        "hinweisRegie": "Place the note in the free space just inside the glowing line, slightly tilted toward the marked section, without covering {A} or the crates outside the line.",
+        "alternative": "{B} sticks small tags on selected crates while {A} keeps working with them in the same hall."
+      },
+      "bildSzene": "glowing line marks section of hall",
+      "bildSzeneAlt": "tags on selected crates in hall",
+      "quellen": [
+        "§ 929 S. 1 BGB",
+        "§ 930 BGB",
+        "§ 868 BGB",
+        "§ 933 BGB",
+        "§ 138 BGB",
+        "Themenpool: sachen-126"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.997Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-6",
+      "slug": "2026-12-26-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zwei freie Tage sind kein Rückstand",
+          "unter": "Kopfsache · Feiertage",
+          "text": "Geplante Pausen gehören zum Lernplan – schlechtes Gewissen nicht.",
+          "norm": null,
+          "icon": "kalender",
+          "sprecher": "Zwei freie Feiertage werfen dich nicht zurück. Eher schadet es, halb zu lernen und sich dabei ganz schlecht zu fühlen. So planst du die Tage zwischen den Jahren.",
+          "marken": [
+            "frei ist frei",
+            "zwischen den Jahren"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Freie Tage festlegen",
+          "text": "Vorher entscheiden, welche Tage frei sind – dann wirklich frei.",
+          "norm": null,
+          "sprecher": "Schritt eins: Leg vorher fest, welche Tage frei sind. Und dann sind sie wirklich frei, ohne Skript auf dem Sofa. Eine bewusste Pause ist Teil des Plans, kein Versagen.",
+          "marken": [
+            "bewusst frei"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Minimalplan statt Vollprogramm",
+          "text": "An Lerntagen: wiederholen statt neuen Stoff anfangen.",
+          "norm": null,
+          "sprecher": "Schritt zwei: ein Minimalplan für die Lerntage. Zwischen den Jahren musst du kein neues Rechtsgebiet anfangen. Wiederhole lieber, was du schon kennst: Schemata, Definitionen, Karteikarten.",
+          "marken": [
+            "wiederholen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Aktiv abfragen",
+          "text": "Selbsttest statt Durchlesen.",
+          "norm": null,
+          "sprecher": "Schritt drei: aktiv abfragen. Deck die Lösung ab und sag das Schema auf, bevor du nachschaust. Was stockt, kommt auf eine kurze Liste.",
+          "marken": [
+            "Selbsttest"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Januar vorbereiten",
+          "text": "Drei Prioritäten für die ersten Wochen notieren.",
+          "norm": null,
+          "sprecher": "Schritt vier: der Blick nach vorn. Schreib dir drei Prioritäten für den Januar auf, etwa die Gebiete, die am meisten wackeln. Dann startest du nicht bei null, sondern mit einem Plan.",
+          "marken": [
+            "drei Prioritäten"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Vergleiche auslassen",
+          "text": "Fremde Lernstunden sagen nichts über deinen Stand.",
+          "norm": null,
+          "sprecher": "Und wenn andere von ihren Lernstunden an den Feiertagen erzählen: Fremde Stundenzahlen sagen nichts über deinen Stand. Entscheidend ist, was du im Examen abrufen kannst.",
+          "marken": [
+            "dein Tempo"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Geplante Pause, kleiner Plan, klare Prioritäten.",
+          "norm": null,
+          "sprecher": "Merke: geplante Pause, kleiner Plan, klare Prioritäten fürs neue Jahr.",
+          "marken": [
+            "Pause · Plan · Fokus"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Heute drei Prioritäten notieren",
+          "text": "Speichern und die Liste für Januar schreiben.",
+          "norm": null,
+          "sprecher": "Speicher dir das Reel und schreib heute noch deine drei Prioritäten für Januar auf.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Zwei freie Feiertage sind kein Rückstand. Eher schadet es, halb zu lernen und sich dabei schlecht zu fühlen. Deshalb: freie Tage vorher festlegen, an Lerntagen wiederholen statt Neues anfangen, aktiv abfragen und drei Prioritäten für Januar notieren. Fremde Lernstunden sagen nichts über deinen Stand. Speichern für die Tage zwischen den Jahren.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#lernplan",
+        "#zwischendenjahren",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Feiertage: Pause ohne Rückstand",
+      "titelZeilen": [
+        "Zwei freie Tage",
+        "sind kein",
+        "Rückstand"
+      ],
+      "coverText": "Pause, Plan, Prioritäten",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Eine bewusst geplante Pause ist Teil des Weges und kein Zurückfallen.",
+        "handlung": "{A} sits relaxed at a small campfire beside a trail marker, while {B} checks a simple map showing the trail continuing clearly beyond the resting spot.",
+        "hinweisRegie": "Place the note in the free space above the trail marker, slightly tilted toward the continuing path, without covering the campfire or {B}'s map.",
+        "alternative": "{B} dims a small lantern at a tent entrance while {A} lays out three stones for the next day's route."
+      },
+      "bildSzene": "resting by campfire at trail marker",
+      "bildSzeneAlt": "three stones laid for next route",
+      "quellen": [
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verbreitete-annahme",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.998Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-768",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Der Vernehmer lügt: „Ihr Komplize hat schon gestanden.“ B gesteht daraufhin. Ist das Geständnis verwertbar?",
+      "optionen": [
+        "Nein – bewusste Täuschung über Tatsachen ist verboten (§ 136a)",
+        "Ja – kriminalistische List ist in der Vernehmung stets erlaubt",
+        "Ja – die vorherige Belehrung nach § 136 StPO heilt den Verstoß"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 136a StPO",
+        "Themenpool: stpo-768"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.998Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-768",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die bewusste Lüge über die Beweislage ist verbotene Täuschung",
+      "text": "§ 136a Abs. 1 S. 1 StPO verbietet die Täuschung. Erfasst ist jedenfalls die bewusste Lüge über Tatsachen, etwa über ein angebliches Geständnis oder Beweise. Erlaubt bleibt kriminalistische List wie Fangfragen oder das Verschweigen des Ermittlungsstands; die Grenze ist im Einzelfall schwierig. Folge hier: unverwertbar (§ 136a Abs. 3 S. 2 StPO).",
+      "norm": "§ 136a Abs. 1, 3 StPO",
+      "quellen": [
+        "§ 136a StPO",
+        "Themenpool: stpo-768"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.998Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – bewusste Täuschung über Tatsachen ist verboten (§ 136a)",
+        "Ja – kriminalistische List ist in der Vernehmung stets erlaubt",
+        "Ja – die vorherige Belehrung nach § 136 StPO heilt den Verstoß"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-551",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 308 Abs. 1 ZPO: Nicht mehr zusprechen als beantragt",
+      "text": "Das Gericht ist an die Anträge gebunden: Es darf nicht mehr und nichts anderes zusprechen, als beantragt ist – auch nicht bei Zinsen und anderen Nebenforderungen (§ 308 Abs. 1 ZPO). Ein Weniger ist erlaubt. Deshalb verlangt § 253 Abs. 2 Nr. 2 ZPO einen bestimmten Antrag. Über die Kosten entscheidet das Gericht dagegen von Amts wegen (§ 308 Abs. 2 ZPO).",
+      "norm": "§ 308 ZPO · § 253 Abs. 2 Nr. 2 ZPO",
+      "quellen": [
+        "§ 253 ZPO",
+        "§ 308 ZPO",
+        "Themenpool: zpo-551"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.998Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-434",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Insichgeschäft: Der Vertreter steht auf beiden Seiten",
+      "text": "§ 181 BGB erfasst das Selbstkontrahieren (Vertreter schließt mit sich selbst) und die Mehrvertretung (er vertritt beide Seiten). Zulässig ist das, wenn es gestattet ist oder nur eine Verbindlichkeit erfüllt. Bei lediglich rechtlich vorteilhaften Geschäften reduziert die Rspr. § 181 BGB teleologisch. Sonst: schwebend unwirksam, §§ 177 ff. BGB analog.",
+      "norm": "§ 181 BGB",
+      "quellen": [
+        "§ 181 BGB",
+        "§ 177 BGB",
+        "Themenpool: bgbat-434"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.998Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-850",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Behördenklausur: Zwangsgeld gleich im Grundbescheid festsetzen?",
+      "falsch": "Im Grundbescheid wird das Zwangsgeld für den Fall der Nichtbefolgung gleich festgesetzt.",
+      "richtigText": "Im gestreckten Verfahren gilt eine Stufenfolge: vollstreckbarer Grundverwaltungsakt, Androhung mit angemessener Frist, Festsetzung, Anwendung (Bund: §§ 6, 13, 14, 15 VwVG). Die Androhung kann mit dem Grundbescheid verbunden werden; festgesetzt wird erst nach fruchtlosem Fristablauf. Die Einzelheiten regelt je nach Behörde Bundes- oder Landesrecht.",
+      "quellen": [
+        "§§ 6, 13, 14, 15 VwVG",
+        "Verwaltungsvollstreckungsgesetze der Länder",
+        "Themenpool: assessoroer-850"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.998Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-229",
+      "ueberzeile": "Klausurtipp Sachenrecht",
+      "titel": "Störer nach § 1004 BGB: Auch wer die Störung durch Dritte ermöglicht",
+      "text": "Neben dem, der selbst stört, kommt als mittelbarer Handlungsstörer in Betracht, wer die Störung durch einen Dritten adäquat verursacht hat und sie rechtlich und tatsächlich verhindern kann – etwa der Vermieter, der die störende Nutzung durch seinen Mieter hinnimmt. Prüfe daher zweistufig: Wer stört unmittelbar? Wer hat es veranlasst und könnte es abstellen?",
+      "quellen": [
+        "§ 1004 BGB",
+        "Themenpool: sachen-229"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.998Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

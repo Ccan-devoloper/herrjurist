@@ -1,0 +1,867 @@
+{
+  "datum": "2026-10-30",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "assessoroer-853",
+        "themaTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-556",
+        "themaTitel": "Widerklage",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-069",
+        "themaTitel": "Wann liegt Heimtücke vor?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "strafbt-763"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "strafbt-763"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "verwbt-115"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "merksatz",
+        "themaId": "verwalt-384"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "begriff",
+        "themaId": "revision-885"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "fehler",
+        "themaId": "strafat-921"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "assessoroer-853",
+      "poolTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-556",
+      "poolTitel": "Widerklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 33, 263 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-069",
+      "poolTitel": "Wann liegt Heimtücke vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 Abs. 2 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-763",
+      "poolTitel": "Widerstand/Vollstreckungsdelikte im Überblick",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 113 ff. StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-763",
+      "poolTitel": "Widerstand/Vollstreckungsdelikte im Überblick",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 113 ff. StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-115",
+      "poolTitel": "Was ist der Unterschied zwischen Gefahr, Anscheinsgefahr und Gefahrenverdacht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "verwalt-384",
+      "poolTitel": "Was ist eine Ermessensreduzierung auf null?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "revision-885",
+      "poolTitel": "Wann beruht ein Urteil auf dem Verfahrensfehler?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 338 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "strafat-921",
+      "poolTitel": "Irrtum über den Kausalverlauf: Wann ist die Abweichung unwesentlich?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 Abs. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-853",
+      "slug": "2026-10-30-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Klageschrift: Beklagter ist Pflicht, der Antrag nur Soll",
+          "titelZeilen": [
+            "Klageschrift:",
+            "Beklagter ist",
+            "Pflicht, der Antrag",
+            "nur Soll"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "§ 82 VwGO: Muss und Soll",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Rechtsanwältin R vertritt M. Die Stadt S hat gegen M einen Gebührenbescheid erlassen, sein Widerspruch blieb erfolglos. R soll Klage zum Verwaltungsgericht erheben. Was muss die Klageschrift enthalten – und was sollte sie nur enthalten?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Muss oder Soll? (§ 82 Abs. 1 VwGO)",
+          "links": {
+            "titel": "Muss-Inhalt",
+            "punkte": [
+              "Kläger",
+              "Beklagter",
+              "Gegenstand des Klagebegehrens"
+            ]
+          },
+          "rechts": {
+            "titel": "Soll-Inhalt",
+            "punkte": [
+              "Bestimmter Antrag",
+              "Begründende Tatsachen und Beweismittel",
+              "Bescheid und Widerspruchsbescheid in Abschrift"
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Form",
+              "text": "Schriftlich beim Gericht (§ 81 VwGO). Als Rechtsanwältin muss R elektronisch einreichen (§ 55d VwGO)."
+            },
+            {
+              "titel": "Frist",
+              "text": "Ein Monat nach Zustellung des Widerspruchsbescheids (§ 74 Abs. 1 VwGO)."
+            },
+            {
+              "titel": "Beklagter",
+              "text": "Grundsätzlich der Rechtsträger, hier die Stadt S; die Angabe der Behörde genügt (§ 78 VwGO). Je nach Landesrecht die Behörde selbst."
+            },
+            {
+              "titel": "Fehlt etwas?",
+              "text": "Das Gericht fordert zur Ergänzung auf; fehlt ein Muss-Teil, kann es eine Ausschlussfrist setzen (§ 82 Abs. 2 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Muss: M als Kläger, die Stadt S als Beklagte, der Gebührenbescheid als Gegenstand. Soll: der Antrag, „den Bescheid vom … in Gestalt des Widerspruchsbescheids vom … aufzuheben“, dazu Begründung und Abschriften. Einreichung elektronisch, binnen eines Monats."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kläger, Beklagter, Gegenstand müssen hinein – der Antrag soll. Fehlt ein Muss-Teil, droht eine Ausschlussfrist nach § 82 Abs. 2 VwGO."
+        },
+        {
+          "art": "cta",
+          "titel": "Klageschrift-Check",
+          "punkte": [
+            "Muss-Inhalt vollständig?",
+            "Antrag bestimmt formuliert?",
+            "Elektronisch und fristgerecht?",
+            "Richtiger Beklagter?"
+          ],
+          "icons": [
+            "klemmbrett",
+            "dokument",
+            "laptop",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "In der Klageschrift ist der Beklagte Pflicht, der Antrag nur Soll. § 82 Abs. 1 VwGO trennt: Kläger, Beklagter und Gegenstand des Klagebegehrens muss die Klage bezeichnen, der bestimmte Antrag, Tatsachen und Beweismittel sind nur Soll-Inhalt. Dazu kommen Form, Frist und der richtige Beklagte nach § 78 VwGO. Speichern für die nächste Anwaltsklausur im Öffentlichen Recht.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klageschrift",
+        "#anwaltsklausur",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Klageschrift im Verwaltungsprozess",
+      "coverText": "§ 82 VwGO: Muss und Soll",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Kläger, Beklagter und Gegenstand muss die Klage nennen – der Antrag ist nur ein Soll.",
+        "handlung": "{A} hovers over an open case with three filled compartments and checks them one by one, while {B} curiously holds up a fourth, optional item that could still be added later.",
+        "hinweisRegie": "Place the note in the free space next to the three filled compartments, slightly tilted toward them, without covering the optional item in {B}'s raised hand.",
+        "alternative": "{B} packs a travel bag with three essential items, while {A} hovers above it holding a fourth item, ready to drop it in later."
+      },
+      "bildSzene": "three filled compartments, optional fourth item",
+      "bildSzeneAlt": "three essentials packed, fourth held ready",
+      "quellen": [
+        "§ 55d VwGO",
+        "§ 74 VwGO",
+        "§ 78 VwGO",
+        "§ 79 VwGO",
+        "§ 81 VwGO",
+        "§ 82 VwGO",
+        "Themenpool: assessoroer-853"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "muss-soll-kontrast",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.050Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-556",
+      "slug": "2026-10-30-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Widerklage: Für die Zuständigkeit wird nicht addiert",
+          "titelZeilen": [
+            "Widerklage:",
+            "Für die Zuständig-",
+            "keit wird nicht",
+            "addiert"
+          ],
+          "coverBadge": "Fehlerfalle",
+          "coverText": "§ 5 ZPO: keine Addition",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K verklagt B vor dem Amtsgericht auf Kaufpreiszahlung. B erhebt Widerklage auf Schadensersatz aus demselben Kaufvertrag. Deren Streitwert liegt für sich genommen über der Zuständigkeitsgrenze des Amtsgerichts. Bleibt das Amtsgericht zuständig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Keine Addition",
+              "text": "Für die sachliche Zuständigkeit werden Klage und Widerklage nicht zusammengerechnet (§ 5 Hs. 2 ZPO)."
+            },
+            {
+              "titel": "Widerklage über der Grenze",
+              "text": "Dafür ist das Amtsgericht nicht zuständig – außer B verhandelt nach Belehrung rügelos (§§ 39, 504 ZPO)."
+            },
+            {
+              "titel": "Verweisung",
+              "text": "Beantragt eine Partei es vor weiterer Verhandlung zur Hauptsache, verweist das AG den ganzen Rechtsstreit ans LG (§ 506 ZPO)."
+            },
+            {
+              "titel": "Besondere Voraussetzungen",
+              "text": "Rechtshängige Klage, Parteiidentität, gleiche Prozessart – und der Zusammenhang nach § 33 ZPO (str.)."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Streit: Was regelt § 33 ZPO?",
+          "links": {
+            "titel": "Rspr.",
+            "punkte": [
+              "Der Zusammenhang ist besondere Voraussetzung der Zulässigkeit.",
+              "Fehlt er, ist die Widerklage grundsätzlich unzulässig."
+            ]
+          },
+          "rechts": {
+            "titel": "Herrschende Lehre",
+            "punkte": [
+              "§ 33 ZPO begründet nur einen besonderen Gerichtsstand.",
+              "Ist das Gericht ohnehin zuständig, braucht es keinen Zusammenhang."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Werte von Klage und Widerklage werden addiert, und das Amtsgericht ist gedanklich schon raus. Für die Zuständigkeit gilt aber § 5 Hs. 2 ZPO. Addiert wird bei den Gerichtsgebühren – und auch dort nicht, wenn beide denselben Gegenstand betreffen (§ 45 Abs. 1 GKG)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zuständigkeit: jede Klage für sich (§ 5 Hs. 2 ZPO). Übersteigt die Widerklage die Grenze des Amtsgerichts: Verweisung auf Antrag nach § 506 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Widerklage prüfen",
+          "punkte": [
+            "Werte getrennt betrachten",
+            "Zuständigkeit für die Widerklage klären",
+            "Antrag nach § 506 ZPO?",
+            "Konnexität: Streit kennen"
+          ],
+          "icons": [
+            "rechner",
+            "gericht",
+            "dokument",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Widerklage vor dem Amtsgericht: Für die Zuständigkeit wird nicht addiert. Nach § 5 Hs. 2 ZPO zählen Klage und Widerklage jeweils für sich. Übersteigt die Widerklage allein die Grenze, verweist das Amtsgericht auf Antrag den ganzen Rechtsstreit an das Landgericht (§ 506 ZPO). Und ob der Zusammenhang nach § 33 ZPO Zulässigkeitsvoraussetzung ist, bleibt umstritten. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#widerklage",
+        "#zivilprozessrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerklage: Zuständigkeit und Konnexität",
+      "coverText": "§ 5 ZPO: keine Addition",
+      "coverBadge": "Fehlerfalle",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Für die Zuständigkeit zählen Klage und Widerklage jeweils für sich – ihre Werte werden nicht addiert.",
+        "handlung": "{A} nervously tries to stack two heavy weights onto one scale pan, while {B} calmly lifts one of them off and sets it on its own separate scale.",
+        "hinweisRegie": "Place the note in the free space between the two separate scales, slightly tilted toward the second one, without covering {A}'s hands or {B}'s lifting arm.",
+        "alternative": "{B} measures two boxes with two separate rulers, while {A} is just about to tape them together into one big box."
+      },
+      "bildSzene": "two weights on separate scales",
+      "bildSzeneAlt": "two boxes measured separately",
+      "quellen": [
+        "§ 5 ZPO",
+        "§ 33 ZPO",
+        "§ 39 ZPO",
+        "§ 504 ZPO",
+        "§ 506 ZPO",
+        "§ 45 Abs. 1 GKG",
+        "Themenpool: zpo-556"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "rechenregel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.051Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-069",
+      "slug": "2026-10-30-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Heimtücke im Schlaf: Das Opfer bleibt arglos",
+          "unter": "Mord · § 211 Abs. 2 StGB",
+          "text": "Der Schlafende nimmt seine Arglosigkeit mit in den Schlaf – der Bewusstlose hat keine.",
+          "norm": "§ 211 Abs. 2 StGB",
+          "icon": "warnung",
+          "sprecher": "Wer schläft, bleibt arglos. Wer bewusstlos ist, dagegen nicht. Klingt paradox, folgt aber direkt aus der Definition der Heimtücke. Hier sind die vier Prüfungsschritte.",
+          "marken": [
+            "schlafend ≠ bewusstlos"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Arglosigkeit",
+          "text": "Das Opfer versieht sich bei Beginn des ersten Angriffs mit Tötungsvorsatz keines Angriffs.",
+          "norm": "§ 211 Abs. 2 StGB",
+          "sprecher": "Schritt eins: Arglos ist, wer sich zu Beginn des ersten mit Tötungsvorsatz geführten Angriffs keines Angriffs versieht. Maßgeblich ist genau dieser Zeitpunkt.",
+          "marken": [
+            "erster Angriff"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Wehrlosigkeit",
+          "text": "Gerade wegen der Arglosigkeit ist die Verteidigung aufgehoben oder stark eingeschränkt.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Das Opfer ist wehrlos, und zwar gerade infolge seiner Arglosigkeit. Seine Fähigkeit, sich zu verteidigen, ist aufgehoben oder stark eingeschränkt.",
+          "marken": [
+            "infolge Arglosigkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausnutzungsbewusstsein",
+          "text": "Der Täter erkennt die Lage und nutzt sie bewusst zur Tötung.",
+          "norm": null,
+          "sprecher": "Schritt drei: Der Täter muss die Arg- und Wehrlosigkeit erkennen und bewusst zur Tötung ausnutzen.",
+          "marken": [
+            "bewusst ausnutzen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Rspr.: feindliche Willensrichtung",
+          "text": "Fehlt etwa, wenn der Täter zum vermeintlich Besten des Opfers handelt.",
+          "norm": null,
+          "sprecher": "Schritt vier: Die Rechtsprechung verlangt zusätzlich eine feindliche Willensrichtung. Sie fehlt etwa, wenn der Täter glaubt, zum Besten des Opfers zu handeln.",
+          "marken": [
+            "feindlich?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zurück zum Paradox",
+          "text": "Arglosigkeit reicht in den Schlaf hinein; ohne Bewusstsein gibt es keinen Argwohn.",
+          "norm": null,
+          "sprecher": "Zurück zum Paradox: Wer einschläft, nimmt seine Arglosigkeit mit in den Schlaf. Wer bewusstlos ist, kann dagegen keinen Argwohn fassen, also auch nicht arglos sein. Bei Kleinkindern stellt die Rechtsprechung regelmäßig auf schutzbereite Dritte ab.",
+          "marken": [
+            "Arglosigkeit im Schlaf"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Arglos beim ersten Angriff, deshalb wehrlos, das bewusst ausgenutzt.",
+          "norm": "§ 211 Abs. 2 StGB",
+          "sprecher": "Merke: arglos beim ersten Angriff, deshalb wehrlos, und das bewusst ausgenutzt. Den Schlafenden erfasst die Heimtücke, den Bewusstlosen nicht.",
+          "marken": [
+            "arglos → wehrlos"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Heimtücke sauber prüfen",
+          "text": "Speichern für die nächste Mordprüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Mordprüfung im Strafrecht BT.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Heimtücke im Schlaf: Das Opfer bleibt arglos – der Bewusstlose dagegen nicht. Heimtückisch tötet, wer die Arg- und Wehrlosigkeit des Opfers bewusst zur Tötung ausnutzt; maßgeblich ist der Beginn des ersten mit Tötungsvorsatz geführten Angriffs. Der Schlafende nimmt seine Arglosigkeit mit in den Schlaf, der Bewusstlose kann gar nicht arglos sein. Die Rspr. verlangt zusätzlich eine feindliche Willensrichtung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#mord",
+        "#211stgb",
+        "#heimtücke",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Heimtücke: arglos, wehrlos, ausgenutzt",
+      "titelZeilen": [
+        "Heimtücke im Schlaf:",
+        "Das Opfer",
+        "bleibt arglos"
+      ],
+      "coverText": "Schlaf nimmt Arglosigkeit mit",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Wer einschläft, bleibt arglos – wer bewusstlos ist, kann gar nicht arglos sein.",
+        "handlung": "{B} dozes peacefully with an open, trusting smile beside an unlocked door, while {A} holds a lantern over him and glances sternly toward the door.",
+        "hinweisRegie": "Place the note in the free space between the sleeping figure and the unlocked door, slightly tilted toward the door, without covering {B}'s trusting smile or {A}'s lantern.",
+        "alternative": "{A} compares two resting figures on a bench, one peacefully asleep with a smile and one completely limp, and ties a small ribbon only to the sleeping one."
+      },
+      "bildSzene": "trusting sleeper beside unlocked door",
+      "bildSzeneAlt": "sleeper versus limp figure on bench",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-069"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.052Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-763",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "Polizist will A festnehmen, obwohl er weiß, dass kein Grund besteht. A stößt ihn weg. § 113 StGB?",
+      "optionen": [
+        "Strafbar – auf die Rechtmäßigkeit kommt es nicht an",
+        "Strafbar – A hätte dulden und sich später wehren müssen",
+        "Nicht nach § 113 StGB – die Diensthandlung ist nicht rechtmäßig"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 113 StGB",
+        "Themenpool: strafbt-763"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.052Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-763",
+      "ueberzeile": "Auflösung",
+      "titel": "Nicht nach § 113 StGB – die Festnahme ist nicht rechtmäßig",
+      "text": "Nach § 113 Abs. 3 StGB ist die Tat nicht strafbar, wenn die Diensthandlung nicht rechtmäßig ist. Nach h.M. gilt ein strafrechtlicher Rechtmäßigkeitsbegriff: Zuständigkeit, wesentliche Förmlichkeiten und pflichtgemäße Prüfung der Eingriffsvoraussetzungen. Eine bewusst grundlose Festnahme erfüllt das nicht. Irrtümer über die Rechtmäßigkeit regelt § 113 Abs. 4 StGB.",
+      "norm": "§ 113 Abs. 3, 4 StGB",
+      "quellen": [
+        "§ 113 StGB",
+        "Themenpool: strafbt-763"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.052Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Strafbar – auf die Rechtmäßigkeit kommt es nicht an",
+        "Strafbar – A hätte dulden und sich später wehren müssen",
+        "Nicht nach § 113 StGB – die Diensthandlung ist nicht rechtmäßig"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-115",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Generalklausel: Auch der Anschein einer Gefahr trägt die Maßnahme",
+      "text": "Konkrete Gefahr: Bei ungehindertem Ablauf droht mit hinreichender Wahrscheinlichkeit ein Schaden für die öffentliche Sicherheit oder Ordnung. Anscheinsgefahr: Bei verständiger Würdigung ex ante lag eine Gefahr vor – nach h.M. eine echte Gefahr. Gefahrenverdacht: Die Behörde erkennt ihre Unsicherheit, grundsätzlich nur Gefahrerforschung. Putativgefahr: keine Gefahr.",
+      "norm": "Polizei- und Ordnungsgesetze der Länder (Generalklausel)",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: verwbt-115"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.052Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-384",
+      "ueberzeile": "Merksatz Verwaltungsrecht AT",
+      "titel": "Ermessen auf null: Aus dem Ermessen wird ein Anspruch",
+      "text": "Ist nur eine Entscheidung ermessensfehlerfrei, muss die Behörde sie treffen – das Gericht verpflichtet dann, statt nur zur Neubescheidung.",
+      "norm": "§ 40 VwVfG · § 113 Abs. 5 VwGO",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: verwalt-384"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.052Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-885",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Absoluter Revisionsgrund: Das Beruhen wird unwiderleglich vermutet",
+      "text": "Bei den Verstößen des § 338 StPO fragt das Revisionsgericht nicht, ob das Urteil ohne den Fehler anders ausgefallen wäre. Beispiele: Gericht nicht vorschriftsmäßig besetzt (Nr. 1), Abwesenheit einer Person, deren Anwesenheit vorgeschrieben ist (Nr. 5), Öffentlichkeit verletzt (Nr. 6), Urteilsgründe fehlen oder kommen verspätet zu den Akten (Nr. 7). Sonst gilt § 337 StPO.",
+      "norm": "§ 338 StPO · § 337 StPO",
+      "quellen": [
+        "§ 337 StPO",
+        "§ 338 StPO",
+        "Themenpool: revision-885"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.052Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-921",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Anders gestorben als geplant: Entfällt der Vorsatz?",
+      "falsch": "Das Opfer ist auf anderem Weg gestorben als vorgestellt – also fehlt der Vorsatz, es bleibt beim Versuch.",
+      "richtigText": "Der Kausalverlauf ist Tatumstand im Sinne des § 16 Abs. 1 StGB, aber nur wesentliche Abweichungen schließen den Vorsatz aus. Unwesentlich ist sie, wenn sie sich im Rahmen des nach allgemeiner Lebenserfahrung Vorhersehbaren hält und keine andere Bewertung der Tat rechtfertigt. Klassiker: Das Opfer soll ertrinken, stirbt aber schon am Brückenpfeiler – Vorsatz bleibt.",
+      "quellen": [
+        "§ 16 Abs. 1 StGB",
+        "§ 15 StGB",
+        "Themenpool: strafat-921"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:55.052Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

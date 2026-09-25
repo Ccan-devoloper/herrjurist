@@ -1,0 +1,860 @@
+{
+  "datum": "2026-12-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "strafat-131",
+        "themaTitel": "Wie prüft man den rechtfertigenden Notstand?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "grundr-627",
+        "themaTitel": "Petitionsrecht",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bereich-218",
+        "themaTitel": "Wie funktioniert die Eingriffskondiktion?",
+        "fach": "bereich",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "strafat-133"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "strafat-133"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "schuld-185"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "streitstand",
+        "themaId": "strafbt-925"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:53",
+        "art": "merksatz",
+        "themaId": "schuld-187"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "begriff",
+        "themaId": "stpo-352"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "strafat-131",
+      "poolTitel": "Wie prüft man den rechtfertigenden Notstand?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 34 StGB",
+        "§ 228 BGB",
+        "§ 904 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "grundr-627",
+      "poolTitel": "Petitionsrecht",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 17 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24",
+        "2026-11-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bereich-218",
+      "poolTitel": "Wie funktioniert die Eingriffskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-133",
+      "poolTitel": "Wann ist der Versuch beendet und wann unbeendet?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-133",
+      "poolTitel": "Wann ist der Versuch beendet und wann unbeendet?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 1 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-185",
+      "poolTitel": "Wann führt eine Störung der Geschäftsgrundlage zur Anpassung, wann zur Auflösung?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 313 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "strafbt-925",
+      "poolTitel": "§§ 239a, 239b StGB im Zwei-Personen-Verhältnis: Wann trägt die Bemächtigungslage?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239a StGB",
+        "§ 239b StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-11"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuld-187",
+      "poolTitel": "Wann muss der Rücktrittsgegner Wertersatz leisten?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 346 Abs. 2 BGB",
+        "§ 346 Abs. 3 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "stpo-352",
+      "poolTitel": "Was ist der Unterschied zwischen Berufung und Revision?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 312 StPO",
+        "§ 333 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-131",
+      "slug": "2026-12-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Drei Notstände, drei Maßstäbe",
+          "titelZeilen": [
+            "Drei Notstände,",
+            "drei Maßstäbe"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Wer ist die Gefahrenquelle?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Welcher Notstand?",
+          "punkte": [
+            "Die Gefahr geht von der Sache aus, die beschädigt wird: § 228 BGB (Defensivnotstand).",
+            "Eine unbeteiligte fremde Sache wird zur Abwehr eingesetzt: § 904 BGB (Aggressivnotstand).",
+            "Alle übrigen Rechtsgüter und Eingriffe: § 34 StGB.",
+            "Die zivilrechtlichen Notstände gehen für Sachen als speziellere Regeln vor."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Der Maßstab bei Sachen",
+          "links": {
+            "titel": "§ 228 BGB",
+            "punkte": [
+              "Schaden darf nicht außer Verhältnis zur Gefahr stehen.",
+              "Großzügig: Die gefährliche Sache darf sogar mehr wert sein."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 904 BGB",
+            "punkte": [
+              "Drohender Schaden muss unverhältnismäßig groß sein.",
+              "Der Eigentümer erhält Schadensersatz (§ 904 S. 2 BGB)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "§ 34 StGB – das Schema",
+          "punkte": [
+            "Notstandslage: gegenwärtige, nicht anders abwendbare Gefahr für ein Rechtsgut",
+            "Erforderlich: geeignet und mildestes gleich wirksames Mittel",
+            "Interessenabwägung: das geschützte Interesse überwiegt wesentlich",
+            "Angemessenheit (§ 34 S. 2 StGB)",
+            "Subjektiv: Handeln zur Gefahrabwendung"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Grenze",
+          "text": "Leben gegen Leben lässt sich nicht abwägen – § 34 StGB rechtfertigt keine Tötung Unbeteiligter. In Betracht kommen dann nur Entschuldigungsgründe: § 35 StGB oder der übergesetzliche entschuldigende Notstand."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nicht außer Verhältnis (§ 228 BGB), unverhältnismäßig groß (§ 904 BGB), wesentlich überwiegend (§ 34 StGB) – drei Notstände, drei Maßstäbe."
+        },
+        {
+          "art": "cta",
+          "titel": "Notstand in drei Fragen",
+          "punkte": [
+            "Wovon geht die Gefahr aus?",
+            "Welcher Maßstab gilt?",
+            "Leben gegen Leben: nur Entschuldigung"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Drei Notstände, drei Maßstäbe: Beim Defensivnotstand (§ 228 BGB) darf der Schaden nicht außer Verhältnis zur Gefahr stehen, beim Aggressivnotstand (§ 904 BGB) muss der drohende Schaden unverhältnismäßig groß sein, und § 34 StGB verlangt ein wesentlich überwiegendes Interesse. Für Sachen gehen die BGB-Normen vor. Leben gegen Leben ist nicht abwägbar – dann bleiben nur Entschuldigungsgründe. Speichern als Spickzettel.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#notstand",
+        "#34stgb",
+        "#228bgb",
+        "#904bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Notstand: drei Normen, drei Maßstäbe",
+      "coverText": "Wer ist die Gefahrenquelle?",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Ob man eine fremde Sache opfern darf, hängt davon ab, ob die Gefahr von ihr ausgeht oder ob sie nur zur Rettung benutzt wird.",
+        "handlung": "{A} breaks a rolling cart that is about to crush a crystal, while {B} nervously borrows a neighbour's plank to block a second rolling cart; three different weights sit on a scale between them.",
+        "hinweisRegie": "Place the note in the free space above the scale with three weights, slightly tilted, so it connects both rescue actions to their different standards without covering hands.",
+        "alternative": "{B} sorts three weights onto three small scales of different sensitivity, while {A} points at the one that must tip clearly."
+      },
+      "bildSzene": "breaking dangerous cart versus borrowing plank",
+      "bildSzeneAlt": "three weights on three scales",
+      "quellen": [
+        "§ 34 StGB",
+        "§ 35 StGB",
+        "§ 228 BGB",
+        "§ 904 BGB",
+        "Themenpool: strafat-131"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-massstaebe",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.189Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-627",
+      "slug": "2026-12-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Petition statt Widerspruch? Die Monatsfrist läuft weiter",
+          "titelZeilen": [
+            "Petition statt",
+            "Widerspruch? Die",
+            "Monatsfrist läuft",
+            "weiter"
+          ],
+          "coverBadge": "Fehlerfalle",
+          "coverText": "Petition hemmt keine Frist",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Ausgangspunkt: Art. 17 GG",
+          "text": "Jeder hat das Recht, sich einzeln oder mit anderen schriftlich mit Bitten oder Beschwerden an die zuständigen Stellen und an die Volksvertretung zu wenden. Ein förmlicher Rechtsbehelf gegen einen Bescheid ist die Petition aber nicht."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Petition oder Widerspruch?",
+          "links": {
+            "titel": "Petition (Art. 17 GG)",
+            "punkte": [
+              "Schriftlich, sonst formlos; keine Frist.",
+              "Anspruch auf Entgegennahme, Prüfung und Bescheid.",
+              "Kein Anspruch auf ein bestimmtes Ergebnis."
+            ]
+          },
+          "rechts": {
+            "titel": "Widerspruch (§ 68 VwGO)",
+            "punkte": [
+              "Monatsfrist ab Bekanntgabe (§ 70 VwGO).",
+              "Grundsätzlich aufschiebende Wirkung (§ 80 I VwGO).",
+              "Voraussetzung der Klage – soweit nicht ausgeschlossen."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Was der Petitionsbescheid enthalten muss",
+          "text": "Nach dem BVerfG genügt es, wenn der Petent erfährt, dass seine Petition sachlich geprüft wurde und wie sie erledigt worden ist. Eine ausführliche Begründung verlangt Art. 17 GG nicht."
+        },
+        {
+          "art": "text",
+          "titel": "Rechtsschutz und Folgen",
+          "punkte": [
+            "Der Petitionsbescheid ist nach h.M. kein Verwaltungsakt.",
+            "Richtige Klage deshalb: allgemeine Leistungsklage auf ordnungsgemäße Bescheidung.",
+            "Die Petition hemmt keine Rechtsbehelfsfrist – der Bescheid kann bestandskräftig werden."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Petition ist ein Grundrecht, kein Rechtsbehelf: Sie sichert Prüfung und Bescheid – aber keine Frist und kein bestimmtes Ergebnis."
+        },
+        {
+          "art": "cta",
+          "titel": "Abgrenzung in drei Zügen",
+          "punkte": [
+            "Frist zuerst sichern",
+            "Petition zusätzlich möglich",
+            "Klage: Leistung auf Bescheidung"
+          ],
+          "icons": [
+            "kalender",
+            "umschlag",
+            "gericht"
+          ]
+        }
+      ],
+      "caption": "Petition statt Widerspruch? Dann läuft die Monatsfrist weiter. Art. 17 GG gibt jedem das Recht, sich schriftlich mit Bitten oder Beschwerden an die zuständigen Stellen und die Volksvertretung zu wenden – mit Anspruch auf Prüfung und Bescheid, aber ohne Anspruch auf ein bestimmtes Ergebnis. Ein Rechtsbehelf ist die Petition nicht: Sie hemmt keine Frist. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#petitionsrecht",
+        "#art17gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Petition oder Widerspruch?",
+      "coverText": "Petition hemmt keine Frist",
+      "coverBadge": "Fehlerfalle",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Eine Petition wird geprüft und beantwortet, hält aber die Frist für einen Rechtsbehelf nicht an.",
+        "handlung": "{A} happily drops a letter into a large public mailbox, while behind her {B} points at an hourglass on a nearby counter whose sand keeps running.",
+        "hinweisRegie": "Place the note in the free space between the mailbox and the running hourglass, slightly tilted toward the hourglass, so it shows the deadline continues, without covering faces.",
+        "alternative": "{B} holds a stopwatch that keeps ticking while {A} waits for a reply letter at a parliament door."
+      },
+      "bildSzene": "letter posted while hourglass keeps running",
+      "bildSzeneAlt": "stopwatch ticking at parliament door",
+      "quellen": [
+        "Art. 17 GG",
+        "Art. 45c GG",
+        "§§ 68, 70 VwGO",
+        "§ 80 Abs. 1 VwGO",
+        "Themenpool: grundr-627"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.190Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-218",
+      "slug": "2026-12-10-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Fremdes Gesicht in der Werbung: zahlen ohne Vertrag",
+          "unter": "Eingriffskondiktion · § 812 BGB",
+          "text": "U wirbt ohne Erlaubnis mit dem Foto der Sportlerin S. Geleistet hat S nichts.",
+          "norm": "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+          "icon": "zeitung",
+          "sprecher": "Kein Vertrag, keine Leistung – und trotzdem zahlen. U wirbt ohne Erlaubnis mit dem Foto der bekannten Sportlerin S. Geleistet hat S nichts. Der Anspruch kommt aus der Eingriffskondiktion.",
+          "marken": [
+            "keine Leistung",
+            "trotzdem zahlen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Etwas erlangt",
+          "text": "Die Nutzung des Bildes – ein Vorteil, für den man sonst zahlt.",
+          "norm": null,
+          "sprecher": "Schritt eins: etwas erlangt. U hat die Nutzung des Bildnisses erlangt, also einen Vorteil, für den man normalerweise eine Lizenz bezahlt.",
+          "marken": [
+            "Nutzung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "In sonstiger Weise",
+          "text": "Nicht durch Leistung, sondern durch eigenen Zugriff.",
+          "norm": "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+          "sprecher": "Schritt zwei: in sonstiger Weise. S hat nichts bewusst und zweckgerichtet zugewendet, U hat selbst zugegriffen. Achtung: Liegt eine Leistung vor, geht die Leistungskondiktion grundsätzlich vor.",
+          "marken": [
+            "Vorrang der Leistung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Auf Kosten: Zuweisungsgehalt",
+          "text": "Die kommerzielle Verwertung des eigenen Bildes steht allein S zu.",
+          "norm": "§ 22 KUG",
+          "sprecher": "Schritt drei: auf Kosten der S. Hier gilt die Lehre vom Zuweisungsgehalt. Das Recht am eigenen Bild weist die kommerzielle Verwertung allein S zu. Wer das nutzt, greift in fremden Zuweisungsgehalt ein.",
+          "marken": [
+            "Zuweisungsgehalt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ohne rechtlichen Grund",
+          "text": "Keine Einwilligung, kein Lizenzvertrag.",
+          "norm": null,
+          "sprecher": "Schritt vier: ohne rechtlichen Grund. Es gibt keine Einwilligung und keinen Lizenzvertrag. Der Rechtsgrund fehlt.",
+          "marken": [
+            "kein Rechtsgrund"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Rechtsfolge: Wertersatz",
+          "text": "Die Nutzung ist nicht herausgebbar – geschuldet ist die übliche Lizenzgebühr.",
+          "norm": "§ 818 Abs. 2 BGB",
+          "sprecher": "Und die Rechtsfolge? Die Nutzung selbst kann U nicht herausgeben. Also schuldet er Wertersatz nach Paragraf 818 Absatz 2, in Höhe der üblichen Lizenzgebühr. Auf ein Verschulden kommt es nicht an.",
+          "marken": [
+            "Lizenzgebühr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Eingriff in fremden Zuweisungsgehalt ohne Rechtsgrund: Wertersatz, ohne Verschulden.",
+          "norm": "§§ 812, 818 Abs. 2 BGB",
+          "sprecher": "Merke: Wer ohne Rechtsgrund in den Zuweisungsgehalt eines fremden Rechts eingreift, muss den Wert herausgeben. Verschulden braucht es dafür nicht.",
+          "marken": [
+            "kein Verschulden nötig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Leistung prüfen, dann den Eingriff",
+          "text": "Speichern für die nächste Bereicherungsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Bereicherungsklausur. Und prüf immer zuerst, ob nicht doch jemand geleistet hat.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Fremdes Gesicht in der Werbung – und das ohne Vertrag? Dann hilft die Eingriffskondiktion (§ 812 Abs. 1 S. 1 Alt. 2 BGB). Wer ohne Rechtsgrund in den Zuweisungsgehalt eines fremden Rechts eingreift, etwa das Recht am eigenen Bild, hat etwas auf Kosten des Berechtigten erlangt. Weil die Nutzung nicht herausgegeben werden kann, schuldet er Wertersatz in Höhe der üblichen Lizenzgebühr (§ 818 Abs. 2 BGB) – unabhängig vom Verschulden.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#eingriffskondiktion",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Eingriffskondiktion: zahlen ohne Vertrag",
+      "titelZeilen": [
+        "Fremdes Gesicht in",
+        "der Werbung: zahlen",
+        "ohne Vertrag"
+      ],
+      "coverText": "Wertersatz: übliche Lizenz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Wer ein fremdes Recht ohne Erlaubnis nutzt, muss zahlen, was eine Erlaubnis gekostet hätte – auch ohne Vertrag.",
+        "handlung": "{B} proudly unveils a billboard showing a borrowed portrait, while {A} curiously holds up the matching original photo and a small price tag next to it.",
+        "hinweisRegie": "Place the note in the free space between the billboard and the price tag in {A}'s hand, slightly tilted, so it links the use to the licence fee without covering faces.",
+        "alternative": "{A} places a coin into a slot every time {B} shines a lamp borrowed from a neighbour's house."
+      },
+      "bildSzene": "billboard with borrowed portrait and price tag",
+      "bildSzeneAlt": "coin paid for borrowed lamp",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "§ 818 Abs. 2 BGB",
+        "§ 22 KUG",
+        "Themenpool: bereich-218"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.191Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-133",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "A hält O nach dem Stich für tödlich verletzt, sieht aber sofort: nur ein Kratzer. Er lässt ab – Rücktritt?",
+      "optionen": [
+        "Nein – der Versuch ist beendet, A hätte den Erfolg aktiv verhindern müssen",
+        "Nein – der Versuch ist fehlgeschlagen",
+        "Ja – nach sofortiger Korrektur ist der Versuch unbeendet, Aufgeben genügt"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-133"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.191Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-133",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – der korrigierte Rücktrittshorizont zählt",
+      "text": "Maßgeblich ist die Vorstellung des Täters nach der letzten Ausführungshandlung. Korrigiert er sie unmittelbar danach, zählt die korrigierte Sicht. A erkennt sofort, dass O kaum verletzt ist und er weiter handeln müsste: Der Versuch ist unbeendet, fehlgeschlagen ist er nicht. Freiwilliges Aufgeben genügt (§ 24 Abs. 1 S. 1 Alt. 1 StGB).",
+      "norm": "§ 24 Abs. 1 S. 1 StGB",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "Themenpool: strafat-133"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.191Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – der Versuch ist beendet, A hätte den Erfolg aktiv verhindern müssen",
+        "Nein – der Versuch ist fehlgeschlagen",
+        "Ja – nach sofortiger Korrektur ist der Versuch unbeendet, Aufgeben genügt"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-185",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 313 BGB: Erst anpassen, dann lösen",
+      "text": "Hat sich die Geschäftsgrundlage schwerwiegend verändert und ist das Festhalten am unveränderten Vertrag unzumutbar, kann Anpassung verlangt werden (§ 313 Abs. 1 BGB). Rücktritt – bei Dauerschuldverhältnissen Kündigung – kommt erst, wenn eine Anpassung nicht möglich oder einem Teil nicht zumutbar ist (§ 313 Abs. 3 BGB). Vorher die vertragliche Risikoverteilung prüfen.",
+      "norm": "§ 313 Abs. 1, 3 BGB",
+      "quellen": [
+        "§ 313 BGB",
+        "Themenpool: schuld-185"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.191Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-925",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Nur Täter und Opfer: Passt § 239b StGB überhaupt?",
+      "norm": "§§ 239a, 239b StGB",
+      "optionen": [
+        "BGH (Großer Senat): anwendbar, aber nur bei einer stabilisierten Bemächtigungslage, die der Täter für eine weitere Nötigung ausnutzen will.",
+        "Teile der Literatur: noch restriktiver – etwa Beschränkung auf Fälle mit Drittbezug."
+      ],
+      "text": "Hintergrund: Die hohen Mindeststrafen passen nicht zu jedem Raub mit vorgehaltener Waffe. Klausur: Prüfe, ob die Bemächtigung eine eigenständige Zwischenlage schafft – etwa das Opfer wird eingesperrt und später zur Herausgabe gezwungen – oder ob sie mit der Nötigung in einem Akt zusammenfällt.",
+      "quellen": [
+        "§ 239a StGB",
+        "§ 239b StGB",
+        "BGH, Großer Senat für Strafsachen (Zwei-Personen-Verhältnis)",
+        "Themenpool: strafbt-925"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.191Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-187",
+      "ueberzeile": "Merksatz Schuldrecht AT",
+      "titel": "Gesetzlicher Rücktritt: eigenübliche Sorgfalt genügt",
+      "text": "Kann der Rücktrittsberechtigte nicht zurückgeben, schuldet er grundsätzlich Wertersatz (§ 346 Abs. 2 BGB). Beim gesetzlichen Rücktritt entfällt er, wenn er die Sorgfalt wie in eigenen Angelegenheiten beachtet hat (§ 346 Abs. 3 S. 1 Nr. 3 BGB).",
+      "norm": "§ 346 Abs. 2, 3 BGB",
+      "quellen": [
+        "§ 346 Abs. 2 BGB",
+        "§ 346 Abs. 3 BGB",
+        "Themenpool: schuld-187"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.191Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-352",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Sprungrevision: vom Amtsgericht direkt in die Revision",
+      "text": "Gegen Urteile des Strafrichters und des Schöffengerichts ist grundsätzlich Berufung statthaft (§ 312 StPO). Wer nur Rechtsfehler rügen will, kann stattdessen Revision einlegen (§ 335 Abs. 1 StPO); entscheiden würde das OLG (§ 335 Abs. 2 StPO). Legt ein anderer Beteiligter Berufung ein, wird die Revision grundsätzlich als Berufung behandelt (§ 335 Abs. 3 StPO).",
+      "norm": "§ 335 StPO",
+      "quellen": [
+        "§ 312 StPO",
+        "§ 335 StPO",
+        "Themenpool: stpo-352"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:33.191Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

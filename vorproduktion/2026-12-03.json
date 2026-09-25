@@ -1,0 +1,872 @@
+{
+  "datum": "2026-12-03",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "assessorz-820",
+        "themaTitel": "Wie wirkt der Anscheinsbeweis und wie erschüttert man ihn?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "stpo-347",
+        "themaTitel": "Was folgt aus einem Verstoß gegen die Belehrungspflicht?",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "europa-109",
+        "themaTitel": "Was ist das Vorabentscheidungsverfahren?",
+        "fach": "europa",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:18",
+        "art": "frage",
+        "themaId": "anklage-860"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:18",
+        "art": "antwort",
+        "themaId": "anklage-860"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "zpo-556"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "streitstand",
+        "themaId": "zwangsv-833"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "merksatz",
+        "themaId": "sachen-127"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "begriff",
+        "themaId": "schuld-170"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "assessorz-820",
+      "poolTitel": "Wie wirkt der Anscheinsbeweis und wie erschüttert man ihn?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 286 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "stpo-347",
+      "poolTitel": "Was folgt aus einem Verstoß gegen die Belehrungspflicht?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136 StPO",
+        "§ 163a StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "europa-109",
+      "poolTitel": "Was ist das Vorabentscheidungsverfahren?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 267 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-26"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-860",
+      "poolTitel": "Was gehört in das Beweismittelverzeichnis?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-860",
+      "poolTitel": "Was gehört in das Beweismittelverzeichnis?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-556",
+      "poolTitel": "Widerklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 33, 263 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "zwangsv-833",
+      "poolTitel": "Welche Rechtsbehelfe richten sich gegen die Vollstreckungsklausel?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 732 ZPO",
+        "§ 768 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-10-04"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "sachen-127",
+      "poolTitel": "Was ist ein Scheinbestandteil und was ein wesentlicher Bestandteil?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 93 BGB",
+        "§ 94 BGB",
+        "§ 95 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-170",
+      "poolTitel": "Was ist der Unterschied zwischen Unmöglichkeit und Unzumutbarkeit?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 275 Abs. 1 BGB",
+        "§ 275 Abs. 2 BGB",
+        "§ 275 Abs. 3 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-820",
+      "slug": "2026-12-03-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anscheinsbeweis kehrt die Beweislast nicht um",
+          "titelZeilen": [
+            "Anscheinsbeweis",
+            "kehrt die",
+            "Beweislast",
+            "nicht um"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Erschüttern statt widerlegen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Was der Anscheinsbeweis ist",
+          "text": "Er gehört zur freien Beweiswürdigung (§ 286 ZPO): Steht ein Sachverhalt fest, der nach der Lebenserfahrung typischerweise auf eine bestimmte Ursache oder ein Verschulden hinweist, darf das Gericht darauf schließen – ohne weiteren Beweis."
+        },
+        {
+          "art": "text",
+          "titel": "Voraussetzungen",
+          "punkte": [
+            "Feststehender Sachverhalt – unstreitig oder bewiesen",
+            "Typischer Geschehensablauf nach allgemeiner Lebenserfahrung",
+            "Nicht bei individuellen Willensentschlüssen"
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Erschüttern ist nicht widerlegen",
+          "links": {
+            "titel": "Anscheinsbeweis",
+            "punkte": [
+              "Der Gegner muss ihn nur erschüttern.",
+              "Er beweist Tatsachen, die einen atypischen Ablauf ernsthaft möglich machen.",
+              "Dann Vollbeweis durch die beweisbelastete Partei."
+            ]
+          },
+          "rechts": {
+            "titel": "Gesetzliche Vermutung",
+            "punkte": [
+              "Der Gegner muss das Gegenteil beweisen (§ 292 ZPO).",
+              "Echte Umkehr der Beweislast.",
+              "Bleiben Zweifel, verliert er."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klassiker aus der Praxis",
+          "punkte": [
+            "Auffahrunfall: Anschein für zu geringen Abstand oder Unaufmerksamkeit des Auffahrenden",
+            "Erschüttert etwa durch einen bewiesenen, unmittelbar vorausgehenden Spurwechsel des Vordermanns",
+            "Im Urteil: erst den typischen Ablauf feststellen, dann die Erschütterung prüfen"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anscheinsbeweis erschüttern: Tatsachen für einen ernsthaft möglichen atypischen Ablauf voll beweisen – nicht das Gegenteil."
+        },
+        {
+          "art": "cta",
+          "titel": "Anscheinsbeweis im Urteil",
+          "punkte": [
+            "Typischer Ablauf festgestellt?",
+            "Atypik ernsthaft möglich – bewiesen?",
+            "Sonst: normale Beweislast"
+          ],
+          "icons": [
+            "lupe",
+            "auto",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Der Anscheinsbeweis kehrt die Beweislast nicht um. Er ist Teil der Beweiswürdigung nach § 286 ZPO: Bei einem typischen Geschehensablauf schließt das Gericht auf Ursache oder Verschulden. Der Gegner muss nicht das Gegenteil beweisen, sondern den Anschein erschüttern – durch voll bewiesene Tatsachen, die einen atypischen Ablauf ernsthaft möglich machen. Dann muss die beweisbelastete Partei wieder voll beweisen. Speichern für die nächste Relation.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#anscheinsbeweis",
+        "#beweisrecht",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anscheinsbeweis: erschüttern statt widerlegen",
+      "coverText": "Erschüttern statt widerlegen",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Ein typischer Ablauf spricht für eine Ursache – der Gegner muss nur zeigen, dass es ernsthaft auch anders gewesen sein kann.",
+        "handlung": "{A} nervously nudges one domino in a long, neatly falling row so that it tips sideways, while {B} points his pointer at the spot where the typical path breaks.",
+        "hinweisRegie": "Place the note in the free space right above the sideways-tipped domino, slightly tilted toward it, so the break in the typical course is the focus without covering {A}'s hand.",
+        "alternative": "{B} shows a well-worn footpath across a field, while {A} discovers a fresh side track branching off just before the end."
+      },
+      "bildSzene": "one domino tips sideways from row",
+      "bildSzeneAlt": "fresh side track off worn footpath",
+      "quellen": [
+        "§ 286 ZPO",
+        "§ 292 ZPO",
+        "Themenpool: assessorz-820"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.775Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-347",
+      "slug": "2026-12-03-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nicht belehrt, aber das Recht gekannt: verwertbar?",
+          "titelZeilen": [
+            "Nicht belehrt,",
+            "Recht gekannt:",
+            "verwertbar?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Widerspruch bis § 257 StPO",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Ausgangspunkt",
+          "text": "Unterbleibt der Hinweis auf die Aussagefreiheit (§ 136 Abs. 1, § 163a Abs. 4 StPO), folgt daraus nach der Rspr. grundsätzlich ein Beweisverwertungsverbot. Es hat aber Grenzen – und eine prozessuale Voraussetzung."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Verwertungsverbot oder nicht?",
+          "links": {
+            "titel": "Unverwertbar",
+            "punkte": [
+              "Der Beschuldigte kannte sein Schweigerecht nicht.",
+              "Der verteidigte Angeklagte widerspricht rechtzeitig.",
+              "Frist: bis zu dem in § 257 StPO genannten Zeitpunkt."
+            ]
+          },
+          "rechts": {
+            "titel": "Verwertbar",
+            "punkte": [
+              "Der Beschuldigte kannte sein Recht sicher.",
+              "Oder: Der rechtzeitige Widerspruch fehlt.",
+              "So die Widerspruchslösung der Rspr."
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Erst ohne, dann mit Belehrung",
+          "links": {
+            "titel": "Erste Vernehmung",
+            "punkte": [
+              "Ohne Belehrung: unverwertbar.",
+              "Der Beschuldigte meint, schon alles gesagt zu haben."
+            ]
+          },
+          "rechts": {
+            "titel": "Zweite Vernehmung",
+            "punkte": [
+              "Qualifizierte Belehrung: Hinweis auf die Unverwertbarkeit.",
+              "Fehlt sie: Abwägung im Einzelfall (Rspr.)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Prüfe der Reihe nach: Beschuldigtenstatus und Belehrungspflicht, Verstoß, Kenntnis des Rechts, rechtzeitiger Widerspruch. Eine Fernwirkung auf mittelbar erlangte Beweise lehnt die Rspr. grundsätzlich ab."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Belehrung vergessen: Verwertungsverbot – außer der Beschuldigte kannte sein Recht oder der rechtzeitige Widerspruch fehlt."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Fragen zur Belehrung",
+          "punkte": [
+            "Beschuldigter oder Zeuge?",
+            "Belehrung unterblieben?",
+            "Recht trotzdem bekannt?",
+            "Widerspruch rechtzeitig?"
+          ],
+          "icons": [
+            "person",
+            "dokument",
+            "lupe",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Nicht belehrt, aber das Schweigerecht gekannt – ist die Aussage verwertbar? Nach der Rspr. ja. Grundsätzlich führt ein Verstoß gegen die Belehrungspflicht aus § 136 Abs. 1 StPO zu einem Verwertungsverbot. Es entfällt, wenn der Beschuldigte sein Recht sicher kannte, und es setzt beim verteidigten Angeklagten einen Widerspruch bis zu dem in § 257 StPO genannten Zeitpunkt voraus. Dazu die qualifizierte Belehrung vor der zweiten Vernehmung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#beweisverwertungsverbot",
+        "#136stpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Belehrungsverstoß: Wann die Aussage verwertbar ist",
+      "coverText": "Widerspruch bis § 257 StPO",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Eine fehlende Belehrung sperrt die Aussage nur, wenn der Beschuldigte sein Recht nicht kannte und rechtzeitig widersprochen wird.",
+        "handlung": "{A} raises a hand to stop a sealed envelope from sliding onto a wooden table, while {B} hovers beside her holding up a small timer that is about to run out.",
+        "hinweisRegie": "Place the note in the free space between {A}'s raised hand and the timer, slightly tilted toward the timer, so the need for a timely objection is visible without covering the envelope.",
+        "alternative": "{B} checks a card showing that the witness already knew the rule, while {A} decides whether a gate may stay open."
+      },
+      "bildSzene": "hand stops envelope, timer running out",
+      "bildSzeneAlt": "gate decision after checking rule card",
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 163a Abs. 4 StPO",
+        "§ 257 StPO",
+        "BGHSt 38, 214",
+        "Themenpool: stpo-347"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.776Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "europa",
+      "klausur": 3,
+      "fachLabel": "Europarecht",
+      "themaId": "europa-109",
+      "slug": "2026-12-03-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Auch das Amtsgericht kann vorlagepflichtig sein",
+          "unter": "Vorabentscheidung · Art. 267 AEUV",
+          "text": "Es kommt darauf an, ob im konkreten Fall noch ein Rechtsmittel möglich ist.",
+          "norm": "Art. 267 Abs. 3 AEUV",
+          "icon": "globus",
+          "sprecher": "Auch ein Amtsgericht kann zur Vorlage verpflichtet sein. Nämlich dann, wenn seine Entscheidung im konkreten Fall nicht mehr angefochten werden kann. Die Pflicht hängt nicht am Rang des Gerichts.",
+          "marken": [
+            "nicht der Rang",
+            "der konkrete Fall"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vorlageberechtigung",
+          "text": "Jedes Gericht eines Mitgliedstaats – der Begriff ist unionsrechtlich.",
+          "norm": "Art. 267 Abs. 2 AEUV",
+          "sprecher": "Schritt eins: die Berechtigung. Vorlegen darf jedes Gericht eines Mitgliedstaats. Was ein Gericht ist, bestimmt der EuGH selbst, etwa nach gesetzlicher Grundlage, Unabhängigkeit und Rechtsprechungsfunktion.",
+          "marken": [
+            "jedes Gericht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vorlagegegenstand",
+          "text": "Auslegung der Verträge; Gültigkeit und Auslegung der Handlungen der Organe.",
+          "norm": "Art. 267 Abs. 1 AEUV",
+          "sprecher": "Schritt zwei: der Gegenstand. Der EuGH entscheidet über die Auslegung der Verträge und über Gültigkeit und Auslegung der Handlungen der Organe. Über nationales Recht entscheidet er nicht.",
+          "marken": [
+            "nur Unionsrecht"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Entscheidungserheblichkeit",
+          "text": "Das Gericht braucht die Antwort für sein Urteil.",
+          "norm": "Art. 267 Abs. 2 AEUV",
+          "sprecher": "Schritt drei: die Erheblichkeit. Das nationale Gericht muss die Antwort für seine Entscheidung brauchen. Den Fall selbst entscheidet danach wieder das nationale Gericht.",
+          "marken": [
+            "erforderlich?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vorlagepflicht",
+          "text": "Letztinstanzlich im konkreten Fall. Ausnahme: Frage geklärt oder offenkundig.",
+          "norm": "Art. 267 Abs. 3 AEUV",
+          "sprecher": "Schritt vier: die Pflicht. Letztinstanzliche Gerichte müssen vorlegen, nach herrschender Meinung konkret betrachtet. Ausnahmen: Die Frage ist schon geklärt oder die Antwort offenkundig. Und wer eine Unionshandlung für ungültig hält, muss immer vorlegen.",
+          "marken": [
+            "konkret letztinstanzlich"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Nichtvorlage und Art. 101 Abs. 1 S. 2 GG",
+          "text": "Der EuGH ist gesetzlicher Richter. Unvertretbare Nichtvorlage kann das Grundrecht verletzen.",
+          "norm": "Art. 101 Abs. 1 S. 2 GG",
+          "sprecher": "Die Brücke ins Verfassungsrecht: Der EuGH ist gesetzlicher Richter. Legt ein Gericht in unvertretbarer Weise nicht vor, kann das Art. 101 Absatz 1 Satz 2 GG verletzen.",
+          "marken": [
+            "gesetzlicher Richter"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Kein Rechtsmittel mehr im konkreten Fall: vorlegen. Ungültigkeit: immer vorlegen.",
+          "norm": "Art. 267 Abs. 3 AEUV",
+          "sprecher": "Merke: Die Pflicht trifft das Gericht, gegen dessen Entscheidung im konkreten Fall kein Rechtsmittel mehr gegeben ist. Und über die Ungültigkeit von Unionsrecht entscheidet allein der EuGH.",
+          "marken": [
+            "Verwerfung: nur EuGH"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst den Rechtsmittelzug im Fall prüfen",
+          "text": "Speichern für die nächste Europarechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Europarechtsklausur. Und prüf immer, ob gegen die Entscheidung im konkreten Fall noch ein Rechtsmittel möglich ist.",
+          "marken": [
+            "Rechtsmittel möglich?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Auch ein Amtsgericht kann vorlagepflichtig sein. Nach Art. 267 Abs. 3 AEUV muss vorlegen, wessen Entscheidung nicht mehr mit Rechtsmitteln angefochten werden kann – nach h.M. bezogen auf den konkreten Fall, nicht auf den Rang des Gerichts. Ausnahmen gelten, wenn die Frage geklärt oder die Antwort offenkundig ist; Zweifel an der Gültigkeit von Unionsrecht führen immer zur Vorlage. Die Nichtvorlage kann Art. 101 Abs. 1 S. 2 GG verletzen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#europarecht",
+        "#eugh",
+        "#267aeuv",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 267 AEUV: Wer muss vorlegen?",
+      "titelZeilen": [
+        "Auch das",
+        "Amtsgericht kann",
+        "vorlagepflichtig",
+        "sein"
+      ],
+      "coverText": "Konkrete Betrachtungsweise",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Ob ein Gericht vorlegen muss, entscheidet der Weg des konkreten Falls, nicht die Größe des Gerichts.",
+        "handlung": "{A} stands at the end of a short path that suddenly stops at a cliff edge with no further steps, and curiously holds out a question stone toward a distant glowing tower, while {B} watches from a tall staircase far behind.",
+        "hinweisRegie": "Place the note in the open space at the cliff edge where the short path ends, slightly tilted toward the distant tower, so the missing next step is the focus without covering {A}'s outstretched hand.",
+        "alternative": "{B} walks a small path that ends in a dead end and hands a letter to a messenger bird flying to a distant tower, while {A} stands on a long staircase that still continues upward."
+      },
+      "bildSzene": "short path ends, question sent to tower",
+      "bildSzeneAlt": "dead-end path sends letter to tower",
+      "quellen": [
+        "Art. 267 AEUV",
+        "Art. 101 Abs. 1 S. 2 GG",
+        "Themenpool: europa-109"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "rang-irrelevant",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-860",
+      "ueberzeile": "Prüfungsfrage Anklageschrift",
+      "titel": "Beweismittelverzeichnis: Was gibst du bei einem Zeugen an?",
+      "optionen": [
+        "Name und vollständige Anschrift mit Straße",
+        "Name und Wohn- oder Aufenthaltsort",
+        "Nur den Namen – der Rest steht in der Akte"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 200 StPO",
+        "§ 68 StPO",
+        "Themenpool: anklage-860"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-860",
+      "ueberzeile": "Auflösung",
+      "titel": "Name und Wohn- oder Aufenthaltsort genügen",
+      "text": "Die Anklageschrift nennt die Beweismittel (§ 200 Abs. 1 StPO). Bei Zeugen ist statt der vollständigen Anschrift der Wohn- oder Aufenthaltsort anzugeben; für gefährdete Zeugen gelten Einschränkungen (vgl. § 68 StPO). Die Würdigung der Beweise gehört nicht ins Verzeichnis, sondern ins wesentliche Ergebnis der Ermittlungen (§ 200 Abs. 2 StPO).",
+      "norm": "§ 200 Abs. 1, 2 StPO",
+      "quellen": [
+        "§ 200 StPO",
+        "§ 68 StPO",
+        "Themenpool: anklage-860"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.777Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Name und vollständige Anschrift mit Straße",
+        "Name und Wohn- oder Aufenthaltsort",
+        "Nur den Namen – der Rest steht in der Akte"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-556",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 33 ZPO: Gerichtsstand der Widerklage",
+      "text": "Die Widerklage kann beim Gericht der Klage erhoben werden, wenn der Gegenanspruch mit dem Klageanspruch oder den Verteidigungsmitteln zusammenhängt (§ 33 Abs. 1 ZPO). Außerdem: rechtshängige Klage, grundsätzlich dieselben Parteien, gleiche Prozessart. Ob der Zusammenhang zusätzlich Zulässigkeitsvoraussetzung ist, ist umstritten.",
+      "norm": "§ 33 Abs. 1 ZPO",
+      "quellen": [
+        "§ 33 ZPO",
+        "§§ 263 ff. ZPO",
+        "Themenpool: zpo-556"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-833",
+      "ueberzeile": "Streitstand Zwangsvollstreckung",
+      "titel": "Klausel nach § 726 ZPO erteilt, aber die Bedingung ist nicht eingetreten: Erinnerung oder Klage?",
+      "norm": "§§ 732, 768 ZPO",
+      "optionen": [
+        "Eine Ansicht: strikte Trennung – § 732 ZPO nur für formelle Fehler, der Nichteintritt gehört in die Klage nach § 768 ZPO.",
+        "Andere Ansicht: Wahlrecht – der Schuldner kann den Nichteintritt auch mit der Erinnerung nach § 732 ZPO rügen."
+      ],
+      "text": "Die Erinnerung ist schnell, aber ohne volle Beweisaufnahme; die Klauselgegenklage klärt die materielle Frage mit Beweisaufnahme. In der Klausur: nach dem Inhalt der Rüge wählen und begründen.",
+      "quellen": [
+        "§ 726 ZPO",
+        "§ 732 ZPO",
+        "§ 768 ZPO",
+        "Themenpool: zwangsv-833"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-127",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Vom Mieter für die Mietzeit gebaut: Die Gartenhütte bleibt seine",
+      "text": "Nur zu einem vorübergehenden Zweck verbunden – kein Bestandteil des Grundstücks (§ 95 Abs. 1 S. 1 BGB). Baut der Mieter für die Mietzeit, wird das vermutet.",
+      "norm": "§§ 94, 95 BGB",
+      "quellen": [
+        "§ 93 BGB",
+        "§ 94 BGB",
+        "§ 95 BGB",
+        "§ 946 BGB",
+        "Themenpool: sachen-127"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-170",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Faktische Unmöglichkeit: der Ring auf dem Meeresgrund",
+      "text": "§ 275 Abs. 2 BGB: Die Leistung ist theoretisch möglich, erfordert aber einen Aufwand in grobem Missverhältnis zum Leistungsinteresse des Gläubigers. Anders als bei Abs. 1 wird der Schuldner nicht automatisch frei – er muss die Leistung verweigern (Einrede). Ist die Leistung bloß teurer geworden, denk an § 313 BGB.",
+      "norm": "§ 275 Abs. 1, 2 BGB",
+      "quellen": [
+        "§ 275 BGB",
+        "§ 313 BGB",
+        "Themenpool: schuld-170"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:46:23.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

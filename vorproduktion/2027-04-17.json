@@ -1,0 +1,855 @@
+{
+  "datum": "2027-04-17",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-901",
+        "themaTitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "strafbt-336",
+        "themaTitel": "Wie prüft man die Sachbeschädigung?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-6",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "vwgo-651"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "vwgo-651"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "stpo-784"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "begriff",
+        "themaId": "handelsg-532"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "fehler",
+        "themaId": "zwangsv-831"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "tipp",
+        "themaId": "staat-086"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-901",
+      "poolTitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2026-11-07",
+        "2027-01-11"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "strafbt-336",
+      "poolTitel": "Wie prüft man die Sachbeschädigung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 303 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-6",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2026-12-26",
+        "2027-02-20"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-651",
+      "poolTitel": "Eröffnung des Verwaltungsrechtswegs",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 40 I VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-04"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-651",
+      "poolTitel": "Eröffnung des Verwaltungsrechtswegs",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 40 I VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-04"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "stpo-784",
+      "poolTitel": "Inbegriff der Hauptverhandlung und freie Beweiswürdigung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17",
+        "2026-11-09"
+      ]
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "handelsg-532",
+      "poolTitel": "Vertretung der GbR",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 705 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-29",
+        "2027-01-09",
+        "2027-01-09"
+      ]
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "zwangsv-831",
+      "poolTitel": "Wie erzwingt man Handlungen und Unterlassungen?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "§ 890 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-06",
+        "2027-01-14",
+        "2027-02-12"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "staat-086",
+      "poolTitel": "Wann gelten Vorrang und Vorbehalt des Gesetzes?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2026-11-18",
+        "2027-01-20"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-901",
+      "slug": "2027-04-17-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Der Obersatz ist mehr als „könnte“",
+          "titelZeilen": [
+            "Der Obersatz ist",
+            "mehr als „könnte“"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Wer, was, von wem, woraus",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "„A könnte sich strafbar gemacht haben.“ So beginnen viele Prüfungen – und der Leser weiß danach nicht, welche Norm, welche Handlung und welches Opfer gemeint sind. Ein guter Obersatz legt fest, was du im Folgenden prüfst. Alles Weitere misst sich an ihm."
+        },
+        {
+          "art": "schritte",
+          "titel": "Der vollständige Obersatz",
+          "schritte": [
+            {
+              "titel": "Zivilrecht: Wer will was von wem woraus?",
+              "text": "„K könnte gegen V einen Anspruch auf Übereignung und Übergabe des Fahrrads aus § 433 Abs. 1 S. 1 BGB haben.“"
+            },
+            {
+              "titel": "Strafrecht: Wer, welche Norm, welche Handlung?",
+              "text": "„A könnte sich wegen Diebstahls gemäß § 242 Abs. 1 StGB strafbar gemacht haben, indem er das Handy des B einsteckte.“"
+            },
+            {
+              "titel": "Öffentliches Recht: Was hat Erfolg?",
+              "text": "„Die Klage hat Erfolg, soweit sie zulässig und begründet ist.“ Dann für jeden Prüfungspunkt einen eigenen Obersatz."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Danach im Gutachten",
+          "schritte": [
+            {
+              "titel": "Definition",
+              "text": "Das Merkmal abstrakt bestimmen – knapp, mit der gängigen Formel."
+            },
+            {
+              "titel": "Subsumtion",
+              "text": "Sachverhalt unter die Definition bringen, mit den Fakten aus dem Fall, nicht mit Wiederholung der Definition."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "In derselben Formulierung wie der Obersatz – ohne Konjunktiv: „A hat sich wegen Diebstahls strafbar gemacht.“"
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Im Strafrecht gehört die konkrete Handlung in den Obersatz („indem …“). Hat der Täter mehrere Handlungen vorgenommen, bildest du sonst ungewollt einen Obersatz für alle – und verlierst in den Konkurrenzen den Überblick."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ein Obersatz nennt Person, Ziel, Gegner und Norm – im Strafrecht auch die Handlung. Das Ergebnis greift ihn wörtlich auf."
+        },
+        {
+          "art": "cta",
+          "titel": "Obersatz-Check",
+          "punkte": [
+            "Wer gegen wen?",
+            "Welche Norm genau?",
+            "Welche Handlung („indem …“)?",
+            "Ergebnis spiegelt den Obersatz?"
+          ],
+          "icons": [
+            "personen",
+            "paragraf",
+            "zielscheibe",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Der Obersatz ist mehr als „könnte“. Er legt fest, was du prüfst: im Zivilrecht wer was von wem woraus will, im Strafrecht zusätzlich die konkrete Handlung („indem …“), im öffentlichen Recht die Frage nach dem Erfolg. Danach folgen Definition, Subsumtion und ein Ergebnis, das den Obersatz wörtlich aufgreift. Speichern für die nächste Übungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#gutachtenstil",
+        "#klausurtraining",
+        "#klausurtechnik",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Der vollständige Obersatz",
+      "coverText": "Wer, was, von wem, woraus",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Ein guter Obersatz legt genau fest, was im Folgenden geprüft wird.",
+        "handlung": "{A} points his stick at a signpost with four arms, while {B} walks up a path and already reads which way to go before taking the first step.",
+        "hinweisRegie": "Place the note in the free space just beside the four-armed signpost, slightly tilted toward the arm {B} is reading, so the clear direction is linked to the note without covering {A}'s pointer.",
+        "alternative": "{B} hands {A} a travel ticket that names the traveler, the destination and the route, while {A} nods and punches it."
+      },
+      "bildSzene": "four-armed signpost read before walking",
+      "bildSzeneAlt": "ticket names traveler, destination, route",
+      "quellen": [
+        "§ 433 Abs. 1 BGB (Beispiel)",
+        "§ 242 Abs. 1 StGB (Beispiel)",
+        "Themenpool: methodik-901"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung-obersatz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.970Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-336",
+      "slug": "2027-04-17-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Luft aus dem Reifen: Sachbeschädigung ohne Kratzer",
+          "titelZeilen": [
+            "Luft aus dem",
+            "Reifen: Sachbe-",
+            "schädigung ohne",
+            "Kratzer"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Brauchbarkeit zählt, nicht nur Substanz",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "§ 303 Abs. 1 StGB",
+          "punkte": [
+            "Tatobjekt: eine fremde Sache",
+            "Zerstören: die Sache ist für ihren Zweck völlig unbrauchbar",
+            "Beschädigen: nicht unerhebliche Substanzverletzung oder Minderung der bestimmungsgemäßen Brauchbarkeit"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Brauchbarkeit zählt",
+          "text": "Eine Substanzverletzung ist nicht nötig. Wer die Luft aus den Reifen eines Autos lässt, macht es vorübergehend unbrauchbar – nach der Rspr. eine Beschädigung, weil das Wiederaufpumpen Aufwand macht. Nicht erfasst ist die bloße Sachentziehung ohne Einwirkung auf die Sache."
+        },
+        {
+          "art": "text",
+          "titel": "§ 303 Abs. 2 StGB",
+          "text": "Unbefugt das Erscheinungsbild einer fremden Sache nicht nur unerheblich und nicht nur vorübergehend verändern. Typisch: Graffiti, auch wenn sich die Farbe ohne Substanzschaden entfernen ließe."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Was du noch brauchst",
+          "links": {
+            "titel": "Im Tatbestand",
+            "punkte": [
+              "Vorsatz, bedingter genügt",
+              "Versuch strafbar (Abs. 3)",
+              "Rechtswidrigkeit: etwa Einwilligung des Eigentümers"
+            ]
+          },
+          "rechts": {
+            "titel": "Drumherum",
+            "punkte": [
+              "Strafantrag nötig, außer besonderes öffentliches Interesse (§ 303c)",
+              "Spezieller: §§ 304, 305 StGB"
+            ]
+          }
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beschädigen heißt nicht nur zerkratzen: Auch wer die Brauchbarkeit nicht unerheblich mindert, beschädigt. Abs. 2 erfasst das veränderte Erscheinungsbild."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 303 StGB in drei Fragen",
+          "punkte": [
+            "Fremde Sache?",
+            "Substanz oder Brauchbarkeit betroffen?",
+            "Oder Erscheinungsbild nach Abs. 2?"
+          ],
+          "icons": [
+            "auto",
+            "werkzeug",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Luft aus dem Reifen – Sachbeschädigung, obwohl nichts zerkratzt ist? Nach der Rspr. ja: Beschädigen ist jede nicht unerhebliche Substanzverletzung oder Minderung der bestimmungsgemäßen Brauchbarkeit. Graffiti erfasst § 303 Abs. 2 StGB über das veränderte Erscheinungsbild. Nicht vergessen: Strafantrag nach § 303c StGB. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#303stgb",
+        "#sachbeschädigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 303 StGB: Beschädigen ohne Kratzer",
+      "coverText": "Brauchbarkeit zählt, nicht nur Substanz",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Auch wer eine Sache nur unbrauchbar macht, ohne sie zu verletzen, beschädigt sie.",
+        "handlung": "{B} crouches beside a mine cart and lets the air hiss out of one of its rubber tires, while {A} stares at the cart that now sags to one side, completely unscratched.",
+        "hinweisRegie": "Place the note in the free space above the deflated tire, slightly tilted toward the sagging side of the cart, so the lost usability is linked to the note without covering {B}'s hand at the valve.",
+        "alternative": "{A} tries to push a perfectly intact wheelbarrow whose tire {B} has just deflated, and it will not roll."
+      },
+      "bildSzene": "air hisses from cart tire",
+      "bildSzeneAlt": "intact wheelbarrow with flat tire",
+      "quellen": [
+        "§ 303 StGB",
+        "§ 303c StGB",
+        "§§ 304, 305 StGB",
+        "Themenpool: strafbt-336"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel-brauchbarkeit",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.970Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-6",
+      "slug": "2027-04-17-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Probeklausur zurück: Die Note zuletzt lesen",
+          "unter": "Kopfsache · Korrektur auswerten",
+          "text": "In den Randbemerkungen steckt mehr als in der Punktzahl.",
+          "norm": null,
+          "icon": "klemmbrett",
+          "sprecher": "Probeklausur zurück? Lies die Note zuletzt. Denn die Punktzahl sagt dir, wie es lief. Die Randbemerkungen sagen dir, was du ändern kannst.",
+          "marken": [
+            "Note zuletzt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Randbemerkungen sammeln",
+          "text": "Jede Anmerkung des Korrektors in einer Liste festhalten – auch die kleinen.",
+          "norm": null,
+          "sprecher": "Schritt eins: Geh die Klausur durch und schreib jede Randbemerkung in eine Liste. Auch die kleinen, wie „ungenau“ oder „zu knapp“.",
+          "marken": [
+            "alles notieren"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "In Kategorien sortieren",
+          "text": "Wissen, Aufbau, Schwerpunkt, Zeit, Sprache.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Sortier die Liste. Fehlte Wissen? Stimmte der Aufbau nicht? Lag der Schwerpunkt falsch? Wurde die Zeit knapp? Oder war es die Sprache?",
+          "marken": [
+            "fünf Kategorien"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ein Muster wählen",
+          "text": "Nicht alles auf einmal – die häufigste Kategorie gezielt angehen.",
+          "norm": null,
+          "sprecher": "Schritt drei: Such dir die Kategorie, die am häufigsten vorkommt. Genau daran arbeitest du bis zur nächsten Klausur, und nur daran.",
+          "marken": [
+            "ein Fokus"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Beim nächsten Mal abgleichen",
+          "text": "Nach der nächsten Klausur prüfen: Taucht die Kategorie wieder auf?",
+          "norm": null,
+          "sprecher": "Schritt vier: Wenn die nächste Klausur zurückkommt, vergleichst du. Taucht dieselbe Kategorie wieder auf, bleibst du dran. Wenn nicht, nimmst du dir die nächste vor.",
+          "marken": [
+            "vergleichen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Unklare Anmerkung?",
+          "text": "Mit der Lösungsskizze abgleichen – oder gezielt nachfragen.",
+          "norm": null,
+          "sprecher": "Und wenn du eine Anmerkung nicht verstehst? Leg die Lösungsskizze daneben oder frag gezielt nach. Eine verstandene Anmerkung bringt dir mehr als drei überlesene.",
+          "marken": [
+            "nachfragen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Sammeln, sortieren, ein Muster angehen, beim nächsten Mal abgleichen.",
+          "norm": null,
+          "sprecher": "Merke: Sammeln, sortieren, ein Muster angehen und beim nächsten Mal abgleichen. So wird aus jeder Korrektur ein Lernplan.",
+          "marken": [
+            "Korrektur = Plan"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Rückgabe",
+          "text": "Speichern für die nächste Probeklausur.",
+          "sprecher": "Speicher dir das für die nächste Rückgabe. Und fang mit deiner letzten Probeklausur gleich heute an.",
+          "marken": [
+            "heute anfangen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Probeklausur zurück? Lies die Note zuletzt. Die Punktzahl sagt dir, wie es lief – die Randbemerkungen, was du ändern kannst. Sammle sie, sortiere sie nach Wissen, Aufbau, Schwerpunkt, Zeit und Sprache, nimm dir das häufigste Muster vor und gleich es bei der nächsten Klausur ab. Speichern für die nächste Rückgabe.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#klausurtraining",
+        "#lernplan",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Korrektur auswerten statt Note anstarren",
+      "titelZeilen": [
+        "Probeklausur zurück:",
+        "Die Note zuletzt",
+        "lesen"
+      ],
+      "coverText": "Randbemerkungen vor Punktzahl",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Aus den Anmerkungen einer Korrektur lässt sich mehr lernen als aus der Note.",
+        "handlung": "{A} sorts a pile of small notes into five neat trays that {B} holds out, while a sealed envelope with the grade lies unopened at the side.",
+        "hinweisRegie": "Place the note in the free space above the five trays, slightly tilted toward the fullest tray, so the sorting is linked to the note without covering the unopened envelope or {A}'s hands.",
+        "alternative": "{B} pins returned margin notes onto a board in columns while {A} circles the longest column with a finger."
+      },
+      "bildSzene": "notes sorted into five trays",
+      "bildSzeneAlt": "margin notes pinned in columns",
+      "quellen": [
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge-korrektur",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.975Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-651",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Die Gemeinde lässt Verein V nicht in ihre Stadthalle, die sie per Mietvertrag vergibt. Welcher Rechtsweg?",
+      "optionen": [
+        "Verwaltungsrechtsweg – das „Ob“ der Zulassung ist öffentlich-rechtlich",
+        "Zivilrechtsweg – die Halle wird per Mietvertrag überlassen",
+        "Verfassungsbeschwerde – es geht um Gleichbehandlung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 40 Abs. 1 S. 1 VwGO",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: vwgo-651"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.975Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-651",
+      "ueberzeile": "Auflösung",
+      "titel": "Verwaltungsgericht – der Zulassungsanspruch ist öffentlich-rechtlich",
+      "text": "Zweistufentheorie: Ob V die öffentliche Einrichtung nutzen darf, richtet sich nach dem Zulassungsanspruch aus der Gemeindeordnung – öffentliches Recht, also § 40 Abs. 1 S. 1 VwGO. Nur das „Wie“, etwa Miete und Haftung, kann privatrechtlich geregelt sein. Betreibt eine gemeindeeigene GmbH die Halle, richtet sich der Anspruch auf Einwirkung gegen die Gemeinde.",
+      "norm": "§ 40 Abs. 1 S. 1 VwGO",
+      "quellen": [
+        "§ 40 Abs. 1 S. 1 VwGO",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: vwgo-651"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.975Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Verwaltungsrechtsweg – das „Ob“ der Zulassung ist öffentlich-rechtlich",
+        "Zivilrechtsweg – die Halle wird per Mietvertrag überlassen",
+        "Verfassungsbeschwerde – es geht um Gleichbehandlung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-784",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 261 StPO: „Im Zweifel für den Angeklagten“ gilt erst am Ende – nicht für jedes Indiz",
+      "text": "Der Zweifelssatz ist keine Beweisregel, sondern eine Entscheidungsregel. Das Gericht würdigt zuerst alle Beweise in ihrer Gesamtheit. Erst wenn es danach nicht überzeugt ist, entscheidet es zugunsten des Angeklagten. Einzelne Indizien werden nicht isoliert „in dubio“ ausgeschieden – ihre Gesamtschau kann die Überzeugung tragen.",
+      "norm": "§ 261 StPO",
+      "quellen": [
+        "§ 261 StPO",
+        "Art. 6 Abs. 2 EMRK",
+        "Themenpool: stpo-784"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.975Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-532",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Rechtsfähige GbR: Vertragspartner ist die Gesellschaft selbst",
+      "text": "Die GbR kann selbst Rechte erwerben und Verbindlichkeiten eingehen, wenn sie nach dem gemeinsamen Willen der Gesellschafter am Rechtsverkehr teilnehmen soll (§ 705 Abs. 2 BGB). Gegenüber Dritten entsteht sie spätestens, wenn sie mit Zustimmung aller am Rechtsverkehr teilnimmt (§ 719 BGB). Vertreten wird sie grundsätzlich von allen Gesellschaftern gemeinsam (§ 720 Abs. 1 BGB).",
+      "norm": "§§ 705 Abs. 2, 719, 720 BGB",
+      "quellen": [
+        "§ 705 Abs. 2 BGB",
+        "§ 719 BGB",
+        "§ 720 BGB",
+        "Themenpool: handelsg-532"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.975Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-831",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Titel auf Auskunft: Ersatzvornahme durch einen Dritten?",
+      "falsch": "Der Schuldner muss Auskunft erteilen – das kann auch ein Dritter, also vollstreckt der Gläubiger nach § 887 ZPO.",
+      "richtigText": "Eine Auskunft kann in der Regel nur der Schuldner geben, denn nur er kennt die Tatsachen. Sie ist unvertretbar: Vollstreckt wird nach § 888 ZPO durch Zwangsgeld oder Zwangshaft. Das Zwangsgeld fließt an die Staatskasse, nicht an den Gläubiger. § 887 ZPO passt nur, wenn ein Dritter die Handlung genauso vornehmen kann.",
+      "quellen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "Themenpool: zwangsv-831"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.975Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-086",
+      "ueberzeile": "Klausurtipp Staatsrecht",
+      "titel": "Subvention ohne Gesetz? Erst fragen: Eingriff oder Leistung",
+      "text": "Für Eingriffe braucht die Verwaltung stets eine gesetzliche Grundlage. Bei Leistungen wie Subventionen lässt die Rspr. regelmäßig einen Ansatz im Haushaltsplan genügen. Grenze ist die Wesentlichkeitslehre: Berührt die Förderung Grundrechte erheblich – etwa die von Konkurrenten oder im Pressebereich –, kann ein Parlamentsgesetz nötig sein.",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-086"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:38:09.975Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

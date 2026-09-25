@@ -1,0 +1,879 @@
+{
+  "datum": "2027-03-29",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "assessoroer-850",
+        "themaTitel": "Wie läuft die Verwaltungsvollstreckung in der Behördenklausur?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "assessorz-806",
+        "themaTitel": "Wie tenoriert man ein Zivilurteil vollständig?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-734",
+        "themaTitel": "Unterlassen: Garantenstellung",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "grundr-139"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "grundr-139"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "verwbt-112"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "tipp",
+        "themaId": "vwgo-666"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:03",
+        "art": "zahl",
+        "themaId": "assessorz-818"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "streitstand",
+        "themaId": "streit-20"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "assessoroer-850",
+      "poolTitel": "Wie läuft die Verwaltungsvollstreckung in der Behördenklausur?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwVG; Landesrecht"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-12-26",
+        "2027-02-26"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "assessorz-806",
+      "poolTitel": "Wie tenoriert man ein Zivilurteil vollständig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 1 ZPO",
+        "§§ 91 ff. ZPO",
+        "§§ 708 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2026-12-05",
+        "2027-02-05"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-734",
+      "poolTitel": "Unterlassen: Garantenstellung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-139",
+      "poolTitel": "Wann ist die Meinungsfreiheit eingeschränkt?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 Abs. 1 GG",
+        "Art. 5 Abs. 2 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-01-04",
+        "2027-01-04"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-139",
+      "poolTitel": "Wann ist die Meinungsfreiheit eingeschränkt?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 Abs. 1 GG",
+        "Art. 5 Abs. 2 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2027-01-04",
+        "2027-01-04"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-112",
+      "poolTitel": "Was ist das Gebot der Rücksichtnahme?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 15 BauNVO",
+        "§ 34 Abs. 1 BauGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2027-01-09"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "vwgo-666",
+      "poolTitel": "Anordnung der sofortigen Vollziehung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 II Nr. 4, III VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2027-03-12"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "assessorz-818",
+      "poolTitel": "Was bewirkt die Streitverkündung im Folgeprozess?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 72 ff. ZPO",
+        "§ 74 ZPO",
+        "§ 68 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-03",
+        "2027-01-17"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "streit-20",
+      "poolTitel": "Rechtsscheinvollmacht: Duldungs- und Anscheinsvollmacht im Umfang der Haftung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 164, 170 ff. BGB analog"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-850",
+      "slug": "2027-03-29-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Widerspruch erhoben – darf die Behörde noch vollstrecken?",
+          "titelZeilen": [
+            "Widerspruch",
+            "erhoben – darf die",
+            "Behörde noch",
+            "vollstrecken?"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Erst vollstreckbar, dann Zwangsgeld",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Stadt gibt E auf, ein ungenehmigtes Werbeschild binnen vier Wochen zu entfernen, und droht für den Fall der Nichtbefolgung ein Zwangsgeld von 500 € an. E legt fristgerecht Widerspruch ein und lässt das Schild stehen. Darf die Stadt das Zwangsgeld jetzt festsetzen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Stufen der Vollstreckung",
+          "schritte": [
+            {
+              "titel": "1. Vollstreckbarer Grundverwaltungsakt",
+              "text": "Unanfechtbar oder sofort vollziehbar: Sofortvollzug angeordnet oder Rechtsbehelf ohne aufschiebende Wirkung (§ 6 Abs. 1 VwVG)."
+            },
+            {
+              "titel": "2. Androhung",
+              "text": "Schriftlich, mit angemessener Frist und bestimmtem Zwangsmittel, beim Zwangsgeld mit Betrag (§ 13 VwVG)."
+            },
+            {
+              "titel": "3. Festsetzung",
+              "text": "Erst wenn die Frist aus der Androhung fruchtlos verstrichen ist (§ 14 VwVG)."
+            },
+            {
+              "titel": "4. Anwendung",
+              "text": "Das festgesetzte Zwangsmittel wird durchgesetzt (§ 15 VwVG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Der Widerspruch hat aufschiebende Wirkung (§ 80 Abs. 1 VwGO). Die Verfügung ist weder unanfechtbar noch sofort vollziehbar – festgesetzt werden darf nicht. Hätte die Stadt die sofortige Vollziehung angeordnet (§ 80 Abs. 2 S. 1 Nr. 4 VwGO) und nach § 80 Abs. 3 S. 1 VwGO begründet, wäre das anders."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Androhung wird ausführlich geprüft, die Vollstreckbarkeit der Grundverfügung nicht. Sie steht am Anfang: Solange ein Rechtsbehelf aufschiebende Wirkung hat, wird nicht vollstreckt. Auf ihre Rechtmäßigkeit kommt es im gestreckten Verfahren nach h.M. grundsätzlich nicht an."
+        },
+        {
+          "art": "text",
+          "titel": "Für den Bescheid in der Behördenklausur",
+          "punkte": [
+            "Ziffer 1: die Grundverfügung, hinreichend bestimmt",
+            "Ziffer 2: sofortige Vollziehung – nur wenn nötig, gesondert begründet",
+            "Ziffer 3: Androhung des Zwangsmittels mit Frist und Betrag",
+            "Landesbehörden: Normen aus dem Landesvollstreckungsrecht – die Stufen sind vergleichbar"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vollstreckt wird nur aus einem unanfechtbaren oder sofort vollziehbaren Verwaltungsakt – dann androhen, festsetzen, anwenden."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Festsetzung prüfen",
+          "punkte": [
+            "Grundverfügung vollstreckbar?",
+            "Ordnungsgemäß angedroht?",
+            "Frist fruchtlos verstrichen?"
+          ],
+          "icons": [
+            "dokument",
+            "warnung",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Widerspruch erhoben – und die Behörde will schon das Zwangsgeld festsetzen? Das geht nur, wenn die Grundverfügung vollstreckbar ist: unanfechtbar oder sofort vollziehbar (§ 6 Abs. 1 VwVG, im Landesrecht vergleichbar). Der Widerspruch hat grundsätzlich aufschiebende Wirkung (§ 80 Abs. 1 VwGO) – ohne angeordneten Sofortvollzug ist die Vollstreckung gesperrt. Danach gilt: androhen, festsetzen, anwenden. Speichern für die nächste Behördenklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsvollstreckung",
+        "#vwvg",
+        "#behördenklausur",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vollstrecken trotz Widerspruch?",
+      "coverText": "Erst vollstreckbar, dann Zwangsgeld",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Vollstreckt wird erst, wenn die Grundverfügung vollstreckbar ist.",
+        "handlung": "{A} hovers with a heavy stamp raised above a sealed order, while {B} nervously points at a small pause lever on the order that is still switched on.",
+        "hinweisRegie": "Place the note in the open space between the raised stamp and the pause lever, slightly tilted toward the lever, so the suspended effect is linked to the note without covering {B}'s pointing hand.",
+        "alternative": "{B} tries to wind up a coin-launching machine, but {A} blocks the crank with a small padlock that only opens once the order is final."
+      },
+      "bildSzene": "droid stamp halted by pause lever",
+      "bildSzeneAlt": "coin machine crank locked by padlock",
+      "quellen": [
+        "§§ 6, 13, 14, 15 VwVG",
+        "§ 80 Abs. 1, 2, 3 VwGO",
+        "Verwaltungsvollstreckungsgesetze der Länder",
+        "Themenpool: assessoroer-850"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.185Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-806",
+      "slug": "2027-03-29-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Teilerfolg: Das Urteil ist in beide Richtungen vollstreckbar",
+          "titelZeilen": [
+            "Teilerfolg: Das",
+            "Urteil ist in beide",
+            "Richtungen",
+            "vollstreckbar"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Vollstreckbarkeit für jede Partei",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Urteilsformel (§ 313 Abs. 1 Nr. 4 ZPO) muss aus sich heraus verständlich und vollstreckbar sein. Sie hat drei Teile: Hauptsache, Kosten, vorläufige Vollstreckbarkeit. Beispiel: K klagt 10.000 € ein, zugesprochen werden 6.000 €."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Hauptsache",
+              "text": "„Der Beklagte wird verurteilt, an den Kläger 6.000 € nebst Zinsen … zu zahlen. Im Übrigen wird die Klage abgewiesen.“"
+            },
+            {
+              "titel": "2. Kosten",
+              "text": "Von Amts wegen (§ 308 Abs. 2 ZPO). Bei Teilerfolg Quote nach § 92 Abs. 1 ZPO: Kläger 40 %, Beklagter 60 %."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Vorläufige Vollstreckbarkeit",
+              "text": "Für jede Partei, die etwas vollstrecken kann: der Kläger Hauptsache und Kostenanteil, der Beklagte seinen Kostenanteil."
+            },
+            {
+              "titel": "Welche Norm?",
+              "text": "Über den Grenzen des § 708 Nr. 11 ZPO: § 709 ZPO gegen Sicherheitsleistung. Darunter: § 708 Nr. 11 mit Abwendungsbefugnis (§ 711 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Der Beklagte hat auch einen Titel",
+          "text": "Wer teilweise unterliegt, muss dem Gegner Kosten erstatten. Der Ausspruch zur Vollstreckbarkeit braucht dann oft zwei Hälften – etwa § 709 ZPO für den Kläger und §§ 708 Nr. 11, 711 ZPO für den Kostenanspruch des Beklagten. Welche Norm passt, entscheidet der jeweils vollstreckbare Betrag."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Hauptsache, Kosten, vorläufige Vollstreckbarkeit – und die Vollstreckbarkeit für jede Partei durchdenken, die etwas vollstrecken kann."
+        },
+        {
+          "art": "cta",
+          "titel": "Tenor-Check in drei Zügen",
+          "punkte": [
+            "Hauptsache vollständig – auch „im Übrigen“",
+            "Kostenquote nach §§ 91, 92 ZPO",
+            "Vollstreckbarkeit für beide Parteien"
+          ],
+          "icons": [
+            "dokument",
+            "muenzen",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Teilweise gewonnen heißt: Beide Parteien haben etwas zu vollstrecken. Der Kläger die Hauptsache und seinen Kostenanteil, der Beklagte seinen Kostenerstattungsanspruch. Der Tenor braucht deshalb drei vollständige Teile – Hauptsache mit „im Übrigen“, Kostenquote nach § 92 ZPO und eine Vollstreckbarkeitsentscheidung, die beide Seiten erfasst (§§ 708 ff. ZPO). Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#urteilstenor",
+        "#vollstreckbarkeit",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zivilurteil: den Tenor vollständig bauen",
+      "coverText": "Vollstreckbarkeit für jede Partei",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Bei Teilerfolg können beide Parteien aus demselben Urteil etwas vollstrecken.",
+        "handlung": "{A} and {B} each hold one end of a long carrying pole with two unequal crystal baskets hanging from it, both reaching for the basket closest to them.",
+        "hinweisRegie": "Place the note in the free space between the two unequal baskets, slightly tilted toward the smaller one, so it shows that both sides get something without covering {A}'s or {B}'s hands.",
+        "alternative": "{B} splits a glowing ore block into a larger and a smaller piece while {A} curiously labels which piece goes to which side."
+      },
+      "bildSzene": "two figures share pole with unequal baskets",
+      "bildSzeneAlt": "ore block split into two pieces",
+      "quellen": [
+        "§ 313 Abs. 1 Nr. 4 ZPO",
+        "§ 308 Abs. 2 ZPO",
+        "§§ 91, 92 ZPO",
+        "§§ 708, 709, 711 ZPO",
+        "Themenpool: assessorz-806"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.185Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-734",
+      "slug": "2027-03-29-b3",
+      "titelZeilen": [
+        "Wer helfen könnte,",
+        "ist noch",
+        "kein Garant"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Wer helfen könnte, ist noch kein Garant",
+          "unter": "Unterlassen · § 13 StGB",
+          "text": "§ 13 StGB verlangt eine Rechtspflicht zum Handeln – eine moralische genügt nicht.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "icon": "person",
+          "sprecher": "Wer helfen könnte, ist noch lange kein Garant. Paragraf 13 StGB verlangt, dass du rechtlich dafür einzustehen hast, dass der Erfolg nicht eintritt. Eine moralische Pflicht reicht nicht.",
+          "marken": [
+            "rechtlich einstehen",
+            "nicht moralisch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Standort im Aufbau",
+          "text": "Objektiver Tatbestand: nach Erfolg, Unterlassen und Quasi-Kausalität.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "sprecher": "Schritt eins: der Standort. Die Garantenstellung prüfst du im objektiven Tatbestand, nach dem Erfolg, dem Unterlassen der möglichen Handlung und der Quasi-Kausalität. Danach folgt die Entsprechungsklausel.",
+          "marken": [
+            "objektiver Tatbestand"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beschützergarant",
+          "text": "Schutzpflicht für ein bestimmtes Rechtsgut.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Beschützergarant. Er muss ein bestimmtes Rechtsgut gegen Gefahren schützen. Typisch sind enge familiäre Verbundenheit, etwa von Eltern gegenüber ihren Kindern, und die tatsächliche Übernahme von Schutzpflichten, etwa durch die Babysitterin.",
+          "marken": [
+            "Schutz des Rechtsguts"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Überwachergarant",
+          "text": "Verantwortung für eine Gefahrenquelle – auch aus Ingerenz.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Überwachergarant. Er muss eine Gefahrenquelle überwachen, etwa ein baufälliges Haus oder einen bissigen Hund. Dazu gehört die Ingerenz: Wer durch sein Vorverhalten eine nahe Gefahr schafft, wird Garant. Nach Rechtsprechung und herrschender Meinung muss dieses Vorverhalten pflichtwidrig sein.",
+          "marken": [
+            "Gefahrenquelle",
+            "Ingerenz"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Notwehr begründet keine Ingerenz",
+          "text": "Wer rechtmäßig abwehrt, wird nicht Garant – § 323c StGB bleibt möglich.",
+          "norm": "§ 32 StGB · § 323c StGB",
+          "sprecher": "Daraus folgt der Klassiker: Wer in Notwehr zusticht, handelt rechtmäßig und wird nach dem BGH nicht aus Ingerenz zum Garanten. Lässt er den Angreifer liegen, bleibt aber die unterlassene Hilfeleistung.",
+          "marken": [
+            "rechtmäßig = kein Garant"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Rechtspflicht als Beschützer oder Überwacher – Ingerenz nur bei pflichtwidrigem Vorverhalten.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "sprecher": "Merke: Garant ist nur, wer rechtlich einstehen muss, als Beschützer oder als Überwacher. Und Ingerenz setzt pflichtwidriges Vorverhalten voraus.",
+          "marken": [
+            "Rechtspflicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jedem Unterlassen fragen: Woher kommt die Pflicht?",
+          "text": "Speichern für die nächste Unterlassungsprüfung.",
+          "sprecher": "Speicher dir das für die nächste Unterlassungsprüfung. Und nenn immer die konkrete Quelle der Garantenpflicht.",
+          "marken": [
+            "Quelle nennen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Wer helfen könnte, ist noch kein Garant. § 13 StGB verlangt eine Rechtspflicht, den Erfolg abzuwenden – als Beschützergarant für ein bestimmtes Rechtsgut oder als Überwachergarant für eine Gefahrenquelle. Ingerenz setzt nach Rspr. und h.M. pflichtwidriges Vorverhalten voraus: Wer in Notwehr handelt, wird dadurch nicht zum Garanten. Dann bleibt § 323c StGB. Speichern für die nächste Unterlassungsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#unterlassen",
+        "#13stgb",
+        "#garantenstellung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Garantenstellung: Rechtspflicht statt Moral",
+      "coverText": "Moralpflicht reicht nicht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Garant ist nur, wer rechtlich zum Schutz oder zur Überwachung verpflichtet ist.",
+        "handlung": "{A} stands at a narrow bridge holding a safety rope tied to a small child figure, while {B} points his stick at a crowd of onlookers who merely watch from the side.",
+        "hinweisRegie": "Place the note in the open space beside the safety rope, slightly tilted toward {A}'s grip, so the legal duty is linked to the rope and the onlookers stay visible.",
+        "alternative": "{B} holds a leash of a restless creature while {A} checks whether the fence around it was left open."
+      },
+      "bildSzene": "expedition leader holds safety rope, onlookers watch",
+      "bildSzeneAlt": "professor holds leash near open fence",
+      "quellen": [
+        "§ 13 StGB",
+        "§ 32 StGB",
+        "§ 323c StGB",
+        "Themenpool: strafat-734"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-139",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Harte Polemik gegen eine Politikerin: Wann darf das Gericht ohne Abwägung für die Ehre entscheiden?",
+      "optionen": [
+        "Immer, wenn die Äußerung ehrverletzend ist",
+        "Nie – Politiker müssen jede Kritik hinnehmen",
+        "Nur bei Schmähkritik, Formalbeleidigung, Menschenwürdeangriff"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 5 Abs. 1, 2 GG",
+        "§ 185 StGB",
+        "§ 193 StGB",
+        "Themenpool: grundr-139"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.186Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-139",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur in drei eng begrenzten Ausnahmefällen",
+      "text": "Der Ehrschutz über §§ 185 ff. StGB schränkt die Meinungsfreiheit ein (Art. 5 Abs. 2 GG), muss aber in ihrem Licht angewandt werden. Grundsätzlich ist deshalb im Einzelfall abzuwägen. Entbehrlich ist das nur bei Schmähkritik, Formalbeleidigung oder Angriff auf die Menschenwürde – eng verstanden. Überspitzung und Polemik allein genügen nicht.",
+      "norm": "Art. 5 Abs. 1, 2 GG · §§ 185, 193 StGB",
+      "quellen": [
+        "Art. 5 Abs. 1, 2 GG",
+        "§ 185 StGB",
+        "§ 193 StGB",
+        "Themenpool: grundr-139"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.187Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Immer, wenn die Äußerung ehrverletzend ist",
+        "Nie – Politiker müssen jede Kritik hinnehmen",
+        "Nur bei Schmähkritik, Formalbeleidigung, Menschenwürdeangriff"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-112",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 15 Abs. 1 S. 2 BauNVO: Rücksichtnahme wirkt in beide Richtungen",
+      "text": "Unzulässig ist nicht nur ein Vorhaben, von dem unzumutbare Belästigungen oder Störungen ausgehen, sondern auch eines, das solchen Störungen selbst ausgesetzt würde – etwa ein Wohnhaus, das an einen emittierenden Betrieb heranrückt. So schützt das Gebot auch den vorhandenen Betrieb. Im unbeplanten Innenbereich steckt es im Einfügen nach § 34 Abs. 1 BauGB.",
+      "norm": "§ 15 Abs. 1 S. 2 BauNVO · § 34 Abs. 1 BauGB",
+      "quellen": [
+        "§ 15 Abs. 1 BauNVO",
+        "§ 34 Abs. 1 BauGB",
+        "Themenpool: verwbt-112"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-666",
+      "ueberzeile": "Klausurtipp VwGO",
+      "titel": "Sofortvollzug angreifen: nicht mit Widerspruch, sondern über § 80 Abs. 5 VwGO",
+      "text": "Die Anordnung nach § 80 Abs. 2 S. 1 Nr. 4 VwGO ist nach h.M. kein Verwaltungsakt, sondern eine verfahrensrechtliche Nebenentscheidung. Folgen: Rechtsschutz über § 80 Abs. 5 VwGO, und eine gesonderte Anhörung verlangt die h.M. nicht (a.A.: § 28 VwVfG analog). Formell prüfst du Zuständigkeit und die schriftliche Begründung nach § 80 Abs. 3 S. 1 VwGO.",
+      "quellen": [
+        "§ 80 Abs. 2 S. 1 Nr. 4, Abs. 3, Abs. 5 VwGO",
+        "§ 28 VwVfG",
+        "Themenpool: vwgo-666"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-818",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Interventionswirkung: Was der Streitverkündete im Folgeprozess nicht mehr bestreiten kann",
+      "text": "Der Streitverkünder hat den Vorprozess verloren und nimmt den Dritten in Regress. Diese vier Punkte prüfst du im Folgeprozess:",
+      "punkte": [
+        "Streitverkündung zulässig (§ 72 ZPO) – geprüft erst jetzt",
+        "Wirkung auch ohne Beitritt (§ 74 Abs. 3 ZPO)",
+        "Bindung an die tragenden Feststellungen, nicht nur an den Tenor (§ 68 ZPO)",
+        "Nur zulasten des Dritten; Einrede mangelhafter Prozessführung beachten"
+      ],
+      "quellen": [
+        "§ 72 ZPO",
+        "§ 74 ZPO",
+        "§ 68 ZPO",
+        "Themenpool: assessorz-818"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "streit-20",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Anscheinsvollmacht: Bindung oder nur Vertrauensschaden?",
+      "norm": "§§ 164, 170 ff. BGB analog",
+      "optionen": [
+        "Rspr. (BGH): Der Vertretene ist gebunden wie bei erteilter Vollmacht.",
+        "Teile der Lit.: Außerhalb des Handelsverkehrs nur Vertrauensschaden (§§ 280 I, 311 II BGB)."
+      ],
+      "text": "Anders als bei der Duldung kennt der Vertretene das Handeln nicht, hätte es aber erkennen und verhindern können. Klausur: Rechtsschein, Zurechenbarkeit, guter Glaube, Kausalität – den Streit erst bei der Rechtsfolge.",
+      "quellen": [
+        "§ 164 BGB",
+        "§§ 170–173 BGB",
+        "§§ 280 Abs. 1, 311 Abs. 2 BGB"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:21:34.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

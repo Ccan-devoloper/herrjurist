@@ -1,0 +1,898 @@
+{
+  "datum": "2027-03-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "schuldbt-196",
+        "themaTitel": "Wann darf der Mieter die Miete mindern?",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-721",
+        "themaTitel": "Tatbestandsirrtum",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "assessoroer-709"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "assessoroer-709"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "strafbt-136"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "fehler",
+        "themaId": "verwalt-930"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "tipp",
+        "themaId": "schuld-184"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:19",
+        "art": "zahl",
+        "themaId": "revision-877"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuldbt-196",
+      "poolTitel": "Wann darf der Mieter die Miete mindern?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 536 BGB",
+        "§ 536b BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-09-22",
+        "2026-12-19"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-721",
+      "poolTitel": "Tatbestandsirrtum",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 16 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessoroer-709",
+      "poolTitel": "Widerspruchsbescheid: Tenor, Gründe, Kosten",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§§ 68 ff. VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessoroer-709",
+      "poolTitel": "Widerspruchsbescheid: Tenor, Gründe, Kosten",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§§ 68 ff. VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-136",
+      "poolTitel": "Was ist der Unterschied zwischen Raub und räuberischem Diebstahl?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 252 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-16",
+        "2027-02-23"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "verwalt-930",
+      "poolTitel": "Wann beginnt die Jahresfrist des § 48 Abs. 4 VwVfG?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 Abs. 4 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2027-01-08"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "schuld-184",
+      "poolTitel": "Was ist die Einrede des nicht erfüllten Vertrages?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 320 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-22"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "revision-877",
+      "poolTitel": "Wie baut man eine Verfahrensrüge auf?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO",
+        "§ 344 StPO",
+        "§ 274 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-23",
+        "2026-12-17"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-03-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen, vier Bereiche – ein Schnelltest",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen, vier",
+            "Bereiche – ein",
+            "Schnelltest"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Abstraktionsprinzip: Kauf nichtig, Übereignung wirksam – zurück über § 812 BGB.",
+            "§ 107 BGB: Schenkung und Übereignung getrennt prüfen; nachteilige Erfüllung sperrt die Eltern.",
+            "Annahmeverzug: Angebot plus Nichtannahme – ohne Verschulden.",
+            "§ 123 BGB: Wer im Lager des Partners verhandelt, ist kein Dritter.",
+            "Tatbestand: Beweisaufnahme als Prozessgeschichte, Würdigung in die Gründe."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Fahrlässigkeit: ohne Pflichtwidrigkeitszusammenhang keine Zurechnung.",
+            "Untauglicher Versuch strafbar, Wahndelikt straflos.",
+            "§ 244 Abs. 1 Nr. 3 StGB: Diebstahlsvorsatz schon beim Einbrechen.",
+            "Notwehrprovokation: Absicht, Vorwurf oder erlaubt – geprüft bei der Gebotenheit.",
+            "Beihilfe: Dabeistehen und Billigen fördert die Tat nicht."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Art. 79 Abs. 3 GG: geschützt sind Grundsätze, nicht Artikelnummern.",
+            "Wissenschaftsfreiheit: auch für Hochschulen – Ausnahme zu Art. 19 Abs. 3 GG.",
+            "Aufenthaltsverbot: Art. 11 GG mit qualifiziertem Vorbehalt.",
+            "Art. 34 AEUV: Dassonville weit, Keck nur für neutrale Verkaufsmodalitäten.",
+            "Sofortvollzug: Begründung Pflicht, Anhörung nach h.M. nicht.",
+            "Ermessensfehler: meist Bescheidung, Vornahme nur bei Reduzierung auf Null."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Meinungsstreit: erst Ergebnisse vergleichen, nur bei Abweichung entscheiden.",
+            "Nach einer schwierigen Klausur: nicht nachbesprechen, abschließen, neu starten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Kaufvertrag nichtig: Verlangt V die Sache über § 985 oder § 812 BGB zurück?",
+            "A bricht ein, um sich zu verstecken, und stiehlt dann: § 244 StGB?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Verpflichtung und Verfügung",
+            "Strafrecht über Zurechnung und Vorsatz",
+            "Öffentliches Recht über Schranken",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – vom Abstraktionsprinzip über den Wohnungseinbruchdiebstahl bis zur Ermessensfehlerlehre. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch, mach den Selbsttest und notier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Schnelltest",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Am Wochenende zeigt ein kurzer Test, welche Themen schon sicher sitzen.",
+        "handlung": "{A} holds up four small lanterns one after another, while {B} nervously checks which of them flickers and taps it with a small wrench.",
+        "hinweisRegie": "Place the note in the free space above the flickering lantern, slightly tilted toward it, so it marks the weak spot without covering {B}'s wrench or {A}'s pointer.",
+        "alternative": "{B} pulls four drawers of a small cabinet open in turn, while {A} marks the one that sticks."
+      },
+      "bildSzene": "four lanterns, one flickers",
+      "bildSzeneAlt": "cabinet drawer that sticks",
+      "quellen": [
+        "Art. 79 GG",
+        "§§ 433, 929, 812 BGB",
+        "§§ 107, 181 BGB",
+        "§§ 293 ff., 286 BGB",
+        "§ 123 BGB",
+        "§ 313 ZPO",
+        "§§ 222, 229 StGB",
+        "§§ 22, 23 StGB",
+        "§ 244 StGB",
+        "§ 32 StGB",
+        "§ 27 StGB",
+        "Art. 5 Abs. 3 GG",
+        "Art. 11 GG",
+        "Art. 34, 36 AEUV",
+        "§ 80 VwGO",
+        "§ 114 VwGO",
+        "§ 40 VwVfG",
+        "Themenpool: methodik-938",
+        "Themenpool: mindset-1"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-196",
+      "slug": "2027-03-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Mietminderung: fünf Schritte – im vierten stecken die Ausschlüsse",
+          "titelZeilen": [
+            "Mietminderung:",
+            "fünf Schritte – im",
+            "vierten stecken die",
+            "Ausschlüsse"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Minderung kraft Gesetzes",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Miete mindert sich kraft Gesetzes, solange die Mietsache mangelhaft ist (§ 536 Abs. 1 BGB). Der Mieter muss nichts erklären. Geprüft wird trotzdem sauber – und die meisten Fälle entscheiden sich bei den Ausschlussgründen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Mietvertrag",
+              "text": "Wirksamer Mietvertrag nach § 535 BGB, Mietsache überlassen oder zu überlassen."
+            },
+            {
+              "titel": "2. Mangel",
+              "text": "Ist weicht vom vertraglich geschuldeten Soll ab (§ 536 Abs. 1 BGB), zugesicherte Eigenschaft fehlt (Abs. 2) oder Rechtsmangel (Abs. 3)."
+            },
+            {
+              "titel": "3. Erheblichkeit",
+              "text": "Eine unerhebliche Minderung der Tauglichkeit bleibt außer Betracht (§ 536 Abs. 1 S. 3 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Kein Ausschluss",
+              "text": "Kenntnis bei Vertragsschluss, vorbehaltlose Annahme (§ 536b BGB), fehlende Mängelanzeige (§ 536c Abs. 2 BGB), selbst verursachter Mangel."
+            },
+            {
+              "titel": "5. Rechtsfolge",
+              "text": "Tauglichkeit aufgehoben: keine Miete. Gemindert: angemessen herabgesetzte Miete – nach dem BGH aus der Bruttomiete berechnet."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweise",
+          "punkte": [
+            "Grob fahrlässige Unkenntnis schadet, außer der Vermieter hat arglistig verschwiegen (§ 536b S. 2 BGB).",
+            "Energetische Modernisierung: drei Monate keine Minderung (§ 536 Abs. 1a BGB).",
+            "Wohnraum: Abweichende Vereinbarungen zulasten des Mieters sind unwirksam (§ 536 Abs. 4 BGB)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vertrag, Mangel, erheblich, kein Ausschluss – dann mindert sich die Miete von selbst. Die Ausschlüsse nie überspringen."
+        },
+        {
+          "art": "cta",
+          "titel": "Mietminderung in fünf Zügen",
+          "punkte": [
+            "Mietvertrag und Mangel",
+            "Erheblich?",
+            "§§ 536b, 536c BGB geprüft?",
+            "Minderung aus der Bruttomiete"
+          ],
+          "icons": [
+            "haus",
+            "lupe",
+            "warnung",
+            "rechner"
+          ]
+        }
+      ],
+      "caption": "Mietminderung in fünf Schritten: Mietvertrag, Mangel, Erheblichkeit, kein Ausschluss, Rechtsfolge. Die Minderung tritt kraft Gesetzes ein – entschieden wird der Fall aber oft im vierten Schritt: Kenntnis bei Vertragsschluss oder vorbehaltlose Annahme (§ 536b BGB), unterlassene Mängelanzeige (§ 536c Abs. 2 BGB). Berechnet wird nach dem BGH aus der Bruttomiete. Speichern für die nächste Mietrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#mietrecht",
+        "#536bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mietminderung: das Prüfschema",
+      "coverText": "Minderung kraft Gesetzes",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Ein Mangel senkt die Miete von selbst – außer ein Ausschlussgrund steht im Weg.",
+        "handlung": "{A} watches a stack of rent coins shrink on its own as water drips from a leaking ceiling, while {B} hovers nearby holding a small stop sign over one coin.",
+        "hinweisRegie": "Place the note in the free space beside {B}'s stop sign and the shrinking coin stack, slightly tilted toward the sign, so it marks the exclusion step without covering the leak or {A}'s face.",
+        "alternative": "{B} weighs a rent purse on a scale that dips as a crack appears in the wall, while {A} checks an old signed receipt for known damage."
+      },
+      "bildSzene": "rent coins shrink under leaking ceiling",
+      "bildSzeneAlt": "scale dips as wall cracks",
+      "quellen": [
+        "§ 535 BGB",
+        "§ 536 BGB",
+        "§ 536b BGB",
+        "§ 536c BGB",
+        "Themenpool: schuldbt-196"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-schritte-verortung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.777Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-721",
+      "slug": "2027-03-14-b3",
+      "titelZeilen": [
+        "Er hielt den",
+        "Menschen für ein",
+        "Wildschwein –",
+        "kein Totschlag"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Er hielt den Menschen für ein Wildschwein – kein Totschlag",
+          "unter": "Tatbestandsirrtum · § 16 StGB",
+          "text": "Wer einen Tatumstand nicht kennt, handelt ohne Vorsatz.",
+          "norm": "§ 16 Abs. 1 StGB",
+          "icon": "zielscheibe",
+          "sprecher": "Er hielt den Menschen für ein Wildschwein. Kein Totschlag. Jäger J schießt in der Dämmerung auf eine Bewegung im Gebüsch, dort steht aber ein Pilzsammler. Die Lösung steht in Paragraf 16 StGB.",
+          "marken": [
+            "kein Vorsatz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Tatumstand nicht gekannt",
+          "text": "„Einen Menschen“ gehört zum Tatbestand des § 212 StGB – J weiß das nicht.",
+          "norm": "§ 16 Abs. 1 S. 1 StGB",
+          "sprecher": "Schritt eins: Wer bei der Tat einen Umstand nicht kennt, der zum gesetzlichen Tatbestand gehört, handelt nicht vorsätzlich. Beim Totschlag ist das: einen Menschen. J glaubt, auf ein Tier zu schießen.",
+          "marken": [
+            "Tatumstand"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Fahrlässigkeit bleibt",
+          "text": "Der Vorsatz entfällt, die Fahrlässigkeitsstrafbarkeit nicht.",
+          "norm": "§ 16 Abs. 1 S. 2 StGB · § 222 StGB",
+          "sprecher": "Schritt zwei: Die Strafbarkeit wegen fahrlässiger Begehung bleibt unberührt. Du prüfst also fahrlässige Tötung nach Paragraf 222.",
+          "marken": [
+            "§ 222 prüfen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Normative Merkmale",
+          "text": "Parallelwertung in der Laiensphäre: Die soziale Bedeutung muss erfasst sein.",
+          "norm": null,
+          "sprecher": "Schritt drei: Bei normativen Merkmalen wie fremd oder Urkunde musst du nicht juristisch richtig subsumieren. Es reicht, dass der Täter die soziale Bedeutung erfasst, die sogenannte Parallelwertung in der Laiensphäre.",
+          "marken": [
+            "Laiensphäre"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Abgrenzung: Subsumtionsirrtum",
+          "text": "Tatsachen gekannt, rechtlich falsch eingeordnet: Vorsatz bleibt.",
+          "norm": "§ 17 StGB",
+          "sprecher": "Schritt vier: die Abgrenzung. Kennt der Täter alle Tatsachen und ordnet sie nur rechtlich falsch ein, bleibt der Vorsatz. Klassiker: Der Kellner ergänzt Striche auf dem Bierdeckel und meint, das sei keine Urkunde. Subsumtionsirrtum, allenfalls Paragraf 17.",
+          "marken": [
+            "Vorsatz bleibt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Absatz 2 nicht vergessen",
+          "text": "Nimmt der Täter irrig mildernde Umstände an, wird er nur aus dem milderen Gesetz bestraft.",
+          "norm": "§ 16 Abs. 2 StGB",
+          "sprecher": "Und Absatz zwei: Wer irrig Umstände annimmt, die ein milderes Gesetz erfüllen würden, wird nur nach diesem bestraft. Hält der Täter etwa ein ausdrückliches Tötungsverlangen für gegeben, das es nicht gab, gilt Paragraf 216.",
+          "marken": [
+            "milderes Gesetz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Tatsache verkannt: § 16, Vorsatz weg. Recht verkannt: Vorsatz bleibt, § 17.",
+          "norm": "§§ 16, 17 StGB",
+          "sprecher": "Merke: Tatsache verkannt, Vorsatz weg nach Paragraf 16. Nur das Recht verkannt, Vorsatz bleibt, weiter bei Paragraf 17.",
+          "marken": [
+            "Tatsache vs. Recht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Jagdfall abrufen",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur und prüf nach dem Vorsatz immer gleich das Fahrlässigkeitsdelikt mit.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Er hielt den Menschen für ein Wildschwein – kein Totschlag. Wer einen Umstand nicht kennt, der zum gesetzlichen Tatbestand gehört, handelt ohne Vorsatz (§ 16 Abs. 1 S. 1 StGB); die Fahrlässigkeitsstrafbarkeit bleibt (§ 16 Abs. 1 S. 2 StGB), hier § 222 StGB. Anders beim Subsumtionsirrtum: Wer alle Tatsachen kennt und nur rechtlich falsch einordnet, handelt vorsätzlich. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#vorsatz",
+        "#16stgb",
+        "#tatbestandsirrtum",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 16 StGB: Tatumstand nicht gekannt",
+      "coverText": "Tatsache oder Recht verkannt?",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer nicht erkennt, dass er auf einen Menschen zielt, handelt nicht vorsätzlich – kann aber fahrlässig handeln.",
+        "handlung": "{B} peers through a dusky thicket at a rustling shape she takes for a boar, while {A} steps out of the bushes holding a basket of mushrooms and raises a hand.",
+        "hinweisRegie": "Place the note in the free space between {B}'s line of sight and the rustling bushes, slightly tilted toward the mushroom picker, so it marks the mistaken perception without covering faces.",
+        "alternative": "{A} holds a pair of foggy binoculars showing a boar silhouette, while {B} wipes the lens clear to reveal a person."
+      },
+      "bildSzene": "dusky thicket, boar shape is mushroom picker",
+      "bildSzeneAlt": "foggy binoculars wiped, person revealed",
+      "quellen": [
+        "§ 16 StGB",
+        "§ 17 StGB",
+        "§ 212 StGB",
+        "§ 216 StGB",
+        "§ 222 StGB",
+        "§ 267 StGB",
+        "Themenpool: strafat-721"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkreter-fall-konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.779Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-709",
+      "ueberzeile": "Prüfungsfrage 2. Examen ÖR",
+      "titel": "Der Widerspruch des W hat vollen Erfolg. Wer muss W seine notwendigen Aufwendungen erstatten?",
+      "optionen": [
+        "W selbst – die Kosten trägt stets, wer Widerspruch einlegt",
+        "Niemand – das Vorverfahren ist immer kostenfrei",
+        "Der Rechtsträger der Ausgangsbehörde (§ 80 Abs. 1 S. 1 VwVfG)"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 80 VwVfG",
+        "§ 73 Abs. 3 VwGO",
+        "Themenpool: assessoroer-709"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.779Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-709",
+      "ueberzeile": "Auflösung",
+      "titel": "Der Rechtsträger der Behörde, die den Bescheid erlassen hat",
+      "text": "Soweit der Widerspruch Erfolg hat, erstattet der Rechtsträger der Ausgangsbehörde die notwendigen Aufwendungen (§ 80 Abs. 1 S. 1 VwVfG bzw. Landes-VwVfG). Die Kostenentscheidung gehört in den Widerspruchsbescheid (§ 73 Abs. 3 S. 3 VwGO) – samt Ausspruch, ob ein Anwalt notwendig war (§ 80 Abs. 3 S. 2 VwVfG).",
+      "norm": "§ 80 VwVfG · § 73 Abs. 3 S. 3 VwGO",
+      "quellen": [
+        "§ 80 VwVfG",
+        "§ 73 Abs. 3 VwGO",
+        "Themenpool: assessoroer-709"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.779Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "W selbst – die Kosten trägt stets, wer Widerspruch einlegt",
+        "Niemand – das Vorverfahren ist immer kostenfrei",
+        "Der Rechtsträger der Ausgangsbehörde (§ 80 Abs. 1 S. 1 VwVfG)"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-136",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 249 StGB: Die Gewalt muss der Wegnahme dienen",
+      "text": "Raub verlangt einen Finalzusammenhang: Gewalt gegen eine Person oder Drohung mit gegenwärtiger Gefahr für Leib oder Leben wird eingesetzt, um die Wegnahme zu ermöglichen. Schlägt A den O aus Wut nieder und nimmt erst danach spontan dessen Handy, fehlt dieser Zusammenhang. Gewalt nach vollendeter Wegnahme, um die Beute zu sichern: § 252 StGB.",
+      "norm": "§ 249 Abs. 1 StGB",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 252 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-136"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.779Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-930",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "§ 48 Abs. 4 VwVfG: Gilt die Jahresfrist auch, wenn die Behörde nur das Recht falsch angewandt hat?",
+      "falsch": "Die Jahresfrist betrifft nur neu bekannt gewordene Tatsachen – bei bloß falscher Rechtsanwendung gilt sie nicht.",
+      "richtigText": "Nach dem Großen Senat des BVerwG gilt § 48 Abs. 4 S. 1 VwVfG auch bei Rechtsanwendungsfehlern. Sie ist eine Entscheidungsfrist: Sie beginnt erst, wenn die zuständige Behörde alle für die Rücknahme erheblichen Tatsachen vollständig kennt. Keine Frist bei Arglist, Drohung oder Bestechung (§ 48 Abs. 4 S. 2 VwVfG).",
+      "quellen": [
+        "§ 48 Abs. 4 VwVfG",
+        "Themenpool: verwalt-930"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.779Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-184",
+      "ueberzeile": "Klausurtipp Schuldrecht",
+      "titel": "§ 320 oder § 273 BGB? Erst das Gegenseitigkeitsverhältnis prüfen",
+      "text": "§ 320 BGB gilt nur für Pflichten im Synallagma, etwa Ware gegen Kaufpreis. Für sonstige fällige Gegenansprüche bleibt das Zurückbehaltungsrecht nach § 273 BGB. Wer vorleisten muss, kann § 320 BGB nicht erheben. Bei Teilleistung: kein Verweigern, soweit es gegen Treu und Glauben verstößt (§ 320 Abs. 2 BGB).",
+      "quellen": [
+        "§ 320 BGB",
+        "§ 273 BGB",
+        "§ 322 BGB",
+        "Themenpool: schuld-184"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.779Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-877",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Beweisantrag abgelehnt: So baust du die Verfahrensrüge auf",
+      "text": "Das Revisionsgericht prüft die Rüge nur anhand der Begründung (§ 344 Abs. 2 S. 2 StPO).",
+      "punkte": [
+        "Verletzte Norm benennen, etwa § 244 Abs. 3 StPO",
+        "Antrag und Ablehnungsbeschluss im Wortlaut mitteilen",
+        "Darlegen, warum der Ablehnungsgrund nicht trägt",
+        "Beruhen: Urteil hätte anders ausfallen können (§ 337 StPO)"
+      ],
+      "quellen": [
+        "§ 244 Abs. 3 StPO",
+        "§ 337 StPO",
+        "§ 344 Abs. 2 StPO",
+        "§ 274 StPO",
+        "Themenpool: revision-877"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:12.779Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

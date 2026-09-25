@@ -1,0 +1,865 @@
+{
+  "datum": "2027-04-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "assessoroer-711",
+        "themaTitel": "Urteilsklausur Verwaltungsgericht",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-498",
+        "themaTitel": "Gutgläubiger Erwerb beweglicher Sachen",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-324",
+        "themaTitel": "Wann liegt ein Gewahrsamsbruch trotz Einverständnis vor?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:01",
+        "art": "frage",
+        "themaId": "verwbt-689"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:01",
+        "art": "antwort",
+        "themaId": "verwbt-689"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "europa-416"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:33",
+        "art": "streitstand",
+        "themaId": "zpo-917"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "merksatz",
+        "themaId": "sachen-227"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "begriff",
+        "themaId": "anklage-796"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "assessoroer-711",
+      "poolTitel": "Urteilsklausur Verwaltungsgericht",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "sachen-498",
+      "poolTitel": "Gutgläubiger Erwerb beweglicher Sachen",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 932 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-15",
+        "2027-03-20",
+        "2027-03-20"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-324",
+      "poolTitel": "Wann liegt ein Gewahrsamsbruch trotz Einverständnis vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-17",
+        "2026-11-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwbt-689",
+      "poolTitel": "Organe der Gemeinde und Zuständigkeiten",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Gemeindeordnung des Landes"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwbt-689",
+      "poolTitel": "Organe der Gemeinde und Zuständigkeiten",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Gemeindeordnung des Landes"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "europa-416",
+      "poolTitel": "Was ist die richtlinienkonforme Auslegung und wo endet sie?",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 288 AEUV"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2026-11-22",
+        "2027-02-05"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "zpo-917",
+      "poolTitel": "Gewillkürter Parteiwechsel: Nach welchen Regeln kommt die neue Partei in den Prozess?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 263 ZPO",
+        "§ 269 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2026-12-08",
+        "2027-02-06"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "sachen-227",
+      "poolTitel": "Wer ist Hersteller im Sinne des § 950 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 950 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "anklage-796",
+      "poolTitel": "Plädoyer der Staatsanwaltschaft",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-26"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-711",
+      "slug": "2027-04-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ermessen noch offen: Wie tenorierst du die Verpflichtung?",
+          "titelZeilen": [
+            "Ermessen noch offen:",
+            "Wie tenorierst du",
+            "die Verpflichtung?"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Bescheiden statt verpflichten",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K beantragt eine Sondernutzungserlaubnis für Tische vor seinem Café. Die Behörde lehnt ab, ohne ihr Ermessen auszuüben. Auf null reduziert ist das Ermessen nicht. K beantragt, die Behörde zur Erteilung zu verpflichten. Was tenoriert das Verwaltungsgericht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Spruchreife prüfen",
+              "text": "Zur Vornahme verpflichtet das Gericht nur, wenn die Sache spruchreif ist (§ 113 Abs. 5 S. 1 VwGO)."
+            },
+            {
+              "titel": "Ermessen bleibt bei der Behörde",
+              "text": "Das Gericht prüft Ermessen nur auf Fehler (§ 114 S. 1 VwGO) und übt es nicht selbst aus. Ohne Reduzierung auf null fehlt die Spruchreife."
+            },
+            {
+              "titel": "Bescheidungsurteil",
+              "text": "Verpflichtung zur erneuten Entscheidung unter Beachtung der Rechtsauffassung des Gerichts (§ 113 Abs. 5 S. 2 VwGO)."
+            },
+            {
+              "titel": "Teilunterliegen",
+              "text": "K wollte mehr: Klage im Übrigen abweisen, Kosten nach § 155 Abs. 1 VwGO verteilen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Tenor",
+          "text": "„Der Bescheid vom … wird aufgehoben. Der Beklagte wird verpflichtet, über den Antrag des Klägers vom … unter Beachtung der Rechtsauffassung des Gerichts erneut zu entscheiden. Im Übrigen wird die Klage abgewiesen.“ Dann Kosten (§ 155 I) und Vollstreckbarkeit wegen der Kosten (§ 167 II VwGO)."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Voll verpflichten, obwohl nur Bescheidung möglich ist – oder die Bescheidung tenorieren und das „Im Übrigen“ vergessen. Wer Verpflichtung beantragt und nur Bescheidung erhält, unterliegt teilweise. Das muss sich im Tenor und in der Kostenentscheidung zeigen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ermessen offen, Sache nicht spruchreif: bescheiden statt verpflichten – und den Rest der Klage abweisen."
+        },
+        {
+          "art": "cta",
+          "titel": "Tenor-Check in drei Zügen",
+          "punkte": [
+            "Spruchreif – oder Ermessen offen?",
+            "Verpflichtung oder Bescheidung?",
+            "Im Übrigen abweisen, Kosten teilen"
+          ],
+          "icons": [
+            "lupe",
+            "richter",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Die Behörde hat ihr Ermessen gar nicht ausgeübt – verpflichtet das Verwaltungsgericht dann zur Erteilung? Nur wenn die Sache spruchreif ist (§ 113 Abs. 5 S. 1 VwGO). Bleibt Ermessen offen, ergeht ein Bescheidungsurteil nach § 113 Abs. 5 S. 2 VwGO: neu entscheiden unter Beachtung der Rechtsauffassung des Gerichts. Hat der Kläger Verpflichtung beantragt, wird die Klage im Übrigen abgewiesen – mit Folgen für die Kosten. Speichern für die nächste Urteilsklausur im Referendariat.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#113vwgo",
+        "#tenor",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Bescheidungsurteil: Tenor bei offenem Ermessen",
+      "coverText": "Bescheiden statt verpflichten",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Solange die Behörde noch Ermessen hat, schickt das Gericht die Sache mit einer Anleitung zurück, statt selbst zu entscheiden.",
+        "handlung": "{A} hovers over a desk and hands a returned file back toward an empty office chair, while {B} pins a small instruction note onto the file with his pointer.",
+        "hinweisRegie": "Place the note in the free space above the returned file, slightly tilted toward the empty chair, so it reads as a decision sent back for renewal without covering {B}'s pointer or the file.",
+        "alternative": "{B} holds a half-finished puzzle and hands the last pieces back to {A}, who must place them himself."
+      },
+      "bildSzene": "droid returns file with pinned instruction",
+      "bildSzeneAlt": "last puzzle pieces handed back",
+      "quellen": [
+        "§ 113 Abs. 5 VwGO",
+        "§ 114 S. 1 VwGO",
+        "§ 155 Abs. 1 VwGO",
+        "§ 167 Abs. 2 VwGO",
+        "Themenpool: assessoroer-711"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "tenorfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.536Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-498",
+      "slug": "2027-04-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Freiwillig überlassen – und doch abhandengekommen",
+          "titelZeilen": [
+            "Freiwillig überlassen",
+            "– und doch",
+            "abhandengekommen"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Besitzdiener ist kein Besitzer",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Angestellter L darf den Firmenlaptop seines Arbeitgebers E für die Arbeit nutzen. L verkauft ihn an K, der L ohne grobe Fahrlässigkeit für den Eigentümer hält, und übergibt ihn. Wird K Eigentümer?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Einigung und Übergabe (§ 929 S. 1 BGB)",
+              "text": "L und K einigen sich, L übergibt. Aber L ist nicht Eigentümer – es geht um gutgläubigen Erwerb."
+            },
+            {
+              "titel": "Guter Glaube (§ 932 BGB)",
+              "text": "K kennt das fehlende Eigentum nicht und verkennt es nicht grob fahrlässig."
+            },
+            {
+              "titel": "Abhandengekommen? (§ 935 Abs. 1 BGB)",
+              "text": "Unfreiwilliger Verlust des unmittelbaren Besitzes. Unmittelbarer Besitzer war E – L war nur Besitzdiener (§ 855 BGB)."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Gibt der Besitzdiener die Sache eigenmächtig weg, ist sie dem Besitzherrn nach h.M. abhandengekommen. K wird nicht Eigentümer."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wer hatte den unmittelbaren Besitz?",
+          "links": {
+            "titel": "Besitzdiener (§ 855)",
+            "punkte": [
+              "Angestellter mit Weisungsbindung – Besitzer bleibt der Chef.",
+              "Weggabe ohne Willen des Chefs: abhandengekommen."
+            ]
+          },
+          "rechts": {
+            "titel": "Entleiher, Mieter",
+            "punkte": [
+              "Eigener unmittelbarer Besitz, E hat nur mittelbaren.",
+              "E gab den Besitz freiwillig weg: gutgläubiger Erwerb möglich."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„E hat L den Laptop freiwillig gegeben, also ist er nicht abhandengekommen.“ Das trägt nur, wenn L eigenen Besitz hatte – wie ein Entleiher. Beim Besitzdiener kommt es auf den Willen des Besitzherrn an."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 935 BGB fragt nach dem unmittelbaren Besitzer. Beim Besitzdiener ist das der Besitzherr – gibt der Diener eigenmächtig weg, ist die Sache abhandengekommen."
+        },
+        {
+          "art": "cta",
+          "titel": "Gutgläubiger Erwerb in drei Fragen",
+          "punkte": [
+            "Einigung und Übergabe?",
+            "Erwerber gutgläubig?",
+            "Wer war unmittelbarer Besitzer?"
+          ],
+          "icons": [
+            "handschlag",
+            "lupe",
+            "laptop"
+          ]
+        }
+      ],
+      "caption": "Der Arbeitgeber hat dem Angestellten den Laptop freiwillig überlassen – kann K ihn dann gutgläubig erwerben? Nicht, wenn der Angestellte nur Besitzdiener war. Unmittelbarer Besitzer bleibt nach § 855 BGB der Arbeitgeber; gibt der Besitzdiener die Sache eigenmächtig weg, ist sie ihm nach h.M. abhandengekommen (§ 935 Abs. 1 BGB). Anders beim Entleiher oder Mieter: Dort wurde der Besitz freiwillig übertragen. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#932bgb",
+        "#935bgb",
+        "#gutgläubigererwerb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 935 BGB: Besitzdiener gibt die Sache weg",
+      "coverText": "Besitzdiener ist kein Besitzer",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Wer nur für einen anderen den Besitz ausübt, kann die Sache nicht wirksam aus dessen Besitz weggeben.",
+        "handlung": "{B} secretly hands a company laptop over a counter to a smiling buyer, while {A} watches from a doorway behind with a still-attached work badge dangling from the laptop.",
+        "hinweisRegie": "Place the note in the free space between the dangling work badge and the doorway, slightly tilted toward the badge, so it links the laptop to its real holder without covering the buyer or {B}'s hands.",
+        "alternative": "{A} lends a lantern to {B}, who later sells it, while a second lantern is carried off by a helper wearing a uniform of {A}'s workshop."
+      },
+      "bildSzene": "employee hands company laptop to buyer",
+      "bildSzeneAlt": "lent lantern versus helper's lantern",
+      "quellen": [
+        "§ 929 S. 1 BGB",
+        "§ 932 BGB",
+        "§ 935 Abs. 1 BGB",
+        "§ 855 BGB",
+        "Themenpool: sachen-498"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.536Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-324",
+      "slug": "2027-04-07-b3",
+      "titelZeilen": [
+        "In der Diebesfalle",
+        "gibt es keinen",
+        "Gewahrsamsbruch"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "In der Diebesfalle gibt es keinen Gewahrsamsbruch",
+          "unter": "Diebstahl · § 242 StGB",
+          "text": "Einverständnis schließt den Bruch aus – auch wenn es der Überführung dient.",
+          "norm": "§ 242 Abs. 1 StGB",
+          "icon": "detektiv",
+          "sprecher": "Wer in die Diebesfalle tappt, bricht keinen Gewahrsam. Klingt paradox, folgt aber direkt aus dem Begriff der Wegnahme. Vier Schritte.",
+          "marken": [
+            "kein Bruch",
+            "Diebesfalle"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Wegnahme heißt Bruch fremden Gewahrsams",
+          "text": "Gewahrsam ohne oder gegen den Willen des Inhabers aufheben, neuen begründen.",
+          "norm": "§ 242 Abs. 1 StGB",
+          "sprecher": "Schritt eins: Wegnahme ist der Bruch fremden und die Begründung neuen, nicht notwendig tätereigenen Gewahrsams. Bruch heißt: ohne oder gegen den Willen des bisherigen Gewahrsamsinhabers.",
+          "marken": [
+            "ohne seinen Willen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Einverständnis schließt den Bruch aus",
+          "text": "Wirkt tatbestandsausschließend; es zählt der tatsächliche Wille.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Ist der Gewahrsamsinhaber einverstanden, fehlt der Bruch. Das Einverständnis schließt schon den Tatbestand aus. Es kommt auf seinen tatsächlichen, natürlichen Willen an.",
+          "marken": [
+            "tatsächlicher Wille"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Einverständnis kann bedingt sein",
+          "text": "Etwa beim Warenautomaten: nur bei ordnungsgemäßer Bedienung.",
+          "norm": null,
+          "sprecher": "Schritt drei: Das Einverständnis kann an Bedingungen geknüpft sein. Beim Warenautomaten gilt es nur für die ordnungsgemäße Bedienung. Wer mit Falschgeld oder Draht manipuliert, bricht den Gewahrsam doch.",
+          "marken": [
+            "nur bei Bedingung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Diebesfalle",
+          "text": "Der Inhaber will, dass der Täter nimmt – kein Bruch, nur Versuch.",
+          "norm": "§§ 242, 22 StGB",
+          "sprecher": "Schritt vier: die Diebesfalle. Legt der Inhaber präparierte Scheine aus, um den Täter zu überführen, ist er nach herrschender Meinung mit dem Gewahrsamswechsel einverstanden. Es fehlt der Bruch. Weil der Täter sich einen Bruch vorstellt, bleibt ein versuchter Diebstahl.",
+          "marken": [
+            "nur Versuch"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Abgrenzen: Beobachten allein reicht nicht",
+          "text": "Wer den Dieb nur beobachtet, ist deshalb nicht einverstanden. Bei der Falle: § 246 StGB prüfen.",
+          "norm": "§ 246 StGB",
+          "sprecher": "Abgrenzen musst du das vom bloßen Beobachten: Wer den Dieb nur sieht, ist deshalb noch nicht einverstanden. Und bei der Falle zusätzlich an Unterschlagung denken, Paragraf 246.",
+          "marken": [
+            "§ 246 prüfen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Einverstanden heißt: kein Bruch – in der Falle bleibt nur der Versuch.",
+          "norm": "§ 242 StGB",
+          "sprecher": "Merke: Einverständnis heißt kein Bruch. In der Diebesfalle bleibt deshalb nur der versuchte Diebstahl.",
+          "marken": [
+            "Einverständnis"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Was wollte der Inhaber?",
+          "text": "Speichern für die nächste Diebstahlsprüfung.",
+          "sprecher": "Speicher dir das für die nächste Diebstahlsprüfung. Und frag bei jeder Wegnahme zuerst: Was wollte der Gewahrsamsinhaber wirklich?",
+          "marken": [
+            "Wille des Inhabers"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Scheine waren präpariert, der Dieb greift zu – vollendeter Diebstahl? Nach h.M. nicht: Wer eine Diebesfalle stellt, ist mit dem Gewahrsamswechsel einverstanden, und das Einverständnis schließt den Bruch und damit die Wegnahme aus. Weil der Täter sich einen Bruch vorstellt, bleibt ein versuchter Diebstahl; daneben ist § 246 StGB zu prüfen. Bloßes Beobachten ist dagegen kein Einverständnis.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#242stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Diebesfalle: Einverständnis statt Bruch",
+      "coverText": "Einverständnis → nur Versuch",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer den Dieb bewusst zugreifen lässt, um ihn zu überführen, ist mit dem Gewahrsamswechsel einverstanden.",
+        "handlung": "{A} deliberately places a glowing marked coin pouch on a crate and steps back into the shadows, while {B} watches a hand reach for it and points out the glowing marks.",
+        "hinweisRegie": "Place the note in the free space above the marked pouch, slightly tilted toward {A} in the shadows, so it connects the trap with her intention without covering the reaching hand.",
+        "alternative": "{B} leaves a door deliberately unlocked with a small bell attached, while {A} waits calmly behind a curtain with a lantern."
+      },
+      "bildSzene": "marked coin pouch placed as trap",
+      "bildSzeneAlt": "unlocked door with bell, waiting lantern",
+      "quellen": [
+        "§ 242 Abs. 1 StGB",
+        "§§ 22, 23 StGB",
+        "§ 246 StGB",
+        "BGHSt 4, 199 (Diebesfalle)",
+        "Themenpool: strafbt-324"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.538Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-689",
+      "ueberzeile": "Prüfungsfrage Kommunalrecht",
+      "titel": "Wer entscheidet in der Gemeinde über Geschäfte der laufenden Verwaltung, etwa den Kauf von Büromaterial?",
+      "optionen": [
+        "Stets der Gemeinderat – er ist das Hauptorgan der Gemeinde",
+        "Die Verwaltungsspitze, meist der Bürgermeister, in eigener Zuständigkeit",
+        "Die Kommunalaufsichtsbehörde"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-689"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.538Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-689",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Verwaltungsspitze – laufende Geschäfte sind nicht Sache des Rats",
+      "text": "Die Gemeindeordnungen kennen im Kern zwei Organe: die gewählte Vertretung (Gemeinderat) als Hauptorgan für die grundlegenden Entscheidungen und die Verwaltungsspitze, meist den Bürgermeister. Er leitet die Verwaltung, vollzieht Beschlüsse und erledigt die laufenden Geschäfte. In Hessen etwa liegt die laufende Verwaltung beim Gemeindevorstand. Details je nach Landesrecht.",
+      "norm": "Gemeindeordnung des Landes",
+      "quellen": [
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-689"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.538Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Stets der Gemeinderat – er ist das Hauptorgan der Gemeinde",
+        "Die Verwaltungsspitze, meist der Bürgermeister, in eigener Zuständigkeit",
+        "Die Kommunalaufsichtsbehörde"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-416",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 288 Abs. 3 AEUV: Richtlinienkonform auslegen – aber nicht contra legem",
+      "text": "Gerichte legen nationales Recht so weit wie möglich im Licht der Richtlinie aus, jedenfalls ab Ablauf der Umsetzungsfrist. Grenze: keine Auslegung contra legem. Der BGH erlaubt darüber hinaus eine richtlinienkonforme Rechtsfortbildung, etwa durch teleologische Reduktion, wenn der Gesetzgeber richtlinienkonform umsetzen wollte – so beim Nutzungsersatz im Verbrauchsgüterkauf.",
+      "norm": "Art. 288 Abs. 3 AEUV · Art. 4 Abs. 3 EUV",
+      "quellen": [
+        "Art. 288 Abs. 3 AEUV",
+        "Art. 4 Abs. 3 EUV",
+        "Themenpool: europa-416"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.538Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-917",
+      "ueberzeile": "Streitstand Zivilprozess",
+      "titel": "Beklagtenwechsel erst in der Berufung: Nach welchen Regeln kommt der neue Beklagte hinein?",
+      "norm": "§§ 263, 269 ZPO analog",
+      "optionen": [
+        "Rspr.: Behandlung wie eine Klageänderung (§§ 263 ff. ZPO analog).",
+        "Teile der Lit.: eigenes Institut, Voraussetzungen aus §§ 263, 269 ZPO entlehnt."
+      ],
+      "text": "Klausur: Der alte Beklagte muss nach Verhandlungsbeginn zustimmen (§ 269 Abs. 1 ZPO analog). In der Berufung verlangt der BGH auch die Zustimmung des neuen – er verliert eine Instanz –, außer die Weigerung ist missbräuchlich.",
+      "quellen": [
+        "§ 263 ZPO",
+        "§ 269 Abs. 1 ZPO",
+        "Themenpool: zpo-917"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.538Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-227",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "§ 950 BGB: Hersteller ist nicht, wer die Hand anlegt",
+      "text": "Hersteller ist, in wessen Namen und Interesse nach der Verkehrsauffassung verarbeitet wird: der Betriebsinhaber, nicht der Arbeitnehmer. Verarbeitungsklauseln lässt der BGH zu – streitig.",
+      "norm": "§ 950 Abs. 1 BGB",
+      "quellen": [
+        "§ 950 BGB",
+        "Themenpool: sachen-227"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.538Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-796",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Schlussvortrag: Die Staatsanwaltschaft plädiert zuerst – notfalls auf Freispruch",
+      "text": "Nach der Beweisaufnahme erhalten Staatsanwaltschaft und dann Angeklagter das Wort zu Ausführungen und Anträgen (§ 258 Abs. 1 StPO). Das Plädoyer würdigt, was die Hauptverhandlung ergeben hat – nicht die Akte. Weil die StA auch Entlastendes ermittelt (§ 160 Abs. 2 StPO), kann ihr Antrag auf Freispruch lauten. Das letzte Wort hat der Angeklagte.",
+      "norm": "§ 258 StPO",
+      "quellen": [
+        "§ 258 StPO",
+        "§ 160 Abs. 2 StPO",
+        "Themenpool: anklage-796"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:53.538Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

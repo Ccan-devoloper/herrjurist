@@ -1,0 +1,860 @@
+{
+  "datum": "2027-04-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "sachen-501",
+        "themaTitel": "Verarbeitung, Verbindung und Vermischung",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-310",
+        "themaTitel": "Wann liegt eine Anstiftung und wann psychische Beihilfe vor?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-380",
+        "themaTitel": "Wann ist ein Verwaltungsakt formell rechtswidrig und wann heilbar?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:07",
+        "art": "frage",
+        "themaId": "grundr-614"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:07",
+        "art": "antwort",
+        "themaId": "grundr-614"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "bgbat-149"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "merksatz",
+        "themaId": "stpo-077"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:54",
+        "art": "begriff",
+        "themaId": "ipr-891"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "fehler",
+        "themaId": "stpo-926"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "sachen-501",
+      "poolTitel": "Verarbeitung, Verbindung und Vermischung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 946 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-310",
+      "poolTitel": "Wann liegt eine Anstiftung und wann psychische Beihilfe vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 26 StGB",
+        "§ 27 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2026-09-17"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-380",
+      "poolTitel": "Wann ist ein Verwaltungsakt formell rechtswidrig und wann heilbar?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 45 VwVfG",
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2027-02-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-614",
+      "poolTitel": "Meinungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 I 1 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-614",
+      "poolTitel": "Meinungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 I 1 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-149",
+      "poolTitel": "Was gilt, wenn der Zugang einer Willenserklärung vereitelt wird?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "stpo-077",
+      "poolTitel": "Wann darf ohne richterliche Anordnung durchsucht werden?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 102 StPO",
+        "§ 105 StPO",
+        "Art. 13 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02",
+        "2027-01-22",
+        "2027-01-26"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "ipr-891",
+      "poolTitel": "Welches Recht gilt für eine unerlaubte Handlung im Ausland?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 Rom II-VO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-10-28",
+        "2027-02-20"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "stpo-926",
+      "poolTitel": "Wann erlauben §§ 100a, 100b StPO Telekommunikationsüberwachung und Online-Durchsuchung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "Art. 10 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17",
+        "2026-12-18",
+        "2027-02-20"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-501",
+      "slug": "2027-04-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Fenster eingebaut: Der Eigentumsvorbehalt ist weg",
+          "titelZeilen": [
+            "Fenster eingebaut:",
+            "Der Eigentums-",
+            "vorbehalt ist weg"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 946 BGB ist zwingend",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "V liefert Fenster unter Eigentumsvorbehalt an Bauunternehmer U. U baut sie in das Haus des E ein; E zahlt U den vereinbarten Werklohn. U zahlt V nicht und wird insolvent. V verlangt von E die Fenster heraus – hilfsweise Geld."
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung: § 985 BGB",
+          "schritte": [
+            {
+              "titel": "V war Eigentümer",
+              "text": "Wegen des Eigentumsvorbehalts blieb V bis zur vollständigen Zahlung Eigentümer (§§ 929, 158 Abs. 1, 449 BGB)."
+            },
+            {
+              "titel": "Einbau als Verbindung",
+              "text": "Zur Herstellung eines Gebäudes eingefügte Sachen sind wesentliche Bestandteile des Grundstücks (§ 94 Abs. 2 BGB)."
+            },
+            {
+              "titel": "Rechtsfolge des § 946 BGB",
+              "text": "Das Eigentum am Grundstück erstreckt sich auf die Fenster; Sonderrechte gibt es nicht (§ 93 BGB). E ist Eigentümer."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Kurzschluss",
+          "text": "„V hat sich doch das Eigentum vorbehalten.“ Das hilft nicht: § 946 BGB ist zwingend und fragt weder nach Vereinbarungen noch nach gutem Glauben. Der Vorbehalt schützt V nur, solange die Sache selbstständig bleibt."
+        },
+        {
+          "art": "text",
+          "titel": "Und der Ausgleich?",
+          "text": "§ 951 Abs. 1 S. 1 BGB verweist auf das Bereicherungsrecht. Gegen E scheitert V nach h.M. trotzdem: E hat die Fenster durch Leistung des U erlangt – diese Leistungsbeziehung hat Vorrang. Zudem hätte der gutgläubige E sie bei einer Übereignung erworben (§ 932 BGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "V hat gegen E weder einen Anspruch aus § 985 BGB noch aus §§ 951, 812 BGB. Er ist auf U verwiesen – in der Insolvenz meist wertlos. Absichern kann sich V etwa mit einem verlängerten Eigentumsvorbehalt, also der Vorausabtretung der Werklohnforderung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eingebaut ist eingebaut: § 946 BGB bricht den Eigentumsvorbehalt. Ausgleich über § 951 BGB – gegen den gutgläubigen Bauherrn meist nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Verbindung in drei Zügen",
+          "punkte": [
+            "Wesentlicher Bestandteil (§§ 93, 94 BGB)?",
+            "Eigentum kraft § 946 BGB",
+            "Ausgleich: § 951 BGB und der Vorrang der Leistung"
+          ],
+          "icons": [
+            "haus",
+            "schluessel",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Unter Eigentumsvorbehalt geliefert, eingebaut – und das Eigentum ist weg. Mit dem Einbau werden die Fenster wesentlicher Bestandteil des Grundstücks (§ 94 Abs. 2 BGB), der Grundstückseigentümer wird nach § 946 BGB Eigentümer. Den Ausgleich über § 951 BGB verweigert die h.M. gegenüber dem gutgläubigen Bauherrn, der die Fenster durch Leistung des Unternehmers erhalten hat. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#eigentumsvorbehalt",
+        "#946bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Einbau bricht Eigentumsvorbehalt",
+      "coverText": "§ 946 BGB ist zwingend",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Sobald eine Sache fest in ein Gebäude eingebaut ist, gehört sie dem Grundstückseigentümer – ein Eigentumsvorbehalt ändert daran nichts.",
+        "handlung": "{A} fits a heavy crystal window pane firmly into a stone wall, while {B} lifts a small tag on a string from the pane that now dangles loose and useless.",
+        "hinweisRegie": "Place the note in the free space right beside the dangling tag, slightly tilted toward the fitted pane, so the lost reservation is linked to the installed window without covering {A}'s hands.",
+        "alternative": "{B} tries to pull a single brick back out of a finished wall, while {A} shows the wall would collapse."
+      },
+      "bildSzene": "pane fitted into wall, tag dangling",
+      "bildSzeneAlt": "brick pulled from finished wall",
+      "quellen": [
+        "§ 946 BGB",
+        "§§ 93, 94 BGB",
+        "§ 449 BGB",
+        "§ 951 BGB",
+        "§ 812 BGB",
+        "§ 932 BGB",
+        "Themenpool: sachen-501"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.705Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-310",
+      "slug": "2027-04-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schon entschlossen: Wer ihn bestärkt, stiftet nicht an",
+          "titelZeilen": [
+            "Schon entschlossen:",
+            "Wer ihn bestärkt,",
+            "stiftet nicht an"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Entschluss wecken oder bestärken",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "T hat fest beschlossen, seinen Konkurrenten O zu verprügeln, und erzählt es A. A hält T noch für unentschlossen und redet auf ihn ein: „Mach das, der hat es verdient.“ T schlägt zu (§ 223 StGB). Wie hat sich A strafbar gemacht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Anstiftung, § 26 StGB",
+              "text": "Anstiften heißt, den Tatentschluss hervorrufen. T war schon fest entschlossen (omnimodo facturus) – A hat nichts mehr hervorgerufen."
+            },
+            {
+              "titel": "Versuchte Anstiftung?",
+              "text": "§ 30 Abs. 1 StGB erfasst nur Verbrechen. § 223 StGB ist ein Vergehen – insoweit straflos."
+            },
+            {
+              "titel": "Psychische Beihilfe, § 27 StGB",
+              "text": "A hat den bestehenden Entschluss bestärkt. Sein Anstiftungsvorsatz umfasst als Weniger den Gehilfenvorsatz."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Kurzschluss",
+          "text": "„A hat T überredet, also Anstiftung.“ Entscheidend ist aber nicht, was A bewirken wollte, sondern ob er den Entschluss tatsächlich hervorgerufen hat. Beim fest Entschlossenen bleibt nur psychische Beihilfe – und die verlangt eine wirkliche Bestärkung, nicht bloße Anwesenheit."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "A ist nicht wegen Anstiftung, sondern wegen Beihilfe zur Körperverletzung strafbar (§§ 223 Abs. 1, 27 StGB); die Strafe ist nach §§ 27 Abs. 2, 49 Abs. 1 StGB zu mildern. Wäre die Tat ein Verbrechen, müsstest du zusätzlich § 30 Abs. 1 StGB prüfen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anstiften heißt Entschluss wecken. Wer einen fest Entschlossenen bestärkt, leistet psychische Beihilfe."
+        },
+        {
+          "art": "cta",
+          "titel": "Anstiftung oder Beihilfe?",
+          "punkte": [
+            "War der Täter schon entschlossen?",
+            "Verbrechen: § 30 Abs. 1 StGB?",
+            "Wurde der Entschluss wirklich bestärkt?"
+          ],
+          "icons": [
+            "person",
+            "paragraf",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Schon entschlossen – wer den Täter dann noch bestärkt, stiftet nicht an. Anstiftung (§ 26 StGB) heißt, den Tatentschluss hervorzurufen; beim omnimodo facturus geht das nicht mehr. Übrig bleibt psychische Beihilfe (§ 27 StGB), und bei Verbrechen zusätzlich die versuchte Anstiftung nach § 30 Abs. 1 StGB. Speichern für die nächste AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#anstiftung",
+        "#beihilfe",
+        "#26stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Omnimodo facturus: Beihilfe statt Anstiftung",
+      "coverText": "Entschluss wecken oder bestärken",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Wer jemanden bestärkt, der schon fest entschlossen ist, hat den Entschluss nicht geweckt – er hilft nur.",
+        "handlung": "{A} is already striding firmly toward a distant gate, while {B} runs alongside, cheering and pushing a small encouraging banner into the air.",
+        "hinweisRegie": "Place the note in the free space between {A}'s determined stride and {B}'s banner, slightly tilted toward {A}, so the already-made decision stays visible without covering the banner.",
+        "alternative": "{A} has already lit a lantern, and {B} merely shields its flame from the wind with both hands."
+      },
+      "bildSzene": "determined stride, cheering banner alongside",
+      "bildSzeneAlt": "lit lantern, flame shielded",
+      "quellen": [
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "§ 30 Abs. 1 StGB",
+        "§ 223 StGB",
+        "§ 49 Abs. 1 StGB",
+        "Themenpool: strafat-310"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.705Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-380",
+      "slug": "2027-04-23-b3",
+      "titelZeilen": [
+        "Nachholen hilft –",
+        "nur nicht bei der",
+        "Zuständigkeit"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nachholen hilft – nur nicht bei der Zuständigkeit",
+          "unter": "Formelle Rechtmäßigkeit · § 45 VwVfG",
+          "text": "Anhörung und Begründung lassen sich nachholen – die sachliche Zuständigkeit nicht.",
+          "norm": "§ 45 VwVfG",
+          "icon": "gebaeude",
+          "sprecher": "Anhörung vergessen? Lässt sich nachholen. Die unzuständige Behörde dagegen nicht.",
+          "marken": [
+            "§ 45 VwVfG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Zuständigkeit",
+          "text": "Sachlich, örtlich, instanziell – die richtige Behörde muss handeln.",
+          "norm": null,
+          "sprecher": "Schritt eins: die Zuständigkeit. Sachlich, örtlich und instanziell muss die richtige Behörde entschieden haben. Das regelt meist das Fachrecht, die örtliche Zuständigkeit oft Paragraf 3 VwVfG.",
+          "marken": [
+            "richtige Behörde"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verfahren",
+          "text": "Vor allem die Anhörung vor belastenden Verwaltungsakten.",
+          "norm": "§ 28 VwVfG",
+          "sprecher": "Schritt zwei: das Verfahren. Klassiker ist die Anhörung vor einem belastenden Verwaltungsakt nach Paragraf 28. Dazu kommen Befangenheit und die Mitwirkung anderer Behörden.",
+          "marken": [
+            "Anhörung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Form",
+          "text": "Der schriftliche Verwaltungsakt braucht grundsätzlich eine Begründung.",
+          "norm": "§ 39 VwVfG",
+          "sprecher": "Schritt drei: die Form. Ein schriftlicher Verwaltungsakt braucht grundsätzlich eine Begründung nach Paragraf 39.",
+          "marken": [
+            "Begründung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Heilung",
+          "text": "Katalog des § 45 Abs. 1 – nachholbar bis zum Ende der letzten Tatsacheninstanz.",
+          "norm": "§ 45 Abs. 1, 2 VwVfG",
+          "sprecher": "Schritt vier: die Heilung. Paragraf 45 lässt nachholen: den Antrag, die Begründung, die Anhörung, den Ausschussbeschluss und die Mitwirkung einer anderen Behörde. Und zwar bis zum Abschluss der letzten Tatsacheninstanz des Verwaltungsprozesses.",
+          "marken": [
+            "fünf Fälle"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und § 46 VwVfG?",
+          "text": "Verfahren, Form, örtliche Zuständigkeit: keine Aufhebung, wenn offensichtlich ohne Einfluss.",
+          "norm": "§ 46 VwVfG",
+          "sprecher": "Was nicht geheilt ist, kann unbeachtlich sein. Paragraf 46 schließt den Aufhebungsanspruch aus bei Verstößen gegen Verfahren, Form und örtliche Zuständigkeit, wenn offensichtlich ist, dass sie die Entscheidung nicht beeinflusst haben. Bei Ermessen ist das selten offensichtlich.",
+          "marken": [
+            "offensichtlich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Lücke im System",
+          "text": "Sachlich unzuständig: weder § 45 noch § 46 VwVfG.",
+          "norm": null,
+          "sprecher": "Merke: Die sachliche Zuständigkeit taucht weder in Paragraf 45 noch in Paragraf 46 auf. Hat die sachlich unzuständige Behörde entschieden, bleibt der Verwaltungsakt rechtswidrig.",
+          "marken": [
+            "sachlich zuständig?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Anfechtungsklage",
+          "text": "Speichern und bei jedem Formverstoß ansehen.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Anfechtungsklage. Und prüf bei jedem formellen Verstoß erst Paragraf 45, dann Paragraf 46.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Anhörung vergessen? Lässt sich nach § 45 VwVfG nachholen – bis zum Abschluss der letzten Tatsacheninstanz. Verstöße gegen Verfahren, Form und örtliche Zuständigkeit können zudem nach § 46 VwVfG unbeachtlich sein. Die sachliche Zuständigkeit taucht in keiner der beiden Normen auf: Hat die falsche Behörde entschieden, bleibt der Verwaltungsakt rechtswidrig. Speichern für die nächste Anfechtungsklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#45vwvfg",
+        "#46vwvfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§§ 45, 46 VwVfG: was heilt, was nicht",
+      "coverText": "§ 45 heilt, § 46 entschuldigt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Manche Verfahrensschritte lassen sich nachholen, aber eine Entscheidung der sachlich falschen Stelle wird dadurch nicht richtig.",
+        "handlung": "{A} quickly patches a missing stamp onto a form, while {B} hovers beside him and holds up the whole form, which was issued at the wrong counter window.",
+        "hinweisRegie": "Place the note in the free space next to the wrong counter window, slightly tilted toward {B}'s raised form, so the wrong office stays visible without covering {A}'s patching hands.",
+        "alternative": "{A} repairs a loose hinge on a door, while {B} shows that the door belongs to an entirely different building."
+      },
+      "bildSzene": "stamp patched, wrong counter window",
+      "bildSzeneAlt": "hinge repaired, wrong building",
+      "quellen": [
+        "§ 28 VwVfG",
+        "§ 39 VwVfG",
+        "§ 45 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-380"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.706Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-614",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "A behauptet öffentlich eine Tatsache, von der er weiß, dass sie unwahr ist. Schützt ihn Art. 5 Abs. 1 S. 1 GG?",
+      "optionen": [
+        "Nein – bewusst unwahre Tatsachenbehauptungen sind nicht geschützt",
+        "Ja – die Grenze zieht erst Art. 5 Abs. 2 GG",
+        "Ja – Tatsachen und Meinungen sind stets gleich geschützt"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "Art. 5 Abs. 1 S. 1 GG",
+        "Art. 5 Abs. 2 GG",
+        "Themenpool: grundr-614"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.706Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-614",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – bewusste Unwahrheit fällt schon aus dem Schutzbereich",
+      "text": "Tatsachenbehauptungen schützt Art. 5 Abs. 1 S. 1 GG, weil sie Grundlage der Meinungsbildung sind. Bewusst unwahre Tatsachenbehauptungen tragen dazu nichts bei – nach dem BVerfG fallen sie nicht in den Schutzbereich. Ist die Unwahrheit nicht erwiesen oder ist die Äußerung mit Wertungen durchmischt, bleibt es beim Schutz; dann wird abgewogen.",
+      "norm": "Art. 5 Abs. 1 S. 1 GG",
+      "quellen": [
+        "Art. 5 Abs. 1 S. 1 GG",
+        "Themenpool: grundr-614"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.707Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – bewusst unwahre Tatsachenbehauptungen sind nicht geschützt",
+        "Ja – die Grenze zieht erst Art. 5 Abs. 2 GG",
+        "Ja – Tatsachen und Meinungen sind stets gleich geschützt"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-149",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 130 BGB: Wer den Zugang vereitelt, kann sich auf ihn nicht berufen",
+      "text": "Verweigert der Empfänger die Annahme grundlos, muss er sich nach Treu und Glauben (§ 242 BGB) so behandeln lassen, als sei die Erklärung zugegangen. Holt er ein Einschreiben nach Benachrichtigung nicht ab, verlangt die Rspr. regelmäßig einen unverzüglichen neuen Zustellversuch des Absenders – dann kann die Erklärung als rechtzeitig gelten.",
+      "norm": "§ 130 Abs. 1 S. 1 BGB · § 242 BGB",
+      "quellen": [
+        "§ 130 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-149"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.707Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-077",
+      "ueberzeile": "Merksatz StPO",
+      "titel": "Wer bewusst wartet, schafft keine Eilkompetenz",
+      "text": "Gefahr im Verzug heißt: Der Richter ist nicht rechtzeitig erreichbar. Wer mit dem Antrag wartet, bis Beweisverlust droht, kann sich nach dem BVerfG nicht darauf berufen.",
+      "norm": "§ 105 Abs. 1 S. 1 StPO",
+      "quellen": [
+        "§ 105 StPO",
+        "Art. 13 Abs. 2 GG",
+        "Themenpool: stpo-077"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.707Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-891",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Sicherheits- und Verhaltensregeln: Es zählen die Verkehrsregeln des Unfallorts",
+      "text": "Auch wenn für den Unfall ein anderes Recht gilt – etwa das Recht des gemeinsamen gewöhnlichen Aufenthalts nach Art. 4 Abs. 2 Rom II-VO –, sind die Sicherheits- und Verhaltensregeln am Ort des schadensbegründenden Ereignisses faktisch und soweit angemessen zu berücksichtigen (Art. 17 Rom II-VO). Beispiel: Tempolimit und Vorfahrt.",
+      "norm": "Art. 17 Rom II-VO",
+      "quellen": [
+        "Art. 4 Rom II-VO",
+        "Art. 17 Rom II-VO",
+        "Themenpool: ipr-891"
+      ],
+      "fachLabel": "IPR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.707Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-926",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Quellen-TKÜ: Darf die Polizei gleich alle gespeicherten Chats auslesen?",
+      "falsch": "Ist die Software für die Quellen-TKÜ erst einmal auf dem Handy, darf die Polizei auch alle älteren gespeicherten Chats auslesen – ist ja Telekommunikation.",
+      "richtigText": "Die Quellen-TKÜ (§ 100a Abs. 1 S. 2, 3 StPO) erfasst nur laufende Kommunikation und gespeicherte Inhalte, die ab der Anordnung auch während der Übertragung hätten überwacht werden können. Der Zugriff auf den übrigen Datenbestand ist Online-Durchsuchung – nur unter den strengeren Voraussetzungen des § 100b StPO.",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "Themenpool: stpo-926"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:39:10.707Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

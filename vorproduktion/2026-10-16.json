@@ -1,0 +1,832 @@
+{
+  "datum": "2026-10-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "sachen-229",
+        "themaTitel": "Wer ist Störer im Sinne des § 1004 BGB?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-325",
+        "themaTitel": "Wie prüft man den besonders schweren Fall des Diebstahls?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwbt-400",
+        "themaTitel": "Wann ist ein Bebauungsplan abwägungsfehlerhaft?",
+        "fach": "verwbt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "assessorz-580"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "assessorz-580"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:55",
+        "art": "norm",
+        "themaId": "verwbt-112"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "merksatz",
+        "themaId": "handelsg-272"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "begriff",
+        "themaId": "schuld-441"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "fehler",
+        "themaId": "assessorz-804"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "sachen-229",
+      "poolTitel": "Wer ist Störer im Sinne des § 1004 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1004 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-325",
+      "poolTitel": "Wie prüft man den besonders schweren Fall des Diebstahls?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 243 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwbt-400",
+      "poolTitel": "Wann ist ein Bebauungsplan abwägungsfehlerhaft?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 1 Abs. 7 BauGB",
+        "§ 214 BauGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-580",
+      "poolTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-580",
+      "poolTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-112",
+      "poolTitel": "Was ist das Gebot der Rücksichtnahme?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 15 BauNVO",
+        "§ 34 Abs. 1 BauGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "handelsg-272",
+      "poolTitel": "Was ist eine verdeckte Sacheinlage?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 19 Abs. 4 GmbHG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "schuld-441",
+      "poolTitel": "Anfängliche Unmöglichkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 311a BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessorz-804",
+      "poolTitel": "Wie ist der Tatbestand des Zivilurteils aufgebaut?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 2 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-229",
+      "slug": "2026-10-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Warum der Baumeigentümer nach dem Sturm nicht Störer ist",
+          "titelZeilen": [
+            "Warum der",
+            "Baumeigentümer",
+            "nach dem Sturm",
+            "nicht Störer ist"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Eigentum allein reicht nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Ein gesunder, regelmäßig kontrollierter Baum auf dem Grundstück des E stürzt bei einem schweren Sturm auf das Grundstück des N. N verlangt von E nach § 1004 BGB, den Stamm zu beseitigen. Zu Recht?"
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Der Baum gehört E – also ist E Zustandsstörer.“ Das greift zu kurz: Das Eigentum an der störenden Sache macht allein noch niemanden zum Störer."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du die Störereigenschaft",
+          "schritte": [
+            {
+              "titel": "Handlungsstörer",
+              "text": "Wer die Beeinträchtigung durch eigenes Tun oder pflichtwidriges Unterlassen adäquat verursacht – auch mittelbar."
+            },
+            {
+              "titel": "Zustandsstörer",
+              "text": "Die Beeinträchtigung geht von seiner Sache aus und beruht wenigstens mittelbar auf seinem Willen."
+            },
+            {
+              "titel": "Naturkräfte",
+              "text": "Nach der Rspr. zurechenbar, wenn der Eigentümer eine Sicherungspflicht verletzt hat – etwa einen erkennbar kranken Baum stehen ließ."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Der Baum war gesund und wurde kontrolliert; die Beeinträchtigung beruht allein auf Naturkräften. Nach diesem Maßstab hat E keine Sicherungspflicht verletzt und ist nicht Störer – ein Anspruch aus § 1004 BGB scheidet aus. Mangels Verschulden hilft auch § 823 Abs. 1 BGB nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Störer ist nicht, wem die Sache gehört, sondern wem die Beeinträchtigung zurechenbar ist."
+        },
+        {
+          "art": "cta",
+          "titel": "Störer in drei Fragen",
+          "punkte": [
+            "Eigenes Tun oder Unterlassen?",
+            "Zustand der eigenen Sache – zurechenbar?",
+            "Naturkraft: Sicherungspflicht verletzt?"
+          ],
+          "icons": [
+            "person",
+            "haus",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Ein Sturm wirft den Baum des E auf das Grundstück des N – ist E automatisch Störer im Sinne des § 1004 BGB? Nein. Eigentum an der störenden Sache allein genügt nicht. Zustandsstörer ist nur, wem die Beeinträchtigung wenigstens mittelbar zurechenbar ist; bei Naturkräften stellt die Rechtsprechung darauf ab, ob der Eigentümer eine Sicherungspflicht verletzt hat. Speichern für den nächsten Nachbarfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#1004bgb",
+        "#nachbarrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 1004 BGB: Wer ist Störer?",
+      "coverText": "Eigentum allein reicht nicht",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer Eigentümer der störenden Sache ist, muss deshalb noch nicht für jede Naturgewalt einstehen.",
+        "handlung": "{A} stands beside a healthy tree stump with a neat inspection tag, shrugging at a fallen trunk lying across the fence, while {B} curiously points up at storm clouds swirling above.",
+        "hinweisRegie": "Place the note in the open space next to the inspection tag on the stump, slightly tilted, linking it to the question of responsibility without covering the fallen trunk or faces.",
+        "alternative": "{B} holds up a healthy leaf and a withered leaf side by side, while {A} weighs which one would make the owner responsible."
+      },
+      "bildSzene": "storm-felled tree across fence, inspection tag",
+      "bildSzeneAlt": "healthy leaf versus withered leaf",
+      "quellen": [
+        "§ 1004 BGB",
+        "§ 823 Abs. 1 BGB",
+        "BGH, Störereigenschaft bei Naturereignissen",
+        "Themenpool: sachen-229"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "warum-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.128Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-325",
+      "slug": "2026-10-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 243 StGB gehört hinter die Schuld",
+          "titelZeilen": [
+            "§ 243 StGB gehört",
+            "hinter die Schuld"
+          ],
+          "coverBadge": "Fehlerfalle",
+          "coverText": "Strafzumessung, kein Tatbestand",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "T hebelt nachts die Tür eines Ladens auf und nimmt Waren im Wert von 800 € mit. Wo und wie prüfst du § 243 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "§ 242 StGB vollständig",
+              "text": "Tatbestand, Rechtswidrigkeit, Schuld – ohne § 243 StGB."
+            },
+            {
+              "titel": "Regelbeispiel objektiv",
+              "text": "Danach in der Strafzumessung: hier § 243 Abs. 1 S. 2 Nr. 1 StGB – Einbrechen in einen Geschäftsraum."
+            },
+            {
+              "titel": "Vorsatz",
+              "text": "Der Täter muss die Umstände des Regelbeispiels kennen."
+            },
+            {
+              "titel": "Kein Ausschluss",
+              "text": "§ 243 Abs. 2 StGB: nicht bei geringwertigen Sachen. 800 € sind nicht geringwertig."
+            },
+            {
+              "titel": "Indizwirkung",
+              "text": "Das Regelbeispiel indiziert den besonders schweren Fall; besondere Umstände können die Indizwirkung entkräften."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "§ 243 StGB wie eine Qualifikation in den Tatbestand ziehen. Die Regelbeispiele sind Strafzumessungsregeln: Sie ändern den Tatbestand nicht, sondern indizieren einen höheren Strafrahmen. Achtung: Der Wohnungseinbruchdiebstahl ist dagegen eine Qualifikation (§ 244 Abs. 1 Nr. 3 StGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "T erfüllt § 242 StGB. In der Strafzumessung verwirklicht er vorsätzlich das Regelbeispiel des § 243 Abs. 1 S. 2 Nr. 1 StGB; § 243 Abs. 2 StGB greift nicht, Umstände gegen die Indizwirkung sind nicht ersichtlich. Ergebnis: Diebstahl in einem besonders schweren Fall."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 243 StGB kommt nach der Schuld: Regelbeispiel, Vorsatz, kein Abs. 2 – und keine Umstände, die die Indizwirkung entkräften."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 243 StGB richtig platzieren",
+          "punkte": [
+            "Erst § 242 StGB bis zur Schuld",
+            "Dann Regelbeispiel und Vorsatz",
+            "Geringwertigkeit und Indizwirkung"
+          ],
+          "icons": [
+            "paragraf",
+            "schloss",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "§ 243 StGB gehört nicht in den Tatbestand. Die Regelbeispiele des besonders schweren Falls sind Strafzumessungsregeln: Du prüfst § 242 StGB vollständig bis zur Schuld und erst danach das Regelbeispiel, den Vorsatz darauf, den Ausschluss bei Geringwertigkeit (§ 243 Abs. 2 StGB) und die Indizwirkung. Anders der Wohnungseinbruchdiebstahl: Er ist eine Qualifikation nach § 244 Abs. 1 Nr. 3 StGB.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#diebstahl",
+        "#243stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 243 StGB: Aufbau nach der Schuld",
+      "coverText": "Strafzumessung, kein Tatbestand",
+      "coverBadge": "Fehlerfalle",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Der besonders schwere Fall kommt erst nach dem vollständig geprüften Grunddelikt an die Reihe.",
+        "handlung": "{B} tries to squeeze a heavy crowbar-shaped block into the middle of a neatly stacked tower of three blocks, while {A} hovers above and firmly redirects it to the top of the finished tower.",
+        "hinweisRegie": "Place the note in the free space just above the top of the tower where the block belongs, slightly tilted, without covering {B}'s hands or the stacked blocks.",
+        "alternative": "{A} lays out three stepping stones to a finish line, and {B} places an extra weight only after crossing the last stone."
+      },
+      "bildSzene": "extra block placed on top of tower",
+      "bildSzeneAlt": "weight added after last stepping stone",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 243 StGB",
+        "§ 244 Abs. 1 Nr. 3 StGB",
+        "Themenpool: strafbt-325"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "platzierungsregel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.128Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-400",
+      "slug": "2026-10-16-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vier Abwägungsfehler – nicht jeder kippt den Plan",
+          "unter": "Bauleitplanung · § 1 Abs. 7 BauGB",
+          "text": "Ausfall, Defizit, Fehleinschätzung, Disproportionalität – dann § 214 BauGB.",
+          "norm": "§ 1 Abs. 7 BauGB",
+          "icon": "haeuser",
+          "sprecher": "Vier Abwägungsfehler gibt es. Aber nicht jeder macht den Bebauungsplan unwirksam. Grundlage ist § 1 Absatz 7 BauGB: Die Belange sind gerecht gegeneinander und untereinander abzuwägen.",
+          "marken": [
+            "vier Fehler",
+            "§ 214 filtert"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Abwägungsausfall",
+          "text": "Eine Abwägung findet gar nicht statt.",
+          "norm": null,
+          "sprecher": "Fehler eins: der Abwägungsausfall. Die Gemeinde wägt überhaupt nicht ab, etwa weil sie sich schon vorher festgelegt hat.",
+          "marken": [
+            "gar nicht abgewogen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Abwägungsdefizit",
+          "text": "Ein Belang, der hineingehört, fehlt.",
+          "norm": null,
+          "sprecher": "Fehler zwei: das Abwägungsdefizit. Ein Belang, der nach Lage der Dinge eingestellt werden musste, bleibt außen vor.",
+          "marken": [
+            "Belang fehlt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Abwägungsfehleinschätzung",
+          "text": "Die Bedeutung eines Belangs wird verkannt.",
+          "norm": null,
+          "sprecher": "Fehler drei: die Fehleinschätzung. Die Gemeinde verkennt die Bedeutung eines betroffenen Belangs.",
+          "marken": [
+            "falsch gewichtet"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Abwägungsdisproportionalität",
+          "text": "Der Ausgleich steht außer Verhältnis zum Gewicht der Belange.",
+          "norm": null,
+          "sprecher": "Fehler vier: die Disproportionalität. Der Ausgleich zwischen den Belangen steht zu ihrem objektiven Gewicht außer Verhältnis. Das ist ein Fehler im Ergebnis.",
+          "marken": [
+            "Fehler im Ergebnis"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Filter: § 214 BauGB",
+          "text": "Ermitteln/Bewerten: Abs. 1 S. 1 Nr. 1. Übriger Vorgang: Abs. 3 S. 2 – offensichtlich und von Einfluss.",
+          "norm": "§ 2 Abs. 3 BauGB · § 214 BauGB",
+          "sprecher": "Jetzt der Filter. Fehler beim Ermitteln und Bewerten sind Verfahrensfehler nach § 2 Absatz 3; beachtlich nur unter den Voraussetzungen des § 214 Absatz 1 Satz 1 Nummer 1. Übrige Mängel im Abwägungsvorgang sind nur erheblich, wenn sie offensichtlich und auf das Ergebnis von Einfluss waren.",
+          "marken": [
+            "offensichtlich, Einfluss"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ergebnisfehler zählen immer. Vorgangsfehler filtern §§ 214, 215 BauGB.",
+          "norm": "§§ 214, 215 BauGB",
+          "sprecher": "Merke: Ein Fehler im Abwägungsergebnis ist immer beachtlich. Vorgangsfehler filtert § 214, und nach § 215 werden sie bei ordnungsgemäßem Hinweis unbeachtlich, wenn sie nicht binnen eines Jahres gerügt werden.",
+          "marken": [
+            "Rügefrist ein Jahr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nach jedem Fehler § 214 BauGB prüfen",
+          "text": "Speichern für die nächste Normenkontrolle.",
+          "sprecher": "Speicher dir das für die nächste Normenkontrolle. Und prüf nach jedem Abwägungsfehler sofort § 214.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Vier Abwägungsfehler – aber nicht jeder macht den Bebauungsplan unwirksam. Nach § 1 Abs. 7 BauGB unterscheidest du Abwägungsausfall, -defizit, -fehleinschätzung und -disproportionalität. Dann kommt der Filter: Ermittlungs- und Bewertungsfehler (§ 2 Abs. 3 BauGB) sind nur unter § 214 Abs. 1 S. 1 Nr. 1 BauGB beachtlich, sonstige Mängel im Abwägungsvorgang nur, wenn sie offensichtlich und auf das Ergebnis von Einfluss waren (§ 214 Abs. 3 S. 2 BauGB). Und § 215 BauGB setzt eine Rügefrist.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#baurecht",
+        "#bebauungsplan",
+        "#baugb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Bebauungsplan: vier Abwägungsfehler",
+      "titelZeilen": [
+        "Vier Abwägungs-",
+        "fehler – nicht jeder",
+        "kippt den Plan"
+      ],
+      "coverText": "Erst Fehler, dann § 214 BauGB",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Nicht jeder Fehler beim Abwägen bringt den Plan zu Fall – erst ein Filter entscheidet über die Folgen.",
+        "handlung": "{A} points his pointer at four cracked tiles on a town planning model, while {B} holds a sieve over the model and lets only one large crack fall through onto the table.",
+        "hinweisRegie": "Place the note in the free space beside the sieve, slightly tilted toward the single falling crack, so it links the filter to the outcome without covering the model or faces.",
+        "alternative": "{B} sorts four small warning stones into two bowls marked by shape only, while {A} explains which bowl topples a miniature house."
+      },
+      "bildSzene": "sieve over cracked town planning model",
+      "bildSzeneAlt": "warning stones sorted into two bowls",
+      "quellen": [
+        "§ 1 Abs. 7 BauGB",
+        "§ 2 Abs. 3 BauGB",
+        "§ 214 BauGB",
+        "§ 215 BauGB",
+        "Themenpool: verwbt-400"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-fehler",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-580",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "Anwaltsklausur: Womit beginnt deine Prüfung?",
+      "optionen": [
+        "Mit der Zulässigkeit einer Klage",
+        "Mit dem Begehren des Mandanten – was will er erreichen?",
+        "Mit dem Entwurf des Klageantrags"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "ZPO",
+        "BGB",
+        "Themenpool: assessorz-580"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-580",
+      "ueberzeile": "Auflösung",
+      "titel": "Erst das Mandantenbegehren, dann das Recht",
+      "text": "In der Anwaltsklausur arbeitest du für den Mandanten: Zuerst klärst du, was er rechtlich und wirtschaftlich erreichen will. Daran misst du die materielle Rechtslage, dann die prozessuale Umsetzung und zuletzt die Zweckmäßigkeit – den sichersten, schnellsten und kostengünstigsten Weg. Ein zulässiger, aber unzweckmäßiger Antrag verfehlt das Ziel.",
+      "norm": "ZPO · BGB",
+      "quellen": [
+        "ZPO",
+        "BGB",
+        "Themenpool: assessorz-580"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.134Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Mit der Zulässigkeit einer Klage",
+        "Mit dem Begehren des Mandanten – was will er erreichen?",
+        "Mit dem Entwurf des Klageantrags"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-112",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Rücksichtnahmegebot: Drittschutz nur bei Unzumutbarkeit",
+      "text": "Das Gebot der Rücksichtnahme schützt Nachbarn vor unzumutbaren Auswirkungen eines Vorhabens. Im Plangebiet über § 15 Abs. 1 BauNVO, im Innenbereich über das Einfügen nach § 34 Abs. 1 BauGB. Drittschützend wirkt es, wenn ein individualisierter Kreis Betroffener qualifiziert berührt ist – und das Vorhaben ihm Unzumutbares abverlangt.",
+      "norm": "§ 15 Abs. 1 BauNVO · § 34 Abs. 1 BauGB",
+      "quellen": [
+        "§ 15 BauNVO",
+        "§ 34 Abs. 1 BauGB",
+        "Themenpool: verwbt-112"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-272",
+      "ueberzeile": "Merksatz Gesellschaftsrecht",
+      "titel": "Verdeckte Sacheinlage: Anrechnung statt Unwirksamkeit",
+      "text": "Die Geldeinlagepflicht bleibt bestehen, die Verträge bleiben aber wirksam. Der Wert des eingebrachten Gegenstands wird angerechnet; die Werthaltigkeit muss der Gesellschafter beweisen.",
+      "norm": "§ 19 Abs. 4 GmbHG",
+      "quellen": [
+        "§ 19 Abs. 4 GmbHG",
+        "Themenpool: handelsg-272"
+      ],
+      "fachLabel": "Gesellschaftsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-441",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Anfängliche Unmöglichkeit: Vertrag wirksam, Haftung hängt an der Kenntnis",
+      "text": "Das Leistungshindernis besteht schon bei Vertragsschluss. Der Vertrag bleibt trotzdem wirksam (§ 311a Abs. 1 BGB); die Leistungspflicht entfällt nach § 275 BGB. Der Gläubiger kann Schadensersatz statt der Leistung oder Aufwendungsersatz verlangen – außer der Schuldner kannte das Hindernis nicht und hat seine Unkenntnis nicht zu vertreten (§ 311a Abs. 2 BGB).",
+      "norm": "§ 311a BGB",
+      "quellen": [
+        "§ 311a BGB",
+        "§ 275 BGB",
+        "§ 284 BGB",
+        "Themenpool: schuld-441"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-804",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Tatbestand des Zivilurteils: Vortrag wiedergeben, nicht bewerten",
+      "falsch": "Im Tatbestand schildere ich den Sachverhalt so, wie ich ihn nach der Beweisaufnahme für richtig halte.",
+      "richtigText": "Der Tatbestand gibt den Vortrag der Parteien knapp wieder (§ 313 Abs. 2 ZPO): Unstreitiges im Imperfekt, streitiges Vorbringen im Präsens und in indirekter Rede, dazu die Anträge. Beweisergebnis und Würdigung gehören in die Entscheidungsgründe.",
+      "quellen": [
+        "§ 313 Abs. 2 ZPO",
+        "Themenpool: assessorz-804"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:20:19.134Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

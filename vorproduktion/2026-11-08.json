@@ -1,0 +1,876 @@
+{
+  "datum": "2026-11-08",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "sachen-509",
+        "themaTitel": "Überbau",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "stpo-766",
+        "themaTitel": "Beschuldigtenbegriff und Belehrung",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "grundr-090"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "grundr-090"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "handelsg-534"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:16",
+        "art": "fehler",
+        "themaId": "methodik-938"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:53",
+        "art": "tipp",
+        "themaId": "strafat-311"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "zahl",
+        "themaId": "assessorz-801"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-509",
+      "poolTitel": "Überbau",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 912 ff. BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-766",
+      "poolTitel": "Beschuldigtenbegriff und Belehrung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 136, 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-090",
+      "poolTitel": "Wann ist Art. 2 Abs. 1 GG einschlägig und wann ein spezielleres Grundrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-090",
+      "poolTitel": "Wann ist Art. 2 Abs. 1 GG einschlägig und wann ein spezielleres Grundrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "handelsg-534",
+      "poolTitel": "OHG: Entstehung, Vertretung, Haftung",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 105 ff. HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "methodik-938",
+      "poolTitel": "Meinungsstreit darstellen: Ansichten, Argumente, Streitentscheid",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafat-311",
+      "poolTitel": "Wie wirkt die Akzessorietät bei besonderen persönlichen Merkmalen?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 28 StGB",
+        "§ 29 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-801",
+      "poolTitel": "Was verlangt die Relationstechnik in drei Stationen?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-11-08-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: vier Bereiche, 18 Kernsätze zum Abfragen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "vier Bereiche,",
+            "18 Kernsätze zum",
+            "Abfragen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Kommanditist: Die zurückgezahlte Einlage lässt die Haftung wieder aufleben (§ 172 Abs. 4 HGB).",
+            "Fremdbesitzerexzess: § 993 BGB sperrt § 823 BGB nach h.M. nicht.",
+            "Zugang: Machtbereich plus Kenntnisnahme unter normalen Umständen (§ 130 BGB).",
+            "Vorrang der Leistung: weicht bei gestohlenen Sachen der Wertung des § 935 BGB.",
+            "Schutzwirkung für Dritte: öffnet den Weg zu § 278 BGB – ohne Entlastung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Schweigen: ganz – neutral; teilweise – würdigbar.",
+            "Unterlassen: Garant, Quasi-Kausalität, Entsprechung – bei § 223 StGB ein Satz.",
+            "§ 228 StGB: Verabredete Schlägerei ohne Absprachen – Einwilligung trägt nicht.",
+            "Indizien: einzeln feststellen, gemeinsam würdigen, Zweifelssatz am Ende.",
+            "Hehlerei: Absetzen erst mit Absatzerfolg vollendet."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Wiedereinsetzung: binnen zwei Wochen Antrag stellen und Klage nachholen (§ 60 VwGO).",
+            "Wesentlichkeit: Auch Strafvollzug und Schule brauchen Parlamentsgesetze.",
+            "Erlaubnispflicht streitig: Feststellungsklage nach § 43 VwGO.",
+            "VG-Urteil: Tatbestand in sieben Bausteinen (§ 117 Abs. 3 VwGO).",
+            "Demokratie: personelle, sachliche und institutionelle Legitimation.",
+            "Polizeiklausur: Rechtsschutz, Maßnahme, Kosten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Gutachtenstil für Probleme, Urteilsstil für das Klare.",
+            "Wiederholen: erst aus dem Kopf, dann ins Buch."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Klagefrist verpasst, weil K im Krankenhaus lag: Was muss binnen zwei Wochen passieren?",
+            "H inseriert Diebesgut, findet keinen Käufer: vollendete Hehlerei?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Haftung und Zurechnung",
+            "Strafrecht: Vollendung oder Versuch?",
+            "Öffentliches Recht: Klageart und Frist",
+            "Methodik: Stil und Abruf"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Kernsätze aus vier Bereichen – vom Kommanditisten über die Hehlerei bis zur Wiedereinsetzung nach § 60 VwGO. Jede Folie bündelt einen Bereich. Geh sie ohne Unterlagen durch, beantworte den Selbsttest und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Kernsätze im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Am Ende der Woche wird jeder Lernbereich abgeklopft, bevor es weitergeht.",
+        "handlung": "{B} holds up four differently coloured lanterns one after another, while {A} nervously checks which of them flickers.",
+        "hinweisRegie": "Place the note in the free space beside the flickering lantern, slightly tilted toward it, so the weak area is linked to the note without covering {B}'s raised hand.",
+        "alternative": "{A} tightens bolts on a four-legged table, while {B} presses on each corner to find the one that wobbles."
+      },
+      "bildSzene": "four lanterns checked, one flickers",
+      "bildSzeneAlt": "pressing table corners to find wobble",
+      "quellen": [
+        "§ 172 Abs. 4 HGB",
+        "§ 993 BGB",
+        "§ 130 BGB",
+        "§ 935 BGB",
+        "§ 278 BGB",
+        "§ 261 StPO",
+        "§ 13 StGB",
+        "§ 228 StGB",
+        "§ 259 StGB",
+        "§ 60 VwGO",
+        "§ 43 VwGO",
+        "§ 117 Abs. 3 VwGO",
+        "Art. 20 Abs. 2, 3 GG",
+        "Polizeigesetze der Länder",
+        "Themenpool: methodik-901",
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.687Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-509",
+      "slug": "2026-11-08-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Überbau: vier Voraussetzungen – dann bleibt das Haus stehen",
+          "titelZeilen": [
+            "Überbau: vier",
+            "Voraussetzungen –",
+            "dann bleibt das",
+            "Haus stehen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Dulden gegen Rente",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Wer über die Grenze baut, beeinträchtigt das Eigentum des Nachbarn – eigentlich ein Fall für § 1004 BGB. § 912 BGB will aber verhindern, dass wirtschaftliche Werte zerschlagen werden: Unter vier Voraussetzungen muss der Nachbar den Überbau dulden, gegen eine Geldrente."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema: Duldungspflicht, § 912 Abs. 1 BGB",
+          "schritte": [
+            {
+              "titel": "1. Gebäude errichtet",
+              "text": "Der Eigentümer hat bei der Errichtung eines Gebäudes gebaut – nicht jede bauliche Anlage genügt."
+            },
+            {
+              "titel": "2. Über die Grenze gebaut",
+              "text": "Ein Teil des Gebäudes steht auf dem Nachbargrundstück."
+            },
+            {
+              "titel": "3. Ohne Vorsatz oder grobe Fahrlässigkeit",
+              "text": "Leichte Fahrlässigkeit schadet nicht. Das Verschulden seines Architekten wird ihm nach der Rspr. analog § 166 BGB zugerechnet."
+            },
+            {
+              "titel": "4. Kein rechtzeitiger Widerspruch",
+              "text": "Der Nachbar hat nicht vor oder sofort nach der Grenzüberschreitung widersprochen."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Rechtsfolgen",
+          "schritte": [
+            {
+              "titel": "Dulden",
+              "text": "Der Nachbar muss den Überbau dulden; der Anspruch aus § 1004 BGB ist insoweit ausgeschlossen (§ 1004 Abs. 2 BGB)."
+            },
+            {
+              "titel": "Überbaurente",
+              "text": "Er erhält eine Geldrente (§ 912 Abs. 2 BGB), bemessen nach der Zeit der Grenzüberschreitung."
+            },
+            {
+              "titel": "Abkauf",
+              "text": "Er kann verlangen, dass der Rentenpflichtige ihm den überbauten Grundstücksteil abkauft (§ 915 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Wem gehört der Überbau?",
+          "text": "Beim entschuldigten Überbau gehört der übergebaute Gebäudeteil nach h.M. dem Eigentümer des Stammgrundstücks. Beim unentschuldigten Überbau bleibt es grundsätzlich bei der Grundstücksgrenze: Der übergebaute Teil fällt nach § 94 BGB dem Nachbarn zu, und § 1004 BGB bleibt anwendbar."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gebäude, Grenze, kein grobes Verschulden, kein Widerspruch – dann dulden gegen Rente. Fehlt eine Voraussetzung, bleibt § 1004 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Überbau in vier Zügen",
+          "punkte": [
+            "Gebäude über die Grenze?",
+            "Vorsatz oder grobe Fahrlässigkeit?",
+            "Sofort widersprochen?",
+            "Rente oder Abkauf?"
+          ],
+          "icons": [
+            "haus",
+            "lupe",
+            "stopp",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Überbau in vier Voraussetzungen: Gebäude errichtet, über die Grenze gebaut, weder Vorsatz noch grobe Fahrlässigkeit, kein rechtzeitiger Widerspruch des Nachbarn. Dann muss der Nachbar den Überbau dulden (§ 912 Abs. 1 BGB) und erhält eine Überbaurente oder kann den Abkauf verlangen. Fehlt eine Voraussetzung, bleibt es bei § 1004 BGB. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#nachbarrecht",
+        "#überbau",
+        "#912bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Überbau: das Prüfschema zu § 912 BGB",
+      "coverText": "Dulden gegen Rente",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Wer schuldlos über die Grenze baut, darf stehen bleiben – der Nachbar erhält dafür eine Rente.",
+        "handlung": "{A} stands beside his stone hut whose corner sits just over a glowing boundary line, while {B} hovers there and hands a small pouch of coins across the line instead of tearing the corner down.",
+        "hinweisRegie": "Place the note in the free space above the corner that crosses the boundary line, slightly tilted toward the coin pouch, so tolerating against payment is linked to the note without covering the line.",
+        "alternative": "{B} measures a wall that crosses a painted line, while {A} holds a demolition hammer and hesitantly lowers it."
+      },
+      "bildSzene": "hut corner over boundary, coins paid",
+      "bildSzeneAlt": "measuring wall, demolition hammer lowered",
+      "quellen": [
+        "§ 912 BGB",
+        "§ 915 BGB",
+        "§ 1004 BGB",
+        "§§ 93, 94 BGB",
+        "§ 166 BGB",
+        "Themenpool: sachen-509"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-voraussetzungen-folge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.688Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-766",
+      "slug": "2026-11-08-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zeuge genannt, Beschuldigter gemeint",
+          "unter": "Beschuldigter · §§ 136, 163a StPO",
+          "text": "Wer Beschuldigter ist, bestimmt der Verdacht – nicht die Bezeichnung.",
+          "norm": "§ 136 Abs. 1 S. 2 StPO",
+          "icon": "polizei",
+          "sprecher": "Nicht das Etikett entscheidet, sondern der Verdacht. Wer schon ernsthaft verdächtig ist, darf nicht als Zeuge befragt werden, nur um die Belehrung zu sparen. Sonst droht ein Verwertungsverbot.",
+          "marken": [
+            "Verdacht statt Etikett"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Wer ist Beschuldigter?",
+          "text": "Tatverdacht plus Willensakt der Strafverfolgungsbehörde.",
+          "norm": null,
+          "sprecher": "Erstens: der Begriff. Beschuldigter ist, gegen wen das Verfahren als Beschuldigten betrieben wird. Nötig sind ein Tatverdacht und ein Willensakt der Strafverfolgungsbehörde, etwa eine Ermittlungsmaßnahme gegen ihn.",
+          "marken": [
+            "Verdacht + Willensakt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Grenze des Spielraums",
+          "text": "Ist der Verdacht stark genug, muss die Behörde ihn als Beschuldigten behandeln.",
+          "norm": null,
+          "sprecher": "Zweitens: die Grenze. Die Behörde hat einen Beurteilungsspielraum. Kommt jemand aber ernsthaft als Täter in Betracht, muss sie ihn als Beschuldigten vernehmen. Die Zeugenrolle darf nicht vorgeschoben werden.",
+          "marken": [
+            "kein Rollentausch"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Belehrung",
+          "text": "Tatvorwurf, Schweigerecht, Verteidiger – für Polizei und StA über § 163a StPO.",
+          "norm": "§ 136 Abs. 1 S. 2 StPO",
+          "sprecher": "Drittens: der Inhalt. Vor der ersten Vernehmung wird dem Beschuldigten eröffnet, welche Tat ihm vorgeworfen wird. Er wird belehrt, dass er schweigen und jederzeit einen Verteidiger befragen darf. Für Polizei und Staatsanwaltschaft gilt das über § 163a StPO.",
+          "marken": [
+            "Schweigen + Verteidiger"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Ohne Belehrung: Verwertungsverbot",
+          "text": "Grundsätzlich unverwertbar – der verteidigte Angeklagte muss widersprechen.",
+          "norm": "§ 257 StPO",
+          "sprecher": "Viertens: die Folge. Aussagen ohne Belehrung sind nach der Rechtsprechung grundsätzlich unverwertbar, außer der Beschuldigte kannte sein Schweigerecht. Und der verteidigte Angeklagte muss der Verwertung in der Hauptverhandlung rechtzeitig widersprechen.",
+          "marken": [
+            "Widerspruch nötig"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Informatorische Befragung",
+          "text": "Vor jedem Verdacht: Fragen an alle Anwesenden – Spontanäußerungen bleiben verwertbar.",
+          "norm": null,
+          "sprecher": "Keine Belehrung braucht die informatorische Befragung. Fragt die Polizei am Unfallort in die Runde, was passiert ist, ist noch niemand Beschuldigter. Auch spontane Äußerungen ohne Frage bleiben verwertbar.",
+          "marken": [
+            "noch kein Verdacht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ernsthafter Verdacht heißt Beschuldigter – vor der Vernehmung wird belehrt.",
+          "norm": "§§ 136, 163a StPO",
+          "sprecher": "Merke: Wer ernsthaft als Täter in Betracht kommt, ist Beschuldigter. Vor seiner Vernehmung wird belehrt – sonst droht ein Verwertungsverbot.",
+          "marken": [
+            "erst belehren"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Wer wusste da schon was?",
+          "text": "Speichern für die nächste StPO-Zusatzfrage.",
+          "sprecher": "Speicher dir das für die nächste Zusatzfrage im Strafprozessrecht. Und frag bei jeder Aussage im Sachverhalt: Wer wusste da schon was?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Zeuge genannt, Beschuldigter gemeint – das trägt nicht. Wer ernsthaft als Täter in Betracht kommt, ist als Beschuldigter zu vernehmen und vorher zu belehren: Tatvorwurf, Schweigerecht, Verteidigerkonsultation (§§ 136 Abs. 1, 163a StPO). Fehlt die Belehrung, ist die Aussage grundsätzlich unverwertbar – beim verteidigten Angeklagten aber nur nach rechtzeitigem Widerspruch. Die informatorische Befragung am Unfallort braucht dagegen keine Belehrung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafprozessrecht",
+        "#belehrung",
+        "#beweisverwertungsverbot",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beschuldigter oder Zeuge? Belehrung und Folgen",
+      "titelZeilen": [
+        "Zeuge genannt,",
+        "Beschuldigter",
+        "gemeint"
+      ],
+      "coverText": "Der Verdacht entscheidet",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Ob jemand Beschuldigter ist, entscheidet der Verdacht – nicht die Rolle, die man ihm zuweist.",
+        "handlung": "{B} tries to pin a plain grey badge onto a figure standing in a bright spotlight, while {A} steps in and swaps it for a red badge that matches the spotlight's glow.",
+        "hinweisRegie": "Place the note in the free space between the grey badge and the red badge, slightly tilted toward the spotlight, so the decisive suspicion is linked to the note without covering either badge.",
+        "alternative": "{A} lifts a plain mask from a figure's face and reveals that a spotlight is already fixed on them, while {B} points his pointer at the light."
+      },
+      "bildSzene": "badge swapped under bright spotlight",
+      "bildSzeneAlt": "mask lifted, spotlight already fixed",
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 163a Abs. 3, 4 StPO",
+        "§ 257 StPO",
+        "Themenpool: stpo-766"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "etikettenschwindel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.689Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-090",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Ein Landesgesetz verbietet das Reiten auf schmalen Waldwegen. Welches Grundrecht ist Prüfungsmaßstab?",
+      "optionen": [
+        "Art. 11 GG – Freizügigkeit",
+        "Art. 2 Abs. 1 GG – allgemeine Handlungsfreiheit",
+        "Art. 8 GG – Versammlungsfreiheit"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 8 GG",
+        "Art. 11 GG",
+        "Themenpool: grundr-090"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.689Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-090",
+      "ueberzeile": "Auflösung",
+      "titel": "Art. 2 Abs. 1 GG – das Auffanggrundrecht greift, wenn kein spezielles passt",
+      "text": "Art. 2 Abs. 1 GG schützt jedes menschliche Verhalten, auch das Reiten im Wald. Er tritt zurück, sobald der Schutzbereich eines spezielleren Freiheitsrechts eröffnet ist – egal, ob der Eingriff dort gerechtfertigt ist. Freizügigkeit meint Aufenthalt und Wohnsitz, nicht jede Fortbewegung. Schranke: die verfassungsmäßige Ordnung, also jedes verfassungsmäßige Gesetz.",
+      "norm": "Art. 2 Abs. 1 GG",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 8 GG",
+        "Art. 11 GG",
+        "Themenpool: grundr-090"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.689Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Art. 11 GG – Freizügigkeit",
+        "Art. 2 Abs. 1 GG – allgemeine Handlungsfreiheit",
+        "Art. 8 GG – Versammlungsfreiheit"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-534",
+      "ueberzeile": "Norm des Tages",
+      "titel": "OHG: Jeder Gesellschafter haftet persönlich für die Schulden der Gesellschaft",
+      "text": "Die OHG betreibt unter gemeinschaftlicher Firma ein Handelsgewerbe, ohne dass die Haftung eines Gesellschafters beschränkt ist (§ 105 Abs. 1 HGB); sie ist selbst rechtsfähig. Jeder Gesellschafter ist grundsätzlich allein zur Vertretung befugt und haftet den Gläubigern für die Gesellschaftsschulden persönlich und unbeschränkt – seit dem MoPeG in § 126 HGB (früher § 128 HGB).",
+      "norm": "§§ 105, 124, 126 HGB",
+      "quellen": [
+        "§ 105 HGB",
+        "§ 124 HGB",
+        "§ 126 HGB",
+        "Themenpool: handelsg-534"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.689Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-938",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Meinungsstreit: Muss ich jeden Streit entscheiden?",
+      "falsch": "Jeder Streit wird ausführlich dargestellt und entschieden – auch wenn alle Ansichten zum selben Ergebnis kommen.",
+      "richtigText": "Kommen alle Ansichten im konkreten Fall zum selben Ergebnis, stellst du sie knapp dar und hältst fest, dass ein Streitentscheid entbehrlich ist. Entscheiden musst du nur, wenn die Ergebnisse auseinanderfallen: Ansichten mit Ergebnis, Argumente, eigene begründete Stellungnahme. Und den Streit dort, wo er im Fall relevant wird – nicht vorab abstrakt.",
+      "quellen": [
+        "Themenpool: methodik-938"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.689Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-311",
+      "ueberzeile": "Klausurtipp Strafrecht AT",
+      "titel": "§ 28 StGB: Erst klären, ob das Merkmal strafbegründend oder strafschärfend ist",
+      "text": "§ 28 StGB erfasst nur besondere persönliche, also täterbezogene Merkmale. Fehlt ein strafbegründendes beim Teilnehmer, wird seine Strafe gemildert (Abs. 1). Schärfende, mildernde oder ausschließende gelten nur für den, bei dem sie vorliegen (Abs. 2). Klassiker Mord: Die Rspr. sieht § 211 als eigenständigen Tatbestand (Abs. 1), die h.L. als Qualifikation des § 212 (Abs. 2).",
+      "quellen": [
+        "§ 28 StGB",
+        "§ 29 StGB",
+        "§§ 211, 212 StGB",
+        "Themenpool: strafat-311"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.689Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-801",
+      "ueberzeile": "3 Punkte 2. Examen",
+      "titel": "Relation: drei Stationen, drei Fragen",
+      "text": "Vorab die Zulässigkeit. Dann beantwortet jede Station genau eine Frage – in dieser Reihenfolge.",
+      "punkte": [
+        "Klägerstation: Ist der Klägervortrag schlüssig?",
+        "Beklagtenstation: Ist das Verteidigungsvorbringen erheblich?",
+        "Beweisstation: Was ist streitig, wer trägt die Beweislast, was ist bewiesen?"
+      ],
+      "quellen": [
+        "§ 138 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: assessorz-801"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:39.689Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

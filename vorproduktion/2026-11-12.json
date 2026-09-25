@@ -1,0 +1,853 @@
+{
+  "datum": "2026-11-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "schuld-452",
+        "themaTitel": "Abtretung und Schuldnerschutz",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "strafbt-743",
+        "themaTitel": "Schwere Körperverletzung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-385",
+        "themaTitel": "Wann liegt ein unbestimmter Rechtsbegriff mit Beurteilungsspielraum vor?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "bgbat-431"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "bgbat-431"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "schuld-440"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "streitstand",
+        "themaId": "assessorz-824"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "merksatz",
+        "themaId": "delikt-038"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "begriff",
+        "themaId": "strafbt-071"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "schuld-452",
+      "poolTitel": "Abtretung und Schuldnerschutz",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 398 ff., 404 ff. BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "strafbt-743",
+      "poolTitel": "Schwere Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 226 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-385",
+      "poolTitel": "Wann liegt ein unbestimmter Rechtsbegriff mit Beurteilungsspielraum vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Fachrecht; Rechtsprechung"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-23",
+        "2026-10-23"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-431",
+      "poolTitel": "AGB-Inhaltskontrolle und geltungserhaltende Reduktion",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 306, 307-309 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-440",
+      "poolTitel": "Unmöglichkeit: echte, praktische und persönliche Unmöglichkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 275 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-824",
+      "poolTitel": "Wie läuft die Kostenfestsetzung nach dem Urteil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 103 ZPO",
+        "§ 104 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "delikt-038",
+      "poolTitel": "Wann greift die Produzentenhaftung neben dem ProdHaftG?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 1 ProdHaftG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-071",
+      "poolTitel": "Wann liegt eine Zueignungsabsicht vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB",
+        "§ 246 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-452",
+      "slug": "2026-11-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Abgetreten, an den Alten gezahlt – trotzdem frei",
+          "titelZeilen": [
+            "Abgetreten, an den",
+            "Alten gezahlt –",
+            "trotzdem frei"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "§ 407: Unkenntnis schützt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Abtretung in einem Satz",
+          "text": "Der neue Gläubiger tritt durch Vertrag mit dem alten an dessen Stelle (§ 398 BGB) – ohne Mitwirkung des Schuldners. Prüfe: Einigung, Bestehen und Bestimmbarkeit der Forderung, kein Ausschluss (§§ 399, 400 BGB), Berechtigung des Zedenten."
+        },
+        {
+          "art": "text",
+          "titel": "Schuldnerschutz in vier Normen",
+          "punkte": [
+            "§ 404: Einwendungen gegen den Altgläubiger bleiben erhalten.",
+            "§ 406: Aufrechnung auch gegenüber dem Neugläubiger – mit Grenzen.",
+            "§ 407: Leistung an den Altgläubiger befreit, solange der Schuldner nichts weiß.",
+            "§ 409: Auf eine Abtretungsanzeige des Gläubigers darf der Schuldner vertrauen."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "§ 404 oder § 407?",
+          "links": {
+            "titel": "§ 404 BGB",
+            "punkte": [
+              "Einwendungen, die bei der Abtretung schon begründet waren",
+              "Etwa Nichtigkeit, Stundung, Verjährung"
+            ]
+          },
+          "rechts": {
+            "titel": "§ 407 BGB",
+            "punkte": [
+              "Leistung oder Rechtsgeschäft nach der Abtretung",
+              "Mit dem Altgläubiger, ohne Kenntnis der Abtretung"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurfalle: Abtretungsverbot",
+          "text": "Ein vertragliches Abtretungsverbot macht die Abtretung grundsätzlich unwirksam (§ 399 Alt. 2 BGB). Ist das Geschäft für beide Seiten ein Handelsgeschäft, bleibt eine Geldforderung trotzdem abtretbar; der Schuldner darf aber weiter an den Altgläubiger leisten (§ 354a Abs. 1 HGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die Abtretung darf den Schuldner nicht schlechter stellen: Einwendungen bleiben, gutgläubige Leistung an den Alten befreit (§ 407 BGB)."
+        },
+        {
+          "art": "cta",
+          "titel": "Abtretung prüfen",
+          "punkte": [
+            "Wirksame Abtretung (§§ 398 ff.)?",
+            "Einwendungen nach § 404?",
+            "Aufrechnung nach § 406?",
+            "Befreiende Leistung nach § 407?"
+          ],
+          "icons": [
+            "vertrag",
+            "schild",
+            "waage",
+            "quittung"
+          ]
+        }
+      ],
+      "caption": "Abgetreten, an den Alten gezahlt – und trotzdem frei: Wer von der Abtretung nichts weiß und an den bisherigen Gläubiger leistet, wird nach § 407 BGB befreit. Der neue Gläubiger hält sich dann an den alten (§ 816 Abs. 2 BGB). Dazu kommen § 404 (Einwendungen bleiben), § 406 (Aufrechnung) und § 409 BGB (Abtretungsanzeige). Und beim Abtretungsverbot unter Kaufleuten: § 354a HGB. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#abtretung",
+        "#407bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Abtretung: So wird der Schuldner geschützt",
+      "coverText": "§ 407: Unkenntnis schützt",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer von der Abtretung nichts weiß und an den alten Gläubiger zahlt, ist trotzdem frei.",
+        "handlung": "{A} hands a bag of crystals to an old trading partner at a counter, unaware that {B} is standing just behind the partner holding a freshly signed transfer note.",
+        "hinweisRegie": "Place the note in the free space above the counter between the handed-over bag and {B}'s transfer note, slightly tilted toward {A}, without covering the bag or the note.",
+        "alternative": "{A} drops a payment into an old mailbox while {B} waits in vain at a new mailbox a few steps away."
+      },
+      "bildSzene": "miner pays old partner, new holder waits",
+      "bildSzeneAlt": "payment in old mailbox, new one empty",
+      "quellen": [
+        "§§ 398–400 BGB",
+        "§ 404 BGB",
+        "§ 406 BGB",
+        "§ 407 BGB",
+        "§ 409 BGB",
+        "§ 816 Abs. 2 BGB",
+        "§ 354a HGB",
+        "Themenpool: schuld-452"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.780Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-743",
+      "slug": "2026-11-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Bedingter Vorsatz reicht nicht für § 226 Abs. 2 StGB",
+          "titelZeilen": [
+            "Bedingter Vorsatz",
+            "reicht nicht für",
+            "§ 226 Abs. 2 StGB"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Absicht oder sicheres Wissen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 226 StGB knüpft an eine Körperverletzung schwere Folgen: Verlust von Sehvermögen, Gehör, Sprechvermögen oder Fortpflanzungsfähigkeit (Nr. 1), eines wichtigen Glieds oder dessen dauernde Unbrauchbarkeit (Nr. 2), erhebliche dauernde Entstellung, Siechtum, Lähmung und Ähnliches (Nr. 3)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Abs. 1 oder Abs. 2?",
+          "links": {
+            "titel": "§ 226 Abs. 1 StGB",
+            "punkte": [
+              "Erfolgsqualifikation",
+              "Folge wenigstens fahrlässig (§ 18 StGB)",
+              "Ein bis zehn Jahre Freiheitsstrafe"
+            ]
+          },
+          "rechts": {
+            "titel": "§ 226 Abs. 2 StGB",
+            "punkte": [
+              "Folge absichtlich oder wissentlich verursacht",
+              "Bedingter Vorsatz genügt nicht",
+              "Freiheitsstrafe nicht unter drei Jahren"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Schlüsselbegriffe",
+          "punkte": [
+            "Wichtiges Glied: nach BGH unter Berücksichtigung individueller Körpereigenschaften des Opfers.",
+            "Glied: nach außen tretender Körperteil – innere Organe wie die Niere zählen nach BGH nicht.",
+            "Dauernd: auf unabsehbare Zeit – nicht zwingend für immer."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Aufbau in der Klausur",
+          "text": "Abs. 1: Grunddelikt § 223 StGB, Eintritt der schweren Folge, tatbestandsspezifischer Gefahrzusammenhang, wenigstens Fahrlässigkeit bezüglich der Folge. Abs. 2: Die Folge gehört in den subjektiven Tatbestand – als Absicht oder sicheres Wissen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Folge fahrlässig oder bedingt vorsätzlich: Abs. 1. Folge beabsichtigt oder sicher vorausgesehen: Abs. 2."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 226 StGB in drei Fragen",
+          "punkte": [
+            "Schwere Folge nach Nr. 1–3?",
+            "Gefahrzusammenhang?",
+            "Fahrlässig, bedingt vorsätzlich oder absichtlich?"
+          ],
+          "icons": [
+            "lupe",
+            "kreislauf",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Bedingter Vorsatz reicht nicht für § 226 Abs. 2 StGB: Die Qualifikation mit mindestens drei Jahren Freiheitsstrafe verlangt, dass der Täter die schwere Folge absichtlich oder wissentlich verursacht. Nimmt er sie nur billigend in Kauf, bleibt es bei Abs. 1 – dort genügt sogar Fahrlässigkeit (§ 18 StGB). Dazu die Schlüsselbegriffe: wichtiges Glied, innere Organe sind keine Glieder, dauernd heißt auf unabsehbare Zeit. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#körperverletzung",
+        "#226stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 226 StGB: Abs. 1 oder Abs. 2?",
+      "coverText": "Absicht oder sicheres Wissen",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Ob die schwere Folge nur fahrlässig oder gezielt herbeigeführt wurde, entscheidet über den Strafrahmen.",
+        "handlung": "{A} holds two differently weighted stones above two separate scale pans, while {B} uses his pointer to tap the heavier pan that is already sinking deeper.",
+        "hinweisRegie": "Place the note in the free space beside the deeper-sinking scale pan, slightly tilted toward it, without covering {A}'s hands or {B}'s pointer.",
+        "alternative": "{B} draws two paths on the ground, one wandering and one straight to a target, while {A} stands at the fork deciding which one was walked."
+      },
+      "bildSzene": "two stones over two scale pans",
+      "bildSzeneAlt": "wandering path versus straight path",
+      "quellen": [
+        "§ 226 StGB",
+        "§ 18 StGB",
+        "§ 223 StGB",
+        "Themenpool: strafbt-743"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "vorsatzform-verwechselt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.781Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-385",
+      "slug": "2026-11-12-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Spielraum der Behörde heißt nicht: keine Kontrolle",
+          "unter": "Verwaltungsrecht AT · Kontrolldichte",
+          "text": "Auch beim Beurteilungsspielraum prüft das Gericht die Grenzen.",
+          "norm": "Art. 19 Abs. 4 GG",
+          "icon": "lupe",
+          "sprecher": "Auch mit Beurteilungsspielraum kontrolliert das Gericht weiter. Es ersetzt nur nicht die Wertung der Behörde durch seine eigene. Was es dann noch prüft, in vier Schritten.",
+          "marken": [
+            "Spielraum ≠ Freibrief",
+            "4 Prüfsteine"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gibt es überhaupt einen Spielraum?",
+          "text": "Grundsatz: volle Kontrolle. Spielraum nur kraft gesetzlicher Ermächtigung.",
+          "norm": "Art. 19 Abs. 4 GG",
+          "sprecher": "Schritt eins: Gibt es überhaupt einen Spielraum? Grundsätzlich legt das Gericht unbestimmte Rechtsbegriffe selbst aus, wegen Artikel 19 Absatz 4 Grundgesetz. Einen Spielraum gibt es nur, wenn das Gesetz ihn der Behörde erkennbar einräumt, und er betrifft den Tatbestand, nicht die Rechtsfolge.",
+          "marken": [
+            "nur kraft Gesetzes"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verfahren eingehalten?",
+          "text": "Zuständigkeit, Besetzung, Anhörung, Befangenheit.",
+          "norm": null,
+          "sprecher": "Schritt zwei: das Verfahren. Hat das richtige Organ in richtiger Besetzung entschieden, wurden Anhörungs- und Mitwirkungsrechte gewahrt, war niemand befangen?",
+          "marken": [
+            "Verfahren"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Sachverhalt richtig und vollständig?",
+          "text": "Keine Wertung auf falscher Tatsachengrundlage.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Sachverhalt. Die Behörde muss von einem richtigen und vollständig ermittelten Sachverhalt ausgehen. Eine Wertung auf falscher Grundlage hält nicht.",
+          "marken": [
+            "Tatsachen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Maßstäbe und sachfremde Erwägungen",
+          "text": "Allgemein gültige Bewertungsmaßstäbe beachtet, nichts Sachfremdes erwogen?",
+          "norm": null,
+          "sprecher": "Schritt vier: die Wertung selbst. Das Gericht prüft, ob allgemein gültige Bewertungsmaßstäbe beachtet und keine sachfremden Erwägungen angestellt wurden.",
+          "marken": [
+            "Maßstäbe"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel: dienstliche Beurteilung",
+          "text": "Das Gericht vergibt keine eigene Note, prüft aber die Grenzen.",
+          "norm": null,
+          "sprecher": "Beispiel dienstliche Beurteilung: Das Gericht fragt nicht, welche Note es selbst vergeben hätte. Es prüft aber, ob der Beurteiler von falschen Tatsachen ausging, Maßstäbe verkannt oder sachfremd erwogen hat.",
+          "marken": [
+            "keine eigene Note"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Eingeschränkt, nicht ausgeschaltet",
+          "text": "Verfahren, Sachverhalt, Maßstäbe, sachfremde Erwägungen.",
+          "norm": null,
+          "sprecher": "Merke: Ein Beurteilungsspielraum schränkt die Kontrolle ein, schaltet sie aber nicht aus. Verfahren, Sachverhalt, Maßstäbe und sachfremde Erwägungen prüft das Gericht immer.",
+          "marken": [
+            "eingeschränkt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst den Spielraum begründen",
+          "text": "Speichern für die nächste Klausur im Verwaltungsrecht.",
+          "sprecher": "Speicher dir das für die nächste Klausur im Verwaltungsrecht. Und begründe zuerst, warum überhaupt ein Spielraum besteht.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ein Beurteilungsspielraum der Behörde heißt nicht: keine Kontrolle. Zuerst ist zu begründen, dass das Gesetz ihn überhaupt einräumt – grundsätzlich kontrollieren die Gerichte unbestimmte Rechtsbegriffe voll (Art. 19 Abs. 4 GG). Besteht er, prüft das Gericht weiter Verfahren, Sachverhalt, allgemein gültige Bewertungsmaßstäbe und sachfremde Erwägungen – es setzt nur nicht seine eigene Wertung an die Stelle der Behörde. Speichern für die nächste Klausur im Verwaltungsrecht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#beurteilungsspielraum",
+        "#verwaltungsprozessrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beurteilungsspielraum: was das Gericht prüft",
+      "titelZeilen": [
+        "Spielraum der",
+        "Behörde heißt nicht:",
+        "keine Kontrolle"
+      ],
+      "coverText": "Grenzen prüft das Gericht immer",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Auch wo die Behörde einen Wertungsspielraum hat, prüft das Gericht Verfahren, Tatsachen und Maßstäbe.",
+        "handlung": "{B} hovers with a finished rating card and a stamp raised, while {A} leaves the rating itself untouched but holds the card up to the light to examine the facts listed on its back.",
+        "hinweisRegie": "Place the note in the free space next to the card held up to the light, slightly tilted toward its back side, without covering {B}'s raised stamp or {A}'s face.",
+        "alternative": "{A} walks along a fenced area and checks every fence post while leaving the garden inside the fence untouched, as {B} watches from within."
+      },
+      "bildSzene": "explorer checks back of droid's rating card",
+      "bildSzeneAlt": "checking fence posts, garden untouched",
+      "quellen": [
+        "Art. 19 Abs. 4 GG",
+        "Rechtsprechung zum Beurteilungsspielraum",
+        "Themenpool: verwalt-385"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-431",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "Eine AGB-Klausel geht über das Zulässige hinaus. Kürzt das Gericht sie auf das erlaubte Maß?",
+      "optionen": [
+        "Ja – sie gilt im gerade noch zulässigen Umfang",
+        "Nein – der ganze Vertrag ist nichtig",
+        "Nein – die Klausel entfällt ganz, es gilt das Gesetz"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 306 BGB",
+        "§§ 307–309 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-431",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die Klausel fällt ganz weg",
+      "text": "Verbot der geltungserhaltenden Reduktion: Eine unwirksame Klausel wird nicht auf den noch zulässigen Inhalt zurückgeführt – sonst könnte der Verwender risikolos überziehen. Sie entfällt, an ihre Stelle tritt das dispositive Recht (§ 306 Abs. 2 BGB); der übrige Vertrag bleibt wirksam (§ 306 Abs. 1). Abtrennbare, aus sich heraus verständliche Teile können bestehen bleiben.",
+      "norm": "§ 306 BGB · §§ 307–309 BGB",
+      "quellen": [
+        "§ 306 BGB",
+        "§§ 307–309 BGB",
+        "Themenpool: bgbat-431"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.782Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – sie gilt im gerade noch zulässigen Umfang",
+        "Nein – der ganze Vertrag ist nichtig",
+        "Nein – die Klausel entfällt ganz, es gilt das Gesetz"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-440",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 275 BGB: Abs. 1 wirkt automatisch, Abs. 2 und 3 nur als Einrede",
+      "text": "Echte Unmöglichkeit (Abs. 1) schließt den Leistungsanspruch kraft Gesetzes aus. Bei grobem Missverhältnis von Aufwand und Leistungsinteresse (praktische Unmöglichkeit, Abs. 2) und bei persönlicher Unzumutbarkeit (Abs. 3) kann der Schuldner nur verweigern – er muss sich darauf berufen. Die Gegenleistung regelt § 326 BGB, Sekundäransprüche § 275 Abs. 4 BGB.",
+      "norm": "§ 275 BGB",
+      "quellen": [
+        "§ 275 BGB",
+        "§ 326 BGB",
+        "Themenpool: schuld-440"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-824",
+      "ueberzeile": "Streitstand ZPO",
+      "titel": "Kostenfestsetzung: Darf der Rechtspfleger die Zahlung des Schuldners berücksichtigen?",
+      "norm": "§§ 103, 104 ZPO · § 767 ZPO",
+      "optionen": [
+        "Eine Ansicht: Formales Verfahren – materielle Einwendungen nie; der Weg ist § 767 ZPO.",
+        "Andere Ansicht (verbreitet): ausnahmsweise ja, wenn die Einwendung unstreitig oder offenkundig ist."
+      ],
+      "text": "Einig ist man im Grundsatz: Der Rechtspfleger prüft auf Basis der Kostengrundentscheidung nur, ob die Kosten entstanden und notwendig sind (§ 91 ZPO). Rechtsbehelf: sofortige Beschwerde (§ 104 Abs. 3 ZPO).",
+      "quellen": [
+        "§ 103 ZPO",
+        "§ 104 ZPO",
+        "§ 91 ZPO",
+        "§ 767 ZPO",
+        "Themenpool: assessorz-824"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-038",
+      "ueberzeile": "Merksatz Deliktsrecht",
+      "titel": "Produkthaftung: ProdHaftG und § 823 BGB stehen nebeneinander",
+      "text": "Das ProdHaftG verdrängt § 823 Abs. 1 BGB nicht (§ 15 Abs. 2 ProdHaftG). Die Produzentenhaftung trägt, wo es Lücken hat – etwa bei beruflich genutzten Sachen oder der Produktbeobachtung.",
+      "norm": "§ 823 Abs. 1 BGB · § 15 Abs. 2 ProdHaftG",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 1 ProdHaftG",
+        "§ 15 ProdHaftG",
+        "Themenpool: delikt-038"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-071",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Zueignungsabsicht",
+      "text": "Sie hat zwei Teile: Vorsatz, den Eigentümer dauerhaft zu enteignen (bedingter Vorsatz genügt), und Absicht, sich oder einem Dritten die Sache oder ihren Sachwert zumindest vorübergehend anzueignen. Funktion: Sie trennt den Diebstahl (§ 242 StGB) von der straflosen Gebrauchsanmaßung. Bei § 246 StGB muss sich die Zueignung dagegen objektiv zeigen.",
+      "norm": "§ 242 Abs. 1 StGB · § 246 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 246 StGB",
+        "Themenpool: strafbt-071"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:39.782Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

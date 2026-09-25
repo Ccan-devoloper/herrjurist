@@ -1,0 +1,868 @@
+{
+  "datum": "2026-12-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "stpo-776",
+        "themaTitel": "Vorläufige Festnahme",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "staat-596",
+        "themaTitel": "Zustimmungsgesetz und Einspruchsgesetz",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "sachen-226",
+        "themaTitel": "Wie entsteht Eigentum durch Verbindung, Vermischung und Verarbeitung?",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:10",
+        "art": "frage",
+        "themaId": "grundr-621"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:10",
+        "art": "antwort",
+        "themaId": "grundr-621"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:09",
+        "art": "norm",
+        "themaId": "revision-881"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "zahl",
+        "themaId": "methodik-904"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "streitstand",
+        "themaId": "revision-873"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "merksatz",
+        "themaId": "zpo-288"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "stpo-776",
+      "poolTitel": "Vorläufige Festnahme",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 127 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "staat-596",
+      "poolTitel": "Zustimmungsgesetz und Einspruchsgesetz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 77 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-226",
+      "poolTitel": "Wie entsteht Eigentum durch Verbindung, Vermischung und Verarbeitung?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 946 BGB",
+        "§ 947 BGB",
+        "§ 950 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-20"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "grundr-621",
+      "poolTitel": "Freizügigkeit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 11 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "grundr-621",
+      "poolTitel": "Freizügigkeit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 11 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "revision-881",
+      "poolTitel": "Wie begründet man die Aufklärungsrüge?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 2 StPO",
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "methodik-904",
+      "poolTitel": "Normenketten bilden statt Einzelnormen lernen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "revision-873",
+      "poolTitel": "Wann ist die Revision statthaft?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 333 StPO",
+        "§ 335 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2026-10-25"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "zpo-288",
+      "poolTitel": "Wie wird eine Forderung gepfändet?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 829 ZPO",
+        "§ 835 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-776",
+      "slug": "2026-12-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Festgehalten, aber unschuldig: Deckt § 127 StPO das?",
+          "titelZeilen": [
+            "Festgehalten, aber",
+            "unschuldig: Deckt",
+            "§ 127 StPO das?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Verdacht oder echte Tat?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Ladeninhaber L sieht, wie A scheinbar eine Flasche einsteckt, und hält ihn bis zum Eintreffen der Polizei fest. Später zeigt sich: A hatte die Flasche vorher woanders gekauft. War L nach § 127 Abs. 1 S. 1 StPO gerechtfertigt?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Muss die Tat wirklich begangen sein?",
+          "links": {
+            "titel": "Verdacht genügt",
+            "punkte": [
+              "Dringender, objektiv begründeter Tatverdacht reicht.",
+              "Wer schnell handeln muss, soll nicht das Irrtumsrisiko tragen.",
+              "Vor allem die Rechtsprechung."
+            ]
+          },
+          "rechts": {
+            "titel": "Tat muss vorliegen",
+            "punkte": [
+              "Wortlaut: „auf frischer Tat“ meint eine begangene Tat.",
+              "Der Unschuldige soll das Irrtumsrisiko nicht tragen.",
+              "Großer Teil der Literatur; Irrtum als Erlaubnistatbestands-irrtum."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Wo der Streit entscheidet",
+          "text": "L bleibt meist nach beiden Ansichten straflos – nach der Verdachtslösung ist er gerechtfertigt, nach der Tatlösung hilft ihm der Erlaubnistatbestandsirrtum. Entscheidend wird der Streit, wenn A sich losreißt und L verletzt: Gegen eine gerechtfertigte Festnahme gibt es keine Notwehr."
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme",
+          "text": "Für die Verdachtslösung spricht, dass Bürger in Sekunden entscheiden müssen. Für die Tatlösung spricht, dass der Unschuldige sich sonst nicht wehren dürfte. Beides ist vertretbar – zeig in der Klausur vor allem die Folge für die Notwehr des Festgehaltenen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tat oder Verdacht? Der Streit entscheidet selten über den Festnehmenden, aber oft über das Notwehrrecht des Festgehaltenen."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 127 Abs. 1 StPO in drei Zügen",
+          "punkte": [
+            "Frische Tat: Tat oder Verdacht?",
+            "Fluchtverdacht oder Identität unklar?",
+            "Mittel: festhalten, nicht mehr"
+          ],
+          "icons": [
+            "lupe",
+            "person",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Festgehalten, aber unschuldig – deckt § 127 Abs. 1 StPO das? Die Rechtsprechung lässt einen dringenden, objektiv begründeten Tatverdacht genügen; ein großer Teil der Literatur verlangt eine wirklich begangene Tat. Für den Festnehmenden ändert das im Ergebnis oft wenig. Entscheidend wird es, wenn der Festgehaltene sich wehrt: Gegen eine gerechtfertigte Festnahme gibt es keine Notwehr. Speichern für die nächste StPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#festnahme",
+        "#127stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorläufige Festnahme: Tat oder Verdacht?",
+      "coverText": "Verdacht oder echte Tat?",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Ob schon der Verdacht die Festnahme trägt, entscheidet, ob sich der Festgehaltene wehren darf.",
+        "handlung": "{A} firmly holds the sleeve of {B}, who is holding up a small receipt with a puzzled, innocent expression, both frozen in a doorway.",
+        "hinweisRegie": "Place the note in the free space next to the raised receipt, slightly tilted toward it, so it points to the doubt about the deed without covering either face or the holding hand.",
+        "alternative": "{B} stands on a scale balancing a question mark against a small bottle, while {A} decides whether to close a gate."
+      },
+      "bildSzene": "sleeve held, innocent receipt raised",
+      "bildSzeneAlt": "gate decision beside balancing scale",
+      "quellen": [
+        "§ 127 Abs. 1 StPO",
+        "§ 32 StGB",
+        "§ 16 StGB",
+        "§ 239 StGB",
+        "Themenpool: stpo-776"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.694Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-596",
+      "slug": "2026-12-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kanzlermehrheit reicht nicht, wenn der Bundesrat zustimmen muss",
+          "titelZeilen": [
+            "Kanzlermehrheit",
+            "reicht nicht, wenn",
+            "der Bundesrat",
+            "zustimmen muss"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Zurückweisen geht nur beim Einspruch",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Der Bundestag beschließt ein Gesetz, das auch das Verwaltungsverfahren der Landesbehörden regelt – ausdrücklich ohne Abweichungsmöglichkeit für die Länder. Der Bundesrat verweigert die Zustimmung. Der Bundestag „überstimmt“ ihn mit der Mehrheit seiner Mitglieder. Gesetz zustande gekommen?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Gesetzestypen",
+          "links": {
+            "titel": "Einspruchsgesetz",
+            "punkte": [
+              "Regelfall: Zustimmung nur, wo das GG sie anordnet.",
+              "Bundesrat kann nach dem Vermittlungsverfahren Einspruch einlegen.",
+              "Bundestag kann ihn zurückweisen (Art. 77 IV GG)."
+            ]
+          },
+          "rechts": {
+            "titel": "Zustimmungsgesetz",
+            "punkte": [
+              "Nur in den vom GG genannten Fällen, z. B. Art. 84 I 6 GG.",
+              "Ohne Zustimmung kein Gesetz (Art. 78 GG).",
+              "Ein Überstimmen gibt es nicht."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Zustimmungsbedürftig?",
+              "text": "Nur wenn das GG es ausdrücklich anordnet – hier Art. 84 Abs. 1 S. 6 GG für Verfahrensregeln ohne Abweichungsmöglichkeit."
+            },
+            {
+              "titel": "Das ganze Gesetz?",
+              "text": "Nach dem BVerfG ist das Gesetz als Einheit insgesamt zustimmungsbedürftig, wenn eine Vorschrift die Zustimmung auslöst."
+            },
+            {
+              "titel": "Zustimmung erteilt?",
+              "text": "Der Bundesrat muss aktiv zustimmen, mit mindestens der Mehrheit seiner Stimmen (Art. 52 Abs. 3 S. 1 GG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Das Gesetz ist zustimmungsbedürftig (Art. 84 Abs. 1 S. 6 GG). Der Bundesrat hat nicht zugestimmt, also ist es nicht zustande gekommen (Art. 78 GG). Die Kanzlermehrheit hilft nur gegen einen Einspruch (Art. 77 Abs. 4 GG) – eine verweigerte Zustimmung kann der Bundestag nicht zurückweisen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst den Gesetzestyp bestimmen. Einen Einspruch kann der Bundestag zurückweisen, eine verweigerte Zustimmung nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Gesetzgebung in drei Zügen",
+          "punkte": [
+            "Zustimmung vom GG angeordnet?",
+            "Einspruch oder verweigerte Zustimmung?",
+            "Art. 78 GG: zustande gekommen?"
+          ],
+          "icons": [
+            "paragraf",
+            "gebaeude",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Die Kanzlermehrheit reicht nicht, wenn der Bundesrat zustimmen muss. Zurückweisen kann der Bundestag nur einen Einspruch (Art. 77 Abs. 4 GG). Ist das Gesetz zustimmungsbedürftig – etwa nach Art. 84 Abs. 1 S. 6 GG –, kommt es ohne Zustimmung nicht zustande (Art. 78 GG). Und nach dem BVerfG genügt eine zustimmungsbedürftige Vorschrift, damit das ganze Gesetz zustimmungsbedürftig ist. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#gesetzgebung",
+        "#bundesrat",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zustimmungs- oder Einspruchsgesetz?",
+      "coverText": "Zurückweisen geht nur beim Einspruch",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Beim Zustimmungsgesetz kann der Bundestag den Bundesrat nicht überstimmen – ohne Zustimmung kein Gesetz.",
+        "handlung": "{A} hovers in front of a door with two locks, one already opened by a large crowd's key, while {B} taps his pointer on the second lock that only a separate small key can open.",
+        "hinweisRegie": "Place the note in the free space right next to the second, still closed lock, slightly tilted toward it, without covering {B}'s pointer or the opened first lock.",
+        "alternative": "{B} shows two gates side by side: one with a push-open barrier and one sealed with a lock, while {A} holds up a single missing key."
+      },
+      "bildSzene": "door with second lock still closed",
+      "bildSzeneAlt": "push barrier versus sealed gate",
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Art. 84 Abs. 1 GG",
+        "Art. 52 Abs. 3 GG",
+        "Themenpool: staat-596"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.694Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-226",
+      "slug": "2026-12-22-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eingebaut, vermischt, verarbeitet: Eigentum ohne Einigung",
+          "unter": "Sachenrecht · §§ 946 ff. BGB",
+          "text": "Gesetzlicher Eigentumserwerb – ohne Einigung und ohne Übergabe.",
+          "norm": "§§ 946–950 BGB",
+          "icon": "werkzeug",
+          "sprecher": "Eigentum wechselt auch ganz ohne Einigung. Beim Einbauen, Vermischen und Verarbeiten ordnet das Gesetz es neu. Hier sind die vier Regeln.",
+          "marken": [
+            "ohne Einigung",
+            "vier Regeln"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Verbindung mit einem Grundstück",
+          "text": "Wird die Sache wesentlicher Bestandteil, erwirbt der Grundstückseigentümer.",
+          "norm": "§ 946 BGB · §§ 93, 94 BGB",
+          "sprecher": "Regel eins: Wird eine bewegliche Sache wesentlicher Bestandteil eines Grundstücks, erstreckt sich das Eigentum am Grundstück auf sie. Klassiker: Baumaterial im Haus. Achtung bei Scheinbestandteilen nach § 95 BGB, etwa Einbauten nur für die Mietzeit.",
+          "marken": [
+            "Grundstück gewinnt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verbindung beweglicher Sachen",
+          "text": "Miteigentum nach Wertverhältnis – Alleineigentum, wenn eine Sache Hauptsache ist.",
+          "norm": "§ 947 BGB",
+          "sprecher": "Regel zwei: Werden bewegliche Sachen wesentliche Bestandteile einer einheitlichen Sache, werden ihre Eigentümer Miteigentümer, im Verhältnis der Werte. Ist eine Sache als Hauptsache anzusehen, erwirbt ihr Eigentümer Alleineigentum.",
+          "marken": [
+            "Miteigentum"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vermischung",
+          "text": "Untrennbar vermischt oder vermengt: § 947 BGB gilt entsprechend.",
+          "norm": "§ 948 BGB",
+          "sprecher": "Regel drei: Werden bewegliche Sachen untrennbar vermischt oder vermengt, etwa Heizöl im Tank, gilt das entsprechend. Untrennbar ist es auch, wenn die Trennung unverhältnismäßige Kosten verursachen würde.",
+          "marken": [
+            "untrennbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verarbeitung",
+          "text": "Wer eine neue Sache herstellt, wird Eigentümer – außer der Verarbeitungswert ist erheblich geringer.",
+          "norm": "§ 950 BGB",
+          "sprecher": "Regel vier: Wer durch Verarbeitung eine neue bewegliche Sache herstellt, erwirbt das Eigentum daran. Das gilt nicht, wenn der Wert der Verarbeitung erheblich geringer ist als der Wert des Stoffes.",
+          "marken": [
+            "neue Sache"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und wer verliert?",
+          "text": "Keine Rückgabe – Vergütung in Geld nach Bereicherungsrecht.",
+          "norm": "§ 951 BGB",
+          "sprecher": "Und wer sein Eigentum verliert? Die Wiederherstellung des früheren Zustands kann er nicht verlangen. Er bekommt nach § 951 BGB eine Vergütung in Geld nach Bereicherungsrecht.",
+          "marken": [
+            "Geld statt Sache"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Einbau, Vermischung, Verarbeitung: Das Gesetz verteilt das Eigentum – der Verlierer bekommt Geld.",
+          "norm": "§§ 946–951 BGB",
+          "sprecher": "Merke: Beim Einbauen, Vermischen und Verarbeiten verteilt das Gesetz das Eigentum neu, ganz ohne Einigung. Der Verlierer bekommt Geld über § 951 BGB.",
+          "marken": [
+            "Gesetz statt Einigung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim Einbau an § 95 BGB denken",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "sprecher": "Speicher dir die vier Regeln für die nächste Sachenrechtsklausur. Und denk beim Einbau immer an § 95 BGB.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Eigentum wechselt auch ohne Einigung: Wird eine Sache wesentlicher Bestandteil eines Grundstücks, erwirbt der Grundstückseigentümer (§ 946 BGB). Verbundene oder untrennbar vermischte bewegliche Sachen führen zu Miteigentum nach Wertanteilen – oder zu Alleineigentum am Hauptbestandteil (§§ 947, 948 BGB). Wer eine neue Sache herstellt, wird ihr Eigentümer (§ 950 BGB). Der Verlierer bekommt Geld nach § 951 BGB. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#eigentumserwerb",
+        "#950bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verbindung, Vermischung, Verarbeitung",
+      "titelZeilen": [
+        "Eingebaut, vermischt,",
+        "verarbeitet: Eigentum",
+        "ohne Einigung"
+      ],
+      "coverText": "Das Gesetz verteilt neu",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Wird eine Sache eingebaut, vermischt oder verarbeitet, wechselt das Eigentum kraft Gesetzes.",
+        "handlung": "{A} fits a single glowing crystal block into the wall of a small stone hut, while {B} points his pointer at the block that now seamlessly belongs to the hut.",
+        "hinweisRegie": "Place the note in the open space right beside the newly fitted block, slightly tilted toward it, so it marks the moment of change without covering {A}'s hands or the pointer.",
+        "alternative": "{B} watches {A} carve a raw crystal into a small statue, the leftover shards lying beside the finished piece."
+      },
+      "bildSzene": "crystal block fitted into hut wall",
+      "bildSzeneAlt": "raw crystal carved into statue",
+      "quellen": [
+        "§ 946 BGB",
+        "§ 947 BGB",
+        "§ 948 BGB",
+        "§ 950 BGB",
+        "§ 951 BGB",
+        "§§ 93–95 BGB",
+        "Themenpool: sachen-226"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "gesetz-statt-einigung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.695Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-621",
+      "ueberzeile": "Prüfungsfrage Grundrechte",
+      "titel": "Dem Deutschen D wird die Ausreise ins Ausland untersagt. Welches Grundrecht ist der Maßstab?",
+      "optionen": [
+        "Art. 11 GG – die Freizügigkeit umfasst jede Ortsveränderung",
+        "Art. 2 Abs. 2 S. 2 GG – die Freiheit der Person",
+        "Art. 2 Abs. 1 GG – Art. 11 GG gilt nur im Bundesgebiet"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "Art. 11 GG",
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: grundr-621"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.695Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-621",
+      "ueberzeile": "Auflösung",
+      "titel": "Art. 2 Abs. 1 GG – Art. 11 GG endet an der Grenze",
+      "text": "Art. 11 GG schützt Deutsche darin, im Bundesgebiet Aufenthalt und Wohnsitz zu nehmen. Die Ausreise fällt nach dem BVerfG (Elfes) nicht darunter, sondern unter die allgemeine Handlungsfreiheit. Die Einreise ins Bundesgebiet ist nach h.M. dagegen von Art. 11 GG erfasst. Die Freiheit der Person schützt nur vor Eingriffen in die körperliche Bewegungsfreiheit.",
+      "norm": "Art. 11 GG · Art. 2 Abs. 1 GG",
+      "quellen": [
+        "Art. 11 GG",
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: grundr-621"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.695Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Art. 11 GG – die Freizügigkeit umfasst jede Ortsveränderung",
+        "Art. 2 Abs. 2 S. 2 GG – die Freiheit der Person",
+        "Art. 2 Abs. 1 GG – Art. 11 GG gilt nur im Bundesgebiet"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-881",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Aufklärungsrüge: Ohne konkrete Beweistatsache bleibt sie unzulässig",
+      "text": "Die Verletzung der Aufklärungspflicht (§ 244 Abs. 2 StPO) rügst du mit der Verfahrensrüge. Nach § 344 Abs. 2 S. 2 StPO musst du darlegen: welche bestimmte Tatsache aufzuklären war, mit welchem Beweismittel, welche Umstände das Gericht dazu drängten und welches Ergebnis zu erwarten war. Daraus folgt das Beruhen (§ 337 StPO).",
+      "norm": "§ 244 Abs. 2 StPO · § 344 Abs. 2 S. 2 StPO",
+      "quellen": [
+        "§ 244 Abs. 2 StPO",
+        "§ 344 Abs. 2 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-881"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.695Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-904",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Normenkette bauen: Rücktritt wegen eines Mangels",
+      "text": "Statt Einzelnormen zu lernen, verbinde sie zu einer Kette – vom Einstieg bis zur Rechtsfolge.",
+      "punkte": [
+        "Einstieg: §§ 437 Nr. 2, 323 BGB",
+        "Frist oder Entbehrlichkeit: §§ 323 Abs. 2, 440 BGB",
+        "Ausschluss: § 323 Abs. 5 S. 2 BGB",
+        "Rechtsfolge: § 346 Abs. 1 BGB"
+      ],
+      "quellen": [
+        "§ 437 BGB",
+        "§ 440 BGB",
+        "§ 323 BGB",
+        "§ 346 BGB",
+        "Themenpool: methodik-904"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.695Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-873",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Freispruch mit belastenden Gründen: Kann der Angeklagte Revision einlegen?",
+      "norm": "§§ 333, 335 StPO",
+      "optionen": [
+        "Rspr.: Nein – beschweren kann nur der Tenor, nicht die Begründung.",
+        "Teile der Literatur: ausnahmsweise ja, wenn die Gründe erheblich stigmatisieren."
+      ],
+      "text": "Klausurhinweis: Statthaft ist die Revision gegen Urteile der Strafkammern, der Schwurgerichte und erstinstanzliche OLG-Urteile (§ 333 StPO), gegen Urteile des Amtsgerichts als Sprungrevision (§ 335 StPO). Zulässig ist sie aber nur bei Beschwer – und die folgt nach der Rspr. aus dem Tenor.",
+      "quellen": [
+        "§ 333 StPO",
+        "§ 335 StPO",
+        "Themenpool: revision-873"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.695Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-288",
+      "ueberzeile": "Merksatz ZPO",
+      "titel": "Forderungspfändung: Zustellung macht sie wirksam",
+      "text": "Gepfändet ist die Forderung erst mit Zustellung des Beschlusses an den Drittschuldner (§ 829 Abs. 3 ZPO). Einziehen darf der Gläubiger sie aber erst nach der Überweisung (§ 835 ZPO).",
+      "norm": "§ 829 ZPO · § 835 ZPO",
+      "quellen": [
+        "§ 829 ZPO",
+        "§ 835 ZPO",
+        "Themenpool: zpo-288"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:18.695Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

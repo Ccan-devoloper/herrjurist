@@ -1,0 +1,877 @@
+{
+  "datum": "2026-12-06",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafat-060",
+        "themaTitel": "Was ist ein intensiver bzw. extensiver Notwehrexzess?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "grundr-615",
+        "themaTitel": "Presse- und Rundfunkfreiheit",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "strafbt-758"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "strafbt-758"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "schuldbt-024"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "fehler",
+        "themaId": "zwangsv-831"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "tipp",
+        "themaId": "zpo-561"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "zahl",
+        "themaId": "assessorz-805"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-060",
+      "poolTitel": "Was ist ein intensiver bzw. extensiver Notwehrexzess?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 33 StGB",
+        "§ 32 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-28"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-615",
+      "poolTitel": "Presse- und Rundfunkfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 I GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-10-25"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-758",
+      "poolTitel": "Untreue",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-758",
+      "poolTitel": "Untreue",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-024",
+      "poolTitel": "Wann kann der Käufer ohne Fristsetzung zurücktreten?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 323 Abs. 2 BGB",
+        "§ 440 BGB",
+        "§ 326 Abs. 5 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-13"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "zwangsv-831",
+      "poolTitel": "Wie erzwingt man Handlungen und Unterlassungen?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "§ 890 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "zpo-561",
+      "poolTitel": "Versäumnisurteil und Einspruch",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 330 ff., 338 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-13"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-805",
+      "poolTitel": "Wie schreibt man Entscheidungsgründe im Urteilsstil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 3 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-12-06-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen in vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen in",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Prozessstandschaft: Wer klagen darf, ist Zulässigkeit – wem das Recht zusteht, Begründetheit.",
+            "Leistungskondiktion: „auf Kosten“ ohne eigenen Prüfpunkt.",
+            "§ 892 BGB: Beim Grundstück schadet nur Kenntnis, nicht grobe Fahrlässigkeit.",
+            "Anscheinsbeweis: erschüttern genügt – keine Umkehr der Beweislast.",
+            "Rechtskraft: Identität, Präjudizialität, kontradiktorisches Gegenteil.",
+            "Nachbesserung seit 31.07.2026: Informationspflicht, längere Verjährung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Erpressung: sechs Schritte, am Ende die Verwerflichkeit nach § 253 Abs. 2 StGB.",
+            "Vorsatz: im Tatbestand – und als Vorsatzschuld in der Schuld.",
+            "§ 136 StPO: Schweigen zur Sache ja, Personalien muss er angeben.",
+            "Belehrung vergessen: unverwertbar – außer Recht bekannt oder kein Widerspruch.",
+            "Eigenverantwortliche Selbstgefährdung: kausal, aber nicht zurechenbar."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Kammer-Pflichtmitgliedschaft: nach dem BVerfG Art. 2 Abs. 1, nicht Art. 9 GG.",
+            "VG-Urteil: Der Einleitungssatz nennt zuerst das Ergebnis.",
+            "Bundestreue: akzessorisch, keine eigene Anspruchsgrundlage.",
+            "Art. 267 AEUV: Vorlagepflicht nach dem konkreten Fall, nicht nach dem Rang.",
+            "Art. 82 GG: formell voll, materiell nach verbreiteter Ansicht nur Evidenz."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Analogie: planwidrige Lücke, vergleichbare Interessenlage – nie zulasten des Täters.",
+            "Zeitnot: Notfallmodus mit Ergebnissatz, Restzeit verteilen, Urteilsstil."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Grob fahrlässiger Grundstückserwerber: Wird er Eigentümer?",
+            "Pflichtmitglied der Kammer: Welches Grundrecht prüfst du?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Prozess und Sachenrecht",
+            "Strafrecht: Zurechnung und StPO",
+            "Öffentliches Recht: Staatsorganisation",
+            "Klausurtechnik unter Zeitdruck"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen in vier Bereichen – von der Prozessstandschaft über die eigenverantwortliche Selbstgefährdung bis zur Vorlagepflicht nach Art. 267 AEUV. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Am Ende der Woche wird sortiert, welches Wissen schon fest sitzt und welches noch einmal nach oben muss.",
+        "handlung": "{A} sorts a pile of glowing crystals into four sturdy crates, while {B} taps one crystal with his pointer that still flickers and sets it on top for another look.",
+        "hinweisRegie": "Place the note in the free space above the flickering crystal on top of the crates, slightly tilted toward it, without covering {A}'s sorting hands or the four crates.",
+        "alternative": "{B} checks four lanterns on a wall and marks the one whose flame still wavers, while {A} refills it."
+      },
+      "bildSzene": "sorting crystals into four crates",
+      "bildSzeneAlt": "checking four lanterns, one wavers",
+      "quellen": [
+        "§ 265 Abs. 2 ZPO",
+        "§ 812 Abs. 1 BGB",
+        "§ 892 BGB",
+        "§ 286 ZPO",
+        "§ 322 ZPO",
+        "§ 475e Abs. 5 BGB",
+        "§ 253 StGB",
+        "§ 15 StGB",
+        "§ 136 StPO",
+        "§ 222 StGB",
+        "Art. 9 GG",
+        "§ 117 VwGO",
+        "Art. 20 Abs. 1 GG",
+        "Art. 267 AEUV",
+        "Art. 82 GG",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-937",
+        "Themenpool: mindset-3"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.569Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-060",
+      "slug": "2026-12-06-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 33 StGB in vier Schritten: Wut reicht nicht",
+          "titelZeilen": [
+            "§ 33 StGB in",
+            "vier Schritten:",
+            "Wut reicht nicht"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Nur Verwirrung, Furcht, Schrecken",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 33 StGB ist ein Entschuldigungsgrund: Wer die Grenzen der Notwehr aus Verwirrung, Furcht oder Schrecken überschreitet, wird nicht bestraft. Die Tat bleibt rechtswidrig – deshalb prüfst du § 33 StGB in der Schuld, nachdem § 32 StGB gescheitert ist."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Notwehrlage",
+              "text": "Ein gegenwärtiger rechtswidriger Angriff (§ 32 Abs. 2 StGB). Beim intensiven Exzess liegt er vor."
+            },
+            {
+              "titel": "2. Überschreitung",
+              "text": "Die Verteidigung geht über das Erforderliche hinaus – der Täter wehrt sich stärker als nötig."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Asthenischer Affekt",
+              "text": "Verwirrung, Furcht oder Schrecken. Sthenische Affekte wie Wut oder Zorn genügen nicht."
+            },
+            {
+              "titel": "4. Kausalität",
+              "text": "Der Affekt muss die Überschreitung verursacht haben; Mitursächlichkeit neben anderen Motiven genügt nach der Rspr."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: extensiver Exzess",
+          "text": "Überschreitet der Täter die zeitlichen Grenzen – er wehrt sich, bevor der Angriff gegenwärtig ist oder nachdem er beendet ist –, ist § 33 StGB umstritten. Beim vorzeitigen Exzess wird er überwiegend abgelehnt; beim nachzeitigen gehen die Ansichten auseinander. Hier Stellung nehmen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verwirrung, Furcht oder Schrecken entschuldigen die zu harte Abwehr – Wut und Zorn nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 33 StGB in vier Fragen",
+          "punkte": [
+            "Notwehrlage gegeben?",
+            "Grenze überschritten?",
+            "Verwirrung, Furcht, Schrecken?",
+            "Affekt ursächlich?"
+          ],
+          "icons": [
+            "warnung",
+            "stopp",
+            "blitz",
+            "kreislauf"
+          ]
+        }
+      ],
+      "caption": "§ 33 StGB in vier Schritten – und Wut reicht nicht. Der Notwehrexzess entschuldigt nur, wer die Grenzen der Notwehr aus Verwirrung, Furcht oder Schrecken überschreitet; sthenische Affekte wie Zorn genügen nicht. Du prüfst ihn in der Schuld: Notwehrlage, Überschreitung, asthenischer Affekt, Kausalität. Umstritten ist der extensive Exzess, vor allem der nachzeitige. Speichern für die nächste Notwehrklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#notwehrexzess",
+        "#33stgb",
+        "#notwehr",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 33 StGB: Notwehrexzess im Schema",
+      "coverText": "Nur Verwirrung, Furcht, Schrecken",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer sich aus Angst zu heftig verteidigt, kann entschuldigt sein – wer aus Wut zu heftig zuschlägt, nicht.",
+        "handlung": "{A} flinches back in fright and pushes a heavy crate far too hard toward an approaching intruder, while {B} steps between them and raises a calming hand.",
+        "hinweisRegie": "Place the note in the free space beside {A}'s frightened face and the overpushed crate, slightly tilted toward his expression, so the fear as the reason is the focus without covering {B}'s hand.",
+        "alternative": "{B} compares two figures, one trembling behind a shield and one red with anger, while {A} points only at the trembling one."
+      },
+      "bildSzene": "frightened mechanic overpushes crate",
+      "bildSzeneAlt": "trembling figure versus angry figure",
+      "quellen": [
+        "§ 33 StGB",
+        "§ 32 StGB",
+        "Themenpool: strafat-060"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-pruefpunkte-mit-pointe",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.570Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-615",
+      "slug": "2026-12-06-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Rundfunkfreiheit verlangt vom Staat mehr als Abstand",
+          "unter": "Presse- und Rundfunkfreiheit · Art. 5 Abs. 1 S. 2 GG",
+          "text": "Der Gesetzgeber muss eine Ordnung schaffen, die Vielfalt sichert.",
+          "norm": "Art. 5 Abs. 1 S. 2 GG",
+          "icon": "zeitung",
+          "sprecher": "Beim Rundfunk reicht es nicht, dass der Staat sich raushält. Er muss sogar aktiv werden. Das unterscheidet die Rundfunkfreiheit von der Pressefreiheit – und das prägt die ganze Prüfung.",
+          "marken": [
+            "nicht nur Abwehr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Pressefreiheit: vor allem Abwehr",
+          "text": "Geschützt ist die Pressearbeit von der Recherche bis zum Vertrieb.",
+          "norm": "Art. 5 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt eins: die Presse. Der Begriff ist formal, gemeint sind Druckerzeugnisse. Geschützt ist die Pressearbeit von der Recherche bis zum Vertrieb, samt Redaktionsgeheimnis. Hier wirkt das Grundrecht vor allem als Abwehrrecht.",
+          "marken": [
+            "Recherche bis Vertrieb"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Beispiel: Durchsuchung der Redaktion",
+          "text": "Unzulässig, wenn sie vor allem den Informanten aufdecken soll.",
+          "norm": "Art. 5 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt zwei, ein Beispiel: Durchsuchungen und Beschlagnahmen bei der Presse sind nach dem Bundesverfassungsgericht unzulässig, wenn sie ausschließlich oder vorwiegend dazu dienen, einen Informanten zu ermitteln.",
+          "marken": [
+            "Informantenschutz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rundfunk: eine dienende Freiheit",
+          "text": "Sie dient der freien Meinungsbildung und braucht eine gesetzliche Ordnung.",
+          "norm": "Art. 5 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt drei: der Rundfunk. Wegen seiner Breitenwirkung ist die Rundfunkfreiheit nach dem Bundesverfassungsgericht eine dienende Freiheit. Der Gesetzgeber muss eine positive Ordnung schaffen, die Meinungsvielfalt sichert.",
+          "marken": [
+            "Ausgestaltung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Staatsferne und Grundversorgung",
+          "text": "Öffentlich-rechtlicher Rundfunk sichert die Grundversorgung – staatsfern organisiert.",
+          "norm": "Art. 5 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt vier: In der dualen Ordnung sichert der öffentlich-rechtliche Rundfunk die Grundversorgung. Er muss staatsfern organisiert sein: Staatliche und staatsnahe Mitglieder dürfen seine Aufsichtsgremien nicht beherrschen.",
+          "marken": [
+            "staatsfern"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Schranken: Art. 5 Abs. 2 GG",
+          "text": "Allgemeine Gesetze, Jugendschutz, persönliche Ehre – mit Wechselwirkung.",
+          "norm": "Art. 5 Abs. 2 GG",
+          "sprecher": "Für beide Freiheiten gelten die Schranken aus Absatz zwei: allgemeine Gesetze, Jugendschutz, persönliche Ehre. Und die Wechselwirkungslehre: Das Gesetz wird im Licht des Grundrechts ausgelegt.",
+          "marken": [
+            "Wechselwirkung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Presse: vor allem Abwehr. Rundfunk: zusätzlich Ausgestaltung durch den Gesetzgeber.",
+          "norm": "Art. 5 Abs. 1 S. 2 GG",
+          "sprecher": "Merke: Die Pressefreiheit wehrt vor allem ab. Die Rundfunkfreiheit verlangt zusätzlich eine gesetzliche Ordnung, die Vielfalt und Staatsferne sichert.",
+          "marken": [
+            "Abwehr + Auftrag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Presse oder Rundfunk?",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und ordne zuerst zu: Presse oder Rundfunk? Davon hängt ab, was der Staat tun muss.",
+          "marken": [
+            "erst zuordnen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Rundfunkfreiheit verlangt vom Staat mehr als Abstand. Die Pressefreiheit schützt die Pressearbeit von der Recherche bis zum Vertrieb, vor allem als Abwehrrecht – etwa gegen Durchsuchungen, die vorwiegend Informanten aufdecken sollen. Die Rundfunkfreiheit ist nach dem BVerfG eine dienende Freiheit: Der Gesetzgeber muss eine Ordnung schaffen, die Meinungsvielfalt, Grundversorgung und Staatsferne sichert. Schranken für beide: Art. 5 Abs. 2 GG.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#rundfunkfreiheit",
+        "#pressefreiheit",
+        "#art5gg",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 5 GG: Presse- und Rundfunkfreiheit",
+      "titelZeilen": [
+        "Rundfunkfreiheit",
+        "verlangt vom Staat",
+        "mehr als Abstand"
+      ],
+      "coverText": "Dienende Freiheit",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Bei der Presse soll der Staat vor allem fernbleiben, beim Rundfunk muss er zusätzlich eine faire Ordnung bauen.",
+        "handlung": "{A} curiously holds a microphone on a small open stage, while {B} uses his pointer to set up several evenly spaced speaker stands so that many different voices get a place.",
+        "hinweisRegie": "Place the note in the open space between the evenly spaced speaker stands, slightly tilted toward them, so the duty to organise diversity is the focus without covering the microphone or faces.",
+        "alternative": "{B} keeps a respectful distance from a busy printing press, while {A} builds a round table with many equal seats around a broadcast antenna."
+      },
+      "bildSzene": "professor arranges many equal speaker stands",
+      "bildSzeneAlt": "distance from press, round table at antenna",
+      "quellen": [
+        "Art. 5 Abs. 1 S. 2 GG",
+        "Art. 5 Abs. 2 GG",
+        "BVerfG, Cicero-Entscheidung",
+        "Themenpool: grundr-615"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "mehr-als-abwehr",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.571Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-758",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "Untreue: Welche Variante setzt keine wirksame Befugnis im Außenverhältnis voraus?",
+      "optionen": [
+        "Der Missbrauchstatbestand",
+        "Der Treubruchstatbestand",
+        "Keine – beide setzen wirksame Vertretungsmacht voraus"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 266 Abs. 1 StGB",
+        "Themenpool: strafbt-758"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.571Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-758",
+      "ueberzeile": "Auflösung",
+      "titel": "Der Treubruchstatbestand",
+      "text": "Der Missbrauchstatbestand verlangt eine Befugnis, über fremdes Vermögen zu verfügen oder einen anderen zu verpflichten: Der Täter kann nach außen wirksam handeln, überschreitet aber sein Dürfen im Innenverhältnis. Der Treubruch erfasst jede Verletzung einer Vermögensbetreuungspflicht, auch rein tatsächlich. Beide verlangen nach h.M. diese Pflicht und einen Nachteil.",
+      "norm": "§ 266 Abs. 1 StGB",
+      "quellen": [
+        "§ 266 Abs. 1 StGB",
+        "Themenpool: strafbt-758"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.571Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Der Missbrauchstatbestand",
+        "Der Treubruchstatbestand",
+        "Keine – beide setzen wirksame Vertretungsmacht voraus"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-024",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 440 BGB: Nach dem zweiten Reparaturversuch ist meist Schluss",
+      "text": "§ 440 BGB macht die Fristsetzung zusätzlich zu § 323 Abs. 2 BGB entbehrlich: bei Verweigerung beider Arten der Nacherfüllung nach § 439 Abs. 4, bei fehlgeschlagener oder unzumutbarer Nacherfüllung. Nachbesserung gilt nach dem erfolglosen zweiten Versuch als fehlgeschlagen, wenn sich nicht etwas anderes ergibt. Beim Verbrauchsgüterkauf: § 475d BGB.",
+      "norm": "§ 440 BGB · § 323 Abs. 2 BGB",
+      "quellen": [
+        "§ 440 BGB",
+        "§ 323 Abs. 2 BGB",
+        "§ 326 Abs. 5 BGB",
+        "§ 475d BGB",
+        "Themenpool: schuldbt-024"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.571Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-831",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Vertretbare Handlung: Ersatzvornahme statt Zwangsgeld",
+      "falsch": "Der Schuldner soll etwas tun – also Zwangsgeld nach § 888 ZPO.",
+      "richtigText": "Erst einordnen: Kann ein Dritter die Handlung vornehmen, ermächtigt das Prozessgericht den Gläubiger zur Ersatzvornahme auf Kosten des Schuldners (§ 887 ZPO). Nur unvertretbare Handlungen werden mit Zwangsgeld oder Zwangshaft erzwungen (§ 888 ZPO). Unterlassen und Dulden: Ordnungsgeld oder Ordnungshaft nach Androhung (§ 890 ZPO).",
+      "quellen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "§ 890 ZPO",
+        "Themenpool: zwangsv-831"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.571Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-561",
+      "ueberzeile": "Klausurtipp ZPO",
+      "titel": "Einspruch gegen das Versäumnisurteil: § 343 ZPO bestimmt den Tenor",
+      "text": "Nach zulässigem Einspruch (statthaft, zwei Wochen Notfrist ab Zustellung, Form: §§ 338–340 ZPO) wird der Prozess in die Lage vor der Säumnis zurückversetzt (§ 342 ZPO). Stimmt die neue Entscheidung mit dem Versäumnisurteil überein, wird es aufrechterhalten, sonst aufgehoben (§ 343 ZPO). Die Säumniskosten trägt grundsätzlich die säumige Partei (§ 344 ZPO).",
+      "quellen": [
+        "§§ 330 ff. ZPO",
+        "§§ 338–344 ZPO",
+        "Themenpool: zpo-561"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.571Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-805",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Entscheidungsgründe im Urteilsstil: vier Handgriffe",
+      "text": "Das Gutachten kennst du. Im Urteil drehst du die Reihenfolge um (§ 313 Abs. 3 ZPO).",
+      "punkte": [
+        "Ergebnis zuerst: „Die zulässige Klage ist begründet.“",
+        "Begründen mit „denn“ oder „weil“ – nicht „fraglich ist“",
+        "Unstreitiges knapp, Streitiges mit Beweiswürdigung (§ 286 ZPO)",
+        "Nebenentscheidungen am Ende mit Normen belegen"
+      ],
+      "quellen": [
+        "§ 313 Abs. 3 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: assessorz-805"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:53:59.571Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

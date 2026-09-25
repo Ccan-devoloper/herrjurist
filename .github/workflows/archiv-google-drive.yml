@@ -1,0 +1,105 @@
+name: Archiv · veröffentlichte Tage nach Google Drive
+
+# Nach Ablauf eines Tages: Sind alle Beiträge und Stories des Tages veröffentlicht,
+# werden bilder/<datum>/ und vorproduktion/<datum>/ aus dem Asset-Zweig nach
+# Google Drive kopiert, die Kopie wird geprüft, erst danach wird im Repo gelöscht.
+# Zugang rein online über drei Secrets (kein lokales Programm nötig):
+#   GDRIVE_CLIENT_ID, GDRIVE_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN (Scope drive.file)
+# Alternativ eine fertige rclone-Konfiguration im Secret RCLONE_CONFIG.
+# Ohne Zugang passiert nichts (es wird nie ohne Sicherung gelöscht).
+on:
+  schedule:
+    - cron: "43 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-bot
+  cancel-in-progress: false
+
+jobs:
+  archiv:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      IG_WISSEN_KEY: ${{ secrets.IG_WISSEN_KEY }}
+      RCLONE_CONFIG_INHALT: ${{ secrets.RCLONE_CONFIG }}
+      GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+      GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+      GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+      IG_ARCHIV_ZIEL: ${{ vars.IG_ARCHIV_ZIEL || 'gdrive:HerrJurist-Archiv' }}
+      GIT_AUTHOR_NAME: instagram-bot
+      GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    steps:
+      - name: Google-Drive-Zugang vorhanden?
+        id: zugang
+        run: |
+          if [ -z "$RCLONE_CONFIG_INHALT" ] && { [ -z "$GDRIVE_CLIENT_ID" ] || [ -z "$GDRIVE_CLIENT_SECRET" ] || [ -z "$GDRIVE_REFRESH_TOKEN" ]; }; then
+            echo "::warning::Google-Drive-Secrets fehlen (GDRIVE_CLIENT_ID/_SECRET/_REFRESH_TOKEN oder RCLONE_CONFIG) – es wird nichts archiviert und nichts gelöscht."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.zugang.outputs.ok == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.zugang.outputs.ok == 'true'
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Abhängigkeiten und rclone
+        if: steps.zugang.outputs.ok == 'true'
+        run: |
+          npm ci
+          curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null
+          mkdir -p ~/.config/rclone
+          if [ -n "$RCLONE_CONFIG_INHALT" ]; then
+            printf '%s\n' "$RCLONE_CONFIG_INHALT" > ~/.config/rclone/rclone.conf
+          else
+            # Abgelaufenes access_token erzwingt sofortigen Refresh über das refresh_token.
+            TOKEN=$(node -e 'console.log(JSON.stringify({access_token:"",token_type:"Bearer",refresh_token:process.env.GDRIVE_REFRESH_TOKEN,expiry:"2000-01-01T00:00:00Z"}))')
+            {
+              echo "[gdrive]"
+              echo "type = drive"
+              echo "scope = drive.file"
+              echo "client_id = $GDRIVE_CLIENT_ID"
+              echo "client_secret = $GDRIVE_CLIENT_SECRET"
+              echo "token = $TOKEN"
+            } > ~/.config/rclone/rclone.conf
+          fi
+          chmod 600 ~/.config/rclone/rclone.conf
+          rclone lsd "${IG_ARCHIV_ZIEL%%:*}:" >/dev/null
+
+      - name: Archivierbare Tage bestimmen
+        if: steps.zugang.outputs.ok == 'true'
+        id: tage
+        run: node bin/archiv-tage.mjs liste >> "$GITHUB_OUTPUT"
+
+      - name: Nach Google Drive kopieren und prüfen
+        if: steps.zugang.outputs.ok == 'true' && steps.tage.outputs.tage != ''
+        run: |
+          set -euo pipefail
+          A=.instagram-assets
+          for d in ${{ steps.tage.outputs.tage }}; do
+            for teil in bilder vorproduktion; do
+              if [ -d "$A/$teil/$d" ]; then
+                rclone copy "$A/$teil/$d" "$IG_ARCHIV_ZIEL/$d/$teil" --transfers 8 --checkers 16
+                rclone check "$A/$teil/$d" "$IG_ARCHIV_ZIEL/$d/$teil" --one-way --size-only
+              fi
+            done
+            for f in "state/plaene/$d.json" "vorproduktion/$d.json"; do
+              if [ -f "$A/$f" ]; then rclone copyto "$A/$f" "$IG_ARCHIV_ZIEL/$d/$(basename "$(dirname "$f")")-$d.json"; fi
+            done
+            echo "✓ $d gesichert"
+          done
+
+      - name: Im Repo löschen (nur gesicherte Tage)
+        if: steps.zugang.outputs.ok == 'true' && steps.tage.outputs.tage != ''
+        run: node bin/archiv-tage.mjs loeschen ${{ steps.tage.outputs.tage }}

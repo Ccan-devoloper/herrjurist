@@ -1,0 +1,866 @@
+{
+  "datum": "2027-05-03",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-746",
+        "themaTitel": "Diebstahl: fremde bewegliche Sache und Wegnahme",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "grundr-373",
+        "themaTitel": "Wie prüft man die Glaubensfreiheit?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuldbt-465",
+        "themaTitel": "Unverhältnismäßigkeit der Nacherfüllung",
+        "fach": "schuldbt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:14",
+        "art": "frage",
+        "themaId": "zpo-560"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:14",
+        "art": "antwort",
+        "themaId": "zpo-560"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:06",
+        "art": "norm",
+        "themaId": "strafbt-330"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "tipp",
+        "themaId": "bgbat-005"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:50",
+        "art": "zahl",
+        "themaId": "zwangsv-826"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "streitstand",
+        "themaId": "strafat-057"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-746",
+      "poolTitel": "Diebstahl: fremde bewegliche Sache und Wegnahme",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-21",
+        "2026-12-21",
+        "2027-03-12"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-373",
+      "poolTitel": "Wie prüft man die Glaubensfreiheit?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 4 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuldbt-465",
+      "poolTitel": "Unverhältnismäßigkeit der Nacherfüllung",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 IV BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2027-01-13"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-18",
+        "2026-11-18",
+        "2026-11-22"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-18",
+        "2026-11-18",
+        "2026-11-22"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-330",
+      "poolTitel": "Wann liegt eine Vermögensverfügung vor und wie grenzt man sie vom Diebstahl ab?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB",
+        "§ 242 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-01",
+        "2027-03-16"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "bgbat-005",
+      "poolTitel": "Was besagt die Kipp'sche Lehre von der Doppelnichtigkeit?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 134 BGB",
+        "§ 138 BGB",
+        "§ 142 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zwangsv-826",
+      "poolTitel": "Wie prüft man die Vollstreckungsabwehrklage?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-16",
+        "2027-02-22"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "strafat-057",
+      "poolTitel": "Was ist der Unterschied zwischen Eventualvorsatz und bewusster Fahrlässigkeit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB",
+        "§ 16 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-28",
+        "2026-12-28",
+        "2027-03-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-746",
+      "slug": "2027-05-03-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zur Hälfte sein Rad – und trotzdem eine fremde Sache",
+          "titelZeilen": [
+            "Zur Hälfte sein Rad",
+            "– und trotzdem eine",
+            "fremde Sache"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Miteigentum reicht für „fremd“",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A und B haben gemeinsam ein E-Bike gekauft und sind je zur Hälfte Miteigentümer. Das Rad steht in der abgeschlossenen Garage des B. A holt es heimlich heraus, um es allein zu behalten und später zu verkaufen. Hat A sich nach § 242 StGB strafbar gemacht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Beweglich",
+              "text": "Das Rad lässt sich fortschaffen – unproblematisch."
+            },
+            {
+              "titel": "2. Fremd",
+              "text": "Nicht im Alleineigentum des Täters und nicht herrenlos – nach Zivilrecht bestimmt. Miteigentum des B genügt."
+            },
+            {
+              "titel": "3. Wegnahme",
+              "text": "B hat Gewahrsam: Sachherrschaft über die Garage und Herrschaftswille. A bricht ihn ohne Einverständnis und begründet eigenen Gewahrsam."
+            },
+            {
+              "titel": "4. Subjektiver Tatbestand",
+              "text": "Vorsatz und Zueignungsabsicht: A will B dauerhaft ausschließen und das Rad wie ein Alleineigentümer nutzen und verwerten."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Das Rad ist für A fremd, weil B Miteigentümer ist. A hat es B weggenommen und wollte es sich zueignen. Einen fälligen Anspruch darauf, das Rad allein zu erhalten, hat A nicht – die erstrebte Zueignung ist rechtswidrig. Ergebnis: § 242 Abs. 1 StGB (+)."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Fremdheit und Gewahrsam werden vermischt. „Fremd“ fragt nach dem Eigentum, die Wegnahme nach dem Gewahrsam – beides wird getrennt bestimmt. Wer beim Miteigentum „halb eigen, also nicht fremd“ schreibt, verkürzt die Definition."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Fremd ist jede Sache, die nicht im Alleineigentum des Täters steht und nicht herrenlos ist. Die Wegnahme fragt nach dem Gewahrsam, nicht nach dem Eigentum."
+        },
+        {
+          "art": "cta",
+          "titel": "Beim Diebstahl sauber trennen",
+          "punkte": [
+            "Eigentum: Ist die Sache fremd?",
+            "Gewahrsam: Wer hat die Sachherrschaft?",
+            "Zueignung: rechtswidrig erstrebt?"
+          ],
+          "icons": [
+            "schluessel",
+            "haus",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Zur Hälfte gehört A das Rad – und trotzdem ist es für ihn eine fremde Sache. Fremd im Sinne des § 242 StGB ist jede Sache, die nicht im Alleineigentum des Täters steht und nicht herrenlos ist; entscheidend ist das Zivilrecht. Die Wegnahme fragt dagegen nach dem Gewahrsam. Beides getrennt prüfen, dann trägt die Lösung. Speichern für den nächsten Diebstahlsfall.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#242stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Miteigentum: Das Rad ist trotzdem fremd",
+      "coverText": "Miteigentum reicht für „fremd“",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Auch eine Sache, die dem Täter zur Hälfte gehört, ist für ihn fremd.",
+        "handlung": "{A} quietly rolls a shared two-seat hover bike out of a crystal shed, while {B} peeks around the door holding the other half of a split key.",
+        "hinweisRegie": "Place the note in the open space above the hover bike's second seat, slightly tilted toward {B}'s half key, so the shared ownership is linked to the note without covering {A}'s hands.",
+        "alternative": "{B} holds one end of a long crystal bar while {A} tries to carry the whole bar away alone."
+      },
+      "bildSzene": "shared hover bike rolled out of shed",
+      "bildSzeneAlt": "crystal bar held at both ends",
+      "quellen": [
+        "§ 242 StGB",
+        "§§ 1008 ff. BGB",
+        "Themenpool: strafbt-746"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.193Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-373",
+      "slug": "2027-05-03-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Glaubensfreiheit: drei Schritte – die Schranke steht nicht im Artikel",
+          "titelZeilen": [
+            "Glaubensfreiheit:",
+            "drei Schritte – die",
+            "Schranke steht",
+            "nicht im Artikel"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Vorbehaltlos, aber nicht grenzenlos",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Art. 4 Abs. 1 und 2 GG schützen nach dem BVerfG ein einheitliches Grundrecht: Glauben, Bekennen und ungestörte Religionsausübung. Die Prüfung folgt dem bekannten Dreischritt – die Besonderheit steckt in der Rechtfertigung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich, persönlich",
+              "text": "Jeder Mensch, auch Minderjährige. Religions- und Weltanschauungsgemeinschaften über Art. 19 Abs. 3 GG bzw. kollektiv."
+            },
+            {
+              "titel": "Schutzbereich, sachlich",
+              "text": "Glaube und das Recht, sein Verhalten an den Lehren des Glaubens auszurichten. Maßstab: plausibles Selbstverständnis, keine Glaubensprüfung."
+            },
+            {
+              "titel": "2. Eingriff",
+              "text": "Jede staatliche Maßnahme, die ein geschütztes Verhalten verbietet, erschwert oder sanktioniert – auch mittelbar-faktisch."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Rechtfertigung: Schranke",
+              "text": "Kein Gesetzesvorbehalt. Nach dem BVerfG nur verfassungsimmanente Schranken: Grundrechte Dritter oder andere Güter mit Verfassungsrang."
+            },
+            {
+              "titel": "Schranken-Schranke",
+              "text": "Ein Gesetz ist nötig. Dann Verhältnismäßigkeit mit praktischer Konkordanz: beide Verfassungsgüter möglichst schonend zum Ausgleich bringen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Art. 136 Abs. 1 WRV",
+          "text": "Über Art. 140 GG gilt Art. 136 Abs. 1 WRV. Eine Ansicht in der Literatur liest darin einen Gesetzesvorbehalt für Art. 4 GG. Das BVerfG folgt dem nicht: Art. 136 WRV wird von Art. 4 GG überlagert. In der Klausur kurz ansprechen und mit dem BVerfG entscheiden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Art. 4 GG ist vorbehaltlos gewährleistet. Eingriffe rechtfertigen nur kollidierende Verfassungsgüter – per Gesetz und in praktischer Konkordanz."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 4 GG in drei Zügen",
+          "punkte": [
+            "Selbstverständnis plausibel?",
+            "Eingriff auch mittelbar?",
+            "Welches Verfassungsgut kollidiert?"
+          ],
+          "icons": [
+            "person",
+            "warnung",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Glaubensfreiheit in drei Schritten – und die Schranke suchst du vergeblich im Artikel. Art. 4 Abs. 1, 2 GG ist vorbehaltlos gewährleistet. Rechtfertigen lassen sich Eingriffe nur durch kollidierendes Verfassungsrecht, etwa Grundrechte Dritter oder den staatlichen Erziehungsauftrag, und zwar über ein Gesetz und in praktischer Konkordanz. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#art4gg",
+        "#glaubensfreiheit",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Glaubensfreiheit: das Prüfungsschema",
+      "coverText": "Vorbehaltlos, aber nicht grenzenlos",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Die Glaubensfreiheit hat keinen Gesetzesvorbehalt – Grenzen kommen nur aus der Verfassung selbst.",
+        "handlung": "{A} points his stick at an empty hook on a wall where a padlock would usually hang, while {B} hovers nearby holding a small balance with two glowing weights.",
+        "hinweisRegie": "Place the note in the free space next to the empty hook, slightly tilted toward the balance in {B}'s grip, so the missing reservation and the weighing are linked without covering {A}'s stick.",
+        "alternative": "{B} tries to stamp a limit onto a floating lantern, but {A} gently redirects the stamp toward a second lantern that pushes against the first."
+      },
+      "bildSzene": "empty padlock hook beside glowing balance",
+      "bildSzeneAlt": "two lanterns pushing against each other",
+      "quellen": [
+        "Art. 4 Abs. 1, 2 GG",
+        "Art. 140 GG i.V.m. Art. 136 Abs. 1 WRV",
+        "Art. 19 Abs. 3 GG",
+        "Themenpool: grundr-373"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-schritte-schrankenfalle",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.194Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-465",
+      "slug": "2027-05-03-b3",
+      "titelZeilen": [
+        "Zu teuer? Zählt",
+        "erst, wenn der",
+        "Verkäufer es sagt"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zu teuer? Zählt erst, wenn der Verkäufer es sagt",
+          "unter": "Nacherfüllung · § 439 Abs. 4 BGB",
+          "text": "Unverhältnismäßigkeit wirkt nicht automatisch – der Verkäufer muss sich darauf berufen.",
+          "norm": "§ 439 Abs. 4 BGB",
+          "icon": "muenzen",
+          "sprecher": "Zu teuer zählt erst, wenn der Verkäufer es sagt. Paragraf 439 Absatz 4 BGB gibt ihm ein Recht, die Nacherfüllung zu verweigern. Das ist eine Einrede. Beruft er sich nicht darauf, bleibt der Anspruch voll bestehen.",
+          "marken": [
+            "Einrede",
+            "nicht automatisch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der Käufer wählt",
+          "text": "Nachbesserung oder Nachlieferung – die Wahl liegt beim Käufer.",
+          "norm": "§ 439 Abs. 1 BGB",
+          "sprecher": "Schritt eins: Der Käufer wählt, ob er Nachbesserung oder eine neue Sache will. Erst gegen diese Wahl kann der Verkäufer einwenden, sie sei zu teuer.",
+          "marken": [
+            "Wahl des Käufers"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Kriterien",
+          "text": "Wert der mangelfreien Sache, Bedeutung des Mangels, Alternative ohne erhebliche Nachteile.",
+          "norm": "§ 439 Abs. 4 S. 2 BGB",
+          "sprecher": "Schritt zwei: die Abwägung. Das Gesetz nennt den Wert der Sache in mangelfreiem Zustand, die Bedeutung des Mangels und die Frage, ob die andere Art der Nacherfüllung ohne erhebliche Nachteile für den Käufer möglich ist.",
+          "marken": [
+            "Wert",
+            "Bedeutung",
+            "Alternative"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Folge: auf die andere Art beschränkt",
+          "text": "Verweigert er nur die gewählte Art, bleibt der Anspruch auf die andere.",
+          "norm": "§ 439 Abs. 4 S. 3 BGB",
+          "sprecher": "Schritt drei: die Folge. Verweigert der Verkäufer die gewählte Art zu Recht, beschränkt sich der Anspruch auf die andere Art. Der Käufer verliert also nicht die Nacherfüllung, nur seine Wahl.",
+          "marken": [
+            "andere Art bleibt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Beide verweigert: sofort weiter",
+          "text": "Dann ist die Fristsetzung entbehrlich – Rücktritt, Minderung, Schadensersatz.",
+          "norm": "§ 440 S. 1 BGB",
+          "sprecher": "Schritt vier: Verweigert er beide Arten zu Recht, muss der Käufer keine Frist mehr setzen. Nach Paragraf 440 BGB geht es direkt zu Rücktritt, Minderung oder Schadensersatz statt der Leistung.",
+          "marken": [
+            "Frist entbehrlich"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Einrede erheben, abwägen, auf die andere Art beschränken – oder den Weg zu den Sekundärrechten öffnen.",
+          "norm": "§§ 439 Abs. 4, 440 BGB",
+          "sprecher": "Merke: Die Unverhältnismäßigkeit ist eine Einrede. Erst wenn der Verkäufer sie erhebt, prüfst du die Kriterien. Und dann fragst du, ob nur eine oder beide Arten wegfallen.",
+          "marken": [
+            "erst erheben",
+            "dann abwägen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Im Kaufrecht immer fragen: Hat er sich berufen?",
+          "text": "Speichern für die nächste Kaufrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Kaufrechtsklausur. Und such im Sachverhalt, ob der Verkäufer die Einrede wirklich erhoben hat.",
+          "marken": [
+            "Sachverhalt lesen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Zu teuer zählt erst, wenn der Verkäufer es sagt: § 439 Abs. 4 BGB ist eine Einrede. Erhebt er sie, wägst du Wert der Sache, Bedeutung des Mangels und die Alternative ab. Fällt nur die gewählte Art weg, bleibt der Anspruch auf die andere. Fallen beide weg, ist die Fristsetzung nach § 440 BGB entbehrlich. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#439bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 439 IV BGB: Einrede, nicht Automatik",
+      "coverText": "Erst die Einrede, dann die Abwägung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Die Unverhältnismäßigkeit der Nacherfüllung greift nur, wenn der Verkäufer sich darauf beruft.",
+        "handlung": "{A} stands at a repair bench in front of a huge, expensive spare part and hesitates, while {B} waits with crossed arms for him to speak up.",
+        "hinweisRegie": "Place the note in the free space between the oversized spare part and {B}'s crossed arms, slightly tilted toward {A}'s open mouth, so the missing objection is linked without covering the part.",
+        "alternative": "{A} holds a stop sign behind his back without raising it, while {B} keeps walking toward the repair workshop."
+      },
+      "bildSzene": "mechanic hesitates before expensive spare part",
+      "bildSzeneAlt": "stop sign hidden behind back",
+      "quellen": [
+        "§ 439 Abs. 1, 4 BGB",
+        "§ 440 BGB",
+        "§ 437 BGB",
+        "Themenpool: schuldbt-465"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "einrede-statt-automatik",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.195Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-560",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Schriftliches Gutachten liegt vor. K will den Sachverständigen zur Erläuterung laden lassen. Muss das Gericht?",
+      "optionen": [
+        "Nein – das steht allein im Ermessen des Gerichts",
+        "Ja, grundsätzlich – die Partei darf Fragen stellen",
+        "Nur, wenn der Gegner zustimmt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§§ 397, 402 ZPO",
+        "§ 411 Abs. 3, 4 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.195Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-560",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – die Partei hat grundsätzlich ein Recht, den Sachverständigen zu befragen",
+      "text": "§ 411 Abs. 3 ZPO erlaubt dem Gericht, die Erläuterung von Amts wegen anzuordnen. Unabhängig davon hat die Partei nach der Rspr. des BGH aus §§ 397, 402 ZPO grundsätzlich einen Anspruch, dem Sachverständigen Fragen zu stellen – auch wenn das Gericht das Gutachten für überzeugend hält. Grenzen: Rechtsmissbrauch und Verspätung (§ 411 Abs. 4 ZPO).",
+      "norm": "§§ 397, 402, 411 ZPO",
+      "quellen": [
+        "§§ 397, 402 ZPO",
+        "§ 411 Abs. 3, 4 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.195Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – das steht allein im Ermessen des Gerichts",
+        "Ja, grundsätzlich – die Partei darf Fragen stellen",
+        "Nur, wenn der Gegner zustimmt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-330",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB: Wer nicht weiß, dass er etwas hergibt, verfügt nicht",
+      "text": "Beim Sachbetrug trennt das Verfügungsbewusstsein die Verfügung von der Wegnahme. Versteckt K Ware in einem Karton und bezahlt an der Kasse nur den Karton, weiß die Kassiererin nichts von der versteckten Ware. Nach h.M. verfügt sie darüber nicht – K nimmt sie weg: § 242 StGB. Betrug und Diebstahl schließen sich für denselben Gegenstand aus.",
+      "norm": "§ 263 Abs. 1 StGB · § 242 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-330"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.195Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-005",
+      "ueberzeile": "Klausurtipp BGB AT",
+      "titel": "Schon nichtig? Anfechten kannst du trotzdem – und das kann entscheidend sein",
+      "text": "Nach der heute h.M. (Lehre von der Doppelnichtigkeit) lässt sich auch ein nichtiges Geschäft anfechten. Praktisch wird das bei § 142 Abs. 2 BGB: Kannte ein Dritterwerber nur die Anfechtbarkeit, wird er nach der Anfechtung so behandelt, als hätte er die Nichtigkeit gekannt – gutgläubiger Erwerb scheidet aus. Brich die Prüfung also nicht mit „ohnehin nichtig“ ab.",
+      "quellen": [
+        "§ 142 Abs. 1, 2 BGB",
+        "§§ 105, 134, 138 BGB",
+        "§ 932 BGB",
+        "Themenpool: bgbat-005"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.195Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-826",
+      "ueberzeile": "4 Punkte Zwangsvollstreckung",
+      "titel": "§ 767 ZPO: vier Zulässigkeitspunkte, bevor es um die Einwendung geht",
+      "text": "Mit der Vollstreckungsabwehrklage greift der Schuldner nicht das Urteil an, sondern die Vollstreckbarkeit des Titels. Vorab prüfst du:",
+      "punkte": [
+        "Statthaft: materielle Einwendung gegen den titulierten Anspruch",
+        "Abgrenzung: Verfahrensfehler der Vollstreckung gehören zu § 766 ZPO",
+        "Zuständig: Prozessgericht des ersten Rechtszugs, ausschließlich (§ 802 ZPO)",
+        "Rechtsschutzbedürfnis: ab Vorliegen des Titels bis zu seiner Herausgabe"
+      ],
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 766 ZPO",
+        "§ 802 ZPO",
+        "Themenpool: zwangsv-826"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.195Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-057",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Bedingter Vorsatz: Reicht das Wissen um die Gefahr – oder muss der Täter den Erfolg auch billigen?",
+      "norm": "§ 15 StGB",
+      "optionen": [
+        "Rspr.: Billigungstheorie – der Täter erkennt den Erfolg als möglich und findet sich mit ihm ab.",
+        "Teile der Lit.: Möglichkeits- bzw. Wahrscheinlichkeitstheorie – das Wissen um die Gefahr genügt."
+      ],
+      "text": "Die Ernstnahmetheorie der h.L. (Gefahr ernst nehmen, sich mit ihr abfinden) liegt nah bei der Rspr. Klausur: Theorien knapp darstellen und nur entscheiden, wenn sie im Fall zu verschiedenen Ergebnissen führen – bewusste Fahrlässigkeit liegt vor, wenn der Täter ernsthaft auf einen guten Ausgang vertraut.",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "Themenpool: strafat-057"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:40:59.195Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

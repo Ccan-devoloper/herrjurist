@@ -1,0 +1,889 @@
+{
+  "datum": "2027-02-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafat-727",
+        "themaTitel": "Unmittelbares Ansetzen",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "vwgo-101",
+        "themaTitel": "Welche Formen einer einstweiligen Anordnung gibt es nach § 123 Abs. 1 VwGO?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "staat-596"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "staat-596"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:57",
+        "art": "norm",
+        "themaId": "vwgo-407"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:16",
+        "art": "fehler",
+        "themaId": "assessorz-810"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "tipp",
+        "themaId": "methodik-907"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "zahl",
+        "themaId": "gesetzs-205"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-727",
+      "poolTitel": "Unmittelbares Ansetzen",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-101",
+      "poolTitel": "Welche Formen einer einstweiligen Anordnung gibt es nach § 123 Abs. 1 VwGO?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 Abs. 1 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-11-04"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-596",
+      "poolTitel": "Zustimmungsgesetz und Einspruchsgesetz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 77 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-22"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-596",
+      "poolTitel": "Zustimmungsgesetz und Einspruchsgesetz",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 77 GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-22"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "vwgo-407",
+      "poolTitel": "Wann entfällt die aufschiebende Wirkung?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 2 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17",
+        "2026-11-13"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessorz-810",
+      "poolTitel": "Wie entscheidet das Gericht nach übereinstimmender Erledigungserklärung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2026-11-13",
+        "2026-12-07"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "methodik-907",
+      "poolTitel": "Fehleranalyse nach der Probeklausur",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2026-11-02"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "gesetzs-205",
+      "poolTitel": "Was ist eine auch-fremde Geschäftsführung und ist sie GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 677 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2026-11-25",
+        "2026-12-07"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-02-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen in vier Bereichen",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen in",
+            "vier Bereichen"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Verbrauchsgüterkauf: Ein pauschaler Ausschluss hält nicht (§ 476 BGB).",
+            "Rücktritt nach § 323 BGB: kein Vertretenmüssen nötig.",
+            "§ 771 ZPO: Rechte Dritter per Klage gegen den Gläubiger, nicht per Erinnerung.",
+            "Erledigung: § 91a, Feststellungsurteil oder § 269 Abs. 3 S. 3 ZPO.",
+            "Weiterfresser: ohne Stoffgleichheit auch § 823 Abs. 1 BGB.",
+            "Prozessvergleich ohne Kostenregel: § 98 ZPO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 28 StGB: erst täter- oder tatbezogen, dann begründend oder modifizierend.",
+            "Täter hinter dem Täter: nach dem BGH trotz voll verantwortlichem Vordermann.",
+            "Anklagesatz: abstrakt Gesetzesworte, konkret Tatsachen.",
+            "§ 358 Abs. 2 StPO: Auch der Wegfall der Bewährung ist schlechter.",
+            "Verbotsirrtum: Der Vorsatz bleibt – vermeidbar heißt schuldig."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 48 Abs. 4 VwVfG: Jahresfrist erst ab vollständiger Kenntnis.",
+            "Eilantrag bei Nr. 4: wiederherstellen, nicht aufheben.",
+            "Ermessen: Ist nur das Ob reduziert, gibt es ein Bescheidungsurteil.",
+            "Rechtsweg: Amtshaftung geht zum Landgericht.",
+            "Klagebefugnis des Nachbarn: nur aus drittschützender Norm."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Schweigt der Sachverhalt: Normalfall unterstellen, nichts erfinden.",
+            "Unbekanntes Problem: Norm, Wortlaut, Zweck, Entscheidung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Warum gehört das Vertretenmüssen nicht ins Rücktrittsschema?",
+            "Wann ist ein kürzeres Urteil trotzdem schlechter?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Verfahren",
+            "Strafrecht über Beteiligung und Schuld",
+            "Öffentliches Recht über die Zulässigkeit",
+            "Klausurtechnik in der Probeklausur"
+          ],
+          "icons": [
+            "waage",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – vom Verbrauchsgüterkauf über den Täter hinter dem Täter bis zur Klagebefugnis des Nachbarn. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Eine Woche Stoff wird in vier Fächer sortiert und kurz abgefragt.",
+        "handlung": "{A} curiously places eighteen small glowing cards into four open drawers of a cabinet, while {B} pulls one card back out with his pointer to test her.",
+        "hinweisRegie": "Place the note in the free space above the four open drawers, slightly tilted toward the card on {B}'s pointer, without covering {A}'s hands.",
+        "alternative": "{B} spins a small wheel with four coloured segments, while {A} waits to answer the question for the segment where it stops."
+      },
+      "bildSzene": "sorting glowing cards into four drawers",
+      "bildSzeneAlt": "four-segment quiz wheel spinning",
+      "quellen": [
+        "§§ 474, 476 BGB",
+        "§ 323 BGB",
+        "§ 771 ZPO",
+        "§§ 91a, 269 ZPO",
+        "§§ 280, 823 BGB",
+        "§§ 98, 794 ZPO",
+        "§ 28 StGB",
+        "§ 25 Abs. 1 StGB",
+        "§ 200 StPO",
+        "§ 358 Abs. 2 StPO",
+        "§ 17 StGB",
+        "§ 48 VwVfG",
+        "§ 80 Abs. 5 VwGO",
+        "§ 40 VwVfG",
+        "§ 40 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "Themenpool: methodik-906",
+        "Themenpool: mindset-4"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.706Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-727",
+      "slug": "2027-02-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Niemand öffnet die Tür – der Raub ist schon versucht",
+          "titelZeilen": [
+            "Niemand öffnet",
+            "die Tür – der Raub",
+            "ist schon versucht"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "„Jetzt geht's los“ nach Tätervorstellung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "A und B klingeln maskiert an der Wohnung des O, um ihn beim Öffnen sofort zu überwältigen und auszurauben. O öffnet nicht. Nach der Rspr. kann schon das Klingeln ein unmittelbares Ansetzen sein – denn nach dem Tatplan sollte der Überfall ohne weitere Zwischenschritte folgen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Vorprüfung",
+              "text": "Tat nicht vollendet; Versuch strafbar – bei Verbrechen immer, bei Vergehen nur, wenn es angeordnet ist (§ 23 Abs. 1 StGB)."
+            },
+            {
+              "titel": "2. Tatentschluss",
+              "text": "Vorsatz bezüglich aller objektiven Merkmale und besondere subjektive Merkmale, etwa die Zueignungsabsicht."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Unmittelbares Ansetzen",
+              "text": "Nach der Vorstellung des Täters: „Jetzt geht's los“, keine wesentlichen Zwischenschritte, Rechtsgut unmittelbar gefährdet."
+            },
+            {
+              "titel": "4. Rechtswidrigkeit, Schuld, Rücktritt",
+              "text": "Dann wie gewohnt – und am Ende der Rücktritt nach § 24 StGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Regelbeispiele",
+          "text": "Das Ansetzen zu einem Regelbeispiel, etwa dem Einbrechen (§ 243 Abs. 1 S. 2 Nr. 1 StGB), begründet für sich keinen Versuch. Entscheidend ist, ob nach dem Tatplan die Wegnahme ohne wesentliche Zwischenschritte folgen soll."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tatplan plus Nähe: Wer nach seiner Vorstellung ohne weitere Zwischenschritte zur Tat übergehen will, hat angesetzt – auch wenn niemand öffnet."
+        },
+        {
+          "art": "cta",
+          "titel": "Unmittelbares Ansetzen prüfen",
+          "punkte": [
+            "Was genau war der Tatplan?",
+            "Fehlen noch wesentliche Zwischenschritte?",
+            "Ist das Rechtsgut schon gefährdet?"
+          ],
+          "icons": [
+            "zielscheibe",
+            "tuer",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Niemand öffnet die Tür – und der Raub ist trotzdem schon versucht. Nach der Rspr. kann bereits das Klingeln ein unmittelbares Ansetzen sein, wenn der Überfall nach dem Tatplan sofort nach dem Öffnen folgen soll. Maßstab ist die Vorstellung des Täters: „Jetzt geht's los“, keine wesentlichen Zwischenschritte, unmittelbare Gefährdung. Das Schema: Vorprüfung, Tatentschluss, unmittelbares Ansetzen, Rechtswidrigkeit, Schuld, Rücktritt. Speichern für die nächste Versuchsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#22stgb",
+        "#versuch",
+        "#raub",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Unmittelbares Ansetzen: das Versuchsschema",
+      "coverText": "„Jetzt geht's los“ nach Tätervorstellung",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Der Versuch beginnt nicht erst beim Zugriff, sondern schon dort, wo nach dem Plan nichts Wesentliches mehr dazwischenliegt.",
+        "handlung": "{A} nervously presses a doorbell of a closed door, while {B} stands in the shadow right beside the doorframe, ready, and the door stays shut.",
+        "hinweisRegie": "Place the note in the free space above the doorbell, slightly tilted toward {A}'s finger on the button, without covering {B} or the closed door.",
+        "alternative": "{B} stands at the very edge of a starting line with one foot lifted, while {A} watches the empty track ahead."
+      },
+      "bildSzene": "finger on doorbell, door stays shut",
+      "bildSzeneAlt": "foot lifted at the starting line",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 1 StGB",
+        "§ 24 StGB",
+        "§ 249 StGB",
+        "§ 243 StGB",
+        "Themenpool: strafat-727"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "fallbild-vorverlagerung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.706Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-101",
+      "slug": "2027-02-07-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Zwei Anordnungen, ein Verbot: § 123 VwGO",
+          "unter": "Einstweilige Anordnung · § 123 VwGO",
+          "text": "Sicherung oder Regelung – und grundsätzlich keine Vorwegnahme der Hauptsache.",
+          "norm": "§ 123 Abs. 1 VwGO",
+          "icon": "stoppuhr",
+          "sprecher": "Das Eilgericht darf dir nicht einfach alles geben. Die einstweilige Anordnung kennt zwei Formen und ein Verbot.",
+          "marken": [
+            "zwei Formen",
+            "ein Verbot"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Statthaftigkeit",
+          "text": "Nur, wenn kein Fall der §§ 80, 80a VwGO vorliegt.",
+          "norm": "§ 123 Abs. 5 VwGO",
+          "sprecher": "Schritt eins: die Statthaftigkeit. Paragraf 123 ist subsidiär. Geht es in der Hauptsache um Anfechtung, gelten die Paragrafen 80 und 80a. Sonst ist Paragraf 123 der richtige Weg.",
+          "marken": [
+            "subsidiär"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Sicherungsanordnung",
+          "text": "Satz 1: den bestehenden Zustand sichern.",
+          "norm": "§ 123 Abs. 1 S. 1 VwGO",
+          "sprecher": "Schritt zwei: die Sicherungsanordnung nach Satz 1. Sie bewahrt den bestehenden Zustand, wenn eine Veränderung die Verwirklichung deines Rechts vereiteln oder wesentlich erschweren könnte.",
+          "marken": [
+            "Status quo"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Regelungsanordnung",
+          "text": "Satz 2: einen vorläufigen Zustand regeln – etwa eine Zulassung.",
+          "norm": "§ 123 Abs. 1 S. 2 VwGO",
+          "sprecher": "Schritt drei: die Regelungsanordnung nach Satz 2. Sie regelt einen vorläufigen Zustand und kann deine Position erweitern, etwa durch die vorläufige Zulassung zu einer Prüfung. Die Abgrenzung ist oft fließend.",
+          "marken": [
+            "Erweiterung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Anspruch und Grund glaubhaft machen",
+          "text": "Anordnungsanspruch und Anordnungsgrund, jeweils glaubhaft gemacht.",
+          "norm": "§ 123 Abs. 3 VwGO · § 920 Abs. 2 ZPO",
+          "sprecher": "Schritt vier: die Begründetheit. Du brauchst einen Anordnungsanspruch, also das Recht, um das es geht, und einen Anordnungsgrund, also die Eilbedürftigkeit. Beides musst du glaubhaft machen.",
+          "marken": [
+            "Anspruch + Grund"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Das Verbot",
+          "text": "Grundsätzlich keine Vorwegnahme der Hauptsache.",
+          "norm": null,
+          "sprecher": "Jetzt das Verbot. Die einstweilige Anordnung soll nur vorläufig sichern oder regeln. Sie darf grundsätzlich nicht das geben, was du erst im Hauptsacheverfahren bekommen könntest.",
+          "marken": [
+            "nur vorläufig"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Ausnahme",
+          "text": "Schwere, sonst nicht mehr abwendbare Nachteile und hohe Erfolgsaussichten.",
+          "norm": "Art. 19 Abs. 4 GG",
+          "sprecher": "Die Ausnahme folgt aus Artikel 19 Absatz 4 GG. Drohen dir sonst schwere, später nicht mehr zu beseitigende Nachteile, und hat die Hauptsache sehr hohe Erfolgsaussichten, ist die Vorwegnahme ausnahmsweise erlaubt.",
+          "marken": [
+            "Art. 19 IV GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Sichern oder regeln, Anspruch und Grund – Vorwegnahme nur ausnahmsweise.",
+          "norm": "§ 123 VwGO",
+          "sprecher": "Merke: Sicherung nach Satz 1, Regelung nach Satz 2. Anordnungsanspruch und Anordnungsgrund glaubhaft machen. Und die Hauptsache nur ausnahmsweise vorwegnehmen.",
+          "marken": [
+            "S. 1 · S. 2 · Verbot"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst prüfen: § 80 oder § 123?",
+          "text": "Speichern für die nächste Eilrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Eilrechtsklausur. Und frag dich immer zuerst: Geht es um Anfechtung, oder brauchst du Paragraf 123?",
+          "marken": [
+            "§ 80 oder § 123?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Zwei Anordnungen, ein Verbot: Die einstweilige Anordnung nach § 123 VwGO sichert den bestehenden Zustand (S. 1) oder regelt einen vorläufigen Zustand (S. 2). Du brauchst Anordnungsanspruch und Anordnungsgrund, beides glaubhaft gemacht. Die Hauptsache darf sie grundsätzlich nicht vorwegnehmen – ausnahmsweise doch, wenn sonst schwere, nicht mehr abwendbare Nachteile drohen und die Hauptsache sehr hohe Erfolgsaussichten hat. Speichern für die nächste Eilrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#123vwgo",
+        "#eilrechtsschutz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 123 VwGO: Sicherung, Regelung, Vorwegnahme",
+      "titelZeilen": [
+        "Zwei Anordnungen,",
+        "ein Verbot:",
+        "§ 123 VwGO"
+      ],
+      "coverText": "Vorwegnahme nur ausnahmsweise",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Im Eilverfahren wird gesichert oder vorläufig geregelt – das Endergebnis gibt es grundsätzlich erst später.",
+        "handlung": "{B} holds up a temporary wooden prop under a sagging crystal ceiling, while {A} hovers beside him and keeps the finished stone pillar still wrapped for later.",
+        "hinweisRegie": "Place the note in the free space between the wooden prop and the wrapped pillar, slightly tilted toward the prop, without covering {B}'s arms or the ceiling.",
+        "alternative": "{A} places a small temporary barrier in front of an open gate, while {B} waits with the permanent gate lock still in his hands."
+      },
+      "bildSzene": "temporary prop under sagging ceiling",
+      "bildSzeneAlt": "temporary barrier before open gate",
+      "quellen": [
+        "§ 123 VwGO",
+        "§§ 80, 80a VwGO",
+        "§ 920 Abs. 2 ZPO",
+        "Art. 19 Abs. 4 GG",
+        "Themenpool: vwgo-101"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "zwei-formen-ein-verbot",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.708Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-596",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Einspruchsgesetz: Der Bundesrat legt Einspruch ein, ohne den Vermittlungsausschuss anzurufen. Folge?",
+      "optionen": [
+        "Der Einspruch wirkt – der Bundestag muss ihn zurückweisen",
+        "Kein wirksamer Einspruch – das Gesetz kommt zustande",
+        "Das Gesetz ist endgültig gescheitert"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Themenpool: staat-596"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.708Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-596",
+      "ueberzeile": "Auflösung",
+      "titel": "Ohne Vermittlungsverfahren kein Einspruch – das Gesetz kommt zustande",
+      "text": "Beim Einspruchsgesetz kann der Bundesrat erst Einspruch einlegen, wenn das Verfahren vor dem Vermittlungsausschuss beendet ist (Art. 77 Abs. 3 S. 1 GG). Ruft er ihn nicht binnen drei Wochen an (Art. 77 Abs. 2 GG), kommt das Gesetz zustande (Art. 78 GG). Einen wirksamen Einspruch kann der Bundestag nach Art. 77 Abs. 4 GG zurückweisen.",
+      "norm": "Art. 77 Abs. 2, 3 GG · Art. 78 GG",
+      "quellen": [
+        "Art. 77 GG",
+        "Art. 78 GG",
+        "Themenpool: staat-596"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.708Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Der Einspruch wirkt – der Bundestag muss ihn zurückweisen",
+        "Kein wirksamer Einspruch – das Gesetz kommt zustande",
+        "Das Gesetz ist endgültig gescheitert"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-407",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 212a BauGB: Der Nachbarwiderspruch stoppt den Bau nicht",
+      "text": "Nach § 80 Abs. 2 S. 1 Nr. 3 VwGO entfällt die aufschiebende Wirkung, wenn ein Gesetz es vorschreibt. Klassiker: Widerspruch und Anfechtungsklage eines Dritten gegen die bauaufsichtliche Zulassung haben keine aufschiebende Wirkung (§ 212a Abs. 1 BauGB). Der Nachbar beantragt deshalb beim Gericht deren Anordnung (§§ 80a Abs. 3, 80 Abs. 5 VwGO).",
+      "norm": "§ 212a Abs. 1 BauGB",
+      "quellen": [
+        "§ 80 Abs. 2 VwGO",
+        "§ 80a VwGO",
+        "§ 212a BauGB",
+        "Themenpool: vwgo-407"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.708Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-810",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Beklagter zahlt nach Zustellung, beide erklären erledigt: Wer trägt die Kosten?",
+      "falsch": "Der Beklagte hat gezahlt – damit hat er verloren und trägt nach § 91a ZPO automatisch die Kosten.",
+      "richtigText": "§ 91a ZPO verlangt billiges Ermessen unter Berücksichtigung des bisherigen Sach- und Streitstands. Das Gericht prüft summarisch, wer ohne die Erledigung voraussichtlich unterlegen wäre. Die Zahlung ist kein Anerkenntnis, kann aber ein Indiz sein; auch der Gedanke des § 93 ZPO kann einfließen. Entschieden wird durch Beschluss.",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 93 ZPO",
+        "Themenpool: assessorz-810"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.708Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-907",
+      "ueberzeile": "Lerntipp Probeklausur",
+      "titel": "Probeklausur zurück: Schreib die drei teuersten Absätze neu",
+      "text": "Such die drei Stellen mit dem größten Punktverlust. Schreib jeden Absatz ohne Lösungsskizze neu, in zehn Minuten, so wie er in der Klausur hätte stehen sollen. Erst dann mit der Lösung vergleichen. Eine Woche später wiederholst du das ohne Vorlage. So wird aus der Korrektur ein Formulierungstraining.",
+      "quellen": [
+        "Themenpool: methodik-907"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.708Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-205",
+      "ueberzeile": "3 Punkte GoA",
+      "titel": "Auch-fremdes Geschäft: drei Fallgruppen aus der Klausur",
+      "text": "Beim auch-fremden Geschäft vermutet die Rspr. den Fremdgeschäftsführungswillen. Die Lit. sieht die weite Ausdehnung kritisch.",
+      "punkte": [
+        "Gefahrenabwehr: Brand beim Nachbarn löschen, der aufs eigene Haus überzugreifen droht",
+        "Selbstaufopferung im Verkehr: Ausweichen vor einem Kind, wenn die eigene Haftung ausscheidet",
+        "Behörde erfüllt eigene Pflicht und zugleich die eines Privaten (sehr umstritten)"
+      ],
+      "quellen": [
+        "§ 677 BGB",
+        "§ 683 BGB",
+        "Themenpool: gesetzs-205"
+      ],
+      "fachLabel": "GoA/EBV",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:25:23.708Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

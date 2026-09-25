@@ -1,0 +1,866 @@
+{
+  "datum": "2027-04-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-640",
+        "themaTitel": "Bekanntgabe des Verwaltungsakts",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuldbt-475",
+        "themaTitel": "Waren mit digitalen Elementen",
+        "fach": "schuldbt",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "stpo-777",
+        "themaTitel": "Untersuchungshaft: Haftgründe",
+        "fach": "stpo",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "sachen-028"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "sachen-028"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "schuldbt-191"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:27",
+        "art": "streitstand",
+        "themaId": "methodik-903"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "merksatz",
+        "themaId": "zpo-561"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "begriff",
+        "themaId": "anklage-869"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-640",
+      "poolTitel": "Bekanntgabe des Verwaltungsakts",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 41 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10",
+        "2026-12-09",
+        "2027-04-26"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuldbt-475",
+      "poolTitel": "Waren mit digitalen Elementen",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 475b ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-30",
+        "2027-04-26",
+        "2027-04-26"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "stpo-777",
+      "poolTitel": "Untersuchungshaft: Haftgründe",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 112 ff. StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-07",
+        "2026-12-15",
+        "2026-12-15"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-028",
+      "poolTitel": "Welche Vermutungen enthält § 1006 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1006 BGB",
+        "§ 985 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-25",
+        "2026-09-25",
+        "2027-01-14"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-028",
+      "poolTitel": "Welche Vermutungen enthält § 1006 BGB?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1006 BGB",
+        "§ 985 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-25",
+        "2026-09-25",
+        "2027-01-14"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-191",
+      "poolTitel": "Was ist der Nacherfüllungsanspruch und wer bestimmt die Art?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-09",
+        "2026-10-15"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "methodik-903",
+      "poolTitel": "Hilfsgutachten: wann es rettet und wann es schadet",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-21",
+        "2027-02-20",
+        "2027-02-23"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zpo-561",
+      "poolTitel": "Versäumnisurteil und Einspruch",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 330 ff., 338 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-13",
+        "2026-12-06"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "anklage-869",
+      "poolTitel": "Wann ist ein Verteidiger notwendig zu bestellen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 140 StPO",
+        "§ 141 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2027-01-29",
+        "2027-03-02"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-640",
+      "slug": "2027-04-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Versehentlich verschickt: Der Entwurf wird kein VA",
+          "titelZeilen": [
+            "Versehentlich",
+            "verschickt: Der",
+            "Entwurf wird",
+            "kein VA"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Zugang ist nicht Bekanntgabe",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Sachbearbeiterin S hat einen Gebührenbescheid gegen A nur als Entwurf vorbereitet; die Amtsleitung soll noch entscheiden. Ein Kollege schickt ihn versehentlich ab, A erhält ihn. Ist ein wirksamer Verwaltungsakt entstanden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Wirksam erst mit Bekanntgabe",
+              "text": "Ein VA wird mit seiner Bekanntgabe wirksam (§ 43 Abs. 1 VwVfG). Bekanntgabe ist die gezielte Eröffnung durch die Behörde (§ 41 VwVfG)."
+            },
+            {
+              "titel": "Bekanntgabewille",
+              "text": "Nach h.M. muss die Behörde den VA bekanntgeben wollen – maßgeblich ist der Wille eines dafür zuständigen Amtswalters."
+            },
+            {
+              "titel": "Fehlt er",
+              "text": "Bloßes Bekanntwerden genügt nicht. Ohne Bekanntgabewillen entsteht kein wirksamer VA, sondern nur sein Rechtsschein."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Zugang beim Bürger mit Bekanntgabe gleichsetzen und sofort Fristen berechnen. Dass A das Schreiben in der Hand hält, sagt noch nichts darüber, ob die Behörde es ihm eröffnen wollte."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Der Bekanntgabewille fehlt: Der Entwurf ist kein wirksamer VA. Weil er aber wie ein Bescheid aussieht, darf A den Rechtsschein beseitigen lassen – nach verbreiteter Ansicht mit Anfechtungsklage, alternativ mit einer Feststellungsklage (§ 43 VwGO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zugang ist nicht Bekanntgabe. Ohne den Willen der Behörde, den VA zu eröffnen, wird er nicht wirksam."
+        },
+        {
+          "art": "cta",
+          "titel": "Bekanntgabe in drei Fragen",
+          "punkte": [
+            "Wollte die Behörde bekanntgeben?",
+            "Handelte ein zuständiger Amtswalter?",
+            "Rechtsschein beseitigen?"
+          ],
+          "icons": [
+            "umschlag",
+            "buero",
+            "schild"
+          ]
+        }
+      ],
+      "caption": "Der Bescheid liegt im Briefkasten – und ist doch kein wirksamer Verwaltungsakt? Wenn er nur ein Entwurf war und versehentlich verschickt wurde, ja. Wirksam wird ein VA erst mit Bekanntgabe (§ 43 Abs. 1 VwVfG), und die setzt nach h.M. den Bekanntgabewillen der Behörde voraus. Bleibt nur der Rechtsschein, kann der Betroffene ihn gerichtlich beseitigen lassen. Speichern für die nächste VA-Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#bekanntgabe",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Entwurf verschickt: kein wirksamer VA",
+      "coverText": "Zugang ist nicht Bekanntgabe",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Ein versehentlich verschickter Entwurf wird kein Verwaltungsakt, weil die Behörde ihn nicht bekanntgeben wollte.",
+        "handlung": "{A} lunges after an unsigned paper that is sliding out of a mail chute, while {B} nervously holds the official seal that was never pressed onto it.",
+        "hinweisRegie": "Place the note in the free space next to the unused seal in {B}'s hands, slightly tilted toward it, so the missing will to issue stands out without covering the sliding paper or {A}'s face.",
+        "alternative": "{B} catches a paper plane made of a draft form mid-air, while {A} shows the empty signature field on it."
+      },
+      "bildSzene": "unsigned paper sliding out of chute",
+      "bildSzeneAlt": "draft paper plane caught mid-air",
+      "quellen": [
+        "§ 41 VwVfG",
+        "§ 43 Abs. 1 VwVfG",
+        "§ 35 VwVfG",
+        "§ 42 VwGO",
+        "§ 43 VwGO",
+        "Themenpool: verwalt-640"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.596Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-475",
+      "slug": "2027-04-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Update ignoriert: Der Verkäufer ist nicht automatisch raus",
+          "titelZeilen": [
+            "Update ignoriert:",
+            "Der Verkäufer ist",
+            "nicht automatisch",
+            "raus"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Belehrung über die Folgen zählt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Verbraucher K kauft bei V einen Smart-TV. V teilt per Mail mit, dass ein Update bereitsteht – was passiert, wenn K es nicht installiert, sagt V nicht. K installiert es nicht; eine App-Funktion fällt deshalb aus. Hat K Mängelrechte gegen V?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Mangel",
+              "text": "Ohne erforderliche Aktualisierung entspricht die Ware nicht den objektiven Anforderungen (§ 475b Abs. 4 BGB)."
+            },
+            {
+              "titel": "Ausschluss nach Abs. 5",
+              "text": "Installiert der Verbraucher ein Update nicht rechtzeitig, haftet der Unternehmer nicht für einen allein darauf beruhenden Mangel –"
+            },
+            {
+              "titel": "… aber nur unter zwei Bedingungen",
+              "text": "Er hat über die Verfügbarkeit und die Folgen der Nichtinstallation informiert, und die Installationsanleitung war nicht mangelhaft."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Mit „selbst schuld“ abbrechen. § 475b Abs. 5 BGB befreit den Unternehmer nur, wenn beide Bedingungen erfüllt sind – und die Belehrung über die Folgen gehört ausdrücklich dazu."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "V hat nur über die Verfügbarkeit informiert, nicht über die Folgen einer unterlassenen Installation. Der Ausschluss greift nicht. K hat die Rechte aus § 437 BGB, zunächst den Anspruch auf Nacherfüllung (§ 439 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Update nicht installiert? Der Unternehmer ist nur frei, wenn er über Verfügbarkeit und Folgen informiert hat und die Anleitung taugte."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 475b Abs. 5 BGB prüfen",
+          "punkte": [
+            "Update bereitgestellt?",
+            "Über die Folgen informiert?",
+            "Anleitung in Ordnung?"
+          ],
+          "icons": [
+            "laptop",
+            "glocke",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Der Käufer installiert das Update nicht – ist der Verkäufer damit raus? Nicht automatisch. § 475b Abs. 5 BGB schließt die Haftung für einen allein darauf beruhenden Mangel nur aus, wenn der Unternehmer über Verfügbarkeit und Folgen der Nichtinstallation informiert hat und die Anleitung nicht mangelhaft war. Fehlt die Belehrung über die Folgen, bleiben die Rechte aus § 437 BGB. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#verbrauchsgüterkauf",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Update nicht installiert: Wer haftet?",
+      "coverText": "Belehrung über die Folgen zählt",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wer das Update nicht installiert, verliert seine Rechte nur, wenn er über die Folgen belehrt wurde.",
+        "handlung": "{A} ignores a small blinking box beside a large screen device, while {B} holds up a delivery note on which only half of the message is printed.",
+        "hinweisRegie": "Place the note in the free space next to the half-printed delivery note, slightly tilted toward it, so the missing warning stands out without covering the blinking box or {A}'s face.",
+        "alternative": "{B} hands {A} a spare part in a box whose warning label is torn off, while the device behind them stops working."
+      },
+      "bildSzene": "half-printed note beside blinking device",
+      "bildSzeneAlt": "spare part box with torn warning label",
+      "quellen": [
+        "§ 475b BGB",
+        "§ 437 BGB",
+        "§ 439 BGB",
+        "§ 434 BGB",
+        "Themenpool: schuldbt-475"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.596Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-777",
+      "slug": "2027-04-28-b3",
+      "titelZeilen": [
+        "Fünf Haftgründe –",
+        "die hohe Straf-",
+        "erwartung ist keiner"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Fünf Haftgründe – die hohe Straferwartung ist keiner",
+          "unter": "Untersuchungshaft · §§ 112, 112a StPO",
+          "text": "Die Straferwartung ist nur ein Indiz für Fluchtgefahr.",
+          "norm": "§ 112 Abs. 2 Nr. 2 StPO",
+          "icon": "schloss",
+          "sprecher": "Hohe Straferwartung allein ist keine Fluchtgefahr. Sie ist ein Indiz, mehr nicht. U-Haft braucht dringenden Tatverdacht, einen Haftgrund und Verhältnismäßigkeit.",
+          "marken": [
+            "kein Automatismus",
+            "nur Indiz"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Flucht und Fluchtgefahr",
+          "text": "Festgestellte Flucht oder Gesamtwürdigung aller Umstände.",
+          "norm": "§ 112 Abs. 2 Nr. 1, 2 StPO",
+          "sprecher": "Haftgründe eins und zwei: Flucht und Fluchtgefahr. Ist der Beschuldigte flüchtig, liegt der erste vor. Für die Fluchtgefahr wägst du den Fluchtanreiz der Strafe gegen Wohnung, Familie und Arbeit ab.",
+          "marken": [
+            "Gesamtwürdigung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verdunkelungsgefahr",
+          "text": "Dringender Verdacht konkreter Verdunkelungshandlungen.",
+          "norm": "§ 112 Abs. 2 Nr. 3 StPO",
+          "sprecher": "Haftgrund drei: Verdunkelungsgefahr. Es braucht den dringenden Verdacht, dass er Beweise vernichtet oder Zeugen beeinflusst. Die bloße Möglichkeit reicht nicht.",
+          "marken": [
+            "konkrete Handlungen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Schwere der Tat",
+          "text": "Katalogtaten – nach dem BVerfG nur verfassungskonform eng.",
+          "norm": "§ 112 Abs. 3 StPO",
+          "sprecher": "Haftgrund vier: die Schwere der Tat, etwa bei Mord oder Totschlag. Nach dem BVerfG genügt es aber nur, wenn Flucht- oder Verdunkelungsgefahr nicht auszuschließen ist.",
+          "marken": [
+            "Katalogtaten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Wiederholungsgefahr",
+          "text": "Nur bei bestimmten Anlasstaten und nur subsidiär.",
+          "norm": "§ 112a StPO",
+          "sprecher": "Haftgrund fünf: Wiederholungsgefahr. Er greift nur bei bestimmten Anlasstaten und tritt zurück, wenn schon ein Haftgrund nach Paragraf 112 vorliegt.",
+          "marken": [
+            "subsidiär"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Und die Verhältnismäßigkeit?",
+          "text": "Nicht außer Verhältnis zur Sache – oft genügt Haftverschonung.",
+          "norm": "§ 112 Abs. 1 S. 2 StPO · § 116 StPO",
+          "sprecher": "Und die Verhältnismäßigkeit? U-Haft darf nicht außer Verhältnis zur Bedeutung der Sache und zur erwarteten Strafe stehen. Und oft reicht es, den Haftbefehl gegen Auflagen außer Vollzug zu setzen, etwa mit Meldepflicht oder Sicherheitsleistung.",
+          "marken": [
+            "§ 116 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Tatverdacht, Haftgrund, Verhältnismäßigkeit – die Strafhöhe ist nur ein Baustein.",
+          "norm": "§ 112 Abs. 1 StPO",
+          "sprecher": "Merke: dringender Tatverdacht, ein echter Haftgrund und Verhältnismäßigkeit. Die drohende Strafe ist dabei nur ein Baustein der Fluchtgefahr.",
+          "marken": [
+            "drei Säulen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Haftgrund am Sachverhalt belegen",
+          "text": "Speichern für die nächste Haftprüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Haftprüfung. Und belege jeden Haftgrund mit Tatsachen aus dem Sachverhalt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Fünf Haftgründe – und die hohe Straferwartung ist keiner davon. Flucht, Fluchtgefahr und Verdunkelungsgefahr (§ 112 Abs. 2 StPO), die Schwere der Tat (§ 112 Abs. 3 StPO) und die subsidiäre Wiederholungsgefahr (§ 112a StPO). Die drohende Strafe ist nur ein Indiz für Fluchtgefahr und muss gegen soziale Bindungen abgewogen werden. Speichern für die nächste Haftprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#untersuchungshaft",
+        "#112stpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "U-Haft: fünf Haftgründe im Überblick",
+      "coverText": "Straferwartung ist nur ein Indiz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Eine hohe drohende Strafe begründet allein noch keine Fluchtgefahr – sie muss gegen die Bindungen des Beschuldigten abgewogen werden.",
+        "handlung": "{A} places a heavy stone on one pan of a balance, while {B} points his pointer at the other pan, which holds a small house, a family photo frame and a work helmet.",
+        "hinweisRegie": "Place the note in the free space above the pan with the house and photo frame, slightly tilted toward it, so the counterweight of ties stands out without covering the heavy stone or {A}'s hands.",
+        "alternative": "{B} checks five different locks on a door while {A} holds up a sixth, oversized lock that fits none of them."
+      },
+      "bildSzene": "heavy stone versus house on balance",
+      "bildSzeneAlt": "oversized lock fits no door",
+      "quellen": [
+        "§ 112 StPO",
+        "§ 112a StPO",
+        "§ 116 StPO",
+        "Themenpool: stpo-777"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-haftgruende",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-028",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Das Rad wurde E gestohlen, jetzt fährt es B. Wem hilft § 1006 BGB, wenn das Eigentum unklar bleibt?",
+      "optionen": [
+        "E – B kann sich ihm gegenüber nicht auf Abs. 1 berufen",
+        "B – der jetzige Besitzer gilt immer als Eigentümer",
+        "Keinem – § 1006 BGB gilt nur für Grundstücke"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 1006 BGB",
+        "§ 985 BGB",
+        "Themenpool: sachen-028"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-028",
+      "ueberzeile": "Auflösung",
+      "titel": "E – die Vermutung kippt zugunsten des bestohlenen Vorbesitzers",
+      "text": "Zugunsten des Besitzers wird vermutet, dass er Eigentümer ist (§ 1006 Abs. 1 S. 1 BGB) – aber nicht gegenüber einem früheren Besitzer, dem die Sache abhandengekommen ist (S. 2). Den Diebstahl muss E beweisen. Dann hilft ihm § 1006 Abs. 2 BGB: Er gilt für die Dauer seines Besitzes als Eigentümer.",
+      "norm": "§ 1006 Abs. 1, 2 BGB",
+      "quellen": [
+        "§ 1006 BGB",
+        "§ 985 BGB",
+        "Themenpool: sachen-028"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.598Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "E – B kann sich ihm gegenüber nicht auf Abs. 1 berufen",
+        "B – der jetzige Besitzer gilt immer als Eigentümer",
+        "Keinem – § 1006 BGB gilt nur für Grundstücke"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-191",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 439 Abs. 3 BGB: Eingebaut und mangelhaft – der Verkäufer trägt Aus- und Einbau",
+      "text": "Hat der Käufer die mangelhafte Sache ihrer Art und ihrem Verwendungszweck gemäß eingebaut, muss der Verkäufer im Rahmen der Nacherfüllung die erforderlichen Aufwendungen für das Entfernen und den Einbau der mangelfreien Sache ersetzen – ohne Verschulden und bei jedem Kaufvertrag, nicht nur beim Verbrauchsgüterkauf.",
+      "norm": "§ 439 Abs. 3 BGB",
+      "quellen": [
+        "§ 439 BGB",
+        "Themenpool: schuldbt-191"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-903",
+      "ueberzeile": "Streitstand Klausurtechnik",
+      "titel": "Klage wohl unzulässig, sicher unbegründet: Darf die Zulässigkeit offenbleiben?",
+      "norm": "§ 256 Abs. 1 ZPO",
+      "optionen": [
+        "H.M.: Nein – Zulässigkeit geht vor; die Begründetheit gehört dann ins Hilfsgutachten.",
+        "BGH beim Feststellungsinteresse: Ja – es ist nur für ein stattgebendes Urteil zwingend."
+      ],
+      "text": "Klausur: Vorrang der Zulässigkeit ist der Grundsatz. Ist die Klage unzulässig, prüfst du die Begründetheit hilfsgutachtlich, wenn der Bearbeitervermerk alle Fragen verlangt. Die BGH-Ausnahme nur beim Feststellungsinteresse nutzen.",
+      "quellen": [
+        "§ 256 Abs. 1 ZPO",
+        "Themenpool: methodik-903"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-561",
+      "ueberzeile": "Merksatz ZPO",
+      "titel": "Wieder säumig nach Einspruch: Das zweite VU ist endgültig",
+      "text": "Säumig im Einspruchstermin? Dann wird der Einspruch durch zweites VU verworfen (§ 345 ZPO) – ohne weiteren Einspruch. Berufung nur mit der Rüge, die Säumnis sei nicht schuldhaft gewesen (§ 514 Abs. 2 ZPO).",
+      "norm": "§ 345 ZPO · § 514 Abs. 2 ZPO",
+      "quellen": [
+        "§ 345 ZPO",
+        "§ 514 ZPO",
+        "§ 338 ZPO",
+        "Themenpool: zpo-561"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-869",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Pflichtverteidigerwechsel (§ 143a StPO)",
+      "text": "Die Bestellung ist nicht unumstößlich. Beauftragt der Beschuldigte einen Wahlverteidiger, wird sie grundsätzlich aufgehoben (§ 143a Abs. 1 StPO). Ein anderer Pflichtverteidiger kommt u. a. in Betracht, wenn das Vertrauensverhältnis endgültig zerstört ist oder eine angemessene Verteidigung sonst nicht gewährleistet ist (§ 143a Abs. 2 StPO).",
+      "norm": "§ 143a StPO",
+      "quellen": [
+        "§ 140 StPO",
+        "§ 141 StPO",
+        "§ 143a StPO",
+        "Themenpool: anklage-869"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:43:37.598Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

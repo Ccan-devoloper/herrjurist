@@ -1,0 +1,896 @@
+{
+  "datum": "2027-02-24",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-379",
+        "themaTitel": "Wie prüft man die Rechtmäßigkeit eines Verwaltungsakts?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuld-446",
+        "themaTitel": "Schadensersatz statt der Leistung bei Unmöglichkeit",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-872",
+        "themaTitel": "Wie begründet man einen Haftbefehl in der Klausur?",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:04",
+        "art": "frage",
+        "themaId": "stpo-783"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:04",
+        "art": "antwort",
+        "themaId": "stpo-783"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "schuldbt-024"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "streitstand",
+        "themaId": "assessorz-807"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "merksatz",
+        "themaId": "strafbt-074"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:16",
+        "art": "begriff",
+        "themaId": "bgbat-423"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-379",
+      "poolTitel": "Wie prüft man die Rechtmäßigkeit eines Verwaltungsakts?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG",
+        "§ 40 VwVfG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuld-446",
+      "poolTitel": "Schadensersatz statt der Leistung bei Unmöglichkeit",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, III, 283 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16",
+        "2027-01-15",
+        "2027-01-15"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-872",
+      "poolTitel": "Wie begründet man einen Haftbefehl in der Klausur?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 112 StPO",
+        "§ 116 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-783",
+      "poolTitel": "Hauptverhandlung: Unmittelbarkeitsgrundsatz",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-783",
+      "poolTitel": "Hauptverhandlung: Unmittelbarkeitsgrundsatz",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 250 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-024",
+      "poolTitel": "Wann kann der Käufer ohne Fristsetzung zurücktreten?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 323 Abs. 2 BGB",
+        "§ 440 BGB",
+        "§ 326 Abs. 5 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-13",
+        "2026-12-06"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-807",
+      "poolTitel": "Wann ist ohne, wann nur gegen Sicherheitsleistung vorläufig vollstreckbar?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "§ 713 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-10-19",
+        "2026-12-23"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-074",
+      "poolTitel": "Was ist eine gefährliche Körperverletzung nach § 224 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB",
+        "§ 224 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2026-10-19"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "bgbat-423",
+      "poolTitel": "Geschäftsunfähigkeit und Nichtigkeit",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 104, 105 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2026-11-24",
+        "2027-02-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-379",
+      "slug": "2027-02-24-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Richtiges Ergebnis, rechtswidriger Bescheid",
+          "titelZeilen": [
+            "Richtiges Ergebnis,",
+            "rechtswidriger",
+            "Bescheid"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "„Kann“ überlesen: Ermessensausfall",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "E hat ohne Genehmigung ein Gartenhaus gebaut, das auch nicht genehmigungsfähig ist. Nach der Landesbauordnung „kann“ die Behörde die Beseitigung anordnen. Im Bescheid steht: „Wir sind verpflichtet, die Beseitigung anzuordnen.“ Ist die Anordnung rechtmäßig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du den Verwaltungsakt",
+          "schritte": [
+            {
+              "titel": "1. Ermächtigungsgrundlage",
+              "text": "Eingriff braucht eine gesetzliche Grundlage – hier die Beseitigungsbefugnis der Landesbauordnung."
+            },
+            {
+              "titel": "2. Formelle Rechtmäßigkeit",
+              "text": "Zuständigkeit, Verfahren (Anhörung, § 28 VwVfG), Form und Begründung (§ 39 VwVfG)."
+            },
+            {
+              "titel": "3. Tatbestand",
+              "text": "Die Voraussetzungen der Norm – hier Widerspruch zu öffentlich-rechtlichen Vorschriften – liegen vor."
+            },
+            {
+              "titel": "4. Rechtsfolge",
+              "text": "„Kann“ heißt Ermessen: Die Behörde muss es ausüben, dem Zweck entsprechend und in den gesetzlichen Grenzen (§ 40 VwVfG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Beim Ermessen nur prüfen, ob die Beseitigung verhältnismäßig ist – und dann „rechtmäßig“ schreiben. Hier hat die Behörde ihr Ermessen gar nicht erkannt: Ermessensausfall. Der Bescheid ist rechtswidrig, auch wenn eine Beseitigung im Ergebnis vertretbar wäre."
+        },
+        {
+          "art": "text",
+          "titel": "Kann die Behörde das im Prozess retten?",
+          "punkte": [
+            "§ 114 S. 2 VwGO erlaubt nur, Ermessenserwägungen zu ergänzen.",
+            "Wer gar kein Ermessen ausgeübt hat, kann es dort nicht erstmals nachholen.",
+            "Das Gericht prüft nur Ermessensfehler (§ 114 S. 1 VwGO) – es setzt kein eigenes Ermessen ein."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bei „kann“ erst fragen, ob überhaupt Ermessen ausgeübt wurde. Ermessensausfall macht den Bescheid rechtswidrig – egal, wie das Ergebnis aussieht."
+        },
+        {
+          "art": "cta",
+          "titel": "Ermessen in drei Fragen",
+          "punkte": [
+            "Ermessen überhaupt erkannt und ausgeübt?",
+            "Alle relevanten Belange berücksichtigt?",
+            "Gesetzliche Grenzen und Verhältnismäßigkeit?"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Richtiges Ergebnis, rechtswidriger Bescheid: Schreibt die Behörde „wir sind verpflichtet“, obwohl die Norm „kann“ sagt, hat sie ihr Ermessen nicht ausgeübt. Das ist ein Ermessensausfall – der Bescheid ist rechtswidrig, auch wenn die Maßnahme vertretbar wäre (§ 40 VwVfG, § 114 S. 1 VwGO). Im Prozess nachholen lässt sich das nicht: § 114 S. 2 VwGO erlaubt nur ein Ergänzen. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#ermessen",
+        "#40vwvfg",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ermessensausfall: rechtswidrig trotz Ergebnis",
+      "coverText": "„Kann“ überlesen: Ermessensausfall",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Wer ein Ermessen hat, es aber nicht erkennt, entscheidet rechtswidrig – selbst wenn das Ergebnis vertretbar wäre.",
+        "handlung": "{B} hovers in front of a track switch and pushes it firmly in one direction, while {A} kneels beside a second, untouched lever that would have let {B} choose between two tracks.",
+        "hinweisRegie": "Place the note in the free space above the untouched second lever, slightly tilted toward it, so the ignored choice is emphasized without covering {B}'s pushing arm.",
+        "alternative": "{A} holds out two different keys, but {B} has already turned a single key without even looking at the other one."
+      },
+      "bildSzene": "droid ignores lever offering a choice",
+      "bildSzeneAlt": "two keys offered, only one used",
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 28 VwVfG",
+        "§ 39 VwVfG",
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "Bauordnungen der Länder",
+        "Themenpool: verwalt-379"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "paradox-ergebnis",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.979Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-446",
+      "slug": "2027-02-24-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vor Vertragsschluss zerstört: Hier greifen viele zu § 283 BGB",
+          "titelZeilen": [
+            "Vor Vertragsschluss",
+            "zerstört: Hier",
+            "greifen viele zu",
+            "§ 283 BGB"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Anfänglich: § 311a Abs. 2 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V verkauft K ein Gemälde. Keiner weiß: Es ist am Vortag im Lager des V verbrannt. K hätte es mit Gewinn weiterverkauft und verlangt Schadensersatz statt der Leistung. Viele prüfen jetzt §§ 280 Abs. 1, 3, 283 BGB. Das ist die Norm für nachträgliche Unmöglichkeit – hier passt sie nicht."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wann trat das Hindernis ein?",
+          "links": {
+            "titel": "Vor Vertragsschluss",
+            "punkte": [
+              "Anfängliche Unmöglichkeit",
+              "Vertrag trotzdem wirksam (§ 311a Abs. 1 BGB)",
+              "Anspruch: § 311a Abs. 2 BGB",
+              "Bezugspunkt: Kenntnis vom Hindernis"
+            ]
+          },
+          "rechts": {
+            "titel": "Nach Vertragsschluss",
+            "punkte": [
+              "Nachträgliche Unmöglichkeit",
+              "Leistungspflicht entfällt (§ 275 BGB)",
+              "Anspruch: §§ 280 Abs. 1, 3, 283 BGB",
+              "Bezugspunkt: Herbeiführen des Hindernisses"
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du § 311a Abs. 2 BGB",
+          "schritte": [
+            {
+              "titel": "1. Wirksamer Vertrag",
+              "text": "Die anfängliche Unmöglichkeit hindert die Wirksamkeit nicht (§ 311a Abs. 1 BGB)."
+            },
+            {
+              "titel": "2. Leistungshindernis schon bei Vertragsschluss",
+              "text": "Der Schuldner ist nach § 275 Abs. 1–3 BGB nicht zur Leistung verpflichtet."
+            },
+            {
+              "titel": "3. Kenntnis oder fahrlässige Unkenntnis",
+              "text": "Kannte V das Hindernis oder hätte er es kennen müssen? Er muss sich entlasten (§ 311a Abs. 2 S. 2 BGB)."
+            },
+            {
+              "titel": "4. Rechtsfolge",
+              "text": "Schadensersatz statt der Leistung – etwa der entgangene Gewinn – oder Aufwendungsersatz im Umfang des § 284 BGB."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Falls",
+          "punkte": [
+            "Der Vertrag ist wirksam, V muss nicht leisten (§ 275 Abs. 1 BGB), K nicht zahlen (§ 326 Abs. 1 S. 1 BGB).",
+            "K kann den Gewinn nach § 311a Abs. 2 BGB verlangen – wenn V den Brand kannte oder kennen musste.",
+            "Konnte V davon nichts wissen, scheidet der Anspruch aus."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Weiche ist der Vertragsschluss: Hindernis vorher – § 311a Abs. 2 BGB. Hindernis danach – §§ 280 Abs. 1, 3, 283 BGB."
+        },
+        {
+          "art": "cta",
+          "titel": "Unmöglichkeit in drei Schritten",
+          "punkte": [
+            "Wann entstand das Hindernis?",
+            "Vorher: § 311a Abs. 2 – Kenntnis?",
+            "Danach: §§ 280, 283 – Vertretenmüssen?"
+          ],
+          "icons": [
+            "kalender",
+            "lupe",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Schon vor Vertragsschluss zerstört? Dann ist §§ 280 Abs. 1, 3, 283 BGB die falsche Spur. Bei anfänglicher Unmöglichkeit bleibt der Vertrag wirksam (§ 311a Abs. 1 BGB), und Schadensersatz statt der Leistung gibt es nach § 311a Abs. 2 BGB. Der Schuldner haftet, wenn er das Hindernis kannte oder kennen musste. Die Weiche ist der Zeitpunkt des Vertragsschlusses. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#311abgb",
+        "#unmöglichkeit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anfängliche Unmöglichkeit: § 311a statt § 283",
+      "coverText": "Anfänglich: § 311a Abs. 2 BGB",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Ob die Sache vor oder nach Vertragsschluss unterging, entscheidet über die Anspruchsgrundlage.",
+        "handlung": "{A} holds a signed handshake card up high, while {B} points to a pile of ash on the floor behind him that clearly lies on the earlier side of a chalk line drawn across the room.",
+        "hinweisRegie": "Place the note in the free space just above the chalk line, slightly tilted toward the ash pile, so the before-and-after split is emphasized without covering the handshake card.",
+        "alternative": "{B} carries an empty picture frame toward {A}, while a calendar page behind them shows the day before the deal already torn off."
+      },
+      "bildSzene": "ash pile on earlier side of line",
+      "bildSzeneAlt": "empty frame, torn calendar page",
+      "quellen": [
+        "§ 275 BGB",
+        "§ 280 Abs. 1, 3 BGB",
+        "§ 283 BGB",
+        "§ 284 BGB",
+        "§ 311a BGB",
+        "§ 326 Abs. 1 BGB",
+        "Themenpool: schuld-446"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.980Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-872",
+      "slug": "2027-02-24-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Haftbefehl: drei Stufen – und dann § 116 StPO",
+          "unter": "Haftbefehl · §§ 112, 116 StPO",
+          "text": "Tatverdacht, Haftgrund, Verhältnismäßigkeit – dann die Frage nach der Aussetzung.",
+          "norm": "§ 112 StPO",
+          "icon": "schloss",
+          "sprecher": "Drei Stufen trägt jeder Haftbefehl. Danach kommt eine vierte Frage, die über die Freiheit entscheidet: Muss er überhaupt vollzogen werden?",
+          "marken": [
+            "drei Stufen",
+            "plus § 116"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Dringender Tatverdacht",
+          "text": "Hohe Wahrscheinlichkeit von Täterschaft und Strafbarkeit nach dem Ermittlungsstand.",
+          "norm": "§ 112 Abs. 1 S. 1 StPO",
+          "sprecher": "Stufe eins: dringender Tatverdacht. Nach dem gegenwärtigen Ermittlungsstand muss eine hohe Wahrscheinlichkeit bestehen, dass der Beschuldigte die Tat begangen hat.",
+          "marken": [
+            "hohe Wahrscheinlichkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Haftgrund aus Tatsachen",
+          "text": "Flucht, Fluchtgefahr, Verdunkelungsgefahr – die hohe Straferwartung allein genügt regelmäßig nicht.",
+          "norm": "§ 112 Abs. 2 StPO",
+          "sprecher": "Stufe zwei: ein Haftgrund, gestützt auf bestimmte Tatsachen. Meist geht es um Fluchtgefahr. Die hohe Straferwartung ist nur ein Fluchtanreiz. Dagegen stehen Wohnung, Familie und Arbeit. Beides musst du abwägen.",
+          "marken": [
+            "abwägen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Verhältnismäßigkeit",
+          "text": "Die Haft darf nicht außer Verhältnis zur Bedeutung der Sache und zur Straferwartung stehen.",
+          "norm": "§ 112 Abs. 1 S. 2 StPO",
+          "sprecher": "Stufe drei: Verhältnismäßigkeit. Die Untersuchungshaft darf nicht außer Verhältnis zur Bedeutung der Sache und zur erwarteten Strafe stehen.",
+          "marken": [
+            "§ 112 Abs. 1 S. 2"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Dann: Aussetzung des Vollzugs",
+          "text": "Reichen mildere Maßnahmen? Meldeauflage, Ausweisabgabe, Sicherheitsleistung.",
+          "norm": "§ 116 StPO",
+          "sprecher": "Und dann die Frage, die leicht untergeht: Paragraf 116 StPO. Reichen weniger einschneidende Maßnahmen, wird der Vollzug ausgesetzt. Bei Fluchtgefahr etwa eine Meldeauflage, die Abgabe des Ausweises oder eine Sicherheitsleistung.",
+          "marken": [
+            "mildere Mittel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Aufbau in der Klausur",
+          "text": "Tat konkret wie im Anklagesatz, dann Haftgrund und die Tatsachen, die ihn tragen.",
+          "norm": "§ 114 Abs. 2 StPO",
+          "sprecher": "Für den Aufbau hilft Paragraf 114 Absatz 2: Beschuldigter, Tat mit Zeit und Ort, gesetzliche Merkmale und Vorschriften, der Haftgrund und die Tatsachen, aus denen sich Tatverdacht und Haftgrund ergeben.",
+          "marken": [
+            "§ 114 Abs. 2"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Tatverdacht, Haftgrund, Verhältnismäßigkeit – und immer § 116 StPO.",
+          "norm": "§§ 112, 116 StPO",
+          "sprecher": "Merke: Tatverdacht, Haftgrund, Verhältnismäßigkeit. Und immer noch Paragraf 116 prüfen.",
+          "marken": [
+            "immer § 116"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die nächste Haftfrage",
+          "text": "Speichern für die nächste Strafrechtsklausur im Referendariat.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur mit Haftfrage.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Haftbefehl in drei Stufen: dringender Tatverdacht, Haftgrund aus bestimmten Tatsachen, Verhältnismäßigkeit (§ 112 StPO). Die hohe Straferwartung allein trägt die Fluchtgefahr regelmäßig nicht – sie ist gegen Wohnung, Familie und Arbeit abzuwägen. Danach immer § 116 StPO: Reichen Meldeauflage, Ausweisabgabe oder Sicherheitsleistung, wird der Vollzug ausgesetzt. Speichern für die nächste Haftfrage.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#haftbefehl",
+        "#untersuchungshaft",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Haftbefehl: drei Stufen und § 116 StPO",
+      "titelZeilen": [
+        "Haftbefehl:",
+        "drei Stufen – und",
+        "dann § 116 StPO"
+      ],
+      "coverText": "Mildere Mittel prüfen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Auch wenn alle Haftvoraussetzungen vorliegen, bleibt zu prüfen, ob mildere Maßnahmen genügen.",
+        "handlung": "{B} is about to close a heavy cell door, while {A} curiously holds up a small ankle tag and a check-in card, offering them as a lighter alternative.",
+        "hinweisRegie": "Place the note in the free space between the half-closed door and the offered check-in card, slightly tilted toward the card, so the milder alternative stands out without covering {A}'s face.",
+        "alternative": "{A} climbs three stone steps toward a gate, and on the fourth step {B} holds a smaller side door open."
+      },
+      "bildSzene": "cell door paused, lighter option offered",
+      "bildSzeneAlt": "three steps, side door on fourth",
+      "quellen": [
+        "§ 112 StPO",
+        "§ 114 StPO",
+        "§ 116 StPO",
+        "Themenpool: anklage-872"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-stufen-plus-schluss",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.981Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-783",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Zeuge Z fehlt in der Hauptverhandlung. Darf das Gericht einfach sein Polizeiprotokoll verlesen?",
+      "optionen": [
+        "Nein – nur in den Ausnahmefällen der §§ 251 ff. StPO",
+        "Ja – Vernehmungsprotokolle sind Urkunden und immer verlesbar",
+        "Ja – wenn der Vorsitzende das Protokoll für ausreichend hält"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 250 StPO",
+        "§ 251 StPO",
+        "Themenpool: stpo-783"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.981Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-783",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – die Vernehmung darf nicht durch das Protokoll ersetzt werden",
+      "text": "Beruht der Beweis auf der Wahrnehmung einer Person, ist sie in der Hauptverhandlung zu vernehmen; das Protokoll einer früheren Vernehmung ersetzt sie nicht (§ 250 S. 2 StPO). Ausnahmen regelt § 251 StPO, etwa bei Einverständnis der Beteiligten. Zulässig bleibt es aber, den Polizeibeamten als Zeugen darüber zu hören, was Z ihm gesagt hat.",
+      "norm": "§ 250 StPO · § 251 StPO",
+      "quellen": [
+        "§ 250 StPO",
+        "§ 251 StPO",
+        "Themenpool: stpo-783"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.981Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – nur in den Ausnahmefällen der §§ 251 ff. StPO",
+        "Ja – Vernehmungsprotokolle sind Urkunden und immer verlesbar",
+        "Ja – wenn der Vorsitzende das Protokoll für ausreichend hält"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-024",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 326 Abs. 5 BGB: Unbehebbarer Mangel – Rücktritt ohne Frist",
+      "text": "Ist die Nacherfüllung unmöglich, wäre eine Frist sinnlos: Der Käufer kann nach §§ 437 Nr. 2, 326 Abs. 5 BGB ohne Fristsetzung zurücktreten. Klassiker: Der als unfallfrei verkaufte Wagen ist ein Unfallwagen – das lässt sich nicht reparieren. Über den Verweis auf § 323 BGB bleibt der Ausschluss bei unerheblichem Mangel (§ 323 Abs. 5 S. 2) anwendbar.",
+      "norm": "§ 326 Abs. 5 BGB · § 437 Nr. 2 BGB",
+      "quellen": [
+        "§ 326 Abs. 5 BGB",
+        "§ 323 BGB",
+        "§ 437 Nr. 2 BGB",
+        "§ 275 BGB",
+        "Themenpool: schuldbt-024"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.981Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-807",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Einseitige Erledigungserklärung: Worüber entscheidet das Gericht dann eigentlich?",
+      "norm": "§ 91a ZPO · § 264 ZPO",
+      "optionen": [
+        "BGH, h.M.: Klageänderung – festzustellen ist, dass sich die Hauptsache erledigt hat.",
+        "Teile der Lit.: Prozesserklärung eigener Art, keine Klageänderung."
+      ],
+      "text": "Klausur: Mit der h.M. prüfst du, ob die Klage bis zum erledigenden Ereignis zulässig und begründet war. Tenor: „Es wird festgestellt, dass der Rechtsstreit in der Hauptsache erledigt ist.“ Vorläufig vollstreckbar ist dann nur die Kostenentscheidung.",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 264 Nr. 2 ZPO",
+        "§ 256 ZPO",
+        "§§ 708, 709 ZPO",
+        "Themenpool: assessorz-807"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.981Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-074",
+      "ueberzeile": "Merksatz Körperverletzung",
+      "titel": "§ 224 I Nr. 5 StGB: Keine konkrete Lebensgefahr nötig",
+      "text": "Nach der Rspr. genügt, dass die Behandlung nach den Umständen generell geeignet ist, das Leben zu gefährden – etwa heftiges Würgen. Ein Teil der Lit. verlangt eine konkrete Gefahr.",
+      "norm": "§ 224 Abs. 1 Nr. 5 StGB",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 224 Abs. 1 Nr. 5 StGB",
+        "Themenpool: strafbt-074"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.981Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-423",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Partielle Geschäftsunfähigkeit: für einen Lebensbereich, nicht für schwierige Geschäfte",
+      "text": "Geschäftsunfähig ist, wer sich in einem nicht nur vorübergehenden krankhaften Zustand befindet, der die freie Willensbestimmung ausschließt (§ 104 Nr. 2 BGB). Das kann auf einen Lebensbereich beschränkt sein, etwa bei einem Wahn. Eine „relative“ Geschäftsunfähigkeit nur für besonders schwierige Geschäfte lehnt die Rspr. ab. Im lichten Moment ist der Betroffene geschäftsfähig.",
+      "norm": "§ 104 Nr. 2 BGB",
+      "quellen": [
+        "§ 104 Nr. 2 BGB",
+        "§ 105 BGB",
+        "Themenpool: bgbat-423"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:33.981Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

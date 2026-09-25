@@ -1,0 +1,860 @@
+{
+  "datum": "2027-01-29",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "bereich-211",
+        "themaTitel": "Wann greift die Nichtleistungskondiktion?",
+        "fach": "bereich",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-773",
+        "themaTitel": "Beschlagnahme und Sicherstellung",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-384",
+        "themaTitel": "Was ist eine Ermessensreduzierung auf null?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "strafbt-739"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "strafbt-739"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "strafbt-737"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "merksatz",
+        "themaId": "strafat-297"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:04",
+        "art": "begriff",
+        "themaId": "anklage-869"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "fehler",
+        "themaId": "anklage-858"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "bereich-211",
+      "poolTitel": "Wann greift die Nichtleistungskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-16"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-773",
+      "poolTitel": "Beschlagnahme und Sicherstellung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 94 ff. StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2026-12-14"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-384",
+      "poolTitel": "Was ist eine Ermessensreduzierung auf null?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2027-01-15"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-739",
+      "poolTitel": "Mord: Verdeckungsabsicht",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-739",
+      "poolTitel": "Mord: Verdeckungsabsicht",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-10"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-737",
+      "poolTitel": "Totschlag und Tötungsvorsatz",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 212 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2026-11-26"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "strafat-297",
+      "poolTitel": "Was ist ein Verbotsirrtum und wann ist er vermeidbar?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 17 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-26"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "anklage-869",
+      "poolTitel": "Wann ist ein Verteidiger notwendig zu bestellen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 140 StPO",
+        "§ 141 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "anklage-858",
+      "poolTitel": "Was leistet der konkrete Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-29",
+        "2026-10-12",
+        "2026-11-28"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-211",
+      "slug": "2027-01-29-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Von D gekauft – und doch muss F an E zahlen",
+          "titelZeilen": [
+            "Von D gekauft –",
+            "und doch muss F",
+            "an E zahlen"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 935 BGB schlägt den Vorrang",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "D stiehlt dem Landwirt E zwei Jungbullen und verkauft sie an den Fleischfabrikanten F, der vom Diebstahl nichts weiß. F verarbeitet die Tiere zu Wurst. E verlangt von F Wertersatz."
+        },
+        {
+          "art": "text",
+          "titel": "Die naheliegende Abkürzung",
+          "text": "„F hat die Bullen durch Leistung des D erhalten – also ist eine Nichtleistungskondiktion des E gesperrt.“ Der Vorrang der Leistungsbeziehung gilt aber nicht schematisch. Es kommt auf eine Wertung an: Hätte F bei einem rechtsgeschäftlichen Erwerb Bestand gehabt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "1. § 985 BGB?",
+              "text": "Scheitert: F ist durch die Verarbeitung Eigentümer geworden (§ 950 BGB)."
+            },
+            {
+              "titel": "2. §§ 951 Abs. 1, 812 Abs. 1 S. 1 Alt. 2 BGB",
+              "text": "Rechtsgrundverweisung: F hat Eigentum erlangt, E hat es verloren."
+            },
+            {
+              "titel": "3. In sonstiger Weise?",
+              "text": "Die Leistung des D sperrt nur, wenn F die Tiere auch rechtsgeschäftlich kondiktionsfest hätte erwerben können."
+            },
+            {
+              "titel": "4. Wertung des § 935 BGB",
+              "text": "Gestohlene Tiere hätte F nicht gutgläubig erwerben können. Die Verarbeitung darf ihn nicht besser stellen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "E hat gegen F einen Anspruch aus §§ 951 Abs. 1, 812 Abs. 1 S. 1 Alt. 2 BGB. Da die Tiere nicht mehr herausgegeben werden können, schuldet F Wertersatz (§ 818 Abs. 2 BGB). Den an D gezahlten Kaufpreis darf F nach der Rspr. nicht abziehen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Vorrang der Leistung ist kein Automatismus: Wer wegen § 935 BGB nicht gutgläubig erwerben konnte, wird auch durch Verarbeitung nicht kondiktionsfest."
+        },
+        {
+          "art": "cta",
+          "titel": "Nichtleistungskondiktion in vier Zügen",
+          "punkte": [
+            "§ 985 BGB: Eigentum noch da?",
+            "§ 951 BGB als Rechtsgrundverweisung",
+            "Leistung eines Dritten: Wertung prüfen",
+            "§ 935 BGB entscheidet mit"
+          ],
+          "icons": [
+            "paragraf",
+            "kreislauf",
+            "waage",
+            "schloss"
+          ]
+        }
+      ],
+      "caption": "Von D gekauft – und doch muss F an E zahlen. Der Vorrang der Leistungskondiktion sperrt die Nichtleistungskondiktion nicht automatisch. Im Jungbullenfall hatte F die gestohlenen Tiere vom Dieb gekauft und verarbeitet. Weil er sie wegen § 935 BGB nicht gutgläubig hätte erwerben können, haftet er dem Eigentümer aus §§ 951 Abs. 1, 812 Abs. 1 S. 1 Alt. 2 BGB auf Wertersatz. Speichern für die nächste Bereicherungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#951bgb",
+        "#935bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Jungbullenfall: Kondiktion trotz Kauf",
+      "coverText": "§ 935 BGB schlägt den Vorrang",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Wer eine gestohlene Sache vom Dieb kauft und verarbeitet, ist dem Eigentümer trotzdem zum Ausgleich verpflichtet.",
+        "handlung": "{A} hauls a crate of freshly processed goods out of a small factory, while {B} steps into his path and firmly holds up an old ownership brand matching the mark on the crate.",
+        "hinweisRegie": "Place the note in the free space between the crate and the held-up ownership brand, slightly tilted toward the mark, so it links both without covering faces or hands.",
+        "alternative": "{B} follows a trail of hoof prints from an empty pasture straight to a factory door, where {A} stands with a receipt in hand."
+      },
+      "bildSzene": "crate blocked by matching ownership brand",
+      "bildSzeneAlt": "hoof prints leading to factory door",
+      "quellen": [
+        "§§ 951 Abs. 1, 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "§ 950 BGB",
+        "§ 935 BGB",
+        "§ 818 Abs. 2 BGB",
+        "BGHZ 55, 176 (Jungbullen)",
+        "Themenpool: bereich-211"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "wertung-statt-schema",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.884Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-773",
+      "slug": "2027-01-29-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verteidigerpost beim Beschuldigten: Darf die Polizei sie mitnehmen?",
+          "titelZeilen": [
+            "Verteidigerpost",
+            "beim Beschuldigten:",
+            "Darf die Polizei",
+            "sie mitnehmen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 148 StPO schützt mit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Bei der Durchsuchung der Wohnung des Beschuldigten B findet die Polizei einen Brief seines Verteidigers V mit der geplanten Verteidigungsstrategie. B gibt ihn nicht freiwillig heraus. Darf der Brief beschlagnahmt werden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Beweisgegenstand",
+              "text": "Der Brief kann für die Untersuchung von Bedeutung sein (§ 94 Abs. 1 StPO)."
+            },
+            {
+              "titel": "2. Beschlagnahme nötig",
+              "text": "Keine freiwillige Herausgabe – also Beschlagnahme (§ 94 Abs. 2 StPO), angeordnet nach § 98 StPO."
+            },
+            {
+              "titel": "3. § 97 StPO nach dem Wortlaut",
+              "text": "Das Verbot erfasst grundsätzlich nur Gegenstände im Gewahrsam des Zeugnisverweigerungsberechtigten (§ 97 Abs. 2 S. 1 StPO)."
+            },
+            {
+              "titel": "4. § 148 StPO",
+              "text": "Der freie Verkehr mit dem Verteidiger schützt Verteidigungsunterlagen nach der Rspr. auch beim Beschuldigten selbst."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nur den Wortlaut des § 97 Abs. 2 StPO lesen: „Der Brief liegt bei B, nicht bei V – also beschlagnahmefähig.“ Das übersieht § 148 StPO. Die Kommunikation mit dem Verteidiger wäre wertlos, wenn sie beim Mandanten jederzeit mitgenommen werden dürfte."
+        },
+        {
+          "art": "text",
+          "titel": "Ergebnis",
+          "text": "Der Brief ist beschlagnahmefrei. Wird er trotzdem beschlagnahmt, darf er nicht verwertet werden. Gegen eine nichtrichterliche Beschlagnahme kann B jederzeit die gerichtliche Entscheidung beantragen (§ 98 Abs. 2 S. 2 StPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verteidigungsunterlagen sind wegen § 148 StPO auch beim Beschuldigten beschlagnahmefrei – der Wortlaut des § 97 StPO greift zu kurz."
+        },
+        {
+          "art": "cta",
+          "titel": "Beschlagnahme in vier Zügen",
+          "punkte": [
+            "Beweisbedeutung, § 94 StPO",
+            "Anordnung nach § 98 StPO",
+            "Verbot nach § 97 StPO?",
+            "§ 148 StPO mitdenken"
+          ],
+          "icons": [
+            "lupe",
+            "richter",
+            "verbot",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Verteidigerpost beim Beschuldigten – darf die Polizei sie mitnehmen? Nein. § 97 Abs. 2 S. 1 StPO knüpft das Beschlagnahmeverbot zwar grundsätzlich an den Gewahrsam des Zeugnisverweigerungsberechtigten. Aus dem freien Verkehr mit dem Verteidiger (§ 148 StPO) folgt nach der Rspr. aber, dass Verteidigungsunterlagen auch beim Beschuldigten selbst beschlagnahmefrei sind. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#beschlagnahme",
+        "#strafprozessrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verteidigerpost: beschlagnahmefrei",
+      "coverText": "§ 148 StPO schützt mit",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Was zwischen Beschuldigtem und Verteidiger geschrieben wurde, bleibt geschützt – auch wenn es beim Beschuldigten liegt.",
+        "handlung": "{A} hovers over an open drawer and reaches for a sealed letter, while {B} curiously places a small glowing shield over the letter just before {A}'s grabber touches it.",
+        "hinweisRegie": "Place the note in the free space just above the glowing shield on the letter, slightly tilted toward it, so it marks the protection without covering the grabber or {B}'s face.",
+        "alternative": "{B} carries a sealed envelope through a checkpoint where a scanning beam simply passes around it while {A} watches puzzled."
+      },
+      "bildSzene": "shield placed over sealed letter",
+      "bildSzeneAlt": "scanner beam passes around envelope",
+      "quellen": [
+        "§ 94 StPO",
+        "§ 97 StPO",
+        "§ 98 StPO",
+        "§ 148 StPO",
+        "Themenpool: stpo-773"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.885Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-384",
+      "slug": "2027-01-29-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Klage gewonnen – und trotzdem nur Neubescheidung",
+          "unter": "Ermessen · § 113 Abs. 5 VwGO",
+          "text": "Bei Ermessen gibt es meist nur ein Bescheidungsurteil.",
+          "norm": "§ 113 Abs. 5 S. 2 VwGO",
+          "icon": "gericht",
+          "sprecher": "Du gewinnst – und bekommst trotzdem nicht, was du willst. Bei Ermessen verpflichtet das Gericht die Behörde meist nur zur Neubescheidung.",
+          "marken": [
+            "gewonnen",
+            "Neubescheidung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Kontrolle nur auf Fehler",
+          "text": "Ausfall, Überschreitung, Fehlgebrauch – kein eigenes Ermessen des Gerichts.",
+          "norm": "§ 114 S. 1 VwGO",
+          "sprecher": "Schritt eins: Das Gericht prüft bei Ermessen nur Fehler: Ermessensausfall, Überschreitung, Fehlgebrauch. Sein eigenes Ermessen setzt es nicht an die Stelle der Behörde.",
+          "marken": [
+            "nur Fehler"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Folge: Bescheidungsurteil",
+          "text": "Die Behörde entscheidet neu – nach der Rechtsauffassung des Gerichts.",
+          "norm": "§ 113 Abs. 5 S. 2 VwGO",
+          "sprecher": "Schritt zwei: Findet das Gericht einen Ermessensfehler, ist die Sache nicht spruchreif. Die Behörde muss unter Beachtung der Rechtsauffassung des Gerichts neu entscheiden.",
+          "marken": [
+            "nicht spruchreif"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ausnahme: Reduzierung auf null",
+          "text": "Nur eine einzige Entscheidung ist noch fehlerfrei.",
+          "norm": "§ 40 VwVfG",
+          "sprecher": "Schritt drei: die Ausnahme. Ist nur noch eine Entscheidung ermessensfehlerfrei, ist das Ermessen auf null reduziert. Typisch bei erheblicher Gefahr für Leben oder Gesundheit oder bei Selbstbindung durch ständige Verwaltungspraxis.",
+          "marken": [
+            "auf null"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Dann: Verpflichtungsurteil",
+          "text": "Spruchreife – das Gericht verpflichtet zu genau dieser Entscheidung.",
+          "norm": "§ 113 Abs. 5 S. 1 VwGO",
+          "sprecher": "Schritt vier: Dann ist die Sache spruchreif. Das Gericht verpflichtet die Behörde, genau diesen Verwaltungsakt zu erlassen.",
+          "marken": [
+            "Spruchreife"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Anspruch auf Einschreiten",
+          "text": "Drittschützende Norm plus Ermessensreduzierung auf null.",
+          "norm": null,
+          "sprecher": "Der Klassiker: Der Nachbar verlangt, dass die Behörde gegen eine gefährliche Anlage einschreitet. Er braucht eine drittschützende Norm, und für ein Verpflichtungsurteil muss das Ermessen auf null reduziert sein.",
+          "marken": [
+            "Drittschutz",
+            "auf null"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ermessensfehler: Neubescheidung. Reduzierung auf null: Verpflichtung.",
+          "norm": "§ 113 Abs. 5 VwGO",
+          "sprecher": "Merke: Ermessensfehler heißt Neubescheidung. Nur bei Reduzierung auf null gibt es die Verpflichtung zur konkreten Entscheidung.",
+          "marken": [
+            "S. 1 oder S. 2?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Immer prüfen: Ist die Sache spruchreif?",
+          "text": "Speichern für die nächste Verwaltungsrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Verwaltungsrechtsklausur. Und prüf am Ende immer: Ist die Sache spruchreif?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Klage gewonnen – und trotzdem nur Neubescheidung. Bei Ermessensentscheidungen prüft das Gericht nur Ermessensfehler (§ 114 S. 1 VwGO). Findet es einen, verpflichtet es die Behörde regelmäßig nur zur Neubescheidung (§ 113 Abs. 5 S. 2 VwGO). Ein Verpflichtungsurteil nach S. 1 gibt es erst, wenn das Ermessen auf null reduziert ist – etwa bei erheblicher Gefahr für Leben oder Gesundheit. Speichern für die nächste VerwR-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwgo",
+        "#ermessen",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ermessen: Neubescheidung oder Verpflichtung",
+      "titelZeilen": [
+        "Klage gewonnen –",
+        "und trotzdem nur",
+        "Neubescheidung"
+      ],
+      "coverText": "Erst auf null wird verpflichtet",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Ein Ermessensfehler bringt nur eine neue Entscheidung – erst wenn nur noch ein Weg bleibt, gibt es genau diesen.",
+        "handlung": "{A} stands at a crossroads where all but one path are blocked by fallen rocks, while {B} nervously points down the single open path.",
+        "hinweisRegie": "Place the note in the free space at the entrance of the single open path, slightly tilted toward it, so it marks the only remaining option without covering the rocks or faces.",
+        "alternative": "{B} hands {A} a returned form stamped only with a round circular mark, while a second form with a clear yes stamp lies on a far table."
+      },
+      "bildSzene": "crossroads with only one open path",
+      "bildSzeneAlt": "returned form, yes stamp far away",
+      "quellen": [
+        "§ 113 Abs. 5 VwGO",
+        "§ 114 S. 1 VwGO",
+        "§ 40 VwVfG",
+        "Themenpool: verwalt-384"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.886Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-739",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "Um seinen Diebstahl zu verdecken, fährt A auf Polizist P zu und nimmt dessen Tod in Kauf. Verdeckungsmord?",
+      "optionen": [
+        "Nein – Verdeckungsabsicht verlangt direkten Tötungsvorsatz",
+        "Nein – wer flieht, will nichts verdecken",
+        "Ja – bedingter Tötungsvorsatz kann genügen"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-739"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.887Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-739",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – für den Tod genügt nach der Rspr. bedingter Vorsatz",
+      "text": "Die Absicht bezieht sich auf das Verdecken der Vortat, nicht auf den Tod. Nach dem BGH genügt deshalb bedingter Tötungsvorsatz. Anders liegt es, wenn der Täter meint, die Verdeckung gelinge nur durch den Tod des Opfers – dann will er ihn. A will hier entkommen; Ps Tod nimmt er nur in Kauf.",
+      "norm": "§ 211 Abs. 2 StGB",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "Themenpool: strafbt-739"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.887Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – Verdeckungsabsicht verlangt direkten Tötungsvorsatz",
+        "Nein – wer flieht, will nichts verdecken",
+        "Ja – bedingter Tötungsvorsatz kann genügen"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-737",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 212 StGB: Gefährliches Handeln legt Tötungsvorsatz nahe – mehr nicht",
+      "text": "Für § 212 StGB genügt bedingter Vorsatz: Der Täter erkennt den Tod als möglich und nimmt ihn billigend in Kauf. Bei äußerst gefährlichen Gewalthandlungen liegt das nahe. Der BGH verlangt aber eine Gesamtschau aller objektiven und subjektiven Umstände, etwa Tatsituation, Motiv und Verfassung des Täters.",
+      "norm": "§ 212 Abs. 1 StGB · § 15 StGB",
+      "quellen": [
+        "§ 212 StGB",
+        "§ 15 StGB",
+        "Themenpool: strafbt-737"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.887Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-297",
+      "ueberzeile": "Merksatz Strafrecht AT",
+      "titel": "Verbotsirrtum: Verlässlicher Rechtsrat kann entlasten",
+      "text": "Unvermeidbar ist der Irrtum, wenn der Täter das Unrecht trotz Gewissensanspannung und Erkundigung nicht erkennen konnte. Rat einer verlässlichen, sachkundigen Stelle kann genügen – ein Gefälligkeitsrat nicht.",
+      "norm": "§ 17 StGB",
+      "quellen": [
+        "§ 17 StGB",
+        "Themenpool: strafat-297"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.887Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-869",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Notwendige Verteidigung: Der Verteidiger muss dabei sein",
+      "text": "In den Fällen des § 140 StPO muss ein Verteidiger mitwirken – notfalls wird ein Pflichtverteidiger bestellt (§ 141 StPO), auch wenn der Beschuldigte keinen will. Fehlt der Verteidiger in einem wesentlichen Teil der Hauptverhandlung, ist das ein absoluter Revisionsgrund (§ 338 Nr. 5 StPO).",
+      "norm": "§ 140 StPO · § 338 Nr. 5 StPO",
+      "quellen": [
+        "§ 140 StPO",
+        "§ 141 StPO",
+        "§ 338 Nr. 5 StPO",
+        "Themenpool: anklage-869"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.887Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-858",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Konkreter Anklagesatz: schildern, nicht beweisen",
+      "falsch": "Im konkreten Anklagesatz wird dargelegt, warum der Angeschuldigte überführt ist – mit Zeugenaussagen und Indizien.",
+      "richtigText": "Der konkrete Anklagesatz schildert nur die Tat: Zeit, Ort und die Tatsachen, die die gesetzlichen Merkmale ausfüllen (§ 200 Abs. 1 S. 1 StPO). Die Beweiswürdigung gehört ins wesentliche Ergebnis der Ermittlungen (§ 200 Abs. 2 S. 1 StPO); die Beweismittel werden gesondert angegeben.",
+      "quellen": [
+        "§ 200 StPO",
+        "Themenpool: anklage-858"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:17:45.887Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

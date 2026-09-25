@@ -1,0 +1,882 @@
+{
+  "datum": "2027-03-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "bgbat-425",
+        "themaTitel": "Minderjährigenrecht: Einwilligung, Genehmigung, Taschengeld",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "strafat-059",
+        "themaTitel": "Was ist ein untauglicher Versuch, was ein Wahndelikt?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-617",
+        "themaTitel": "Wissenschaftsfreiheit",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "schuld-010"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "schuld-010"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:12",
+        "art": "norm",
+        "themaId": "strafbt-752"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "zahl",
+        "themaId": "revision-876"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:58",
+        "art": "streitstand",
+        "themaId": "assessoroer-853"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "merksatz",
+        "themaId": "staat-602"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "bgbat-425",
+      "poolTitel": "Minderjährigenrecht: Einwilligung, Genehmigung, Taschengeld",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 107, 108, 110 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2027-02-14"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "strafat-059",
+      "poolTitel": "Was ist ein untauglicher Versuch, was ein Wahndelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2027-01-05"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-617",
+      "poolTitel": "Wissenschaftsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 5 III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-21",
+        "2027-03-06"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-010",
+      "poolTitel": "Wann liegt Annahmeverzug vor?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 293 BGB",
+        "§ 294 BGB",
+        "§ 295 BGB",
+        "§ 296 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2026-09-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-010",
+      "poolTitel": "Wann liegt Annahmeverzug vor?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 293 BGB",
+        "§ 294 BGB",
+        "§ 295 BGB",
+        "§ 296 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2026-09-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-752",
+      "poolTitel": "Räuberischer Diebstahl",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 252 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-10-14",
+        "2026-12-18"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "revision-876",
+      "poolTitel": "Was verlangt § 344 Abs. 2 Satz 2 StPO?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 344 Abs. 2 Satz 2 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-15",
+        "2027-01-20"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "assessoroer-853",
+      "poolTitel": "Wie schreibt man eine Klageschrift im Verwaltungsprozess?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 81 VwGO",
+        "§ 82 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-30",
+        "2026-11-03",
+        "2027-01-04"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "staat-602",
+      "poolTitel": "Konstruktives Misstrauensvotum und Vertrauensfrage",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 67, 68 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2027-01-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-425",
+      "slug": "2027-03-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eltern schenken vermietete Wohnung: Wer muss mitwirken?",
+          "titelZeilen": [
+            "Eltern schenken",
+            "vermietete Wohnung:",
+            "Wer muss mitwirken?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Gesamt- oder Einzelbetrachtung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Die Eltern schenken ihrer 15-jährigen Tochter T eine vermietete Eigentumswohnung. Die Schenkung bringt T nur Vorteile. Die Übereignung nicht: Mit dem Eigentum tritt T in den Mietvertrag ein (§ 566 BGB). Reicht § 107 BGB – oder braucht T einen Ergänzungspfleger?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wie bewertet man den Vorteil?",
+          "links": {
+            "titel": "Gesamtbetrachtung",
+            "punkte": [
+              "Frühere Rspr. des BGH: Schenkung und Übereignung zusammen bewerten.",
+              "Ist die Übereignung nachteilig, ist es auch die Schenkung."
+            ]
+          },
+          "rechts": {
+            "titel": "Getrennte Betrachtung",
+            "punkte": [
+              "BGH heute, h.L.: Jedes Geschäft für sich prüfen.",
+              "Schenkung wirksam (§ 107 BGB); Übereignung braucht einen Pfleger."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der Knackpunkt: § 181 BGB",
+          "text": "Die Eltern könnten T nach § 181 BGB a. E. vertreten, wenn sie nur eine Verbindlichkeit erfüllen. Die getrennte Betrachtung reduziert diese Ausnahme teleologisch: Ist das Erfüllungsgeschäft rechtlich nachteilig, bleibt es beim Vertretungsverbot (§ 1629 Abs. 2 S. 1 BGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme",
+          "punkte": [
+            "Beide Wege landen beim Ergänzungspfleger für die Auflassung.",
+            "Die getrennte Betrachtung wahrt das Trennungs- und Abstraktionsprinzip.",
+            "Klausur: Streit kurz darstellen, Ergebnis über die Übereignung begründen."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schenkung und Übereignung getrennt auf den rechtlichen Vorteil prüfen. Nachteilige Erfüllung sperrt die Eltern trotz § 181 BGB a. E."
+        },
+        {
+          "art": "cta",
+          "titel": "Minderjährigenschenkung in drei Schritten",
+          "punkte": [
+            "Schenkung: lediglich vorteilhaft?",
+            "Übereignung: Nachteil wie § 566 BGB?",
+            "Vertretung: Eltern oder Pfleger?"
+          ],
+          "icons": [
+            "vertrag",
+            "haus",
+            "familie"
+          ]
+        }
+      ],
+      "caption": "Eltern schenken dem Kind eine vermietete Wohnung – wer muss mitwirken? Die Schenkung ist lediglich rechtlich vorteilhaft, die Übereignung wegen § 566 BGB nicht. Früher bewertete der BGH beides zusammen, heute prüft er getrennt und reduziert § 181 BGB a. E. teleologisch. Ergebnis beider Wege: Für die Übereignung braucht es einen Ergänzungspfleger. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#107bgb",
+        "#minderjährigenrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 107 BGB: Schenkung einer vermieteten Wohnung",
+      "coverText": "Gesamt- oder Einzelbetrachtung",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Ein Geschenk kann vorteilhaft sein, obwohl das, was man damit übernimmt, Pflichten mitbringt.",
+        "handlung": "{A} happily accepts a small house key from {B}, but a tenant's heavy backpack is strapped to the key ring and pulls her arm down.",
+        "hinweisRegie": "Place the note in the free space beside the heavy backpack on the key ring, slightly tilted toward it, so it marks the hidden burden without covering {A}'s hand or face.",
+        "alternative": "{B} hands over a gift box while {A} discovers a second, sealed box of obligations tied underneath it."
+      },
+      "bildSzene": "house key with heavy backpack attached",
+      "bildSzeneAlt": "gift box with obligations tied underneath",
+      "quellen": [
+        "§ 107 BGB",
+        "§ 181 BGB",
+        "§ 566 BGB",
+        "§ 1629 Abs. 2 S. 1 BGB",
+        "Themenpool: bgbat-425"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.516Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-059",
+      "slug": "2027-03-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Auf eine Leiche eingestochen – versuchter Totschlag",
+          "titelZeilen": [
+            "Auf eine Leiche",
+            "eingestochen –",
+            "versuchter Totschlag"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Tatsache oder Recht?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A will O töten. Er schleicht nachts ins Schlafzimmer und sticht auf den reglos im Bett liegenden O ein. O war schon eine Stunde vorher an einem Herzinfarkt gestorben. Später wischt A seine Fingerabdrücke vom Messer – und hält das für strafbare Strafvereitelung."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Irrtümer, zwei Richtungen",
+          "links": {
+            "titel": "Untauglicher Versuch",
+            "punkte": [
+              "Irrtum über Tatsachen zulasten des Täters.",
+              "A stellt sich einen lebenden Menschen vor.",
+              "Strafbar (§§ 22, 23 Abs. 1 StGB)."
+            ]
+          },
+          "rechts": {
+            "titel": "Wahndelikt",
+            "punkte": [
+              "Irrtum über das Recht zulasten des Täters.",
+              "A hält Straflose für strafbar.",
+              "Straflos – es fehlt eine Strafnorm."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Versuchter Totschlag",
+              "text": "Nicht vollendet, Versuch strafbar (Verbrechen). Tatentschluss: Tötung eines Lebenden. Unmittelbares Ansetzen: Zustechen."
+            },
+            {
+              "titel": "Untauglichkeit schadet nicht",
+              "text": "Das untaugliche Objekt ändert nichts: § 23 Abs. 3 StGB setzt Strafbarkeit voraus, bei grobem Unverstand Milderung oder Absehen."
+            },
+            {
+              "titel": "Spuren beseitigen",
+              "text": "§ 258 StGB erfasst nur die Vereitelung zugunsten eines anderen. Selbstbegünstigung ist straflos – A irrt über das Recht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "A ist wegen versuchten Totschlags strafbar (§§ 212, 22, 23 Abs. 1 StGB); Mordmerkmale wären gesondert zu prüfen. Das Wegwischen der Spuren ist ein strafloses Wahndelikt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tatsachen falsch vorgestellt: untauglicher Versuch, strafbar. Recht falsch vorgestellt: Wahndelikt, straflos."
+        },
+        {
+          "art": "cta",
+          "titel": "Umgekehrter Irrtum in zwei Fragen",
+          "punkte": [
+            "Worüber irrt der Täter: Tatsache oder Recht?",
+            "Gibt es die vorgestellte Strafnorm überhaupt?"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Wer auf eine Leiche einsticht, kann wegen versuchten Totschlags strafbar sein. Stellt sich der Täter Tatsachen vor, die den Tatbestand erfüllen würden, liegt ein untauglicher Versuch vor (§§ 22, 23 Abs. 1 StGB). Hält er dagegen erlaubtes Verhalten für verboten, etwa das Beseitigen eigener Spuren, ist das ein strafloses Wahndelikt. Speichern für die nächste Versuchsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#versuch",
+        "#22stgb",
+        "#wahndelikt",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Untauglicher Versuch oder Wahndelikt?",
+      "coverText": "Tatsache oder Recht?",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer sich die Tat vorstellt, ist strafbar; wer sich nur ein Verbot vorstellt, nicht.",
+        "handlung": "{A} aims at a dummy lying in a bed that she believes is a living target, while {B} lifts the blanket and reveals the lifeless dummy with a raised eyebrow.",
+        "hinweisRegie": "Place the note in the free space above the lifted blanket, slightly tilted toward the dummy, so it marks the mistaken belief without covering {A}'s aiming arm or {B}'s face.",
+        "alternative": "{B} holds two magnifying lenses, one over a footprint and one over an empty rule board, while {A} points to the footprint."
+      },
+      "bildSzene": "lifted blanket reveals lifeless dummy",
+      "bildSzeneAlt": "two lenses: footprint versus empty board",
+      "quellen": [
+        "§§ 22, 23 StGB",
+        "§ 212 StGB",
+        "§ 258 StGB",
+        "Themenpool: strafat-059"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.535Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-617",
+      "slug": "2027-03-09-b3",
+      "titelZeilen": [
+        "Die Uni ist Staat –",
+        "und hat trotzdem",
+        "ein Grundrecht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Die Uni ist Staat – und hat trotzdem ein Grundrecht",
+          "unter": "Wissenschaftsfreiheit · Art. 5 Abs. 3 GG",
+          "text": "Hochschulen und Fakultäten können sich auf Art. 5 Abs. 3 GG berufen.",
+          "norm": "Art. 5 Abs. 3 GG · Art. 19 Abs. 3 GG",
+          "icon": "schule",
+          "sprecher": "Die Uni ist Staat und hat trotzdem ein Grundrecht. Eigentlich schließt Art. 19 Absatz 3 das aus. Bei der Wissenschaftsfreiheit gilt eine Ausnahme.",
+          "marken": [
+            "Ausnahme"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Sachlicher Schutzbereich",
+          "text": "Forschung und Lehre: ernsthafter, planmäßiger Versuch zur Ermittlung der Wahrheit.",
+          "norm": "Art. 5 Abs. 3 S. 1 GG",
+          "sprecher": "Schritt eins: der sachliche Schutzbereich. Geschützt sind Forschung und Lehre, also jede Tätigkeit, die nach Inhalt und Form als ernsthafter, planmäßiger Versuch zur Ermittlung der Wahrheit gilt.",
+          "marken": [
+            "Forschung + Lehre"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Persönlicher Schutzbereich",
+          "text": "Jeder wissenschaftlich Tätige – und ausnahmsweise Hochschulen und Fakultäten.",
+          "norm": "Art. 19 Abs. 3 GG",
+          "sprecher": "Schritt zwei: wer ist geschützt? Jeder, der wissenschaftlich tätig ist. Und hier kommt die Ausnahme: Juristische Personen des öffentlichen Rechts sind grundsätzlich nicht grundrechtsberechtigt. Hochschulen und Fakultäten aber schon, weil sie gerade der Wissenschaft dienen.",
+          "marken": [
+            "Hochschule geschützt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Eingriff",
+          "text": "Jede staatliche Beeinträchtigung wissenschaftlicher Tätigkeit.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Eingriff. Jede staatliche Maßnahme, die wissenschaftliche Tätigkeit erschwert, etwa ein Forschungsverbot oder eine Vorgabe für Lehrinhalte.",
+          "marken": [
+            "Verbot, Vorgabe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Vorbehaltlos, nicht schrankenlos",
+          "text": "Nur kollidierendes Verfassungsrecht rechtfertigt – auf gesetzlicher Grundlage.",
+          "norm": "Art. 20a GG · Art. 2 Abs. 2 GG",
+          "sprecher": "Schritt vier: Rechtfertigung. Art. 5 Absatz 3 hat keinen Gesetzesvorbehalt. Eingriffe rechtfertigt nur kollidierendes Verfassungsrecht, etwa Leben und Gesundheit oder der Tierschutz aus Art. 20a GG, und zwar auf gesetzlicher Grundlage.",
+          "marken": [
+            "verfassungsimmanent"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Uni und Fakultät geschützt, Schranken nur aus der Verfassung selbst.",
+          "norm": "Art. 5 Abs. 3 GG",
+          "sprecher": "Merke: Hochschulen und Fakultäten sind trotz Art. 19 Absatz 3 geschützt. Und Schranken gibt es nur aus der Verfassung selbst.",
+          "marken": [
+            "Art. 19 III-Ausnahme"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Hochschulfall mitdenken",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Die gleiche Ausnahme kennst du übrigens von Rundfunkanstalten.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Uni ist Staat – und hat trotzdem ein Grundrecht. Juristische Personen des öffentlichen Rechts sind nach Art. 19 Abs. 3 GG grundsätzlich nicht grundrechtsberechtigt; Hochschulen und Fakultäten können sich aber auf die Wissenschaftsfreiheit berufen. Art. 5 Abs. 3 GG ist vorbehaltlos gewährleistet: Eingriffe rechtfertigt nur kollidierendes Verfassungsrecht auf gesetzlicher Grundlage. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#wissenschaftsfreiheit",
+        "#art5gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wissenschaftsfreiheit: auch für die Uni",
+      "coverText": "Ausnahme von Art. 19 Abs. 3 GG",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Obwohl die Hochschule Teil des Staates ist, darf sie sich auf die Wissenschaftsfreiheit berufen.",
+        "handlung": "{A}, wearing a small official badge, holds up a protective umbrella over a research table, while {B} curiously points at the badge and then at the umbrella.",
+        "hinweisRegie": "Place the note in the free space under the umbrella next to the research table, slightly tilted, so it links the official badge with the protection without covering faces or the table.",
+        "alternative": "{B} opens a gate marked only by a glowing lab flask, and {A} in an official coat is let through while others with official coats wait outside."
+      },
+      "bildSzene": "official holds umbrella over research table",
+      "bildSzeneAlt": "official coat passes flask-marked gate",
+      "quellen": [
+        "Art. 5 Abs. 3 GG",
+        "Art. 19 Abs. 3 GG",
+        "Art. 20a GG",
+        "Art. 2 Abs. 2 GG",
+        "Themenpool: grundr-617"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-von-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.537Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-010",
+      "ueberzeile": "Prüfungsfrage Schuldrecht",
+      "titel": "K erklärt, er werde die Ware nicht abnehmen. Muss V sie tatsächlich anbieten, damit K in Annahmeverzug gerät?",
+      "optionen": [
+        "Ja – ohne tatsächliches Angebot nie Annahmeverzug",
+        "Nein – Annahmeverzug tritt erst nach einer Mahnung des V ein",
+        "Nein – ein wörtliches Angebot genügt (§ 295 BGB)"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 293 BGB",
+        "§ 294 BGB",
+        "§ 295 BGB",
+        "§ 296 BGB",
+        "§ 297 BGB",
+        "Themenpool: schuld-010"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.537Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-010",
+      "ueberzeile": "Auflösung",
+      "titel": "Ein wörtliches Angebot reicht, wenn K die Annahme schon verweigert hat",
+      "text": "Grundsatz: tatsächliches Angebot (§ 294 BGB). Hat der Gläubiger erklärt, er werde nicht annehmen, genügt ein wörtliches Angebot (§ 295 S. 1 BGB). Ist für seine Mitwirkung eine Zeit nach dem Kalender bestimmt, braucht es gar keins (§ 296 BGB). Eine Mahnung ist kein Merkmal, Verschulden des Gläubigers auch nicht. V muss aber leisten können (§ 297 BGB).",
+      "norm": "§§ 293–297 BGB",
+      "quellen": [
+        "§ 293 BGB",
+        "§ 294 BGB",
+        "§ 295 BGB",
+        "§ 296 BGB",
+        "§ 297 BGB",
+        "Themenpool: schuld-010"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.537Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – ohne tatsächliches Angebot nie Annahmeverzug",
+        "Nein – Annahmeverzug tritt erst nach einer Mahnung des V ein",
+        "Nein – ein wörtliches Angebot genügt (§ 295 BGB)"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-752",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 252 StGB: „Gleich einem Räuber“ öffnet auch §§ 250, 251 StGB",
+      "text": "Voraussetzungen: vollendeter, aber noch nicht beendeter Diebstahl, auf frischer Tat betroffen, Gewalt gegen eine Person oder Drohung mit gegenwärtiger Gefahr für Leib oder Leben, Absicht, sich im Besitz der Beute zu erhalten. Rechtsfolge: Strafe wie beim Raub – deshalb gelten auch die Qualifikationen, etwa §§ 252, 250 Abs. 1 Nr. 1a StGB.",
+      "norm": "§ 252 StGB",
+      "quellen": [
+        "§ 252 StGB",
+        "§ 249 StGB",
+        "§ 250 StGB",
+        "§ 251 StGB",
+        "Themenpool: strafbt-752"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.537Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-876",
+      "ueberzeile": "3 Punkte Revision",
+      "titel": "§ 344 Abs. 2 S. 2 StPO: Woran Verfahrensrügen scheitern",
+      "text": "Das Revisionsgericht liest nur die Begründung – was dort fehlt, gibt es für die Rüge nicht.",
+      "punkte": [
+        "Tatsachen bestimmt behaupten – nicht nur vermuten",
+        "Inhalte selbst mitteilen – keine Bezugnahme auf Akten oder Protokoll",
+        "Negativtatsachen vortragen, die den Fehler sonst ausräumen könnten"
+      ],
+      "quellen": [
+        "§ 344 Abs. 2 S. 2 StPO",
+        "Themenpool: revision-876"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.537Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-853",
+      "ueberzeile": "Streitstand 2. Examen ÖR",
+      "titel": "Falschen Beklagten benannt: Ist die Klage unzulässig oder unbegründet?",
+      "norm": "§ 78 VwGO · § 82 VwGO",
+      "optionen": [
+        "Eine Ansicht: § 78 VwGO regelt die passive Prozessführungsbefugnis – die Klage ist unzulässig.",
+        "Andere Ansicht: § 78 VwGO betrifft die Passivlegitimation – die Klage ist unbegründet."
+      ],
+      "text": "Für die Klageschrift (§ 82 Abs. 1 VwGO) zählt vor allem: Beklagten richtig bezeichnen – den Rechtsträger oder, wo das Landesrecht es vorsieht, die Behörde. Nach § 78 Abs. 1 Nr. 1 Hs. 2 VwGO genügt die Angabe der Behörde.",
+      "quellen": [
+        "§ 78 VwGO",
+        "§ 82 VwGO",
+        "Themenpool: assessoroer-853"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.537Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-602",
+      "ueberzeile": "Merksatz Staatsorganisation",
+      "titel": "Vertrauensfrage, um sie zu verlieren: zulässig – aber nicht beliebig",
+      "text": "Das BVerfG billigt sie, wenn der Kanzler nicht mehr auf eine stetige Mehrheit bauen kann – mit Einschätzungsspielraum. Ein Selbstauflösungsrecht hat der Bundestag nicht. Über die Auflösung entscheidet der Bundespräsident: Er kann, muss aber nicht.",
+      "norm": "Art. 68 Abs. 1 GG",
+      "quellen": [
+        "Art. 67 GG",
+        "Art. 68 GG",
+        "Themenpool: staat-602"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:11:32.537Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

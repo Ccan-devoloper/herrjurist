@@ -1,0 +1,850 @@
+{
+  "datum": "2026-10-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "vwgo-408",
+        "themaTitel": "Wie prüft man den Antrag nach § 80 Abs. 5 VwGO?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "sachen-228",
+        "themaTitel": "Wie prüft man den Beseitigungs- und Unterlassungsanspruch?",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-858",
+        "themaTitel": "Was leistet der konkrete Anklagesatz?",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "famerb-524"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "famerb-524"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "strafbt-741"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "tipp",
+        "themaId": "schuldbt-190"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:02",
+        "art": "zahl",
+        "themaId": "methodik-908"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "streitstand",
+        "themaId": "bgbat-912"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "vwgo-408",
+      "poolTitel": "Wie prüft man den Antrag nach § 80 Abs. 5 VwGO?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-228",
+      "poolTitel": "Wie prüft man den Beseitigungs- und Unterlassungsanspruch?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1004 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-858",
+      "poolTitel": "Was leistet der konkrete Anklagesatz?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 Abs. 1 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-29"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "famerb-524",
+      "poolTitel": "Pflichtteil und Pflichtteilsergänzung",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 2303 ff., 2325 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "famerb-524",
+      "poolTitel": "Pflichtteil und Pflichtteilsergänzung",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 2303 ff., 2325 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-741",
+      "poolTitel": "Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "schuldbt-190",
+      "poolTitel": "Wer trägt die Beweislast für einen Mangel und wann kehrt sie sich um?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 477 BGB",
+        "§ 363 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-908",
+      "poolTitel": "Aktuelle Rechtsprechung examensgerecht reduzieren",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "bgbat-912",
+      "poolTitel": "Fehlendes Erklärungsbewusstsein: Was lehrt die Trierer Weinversteigerung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 133 BGB",
+        "§ 157 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-408",
+      "slug": "2026-10-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anordnen oder wiederherstellen? § 80 Abs. 5 VwGO",
+          "titelZeilen": [
+            "Anordnen oder",
+            "wiederherstellen?",
+            "§ 80 Abs. 5 VwGO"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Nr. 4 → wiederherstellen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde untersagt A den Betrieb seines Imbisses und ordnet die sofortige Vollziehung an. A legt fristgerecht Widerspruch ein. Was beantragt er beim Verwaltungsgericht – und wie prüft das Gericht?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Anordnen oder wiederherstellen?",
+          "links": {
+            "titel": "Anordnung",
+            "punkte": [
+              "Die Wirkung entfällt kraft Gesetzes (§ 80 II Nr. 1–3).",
+              "Z. B. Abgaben und Kosten, Maßnahmen der Vollzugspolizei."
+            ]
+          },
+          "rechts": {
+            "titel": "Wiederherstellung",
+            "punkte": [
+              "Die Behörde hat die sofortige Vollziehung angeordnet (§ 80 II Nr. 4).",
+              "Die aufschiebende Wirkung bestand und wurde erst beseitigt."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüft das Gericht",
+          "schritte": [
+            {
+              "titel": "Statthaftigkeit",
+              "text": "Hauptsache ist eine Anfechtungsklage, die aufschiebende Wirkung entfällt nach § 80 Abs. 2 VwGO."
+            },
+            {
+              "titel": "Antragsbefugnis, Rechtsschutzbedürfnis",
+              "text": "§ 42 Abs. 2 VwGO analog. Bei Abgaben und Kosten zuerst Antrag an die Behörde (§ 80 Abs. 6 VwGO)."
+            },
+            {
+              "titel": "Formelle Rechtmäßigkeit der Anordnung",
+              "text": "Nur bei Nr. 4: zuständige Behörde und schriftliche, einzelfallbezogene Begründung (§ 80 Abs. 3 S. 1 VwGO)."
+            },
+            {
+              "titel": "Interessenabwägung",
+              "text": "Aussetzungs- gegen Vollzugsinteresse, orientiert an den Erfolgsaussichten in der Hauptsache."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Bei Nr. 4 sofort in die Interessenabwägung springen. Erst kommt die Begründung nach § 80 Abs. 3 S. 1 VwGO: Eine formelhafte Begründung genügt nicht. Und: Ist der Bescheid rechtmäßig, braucht es bei Nr. 4 zusätzlich ein besonderes Interesse an der sofortigen Vollziehung."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nr. 1–3: anordnen. Nr. 4: wiederherstellen – und vor der Abwägung die Begründung nach § 80 Abs. 3 S. 1 VwGO prüfen."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen vor der Abwägung",
+          "punkte": [
+            "Warum entfällt die aufschiebende Wirkung?",
+            "Anordnen oder wiederherstellen?",
+            "Bei Nr. 4: Begründung ausreichend?"
+          ],
+          "icons": [
+            "lupe",
+            "paragraf",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Anordnen oder wiederherstellen? Im Antrag nach § 80 Abs. 5 VwGO kommt es darauf an, warum die aufschiebende Wirkung entfällt. Kraft Gesetzes (§ 80 Abs. 2 S. 1 Nr. 1–3): Das Gericht ordnet sie an. Nach behördlicher Anordnung der sofortigen Vollziehung (Nr. 4): Es stellt sie wieder her – und prüft vorher, ob die Anordnung nach § 80 Abs. 3 S. 1 VwGO schriftlich und einzelfallbezogen begründet ist. Speichern für den nächsten Eilantrag.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsprozessrecht",
+        "#vwgo",
+        "#80vwgo",
+        "#eilrechtsschutz",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 80 Abs. 5 VwGO: anordnen oder wiederherstellen",
+      "coverText": "Nr. 4 → wiederherstellen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Ob das Gericht die aufschiebende Wirkung anordnet oder wiederherstellt, hängt davon ab, wer sie beseitigt hat.",
+        "handlung": "{A} hovers beside a pause switch that was flipped off by a small official stamp, while {B} curiously reaches to flip it back on and looks up to check who switched it off.",
+        "hinweisRegie": "Place the note in the open space next to the switch and the stamp, slightly tilted toward the stamp, so the source of the switch-off is linked to the note without covering {B}'s hand.",
+        "alternative": "{B} compares two paused clocks, one stopped by a rulebook and one stopped by a stamp, while {A} holds the key for restarting the second."
+      },
+      "bildSzene": "alien flips back switch turned off by stamp",
+      "bildSzeneAlt": "two paused clocks, rulebook versus stamp",
+      "quellen": [
+        "§ 80 Abs. 2, 3, 5, 6 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "Themenpool: vwgo-408"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "entscheidungsfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.477Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-228",
+      "slug": "2026-10-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 1004 BGB: vier Schritte – der dritte wird oft übersehen",
+          "titelZeilen": [
+            "§ 1004 BGB:",
+            "vier Schritte –",
+            "der dritte wird",
+            "oft übersehen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Duldungspflicht nicht vergessen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 1004 Abs. 1 BGB schützt das Eigentum gegen Beeinträchtigungen, die nicht in der Entziehung oder Vorenthaltung des Besitzes liegen – dafür gilt § 985 BGB. Verschulden ist nicht erforderlich."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Eigentumsbeeinträchtigung",
+              "text": "Jede Einwirkung, die dem Inhalt des Eigentums widerspricht – etwa Immissionen, Betreten, Ablagerungen. Nicht: bloßer Besitzentzug."
+            },
+            {
+              "titel": "2. Anspruchsgegner ist Störer",
+              "text": "Handlungsstörer (durch eigenes Tun oder Unterlassen) oder Zustandsstörer (Störung geht von seiner Sache aus und ist ihm zurechenbar)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Keine Duldungspflicht",
+              "text": "§ 1004 Abs. 2 BGB: etwa aus Vertrag, § 906 BGB, § 904 BGB oder öffentlichem Recht. Hier wird der Anspruch oft entschieden."
+            },
+            {
+              "titel": "4. Rechtsfolge",
+              "text": "Beseitigung einer fortdauernden Beeinträchtigung; Unterlassung bei Wiederholungs- oder Erstbegehungsgefahr (§ 1004 Abs. 1 S. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Beseitigung ist kein Schadensersatz",
+          "text": "Beseitigung heißt, die fortwirkende Störung abzustellen – nicht, den früheren Zustand wie nach § 249 BGB umfassend wiederherzustellen. Wo genau die Grenze verläuft, ist umstritten. In der Klausur das Problem offen benennen und am Einzelfall begründen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beeinträchtigung, Störer, keine Duldungspflicht – dann Beseitigung oder Unterlassung. Auf Verschulden kommt es nicht an."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 1004 BGB in vier Zügen",
+          "punkte": [
+            "Beeinträchtigung – nicht Besitzentzug",
+            "Handlungs- oder Zustandsstörer",
+            "Duldungspflicht nach Abs. 2 ausschließen",
+            "Beseitigung oder Unterlassung"
+          ],
+          "icons": [
+            "haus",
+            "person",
+            "stopp",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "§ 1004 BGB in vier Schritten: Eigentumsbeeinträchtigung, Störer, keine Duldungspflicht, Rechtsfolge. Der dritte Schritt wird oft übersehen – dabei entscheidet § 1004 Abs. 2 BGB mit § 906 BGB, Verträgen oder öffentlichem Recht viele Nachbarfälle. Und: Beseitigung ist kein Schadensersatz, Verschulden braucht es nicht. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#1004bgb",
+        "#nachbarrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 1004 BGB: das Prüfschema",
+      "coverText": "Duldungspflicht nicht vergessen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Wer das Eigentum stört, muss die Störung abstellen – außer der Eigentümer muss sie dulden.",
+        "handlung": "{A} blocks a stream of rubble tumbling from the neighbour's plot onto his own crystal field, while {B} nervously checks a small gate sign that might allow the rubble to pass.",
+        "hinweisRegie": "Place the note in the free area next to the small gate sign, slightly tilted, so it points to the possible duty to tolerate without covering {A}'s blocking arms.",
+        "alternative": "{B} tries to turn down a noisy machine next to the fence while {A} holds up an old agreement that might oblige him to accept the noise."
+      },
+      "bildSzene": "miner blocks rubble from neighbour's plot",
+      "bildSzeneAlt": "noisy machine at fence, old agreement",
+      "quellen": [
+        "§ 1004 BGB",
+        "§ 985 BGB",
+        "§ 906 BGB",
+        "§ 904 BGB",
+        "§ 249 BGB",
+        "Themenpool: sachen-228"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefpunkte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.477Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-858",
+      "slug": "2026-10-12-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Anklagesatz ohne klare Tatgrenze – Anklage unwirksam",
+          "unter": "Anklageschrift · § 200 Abs. 1 StPO",
+          "text": "Umgrenzung und Information – nur Umgrenzungsmängel machen die Anklage unwirksam.",
+          "norm": "§ 200 Abs. 1 StPO",
+          "icon": "dokument",
+          "sprecher": "Ohne klare Tatgrenze ist die Anklage unwirksam. Der Anklagesatz hat zwei Funktionen, und nur eine Lücke wirkt so hart. Paragraf 200 StPO verlangt: die Tat mit Zeit und Ort, ihre gesetzlichen Merkmale und die anzuwendenden Vorschriften.",
+          "marken": [
+            "Tatgrenze",
+            "zwei Funktionen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Umgrenzungsfunktion",
+          "text": "Welche Tat im prozessualen Sinn wird angeklagt?",
+          "norm": "§ 200 Abs. 1 StPO · § 264 StPO",
+          "sprecher": "Funktion eins: Umgrenzung. Der Anklagesatz muss die Tat so beschreiben, dass sie von anderen Taten unterscheidbar ist. Er legt fest, worüber das Gericht urteilen darf – und damit auch, wie weit später der Strafklageverbrauch reicht.",
+          "marken": [
+            "Welche Tat?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Informationsfunktion",
+          "text": "Der Angeschuldigte soll wissen, wogegen er sich verteidigt.",
+          "norm": "§ 200 Abs. 1 StPO",
+          "sprecher": "Funktion zwei: Information. Der Angeschuldigte soll erkennen, welche Vorwürfe ihm gemacht werden, damit er seine Verteidigung darauf einstellen kann.",
+          "marken": [
+            "Was genau?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Jedes Merkmal mit Tatsachen füllen",
+          "text": "Objektive und subjektive Tatsachen – ohne Beweiswürdigung.",
+          "norm": null,
+          "sprecher": "Für den konkreten Anklagesatz heißt das: Jedes gesetzliche Merkmal bekommt Tatsachen, auch der Vorsatz. Beweismittel, Beweiswürdigung und rechtliche Ausführungen gehören nicht hinein.",
+          "marken": [
+            "auch den Vorsatz"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Fehlerfolgen",
+          "text": "Umgrenzungsmangel: Verfahrenshindernis. Informationsmangel: Anklage bleibt wirksam.",
+          "norm": null,
+          "sprecher": "Und jetzt die Folgen: Fehlt die Umgrenzung, ist die Anklage unwirksam, es besteht ein Verfahrenshindernis. Mängel der Information lassen die Anklage wirksam; sie können in der Hauptverhandlung etwa durch Hinweise ausgeglichen werden.",
+          "marken": [
+            "unwirksam vs. heilbar"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Erst umgrenzen, dann informieren – jedes Merkmal mit einer Tatsache.",
+          "norm": "§ 200 Abs. 1 StPO",
+          "sprecher": "Merke: erst umgrenzen, dann informieren. Und zu jedem gesetzlichen Merkmal mindestens eine konkrete Tatsache aus dem Sachverhalt.",
+          "marken": [
+            "Merkmal = Tatsache"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Anklagesatz abhaken",
+          "text": "Speichern für die nächste Anklageklausur.",
+          "sprecher": "Speicher dir das für die nächste Anklageklausur. Und lies deinen konkreten Anklagesatz am Ende einmal gegen die gesetzlichen Merkmale.",
+          "marken": [
+            "gegenlesen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ohne klare Tatgrenze ist die Anklage unwirksam. Denn der konkrete Anklagesatz hat zwei Funktionen: Er umgrenzt die Tat im prozessualen Sinn und informiert den Angeschuldigten über den Vorwurf (§ 200 Abs. 1 StPO). Die Fehlerfolgen unterscheiden sich: Fehlt die Umgrenzung, ist die Anklage unwirksam – ein Verfahrenshindernis. Mängel der Information lassen sie wirksam. Deshalb: jedes gesetzliche Merkmal mit Tatsachen füllen, auch den Vorsatz.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#200stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Konkreter Anklagesatz: zwei Funktionen",
+      "titelZeilen": [
+        "Anklagesatz ohne",
+        "klare Tatgrenze –",
+        "Anklage unwirksam"
+      ],
+      "coverText": "Umgrenzung vor Information",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Der Anklagesatz zieht eine klare Grenze um die Tat und sagt dem Angeschuldigten zugleich, worum es geht.",
+        "handlung": "{A} draws a firm rope boundary around a single marked spot on the ground, while {B} hovers nearby and hands a sealed envelope to a waiting figure standing outside the rope.",
+        "hinweisRegie": "Place the note in the free space just inside the rope boundary, slightly tilted toward the marked spot, so it reads as the first and decisive function without covering the envelope.",
+        "alternative": "{B} holds up a magnifying lens over one footprint among many while {A} pins a small flag next to it to set it apart."
+      },
+      "bildSzene": "rope boundary around marked spot, envelope",
+      "bildSzeneAlt": "one footprint marked with small flag",
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 264 StPO",
+        "Themenpool: anklage-858"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.483Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-524",
+      "ueberzeile": "Prüfungsfrage Erbrecht",
+      "titel": "Vater enterbt den Sohn und hat 18 Monate vor seinem Tod sein Haus verschenkt. Was kann der Sohn verlangen?",
+      "optionen": [
+        "Pflichtteil plus Ergänzung – das Haus zählt zu 9/10 mit",
+        "Nur den Pflichtteil – Schenkungen zu Lebzeiten zählen nie mit",
+        "Die Herausgabe des Hauses an sich selbst"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 2303 BGB",
+        "§ 2325 BGB",
+        "§ 2329 BGB",
+        "Themenpool: famerb-524"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.483Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-524",
+      "ueberzeile": "Auflösung",
+      "titel": "Pflichtteil plus Ergänzung – das Haus zählt zu 9/10",
+      "text": "Enterbt heißt nicht leer ausgehen: Der Sohn hat den Pflichtteil, die Hälfte seines gesetzlichen Erbteils (§ 2303 Abs. 1 BGB). Die Schenkung wird nach § 2325 BGB dem Nachlass hinzugerechnet – im ersten Jahr vor dem Erbfall voll, danach je Jahr ein Zehntel weniger (§ 2325 Abs. 3). Schuldner ist der Erbe, unter den Voraussetzungen des § 2329 BGB der Beschenkte.",
+      "norm": "§ 2303 Abs. 1 BGB · § 2325 BGB · § 2329 BGB",
+      "quellen": [
+        "§ 2303 BGB",
+        "§ 2325 BGB",
+        "§ 2329 BGB",
+        "Themenpool: famerb-524"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.483Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Pflichtteil plus Ergänzung – das Haus zählt zu 9/10 mit",
+        "Nur den Pflichtteil – Schenkungen zu Lebzeiten zählen nie mit",
+        "Die Herausgabe des Hauses an sich selbst"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-741",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 223 StGB: Misshandlung und Gesundheitsschädigung sind zwei Wege",
+      "text": "Körperliche Misshandlung: eine üble, unangemessene Behandlung, die das körperliche Wohlbefinden oder die Unversehrtheit mehr als nur unerheblich beeinträchtigt. Gesundheitsschädigung: Hervorrufen oder Steigern eines vom Normalzustand nachteilig abweichenden krankhaften Zustands. Der Versuch ist strafbar (§ 223 Abs. 2 StGB).",
+      "norm": "§ 223 StGB",
+      "quellen": [
+        "§ 223 StGB",
+        "Themenpool: strafbt-741"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.483Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-190",
+      "ueberzeile": "Klausurtipp Kaufrecht",
+      "titel": "Beweislast beim Mangel: erst § 363, dann § 477 BGB",
+      "text": "Nach Annahme als Erfüllung muss der Käufer beweisen, dass sie schon bei Gefahrübergang mangelhaft war (§ 363 BGB). Beim Verbrauchsgüterkauf hilft § 477 Abs. 1 BGB: Zeigt sich binnen eines Jahres (Tiere: sechs Monate) ein vertragswidriger Zustand, wird vermutet, dass er schon bei Gefahrübergang vorlag – außer das ist mit der Art der Sache oder des Mangels unvereinbar.",
+      "quellen": [
+        "§ 363 BGB",
+        "§ 477 BGB",
+        "Themenpool: schuldbt-190"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.483Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-908",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Neues Urteil gelesen? So machst du daraus eine Karteikarte",
+      "text": "Ziel ist nicht die Urteilszusammenfassung, sondern das, was du in der Klausur brauchst.",
+      "punkte": [
+        "Sachverhalt auf das eine Rechtsproblem kürzen",
+        "Die Streitfrage als Frage formulieren",
+        "Ergebnis und tragendes Argument in einem Satz",
+        "Einordnen: Wo im Schema taucht das Problem auf?"
+      ],
+      "quellen": [
+        "Themenpool: methodik-908"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.483Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-912",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Hand gehoben, nur um zu grüßen: Liegt eine Willenserklärung vor?",
+      "norm": "§§ 119 Abs. 1, 133, 157 BGB",
+      "optionen": [
+        "Rspr./h.M.: Erklärung liegt vor, wenn der Handelnde diese Deutung hätte erkennen und vermeiden können.",
+        "Andere Ansicht: Ohne Erklärungsbewusstsein keine Willenserklärung; nur Vertrauensschaden analog § 122 BGB."
+      ],
+      "text": "Folge der h.M.: Sie schützt den Verkehr und lässt dem Erklärenden die Wahl – gelten lassen oder analog § 119 Abs. 1 BGB anfechten, dann mit § 122 BGB.",
+      "quellen": [
+        "§ 119 Abs. 1 BGB",
+        "§ 121 BGB",
+        "§ 122 BGB",
+        "§§ 133, 157 BGB",
+        "Themenpool: bgbat-912"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.483Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

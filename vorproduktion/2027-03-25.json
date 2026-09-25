@@ -1,0 +1,896 @@
+{
+  "datum": "2027-03-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "anklage-870",
+        "themaTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+        "fach": "anklage",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "assessoroer-845",
+        "themaTitel": "Wann ist eine Beiladung notwendig?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "sachen-030",
+        "themaTitel": "Welche Ausnahmen gibt es zur Sperrwirkung des EBV im Deliktsrecht?",
+        "fach": "sachen",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "stpo-768"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "stpo-768"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "strafat-059"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:24",
+        "art": "streitstand",
+        "themaId": "streit-19"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "merksatz",
+        "themaId": "schuld-015"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "begriff",
+        "themaId": "strafbt-073"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "anklage-870",
+      "poolTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 74 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2027-01-05",
+        "2027-03-08"
+      ]
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "assessoroer-845",
+      "poolTitel": "Wann ist eine Beiladung notwendig?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 65 VwGO",
+        "§ 142 Abs. 1 Satz 2 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-30",
+        "2026-12-30",
+        "2027-03-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "sachen-030",
+      "poolTitel": "Welche Ausnahmen gibt es zur Sperrwirkung des EBV im Deliktsrecht?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 993 Abs. 1 BGB",
+        "§ 992 BGB",
+        "§ 823 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2027-02-05"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-768",
+      "poolTitel": "Vernehmung und verbotene Methoden",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-12-26",
+        "2026-12-26"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-768",
+      "poolTitel": "Vernehmung und verbotene Methoden",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 136a StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-22",
+        "2026-12-26",
+        "2026-12-26"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-059",
+      "poolTitel": "Was ist ein untauglicher Versuch, was ein Wahndelikt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2027-01-05",
+        "2027-03-09"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-19",
+      "poolTitel": "Zueignungsabsicht: Substanz-, Sachwert- oder Vereinigungstheorie?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "schuld-015",
+      "poolTitel": "Was besagt die Lehre vom fehlerhaften Vertrag?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 142 BGB",
+        "§ 611a BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-073",
+      "poolTitel": "Wann ist Raub vollendet und wie verhält er sich zur räuberischen Erpressung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 253 StGB",
+        "§ 255 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-26"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-870",
+      "slug": "2027-03-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "800 € Einkauf, 1.000 € Verkauf – eingezogen werden 1.000 €",
+          "titelZeilen": [
+            "800 € Einkauf,",
+            "1.000 € Verkauf –",
+            "eingezogen werden",
+            "1.000 €"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Bruttoprinzip nach § 73d StGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Grundregel",
+          "text": "Was der Täter durch oder für die Tat erlangt hat, zieht das Gericht ein (§ 73 Abs. 1 StGB) – zwingend, ohne Ermessen. Ist der Gegenstand nicht mehr da, wird ein Geldbetrag in Höhe seines Wertes eingezogen (§ 73c StGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Bruttoprinzip (§ 73d Abs. 1 StGB)",
+          "punkte": [
+            "Maßgeblich ist alles Erlangte, nicht der Gewinn.",
+            "Aufwendungen werden grundsätzlich abgezogen …",
+            "… nicht aber, was für die Begehung oder Vorbereitung der Tat eingesetzt wurde."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Tatertrag oder Tatmittel?",
+          "links": {
+            "titel": "Tatertrag (§ 73)",
+            "punkte": [
+              "Durch oder für die Tat erlangt.",
+              "Einziehung zwingend.",
+              "Nicht mehr da: Wertersatz (§ 73c)."
+            ]
+          },
+          "rechts": {
+            "titel": "Tatmittel, Tatprodukt (§ 74)",
+            "punkte": [
+              "Zur Tat gebraucht oder durch sie hervorgebracht.",
+              "Einziehung im Ermessen.",
+              "Grenze: Verhältnismäßigkeit (§ 74f)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Das Beispiel",
+          "text": "A kauft Kokain für 800 € und verkauft es für 1.000 €. Erlangt hat er 1.000 €. Den Einkaufspreis hat er für die Tat eingesetzt – er wird nicht abgezogen. Ist das Geld nicht mehr greifbar, wird der Wert von 1.000 € eingezogen (§ 73c StGB)."
+        },
+        {
+          "art": "text",
+          "titel": "Für die Anklage",
+          "punkte": [
+            "Einziehung mit Normen und Betrag angeben – die genaue Stelle folgt der Praxis deines Landes.",
+            "Ist der Anspruch des Verletzten erloschen, entfällt die Einziehung insoweit (§ 73e Abs. 1 StGB)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tatertrag: zwingend und brutto. Tatmittel: Ermessen. Was für die Tat eingesetzt wurde, wird nicht abgezogen."
+        },
+        {
+          "art": "cta",
+          "titel": "Einziehung in vier Fragen",
+          "punkte": [
+            "Tatertrag oder Tatmittel?",
+            "Noch vorhanden – sonst § 73c",
+            "Brutto rechnen (§ 73d)",
+            "Verletzter befriedigt (§ 73e)?"
+          ],
+          "icons": [
+            "lupe",
+            "geldbeutel",
+            "rechner",
+            "quittung"
+          ]
+        }
+      ],
+      "caption": "800 € Einkauf, 1.000 € Verkauf – eingezogen werden 1.000 €. Bei der Einziehung von Taterträgen gilt das Bruttoprinzip (§ 73d Abs. 1 StGB): Maßgeblich ist alles Erlangte; was für die Begehung der Tat eingesetzt wurde, wird nicht abgezogen. Die Einziehung des Tatertrags ist zwingend (§ 73 StGB), ist er nicht mehr vorhanden, folgt Wertersatz (§ 73c StGB). Tatmittel und Tatprodukte zieht das Gericht dagegen nach Ermessen ein (§ 74 StGB). Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#einziehung",
+        "#73stgb",
+        "#anklageschrift",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Einziehung: Bruttoprinzip und Wertersatz",
+      "coverText": "Bruttoprinzip nach § 73d StGB",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Eingezogen wird alles, was der Täter aus der Tat erlangt hat – sein Einkaufspreis wird nicht gegengerechnet.",
+        "handlung": "{A} puts a full sack of crystals on a scale, while {B} hovers beside it and firmly pushes away a small counterweight that {A} tries to place on the other side.",
+        "hinweisRegie": "Place the note in the open space above the scale, slightly tilted toward the rejected counterweight, so the refusal to deduct is clear without covering the full sack.",
+        "alternative": "{B} counts coins from a till into a box, while {A} holds up an old purchase receipt that {B} ignores."
+      },
+      "bildSzene": "full sack weighed, counterweight pushed away",
+      "bildSzeneAlt": "coins counted, purchase receipt ignored",
+      "quellen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 73d StGB",
+        "§ 73e StGB",
+        "§ 74 StGB",
+        "§ 74f StGB",
+        "Themenpool: anklage-870"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zahlenfall-widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.514Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-845",
+      "slug": "2027-03-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Interessen berührt heißt noch nicht: notwendig beiladen",
+          "titelZeilen": [
+            "Interessen berührt",
+            "heißt noch nicht:",
+            "notwendig beiladen"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Nur einheitlich? Dann Pflicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Beigeladen wird ein Dritter, dessen rechtliche Interessen durch die Entscheidung berührt werden (§ 65 Abs. 1 VwGO). Er wird Beteiligter (§ 63 Nr. 3 VwGO) und ist an das rechtskräftige Urteil gebunden (§ 121 VwGO)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Einfach oder notwendig?",
+          "links": {
+            "titel": "Einfache (§ 65 I)",
+            "punkte": [
+              "Rechtliche Interessen berührt.",
+              "Ermessen des Gerichts.",
+              "Keine abweichenden Sachanträge (§ 66 S. 2)."
+            ]
+          },
+          "rechts": {
+            "titel": "Notwendige (§ 65 II)",
+            "punkte": [
+              "Entscheidung kann nur einheitlich ergehen.",
+              "Pflicht – kein Ermessen.",
+              "Eigene, abweichende Sachanträge möglich."
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Unterblieben – was nun?",
+          "links": {
+            "titel": "Einfache",
+            "punkte": [
+              "Das Urteil bindet den Dritten nicht (§ 121).",
+              "Nachholung in der Revision ausgeschlossen."
+            ]
+          },
+          "rechts": {
+            "titel": "Notwendige",
+            "punkte": [
+              "Schwerer Verfahrensmangel.",
+              "Nachholung noch in der Revision (§ 142 I 2)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Typische Fälle",
+          "punkte": [
+            "Nachbar klagt gegen die Baugenehmigung: Der Bauherr ist notwendig beizuladen.",
+            "Bauherr klagt auf Genehmigung, Einvernehmen der Gemeinde verweigert: Gemeinde notwendig beizuladen.",
+            "Bauherr klagt, Nachbar betroffen: Ob notwendig, ist umstritten."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Interessen berührt: Das Gericht kann beiladen. Nur einheitlich entscheidbar: Es muss – notfalls noch in der Revision."
+        },
+        {
+          "art": "cta",
+          "titel": "Beiladung in drei Fragen",
+          "punkte": [
+            "Rechtliche Interessen berührt?",
+            "Nur einheitliche Entscheidung möglich?",
+            "Unterblieben: Folgen prüfen"
+          ],
+          "icons": [
+            "person",
+            "waage",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Rechtliche Interessen berührt heißt noch nicht: notwendig beiladen. Einfach beiladen kann das Gericht nach § 65 Abs. 1 VwGO, notwendig beiladen muss es nach § 65 Abs. 2 VwGO, wenn die Entscheidung auch dem Dritten gegenüber nur einheitlich ergehen kann. Der Unterschied zeigt sich bei den Folgen: Nur der notwendig Beigeladene kann abweichende Sachanträge stellen, und nur seine Beiladung lässt sich noch im Revisionsverfahren nachholen (§ 142 Abs. 1 S. 2 VwGO). Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#beiladung",
+        "#65vwgo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beiladung: einfach oder notwendig?",
+      "coverText": "Nur einheitlich? Dann Pflicht",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Wer vom Ausgang nur berührt ist, darf mitreden – wer untrennbar mitbetroffen ist, muss mit an den Tisch.",
+        "handlung": "{A} watches from a doorway as {B} decisively pulls a second chair to a negotiation table because a rope already ties {A}'s wrist to the object on the table.",
+        "hinweisRegie": "Place the note in the free space between the doorway and the table, slightly tilted toward the rope, so the reason for the obligatory invitation is visible without covering {B}'s gesture.",
+        "alternative": "{B} hands out two kinds of tickets, a simple guest pass and a bound seat ticket, while {A} curiously compares them."
+      },
+      "bildSzene": "second chair pulled to table, rope tied",
+      "bildSzeneAlt": "guest pass versus bound seat ticket",
+      "quellen": [
+        "§ 63 VwGO",
+        "§ 65 VwGO",
+        "§ 66 VwGO",
+        "§ 121 VwGO",
+        "§ 142 Abs. 1 S. 2 VwGO",
+        "§ 36 BauGB",
+        "Themenpool: assessoroer-845"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.514Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-030",
+      "slug": "2027-03-25-b3",
+      "titelZeilen": [
+        "EBV-Sperre:",
+        "Drei Wege zurück",
+        "zu § 823 BGB"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "EBV-Sperre: Drei Wege zurück zu § 823 BGB",
+          "unter": "Sachenrecht · §§ 987 ff. BGB",
+          "text": "Grundsatz: Der unrechtmäßige Besitzer haftet nur nach dem EBV.",
+          "norm": "§ 993 Abs. 1 BGB",
+          "icon": "haus",
+          "sprecher": "Das EBV sperrt Paragraf 823 – aber nicht immer. Grundsatz: Der unrechtmäßige Besitzer haftet dem Eigentümer nur nach den Paragrafen 987 folgende. Es gibt aber drei Wege zurück ins Deliktsrecht.",
+          "marken": [
+            "Sperre",
+            "drei Wege"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die Sperre",
+          "text": "Redlicher, unverklagter Besitzer: weder Schadensersatz noch Nutzungen, außer nach dem EBV.",
+          "norm": "§ 993 Abs. 1 BGB",
+          "sprecher": "Zuerst die Sperre. Nach § 993 Absatz 1 am Ende haftet der redliche, unverklagte Besitzer im Übrigen weder auf Schadensersatz noch auf Nutzungen. Das schützt ihn vor dem Deliktsrecht.",
+          "marken": [
+            "§ 993 I a. E."
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Weg 1: § 992 BGB",
+          "text": "Besitz durch verbotene Eigenmacht oder durch eine Straftat verschafft.",
+          "norm": "§ 992 BGB",
+          "sprecher": "Weg eins steht im Gesetz: § 992. Hat sich der Besitzer den Besitz durch verbotene Eigenmacht oder durch eine Straftat verschafft, haftet er nach Deliktsrecht. Die herrschende Meinung verlangt dabei schuldhafte verbotene Eigenmacht.",
+          "marken": [
+            "Dieb haftet voll"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Weg 2: Fremdbesitzerexzess",
+          "text": "Der Fremdbesitzer überschreitet sein vermeintliches Besitzrecht.",
+          "norm": "§ 823 Abs. 1 BGB",
+          "sprecher": "Weg zwei steht nicht im Gesetz: der Fremdbesitzerexzess. Der Mieter aus einem unerkannt nichtigen Vertrag beschädigt die Sache schuldhaft. Bei wirksamem Vertrag haftete er. Ohne Besitzrecht darf er nicht besser stehen. Die herrschende Meinung wendet deshalb § 823 an.",
+          "marken": [
+            "nicht besser stehen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Weg 3: keine Vindikationslage",
+          "text": "Mit Recht zum Besitz gilt das EBV nicht – § 823 bleibt anwendbar.",
+          "norm": "§ 986 BGB",
+          "sprecher": "Weg drei: Es fehlt schon die Vindikationslage. Hat der Besitzer ein Recht zum Besitz, etwa aus einem wirksamen Mietvertrag, gilt das EBV gar nicht. Dann ist § 823 ohne Weiteres anwendbar.",
+          "marken": [
+            "erst Vindikationslage"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Sperre nur bei Vindikationslage – durchbrochen bei § 992 und beim Fremdbesitzerexzess.",
+          "norm": "§§ 992, 993 BGB",
+          "sprecher": "Merke: Das EBV sperrt das Deliktsrecht nur bei einer Vindikationslage. Durchbrochen wird die Sperre bei § 992 und, nach herrschender Meinung, beim Fremdbesitzerexzess.",
+          "marken": [
+            "992 · Exzess"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor § 823: erst die Vindikationslage",
+          "text": "Speichern für die nächste Sachenrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Sachenrechtsklausur. Und prüf vor jedem Delikt gegen einen Besitzer zuerst die Vindikationslage.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Das EBV sperrt § 823 BGB – aber nicht immer. Der redliche, unverklagte Besitzer haftet nach § 993 Abs. 1 a. E. BGB nicht nach Deliktsrecht. Drei Wege zurück: § 992 BGB bei verbotener Eigenmacht oder Straftat, der Fremdbesitzerexzess nach h.M. – und schlicht das Fehlen einer Vindikationslage, weil der Besitzer ein Recht zum Besitz hat. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#ebv",
+        "#823bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "EBV und Deliktsrecht: die Sperrwirkung",
+      "coverText": "§ 992 und Fremdbesitzerexzess",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Das EBV schützt den redlichen Besitzer vor dem Deliktsrecht, nicht aber den, der sich den Besitz erschlichen oder überschritten hat.",
+        "handlung": "{A} holds a protective shield in front of a calm miner, while {B} steps out from behind the shield carrying a crystal he clearly snatched from a locked chest.",
+        "hinweisRegie": "Place the note in the open space right beside the shield's edge where {B} steps out, slightly tilted toward the snatched crystal, so the gap in protection is clear without covering {A}'s face.",
+        "alternative": "{B} sits in a borrowed cart and drives it carelessly into a wall, while {A} checks the cart's rental card and finds it void."
+      },
+      "bildSzene": "miner steps out from protective shield",
+      "bildSzeneAlt": "borrowed cart crashes, void rental card",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "§ 986 BGB",
+        "§ 987 BGB",
+        "§ 992 BGB",
+        "§ 993 Abs. 1 BGB",
+        "Themenpool: sachen-030"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-ausnahmen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.517Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-768",
+      "ueberzeile": "Prüfungsfrage Strafprozessrecht",
+      "titel": "Polizist P zu B: „Gestehen Sie, wird der Haftbefehl aufgehoben.“ Darüber entscheidet P nicht. Verwertbar?",
+      "optionen": [
+        "Verwertbar – Versprechen sind nur Richtern verboten",
+        "Verwertbar, wenn B vorher ordnungsgemäß belehrt wurde",
+        "Unverwertbar – ein gesetzlich nicht vorgesehener Vorteil"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 136a StPO",
+        "§ 163a Abs. 4 StPO",
+        "Themenpool: stpo-768"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.517Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-768",
+      "ueberzeile": "Auflösung",
+      "titel": "Unverwertbar – er verspricht, was er nicht halten kann",
+      "text": "§ 136a Abs. 1 S. 3 StPO verbietet das Versprechen eines gesetzlich nicht vorgesehenen Vorteils. Über die Haft entscheidet der Richter, nicht der Vernehmer. Für Polizeibeamte gilt das Verbot über § 163a Abs. 4 S. 2 StPO. Folge: Die Aussage ist unverwertbar, auch wenn B später zustimmt (§ 136a Abs. 3 S. 2 StPO).",
+      "norm": "§ 136a Abs. 1 S. 3, Abs. 3 StPO",
+      "quellen": [
+        "§ 136a StPO",
+        "§ 163a Abs. 4 StPO",
+        "Themenpool: stpo-768"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.517Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Verwertbar – Versprechen sind nur Richtern verboten",
+        "Verwertbar, wenn B vorher ordnungsgemäß belehrt wurde",
+        "Unverwertbar – ein gesetzlich nicht vorgesehener Vorteil"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-059",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 23 Abs. 3 StGB: Auch der Versuch aus grobem Unverstand ist strafbar",
+      "text": "Die Norm setzt voraus, dass auch der untaugliche Versuch strafbar ist. Hat der Täter aus grobem Unverstand verkannt, dass die Tat nach der Art des Objekts oder Mittels gar nicht gelingen konnte, kann das Gericht von Strafe absehen oder mildern (§ 49 Abs. 2 StGB). Davon zu trennen: der abergläubische Versuch, etwa Totbeten – nach h.M. straflos.",
+      "norm": "§ 23 Abs. 3 StGB · § 49 Abs. 2 StGB",
+      "quellen": [
+        "§ 22 StGB",
+        "§ 23 Abs. 3 StGB",
+        "§ 49 Abs. 2 StGB",
+        "Themenpool: strafat-059"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.517Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "streit-19",
+      "ueberzeile": "Streitstand Strafrecht BT",
+      "titel": "Sparbuch weggenommen, Geld abgehoben, Buch zurückgelegt: Zueignungsabsicht?",
+      "norm": "§ 242 Abs. 1 StGB",
+      "optionen": [
+        "Substanztheorie: nur die Sache selbst – A gibt das Buch zurück, also keine Zueignung.",
+        "Vereinigungstheorie (Rspr., h.M.): Sache oder ihr spezifischer Sachwert – hier bejaht."
+      ],
+      "text": "Das Sparbuch verliert durch die Abhebung dauerhaft an Wert. Grenze: Der bloße Gebrauchsvorteil genügt nicht.",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 246 StGB"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.517Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-015",
+      "ueberzeile": "Merksatz Schuldrecht",
+      "titel": "In Vollzug gesetzt: Nichtigkeit wirkt nur für die Zukunft",
+      "text": "Arbeits- oder Gesellschaftsvertrag nichtig, aber schon vollzogen: grundsätzlich keine Rückabwicklung ex tunc. Grenze: vorrangige Schutzinteressen, etwa Minderjähriger.",
+      "norm": "§ 142 Abs. 1 BGB · § 611a BGB",
+      "quellen": [
+        "§ 142 Abs. 1 BGB",
+        "§ 611a BGB",
+        "§§ 812 ff. BGB",
+        "Themenpool: schuld-015"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.517Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-073",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Raub: vollendet mit der Wegnahme – die Zueignung bleibt Absicht",
+      "text": "Raub (§ 249 StGB) ist vollendet, sobald der Täter neuen Gewahrsam begründet hat; die Zueignung muss er nur beabsichtigen. Zu § 255 StGB: Die Rspr. sieht im Raub den spezielleren Fall und grenzt nach dem äußeren Bild ab – Nehmen oder Geben. Die Lit. verlangt für die Erpressung eine Vermögensverfügung und grenzt nach der Vorstellung des Opfers ab.",
+      "norm": "§ 249 StGB · § 255 StGB",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 253 StGB",
+        "§ 255 StGB",
+        "Themenpool: strafbt-073"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:51.517Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

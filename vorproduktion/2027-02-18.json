@@ -1,0 +1,880 @@
+{
+  "datum": "2027-02-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "grundr-608",
+        "themaTitel": "Grundrechtsprüfung: Schutzbereich - Eingriff - Rechtfertigung",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "zwangsv-588",
+        "themaTitel": "Zwangsvollstreckungsklausur: richtige Klage/Rechtsbehelf wählen",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-733",
+        "themaTitel": "Sukzessive Mittäterschaft/Beihilfe",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "sachen-503"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "sachen-503"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "gesetzs-206"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:36",
+        "art": "streitstand",
+        "themaId": "assessorz-816"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "merksatz",
+        "themaId": "zpo-278"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "begriff",
+        "themaId": "handelsg-048"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "grundr-608",
+      "poolTitel": "Grundrechtsprüfung: Schutzbereich - Eingriff - Rechtfertigung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "zwangsv-588",
+      "poolTitel": "Zwangsvollstreckungsklausur: richtige Klage/Rechtsbehelf wählen",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 766, 767, 771 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-29"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-733",
+      "poolTitel": "Sukzessive Mittäterschaft/Beihilfe",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 25 II, 27 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-503",
+      "poolTitel": "Herausgabeanspruch des Eigentümers",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 985 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-09-22",
+        "2026-12-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-503",
+      "poolTitel": "Herausgabeanspruch des Eigentümers",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 985 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-09-22",
+        "2026-12-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "gesetzs-206",
+      "poolTitel": "Was folgt aus einer unberechtigten GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 684 BGB",
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-816",
+      "poolTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-21",
+        "2026-12-20"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "zpo-278",
+      "poolTitel": "Wie weit reicht die materielle Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23",
+        "2026-12-01",
+        "2027-01-08"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "handelsg-048",
+      "poolTitel": "Wann liegt ein Handelsgeschäft vor und was folgt daraus?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 343 HGB",
+        "§ 377 HGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-18",
+        "2026-12-18"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-608",
+      "slug": "2027-02-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Drei Stufen, eine Weiche: das Grundrechtsschema",
+          "titelZeilen": [
+            "Drei Stufen,",
+            "eine Weiche:",
+            "Grundrechtsschema"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Die Schranke bestimmt den Weg",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Stufe 1: Schutzbereich",
+          "punkte": [
+            "Persönlich: Jedermann- oder Deutschengrundrecht? Juristische Personen über Art. 19 Abs. 3 GG.",
+            "Sachlich: Ist das Verhalten vom Grundrecht erfasst? Erst definieren, dann subsumieren.",
+            "Spezielle Freiheitsrechte vor Art. 2 Abs. 1 GG prüfen."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Stufe 2: Eingriff",
+          "links": {
+            "titel": "Klassisch",
+            "punkte": [
+              "Final und unmittelbar.",
+              "Rechtsförmig, mit Befehl und Zwang durchsetzbar."
+            ]
+          },
+          "rechts": {
+            "titel": "Modern",
+            "punkte": [
+              "Jedes staatliche Handeln, das die Ausübung erschwert oder unmöglich macht.",
+              "Auch mittelbar oder faktisch, wenn es dem Staat zurechenbar ist."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stufe 3: die Weiche bei der Schranke",
+          "punkte": [
+            "Einfacher Gesetzesvorbehalt: Eingriff durch oder aufgrund eines verfassungsmäßigen Gesetzes.",
+            "Qualifizierter Vorbehalt: zusätzlich die im GG genannten Anforderungen, etwa Art. 11 Abs. 2 GG.",
+            "Vorbehaltlos: nur kollidierendes Verfassungsrecht, etwa Grundrechte Dritter."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Schranken-Schranken",
+          "punkte": [
+            "Formelle Verfassungsmäßigkeit des Gesetzes: Kompetenz, Verfahren, Form.",
+            "Verhältnismäßigkeit: legitimer Zweck, geeignet, erforderlich, angemessen.",
+            "Zitiergebot, wo es greift (Art. 19 Abs. 1 S. 2 GG), Wesensgehalt (Art. 19 Abs. 2 GG), Bestimmtheit.",
+            "Bei einem Einzelakt: auch die verfassungsgemäße Anwendung im Einzelfall."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schutzbereich, Eingriff, Rechtfertigung – und in der Rechtfertigung zuerst die Art der Schranke bestimmen."
+        },
+        {
+          "art": "cta",
+          "titel": "Grundrechtsprüfung in drei Zügen",
+          "punkte": [
+            "Schutzbereich persönlich und sachlich",
+            "Eingriff: klassisch oder modern",
+            "Schranke bestimmen, dann Verhältnismäßigkeit"
+          ],
+          "icons": [
+            "schild",
+            "blitz",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Drei Stufen, eine Weiche: Schutzbereich, Eingriff, Rechtfertigung. Die Weiche liegt in der Rechtfertigung – einfacher Gesetzesvorbehalt, qualifizierter Vorbehalt oder vorbehaltlos gewährt? Davon hängt ab, welche Gründe einen Eingriff überhaupt tragen können. Danach folgen die Schranken-Schranken mit der Verhältnismäßigkeit im Zentrum. Speichern als Spickzettel für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#grundrechtsprüfung",
+        "#verhältnismäßigkeit",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Grundrechtsprüfung: drei Stufen, eine Weiche",
+      "coverText": "Die Schranke bestimmt den Weg",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Drei feste Stufen – und bei der Rechtfertigung entscheidet die Art der Schranke über den weiteren Weg.",
+        "handlung": "{A} taps a railway switch lever with his pointer at the third of three stepped track sections, while {B} hovers ready to throw the switch toward one of three branching tracks.",
+        "hinweisRegie": "Place the note in the open space beside the switch lever at the third track section, slightly tilted toward the branching tracks, so the decisive switch reads clearly without covering {A}'s pointer.",
+        "alternative": "{B} stacks three sturdy blocks into a small staircase, while {A} chooses one of three differently shaped keys for a lock on the top block."
+      },
+      "bildSzene": "professor at railway switch, three tracks",
+      "bildSzeneAlt": "three blocks, choosing one of three keys",
+      "quellen": [
+        "Art. 1 Abs. 3 GG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 11 Abs. 2 GG",
+        "Art. 19 Abs. 1–3 GG",
+        "Themenpool: grundr-608"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-stufen-eine-weiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.848Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-588",
+      "slug": "2027-02-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schon bezahlt? Dann hilft § 766 ZPO nicht",
+          "titelZeilen": [
+            "Schon bezahlt?",
+            "Dann hilft",
+            "§ 766 ZPO nicht"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Materielle Einwendung: § 767",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "S wurde rechtskräftig zur Zahlung an G verurteilt. Danach zahlt S vollständig. G vollstreckt trotzdem, der Gerichtsvollzieher pfändet bei S – auch ein Fahrrad, das der Freundin F gehört. Wer wehrt sich wie?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Erinnerung oder Vollstreckungsabwehrklage?",
+          "links": {
+            "titel": "§ 766 ZPO",
+            "punkte": [
+              "Rügt die Art und Weise der Vollstreckung.",
+              "Verfahrensfehler des Vollstreckungsorgans.",
+              "Entscheidung durch das Vollstreckungsgericht."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 767 ZPO",
+            "punkte": [
+              "Richtet sich gegen den titulierten Anspruch.",
+              "Materielle Einwendungen, etwa Erfüllung.",
+              "Klage beim Prozessgericht des ersten Rechtszugs."
+            ]
+          }
+        },
+        {
+          "art": "vergleich",
+          "titel": "Schuldner oder Dritter?",
+          "links": {
+            "titel": "§ 767 ZPO",
+            "punkte": [
+              "Kläger ist der Schuldner.",
+              "Ziel: Vollstreckung aus dem Titel für unzulässig erklären."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 771 ZPO",
+            "punkte": [
+              "Kläger ist ein Dritter.",
+              "Er hat ein die Veräußerung hinderndes Recht, etwa Eigentum."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis: § 767 Abs. 2 ZPO",
+          "text": "Gegen ein Urteil sind nur Einwendungen zulässig, deren Gründe nach Schluss der letzten mündlichen Verhandlung entstanden sind. Die Zahlung danach passt. Bei Gestaltungsrechten wie der Aufrechnung stellt der BGH auf die objektive Aufrechnungslage ab – das ist umstritten."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "punkte": [
+            "Zahlung nach dem Urteil: S erhebt Vollstreckungsabwehrklage (§ 767 ZPO).",
+            "Fahrrad der F: Drittwiderspruchsklage der F (§ 771 ZPO).",
+            "§ 766 ZPO nur bei Verfahrensfehlern des Gerichtsvollziehers, etwa gegen ein Pfändungsverbot (§ 811 ZPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wie vollstreckt wird: § 766. Ob der Anspruch noch besteht: § 767. Wem die Sache gehört: § 771 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtsbehelf in drei Fragen",
+          "punkte": [
+            "Verfahrensfehler? § 766 ZPO",
+            "Anspruch erloschen? § 767 ZPO",
+            "Recht eines Dritten? § 771 ZPO"
+          ],
+          "icons": [
+            "klemmbrett",
+            "quittung",
+            "schluessel"
+          ]
+        }
+      ],
+      "caption": "Schon bezahlt – und G vollstreckt trotzdem? Dann hilft die Erinnerung nach § 766 ZPO nicht, denn sie rügt nur die Art und Weise der Vollstreckung. Gegen den titulierten Anspruch selbst geht es mit der Vollstreckungsabwehrklage (§ 767 ZPO), begrenzt durch die Präklusion nach Abs. 2. Gehört die gepfändete Sache einem Dritten, erhebt er Drittwiderspruchsklage (§ 771 ZPO). Speichern für die nächste ZV-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#767zpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 766, § 767 oder § 771 ZPO?",
+      "coverText": "Materielle Einwendung: § 767",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer schon bezahlt hat, wehrt sich gegen den Anspruch selbst – nicht gegen die Art der Vollstreckung.",
+        "handlung": "{B} firmly holds on to a bicycle that is being dragged away on a rope, while {A} nervously holds up a small paid token as if it should have stopped the rope.",
+        "hinweisRegie": "Place the note in the free space between {A}'s raised token and the rope, slightly tilted toward the token, so the already paid claim reads as the key point without covering {B}'s grip.",
+        "alternative": "{A} knocks at three differently shaped doors in a row, holding a token that only fits the middle door."
+      },
+      "bildSzene": "mechanic shows paid token, bicycle dragged",
+      "bildSzeneAlt": "token fits only the middle of three doors",
+      "quellen": [
+        "§§ 766, 767, 771 ZPO",
+        "§ 811 ZPO",
+        "Themenpool: zwangsv-588"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.849Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-733",
+      "slug": "2027-02-18-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Später dazugekommen: drei Zeitpunkte, drei Antworten",
+          "unter": "Sukzessive Beteiligung · §§ 25 II, 27 StGB",
+          "text": "Wann jemand einsteigt, entscheidet über seine Strafbarkeit.",
+          "norm": "§ 25 Abs. 2 StGB · § 27 StGB",
+          "icon": "uhr",
+          "sprecher": "Wer später einsteigt, haftet nicht für alles davor. Bei der sukzessiven Beteiligung zählt der Zeitpunkt. Es gibt drei, und jeder hat seine eigene Antwort.",
+          "marken": [
+            "später eingestiegen",
+            "drei Zeitpunkte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vor der Vollendung",
+          "text": "Sukzessive Mittäterschaft möglich: gemeinsamer Tatplan plus eigener Tatbeitrag.",
+          "norm": "§ 25 Abs. 2 StGB",
+          "sprecher": "Zeitpunkt eins: vor der Vollendung. Wer jetzt einsteigt, kann Mittäter werden. Er braucht einen gemeinsamen Tatplan, der auch stillschweigend entstehen kann, und einen eigenen Tatbeitrag.",
+          "marken": [
+            "vor Vollendung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zwischen Vollendung und Beendigung",
+          "text": "Rspr.: Beteiligung noch möglich. Weite Teile der Lehre: nur bis zur Vollendung.",
+          "norm": "§ 27 StGB",
+          "sprecher": "Zeitpunkt zwei: nach der Vollendung, aber vor der Beendigung. Die Rechtsprechung lässt sukzessive Mittäterschaft und Beihilfe hier noch zu. Weite Teile der Lehre ziehen die Grenze bei der Vollendung, sonst verschwimmt die Abgrenzung zu den Anschlussdelikten.",
+          "marken": [
+            "Rspr. vs. Lehre"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Nach der Beendigung",
+          "text": "Keine Beteiligung mehr – nur noch Anschlussdelikte wie §§ 257, 259 StGB.",
+          "norm": "§§ 257, 259 StGB",
+          "sprecher": "Zeitpunkt drei: nach der Beendigung. Dann ist Beteiligung ausgeschlossen. Es bleiben Anschlussdelikte wie Begünstigung oder Hehlerei.",
+          "marken": [
+            "nur Anschlussdelikte"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Keine Zurechnung nach hinten",
+          "text": "Vollständig abgeschlossene Tatteile werden nicht zugerechnet – Billigen genügt nicht.",
+          "norm": null,
+          "sprecher": "Und die wichtigste Grenze: Was vor dem Einstieg vollständig abgeschlossen war, wird dem Hinzutretenden nicht zugerechnet, auch wenn er es kennt und billigt. Beispiel: A hat O schon geschlagen, dann tritt B mit zu. Für die Schläge davor haftet B nicht.",
+          "marken": [
+            "Billigen genügt nicht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vorher: Mittäter möglich. Dazwischen: Streit. Danach: Anschlussdelikte.",
+          "norm": null,
+          "sprecher": "Merke: vor der Vollendung Beteiligung möglich, aber ohne Zurechnung nach hinten. Dazwischen Streit. Nach der Beendigung nur Anschlussdelikte.",
+          "marken": [
+            "vorher · später · danach"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst den Einstiegszeitpunkt bestimmen",
+          "text": "Speichern für die nächste Beteiligungsklausur.",
+          "sprecher": "Speicher dir das für die nächste Beteiligungsklausur. Und markier im Sachverhalt genau, wann der Hinzutretende einsteigt.",
+          "marken": [
+            "Einstieg markieren"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Später dazugekommen? Dann entscheidet der Zeitpunkt. Vor der Vollendung ist sukzessive Mittäterschaft möglich – vollständig abgeschlossene Tatteile werden aber nicht zugerechnet, auch nicht bei Kenntnis und Billigung. Zwischen Vollendung und Beendigung lässt die Rspr. Beteiligung noch zu, weite Teile der Lehre nicht. Nach der Beendigung bleiben nur Anschlussdelikte wie §§ 257, 259 StGB. Speichern für die nächste Beteiligungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#mittäterschaft",
+        "#beihilfe",
+        "#25stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sukzessive Beteiligung: drei Zeitpunkte",
+      "titelZeilen": [
+        "Später dazu-",
+        "gekommen: drei",
+        "Zeitpunkte, drei",
+        "Antworten"
+      ],
+      "coverText": "Vollendung, Beendigung, danach",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Wann jemand in eine laufende Tat einsteigt, bestimmt, wofür er noch einstehen muss.",
+        "handlung": "{B} curiously steps onto a moving cart halfway along a track, while {A} raises a hand to show that the stretch already travelled behind them stays behind.",
+        "hinweisRegie": "Place the note in the free space at the point on the track where {B} steps on, slightly tilted toward that spot, so the moment of joining reads as decisive without covering faces or hands.",
+        "alternative": "{A} plants three flags along a trail – start, summit and camp – while {B} arrives somewhere between the summit and the camp."
+      },
+      "bildSzene": "alien jumps onto moving cart midway",
+      "bildSzeneAlt": "three flags on a trail, late arrival",
+      "quellen": [
+        "§ 25 Abs. 2 StGB",
+        "§ 27 StGB",
+        "§§ 257, 259 StGB",
+        "Themenpool: strafat-733"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-zeitpunkte",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.850Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-503",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "E klagt aus § 985 BGB. Aus dem Vortrag ergibt sich ein Mietvertrag mit B – B beruft sich nicht darauf. Folge?",
+      "optionen": [
+        "Klage begründet – § 986 BGB ist eine Einrede",
+        "Klage begründet – gegen den Eigentümer gibt es kein Besitzrecht",
+        "Klage unbegründet – § 986 BGB wirkt als Einwendung"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 985 BGB",
+        "§ 986 BGB",
+        "Themenpool: sachen-503"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.850Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-503",
+      "ueberzeile": "Auflösung",
+      "titel": "§ 986 BGB wirkt als Einwendung – die Klage ist unbegründet",
+      "text": "Trotz des Wortlauts („kann verweigern“) behandelt die h.M. das Recht zum Besitz als Einwendung: Das Gericht berücksichtigt es von Amts wegen, sobald es sich aus dem Vortrag ergibt. Der Mietvertrag gibt B ein Recht zum Besitz gegenüber E (§ 986 Abs. 1 S. 1 BGB). Endet er, muss B herausgeben – dann auch nach § 546 BGB.",
+      "norm": "§ 985 BGB · § 986 Abs. 1 BGB",
+      "quellen": [
+        "§ 985 BGB",
+        "§ 986 BGB",
+        "§ 546 BGB",
+        "Themenpool: sachen-503"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.850Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Klage begründet – § 986 BGB ist eine Einrede",
+        "Klage begründet – gegen den Eigentümer gibt es kein Besitzrecht",
+        "Klage unbegründet – § 986 BGB wirkt als Einwendung"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "pairId": "gesetzs-206",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 684 S. 1 BGB: Unberechtigte GoA – kein Aufwendungsersatz, nur Bereicherungsausgleich",
+      "text": "Fehlen die Voraussetzungen des § 683 BGB, muss der Geschäftsherr nur herausgeben, was er durch die Geschäftsführung erlangt hat – nach Bereicherungsrecht. Nach h.M. ist das eine Rechtsfolgenverweisung auf die §§ 818 ff. BGB. Genehmigt der Geschäftsherr die Geschäftsführung, bekommt der Geschäftsführer Aufwendungsersatz wie nach § 683 BGB (§ 684 S. 2 BGB).",
+      "norm": "§ 684 BGB",
+      "quellen": [
+        "§ 683 BGB",
+        "§ 684 BGB",
+        "§§ 818 ff. BGB",
+        "Themenpool: gesetzs-206"
+      ],
+      "fachLabel": "GoA/EBV",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.850Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-816",
+      "ueberzeile": "Streitstand Zivilprozess",
+      "titel": "Verjährungseinrede erst in der Berufung: Ist sie als neues Vorbringen ausgeschlossen?",
+      "norm": "§§ 529, 531 Abs. 2 ZPO",
+      "optionen": [
+        "BGH (Großer Senat für Zivilsachen): Zuzulassen, wenn Erhebung und Verjährungstatsachen unstreitig sind.",
+        "Gegenansicht: Neues Verteidigungsmittel – nur unter den Voraussetzungen des § 531 Abs. 2 ZPO."
+      ],
+      "text": "Klausur: Mit dem BGH ist unstreitiger neuer Vortrag in der Berufung zu berücksichtigen. Sind die Verjährungstatsachen streitig, prüfst du § 531 Abs. 2 ZPO. Gleicher Gedanke in erster Instanz: Unstreitiges verzögert nicht, § 296 ZPO greift nur bei streitigem Vorbringen.",
+      "quellen": [
+        "§§ 529, 531 ZPO",
+        "§ 296 ZPO",
+        "§ 214 BGB",
+        "Themenpool: assessorz-816"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.850Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-278",
+      "ueberzeile": "Merksatz Zivilprozess",
+      "titel": "Rechtskraft wirkt dreifach",
+      "text": "Derselbe Streitgegenstand: neue Klage unzulässig. Entschiedenes als Vorfrage: Das Gericht ist gebunden. Das kontradiktorische Gegenteil: ebenfalls ausgeschlossen.",
+      "norm": "§ 322 Abs. 1 ZPO · § 325 ZPO",
+      "quellen": [
+        "§ 322 ZPO",
+        "§ 325 ZPO",
+        "Themenpool: zpo-278"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.850Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-048",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Handelsgeschäft",
+      "text": "Handelsgeschäfte sind alle Geschäfte eines Kaufmanns, die zum Betrieb seines Handelsgewerbes gehören (§ 343 HGB); im Zweifel gelten seine Rechtsgeschäfte als dazugehörig (§ 344 Abs. 1 HGB). Funktion: Schalter für das HGB-Sonderrecht – teils genügt ein einseitiges Handelsgeschäft (etwa § 350 HGB), teils braucht es ein beiderseitiges (etwa § 377 HGB).",
+      "norm": "§§ 343, 344 HGB",
+      "quellen": [
+        "§§ 343, 344 HGB",
+        "§ 350 HGB",
+        "§ 377 HGB",
+        "Themenpool: handelsg-048"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:27:14.850Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

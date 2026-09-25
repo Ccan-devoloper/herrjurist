@@ -1,0 +1,864 @@
+{
+  "datum": "2026-12-01",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "strafat-290",
+        "themaTitel": "Wie ist ein vorsätzliches Begehungsdelikt aufgebaut?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "assessoroer-843",
+        "themaTitel": "Womit beginnen die Entscheidungsgründe?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "bereich-210",
+        "themaTitel": "Wie prüft man die Leistungskondiktion?",
+        "fach": "bereich",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "schuldbt-464"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "schuldbt-464"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "zpo-278"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "zahl",
+        "themaId": "bgbat-001"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "streitstand",
+        "themaId": "bgbat-003"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "merksatz",
+        "themaId": "sachen-237"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "strafat-290",
+      "poolTitel": "Wie ist ein vorsätzliches Begehungsdelikt aufgebaut?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "assessoroer-843",
+      "poolTitel": "Womit beginnen die Entscheidungsgründe?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 117 Abs. 2 Nr. 5 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "bereich-210",
+      "poolTitel": "Wie prüft man die Leistungskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 1 Alt. 1 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-464",
+      "poolTitel": "Kosten der Nacherfüllung und Aus-/Einbaukosten",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-464",
+      "poolTitel": "Kosten der Nacherfüllung und Aus-/Einbaukosten",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 439 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-278",
+      "poolTitel": "Wie weit reicht die materielle Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "bgbat-001",
+      "poolTitel": "Was sind die Voraussetzungen und Rechtsfolgen einer wirksamen Anfechtung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 BGB",
+        "§ 123 BGB",
+        "§ 121 BGB",
+        "§ 124 BGB",
+        "§ 142 Abs. 1 BGB",
+        "§ 143 BGB",
+        "§ 144 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "bgbat-003",
+      "poolTitel": "Inwieweit werden sich widersprechende AGB Vertragsbestandteil?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 154 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-01"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "sachen-237",
+      "poolTitel": "Wann greift der öffentliche Glaube des Grundbuchs?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 892 BGB",
+        "§ 893 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-290",
+      "slug": "2026-12-01-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vorsatz: im Tatbestand geprüft, in der Schuld noch einmal",
+          "titelZeilen": [
+            "Vorsatz: im",
+            "Tatbestand geprüft,",
+            "in der Schuld",
+            "noch einmal"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Doppelstellung des Vorsatzes",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Aufbau des Vorsatzdelikts",
+          "punkte": [
+            "Tatbestand objektiv: Handlung, Erfolg, Kausalität, objektive Zurechnung",
+            "Tatbestand subjektiv: Vorsatz (§ 15 StGB), ggf. besondere Absichten",
+            "Rechtswidrigkeit: Rechtfertigungsgründe",
+            "Schuld: Schuldfähigkeit, Unrechtsbewusstsein, Entschuldigungsgründe"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Wo gehört der Vorsatz hin? Die klassische Verbrechenslehre sah ihn als Schuldform. Heute prüfst du ihn im subjektiven Tatbestand. Offen bleibt, ob er in der Schuld noch eine Rolle spielt – wichtig, wenn der Täter irrig rechtfertigende Umstände annimmt."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Tatbestand oder Schuld?",
+          "links": {
+            "titel": "Klassische Lehre",
+            "punkte": [
+              "Vorsatz ist Schuldform.",
+              "Der Tatbestand ist rein objektiv.",
+              "Heute kaum noch vertreten."
+            ]
+          },
+          "rechts": {
+            "titel": "Heute h.M.",
+            "punkte": [
+              "Vorsatz im subjektiven Tatbestand.",
+              "Doppelstellung: in der Schuld als Vorsatzschuld.",
+              "Folge: dreistufiger Aufbau mit subjektivem Tatbestand."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Den Streit schreibst du nicht aus – du prüfst den Vorsatz im Tatbestand. Die Doppelstellung wird beim Erlaubnistatbestandsirrtum wichtig: Nach der rechtsfolgenverweisenden eingeschränkten Schuldtheorie entfällt die Vorsatzschuld, der Tatbestandsvorsatz bleibt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vorsatz im Tatbestand prüfen. In der Schuld taucht er als Vorsatzschuld wieder auf – relevant beim Erlaubnistatbestandsirrtum."
+        },
+        {
+          "art": "cta",
+          "titel": "Aufbau in drei Stufen",
+          "punkte": [
+            "Tatbestand: objektiv, dann subjektiv",
+            "Rechtswidrigkeit: Rechtfertigung",
+            "Schuld: Vorsatzschuld im Blick"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Der Vorsatz steht im subjektiven Tatbestand – und taucht in der Schuld noch einmal auf. Die klassische Lehre sah ihn allein als Schuldform; heute gilt nach h.M. die Doppelstellung: Vorsatz als Verhaltensform im Tatbestand, Vorsatzschuld in der Schuld. Praktisch wird das beim Erlaubnistatbestandsirrtum. Speichern für den nächsten Aufbau im Strafrecht AT.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#vorsatz",
+        "#klausurtraining",
+        "#15stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorsatzdelikt: Aufbau und Doppelstellung",
+      "coverText": "Doppelstellung des Vorsatzes",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Der Vorsatz wird im Tatbestand geprüft, hat aber in der Schuld eine zweite Rolle.",
+        "handlung": "{A} uses his pointer to place one glowing token into the first of three stacked boxes, while {B} nervously discovers a faint twin of the same token already waiting in the third box.",
+        "hinweisRegie": "Place the note in the free space between the first and third box, slightly tilted toward the faint twin token, so the double role is visible without covering {B}'s surprised face.",
+        "alternative": "{B} walks up three steps carrying a lantern, and {A} shows that the same lantern's light reappears on the top step."
+      },
+      "bildSzene": "same token appears in two boxes",
+      "bildSzeneAlt": "lantern light reappears on top step",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "Themenpool: strafat-290"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.792Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-843",
+      "slug": "2026-12-01-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "VG-Urteil: Der erste Satz ist das Ergebnis",
+          "titelZeilen": [
+            "VG-Urteil: Der",
+            "erste Satz ist",
+            "das Ergebnis"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Einleitungssatz vor Zulässigkeit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A beantragt, „den Gebührenbescheid für ungültig zu erklären“. Die Kammer hat den Rechtsstreit dem Einzelrichter übertragen, die Beteiligten haben auf mündliche Verhandlung verzichtet. Die Klage hat Erfolg. Womit beginnen die Entscheidungsgründe?"
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Einstieg, der nicht passt",
+          "text": "„Die Klage ist zulässig. Der Verwaltungsrechtsweg ist eröffnet …“ So beginnt ein Gutachten. Im Urteil steht vorn das Ergebnis, danach die Begründung – Urteilsstil."
+        },
+        {
+          "art": "schritte",
+          "titel": "Aufbau der Entscheidungsgründe",
+          "schritte": [
+            {
+              "titel": "Einleitungssatz",
+              "text": "Ergebnis vorab: „Die zulässige Klage ist begründet.“ Verfahrensfragen (§§ 6, 101 Abs. 2 VwGO) passen hier hinein."
+            },
+            {
+              "titel": "Auslegung des Antrags",
+              "text": "Unklaren Antrag nach § 88 VwGO auslegen – vor der Zulässigkeit."
+            },
+            {
+              "titel": "Zulässigkeit und Begründetheit",
+              "text": "Problematisches ausführen, Unproblematisches knapp feststellen."
+            },
+            {
+              "titel": "Nebenentscheidungen",
+              "text": "Kosten (§§ 154 ff. VwGO), vorläufige Vollstreckbarkeit (§ 167 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Etwa: „Die Klage, über die der Einzelrichter im Einverständnis der Beteiligten ohne mündliche Verhandlung entscheidet (§§ 6 Abs. 1, 101 Abs. 2 VwGO), hat Erfolg.“ Dann: Der Antrag ist als Anfechtungsantrag auszulegen (§ 88 VwGO). Die so verstandene Klage ist zulässig und begründet."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ergebnis zuerst, dann Verfahren und Auslegung, dann Zulässigkeit und Begründetheit – alles im Urteilsstil."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem ersten Satz klären",
+          "punkte": [
+            "Wie geht das Verfahren aus?",
+            "Einzelrichter, ohne mündliche Verhandlung?",
+            "Antrag auslegungsbedürftig?"
+          ],
+          "icons": [
+            "richter",
+            "dokument",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Im VG-Urteil ist der erste Satz der Entscheidungsgründe das Ergebnis – nicht „Die Klage ist zulässig“. Verfahrensfragen wie Einzelrichter (§ 6 VwGO) und Verzicht auf mündliche Verhandlung (§ 101 Abs. 2 VwGO) lassen sich in den Einleitungssatz einbauen, danach folgt bei Bedarf die Auslegung des Antrags nach § 88 VwGO. Die Formulierungsgewohnheiten unterscheiden sich je nach Ausbildungsland – der Grundsatz „Ergebnis zuerst“ nicht.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#urteilsstil",
+        "#verwaltungsprozessrecht",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VG-Urteil: Womit die Entscheidungsgründe beginnen",
+      "coverText": "Einleitungssatz vor Zulässigkeit",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Im Urteil steht das Ergebnis am Anfang, die Begründung folgt danach.",
+        "handlung": "{B} plants a finished flag at the very start of a trail, while {A} hovers behind her and unrolls the map of the path that leads to that flag.",
+        "hinweisRegie": "Place the note in the open space right beside the flag at the start of the trail, slightly tilted toward it, without covering the unrolled map or {B}'s hand on the pole.",
+        "alternative": "{A} places the lid with the result on a box first, and {B} fills the supporting pieces in underneath."
+      },
+      "bildSzene": "flag planted at start of trail",
+      "bildSzeneAlt": "result lid placed before contents",
+      "quellen": [
+        "§ 117 Abs. 2 Nr. 5 VwGO",
+        "§ 6 Abs. 1 VwGO",
+        "§ 101 Abs. 2 VwGO",
+        "§ 88 VwGO",
+        "§§ 154, 167 VwGO",
+        "Themenpool: assessoroer-843"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.792Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-210",
+      "slug": "2026-12-01-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Auf Kosten“ prüfst du bei der Leistungskondiktion nicht",
+          "unter": "Leistungskondiktion · § 812 Abs. 1 S. 1 Alt. 1 BGB",
+          "text": "Die Leistung bestimmt schon, wer auf wessen Kosten erlangt hat.",
+          "norm": "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+          "icon": "muenzen",
+          "sprecher": "„Auf Kosten“ braucht hier keinen eigenen Prüfpunkt. Bei der Leistungskondiktion ergibt sich das schon aus der Leistung. Wer leistet, legt fest, wer auf wessen Kosten etwas erlangt hat.",
+          "marken": [
+            "kein eigener Punkt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Etwas erlangt",
+          "text": "Jeder vermögenswerte Vorteil: Eigentum, Besitz, Forderung, Befreiung von einer Schuld.",
+          "norm": null,
+          "sprecher": "Schritt eins: etwas erlangt. Das ist jeder vermögenswerte Vorteil – Eigentum, Besitz, eine Forderung oder die Befreiung von einer Verbindlichkeit.",
+          "marken": [
+            "jeder Vorteil"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Durch Leistung",
+          "text": "Bewusste und zweckgerichtete Mehrung fremden Vermögens.",
+          "norm": null,
+          "sprecher": "Schritt zwei: durch Leistung. Leistung ist die bewusste und zweckgerichtete Mehrung fremden Vermögens. Der Zweck, meist die Erfüllung einer Verbindlichkeit, bestimmt auch, wer Leistender und wer Empfänger ist.",
+          "marken": [
+            "bewusst + zweckgerichtet"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Ohne rechtlichen Grund",
+          "text": "Der Rechtsgrund fehlte von Anfang an – etwa beim nichtigen Vertrag.",
+          "norm": null,
+          "sprecher": "Schritt drei: ohne rechtlichen Grund. Bei dieser Alternative fehlt der Rechtsgrund von Anfang an, zum Beispiel weil der Vertrag nichtig ist. Fällt er erst später weg, gehst du über Satz zwei.",
+          "marken": [
+            "von Anfang an"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Kein Ausschluss",
+          "text": "§ 814 BGB: Kenntnis der Nichtschuld. § 817 S. 2 BGB: eigener Gesetzes- oder Sittenverstoß.",
+          "norm": "§§ 814, 817 S. 2 BGB",
+          "sprecher": "Schritt vier: kein Ausschluss. Wer weiß, dass er nicht verpflichtet ist, kann nach § 814 nicht zurückfordern. Und § 817 Satz 2 sperrt die Rückforderung, wenn auch dem Leistenden ein Gesetzes- oder Sittenverstoß zur Last fällt.",
+          "marken": [
+            "§ 814",
+            "§ 817 S. 2"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Wo „auf Kosten“ zählt",
+          "text": "Bei der Nichtleistungskondiktion fehlt die Leistung als Zuordnung – dort ist es Prüfpunkt.",
+          "norm": "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+          "sprecher": "Wichtig wird „auf Kosten“ bei der Nichtleistungskondiktion. Dort gibt es keine Leistung, die das Verhältnis ordnet. Dann fragst du etwa nach dem Zuweisungsgehalt des verletzten Rechts.",
+          "marken": [
+            "Nichtleistung: prüfen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Etwas erlangt, durch Leistung, ohne Rechtsgrund, kein Ausschluss.",
+          "norm": "§ 812 Abs. 1 S. 1 Alt. 1 BGB",
+          "sprecher": "Merke: etwas erlangt, durch Leistung, ohne Rechtsgrund, kein Ausschluss. Rechtsfolge ist die Herausgabe nach § 818 BGB.",
+          "marken": [
+            "vier Merkmale"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst den Leistungszweck bestimmen",
+          "text": "Speichern für die nächste Bereicherungsklausur.",
+          "sprecher": "Speicher dir das für die nächste Bereicherungsklausur. Und bestimme zuerst, wer an wen zu welchem Zweck geleistet hat.",
+          "marken": [
+            "wer an wen?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "„Auf Kosten“ braucht bei der Leistungskondiktion keinen eigenen Prüfpunkt: Die Leistung – die bewusste und zweckgerichtete Mehrung fremden Vermögens – legt schon fest, wer von wem etwas erlangt hat. Du prüfst: etwas erlangt, durch Leistung, ohne rechtlichen Grund, kein Ausschluss nach §§ 814, 817 S. 2 BGB. Eigenständig wird „auf Kosten“ erst bei der Nichtleistungskondiktion.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#leistungskondiktion",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Leistungskondiktion: vier Merkmale",
+      "titelZeilen": [
+        "„Auf Kosten“",
+        "prüfst du bei der",
+        "Leistungs-",
+        "kondiktion nicht"
+      ],
+      "coverText": "Die Leistung ordnet alles",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Bei der Leistungskondiktion zeigt die Leistung selbst, wer von wem etwas zurückverlangen kann.",
+        "handlung": "{B} hands a crystal directly into {A}'s open hands along a single glowing line that connects only the two of them.",
+        "hinweisRegie": "Place the note in the open space just above the glowing line between the two, slightly tilted, so the direct giving relation is highlighted without covering the crystal or hands.",
+        "alternative": "{A} traces a tangled web of paths with her finger until {B} simply points out the one straight path along which he actually handed over the stone."
+      },
+      "bildSzene": "crystal handed along single glowing line",
+      "bildSzeneAlt": "one straight path in tangled web",
+      "quellen": [
+        "§ 812 Abs. 1 BGB",
+        "§ 814 BGB",
+        "§ 817 S. 2 BGB",
+        "§ 818 BGB",
+        "Themenpool: bereich-210"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kein-eigener-pruefpunkt",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.796Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-464",
+      "ueberzeile": "Prüfungsfrage Kaufrecht",
+      "titel": "Die mangelhaften Fliesen sind schon verlegt: Muss V die Kosten für Aus- und Einbau tragen?",
+      "optionen": [
+        "Nein – das wäre Schadensersatz, und V trifft kein Verschulden",
+        "Nur beim Verbrauchsgüterkauf",
+        "Ja – Aufwendungsersatz nach § 439 Abs. 3 BGB, ohne Verschulden"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 439 Abs. 3 BGB",
+        "§ 442 Abs. 1 BGB",
+        "Themenpool: schuldbt-464"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.796Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-464",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – verschuldensunabhängig nach § 439 Abs. 3 BGB",
+      "text": "Hat K die Fliesen ihrer Art und ihrem Zweck gemäß eingebaut, bevor der Mangel offenbar wurde, ersetzt V im Rahmen der Nacherfüllung die erforderlichen Aufwendungen für Ausbau und Einbau – ohne Verschulden und bei jedem Kaufvertrag. Kannte K den Mangel beim Einbau, gilt § 442 Abs. 1 BGB entsprechend (§ 439 Abs. 3 S. 2 BGB).",
+      "norm": "§ 439 Abs. 3 BGB",
+      "quellen": [
+        "§ 439 Abs. 3 BGB",
+        "§ 442 Abs. 1 BGB",
+        "Themenpool: schuldbt-464"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.796Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – das wäre Schadensersatz, und V trifft kein Verschulden",
+        "Nur beim Verbrauchsgüterkauf",
+        "Ja – Aufwendungsersatz nach § 439 Abs. 3 BGB, ohne Verschulden"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-278",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 322 Abs. 2 ZPO: Auch die Aufrechnung wird rechtskräftig",
+      "text": "Grundsatz: Rechtskräftig wird nur die Entscheidung über den erhobenen Anspruch, nicht die Begründung (§ 322 Abs. 1 ZPO). Ausnahme Abs. 2: Rechnet der Beklagte auf, wird die Entscheidung, dass die Gegenforderung nicht besteht, bis zur Höhe des Aufrechnungsbetrags rechtskräftig. Er kann sie dann nicht erneut einklagen.",
+      "norm": "§ 322 ZPO",
+      "quellen": [
+        "§ 322 ZPO",
+        "Themenpool: zpo-278"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.796Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-001",
+      "ueberzeile": "4 Punkte BGB AT",
+      "titel": "Anfechtung: vier Prüfpunkte, dann nichtig von Anfang an",
+      "text": "Rechtsfolge: Das Geschäft gilt als von Anfang an nichtig (§ 142 Abs. 1 BGB). Bei §§ 119, 120 BGB schuldet der Anfechtende den Vertrauensschaden (§ 122 BGB).",
+      "punkte": [
+        "Anfechtungsgrund: §§ 119, 120 oder 123 BGB",
+        "Erklärung gegenüber dem Anfechtungsgegner (§ 143 BGB)",
+        "Frist: unverzüglich (§ 121) oder ein Jahr (§ 124 BGB)",
+        "Kein Ausschluss, etwa durch Bestätigung (§ 144 BGB)"
+      ],
+      "quellen": [
+        "§§ 119–124 BGB",
+        "§§ 142–144 BGB",
+        "Themenpool: bgbat-001"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.796Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-003",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Beide verweisen auf ihre eigenen AGB, die sich widersprechen: Welche Klauseln gelten?",
+      "norm": "§§ 150 Abs. 2, 154, 306 BGB",
+      "optionen": [
+        "Theorie des letzten Wortes (frühere Rspr.): Wer zuletzt verweist, setzt sich bei widerspruchsloser Durchführung durch.",
+        "Heute h.M.: Vertrag gilt; übereinstimmende Klauseln gelten, im Übrigen dispositives Recht (§ 306 Abs. 2 BGB)."
+      ],
+      "text": "Gegen das letzte Wort spricht: Es entscheidet der Zufall, wer zuletzt schreibt. Führen die Parteien den Vertrag durch, zeigen sie, dass er gelten soll – § 154 BGB tritt zurück. Beachte: § 305 Abs. 2 BGB gilt nicht gegenüber Unternehmern (§ 310 Abs. 1 BGB).",
+      "quellen": [
+        "§ 150 Abs. 2 BGB",
+        "§ 154 BGB",
+        "§ 305 Abs. 2 BGB",
+        "§ 306 BGB",
+        "§ 310 Abs. 1 BGB",
+        "Themenpool: bgbat-003"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.796Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-237",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Grundbuchglaube: nur beim Verkehrsgeschäft",
+      "text": "§ 892 BGB schützt nur Verkehrsgeschäfte. Wer kraft Gesetzes erwirbt – etwa als Erbe – oder durch Zwangsvollstreckung, wird nicht geschützt.",
+      "norm": "§ 892 Abs. 1 BGB",
+      "quellen": [
+        "§ 892 BGB",
+        "§ 893 BGB",
+        "Themenpool: sachen-237"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:42:30.796Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,885 @@
+{
+  "datum": "2026-12-27",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafbt-741",
+        "themaTitel": "Körperverletzung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "grundr-612",
+        "themaTitel": "Besondere Gleichheitssätze",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "famerb-519"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "famerb-519"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:11",
+        "art": "norm",
+        "themaId": "zwangsv-566"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "fehler",
+        "themaId": "assessoroer-838"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "tipp",
+        "themaId": "vwgo-404"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:26",
+        "art": "zahl",
+        "themaId": "ipr-889"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-741",
+      "poolTitel": "Körperverletzung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 223 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-12",
+        "2026-12-14"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-612",
+      "poolTitel": "Besondere Gleichheitssätze",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 3 II, III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-12-09",
+        "2026-12-09"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "famerb-519",
+      "poolTitel": "Ehegattenerbrecht",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1931, 1371 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "famerb-519",
+      "poolTitel": "Ehegattenerbrecht",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1931, 1371 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zwangsv-566",
+      "poolTitel": "Vollstreckungsklausel und Klauselrechtsbehelfe",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 724 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessoroer-838",
+      "poolTitel": "Wie tenoriert man im vorläufigen Rechtsschutz?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 5 VwGO",
+        "§ 123 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-24",
+        "2026-10-26"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "vwgo-404",
+      "poolTitel": "Was ist die Schutznormtheorie?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 2 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2026-10-28"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "ipr-889",
+      "poolTitel": "In welcher Reihenfolge prüft man einen Fall mit Auslandsbezug?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "EuGVVO",
+        "Rom I-VO",
+        "EGBGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-12-27-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen vor Silvester – was sitzt?",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen vor",
+            "Silvester –",
+            "was sitzt?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Vier Bereiche, ein Selbsttest",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Verjährung: Start zum Jahresende (§ 199 Abs. 1 BGB), nicht am Tag der Rechnung.",
+            "§§ 946 ff. BGB: Einbau, Vermischung, Verarbeitung – Eigentum ohne Einigung.",
+            "§ 986 Abs. 1 S. 2 BGB: unbefugt weitergegeben – Herausgabe an den Mieter.",
+            "GmbH-Gründung: Vorgründungsgesellschaft, Vor-GmbH, GmbH – jede mit eigener Haftung.",
+            "Widerruf im Fernabsatz: 14 Tage ab Erhalt der Ware, nicht ab Bestellung.",
+            "Sicherungsübereignung: Bestimmtheit, Besitzkonstitut, Berechtigung, Übersicherung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Wechselgeld: Schweigen ist keine konkludente Täuschung – Unterlassen braucht einen Garanten.",
+            "§ 127 StPO: Tat oder Verdacht? Entscheidend für die Notwehr des Festgehaltenen.",
+            "Vermögensschaden: saldieren, nur die Gegenleistung anrechnen, persönlicher Einschlag.",
+            "Gewahrsamsenklave: eingesteckt ist weggenommen – auch unter Beobachtung.",
+            "Belehrungsfehler: unverwertbar, nach der Rspr. aber nur mit rechtzeitigem Widerspruch."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 49a VwVfG: erst rückwirkend aufheben, dann per VA festsetzen.",
+            "Zustimmungsgesetz: Eine verweigerte Zustimmung kann der Bundestag nicht überstimmen.",
+            "Verfassungsbeschwerde gegen ein Gesetz: unmittelbar, subsidiär, ein Jahr Frist.",
+            "§ 78 VwGO: verklagt wird der Rechtsträger, die Behörde nur nach Landesrecht.",
+            "§ 46 VwVfG: örtlich unzuständig – Aufhebung nur, wenn es etwas ändern konnte."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Normenkette: §§ 212 Abs. 1, 22, 23 Abs. 1 StGB statt nur § 212 StGB.",
+            "Feiertage: geplante Pause, kleiner Plan, drei Prioritäten für Januar."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Anspruch 2023 entstanden und bekannt: Wann ist er verjährt?",
+            "Mieter verleiht das Auto unbefugt: An wen muss der Dritte herausgeben?",
+            "Was stockt, kommt auf deine Prioritätenliste für Januar."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Im neuen Jahr gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Fristen und Eigentum",
+            "Strafrecht: Täuschung und Wegnahme",
+            "ÖR: Zulässigkeit und Klagegegner",
+            "Methodik: Ketten statt Einzelnormen"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "kreislauf"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick vor Silvester: 18 Themen aus vier Bereichen – von der Verjährung zum Jahresende über die Gewahrsamsenklave bis zum richtigen Klagegegner nach § 78 VwGO. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und setz, was noch wackelt, auf deine Prioritätenliste für Januar. Speichern für die Wiederholung zwischen den Jahren.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen vor Silvester",
+      "coverText": "Vier Bereiche, ein Selbsttest",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Vor dem Jahreswechsel wird geprüft, welche Themen der Woche schon sicher sitzen.",
+        "handlung": "{A} nervously lifts four small crates one by one onto a sled, while {B} taps each crate with his pointer and pauses at one that rattles.",
+        "hinweisRegie": "Place the note in the free space above the rattling crate, slightly tilted toward it, without covering {A}'s hands or {B}'s pointer.",
+        "alternative": "{B} checks four lanterns along a snowy path while {A} refills the one that flickers."
+      },
+      "bildSzene": "tapping four crates, one rattles",
+      "bildSzeneAlt": "refilling flickering lantern on snowy path",
+      "quellen": [
+        "§ 199 BGB",
+        "§§ 946–951 BGB",
+        "§ 986 BGB",
+        "§ 11 GmbHG",
+        "§§ 312g, 355, 356 BGB",
+        "§§ 929, 930 BGB",
+        "§ 263 StGB",
+        "§ 127 StPO",
+        "§ 242 StGB",
+        "§ 136 StPO",
+        "§ 49a VwVfG",
+        "Art. 77, 78 GG",
+        "§ 93 BVerfGG",
+        "§ 78 VwGO",
+        "§ 46 VwVfG",
+        "§§ 22, 23 StGB",
+        "Themenpool: methodik-904",
+        "Themenpool: mindset-6"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.200Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-741",
+      "slug": "2026-12-27-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Körperverletzung: Die Einwilligung gehört nicht in den Tatbestand",
+          "titelZeilen": [
+            "Körperverletzung:",
+            "Die Einwilligung",
+            "gehört nicht in",
+            "den Tatbestand"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Einwilligung erst auf Stufe zwei",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Bei § 223 StGB ist die Einwilligung nach h.M. ein Rechtfertigungsgrund. Anders als das tatbestandsausschließende Einverständnis etwa beim Diebstahl prüfst du sie erst in der Rechtswidrigkeit – mit eigenen Voraussetzungen und der Grenze des § 228 StGB."
+        },
+        {
+          "art": "schritte",
+          "titel": "Tatbestand",
+          "schritte": [
+            {
+              "titel": "1. Andere Person",
+              "text": "Tatobjekt ist nur ein anderer Mensch; die Selbstverletzung ist nicht erfasst."
+            },
+            {
+              "titel": "2. Körperliche Misshandlung",
+              "text": "Üble, unangemessene Behandlung, die Wohlbefinden oder Unversehrtheit mehr als nur unerheblich beeinträchtigt."
+            },
+            {
+              "titel": "3. Gesundheitsschädigung",
+              "text": "Hervorrufen oder Steigern eines vom Normalzustand nachteilig abweichenden krankhaften Zustands."
+            },
+            {
+              "titel": "4. Vorsatz",
+              "text": "Mindestens bedingter Vorsatz bezüglich Erfolg und Kausalität."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Rechtswidrigkeit, Schuld, Antrag",
+          "schritte": [
+            {
+              "titel": "5. Einwilligung",
+              "text": "Dispositionsbefugnis, Einwilligungsfähigkeit, Erklärung vor der Tat, keine wesentlichen Willensmängel, Handeln in Kenntnis."
+            },
+            {
+              "titel": "6. Grenze: § 228 StGB",
+              "text": "Trotz Einwilligung rechtswidrig, wenn die Tat gegen die guten Sitten verstößt – nach der Rspr. vor allem bei konkreter Todesgefahr."
+            },
+            {
+              "titel": "7. Schuld und Strafantrag",
+              "text": "Die einfache Körperverletzung wird nur auf Antrag verfolgt, außer bei besonderem öffentlichem Interesse (§ 230 Abs. 1 StGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: die verabredete Schlägerei",
+          "text": "Teile der Literatur sehen in der Einwilligung schon einen Tatbestandsausschluss – die h.M. rechtfertigt. Praktisch wichtig ist § 228 StGB: Bei verabredeten Schlägereien zwischen Gruppen hält der BGH die Einwilligung für unwirksam, wenn es an Absprachen und Sicherungen gegen eine Eskalation fehlt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Tatbestand ohne Einwilligung prüfen. Sie rechtfertigt erst auf der zweiten Stufe – begrenzt durch § 228 StGB."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 223 StGB in drei Stufen",
+          "punkte": [
+            "Misshandlung oder Gesundheitsschädigung?",
+            "Einwilligung wirksam – § 228 StGB?",
+            "Strafantrag nach § 230 StGB"
+          ],
+          "icons": [
+            "person",
+            "haken",
+            "dokument"
+          ]
+        }
+      ],
+      "caption": "Die Einwilligung gehört bei der Körperverletzung nicht in den Tatbestand. Nach h.M. ist sie ein Rechtfertigungsgrund: erst Misshandlung oder Gesundheitsschädigung und Vorsatz prüfen, dann die Einwilligung mit ihren Voraussetzungen und der Sittenwidrigkeitsgrenze des § 228 StGB. Bei verabredeten Gruppenschlägereien ohne Absprachen und Sicherungen scheitert die Einwilligung nach dem BGH an § 228 StGB. Und am Ende: Strafantrag nach § 230 StGB. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#körperverletzung",
+        "#223stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Körperverletzung: das Prüfschema",
+      "coverText": "Einwilligung erst auf Stufe zwei",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Ob eine Verletzung erlaubt war, wird erst geprüft, nachdem feststeht, dass eine Verletzung vorliegt.",
+        "handlung": "{B} holds out his bandaged arm to {A}, who first examines the bandage closely and only then turns to a small signed permission slip lying on a crate beside them.",
+        "hinweisRegie": "Place the note in the free space between the bandaged arm and the permission slip, slightly tilted toward the slip, without covering {A}'s examining hands.",
+        "alternative": "{A} climbs a two-step ladder: on the first step she inspects a dent in a crystal, on the second she reviews a handshake agreement with {B}."
+      },
+      "bildSzene": "examining bandage, then permission slip",
+      "bildSzeneAlt": "two-step ladder: dent, then handshake",
+      "quellen": [
+        "§ 223 StGB",
+        "§ 228 StGB",
+        "§ 230 StGB",
+        "Themenpool: strafbt-741"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "aufbau-reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.200Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-612",
+      "slug": "2026-12-27-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Art. 3 Abs. 3 GG: drei Unterschiede zum Gleichheitssatz",
+          "unter": "Gleichheit · Art. 3 Abs. 2, 3 GG",
+          "text": "Verbotene Merkmale, strengere Rechtfertigung, eigener Förderauftrag.",
+          "norm": "Art. 3 Abs. 2, 3 GG",
+          "icon": "waage",
+          "sprecher": "Für Art. 3 Abs. 3 GG reicht kein sachlicher Grund. Die besonderen Gleichheitssätze funktionieren anders als Art. 3 Absatz eins. Hier sind die drei Unterschiede.",
+          "marken": [
+            "kein sachlicher Grund",
+            "drei Unterschiede"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Verbotene Merkmale",
+          "text": "Geschlecht, Abstammung, Rasse, Sprache, Heimat, Herkunft, Glaube, Anschauungen, Behinderung.",
+          "norm": "Art. 3 Abs. 3 GG",
+          "sprecher": "Unterschied eins: die Merkmale. Absatz drei nennt feste Merkmale, etwa Geschlecht, Abstammung, Herkunft, Glauben oder politische Anschauungen. Wegen dieser Merkmale darf niemand benachteiligt oder bevorzugt werden. Bei einer Behinderung ist nur die Benachteiligung verboten.",
+          "marken": [
+            "Katalog"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anknüpfung – auch mittelbar",
+          "text": "Die Regelung knüpft an das Merkmal an; auch mittelbare Benachteiligung kann erfasst sein.",
+          "norm": "Art. 3 Abs. 3 GG",
+          "sprecher": "Unterschied zwei: die Ungleichbehandlung. Es reicht, dass eine Regelung an ein verbotenes Merkmal anknüpft. Nach dem Bundesverfassungsgericht kann auch eine neutral formulierte Regelung erfasst sein, die faktisch überwiegend ein Geschlecht trifft.",
+          "marken": [
+            "auch mittelbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rechtfertigung nur durch Verfassungsrecht",
+          "text": "Kein Gesetzesvorbehalt: nur kollidierendes Verfassungsrecht, verhältnismäßig angewandt.",
+          "norm": "Art. 3 Abs. 3 GG",
+          "sprecher": "Unterschied drei: die Rechtfertigung. Art. 3 Absatz drei steht unter keinem Gesetzesvorbehalt. Ein bloß sachlicher Grund oder die neue Formel reichen deshalb nicht. Rechtfertigen kann nur kollidierendes Verfassungsrecht, und die Ungleichbehandlung muss verhältnismäßig sein.",
+          "marken": [
+            "nur Verfassungsrecht"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Sonderfall Geschlecht",
+          "text": "Zwingende natürliche Unterschiede – oder Verfassungsrecht wie der Förderauftrag.",
+          "norm": "Art. 3 Abs. 2 S. 2 GG",
+          "sprecher": "Beim Geschlecht gilt nach dem Bundesverfassungsgericht: Differenzierungen sind zulässig, soweit sie zwingend erforderlich sind, um Probleme zu lösen, die ihrer Natur nach nur bei Männern oder nur bei Frauen auftreten. Sonst bleibt nur kollidierendes Verfassungsrecht, etwa der Förderauftrag aus Art. 3 Absatz zwei Satz zwei.",
+          "marken": [
+            "Förderauftrag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Verbotenes Merkmal, Anknüpfung auch mittelbar, Rechtfertigung nur durch Verfassungsrecht.",
+          "norm": "Art. 3 Abs. 2, 3 GG",
+          "sprecher": "Merke: verbotenes Merkmal, Anknüpfung auch mittelbar, Rechtfertigung nur durch kollidierendes Verfassungsrecht. Die Formeln aus Art. 3 Absatz eins lässt du hier stecken.",
+          "marken": [
+            "strenger Maßstab"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst nach Absatz 3 fragen",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir die drei Unterschiede für die nächste Grundrechtsklausur. Und prüf bei jeder Ungleichbehandlung zuerst, ob ein Merkmal aus Absatz drei im Spiel ist.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Für Art. 3 Abs. 3 GG reicht kein sachlicher Grund. Die besonderen Gleichheitssätze unterscheiden sich in drei Punkten vom allgemeinen Gleichheitssatz: Sie verbieten bestimmte Anknüpfungsmerkmale, erfassen nach dem BVerfG auch mittelbare Benachteiligungen und lassen sich mangels Gesetzesvorbehalt nur durch kollidierendes Verfassungsrecht rechtfertigen. Beim Geschlecht kommt der Förderauftrag aus Art. 3 Abs. 2 S. 2 GG hinzu. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#gleichheitssatz",
+        "#art3gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Besondere Gleichheitssätze: Art. 3 Abs. 2, 3 GG",
+      "titelZeilen": [
+        "Art. 3 Abs. 3 GG:",
+        "drei Unterschiede",
+        "zum Gleichheitssatz"
+      ],
+      "coverText": "Nur Verfassungsrecht rechtfertigt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Bei den besonderen Gleichheitssätzen genügt ein gewöhnlicher Grund nicht – die Hürde liegt deutlich höher.",
+        "handlung": "{A} points his pointer at two gates side by side: a low one that {B} opens easily with a small key, and a tall sealed one that only opens with a large, rare crystal key.",
+        "hinweisRegie": "Place the note in the free space beside the tall sealed gate, slightly tilted toward its lock, without covering {B}'s small key or the low gate.",
+        "alternative": "{B} holds a small weight that tips a light scale, while {A} shows a second, heavier scale that the small weight cannot move."
+      },
+      "bildSzene": "low gate versus tall sealed gate",
+      "bildSzeneAlt": "small weight cannot move heavy scale",
+      "quellen": [
+        "Art. 3 Abs. 1 GG",
+        "Art. 3 Abs. 2 GG",
+        "Art. 3 Abs. 3 GG",
+        "Themenpool: grundr-612"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-unterschiede",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.205Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-519",
+      "ueberzeile": "Prüfungsfrage Erbrecht",
+      "titel": "E stirbt ohne Testament, hinterlässt F (Zugewinngemeinschaft) und zwei Kinder. Wie groß ist der Erbteil der F?",
+      "optionen": [
+        "1/4 – nur nach § 1931 Abs. 1 BGB",
+        "1/3 – sie erbt wie ein weiteres Kind",
+        "1/2 – 1/4 nach § 1931 plus 1/4 nach § 1371 BGB"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 1931 BGB",
+        "§ 1371 BGB",
+        "§ 1924 BGB",
+        "Themenpool: famerb-519"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.205Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-519",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Hälfte – ein Viertel plus ein pauschales Viertel",
+      "text": "Neben Verwandten der ersten Ordnung erbt der Ehegatte ein Viertel (§ 1931 Abs. 1 BGB). In der Zugewinngemeinschaft erhöht sich das um ein weiteres Viertel (§ 1371 Abs. 1 BGB) – pauschal, unabhängig davon, ob tatsächlich ein Zugewinn erzielt wurde. F erbt also 1/2, die beiden Kinder teilen sich die andere Hälfte: je 1/4.",
+      "norm": "§ 1931 Abs. 1, 3 BGB · § 1371 Abs. 1 BGB",
+      "quellen": [
+        "§ 1931 BGB",
+        "§ 1371 BGB",
+        "§ 1924 BGB",
+        "Themenpool: famerb-519"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.205Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "1/4 – nur nach § 1931 Abs. 1 BGB",
+        "1/3 – sie erbt wie ein weiteres Kind",
+        "1/2 – 1/4 nach § 1931 plus 1/4 nach § 1371 BGB"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-566",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Klausel angreifen: § 732 oder § 768 ZPO?",
+      "text": "Die vollstreckbare Ausfertigung erteilt die Geschäftsstelle (§ 724 ZPO); bei Bedingungseintritt oder Rechtsnachfolge braucht es eine qualifizierte Klausel (§§ 726, 727 ZPO). Formelle Fehler rügt der Schuldner mit der Klauselerinnerung (§ 732 ZPO). Bestreitet er den Bedingungseintritt oder die Rechtsnachfolge in der Sache, bleibt die Klauselgegenklage (§ 768 ZPO).",
+      "norm": "§§ 724, 726, 727, 732, 768 ZPO",
+      "quellen": [
+        "§ 724 ZPO",
+        "§ 726 ZPO",
+        "§ 727 ZPO",
+        "§ 732 ZPO",
+        "§ 768 ZPO",
+        "Themenpool: zwangsv-566"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.205Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "pairId": "assessoroer-838",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Beschluss nach § 123 VwGO: Tenor wie im Urteil?",
+      "falsch": "„Der Antragsgegner wird verpflichtet, dem Antragsteller die Genehmigung zu erteilen. … Der Beschluss ist vorläufig vollstreckbar.“",
+      "richtigText": "Die einstweilige Anordnung regelt grundsätzlich nur vorläufig: „… wird im Wege der einstweiligen Anordnung verpflichtet, den Antragsteller vorläufig … zuzulassen.“ Eine Vorwegnahme der Hauptsache ist nur ausnahmsweise zulässig. Es folgen Kosten (§ 154 Abs. 1 VwGO) und Streitwert – ein Ausspruch zur vorläufigen Vollstreckbarkeit entfällt.",
+      "quellen": [
+        "§ 123 VwGO",
+        "§ 154 Abs. 1 VwGO",
+        "Themenpool: assessoroer-838"
+      ],
+      "fachLabel": "2. Examen ÖR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.205Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-404",
+      "ueberzeile": "Klausurtipp VwGO",
+      "titel": "Nachbarklage im Baugebiet: erst Gebietserhaltung, dann Rücksichtnahme",
+      "text": "Liegt das Vorhaben im selben Baugebiet und ist es dort der Art nach unzulässig, hat der Nachbar nach dem BVerwG einen Gebietserhaltungsanspruch – ohne spürbare Beeinträchtigung. Sonst bleibt meist das Gebot der Rücksichtnahme, das eine qualifizierte Betroffenheit verlangt. Festsetzungen zum Maß der Nutzung sind in der Regel nicht drittschützend.",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "§ 15 Abs. 1 BauNVO",
+        "§ 34 BauGB",
+        "Themenpool: vwgo-404"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.205Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-889",
+      "ueberzeile": "4 Punkte IPR",
+      "titel": "Fall mit Auslandsbezug: Diese Reihenfolge trägt",
+      "text": "Erst das Gericht, dann das Recht – und immer den Vorrang von Unionsrecht und Staatsverträgen beachten (Art. 3 EGBGB).",
+      "punkte": [
+        "Internationale Zuständigkeit, vorrangig nach der EuGVVO",
+        "Kollisionsnorm finden: Rom I/II vor dem EGBGB",
+        "Qualifizieren und anknüpfen, etwa Rechtswahl (Art. 3 Rom I-VO)",
+        "Sachrecht anwenden – Renvoi nur bei Gesamtverweisung"
+      ],
+      "quellen": [
+        "EuGVVO",
+        "Rom I-VO",
+        "Rom II-VO",
+        "Art. 3, 4 EGBGB",
+        "Themenpool: ipr-889"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:19.205Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

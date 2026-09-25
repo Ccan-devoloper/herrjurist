@@ -1,0 +1,894 @@
+{
+  "datum": "2027-02-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "sachen-508",
+        "themaTitel": "Nachbarrechtliche Ausgleichsfragen",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-720",
+        "themaTitel": "Zeitpunkt des Vorsatzes",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:25",
+        "art": "frage",
+        "themaId": "anklage-781"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:25",
+        "art": "antwort",
+        "themaId": "anklage-781"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "famerb-257"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:29",
+        "art": "fehler",
+        "themaId": "europa-934"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "tipp",
+        "themaId": "zpo-285"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:06",
+        "art": "zahl",
+        "themaId": "schuldbt-472"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "sachen-508",
+      "poolTitel": "Nachbarrechtliche Ausgleichsfragen",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 906, 1004 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-25"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-720",
+      "poolTitel": "Zeitpunkt des Vorsatzes",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§§ 15, 16 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-781",
+      "poolTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 151, 200 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2026-12-17",
+        "2027-02-08"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-781",
+      "poolTitel": "Anklagegrundsatz und Umgrenzungsfunktion",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 151, 200 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-17",
+        "2026-12-17",
+        "2027-02-08"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-257",
+      "poolTitel": "Wann besteht ein Anspruch auf Trennungsunterhalt?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1361 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-14",
+        "2026-09-14"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "europa-934",
+      "poolTitel": "Rückforderung unionsrechtswidriger Beihilfen: § 48 VwVfG unter dem Effektivitätsgebot",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-18",
+        "2026-12-17"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "zpo-285",
+      "poolTitel": "Wie wirkt eine Erledigung der Hauptsache?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-20",
+        "2027-02-04"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "schuldbt-472",
+      "poolTitel": "Reparierbarkeit als objektives Beschaffenheitsmerkmal seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 434 Abs. 3 Satz 2 BGB",
+        "Art. 229 § 72 EGBGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-10",
+        "2026-12-21",
+        "2027-02-16"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-02-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: vier Bereiche, 18 Kernsätze",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "vier Bereiche,",
+            "18 Kernsätze"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 313 BGB: Erst Anpassung prüfen – Rücktritt oder Kündigung nur, wenn sie ausscheidet.",
+            "Reparierbarkeit: Für Kaufverträge ab 31.07.2026 übliche Beschaffenheit (§ 434 Abs. 3 BGB).",
+            "Digitale Elemente: Erst klären, ob eigenständiges Produkt oder Teil der Ware (§§ 327a, 475b BGB).",
+            "Schon bezahlt? Das ist ein Fall für § 767, nicht für § 766 ZPO.",
+            "AGB: Erst Einbeziehung samt § 305c BGB, dann Inhaltskontrolle."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Ingerenz: Nur pflichtwidriges Vorverhalten mit naheliegender Gefahr macht zum Garanten.",
+            "Kausal heißt nicht zurechenbar: ohne missbilligte Gefahr kein Totschlag.",
+            "Durchsuchung beim Dritten: Tatsachen statt bloßer Vermutung (§ 103 StPO).",
+            "Später dazugekommen: vor Vollendung Mittäter möglich, danach Anschlussdelikte.",
+            "Kein letztes Wort: relativer Revisionsgrund – es kommt auf das Beruhen an."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Zwangsgeld: Der wirksame, vollziehbare Grund-VA trägt die Vollstreckung.",
+            "Menschenwürde: Objekt sein allein reicht nicht – Subjektqualität missachtet?",
+            "Nachbarklage: Erst die drittschützende Norm, dann der Verstoß.",
+            "Grundrechtsschema: In der Rechtfertigung zuerst die Art der Schranke bestimmen.",
+            "Parteiaustritt: Das Mandat bleibt beim Abgeordneten (Art. 38 Abs. 1 S. 2 GG).",
+            "Anhörung vergessen: entbehrlich, nach § 45 geheilt oder § 46 VwVfG?"
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Hilfsgutachten: Hauptergebnis stehen lassen, an der Weiche einsteigen.",
+            "Klausurtag: Ein vorher festgelegter Ablauf spart Kraft für die Lösung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann darf die Polizei bei der Mutter des Verdächtigen durchsuchen?",
+            "Welche drei Wege retten einen Bescheid ohne Anhörung?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Vertrag und Vollstreckung",
+            "Strafrecht: Zurechnung und Verfahren",
+            "Öffentliches Recht: Schema und Verfahren",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: vier Bereiche, 18 Kernsätze – von § 313 BGB über die Durchsuchung beim Dritten bis zur vergessenen Anhörung. Zivilrecht, Strafrecht und Öffentliches Recht stehen jeweils auf einer eigenen Folie, dazu Klausurtechnik und Kopfsache. Geh jeden Punkt durch und markiere, was du noch nicht ohne Unterlagen erklären kannst. Genau das kommt auf die Wiederholungsliste.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Kernsätze der Woche",
+      "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Woche wird in vier Bereiche sortiert und kurz abgefragt.",
+        "handlung": "{A} carries a heavy crate of glowing crystals and sets it down, while {B} curiously lifts single crystals out and places them on four separate shelves.",
+        "hinweisRegie": "Place the note in the free space above the four shelves, slightly tilted toward the last crystal {B} is holding, without covering the crate, {A}'s face or {B}'s hands.",
+        "alternative": "{B} holds up one crystal against the light while {A} points to the shelf where it belongs."
+      },
+      "bildSzene": "crystals sorted onto four shelves",
+      "bildSzeneAlt": "crystal held up against the light",
+      "quellen": [
+        "§ 313 BGB",
+        "§ 434 Abs. 3 BGB",
+        "§§ 327a, 475b BGB",
+        "§§ 766, 767 ZPO",
+        "§ 305c BGB",
+        "§ 13 StGB",
+        "§ 212 StGB",
+        "§§ 102, 103 StPO",
+        "§ 25 Abs. 2 StGB",
+        "§ 337 StPO",
+        "Art. 1 Abs. 1 GG",
+        "§ 42 Abs. 2 VwGO",
+        "Art. 38 Abs. 1 S. 2 GG",
+        "§§ 28, 45, 46 VwVfG"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.071Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-508",
+      "slug": "2027-02-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Feuer vom Nachbarn: Ausgleich auch ohne Verschulden",
+          "titelZeilen": [
+            "Feuer vom Nachbarn:",
+            "Ausgleich auch",
+            "ohne Verschulden"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Analog § 906 II 2 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "In der Garage des N entsteht durch einen technischen Defekt ein Brand. Das Feuer greift auf das Haus der E über. N hat nichts falsch gemacht, § 823 Abs. 1 BGB scheitert am Verschulden. Geht E leer aus? Nein – die Rspr. hilft mit dem nachbarrechtlichen Ausgleichsanspruch."
+        },
+        {
+          "art": "text",
+          "titel": "Woher der Anspruch kommt",
+          "text": "§ 906 Abs. 2 S. 2 BGB gibt einen Geldausgleich, wenn der Eigentümer eine Einwirkung dulden muss. Der BGH wendet das analog an, wenn die Einwirkung rechtswidrig ist, der Betroffene sie aber aus besonderen Gründen nicht rechtzeitig nach § 1004 BGB abwehren konnte – faktischer Duldungszwang."
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfungsschema (analog § 906 Abs. 2 S. 2 BGB)",
+          "schritte": [
+            {
+              "titel": "1. Beeinträchtigtes Grundstück",
+              "text": "Eigentümer – nach der Rspr. auch der Besitzer."
+            },
+            {
+              "titel": "2. Einwirkung von einem anderen Grundstück",
+              "text": "Aus privatwirtschaftlicher Nutzung; Gegner ist der Nutzer als Störer."
+            },
+            {
+              "titel": "3. Rechtswidrig, aber nicht abwehrbar",
+              "text": "Nach § 1004 BGB abwehrbar, faktisch aber nicht rechtzeitig."
+            },
+            {
+              "titel": "4. Unzumutbare Beeinträchtigung",
+              "text": "Über dem entschädigungslos hinzunehmenden Maß."
+            },
+            {
+              "titel": "5. Rechtsfolge",
+              "text": "Angemessener Geldausgleich; bei Substanzschäden kann er Reparaturkosten umfassen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Worauf es in der Klausur ankommt",
+          "punkte": [
+            "Kein Verschulden nötig – das ist der Grund, warum der Anspruch neben § 823 BGB Bedeutung hat.",
+            "Störereigenschaft: Die Gefahrenquelle muss dem Nutzer zurechenbar sein; Zufall allein genügt nicht.",
+            "Subsidiär: Er tritt zurück, wo eine Sonderregelung den Fall abschließend erfasst."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rechtswidrig, nicht abwehrbar, unzumutbar: Dann Geldausgleich analog § 906 Abs. 2 S. 2 BGB – auch ohne Verschulden."
+        },
+        {
+          "art": "cta",
+          "titel": "Ausgleich in drei Zügen",
+          "punkte": [
+            "Einwirkung vom Nachbargrundstück?",
+            "Faktisch nicht abwehrbar?",
+            "Unzumutbar – dann Geldausgleich"
+          ],
+          "icons": [
+            "haeuser",
+            "feuer",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Feuer vom Nachbarn – und der Nachbar hat nichts falsch gemacht. Trotzdem geht der Geschädigte nicht leer aus: Die Rspr. gewährt einen verschuldensunabhängigen nachbarrechtlichen Ausgleichsanspruch analog § 906 Abs. 2 S. 2 BGB, wenn eine rechtswidrige Einwirkung faktisch nicht abgewehrt werden konnte. Entscheidend sind Störereigenschaft, Unzumutbarkeit und die Subsidiarität. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#906bgb",
+        "#1004bgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Feuer vom Nachbarn: Ausgleich ohne Verschulden",
+      "coverText": "Analog § 906 II 2 BGB",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer eine Einwirkung vom Nachbargrundstück nicht abwehren konnte, bekommt Ausgleich – auch ohne Verschulden des Nachbarn.",
+        "handlung": "{A} stares in shock as sparks jump over a low fence from his workshop to the neighbouring hut, while {B} calmly holds out a small pouch of coins toward the damaged hut's owner side.",
+        "hinweisRegie": "Place the note in the free space just above the low fence where the sparks cross over, slightly tilted toward the damaged hut, without covering {A}'s face or the coin pouch in {B}'s hand.",
+        "alternative": "{B} weighs a scorched roof tile against a small pile of coins on a simple balance, while {A} looks on."
+      },
+      "bildSzene": "sparks jump fence to neighbouring hut",
+      "bildSzeneAlt": "scorched roof tile weighed against coins",
+      "quellen": [
+        "§ 906 BGB",
+        "§ 1004 BGB",
+        "§ 823 BGB",
+        "Themenpool: sachen-508"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-ohne-verschulden",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.071Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-720",
+      "slug": "2027-02-21-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Tatplan für morgen, Unfall heute: nur § 222 StGB",
+          "unter": "Vorsatz · §§ 15, 16 StGB",
+          "text": "Der Vorsatz muss bei der Tathandlung vorliegen – nicht davor, nicht danach.",
+          "norm": "§ 16 Abs. 1 S. 1 StGB",
+          "icon": "uhr",
+          "sprecher": "Geplant für morgen, heute versehentlich getötet: kein Totschlag. Denn beim Vorsatz zählt nicht, was der Täter irgendwann wollte, sondern was er wollte, als er gehandelt hat.",
+          "marken": [
+            "Plan ≠ Vorsatz",
+            "Zeitpunkt zählt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Koinzidenz: Vorsatz bei Begehung",
+          "text": "§ 16 Abs. 1 S. 1 StGB: bei Begehung der Tat; Zeit der Tat ist die Handlung (§ 8 StGB).",
+          "norm": "§§ 8, 16 StGB",
+          "sprecher": "Schritt eins: das Koinzidenzprinzip. § 16 StGB stellt auf die Umstände bei Begehung der Tat ab. Begangen ist die Tat nach § 8 StGB, wenn der Täter handelt. Vorsatz und Handlung müssen zusammenfallen.",
+          "marken": [
+            "Vorsatz + Handlung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vorsatz danach: dolus subsequens",
+          "text": "Wer sich erst nach der Tat über den Erfolg freut, handelte nicht vorsätzlich.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Vorsatz, der erst danach kommt. A verletzt B versehentlich tödlich und freut sich anschließend darüber. Das ist dolus subsequens – unbeachtlich. Übrig bleibt Fahrlässigkeit.",
+          "marken": [
+            "danach: unbeachtlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Vorsatz davor: dolus antecedens",
+          "text": "Ein Tatplan für später trägt nicht die frühere, unvorsätzliche Handlung.",
+          "norm": "§ 222 StGB",
+          "sprecher": "Schritt drei: Vorsatz, der nur vorher bestand. A will B morgen töten, fährt ihn aber heute aus Unachtsamkeit tot. Der Plan trägt diese Handlung nicht. Also nur fahrlässige Tötung, § 222 StGB.",
+          "marken": [
+            "davor: unbeachtlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Erfolg früher als geplant",
+          "text": "Maßgeblich: Hatte der Täter schon unmittelbar angesetzt?",
+          "norm": "§ 22 StGB",
+          "sprecher": "Schritt vier: Der Erfolg tritt früher ein als geplant. Hat der Täter schon unmittelbar zur Tat angesetzt, liegt nach herrschender Meinung ein vollendetes Vorsatzdelikt vor, wenn die Abweichung unwesentlich ist. Im Vorbereitungsstadium bleibt es bei Fahrlässigkeit.",
+          "marken": [
+            "Versuchsbeginn?"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: Erfolg erst durch die zweite Handlung",
+          "text": "Opfer für tot gehalten, beseitigt – und erst dadurch getötet. Vollendung oder Versuch?",
+          "norm": null,
+          "sprecher": "Der Klassiker andersherum: A hält B nach dem Würgen für tot, wirft ihn ins Wasser, erst dort stirbt B. Die Rechtsprechung sieht eine unwesentliche Abweichung vom Kausalverlauf und bejaht Vollendung. Ein Teil der Literatur trennt: Versuch plus fahrlässige Tötung.",
+          "marken": [
+            "Streit",
+            "Kausalverlauf"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Vorsatz zählt nur im Zeitpunkt der Handlung – davor und danach nicht.",
+          "norm": "§ 16 Abs. 1 S. 1 StGB",
+          "sprecher": "Merke: Vorsatz zählt nur im Moment der Handlung. Was davor geplant oder danach gewollt wurde, hilft nicht.",
+          "marken": [
+            "nur im Moment"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zeitpunkt des Vorsatzes sichern",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Strafrechtsklausur.",
+          "marken": [
+            "Speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Geplant für morgen, heute versehentlich getötet: Das ist kein Totschlag. Der Vorsatz muss bei Begehung der Tat vorliegen (§§ 8, 16 Abs. 1 S. 1 StGB) – dolus antecedens und dolus subsequens sind unbeachtlich. Tritt der Erfolg früher ein als geplant, kommt es darauf an, ob der Täter schon unmittelbar angesetzt hatte. Und beim Klassiker mit der zweiten Handlung streiten Rspr. und Teile der Literatur. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#vorsatz",
+        "#16stgb",
+        "#jurastudent",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorsatz: Nur der Moment der Handlung zählt",
+      "titelZeilen": [
+        "Tatplan für morgen,",
+        "Unfall heute:",
+        "nur § 222 StGB"
+      ],
+      "coverText": "Vorsatz davor und danach zählt nicht",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Der Vorsatz muss genau im Moment der Handlung vorliegen – nicht nur vorher geplant oder hinterher gewollt.",
+        "handlung": "{A} taps his pointer on the single moment where two sliding rails meet, while {B} hovers and holds the two rails exactly aligned.",
+        "hinweisRegie": "Place the note in the free space directly beside the meeting point of the two rails, slightly tilted toward {A}'s pointer tip, without covering {B}'s grip on the rails or {A}'s face.",
+        "alternative": "{B} holds two transparent sheets, one showing a plan and one an action, while {A} checks whether they overlap at the same spot."
+      },
+      "bildSzene": "pointer at point where two rails meet",
+      "bildSzeneAlt": "two transparent sheets checked for overlap",
+      "quellen": [
+        "§ 8 StGB",
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "§ 22 StGB",
+        "§ 222 StGB",
+        "Themenpool: strafat-720"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung-zeitpunkt",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.074Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-781",
+      "ueberzeile": "Prüfungsfrage Anklage",
+      "titel": "Die Anklage lässt offen, welcher von mehreren gleichartigen Diebstählen gemeint ist. Was folgt daraus?",
+      "optionen": [
+        "Ein Hinweis nach § 265 StPO in der Hauptverhandlung genügt",
+        "Anklage unwirksam – Verfahrenshindernis, grundsätzlich Einstellung",
+        "Freispruch, weil die Tat nicht nachgewiesen ist"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 260 Abs. 3 StPO",
+        "§ 265 StPO",
+        "Themenpool: anklage-781"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.074Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-781",
+      "ueberzeile": "Auflösung",
+      "titel": "Umgrenzung verfehlt: Die Anklage ist unwirksam",
+      "text": "Die Anklage muss die Tat nach Zeit, Ort und Begehungsweise so beschreiben, dass sie von anderen gleichartigen Taten unterscheidbar ist (§ 200 Abs. 1 StPO). Fehlt das, ist sie unwirksam: Es fehlt eine Prozessvoraussetzung, das Verfahren ist grundsätzlich einzustellen (§ 260 Abs. 3 StPO). Mängel nur der Informationsfunktion lassen die Anklage dagegen wirksam.",
+      "norm": "§ 200 Abs. 1 StPO",
+      "quellen": [
+        "§ 151 StPO",
+        "§ 200 Abs. 1 StPO",
+        "§ 260 Abs. 3 StPO",
+        "Themenpool: anklage-781"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.074Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ein Hinweis nach § 265 StPO in der Hauptverhandlung genügt",
+        "Anklage unwirksam – Verfahrenshindernis, grundsätzlich Einstellung",
+        "Freispruch, weil die Tat nicht nachgewiesen ist"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-257",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1361 BGB: Unterhalt schon vor der Scheidung",
+      "text": "Leben Ehegatten getrennt, kann einer vom anderen den angemessenen Unterhalt nach den ehelichen Lebens-, Erwerbs- und Vermögensverhältnissen verlangen (§ 1361 Abs. 1 BGB). Auf eigene Erwerbstätigkeit darf der bisher nicht Erwerbstätige nur verwiesen werden, wenn das von ihm erwartet werden kann (Abs. 2). Die Härtegründe des § 1579 Nr. 2 bis 8 BGB gelten entsprechend (Abs. 3).",
+      "norm": "§ 1361 BGB",
+      "quellen": [
+        "§ 1361 BGB",
+        "§ 1567 BGB",
+        "§ 1579 BGB",
+        "Themenpool: famerb-257"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.075Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-934",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Unionsrechtswidrige Beihilfe: Darf die Behörde aus Billigkeit auf die Rücknahme verzichten?",
+      "falsch": "Ob die Behörde den Beihilfebescheid zurücknimmt, steht in ihrem Ermessen nach § 48 Abs. 1 S. 1 VwVfG – aus Billigkeitsgründen kann sie davon absehen.",
+      "richtigText": "Hat die Kommission die Rückforderung einer unter Verstoß gegen Art. 108 Abs. 3 AEUV gewährten Beihilfe angeordnet, ist das Rücknahmeermessen nach der Rspr. auf null reduziert. Das Effektivitätsgebot verlangt die tatsächliche Rückforderung; nationale Billigkeitserwägungen dürfen sie nicht vereiteln. Vertrauensschutz kommt nur bei außergewöhnlichen Umständen in Betracht.",
+      "quellen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG",
+        "Themenpool: europa-934"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.075Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-285",
+      "ueberzeile": "Klausurtipp Zivilprozessrecht",
+      "titel": "Nur teilweise erledigt: eine Kostenentscheidung, zwei Maßstäbe",
+      "text": "Erklären beide Parteien den Rechtsstreit nur zum Teil für erledigt, entscheidet das Gericht über den Rest durch Urteil – und über die Kosten einheitlich im Urteil. Für den erledigten Teil gilt § 91a ZPO (billiges Ermessen nach bisherigem Sach- und Streitstand), für den Rest §§ 91, 92 ZPO. In den Gründen begründest du beide Teile getrennt.",
+      "quellen": [
+        "§ 91a ZPO",
+        "§§ 91, 92 ZPO",
+        "Themenpool: zpo-285"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.075Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-472",
+      "ueberzeile": "3 Punkte Kaufrecht",
+      "titel": "Reparierbarkeit als Beschaffenheit: Erst Datum und Parteien prüfen",
+      "text": "Beispiel: Händler H verkauft im März 2027 einen Kaffeevollautomaten an die Café-Betreiberin C. Ob die Neuregelung greift, hängt davon ab, wann und zwischen wem der Vertrag geschlossen wurde.",
+      "punkte": [
+        "Vertrag ab 31.07.2026: Reparierbarkeit zählt zur üblichen Beschaffenheit",
+        "Zwischen Unternehmern erst bei Verträgen ab 2028 – also nicht im Fall H/C",
+        "Sonst: Streit um den Beschaffenheitsbegriff entscheiden"
+      ],
+      "quellen": [
+        "§ 434 Abs. 3 BGB",
+        "Art. 229 § 72 EGBGB",
+        "Themenpool: schuldbt-472"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:28:05.075Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

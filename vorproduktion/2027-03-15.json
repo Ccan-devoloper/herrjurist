@@ -1,0 +1,889 @@
+{
+  "datum": "2027-03-15",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-546",
+        "themaTitel": "Zulässigkeitsprüfung der Zivilklage",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafat-304",
+        "themaTitel": "Wie prüft man den Rücktritt bei mehreren Beteiligten?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-644",
+        "themaTitel": "Widerruf rechtmäßiger Verwaltungsakte",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "vwgo-655"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "vwgo-655"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "grundr-091"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:39",
+        "art": "tipp",
+        "themaId": "strafat-290"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:46",
+        "art": "zahl",
+        "themaId": "revision-874"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:25",
+        "art": "streitstand",
+        "themaId": "assessorz-817"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-546",
+      "poolTitel": "Zulässigkeitsprüfung der Zivilklage",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 12 ff., 253 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-20",
+        "2027-01-21",
+        "2027-01-21"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafat-304",
+      "poolTitel": "Wie prüft man den Rücktritt bei mehreren Beteiligten?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 Abs. 2 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-644",
+      "poolTitel": "Widerruf rechtmäßiger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 49 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-655",
+      "poolTitel": "Allgemeine Leistungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-20",
+        "2027-02-10"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-655",
+      "poolTitel": "Allgemeine Leistungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-20",
+        "2027-02-10"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "grundr-091",
+      "poolTitel": "Wie wirken Grundrechte zwischen Privaten?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 Abs. 3 GG",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-27",
+        "2026-10-23"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "strafat-290",
+      "poolTitel": "Wie ist ein vorsätzliches Begehungsdelikt aufgebaut?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-01",
+        "2027-01-08"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "revision-874",
+      "poolTitel": "Wer ist revisionsberechtigt und wann ist er beschwert?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 296 StPO",
+        "§ 297 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02",
+        "2027-03-05"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-817",
+      "poolTitel": "Wann ist eine Drittwiderklage zulässig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-19",
+        "2027-01-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-546",
+      "slug": "2027-03-15-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Schmerzensgeld ohne Zahl im Antrag: Die Klage ist zulässig",
+          "titelZeilen": [
+            "Schmerzensgeld",
+            "ohne Zahl im Antrag:",
+            "Die Klage",
+            "ist zulässig"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Größenordnung statt Betrag",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "K wird bei einem Verkehrsunfall verletzt und verklagt B vor dem Landgericht auf „ein angemessenes Schmerzensgeld, mindestens 15.000 €“. B meint, der Antrag sei nicht bestimmt genug. Ist die Klage zulässig?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Zulässigkeit der Reihe nach",
+          "schritte": [
+            {
+              "titel": "Zuständigkeit",
+              "text": "Sachlich das LG (§§ 23 Nr. 1, 71 Abs. 1 GVG), örtlich Wohnsitz des B (§§ 12, 13 ZPO) oder Unfallort (§ 32 ZPO)."
+            },
+            {
+              "titel": "Parteien",
+              "text": "Partei- und Prozessfähigkeit (§§ 50, 51, 52 ZPO); vor dem LG zusätzlich Anwaltszwang (§ 78 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "Ordnungsgemäße Klageerhebung",
+              "text": "§ 253 Abs. 2 Nr. 2 ZPO: Gegenstand und Grund des Anspruchs bestimmt angeben, dazu ein bestimmter Antrag. Hier sitzt das Problem."
+            },
+            {
+              "titel": "Keine Rechtshängigkeit, keine Rechtskraft",
+              "text": "Dieselbe Sache darf nicht schon anhängig oder rechtskräftig entschieden sein (§ 261 Abs. 3 Nr. 1, § 322 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Lösung",
+          "text": "Ein Zahlungsantrag muss grundsätzlich beziffert sein. Liegt die Höhe aber im Ermessen des Gerichts – wie beim Schmerzensgeld (§ 253 Abs. 2 BGB, § 287 ZPO) –, genügt ein unbezifferter Antrag, wenn K die Bemessungsgrundlagen vorträgt und die Größenordnung nennt. Beides liegt vor: zulässig."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den unbezifferten Antrag erst in der Begründetheit zu diskutieren. Die Bestimmtheit ist Zulässigkeitsvoraussetzung: Fehlt sie, weist das Gericht die Klage – nach einem Hinweis (§ 139 ZPO) – durch Prozessurteil als unzulässig ab."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Bezifferung ist die Regel. Beim Schmerzensgeld reicht die Größenordnung – aber nur zusammen mit den Tatsachen für die Bemessung."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen an den Klageantrag",
+          "punkte": [
+            "Ist der Antrag bestimmt genug?",
+            "Liegt die Höhe im Ermessen des Gerichts?",
+            "Größenordnung und Bemessungstatsachen genannt?"
+          ],
+          "icons": [
+            "dokument",
+            "waage",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Schmerzensgeld einklagen, ohne einen festen Betrag zu nennen – geht das? Ja. § 253 Abs. 2 Nr. 2 ZPO verlangt zwar einen bestimmten Antrag, doch wenn die Höhe im Ermessen des Gerichts liegt, genügt ein unbezifferter Antrag. Voraussetzung: Der Kläger trägt die Bemessungsgrundlagen vor und nennt die Größenordnung, etwa einen Mindestbetrag. Die Bestimmtheit prüfst du in der Zulässigkeit, nicht erst in der Begründetheit. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#253zpo",
+        "#klageantrag",
+        "#schmerzensgeld",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schmerzensgeld: unbezifferter Antrag zulässig",
+      "coverText": "Größenordnung statt Betrag",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Beim Schmerzensgeld darf der Kläger den genauen Betrag offenlassen, wenn er die Größenordnung nennt.",
+        "handlung": "{A} curiously holds up an empty price tag toward {B}, who calmly uses his pointer to mark a single minimum line on a tall measuring stick standing next to a bandaged figure.",
+        "hinweisRegie": "Place the note in the free space beside the marked minimum line on the measuring stick, slightly tilted toward it, so it reads as the required order of magnitude without covering the empty price tag or any faces.",
+        "alternative": "{B} places a small weight labelled only by its size on one side of a balance, while {A} watches the other side stay open for the final amount."
+      },
+      "bildSzene": "empty price tag, minimum line marked",
+      "bildSzeneAlt": "small weight placed on open balance",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 287 ZPO",
+        "§ 253 Abs. 2 BGB",
+        "§§ 12, 13, 32 ZPO",
+        "§§ 23, 71 GVG",
+        "§ 139 ZPO",
+        "Themenpool: zpo-546"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.644Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-304",
+      "slug": "2027-03-15-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Rücktritt mit Komplizen: vier Schritte, der dritte verlangt mehr",
+          "titelZeilen": [
+            "Rücktritt mit",
+            "Komplizen: vier",
+            "Schritte, der dritte",
+            "verlangt mehr"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Aufhören allein genügt nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Sind mehrere an der Tat beteiligt – als Mittäter, Anstifter oder Gehilfen –, richtet sich der Rücktritt nach § 24 Abs. 2 StGB, nicht nach Abs. 1. Der Grund: Die Tat liegt nicht mehr allein in der Hand des Zurücktretenden. Deshalb verlangt das Gesetz grundsätzlich, dass er die Vollendung verhindert."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Versuch, nicht vollendet",
+              "text": "Die Tat ist ins Versuchsstadium gelangt (§ 22 StGB), aber nicht vollendet. Nach Vollendung ist kein Rücktritt mehr möglich."
+            },
+            {
+              "titel": "2. Kein Fehlschlag",
+              "text": "Hält der Beteiligte die Vollendung mit den vorhandenen Mitteln nicht mehr für möglich, scheidet der Rücktritt von vornherein aus."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Vollendung verhindert",
+              "text": "§ 24 Abs. 2 S. 1 StGB: etwa die Mittäter stoppen oder das Opfer warnen. Bloßes Aufhören genügt grundsätzlich nicht."
+            },
+            {
+              "titel": "4. Freiwillig",
+              "text": "Er handelt aus eigenem Antrieb, nicht unter dem Druck äußerer Umstände. Straffrei wird nur, wer selbst die Voraussetzungen erfüllt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Wenn Verhindern nicht nötig ist",
+          "punkte": [
+            "Unterbleibt die Vollendung ohne sein Zutun, genügt freiwilliges, ernsthaftes Bemühen (§ 24 II 2 Alt. 1 StGB).",
+            "Dasselbe gilt, wenn die Tat unabhängig von seinem früheren Tatbeitrag begangen wird (Alt. 2).",
+            "Rspr.: Beim unbeendeten Versuch kann es genügen, dass alle Beteiligten einvernehmlich nicht weiterhandeln."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Mehrere Beteiligte: verhindern statt bloß aufhören. Scheitert die Tat ohne sein Zutun, reicht ernsthaftes Bemühen."
+        },
+        {
+          "art": "cta",
+          "titel": "Rücktritt im Team",
+          "punkte": [
+            "§ 24 Abs. 2 statt Abs. 1 wählen",
+            "Versuch und kein Fehlschlag",
+            "Verhindert – oder ernsthaft bemüht?",
+            "Freiwilligkeit, Wirkung nur für ihn"
+          ],
+          "icons": [
+            "personen",
+            "lupe",
+            "stopp",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Mittäter hören auf – sind sie damit straffrei? Nicht ohne Weiteres. Bei mehreren Beteiligten gilt § 24 Abs. 2 StGB: Der Zurücktretende muss grundsätzlich die Vollendung verhindern, bloßes Aufhören reicht meist nicht. Unterbleibt die Vollendung ohne sein Zutun, genügt sein freiwilliges und ernsthaftes Bemühen. Und die Straffreiheit gilt nur für den, der selbst zurücktritt. Speichern für die nächste Beteiligungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#rücktritt",
+        "#24stgb",
+        "#mittäterschaft",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücktritt bei mehreren Beteiligten: § 24 II StGB",
+      "coverText": "Aufhören allein genügt nicht",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer zu mehreren handelt, wird nicht durch bloßes Weggehen straffrei, sondern muss den Erfolg aktiv verhindern.",
+        "handlung": "{A} nervously pulls the brake lever of a runaway cart that two shadowy partners have pushed off, while {B} stands firmly at the end of the track and raises a hand to stop it.",
+        "hinweisRegie": "Place the note in the free space next to the brake lever {A} is pulling, slightly tilted toward his hands, so it links active prevention to the note without covering {B}'s raised hand or any faces.",
+        "alternative": "{B} turns away from a group, while {A} points out that the fuse they lit together is still burning and has to be stamped out."
+      },
+      "bildSzene": "mechanic pulls brake on runaway cart",
+      "bildSzeneAlt": "shared fuse still burning, stamp it out",
+      "quellen": [
+        "§ 24 Abs. 2 StGB",
+        "§ 22 StGB",
+        "§ 25 Abs. 2 StGB",
+        "Themenpool: strafat-304"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-pruefschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.645Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-644",
+      "slug": "2027-03-15-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Widerruf wirkt nicht zurück – außer beim Zuschuss",
+          "unter": "Widerruf · § 49 VwVfG",
+          "text": "Grundsatz: nur für die Zukunft. Ausnahme: zweckgebundene Leistungen.",
+          "norm": "§ 49 Abs. 3 VwVfG",
+          "icon": "muenzen",
+          "sprecher": "Widerruf wirkt nur nach vorn? Beim Zuschuss nicht. Rechtmäßige Verwaltungsakte widerruft die Behörde grundsätzlich nur für die Zukunft. Bei zweckgebundenem Geld darf sie zurückgreifen.",
+          "marken": [
+            "nur nach vorn?",
+            "Ausnahme: Geld"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Grundsatz: Wirkung für die Zukunft",
+          "text": "§ 49 Abs. 1 und 2 VwVfG: Widerruf nur ex nunc.",
+          "norm": "§ 49 Abs. 1, 2 VwVfG",
+          "sprecher": "Schritt eins: der Grundsatz. Nach Absatz eins und zwei wirkt der Widerruf nur für die Zukunft. Was bis dahin galt, bleibt bestehen.",
+          "marken": [
+            "ex nunc"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anwendungsbereich: zweckgebundene Leistung",
+          "text": "Geldleistung oder teilbare Sachleistung zur Erfüllung eines bestimmten Zwecks.",
+          "norm": "§ 49 Abs. 3 S. 1 VwVfG",
+          "sprecher": "Schritt zwei: Absatz drei. Er erfasst Geldleistungen oder teilbare Sachleistungen für einen bestimmten Zweck. Typisch: die Subvention.",
+          "marken": [
+            "Zweckbindung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Grund: Zweck verfehlt oder Auflage offen",
+          "text": "Nr. 1: nicht oder nicht zweckentsprechend verwendet. Nr. 2: Auflage nicht erfüllt.",
+          "norm": "§ 49 Abs. 3 S. 1 Nr. 1, 2 VwVfG",
+          "sprecher": "Schritt drei: der Grund. Nummer eins: Das Geld wird nicht, nicht alsbald oder nicht für den bestimmten Zweck verwendet. Nummer zwei: Eine Auflage wird nicht oder nicht fristgerecht erfüllt.",
+          "marken": [
+            "Zweck verfehlt",
+            "Auflage offen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Jahresfrist und Ermessen",
+          "text": "§ 48 Abs. 4 VwVfG gilt entsprechend; der Widerruf steht im Ermessen.",
+          "norm": "§ 49 Abs. 3 S. 2 VwVfG",
+          "sprecher": "Schritt vier: Frist und Ermessen. Die Jahresfrist des § 48 Absatz vier gilt entsprechend. Und der Widerruf steht im Ermessen der Behörde.",
+          "marken": [
+            "Jahresfrist",
+            "Ermessen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Dann: Erstattung nach § 49a VwVfG",
+          "text": "Die Behörde setzt den Betrag durch schriftlichen Verwaltungsakt fest; er wird verzinst.",
+          "norm": "§ 49a Abs. 1, 3 VwVfG",
+          "sprecher": "Dann folgt die Erstattung: Die Behörde setzt die bereits erbrachten Leistungen durch schriftlichen Verwaltungsakt fest, und der Betrag wird grundsätzlich verzinst.",
+          "marken": [
+            "erstatten + verzinsen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Widerruf ex nunc – bei Zweckbindung auch ex tunc, dann Erstattung.",
+          "norm": "§§ 49, 49a VwVfG",
+          "sprecher": "Merke: Widerruf grundsätzlich nur für die Zukunft. Rückwirkend nur bei zweckgebundenen Leistungen, und dann mit Erstattung nach § 49a.",
+          "marken": [
+            "ex nunc · ex tunc"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Geht es um zweckgebundenes Geld?",
+          "text": "Speichern für die nächste Subventionsklausur.",
+          "sprecher": "Speicher dir das für die nächste Subventionsklausur. Und handelt eine Landesbehörde, schau ins Verwaltungsverfahrensgesetz deines Landes.",
+          "marken": [
+            "Zweck geprüft?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Widerruf wirkt nur für die Zukunft? Grundsätzlich ja: Rechtmäßige Verwaltungsakte widerruft die Behörde nach § 49 Abs. 1, 2 VwVfG ex nunc. Die Ausnahme steht in Abs. 3: Zweckgebundene Geld- oder teilbare Sachleistungen können auch für die Vergangenheit widerrufen werden, wenn der Zweck verfehlt oder eine Auflage nicht erfüllt ist. Die Jahresfrist gilt entsprechend § 48 Abs. 4 VwVfG, danach folgt die Erstattung nach § 49a VwVfG.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#49vwvfg",
+        "#subventionen",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerruf für die Vergangenheit: § 49 III VwVfG",
+      "titelZeilen": [
+        "Widerruf wirkt",
+        "nicht zurück –",
+        "außer beim Zuschuss"
+      ],
+      "coverText": "Zweck verfehlt: Geld zurück",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Einen rechtmäßigen Bescheid hebt die Behörde meist nur für die Zukunft auf – zweckwidrig verwendetes Fördergeld holt sie auch rückwirkend zurück.",
+        "handlung": "{A} carries a heavy sack of coins along a marked path but veers off toward a side tunnel, while {B} hovers above and pulls a thin rope that draws the sack back along the path already walked.",
+        "hinweisRegie": "Place the note in the open space along the stretch of path the sack is pulled back over, slightly tilted, so it reads as the look back into the past without covering the rope or {A}'s hands.",
+        "alternative": "{B} runs a simple coin conveyor belt in reverse, while {A} stands at the fork where the coins left their intended track."
+      },
+      "bildSzene": "coin sack pulled back along path",
+      "bildSzeneAlt": "coin conveyor belt running in reverse",
+      "quellen": [
+        "§ 49 VwVfG",
+        "§ 49a VwVfG",
+        "§ 48 Abs. 4 VwVfG",
+        "Themenpool: verwalt-644"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-uebersehen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.646Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-655",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Der Bürgermeister äußert sich öffentlich ehrverletzend über B. B will den Widerruf. Welche Klage?",
+      "optionen": [
+        "Anfechtungsklage gegen die Äußerung",
+        "Verpflichtungsklage auf einen Widerrufsbescheid",
+        "Allgemeine Leistungsklage auf Widerruf"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 40 Abs. 1 VwGO",
+        "§ 42 Abs. 2 VwGO analog",
+        "§ 43 Abs. 2 VwGO",
+        "Themenpool: vwgo-655"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.646Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-655",
+      "ueberzeile": "Auflösung",
+      "titel": "Allgemeine Leistungsklage – Äußerung und Widerruf sind Realakte",
+      "text": "Die amtliche Äußerung regelt nichts; sie ist schlichtes Verwaltungshandeln, kein Verwaltungsakt. Dasselbe gilt für ihren Widerruf. B klagt deshalb mit der allgemeinen Leistungsklage, die die VwGO voraussetzt (etwa § 43 Abs. 2). Klagebefugnis: § 42 Abs. 2 VwGO analog. Vorverfahren und Klagefrist gibt es grundsätzlich nicht.",
+      "norm": "§ 42 Abs. 2 VwGO analog · § 43 Abs. 2 VwGO",
+      "quellen": [
+        "§ 40 Abs. 1 VwGO",
+        "§ 42 Abs. 2 VwGO analog",
+        "§ 43 Abs. 2 VwGO",
+        "Themenpool: vwgo-655"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.646Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Anfechtungsklage gegen die Äußerung",
+        "Verpflichtungsklage auf einen Widerrufsbescheid",
+        "Allgemeine Leistungsklage auf Widerruf"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-091",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Art. 1 Abs. 3 GG: Grundrechte binden den Staat – nicht direkt den Nachbarn",
+      "text": "Adressaten der Grundrechte sind Gesetzgebung, vollziehende Gewalt und Rechtsprechung. Zwischen Privaten wirken sie mittelbar: Die Zivilgerichte müssen sie bei der Auslegung von Generalklauseln wie §§ 138, 242, 826 BGB berücksichtigen. Eine Ausnahme mit unmittelbarer Wirkung auch unter Privaten ist Art. 9 Abs. 3 S. 2 GG.",
+      "norm": "Art. 1 Abs. 3 GG · § 242 BGB",
+      "quellen": [
+        "Art. 1 Abs. 3 GG",
+        "Art. 9 Abs. 3 GG",
+        "§ 138 BGB",
+        "§ 242 BGB",
+        "§ 826 BGB",
+        "Themenpool: grundr-091"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.646Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-290",
+      "ueberzeile": "Klausurtipp Strafrecht AT",
+      "titel": "Tatumstand nicht gekannt? § 16 StGB gehört in den subjektiven Tatbestand",
+      "text": "Kennt der Täter einen Umstand nicht, der zum gesetzlichen Tatbestand gehört, fehlt der Vorsatz (§ 16 Abs. 1 S. 1 StGB). Prüfe das beim Vorsatz, nicht erst in der Schuld. Beispiel: A nimmt einen fremden Schirm mit, den er für seinen hält – kein Vorsatz bezüglich „fremd“. Danach an Fahrlässigkeit denken (§ 16 Abs. 1 S. 2 StGB); fahrlässiger Diebstahl ist aber nicht strafbar.",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 16 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafat-290"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.646Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-874",
+      "ueberzeile": "4 Punkte Revision",
+      "titel": "Wer darf Revision einlegen – und mit welcher Grenze?",
+      "text": "Die Berechtigung ist nur der erste Schritt: Der Angeklagte muss außerdem durch den Urteilsausspruch beschwert sein.",
+      "punkte": [
+        "Staatsanwaltschaft – auch zugunsten des Angeklagten (§ 296 StPO)",
+        "Angeklagter – bei Beschwer durch den Tenor (§ 296 StPO)",
+        "Verteidiger – nicht gegen den ausdrücklichen Willen des Angeklagten (§ 297 StPO)",
+        "Nebenkläger – nicht nur für eine andere Rechtsfolge (§ 400 StPO)"
+      ],
+      "quellen": [
+        "§ 296 StPO",
+        "§ 297 StPO",
+        "§ 400 StPO",
+        "Themenpool: revision-874"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.646Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-817",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "B erhebt Widerklage gegen Kläger K und den bisher unbeteiligten D. Was braucht es, um D einzubeziehen?",
+      "norm": "§§ 59, 60, 263 ZPO",
+      "optionen": [
+        "Rspr.: wie eine Klageänderung (§ 263 ZPO analog) – Einwilligung des D oder Sachdienlichkeit.",
+        "Andere Ansicht: Es genügen die Voraussetzungen der Streitgenossenschaft (§§ 59, 60 ZPO)."
+      ],
+      "text": "Klausur: Zuständigkeit gegenüber D gesondert prüfen. Deckt sich der Streitstoff, ist die Einbeziehung meist sachdienlich – dann entscheidet der Streit das Ergebnis selten.",
+      "quellen": [
+        "§ 33 ZPO",
+        "§§ 59, 60 ZPO",
+        "§ 263 ZPO",
+        "Themenpool: assessorz-817"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:13:21.646Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

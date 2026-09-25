@@ -1,0 +1,847 @@
+{
+  "datum": "2026-12-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "staat-631",
+        "themaTitel": "Verfassungsbeschwerde: Zulässigkeit",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "sachen-503",
+        "themaTitel": "Herausgabeanspruch des Eigentümers",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-072",
+        "themaTitel": "Wie prüft man den Vermögensschaden beim Betrug?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "verwalt-643"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "verwalt-643"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "delikt-036"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "streitstand",
+        "themaId": "assessorz-807"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:55",
+        "art": "merksatz",
+        "themaId": "delikt-035"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "begriff",
+        "themaId": "verwalt-650"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-631",
+      "poolTitel": "Verfassungsbeschwerde: Zulässigkeit",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 94 I Nr. 4a GG; §§ 90 ff. BVerfGG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "sachen-503",
+      "poolTitel": "Herausgabeanspruch des Eigentümers",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 985 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-22",
+        "2026-09-22"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-072",
+      "poolTitel": "Wie prüft man den Vermögensschaden beim Betrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-643",
+      "poolTitel": "Rücknahme rechtswidriger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-643",
+      "poolTitel": "Rücknahme rechtswidriger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 48 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "delikt-036",
+      "poolTitel": "Was ist das Recht am eingerichteten und ausgeübten Gewerbebetrieb?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 823 Abs. 1 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-15"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "assessorz-807",
+      "poolTitel": "Wann ist ohne, wann nur gegen Sicherheitsleistung vorläufig vollstreckbar?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "§ 713 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-05",
+        "2026-10-19"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "delikt-035",
+      "poolTitel": "Wann haftet der Geschäftsherr nach § 831 BGB und wann kann er sich entlasten?",
+      "fach": "delikt",
+      "fachLabel": "Deliktsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 831 BGB",
+        "§ 278 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "verwalt-650",
+      "poolTitel": "Sofortvollzug und unmittelbare Ausführung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Bundes-/Landesrecht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-631",
+      "slug": "2026-12-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Verfassungsbeschwerde gegen ein Gesetz: drei Hürden",
+          "titelZeilen": [
+            "Verfassungs-",
+            "beschwerde gegen",
+            "ein Gesetz:",
+            "drei Hürden"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Unmittelbar, subsidiär, ein Jahr",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Ein neues Bundesgesetz verbietet ab sofort, bestimmte Heizgeräte zu betreiben; Verstöße sind bußgeldbewehrt. Eigentümer E will sich direkt beim BVerfG wehren. Worauf kommt es bei der Zulässigkeit besonders an?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die drei Hürden",
+          "schritte": [
+            {
+              "titel": "1. Unmittelbar betroffen",
+              "text": "Das Gesetz muss E ohne weiteren Vollzugsakt treffen. Hier wirkt das Verbot direkt; ein Bußgeldverfahren abzuwarten ist ihm nicht zumutbar."
+            },
+            {
+              "titel": "2. Subsidiarität",
+              "text": "Einen Rechtsweg gegen Gesetze gibt es nicht. Ist aber fachgerichtliche Klärung möglich, etwa per Feststellungsklage, geht sie oft vor."
+            },
+            {
+              "titel": "3. Jahresfrist",
+              "text": "Gegen ein Gesetz gilt nicht die Monatsfrist, sondern ein Jahr seit Inkrafttreten (§ 93 Abs. 3 BVerfGG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Monatsfrist des § 93 Abs. 1 BVerfGG auch auf Gesetze anwenden – oder die Unmittelbarkeit bejahen, obwohl das Gesetz erst durch einen Bescheid umgesetzt wird. Dann muss E gegen den Bescheid vorgehen und den Rechtsweg erschöpfen (§ 90 Abs. 2 S. 1 BVerfGG)."
+        },
+        {
+          "art": "text",
+          "titel": "Der Rest bleibt Standard",
+          "punkte": [
+            "Zuständigkeit: Art. 93 Abs. 1 Nr. 4a GG, § 13 Nr. 8a BVerfGG",
+            "Beschwerdefähigkeit: „jedermann“",
+            "Beschwerdebefugnis: selbst, gegenwärtig, unmittelbar",
+            "Form: schriftlich und begründet (§§ 23, 92 BVerfGG)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gesetz als Gegenstand: unmittelbar betroffen, kein zumutbarer fachgerichtlicher Weg, Frist ein Jahr."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Beschwerde gegen ein Gesetz",
+          "punkte": [
+            "Braucht es noch einen Vollzugsakt?",
+            "Fachgericht zuerst zumutbar?",
+            "Jahresfrist nach § 93 Abs. 3 BVerfGG"
+          ],
+          "icons": [
+            "paragraf",
+            "gericht",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Verfassungsbeschwerde direkt gegen ein Gesetz: Drei Hürden prüfst du hier besonders genau. Erstens die unmittelbare Betroffenheit – braucht es noch einen Vollzugsakt, fehlt sie regelmäßig. Zweitens die Subsidiarität: Einen Rechtsweg gegen Gesetze gibt es nicht, aber fachgerichtlicher Rechtsschutz kann trotzdem vorgehen. Drittens die Frist: ein Jahr ab Inkrafttreten (§ 93 Abs. 3 BVerfGG), nicht ein Monat. Speichern für die nächste Verfassungsbeschwerde.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#verfassungsbeschwerde",
+        "#bverfgg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verfassungsbeschwerde gegen ein Gesetz",
+      "coverText": "Unmittelbar, subsidiär, ein Jahr",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Wer direkt gegen ein Gesetz vorgeht, muss drei besondere Hürden nehmen.",
+        "handlung": "{B} steps over the first of three low hurdles on a path leading to a distant red-roofed court building, while {A} points his pointer at the third, longer hurdle marked only by a big calendar tile.",
+        "hinweisRegie": "Place the note in the free space above the three hurdles, slightly tilted toward the third one, without covering {B}'s stride or {A}'s pointer.",
+        "alternative": "{A} holds up a thin rule scroll while {B} checks whether it touches her directly or only through a small messenger standing between them."
+      },
+      "bildSzene": "three hurdles on path to court",
+      "bildSzeneAlt": "rule scroll touches directly or via messenger",
+      "quellen": [
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 13 Nr. 8a BVerfGG",
+        "§ 90 BVerfGG",
+        "§ 93 BVerfGG",
+        "§§ 23, 92 BVerfGG",
+        "Themenpool: staat-631"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-huerden",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.411Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-503",
+      "slug": "2026-12-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Herausgabe ja – aber nicht an den Eigentümer",
+          "titelZeilen": [
+            "Herausgabe ja –",
+            "aber nicht an den",
+            "Eigentümer"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "§ 986 Abs. 1 S. 2 BGB",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "E vermietet sein Auto an M. M verleiht es ohne Erlaubnis des E an seinen Freund D. E verlangt das Auto von D heraus – an sich selbst. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "E ist Eigentümer",
+              "text": "Die Vermietung ändert daran nichts. In der Klausur prüfst du die Eigentumslage chronologisch."
+            },
+            {
+              "titel": "D ist Besitzer",
+              "text": "D übt die tatsächliche Sachherrschaft aus (§ 854 Abs. 1 BGB); M ist mittelbarer Besitzer."
+            },
+            {
+              "titel": "Recht zum Besitz?",
+              "text": "D leitet sein Recht von M ab. M ist gegenüber E zum Besitz berechtigt, durfte das Auto aber nicht weitergeben (§ 540 Abs. 1 BGB)."
+            },
+            {
+              "titel": "Rechtsfolge",
+              "text": "E kann Herausgabe nur an M verlangen – an sich selbst nur, wenn M den Besitz nicht übernehmen kann oder will (§ 986 Abs. 1 S. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Aus dem fehlenden Besitzrecht des D direkt auf Herausgabe an E schließen. § 986 Abs. 1 S. 2 BGB schützt das Besitzrecht des M. Erst wenn E wirksam kündigt, etwa nach § 543 Abs. 2 S. 1 Nr. 2 BGB, entfällt es – dann Herausgabe an E."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eigentümer, Besitzer, kein Recht zum Besitz. Durfte der Zwischenmann nicht weitergeben: Herausgabe an ihn, nicht an den Eigentümer."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 985 BGB in drei Zügen",
+          "punkte": [
+            "Eigentum chronologisch prüfen",
+            "Besitz des Anspruchsgegners",
+            "§ 986 BGB: eigenes oder abgeleitetes Recht?"
+          ],
+          "icons": [
+            "schluessel",
+            "person",
+            "auto"
+          ]
+        }
+      ],
+      "caption": "Herausgabe ja – aber nicht an den Eigentümer. Hat der Mieter die Sache unbefugt weitergegeben, fehlt dem Dritten zwar ein Besitzrecht gegenüber dem Eigentümer. Nach § 986 Abs. 1 S. 2 BGB kann der Eigentümer aber nur Herausgabe an den Mieter verlangen – an sich selbst erst, wenn der Mieter den Besitz nicht übernehmen kann oder will. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#985bgb",
+        "#986bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 985 BGB: Herausgabe an wen?",
+      "coverText": "§ 986 Abs. 1 S. 2 BGB",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Der Eigentümer bekommt seine Sache zurück – aber zunächst in die Hände dessen, der zum Besitz berechtigt ist.",
+        "handlung": "{A} reaches for a small crystal cart held by {B}, but {B} hands it past him to a third, waiting figure standing between them.",
+        "hinweisRegie": "Place the note in the open space above the cart as it passes to the middle figure, slightly tilted toward that figure, without covering hands or faces.",
+        "alternative": "{A} stands at the end of a short chain of three people passing a cart; the handover stops one step before him."
+      },
+      "bildSzene": "cart handed to middle figure, not owner",
+      "bildSzeneAlt": "handover chain stops one step early",
+      "quellen": [
+        "§ 985 BGB",
+        "§ 986 BGB",
+        "§ 854 BGB",
+        "§ 540 BGB",
+        "§ 543 BGB",
+        "Themenpool: sachen-503"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.412Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-072",
+      "slug": "2026-12-23-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Fairer Preis bezahlt – trotzdem Vermögensschaden",
+          "unter": "Betrug · § 263 StGB",
+          "text": "Gesamtsaldierung – und der persönliche Schadenseinschlag.",
+          "norm": "§ 263 Abs. 1 StGB",
+          "icon": "waage",
+          "sprecher": "Voller Gegenwert – und trotzdem ein Schaden. Das geht beim Betrug. Hier ist die Prüfung des Vermögensschadens in vier Schritten.",
+          "marken": [
+            "voller Gegenwert",
+            "trotzdem Schaden"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gesamtsaldierung",
+          "text": "Vermögen vor und nach der Verfügung wirtschaftlich vergleichen.",
+          "norm": "§ 263 Abs. 1 StGB",
+          "sprecher": "Schritt eins: die Gesamtsaldierung. Du vergleichst den Wert des Vermögens unmittelbar vor und unmittelbar nach der Verfügung. Maßgeblich ist eine wirtschaftliche Betrachtung.",
+          "marken": [
+            "vorher – nachher"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Kompensation nur durch die Gegenleistung",
+          "text": "Ansprüche aus Anfechtung oder Schadensersatz gleichen den Verlust nicht aus.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Kompensation. Ausgleichen kann nur, was unmittelbar durch die Verfügung ins Vermögen fließt, typischerweise die Gegenleistung. Gesetzliche Ansprüche des Opfers, etwa aus Anfechtung oder auf Schadensersatz, zählen nicht.",
+          "marken": [
+            "unmittelbar"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Eingehungsbetrug",
+          "text": "Schon der Vertragsschluss: Anspruch weniger wert als die Verpflichtung.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Zeitpunkt. Schon der Vertragsschluss kann schaden, wenn der erlangte Anspruch weniger wert ist als die eingegangene Verpflichtung. Den Schaden musst du dabei der Höhe nach nachvollziehbar feststellen.",
+          "marken": [
+            "Vertragsschluss"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Persönlicher Schadenseinschlag",
+          "text": "Gleichwertig, aber für das Opfer nicht zumutbar nutzbar.",
+          "norm": null,
+          "sprecher": "Schritt vier: der persönliche Schadenseinschlag. Ist die Gegenleistung zwar ihren Preis wert, kann das Opfer sie aber weder zum vorausgesetzten Zweck noch sonst zumutbar verwenden, liegt trotzdem ein Schaden vor.",
+          "marken": [
+            "individuell"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Klassiker",
+          "text": "Melkmaschinen-Fall: Gleichwertigkeit allein schließt den Schaden nicht aus.",
+          "norm": null,
+          "sprecher": "Der Klassiker dazu ist der Melkmaschinen-Fall des BGH. Dort wurde entwickelt, wann trotz gleichwertiger Gegenleistung ein Schaden vorliegt, etwa wenn sich das Opfer mit der Verpflichtung finanziell übernimmt.",
+          "marken": [
+            "Melkmaschine"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Saldieren, nur die Gegenleistung anrechnen, Zeitpunkt klären, dann den persönlichen Einschlag prüfen.",
+          "norm": "§ 263 StGB",
+          "sprecher": "Merke: saldieren, nur die Gegenleistung anrechnen, den Zeitpunkt klären. Und bei gleichwertiger Leistung an den persönlichen Schadenseinschlag denken.",
+          "marken": [
+            "4 Schritte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Gleichwertig heißt nicht schadlos",
+          "text": "Speichern für die nächste Betrugsklausur.",
+          "sprecher": "Speicher dir die vier Schritte für die nächste Betrugsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Fairer Preis bezahlt – und trotzdem ein Vermögensschaden? Beim Betrug möglich. Ausgangspunkt ist die Gesamtsaldierung: Vermögen vor und nach der Verfügung. Kompensieren kann nur die unmittelbare Gegenleistung, nicht ein Anspruch aus Anfechtung oder Schadensersatz. Schon der Vertragsschluss kann schaden (Eingehungsbetrug). Und bei gleichwertiger Leistung bleibt der persönliche Schadenseinschlag. Speichern für die nächste Betrugsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#betrug",
+        "#263stgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vermögensschaden beim Betrug in 4 Schritten",
+      "titelZeilen": [
+        "Fairer Preis",
+        "bezahlt – trotzdem",
+        "Vermögensschaden"
+      ],
+      "coverText": "Persönlicher Schadenseinschlag",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Auch wer den fairen Preis bekommt, kann geschädigt sein, wenn er mit der Gegenleistung nichts anfangen kann.",
+        "handlung": "{A} proudly hands over a huge, shiny machine in exchange for a fair pile of coins, while {B} stares at her tiny workshop door the machine can never fit through.",
+        "hinweisRegie": "Place the note in the free space between the oversized machine and the tiny workshop door, slightly tilted toward the door, without covering the coins or faces.",
+        "alternative": "{B} balances coins and a giant tool on a scale that sits perfectly level, while the tool is visibly too big for her small bench."
+      },
+      "bildSzene": "huge machine too big for tiny door",
+      "bildSzeneAlt": "level scale, tool too big for bench",
+      "quellen": [
+        "§ 263 StGB",
+        "Themenpool: strafbt-072"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.413Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-643",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "B hat einen rechtswidrigen Zuschuss gutgläubig ausgegeben, Angaben korrekt. Darf die Behörde zurücknehmen?",
+      "optionen": [
+        "In der Regel nicht – sein Vertrauen ist schutzwürdig (§ 48 Abs. 2 VwVfG)",
+        "Ja – rechtswidrige Verwaltungsakte sind stets zurückzunehmen",
+        "Ja, aber nur gegen Ausgleich des Vertrauensschadens"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 48 VwVfG",
+        "Themenpool: verwalt-643"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.413Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-643",
+      "ueberzeile": "Auflösung",
+      "titel": "In der Regel nicht – verbrauchtes Geld begründet Vertrauensschutz",
+      "text": "Bei Geld- und Sachleistungen sperrt schutzwürdiges Vertrauen die Rücknahme (§ 48 Abs. 2 S. 1 VwVfG). Schutzwürdig ist es in der Regel, wenn die Leistung verbraucht ist (S. 2). Kein Schutz etwa bei Täuschung, Drohung, Bestechung, unrichtigen Angaben oder Kenntnis bzw. grob fahrlässiger Unkenntnis der Rechtswidrigkeit (S. 3). Der Ausgleich nach Abs. 3 betrifft nur andere VAs.",
+      "norm": "§ 48 Abs. 2 VwVfG",
+      "quellen": [
+        "§ 48 VwVfG",
+        "Themenpool: verwalt-643"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.413Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "In der Regel nicht – sein Vertrauen ist schutzwürdig (§ 48 Abs. 2 VwVfG)",
+        "Ja – rechtswidrige Verwaltungsakte sind stets zurückzunehmen",
+        "Ja, aber nur gegen Ausgleich des Vertrauensschadens"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-036",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Gewerbebetrieb: Die Rechtswidrigkeit wird erst abgewogen",
+      "text": "Das Recht am eingerichteten und ausgeübten Gewerbebetrieb schützt die Rechtsprechung als sonstiges Recht nach § 823 Abs. 1 BGB – subsidiär, wenn keine speziellere Norm greift. Als offener Tatbestand indiziert der Eingriff die Rechtswidrigkeit nicht: Sie folgt erst aus einer Güter- und Interessenabwägung, etwa mit der Meinungsfreiheit bei Kritik oder Boykottaufruf.",
+      "norm": "§ 823 Abs. 1 BGB",
+      "quellen": [
+        "§ 823 Abs. 1 BGB",
+        "Art. 5 Abs. 1 GG",
+        "Themenpool: delikt-036"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.413Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-807",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Urteil nach § 767 ZPO: Auch in der Hauptsache vorläufig vollstreckbar?",
+      "norm": "§§ 708, 709, 767, 775 Nr. 1, 776 ZPO",
+      "optionen": [
+        "Überwiegende Ansicht: ja – wegen §§ 775 Nr. 1, 776 ZPO, dann wie sonst nach §§ 708 ff. ZPO.",
+        "Andere Ansicht: Gestaltungsurteil – vorläufig vollstreckbar nur wegen der Kosten."
+      ],
+      "text": "Klausurhinweis: Die überwiegende Praxis erklärt das stattgebende Urteil insgesamt für vorläufig vollstreckbar, damit der Schuldner schon vor Rechtskraft die Einstellung erreichen kann. Ob mit oder ohne Sicherheitsleistung, entscheidest du dann nach §§ 708, 709, 711 ZPO.",
+      "quellen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "§ 767 ZPO",
+        "§§ 775, 776 ZPO",
+        "Themenpool: assessorz-807"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.413Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "delikt",
+      "klausur": 1,
+      "pairId": "delikt-035",
+      "ueberzeile": "Merksatz Deliktsrecht",
+      "titel": "§ 831 BGB: Haftung für eigenes vermutetes Verschulden",
+      "text": "Vermutet wird, dass der Geschäftsherr den Gehilfen nicht sorgfältig ausgewählt oder überwacht hat. Er kann sich entlasten (§ 831 Abs. 1 S. 2 BGB) – bei § 278 BGB nicht.",
+      "norm": "§ 831 BGB · § 278 BGB",
+      "quellen": [
+        "§ 831 BGB",
+        "§ 278 BGB",
+        "Themenpool: delikt-035"
+      ],
+      "fachLabel": "Deliktsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.413Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-650",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Sofortiger Vollzug ist nicht die sofortige Vollziehung",
+      "text": "Sofortiger Vollzug heißt: Verwaltungszwang ohne vorausgehenden Verwaltungsakt, wenn eine akute Gefahr keinen Aufschub duldet (Bund: § 6 Abs. 2 VwVG; sonst Landesrecht). Viele Polizeigesetze kennen zudem die unmittelbare Ausführung, wenn der Verantwortliche nicht rechtzeitig erreichbar ist. Beides ist etwas anderes als § 80 Abs. 2 S. 1 Nr. 4 VwGO.",
+      "norm": "§ 6 Abs. 2 VwVG · Landesrecht",
+      "quellen": [
+        "§ 6 Abs. 2 VwVG",
+        "Polizei- und Vollstreckungsgesetze der Länder",
+        "§ 80 Abs. 2 VwGO",
+        "Themenpool: verwalt-650"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:41:40.413Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

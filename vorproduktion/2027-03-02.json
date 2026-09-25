@@ -1,0 +1,885 @@
+{
+  "datum": "2027-03-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "verwalt-382",
+        "themaTitel": "Welche Nebenbestimmungen gibt es und wie greift man sie an?",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "schuld-169",
+        "themaTitel": "Wann ist eine Fristsetzung entbehrlich?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-869",
+        "themaTitel": "Wann ist ein Verteidiger notwendig zu bestellen?",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:00",
+        "art": "frage",
+        "themaId": "bgbat-428"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:00",
+        "art": "antwort",
+        "themaId": "bgbat-428"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "verwbt-115"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:34",
+        "art": "zahl",
+        "themaId": "verwbt-110"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "streitstand",
+        "themaId": "strafat-057"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "merksatz",
+        "themaId": "bgbat-159"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "verwalt-382",
+      "poolTitel": "Welche Nebenbestimmungen gibt es und wie greift man sie an?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 36 VwVfG",
+        "§ 42 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-22",
+        "2027-01-22"
+      ]
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "schuld-169",
+      "poolTitel": "Wann ist eine Fristsetzung entbehrlich?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 281 Abs. 2 BGB",
+        "§ 323 Abs. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-869",
+      "poolTitel": "Wann ist ein Verteidiger notwendig zu bestellen?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 140 StPO",
+        "§ 141 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2027-01-29"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-428",
+      "poolTitel": "Anfechtung durch Vertreter: Wissenszurechnung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 123, 166 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2026-11-09",
+        "2026-11-09"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-428",
+      "poolTitel": "Anfechtung durch Vertreter: Wissenszurechnung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 123, 166 BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-06",
+        "2026-11-09",
+        "2026-11-09"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-115",
+      "poolTitel": "Was ist der Unterschied zwischen Gefahr, Anscheinsgefahr und Gefahrenverdacht?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-30"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "verwbt-110",
+      "poolTitel": "Wie prüft man die Rechtmäßigkeit einer Baugenehmigung?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 29 BauGB",
+        "§ 30 BauGB",
+        "§ 34 BauGB",
+        "§ 35 BauGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-28"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "strafat-057",
+      "poolTitel": "Was ist der Unterschied zwischen Eventualvorsatz und bewusster Fahrlässigkeit?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 15 StGB",
+        "§ 16 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-28",
+        "2026-12-28"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "bgbat-159",
+      "poolTitel": "Was ist eine geltungserhaltende Reduktion und warum ist sie bei AGB unzulässig?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 306 BGB",
+        "§ 307 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-382",
+      "slug": "2027-03-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nebenbestimmung: Der Streit gehört in die Begründetheit",
+          "titelZeilen": [
+            "Nebenbestimmung:",
+            "Der Streit gehört",
+            "in die Begründetheit"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Erst anfechten, dann teilen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "A erhält eine Sondernutzungserlaubnis für einen Verkaufsstand – mit der Auflage, ihn jeden Abend um 18 Uhr abzubauen. A will die Erlaubnis behalten, die Auflage aber loswerden. Reicht die Anfechtungsklage gegen die Nebenbestimmung, oder muss A auf eine Erlaubnis ohne sie klagen?"
+        },
+        {
+          "art": "text",
+          "titel": "Die Arten",
+          "punkte": [
+            "Befristung, Bedingung, Widerrufsvorbehalt: Teil der Hauptregelung (§ 36 II Nr. 1–3 VwVfG).",
+            "Auflage und Auflagenvorbehalt: zusätzliche Regelung neben dem VA (Nr. 4, 5).",
+            "Maßgeblich ist der objektive Erklärungsinhalt, nicht die Bezeichnung im Bescheid."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Anfechtung oder Verpflichtung?",
+          "links": {
+            "titel": "BVerwG",
+            "punkte": [
+              "Gegen belastende NB ist die Anfechtungsklage grundsätzlich statthaft – bei allen Arten.",
+              "Außer die isolierte Aufhebung scheidet offenkundig von vornherein aus.",
+              "Ob der Rest-VA bestehen bleibt, klärt die Begründetheit."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Lit.",
+            "punkte": [
+              "Unterscheiden nach der Art der Nebenbestimmung.",
+              "Auflage: selbständig, isoliert anfechtbar.",
+              "Befristung, Bedingung: Teil des VA – Verpflichtungsklage auf VA ohne NB."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "In der Begründetheit",
+          "text": "Die Klage hat Erfolg, soweit (§ 113 Abs. 1 S. 1 VwGO) die Nebenbestimmung rechtswidrig ist, A dadurch in seinen Rechten verletzt wird und der verbleibende VA sinnvoll und rechtmäßig bestehen bleiben kann. Grund: Das Gericht darf der Behörde keinen VA aufzwingen, den sie so nicht erlassen dürfte."
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Vorher klären: Ist es überhaupt eine Nebenbestimmung oder eine Inhaltsbestimmung des VA? Im zweiten Fall hilft nur die Verpflichtungsklage. Sonst den Streit in der Statthaftigkeit kurz darstellen und dem BVerwG folgen – die Teilbarkeit ist eine Frage der Begründetheit."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Anfechtungsklage gegen die Nebenbestimmung: nach dem BVerwG grundsätzlich statthaft. Ob der Rest-VA stehen bleibt, zeigt die Begründetheit."
+        },
+        {
+          "art": "cta",
+          "titel": "Nebenbestimmung in drei Zügen",
+          "punkte": [
+            "Art nach § 36 Abs. 2 VwVfG bestimmen",
+            "Statthaftigkeit: Streit kurz, BVerwG folgen",
+            "Teilbarkeit in der Begründetheit prüfen"
+          ],
+          "icons": [
+            "lupe",
+            "waage",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "Nebenbestimmung angreifen, Genehmigung behalten? Ob die Anfechtungsklage gegen eine Auflage, Bedingung oder Befristung statthaft ist, ist umstritten. Das BVerwG hält sie grundsätzlich für statthaft und verschiebt die entscheidende Frage in die Begründetheit: Kann der Verwaltungsakt ohne die Nebenbestimmung sinnvoll und rechtmäßig bestehen bleiben? Teile der Literatur unterscheiden nach der Art der Nebenbestimmung. Speichern für die nächste Klausur im Verwaltungsrecht.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#nebenbestimmung",
+        "#36vwvfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nebenbestimmung isoliert anfechten?",
+      "coverText": "Erst anfechten, dann teilen",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Die Klage gegen die Nebenbestimmung ist statthaft – ob der Rest stehen bleibt, zeigt erst die Begründetheit.",
+        "handlung": "{B} curiously unclips a small heavy weight hanging from a floating permit plate, while {A} hovers beneath and checks whether the plate stays level without it.",
+        "hinweisRegie": "Place the note in the free space between the unclipped weight and the floating plate, slightly tilted, so it points to the question whether the rest holds, without covering {B}'s hands.",
+        "alternative": "{A} carefully cuts a single ribbon from a wrapped parcel while {B} watches whether the parcel stays closed."
+      },
+      "bildSzene": "alien unclips weight from floating plate",
+      "bildSzeneAlt": "cutting one ribbon from wrapped parcel",
+      "quellen": [
+        "§ 36 VwVfG",
+        "§ 42 Abs. 1 VwGO",
+        "§ 113 Abs. 1 S. 1 VwGO",
+        "Themenpool: verwalt-382"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "falscher-pruefungsort",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.578Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-169",
+      "slug": "2027-03-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Termin geplatzt: Rücktritt sofort, Schadensersatz nicht automatisch",
+          "titelZeilen": [
+            "Termin geplatzt:",
+            "Rücktritt sofort,",
+            "Schadensersatz",
+            "nicht automatisch"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 281 II kennt kein Fixgeschäft",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "K eröffnet am 1. April ein Café und bestellt bei Händler V 40 Stühle. Bei Vertragsschluss sagt er: „Lieferung bis 31. März ist für mich entscheidend, die Eröffnung steht fest.“ V liefert nicht. K kauft am 31. März bei D teurer ein, tritt zurück und verlangt von V die Mehrkosten."
+        },
+        {
+          "art": "schritte",
+          "titel": "Rücktritt, § 323 BGB",
+          "schritte": [
+            {
+              "titel": "Fällige Leistung nicht erbracht",
+              "text": "Lieferung bis 31. März geschuldet und ausgeblieben."
+            },
+            {
+              "titel": "Fristsetzung entbehrlich?",
+              "text": "§ 323 Abs. 2 Nr. 2 BGB: Termin im Vertrag bestimmt, Einhaltung laut Mitteilung vor Vertragsschluss wesentlich – relatives Fixgeschäft."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Der Rücktritt ohne Frist ist wirksam."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Mehrkosten, §§ 280, 281 BGB",
+          "schritte": [
+            {
+              "titel": "Pflichtverletzung, Vertretenmüssen",
+              "text": "Nichtleistung trotz Fälligkeit; das Vertretenmüssen wird vermutet (§ 280 Abs. 1 S. 2 BGB)."
+            },
+            {
+              "titel": "Frist entbehrlich?",
+              "text": "§ 281 Abs. 2 BGB kennt kein Fixgeschäft: nur ernsthafte und endgültige Verweigerung oder besondere Umstände nach Interessenabwägung."
+            },
+            {
+              "titel": "Hier",
+              "text": "Eröffnung am nächsten Tag, keine Lieferung: Besondere Umstände für den sofortigen Deckungskauf sind gut vertretbar."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Der Rücktritt ist nach § 323 Abs. 2 Nr. 2 BGB ohne Frist wirksam. Die Mehrkosten des Deckungskaufs verlangt K als Schadensersatz statt der Leistung – die Frist ist hier nach § 281 Abs. 2 Alt. 2 BGB entbehrlich. Der Rücktritt schließt den Schadensersatz nicht aus (§ 325 BGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Fixtermin wesentlich: Rücktritt ohne Frist (§ 323 II Nr. 2). Für Schadensersatz statt der Leistung begründest du § 281 II eigens."
+        },
+        {
+          "art": "cta",
+          "titel": "Frist entbehrlich? Drei Checks",
+          "punkte": [
+            "§ 323 Abs. 2 Nr. 1–3 für den Rücktritt",
+            "§ 281 Abs. 2 eigens für Schadensersatz",
+            "§ 325: beides nebeneinander"
+          ],
+          "icons": [
+            "kalender",
+            "waage",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Termin geplatzt: Der Rücktritt geht sofort, der Schadensersatz nicht automatisch. § 323 Abs. 2 Nr. 2 BGB macht die Frist beim relativen Fixgeschäft entbehrlich. § 281 Abs. 2 BGB kennt diese Variante nicht – für Schadensersatz statt der Leistung brauchst du eine ernsthafte und endgültige Verweigerung oder besondere Umstände. Beides schließt sich nicht aus (§ 325 BGB). Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#323bgb",
+        "#281bgb",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fixtermin: § 323 II und § 281 II BGB trennen",
+      "coverText": "§ 281 II kennt kein Fixgeschäft",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Ein geplatzter Fixtermin öffnet den Rücktritt sofort – der Schadensersatz braucht eine eigene Begründung.",
+        "handlung": "{A} nervously holds an empty chair frame at a café door on opening day, while {B} has swung open a first gate and pauses thoughtfully before a second, separate gate.",
+        "hinweisRegie": "Place the note in the free space between the opened first gate and the still closed second gate, slightly tilted toward the second one, without covering {B}'s hand on the latch or {A}'s chair frame.",
+        "alternative": "{B} steps through an open door holding a torn calendar page while {A} still searches his pockets for the key to a second door."
+      },
+      "bildSzene": "empty chair at café, two gates",
+      "bildSzeneAlt": "open door, second door still locked",
+      "quellen": [
+        "§ 323 Abs. 2 Nr. 2 BGB",
+        "§§ 280, 281 BGB",
+        "§ 325 BGB",
+        "Themenpool: schuld-169"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslungsfehler",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.579Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-869",
+      "slug": "2027-03-02-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nur ein Vergehen – und doch notwendige Verteidigung",
+          "unter": "Pflichtverteidigung · § 140 StPO",
+          "text": "Anklage zum Schöffengericht: Die Verteidigung ist notwendig – auch ohne Verbrechen.",
+          "norm": "§ 140 Abs. 1 Nr. 1 StPO",
+          "icon": "richter",
+          "sprecher": "Auch beim Vergehen kann ein Pflichtverteidiger nötig sein. Viele denken bei § 140 StPO nur an Verbrechen. Aber schon die Hauptverhandlung vor dem Schöffengericht reicht.",
+          "marken": [
+            "Schöffengericht",
+            "§ 140 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der Katalog in Absatz 1",
+          "text": "Etwa: Verhandlung vor OLG, LG oder Schöffengericht, Verbrechen, vollstreckte U-Haft.",
+          "norm": "§ 140 Abs. 1 StPO",
+          "sprecher": "Schritt eins: der Katalog. Notwendig ist die Verteidigung unter anderem, wenn die Hauptverhandlung im ersten Rechtszug vor dem Oberlandesgericht, dem Landgericht oder dem Schöffengericht zu erwarten ist, bei einem Verbrechen oder wenn Untersuchungshaft vollstreckt wird.",
+          "marken": [
+            "Katalog"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Die Generalklausel",
+          "text": "Schwere der Tat oder Rechtsfolge, schwierige Sach- oder Rechtslage, keine Selbstverteidigung.",
+          "norm": "§ 140 Abs. 2 StPO",
+          "sprecher": "Schritt zwei: die Generalklausel. Auch sonst ist ein Verteidiger nötig, wenn die Schwere der Tat oder der Rechtsfolge oder eine schwierige Sach- oder Rechtslage das gebietet – oder wenn sich der Beschuldigte erkennbar nicht selbst verteidigen kann.",
+          "marken": [
+            "Abs. 2"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Bestellung auf Antrag",
+          "text": "Nach Eröffnung des Vorwurfs und Belehrung: auf ausdrücklichen Antrag, unverzüglich.",
+          "norm": "§ 141 Abs. 1 StPO",
+          "sprecher": "Schritt drei: Wurde dem Beschuldigten der Tatvorwurf eröffnet, bekommt er auf ausdrücklichen Antrag nach Belehrung unverzüglich einen Pflichtverteidiger.",
+          "marken": [
+            "auf Antrag"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Bestellung von Amts wegen",
+          "text": "Etwa bei Vorführung zur Haftentscheidung, spätestens mit der Aufforderung nach § 201 StPO.",
+          "norm": "§ 141 Abs. 2 StPO",
+          "sprecher": "Schritt vier: Ohne Antrag wird bestellt, etwa wenn der Beschuldigte zur Entscheidung über Haft vorgeführt werden soll, und spätestens, wenn er zur Erklärung über die Anklageschrift aufgefordert wird.",
+          "marken": [
+            "von Amts wegen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "In der Anklageklausur",
+          "text": "Anklage zum Schöffengericht, kein Verteidiger: in der Abschlussverfügung an die Pflichtverteidigung denken.",
+          "norm": null,
+          "sprecher": "Für die Anklageklausur heißt das: Klagst du zum Schöffengericht an und hat der Angeschuldigte keinen Verteidiger, denk in der Abschlussverfügung an die Pflichtverteidigung.",
+          "marken": [
+            "Abschlussverfügung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Schöffengericht, LG, OLG oder Verbrechen: Verteidigung notwendig.",
+          "norm": "§§ 140, 141 StPO",
+          "sprecher": "Merke: nicht erst beim Verbrechen. Schon das Gericht, vor dem verhandelt wird, kann die Verteidigung notwendig machen.",
+          "marken": [
+            "nicht nur Verbrechen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Abschlussverfügung prüfen",
+          "text": "Speichern für die nächste Anklageklausur.",
+          "sprecher": "Speicher dir das für die nächste Anklageklausur. Und prüf vor der Abschlussverfügung kurz § 140 StPO.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Nur ein Vergehen – und doch notwendige Verteidigung. § 140 Abs. 1 StPO knüpft nicht nur an Verbrechen an: Notwendig ist die Verteidigung unter anderem schon, wenn die Hauptverhandlung im ersten Rechtszug vor dem Schöffengericht, dem Landgericht oder dem OLG zu erwarten ist. Dazu kommt die Generalklausel des Abs. 2. Bestellt wird auf Antrag oder von Amts wegen (§ 141 StPO). Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#pflichtverteidiger",
+        "#140stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 140 StPO: auch beim Vergehen",
+      "titelZeilen": [
+        "Nur ein Vergehen –",
+        "und doch notwendige",
+        "Verteidigung"
+      ],
+      "coverText": "Schöffengericht genügt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Nicht erst das Verbrechen – schon das Gericht, vor dem verhandelt wird, kann den Verteidiger notwendig machen.",
+        "handlung": "{B} stops a lone traveler at the entrance of a mid-sized hall and assigns him a companion to walk beside him, while {A} points his pointer at the hall's heavy doors.",
+        "hinweisRegie": "Place the note in the free space next to the hall entrance, slightly tilted toward the heavy doors, so the court as trigger stands out without covering the traveler, the companion or the pointer.",
+        "alternative": "{A} measures the height of three different doors with his pointer while {B} hands a guide rope to a traveler in front of the middle door."
+      },
+      "bildSzene": "traveler gets companion at hall entrance",
+      "bildSzeneAlt": "measuring three doors, guide rope handed",
+      "quellen": [
+        "§ 140 StPO",
+        "§ 141 StPO",
+        "§ 201 StPO",
+        "Themenpool: anklage-869"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.582Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-428",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "V lügt über die Unfallfreiheit. Ks Vertreter X durchschaut das, kauft aber. Kann K nach § 123 BGB anfechten?",
+      "optionen": [
+        "Nein – es kommt auf den Irrtum des Vertreters an (§ 166 I BGB)",
+        "Ja – K selbst wusste nichts, sein Irrtum zählt",
+        "Ja – aber nur X kann die Anfechtung erklären"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 123 Abs. 1 BGB",
+        "§ 166 Abs. 1 BGB",
+        "Themenpool: bgbat-428"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.582Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-428",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – getäuscht werden muss der Vertreter",
+      "text": "Bei Willensmängeln kommt es nach § 166 Abs. 1 BGB auf die Person des Vertreters an. X hat die Lüge durchschaut, er irrte also nicht – die Täuschung war für die Erklärung nicht ursächlich. Wäre X getäuscht worden, könnte K anfechten: Anfechtungsberechtigt ist der Vertretene, dem die Erklärung zugerechnet wird.",
+      "norm": "§ 123 Abs. 1 BGB · § 166 Abs. 1 BGB",
+      "quellen": [
+        "§ 123 Abs. 1 BGB",
+        "§ 166 Abs. 1 BGB",
+        "Themenpool: bgbat-428"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.582Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – es kommt auf den Irrtum des Vertreters an (§ 166 I BGB)",
+        "Ja – K selbst wusste nichts, sein Irrtum zählt",
+        "Ja – aber nur X kann die Anfechtung erklären"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-115",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Polizeiliche Generalklausel: Beim Gefahrenverdacht zuerst aufklären",
+      "text": "Gefahrenverdacht: Die Behörde weiß, dass ihre Tatsachenbasis unsicher ist – eine Gefahr ist möglich, aber nicht gewiss. Die Generalklausel trägt dann nach verbreiteter Ansicht vor allem vorläufige Maßnahmen zur Aufklärung (Gefahrerforschungseingriffe). Anders die Anscheinsgefahr: Die Behörde durfte ex ante vertretbar von einer Gefahr ausgehen.",
+      "norm": "Generalklausel der Polizeigesetze der Länder",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder (Generalklausel)",
+        "Themenpool: verwbt-115"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.582Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-110",
+      "ueberzeile": "4 Punkte Baurecht",
+      "titel": "Klage auf die Baugenehmigung: vier Prüfschritte in der Begründetheit",
+      "text": "Ein Anspruch besteht, wenn dem Vorhaben keine öffentlich-rechtlichen Vorschriften entgegenstehen, die im Verfahren zu prüfen sind. Das Prüfprogramm regelt je nach Land die Bauordnung.",
+      "punkte": [
+        "Genehmigungspflicht nach der Landesbauordnung",
+        "Vorhaben im Sinne des § 29 Abs. 1 BauGB",
+        "Planungsrechtlich zulässig: § 30, § 34 oder § 35 BauGB",
+        "Übriges öffentliches Recht, soweit im Prüfprogramm"
+      ],
+      "quellen": [
+        "§§ 29, 30, 34, 35 BauGB",
+        "Landesbauordnungen",
+        "Themenpool: verwbt-110"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.582Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-057",
+      "ueberzeile": "Streitstand Strafrecht AT",
+      "titel": "Messerstich in den Oberkörper: Spricht die „Hemmschwelle“ gegen den Tötungsvorsatz?",
+      "norm": "§ 15 StGB · § 212 StGB",
+      "optionen": [
+        "Ältere Rspr.: Vor der Tötung steht eine hohe Hemmschwelle – den Vorsatz besonders sorgfältig begründen.",
+        "Kritik der Lit., heute auch BGH: keine eigene Beweisregel – es zählt die Gesamtschau aller Umstände."
+      ],
+      "text": "Klausur: Die offensichtliche Lebensgefährlichkeit der Handlung ist ein gewichtiges Indiz für bedingten Vorsatz. Gegenindizien wie Spontaneität, Alkohol oder Affekt würdigst du in der Gesamtschau.",
+      "quellen": [
+        "§ 15 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafat-057"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.582Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-159",
+      "ueberzeile": "Merksatz AGB-Recht",
+      "titel": "Keine geltungserhaltende Reduktion bei AGB",
+      "text": "Eine zu weit gefasste Klausel kürzt das Gericht nicht aufs Zulässige. Sie ist ganz unwirksam, der Vertrag bleibt wirksam, es gilt das Gesetz (§ 306 BGB). Nur abtrennbare Teile bleiben stehen.",
+      "norm": "§ 306 BGB · § 307 BGB",
+      "quellen": [
+        "§ 306 BGB",
+        "§ 307 BGB",
+        "Themenpool: bgbat-159"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:16:16.582Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

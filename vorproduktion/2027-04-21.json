@@ -1,0 +1,867 @@
+{
+  "datum": "2027-04-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-753",
+        "themaTitel": "Räuberische Erpressung und Abgrenzung zum Raub",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "vwgo-104",
+        "themaTitel": "Wann ist die Fortsetzungsfeststellungsklage statthaft?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-443",
+        "themaTitel": "Gläubigerverzug und Gefahrtragung",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "stpo-772"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "stpo-772"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "schuld-455"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:32",
+        "art": "streitstand",
+        "themaId": "anklage-856"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "merksatz",
+        "themaId": "sachen-508"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:10",
+        "art": "begriff",
+        "themaId": "strafat-302"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-753",
+      "poolTitel": "Räuberische Erpressung und Abgrenzung zum Raub",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§§ 253, 255 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-29"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "vwgo-104",
+      "poolTitel": "Wann ist die Fortsetzungsfeststellungsklage statthaft?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 113 Abs. 1 S. 4 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-05",
+        "2027-01-05",
+        "2027-04-01"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-443",
+      "poolTitel": "Gläubigerverzug und Gefahrtragung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 293 ff., 300, 326 II BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-10"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "stpo-772",
+      "poolTitel": "Durchsuchung bei Dritten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 103 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-26",
+        "2027-01-23",
+        "2027-01-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "stpo-772",
+      "poolTitel": "Durchsuchung bei Dritten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 103 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-26",
+        "2027-01-23",
+        "2027-01-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-455",
+      "poolTitel": "Drittschadensliquidation",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 249 ff. BGB, richterrechtliche Fallgruppen"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "anklage-856",
+      "poolTitel": "Wie ist die Anklageschrift aufgebaut?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-12-14",
+        "2026-12-16",
+        "2027-02-16"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "sachen-508",
+      "poolTitel": "Nachbarrechtliche Ausgleichsfragen",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 906, 1004 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-25",
+        "2027-02-21"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-302",
+      "poolTitel": "Wie grenzt man Tun und Unterlassen ab?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-08"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-753",
+      "slug": "2027-04-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Raub oder Erpressung? Viele prüfen nur „Geben oder Nehmen“",
+          "titelZeilen": [
+            "Raub oder",
+            "Erpressung? Viele",
+            "prüfen nur „Geben",
+            "oder Nehmen“"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Vermögensverfügung – ja oder nein?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der verbreitete Kurzschluss",
+          "text": "„O hat gegeben, also Erpressung“ – und weiter. Das ist nur die Sicht der Rechtsprechung. Die Literatur verlangt für § 253 StGB eine Vermögensverfügung und stellt auf die Vorstellung des Opfers ab. Wer den Streit nicht sieht, verpasst die Fälle, in denen er entscheidet."
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A hält O ein Messer vor und verlangt die Geldbörse. O reicht sie ihm, weil er glaubt, A nehme sie sich sonst ohnehin. Raub (§ 249 StGB) oder räuberische Erpressung (§§ 253, 255 StGB)?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Die zwei Ansichten",
+          "links": {
+            "titel": "Rechtsprechung",
+            "punkte": [
+              "Äußeres Erscheinungsbild: Geben = Erpressung, Nehmen = Raub.",
+              "Keine Vermögensverfügung nötig; § 249 ist ein Spezialfall der §§ 253, 255."
+            ]
+          },
+          "rechts": {
+            "titel": "Überwiegende Literatur",
+            "punkte": [
+              "§ 253 verlangt eine Vermögensverfügung.",
+              "Sieht das Opfer keine Wahl, ist auch die Weggabe eine Wegnahme – dann Raub."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Wann der Streit entscheidet",
+          "punkte": [
+            "Im Fall oben: gleicher Strafrahmen (§ 255 StGB), aber ein anderer Schuldspruch.",
+            "Ohne Zueignungsabsicht: Auto mit Gewalt „nur zum Fahren“ – Rspr. §§ 253, 255, Lit. nur §§ 240, 248b.",
+            "Deshalb: Streit darstellen und mit Argument entscheiden."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nach der Rspr. hat O gegeben: räuberische Erpressung (§§ 253, 255 StGB). Nach der Literatur fehlt eine Verfügung, weil O keine Wahl sah: Raub (§ 249 StGB). Folge der Rspr. im Nehmen-Fall: § 249 StGB verdrängt als Spezialfall die §§ 253, 255 StGB."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rspr.: Geben oder Nehmen. Literatur: Vermögensverfügung ja oder nein. Ernst wird der Streit vor allem ohne Zueignungsabsicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Raub oder Erpressung in drei Zügen",
+          "punkte": [
+            "Wegnahme oder Weggabe?",
+            "Hatte das Opfer eine Wahl?",
+            "Zueignungsabsicht vorhanden?"
+          ],
+          "icons": [
+            "messer",
+            "waage",
+            "auto"
+          ]
+        }
+      ],
+      "caption": "Raub oder räuberische Erpressung? Viele prüfen nur „Geben oder Nehmen“ – und übersehen, dass das allein die Sicht der Rechtsprechung ist. Die Literatur verlangt für § 253 StGB eine Vermögensverfügung: Sieht das Opfer keine Wahl, ist auch die Weggabe eine Wegnahme. Richtig ernst wird der Streit ohne Zueignungsabsicht, etwa beim erzwungenen Auto „nur zum Fahren“. Speichern für die nächste BT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#raub",
+        "#erpressung",
+        "#255stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Raub oder räuberische Erpressung?",
+      "coverText": "Vermögensverfügung – ja oder nein?",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Ob das Opfer die Sache hergibt oder sie ihm genommen wird, ist nicht alles – entscheidend kann sein, ob es überhaupt eine Wahl hatte.",
+        "handlung": "{A} nervously hands a small glowing pouch toward an off-frame threat, while {B} curiously checks whether the small side door behind {A} is open or firmly locked.",
+        "hinweisRegie": "Place the note in the free space next to the small side door, slightly tilted toward it, so the question of choice is linked to the note without covering the pouch or {A}'s hands.",
+        "alternative": "{B} watches a split stage where a pouch is handed over on one side and snatched on the other, and holds a magnifier over the hand that hands it over."
+      },
+      "bildSzene": "pouch handed over, locked side door",
+      "bildSzeneAlt": "split stage: handed over vs snatched",
+      "quellen": [
+        "§ 249 StGB",
+        "§§ 253, 255 StGB",
+        "§ 240 StGB",
+        "§ 248b StGB",
+        "Themenpool: strafbt-753"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.789Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-104",
+      "slug": "2027-04-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Versammlung vorbei – welche Klage bleibt?",
+          "titelZeilen": [
+            "Versammlung",
+            "vorbei – welche",
+            "Klage bleibt?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Erledigt vor Klageerhebung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Polizei löst die Versammlung des A auf. Am Abend wäre sie ohnehin vorbei gewesen. A will gerichtlich feststellen lassen, dass die Auflösung rechtswidrig war – er plant weitere Versammlungen zum selben Thema. Welche Klage ist statthaft?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Verwaltungsakt erledigt",
+              "text": "Die Auflösung ist ein VA. Mit dem Ende der Versammlung hat sie sich erledigt (§ 43 Abs. 2 VwVfG) – eine Anfechtung ginge ins Leere."
+            },
+            {
+              "titel": "Zeitpunkt bestimmen",
+              "text": "Erledigung nach Klageerhebung: § 113 Abs. 1 S. 4 VwGO direkt. Hier vor Klageerhebung: nach h.M. analog."
+            },
+            {
+              "titel": "Feststellungsinteresse",
+              "text": "Wiederholungsgefahr, Rehabilitation oder ein tiefgreifender Grundrechtseingriff, der sich typischerweise schnell erledigt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Das Interesse mit einem geplanten Amtshaftungsprozess begründen. Das trägt nur bei Erledigung nach Klageerhebung. Erledigt sich der VA vorher, kann A gleich vor dem Zivilgericht klagen, das die Rechtmäßigkeit selbst prüft."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Statthaft ist die Fortsetzungsfeststellungsklage analog § 113 Abs. 1 S. 4 VwGO; eine Gegenansicht greift zur allgemeinen Feststellungsklage (§ 43 VwGO). Das Interesse folgt hier aus der Wiederholungsgefahr und dem Eingriff in Art. 8 GG."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vor Klageerhebung erledigt? § 113 Abs. 1 S. 4 VwGO analog – und kein Präjudizinteresse für die Amtshaftung."
+        },
+        {
+          "art": "cta",
+          "titel": "FFK in drei Fragen",
+          "punkte": [
+            "Wann hat sich der VA erledigt?",
+            "Direkt oder analog?",
+            "Welches Feststellungsinteresse?"
+          ],
+          "icons": [
+            "kalender",
+            "paragraf",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Die Versammlung ist vorbei, die Auflösung erledigt – welche Klage bleibt? Erledigt sich ein Verwaltungsakt schon vor Klageerhebung, ist nach h.M. die Fortsetzungsfeststellungsklage analog § 113 Abs. 1 S. 4 VwGO statthaft. Das besondere Feststellungsinteresse kann aus Wiederholungsgefahr, Rehabilitation oder einem tiefgreifenden, sich schnell erledigenden Grundrechtseingriff folgen. Ein geplanter Amtshaftungsprozess reicht hier nicht. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#verwaltungsprozessrecht",
+        "#fortsetzungsfeststellungsklage",
+        "#versammlungsrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "FFK: Erledigung vor Klageerhebung",
+      "coverText": "Erledigt vor Klageerhebung",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Auch wenn die Maßnahme schon vorbei ist, bleibt ein Weg, ihre Rechtswidrigkeit feststellen zu lassen.",
+        "handlung": "{B} stands in an empty town square after the crowd has gone and picks up a single dropped banner pole, while {A} hovers beside him and holds out an open folder to keep it on record.",
+        "hinweisRegie": "Place the note in the free space above the open folder, slightly tilted toward the banner pole, so it reads as preserving a finished event for review without covering {B}'s hands.",
+        "alternative": "{A} photographs a faded chalk outline on the pavement where a stage once stood, while {B} points at a calendar with a future date circled."
+      },
+      "bildSzene": "empty square, dropped banner, folder",
+      "bildSzeneAlt": "chalk outline, future date circled",
+      "quellen": [
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "§ 43 VwGO",
+        "§ 43 Abs. 2 VwVfG",
+        "Art. 8 GG",
+        "Themenpool: vwgo-104"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "entscheidungsfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.789Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-443",
+      "slug": "2027-04-21-b3",
+      "titelZeilen": [
+        "Ware zerstört –",
+        "der Käufer zahlt",
+        "trotzdem"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ware zerstört – der Käufer zahlt trotzdem",
+          "unter": "Annahmeverzug · § 326 Abs. 2 BGB",
+          "text": "Wer nicht annimmt, trägt die Gegenleistungsgefahr.",
+          "norm": "§ 326 Abs. 2 S. 1 BGB",
+          "icon": "lkw",
+          "sprecher": "Ware zerstört – und der Käufer zahlt trotzdem. Das passiert, wenn er vorher im Annahmeverzug war.",
+          "marken": [
+            "zahlt trotzdem",
+            "Annahmeverzug"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Annahmeverzug",
+          "text": "Angebot wie geschuldet, der Gläubiger nimmt nicht an (§§ 293, 294 BGB).",
+          "norm": "§§ 293, 294 BGB",
+          "sprecher": "Schritt eins: Annahmeverzug. V bietet die Ware am vereinbarten Tag tatsächlich an, K öffnet nicht. Auf ein Verschulden des K kommt es nicht an.",
+          "marken": [
+            "tatsächliches Angebot"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Haftung gemildert",
+          "text": "Der Schuldner haftet nur noch für Vorsatz und grobe Fahrlässigkeit.",
+          "norm": "§ 300 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: die Haftungsmilderung. Während des Annahmeverzugs haftet V nur noch für Vorsatz und grobe Fahrlässigkeit. Ein leichter Fahrfehler auf der Rückfahrt schadet ihm nicht.",
+          "marken": [
+            "nur grob fahrlässig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Leistungspflicht erlischt",
+          "text": "Die Ware ist zerstört – V wird frei.",
+          "norm": "§ 275 Abs. 1 BGB",
+          "sprecher": "Schritt drei: Die Ware wird auf der Rückfahrt zerstört, V wird von seiner Leistungspflicht frei. Bei einer Gattungsschuld hilft dabei § 300 Absatz 2 oder schon die Konkretisierung.",
+          "marken": [
+            "frei nach § 275"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Der Kaufpreis bleibt",
+          "text": "Unmöglichkeit im Annahmeverzug, nicht zu vertreten: Gegenleistung bleibt.",
+          "norm": "§ 326 Abs. 2 S. 1 BGB",
+          "sprecher": "Schritt vier: die Gegenleistung. Grundsätzlich entfällt sie bei Unmöglichkeit. Tritt die Unmöglichkeit aber während des Annahmeverzugs ein und hat V sie nicht zu vertreten, behält er den Anspruch auf den Kaufpreis.",
+          "marken": [
+            "§ 326 II 1 Alt. 2"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Abzug für Ersparnisse",
+          "text": "V muss sich anrechnen lassen, was er durch die Befreiung erspart.",
+          "norm": "§ 326 Abs. 2 S. 2 BGB",
+          "sprecher": "Einen Haken gibt es: V muss sich anrechnen lassen, was er infolge der Befreiung erspart, etwa die Kosten einer erneuten Lieferung.",
+          "marken": [
+            "Ersparnis abziehen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Annahmeverzug, nicht zu vertreten – der Kaufpreis bleibt.",
+          "norm": null,
+          "sprecher": "Merke: Im Annahmeverzug haftet der Verkäufer nur noch für Vorsatz und grobe Fahrlässigkeit, und der Kaufpreis bleibt geschuldet.",
+          "marken": [
+            "Gefahr beim Gläubiger"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst den Annahmeverzug prüfen",
+          "text": "Speichern für die nächste Schuldrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Schuldrechtsklausur. Und prüf bei zerstörter Ware immer, ob der Gläubiger schon im Annahmeverzug war.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Die Ware geht unter, und der Käufer muss trotzdem zahlen? Ja – wenn er vorher im Annahmeverzug war. Dann haftet der Verkäufer nur noch für Vorsatz und grobe Fahrlässigkeit (§ 300 Abs. 1 BGB), wird nach § 275 Abs. 1 BGB frei und behält den Anspruch auf den Kaufpreis (§ 326 Abs. 2 S. 1 Alt. 2 BGB). Ersparte Aufwendungen muss er sich anrechnen lassen. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#annahmeverzug",
+        "#326bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Annahmeverzug: Wer trägt die Gefahr?",
+      "coverText": "Gefahr beim säumigen Käufer",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "flux"
+        ],
+        "kernidee": "Wer die angebotene Lieferung nicht annimmt, trägt das Risiko, wenn die Ware danach ohne grobes Verschulden untergeht.",
+        "handlung": "{A} holds out a delivery crate at a closed front door, while {B} peeks through the window beside it and deliberately stays inside.",
+        "hinweisRegie": "Place the note in the free space beside the closed door, slightly tilted toward the offered crate, so it links the refused delivery to the risk without covering {A}'s hands or {B}'s face at the window.",
+        "alternative": "{B} lets a parcel slide off a cart on the way back from a locked house, while {A} calmly keeps the invoice in her hand."
+      },
+      "bildSzene": "crate offered at door, nobody opens",
+      "bildSzeneAlt": "parcel falls off cart, invoice kept",
+      "quellen": [
+        "§§ 293 ff. BGB",
+        "§ 300 BGB",
+        "§ 275 Abs. 1 BGB",
+        "§ 326 Abs. 2 BGB",
+        "Themenpool: schuld-443"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-772",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Durchsucht wird beim unverdächtigen D, Inhaber der Wohnung. Muss man ihm vorher sagen, wonach gesucht wird?",
+      "optionen": [
+        "Nein – das könnte den Ermittlungszweck gefährden",
+        "Nur wenn D ausdrücklich danach fragt",
+        "Ja – der Zweck ist vor Beginn bekanntzumachen"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 103 StPO",
+        "§ 106 StPO",
+        "Themenpool: stpo-772"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-772",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – beim Dritten wird der Zweck vor Beginn bekanntgemacht",
+      "text": "§ 106 Abs. 2 S. 1 StPO: Bei einer Durchsuchung nach § 103 Abs. 1 StPO ist dem Inhaber – oder der in seiner Abwesenheit zugezogenen Person – der Zweck der Durchsuchung vor ihrem Beginn bekanntzumachen. Der Unverdächtige soll wissen, was gesucht wird, und die Sache womöglich freiwillig herausgeben. Für den Beschuldigten (§ 102 StPO) sieht die Norm das nicht vor.",
+      "norm": "§ 106 Abs. 2 S. 1 StPO",
+      "quellen": [
+        "§ 102 StPO",
+        "§ 103 StPO",
+        "§ 106 StPO",
+        "Themenpool: stpo-772"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.791Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – das könnte den Ermittlungszweck gefährden",
+        "Nur wenn D ausdrücklich danach fragt",
+        "Ja – der Zweck ist vor Beginn bekanntzumachen"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-455",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Drittschadensliquidation: wenn Schaden und Anspruch zufällig auseinanderfallen",
+      "text": "Grundsatz: Ersatz bekommt nur, wer selbst geschädigt ist. Die DSL macht eine Ausnahme, wenn der Anspruchsinhaber keinen Schaden hat, der Geschädigte keinen Anspruch – und sich der Schaden nur zufällig verlagert hat. Fallgruppen: Gefahrentlastung (etwa § 447 BGB), mittelbare Stellvertretung, Obhutsfälle. Der Dritte kann Abtretung des Anspruchs verlangen, meist über § 285 BGB.",
+      "norm": "§§ 249 ff. BGB · § 285 BGB",
+      "quellen": [
+        "§§ 249 ff. BGB",
+        "§ 447 BGB",
+        "§ 285 BGB",
+        "Themenpool: schuld-455"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.791Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-856",
+      "ueberzeile": "Streitstand Anklage",
+      "titel": "Der Staatsanwalt erfährt privat von einer Straftat: Muss er dienstlich einschreiten?",
+      "norm": "§ 152 Abs. 2 StPO",
+      "optionen": [
+        "Rspr.: Abwägung – Pflicht nur bei Taten, die die Öffentlichkeit besonders berühren.",
+        "Teile der Lit.: Privates Wissen verpflichtet nie – andere: stets."
+      ],
+      "text": "Relevant meist bei § 258a StGB: Strafvereitelung im Amt durch Untätigkeit? Mit der Rspr. wägst du die Schwere der Tat gegen die Privatsphäre des Beamten ab.",
+      "quellen": [
+        "§ 152 Abs. 2 StPO",
+        "§ 160 Abs. 1 StPO",
+        "§ 258a StGB",
+        "Themenpool: anklage-856"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.791Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-508",
+      "ueberzeile": "Merksatz Sachenrecht",
+      "titel": "Grenzwert eingehalten: in der Regel unwesentlich",
+      "text": "Werden gesetzliche oder durch Rechtsverordnung festgelegte Grenz- oder Richtwerte nicht überschritten, ist die Beeinträchtigung in der Regel unwesentlich und zu dulden. Ausnahmen bleiben möglich.",
+      "norm": "§ 906 Abs. 1 S. 2 BGB",
+      "quellen": [
+        "§ 906 BGB",
+        "§ 1004 BGB",
+        "Themenpool: sachen-508"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.791Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-302",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Abbruch rettender Kausalverläufe: Fremde Rettung stoppen ist Tun",
+      "text": "Wer eine fremde Rettungsmaßnahme abbricht – etwa den zugeworfenen Rettungsring wegzieht –, handelt aktiv. Bricht jemand seine eigene Rettungsbemühung ab, bevor sie das Opfer erreicht, ist das nach h.M. Unterlassen: Dann kommt es auf die Garantenstellung an (§ 13 StGB).",
+      "norm": "§ 13 StGB",
+      "quellen": [
+        "§ 13 StGB",
+        "Themenpool: strafat-302"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:30:49.791Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,850 @@
+{
+  "datum": "2026-11-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-901",
+        "themaTitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "assessoroer-714",
+        "themaTitel": "Polizei-/Ordnungsrechtsklausur im Assessorexamen",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-7",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "assessorz-582"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "assessorz-582"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:52",
+        "art": "norm",
+        "themaId": "revision-788"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "begriff",
+        "themaId": "grundr-366"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "fehler",
+        "themaId": "verwbt-932"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:14",
+        "art": "tipp",
+        "themaId": "verwbt-114"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-901",
+      "poolTitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "assessoroer-714",
+      "poolTitel": "Polizei-/Ordnungsrechtsklausur im Assessorexamen",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "Landesrecht; VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-7",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-12"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-582",
+      "poolTitel": "Anwaltsklausur: Klageerwiderung und Verteidigungsstrategie",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-582",
+      "poolTitel": "Anwaltsklausur: Klageerwiderung und Verteidigungsstrategie",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "revision-788",
+      "poolTitel": "Beruhensprüfung",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 337 StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-29"
+      ]
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "grundr-366",
+      "poolTitel": "Wann ist die Menschenwürde verletzt?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 1 Abs. 1 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "verwbt-932",
+      "poolTitel": "Mittel der Kommunalaufsicht und der Rechtsschutz der Gemeinde",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "verwbt-114",
+      "poolTitel": "Wann darf die Polizei einen Nichtstörer in Anspruch nehmen?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-901",
+      "slug": "2026-11-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gutachtenstil fürs Offensichtliche kostet den Schwerpunkt",
+          "titelZeilen": [
+            "Gutachtenstil fürs",
+            "Offensichtliche",
+            "kostet den",
+            "Schwerpunkt"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Kurz, wo es klar ist",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "Jedes Merkmal mit Obersatz, Definition, Subsumtion und Ergebnis – auch das, was offensichtlich vorliegt. Das kostet Zeit und Platz, und der Korrektor sieht nicht, wo du den Fall für problematisch hältst. Der Stil ist ein Werkzeug: Er zeigt, wo du Gewicht setzt."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Stile, zwei Aufgaben",
+          "links": {
+            "titel": "Gutachtenstil",
+            "punkte": [
+              "Erst die Frage, dann die Antwort: „müsste“ … „also“",
+              "Für echte Probleme und Streitfragen",
+              "Obersatz, Definition, Subsumtion, Ergebnis"
+            ]
+          },
+          "rechts": {
+            "titel": "Urteilsstil",
+            "punkte": [
+              "Erst das Ergebnis, dann der Grund: „denn“, „weil“",
+              "Für Unproblematisches im Gutachten",
+              "Im 2. Examen: Stil der Entscheidungsgründe"
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "So setzt du die Stile ein",
+          "schritte": [
+            {
+              "titel": "Schwerpunkte markieren",
+              "text": "Vor dem Schreiben: Welche zwei, drei Merkmale sind im Sachverhalt wirklich angelegt?"
+            },
+            {
+              "titel": "Klares im Urteilsstil",
+              "text": "Ein Satz genügt: „Die Uhr ist für A eine fremde bewegliche Sache.“ Mehrere klare Merkmale darfst du bündeln."
+            },
+            {
+              "titel": "Probleme im Gutachtenstil",
+              "text": "Obersatz, Definition, sorgfältige Subsumtion mit den Angaben des Sachverhalts – Streit nur, wo er relevant wird."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Vorher, nachher",
+          "text": "Vorher: „Die Uhr müsste eine Sache sein. Sachen sind körperliche Gegenstände (§ 90 BGB). Die Uhr ist ein körperlicher Gegenstand. Also ist sie eine Sache.“ Nachher: „Die Uhr ist eine fremde bewegliche Sache. Fraglich ist, ob A sie weggenommen hat.“"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gutachtenstil zeigt das Problem, Urteilsstil erledigt das Klare. Wer beides bewusst mischt, gewinnt Zeit für den Schwerpunkt."
+        },
+        {
+          "art": "cta",
+          "titel": "Stil-Check beim Schreiben",
+          "punkte": [
+            "Ist das hier wirklich problematisch?",
+            "Wenn nein: ein Satz im Urteilsstil",
+            "Wenn ja: volles Gutachten"
+          ],
+          "icons": [
+            "lupe",
+            "fueller",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Gutachtenstil fürs Offensichtliche kostet dich Zeit – und die fehlt beim Schwerpunkt. Der Gutachtenstil gehört zu den echten Problemen: Obersatz, Definition, Subsumtion, Ergebnis. Was klar vorliegt, stellst du im Urteilsstil in einem Satz fest. So sieht der Korrektor sofort, wo du den Fall für schwierig hältst. Speichern und in der nächsten Probeklausur testen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#gutachtenstil",
+        "#klausurtechnik",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+      "coverText": "Kurz, wo es klar ist",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Ausführlich wird es nur dort, wo der Fall ein Problem hat – das Klare bekommt einen Satz.",
+        "handlung": "{A} taps his pointer on one large glowing stone in a row of small plain pebbles, while {B} strides quickly over the pebbles toward it.",
+        "hinweisRegie": "Place the note in the free space above the glowing stone, slightly tilted toward it, so the focus on the real problem is linked to the note without covering {B}'s stride.",
+        "alternative": "{B} walks briskly along a paved path and slows down only at one rickety bridge section, where {A} waits with his pointer raised."
+      },
+      "bildSzene": "pointer taps glowing stone among pebbles",
+      "bildSzeneAlt": "brisk walk slows at rickety bridge",
+      "quellen": [
+        "§ 90 BGB (Beispiel)",
+        "Themenpool: methodik-901"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zeitkosten-konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.954Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-714",
+      "slug": "2026-11-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Polizeiklausur im 2. Examen: drei Ebenen, feste Reihenfolge",
+          "titelZeilen": [
+            "Polizeiklausur im",
+            "2. Examen: drei",
+            "Ebenen, feste",
+            "Reihenfolge"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Rechtsschutz, Maßnahme, Kosten",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Ebene 1: Rechtsschutz",
+          "punkte": [
+            "Maßnahme wirkt fort: Anfechtungsklage, im Eilverfahren § 80 Abs. 5 VwGO.",
+            "Anordnungen von Polizeivollzugsbeamten: keine aufschiebende Wirkung (§ 80 Abs. 2 S. 1 Nr. 2 VwGO).",
+            "Erledigt: Fortsetzungsfeststellungsklage (§ 113 Abs. 1 S. 4 VwGO; vor Klageerhebung nach h.M. analog).",
+            "Dann Feststellungsinteresse: Wiederholungsgefahr, Rehabilitation, tiefgreifender Grundrechtseingriff."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Ebene 2: die Maßnahme",
+          "punkte": [
+            "Ermächtigungsgrundlage: Spezialgesetz vor Standardmaßnahme vor Generalklausel.",
+            "Formell: Zuständigkeit, Verfahren, Form – je nach Landesrecht.",
+            "Materiell: Gefahr, richtiger Adressat, Ermessen, Verhältnismäßigkeit."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Ebene 3: Vollstreckung und Kosten",
+          "punkte": [
+            "Zwangsmittel: Grund-VA vollziehbar – oder Sofortvollzug zulässig?",
+            "Unmittelbare Ausführung: je nach Landesrecht eigene Befugnis.",
+            "Kostenbescheid: Grundlage im Landesrecht; bei Sofortvollzug die Rechtmäßigkeit der Maßnahme mitprüfen."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Anschein: zwei Ebenen, zwei Maßstäbe",
+          "links": {
+            "titel": "Primärebene",
+            "punkte": [
+              "Maßstab: verständige Sicht ex ante",
+              "Der Anscheinsstörer ist verantwortlich"
+            ]
+          },
+          "rechts": {
+            "titel": "Sekundärebene",
+            "punkte": [
+              "Maßstab: Zurechnung aus Sicht ex post",
+              "Wer den Anschein nicht veranlasst hat, trägt die Kosten ggf. nicht"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtaktik",
+          "text": "Im Assessorexamen zählt die Form: Urteil, Beschluss oder Anwaltsschriftsatz. Zitiere Landesrecht immer mit der konkreten Norm – Begriffe wie „Generalklausel“ oder „Notstand“ ersetzen die Fundstelle nicht."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Rechtsschutzform, dann die Maßnahme, dann Vollstreckung und Kosten – und auf jeder Ebene die konkrete Landesnorm."
+        },
+        {
+          "art": "cta",
+          "titel": "Polizeiklausur in drei Ebenen",
+          "punkte": [
+            "Welcher Rechtsschutz passt?",
+            "Maßnahme rechtmäßig?",
+            "Vollstreckung und Kosten?"
+          ],
+          "icons": [
+            "gericht",
+            "polizei",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Die Polizeiklausur im 2. Examen in drei Ebenen: Rechtsschutz (Anfechtung, Eilantrag, Fortsetzungsfeststellung), Rechtmäßigkeit der Maßnahme (Ermächtigungsgrundlage, Adressat, Ermessen) und Vollstreckung samt Kosten. Die Details stehen in den Polizei- und Ordnungsgesetzen der Länder – deshalb gehört auf jede Ebene die konkrete Landesnorm. Speichern als Spickzettel für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#vwgo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Polizeirecht im Assessorexamen: drei Ebenen",
+      "coverText": "Rechtsschutz, Maßnahme, Kosten",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Polizeiklausur löst man in drei Ebenen: Rechtsschutz, Maßnahme, Kosten.",
+        "handlung": "{B} nervously climbs a three-rung ladder toward a flashing warning beacon, while {A} hovers beside the ladder and checks each rung before {B} steps up.",
+        "hinweisRegie": "Place the note in the free space beside the middle rung, slightly tilted toward the beacon, so the ordered levels are linked to the note without covering {B}'s hands or the beacon.",
+        "alternative": "{A} stacks three crates of different colours in a fixed order, while {B} waits to lift them off one by one from the top."
+      },
+      "bildSzene": "checked ladder rungs toward warning beacon",
+      "bildSzeneAlt": "three coloured crates stacked in order",
+      "quellen": [
+        "§ 80 Abs. 2, 5 VwGO",
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: assessoroer-714"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-ebenen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.955Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-7",
+      "slug": "2026-11-07-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nochmal lesen fühlt sich nur wie Lernen an",
+          "unter": "Kopfsache · Wiederholen",
+          "text": "Wiedererkennen ist nicht Abrufen – in der Klausur zählt das Abrufen.",
+          "norm": null,
+          "icon": "buch",
+          "sprecher": "Nochmal lesen fühlt sich nur wie Lernen an. Beim zweiten Lesen erkennst du alles wieder und denkst: sitzt. In der Klausur musst du es aber ohne Vorlage abrufen. Genau das trainierst du beim Lesen nicht.",
+          "marken": [
+            "erkennen statt abrufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Buch zu, Frage stellen",
+          "text": "Vor dem Lesen: Was weiß ich zu dem Thema noch?",
+          "norm": null,
+          "sprecher": "Schritt eins: Buch zu. Bevor du ein Thema wiederholst, stell dir eine Frage dazu, etwa: Welche Voraussetzungen hat die Anfechtung? Und versuch die Antwort, bevor du nachschaust.",
+          "marken": [
+            "erst fragen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Aus dem Kopf aufschreiben",
+          "text": "Schema, Definition, Streit – ohne Vorlage auf ein leeres Blatt.",
+          "norm": null,
+          "sprecher": "Schritt zwei: aufschreiben. Schema, Definition, Streitstand, alles aus dem Kopf auf ein leeres Blatt. Es darf lückenhaft sein. Die Lücken sind die eigentliche Information.",
+          "marken": [
+            "leeres Blatt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Nur die Lücken nachlesen",
+          "text": "Vergleichen, markieren, gezielt ergänzen.",
+          "norm": null,
+          "sprecher": "Schritt drei: vergleichen. Jetzt erst schlägst du nach und liest gezielt dort, wo dein Blatt Lücken hat. Das spart Zeit und zeigt dir, was wirklich fehlt.",
+          "marken": [
+            "gezielt ergänzen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Mit Abstand wiederholen",
+          "text": "Nach ein paar Tagen erneut abrufen – nicht am selben Abend.",
+          "norm": null,
+          "sprecher": "Schritt vier: Abstand. Wiederhole dasselbe Thema nach ein paar Tagen und später noch einmal, jedes Mal zuerst aus dem Kopf. Dass du zwischendurch etwas vergisst, gehört dazu.",
+          "marken": [
+            "mit Abstand"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Warum es anstrengender ist",
+          "text": "Abrufen fühlt sich mühsamer an – genau das ist das Training.",
+          "norm": null,
+          "sprecher": "Ja, das fühlt sich mühsamer an als Lesen. Aber genau diese Mühe ist das Training für die Situation, in der du ohne Unterlagen vor dem Sachverhalt sitzt.",
+          "marken": [
+            "Mühe ist Training"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Abrufen statt anschauen",
+          "text": "Erst aus dem Kopf, dann ins Buch – immer in dieser Reihenfolge.",
+          "norm": null,
+          "sprecher": "Merke: erst aus dem Kopf, dann ins Buch. Wiedererkennen ist noch kein Können.",
+          "marken": [
+            "erst Kopf, dann Buch"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Heute ein Thema aus dem Kopf",
+          "text": "Speichern und heute ein Thema abrufen.",
+          "norm": null,
+          "sprecher": "Probier es heute mit einem einzigen Thema aus: Blatt, Kopf, dann Buch. Speicher dir das Reel für deinen nächsten Wiederholungstag.",
+          "marken": [
+            "heute testen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Nochmal lesen fühlt sich nur wie Lernen an: Du erkennst alles wieder – aber in der Klausur musst du es ohne Vorlage abrufen. Deshalb: Buch zu, Frage stellen, aus dem Kopf aufschreiben, nur die Lücken nachlesen und nach ein paar Tagen wiederholen. Das ist mühsamer als Lesen, trainiert aber genau das, was im Examen gefragt ist.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#lernplan",
+        "#lernmethoden",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wiederholen: abrufen statt nochmal lesen",
+      "titelZeilen": [
+        "Nochmal lesen",
+        "fühlt sich nur",
+        "wie Lernen an"
+      ],
+      "coverText": "Abrufen statt anschauen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wer nur nochmal liest, erkennt wieder – wer abruft, trainiert für die Klausur.",
+        "handlung": "{A} has closed a glowing book and tries to rebuild a small crystal structure from memory, while {B} hides the finished model behind his back for the later comparison.",
+        "hinweisRegie": "Place the note in the free space between {A}'s half-built structure and {B}'s hidden model, slightly tilted toward the gaps, so recall practice is linked to the note without covering {A}'s hands.",
+        "alternative": "{B} covers a map with his broad hand, while {A} tries to sketch the route from memory in the sand."
+      },
+      "bildSzene": "rebuilding crystal model from memory",
+      "bildSzeneAlt": "sketching covered map from memory",
+      "quellen": [
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "gefuehl-vs-wirkung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.956Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-582",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "Anwaltsklausur: Der Mandant hält die Klageforderung für verjährt. Was muss in die Klageerwiderung?",
+      "optionen": [
+        "Die Einrede der Verjährung – sie wird nicht von Amts wegen geprüft",
+        "Nichts – das Gericht prüft die Verjährung von Amts wegen",
+        "Eine Widerklage auf Feststellung der Verjährung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 214 Abs. 1 BGB",
+        "§§ 195, 199 BGB",
+        "ZPO",
+        "Themenpool: assessorz-582"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.956Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-582",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Einrede erheben – sonst bleibt die Verjährung unberücksichtigt",
+      "text": "Verjährung ist eine Einrede (§ 214 Abs. 1 BGB): Sie wirkt nur, wenn sich der Schuldner darauf beruft. In die Klageerwiderung gehören deshalb die Erhebung der Einrede und die Tatsachen zu Beginn und Ablauf der Frist (§§ 195, 199 BGB) – dafür trägt der Schuldner die Beweislast. Mögliche Hemmungsgründe des Klägers gleich mitdenken und ggf. bestreiten.",
+      "norm": "§ 214 Abs. 1 BGB · §§ 195, 199 BGB",
+      "quellen": [
+        "§ 214 Abs. 1 BGB",
+        "§§ 195, 199 BGB",
+        "ZPO",
+        "Themenpool: assessorz-582"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.956Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die Einrede der Verjährung – sie wird nicht von Amts wegen geprüft",
+        "Nichts – das Gericht prüft die Verjährung von Amts wegen",
+        "Eine Widerklage auf Feststellung der Verjährung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-788",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Letztes Wort versagt: Das Beruhen lässt sich kaum ausschließen",
+      "text": "Dem Angeklagten gebührt das letzte Wort (§ 258 Abs. 2 StPO). Wird es versagt, ist das ein relativer Revisionsgrund – das Beruhen (§ 337 Abs. 1 StPO) ist zu prüfen. Nach der Rspr. lässt es sich aber nur selten ausschließen: Niemand weiß, was der Angeklagte noch gesagt hätte und wie das auf das Gericht gewirkt hätte, vor allem bei der Strafzumessung.",
+      "norm": "§ 337 Abs. 1 StPO · § 258 Abs. 2 StPO",
+      "quellen": [
+        "§ 337 StPO",
+        "§ 258 StPO",
+        "Themenpool: revision-788"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.956Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-366",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Menschenwürde: verletzt, wenn der Mensch zum bloßen Objekt wird",
+      "text": "Objektformel: Die Würde ist verletzt, wenn der Staat einen Menschen zum bloßen Objekt seines Handelns macht und seine Subjektqualität grundsätzlich in Frage stellt. Art. 1 Abs. 1 GG ist unantastbar: Es gibt keine Rechtfertigung und keine Abwägung – jeder Eingriff ist eine Verletzung. Deshalb wird der Schutzbereich eng und am konkreten Fall bestimmt.",
+      "norm": "Art. 1 Abs. 1 GG",
+      "quellen": [
+        "Art. 1 Abs. 1 GG",
+        "Themenpool: grundr-366"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.956Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-932",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Aufsicht über die Gemeinde: Ist jede Maßnahme ein Verwaltungsakt?",
+      "falsch": "Egal ob Rechts- oder Fachaufsicht: Die Gemeinde wehrt sich stets mit der Anfechtungsklage.",
+      "richtigText": "Maßnahmen der Rechtsaufsicht in Selbstverwaltungsangelegenheiten sind gegenüber der Gemeinde regelmäßig Verwaltungsakte – sie berühren Art. 28 Abs. 2 GG, also Anfechtungsklage. Fachaufsichtliche Weisungen im übertragenen Wirkungskreis haben grundsätzlich keine Außenwirkung – anders, wenn sie in die Selbstverwaltung übergreifen. Details: Gemeindeordnungen der Länder.",
+      "quellen": [
+        "Art. 28 Abs. 2 GG",
+        "§ 35 VwVfG",
+        "Gemeindeordnungen der Länder",
+        "Themenpool: verwbt-932"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.956Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-114",
+      "ueberzeile": "Klausurtipp Polizeirecht",
+      "titel": "Nichtstörer herangezogen? Denk an den Entschädigungsanspruch",
+      "text": "Wer als Nichtverantwortlicher im polizeilichen Notstand in Anspruch genommen wird, erhält nach den Polizeigesetzen der Länder grundsätzlich Ausgleich für seinen Schaden. In der Klausur erst die Notstandsvoraussetzungen – erhebliche gegenwärtige Gefahr, Störer nicht rechtzeitig heranziehbar, keine eigene Abwehr, keine unzumutbare Belastung – dann die Entschädigung.",
+      "quellen": [
+        "Polizeigesetze der Länder",
+        "Themenpool: verwbt-114"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:17.956Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

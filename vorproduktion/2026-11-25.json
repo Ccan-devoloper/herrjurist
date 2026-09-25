@@ -1,0 +1,845 @@
+{
+  "datum": "2026-11-25",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-757",
+        "themaTitel": "Erschleichen von Leistungen",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-639",
+        "themaTitel": "Bestimmtheit und Begründung",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "gesetzs-205",
+        "themaTitel": "Was ist eine auch-fremde Geschäftsführung und ist sie GoA?",
+        "fach": "gesetzs",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "schuldbt-463"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "schuldbt-463"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "sachen-508"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "streitstand",
+        "themaId": "streit-06"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:40",
+        "art": "merksatz",
+        "themaId": "staat-597"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "begriff",
+        "themaId": "grundr-627"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-757",
+      "poolTitel": "Erschleichen von Leistungen",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 265a StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-639",
+      "poolTitel": "Bestimmtheit und Begründung",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§§ 37, 39 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "gesetzs-205",
+      "poolTitel": "Was ist eine auch-fremde Geschäftsführung und ist sie GoA?",
+      "fach": "gesetzs",
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "klausur": 1,
+      "normen": [
+        "§ 677 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-06"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-463",
+      "poolTitel": "Nacherfüllung: Nachbesserung oder Ersatzlieferung",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 1, 439 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-463",
+      "poolTitel": "Nacherfüllung: Nachbesserung oder Ersatzlieferung",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 1, 439 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-508",
+      "poolTitel": "Nachbarrechtliche Ausgleichsfragen",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 906, 1004 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-06",
+      "poolTitel": "Zweckveranlasser als Störer im Gefahrenabwehrrecht",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizei- und Ordnungsrecht der Länder"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "staat-597",
+      "poolTitel": "Bundesrat: Mitwirkung und Stimmabgabe",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 50 ff. GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-15",
+        "2026-09-22"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "grundr-627",
+      "poolTitel": "Petitionsrecht",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 17 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-757",
+      "slug": "2026-11-25-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Keine Schranke überwunden – trotzdem § 265a StGB",
+          "titelZeilen": [
+            "Keine Schranke",
+            "überwunden –",
+            "trotzdem § 265a StGB"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Anschein ordnungsgemäßer Nutzung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A steigt ohne Fahrschein in eine S-Bahn. Zugangssperren gibt es nicht, kontrolliert wird niemand. A setzt sich wie alle anderen Fahrgäste hin und will nicht zahlen. Hat er sich die Beförderung nach § 265a Abs. 1 StGB erschlichen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Tatobjekt",
+              "text": "Beförderung durch ein Verkehrsmittel – eine der Leistungen des § 265a Abs. 1 StGB."
+            },
+            {
+              "titel": "Tathandlung: Erschleichen",
+              "text": "Nach dem BGH genügt es, dass der Täter sich mit dem Anschein umgibt, die Bedingungen der Benutzung zu erfüllen."
+            },
+            {
+              "titel": "Subjektiv",
+              "text": "Vorsatz und Absicht, das Entgelt nicht zu entrichten."
+            },
+            {
+              "titel": "Subsidiarität und Antrag",
+              "text": "Nur, wenn keine schwerere Strafe droht; bei geringem Wert Strafantrag (§§ 265a Abs. 3, 248a StGB)."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Was heißt „erschleichen“?",
+          "links": {
+            "titel": "BGH",
+            "punkte": [
+              "Unauffälliges Mitfahren mit dem Anschein ordnungsgemäßer Nutzung genügt.",
+              "Keine Täuschung und kein Umgehen von Kontrollen nötig."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Verlangen ein Umgehen oder Ausschalten von Sicherungen oder Kontrollen.",
+              "Bloßes Einsteigen ohne Ticket reicht danach nicht."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Erschleichen“ mit dem Überwinden einer Sperre gleichsetzen und § 265a StGB kurzerhand verneinen. Nach dem BGH trägt schon der Anschein ordnungsgemäßer Nutzung das Merkmal. Folgst du ihm, ist A strafbar; mit der Gegenansicht nicht – dann den Streit entscheiden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schwarzfahren ohne Sperre: Nach dem BGH erschleicht, wer sich mit dem Anschein ordnungsgemäßer Nutzung umgibt."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 265a StGB in drei Zügen",
+          "punkte": [
+            "Welche Leistung wird erschlichen?",
+            "Anschein ordnungsgemäßer Nutzung?",
+            "Subsidiarität und Strafantrag"
+          ],
+          "icons": [
+            "lupe",
+            "detektiv",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Keine Schranke überwunden, niemand getäuscht – und trotzdem § 265a StGB? Nach dem BGH ja: Wer ohne Fahrschein mitfährt und sich dabei mit dem Anschein umgibt, die Nutzungsbedingungen zu erfüllen, erschleicht die Beförderung. Teile der Literatur verlangen ein Umgehen von Sicherungen oder Kontrollen. Nicht vergessen: Subsidiarität und bei geringem Wert der Strafantrag (§§ 265a Abs. 3, 248a StGB). Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#265astgb",
+        "#schwarzfahren",
+        "#erschleichen",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 265a StGB: Schwarzfahren ohne Sperre",
+      "coverText": "Anschein ordnungsgemäßer Nutzung",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Auch ohne Schranke erschleicht die Fahrt, wer sich unauffällig wie ein zahlender Fahrgast gibt.",
+        "handlung": "{A} sits calmly among other passengers on a train bench, perfectly blending in, while {B} nervously points at the wide-open, barrier-free doorway she just walked through.",
+        "hinweisRegie": "Place the note in the open space between the barrier-free doorway and {A}'s seat, slightly tilted toward her, so it links blending in to the offence without covering faces.",
+        "alternative": "{B} holds up a turnstile that has been removed entirely, while {A} strolls past wearing a confident, ticket-holder smile."
+      },
+      "bildSzene": "alien blends in on train bench",
+      "bildSzeneAlt": "removed turnstile, confident passenger strolls",
+      "quellen": [
+        "§ 265a StGB",
+        "§ 248a StGB",
+        "BGH, Beschluss zum Erschleichen durch unauffälliges Mitfahren",
+        "Themenpool: strafbt-757"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.826Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-639",
+      "slug": "2026-11-25-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Begründung fehlt, Tenor unklar: Was ist heilbar?",
+          "titelZeilen": [
+            "Begründung fehlt,",
+            "Tenor unklar:",
+            "Was ist heilbar?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Nachholen ist nicht Nachschieben",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde ordnet gegenüber E den Abriss „des Nebengebäudes“ an. Auf dem Grundstück stehen aber zwei Nebengebäude. Eine Begründung enthält der Bescheid nicht. Welcher Mangel lässt sich im Prozess noch beheben?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Anforderungen, zwei Folgen",
+          "links": {
+            "titel": "Begründung (§ 39)",
+            "punkte": [
+              "Formelle Rechtmäßigkeit.",
+              "Nachholbar bis zum Ende der letzten Tatsacheninstanz (§ 45 I Nr. 2, II VwVfG)."
+            ]
+          },
+          "rechts": {
+            "titel": "Bestimmtheit (§ 37 I)",
+            "punkte": [
+              "Nach h.M. materielle Rechtmäßigkeit.",
+              "Keine Heilung über § 45 VwVfG; klarstellen kann etwa der Widerspruchsbescheid."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der Lösungsweg",
+          "punkte": [
+            "Begründung: Die Behörde kann sie nachholen; bis dahin ist der Bescheid formell rechtswidrig.",
+            "Bestimmtheit: E muss erkennen können, was von ihm verlangt wird. Bei zwei Nebengebäuden ist das offen.",
+            "Folge: Der Bescheid bleibt wegen Unbestimmtheit rechtswidrig – die nachgeholte Begründung hilft nicht."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Nachholen und Nachschieben verwechseln. § 45 Abs. 1 Nr. 2 VwVfG erlaubt, eine fehlende Begründung nachzuholen – ein formeller Vorgang. Neue Gründe nachschieben, die den Bescheid inhaltlich tragen sollen, ist eine materielle Frage; für Ermessenserwägungen gilt § 114 S. 2 VwGO."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Fehlende Begründung: formell und heilbar. Unklarer Regelungsinhalt: materiell – § 45 VwVfG hilft nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Bescheid prüfen in drei Zügen",
+          "punkte": [
+            "Begründet nach § 39 VwVfG?",
+            "Hinreichend bestimmt nach § 37 VwVfG?",
+            "Heilung oder Unbeachtlichkeit prüfen"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "werkzeug"
+          ]
+        }
+      ],
+      "caption": "Begründung fehlt, Tenor unklar – was lässt sich retten? Die fehlende Begründung ist ein formeller Fehler: Die Behörde kann sie nach § 45 Abs. 1 Nr. 2, Abs. 2 VwVfG bis zum Abschluss der letzten Tatsacheninstanz nachholen. Die fehlende Bestimmtheit (§ 37 Abs. 1 VwVfG) betrifft nach h.M. die materielle Rechtmäßigkeit – dafür gibt es keine Heilung nach § 45. Und: Nachholen ist nicht Nachschieben. Speichern für die nächste Bescheidprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#vwvfg",
+        "#verwaltungsakt",
+        "#bestimmtheit",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Begründung und Bestimmtheit: was heilbar ist",
+      "coverText": "Nachholen ist nicht Nachschieben",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Eine fehlende Begründung lässt sich nachreichen, ein unklarer Befehl bleibt dagegen fehlerhaft.",
+        "handlung": "{A} hovers beside two identical small sheds and holds a demolition order pointing vaguely between them, while {B} stands with a pickaxe, puzzled, looking from one shed to the other.",
+        "hinweisRegie": "Place the note in the free space between the two identical sheds, slightly tilted, so it highlights the unclear target without covering {B}'s pickaxe or {A}'s pointing arm.",
+        "alternative": "{A} slips a late envelope into a closed file while {B} holds up a blurry map that no envelope can sharpen."
+      },
+      "bildSzene": "puzzled miner between two identical sheds",
+      "bildSzeneAlt": "late envelope versus blurry map",
+      "quellen": [
+        "§ 37 VwVfG",
+        "§ 39 VwVfG",
+        "§ 45 VwVfG",
+        "§ 114 S. 2 VwGO",
+        "Themenpool: verwalt-639"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "entscheidungsfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.826Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "gesetzs",
+      "klausur": 1,
+      "fachLabel": "Gesetzliche Schuldverhältnisse",
+      "themaId": "gesetzs-205",
+      "slug": "2026-11-25-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eigenes Interesse schließt GoA nicht aus",
+          "unter": "GoA · § 677 BGB",
+          "text": "Auch wer zugleich eigene Interessen verfolgt, kann ein fremdes Geschäft führen.",
+          "norm": "§ 677 BGB",
+          "icon": "feuer",
+          "sprecher": "Eigenes Interesse schließt GoA nicht aus. Wer zugleich für sich und für einen anderen handelt, führt ein auch-fremdes Geschäft. Und das kann nach der Rechtsprechung GoA sein.",
+          "marken": [
+            "eigenes Interesse",
+            "trotzdem GoA"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Auch-fremdes Geschäft",
+          "text": "Das Geschäft liegt zugleich im eigenen und im fremden Rechtskreis.",
+          "norm": "§ 677 BGB",
+          "sprecher": "Schritt eins: das auch-fremde Geschäft. Beispiel: A löscht einen Brand auf dem Nachbargrundstück, der auf sein eigenes Haus überzugreifen droht. Er schützt sein Haus und zugleich das Eigentum des Nachbarn.",
+          "marken": [
+            "eigen und fremd"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Fremdgeschäftsführungswille",
+          "text": "Beim auch-fremden Geschäft vermutet ihn die Rspr.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Fremdgeschäftsführungswille. Beim objektiv fremden Geschäft wird er vermutet. Der BGH vermutet ihn auch beim auch-fremden Geschäft. Das eigene Interesse schadet also nicht.",
+          "marken": [
+            "Wille vermutet"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Berechtigt: Interesse und Wille",
+          "text": "Dann Aufwendungsersatz nach §§ 683 S. 1, 670 BGB.",
+          "norm": "§§ 683, 670 BGB",
+          "sprecher": "Schritt drei: Entspricht die Übernahme dem Interesse und dem Willen des Geschäftsherrn, ist die GoA berechtigt. Dann gibt es Aufwendungsersatz nach Paragraf 683 Satz 1 und Paragraf 670.",
+          "marken": [
+            "Aufwendungsersatz"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Kritik an der Rspr.",
+          "text": "Die Lehre warnt vor einer Ausuferung, gerade bei vorrangigen Sonderregeln.",
+          "norm": null,
+          "sprecher": "Der Streit: Große Teile der Lehre halten die Rechtsprechung für zu weit. Die GoA werde so zur allgemeinen Ausgleichsordnung. Einigkeit besteht jedenfalls: Regeln Vertrag oder Gesetz den Ausgleich abschließend, tritt die GoA zurück.",
+          "marken": [
+            "zu weit?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Auch-fremd genügt, der Wille wird vermutet – außer Sonderregeln gehen vor.",
+          "norm": "§ 677 BGB",
+          "sprecher": "Merke: Ein auch-fremdes Geschäft genügt, der Fremdgeschäftsführungswille wird vermutet. Vorher aber prüfen, ob eine Sonderregel abschließend ist.",
+          "marken": [
+            "auch-fremd genügt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst Sonderregeln, dann GoA",
+          "text": "Speichern für die nächste GoA-Prüfung.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste GoA-Prüfung. Und schau immer zuerst, ob Vertrag oder Gesetz den Fall schon abschließend regeln.",
+          "marken": [
+            "Vorrang prüfen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Eigenes Interesse schließt GoA nicht aus. Wer einen Brand beim Nachbarn löscht, um sein eigenes Haus zu retten, führt ein auch-fremdes Geschäft. Die Rechtsprechung vermutet dann den Fremdgeschäftsführungswillen; bei berechtigter GoA gibt es Aufwendungsersatz nach §§ 683 S. 1, 670 BGB. Große Teile der Lehre kritisieren diese Weite. Regeln Vertrag oder Gesetz den Ausgleich abschließend, tritt die GoA zurück. Speichern für die nächste GoA-Prüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#goa",
+        "#677bgb",
+        "#gesetzlicheschuldverhältnisse",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Auch-fremdes Geschäft: trotzdem GoA",
+      "titelZeilen": [
+        "Eigenes Interesse",
+        "schließt GoA",
+        "nicht aus"
+      ],
+      "coverText": "Auch-fremd genügt",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Wer beim Nachbarn löscht, um das eigene Haus zu retten, hilft zugleich dem Nachbarn – und kann Ersatz verlangen.",
+        "handlung": "{A} throws a bucket of water onto flames at a fence between two small houses, while {B} watches from the neighbour's side and notices both houses are being saved at once.",
+        "hinweisRegie": "Place the note in the open space above the fence between the two houses, slightly tilted, so it connects both properties to the single act without covering the bucket or the flames.",
+        "alternative": "{B} repairs a shared wall between two cabins with one hand on each side, while {A} looks on and points at both roofs."
+      },
+      "bildSzene": "bucket of water on fence fire",
+      "bildSzeneAlt": "repairing shared wall between two cabins",
+      "quellen": [
+        "§ 677 BGB",
+        "§ 683 BGB",
+        "§ 670 BGB",
+        "Themenpool: gesetzs-205"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.832Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-463",
+      "ueberzeile": "Prüfungsfrage Kaufrecht",
+      "titel": "Gebrauchtwagen mit Mangel: Kann der Käufer einen gleichwertigen Ersatzwagen verlangen?",
+      "optionen": [
+        "Immer – § 439 Abs. 1 BGB unterscheidet nicht nach Kaufart",
+        "Nur, wenn die Sache nach dem Parteiwillen austauschbar ist",
+        "Nie – beim Stückkauf gibt es nur die Nachbesserung"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 437 Nr. 1 BGB",
+        "§ 439 Abs. 1 BGB",
+        "Themenpool: schuldbt-463"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.832Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-463",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur bei austauschbarer Kaufsache",
+      "text": "Nach dem BGH ist Nachlieferung auch beim Stückkauf nicht von vornherein ausgeschlossen. Entscheidend ist, ob die Sache nach dem Willen der Parteien bei Vertragsschluss durch eine gleichartige und gleichwertige ersetzt werden kann. Beim Gebrauchtwagen scheidet das regelmäßig aus, weil der persönliche Eindruck vom konkreten Fahrzeug zählt – dann bleibt die Nachbesserung.",
+      "norm": "§§ 437 Nr. 1, 439 Abs. 1 BGB",
+      "quellen": [
+        "§ 437 Nr. 1 BGB",
+        "§ 439 Abs. 1 BGB",
+        "Themenpool: schuldbt-463"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.832Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Immer – § 439 Abs. 1 BGB unterscheidet nicht nach Kaufart",
+        "Nur, wenn die Sache nach dem Parteiwillen austauschbar ist",
+        "Nie – beim Stückkauf gibt es nur die Nachbesserung"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-508",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 906 Abs. 2 S. 2 BGB: dulden müssen – aber nicht umsonst",
+      "text": "Muss der Eigentümer eine wesentliche, aber ortsübliche und nicht zumutbar verhinderbare Einwirkung dulden, erhält er einen angemessenen Geldausgleich, wenn sie Nutzung oder Ertrag unzumutbar beeinträchtigt. Analog gilt das nach der Rspr., wenn er eine rechtswidrige Einwirkung faktisch nicht rechtzeitig abwehren konnte. Verschulden ist nicht nötig.",
+      "norm": "§ 906 Abs. 2 S. 2 BGB",
+      "quellen": [
+        "§ 906 BGB",
+        "§ 1004 BGB",
+        "Themenpool: sachen-508"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.832Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "streit-06",
+      "ueberzeile": "Streitstand Polizeirecht",
+      "titel": "Zweckveranlasser: Störer durch das Verhalten Dritter?",
+      "norm": "Landespolizeirecht",
+      "optionen": [
+        "Verbreitet, auch Rspr.: Störer ist, wer die Störung durch Dritte bezweckt oder zwangsläufig auslöst.",
+        "Kritische Lit.: Figur zu unbestimmt; verantwortlich ist nur, wer die Gefahrenschwelle selbst überschreitet."
+      ],
+      "text": "Klassiker: das Schaufenster, vor dem sich eine Menge staut. Vorsicht bei Versammlungen: Grundrechtlich geschütztes Verhalten wird nicht allein durch gewalttätige Gegner zur Störung. Je nach Landesrecht: Unmittelbarkeitstheorie, dann Zweckveranlasser.",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:06.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-597",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "Bundesrat: Ein Land stimmt einheitlich",
+      "text": "Die Stimmen eines Landes zählen nur einheitlich (Art. 51 Abs. 3 S. 2 GG), sonst sind sie ungültig. Nötig ist die absolute Mehrheit (Art. 52 Abs. 3 S. 1 GG) – Enthaltung wirkt wie Nein.",
+      "norm": "Art. 51, 52 GG",
+      "quellen": [
+        "Art. 51 GG",
+        "Art. 52 GG",
+        "Themenpool: staat-597"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.832Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-627",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Petitionsrecht: Anspruch auf Antwort – nicht auf Erfolg",
+      "text": "Jeder darf sich einzeln oder mit anderen schriftlich mit Bitten oder Beschwerden an die zuständigen Stellen und an die Volksvertretung wenden (Art. 17 GG). Daraus folgt ein Anspruch auf Entgegennahme, sachliche Prüfung und einen Bescheid über die Art der Erledigung – nicht auf eine bestimmte Entscheidung oder eine ausführliche Begründung.",
+      "norm": "Art. 17 GG",
+      "quellen": [
+        "Art. 17 GG",
+        "Themenpool: grundr-627"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:52:21.832Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

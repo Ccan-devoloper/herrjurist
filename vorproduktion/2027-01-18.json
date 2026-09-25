@@ -1,0 +1,862 @@
+{
+  "datum": "2027-01-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "stpo-780",
+        "themaTitel": "Zufallsfunde",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "staat-602",
+        "themaTitel": "Konstruktives Misstrauensvotum und Vertrauensfrage",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-558",
+        "themaTitel": "Beweislast und Beweismaß",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "sachen-507"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "sachen-507"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "bereich-212"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "tipp",
+        "themaId": "verwalt-694"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:54",
+        "art": "zahl",
+        "themaId": "methodik-908"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "streitstand",
+        "themaId": "verwalt-931"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "stpo-780",
+      "poolTitel": "Zufallsfunde",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "staat-602",
+      "poolTitel": "Konstruktives Misstrauensvotum und Vertrauensfrage",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 67, 68 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-21"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-558",
+      "poolTitel": "Beweislast und Beweismaß",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 286, 287 ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-11-27"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-507",
+      "poolTitel": "EBV: Verwendungsersatz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 994 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-507",
+      "poolTitel": "EBV: Verwendungsersatz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 994 ff. BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bereich-212",
+      "poolTitel": "Was ist der Vorrang der Leistungsbeziehung?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "verwalt-694",
+      "poolTitel": "Verschulden und anderweitige Ersatzmöglichkeit",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 839 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-908",
+      "poolTitel": "Aktuelle Rechtsprechung examensgerecht reduzieren",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-12",
+        "2026-12-19"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "verwalt-931",
+      "poolTitel": "Besorgnis der Befangenheit im Verwaltungsverfahren: §§ 20, 21 VwVfG",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-11"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-780",
+      "slug": "2027-01-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "TKÜ-Zufallsfund: Mitgehört heißt nicht verwertbar",
+          "titelZeilen": [
+            "TKÜ-Zufallsfund:",
+            "Mitgehört heißt",
+            "nicht verwertbar"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Hätte die TKÜ die Tat getragen?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Gegen A läuft eine Telekommunikationsüberwachung wegen bandenmäßigen Drogenhandels. Im Gespräch erzählt A beiläufig, er habe im Supermarkt eine Flasche Whisky gestohlen. Darf die Aufzeichnung im Verfahren wegen dieses Diebstahls als Beweis verwertet werden?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Welche Maßnahme?",
+              "text": "Die TKÜ ist nur bei Verdacht einer Katalogtat zulässig (§ 100a Abs. 2 StPO). Der Zufallsfund betrifft eine andere Tat."
+            },
+            {
+              "titel": "2. Maßstab: § 479 Abs. 2 StPO",
+              "text": "Als Beweis in einem anderen Verfahren nur zur Aufklärung einer Tat, für die die Maßnahme hätte angeordnet werden dürfen."
+            },
+            {
+              "titel": "3. Hypothetischer Ersatzeingriff",
+              "text": "Hätte man wegen des einfachen Diebstahls (§ 242 StGB) eine TKÜ anordnen dürfen? Nein – er ist keine Katalogtat."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Keine Verwertung zu Beweiszwecken. Als Spurenansatz für weitere Ermittlungen darf die Erkenntnis nach h.M. genutzt werden."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Durchsuchung oder TKÜ?",
+          "links": {
+            "titel": "Durchsuchung",
+            "punkte": [
+              "§ 108 StPO: Gegenstände, die auf eine andere Tat hindeuten, einstweilen beschlagnahmen.",
+              "Staatsanwaltschaft informieren; gezielte Suche danach ist unzulässig."
+            ]
+          },
+          "rechts": {
+            "titel": "TKÜ und Co.",
+            "punkte": [
+              "Verwendung als Beweis nur für Taten, die die Maßnahme selbst getragen hätten.",
+              "Prüfstein: hypothetischer Ersatzeingriff (§ 479 Abs. 2 StPO)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Zufallsfund – also frei verwertbar“ oder umgekehrt „Zufallsfund – also unverwertbar“. Beides greift zu kurz. Entscheidend ist, welche Maßnahme den Fund geliefert hat. Bei katalogabhängigen Maßnahmen fragst du: Hätte sie auch für die neue Tat angeordnet werden dürfen?"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Zufallsfunde aus der TKÜ verwertest du als Beweis nur für Taten, die selbst eine TKÜ getragen hätten."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen zum Zufallsfund",
+          "punkte": [
+            "Aus welcher Maßnahme stammt er?",
+            "Hätte sie für die neue Tat angeordnet werden dürfen?",
+            "Beweismittel oder nur Spurenansatz?"
+          ],
+          "icons": [
+            "telefon",
+            "paragraf",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Mitgehört heißt nicht verwertbar: Was eine Telekommunikationsüberwachung zufällig über eine andere Tat zutage fördert, darf als Beweis nur für Taten verwendet werden, zu deren Aufklärung die TKÜ selbst hätte angeordnet werden dürfen (§ 479 Abs. 2 StPO). Beim einfachen Diebstahl ist das nicht der Fall. Anders bei der Durchsuchung: Dort regelt § 108 StPO die einstweilige Beschlagnahme. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#zufallsfund",
+        "#100astpo",
+        "#strafprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zufallsfund aus der TKÜ: verwertbar?",
+      "coverText": "Hätte die TKÜ die Tat getragen?",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Was eine Überwachung nebenbei einfängt, darf nur verwendet werden, wenn die Überwachung auch dafür erlaubt gewesen wäre.",
+        "handlung": "{A} nervously holds up a small fish caught by accident in a net meant for a large one, while {B} hovers beside him and measures the fish against a size gauge on the net frame.",
+        "hinweisRegie": "Place the note in the free space between the small fish and the size gauge, slightly tilted toward the gauge, so the test question is linked to the catch without covering {A}'s hands.",
+        "alternative": "{B} sorts two sound recordings into a bin marked only by a shape, while {A} tries to push a second recording that does not fit the shape."
+      },
+      "bildSzene": "small fish caught in net, size gauge",
+      "bildSzeneAlt": "recordings sorted into shape-coded bin",
+      "quellen": [
+        "§ 100a Abs. 2 StPO",
+        "§ 479 Abs. 2 StPO",
+        "§ 108 StPO",
+        "§ 242 StGB",
+        "Themenpool: stpo-780"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.634Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-602",
+      "slug": "2027-01-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vertrauensfrage: fünf Schritte bis zur Neuwahl",
+          "titelZeilen": [
+            "Vertrauensfrage:",
+            "fünf Schritte bis",
+            "zur Neuwahl"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Auflösen darf nur der Bundespräsident",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Art. 67 GG: Der Bundestag stürzt den Kanzler nur, indem er einen Nachfolger wählt. Art. 68 GG geht den umgekehrten Weg: Der Kanzler stellt die Vertrauensfrage. Scheitert sie, kann am Ende die Auflösung des Bundestags stehen – aber nicht automatisch."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Antrag des Kanzlers",
+              "text": "Er beantragt, ihm das Vertrauen auszusprechen (Art. 68 Abs. 1 S. 1 GG)."
+            },
+            {
+              "titel": "2. Frist",
+              "text": "Zwischen Antrag und Abstimmung müssen 48 Stunden liegen (Art. 68 Abs. 2 GG)."
+            },
+            {
+              "titel": "3. Keine Mehrheit der Mitglieder",
+              "text": "Maßgeblich ist die Mehrheit der gesetzlichen Mitgliederzahl (Art. 121 GG), nicht der Anwesenden."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Vorschlag des Kanzlers",
+              "text": "Ohne seinen Vorschlag darf der Bundespräsident nicht auflösen."
+            },
+            {
+              "titel": "5. Entscheidung des Bundespräsidenten",
+              "text": "Binnen 21 Tagen, nach seinem Ermessen. Das Recht erlischt, sobald der Bundestag mit Mitgliedermehrheit einen anderen Kanzler wählt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: die gewollt verlorene Vertrauensfrage",
+          "text": "Stellt der Kanzler die Frage, um Neuwahlen zu erreichen, verlangt das BVerfG eine Lage, in der er nicht mehr auf eine stetige Mehrheit bauen kann. Dem Kanzler steht dabei eine Einschätzungsprärogative zu; das Gericht prüft zurückhaltend."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Die verlorene Vertrauensfrage öffnet nur die Tür: Auflösen kann allein der Bundespräsident – auf Vorschlag des Kanzlers und binnen 21 Tagen."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 68 GG auf einen Blick",
+          "punkte": [
+            "Antrag und 48 Stunden",
+            "Mitgliedermehrheit verfehlt?",
+            "Vorschlag des Kanzlers",
+            "Ermessen des Bundespräsidenten"
+          ],
+          "icons": [
+            "dokument",
+            "uhr",
+            "wahlurne",
+            "gebaeude"
+          ]
+        }
+      ],
+      "caption": "Vertrauensfrage verloren – und dann? Art. 68 GG läuft in fünf Schritten: Antrag des Kanzlers, 48 Stunden Frist, keine Mehrheit der Mitglieder des Bundestags, Vorschlag des Kanzlers und die Ermessensentscheidung des Bundespräsidenten binnen 21 Tagen. Wählt der Bundestag vorher mit Mitgliedermehrheit einen anderen Kanzler, erlischt das Auflösungsrecht. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#staatsorganisationsrecht",
+        "#art68gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vertrauensfrage nach Art. 68 GG: das Schema",
+      "coverText": "Auflösen darf nur der Bundespräsident",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Eine verlorene Vertrauensfrage löst den Bundestag nicht auf – sie gibt nur den Weg für eine Entscheidung des Bundespräsidenten frei.",
+        "handlung": "{A} points with his pointer at an unlocked door whose key hangs on a separate hook, while {B} stands in front of the door and decides whether to take the key.",
+        "hinweisRegie": "Place the note in the free space next to the key on its separate hook, slightly tilted toward {B}'s hand, so the final decision is linked to the note without covering the unlocked door.",
+        "alternative": "{B} holds a sand timer that is running out while {A} waits beside a closed gate that only opens if she turns a crank."
+      },
+      "bildSzene": "unlocked door, key on separate hook",
+      "bildSzeneAlt": "sand timer beside gate with crank",
+      "quellen": [
+        "Art. 67 GG",
+        "Art. 68 GG",
+        "Art. 121 GG",
+        "BVerfG zur auflösungsgerichteten Vertrauensfrage",
+        "Themenpool: staat-602"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-schritte-verfahren",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.634Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-558",
+      "slug": "2027-01-18-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "51 Prozent überzeugen das Gericht nicht",
+          "unter": "Beweismaß · § 286 ZPO",
+          "text": "Volle Überzeugung statt „wahrscheinlicher als nicht“.",
+          "norm": "§ 286 ZPO",
+          "icon": "waage",
+          "sprecher": "Einundfünfzig Prozent reichen im Zivilprozess nicht. Nach § 286 ZPO muss der Richter von der Wahrheit einer Behauptung überzeugt sein. Ein bloßes Übergewicht an Wahrscheinlichkeit genügt nicht.",
+          "marken": [
+            "nicht 51 %",
+            "Überzeugung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Regelbeweismaß: volle Überzeugung",
+          "text": "Ein brauchbarer Grad an Gewissheit – letzte Zweifel dürfen bleiben.",
+          "norm": "§ 286 Abs. 1 ZPO",
+          "sprecher": "Schritt eins: das Regelbeweismaß. Verlangt wird keine mathematische Sicherheit, sondern ein für das praktische Leben brauchbarer Grad an Gewissheit. Vernünftige Zweifel müssen schweigen, völlig ausgeschlossen sein müssen sie nicht.",
+          "marken": [
+            "keine 100 %"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Abgesenkt: § 287 ZPO",
+          "text": "Bei Schadensentstehung und Schadenshöhe darf das Gericht schätzen.",
+          "norm": "§ 287 ZPO",
+          "sprecher": "Schritt zwei: die Ausnahme. Ob und in welcher Höhe ein Schaden entstanden ist, entscheidet das Gericht nach § 287 ZPO unter Würdigung aller Umstände. Hier sind die Anforderungen gesenkt, das Gericht darf schätzen.",
+          "marken": [
+            "Schätzung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Glaubhaftmachung: § 294 ZPO",
+          "text": "Im Eilverfahren genügt überwiegende Wahrscheinlichkeit.",
+          "norm": "§ 294 ZPO",
+          "sprecher": "Schritt drei: die Glaubhaftmachung. Wo das Gesetz sie genügen lässt, etwa im Eilverfahren, reicht überwiegende Wahrscheinlichkeit. Mittel dafür ist auch die eidesstattliche Versicherung.",
+          "marken": [
+            "nur wo erlaubt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Non liquet: Die Beweislast entscheidet",
+          "text": "Wer sich auf eine günstige Norm beruft, trägt die Last für ihre Voraussetzungen.",
+          "norm": null,
+          "sprecher": "Schritt vier: Bleibt das Gericht unentschlossen, entscheidet die Beweislast. Grundsätzlich trägt jede Partei sie für die tatsächlichen Voraussetzungen der Norm, die ihr günstig ist.",
+          "marken": [
+            "günstige Norm"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "§ 286: Überzeugung. § 287: Schätzung. § 294: Wahrscheinlichkeit. Zweifel: Beweislast.",
+          "norm": "§§ 286, 287, 294 ZPO",
+          "sprecher": "Merke: Paragraf 286 verlangt Überzeugung, 287 erlaubt Schätzung, 294 lässt Wahrscheinlichkeit genügen. Und wenn Zweifel bleiben, verliert, wer die Beweislast trägt.",
+          "marken": [
+            "drei Maße"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst das Beweismaß, dann die Beweislast",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur. Und frag vor jeder Beweiswürdigung: Welches Beweismaß gilt hier eigentlich?",
+          "marken": [
+            "welches Maß?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "51 Prozent überzeugen das Gericht nicht. Im Zivilprozess gilt nach § 286 ZPO die volle richterliche Überzeugung – ein brauchbarer Grad an Gewissheit, kein bloßes Wahrscheinlichkeitsübergewicht. Abgesenkt ist das Maß bei der Schadensschätzung nach § 287 ZPO; überwiegende Wahrscheinlichkeit genügt nur, wo Glaubhaftmachung reicht (§ 294 ZPO). Bleibt es unklar, entscheidet die Beweislast.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#beweislast",
+        "#286zpo",
+        "#zivilprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beweismaß im Zivilprozess: mehr als 51 Prozent",
+      "titelZeilen": [
+        "51 Prozent",
+        "überzeugen das",
+        "Gericht nicht"
+      ],
+      "coverText": "Überzeugung, Schätzung, Glaubhaft",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Ein knappes Übergewicht reicht nicht – das Gericht muss überzeugt sein, sonst entscheidet die Beweislast.",
+        "handlung": "{A} curiously watches a balance scale that tips only slightly to one side, while {B} keeps adding heavy crystals until the scale clearly settles.",
+        "hinweisRegie": "Place the note in the free space above the barely tipped scale, slightly tilted toward the rising pan, so it marks the missing weight without covering {B}'s crystals or hands.",
+        "alternative": "{B} tries to cross a gap on a plank that barely reaches the far side, while {A} measures how much longer it needs to be."
+      },
+      "bildSzene": "slightly tipped scale, crystals added",
+      "bildSzeneAlt": "plank barely reaching across a gap",
+      "quellen": [
+        "§ 286 ZPO",
+        "§ 287 ZPO",
+        "§ 294 ZPO",
+        "Themenpool: zpo-558"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verbreiteter-irrtum",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-507",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Dieb D lässt den Motor im gestohlenen Auto des E reparieren. E verlangt das Auto heraus. Ersatz für D?",
+      "optionen": [
+        "Nur nach GoA-Regeln (§ 994 Abs. 2 BGB)",
+        "Voll nach § 994 Abs. 1 BGB – notwendig ist notwendig",
+        "Nie – ein Dieb bekommt keinerlei Verwendungsersatz"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 994 BGB",
+        "§ 996 BGB",
+        "§§ 683, 684 BGB",
+        "§ 1000 BGB",
+        "Themenpool: sachen-507"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-507",
+      "ueberzeile": "Auflösung",
+      "titel": "Der bösgläubige Besitzer wird auf die GoA verwiesen",
+      "text": "Die Reparatur ist eine notwendige Verwendung. Vollen Ersatz nach § 994 Abs. 1 BGB bekommt aber nur der redliche, unverklagte Besitzer. Der Dieb ist bösgläubig: Er erhält Ersatz nur nach den GoA-Vorschriften (§ 994 Abs. 2 BGB) – also wenn die Reparatur Interesse und Willen des E entsprach, sonst nach § 684 S. 1 BGB. Bis dahin: Zurückbehaltungsrecht (§ 1000 BGB).",
+      "norm": "§ 994 Abs. 2 BGB · §§ 683, 684 BGB",
+      "quellen": [
+        "§ 994 BGB",
+        "§ 996 BGB",
+        "§§ 683, 684 BGB",
+        "§ 1000 BGB",
+        "Themenpool: sachen-507"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.637Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nur nach GoA-Regeln (§ 994 Abs. 2 BGB)",
+        "Voll nach § 994 Abs. 1 BGB – notwendig ist notwendig",
+        "Nie – ein Dieb bekommt keinerlei Verwendungsersatz"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-212",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 812 Abs. 1 S. 1 BGB: Rückabwicklung nur im Leistungsverhältnis",
+      "text": "Subunternehmer S baut im Auftrag des Generalunternehmers G ein Dach auf das Haus des B. G zahlt nicht. Gegen B hat S keinen Anspruch aus § 812 BGB: S hat an G geleistet, B hat das Dach durch Leistung des G erhalten. Rückabgewickelt wird im jeweiligen Leistungsverhältnis – eine Nichtleistungskondiktion des S gegen B ist grundsätzlich gesperrt.",
+      "norm": "§ 812 Abs. 1 S. 1 BGB",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 BGB",
+        "Themenpool: bereich-212"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-694",
+      "ueberzeile": "Klausurtipp Staatshaftung",
+      "titel": "§ 839 Abs. 1 S. 2 BGB: Die Verweisung auf andere Ersatzquellen eng lesen",
+      "text": "Bei Fahrlässigkeit haftet der Staat nur, wenn der Geschädigte nicht anderweitig Ersatz erlangen kann. Die Rspr. legt das eng aus: Nicht verwiesen wird auf selbst erkaufte Versicherungsleistungen und nicht bei dienstlicher Teilnahme am allgemeinen Straßenverkehr – jedenfalls ohne Sonderrechte. Beim Verschulden gilt ein objektiver Maßstab: der pflichtgetreue Durchschnittsbeamte.",
+      "quellen": [
+        "§ 839 Abs. 1 BGB",
+        "Art. 34 GG",
+        "Themenpool: verwalt-694"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-908",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Neues Urteil in den Nachrichten: vier Signale, dass es klausurtauglich ist",
+      "text": "Nicht jede Entscheidung gehört auf die Lernliste. Prüf diese vier Punkte, bevor du Zeit investierst.",
+      "punkte": [
+        "Es betrifft ein Standardproblem im Prüfungsschema",
+        "Es bestätigt oder ändert eine bekannte Linie",
+        "Es stammt von einem obersten Bundesgericht",
+        "Der Fall lässt sich in wenigen Sätzen erzählen"
+      ],
+      "quellen": [
+        "Themenpool: methodik-908"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-931",
+      "ueberzeile": "Streitstand Verwaltungsrecht",
+      "titel": "Behörde entscheidet über ein Vorhaben ihres eigenen Rechtsträgers: befangen?",
+      "norm": "§§ 20, 21 VwVfG",
+      "optionen": [
+        "BVerwG: Keine „institutionelle Befangenheit“ – genügend ist eine organisatorische und personelle Trennung in der Behörde.",
+        "Teile der Literatur: Das Neutralitätsgebot verlangt in solchen Fällen strengere Anforderungen bis hin zu einer anderen Behörde."
+      ],
+      "text": "Klausur: §§ 20, 21 VwVfG knüpfen an Personen an. Prüf zuerst den einzelnen Amtsträger – Ausschluss nach § 20 oder Besorgnis der Befangenheit nach § 21. Die institutionelle Frage vertiefst du nur, wenn der Sachverhalt gerade auf die Doppelrolle der Behörde zielt.",
+      "quellen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "Themenpool: verwalt-931"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:16.637Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

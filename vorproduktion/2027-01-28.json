@@ -1,0 +1,852 @@
+{
+  "datum": "2027-01-28",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "verwbt-110",
+        "themaTitel": "Wie prüft man die Rechtmäßigkeit einer Baugenehmigung?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "sachen-504",
+        "themaTitel": "Recht zum Besitz",
+        "fach": "sachen",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-725",
+        "themaTitel": "Einwilligung und mutmaßliche Einwilligung",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "schuld-459"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "schuld-459"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:00",
+        "art": "norm",
+        "themaId": "strafat-064"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:22",
+        "art": "streitstand",
+        "themaId": "streit-15"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "merksatz",
+        "themaId": "strafbt-323"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "stpo-767"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "verwbt-110",
+      "poolTitel": "Wie prüft man die Rechtmäßigkeit einer Baugenehmigung?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 29 BauGB",
+        "§ 30 BauGB",
+        "§ 34 BauGB",
+        "§ 35 BauGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "sachen-504",
+      "poolTitel": "Recht zum Besitz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 986 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-725",
+      "poolTitel": "Einwilligung und mutmaßliche Einwilligung",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "StGB AT"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuld-459",
+      "poolTitel": "Naturalrestitution, Differenzhypothese und Vorteilsausgleichung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 249 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuld-459",
+      "poolTitel": "Naturalrestitution, Differenzhypothese und Vorteilsausgleichung",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 249 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-064",
+      "poolTitel": "Wie grenzt man Täterschaft und Teilnahme ab?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 StGB",
+        "§ 26 StGB",
+        "§ 27 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-15",
+      "poolTitel": "Beurteilungsspielraum und gerichtliche Kontrolle bei Prüfungsentscheidungen",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 Abs. 1, Art. 19 Abs. 4 GG"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "strafbt-323",
+      "poolTitel": "Was ist der Gewahrsamsbegriff beim Diebstahl?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-06"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "stpo-767",
+      "poolTitel": "Schweigerecht und nemo tenetur",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "StPO; Art. 6 EMRK"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-11-14",
+        "2026-11-14"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-110",
+      "slug": "2027-01-28-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Drei Gebiete, drei Maßstäbe: §§ 30, 34, 35 BauGB",
+          "titelZeilen": [
+            "Drei Gebiete,",
+            "drei Maßstäbe:",
+            "§§ 30, 34, 35 BauGB"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Das Grundstück wählt die Norm",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Einstieg",
+          "text": "Die Baugenehmigung ist zu erteilen, wenn dem Vorhaben keine öffentlich-rechtlichen Vorschriften entgegenstehen, die im Genehmigungsverfahren zu prüfen sind – so oder ähnlich in allen Landesbauordnungen. Vorab klärst du Genehmigungsbedürftigkeit und Prüfprogramm, je nach Verfahren und Land."
+        },
+        {
+          "art": "text",
+          "titel": "Mit Bebauungsplan",
+          "punkte": [
+            "Vorhaben nach § 29 Abs. 1 BauGB: Errichtung, Änderung oder Nutzungsänderung einer baulichen Anlage.",
+            "Qualifizierter Plan: § 30 Abs. 1 BauGB – kein Widerspruch zu den Festsetzungen, Erschließung gesichert.",
+            "Abweichung von Festsetzungen: Ausnahme oder Befreiung nach § 31 BauGB.",
+            "Einfacher Plan: § 30 Abs. 3 BauGB – im Übrigen § 34 oder § 35 BauGB."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Ohne qualifizierten Plan",
+          "punkte": [
+            "Innenbereich, § 34 Abs. 1 BauGB: Einfügen nach Art, Maß, Bauweise und überbaubarer Grundstücksfläche.",
+            "§ 34 Abs. 2 BauGB: Entspricht die Umgebung einem Baugebiet der BauNVO, gilt für die Art die BauNVO.",
+            "Außenbereich, § 35 Abs. 1 BauGB: Privilegiertes zulässig, wenn öffentliche Belange nicht entgegenstehen.",
+            "§ 35 Abs. 2 BauGB: Sonstiges nur, wenn öffentliche Belange nicht beeinträchtigt werden (Abs. 3)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Nicht vergessen",
+          "punkte": [
+            "Einvernehmen der Gemeinde (§ 36 BauGB) in den Fällen der §§ 31, 33 bis 35 BauGB.",
+            "Bauordnungsrecht, etwa Abstandsflächen – soweit es zum Prüfprogramm gehört.",
+            "Sonstiges öffentliches Recht nur, soweit die Landesbauordnung es in das Verfahren holt."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst das Gebiet bestimmen, dann den Maßstab anlegen: § 30, § 34 oder § 35 BauGB. Wer bei qualifiziertem Plan mit § 34 beginnt, prüft vorbei."
+        },
+        {
+          "art": "cta",
+          "titel": "Bauplanungsrecht in vier Zügen",
+          "punkte": [
+            "Qualifizierter Plan? § 30 BauGB",
+            "Innenbereich? § 34 BauGB",
+            "Außenbereich? § 35 BauGB",
+            "Einvernehmen, § 36 BauGB"
+          ],
+          "icons": [
+            "dokument",
+            "haeuser",
+            "haus",
+            "handschlag"
+          ]
+        }
+      ],
+      "caption": "Drei Gebiete, drei Maßstäbe: Im Bauplanungsrecht entscheidet das Grundstück, welche Norm gilt. Mit qualifiziertem Bebauungsplan prüfst du § 30 Abs. 1 BauGB, im unbeplanten Innenbereich das Einfügen nach § 34 BauGB, im Außenbereich § 35 BauGB – privilegiert oder sonstig. Dazu das Einvernehmen der Gemeinde nach § 36 BauGB und das Bauordnungsrecht im Rahmen des Prüfprogramms. Speichern für die nächste Baurechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#baurecht",
+        "#baugb",
+        "#baugenehmigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Baugenehmigung: §§ 30, 34, 35 BauGB",
+      "coverText": "Das Grundstück wählt die Norm",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Bevor du prüfst, ob gebaut werden darf, klärst du, in welchem der drei Gebiete das Grundstück liegt.",
+        "handlung": "{A} kneels at a map table and plants a small flag on one plot, while {B} hovers above and projects three differently coloured zones onto the map around the flag.",
+        "hinweisRegie": "Place the note in the free space next to the planted flag at the border of the projected zones, slightly tilted, so it marks the choice of zone without covering {A}'s hand.",
+        "alternative": "{B} sorts three different measuring tapes into three trays while {A} picks exactly one tape for a plot marked on the ground."
+      },
+      "bildSzene": "flag planted between three map zones",
+      "bildSzeneAlt": "picking one of three measuring tapes",
+      "quellen": [
+        "§ 29 Abs. 1 BauGB",
+        "§ 30 BauGB",
+        "§ 31 BauGB",
+        "§ 34 BauGB",
+        "§ 35 BauGB",
+        "§ 36 BauGB",
+        "Landesbauordnungen",
+        "Themenpool: verwbt-110"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-echte-gebiete",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.485Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "sachen",
+      "klausur": 1,
+      "fachLabel": "Sachenrecht",
+      "themaId": "sachen-504",
+      "slug": "2027-01-28-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Neuer Eigentümer – und der Besitzer darf trotzdem bleiben",
+          "titelZeilen": [
+            "Neuer Eigentümer –",
+            "und der Besitzer",
+            "darf trotzdem",
+            "bleiben"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Abtretung nimmt Einwendungen mit",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Verlangt der Eigentümer seine Sache nach § 985 BGB heraus, kann der Besitzer ein Recht zum Besitz entgegenhalten (§ 986 BGB). Abs. 1 und Abs. 2 schützen dabei ganz unterschiedliche Lagen."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Abs. 1 oder Abs. 2?",
+          "links": {
+            "titel": "§ 986 Abs. 1 BGB",
+            "punkte": [
+              "Eigenes Besitzrecht gegenüber dem Eigentümer, etwa aus Miete.",
+              "Oder abgeleitet vom mittelbaren Besitzer, der selbst berechtigt ist.",
+              "Ohne Überlassungsbefugnis: Herausgabe an den mittelbaren Besitzer (S. 2)."
+            ]
+          },
+          "rechts": {
+            "titel": "§ 986 Abs. 2 BGB",
+            "punkte": [
+              "Eigentum ging nach § 931 BGB über – per Abtretung des Herausgabeanspruchs.",
+              "Der Besitzer behält seine Einwendungen gegen den abgetretenen Anspruch.",
+              "Schützt etwa den Mieter einer beweglichen Sache."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "V vermietet sein E-Bike für ein Jahr an M. Nach zwei Monaten übereignet er es an E, indem er ihm seinen Herausgabeanspruch gegen M abtritt (§§ 929, 931 BGB). E verlangt von M sofort Herausgabe nach § 985 BGB."
+        },
+        {
+          "art": "text",
+          "titel": "Die Lösung",
+          "text": "E ist Eigentümer, M Besitzer. Einen Mietvertrag hat M nur mit V – ein Besitzrecht gerade gegenüber E nach Abs. 1 lässt sich so nicht begründen. Aber § 986 Abs. 2 BGB: M kann E die Einwendung aus dem Mietvertrag entgegenhalten und das E-Bike bis zum Ende der Mietzeit behalten."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Abs. 1 fragt nach einem Besitzrecht gegenüber diesem Eigentümer. Abs. 2 schützt den Besitzer, wenn das Eigentum per Abtretung wechselt."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 986 BGB in drei Fragen",
+          "punkte": [
+            "Eigenes Besitzrecht? Abs. 1 S. 1",
+            "Abgeleitet? Überlassung erlaubt?",
+            "Übereignung nach § 931? Abs. 2"
+          ],
+          "icons": [
+            "schluessel",
+            "kreislauf",
+            "vertrag"
+          ]
+        }
+      ],
+      "caption": "Neuer Eigentümer – und der Besitzer darf trotzdem bleiben. § 986 Abs. 1 BGB schützt, wer ein eigenes oder abgeleitetes Recht zum Besitz gegenüber dem Eigentümer hat. § 986 Abs. 2 BGB greift, wenn das Eigentum nach § 931 BGB durch Abtretung des Herausgabeanspruchs wechselt: Der Besitzer behält seine Einwendungen, etwa aus einem Mietvertrag mit dem Veräußerer. Speichern für die nächste Sachenrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#sachenrecht",
+        "#985bgb",
+        "#986bgb",
+        "#ebv",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Recht zum Besitz: § 986 Abs. 1 und 2 BGB",
+      "coverText": "Abtretung nimmt Einwendungen mit",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "brakk"
+        ],
+        "kernidee": "Wechselt das Eigentum nur per Abtretung, bleibt der berechtigte Besitzer geschützt.",
+        "handlung": "{A} curiously hands a glowing claim token to a newcomer, while {B} keeps riding a small crystal-powered bike and calmly holds up a rental ticket toward the newcomer.",
+        "hinweisRegie": "Place the note in the free space between the rental ticket and the handed-over token, slightly tilted, so it links both without covering the bike or faces.",
+        "alternative": "{B} stays seated on a mining cart while its ownership plaque is swapped behind him, and {A} points at the unchanged rental sticker on the cart."
+      },
+      "bildSzene": "claim token handed over, rider keeps bike",
+      "bildSzeneAlt": "cart plaque swapped, rider stays seated",
+      "quellen": [
+        "§ 985 BGB",
+        "§ 986 Abs. 1, 2 BGB",
+        "§§ 929, 931 BGB",
+        "Themenpool: sachen-504"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.485Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-725",
+      "slug": "2027-01-28-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Wer fragen kann, darf nicht mutmaßen",
+          "unter": "Einwilligung · Strafrecht AT",
+          "text": "Die mutmaßliche Einwilligung ist nur ein Ersatz.",
+          "norm": null,
+          "icon": "arzt",
+          "sprecher": "Wer fragen kann, darf nicht mutmaßen. Die mutmaßliche Einwilligung hilft nur, wenn eine echte Einwilligung nicht rechtzeitig zu bekommen ist.",
+          "marken": [
+            "erst fragen",
+            "subsidiär"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Verfügbares Rechtsgut",
+          "text": "Eigene Individualrechtsgüter – nicht das eigene Leben.",
+          "norm": "§ 216 StGB",
+          "sprecher": "Schritt eins: Das Rechtsgut muss verfügbar sein. Über Eigentum oder den eigenen Körper kann man verfügen. Über das eigene Leben nicht, das zeigt Paragraf 216.",
+          "marken": [
+            "disponibel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Fähigkeit und wirksame Erklärung",
+          "text": "Einsichtsfähig, vor der Tat erklärt, ohne wesentliche Willensmängel.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Der Einwilligende muss Bedeutung und Tragweite erfassen können. Er erklärt die Einwilligung vor der Tat, und sie darf nicht auf Zwang oder einer wesentlichen Täuschung beruhen.",
+          "marken": [
+            "einsichtsfähig",
+            "vor der Tat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Grenze bei Körperverletzung",
+          "text": "Keine Rechtfertigung, wenn die Tat trotz Einwilligung sittenwidrig ist.",
+          "norm": "§ 228 StGB",
+          "sprecher": "Schritt drei: Bei der Körperverletzung zieht Paragraf 228 eine Grenze. Ist die Tat trotz Einwilligung sittenwidrig, bleibt sie rechtswidrig. Die Rechtsprechung schaut vor allem auf Art und Gefährlichkeit der Verletzung.",
+          "marken": [
+            "§ 228 StGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Handeln in Kenntnis",
+          "text": "Der Täter weiß von der Einwilligung.",
+          "norm": null,
+          "sprecher": "Schritt vier: Der Täter handelt in Kenntnis der Einwilligung. Sonst fehlt das subjektive Rechtfertigungselement.",
+          "marken": [
+            "subjektiv"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: der bewusstlose Patient",
+          "text": "Nicht rechtzeitig fragbar – dann zählt der hypothetische Wille.",
+          "norm": null,
+          "sprecher": "Der Klassiker: Der Notarzt operiert einen bewusstlosen Unfallverletzten. Fragen geht nicht, also zählt der hypothetische Wille des Patienten. Wäre er rechtzeitig ansprechbar, müsste der Arzt fragen.",
+          "marken": [
+            "hypothetischer Wille"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Echte Einwilligung vor mutmaßlicher – mutmaßen nur, wenn Fragen nicht geht.",
+          "norm": null,
+          "sprecher": "Merke: Die echte Einwilligung geht vor. Mutmaßen darfst du nur, wenn Fragen nicht rechtzeitig möglich ist.",
+          "marken": [
+            "erst fragen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Immer zuerst: Konnte man fragen?",
+          "text": "Speichern für die nächste Strafrecht-AT-Klausur.",
+          "sprecher": "Speicher dir das für die nächste Strafrecht-AT-Klausur. Und prüf immer zuerst: Konnte man fragen?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Wer fragen kann, darf nicht mutmaßen. Die Einwilligung rechtfertigt, wenn das Rechtsgut verfügbar ist, der Einwilligende einsichtsfähig ist und vor der Tat ohne wesentliche Willensmängel zustimmt – bei der Körperverletzung in den Grenzen des § 228 StGB. Die mutmaßliche Einwilligung ist nur ein Ersatz: Sie greift, wenn eine echte Einwilligung nicht rechtzeitig einholbar ist. Speichern für die nächste Strafrecht-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#einwilligung",
+        "#228stgb",
+        "#rechtfertigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Einwilligung und mutmaßliche Einwilligung",
+      "titelZeilen": [
+        "Wer fragen kann,",
+        "darf nicht",
+        "mutmaßen"
+      ],
+      "coverText": "Mutmaßliche Einwilligung: nur Ersatz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Solange man jemanden fragen kann, zählt seine Antwort – erst wenn das nicht geht, darf man seinen Willen vermuten.",
+        "handlung": "{A} leans toward a patient who is wide awake on a stretcher and holds out a question-shaped speech bubble, while {B} points his pointer at a second, unconscious patient further back.",
+        "hinweisRegie": "Place the note in the free space between the awake and the unconscious patient, slightly tilted, so it separates asking from presuming without covering faces.",
+        "alternative": "{B} knocks on a door with the owner visibly inside, while {A} holds back a figure already reaching for the handle."
+      },
+      "bildSzene": "asking awake patient, unconscious one behind",
+      "bildSzeneAlt": "knocking while owner is home",
+      "quellen": [
+        "§ 228 StGB",
+        "§ 216 StGB",
+        "Themenpool: strafat-725"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "subsidiaritaet",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.488Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-459",
+      "ueberzeile": "Prüfungsfrage Schuldrecht AT",
+      "titel": "Die Unfallreparatur mit Neuteilen macht Gs älteres Auto messbar wertvoller. Muss G sich das anrechnen lassen?",
+      "optionen": [
+        "Nein, der Schädiger trägt immer die vollen Kosten",
+        "Ja – Abzug „neu für alt“, soweit zumutbar",
+        "Ja, G erhält dann nur noch den Restwert"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 249 BGB",
+        "Themenpool: schuld-459"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-459",
+      "ueberzeile": "Auflösung",
+      "titel": "Abzug „neu für alt“ – bei messbarem, zumutbarem Vorteil",
+      "text": "Nach der Differenzhypothese wird G so gestellt, wie er ohne das Schadensereignis stünde (§ 249 Abs. 1 BGB). Vorteile aus dem Ereignis werden angerechnet, wenn das dem Zweck des Ersatzes entspricht und den Schädiger nicht unbillig entlastet (Vorteilsausgleichung). Eine messbare Wertsteigerung durch Neuteile führt deshalb zum Abzug „neu für alt“.",
+      "norm": "§ 249 Abs. 1 BGB",
+      "quellen": [
+        "§ 249 BGB",
+        "Themenpool: schuld-459"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.489Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein, der Schädiger trägt immer die vollen Kosten",
+        "Ja – Abzug „neu für alt“, soweit zumutbar",
+        "Ja, G erhält dann nur noch den Restwert"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-064",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 26 StGB: Strafe wie ein Täter – und trotzdem nur Teilnehmer",
+      "text": "Anstifter ist, wer einen anderen vorsätzlich zu dessen vorsätzlicher rechtswidriger Tat bestimmt, also den Tatentschluss hervorruft. Wer schon fest entschlossen ist, kann nicht mehr angestiftet werden. Der Anstifter wird gleich einem Täter bestraft; beim Gehilfen ist die Strafe zwingend zu mildern (§ 27 Abs. 2 S. 2 StGB).",
+      "norm": "§ 26 StGB · § 27 Abs. 2 StGB",
+      "quellen": [
+        "§ 26 StGB",
+        "§ 27 StGB",
+        "§ 25 StGB",
+        "Themenpool: strafat-064"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "streit-15",
+      "ueberzeile": "Streitstand Prüfungsrecht",
+      "titel": "Examensnote angefochten: Wie weit prüft das Gericht die Bewertung?",
+      "norm": "Art. 12 Abs. 1, Art. 19 Abs. 4 GG",
+      "optionen": [
+        "BVerfG, h.M.: Spielraum nur bei prüfungsspezifischen Wertungen; Fachfragen voll kontrollierbar.",
+        "Teile der Lit.: Art. 19 Abs. 4 GG verlangt auch dort volle Kontrolle, notfalls mit Sachverständigen."
+      ],
+      "text": "Klausur: Vertretbares darf nicht als falsch gewertet werden. Wertungen prüfst du auf Verfahrensfehler, falsche Tatsachen, sachfremde Erwägungen und allgemeine Bewertungsmaßstäbe.",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Art. 19 Abs. 4 GG",
+        "BVerfGE 84, 34"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-323",
+      "ueberzeile": "Merksatz Strafrecht BT",
+      "titel": "Der Schlafende hat Gewahrsam – der Tote nicht",
+      "text": "Gewahrsam: tatsächliche Sachherrschaft mit Herrschaftswillen nach der Verkehrsauffassung. Schlafende und Bewusstlose behalten ihn. Mit dem Tod endet er – hat niemand sonst Gewahrsam, bleibt nur § 246 StGB.",
+      "norm": "§ 242 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 246 StGB",
+        "Themenpool: strafbt-323"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-767",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Nemo tenetur: Mitwirken muss er nicht – dulden schon",
+      "text": "Niemand muss sich selbst belasten. Der Beschuldigte darf schweigen und muss nicht aktiv an seiner Überführung mitwirken (§ 136 Abs. 1 S. 2 StPO). Passive Duldungspflichten bleiben: Eine Blutprobe nach § 81a StPO muss er hinnehmen – in ein Messgerät pusten muss er nicht.",
+      "norm": "§ 136 Abs. 1 S. 2 StPO · § 81a StPO",
+      "quellen": [
+        "§ 136 Abs. 1 S. 2 StPO",
+        "§ 81a StPO",
+        "Art. 6 EMRK",
+        "Themenpool: stpo-767"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:35.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

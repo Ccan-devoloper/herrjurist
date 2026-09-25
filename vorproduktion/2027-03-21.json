@@ -1,0 +1,897 @@
+{
+  "datum": "2027-03-21",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafbt-762",
+        "themaTitel": "Strafvereitelung",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "verwbt-114",
+        "themaTitel": "Wann darf die Polizei einen Nichtstörer in Anspruch nehmen?",
+        "fach": "verwbt",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:08",
+        "art": "frage",
+        "themaId": "bgbat-433"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:08",
+        "art": "antwort",
+        "themaId": "bgbat-433"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:14",
+        "art": "norm",
+        "themaId": "famerb-044"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:17",
+        "art": "fehler",
+        "themaId": "strafat-922"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:55",
+        "art": "tipp",
+        "themaId": "staat-364"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:11",
+        "art": "zahl",
+        "themaId": "methodik-897"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-762",
+      "poolTitel": "Strafvereitelung",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 258 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwbt-114",
+      "poolTitel": "Wann darf die Polizei einen Nichtstörer in Anspruch nehmen?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-11-07",
+        "2027-01-21"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-433",
+      "poolTitel": "Vertreter ohne Vertretungsmacht und Genehmigung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 177-179 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02",
+        "2026-10-29",
+        "2026-10-29"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-433",
+      "poolTitel": "Vertreter ohne Vertretungsmacht und Genehmigung",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 177-179 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02",
+        "2026-10-29",
+        "2026-10-29"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "famerb-044",
+      "poolTitel": "Was bedeutet „angemessen“ i.S.d. § 1357 BGB?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1357 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "strafat-922",
+      "poolTitel": "Erfolgsqualifizierter Versuch und versuchte Erfolgsqualifikation: Was ist strafbar?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 18 StGB",
+        "§ 11 Abs. 2 StGB",
+        "§ 227 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14",
+        "2027-01-16"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "staat-364",
+      "poolTitel": "Was ist die Ewigkeitsgarantie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 79 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2026-11-30"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "methodik-897",
+      "poolTitel": "Anspruchsgrundlagen finden statt Probleme erraten",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14",
+        "2027-02-27"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-03-21-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Themen der Woche: vier Bereiche im Schnelltest",
+          "titelZeilen": [
+            "18 Themen der",
+            "Woche: vier",
+            "Bereiche im",
+            "Schnelltest"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Schmerzensgeld: unbezifferter Antrag zulässig – mit Größenordnung und Bemessungstatsachen.",
+            "Grundstück: Eigentum erst mit Auflassung und Eintragung (§§ 873, 925 BGB).",
+            "§ 626 BGB: wichtiger Grund an sich, dann Abwägung – Abmahnung mitdenken.",
+            "IPR: Zuständigkeit, Kollisionsrecht, Sachrecht – streng getrennt.",
+            "§ 986 BGB: Das Recht zum Besitz ist Einwendung, keine Einrede.",
+            "Rücktritt: Gefahrene Kilometer sind als Nutzungen zu vergüten (§ 346 Abs. 1 BGB)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 24 Abs. 2 StGB: Bei mehreren Beteiligten verhindern statt bloß aufhören.",
+            "Dreiecksbetrug: Verfügung zurechenbar? Rspr. Nähe zur Sache, Teile der Lit. Befugnis.",
+            "Bedingter Vorsatz: für möglich halten und sich abfinden – Wollen nicht nötig.",
+            "Revision: Lücken in der Beweiswürdigung fängt die Sachrüge.",
+            "§ 252 StPO: Zeugnisverweigerung sperrt auch den Vernehmungsbeamten."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 49 Abs. 3 VwVfG: Zweckverfehlter Zuschuss auch rückwirkend – dann § 49a.",
+            "Art. 13 GG: Durchsuchung nach Abs. 2, Betreten zur Gefahrenabwehr nach Abs. 7.",
+            "Art. 100 Abs. 1 GG: Vorlage erst bei Überzeugung, nicht bei Zweifeln.",
+            "§ 42 Abs. 2 VwGO: Adressat, Dritter, Verpflichtung – drei Wege.",
+            "§ 80 Abs. 5 VwGO: Verfristeter Widerspruch – nichts wiederherzustellen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Rechtsprechung: tragenden Grund lernen, Abwandlung selbst bilden.",
+            "Blackout: wechseln, gliedern, mit dem Obersatz beginnen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "K nennt beim Schmerzensgeld nur einen Mindestbetrag: Ist die Klage zulässig?",
+            "Mittäter M hört auf, B vollendet ohne ihn: Ist M straffrei?",
+            "Nachbar klagt gegen eine Baugenehmigung: Genügt Art. 2 Abs. 1 GG?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anträge und Einwendungen",
+            "Strafrecht über Rücktritt und Vorsatz",
+            "Öffentliches Recht über Klage und Eilrechtsschutz",
+            "Klausurtechnik als feste Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "18 Themen aus vier Bereichen – vom unbezifferten Schmerzensgeldantrag über den Dreiecksbetrug bis zum verfristeten Widerspruch im Eilverfahren. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch, beantworte die drei Selbsttest-Fragen und notier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "18 Themen der Woche im Schnelltest",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Die Woche wird sortiert: Was sitzt, kommt in die Kiste – was wackelt, auf den Stapel für nächste Woche.",
+        "handlung": "{A} sorts glowing crystals from a mine cart into four labeled-by-color crates, while {B} curiously holds up one crystal that flickers and sets it aside on a small separate pile.",
+        "hinweisRegie": "Place the note in the free space above the small separate pile {B} is building, slightly tilted toward it, so it marks what still needs review without covering the crates or any faces.",
+        "alternative": "{B} checks four small lanterns hanging on a rope bridge one by one, while {A} holds a spare flame ready for the one that dims."
+      },
+      "bildSzene": "crystals sorted into four crates",
+      "bildSzeneAlt": "four lanterns checked on bridge",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§§ 873, 925 BGB",
+        "§ 626 BGB",
+        "Rom I-VO",
+        "§§ 985, 986 BGB",
+        "§ 346 BGB",
+        "§ 24 Abs. 2 StGB",
+        "§§ 242, 263 StGB",
+        "§ 15 StGB",
+        "§ 344 StPO",
+        "§ 252 StPO",
+        "§§ 49, 49a VwVfG",
+        "Art. 13 GG",
+        "Art. 100 Abs. 1 GG",
+        "§ 42 Abs. 2 VwGO",
+        "§ 80 Abs. 5 VwGO",
+        "Themenpool: methodik-908",
+        "Themenpool: mindset-2"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.870Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-762",
+      "slug": "2027-03-21-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Tat gesehen, nicht angezeigt: Das ist noch keine Strafvereitelung",
+          "titelZeilen": [
+            "Tat gesehen, nicht",
+            "angezeigt: Das ist",
+            "noch keine Straf-",
+            "vereitelung"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Schweigen ist kein Vereiteln",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 258 StGB schützt die Strafrechtspflege: Abs. 1 erfasst die Verfolgungs-, Abs. 2 die Vollstreckungsvereitelung. Vereiteln kann man durch aktives Tun – etwa ein falsches Alibi oder das Verstecken des Täters. Durch bloßes Unterlassen nur, wer eine Garantenpflicht zur Strafverfolgung hat."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1: Tatbestand",
+          "schritte": [
+            {
+              "titel": "1. Vortat eines anderen",
+              "text": "Ein anderer hat tatsächlich eine rechtswidrige Tat begangen, für die ihm Strafe oder eine Maßnahme droht."
+            },
+            {
+              "titel": "2. Vereitelungserfolg",
+              "text": "Bestrafung ganz oder zum Teil vereitelt – nach h.M. genügt eine Verzögerung für geraume Zeit."
+            },
+            {
+              "titel": "3. Vorsatz",
+              "text": "Zur Vereitelung Absicht oder Wissentlichkeit; hinsichtlich der Vortat genügt bedingter Vorsatz."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2: danach",
+          "schritte": [
+            {
+              "titel": "4. Rechtswidrigkeit, Schuld",
+              "text": "Keine Besonderheiten."
+            },
+            {
+              "titel": "5. Strafausschließung",
+              "text": "Selbstbegünstigung (§ 258 Abs. 5 StGB) und Tat zugunsten eines Angehörigen (§ 258 Abs. 6 StGB) – straffrei."
+            },
+            {
+              "titel": "6. Qualifikation",
+              "text": "Amtsträger bei Mitwirkung am Strafverfahren: § 258a StGB – das Angehörigenprivileg gilt dort nicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweise",
+          "punkte": [
+            "Nichtanzeigen allein ist kein Vereiteln – anders bei Garantenpflicht, etwa für Polizeibeamte im Dienst.",
+            "Verteidiger: prozessual zulässiges Verhalten vereitelt nichts, aktive Verdunkelung schon.",
+            "Geldstrafe für einen anderen bezahlt: nach dem BGH keine Vollstreckungsvereitelung.",
+            "Der Versuch ist strafbar (§ 258 Abs. 4 StGB) – etwa ein Alibi, das nicht verfängt."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Vereiteln verlangt ein Tun oder eine Garantenpflicht. Wer nur schweigt, vereitelt nichts – wer sich oder Angehörige schützt, bleibt straffrei."
+        },
+        {
+          "art": "cta",
+          "titel": "Strafvereitelung in vier Zügen",
+          "punkte": [
+            "Vortat eines anderen",
+            "Vereitelt – auch für geraume Zeit",
+            "Absicht oder Wissen",
+            "Abs. 5 und 6 nicht vergessen"
+          ],
+          "icons": [
+            "detektiv",
+            "uhr",
+            "zielscheibe",
+            "familie"
+          ]
+        }
+      ],
+      "caption": "Eine Straftat beobachtet und nicht angezeigt – das ist noch keine Strafvereitelung. § 258 StGB verlangt ein Vereiteln, und durch Unterlassen vereitelt nur, wer eine Garantenpflicht hat. Das Schema: Vortat eines anderen, Vereitelungserfolg, Absicht oder Wissentlichkeit, dann die Strafausschließungsgründe der Absätze 5 und 6. Für Amtsträger gilt § 258a StGB. Speichern für die nächste Klausur zu den Rechtspflegedelikten.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#258stgb",
+        "#strafvereitelung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Strafvereitelung: das Schema zu § 258 StGB",
+      "coverText": "Schweigen ist kein Vereiteln",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Wer nur zusieht, vereitelt nichts – strafbar wird erst, wer dem Täter aktiv den Weg freiräumt.",
+        "handlung": "{A} stands still with folded arms at a crossroads while a hooded figure runs past, whereas {B} hovers nearby and is about to drape a camouflage cloth over the runner's footprints.",
+        "hinweisRegie": "Place the note in the free space between {A}'s folded arms and {B}'s camouflage cloth, slightly tilted toward the cloth, so it contrasts watching with actively covering tracks without hiding any faces.",
+        "alternative": "{B} quietly hands a hooded figure a false travel pass at a gate, while {A} merely watches from a distance with her hands in her pockets."
+      },
+      "bildSzene": "one watches, other covers footprints",
+      "bildSzeneAlt": "false pass handed over at gate",
+      "quellen": [
+        "§ 258 StGB",
+        "§ 258a StGB",
+        "§ 11 Abs. 1 Nr. 1 StGB",
+        "§ 13 StGB",
+        "Themenpool: strafbt-762"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "unterlassen-nicht-erfasst",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.870Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-114",
+      "slug": "2027-03-21-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nichts getan – und trotzdem muss er die Wohnung überlassen",
+          "unter": "Nichtstörer · Polizeirecht der Länder",
+          "text": "Auch wer keine Gefahr verursacht, kann im Notstand herangezogen werden.",
+          "norm": "Polizei- und Ordnungsgesetze der Länder",
+          "icon": "haus",
+          "sprecher": "Der Vermieter hat nichts getan. Trotzdem wird er herangezogen. Klassiker: Mieter M wird geräumt und steht mitten im Winter ohne Unterkunft da. Die Ordnungsbehörde weist ihn vorübergehend wieder in seine alte Wohnung ein. Eigentümer E ist Nichtstörer. Geht das?",
+          "marken": [
+            "Nichtstörer"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gegenwärtige erhebliche Gefahr",
+          "text": "Unfreiwillige Obdachlosigkeit gefährdet Leib, Leben und Gesundheit.",
+          "norm": null,
+          "sprecher": "Schritt eins: eine gegenwärtige erhebliche Gefahr. Unfreiwillige Obdachlosigkeit gefährdet Leib, Leben und Gesundheit – gerade im Winter. Eine bloße Unannehmlichkeit reicht dafür nicht.",
+          "marken": [
+            "gegenwärtig",
+            "erheblich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Störer scheidet aus",
+          "text": "Maßnahmen gegen den Verantwortlichen sind nicht möglich oder nicht erfolgversprechend.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Maßnahmen gegen den Störer sind nicht oder nicht rechtzeitig möglich oder versprechen keinen Erfolg. Der Obdachlose selbst kann sich keine Wohnung beschaffen.",
+          "marken": [
+            "Störer zuerst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Behörde kann nicht selbst",
+          "text": "Keine eigene Notunterkunft, keine Abhilfe durch Beauftragte.",
+          "norm": null,
+          "sprecher": "Schritt drei: Die Behörde kann die Gefahr nicht selbst oder durch Beauftragte abwehren. Hat die Gemeinde eine freie Notunterkunft, muss sie die nutzen. Der private Eigentümer ist das letzte Mittel.",
+          "marken": [
+            "letztes Mittel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Zumutbar für den Nichtstörer",
+          "text": "Keine erhebliche eigene Gefährdung, keine Verletzung höherwertiger Pflichten.",
+          "norm": null,
+          "sprecher": "Schritt vier: Der Nichtstörer kann ohne erhebliche eigene Gefährdung und ohne Verletzung höherwertiger Pflichten herangezogen werden. Die genaue Formulierung steht im jeweiligen Landesgesetz.",
+          "marken": [
+            "zumutbar"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Nur auf Zeit – und nicht umsonst",
+          "text": "Befristen, weiter nach Unterkunft suchen, Nichtstörer entschädigen.",
+          "norm": null,
+          "sprecher": "Und die Grenzen: Die Inanspruchnahme darf nur so lange dauern, wie der Notstand besteht. Die Behörde muss befristen und weiter nach einer anderen Unterkunft suchen. Für seinen Schaden erhält der Nichtstörer grundsätzlich einen Ausgleich.",
+          "marken": [
+            "befristet",
+            "Ausgleich"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Erhebliche Gefahr, Störer und Behörde versagen, zumutbar – dann auch der Unbeteiligte, aber nur auf Zeit.",
+          "norm": null,
+          "sprecher": "Merke: Den Nichtstörer trifft es erst, wenn Störer und Behörde versagen – und dann nur auf Zeit.",
+          "marken": [
+            "letzte Reihe"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Schritte für den Notstand",
+          "text": "Speichern für die nächste Polizeirechtsklausur.",
+          "sprecher": "Speicher dir die vier Schritte für die nächste Polizeirechtsklausur.",
+          "marken": [
+            "vier Schritte"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Der Eigentümer hat nichts getan – und muss den geräumten Mieter trotzdem vorübergehend wieder aufnehmen. Den Nichtstörer darf die Behörde nur im polizeilichen Notstand heranziehen: gegenwärtige erhebliche Gefahr, Störer scheidet aus, Behörde kann nicht selbst abhelfen, Inanspruchnahme zumutbar. Die Details regeln die Polizei- und Ordnungsgesetze der Länder. Und: nur befristet und gegen Ausgleich. Speichern für die nächste Polizeirechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#polizeirecht",
+        "#nichtstörer",
+        "#verwaltungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nichtstörer: vier Schritte zum Notstand",
+      "titelZeilen": [
+        "Nichts getan – und",
+        "trotzdem muss er die",
+        "Wohnung überlassen"
+      ],
+      "coverText": "Notstand trifft Unbeteiligte",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Im Notstand kann auch ein Unbeteiligter herangezogen werden – aber nur als letztes Mittel und nur auf Zeit.",
+        "handlung": "{A} reluctantly holds open the door of his small house for a shivering traveler in the snow, while {B} points his pointer at a large hourglass placed on the doorstep.",
+        "hinweisRegie": "Place the note in the free space beside the hourglass on the doorstep, slightly tilted toward it, so it stresses the temporary nature of the intervention without covering the open door or any faces.",
+        "alternative": "{B} checks a row of empty emergency shelters one by one with a lantern, while {A} waits last in line in front of his own house."
+      },
+      "bildSzene": "door held open, hourglass on doorstep",
+      "bildSzeneAlt": "empty shelters checked before house",
+      "quellen": [
+        "Polizei- und Ordnungsgesetze der Länder",
+        "Themenpool: verwbt-114"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "unbeteiligter-haftet",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.871Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-433",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "V kontrahiert für P mit D, hält sich schuldlos für bevollmächtigt. P genehmigt nicht. Was schuldet V dem D?",
+      "optionen": [
+        "Nach seiner Wahl Erfüllung oder Schadensersatz",
+        "Nichts – ohne Verschulden haftet V nicht",
+        "Den Vertrauensschaden, höchstens bis zum Erfüllungsinteresse"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 177 BGB",
+        "§ 179 BGB",
+        "Themenpool: bgbat-433"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.871Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-433",
+      "ueberzeile": "Auflösung",
+      "titel": "Vertrauensschaden – V haftet auch ohne Verschulden, aber begrenzt",
+      "text": "§ 179 BGB ist eine Garantiehaftung. Kannte V den Mangel seiner Vertretungsmacht, haftet er nach Wahl auf Erfüllung oder Schadensersatz (Abs. 1). Kannte er ihn nicht, schuldet er nur den Vertrauensschaden, gedeckelt durch das Erfüllungsinteresse (Abs. 2). Kannte D den Mangel oder musste er ihn kennen, haftet V gar nicht (Abs. 3 S. 1).",
+      "norm": "§ 179 BGB",
+      "quellen": [
+        "§ 177 BGB",
+        "§ 179 BGB",
+        "Themenpool: bgbat-433"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.871Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nach seiner Wahl Erfüllung oder Schadensersatz",
+        "Nichts – ohne Verschulden haftet V nicht",
+        "Den Vertrauensschaden, höchstens bis zum Erfüllungsinteresse"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-044",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1357 BGB: „Angemessen“ misst sich an der konkreten Familie",
+      "text": "Geschäfte zur angemessenen Deckung des Lebensbedarfs der Familie berechtigen und verpflichten beide Ehegatten. Maßstab ist der Lebenszuschnitt dieser Familie, wie er nach außen erkennbar ist. Größere Anschaffungen, über die sich Ehegatten üblicherweise vorher abstimmen, fallen regelmäßig nicht darunter. Leben die Ehegatten getrennt, gilt § 1357 BGB nicht (Abs. 3).",
+      "norm": "§ 1357 Abs. 1 BGB",
+      "quellen": [
+        "§ 1357 BGB",
+        "Themenpool: famerb-044"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.871Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-922",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Anstiftung zur Körperverletzung mit Todesfolge – geht das überhaupt?",
+      "falsch": "Die Todesfolge ist nur fahrlässig verursacht – an einer Fahrlässigkeitstat gibt es keine Teilnahme, also scheidet Anstiftung zu § 227 StGB aus.",
+      "richtigText": "Nach § 11 Abs. 2 StGB gilt die Vorsatz-Fahrlässigkeits-Kombination als vorsätzliche Tat. Anstiftung und Beihilfe zu § 227 StGB sind daher möglich. Nach § 18 StGB prüfst du aber für jeden Beteiligten gesondert, ob ihm selbst hinsichtlich der schweren Folge wenigstens Fahrlässigkeit zur Last fällt.",
+      "quellen": [
+        "§ 11 Abs. 2 StGB",
+        "§ 18 StGB",
+        "§ 227 StGB",
+        "§§ 26, 27 StGB",
+        "Themenpool: strafat-922"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.871Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-364",
+      "ueberzeile": "Klausurtipp Staatsrecht",
+      "titel": "EU-Integration in der Klausur? Art. 79 Abs. 3 GG kommt über Art. 23 GG ins Spiel",
+      "text": "Für die Begründung der EU und Änderungen ihrer vertraglichen Grundlagen, die das Grundgesetz inhaltlich ändern oder ergänzen, verweist Art. 23 Abs. 1 S. 3 GG auf Art. 79 Abs. 2 und 3 GG. Die Verfassungsidentität setzt damit auch der Integration eine Grenze. Das BVerfG behält sich neben der Ultra-vires-Kontrolle eine Identitätskontrolle vor.",
+      "quellen": [
+        "Art. 23 Abs. 1 GG",
+        "Art. 79 Abs. 3 GG",
+        "Themenpool: staat-364"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.871Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-897",
+      "ueberzeile": "3 Punkte Klausurtechnik",
+      "titel": "Anspruchsgrundlage gesucht? Von der Rechtsfolge her denken",
+      "text": "Nicht mit dem Problem anfangen, das dir im Sachverhalt auffällt – sondern mit dem, was der Anspruchsteller will.",
+      "punkte": [
+        "Begehren benennen: Herausgabe, Zahlung, Schadensersatz?",
+        "Normen mit passender Rechtsfolge sammeln – Herausgabe: etwa §§ 985, 812 BGB",
+        "Erst dann die Tatbestände prüfen – dort zeigen sich die Probleme"
+      ],
+      "quellen": [
+        "§ 985 BGB",
+        "§ 812 BGB",
+        "Themenpool: methodik-897"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:27:55.871Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

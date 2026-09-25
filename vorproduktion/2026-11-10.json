@@ -1,0 +1,856 @@
+{
+  "datum": "2026-11-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "strafbt-739",
+        "themaTitel": "Mord: Verdeckungsabsicht",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "vwgo-669",
+        "themaTitel": "Beschwerde/Berufung im Überblick",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuldbt-467",
+        "themaTitel": "Minderung im Kaufrecht",
+        "fach": "schuldbt",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:12",
+        "art": "frage",
+        "themaId": "vwgo-659"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:12",
+        "art": "antwort",
+        "themaId": "vwgo-659"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:59",
+        "art": "norm",
+        "themaId": "schuld-123"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "zahl",
+        "themaId": "ipr-893"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:05",
+        "art": "streitstand",
+        "themaId": "methodik-937"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "merksatz",
+        "themaId": "verwalt-644"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "strafbt-739",
+      "poolTitel": "Mord: Verdeckungsabsicht",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 211 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "vwgo-669",
+      "poolTitel": "Beschwerde/Berufung im Überblick",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§§ 124 ff., 146 ff. VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-02",
+        "2026-11-02"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuldbt-467",
+      "poolTitel": "Minderung im Kaufrecht",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 437 Nr. 2, 441 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-659",
+      "poolTitel": "Klagebefugnis und Adressatentheorie",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 II VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-659",
+      "poolTitel": "Klagebefugnis und Adressatentheorie",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 II VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-123",
+      "poolTitel": "Was ist die Drittschadensliquidation und wann greift sie?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 249 BGB",
+        "§ 447 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "ipr-893",
+      "poolTitel": "Wann ist ein deutsches Gericht international zuständig?",
+      "fach": "ipr",
+      "fachLabel": "Internationales Privatrecht",
+      "klausur": 1,
+      "normen": [
+        "Art. 4 EuGVVO",
+        "Art. 7 EuGVVO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "methodik-937",
+      "poolTitel": "Analogie und teleologische Reduktion: Voraussetzungen und saubere Formulierung",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [
+        "Art. 103 Abs. 2 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "verwalt-644",
+      "poolTitel": "Widerruf rechtmäßiger Verwaltungsakte",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 49 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-739",
+      "slug": "2026-11-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Spontan zugestochen, damit das Opfer schweigt – Mord?",
+          "titelZeilen": [
+            "Spontan zugestochen,",
+            "damit das Opfer",
+            "schweigt – Mord?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "Ein Plan ist nicht nötig",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A schlägt B im Streit zu Boden. B ruft: „Das zeige ich an!“ A fasst sofort den Entschluss, B zu töten, damit die Körperverletzung nicht herauskommt, und sticht zu. B stirbt. Verdeckungsmord – obwohl alles in einem Zug geschah?"
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "§ 211 Abs. 2 StGB: töten, „um eine andere Straftat zu … verdecken“. Mord heißt zwingend lebenslange Freiheitsstrafe. Fraglich ist, ob auch eine spontane Tötung im unmittelbaren Anschluss an die Vortat dieses Gewicht trägt."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Spontane Verdeckungstat",
+          "links": {
+            "titel": "Rechtsprechung",
+            "punkte": [
+              "Verdeckungsabsicht auch bei spontanem Entschluss.",
+              "Der unmittelbare Anschluss an die Vortat schließt sie nicht aus.",
+              "Grenze: Die Vortat muss eine „andere“ Tat sein."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Einschränkung wegen der absoluten Strafdrohung.",
+              "Spontantat aus einer Konfliktlage: nicht besonders verwerflich.",
+              "Folge: nur Totschlag (§ 212 StGB)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Stellungnahme und Klausur",
+          "text": "Der Wortlaut verlangt keinen Plan, und der Täter stellt sein Interesse, unentdeckt zu bleiben, über das Leben des Opfers – das trägt die Rspr. Aufbau: Verdeckungsabsicht ist ein subjektives Mordmerkmal. Prüfe, ob die Vortat eine andere Tat ist und ob A ihre Aufdeckung verhindern wollte."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Spontan schließt Verdeckungsabsicht nach der Rspr. nicht aus. Entscheidend: eine andere Tat und das Ziel, ihre Aufdeckung zu verhindern."
+        },
+        {
+          "art": "cta",
+          "titel": "Verdeckungsabsicht in drei Fragen",
+          "punkte": [
+            "Andere Straftat als Vortat?",
+            "Ziel: Aufdeckung oder Verfolgung verhindern?",
+            "Spontaneität: Streit kurz darstellen"
+          ],
+          "icons": [
+            "dokument",
+            "detektiv",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Spontan zugestochen, damit das Opfer schweigt – ist das Mord? Die Rspr. bejaht Verdeckungsabsicht auch bei einem plötzlichen Entschluss im unmittelbaren Anschluss an die Vortat; Voraussetzung ist, dass eine andere Straftat verdeckt werden soll. Teile der Literatur schränken wegen der absoluten Strafe ein und kommen bei Spontantaten aus einer Konfliktlage nur zu § 212 StGB. In der Klausur: Streit kurz darstellen, dann entscheiden. Speichern für die nächste Tötungsdelikts-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#mord",
+        "#211stgb",
+        "#verdeckungsabsicht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verdeckungsabsicht bei spontaner Tötung",
+      "coverText": "Ein Plan ist nicht nötig",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "Wer tötet, damit eine gerade begangene Tat nicht herauskommt, kann auch ohne vorherigen Plan Mord begehen.",
+        "handlung": "{A} hastily pulls a heavy curtain shut in front of a small broken crate, while {B} stands at the edge of the scene and holds up a hand to stop the curtain.",
+        "hinweisRegie": "Place the note in the free space next to the half-closed curtain, slightly tilted toward the hidden crate, so the cover-up motive is linked to the note without covering {B}'s raised hand.",
+        "alternative": "{A} tries to sweep fresh footprints away in a hurry while {B} watches from a ridge and weighs two small stones in her hands."
+      },
+      "bildSzene": "mechanic pulls curtain over broken crate",
+      "bildSzeneAlt": "sweeping footprints, explorer weighs stones",
+      "quellen": [
+        "§ 211 Abs. 2 StGB",
+        "§ 212 StGB",
+        "Themenpool: strafbt-739"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.350Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-669",
+      "slug": "2026-11-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eilbeschluss angefochten: Das OVG prüft nur deine Gründe",
+          "titelZeilen": [
+            "Eilbeschluss",
+            "angefochten: Das OVG",
+            "prüft nur deine",
+            "Gründe"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Zwei Wochen, ein Monat, Darlegung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Das VG lehnt den Antrag des K nach § 80 Abs. 5 VwGO gegen eine sofort vollziehbare Nutzungsuntersagung ab. Ks Anwalt legt fristgerecht Beschwerde ein und begründet sie mit einem Satz: Er verweist auf seinen Vortrag in erster Instanz. Hat die Beschwerde Erfolg?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung der Beschwerde",
+          "schritte": [
+            {
+              "titel": "Statthaftigkeit",
+              "text": "Gegen Beschlüsse im Eilverfahren ist die Beschwerde statthaft (§ 146 Abs. 1 VwGO) – eine Zulassung braucht es nicht."
+            },
+            {
+              "titel": "Fristen",
+              "text": "Einlegung binnen zwei Wochen beim VG (§ 147 Abs. 1 VwGO), Begründung binnen eines Monats nach Bekanntgabe (§ 146 Abs. 4 S. 1 VwGO)."
+            },
+            {
+              "titel": "Darlegung",
+              "text": "Die Begründung muss darlegen, warum der Beschluss zu ändern ist, und sich mit ihm auseinandersetzen (§ 146 Abs. 4 S. 3 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Urteil oder Eilbeschluss?",
+          "links": {
+            "titel": "Urteil des VG",
+            "punkte": [
+              "Berufung nur nach Zulassung (§ 124 VwGO)",
+              "Antrag beim VG: 1 Monat, Begründung: 2 Monate"
+            ]
+          },
+          "rechts": {
+            "titel": "Eilbeschluss des VG",
+            "punkte": [
+              "Beschwerde ohne Zulassung (§ 146 VwGO)",
+              "Einlegung: 2 Wochen, Begründung: 1 Monat"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Kein Erfolg: Ein bloßer Verweis auf den erstinstanzlichen Vortrag setzt sich nicht mit dem Beschluss auseinander. Die Beschwerde ist als unzulässig zu verwerfen (§ 146 Abs. 4 S. 4 VwGO). Und selbst bei ordentlicher Begründung prüft das OVG nur die dargelegten Gründe (§ 146 Abs. 4 S. 6 VwGO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beschwerde im Eilverfahren: zwei Wochen, ein Monat – und nur das, was du gegen den Beschluss darlegst, kommt auf den Prüfstand."
+        },
+        {
+          "art": "cta",
+          "titel": "Beschwerde in drei Checks",
+          "punkte": [
+            "Eilbeschluss, also Beschwerde?",
+            "Fristen: 2 Wochen und 1 Monat",
+            "Auseinandersetzung mit dem Beschluss"
+          ],
+          "icons": [
+            "dokument",
+            "kalender",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Eilbeschluss angefochten? Dann prüft das OVG nur die Gründe, die du darlegst (§ 146 Abs. 4 S. 6 VwGO). Gegen Beschlüsse im Eilverfahren ist die Beschwerde statthaft: Einlegung binnen zwei Wochen beim VG, Begründung binnen eines Monats. Die Begründung muss sich mit dem Beschluss auseinandersetzen – ein bloßer Verweis auf den Vortrag erster Instanz genügt nicht, dann wird die Beschwerde verworfen. Speichern für die nächste Rechtsmittelfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#verwaltungsprozessrecht",
+        "#eilrechtsschutz",
+        "#rechtsmittel",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VwGO-Beschwerde: Darlegung entscheidet",
+      "coverText": "Zwei Wochen, ein Monat, Darlegung",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Das Beschwerdegericht schaut nur auf die Gründe, die gegen den Eilbeschluss konkret vorgebracht werden.",
+        "handlung": "{A} hovers over a large stack of papers and shines a narrow spotlight on only the one sheet that {B} is actively holding up and pointing at.",
+        "hinweisRegie": "Place the note in the free space next to the spotlighted sheet, slightly tilted toward it, so the narrow review is linked to the note without covering {B}'s pointing hand.",
+        "alternative": "{B} hands a single marked page through a small window while {A} examines only that page and ignores a pile left outside."
+      },
+      "bildSzene": "spotlight on one held-up sheet",
+      "bildSzeneAlt": "single page through small window",
+      "quellen": [
+        "§ 146 VwGO",
+        "§ 147 VwGO",
+        "§ 124 VwGO",
+        "§ 124a VwGO",
+        "Themenpool: vwgo-669"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "pruefumfang-begrenzt",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.350Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht BT",
+      "themaId": "schuldbt-467",
+      "slug": "2026-11-10-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Anspruch auf Minderung? Den gibt es nicht",
+          "unter": "Kaufrecht · § 441 BGB",
+          "text": "Minderung ist ein Gestaltungsrecht. Das Geld kommt aus § 441 Abs. 4 BGB.",
+          "norm": "§§ 437 Nr. 2, 441 BGB",
+          "icon": "rechner",
+          "sprecher": "Einen Anspruch auf Minderung gibt es nicht. Minderung ist ein Gestaltungsrecht. Der Käufer erklärt sie, und erst daraus folgt ein Zahlungsanspruch. So baust du sie auf.",
+          "marken": [
+            "kein Anspruch",
+            "Gestaltungsrecht"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Kaufvertrag und Sachmangel",
+          "text": "Mangel bei Gefahrübergang.",
+          "norm": "§§ 433, 434, 446 BGB",
+          "sprecher": "Schritt eins: ein wirksamer Kaufvertrag und ein Sachmangel bei Gefahrübergang, nach den Paragrafen 434 und 446. Bis hierhin wie bei den anderen Mängelrechten.",
+          "marken": [
+            "Mangel bei Übergabe"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Statt zurückzutreten",
+          "text": "Rücktrittsvoraussetzungen, aber auch bei unerheblichem Mangel.",
+          "norm": "§ 441 Abs. 1 BGB",
+          "sprecher": "Schritt zwei: Der Käufer kann statt zurückzutreten mindern. Du brauchst also die Rücktrittsvoraussetzungen, grundsätzlich eine erfolglose Frist zur Nacherfüllung. Aber: Der Ausschluss bei unerheblichem Mangel gilt für die Minderung nicht.",
+          "marken": [
+            "auch bei Kleinigkeiten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Erklärung gegenüber dem Verkäufer",
+          "text": "Gestaltungsrecht – danach kein Wechsel zum Rücktritt.",
+          "norm": "§ 441 Abs. 1, 2 BGB",
+          "sprecher": "Schritt drei: die Minderungserklärung gegenüber dem Verkäufer. Als Gestaltungsrecht ist sie bindend, ein späterer Rücktritt ist ausgeschlossen. Sind auf einer Seite mehrere beteiligt, geht es nur von allen oder gegen alle.",
+          "marken": [
+            "bindend"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Berechnung",
+          "text": "Preis × Wert mit Mangel ÷ Wert ohne Mangel.",
+          "norm": "§ 441 Abs. 3 BGB",
+          "sprecher": "Schritt vier: die Berechnung. Der Preis sinkt in dem Verhältnis, in dem bei Vertragsschluss der Wert der mangelfreien Sache zum wirklichen Wert gestanden hätte. Notfalls wird geschätzt.",
+          "marken": [
+            "Verhältnis der Werte"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Schon voll bezahlt?",
+          "text": "Rückzahlung aus § 441 Abs. 4 BGB mit §§ 346, 347 BGB.",
+          "norm": "§ 441 Abs. 4 BGB",
+          "sprecher": "Und wenn der Käufer schon voll gezahlt hat? Dann ist § 441 Absatz vier die Anspruchsgrundlage für den Mehrbetrag, mit den Rücktrittsregeln der Paragrafen 346 und 347.",
+          "marken": [
+            "Absatz 4"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Erklären, berechnen, zurückfordern",
+          "text": "Gestaltungsrecht aus §§ 437 Nr. 2, 441 BGB – Geld aus § 441 Abs. 4 BGB.",
+          "norm": "§ 441 BGB",
+          "sprecher": "Merke: Die Minderung wird erklärt und dann berechnet. Das zu viel gezahlte Geld verlangst du aus § 441 Absatz vier.",
+          "marken": [
+            "erklären · rechnen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Nie wieder „Anspruch auf Minderung“",
+          "text": "Speichern für die nächste Kaufrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Kaufrechtsklausur. Und schreib im Obersatz nie wieder: Anspruch auf Minderung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Einen Anspruch auf Minderung gibt es nicht: Die Minderung ist ein Gestaltungsrecht (§§ 437 Nr. 2, 441 BGB). Der Käufer erklärt sie statt des Rücktritts – auch bei unerheblichem Mangel – und der Preis sinkt nach § 441 Abs. 3 BGB im Verhältnis der Werte. Hat er schon voll gezahlt, verlangt er den Mehrbetrag aus § 441 Abs. 4 BGB mit §§ 346, 347 BGB zurück. Speichern für die nächste Kaufrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#kaufrecht",
+        "#minderung",
+        "#441bgb",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Minderung: Aufbau und Anspruchsgrundlage",
+      "titelZeilen": [
+        "Anspruch auf",
+        "Minderung? Den",
+        "gibt es nicht"
+      ],
+      "coverText": "Zahlung über § 441 Abs. 4",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "flux"
+        ],
+        "kernidee": "Die Minderung wird erklärt; erst danach entsteht ein Anspruch auf das zu viel gezahlte Geld.",
+        "handlung": "{A} places a cracked crystal on one side of a balance scale, while {B} taps the lighter side with his pointer and a small pile of coins slides back toward {A}.",
+        "hinweisRegie": "Place the note in the free space beside the sliding coins, slightly tilted toward the scale, so the reduced price is linked to the note without covering the cracked crystal or {B}'s pointer.",
+        "alternative": "{B} shortens a long price ribbon with scissors while {A} holds the flawed crystal next to it for comparison."
+      },
+      "bildSzene": "cracked crystal on scale, coins return",
+      "bildSzeneAlt": "price ribbon cut beside flawed crystal",
+      "quellen": [
+        "§ 437 Nr. 2 BGB",
+        "§ 441 BGB",
+        "§§ 346, 347 BGB",
+        "§ 323 Abs. 5 S. 2 BGB",
+        "Themenpool: schuldbt-467"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "begriffsfalle",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.356Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-659",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Adressatentheorie: Warum ist der Adressat eines belastenden Verwaltungsakts klagebefugt?",
+      "optionen": [
+        "Er muss eine drittschützende Norm konkret benennen",
+        "Er muss vorher erfolglos Widerspruch eingelegt haben",
+        "Zumindest Art. 2 I GG ist möglicherweise verletzt"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: vwgo-659"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.356Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-659",
+      "ueberzeile": "Auflösung",
+      "titel": "Weil zumindest Art. 2 Abs. 1 GG möglicherweise verletzt ist",
+      "text": "§ 42 Abs. 2 VwGO verlangt die Möglichkeit, in eigenen Rechten verletzt zu sein. Belastet ein VA seinen Adressaten, ist jedenfalls die allgemeine Handlungsfreiheit (Art. 2 Abs. 1 GG) möglicherweise verletzt – das genügt. Für Dritte, etwa Nachbarn, trägt die Adressatentheorie nicht: Dort brauchst du eine drittschützende Norm (Schutznormtheorie).",
+      "norm": "§ 42 Abs. 2 VwGO · Art. 2 Abs. 1 GG",
+      "quellen": [
+        "§ 42 Abs. 2 VwGO",
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: vwgo-659"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.356Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Er muss eine drittschützende Norm konkret benennen",
+        "Er muss vorher erfolglos Widerspruch eingelegt haben",
+        "Zumindest Art. 2 I GG ist möglicherweise verletzt"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-123",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Drittschadensliquidation: Schaden und Anspruch fallen auseinander",
+      "text": "Grundsatz: Ersatz gibt es nur für eigenen Schaden (§ 249 BGB). Die DSL hilft, wenn der Anspruchsinhaber keinen Schaden hat und der Geschädigte keinen Anspruch – zufällig aus Sicht des Schädigers. Fallgruppen: mittelbare Stellvertretung, obligatorische Gefahrentlastung (etwa § 447 BGB), Obhutsfälle. Der Gläubiger liquidiert den Drittschaden oder tritt den Anspruch ab.",
+      "norm": "§ 249 BGB · § 447 BGB",
+      "quellen": [
+        "§ 249 BGB",
+        "§ 447 BGB",
+        "§ 285 BGB",
+        "Themenpool: schuld-123"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.356Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "ipr",
+      "klausur": 1,
+      "pairId": "ipr-893",
+      "ueberzeile": "4 Punkte IPR",
+      "titel": "Ist ein deutsches Gericht international zuständig? Prüfung nach Brüssel Ia",
+      "text": "Zivil- oder Handelssache und Beklagter mit Wohnsitz in einem Mitgliedstaat: Dann gilt die EuGVVO. Für Verbraucher-, Versicherungs- und Arbeitssachen gelten eigene Schutzregeln.",
+      "punkte": [
+        "Ausschließliche Zuständigkeit, etwa für Grundstücke (Art. 24)",
+        "Gerichtsstandsvereinbarung (Art. 25) oder rügelose Einlassung (Art. 26)",
+        "Allgemeiner Gerichtsstand: Wohnsitz des Beklagten (Art. 4)",
+        "Besondere Gerichtsstände, etwa Erfüllungsort oder Delikt (Art. 7)"
+      ],
+      "quellen": [
+        "Art. 4 EuGVVO",
+        "Art. 7 EuGVVO",
+        "Art. 24–26 EuGVVO",
+        "Themenpool: ipr-893"
+      ],
+      "fachLabel": "IPR",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.356Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-937",
+      "ueberzeile": "Streitstand Methodik",
+      "titel": "Rechtfertigungsgrund zulasten des Täters einschränken – erlaubt?",
+      "norm": "Art. 103 Abs. 2 GG · § 32 StGB",
+      "optionen": [
+        "Eine Ansicht: Art. 103 II GG gilt auch hier – keine Reduktion zulasten des Täters.",
+        "Andere Ansicht: Rechtfertigungsgründe begründen keine Strafe – Einschränkung möglich."
+      ],
+      "text": "Bei der Notwehr entschärft der Wortlaut den Streit: Einschränkungen hängen am Merkmal „geboten“ – Auslegung statt Reduktion. Merke: Analogie braucht planwidrige Lücke und vergleichbare Interessenlage.",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "§ 32 StGB",
+        "Themenpool: methodik-937"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.356Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-644",
+      "ueberzeile": "Merksatz Verwaltungsrecht",
+      "titel": "Widerruf: Belastendes fast immer, Begünstigendes nur mit Grund",
+      "text": "Belastender VA: Widerruf für die Zukunft grundsätzlich jederzeit (§ 49 Abs. 1 VwVfG). Begünstigender VA: nur mit Grund aus § 49 Abs. 2 und binnen Jahresfrist.",
+      "norm": "§ 49 VwVfG",
+      "quellen": [
+        "§ 49 VwVfG",
+        "§ 48 Abs. 4 VwVfG",
+        "Themenpool: verwalt-644"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:43:39.356Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

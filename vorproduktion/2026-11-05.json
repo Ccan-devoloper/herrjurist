@@ -1,0 +1,867 @@
+{
+  "datum": "2026-11-05",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "spickzettel",
+        "themaId": "assessoroer-842",
+        "themaTitel": "Wie ist der Tatbestand des Verwaltungsurteils aufgebaut?",
+        "fach": "assessoroer",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "vergleich",
+        "themaId": "bereich-212",
+        "themaTitel": "Was ist der Vorrang der Leistungsbeziehung?",
+        "fach": "bereich",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-795",
+        "themaTitel": "Beweiswürdigung im Strafurteil",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:15",
+        "art": "frage",
+        "themaId": "verwbt-396"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:15",
+        "art": "antwort",
+        "themaId": "verwbt-396"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "strafat-313"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:23",
+        "art": "streitstand",
+        "themaId": "bgbat-911"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:41",
+        "art": "merksatz",
+        "themaId": "stpo-774"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:20",
+        "art": "begriff",
+        "themaId": "staat-591"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "spickzettel",
+      "themaId": "assessoroer-842",
+      "poolTitel": "Wie ist der Tatbestand des Verwaltungsurteils aufgebaut?",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 117 Abs. 3 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "vergleich",
+      "themaId": "bereich-212",
+      "poolTitel": "Was ist der Vorrang der Leistungsbeziehung?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwbt-396",
+      "poolTitel": "Wann ist eine Standardmaßnahme der Polizei zulässig?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwbt-396",
+      "poolTitel": "Wann ist eine Standardmaßnahme der Polizei zulässig?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Polizeigesetze der Länder"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-313",
+      "poolTitel": "Was ist eine mitbestrafte Nachtat?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "Konkurrenzlehre; Gesetzeskonkurrenz"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "bgbat-911",
+      "poolTitel": "Bindet eine abhandengekommene Willenserklärung, die ohne Willen in den Verkehr gelangt?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB",
+        "§ 122 BGB analog",
+        "§ 172 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "stpo-774",
+      "poolTitel": "Telefon-/Telekommunikationsüberwachung im Überblick",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 100a ff. StPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-19"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "staat-591",
+      "poolTitel": "Rechtsstaatsprinzip und Bestimmtheitsgebot",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 III GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "spickzettel",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-842",
+      "slug": "2026-11-05-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "VG-Urteil: der Tatbestand in sieben Bausteinen",
+          "titelZeilen": [
+            "VG-Urteil:",
+            "der Tatbestand in",
+            "sieben Bausteinen"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "Anträge eingerückt, Vortrag indirekt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Maßstab",
+          "text": "§ 117 Abs. 3 VwGO: Der Sach- und Streitstand ist unter Hervorhebung der gestellten Anträge seinem wesentlichen Inhalt nach gedrängt darzustellen. Wegen der Einzelheiten soll auf Schriftsätze, Protokolle und andere Unterlagen verwiesen werden."
+        },
+        {
+          "art": "text",
+          "titel": "Bausteine 1–4",
+          "punkte": [
+            "1. Einleitungssatz: Worum geht es? („Der Kläger wendet sich gegen …“)",
+            "2. Unstreitiges und Verwaltungsverfahren: chronologisch, im Imperfekt.",
+            "3. Vorverfahren: Widerspruch und Widerspruchsbescheid mit Datum – soweit nach Landesrecht vorgesehen.",
+            "4. Klageerhebung und Vorbringen des Klägers in indirekter Rede."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Bausteine 5–7",
+          "punkte": [
+            "5. Anträge: wörtlich und eingerückt – erst Kläger, dann Beklagter.",
+            "6. Vorbringen des Beklagten, gegebenenfalls des Beigeladenen.",
+            "7. Prozessgeschichte und Bezugnahme auf Gerichtsakte und Verwaltungsvorgänge."
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Rein oder raus?",
+          "links": {
+            "titel": "Gehört hinein",
+            "punkte": [
+              "Tatsachen, die das Gericht für die Entscheidung braucht",
+              "Rechtsansichten der Beteiligten, knapp",
+              "Beweisaufnahme – ohne sie zu würdigen"
+            ]
+          },
+          "rechts": {
+            "titel": "Bleibt draußen",
+            "punkte": [
+              "Eigene rechtliche Würdigung",
+              "Beweiswürdigung – sie gehört in die Gründe",
+              "Wörtliche Zitate ganzer Bescheide"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Zeitformen und Stil",
+          "text": "Unstreitiges im Imperfekt, Vorbringen der Beteiligten im Konjunktiv der indirekten Rede, Prozessgeschichte im Perfekt. Die Gepflogenheiten unterscheiden sich im Detail je nach Ausbildungsland – maßgeblich ist, was dort gelehrt wird."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Der Tatbestand erzählt, die Gründe bewerten: Im Tatbestand wird nichts gewürdigt, in den Gründen nichts neu erzählt."
+        },
+        {
+          "art": "cta",
+          "titel": "Tatbestand-Check vor der Abgabe",
+          "punkte": [
+            "Einleitungssatz vorhanden?",
+            "Vorverfahren mit Datum?",
+            "Anträge wörtlich und eingerückt?",
+            "Keine Würdigung im Tatbestand?"
+          ],
+          "icons": [
+            "dokument",
+            "kalender",
+            "klemmbrett",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Der Tatbestand im VG-Urteil in sieben Bausteinen: Einleitungssatz, Unstreitiges samt Verwaltungsverfahren, Vorverfahren, Klageerhebung und Klägervortrag, Anträge, Beklagtenvortrag, Prozessgeschichte mit Bezugnahme. Maßstab ist § 117 Abs. 3 VwGO: gedrängt, mit hervorgehobenen Anträgen, ohne eigene Würdigung. Speichern als Spickzettel für die nächste Urteilsklausur im Öffentlichen Recht.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#verwaltungsurteil",
+        "#tatbestand",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "VG-Urteil: Aufbau des Tatbestands",
+      "coverText": "Anträge eingerückt, Vortrag indirekt",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Der Tatbestand erzählt den Streit in fester Reihenfolge, ohne ihn zu bewerten.",
+        "handlung": "{A} hovers over a long table laying out seven sealed folders in a neat row, while {B} holds back the last folder until the others are in place.",
+        "hinweisRegie": "Place the note in the free space above the row of folders, slightly tilted toward the gap for the last one, so the fixed order is linked to the note without covering {B}'s hand.",
+        "alternative": "{B} places seven stepping stones across a stream, while {A} checks the position of each stone before she steps on it."
+      },
+      "bildSzene": "droid lays seven folders in a row",
+      "bildSzeneAlt": "seven stepping stones across stream",
+      "quellen": [
+        "§ 117 Abs. 3 VwGO",
+        "Themenpool: assessoroer-842"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "sieben-echte-bausteine",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "vergleich",
+      "fach": "bereich",
+      "klausur": 1,
+      "fachLabel": "Bereicherungsrecht",
+      "themaId": "bereich-212",
+      "slug": "2026-11-05-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vorrang der Leistung – nicht bei gestohlenem Material",
+          "titelZeilen": [
+            "Vorrang der Leistung",
+            "– nicht bei",
+            "gestohlenem",
+            "Material"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "§ 935 BGB bricht den Vorrang",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Wer etwas durch Leistung erlangt hat, hat es grundsätzlich nicht zugleich „in sonstiger Weise“ auf Kosten eines Dritten erlangt (§ 812 Abs. 1 S. 1 Alt. 2 BGB). Die Leistungsbeziehung geht vor: Rückabgewickelt wird innerhalb der Leistungskette."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Leistung oder Eingriff?",
+          "links": {
+            "titel": "Leistungskondiktion",
+            "punkte": [
+              "Bewusste, zweckgerichtete Mehrung fremden Vermögens",
+              "Rückabwicklung zwischen den Leistungsparteien",
+              "§ 812 I 1 Alt. 1 BGB"
+            ]
+          },
+          "rechts": {
+            "titel": "Eingriffskondiktion",
+            "punkte": [
+              "Erwerb ohne Leistung, vor allem durch Eingriff",
+              "Grundsätzlich nur, wo keine Leistung vorliegt",
+              "§ 812 I 1 Alt. 2 BGB"
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der Einbaufall",
+          "text": "D stiehlt Baumaterial des E und verkauft es an Bauunternehmer U. U baut es im Haus des B ein, E verliert sein Eigentum (§§ 946, 94 BGB). Kann E von B Wertersatz nach §§ 951 Abs. 1, 812 Abs. 1 S. 1 Alt. 2 BGB verlangen, obwohl B das Material durch Leistung des U erhielt?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Vorrang oder Durchgriff?",
+          "links": {
+            "titel": "Nicht abhanden",
+            "punkte": [
+              "B hätte nach §§ 932 ff. BGB gutgläubig erwerben können.",
+              "Dann bleibt es beim Vorrang: kein Anspruch des E gegen B."
+            ]
+          },
+          "rechts": {
+            "titel": "Gestohlen",
+            "punkte": [
+              "Ein gutgläubiger Erwerb wäre an § 935 BGB gescheitert.",
+              "Diese Wertung schlägt durch: E kann von B kondizieren."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "text": "Der Vorrang der Leistung ist keine starre Formel, sondern eine Wertungsfrage. Prüfe: Hätte der Empfänger die Sache auch rechtsgeschäftlich gutgläubig erwerben können? Wenn nein, verdient er keinen stärkeren Schutz, nur weil statt einer Übereignung ein Einbau vorliegt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Leistungskette. Bei abhandengekommenen Sachen setzt sich aber die Wertung des § 935 BGB gegen den Vorrang der Leistung durch."
+        },
+        {
+          "art": "cta",
+          "titel": "Einbaufall in drei Fragen",
+          "punkte": [
+            "Durch Leistung erlangt?",
+            "Gutgläubiger Erwerb möglich gewesen?",
+            "Wenn nein: Eingriffskondiktion prüfen"
+          ],
+          "icons": [
+            "handschlag",
+            "schloss",
+            "baustelle"
+          ]
+        }
+      ],
+      "caption": "Vorrang der Leistung – aber nicht bei gestohlenem Material. Wer etwas durch Leistung erhält, ist grundsätzlich vor der Eingriffskondiktion eines Dritten geschützt. Wurde das Material aber gestohlen, hätte der Empfänger es wegen § 935 BGB nicht einmal gutgläubig erwerben können – dann setzt sich diese Wertung durch, und der Eigentümer kann aus §§ 951, 812 BGB kondizieren. Speichern für die nächste Bereicherungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bereicherungsrecht",
+        "#812bgb",
+        "#kondiktion",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorrang der Leistungsbeziehung und § 935 BGB",
+      "coverText": "§ 935 BGB bricht den Vorrang",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer etwas durch Leistung erhält, ist geschützt – aber nicht stärker, als es ein gutgläubiger Erwerber wäre.",
+        "handlung": "{A} sets a glowing crystal brick into the wall of a house under construction, while {B} curiously lifts a small stolen-goods tag dangling from that very brick.",
+        "hinweisRegie": "Place the note in the open space beside the tagged brick, slightly tilted toward the tag, so the stolen origin is linked to the note without covering {A}'s hands on the wall.",
+        "alternative": "{B} follows a chain of hands passing a crystal brick along and stops at the first hand that took it without permission."
+      },
+      "bildSzene": "tagged stolen brick built into wall",
+      "bildSzeneAlt": "chain of hands passing crystal brick",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 BGB",
+        "§ 951 Abs. 1 BGB",
+        "§§ 946, 94 BGB",
+        "§§ 932, 935 BGB",
+        "Themenpool: bereich-212"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-wertung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-795",
+      "slug": "2026-11-05-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Jedes Indiz zweifelhaft – trotzdem verurteilt",
+          "unter": "Beweiswürdigung · § 261 StPO",
+          "text": "In dubio pro reo gilt nach der Gesamtwürdigung – nicht für jedes Indiz.",
+          "norm": "§ 261 StPO",
+          "icon": "lupe",
+          "sprecher": "Kein Indiz reicht allein. Verurteilt wird trotzdem. Denn der Zweifelssatz gilt nicht für jedes einzelne Indiz, sondern erst am Ende der Gesamtwürdigung.",
+          "marken": [
+            "Gesamtwürdigung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Inbegriff der Hauptverhandlung",
+          "text": "Verwertet wird nur, was Gegenstand der Hauptverhandlung war.",
+          "norm": "§ 261 StPO",
+          "sprecher": "Schritt eins: die Grundlage. Das Gericht entscheidet nach seiner freien Überzeugung, geschöpft aus dem Inbegriff der Verhandlung. Was nicht in der Hauptverhandlung war, darf nicht ins Urteil.",
+          "marken": [
+            "nur aus der Verhandlung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Persönliche Gewissheit",
+          "text": "Keine mathematische Sicherheit – aber keine vernünftigen Zweifel.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der Maßstab. Nötig ist die persönliche Gewissheit des Gerichts auf tragfähiger objektiver Grundlage. Mathematische Sicherheit verlangt niemand, bloß theoretische Zweifel stehen nicht entgegen.",
+          "marken": [
+            "vernünftige Zweifel?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Indizien: erst einzeln, dann gesamt",
+          "text": "Jede Indiztatsache muss feststehen – gewürdigt wird in der Gesamtschau.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Indizien. Jede Indiztatsache selbst muss feststehen. Ihr Beweiswert wird aber nicht isoliert beurteilt. Mehrere Indizien, die einzeln nicht genügen, können zusammen die volle Überzeugung tragen.",
+          "marken": [
+            "einzeln, dann gesamt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Der Zweifelssatz am Ende",
+          "text": "In dubio pro reo ist Entscheidungsregel, keine Beweisregel für Einzelindizien.",
+          "norm": null,
+          "sprecher": "Schritt vier: der Zweifelssatz. In dubio pro reo greift erst, wenn das Gericht nach der Gesamtwürdigung nicht überzeugt ist. Auf einzelne Indizien wendet man ihn nicht isoliert an.",
+          "marken": [
+            "erst am Schluss"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Im Urteil darstellen",
+          "text": "Nachvollziehbar, lückenlos, widerspruchsfrei – das prüft die Revision.",
+          "norm": "§ 267 StPO",
+          "sprecher": "Für deine Urteilsklausur heißt das: Die Beweiswürdigung muss nachvollziehbar, lückenlos und widerspruchsfrei sein. Genau das prüft das Revisionsgericht, nicht, ob es selbst anders gewürdigt hätte.",
+          "marken": [
+            "revisionsfest"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Indizien einzeln feststellen, gemeinsam würdigen – Zweifel erst am Ende.",
+          "norm": "§ 261 StPO",
+          "sprecher": "Merke: Indizien einzeln feststellen, gemeinsam würdigen. Und der Zweifelssatz kommt erst ganz am Schluss.",
+          "marken": [
+            "Zweifel erst am Ende"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Gesamtwürdigung nicht vergessen",
+          "text": "Speichern für die nächste Strafurteilsklausur.",
+          "sprecher": "Speicher dir das für die nächste Urteilsklausur im Strafrecht. Und schreib immer ausdrücklich einen Satz zur Gesamtwürdigung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Jedes Indiz für sich zweifelhaft – und trotzdem kann das Gericht verurteilen. Nach § 261 StPO zählt die Gesamtwürdigung: Die Indiztatsachen müssen feststehen, ihr Beweiswert wird aber gemeinsam beurteilt. In dubio pro reo ist eine Entscheidungsregel für das Ende dieser Würdigung, keine Beweisregel für jedes einzelne Indiz. Speichern für die nächste Strafurteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#beweiswürdigung",
+        "#indubioproreo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beweiswürdigung: Indizien und in dubio pro reo",
+      "titelZeilen": [
+        "Jedes Indiz",
+        "zweifelhaft –",
+        "trotzdem verurteilt"
+      ],
+      "coverText": "Zweifelssatz erst am Ende",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Einzelne schwache Indizien können gemeinsam die Überzeugung tragen – über Zweifel entscheidet erst das Gesamtbild.",
+        "handlung": "{B} nervously holds up single thin threads that each snap at a light tug, while {A} twists several of them together into a rope that holds a heavy weight.",
+        "hinweisRegie": "Place the note in the free space beside the finished rope, slightly tilted toward it, so the combined strength is linked to the note without covering {B}'s broken threads.",
+        "alternative": "{A} fits several faint puzzle pieces together until a clear picture appears, while {B} stares at one blurry piece on its own."
+      },
+      "bildSzene": "thin threads twisted into strong rope",
+      "bildSzeneAlt": "faint puzzle pieces form clear picture",
+      "quellen": [
+        "§ 261 StPO",
+        "§ 267 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-396",
+      "ueberzeile": "Prüfungsfrage Polizeirecht",
+      "titel": "Die Polizei will zur Gefahrenabwehr die Identität des A feststellen. Worauf stützt sie die Maßnahme?",
+      "optionen": [
+        "Auf die Generalklausel – sie gilt stets daneben",
+        "Auf die Standardbefugnis zur Identitätsfeststellung im Landesgesetz",
+        "Auf § 163b StPO"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Polizeigesetze der Länder",
+        "§ 163b StPO",
+        "Themenpool: verwbt-396"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.188Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-396",
+      "ueberzeile": "Auflösung",
+      "titel": "Auf die Standardbefugnis – sie verdrängt die Generalklausel",
+      "text": "Standardmaßnahmen wie Identitätsfeststellung, Platzverweis oder Durchsuchung sind in den Polizeigesetzen der Länder speziell geregelt und verdrängen in ihrem Anwendungsbereich die Generalklausel. Prüfe: Tatbestand der Standardbefugnis, richtiger Adressat, Ermessen, Verhältnismäßigkeit. § 163b StPO betrifft die Strafverfolgung, nicht die Gefahrenabwehr.",
+      "norm": "Polizeigesetze der Länder",
+      "quellen": [
+        "Polizeigesetze der Länder",
+        "§ 163b StPO",
+        "Themenpool: verwbt-396"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.189Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Auf die Generalklausel – sie gilt stets daneben",
+        "Auf die Standardbefugnis zur Identitätsfeststellung im Landesgesetz",
+        "Auf § 163b StPO"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-313",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Mitbestrafte Nachtat: tatbestandsmäßig, aber durch die Vortat abgegolten",
+      "text": "Die Nachtat verwirklicht einen Tatbestand, sichert oder verwertet aber nur, was die Vortat eingebracht hat – ohne neuen Schaden, ohne neues Opfer. Beispiel: Der Dieb zerstört die gestohlene Sache (§ 303 StGB). Sie tritt im Wege der Gesetzeskonkurrenz zurück. Scheidet eine Bestrafung aus der Vortat aus, kann nach h.M. aus der Nachtat bestraft werden.",
+      "norm": "Gesetzeskonkurrenz (Konkurrenzlehre)",
+      "quellen": [
+        "Konkurrenzlehre",
+        "§ 303 StGB",
+        "Themenpool: strafat-313"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.189Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-911",
+      "ueberzeile": "Streitstand BGB AT",
+      "titel": "Unterschriebener Entwurf versehentlich verschickt: Ist die Erklärung abgegeben?",
+      "norm": "§ 130 BGB · § 122 BGB analog",
+      "optionen": [
+        "h.M.: Nein – keine Abgabe; Vertrauensschaden allenfalls analog § 122 BGB.",
+        "Andere Ansicht: Ja, wenn zurechenbar veranlasst – dann Anfechtung analog § 119 BGB."
+      ],
+      "text": "Für die h.M.: Ohne willentliche Entäußerung fehlt ein Kernstück der Erklärung; den Empfänger schützt der Ersatz des Vertrauensschadens. Klausur: Parallele zum fehlenden Erklärungsbewusstsein ziehen und begründen.",
+      "quellen": [
+        "§ 130 BGB",
+        "§ 122 BGB",
+        "§ 119 BGB",
+        "Themenpool: bgbat-911"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.189Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-774",
+      "ueberzeile": "Merksatz StPO",
+      "titel": "Quellen-TKÜ ist keine Online-Durchsuchung",
+      "text": "Die Quellen-TKÜ erfasst nur Kommunikation ab der Anordnung (§ 100a Abs. 1 S. 2, 3 StPO). Wer das ganze Gerät durchsucht, braucht § 100b StPO – mit strengeren Voraussetzungen.",
+      "norm": "§§ 100a, 100b StPO",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "Themenpool: stpo-774"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.189Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-591",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Bestimmtheitsgebot: Betroffene müssen die Rechtslage erkennen können",
+      "text": "Normen müssen so klar sein, dass Betroffene die Rechtslage erkennen und ihr Verhalten danach ausrichten können – und dass Verwaltung und Gerichte gebunden sind. Unbestimmte Rechtsbegriffe sind zulässig, wenn sie sich durch Auslegung konkretisieren lassen. Je schwerer der Eingriff, desto höher die Anforderungen; für Strafgesetze gilt Art. 103 Abs. 2 GG.",
+      "norm": "Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: staat-591"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:00:08.189Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

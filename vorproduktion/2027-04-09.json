@@ -1,0 +1,857 @@
+{
+  "datum": "2027-04-09",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "strafbt-333",
+        "themaTitel": "Was ist der Computerbetrug?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-365",
+        "themaTitel": "Wie prüft man ein Freiheitsgrundrecht?",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "schuld-177",
+        "themaTitel": "Wann ist ein Mitverschulden zu berücksichtigen?",
+        "fach": "schuld",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "vwgo-668"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "vwgo-668"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "strafat-311"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "merksatz",
+        "themaId": "handelsg-273"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "begriff",
+        "themaId": "zpo-564"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:15",
+        "art": "fehler",
+        "themaId": "strafbt-925"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "strafbt-333",
+      "poolTitel": "Was ist der Computerbetrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263a StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-15"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-365",
+      "poolTitel": "Wie prüft man ein Freiheitsgrundrecht?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 Abs. 1 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "schuld-177",
+      "poolTitel": "Wann ist ein Mitverschulden zu berücksichtigen?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 254 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "vwgo-668",
+      "poolTitel": "Einstweilige Anordnung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2026-12-19",
+        "2026-12-19"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "vwgo-668",
+      "poolTitel": "Einstweilige Anordnung",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 123 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-09",
+        "2026-12-19",
+        "2026-12-19"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-311",
+      "poolTitel": "Wie wirkt die Akzessorietät bei besonderen persönlichen Merkmalen?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 28 StGB",
+        "§ 29 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08",
+        "2027-02-01"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "handelsg-273",
+      "poolTitel": "Wie werden Gesellschafterbeschlüsse angefochten?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 47 GmbHG",
+        "§ 243 AktG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "zpo-564",
+      "poolTitel": "Berufung: Zulässigkeit und Prüfungsumfang",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 511 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-25",
+        "2026-11-24",
+        "2027-01-20"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "strafbt-925",
+      "poolTitel": "§§ 239a, 239b StGB im Zwei-Personen-Verhältnis: Wann trägt die Bemächtigungslage?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 239a StGB",
+        "§ 239b StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-11",
+        "2026-12-10",
+        "2027-02-08"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-333",
+      "slug": "2027-04-09-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Niemand getäuscht – trotzdem strafbar: Überweisung mit fremden Daten",
+          "titelZeilen": [
+            "Niemand getäuscht –",
+            "trotzdem strafbar:",
+            "Überweisung mit",
+            "fremden Daten"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Ein System kann nicht irren",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A hat sich die Zugangsdaten zum Onlinebanking des O verschafft. Er meldet sich als O an, bestätigt mit einer TAN von O's Gerät und überweist 2.000 € auf sein eigenes Konto. Kein Bankmitarbeiter bekommt den Vorgang zu sehen. Strafbarkeit des A nach § 263 und § 263a StGB?"
+        },
+        {
+          "art": "text",
+          "titel": "Warum § 263 StGB scheitert",
+          "text": "Betrug verlangt, dass ein Mensch getäuscht wird und irrt. Die Überweisung verarbeitet allein das System der Bank. Ein Computer kann nicht irren – Täuschung und Irrtum fehlen. Genau diese Lücke schließt § 263a StGB."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du § 263a Abs. 1 StGB",
+          "schritte": [
+            {
+              "titel": "Tathandlung",
+              "text": "Hier: unbefugte Verwendung von Daten (Var. 3) – A nutzt Zugangsdaten und TAN des O."
+            },
+            {
+              "titel": "Unbefugt",
+              "text": "Rspr.: betrugsspezifisch auslegen – hätte A dieselbe Erklärung gegenüber einem Bankmitarbeiter abgegeben, läge darin eine Täuschung."
+            },
+            {
+              "titel": "Ergebnis der Datenverarbeitung beeinflusst",
+              "text": "Die Überweisung wird ausgeführt – das ersetzt die Vermögensverfügung beim Betrug."
+            },
+            {
+              "titel": "Schaden, Vorsatz, Bereicherungsabsicht",
+              "text": "Ein fremdes Vermögen ist gemindert, A handelt vorsätzlich und will sich stoffgleich bereichern."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "A gibt sich gegenüber dem System als O aus; gegenüber einem Menschen wäre das eine Täuschung über seine Berechtigung. Er hat die Daten unbefugt verwendet und so die Überweisung ausgelöst. § 263a Abs. 1 Var. 3 StGB ist erfüllt, § 263 StGB scheitert mangels Irrtums. Daneben ist § 269 StGB zu prüfen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wo kein Mensch getäuscht wird, fragst du nach § 263a StGB – und prüfst „unbefugt“ so, als säße ein Bankmitarbeiter davor."
+        },
+        {
+          "art": "cta",
+          "titel": "Computerbetrug in drei Fragen",
+          "punkte": [
+            "Irrt ein Mensch oder nur ein System?",
+            "Welche der vier Tathandlungen?",
+            "Wäre es gegenüber einem Menschen eine Täuschung?"
+          ],
+          "icons": [
+            "laptop",
+            "lupe",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Niemand wurde getäuscht – und trotzdem macht sich A strafbar, wenn er mit fremden Zugangsdaten Geld auf sein Konto überweist. § 263 StGB scheitert, weil kein Mensch irrt; § 263a StGB ersetzt Täuschung und Irrtum durch die Beeinflussung eines Datenverarbeitungsvorgangs. Ob die Verwendung der Daten „unbefugt“ war, beurteilt die Rspr. betrugsspezifisch: Wäre dieselbe Erklärung gegenüber einem Menschen eine Täuschung? Speichern für den nächsten Fall rund ums Onlinebanking.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#computerbetrug",
+        "#263astgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Computerbetrug beim Onlinebanking",
+      "coverText": "Ein System kann nicht irren",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "flux"
+        ],
+        "kernidee": "Wo nur eine Maschine entscheidet, gibt es keinen Irrtum – die Strafbarkeit folgt dann aus einer eigenen Norm.",
+        "handlung": "{A} slips a borrowed key card into a humming vault machine that obediently slides out a coin tray, while {B} points his stick at the empty clerk's chair beside it.",
+        "hinweisRegie": "Place the note in the free space above the empty clerk's chair, slightly tilted toward the machine, so it links the missing human to the paying machine without covering the coin tray or faces.",
+        "alternative": "{B} holds up a mask of another creature's face in front of a scanning lens that turns green, while {A} watches nervously from behind a pipe."
+      },
+      "bildSzene": "borrowed card, vault machine, empty chair",
+      "bildSzeneAlt": "mask in front of green scanner",
+      "quellen": [
+        "§ 263 StGB",
+        "§ 263a Abs. 1 StGB",
+        "§ 269 StGB",
+        "Themenpool: strafbt-333"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.788Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-365",
+      "slug": "2027-04-09-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Reiten im Wald verboten: Welches Grundrecht schützt den Reiter?",
+          "titelZeilen": [
+            "Reiten im Wald",
+            "verboten: Welches",
+            "Grundrecht schützt",
+            "den Reiter?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Geschützt ist jedes Verhalten",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Ein Landesgesetz erlaubt das Reiten im Wald nur noch auf gekennzeichneten Wegen. R reitet seit Jahren quer durch den Wald und fühlt sich in seinen Grundrechten verletzt. Kein Spezialgrundrecht passt. Ist sein Hobby überhaupt grundrechtlich geschützt – und wie prüfst du das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg: Freiheitsgrundrecht in drei Stufen",
+          "schritte": [
+            {
+              "titel": "Schutzbereich",
+              "text": "Art. 2 Abs. 1 GG schützt als allgemeine Handlungsfreiheit jedes menschliche Verhalten – auch das Reiten im Wald."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Jedes staatliche Handeln, das dieses Verhalten ganz oder teilweise unmöglich macht – hier das Verbot abseits der Wege."
+            },
+            {
+              "titel": "Schranke",
+              "text": "Verfassungsmäßige Ordnung: jede formell und materiell verfassungsmäßige Rechtsnorm."
+            },
+            {
+              "titel": "Schranken-Schranken",
+              "text": "Vor allem Verhältnismäßigkeit: legitimer Zweck, geeignet, erforderlich, angemessen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Reihenfolge davor",
+          "text": "Art. 2 Abs. 1 GG ist ein Auffanggrundrecht. Prüfe zuerst, ob ein speziellerer Schutzbereich eröffnet ist – etwa Art. 12 GG, wenn R als Reitlehrer arbeitet. Nur wenn keiner greift, kommt die allgemeine Handlungsfreiheit zum Zug. Sie ist dann aber vollwertig zu prüfen."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "„Reiten ist kein wichtiges Verhalten, also nicht geschützt.“ Das greift zu kurz: Nach dem weiten Verständnis des BVerfG kommt es auf das Gewicht des Verhaltens im Schutzbereich nicht an. Es wird erst bei der Angemessenheit relevant – dort überwiegt meist der Schutz von Wald und Erholungssuchenden."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst Spezialgrundrechte, dann Art. 2 Abs. 1 GG. Geschützt ist jedes Verhalten – das Gewicht zählt erst in der Abwägung."
+        },
+        {
+          "art": "cta",
+          "titel": "Freiheitsgrundrecht in drei Stufen",
+          "punkte": [
+            "Spezielleres Grundrecht?",
+            "Schutzbereich und Eingriff",
+            "Schranke und Verhältnismäßigkeit"
+          ],
+          "icons": [
+            "lupe",
+            "schild",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Reiten im Wald – ist das überhaupt grundrechtlich geschützt? Ja: Art. 2 Abs. 1 GG schützt als allgemeine Handlungsfreiheit jedes menschliche Verhalten, wenn kein spezielleres Grundrecht greift. Geprüft wird in drei Stufen: Schutzbereich, Eingriff, Rechtfertigung – mit der verfassungsmäßigen Ordnung als Schranke und der Verhältnismäßigkeit als Schranken-Schranke. Das Gewicht des Verhaltens zählt erst in der Abwägung. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#art2gg",
+        "#handlungsfreiheit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Freiheitsgrundrecht prüfen: Art. 2 I GG",
+      "coverText": "Geschützt ist jedes Verhalten",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "mara"
+        ],
+        "kernidee": "Auch ein unscheinbares Hobby ist grundrechtlich geschützt – ob das Verbot hält, entscheidet erst die Abwägung.",
+        "handlung": "{A} rides a small six-legged creature off a marked forest path, while {B} holds up a simple balance with a tiny saddle on one side and a sapling on the other.",
+        "hinweisRegie": "Place the note in the free space between the path and the balance, slightly tilted toward the sapling, so it points at the weighing without covering the rider or {B}'s hands.",
+        "alternative": "{B} swings open a huge gate so {A} and many odd creatures can pass, then loosely ties a thin rope across one side of it."
+      },
+      "bildSzene": "rider leaves path, balance with sapling",
+      "bildSzeneAlt": "wide gate narrowed by rope",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "Art. 12 Abs. 1 GG",
+        "BVerfGE 80, 137 (Reiten im Walde)",
+        "Themenpool: grundr-365"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.789Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-177",
+      "slug": "2027-04-09-b3",
+      "titelZeilen": [
+        "Eltern passen",
+        "nicht auf – das Kind",
+        "bekommt vollen Ersatz"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Eltern passen nicht auf – das Kind bekommt vollen Ersatz",
+          "unter": "Mitverschulden · § 254 BGB",
+          "text": "Aufsichtsfehler der Eltern mindern den Deliktsanspruch des Kindes grundsätzlich nicht.",
+          "norm": "§ 254 BGB",
+          "icon": "familie",
+          "sprecher": "Die Eltern passen nicht auf, trotzdem gibt es vollen Ersatz. Klingt ungerecht? Im Deliktsrecht ist das die Regel. So prüfst du das Mitverschulden nach Paragraf 254.",
+          "marken": [
+            "voller Ersatz",
+            "§ 254 BGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Verschulden gegen sich selbst",
+          "text": "Der Geschädigte lässt die Sorgfalt außer Acht, die ein Verständiger zum eigenen Schutz aufwendet.",
+          "norm": "§ 254 Abs. 1 BGB",
+          "sprecher": "Schritt eins: Hat der Geschädigte selbst zum Schaden beigetragen? Gemeint ist ein Verschulden gegen sich selbst, also die Sorgfalt, die ein verständiger Mensch zum eigenen Schutz aufwendet.",
+          "marken": [
+            "gegen sich selbst"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zurechnungsfähigkeit",
+          "text": "§§ 827, 828 BGB gelten entsprechend – ein Kleinkind trifft kein Mitverschulden.",
+          "norm": "§ 828 BGB",
+          "sprecher": "Schritt zwei: Konnte ihm das überhaupt vorgeworfen werden? Die Paragrafen 827 und 828 gelten entsprechend. Ein Kind unter sieben Jahren trifft deshalb kein Mitverschulden, bei Unfällen mit Kraftfahrzeugen liegt die Grenze grundsätzlich bei zehn.",
+          "marken": [
+            "§§ 827, 828 analog"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Fremdes Verschulden zurechnen",
+          "text": "§ 254 Abs. 2 S. 2 i. V. m. § 278 BGB – nach der Rspr. nur bei bestehender Sonderverbindung.",
+          "norm": "§ 254 Abs. 2 S. 2 BGB",
+          "sprecher": "Schritt drei: Muss sich der Geschädigte das Verschulden eines anderen zurechnen lassen? Das läuft über Paragraf 254 Absatz 2 Satz 2 und Paragraf 278. Nach der Rechtsprechung setzt das eine bestehende Sonderverbindung zum Schädiger voraus.",
+          "marken": [
+            "nur mit Sonderverbindung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Abwägung",
+          "text": "Vorrangig das Maß der Verursachung, dann das Verschulden – Quote bis hin zum Ausschluss.",
+          "norm": null,
+          "sprecher": "Schritt vier: die Abwägung. Entscheidend ist vor allem, wessen Beitrag den Schaden überwiegend verursacht hat, erst danach das Verschulden. Das Ergebnis ist eine Quote, im Extremfall der völlige Ausschluss.",
+          "marken": [
+            "Quote"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zurück zum Kind",
+          "text": "Kleinkind: kein eigenes Mitverschulden, keine Sonderverbindung zum Fahrer.",
+          "norm": null,
+          "sprecher": "Zurück zum Kind. Ist es noch klein, trifft es kein eigenes Mitverschulden. Und mit dem fremden Autofahrer verband es vor dem Unfall keine Sonderverbindung. Die Aufsichtspflichtverletzung der Eltern wird ihm deshalb nicht zugerechnet.",
+          "marken": [
+            "keine Zurechnung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Eigenes Verschulden kürzt. Fremdes nur, wenn schon ein Schuldverhältnis bestand.",
+          "norm": "§ 254 BGB",
+          "sprecher": "Merke: Eigenes Mitverschulden kürzt den Anspruch. Fremdes nur, wenn schon vorher ein Schuldverhältnis bestand.",
+          "marken": [
+            "eigen / fremd"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jedem Mitverschulden: Wessen Verschulden?",
+          "text": "Speichern für die nächste Schadensersatzklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Schadensersatzklausur und frag immer zuerst: Wessen Verschulden soll hier eigentlich gekürzt werden?",
+          "marken": [
+            "wessen Verschulden?"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Die Eltern passen nicht auf, das Kind wird angefahren – und bekommt trotzdem vollen Ersatz? Im Deliktsrecht in der Regel ja. § 254 BGB kürzt nur bei eigenem Mitverschulden, und das setzt Zurechnungsfähigkeit nach §§ 827, 828 BGB analog voraus. Fremdes Verschulden wird über § 254 Abs. 2 S. 2 i. V. m. § 278 BGB nach der Rspr. nur zugerechnet, wenn schon eine Sonderverbindung bestand. Speichern für die nächste Schadensersatzklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#mitverschulden",
+        "#254bgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mitverschulden: Wann § 254 BGB kürzt",
+      "coverText": "Fremdes nur mit Sonderverbindung",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Ein Anspruch wird nur um das eigene Mitverschulden gekürzt, nicht um das Versäumnis eines Aufpassers.",
+        "handlung": "{A} holds a bandaged little creature on his shoulder and receives a full, unbroken crystal from a cart driver, while {B} hovers beside them and pushes away a small chipped piece someone tries to break off.",
+        "hinweisRegie": "Place the note in the free space above the unbroken crystal, slightly tilted toward {B}'s blocking hand, so it marks the full compensation without covering the little creature or the driver.",
+        "alternative": "{B} weighs two stones on a scale, one labeled only by a small footprint of the injured party, while a larger shadow of a guardian stays off the scale."
+      },
+      "bildSzene": "full crystal handed to injured child",
+      "bildSzeneAlt": "guardian's shadow stays off scale",
+      "quellen": [
+        "§ 254 Abs. 1, 2 BGB",
+        "§ 278 BGB",
+        "§§ 827, 828 BGB",
+        "Themenpool: schuld-177"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-668",
+      "ueberzeile": "Prüfungsfrage VwGO",
+      "titel": "Eilantrag auf vorläufige Zulassung zur Prüfung in drei Tagen: Scheitert er an der Vorwegnahme der Hauptsache?",
+      "optionen": [
+        "Ja – eine Vorwegnahme der Hauptsache ist ausnahmslos unzulässig",
+        "Nicht zwingend – Ausnahme bei schweren Nachteilen, hohen Erfolgschancen",
+        "Nein – bei § 123 VwGO gibt es kein solches Verbot"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 123 Abs. 1 VwGO",
+        "Art. 19 Abs. 4 GG",
+        "Themenpool: vwgo-668"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-668",
+      "ueberzeile": "Auflösung",
+      "titel": "Nicht zwingend – effektiver Rechtsschutz kann die Vorwegnahme erlauben",
+      "text": "Die einstweilige Anordnung soll grundsätzlich nur vorläufig regeln, nicht vorwegnehmen, was erst das Hauptsacheverfahren bringen soll. Wegen Art. 19 Abs. 4 GG gilt eine Ausnahme: Drohen ohne die Anordnung schwere, unzumutbare und später nicht mehr zu beseitigende Nachteile und spricht viel für den Erfolg in der Hauptsache, darf das Gericht vorläufig zulassen.",
+      "norm": "§ 123 Abs. 1 VwGO · Art. 19 Abs. 4 GG",
+      "quellen": [
+        "§ 123 Abs. 1 VwGO",
+        "Art. 19 Abs. 4 GG",
+        "Themenpool: vwgo-668"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.790Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – eine Vorwegnahme der Hauptsache ist ausnahmslos unzulässig",
+        "Nicht zwingend – Ausnahme bei schweren Nachteilen, hohen Erfolgschancen",
+        "Nein – bei § 123 VwGO gibt es kein solches Verbot"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-311",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 29 StGB: Jeder Beteiligte wird nach seiner eigenen Schuld bestraft",
+      "text": "Anstiftung und Beihilfe setzen nur eine vorsätzliche, rechtswidrige Haupttat voraus – schuldhaft muss sie nicht sein (limitierte Akzessorietät). Ist der Haupttäter schuldunfähig oder nach § 35 StGB entschuldigt, bleibt der Teilnehmer strafbar. Umgekehrt hilft ein Entschuldigungsgrund nur dem, bei dem er vorliegt.",
+      "norm": "§ 29 StGB · §§ 26, 27 StGB",
+      "quellen": [
+        "§ 29 StGB",
+        "§§ 26, 27 StGB",
+        "§ 35 StGB",
+        "Themenpool: strafat-311"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-273",
+      "ueberzeile": "Merksatz GmbH-Recht",
+      "titel": "GmbH-Beschluss anfechten: AktG analog",
+      "text": "Die Rspr. wendet §§ 241 ff. AktG entsprechend an: Nichtige Beschlüsse sind unwirksam, anfechtbare gelten, bis ein Urteil sie aufhebt. Klage gegen die GmbH, in angemessener Frist – Leitbild ist die Monatsfrist des § 246 Abs. 1 AktG.",
+      "norm": "§§ 241, 243, 246 AktG analog · § 47 GmbHG",
+      "quellen": [
+        "§ 47 GmbHG",
+        "§§ 241, 243, 246 AktG",
+        "Themenpool: handelsg-273"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-564",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Beschwerdegegenstand: nicht die Beschwer, sondern was du davon angreifst",
+      "text": "Die Beschwer sagt, wie weit das Urteil hinter dem Begehren zurückbleibt. Der Beschwerdegegenstand ist der Teil davon, den der Berufungskläger mit seinen Anträgen tatsächlich angreift. Nur er muss den Mindestwert des § 511 Abs. 2 Nr. 1 ZPO übersteigen – sonst braucht es die Zulassung durch das Ausgangsgericht (Nr. 2).",
+      "norm": "§ 511 Abs. 2 ZPO",
+      "quellen": [
+        "§ 511 Abs. 2, 4 ZPO",
+        "Themenpool: zpo-564"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-925",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "§ 239a StGB: Die Forderung muss in die Bemächtigungslage fallen",
+      "falsch": "A hält O einen Tag lang fest, lässt ihn dann frei und verlangt eine Woche später Geld – sonst passiere das wieder. Einmal bemächtigt, also liegt § 239a StGB vor.",
+      "richtigText": "Nach der Rspr. muss der Täter die Bemächtigungslage ausnutzen wollen, um das Opfer noch während dieser Lage zur Vermögensverfügung zu bringen. Hier ist die Lage beendet, als A fordert. Es bleiben § 239 StGB und für die spätere Forderung § 253 StGB bzw. dessen Versuch.",
+      "quellen": [
+        "§ 239a Abs. 1 StGB",
+        "§ 239 StGB",
+        "§ 253 StGB",
+        "Themenpool: strafbt-925"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:31:17.790Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

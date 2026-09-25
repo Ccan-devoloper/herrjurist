@@ -1,0 +1,847 @@
+{
+  "datum": "2026-11-13",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "strafbt-750",
+        "themaTitel": "Raub",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "staat-607",
+        "themaTitel": "Bundeszwang, Bundesaufsicht und Verwaltungszuständigkeiten",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessorz-810",
+        "themaTitel": "Wie entscheidet das Gericht nach übereinstimmender Erledigungserklärung?",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "sachen-512"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "sachen-512"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:05",
+        "art": "norm",
+        "themaId": "strafbt-339"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:37",
+        "art": "merksatz",
+        "themaId": "vwgo-407"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:57",
+        "art": "begriff",
+        "themaId": "stpo-766"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:23",
+        "art": "fehler",
+        "themaId": "assessorz-920"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "strafbt-750",
+      "poolTitel": "Raub",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-607",
+      "poolTitel": "Bundeszwang, Bundesaufsicht und Verwaltungszuständigkeiten",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 83 ff. GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-810",
+      "poolTitel": "Wie entscheidet das Gericht nach übereinstimmender Erledigungserklärung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-08",
+        "2026-10-08"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-512",
+      "poolTitel": "Vormerkung: Entstehung und Wirkung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 883 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-512",
+      "poolTitel": "Vormerkung: Entstehung und Wirkung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 883 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-339",
+      "poolTitel": "Wie ist die Brandstiftung aufgebaut?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 306 StGB",
+        "§ 306a StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "vwgo-407",
+      "poolTitel": "Wann entfällt die aufschiebende Wirkung?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 80 Abs. 2 VwGO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-17"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "stpo-766",
+      "poolTitel": "Beschuldigtenbegriff und Belehrung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§§ 136, 163a StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-08"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessorz-920",
+      "poolTitel": "Verteidigung gegen Arrest und einstweilige Verfügung: Widerspruch, Aufhebung, Schadensersatz",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 924 ZPO",
+        "§§ 926, 927 ZPO",
+        "§ 945 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-750",
+      "slug": "2026-11-13-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Raub: Erst der Entschluss, dann die Gewalt",
+          "titelZeilen": [
+            "Raub: Erst der",
+            "Entschluss, dann",
+            "die Gewalt"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Gewalt muss der Wegnahme dienen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A gerät mit B in Streit und schlägt ihn nieder – nur aus Wut. Als B benommen am Boden liegt, sieht A dessen Handy, entschließt sich spontan, es zu behalten, und nimmt es mit. Strafbarkeit des A nach § 249 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Prüfung",
+          "schritte": [
+            {
+              "titel": "Wegnahme einer fremden beweglichen Sache",
+              "text": "Liegt vor: A bricht den Gewahrsam des B und begründet eigenen."
+            },
+            {
+              "titel": "Qualifiziertes Nötigungsmittel",
+              "text": "Gewalt gegen eine Person hat A angewendet – aber noch ohne jeden Gedanken an das Handy."
+            },
+            {
+              "titel": "Finalzusammenhang",
+              "text": "Nach der Vorstellung des Täters muss die Gewalt Mittel der Wegnahme sein. Bloßes Ausnutzen einer früheren Lage genügt nach Rspr. nicht."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wann es doch Raub wäre",
+          "text": "Wendet A nach seinem Entschluss erneut Gewalt an oder droht er – auch schlüssig – mit gegenwärtiger Gefahr für Leib oder Leben, dient dieses neue Nötigungsmittel der Wegnahme. Dann liegt Raub vor."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Kein Raub: Bei der Gewalt fehlte der Bezug zur Wegnahme, danach setzte A kein neues Nötigungsmittel ein. A ist strafbar wegen Körperverletzung (§ 223 StGB) und Diebstahls (§ 242 StGB) in Tatmehrheit (§ 53 StGB)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Beim Raub dient die Gewalt der Wegnahme. Wer erst nach der Gewalt an die Beute denkt, begeht ohne neues Nötigungsmittel nur Diebstahl."
+        },
+        {
+          "art": "cta",
+          "titel": "Raub in vier Zügen",
+          "punkte": [
+            "Wegnahme bejahen",
+            "Gewalt oder Drohung mit Gefahr für Leib oder Leben",
+            "Nötigungsmittel als Mittel der Wegnahme?",
+            "Sonst: §§ 223, 242 StGB"
+          ],
+          "icons": [
+            "geldbeutel",
+            "blitz",
+            "zielscheibe",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Raub: erst der Entschluss, dann die Gewalt. § 249 StGB verlangt, dass Gewalt oder Drohung nach der Vorstellung des Täters Mittel zur Wegnahme ist. Wer aus Wut zuschlägt und erst danach beschließt, die Sache des am Boden liegenden Opfers mitzunehmen, begeht ohne neues Nötigungsmittel keinen Raub – sondern Körperverletzung und Diebstahl. Speichern für die nächste Vermögensdelikts-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#raub",
+        "#249stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Raub: der Finalzusammenhang",
+      "coverText": "Gewalt muss der Wegnahme dienen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Beim Raub muss die Gewalt dem Ziel dienen, die Sache wegzunehmen – nicht umgekehrt.",
+        "handlung": "{A} stands over a toppled crate after an angry kick and only now notices a glowing crystal lying beside it, while {B} watches from a doorway and holds up two fingers to mark the order of events.",
+        "hinweisRegie": "Place the note in the free space between the toppled crate and the glowing crystal, slightly tilted toward the crystal, without covering {A}'s surprised face or {B}'s raised fingers.",
+        "alternative": "{A} holds a stopwatch showing two separate laps while {B} points first at a broken fence and then at a missing crystal."
+      },
+      "bildSzene": "mechanic notices crystal after angry kick",
+      "bildSzeneAlt": "stopwatch with two separate laps",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 223 StGB",
+        "§ 242 StGB",
+        "§ 53 StGB",
+        "Themenpool: strafbt-750"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.487Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-607",
+      "slug": "2026-11-13-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Der Bund weist das Land an – darf er das?",
+          "titelZeilen": [
+            "Der Bund weist",
+            "das Land an –",
+            "darf er das?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Gesetzgebung heißt nicht Weisung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Ein Bundesgesetz wird von den Landesbehörden ausgeführt. Das zuständige Bundesministerium ist mit der Praxis eines Landes unzufrieden und will einer Landesbehörde für einen Einzelfall eine verbindliche Weisung erteilen. Geht das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Regel: Die Länder führen aus",
+              "text": "Die Länder führen Bundesgesetze als eigene Angelegenheit aus, soweit das GG nichts anderes bestimmt (Art. 83 GG)."
+            },
+            {
+              "titel": "Landeseigenverwaltung",
+              "text": "Einzelweisungen nur, wenn ein Bundesgesetz mit Zustimmung des Bundesrates dazu ermächtigt – für besondere Fälle (Art. 84 Abs. 5 GG)."
+            },
+            {
+              "titel": "Bundesauftragsverwaltung",
+              "text": "Nur wo das GG sie vorsieht, etwa Art. 87c oder Art. 90 Abs. 3 GG. Dann besteht ein Weisungsrecht des Bundes (Art. 85 Abs. 3 GG)."
+            },
+            {
+              "titel": "Aufsicht und Bundeszwang",
+              "text": "Bundesaufsicht nach Art. 84 Abs. 3, 4 bzw. Art. 85 Abs. 4 GG; als letztes Mittel Bundeszwang mit Zustimmung des Bundesrates (Art. 37 GG)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Aus der Gesetzgebungskompetenz des Bundes auf ein Weisungsrecht schließen. Gesetzgebung und Verwaltung sind getrennt: Im Regelfall der Landeseigenverwaltung gibt es Einzelweisungen nur nach Art. 84 Abs. 5 GG. Ohne eine solche Ermächtigung darf das Ministerium hier nicht anweisen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Landeseigenverwaltung: Weisung nur nach Art. 84 Abs. 5 GG. Auftragsverwaltung: Weisungsrecht nach Art. 85 Abs. 3 GG."
+        },
+        {
+          "art": "cta",
+          "titel": "Verwaltungskompetenz in vier Fragen",
+          "punkte": [
+            "Welcher Verwaltungstyp?",
+            "Art. 84 Abs. 5 oder Art. 85 Abs. 3 GG?",
+            "Aufsicht: Recht oder auch Zweckmäßigkeit?",
+            "Bundeszwang als letztes Mittel"
+          ],
+          "icons": [
+            "gebaeude",
+            "paragraf",
+            "lupe",
+            "warnung"
+          ]
+        }
+      ],
+      "caption": "Der Bund hat das Gesetz erlassen – darf er dem Land deshalb Weisungen erteilen? Grundsätzlich nicht: Die Länder führen Bundesgesetze als eigene Angelegenheit aus (Art. 83 GG). Einzelweisungen gibt es dort nur, wenn ein zustimmungsbedürftiges Bundesgesetz dazu ermächtigt (Art. 84 Abs. 5 GG). Ein allgemeines Weisungsrecht besteht erst in der Bundesauftragsverwaltung (Art. 85 Abs. 3 GG). Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#staatsorganisationsrecht",
+        "#grundgesetz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 84, 85 GG: Wann darf der Bund anweisen?",
+      "coverText": "Gesetzgebung heißt nicht Weisung",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Dass der Bund ein Gesetz erlässt, gibt ihm noch kein Recht, die Landesbehörde im Einzelfall anzuweisen.",
+        "handlung": "{A} hovers toward a regional outpost holding out a sealed order, while {B} stands in the outpost's doorway and raises her palm, pointing to a small key hook that is still empty.",
+        "hinweisRegie": "Place the note in the free space next to the empty key hook in the doorway, slightly tilted toward it, so the missing authorisation is the focus without covering the sealed order.",
+        "alternative": "{A} tries to steer a boat that {B} is rowing, but the rudder is only connected when a specific switch is turned on."
+      },
+      "bildSzene": "droid brings order, explorer points empty hook",
+      "bildSzeneAlt": "rudder only works with switch",
+      "quellen": [
+        "Art. 83 GG",
+        "Art. 84 GG",
+        "Art. 85 GG",
+        "Art. 87c GG",
+        "Art. 90 Abs. 3 GG",
+        "Art. 37 GG",
+        "Themenpool: staat-607"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "kompetenzfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.487Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-810",
+      "slug": "2026-11-13-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Erledigung erklärt – geprüft wird sie nicht",
+          "unter": "Erledigung · § 91a ZPO",
+          "text": "Beide erklären erledigt: Es geht nur noch um die Kosten.",
+          "norm": "§ 91a ZPO",
+          "icon": "waage",
+          "sprecher": "Ob wirklich erledigt ist, prüft das Gericht hier nicht. Erklären beide Parteien die Hauptsache für erledigt, geht es nur noch um die Kosten. In vier Schritten.",
+          "marken": [
+            "keine Erledigungsprüfung",
+            "nur Kosten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Zwei Erledigungserklärungen",
+          "text": "Ausdrücklich oder durch Schweigen nach Hinweis.",
+          "norm": "§ 91a Abs. 1 ZPO",
+          "sprecher": "Schritt eins: zwei wirksame Erledigungserklärungen. Der Beklagte kann auch schweigen: Widerspricht er nicht binnen einer Notfrist von zwei Wochen ab Zustellung des Schriftsatzes, genügt das, wenn er auf diese Folge hingewiesen wurde.",
+          "marken": [
+            "auch durch Schweigen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Hauptsache nicht mehr rechtshängig",
+          "text": "Ob ein erledigendes Ereignis vorlag, spielt keine Rolle.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Wirkung. Die Rechtshängigkeit der Hauptsache endet. Ob tatsächlich ein erledigendes Ereignis vorlag, spielt keine Rolle mehr. Übrig bleibt nur die Kostenfrage.",
+          "marken": [
+            "Hauptsache weg"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Billiges Ermessen",
+          "text": "Bisheriger Sach- und Streitstand: Wer hätte voraussichtlich verloren?",
+          "norm": "§ 91a Abs. 1 S. 1 ZPO",
+          "sprecher": "Schritt drei: der Maßstab. Das Gericht entscheidet nach billigem Ermessen unter Berücksichtigung des bisherigen Sach- und Streitstandes. Die Kosten trägt in der Regel, wer ohne die Erledigung voraussichtlich unterlegen wäre. Beweis erhoben wird dafür grundsätzlich nicht.",
+          "marken": [
+            "wer hätte verloren?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Beschluss und Rechtsmittel",
+          "text": "Entscheidung durch Beschluss; sofortige Beschwerde nach § 91a Abs. 2 ZPO.",
+          "norm": "§ 91a Abs. 2 ZPO",
+          "sprecher": "Schritt vier: die Form. Entschieden wird durch Beschluss. Dagegen gibt es die sofortige Beschwerde, wenn der Streitwert der Hauptsache 600 Euro übersteigt.",
+          "marken": [
+            "Beschluss"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Für die Assessorklausur",
+          "text": "Nur Kostenentscheidung – kein Hauptsachetenor.",
+          "norm": null,
+          "sprecher": "Für die Assessorklausur heißt das: kein Tenor zur Hauptsache, sondern nur die Kostenentscheidung, begründet mit den voraussichtlichen Erfolgsaussichten.",
+          "marken": [
+            "nur Kostentenor"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Zwei Erklärungen, eine Kostenfrage",
+          "text": "Keine Prüfung der Erledigung – Kosten nach voraussichtlichem Ausgang.",
+          "norm": "§ 91a ZPO",
+          "sprecher": "Merke: zwei Erklärungen, keine Prüfung der Erledigung, und die Kosten trägt, wer voraussichtlich verloren hätte.",
+          "marken": [
+            "wer verloren hätte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst prüfen: wirklich übereinstimmend?",
+          "text": "Speichern für die nächste Assessorklausur.",
+          "sprecher": "Speicher dir das für die nächste Assessorklausur. Und prüf zuerst, ob die Erledigung wirklich übereinstimmend erklärt ist. Sonst bist du bei der einseitigen Erledigungserklärung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Erledigung erklärt – geprüft wird sie nicht: Erklären beide Parteien die Hauptsache für erledigt, endet deren Rechtshängigkeit, und das Gericht entscheidet nach § 91a ZPO nur noch über die Kosten. Maßstab ist der bisherige Sach- und Streitstand: Die Kosten trägt in der Regel, wer voraussichtlich unterlegen wäre. Schweigt der Beklagte nach Hinweis zwei Wochen, gilt das als Zustimmung. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#91azpo",
+        "#erledigung",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 91a ZPO: Kosten nach Erledigung",
+      "titelZeilen": [
+        "Erledigung erklärt –",
+        "geprüft wird",
+        "sie nicht"
+      ],
+      "coverText": "Kosten nach voraussichtlichem Ausgang",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Wenn beide den Streit für erledigt erklären, bleibt nur noch die Frage, wer die Kosten trägt.",
+        "handlung": "{B} closes a large box labelled only with a symbol and pushes it aside, while {A} points his pointer at a small coin pouch left on the table between them.",
+        "hinweisRegie": "Place the note in the free space next to the small coin pouch, slightly tilted toward it, so the remaining cost question is the focus without covering the pushed-aside box.",
+        "alternative": "{A} and {B} shake hands over a finished game board while a small scoreboard next to them still shows an open column."
+      },
+      "bildSzene": "box pushed aside, coin pouch remains",
+      "bildSzeneAlt": "handshake over board, open score column",
+      "quellen": [
+        "§ 91a ZPO",
+        "§ 511 ZPO",
+        "Themenpool: assessorz-810"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "pruefung-entfaellt",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-512",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "E bewilligt K eine Vormerkung, übereignet das Grundstück dann aber an D. Was hilft K?",
+      "optionen": [
+        "Nichts – D ist Eigentümer geworden",
+        "Von D die Zustimmung zu seiner Eintragung",
+        "Nur Schadensersatz gegen E"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 883 BGB",
+        "§ 885 BGB",
+        "§ 888 BGB",
+        "Themenpool: sachen-512"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-512",
+      "ueberzeile": "Auflösung",
+      "titel": "Zustimmung des D zur Eintragung – § 888 BGB",
+      "text": "Die Verfügung an D ist K gegenüber unwirksam, soweit sie seinen Anspruch vereiteln würde (§ 883 Abs. 2 BGB) – relative Unwirksamkeit. E bleibt K zur Auflassung verpflichtet; von D kann K die Zustimmung zu seiner Eintragung verlangen (§ 888 Abs. 1 BGB). Voraussetzungen: zu sichernder Anspruch, Bewilligung oder einstweilige Verfügung, Eintragung (§§ 883, 885 BGB).",
+      "norm": "§ 883 Abs. 2 BGB · § 888 Abs. 1 BGB",
+      "quellen": [
+        "§ 883 BGB",
+        "§ 885 BGB",
+        "§ 888 BGB",
+        "Themenpool: sachen-512"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.489Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nichts – D ist Eigentümer geworden",
+        "Von D die Zustimmung zu seiner Eintragung",
+        "Nur Schadensersatz gegen E"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-339",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 306 StGB schützt Eigentum, § 306a StGB Menschenleben",
+      "text": "§ 306 StGB ist ein qualifiziertes Sachbeschädigungsdelikt: Tatobjekte sind fremde Gebäude, Fahrzeuge und weitere aufgezählte Sachen. § 306a Abs. 1 StGB ist ein abstraktes Gefährdungsdelikt: Es kommt auf die Nutzung zu Wohnzwecken an – auch das eigene Wohnhaus ist erfasst. Tathandlung jeweils: in Brand setzen oder durch Brandlegung ganz oder teilweise zerstören.",
+      "norm": "§ 306 StGB · § 306a Abs. 1 StGB",
+      "quellen": [
+        "§ 306 StGB",
+        "§ 306a StGB",
+        "Themenpool: strafbt-339"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "vwgo",
+      "klausur": 3,
+      "pairId": "vwgo-407",
+      "ueberzeile": "Merksatz VwGO",
+      "titel": "Aufschiebende Wirkung entfällt nur nach § 80 Abs. 2 VwGO",
+      "text": "Kraft Gesetzes: Abgaben und Kosten, unaufschiebbare Anordnungen von Polizeivollzugsbeamten, gesetzlich geregelte Fälle (Nr. 1–3a). Sonst nur durch Anordnung der Behörde (Nr. 4).",
+      "norm": "§ 80 Abs. 2 S. 1 VwGO",
+      "quellen": [
+        "§ 80 Abs. 2 VwGO",
+        "§ 80 Abs. 3 VwGO",
+        "Themenpool: vwgo-407"
+      ],
+      "fachLabel": "VwGO",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-766",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Beschuldigter",
+      "text": "Beschuldigter ist, gegen wen das Verfahren als Beschuldigter betrieben wird: Es braucht einen Verfolgungswillen der Behörde, der sich in einem Willensakt zeigt, etwa einer Vernehmung als Beschuldigter. Bei starkem Tatverdacht darf sie ihn nicht willkürlich als Zeugen vernehmen. Funktion: Ab jetzt gelten die Belehrungspflichten (§ 136 Abs. 1, § 163a Abs. 4 StPO).",
+      "norm": "§ 136 Abs. 1 StPO · § 163a StPO",
+      "quellen": [
+        "§ 136 StPO",
+        "§ 163a StPO",
+        "Themenpool: stpo-766"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-920",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Einstweilige Verfügung ohne mündliche Verhandlung erlassen: Berufung?",
+      "falsch": "Gegen die per Beschluss erlassene einstweilige Verfügung legt der Schuldner Berufung oder sofortige Beschwerde ein.",
+      "richtigText": "Statthaft ist der Widerspruch (§ 924 Abs. 1 ZPO, über § 936 ZPO); das Gericht entscheidet dann durch Urteil (§ 925 ZPO). Daneben: Fristsetzung zur Klage in der Hauptsache (§ 926 ZPO) und Aufhebung wegen veränderter Umstände (§ 927 ZPO). War die Anordnung von Anfang an ungerechtfertigt, haftet der Gläubiger ohne Verschulden (§ 945 ZPO).",
+      "quellen": [
+        "§ 924 ZPO",
+        "§ 925 ZPO",
+        "§§ 926, 927 ZPO",
+        "§ 936 ZPO",
+        "§ 945 ZPO",
+        "Themenpool: assessorz-920"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:47:30.489Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

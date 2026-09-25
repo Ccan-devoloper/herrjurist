@@ -1,0 +1,857 @@
+{
+  "datum": "2026-10-14",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-752",
+        "themaTitel": "Räuberischer Diebstahl",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-609",
+        "themaTitel": "Allgemeine Handlungsfreiheit",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessorz-583",
+        "themaTitel": "Einstweiliger Rechtsschutz aus Anwaltssicht",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "sachen-510"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "sachen-510"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:08",
+        "art": "norm",
+        "themaId": "methodik-904"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:25",
+        "art": "streitstand",
+        "themaId": "anklage-856"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:49",
+        "art": "merksatz",
+        "themaId": "staat-607"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "begriff",
+        "themaId": "schuld-014"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-752",
+      "poolTitel": "Räuberischer Diebstahl",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 252 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-609",
+      "poolTitel": "Allgemeine Handlungsfreiheit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-583",
+      "poolTitel": "Einstweiliger Rechtsschutz aus Anwaltssicht",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 916 ff., 935 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-510",
+      "poolTitel": "Grundstücksübereignung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 873, 925 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-510",
+      "poolTitel": "Grundstücksübereignung",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 873, 925 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "methodik-904",
+      "poolTitel": "Normenketten bilden statt Einzelnormen lernen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "anklage-856",
+      "poolTitel": "Wie ist die Anklageschrift aufgebaut?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "staat-607",
+      "poolTitel": "Bundeszwang, Bundesaufsicht und Verwaltungszuständigkeiten",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 83 ff. GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "schuld-014",
+      "poolTitel": "Was ist der Unterschied zwischen dem Ersatz des positiven und des negativen Interesses?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 249 ff. BGB",
+        "§ 122 BGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-752",
+      "slug": "2026-10-14-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Beute fallen lassen, Detektiv gestoßen: kein räuberischer Diebstahl",
+          "titelZeilen": [
+            "Beute fallen lassen,",
+            "Detektiv gestoßen:",
+            "kein räuberischer",
+            "Diebstahl"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Nur fliehen reicht nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "D steckt im Supermarkt eine Flasche Whisky in seine Jacke und geht an der Kasse vorbei. Draußen spricht ihn der Detektiv an. D stößt ihn zu Boden – (a) um den Whisky zu behalten, (b) nur um zu entkommen; die Flasche lässt er fallen. Räuberischer Diebstahl?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Vortat",
+              "text": "Ein vollendeter, aber noch nicht beendeter Diebstahl. Das Einstecken kleiner Waren in die Kleidung vollendet die Wegnahme."
+            },
+            {
+              "titel": "Auf frischer Tat betroffen",
+              "text": "Enger räumlich-zeitlicher Zusammenhang mit der Tat. Nach dem BGH genügt es auch, wenn der Täter der Entdeckung zuvorkommt."
+            },
+            {
+              "titel": "Gewalt oder Drohung",
+              "text": "Gewalt gegen eine Person oder Drohung mit gegenwärtiger Gefahr für Leib oder Leben."
+            },
+            {
+              "titel": "Besitzerhaltungsabsicht",
+              "text": "Der Täter will sich im Besitz des gestohlenen Gutes erhalten. Sie muss nicht sein einziges Motiv sein."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Jede Gewalt nach einem Diebstahl als § 252 StGB werten. Will der Täter nur fliehen oder der Festnahme entgehen und gibt er die Beute auf, fehlt die Besitzerhaltungsabsicht."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "punkte": [
+            "(a) D will den Whisky behalten: § 252 StGB – er wird gleich einem Räuber bestraft.",
+            "(b) D will nur entkommen: kein § 252 StGB. Es bleibt beim Diebstahl, daneben etwa §§ 223, 240 StGB."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 252 StGB: vollendeter, nicht beendeter Diebstahl, frische Tat, Gewalt oder qualifizierte Drohung – und die Absicht, die Beute zu behalten."
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Prüfsteine für § 252 StGB",
+          "punkte": [
+            "Diebstahl vollendet, nicht beendet?",
+            "Auf frischer Tat betroffen?",
+            "Gewalt oder qualifizierte Drohung?",
+            "Will er die Beute behalten?"
+          ],
+          "icons": [
+            "laden",
+            "detektiv",
+            "blitz",
+            "geldbeutel"
+          ]
+        }
+      ],
+      "caption": "Gewalt auf der Flucht ist nicht automatisch räuberischer Diebstahl. § 252 StGB verlangt einen vollendeten, aber noch nicht beendeten Diebstahl, ein Betroffensein auf frischer Tat, Gewalt oder eine qualifizierte Drohung – und die Absicht, sich im Besitz des gestohlenen Gutes zu erhalten. Wer nur entkommen will und die Beute aufgibt, erfüllt § 252 StGB nicht. Speichern für die nächste Klausur zu den Eigentumsdelikten.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#252stgb",
+        "#räuberischerdiebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 252 StGB: Besitzerhaltungsabsicht",
+      "coverText": "Nur fliehen reicht nicht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Gewalt nach dem Diebstahl wird erst zum räuberischen Diebstahl, wenn der Täter die Beute behalten will.",
+        "handlung": "{B} pushes past a guard while clutching a bottle tightly to his chest, and {A} curiously compares him with a second runner who has dropped his bottle on the ground and simply flees.",
+        "hinweisRegie": "Place the note in the open space near the tightly clutched bottle, slightly tilted toward it, marking the decisive intention without covering the guard or the runners' faces.",
+        "alternative": "{A} holds a small magnifier over two footprints leaving a shop: one path carries a bottle outline, the other shows the bottle left behind at the door."
+      },
+      "bildSzene": "runner clutches bottle, other drops it",
+      "bildSzeneAlt": "two footprint paths leaving shop",
+      "quellen": [
+        "§ 252 StGB",
+        "§ 242 StGB",
+        "§§ 223, 240 StGB",
+        "Themenpool: strafbt-752"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.663Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-609",
+      "slug": "2026-10-14-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Auch Taubenfüttern ist grundrechtlich geschützt",
+          "titelZeilen": [
+            "Auch Taubenfüttern",
+            "ist grundrechtlich",
+            "geschützt"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Auffanggrundrecht: Art. 2 I GG",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Eine Stadt verbietet per Verordnung, in der Innenstadt Tauben zu füttern. T füttert trotzdem weiter und hält das Verbot für verfassungswidrig. An welchem Grundrecht misst du die Regelung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Spezielles Freiheitsrecht?",
+              "text": "Zuerst die speziellen Grundrechte prüfen. Art. 2 Abs. 1 GG ist Auffanggrundrecht und tritt zurück, wenn eines davon einschlägig ist."
+            },
+            {
+              "titel": "Schutzbereich",
+              "text": "Nach dem BVerfG jedes menschliche Verhalten, ohne Rücksicht auf sein Gewicht – auch das Füttern von Tauben."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Das bußgeldbewehrte Verbot verkürzt dieses Verhalten."
+            },
+            {
+              "titel": "Schranke und Verhältnismäßigkeit",
+              "text": "Verfassungsmäßige Ordnung = alle formell und materiell verfassungsmäßigen Rechtsnormen. Der Schwerpunkt liegt in der Verhältnismäßigkeit."
+            }
+          ]
+        },
+        {
+          "art": "vergleich",
+          "titel": "Wie weit reicht der Schutz?",
+          "links": {
+            "titel": "BVerfG",
+            "punkte": [
+              "Weite Auslegung: Handlungsfreiheit im umfassenden Sinn.",
+              "Auch banale Tätigkeiten wie Reiten im Walde oder Taubenfüttern."
+            ]
+          },
+          "rechts": {
+            "titel": "Enge Ansicht",
+            "punkte": [
+              "Persönlichkeits-kerntheorie: nur Verhalten, in dem sich die Persönlichkeit entfaltet.",
+              "Mindermeinung; der Schutzbereich wird deutlich enger."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Mit Art. 2 Abs. 1 GG beginnen oder die Schranke über die „Rechte anderer“ lösen. Praktisch entscheidend ist die verfassungsmäßige Ordnung: Jede verfassungsmäßige Norm kann die allgemeine Handlungsfreiheit beschränken – die eigentliche Arbeit steckt in der Verhältnismäßigkeit."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst das Spezialgrundrecht, dann Art. 2 Abs. 1 GG. Geschützt ist jedes Verhalten, beschränkt wird es durch jede verfassungsmäßige Norm."
+        },
+        {
+          "art": "cta",
+          "titel": "Art. 2 Abs. 1 GG in drei Zügen",
+          "punkte": [
+            "Spezialgrundrecht ausschließen",
+            "Weiter Schutzbereich",
+            "Verhältnismäßigkeit als Schwerpunkt"
+          ],
+          "icons": [
+            "lupe",
+            "person",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Auch Taubenfüttern ist grundrechtlich geschützt: Greift kein spezielles Grundrecht, hilft die allgemeine Handlungsfreiheit aus Art. 2 Abs. 1 GG. Das BVerfG versteht sie als Schutz jedes menschlichen Verhaltens, ohne Rücksicht auf sein Gewicht. Beschränkt wird sie durch die verfassungsmäßige Ordnung, also jede formell und materiell verfassungsmäßige Norm. Der Schwerpunkt deiner Prüfung liegt deshalb in der Verhältnismäßigkeit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#handlungsfreiheit",
+        "#art2gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Allgemeine Handlungsfreiheit: Art. 2 Abs. 1 GG",
+      "coverText": "Auffanggrundrecht: Art. 2 I GG",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Auch ein banales Verhalten wie Taubenfüttern steht unter grundrechtlichem Schutz – dem Auffanggrundrecht.",
+        "handlung": "{A} kneels on a town square scattering a few crumbs to pigeons, while {B} holds a large, wide safety net above the whole scene that catches everything no other net has caught.",
+        "hinweisRegie": "Place the note in the free space beside the wide safety net, slightly tilted toward its edge, so it reads as the catch-all right without covering the pigeons or faces.",
+        "alternative": "{B} checks a row of specific shelves that all stay empty, while {A} places a small bag of pigeon feed into a large bottom drawer labelled only with a symbol."
+      },
+      "bildSzene": "feeding pigeons under wide safety net",
+      "bildSzeneAlt": "feed bag placed in catch-all drawer",
+      "quellen": [
+        "Art. 2 Abs. 1 GG",
+        "BVerfGE 54, 143 (Taubenfütterungsverbot)",
+        "BVerfGE 80, 137 (Reiten im Walde)",
+        "Themenpool: grundr-609"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.664Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-583",
+      "slug": "2026-10-14-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Geld sichert der Arrest, nicht die Verfügung",
+          "unter": "Eilrechtsschutz · §§ 916 ff., 935 ff. ZPO",
+          "text": "Geldforderungen sichert der Arrest, andere Ansprüche die einstweilige Verfügung.",
+          "norm": "§ 916 ZPO · § 935 ZPO",
+          "icon": "aktentasche",
+          "sprecher": "Geld sichert der Arrest, nicht die einstweilige Verfügung. Das ist die erste Weiche im Eilrechtsschutz. So gehst du als Anwalt vor.",
+          "marken": [
+            "Geld = Arrest"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Das richtige Mittel",
+          "text": "Arrest für Geldforderungen, einstweilige Verfügung für alles andere.",
+          "norm": "§§ 916, 935, 940 ZPO",
+          "sprecher": "Schritt eins: das Mittel. Der Arrest sichert eine Geldforderung, § 916 ZPO. Die einstweilige Verfügung sichert andere Ansprüche oder regelt einen streitigen Zustand, §§ 935 und 940.",
+          "marken": [
+            "Arrest oder eV"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Anspruch und Grund",
+          "text": "Zu sichernder Anspruch plus Grund für die Eile.",
+          "norm": "§ 917 ZPO",
+          "sprecher": "Schritt zwei: Anspruch und Grund. Du brauchst den zu sichernden Anspruch und einen Grund für die Eile. Beim Arrest heißt das: Ohne ihn würde die Vollstreckung vereitelt oder wesentlich erschwert.",
+          "marken": [
+            "Anspruch + Grund"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Glaubhaft machen",
+          "text": "Kein Vollbeweis – etwa eidesstattliche Versicherung.",
+          "norm": "§§ 920 Abs. 2, 294 ZPO",
+          "sprecher": "Schritt drei: Glaubhaftmachung. Anspruch und Grund müssen nicht voll bewiesen, sondern glaubhaft gemacht werden. Typisches Mittel ist die eidesstattliche Versicherung des Mandanten.",
+          "marken": [
+            "glaubhaft genügt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Nach Erlass: vollziehen",
+          "text": "Vollziehungsfrist: ein Monat.",
+          "norm": "§ 929 Abs. 2 ZPO · § 936 ZPO",
+          "sprecher": "Schritt vier: vollziehen. Arrest und einstweilige Verfügung müssen binnen eines Monats vollzogen werden, § 929 Absatz 2. Danach ist die Vollziehung unstatthaft.",
+          "marken": [
+            "ein Monat"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Dringlichkeit nicht selbst widerlegen",
+          "text": "Wer lange zuwartet, zeigt, dass es nicht eilt.",
+          "norm": null,
+          "sprecher": "Und die Anwaltsfalle: Wer nach Kenntnis lange mit dem Antrag wartet, widerlegt die Dringlichkeit selbst. Also zügig handeln und die Eile im Antrag begründen.",
+          "marken": [
+            "nicht zuwarten"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Geld: Arrest. Sonst: einstweilige Verfügung. Glaubhaft machen, zügig vollziehen.",
+          "norm": null,
+          "sprecher": "Merke: Geld sichert der Arrest, alles andere die einstweilige Verfügung. Glaubhaft machen, schnell beantragen, binnen eines Monats vollziehen.",
+          "marken": [
+            "Mittel · Grund · Frist"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für die Anwaltsklausur speichern",
+          "text": "Speichern für die nächste Anwaltsklausur.",
+          "sprecher": "Speicher dir das für die nächste Anwaltsklausur im Eilrechtsschutz.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Eine Geldforderung sichert man nicht mit der einstweiligen Verfügung, sondern mit dem Arrest (§ 916 ZPO). Die einstweilige Verfügung sichert andere Ansprüche oder regelt einen streitigen Zustand (§§ 935, 940 ZPO). Aus Anwaltssicht: Anspruch und Eilgrund glaubhaft machen, etwa per eidesstattlicher Versicherung, nicht zu lange zuwarten und den Titel binnen eines Monats vollziehen (§ 929 Abs. 2 ZPO).",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#einstweiligeverfügung",
+        "#arrest",
+        "#anwaltsklausur",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Eilrechtsschutz: Arrest oder Verfügung?",
+      "titelZeilen": [
+        "Geld sichert",
+        "der Arrest, nicht",
+        "die Verfügung"
+      ],
+      "coverText": "Geld → Arrest, § 916 ZPO",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Für Geldforderungen und für sonstige Ansprüche gibt es im Eilverfahren zwei verschiedene Werkzeuge.",
+        "handlung": "{B} hastily reaches for a large key to lock a treasure chest full of coins, while {A} stops him with his pointer and hands him a different, smaller padlock that fits the chest.",
+        "hinweisRegie": "Place the note in the free space beside the smaller padlock in {A}'s hand, slightly tilted, so it points to the right tool without covering the coin chest or faces.",
+        "alternative": "{A} sorts two urgent requests onto two separate trays, one holding coins and one holding a small house key, while {B} races an hourglass."
+      },
+      "bildSzene": "wrong key versus padlock for coin chest",
+      "bildSzeneAlt": "coins and key sorted onto two trays",
+      "quellen": [
+        "§§ 916, 917, 920, 929 ZPO",
+        "§§ 935, 936, 940 ZPO",
+        "§ 294 ZPO",
+        "Themenpool: assessorz-583"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "x-nicht-y",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.672Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-510",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Was braucht die Übereignung eines Grundstücks?",
+      "optionen": [
+        "Kaufvertrag und Zahlung des Kaufpreises",
+        "Einigung und Übergabe des Grundstücks",
+        "Auflassung und Eintragung ins Grundbuch"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 873 BGB",
+        "§ 925 BGB",
+        "§ 311b Abs. 1 BGB",
+        "Themenpool: sachen-510"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.672Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-510",
+      "ueberzeile": "Auflösung",
+      "titel": "Auflassung plus Eintragung ins Grundbuch",
+      "text": "§ 873 Abs. 1 BGB verlangt Einigung und Eintragung. Die Einigung heißt beim Grundstück Auflassung: bei gleichzeitiger Anwesenheit beider Teile vor einer zuständigen Stelle, regelmäßig dem Notar (§ 925 Abs. 1 BGB). Sie verträgt keine Bedingung oder Zeitbestimmung (§ 925 Abs. 2 BGB). Der Kaufvertrag (§ 311b Abs. 1 BGB) ist nur das Verpflichtungsgeschäft.",
+      "norm": "§ 873 Abs. 1 BGB · § 925 BGB",
+      "quellen": [
+        "§ 873 BGB",
+        "§ 925 BGB",
+        "§ 311b Abs. 1 BGB",
+        "Themenpool: sachen-510"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.672Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Kaufvertrag und Zahlung des Kaufpreises",
+        "Einigung und Übergabe des Grundstücks",
+        "Auflassung und Eintragung ins Grundbuch"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-904",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Normenkette statt Einzelnorm: §§ 280 Abs. 1, 3, 281 BGB",
+      "text": "Schadensersatz statt der Leistung steht nicht in einer einzigen Norm. § 280 Abs. 1 BGB ist der Grundtatbestand, Abs. 3 verweist auf die Zusatzvoraussetzungen, § 281 BGB liefert sie – etwa die Fristsetzung. Lerne Anspruchsgrundlagen als Kette: So zitierst du im Obersatz vollständig und vergisst keine Voraussetzung.",
+      "norm": "§§ 280 Abs. 1, 3, 281 BGB",
+      "quellen": [
+        "§ 280 BGB",
+        "§ 281 BGB",
+        "Themenpool: methodik-904"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.672Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-856",
+      "ueberzeile": "Streitstand Anklageschrift",
+      "titel": "Lückenhafter Anklagesatz: Darf das wesentliche Ergebnis der Ermittlungen aushelfen?",
+      "norm": "§ 200 StPO",
+      "optionen": [
+        "Rspr.: Zur Auslegung des Anklagesatzes darf das wesentliche Ergebnis der Ermittlungen herangezogen werden.",
+        "Andere Ansicht: Der Anklagesatz muss die Tat aus sich heraus umgrenzen."
+      ],
+      "text": "Klausur: Schreib den konkreten Anklagesatz so, dass er die Tat allein trägt – dann stellt sich die Frage gar nicht.",
+      "quellen": [
+        "§ 200 Abs. 1, 2 StPO",
+        "Themenpool: anklage-856"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.672Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-607",
+      "ueberzeile": "Merksatz Staatsorganisation",
+      "titel": "Bundesaufsicht: Recht oder auch Zweckmäßigkeit?",
+      "text": "Landeseigenverwaltung (Art. 83, 84 GG): Der Bund prüft nur die Rechtmäßigkeit. Bundesauftragsverwaltung (Art. 85 GG): auch die Zweckmäßigkeit. Letztes Mittel: Bundeszwang (Art. 37 GG).",
+      "norm": "Art. 37, 83–85 GG",
+      "quellen": [
+        "Art. 37 GG",
+        "Art. 83 GG",
+        "Art. 84 GG",
+        "Art. 85 GG",
+        "Themenpool: staat-607"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.672Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-014",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Positives oder negatives Interesse: Wie stünde der Gläubiger?",
+      "text": "Positives Interesse (Erfüllungsinteresse): so stellen, als wäre ordnungsgemäß erfüllt worden – etwa beim Schadensersatz statt der Leistung (§§ 280, 281 BGB). Negatives Interesse (Vertrauensschaden): so stellen, als hätte er nie auf die Wirksamkeit vertraut – etwa § 122 BGB, dort begrenzt durch das Erfüllungsinteresse.",
+      "norm": "§§ 249 ff. BGB · § 122 BGB",
+      "quellen": [
+        "§§ 249 ff. BGB",
+        "§ 122 BGB",
+        "§§ 280, 281 BGB",
+        "Themenpool: schuld-014"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.672Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

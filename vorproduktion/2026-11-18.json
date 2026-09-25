@@ -1,0 +1,824 @@
+{
+  "datum": "2026-11-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-563",
+        "themaTitel": "Vorläufige Vollstreckbarkeit",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "revision-878",
+        "themaTitel": "Was beweist das Hauptverhandlungsprotokoll?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "staat-086",
+        "themaTitel": "Wann gelten Vorrang und Vorbehalt des Gesetzes?",
+        "fach": "staat",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "zpo-560"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "zpo-560"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "strafat-722"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:30",
+        "art": "streitstand",
+        "themaId": "streit-02"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:55",
+        "art": "merksatz",
+        "themaId": "methodik-905"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:21",
+        "art": "begriff",
+        "themaId": "strafbt-747"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-563",
+      "poolTitel": "Vorläufige Vollstreckbarkeit",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 708 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "revision-878",
+      "poolTitel": "Was beweist das Hauptverhandlungsprotokoll?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 274 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-13"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "staat-086",
+      "poolTitel": "Wann gelten Vorrang und Vorbehalt des Gesetzes?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-26"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-560",
+      "poolTitel": "Sachverständigenbeweis",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 402 ff. ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-722",
+      "poolTitel": "Verbotsirrtum",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 17 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-14",
+        "2026-10-10"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "streit-02",
+      "poolTitel": "Saldotheorie oder Zweikondiktionentheorie beim beiderseits erfüllten nichtigen Vertrag",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§§ 812, 818 Abs. 3 BGB"
+      ],
+      "typ": "streitstand",
+      "streitImPool": true,
+      "frueherVerwendet": [],
+      "redaktion": "Redaktionell zugewiesener echter Streitstand (ersetzt eine 44-fache Wiederholung von strafbt-068). pairId = themaId; quellen ohne Themenpool-Verweis."
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "methodik-905",
+      "poolTitel": "Prozessrecht früh erkennen und einbauen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-24"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-747",
+      "poolTitel": "Gewahrsamsbruch und Gewahrsamsenklave",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 242 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-563",
+      "slug": "2026-11-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Über 1.250 € hilft § 708 Nr. 11 ZPO nicht mehr",
+          "titelZeilen": [
+            "Über 1.250 € hilft",
+            "§ 708 Nr. 11 ZPO",
+            "nicht mehr"
+          ],
+          "coverBadge": "Tenorfrage",
+          "coverText": "Grenze: 1.250 € Hauptsache",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Das Landgericht verurteilt B nach streitiger Verhandlung, an K 8.000 € zu zahlen; B trägt die Kosten des Rechtsstreits. Wie lautet der Ausspruch zur vorläufigen Vollstreckbarkeit?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "§ 708 Nr. 1–10 ZPO?",
+              "text": "Erst die Sonderfälle, etwa Anerkenntnis- oder Versäumnisurteil: vorläufig vollstreckbar ohne Sicherheitsleistung. Hier: streitiges Urteil."
+            },
+            {
+              "titel": "§ 708 Nr. 11 ZPO?",
+              "text": "Ohne Sicherheit nur, wenn die Hauptsache 1.250 € nicht übersteigt oder nur Kosten bis 1.500 € vollstreckbar sind. Hier: 8.000 €."
+            },
+            {
+              "titel": "§ 709 ZPO",
+              "text": "Also gegen Sicherheitsleistung. Bei Geldforderungen genügt ein Verhältnis zum jeweils vollstreckbaren Betrag (§ 709 S. 2 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der Tenor",
+          "text": "„Das Urteil ist gegen Sicherheitsleistung in Höhe von 110 % des jeweils zu vollstreckenden Betrags vorläufig vollstreckbar.“ Eine Abwendungsbefugnis nach § 711 ZPO gehört nicht dazu – sie gibt es nur in den Fällen des § 708 Nr. 4–11 ZPO."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Reflexhaft „§§ 708 Nr. 11, 711 ZPO“ tenorieren. Das passt nur bis 1.250 € in der Hauptsache. Umgekehrt: Wird die Klage abgewiesen, vollstreckt der Beklagte nur Kosten – dann entscheidet die Grenze von 1.500 €."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst § 708 Nr. 1–10, dann die Grenze: 1.250 € Hauptsache, 1.500 € Kosten. Darüber gilt § 709 ZPO – gegen Sicherheit, ohne § 711 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Vollstreckbarkeit in drei Zügen",
+          "punkte": [
+            "Sonderfall nach § 708 Nr. 1–10?",
+            "Hauptsache bis 1.250 €? Nur Kosten bis 1.500 €?",
+            "Sonst § 709 ZPO mit 110 %"
+          ],
+          "icons": [
+            "klemmbrett",
+            "rechner",
+            "muenzen"
+          ]
+        }
+      ],
+      "caption": "Über 1.250 € hilft § 708 Nr. 11 ZPO nicht mehr. Ein streitiges Zahlungsurteil über 8.000 € ist nur gegen Sicherheitsleistung vorläufig vollstreckbar (§ 709 ZPO) – üblich sind 110 % des jeweils zu vollstreckenden Betrags. Eine Abwendungsbefugnis nach § 711 ZPO gibt es dann nicht. Bei Klageabweisung zählen für den Beklagten nur die Kosten: Grenze 1.500 €. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#tenor",
+        "#vorläufigevollstreckbarkeit",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorläufige Vollstreckbarkeit: § 708 oder § 709?",
+      "coverText": "Grenze: 1.250 € Hauptsache",
+      "coverBadge": "Tenorfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Ab einer bestimmten Summe wird ein Urteil nur gegen Sicherheit vollstreckt.",
+        "handlung": "{A} hovers beside a scale gate and lowers a barrier when {B} pushes a heavily loaded cart past a marked line, pointing to a small deposit box {B} must fill first.",
+        "hinweisRegie": "Place the note in the free space next to the marked line and the deposit box, slightly tilted toward the box, so the threshold and the security are linked without covering the cart or {A}.",
+        "alternative": "{B} tries to carry a large crystal through a narrow door while {A} holds out a pledge bowl that must be filled before the door opens."
+      },
+      "bildSzene": "barrier lowered at marked threshold line",
+      "bildSzeneAlt": "pledge bowl before narrow door",
+      "quellen": [
+        "§ 708 ZPO",
+        "§ 709 ZPO",
+        "§ 711 ZPO",
+        "Themenpool: zpo-563"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "schwellenwert",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-878",
+      "slug": "2026-11-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zeuge sagte etwas anderes? Protokoll hilft dir nicht",
+          "titelZeilen": [
+            "Zeuge sagte etwas",
+            "anderes? Protokoll",
+            "hilft dir nicht"
+          ],
+          "coverBadge": "Praxisrelevant",
+          "coverText": "Förmlichkeiten, nicht Inhalte",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Im Urteil steht, Zeuge Z habe A am Tatort gesehen. Der Verteidiger ist sicher: Z hat in der Hauptverhandlung das Gegenteil gesagt. Das Protokoll vermerkt nur, dass Z zur Sache ausgesagt hat. Trägt das eine Revisionsrüge?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Was § 274 StPO beweist",
+              "text": "Nur die Beobachtung der vorgeschriebenen Förmlichkeiten: etwa ob ein Zeuge vernommen, vereidigt oder eine Urkunde verlesen wurde."
+            },
+            {
+              "titel": "Was nicht",
+              "text": "Den Inhalt einer Aussage. Er ist keine wesentliche Förmlichkeit – auch dann nicht, wenn das Protokoll ihn zusammenfasst."
+            },
+            {
+              "titel": "Keine Rekonstruktion",
+              "text": "Das Revisionsgericht wiederholt die Beweisaufnahme nicht. Was Z gesagt hat, klärt es nicht nachträglich auf."
+            },
+            {
+              "titel": "Ergebnis",
+              "text": "Die Rüge, das Urteil gebe die Aussage unrichtig wieder, bleibt regelmäßig ohne Erfolg."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Das Protokoll als Beweis für alles nehmen. Seine Beweiskraft reicht nur so weit wie die wesentlichen Förmlichkeiten. Und sie entfällt, wo es lückenhaft, widersprüchlich oder erkennbar unklar ist – dann klärt das Revisionsgericht im Freibeweis."
+        },
+        {
+          "art": "text",
+          "titel": "Streit am Rand",
+          "text": "Umstritten ist, ob ein erst nach Erhebung der Rüge berichtigtes Protokoll beachtlich ist (Rügeverkümmerung). Der BGH lässt eine Berichtigung unter Verfahrenssicherungen zu; Teile der Literatur lehnen das ab."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 274 StPO beweist Förmlichkeiten, nicht Inhalte. Was ein Zeuge gesagt hat, rekonstruiert das Revisionsgericht nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor jeder Verfahrensrüge",
+          "punkte": [
+            "Wesentliche Förmlichkeit betroffen?",
+            "Was sagt das Protokoll – was verschweigt es?",
+            "Beweiskraft ausnahmsweise entfallen?"
+          ],
+          "icons": [
+            "lupe",
+            "dokument",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Zeuge sagte etwas anderes? Das Protokoll hilft dir in der Revision nicht. § 274 StPO gibt ihm Beweiskraft nur für die wesentlichen Förmlichkeiten – ob vernommen, vereidigt, verlesen wurde. Den Inhalt einer Aussage beweist es nicht, und das Revisionsgericht rekonstruiert die Beweisaufnahme nicht. Ausnahme: Das Protokoll ist lückenhaft oder widersprüchlich. Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#274stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 274 StPO: Was das Protokoll beweist",
+      "coverText": "Förmlichkeiten, nicht Inhalte",
+      "coverBadge": "Praxisrelevant",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Das Protokoll beweist, dass etwas stattgefunden hat – nicht, was dabei gesagt wurde.",
+        "handlung": "{A} taps his pointer on a checklist of ticked boxes pinned to a board, while {B} holds up an empty speech bubble frame next to it, puzzled that nothing is written inside.",
+        "hinweisRegie": "Place the note in the free space between the ticked checklist and the empty speech bubble frame, slightly tilted toward the bubble, so the missing content is marked without covering the ticks.",
+        "alternative": "{B} listens to a sealed shell that only shows a stamp 'heard', while {A} points out that the stamp says nothing about the words."
+      },
+      "bildSzene": "ticked checklist beside empty speech bubble",
+      "bildSzeneAlt": "sealed shell stamped heard, no words",
+      "quellen": [
+        "§ 273 StPO",
+        "§ 274 StPO",
+        "§ 261 StPO",
+        "Themenpool: revision-878"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "falsche-erwartung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.814Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-086",
+      "slug": "2026-11-18-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Vorrang gilt immer – der Vorbehalt nicht",
+          "unter": "Gesetzmäßigkeit · Art. 20 Abs. 3 GG",
+          "text": "Nie gegen das Gesetz – aber nicht jedes Handeln braucht ein eigenes Gesetz.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "icon": "paragraf",
+          "sprecher": "Nicht jedes Verwaltungshandeln braucht ein eigenes Gesetz. Gegen das Gesetz darf die Verwaltung nie handeln. Ohne Gesetz aber manchmal schon. Das ist der Unterschied zwischen Vorrang und Vorbehalt, beide verankert in Art. 20 Absatz 3 GG.",
+          "marken": [
+            "nie dagegen",
+            "manchmal ohne"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Vorrang des Gesetzes",
+          "text": "Kein Handeln gegen das Gesetz – bei jeder Verwaltungstätigkeit.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Schritt eins: der Vorrang des Gesetzes. Die Verwaltung darf nicht gegen geltendes Recht handeln. Das gilt ausnahmslos, ob sie eingreift oder Leistungen gewährt.",
+          "marken": [
+            "ausnahmslos"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Vorbehalt des Gesetzes",
+          "text": "Kein Eingriff ohne gesetzliche Grundlage.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Schritt zwei: der Vorbehalt des Gesetzes. Greift der Staat in Grundrechte ein, braucht er eine gesetzliche Ermächtigungsgrundlage. Kein Eingriff ohne Gesetz.",
+          "marken": [
+            "Eingriff → Gesetz"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Wesentlichkeit",
+          "text": "Wesentliches regelt das Parlament selbst.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Wesentlichkeitstheorie. Was für die Verwirklichung der Grundrechte wesentlich ist, muss der parlamentarische Gesetzgeber selbst regeln. Je intensiver die Grundrechte betroffen sind, desto genauer muss das Gesetz sein.",
+          "marken": [
+            "Parlament entscheidet"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Beispiel Subvention",
+          "text": "Rspr.: Haushaltsansatz genügt grundsätzlich – anders, wenn Grundrechte Dritter berührt sind.",
+          "norm": null,
+          "sprecher": "Und die Subvention? Nach der Rechtsprechung genügt für Leistungen grundsätzlich ein Ansatz im Haushaltsplan, festgestellt durch das Haushaltsgesetz. Anders kann es sein, wenn die Förderung Grundrechte Dritter berührt, etwa von Konkurrenten, oder in grundrechtssensiblen Bereichen wie der Presse.",
+          "marken": [
+            "Haushaltsplan"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Nie dagegen, ohne nur ausnahmsweise",
+          "text": "Ohne Gesetz nur, wo weder eingegriffen noch Wesentliches geregelt wird.",
+          "norm": "Art. 20 Abs. 3 GG",
+          "sprecher": "Merke: Gegen das Gesetz nie. Ohne Gesetz nur, wo weder eingegriffen noch Wesentliches geregelt wird.",
+          "marken": [
+            "Vorrang vs. Vorbehalt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Eingriff oder Leistung?",
+          "text": "Speichern für die nächste Staatsrechtsklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Klausur im Staatsrecht. Und frag bei jeder Maßnahme zuerst: Eingriff oder Leistung?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Vorrang gilt immer – der Vorbehalt nicht. Beide Grundsätze folgen aus Art. 20 Abs. 3 GG: Gegen das Gesetz darf die Verwaltung nie handeln; eine gesetzliche Grundlage braucht sie vor allem für Eingriffe und für alles Wesentliche. Für Subventionen lässt die Rechtsprechung grundsätzlich einen Ansatz im Haushaltsplan genügen – anders, wenn Grundrechte Dritter berührt sind. Speichern für die nächste Staatsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#vorbehaltdesgesetzes",
+        "#wesentlichkeitstheorie",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Vorrang und Vorbehalt des Gesetzes",
+      "titelZeilen": [
+        "Vorrang gilt",
+        "immer – der",
+        "Vorbehalt nicht"
+      ],
+      "coverText": "Nie dagegen, nicht immer ohne",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Gegen das Gesetz darf der Staat nie handeln – ohne Gesetz nur dort, wo er nicht eingreift.",
+        "handlung": "{A} stops {B} at a solid wall he wants to push through, while a side path leading to a food stand stays open and needs no permission.",
+        "hinweisRegie": "Place the note in the free space between the solid wall and the open side path, slightly tilted toward the wall, so the difference between both ways is visible without covering {A}'s raised hand.",
+        "alternative": "{B} hands out crystals from a public basket with a simple budget tag, while {A} blocks him from taking crystals from a neighbour's pile."
+      },
+      "bildSzene": "wall blocked, side path stays open",
+      "bildSzeneAlt": "handing out crystals versus taking",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-086"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontrastpaar",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.816Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-560",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Sachverständigenbeweis: Wer wählt den Sachverständigen aus?",
+      "optionen": [
+        "Das Gericht – einigen sich die Parteien, folgt es ihrer Wahl",
+        "Die Partei, die den Beweis angetreten hat",
+        "Die beweisbelastete Partei; das Gericht bestätigt nur"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 403 ZPO",
+        "§ 404 ZPO",
+        "§ 406 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.817Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-560",
+      "ueberzeile": "Auflösung",
+      "titel": "Das Gericht – bei Einigung der Parteien folgt es ihrer Wahl",
+      "text": "Die Auswahl trifft das Prozessgericht (§ 404 ZPO); die Partei bezeichnet beim Beweisantritt nur die Punkte, die begutachtet werden sollen (§ 403 ZPO). Einigen sich die Parteien auf eine Person, muss das Gericht dem folgen. Anders als ein Zeuge kann der Sachverständige wegen Besorgnis der Befangenheit abgelehnt werden (§ 406 ZPO).",
+      "norm": "§§ 403, 404, 406 ZPO",
+      "quellen": [
+        "§ 403 ZPO",
+        "§ 404 ZPO",
+        "§ 406 ZPO",
+        "Themenpool: zpo-560"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.817Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Das Gericht – einigen sich die Parteien, folgt es ihrer Wahl",
+        "Die Partei, die den Beweis angetreten hat",
+        "Die beweisbelastete Partei; das Gericht bestätigt nur"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-722",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 17 StGB: Unrecht erkennen heißt nicht, die Norm zu kennen",
+      "text": "Unrechtsbewusstsein hat, wer erkennt, dass sein Verhalten gegen die Rechtsordnung verstößt. Die konkrete Strafnorm oder die Strafbarkeit muss er nicht kennen. Das Gefühl, etwas sei bloß unmoralisch, genügt dagegen nicht. Fehlt das Unrechtsbewusstsein, greift § 17 StGB.",
+      "norm": "§ 17 StGB",
+      "quellen": [
+        "§ 17 StGB",
+        "Themenpool: strafat-722"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.817Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "streit-02",
+      "ueberzeile": "Streitstand Bereicherungsrecht",
+      "titel": "Nichtiger Vertrag erfüllt: Saldo oder zwei Kondiktionen?",
+      "norm": "§§ 812, 818 III BGB",
+      "optionen": [
+        "Rspr. (Saldotheorie): Nur ein Anspruch auf den Saldo; wer das Erlangte verliert, muss sich dessen Wert anrechnen lassen.",
+        "Lit. (Zweikondiktionentheorie): Zwei selbständige Ansprüche; Korrektur wertend bei § 818 III BGB."
+      ],
+      "text": "Entscheidend, wenn die empfangene Sache untergeht. Die Rspr. macht Ausnahmen von der Saldotheorie, etwa für nicht voll Geschäftsfähige und arglistig Getäuschte. Klausur: erst beide Kondiktionen feststellen, dann den Streit bei § 818 III BGB führen.",
+      "quellen": [
+        "§ 812 BGB",
+        "§ 818 Abs. 3 BGB"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:05:06.187Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-905",
+      "ueberzeile": "Merksatz Klausurtechnik",
+      "titel": "Ein Datum im Sachverhalt ist selten Deko",
+      "text": "Zustellungsdaten und Wochentage deuten fast immer auf eine Frist: Einspruch, Widerspruch, Klage, Berufung. Rechne sie schon beim ersten Lesen am Rand aus.",
+      "norm": "Fristen, z. B. § 339 ZPO · § 74 VwGO",
+      "quellen": [
+        "Themenpool: methodik-905"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.818Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-747",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Gewahrsamsenklave: Diebstahl schon vor der Kasse vollendet",
+      "text": "Im fremden Herrschaftsbereich, etwa im Supermarkt, kann der Täter eigenen Gewahrsam begründen: Steckt er eine kleine, leicht bewegliche Sache in seine Jacken- oder Hosentasche, entsteht eine Gewahrsamsenklave in seiner körperlichen Tabusphäre. Der Diebstahl ist damit vollendet – nach der Rspr. selbst dann, wenn ein Detektiv ihn beobachtet.",
+      "norm": "§ 242 Abs. 1 StGB",
+      "quellen": [
+        "§ 242 StGB",
+        "Themenpool: strafbt-747"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:54:01.818Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

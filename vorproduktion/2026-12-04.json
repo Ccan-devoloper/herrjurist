@@ -1,0 +1,829 @@
+{
+  "datum": "2026-12-04",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "strafat-292",
+        "themaTitel": "Was ist eine eigenverantwortliche Selbstgefährdung?",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "staat-600",
+        "themaTitel": "Bundespräsident: Ausfertigungsprüfungsrecht",
+        "fach": "staat",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zpo-277",
+        "themaTitel": "Was ist der Streitgegenstand und warum entscheidet er über die Rechtskraft?",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "anklage-800"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "anklage-800"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "methodik-906"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "merksatz",
+        "themaId": "handelsg-271"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:49",
+        "art": "begriff",
+        "themaId": "strafbt-335"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:09",
+        "art": "fehler",
+        "themaId": "assessorz-802"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "strafat-292",
+      "poolTitel": "Was ist eine eigenverantwortliche Selbstgefährdung?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 222 StGB",
+        "§ 216 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "staat-600",
+      "poolTitel": "Bundespräsident: Ausfertigungsprüfungsrecht",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 82 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-10",
+        "2026-09-10"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-277",
+      "poolTitel": "Was ist der Streitgegenstand und warum entscheidet er über die Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-10",
+        "2026-11-09"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-800",
+      "poolTitel": "Aktenvortrag Strafrecht",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StGB; StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-800",
+      "poolTitel": "Aktenvortrag Strafrecht",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StGB; StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "methodik-906",
+      "poolTitel": "Sachverhaltssignale für Standardprobleme lesen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "handelsg-271",
+      "poolTitel": "Wann haftet der Gesellschafter einer GmbH persönlich?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 13 Abs. 2 GmbHG",
+        "§ 826 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-05"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafbt-335",
+      "poolTitel": "Wann ist eine Urkunde zusammengesetzt?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 267 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "assessorz-802",
+      "poolTitel": "Worin unterscheiden sich Schlüssigkeit und Erheblichkeit?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 138 Abs. 3 ZPO",
+        "§ 138 Abs. 4 ZPO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-292",
+      "slug": "2026-12-04-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kausal für den Tod – und trotzdem nicht strafbar",
+          "titelZeilen": [
+            "Kausal für den",
+            "Tod – und",
+            "trotzdem nicht",
+            "strafbar"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Wer setzt die Spritze?",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "A besorgt seinem Freund B auf dessen Bitte Heroin. B kennt die Gefahren der Droge und setzt sich den Schuss selbst. Er stirbt an einer Überdosis. Hat sich A wegen fahrlässiger Tötung (§ 222 StGB) strafbar gemacht?"
+        },
+        {
+          "art": "text",
+          "titel": "Die naheliegende Antwort",
+          "text": "„Ohne das Heroin wäre B nicht gestorben – also hat A den Tod fahrlässig verursacht.“ Kausal ist A tatsächlich. Die Zurechnung scheitert aber, wenn sich B eigenverantwortlich selbst gefährdet hat."
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "Kausalität",
+              "text": "Die Übergabe des Heroins ist conditio sine qua non für den Tod."
+            },
+            {
+              "titel": "Selbst- oder Fremdgefährdung?",
+              "text": "Wer beherrscht die unmittelbar lebensgefährdende Handlung? Hier setzt B die Spritze selbst."
+            },
+            {
+              "titel": "Eigenverantwortlichkeit",
+              "text": "B erfasst das Risiko, A weiß nicht mehr als B. Der Maßstab ist umstritten: §§ 20, 35 StGB analog oder Einwilligungsregeln."
+            },
+            {
+              "titel": "Folge",
+              "text": "Wer eine eigenverantwortliche Selbstgefährdung nur veranlasst oder fördert, dem ist der Erfolg nicht zuzurechnen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "B hat sich eigenverantwortlich selbst gefährdet; der Tod ist A objektiv nicht zuzurechnen. A ist nicht nach § 222 StGB strafbar. Anders kann es liegen, wenn A die Spritze setzt oder die Gefahr besser kennt als B. Die Strafbarkeit nach dem BtMG ist eine eigene Frage."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Wer eine eigenverantwortliche Selbstgefährdung nur veranlasst oder fördert, bleibt straflos – entscheidend ist, wer die Gefährdung beherrscht."
+        },
+        {
+          "art": "cta",
+          "titel": "Selbstgefährdung in drei Fragen",
+          "punkte": [
+            "Wer beherrscht die gefährliche Handlung?",
+            "Kennt das Opfer das Risiko?",
+            "Weiß der Täter mehr als das Opfer?"
+          ],
+          "icons": [
+            "person",
+            "warnung",
+            "lupe"
+          ]
+        }
+      ],
+      "caption": "Kausal für den Tod – und trotzdem nicht strafbar? Ja, wenn sich das Opfer eigenverantwortlich selbst gefährdet hat. Wer eine solche Selbstgefährdung nur veranlasst oder fördert, dem ist der Erfolg nicht zuzurechnen. Entscheidend ist, wer die unmittelbar gefährdende Handlung beherrscht und ob das Opfer das Risiko überblickt. Der Maßstab der Eigenverantwortlichkeit ist umstritten. Speichern für die nächste Fahrlässigkeitsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#222stgb",
+        "#selbstgefährdung",
+        "#objektivezurechnung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Eigenverantwortliche Selbstgefährdung",
+      "coverText": "Wer setzt die Spritze?",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Wer einem anderen nur etwas Gefährliches überlässt, haftet nicht für dessen freie Entscheidung, sich selbst zu gefährden.",
+        "handlung": "{B} nervously hands a glowing, crackling rope ladder to {A}, who fully aware of the risk decides on her own to climb down a steep dark shaft with it.",
+        "hinweisRegie": "Place the note in the free space beside {A}'s hands gripping the ladder at the shaft's edge, slightly tilted toward her grip, so her own decision is the focus without covering {B}'s worried face.",
+        "alternative": "{A} calmly steps onto a thin ice sheet after reading a warning sign, while {B} only held the gate open behind her."
+      },
+      "bildSzene": "she chooses to climb risky ladder",
+      "bildSzeneAlt": "steps onto thin ice after warning",
+      "quellen": [
+        "§ 222 StGB",
+        "§§ 20, 35 StGB",
+        "§ 216 StGB",
+        "Themenpool: strafat-292"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.314Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "staat",
+      "klausur": 3,
+      "fachLabel": "Staatsrecht",
+      "themaId": "staat-600",
+      "slug": "2026-12-04-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Politisch verfehlt: Darf der Bundespräsident das Gesetz stoppen?",
+          "titelZeilen": [
+            "Politisch",
+            "verfehlt: Darf der",
+            "Bundespräsident",
+            "das Gesetz stoppen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Formell ja, materiell evident",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Bundestag und Bundesrat haben ein Gesetz ordnungsgemäß beschlossen. Der Bundespräsident hält es für politisch unklug und hat Zweifel, ob es mit Art. 3 Abs. 1 GG vereinbar ist. Darf er die Ausfertigung verweigern?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Formelles Prüfungsrecht",
+              "text": "Art. 82 Abs. 1 GG: Er fertigt Gesetze aus, die „nach den Vorschriften dieses Grundgesetzes zustande gekommen“ sind. Unstreitig."
+            },
+            {
+              "titel": "Materielles Prüfungsrecht",
+              "text": "Umstritten. Nach verbreiteter Ansicht darf er jedenfalls bei offenkundigen Verfassungsverstößen verweigern."
+            },
+            {
+              "titel": "Kein politisches Prüfungsrecht",
+              "text": "Politische Zweckmäßigkeit prüft er nicht – das ist Sache des Parlaments."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Das materielle Prüfungsrecht wie eine Vollkontrolle behandeln. Nach der verbreiteten Evidenzlösung genügen bloße Zweifel nicht; die Verwerfung verfassungswidriger Gesetze ist Sache des BVerfG."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Politische Bedenken tragen keine Verweigerung. Die Zweifel an Art. 3 Abs. 1 GG genügen nach der Evidenzlösung nur, wenn der Verstoß offenkundig ist. Sonst muss er ausfertigen; die Kontrolle bleibt dem BVerfG, etwa über die abstrakte Normenkontrolle."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Formell prüft der Bundespräsident voll, materiell nach verbreiteter Ansicht nur auf Evidenz, politisch gar nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "Ausfertigung in drei Stufen",
+          "punkte": [
+            "Formell: ordnungsgemäß zustande gekommen?",
+            "Materiell: evidenter Verstoß?",
+            "Politisch: kein Prüfungsrecht"
+          ],
+          "icons": [
+            "dokument",
+            "lupe",
+            "verbot"
+          ]
+        }
+      ],
+      "caption": "Politisch verfehlt – darf der Bundespräsident das Gesetz stoppen? Nein. Nach Art. 82 Abs. 1 GG prüft er, ob das Gesetz nach den Vorschriften des Grundgesetzes zustande gekommen ist. Ein materielles Prüfungsrecht ist umstritten; nach verbreiteter Ansicht besteht es jedenfalls bei offenkundigen Verfassungsverstößen. Ein politisches Prüfungsrecht hat er nicht. Speichern für die nächste Staatsorganisationsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#staatsrecht",
+        "#bundespräsident",
+        "#art82gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 82 GG: Prüfungsrecht des Bundespräsidenten",
+      "coverText": "Formell ja, materiell evident",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Der Bundespräsident prüft das Zustandekommen, nicht die politische Klugheit eines Gesetzes.",
+        "handlung": "{A} hovers over a finished scroll and checks its seals one by one with a small light, while {B} points his pointer at a big smudge of taste on the scroll that {A} deliberately ignores.",
+        "hinweisRegie": "Place the note in the open space next to the checked seals, slightly tilted toward them, so the formal check stands out while the ignored smudge remains visible.",
+        "alternative": "{B} holds up three sieves of different fineness, while {A} lets a document pass the coarse political sieve without stopping."
+      },
+      "bildSzene": "droid checks seals, ignores smudge",
+      "bildSzeneAlt": "three sieves of different fineness",
+      "quellen": [
+        "Art. 82 Abs. 1 GG",
+        "Art. 93 Abs. 1 Nr. 2 GG",
+        "Art. 3 Abs. 1 GG",
+        "Themenpool: staat-600"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.314Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-277",
+      "slug": "2026-12-04-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Altes Urteil, neue Klage: drei Wirkungen der Rechtskraft",
+          "unter": "Materielle Rechtskraft · § 322 ZPO",
+          "text": "Identität, Präjudizialität, kontradiktorisches Gegenteil.",
+          "norm": "§ 322 Abs. 1 ZPO",
+          "icon": "gericht",
+          "sprecher": "Altes Urteil, neue Klage. Die Rechtskraft wirkt auf drei Arten – aber nicht jede macht die neue Klage unzulässig. Maßstab ist immer der Streitgegenstand des ersten Prozesses.",
+          "marken": [
+            "drei Wirkungen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Derselbe Streitgegenstand",
+          "text": "Gleicher Antrag, gleicher Lebenssachverhalt: Die neue Klage ist unzulässig.",
+          "norm": "§ 322 Abs. 1 ZPO",
+          "sprecher": "Wirkung eins: Identität. K verliert eine Klage auf fünftausend Euro aus Kaufvertrag. Klagt er dieselben fünftausend aus demselben Geschehen jetzt aus Delikt ein, ist die neue Klage unzulässig. Eine andere Anspruchsgrundlage ändert den Streitgegenstand nicht.",
+          "marken": [
+            "unzulässig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Präjudizialität",
+          "text": "Das Urteil ist Vorfrage im neuen Prozess: zulässig, aber das Gericht ist gebunden.",
+          "norm": null,
+          "sprecher": "Wirkung zwei: Präjudizialität. Ist rechtskräftig festgestellt, dass K Eigentümer ist, und klagt K später auf Herausgabe, ist die neue Klage zulässig. Aber das Gericht muss K als Eigentümer zugrunde legen.",
+          "marken": [
+            "zulässig, gebunden"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kontradiktorisches Gegenteil",
+          "text": "Wer verurteilt ist, kann nicht das Gegenteil einklagen.",
+          "norm": null,
+          "sprecher": "Wirkung drei: das kontradiktorische Gegenteil. B ist rechtskräftig zur Zahlung verurteilt und zahlt. Jetzt verlangt er das Geld nach § 812 BGB zurück, weil die Forderung nie bestanden habe. Das ist ausgeschlossen – nach herrschender Meinung schon unzulässig.",
+          "marken": [
+            "Gegenteil gesperrt"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Nicht rechtskräftig: die Vorfragen",
+          "text": "Wer nach § 985 BGB verurteilt ist, ist nicht rechtskräftig Nichteigentümer.",
+          "norm": "§ 256 Abs. 2 ZPO",
+          "sprecher": "Die Falle: Vorfragen werden nicht rechtskräftig. Wird B zur Herausgabe verurteilt, steht damit nicht rechtskräftig fest, wem die Sache gehört. Wer das will, erhebt eine Zwischenfeststellungsklage.",
+          "marken": [
+            "Gründe: nicht bindend"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Identität und Gegenteil: unzulässig. Vorfrage: zulässig, aber gebunden.",
+          "norm": "§ 322 Abs. 1 ZPO",
+          "sprecher": "Merke: Identität und kontradiktorisches Gegenteil führen zur Unzulässigkeit. Präjudizialität bindet nur das Gericht. Und rechtskräftig wird der Tenor, nicht die Begründung.",
+          "marken": [
+            "Tenor, nicht Gründe"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der zweiten Klage: Welche Wirkung greift?",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur. Und frag bei jeder zweiten Klage: identisch, vorgreiflich oder das Gegenteil?",
+          "marken": [
+            "welche Wirkung?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Altes Urteil, neue Klage: Die materielle Rechtskraft wirkt auf drei Arten. Bei identischem Streitgegenstand ist die neue Klage unzulässig – auch mit neuer Anspruchsgrundlage. Ist die frühere Entscheidung Vorfrage, bleibt die Klage zulässig, das Gericht ist aber gebunden. Und das kontradiktorische Gegenteil kann nicht eingeklagt werden. Rechtskräftig wird dabei nur der Tenor, nicht die Vorfragen (§ 322 Abs. 1 ZPO).",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#rechtskraft",
+        "#322zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rechtskraft: drei Wirkungen auf die neue Klage",
+      "titelZeilen": [
+        "Altes Urteil,",
+        "neue Klage: drei",
+        "Wirkungen der",
+        "Rechtskraft"
+      ],
+      "coverText": "Identisch, vorgreiflich, Gegenteil",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Ein rechtskräftiges Urteil sperrt, bindet oder verhindert das Gegenteil – je nachdem, wie die neue Klage zum alten Streit steht.",
+        "handlung": "{A} rests a heavy engraved stone tablet on the ground, while {B} curiously tries three different new stones against it: one identical, one stacked on top, and one mirror-image that will not fit.",
+        "hinweisRegie": "Place the note in the free space just above the old engraved tablet, slightly tilted toward the three test stones, so the three effects read as one comparison without covering {B}'s hands.",
+        "alternative": "{B} holds an old sealed key that opens nothing twice, while {A} tests a copy, a key that needs it as a base, and a reversed key."
+      },
+      "bildSzene": "old tablet tested against three stones",
+      "bildSzeneAlt": "old sealed key versus three new keys",
+      "quellen": [
+        "§ 322 Abs. 1 ZPO",
+        "§ 256 Abs. 2 ZPO",
+        "§ 985 BGB",
+        "§ 812 BGB",
+        "Themenpool: zpo-277"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-wirkungen",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-800",
+      "ueberzeile": "Prüfungsfrage Aktenvortrag",
+      "titel": "Aktenvortrag Strafrecht: Was gehört in den ersten Satz?",
+      "optionen": [
+        "Die ausführliche Beweiswürdigung",
+        "Das Ergebnis mit dem beantragten Strafmaß",
+        "Beschuldigter, Tatvorwurf, Verfahrensstand und deine Aufgabe"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 170 StPO",
+        "Themenpool: anklage-800"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-800",
+      "ueberzeile": "Auflösung",
+      "titel": "Wer, welcher Vorwurf, welcher Stand – und was zu tun ist",
+      "text": "Der Einleitungssatz orientiert die Zuhörer: gegen wen, wegen welchen Vorwurfs, in welchem Verfahrensstadium und welche Entscheidung du vorbereitest – etwa die Abschlussverfügung der Staatsanwaltschaft. Danach folgt der Sachbericht. Wo der Entscheidungsvorschlag steht, handhaben die Ausbildungsländer unterschiedlich.",
+      "norm": "§ 170 StPO",
+      "quellen": [
+        "§ 170 StPO",
+        "Themenpool: anklage-800"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.316Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Die ausführliche Beweiswürdigung",
+        "Das Ergebnis mit dem beantragten Strafmaß",
+        "Beschuldigter, Tatvorwurf, Verfahrensstand und deine Aufgabe"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-906",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Ein Alter unter 18 im Sachverhalt ist ein Signal",
+      "text": "Sachverhaltssignale zeigen dir die Norm: Steht dort, dass K 17 Jahre alt ist, prüfst du die Wirksamkeit seiner Erklärung nach §§ 106 ff. BGB – lediglich rechtlicher Vorteil, Einwilligung, Taschengeld (§ 110 BGB). Faustregel: Jede Angabe, die die Geschichte nicht braucht, fragt nach einer Norm.",
+      "norm": "§§ 106 ff. BGB (Beispiel)",
+      "quellen": [
+        "§§ 106–110 BGB",
+        "Themenpool: methodik-906"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-271",
+      "ueberzeile": "Merksatz Gesellschaftsrecht",
+      "titel": "Existenzvernichtung: Die Gesellschafter haften der GmbH",
+      "text": "Den Gläubigern haftet nur das Gesellschaftsvermögen (§ 13 Abs. 2 GmbHG). Bei existenzvernichtendem Eingriff haften Gesellschafter nach der Rspr. aus § 826 BGB – gegenüber der GmbH.",
+      "norm": "§ 13 Abs. 2 GmbHG · § 826 BGB",
+      "quellen": [
+        "§ 13 Abs. 2 GmbHG",
+        "§ 826 BGB",
+        "Themenpool: handelsg-271"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-335",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Zusammengesetzte Urkunde: Preisschild plus Ware",
+      "text": "Sie entsteht, wenn eine verkörperte Gedankenerklärung mit einem Bezugsobjekt räumlich fest zu einer Beweiseinheit verbunden ist – etwa Preisschild und Ware oder Kennzeichen und Fahrzeug. Wer ein Preisschild von einer anderen Ware umhängt, stellt nach h.M. eine unechte Urkunde her (§ 267 Abs. 1 StGB).",
+      "norm": "§ 267 Abs. 1 StGB",
+      "quellen": [
+        "§ 267 StGB",
+        "Themenpool: strafbt-335"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-802",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Schlüssig heißt noch nicht begründet",
+      "falsch": "Die Klage ist schlüssig – also hat sie Erfolg.",
+      "richtigText": "Schlüssig heißt nur: Der Klägervortrag trägt, als wahr unterstellt, den Antrag. Dann folgt die Erheblichkeit: Führt der Vortrag des Beklagten, als wahr unterstellt, zur Abweisung? Unbestrittenes gilt als zugestanden (§ 138 Abs. 3 ZPO). Beweis erhebst du nur über erhebliche, streitige Tatsachen.",
+      "quellen": [
+        "§ 138 Abs. 3, 4 ZPO",
+        "Themenpool: assessorz-802"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:56:22.316Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

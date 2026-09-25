@@ -1,0 +1,838 @@
+{
+  "datum": "2027-01-02",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-939",
+        "themaTitel": "Hausarbeit: Phasen, Gliederung und Zitierweise im Griff",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "revision-875",
+        "themaTitel": "Welche Fristen und Formen gelten für Einlegung und Begründung?",
+        "fach": "revision",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-7",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:04",
+        "art": "frage",
+        "themaId": "anklage-795"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:04",
+        "art": "antwort",
+        "themaId": "anklage-795"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "sachen-500"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:26",
+        "art": "begriff",
+        "themaId": "schuldbt-193"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "fehler",
+        "themaId": "methodik-936"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:06",
+        "art": "tipp",
+        "themaId": "staat-633"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-939",
+      "poolTitel": "Hausarbeit: Phasen, Gliederung und Zitierweise im Griff",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "revision-875",
+      "poolTitel": "Welche Fristen und Formen gelten für Einlegung und Begründung?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 32d StPO",
+        "§ 341 StPO",
+        "§ 344 StPO",
+        "§ 345 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-24",
+        "2026-09-24",
+        "2026-11-27"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-7",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-12",
+        "2026-11-07"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "anklage-795",
+      "poolTitel": "Beweiswürdigung im Strafurteil",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 261 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-500",
+      "poolTitel": "Eigentumsvorbehalt und Anwartschaftsrecht",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 449, 929, 158 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "schuldbt-193",
+      "poolTitel": "Wann ist der Rücktritt wegen Unerheblichkeit ausgeschlossen?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 323 Abs. 5 S. 2 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "methodik-936",
+      "poolTitel": "Die vier Auslegungsmethoden sicher anwenden",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "staat-633",
+      "poolTitel": "Rechtswegerschöpfung und Subsidiarität",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 90 II BVerfGG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-01",
+        "2026-11-03"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-939",
+      "slug": "2027-01-02-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wer „A.“ gliedert, braucht ein „B.“",
+          "titelZeilen": [
+            "Wer „A.“ gliedert,",
+            "braucht ein „B.“"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Gliederung, Zitate, Zeitplan",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "In der Hausarbeit zählt nicht nur das Ergebnis, sondern auch Aufbau und Belege. Eine Gliederung mit einem einzelnen Unterpunkt oder Fußnoten ohne überprüfbare Fundstelle wirken unsauber – und beides lässt sich mit einem festen Ablauf vermeiden."
+        },
+        {
+          "art": "schritte",
+          "titel": "Vier Phasen",
+          "schritte": [
+            {
+              "titel": "1. Fall lösen",
+              "text": "Sachverhalt mehrfach lesen, Lösungsskizze zunächst ohne Literatur – erst die eigenen Probleme finden."
+            },
+            {
+              "titel": "2. Recherche",
+              "text": "Gezielt zu diesen Problemen: Kommentare, Lehrbücher, Rechtsprechung. Fundstellen sofort vollständig notieren."
+            },
+            {
+              "titel": "3. Schreiben",
+              "text": "Gutachtenstil, Schwerpunkte ausführlich, Unproblematisches knapp."
+            },
+            {
+              "titel": "4. Formalia",
+              "text": "Gliederung, Fußnoten und Literaturverzeichnis gegenlesen – mit Zeitpuffer vor der Abgabe."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Gliederung",
+          "text": "Wer „A.“ schreibt, braucht „B.“, wer „I.“ schreibt, braucht „II.“ – ein einzelner Unterpunkt ist keine Untergliederung. Verbreitet: A., I., 1., a), aa), (1). Die Überschriften in der Gliederung und im Text stimmen wörtlich überein, dazu die Seitenzahlen."
+        },
+        {
+          "art": "text",
+          "titel": "Zitieren",
+          "punkte": [
+            "Nur zitieren, was du selbst gelesen hast.",
+            "Kommentar: Bearbeiter, Werk, Auflage, Norm und Randnummer.",
+            "Urteile: Gericht, Datum, Aktenzeichen oder Fundstelle.",
+            "Selbstverständliches nicht belegen – Streitstände schon.",
+            "Die Vorgaben deines Lehrstuhls gehen immer vor."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Gliederung vollständig, Belege überprüfbar, Formalia mit Zeitpuffer – so verschenkt die Hausarbeit keine Punkte."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Abgabe prüfen",
+          "punkte": [
+            "Jedes „A.“ hat ein „B.“?",
+            "Jede Fußnote nachprüfbar?",
+            "Überschriften identisch?",
+            "Lehrstuhlvorgaben erfüllt?"
+          ],
+          "icons": [
+            "ordner",
+            "fueller",
+            "klemmbrett",
+            "haken"
+          ]
+        }
+      ],
+      "caption": "Wer „A.“ gliedert, braucht ein „B.“ – ein einzelner Unterpunkt ist keine Gliederung. Für die Hausarbeit gilt: erst den Fall ohne Literatur lösen, dann gezielt recherchieren, im Gutachtenstil schreiben und die Formalia mit Zeitpuffer prüfen. Zitiere nur, was du selbst gelesen hast, und halte dich an die Vorgaben deines Lehrstuhls. Speichern für die nächste Hausarbeit.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#hausarbeit",
+        "#klausurtechnik",
+        "#zitieren",
+        "#jurastudent",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Hausarbeit: Phasen, Gliederung, Zitate",
+      "coverText": "Gliederung, Zitate, Zeitplan",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "flux"
+        ],
+        "kernidee": "Eine Gliederung ist erst vollständig, wenn jeder Unterpunkt einen Partner hat.",
+        "handlung": "{A} hovers beside a shelf where a single lonely box stands on a lower level, while {B} places a matching second box next to it with his pointer.",
+        "hinweisRegie": "Place the note in the free space beside the two now-paired boxes on the lower shelf, slightly tilted toward them, without covering {B}'s pointer or {A}'s sensors.",
+        "alternative": "{B} lays out stepping stones in pairs across a path, while {A} removes one stone that stood alone."
+      },
+      "bildSzene": "second box placed beside lonely box",
+      "bildSzeneAlt": "stepping stones laid out in pairs",
+      "quellen": [
+        "Themenpool: methodik-939"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.917Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "revision",
+      "klausur": 2,
+      "fachLabel": "Revision im Strafverfahren",
+      "themaId": "revision-875",
+      "slug": "2027-01-02-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Revision per Fax vom Verteidiger – wirksam?",
+          "titelZeilen": [
+            "Revision per Fax",
+            "vom Verteidiger –",
+            "wirksam?"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "§ 32d StPO: elektronisch",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die kurze Antwort",
+          "text": "Nein. Verteidiger und Rechtsanwälte müssen die Revision und ihre Begründung als elektronisches Dokument übermitteln (§ 32d S. 2 StPO). Ein Fax wahrt die Form nicht. Nur bei vorübergehender technischer Unmöglichkeit ist die Ersatzeinreichung zulässig – glaubhaft gemacht (§ 32d S. 3, 4 StPO)."
+        },
+        {
+          "art": "vergleich",
+          "titel": "Einlegung und Begründung",
+          "links": {
+            "titel": "Einlegung",
+            "punkte": [
+              "Eine Woche nach Verkündung (§ 341 I StPO).",
+              "Beim Gericht, dessen Urteil angefochten wird.",
+              "Schriftlich oder zu Protokoll der Geschäftsstelle."
+            ]
+          },
+          "rechts": {
+            "titel": "Begründung",
+            "punkte": [
+              "Ein Monat nach Ablauf der Einlegungsfrist (§ 345 I StPO).",
+              "Urteil noch nicht zugestellt? Dann ab Zustellung.",
+              "Angeklagter nur über Verteidiger/RA oder zu Protokoll (§ 345 II)."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Sonderfall: Abwesenheit",
+          "text": "Wurde das Urteil nicht in Anwesenheit des Angeklagten verkündet, beginnt die Einlegungsfrist für ihn grundsätzlich erst mit der Zustellung (§ 341 Abs. 2 StPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Inhalt der Begründung",
+          "punkte": [
+            "Revisionsantrag: inwieweit angefochten, Aufhebung beantragt (§ 344 Abs. 1 StPO).",
+            "Sachrüge: „Ich rüge die Verletzung sachlichen Rechts“ genügt.",
+            "Verfahrensrüge: alle Tatsachen vollständig angeben (§ 344 Abs. 2 S. 2 StPO)."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Eine Woche für die Einlegung, ein Monat für die Begründung – und als Verteidiger nur elektronisch."
+        },
+        {
+          "art": "cta",
+          "titel": "Fristen- und Form-Check",
+          "punkte": [
+            "Verkündung oder Zustellung?",
+            "Eine Woche für die Einlegung",
+            "Ein Monat für die Begründung",
+            "Verteidiger: elektronisch"
+          ],
+          "icons": [
+            "kalender",
+            "uhr",
+            "stoppuhr",
+            "laptop"
+          ]
+        }
+      ],
+      "caption": "Revision per Fax vom Verteidiger? Formgerecht ist das nicht: Nach § 32d S. 2 StPO müssen Verteidiger und Rechtsanwälte Revision und Begründung elektronisch übermitteln. Dazu die Fristen: eine Woche für die Einlegung (§ 341 StPO), ein Monat für die Begründung ab Ablauf der Einlegungsfrist oder späterer Urteilszustellung (§ 345 StPO). Speichern für die nächste Revisionsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#revision",
+        "#fristen",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Revision: Fristen und Formen",
+      "coverText": "§ 32d StPO: elektronisch",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Für Verteidiger zählt nur die elektronische Übermittlung – Papierwege wahren die Form nicht.",
+        "handlung": "{A} nervously feeds a crumpled paper sheet into an old rattling machine, while {B} curiously points to a glowing digital slot right next to it that stands open.",
+        "hinweisRegie": "Place the note in the free space beside the glowing digital slot, slightly tilted toward it, so the correct channel is highlighted without covering {A}'s hands or the old machine.",
+        "alternative": "{B} holds a stopwatch showing a short and a long segment, while {A} rushes a sealed envelope toward a glowing portal."
+      },
+      "bildSzene": "paper into old machine, digital slot",
+      "bildSzeneAlt": "stopwatch with two segments, glowing portal",
+      "quellen": [
+        "§ 32d StPO",
+        "§ 341 StPO",
+        "§ 344 StPO",
+        "§ 345 StPO",
+        "Themenpool: revision-875"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.918Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-7",
+      "slug": "2027-01-02-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Klausur verpatzt? Heute nicht nachlesen",
+          "unter": "Kopfsache · nach der Klausur",
+          "text": "Nachlesen ändert die Note nicht – kostet aber Kraft für morgen.",
+          "norm": null,
+          "icon": "uhr",
+          "sprecher": "Klausur verpatzt? Dann heute bitte nicht nachlesen. Die Lösung zu suchen fühlt sich vernünftig an. Aber es ändert nichts mehr und kostet dich Kraft für die nächste Klausur.",
+          "marken": [
+            "nicht nachlesen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Nicht nachlesen, nicht diskutieren",
+          "text": "Kein Lösungsabgleich, keine Flurgespräche über Probleme.",
+          "norm": null,
+          "sprecher": "Schritt eins: nicht nachlesen und nicht diskutieren. Keine Lösungsskizze, keine Gespräche im Flur darüber, wer welches Problem gesehen hat. Das verunsichert nur.",
+          "marken": [
+            "kein Abgleich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Ein Abend ohne Fachgespräch",
+          "text": "Bewegung, Essen, Schlaf – der Kopf braucht Abstand.",
+          "norm": null,
+          "sprecher": "Schritt zwei: ein Abend ohne Fachgespräch. Geh raus, iss etwas Ordentliches, schlaf. Dein Kopf braucht Abstand, damit er morgen wieder frei arbeitet.",
+          "marken": [
+            "Abstand"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Kurz auf morgen schauen",
+          "text": "Nur die Schemata für die nächste Klausur überfliegen.",
+          "norm": null,
+          "sprecher": "Schritt drei: kurz nach vorn schauen. Geh die Schemata für die nächste Klausur durch, ohne Neues zu lernen. So lenkst du die Aufmerksamkeit dorthin, wo noch Punkte zu holen sind.",
+          "marken": [
+            "nach vorn"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Eine Klausur entscheidet nicht allein",
+          "text": "Die Note ergibt sich aus allen Klausuren und der mündlichen Prüfung.",
+          "norm": null,
+          "sprecher": "Und zur Einordnung: Im Examen entscheidet nicht eine einzelne Klausur. Die Note ergibt sich aus allen Klausuren und der mündlichen Prüfung. Wie diese Klausur wirklich gelaufen ist, weißt du heute ohnehin noch nicht.",
+          "marken": [
+            "alle zählen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Was geschrieben ist, ist geschrieben",
+          "text": "Die nächste Klausur ist ein neuer Anfang.",
+          "norm": null,
+          "sprecher": "Merke: Was geschrieben ist, ist geschrieben. Die nächste Klausur ist ein neuer Anfang.",
+          "marken": [
+            "neuer Anfang"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Für den Abend nach der Klausur",
+          "text": "Speichern und nach der nächsten schweren Klausur ansehen.",
+          "norm": null,
+          "sprecher": "Speicher dir das Reel für den Abend nach einer schweren Klausur. Und schick es jemandem, der gerade mitten in den Examensklausuren steckt.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Klausur verpatzt? Dann heute nicht nachlesen. Der Abgleich mit der Lösung ändert nichts mehr, kostet aber Kraft für die nächste Klausur. Drei Schritte: nicht nachlesen und nicht diskutieren, ein Abend ohne Fachgespräch, kurz die Schemata für morgen durchgehen. Was geschrieben ist, ist geschrieben – die nächste Klausur ist ein neuer Anfang.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#examensklausuren",
+        "#motivation",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nach der schlechten Klausur: der Plan",
+      "titelZeilen": [
+        "Klausur verpatzt?",
+        "Heute nicht",
+        "nachlesen"
+      ],
+      "coverText": "Abstand statt Lösungsabgleich",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Nach einer schlechten Klausur hilft Abstand mehr als der Blick zurück.",
+        "handlung": "{B} kneels and keeps digging through a pile of rubble behind him, while {A} gently turns him around to face a clear path ahead lit by a small lantern.",
+        "hinweisRegie": "Place the note in the free space above the lantern-lit path ahead, slightly tilted toward it, so the forward direction is emphasized without covering {A}'s guiding hand or {B}'s face.",
+        "alternative": "{A} closes a heavy door on a stormy room behind them, while {B} sets down his pickaxe and looks at a calm sunrise."
+      },
+      "bildSzene": "miner turned from rubble to lit path",
+      "bildSzeneAlt": "door closed on storm, calm sunrise",
+      "quellen": [
+        "Themenpool: mindset-7"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "maxime",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.920Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-795",
+      "ueberzeile": "Prüfungsfrage StPO",
+      "titel": "Der Angeklagte schweigt in der Hauptverhandlung vollständig. Darf das Gericht das zu seinen Lasten werten?",
+      "optionen": [
+        "Nein – vollständiges Schweigen ist kein Indiz für Schuld",
+        "Ja – ein Unschuldiger würde sich verteidigen",
+        "Ja, aber nur in der Strafzumessung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 243 Abs. 5 StPO",
+        "§ 261 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.921Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-795",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein: Vollständiges Schweigen darf nicht belastend gewertet werden",
+      "text": "Niemand muss sich selbst belasten; der Angeklagte darf zur Sache schweigen (§ 243 Abs. 5 S. 1 StPO). Würde sein Schweigen gegen ihn verwendet, liefe das Recht leer – auch in der Strafzumessung. Anders beim Teilschweigen: Äußert er sich zur Sache, aber zu einzelnen Punkten nicht, darf das nach der Rspr. in die Beweiswürdigung nach § 261 StPO einfließen.",
+      "norm": "§ 261 StPO · § 243 Abs. 5 StPO",
+      "quellen": [
+        "§ 136 Abs. 1 StPO",
+        "§ 243 Abs. 5 StPO",
+        "§ 261 StPO",
+        "Themenpool: anklage-795"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.921Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – vollständiges Schweigen ist kein Indiz für Schuld",
+        "Ja – ein Unschuldiger würde sich verteidigen",
+        "Ja, aber nur in der Strafzumessung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-500",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 449 Abs. 1 BGB: Eigentum erst mit der letzten Rate",
+      "text": "Beim Eigentumsvorbehalt ist im Zweifel anzunehmen, dass das Eigentum unter der aufschiebenden Bedingung vollständiger Zahlung übertragen wird (§ 449 Abs. 1 BGB). Bedingt ist nur die Einigung nach § 929 S. 1 BGB (§ 158 Abs. 1 BGB), der Kaufvertrag selbst nicht. Bis dahin hat der Käufer ein Anwartschaftsrecht, das er entsprechend §§ 929 ff. BGB übertragen kann.",
+      "norm": "§ 449 Abs. 1 BGB · §§ 929, 158 BGB",
+      "quellen": [
+        "§ 449 BGB",
+        "§ 929 BGB",
+        "§ 158 BGB",
+        "Themenpool: sachen-500"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.921Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-193",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Unerhebliche Pflichtverletzung: kein Rücktritt, aber Minderung",
+      "text": "Ist die Pflichtverletzung unerheblich, ist der Rücktritt ausgeschlossen (§ 323 Abs. 5 S. 2 BGB), ebenso Schadensersatz statt der ganzen Leistung (§ 281 Abs. 1 S. 3 BGB). Bei behebbaren Mängeln zieht der BGH die Grenze in der Regel bei Beseitigungskosten von mehr als fünf Prozent des Kaufpreises. Mindern kann der Käufer trotzdem (§ 441 Abs. 1 S. 2 BGB).",
+      "norm": "§ 323 Abs. 5 S. 2 BGB",
+      "quellen": [
+        "§ 323 Abs. 5 S. 2 BGB",
+        "§ 281 Abs. 1 S. 3 BGB",
+        "§ 441 Abs. 1 S. 2 BGB",
+        "Themenpool: schuldbt-193"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.921Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-936",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Klarer Wortlaut – und die Auslegung ist trotzdem nicht fertig",
+      "falsch": "Der Wortlaut ist eindeutig, also brauche ich Systematik, Entstehungsgeschichte und Zweck nicht mehr.",
+      "richtigText": "Der Wortlaut ist Ausgangspunkt und Grenze der Auslegung, aber nur eine von vier Methoden. Systematik, Historie und Telos bestätigen oder korrigieren das Ergebnis – innerhalb des möglichen Wortsinns. Was darüber hinausgeht, ist Rechtsfortbildung, etwa Analogie; im Strafrecht zulasten des Täters verboten (Art. 103 Abs. 2 GG).",
+      "quellen": [
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-936"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.921Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-633",
+      "ueberzeile": "Klausurtipp Staatsrecht",
+      "titel": "Gehörsverstoß gerügt? Erst die Anhörungsrüge, dann die Verfassungsbeschwerde",
+      "text": "Rügt der Beschwerdeführer eine Verletzung von Art. 103 Abs. 1 GG, gehört die fachgerichtliche Anhörungsrüge (etwa § 321a ZPO, § 152a VwGO) zum Rechtsweg (§ 90 Abs. 2 S. 1 BVerfGG). Fehlt sie, ist die Verfassungsbeschwerde insoweit unzulässig. Die Monatsfrist des § 93 Abs. 1 BVerfGG läuft dann ab der Entscheidung über die Rüge – außer diese war offensichtlich unzulässig.",
+      "quellen": [
+        "§ 90 Abs. 2 BVerfGG",
+        "§ 93 Abs. 1 BVerfGG",
+        "§ 321a ZPO",
+        "§ 152a VwGO",
+        "Art. 103 Abs. 1 GG",
+        "Themenpool: staat-633"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:03:08.921Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

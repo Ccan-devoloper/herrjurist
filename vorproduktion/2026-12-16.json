@@ -1,0 +1,859 @@
+{
+  "datum": "2026-12-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-328",
+        "themaTitel": "Wie prüft man die Unterschlagung und was ist die Zueignung?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "vwgo-103",
+        "themaTitel": "Wie prüft man die Zulässigkeit der Anfechtungsklage?",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "zwangsv-571",
+        "themaTitel": "Pfändung beweglicher Sachen",
+        "fach": "zwangsv",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:16",
+        "art": "frage",
+        "themaId": "schuldbt-469"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:16",
+        "art": "antwort",
+        "themaId": "schuldbt-469"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "strafbt-329"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:20",
+        "art": "streitstand",
+        "themaId": "anklage-856"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:45",
+        "art": "merksatz",
+        "themaId": "handelsg-146"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "begriff",
+        "themaId": "strafbt-136"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-328",
+      "poolTitel": "Wie prüft man die Unterschlagung und was ist die Zueignung?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 246 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "vwgo-103",
+      "poolTitel": "Wie prüft man die Zulässigkeit der Anfechtungsklage?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 Abs. 1 VwGO",
+        "§ 42 Abs. 2 VwGO",
+        "§ 68 VwGO",
+        "§ 74 VwGO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zwangsv-571",
+      "poolTitel": "Pfändung beweglicher Sachen",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§§ 808 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "schuldbt-469",
+      "poolTitel": "Mangelfolgeschaden und Integritätsinteresse",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, 823 I BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "schuldbt-469",
+      "poolTitel": "Mangelfolgeschaden und Integritätsinteresse",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 280 I, 823 I BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-329",
+      "poolTitel": "Was ist eine Täuschung durch konkludentes Verhalten beim Betrug?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 263 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "anklage-856",
+      "poolTitel": "Wie ist die Anklageschrift aufgebaut?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-14",
+        "2026-12-14"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "handelsg-146",
+      "poolTitel": "Wie haftet der eintretende Gesellschafter für Altschulden?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 721a BGB",
+        "§ 127 HGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafbt-136",
+      "poolTitel": "Was ist der Unterschied zwischen Raub und räuberischem Diebstahl?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 249 StGB",
+        "§ 252 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-328",
+      "slug": "2026-12-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Unterschlagung: Zueignung ist hier Tathandlung, keine Absicht",
+          "titelZeilen": [
+            "Unterschlagung:",
+            "Zueignung ist hier",
+            "Tathandlung"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "Manifestation statt Absicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A leiht sich von B ein Fahrrad. Als B es zurückfordert, stellt A es in einem Kleinanzeigenportal zum Verkauf ein. Hat A eine Unterschlagung begangen – und wo im Aufbau prüfst du die Zueignung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Fremde bewegliche Sache",
+              "text": "Das Rad gehört B. Gewahrsam des Opfers ist nicht nötig – A darf die Sache selbst in Händen haben."
+            },
+            {
+              "titel": "Zueignung (objektiv)",
+              "text": "Tathandlung: A zeigt nach außen den Willen, sich die Sache dauerhaft anzueignen und B dauerhaft auszuschließen."
+            },
+            {
+              "titel": "Manifestation",
+              "text": "Rspr.: Jedes nach außen erkennbare Verhalten, das den Zueignungswillen zeigt – das Verkaufsangebot genügt. Teile der Lit. sind strenger."
+            },
+            {
+              "titel": "Vorsatz, Rechtswidrigkeit",
+              "text": "Vorsatz bezüglich aller Merkmale; rechtswidrig ist die Zueignung, wenn A keinen fälligen, einredefreien Anspruch auf das Rad hat."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Zueignung wie bei § 242 StGB als Absicht im subjektiven Tatbestand prüfen. Bei § 246 StGB ist sie objektive Tathandlung; subjektiv genügt Vorsatz. Und weil B das Rad dem A überlassen hat, ist es ihm anvertraut: Qualifikation nach § 246 Abs. 2 StGB."
+        },
+        {
+          "art": "text",
+          "titel": "Konkurrenzen",
+          "text": "§ 246 StGB tritt zurück, wenn die Tat in anderen Vorschriften mit schwererer Strafe bedroht ist. Nach dem BGH gilt diese Subsidiarität gegenüber allen Delikten mit schwererer Strafdrohung, nicht nur gegenüber Zueignungsdelikten; Teile der Literatur sehen das enger."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 242: Zueignungsabsicht. § 246: Zueignung als Tathandlung, nach außen erkennbar – subjektiv genügt Vorsatz."
+        },
+        {
+          "art": "cta",
+          "titel": "Unterschlagung in drei Zügen",
+          "punkte": [
+            "Fremde bewegliche Sache",
+            "Zueignung nach außen erkennbar",
+            "Anvertraut? Dann Abs. 2"
+          ],
+          "icons": [
+            "paket",
+            "lupe",
+            "schluessel"
+          ]
+        }
+      ],
+      "caption": "Bei der Unterschlagung ist die Zueignung keine Absicht, sondern die Tathandlung selbst. Sie gehört in den objektiven Tatbestand: A muss den Zueignungswillen nach außen erkennbar betätigen – nach der Rspr. genügt schon das Verkaufsangebot. Subjektiv reicht Vorsatz. War die Sache anvertraut, greift § 246 Abs. 2 StGB. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#246stgb",
+        "#unterschlagung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 246 StGB: Zueignung als Tathandlung",
+      "coverText": "Manifestation statt Absicht",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Bei der Unterschlagung zählt, dass der Täter seinen Zueignungswillen nach außen sichtbar macht.",
+        "handlung": "{A} props a borrowed bicycle-like hover board against a stall and hangs a price tag on it, while {B} nervously watches from behind, holding the note of whom it was borrowed from.",
+        "hinweisRegie": "Place the note in the free space next to the price tag on the borrowed board, slightly tilted toward the tag, so the visible act is highlighted without covering {B}'s worried face.",
+        "alternative": "{B} paints his own name on a borrowed toolbox in plain view while {A} curiously compares it with the owner's old label."
+      },
+      "bildSzene": "price tag hung on borrowed board",
+      "bildSzeneAlt": "own name painted on borrowed toolbox",
+      "quellen": [
+        "§ 246 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-328"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "verwechslung-mit-242",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.368Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-103",
+      "slug": "2026-12-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Anfechtungsklage ohne Widerspruch? Je nach Land zulässig",
+          "titelZeilen": [
+            "Anfechtungsklage",
+            "ohne Widerspruch?",
+            "Je nach Land",
+            "zulässig"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "§ 68 I 2 VwGO + Landesrecht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Stadt untersagt A durch Bescheid, auf seinem Grundstück Werbetafeln aufzustellen. A will gegen den Bescheid klagen. Was prüfst du in der Zulässigkeit – und braucht A vorher einen Widerspruch?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Zulässigkeit, Teil 1",
+          "schritte": [
+            {
+              "titel": "Verwaltungsrechtsweg",
+              "text": "§ 40 Abs. 1 S. 1 VwGO: öffentlich-rechtliche Streitigkeit nichtverfassungsrechtlicher Art, keine abdrängende Sonderzuweisung."
+            },
+            {
+              "titel": "Statthaftigkeit",
+              "text": "§ 42 Abs. 1 Alt. 1 VwGO: A begehrt die Aufhebung eines noch nicht erledigten Verwaltungsakts."
+            },
+            {
+              "titel": "Klagebefugnis",
+              "text": "§ 42 Abs. 2 VwGO: Als Adressat eines belastenden VA ist A möglicherweise zumindest in Art. 2 Abs. 1 GG verletzt."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Zulässigkeit, Teil 2",
+          "schritte": [
+            {
+              "titel": "Vorverfahren",
+              "text": "§ 68 Abs. 1 S. 1 VwGO – außer ein Gesetz bestimmt, dass es entfällt (§ 68 Abs. 1 S. 2 VwGO). Viele Länder haben das geregelt."
+            },
+            {
+              "titel": "Klagefrist",
+              "text": "§ 74 Abs. 1 VwGO: ein Monat ab Zustellung des Widerspruchsbescheids – ohne Vorverfahren ab Bekanntgabe des VA."
+            },
+            {
+              "titel": "Beteiligte und Gericht",
+              "text": "Beteiligten- und Prozessfähigkeit (§§ 61, 62 VwGO), zuständiges Verwaltungsgericht (§§ 45, 52 VwGO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Das Vorverfahren schematisch verlangen, obwohl das Landesrecht es hier abgeschafft hat – oder umgekehrt Entbehrlichkeit einfach unterstellen. Maßgeblich ist § 68 Abs. 1 S. 2 VwGO mit dem jeweiligen Landesrecht. Und: Entfällt das Vorverfahren, läuft die Monatsfrist ab Bekanntgabe des Bescheids."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rechtsweg, Statthaftigkeit, Klagebefugnis, Vorverfahren nach Landesrecht, Frist – und die Frist hängt davon ab, ob ein Widerspruch nötig war."
+        },
+        {
+          "art": "cta",
+          "titel": "Vor der Anfechtungsklage klären",
+          "punkte": [
+            "Ist der VA noch nicht erledigt?",
+            "Möglichkeit der Rechtsverletzung?",
+            "Vorverfahren nach Landesrecht nötig?",
+            "Ab wann läuft die Monatsfrist?"
+          ],
+          "icons": [
+            "dokument",
+            "person",
+            "gebaeude",
+            "kalender"
+          ]
+        }
+      ],
+      "caption": "Anfechtungsklage ohne Widerspruch – je nach Land ist das zulässig. § 68 Abs. 1 S. 2 VwGO erlaubt, das Vorverfahren durch Gesetz entfallen zu lassen, und viele Länder haben davon Gebrauch gemacht. Dann läuft die Klagefrist ab Bekanntgabe des Verwaltungsakts (§ 74 Abs. 1 S. 2 VwGO). Die ganze Zulässigkeitsprüfung in zwei Folien. Speichern für die nächste VwGO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsprozessrecht",
+        "#vwgo",
+        "#anfechtungsklage",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anfechtungsklage: die Zulässigkeit",
+      "coverText": "§ 68 I 2 VwGO + Landesrecht",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Ob vor der Klage ein Widerspruch nötig ist, entscheidet das jeweilige Landesrecht.",
+        "handlung": "{B} walks toward a courthouse-like gate, while {A} hovers beside a small side booth and checks a regional map to see whether the booth must be passed first.",
+        "hinweisRegie": "Place the note in the open space beside the side booth, slightly tilted toward the regional map, without covering {B}'s path to the gate.",
+        "alternative": "{A} holds two different route cards for two regions; on one, the path skips the waiting room entirely, while {B} studies both."
+      },
+      "bildSzene": "side booth before gate, regional map",
+      "bildSzeneAlt": "two route cards, one skips room",
+      "quellen": [
+        "§ 40 VwGO",
+        "§ 42 VwGO",
+        "§ 68 VwGO",
+        "§ 74 VwGO",
+        "§§ 61, 62 VwGO",
+        "§§ 45, 52 VwGO",
+        "Themenpool: vwgo-103"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "landesrecht-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.368Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-571",
+      "slug": "2026-12-16-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Pfändung: Gewahrsam zählt, nicht das Eigentum",
+          "unter": "Sachpfändung · § 808 ZPO",
+          "text": "Der Gerichtsvollzieher prüft grundsätzlich nur den Gewahrsam des Schuldners.",
+          "norm": "§ 808 Abs. 1 ZPO",
+          "icon": "schloss",
+          "sprecher": "Der Gerichtsvollzieher prüft nicht, wem die Sache gehört. Er schaut auf den Gewahrsam. So läuft die Pfändung beweglicher Sachen.",
+          "marken": [
+            "Gewahrsam statt Eigentum"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Gewahrsam des Schuldners",
+          "text": "Gepfändet werden Sachen, die der Schuldner in Gewahrsam hat.",
+          "norm": "§ 808 Abs. 1 ZPO",
+          "sprecher": "Schritt eins: Gepfändet werden Sachen im Gewahrsam des Schuldners, Paragraf 808 Absatz 1. Ob sie ihm gehören, prüft der Gerichtsvollzieher grundsätzlich nicht. Das Verfahren ist bewusst formalisiert.",
+          "marken": [
+            "formalisiert"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gewahrsam eines Dritten",
+          "text": "Nur, wenn der Dritte zur Herausgabe bereit ist.",
+          "norm": "§ 809 ZPO",
+          "sprecher": "Schritt zwei: Hat ein Dritter die Sache in Gewahrsam, darf gepfändet werden, wenn er zur Herausgabe bereit ist, Paragraf 809. Oder wenn der Gläubiger selbst sie hat.",
+          "marken": [
+            "herausgabebereit?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Der Pfändungsakt",
+          "text": "Inbesitznahme – oder Pfandsiegel, wenn die Sache beim Schuldner bleibt.",
+          "norm": "§ 808 Abs. 1, 2 ZPO",
+          "sprecher": "Schritt drei: Gepfändet wird, indem der Gerichtsvollzieher die Sache in Besitz nimmt. Geld und Kostbarkeiten nimmt er mit. Andere Sachen können beim Schuldner bleiben, dann wird die Pfändung kenntlich gemacht, etwa durch ein Pfandsiegel.",
+          "marken": [
+            "Pfandsiegel"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die Grenzen",
+          "text": "Unpfändbare Sachen und Verbot der Überpfändung.",
+          "norm": "§ 811 ZPO · § 803 Abs. 1 S. 2 ZPO",
+          "sprecher": "Schritt vier: die Grenzen. Unpfändbar ist etwa, was der Schuldner für eine bescheidene Lebens- und Haushaltsführung braucht, Paragraf 811. Und es darf nicht mehr gepfändet werden als nötig.",
+          "marken": [
+            "unpfändbar",
+            "keine Überpfändung"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Gehört die Sache einem Dritten?",
+          "text": "Dann wehrt er sich mit der Drittwiderspruchsklage.",
+          "norm": "§ 771 ZPO",
+          "sprecher": "Und wenn die Sache gar nicht dem Schuldner gehört? Dann muss der Eigentümer selbst aktiv werden: mit der Drittwiderspruchsklage nach Paragraf 771.",
+          "marken": [
+            "§ 771 ZPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Gewahrsam jetzt, Eigentum später",
+          "text": "Das Eigentum klärt nicht der Gerichtsvollzieher, sondern der Prozess nach § 771 ZPO.",
+          "norm": "§ 808 ZPO",
+          "sprecher": "Merke: Gewahrsam statt Eigentum. Das Eigentum klärt später die Drittwiderspruchsklage.",
+          "marken": [
+            "später klären"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Dritteigentum? An § 771 ZPO denken",
+          "text": "Speichern für die nächste Vollstreckungsklausur.",
+          "sprecher": "Speicher dir das für deine nächste Vollstreckungsklausur. Und denk bei Dritteigentum immer an Paragraf 771.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Bei der Pfändung beweglicher Sachen prüft der Gerichtsvollzieher nicht, wem die Sache gehört: Maßgeblich ist der Gewahrsam des Schuldners (§ 808 Abs. 1 ZPO), bei Dritten deren Herausgabebereitschaft (§ 809 ZPO). Grenzen ziehen § 811 ZPO und das Verbot der Überpfändung. Gehört die Sache einem Dritten, wehrt er sich mit der Drittwiderspruchsklage nach § 771 ZPO. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#808zpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sachpfändung: Gewahrsam statt Eigentum",
+      "titelZeilen": [
+        "Pfändung:",
+        "Gewahrsam zählt,",
+        "nicht Eigentum"
+      ],
+      "coverText": "Eigentum klärt § 771 ZPO",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "form7"
+        ],
+        "kernidee": "Gepfändet wird, was der Schuldner in Gewahrsam hat – wem es gehört, wird erst später geklärt.",
+        "handlung": "{B} hovers over a pile of crystals in {A}'s cart and presses a small seal onto one of them, while {A} protests by pointing at a neighbour's mark on that crystal.",
+        "hinweisRegie": "Place the note in the free space next to the sealed crystal with the neighbour's mark, slightly tilted toward it, without covering the seal or {A}'s pointing hand.",
+        "alternative": "{A} holds up a borrowed lamp as {B} tags everything in the room; a figure at the door already raises a hand to claim it back."
+      },
+      "bildSzene": "seal pressed on crystal in cart",
+      "bildSzeneAlt": "tagging room items, owner at door",
+      "quellen": [
+        "§ 803 ZPO",
+        "§ 808 ZPO",
+        "§ 809 ZPO",
+        "§ 811 ZPO",
+        "§ 771 ZPO",
+        "Themenpool: zwangsv-571"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.375Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-469",
+      "ueberzeile": "Prüfungsfrage Kaufrecht",
+      "titel": "Eine mangelhafte Heizdecke setzt das Schlafzimmer des Käufers K in Brand. Worauf stützt K den Brandschaden?",
+      "optionen": [
+        "§§ 437 Nr. 3, 280 Abs. 1 BGB ohne Frist – daneben § 823 Abs. 1",
+        "Nur §§ 437 Nr. 3, 281 BGB – erst nach erfolgloser Fristsetzung",
+        "Nur § 823 Abs. 1 BGB – Kaufrecht ersetzt keine Folgeschäden"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 437 Nr. 3 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: schuldbt-469"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.375Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-469",
+      "ueberzeile": "Auflösung",
+      "titel": "§ 280 Abs. 1 BGB ohne Frist – und § 823 Abs. 1 BGB daneben",
+      "text": "Der Brand trifft nicht das Interesse an einer mangelfreien Decke, sondern das Integritätsinteresse an den übrigen Rechtsgütern: Mangelfolgeschaden. Nacherfüllung könnte ihn nicht beseitigen, deshalb keine Frist – Grundlage sind §§ 437 Nr. 3, 280 Abs. 1 BGB. Der Verkäufer haftet nur bei Vertretenmüssen, das vermutet wird. Daneben § 823 Abs. 1 BGB wegen der Eigentumsverletzung.",
+      "norm": "§§ 437 Nr. 3, 280 Abs. 1 BGB · § 823 Abs. 1 BGB",
+      "quellen": [
+        "§ 437 Nr. 3 BGB",
+        "§ 280 Abs. 1 BGB",
+        "§ 823 Abs. 1 BGB",
+        "Themenpool: schuldbt-469"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.375Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "§§ 437 Nr. 3, 280 Abs. 1 BGB ohne Frist – daneben § 823 Abs. 1",
+        "Nur §§ 437 Nr. 3, 281 BGB – erst nach erfolgloser Fristsetzung",
+        "Nur § 823 Abs. 1 BGB – Kaufrecht ersetzt keine Folgeschäden"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-329",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 263 StGB: Täuschen geht auch ohne ausdrückliche Lüge",
+      "text": "Konkludent täuscht, wer eine unwahre Tatsache durch schlüssiges Verhalten miterklärt. Maßstab ist die Verkehrsanschauung: Was bringt das Verhalten aus Sicht des Empfängers zum Ausdruck? Klassiker: Wer im Restaurant bestellt, erklärt, zahlungswillig und zahlungsfähig zu sein. Wer eine Sportwette abgibt, erklärt, das Spiel nicht manipuliert zu haben.",
+      "norm": "§ 263 Abs. 1 StGB",
+      "quellen": [
+        "§ 263 StGB",
+        "Themenpool: strafbt-329"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.375Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-856",
+      "ueberzeile": "Streitstand Anklage",
+      "titel": "Serientaten ohne genaue Tatdaten: Genügt die Anklage der Umgrenzungsfunktion?",
+      "norm": "§ 200 Abs. 1 S. 1 StPO",
+      "optionen": [
+        "BGH: Ja, wenn Tatopfer, Tatzeitraum, Grundmuster der Begehung und Mindestzahl der Taten genannt sind.",
+        "Kritische Stimmen: Jede Einzeltat muss individualisiert sein, sonst bleibt der Verfahrensgegenstand unklar."
+      ],
+      "text": "Klausur: Nenne jedenfalls Opfer, Zeitraum, Begehungsweise und die Mindestzahl der Taten – dann trägt die Anklage auch nach der Rspr. Denk an die Folgen: Mängel der Umgrenzung machen die Anklage unwirksam, Informationsmängel nicht.",
+      "quellen": [
+        "§ 200 StPO",
+        "§ 264 StPO",
+        "Themenpool: anklage-856"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.375Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-146",
+      "ueberzeile": "Merksatz Gesellschaftsrecht",
+      "titel": "Eingetreten heißt: Du haftest auch für Altschulden",
+      "text": "Wer in eine rechtsfähige GbR oder OHG eintritt, haftet für die vorher begründeten Verbindlichkeiten wie die übrigen Gesellschafter (§ 721a BGB, § 127 HGB). Abreden dagegen wirken nicht gegenüber Dritten.",
+      "norm": "§ 721a BGB · § 127 HGB",
+      "quellen": [
+        "§ 721a BGB",
+        "§ 127 HGB",
+        "Themenpool: handelsg-146"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.375Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-136",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Räuberischer Diebstahl: Gewalt nach der Wegnahme, um die Beute zu behalten",
+      "text": "Beim Raub (§ 249 StGB) dient die Gewalt der Wegnahme – sie wird vor deren Vollendung eingesetzt. Beim räuberischen Diebstahl (§ 252 StGB) ist der Diebstahl schon vollendet, aber noch nicht beendet: Der auf frischer Tat Betroffene setzt Gewalt oder Drohung ein, um sich im Besitz der Beute zu erhalten. Er wird gleich einem Räuber bestraft.",
+      "norm": "§ 249 StGB · § 252 StGB",
+      "quellen": [
+        "§ 249 StGB",
+        "§ 252 StGB",
+        "Themenpool: strafbt-136"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:02.375Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

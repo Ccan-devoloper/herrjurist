@@ -1,0 +1,858 @@
+{
+  "datum": "2026-12-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "assessorz-585",
+        "themaTitel": "Mahnverfahren und Vollstreckungsbescheid",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "strafat-728",
+        "themaTitel": "Rücktritt vom unbeendeten Versuch",
+        "fach": "strafat",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "verwalt-141",
+        "themaTitel": "Wann liegt ein Verwaltungsakt vor?",
+        "fach": "verwalt",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:03",
+        "art": "frage",
+        "themaId": "handelsg-048"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:03",
+        "art": "antwort",
+        "themaId": "handelsg-048"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "strafbt-752"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "merksatz",
+        "themaId": "staat-359"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "begriff",
+        "themaId": "bgbat-120"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "fehler",
+        "themaId": "stpo-926"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "assessorz-585",
+      "poolTitel": "Mahnverfahren und Vollstreckungsbescheid",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 688 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-08",
+        "2026-12-08"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "strafat-728",
+      "poolTitel": "Rücktritt vom unbeendeten Versuch",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 I StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "verwalt-141",
+      "poolTitel": "Wann liegt ein Verwaltungsakt vor?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 35 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-12-11",
+        "2026-12-11"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "handelsg-048",
+      "poolTitel": "Wann liegt ein Handelsgeschäft vor und was folgt daraus?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 343 HGB",
+        "§ 377 HGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "handelsg-048",
+      "poolTitel": "Wann liegt ein Handelsgeschäft vor und was folgt daraus?",
+      "fach": "handelsg",
+      "fachLabel": "Handels- und Gesellschaftsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 343 HGB",
+        "§ 377 HGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafbt-752",
+      "poolTitel": "Räuberischer Diebstahl",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 252 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-04",
+        "2026-10-14"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "staat-359",
+      "poolTitel": "Was ist die Wesentlichkeitstheorie?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "bgbat-120",
+      "poolTitel": "Wann ist Schweigen ausnahmsweise rechtlich erheblich?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 362 HGB",
+        "§ 151 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "stpo-926",
+      "poolTitel": "Wann erlauben §§ 100a, 100b StPO Telekommunikationsüberwachung und Online-Durchsuchung?",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "Art. 10 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-585",
+      "slug": "2026-12-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Widerspruch zu spät? Dann wird er zum Einspruch",
+          "titelZeilen": [
+            "Widerspruch",
+            "zu spät? Dann wird",
+            "er zum Einspruch"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "§ 694 Abs. 2 ZPO deutet um",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "G erwirkt gegen S einen Mahnbescheid über 3.000 Euro für angeblich gelieferte Ware. S reagiert nicht, G beantragt den Vollstreckungsbescheid. Fünf Tage nach dessen Zustellung schreibt S ans Mahngericht: „Ich widerspreche der Forderung.“ Kommt das zu spät?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Stationen des Mahnverfahrens",
+          "schritte": [
+            {
+              "titel": "Mahnbescheid",
+              "text": "Ohne Schlüssigkeitsprüfung: Das Gericht prüft nicht, ob der Anspruch besteht (§ 692 Abs. 1 Nr. 2 ZPO)."
+            },
+            {
+              "titel": "Widerspruch",
+              "text": "Binnen zwei Wochen – möglich, solange der Vollstreckungsbescheid nicht verfügt ist (§ 694 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "Vollstreckungsbescheid",
+              "text": "Steht einem für vorläufig vollstreckbar erklärten Versäumnisurteil gleich (§ 700 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "Einspruch",
+              "text": "Binnen zwei Wochen ab Zustellung, Notfrist (§§ 700 Abs. 1, 339 Abs. 1 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Prüfung für S",
+          "punkte": [
+            "Ein Widerspruch ist nach Verfügung des VB nicht mehr möglich (§ 694 Abs. 1 ZPO).",
+            "Aber: Ein verspäteter Widerspruch wird als Einspruch behandelt (§ 694 Abs. 2 S. 1 ZPO).",
+            "Frist: zwei Wochen ab Zustellung des VB – nach fünf Tagen gewahrt.",
+            "Folge: Übergang ins streitige Verfahren (§ 700 Abs. 3 ZPO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Das Schreiben kommt nicht zu spät: Es gilt als rechtzeitiger Einspruch gegen den Vollstreckungsbescheid. G muss den Anspruch nun im streitigen Verfahren begründen. Weil der VB vorläufig vollstreckbar bleibt, sollte S zusätzlich die Einstellung der Vollstreckung beantragen (§§ 719 Abs. 1, 707 ZPO)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Nach dem Vollstreckungsbescheid gibt es nur noch den Einspruch – ein verspäteter Widerspruch wird in ihn umgedeutet, wenn die Zwei-Wochen-Frist läuft."
+        },
+        {
+          "art": "cta",
+          "titel": "Mahnverfahren in vier Fragen",
+          "punkte": [
+            "Mahnbescheid oder schon VB?",
+            "Wie heißt der Rechtsbehelf – und gilt § 694 II?",
+            "Zwei-Wochen-Frist seit Zustellung gewahrt?",
+            "Vollstreckung vorläufig einstellen?"
+          ],
+          "icons": [
+            "umschlag",
+            "dokument",
+            "stoppuhr",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Widerspruch zu spät? Dann wird er zum Einspruch. Ist der Vollstreckungsbescheid schon verfügt, kann S nicht mehr widersprechen – doch § 694 Abs. 2 S. 1 ZPO behandelt den verspäteten Widerspruch als Einspruch. Maßgeblich ist dann die Einspruchsfrist von zwei Wochen ab Zustellung (§§ 700 Abs. 1, 339 Abs. 1 ZPO). Und: Einstellung der Vollstreckung beantragen. Speichern für die nächste Anwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#mahnverfahren",
+        "#vollstreckungsbescheid",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Mahnverfahren: verspäteter Widerspruch",
+      "coverText": "§ 694 Abs. 2 ZPO deutet um",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Wer nach dem Vollstreckungsbescheid noch widerspricht, hat damit rechtzeitig Einspruch eingelegt.",
+        "handlung": "{A} pushes a letter into a slot that has just been shut, while {B} hovers beside it, catches the letter and calmly redirects it into a second, still open slot next to a two-week hourglass.",
+        "hinweisRegie": "Place the note in the free space between the shut slot and the open one, slightly tilted toward the open slot and the hourglass, without covering {A}'s hand.",
+        "alternative": "{B} relabels a parcel that arrived at a closed counter and slides it to the neighbouring counter that is still open, while {A} watches the clock."
+      },
+      "bildSzene": "letter redirected into open slot",
+      "bildSzeneAlt": "parcel relabelled to open counter",
+      "quellen": [
+        "§ 692 ZPO",
+        "§ 694 ZPO",
+        "§ 699 ZPO",
+        "§ 700 ZPO",
+        "§§ 338, 339 ZPO",
+        "§§ 707, 719 ZPO",
+        "Themenpool: assessorz-585"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "fallfrage-umdeutung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.131Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-728",
+      "slug": "2026-12-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Einfach aufhören genügt – beim unbeendeten Versuch",
+          "titelZeilen": [
+            "Einfach aufhören",
+            "genügt – beim",
+            "unbeendeten",
+            "Versuch"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Rücktrittshorizont entscheidet",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A sticht mit Tötungsvorsatz einmal auf O ein. O ist verletzt, aber ansprechbar. A glaubt, O werde ohne weitere Stiche überleben, und geht, obwohl er weiterstechen könnte. Ist A vom versuchten Totschlag zurückgetreten?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Kein Fehlschlag",
+              "text": "A hält die Vollendung mit weiteren Stichen ohne Zäsur noch für möglich – der Versuch ist nicht fehlgeschlagen."
+            },
+            {
+              "titel": "Unbeendet oder beendet?",
+              "text": "Maßgeblich ist die Vorstellung nach der letzten Ausführungshandlung. A hält den Tod nicht für möglich: unbeendet."
+            },
+            {
+              "titel": "Rücktrittshandlung",
+              "text": "Beim unbeendeten Versuch genügt es, die weitere Ausführung aufzugeben (§ 24 Abs. 1 S. 1 Alt. 1 StGB)."
+            },
+            {
+              "titel": "Freiwilligkeit",
+              "text": "A hört aus autonomen Motiven auf, nicht weil äußere Umstände ihn dazu zwingen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Von A zu verlangen, dass er den Tod aktiv verhindert. Das gilt erst beim beendeten Versuch (§ 24 Abs. 1 S. 1 Alt. 2 StGB). Und: Der Rücktritt wirkt nur für den versuchten Totschlag – die vollendete gefährliche Körperverletzung bleibt strafbar."
+        },
+        {
+          "art": "text",
+          "titel": "Wenn A es sich anders vorstellt",
+          "text": "Hält A den Tod für möglich, ist der Versuch beendet – Weggehen reicht nicht. Erkennt er unmittelbar danach, dass O doch in Lebensgefahr schwebt, wird der Versuch beendet, er muss aktiv helfen. Die Rspr. lässt diese Korrektur des Rücktrittshorizonts in engem zeitlichem Zusammenhang zu."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Unbeendet: aufhören genügt. Beendet: Erfolg verhindern. Entscheidend ist die Vorstellung des Täters nach der letzten Ausführungshandlung."
+        },
+        {
+          "art": "cta",
+          "titel": "Rücktritt in vier Zügen",
+          "punkte": [
+            "Fehlschlag ausschließen",
+            "Unbeendet oder beendet?",
+            "Aufgeben oder verhindern",
+            "Freiwillig?"
+          ],
+          "icons": [
+            "stopp",
+            "lupe",
+            "haken",
+            "person"
+          ]
+        }
+      ],
+      "caption": "Beim unbeendeten Versuch genügt es, einfach aufzuhören (§ 24 Abs. 1 S. 1 Alt. 1 StGB). Aktives Verhindern verlangt das Gesetz erst beim beendeten Versuch. Ob der Versuch unbeendet ist, richtet sich nach der Vorstellung des Täters nach der letzten Ausführungshandlung – und die kann sich in engem zeitlichem Zusammenhang noch ändern. Vorher: Fehlschlag ausschließen. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#rücktritt",
+        "#24stgb",
+        "#versuch",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rücktritt vom unbeendeten Versuch",
+      "coverText": "Rücktrittshorizont entscheidet",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer glaubt, noch nicht alles für den Erfolg getan zu haben, tritt schon durch bloßes Aufhören zurück.",
+        "handlung": "{A} lowers a raised tool and steps away from a half-finished task, while {B} curiously looks between the unfinished work and a small arrow-shaped signpost pointing back.",
+        "hinweisRegie": "Place the note in the open space next to the lowered tool and the unfinished work, slightly tilted toward the tool, without covering {A}'s turning body.",
+        "alternative": "{B} stops a slowly rolling cart simply by letting go of the push handle, while {A} compares it to a cart already racing downhill that must be caught."
+      },
+      "bildSzene": "tool lowered, unfinished task left",
+      "bildSzeneAlt": "letting go of cart versus catching one",
+      "quellen": [
+        "§ 24 Abs. 1 StGB",
+        "§§ 212, 22, 23 StGB",
+        "§ 224 StGB",
+        "Themenpool: strafat-728"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "bedingte-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.131Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-141",
+      "slug": "2026-12-18-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Ein Verkehrsschild ist ein Verwaltungsakt",
+          "unter": "Verwaltungsakt · § 35 VwVfG",
+          "text": "Als Allgemeinverfügung nach § 35 S. 2 VwVfG.",
+          "norm": "§ 35 VwVfG",
+          "icon": "schild",
+          "sprecher": "Ein Verkehrsschild ist ein Verwaltungsakt. Klingt schräg, folgt aber direkt aus Paragraf 35 Verwaltungsverfahrensgesetz. Hier sind die Merkmale.",
+          "marken": [
+            "Schild = Verwaltungsakt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Hoheitliche Maßnahme einer Behörde",
+          "text": "Auf dem Gebiet des öffentlichen Rechts.",
+          "norm": "§ 35 S. 1 VwVfG · § 1 Abs. 4 VwVfG",
+          "sprecher": "Erstens: eine hoheitliche Maßnahme einer Behörde auf dem Gebiet des öffentlichen Rechts. Behörde ist jede Stelle, die Aufgaben der öffentlichen Verwaltung wahrnimmt.",
+          "marken": [
+            "Behörde",
+            "hoheitlich"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Regelung",
+          "text": "Sie setzt eine Rechtsfolge – Hinweise und Auskünfte nicht.",
+          "norm": "§ 35 S. 1 VwVfG",
+          "sprecher": "Zweitens: eine Regelung. Die Maßnahme soll eine Rechtsfolge setzen, also Rechte oder Pflichten begründen, ändern, aufheben oder verbindlich feststellen. Bloße Hinweise oder Auskünfte regeln nichts.",
+          "marken": [
+            "Rechtsfolge"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Einzelfall",
+          "text": "Abgrenzung zur abstrakt-generellen Rechtsnorm.",
+          "norm": "§ 35 S. 1, 2 VwVfG",
+          "sprecher": "Drittens: ein Einzelfall. Das grenzt den Verwaltungsakt von der abstrakt-generellen Rechtsnorm ab. Die Allgemeinverfügung nach Satz 2 ist trotzdem ein Verwaltungsakt, etwa wenn sie die Benutzung einer Sache durch die Allgemeinheit regelt.",
+          "marken": [
+            "Einzelfall"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Unmittelbare Außenwirkung",
+          "text": "Rechtsfolgen außerhalb der Verwaltung – interne Weisungen meist nicht.",
+          "norm": "§ 35 S. 1 VwVfG",
+          "sprecher": "Viertens: unmittelbare Außenwirkung. Die Regelung muss auf Rechtsfolgen außerhalb der Verwaltung gerichtet sein. Rein verwaltungsinterne Weisungen scheiden deshalb in der Regel aus.",
+          "marken": [
+            "nach außen"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Zurück zum Schild",
+          "text": "Es regelt die Benutzung einer bestimmten Straße: Allgemeinverfügung.",
+          "norm": "§ 35 S. 2 VwVfG",
+          "sprecher": "Und das Schild? Es gebietet oder verbietet etwas für eine bestimmte Straße und regelt so deren Benutzung durch die Allgemeinheit. Also eine Allgemeinverfügung. Bekannt gegeben wird es durch das Aufstellen.",
+          "marken": [
+            "Allgemeinverfügung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Vier Merkmale plus Satz 2",
+          "text": "Behörde, Regelung, Einzelfall, Außenwirkung – die Allgemeinverfügung zählt mit.",
+          "norm": "§ 35 VwVfG",
+          "sprecher": "Merke: Behörde, Regelung, Einzelfall, Außenwirkung. Und die Allgemeinverfügung zählt mit.",
+          "marken": [
+            "vier Merkmale"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst fragen: Regelt es überhaupt etwas?",
+          "text": "Speichern für die nächste Verwaltungsrechtsklausur.",
+          "sprecher": "Speicher dir die vier Merkmale für deine nächste Verwaltungsrechtsklausur. Und prüf bei jedem Behördenschreiben zuerst: Regelt es überhaupt etwas?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Ein Verkehrsschild ist ein Verwaltungsakt – genauer: eine Allgemeinverfügung nach § 35 S. 2 VwVfG, weil es die Benutzung einer Straße durch die Allgemeinheit regelt. Die Merkmale des § 35 S. 1 VwVfG: hoheitliche Maßnahme einer Behörde, Regelung, Einzelfall, unmittelbare Außenwirkung. Die Einordnung entscheidet über Klageart und Rechtsschutz. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#verwaltungsakt",
+        "#35vwvfg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 35 VwVfG: die Merkmale des Verwaltungsakts",
+      "titelZeilen": [
+        "Ein Verkehrs-",
+        "schild ist ein",
+        "Verwaltungsakt"
+      ],
+      "coverText": "Allgemeinverfügung, § 35 S. 2",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Auch ein Verkehrsschild regelt verbindlich einen Einzelfall – die Benutzung einer bestimmten Straße.",
+        "handlung": "{A} stops her small vehicle in front of a single road sign on one particular street, while {B} taps the sign with his pointer as if introducing it to the class.",
+        "hinweisRegie": "Place the note in the free space beside the road sign, slightly tilted toward it, so the sign is the focal element without covering {B}'s pointer or {A}'s vehicle.",
+        "alternative": "{B} compares a thick general rulebook with a single sign on a post, while {A} waits at the sign for the answer."
+      },
+      "bildSzene": "pointer taps road sign, vehicle stops",
+      "bildSzeneAlt": "rulebook compared with single sign post",
+      "quellen": [
+        "§ 35 VwVfG",
+        "§ 1 Abs. 4 VwVfG",
+        "Themenpool: verwalt-141"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitiver-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.138Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-048",
+      "ueberzeile": "Prüfungsfrage Handelsrecht",
+      "titel": "Kaufmann K kauft beim Großhändler für den Betrieb, prüft nie, sieht nach Monaten einen offenen Mangel. Folge?",
+      "optionen": [
+        "Nichts – Mängelrechte verjähren erst nach zwei Jahren",
+        "Die Ware gilt als genehmigt, K verliert seine Mängelrechte",
+        "Nur eine Kürzung des Schadensersatzes wegen Mitverschuldens"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 343 HGB",
+        "§ 377 HGB",
+        "Themenpool: handelsg-048"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.138Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "handelsg",
+      "klausur": 1,
+      "pairId": "handelsg-048",
+      "ueberzeile": "Auflösung",
+      "titel": "Die Ware gilt als genehmigt – § 377 HGB",
+      "text": "Beide sind Kaufleute, der Kauf gehört zu ihrem Betrieb: beiderseitiges Handelsgeschäft (§ 343 HGB). Dann muss der Käufer die Ware unverzüglich nach Ablieferung untersuchen und Mängel anzeigen (§ 377 Abs. 1 HGB). Versäumt er das, gilt die Ware als genehmigt (Abs. 2) – die Mängelrechte sind weg. Versteckte Mängel sind unverzüglich nach Entdeckung zu rügen (Abs. 3).",
+      "norm": "§ 343 HGB · § 377 HGB",
+      "quellen": [
+        "§ 343 HGB",
+        "§ 377 HGB",
+        "Themenpool: handelsg-048"
+      ],
+      "fachLabel": "Handels-/GesR",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.138Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nichts – Mängelrechte verjähren erst nach zwei Jahren",
+        "Die Ware gilt als genehmigt, K verliert seine Mängelrechte",
+        "Nur eine Kürzung des Schadensersatzes wegen Mitverschuldens"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-752",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 252 StGB: Betroffen ist auch, wer der Entdeckung zuvorkommt",
+      "text": "Der räuberische Diebstahl setzt einen vollendeten, noch nicht beendeten Diebstahl voraus. Auf frischer Tat betroffen ist, wer in engem räumlich-zeitlichem Zusammenhang mit der Tat am Tatort oder in dessen Nähe angetroffen wird. Nach Rspr. und h.M. genügt es, wenn er der Wahrnehmung durch einen schnellen Schlag zuvorkommt. Teile der Lit. verlangen, dass er bemerkt wurde.",
+      "norm": "§ 252 StGB",
+      "quellen": [
+        "§ 252 StGB",
+        "Themenpool: strafbt-752"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.138Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-359",
+      "ueberzeile": "Merksatz Staatsrecht",
+      "titel": "Wesentliches entscheidet das Parlament selbst",
+      "text": "Wesentlichkeitstheorie: Grundlegende, vor allem grundrechtsrelevante Entscheidungen muss der Gesetzgeber selbst treffen. Je intensiver der Eingriff, desto bestimmter das Gesetz.",
+      "norm": "Art. 20 Abs. 3 GG",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Themenpool: staat-359"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.139Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-120",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Schweigen: grundsätzlich keine Willenserklärung",
+      "text": "Wer schweigt, erklärt weder Annahme noch Ablehnung. Ausnahmen: Das Gesetz fingiert eine Erklärung, etwa § 362 Abs. 1 HGB beim Kaufmann, dessen Gewerbe Geschäftsbesorgungen für andere umfasst; die Parteien haben es vereinbart; oder das kaufmännische Bestätigungsschreiben greift. Abgrenzen: Bei § 151 BGB gibt es eine Annahme – nur ihr Zugang ist entbehrlich.",
+      "norm": "§ 362 HGB · § 151 BGB",
+      "quellen": [
+        "§ 362 HGB",
+        "§ 151 BGB",
+        "Themenpool: bgbat-120"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.139Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-926",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Gefahr im Verzug: Darf die Staatsanwaltschaft die Online-Durchsuchung anordnen?",
+      "falsch": "Bei Gefahr im Verzug ordnet die Staatsanwaltschaft die Online-Durchsuchung nach § 100b StPO selbst an – wie bei der TKÜ.",
+      "richtigText": "Nein. Maßnahmen nach § 100b StPO ordnet nur die zuständige Kammer des Landgerichts an, bei Gefahr im Verzug ihr Vorsitzender (§ 100e Abs. 2 StPO). Eine Eilkompetenz der Staatsanwaltschaft gibt es nur bei der TKÜ nach § 100a StPO – mit gerichtlicher Bestätigung binnen drei Werktagen (§ 100e Abs. 1 StPO).",
+      "quellen": [
+        "§ 100a StPO",
+        "§ 100b StPO",
+        "§ 100e StPO",
+        "Art. 10 GG",
+        "Themenpool: stpo-926"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.139Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

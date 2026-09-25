@@ -1,0 +1,902 @@
+{
+  "datum": "2027-03-07",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "grundr-629",
+        "themaTitel": "Schutzpflichten des Staates",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "zpo-559",
+        "themaTitel": "Zeugenbeweis und Parteivernehmung",
+        "fach": "zpo",
+        "klausur": 1,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "sachen-511"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "sachen-511"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:56",
+        "art": "norm",
+        "themaId": "strafat-061"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "fehler",
+        "themaId": "zwangsv-918"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:44",
+        "art": "tipp",
+        "themaId": "sachen-504"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:17",
+        "art": "zahl",
+        "themaId": "schuldbt-474"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "grundr-629",
+      "poolTitel": "Schutzpflichten des Staates",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Grundrechte"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-21"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "zpo-559",
+      "poolTitel": "Zeugenbeweis und Parteivernehmung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 373 ff., 445 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2027-01-22"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-511",
+      "poolTitel": "Gutgläubiger Grundstückserwerb",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 892, 893 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-511",
+      "poolTitel": "Gutgläubiger Grundstückserwerb",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 892, 893 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "strafat-061",
+      "poolTitel": "Worin unterscheiden sich Einverständnis und Einwilligung?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 228 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-26"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "zwangsv-918",
+      "poolTitel": "Vollstreckung für und gegen den Rechtsnachfolger: Wann braucht es die Klausel des § 727 ZPO?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 727 ZPO",
+        "§ 750 ZPO",
+        "§ 325 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-04",
+        "2027-01-06"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "sachen-504",
+      "poolTitel": "Recht zum Besitz",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 986 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-27",
+        "2027-01-28"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "schuldbt-474",
+      "poolTitel": "Herstellerpflicht zur Reparatur seit 31.07.2026",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 479a-479g BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-14",
+        "2026-11-17",
+        "2027-01-10"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-03-07-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Kernsätze aus dieser Woche – was sitzt?",
+          "titelZeilen": [
+            "18 Kernsätze",
+            "aus dieser Woche –",
+            "was sitzt?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 107 BGB: Es zählen die rechtlichen Folgen – jeder Kauf verpflichtet, auch für 1 Euro.",
+            "Fixtermin: Rücktritt nach § 323 II Nr. 2 BGB; Schadensersatz braucht § 281 II eigens.",
+            "Klage erhöht: § 264 Nr. 2 ZPO – keine Klageänderung, keine Sachdienlichkeit nötig.",
+            "Besitzschutz: Ein Recht zum Besitz hilft dem Täter nicht (§ 863 BGB) – Grenze § 861 II.",
+            "§ 167 ZPO: Zustellung „demnächst“ wirkt auf den Eingang zurück."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Beruhen (§ 337 StPO): Ein anderes Urteil darf nicht auszuschließen sein.",
+            "§ 140 StPO: Schon die Verhandlung vor dem Schöffengericht macht Verteidigung notwendig.",
+            "§ 250 StPO: Zeuge vor Urkunde – der Zeuge vom Hörensagen ist zulässig.",
+            "Versuchsbeginn: Gesamtlösung, Entlassen des Werkzeugs, Gefahr beim Unterlassen, Grunddelikt.",
+            "Revision: Die StA kann auch zugunsten des Angeklagten anfechten (§ 296 II StPO).",
+            "Wesentliches Ergebnis: beim Strafrichter entbehrlich (§ 200 II 2 StPO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Erledigung: Beide erklären – Einstellung; nur der Kläger – Feststellungsurteil.",
+            "Nebenbestimmung: Anfechtungsklage statthaft (BVerwG), Teilbarkeit in der Begründetheit.",
+            "Urteils-VB: nur spezifisches Verfassungsrecht – keine Superrevision.",
+            "FFK: Präjudizinteresse nur bei Erledigung nach Klageerhebung.",
+            "Art. 2 Abs. 1 GG fängt jedes Verhalten auf, das kein Spezialgrundrecht schützt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Definitionen: zerlegen, abgrenzen, testen – jeder Baustein schließt einen Fall aus.",
+            "Kopfsache: Unbekanntes Problem? Sachverhalt, Nachbarnorm und Ergebnis liefern Argumente."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann ist eine höhere Klageforderung keine Klageänderung?",
+            "Wann gibt es bei der FFK kein Präjudizinteresse – und warum?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Prozess",
+            "Strafrecht über Aufbau und Revision",
+            "Öffentliches Recht als Prüfungskette",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "waage",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "18 Kernsätze aus dieser Woche, sortiert nach Zivilrecht, Strafrecht, Öffentlichem Recht sowie Klausurtechnik und Kopfsache – vom lediglich rechtlichen Vorteil über das Beruhen in der Revision bis zur Fortsetzungsfeststellungsklage. Geh die Folien ohne Unterlagen durch und markier dir, was noch wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Kernsätze",
+      "coverText": "Zivil · Straf · ÖR · Klausur & Kopf",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Eine Woche Stoff, sortiert in vier Bereiche und kurz abgefragt.",
+        "handlung": "{A} sets down a crate of eighteen small crystals beside four open bins, while {B} curiously lifts one crystal and holds it up to the light to check whether it shines.",
+        "hinweisRegie": "Place the note in the free space above the four open bins, slightly tilted toward the crystal held up to the light, without covering {A}'s hands or {B}'s face.",
+        "alternative": "{B} holds up a small blank flashcard while {A} answers by raising one of four coloured lanterns."
+      },
+      "bildSzene": "crystals sorted into four open bins",
+      "bildSzeneAlt": "flashcard answered with coloured lantern",
+      "quellen": [
+        "§§ 106–108 BGB",
+        "§§ 281, 323 BGB",
+        "§ 264 ZPO",
+        "§§ 858–864 BGB",
+        "§ 167 ZPO",
+        "§§ 337, 338 StPO",
+        "§§ 140, 141 StPO",
+        "§ 250 StPO",
+        "§ 22 StGB",
+        "§§ 296, 297, 301 StPO",
+        "§ 200 StPO",
+        "§ 161 Abs. 2 VwGO",
+        "§ 36 VwVfG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "§ 113 Abs. 1 S. 4 VwGO",
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: methodik-899",
+        "Themenpool: mindset-8"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-629",
+      "slug": "2027-03-07-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Der Staat schuldet Schutz – aber nicht den bestmöglichen",
+          "titelZeilen": [
+            "Der Staat schuldet",
+            "Schutz – aber nicht",
+            "den bestmöglichen"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Untermaßverbot statt Übermaß",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Grundrechte sind nicht nur Abwehrrechte. Aus ihnen folgt auch die Pflicht des Staates, sich schützend vor Rechtsgüter zu stellen – vor allem vor Leben und körperliche Unversehrtheit (Art. 2 Abs. 2 S. 1 GG), etwa gegen Gefahren durch Private. Geprüft wird dann das Untermaßverbot."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Schutzbereich",
+              "text": "Welches Grundrecht, welches Rechtsgut ist betroffen – etwa Leben und Gesundheit?"
+            },
+            {
+              "titel": "2. Schutzpflicht ausgelöst",
+              "text": "Das Rechtsgut ist gefährdet, typischerweise durch Private. Der Staat greift nicht selbst ein – er soll schützen."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Verletzung: Untermaßverbot",
+              "text": "Erst wenn gar keine Schutzvorkehrungen bestehen oder sie offensichtlich ungeeignet oder völlig unzulänglich sind."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Innerhalb dieser Grenze entscheidet der Gesetzgeber, wie er schützt – das BVerfG kontrolliert zurückhaltend."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: der Spielraum",
+          "text": "Bei der Erfüllung von Schutzpflichten hat der Staat einen weiten Einschätzungs-, Wertungs- und Gestaltungsspielraum. Einen Anspruch auf eine bestimmte Maßnahme gibt es nur ausnahmsweise – wenn allein sie den gebotenen Schutz sichern kann."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Schutzpflicht heißt: nicht die beste Lösung, sondern ein Mindestmaß an wirksamem Schutz – Untermaßverbot, weiter Spielraum."
+        },
+        {
+          "art": "cta",
+          "titel": "Schutzpflicht in vier Zügen",
+          "punkte": [
+            "Schutzbereich bestimmen",
+            "Gefährdung durch Dritte?",
+            "Untermaßverbot: Evidenzkontrolle",
+            "Spielraum des Gesetzgebers achten"
+          ],
+          "icons": [
+            "schild",
+            "person",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Der Staat schuldet Schutz – aber nicht den bestmöglichen. Aus den Grundrechten folgen Schutzpflichten, vor allem für Leben und Gesundheit (Art. 2 Abs. 2 S. 1 GG). Verletzt ist eine solche Pflicht nach dem BVerfG erst, wenn Schutzvorkehrungen fehlen oder offensichtlich ungeeignet oder völlig unzulänglich sind (Untermaßverbot). Der Gesetzgeber hat einen weiten Spielraum. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#schutzpflicht",
+        "#art2gg",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Schutzpflichten: das Untermaßverbot",
+      "coverText": "Untermaßverbot statt Übermaß",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Der Staat muss wirksam schützen – aber er muss nicht die bestmögliche Maßnahme wählen.",
+        "handlung": "{B} holds up a sturdy but plain wooden shield in front of a small village, while {A} calmly turns away a merchant offering an ornate golden shield.",
+        "hinweisRegie": "Place the note in the free space between the plain shield and the golden shield, slightly tilted toward the plain one, so the minimum standard stands out without covering faces or the village.",
+        "alternative": "{A} checks that a simple fence around a well is closed, while {B} points out that a much taller fence would also be possible."
+      },
+      "bildSzene": "plain shield chosen over golden one",
+      "bildSzeneAlt": "simple fence around a well checked",
+      "quellen": [
+        "Art. 2 Abs. 2 S. 1 GG",
+        "Art. 1 Abs. 1 S. 2 GG",
+        "Art. 93 Abs. 1 Nr. 4a GG",
+        "Themenpool: grundr-629"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "grenze-der-pflicht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-559",
+      "slug": "2027-03-07-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Der Geschäftsführer der GmbH ist kein Zeuge",
+          "unter": "Beweisrecht · §§ 373 ff., 445 ff. ZPO",
+          "text": "Wer die Partei gesetzlich vertritt, wird als Partei vernommen – nicht als Zeuge.",
+          "norm": "§ 455 Abs. 1 ZPO",
+          "icon": "person",
+          "sprecher": "Der Geschäftsführer der klagenden GmbH ist kein Zeuge. Er vertritt die Partei und wird deshalb wie eine Partei vernommen. Und die Parteivernehmung ist nur nachrangig.",
+          "marken": [
+            "Partei, nicht Zeuge",
+            "§ 455 ZPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Wer Zeuge sein kann",
+          "text": "Jeder, der nicht Partei ist und die Partei nicht gesetzlich vertritt.",
+          "norm": "§ 373 ZPO",
+          "sprecher": "Schritt eins: Zeuge kann jeder sein, der nicht Partei ist und die Partei nicht gesetzlich vertritt. Auch Mitarbeiter der GmbH oder Angehörige der Parteien sind taugliche Zeugen.",
+          "marken": [
+            "Dritte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Zeugenbeweis antreten",
+          "text": "Zeugen benennen und die Tatsachen bezeichnen, zu denen sie aussagen sollen.",
+          "norm": "§ 373 ZPO",
+          "sprecher": "Schritt zwei: Den Zeugenbeweis tritt man an, indem man den Zeugen benennt und die Tatsachen bezeichnet, zu denen er aussagen soll. Ein Beweisantrag ins Blaue hinein genügt nicht.",
+          "marken": [
+            "benennen",
+            "Tatsachen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Parteivernehmung: nur subsidiär",
+          "text": "Antrag auf Vernehmung des Gegners, wenn der Beweis sonst nicht vollständig geführt ist.",
+          "norm": "§ 445 Abs. 1 ZPO",
+          "sprecher": "Schritt drei: Die Parteivernehmung ist subsidiär. Die beweisbelastete Partei kann beantragen, den Gegner zu vernehmen, wenn ihre anderen Beweismittel fehlen oder nicht ausreichen.",
+          "marken": [
+            "nachrangig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die eigene Partei vernehmen",
+          "text": "Mit Einverständnis des Gegners oder von Amts wegen bei gewisser Wahrscheinlichkeit.",
+          "norm": "§§ 447, 448 ZPO",
+          "sprecher": "Schritt vier: Die beweispflichtige Partei selbst vernimmt das Gericht nur, wenn der Gegner einverstanden ist, oder von Amts wegen, wenn schon eine gewisse Wahrscheinlichkeit für ihre Behauptung spricht.",
+          "marken": [
+            "§ 447",
+            "§ 448"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: das Vier-Augen-Gespräch",
+          "text": "Nur eine Seite hat einen Zeugen: Waffengleichheit verlangt Anhörung oder Vernehmung der anderen Partei.",
+          "norm": "§ 141 ZPO · § 448 ZPO",
+          "sprecher": "Der Klassiker: das Vier-Augen-Gespräch. Die GmbH hat ihren Mitarbeiter als Zeugen, der Gegner war allein. Die Waffengleichheit verlangt dann, dass das Gericht den Gegner anhört oder als Partei vernimmt und seine Angaben würdigt.",
+          "marken": [
+            "Waffengleichheit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Abtretung schafft einen Zeugen",
+          "text": "Der Zedent kann im Prozess des Zessionars Zeuge sein – das Gericht würdigt frei.",
+          "norm": "§ 286 ZPO",
+          "sprecher": "Die Gegenstrategie: Wer seinen Anspruch abtritt, kann im Prozess des neuen Gläubigers als Zeuge aussagen. Das ist zulässig – das Gericht würdigt seine Aussage aber frei.",
+          "marken": [
+            "Zedent als Zeuge"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Partei und gesetzlicher Vertreter: Parteivernehmung, nur nachrangig. Alle anderen: Zeugen.",
+          "norm": null,
+          "sprecher": "Merke: Partei und gesetzlicher Vertreter werden als Partei vernommen, und das nur nachrangig. Alle anderen sind Zeugen.",
+          "marken": [
+            "Zeuge oder Partei?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Bei jedem Beweisangebot prüfen",
+          "text": "Speichern für die nächste ZPO-Klausur.",
+          "sprecher": "Speicher dir das für die nächste ZPO-Klausur. Frag bei jedem Beweisangebot zuerst: Zeuge oder Partei?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Der Geschäftsführer der GmbH ist im Prozess seiner Gesellschaft kein Zeuge: Als gesetzlicher Vertreter wird er als Partei vernommen (§ 455 Abs. 1 ZPO). Und die Parteivernehmung ist nachrangig – den Gegner auf Antrag (§ 445 ZPO), die eigene Partei nur mit Einverständnis oder von Amts wegen (§§ 447, 448 ZPO). Beim Vier-Augen-Gespräch sichert die Waffengleichheit die Anhörung der Gegenseite. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#beweisrecht",
+        "#zeugenbeweis",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zeuge oder Partei? Beweisrecht der ZPO",
+      "titelZeilen": [
+        "Der Geschäftsführer",
+        "der GmbH ist",
+        "kein Zeuge"
+      ],
+      "coverText": "Vertreter wird Partei vernommen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Wer die Partei vertritt, sitzt nicht im Zeugenstand, sondern auf der Seite der Partei.",
+        "handlung": "{B} nervously tries to sit down on a witness chair, while {A} gently steers him with his pointer back to a bench on the party's side.",
+        "hinweisRegie": "Place the note in the free space between the witness chair and the party bench, slightly tilted toward the bench, so the change of role stands out without covering the pointer or {B}'s face.",
+        "alternative": "{A} sorts people into two queues, a short one to a small bench and a long one to a row of witness chairs, while {B} hesitates between them."
+      },
+      "bildSzene": "pointer steers figure from witness chair",
+      "bildSzeneAlt": "two queues, bench and witness chairs",
+      "quellen": [
+        "§§ 373 ff. ZPO",
+        "§§ 445–448 ZPO",
+        "§ 455 ZPO",
+        "§ 141 ZPO",
+        "§ 286 ZPO",
+        "Themenpool: zpo-559"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "rollen-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.401Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-511",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "E steht zu Unrecht als Eigentümer im Grundbuch. K erfährt das erst nach seinem Eintragungsantrag. Erwirbt K?",
+      "optionen": [
+        "Nein – Kenntnis vor der Eintragung schadet immer",
+        "Ja – maßgeblich ist die Kenntnis bei Antragstellung",
+        "Nein – Grundstücke erwirbt man nie gutgläubig"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 892 BGB",
+        "§ 873 BGB",
+        "Themenpool: sachen-511"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.401Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-511",
+      "ueberzeile": "Auflösung",
+      "titel": "Ja – es zählt die Kenntnis bei Antragstellung",
+      "text": "Nach § 892 Abs. 2 BGB kommt es für die Kenntnis auf die Stellung des Eintragungsantrags an – liegt die Auflassung später, auf deren Zeitpunkt. Spätere Kenntnis schadet nicht: Der Erwerber soll nicht die Bearbeitungszeit des Grundbuchamts tragen. Ausgeschlossen ist der Erwerb durch positive Kenntnis oder einen eingetragenen Widerspruch.",
+      "norm": "§ 892 Abs. 1, 2 BGB",
+      "quellen": [
+        "§ 892 BGB",
+        "§ 873 BGB",
+        "Themenpool: sachen-511"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.401Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – Kenntnis vor der Eintragung schadet immer",
+        "Ja – maßgeblich ist die Kenntnis bei Antragstellung",
+        "Nein – Grundstücke erwirbt man nie gutgläubig"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-061",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 228 StGB: Die Einwilligung endet an den guten Sitten",
+      "text": "Die Einwilligung rechtfertigt eine Körperverletzung nicht, wenn die Tat trotzdem gegen die guten Sitten verstößt. Die Rspr. stellt vor allem auf Art und Gewicht der Verletzung und den Grad der Lebensgefahr ab. Abgrenzung: Das Einverständnis schließt schon den Tatbestand aus, wo er ein Handeln gegen den Willen voraussetzt – etwa die Wegnahme bei § 242 StGB.",
+      "norm": "§ 228 StGB",
+      "quellen": [
+        "§ 228 StGB",
+        "§ 223 StGB",
+        "§ 242 StGB",
+        "Themenpool: strafat-061"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.401Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-918",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Schuldner gestorben: Der alte Titel reicht nicht gegen den Erben",
+      "falsch": "S ist gestorben, E ist sein Erbe. Der Titel gegen S reicht – ich vollstrecke direkt gegen E.",
+      "richtigText": "E steht nicht im Titel. Gegen ihn wird erst mit einer auf ihn umgeschriebenen Klausel vollstreckt (§ 727 ZPO); die Erbfolge wird etwa durch Erbschein nachgewiesen. Klausel und Urkunden werden zugestellt (§ 750 Abs. 2 ZPO). Hatte die Vollstreckung schon vor dem Tod begonnen, wird sie in den Nachlass fortgesetzt (§ 779 ZPO).",
+      "quellen": [
+        "§ 727 ZPO",
+        "§ 750 Abs. 2 ZPO",
+        "§ 779 ZPO",
+        "§ 325 ZPO",
+        "Themenpool: zwangsv-918"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.401Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-504",
+      "ueberzeile": "Klausurtipp Sachenrecht",
+      "titel": "Eigentumsvorbehalt: Bis zum Rücktritt darf der Käufer die Sache behalten",
+      "text": "Verlangt der Vorbehaltsverkäufer nach § 985 BGB Herausgabe, prüf § 986 BGB: Der Kaufvertrag gibt dem Käufer ein Recht zum Besitz. Herausverlangen kann der Verkäufer erst, wenn er vom Vertrag zurückgetreten ist (§ 449 Abs. 2 BGB). Ob das Anwartschaftsrecht selbst ein Besitzrecht gibt, ist umstritten – gegenüber dem Verkäufer reicht der Kaufvertrag.",
+      "quellen": [
+        "§ 985 BGB",
+        "§ 986 BGB",
+        "§ 449 BGB",
+        "Themenpool: sachen-504"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.401Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-474",
+      "ueberzeile": "3 Punkte Recht auf Reparatur",
+      "titel": "Handy nach drei Jahren defekt: Wer muss jetzt reparieren?",
+      "text": "Die Rechte gegen den Verkäufer helfen dann oft nicht mehr – der Reparaturanspruch gegen den Hersteller kann greifen.",
+      "punkte": [
+        "Mängelrechte gegen den Verkäufer: meist verjährt (§ 438 Abs. 1 Nr. 3 BGB)",
+        "Hersteller repariert erfasste Waren wie Smartphones (§§ 479a ff. BGB)",
+        "Unentgeltlich oder gegen angemessenes Entgelt, in angemessener Zeit"
+      ],
+      "quellen": [
+        "§§ 479a ff. BGB",
+        "§ 438 BGB",
+        "Richtlinie (EU) 2024/1799",
+        "Themenpool: schuldbt-474"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:24:31.401Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

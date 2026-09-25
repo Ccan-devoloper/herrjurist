@@ -1,0 +1,875 @@
+{
+  "datum": "2027-02-22",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "bgbat-423",
+        "themaTitel": "Geschäftsunfähigkeit und Nichtigkeit",
+        "fach": "bgbat",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "stpo-775",
+        "themaTitel": "Blutentnahme und körperliche Untersuchung",
+        "fach": "stpo",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessoroer-712",
+        "themaTitel": "Kostenentscheidung und Zuziehung eines Bevollmächtigten",
+        "fach": "assessoroer",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:21",
+        "art": "frage",
+        "themaId": "staat-079"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:21",
+        "art": "antwort",
+        "themaId": "staat-079"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:07",
+        "art": "norm",
+        "themaId": "bgbat-148"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "tipp",
+        "themaId": "zpo-277"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:59",
+        "art": "zahl",
+        "themaId": "zwangsv-826"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:07",
+        "art": "streitstand",
+        "themaId": "revision-873"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "bgbat-423",
+      "poolTitel": "Geschäftsunfähigkeit und Nichtigkeit",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 104, 105 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-24",
+        "2026-11-24"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "stpo-775",
+      "poolTitel": "Blutentnahme und körperliche Untersuchung",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 81a StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessoroer-712",
+      "poolTitel": "Kostenentscheidung und Zuziehung eines Bevollmächtigten",
+      "fach": "assessoroer",
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "klausur": 3,
+      "normen": [
+        "§ 80 VwVfG; VwGO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "staat-079",
+      "poolTitel": "Was sind die wichtigsten Ausprägungen des Rechtsstaatsprinzips?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 19 Abs. 4 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28",
+        "2027-01-01"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "staat-079",
+      "poolTitel": "Was sind die wichtigsten Ausprägungen des Rechtsstaatsprinzips?",
+      "fach": "staat",
+      "fachLabel": "Staatsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 19 Abs. 4 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-28",
+        "2027-01-01"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bgbat-148",
+      "poolTitel": "Wann geht eine Willenserklärung unter Abwesenden zu?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 130 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-11",
+        "2026-11-04",
+        "2026-12-14"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "zpo-277",
+      "poolTitel": "Was ist der Streitgegenstand und warum entscheidet er über die Rechtskraft?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 253 ZPO",
+        "§ 322 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-10",
+        "2026-11-09",
+        "2026-12-04"
+      ]
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "zwangsv-826",
+      "poolTitel": "Wie prüft man die Vollstreckungsabwehrklage?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-16"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "revision-873",
+      "poolTitel": "Wann ist die Revision statthaft?",
+      "fach": "revision",
+      "fachLabel": "Revision im Strafverfahren",
+      "klausur": 2,
+      "normen": [
+        "§ 333 StPO",
+        "§ 335 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-20",
+        "2026-10-25",
+        "2026-12-22"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "fachLabel": "BGB Allgemeiner Teil",
+      "themaId": "bgbat-423",
+      "slug": "2027-02-22-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Volltrunken gekauft: nichtig, obwohl geschäftsfähig",
+          "titelZeilen": [
+            "Volltrunken gekauft:",
+            "nichtig, obwohl",
+            "geschäftsfähig"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 105 Abs. 2 statt § 104 Nr. 2",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A hat in der Kneipe so viel getrunken, dass er kaum noch weiß, was er tut. Er kauft dem B dessen Uhr für 500 € ab und zahlt bar. Am nächsten Morgen will er sein Geld zurück. Ist der Kaufvertrag wirksam – und über welche Norm läuft die Prüfung?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du",
+          "schritte": [
+            {
+              "titel": "1. § 104 Nr. 2 BGB?",
+              "text": "Geschäftsunfähig ist nur, wessen krankhafte Störung der Geistestätigkeit nicht bloß vorübergehend ist. Ein Rausch geht vorbei – also nein."
+            },
+            {
+              "titel": "2. § 105 Abs. 2 BGB",
+              "text": "Nichtig ist aber die Erklärung, die im Zustand der Bewusstlosigkeit oder vorübergehender Störung der Geistestätigkeit abgegeben wird."
+            },
+            {
+              "titel": "3. Freie Willensbestimmung",
+              "text": "Entscheidend ist, ob sie ausgeschlossen war. Eine feste Promillegrenze gibt es nicht – es kommt auf die Umstände des Einzelfalls an."
+            },
+            {
+              "titel": "4. Folgen",
+              "text": "Kaufvertrag nichtig. Auch die Übereignungen: Die Einigungserklärungen des A leiden am selben Mangel."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Den Betrunkenen als geschäftsunfähig nach § 104 Nr. 2 BGB einordnen. Der Rausch ist vorübergehend – A bleibt geschäftsfähig. Nichtig ist nur die einzelne Erklärung nach § 105 Abs. 2 BGB. Deshalb helfen auch Regeln, die an die Geschäftsunfähigkeit anknüpfen (etwa § 105a BGB), hier nicht weiter."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Falls",
+          "punkte": [
+            "Kein Kaufvertrag: A schuldet keine 500 €, B keine Uhr.",
+            "Die Einigung über das Geld ist ebenfalls nichtig – A bleibt Eigentümer der Scheine (§ 985 BGB).",
+            "Sind die Scheine vermischt oder ausgegeben, bleibt der Weg über §§ 812 ff. BGB."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Dauerhafte Störung: geschäftsunfähig (§ 104 Nr. 2). Vorübergehender Rausch: geschäftsfähig, aber die Erklärung ist nichtig (§ 105 Abs. 2)."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen beim Rausch-Fall",
+          "punkte": [
+            "Dauerhaft oder vorübergehend gestört?",
+            "Freie Willensbestimmung ausgeschlossen?",
+            "Welche Erklärungen sind betroffen?"
+          ],
+          "icons": [
+            "uhr",
+            "lupe",
+            "vertrag"
+          ]
+        }
+      ],
+      "caption": "Volltrunken gekauft: Der Vertrag ist nichtig – aber nicht, weil A geschäftsunfähig wäre. § 104 Nr. 2 BGB verlangt eine Störung, die nicht nur vorübergehend ist. Beim Rausch greift § 105 Abs. 2 BGB: Nichtig ist die einzelne Erklärung, wenn die freie Willensbestimmung ausgeschlossen war. Das erfasst auch die Übereignungen. Speichern für die nächste BGB-AT-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#bgbat",
+        "#105bgb",
+        "#geschäftsfähigkeit",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Rausch: § 105 Abs. 2 statt § 104 Nr. 2 BGB",
+      "coverText": "§ 105 Abs. 2 statt § 104 Nr. 2",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Wer nur vorübergehend nicht bei Sinnen ist, bleibt geschäftsfähig – seine Erklärung in diesem Moment gilt trotzdem nicht.",
+        "handlung": "{A} wobbles dizzily while handing over a shiny pocket watch, and {B} pauses mid-reach, noticing that the spinning spiral above {A}'s head is only a passing cloud that is already fading.",
+        "hinweisRegie": "Place the note in the open space beside the fading spiral cloud, slightly tilted toward it, so the temporary state is linked to the note without covering the watch or {B}'s hand.",
+        "alternative": "{B} holds up an hourglass next to a dizzy {A}, showing that the confusion drains away while a signed slip in {A}'s hand dissolves into mist."
+      },
+      "bildSzene": "dizzy mechanic hands over pocket watch",
+      "bildSzeneAlt": "hourglass beside dizzy figure, slip dissolving",
+      "quellen": [
+        "§ 104 Nr. 2 BGB",
+        "§ 105 Abs. 1, 2 BGB",
+        "§ 105a BGB",
+        "§ 929 S. 1 BGB",
+        "§ 985 BGB",
+        "§ 812 BGB",
+        "Themenpool: bgbat-423"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.243Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "stpo",
+      "klausur": 2,
+      "fachLabel": "Strafprozessrecht",
+      "themaId": "stpo-775",
+      "slug": "2027-02-22-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Blutprobe nach § 81a StPO: vier Prüfpunkte – pusten muss keiner",
+          "titelZeilen": [
+            "Blutprobe:",
+            "vier Prüfpunkte –",
+            "pusten muss keiner"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Dulden ja, mitwirken nein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 81a StPO erlaubt die körperliche Untersuchung des Beschuldigten und Eingriffe wie die Blutentnahme – notfalls mit Zwang. Der Beschuldigte muss sie dulden. Aktiv mitwirken muss er nicht."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Betroffener ist Beschuldigter",
+              "text": "§ 81a StPO gilt nur für ihn. Andere Personen, etwa Zeugen, nur unter den engeren Voraussetzungen des § 81c StPO."
+            },
+            {
+              "titel": "2. Zulässige Maßnahme",
+              "text": "Für verfahrenserhebliche Tatsachen; Eingriffe nur durch einen Arzt nach den Regeln der ärztlichen Kunst, ohne Gesundheitsnachteil."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Anordnung",
+              "text": "Grundsätzlich der Richter; bei Gefährdung des Untersuchungserfolgs durch Verzögerung auch StA und Ermittlungspersonen (§ 81a Abs. 2 StPO)."
+            },
+            {
+              "titel": "Sonderfall Verkehr",
+              "text": "Bei Verdacht bestimmter Verkehrsdelikte, etwa § 316 StGB, braucht die Blutprobe keine richterliche Anordnung (§ 81a Abs. 2 S. 2 StPO)."
+            },
+            {
+              "titel": "4. Verhältnismäßigkeit",
+              "text": "Der Eingriff muss zur Bedeutung der Sache und zur Stärke des Tatverdachts in angemessenem Verhältnis stehen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: dulden, nicht mitwirken",
+          "text": "Niemand muss sich selbst belasten: Der Beschuldigte muss die Blutentnahme hinnehmen, aber weder in ein Atemalkoholgerät pusten noch an Geh- oder Sprechtests mitwirken. Ob ein Verstoß gegen den Richtervorbehalt zu einem Verwertungsverbot führt, entscheidet die Rspr. nach Abwägung – nicht automatisch."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 81a StPO verlangt Dulden, kein Mitmachen: Blut abnehmen ja, Pusten nur freiwillig."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 81a StPO in vier Zügen",
+          "punkte": [
+            "Beschuldigter – sonst § 81c StPO",
+            "Arzt, keine Gesundheitsgefahr",
+            "Richter, Eilkompetenz, Verkehrsausnahme",
+            "Verhältnismäßig?"
+          ],
+          "icons": [
+            "person",
+            "arzt",
+            "richter",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Blutprobe nach § 81a StPO in vier Prüfpunkten: Beschuldigter, zulässiger Eingriff durch einen Arzt, richtige Anordnung, Verhältnismäßigkeit. Dazu die Grenze, die oft untergeht: Der Beschuldigte muss dulden, aber nicht mitwirken. Pusten, Gehtest und Sprechprobe sind freiwillig. Bei bestimmten Verkehrsdelikten braucht die Blutprobe keinen Richter. Speichern für die nächste StPO-Zusatzfrage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#81astpo",
+        "#blutprobe",
+        "#strafprozessrecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 81a StPO: Blutprobe in vier Prüfpunkten",
+      "coverText": "Dulden ja, mitwirken nein",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "mara"
+        ],
+        "kernidee": "Der Beschuldigte muss die Blutprobe hinnehmen, aber niemand kann ihn zwingen, selbst an seiner Überführung mitzuwirken.",
+        "handlung": "{B} sits calmly with one sleeve rolled up for a small sample vial held by {A}, while pushing away a breath-test tube that {A} offers with the other arm.",
+        "hinweisRegie": "Place the note in the free space between the sample vial and the pushed-away tube, slightly tilted toward the tube, so the difference between tolerating and cooperating is clear without covering {B}'s face.",
+        "alternative": "{A} holds open a door to an examination room that {B} walks through calmly, while a balance beam for a walking test stands untouched beside them."
+      },
+      "bildSzene": "sample vial accepted, breath tube refused",
+      "bildSzeneAlt": "calm walk past untouched balance beam",
+      "quellen": [
+        "§ 81a StPO",
+        "§ 81c StPO",
+        "§ 316 StGB",
+        "Themenpool: stpo-775"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-pruefpunkte-mit-grenze",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.243Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessoroer",
+      "klausur": 3,
+      "fachLabel": "Öffentlich-rechtliche Assessorklausur",
+      "themaId": "assessoroer-712",
+      "slug": "2027-02-22-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Gewonnen – und den Widerspruchsanwalt selbst zahlen?",
+          "unter": "Kosten · § 162 Abs. 2 S. 2 VwGO",
+          "text": "Anwaltskosten des Vorverfahrens gibt es nur, wenn das Gericht die Zuziehung für notwendig erklärt.",
+          "norm": "§ 162 Abs. 2 S. 2 VwGO",
+          "icon": "geldbeutel",
+          "sprecher": "Klage gewonnen, und trotzdem zahlst du den Anwalt selbst? Das passiert, wenn im Tenor ein Satz fehlt. Für das Widerspruchsverfahren gilt nämlich eine Sonderregel.",
+          "marken": [
+            "ein Satz fehlt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Die normale Kostenentscheidung",
+          "text": "Wer unterliegt, trägt die Kosten – einschließlich der Kosten des Vorverfahrens.",
+          "norm": "§ 154 Abs. 1 · § 162 Abs. 1 VwGO",
+          "sprecher": "Schritt eins: die Kostengrundentscheidung. Wer unterliegt, trägt die Kosten, Paragraf 154 Absatz 1 VwGO. Dazu zählen auch die Kosten des Vorverfahrens, Paragraf 162 Absatz 1.",
+          "marken": [
+            "§ 154 VwGO"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der Anwalt im Vorverfahren",
+          "text": "Seine Gebühren sind nur erstattungsfähig, wenn das Gericht die Zuziehung für notwendig erklärt.",
+          "norm": "§ 162 Abs. 2 S. 2 VwGO",
+          "sprecher": "Schritt zwei: der Anwalt im Vorverfahren. Seine Gebühren werden nur erstattet, wenn das Gericht die Zuziehung eines Bevollmächtigten für das Vorverfahren für notwendig erklärt. Ohne diesen Ausspruch bleiben sie bei dir.",
+          "marken": [
+            "für notwendig erklärt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Wann ist die Zuziehung notwendig?",
+          "text": "Aus Sicht einer verständigen Partei: War es ihr zumutbar, das Verfahren selbst zu führen?",
+          "norm": null,
+          "sprecher": "Schritt drei: der Maßstab. Gefragt wird aus der Sicht einer verständigen Partei. War es ihr zumutbar, das Widerspruchsverfahren ohne Anwalt zu führen? Bei nicht einfacher Sach- oder Rechtslage wird das meist verneint.",
+          "marken": [
+            "verständige Partei"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "In der Behördenklausur: § 80 VwVfG",
+          "text": "Erfolgreicher Widerspruch: Kostenerstattung, Entscheidung über die Zuziehung im Widerspruchsbescheid.",
+          "norm": "§ 80 Abs. 1–3 VwVfG",
+          "sprecher": "Schreibst du den Widerspruchsbescheid, gilt Paragraf 80 VwVfG oder das gleichlautende Landesrecht. Hat der Widerspruch Erfolg, werden die Kosten erstattet. Über die Notwendigkeit der Zuziehung entscheidet die Behörde gleich mit. Und: Das gilt auch, wenn der Widerspruch nur scheitert, weil ein Verfahrensfehler nach Paragraf 45 geheilt wurde.",
+          "marken": [
+            "§ 80 VwVfG",
+            "auch bei § 45"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Der Satz für den Tenor",
+          "text": "„Die Zuziehung eines Bevollmächtigten für das Vorverfahren wird für notwendig erklärt.“",
+          "norm": "§ 162 Abs. 2 S. 2 VwGO",
+          "sprecher": "Merke den Satz für den Tenor: Die Zuziehung eines Bevollmächtigten für das Vorverfahren wird für notwendig erklärt.",
+          "marken": [
+            "Tenor"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Vor dem Abgeben: Kostentenor prüfen",
+          "text": "Speichern für die nächste Assessorklausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste Assessorklausur. Und lies deinen Kostentenor am Ende noch einmal: Gab es ein Vorverfahren mit Anwalt?",
+          "marken": [
+            "gegenlesen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Klage gewonnen, Anwalt trotzdem selbst zahlen? Die Anwaltskosten des Widerspruchsverfahrens sind nur erstattungsfähig, wenn das Gericht die Zuziehung eines Bevollmächtigten für das Vorverfahren für notwendig erklärt (§ 162 Abs. 2 S. 2 VwGO). Maßstab ist die Sicht einer verständigen Partei. Im Widerspruchsbescheid entscheidet die Behörde darüber nach § 80 VwVfG bzw. Landesrecht. Speichern für die nächste Assessorklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#kostenentscheidung",
+        "#widerspruchsverfahren",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zuziehung im Vorverfahren: der fehlende Satz",
+      "titelZeilen": [
+        "Gewonnen – und den",
+        "Widerspruchsanwalt",
+        "selbst zahlen?"
+      ],
+      "coverText": "Zuziehung für notwendig erklären",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Die Anwaltskosten des Vorverfahrens werden nur erstattet, wenn das Gericht die Zuziehung ausdrücklich für notwendig erklärt.",
+        "handlung": "{B} proudly holds up a winner's ribbon while a heavy sack of coins still hangs on his back, and {A} points with his pointer at a single missing piece in a small puzzle frame that would release the sack.",
+        "hinweisRegie": "Place the note in the open space next to the puzzle frame with the missing piece, slightly tilted toward it, so the missing sentence is emphasized without covering the ribbon or the sack.",
+        "alternative": "{A} hands {B} a key that unlocks a second smaller treasure chest standing behind the large one {B} has already opened."
+      },
+      "bildSzene": "winner still carrying heavy coin sack",
+      "bildSzeneAlt": "second small chest unlocked by key",
+      "quellen": [
+        "§ 154 Abs. 1 VwGO",
+        "§ 162 Abs. 1, 2 VwGO",
+        "§ 80 VwVfG",
+        "§ 45 VwVfG",
+        "Themenpool: assessoroer-712"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.244Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-079",
+      "ueberzeile": "Prüfungsfrage Staatsrecht",
+      "titel": "Der Bund fördert Unternehmen ohne Fachgesetz, allein gestützt auf den Haushaltsplan. Genügt das?",
+      "optionen": [
+        "Nein – jede staatliche Leistung braucht ein eigenes Fachgesetz",
+        "In der Regel ja – für Subventionen reicht meist der Haushaltsansatz",
+        "Ja – für Leistungen gilt der Vorrang des Gesetzes nicht"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 3 Abs. 1 GG",
+        "Themenpool: staat-079"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.245Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "staat",
+      "klausur": 3,
+      "pairId": "staat-079",
+      "ueberzeile": "Auflösung",
+      "titel": "Meist ja – der Vorbehalt des Gesetzes gilt für Subventionen nur eingeschränkt",
+      "text": "Der Vorbehalt des Gesetzes (Art. 20 Abs. 3 GG) verlangt für Eingriffe stets eine gesetzliche Grundlage. Für Subventionen lässt die Rspr. grundsätzlich die Mittelbereitstellung im Haushaltsplan genügen – anders, wo die Förderung Grundrechte Dritter wesentlich berührt. Der Vorrang des Gesetzes gilt immer; die Vergabe bindet Art. 3 Abs. 1 GG.",
+      "norm": "Art. 20 Abs. 3 GG · Art. 3 Abs. 1 GG",
+      "quellen": [
+        "Art. 20 Abs. 3 GG",
+        "Art. 3 Abs. 1 GG",
+        "Themenpool: staat-079"
+      ],
+      "fachLabel": "Staatsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.245Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Nein – jede staatliche Leistung braucht ein eigenes Fachgesetz",
+        "In der Regel ja – für Subventionen reicht meist der Haushaltsansatz",
+        "Ja – für Leistungen gilt der Vorrang des Gesetzes nicht"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-148",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 130 Abs. 2 BGB: Absender gestorben – die Erklärung wird trotzdem wirksam",
+      "text": "Stirbt der Erklärende nach der Abgabe oder wird er geschäftsunfähig, hindert das die Wirksamkeit nicht: Die Erklärung wird mit Zugang wirksam (§ 130 Abs. 2 BGB). Voraussetzung ist, dass sie schon abgegeben, also willentlich auf den Weg zum Empfänger gebracht war. Beim Angebot hilft § 153 BGB: Der Vertrag kann auch noch mit den Erben zustande kommen.",
+      "norm": "§ 130 Abs. 2 BGB · § 153 BGB",
+      "quellen": [
+        "§ 130 BGB",
+        "§ 153 BGB",
+        "Themenpool: bgbat-148"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.245Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-277",
+      "ueberzeile": "Klausurtipp ZPO",
+      "titel": "Herausgabe gewonnen – das Eigentum ist damit nicht rechtskräftig festgestellt",
+      "text": "Rechtskräftig wird nur die Entscheidung über den Streitgegenstand (§ 322 Abs. 1 ZPO), nicht die Vorfrage. Wer nach § 985 BGB gewinnt, hat im Folgeprozess kein rechtskräftiges Eigentum. Soll es verbindlich geklärt werden, braucht es eine Zwischenfeststellungsklage (§ 256 Abs. 2 ZPO). Im Folgeprozess deshalb zuerst den Streitgegenstand des Vorprozesses bestimmen.",
+      "quellen": [
+        "§ 253 Abs. 2 Nr. 2 ZPO",
+        "§ 256 Abs. 2 ZPO",
+        "§ 322 Abs. 1 ZPO",
+        "§ 985 BGB",
+        "Themenpool: zpo-277"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.245Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-826",
+      "ueberzeile": "4 Punkte Zwangsvollstreckung",
+      "titel": "§ 767 Abs. 2 ZPO: Welche Einwendungen sind abgeschnitten?",
+      "text": "Die Vollstreckungsabwehrklage ist kein Rechtsmittel: Was schon im Vorprozess hätte vorgebracht werden können, ist ausgeschlossen.",
+      "punkte": [
+        "Gründe müssen nach Schluss der letzten mündlichen Verhandlung entstanden sein",
+        "Beim Versäumnisurteil: nach Ablauf der Einspruchsfrist",
+        "Aufrechnung: BGH stellt auf die Aufrechnungslage ab, Teile der Lit. auf die Erklärung",
+        "Bei vollstreckbaren Urkunden gilt die Präklusion nicht (§ 797 Abs. 4 ZPO)"
+      ],
+      "quellen": [
+        "§ 767 Abs. 2 ZPO",
+        "§ 797 Abs. 4 ZPO",
+        "Themenpool: zwangsv-826"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.245Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "revision",
+      "klausur": 2,
+      "pairId": "revision-873",
+      "ueberzeile": "Streitstand Revision",
+      "titel": "Zeuge nicht nach § 55 StPO belehrt: Kann der Angeklagte das rügen?",
+      "norm": "§ 55 Abs. 2 StPO",
+      "optionen": [
+        "BGH (Rechtskreistheorie): nein – § 55 StPO schützt allein den Zeugen.",
+        "Weite Teile der Lit.: ja – es kommt nur auf das Beruhen an."
+      ],
+      "text": "Klausur: Mit dem BGH scheitert die Rüge, der Rechtskreis des Angeklagten ist nicht berührt. Anders bei § 52 StPO: Die fehlende Belehrung eines Angehörigen kann er rügen – das Recht schützt auch die Familienbande zu ihm.",
+      "quellen": [
+        "§ 52 Abs. 3 StPO",
+        "§ 55 StPO",
+        "§ 337 StPO",
+        "Themenpool: revision-873"
+      ],
+      "fachLabel": "Revision (StPO)",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:10:19.245Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

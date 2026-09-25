@@ -1,0 +1,855 @@
+{
+  "datum": "2027-02-15",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwbt-119",
+        "themaTitel": "Wie ist der Verwaltungszwang aufgebaut?",
+        "fach": "verwbt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "schuld-456",
+        "themaTitel": "Störung der Geschäftsgrundlage",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafat-301",
+        "themaTitel": "Wann liegt Ingerenz vor?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:02",
+        "art": "frage",
+        "themaId": "strafbt-758"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:02",
+        "art": "antwort",
+        "themaId": "strafbt-758"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:02",
+        "art": "norm",
+        "themaId": "assessorz-583"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:29",
+        "art": "tipp",
+        "themaId": "schuldbt-488"
+      },
+      {
+        "slot": "s8",
+        "zeit": "17:01",
+        "art": "zahl",
+        "themaId": "methodik-900"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "streitstand",
+        "themaId": "assessorz-812"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwbt-119",
+      "poolTitel": "Wie ist der Verwaltungszwang aufgebaut?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Bundes-/Landes-VwVG",
+        "beim Bund insbesondere §§ 6, 13 VwVG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-03"
+      ]
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "schuld-456",
+      "poolTitel": "Störung der Geschäftsgrundlage",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 313 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-301",
+      "poolTitel": "Wann liegt Ingerenz vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 13 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafbt-758",
+      "poolTitel": "Untreue",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-06",
+        "2026-12-06",
+        "2027-01-27"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafbt-758",
+      "poolTitel": "Untreue",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 266 StGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-06",
+        "2026-12-06",
+        "2027-01-27"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "assessorz-583",
+      "poolTitel": "Einstweiliger Rechtsschutz aus Anwaltssicht",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§§ 916 ff., 935 ff. ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-14"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "schuldbt-488",
+      "poolTitel": "Nacherfüllung und Selbstvornahme im Werkvertrag",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§§ 635, 637 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-900",
+      "poolTitel": "Streitstände nur dort, wo sie entscheidungserheblich sind",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-20",
+        "2026-11-28",
+        "2027-02-13"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-812",
+      "poolTitel": "Wie baut man die Hilfsaufrechnung im Urteil auf?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 322 Abs. 2 ZPO",
+        "§ 387 BGB",
+        "§ 45 Abs. 3 GKG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-15",
+        "2026-12-15"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwbt",
+      "klausur": 3,
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "themaId": "verwbt-119",
+      "slug": "2027-02-15-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Zwangsgeld: Die Rechtmäßigkeit des Grund-VA zählt hier nicht",
+          "titelZeilen": [
+            "Zwangsgeld: Die",
+            "Rechtmäßigkeit des",
+            "Grund-VA zählt",
+            "hier nicht"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Wirksam und vollziehbar genügt",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Behörde untersagt A, seine Halle als Lager zu nutzen. A lässt die Rechtsbehelfsfrist verstreichen, die Untersagung wird unanfechtbar. A nutzt weiter, die Behörde droht ein Zwangsgeld an. A meint, schon die Untersagung sei rechtswidrig gewesen. Hilft ihm das?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du die Zwangsgeldandrohung",
+          "schritte": [
+            {
+              "titel": "1. Ermächtigungsgrundlage",
+              "text": "Landesbehörde: Landes-VwVG. Bundesbehörde: VwVG des Bundes (§§ 6, 9, 13 VwVG). Aufbau und Begriffe weichen im Detail ab."
+            },
+            {
+              "titel": "2. Formelle Rechtmäßigkeit",
+              "text": "Zuständige Vollstreckungsbehörde; Androhung schriftlich und mit angemessener Frist zur Erfüllung (§ 13 VwVG)."
+            },
+            {
+              "titel": "3. Vollstreckbarer Grund-VA",
+              "text": "Auf Handlung, Duldung oder Unterlassung gerichtet, wirksam und unanfechtbar oder sofort vollziehbar (§ 6 Abs. 1 VwVG)."
+            },
+            {
+              "titel": "4. Zwangsmittel",
+              "text": "Zulässiges Zwangsmittel (§ 9 VwVG), in bestimmter Höhe angedroht und verhältnismäßig."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Die Rechtmäßigkeit der Untersagung inzident durchprüfen. Im gestreckten Verfahren genügt nach der Rspr. ein wirksamer und vollziehbarer Grund-VA. Einwände gegen ihn gehören in seine eigene Anfechtung. Grenze: Ein nichtiger VA ist unwirksam (§ 43 Abs. 3 VwVfG) und trägt keine Vollstreckung."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "Nein. Die Untersagung ist unanfechtbar und wirksam – das trägt die Vollstreckung. Gegen die Androhung kann A nur Fehler rügen, die in ihr selbst liegen, etwa eine fehlende Frist oder einen unbestimmten Betrag (Bund: § 18 Abs. 1 S. 3 VwVG; Landesrecht prüfen)."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Im gestreckten Verfahren trägt der wirksame, vollziehbare Grund-VA die Vollstreckung. Einwände gegen ihn gehören in seine eigene Anfechtung."
+        },
+        {
+          "art": "cta",
+          "titel": "Zwangsgeld in drei Zügen",
+          "punkte": [
+            "Grund-VA wirksam und vollziehbar?",
+            "Androhung: schriftlich, Frist, Betrag",
+            "Zwangsmittel verhältnismäßig?"
+          ],
+          "icons": [
+            "dokument",
+            "uhr",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Die Nutzungsuntersagung war vielleicht rechtswidrig – das Zwangsgeld kann trotzdem rechtmäßig sein. Im gestreckten Verfahren setzt die Vollstreckung nach der Rspr. nur einen wirksamen und unanfechtbaren oder sofort vollziehbaren Grund-VA voraus (§ 6 Abs. 1 VwVG). Einwände gegen den Grund-VA gehören in dessen Anfechtung; gegen die Androhung zählen nur ihre eigenen Fehler, etwa Frist oder Betrag. Landesbehörden vollstrecken nach Landes-VwVG. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#verwaltungsvollstreckung",
+        "#zwangsgeld",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Verwaltungszwang: Grund-VA muss wirksam sein",
+      "coverText": "Wirksam und vollziehbar genügt",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "rex"
+        ],
+        "kernidee": "Die Vollstreckung fragt nur, ob die Anordnung wirksam und vollziehbar ist – nicht, ob sie richtig war.",
+        "handlung": "{A} hovers beside a locked warehouse door and calmly clips a small weight tag onto its handle, while {B} frantically waves a crumpled old sheet of paper, protesting about the original order.",
+        "hinweisRegie": "Place the note in the free space between the weight tag on the door handle and {B}'s crumpled sheet, slightly tilted toward the door, so the enforcement step reads as independent without covering either character's hands.",
+        "alternative": "{B} tries to push a heavy stone back up a ramp it has already rolled down, while {A} quietly points to the next station further along the ramp."
+      },
+      "bildSzene": "droid tags warehouse door, mechanic protests",
+      "bildSzeneAlt": "stone rolled past the point of return",
+      "quellen": [
+        "§§ 6, 9, 13, 18 VwVG",
+        "Landes-VwVG",
+        "§ 43 Abs. 3 VwVfG",
+        "Themenpool: verwbt-119"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontraintuitive-regel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.363Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-456",
+      "slug": "2027-02-15-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "§ 313 BGB: fünf Schritte, Anpassung vor Rücktritt",
+          "titelZeilen": [
+            "§ 313 BGB:",
+            "fünf Schritte,",
+            "Anpassung vor",
+            "Rücktritt"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Erst anpassen, dann lösen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "§ 313 BGB hilft, wenn sich Umstände, die zur Grundlage des Vertrags geworden sind, nach Vertragsschluss schwerwiegend verändern (Abs. 1) oder wesentliche gemeinsame Vorstellungen sich als falsch herausstellen (Abs. 2). Er ist ein Notventil – kein allgemeines Reuerecht."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Anwendbarkeit",
+              "text": "Vorrang haben Auslegung, ergänzende Vertragsauslegung, Mängelrecht, § 275 BGB und Anfechtung, soweit sie die Frage abschließend regeln."
+            },
+            {
+              "titel": "2. Geschäftsgrundlage",
+              "text": "Umstände, die nicht Vertragsinhalt sind, auf denen der Geschäftswille beider Parteien aber aufbaut (reales Element)."
+            },
+            {
+              "titel": "3. Schwerwiegende Änderung",
+              "text": "Bei Kenntnis hätten die Parteien den Vertrag nicht oder mit anderem Inhalt geschlossen (hypothetisches Element)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Unzumutbarkeit",
+              "text": "Festhalten am unveränderten Vertrag ist unzumutbar – nach allen Umständen, vor allem der vertraglichen oder gesetzlichen Risikoverteilung."
+            },
+            {
+              "titel": "5. Rechtsfolge",
+              "text": "Anspruch auf Anpassung (Abs. 1). Nur wenn sie nicht möglich oder unzumutbar ist: Rücktritt, bei Dauerschuldverhältnissen Kündigung (Abs. 3)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: die Risikoverteilung",
+          "text": "Hier entscheidet sich der Fall. Liegt das Risiko nach Vertrag oder Gesetz bei einer Partei, scheidet § 313 BGB regelmäßig aus – etwa das Verwendungsrisiko des Käufers. Deshalb zuerst fragen: Wer sollte genau dieses Risiko tragen?"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Grundlage, schwerwiegende Änderung, Unzumutbarkeit nach Risikoverteilung – dann Anpassung. Rücktritt oder Kündigung erst, wenn Anpassung ausscheidet."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 313 BGB in vier Zügen",
+          "punkte": [
+            "Vorrang anderer Regeln prüfen",
+            "Grundlage und schwerwiegende Änderung",
+            "Risikoverteilung entscheidet",
+            "Anpassung vor Rücktritt"
+          ],
+          "icons": [
+            "paragraf",
+            "lupe",
+            "waage",
+            "vertrag"
+          ]
+        }
+      ],
+      "caption": "§ 313 BGB in fünf Schritten: Anwendbarkeit, Geschäftsgrundlage, schwerwiegende Änderung, Unzumutbarkeit und Rechtsfolge. Der Kern liegt in der Risikoverteilung – was eine Partei nach Vertrag oder Gesetz tragen sollte, rettet § 313 BGB nicht. Und die Rechtsfolge ist zuerst die Anpassung; Rücktritt oder Kündigung kommen nach Abs. 3 nur, wenn sie ausscheidet. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#313bgb",
+        "#geschäftsgrundlage",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 313 BGB: das Prüfschema in fünf Schritten",
+      "coverText": "Erst anpassen, dann lösen",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "zylla"
+        ],
+        "kernidee": "Wenn die gemeinsame Grundlage wegbricht, wird der Vertrag zuerst angepasst und nicht sofort aufgelöst.",
+        "handlung": "{A} steadies a wooden bridge whose supporting pillar has sunk and slides a new wedge under it, while {B} waits curiously at the start of the bridge instead of turning back.",
+        "hinweisRegie": "Place the note in the free space beside the sunken pillar and the new wedge, slightly tilted toward the wedge, so adjustment reads as the first answer without covering {A}'s hands or {B}'s face.",
+        "alternative": "{A} and {B} rebalance a two-sided scale after a heavy stone unexpectedly fell on one side, adding a small counterweight instead of tipping the scale over."
+      },
+      "bildSzene": "expeditionist wedges sunken bridge pillar",
+      "bildSzeneAlt": "rebalancing scale with small counterweight",
+      "quellen": [
+        "§ 313 BGB",
+        "§ 275 BGB",
+        "Themenpool: schuld-456"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "fuenf-echte-pruefschritte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.386Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-301",
+      "slug": "2027-02-15-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nicht jedes Vorverhalten macht dich zum Garanten",
+          "unter": "Unterlassen · § 13 StGB",
+          "text": "Ingerenz verlangt nach h.M. ein pflichtwidriges Vorverhalten.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "icon": "warnung",
+          "sprecher": "Nicht jedes gefährliche Vorverhalten macht dich zum Garanten. Ingerenz heißt: Wer eine Gefahr schafft, muss den Schaden abwenden. Aber Rechtsprechung und herrschende Meinung ziehen klare Grenzen.",
+          "marken": [
+            "nicht jedes Vorverhalten",
+            "Grenzen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Naheliegende Gefahr",
+          "text": "Das Vorverhalten schafft die naheliegende Gefahr gerade dieses Erfolgs.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "sprecher": "Schritt eins: Das Vorverhalten muss die naheliegende Gefahr gerade des eingetretenen Erfolgs geschaffen haben. Eine entfernte, ganz unwahrscheinliche Gefahr genügt nicht. Das Risiko muss sich also gerade aufdrängen.",
+          "marken": [
+            "naheliegende Gefahr"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Pflichtwidrig",
+          "text": "Sorgfaltsgemäßes Verhalten begründet grundsätzlich keine Garantenstellung.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Das Vorverhalten muss pflichtwidrig sein. Wer sich korrekt verhält, etwa vorschriftsmäßig Auto fährt, wird nach der Rechtsprechung nicht allein dadurch Garant. Teile der Literatur lassen jedes gefahrschaffende Verhalten genügen.",
+          "marken": [
+            "pflichtwidrig?",
+            "h.M. vs. Teile d. Lit."
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Schutzzweckzusammenhang",
+          "text": "Die verletzte Pflicht dient gerade dem Schutz des gefährdeten Rechtsguts.",
+          "norm": null,
+          "sprecher": "Schritt drei: Die Pflichtwidrigkeit muss in der Verletzung eines Gebots liegen, das gerade dem Schutz des gefährdeten Rechtsguts dient. Sonst fehlt der Zusammenhang.",
+          "marken": [
+            "Schutzzweck"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Notwehr-Klassiker",
+          "text": "Wer in Notwehr verletzt, wird nicht Garant für den Angreifer.",
+          "norm": "§ 32 StGB · § 323c StGB",
+          "sprecher": "Der Klassiker: Wer sich in Notwehr rechtmäßig verteidigt, handelt nicht pflichtwidrig. Er wird deshalb nicht Garant für den verletzten Angreifer. In Betracht kommt dann nur unterlassene Hilfeleistung nach Paragraf 323c StGB.",
+          "marken": [
+            "Notwehr: kein Garant"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Naheliegende Gefahr, pflichtwidrig, Schutzzweck – erst dann Garant.",
+          "norm": "§ 13 Abs. 1 StGB",
+          "sprecher": "Merke: naheliegende Gefahr, pflichtwidriges Vorverhalten, Schutzzweckzusammenhang. Erst dann bist du Garant aus Ingerenz.",
+          "marken": [
+            "drei Filter"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erst die Pflichtwidrigkeit prüfen",
+          "text": "Speichern für die nächste Unterlassungsprüfung.",
+          "sprecher": "Speicher dir das für die nächste Unterlassungsprüfung. Und frag beim Vorverhalten immer zuerst: War das überhaupt pflichtwidrig? Erst danach lohnt sich der Blick auf die übrigen Voraussetzungen.",
+          "marken": [
+            "pflichtwidrig?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Nicht jedes gefährliche Vorverhalten macht dich zum Garanten. Ingerenz setzt nach Rspr. und h.M. voraus, dass das Vorverhalten die naheliegende Gefahr des Erfolgs schafft, pflichtwidrig ist und die verletzte Pflicht gerade dem Schutz des gefährdeten Rechtsguts dient. Klassiker: Wer in Notwehr verletzt, wird nicht Garant für den Angreifer – dann bleibt § 323c StGB. Speichern für die nächste Unterlassungsprüfung.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#unterlassen",
+        "#13stgb",
+        "#ingerenz",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Ingerenz: nicht jedes Vorverhalten zählt",
+      "titelZeilen": [
+        "Nicht jedes",
+        "Vorverhalten macht",
+        "dich zum Garanten"
+      ],
+      "coverText": "Pflichtwidrig muss es sein",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "brakk"
+        ],
+        "kernidee": "Nur wer die Gefahr pflichtwidrig geschaffen hat, muss später den Schaden abwenden.",
+        "handlung": "{A} points his pointer at two rocks rolling downhill: one carelessly kicked off a ledge, the other loosened while {B} walks correctly along the marked path.",
+        "hinweisRegie": "Place the note in the free space beside the carelessly kicked rock at the ledge, slightly tilted toward it, so the note links the duty to the careless act without covering {B} on the marked path.",
+        "alternative": "{B} holds up a shield against an attacker's blow, while {A} calmly shows that the fallen attacker does not make {B} responsible."
+      },
+      "bildSzene": "two rocks rolling, one kicked carelessly",
+      "bildSzeneAlt": "defender with shield, fallen attacker",
+      "quellen": [
+        "§ 13 StGB",
+        "§ 32 StGB",
+        "§ 323c StGB",
+        "Themenpool: strafat-301"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.388Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-758",
+      "ueberzeile": "Prüfungsfrage Strafrecht BT",
+      "titel": "K zahlt den fälligen Kaufpreis bewusst nicht, obwohl er könnte. Untreue gegenüber Verkäufer V?",
+      "optionen": [
+        "Ja – Treubruchstatbestand, weil K eine Vertragspflicht verletzt",
+        "Nein – eigene Leistungspflichten sind keine Vermögensbetreuung",
+        "Ja – Missbrauchstatbestand, weil K über sein Geld verfügt"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 266 StGB",
+        "Themenpool: strafbt-758"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.388Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-758",
+      "ueberzeile": "Auflösung",
+      "titel": "Nein – wer nur seine eigene Schuld nicht zahlt, betreut kein fremdes Vermögen",
+      "text": "§ 266 StGB verlangt eine Pflicht, fremde Vermögensinteressen wahrzunehmen – nach h.M. auch beim Missbrauchstatbestand. Sie muss eine Hauptpflicht von einigem Gewicht sein, fremdnützig und mit gewisser Selbständigkeit. Wer bloß eine eigene Leistungspflicht nicht erfüllt, verletzt den Vertrag, betreut aber kein fremdes Vermögen.",
+      "norm": "§ 266 Abs. 1 StGB",
+      "quellen": [
+        "§ 266 StGB",
+        "Themenpool: strafbt-758"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.388Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – Treubruchstatbestand, weil K eine Vertragspflicht verletzt",
+        "Nein – eigene Leistungspflichten sind keine Vermögensbetreuung",
+        "Ja – Missbrauchstatbestand, weil K über sein Geld verfügt"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-583",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 929 Abs. 2 ZPO: Einstweilige Verfügung erwirkt – jetzt läuft ein Monat",
+      "text": "Arrest und einstweilige Verfügung (§ 936 ZPO) müssen binnen eines Monats vollzogen werden – ab Verkündung oder Zustellung an den Antragsteller (§ 929 Abs. 2 ZPO). Aus Anwaltssicht: Eine Unterlassungsverfügung vollziehst du nach der Rspr. durch Zustellung im Parteibetrieb. Frist versäumt? Dann ist die Verfügung aufzuheben, etwa auf Widerspruch oder nach § 927 ZPO.",
+      "norm": "§ 929 Abs. 2 ZPO · § 936 ZPO",
+      "quellen": [
+        "§ 929 Abs. 2 ZPO",
+        "§ 936 ZPO",
+        "§ 927 ZPO",
+        "Themenpool: assessorz-583"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.388Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-488",
+      "ueberzeile": "Klausurtipp Werkvertrag",
+      "titel": "Werkmangel: Hier wählt der Unternehmer – und Selbstvornahme erst nach Fristablauf",
+      "text": "Anders als im Kaufrecht wählt beim Werkvertrag der Unternehmer, ob er nachbessert oder neu herstellt (§ 635 Abs. 1 BGB). Beseitigt der Besteller den Mangel selbst, verlangt er Ersatz der Aufwendungen grundsätzlich erst nach erfolglosem Ablauf einer angemessenen Frist zur Nacherfüllung (§ 637 Abs. 1 BGB). Für die Kosten gibt es einen Vorschuss (§ 637 Abs. 3 BGB).",
+      "quellen": [
+        "§ 635 BGB",
+        "§ 637 BGB",
+        "Themenpool: schuldbt-488"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.388Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-900",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Streit entdeckt? Vier Fragen, bevor du ihn entscheidest",
+      "text": "Ein Streit gehört nur dann mit Stellungnahme ins Gutachten, wenn er den Fall entscheidet.",
+      "punkte": [
+        "Welche Ansichten werden ernsthaft vertreten?",
+        "Wozu führt jede im konkreten Fall?",
+        "Unterscheiden sich die Ergebnisse – auch für Folgefragen?",
+        "Nur dann: Stellung nehmen mit tragendem Argument"
+      ],
+      "quellen": [
+        "Themenpool: methodik-900"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.388Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-812",
+      "ueberzeile": "Streitstand Zivilprozess",
+      "titel": "Aufrechnung als verspätet zurückgewiesen: Ist die Gegenforderung trotzdem erloschen?",
+      "norm": "§ 296 ZPO · § 322 Abs. 2 ZPO",
+      "optionen": [
+        "H.M. (Doppeltatbestand): Nein – ist sie prozessual unbeachtlich, entfällt auch die materielle Wirkung.",
+        "Andere Ansicht (materielle Theorie): Ja – die Erklärung wirkt unabhängig vom Prozess."
+      ],
+      "text": "Folge der h.M.: Die Gegenforderung bleibt bestehen und kann eingeklagt werden. Das Urteil entscheidet über sie nicht rechtskräftig – § 322 Abs. 2 ZPO greift nicht.",
+      "quellen": [
+        "§ 296 ZPO",
+        "§§ 387, 389 BGB",
+        "§ 322 Abs. 2 ZPO",
+        "Themenpool: assessorz-812"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:18:21.388Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

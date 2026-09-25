@@ -1,0 +1,878 @@
+{
+  "datum": "2027-03-23",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "streitstand",
+        "themaId": "vwgo-654",
+        "themaTitel": "Verpflichtungsklage",
+        "fach": "vwgo",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "minifall",
+        "themaId": "zwangsv-827",
+        "themaTitel": "Was präkludiert § 767 Abs. 2 ZPO?",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "strafbt-342",
+        "themaTitel": "Wann ist eine Aussage falsch im Sinne der §§ 153 ff. StGB?",
+        "fach": "strafbt",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:20",
+        "art": "frage",
+        "themaId": "assessorz-580"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:20",
+        "art": "antwort",
+        "themaId": "assessorz-580"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:58",
+        "art": "norm",
+        "themaId": "schuldbt-190"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "zahl",
+        "themaId": "assessorz-805"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:55",
+        "art": "streitstand",
+        "themaId": "verwalt-931"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "merksatz",
+        "themaId": "strafat-313"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "streitstand",
+      "themaId": "vwgo-654",
+      "poolTitel": "Verpflichtungsklage",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 42 I Alt. 2 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "minifall",
+      "themaId": "zwangsv-827",
+      "poolTitel": "Was präkludiert § 767 Abs. 2 ZPO?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 767 Abs. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-11-29",
+        "2027-01-30"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafbt-342",
+      "poolTitel": "Wann ist eine Aussage falsch im Sinne der §§ 153 ff. StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 153 StGB",
+        "§ 154 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-580",
+      "poolTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2026-10-16"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-580",
+      "poolTitel": "Anwaltsklausur: Mandantenbegehren und Zweckmäßigkeit",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ZPO; BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2026-10-16"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-190",
+      "poolTitel": "Wer trägt die Beweislast für einen Mangel und wann kehrt sie sich um?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 477 BGB",
+        "§ 363 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-12",
+        "2026-10-26",
+        "2027-01-06"
+      ]
+    },
+    "s7": {
+      "art": "zahl",
+      "themaId": "assessorz-805",
+      "poolTitel": "Wie schreibt man Entscheidungsgründe im Urteilsstil?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 3 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-30",
+        "2026-12-06"
+      ]
+    },
+    "s8": {
+      "art": "streitstand",
+      "themaId": "verwalt-931",
+      "poolTitel": "Besorgnis der Befangenheit im Verwaltungsverfahren: §§ 20, 21 VwVfG",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 46 VwVfG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-11",
+        "2027-01-18"
+      ]
+    },
+    "s9": {
+      "art": "merksatz",
+      "themaId": "strafat-313",
+      "poolTitel": "Was ist eine mitbestrafte Nachtat?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "Konkurrenzlehre; Gesetzeskonkurrenz"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "streitstand",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-654",
+      "slug": "2027-03-23-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nur die Befristung stört: anfechten oder verpflichten?",
+          "titelZeilen": [
+            "Nur die Befristung",
+            "stört: anfechten",
+            "oder verpflichten?"
+          ],
+          "coverBadge": "Streitstand",
+          "coverText": "BVerwG: grundsätzlich Anfechtung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Das Problem",
+          "text": "A erhält die beantragte Genehmigung – aber nur befristet auf zwei Jahre. Er will die Genehmigung behalten, nur die Befristung soll weg. Klagt er auf Aufhebung der Befristung oder auf Erteilung einer unbefristeten Genehmigung (§ 42 Abs. 1 VwGO)?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Welche Klageart?",
+          "links": {
+            "titel": "BVerwG",
+            "punkte": [
+              "Gegen belastende Nebenbestimmungen grundsätzlich Anfechtungsklage.",
+              "Ob isoliert aufhebbar: Frage der Begründetheit.",
+              "Unzulässig nur, wenn das offenkundig ausscheidet."
+            ]
+          },
+          "rechts": {
+            "titel": "Teile der Literatur",
+            "punkte": [
+              "Unterscheidung nach der Art (§ 36 II VwVfG).",
+              "Auflage: selbständig, also Anfechtungsklage.",
+              "Bedingung, Befristung: Verpflichtungsklage."
+            ]
+          }
+        },
+        {
+          "art": "text",
+          "titel": "Warum das zählt",
+          "text": "Mit der Verpflichtungsklage muss A einen Anspruch auf die unbelastete Genehmigung begründen – bei Ermessen oft nur einen Anspruch auf Neubescheidung (§ 113 Abs. 5 S. 2 VwGO). Die Anfechtung lässt die Genehmigung im Übrigen bestehen und trifft nur die Nebenbestimmung."
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "Begehren auslegen (§ 88 VwGO): Was will der Kläger behalten?",
+            "Mit dem BVerwG: Anfechtungsklage, Teilbarkeit in der Begründetheit prüfen.",
+            "Verpflichtungsklage, wenn der Kläger einen anderen, günstigeren Verwaltungsakt will."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Belastende Nebenbestimmung: nach dem BVerwG grundsätzlich Anfechtungsklage. Die Verpflichtungsklage führt zu einem anderen, günstigeren Verwaltungsakt."
+        },
+        {
+          "art": "cta",
+          "titel": "Klageart in drei Fragen",
+          "punkte": [
+            "Was will der Kläger behalten?",
+            "Welche Nebenbestimmung (§ 36 VwVfG)?",
+            "Isolierte Aufhebung offenkundig ausgeschlossen?"
+          ],
+          "icons": [
+            "lupe",
+            "dokument",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Nur die Befristung stört – anfechten oder auf eine unbefristete Genehmigung klagen? Nach dem BVerwG ist gegen belastende Nebenbestimmungen grundsätzlich die Anfechtungsklage statthaft; ob die Nebenbestimmung isoliert aufgehoben werden kann, ist eine Frage der Begründetheit. Teile der Literatur unterscheiden nach der Art der Nebenbestimmung und verweisen bei Bedingung und Befristung auf die Verpflichtungsklage. Speichern für die nächste Klausur zur Verpflichtungsklage.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#verpflichtungsklage",
+        "#nebenbestimmung",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Nebenbestimmung: Anfechtung oder Verpflichtung?",
+      "coverText": "BVerwG: grundsätzlich Anfechtung",
+      "coverBadge": "Streitstand",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Wer nur die lästige Nebenbestimmung loswerden will, kann sie nach dem BVerwG grundsätzlich allein angreifen.",
+        "handlung": "{A} holds a permit card with a heavy clip attached and tries to lift off only the clip, while {B} hovers beside it offering a completely new, clean card instead.",
+        "hinweisRegie": "Place the note in the open space between the clipped card and the clean card, slightly tilted toward the clip, so the choice between removing and replacing is visible without covering {A}'s hand.",
+        "alternative": "{B} carefully unscrews one weight from a balance bar held by {A}, while a second, lighter bar waits on a shelf behind them."
+      },
+      "bildSzene": "alien lifts clip off permit card",
+      "bildSzeneAlt": "unscrewing one weight from balance bar",
+      "quellen": [
+        "§ 42 Abs. 1 VwGO",
+        "§ 113 Abs. 1, 5 VwGO",
+        "§ 88 VwGO",
+        "§ 36 VwVfG",
+        "Themenpool: vwgo-654"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.710Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "minifall",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-827",
+      "slug": "2027-03-23-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vor dem Urteil bezahlt, nicht vorgetragen – die Zahlung zählt nicht",
+          "titelZeilen": [
+            "Vor dem Urteil",
+            "bezahlt, nicht",
+            "vorgetragen – die",
+            "Zahlung zählt nicht"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Entstehung vor Schluss der Verhandlung",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "S wird verurteilt, an G 5.000 € zu zahlen. 2.000 € hatte er schon vor der letzten mündlichen Verhandlung gezahlt, das aber nicht vorgetragen. Nach dem Urteil zahlt er weitere 3.000 €. G vollstreckt trotzdem die vollen 5.000 €. Was kann S tun?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Vollstreckungsabwehrklage prüfen",
+          "schritte": [
+            {
+              "titel": "Statthaftigkeit",
+              "text": "S wendet sich gegen den titulierten Anspruch selbst: Erfüllung (§ 362 BGB) ist eine materielle Einwendung (§ 767 Abs. 1 ZPO)."
+            },
+            {
+              "titel": "Zuständigkeit",
+              "text": "Ausschließlich das Prozessgericht des ersten Rechtszugs (§§ 767 Abs. 1, 802 ZPO)."
+            },
+            {
+              "titel": "Begründetheit: Einwendung",
+              "text": "Der Anspruch ist durch Erfüllung erloschen – soweit S tatsächlich gezahlt hat."
+            },
+            {
+              "titel": "Begründetheit: Präklusion",
+              "text": "Nur Gründe, die nach dem Schluss der letzten mündlichen Tatsachenverhandlung entstanden sind (§ 767 Abs. 2 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Worauf es ankommt",
+          "text": "Maßgeblich ist, wann der Einwendungsgrund entstanden ist – nicht, wann S ihn geltend macht. Die Zahlung vor dem Schluss der mündlichen Verhandlung hätte S im Prozess vortragen müssen. Beim Vollstreckungsbescheid zählt stattdessen dessen Zustellung (§ 796 Abs. 2 ZPO)."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "Die 3.000 € nach dem Urteil sind eine neue Einwendung – insoweit ist die Klage begründet. Die 2.000 € davor sind nach § 767 Abs. 2 ZPO präkludiert. Tenor etwa: „Die Zwangsvollstreckung aus dem Urteil … wird für unzulässig erklärt, soweit sie über 2.000 € hinausgeht.“"
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "§ 767 Abs. 2 ZPO fragt, wann der Einwand entstanden ist: vor Schluss der mündlichen Verhandlung – präkludiert, danach – beachtlich."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 767 ZPO in drei Fragen",
+          "punkte": [
+            "Materielle Einwendung gegen den Anspruch?",
+            "Wann ist sie entstanden?",
+            "Tenor: soweit … unzulässig"
+          ],
+          "icons": [
+            "dokument",
+            "kalender",
+            "richter"
+          ]
+        }
+      ],
+      "caption": "Vor dem Urteil gezahlt, im Prozess aber nicht vorgetragen – dann hilft auch die Vollstreckungsabwehrklage nicht. § 767 Abs. 2 ZPO lässt nur Einwendungen zu, deren Gründe nach dem Schluss der letzten mündlichen Tatsachenverhandlung entstanden sind. Zahlungen nach dem Urteil kann S geltend machen, frühere nicht. Der Tenor erklärt die Zwangsvollstreckung für unzulässig, soweit sie den offenen Betrag übersteigt. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#767zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 767 Abs. 2 ZPO: Wann ist der Einwand präkludiert?",
+      "coverText": "Entstehung vor Schluss der Verhandlung",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Was schon vor dem Schluss der mündlichen Verhandlung da war, kann gegen die Vollstreckung nicht mehr eingewandt werden.",
+        "handlung": "{A} lowers a heavy gate at a marked line on the ground, while {B} nervously tries to push an old coin bag under it that was lying on the wrong side the whole time.",
+        "hinweisRegie": "Place the note in the open space just above the lowered gate, slightly tilted toward the old coin bag, so the cut-off point is linked to the note without covering {B}'s hands.",
+        "alternative": "{B} holds up two receipts, one dated before and one after a line drawn by {A}, and only the second one lights up."
+      },
+      "bildSzene": "gate lowered, old coin bag left out",
+      "bildSzeneAlt": "two receipts, only later one glows",
+      "quellen": [
+        "§ 767 ZPO",
+        "§ 796 Abs. 2 ZPO",
+        "§ 802 ZPO",
+        "§ 362 BGB",
+        "Themenpool: zwangsv-827"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konsequenz",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.711Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-342",
+      "slug": "2027-03-23-b3",
+      "titelZeilen": [
+        "Er will lügen –",
+        "und sagt zufällig",
+        "die Wahrheit"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Er will lügen – und sagt zufällig die Wahrheit",
+          "unter": "Falschaussage · § 153 StGB",
+          "text": "Nach h.M. zählt allein der Widerspruch zwischen Aussage und Wirklichkeit.",
+          "norm": "§ 153 StGB",
+          "icon": "gericht",
+          "sprecher": "Er will lügen – und sagt zufällig die Wahrheit. Ist seine Aussage falsch im Sinne von § 153 StGB? Nach herrschender Meinung nicht. Drei Theorien stehen sich gegenüber.",
+          "marken": [
+            "Wahrheit trotz Lüge?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Objektive Theorie (h.M.)",
+          "text": "Falsch ist die Aussage, wenn sie nicht mit der Wirklichkeit übereinstimmt.",
+          "norm": "§ 153 StGB",
+          "sprecher": "Theorie eins: die objektive Theorie, die herrschende Meinung. Falsch ist eine Aussage, wenn ihr Inhalt nicht mit der Wirklichkeit übereinstimmt. Wer zufällig die Wahrheit sagt, sagt nicht falsch aus.",
+          "marken": [
+            "Aussage vs. Wirklichkeit"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Subjektive Theorie",
+          "text": "Falsch ist, was vom Wissen des Aussagenden abweicht.",
+          "norm": null,
+          "sprecher": "Theorie zwei: die subjektive Theorie. Sie vergleicht die Aussage mit dem, was der Zeuge tatsächlich weiß. Danach wäre unser Zeuge vollendet strafbar.",
+          "marken": [
+            "Aussage vs. Wissen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Pflichttheorie",
+          "text": "Falsch ist, was hinter dem pflichtgemäß erreichbaren Wissen zurückbleibt.",
+          "norm": null,
+          "sprecher": "Theorie drei: die Pflichttheorie. Sie fragt, was der Zeuge bei kritischer Prüfung seines Erinnerungsvermögens hätte aussagen können.",
+          "marken": [
+            "pflichtgemäß"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Folge der h.M.: untauglicher Versuch",
+          "text": "§ 153 StGB ist ein Vergehen ohne Versuchsstrafbarkeit – beim Meineid ist der Versuch strafbar.",
+          "norm": "§ 154 StGB · § 23 Abs. 1 StGB",
+          "sprecher": "Die Folge: Unser Zeuge hält seine Aussage für falsch, sie ist es aber nicht. Das ist ein untauglicher Versuch. Bei § 153 bleibt er straflos, denn der Versuch dieses Vergehens ist nicht mit Strafe bedroht. Beim Meineid, einem Verbrechen, ist er strafbar.",
+          "marken": [
+            "Versuch strafbar?"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "punkt",
+          "titel": "Umgekehrt: gutgläubig Falsches gesagt",
+          "text": "Objektiv falsch, aber ohne Vorsatz – beim Eid bleibt § 161 StGB.",
+          "norm": "§ 161 StGB",
+          "sprecher": "Und umgekehrt? Sagt der Zeuge gutgläubig etwas Unwahres, ist die Aussage objektiv falsch, aber es fehlt der Vorsatz. Beim Eid bleibt der fahrlässige Falscheid nach § 161.",
+          "marken": [
+            "§ 161 StGB"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Falsch ist, was der Wirklichkeit widerspricht. Was der Zeuge glaubt, gehört zum Vorsatz.",
+          "norm": "§ 153 StGB",
+          "sprecher": "Merke: Nach herrschender Meinung ist falsch, was der Wirklichkeit widerspricht. Was der Zeuge glaubt, prüfst du erst beim Vorsatz.",
+          "marken": [
+            "erst Wirklichkeit"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim Versuch immer fragen: strafbar?",
+          "text": "Speichern für die nächste Klausur zu den Aussagedelikten.",
+          "sprecher": "Speicher dir das für die nächste Klausur zu den Aussagedelikten. Und prüf beim Versuch immer: Ist er bei diesem Delikt überhaupt strafbar?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Er will lügen – und sagt zufällig die Wahrheit. Nach der objektiven Theorie, der herrschenden Meinung, ist eine Aussage nur falsch, wenn sie der Wirklichkeit widerspricht. Subjektive Theorie und Pflichttheorie stellen auf das Wissen bzw. das pflichtgemäß erreichbare Wissen des Zeugen ab. Folge der h.M.: nur untauglicher Versuch – bei § 153 StGB straflos, beim Meineid (§ 154 StGB) strafbar.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#153stgb",
+        "#aussagedelikte",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Falsche Aussage: drei Theorien, ein Klassiker",
+      "coverText": "Maßstab: die Wirklichkeit",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Ob eine Aussage falsch ist, misst die h.M. an der Wirklichkeit, nicht an dem, was der Zeuge glaubt.",
+        "handlung": "{A} holds his pointer next to a painted picture and compares it with the real landscape behind it, while {B} nervously crosses his fingers behind his back although the picture matches perfectly.",
+        "hinweisRegie": "Place the note in the free space between the painting and the real landscape, slightly tilted toward the matching details, so the comparison is clear without hiding {B}'s crossed fingers.",
+        "alternative": "{B} points a shaky arrow at a target and accidentally hits the centre, while {A} checks the hit against the target instead of {B}'s intention."
+      },
+      "bildSzene": "painting compared with real landscape",
+      "bildSzeneAlt": "accidental bullseye checked against target",
+      "quellen": [
+        "§ 153 StGB",
+        "§ 154 StGB",
+        "§ 161 StGB",
+        "§ 23 Abs. 1 StGB",
+        "Themenpool: strafbt-342"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.712Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-580",
+      "ueberzeile": "Prüfungsfrage 2. Examen",
+      "titel": "Anwaltsklausur: Forderung unstreitig, der Schuldner zahlt einfach nicht. Welcher Weg zum Titel ist zweckmäßig?",
+      "optionen": [
+        "Feststellungsklage, dass die Forderung besteht",
+        "Selbständiges Beweisverfahren (§§ 485 ff. ZPO)",
+        "Mahnverfahren bis zum Vollstreckungsbescheid"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§§ 688 ff. ZPO",
+        "§ 699 ZPO",
+        "§ 794 Abs. 1 Nr. 4 ZPO",
+        "§ 204 Abs. 1 Nr. 3 BGB",
+        "Themenpool: assessorz-580"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.712Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-580",
+      "ueberzeile": "Auflösung",
+      "titel": "Mahnverfahren – schnell und günstig, wenn kein Widerspruch zu erwarten ist",
+      "text": "Bei Geldforderungen in Euro führt das Mahnverfahren ohne Schlüssigkeitsprüfung zum Vollstreckungsbescheid, einem Titel (§§ 688, 699, 794 Abs. 1 Nr. 4 ZPO); der Mahnbescheid hemmt die Verjährung (§ 204 Abs. 1 Nr. 3 BGB). Drohen Einwendungen, ist die Klage oft direkter. Die Feststellungsklage bringt keinen Leistungstitel, das Beweisverfahren sichert nur Beweise.",
+      "norm": "§§ 688, 699 ZPO · § 794 Abs. 1 Nr. 4 ZPO",
+      "quellen": [
+        "§§ 688 ff. ZPO",
+        "§ 699 ZPO",
+        "§ 794 Abs. 1 Nr. 4 ZPO",
+        "§ 204 Abs. 1 Nr. 3 BGB",
+        "Themenpool: assessorz-580"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.712Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Feststellungsklage, dass die Forderung besteht",
+        "Selbständiges Beweisverfahren (§§ 485 ff. ZPO)",
+        "Mahnverfahren bis zum Vollstreckungsbescheid"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-190",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 363 BGB: Mit der Annahme wechselt die Beweislast zum Käufer",
+      "text": "Hat der Gläubiger eine Leistung als Erfüllung angenommen, muss er beweisen, dass sie nicht die geschuldete oder unvollständig war. Im Kaufrecht heißt das: Nach Annahme der Sache trägt der Käufer die Beweislast für einen Mangel bei Gefahrübergang. Die Vermutung des § 477 BGB ist die Ausnahme für den Verbrauchsgüterkauf – nicht die Regel.",
+      "norm": "§ 363 BGB · § 477 BGB",
+      "quellen": [
+        "§ 363 BGB",
+        "§ 477 BGB",
+        "Themenpool: schuldbt-190"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.712Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-805",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Entscheidungsgründe: die Reihenfolge von oben nach unten",
+      "text": "Kurze Zusammenfassung der tragenden Erwägungen (§ 313 Abs. 3 ZPO) – im Urteilsstil: Ergebnis zuerst, dann die Begründung.",
+      "punkte": [
+        "Einleitungssatz: „Die zulässige Klage ist begründet.“",
+        "Zulässigkeit nur, soweit sie Anlass gibt",
+        "Begründetheit: je Anspruch Ergebnis, dann „denn …“",
+        "Nebenentscheidungen: Zinsen, Kosten, Vollstreckbarkeit"
+      ],
+      "quellen": [
+        "§ 313 Abs. 3 ZPO",
+        "§ 91 ZPO",
+        "§§ 708 ff. ZPO",
+        "Themenpool: assessorz-805"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.712Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "streitstand",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-931",
+      "ueberzeile": "Streitstand Verwaltungsrecht",
+      "titel": "Ein ausgeschlossener Amtsträger hat mitentschieden: Rettet § 46 VwVfG den Bescheid?",
+      "norm": "§§ 20, 46 VwVfG",
+      "optionen": [
+        "Verbreitete Ansicht: § 46 VwVfG gilt auch hier; entscheidend ist, ob der Fehler die Sache beeinflusst hat.",
+        "Andere Ansicht: So schwere Fehler sind absolut – § 46 VwVfG soll nicht greifen."
+      ],
+      "text": "Klausur: Nichtig ist der VA nicht allein deshalb (§ 44 Abs. 3 Nr. 2 VwVfG). Bei Ermessensentscheidungen lässt sich ein Einfluss selten ausschließen – dann kommt es auf den Streit oft nicht an.",
+      "quellen": [
+        "§ 20 VwVfG",
+        "§ 21 VwVfG",
+        "§ 44 Abs. 3 Nr. 2 VwVfG",
+        "§ 46 VwVfG",
+        "Themenpool: verwalt-931"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "merksatz",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-313",
+      "ueberzeile": "Merksatz Konkurrenzen",
+      "titel": "Mitbestrafte Nachtat: verdrängt, aber nicht verschwunden",
+      "text": "Sie tritt nur in den Konkurrenzen zurück und bleibt rechtswidrige Tat: Teilnahme bleibt möglich. Ist die Vortat etwa verjährt, kann nach der Rspr. die Nachtat bestraft werden.",
+      "norm": "Gesetzeskonkurrenz (Konsumtion)",
+      "quellen": [
+        "Konkurrenzlehre",
+        "Gesetzeskonkurrenz",
+        "Themenpool: strafat-313"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:24:32.713Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

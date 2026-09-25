@@ -1,0 +1,848 @@
+{
+  "datum": "2027-01-16",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "klausurtechnik",
+        "themaId": "methodik-936",
+        "themaTitel": "Die vier Auslegungsmethoden sicher anwenden",
+        "fach": "methodik",
+        "klausur": 0
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "spickzettel",
+        "themaId": "assessorz-821",
+        "themaTitel": "Welchen Prüfungsumfang hat die Berufung?",
+        "fach": "assessorz",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "mindset-1",
+        "themaTitel": null,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:11",
+        "art": "frage",
+        "themaId": "bgbat-432"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:11",
+        "art": "antwort",
+        "themaId": "bgbat-432"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:51",
+        "art": "norm",
+        "themaId": "bereich-211"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "begriff",
+        "themaId": "stpo-771"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:54",
+        "art": "fehler",
+        "themaId": "strafat-922"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:27",
+        "art": "tipp",
+        "themaId": "famerb-258"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "klausurtechnik",
+      "themaId": "methodik-936",
+      "poolTitel": "Die vier Auslegungsmethoden sicher anwenden",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-01",
+        "2027-01-02"
+      ]
+    },
+    "b2": {
+      "format": "spickzettel",
+      "themaId": "assessorz-821",
+      "poolTitel": "Welchen Prüfungsumfang hat die Berufung?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 513 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-03",
+        "2027-01-03"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "mindset-1",
+      "poolTitel": null,
+      "fachLabel": "Examenswissen",
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-09-26",
+        "2026-11-21"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "bgbat-432",
+      "poolTitel": "Stellvertretung: eigene Willenserklärung, Offenkundigkeit, Vertretungsmacht",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 164 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "bgbat-432",
+      "poolTitel": "Stellvertretung: eigene Willenserklärung, Offenkundigkeit, Vertretungsmacht",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 164 ff. BGB"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "bereich-211",
+      "poolTitel": "Wann greift die Nichtleistungskondiktion?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "begriff",
+      "themaId": "stpo-771",
+      "poolTitel": "Durchsuchung beim Beschuldigten",
+      "fach": "stpo",
+      "fachLabel": "Strafprozessrecht",
+      "klausur": 2,
+      "normen": [
+        "§ 102 StPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "fehler",
+      "themaId": "strafat-922",
+      "poolTitel": "Erfolgsqualifizierter Versuch und versuchte Erfolgsqualifikation: Was ist strafbar?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 18 StGB",
+        "§ 11 Abs. 2 StGB",
+        "§ 227 StGB"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-14"
+      ]
+    },
+    "s9": {
+      "art": "tipp",
+      "themaId": "famerb-258",
+      "poolTitel": "Wie ist die gesetzliche Erbfolge aufgebaut?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1924 BGB",
+        "§ 1925 BGB",
+        "§ 1931 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-03"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "klausurtechnik",
+      "fach": "methodik",
+      "klausur": 0,
+      "fachLabel": "Klausur- und Lernmethodik",
+      "themaId": "methodik-936",
+      "slug": "2027-01-16-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Ist der Hund eine Sache? Auslegung in vier Zügen",
+          "titelZeilen": [
+            "Ist der Hund eine",
+            "Sache? Auslegung",
+            "in vier Zügen"
+          ],
+          "coverBadge": "Klausurtechnik",
+          "coverText": "Methoden als Argumente",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A nimmt den Hund seines Nachbarn N mit, um ihn zu behalten. § 242 StGB verlangt eine fremde bewegliche „Sache“. Aber § 90a S. 1 BGB sagt: Tiere sind keine Sachen. Ein echtes Auslegungsproblem – also gehst du die Methoden sichtbar durch."
+        },
+        {
+          "art": "schritte",
+          "titel": "Die vier Züge am Beispiel",
+          "schritte": [
+            {
+              "titel": "Wortlaut",
+              "text": "Sache im natürlichen Sinn ist jeder körperliche Gegenstand. Ein Hund fällt darunter."
+            },
+            {
+              "titel": "Systematik",
+              "text": "§ 90a BGB betrifft das Zivilrecht und ordnet selbst an, die Vorschriften über Sachen entsprechend anzuwenden (S. 3)."
+            },
+            {
+              "titel": "Historie",
+              "text": "§ 90a BGB sollte die Stellung des Tieres betonen, nicht den Eigentumsschutz schwächen. Nur anführen, was du sicher weißt."
+            },
+            {
+              "titel": "Telos",
+              "text": "§ 242 StGB schützt das Eigentum – auch an Tieren. Ergebnis nach h.M.: Der Hund ist eine Sache."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Grenze",
+          "text": "Jenseits des möglichen Wortsinns endet die Auslegung. Was dann folgt, ist Rechtsfortbildung, etwa eine Analogie. Im Strafrecht ist sie zulasten des Täters verboten (Art. 103 Abs. 2 GG). Hier bleibt die Auslegung im Wortsinn – deshalb ist das Ergebnis zulässig."
+        },
+        {
+          "art": "text",
+          "titel": "So schreibst du es",
+          "punkte": [
+            "Merkmal und mögliche Deutungen benennen.",
+            "Pro Methode ein Argument – keine Methode erzwingen.",
+            "Historische Argumente nicht erfinden, lieber weglassen.",
+            "Ergebnis festhalten und am Fall weiterprüfen."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Auslegen heißt: Wortlaut, Systematik, Historie und Telos als Argumente nutzen – innerhalb des möglichen Wortsinns."
+        },
+        {
+          "art": "cta",
+          "titel": "Auslegung in drei Zügen",
+          "punkte": [
+            "Problem und Deutungen benennen",
+            "Methoden als Argumente nutzen",
+            "Wortlautgrenze beachten"
+          ],
+          "icons": [
+            "lupe",
+            "buch",
+            "stopp"
+          ]
+        }
+      ],
+      "caption": "Ist der Hund eine Sache? Für § 242 StGB lohnt sich die Auslegung in vier Zügen: Der Wortlaut erfasst jeden körperlichen Gegenstand, § 90a BGB betrifft das Zivilrecht und verweist selbst auf die Sachvorschriften, und der Zweck des Eigentumsschutzes spricht ebenfalls dafür. Die Grenze bleibt der mögliche Wortsinn – dahinter beginnt die Analogie, im Strafrecht zulasten des Täters verboten. Speichern für die nächste Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#klausurtechnik",
+        "#auslegung",
+        "#methodenlehre",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Auslegung in vier Zügen: der Hund als Sache",
+      "coverText": "Methoden als Argumente",
+      "coverBadge": "Klausurtechnik",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Eine Auslegungsfrage wird Schritt für Schritt mit vier Werkzeugen beantwortet – innerhalb eines klaren Zauns.",
+        "handlung": "{A} holds a friendly dog on a leash and points with his pointer at four different keys laid out on a table, while {B} hovers at the edge of the courtyard and traces the fence line.",
+        "hinweisRegie": "Place the note in the free space above the four keys, slightly tilted toward them, so it reads as the four steps without covering the dog, {A}'s pointer or the fence line.",
+        "alternative": "{B} places a small dog figure and a wooden block side by side on a scale, while {A} checks whether both fit through the same doorway frame."
+      },
+      "bildSzene": "four keys on table, dog on leash",
+      "bildSzeneAlt": "dog figure weighed against toy block",
+      "quellen": [
+        "§ 242 StGB",
+        "§ 90a BGB",
+        "Art. 103 Abs. 2 GG",
+        "Themenpool: methodik-936"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-zuege-am-beispiel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.613Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "spickzettel",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-821",
+      "slug": "2027-01-16-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Berufung: Neue Tatsachen nur durch drei Türen",
+          "titelZeilen": [
+            "Berufung: Neue",
+            "Tatsachen nur durch",
+            "drei Türen"
+          ],
+          "coverBadge": "Spickzettel",
+          "coverText": "§ 531 Abs. 2 ZPO",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Die Berufung ist keine vollständig neue Tatsacheninstanz. Welche Tatsachen das Berufungsgericht zugrunde legt, steuern §§ 529, 531 ZPO – und das bestimmt, was du in der Berufungsbegründung noch vortragen kannst."
+        },
+        {
+          "art": "text",
+          "titel": "Prüfungsumfang",
+          "punkte": [
+            "Berufungsgründe: Rechtsverletzung oder andere Tatsachen nach § 529 ZPO (§ 513 Abs. 1 ZPO).",
+            "Bindung an erstinstanzliche Feststellungen, außer bei konkreten Zweifeln (§ 529 Abs. 1 Nr. 1 ZPO).",
+            "Verfahrensmängel nur auf Rüge, soweit nicht von Amts wegen zu beachten (§ 529 Abs. 2 ZPO)."
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Die drei Türen des § 531 Abs. 2 ZPO",
+          "schritte": [
+            {
+              "titel": "Nr. 1: übersehener Gesichtspunkt",
+              "text": "Das erste Gericht hat ihn erkennbar übersehen oder für unerheblich gehalten."
+            },
+            {
+              "titel": "Nr. 2: Verfahrensmangel",
+              "text": "Das Vorbringen unterblieb infolge eines Verfahrensmangels im ersten Rechtszug."
+            },
+            {
+              "titel": "Nr. 3: keine Nachlässigkeit",
+              "text": "Die Partei hat es in erster Instanz nicht aus Nachlässigkeit versäumt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Sonderfälle",
+          "punkte": [
+            "Zu Recht zurückgewiesenes Vorbringen bleibt ausgeschlossen (§ 531 Abs. 1 ZPO).",
+            "Unstreitiges neues Vorbringen ist nach dem BGH stets zu berücksichtigen.",
+            "Klageänderung, Aufrechnung, Widerklage: § 533 ZPO – Einwilligung oder Sachdienlichkeit."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Neues Vorbringen kommt nur durch eine der drei Türen des § 531 Abs. 2 ZPO – Unstreitiges geht immer durch."
+        },
+        {
+          "art": "cta",
+          "titel": "Berufung in drei Fragen",
+          "punkte": [
+            "Welcher Berufungsgrund (§ 513 ZPO)?",
+            "Welche Tatsachen gelten (§ 529 ZPO)?",
+            "Neues Vorbringen zulässig (§ 531 ZPO)?"
+          ],
+          "icons": [
+            "gericht",
+            "lupe",
+            "tuer"
+          ]
+        }
+      ],
+      "caption": "Neue Tatsachen in der Berufung? Nur durch drei Türen: § 531 Abs. 2 ZPO lässt sie zu, wenn das erste Gericht den Gesichtspunkt erkennbar übersehen hat, ein Verfahrensmangel den Vortrag verhindert hat oder die Partei nicht nachlässig war. Im Übrigen bindet § 529 ZPO an die Feststellungen der ersten Instanz. Ausnahme nach dem BGH: Unstreitiges neues Vorbringen ist stets zu berücksichtigen. Speichern für die nächste Anwaltsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#berufung",
+        "#zivilprozessrecht",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Berufung: Prüfungsumfang und neues Vorbringen",
+      "coverText": "§ 531 Abs. 2 ZPO",
+      "coverBadge": "Spickzettel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "mara"
+        ],
+        "kernidee": "In die Berufung kommen neue Tatsachen nicht einfach hinein – nur durch wenige, genau bestimmte Eingänge.",
+        "handlung": "{A} nervously carries a crate of new evidence toward a wall with three small doors, while {B} calmly checks which of the doors is actually open for him.",
+        "hinweisRegie": "Place the note in the free space above the three small doors, slightly tilted toward the open one, without covering {A}'s crate or {B}'s checking hand.",
+        "alternative": "{B} stands at a checkpoint and waves through one parcel that both sides already agree on, while {A} holds back the other boxes."
+      },
+      "bildSzene": "crate carried toward three small doors",
+      "bildSzeneAlt": "agreed parcel waved through checkpoint",
+      "quellen": [
+        "§ 513 ZPO",
+        "§ 529 ZPO",
+        "§ 531 ZPO",
+        "§ 533 ZPO",
+        "BGH, Großer Senat für Zivilsachen (unstreitiges neues Vorbringen)",
+        "Themenpool: assessorz-821"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "drei-zulassungsgruende",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.614Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "mindset",
+      "klausur": 0,
+      "fachLabel": "Kopfsache",
+      "themaId": "mindset-1",
+      "slug": "2027-01-16-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Nochmal lesen fühlt sich nach Lernen an",
+          "unter": "Kopfsache · Wiederholen",
+          "text": "Wiedererkennen ist nicht Können – Abrufen schon.",
+          "norm": null,
+          "icon": "buch",
+          "sprecher": "Nochmal lesen fühlt sich nach Lernen an. Der Stoff kommt dir bekannt vor, also glaubst du, du kannst ihn. Aber Wiedererkennen ist nicht dasselbe wie Abrufen. Und in der Klausur musst du abrufen.",
+          "marken": [
+            "bekannt ≠ gekonnt",
+            "abrufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Leeres Blatt zuerst",
+          "text": "Schema oder Definition aus dem Kopf aufschreiben – dann erst nachschlagen.",
+          "norm": null,
+          "sprecher": "Schritt eins: das leere Blatt. Bevor du die Karteikarte umdrehst oder ins Skript schaust, schreibst du das Schema aus dem Kopf auf. Erst dann vergleichst du.",
+          "marken": [
+            "erst abrufen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Lücken markieren",
+          "text": "Was fehlte, wird markiert – und nur das wird nachgearbeitet.",
+          "norm": null,
+          "sprecher": "Schritt zwei: die Lücken markieren. Was gefehlt hat oder nicht gestimmt hat, streichst du farbig an. Genau das arbeitest du nach, nicht alles noch einmal von vorn.",
+          "marken": [
+            "nur die Lücken"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Mit Abstand wiederholen",
+          "text": "Nach einem Tag, nach einer Woche und später erneut abrufen.",
+          "norm": null,
+          "sprecher": "Schritt drei: mit Abstand wiederholen. Ruf dasselbe Thema nach einem Tag, nach einer Woche und später noch einmal ab. Es darf sich ruhig mühsam anfühlen.",
+          "marken": [
+            "Tag · Woche · später"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Am Fall abrufen",
+          "text": "Nicht nur Definitionen aufsagen, sondern sie auf einen Mini-Fall anwenden.",
+          "norm": null,
+          "sprecher": "Schritt vier: am Fall abrufen. Sag nicht nur die Definition auf, sondern wende sie auf einen kurzen Sachverhalt an. So wie später in der Klausur.",
+          "marken": [
+            "im Fall"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Mühsam heißt nicht wirkungslos",
+          "text": "Dass Abrufen anstrengender ist als Lesen, gehört zum Lerneffekt.",
+          "norm": null,
+          "sprecher": "Warum das funktioniert: Abrufen ist anstrengender als Lesen. Genau diese Anstrengung festigt das Wissen. Die Lernforschung spricht vom Testeffekt.",
+          "marken": [
+            "Testeffekt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Erst abrufen, dann nachlesen – und mit Abstand wiederholen.",
+          "norm": null,
+          "sprecher": "Merke: erst abrufen, dann nachlesen. Und wiederholen mit Abstand, nicht alles am Stück.",
+          "marken": [
+            "abrufen vor lesen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Die nächste Wiederholung mit leerem Blatt starten",
+          "text": "Speichern und morgen ausprobieren.",
+          "sprecher": "Speicher dir das Reel und starte deine nächste Wiederholung mit einem leeren Blatt statt mit dem Skript.",
+          "marken": [
+            "leeres Blatt"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Nochmal lesen fühlt sich nach Lernen an – der Stoff kommt dir bekannt vor. Aber Wiedererkennen ist nicht Abrufen, und in der Klausur musst du abrufen. Deshalb: erst das leere Blatt, dann nachschlagen, Lücken markieren und mit Abstand wiederholen, am besten an einem kurzen Fall. Speichern und bei der nächsten Wiederholung ausprobieren.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#kopfsache",
+        "#lernplan",
+        "#klausurtraining",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wiederholen: abrufen statt nochmal lesen",
+      "titelZeilen": [
+        "Nochmal lesen",
+        "fühlt sich nach",
+        "Lernen an"
+      ],
+      "coverText": "Abrufen schlägt Wiederlesen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Etwas wiederzuerkennen ist nicht dasselbe, wie es selbst hervorzuholen.",
+        "handlung": "{A} confidently flips through a familiar picture book, while {B} hands him a blank board and a piece of chalk and waits for him to draw it from memory.",
+        "hinweisRegie": "Place the note in the free space above the blank board, slightly tilted toward it, so it marks the moment of recall without covering {A}'s hands or the book.",
+        "alternative": "{B} digs a crystal out of solid rock with effort, while {A} only admires an identical crystal behind glass."
+      },
+      "bildSzene": "blank board handed over, book aside",
+      "bildSzeneAlt": "digging crystal versus crystal behind glass",
+      "quellen": [
+        "Themenpool: mindset-1"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "gefuehlte-sicherheit",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.615Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-432",
+      "ueberzeile": "Prüfungsfrage BGB AT",
+      "titel": "V schließt im eigenen Namen ab, will aber für P handeln – erkennbar ist das nicht. Wer wird Vertragspartner?",
+      "optionen": [
+        "V selbst – sein Wille, für P zu handeln, zählt nicht",
+        "P, weil V für ihn handeln wollte",
+        "Niemand – V kann seine Erklärung wegen Irrtums anfechten"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 164 Abs. 1, 2 BGB",
+        "Themenpool: bgbat-432"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.615Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-432",
+      "ueberzeile": "Auflösung",
+      "titel": "V selbst – sein innerer Vertretungswille bleibt unbeachtlich",
+      "text": "Stellvertretung verlangt eine eigene Willenserklärung, die erkennbar im Namen des Vertretenen abgegeben wird (Offenkundigkeit, § 164 Abs. 1 BGB), und Vertretungsmacht. Tritt der Wille nicht erkennbar hervor, wird V selbst verpflichtet – anfechten kann er deshalb nicht (§ 164 Abs. 2 BGB). Ausnahmen: Geschäft für den, den es angeht; unternehmensbezogenes Geschäft.",
+      "norm": "§ 164 Abs. 1, 2 BGB",
+      "quellen": [
+        "§ 164 Abs. 1, 2 BGB",
+        "Themenpool: bgbat-432"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.615Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "V selbst – sein Wille, für P zu handeln, zählt nicht",
+        "P, weil V für ihn handeln wollte",
+        "Niemand – V kann seine Erklärung wegen Irrtums anfechten"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-211",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 812 Abs. 1 S. 1 Alt. 2 BGB: Eingriff statt Leistung",
+      "text": "Die Nichtleistungskondiktion erfasst Vermögensverschiebungen „in sonstiger Weise“. Wichtigster Fall ist die Eingriffskondiktion: Jemand nutzt oder verwertet, was nach dem Zuweisungsgehalt eines Rechts einem anderen gebührt. Wurde der Gegenstand geleistet, gilt grundsätzlich der Vorrang der Leistungsbeziehung. Weitere Fälle: Verwendungs- und Rückgriffskondiktion.",
+      "norm": "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 Alt. 2 BGB",
+        "Themenpool: bereich-211"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.615Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "begriff",
+      "fach": "stpo",
+      "klausur": 2,
+      "pairId": "stpo-771",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Durchsuchung beim Verdächtigen: Anfangsverdacht genügt",
+      "text": "Beim Verdächtigen dürfen Wohnung, Räume, Person und Sachen durchsucht werden, um ihn zu ergreifen oder wenn zu vermuten ist, dass Beweismittel gefunden werden (§ 102 StPO). Nötig ist ein auf Tatsachen gestützter Anfangsverdacht. Anordnen darf grundsätzlich der Richter, bei Gefahr im Verzug auch StA und Ermittlungspersonen (§ 105 Abs. 1 StPO).",
+      "norm": "§§ 102, 105 StPO",
+      "quellen": [
+        "§ 102 StPO",
+        "§ 103 StPO",
+        "§ 105 StPO",
+        "Themenpool: stpo-771"
+      ],
+      "fachLabel": "Strafprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.615Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "fehler",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-922",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Schwere Folge beabsichtigt, aber ausgeblieben: Nur das Grunddelikt?",
+      "falsch": "Tritt die schwere Folge nicht ein, gibt es keine versuchte Erfolgsqualifikation – es bleibt beim Grunddelikt.",
+      "richtigText": "Will der Täter die schwere Folge, ist ihr Versuch strafbar: Die Erfolgsqualifikation bleibt Vorsatztat (§ 11 Abs. 2 StGB), § 18 StGB verlangt nur „wenigstens“ Fahrlässigkeit. Beispiel: A will O dauerhaft entstellen, O bleibt nur leicht verletzt – versuchte schwere Körperverletzung (§§ 226 Abs. 2, 22 StGB). Nicht verwechseln mit dem erfolgsqualifizierten Versuch.",
+      "quellen": [
+        "§ 18 StGB",
+        "§ 11 Abs. 2 StGB",
+        "§ 226 StGB",
+        "Themenpool: strafat-922"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.615Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "tipp",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-258",
+      "ueberzeile": "Klausurtipp Erbrecht",
+      "titel": "Gesetzliche Erbfolge: erst den Ehegatten, dann die Verwandten",
+      "text": "Bestimme zuerst den Erbteil des Ehegatten: neben Kindern ein Viertel (§ 1931 Abs. 1 BGB), bei Zugewinngemeinschaft plus ein Viertel (§ 1371 Abs. 1 BGB). Den Rest verteilst du nach Ordnungen (§§ 1924 ff. BGB); die nähere Ordnung schließt entferntere aus (§ 1930 BGB). Beispiel: Ehefrau und zwei Kinder – Ehefrau 1/2, Kinder je 1/4.",
+      "quellen": [
+        "§ 1924 BGB",
+        "§ 1930 BGB",
+        "§ 1931 BGB",
+        "§ 1371 Abs. 1 BGB",
+        "Themenpool: famerb-258"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.615Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

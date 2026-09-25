@@ -1,0 +1,901 @@
+{
+  "datum": "2027-04-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "strafbt-343",
+        "themaTitel": "Wie prüft man Beleidigungsdelikte?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "vwgo-406",
+        "themaTitel": "Welche Fristen gelten für Widerspruch und Klage?",
+        "fach": "vwgo",
+        "klausur": 3,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:05",
+        "art": "frage",
+        "themaId": "verwalt-382"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:05",
+        "art": "antwort",
+        "themaId": "verwalt-382"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:15",
+        "art": "norm",
+        "themaId": "zpo-281"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:19",
+        "art": "fehler",
+        "themaId": "assessorz-806"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "tipp",
+        "themaId": "bereich-212"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:22",
+        "art": "zahl",
+        "themaId": "methodik-908"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-343",
+      "poolTitel": "Wie prüft man Beleidigungsdelikte?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 185 StGB",
+        "§ 186 StGB",
+        "§ 193 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "vwgo-406",
+      "poolTitel": "Welche Fristen gelten für Widerspruch und Klage?",
+      "fach": "vwgo",
+      "fachLabel": "Verwaltungsprozessrecht",
+      "klausur": 3,
+      "normen": [
+        "§ 70 VwGO",
+        "§ 74 VwGO",
+        "§ 58 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-12-13",
+        "2026-12-13"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "verwalt-382",
+      "poolTitel": "Welche Nebenbestimmungen gibt es und wie greift man sie an?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 36 VwVfG",
+        "§ 42 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-22",
+        "2027-01-22",
+        "2027-03-02"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "verwalt-382",
+      "poolTitel": "Welche Nebenbestimmungen gibt es und wie greift man sie an?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 36 VwVfG",
+        "§ 42 VwGO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-22",
+        "2027-01-22",
+        "2027-03-02"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-281",
+      "poolTitel": "Was ist eine Nebenintervention?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 66 ZPO",
+        "§ 67 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-16"
+      ]
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "assessorz-806",
+      "poolTitel": "Wie tenoriert man ein Zivilurteil vollständig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 1 ZPO",
+        "§§ 91 ff. ZPO",
+        "§§ 708 ff. ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-05",
+        "2027-02-05",
+        "2027-03-29"
+      ]
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "bereich-212",
+      "poolTitel": "Was ist der Vorrang der Leistungsbeziehung?",
+      "fach": "bereich",
+      "fachLabel": "Bereicherungsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 812 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-05",
+        "2027-01-18"
+      ]
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "methodik-908",
+      "poolTitel": "Aktuelle Rechtsprechung examensgerecht reduzieren",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-19",
+        "2027-01-18",
+        "2027-03-20"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2027-04-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Beiträge, vier Bereiche: Was sitzt nach dieser Woche?",
+          "titelZeilen": [
+            "18 Beiträge,",
+            "vier Bereiche:",
+            "Was sitzt nach",
+            "dieser Woche?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Technik & Kopfsache",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "Übereignung: Bezahlt ist nicht übereignet – Einigung und Übergabe (§ 929 S. 1 BGB).",
+            "EBV: §§ 989 ff. BGB; § 823 BGB nur über § 992 oder beim Exzess.",
+            "§ 935 BGB: Gibt der Besitzdiener eigenmächtig weg, ist die Sache abhandengekommen.",
+            "Verlängerter EV: Vorausabtretung, Verarbeitungsklausel, Vertragsbruchtheorie.",
+            "Mitverschulden: Fremdes Verschulden zählt über §§ 254 II 2, 278 BGB nur bei Sonderverbindung.",
+            "§ 296 ZPO: Frist versäumt – zwingend; Förderungspflicht verletzt – Ermessen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "§ 153 StGB: Der Angeklagte ist schon kein tauglicher Täter.",
+            "Diebstahl oder Betrug: Entscheidend ist, ob das Opfer bewusst verfügt.",
+            "Diebesfalle: Mit Einverständnis kein Gewahrsamsbruch – es bleibt der Versuch.",
+            "Konkurrenzen: Gezählt werden Handlungen, nicht Opfer (§§ 52, 53 StGB).",
+            "§ 263a StGB: Wo kein Mensch irrt, „unbefugt“ betrugsspezifisch prüfen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 80 Abs. 2 VwGO: Die Ausnahmen von der aufschiebenden Wirkung sind abschließend.",
+            "§ 35 BauGB: Privilegiert – Belange dürfen nicht entgegenstehen; sonst nicht einmal beeinträchtigt sein.",
+            "Ermessen offen: Bescheidungsurteil statt Verpflichtung, im Übrigen abweisen.",
+            "Art. 8 GG: Die Anmeldung ist Pflicht, aber keine Schutzvoraussetzung.",
+            "Art. 2 Abs. 1 GG: Geschützt ist jedes Verhalten – das Gewicht zählt erst in der Abwägung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Klausurtechnik: Nicht die Randbemerkung reparieren, sondern ihre Ursache.",
+            "Kopfsache: In der Lerngruppe mit einem Fall starten und laut ohne Unterlagen lösen."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wann wird dem Kind das Aufsichtsverschulden der Eltern zugerechnet?",
+            "Warum ist die Diebesfalle nur ein versuchter Diebstahl?",
+            "Welche Klage bei offenem Ermessen – und wie lautet der Tenor?",
+            "Was stockt, kommt auf die Wiederholungsliste der nächsten Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Vier Bereiche, eine Wiederholung",
+          "punkte": [
+            "Zivilrecht: Eigentum, EBV, ZPO",
+            "Strafrecht: Abgrenzungen und Konkurrenzen",
+            "Öffentliches Recht: Grundrechte und Prozess",
+            "Technik & Kopfsache als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "polizei",
+            "gebaeude",
+            "buch"
+          ]
+        }
+      ],
+      "caption": "18 Beiträge, vier Bereiche – was sitzt nach dieser Woche? Zivilrecht mit Übereignung, EBV, verlängertem Eigentumsvorbehalt, Mitverschulden und § 296 ZPO. Strafrecht mit Falschaussage, Diebstahl oder Betrug, Diebesfalle, Konkurrenzen und Computerbetrug. Öffentliches Recht mit aufschiebender Wirkung, Außenbereich, Bescheidungsurteil, Art. 8 und Art. 2 Abs. 1 GG. Geh nur die Punkte durch, die du noch nicht ohne Unterlagen erklären kannst.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Beiträge, vier Bereiche",
+      "coverText": "Zivil · Straf · ÖR · Technik & Kopfsache",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "rex"
+        ],
+        "kernidee": "Am Ende der Woche wird sortiert, was schon sitzt und was noch einmal wiederholt werden muss.",
+        "handlung": "{A} drops small glowing tokens into four separate baskets, while {B} catches the one token that bounces back out and holds it up for another try.",
+        "hinweisRegie": "Place the note in the free space above the four baskets, slightly tilted toward the bounced token in {B}'s hand, without covering the baskets or faces.",
+        "alternative": "{B} pulls four drawers of a small cabinet open one after another, while {A} checks each with a lantern and leaves one drawer marked with a ribbon."
+      },
+      "bildSzene": "tokens sorted into four baskets",
+      "bildSzeneAlt": "four drawers checked with lantern",
+      "quellen": [
+        "§ 929 S. 1 BGB",
+        "§§ 989 ff., 992 BGB",
+        "§ 935 BGB",
+        "§ 855 BGB",
+        "§§ 398, 449, 950 BGB",
+        "§§ 254, 278 BGB",
+        "§ 296 ZPO",
+        "§ 153 StGB",
+        "§§ 242, 263 StGB",
+        "§§ 52, 53 StGB",
+        "§ 263a StGB",
+        "§ 80 Abs. 2 VwGO",
+        "§ 35 BauGB",
+        "§ 113 Abs. 5 VwGO",
+        "Art. 8 GG",
+        "Art. 2 Abs. 1 GG",
+        "Themenpool: methodik-907",
+        "Themenpool: mindset-5"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "vier-echte-bereiche",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.864Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-343",
+      "slug": "2027-04-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Nicht bei § 185 StGB anfangen: erst Tatsache oder Werturteil klären",
+          "titelZeilen": [
+            "Nicht bei",
+            "§ 185 StGB anfangen:",
+            "erst Tatsache oder",
+            "Werturteil klären"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Die Weiche kommt vor dem Schema",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Weiche vor dem Schema",
+          "text": "Tatsachen sind dem Beweis zugänglich, Werturteile von Stellungnahme und Meinen geprägt. Werturteile: § 185 StGB. Ehrenrührige Tatsachen gegenüber Dritten: § 186 StGB – oder § 187 StGB, wenn der Täter die Unwahrheit kennt. Unwahre Tatsachen nur gegenüber dem Betroffenen: § 185 StGB."
+        },
+        {
+          "art": "schritte",
+          "titel": "Schema § 185 StGB",
+          "schritte": [
+            {
+              "titel": "Kundgabe von Missachtung",
+              "text": "Eine Äußerung, die dem Betroffenen seinen Achtungsanspruch ganz oder teilweise abspricht."
+            },
+            {
+              "titel": "Gegenüber einem anderen",
+              "text": "Die Kundgabe muss einen anderen erreichen, der sie wahrnimmt und versteht."
+            },
+            {
+              "titel": "Beleidigungsfähig",
+              "text": "Jeder Mensch; unter Umständen auch Personengemeinschaften und klar abgrenzbare Gruppen."
+            },
+            {
+              "titel": "Vorsatz",
+              "text": "Mindestens bedingter Vorsatz bezüglich des ehrverletzenden Sinns der Äußerung."
+            },
+            {
+              "titel": "Rechtswidrigkeit, Schuld, Antrag",
+              "text": "Vor allem § 193 StGB; dann Schuld; Strafantrag nach § 194 StGB nicht vergessen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Besonderheit bei § 186 StGB",
+          "text": "Dass die Tatsache nicht erweislich wahr ist, ist objektive Bedingung der Strafbarkeit – der Vorsatz muss sich darauf nicht beziehen. Gelingt der Wahrheitsbeweis, scheidet § 186 StGB aus. Dann bleibt nur § 192 StGB, wenn Form oder Umstände der Äußerung selbst beleidigen."
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: § 193 StGB und Art. 5 GG",
+          "text": "Bei Äußerungen im Meinungskampf wägst du im Rahmen des § 193 StGB mit Art. 5 Abs. 1 GG ab. Ohne Abwägung geht es nur bei Schmähkritik, Formalbeleidigung oder einem Angriff auf die Menschenwürde – und diese Ausnahmen legt das BVerfG eng aus."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst die Weiche: Werturteil – § 185. Tatsache gegenüber Dritten – §§ 186, 187. Dann Schema, § 193 StGB mit Art. 5 GG und der Strafantrag."
+        },
+        {
+          "art": "cta",
+          "titel": "Beleidigung in drei Zügen",
+          "punkte": [
+            "Tatsache oder Werturteil?",
+            "Gegenüber wem geäußert?",
+            "§ 193 StGB mit Art. 5 GG abgewogen?"
+          ],
+          "icons": [
+            "lupe",
+            "personen",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Wer bei jeder ehrverletzenden Äußerung sofort mit § 185 StGB startet, landet oft im falschen Delikt. Vor dem Schema steht die Weiche: Werturteil oder Tatsachenbehauptung? Ehrenrührige Tatsachen gegenüber Dritten gehören zu § 186 bzw. § 187 StGB, Werturteile zu § 185 StGB. Danach: Kundgabe, Vorsatz, § 193 StGB mit Art. 5 GG – und der Strafantrag nach § 194 StGB. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#beleidigung",
+        "#185stgb",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Beleidigungsdelikte: das Schema",
+      "coverText": "Die Weiche kommt vor dem Schema",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Bevor man ein Delikt prüft, muss man die Äußerung einordnen: Tatsache oder Meinung.",
+        "handlung": "{A} stands at a track switch lever in front of two diverging rails, deciding which way a small cart carrying a speech bubble shaped stone will go, while {B} hovers beside the second rail.",
+        "hinweisRegie": "Place the note in the free space right above the track switch, slightly tilted toward the diverging rails, without covering {A}'s hand on the lever or the cart.",
+        "alternative": "{B} sorts pebbles into two trays, one for pebbles that can be weighed on a small scale and one for those that cannot, while {A} watches critically."
+      },
+      "bildSzene": "switch lever before two diverging rails",
+      "bildSzeneAlt": "pebbles sorted into two trays",
+      "quellen": [
+        "§ 185 StGB",
+        "§ 186 StGB",
+        "§ 187 StGB",
+        "§ 192 StGB",
+        "§ 193 StGB",
+        "§ 194 StGB",
+        "Art. 5 Abs. 1 GG",
+        "Themenpool: strafbt-343"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.864Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "vwgo",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsprozessrecht",
+      "themaId": "vwgo-406",
+      "slug": "2027-04-11-b3",
+      "titelZeilen": [
+        "Das Datum auf dem",
+        "Bescheid startet",
+        "keine Frist"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Das Datum auf dem Bescheid startet keine Frist",
+          "unter": "Fristen · §§ 70, 74 VwGO",
+          "text": "Maßgeblich ist die Bekanntgabe bzw. die Zustellung – nicht das Ausstellungsdatum.",
+          "norm": "§§ 70, 74 VwGO",
+          "icon": "kalender",
+          "sprecher": "Das Datum auf dem Bescheid startet keine Frist. Entscheidend ist, wann er dir bekanntgegeben oder zugestellt wurde. Hier sind die Fristen für Widerspruch und Klage in vier Schritten.",
+          "marken": [
+            "nicht das Datum",
+            "Bekanntgabe"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Widerspruch: ein Monat",
+          "text": "Ab Bekanntgabe, bei der Ausgangsbehörde – die Widerspruchsbehörde wahrt die Frist auch.",
+          "norm": "§ 70 Abs. 1 VwGO",
+          "sprecher": "Schritt eins: der Widerspruch. Die Frist beträgt einen Monat ab Bekanntgabe. Einlegen musst du ihn bei der Behörde, die den Bescheid erlassen hat. Die Widerspruchsbehörde wahrt die Frist aber ebenfalls. Ein einfacher Brief gilt erst einige Tage nach Aufgabe zur Post als bekanntgegeben.",
+          "marken": [
+            "ein Monat"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Klage: ein Monat nach Zustellung",
+          "text": "Ab Zustellung des Widerspruchsbescheids; ohne Vorverfahren ab Bekanntgabe des Bescheids.",
+          "norm": "§ 74 Abs. 1, 2 VwGO",
+          "sprecher": "Schritt zwei: die Klage. Auch hier gilt ein Monat, gerechnet ab Zustellung des Widerspruchsbescheids. Entfällt das Vorverfahren, je nach Landesrecht, zählt die Bekanntgabe des Bescheids. Für die Verpflichtungsklage gilt dasselbe.",
+          "marken": [
+            "Zustellung zählt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Richtig rechnen",
+          "text": "Tag der Bekanntgabe zählt nicht; Ende am gleichen Kalendertag des Folgemonats.",
+          "norm": "§ 57 Abs. 2 VwGO",
+          "sprecher": "Schritt drei: richtig rechnen. Der Tag der Bekanntgabe zählt nicht mit. Die Frist endet mit Ablauf des Tages im nächsten Monat, der dieselbe Zahl trägt. Fällt er auf ein Wochenende oder einen Feiertag, läuft sie bis zum nächsten Werktag.",
+          "marken": [
+            "§ 222 ZPO, §§ 187 f. BGB"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Belehrung fehlt: ein Jahr",
+          "text": "Ohne ordnungsgemäße Rechtsbehelfsbelehrung beginnt die Monatsfrist nicht.",
+          "norm": "§ 58 VwGO",
+          "sprecher": "Schritt vier: Fehlt die Rechtsbehelfsbelehrung oder ist sie falsch, beginnt die Monatsfrist gar nicht. Dann gilt grundsätzlich eine Jahresfrist.",
+          "marken": [
+            "Jahresfrist"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Frist verpasst? Wiedereinsetzung",
+          "text": "Ohne Verschulden verhindert: Antrag binnen zwei Wochen nach Wegfall des Hindernisses.",
+          "norm": "§ 60 VwGO",
+          "sprecher": "Frist trotzdem verstrichen? Dann bleibt die Wiedereinsetzung. Wer ohne Verschulden verhindert war, beantragt sie binnen zwei Wochen nach Wegfall des Hindernisses. Beim Widerspruch gilt das über Paragraf 70 Absatz 2 entsprechend.",
+          "marken": [
+            "zwei Wochen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Ein Monat, ab Bekanntgabe oder Zustellung – ohne Belehrung ein Jahr.",
+          "norm": "§§ 58, 70, 74 VwGO",
+          "sprecher": "Merke: Widerspruch und Klage haben jeweils einen Monat, ab Bekanntgabe oder Zustellung. Ohne richtige Belehrung ein Jahr.",
+          "marken": [
+            "Monat / Jahr"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Im Gutachten: Fristbeginn mit Datum",
+          "text": "Speichern für die nächste VwGO-Klausur.",
+          "norm": null,
+          "sprecher": "Speicher dir das für die nächste VwGO-Klausur und rechne im Gutachten immer mit konkretem Datum.",
+          "marken": [
+            "Datum ausrechnen"
+          ],
+          "nummer": null
+        }
+      ],
+      "caption": "Das Datum auf dem Bescheid startet keine Frist – maßgeblich ist die Bekanntgabe, bei der Klage die Zustellung des Widerspruchsbescheids. Widerspruch und Klage haben jeweils einen Monat (§§ 70, 74 VwGO), gerechnet nach § 57 Abs. 2 VwGO i. V. m. § 222 ZPO und §§ 187, 188 BGB. Fehlt die Rechtsbehelfsbelehrung, gilt grundsätzlich ein Jahr (§ 58 Abs. 2 VwGO). Verpasst ohne Verschulden? Dann Wiedereinsetzung nach § 60 VwGO.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#vwgo",
+        "#klagefrist",
+        "#verwaltungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Widerspruchs- und Klagefrist richtig berechnen",
+      "coverText": "Bekanntgabe zählt, nicht das Datum",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "zylla"
+        ],
+        "kernidee": "Eine Frist läuft erst ab dem Moment, in dem der Bescheid wirklich beim Empfänger ankommt.",
+        "handlung": "{B} opens a letter at her door just now, while {A} points his stick not at the old stamp on the envelope but at a small sand timer that starts running in her hand.",
+        "hinweisRegie": "Place the note in the free space next to the sand timer in {B}'s hand, slightly tilted toward it, without covering the envelope stamp or {A}'s pointer.",
+        "alternative": "{A} tears off calendar pages one by one while {B} counts along and stops at a page with the same number one month later."
+      },
+      "bildSzene": "sand timer starts when letter opened",
+      "bildSzeneAlt": "calendar pages counted to same date",
+      "quellen": [
+        "§ 57 Abs. 2 VwGO",
+        "§ 58 VwGO",
+        "§ 60 VwGO",
+        "§ 68 Abs. 1 S. 2 VwGO",
+        "§ 70 VwGO",
+        "§ 74 Abs. 1, 2 VwGO",
+        "§ 222 ZPO",
+        "§§ 187, 188 BGB",
+        "§ 41 Abs. 2 VwVfG",
+        "Themenpool: vwgo-406"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.866Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-382",
+      "ueberzeile": "Prüfungsfrage Verwaltungsrecht",
+      "titel": "B hat einen Anspruch auf die Genehmigung. Wann darf die Behörde trotzdem eine Nebenbestimmung beifügen?",
+      "optionen": [
+        "Jederzeit – das steht in ihrem pflichtgemäßen Ermessen",
+        "Nie – gebundene Verwaltungsakte vertragen keine Nebenbestimmung",
+        "Wenn eine Rechtsvorschrift es zulässt oder sie Voraussetzungen sichert"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 36 Abs. 1, 2 VwVfG",
+        "Themenpool: verwalt-382"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.866Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-382",
+      "ueberzeile": "Auflösung",
+      "titel": "Nur mit Rechtsvorschrift oder zur Sicherung der Voraussetzungen",
+      "text": "Bei einem Anspruch auf den Verwaltungsakt erlaubt § 36 Abs. 1 VwVfG Nebenbestimmungen nur, wenn eine Rechtsvorschrift sie zulässt oder sie sicherstellen sollen, dass die gesetzlichen Voraussetzungen erfüllt werden. Das Ermessen nach § 36 Abs. 2 VwVfG gilt nur bei Ermessensakten. Auch dann muss die Nebenbestimmung dem Zweck des Verwaltungsakts entsprechen (§ 36 Abs. 3).",
+      "norm": "§ 36 Abs. 1 VwVfG",
+      "quellen": [
+        "§ 36 Abs. 1, 2, 3 VwVfG",
+        "Themenpool: verwalt-382"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.866Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Jederzeit – das steht in ihrem pflichtgemäßen Ermessen",
+        "Nie – gebundene Verwaltungsakte vertragen keine Nebenbestimmung",
+        "Wenn eine Rechtsvorschrift es zulässt oder sie Voraussetzungen sichert"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-281",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 66 ZPO: Wer einer Partei beitritt, braucht ein rechtliches Interesse",
+      "text": "Nebenintervenient kann werden, wer ein rechtliches Interesse daran hat, dass eine Partei obsiegt – typisch bei drohendem Regress. Ein bloß wirtschaftliches Interesse genügt nicht. Er darf alle Prozesshandlungen vornehmen, aber nicht im Widerspruch zur Hauptpartei (§ 67 ZPO). Im Folgeprozess droht ihm die Interventionswirkung (§ 68 ZPO).",
+      "norm": "§§ 66, 67 ZPO",
+      "quellen": [
+        "§ 66 ZPO",
+        "§ 67 ZPO",
+        "§ 68 ZPO",
+        "Themenpool: zpo-281"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.866Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-806",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Teilerfolg: Die Kosten trägt nicht einfach der Beklagte",
+      "falsch": "K verlangt 8.000 €, zugesprochen werden 2.000 €. Tenor: „Die Kosten des Rechtsstreits trägt der Beklagte.“",
+      "richtigText": "Bei teilweisem Obsiegen werden die Kosten verhältnismäßig geteilt (§ 92 Abs. 1 S. 1 ZPO): „Von den Kosten des Rechtsstreits tragen der Kläger 75 % und der Beklagte 25 %.“ Einer Partei alle Kosten auferlegen darfst du nur ausnahmsweise nach § 92 Abs. 2 ZPO, etwa bei verhältnismäßig geringfügiger Zuvielforderung ohne höhere Kosten.",
+      "quellen": [
+        "§ 91 ZPO",
+        "§ 92 Abs. 1, 2 ZPO",
+        "Themenpool: assessorz-806"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.866Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "bereich",
+      "klausur": 1,
+      "pairId": "bereich-212",
+      "ueberzeile": "Klausurtipp Bereicherungsrecht",
+      "titel": "Überweisung im Dreieck: Jeder kondiziert in seiner Leistungsbeziehung",
+      "text": "Überweist die Bank auf Anweisung ihres Kunden an E, leistet sie an den Kunden (Deckungsverhältnis) und der Kunde an E (Valutaverhältnis). Ist nur das Valutaverhältnis fehlerhaft, kondiziert der Kunde bei E – nicht die Bank. Eine Direktkondiktion der Bank bei E kommt nur ausnahmsweise in Betracht, etwa wenn eine dem Kunden zurechenbare Anweisung fehlt.",
+      "quellen": [
+        "§ 812 Abs. 1 S. 1 BGB",
+        "Themenpool: bereich-212"
+      ],
+      "fachLabel": "Bereicherungsrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.866Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-908",
+      "ueberzeile": "3 Punkte",
+      "titel": "Neues Urteil? Erst den Prüfungspunkt finden, dann lernen",
+      "text": "Eine Entscheidung bleibt nur hängen, wenn du weißt, wo sie im Aufbau steht.",
+      "punkte": [
+        "Prüfungspunkt benennen: An welchem Merkmal hängt die Entscheidung?",
+        "Bisherige Linie in einem Satz",
+        "Was ist neu: Bestätigung, Präzisierung oder Abkehr?"
+      ],
+      "quellen": [
+        "Themenpool: methodik-908"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "3",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T19:35:37.866Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -1,0 +1,865 @@
+{
+  "datum": "2027-03-10",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "strafbt-326",
+        "themaTitel": "Wann ist ein Wohnungseinbruchdiebstahl gegeben?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "grundr-621",
+        "themaTitel": "Freizügigkeit",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "assessorz-804",
+        "themaTitel": "Wie ist der Tatbestand des Zivilurteils aufgebaut?",
+        "fach": "assessorz",
+        "klausur": 1,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:13",
+        "art": "frage",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:13",
+        "art": "antwort",
+        "themaId": "zpo-555"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:13",
+        "art": "norm",
+        "themaId": "schuld-171"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:15",
+        "art": "streitstand",
+        "themaId": "methodik-938"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:56",
+        "art": "merksatz",
+        "themaId": "bgbat-164"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:28",
+        "art": "begriff",
+        "themaId": "anklage-863"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "strafbt-326",
+      "poolTitel": "Wann ist ein Wohnungseinbruchdiebstahl gegeben?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 1 Nr. 3 StGB",
+        "§ 244 Abs. 4 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-14",
+        "2027-01-14"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "grundr-621",
+      "poolTitel": "Freizügigkeit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 11 GG"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-12-22",
+        "2026-12-22"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "assessorz-804",
+      "poolTitel": "Wie ist der Tatbestand des Zivilurteils aufgebaut?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 313 Abs. 2 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": [
+        "2026-10-16",
+        "2026-12-19",
+        "2027-02-19"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19",
+        "2026-11-19",
+        "2027-02-10"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-555",
+      "poolTitel": "Erledigungserklärung: einseitig und übereinstimmend",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 91a, 264 Nr. 2 ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-19",
+        "2026-11-19",
+        "2027-02-10"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuld-171",
+      "poolTitel": "Wer trägt die Gegenleistungsgefahr bei Unmöglichkeit?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 326 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06",
+        "2027-02-12"
+      ]
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "methodik-938",
+      "poolTitel": "Meinungsstreit darstellen: Ansichten, Argumente, Streitentscheid",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-11-08",
+        "2026-12-12",
+        "2027-01-09"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "bgbat-164",
+      "poolTitel": "Wie wirken Hemmung, Ablaufhemmung und Neubeginn der Verjährung?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§§ 203, 204 BGB",
+        "§§ 210, 211 BGB",
+        "§ 212 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-09"
+      ]
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "anklage-863",
+      "poolTitel": "Was regelt die Begleitverfügung?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "StPO; RiStBV"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-326",
+      "slug": "2027-03-10-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Eingebrochen und gestohlen – und doch kein § 244 StGB",
+          "titelZeilen": [
+            "Eingebrochen und",
+            "gestohlen – und doch",
+            "kein § 244 StGB"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Entschluss erst drinnen reicht nicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "A flieht vor Verfolgern, hebelt die Terrassentür der Wohnung des O auf und versteckt sich drinnen. Erst dort sieht er einen Laptop und entschließt sich, ihn mitzunehmen. Wohnungseinbruchdiebstahl nach § 244 Abs. 1 Nr. 3 StGB?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "1. Grundtatbestand",
+              "text": "Diebstahl des Laptops (§ 242 Abs. 1 StGB): fremde bewegliche Sache, Wegnahme, Vorsatz, Zueignungsabsicht – unproblematisch."
+            },
+            {
+              "titel": "2. Wohnung, Einbrechen",
+              "text": "Die Wohnung des O ist erfasst, das Aufhebeln der Tür ist ein Einbrechen."
+            },
+            {
+              "titel": "3. „Zur Ausführung der Tat“",
+              "text": "Der Einbruch muss dem Diebstahl dienen. Der Diebstahlsvorsatz muss also schon beim Einbrechen vorliegen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die Auflösung",
+          "text": "A brach ein, um sich zu verstecken. Den Entschluss zum Diebstahl fasste er erst in der Wohnung. Damit fehlt der Zusammenhang „zur Ausführung der Tat“: kein § 244 Abs. 1 Nr. 3 StGB – und aus demselben Grund auch kein Regelbeispiel nach § 243 Abs. 1 S. 2 Nr. 1 StGB."
+        },
+        {
+          "art": "text",
+          "titel": "Was bleibt",
+          "punkte": [
+            "Diebstahl nach § 242 StGB",
+            "Hausfriedensbruch (§ 123 StGB) und Sachbeschädigung an der Tür (§ 303 StGB)",
+            "Merke den Zeitpunkt: Vorsatz beim Einbrechen, nicht erst beim Zugreifen"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Einbrechen „zur Ausführung der Tat“ heißt: Der Diebstahlsvorsatz besteht schon beim Einbruch. Später gefasster Entschluss reicht nicht."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 244 Abs. 1 Nr. 3 StGB in drei Fragen",
+          "punkte": [
+            "Wohnung betroffen?",
+            "Einbrechen, Einsteigen, Eindringen oder Verbergen?",
+            "Diebstahlsvorsatz schon beim Einbruch?"
+          ],
+          "icons": [
+            "haus",
+            "tuer",
+            "uhr"
+          ]
+        }
+      ],
+      "caption": "Eingebrochen und gestohlen – und doch kein Wohnungseinbruchdiebstahl. § 244 Abs. 1 Nr. 3 StGB verlangt, dass der Täter „zur Ausführung der Tat“ einbricht. Wer nur einbricht, um sich zu verstecken, und erst drinnen den Entschluss zum Diebstahl fasst, erfüllt weder § 244 Abs. 1 Nr. 3 noch § 243 Abs. 1 S. 2 Nr. 1 StGB. Es bleiben §§ 242, 123, 303 StGB. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#244stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wohnungseinbruch: Vorsatz beim Einbrechen",
+      "coverText": "Entschluss erst drinnen reicht nicht",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "brakk"
+        ],
+        "kernidee": "Wer nur einbricht, um sich zu verstecken, und erst drinnen stiehlt, begeht keinen Wohnungseinbruchdiebstahl.",
+        "handlung": "{A} crouches hidden behind a pried-open door, and only now notices a glowing device on a shelf, while {B} peeks in from outside and checks a small clock on his wrist.",
+        "hinweisRegie": "Place the note in the free space between the pried-open door and the glowing device, slightly tilted, so it marks the timing of the decision without covering {A}'s face or the clock.",
+        "alternative": "{B} holds a stopwatch at a doorway while {A} only reaches for a crate after the watch has already clicked past the door."
+      },
+      "bildSzene": "hiding behind pried door, spots device",
+      "bildSzeneAlt": "stopwatch at doorway, grab comes later",
+      "quellen": [
+        "§ 244 Abs. 1 Nr. 3, Abs. 4 StGB",
+        "§ 243 Abs. 1 S. 2 Nr. 1 StGB",
+        "§ 242 StGB",
+        "§ 123 StGB",
+        "§ 303 StGB",
+        "Themenpool: strafbt-326"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "konkrete-wendung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.922Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-621",
+      "slug": "2027-03-10-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Drei Monate Bahnhofsverbot: Welches Grundrecht prüfst du?",
+          "titelZeilen": [
+            "Drei Monate",
+            "Bahnhofsverbot:",
+            "Welches Grundrecht?"
+          ],
+          "coverBadge": "Abgrenzung",
+          "coverText": "Kriminalvorbehalt in Art. 11 II",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Die Polizei untersagt dem Deutschen D für drei Monate, das Bahnhofsviertel zu betreten, weil er dort wiederholt mit Drogen gehandelt hat. Grundlage ist eine Aufenthaltsverbots-Norm im Landespolizeigesetz. Welches Grundrecht ist der Maßstab?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Platzverweis oder Aufenthaltsverbot?",
+          "links": {
+            "titel": "Kurzer Platzverweis",
+            "punkte": [
+              "Vorübergehend, etwa für einen Einsatz.",
+              "Nach h.M. kein Aufenthalt im Sinne des Art. 11 GG.",
+              "Maßstab: Art. 2 Abs. 1 GG."
+            ]
+          },
+          "rechts": {
+            "titel": "Aufenthaltsverbot",
+            "punkte": [
+              "Längerfristig, für ein bestimmtes Gebiet.",
+              "Greift in die Freizügigkeit ein.",
+              "Maßstab: Art. 11 Abs. 1 GG."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du Art. 11 GG",
+          "schritte": [
+            {
+              "titel": "Schutzbereich",
+              "text": "Deutsche; Aufenthalt und Wohnsitz an jedem Ort im Bundesgebiet nehmen – Verweilen von gewisser Dauer oder Bedeutung."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Das Verbot, ein Gebiet zu betreten, schränkt die Wahl des Aufenthaltsorts ein."
+            },
+            {
+              "titel": "Qualifizierter Vorbehalt",
+              "text": "Art. 11 Abs. 2 GG: nur durch oder aufgrund Gesetzes und nur für die dort genannten Zwecke – hier: um strafbaren Handlungen vorzubeugen."
+            },
+            {
+              "titel": "Zitiergebot, Verhältnismäßigkeit",
+              "text": "Das Gesetz muss Art. 11 GG nennen (Art. 19 Abs. 1 S. 2 GG). Dann Dauer und Gebiet am Einzelfall messen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Stolperstein",
+          "text": "Art. 11 GG wie einen einfachen Gesetzesvorbehalt behandeln. Der Eingriff ist nur für die Zwecke des Abs. 2 zulässig – hier trägt der Kriminalvorbehalt. Und: Nichtdeutsche schützt nur Art. 2 Abs. 1 GG."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Kurzer Platzverweis: Art. 2 Abs. 1 GG. Längeres Aufenthaltsverbot: Art. 11 GG – mit qualifiziertem Vorbehalt und Zitiergebot."
+        },
+        {
+          "art": "cta",
+          "titel": "Freizügigkeit in drei Fragen",
+          "punkte": [
+            "Deutscher und Aufenthalt von Gewicht?",
+            "Zweck aus Art. 11 Abs. 2 GG erfüllt?",
+            "Zitiergebot beachtet?"
+          ],
+          "icons": [
+            "person",
+            "polizei",
+            "paragraf"
+          ]
+        }
+      ],
+      "caption": "Drei Monate Bahnhofsverbot – welches Grundrecht prüfst du? Ein längerfristiges Aufenthaltsverbot greift in die Freizügigkeit nach Art. 11 Abs. 1 GG ein; ein kurzer Platzverweis nach h.M. nur in Art. 2 Abs. 1 GG. Art. 11 Abs. 2 GG erlaubt Eingriffe nur zu bestimmten Zwecken, etwa um strafbaren Handlungen vorzubeugen, und das Gesetz muss Art. 11 GG zitieren. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#freizügigkeit",
+        "#art11gg",
+        "#polizeirecht",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Aufenthaltsverbot: Art. 11 GG prüfen",
+      "coverText": "Kriminalvorbehalt in Art. 11 II",
+      "coverBadge": "Abgrenzung",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "form7"
+        ],
+        "kernidee": "Wer für Monate aus einem ganzen Viertel verbannt wird, ist in seiner Freizügigkeit betroffen.",
+        "handlung": "{B} hovers at the edge of a small train-station district and stretches a long ribbon barrier across the entrance, while {A} stops with her travel bag and measures the ribbon's length with her eyes.",
+        "hinweisRegie": "Place the note in the free space above the ribbon barrier, slightly tilted toward its long span, so it marks the duration and area of the ban without covering {A}'s bag or face.",
+        "alternative": "{A} looks at a calendar with three months crossed out, while {B} holds a small map with one district shaded."
+      },
+      "bildSzene": "ribbon barrier across station district",
+      "bildSzeneAlt": "calendar three months crossed, shaded map",
+      "quellen": [
+        "Art. 11 GG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 19 Abs. 1 S. 2 GG",
+        "Polizeigesetze der Länder",
+        "Themenpool: grundr-621"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "grundrecht-zuordnen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.922Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "assessorz",
+      "klausur": 1,
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "themaId": "assessorz-804",
+      "slug": "2027-03-10-b3",
+      "titelZeilen": [
+        "Die Beweisaufnahme",
+        "steht im Tatbestand –",
+        "ihr Ergebnis nicht"
+      ],
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Die Beweisaufnahme steht im Tatbestand – ihr Ergebnis nicht",
+          "unter": "Zivilurteil · § 313 Abs. 2 ZPO",
+          "text": "Dass Beweis erhoben wurde, ist Prozessgeschichte. Was er ergab, würdigst du in den Gründen.",
+          "norm": "§ 313 Abs. 2 ZPO",
+          "icon": "gericht",
+          "sprecher": "Die Beweisaufnahme gehört in den Tatbestand. Aber nur als Prozessgeschichte. Was die Zeugen gesagt haben und was du ihnen glaubst, steht dort nicht. So baust du den Tatbestand auf.",
+          "marken": [
+            "Prozessgeschichte"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Einleitungssatz und Unstreitiges",
+          "text": "Worum wird gestritten? Dann das Unstreitige im Imperfekt.",
+          "norm": null,
+          "sprecher": "Schritt eins: ein Einleitungssatz, worum die Parteien streiten. Dann der unstreitige Sachverhalt, im Imperfekt und im Indikativ, meist chronologisch.",
+          "marken": [
+            "Imperfekt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Streitiger Klägervortrag, Anträge",
+          "text": "Präsens, indirekte Rede – dann die Anträge, abgesetzt.",
+          "norm": null,
+          "sprecher": "Schritt zwei: das streitige Vorbringen des Klägers, im Präsens und in indirekter Rede. Davor gegebenenfalls die kleine Prozessgeschichte. Dann die Anträge, optisch abgesetzt.",
+          "marken": [
+            "indirekte Rede"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Beklagtenvortrag, Replik",
+          "text": "Einwendungen des Beklagten, dann ggf. Erwiderung des Klägers.",
+          "norm": null,
+          "sprecher": "Schritt drei: das streitige Vorbringen des Beklagten, seine Einwendungen und Einreden. Es steht nach den Anträgen, damit klar ist, wogegen er sich wehrt. Wenn nötig, danach die Replik des Klägers.",
+          "marken": [
+            "nach den Anträgen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Prozessgeschichte am Ende",
+          "text": "„Das Gericht hat Beweis erhoben durch …“ – mit Verweis auf das Protokoll.",
+          "norm": "§ 313 Abs. 2 S. 2 ZPO",
+          "sprecher": "Schritt vier: die Prozessgeschichte. Hier steht, dass das Gericht Beweis erhoben hat, durch welches Beweismittel und zu welcher Frage. Für das Ergebnis verweist du auf das Sitzungsprotokoll.",
+          "marken": [
+            "Verweis aufs Protokoll"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Tatbestand berichtet, Entscheidungsgründe würdigen.",
+          "norm": "§ 313 ZPO",
+          "sprecher": "Merke: Der Tatbestand berichtet, was geschehen ist und was die Parteien vortragen. Die Würdigung der Beweise, also wem du glaubst und warum, kommt erst in die Entscheidungsgründe.",
+          "marken": [
+            "berichten ≠ würdigen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beim nächsten Urteil gegenlesen",
+          "text": "Speichern für die nächste Urteilsklausur.",
+          "sprecher": "Speicher dir das für die nächste Urteilsklausur. Und lies deinen Tatbestand am Ende einmal darauf, ob irgendwo schon eine Wertung steckt.",
+          "marken": [
+            "gegenlesen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Die Beweisaufnahme gehört in den Tatbestand – ihr Ergebnis nicht. Aufbau nach § 313 Abs. 2 ZPO: Einleitungssatz, Unstreitiges im Imperfekt, streitiger Klägervortrag in indirekter Rede, Anträge, Beklagtenvortrag, Prozessgeschichte. Dort steht, dass und worüber Beweis erhoben wurde, mit Verweis auf das Protokoll. Die Würdigung gehört in die Entscheidungsgründe. Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zivilurteil",
+        "#tatbestand",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Tatbestand im Zivilurteil: der Aufbau",
+      "coverText": "Berichten, nicht würdigen",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "zylla"
+        ],
+        "kernidee": "Im Tatbestand wird nur berichtet, dass Beweis erhoben wurde – bewertet wird später.",
+        "handlung": "{A} hovers over a neat row of sealed envelopes and stamps each one 'received', while {B} curiously tries to open one and is gently stopped.",
+        "hinweisRegie": "Place the note in the free space above the row of sealed envelopes, slightly tilted, so it marks that contents stay closed here, without covering {B}'s hand or {A}'s stamp.",
+        "alternative": "{B} lays out puzzle pieces in order on a table, while {A} keeps the finished picture covered under a cloth for later."
+      },
+      "bildSzene": "stamping sealed envelopes, not opening",
+      "bildSzeneAlt": "puzzle pieces laid out, picture covered",
+      "quellen": [
+        "§ 313 Abs. 1 Nr. 5, Abs. 2 ZPO",
+        "Themenpool: assessorz-804"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "platzierung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.924Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "K und B erklären den Rechtsstreit übereinstimmend für erledigt. Wie entscheidet das Gericht über die Kosten?",
+      "optionen": [
+        "Durch Beschluss nach billigem Ermessen (§ 91a ZPO)",
+        "Durch Urteil – der Kläger trägt die Kosten wie bei einer Rücknahme",
+        "Durch Urteil nach Beweisaufnahme über die ursprüngliche Klage"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 91a ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.924Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-555",
+      "ueberzeile": "Auflösung",
+      "titel": "Beschluss nach billigem Ermessen – ohne weitere Beweisaufnahme",
+      "text": "Die übereinstimmenden Erklärungen beenden die Rechtshängigkeit in der Hauptsache. Das Gericht entscheidet nur noch über die Kosten, durch Beschluss, unter Berücksichtigung des bisherigen Sach- und Streitstands (§ 91a Abs. 1 S. 1 ZPO) – summarisch. Schweigt der Beklagte binnen zwei Wochen trotz Hinweis, gilt das als Zustimmung (§ 91a Abs. 1 S. 2).",
+      "norm": "§ 91a ZPO",
+      "quellen": [
+        "§ 91a ZPO",
+        "Themenpool: zpo-555"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.924Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Durch Beschluss nach billigem Ermessen (§ 91a ZPO)",
+        "Durch Urteil – der Kläger trägt die Kosten wie bei einer Rücknahme",
+        "Durch Urteil nach Beweisaufnahme über die ursprüngliche Klage"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuld",
+      "klausur": 1,
+      "pairId": "schuld-171",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 326 Abs. 4 BGB: Schon gezahlt? Zurück nach Rücktrittsrecht",
+      "text": "Entfällt die Gegenleistung nach § 326 Abs. 1 BGB kraft Gesetzes, braucht es keinen Rücktritt. Hat der Gläubiger schon geleistet, kann er das Geleistete nach §§ 346 bis 348 BGB zurückfordern (§ 326 Abs. 4 BGB) – nicht über § 812 BGB. Zurücktreten kann er trotzdem, ohne Fristsetzung (§ 326 Abs. 5 BGB).",
+      "norm": "§ 326 Abs. 4, 5 BGB",
+      "quellen": [
+        "§ 326 BGB",
+        "§§ 346–348 BGB",
+        "Themenpool: schuld-171"
+      ],
+      "fachLabel": "Schuldrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.924Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-938",
+      "ueberzeile": "Streitstand Methodenlehre",
+      "titel": "Auslegung: Zählt der Wille des historischen Gesetzgebers oder der objektive Sinn des Gesetzes?",
+      "norm": "Methodenlehre",
+      "optionen": [
+        "Objektive Theorie (BVerfG): Maßgeblich ist der im Gesetz zum Ausdruck kommende objektivierte Wille des Gesetzgebers.",
+        "Subjektive Theorie: Maßgeblich ist der Regelungswille des historischen Gesetzgebers, etwa aus den Materialien."
+      ],
+      "text": "Klausur: Beide Seiten nutzen dieselben Werkzeuge – Wortlaut, Systematik, Entstehung, Zweck. Den Streit brauchst du nur, wenn Wortlaut und erkennbarer Wille auseinanderfallen. Dann Argument, Gegenargument, eigener Entscheid.",
+      "quellen": [
+        "Themenpool: methodik-938"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.924Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-164",
+      "ueberzeile": "Merksatz Verjährung",
+      "titel": "Verhandlungen hemmen – und danach bleiben mindestens drei Monate",
+      "text": "Gehemmt, bis eine Seite die Fortsetzung verweigert (§ 203 S. 1 BGB). Danach tritt die Verjährung frühestens drei Monate später ein (§ 203 S. 2 BGB).",
+      "norm": "§ 203 BGB",
+      "quellen": [
+        "§ 203 BGB",
+        "§ 209 BGB",
+        "Themenpool: bgbat-164"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.924Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-863",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Begleitverfügung: die Verfügung, mit der die Anklage auf den Weg geht",
+      "text": "Neben der Anklageschrift verfügt die Staatsanwaltschaft, was sonst zu tun ist: Abschluss der Ermittlungen vermerken (§ 169a StPO), Teileinstellungen (§ 170 Abs. 2, § 154 StPO) mit Bescheid an den Anzeigenden (§ 171 StPO), Mitteilungen, dann die Akten mit Anklage an das Gericht. Aufbau im Detail je nach Landespraxis.",
+      "norm": "§§ 169a, 170, 171 StPO",
+      "quellen": [
+        "§ 169a StPO",
+        "§ 170 StPO",
+        "§ 171 StPO",
+        "§ 154 StPO",
+        "RiStBV",
+        "Themenpool: anklage-863"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:14:00.924Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

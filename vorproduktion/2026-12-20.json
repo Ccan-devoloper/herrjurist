@@ -1,0 +1,879 @@
+{
+  "datum": "2026-12-20",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "zpo-562",
+        "themaTitel": "Materielle Rechtskraft",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-305",
+        "themaTitel": "Was ist ein fehlgeschlagener Versuch?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:06",
+        "art": "frage",
+        "themaId": "strafat-294"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:06",
+        "art": "antwort",
+        "themaId": "strafat-294"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:10",
+        "art": "norm",
+        "themaId": "zpo-285"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:18",
+        "art": "fehler",
+        "themaId": "schuldbt-915"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:48",
+        "art": "tipp",
+        "themaId": "bgbat-167"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:18",
+        "art": "zahl",
+        "themaId": "assessorz-816"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "zpo-562",
+      "poolTitel": "Materielle Rechtskraft",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 322 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-305",
+      "poolTitel": "Was ist ein fehlgeschlagener Versuch?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": [
+        "2026-10-25"
+      ]
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "strafat-294",
+      "poolTitel": "Wann ist Notwehr sozialethisch eingeschränkt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "strafat-294",
+      "poolTitel": "Wann ist Notwehr sozialethisch eingeschränkt?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-07"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "zpo-285",
+      "poolTitel": "Wie wirkt eine Erledigung der Hauptsache?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 91a ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "schuldbt-915",
+      "poolTitel": "Abhilfe, Selbstabhilfe, Ersatzleistung: Wie setzt der Reisende Mängelrechte vor Ort durch?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 651k BGB",
+        "§ 651i Abs. 3 BGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "bgbat-167",
+      "poolTitel": "Was ist ein Kalkulationsirrtum und ist er beachtlich?",
+      "fach": "bgbat",
+      "fachLabel": "BGB Allgemeiner Teil",
+      "klausur": 1,
+      "normen": [
+        "§ 119 BGB",
+        "§ 242 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "assessorz-816",
+      "poolTitel": "Wann darf verspätetes Vorbringen zurückgewiesen werden?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-21"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-12-20-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "18 Themen, 4 Bereiche: Wo hakt es noch?",
+          "titelZeilen": [
+            "18 Themen,",
+            "4 Bereiche: Wo",
+            "hakt es noch?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 313 BGB: erst Anpassung, Rücktritt oder Kündigung nur nachrangig.",
+            "§ 823 Abs. 2 BGB: Schutzgesetz nur bei (auch) individualschützender Norm.",
+            "Sachpfändung: Gewahrsam zählt, Dritteigentum klärt § 771 ZPO.",
+            "Gesamtschuld: außen schuldet jeder alles, innen nur den Anteil (§ 426 BGB).",
+            "Mahnverfahren: Verspäteter Widerspruch gilt als Einspruch (§ 694 Abs. 2 ZPO)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Anklageschrift: wesentliches Ergebnis beim Strafrichter entbehrlich.",
+            "§ 222 StGB: ohne Pflichtwidrigkeitszusammenhang keine Zurechnung.",
+            "§ 246 StGB: Zueignung ist Tathandlung, subjektiv genügt Vorsatz.",
+            "Verfahrensrüge: ohne vollständige Tatsachen unzulässig.",
+            "Unbeendeter Versuch: Aufhören genügt für den Rücktritt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "Art. 16a GG: Der Reiseweg entscheidet – Abs. 2 sperrt nach Einreise über EU-Staat.",
+            "Art. 65 GG: Streit zwischen Ministern entscheidet das Kabinett.",
+            "Anfechtungsklage: Vorverfahren je nach Landesrecht.",
+            "Widerspruchsbescheid: Kosten gehören in den Tenor.",
+            "Verkehrsschild: Allgemeinverfügung nach § 35 S. 2 VwVfG.",
+            "Organstreit: Das BVerfG stellt nur fest (§ 67 BVerfGG)."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Rechtsprechung lernen: Auslöser, Ort im Schema, Lösung – drei Sätze.",
+            "Lerngruppe: Wer erklärt, lernt am meisten – mit der Warum-Runde."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Wo prüfst du die Zueignung bei § 246 StGB?",
+            "Was tenoriert das BVerfG im Organstreit?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht: Anspruch und Rechtsbehelf",
+            "Strafrecht: Aufbau vor Ergebnis",
+            "Öffentliches Recht: Verfahren und Tenor",
+            "Methodik: erklären statt lesen"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "personen"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – von § 313 BGB über den Rücktritt vom unbeendeten Versuch bis zum Organstreit. Jede Folie bündelt einen Bereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir, wo es noch hakt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "mara"
+        ],
+        "kernidee": "Am Ende der Woche wird geprüft, welcher Teil des Lernstoffs noch nicht sicher sitzt.",
+        "handlung": "{A} lifts four stacked crystal crates one after another onto a scale, while {B} watches the needle and marks the crate that tips it unevenly.",
+        "hinweisRegie": "Place the note in the free space above the scale next to the marked crate, slightly tilted toward it, without covering {A}'s lifting arms or the needle.",
+        "alternative": "{B} walks along four rope bridges and tugs each one, while {A} ties a flag to the rope that gives way a little."
+      },
+      "bildSzene": "four crates weighed, one marked",
+      "bildSzeneAlt": "tugging four rope bridges, flag tied",
+      "quellen": [
+        "§ 313 BGB",
+        "§ 823 Abs. 2 BGB",
+        "§§ 808, 771 ZPO",
+        "§ 426 BGB",
+        "§§ 694, 700 ZPO",
+        "§ 200 StPO",
+        "§ 222 StGB",
+        "§ 246 StGB",
+        "§ 344 Abs. 2 StPO",
+        "§ 24 StGB",
+        "Art. 16a GG",
+        "Art. 65 GG",
+        "§ 68 VwGO",
+        "§ 73 VwGO",
+        "§ 35 VwVfG",
+        "§ 67 BVerfGG",
+        "Themenpool: methodik-908",
+        "Themenpool: mindset-5"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.673Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-562",
+      "slug": "2026-12-20-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Vorfrage entschieden, aber nicht rechtskräftig",
+          "titelZeilen": [
+            "Vorfrage",
+            "entschieden, aber",
+            "nicht rechtskräftig"
+          ],
+          "coverBadge": "Examensklassiker",
+          "coverText": "Tenor ja, Gründe nein",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "Materielle Rechtskraft bindet in späteren Prozessen an die Entscheidung über den erhobenen Anspruch (§ 322 Abs. 1 ZPO). Beispiel: E klagt nach § 985 BGB auf Herausgabe und verliert, weil er nicht Eigentümer sei. Steht damit rechtskräftig fest, dass ihm die Sache nicht gehört?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Formelle Rechtskraft",
+              "text": "Kein Rechtsmittel oder Einspruch mehr möglich (§ 705 ZPO). Erst dann wirkt die materielle Rechtskraft."
+            },
+            {
+              "titel": "2. Objektive Grenzen",
+              "text": "Nur der Streitgegenstand, wie er im Tenor entschieden ist. Tatbestand und Gründe helfen nur bei der Auslegung."
+            },
+            {
+              "titel": "3. Keine Vorfragen",
+              "text": "Präjudizielle Rechtsverhältnisse – hier das Eigentum – werden nicht rechtskräftig. Ausnahme: Aufrechnung (§ 322 Abs. 2 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "4. Subjektive Grenzen",
+              "text": "Grundsätzlich nur zwischen den Parteien und ihren Rechtsnachfolgern (§ 325 ZPO)."
+            },
+            {
+              "titel": "5. Zeitliche Grenze",
+              "text": "Maßgeblich ist der Schluss der letzten mündlichen Verhandlung; später entstandene Tatsachen sind nicht ausgeschlossen."
+            },
+            {
+              "titel": "6. Wirkung im Folgeprozess",
+              "text": "Gleicher Streitgegenstand oder kontradiktorisches Gegenteil: neue Klage unzulässig. Präjudiziell: Bindung an die Entscheidung."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis: Zwischenfeststellung",
+          "text": "Soll das Eigentum selbst verbindlich geklärt werden, braucht es eine Zwischenfeststellungsklage oder -widerklage (§ 256 Abs. 2 ZPO). Nur dann wird über die Vorfrage rechtskräftig entschieden. Im Beispiel: E kann später eine Feststellungsklage zum Eigentum erheben."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Rechtskräftig wird die Entscheidung über den Streitgegenstand – nicht die Begründung, nicht die Vorfragen. Ausnahme: § 322 Abs. 2 ZPO."
+        },
+        {
+          "art": "cta",
+          "titel": "Rechtskraft in drei Fragen",
+          "punkte": [
+            "Formell rechtskräftig?",
+            "Wie weit reicht der Tenor?",
+            "Identität, Gegenteil oder Präjudiz?"
+          ],
+          "icons": [
+            "schloss",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Vorfrage entschieden, aber nicht rechtskräftig: Verliert der Kläger seine Herausgabeklage nach § 985 BGB, steht nur fest, dass er die Sache nicht herausverlangen kann – nicht, dass er nicht Eigentümer ist. Die materielle Rechtskraft (§ 322 Abs. 1 ZPO) erfasst den Streitgegenstand, nicht die Begründung. Wer die Vorfrage verbindlich klären will, braucht § 256 Abs. 2 ZPO. Speichern für die nächste ZPO-Klausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#rechtskraft",
+        "#322zpo",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 322 ZPO: Grenzen der Rechtskraft",
+      "coverText": "Tenor ja, Gründe nein",
+      "coverBadge": "Examensklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "rex"
+        ],
+        "kernidee": "Rechtskräftig wird nur, worüber im Tenor entschieden ist – die Vorfragen bleiben offen.",
+        "handlung": "{A} locks a small chest labelled only with a symbol into a vault, while {B} nervously holds a loose sheet of reasoning that does not fit into the chest and stays outside.",
+        "hinweisRegie": "Place the note in the free space between the locked chest and the loose sheet in {B}'s hand, slightly tilted toward the sheet, without covering the vault lock.",
+        "alternative": "{B} carves one line into a stone tablet while {A} lets the surrounding sketches blow away in the wind."
+      },
+      "bildSzene": "chest locked, loose sheet stays outside",
+      "bildSzeneAlt": "one line carved, sketches blow away",
+      "quellen": [
+        "§ 322 ZPO",
+        "§ 325 ZPO",
+        "§ 256 Abs. 2 ZPO",
+        "§ 705 ZPO",
+        "§ 985 BGB",
+        "Themenpool: zpo-562"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-vorfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.674Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-305",
+      "slug": "2026-12-20-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Das übersehen viele: Vor dem Rücktritt kommt der Fehlschlag",
+          "unter": "Rücktritt · § 24 StGB",
+          "text": "Vom fehlgeschlagenen Versuch ist kein Rücktritt möglich.",
+          "norm": "§ 24 Abs. 1 StGB",
+          "icon": "zielscheibe",
+          "sprecher": "Viele prüfen den Rücktritt, obwohl er gar nicht möglich ist. Der Fehler: Sie überspringen den Fehlschlag. Und vom fehlgeschlagenen Versuch gibt es keinen Rücktritt.",
+          "marken": [
+            "erst Fehlschlag"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Was heißt fehlgeschlagen?",
+          "text": "Der Täter glaubt, den Erfolg nicht mehr ohne zeitliche Zäsur erreichen zu können.",
+          "norm": "§ 24 Abs. 1 StGB",
+          "sprecher": "Schritt eins: die Definition. Fehlgeschlagen ist der Versuch, wenn der Täter glaubt, den Erfolg mit den ihm zur Verfügung stehenden Mitteln nicht mehr ohne zeitliche Zäsur herbeiführen zu können.",
+          "marken": [
+            "nichts mehr aufzugeben"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Maßstab: die Vorstellung des Täters",
+          "text": "Nicht die objektive Lage entscheidet.",
+          "norm": null,
+          "sprecher": "Schritt zwei: Maßgeblich ist nicht die objektive Lage, sondern die Vorstellung des Täters. Hält er weitere Versuche für sinnlos, ist der Versuch fehlgeschlagen, auch wenn es objektiv noch ginge.",
+          "marken": [
+            "Täterperspektive"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Einzelakt oder Gesamtbetrachtung?",
+          "text": "Die Rspr. betrachtet das Geschehen insgesamt nach dem Rücktrittshorizont.",
+          "norm": null,
+          "sprecher": "Schritt drei: der Streit. Die Einzelakttheorie sieht in jedem Akt, den der Täter für erfolgsgeeignet hielt, einen eigenen Versuch. Die Rechtsprechung betrachtet das Geschehen insgesamt, und zwar aus Sicht des Täters nach der letzten Ausführungshandlung.",
+          "marken": [
+            "Gesamtbetrachtung"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Das Beispiel",
+          "text": "Schuss verfehlt, Nachladen sofort möglich: nicht fehlgeschlagen.",
+          "norm": null,
+          "sprecher": "Schritt vier, ein Beispiel: A schießt auf O und verfehlt ihn. Er hat noch Patronen und könnte sofort nachladen. Nach der Gesamtbetrachtung ist der Versuch nicht fehlgeschlagen. Hört A freiwillig auf, kann er zurücktreten.",
+          "marken": [
+            "sofort nachladbar"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Sonderfall: Ziel schon erreicht",
+          "text": "Denkzettel verpasst: Nach dem Großen Senat bleibt der Rücktritt möglich.",
+          "norm": null,
+          "sprecher": "Sonderfall: Hat der Täter sein eigentliches Ziel schon erreicht, etwa einen Denkzettel verpasst, lässt der Große Senat den Rücktritt vom unbeendeten Versuch trotzdem zu. Die Literatur sieht das teils anders.",
+          "marken": [
+            "Denkzettel"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Reihenfolge",
+          "text": "Fehlschlag – unbeendet oder beendet – Rücktrittshandlung – Freiwilligkeit.",
+          "norm": "§ 24 Abs. 1 StGB",
+          "sprecher": "Merke: erst den Fehlschlag, dann unbeendet oder beendet, dann die Rücktrittshandlung und zuletzt die Freiwilligkeit.",
+          "marken": [
+            "vier Stufen"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Erste Frage: Erfolg noch erreichbar?",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "sprecher": "Speicher dir die Reihenfolge für deine nächste Strafrechtsklausur. Und frag immer zuerst: Hält der Täter den Erfolg noch für erreichbar?",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Viele prüfen den Rücktritt, obwohl er ausgeschlossen ist – weil sie den Fehlschlag überspringen. Fehlgeschlagen ist der Versuch, wenn der Täter glaubt, den Erfolg ohne zeitliche Zäsur nicht mehr erreichen zu können. Die Rspr. betrachtet das Geschehen insgesamt aus seiner Sicht nach der letzten Ausführungshandlung. Erst danach: unbeendet oder beendet, Rücktrittshandlung, Freiwilligkeit. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#rücktritt",
+        "#24stgb",
+        "#versuch",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Fehlgeschlagener Versuch: vor dem Rücktritt",
+      "titelZeilen": [
+        "Das übersehen",
+        "viele: Vor dem Rück-",
+        "tritt der Fehlschlag"
+      ],
+      "coverText": "Kein Rücktritt vom Fehlschlag",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "brakk"
+        ],
+        "kernidee": "Wer glaubt, sein Ziel nicht mehr erreichen zu können, kann auch nicht mehr freiwillig davon ablassen.",
+        "handlung": "{B} stares at an empty sling after his last stone missed, while {A} stands at a fork and points to the first of two gates, the one that must be passed before the path back.",
+        "hinweisRegie": "Place the note in the free space next to the empty sling, slightly tilted toward it, so the failed attempt is the focus without covering {A}'s pointing hand at the fork.",
+        "alternative": "{A} watches {B} reach for a second arrow in a full quiver after missing once, showing that the attempt is not yet over."
+      },
+      "bildSzene": "empty sling after missed last stone",
+      "bildSzeneAlt": "reaching for second arrow after miss",
+      "quellen": [
+        "§ 24 StGB",
+        "§§ 22, 23 StGB",
+        "Themenpool: strafat-305"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "zuspitzung-klassiker",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.681Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-294",
+      "ueberzeile": "Prüfungsfrage Strafrecht AT",
+      "titel": "Ein erkennbar Volltrunkener schlägt A mit der flachen Hand. A könnte gefahrlos ausweichen. Was gilt für A?",
+      "optionen": [
+        "Er darf sofort das wirksamste Abwehrmittel wählen",
+        "Er muss ausweichen, wenn das gefahrlos möglich ist",
+        "Notwehr ist gegen Betrunkene ganz ausgeschlossen"
+      ],
+      "richtig": 1,
+      "quellen": [
+        "§ 32 StGB",
+        "Themenpool: strafat-294"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.681Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-294",
+      "ueberzeile": "Auflösung",
+      "titel": "Ausweichen, wenn gefahrlos möglich – die Notwehr ist eingeschränkt",
+      "text": "Gegen erkennbar schuldlos oder erheblich vermindert schuldhaft Handelnde – etwa Kinder oder schwer Betrunkene – ist Notwehr nur eingeschränkt geboten (§ 32 Abs. 1 StGB). Die Stufenfolge: ausweichen, wenn möglich; sonst Schutzwehr; Trutzwehr nur als letztes Mittel. Weitere Fallgruppen: Notwehrprovokation und krasses Missverhältnis der Güter.",
+      "norm": "§ 32 Abs. 1 StGB",
+      "quellen": [
+        "§ 32 StGB",
+        "Themenpool: strafat-294"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.681Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Er darf sofort das wirksamste Abwehrmittel wählen",
+        "Er muss ausweichen, wenn das gefahrlos möglich ist",
+        "Notwehr ist gegen Betrunkene ganz ausgeschlossen"
+      ],
+      "richtig": 1
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-285",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 91a ZPO: Beide erklären erledigt – dann geht es nur noch um die Kosten",
+      "text": "Übereinstimmende Erledigungserklärungen beenden die Rechtshängigkeit der Hauptsache. Das Gericht entscheidet durch Beschluss nur noch über die Kosten, nach billigem Ermessen unter Berücksichtigung des bisherigen Sach- und Streitstands – meist nach den mutmaßlichen Erfolgsaussichten. Erklärt nur der Kläger Erledigung, liegt darin eine Klageänderung auf Feststellung.",
+      "norm": "§ 91a Abs. 1 ZPO",
+      "quellen": [
+        "§ 91a ZPO",
+        "Themenpool: zpo-285"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.681Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-915",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Reisemangel: Darf der Reisende sofort selbst abhelfen und Ersatz verlangen?",
+      "falsch": "Das Hotelzimmer ist verschimmelt. R bucht selbst ein anderes Hotel und verlangt die Mehrkosten – ohne vorher beim Veranstalter Abhilfe zu verlangen.",
+      "richtigText": "Selbstabhilfe mit Aufwendungsersatz setzt nach § 651k Abs. 2 BGB voraus, dass R Abhilfe verlangt und eine angemessene Frist erfolglos verstrichen ist. Entbehrlich ist die Frist nur, wenn der Veranstalter die Abhilfe verweigert oder sofortige Abhilfe notwendig ist. Den Mangel muss R ohnehin unverzüglich anzeigen (§ 651o BGB).",
+      "quellen": [
+        "§ 651i Abs. 3 BGB",
+        "§ 651k BGB",
+        "§ 651o BGB",
+        "Themenpool: schuldbt-915"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.681Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "bgbat",
+      "klausur": 1,
+      "pairId": "bgbat-167",
+      "ueberzeile": "Klausurtipp BGB AT",
+      "titel": "Kalkulationsirrtum: erst auslegen, dann § 242 BGB – nicht anfechten",
+      "text": "Verdeckter Kalkulationsirrtum: unbeachtlicher Motivirrtum, keine Anfechtung nach § 119 BGB. Offener Kalkulationsirrtum: zuerst auslegen (§§ 133, 157 BGB) – was ist gewollt, Endpreis oder Berechnungsgrundlage? Kennt der Empfänger den Irrtum und besteht er trotzdem auf dem Vertrag, kann das nach BGH treuwidrig sein (§ 242 BGB), wenn die Durchführung unzumutbar ist.",
+      "quellen": [
+        "§ 119 BGB",
+        "§§ 133, 157 BGB",
+        "§ 242 BGB",
+        "Themenpool: bgbat-167"
+      ],
+      "fachLabel": "BGB Allgemeiner Teil",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.681Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-816",
+      "ueberzeile": "4 Punkte 2. Examen",
+      "titel": "Verspätetes Vorbringen: Wann darf das Gericht nach § 296 Abs. 1 ZPO zurückweisen?",
+      "text": "Nach Schluss der mündlichen Verhandlung gilt § 296a ZPO: Neue Angriffs- und Verteidigungsmittel sind ausgeschlossen – außer das Gericht eröffnet die Verhandlung wieder (§ 156 ZPO).",
+      "punkte": [
+        "Katalogfrist wirksam gesetzt und versäumt",
+        "Zulassung würde die Erledigung verzögern (BGH: absolut)",
+        "Keine genügende Entschuldigung der Partei",
+        "Gericht hat zumutbare Vorbereitung nicht versäumt"
+      ],
+      "quellen": [
+        "§ 296 ZPO",
+        "§ 296a ZPO",
+        "§ 156 ZPO",
+        "§ 273 ZPO",
+        "Themenpool: assessorz-816"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:55:03.681Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

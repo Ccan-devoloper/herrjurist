@@ -1,0 +1,885 @@
+{
+  "datum": "2026-10-18",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "10:00",
+        "format": "wochenrueckblick",
+        "themaId": null,
+        "themaTitel": "Wochenrückblick",
+        "fach": "wochenrueckblick",
+        "klausur": 4
+      },
+      {
+        "slot": "b2",
+        "zeit": "14:30",
+        "format": "schema",
+        "themaId": "zwangsv-825",
+        "themaTitel": "Welche Voraussetzungen trägt die Zwangsvollstreckung im Grundfall?",
+        "fach": "zwangsv",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "18:30",
+        "format": "reel",
+        "themaId": "strafat-293",
+        "themaTitel": "Wie prüft man die Notwehr?",
+        "fach": "strafat",
+        "klausur": 2,
+        "lang": true
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:07",
+        "art": "frage",
+        "themaId": "sachen-221"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:07",
+        "art": "antwort",
+        "themaId": "sachen-221"
+      },
+      {
+        "slot": "s1",
+        "zeit": "10:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:53",
+        "art": "norm",
+        "themaId": "verwbt-118"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:21",
+        "art": "fehler",
+        "themaId": "europa-934"
+      },
+      {
+        "slot": "s2",
+        "zeit": "14:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:52",
+        "art": "tipp",
+        "themaId": "strafat-307"
+      },
+      {
+        "slot": "s3",
+        "zeit": "18:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:24",
+        "art": "zahl",
+        "themaId": "anklage-870"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "themaId": null,
+      "poolTitel": "Wochenrückblick",
+      "fach": "wochenrueckblick",
+      "fachLabel": "Wochenrückblick",
+      "klausur": 4,
+      "normen": [],
+      "typ": null,
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "zwangsv-825",
+      "poolTitel": "Welche Voraussetzungen trägt die Zwangsvollstreckung im Grundfall?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§ 750 ZPO",
+        "§ 796 Abs. 1 ZPO",
+        "§ 929 Abs. 1 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "strafat-293",
+      "poolTitel": "Wie prüft man die Notwehr?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 32 StGB"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": true,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "sachen-221",
+      "poolTitel": "Wann liegt ein Besitzkonstitut vor?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 868 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "sachen-221",
+      "poolTitel": "Wann liegt ein Besitzkonstitut vor?",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 930 BGB",
+        "§ 868 BGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwbt-118",
+      "poolTitel": "Was ist eine öffentliche Einrichtung und wer hat Zugang zu ihr?",
+      "fach": "verwbt",
+      "fachLabel": "Besonderes Verwaltungsrecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 28 Abs. 2 GG",
+        "Gemeindeordnungen der Länder"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "fehler",
+      "themaId": "europa-934",
+      "poolTitel": "Rückforderung unionsrechtswidriger Beihilfen: § 48 VwVfG unter dem Effektivitätsgebot",
+      "fach": "europa",
+      "fachLabel": "Europarecht",
+      "klausur": 3,
+      "normen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "tipp",
+      "themaId": "strafat-307",
+      "poolTitel": "Was ist mittelbare Täterschaft und wann liegt ein Täter hinter dem Täter vor?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 25 Abs. 1 Alt. 2 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "zahl",
+      "themaId": "anklage-870",
+      "poolTitel": "Wann wird eingezogen, wann Wertersatz angeordnet?",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 74 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": []
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "wochenrueckblick",
+      "fach": "wochenrueckblick",
+      "klausur": 4,
+      "fachLabel": "Wochenrückblick",
+      "themaId": null,
+      "slug": "2026-10-18-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Wochenrückblick: 18 Themen – welcher Bereich wackelt?",
+          "titelZeilen": [
+            "Wochenrückblick:",
+            "18 Themen –",
+            "welcher Bereich",
+            "wackelt?"
+          ],
+          "coverBadge": "Wochenrückblick",
+          "coverText": "Zivil · Straf · ÖR · Methodik",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Zivilrecht",
+          "punkte": [
+            "§ 1004 BGB: Beeinträchtigung, Störer, keine Duldungspflicht, dann Beseitigung oder Unterlassung.",
+            "Störer: Eigentum allein genügt nicht – die Beeinträchtigung muss zurechenbar sein.",
+            "Arbeitnehmerhaftung: gestuft nach Verschulden, Beweislast beim Arbeitgeber (§ 619a BGB).",
+            "Persönlichkeitsrecht: Rechtswidrigkeit erst nach Abwägung – nicht indiziert.",
+            "Eilrechtsschutz: Geld sichert der Arrest, alles andere die einstweilige Verfügung."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Strafrecht",
+          "punkte": [
+            "Anklagesatz: Umgrenzungsmangel macht die Anklage unwirksam, Informationsmangel nicht.",
+            "Verdeckungsabsicht: auch dann, wenn ein Zeuge die Tat schon kennt.",
+            "§ 252 StGB: ohne Besitzerhaltungsabsicht kein räuberischer Diebstahl.",
+            "Notwehr: erforderlich, nicht verhältnismäßig – Einschränkungen über die Gebotenheit.",
+            "§ 243 StGB: Strafzumessungsregel – Prüfung erst nach der Schuld."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Öffentliches Recht",
+          "punkte": [
+            "§ 80 Abs. 5 VwGO: bei Nr. 1–3 anordnen, bei Nr. 4 wiederherstellen.",
+            "Klageart: Das Begehren entscheidet, nicht der Wortlaut (§ 88 VwGO).",
+            "Meinungsfreiheit: allgemeines Gesetz heißt meinungsneutral, dann Wechselwirkung.",
+            "Art. 2 Abs. 1 GG: Auffanggrundrecht, Schwerpunkt Verhältnismäßigkeit.",
+            "Bebauungsplan: vier Abwägungsfehler, gefiltert durch §§ 214, 215 BauGB.",
+            "Polizeirecht: Verhalten oder Zustand – Nichtstörer nur im Notstand."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Klausurtechnik & Kopfsache",
+          "punkte": [
+            "Obersatz: wer, was, von wem, woraus – „Fraglich ist“ ersetzt ihn nicht.",
+            "Perfektionismus: Vollständig schlägt perfekt."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "30-Sekunden-Selbsttest",
+          "punkte": [
+            "Sofortvollzug angeordnet: Was beantragst du nach § 80 Abs. 5 VwGO?",
+            "Wo im Gutachten prüfst du § 243 StGB?",
+            "Was stockt, kommt auf die Wiederholungsliste für nächste Woche."
+          ]
+        },
+        {
+          "art": "cta",
+          "titel": "Nächste Woche gezielt wiederholen",
+          "punkte": [
+            "Zivilrecht über Anspruch und Zurechnung",
+            "Strafrecht über Merkmale und Aufbau",
+            "Öffentliches Recht als Prüfungskette",
+            "Klausurtechnik als Routine"
+          ],
+          "icons": [
+            "vertrag",
+            "richter",
+            "gebaeude",
+            "stoppuhr"
+          ]
+        }
+      ],
+      "caption": "Wochenrückblick: 18 Themen aus vier Bereichen – von § 1004 BGB über den räuberischen Diebstahl bis zum Eilantrag nach § 80 Abs. 5 VwGO. Jede Folie bündelt einen Lernbereich in Kernsätzen. Geh sie ohne Unterlagen durch und markier dir den Bereich, der am meisten wackelt. Speichern für die Wiederholung am Wochenende.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#wochenrückblick",
+        "#zivilrecht",
+        "#strafrecht",
+        "#öffentlichesrecht",
+        "#lernplan",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Wochenrückblick: 18 Themen im Check",
+      "coverText": "Zivil · Straf · ÖR · Methodik",
+      "coverBadge": "Wochenrückblick",
+      "coverRegie": {
+        "charaktere": [
+          "mara",
+          "rex"
+        ],
+        "kernidee": "Am Ende der Woche wird geprüft, welcher Teil des Lernstoffs noch nicht trägt.",
+        "handlung": "{A} walks across a short bridge made of four sections, testing each with her foot, while {B} nervously tightens a bolt on the one section that wobbles.",
+        "hinweisRegie": "Place the note in the free space above the wobbling bridge section, slightly tilted toward it, without covering {B}'s wrench or {A}'s testing foot.",
+        "alternative": "{B} taps four stacked crates with a small hammer, listening, while {A} marks the one that sounds hollow."
+      },
+      "bildSzene": "testing four bridge sections, one wobbles",
+      "bildSzeneAlt": "tapping crates to find hollow one",
+      "quellen": [
+        "§ 1004 BGB",
+        "§ 619a BGB",
+        "§ 823 Abs. 1 BGB",
+        "§§ 916, 935 ZPO",
+        "§ 200 StPO",
+        "§ 211 StGB",
+        "§ 252 StGB",
+        "§ 32 StGB",
+        "§ 243 StGB",
+        "§ 80 Abs. 5 VwGO",
+        "§ 88 VwGO",
+        "Art. 5 Abs. 2 GG",
+        "Art. 2 Abs. 1 GG",
+        "§§ 1 Abs. 7, 214, 215 BauGB",
+        "Polizeigesetze der Länder",
+        "Themenpool: methodik-898",
+        "Themenpool: mindset-4"
+      ],
+      "hookTyp": "zahl",
+      "hookMuster": "echte-themenzahl",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.943Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "fachLabel": "Zwangsvollstreckung",
+      "themaId": "zwangsv-825",
+      "slug": "2026-10-18-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Jeder Titel braucht eine Klausel? Nicht immer",
+          "titelZeilen": [
+            "Jeder Titel braucht",
+            "eine Klausel?",
+            "Nicht immer"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "VB und Arrest: meist ohne Klausel",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Grundfall",
+          "text": "Vollstreckt wird aus einem Titel, nicht aus dem Anspruch selbst. Bevor ein Vollstreckungsorgan tätig wird, prüfst du die allgemeinen Voraussetzungen: Antrag, Titel, Klausel, Zustellung."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema",
+          "schritte": [
+            {
+              "titel": "Antrag",
+              "text": "Der Gläubiger beantragt die Vollstreckung beim zuständigen Organ, etwa Gerichtsvollzieher oder Vollstreckungsgericht."
+            },
+            {
+              "titel": "Titel",
+              "text": "Rechtskräftiges oder vorläufig vollstreckbares Endurteil (§ 704 ZPO) oder ein Titel nach § 794 ZPO, etwa ein Prozessvergleich."
+            },
+            {
+              "titel": "Klausel",
+              "text": "Vollstreckbare Ausfertigung (§ 724 ZPO); bei Bedingung oder Rechtsnachfolge die qualifizierte Klausel (§§ 726 ff. ZPO)."
+            },
+            {
+              "titel": "Zustellung",
+              "text": "Der Titel muss vorher oder spätestens mit Beginn der Vollstreckung zugestellt sein (§ 750 Abs. 1 ZPO)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Wann die Klausel entbehrlich ist",
+          "punkte": [
+            "Vollstreckungsbescheid: Klausel nur bei Vollstreckung für oder gegen andere Personen (§ 796 Abs. 1 ZPO).",
+            "Arrestbefehl und einstweilige Verfügung: ebenso (§§ 929 Abs. 1, 936 ZPO).",
+            "Sonst gilt die Regel: vollstreckbare Ausfertigung nach § 724 ZPO."
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Danach: besondere Voraussetzungen",
+          "punkte": [
+            "Kalendertag abgelaufen (§ 751 Abs. 1 ZPO)",
+            "Sicherheitsleistung nachgewiesen (§ 751 Abs. 2 ZPO)",
+            "Zug um Zug: Gegenleistung angeboten (§§ 756, 765 ZPO)"
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Titel, Klausel, Zustellung ist die Regel. Beim Vollstreckungsbescheid und beim Arrest entfällt die Klausel, solange die Parteien dieselben bleiben."
+        },
+        {
+          "art": "cta",
+          "titel": "Vollstreckung in vier Zügen",
+          "punkte": [
+            "Antrag an das richtige Organ",
+            "Titel benennen",
+            "Klausel – oder Ausnahme",
+            "Zustellung prüfen"
+          ],
+          "icons": [
+            "klemmbrett",
+            "dokument",
+            "schluessel",
+            "umschlag"
+          ]
+        }
+      ],
+      "caption": "Titel, Klausel, Zustellung – aber nicht jeder Titel braucht eine Klausel. Vollstreckungsbescheide benötigen sie nur, wenn für oder gegen andere als die bezeichneten Parteien vollstreckt wird (§ 796 Abs. 1 ZPO); für Arrest und einstweilige Verfügung gilt dasselbe (§§ 929 Abs. 1, 936 ZPO). Im Übrigen: Titel nach §§ 704, 794 ZPO, vollstreckbare Ausfertigung nach § 724 ZPO, Zustellung nach § 750 Abs. 1 ZPO. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#vollstreckungsklausel",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Zwangsvollstreckung: die Voraussetzungen",
+      "coverText": "VB und Arrest: meist ohne Klausel",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Die Vollstreckung braucht Titel, Klausel und Zustellung – doch bei manchen Titeln fällt die Klausel weg.",
+        "handlung": "{A} hovers at a gate checking three stamps on a document carried by {B}; for a second, differently coloured document, {A} waves {B} through after only two stamps.",
+        "hinweisRegie": "Place the note in the free space next to the second document with only two stamps, slightly tilted toward it, without covering {A}'s stamp or {B}'s hands.",
+        "alternative": "{B} carries a heavy chest past three checkpoints while {A} removes the middle checkpoint barrier for a smaller chest."
+      },
+      "bildSzene": "droid checks stamps at enforcement gate",
+      "bildSzeneAlt": "middle checkpoint removed for small chest",
+      "quellen": [
+        "§ 704 ZPO",
+        "§ 724 ZPO",
+        "§§ 726 ff. ZPO",
+        "§ 750 ZPO",
+        "§ 751 ZPO",
+        "§§ 756, 765 ZPO",
+        "§ 794 ZPO",
+        "§ 796 Abs. 1 ZPO",
+        "§ 929 Abs. 1 ZPO",
+        "§ 936 ZPO",
+        "Themenpool: zwangsv-825"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "ausnahme-uebersehen",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.944Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "strafat",
+      "klausur": 2,
+      "fachLabel": "Strafrecht AT",
+      "themaId": "strafat-293",
+      "slug": "2026-10-18-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Rechtswidrig reicht: Notwehr braucht keinen Schuldigen",
+          "unter": "Notwehr · § 32 StGB",
+          "text": "Der Angriff muss rechtswidrig sein – schuldhaft muss er nicht sein.",
+          "norm": "§ 32 Abs. 2 StGB",
+          "icon": "schild",
+          "sprecher": "Für Notwehr reicht ein rechtswidriger Angriff. Schuldhaft muss er nicht sein. Hier ist das komplette Notwehrschema aus § 32 StGB.",
+          "marken": [
+            "rechtswidrig genügt"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Angriff",
+          "text": "Durch menschliches Verhalten drohende Verletzung rechtlich geschützter Interessen.",
+          "norm": "§ 32 Abs. 2 StGB",
+          "sprecher": "Schritt eins: der Angriff. Das ist jede durch menschliches Verhalten drohende Verletzung rechtlich geschützter Interessen. Notwehrfähig sind auch Eigentum, Besitz oder das Persönlichkeitsrecht.",
+          "marken": [
+            "menschliches Verhalten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Gegenwärtig",
+          "text": "Unmittelbar bevorstehend, gerade stattfindend oder noch fortdauernd.",
+          "norm": "§ 32 Abs. 2 StGB",
+          "sprecher": "Schritt zwei: gegenwärtig. Der Angriff steht unmittelbar bevor, findet gerade statt oder dauert noch fort. Beim Diebstahl etwa, solange der Dieb mit der Beute flieht und die Tat noch nicht beendet ist.",
+          "marken": [
+            "bevor, jetzt, fort"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rechtswidrig",
+          "text": "Nicht durch ein eigenes Recht gedeckt – Schuld ist nicht nötig.",
+          "norm": "§ 32 Abs. 2 StGB",
+          "sprecher": "Schritt drei: rechtswidrig. Der Angreifer darf sich nicht selbst auf ein Recht berufen können. Schuldhaft muss er nicht handeln, auch gegen Kinder ist Notwehr grundsätzlich möglich.",
+          "marken": [
+            "keine Schuld nötig"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Verteidigung: erforderlich und geboten",
+          "text": "Mildestes gleich wirksames Mittel; Einschränkungen über die Gebotenheit.",
+          "norm": "§ 32 StGB",
+          "sprecher": "Schritt vier: die Verteidigung. Sie richtet sich gegen den Angreifer und muss erforderlich sein, also das mildeste von mehreren gleich wirksamen Mitteln. Dann die Gebotenheit, etwa bei schuldlos Handelnden oder krassem Missverhältnis.",
+          "marken": [
+            "erforderlich + geboten"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Subjektiv: Verteidigungswille",
+          "text": "Kenntnis der Notwehrlage und Handeln zur Verteidigung – Umfang umstritten.",
+          "norm": null,
+          "sprecher": "Und subjektiv: der Verteidigungswille. Der Täter muss die Notwehrlage kennen und sich verteidigen wollen. Andere Motive dürfen daneben stehen. Ob neben der Kenntnis ein Wille nötig ist, ist umstritten.",
+          "marken": [
+            "Verteidigungswille"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Das komplette Schema",
+          "text": "Angriff, gegenwärtig, rechtswidrig – erforderlich, geboten, mit Verteidigungswillen.",
+          "norm": "§ 32 StGB",
+          "sprecher": "Merke: Angriff, gegenwärtig, rechtswidrig. Dann erforderlich und geboten, und das Ganze mit Verteidigungswillen.",
+          "marken": [
+            "Lage · Handlung · Wille"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Schuld des Angreifers? Keine Voraussetzung",
+          "text": "Speichern für die nächste Strafrechtsklausur.",
+          "sprecher": "Speicher dir das komplette Schema für die nächste Strafrechtsklausur. Und denk dran: Die Schuld des Angreifers ist keine Voraussetzung.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Für Notwehr reicht ein rechtswidriger Angriff: § 32 StGB verlangt einen gegenwärtigen, rechtswidrigen Angriff, keinen schuldhaften. Das komplette Schema: Notwehrlage (Angriff, gegenwärtig, rechtswidrig), Notwehrhandlung (erforderlich und geboten) und Verteidigungswille. Gegen schuldlos Handelnde ist Notwehr grundsätzlich möglich, wird aber über die Gebotenheit eingeschränkt. Speichern für die nächste Strafrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#notwehr",
+        "#32stgb",
+        "#rechtfertigung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Notwehr: das komplette Prüfschema",
+      "titelZeilen": [
+        "Rechtswidrig reicht:",
+        "Notwehr braucht",
+        "keinen Schuldigen"
+      ],
+      "coverText": "Rechtswidrig, nicht schuldhaft",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "flux"
+        ],
+        "kernidee": "Auch gegen einen Angreifer ohne Schuld darf man sich grundsätzlich wehren – nur eingeschränkt.",
+        "handlung": "{A} raises a small shield against a clumsy, confused creature swinging a stick at her, while {B} uses his pointer to tap a simple three-step path drawn on the ground beside them.",
+        "hinweisRegie": "Place the note in the open space next to the confused attacker, slightly tilted toward him, so it points out that guilt is not required without covering the shield or faces.",
+        "alternative": "{B} checks three lanterns lighting up one after another along a path, while {A} holds a shield at the final lantern."
+      },
+      "bildSzene": "shield raised against confused stick-swinger",
+      "bildSzeneAlt": "three lanterns lighting defence path",
+      "quellen": [
+        "§ 32 StGB",
+        "Themenpool: strafat-293"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "schlagwort-reicht",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.949Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-221",
+      "ueberzeile": "Prüfungsfrage Sachenrecht",
+      "titel": "Übereignung nach § 930 BGB: Was braucht das Besitzkonstitut?",
+      "optionen": [
+        "Ein konkretes Besitzmittlungsverhältnis nach § 868 BGB",
+        "Die Übergabe der Sache an den Erwerber",
+        "Eine notarielle Beurkundung der Einigung"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 930 BGB",
+        "§ 868 BGB",
+        "Themenpool: sachen-221"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.949Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-221",
+      "ueberzeile": "Auflösung",
+      "titel": "Ein konkretes Besitzmittlungsverhältnis",
+      "text": "Bei § 930 BGB bleibt der Veräußerer unmittelbarer Besitzer, der Erwerber wird mittelbarer Besitzer. Dafür braucht es ein Rechtsverhältnis nach § 868 BGB, aufgrund dessen der Veräußerer dem Erwerber gegenüber auf Zeit zum Besitz berechtigt oder verpflichtet ist – etwa Leihe, Miete oder die Sicherungsabrede. Ein bloß abstraktes Konstitut genügt nach h.M. nicht.",
+      "norm": "§ 930 BGB · § 868 BGB",
+      "quellen": [
+        "§ 930 BGB",
+        "§ 868 BGB",
+        "Themenpool: sachen-221"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.949Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ein konkretes Besitzmittlungsverhältnis nach § 868 BGB",
+        "Die Übergabe der Sache an den Erwerber",
+        "Eine notarielle Beurkundung der Einigung"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwbt",
+      "klausur": 3,
+      "pairId": "verwbt-118",
+      "ueberzeile": "Norm des Tages",
+      "titel": "Öffentliche Einrichtung: Zulassung nach der Gemeindeordnung",
+      "text": "Öffentliche Einrichtungen wie Stadthalle oder Freibad stellt die Gemeinde durch Widmung zur Benutzung bereit. Den Zulassungsanspruch der Einwohner regeln die Gemeindeordnungen der Länder – im Rahmen des Widmungszwecks und der Kapazität. Betreibt eine private Gesellschaft der Gemeinde die Einrichtung, richtet sich der Anspruch auf Einwirkung.",
+      "norm": "Gemeindeordnungen der Länder · Art. 28 Abs. 2 GG",
+      "quellen": [
+        "Gemeindeordnungen der Länder",
+        "Art. 28 Abs. 2 GG",
+        "Themenpool: verwbt-118"
+      ],
+      "fachLabel": "Verwaltungsrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.949Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "fehler",
+      "fach": "europa",
+      "klausur": 3,
+      "pairId": "europa-934",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Unionsrechtswidrige Beihilfe: Schützt § 48 VwVfG das Vertrauen des Empfängers?",
+      "falsch": "Der Empfänger hat die Beihilfe verbraucht – also steht sein Vertrauen nach § 48 Abs. 2 VwVfG der Rücknahme entgegen.",
+      "richtigText": "Wurde die Beihilfe unter Verstoß gegen das Durchführungsverbot (Art. 108 Abs. 3 AEUV) gewährt, ist das Vertrauen regelmäßig nicht schutzwürdig: Ein sorgfältiger Unternehmer kann prüfen, ob das Verfahren eingehalten wurde. Nach EuGH und BVerwG weichen auch Jahresfrist (§ 48 Abs. 4 VwVfG) und Ermessen dem Effektivitätsgebot.",
+      "quellen": [
+        "Art. 107 AEUV",
+        "Art. 108 Abs. 3 AEUV",
+        "§ 48 VwVfG",
+        "Themenpool: europa-934"
+      ],
+      "fachLabel": "Europarecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.949Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "tipp",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-307",
+      "ueberzeile": "Klausurtipp Strafrecht",
+      "titel": "Mittelbare Täterschaft: erst den Vordermann prüfen",
+      "text": "Prüfe zuerst die Strafbarkeit des unmittelbar Handelnden. Sein Strafbarkeitsmangel – etwa fehlender Vorsatz oder fehlende Schuld – ist der typische Anknüpfungspunkt für die Werkzeugstellung (§ 25 Abs. 1 Alt. 2 StGB). Handelt er voll verantwortlich, bleibt ein Täter hinter dem Täter nur in anerkannten Fallgruppen, etwa bei organisatorischen Machtapparaten.",
+      "quellen": [
+        "§ 25 Abs. 1 Alt. 2 StGB",
+        "Themenpool: strafat-307"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.949Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "zahl",
+      "fach": "anklage",
+      "klausur": 2,
+      "pairId": "anklage-870",
+      "ueberzeile": "4 Punkte Anklage",
+      "titel": "Einziehung oder Wertersatz: Was gilt wann?",
+      "text": "Erst einordnen: Tatertrag oder Tatmittel? Davon hängt ab, ob das Gericht einziehen muss oder kann.",
+      "punkte": [
+        "Tatertrag: Was durch oder für die Tat erlangt wurde, wird eingezogen (§ 73 StGB).",
+        "Wertersatz: Ist das nicht mehr möglich, wird ein Geldbetrag eingezogen (§ 73c StGB).",
+        "Tatprodukte und Tatmittel: Einziehung nach § 74 StGB – im Ermessen.",
+        "Tatertrag: keine Einziehung, soweit der Anspruch des Verletzten erloschen ist (§ 73e StGB)."
+      ],
+      "quellen": [
+        "§ 73 StGB",
+        "§ 73c StGB",
+        "§ 73e StGB",
+        "§ 74 StGB",
+        "Themenpool: anklage-870"
+      ],
+      "fachLabel": "Anklage & Strafakte",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T12:18:25.949Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

@@ -5,6 +5,8 @@ name: Vorproduktion · weitere Tage providerfrei
 #                       landet nur im Log, der Asset-Zweig bleibt unberührt.
 #   modus=rendern     → die redaktionell finalisierten vorproduktion/<datum>.json
 #                       aus dem Repository werden übernommen und gerendert.
+#   modus=hook-update → Cover-Hooks aus vorproduktion/hook-update.json setzen,
+#                       betroffene Reels neu bauen, Cover/Teaser mit Freisteller neu.
 #   modus=quiz-patch  → Quiz-Optionen aus vorproduktion/quiz-optionen.json in die
 #                       Frage-/Antwort-Stories eintragen und nur diese neu rendern.
 on:
@@ -77,11 +79,11 @@ jobs:
           done
 
       - name: Chromium
-        if: steps.trigger.outputs.modus == 'rendern' || steps.trigger.outputs.modus == 'quiz-patch'
+        if: steps.trigger.outputs.modus != 'vorbereiten'
         run: npx playwright install --with-deps chromium
 
       - name: ffmpeg und Piper offline
-        if: steps.trigger.outputs.modus == 'rendern'
+        if: steps.trigger.outputs.modus == 'rendern' || steps.trigger.outputs.modus == 'hook-update'
         run: |
           pip install --quiet piper-tts
           sudo apt-get update -qq >/dev/null
@@ -106,3 +108,15 @@ jobs:
       - name: Quiz-Optionen eintragen und Frage-/Antwort-Stories neu rendern
         if: steps.trigger.outputs.modus == 'quiz-patch'
         run: node bin/vorproduktion-quiz-patch.mjs
+
+      - name: Starke Hooks setzen und betroffene Reels neu bauen
+        if: steps.trigger.outputs.modus == 'hook-update'
+        run: |
+          pip install --quiet Pillow
+          node bin/vorproduktion-hook-update.mjs
+
+      - name: Cover und Teaser mit vorhandenem Freisteller neu rendern
+        if: steps.trigger.outputs.modus == 'hook-update'
+        run: |
+          IG_COVER_SLOTS=$(node -e 'console.log(Object.keys(require("./vorproduktion/hook-update.json").beitraege).join(","))') \
+            node bin/vorproduktion-coverbilder-anwenden.mjs

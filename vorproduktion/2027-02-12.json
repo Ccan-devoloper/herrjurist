@@ -1,0 +1,843 @@
+{
+  "datum": "2027-02-12",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "minifall",
+        "themaId": "grundr-610",
+        "themaTitel": "Recht auf informationelle Selbstbestimmung",
+        "fach": "grundr",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "schuld-171",
+        "themaTitel": "Wer trägt die Gegenleistungsgefahr bei Unmöglichkeit?",
+        "fach": "schuld",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-794",
+        "themaTitel": "Strafurteil: Tenor und Urteilsgründe",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "zpo-553"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "zpo-553"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "11:54",
+        "art": "norm",
+        "themaId": "sachen-513"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:40",
+        "art": "merksatz",
+        "themaId": "strafbt-337"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:47",
+        "art": "begriff",
+        "themaId": "strafat-063"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "fehler",
+        "themaId": "zwangsv-831"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "minifall",
+      "themaId": "grundr-610",
+      "poolTitel": "Recht auf informationelle Selbstbestimmung",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 2 I i.V.m. Art. 1 I GG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-31",
+        "2026-10-31"
+      ]
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "schuld-171",
+      "poolTitel": "Wer trägt die Gegenleistungsgefahr bei Unmöglichkeit?",
+      "fach": "schuld",
+      "fachLabel": "Schuldrecht AT",
+      "klausur": 1,
+      "normen": [
+        "§ 326 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-06"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-794",
+      "poolTitel": "Strafurteil: Tenor und Urteilsgründe",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§§ 260, 267 StPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-553",
+      "poolTitel": "Klageänderung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 263 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-553",
+      "poolTitel": "Klageänderung",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 263 ff. ZPO"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "sachen-513",
+      "poolTitel": "Hypothek: Entstehung, Übertragung, Einreden",
+      "fach": "sachen",
+      "fachLabel": "Sachenrecht",
+      "klausur": 1,
+      "normen": [
+        "§§ 1113 ff. BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-02-08"
+      ]
+    },
+    "s7": {
+      "art": "merksatz",
+      "themaId": "strafbt-337",
+      "poolTitel": "Was ist Hehlerei und wann liegt sie vor?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 259 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-13",
+        "2026-11-06",
+        "2026-12-13"
+      ]
+    },
+    "s8": {
+      "art": "begriff",
+      "themaId": "strafat-063",
+      "poolTitel": "Wann ist ein Rücktritt vom Versuch strafbefreiend?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [
+        "§ 24 StGB"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2027-01-12"
+      ]
+    },
+    "s9": {
+      "art": "fehler",
+      "themaId": "zwangsv-831",
+      "poolTitel": "Wie erzwingt man Handlungen und Unterlassungen?",
+      "fach": "zwangsv",
+      "fachLabel": "Zwangsvollstreckung",
+      "klausur": 1,
+      "normen": [
+        "§ 887 ZPO",
+        "§ 888 ZPO",
+        "§ 890 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-02",
+        "2026-12-06",
+        "2027-01-14"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "minifall",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-610",
+      "slug": "2027-02-12-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Kennzeichen gescannt, sofort gelöscht – ein Eingriff",
+          "titelZeilen": [
+            "Kennzeichen",
+            "gescannt, sofort",
+            "gelöscht – ein",
+            "Eingriff"
+          ],
+          "coverBadge": "Mini-Fall",
+          "coverText": "Auch Nichttreffer zählen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Der Fall",
+          "text": "Ein Landespolizeigesetz erlaubt, an bestimmten Straßen Kfz-Kennzeichen automatisch zu erfassen und mit dem Fahndungsbestand abzugleichen. Bei einem Nichttreffer wird das Kennzeichen sofort gelöscht. Pendler P fährt täglich vorbei. Ist sein Recht auf informationelle Selbstbestimmung berührt?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Die Prüfung",
+          "schritte": [
+            {
+              "titel": "Schutzbereich",
+              "text": "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG: selbst über Preisgabe und Verwendung persönlicher Daten bestimmen. Das Kennzeichen führt zum Halter."
+            },
+            {
+              "titel": "Eingriff",
+              "text": "Nach dem BVerfG (2018) ist schon die Erfassung mit Abgleich ein Eingriff – auch beim Nichttreffer, weil alle gezielt kontrolliert werden."
+            },
+            {
+              "titel": "Rechtfertigung",
+              "text": "Normenklare Grundlage; verhältnismäßig nur zum Schutz von Rechtsgütern erheblichen Gewichts, mit bestimmtem Anlass, nicht flächendeckend."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Früher anders gesehen",
+          "text": "2008 hatte das BVerfG bei sofort und spurlos gelöschten Nichttreffern noch keinen Eingriff angenommen. 2018 hat es diese Sicht aufgegeben. In älteren Unterlagen kann deshalb noch das Gegenteil stehen."
+        },
+        {
+          "art": "text",
+          "titel": "Lösung des Mini-Falls",
+          "text": "P ist in seinem Grundrecht betroffen, auch wenn nie ein Treffer vorliegt. Ob das Gesetz verfassungsgemäß ist, entscheidet die Rechtfertigung: Anlass, Gewicht des Rechtsguts, Reichweite der Kontrolle und klare Regeln für die Verwendung von Treffern."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Auch ein Abgleich ohne Treffer greift ein, wenn der Staat gezielt kontrolliert. Die eigentliche Arbeit steckt in der Rechtfertigung."
+        },
+        {
+          "art": "cta",
+          "titel": "Drei Fragen bei Datenerfassung",
+          "punkte": [
+            "Personenbezogene Daten betroffen?",
+            "Gezielte Erfassung – auch ohne Treffer?",
+            "Anlass, Rechtsgut, Normenklarheit?"
+          ],
+          "icons": [
+            "auto",
+            "lupe",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Kennzeichen gescannt, sofort gelöscht – ist das ein Eingriff? Nach dem BVerfG ja: Schon die automatisierte Erfassung mit Abgleich greift in das Recht auf informationelle Selbstbestimmung ein, auch bei Nichttreffern. 2008 hatte das Gericht das für spurlos gelöschte Nichttreffer noch anders gesehen. Entscheidend ist deshalb die Rechtfertigung: Anlass, Gewicht des Rechtsguts, Normenklarheit. Speichern für die nächste Grundrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verfassungsrecht",
+        "#datenschutz",
+        "#informationelleselbstbestimmung",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Kennzeichenkontrolle: Eingriff auch ohne Treffer",
+      "coverText": "Auch Nichttreffer zählen",
+      "coverBadge": "Mini-Fall",
+      "coverRegie": {
+        "charaktere": [
+          "zylla",
+          "form7"
+        ],
+        "kernidee": "Auch wer beim Abgleich nicht auffällt, wurde gezielt erfasst.",
+        "handlung": "{B} hovers over a roadside and sweeps a scanning beam across every passing small cart, while {A} drives through and curiously looks up at the beam touching her cart.",
+        "hinweisRegie": "Place the note in the free space just beside the point where the beam touches {A}'s cart, slightly tilted toward the beam, without covering {A}'s face or the droid's lens.",
+        "alternative": "{A} watches {B} briefly stamp and then wipe each passing token, wondering why hers was touched at all."
+      },
+      "bildSzene": "droid scans passing cart with beam",
+      "bildSzeneAlt": "tokens stamped, then wiped clean",
+      "quellen": [
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "BVerfG, Kfz-Kennzeichenkontrolle (2008 und 2018)",
+        "Themenpool: grundr-610"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-nichttreffer",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.436Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "schuld",
+      "klausur": 1,
+      "fachLabel": "Schuldrecht AT",
+      "themaId": "schuld-171",
+      "slug": "2027-02-12-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Leicht fahrlässig zerstört – muss der Käufer zahlen?",
+          "titelZeilen": [
+            "Leicht fahrlässig",
+            "zerstört – muss der",
+            "Käufer zahlen?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "§ 300 Abs. 1 BGB dreht das Ergebnis",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "V verkauft K sein gebrauchtes Klavier; K soll es am Samstag abholen. K erscheint nicht. Am Montag lässt V das Klavier beim Umstellen leicht fahrlässig umkippen – es ist nicht mehr zu retten. V verlangt den Kaufpreis. Zu Recht?"
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "V ist frei geworden",
+              "text": "Stückschuld, Klavier zerstört: § 275 Abs. 1 BGB. Grundsätzlich entfällt damit der Kaufpreis (§ 326 Abs. 1 S. 1 BGB)."
+            },
+            {
+              "titel": "Annahmeverzug des K",
+              "text": "Abholtermin kalendermäßig bestimmt, V war leistungsbereit, K kam nicht (§§ 293, 296, 297 BGB)."
+            },
+            {
+              "titel": "Vertretenmüssen im Verzug",
+              "text": "Während des Annahmeverzugs hat V nur Vorsatz und grobe Fahrlässigkeit zu vertreten (§ 300 Abs. 1 BGB)."
+            },
+            {
+              "titel": "Ausnahme greift",
+              "text": "Unmöglichkeit im Annahmeverzug, von V nicht zu vertreten: V behält den Anspruch (§ 326 Abs. 2 S. 1 Alt. 2 BGB)."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Lösung",
+          "text": "K muss zahlen. V muss sich aber anrechnen lassen, was er infolge der Befreiung von der Leistung erspart oder anderweitig erwirbt (§ 326 Abs. 2 S. 2 BGB) – etwa ersparte Transportkosten."
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "§ 300 Abs. 1 BGB übersehen und den normalen Maßstab des § 276 BGB anlegen. Dann hätte V die Zerstörung zu vertreten, die Ausnahme des § 326 Abs. 2 BGB schiede aus – und K müsste nicht zahlen. Der Haftungsmaßstab im Annahmeverzug dreht das Ergebnis."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Im Annahmeverzug schadet dem Schuldner leichte Fahrlässigkeit nicht – die Gegenleistungsgefahr trägt dann der Gläubiger."
+        },
+        {
+          "art": "cta",
+          "titel": "Gegenleistungsgefahr in drei Fragen",
+          "punkte": [
+            "Schuldner nach § 275 BGB frei?",
+            "Gläubiger verantwortlich oder im Annahmeverzug?",
+            "Maßstab des § 300 Abs. 1 BGB beachtet?"
+          ],
+          "icons": [
+            "kreuz",
+            "uhr",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Das Klavier geht leicht fahrlässig kaputt – muss der Käufer trotzdem zahlen? Ja, wenn er im Annahmeverzug war. Grundsätzlich entfällt der Kaufpreis nach § 326 Abs. 1 S. 1 BGB. Im Annahmeverzug haftet der Verkäufer aber nur für Vorsatz und grobe Fahrlässigkeit (§ 300 Abs. 1 BGB) – hat er die Unmöglichkeit nicht zu vertreten, behält er den Anspruch nach § 326 Abs. 2 S. 1 Alt. 2 BGB. Speichern für die nächste Schuldrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#schuldrecht",
+        "#326bgb",
+        "#annahmeverzug",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 326 BGB: Preisgefahr im Annahmeverzug",
+      "coverText": "§ 300 Abs. 1 BGB dreht das Ergebnis",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "rex"
+        ],
+        "kernidee": "Wer die Abholung verpasst, trägt das Risiko, wenn die Sache danach nur leicht fahrlässig zerstört wird.",
+        "handlung": "{A} lets a heavy old piano tip over while shifting it, and {B} nervously points at the empty pickup cart that never arrived.",
+        "hinweisRegie": "Place the note in the free space between the tipped piano and the empty pickup cart, slightly tilted toward the cart, without covering {A}'s hands or the piano keys.",
+        "alternative": "{B} waits beside a stack of coloured crates for a buyer who never comes, while {A} accidentally knocks one crate over."
+      },
+      "bildSzene": "piano tips over, pickup cart empty",
+      "bildSzeneAlt": "crate knocked over, buyer absent",
+      "quellen": [
+        "§ 275 Abs. 1 BGB",
+        "§ 326 Abs. 1, 2 BGB",
+        "§§ 293–300 BGB",
+        "Themenpool: schuld-171"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage-gefahr",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.436Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-794",
+      "slug": "2027-02-12-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Der Tenor nennt die Tat – nicht den Paragrafen",
+          "unter": "Strafurteil · §§ 260, 267 StPO",
+          "text": "Paragrafen stehen in der Liste nach der Urteilsformel, nicht im Schuldspruch.",
+          "norm": "§ 260 Abs. 4, 5 StPO",
+          "icon": "richter",
+          "sprecher": "Paragrafen haben im Tenor eines Strafurteils nichts zu suchen. Der Schuldspruch nennt die Tat mit ihrer gesetzlichen Bezeichnung. Die Vorschriften kommen danach, in einer eigenen Liste.",
+          "marken": [
+            "kein § im Tenor",
+            "Liste danach"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Schuldspruch mit gesetzlicher Überschrift",
+          "text": "„Der Angeklagte wird wegen Diebstahls in zwei Fällen … verurteilt.“",
+          "norm": "§ 260 Abs. 4 StPO",
+          "sprecher": "Schritt eins: der Schuldspruch. Du verwendest die gesetzliche Überschrift, etwa: Der Angeklagte wird wegen Diebstahls in zwei Fällen verurteilt. Tatmehrheit zeigst du mit „in zwei Fällen“, Tateinheit mit „in Tateinheit mit“.",
+          "marken": [
+            "Überschrift nutzen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Was nicht hineingehört",
+          "text": "Regelbeispiele wie § 243 StGB und die Mittäterschaft bleiben draußen.",
+          "norm": "§ 243 StGB",
+          "sprecher": "Schritt zwei: was nicht hineingehört. Regelbeispiele, etwa beim besonders schweren Fall des Diebstahls, sind Strafzumessung und erscheinen nicht im Tenor. Auch die Mittäterschaft wird nicht tenoriert. Qualifikation, Versuch, Anstiftung und Beihilfe dagegen schon.",
+          "marken": [
+            "Regelbeispiel: nein"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Rechtsfolge und Kosten",
+          "text": "Strafe, gegebenenfalls Gesamtstrafe und Bewährung – dann die Kosten.",
+          "norm": "§ 465 StPO",
+          "sprecher": "Schritt drei: Rechtsfolge und Kosten. Du nennst die Strafe, bei mehreren Taten die Gesamtstrafe und gegebenenfalls die Aussetzung zur Bewährung. Wird verurteilt, trägt der Angeklagte die Kosten des Verfahrens.",
+          "marken": [
+            "Strafe · Kosten"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Liste der angewendeten Vorschriften",
+          "text": "Nach der Urteilsformel: Paragraf, Absatz, Nummer und Gesetz.",
+          "norm": "§ 260 Abs. 5 StPO",
+          "sprecher": "Schritt vier: Erst nach der Urteilsformel folgt die Liste der angewendeten Vorschriften, mit Paragraf, Absatz, Nummer und Gesetz. Hier taucht dann auch § 243 StGB auf.",
+          "marken": [
+            "§§ erst hier"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Die Urteilsgründe",
+          "text": "Festgestellte Tatsachen, Beweiswürdigung, rechtliche Würdigung, Strafzumessung.",
+          "norm": "§ 267 StPO",
+          "sprecher": "Und die Gründe? Nach § 267 StPO geben sie die erwiesenen Tatsachen an, in denen die gesetzlichen Merkmale der Tat gefunden werden. Dazu kommen Beweiswürdigung, rechtliche Würdigung und Strafzumessung.",
+          "marken": [
+            "§ 267 StPO"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Tenor: Tat mit Namen, Strafe, Kosten. Paragrafen erst danach.",
+          "norm": null,
+          "sprecher": "Merke: Im Tenor stehen die Tat mit ihrem gesetzlichen Namen, die Strafe und die Kosten. Die Paragrafen folgen erst danach.",
+          "marken": [
+            "Name statt Nummer"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Den Tenor zuletzt gegenlesen",
+          "text": "Speichern für die nächste Urteilsklausur.",
+          "sprecher": "Speicher dir das für die nächste Strafurteilsklausur.",
+          "marken": [
+            "speichern"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Paragrafen haben im Tenor eines Strafurteils nichts zu suchen. Der Schuldspruch nennt die Tat mit ihrer gesetzlichen Überschrift (§ 260 Abs. 4 StPO), Tatmehrheit mit „in zwei Fällen“; Regelbeispiele und Mittäterschaft bleiben draußen. Danach folgen Strafe und Kostenentscheidung – und erst nach der Urteilsformel die Liste der angewendeten Vorschriften (§ 260 Abs. 5 StPO). Speichern für die nächste Urteilsklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#strafurteil",
+        "#260stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Strafurteil: Tenor ohne Paragrafen",
+      "titelZeilen": [
+        "Der Tenor nennt",
+        "die Tat – nicht",
+        "den Paragrafen"
+      ],
+      "coverText": "Paragrafen erst in der Liste",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "form7"
+        ],
+        "kernidee": "Im Urteilsspruch steht der Name der Tat, die Nummern kommen erst dahinter.",
+        "handlung": "{B} hovers and pins a single blank name plaque onto a verdict board, while {A} uses his pointer to push a stack of numbered tags into a separate tray below.",
+        "hinweisRegie": "Place the note in the free space between the verdict board and the tray of numbered tags, slightly tilted toward the tray, without covering {B}'s pinning claw or {A}'s pointer.",
+        "alternative": "{A} sorts items into two boxes, a small velvet box for one name and a plain box for many tags, while {B} closes the velvet box first."
+      },
+      "bildSzene": "droid pins plaque, tags pushed to tray",
+      "bildSzeneAlt": "velvet box first, plain box after",
+      "quellen": [
+        "§ 260 Abs. 4, 5 StPO",
+        "§ 267 StPO",
+        "§ 465 StPO",
+        "§ 243 StGB",
+        "Themenpool: anklage-794"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung-tenor",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.438Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-553",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "Herausgabeklage erhoben, danach verbrennt der Wagen – K will nun Schadensersatz. Klageänderung?",
+      "optionen": [
+        "Ja – zulässig nur mit Einwilligung oder Sachdienlichkeit",
+        "Ja – K muss dafür eine neue Klage erheben",
+        "Nein – kraft Gesetzes keine Klageänderung (§ 264 Nr. 3 ZPO)"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§§ 263, 264, 267 ZPO",
+        "Themenpool: zpo-553"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.439Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-553",
+      "ueberzeile": "Auflösung",
+      "titel": "Keine Klageänderung – § 264 Nr. 3 ZPO",
+      "text": "Verlangt der Kläger wegen einer später eingetretenen Veränderung statt des ursprünglichen Gegenstands das Interesse, ist das kraft Gesetzes keine Klageänderung. Einwilligung oder Sachdienlichkeit (§ 263 ZPO) prüfst du nicht. Anders bei einem ganz neuen Streitgegenstand: Dann gilt § 263 ZPO – die Einwilligung wird angenommen, wenn B sich rügelos einlässt (§ 267 ZPO).",
+      "norm": "§ 264 Nr. 3 ZPO",
+      "quellen": [
+        "§§ 263, 264, 267 ZPO",
+        "Themenpool: zpo-553"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.439Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Ja – zulässig nur mit Einwilligung oder Sachdienlichkeit",
+        "Ja – K muss dafür eine neue Klage erheben",
+        "Nein – kraft Gesetzes keine Klageänderung (§ 264 Nr. 3 ZPO)"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "sachen",
+      "klausur": 1,
+      "pairId": "sachen-513",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 1163 Abs. 1 BGB: Ohne Forderung gehört die Hypothek dem Eigentümer",
+      "text": "Solange die Forderung nicht entstanden ist – etwa das Darlehen noch nicht ausgezahlt –, steht die Hypothek dem Eigentümer zu (S. 1). Erlischt die Forderung, etwa durch Tilgung, erwirbt er sie ebenfalls (S. 2). In seiner Hand wird sie zur Eigentümergrundschuld (§ 1177 Abs. 1 BGB). Bei der Briefhypothek gilt Entsprechendes bis zur Briefübergabe (§ 1163 Abs. 2 BGB).",
+      "norm": "§§ 1163, 1177 BGB",
+      "quellen": [
+        "§ 1163 BGB",
+        "§ 1177 BGB",
+        "Themenpool: sachen-513"
+      ],
+      "fachLabel": "Sachenrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.439Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "merksatz",
+      "fach": "strafbt",
+      "klausur": 2,
+      "pairId": "strafbt-337",
+      "ueberzeile": "Merksatz Strafrecht BT",
+      "titel": "Hehlerei nur an der Beute selbst – Ersatzhehlerei ist straflos",
+      "text": "§ 259 StGB erfasst nur die durch die Vortat erlangte Sache. Wer den Verkaufserlös der Beute annimmt, ist kein Hehler – zu prüfen bleibt § 261 StGB.",
+      "norm": "§ 259 Abs. 1 StGB",
+      "quellen": [
+        "§ 259 StGB",
+        "§ 261 StGB",
+        "Themenpool: strafbt-337"
+      ],
+      "fachLabel": "Strafrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.439Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-063",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Freiwilligkeit beim Rücktritt: „Ich will nicht, obwohl ich könnte“",
+      "text": "Freiwillig tritt zurück, wer aus autonomen Motiven aufgibt – er ist noch Herr seiner Entschlüsse. Unfreiwillig ist der Rücktritt bei heteronomen Gründen, etwa wenn der Täter sich entdeckt glaubt oder das Tatrisiko erheblich gestiegen ist. Ethisch wertvoll muss das Motiv nach der Rechtsprechung nicht sein.",
+      "norm": "§ 24 Abs. 1 StGB",
+      "quellen": [
+        "§ 24 StGB",
+        "Themenpool: strafat-063"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.439Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "fehler",
+      "fach": "zwangsv",
+      "klausur": 1,
+      "pairId": "zwangsv-831",
+      "ueberzeile": "Typischer Fehler",
+      "titel": "Verstoß gegen den Unterlassungstitel: sofort Ordnungsgeld?",
+      "falsch": "Der Schuldner verstößt gegen das titulierte Unterlassungsgebot – also setzt das Gericht ohne Weiteres Ordnungsgeld fest.",
+      "richtigText": "Ordnungsmittel nach § 890 ZPO setzen eine vorherige Androhung voraus (Abs. 2) – oft steht sie schon im Urteil, sonst ergeht ein eigener Beschluss. Und weil Ordnungsmittel auch Sanktion sind, braucht es Verschulden. Anders das Zwangsgeld nach § 888 ZPO: reines Beugemittel, ohne Verschulden.",
+      "quellen": [
+        "§ 888 ZPO",
+        "§ 890 ZPO",
+        "Themenpool: zwangsv-831"
+      ],
+      "fachLabel": "Zwangsvollstreckung",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:28:12.439Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

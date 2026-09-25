@@ -1,0 +1,861 @@
+{
+  "datum": "2027-01-11",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "arbeit-251",
+        "themaTitel": "Wie funktioniert die Sozialauswahl?",
+        "fach": "arbeit",
+        "klausur": 1
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "schema",
+        "themaId": "strafbt-327",
+        "themaTitel": "Was ist ein gefährliches Werkzeug im Sinne des § 244 StGB?",
+        "fach": "strafbt",
+        "klausur": 2
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "grundr-625",
+        "themaTitel": "Ausbürgerung/Auslieferung und Staatsangehörigkeit",
+        "fach": "grundr",
+        "klausur": 3,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:24",
+        "art": "frage",
+        "themaId": "zpo-549"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:24",
+        "art": "antwort",
+        "themaId": "zpo-549"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:03",
+        "art": "norm",
+        "themaId": "schuldbt-023"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:38",
+        "art": "tipp",
+        "themaId": "verwalt-394"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:51",
+        "art": "zahl",
+        "themaId": "methodik-901"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:29",
+        "art": "streitstand",
+        "themaId": "assessorz-817"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "arbeit-251",
+      "poolTitel": "Wie funktioniert die Sozialauswahl?",
+      "fach": "arbeit",
+      "fachLabel": "Arbeitsrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 1 Abs. 3 KSchG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "schema",
+      "themaId": "strafbt-327",
+      "poolTitel": "Was ist ein gefährliches Werkzeug im Sinne des § 244 StGB?",
+      "fach": "strafbt",
+      "fachLabel": "Strafrecht BT",
+      "klausur": 2,
+      "normen": [
+        "§ 244 Abs. 1 Nr. 1 StGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-10-17",
+        "2027-01-07"
+      ]
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "grundr-625",
+      "poolTitel": "Ausbürgerung/Auslieferung und Staatsangehörigkeit",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 16 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "zpo-549",
+      "poolTitel": "Prozessführungsbefugnis und Prozessstandschaft",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "ZPO, materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "zpo-549",
+      "poolTitel": "Prozessführungsbefugnis und Prozessstandschaft",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "ZPO, materielles Recht"
+      ],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "schuldbt-023",
+      "poolTitel": "Wie werden Dienst- und Werkvertrag voneinander abgegrenzt?",
+      "fach": "schuldbt",
+      "fachLabel": "Schuldrecht BT",
+      "klausur": 1,
+      "normen": [
+        "§ 611 BGB",
+        "§ 631 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-12"
+      ]
+    },
+    "s7": {
+      "art": "tipp",
+      "themaId": "verwalt-394",
+      "poolTitel": "Was ist ein enteignender Eingriff und wie grenzt er sich vom enteignungsgleichen ab?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "Art. 14 GG"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s8": {
+      "art": "zahl",
+      "themaId": "methodik-901",
+      "poolTitel": "Gutachtenstil und Urteilsstil richtig einsetzen",
+      "fach": "methodik",
+      "fachLabel": "Klausur- und Lernmethodik",
+      "klausur": 0,
+      "normen": [],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-19",
+        "2026-11-07"
+      ]
+    },
+    "s9": {
+      "art": "streitstand",
+      "themaId": "assessorz-817",
+      "poolTitel": "Wann ist eine Drittwiderklage zulässig?",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO"
+      ],
+      "typ": "modul",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-19"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "arbeit",
+      "klausur": 1,
+      "fachLabel": "Arbeitsrecht",
+      "themaId": "arbeit-251",
+      "slug": "2027-01-11-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Sozialauswahl beginnt nicht mit den Sozialdaten",
+          "titelZeilen": [
+            "Sozialauswahl",
+            "beginnt nicht mit",
+            "den Sozialdaten"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Erst die Vergleichsgruppe",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Im Betrieb des U fällt eine von drei gleichartigen Stellen in der Buchhaltung weg. Dort arbeiten A (58 Jahre, 25 Jahre im Betrieb), B und C. Abteilungsleiter L ist deutlich jünger und kürzer dabei. Muss U den L in die Sozialauswahl einbeziehen?"
+        },
+        {
+          "art": "schritte",
+          "titel": "So prüfst du die Sozialauswahl",
+          "schritte": [
+            {
+              "titel": "1. Vergleichsgruppe bilden",
+              "text": "Betriebsbezogen und horizontal: Wer kann die Arbeit nach seinem Arbeitsvertrag per Direktionsrecht übernehmen? Nur dieselbe Ebene."
+            },
+            {
+              "titel": "2. Sozialdaten gewichten",
+              "text": "Betriebszugehörigkeit, Lebensalter, Unterhaltspflichten, Schwerbehinderung – ausreichend berücksichtigt (§ 1 Abs. 3 S. 1 KSchG)."
+            },
+            {
+              "titel": "3. Leistungsträger herausnehmen?",
+              "text": "Nur bei berechtigtem betrieblichem Interesse, etwa wegen Kenntnissen, Leistungen oder ausgewogener Personalstruktur (§ 1 Abs. 3 S. 2 KSchG)."
+            },
+            {
+              "titel": "4. Ergebnis",
+              "text": "Wurde ein vergleichbarer, sozial weniger schutzwürdiger Kollege verschont, ist die Kündigung sozial ungerechtfertigt."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Der typische Fehler",
+          "text": "Sofort die Sozialdaten von A, B, C und L nebeneinanderlegen. Erst die Vergleichbarkeit entscheidet, wer überhaupt in die Auswahl kommt. L ist Vorgesetzter auf einer anderen Ebene – mit ihm wird nicht verglichen. Lösung: Die Auswahl findet nur unter A, B und C statt."
+        },
+        {
+          "art": "text",
+          "titel": "Klausurhinweis",
+          "punkte": [
+            "Vorher: KSchG anwendbar (§ 1 Abs. 1, § 23 KSchG) und dringendes betriebliches Erfordernis.",
+            "Auswahlrichtlinie oder Namensliste: nur Prüfung auf grobe Fehlerhaftigkeit (§ 1 Abs. 4, 5 KSchG).",
+            "Beweislast beim Arbeitnehmer (§ 1 Abs. 3 S. 3 KSchG); auf Verlangen nennt der Arbeitgeber seine Gründe."
+          ]
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Erst vergleichbar, dann sozial: Wer nicht austauschbar ist, gehört nicht in die Sozialauswahl."
+        },
+        {
+          "art": "cta",
+          "titel": "Sozialauswahl in drei Zügen",
+          "punkte": [
+            "Vergleichsgruppe horizontal bilden",
+            "Vier Sozialdaten gewichten",
+            "Leistungsträger nach S. 2 prüfen"
+          ],
+          "icons": [
+            "personen",
+            "waage",
+            "trophaee"
+          ]
+        }
+      ],
+      "caption": "Sozialauswahl beginnt nicht mit den Sozialdaten. Zuerst bildest du die Vergleichsgruppe: betriebsbezogen und horizontal – vergleichbar ist nur, wer die Arbeit per Direktionsrecht übernehmen könnte. Erst dann gewichtest du Betriebszugehörigkeit, Lebensalter, Unterhaltspflichten und Schwerbehinderung (§ 1 Abs. 3 S. 1 KSchG) und prüfst, ob Leistungsträger nach S. 2 herausgenommen werden dürfen. Speichern für die nächste Kündigungsschutzklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#arbeitsrecht",
+        "#kschg",
+        "#sozialauswahl",
+        "#kündigungsschutz",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Sozialauswahl: erst die Vergleichsgruppe",
+      "coverText": "Erst die Vergleichsgruppe",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "form7",
+          "brakk"
+        ],
+        "kernidee": "Bevor Sozialdaten verglichen werden, steht fest, wer überhaupt austauschbar ist.",
+        "handlung": "{A} hovers over a row of identical workbenches and lines up three workers on the same level, while {B} lifts a taller supervisor's podium out of the row and sets it firmly aside.",
+        "hinweisRegie": "Place the note in the open space above the row of identical workbenches, slightly tilted toward them, so it marks the comparison group without covering the podium set aside or any faces.",
+        "alternative": "{B} weighs three equally sized crystal crates on one scale while {A} keeps a much larger crate off the scale with a raised flat hand."
+      },
+      "bildSzene": "droid lines up workers on same level",
+      "bildSzeneAlt": "three equal crates weighed, big one excluded",
+      "quellen": [
+        "§ 1 Abs. 3 KSchG",
+        "§ 1 Abs. 4, 5 KSchG",
+        "§ 23 KSchG",
+        "Themenpool: arbeit-251"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "reihenfolge",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.398Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "schema",
+      "fach": "strafbt",
+      "klausur": 2,
+      "fachLabel": "Strafrecht BT",
+      "themaId": "strafbt-327",
+      "slug": "2027-01-11-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Harmloses Klebeband – und doch § 244 StGB",
+          "titelZeilen": [
+            "Harmloses",
+            "Klebeband – und",
+            "doch § 244 StGB"
+          ],
+          "coverBadge": "Schemawissen",
+          "coverText": "Lit. b: Mittel plus Absicht",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Worum es geht",
+          "text": "A will nachts in einer Lagerhalle stehlen und nimmt eine Rolle Klebeband mit, um einen etwaigen Wachmann zu fesseln. Klebeband ist kein gefährliches Werkzeug. Trotzdem kommt § 244 Abs. 1 Nr. 1 StGB in Betracht – denn die Norm hat zwei Varianten mit unterschiedlichen Anforderungen."
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 1",
+          "schritte": [
+            {
+              "titel": "1. Grunddelikt § 242 StGB",
+              "text": "Vollständig prüfen: fremde bewegliche Sache, Wegnahme, Vorsatz, Zueignungsabsicht."
+            },
+            {
+              "titel": "2. Tatmittel einordnen",
+              "text": "Waffe oder objektiv gefährliches Werkzeug: lit. a. Jedes sonstige Werkzeug oder Mittel, etwa Klebeband: lit. b."
+            }
+          ]
+        },
+        {
+          "art": "schritte",
+          "titel": "Das Schema, Teil 2",
+          "schritte": [
+            {
+              "titel": "3. Beisichführen",
+              "text": "Griffbereit zu irgendeinem Zeitpunkt der Tat. Die Rspr. lässt die Zeit bis zur Beendigung genügen, Teile der Lit. sind enger."
+            },
+            {
+              "titel": "4. Subjektive Seite",
+              "text": "Lit. a: Wissen um das Beisichführen genügt. Lit. b: zusätzlich die Absicht, Widerstand einer Person durch Gewalt oder Drohung zu brechen."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Problemhinweis und Lösung",
+          "text": "Was bei lit. a „gefährlich“ heißt, ist umstritten, weil es auf keinen Einsatz ankommt. Im Fall kommt es darauf nicht an: A will den Wachmann notfalls fesseln, also Widerstand mit Gewalt überwinden – lit. b ist erfüllt."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Lit. a: gefährlich und griffbereit genügt. Lit. b: harmloses Mittel plus Absicht, den Widerstand einer Person zu brechen."
+        },
+        {
+          "art": "cta",
+          "titel": "§ 244 Abs. 1 Nr. 1 in vier Zügen",
+          "punkte": [
+            "Grunddelikt § 242 StGB",
+            "Lit. a oder lit. b?",
+            "Griffbereit während der Tat",
+            "Bei lit. b: Verwendungsabsicht"
+          ],
+          "icons": [
+            "laden",
+            "paragraf",
+            "uhr",
+            "zielscheibe"
+          ]
+        }
+      ],
+      "caption": "Eine Rolle Klebeband ist harmlos – und kann trotzdem zu § 244 StGB führen. § 244 Abs. 1 Nr. 1 StGB hat zwei Varianten: Lit. a verlangt eine Waffe oder ein gefährliches Werkzeug, das der Täter griffbereit bei sich führt. Lit. b erfasst jedes sonstige Werkzeug oder Mittel, wenn er es einsetzen will, um den Widerstand einer Person durch Gewalt oder Drohung mit Gewalt zu brechen – etwa zum Fesseln. Speichern für die nächste Diebstahlsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#strafrecht",
+        "#strafrechtbt",
+        "#244stgb",
+        "#diebstahl",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "§ 244 Abs. 1 Nr. 1 StGB: lit. a oder lit. b?",
+      "coverText": "Lit. b: Mittel plus Absicht",
+      "coverBadge": "Schemawissen",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "zylla"
+        ],
+        "kernidee": "Auch ein harmloses Mittel macht den Diebstahl schwerer, wenn der Täter damit Widerstand brechen will.",
+        "handlung": "{A} nervously packs a roll of tape into a small bag before a night-time crystal heist, while {B} curiously peeks into the bag and then glances at a sleeping guard figure in the distance.",
+        "hinweisRegie": "Place the note in the free space between the bag with the tape and the distant sleeping guard, slightly tilted toward the tape, without covering {A}'s hands or {B}'s face.",
+        "alternative": "{B} holds up two items side by side, a heavy iron bar and a harmless roll of tape, while {A} points to the guard both could be used against."
+      },
+      "bildSzene": "thief packs tape roll, guard in distance",
+      "bildSzeneAlt": "iron bar and tape roll compared",
+      "quellen": [
+        "§ 244 Abs. 1 Nr. 1 lit. a, b StGB",
+        "§ 242 StGB",
+        "Themenpool: strafbt-327"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "widerspruch-harmloses-mittel",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.399Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "grundr",
+      "klausur": 3,
+      "fachLabel": "Grundrechte",
+      "themaId": "grundr-625",
+      "slug": "2027-01-11-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "Art. 16 GG verbietet nicht jeden Verlust",
+          "unter": "Staatsangehörigkeit · Art. 16 GG",
+          "text": "Verboten ist die Entziehung – ein Verlust kann zulässig sein.",
+          "norm": "Art. 16 Abs. 1 GG",
+          "icon": "schild",
+          "sprecher": "Art. 16 GG verbietet nicht jeden Verlust der Staatsangehörigkeit. Absolut verboten ist nur die Entziehung. Ein Verlust aufgrund eines Gesetzes kann zulässig sein.",
+          "marken": [
+            "Entziehung ≠ Verlust",
+            "Art. 16 GG"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Entziehung: ausnahmslos verboten",
+          "text": "Die deutsche Staatsangehörigkeit darf nicht entzogen werden.",
+          "norm": "Art. 16 Abs. 1 S. 1 GG",
+          "sprecher": "Schritt eins: Satz eins. Die deutsche Staatsangehörigkeit darf nicht entzogen werden. Einen Vorbehalt gibt es hier nicht, also auch keine Rechtfertigung.",
+          "marken": [
+            "ohne Vorbehalt"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Verlust: nur aufgrund eines Gesetzes",
+          "text": "Gegen den Willen nur, wenn der Betroffene nicht staatenlos wird.",
+          "norm": "Art. 16 Abs. 1 S. 2 GG",
+          "sprecher": "Schritt zwei: Satz zwei. Ein Verlust darf nur aufgrund eines Gesetzes eintreten. Und gegen den Willen des Betroffenen nur, wenn er dadurch nicht staatenlos wird.",
+          "marken": [
+            "Gesetz",
+            "nicht staatenlos"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Abgrenzung",
+          "text": "Entziehung: insbesondere ein Verlust, den der Betroffene nicht zumutbar beeinflussen kann.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Abgrenzung. Entziehung ist nach dem Bundesverfassungsgericht insbesondere ein Verlust, den der Betroffene nicht oder nicht auf zumutbare Weise beeinflussen kann.",
+          "marken": [
+            "beeinflussbar?"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Auslieferung Deutscher",
+          "text": "Verboten – Ausnahmen nur per Gesetz für EU-Staaten und internationale Gerichtshöfe.",
+          "norm": "Art. 16 Abs. 2 GG",
+          "sprecher": "Schritt vier: Absatz zwei. Kein Deutscher darf an das Ausland ausgeliefert werden. Ein Gesetz kann Ausnahmen für EU-Mitgliedstaaten und internationale Gerichtshöfe vorsehen, soweit rechtsstaatliche Grundsätze gewahrt sind.",
+          "marken": [
+            "EU",
+            "int. Gerichtshof"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Klassiker: erschlichene Einbürgerung",
+          "text": "Die Rücknahme einer durch Täuschung erlangten Einbürgerung ist nach dem BVerfG keine Entziehung.",
+          "norm": null,
+          "sprecher": "Der Klassiker: Wer seine Einbürgerung durch Täuschung erschlichen hat, kann sich nicht auf das Entziehungsverbot berufen. Das Bundesverfassungsgericht sieht in der Rücknahme keine verbotene Entziehung.",
+          "marken": [
+            "Täuschung",
+            "keine Entziehung"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Entziehung nie. Verlust nur per Gesetz – gegen den Willen nie in die Staatenlosigkeit.",
+          "norm": "Art. 16 GG",
+          "sprecher": "Merke: Entziehung nie. Verlust nur aufgrund eines Gesetzes, und gegen den Willen nie in die Staatenlosigkeit.",
+          "marken": [
+            "Entziehung nie"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Zuerst fragen: Entziehung oder Verlust?",
+          "text": "Speichern für die nächste Grundrechtsklausur.",
+          "sprecher": "Speicher dir das für die nächste Grundrechtsklausur. Und frag immer zuerst: Entziehung oder Verlust?",
+          "marken": [
+            "Entziehung oder Verlust?"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "Art. 16 GG verbietet nicht jeden Verlust der Staatsangehörigkeit. Absolut verboten ist die Entziehung (Abs. 1 S. 1) – nach dem BVerfG insbesondere ein Verlust, den der Betroffene nicht oder nicht zumutbar beeinflussen kann. Ein Verlust aufgrund eines Gesetzes ist möglich, gegen den Willen aber nur ohne Staatenlosigkeit (S. 2). Klassiker: Die Rücknahme einer erschlichenen Einbürgerung ist keine Entziehung. Und Abs. 2 verbietet die Auslieferung Deutscher – mit engen Ausnahmen.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#art16gg",
+        "#staatsangehörigkeit",
+        "#verfassungsrecht",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Art. 16 GG: Entziehung oder Verlust?",
+      "titelZeilen": [
+        "Art. 16 GG verbietet",
+        "nicht jeden Verlust"
+      ],
+      "coverText": "Entziehung nie, Verlust per Gesetz",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Der Staat darf niemandem die Staatsangehörigkeit nehmen – ein gesetzlich geregelter Verlust, den man selbst beeinflussen kann, ist etwas anderes.",
+        "handlung": "{A} uses his pointer to block a hand reaching to snatch a glowing membership badge from a traveler, while {B} calmly watches the same traveler voluntarily set down a second badge on a small table.",
+        "hinweisRegie": "Place the note in the free space between the blocked snatching hand and the small table with the voluntarily placed badge, slightly tilted, contrasting both without covering hands or faces.",
+        "alternative": "{B} stands at a border gate, firmly keeping a traveler on the home side, while {A} points to one narrow side door that opens only under a bright lamp of strict conditions."
+      },
+      "bildSzene": "pointer blocks snatching of glowing badge",
+      "bildSzeneAlt": "border gate with one narrow side door",
+      "quellen": [
+        "Art. 16 GG",
+        "§ 35 StAG",
+        "BVerfGE 116, 24 (Rücknahme erschlichener Einbürgerung)",
+        "Themenpool: grundr-625"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-549",
+      "ueberzeile": "Prüfungsfrage ZPO",
+      "titel": "K verklagt B auf Herausgabe seines Wagens und übereignet ihn während des Prozesses an D. Was gilt?",
+      "optionen": [
+        "D tritt automatisch als Kläger in den Prozess ein",
+        "Die Klage wird unzulässig, weil K nicht mehr Eigentümer ist",
+        "K führt den Prozess weiter – die Veräußerung ändert daran nichts"
+      ],
+      "richtig": 2,
+      "quellen": [
+        "§ 265 ZPO",
+        "§ 325 Abs. 1 ZPO",
+        "Themenpool: zpo-549"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "zpo",
+      "klausur": 1,
+      "pairId": "zpo-549",
+      "ueberzeile": "Auflösung",
+      "titel": "K führt den Prozess weiter – als gesetzlicher Prozessstandschafter",
+      "text": "Die Veräußerung der streitbefangenen Sache hat auf den Prozess keinen Einfluss (§ 265 Abs. 2 S. 1 ZPO). K bleibt prozessführungsbefugt; D kann den Prozess nur mit Zustimmung des Gegners übernehmen (S. 2). Nach h.M. muss K seinen Antrag auf Herausgabe an D umstellen. Das Urteil wirkt auch für und gegen D (§ 325 Abs. 1 ZPO).",
+      "norm": "§ 265 Abs. 2 ZPO · § 325 Abs. 1 ZPO",
+      "quellen": [
+        "§ 265 ZPO",
+        "§ 325 Abs. 1 ZPO",
+        "Themenpool: zpo-549"
+      ],
+      "fachLabel": "Zivilprozessrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.400Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "D tritt automatisch als Kläger in den Prozess ein",
+        "Die Klage wird unzulässig, weil K nicht mehr Eigentümer ist",
+        "K führt den Prozess weiter – die Veräußerung ändert daran nichts"
+      ],
+      "richtig": 2
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "schuldbt",
+      "klausur": 1,
+      "pairId": "schuldbt-023",
+      "ueberzeile": "Norm des Tages",
+      "titel": "§ 631 BGB: Geschuldet ist der Erfolg – nicht nur das Bemühen",
+      "text": "Beim Werkvertrag schuldet der Unternehmer die Herstellung des versprochenen Werks, also einen Erfolg. Beim Dienstvertrag wird die Tätigkeit als solche geschuldet (§ 611 BGB). Abgrenzung nach dem Vertragsinhalt: Wer trägt das Erfolgsrisiko? Abnahme (§ 640 BGB) und Mängelrechte (§ 634 BGB) gibt es nur beim Werkvertrag.",
+      "norm": "§ 631 Abs. 1 BGB · § 611 BGB",
+      "quellen": [
+        "§ 631 BGB",
+        "§ 611 BGB",
+        "§ 634 BGB",
+        "§ 640 BGB",
+        "Themenpool: schuldbt-023"
+      ],
+      "fachLabel": "Schuldrecht BT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "tipp",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-394",
+      "ueberzeile": "Klausurtipp Staatshaftung",
+      "titel": "Enteignend oder enteignungsgleich? Frag zuerst nach der Rechtmäßigkeit",
+      "text": "Enteignungsgleicher Eingriff: rechtswidriges hoheitliches Handeln, das unmittelbar in Eigentum eingreift. Enteignender Eingriff: rechtmäßiges Handeln mit atypischen, unvorhergesehenen Nebenfolgen, die ein Sonderopfer bedeuten. Beide stützt die Rspr. auf den Aufopferungsgedanken (§§ 74, 75 Einl. ALR), nicht auf Art. 14 Abs. 3 GG.",
+      "quellen": [
+        "Art. 14 GG",
+        "§§ 74, 75 Einl. ALR",
+        "Themenpool: verwalt-394"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "zahl",
+      "fach": "methodik",
+      "klausur": 0,
+      "pairId": "methodik-901",
+      "ueberzeile": "4 Punkte Klausurtechnik",
+      "titel": "Vier Signalwörter, an denen man den Gutachtenstil erkennt",
+      "text": "Im Urteilsstil kehrt sich die Reihenfolge um: Ergebnis zuerst, Begründung mit „denn“ oder „weil“.",
+      "punkte": [
+        "Obersatz im Konjunktiv: „A könnte …“",
+        "Voraussetzung: „Dafür müsste …“",
+        "Subsumtion: „Hier …“ – Sachverhalt trifft Definition",
+        "Ergebnis: „Also …“ – ohne Konjunktiv"
+      ],
+      "quellen": [
+        "Themenpool: methodik-901"
+      ],
+      "fachLabel": "Klausurtechnik",
+      "zahl": "4",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "streitstand",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-817",
+      "ueberzeile": "Streitstand 2. Examen",
+      "titel": "Der Zessionar klagt, der Beklagte erhebt Widerklage nur gegen den Zedenten. Ist das zulässig?",
+      "norm": "§ 33 ZPO",
+      "optionen": [
+        "Rspr. (BGH): ausnahmsweise ja, wenn die Gegenstände eng verknüpft sind und keine schutzwürdigen Interessen des Zedenten entgegenstehen.",
+        "Strenge Ansicht: nein – eine Widerklage setzt voraus, dass sie sich (auch) gegen den Kläger richtet."
+      ],
+      "text": "Klausur: Typisch ist die Abtretung, mit der sich der Zedent als Zeuge in Stellung bringt. Für die Zuständigkeit wendet die Rspr. dann § 33 ZPO analog an. Außerhalb solcher Konstellationen bleibt die isolierte Drittwiderklage die Ausnahme.",
+      "quellen": [
+        "§ 33 ZPO",
+        "§ 263 ZPO",
+        "Themenpool: assessorz-817"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:01:03.400Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}

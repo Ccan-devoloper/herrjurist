@@ -1,0 +1,859 @@
+{
+  "datum": "2027-02-03",
+  "status": "vorproduziert",
+  "freigabeBetreiber": false,
+  "liveVerknuepft": false,
+  "vorproduktionStatus": "review",
+  "kostenPolicy": {
+    "textUndFaktencheckUsd": 0,
+    "bildgenerierungUsd": 0,
+    "providerKostenUsd": 0,
+    "piperOffline": true,
+    "coverbilder": false,
+    "autorUsd": 0,
+    "faktencheckUsd": 0,
+    "sonstigeTextKiUsd": 0,
+    "bildgenerierungErlaubt": false,
+    "bildkostenUsd": 0,
+    "bilderStatus": "bewusst-ausgelassen"
+  },
+  "plan": {
+    "beitraege": [
+      {
+        "slot": "b1",
+        "zeit": "08:00",
+        "format": "pruefungsfrage",
+        "themaId": "verwalt-647",
+        "themaTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+        "fach": "verwalt",
+        "klausur": 3
+      },
+      {
+        "slot": "b2",
+        "zeit": "12:30",
+        "format": "pruefungsfrage",
+        "themaId": "zpo-130",
+        "themaTitel": "Wie funktioniert die Drittwiderspruchsklage?",
+        "fach": "zpo",
+        "klausur": 1
+      },
+      {
+        "slot": "b3",
+        "zeit": "17:30",
+        "format": "reel",
+        "themaId": "anklage-792",
+        "themaTitel": "Anklageschrift: abstrakter und konkreter Anklagesatz",
+        "fach": "anklage",
+        "klausur": 2,
+        "lang": false
+      }
+    ],
+    "stories": [
+      {
+        "slot": "s4",
+        "zeit": "07:19",
+        "art": "frage",
+        "themaId": "assessorz-587"
+      },
+      {
+        "slot": "s5",
+        "zeit": "07:19",
+        "art": "antwort",
+        "themaId": "assessorz-587"
+      },
+      {
+        "slot": "s1",
+        "zeit": "08:00",
+        "art": "teaser",
+        "beitragSlot": "b1",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s6",
+        "zeit": "12:01",
+        "art": "norm",
+        "themaId": "verwalt-383"
+      },
+      {
+        "slot": "s2",
+        "zeit": "12:30",
+        "art": "teaser",
+        "beitragSlot": "b2",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s7",
+        "zeit": "14:31",
+        "art": "streitstand",
+        "themaId": "grundr-089"
+      },
+      {
+        "slot": "s8",
+        "zeit": "16:42",
+        "art": "merksatz",
+        "themaId": "famerb-263"
+      },
+      {
+        "slot": "s3",
+        "zeit": "17:30",
+        "art": "teaser",
+        "beitragSlot": "b3",
+        "status": "aus-beitrag-ableitbar"
+      },
+      {
+        "slot": "s9",
+        "zeit": "19:08",
+        "art": "begriff",
+        "themaId": "strafat-058"
+      }
+    ]
+  },
+  "planHinweise": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "themaId": "verwalt-647",
+      "poolTitel": "Ermessen: Entschließungs- und Auswahlermessen",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "themaId": "zpo-130",
+      "poolTitel": "Wie funktioniert die Drittwiderspruchsklage?",
+      "fach": "zpo",
+      "fachLabel": "Zivilprozessrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 771 ZPO"
+      ],
+      "typ": "schema",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "b3": {
+      "format": "reel",
+      "themaId": "anklage-792",
+      "poolTitel": "Anklageschrift: abstrakter und konkreter Anklagesatz",
+      "fach": "anklage",
+      "fachLabel": "Anklage und Strafakte",
+      "klausur": 2,
+      "normen": [
+        "§ 200 StPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "reelLang": false,
+      "frueherVerwendet": []
+    },
+    "s4": {
+      "art": "frage",
+      "themaId": "assessorz-587",
+      "poolTitel": "Arbeitsrechtliche Urteilsklausur",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ArbGG; ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30",
+        "2026-11-30"
+      ]
+    },
+    "s5": {
+      "art": "antwort",
+      "themaId": "assessorz-587",
+      "poolTitel": "Arbeitsrechtliche Urteilsklausur",
+      "fach": "assessorz",
+      "fachLabel": "Zivilrechtliche Assessorklausur",
+      "klausur": 1,
+      "normen": [
+        "ArbGG; ZPO"
+      ],
+      "typ": "quiz",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-11-30",
+        "2026-11-30"
+      ]
+    },
+    "s6": {
+      "art": "norm",
+      "themaId": "verwalt-383",
+      "poolTitel": "Wie unterscheidet man gebundene Entscheidung und Ermessen?",
+      "fach": "verwalt",
+      "fachLabel": "Verwaltungsrecht AT",
+      "klausur": 3,
+      "normen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO"
+      ],
+      "typ": "begriff",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s7": {
+      "art": "streitstand",
+      "themaId": "grundr-089",
+      "poolTitel": "Wie prüft man einen Eingriff in Art. 12 GG?",
+      "fach": "grundr",
+      "fachLabel": "Grundrechte",
+      "klausur": 3,
+      "normen": [
+        "Art. 12 Abs. 1 GG"
+      ],
+      "typ": "schema",
+      "streitImPool": true,
+      "frueherVerwendet": [
+        "2026-10-03",
+        "2026-12-02"
+      ]
+    },
+    "s8": {
+      "art": "merksatz",
+      "themaId": "famerb-263",
+      "poolTitel": "Was ist ein Vermächtnis und wie wird es geltend gemacht?",
+      "fach": "famerb",
+      "fachLabel": "Familien- und Erbrecht",
+      "klausur": 1,
+      "normen": [
+        "§ 2147 BGB",
+        "§ 2174 BGB"
+      ],
+      "typ": "modul",
+      "streitImPool": false,
+      "frueherVerwendet": []
+    },
+    "s9": {
+      "art": "begriff",
+      "themaId": "strafat-058",
+      "poolTitel": "Welche Arten der Kausalität gibt es?",
+      "fach": "strafat",
+      "fachLabel": "Strafrecht AT",
+      "klausur": 2,
+      "normen": [],
+      "typ": "karteikarte",
+      "streitImPool": false,
+      "frueherVerwendet": [
+        "2026-09-23"
+      ]
+    }
+  },
+  "inhalte": {
+    "b1": {
+      "format": "pruefungsfrage",
+      "fach": "verwalt",
+      "klausur": 3,
+      "fachLabel": "Verwaltungsrecht AT",
+      "themaId": "verwalt-647",
+      "slug": "2027-02-03-b1",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Behörde muss einschreiten – auch so, wie A es will?",
+          "titelZeilen": [
+            "Behörde muss",
+            "einschreiten – auch",
+            "so, wie A es will?"
+          ],
+          "coverBadge": "Prüfungsfrage",
+          "coverText": "Ob reduziert, Wie noch offen",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Vom Grundstück des N geht eine erhebliche Gefahr für die Gesundheit des Nachbarn A aus. Die Behörde bleibt untätig. A klagt und verlangt eine ganz bestimmte Maßnahme. Das Ermessen über das Einschreiten ist auf null reduziert – bekommt A ein Urteil auf genau diese Maßnahme?"
+        },
+        {
+          "art": "vergleich",
+          "titel": "Zwei Ermessensstufen",
+          "links": {
+            "titel": "Das „Ob“",
+            "punkte": [
+              "Entschließung: Handelt die Behörde überhaupt?",
+              "Reduktion auf null z. B. bei erheblicher Gefahr für hochrangige Güter."
+            ]
+          },
+          "rechts": {
+            "titel": "Das „Wie“",
+            "punkte": [
+              "Auswahl: welches Mittel, gegen wen?",
+              "Bleibt offen, solange mehrere Mittel rechtmäßig sind."
+            ]
+          }
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg",
+          "schritte": [
+            {
+              "titel": "Anspruch auf Einschreiten",
+              "text": "Nur, wenn die Befugnisnorm auch A schützt – dann Anspruch auf fehlerfreie Ermessensausübung."
+            },
+            {
+              "titel": "Ob: auf null reduziert",
+              "text": "Die Behörde muss handeln; Untätigkeit wäre ermessensfehlerhaft (§ 40 VwVfG, § 114 S. 1 VwGO)."
+            },
+            {
+              "titel": "Wie: noch offen?",
+              "text": "Sind mehrere Maßnahmen geeignet und verhältnismäßig, darf die Behörde zwischen ihnen wählen."
+            },
+            {
+              "titel": "Tenor",
+              "text": "Dann nur Bescheidungsurteil (§ 113 Abs. 5 S. 2 VwGO). Die konkrete Maßnahme nur, wenn allein sie rechtmäßig ist."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Die typische Verwechslung",
+          "text": "Aus „die Behörde muss handeln“ wird schnell „die Behörde muss so handeln“. Die Reduktion auf null betrifft hier zunächst nur das Ob. Für eine Verpflichtung zu einer bestimmten Maßnahme muss auch das Auswahlermessen auf null schrumpfen."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Ob und Wie getrennt prüfen. Ist nur das Ob reduziert, gibt es ein Bescheidungsurteil – nicht die Maßnahme deiner Wahl."
+        },
+        {
+          "art": "cta",
+          "titel": "Ermessen in drei Fragen",
+          "punkte": [
+            "Schützt die Norm auch den Kläger?",
+            "Ist das Ob auf null reduziert?",
+            "Bleibt beim Wie noch eine Wahl?"
+          ],
+          "icons": [
+            "schild",
+            "zielscheibe",
+            "kreislauf"
+          ]
+        }
+      ],
+      "caption": "Die Behörde muss einschreiten – aber muss sie auch genau das tun, was A verlangt? Nicht unbedingt. Das Ermessen hat zwei Stufen: das Ob (Entschließung) und das Wie (Auswahl). Ist nur das Ob auf null reduziert und kommen mehrere rechtmäßige Maßnahmen in Betracht, gibt es ein Bescheidungsurteil nach § 113 Abs. 5 S. 2 VwGO. Die konkrete Maßnahme nur, wenn allein sie rechtmäßig ist. Speichern für die nächste Verwaltungsrechtsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#öffentlichesrecht",
+        "#verwaltungsrecht",
+        "#ermessen",
+        "#40vwvfg",
+        "#klausurtraining",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Entschließungs- und Auswahlermessen trennen",
+      "coverText": "Ob reduziert, Wie noch offen",
+      "coverBadge": "Prüfungsfrage",
+      "coverRegie": {
+        "charaktere": [
+          "rex",
+          "form7"
+        ],
+        "kernidee": "Dass die Behörde handeln muss, heißt noch nicht, dass sie ein bestimmtes Werkzeug nehmen muss.",
+        "handlung": "{A} nervously points at a leaking pipe, while {B} hovers in front of a small rack of three different tools and is about to pick one of them.",
+        "hinweisRegie": "Place the note in the free space between the leaking pipe and the tool rack, slightly tilted toward the rack, so the open choice of tools stays visible without covering {B}'s hand.",
+        "alternative": "{B} has already stepped through a gate marked only by an arch, while {A} watches him stand before three different paths."
+      },
+      "bildSzene": "droid chooses among three tools",
+      "bildSzeneAlt": "through the gate, three paths ahead",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 S. 1 VwGO",
+        "§ 113 Abs. 5 VwGO",
+        "Themenpool: verwalt-647"
+      ],
+      "hookTyp": "frage",
+      "hookMuster": "konkrete-fallfrage",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.696Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b2": {
+      "format": "pruefungsfrage",
+      "fach": "zpo",
+      "klausur": 1,
+      "fachLabel": "Zivilprozessrecht",
+      "themaId": "zpo-130",
+      "slug": "2027-02-03-b2",
+      "folien": [
+        {
+          "art": "titel",
+          "titel": "Gerichtsvollzieher prüft kein Eigentum – das Gericht schon",
+          "titelZeilen": [
+            "Gerichtsvollzieher",
+            "prüft kein Eigentum –",
+            "das Gericht schon"
+          ],
+          "coverBadge": "Klausurklassiker",
+          "coverText": "§ 771 statt § 766 ZPO",
+          "coverBildAuslassen": true
+        },
+        {
+          "art": "text",
+          "titel": "Die Frage",
+          "text": "Gläubiger G lässt beim Schuldner S einen Transporter pfänden. Der Wagen steht auf dem Hof des S, ist aber der Bank B zur Sicherheit übereignet. Der Gerichtsvollzieher hat korrekt gehandelt. Wie wehrt sich B – und hat sie Erfolg?"
+        },
+        {
+          "art": "text",
+          "titel": "Warum nicht § 766 ZPO",
+          "text": "Der Gerichtsvollzieher prüft bei beweglichen Sachen nur den Gewahrsam des Schuldners (§ 808 ZPO), nicht das Eigentum. Die Pfändung ist verfahrensrechtlich in Ordnung – eine Erinnerung ginge ins Leere. Materielle Rechte Dritter gehören in die Drittwiderspruchsklage."
+        },
+        {
+          "art": "schritte",
+          "titel": "Der Lösungsweg: § 771 ZPO",
+          "schritte": [
+            {
+              "titel": "Zulässigkeit",
+              "text": "Statthaft bei einem Recht am Gegenstand; ausschließlich zuständig ist das Gericht des Vollstreckungsbezirks (§§ 771 Abs. 1, 802 ZPO)."
+            },
+            {
+              "titel": "Rechtsschutzbedürfnis",
+              "text": "Ab Beginn bis zum Ende der Vollstreckung in diesen Gegenstand."
+            },
+            {
+              "titel": "Veräußerung hinderndes Recht",
+              "text": "Vor allem Eigentum. Sicherungseigentum genügt nach der Rspr. – Teile der Lit. verweisen auf § 805 ZPO."
+            },
+            {
+              "titel": "Keine Einwendung des Gläubigers",
+              "text": "Etwa, dass B selbst für die Schuld haftet oder die Übereignung anfechtbar ist."
+            }
+          ]
+        },
+        {
+          "art": "text",
+          "titel": "Ergebnis",
+          "text": "B klagt gegen G, nicht gegen S. Als Sicherungseigentümerin hat sie nach der Rspr. ein die Veräußerung hinderndes Recht. Greift keine Einwendung, erklärt das Gericht die Zwangsvollstreckung in den Transporter für unzulässig."
+        },
+        {
+          "art": "merke",
+          "titel": "Merksatz",
+          "text": "Verfahrensfehler: § 766 ZPO. Recht eines Dritten an der Sache: § 771 ZPO – und die Klage richtet sich gegen den Gläubiger."
+        },
+        {
+          "art": "cta",
+          "titel": "Drittwiderspruch in drei Fragen",
+          "punkte": [
+            "Wer klagt gegen wen?",
+            "Welches Recht am Gegenstand?",
+            "Einwendung des Gläubigers?"
+          ],
+          "icons": [
+            "personen",
+            "schluessel",
+            "waage"
+          ]
+        }
+      ],
+      "caption": "Der Gerichtsvollzieher prüft kein Eigentum – das Gericht schon. Pfändet er eine Sache im Gewahrsam des Schuldners, ist das verfahrensrechtlich korrekt (§ 808 ZPO), selbst wenn sie einem Dritten gehört. Die Erinnerung nach § 766 ZPO hilft dann nicht. Der Dritte erhebt Drittwiderspruchsklage nach § 771 ZPO gegen den Gläubiger – nach der Rspr. auch als Sicherungseigentümer. Speichern für die nächste Vollstreckungsklausur.",
+      "hashtags": [
+        "#jura",
+        "#jurastudium",
+        "#staatsexamen",
+        "#zivilrecht",
+        "#zpo",
+        "#zwangsvollstreckung",
+        "#771zpo",
+        "#jurastudent",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Drittwiderspruchsklage: § 771 statt § 766 ZPO",
+      "coverText": "§ 771 statt § 766 ZPO",
+      "coverBadge": "Klausurklassiker",
+      "coverRegie": {
+        "charaktere": [
+          "brakk",
+          "zylla"
+        ],
+        "kernidee": "Wer nur auf den Besitz schaut, sieht nicht, wem die Sache gehört – das klärt erst das Gericht.",
+        "handlung": "{A} stands next to a small transport cart on his yard that carries a seal of the bank, while {B} curiously lifts the cart's cover and discovers that seal underneath.",
+        "hinweisRegie": "Place the note in the free space above the cart, slightly tilted toward the uncovered seal, without covering {B}'s hands or {A}'s face.",
+        "alternative": "{B} holds a small key that fits a padlock on the cart, while {A} only guards the yard gate and never looks at the lock."
+      },
+      "bildSzene": "hidden bank seal found under cart cover",
+      "bildSzeneAlt": "key fits padlock, guard watches gate",
+      "quellen": [
+        "§ 771 ZPO",
+        "§ 766 ZPO",
+        "§ 808 ZPO",
+        "§ 802 ZPO",
+        "§ 805 ZPO",
+        "Themenpool: zpo-130"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "kontrast-zustaendigkeit",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.696Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "b3": {
+      "format": "reel",
+      "layout": "erklaer",
+      "fach": "anklage",
+      "klausur": 2,
+      "fachLabel": "Anklage und Strafakte",
+      "themaId": "anklage-792",
+      "slug": "2027-02-03-b3",
+      "szenen": [
+        {
+          "art": "hook",
+          "titel": "„Heimtückisch“ ist keine Tatsache",
+          "unter": "Anklagesatz · § 200 StPO",
+          "text": "Gesetzesworte gehören in den abstrakten, Tatsachen in den konkreten Anklagesatz.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "icon": "dokument",
+          "sprecher": "„Heimtückisch“ ist keine Tatsache. Im konkreten Anklagesatz beschreibst du, was geschah: Das Opfer saß beim Essen und rechnete mit keinem Angriff. Das Wort Heimtücke gehört in den abstrakten Teil.",
+          "marken": [
+            "Gesetzeswort",
+            "vs. Tatsache"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "schritt",
+          "nummer": 1,
+          "titel": "Der abstrakte Anklagesatz",
+          "text": "Die gesetzlichen Merkmale in den Worten des Gesetzes – ohne Tatsachen.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "sprecher": "Schritt eins: der abstrakte Anklagesatz. Er gibt die gesetzlichen Merkmale der Straftat in den Worten des Gesetzes wieder, einschließlich Versuch, Beteiligungsform und Konkurrenzen.",
+          "marken": [
+            "Gesetzesworte"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 2,
+          "titel": "Der konkrete Anklagesatz",
+          "text": "Zeit, Ort, Handlung, Erfolg – und die innere Tatseite als Tatsache.",
+          "norm": null,
+          "sprecher": "Schritt zwei: der konkrete Anklagesatz. Hier stehen Tatzeit, Tatort und das Geschehen, so dass jedes gesetzliche Merkmal durch Tatsachen belegt ist. Auch den Vorsatz schilderst du als Tatsache: Er wusste, dass, und er wollte.",
+          "marken": [
+            "Tatsachen"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 3,
+          "titel": "Die Reihenfolge je nach Land",
+          "text": "Manche Länder beginnen konkret, andere abstrakt – folge dem Muster deines Landes.",
+          "norm": null,
+          "sprecher": "Schritt drei: die Reihenfolge. Welcher Teil zuerst kommt, handhaben die Länder unterschiedlich. Halte dich an das Muster, das in deinem Bundesland üblich ist.",
+          "marken": [
+            "je nach Land"
+          ]
+        },
+        {
+          "art": "schritt",
+          "nummer": 4,
+          "titel": "Die anzuwendenden Vorschriften",
+          "text": "Strafvorschriften samt Qualifikationen, Regelbeispielen und Konkurrenzen.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "sprecher": "Schritt vier: Zum Anklagesatz gehören die anzuwendenden Strafvorschriften, samt Qualifikationen, Regelbeispielen und Konkurrenzen.",
+          "marken": [
+            "Vorschriften"
+          ]
+        },
+        {
+          "art": "punkt",
+          "titel": "Der Gegencheck",
+          "text": "Jedes Merkmal im abstrakten Satz braucht eine Tatsache im konkreten.",
+          "norm": null,
+          "sprecher": "Und so kontrollierst du dich: Leg beide Teile nebeneinander. Jedes Merkmal aus dem abstrakten Anklagesatz braucht eine Tatsache im konkreten. Fehlt sie, trägt der Vorwurf nicht.",
+          "marken": [
+            "Merkmal ↔ Tatsache"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "merke",
+          "titel": "Die Kurzform",
+          "text": "Abstrakt: Gesetzesworte. Konkret: Tatsachen – auch für den Vorsatz.",
+          "norm": "§ 200 Abs. 1 S. 1 StPO",
+          "sprecher": "Merke: abstrakt heißt Gesetzesworte, konkret heißt Tatsachen. „Heimtückisch“, „grausam“ oder „gewerbsmäßig“ stehen nur im abstrakten Teil.",
+          "marken": [
+            "Wort ≠ Tatsache"
+          ],
+          "nummer": null
+        },
+        {
+          "art": "cta",
+          "titel": "Beide Anklagesätze nebeneinanderlegen",
+          "text": "Speichern für die nächste Anklageklausur.",
+          "sprecher": "Speicher dir das für die nächste Anklageschrift. Und leg vor der Abgabe beide Anklagesätze einmal nebeneinander.",
+          "marken": [
+            "gegenlesen"
+          ],
+          "nummer": null,
+          "norm": null
+        }
+      ],
+      "caption": "„Heimtückisch“ ist keine Tatsache. Der abstrakte Anklagesatz gibt die gesetzlichen Merkmale in Gesetzesworten wieder, der konkrete schildert das Geschehen mit Zeit, Ort und Handlung – so, dass jedes Merkmal durch Tatsachen belegt ist, auch der Vorsatz. Welcher Teil zuerst kommt, ist je nach Land verschieden. Der beste Gegencheck: beide Sätze nebeneinanderlegen. Speichern für die nächste Anklageklausur.",
+      "hashtags": [
+        "#jura",
+        "#rechtsreferendariat",
+        "#zweitesstaatsexamen",
+        "#strafrecht",
+        "#stpo",
+        "#anklageschrift",
+        "#200stpo",
+        "#referendariat",
+        "#examensvorbereitung"
+      ],
+      "kurztitel": "Anklagesatz: abstrakt und konkret trennen",
+      "titelZeilen": [
+        "„Heimtückisch“",
+        "ist keine Tatsache"
+      ],
+      "coverText": "Gesetzesworte nur im abstrakten Teil",
+      "coverBadge": "Reel",
+      "coverRegie": {
+        "charaktere": [
+          "flux",
+          "mara"
+        ],
+        "kernidee": "Ein Rechtsbegriff ersetzt keine Tatsache – jedes Merkmal braucht ein konkretes Geschehen.",
+        "handlung": "{A} holds up a blank label on his pointer, while {B} places a small, detailed diorama of a dinner table beside it as the evidence the label needs.",
+        "hinweisRegie": "Place the note in the free space between the blank label and the diorama, slightly tilted toward the diorama, without covering {B}'s hands or the small table scene.",
+        "alternative": "{B} lays two strips side by side on a table, one short and plain, one long and detailed, while {A} checks that every notch on the short strip meets a notch on the long one."
+      },
+      "bildSzene": "blank label next to detailed diorama",
+      "bildSzeneAlt": "two strips compared notch by notch",
+      "quellen": [
+        "§ 200 Abs. 1 StPO",
+        "§ 211 StGB",
+        "Themenpool: anklage-792"
+      ],
+      "hookTyp": "fehler",
+      "hookMuster": "nicht-klarstellung",
+      "coverBildAuslassen": true,
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.698Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s4": {
+      "slot": "s4",
+      "art": "frage",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-587",
+      "ueberzeile": "Prüfungsfrage Arbeitsrecht",
+      "titel": "Kündigungsschutzklage gewonnen, Weiterbeschäftigung beantragt: Wie entscheidet das Arbeitsgericht?",
+      "optionen": [
+        "Verurteilung zur Weiterbeschäftigung bis zum rechtskräftigen Abschluss",
+        "Abweisung – Weiterbeschäftigung gibt es erst nach Rechtskraft",
+        "Abweisung – dafür ist nur ein Eilverfahren statthaft"
+      ],
+      "richtig": 0,
+      "quellen": [
+        "§ 4 KSchG",
+        "§§ 611a, 242 BGB",
+        "Themenpool: assessorz-587"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.698Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s5": {
+      "slot": "s5",
+      "art": "antwort",
+      "fach": "assessorz",
+      "klausur": 1,
+      "pairId": "assessorz-587",
+      "ueberzeile": "Auflösung",
+      "titel": "Weiterbeschäftigung bis zum rechtskräftigen Abschluss",
+      "text": "Nach dem Großen Senat des BAG besteht ein allgemeiner Weiterbeschäftigungsanspruch, wenn die Kündigung unwirksam ist und keine überwiegenden schutzwerten Interessen des Arbeitgebers entgegenstehen. Nach einem Sieg in erster Instanz überwiegt regelmäßig das Interesse des Arbeitnehmers. Tenor: „… den Kläger bis zum rechtskräftigen Abschluss … weiterzubeschäftigen.“",
+      "norm": "§§ 611a, 242 BGB (BAG)",
+      "quellen": [
+        "§ 4 KSchG",
+        "§§ 611a, 242 BGB",
+        "Themenpool: assessorz-587"
+      ],
+      "fachLabel": "2. Examen Zivilrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.698Z",
+      "fachStand": "redaktionell-2026-09-25",
+      "optionen": [
+        "Verurteilung zur Weiterbeschäftigung bis zum rechtskräftigen Abschluss",
+        "Abweisung – Weiterbeschäftigung gibt es erst nach Rechtskraft",
+        "Abweisung – dafür ist nur ein Eilverfahren statthaft"
+      ],
+      "richtig": 0
+    },
+    "s6": {
+      "slot": "s6",
+      "art": "norm",
+      "fach": "verwalt",
+      "klausur": 3,
+      "pairId": "verwalt-383",
+      "ueberzeile": "Norm des Tages",
+      "titel": "„Soll“ heißt: im Regelfall muss die Behörde",
+      "text": "Am Wortlaut erkennst du die Rechtsfolge: „ist zu erteilen“ bindet, „kann“ oder „darf“ eröffnet Ermessen. „Soll“ bindet im Regelfall – nur in atypischen Fällen darf die Behörde abweichen. Ermessen übt sie nach § 40 VwVfG aus; das Gericht prüft nur Ermessensfehler (§ 114 S. 1 VwGO), nicht die Zweckmäßigkeit.",
+      "norm": "§ 40 VwVfG · § 114 S. 1 VwGO",
+      "quellen": [
+        "§ 40 VwVfG",
+        "§ 114 VwGO",
+        "Themenpool: verwalt-383"
+      ],
+      "fachLabel": "Verwaltungsrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.698Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s7": {
+      "slot": "s7",
+      "art": "streitstand",
+      "fach": "grundr",
+      "klausur": 3,
+      "pairId": "grundr-089",
+      "ueberzeile": "Streitstand Grundrechte",
+      "titel": "Eine Ärztin aus Frankreich will in Deutschland eine Praxis eröffnen: Schützt sie Art. 12 GG?",
+      "norm": "Art. 12 GG · Art. 18 AEUV",
+      "optionen": [
+        "Eine Ansicht: Art. 2 Abs. 1 GG, im Schutzniveau an Art. 12 GG angeglichen.",
+        "Andere Ansicht: Art. 12 GG selbst – unionsrechtlich auf EU-Bürger erweitert."
+      ],
+      "text": "Art. 12 GG ist ein Deutschengrundrecht, Art. 18 AEUV verlangt aber gleichen Schutz für Unionsbürger. Im Ergebnis liegen beide Wege nah beieinander. Klausur: Problem erkennen, beide Wege nennen, kurz entscheiden.",
+      "quellen": [
+        "Art. 12 Abs. 1 GG",
+        "Art. 2 Abs. 1 GG",
+        "Art. 18 AEUV",
+        "Themenpool: grundr-089"
+      ],
+      "fachLabel": "Grundrechte",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.698Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s8": {
+      "slot": "s8",
+      "art": "merksatz",
+      "fach": "famerb",
+      "klausur": 1,
+      "pairId": "famerb-263",
+      "ueberzeile": "Merksatz Erbrecht",
+      "titel": "Vermächtnis: Anspruch, nicht Eigentum",
+      "text": "Mit dem Erbfall erwirbt der Vermächtnisnehmer nur eine Forderung gegen den Beschwerten (§ 2174 BGB). Eigentum bekommt er erst, wenn dieser erfüllt – etwa durch Übereignung nach §§ 929 ff. BGB.",
+      "norm": "§§ 2147, 2174 BGB",
+      "quellen": [
+        "§ 2147 BGB",
+        "§ 2174 BGB",
+        "§ 2087 BGB",
+        "Themenpool: famerb-263"
+      ],
+      "fachLabel": "Familien-/Erbrecht",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.698Z",
+      "fachStand": "redaktionell-2026-09-25"
+    },
+    "s9": {
+      "slot": "s9",
+      "art": "begriff",
+      "fach": "strafat",
+      "klausur": 2,
+      "pairId": "strafat-058",
+      "ueberzeile": "Begriff des Tages",
+      "titel": "Alternative Kausalität: zwei tödliche Dosen, zwei Ursachen",
+      "text": "A und B vergiften O unabhängig voneinander, jede Dosis allein wäre tödlich. Nach der Conditio-Formel wäre keiner kausal. Deshalb gilt: Von mehreren Bedingungen, die zwar alternativ, aber nicht kumulativ hinweggedacht werden können, ohne dass der Erfolg entfiele, ist jede ursächlich. Abzugrenzen: kumulative und überholende Kausalität.",
+      "norm": "Erfolgsdelikte, z. B. § 212 StGB",
+      "quellen": [
+        "§ 212 StGB",
+        "Themenpool: strafat-058"
+      ],
+      "fachLabel": "Strafrecht AT",
+      "freigabeBetreiber": false,
+      "vorproduktionStatus": "review",
+      "textProviderKostenUsd": 0,
+      "faktencheckProviderKostenUsd": 0,
+      "bildStatus": "bewusst-ausgelassen",
+      "manuellGeprueft": true,
+      "regelGeprueft": true,
+      "finalisiertVon": "chat-vorproduktion",
+      "finalisiertAm": "2026-09-25T13:22:46.698Z",
+      "fachStand": "redaktionell-2026-09-25"
+    }
+  },
+  "hookOptimierung": {
+    "quelle": "state/ledger.json",
+    "stand": "2026-09-25",
+    "regel": "Fehler-Hook bevorzugt (echter, belegbarer Irrtum), Zahl nur bei realer 2–6-Punkte-Struktur, Frage nur konkret; keine Aussage-Hooks, kein Clickbait."
+  },
+  "renderVorschau": {
+    "status": "ausstehend",
+    "coverbilder": false,
+    "charakterLayer": "spaeter",
+    "reelLayout": "erklaer",
+    "audio": "piper-offline",
+    "providerKostenUsd": 0
+  },
+  "liveRegel": {
+    "veroeffentlichen": false,
+    "freigabeErforderlich": true
+  }
+}
