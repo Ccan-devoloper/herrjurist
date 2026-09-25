@@ -1,5 +1,7 @@
 source=instagram-assets/vorproduktion/coverbilder
 mode=providerfrei
-run=rerender-cover-layout-after-geometry-fix
-slots=2026-09-25/b1,2026-09-29/b1,2026-09-29/b2,2026-09-29/b3,2026-09-30/b1,2026-09-30/b2,2026-09-30/b3,2026-10-01/b1,2026-10-01/b2,2026-10-01/b3,2026-10-02/b1,2026-10-02/b2,2026-10-02/b3,2026-10-03/b1,2026-10-03/b2,2026-10-03/b3,2026-10-04/b1,2026-10-04/b2,2026-10-04/b3,2026-10-05/b1,2026-10-05/b2,2026-10-05/b3,2026-10-06/b1,2026-10-06/b2,2026-10-06/b3,2026-10-07/b1,2026-10-07/b2,2026-10-07/b3,2026-10-08/b1,2026-10-08/b2,2026-10-08/b3
-reason=reels-vollbreit-ohne-crop-und-karussell-kollisionsbewusst
+status=completed
+layoutFix=reel-width-plus-carousel-safe
+assetCommit=4bc075ab76c0f0da481affc2d5733d9a1fdda1a9
+completedRun=36079949246
+validated=true
