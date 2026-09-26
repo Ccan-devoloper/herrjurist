@@ -77,7 +77,11 @@ export function feedAssets(vp, e) {
 
 
 export function feedWartezeitMs(plan, jetztSekunden, maxMinuten = 100) {
-  const offen = (plan?.beitraege || []).filter((e) => e.status !== "veroeffentlicht" && /^\d{1,2}:\d{2}$/.test(String(e.zeit || "")));
+  // Beim exakten Vorproduktionslauf zählt der früheste offene Slot – Feed ODER
+  // Story. Sonst kann ein früher Story-Slot hinter einem späteren Feed-Slot
+  // hängen bleiben, während der Runner auf die falsche Uhrzeit wartet.
+  const offen = [...(plan?.beitraege || []), ...(plan?.stories || [])]
+    .filter((e) => e.status !== "veroeffentlicht" && /^\d{1,2}:\d{2}$/.test(String(e.zeit || "")));
   if (!offen.length) return 0;
   const sekunden = offen.map((e) => {
     const [h, m] = e.zeit.split(":").map(Number);
