@@ -140,6 +140,25 @@ export function normGesprochen(text) {
   return out.replace(/\s{2,}/g, " ").replace(/\s+([,.;:])/g, "$1").trim();
 }
 
+/* Eigene Sprechfassung für die TTS-Engine. Sichtbare Normzitate bleiben kurz. */
+const ZAHL_EINER = ["null","eins","zwei","drei","vier","fünf","sechs","sieben","acht","neun","zehn","elf","zwölf","dreizehn","vierzehn","fünfzehn","sechzehn","siebzehn","achtzehn","neunzehn"];
+const ZAHL_ZEHNER = ["","","zwanzig","dreißig","vierzig","fünfzig","sechzig","siebzig","achtzig","neunzig"];
+function zahlGesprochen(n) {
+  if (n < 20) return ZAHL_EINER[n];
+  if (n < 100) return n % 10 ? (n % 10 === 1 ? "ein" : ZAHL_EINER[n % 10]) + "und" + ZAHL_ZEHNER[Math.floor(n / 10)] : ZAHL_ZEHNER[n / 10];
+  if (n < 1000) return (n < 200 ? "ein" : ZAHL_EINER[Math.floor(n / 100)]) + "hundert" + (n % 100 ? zahlGesprochen(n % 100) : "");
+  return (n < 2000 ? "ein" : ZAHL_EINER[Math.floor(n / 1000)]) + "tausend" + (n % 1000 ? zahlGesprochen(n % 1000) : "");
+}
+export function normTTS(text) {
+  if (typeof text !== "string" || !text) return text;
+  return normGesprochen(text)
+    .replace(/\b(Paragraf(?:en)?|Artikel|Absatz|Satz|Nummer|Halbsatz)\s+(\d{1,4})([a-z])?\b/gi,
+      (_, bezeichner, zahl, buchstabe) => `${bezeichner} ${zahlGesprochen(Number(zahl))}${buchstabe ? " " + buchstabe : ""}`)
+    .replace(/\bFortsetzungsfeststellungsinteresse\b/gi, "Fortsetzungs-Feststellungs-Interesse")
+    .replace(/\bVA\b/g, "Verwaltungsakt")
+    .replace(/\bGbR\b/g, "Gesellschaft bürgerlichen Rechts");
+}
+
 /** Die Regel, wie sie im Auftrag an das Modell steht. */
 export const NORM_REGEL = 'Normen in der Klausur-Zitierweise: § 80 Abs. 1 S. 5 VwGO, § 1 Abs. 1 S. 1 Nr. 1 lit. a BGB. Absatz, Satz, Nummer und Buchstabe abgekürzt, nie in Klammern. Römische Absatzziffern („§ 441 III BGB“) sind ebenfalls in Ordnung, wenn die Norm üblicherweise so zitiert wird – nur nicht innerhalb eines Beitrags mischen. Grundgesetz, EMRK, AEUV, EUV und Grundrechtecharta werden mit ARTIKEL zitiert, nie mit Paragraf: „Art. 9 Abs. 3 GG“, niemals „§ 9 GG“.';
 export const NORM_REGEL_STIMME = 'Im Sprechertext dagegen ausgeschrieben, damit die Stimme es richtig liest: „Paragraf 80 Absatz 1 Satz 5 VwGO“ – dort keine Abkürzungen.';
